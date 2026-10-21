@@ -25,7 +25,7 @@ body=h2('Your turn: whiteboards')+p('Write the mystery number. Then check it by 
 put('l5-try1',sec('l5-try1','30–31 MIN',body,'Children write on whiteboards and hold them up together. Click for each answer. For b, ask: "The machine took 4 away, so what is the opposite?" (add 4: 9 + 4 = 13). Anyone who writes 5 for b has taken away again: show it with counters.'))
 
 # 9. worked example 2
-body=h2('Worked example: two steps')+card(p('I think of a number. I add 5, then I take away 3. I get 9.',44,700))+step(1,'Draw it:  ? → + 5 → □ → − 3 → 9',top=430,size=36)+step(2,'Undo the LAST step first: the opposite of − 3 is + 3.  9 + 3 = 12',top=540,size=36)+step(3,'Then undo + 5:  12 − 5 = 7',top=650,size=36)+step(4,'Check forwards:  7 + 5 = 12,  12 − 3 = 9  ✓  My number is 7.',top=760,size=36)
+body=h2('Worked example: two steps')+card(p('I think of a number. I add 5, then I take away 3. I get 9.',44,700))+step(1,'Draw it:  ? → + 5 → B → − 3 → 9',top=430,size=36)+step(2,'Undo the LAST step first: the opposite of − 3 is + 3.  9 + 3 = 12',top=540,size=36)+step(3,'Then undo + 5:  12 − 5 = 7',top=650,size=36)+step(4,'Check forwards:  7 + 5 = 12,  12 − 3 = 9  ✓  My number is 7.',top=760,size=36)
 put('l5-we2',sec('l5-we2','31–33 MIN',body,'Click through the steps. Analogy that works well: "In the morning you put on socks, then shoes. At night you take off shoes first, then socks. Undoing goes in the opposite order." Think-aloud: "The last thing I did was take away 3, so I undo it first: 9 + 3 = 12. Then undo add 5: 12 − 5 = 7. Check: 7 + 5 = 12, 12 − 3 = 9."'))
 
 # 10. try 2
@@ -112,5 +112,6 @@ json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False
 print(len(deck['order']),'slides; wrote',len(S))
 
 import p1gifted; p1gifted.apply(D,5)
+import p1gaps; p1gaps.apply(D,5)
 import p1fix
 p1fix.finish(D,5,{'l5-ws1':'42–52 MIN','l5-ws1ans':'52–54 MIN','l5-teachbar':'54–56 MIN','l5-teachq1':'56–57 MIN','l5-teachq2':'57–58 MIN','l5-ws2':'58–68 MIN'})

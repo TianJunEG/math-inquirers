@@ -80,7 +80,7 @@ put('l10-key',sec('l10-key','34–35 MIN',body,'Say the key idea together. Commo
 
 # ---------- teach before page 1: picture graphs ----------
 fr=[('Apples',6,'#C0392B'),('Pears',3,'#7DA453'),('Plums',5,'#7D3C98'),('Figs',4,'#B9770E')]
-g=''.join(T(0,48+i*80,n,32,anchor='start')+''.join(f'<circle cx="{200+j*70}" cy="{38+i*80}" r="26" fill="{c}"/>' for j in range(k)) for i,(n,k,c) in enumerate(fr))+T(0,370,'● = 1 fruit',28,MUTED,'start',700)
+g=''.join(T(0,48+i*80,n,32,anchor='start')+''.join(f'<circle cx="{200+j*70}" cy="{38+i*80}" r="26" fill="{c}"/>' for j in range(k)) for i,(n,k,c) in enumerate(fr))+f'<circle cx="14" cy="361" r="11" fill="{NAVY}"/>'+T(34,370,'= 1 fruit',28,MUTED,'start',700)
 body=h2('Picture graphs: count, compare, combine')+pin(128,260,640,svg(640,390,g,'Picture graph: apples 6, pears 3, plums 5, figs 4'))
 body+=step(1,'How many more apples than pears? Line up the rows: 3 stick out. 6 − 3 = 3.',left=840,top=260,width=952,size=32)
 body+=step(2,'How many fruits altogether? 6 + 3 + 5 + 4 = 18.',left=840,top=420,width=952,size=32)
@@ -183,4 +183,5 @@ d=json.load(open(os.path.join(D,'deck.json')));
 if 'l10-cards' not in d['order']: d['order'].insert(d['order'].index('l10-explore1')+1,'l10-cards')
 json.dump(d,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 import p1gifted; p1gifted.apply(D,10)
+import p1gaps; p1gaps.apply(D,10)
 p1fix.finish(D,10,{'l10-explore1':'10–11 MIN','l10-explore2':'21–25 MIN','l10-ws2':'58–68 MIN'})

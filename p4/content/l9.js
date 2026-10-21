@@ -218,5 +218,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was reading between the lines on the scale. I got unstuck by writing what each line was worth."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) 125. Halfway between 100 and 150 is 100 + 25. (b) The scales are different. For example, A's graph may start at 40 and have big gaps for each 5, while B's starts at 0 with small gaps. The same numbers can look different, so read the scale first."]);
-module.exports.lesson.key.push(['Open investigation', "Three plants. (a) A: 10, 14, 18, 22, 26, 30, 34. B: 20, 24, 28, 32, 36, 40, 44. C: 10, 16, 22, 28, 34, 40, 46. (b) B is always 10 cm taller than A. The two lines would be parallel (the same steepness), with B above A. (c) Yes, in week 5 both are 40 cm. In week 6 Plant C is the tallest (46 cm, B is 44 cm). C's line is steeper. Look for children who spot the pattern in the table before drawing anything, and who link the growth per week to how steep the line is."]);

@@ -10,6 +10,7 @@
   "l9-title",
   "l9-warm1",
   "l9-warm2",
+  "l9-warmcheck",
   "l9-explore1",
   "l9-explore2",
   "l9-teach1",
@@ -32,7 +33,8 @@
   "l9-challenge",
   "l9-chwalk",
   "l9-talk",
-  "l9-exit"
+  "l9-exit",
+  "l9-reflect"
  ],
  "cover": "l9-title",
  "sections": {

@@ -195,6 +195,7 @@ missing=[i for i in deck['order'] if not os.path.exists(os.path.join(D,'slides',
 print(len(deck['order']),'slides; wrote',len(S),'missing',missing)
 
 import p1gifted; p1gifted.apply(D,8)
+import p1gaps; p1gaps.apply(D,8)
 import p1fix
 p1fix.sub_all(D,[('the Venn diagram in the lesson','the two-loop picture in the lesson'),('Putting numbers in the middle of the Venn diagram','Putting numbers in the middle of the two-loop picture'),('(Venn diagram)',''),('in a Venn diagram','in a two-loop picture'),('with a Venn diagram','with a two-loop picture')])
 p1fix.finish(D,8,{})

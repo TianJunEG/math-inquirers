@@ -10,6 +10,7 @@
   "l5-title",
   "l5-warm1",
   "l5-warm2",
+  "l5-warmcheck",
   "l5-explore1",
   "l5-explore2",
   "l5-teach1",
@@ -31,7 +32,8 @@
   "l5-challenge",
   "l5-chwalk",
   "l5-talk",
-  "l5-exit"
+  "l5-exit",
+  "l5-reflect"
  ],
  "cover": "l5-title",
  "sections": {

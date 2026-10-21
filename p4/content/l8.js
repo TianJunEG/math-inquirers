@@ -241,5 +241,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was folding the net in my head. I got unstuck by making it with paper."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) No. The first 4 squares wrap round as walls. The 5th lands on top of the 1st and the 6th on top of the 2nd, so nothing makes a lid or a base. (b) H has 2 (one up-down and one across). A has 1 (up-down)."]);
-module.exports.lesson.key.push(['Open investigation', "A row of four. Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason."]);

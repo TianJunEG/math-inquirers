@@ -10,6 +10,7 @@
   "l2-title",
   "l2-warm1",
   "l2-warm2",
+  "l2-warmcheck",
   "l2-explore1",
   "l2-explore2",
   "l2-teach1",
@@ -29,7 +30,8 @@
   "l2-challenge",
   "l2-chwalk",
   "l2-talk",
-  "l2-exit"
+  "l2-exit",
+  "l2-reflect"
  ],
  "cover": "l2-title",
  "sections": {

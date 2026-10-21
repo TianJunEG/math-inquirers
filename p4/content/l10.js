@@ -168,5 +168,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was choosing which way in to use. I got unstuck by trying a table first."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) 3 rabbits (and 5 ducks): 5 × 2 + 3 × 4 = 22. Suppose all 8 are ducks: 16 legs, 6 too few; each rabbit instead of a duck adds 2 legs, so 3 rabbits. (b) 8. Work backwards: 30 ÷ 2 = 15, then 15 − 7 = 8."]);
-module.exports.lesson.key.push(['Open investigation', "Ring toss scores. (a) You cannot get 1, 2, 4 or 7. You can get 3, 5, 6 (3 + 3), 8 (3 + 5), 9 (3 + 3 + 3), 10 (5 + 5) and every score from 8 up to 20 (checked by brute force up to 30). (b) After 7 you can get every score: 8, 9 and 10 can be made, and adding a 3 gives the next ones. (c) With 4 and 6 every score is even, so all the odd scores are impossible, and 2 as well (every even score from 4 up is possible). Why: both rings score even numbers, and even + even is even. Look for a systematic list or table, and for children who can say WHY about the even scores."]);

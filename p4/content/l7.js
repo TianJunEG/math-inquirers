@@ -218,5 +218,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was finding the missing lengths on the staircase. I got unstuck by writing the lengths on the picture."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) 22 m². The full rectangle is 6 × 4 = 24 m², and 24 − 2 = 22. (b) 20 m. Cutting a piece out of a corner does not change the perimeter. Push the steps out to the 6 by 4 rectangle: 6 + 4 + 6 + 4 = 20."]);
-module.exports.lesson.key.push(['Open investigation', "Bigger area, bigger perimeter?. (a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter."]);

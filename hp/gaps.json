@@ -3,11 +3,13 @@
   "check": [
    {
     "q": "A bunny starts at 1 and hops 3 each time: 1, 4, 7 ... Will it land on 20?",
-    "a": "No. It lands on 19, then 22, so it jumps over 20. (Keep hopping, or notice it only lands on numbers that are 1 more than a 3s number.)"
+    "a": "No. It lands on 19, then 22, so it jumps over 20. (Keep hopping, or notice it only lands on numbers that are 1 more than a 3s number.)",
+    "short": "No: 19, then 22"
    },
    {
     "q": "A pattern has 12 as its 2nd number and 18 as its 3rd number. What is its 1st number?",
-    "a": "6. The rule is add 6 (18 − 12), so go back one step: 12 − 6 = 6."
+    "a": "6. The rule is add 6 (18 − 12), so go back one step: 12 − 6 = 6.",
+    "short": "6"
    }
   ],
   "invest": {
@@ -26,11 +28,13 @@
   "check": [
    {
     "q": "A box has 20 sweets. 12 are red and the rest are green. How many are green?",
-    "a": "8. 12 + 8 = 20 (or 12 + 8: 2 + 8 makes 10, and 10 more makes 20)."
+    "a": "8. 12 + 8 = 20 (or 12 + 8: 2 + 8 makes 10, and 10 more makes 20).",
+    "short": "8"
    },
    {
     "q": "True or false: 7 + 5 = 6 + 6. How do you know?",
-    "a": "True. Both sides make 12. (7 goes down 1 and 5 goes up 1, so the total stays the same.)"
+    "a": "True. Both sides make 12. (7 goes down 1 and 5 goes up 1, so the total stays the same.)",
+    "short": "True: both sides make 12"
    }
   ],
   "invest": {
@@ -49,11 +53,13 @@
   "check": [
    {
     "q": "1 picture = 1 child. Red has 7 pictures, blue has 5 and green has 3. How many MORE children chose red than green?",
-    "a": "4 more (7 − 3). Compare the two rows: do not add."
+    "a": "4 more (7 − 3). Compare the two rows: do not add.",
+    "short": "4 more (7 − 3)"
    },
    {
     "q": "Our class chose red. Will the whole school choose red too? Why?",
-    "a": "Not necessarily. Only our class voted, so the graph tells us about our class, not the whole school."
+    "a": "Not necessarily. Only our class voted, so the graph tells us about our class, not the whole school.",
+    "short": "Not necessarily: only our class voted"
    }
   ],
   "invest": {
@@ -72,11 +78,13 @@
   "check": [
    {
     "q": "Beads repeat: red, blue, blue, red, blue, blue ... What colour is the 12th bead? How do you know?",
-    "a": "Blue. The pattern repeats every 3 beads, so the 3rd, 6th, 9th and 12th beads end a repeat, and each repeat ends with blue."
+    "a": "Blue. The pattern repeats every 3 beads, so the 3rd, 6th, 9th and 12th beads end a repeat, and each repeat ends with blue.",
+    "short": "Blue: 12 ends a repeat"
    },
    {
     "q": "A row of squares is made with sticks: 1 square uses 4 sticks, 2 squares use 7, 3 squares use 10. How many sticks for 4 squares? Why?",
-    "a": "13. Each new square shares a side, so it needs only 3 more sticks (10 + 3)."
+    "a": "13. Each new square shares a side, so it needs only 3 more sticks (10 + 3).",
+    "short": "13 sticks (3 more each time)"
    }
   ],
   "invest": {
@@ -95,11 +103,13 @@
   "check": [
    {
     "q": "A bag has some marbles. Ali puts in 6 more. Now there are 15. How many were in the bag at first?",
-    "a": "9. Work backwards: 15 − 6 = 9."
+    "a": "9. Work backwards: 15 − 6 = 9.",
+    "short": "9 (15 − 6)"
    },
    {
     "q": "I think of a number. I take away 2, then I add 7. I get 12. What is my number?",
-    "a": "7. Undo the last step first: 12 − 7 = 5, then undo the first step: 5 + 2 = 7. Check: 7 − 2 = 5, 5 + 7 = 12."
+    "a": "7. Undo the last step first: 12 − 7 = 5, then undo the first step: 5 + 2 = 7. Check: 7 − 2 = 5, 5 + 7 = 12.",
+    "short": "7 (12 − 7 = 5, then 5 + 2 = 7)"
    }
   ],
   "invest": {
@@ -118,11 +128,13 @@
   "check": [
    {
     "q": "Ben has a 20¢ coin, a 10¢ coin and a 5¢ coin. Which of 25¢, 30¢ and 40¢ can he pay exactly?",
-    "a": "25¢ (20¢ + 5¢) and 30¢ (20¢ + 10¢). Not 40¢: all three coins together make only 35¢."
+    "a": "25¢ (20¢ + 5¢) and 30¢ (20¢ + 10¢). Not 40¢: all three coins together make only 35¢.",
+    "short": "25¢ and 30¢, not 40¢"
    },
    {
     "q": "Can you make 25¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢?",
-    "a": "Yes: 10¢ + 10¢ + 5¢. (It is the only way.)"
+    "a": "Yes: 10¢ + 10¢ + 5¢. (It is the only way.)",
+    "short": "Yes: 10¢ + 10¢ + 5¢"
    }
   ],
   "invest": {
@@ -141,11 +153,13 @@
   "check": [
    {
     "q": "A shape has 9 corners. How many straight sides does it have?",
-    "a": "9. A shape has as many straight sides as it has corners."
+    "a": "9. A shape has as many straight sides as it has corners.",
+    "short": "9 sides"
    },
    {
     "q": "Cut a rectangle from one corner straight to the opposite corner. What two shapes do you get?",
-    "a": "Two triangles (the same size)."
+    "a": "Two triangles (the same size).",
+    "short": "Two triangles"
    }
   ],
   "invest": {
@@ -164,11 +178,13 @@
   "check": [
    {
     "q": "Ben is shorter than Cara. Cara is shorter than Dev. Dev is shorter than Eli. Who is second tallest?",
-    "a": "Dev. The order from shortest is Ben, Cara, Dev, Eli."
+    "a": "Dev. The order from shortest is Ben, Cara, Dev, Eli.",
+    "short": "Dev"
    },
    {
     "q": "Which number does NOT belong: 4, 8, 12, 15? Give a reason. Can you find a different reason?",
-    "a": "15 (it is not in the 4s; it is the only odd number; it is the only one that ends in 5). Accept any reasoned answer."
+    "a": "15 (it is not in the 4s; it is the only odd number; it is the only one that ends in 5). Accept any reasoned answer.",
+    "short": "15: not in the 4s, or the only odd one"
    }
   ],
   "invest": {
@@ -187,11 +203,13 @@
   "check": [
    {
     "q": "A ribbon lies from the 4 cm mark to the 11 cm mark on a ruler. How long is it?",
-    "a": "7 cm. Count the spaces from 4 to 11 (or 11 − 4). The ribbon does not start at 0."
+    "a": "7 cm. Count the spaces from 4 to 11 (or 11 − 4). The ribbon does not start at 0.",
+    "short": "7 cm"
    },
    {
     "q": "Ali measures a table with his pencil and gets 5 pencils. Mei measures the same table with a shorter pencil. Will she count more or fewer pencils?",
-    "a": "More. A shorter pencil covers less, so she needs more of them."
+    "a": "More. A shorter pencil covers less, so she needs more of them.",
+    "short": "More: a shorter unit needs more of them"
    }
   ],
   "invest": {
@@ -210,11 +228,13 @@
   "check": [
    {
     "q": "The pattern is 4, 9, 14, 19 ... What is the 7th number?",
-    "a": "34. The rule is add 5: 24, 29, 34 (or 4 + 6 jumps of 5 = 34)."
+    "a": "34. The rule is add 5: 24, 29, 34 (or 4 + 6 jumps of 5 = 34).",
+    "short": "34"
    },
    {
     "q": "Make 35¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.",
-    "a": "20¢ + 10¢ + 5¢. (It is the only way.)"
+    "a": "20¢ + 10¢ + 5¢. (It is the only way.)",
+    "short": "20¢ + 10¢ + 5¢"
    }
   ],
   "invest": {

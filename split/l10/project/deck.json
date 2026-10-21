@@ -10,6 +10,7 @@
   "l10-title",
   "l10-warm1",
   "l10-warm2",
+  "l10-warmcheck",
   "l10-explore1",
   "l10-cards",
   "l10-explore2",
@@ -33,6 +34,7 @@
   "l10-chwalk",
   "l10-talk",
   "l10-exit",
+  "l10-reflect",
   "end"
  ],
  "cover": "l10-title",

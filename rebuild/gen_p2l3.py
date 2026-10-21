@@ -1,7 +1,7 @@
 """Math Inquirers P2, Lesson 3: Legs, Wheels and Arrays. Writes split/p2l3/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit
+import slidekit, p2gaps
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
 RED='#D64545'

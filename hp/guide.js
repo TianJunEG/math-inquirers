@@ -1,6 +1,7 @@
 const C = require('./common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./lessons.js');
+const GAPS = require('./gaps.json');
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -39,18 +40,20 @@ G.push(tx('Suggested pairing: two lessons a week, for example Tuesday and Thursd
 G.push(h1('The 90-minute lesson routine', true));
 G.push(tx('Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.'));
 const R = [
-  ['0–10', 'Warm-up', 'A quick game from the lesson plan. Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers by thumbs, hands or chat.'],
+  ['0–10', 'Warm-up', 'A quick game and quick questions. Everyone joins in. The last 3 minutes (7 to 10) are the Warm-up check: two questions on the lesson’s key idea, in a new setting.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers by thumbs, hands or chat.'],
   ['10–25', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['25–35', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['35–40', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
-  ['40–72', 'Worksheet', 'Start in pairs, finish alone, then check together (the last 4 minutes, starting with a 1-minute stand-up stretch). Tutor asks “how do you know?” rather than giving answers. Think Harder (T) and Challenge (C) are for early finishers or home.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
+  ['40–72', 'Worksheet', 'Start in pairs, finish alone, then check together (the last 4 minutes, starting with a 1-minute stand-up stretch). Tutor asks “how do you know?” rather than giving answers. Think Harder (T), Challenge (C) and the Open investigation are for early finishers or home, and for children on the fast track (see below).', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
   ['72–80', 'Talk time', 'Share one answer and explain it. Compare methods.', 'Each child shares in turn.', 'Each child unmutes in turn.'],
-  ['80–90', 'Exit ticket and stamp', 'One question on a slip of paper. Stamp the inquiry journal.', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the camera. Tutor stamps the next time or posts it.']
+  ['80–90', 'Exit ticket, look-back and stamp', 'One question on a slip of paper (80 to 88). Stamp the inquiry journal. Then a one-minute look-back, “What was hard?” (88 to 90).', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the camera. Tutor stamps the next time or posts it.']
 ];
 G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1450), hd('What happens', 2700), hd('Face to face', 2300), hd('Online', 2550)]), ...R.map(r => row([c2(r[0], 900, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2700), c2(r[3], 2300), c2(r[4], 2550)]))]));
 G.push(h2('Teaching habits that matter'));
 ['Ask “How do you know?” after every answer, right or wrong.', 'Wait 10 seconds before helping. Let children struggle a little.', 'Praise the thinking (“You checked it two ways”), not just the answer.', 'Let children disagree with each other and settle it with objects or a drawing.', 'If a child finishes early, use the Challenge or Extension question, not extra drill.'].forEach(s => G.push(bu(s)));
 
+G.push(h2('Warm-up check, fast track and look-back (every lesson)'));
+['Warm-up check (minutes 7 to 10). Two questions on the key idea, in a new setting, not recall. Children answer on a whiteboard or paper, show it on a count of three, and the tutor asks a few children “How do you know?”. It is a way to decide where each child starts the worksheet. It is not a test: no scores are written down or announced.', 'Fast track. A child who gets both questions right and can say why in one sentence may start the worksheet on the Think Harder page, then the Challenge page and the Open investigation, while the group works on the core page. Every child still joins Explore and the Mini-lesson, and everyone returns for talk time and the exit ticket. Nobody is labelled: tell a child privately (face to face: a quiet word at minute 40; online: a private chat message) and say the same thing to any child who asks. The note in each workbook tells every child that this option exists. Which children start where can change from lesson to lesson, and any child who finds the Think Harder page too hard simply goes back to the core page.', 'Online with a group of 8, the tutor can give children different pages because each child already holds the page up to the camera. Above 8 children, the helper keeps an eye on the fast-track children while the tutor works with the others.', 'Look-back (minutes 88 to 90). Children tick or write three short prompts in the “What was hard?” box in the workbook: the hardest part, what got them unstuck, and what they will try next time. It takes one minute. Ask one or two children to share one line. Never mark or grade it, and praise the strategy (“Drawing it got you unstuck”), not the speed.', 'The Open investigation is the last task on each Challenge page. It has several valid answers. The key gives a model answer and what to look for. Accept any correct noticing, and ask “How do you know?”.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up face to face'));
 ['Seat children in pairs. Keep a materials box per pair so no time is lost.', 'Print the workbook double-sided and staple it. Print the cut-out page on card for Lessons 6 and 9.', 'Keep the answer key with the tutor only. Collect worksheets at the end unless the group is told to keep them.', 'Use a whiteboard or large paper for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
@@ -105,8 +108,12 @@ L.lessons.forEach(l => {
   G.push(seg('2–10 min', 'Warm-up'));
   doo([d.warmGame]);
   say(s.warmIntro);
-  doo(['After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.']);
+  doo(['After the game, ask the quick questions on the warm-up slides (about minutes 5 to 7; if time is short, take questions 1 to 3). Use thumbs or a whisper to partners before taking answers.']);
   ask(d.warmQs.map(x => [x[0], x[1]]));
+  G.push(seg('7–10 min', 'Warm-up check (3 minutes) and fast track'));
+  say(['Two questions on your whiteboard. Write your answer and how you know. Show me on three.']);
+  doo(['Show the Warm-up check slide. Give about a minute for each question, then show boards on three. Click to show each answer. Ask one or two children “How do you know?” and listen for a reason, not just the answer.', 'Quietly note who got both right and gave a reason. Do not write scores on the board or say who is “ahead”. At minute 40, tell those children privately to start on Think Harder, then Challenge and the Open investigation, and to hold that page up to the camera. Everyone else starts on the core page.', 'Everyone still joins Explore and the Mini-lesson. Fast-track children rejoin the group for talk time and the exit ticket. If the Think Harder page is too hard, they go back to the core page, with no fuss.']);
+  ask(GAPS[String(l.n)].check.map((c, i) => ['Warm-up check ' + (i + 1) + ': ' + c.q, c.a]), 'Question', 'Answer and why');
 
   G.push(seg('10–25 min', 'Explore (in pairs, with objects)'));
   say(s.predict);
@@ -135,7 +142,7 @@ L.lessons.forEach(l => {
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Early finishers: give Think Harder T1 first (it is in the workbook), then the Stretch slide, then the Challenge.']);
+  doo(['Early finishers: give Think Harder T1 first (it is in the workbook), then the Stretch slide, then the Challenge, then the Open investigation at the end of the Challenge page. Fast-track children start here (see the Warm-up check).']);
   G.push(h2('Stretch and challenge questions'));
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder T' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge C' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the two Think Harder pages in the workbook (T1 to T4 and C1 to C3). The Stretch slide has three more questions; their answers are in the answer key below. More are in the separate Question Bank.', { size: 19, color: '666666' }));
@@ -145,15 +152,20 @@ L.lessons.forEach(l => {
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
 
-  G.push(seg('80–90 min', 'Exit ticket and closing'));
+  G.push(seg('80–88 min', 'Exit ticket and closing'));
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
+  G.push(seg('88–90 min', 'Look-back: What was hard? (1 minute)'));
+  say(['Look at the box called “What was hard?”. Tick what was hard for you. Tick what helped you get unstuck. Write or draw one thing you will try next time. There are no right answers.', 'Who would like to tell us one thing? Thank you. Drawing it, using counters, asking a friend: those are all good ways to get unstuck.']);
+  doo(['Show the look-back slide. Keep it to one minute. Ask one or two children to share one line each (not only the fastest). Never mark or grade the box. Praise the strategy a child used, not how quickly they finished.']);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   G.push(h2('Extension for children who are ready'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  GAPS[String(l.n)].check.forEach((c, i) => G.push(p([t('Warm-up check ' + (i + 1) + '  ', { bold: true, size: 20 }), t(c.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Open investigation (' + GAPS[String(l.n)].invest.title + ')  ', { bold: true, size: 20 }), t(GAPS[String(l.n)].invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */

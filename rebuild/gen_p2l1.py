@@ -1,7 +1,7 @@
 """Math Inquirers P2, Lesson 1: Digit Detectives. Writes split/p2l1/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit
+import slidekit, p2gaps
 from slidekit import *
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p2l1','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)

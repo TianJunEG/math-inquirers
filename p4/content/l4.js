@@ -205,5 +205,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was comparing 3/8 and 3/5. I got unstuck by drawing two fraction bars."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) 2 full scoops and 1/4 of a scoop (9/4 = 2 1/4). (b) 3/5. Both have 3 pieces, but fifths are bigger pieces than eighths, so 3 fifths is more than 3 eighths."]);
-module.exports.lesson.key.push(['Open investigation', "Sharing 24 stickers. (a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1."]);

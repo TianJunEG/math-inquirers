@@ -10,6 +10,7 @@
   "l4-title",
   "l4-warm1",
   "l4-warm2",
+  "l4-warmcheck",
   "l4-explore1",
   "l4-explore2",
   "l4-teach1",
@@ -28,7 +29,8 @@
   "l4-challenge",
   "l4-chwalk",
   "l4-talk",
-  "l4-exit"
+  "l4-exit",
+  "l4-reflect"
  ],
  "cover": "l4-title",
  "sections": {

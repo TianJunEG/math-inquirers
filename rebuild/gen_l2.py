@@ -48,7 +48,7 @@ put('l2-teachpage2',sec('l2-teachpage2','56–58 MIN',body,'Teach before workshe
 put('l2-ws2',ws_preview('l2-ws2','60–66 MIN','Worksheet page 2: on your own',[('Q4','The equals sign. Work out the side you know first.'),('Q5','Magic triangle. Think about which numbers go in the corners.'),('Q6','Two numbers. Use cubes: take away the extra, share, give it back.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson.'))
 put('l2-ws2ans',check_slide('l2-ws2ans','66–68 MIN','Page 2: check together',[('Q4','a) 4,  b) 4,  c) 6,  d) 2,  e) No: 4 + 4 is 8 but 8 + 1 is 9'),('Q5','Sides of 9: corners 1, 2, 3 with 6, 4, 5 between.  Sides of 10: corners 1, 3, 5'),('Q6','4 and 6.   Think harder: 4 and 8')],'Click each answer after a child explains. Q5: small sides need small corners, so 1, 2, 3 go in the corners for 9. Between 1 and 2: 6; between 2 and 3: 4; between 3 and 1: 5. For 10 the corners are 1, 3, 5 with 6, 2, 4 between.'))
 # stretch new
-st=[('1.','13 + 7 = 10 + __ = 4 + __'),('2.','□ + □ + 4 = 20, and both boxes are the same number. What is in the box?'),('3.','How many pairs make 20 if both numbers are from 5 to 15? (7 + 13 and 13 + 7 count once.)')]
+st=[('1.','13 + 7 = 10 + __ = 4 + __'),('2.','A + A + 4 = 20, and the two As stand for the same number. What number is A?'),('3.','How many pairs make 20 if both numbers are from 5 to 15? (7 + 13 and 13 + 7 count once.)')]
 put('l2-stretch',sec('l2-stretch','For early finishers',h2('Stretch')+''.join(card(p(f'<span style="color:#1F7A6F">{a}</span>  {E(b)}',38,600,raw=True)) for a,b in st),'Answers: 1) 10 and 16 (all three are 20). 2) 8 (20 − 4 = 16, and 8 + 8 = 16). 3) 6 pairs: 5+15, 6+14, 7+13, 8+12, 9+11, 10+10.'))
 # challenge walk-through
 body=h2('Challenge: walk-through')+pin(128,250,760,p('Q1: sides of 11',40,800,TEAL))+pin(128,330,760,p('Try the even numbers 2, 4, 6 in the corners.',34),'rise',WHITE)+pin(128,450,760,p('2 + 5 + 4 = 11,  4 + 1 + 6 = 11,  6 + 3 + 2 = 11 ✓',34),'rise',WHITE)
@@ -70,5 +70,6 @@ for old in ['l2-teachtri','l2-teachtwo']:
 
 # ---- P1 audit fixes (issues 8, 9, 27, 28): timing ----
 import p1gifted; p1gifted.apply(D,2)
+import p1gaps; p1gaps.apply(D,2)
 import p1fix
 p1fix.finish(D,2,{'l2-ws1':'40–54 MIN','l2-ws1ans':'54–56 MIN','l2-teachpage2':'56–58 MIN','l2-ws2':'58–68 MIN'})

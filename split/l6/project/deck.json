@@ -10,6 +10,7 @@
   "l6-title",
   "l6-warm1",
   "l6-warm2",
+  "l6-warmcheck",
   "l6-explore1",
   "l6-explore2",
   "l6-teach1",
@@ -30,7 +31,8 @@
   "l6-challenge",
   "l6-chwalk",
   "l6-talk",
-  "l6-exit"
+  "l6-exit",
+  "l6-reflect"
  ],
  "cover": "l6-title",
  "sections": {

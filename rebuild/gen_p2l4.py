@@ -1,7 +1,7 @@
 """Math Inquirers P2, Lesson 4: Pattern Machines. Writes split/p2l4/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit
+import slidekit, p2gaps
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
 RED='#D64545'; BLUE='#4A7FD6'; GREEN='#3DBE7A'; BROWN='#C98A1A'

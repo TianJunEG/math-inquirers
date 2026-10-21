@@ -210,5 +210,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was remembering to do × before −. I got unstuck by underlining the part to do first."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) (2 + 3) × 4 = 5 × 4 = 20. (b) He worked from left to right: 10 − 2 = 8, 8 × 3 = 24. Multiplication comes first: 2 × 3 = 6, 10 − 6 = 4."]);
-module.exports.lesson.key.push(['Open investigation', "Make the target. Every target from 1 to 12 can be made (all of 1 to 20 can, checked by brute force). Model sentences: 1 = (5 − 4) × (3 − 2); 2 = 5 − 4 + 3 − 2; 3 = 5 × 2 − 4 − 3; 4 = 2 + 3 + 4 − 5; 5 = (2 + 3 − 4) × 5; 6 = 2 + 3 − 4 + 5; 7 = 2 + (4 − 3) × 5; 8 = 5 + 4 + 2 − 3; 9 = 2 + 3 × 4 − 5; 10 = (2 × 3 − 4) × 5; 11 = 2 × 5 − 3 + 4; 12 = 2 × (3 + 5) − 4. Many other correct sentences exist: accept any that work out. Look for children who work each sentence out in the right order and check it, and who use brackets on purpose."]);

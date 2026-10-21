@@ -125,5 +125,6 @@ json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False
 print(len(deck['order']),'slides')
 
 import p1gifted; p1gifted.apply(D,6)
+import p1gaps; p1gaps.apply(D,6)
 import p1fix
 p1fix.finish(D,6,{'l6-ws1':'40–52 MIN','l6-ws1ans':'52–54 MIN','l6-teachfew':'54–56 MIN','l6-teachnotes':'56–57 MIN','l6-trynotes':'57–58 MIN','l6-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','teachexact','teachswap'))

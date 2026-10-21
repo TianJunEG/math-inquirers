@@ -10,6 +10,7 @@
   "l8-title",
   "l8-warm1",
   "l8-warm2",
+  "l8-warmcheck",
   "l8-explore1",
   "l8-explore2",
   "l8-teach1",
@@ -31,7 +32,8 @@
   "l8-challenge",
   "l8-chwalk",
   "l8-talk",
-  "l8-exit"
+  "l8-exit",
+  "l8-reflect"
  ],
  "cover": "l8-title",
  "sections": {

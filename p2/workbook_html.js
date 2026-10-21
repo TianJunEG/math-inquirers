@@ -12,16 +12,15 @@ const hdr = (n, topic, title, pb = true, note = '') => [
 ];
 
 // ---- close-the-gaps pieces: fast-track note, open investigation grid, reflection ----
-const faceSvg = m => `<svg width="30" height="30" viewBox="0 0 30 30" style="vertical-align:middle"><circle cx="15" cy="15" r="13" fill="#FFC93C" stroke="#1B2A49" stroke-width="2"/><circle cx="10" cy="12" r="1.8" fill="#1B2A49"/><circle cx="20" cy="12" r="1.8" fill="#1B2A49"/><path d="${m}" fill="none" stroke="#1B2A49" stroke-width="2" stroke-linecap="round"/></svg>`;
+const faceSvg = m => `<svg width="26" height="26" viewBox="0 0 30 30" style="vertical-align:middle"><circle cx="15" cy="15" r="13" fill="#FFC93C" stroke="#1B2A49" stroke-width="2"/><circle cx="10" cy="12" r="1.8" fill="#1B2A49"/><circle cx="20" cy="12" r="1.8" fill="#1B2A49"/><path d="${m}" fill="none" stroke="#1B2A49" stroke-width="2" stroke-linecap="round"/></svg>`;
 const tick = '<span style="display:inline-block;width:13px;height:13px;border:2px solid #1B2A49;border-radius:3px;margin:0 5px -2px 14px;background:#fff"></span>';
-const gridSvg = () => { let g = '<svg aria-label="Square grid for drawing shapes" viewBox="0 0 600 190" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">'; for (let r = 0; r < 5; r++) for (let c = 0; c < 16; c++) g += `<rect x="${12 + c * 36}" y="${8 + r * 36}" width="36" height="36" fill="#fff" stroke="#8A94AD" stroke-width="1.5"/>`; return g + '</svg>'; };
+const gridSvg = () => { let g = '<svg aria-label="Square grid for drawing shapes" viewBox="0 0 600 130" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">'; for (let r = 0; r < 4; r++) for (let c = 0; c < 19; c++) g += `<rect x="${12 + c * 30}" y="${8 + r * 30}" width="30" height="30" fill="#fff" stroke="#8A94AD" stroke-width="1.5"/>`; return g + '</svg>'; };
 const fastNote = () => `<span style="flex:1;margin:0 0 3px 14px;border:1.5px dashed #1F7A6F;background:#EAF6F3;border-radius:5px;padding:1px 6px;font-size:10px;line-height:1.2;min-width:150px"><b style="color:#1F7A6F">${esc0(L.gaps.common.fast.split('.')[0])}.</b> ${esc0(L.gaps.common.fast.split('.').slice(1).join('.').trim())}</span>`;
 function esc0(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-const reflect = g => `<div class="p" style="border:2.5px solid #1B2A49;border-radius:6px;background:#FFFBEA;padding:4px 12px 2px;margin:4px 4px 0;font-size:13px;line-height:1.4;break-inside:avoid"><div style="font-weight:700;font-size:16px;color:#1F7A6F">What was hard?  <span style="font-weight:400;font-size:12px;color:#5B6785">No marks for this page. Tick, then write one line.</span></div>`
-  + `<div>This lesson felt:${tick}${faceSvg('M9 18 Q15 25 21 18')} easy${tick}${faceSvg('M10 20 H20')} OK${tick}${faceSvg('M9 22 Q15 15 21 22')} tricky</div>`
-  + `<div>The hardest part was <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:62%">&nbsp;</span></div>`
+const reflect = g => `<div class="p" style="border:2.5px solid #1B2A49;border-radius:6px;background:#FFFBEA;padding:3px 12px 2px;margin:4px 4px 0;font-size:12.5px;line-height:1.35;break-inside:avoid"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:15px;color:#1F7A6F">What was hard?</b><span style="margin-left:10px">This lesson felt:${tick}${faceSvg('M9 18 Q15 25 21 18')} easy${tick}${faceSvg('M10 20 H20')} OK${tick}${faceSvg('M9 22 Q15 15 21 22')} tricky</span></div>`
+  + `<div>The hardest part was <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:68%">&nbsp;</span></div>`
   + `<div>I got unstuck by:${g.unstuck.map(u => tick + esc0(u)).join('')}</div>`
-  + `<div style="margin-bottom:2px">Next time I will try <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:63%">&nbsp;</span></div></div>`;
+  + `<div style="margin-bottom:2px">Next time I will try <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:70%">&nbsp;</span></div></div>`;
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -31,7 +30,7 @@ const extra = (n) => {
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 90, after: 30, keepNext: true })); out.push(...lines(3)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 90, after: 30, keepNext: true })); out.push(...lines([4, 5, 8, 10].includes(n) ? 2 : 3)); });
   const g = L.gaps[String(n)];
   out.push(q(8, 'Open investigation: ' + g.invest.title + '. ' + g.invest.text, { before: 90, after: 30, keepNext: true }));
   if (g.fig === 'grid') out.push(H.fig(gridSvg()));

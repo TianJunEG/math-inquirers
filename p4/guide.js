@@ -91,6 +91,7 @@ ask([
 ], 'If…', 'Then…');
 
 L.lessons.forEach(l => {
+  l = Object.assign({}, l, { gaps: L.content[l.n - 1].gaps });
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
@@ -166,6 +167,8 @@ L.lessons.forEach(l => {
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Open investigation  ', { bold: true, size: 20 }), t(l.gaps.invest.head + ' (' + l.gaps.invest.kind.trim() + ') ' + l.gaps.invest.key, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(p([t('Warm-up check  ', { bold: true, size: 20 }), t(l.gaps.check.map((x, i) => '(' + (i + 1) + ') ' + x.a).join('  '), { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */

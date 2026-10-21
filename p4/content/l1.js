@@ -189,5 +189,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was knowing when to stop listing factors. I got unstuck by writing the pairs in order."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) Floors 15 and 30. They are in both lists: they are the multiples of 15. (b) Siti listed the multiples of 30. The factors are 1, 2, 3, 5, 6, 10, 15, 30."]);
-module.exports.lesson.key.push(['Open investigation', "Bus meeting times. (a) 18, 12, 30, 42 minutes. (b) The meeting time is always a multiple of both gaps (the smallest common multiple), and never smaller than the bigger gap. When the gaps share no factor except 1 (6 and 5, 6 and 7) the meeting time is their product (30, 42). Accept any true pattern. (c) Six pairs: 2 and 12, 3 and 4, 3 and 12, 4 and 6, 4 and 12, 6 and 12 (checked by brute force). Look for a systematic list (fix one gap, test the others) rather than guesses. A child with 3 or 4 pairs who can explain how they know is doing well. Extension: choose your own meeting time (such as 30) and find all the pairs."]);

@@ -10,6 +10,7 @@
   "l3-title",
   "l3-warm1",
   "l3-warm2",
+  "l3-warmcheck",
   "l3-explore1",
   "l3-explore2",
   "l3-teach1",
@@ -30,7 +31,8 @@
   "l3-challenge",
   "l3-chwalk",
   "l3-talk",
-  "l3-exit"
+  "l3-exit",
+  "l3-reflect"
  ],
  "cover": "l3-title",
  "sections": {

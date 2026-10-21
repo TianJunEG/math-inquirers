@@ -232,5 +232,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was reading the protractor scale. I got unstuck by estimating the angle first."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) North-West. 135° is 3 steps of 45°: East to North-East to North to North-West. (b) 55°. A square corner is 90°, and 90° − 35° = 55°."]);
-module.exports.lesson.key.push(['Open investigation', "Splitting a corner. (a) Seven sets: 10, 10, 70; 10, 20, 60; 10, 30, 50; 10, 40, 40; 20, 20, 50; 20, 30, 40; 30, 30, 30 (checked by brute force). (b) A good method: fix the smallest angle, then list the other two in order. Counting in units of 10° helps: three whole numbers that add up to 9. (c) Three sets: 30, 30, 120; 30, 60, 90; 60, 60, 60. What stays the same: the three angles always add up to the whole turn (90° or 180°). Low floor: any three angles that add to 90°. Look for children who realise a list needs a system."]);

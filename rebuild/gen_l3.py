@@ -152,4 +152,5 @@ json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False
 print(len(deck['order']),'slides')
 
 import p1gifted; p1gifted.apply(D,3)
+import p1gaps; p1gaps.apply(D,3)
 import p1fix; p1fix.finish(D,3,{'l3-ws2':'58–68 MIN'})

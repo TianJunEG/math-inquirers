@@ -3,10 +3,10 @@ def E(body): return SVG(1000,270,body,'height:190px;width:100%')
 def e1():
     k=940/50;x0=30;b=L(x0,150,x0+50*k,150,NAVY,4)
     for n in range(0,51,5): b+=L(x0+n*k,140,x0+n*k,160,NAVY,2)+T(x0+n*k,185,str(n),22)
-    for n in range(4,21,4): b+=T(x0+n*k,128,'✕',34,RED)
+    for n in range(4,21,4): b+=L(x0+n*k-9,100,x0+n*k+9,120,RED,5)+L(x0+n*k-9,120,x0+n*k+9,100,RED,5)
     for n in range(5,21,5): b+=C(x0+n*k,215,12,WHITE,BLUE,4)
     b+=T(x0+20*k,250,'20 has both marks',24,TEAL)
-    b+=T(30,45,'Frog A: 4s (red ✕)',28,RED,'start')+T(380,45,'Frog B: 5s (blue ○)',28,BLUE,'start')
+    b+=T(30,45,'Frog A: 4s (red crosses)',28,RED,'start')+T(380,45,'Frog B: 5s (blue circles)',28,BLUE,'start')
     return E(b)
 def e2():
     b=''

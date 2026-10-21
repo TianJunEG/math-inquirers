@@ -10,6 +10,7 @@
   "l7-title",
   "l7-warm1",
   "l7-warm2",
+  "l7-warmcheck",
   "l7-explore1",
   "l7-explore2",
   "l7-teach1",
@@ -32,7 +33,8 @@
   "l7-challenge",
   "l7-chwalk",
   "l7-talk",
-  "l7-exit"
+  "l7-exit",
+  "l7-reflect"
  ],
  "cover": "l7-title",
  "sections": {

@@ -39,7 +39,7 @@ G.push(tx('Suggested pairing: two lessons a week, for example Tuesday and Thursd
 G.push(h1('The 90-minute lesson routine', true));
 G.push(tx('Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.'));
 const R = [
-  ['0–8', 'Warm-up', 'A quick game from the lesson plan. Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers by thumbs, hands or chat.'],
+  ['0–8', 'Warm-up', 'Welcome, a 3-minute Warm-up check (two questions in a new setting, minutes 1 to 4), then a quick game. Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers by thumbs, hands or chat.'],
   ['8–20', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['20–32', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['32–36', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
@@ -98,14 +98,21 @@ L.lessons.forEach(l => {
   ].map(r => row([cell(r[0], 1900, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 60 }), c2(r[1], 8000, { h: 60 })]))));
   G.push(gap(40));
 
-  G.push(seg('0–2 min', 'Opening'));
+  G.push(seg('0–1 min', 'Opening'));
   say(s.hook);
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
 
-  G.push(seg('2–8 min', 'Warm-up'));
+  const gp = L.gaps[String(l.n)], GC = L.gaps.common;
+  G.push(seg('1–4 min', 'Warm-up check (3 minutes) and fast track'));
+  say([GC.preSay]);
+  doo(GC.preDo);
+  ask(gp.pre.map((x, i) => ['Check question ' + (i + 1) + ': ' + x.q, x.a + '  Listen for: ' + x.w]), 'Warm-up check question', 'Answer and what to listen for');
+  doo(['The fast-track note is printed at the top of the first worksheet page, next to the lesson title.']);
+
+  G.push(seg('4–8 min', 'Warm-up'));
   doo([d.warmGame]);
   say(s.warmIntro);
-  doo(['After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.']);
+  doo(['Keep the game to two minutes today. After the game, ask the quick questions on the warm-up slides (if you are short of time, use questions 1, 3 and 5). Use thumbs or a whisper to partners before taking answers.']);
   ask(d.warmQs.map(x => [x[0], x[1]]));
 
   G.push(seg('8–20 min', 'Explore (in pairs, with objects)'));
@@ -136,18 +143,23 @@ L.lessons.forEach(l => {
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
   doo(['Early finishers: give the stretch question first, then the challenge.']);
+  doo(['Fast-track children (see the Warm-up check) start on the THINK HARDER pages and the Open investigation (Workbook Q8). Visit them at about minute 40. They rejoin the group for the check-together slides and talk time.']);
   G.push(h2('Stretch and challenge questions'));
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
+  ask([['Workbook Open investigation (Q8): ' + gp.invest.title + '. ' + gp.invest.text, gp.invest.model]], 'Open investigation (several answers are right)', 'Model answer and what to look for');
 
   G.push(seg('72–80 min', 'Talk time'));
   doo(['Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.']);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
 
-  G.push(seg('80–90 min', 'Exit ticket and closing'));
+  G.push(seg('80–88 min', 'Exit ticket'));
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
+  G.push(seg('88–90 min', 'What was hard? (1 minute) and closing'));
+  say([GC.refSay]);
+  doo([GC.refDo]);
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   G.push(h2('Extension for children who are ready'));

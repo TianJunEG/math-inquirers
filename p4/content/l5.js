@@ -189,5 +189,3 @@ module.exports.gaps = {
  },
  "reflect": "The hardest part for me was comparing decimals with different numbers of digits. I got unstuck by adding zeros so they had the same length."
 };
-module.exports.lesson.key.push(['Warm-up check', "(a) 0.8. It has 8 tenths and 0.75 has only 7 tenths (0.8 = 0.80). More digits does not mean bigger. (b) Any decimal from 3.401 to 3.499, for example 3.45. Write 3.4 as 3.40 and 3.5 as 3.50: 3.45 is between them."]);
-module.exports.lesson.key.push(['Open investigation', "Between two decimals. (a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare."]);
