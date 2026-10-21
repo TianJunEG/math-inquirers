@@ -148,11 +148,11 @@ module.exports = {
   qbank: {
     core: [
       { q: 'It is 10 o’clock. What time will it be 5 hours later?', a: '3 o’clock (15 − 12 = 3)' },
-      { q: 'Work out 20 mod 12.', a: '8 (20 = 1 × 12 + 8)' },
-      { q: 'What is the remainder when 45 is divided by 7?', a: '3 (45 = 6 × 7 + 3)' },
+      { q: 'A clock has 12 numbers. Start at 12 and move 20 hours forward. Where do you stop? (This is written 20 mod 12: the remainder when 20 is divided by 12.)', a: '8 o’clock (20 − 12 = 8, so 20 mod 12 = 8)' },
+      { q: 'What is the remainder when 45 is divided by 7? Hint: count up in 7s.', a: '3 (45 = 6 × 7 + 3)' },
       { q: 'Today is Monday. What day will it be 10 days from today?', a: 'Thursday (10 mod 7 = 3; Monday + 3 days)' },
-      { q: 'Code the word DOG with a shift of 1.', a: 'EPH' },
-      { q: 'Decode KBN. It was made with a shift of 1.', a: 'JAM' }
+      { q: 'A secret code moves every letter one place along the alphabet: A becomes B, B becomes C, and so on. Code the word DOG. (Write the alphabet out to help you.)', a: 'EPH' },
+      { q: 'Using the same code (every letter moves one place along), decode KBN. Move each letter one place back.', a: 'JAM' }
     ],
     stretch: [
       { q: 'The pattern CODECODECODE… goes on and on. What is the 100th letter?', a: 'E (100 mod 4 = 0, so the 100th letter is the 4th letter of CODE)' },
@@ -167,11 +167,11 @@ module.exports = {
     challenge: [
       { q: 'Mei makes a new code: multiply each letter number by 2, then take mod 26. Why can her friend not always decode it?', a: 'Two letters can give the same code letter: A (0) and N (13) both give 0 = A (13 × 2 = 26). So every code letter could stand for two different letters.' },
       { q: 'Ben’s code multiplies each letter number by 3, then takes mod 26. Code the word CAB. Do two letters ever get the same code letter?', a: 'GAD (C = 2 gives 6 = G, A = 0 gives 0 = A, B = 1 gives 3 = D). No: all 26 letters get different code letters, because 3 and 26 have no common factor.' },
-      { q: 'What day of the week is it 1000 days after a Monday?', a: 'Sunday (1000 = 142 × 7 + 6, Monday + 6 days)' },
-      { q: 'Find the smallest number that leaves a remainder of 1 when it is divided by 2, 3, 4, 5 or 6, and is a multiple of 7.', a: '301 (it is 1 more than a multiple of 60: 61, 121, 181, 241, 301; only 301 = 7 × 43)' },
-      { q: 'Count 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, … (start again after 7). What is the 2026th number you say?', a: '3 (2026 = 289 × 7 + 3)' },
-      { q: 'Ali codes a message with a shift of k, then codes the result again with the same shift k. It is the same as one shift of 6. What could k be? Find every answer from 0 to 25.', a: '3 or 16 (3 + 3 = 6; 16 + 16 = 32 and 32 mod 26 = 6)' },
       { q: 'Crack this Caesar code. Hint: a one-letter word is usually A or I.   X ADKT BPIWH', a: 'I LOVE MATHS (X = 23 is I = 8, so the shift is 15)' },
+      { q: 'Find the smallest number that leaves a remainder of 2 when it is divided by 3, by 4 or by 5, and is a multiple of 7.', a: '182 (it is 2 more than a multiple of 60: 62, 122, 182, and 182 = 7 × 26). The smaller numbers 2, 62 and 122 are not multiples of 7.' },
+      { q: 'Ali goes to the library every 4th day and Mei every 6th day. They are both there on Day 0, a Monday. On which day of the week do they next meet? And on which day of the week is their 5th meeting after Day 0?', a: 'They next meet on Day 12 (the smallest number in both the 4 and 6 times tables), and 12 mod 7 = 5, so it is a Saturday. Their 5th meeting after Day 0 is on Day 60, and 60 mod 7 = 4, so it is a Friday.' },
+      { q: 'Ali codes a message with a shift of k, then codes the result again with the same shift k. It is the same as one shift of 6. What could k be? Find every answer from 0 to 25.', a: '3 or 16 (3 + 3 = 6; 16 + 16 = 32 and 32 mod 26 = 6)' },
+      { q: 'Write your own secret message of at least 8 letters and code it with a shift of your choice. Write clear instructions telling a friend how to decode it, and explain how a friend could crack it without being told the shift. Swap and decode.', a: 'Open. Check the code by decoding it, and that the cracking idea is sensible: try every shift from 1 to 25, or use the commonest letter (often E) or a short word (A or I). Example: MEET AT SIX with a shift of 3 is PHHW DW VLA.' },
       { q: 'Ali codes a message with a shift of 7. Mei codes Ali’s result with another shift. The final message is the same as the original coded with a shift of 2. What shift did Mei use?', a: '21 (7 + 21 = 28, and 28 mod 26 = 2)' },
       { q: 'Start at 12 on a clock and keep jumping forward 5 hours. Do you land on every number before you get back to 12? What about jumps of 4 hours?', a: 'Jumps of 5: yes, all 12 numbers (5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12). Jumps of 4: no, only 4, 8 and 12, because 4 shares a factor with 12.' }
     ]

@@ -179,8 +179,8 @@ st=[('1.','? → + 7 → × 2 → 30.  What went IN?'),('2.','Mei had some stamp
 put(f'{P}-stretch',sec(f'{P}-stretch','For early finishers',h2('Stretch')+qcards(st,36),'For children who finish early. Answers: 1) 8 (30 ÷ 2 = 15, 15 − 7 = 8; check 8 + 7 = 15, 15 × 2 = 30). 2) 16 (5 + 3 = 8 is the half she kept, 8 + 8 = 16; check: half of 16 is 8, 8 − 3 = 5). 3) Ben 8, Ravi 10, Tom 13 (31 − 2 − 5 = 24, 24 ÷ 3 = 8; check 8 + 10 + 13 = 31).'))
 
 # 22 challenge
-ch=[('1.','A machine does × 2, then − 4. Ravi puts a number in, then puts the OUT straight back in again. The final OUT is 12. What number did he put in first?'),('2.','Ben gives Ali 5 marbles. Now they both have 20 marbles. How many marbles did each boy have before?')]
-put(f'{P}-challenge',sec(f'{P}-challenge','Challenge',h2('Challenge')+qcards(ch,38),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Ask for the reason every time. Answers: 1) 6 (go back twice: 12 + 4 = 16, 16 ÷ 2 = 8; 8 + 4 = 12, 12 ÷ 2 = 6; check 6 → 8 → 12). 2) Ben 25, Ali 15 (give the 5 back: Ben 20 + 5, Ali 20 − 5). Common wrong answer for 2: "both had 20" or "Ben 25, Ali 20".'))
+ch=[('1.','A machine does × 2, then − 4. Ravi puts a number in, then puts the OUT straight back in again. The final OUT is 12. What number did he put in first?'),('2.','Ben gives Ali 5 marbles. Now they both have 20 marbles. How many marbles did each boy have before? How many MORE did Ben have than Ali at first? Why is it not 5?')]
+put(f'{P}-challenge',sec(f'{P}-challenge','Challenge',h2('Challenge')+qcards(ch,38),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Ask for the reason every time. Answers: 1) 6 (go back twice: 12 + 4 = 16, 16 ÷ 2 = 8; 8 + 4 = 12, 12 ÷ 2 = 6; check 6 → 8 → 12). 2) Ben 25, Ali 15 (give the 5 back: Ben 20 + 5, Ali 20 − 5). Ben had 10 more than Ali, not 5, because Ben lost 5 AND Ali gained 5. Extension: if Ben had given 8 and they ended equal, he had 16 more at first (the gap is double the number given). Common wrong answer for 2: "both had 20" or "Ben 25, Ali 20", or "5 more".'))
 
 # 23 chdiag
 m1=machine([('?','q'),('× 2','op'),('− 4','op'),('□','res')],w=760).replace('width:760px;height:130px','width:100%;height:auto')
@@ -203,7 +203,7 @@ put(f'{P}-chdiag',sec(f'{P}-chdiag','Challenge',body,'Show after pairs have trie
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: go back through twice',38,800,TEAL))
 for i,t in enumerate(['Second time: 12 + 4 = 16,  16 ÷ 2 = 8','First time: 8 + 4 = 12,  12 ÷ 2 = 6','Check: 6 × 2 − 4 = 8,  8 × 2 − 4 = 12 ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: undo the give',38,800,TEAL))
-for i,t in enumerate(['After: Ben 20, Ali 20.','Undo it: Ben gets his 5 back: 20 + 5 = 25','Ali gives the 5 back: 20 − 5 = 15','Check: 25 − 5 = 20,  15 + 5 = 20 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
+for i,t in enumerate(['After: Ben 20, Ali 20.','Undo it: Ben gets his 5 back: 20 + 5 = 25','Ali gives the 5 back: 20 − 5 = 15','Ben had 25 − 15 = 10 more, not 5 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
 put(f'{P}-chwalk',sec(f'{P}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the machine runs twice, so we undo it twice, starting from the final OUT; the number in the middle is 8. Q2: the last thing that happened was "Ben gives 5", so we undo it: Ben takes 5 back and Ali gives 5 back. Ask: "Why is the difference 10 and not 5?" (Ben lost 5 AND Ali gained 5.)'))
 
 # 25 talk, 26 exit

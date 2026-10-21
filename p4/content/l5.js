@@ -59,12 +59,11 @@ module.exports = {
     extension: 'Use the digit cards 1, 3, 5, 7 and a decimal point. Make the number with 2 decimal places that is closest to 40. (37.51) Then make your own closest-to puzzle for a partner.',
     key: [
       ['Q1', 'A 6.3,  B 6.85,  C 4.53,  D 4.58,  E 0.247.  (f) B (6.85 rounds to 7; 6.3 rounds to 6; the others are near 4.5 or 0.2).'],
-      ['Q2', '(a) 3.045, 3.054, 3.405, 3.45, 3.5  (b) No. Line up the points: 3.405 and 3.450 have the same tenths, but 0 hundredths is less than 5 hundredths, so 3.405 is smaller.  (c) 6, 7, 8 and 9 (5.57 is smaller than 5.62).'],
+      ['Q2', '(a) 3.045, 3.054, 3.405, 3.45, 3.5  (b) No. Line up the points: 3.405 and 3.450 have the same tenths, but 0 hundredths is less than 5 hundredths, so 3.405 is smaller. '],
       ['Q3', '(a) Smallest 7.35, largest 7.44  (b) 10 numbers (7.35, 7.36 … 7.44)  (c) 7.38 (7.47 has digits adding to 18 too, but it rounds to 7.5).'],
       ['Q4', '(a) 12 numbers: 3.69, 3.96, 6.39, 6.93, 9.36, 9.63, 36.9, 39.6, 63.9, 69.3, 93.6, 96.3  (b) 9.63  (c) 6.93 (only 0.07 away)  (d) 39.6'],
       ['Q5', 'Siti $4.10, Mei $5.30 ($9.40 − $1.20 = $8.20, $8.20 ÷ 2 = $4.10, $4.10 + $1.20 = $5.30; check $4.10 + $5.30 = $9.40).'],
-      ['Q6', '(a) 0.4 kg (2.85 − 0.45 = 2.40 kg for 6 cans, 2.40 ÷ 6 = 0.4)  (b) 2.05 kg (2.85 − 0.8)'],
-      ['Q7', '4.687 (rounds to 4.7, so tenths 6 or 7; tenths 7 would make hundredths 9, 4.79…, too big; so 4.68_ and 4 + 6 + 8 + 7 = 25).']
+      ['Q6', '(a) 0.4 kg (2.85 − 0.45 = 2.40 kg for 6 cans, 2.40 ÷ 6 = 0.4)  (b) 2.05 kg (2.85 − 0.8)']
     ]
   },
 
@@ -95,27 +94,28 @@ module.exports = {
     keySmall: 'To round, find the two neighbours and the halfway mark. To round backwards, find the smallest and largest numbers that round to it.',
     brk: 'Decimal stand-up. The tutor calls a decimal. More than 0.5: stand tall. Less than 0.5: crouch. Exactly 0.5: freeze like a statue.',
     ws1: 'Page 1, in pairs: Q1 zoom-in number lines, Q2 ordering and the missing digit, Q3 the rounding detective.',
-    ws2: 'Page 2, on your own: Q4 digit-card decimals, Q5 money bar model, Q6 the box of cans, Q7 the mystery decimal.'
+    ws2: 'Page 2, on your own: Q4 digit-card decimals, Q5 money bar model, Q6 the box of cans.'
   },
 
   qbank: {
     core: [
-      { q: 'Write 3 ones, 4 tenths and 7 thousandths as a decimal.', a: '3.407' },
-      { q: 'What is the value of the digit 6 in 12.365?', a: '6 hundredths (0.06)' },
-      { q: 'Which is greater, 0.9 or 0.89? How do you know?', a: '0.9. Line up the points: 0.90 and 0.89. 9 tenths is more than 8 tenths.' },
-      { q: 'Round 7.46 to 1 decimal place.', a: '7.5' },
-      { q: 'Round 15.96 to 1 decimal place.', a: '16.0' },
-      { q: 'Ali buys 3 pens at $1.25 each. How much does he pay?', a: '$3.75' }
+      { q: 'Ali has 3 one-dollar coins, 4 ten-cent coins and 7 one-cent coins. How much money is that? Write the amount in dollars, using a decimal point.', a: '$3.47' },
+      { q: 'Ali has $0.90 and Mei has $0.89. Who has more money? How much more? (Think in cents.)', a: 'Ali has more: 90¢ is 1¢ more than 89¢.' },
+      { q: 'Is 7.46 closer to 7.4 or to 7.5? Draw a number line from 7.4 to 7.5 and mark the halfway point 7.45 to help you.', a: '7.5 (7.46 is just past the halfway point 7.45).' },
+      { q: 'Ali buys 3 pens at $1.25 each. How much does he pay? (Add $1.25 three times, or think of $1.25 as 125 cents.)', a: '$3.75' },
+      { q: 'A stick is 1 metre long. It is cut into 10 equal parts and Mei takes 4 parts. She then cuts one more part into 10 tiny equal pieces and takes 7 of them. How long is Mei’s stick, written as a decimal of a metre?', a: '0.47 m (4 tenths and 7 hundredths).' },
+      { q: 'A number line from 3 to 4 has 10 equal steps. An arrow points to the 6th step after 3. What number is it? Now zoom in on the gap between that number and the next step, and cut it into 10 smaller steps. A new arrow points to the 5th small step. What number is that?', a: '3.6, then 3.65.' }
     ],
     stretch: [
       { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
       { q: 'A number with 2 decimal places rounds to 10 when rounded to the nearest whole number. What is the smallest it can be? The largest?', a: 'Smallest 9.50, largest 10.49' },
       { q: 'What number is halfway between 2.6 and 2.7? What number is halfway between 2.6 and 2.61?', a: '2.65 and 2.605' },
-      { q: 'A ribbon 4.8 m long is cut into 6 equal pieces. How long is each piece? Ravi uses 4 of the pieces. How much ribbon does he use?', a: '0.8 m each; 3.2 m' },
+      { q: 'Mystery decimal. I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', a: '4.687 (rounds to 4.7, so tenths 6 or 7; tenths 7 would make hundredths 9, 4.79…, too big; so 4.68_ and 4 + 6 + 8 + 7 = 25).' },
       { q: 'Siti buys 4 notebooks that cost the same. She pays with a $10 note and gets $2.60 change. How much does one notebook cost?', a: '$1.85 ($10 − $2.60 = $7.40, $7.40 ÷ 4 = $1.85)' },
       { q: 'Write these in order, smallest first: 0.6, 0.066, 0.606, 0.66, 0.06', a: '0.06, 0.066, 0.6, 0.606, 0.66 (as 0.060, 0.066, 0.600, 0.606, 0.660)' },
       { q: 'Mei is 1.38 m tall. Ben is 0.15 m taller than Mei. Ali is 0.09 m shorter than Ben. How tall is Ali?', a: '1.44 m (Ben 1.53 m)' },
-      { q: 'Use the digit cards 2, 4, 7 and a decimal point once each (the point goes between two digits). Which number is closest to 50?', a: '47.2 (2.8 away; the next closest is 42.7)' }
+      { q: 'Use the digit cards 2, 4, 7 and a decimal point once each (the point goes between two digits). Which number is closest to 50?', a: '47.2 (2.8 away; the next closest is 42.7)' },
+      { q: 'A ribbon 4.8 m long is cut into 6 equal pieces. How long is each piece? Ravi uses 4 of the pieces. How much ribbon does he use?', a: '0.8 m each; 3.2 m' }
     ],
     challenge: [
       { q: 'A number with 3 decimal places rounds to 2.46 when rounded to 2 decimal places. Its digits add up to 20. What is the number?', a: '2.459 (it is from 2.455 to 2.464; 2.45_ needs 9 to make 20; 2.46_ would need 8, but 2.468 rounds to 2.47)' },
@@ -124,7 +124,7 @@ module.exports = {
       { q: 'Ben rounds a number with 2 decimal places to the nearest whole number and gets 6. Mei rounds the same number to 1 decimal place and gets 5.5. Find ALL the numbers it could be.', a: '5.50, 5.51, 5.52, 5.53, 5.54' },
       { q: 'A pen costs $0.85 more than a pencil. 2 pens and 1 pencil cost $4.70 altogether. How much does a pencil cost?', a: '$1.00 (3 pencils + $1.70 = $4.70, so 3 pencils cost $3.00; a pen costs $1.85)' },
       { q: 'How many numbers with exactly 2 decimal places are between 3.9 and 4.1? (Do not count 3.9 and 4.1.)', a: '19 (3.91 to 3.99 is 9, 4.00 to 4.09 is 10)' },
-      { q: 'Use the digit cards 1, 2, 4, 8 and a decimal point once each to make a number with 2 decimal places. Which number is closest to 50?', a: '48.21 (1.79 away; 48.12 is 1.88 away, and numbers starting with 8 are far too big)' },
+      { q: 'Make up your own "closest to" puzzle. Choose four digit cards and a decimal point (the point goes between two digits). Pick a target number and find the number with 2 decimal places that is closest to it. Then ask: what if the target changes? Swap puzzles with a partner and check each other’s answers.', a: 'Puzzles will vary: check by listing every number that can be made. Model: cards 3, 5, 6, 9 and target 40: the closest is 39.65 (0.35 away); the next is 39.56 (0.44 away). What if the target is 50? Then the closest is 53.69 (3.69 away); the closest below 50 is 39.65, which is 10.35 away.' },
       { q: 'Ali, Ben and Siti share $9.20. Ben gets $0.50 more than Ali. Siti gets $1.30 more than Ben. How much does each child get?', a: 'Ali $2.30, Ben $2.80, Siti $4.10 (take away $0.50 + $1.80 = $2.30, then $6.90 ÷ 3 = $2.30)' },
       { q: 'A jug full of water weighs 1.45 kg. When it is half full, it weighs 0.85 kg. What is the mass of the empty jug?', a: '0.25 kg (half the water is 1.45 − 0.85 = 0.6 kg, all the water is 1.2 kg, jug = 1.45 − 1.2)' }
     ]
@@ -140,7 +140,6 @@ module.exports = {
     H.sub('', '_________,  _________,  _________,  _________,  _________'),
     H.sub('b', 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right? Explain.'),
     ...H.lines(1),
-    H.sub('c', 'Find ALL the digits that can go in the box:    5.□7  >  5.62      ________________'),
     H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4.', { keepNext: true }),
     H.sub('a', 'What is the smallest it can be?  ________     The largest?  ________'),
     H.sub('b', 'How many different numbers could it be?   ________'),
@@ -158,9 +157,6 @@ module.exports = {
     H.q(6, 'A box holds 6 cans that all have the same mass.', { keepNext: true }),
     H.fig(scales()),
     H.sub('a', 'What is the mass of one can?   ________ kg'),
-    H.sub('b', 'Ali takes 2 cans out of the box. What is the mass of the box and cans now?   ________ kg'),
-    H.q(7, '★ Mystery decimal (a bit harder). I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', { keepNext: true }),
-    ...H.lines(1),
-    H.ans('I am:')
+    H.sub('b', 'Ali takes 2 cans out of the box. What is the mass of the box and cans now?   ________ kg')
   ]
 };

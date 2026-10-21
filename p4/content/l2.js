@@ -48,7 +48,7 @@ module.exports = {
     extension: 'How many whole numbers round to 45 000 to the nearest thousand AND to 50 000 to the nearest ten thousand? (500: from 45 000 to 45 499.)',
     key: [
       ['Q1', '47 285: 47 290, 47 300, 47 000.  63 950: 63 950, 64 000, 64 000.  9049: 9050, 9000, 9000.  80 503: 80 500, 80 500, 81 000.'],
-      ['Q2', '(a) Smallest 62 500, largest 63 499  (b) 5 350, 5 351, 5 352, 5 353, 5 354 (5 numbers)'],
+      ['Q2', '(a) Smallest 62 500, largest 63 499  (b) 5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5353, 5354 (10 numbers)'],
       ['Q3', '(a) 6 × 5 000 = 30 000  (b) Less: 4 982 was rounded up to 5 000, so each day was counted as a little more than it really is.  (c) 29 892'],
       ['Q4', '(a) 47 621  (b) 10 001, 10 010, 10 100, 11 000, 20 000 (5 numbers)'],
       ['Q5', '(a) 26 450, 27 450  (b) 76 800, 75 300  (c) 99 990, 100 000  (d) 32 500'],
@@ -92,31 +92,31 @@ module.exports = {
     core: [
       { q: 'In 64 205, what is the digit 4 worth?', a: '4000 (4 thousands)' },
       { q: 'Write fifty-three thousand and eighty in numerals.', a: '53 080' },
-      { q: 'Round 27 649 to the nearest thousand.', a: '28 000' },
+      { q: 'Mei’s number is 27 649. Is it closer to 27 000 or to 28 000? Draw a number line from 27 000 to 28 000 and mark the halfway point (27 500) to help you.', a: '28 000 (27 649 is past the halfway point 27 500).' },
       { q: 'What number is 1000 less than 70 230?', a: '69 230' },
       { q: 'Put these numbers in order, smallest first: 45 099, 45 909, 45 990, 45 900.', a: '45 099, 45 900, 45 909, 45 990' },
-      { q: 'Round 6352 to the nearest hundred.', a: '6400' }
+      { q: 'A bakery baked 6352 buns. Is that closer to 6300 or to 6400? Draw a number line from 6300 to 6400 and mark the halfway point (6350).', a: '6400 (6352 is just past the halfway point 6350).' }
     ],
     stretch: [
       { q: 'I am a 5-digit number. All my digits are the same. Rounded to the nearest ten thousand, I am 60 000. Who am I?', a: '55 555 (66 666 rounds to 70 000; 44 444 rounds to 40 000).' },
       { q: 'Use the digit cards 1, 4, 6, 7 and 9 once each. Make the 5-digit number that is closest to 70 000.', a: '69 741 (259 away; the closest number above 70 000 is 71 469, which is 1469 away).' },
       { q: 'Find the rule and write the next two numbers: 17 250, 19 500, 21 750, ____, ____', a: 'Add 2250 each time: 24 000, 26 250.' },
       { q: 'How many whole numbers round to 3500 when rounded to the nearest hundred?', a: '100 (from 3450 to 3549).' },
-      { q: 'What is the smallest whole number that rounds to 80 000 when rounded to the nearest thousand?', a: '79 500' },
+      { q: 'A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.', a: '5350, 5351, 5352, 5353, 5354 (5 numbers). To the nearest 10 it is 5345 to 5354; to the nearest 100 it is 5350 to 5449; both: 5350 to 5354.' },
       { q: 'Estimate 8 × 6102 by rounding 6102 to the nearest thousand first. Is the exact answer more or less than your estimate?', a: '8 × 6000 = 48 000. More, because 6102 was rounded down (exact: 48 816).' },
-      { q: 'How many 5-digit numbers have all five digits the same?', a: '9 (11 111, 22 222, … 99 999).' },
+      { q: 'The crowd at the first concert was 38 000 to the nearest thousand. At the second concert it was 41 000 to the nearest thousand. What is the smallest and the largest the difference between the two crowds could be?', a: 'Smallest 2001 (40 500 − 38 499). Largest 3999 (41 499 − 37 500).' },
       { q: 'What is the largest 5-digit odd number with all its digits different?', a: '98 765' }
     ],
     challenge: [
       { q: 'Ali counts on in 1000s, starting at 3456. He stops at the last number below 100 000. What is the last number he says? How many numbers does he say?', a: '99 456. He says 97 numbers (3456, 4456, … 99 456).' },
       { q: 'How many whole numbers round to 45 000 to the nearest thousand AND to 50 000 to the nearest ten thousand?', a: '500. To the nearest thousand: 44 500 to 45 499. To the nearest ten thousand: 45 000 to 54 999. Both: 45 000 to 45 499.' },
       { q: 'A palindrome reads the same forwards and backwards, like 12 321. How many 5-digit palindromes are there between 40 000 and 50 000?', a: '100. They look like 4 a b a 4: 10 choices for a and 10 for b.' },
-      { q: 'Mei rounds a 4-digit number to the nearest thousand and multiplies by 6. She gets 24 000. What are the smallest and largest numbers she could have started with?', a: 'She rounded to 4000, so the number is from 3500 to 4499.' },
+      { q: 'A 5-digit number has all its digits different, and its digits add up to 10. What is the largest it can be? What is the smallest?', a: 'Largest 43 210, smallest 10 234 (the only five different digits that add up to 10 are 0, 1, 2, 3, 4).' },
       { q: 'Find all the 5-digit palindromes that round to 50 000 when rounded to the nearest thousand.', a: '10: 49 594, 49 694, 49 794, 49 894, 49 994, 50 005, 50 105, 50 205, 50 305, 50 405.' },
       { q: 'Ben writes all the numbers from 99 990 to 100 000. How many digits does he write altogether?', a: '56. 99 990 to 99 999 is 10 numbers × 5 digits = 50, and 100 000 has 6 digits.' },
       { q: 'How many 5-digit numbers have digits that add up to 3?', a: '15. Ten thousands digit 1: the other 2 goes as 2 in one place (4 ways) or 1 and 1 in two places (6 ways): 10. Ten thousands digit 2: 4 ways. Ten thousands digit 3: 1 way (30 000). 10 + 4 + 1 = 15.' },
-      { q: 'A 5-digit number has all its digits different, and its digits add up to 10. What is the largest it can be? What is the smallest?', a: 'Largest 43 210, smallest 10 234 (the only five different digits that add up to 10 are 0, 1, 2, 3, 4).' },
-      { q: 'The distance counter on Mr Tan\'s car shows 39 993 km. This number is a palindrome: it reads the same forwards and backwards. What is the next palindrome the counter will show? How many more kilometres is that?', a: '40 004, which is 11 km more.' }
+      { q: 'Make up your own number riddle about a 5-digit number. Use a rounding clue, a clue about the digits and an odd-or-even clue, so that exactly ONE number fits. Check your riddle: list every number that fits the rounding clue, then cross out the ones that break the other clues. Swap riddles with a partner.', a: 'Riddles will vary. Check that the rounding clue gives the right range and that only one number is left. Model riddle: "Rounded to the nearest thousand I am 30 000. All my digits are different. My digits add up to 12. I am odd." The only number is 30 261.' },
+      { q: 'The distance counter on Mr Tan’s car shows 39 993 km. This number is a palindrome: it reads the same forwards and backwards. What is the next palindrome the counter will show? How many more kilometres is that?', a: '40 004, which is 11 km more.' }
     ]
   },
 
@@ -127,11 +127,11 @@ module.exports = {
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
       ...['47 285', '63 950', '9049', '80 503'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
     ]));
-    W.push(H.q(2, 'Work backwards.  (A star ★ means a bit harder.)', { keepNext: true }));
+    W.push(H.q(2, 'Work backwards.', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
-    W.push(H.sub('b', '★  A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.'));
+    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));
     W.push(H.sub('a', 'Round 4982 to the nearest thousand and estimate the total.   Estimate:  ____________'));

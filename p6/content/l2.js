@@ -144,12 +144,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'List all the factors of 18.', a: '1, 2, 3, 6, 9, 18' },
-      { q: 'Is 37 prime? How do you know?', a: 'Yes. Its only factors are 1 and 37 (2, 3, 5 do not divide it, and 7 × 7 = 49 is already bigger than 37).' },
-      { q: 'What is 29 mod 4 (the remainder when 29 is divided by 4)?', a: '1 (4 × 7 = 28)' },
-      { q: 'Write 30 as a product of primes.', a: '2 × 3 × 5' },
-      { q: 'Which of these are prime: 21, 23, 25, 27, 29?', a: '23 and 29' },
-      { q: 'Write 20 as the sum of two primes.', a: '3 + 17 or 7 + 13' }
+      { q: 'List all the factors of 18. Hint: find pairs of numbers that multiply to 18.', a: '1, 2, 3, 6, 9, 18' },
+      { q: 'A number is called prime if it has exactly two factors: 1 and itself. For example, 7 is prime (factors 1 and 7) but 8 is not (factors 1, 2, 4, 8). Is 21 prime? Is 23 prime? List the factors of each.', a: '21 is not prime (factors 1, 3, 7, 21). 23 is prime (its only factors are 1 and 23).' },
+      { q: '29 sweets are shared equally among 4 children. How many sweets are left over? (In code, the left-over number is written 29 mod 4.)', a: '1 (4 × 7 = 28, so 1 is left over: 29 mod 4 = 1)' },
+      { q: 'Write 30 as a multiplication of as many numbers (bigger than 1) as you can. For example, 30 = 5 × 6 uses two numbers. Can you use three? Can you use four?', a: '30 = 2 × 3 × 5 uses three numbers, and you cannot use four: none of 2, 3 and 5 can be split again. (These are the prime factors of 30.)' },
+      { q: 'A prime number has exactly two factors. Which of these are prime: 21, 23, 25, 27, 29? Hint: try dividing each by 2, 3 and 5.', a: '23 and 29' },
+      { q: 'The primes begin 2, 3, 5, 7, 11, 13, 17, 19. Write 20 as the sum of two of them.', a: '3 + 17 or 7 + 13' }
     ],
     stretch: [
       { q: 'How many factors does 64 have? List them.', a: '7: 1, 2, 4, 8, 16, 32, 64 (8 × 8 counts once).' },
@@ -166,9 +166,9 @@ module.exports = {
       { q: 'Ali multiplies two different primes and gets 91. Mei multiplies three different primes and gets 105. Which primes did each of them use?', a: 'Ali: 7 × 13. Mei: 3 × 5 × 7.' },
       { q: 'Find the smallest number that can be divided exactly by 2, 3, 4, 5 and 6.', a: '60. It needs 2 × 2 (for 4), a 3 and a 5: 2 × 2 × 3 × 5 = 60.' },
       { q: '1001 = 7 × 11 × 13. Use this to write 3003 and 5005 as products of primes.', a: '3003 = 3 × 7 × 11 × 13 and 5005 = 5 × 7 × 11 × 13.' },
-      { q: 'Mei’s program counts how many numbers from 1 to 30 are prime. What number should it say? List them to check.', a: '10: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.' },
-      { q: 'Which even number below 50 can be written as the sum of two primes in the most ways? How many ways?', a: '48, in 5 ways: 5 + 43, 7 + 41, 11 + 37, 17 + 31, 19 + 29.' },
       { q: 'Find all the numbers between 100 and 200 that have exactly 3 factors.', a: '121 and 169 (11 × 11 and 13 × 13). 144 = 12 × 12 does not work because 12 is not prime.' },
+      { q: 'Which even number below 50 can be written as the sum of two primes in the most ways? How many ways?', a: '48, in 5 ways: 5 + 43, 7 + 41, 11 + 37, 17 + 31, 19 + 29.' },
+      { q: 'Make up a “Who am I?” number puzzle using factors and primes, for example: “I am between 30 and 60 and I have exactly three factors.” Write 2 or 3 clues so that only ONE number fits. Swap with a partner, then check that no other number fits.', a: 'Open. Example: “I am between 30 and 60 and I have exactly 3 factors” fits only 49 (7 × 7). The numbers with exactly 3 factors are the squares of primes: 4, 9, 25, 49, 121, … Check a puzzle by listing every number that fits the clues.' },
       { q: 'A farmer counts her eggs in 2s, 3s, 4s, 5s and 6s, and each time there is 1 egg left over. When she counts them in 7s, none are left over. What is the smallest number of eggs she could have?', a: '301. It must be 1 more than a multiple of 60: 61, 121, 181, 241, 301, … The first of these in the 7 times table is 301 = 7 × 43.' },
       { q: '20 lockers are closed. Student 1 opens every locker. Student 2 changes every 2nd locker (open to closed, closed to open). Student 3 changes every 3rd locker, and so on up to student 20. Which lockers are open at the end?', a: '1, 4, 9 and 16. Locker n is changed once for each factor of n. Only square numbers have an odd number of factors, so only they end up open.' }
     ]

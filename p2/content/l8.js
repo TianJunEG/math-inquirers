@@ -157,19 +157,19 @@ module.exports = {
       { q: 'Which solid has 2 flat faces that are circles and 1 curved face?', a: 'A cylinder' }
     ],
     stretch: [
-      { q: 'How many quarter circles make 3 semicircles?', a: '6' },
+      { q: 'A stack of cubes has a bottom layer 4 cubes long and 3 cubes deep, a middle layer 3 cubes long and 2 cubes deep, and 1 cube on top. How many cubes are in the stack? Draw the layers.', a: '19 (12 + 6 + 1)' },
       { q: 'How many squares are in a grid 3 squares long and 2 squares high?', a: '8 (6 small + 2 made of 4 small ones)' },
       { q: 'A stack has 2 layers. Each layer is 3 cubes long and 2 cubes wide. How many cubes?', a: '12' },
       { q: 'Six squares are joined in a straight line. Can they fold into a cube? Explain.', a: 'No. When you fold the line round, the 5th square lands on the same face as the 1st and the 6th on the 2nd, and the two ends are left open.' },
       { q: 'A shape is made of a square with a semicircle on each of its 4 sides, curved sides outward. How many straight sides does its outside edge have? How many curved sides?', a: 'No straight sides and 4 curved sides.' },
-      { q: 'How many triangles are in a square with one line from corner to corner?', a: '2' },
-      { q: 'Mei builds a big cube 2 cubes long, 2 wide and 2 high. She takes away 1 cube from a corner. How many cubes are left?', a: '7' },
+      { q: 'How many rectangles can you find in a row of 3 squares joined side by side? (A square is a rectangle too. Count all sizes.)', a: '6 (3 of length 1, 2 of length 2, 1 of length 3)' },
+      { q: 'Mei builds a stack 3 cubes long, 2 wide and 3 high. She takes away the whole top layer. Then she takes away the 4 corner cubes of the new top layer. How many cubes are left?', a: '8 (18 − 6 = 12, then 12 − 4 = 8)' },
       { q: 'A stack is 4 cubes long, 2 cubes wide and 2 cubes high. How many cubes?', a: '16 (8 in each layer)' }
     ],
     challenge: [
-      { q: 'How many squares can you find in a grid 4 squares long and 3 squares high?', a: '20 (12 + 6 + 2)' },
+      { q: 'How many squares can you find in a grid 4 squares long and 3 squares high? Another grid, longer than it is high and at least 2 squares high, also has exactly 20 squares of all sizes. Find ALL the grids like that.', a: '20 (12 + 6 + 2). Also a 7 by 2 grid.' },
       { q: 'A square has both lines from corner to corner drawn. How many triangles can you find?', a: '8 (4 small + 4 made of 2 small ones)' },
-      { q: 'Ben has 3 semicircles and 1 quarter circle, all cut from same-size circles. How many more quarter circles does he need to make exactly 2 whole circles?', a: '1 more (3 semicircles = 6 quarter circles, + 1 = 7; 2 circles need 8)' },
+      { q: 'Design your own cube stack: draw a stack with at least 2 layers that has exactly 20 cubes. Then change it into a different stack that also has exactly 20 cubes. Write how many cubes are in each layer. Swap with a partner and check each other’s.', a: 'Open. Examples: a stack 5 long, 2 wide and 2 high is 5 × 2 × 2 = 20; or four layers of 9, 6, 4 and 1 cubes (a 3 by 3, a 3 by 2, a 2 by 2 and a 1 by 1 layer: 9 + 6 + 4 + 1 = 20). Check that every layer sits on a layer at least as big.' },
       { q: 'A big cube is built from small cubes: 3 long, 3 wide and 3 high. Its outside is painted. How many small cubes have no paint at all?', a: '1 (only the cube in the very middle is not on the outside)' },
       { q: 'Steps are made of cubes. They are 3 cubes high, then 2, then 1, and every step is 3 cubes wide from front to back. How many cubes?', a: '18 (9 + 6 + 3)' },
       { q: 'How many triangles are in a triangle with 3 lines from the top corner to the bottom and 1 line across the middle?', a: '20 (10 sit on the bottom line + 10 sit on the line across)' },

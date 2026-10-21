@@ -104,7 +104,7 @@ module.exports = {
       { q: 'Use the digit cards 1, 5 and 8 once each. How many different 3-digit numbers can you make? List them in order.', a: '6 numbers: 158, 185, 518, 581, 815, 851.' },
       { q: 'Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?', a: '3 numbers: 447, 474, 744. The two 4s look the same, so swapping them does not make a new number.' },
       { q: 'What number is 3 hundreds, 14 tens and 6 ones?', a: '446 (14 tens = 1 hundred and 4 tens).' },
-      { q: 'Ben counts back in 100s from 980: 980, 880, 780 … He stops at the last 3-digit number. What is it? How many numbers did he say?', a: '180. He said 9 numbers: 980, 880, 780, 680, 580, 480, 380, 280, 180.' },
+      { q: 'Mei says: “If I swap the tens digit and the ones digit of a 3-digit number, the new number is always smaller.” Is she right? Show what happens with some examples. When does the number stay the same?', a: 'No. 452 becomes 425, which is smaller, but 425 becomes 452, which is bigger. It gets smaller when the tens digit is bigger than the ones digit, bigger when it is smaller, and stays the same when the two digits are the same (733).' },
       { q: 'I am a 3-digit number. My digits add up to 4. Find all the numbers I could be.', a: '10 numbers: 103, 112, 121, 130, 202, 211, 220, 301, 310, 400.' },
       { q: 'Use the digit cards 2, 5 and 9 once each. Which number you can make is closest to 600?', a: '592 (only 8 away).' },
       { q: 'How many 3-digit numbers have 7 in the hundreds place and 0 in the ones place?', a: '10: 700, 710, 720, … 790.' },
@@ -114,9 +114,9 @@ module.exports = {
       { q: 'Use any three of the digit cards 1, 3, 5 and 7. How many different 3-digit numbers can you make?', a: '24. Leave out one card (4 choices); each set of 3 cards makes 6 numbers: 6 + 6 + 6 + 6 = 24.' },
       { q: 'How many 3-digit numbers have digits that add up to 5?', a: '15. Hundreds digit 1: 5 numbers; 2: 4; 3: 3; 4: 2; 5: 1. 5 + 4 + 3 + 2 + 1 = 15.' },
       { q: 'I am an odd 3-digit number. My three digits are all different and add up to 6. Find all the numbers I could be.', a: '6 numbers: 105, 123, 213, 231, 321, 501.' },
-      { q: 'I am between 400 and 500. My tens digit is double my ones digit. My digits add up to 10. Who am I?', a: '442 (4 + 4 + 2 = 10, and 4 is double 2).' },
+      { q: 'Make up your own 3-digit number riddle with three clues, so that exactly ONE number fits (use clues about the hundreds digit, the digits adding up, odd or even, double or half). Write the answer on the back. After each clue, say how many numbers still fit. Swap with a partner and solve theirs.', a: 'Open. Example: “I am between 300 and 400. My digits add up to 9. My ones digit is double my tens digit.” Clue 1 leaves 100 numbers, clue 2 leaves 7 (306, 315, 324, 333, 342, 351, 360), clue 3 leaves only 324. Check that a partner cannot find a second number that fits all the clues.' },
       { q: 'A book has pages numbered 1 to 120. How many digits are printed altogether?', a: '252. Pages 1 to 9: 9 digits. Pages 10 to 99: 90 pages × 2 = 180 digits. Pages 100 to 120: 21 pages × 3 = 63 digits. 9 + 180 + 63 = 252.' },
-      { q: 'Use three of the digit cards 0, 2, 5 and 8. Which 3-digit number you can make is closest to 500?', a: '502 (only 2 away).' },
+      { q: 'Use three DIFFERENT cards from 0, 2, 5 and 8 to make a 3-digit number. How many different numbers can you make? Why is it not 4 × 3 × 2 = 24?', a: '18. Only 2, 5 or 8 can go in the hundreds place (3 choices), then 3 cards are left for the tens (3 choices) and 2 for the ones (2 choices): 3 × 3 × 2 = 18. 24 counts numbers that start with 0 (like 025), and those are not 3-digit numbers.' },
       { q: 'Mei uses each of the digit cards 1, 2, 3, 4, 5 and 6 once to make two 3-digit numbers. She adds them. What is the smallest total she can make?', a: '381, for example 135 + 246. The smallest digits 1 and 2 go in the hundreds places, 3 and 4 in the tens, 5 and 6 in the ones: 300 + 70 + 11 = 381.' },
       { q: 'Ali counts in 5s, starting at 3: 3, 8, 13, 18 … Will he say 500? Will he say 998? Explain.', a: 'He says only numbers ending in 3 or 8. So he will not say 500, but he will say 998.' },
       { q: 'Ben writes all the numbers from 300 to 399. How many times does he write the digit 3?', a: '120. Hundreds place: 100 times. Tens place (330 to 339): 10 times. Ones place (303, 313, … 393): 10 times. 100 + 10 + 10 = 120.' }
@@ -161,7 +161,7 @@ module.exports = {
     W.push(H.q(6, 'Digit riddles. Who am I?', { keepNext: true }));
     W.push(H.sub('a', 'I am a 3-digit number. My hundreds digit is 4. My ones digit is 2 more than my tens digit. My digits add up to 12.'));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'I am a 3-digit number. My digits add up to 3. Find ALL the numbers I could be. Start with the smallest hundreds digit.'));
+    W.push(H.sub('b', 'I am a 3-digit number. My digits add up to 3. Find ALL the numbers I could be. Tip: use 3 counters. Put 1 counter in the hundreds box, then share the other 2 between the tens and the ones. Then try 2 counters in the hundreds box.'));
     W.push(...H.lines(3));
     W.push(H.ans('How many numbers?'));
     return W;

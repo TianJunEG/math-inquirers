@@ -82,8 +82,8 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Work out 35 ÷ 4. Write the answer and the remainder.', a: '8 r 3 (4 × 8 = 32, 35 − 32 = 3)' },
-      { q: 'Work out 58 ÷ 7. Write the answer and the remainder.', a: '8 r 2 (7 × 8 = 56)' },
+      { q: 'Share 35 counters equally among 4 children. How many counters does each child get? How many counters are left over? (Use counters or draw dots in 4 groups.)', a: '8 each, 3 left over (4 × 8 = 32, 35 − 32 = 3)' },
+      { q: 'Put 58 sweets into bags with 7 sweets in each bag. How many full bags can you fill? How many sweets are left over? (Use counters or draw dots.)', a: '8 full bags, 2 sweets left over (7 × 8 = 56)' },
       { q: '6 friends share 45 stickers equally. How many does each friend get? How many are left over?', a: '7 each, 3 left over (6 × 7 = 42)' },
       { q: '30 children go on an outing. Each car holds 4 children. How many cars are needed?', a: '8 cars (30 ÷ 4 = 7 r 2; the 2 children left over need a car too)' },
       { q: 'A ribbon is 50 cm long. Siti cuts it into pieces 6 cm long. How many whole pieces does she get? How much ribbon is left?', a: '8 pieces, 2 cm left (6 × 8 = 48)' },
@@ -97,17 +97,17 @@ module.exports = {
       { q: 'Siti fills 9 bags with 7 oranges each and has 5 oranges left over. She packs all the oranges again into bags of 8. How many full bags does she get? How many are left over?', a: '68 oranges (9 × 7 + 5). 68 ÷ 8 = 8 r 4: 8 full bags, 4 left over.' },
       { q: 'A pattern goes circle, triangle, square, circle, triangle, square, … What is the 50th shape?', a: 'Triangle (50 ÷ 3 = 16 r 2; the 2nd shape in the repeat)' },
       { q: 'Find all the 2-digit numbers less than 40 that leave a remainder of 2 when divided by 3 AND when divided by 4.', a: '14, 26 and 38 (each is 2 more than a number in both the 3 and 4 tables: 12, 24, 36)' },
-      { q: 'A pen costs $4. Ravi has $35. How many pens can he buy? How much more money does he need to buy one more pen?', a: '8 pens (35 ÷ 4 = 8 r 3). He needs $1 more.' }
+      { q: 'Mei has 29 beads. She puts them into bags of 4. Then she tips them out and puts them into bags of 5. Then into bags of 6. Each time she writes how many beads are left over. Which bag size leaves the most beads over? Which leaves the fewest?', a: 'Bags of 4: 7 bags and 1 left. Bags of 5: 5 bags and 4 left. Bags of 6: 4 bags and 5 left. Bags of 6 leave the most (5), bags of 4 leave the fewest (1).' }
     ],
     challenge: [
       { q: 'I am a 2-digit number. When I am divided by 3, by 4 or by 5, the remainder is always 2. What number am I?', a: '62 (60 is in the 3, 4 and 5 tables; 60 + 2 = 62; the next one, 122, has 3 digits)' },
       { q: 'A box has more than 30 but fewer than 50 chocolates. They can be shared equally among 2, 3, 4 or 6 children with none left over. Find all the numbers of chocolates there could be.', a: '36 and 48 (numbers in the 12 times table)' },
-      { q: 'The letters M A T H M A T H M A T H … go on and on. What is the 75th letter?', a: 'T (75 ÷ 4 = 18 r 3; the 3rd letter of MATH)' },
+      { q: 'A number is divided by 6. The answer and the remainder are the same number, and it is not 0. Find all the numbers it could be.', a: '7, 14, 21, 28 and 35 (1 r 1, 2 r 2, 3 r 3, 4 r 4, 5 r 5; the remainder cannot be 6 or more)' },
       { q: 'Ben counts his marbles in 5s and has 3 left over. He counts them in 7s and has 3 left over. He has more than 50 and fewer than 100 marbles. How many does he have?', a: '73 (35 is in both tables; 35 + 3 = 38 is too small; 70 + 3 = 73)' },
       { q: 'When 100 is divided by a 1-digit number, the remainder is 1. Find all the numbers it could be.', a: '3 and 9 (100 ÷ 3 = 33 r 1, 100 ÷ 9 = 11 r 1; 99 is only in the 1, 3 and 9 tables, and dividing by 1 leaves no remainder)' },
       { q: 'A farmer counts her eggs. In 2s, 3s, 4s, 5s or 6s there is always 1 egg left over. In 7s there are none left over. What is the smallest number of eggs she can have?', a: '301 (one more than a number in the 60 times table: 61, 121, 181, 241, 301; only 301 is in the 7 table: 7 × 43)' },
-      { q: 'A number is divided by 6. The answer and the remainder are the same number, and it is not 0. Find all the numbers it could be.', a: '7, 14, 21, 28 and 35 (1 r 1, 2 r 2, 3 r 3, 4 r 4, 5 r 5; the remainder cannot be 6 or more)' },
-      { q: 'Today is Monday. What day of the week will it be 100 days from today?', a: 'Wednesday (100 ÷ 7 = 14 r 2: after 14 weeks it is Monday again, then 2 more days)' },
+      { q: 'Make up your own remainder riddle: "I am a number between ___ and ___. When I am divided by ___ the remainder is ___. When I am divided by ___ the remainder is ___." Check that only ONE number fits, by listing the numbers for the first clue and testing them. Swap with a partner.', a: 'Answers vary. Check that the secret number is correct for both clues and that the list of numbers for clue 1, tested with clue 2, leaves exactly one. Example: "I am between 20 and 50. When I am divided by 5 the remainder is 2. When I am divided by 6 the remainder is 4." Numbers with remainder 2 when divided by 5: 22, 27, 32, 37, 42, 47. Only 22 leaves remainder 4 when divided by 6 (22 = 3 × 6 + 4). If the range were 20 to 60, then 52 would also fit, so the range matters.' },
+      { q: 'Today is Monday. What day of the week will it be 100 days from today? What day of the week was it 100 days ago? Explain how you know.', a: '100 days from today: Wednesday. 100 ÷ 7 = 14 remainder 2, so after 14 weeks it is Monday again, then 2 more days. 100 days ago: Saturday. Go back 14 weeks to a Monday, then 2 more days back: Sunday, then Saturday.' },
       { q: 'Mr Lim gives pens to his pupils. If each pupil gets 4 pens, 10 pens are left over. If each pupil gets 6 pens, he is 4 pens short. How many pupils are there? How many pens does he have?', a: '7 pupils and 38 pens (giving 2 more pens each needs 10 + 4 = 14 pens, and 14 ÷ 2 = 7; 7 × 4 + 10 = 38, 7 × 6 = 42 = 38 + 4)' }
     ]
   },
@@ -142,7 +142,7 @@ module.exports = {
     W.push(H.sub('b', 'I am a 2-digit number less than 50. When I am divided by 6, the remainder is 5. When I am divided by 4, the remainder is 3. Find ALL the numbers I could be.', { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.q(5, 'Dividing by 8.', { keepNext: true }));
-    W.push(H.sub('a', 'Write ALL the remainders you could get when you divide a number by 8.', { keepNext: true }));
+    W.push(H.sub('a', 'Write ALL the remainders you could get when you divide a number by 8. Hint: share 9, 10, 11, … counters into groups of 8. What is left over each time?', { keepNext: true }));
     W.push(H.ans());
     W.push(H.sub('b', 'A number between 60 and 70 is divided by 8. The remainder is as big as it can be. What is the number?   ____'));
     W.push(H.q(6, '(if time) At a class party, children sit at tables. If 6 children sit at each table, 5 children have no seat. If 7 children sit at each table, every seat is filled and nobody is left over.', { keepNext: true }));

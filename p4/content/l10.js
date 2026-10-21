@@ -65,12 +65,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Two next-door numbers (like 7 and 8) multiply to make 90. What are they?', a: '9 and 10' },
-      { q: 'A farm has chickens and rabbits. There are 8 heads and 22 legs. How many rabbits are there?', a: '3 rabbits (and 5 chickens). Suppose all chickens: 16 legs, 6 short, each swap adds 2.' },
-      { q: 'I think of a number. I add 15, then double it. I get 70. What is my number?', a: '20 (70 ÷ 2 = 35, 35 − 15 = 20)' },
-      { q: 'Ali is 6th from the front and 6th from the back of a queue. How many people are in the queue?', a: '11 (5 + 1 + 5)' },
+      { q: 'Two next-door numbers (like 7 and 8) multiply to make 90. What are they? Try some pairs and write each try in a list.', a: '9 and 10' },
+      { q: 'A farm has chickens and rabbits. There are 8 heads and 22 legs. How many rabbits are there? Draw 8 animals with 2 legs each first, then see how many legs you still need to add.', a: '3 rabbits (and 5 chickens). Suppose all chickens: 16 legs, 6 short, each swap adds 2.' },
+      { q: 'I think of a number. I add 15, then double it. I get 70. What is my number? Start at 70 and undo each step.', a: '20 (70 ÷ 2 = 35, 35 − 15 = 20)' },
+      { q: 'Ali is 6th from the front and 6th from the back of a queue. How many people are in the queue? Draw the queue.', a: '11 (5 + 1 + 5)' },
       { q: 'Two numbers add up to 30. One is 6 more than the other. What are they?', a: '12 and 18' },
-      { q: 'Ben has 6 coins. Some are 10¢ and some are 50¢. They make $1.40 altogether. How many 50¢ coins does he have?', a: '2 (and four 10¢ coins: 100¢ + 40¢ = 140¢)' }
+      { q: 'Ben has 6 coins. Some are 10¢ and some are 50¢. They make $1.40 altogether. How many 50¢ coins does he have? Try 1 fifty-cent coin, then 2, then 3 …', a: '2 (and four 10¢ coins: 100¢ + 40¢ = 140¢)' }
     ],
     stretch: [
       { q: 'There are 20 bicycles and tricycles with 47 wheels altogether. How many tricycles are there?', a: '7 tricycles (and 13 bicycles). All bicycles: 40 wheels, 7 short, each swap adds 1.' },
@@ -88,10 +88,10 @@ module.exports = {
       { q: 'I am a 2-digit number. My digits add up to 11. If you swap my digits, the new number is 27 more than me. Who am I?', a: '47 (74 − 47 = 27)' },
       { q: 'Ali, Ben, Mei and Siti sit in a row of 4 seats, numbered 1 to 4 from the left. Mei sits at one end. Ben sits next to Mei. Ali does not sit next to Ben. Ali sits in seat 1 or seat 2. Who sits in each seat?', a: 'Seat 1 Ali, seat 2 Siti, seat 3 Ben, seat 4 Mei.' },
       { q: 'A cake costs $3 more than a drink. 4 cakes and 3 drinks cost $40. How much does a drink cost?', a: '$4 (a cake is $7). Suppose all 7 are drinks: take away 4 × $3 = $12, then $28 ÷ 7 = $4.' },
-      { q: 'I halve a number, then add 6, then multiply by 3. I get 48. What was the number?', a: '20 (48 ÷ 3 = 16, 16 − 6 = 10, 10 × 2 = 20)' },
+      { q: 'Ben’s uncle is 4 times as old as Ben. In 10 years, his uncle will be only twice as old as Ben. How old is Ben now?', a: '5 (uncle 20; in 10 years 15 and 30)' },
       { q: 'A hawker centre has 15 tables. Some seat 4 people and some seat 6 people. There are 76 seats altogether. How many tables seat 6?', a: '8 tables seat 6 (and 7 seat 4). All seat 4: 60 seats, 16 short, each swap adds 2.' },
       { q: 'Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 stickers left. How many did she have at first?', a: '32. Work backwards: (5 + 2) × 2 = 14, (14 + 2) × 2 = 32.' },
-      { q: 'Ben’s uncle is 4 times as old as Ben. In 10 years, his uncle will be only twice as old as Ben. How old is Ben now?', a: '5 (uncle 20; in 10 years 15 and 30)' }
+      { q: 'Make up your own heads-and-legs puzzle (chickens and goats, or bicycles and cars) that has exactly ONE answer. Check it by trying every number of one animal. Then explain why a farmer who counts 12 heads and 35 legs on a farm with only chickens and goats must have counted wrong.', a: 'Puzzles will vary: check by trying every possible number. Model: 10 vehicles, 32 wheels, cars (4 wheels) and motorcycles (2 wheels): 6 cars and 4 motorcycles is the only way. Why 35 is impossible: every chicken has 2 legs and every goat has 4, so the total number of legs is always even, and 35 is odd.' }
     ]
   },
 

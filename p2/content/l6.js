@@ -80,21 +80,21 @@ module.exports = {
       { q: 'Ben had some money. He spent $6 and has $9 left. How much money did he have at first?', a: '$15' }
     ],
     stretch: [
-      { q: 'How many ways can you pay exactly $10 using $5 notes, $2 notes and $1 coins?', a: '10 ways (two $5: 1 way; one $5: 3 ways; no $5: 6 ways)' },
+      { q: 'How many ways can you pay exactly $10 using $5 notes, $2 notes and $1 coins?', a: '10 ways (1 + 3 + 6)' },
       { q: 'Ali has 4 coins. They are worth $1.25 altogether. Find all the sets of 4 coins he could have.', a: '2 sets: $1 + 10¢ + 10¢ + 5¢, and 50¢ + 50¢ + 20¢ + 5¢' },
-      { q: 'A bun costs 70¢. Mei pays with a $1 coin. Which coins does she get as change, using the fewest coins?', a: '30¢: 20¢ + 10¢' },
-      { q: 'Ben has $30. He buys a book for $12 and a pen for $5. How much money does he have left? Can he also buy a game for $15?', a: '$13 left. No, he is $2 short.' },
+      { q: 'How many different ways can you pay exactly 40¢ using 5¢, 10¢ and 20¢ coins? Make a list in order, starting with the most 20¢ coins.', a: '9 ways: two 20¢ (1 way); one 20¢ and 20¢ more (3 ways); no 20¢ (5 ways).' },
+      { q: 'Pens cost $3 each and books cost $7 each. Ben buys 6 things and spends exactly $30. How many pens and how many books does he buy? Make a table.', a: '3 pens and 3 books ($9 + $21 = $30). Table: 6 pens $18, 5 pens and 1 book $22, 4 and 2 $26, 3 and 3 $30 ✓. Each swap of a pen for a book adds $4.' },
       { q: 'Ravi had some money. He spent $8, then he spent half of what was left. He had $6 left. How much money did Ravi have at first?', a: '$20 ($6 + $6 = $12 was left after the $8; $12 + $8 = $20)' },
       { q: 'Siti has 5 coins. They are all 20¢ or 50¢ coins, worth $1.60 altogether. How many of each coin does she have?', a: 'Three 20¢ and two 50¢ (60¢ + 100¢ = 160¢)' },
       { q: 'Ali pays exactly 90¢ with 5 coins. Find all the sets of 5 coins he could use.', a: '3 sets: 50¢ + 20¢ + 10¢ + 5¢ + 5¢; 50¢ + 10¢ + 10¢ + 10¢ + 10¢; 20¢ + 20¢ + 20¢ + 20¢ + 10¢' },
       { q: 'A pen costs $3 more than a pencil. Together they cost $11. How much does each cost?', a: 'Pencil $4, pen $7 ($11 − $3 = $8, $8 ÷ 2 = $4)' }
     ],
     challenge: [
-      { q: 'Ali has 10 coins. They are all 10¢ or 20¢ coins, worth $1.50 altogether. How many of each coin does he have?', a: 'Five 10¢ and five 20¢ (start with ten 10¢ = $1; each swap to a 20¢ adds 10¢; 5 swaps)' },
-      { q: 'Mei has $1. At the snack stall: chips 45¢, sweet 15¢, jelly 25¢, biscuit 30¢, lollipop 20¢. She wants as many DIFFERENT snacks as she can. Which should she buy?', a: 'Sweet, lollipop, jelly and biscuit (15 + 20 + 25 + 30 = 90¢, 10¢ change). Five snacks cost $1.35, too much.' },
+      { q: 'Ali has 10 coins. Every coin is a 10¢ coin or a 20¢ coin. They could be worth $1.50: how many of each coin is that? Write ALL the totals his 10 coins could be worth. Could they be worth $1.55? Explain.', a: 'Five and five. Totals $1.00 to $2.00, 10¢ apart (11). Not $1.55.' },
+      { q: 'Mei has $1. At the snack stall: chips 45¢, sweet 15¢, jelly 25¢, biscuit 30¢, lollipop 20¢. She wants as many DIFFERENT snacks as she can. Which should she buy?', a: 'Sweet, lollipop, jelly and biscuit (90¢). Five snacks cost $1.35.' },
       { q: 'Ben has 6 coins. Every coin is 10¢ or 50¢. List all the amounts he could have.', a: '7 amounts: 60¢, $1, $1.40, $1.80, $2.20, $2.60, $3' },
-      { q: 'Find all the ways to pay exactly $1 using only 20¢ and 50¢ coins.', a: '2 ways: two 50¢, or five 20¢ (one 50¢ leaves 50¢, which 20¢ coins cannot make)' },
-      { q: 'Ravi has $2 in 20¢ coins. Mei has $2 in 50¢ coins. Who has more coins? How many more?', a: 'Ravi, 6 more (10 coins and 4 coins)' },
+      { q: 'Which amounts 10¢, 20¢, 30¢, … up to $1 can be paid exactly using only 20¢ and 50¢ coins? Which cannot? Explain why.', a: 'Can: 20¢, 40¢, 50¢, 60¢, 70¢, 80¢, 90¢ and $1. Cannot: 10¢ and 30¢. 20¢, 40¢, 60¢, 80¢ and $1 are made of 20¢ coins only. 50¢, 70¢ and 90¢ need one 50¢ coin and then 0, 20¢ or 40¢ more in 20¢ coins. 10¢ is smaller than every coin, and 30¢ is too small for a 50¢ coin and is not made of 20¢ coins.' },
+      { q: 'Make up your own price list for 5 snacks (prices in cents) so that Mei, with exactly $1, can buy exactly TWO different baskets that cost exactly $1. Check by listing every basket in order. Swap with a partner. Is your answer the same?', a: 'Open. Example: 50¢, 30¢, 20¢, 60¢, 40¢. The two baskets that cost $1 are 50¢ + 30¢ + 20¢ and 60¢ + 40¢. No other basket makes exactly $1, so the list has exactly two.' },
       { q: 'Three friends share the cost of a $15 present. Ali pays $2 more than Ben. Siti pays $2 more than Ali. How much does each pay?', a: 'Ben $3, Ali $5, Siti $7' },
       { q: 'Siti had some money. She spent half of it on a book. Then she spent half of what was left on a pen. She had $5 left. How much money did she have at first?', a: '$20 ($5 + $5 = $10 before the pen; $10 + $10 = $20)' },
       { q: 'Sweets cost 5¢ each and lollipops cost 20¢ each. Ben buys 8 things altogether and spends exactly $1. How many sweets and how many lollipops does he buy?', a: '4 sweets and 4 lollipops (20¢ + 80¢ = $1)' },
@@ -131,9 +131,9 @@ module.exports = {
       ...H.lines(2),
       H.q(5, 'Work backwards.', { keepNext: true }),
       H.sub('a', 'Mei spent 45¢ on a sweet and 30¢ on a pencil. She has 25¢ left. How much money did she have at first? Write it in dollars and cents.   ________'),
-      H.sub('b', 'Ben spent half of his money on a kite. Then he spent $4 on a ball. He had $6 left. How much money did Ben have at first?   ________'),
+      H.sub('b', 'Ben spent half of his money on a kite. Then he spent $4 on a ball. He had $6 left. How much money did Ben have at first? Tip: draw his money as a bar cut in half.   ________'),
       H.q(6, 'Stickers cost 20¢ each. Erasers cost 50¢ each. Siti spends exactly $2. How many stickers and erasers could she buy? Find ALL the ways. (She might buy only one kind.)', { keepNext: true }),
-      ...H.lines(4)
+      ...H.lines(3)
     ];
   }
 };

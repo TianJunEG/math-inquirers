@@ -249,11 +249,11 @@ body=h2('Challenge: see it')+f'<div style="display:flex;gap:32px;align-items:fle
 put('p6l9-chdiag',sec('p6l9-chdiag','62–75 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Ask: What do you notice? What do we know? What do we not know yet? Which totals can you find? Answers are in the Challenge slide notes.'))
 
 # ---------------- 24. challenge walk-through ----------------
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: compare the totals',38,800,TEAL))
-for i,t in enumerate(['Total of 5: 5 × 8 = 40','Total of 4: 4 × 7 = 28','Removed: 40 − 28 = 12','Check: 28 + 12 = 40, 40 ÷ 5 = 8 ✓']): body+=pin(128,330+i*120,800,p(t,32),'rise',WHITE)
-body+=pin(992,250,800,p('Q2: total needed, total so far',38,800,TEAL))
-for i,t in enumerate(['Needed after 10 games: 10 × 32 = 320','So far after 9 games: 9 × 30 = 270','Game 10: 320 − 270 = 50 points','Why so many? It must lift 9 games by 2 each (18) AND reach 32 itself: 32 + 18 = 50 ✓']): body+=pin(992,330+i*120,800,p(t,30),'rise',WHITE)
-put('p6l9-chwalk',sec('p6l9-chwalk','Challenge',body,'Use after pairs have tried, with the "see it" slide. The big idea in both: work with TOTALS, not means. Q2 also has a levelling explanation: the 10th score must bring itself up to 32 and also give 2 extra to each of the 9 earlier games. Test either in Scratch: put the numbers in a list and run the mean program.'))
+body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1(a): compare the totals',38,800,TEAL))
+for i,t in enumerate(['Total of 5: 5 × 8 = 40','Total of 4: 4 × 7 = 28','Removed: 40 − 28 = 12','(b) Above the mean: lowers it. Below: raises it.']): body+=pin(128,330+i*120,800,p(t,32),'rise',WHITE)
+body+=pin(992,250,800,p('Q2(a): total needed, total so far',38,800,TEAL))
+for i,t in enumerate(['Needed after 10 games: 10 × 32 = 320','So far after 9 games: 9 × 30 = 270','Game 10: 320 − 270 = 50 points','(b) Best case: 270 + 60 = 330, 330 ÷ 10 = 33']): body+=pin(992,330+i*120,800,p(t,30),'rise',WHITE)
+put('p6l9-chwalk',sec('p6l9-chwalk','Challenge',body,'Use after pairs have tried, with the "see it" slide. The big idea in both: work with TOTALS, not means. Q2 also has a levelling explanation: the 10th score must bring itself up to 32 and also give 2 extra to each of the 9 earlier games. Q1(b): Ali is wrong. Removing a number ABOVE the mean (like 12) lowers the mean; removing one BELOW the mean raises it. Example: 4, 6, 8, 10, 12 has mean 8; remove 4 and the mean of 6, 8, 10, 12 is 9. Check for (a): 28 + 12 = 40 and 40 ÷ 5 = 8. Q2(b): the best she can do is 60 in game 10, so the total is 270 + 60 = 330 and the mean is 33. Test either in Scratch: put the numbers in a list and run the mean program.'))
 
 # ---------------- 25. talk ----------------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(L['share'],42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))

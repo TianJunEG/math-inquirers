@@ -160,12 +160,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'A turtle draws a regular hexagon. How many degrees does it turn at each corner?', a: '60° (360 ÷ 6)' },
-      { q: 'What is each inside angle of a regular hexagon?', a: '120° (180 − 60)' },
-      { q: 'Fill in the turn so the turtle draws a square: repeat 4 [move 100, turn ↻ ___ ]', a: '90' },
-      { q: 'A regular polygon has a turn angle of 72°. How many sides does it have?', a: '5 (360 ÷ 72): a regular pentagon' },
-      { q: 'At a corner the turtle turns 50°. What is the inside angle at that corner?', a: '130° (180 − 50)' },
-      { q: 'A turtle draws any triangle and comes back to the start facing the same way. How many degrees has it turned altogether?', a: '360°' }
+      { q: 'Walk a square: walk forward, turn on the spot by 90° to the right, and repeat, until you are back at the start facing the way you began. You turn 90° at each of the 4 corners. How many degrees did you turn altogether? (A full turn on the spot is 360°.)', a: '360° (4 × 90°): one full turn' },
+      { q: 'A turtle runs: repeat 6 [move 100, turn ↻ 60]. It draws a hexagon. How many degrees does it turn altogether? What do you notice?', a: '360° (6 × 60°). The same total as the square: one full turn.' },
+      { q: 'A turtle draws an equilateral triangle: repeat 3 [move 100, turn ↻ ___ ]. It turns the same amount each time and ends up facing the way it started (a full turn is 360°). Guess and check, or draw it with a ruler. What number goes in the gap?', a: '120 (3 × 120 = 360)' },
+      { q: 'A turtle repeats [move 100, turn ↻ 72] again and again. How many repeats until it first faces the way it started? Add up the turns, 72, 144, … until you reach a full turn (360). What shape does it draw?', a: '5 repeats (5 × 72 = 360). It draws a regular pentagon.' },
+      { q: 'Angles on a straight line add up to 180°. At one corner the turtle turns 50° to go along the next side. What is the inside angle at that corner?', a: '130° (180° − 50°)' },
+      { q: 'Each turn of a regular hexagon is 60°. A turn and the inside angle at a corner make a straight line (180°). What is each inside angle of a regular hexagon?', a: '120° (180° − 60°)' }
     ],
     stretch: [
       { q: 'Each inside angle of a regular polygon is 4 times its turn angle. How many sides does the polygon have?', a: '10 (turn + 4 × turn = 180°, so the turn is 36° and 360 ÷ 36 = 10; check: inside 144° = 4 × 36°)' },
@@ -180,11 +180,11 @@ module.exports = {
     challenge: [
       { q: 'Ali wants a regular pentagon. He types the inside angle by mistake: repeat 5 [move 100, turn ↻ 108]. Does his shape close? How many repeats would make it close, and what would it draw?', a: 'No: 5 × 108° = 540° is not a whole number of turns. 108 × 10 = 1080 = 3 × 360, so 10 repeats close it: a 10-point star that goes round 3 times (each point 72°).' },
       { q: 'How many different stars with 9 points can a turtle draw using equal moves and equal turns? Give the turns.', a: '2: turn 80° (round 2 times) and turn 160° (round 4 times). Turn 120° (3 times round) only draws a triangle 3 times; turns of 200°, 280° … give the same stars turned the other way.' },
-      { q: 'Each inside angle of a regular polygon is 5 times its turn angle. How many sides does it have?', a: '12 (6 × turn = 180°, turn 30°, 360 ÷ 30 = 12)' },
+      { q: 'The inside angles of a regular polygon add up to 1800°. A second regular polygon has a turn angle exactly half as big as the first one’s. How many sides does the second polygon have, and what do all its inside angles add up to?', a: 'First polygon: (n − 2) × 180° = 1800°, so n = 12 and its turn is 30°. Second: turn 15°, so 360 ÷ 15 = 24 sides. Its inside angles add up to (24 − 2) × 180° = 3960° (or 24 × 165°).' },
       { q: 'How many different 12-point stars can a turtle draw with equal moves and equal turns? Give the turn and how many times it goes round.', a: 'Only 1: turn 150°, going round 5 times (5 × 360 ÷ 12). Turns 60°, 90° and 120° (round 2, 3, 4 times) just redraw a hexagon, square or triangle, and 180° goes back and forth on a line.' },
       { q: 'A turtle runs: repeat 12 [repeat 4 (move 100, turn ↻ 90), turn ↻ 30]. How many full turns does it make altogether?', a: '13 (12 × (360° + 30°) = 4680° = 13 × 360°)' },
-      { q: 'Each inside angle of a regular polygon is 20° bigger than each inside angle of a regular hexagon. How many sides does it have?', a: '9 (inside 140°, turn 40°, 360 ÷ 40 = 9)' },
-      { q: 'All the inside angles of a regular polygon add up to 1800°. How many sides does it have, and what is its turn angle?', a: '12 sides ((12 − 2) × 180° = 1800°); turn 30°' },
+      { q: 'Zara says: “The more sides a regular polygon has, the bigger each inside angle is, but an inside angle can never reach 180°.” Is she right? Use the turn angle to explain.', a: 'Yes. The turn is 360° ÷ n. It gets smaller as n grows but is never 0, so the inside angle 180° − 360° ÷ n gets bigger and always stays below 180° (180° would be a straight line, which needs a turn of 0°). For example 5 sides give 108°, 12 sides give 150° and 60 sides give 174°.' },
+      { q: 'Design your own star. Choose the number of points p and how many times it goes round, k, so that the turn angle 360° × k ÷ p is a WHOLE number and p and k share no common factor. Give the turn angle, the point angle (180° − turn) and the code. Explain why your star closes after p repeats.', a: 'Open. Example: 8 points going round 3 times: turn = 360 × 3 ÷ 8 = 135°, point angle 45°; code repeat 8 [move 100, turn ↻ 135]. After 8 repeats it has turned 8 × 135° = 1080° = 3 full turns, so it faces the way it started and the star closes. If p and k share a factor, the star closes sooner and is a smaller shape repeated (9 points going round 3 times is just a triangle).' },
       { q: 'A square, a hexagon and a 12-sided shape fit exactly around a point: 90° + 120° + 150° = 360°. Find one other set of three regular polygons whose inside angles add up to 360° (hint: the answer uses a square or a triangle).', a: 'Square + octagon + octagon (90° + 135° + 135°) or triangle + 12-gon + 12-gon (60° + 150° + 150°).' },
       { q: 'Try turn 120 and turn 60 with repeat 6 and move 100. Which one draws a hexagon? Why does the other not make a 6-point star?', a: 'Turn 60 draws the hexagon (6 × 60° = 360°, one full turn). Turn 120 draws a triangle twice round (6 × 120° = 720°, two full turns), and it only visits 3 corners, not 6.' }
     ]

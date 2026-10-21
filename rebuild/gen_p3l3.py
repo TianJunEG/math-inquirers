@@ -224,8 +224,8 @@ put('p3l3-ws2ans',check_rows('p3l3-ws2ans','66–68 MIN','Page 2: check together
  'Q5: 5, 7, 8, 10 and 11 rows do not work. The number of ways is odd because 6 × 6 pairs with itself. Q6: list 16, 24, 32 … 96 and test each for ÷ 6: 24, 48, 72, 96. Digit sums 6, 12, 9, 15, so 48.'))
 
 # ---------- 21 stretch ----------
-st=[('1.','Which is more, 7 × 8 or 6 × 9? By how much?'),('2.','The last digit of 9 × 9 is 1. What is the last digit of 9 × 9 × 9 × 9?'),('3.','Ben multiplies a number by 6. The answer ends in 4. What could the last digit of his number be? Find all.')]
-put('p3l3-stretch',sec('p3l3-stretch','For early finishers',h2('Stretch')+numbered(st,38),'For children who finish early. Answers: 1) 7 × 8 = 56 is 2 more than 6 × 9 = 54. 2) 1: the last digits go 9, 1, 9, 1 (9 × 9 × 9 × 9 = 6561). 3) 4 or 9: 6 × 4 = 24 and 6 × 9 = 54; check every digit 0 to 9, no other one gives a last digit of 4.'))
+st=[('1.','Which is more, and by how much? (a) 7 × 7 or 6 × 8   (b) 8 × 8 or 7 × 9   (c) 7 × 8 or 6 × 9. What do you notice?'),('2.','The last digit of 9 × 9 is 1. What is the last digit of 9 × 9 × 9 × 9?'),('3.','Ben multiplies a number by 6. The answer ends in 4. What could the last digit of his number be? Find all.')]
+put('p3l3-stretch',sec('p3l3-stretch','For early finishers',h2('Stretch')+numbered(st,38),'For children who finish early. Answers: 1) (a) 49 is 1 more than 48. (b) 64 is 1 more than 63. (c) 56 is 2 more than 54. The closer the two numbers are to each other, the bigger the answer. 2) 1: the last digits go 9, 1, 9, 1 (9 × 9 × 9 × 9 = 6561). 3) 4 or 9: 6 × 4 = 24 and 6 × 9 = 54; check every digit 0 to 9, no other one gives a last digit of 4.'))
 
 # ---------- 22 challenge ----------
 ch=[('1.','In a multiplication square, the top row of a 2 by 2 block shows 42 and 48. The row below shows 49 and 56. What are the two row numbers and the two column numbers?'),('2.','Ben writes the answers of the 6 times table from 6 × 1 to 6 × 20. How many of the answers end in 8?')]

@@ -111,12 +111,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Write 11/3 as a mixed number.', a: '3 2/3' },
-      { q: 'Write 2 3/4 as an improper fraction.', a: '11/4' },
-      { q: 'Find 1/4 of 32.', a: '8' },
-      { q: 'Find 2/3 of 18.', a: '12' },
-      { q: 'Which is bigger, 5/6 or 2/3?', a: '5/6 (2/3 = 4/6)' },
-      { q: 'Work out 3/10 + 2/5.', a: '7/10 (2/5 = 4/10)' }
+      { q: 'Ravi eats 11 slices of pizza. Each pizza is cut into 3 equal slices. Draw circles cut into 3 slices to help you. How many whole pizzas did he eat, and how many slices of another pizza?', a: '3 whole pizzas and 2 slices of another pizza (11 thirds = 3 2/3 pizzas).' },
+      { q: 'Mei has 2 whole chocolate bars and 3 more pieces. Each bar is broken into 4 equal pieces. Draw the bars. How many pieces does she have altogether?', a: '11 pieces (2 × 4 = 8, and 3 more). In fractions: 11 quarters = 11/4 = 2 3/4 bars.' },
+      { q: 'There are 32 counters. Put them equally into 4 groups. How many counters are in one group? Ali takes one group. What fraction of the counters does he take?', a: '8 counters in a group. Ali takes 1 group out of 4, which is 1/4 of the counters (1/4 of 32 = 8).' },
+      { q: 'Put 18 counters equally into 3 groups. Give 2 of the groups to Mei. How many counters does Mei get?', a: '12 counters (each group has 6; 2 groups = 12). That is 2/3 of 18.' },
+      { q: 'Fold two paper strips of the same length. Fold one into 6 equal parts and shade 5 of them. Fold the other into 3 equal parts and shade 2 of them. Which strip has more shaded?', a: 'The strip with 5 of 6 parts shaded (5/6). Two of the three parts is 4 of the 6 small parts (2/3 = 4/6), and 5 is more than 4.' },
+      { q: 'A ribbon 1 m long is marked in 10 equal parts. Mei uses 3 parts for a bow and 4 more parts to wrap a gift. What fraction of the ribbon is left?', a: '3/10 of the ribbon is left (10 − 3 − 4 = 3 parts).' }
     ],
     stretch: [
       { q: 'Ben ate 7/4 pizzas and Ravi ate 1 5/8 pizzas. Who ate more?', a: 'Ben. 7/4 = 14/8 = 1 6/8, which is more than 1 5/8.' },
@@ -129,15 +129,14 @@ module.exports = {
       { q: 'Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. Is he right? Explain.', a: 'No. Both have 3 pieces, but sevenths are smaller pieces than fifths, so 3/5 is bigger.' },
       { q: '2/5 of a number is 16. What is the number?', a: '40 (2 units = 16, 1 unit = 8, 5 units = 40).' }
     ],
-
     challenge: [
-      { q: 'How many fractions with denominator 12 are bigger than 1/4 but smaller than 2/3?', a: '4: 4/12, 5/12, 6/12, 7/12 (1/4 = 3/12 and 2/3 = 8/12 do not count).' },
+      { q: 'I am a fraction equal to 3/4. My numerator and denominator add up to 28. Who am I?', a: '12/16. 3/4 has 3 + 4 = 7 parts; 28 ÷ 7 = 4, so 3 × 4 = 12 and 4 × 4 = 16.' },
       { q: 'Mei spent 1/3 of her money on a book and 1/4 of her money on a pen. She had $25 left. How much money did she have at first?', a: '$60. Book 4/12, pen 3/12, so 5/12 is left. 5 units = $25, 1 unit = $5, 12 units = $60.' },
       { q: 'A tank is 3/8 full of water. After 15 litres more are poured in, it is 3/4 full. How many litres does the full tank hold?', a: '40 litres. 3/4 = 6/8, so 15 litres is 3/8. 1/8 = 5 litres, 8/8 = 40 litres.' },
       { q: 'Use two of the digit cards 2, 3, 5 and 7 to make a fraction smaller than 1 that is as close to 1 as possible.', a: '5/7. It is 2/7 short of 1. The next best, 2/3, is 1/3 = 2/6 short, and 2/7 is less than 2/6.' },
       { q: 'In a bag of marbles, 1/4 are red and 1/3 are blue. The other 10 marbles are green. How many marbles are in the bag?', a: '24. Red 3/12 and blue 4/12, so green is 5/12. 5 units = 10, 1 unit = 2, 12 units = 24.' },
-      { q: 'A cake is cut into 12 equal pieces. Mei eats 1/4 of the cake and Ben eats 1/3 of the cake. How many pieces are left?', a: '5 pieces (Mei 3 pieces, Ben 4 pieces, 12 − 7 = 5).' },
-      { q: 'I am a fraction equal to 3/4. My numerator and denominator add up to 28. Who am I?', a: '12/16. 3/4 has 3 + 4 = 7 parts; 28 ÷ 7 = 4, so 3 × 4 = 12 and 4 × 4 = 16.' },
+      { q: 'Ben gives 1/3 of his marbles to Ali and 1/4 of his marbles to Mei. Ali gets 2 more marbles than Mei. How many marbles did Ben have at first?', a: '24 marbles. Ali gets 4/12 and Mei gets 3/12, so Ali gets 1/12 more than Mei. 1/12 = 2 marbles, so 12/12 = 24. Check: Ali 8, Mei 6.' },
+      { q: 'Mei takes 1/2 of the sweets in a jar. Ali takes 1/3 of the sweets. There are 5 sweets left. (a) How many sweets were in the jar at first? (b) What if 7 sweets were left? (c) Make up your own puzzle with two other fractions taken from a jar and a number of sweets left, and solve it.', a: '(a) 30 sweets: 1/2 + 1/3 = 5/6 are taken, so 1/6 is left; 1/6 = 5, so 6/6 = 30. (b) 42 sweets (1/6 = 7). The jar always holds 6 times the number left. (c) Puzzles will vary: check that the fractions taken add to less than 1 and that the left-over fraction was found first.' },
       { q: 'Half of a number is 3 more than a third of the number. What is the number?', a: '18. Half = 3 sixths and a third = 2 sixths, so 1 sixth = 3 and the number is 6 sixths = 18. Check: 9 is 3 more than 6.' },
       { q: 'Siti read 2/5 of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?', a: '150 pages. Cut each fifth in half to make tenths: Monday 4 tenths, the rest is 6 tenths, Tuesday 3 tenths, 3 tenths left = 45. 1 tenth = 15, 10 tenths = 150.' }
     ]
@@ -146,7 +145,7 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.p(['<b>Improper fraction:</b> 1 or more, like ', fr(7, 4), '.   <b>Mixed number:</b> a whole number and a fraction, like ', mx(1, 3, 4), '.'], { after: 40 }));
-    W.push(H.q(1, 'Each bar is one whole.', { before: 40, keepNext: true }));
+    W.push(H.q(1, 'Each bar is one whole. Draw more bars if you need them.', { before: 40, keepNext: true }));
     W.push(H.fig(barsSvg()));
     W.push(H.sub('a', 'Fifths shaded: _____    Improper fraction: _____    Mixed number: _____'));
     W.push(H.sub('b', ['Write ', fr(19, 4), ' as a mixed number. ______     <b style="color:#1F7A6F">c</b>  Write ', mx(3, 2, 5), ' as an improper fraction. ______']));
@@ -159,7 +158,7 @@ module.exports = {
     W.push(H.fig(setSvg()));
     W.push(H.sub('a', ['How many wear glasses? ______      <b style="color:#1F7A6F">b</b>  How many do NOT wear glasses? ______']));
 
-    W.push(H.q(4, 'Compare. Write > or < in each box. Then write how you know.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. Then write how you know.', { pb: true, before: 0, keepNext: true }));
     W.push(H.sub('a', [fr(3, 4), box, fr(5, 8), '     ____________________________']));
     W.push(H.sub('b', [fr(2, 3), box, fr(7, 12), '     ____________________________']));
     W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     ____________________________']));
@@ -171,7 +170,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('b', 'How many sweets are NOT red?'));
     W.push(H.ans());
-    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '.'], { keepNext: true }));
+    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Hint: draw a strip of 12 equal boxes and shade ', fr(1, 3), ' of it, then ', fr(3, 4), '.'], { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.ans('How many?'));
     return W;

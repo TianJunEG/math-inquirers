@@ -122,11 +122,11 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'On a line graph, each line on the scale is worth 10. A point is halfway between the 30 line and the 40 line. What number does it show?', a: '35' },
+      { q: 'On a line graph, each line on the scale is worth 10. Draw the scale from 30 to 40. A point is halfway between the 30 line and the 40 line. What number does it show?', a: '35' },
       { q: 'A stall sold 45 bowls of laksa on Monday and 60 bowls on Tuesday. By how many bowls did sales go up?', a: '15 bowls' },
       { q: 'A table shows 32 visitors on Monday, 48 on Tuesday and 20 on Wednesday. How many visitors came altogether?', a: '100' },
-      { q: 'A line graph goes up from 8 am to 10 am, then down until 12 pm. At what time was the number the highest?', a: '10 am' },
-      { q: 'A table shows that Ali has 25 cards and Mei has 18 more cards than Ali. How many cards do they have altogether?', a: '68 (Mei has 43; 25 + 43 = 68)' },
+      { q: 'A line graph goes up from 8 am to 10 am, then down until 12 pm. Sketch what it looks like. At what time was the number the highest?', a: '10 am' },
+      { q: 'A table shows that Ali has 25 cards and Mei has 18 more cards than Ali. Draw a bar for each child. How many cards do they have altogether?', a: '68 (Mei has 43; 25 + 43 = 68)' },
       { q: 'Three days of sales add up to 90. Day 1 is 30 and Day 2 is 25. What is Day 3?', a: '35' }
     ],
     stretch: [
@@ -143,12 +143,12 @@ module.exports = {
       { q: 'A shop’s sales go up by the same amount every week. In week 2 it sold 45 toys and in week 6 it sold 85 toys. How many toys did it sell in week 1? In which week did it first sell more than 100 toys?', a: 'Week 1: 35 (4 jumps make 40, so 10 a week). First more than 100: week 8 (105).' },
       { q: 'A stall sold 250 bowls of noodles from Monday to Friday. Monday 40 and Friday 50. Tuesday and Wednesday were the same, and Thursday was 10 more than Tuesday. Find the sales for Tuesday, Wednesday and Thursday.', a: 'Tuesday 50, Wednesday 50, Thursday 60. (Tue + Wed + Thu = 160; take away the extra 10, 150 shared by 3 = 50.)' },
       { q: 'On Ben’s graph each line is worth 2. On Mei’s graph each line is worth 10. Both lines go up by 3 grid lines from Monday to Tuesday. Whose number went up more, and by how much more?', a: 'Mei’s: hers went up 30 and Ben’s went up 6, so 24 more.' },
-      { q: 'Three classes read 210 books altogether in Term 1. In Term 2, each class read 15 more books than in Term 1. How many books did the three classes read in Term 2?', a: '255 (210 + 15 + 15 + 15)' },
+      { q: 'A graph’s scale starts at 200 and each line is worth 50. Monday’s point is 2 lines up and Tuesday’s point is 6 lines up. Ravi says Tuesday’s number is 3 times Monday’s. Is he right? Explain.', a: 'No. Monday is 300 and Tuesday is 500. 3 times 300 is 900.' },
       { q: 'At a pool, the number of swimmers went up by 15 every hour from 9 am to 11 am, then went down by 10 every hour until 1 pm. At 1 pm there were 50 swimmers. How many were there at 9 am?', a: '40. Work backwards: 12 pm 60, 11 am 70, 10 am 55, 9 am 40.' },
       { q: 'A stall sold 400 plates of nasi lemak from Monday to Friday. Each day it sold 10 more plates than the day before. How many plates did it sell on Monday?', a: '60 (60, 70, 80, 90, 100)' },
       { q: 'Four teams scored 100 points altogether. Team A scored twice as many as Team B. Team C scored 10 more than Team B. Team D scored 22. How many points did each team score?', a: 'A 34, B 17, C 27, D 22. (A + B + C = 78: four equal parts and 10 more, so one part is 68 ÷ 4 = 17.)' },
       { q: 'Tank A has 80 litres of water and loses 6 litres every hour. Tank B has 20 litres and gains 9 litres every hour. On a line graph the two lines cross. After how many hours do the tanks hold the same amount? How much is in each?', a: 'After 4 hours: 56 litres each. The gap of 60 litres closes by 15 litres every hour.' },
-      { q: 'A graph’s scale starts at 200 and each line is worth 50. Monday’s point is 2 lines up and Tuesday’s point is 6 lines up. Ravi says Tuesday’s number is 3 times Monday’s. Is he right? Explain.', a: 'No. Monday is 300 and Tuesday is 500. 3 times 300 is 900.' }
+      { q: 'Four numbers: 52, 54, 56, 58. Choose where the scale starts and how much each line is worth, so that a line graph of these numbers looks (a) like a huge increase and (b) like hardly any increase. Write both scales and a sentence a shop owner might say with each graph. Which graph is fair? Why?', a: 'Answers vary. (a) Start at 50 with each line worth 1: the line climbs steeply. (b) Start at 0 with each line worth 20: the line is almost flat. A fair graph starts at 0 or says clearly that it does not, so the viewer can see the real change of 6. Both graphs show the same numbers.' }
     ]
   },
 

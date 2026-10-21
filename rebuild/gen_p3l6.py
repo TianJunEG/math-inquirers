@@ -245,7 +245,7 @@ put('p3l6-teachbetween',sec('p3l6-teachbetween','58–59 MIN',body,
 SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
- [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','ALL the twelfths between one half and three quarters.')],
+ [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','★ If time: ALL the twelfths between one half and three quarters.')],
  'Finished early? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
@@ -263,9 +263,9 @@ put('p3l6-stretch',sec('p3l6-stretch','For early finishers',body,
  'For children who finish early. Answers: 1) 1/2, or 3/6 (1/3 = 2/6, and 5/6 − 2/6 = 3/6). 2) 2/5, 1/2, 7/10 (4/10, 5/10, 7/10). 3) 3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10; the ends do not count).'))
 
 # ---------- 22. challenge ----------
-body=h2('Challenge')+items([('1.','Fill one whole bar using exactly 5 pieces. You may use '+F(1,2)+', '+F(1,4)+' and '+F(1,8)+' pieces, as many of each as you like. Find all the ways.'),('2.','Siti and Ravi each have the same size bottle of juice. Siti drinks '+F(2,3)+' of her bottle. Ravi drinks '+F(7,12)+' of his. Who drinks more? How much more?')],34)
+body=h2('Challenge')+items([('1.','Fill one whole bar using exactly 5 pieces. You may use '+F(1,2)+', '+F(1,4)+' and '+F(1,8)+' pieces, as many of each as you like. Find all the ways.'),('2.','Find a fraction that is bigger than '+F(2,3)+' but smaller than '+F(3,4)+'. Hint: cut every part into smaller equal parts. Can you find another one?')],34)
 put('p3l6-challenge',sec('p3l6-challenge','Challenge',body,
- 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 2 ways: 1/2 + 1/8 + 1/8 + 1/8 + 1/8, and 1/4 + 1/4 + 1/4 + 1/8 + 1/8. 2) Siti, by 1/12 of a bottle.'))
+ 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 2 ways: 1/2 + 1/8 + 1/8 + 1/8 + 1/8, and 1/4 + 1/4 + 1/4 + 1/8 + 1/8. 2) 17/24 (2/3 = 16/24 and 3/4 = 18/24). Another: 25/36 (24/36 and 27/36). Many answers are possible.'))
 
 # ---------- 23. challenge: see it ----------
 c1=(f'<rect x="10" y="40" width="720" height="70" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/>'+T(370,86,'1 whole: fill it with exactly 5 pieces',26)
@@ -275,13 +275,13 @@ c1=(f'<rect x="10" y="40" width="720" height="70" fill="{WHITE}" stroke="{NAVY}"
     +bar(10,365,90,64,1,[TEAL],3,False)+sfr(55,396,1,8,24,WHITE)
     +T(400,300,'Same length as the whole:',24,MUTED,'start')+T(400,334,'2 halves, 4 quarters',24,MUTED,'start')+T(400,368,'or 8 eighths.',24,MUTED,'start'))
 sv1=svgwrap('An empty whole bar and the half, quarter and eighth pieces drawn to the same scale',740,440,c1,'width:100%;height:auto')
-c2=(T(10,40,'Siti drinks',28,TEAL,'start')+bar(10,56,720,80,3,[YEL,YEL],4,True,26)
-    +T(10,200,'Ravi drinks',28,TEAL,'start')+bar(10,216,720,80,12,[SKY]*7,3,False)
-    +T(370,370,'Same size bottles. Can you make the parts match?',24,MUTED))
-sv2=svgwrap('Two equal bars: one cut into thirds with 2 shaded, one cut into twelfths with 7 shaded',740,400,c2,'width:100%;height:auto')
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card('<p style="font-size:28px;font-weight:700;color:#1F7A6F">Q1: Five pieces, one whole</p>'+sv1,extra='flex:1;min-width:0;padding:20px 24px')+card('<p style="font-size:28px;font-weight:700;color:#1F7A6F">Q2: Two bottles of juice</p>'+sv2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+c2=(T(10,40,'Two thirds',28,TEAL,'start')+bar(10,56,720,80,3,[YEL,YEL],4,True,26)
+    +T(10,200,'Three quarters',28,TEAL,'start')+bar(10,216,720,80,4,[SKY]*3,3,False)
+    +T(370,370,'Is there a fraction in between? Cut the parts smaller.',24,MUTED))
+sv2=svgwrap('Two equal bars: one cut into thirds with 2 shaded, one cut into quarters with 3 shaded',740,400,c2,'width:100%;height:auto')
+body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card('<p style="font-size:28px;font-weight:700;color:#1F7A6F">Q1: Five pieces, one whole</p>'+sv1,extra='flex:1;min-width:0;padding:20px 24px')+card('<p style="font-size:28px;font-weight:700;color:#1F7A6F">Q2: Between two fractions</p>'+sv2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p3l6-chdiag',sec('p3l6-chdiag','Challenge',body,
- 'Show after pairs have tried, or if they are stuck. The pictures show the problem, not the answer. Q1: "Start with the biggest piece. If you use a half, what must the other 4 pieces make?" Q2: "The parts are different sizes. What could you cut the thirds into so they match Ravi\'s parts?"'))
+ 'Show after pairs have tried, or if they are stuck. The pictures show the problem, not the answer. Q1: "Start with the biggest piece. If you use a half, what must the other 4 pieces make?" Q2: "The parts are different sizes. How can you cut both bars so the parts match?"'))
 
 # ---------- 24. challenge walk-through ----------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: biggest piece first',38,800,TEAL))
@@ -291,11 +291,11 @@ for i,t in enumerate(['With a '+F(1,2)+': four '+F(1,8)+' make the other '+F(1,2
                       '2 ways altogether.']):
     body+=pin(128,330+i*140,800,rp(t,28),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: make the parts the same size',38,800,TEAL))
-for i,t in enumerate(['Change Siti’s thirds to twelfths:  '+F(2,3)+' = '+F(8,12),F(8,12)+' is more than '+F(7,12)+'. Siti drinks more.',F(8,12)+' − '+F(7,12)+' = '+F(1,12)+' of a bottle more.']):
+for i,t in enumerate([F(2,3)+' = '+F(8,12)+'  and  '+F(3,4)+' = '+F(9,12),'Nothing fits between '+F(8,12)+' and '+F(9,12)+'. Cut every part in 2:',F(16,24)+'  and  '+F(18,24)+'.  '+F(17,24)+' fits in between!']):
     body+=pin(992,330+i*140,800,rp(t,28),'rise',WHITE)
 put('p3l6-chwalk',sec('p3l6-chwalk','Challenge',body,
  'Use after pairs have tried. Q1: work in order from the biggest piece, as in the list-in-order puzzles earlier in the program. With a half: the other half needs 4 pieces; 1/4 + 1/8 + 1/8 is only 3 pieces, and 1/4 + three eighths is too much, so only four eighths. Without a half: four quarters is only 4 pieces; three quarters + two eighths works; two quarters + eighths needs 4 eighths, which is 6 pieces. '
- 'Q2: the thirds are cut into 4 each to make twelfths (2/3 = 8/12).'))
+ 'Q2: first make the parts the same size: 2/3 = 8/12 and 3/4 = 9/12. There is no twelfth between them, so cut every part in two: 16/24 and 18/24, and 17/24 is in between. Children may cut into 3 or 4 instead (24/36 and 27/36 leave 25/36 and 26/36). The answer is not unique: the ladder of cuts never ends.'))
 
 # ---------- 25. talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+rp('Why is '+F(1,8)+' smaller than '+F(1,6)+', even though 8 is bigger than 6?',42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))

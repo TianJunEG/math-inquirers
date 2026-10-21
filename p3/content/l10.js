@@ -102,15 +102,15 @@ module.exports = {
   },
   qbank: {
     core: [
-      { q: 'Mei is 5th from the front and 4th from the back of a queue. How many people are in the queue?', a: '8 (5 + 4 − 1)' },
-      { q: 'Two numbers add up to 50. One number is 12 more than the other. What are the numbers?', a: '19 and 31 (50 − 12 = 38; 38 ÷ 2 = 19; 19 + 12 = 31)' },
+      { q: 'Mei is 5th from the front and 4th from the back of a queue. Draw circles for the children in the queue. How many children are in the queue?', a: '8 (5 + 4 − 1: Mei is counted in both)' },
+      { q: 'Two numbers add up to 50. One number is 12 more than the other. Guess a pair, check it, and improve your guess. What are the two numbers?', a: '19 and 31 (19 + 31 = 50 and 31 − 19 = 12; or 50 − 12 = 38 and 38 ÷ 2 = 19)' },
       { q: 'Make all the 3-digit numbers you can with the digit cards 1, 4 and 7 (use each card once). Which of them are even?', a: '147, 174, 417, 471, 714, 741. Even: 174 and 714.' },
       { q: 'A bar graph has lines at 0, 10, 20, 30, 40 and 50. A bar stops halfway between 30 and 40. What number does it show?', a: '35' },
       { q: '5, 9, 13, 17, … What is the 10th number in this pattern?', a: '41 (add 4 each time: 5, 9, 13, 17, 21, 25, 29, 33, 37, 41)' },
       { q: 'Ali has $5. He buys 2 drinks at $1.35 each. How much money does he have left?', a: '$2.30 ($1.35 + $1.35 = $2.70; $5 − $2.70 = $2.30)' }
     ],
     stretch: [
-      { q: 'In a queue, there are 4 people in front of Ravi and 7 people behind him. How many people are in the queue?', a: '12 (4 + 1 + 7)' },
+      { q: 'Ali has three coins: 10¢, 20¢ and 50¢. He picks one coin, or two coins, or all three. List every different amount of money he can make, in order. How many amounts are there?', a: '7 amounts: 10¢, 20¢, 30¢ (10 + 20), 50¢, 60¢ (10 + 50), 70¢ (20 + 50), 80¢ (all three). Listing by the number of coins (one, two, three) makes sure none is missed.' },
       { q: 'Ali, Ben and Siti each have a different pet: a cat, a dog and a fish. Ali’s pet has no fur. Ben does not have the dog. Who has which pet?', a: 'Ali: fish. Ben: cat. Siti: dog.' },
       { q: 'Triangles are made in a row with sticks: 1 triangle uses 3 sticks, 2 triangles use 5 sticks, 3 triangles use 7 sticks. How many sticks are needed for 12 triangles?', a: '25 sticks (add 2 each time: 3 + 11 × 2 = 25)' },
       { q: 'Use the digits 3, 0, 6 and 9 once each. Make the largest even 4-digit number and the smallest odd 4-digit number.', a: 'Largest even: 9630. Smallest odd: 3069.' },
@@ -120,13 +120,13 @@ module.exports = {
       { q: 'Two numbers add up to 100. Their difference is 24. What are the numbers?', a: '62 and 38' }
     ],
     challenge: [
-      { q: 'Mei, Ali and Ravi have 90 stickers altogether. Ali has 10 more than Mei. Ravi has 5 fewer than Ali. How many stickers does each child have?', a: 'Mei 25, Ali 35, Ravi 30' },
+      { q: 'Ben is 3rd from the front and 5th from the back of a queue, so there are 7 children. Add the two numbers: what do you get? Does this always work? Mei is 6th from the front in a queue of 15. Where is she from the back? Write a rule that links "from the front", "from the back" and "how many in the queue".', a: '3 + 5 = 8, which is 1 more than 7. It always works: the child in question is counted in both numbers, so (from the front) + (from the back) = (children in the queue) + 1. Mei is 15 + 1 − 6 = 10th from the back.' },
       { q: 'How many squares of any size are there in a 3 by 3 grid of squares?', a: '14 (9 small, 4 of size 2 by 2, 1 of size 3 by 3)' },
       { q: '6 children meet. Each child shakes hands once with every other child. How many handshakes are there?', a: '15 (5 + 4 + 3 + 2 + 1)' },
-      { q: 'How many 2-digit numbers have digits that add up to 9?', a: '9 (18, 27, 36, 45, 54, 63, 72, 81, 90)' },
-      { q: 'A bar graph shows the books 4 children read. Ali’s and Ben’s bars are the same height. Mei read 3 more than Ali. Siti read 2 fewer than Mei. Altogether they read 44 books. How many did each read?', a: 'Ali 10, Ben 10, Mei 13, Siti 11' },
-      { q: 'Siti has 8 coins. They are all 10¢ and 50¢ coins, worth $2 altogether. How many of each coin does she have?', a: 'Three 50¢ coins and five 10¢ coins' },
-      { q: 'One of Ali, Ben and Mei ate the last kueh. Ali says, “Ben ate it.” Ben says, “I did not eat it.” Mei says, “I did not eat it.” Only ONE of them is telling the truth. Who ate the kueh?', a: 'Mei (if Ali ate it, Ben and Mei are both truthful; if Ben ate it, Ali and Mei are both truthful; if Mei ate it, only Ben is truthful)' },
+      { q: 'How many rectangles of any size can you find in a grid of squares that is 2 squares tall and 3 squares wide (squares count as rectangles)? Make a list in order so that you do not miss any or count any twice.', a: '18. List by size (rows by columns): 1 by 1: 6 rectangles; 1 by 2: 4; 1 by 3: 2; 2 by 1: 3; 2 by 2: 2; 2 by 3: 1. Total 6 + 4 + 2 + 3 + 2 + 1 = 18.' },
+      { q: 'Ali, Ben, Mei and Siti read 8, 11, 13 and 15 books (each child a different number). Mei read the most. Siti read more than Ben. Ali read 2 fewer books than Siti. How many books did each child read? Then draw the bar graph.', a: 'Mei 15, Siti 13, Ali 11, Ben 8 (the only way). Mei has the most, 15. Ali is 2 fewer than Siti, and the only two numbers that are 2 apart among the rest (8, 11, 13) are 11 and 13, so Siti 13 and Ali 11. Ben is left with 8, and Siti (13) read more than Ben (8).' },
+      { q: 'Squares are built from sticks. Figure 1 is 1 square (4 sticks). Figure 2 is a 2 by 2 block of 4 squares (12 sticks). Figure 3 is a 3 by 3 block of 9 squares (24 sticks). How many sticks does Figure 4 need? Make a table and look at the jumps. How many sticks does Figure 10 need?', a: 'Figure 4: 40 sticks. The table goes 4, 12, 24, 40, 60, 84, 112, 144, 180, 220. The jumps are 8, 12, 16, 20, 24, 28, 32, 36, 40: they go up by 4 each time. Figure 10 needs 220 sticks. (Rule: 2 × n × (n + 1).)' },
+      { q: 'Make up your own logic puzzle with 3 people and 3 things (colours, pets or sports). Write 3 or 4 clues. Test it on a partner: does it have exactly ONE answer? Is there a clue you could take away and still have only one answer?', a: 'Answers vary. Check that the clues fit one arrangement only (try every arrangement of the 3 things). Example: Sam, Lee and Mei wear red, blue and green. Clues: Sam is not wearing red. Lee is not wearing blue. Mei is not wearing green. Sam is not wearing blue. The only answer is Sam green, Lee red, Mei blue. The clue "Mei is not wearing green" could be taken away and there is still only one answer.' },
       { q: 'In a queue, Siti is 6th from the front and Ravi is 4th from the back. There are 3 children between them, and Siti is in front of Ravi. How many children are in the queue?', a: '13 (Siti 6th, Ravi 6 + 3 + 1 = 10th from the front, then 3 more behind Ravi)' },
       { q: 'A bar graph shows the paper collected by 4 classes. 3P1 collected 10 kg more than 3P2. 3P3 collected the same as 3P1. 3P4 collected 5 kg less than 3P2. Altogether they collected 135 kg. How much did each class collect?', a: '3P1 40 kg, 3P2 30 kg, 3P3 40 kg, 3P4 25 kg (take away the extras 10 + 10 − 5 = 15: 120 kg ÷ 4 = 30 kg for 3P2)' }
     ]

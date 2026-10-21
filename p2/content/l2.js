@@ -133,16 +133,16 @@ module.exports = {
       { q: 'What number makes this true?  538 + 199 = 540 + □', a: '197. 538 is 2 less than 540, so □ is 2 less than 199. Both sides are 737.' },
       { q: 'A shop had 905 eggs. It sold some in the morning and 260 in the afternoon. 345 eggs were left. How many eggs were sold in the morning?', a: '300. Work backwards: 345 + 260 = 605 eggs after the morning sales; 905 − 605 = 300.' },
       { q: 'What number makes this true?  900 − □ = 450 + 175', a: '275 (450 + 175 = 625 and 900 − 625 = 275).' },
-      { q: '125 + 250 + □ = 1000. What is □?', a: '625' },
+      { q: 'Which is bigger, 347 + 258 or 350 + 255? Explain how you know without adding.', a: 'They are the same (both 605). 347 is 3 less than 350 and 258 is 3 more than 255, so moving 3 from one number to the other does not change the total.' },
       { q: 'The numbers 20, 40, 60, 80, 100, 120, 140, 160 and 180 make a magic square. What is the magic total? Which number goes in the middle?', a: '300 (all nine add up to 900, shared equally by the 3 rows). The middle is 100.' },
       { q: 'Put 11, 12, 13, 14, 15 and 16 in a magic triangle so each side adds up to 39. Which numbers go in the corners?', a: '11, 12 and 13. Between 11 and 12: 16. Between 12 and 13: 14. Between 13 and 11: 15.' }
     ],
     challenge: [
       { q: 'Use the digit cards 1, 2, 3, 4, 5 and 6 once each to make two 3-digit numbers. Make the difference as BIG as possible.', a: '531: 654 − 123.' },
-      { q: 'The numbers 101 to 109 make a magic square. What is the magic total? Which number goes in the middle?', a: '315 (all nine add up to 945, shared by 3 rows). The middle is 105.' },
-      { q: 'I add 199 to my number, then take away 99. I get 650. What is my number?', a: '550. Work backwards: 650 + 99 = 749, then 749 − 199 = 550.' },
-      { q: 'Put 100, 200, 300, 400, 500 and 600 in a magic triangle so each side adds up to 900.', a: 'Corners 100, 200, 300. Between 100 and 200: 600. Between 200 and 300: 400. Between 300 and 100: 500.' },
       { q: 'The same number goes in both boxes:  □ + 150 = 550 − □. What is it?', a: '200 (200 + 150 = 350 and 550 − 200 = 350).' },
+      { q: 'I add 199 to my number, then take away 99. I get 650. What is my number?', a: '550. Work backwards: 650 + 99 = 749, then 749 − 199 = 550.' },
+      { q: 'Put 110, 120, 130, 140, 150 and 160 in a magic triangle. What is the smallest side total you can make? The biggest? Find a triangle with side total 400. Could the side total be 380? Explain.', a: 'Smallest 390 (corners 110, 120, 130) and biggest 420 (corners 140, 150, 160). For 400 use corners 110, 130 and 150, with 160 between 110 and 130, 120 between 130 and 150, and 140 between 150 and 110. 380 is impossible: the three corners are counted twice, so the 3 sides add up to 810 plus the corners, and the corners add up to at least 360, so each side is at least 390.' },
+      { q: 'Make up your own missing-digit addition with TWO boxes that has exactly ONE answer. Then make one with two boxes that has MORE than one answer. What is different about the second one? Swap with a partner and check each other’s.', a: 'Open. Example with one answer: 4□6 + 37□ = 801 (426 + 375; ones 6 + 5 = 11 forces the second box, then the tens force the first). Example with more than one answer: □□7 + 4□□ = 1000, where the tens digits only need to add up to 9, so there are 10 answers. When two boxes in the same column only need to add up to a fixed number, many pairs of digits work.' },
       { q: 'What is the smallest 3-digit number you can add to 386 so that the answer has three digits that are all the same?', a: '169 (386 + 169 = 555). 444 is only 58 more than 386, and 58 is not a 3-digit number.' },
       { q: 'Find ALL the ways to fill the boxes:  □□7 + 4□□ = 1000', a: '10 ways: 507 + 493, 517 + 483, 527 + 473, 537 + 463, 547 + 453, 557 + 443, 567 + 433, 577 + 423, 587 + 413, 597 + 403. Ones: 7 + 3 = 10. Hundreds: 5 + 4 + 1 = 10. The two tens digits add up to 9 (with the carried 1 they make 10).' },
       { q: 'Box A and Box B hold 250 marbles together. Box B and Box C hold 350. Box A and Box C hold 400. How many marbles are in each box?', a: 'A 150, B 100, C 250. B + C is 100 more than A + B, so C has 100 more than A. A + C = 400, so A = 150 and C = 250. Then B = 250 − 150 = 100.' },
@@ -156,7 +156,7 @@ module.exports = {
     W.push(H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 60, keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '2?4', '35?', '579', '+'], ['(b)', '46?', '?75', '837', '+'], ['(c)', '?86', '2?9', '645', '+']], 'Three additions with missing digits')));
     W.push(H.p('Check one of your answers by adding the full numbers:  ______ + ______ = ______', { after: 100 }));
-    W.push(H.q(2, 'Find the missing digits. Tip: turn the subtraction into an addition to check.', { keepNext: true }));
+    W.push(H.q(2, 'Find the missing digits. Try a digit and check it: the answer plus the number you take away must give the number you started with. Tip for (b): 3 − 7 cannot be done, so think 13 − 7.', { keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '7?8', '32?', '453', '−'], ['(b)', '5?3', '?67', '276', '−']], 'Two subtractions with missing digits')));
     W.push(H.q(3, 'The = sign means “is the same as”. Fill in the boxes.', { keepNext: true }));
     W.push(H.sub('a', '350 + 140  =  300 + ______'));
@@ -174,7 +174,7 @@ module.exports = {
     W.push(...H.lines(2));
     W.push(H.q(5, 'Magic triangles. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total. Do it for (a) and then (b).', { keepNext: true }));
     W.push(H.fig(triSvg()));
-    W.push(H.sub('a', 'Each side adds up to 390. Write the numbers in the circles. Which numbers are in the corners?  __________'));
+    W.push(H.sub('a', 'Each side adds up to 390. Write the numbers in the circles. Which numbers are in the corners?  __________  (Start: try 110 and 120 as two corners. What goes between them?)'));
     W.push(H.sub('b', 'Each side adds up to 420. Write the numbers in the circles. Which numbers are in the corners?  __________'));
     W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model.', { keepNext: true }));
     W.push(...H.lines(4));

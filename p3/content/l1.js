@@ -89,8 +89,8 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Write the number: 6 thousands, 4 tens and 9 ones.', a: '6049' },
-      { q: 'What is the value of the digit 8 in 2837?', a: '800' },
+      { q: 'Write the number. Think of 6 big boxes of 1000 sweets, 4 packets of 10 sweets and 9 loose sweets. (There are no boxes of 100.)', a: '6049' },
+      { q: 'Look at the place value chart:  Th 2 | H 8 | T 3 | O 7.  This is the number 2837. How much is the digit 8 worth?', a: '800' },
       { q: 'Use the cards 9, 1, 4, 6 once each. Make the smallest 4-digit number.', a: '1469' },
       { q: 'What number is 10 less than 5003?', a: '4993' },
       { q: 'Continue the pattern: 7250, 7500, 7750, ___, ___', a: '8000, 8250 (add 250)' },
@@ -110,10 +110,10 @@ module.exports = {
       { q: 'Ali writes a 4-digit number using only odd digits, all different. It is as close to 5000 as possible. What is it?', a: '5137 (137 more than 5000). The closest below 5000 is 3975, which is 1025 less.' },
       { q: 'A pattern starts at 1000 and goes up by 7 each time: 1000, 1007, 1014, … Is 1100 in the pattern? Explain.', a: 'No. 14 jumps of 7 is 98, so 1098 is in the pattern. The next number is 1105, so 1100 is skipped.' },
       { q: 'How many digits are needed to number the pages of a book from page 1 to page 120?', a: '252 digits: pages 1–9 use 9, pages 10–99 use 90 × 2 = 180, pages 100–120 use 21 × 3 = 63.' },
-      { q: 'What is the smallest 4-digit number with all different digits that add up to 20?', a: '1289 (1 then 0 fails: the last two would need to add to 19; 1 then 2 leaves 17 = 8 + 9)' },
+      { q: '4-digit numbers whose digits add up to 3 can be counted by their first digit: 1, 3, 6. Count the ones whose digits add up to 4 by their first digit too. Use the pattern to predict how many 4-digit numbers have digits that add up to 5, and check by listing the ones that start with 4.', a: 'Digit sum 4: 1, 3, 6, 10 (20 numbers altogether). Digit sum 5: the counts by first digit (5, 4, 3, 2, 1) are 1, 3, 6, 10, 15, so 35 numbers altogether. Check: the numbers that start with 4 are 4100, 4010 and 4001 (3 numbers).' },
       { q: 'I am an even 4-digit number with all different digits. My thousands digit is 4 more than my ones digit. My hundreds digit is double my tens digit. My digits add up to 20. What number am I?', a: '6842 (6 = 2 + 4, 8 = 2 × 4, 6 + 8 + 4 + 2 = 20). It is the only one.' },
       { q: 'Mei makes 3-digit numbers using any three of the cards 2, 4, 6, 8. How many different numbers can she make?', a: '24 (6 numbers start with each card: for 2, the numbers are 246, 248, 264, 268, 284, 286)' },
-      { q: 'How many 4-digit numbers have digits that add up to 4? Make a list in order.', a: '20. Starting with 4: 1; with 3: 3; with 2: 6; with 1: 10 (1, 3, 6, 10: the jumps go up by 1 each time).' },
+      { q: 'Make up your own "What number am I?" puzzle. Choose a secret 4-digit number and write 3 or 4 clues about its digits. Check that ONLY ONE number fits all your clues. Then swap with a partner.', a: 'Answers vary. Check that every clue is true for the secret number and that the clues together leave only one number (list the numbers that fit clue 1, then cross out with clue 2, and so on). Example: "I am between 4000 and 5000. My hundreds digit is 1 less than my thousands digit. My ones digit is 3 times my tens digit. My digits add up to 15." The only number is 4326.' },
       { q: 'A 4-digit number has all different digits. Its thousands digit is the sum of its other three digits. What is the greatest such number? What is the smallest?', a: 'Greatest 9810 (9 = 8 + 1 + 0). Smallest 3012 (the smallest sum of three different digits is 0 + 1 + 2 = 3).' },
       { q: 'Mei uses the cards 1, 2, 3, 4 once each to make 4-digit numbers. She lists them all from smallest to greatest. What is the 10th number in her list?', a: '2341. Six numbers start with 1; then 2134 (7th), 2143 (8th), 2314 (9th), 2341 (10th).' }
     ]
@@ -143,6 +143,7 @@ module.exports = {
     H.sub('d', '3000,  3250,  3500,  3750,  …   The first number greater than 5000 is   ________'),
 
     H.q(4, 'Place value puzzles.', { pb: true, before: 0, keepNext: true }),
+    H.p('Hint: 10 hundreds make 1 thousand. You can draw a box for each thousand, hundred, ten and one.', { after: 40 }),
     H.sub('a', '4 thousands, 15 hundreds, 2 tens and 7 ones make   ____________'),
     H.sub('b', '7305  =  6 thousands  +  ______ hundreds  +  5 ones'),
     H.sub('c', 'Mei says that 6 thousands, 0 hundreds and 23 tens is 6023. Is she right? Explain.'),

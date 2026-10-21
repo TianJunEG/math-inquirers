@@ -137,11 +137,11 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find the mean of 3, 5, 7 and 9.', a: '6 (24 ÷ 4)' },
+      { q: 'Find the mean of 3, 5, 7 and 9. Hint: share the total equally, or even out the towers.', a: '6 (24 ÷ 4)' },
       { q: 'Find the mean of 10, 0, 8 and 6.', a: '6 (24 ÷ 4: the 0 counts as a value)' },
-      { q: 'The mean of 5 numbers is 11. What is their total?', a: '55' },
+      { q: 'The mean of 5 numbers is 11. What is their total? Think: if the total were shared equally between 5 people, each would get 11.', a: '55' },
       { q: 'Four bags have a mean mass of 2.5 kg. What is their total mass?', a: '10 kg' },
-      { q: 'Find the median and the mode of 4, 9, 2, 9, 6.', a: 'In order: 2, 4, 6, 9, 9. Median 6, mode 9.' },
+      { q: 'Find the median (the middle number when they are in order) and the mode (the number that appears most often) of 4, 9, 2, 9, 6.', a: 'In order: 2, 4, 6, 9, 9. Median 6, mode 9.' },
       { q: 'A Scratch list called marks holds 6, 8 and 7. A loop starts total at 0 and adds every item to total. What is total after the loop? What is the mean?', a: 'Total 21, mean 7' }
     ],
     stretch: [
@@ -155,15 +155,15 @@ module.exports = {
       { q: 'Five whole numbers have a mean of 9, a median of 8 and a mode of 8. The smallest is 5 and the largest is 14. Find all five numbers.', a: '5, 8, 8, 10, 14 (total 45; the middle one is 8; 8 must appear twice, and it can only be the 2nd number, so the 4th is 45 − 5 − 8 − 8 − 14 = 10)' }
     ],
     challenge: [
-      { q: 'Five numbers have a mean of 8. One number is removed, and the mean of the other four is 7. Which number was removed?', a: '12 (5 × 8 = 40, 4 × 7 = 28, 40 − 28 = 12)' },
-      { q: 'A basketball player’s mean score for 9 games is 30 points. How many points must she score in the 10th game to raise her mean to 32?', a: '50 (10 × 32 = 320, 9 × 30 = 270, 320 − 270 = 50)' },
-      { q: 'Five whole numbers have a mean of 6, a median of 5 and only one mode, 2. What is the largest the biggest number can be?', a: '15 (2, 2, 5, 6, 15: the total is 30, so the last two make 21; the 4th must be at least 6, or 5 would tie with 2 as a mode)' },
-      { q: 'Can the mean of 5 whole numbers be bigger than 4 of them? Give an example.', a: 'Yes, e.g. 1, 1, 1, 1, 16 has mean 4, which is bigger than four of the numbers.' },
-      { q: 'The mean of 4 numbers is 15. One of the numbers is changed and the mean becomes 18. By how much was that number changed?', a: 'It went up by 12 (the total went from 60 to 72)' },
-      { q: 'Jun’s program adds 5 to every item in a list of 10 numbers, then doubles every item. The mean was 7 before. What is the mean now?', a: '24 ((7 + 5) × 2)' },
+      { q: 'Five numbers have a mean of 8. One number is removed and the mean of the other four is 7. (a) Which number was removed? (b) Ali says: “Taking a number out always makes the mean go down.” Is he right? Explain, using an example.', a: '(a) 12 (5 × 8 = 40, 4 × 7 = 28, 40 − 28 = 12). (b) No. Removing a number above the mean (like 12) lowers the mean, but removing a number below the mean raises it. Example: 4, 6, 8, 10, 12 has mean 8; remove 4 and 6, 8, 10, 12 has mean 9.' },
+      { q: 'A basketball player’s mean score for 9 games is 30 points. (a) How many points must she score in the 10th game to raise her mean to 32? (b) The most she has ever scored in one game is 60. What is the highest mean she could have after game 10?', a: '(a) 50 (10 × 32 = 320, 9 × 30 = 270, 320 − 270 = 50). (b) 33: 270 + 60 = 330 and 330 ÷ 10 = 33.' },
       { q: 'Find ALL the sets of three different counting numbers whose mean is 4 and whose median is 4.', a: '3 sets: 1, 4, 7;  2, 4, 6;  3, 4, 5 (the total is 12, the middle is 4, so the other two add to 8 and one is less than 4)' },
+      { q: 'A shop has 10 staff. Nine earn $2000 a month and the manager earns $11 000. Work out the mean, the median and the mode of their pay. The manager wants an advert saying “our staff are well paid”: which average should she use? Which average would a worker use to say the pay is low?', a: 'Mean = (9 × 2000 + 11 000) ÷ 10 = $2900; median = $2000; mode = $2000. The manager would use the mean ($2900) because one big pay lifts it. A worker would use the median or the mode ($2000), which shows what most people earn.' },
+      { q: 'The numbers 1 and 5 have a mean of 3. Ali says: “If I add 3 to every number, the mean goes up by 3. If I multiply every number by 3, the mean is multiplied by 3. If I square every number, the mean is squared.” Test each of his three claims. Which are true? Explain with totals.', a: 'Add 3: 4 and 8 have mean 6 = 3 + 3, true. Multiply by 3: 3 and 15 have mean 9 = 3 × 3, true. Square: 1 and 25 have mean 13, not 9, so false. Adding 3 to each of n numbers adds 3n to the total, so the mean goes up by 3; multiplying every number by 3 multiplies the total by 3.' },
+      { q: 'Five whole numbers have a mean of 6, a median of 5 and only one mode, 2. What is the largest the biggest number can be?', a: '15 (2, 2, 5, 6, 15: the total is 30, so the last two make 21; the 4th must be at least 6, or 5 would tie with 2 as a mode)' },
+      { q: 'Make up your own “mean mystery” like Think Harder 8: choose five whole numbers, then write clues (any of mean, median, mode, smallest, largest) that give ONLY your numbers. Swap with a partner. Can they find a different set that fits your clues?', a: 'Open. Example clues: mean 5, median 4, mode 4, smallest 2, largest 9. The total is 25, so the other two numbers add to 25 − 2 − 4 − 9 = 10; only 4 and 6 fit (4 must appear twice to be the mode), giving 2, 4, 4, 6, 9. Check that the clues really give one set.' },
       { q: 'The mean of 1, 2, 3, … , 99 is 50. Explain why without adding them all up. Then plan a short program that checks it.', a: 'Pair them: 1 + 99, 2 + 98, … , 49 + 51 each make 100, with 50 left in the middle. Every pair balances around 50, so the mean is 50 (total 4950 ÷ 99 = 50). Program: set total to 0, set n to 1, repeat 99 (change total by n, change n by 1), say total ÷ 99.' },
-      { q: 'A group of 8 children has a mean mass of 41 kg. When their tutor joins, the mean mass of all 9 becomes 44 kg. What is the tutor’s mass?', a: '68 kg (9 × 44 = 396, 8 × 41 = 328, 396 − 328 = 68)' }
+      { q: 'A group of 8 children has a mean mass of 41 kg. When their tutor joins, the mean mass of all 9 becomes 44 kg. Then one more person joins and the mean of all 10 becomes 43 kg. What is the tutor’s mass? What is the mass of the last person to join?', a: 'Tutor: 68 kg (9 × 44 = 396, 8 × 41 = 328, 396 − 328 = 68). Last person: 34 kg (10 × 43 = 430, 430 − 396 = 34).' }
     ]
   },
 

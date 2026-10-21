@@ -123,12 +123,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'There are 2345 people at a concert. 1180 are adults. How many are children? Draw a part-whole model.', a: '1165' },
-      { q: 'A red ribbon is 145 cm long. A blue ribbon is 68 cm longer. How long is the blue ribbon?', a: '213 cm' },
-      { q: 'Ravi has 512 stamps. Siti has 139 fewer stamps than Ravi. How many stamps do they have altogether?', a: 'Siti 373; altogether 885' },
-      { q: 'Ben has 4 times as many cards as Ali. Ali has 23 cards. How many cards does Ben have? How many do they have altogether?', a: 'Ben 92; altogether 115' },
+      { q: 'There are 2345 people at a concert. 1180 of them are adults. How many are children? Draw one long bar for all the people and mark off the part for the adults.', a: '1165' },
+      { q: 'A red ribbon is 145 cm long. A blue ribbon is 68 cm longer. Draw the red ribbon as a bar, then draw a longer bar for the blue ribbon. How long is the blue ribbon?', a: '213 cm' },
+      { q: 'Ravi has 512 stamps. Siti has 139 fewer stamps than Ravi. Draw a bar for each child. How many stamps does Siti have? How many do they have altogether?', a: 'Siti 373; altogether 885' },
+      { q: 'Ali has 23 cards. Ben has 4 times as many cards as Ali. Draw 1 box for Ali and 4 boxes for Ben. How many cards does Ben have? How many do they have altogether?', a: 'Ben 92; altogether 115' },
       { q: 'A box has 1000 beads. Mei uses 365 beads for a necklace and 248 beads for a bracelet. How many beads are left?', a: '387' },
-      { q: 'A pen costs $3. A bag costs 5 times as much as the pen. How much more does the bag cost than the pen?', a: '$12 (the bag costs $15; 4 more units of $3)' }
+      { q: 'A pen costs $3. A bag costs 5 times as much as the pen. Draw 1 box for the pen and 5 boxes for the bag. How much more does the bag cost than the pen?', a: '$12 (the bag costs $15; 4 more boxes of $3)' }
     ],
     stretch: [
       { q: 'Ali and Ben have 96 cards altogether. Ali has 3 times as many cards as Ben. How many more cards does Ali have than Ben?', a: '48. 4 units = 96, 1 unit = 24, and the difference is 2 units.' },
@@ -142,14 +142,14 @@ module.exports = {
       { q: 'Ali has saved $48. Ben has saved $15. From now on each boy saves $6 a week. After how many weeks will Ali have twice as much as Ben?', a: '3 weeks. The difference, $33, stays the same, so Ben must reach $33: $15 + $18. Then Ali has $66.' }
     ],
     challenge: [
-      { q: 'Ali and Ben have 120 stickers altogether. Ali has 3 times as many as Ben. Ali gives 20 stickers to Ben. How many stickers does each boy have now?', a: 'Ben 30, Ali 90 at first (4 units = 120); after giving: Ali 70, Ben 50.' },
-      { q: 'A pencil box and 3 pens cost $25 altogether. The pencil box costs $5 more than one pen. How much does one pen cost?', a: '$5 (take away the extra $5: 4 equal units = $20). The box costs $10.' },
+      { q: 'Ali and Ben have 120 stickers altogether. Ali has 3 times as many as Ben. Ali gives some stickers to Ben, and then Ali has only twice as many as Ben. How many stickers does Ali give to Ben?', a: '10. At first 4 units = 120, so Ben 30 and Ali 90. The total is still 120, but now Ali has 2 parts and Ben 1 part, so 3 equal parts = 120 and each part is 40. Ben now has 40 and Ali 80. Ben went from 30 to 40, so Ali gave 10.' },
+      { q: 'A pencil box and 3 pens cost $25 altogether. A pencil box and 5 pens cost $35 altogether. How much does one pen cost? How much does the pencil box cost?', a: 'Pen $5, box $10. The second bill is $10 more because it has 2 more pens, so 2 pens cost $10 and 1 pen $5. Then 3 pens cost $15, so the box costs $25 − $15 = $10.' },
       { q: 'Ali, Ben and Ravi have 185 marbles altogether. Ali has twice as many as Ben. Ben has 15 more than Ravi. How many marbles does each boy have?', a: 'Ravi 35, Ben 50, Ali 100.' },
-      { q: 'Siti has 4 times as many beads as Mei. If Siti gives Mei 30 beads, they will have the same number. How many beads do they have altogether?', a: '100. The difference is 3 units = 60, so 1 unit = 20: Mei 20, Siti 80.' },
+      { q: 'Ravi, Mei and Siti have 160 beads altogether. Mei has 3 times as many beads as Siti. Ravi has 20 more beads than Mei. How many beads does each child have?', a: 'Siti 20, Mei 60, Ravi 80. Siti is 1 unit, Mei 3 units, Ravi 3 units and 20 more. Take away the extra 20: 140 for 7 equal units, so 1 unit = 20.' },
       { q: 'A club has 3 times as many boys as girls. Then 12 boys leave and 12 girls join, and now there are the same number of boys and girls. How many children are in the club?', a: '48 (12 girls and 36 boys at first; 24 and 24 after).' },
       { q: '2 jugs and 3 cups hold 1800 ml of water altogether. A jug holds 3 times as much as a cup. How much does a cup hold?', a: '200 ml. 2 jugs = 6 cups, so 9 cups = 1800 ml.' },
-      { q: 'Ravi is 7 years old and his sister is 3. In how many years will their ages add up to 30?', a: '10 years. Now they add up to 10, and each year the total grows by 2. (17 + 13 = 30.)' },
-      { q: 'A pen costs $3 more than a ruler. Mei buys 2 pens and 2 rulers for $18. How much does one pen cost?', a: '$6. 2 pens and 2 rulers is 2 pairs, so one pen and one ruler cost $9. The pen is $3 more, so take away $3: $6 is 2 equal parts, a ruler costs $3 and a pen costs $6. Check: 2 × 6 + 2 × 3 = 18.' },
+      { q: 'Make up your own before-and-after story about stickers or money, where one child gives some to another child. Draw its model, solve it and check it. Then change ONE number in your story. What changes in the answer, and what stays the same? Swap with a partner.', a: 'Answers vary. Check that the model matches the story, the total is the same before and after, and the child can explain what changed. Example: Ali has 50 stickers and Ben has 20. Ali gives Ben some so that they have the same number. (Ali gives 15; the difference is 30 and half of it is 15.) If Ali had 60, he would give 20: the difference grows by 10 and the gift by 5.' },
+      { q: 'Ravi is 7 years old and his sister is 3. In how many years will their ages add up to 30? Explain how you know.', a: '10 years. Now they add up to 10, and each year the total grows by 2 (one year for each child). 30 − 10 = 20, and 20 ÷ 2 = 10. Check: 17 + 13 = 30.' },
       { q: 'A ribbon 4 m 75 cm long is cut into 3 pieces. The second piece is twice as long as the first. The third piece is 25 cm longer than the second. How long is the third piece?', a: '2 m 5 cm. 475 − 25 = 450 cm for 5 equal units, so 1 unit = 90 cm; third piece = 180 + 25 = 205 cm.' }
     ]
   },
@@ -168,16 +168,18 @@ module.exports = {
     out.push(H.sub('a', 'Ali has ______ stickers.      Ben has ______ stickers.'));
     out.push(H.sub('b', 'How many stickers do the three children have altogether?   ______'));
     // Q3
-    out.push(H.q(3, 'Siti has 3 times as many beads as Ravi. They have 248 beads altogether.', { keepNext: true }));
+    out.push(H.q(3, 'Siti has 3 times as many beads as Ravi. They have 248 beads altogether. Each box in the picture is 1 unit (one equal part).', { keepNext: true }));
     out.push(H.fig(q3Fig()));
     out.push(H.sub('a', 'How many units are there altogether?   ______      1 unit = ______ beads'));
     out.push(H.sub('b', 'Siti has ______ beads. She has ______ more beads than Ravi.'));
     // ---------- page 2 ----------
     out.push(H.q(4, 'Ali and Ben have 150 marbles altogether. Ali has 24 more marbles than Ben. How many marbles does each boy have?', { pb: true, before: 0, keepNext: true }));
-    out.push(H.fig(drawBox(120)));
+    out.push(H.p('Hint: you can guess and check. Try Ben = 50, so Ali = 74. Is the total 150? Too big or too small? Try again.', { after: 20 }));
+    out.push(H.fig(drawBox(100)));
     out.push(H.sub('', 'Ben: ________      Ali: ________'));
     out.push(H.q(5, 'Mei has 85 stickers. Siti has 47 stickers. Mei gives some stickers to Siti so that they both have the same number.', { keepNext: true }));
-    out.push(H.fig(drawBox(110)));
+    out.push(H.p('Hint: try giving 10 stickers. Do they have the same number now? Keep trying.', { after: 20 }));
+    out.push(H.fig(drawBox(100)));
     out.push(H.sub('a', 'How many stickers does Mei give Siti?   ________'));
     out.push(H.sub('b', 'Ravi says, "Mei must give Siti 38 stickers, because 85 − 47 = 38." What mistake did Ravi make?'));
     out.push(...H.lines(2));

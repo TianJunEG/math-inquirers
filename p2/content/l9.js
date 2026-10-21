@@ -124,13 +124,13 @@ module.exports = {
       { q: 'One bag of flour balances 2 bags of sugar. A bag of sugar is 300 g. How heavy is the bag of flour?', a: '600 g (300 + 300)' },
       { q: 'A bucket holds 10 ℓ. It has 4 ℓ of water in it. Ali pours in 3 ℓ more. How many more litres are needed to fill it?', a: '3 ℓ (4 + 3 = 7, and 10 − 7 = 3)' },
       { q: 'A ribbon is 90 cm long. Mei cuts off 25 cm. How long is the piece that is left?', a: '65 cm' },
-      { q: 'A cartoon starts at 5:40 p.m. and lasts 30 minutes. What time does it end?', a: '6:10 p.m. (5:40 to 6:00 is 20 minutes, 10 more minutes)' },
+      { q: 'A cartoon starts at 5:40 p.m. and lasts 30 minutes. What time does it end?', a: '6:10 p.m.' },
       { q: 'Write a.m. or p.m. Ben eats lunch at 12:30 ____. He goes to bed at 8:45 ____.', a: 'p.m. and p.m.' },
       { q: 'The minute hand points to 7. How many minutes past the hour is it?', a: '35 minutes (count in 5s: 5, 10, 15, 20, 25, 30, 35)' }
     ],
     stretch: [
-      { q: '3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?', a: 'Swap the pomelo for 3 apples: 5 apples balance 500 g, so one apple is 100 g. The pomelo is 300 g. Check: 300 + 100 + 100 = 500.' },
-      { q: 'You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.', a: 'Fill the 7 ℓ jug (0, 7). Pour into the 2 ℓ jug (2, 5). Empty the 2 ℓ jug (0, 5). Pour again (2, 3). 3 ℓ is left in the 7 ℓ jug.' },
+      { q: '3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?', a: 'Apple 100 g, pomelo 300 g (5 apples balance 500 g).' },
+      { q: 'You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.', a: 'Fill 7, pour into 2, empty 2, pour again: 3 ℓ is left in the 7 ℓ jug.' },
       { q: 'Mei’s piano lesson ends at 4:15 p.m. It lasted 45 minutes. What time did it start?', a: '3:30 p.m. (count back 15 minutes to 4:00, then 30 more minutes to 3:30)' },
       { q: 'Buses to the MRT station leave every 15 minutes. The first bus leaves at 6:50 a.m. Ravi reaches the bus stop at 7:40 a.m. How long does he wait? The ride takes 25 minutes. When does he reach the MRT station?', a: 'Buses: 6:50, 7:05, 7:20, 7:35, 7:50. He waits 10 minutes for the 7:50 bus and reaches the station at 8:15 a.m. (7:50 to 8:00 is 10 minutes, 15 more minutes).' },
       { q: 'Three ribbons, each 30 cm long, are glued end to end in a line. Each join overlaps by 2 cm. How long is the long ribbon?', a: '86 cm (30 + 30 + 30 = 90; there are 2 joins, so take away 2 + 2 = 4)' },
@@ -139,11 +139,11 @@ module.exports = {
       { q: 'Ali’s clock is 10 minutes fast. It shows 3:05 p.m. What is the real time?', a: '2:55 p.m.' }
     ],
     challenge: [
-      { q: '1 melon balances 2 pineapples. 1 pineapple balances 3 apples. 1 apple balances 2 lemons. How many lemons balance 1 melon?', a: '12 lemons (1 melon = 6 apples, and each apple = 2 lemons)' },
+      { q: 'A basket with 4 apples is 700 g. The same basket with 2 apples is 500 g. How heavy is the empty basket?', a: '300 g (the 2 extra apples are 200 g)' },
       { q: 'A rope 40 cm long is cut into pieces 10 cm long. Each cut takes 2 minutes. How long does the cutting take?', a: '6 minutes (4 pieces need only 3 cuts)' },
       { q: 'A film is 1 hour 40 minutes long. It ends at 12:20 p.m. What time did it start?', a: '10:40 a.m. (1 hour before 12:20 p.m. is 11:20 a.m., then 40 minutes earlier is 10:40 a.m.)' },
       { q: 'Ali’s watch loses 5 minutes every hour. He sets it to the right time at 8:00 a.m. What does his watch show at 12 noon?', a: '11:40 a.m. (4 hours, 5 minutes slow each hour: 20 minutes slow)' },
-      { q: 'A basket with 4 apples is 700 g. The same basket with 2 apples is 500 g. How heavy is the empty basket?', a: '300 g (the 2 extra apples are 200 g, so each apple is 100 g; 500 − 200 = 300)' },
+      { q: 'Make up your own jug puzzle: choose two jug sizes between 2 ℓ and 9 ℓ and a target amount, and check that it can be done by listing every pour. Then try this: with a 4 ℓ jug and a 6 ℓ jug, can you ever measure exactly 5 ℓ? Explain why or why not.', a: 'Open. Example: a 3 ℓ and a 7 ℓ jug make 5 ℓ (see the pours in the question above). With a 4 ℓ and a 6 ℓ jug you can only ever measure 2 ℓ, 4 ℓ or 6 ℓ: both jugs hold an even number of litres, so every pour, fill or empty changes the amounts by even numbers. 5 is odd, so it is impossible.' },
       { q: 'Ravi has a 5 ℓ jug, a 3 ℓ jug and a big bucket. How can he get exactly 7 ℓ of water in the bucket?', a: 'One way: fill the 5 ℓ jug and pour it into the 3 ℓ jug until that is full: 2 ℓ is left. Pour the 2 ℓ into the bucket. Then fill the 5 ℓ jug and pour it all into the bucket: 2 + 5 = 7 ℓ. (Other ways work too, e.g. 1 ℓ + 3 ℓ + 3 ℓ. Whole jugs alone give 3, 5, 6, 8, 9, 10 …, never 7.)' },
       { q: 'You have a 3 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 5 ℓ? List each pour.', a: '(3 ℓ, 7 ℓ): fill 7 (0, 7); pour (3, 4); empty 3 (0, 4); pour (3, 1); empty 3 (0, 1); pour (1, 0); fill 7 (1, 7); pour until the 3 ℓ jug is full (3, 5). 5 ℓ in the 7 ℓ jug.' },
       { q: 'Scale 1: 2 cubes and 1 ball balance 2 balls. Scale 2: 1 ball and 1 cube balance a 300 g weight. How heavy is one cube? How heavy is one ball?', a: 'Take one ball off both sides of scale 1: 2 cubes balance 1 ball. On scale 2, swap the ball for 2 cubes: 3 cubes balance 300 g, so a cube is 100 g and a ball is 200 g. Check scale 1: 100 + 100 + 200 = 400 = 200 + 200.' },
@@ -157,7 +157,7 @@ module.exports = {
     H.fig(scalesFig),
     H.sub('a', 'How heavy is 1 apple?   ________ g'),
     H.sub('b', 'How heavy is the melon?   ________ g'),
-    H.sub('c', 'How heavy is 1 lemon? Show how you know.'),
+    H.sub('c', 'How heavy is 1 lemon? Show how you know. Tip: on Scale 3, melon = apple + 4 lemons.'),
     ...H.lines(2),
     H.sub('d', 'How many lemons balance the melon?   ________ lemons'),
     H.q(2, 'You have a 3 ℓ jug and a 5 ℓ jug. You can fill a jug from the tap, empty a jug into the sink, or pour from one jug into the other until one jug is full or the other is empty.', { keepNext: true }),
@@ -166,7 +166,7 @@ module.exports = {
     ...H.lines(1),
     H.sub('b', 'How can you get exactly 1 ℓ? Write the steps.'),
     ...H.lines(2),
-    H.q(3, 'Think harder! Start where Q2 (b) ended: 1 ℓ in the 3 ℓ jug and 5 ℓ in the 5 ℓ jug. Now get exactly 4 ℓ in the 5 ℓ jug. Fill in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, 'Next puzzle. Start where Q2 (b) ended: 1 ℓ in the 3 ℓ jug and 5 ℓ in the 5 ℓ jug. Now get exactly 4 ℓ in the 5 ℓ jug. Write each pour in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
     H.tbl([1300, 4600, 2000, 2000], [
       H.row(['Step', 'What I do', '3 ℓ jug', '5 ℓ jug'].map((s, i) => H.cell(s, [1300, 4600, 2000, 2000][i], { bold: true, fill: 'EDEDED', h: 15 }))),
       H.row([H.cell('Start', 1300, { bold: true, h: 15 }), H.cell('(where Q2 b ended)', 4600, { h: 15 }), H.cell('1 ℓ', 2000, { h: 15 }), H.cell('5 ℓ', 2000, { h: 15 })]),

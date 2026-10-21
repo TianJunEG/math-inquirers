@@ -168,12 +168,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'The rule is OUT = 4n + 1. What is OUT when n = 6?', a: '25' },
-      { q: 'IN 1, 2, 3, 4 gives OUT 3, 5, 7, 9. Write the rule with n.', a: 'OUT = 2n + 1' },
-      { q: 'Solve 3n = 54.', a: 'n = 18' },
-      { q: 'A machine multiplies by 6, then takes away 4. OUT is 38. What was IN?', a: '7 (38 + 4 = 42, 42 ÷ 6 = 7)' },
-      { q: 'Ali has n stickers. Mei has 5 more than Ali. Write how many they have altogether.', a: '2n + 5 (n + n + 5)' },
-      { q: 'A Scratch machine does: set out to (answer * 3) + 4, then say out. You type 7. What does it say?', a: '25' }
+      { q: 'A number machine multiplies IN by 4 and then adds 1. (We write this OUT = 4n + 1.) What comes OUT when 6 goes IN? Try 2 and 3 first.', a: '25 (6 × 4 = 24, then + 1)' },
+      { q: 'A machine changes IN 1, 2, 3, 4 into OUT 3, 5, 7, 9. Look at how OUT goes up each time. What does the machine do? What will come OUT when 10 goes IN?', a: 'It doubles IN and then adds 1 (OUT = 2n + 1). IN 10 gives 21.' },
+      { q: 'I think of a number and multiply it by 3. I get 54. What was my number? (Guess and check, or share 54 into 3 equal groups.)', a: '18' },
+      { q: 'A machine multiplies by 6, then takes away 4. OUT is 38. What was IN? Try some numbers, or undo the steps.', a: '7 (38 + 4 = 42, 42 ÷ 6 = 7)' },
+      { q: 'Ali has some stickers. Mei has 5 more than Ali. Fill in the table: if Ali has 3 stickers, Mei has __ and they have __ altogether. If Ali has 7, they have __ altogether. If Ali has 10, they have __. What do you notice about how the total changes?', a: 'Ali 3: Mei 8, total 11. Ali 7: Mei 12, total 19. Ali 10: Mei 15, total 25. Each extra sticker Ali has adds 2 to the total (one for Ali and one for Mei).' },
+      { q: 'A Scratch machine runs: ask for IN, then set out to (answer * 3) + 4, then say out. (* means ×.) You type 7. What does it say?', a: '25' }
     ],
     stretch: [
       { q: 'IN 1, 2, 3, 4 gives OUT 1, 7, 13, 19. Find the rule. What is OUT when IN is 20?', a: 'OUT = 6n − 5; IN 20 gives 115.' },
@@ -188,11 +188,11 @@ module.exports = {
     challenge: [
       { q: 'A machine does × 3, then − 4. Which IN number comes out as the SAME number?', a: '2 (2 × 3 − 4 = 2; 3n − 4 = n)' },
       { q: 'Two machines are joined: the OUT of the first goes into the second. Each one does × 2, then + 1. IN 5 gives OUT 23. Which IN gives OUT 63?', a: '15 (63 → 31 → 15; check 15 → 31 → 63)' },
-      { q: 'A rule is “× a number, then + a number”. IN 2 gives OUT 10 and IN 6 gives OUT 22. What is OUT when IN is 0?', a: '4 (the rule is 3n + 4)' },
+      { q: 'Three numbers in a row add up to 87. Call the smallest n. Write the sum with n and find the numbers.', a: 'n + (n + 1) + (n + 2) = 3n + 3 = 87, so n = 28: the numbers are 28, 29, 30.' },
       { q: 'set n to 0, then repeat until (n × 7) + 3 > 100: change n by 1. Then say n. What does it say?', a: '14 (13 gives 94, 14 gives 101)' },
       { q: 'Machine M does × 5, then − 3. Machine N does × 2, then + 15. Which IN gives the same OUT on both machines? What is that OUT?', a: 'IN 6, OUT 27 (5n − 3 = 2n + 15, so 3n = 18)' },
       { q: 'Which is bigger, 3n + 5 or 3(n + 2)? Does it depend on n?', a: '3(n + 2) = 3n + 6 is always 1 bigger; it does not depend on n.' },
-      { q: 'Three numbers in a row add up to 87. Call the smallest n. Write the sum with n and find the numbers.', a: 'n + (n + 1) + (n + 2) = 3n + 3 = 87, so n = 28: the numbers are 28, 29, 30.' },
+      { q: 'Find two different machines of the form “× a number, then + or − a number” that both turn IN 5 into OUT 18. Then find the machine of this form that ALSO turns IN 2 into OUT 6. Is there only one?', a: 'Many machines turn 5 into 18: × 3 then + 3, × 2 then + 8, × 1 then + 13, × 4 then − 2, … Only × 4 then − 2 also turns 2 into 6 (4 × 2 − 2 = 6). Two pairs of IN and OUT fix the rule: 5a + b = 18 and 2a + b = 6 give 3a = 12, so a = 4 and b = −2.' },
       { q: 'Mei is n years old. Her mother is 3 times as old. In 12 years, her mother will be twice as old as Mei. How old is Mei now?', a: '12 (3n + 12 = 2(n + 12), so n = 12; mother 36; in 12 years 24 and 48)' },
       { q: 'Ali’s secret machine does × a number, then + or − a number. IN 4 gives OUT 9. IN 9 gives OUT 24. What does IN 20 give? Which IN gives OUT 99?', a: 'The rule is 3n − 3. IN 20 gives 57. OUT 99 comes from IN 34.' }
     ]

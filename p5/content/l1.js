@@ -99,8 +99,8 @@ module.exports = {
       { q: 'Write 4 030 205 in words.', a: 'Four million, thirty thousand, two hundred and five.' },
       { q: 'What is the value of the digit 6 in 3 621 480?', a: '600 000' },
       { q: 'Round 5 482 716 to the nearest thousand.', a: '5 483 000' },
-      { q: 'Work out 2 750 000 ÷ 1000.', a: '2750' },
-      { q: 'Work out 48 − 6 × (3 + 4).', a: '6 (brackets first: 6 × 7 = 42, then 48 − 42)' },
+      { q: 'Use seven digit cards, 0 1 2 3 4 5 6, each once. Make the greatest 7-digit number you can, and then the smallest. (A 7-digit number cannot start with 0.)', a: 'Greatest 6 543 210; smallest 1 023 456.' },
+      { q: 'A shop has 48 pens. It sells 6 packs. Each pack has 3 red pens and 4 blue pens. How many pens are left? (Draw the packs or use counters if it helps.)', a: '6 (each pack has 7 pens, 6 packs are 42 pens, 48 − 42 = 6). As one number sentence: 48 − 6 × (3 + 4) = 6.' },
       { q: 'Estimate 6912 × 48 by rounding 6912 to the nearest thousand and 48 to the nearest ten.', a: 'About 350 000 (7000 × 50). The exact answer is 331 776.' }
     ],
     stretch: [
@@ -109,12 +109,12 @@ module.exports = {
       { q: 'A whole number rounded to the nearest thousand is 640 000. What is the greatest it could be? The smallest?', a: 'Greatest 640 499, smallest 639 500.' },
       { q: 'Use each of the digits 1, 2, 3, 4, 5, 6 and 7 once. What is the difference between the greatest and the smallest 7-digit number you can make?', a: '6 419 754 (7 654 321 − 1 234 567).' },
       { q: 'Which is the best estimate of 4108 × 29: 12 000, 120 000 or 1 200 000? Explain.', a: '120 000, because 4000 × 30 = 120 000. (Exactly 119 132.)' },
-      { q: 'Siti saves $250 every week. How many weeks will it take her to save $1 000 000? About how many years is that?', a: '4000 weeks. With 52 weeks in a year, that is about 77 years.' },
+      { q: 'Use 2, 3, 5 and 7 once each, with +, −, ×, ÷ and brackets, to make 29, then 31, then 100.', a: '29 = 5 × 7 − 2 × 3;  31 = 2 × 5 + 3 × 7;  100 = 2 × 5 × (3 + 7). Other ways are possible.' },
       { q: 'Use four 4s with +, −, ×, ÷ and brackets to make 3, then 5, then 7.', a: '(4 + 4 + 4) ÷ 4 = 3;  (4 × 4 + 4) ÷ 4 = 5;  4 + 4 − 4 ÷ 4 = 7. Other ways are possible.' },
-      { q: 'What is the smallest 7-digit number whose digits are all different? The greatest?', a: 'Smallest 1 023 456; greatest 9 876 543.' }
+      { q: 'Use the seven digit cards 1, 2, 5, 6, 7, 8, 9 once each to make the 7-digit number closest to 7 000 000. Test both sides of the target.', a: '6 987 521 (12 479 below 7 000 000). The best number above is 7 125 689, which is 125 689 away.' }
     ],
     challenge: [
-      { q: 'How many 7-digit numbers are there altogether?', a: '9 000 000. They go from 1 000 000 to 9 999 999, and 9 999 999 − 1 000 000 + 1 = 9 000 000.' },
+      { q: 'Make up your own digit riddle for a 7-digit number. Use at least 5 clues (for example: all digits different, a rounding clue, a clue that compares two digits, a digit sum). Only ONE number may fit. Swap with a partner: do you get the same answer? How can you be sure your riddle has only one answer?', a: 'Open-ended. Check the riddle by listing every number that fits the rounding clue first. Sample riddle with exactly one answer (checked on a computer over all 7-digit numbers): all digits different; rounds to 5 400 000 to the nearest hundred thousand; the ten thousands digit is 1 less than the hundred thousands digit; the thousands digit is the sum of those two digits; the tens digit is 0 and the hundreds digit is even; the digits add up to 30. Answer: 5 437 209.' },
       { q: 'Write 1 000 000 as the product of two whole numbers that have no zero digits at all.', a: '64 × 15 625. (1 000 000 = 10 × 10 × 10 × 10 × 10 × 10; put all the 2s together to make 64 and all the 5s together to make 15 625.)' },
       { q: 'Ben multiplies a 4-digit number by a 3-digit number. How many digits can his answer have?', a: '6 or 7. The smallest answer is 1000 × 100 = 100 000 (6 digits); the greatest is 9999 × 999 = 9 989 001 (7 digits).' },
       { q: 'A palindrome reads the same forwards and backwards, like 3 456 543. How many 7-digit palindromes are there between 3 000 000 and 4 000 000?', a: '1000. The first and last digits are 3; the 2nd, 3rd and 4th digits can be anything (10 × 10 × 10), and they fix the rest.' },
@@ -131,11 +131,11 @@ module.exports = {
     const raw = s => [s];
     // Q1 place value
     W.push(H.q(1, 'Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.', { before: 20, keepNext: true }));
-    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.  ______'));
+    W.push(H.sub('a', 'Numerals for five million, three hundred and eight thousand and forty:  ________'));
     W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ________.  The ten thousands digit is ____.'));
     W.push(H.sub('c', 'How many thousands make 3 250 000?   __________'));
     // Q2 digit cards
-    W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number. A 7-digit number cannot start with 0.', { keepNext: true }));
+    W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number (it cannot start with 0).', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
     W.push(H.sub('a', 'Greatest:  ____________      (b)  Smallest EVEN:  ____________'));
     W.push(H.sub('c', 'Closest to 6 000 000:  ______________   Test both sides of the target!', { keepNext: true }));
@@ -148,11 +148,12 @@ module.exports = {
       'My ten thousands digit is 3 more than my hundred thousands digit.',
       'My thousands digit = my ten thousands digit − my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
-      'My digits add up to 32.'];
-      W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
+      'My digits add up to 32.',
+      'START HERE: Clue 2 means I start 7 2 … or 7 3 …  Try both with Clue 3.'];
+      W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => i < 6 ? `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}` : `<b style="color:${TEAL}">${esc(c)}</b>`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
-        H.row(ws.map(w => H.cell('', w, { h: 110 })))])); }
+        H.row(ws.map(w => H.cell('', w, { h: 80 })))])); }
     W.push(H.sub(' ', 'I am  ______________________'));
 
     // ---- page 2 ----

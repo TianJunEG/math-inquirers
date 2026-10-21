@@ -134,12 +134,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'A shop sells 3 shirts and 5 pairs of trousers. How many different outfits of 1 shirt and 1 pair of trousers can you make?', a: '15 (3 × 5)' },
+      { q: 'A shop sells 3 shirts and 5 pairs of trousers. How many different outfits (1 shirt and 1 pair of trousers) can you make? Draw lines to match each shirt with each pair of trousers.', a: '15 (3 × 5)' },
       { q: 'List every 2-digit number you can make from the cards 4, 6 and 9, using each card at most once.', a: '6 numbers: 46, 49, 64, 69, 94, 96' },
-      { q: '4 friends meet. Every pair shakes hands once. How many handshakes?', a: '6 (3 + 2 + 1)' },
-      { q: 'How many times does this say “hi”?  repeat 4 { repeat 6 { say hi } }', a: '24 (4 × 6)' },
-      { q: 'A grid is 3 squares wide and 1 square tall. How many routes go from the bottom left corner to the top right corner, going only right or up?', a: '4 (go up at one of the 4 lines across)' },
-      { q: 'A lock has 2 dials. Each dial shows a digit from 0 to 9. How many different codes are there?', a: '100 (10 × 10: 00 to 99)' }
+      { q: 'Four friends meet. Every pair of friends shakes hands once. How many handshakes are there? Act it out, or draw 4 dots and join every pair.', a: '6 (3 + 2 + 1)' },
+      { q: 'How many times does this say “hi”?  repeat 4 { repeat 6 { say hi } }  (The inner repeat runs all 6 times for each time round the outer repeat.)', a: '24 (4 × 6)' },
+      { q: 'A grid is 3 squares wide and 1 square tall. Draw it. How many routes go from the bottom left corner to the top right corner, going only right or up?', a: '4 (go up at one of the 4 lines across)' },
+      { q: 'A lock has 2 dials. Each dial shows a digit from 0 to 9. How many different codes are there? Start by counting the codes that begin with 0.', a: '100 (10 × 10: 00 to 99; 10 codes begin with 0 and there are 10 first digits)' }
     ],
     stretch: [
       { q: 'A set lunch is 1 main, 1 drink and 1 dessert. There are 4 mains and 3 drinks. There are 60 different set lunches. How many desserts are there?', a: '5 (4 × 3 = 12 and 60 ÷ 12 = 5)' },
@@ -152,13 +152,13 @@ module.exports = {
       { q: 'How many routes go from one corner of a grid 4 squares wide and 2 squares tall to the opposite corner, going only right or up?', a: '15' }
     ],
     challenge: [
-      { q: 'How many different triangles can you make by joining 3 of the 5 corners of a pentagon?', a: '10' },
-      { q: 'How many 2-digit numbers have two different digits?', a: '81 (90 two-digit numbers, minus the 9 with both digits the same: 11, 22, …, 99)' },
+      { q: 'How many different triangles can you make by joining 3 of the 5 corners of a pentagon? What about a hexagon?', a: '10 for the pentagon (list them, or 5 × 4 × 3 ÷ 6); 20 for the hexagon (6 × 5 × 4 ÷ 6).' },
+      { q: 'How many 3-digit numbers have three different digits? (Remember: a number cannot start with 0.)', a: '648 (9 choices for the first digit, 9 for the second because 0 is allowed but the first digit is used, 8 for the third: 9 × 9 × 8)' },
       { q: 'How many digits are printed to number the pages of a book from page 1 to page 120?', a: '252 (9 one-digit + 90 × 2 + 21 × 3 = 9 + 180 + 63)' },
-      { q: 'An ice cream shop has 6 flavours. A cup has 2 different flavours, and the order does not matter. How many different cups are there?', a: '15 (6 × 5 ÷ 2)' },
-      { q: '4 friends each send a card to every other friend. How many cards are sent?', a: '12 (4 × 3: here A to B and B to A are different cards)' },
-      { q: 'How many squares of any size are there on a 3 by 3 grid of squares?', a: '14 (9 small, 4 of size 2 by 2, 1 of size 3 by 3)' },
       { q: 'How many routes go from one corner of a 4 by 4 grid of squares to the opposite corner, going only right or up?', a: '70 (add as you go: the corner numbers on the diagonal row are 1, 4, 10, 20, 35, then 70)' },
+      { q: 'At a party every friend sends a card to every other friend (A to B and B to A are two cards). 90 cards are sent altogether. How many friends are at the party? Test small parties first.', a: '10 friends (10 × 9 = 90). For 4 friends it is 4 × 3 = 12, for 5 friends 5 × 4 = 20, and so on.' },
+      { q: 'How many squares of any size are there on a 3 by 3 grid of squares?', a: '14 (9 small, 4 of size 2 by 2, 1 of size 3 by 3)' },
+      { q: 'Make up your own “how many ways” puzzle whose answer is exactly 24. Write the puzzle, show how you counted, and check with a list or a tree. Swap with a partner.', a: 'Open. Examples: 4 children in a line (4 × 3 × 2 × 1 = 24); 2 shirts × 3 shorts × 4 caps = 24 outfits; 3-digit numbers from the cards 1, 2, 3, 4 using each card at most once (4 × 3 × 2 = 24). Check that every case is counted once.' },
       { q: 'A set of dominoes has one domino for every pair of spot numbers from 0 to 6, including doubles such as 3 | 3. How many dominoes are in the set?', a: '28 (7 doubles, plus 6 + 5 + 4 + 3 + 2 + 1 = 21 with two different numbers)' },
       { q: 'How many 3-digit numbers have digits that add up to 5? (For example, 203.)', a: '15 (first digit 1: 5 numbers, 2: 4, 3: 3, 4: 2, 5: 1; they are 104, 113, 122, 131, 140, 203, 212, 221, 230, 302, 311, 320, 401, 410, 500)' }
     ]

@@ -125,12 +125,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Work out 3999 + 2456. Use a shortcut.', a: '6455 (add 4000 to get 6456, then take away 1)' },
-      { q: '7000 − 2468 = ?', a: '4532' },
-      { q: 'Find the missing digit:  4□27 + 1365 = 5992', a: '6 (4627 + 1365 = 5992)' },
-      { q: 'Find the missing digit:  8□50 − 3420 = 5230', a: '6 (8650 − 3420 = 5230)' },
-      { q: 'In a magic square, every row adds up to 2400. One row has 900 and 600 in it. What is the missing number in that row?', a: '900' },
-      { q: 'A shop had 5000 stickers. It sold 1275 on Monday and 1480 on Tuesday. How many stickers are left?', a: '2245' }
+      { q: 'A library has 3999 storybooks and 2456 comic books. How many books are there altogether? Write the numbers in a Th H T O grid and add the ones first.', a: '6455 (3999 + 2456; or add 4000 to get 6456, then take away 1)' },
+      { q: 'A shop has 7000 stickers and sells 2468 of them. How many are left? Hint: draw a number line from 2468 to 7000 and jump to 2500, then to 3000, then to 7000. Add up the jumps.', a: '4532 (jumps of 32 + 500 + 4000 = 4532; or 7000 − 2468)' },
+      { q: 'Find the missing digit. Add in columns, starting with the ones, or try the digits one at a time.   4□27 + 1365 = 5992', a: '6 (4627 + 1365 = 5992)' },
+      { q: 'Find the missing digit. Try 5, 6 and 7 and check each one by taking away.   8□50 − 3420 = 5230', a: '6 (8650 − 3420 = 5230)' },
+      { q: 'A magic square has 3 rows. Every row adds up to the same total, 2400. One row shows 900, 600 and a box. What number goes in the box?', a: '900 (900 + 600 = 1500, and 2400 − 1500 = 900)' },
+      { q: 'A shop had 5000 stickers. It sold 1275 on Monday and 1480 on Tuesday. Draw a bar for the 5000 stickers and cut it into the two sold parts and the part left. How many stickers are left?', a: '2245 (1275 + 1480 = 2755; 5000 − 2755 = 2245)' }
     ],
     stretch: [
       { q: 'Find the missing digits:  2□7□ + □6□9 = 6000', a: '2371 + 3629 = 6000 (the only way)' },
@@ -138,18 +138,18 @@ module.exports = {
       { q: 'Ali meant to add 1099 to a number, but he added 1999 by mistake and got 6543. What is the correct answer?', a: '5643 (he added 900 too much: 6543 − 900)' },
       { q: 'What is the smallest 4-digit number whose digits add up to 30? What is the greatest?', a: 'Smallest 3999, greatest 9993.' },
       { q: '◆● + ● = ●◆. Different shapes are different digits. Find ◆ and ●.', a: '◆ = 8, ● = 9:  89 + 9 = 98' },
-      { q: 'Use the 9999 trick:  10 000 − 3746 = ?', a: '6254 (9999 − 3746 = 6253, then add 1)' },
+      { q: 'Siti worked out 9999 − 3746 = 6253 by taking each digit away from 9. Use her answer to work out 10 000 − 3746 and 10 003 − 3746 without a new column subtraction. How do you know?', a: '6254 and 6257. 10 000 is 1 more than 9999, so the answer is 1 more than 6253. 10 003 is 4 more than 9999, so the answer is 4 more than 6253. (Check: 6254 + 3746 = 10 000.)' },
       { q: '▲▲ + ■■ = ●■●. Different shapes are different digits. Find them.', a: '▲ = 9, ■ = 2, ● = 1:  99 + 22 = 121' },
       { q: 'Use the cards 2, 3, 5, 6 once each to make two 2-digit numbers. Make the difference as small as possible.', a: '9 (35 − 26, or 62 − 53)' }
     ],
     challenge: [
       { q: 'Find the missing digits:  8□0□ − □4□7 = 2468', a: '8905 − 6437 = 2468 (the only way; check 2468 + 6437 = 8905)' },
       { q: 'A 4-digit number has all different digits that add up to 30. Find the difference between the greatest and the smallest such number.', a: '3087. The only four different digits that add up to 30 are 9, 8, 7, 6, so 9876 − 6789 = 3087.' },
-      { q: 'Mei thinks of a number. She adds 2500, then takes away 1750, and gets 6000. What was her number?', a: '5250 (work backwards: 6000 + 1750 = 7750, 7750 − 2500 = 5250)' },
+      { q: '◆◆ + ●● + ▲▲ = ◆●▲. Different shapes are different digits. Find them.', a: '◆ = 1, ● = 9, ▲ = 8:  11 + 99 + 88 = 198 (the only answer)' },
       { q: '■▲● − ●▲ = ●■▲. Different shapes are different digits. Find the digits.', a: '■ = 7, ▲ = 3, ● = 6:  736 − 63 = 673' },
       { q: 'Make a magic square with the numbers 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700 and 1800. What is the magic total?', a: '4200, with 1400 in the centre. One answer: 1100, 1600, 1500 / 1800, 1400, 1000 / 1300, 1200, 1700.' },
       { q: 'Use the digits 1 to 9 once each:  □□□ + □□□ = □□□. What is the greatest possible answer?', a: '981, e.g. 235 + 746 = 981' },
-      { q: '◆◆ + ●● + ▲▲ = ◆●▲. Different shapes are different digits. Find them.', a: '◆ = 1, ● = 9, ▲ = 8:  11 + 99 + 88 = 198' },
+      { q: 'Make up your own missing-digits sum. Write a 4-digit + 4-digit addition that works, then rub out exactly 3 digits in 3 DIFFERENT columns and write boxes instead. Swap with a partner. Does your partner find only one answer? Explain why your sum has only one answer.', a: 'Answers vary. Check that the sum is true and that the boxes are in different columns, so that each column fixes one digit (3 boxes in the same column, or a box in the answer that can be anything, gives many answers). Example: 3517 + 2486 = 6003, rubbed out to □517 + 2□86 = 60□3. The only answer is 3517 + 2486 = 6003.' },
       { q: 'Use the digit cards 1 to 8 once each to make two 4-digit numbers. Make their difference as small as possible.', a: '247:  5123 − 4876 (the only way). The thousands digits must be next to each other; 5 and 4 in the middle work best.' },
       { q: '★■● + ★●■ = ●■★. Different shapes are different digits. Find them.', a: '★ = 4, ■ = 5, ● = 9:  459 + 495 = 954' }
     ]
@@ -181,7 +181,7 @@ module.exports = {
     H.sub('b', 'What do you notice about the digits? Why is there no carrying?'),
     ...H.lines(1),
     H.sub('c', 'Use your pattern:   10 000 − 4127  =  ________'),
-    H.q(6, 'Shape puzzle. Each shape stands for a digit. Different shapes are different digits.', { before: 80, keepNext: true }),
+    H.q(6, '★ (if time) Shape puzzle. Each shape stands for a digit. Different shapes are different digits.', { before: 80, keepNext: true }),
     H.fig(svg('Shape sum: star circle plus star circle plus star circle equals triangle star circle', 64, shapeLine('SC+SC+SC=TSC'), 400)),
     H.sub('a', '★ = ______   ● = ______   ▲ = ______'),
     H.sub('b', 'The ones column: ● + ● + ● ends in ●. Which digits can ● be? Try 0 and 5, then check the tens column. How do you know?'),

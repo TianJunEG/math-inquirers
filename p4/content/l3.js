@@ -69,7 +69,7 @@ module.exports = {
     key: [
       ['Q1', '(a) 106  (b) 250  (c) 27  (d) 98  (e) 12'],
       ['Q2', '(a) 7 × 6 − 4 = 38  (b) 48 ÷ 6 × 2 = 16  (c) 9 ÷ 3 + 5 = 8  (d) 12 ÷ 3 + 2 × 5 = 14. Each puzzle has only one answer.'],
-      ['Q3', '(a) 41  (b) (4 + 8) × 5 − 3 = 57  (c) 4 + 8 × (5 − 3) = 20  (d) (4 + 8) × (5 − 3) = 12 × 2 = 24'],
+      ['Q3', '(a) 41  (b) (4 + 8) × 5 − 3 = 57  (c) 4 + 8 × (5 − 3) = 20'],
       ['Q4', '(a) 23. Work backwards: 30 × 4 = 120, 120 + 18 = 138, 138 ÷ 6 = 23.  (b) Check: 23 × 6 = 138, 138 − 18 = 120, 120 ÷ 4 = 30.'],
       ['Q5', 'The answer is always 7 (for example 3: 15, 50, 10, 7). (a) It is always 7.  (b) Blanks: number, 7, 7. Multiplying by 5 and then dividing by 5 gets you back to your number. The 35 divided by 5 adds 7. Taking away your number leaves 7.'],
       ['Q6', '(a) Chicken rice: 3 units. Laksa: 1 unit. 4 units = 1 236.  (b) 1 unit = 1 236 ÷ 4 = 309. Chicken rice = 3 × 309 = 927 plates.  (c) 2 units = 618 more plates.'],
@@ -111,10 +111,10 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Work out 18 + 6 × 3.', a: '36' },
-      { q: 'Work out (18 + 6) × 3.', a: '72' },
-      { q: 'Work out 56 ÷ 7 × 2.', a: '16' },
-      { q: 'Work out 90 − 30 ÷ 5.', a: '84' },
+      { q: 'Ali has 18 stickers. He buys 6 packs with 3 stickers in each pack. How many stickers does he have now? Then write ONE number sentence that shows what you did.', a: '36 stickers. 18 + 6 × 3 = 18 + 18 = 36.' },
+      { q: '18 boys and 6 girls each buy 3 tickets. How many tickets are bought altogether? Then write ONE number sentence for it.', a: '72 tickets. (18 + 6) × 3 = 24 × 3 = 72.' },
+      { q: 'A ribbon 56 cm long is cut into 7 equal pieces. Ben takes 2 of the pieces. How long is Ben’s ribbon?', a: '16 cm (56 ÷ 7 = 8, and 8 × 2 = 16).' },
+      { q: 'At a camp there are 90 children. 30 of them make 5 equal teams for a game. After the game, one whole team goes home. How many children are left at the camp?', a: '84 children (a team has 30 ÷ 5 = 6 children; 90 − 6 = 84).' },
       { q: 'Work out 2 345 × 3.', a: '7 035' },
       { q: 'Work out 4 236 ÷ 6.', a: '706' }
     ],
@@ -125,28 +125,28 @@ module.exports = {
       { q: 'Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. The answer is always 7. Explain why it always works. A bar model can help.', a: 'Multiplying by 5 and then dividing by 5 gets back to your number. The 35 divided by 5 adds 7. Taking away your number leaves the 7. So the answer is always 7.' },
       { q: 'Work out 120 − 4 × (18 + 7).', a: '20 (18 + 7 = 25, 4 × 25 = 100, 120 − 100 = 20).' },
       { q: 'In this chain, each number after the first two is the sum of the two before it. Fill in the gaps: 3, __, __, 17, __', a: '3, 7, 10, 17, 27.' },
-      { q: 'A plate of noodles costs $4 and a drink costs $2. Ravi buys 3 plates of noodles and 2 drinks. Write ONE number sentence for the total cost and work it out.', a: '3 × 4 + 2 × 2 = 16, so $16.' },
+      { q: 'Use each of the numbers 2, 3, 4 and 5 once in  □ + □ × □ − □  to make the biggest answer you can.', a: '21, from 3 + 4 × 5 − 2 (or 3 + 5 × 4 − 2). Put the two biggest numbers in the × and use the smallest to take away.' },
       { q: 'Is 50 − 20 − 10 the same as 50 − (20 − 10)? Explain.', a: 'No. 50 − 20 − 10 = 20 (left to right), but 50 − (20 − 10) = 50 − 10 = 40.' },
-      { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' }
+      { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' },
+      { q: 'Look at 4 + 8 × 5 − 3. Mei puts TWO pairs of brackets in it and makes 24. Where could she put them?', a: '(4 + 8) × (5 − 3) = 12 × 2 = 24.' }
     ],
-
     challenge: [
-      { q: 'Use four 4s and any of +, −, ×, ÷ and brackets to make 5.', a: 'For example (4 × 4 + 4) ÷ 4 = 20 ÷ 4 = 5.' },
-      { q: 'Start at 7. If a number is even, halve it. If it is odd, multiply it by 3 and add 1. How many steps does it take to reach 1?', a: '16 steps: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.' },
-      { q: 'Two numbers add up to 1 000. One number is 4 times the other. What are the two numbers?', a: '200 and 800 (5 units = 1 000, 1 unit = 200).' },
+      { q: 'Use four 4s and any of +, −, ×, ÷ and brackets to make each of the numbers 1, 2, 3, 4 and 5. Which one was hardest?', a: 'For example 1 = (4 + 4) ÷ (4 + 4); 2 = 4 ÷ 4 + 4 ÷ 4; 3 = (4 + 4 + 4) ÷ 4; 4 = 4 + (4 − 4) × 4; 5 = (4 × 4 + 4) ÷ 4. Other ways are possible.' },
       { q: 'Ali has $56 more than Ben. Together they have $300. How much money does Ben have?', a: '$122 (300 − 56 = 244, 244 ÷ 2 = 122; Ali has $178).' },
       { q: 'Use 3, 4, 5 and 6 once each, with any signs and brackets, to make 24. Find two different ways.', a: 'For example 6 × (5 − 4 + 3) = 24 and (3 + 5 − 4) × 6 = 24. Other ways are possible.' },
       { q: 'The same number goes in every box:  □ × □ − □ = 30. What is the number?', a: '6 (6 × 6 − 6 = 36 − 6 = 30). Try 5: 20, too small; try 7: 42, too big.' },
+      { q: 'In a number chain, each number after the first two is the sum of the two before it. The 5th number is 30 and the 6th number is 49. What is the 1st number?', a: '3. Work backwards: 4th = 49 − 30 = 19, 3rd = 30 − 19 = 11, 2nd = 19 − 11 = 8, 1st = 11 − 8 = 3. The chain is 3, 8, 11, 19, 30, 49.' },
+      { q: 'Ravi has 3 times as many stickers as Siti. Ravi gives 20 of his stickers to Siti, and now they have the same number. How many stickers did each child have at first?', a: 'Siti 20, Ravi 60. Draw bars: Ravi 3 units, Siti 1 unit. After the gift they are equal, so Ravi’s 2 extra units are 20 + 20 = 40. 1 unit = 20.' },
       { q: 'Put + or − in each gap so that the answer is 7:  1 __ 2 __ 3 __ 4 __ 5 __ 6 = 7. Find ALL the ways.', a: '2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. (All + makes 21, which is 14 too many. Changing a + to a − takes that number away twice, so the numbers we change must add up to 7: 2 and 5, or 3 and 4.)' },
       { q: 'Mei spent half of her money on a book. Then she spent $6 on lunch. Then she spent half of what was left on a gift. She had $9 left. How much money did she have at first?', a: '$48. Work backwards: $9 was half of what was left, so before the gift she had $18. Before lunch: $18 + $6 = $24. That was half, so at first she had $48.' },
-      { q: 'In a number chain, each number after the first two is the sum of the two before it. The 5th number is 30 and the 6th number is 49. What is the 1st number?', a: '3. Work backwards: 4th = 49 − 30 = 19, 3rd = 30 − 19 = 11, 2nd = 19 − 11 = 8, 1st = 11 − 8 = 3. The chain is 3, 8, 11, 19, 30, 49.' }
+      { q: 'The number trick: think of a number, multiply by 5, add 35, divide by 5, take away your number. It always ends with 7. (a) What must you change so that it always ends with 10? (b) Make up your own number trick with four steps that always ends with 3. Test it with two numbers and explain why it works.', a: '(a) Change the +35 to +50: the added number divided by 5 is what is left at the end. (b) Answers vary. Model: × 4, + 12, ÷ 4, − your number: always 3, because × 4 then ÷ 4 gets the number back, and 12 ÷ 4 = 3 is added.' }
     ]
   },
 
   workbook: H => {
     const W = [];
     W.push(H.p('Brackets first. Then × and ÷, working from left to right. Then + and −, working from left to right.', { after: 80 }));
-    W.push(H.q(1, 'Work out. Underline the part you do first.', { before: 40, keepNext: true }));
+    W.push(H.q(1, 'Work out. A story helps: 36 + 14 × 5 means 36 stickers and then 5 more packs of 14 stickers. Underline the part you do first.', { before: 40, keepNext: true }));
     W.push(H.sub('a', '36 + 14 × 5  =  ____________'));
     W.push(H.sub('b', '(36 + 14) × 5  =  ____________'));
     W.push(H.sub('c', '72 ÷ 8 × 3  =  ____________'));
@@ -158,7 +158,6 @@ module.exports = {
     W.push(H.sub('a', 'With no brackets:   4 + 8 × 5 − 3  =  ________'));
     W.push(H.sub('b', 'Put in ONE pair of brackets to make 57:     4  +  8  ×  5  −  3  =  57'));
     W.push(H.sub('c', 'Put in ONE pair of brackets to make 20:     4  +  8  ×  5  −  3  =  20'));
-    W.push(H.sub('d', 'Mei used TWO pairs of brackets and made 24. Show where she put them:     4  +  8  ×  5  −  3  =  24'));
 
     W.push(H.q(4, 'A number goes into this machine chain. 30 comes out.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(machineSvg()));

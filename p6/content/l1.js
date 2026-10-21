@@ -153,17 +153,17 @@ module.exports = {
   qbank: {
     core: [
       { q: 'Write the next two terms: 8, 13, 18, 23, …', a: '28, 33 (add 5)' },
-      { q: 'Write the rule for the nth term of 3, 5, 7, 9, …', a: '2n + 1' },
-      { q: 'Find the 10th term of 7, 10, 13, 16, …', a: '34 (rule 3n + 4: 3 × 10 + 4)' },
+      { q: 'Matchstick triangles in a row. Pattern 1 is 1 triangle (3 sticks). Pattern 2 is 2 triangles side by side (5 sticks). Pattern 3 is 3 triangles (7 sticks). Use matchsticks or draw them. How many sticks does pattern 4 need?', a: '9 sticks (3, 5, 7, 9). Each new triangle adds 2 sticks, because it shares one side with the triangle before it.' },
+      { q: 'Write out the terms one by one to find the 10th term of 7, 10, 13, 16, …', a: '34 (7, 10, 13, 16, 19, 22, 25, 28, 31, 34; the rule 3n + 4 gives 3 × 10 + 4 = 34 too)' },
       { q: 'Write the next two terms: 40, 36, 32, 28, …', a: '24, 20 (take away 4)' },
       { q: 'What does this code say?  set n to 10, then repeat 3 [change n by 4], then say n.', a: '22 (10 + 4 + 4 + 4)' },
-      { q: 'The rule for the nth term is 4n + 3. Write the first three terms.', a: '7, 11, 15' }
+      { q: 'A straight fence is 12 m long with a post every 4 m, including a post at each end. Draw it and count the posts. Then work out how many posts a 60 m fence needs.', a: '4 posts for the 12 m fence (3 gaps). The 60 m fence needs 16 posts: 60 ÷ 4 = 15 gaps, and there is one more post than gaps.' }
     ],
     stretch: [
       { q: 'Find the 100th term of 12, 19, 26, 33, …', a: '705. The rule is 7n + 5, and 7 × 100 + 5 = 705.' },
       { q: 'Is 200 a term of 2, 9, 16, 23, …? Explain.', a: 'No. The rule is 7n − 5. The 29th term is 198 and the 30th term is 205, so 200 is skipped.' },
       { q: 'Matchstick houses in a row: 1 house uses 6 sticks, 2 houses use 11, 3 houses use 16. How many houses can you make with 100 sticks?', a: '19 houses. The rule is 5n + 1: 19 houses use 96 sticks (4 left over) and 20 houses would need 101.' },
-      { q: 'What does this code say?  set n to 100, then repeat 8 [change n by −7], then say n.', a: '44 (100 − 8 × 7 = 100 − 56)' },
+      { q: 'set n to 7, then repeat 49 [change n by 6], then say n. What does it say? Which term of 7, 13, 19, … is that? Check with the rule 6n + 1.', a: '301, the 50th term (7 + 49 × 6 = 301, and 6 × 50 + 1 = 301). Repeat 49 reaches the 50th term, not the 49th.' },
       { q: 'The 5th term of a sequence is 23 and the 6th term is 27. The difference is always the same. What is the 1st term? What is the rule?', a: '7. Go back 4 jumps of 4: 23 − 16 = 7. The rule is 4n + 3.' },
       { q: 'The 1st term of a sequence is 4 and the 10th term is 40. The difference is always the same. What is the difference?', a: '4. From the 1st term to the 10th term is 9 jumps, and 36 ÷ 9 = 4. (The rule is 4n.)' },
       { q: 'Write a sequence whose 1st term is 10 and whose 100th term is 1000.', a: '10, 20, 30, 40, … (rule 10n). There are 99 jumps, and 990 ÷ 99 = 10.' },
@@ -171,12 +171,12 @@ module.exports = {
     ],
     challenge: [
       { q: 'Pattern 1 is 1 tile, pattern 2 is a 2 by 2 square of tiles, pattern 3 is a 3 by 3 square. How many tiles are in pattern 10? How many more tiles does pattern 11 need than pattern 10?', a: '100 tiles. Pattern 11 has 121 tiles, so 21 more. The differences are 3, 5, 7, 9, …, so this is NOT a constant-difference sequence.' },
-      { q: 'A straight fence is 60 m long. There is a post every 4 m, including one at each end. How many posts are there?', a: '16 posts. 60 ÷ 4 = 15 gaps, and there is one more post than gaps.' },
+      { q: 'Ben counts 6, 11, 16, 21, … and Mei counts 83, 81, 79, 77, … They say their terms at the same time. When do they say the same number, and what is it?', a: 'At the 12th term they both say 61. The gap starts at 77 and closes by 7 each time (Ben +5, Mei −2): 77 ÷ 7 = 11 jumps after the 1st term. Check: 5 × 12 + 1 = 61 and 85 − 2 × 12 = 61.' },
       { q: 'The rule for a sequence is 6n − 4. Ben says every term is even. Is he right? Explain.', a: 'Yes. 6 × n is always even, and an even number take away 4 is even (2, 8, 14, 20, …).' },
-      { q: 'Find the first term of 5, 8, 11, 14, … that is bigger than 1000. Which term is it?', a: '1001, the 333rd term. (3n + 2: the 332nd term is 998 and the 333rd is 1001.)' },
+      { q: 'Find the first term of 5, 8, 11, 14, … that is bigger than 1000. Which term is it? Then find the first term bigger than 1000 that ends in 0.', a: '1001, the 333rd term (3n + 2: the 332nd term is 998). The first one bigger than 1000 that ends in 0 is 1010, the 336th term (1001, 1004, 1007, 1010).' },
       { q: 'A sequence goes 2, 6, 18, 54, … Is the difference the same each time? What is the rule? What is the 7th term?', a: 'No: the differences are 4, 12, 36. Each term is 3 times the one before. The 7th term is 1458 (54, 162, 486, 1458).' },
       { q: 'What does this code say?  set a to 1, set b to 1, then repeat 5 [change a by b, change b by a], then say b.', a: '144. a and b leapfrog: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 (the Fibonacci numbers).' },
-      { q: 'Ben counts 6, 11, 16, 21, … and Mei counts 83, 81, 79, 77, … They say their terms at the same time. When do they say the same number, and what is it?', a: 'At the 12th term they both say 61. The gap starts at 77 and closes by 7 each time (Ben +5, Mei −2): 77 ÷ 7 = 11 jumps after the 1st term. Check: 5 × 12 + 1 = 61 and 85 − 2 × 12 = 61.' },
+      { q: 'Make up your own sequence puzzle. Choose a first term and a difference, write the first four terms, then ask: “Is ___ a term?” Pick a number that is NOT a term but is close to one. Swap with a partner and explain how you know.', a: 'Open. Example: 6, 11, 16, 21, … (rule 5n + 1). Is 100 a term? No: 100 − 1 = 99 is not a multiple of 5 (the 19th term is 96 and the 20th is 101). Look for a reason from the rule or from counting jumps, not just a list.' },
       { q: 'Which numbers below 60 are in BOTH sequences 2, 5, 8, 11, … and 4, 9, 14, 19, …? Find them all.', a: '14, 29, 44 and 59. One more than each of them is a multiple of both 3 and 5, so a multiple of 15 (15, 30, 45, 60).' },
       { q: 'What does this code say?  set t to 0, set k to 0, then repeat 5 [change k by 1, change t by k], then say t. What would it say with repeat 100?', a: '15 (1 + 2 + 3 + 4 + 5). With repeat 100 it says 5050: pair 1 + 100, 2 + 99, … to make 50 pairs of 101.' }
     ]

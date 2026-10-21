@@ -87,11 +87,11 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: '5 kg of flour cost $8.50. How much do 3 kg cost?', a: '$5.10 ($1.70 a kg)' },
+      { q: '4 apples cost $2. How much do 8 apples cost? How much do 12 apples cost? How much does 1 apple cost? (Make a table if it helps.)', a: '$4; $6; 50¢ each.' },
       { q: 'A printer prints 24 pages a minute. How long does it take to print 360 pages?', a: '15 minutes' },
-      { q: 'Which is the better buy: 4 rolls for $3.40 or 6 rolls for $4.98?', a: '6 rolls for $4.98 (83¢ a roll, against 85¢)' },
+      { q: 'Pack A has 3 pens for $2. Pack B has 6 pens for $5. Which is the better buy? (Hint: how much would 6 pens cost if you bought Pack A twice?)', a: 'Pack A. Two Pack A cost $4 for 6 pens, but Pack B costs $5 for 6 pens. (Pack A is about 67¢ a pen and Pack B is about 83¢ a pen.)' },
       { q: 'A tap fills a 120 ℓ tank at 8 ℓ a minute. How long does it take?', a: '15 minutes' },
-      { q: 'Two taps fill 10 ℓ and 14 ℓ a minute. How long do they take together to fill a 192 ℓ tank?', a: '8 minutes (192 ÷ 24)' },
+      { q: 'Tap A fills 2 litres every minute and tap B fills 3 litres every minute. Both are turned on together. How many litres are in the tank after 1 minute? After 2 minutes? After 5 minutes? How long do they take to put in 20 litres?', a: '5 litres after 1 minute, 10 after 2 minutes, 25 after 5 minutes. 20 litres takes 4 minutes (5 + 5 + 5 + 5).' },
       { q: 'Nuts cost $1.50 for every 100 g. How much do 650 g cost?', a: '$9.75' }
     ],
     stretch: [
@@ -100,9 +100,9 @@ module.exports = {
       { q: 'A car park charges $1.50 for the first hour and $1 for every half hour or part of a half hour after that. How much does it cost to park from 10.15 a.m. to 2.50 p.m.?', a: '$9.50 (4 h 35 min: first hour, then 3 h 35 min is 8 half hours or parts)' },
       { q: 'Phone plan A costs $15 a month plus 10¢ a minute. Plan B costs 25¢ a minute with no monthly fee. For how many minutes in a month do the two plans cost the same?', a: '100 minutes (Plan B costs 15¢ more each minute; $15 ÷ 15¢ = 100; both cost $25)' },
       { q: '3 machines make 360 masks in 4 minutes. At the same rate, how many masks do 5 machines make in 6 minutes?', a: '900 (1 machine makes 30 masks a minute: 30 × 5 × 6)' },
-      { q: 'Ali earns $9 an hour on weekdays and $12 an hour on Saturdays. He works 4 hours each weekday from Monday to Friday and 5 hours on Saturday. How much does he earn in the week?', a: '$240 ($180 + $60)' },
+      { q: 'Shop X sells pens at 80¢ each. Shop Y sells 4 pens for $3.00 and gives 1 extra pen free with every 4 pens bought. Mei needs 20 pens. Which shop is cheaper, and by how much?', a: 'Shop Y by $4. At X, 20 pens cost $16.00. At Y, each deal gives 5 pens for $3.00, so 20 pens are 4 deals, $12.00.' },
       { q: 'A full tank holds 300 ℓ. A drain lets out 15 ℓ a minute, but a tap is left on that adds 5 ℓ a minute. How long does the tank take to empty?', a: '30 minutes (300 ÷ 10)' },
-      { q: 'A car uses 8 ℓ of petrol for every 100 km. How much petrol does it use for 350 km?', a: '28 ℓ' }
+      { q: 'A dripping tap drips 5 ml of water every 2 seconds. How many litres of water does it waste in one whole day?', a: '216 ℓ (in 1 day there are 86 400 seconds, 43 200 drips of 5 ml is 216 000 ml).' }
     ],
     challenge: [
       { q: 'Printer P prints a job in 6 minutes. Printer Q prints the same job in 3 minutes. How long do they take working together?', a: '2 minutes (pretend the job is 6 pages: P prints 1 page a minute, Q 2 pages, together 3 a minute)' },
@@ -110,7 +110,7 @@ module.exports = {
       { q: 'A machine starts at 9.52 a.m. and makes 50 cups a minute. At 10.00 a.m. a second machine starts, making 30 cups a minute. At what time have they made 1600 cups altogether?', a: '10.15 a.m. (400 cups by 10.00; 1200 ÷ 80 = 15 minutes more)' },
       { q: 'Ben needs at least 20 cans. Shop A sells 6 cans for $4.20, shop B sells 4 cans for $2.92 and shop C sells a deal of 10 cans for $7.80 with 2 cans free. He can buy from more than one shop, but only whole packs. What is the least he can pay?', a: '$13.64 (1 deal from C and 2 packs from B make 20 cans). Check the bigger totals: 22 cans cost at least $14.92 (C + A + B) and 24 cans cost at least $15.60 (2 deals from C), so they cannot be cheaper.' },
       { q: 'A tap fills 9 ℓ a minute. How long does it take to fill an empty tank 60 cm long, 50 cm wide and 45 cm high?', a: '15 minutes (135 000 cm³ = 135 ℓ; 135 ÷ 9)' },
-      { q: 'Ravi reads 24 pages an hour and Siti reads 18 pages an hour. They start the same 360-page book at the same time. When Ravi finishes, how many pages does Siti still have to read?', a: '90 pages (Ravi takes 15 hours; Siti reads 270 pages in that time)' },
+      { q: 'Make up your own better-buy puzzle: three pack sizes of the same snack where the BIGGEST pack is NOT the best buy. Give the sizes and prices, swap with a partner, and ask them to find the best buy and prove it. What price would make the biggest pack the best buy?', a: 'Open-ended. Sample: 6 for $3.00 (50¢ each), 10 for $5.50 (55¢ each) and 12 for $7.20 (60¢ each): the 6-pack is the best buy. If the 12-pack cost $5.40 or less (45¢ each or less) it would be the best buy.' },
       { q: '3 cats eat 3 fish in 3 minutes. At this rate, how many cats are needed to eat 100 fish in 100 minutes?', a: '3 cats (each cat eats 1 fish every 3 minutes, so the 3 cats eat 1 fish a minute: 100 fish in 100 minutes)' },
       { q: 'Candle A is 20 cm tall and burns down 2 cm every hour. Candle B is 14 cm tall and burns down 1 cm every hour. They are lit at the same time. After how many hours are they the same height? How tall are they then?', a: 'After 6 hours, both 8 cm tall (the gap of 6 cm closes by 1 cm each hour)' },
       { q: 'A tap fills an empty bath in 12 minutes. With the plug out, a full bath empties in 20 minutes. Ben turns on the tap but forgets the plug. How long does the bath take to fill?', a: '30 minutes (pretend the bath holds 60 ℓ: 5 ℓ a minute in, 3 ℓ a minute out, 2 ℓ a minute stay: 60 ÷ 2)' }
@@ -152,6 +152,7 @@ module.exports = {
       H.sub('c', 'Mei splits the 900 pages between P and Q so that both printers start together and finish at the same time. How many pages does she give to P?   ________'),
       H.q(5, 'Look at the car park sign.', { keepNext: true }),
       H.fig(figPark()),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> how long is 9.40 a.m. to 1.15 p.m.? Count the first hour, then count the half hours (or parts of a half hour) that are left.'], { after: 20 }),
       H.sub('a', 'Ali parks from 9.40 a.m. to 1.15 p.m. How much does he pay?', { keepNext: true }),
       ...H.lines(1),
       H.sub('b', 'Mei pays $3.60. What is the longest time she could have parked?   ________________'),

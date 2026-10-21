@@ -125,11 +125,11 @@ const qbank = {
     { q: 'A table has 4 legs and a stool has 3 legs. Ravi counts 17 legs on the tables and stools in a room. How many tables and how many stools are there?', a: '2 tables and 3 stools (8 + 9 = 17). No other mix works: 0, 1, 3 or 4 tables leave 17, 13, 5 or 1 legs, which are not in the 3 times table.' }
   ],
   challenge: [
-    { q: 'A shop has bicycles (2 wheels) and tricycles (3 wheels), at least one of each. There are 20 wheels altogether. Find all the ways.', a: '3 ways: 7 bicycles and 2 tricycles; 4 bicycles and 4 tricycles; 1 bicycle and 6 tricycles.' },
-    { q: 'Crayons come in boxes of 10 and packs of 5. Mei buys 6 boxes and packs altogether, with 45 crayons. How many boxes and how many packs does she buy?', a: '3 boxes and 3 packs (30 + 15 = 45).' },
-    { q: 'A farm has ducks and cows. There are 10 heads and 28 legs. How many ducks and how many cows are there?', a: '6 ducks and 4 cows (12 + 16 = 28 legs).' },
+    { q: 'Ali says: “Every number from 4 to 30 can be made into an array with at least 2 rows and at least 2 counters in each row.” Is he right? Find ALL the numbers that cannot. Explain why they cannot.', a: 'No. 5, 7, 11, 13, 17, 19, 23 and 29 cannot (8 numbers): only 1 row works.' },
+    { q: 'A shop sells bicycles (2 wheels), tricycles (3 wheels) and toy cars (4 wheels). There are 9 vehicles and 28 wheels altogether, with at least one of each kind. Find ALL the ways.', a: '3 ways (bikes, trikes, cars): 3, 2, 4; 2, 4, 3; 1, 6, 2.' },
+    { q: 'A pen has 10 animals, all hens (2 legs) and goats (4 legs). What are ALL the numbers of legs that Mei could count? Why can she never count 21 legs, or 42 legs?', a: '20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40 (11 numbers). All hens is 20 legs and each swap to a goat adds 2, up to all goats at 40. 21 is odd and the total is always even; 42 is more than 10 goats can have (40).' },
     { q: 'Mei says: "I counted the legs of some hens and goats. There were 9 legs." Can she be right? Explain.', a: 'No. Hens have 2 legs and goats have 4, so the total is always an even number (in the 2 times table). 9 is odd.' },
-    { q: 'A tray has muffins in rows of 5. Ben takes 3 muffins from the last row. Now there are 22 muffins on the tray. How many rows are there?', a: '5 rows. Before Ben took 3 there were 25 muffins, and 25 is 5 rows of 5.' },
+    { q: 'Make up your own “how many of each” puzzle with two kinds of things that have different numbers of legs or wheels. Write the clues (how many things, how many legs or wheels) so that there is exactly ONE answer. Solve it with a table, then swap with a partner. Then change the number of legs in your puzzle so that it has NO answer.', a: 'Open. Example: spiders (8 legs) and birds (2 legs): 5 animals and 28 legs gives 3 spiders and 2 birds (24 + 4 = 28), and it is the only answer because each swap changes the legs by 6. With 5 animals and 25 legs there is no answer: the total is always even.' },
     { q: 'I am a number between 10 and 30. I can be put into groups of 3 with none left over, and into groups of 4 with none left over. When I am put into groups of 5, 4 are left over. What number am I?', a: '24. Numbers in both the 3 and 4 times tables between 10 and 30 are 12 and 24; 12 in groups of 5 leaves 2, 24 leaves 4.' },
     { q: 'A toy shop has tricycles (3 wheels) and toy cars (4 wheels), at least one of each. There are 30 wheels altogether. Find all the ways.', a: '2 ways: 6 tricycles and 3 cars (18 + 12); 2 tricycles and 6 cars (6 + 24). With 1, 2, 4, 5 or 7 cars the wheels left are not in the 3 times table.' },
     { q: 'Mr Lim has between 20 and 30 sweets. When he puts them in groups of 4, 3 are left over. When he puts them in groups of 5, 2 are left over. How many sweets does he have?', a: '27. Groups of 4 with 3 left: 23 or 27. Groups of 5 with 2 left: 22 or 27. Only 27 is in both lists.' },
@@ -167,7 +167,7 @@ const workbook = H => {
   { const w6 = [2100, 867, 867, 867, 867, 867, 867, 867, 867, 864];
     const r6 = (lab, vals) => H.row([H.cell(lab, w6[0], { bold: true, fill: 'D9D9D9', h: 80 }), ...w6.slice(1).map((w, i) => H.cell(vals ? String(vals[i]) : '\u00a0', w, { h: 80 }))]);
     out.push(H.tbl(w6, [r6('Rows', [2, 3, 4, 5, 6, 7, 8, 9, 10]), r6('Chairs in each row'), r6('Does it work?')])); }
-  out.push(H.q(7, 'Challenge! A shop has some bicycles and some tricycles. There are 17 wheels altogether. Find ALL the ways. Start with 1 tricycle.', { keepNext: true }));
+  out.push(H.q(7, 'A shop has some bicycles (2 wheels) and some tricycles (3 wheels), at least one of each. There are 17 wheels altogether. Use counters or the table to find ALL the ways. Start with 1 tricycle.', { keepNext: true }));
   out.push(H.fig(cyclesFig()));
   out.push(H.tbl(hw, [hr('Tricycles', '1'), hr('Bicycles', ''), hr('Wheels', '')]));
   out.push(H.sub('a', 'How do you know you have found them all?'));

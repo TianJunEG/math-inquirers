@@ -155,12 +155,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'How many faces, edges and corners does a cube have?', a: '6 faces, 12 edges, 8 corners.' },
-      { q: 'How many lines of symmetry does a square have?', a: '4' },
-      { q: 'How many lines of symmetry does a rectangle that is not a square have?', a: '2 (the diagonals are not lines of symmetry).' },
-      { q: 'On a dice, opposite faces add up to 7. Which number is opposite 2?', a: '5' },
-      { q: 'How many squares are there in a net of a cube?', a: '6' },
-      { q: 'Does a row of 6 squares fold into a cube? Explain.', a: 'No. Four squares wrap round to make the walls; the 5th and 6th land on top of the first two, and the two ends are left open.' }
+      { q: 'Hold a box or a dice. How many faces, edges and corners does a cube have? Count them one by one.', a: '6 faces, 12 edges, 8 corners.' },
+      { q: 'Fold a square piece of paper so that the two halves match exactly. How many different ways can you fold it like this? (Folds from corner to corner count too.)', a: '4 ways (across the middle both ways, and along both diagonals).' },
+      { q: 'Now fold a rectangle that is not a square so that the two halves match exactly. How many different ways can you fold it?', a: '2 ways (across the middle both ways). Folding along a diagonal does not make the halves match.' },
+      { q: 'Look at a dice. Opposite faces add up to 7. Which number is on the face opposite 2?', a: '5' },
+      { q: 'Write the capital letters A, B, F, H, L and T on paper in big block letters. Which of them can be folded so that the two halves match exactly?', a: 'A, B, H and T. F and L cannot.' },
+      { q: 'Tape 6 squares in a row. Can you fold the row into a cube with no gaps and no overlaps? What goes wrong?', a: 'No. Four squares wrap round to make the walls, but the 5th and 6th land on top of the 1st and 2nd, and two ends are left open.' }
     ],
     stretch: [
       { q: 'A cuboid is 3 cm long, 2 cm wide and 1 cm high. Its net is drawn on 1 cm squared paper. How many squares does the net cover?', a: '22 squares: 2 faces of 3 by 2 (6 each), 2 faces of 3 by 1 (3 each) and 2 faces of 2 by 1 (2 each). 12 + 6 + 4 = 22.' },
@@ -170,16 +170,16 @@ module.exports = {
       { q: 'Can a 2 by 3 rectangle of squares fold into a cube? Explain.', a: 'No. It has a 2 by 2 block of squares: 4 squares meet at one corner, but on a cube only 3 faces meet at a corner, so two of them would overlap.' },
       { q: 'Which shape made of 5 squares joined edge to edge has exactly 2 lines of symmetry?', a: 'Only the row of 5 squares (one line up-down through the middle square and one line along the row).' },
       { q: 'Ben folds a net into a cube. Each face is a different colour. How many faces can touch the red face along an edge? Could 5 faces touch it?', a: '4 faces touch it. 5 cannot: the face opposite red never touches it.' },
-      { q: 'How many lines of symmetry does a 2 by 4 rectangle of squares have? A 4 by 4 square?', a: '2 and 4.' }
+      { q: 'On a 3 by 3 grid of squares, shade 3 squares so that the pattern has exactly 1 line of symmetry. Then shade 2 squares so that the pattern has exactly 2 lines of symmetry. Draw both patterns.', a: 'Answers vary. One line: for example the whole top row (3 squares), or the top-left, top-right and centre squares. Two lines: the top-middle and bottom-middle squares, or the left-middle and right-middle squares, or two opposite corners.' }
     ],
     challenge: [
       { q: 'Two dice are glued together face to face, and the two glued faces show the same number. The numbers on all the faces you can still see add up to 36. What number is on the glued faces?', a: '3. Two dice have 21 + 21 = 42 altogether. The hidden faces add up to 42 − 36 = 6, and they show the same number, so each is 3.' },
-      { q: 'How many different nets of a cube are there? (Turned or flipped copies count as the same net.)', a: '11.' },
+      { q: 'Show why a net of a cube can never have 5 squares in a row. What is the most squares in a row a net can have?', a: 'With 5 in a row, four squares wrap round to make a ring of walls and the 5th lands on top of the 1st, so two squares share a face and no face is left for the other end. The most is 4 in a row (for example the cross-shaped net).' },
       { q: 'An open box (a cube with no lid) is made from 5 squares. Of the 12 different shapes made of 5 squares joined edge to edge, how many fold into an open box? (Turned or flipped copies count as the same.)', a: '8. Only 4 shapes do not fold: the row of 5, the V (an L with arms of 3 and 3), the U (a C shape) and the P (a 2 by 2 block with one extra square).' },
-      { q: 'Ravi shades the 4 squares along one diagonal of a 4 by 4 grid (top left to bottom right). How many lines of symmetry does the pattern have?', a: '2: the diagonal it lies on, and the other diagonal of the grid.' },
+      { q: 'Three dice are stacked in a tower on a table. The top face of the tower shows 5. What is the total of the numbers on all the faces you cannot see (the faces touching each other and the table)?', a: '16. The top dice: its bottom is 2 (5 + 2 = 7). The middle dice: top and bottom are opposite, 7. The bottom dice: top and bottom, 7. 2 + 7 + 7 = 16.' },
       { q: 'Ali says: "On a dice, the numbers on the 4 side faces always add up to 14." Is he right? Explain.', a: 'Yes. The 4 side faces are two opposite pairs, and each pair adds up to 7: 7 + 7 = 14.' },
       { q: 'A cube has faces numbered 1 to 6 (not a normal dice). Face 1 touches faces 2, 3, 4 and 5. Face 2 touches faces 1, 3, 5 and 6. Which face is opposite 1? Opposite 2? Opposite 3?', a: 'Opposite 1 is 6 (the only face it does not touch). Opposite 2 is 4. That leaves 3 and 5, so opposite 3 is 5.' },
-      { q: 'Three dice are stacked in a tower on a table. The top face of the tower shows 5. What is the total of the numbers on all the faces you cannot see (the faces touching each other and the table)?', a: '16. The top dice: its bottom is 2 (5 + 2 = 7). The middle dice: top and bottom are opposite, 7. The bottom dice: top and bottom, 7. 2 + 7 + 7 = 16.' },
+      { q: 'Design your own dice. Draw a net of a cube that is not one of the nets in this lesson, and write the numbers 1 to 6 on it so that opposite faces add up to 7. Name each pair of opposite faces to prove it works. Then rub out two numbers and challenge a partner to put them back.', a: 'Designs will vary: check each pair of opposite faces on the net adds up to 7. Model: a row of four squares 2, 1, 5, 6 with a 3 above the 1 and a 4 below the 1. Opposite pairs: 2 and 5, 1 and 6 (first and third, second and fourth in the row), and 3 and 4 (above and below).' },
       { q: 'In how many ways can you shade exactly 2 squares of a 3 by 3 grid so that the up-down line through the middle is a line of symmetry?', a: '6. Both squares in the middle column: 3 ways. One square in each side column, in the same row: 3 ways.' },
       { q: 'Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Find both.', a: 'The middle square and the 4 corners (an X), or the middle square and the 4 edge-middle squares (a plus).' }
     ]
@@ -206,7 +206,7 @@ module.exports = {
     W.push(H.q(6, 'Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each.', { keepNext: true }));
     W.push(H.fig(q6Svg()));
     W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________'));
-    W.push(H.sub('b', 'Why can no other square work? Choose one square and explain.'));
+    W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?'));
     W.push(...H.lines(1));
     return W;
   }

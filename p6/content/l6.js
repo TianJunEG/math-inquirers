@@ -131,12 +131,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Roll a dice. What is the probability of rolling a 4?', a: '1/6' },
-      { q: 'Roll a dice. What is the probability of rolling an even number?', a: '3/6 = 1/2 (2, 4 or 6)' },
-      { q: 'A bag has 3 red and 7 yellow counters. You pick one without looking. What is the probability it is yellow?', a: '7/10' },
-      { q: 'You flip a coin 200 times. About how many heads do you expect?', a: 'About 100 (1/2 × 200), probably not exactly 100' },
-      { q: 'A spinner has 4 equal parts: red, red, blue, green. What is the probability of red?', a: '2/4 = 1/2' },
-      { q: 'Roll a normal dice. What is the probability of rolling a 9?', a: '0: it is impossible' }
+      { q: 'Roll a dice. Write down every possible result. How many of them are even? So the chance of an even number is __ out of __. Write it as a fraction.', a: '3 out of 6 = 1/2 (2, 4 or 6)' },
+      { q: 'A bag has 3 red and 7 yellow counters. You pick one without looking. How many counters are there altogether? What is the chance (as a fraction) that you pick yellow?', a: '10 counters; 7/10' },
+      { q: 'You flip a coin 200 times. About how many heads do you expect? Will it be exactly that number?', a: 'About 100 (half of 200), but probably not exactly 100' },
+      { q: 'A spinner has 4 equal parts: red, red, blue, green. Write the chance of spinning red as a fraction.', a: '2/4 = 1/2' },
+      { q: 'Roll a normal dice. Can you roll a 9? Choose one: impossible, unlikely, likely or certain.', a: 'Impossible: the probability is 0 (a dice only shows 1 to 6)' },
+      { q: 'A game: you win if the dice shows 1 or 2; your friend wins if it shows 3, 4, 5 or 6. Write the six dice results and who wins each one. Is the game fair? Why or why not?', a: 'You win on 2 of the 6 results and your friend on 4 of the 6, so it is not fair (2/6 = 1/3 against 4/6 = 2/3).' }
     ],
     stretch: [
       { q: 'A spinner has 10 equal parts numbered 1 to 10. What is the probability of spinning a prime number?', a: '4/10 = 2/5 (2, 3, 5, 7)' },
@@ -144,18 +144,18 @@ module.exports = {
       { q: 'A bag has 5 red counters and some blue counters. The probability of picking red is 1/4. How many blue counters are there?', a: '15 (5 out of 20 is 1/4)' },
       { q: 'Ali flips a coin 3 times. What is the probability that he gets heads all 3 times?', a: '1/8 (8 equally likely outcomes: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT)' },
       { q: 'One letter is picked at random from the word MATHEMATICS. What is the probability that it is M?', a: '2/11' },
-      { q: 'A program rolls a dice 1200 times. About how many even numbers should it roll?', a: 'About 600 (1/2 × 1200)' },
+      { q: 'A program rolls a dice 1200 times and counts the numbers bigger than 4. About how many should it count? The program says 391. Is something wrong? Explain.', a: 'About 400 (2 of the 6 results are bigger than 4, and 1/3 × 1200 = 400). 391 is close, so nothing is wrong: a random simulation is never exactly the expected number.' },
       { q: 'Roll two dice. What is the probability that at least one of them shows a 6?', a: '11/36 (6 with the red die, 6 with the blue die, minus the 6 + 6 counted twice: 6 + 6 − 1 = 11)' },
       { q: 'Roll a dice. Ali wins on 1 or 2; Ben wins on 3, 4, 5 or 6. Ben scores 1 point for each win. How many points should Ali score for each win to make the game fair?', a: '2 points (Ali wins 1/3 of the time and Ben 2/3, so Ali needs twice as many points per win)' }
     ],
     challenge: [
-      { q: 'A bag has red and blue counters in the ratio 2 : 3. What is the probability of picking red?', a: '2/5' },
+      { q: 'Three coins are flipped. What is the probability of getting exactly 2 heads?', a: '3/8 (HHT, HTH, THH out of 8 outcomes)' },
       { q: 'A number from 1 to 30 is picked at random. What is the probability that it is a multiple of 3 or a multiple of 5?', a: '14/30 = 7/15 (10 multiples of 3, 6 of 5, and 15 and 30 are counted twice: 10 + 6 − 2 = 14)' },
       { q: 'Roll two dice and multiply the numbers. What is the probability that the answer is odd?', a: '9/36 = 1/4 (both dice must be odd: 3 × 3 = 9 ways)' },
       { q: 'A spinner is spun 1000 times in a program and lands on red 248 times. Is red most likely 1/2, 1/4 or 1/8 of the spinner? Explain.', a: '1/4: we would expect about 250 reds, and 248 is close. 1/2 would give about 500 and 1/8 about 125.' },
       { q: 'A bag has 4 red and 6 blue counters. Ali picks a red counter and keeps it. What is the probability that the next counter picked is red?', a: '3/9 = 1/3 (3 red left out of 9)' },
       { q: 'Ben says: “When you flip two coins you get two heads, two tails, or one of each, so the chance of one of each is 1/3.” Is he right?', a: 'No: HH, HT, TH, TT are the 4 equally likely outcomes, and one of each happens 2 ways: 2/4 = 1/2.' },
-      { q: 'Three coins are flipped. What is the probability of getting exactly 2 heads?', a: '3/8 (HHT, HTH, THH out of 8 outcomes)' },
+      { q: 'Design a FAIR game for two players using one dice, two coins or a spinner. Write the rules and show with a list or table that each player has the same chance of winning. Then change ONE rule to make the game unfair, and say who is favoured.', a: 'Open. Example: roll one dice; Player A wins on 1, 2 or 3 and Player B wins on 4, 5 or 6 (3/6 each). Change: A also wins on 4. Now A has 4/6 and B has 2/6, so A is favoured. Check that every outcome is listed and the winning outcomes add up to the whole.' },
       { q: 'Mei and Ali each roll one dice. Mei wins if her number is bigger. Ali wins if his number is bigger or the same. Is the game fair? What is the probability that Mei wins?', a: 'Not fair. Mei wins 15/36 = 5/12; Ali wins 21/36 = 7/12 (15 bigger + 6 the same). Fair version: the same number means roll again.' },
       { q: 'Spinner A has 3 equal parts: 1, 2, 3. Spinner B has 4 equal parts: 1, 2, 3, 4. Spin both and multiply. Even wins if the answer is even, Odd wins if it is odd. Is the game fair?', a: 'Not fair. There are 3 × 4 = 12 outcomes; the answer is odd only when both are odd: 2 × 2 = 4 ways. P(Odd) = 4/12 = 1/3, P(Even) = 8/12 = 2/3.' }
     ]

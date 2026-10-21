@@ -60,12 +60,12 @@ module.exports = {
   },
   qbank: {
     core: [
-      { q: '2 m 45 cm = ____ cm', a: '245 cm' },
-      { q: '3060 g = ____ kg ____ g', a: '3 kg 60 g' },
-      { q: 'A pail holds 4 ℓ 500 ml. A jug holds 1 ℓ 750 ml. How much more does the pail hold?', a: '2 ℓ 750 ml (4500 ml − 1750 ml = 2750 ml)' },
+      { q: 'A ribbon is 2 m 45 cm long. (1 m is 100 cm.) How many cm is the ribbon?', a: '245 cm' },
+      { q: 'A bag of rice weighs 3060 g. (1 kg is 1000 g.) Write its mass in kg and g.', a: '3 kg 60 g' },
+      { q: 'A pail holds 4 ℓ 500 ml. A jug holds 1 ℓ 750 ml. (1 ℓ is 1000 ml.) How much more does the pail hold? Hint: write both in ml first.', a: '2 ℓ 750 ml (4500 ml − 1750 ml = 2750 ml)' },
       { q: 'Ali buys a sandwich for $3.80 and a drink for $1.45. He pays with a $10 note. How much change does he get?', a: '$4.75 ($3.80 + $1.45 = $5.25; $10 − $5.25 = $4.75)' },
-      { q: 'Write 6:20 p.m. in 24-hour time.', a: '18:20' },
-      { q: 'A lesson starts at 10:45 a.m. and ends at 12:05 p.m. How long is it?', a: '1 h 20 min (15 min + 1 h + 5 min)' }
+      { q: 'It is 6:20 p.m. Write the time in 24-hour time. (After 12 noon, add 12 to the hour.)', a: '18:20' },
+      { q: 'A lesson starts at 10:45 a.m. and ends at 12:05 p.m. How long is it? Hint: draw a time line and jump to 11:00, then 12:00, then 12:05.', a: '1 h 20 min (15 min + 1 h + 5 min)' }
     ],
     stretch: [
       { q: 'A 2 ℓ bottle of juice is poured into cups. Each cup holds 300 ml. How many cups can be filled? How much juice is left over?', a: '6 cups, 200 ml left (300, 600, 900, 1200, 1500, 1800 ml; 2000 − 1800 = 200 ml)' },
@@ -81,13 +81,13 @@ module.exports = {
     challenge: [
       { q: 'A 5 m ribbon is cut into two pieces. One piece is 80 cm longer than the other. How long is each piece?', a: '2 m 10 cm and 2 m 90 cm (500 − 80 = 420; 420 ÷ 2 = 210)' },
       { q: 'You have a 300 ml cup, a 500 ml cup (no marks on either) and a tap. How can you get exactly 100 ml in a cup?', a: 'Fill the 300 ml cup and pour it into the 500 ml cup. Fill the 300 ml cup again and pour until the 500 ml cup is full (200 ml goes in). 100 ml is left in the 300 ml cup.' },
-      { q: 'Ravi has $10. He buys some erasers at 85¢ each and gets $1.50 change. How many erasers does he buy?', a: '10 erasers ($10 − $1.50 = $8.50 = 850¢; 10 × 85¢ = 850¢)' },
+      { q: 'The clock at the station is 10 minutes fast. The train leaves when this clock shows 13:05. The trip takes 1 h 40 min. What is the real (correct) time when the train arrives? Give it in 24-hour and 12-hour time.', a: '14:35, which is 2:35 p.m. (real start 12:55; + 5 min = 13:00, + 1 h = 14:00, + 35 min = 14:35)' },
       { q: 'A pail has 4 ℓ 200 ml of water. Ali fills 3 bottles that hold 900 ml each. He pours the rest equally into 2 jugs. How much water is in each jug?', a: '750 ml (3 × 900 = 2700 ml; 4200 − 2700 = 1500 ml; 1500 ÷ 2 = 750 ml)' },
       { q: 'School starts at 08:15. There are 5 lessons of 35 minutes and a 20-minute recess after the 3rd lesson. When does the last lesson end?', a: '11:30 (5 × 35 = 175 min, + 20 = 195 min = 3 h 15 min)' },
       { q: 'Ali and Ben have $24 altogether. After Ali spends $3.60, they have the same amount of money. How much did Ali have at first?', a: '$13.80 ($24 − $3.60 = $20.40; half is $10.20; Ali had $10.20 + $3.60 = $13.80, Ben $10.20)' },
       { q: 'A bottle full of water weighs 1 kg 200 g. After half of the water is poured out, it weighs 750 g. How heavy is the empty bottle?', a: '300 g (half the water = 1200 − 750 = 450 g; all the water = 900 g; bottle = 1200 − 900 = 300 g)' },
       { q: 'Mei buys 3 pens and 2 files for $9.20. Each file costs 60¢ more than each pen. How much does one pen cost?', a: '$1.60 (take away the extra 2 × 60¢ = $1.20: $8.00 for 5 pens; 800¢ ÷ 5 = 160¢. A file is $2.20.)' },
-      { q: 'The clock at the station is 10 minutes fast. The train leaves when this clock shows 13:05. The trip takes 1 h 40 min. What is the real (correct) time when the train arrives? Give it in 24-hour and 12-hour time.', a: '14:35, which is 2:35 p.m. (real start 12:55; + 5 min = 13:00, + 1 h = 14:00, + 35 min = 14:35)' }
+      { q: 'Make up your own problem about money or time that needs at least 2 steps. Write it, solve it and check it. Then change ONE number and solve it again. What changes in the answer, and why? Swap with a partner.', a: 'Answers vary. Check that the problem needs 2 or more steps, the answer is right, and the child can say what changed. Example: "Mei has $20. She buys a $7.85 book and a $5.50 water bottle. Can she also buy 3 stickers at $2.35 each?" She has $20 − $13.35 = $6.65 left, but 3 stickers cost $7.05, so she is 40¢ short. If she had $25 she would have $11.65 left, enough for the stickers, with $4.60 change.' }
     ]
   },
   workbook: H => {

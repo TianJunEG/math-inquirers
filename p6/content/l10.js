@@ -147,9 +147,9 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find the 20th term of 5, 8, 11, 14, …', a: '62 (nth term 3n + 2)' },
-      { q: 'Write 60 as a product of prime numbers.', a: '2 × 2 × 3 × 5' },
-      { q: 'The temperature is −3 °C. It falls by 5 °C. What is it now?', a: '−8 °C' },
+      { q: 'Find the 20th term of 5, 8, 11, 14, … (Write the terms out, or look for a shortcut.)', a: '62 (the nth term is 3n + 2, so 3 × 20 + 2)' },
+      { q: 'Break 60 into smaller and smaller multiplications until every number is prime (2, 3, 5, 7, 11, …). Write 60 as a product of primes.', a: '2 × 2 × 3 × 5' },
+      { q: 'The temperature is −3 °C (3 degrees below zero). It falls by 5 degrees. What is it now? Count down on a thermometer drawing.', a: '−8 °C' },
       { q: 'A machine does × 4, then − 6. What comes out when 5 goes in?', a: '14' },
       { q: 'How many different 2-digit numbers can you make with the digit cards 3, 5 and 7 (each card used at most once)?', a: '6 (35, 37, 53, 57, 73, 75)' },
       { q: 'Find the mean of 12, 15, 9, 20 and 14.', a: '14 (70 ÷ 5)' }
@@ -168,10 +168,10 @@ module.exports = {
       { q: 'How many of the numbers from 1 to 100 are NOT multiples of 2 or of 3?', a: '33 (multiples of 2: 50, of 3: 33, of both (6): 16; 100 − (50 + 33 − 16) = 33)' },
       { q: 'A machine does × 3, then − 8. Mei puts a number in and gets the SAME number out. What is it? What if the machine does × 3, then + 8?', a: '4 (4 × 3 − 8 = 4). With + 8 it is −4 (−4 × 3 + 8 = −4).' },
       { q: 'How many squares of any size are there on a 4 by 4 grid?', a: '30 (16 + 9 + 4 + 1)' },
-      { q: 'What is the smallest number with exactly 6 factors?', a: '12 (1, 2, 3, 4, 6, 12)' },
-      { q: 'A turtle draws a star: repeat 5 times (move 100, turn 144°). How many full turns does the turtle make altogether?', a: '2 (5 × 144° = 720° = 2 × 360°)' },
-      { q: 'Three numbers have a mean of 8 and a median of 7. The biggest is 9 more than the smallest. Find the three numbers.', a: '4, 7 and 13 (the total is 24, so the smallest and biggest add to 17 and differ by 9)' },
       { q: 'Find ALL the ways to write 50 as the sum of two prime numbers.', a: '4 ways: 3 + 47, 7 + 43, 13 + 37, 19 + 31' },
+      { q: 'A turtle repeats [move 100, turn ↻ 150]. After how many repeats does it first face the way it started? What does it draw, and how many times does it go round?', a: '12 repeats (12 × 150° = 1800° = 5 × 360°, and no smaller number of repeats gives a multiple of 360°). It draws a 12-point star going round 5 times.' },
+      { q: 'Three numbers have a mean of 8 and a median of 7. The biggest is 9 more than the smallest. Find the three numbers.', a: '4, 7 and 13 (the total is 24, so the smallest and biggest add to 17 and differ by 9)' },
+      { q: 'Make up a challenge question that mixes TWO topics from the programme (for example primes and the clock, or sequences and negative numbers). Write the question, the answer and the working. Swap with a partner and solve each other’s.', a: 'Open. Example: “The nth term of a sequence is 7n − 3. Which is the first term that is a multiple of 5?” The terms are 4, 11, 18, 25, so it is the 4th term, 25. Check that the answer is correct and that both topics are really needed.' },
       { q: 'A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Plan a program that tests it 1000 times.', a: '8/64 = 1/8 (1 + 8, 2 + 7, … , 8 + 1), so about 125 in 1000. Program: set nines to 0; repeat 1000 (if pick random 1 to 8 + pick random 1 to 8 = 9 then change nines by 1); say nines.' },
       { q: 'The nth term of a sequence is 6n − 1. Is 2027 (the year you start Secondary 1) in the sequence? Which is the first term bigger than 2027?', a: 'Yes: it is the 338th term (6 × 338 − 1 = 2027). The first term bigger than 2027 is the 339th, 2033.' }
     ]

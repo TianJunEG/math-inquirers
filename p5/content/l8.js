@@ -167,12 +167,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Two angles on a straight line. One is 127°. What is the other?', a: '53° (180° − 127°)' },
-      { q: 'Four angles meet at a point. Three are 150°, 90° and 80°. What is the fourth?', a: '40° (360° − 320°)' },
-      { q: 'Two angles of a triangle are 48° and 67°. What is the third angle?', a: '65° (180° − 115°)' },
-      { q: 'An isosceles triangle has a top angle of 30°. What is each base angle?', a: '75° ((180° − 30°) ÷ 2)' },
-      { q: 'A parallelogram has one angle of 70°. What are the other three angles?', a: '110°, 70°, 110° (opposite angles are equal; adjacent angles add up to 180°)' },
-      { q: 'In rhombus ABCD, angle ABC is 124°. What is angle BCD?', a: '56° (adjacent angles add up to 180°)' }
+      { q: 'Draw any triangle on paper and tear off its three corners. Put the three corners side by side with their points touching. What do you notice? What do the three angles add up to? (A straight line is a half-turn, 180°.)', a: 'The three corners fit together along a straight line, so the three angles add up to 180°.' },
+      { q: 'Two angles sit side by side on a straight line. A straight line is 180°. One of the angles is 127°. What is the other angle?', a: '53° (180° − 127°).' },
+      { q: 'A round pizza is cut into 8 equal slices. A full turn is 360°. What is the angle of one slice at the centre? What is the angle of 2 slices together?', a: '45° for one slice (360° ÷ 8) and 90° for two slices.' },
+      { q: 'Two angles of a triangle are 48° and 67°. Draw the triangle with a ruler and a protractor and measure the third angle. What do all three angles add up to?', a: 'About 65° (180° − 48° − 67°). The three angles add up to 180°.' },
+      { q: 'The corner of a sheet of paper is 90°. Fold the corner exactly in half. What angle do you make? Fold it in half again: what angle now?', a: '45°, then 22.5° (half of 45°).' },
+      { q: 'A rectangle has four corners of 90°. Draw any four-sided shape (not a rectangle), tear off its four corners and fit them together round a point. What do the four angles add up to?', a: '360° (a full turn). For the rectangle, 4 × 90° = 360° too.' }
     ],
     stretch: [
       { q: 'Two straight lines cross. One of the four angles is 38°. What are the other three? How many different sizes are there?', a: '142°, 38°, 142°. There are two different sizes: 38° and 142°.' },
@@ -186,7 +186,7 @@ module.exports = {
     ],
     challenge: [
       { q: 'Two identical right-angled triangles with angles 30°, 60° and 90° are joined with their shorter sides (the sides opposite the 30° angles) touching, with the right angles together, to make one big triangle. What are the angles of the big triangle?', a: '30°, 30°, 120°. The two right angles make a straight line, and the two 60° angles together make 120°.' },
-      { q: 'Three angles of a four-sided shape are 95°, 110° and 85°. What is the fourth angle? Could the shape be a parallelogram?', a: '70° (360° − 290°). It cannot be a parallelogram: the angles 95°, 110°, 85° and 70° have no equal opposite pairs.' },
+      { q: 'Make up your own angle-chase puzzle: draw a figure with a triangle and a parallelogram (or a rhombus) sharing a side, give just two or three angles, and ask for an angle that needs at least THREE steps. Write the reason for every step in your answer. Swap with a partner and check each other. What if you changed one of the given angles?', a: 'Open-ended. Sample: ABCD is a parallelogram with angle ABC = 56°, and E is on DC with DA = DE. Find angle EAB. (ADC = 56°, DEA = (180° − 56°) ÷ 2 = 62°, DAB = 180° − 56° = 124°, EAB = 124° − 62° = 62°.) Check that every step has a reason and that the given angles do not contradict each other.' },
       { q: 'In triangle ABC, angle B = 70° and angle C = 50°. The line AD cuts angle A into two equal angles, with D on BC. Find angle ADB and angle ADC.', a: 'Angle A = 60°, so each part is 30°. ADB = 180° − 70° − 30° = 80°, and ADC = 180° − 80° = 100° (check: 30° + 50° + 100° = 180°).' },
       { q: 'An isosceles triangle has angles that are all whole numbers of degrees, and one of them is 20°. List every possible triangle.', a: '20°, 20°, 140° and 20°, 80°, 80°.' },
       { q: 'Triangle ABC has angle A = 20°, angle B = 60° and angle C = 100°. D is a point on AB so that angle ACD = 40°. Find the three angles of triangle ACD and the three angles of triangle BCD.', a: 'Triangle ACD: 20°, 40°, 120°. Triangle BCD: angle BCD = 60°, B = 60° and D = 60°, so it is equilateral.' },
@@ -200,9 +200,11 @@ module.exports = {
   workbook: H => [
     H.q(1, 'Left: straight lines AB and CD cross at O. Right: four angles meet at a point. Drawings are not to scale, so do not use a protractor.', { before: 20, keepNext: true }),
     H.fig(q1Fig()),
+    H.p(['<b style="color:#1F7A6F">Hint:</b> a straight line is a half-turn, 180°. A full turn is 360°. Where two lines cross, the angles opposite each other are equal (tear and check).'], { after: 20 }),
     H.sub('a', 'Angle BOC = ______    (b) Angle BOD = ______    (c) Angle AOD = ______', { after: 40 }),
     H.sub('d', 'The missing angle at the point on the right = ________.   Which angle fact did you use? ______________________', { after: 40 }),
     H.q(2, 'Find the missing angles. Write each angle fact you use.', { keepNext: true, before: 100 }),
+    H.p(['<b style="color:#1F7A6F">Hint:</b> in a parallelogram, neighbouring angles add to 180° and opposite angles are equal. A rhombus has 4 equal sides, so each triangle made by a diagonal is isosceles. In a trapezium, the angles between the parallel sides add to 180°.'], { after: 20 }),
     H.fig(q3Fig()),
     H.sub('a', 'Parallelogram:   angle B = ______   angle C = ______   angle D = ______', { after: 40 }),
     H.sub('b', 'Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),

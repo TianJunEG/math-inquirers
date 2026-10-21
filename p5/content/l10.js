@@ -100,11 +100,11 @@ module.exports = {
     challenge: [
       { q: 'At the first bus stop, 1/3 of the passengers got off. At the second stop, half of those left got off and 3 got on. There are now 12 passengers. How many were on the bus at first?', a: '27. Work backwards: 12 − 3 = 9; 9 is half of what was left, so 18 were left after stop 1; 18 is 2/3 of the passengers, so 1/3 is 9 and there were 27 at first.' },
       { q: 'How many rectangles of all sizes are there in a 1 by 5 strip of 5 small squares?', a: '15 (5 of length 1, 4 of length 2, 3 of length 3, 2 of length 4 and 1 of length 5: 5 + 4 + 3 + 2 + 1).' },
-      { q: 'Ali, Ben and Mei have 76 stickers altogether. Ali has 3 times as many as Ben. Mei has 6 more than Ben. How many stickers does each have?', a: 'Ben 14, Ali 42, Mei 20 (Ben 1 unit, Ali 3 units, Mei 1 unit and 6: 5 units and 6 = 76; 5 units = 70; 1 unit = 14).' },
+      { q: 'In the 3 by 4 grid of Question 4 there are 20 squares. How many rectangles of ALL sizes are there (a square counts as a rectangle)? Count by size. Then explain how you know you have not missed any or counted any twice.', a: '60 rectangles. Count by size, width by height (the grid is 4 wide and 3 tall): 1 by 1: 12, 2 by 1: 9, 3 by 1: 6, 4 by 1: 3 (30 with height 1); 1 by 2: 8, 2 by 2: 6, 3 by 2: 4, 4 by 2: 2 (20 with height 2); 1 by 3: 4, 2 by 3: 3, 3 by 3: 2, 4 by 3: 1 (10 with height 3). 30 + 20 + 10 = 60. Check: a rectangle is chosen by 2 of the 5 vertical lines (10 ways) and 2 of the 4 horizontal lines (6 ways): 10 × 6 = 60.' },
       { q: 'How many times does the digit 4 appear when you write all the whole numbers from 1 to 50?', a: '15 (in the ones place: 4, 14, 24, 34 and 44 is 5 times; in the tens place: 40 to 49 is 10 times; 5 + 10 = 15).' },
-      { q: 'I am a 2-digit number. My digits add up to 11. If you swap my digits, the new number is 27 more than I am. Who am I?', a: '47 (74 − 47 = 27; the digits are 4 and 7).' },
+      { q: 'Make up your own logic puzzle with four people and four things (pets, dishes, sports …). Write at least four clues. Test it on a partner: does it have exactly ONE answer? Which clue could you take away without spoiling it, and which clue could you NOT take away?', a: 'Open-ended. Check by trying to find a second solution: if one exists, add a clue. A good test is to remove each clue in turn and count the solutions. Sample: the hawker-centre puzzle in Question 2 has exactly one solution (checked by trying all 24 arrangements); without clue 4 (Mei did not order roti prata) it has more than one.' },
       { q: 'A monkey eats half of the rambutans in a pile and 1 more, every day for 3 days. After the third day there are none left. How many were in the pile at the start?', a: '14. Work backwards: after day 3 there are 0; before day 3 there were 2 (half of 2 is 1, and 1 more is 2); before day 2: (2 + 1) × 2 = 6; before day 1: (6 + 1) × 2 = 14. Check: 14 → 6 → 2 → 0.' },
-      { q: 'A water tank is 1/3 full. After 20 litres are added it is 1/2 full. How many litres does the full tank hold?', a: '120 litres. The 20 litres are 1/2 − 1/3 = 1/6 of the tank, so the whole tank is 6 × 20 = 120 litres.' },
+      { q: 'A water tank is 1/3 full. After 20 litres are added it is 1/2 full. Then 1/4 of the water in the tank is let out. How many litres of water are in the tank now? What fraction of the tank is full?', a: '45 litres, which is 3/8 of the tank. The 20 litres are 1/2 − 1/3 = 1/6 of the tank, so the full tank holds 120 litres. Half full is 60 litres; letting out 1/4 of it (15 litres) leaves 45 litres, and 45 ÷ 120 = 3/8.' },
       { q: '25 coins of 50¢, 10¢ and 20¢ are worth $5.30 altogether. There are twice as many 10¢ coins as 50¢ coins. How many coins of each kind are there?', a: '3 fifty-cent coins, 6 ten-cent coins and 16 twenty-cent coins. Suppose all 25 coins were 20¢: that is $5.00. Every 50¢ coin comes with two 10¢ coins; this group of 3 coins is worth 70¢, and replacing three 20¢ coins (60¢) with it adds 10¢. The extra is 30¢, so there are 3 groups. Check: 150¢ + 60¢ + 320¢ = 530¢ and 3 + 6 + 16 = 25.' },
       { q: 'Ali, Ben, Mei and Siti sit in a row of 4 chairs. Mei is not on either end. Ben does not sit next to Mei. Siti sits somewhere to the left of Ali. Ben is not on the left end. In what order do they sit, from left to right?', a: 'Siti, Mei, Ali, Ben. Mei is in chair 2 or 3. If Mei is in chair 3, the only chair not next to her is chair 1, but Ben is not on the left end, so that fails. So Mei is in chair 2, the only chair not next to her is chair 4, so Ben is in chair 4. Siti and Ali are in chairs 1 and 3 and Siti is on the left: Siti 1, Ali 3.' }
     ]
@@ -115,17 +115,19 @@ module.exports = {
     W.push(H.p('Choose a start: draw a model, list in order, make a table, work backwards or guess and check. Check your answer against EVERY clue.', { after: 40 }));
     // Q1 backwards
     W.push(H.q(1, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
-    W.push(...H.lines(2));
+    W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> write the steps in order. Then undo the LAST step first.'], { after: 20 }));
+    W.push(...H.lines(1));
     W.push(H.ans('Answer:  $'));
     // Q2 logic
     W.push(H.q(2, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
     ['Clue 1:  Ali did not order laksa or satay.', 'Clue 2:  The roti prata was ordered by a girl (Mei and Siti are girls; Ali and Ben are boys).', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));
     { const ws = [1900, 2000, 2000, 2000, 2000];
       W.push(H.tbl(ws, [H.row(['', 'Chicken rice', 'Laksa', 'Satay', 'Roti prata'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 45 }), ...ws.slice(1).map(w => H.cell('', w, { h: 45 }))]))])); }
-    W.push(H.p('Ali: ________________   Ben: ________________   Mei: ________________   Siti: ________________', { before: 20, after: 10 }));
+        ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 34 }), ...ws.slice(1).map(w => H.cell('', w, { h: 34 }))]))])); }
+    W.push(H.p('Ali: __________   Ben: __________   Mei: __________   Siti: __________', { before: 20, after: 10 }));
     // Q3 model
     W.push(H.q(3, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.', { keepNext: true }));
+    W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> Mei is 4 equal units. How many units is 3/4 of Mei’s? Where does the $10 go?'], { after: 20 }));
     W.push(...H.lines(2));
     W.push(H.ans('Mei:  $____________    Ravi:  $____________', 0));
 

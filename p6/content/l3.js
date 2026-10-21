@@ -160,12 +160,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Put in order, smallest first: −4, 2, −10, 0, −1.', a: '−10, −4, −1, 0, 2' },
-      { q: 'It is −3 °C. The temperature rises by 8 degrees. What is it now?', a: '5 °C' },
-      { q: 'It is 2 °C. The temperature falls by 7 degrees. What is it now?', a: '−5 °C' },
-      { q: 'Which is colder, −6 °C or −11 °C? By how many degrees?', a: '−11 °C, by 5 degrees' },
-      { q: 'In a building the floors are numbered …, −2, −1, 0, 1, 2, … and 0 is the ground floor. A lift is at floor −2. It goes up 6 floors. Which floor is it on now?', a: 'Floor 4 (−2 + 6 = 4)' },
-      { q: 'A sprite is at x = 30. It runs "change x by −50". Where is it now?', a: 'x = −20' }
+      { q: 'On a thermometer, 0 °C is where water freezes. Colder than that, numbers have a minus sign: −3 °C means 3 degrees below zero. Draw a thermometer or number line and write these in order, coldest first: −4, 2, −10, 0, −1.', a: '−10, −4, −1, 0, 2' },
+      { q: 'It is −3 °C (3 degrees below zero). The temperature rises by 8 degrees. What is it now? Count up on a thermometer drawing.', a: '5 °C' },
+      { q: 'It is 2 °C. The temperature falls by 7 degrees. What is it now? Count down on a thermometer drawing: 2, 1, 0, then below zero.', a: '−5 °C' },
+      { q: 'Which is colder, −6 °C or −11 °C? By how many degrees? Mark both on a thermometer drawing.', a: '−11 °C, by 5 degrees' },
+      { q: 'In a building the floors are numbered …, −2, −1, 0, 1, 2, … where 0 is the ground floor and −1 is the first floor below it. A lift is at floor −2. It goes up 6 floors. Which floor is it on now? Count the floors one by one.', a: 'Floor 4 (−2 + 6 = 4)' },
+      { q: 'In Scratch the stage is a number line. A sprite is at x = 30. It runs “change x by −50” (move 50 steps to the left). Where is it now?', a: 'x = −20' }
     ],
     stretch: [
       { q: 'Work out −7 + 12 and 5 − 13.', a: '5 and −8' },
@@ -182,9 +182,9 @@ module.exports = {
       { q: 'At midnight it was −6 °C. It rose 2 degrees every hour until 7 a.m., then 3 degrees every hour. What was the temperature at 10 a.m.?', a: '17 °C (−6 + 7 × 2 = 8 at 7 a.m., then 8 + 3 × 3 = 17)' },
       { q: 'set x to 0, then repeat 6 times: change x by 50, change x by −80. Then say x. What does it say?', a: '−180 (each repeat moves −30; 6 × −30 = −180)' },
       { q: 'Which is bigger, −3 − 4 or −3 − (−4)? By how much?', a: '−3 − (−4) = 1 is bigger than −3 − 4 = −7, by 8.' },
-      { q: 'Tokyo is 6 °C. Seoul is 4 degrees colder than Tokyo. Moscow is 17 degrees colder than Seoul. What is the temperature in Moscow?', a: '−15 °C (Seoul 2 °C, then 2 − 17 = −15)' },
-      { q: 'Lift A starts at the surface of a mine (0 m) and goes down 35 m every minute. Lift B starts at −300 m and goes up 25 m every minute. When are they at the same height, and at what height?', a: 'After 5 minutes, at −175 m (the gap of 300 m closes by 60 m each minute).' },
       { q: 'A sprite starts at x = −10. It moves +5, then −3, then +5, then −3, and so on. After how many moves is it first at a number greater than 0? Where is it?', a: 'After 7 moves, at x = 1 (−5, −8, −3, −6, −1, −4, 1).' },
+      { q: 'Lift A starts at the surface of a mine (0 m) and goes down 35 m every minute. Lift B starts at −300 m and goes up 25 m every minute. When are they at the same height, and at what height?', a: 'After 5 minutes, at −175 m (the gap of 300 m closes by 60 m each minute).' },
+      { q: 'Make up your own temperature story with at least three changes (rises and falls) that starts below zero and ends at exactly −7 °C. Write the story, the working and a number-line sketch. Swap with a partner and check each other’s.', a: 'Open. Example: starts at −2 °C, falls 6 degrees (−8), rises 3 degrees (−5), falls 2 degrees (−7). Check that the story really ends at −7 and that each change is shown on a number line.' },
       { q: 'Two numbers add up to −2. Their difference is 10. What are the two numbers?', a: '4 and −6 (4 + (−6) = −2 and 4 − (−6) = 10)' },
       { q: 'In many Singapore buildings there is no level 0: level 1 is the ground floor and B1 is the level below it. A lift goes from level 4 down to B3. How many floors does it go down? (Count the levels one by one; do not use a number line with 0.)', a: '6 floors (4, 3, 2, 1, B1, B2, B3: six moves down). A number line with 0 would give 7, because it counts a level 0 that these buildings do not have.' }
     ]

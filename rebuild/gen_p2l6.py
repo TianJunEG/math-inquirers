@@ -238,8 +238,8 @@ st=[('1.','Find all the ways to pay exactly $9 using only $5 and $2 notes.'),('2
 put(f'{P}-stretch',sec(f'{P}-stretch','For early finishers',h2('Stretch')+qcards(st,38),'For children who finish early. Answers: 1) Only 1 way: $5 + $2 + $2 (without a $5 note, $2 notes make only even amounts, and two $5 notes is $10, too much). 2) 50¢ + 20¢ + 5¢, and there is no other way (we need a 5¢ coin to end in 5, then 70¢ from two coins is only 50¢ + 20¢). 3) $10 ($3 + $12 = $15 before the game; $15 − $5 = $10 before mum gave him money).'))
 
 # 22 challenge
-ch=[('1.','Ali has 10 coins. They are all 10¢ or 20¢ coins, worth $1.50 altogether. How many of each coin does he have?'),('2.','Mei has $1. At the snack stall: chips 45¢, sweet 15¢, jelly 25¢, biscuit 30¢, lollipop 20¢. She wants as many DIFFERENT snacks as she can. Which should she buy?')]
-put(f'{P}-challenge',sec(f'{P}-challenge','Challenge',h2('Challenge')+qcards(ch,38),'Pairs try first, then the "see it" slide, then the walk-through. Answers: 1) Five 10¢ and five 20¢ (50¢ + 100¢ = 150¢). 2) Sweet, lollipop, jelly and biscuit: 15 + 20 + 25 + 30 = 90¢, with 10¢ change. All five cost $1.35, too much, and any 4 snacks with the chips cost at least $1.05.'))
+ch=[('1.','Ali has 10 coins. Every coin is a 10¢ or a 20¢ coin. They could be worth $1.50: how many of each is that? Write ALL the totals his 10 coins could be worth. Could they be worth $1.55?'),('2.','Mei has $1. At the snack stall: chips 45¢, sweet 15¢, jelly 25¢, biscuit 30¢, lollipop 20¢. She wants as many DIFFERENT snacks as she can. Which should she buy?')]
+put(f'{P}-challenge',sec(f'{P}-challenge','Challenge',h2('Challenge')+qcards(ch,38),'Pairs try first, then the "see it" slide, then the walk-through. Answers: 1) Five 10¢ and five 20¢ (50¢ + 100¢ = 150¢). The totals are $1.00, $1.10, … $2.00 (11 totals, going up 10¢ at a time); $1.55 is not possible because every total is a multiple of 10¢. 2) Sweet, lollipop, jelly and biscuit: 15 + 20 + 25 + 30 = 90¢, with 10¢ change. All five cost $1.35, too much, and any 4 snacks with the chips cost at least $1.05.'))
 
 # 23 chdiag
 WT=[230,230,230]
@@ -258,7 +258,7 @@ put(f'{P}-chdiag',sec(f'{P}-chdiag','Challenge',body,'Show after pairs have trie
 
 # 24 chwalk
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: start with all 10¢',38,800,TEAL))
-for i,t in enumerate(['Ten 10¢ coins = $1.00','Each swap to a 20¢ adds 10¢','$1.50 is 50¢ more: 5 swaps','Five 10¢ + five 20¢ = 50¢ + $1 ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
+for i,t in enumerate(['Ten 10¢ coins = $1.00','Each swap to a 20¢ adds 10¢','$1.50 is 50¢ more: 5 swaps (5 and 5)','Totals: $1.00, $1.10 … $2.00 (11). $1.55? No ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: cheapest first',38,800,TEAL))
 for i,t in enumerate(['15¢ + 20¢ = 35¢','+ 25¢ = 60¢,  + 30¢ = 90¢','Chips next: 90¢ + 45¢ is too much','4 snacks, 10¢ change ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
 put(f'{P}-chwalk',sec(f'{P}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the swap idea is a list in order (10 and 0, 9 and 1, 8 and 2 …) with the total going up by 10¢ each row. Q2: to get the MOST things, buy the cheapest things first. Ask: "Could she swap the biscuit for the chips?" (15 + 20 + 25 + 45 = 105¢, too much.)'))

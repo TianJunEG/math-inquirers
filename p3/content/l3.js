@@ -104,11 +104,11 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find 8 × 6 and 6 × 8. What do you notice?', a: 'Both are 48. Swapping the numbers does not change the answer.' },
+      { q: 'Draw 6 rows of 8 dots. How many dots are there? Now turn your drawing sideways: it shows 8 rows of 6 dots. How many dots now? What do you notice?', a: 'Both are 48: 8 × 6 and 6 × 8 are the same. Swapping the numbers does not change the answer.' },
       { q: 'You know 5 × 9 = 45. Use it to find 6 × 9.', a: '54 (one more 9: 45 + 9).' },
-      { q: 'Fill in the box: 7 × □ = 63', a: '9' },
+      { q: '63 apples are packed into boxes of 7 apples with none left over. Count in 7s (7, 14, 21, …) to find how many boxes there are.', a: '9 boxes (7 × 9 = 63)' },
       { q: 'A spider has 8 legs. How many legs do 7 spiders have?', a: '56' },
-      { q: 'Write the last digits of the 6 times table from 6 × 1 to 6 × 10. Which digits appear?', a: '6, 2, 8, 4, 0, 6, 2, 8, 4, 0. Only 6, 2, 8, 4 and 0.' },
+      { q: 'Count in 6s from 6 up to 60 (6, 12, 18, …). Write only the LAST digit of each number. Which last digits do you see?', a: '6, 2, 8, 4, 0, 6, 2, 8, 4, 0. Only 6, 2, 8, 4 and 0.' },
       { q: 'Find 9 × 7 by working out 10 × 7 and taking away one 7.', a: '70 − 7 = 63' }
     ],
     stretch: [
@@ -116,19 +116,19 @@ module.exports = {
       { q: 'What is the last digit of 8 × 8 × 8? Use last digits only.', a: '2. 8 × 8 = 64 ends in 4, and 4 × 8 = 32 ends in 2. (8 × 8 × 8 = 512.)' },
       { q: 'Ravi says: "Every answer in the 6 times table is even." Is he right? Explain why.', a: 'Yes. 6 groups can always be put into 3 pairs of groups, so nothing is left over. (6 × 7 = 3 × 14 = 42.)' },
       { q: 'Find ALL the 2-digit numbers that can be divided exactly by 7 and whose digits add up to 10.', a: '28 and 91. (List 14, 21, 28 … 98 and add the digits of each: only 28 and 91 make 10.)' },
-      { q: 'Which is more, 7 × 8 or 6 × 9? By how much?', a: '7 × 8 = 56 is 2 more than 6 × 9 = 54.' },
+      { q: 'Compare each pair. Which is more, and by how much?  (a) 7 × 7 and 6 × 8   (b) 8 × 8 and 7 × 9   (c) 7 × 8 and 6 × 9.  What do you notice?', a: '(a) 49 is 1 more than 48. (b) 64 is 1 more than 63. (c) 56 is 2 more than 54. The first number of each pair is always more: the closer the two numbers are to each other, the bigger the answer.' },
       { q: 'The last digit of 9 × 9 is 1. What is the last digit of 9 × 9 × 9 × 9?', a: '1. Last digits go 9, 1, 9, 1. (9 × 9 × 9 × 9 = 6561.)' },
       { q: 'Ben multiplies a number by 6. His answer ends in 4. What could the last digit of his number be? Find all the possible digits.', a: '4 or 9 (6 × 4 = 24 and 6 × 9 = 54; no other digit gives a last digit of 4).' },
-      { q: 'Mei’s age × 6 = 48. Ali’s age × 7 = 63. Who is older, and by how many years?', a: 'Mei is 8, Ali is 9, so Ali is older by 1 year.' }
+      { q: 'Find three different ways to work out 8 × 9 using facts you already know (for example 5 × 9 plus something). Write each way and the answer.', a: '72 every time. For example 5 × 9 + 3 × 9 = 45 + 27; 10 × 9 − 2 × 9 = 90 − 18; 4 × 9 + 4 × 9 = 36 + 36; 8 × 10 − 8 = 80 − 8.' }
     ],
     challenge: [
       { q: 'Four numbers in a multiplication square are 42 and 48 in the top row, and 49 and 56 in the row below. What are the two row numbers and the two column numbers?', a: 'Rows 6 and 7, columns 7 and 8. Start with 49: it can only be 7 × 7.' },
       { q: 'Ben writes the answers of the 6 times table from 6 × 1 to 6 × 20. How many of the answers end in 8?', a: '4 (18, 48, 78, 108). The last digits 6, 2, 8, 4, 0 repeat every 5, so 8 comes once in every 5.' },
       { q: 'How many numbers from 1 to 200 can be divided exactly by both 6 and 9?', a: '11. They are the numbers in the 18 times table: 18, 36, 54 … 198.' },
-      { q: 'Siti writes the 7 times table from 7 × 1 to 7 × 20. How many answers end in 3?', a: '2 (63 and 133). Each digit appears once in every 10 answers.' },
+      { q: 'In the 8 times table, which digits can NEVER be the last digit of an answer? Explain why. Is the same true for the 6 times table?', a: 'The odd digits 1, 3, 5, 7 and 9 never appear. 8 × any number is even (8 × n = 2 × 4 × n), so its last digit is even, and the last digits cycle through 8, 6, 4, 2, 0. The same is true for the 6 times table (6 × n = 2 × 3 × n, so the last digits cycle 6, 2, 8, 4, 0).' },
       { q: 'Siti says the answer to 6 × 7 × 8 × 9 ends in 4. Is she right? Use last digits only.', a: 'Yes. 6 × 7 = 42 → 2; 2 × 8 = 16 → 6; 6 × 9 = 54 → 4. (The answer is 3024.)' },
-      { q: 'Mei multiplies two DIFFERENT numbers from 6, 7, 8 and 9. Find all the answers she can get.', a: '6 answers: 42, 48, 54, 56, 63, 72 (6×7, 6×8, 6×9, 7×8, 7×9, 8×9).' },
       { q: 'Mei has between 40 and 60 sweets. She can share them equally among 6 friends with none left over. She can also share them equally among 9 friends with none left over. How many sweets does she have?', a: '54. Numbers that work for 6 and 9 are 18, 36, 54, 72 …; only 54 is between 40 and 60.' },
+      { q: 'Make up your own riddle: "I am a 2-digit number in the ___ times table …" Write 2 or 3 clues (about odd or even, the digits, being between two numbers). Check that only ONE number fits, by listing the table. Swap with a partner.', a: 'Answers vary. Check that the secret number is in the table, every clue is true, and listing the table leaves exactly one number. Example: "I am a 2-digit number in the 7 times table. I am odd. My digits add up to 10." The 2-digit odd numbers in the 7 table are 21, 35, 49, 63, 77 and 91, and only 91 has digits that add up to 10.' },
       { q: 'Ben keeps multiplying by 7: 7, 49, 343 … He writes only the last digit each time: 7, 9, 3 … What is the last digit when he has multiplied 8 sevens together? Explain the pattern.', a: '1. The last digits go 7, 9, 3, 1 and then repeat, so the 4th and the 8th are both 1.' },
       { q: 'I am a 3-digit number less than 200. I can be divided exactly by 7 and by 9. My digits add up to 9. What number am I?', a: '126. Numbers that work for 7 and 9 are 63, 126, 189 …; the 3-digit ones below 200 are 126 and 189, and only 1 + 2 + 6 = 9.' }
     ]

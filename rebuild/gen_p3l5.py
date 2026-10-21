@@ -218,9 +218,9 @@ put('p3l5-stretch',sec('p3l5-stretch','For early finishers',body,
  'For children who finish early. Answers: 1) 43 (remainder 1 when ÷ 6: 43 and 49; 43 ÷ 4 = 10 r 3 ✓, 49 ÷ 4 = 12 r 1). 2) 9 r 7 (work backwards: 9 × 8 + 7 = 79; 79 ÷ 8 = 9 r 7). 3) 4 more (60 ÷ 8 = 7 r 4; the next box needs 64).'))
 
 # ---------- 22. challenge ----------
-body=h2('Challenge')+items([('1.','Today is Monday. What day of the week will it be 100 days from today?'),('2.','Mr Lim gives pens to his pupils. If each pupil gets 4 pens, 10 pens are left over. If each pupil gets 6 pens, he is 4 pens short. How many pupils are there? How many pens does he have?')],38)
+body=h2('Challenge')+items([('1.','Today is Monday. What day of the week will it be 100 days from today? What day of the week was it 100 days ago?'),('2.','Mr Lim gives pens to his pupils. If each pupil gets 4 pens, 10 pens are left over. If each pupil gets 6 pens, he is 4 pens short. How many pupils are there? How many pens does he have?')],38)
 put('p3l5-challenge',sec('p3l5-challenge','Challenge',body,
- 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) Wednesday (100 ÷ 7 = 14 r 2). 2) 7 pupils and 38 pens.'))
+ 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) Wednesday in 100 days (100 ÷ 7 = 14 r 2, so 2 days after Monday). Saturday 100 days ago (14 weeks back is Monday, then 2 more days back: Sunday, Saturday). 2) 7 pupils and 38 pens.'))
 
 # ---------- 23. challenge: see it ----------
 days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
@@ -256,11 +256,11 @@ put('p3l5-chdiag',sec('p3l5-chdiag','Challenge',body,
 
 # ---------- 24. challenge walk-through ----------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: weeks are groups of 7',38,800,TEAL))
-for i,t in enumerate(['100 ÷ 7 = 14 r 2','After 14 weeks (98 days) it is Monday again.','2 more days: Tuesday, then Wednesday.','100 days from Monday is Wednesday ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
+for i,t in enumerate(['100 ÷ 7 = 14 r 2. After 14 weeks (98 days) it is Monday again.','Forward 2 more days: Tuesday, then Wednesday.','Backward: 14 weeks ago was Monday; 2 more days back: Sunday, then Saturday.','100 days from Monday is Wednesday. 100 days ago was Saturday ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: compare the two shares',38,800,TEAL))
 for i,t in enumerate(['From 4 to 6 pens, each pupil gets 2 more.','That needs the 10 spare pens + 4 more = 14 pens.','14 ÷ 2 = 7 pupils.','Pens: 7 × 4 + 10 = 38. Check: 7 × 6 = 42 = 38 + 4 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
 put('p3l5-chwalk',sec('p3l5-chwalk','Challenge',body,
- 'Use after pairs have tried. Q1: the remainder is what matters: full weeks bring us back to the same day. Many children count on 100 from Monday or say Tuesday; the table of days shows why it is 2 days on. '
+ 'Use after pairs have tried. Q1: the remainder is what matters: full weeks bring us back to the same day. Many children count on 100 from Monday or say Tuesday; the table of days shows why it is 2 days on. For 100 days AGO, children often say Wednesday again: ask them to go backwards, so 2 days BEFORE Monday is Saturday. '
  'Q2: if children are stuck, act it out with 3 or 4 "pupils" and pens; a table (pupils 1, 2, 3 … with pens needed both ways) also works: 7 pupils is where 4 × 7 + 10 = 38 and 6 × 7 − 4 = 38 match.'))
 
 # ---------- 25. talk ----------

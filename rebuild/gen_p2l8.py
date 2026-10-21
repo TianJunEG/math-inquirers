@@ -389,14 +389,14 @@ put('p2l8-ws2ans',check_x('p2l8-ws2ans','69–72 MIN','Page 2: check together',[
  'The dice net (opposite faces add up to 7) is on the Think Harder page for strong thinkers: in a straight row, the 1st and 3rd squares are opposite, and so are the 2nd and 4th.',lw=180,gap=170,size=34))
 
 # 22. stretch
-st=[('1.','How many quarter circles make 2 whole circles and 1 semicircle?'),('2.','A stack is 3 cubes long, 3 cubes wide and 2 cubes high. How many cubes?'),('3.','How many triangles are in a triangle with 3 lines from the top corner to the bottom?')]
+st=[('1.','How many rectangles can you find in a row of 4 squares joined side by side? (A square is a rectangle too. Count all sizes.)'),('2.','A stack is 3 cubes long, 3 cubes wide and 2 cubes high. How many cubes?'),('3.','How many triangles are in a triangle with 3 lines from the top corner to the bottom?')]
 put('p2l8-stretch',sec('p2l8-stretch','For early finishers',h2('Stretch')+qcards(st,38),
- 'For children who finish early. Answers: 1) 10 (4 + 4 + 2).  2) 18 (each layer 3 + 3 + 3 = 9, two layers).  3) 10: made of 1 part 4, of 2 parts 3, of 3 parts 2, all 4 parts 1 (4 + 3 + 2 + 1).'))
+ 'For children who finish early. Answers: 1) 10 (4 of length 1, 3 of length 2, 2 of length 3, 1 of length 4).  2) 18 (each layer 3 + 3 + 3 = 9, two layers).  3) 10: made of 1 part 4, of 2 parts 3, of 3 parts 2, all 4 parts 1 (4 + 3 + 2 + 1).'))
 
 # 23. challenge
-ch=[('1.','Steps are made of cubes. They are 3 cubes high, then 2, then 1, and every step is 3 cubes wide (from front to back). How many cubes?'),('2.','How many squares can you find in a grid 4 squares long and 3 squares high?')]
+ch=[('1.','Steps are made of cubes. They are 3 cubes high, then 2, then 1, and every step is 3 cubes wide (from front to back). How many cubes?'),('2.','How many squares can you find in a grid 4 squares long and 3 squares high? Another grid, longer than it is high and at least 2 squares high, also has exactly 20 squares. Find ALL such grids.')]
 put('p2l8-challenge',sec('p2l8-challenge','Challenge',h2('Challenge')+qcards(ch,36),
- 'Use as a pair challenge or in talk time. Ask for the reason every time. More are in the question bank. Answers: 1) 18 cubes.  2) 20 squares.'))
+ 'Use as a pair challenge or in talk time. Ask for the reason every time. More are in the question bank. Answers: 1) 18 cubes.  2) 20 squares in the 4 by 3 grid; the other grid is 7 long and 2 high (14 + 6 = 20). So 4 by 3 and 7 by 2.'))
 
 # 24. chdiag
 steps=hmap([[3,2,1]]*3)
@@ -410,7 +410,7 @@ put('p2l8-chdiag',sec('p2l8-chdiag','Challenge',body,'Show after pairs have trie
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: count one step at a time',38,800,TEAL))
 for i,t in enumerate(['Tall step: 3 high and 3 deep: 3 + 3 + 3 = 9','Middle step: 2 high and 3 deep: 2 + 2 + 2 = 6','Short step: 1 high and 3 deep: 3','9 + 6 + 3 = 18 cubes ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: count by size',38,800,TEAL))
-for i,t in enumerate(['1 by 1: 4 in a row, 3 rows: 12','2 by 2: the window fits 3 across, 2 down: 6','3 by 3: it fits 2 across, 1 down: 2','4 by 4: too big. 12 + 6 + 2 = 20 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
+for i,t in enumerate(['1 by 1: 4 in a row, 3 rows: 12','2 by 2: the window fits 3 across, 2 down: 6','3 by 3: it fits 2 across, 1 down: 2','4 by 4: too big. 12 + 6 + 2 = 20 ✓ (7 by 2 also: 14 + 6 = 20)']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
 put('p2l8-chwalk',sec('p2l8-chwalk','Challenge',body,
  'Use after pairs have tried. Q1: you could also count front to back: each slice from the front is 3 + 2 + 1 = 6 cubes, and there are 3 slices: 6 + 6 + 6 = 18. Two ways, same answer: a great check. '
  'Q2: the grid is only 3 high, so there is no 4 by 4 square. Watch for 12 (only small squares) and for 21 or more (counting a 4 by 4 that is not there).'))

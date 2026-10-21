@@ -87,12 +87,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find 10% of $360 and 15% of $360.', a: '$36 and $54 ($36 + $18)' },
-      { q: 'A book costs $45. It is sold at a 20% discount. What is the sale price?', a: '$36 (20% of $45 = $9)' },
-      { q: 'A meal costs $30 before GST. GST is 9%. How much is the meal with GST?', a: '$32.70 (9% of $30 = $2.70)' },
+      { q: 'A hundred-square has 100 small squares. 35 of them are shaded. What percentage is shaded? What percentage is NOT shaded? (Percent means “out of 100”.)', a: '35% shaded, 65% not shaded.' },
+      { q: 'Percent means “out of 100”, so 50% is a half. Find 50% of $80. Then use it to find 25% of $80 (half of 50%) and 10% of $80 (one tenth).', a: '50% is $40, 25% is $20 and 10% is $8.' },
+      { q: 'A book costs $50. It has 10% off, which is one tenth of the price. How much money is taken off? What do you pay?', a: '$5 is taken off; you pay $45.' },
       { q: '24 of the 40 pupils in a class walk to school. What percentage walk to school?', a: '60% (24 out of 40 = 60 out of 100)' },
       { q: 'Ali had $60. He spent 25% of it. How much did he have left?', a: '$45' },
-      { q: '21 of the 60 seats in a hall are empty. What percentage of the seats are empty?', a: '35% (21 out of 60 = 35 out of 100)' }
+      { q: 'A notebook costs $20 before GST. GST is 9%. 1% of $20 is 20¢. How much is the GST? How much do you pay altogether?', a: 'GST is 9 × 20¢ = $1.80; you pay $21.80.' }
     ],
     stretch: [
       { q: 'At a hawker centre, a plate of chicken rice went up from $4 to $5. A month later, it went back down from $5 to $4. (a) Find the percentage increase from $4 to $5. (b) Find the percentage decrease from $5 to $4. (c) Both changes are $1. Why are the two percentages different? Hint: percentage change = the change out of the amount you START with.', a: '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) Each change is compared with its own starting amount: $1 out of $4 is a bigger part than $1 out of $5. (Percentage change is a P6 skill: a preview.)' },
@@ -105,7 +105,7 @@ module.exports = {
       { q: 'Ravi scored 18 out of 25 in Test A and 27 out of 40 in Test B. In which test did he do better?', a: 'Test A: 72% (18 out of 25) is more than 67.5% (27 out of 40).' }
     ],
     challenge: [
-      { q: 'A $100 jacket goes up by 20%, then the new price goes down by 20%. What is the final price? Is it a percentage increase or decrease from $100, and how much?', a: '$96 ($120, then 20% of $120 = $24 off). A 4% decrease.' },
+      { q: 'Make up your own percentage trap: a story in which a price goes up by a percentage and then down by a percentage (or two percentages are added) and someone gets the wrong answer. Use real numbers to show what really happens. Swap with a partner: can they find the mistake? What if the two percentages were different?', a: 'Open-ended. Sample: a $60 jacket goes up 50% and then down 50%. Ravi says the price is back to $60. Really: $60 + $30 = $90, then 50% of $90 is $45 off, so $45. It is 25% LESS than the start, because the second 50% is of the bigger amount.' },
       { q: 'After a 20% discount, a shirt costs $40. Ben says the price before the discount was $48. Is he right? Find the price before the discount.', a: 'No. $40 is 80% of the old price, so 10% is $5 and 100% is $50. (Ben added 20% of $40, but the 20% was of the old price.)' },
       { q: 'A tank is 40% full. After 60 ℓ of water is poured in, it is 70% full. How much water can the tank hold?', a: '200 ℓ (the 60 ℓ is 30% of the tank, so 10% is 20 ℓ)' },
       { q: 'Mei\'s score went up by 20% from Test 1 to Test 2. Then it went down by 20% from Test 2 to Test 3. Her Test 3 score was 48. What was her Test 1 score?', a: '50. Work backwards: 48 is 80% of Test 2, so Test 2 = 60; 60 is 120% of Test 1, so Test 1 = 50.' },

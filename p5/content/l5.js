@@ -131,12 +131,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'A cuboid is 9 cm long, 4 cm wide and 5 cm high. What is its volume?', a: '180 cm³' },
-      { q: 'A cube has edges of 6 cm. How many 1-cm cubes are needed to build it?', a: '216 (6 × 6 × 6)' },
-      { q: 'A tank 40 cm long, 20 cm wide and 30 cm high is half full of water. How many litres of water are in it?', a: '12 ℓ (40 × 20 × 15 = 12 000 cm³)' },
-      { q: 'A cuboid has a volume of 240 cm³. Its base is 8 cm by 6 cm. How high is it?', a: '5 cm (240 ÷ 48)' },
-      { q: 'A tank with a base 25 cm by 20 cm has water 6 cm deep. 2 ℓ more water is poured in. How deep is the water now?', a: '10 cm (2000 ÷ 500 = 4 cm more)' },
-      { q: 'A stone sinks to the bottom of a tank with a base 20 cm by 15 cm. The water rises 2 cm. What is the volume of the stone?', a: '600 cm³ (20 × 15 × 2)' }
+      { q: 'Build a box 3 cubes long, 2 cubes wide and 2 cubes high with 1-cm cubes (or draw it layer by layer). How many cubes are in the bottom layer? How many layers are there? How many cubes are used altogether?', a: '6 cubes in the bottom layer, 2 layers, 12 cubes altogether (12 cm³).' },
+      { q: 'Use 12 cubes to build a flat rectangle, one cube high. How many different rectangles can you make? (Turning a rectangle round does not make a new one.) Write the length and width of each.', a: '3 rectangles: 1 by 12, 2 by 6 and 3 by 4.' },
+      { q: 'A tank has a base of 10 cm by 10 cm. If the water is 1 cm deep, there are 100 one-cm cubes of water. How many cubes of water are there if the water is 3 cm deep? 10 cm deep? How many litres is the water when it is 10 cm deep? (1 ℓ = 1000 cm³.)', a: '300 cm³; 1000 cm³, which is 1 ℓ.' },
+      { q: 'How many 1-cm cubes (dice) fill a box 5 cm long, 4 cm wide and 3 cm high? Use dice, or draw one layer and count the layers.', a: '60 cubes (a layer of 20, three layers).' },
+      { q: 'A tank has a base 4 cm by 3 cm. The water is 2 cm deep. Twelve 1-cm cubes are dropped in and sink to the bottom. How much higher does the water rise? (Think of the cubes as one more layer of water.)', a: '1 cm (12 cubes fill exactly one layer of 4 × 3).' },
+      { q: 'A bottle holds 2 litres of water. How many cm³ is that? How many ml is 2.5 ℓ? (1 ℓ = 1000 ml = 1000 cm³.)', a: '2000 cm³; 2500 ml.' }
     ],
     stretch: [
       { q: 'How many cubes with 2-cm edges can be packed in neat layers into a box 9 cm long, 6 cm wide and 5 cm high?', a: '24 (4 along, 3 across, 2 layers; not 270 ÷ 8, because the cubes cannot be cut)' },
@@ -146,14 +146,14 @@ module.exports = {
       { q: 'A tank is 60 cm long, 40 cm wide and 50 cm high. A bucket holds 8 ℓ. What is the fewest number of buckets of water needed to fill the tank at least 3/4 full?', a: '12 buckets (3/4 of 120 ℓ = 90 ℓ; 90 ÷ 8 = 11.25, so 11 buckets are not enough)' },
       { q: 'A tank has a base 40 cm by 30 cm. It holds 36 ℓ of water. How deep is the water?', a: '30 cm (36 000 ÷ 1200)' },
       { q: 'A cube-shaped container with 20-cm edges is full of water. All of it is poured into an empty tank with a base 50 cm by 32 cm. How deep is the water in the tank?', a: '5 cm (8000 ÷ 1600)' },
-      { q: 'A cube with 10-cm edges is cut into small cubes with 2-cm edges. How many small cubes are there?', a: '125 (5 × 5 × 5)' }
+      { q: 'A tank with a base 50 cm by 20 cm has water 8 cm deep. Ali pours in 3 ℓ of water. Then he drops in a stone with a volume of 500 cm³, and it sinks. How deep is the water now?', a: '11.5 cm (3 ℓ = 3000 cm³ raises the water 3000 ÷ 1000 = 3 cm to 11 cm; the stone raises it 500 ÷ 1000 = 0.5 cm more).' }
     ],
     challenge: [
       { q: 'A big cube is painted on the outside and cut into small cubes of the same size. 96 small cubes have exactly one painted face. How many small cubes are there altogether?', a: '216 (each face has 96 ÷ 6 = 16 = 4 × 4 one-face cubes, so the cube is 6 cubes along each edge: 6 × 6 × 6)' },
       { q: 'How many different cuboids can be built with exactly 64 one-centimetre cubes, using all of them each time?', a: '7 (1 × 1 × 64, 1 × 2 × 32, 1 × 4 × 16, 1 × 8 × 8, 2 × 2 × 16, 2 × 4 × 8, 4 × 4 × 4)' },
       { q: 'A tank has a base 40 cm by 30 cm. A cube with edges of 10 cm sits on the bottom, and the water is 6 cm deep around it. How much water is in the tank?', a: '6600 cm³ = 6.6 ℓ (40 × 30 × 6 − 10 × 10 × 6 = 7200 − 600; the cube is taller than the water, so only 6 cm of it is under water)' },
       { q: 'Water in a tank is 15 cm deep. When 4 identical bricks are put in, the water rises to 18 cm. 6 more of the same bricks are put in. How deep is the water now? (The bricks stay under water.)', a: '22.5 cm (each brick raises it 3 ÷ 4 = 0.75 cm; 10 bricks raise it 7.5 cm)' },
-      { q: 'A 5 by 5 by 5 cube is built from 1-cm cubes. All the cubes that cannot be seen from outside are taken out, so it is hollow. How many cubes are left?', a: '98 (125 − 3 × 3 × 3)' },
+      { q: 'Make up your own tank puzzle with a stone. Choose the size of the base, the volume of the stone and how the water changes, then give your partner the puzzle. Check your partner\u2019s answer. What if the base were twice as wide: how would the rise change?', a: 'Open-ended. Sample: a tank has a base 25 cm by 20 cm and water 10 cm deep. A stone of 1000 cm³ sinks. How much does the water rise? (1000 ÷ 500 = 2 cm, so the water is 12 cm deep.) If the base were twice as wide (1000 cm²), the rise would be half as much, 1 cm.' },
       { q: 'Bricks measure 2 cm by 3 cm by 4 cm. They are all placed the same way up to build a solid cube. What is the fewest number of bricks needed?', a: '72 (the smallest cube edge is 12 cm, the smallest common multiple of 2, 3 and 4: 6 × 4 × 3 = 72 bricks)' },
       { q: 'Three faces of a cuboid have areas 12 cm², 15 cm² and 20 cm². What is the volume of the cuboid?', a: '60 cm³ (edges 3 cm, 4 cm and 5 cm: 3 × 4 = 12, 3 × 5 = 15, 4 × 5 = 20)' },
       { q: 'A cuboid 3 cm by 4 cm by 5 cm is built from 1-cm cubes and painted on the outside. How many cubes have exactly 2 painted faces? How many have exactly 1?', a: '24 with 2 faces (4 × 1 + 4 × 2 + 4 × 3 along the edges); 22 with 1 face (60 − 8 corners − 24 − 6 inside)' },
@@ -180,6 +180,7 @@ module.exports = {
       ...H.lines(2),
       H.sub('b', 'Which of them can fit inside a box 5 cm long, 5 cm wide and 5 cm high?   ________________'),
       H.q(3, 'A glass tank is 50 cm long, 30 cm wide and 40 cm high. The water in it is 18 cm deep.', { keepNext: true }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> the water is 18 layers of cubes; the bottom layer is 50 by 30. 1000 cm³ = 1 ℓ.'], { after: 20 }),
       H.tbl([4400, 5500], [H.row([H.cell('<div>' + figQ3() + '</div>', 4400, { h: 20 }),
         H.cell(t(L('(a)') + 'How many litres of water are in the tank?<br>' + blank(110) + ' ℓ<br>' + L('(b)') + 'How many more litres are needed to fill it to the top?<br>' + blank(110) + ' ℓ<br>' + L('(c)') + 'Instead, 9 ℓ of water is let out. How deep is the water now?<br>' + blank(110) + ' cm'), 5500, { h: 40 })])]),
 

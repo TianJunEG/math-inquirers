@@ -154,18 +154,18 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Fill in the box: 1/2 = ?/10', a: '5 (1/2 = 5/10)' },
-      { q: 'Which is bigger: 1/6 or 1/9?', a: '1/6 (sixths are bigger pieces than ninths)' },
-      { q: 'Work out 2/9 + 5/9.', a: '7/9' },
-      { q: 'Work out 1 − 3/8.', a: '5/8 (8/8 − 3/8)' },
+      { q: 'A chocolate bar has 10 equal pieces. Ali eats half of the bar. How many pieces is that? Write it as 1/2 = ?/10. (Draw the bar and cut it in two halves if you like.)', a: '5 (1/2 = 5/10)' },
+      { q: 'Two pizzas are the same size. One is cut into 6 equal slices and the other into 9 equal slices. Which pizza has the bigger slices? So which is bigger, 1/6 of a pizza or 1/9 of a pizza?', a: '1/6 (cutting into fewer slices makes bigger slices)' },
+      { q: 'A bar is cut into 9 equal parts. Shade 2 parts. Then shade 5 more parts. What fraction of the bar is shaded now?', a: '7/9 (2/9 + 5/9)' },
+      { q: 'A bar is cut into 8 equal parts and 3 parts are shaded. What fraction of the bar is NOT shaded? (Draw it and count.)', a: '5/8 (8/8 − 3/8)' },
       { q: 'Put these in order, smallest first: 5/12, 1/12, 11/12.', a: '1/12, 5/12, 11/12' },
-      { q: 'Fill in the box: 2/5 = ?/10', a: '4 (2/5 = 4/10)' }
+      { q: 'A bar is cut into 5 equal parts and 2 parts are shaded (2/5). Now cut every part into 2 equal pieces. How many small pieces are shaded now, out of how many pieces? Write it as 2/5 = ?/10.', a: '4 (4 small pieces shaded out of 10: 2/5 = 4/10)' }
     ],
     stretch: [
       { q: 'Which is bigger, 3/5 or 7/10? Show how you know.', a: '7/10 (3/5 = 6/10, and 7/10 is bigger than 6/10)' },
       { q: 'Siti reads 1/4 of a book on Monday and 1/2 of the book on Tuesday. What fraction of the book has she read? What fraction is left?', a: 'She has read 3/4 (1/4 + 2/4). 1/4 is left.' },
       { q: 'Put these in order, smallest first: 2/3, 5/6, 7/12.', a: '7/12, 2/3, 5/6 (7/12, 8/12, 10/12)' },
-      { q: 'Write two fractions equal to 4/6: one with a smaller bottom number and one with a bigger bottom number.', a: '2/3 and 8/12' },
+      { q: 'Write three different fractions that are all equal to 2/3, each with a different bottom number. How do you know they are equal?', a: '4/6, 6/9 and 8/12 are examples (the top and bottom numbers are both multiplied by 2, 3 or 4, so each piece is cut into more, smaller pieces but the shaded amount does not change; the fraction wall shows it).' },
       { q: 'A jug is 5/6 full of water. Ravi pours out 1/2 of the whole jug. What fraction of the jug is still full?', a: '1/3 (5/6 − 3/6 = 2/6 = 1/3)' },
       { q: 'Which fraction with bottom number 8 is exactly halfway between 1/4 and 1/2?', a: '3/8 (1/4 = 2/8 and 1/2 = 4/8)' },
       { q: 'Work out 1/2 + 1/4 + 1/8.', a: '7/8 (4/8 + 2/8 + 1/8)' },
@@ -175,12 +175,12 @@ module.exports = {
       { q: 'Which is bigger, 3/7 or 5/9? Use 1/2 to help you.', a: '5/9. 3/7 is less than 1/2 (half of 7 is 3 and a half) and 5/9 is more than 1/2 (half of 9 is 4 and a half).' },
       { q: 'Which is bigger, 2/5 or 4/9? Hint: make the top numbers the same.', a: '4/9. 2/5 = 4/10, and ninths are bigger pieces than tenths, so 4/9 > 4/10.' },
       { q: 'Use the digits 1, 2, 3 and 6, once each, to make two equal fractions that are each less than 1: ?/? = ?/?. Find both ways.', a: '1/2 = 3/6 and 1/3 = 2/6' },
-      { q: 'A ribbon is cut into equal pieces. Ali takes 1/3 of the ribbon and Ben takes 1/6 of it. Mei takes the rest. Who has the most ribbon?', a: 'Mei. Ali 2/6, Ben 1/6, Mei 6/6 − 3/6 = 3/6 = 1/2.' },
-      { q: 'Find all the fractions with bottom number 12 that are bigger than 2/3 but smaller than 1.', a: '9/12, 10/12 and 11/12 (2/3 = 8/12)' },
-      { q: 'I am a fraction equal to 3/4. My top number and my bottom number add up to 14. What fraction am I?', a: '6/8 (3 + 4 = 7, and 14 is double 7, so double the top and the bottom)' },
+      { q: 'Two fractions both have 12 as the bottom number. Together they make 5/6. One of them is 1/6 more than the other. What are the two fractions?', a: '6/12 (= 1/2) and 4/12 (= 1/3). 5/6 = 10/12 and 1/6 = 2/12. Take away the extra 2/12: 8/12 shared between two equal parts is 4/12 each; the bigger one is 4/12 + 2/12 = 6/12.' },
       { q: 'A fraction is equal to 2/3. Its bottom number is 4 more than its top number. What is the fraction?', a: '8/12 (in 2/3 the bottom is 1 more than the top; 4 times as much: 8/12)' },
+      { q: 'I am a fraction equal to 3/4. My top number and my bottom number add up to 14. What fraction am I?', a: '6/8 (3 + 4 = 7, and 14 is double 7, so double the top and the bottom)' },
+      { q: 'Make up your own "What fraction am I?" riddle, like: "I am equal to 3/4. My top and bottom numbers add up to ___." Choose the number so that exactly ONE fraction fits. Check it, then swap with a partner. Is your riddle always going to work for any number you choose? Explain.', a: 'Answers vary. Check that the fraction is equal to the given one and that the clue fits only one fraction. Example: "I am equal to 3/4. My top and bottom numbers add up to 21." Fractions equal to 3/4 are 3/4, 6/8, 9/12, 12/16 …, with sums 7, 14, 21, 28 …, so only 9/12 fits. The riddle only works if the number is in the 7 times table (7, 14, 21, 28 …).' },
       { q: 'Fill one whole bar using exactly 5 pieces. You may use 1/2, 1/4 and 1/8 pieces, as many of each as you like. Find all the ways.', a: '2 ways: 1/2 + 1/8 + 1/8 + 1/8 + 1/8, and 1/4 + 1/4 + 1/4 + 1/8 + 1/8.' },
-      { q: 'Siti and Ravi each have the same size bottle of juice. Siti drinks 2/3 of her bottle. Ravi drinks 7/12 of his. Who drinks more? How much more?', a: 'Siti, by 1/12 of a bottle (2/3 = 8/12, and 8/12 − 7/12 = 1/12).' }
+      { q: 'Find a fraction that is bigger than 2/3 but smaller than 3/4. Hint: the fraction wall has no row that helps, so cut every part into smaller equal parts. Can you find another one?', a: '17/24 (2/3 = 16/24 and 3/4 = 18/24). Another: 25/36 (2/3 = 24/36, 3/4 = 27/36). Many answers are possible: cut the parts smaller and smaller.' }
     ]
   },
 
@@ -220,7 +220,7 @@ module.exports = {
     W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
     W.push(...H.lines(1));
-    W.push(H.q(7, ['Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '.'], { keepNext: true, after: 60 }));
+    W.push(H.q(7, ['★ (if time) Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '. Hint: look at the twelfths row of your wall.'], { keepNext: true, after: 60 }));
     W.push(H.sub('a', ['______________________     (b)  Which one is equal to ', fr(2, 3), '?   ________']));
     return W;
   }

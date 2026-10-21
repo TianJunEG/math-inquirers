@@ -78,12 +78,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'A baker made some buns. She sold 2/5 of them in the morning and 1/3 of the remaining buns in the afternoon. She had 120 buns left. How many buns did she make?', a: '300 (left = 2/3 of 3/5 = 2/5 of all the buns; 2/5 = 120, so 1/5 = 60). She sold 60 in the afternoon.' },
-      { q: 'Ben is 10 years old and his father is 38. In how many years will Ben’s age be 1/2 of his father’s age?', a: '18 years (the difference, 28, is 1 unit; Ben will be 28 and his father 56)' },
+      { q: 'Ali has 18 counters and Mei has 6 counters. Ali gives Mei 4 counters. How many counters does each child have now? What is the total before, and what is the total after? (Use counters or draw dots.)', a: 'Ali 14, Mei 10. The total is 24 before and 24 after.' },
+      { q: 'Ben is 10 years old and his father is 38. How old will each of them be in 5 years? How many years older than Ben is his father now? And in 5 years?', a: 'Ben 15 and his father 43. The father is 28 years older now, and 28 years older in 5 years (the difference stays the same).' },
       { q: 'Siti had $60. She spent 1/4 of it on a book and 1/3 of the remainder on a T-shirt. How much money did she have left?', a: '$30 (book $15, remainder $45, T-shirt $15)' },
       { q: 'Ali had 26 stamps and Ravi had 34. How many stamps must Ravi give Ali so that they have the same number?', a: '4 (the total is 60, so 30 each)' },
       { q: 'There are 40 pupils in a hall. 3/8 of them are boys. How many more girls than boys are there?', a: '10 (15 boys and 25 girls)' },
-      { q: 'Mei and Siti had the same amount of money. Mei spent $18 and Siti spent $42. Then Siti had 1/3 as much money as Mei. How much did each of them have at first?', a: '$54 (after: the difference $24 is 2 units, so 1 unit = $12; Siti $12 + $42 = $54; Mei $36 + $18 = $54)' }
+      { q: 'A jar has 24 red beads and 12 blue beads. What fraction of the beads are blue? Then 12 more red beads are put in. What fraction of the beads are blue now? Which colour did not change?', a: '12 out of 36 = 1/3 blue; after the red beads are added, 12 out of 48 = 1/4 blue. The blue beads did not change.' }
     ],
     stretch: [
       { q: 'Ravi spent 1/4 of his money on Monday and 2/5 of the remainder on Tuesday. He spent $66 altogether. How much money did he have at first?', a: '$120 (20 units: Monday 5 units, Tuesday 6 units; 11 units = $66, so 1 unit = $6)' },
@@ -96,8 +96,8 @@ module.exports = {
       { q: 'Ravi had $45 and Ben had $15. Their aunt gave each of them the same amount of money. Then Ben had 1/2 as much as Ravi. How much did the aunt give each boy?', a: '$15 (the difference, $30, is 1 unit; Ben $30, Ravi $60)' }
     ],
     challenge: [
-      { q: 'Ali, Ben and Mei shared $180. Ali took 1/3 of the money, Ben took 1/4 of what was left and Mei took the rest. How much more did Mei get than Ali?', a: '$30 (Ali $60, Ben $30, Mei $90)' },
-      { q: 'Mei had some money. She spent $12, then spent 1/2 of what was left, then spent $8. She had $10 left. How much did she have at first?', a: '$48 (work backwards: 10 + 8 = 18; 18 × 2 = 36; 36 + 12 = 48)' },
+      { q: 'Make up your own before-and-after story in which the total stays the same and a fraction is used in the After (like “Ali has 1/2 as many as Ben”). Solve it with a model, swap with a partner and check each other. What if the fraction in your story were changed?', a: 'Open-ended. Sample: Ali and Ben have 108 stickers altogether. Ali gives Ben 24 stickers. Then Ali has 1/2 as many stickers as Ben. How many did Ali have at first? (After: 3 units = 108, Ali 36, Ben 72; Ali had 36 + 24 = 60, Ben 48.) Check that the total is the same in both models and that every unit is the same size.' },
+      { q: 'Ali has 18 counters and Mei has 6. Ali may give Mei some counters (he can give none, or up to all 18). After the giving, one child has exactly 2, 3, 4 … times as many counters as the other (the two numbers are not equal). List ALL the ways. How do you know you have them all?', a: 'Eight ways (Ali, Mei): 18 and 6 (Ali gives none), 16 and 8, 8 and 16, 6 and 18, 4 and 20, 3 and 21, 2 and 22, 1 and 23. The total stays 24, so the smaller number must go into 24 exactly and be less than 12: 1, 2, 3, 4, 6 or 8. (12 and 12 is equal, so it does not count.)' },
       { q: 'A father and his son are 50 years old altogether. In 5 years, the son’s age will be 1/3 of the father’s age. How old is the son now?', a: '10 (in 5 years the total is 60 = 4 units, the son is 15)' },
       { q: 'Ali had 3/5 as many cards as Ben. After Ben gave Ali 20 cards, they had the same number. How many cards did they have altogether?', a: '160 (Ali 3 units, Ben 5 units; same means 4 units each, so Ben gave 1 unit = 20; 8 units = 160)' },
       { q: 'In a basket, 1/3 of the fruits were apples. 10 apples were eaten and 10 pears were put in. Now 1/6 of the fruits are apples. How many fruits are in the basket?', a: '60 (the total did not change; 1/3 − 1/6 = 1/6 of the fruits is 10)' },
@@ -112,6 +112,7 @@ module.exports = {
     H.p('Draw a model for every question. First ask: what stays the same?', { after: 40 }),
     H.q(1, 'Ravi had some money. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. He had $36 left.', { before: 40, keepNext: true }),
     H.fig(raviBar()),
+    H.p(['<b style="color:' + TEAL + '">Start here:</b> guess that Ravi had $60 at first. Work out the book, the pen and what is left. Is that too much or too little compared with $36?'], { after: 20 }),
     H.sub('a', 'What fraction of his money did he spend on the pen?   ____________'),
     H.sub('b', 'How much money did Ravi have at first?'), H.ans(),
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
@@ -124,6 +125,7 @@ module.exports = {
     H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
 
     H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
+    H.p(['<b style="color:' + TEAL + '">Start here:</b> try a gift of $10 each. How much does each boy have now? Is Ali’s money 2/3 of Ravi’s? Is the gift too big or too small?'], { after: 20 }),
     H.sub('a', 'What stays the same: the total or the difference? How much is it?'), H.ans(),
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
     H.q(5, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),

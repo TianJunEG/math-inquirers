@@ -143,14 +143,14 @@ const qbank = {
     { q: 'A pattern goes square, circle, circle, square, circle, circle … Mei draws 20 shapes. How many squares does she draw?', a: '7 squares (in places 1, 4, 7, 10, 13, 16, 19). 18 shapes is 6 groups with 6 squares, and place 19 is one more square.' }
   ],
   challenge: [
-    { q: 'Ali writes 1, 2, 3, 4, 1, 2, 3, 4 … What is the total of the first 20 numbers?', a: '50. 20 numbers is 5 groups, and each group adds up to 10.' },
+    { q: 'Light A flashes every 3 seconds. Light B flashes every 5 seconds. They flash together at the start. In the next 30 seconds, when do they flash together?', a: 'At 15 seconds and at 30 seconds (numbers in both the 3 and 5 times tables).' },
     { q: 'Houses are made of sticks in a row: 1 house uses 5 sticks, 2 houses use 9, 3 houses use 13. Ben has 40 sticks. What is the most houses he can make? How many sticks are left over?', a: '9 houses use 37 sticks, with 3 left over (10 houses would need 41).' },
     { q: 'A frog starts at 1 and jumps 4 each time: 1, 5, 9, 13 … Will it land on 37? Will it land on 30? Explain.', a: 'It lands on 37 but not on 30. The frog lands on numbers 1 more than the 4 times table: 36 + 1 = 37, but 30 is not 1 more than a 4 times table number (it lands on 29 and 33).' },
     { q: 'A pattern repeats every 5 shapes. In each group, only the 3rd shape is a star. Which of these places have a star: 13, 23, 30, 48?', a: '13, 23 and 48. Stars are 2 more than the 5 times table: 13 = 10 + 3, 23 = 20 + 3, 48 = 45 + 3. 30 ends a group, so it is the 5th shape.' },
-    { q: 'Light A flashes every 3 seconds. Light B flashes every 5 seconds. They flash together at the start. In the next 30 seconds, when do they flash together?', a: 'At 15 seconds and at 30 seconds (numbers in both the 3 and 5 times tables).' },
+    { q: 'Make up your own repeating pattern of 4 shapes. Write 3 “far place” questions about it for a partner (one place in the 40s), with the answers. Then change your pattern so it repeats every 5 shapes. Which of your answers change? Which stay the same?', a: 'Open. Example: square, circle, circle, triangle. Place 41 is a square (40 ends a group), place 46 is a circle, place 48 is a triangle. With a group of 5 the answers change, except for places that are in both the 4 and the 5 times tables (20 and 40 are still the end of a group, but the last shape of the new pattern may be different).' },
     { q: 'A pattern goes triangle, square, circle, circle, circle, triangle, square, circle, circle, circle … How many circles are in the first 42 shapes?', a: '24 circles. 40 shapes is 8 groups with 3 circles each (24); places 41 and 42 are a triangle and a square.' },
-    { q: 'Mei counts in 4s from 4. Ben counts in 5s from 5. Which is bigger: Mei’s 10th number or Ben’s 8th number?', a: 'Neither: they are the same. Mei’s 10th number is 40 and Ben’s 8th number is 40.' },
-    { q: 'Siti builds towers of cubes. Tower 1 has 2 cubes, tower 2 has 5 cubes, tower 3 has 8 cubes. The towers keep growing in the same way. Which tower has 29 cubes?', a: 'Tower 10. The rule is add 3: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29.' },
+    { q: 'Ali counts in 3s from 3. Mei counts in 4s from 4. They both say 12. Predict the next number they will BOTH say. Then list every number up to 100 that they both say. What do you notice? Why?', a: '24 is next. They both say 12, 24, 36, 48, 60, 72, 84 and 96 (8 numbers): the numbers go up by 12 each time, because 12 is the first number in both the 3 and 4 times tables, and each next one is 12 more.' },
+    { q: 'Siti builds towers of cubes. Tower 1 has 2 cubes, tower 2 has 5 cubes, tower 3 has 8 cubes. The towers keep growing in the same way. Which tower has 29 cubes? Is there a tower with exactly 50 cubes? With exactly 100 cubes? Explain how you know.', a: 'Tower 10 has 29 cubes (the rule is add 3: 2, 5, 8, 11, … 29). Tower 17 has 50 cubes. No tower has 100: every tower has 1 less than a number in the 3 times table (tower 10: 30 − 1 = 29), and 101 is not in the 3 times table (99 and 102 are).' },
     { q: 'Frog A starts at 0 and jumps 4 each time: 4, 8, 12 … Frog B starts at 2 and jumps 3 each time: 5, 8, 11 … Which numbers up to 30 do both frogs land on?', a: '8 and 20. Frog A: 4, 8, 12, 16, 20, 24, 28. Frog B: 5, 8, 11, 14, 17, 20, 23, 26, 29.' }
   ]
 };
@@ -170,7 +170,7 @@ const workbook = H => {
   out.push(H.sub('a', 'What is the 18th letter?   ______        (b)  Where is the 10th letter H?   place ______'));
   out.push(H.sub('c', 'Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.'));
   out.push(...H.lines(1));
-  out.push(H.q(3, 'Challenge! Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … She uses 12 red beads. The string ends with 3 yellow beads.', { keepNext: true }));
+  out.push(H.q(3, 'Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … She uses 12 red beads. The string ends with 3 yellow beads. Tip: draw the string in groups, or thread beads on a pencil with counters.', { keepNext: true }));
   out.push(H.fig(beadFig()));
   out.push(H.sub('a', 'How many yellow beads?   ______        (b)  How many beads altogether?   ______'));
   // ---- page 2 (on your own)

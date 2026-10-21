@@ -22,7 +22,7 @@ module.exports = {
         ['Q3', 'Frog 1 lands on 4, 8, 12, 16, 20. Frog 2 lands on 5, 10, 15, 20. Both: 20.'],
         ['Q4', '(a) 10, 20, 30, 40, 50  (b) They all end in 0. We say them when we count in 10s.'],
         ['Q5', 'Stickers: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. (a) Box 10 has 29. (b) Even, odd, even, odd: they alternate.'],
-        ['Stretch slide', '1) Yes to 39, no to 40  2) 6  3) Add 4; the 1st number is 3']
+        ['Stretch slide', '1) Yes to 39, no to 40  2) 22 does not belong; it should be 20  3) Add 4; the 1st number is 3']
       ]
     },
     {
@@ -88,7 +88,7 @@ module.exports = {
         ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
         ['Q3', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
         ['Q4', '7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.'],
-        ['Stretch slide', '1) circle  2) 6 squares and 1 stick left over  3) 9 Bs']
+        ['Stretch slide', '1) circle  2) 9 Bs  3) Yes: count in 5s, 25 ends a core, like the 5th']
       ]
     },
     {
@@ -108,9 +108,9 @@ module.exports = {
         ['Q1', '(a) 7  (b) 12  (c) 8 (undo in reverse order: 10 + 2 = 12, then 12 \u2212 4 = 8)'],
         ['Q2', '(a) 15 and 8  (b) Add 4. IN 15 gives OUT 19. OUT 30 comes from IN 26.'],
         ['Q3', '(a) Mei 13  (b) Ben 7  (c) Mei has 6 more than Ben  (d) 28 altogether'],
-        ['Q4', '(a) 13 children (20 − 7)  (b) 15 children (8 + 8 − 1, Ali is counted twice)'],
+        ['Q4', '(a) 13 children (20 − 7)  (b) 5 children (3 + 3 − 1, Ali is counted twice). Talk time: 8th from both ends is 15.'],
         ['Q5', 'Open: check that the story has a clear answer.'],
-        ['Stretch slide', '1) Ben 8, Ali 12  2) 15  3) 10']
+        ['Stretch slide', '1) 10 children  2) 7 sweets  3) 11']
       ]
     },
     {
@@ -124,7 +124,7 @@ module.exports = {
       mini: 'Start with the biggest coin and work down. Use a table: how many 20¢, 10¢, 5¢. Show why we know when we have them all.',
       share: 'Why can’t 35¢ be made with only two coins?',
       exit: { q: 'Make 40¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', a: '20¢ + 10¢ + 10¢.' },
-      mistakes: ['Listing the same way twice in a different order (10+5+5 and 5+10+5).', 'Choosing many small coins instead of looking for the fewest.', 'Stopping at the first set in Think Harder T2 instead of checking for all of them.'],
+      mistakes: ['Listing the same way twice in a different order (10+5+5 and 5+10+5).', 'Choosing many small coins instead of looking for the fewest.', 'Stopping at the first set in Think Harder T1 instead of checking for all of them.'],
       extension: 'Make 50¢ in as many ways as possible using 5¢, 10¢, 20¢ and 50¢.',
       key: [
         ['Q1', 'A: one 20¢.  B: two 10¢.  C: one 10¢ and two 5¢.  D: four 5¢.  Row E is spare (only 4 ways).  (a) one 20¢ coin  (b) four 5¢ coins  (c) Start with the biggest coin and work down.'],
@@ -132,8 +132,8 @@ module.exports = {
         ['Q3', '(a) 4 coins: 50¢ + 20¢ + 10¢ + 5¢.  (b) e.g. 50¢ + 10¢ + 10¢ + 5¢ + 5¢ + 5¢, or 20¢ + 20¢ + 20¢ + 10¢ + 10¢ + 5¢.'],
         ['Q4', 'No. Two coins can total 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.'],
         ['Q5', '(a) $10 + $5 + $2 (3 pieces).  (b) Any 3 ways, e.g. $10 + $10; $10 + $5 + $5; $5 + $5 + $5 + $5; $10 + $5 + $2 + $2 + $1. There is no $20 note.  (c) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
-        ['Think Harder T2, T3', 'T2: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T3: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.'],
-        ['Stretch slide', '1) 9 ways  2) Three 10¢ and three 5¢  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
+        ['Think Harder T1 to T4', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 4 ways (20+5; 10+10+5; 10+5+5+5; five 5¢).'],
+        ['Stretch slide', '1) 9 ways  2) $10 + $1 + $1 and $5 + $5 + $2  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
       ]
     },
     {
@@ -147,16 +147,16 @@ module.exports = {
       mini: 'Count squares in grids by size, smallest first (a 2 by 2 grid, then a 3 by 3 grid). Rectangles in strips and shapes made from 3 squares are for early finishers. Before the worksheet: count shapes in a picture one kind at a time, mark a starting dot when counting sides, cross out shapes for riddles, count triangles small first.',
       share: 'How many triangles are in a square with both diagonals drawn (lines joining opposite corners)? How do you make sure you do not miss any?',
       exit: { q: 'How many squares are in a 3 by 3 grid? (3 squares long and 3 squares high)', a: '14 (9 small + 4 made of 4 small ones + 1 made of all 9)' },
-      mistakes: ['Counting only the small triangles in Q4 picture C (4 instead of 8): look for bigger triangles made of 2 small ones.', 'Counting a square window in both the Square and the Rectangle columns in Q1.', 'Thinking a turned or flipped shape is a new one.', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has a straight side (it has 0 straight sides).'],
+      mistakes: ['Counting only the small triangles in the talk-time picture (4 instead of 8): look for bigger triangles made of 2 small ones.', 'Counting a square window in both the Square and the Rectangle columns in Q1.', 'Thinking a turned or flipped shape is a new one.', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has a straight side (it has 0 straight sides).'],
       extension: 'How many squares in a grid 4 long and 2 high? (8 + 3 = 11) Then 4 long and 3 high? (12 + 6 + 2 = 20)',
       key: [
         ['Q1', 'Circle 1, triangle 2, square 3, rectangle 2. (a) Squares. (b) 8 shapes.'],
         ['Q2', 'Straight sides and corners: circle 0 and 0, triangle 3 and 3, square 4 and 4, pentagon 5 and 5, hexagon 6 and 6, octagon 8 and 8. The number of straight sides equals the number of corners. 7 sides means 7 corners.'],
         ['Q3', '(a) square  (b) circle  (c) hexagon'],
-        ['Q4', 'A: 3  B: 2  C: 8 (4 small + 4 made of two small ones)'],
+        ['Q4', 'A: 3  B: 2. (The square with both diagonals, 8 triangles, is the talk-time question: 4 small + 4 made of two small ones.)'],
         ['Q5', 'Accept any correct shape with its name: rectangle, square, bigger triangle or parallelogram.'],
         ['Q6', '5 squares (4 small + 1 big)'],
-        ['Stretch slide', '1) 8  2) 9  3) 5 shapes']
+        ['Stretch slide', '1) 6  2) 9  3) Yes to both: the square again, and one big triangle with a long side twice as long']
       ]
     },
     {
@@ -202,7 +202,7 @@ module.exports = {
         ['Q4', '(a) 10 erasers  (b) 6 clips'],
         ['Q5', 'Ali 11 cubes, Ben 6 cubes. All three together: 25 cubes.'],
         ['Q6', '(a) 12 cm  (b) 5 cm (8 − 3)  (c) Open: check the child started at the 0 mark and compared with 10 cm.'],
-        ['Stretch slide', '1) 8 cm  2) 24 erasers  3) 5 cubes each and 2 cuts']
+        ['Stretch slide', '1) 5 cubes each and 2 cuts  2) Ben: six clips of 2 cubes is 12 cubes  3) The 11 cm mark']
       ]
     },
     {
@@ -229,13 +229,13 @@ module.exports = {
         ['Q2', '5 and 7 (5 + 7 = 12 and 7 − 5 = 2)'],
         ['Q3', '(a) 2 more cats than birds  (b) 19 pets  (c) Cat and fish (7 + 3 = 10)'],
         ['Q4', '(a) 50¢  (b) 20¢ + 10¢ + 5¢'],
-        ['Q5', '(a) square  (b) 6 triangles'],
+        ['Q5', '(a) square  (b) 3 triangles'],
         ['Q6', 'Mei is youngest, Ali is oldest.'],
         ['Q7', '5 (5 + 9 = 14, 14 − 4 = 10)'],
         ['Q8', 'Pen 10 cubes. End to end 16 cubes.'],
         ['Q9', 'Open. Done at talk time: swap puzzles with a partner and solve each other\u2019s.'],
         ['Puzzle cards', 'Coins: 20¢ + 20¢ + 5¢.  Patterns: 32.  Logic: Mei, Ben, Sam, Ali.  Measuring: 16 cubes.'],
-        ['Stretch slide', '1) 6 bigger  2) 49  3) Two sets: 20¢ + 10¢ + 10¢ + 10¢ + 10¢, and 20¢ + 20¢ + 10¢ + 5¢ + 5¢']
+        ['Stretch slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
       ]
     }
   ]

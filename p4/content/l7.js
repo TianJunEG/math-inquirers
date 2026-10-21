@@ -118,12 +118,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find the area of a rectangle 9 cm long and 7 cm wide.', a: '63 cm²' },
-      { q: 'Find the perimeter of a rectangle 15 cm long and 4 cm wide.', a: '38 cm' },
-      { q: 'A square has a perimeter of 36 cm. Find its area.', a: '81 cm² (each side is 9 cm).' },
-      { q: 'A rectangle has an area of 56 cm². Its length is 8 cm. Find its perimeter.', a: '30 cm (the breadth is 7 cm; 8 + 7 + 8 + 7 = 30).' },
-      { q: 'A figure is made of a 6 cm by 4 cm rectangle and a 3 cm by 2 cm rectangle joined together without overlapping. Find its area.', a: '24 + 6 = 30 cm²' },
-      { q: 'A 4 cm by 4 cm square is cut from one corner of a 10 cm by 10 cm square. Find the area left. Has the perimeter changed?', a: '100 − 16 = 84 cm². The perimeter has not changed: it is still 40 cm.' }
+      { q: 'Draw a rectangle 9 cm long and 7 cm wide on squared paper (1 cm squares). How many squares are inside it? That is its area in cm².', a: '63 cm² (7 rows of 9 squares).' },
+      { q: 'A rectangle is 15 cm long and 4 cm wide. Walk your finger once round the edge, adding the sides as you go. How long is the way round (the perimeter)?', a: '38 cm (15 + 4 + 15 + 4).' },
+      { q: 'Use 12 square tiles (each 1 cm by 1 cm). Make a rectangle using all of the tiles. Write its length and breadth. Can you make a different rectangle with the 12 tiles? Draw each one.', a: '1 by 12, 2 by 6 and 3 by 4 (a 6 by 2 is the same rectangle turned round).' },
+      { q: 'A rectangle has an area of 56 cm². Its length is 8 cm. Find its perimeter. (Draw 8 squares in a row and add rows until you have 56 squares.)', a: '30 cm (the breadth is 7 cm; 8 + 7 + 8 + 7 = 30).' },
+      { q: 'A figure is made of a 6 cm by 4 cm rectangle and a 3 cm by 2 cm rectangle joined together without overlapping. Draw it on squared paper. Find its area.', a: '24 + 6 = 30 cm²' },
+      { q: 'On squared paper draw a 6 cm by 6 cm square. Cut a 2 cm by 2 cm square from one corner. How many squares are left (the area)? Walk round the edge of the new shape: is the perimeter more than, less than, or the same as the perimeter of the 6 cm by 6 cm square?', a: 'Area 36 − 4 = 32 cm². The perimeter is the same: 24 cm.' }
     ],
     stretch: [
       { q: 'List every rectangle with whole-cm sides and an area of 30 cm². Which one has the smallest perimeter?', a: '1 by 30 (62 cm), 2 by 15 (34 cm), 3 by 10 (26 cm), 5 by 6 (22 cm). Smallest: 5 cm by 6 cm, 22 cm.' },
@@ -138,11 +138,11 @@ module.exports = {
     challenge: [
       { q: 'A square is cut into two identical rectangles. Each rectangle has a perimeter of 24 cm. Find the area of the square.', a: '64 cm². Each rectangle is one whole side and one half side all round, which is 3 sides of the square. 24 ÷ 3 = 8 cm, and 8 × 8 = 64.' },
       { q: 'A gap is cut into the middle of the top side of a 10 cm by 6 cm rectangle. The gap is 2 cm wide and 4 cm deep, with square corners. Find the area and the perimeter of the shape that is left.', a: 'Area 60 − 8 = 52 cm². Perimeter 32 + 4 + 4 = 40 cm: the two 4 cm sides inside the gap cannot be pushed out.' },
-      { q: 'Ravi has 24 m of fencing to make a rectangular pen with whole-metre sides. What is the largest area he can fence?', a: '36 m², a 6 m by 6 m square.' },
-      { q: 'Ravi uses the same 24 m of fencing, but now one side of the pen is a wall and needs no fence. What is the largest area now?', a: '72 m²: the two sides from the wall are 6 m and the side opposite the wall is 12 m (6 + 12 + 6 = 24).' },
+      { q: 'Ravi has 24 m of fencing to make a rectangular pen with whole-metre sides. (a) What is the largest area he can fence? (b) Now one side of the pen is a wall and needs no fence. What is the largest area now?', a: '(a) 36 m², a 6 m by 6 m square. (b) 72 m²: the two sides from the wall are 6 m and the side opposite the wall is 12 m (6 + 12 + 6 = 24).' },
       { q: 'Two 8 cm by 2 cm rectangles cross at their middles to make a plus shape. Find the area and the perimeter of the plus shape.', a: 'Area 16 + 16 − 4 = 28 cm² (the 2 by 2 middle is counted once). Perimeter 32 cm: each of the 4 arms is 3 cm long, so each arm adds 3 + 2 + 3 = 8 cm.' },
-      { q: 'Siti’s garden is a square with an area of 49 m². She makes it 2 m longer and 2 m wider. How much more area does it have now?', a: '32 m². The sides go from 7 m to 9 m, and 81 − 49 = 32.' },
+      { q: 'Siti’s garden is a square with an area of 49 m². She makes it 1 m longer and 1 m wider. How much bigger is the area? Then try 2 m longer and wider, and 3 m. Write what you notice.', a: '+1 m: 64 − 49 = 15 m². +2 m: 81 − 49 = 32 m². +3 m: 100 − 49 = 51 m². Each time the new area is two strips of 7 m by the extra width, plus a small square in the corner: 14 × 1 + 1 × 1, 14 × 2 + 2 × 2, 14 × 3 + 3 × 3. The gains 15, 32, 51 grow faster each time.' },
       { q: 'Mei makes a rectangle with 36 square tiles (each 1 cm by 1 cm). Ben makes a different rectangle with 36 tiles. Ben’s perimeter is 16 cm longer than Mei’s. What are the two rectangles?', a: 'Mei 6 cm by 6 cm (24 cm), Ben 2 cm by 18 cm (40 cm). The perimeters for 36 are 74, 40, 30, 26 and 24; only 40 and 24 differ by 16.' },
+      { q: 'Make up your own fencing puzzle like Ravi’s: choose a length of fence (a whole number of metres, more than 20) and say whether one side is a wall. Find the largest area the pen can have, and prove it by listing every whole-metre pen. Swap puzzles with a partner and check each other’s lists.', a: 'Puzzles will vary: check that every whole-metre pen is listed. Model: 30 m of fence, no wall: the sides add to 15, and 7 m by 8 m gives the largest area, 56 m². With a wall on one side: 7 m, 16 m, 7 m (or 8 m, 14 m, 8 m) both give the largest area, 112 m².' },
       { q: 'A garden is 10 m long and 8 m wide. Two paths 1 m wide cross it: one goes along its length and one goes across its width. What area of the garden is NOT path?', a: '63 m². Slide the paths to the edges: the grass makes a 9 m by 7 m rectangle. (Or 80 − 10 − 8 + 1 = 63, because the square where the paths cross was counted twice.)' },
       { q: 'A rectangle 9 cm long and 4 cm wide is cut into 2 pieces. The pieces fit together exactly to make a square. How long is a side of the square? Did the perimeter go up or down?', a: 'Area 36 cm², so the side is 6 cm. The perimeter went down from 26 cm to 24 cm.' }
     ]

@@ -118,11 +118,11 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Find the perimeter of a rectangle 9 cm long and 4 cm wide.', a: '26 cm (9 + 4 + 9 + 4)' },
-      { q: 'Find the area of a rectangle 7 cm long and 6 cm wide.', a: '42 cm²' },
-      { q: 'A square has a perimeter of 32 cm. How long is each side?', a: '8 cm (32 ÷ 4)' },
-      { q: 'A square has an area of 36 cm². What is its perimeter?', a: 'Each side is 6 cm (6 × 6 = 36), so the perimeter is 24 cm.' },
-      { q: 'A rectangle has an area of 40 cm². Its length is 8 cm. Find its breadth and its perimeter.', a: 'Breadth 5 cm (8 × 5 = 40). Perimeter 26 cm.' },
+      { q: 'A rectangle is 9 cm long and 4 cm wide. Walk all the way round its edge: how far is that? (This distance is called the perimeter.) Draw it on squared paper if you like.', a: '26 cm (9 + 4 + 9 + 4)' },
+      { q: 'Cover a rectangle 7 cm long and 6 cm wide with squares that are 1 cm by 1 cm. There are 6 rows with 7 squares in each row. How many squares cover it? (The number of squares is the area, in cm².)', a: '42 cm² (6 rows of 7)' },
+      { q: 'A square has 4 equal sides. The distance all the way round it is 32 cm. How long is each side?', a: '8 cm (32 ÷ 4)' },
+      { q: 'A square floor is covered with 36 small squares (1 cm by 1 cm), with the same number of squares in each row and each column. How many squares are there along one side? How far is it all the way round the edge?', a: '6 squares along one side (6 × 6 = 36), so the distance round is 6 + 6 + 6 + 6 = 24 cm.' },
+      { q: 'A rectangle is covered by 40 small squares (1 cm by 1 cm), with 8 squares in each row. How many rows are there? How far is it all the way round the edge?', a: '5 rows (8 × 5 = 40). The distance round is 8 + 5 + 8 + 5 = 26 cm.' },
       { q: 'A figure is made of 7 squares, each 1 cm by 1 cm. What is its area? Can you say its perimeter without seeing it?', a: 'Area 7 cm². No: the perimeter depends on how the squares are joined (it can be 12, 14 or 16 cm).' }
     ],
     stretch: [
@@ -136,13 +136,13 @@ module.exports = {
       { q: 'Use exactly 6 squares (each 1 cm by 1 cm), whole sides touching. Draw a figure with a perimeter of 10 cm and one with a perimeter of 14 cm. What is the biggest perimeter possible?', a: '10 cm: only the 2 by 3 rectangle. 14 cm: any shape with no 2 by 2 block, e.g. a row of 6. 14 cm is the biggest: 6 squares have 24 sides, they need at least 5 touches to join, and each touch hides 2 sides (24 − 10 = 14).' }
     ],
     challenge: [
-      { q: 'Find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area?', a: '11 by 1, 10 by 2, 9 by 3, 8 by 4, 7 by 5, 6 by 6: 6 rectangles. The 6 cm by 6 cm square has the biggest area, 36 cm².' },
+      { q: 'List every rectangle with whole-cm sides and a perimeter of 24 cm, with its area, in a table. What do you notice as the rectangle gets closer to a square? Use what you notice to predict the biggest area for a perimeter of 40 cm, then check.', a: '11 by 1 (11 cm²), 10 by 2 (20), 9 by 3 (27), 8 by 4 (32), 7 by 5 (35), 6 by 6 (36). The area grows as the sides get closer to each other, and the square has the biggest area. For 40 cm the square is 10 by 10, area 100 cm² (the next best, 11 by 9, is 99 cm²).' },
       { q: 'A rectangle is made of 2 same-size squares side by side. Its perimeter is 36 cm. What is its area?', a: 'The perimeter is 6 sides of a small square, so each side is 6 cm. Area 2 × 36 = 72 cm².' },
       { q: 'A rectangle 6 cm by 4 cm is cut into two rectangles with one straight cut that is parallel to one side. Find the total perimeter of the two pieces. Is there more than one answer?', a: 'Yes, two answers. A cut parallel to the 4 cm sides is 4 cm long: 20 + 4 + 4 = 28 cm. A cut parallel to the 6 cm sides is 6 cm long: 20 + 6 + 6 = 32 cm.' },
       { q: 'A square has a perimeter of 20 cm. Four of these squares are put together to make one big square. What is the perimeter of the big square?', a: 'Small side 5 cm, big side 10 cm, perimeter 40 cm.' },
-      { q: 'Each small square is 1 cm by 1 cm. Draw a figure of 7 squares with a perimeter of 12 cm, and another with a perimeter of 16 cm.', a: 'For example: a 2 by 4 rectangle with one corner square missing (12 cm); a row of 7 squares (16 cm).' },
-      { q: 'The area of a rectangle is 36 cm². Its length is 4 times its breadth. Find its perimeter.', a: 'Try breadths: 1 and 4 (area 4), 2 and 8 (16), 3 and 12 (36). So 12 cm by 3 cm, perimeter 30 cm.' },
-      { q: 'A rectangle is made of 3 same-size squares in a row. Its perimeter is 32 cm. What is its area?', a: 'The perimeter is 8 sides of a small square, so each side is 32 ÷ 8 = 4 cm. Area 3 × 16 = 48 cm².' },
+      { q: 'A rectangle is 10 m long and 8 m wide. A 4 m by 3 m rectangle is cut out of one corner. Find the area and the perimeter that are left. Then cut the same 4 m by 3 m rectangle out of the MIDDLE of one long side instead. Find the new area and perimeter. What stays the same and what changes?', a: 'Corner cut: area 80 − 12 = 68 m², perimeter 36 m (the same as the 10 by 8 rectangle: push the corner out). Notch in the middle of a long side: area 68 m² and perimeter 36 + 3 + 3 = 42 m (take away 4 m of edge and add 4 + 3 + 3). The area is the same in both, but the perimeter is different.' },
+      { q: 'A square with sides of 8 cm is cut into four same-size squares. The four small squares are put in a row, touching whole sides. Find the perimeter of the row. Then compare with the perimeter of the big square and with the area of each shape. What stays the same and what changes?', a: 'Each small square has sides of 4 cm. The row is 16 cm by 4 cm, so its perimeter is 40 cm. The 8 cm square has a perimeter of 32 cm. The area is 64 cm² for both. The area stays the same but the perimeter goes up when the pieces are spread out.' },
+      { q: 'Make up your own rectangle puzzle. Choose a rectangle with whole-cm sides, then give a partner only TWO clues about it (for example its area and its perimeter). Check that only ONE rectangle fits both clues. Which two clues did you choose, and why do they work?', a: 'Answers vary. Check that the clues fit the secret rectangle and that listing the rectangles for the first clue leaves exactly one for the second. Example: "Area 24 cm² and perimeter 20 cm". The rectangles with area 24 cm² are 24 by 1 (perimeter 50), 12 by 2 (28), 8 by 3 (22) and 6 by 4 (20), so only 6 by 4 fits.' },
       { q: 'Ali joins 5 same-size squares with sides of 2 cm, whole sides touching. What is the biggest perimeter his shape can have? The smallest?', a: 'Biggest 24 cm (12 sides of 2 cm, e.g. a row of 5). Smallest 20 cm (10 sides: a 2 by 2 square with one more square on a side).' },
       { q: 'A rectangle 7 cm by 5 cm has a 1 cm square cut out of each of its 4 corners. Find the new area and the new perimeter.', a: 'Area 35 − 4 = 31 cm². Perimeter still 24 cm: push the cut corners out and you get the 7 by 5 rectangle back.' }
     ]
@@ -170,9 +170,9 @@ module.exports = {
       H.p('You may not need all the rows.', { after: 20 }),
       H.gap(20),
       H.sub('a', 'Which garden has the biggest area?   ______________'),
-      H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?   ____________ cm²', { after: 60 }),
+      H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. Hint: first walk round the rectangle. What is the area of the square?   ____________ cm²', { after: 60 }),
 
-      H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure. Hint: you can cut the figure into two rectangles.', { pb: true, before: 0, keepNext: true }),
       side(q3Fig(), H.sub('', 'Missing sides:  ____ and ____') + H.sub('a', 'Area = __________ cm²') + H.sub('b', 'Perimeter = __________ cm')),
       H.q(5, 'Look at this staircase.', { keepNext: true }),
       side(q4Fig(), H.sub('a', 'What is its area?   ________ cm²') + H.sub('b', 'What is its perimeter?   ________ cm')),

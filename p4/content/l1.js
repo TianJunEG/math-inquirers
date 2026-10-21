@@ -41,7 +41,7 @@ module.exports = {
       ['Q2', '6 ways: 2 rows of 20, 4 rows of 10, 5 rows of 8, 8 rows of 5, 10 rows of 4, 20 rows of 2.'],
       ['Q3', '(a) 18: 1, 2, 3, 6, 9, 18.  24: 1, 2, 3, 4, 6, 8, 12, 24  (b) 1, 2, 3, 6  (c) 6 packs, each with 3 red and 4 blue beads.'],
       ['Q4', '(a) Bus 33: 6:00, 6:10, 6:20, 6:30 …  Bus 51: 6:00, 6:15, 6:30 …  Together again at 6:30 am.  (b) Every 30 minutes: 6:00, 6:30, 7:00, 7:30, 8:00, so 5 times.'],
-      ['Q5', '(a) 6: 4 factors, 9: 3, 10: 4, 15: 4, 16: 5, 25: 3  (b) 9 and 25. Each is a number times itself (3 × 3 and 5 × 5).  (c) 4, 9, 25, 49'],
+      ['Q5', '(a) 6: 4 factors, 9: 3, 10: 4, 15: 4, 16: 5, 25: 3  (b) 9 and 25. Each is a number times itself (3 × 3 and 5 × 5).  (c) Yes: 1, 7, 49. It is 7 × 7, a number times itself, like 9 and 25.'],
       ['Q6', '(a) 36 (multiples of 12 between 30 and 70 are 36, 48, 60; 48 is a multiple of 8; in 60 the ones digit is smaller).  (b) Ravi. 6 = 2 × 3, so every multiple of 6 is in the 3 times table. Mei is wrong: 9 is a multiple of 3 but not of 6.']
     ]
   },
@@ -80,21 +80,21 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Write all the factors of 12.', a: '1, 2, 3, 4, 6, 12' },
-      { q: 'Write the first five multiples of 7.', a: '7, 14, 21, 28, 35' },
-      { q: 'Is 4 a factor of 52? How do you know?', a: 'Yes: 4 × 13 = 52.' },
-      { q: 'Find a common multiple of 3 and 5 that is less than 20.', a: '15' },
-      { q: 'Write all the factor pairs of 20.', a: '1 × 20, 2 × 10, 4 × 5' },
-      { q: 'What is the smallest number that is a multiple of both 4 and 6?', a: '12' }
+      { q: 'Ali has 12 sweets. He puts them into bags so that every bag has the same number of sweets and none are left over. Use 12 counters, or draw 12 dots. Write down every number of sweets that one bag could have.', a: '1, 2, 3, 4, 6 or 12 sweets in a bag.' },
+      { q: 'A frog starts at 0 and jumps along a number line in jumps of 7. Write the first five numbers it lands on.', a: '7, 14, 21, 28, 35' },
+      { q: 'Can 52 stickers be shared equally among 4 children with none left over? Try it: give each child 10 stickers first, then see how many are left to share.', a: 'Yes. 40 stickers are given out first and 12 are left. 12 shared among 4 is 3 each, so each child gets 13 (4 × 13 = 52).' },
+      { q: 'Mei counts 3, 6, 9, 12 … (in 3s). Ravi counts 5, 10, 15, 20 … (in 5s). Write a number less than 20 that both of them say.', a: '15' },
+      { q: 'Make rectangles from 20 square tiles, using all of them each time. Draw every different rectangle you can on squared paper (a 2 by 10 and a 10 by 2 are the same). Write each one as rows × tiles in a row.', a: '1 × 20, 2 × 10, 4 × 5' },
+      { q: 'A shop gives a free sticker with every 3rd purchase and a free pen with every 4th purchase. Write the numbers 1 to 12. Mark the purchases that get a sticker, then the ones that get a pen. Which purchase gets both?', a: 'The 12th purchase (stickers: 3, 6, 9, 12; pens: 4, 8, 12).' }
     ],
     stretch: [
       { q: 'How many factors does 72 have? List them in order.', a: '12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72.' },
       { q: 'One lighthouse flashes every 6 seconds. Another flashes every 9 seconds. They flash together now. After how many seconds will they next flash together?', a: '18 seconds (6, 12, 18 and 9, 18).' },
       { q: 'Find all the common factors of 24 and 36.', a: '1, 2, 3, 4, 6, 12' },
-      { q: 'I am a multiple of 7 between 50 and 80. My digits add up to 11. Who am I?', a: '56 (the multiples of 7 are 56, 63, 70, 77; only 5 + 6 = 11).' },
+      { q: 'Find ALL the numbers from 1 to 60 that have exactly 3 factors. What do the numbers have in common?', a: '4, 9, 25 and 49. Each is a number times itself (2 × 2, 3 × 3, 5 × 5, 7 × 7), where that number has only 2 factors. 16 = 4 × 4 has 5 factors and 36 has 9.' },
       { q: 'Ben shares 28 stickers equally among some friends with none left over. He has more than 1 friend and gives each friend more than 1 sticker. How many friends could he have? Find all the answers.', a: '2, 4, 7 or 14 friends.' },
+      { q: 'I am a multiple of 7 between 50 and 80. My digits add up to 11. Who am I?', a: '56 (the multiples of 7 are 56, 63, 70, 77; only 5 + 6 = 11).' },
       { q: 'Which number less than 30 has the most factors?', a: '24, with 8 factors: 1, 2, 3, 4, 6, 8, 12, 24.' },
-      { q: 'Which of these numbers are multiples of both 4 and 9: 54, 72, 96, 108?', a: '72 and 108' },
       { q: 'Mrs Tan has 36 pencils and 48 erasers. She puts them into identical packs with nothing left over. What is the greatest number of packs she can make? What is in each pack?', a: '12 packs, each with 3 pencils and 4 erasers.' }
     ],
     challenge: [
@@ -102,9 +102,9 @@ module.exports = {
       { q: 'Mei has between 30 and 50 eggs. When she packs them in 4s, 1 egg is left. When she packs them in 5s, 1 egg is left. How many eggs does she have?', a: '41. One less than the number of eggs is a common multiple of 4 and 5 (20, 40, 60), so 21, 41 or 61; only 41 is between 30 and 50.' },
       { q: 'What is the smallest number that has exactly 6 factors?', a: '12 (1, 2, 3, 4, 6, 12). Every number below 12 has fewer than 6 factors.' },
       { q: 'Ali counts in 6s from 6. Mei counts in 8s from 8. Both stop at 100. How many numbers do they both say?', a: '4: 24, 48, 72, 96.' },
-      { q: 'Ravi runs one lap of a track every 4 minutes. Siti runs one lap every 6 minutes. They start together at the start line. How many laps has each run when they are next at the start line together?', a: 'After 12 minutes: Ravi has run 3 laps and Siti 2 laps.' },
+      { q: 'Ben says: "A number that is a multiple of 4 and a multiple of 6 must be a multiple of 24, because 4 × 6 = 24." Test his idea with examples. Is he right? What is true instead?', a: 'Ben is wrong. 12 is a multiple of both 4 and 6, but it is not a multiple of 24. The common multiples of 4 and 6 are 12, 24, 36, 48 …: every one is a multiple of 12, the smallest common multiple. 24 is only the second.' },
       { q: 'Find a number between 20 and 40 that has exactly 4 factors and is odd.', a: '21 (1 × 21, 3 × 7), 27 (1 × 27, 3 × 9), 33 (1 × 33, 3 × 11), 35 (1 × 35, 5 × 7) or 39 (1 × 39, 3 × 13). Any one of these.' },
-      { q: 'Three school bells ring every 4 minutes, every 6 minutes and every 10 minutes. They all ring together at 9:00 am. When do they next all ring together?', a: '10:00 am. The smallest common multiple of 4, 6 and 10 is 60 minutes.' },
+      { q: 'Bus A leaves a stop every 6 minutes and Bus B every 9 minutes. Bus C leaves every ___ minutes. All three leave together at 9:00 am, and they next leave together at 9:36 am. What could the gap for Bus C be? Find ALL the whole-minute answers. Then make up a puzzle like this one for a partner.', a: '4, 12 or 36 minutes. The smallest common multiple of 6 and 9 is 18, so Bus C\'s gap must be a factor of 36 that makes the first meeting 36 (not 18). 1, 2, 3, 6, 9 and 18 all give 18, so they do not work. Puzzles will vary: check that the partner\'s answer really gives the stated time.' },
       { q: 'I am a number less than 100. When I am divided by 2, 3, 4, 5 or 6, there is always 1 left over. I am bigger than 1. Who am I?', a: '61. One less than the number is a common multiple of 2, 3, 4, 5 and 6: 60. 60 + 1 = 61 (the next one, 121, is too big).' },
       { q: 'There are 20 closed lockers, numbered 1 to 20. Child 1 opens every locker. Child 2 changes every 2nd locker (opens it if it is closed, closes it if it is open). Child 3 changes every 3rd locker, and so on, up to child 20. Which lockers are open at the end?', a: '1, 4, 9 and 16. Each locker is changed once for every factor of its number. Only numbers with an odd number of factors (1, 4, 9, 16: a number times itself) end up open.' }
     ]
@@ -150,8 +150,8 @@ module.exports = {
     W.push(H.gap(60));
     W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
     W.push(...H.lines(1));
-    W.push(H.sub('c', 'Find ALL the numbers from 1 to 60 that have exactly 3 factors. Hint: look at your answer to (b).'));
-    W.push(H.ans('Numbers:'));
+    W.push(H.sub('c', 'Is 49 a number with exactly 3 factors? List its factors to check. How could your answer to (b) have told you?'));
+    W.push(H.ans('Factors of 49:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
     W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?'));
     W.push(H.ans('I am:'));

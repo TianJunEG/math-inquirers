@@ -20,6 +20,8 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  out.push(p(t('Look back: which puzzle was hardest? How did you start it? What would you try next time?', { italics: true, size: 24 }), { before: 160, after: 40 }));
+  out.push(...lines(2));
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');

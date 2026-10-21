@@ -135,31 +135,31 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'How many right angles does a rectangle have?', a: '4' },
-      { q: 'At 3 o’clock, what angle do the hands of a clock make?', a: 'A right angle' },
-      { q: 'At 2 o’clock, is the angle between the clock hands smaller or bigger than a right angle?', a: 'Smaller' },
-      { q: 'Name 2 capital letters that have a pair of parallel lines.', a: 'For example H and E (also F, N, Z, U, M).' },
-      { q: 'Two straight lines cross like a plus sign (+). How many right angles do they make?', a: '4' },
-      { q: '3 lines go out from one point, spread out like a fan. How many angles can you find?', a: '3 (2 small ones and 1 made of both)' }
+      { q: 'A right angle is a square corner, like the corner of a page. How many right angles does a rectangle have? Check with the corner of a piece of paper.', a: '4' },
+      { q: 'At 3 o’clock the minute hand points at 12 and the hour hand points at 3. Is the angle between the hands smaller than, bigger than, or the same as the corner of a page?', a: 'The same: a right angle' },
+      { q: 'At 2 o’clock, is the angle between the clock hands smaller or bigger than the corner of a page?', a: 'Smaller' },
+      { q: 'Parallel lines are straight lines that stay the same distance apart and never meet, like the two rails of a train track. Name 2 capital letters that have a pair of parallel lines.', a: 'For example H and E (also F, N, Z, U, M).' },
+      { q: 'Two straight lines cross like a plus sign (+). Each square corner where they cross is a right angle. How many right angles do they make?', a: '4' },
+      { q: '3 lines go out from one point, spread out like a fan. An angle is the space between two lines. How many different angles can you find? (Draw it and count.)', a: '3 (2 small ones and 1 made of both)' }
     ],
     stretch: [
       { q: 'I have 4 sides and 4 right angles. My sides are not all the same length. What shape am I? How many pairs of parallel lines do I have?', a: 'A rectangle. 2 pairs of parallel lines.' },
       { q: 'A U shape is made of 5 squares: 3 squares in a row with 1 more square on top of each end square. How many right angles are inside it?', a: '6 (it has 8 corners; the 2 corners at the bottom of the gap are bigger than a right angle inside the shape).' },
-      { q: 'At which o’clock times do the hands of a clock make a right angle?', a: '3 o’clock and 9 o’clock' },
+      { q: 'Look at a clock face. For each o’clock time from 1 o’clock to 11 o’clock, is the angle between the hands (the short way round) smaller than, the same as, or bigger than a right angle? Put each time in the right group.', a: 'Smaller than a right angle: 1, 2, 10 and 11 o’clock. A right angle: 3 and 9 o’clock. Bigger: 4, 5, 6, 7 and 8 o’clock (at 6 o’clock the hands make a straight line).' },
       { q: 'The # sign is made of 4 lines: 2 upright lines and 2 lines across. How many pairs of parallel lines does it have? How many pairs of perpendicular lines?', a: '2 pairs of parallel lines and 4 pairs of perpendicular lines.' },
       { q: 'Draw me on square grid paper: (a) I have 4 sides, exactly 2 right angles and exactly 1 pair of parallel lines. (b) I have 4 sides and 2 pairs of parallel lines, but no right angles.', a: '(a) For example a shape with a long bottom, a shorter top parallel to it, one upright side and one slanted side. (b) For example a slanted parallelogram or a rhombus with no square corners.' },
       { q: 'How many right angles can you find in the letter E (4 straight lines)?', a: '4: 1 at the top corner, 2 where the middle line meets the upright line, 1 at the bottom corner.' },
       { q: 'Is the smaller angle between the clock hands at 4 o’clock the same size as at 8 o’clock?', a: 'Yes, in both the hands are 4 hour-marks apart the short way round.' },
-      { q: 'How many pairs of parallel lines does a rectangle have? How many pairs of perpendicular lines?', a: '2 pairs of parallel lines and 4 pairs of perpendicular lines.' }
+      { q: 'The letter H is made of 3 straight lines: 2 upright lines and 1 line across. List every pair of lines. Which pairs are parallel and which pairs are perpendicular?', a: '3 pairs: the two upright lines (parallel), the line across with the left upright (perpendicular) and the line across with the right upright (perpendicular). So 1 pair of parallel lines and 2 pairs of perpendicular lines.' }
     ],
     challenge: [
       { q: '4 lines from one point make 6 angles. How many lines from one point are needed to make exactly 10 angles?', a: '5 lines (4 + 3 + 2 + 1 = 10).' },
-      { q: 'The minute hand turns from 12 to 3. How many right angles has it turned through? From 12 to 9 (going clockwise)?', a: '1 right angle; 3 right angles.' },
+      { q: 'A staircase is made of columns of 1, 2 and 3 squares standing side by side (3 steps). It has 6 right angles inside it. How many right angles are inside a staircase with 4 steps? With 5 steps? With 10 steps? Find a rule and explain why it works.', a: '4 steps: 7. 5 steps: 8. 10 steps: 13. The rule is: number of steps + 3. Each column has one square corner at its top right (that is the number of steps), the tallest column has one more at its top left, and there are 2 square corners at the bottom. The inside corners where one step meets the next are dents (bigger than a right angle), so they do not count.' },
       { q: 'A square has 2 lines down and 2 lines across inside it, like a noughts-and-crosses grid. How many right angles can you find?', a: '36: 4 corners × 1, 8 points on the sides × 2, and 4 crossing points × 4.' },
-      { q: 'How many right angles are there in the letter F (3 straight lines)?', a: '3: 1 at the top corner and 2 where the middle line meets the upright line.' },
-      { q: 'The letter E is made of 4 lines. List every pair of lines. How many pairs are there altogether?', a: '6 pairs: 3 pairs of parallel lines (the 3 short lines) and 3 pairs of perpendicular lines (the upright line with each short line).' },
-      { q: 'Ben says: “A shape with 4 sides and 2 pairs of parallel lines must have right angles.” Is he right?', a: 'No. A slanted parallelogram (or a rhombus) has 2 pairs of parallel lines but no right angles.' },
       { q: 'A 4-sided shape has 3 right angles. Draw it. Test the 4th angle with your checker. Can a 5-sided shape have exactly 3 right angles? Draw one.', a: 'The 4th angle is a right angle too (it is a rectangle). Yes: cut one corner off a rectangle with one slanted cut.' },
+      { q: 'Mei says: "Perpendicular lines must be one going straight up and one going straight across." Is she right? On a square grid, draw two perpendicular lines that are both slanted. Check with your checker. How do you know they are perpendicular?', a: 'No. Perpendicular lines meet at a right angle however the page is turned. On a square grid, one line going 1 right and 1 up at each step and another going 1 left and 1 up at each step are perpendicular (and so are 2 right 1 up with 1 left 2 up). Turning the page so that one line is flat shows the other one standing straight up.' },
+      { q: 'Ben says: “A shape with 4 sides and 2 pairs of parallel lines must have right angles.” Is he right?', a: 'No. A slanted parallelogram (or a rhombus) has 2 pairs of parallel lines but no right angles.' },
+      { q: 'Make up your own "Which shape am I?" riddle about a shape on square grid paper. Use words like sides, right angles, parallel and perpendicular, and give 3 clues. Draw the answer. Then check: can a partner draw a DIFFERENT shape that fits your clues? If yes, add a clue.', a: 'Answers vary. Check that the drawn shape fits every clue and that the clues are about sides, right angles and parallel lines. Example: "I have 6 straight sides. I have 5 right angles inside me. I have one dent." (An L shape.) Other shapes could fit the first two clues, so the third clue matters.' },
       { q: 'A long rectangle is cut into 6 squares in a row by 5 lines. How many right angles can you find?', a: '24. 4 at the corners, and each of the 5 lines makes 2 right angles at the top and 2 at the bottom: 4 + 5 × 4 = 24.' },
       { q: 'Can a 6-sided shape have 6 right angles inside it? What is the most right angles a 6-sided shape can have inside?', a: 'No. The most is 5, for example an L shape. Children try to draw 6 square corners and always find a dent. A proof is not expected.' }
     ]
@@ -182,7 +182,7 @@ module.exports = {
       side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
       H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
 
-      H.q(4, 'Look at the lines in these letters. Write Yes or No in the table.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Look at the lines in these letters. Parallel lines never meet and stay the same distance apart, like train tracks. Perpendicular lines meet at a right angle (a square corner). Write Yes or No in the table.', { pb: true, before: 0, keepNext: true }),
       H.fig(q4Fig()),
       H.tbl(W6, [
         H.row(['Letter', 'E', 'H', 'T', 'L', 'Z', 'N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),

@@ -88,12 +88,12 @@ module.exports = {
 
   qbank: {
     core: [
-      { q: 'Write 7 ÷ 9 as a fraction.', a: '7/9' },
-      { q: 'Work out 2/3 + 3/4.', a: '17/12 = 1 5/12' },
-      { q: 'Work out 5/6 − 1/4.', a: '7/12' },
-      { q: 'Find 3/5 of 15.', a: '9' },
-      { q: 'Work out 2/3 × 9/10.', a: '3/5' },
-      { q: 'Work out 3/5 × 1/2 + 1/10.', a: '2/5 (3/10 + 1/10 = 4/10)' }
+      { q: '4 friends share 3 chocolate bars equally. Draw the bars and cut them. How much chocolate does each friend get?', a: '3/4 of a bar (cut every bar into 4 pieces: 12 pieces, 3 each; 3 ÷ 4 = 3/4).' },
+      { q: 'Siti ate 1/2 of a pizza and Ben ate 1/4 of the same pizza. Draw the pizza. What fraction did they eat altogether? What fraction is left?', a: '3/4 eaten, 1/4 left.' },
+      { q: 'A pizza is cut into 12 equal slices (draw it). Ravi eats 1/3 of the pizza and Mei eats 1/4 of the pizza. How many slices did they eat? What fraction of the pizza is left?', a: '4 + 3 = 7 slices eaten; 5 slices are left, which is 5/12 of the pizza.' },
+      { q: 'Find 3/5 of 15 sweets. (Draw 15 dots and put them into 5 equal groups.)', a: '9 (each group has 3 dots, and 3 groups make 9).' },
+      { q: 'Half of a cake is left. Ali eats half of what is left. Draw the cake. What fraction of the WHOLE cake did Ali eat?', a: '1/4 of the whole cake.' },
+      { q: 'Mei has 3/4 of a pizza and Ali has 2/3 of a pizza (the pizzas are the same size). Who has more? Draw two bars to show how you know.', a: 'Mei. Cut both bars into 12 equal parts: 3/4 = 9 parts and 2/3 = 8 parts. (Or: Mei is 1/4 short of a whole pizza and Ali is 1/3 short, and 1/4 is less than 1/3.)' }
     ],
     stretch: [
       { q: 'Write 2/3 as the sum of two different unit fractions.', a: '1/2 + 1/6 (the only way).' },
@@ -101,7 +101,7 @@ module.exports = {
       { q: '1/2 − 1/3 = 1/6 and 1/3 − 1/4 = 1/12. Use the pattern to work out 1/4 − 1/5 and 1/9 − 1/10.', a: '1/20 and 1/90 (the bottom numbers multiply: 4 × 5 and 9 × 10).' },
       { q: '4 litres of juice are poured equally into 6 bottles. How much juice is in each bottle?', a: '4/6 = 2/3 of a litre.' },
       { q: 'Which is bigger, 5/6 or 6/7? Explain without finding common denominators.', a: '6/7. 5/6 is 1/6 short of 1 and 6/7 is only 1/7 short of 1, and 1/7 is smaller than 1/6.' },
-      { q: 'A rope 3/4 m long is cut into 3 equal pieces. How long is each piece?', a: '1/4 m (3/4 ÷ 3).' },
+      { q: '(Preview of P6) A rope 3/4 m long is cut into 3 equal pieces. How long is each piece? Draw a bar to help.', a: '1/4 m (3/4 ÷ 3: 3 quarters shared by 3 pieces is 1 quarter each).' },
       { q: 'Find a fraction between 2/5 and 1/2 with 20 as the bottom number.', a: '9/20 (2/5 = 8/20 and 1/2 = 10/20).' },
       { q: 'Which is bigger, 7/8 of 24 or 5/6 of 30?', a: '5/6 of 30. 7/8 of 24 = 21 and 5/6 of 30 = 25.' }
     ],
@@ -109,12 +109,12 @@ module.exports = {
       { q: 'Write 1 as the sum of three different unit fractions. Find all the ways.', a: 'Only one way: 1/2 + 1/3 + 1/6. (The biggest part must be 1/2, and then 1/2 = 1/3 + 1/6 is the only split into two different unit fractions.)' },
       { q: 'Work out 1/2 × 2/3 × 3/4 × 4/5 × … × 99/100.', a: '1/100. Each top number cancels the bottom number before it, leaving 1 on top and 100 at the bottom.' },
       { q: 'Mrs Tan baked some cookies. She gave 1/2 of them to her neighbours, 1/3 of the remainder to Ben and 1/4 of what was then left to Mei. She had 30 cookies left. How many did she bake?', a: '120. What is left is 1/2 × 2/3 × 3/4 = 1/4 of the cookies, and 1/4 is 30.' },
-      { q: 'Which is more: 2/3 of 3/4 of a cake, or 3/4 of 2/3 of a cake?', a: 'They are the same: both are 1/2 of the cake (2/3 × 3/4 = 3/4 × 2/3 = 6/12).' },
+      { q: 'Make up your own story about a fraction of a REMAINDER (it must use "of what was left" at least once) with a whole-number answer. Solve it with a bar model, swap with a partner, and check each other. Then change one fraction in your story: what changes in the answer, and what stays the same?', a: 'Open-ended. Sample: a shop had 60 oranges, sold 1/3 of them, then 1/4 of the oranges that were left. How many are left? (60 - 20 = 40; 1/4 of 40 = 10; 30 left.) Check that the model uses equal small units and that the second fraction is taken of the remainder.' },
       { q: 'Use the digit cards 1, 3, 5 and 7 once each to make two fractions. Take the smaller from the bigger. What is the smallest difference you can make (more than 0)?', a: '8/35, from 3/7 − 1/5 (15/35 − 7/35).' },
-      { q: 'Mei spent 1/4 of her money on Monday and 1/3 of the remainder on Tuesday. She had $50 left. How much did she spend each day?', a: '$25 each day. 1/3 of the remaining 3/4 is 1/4, so she spent 1/4 each day and 1/2 is left. 1/2 = $50, so she had $100.' },
+      { q: 'Write 3/4 as the sum of three DIFFERENT unit fractions. Find all the ways and explain how you know you have found them all.', a: 'Exactly three ways: 1/2 + 1/5 + 1/20, 1/2 + 1/6 + 1/12 and 1/3 + 1/4 + 1/6. (The biggest part must be 1/2 or 1/3: three unit fractions of 1/5 or less add to less than 3/4. Then test in order, as in the lesson.)' },
       { q: 'Work out 1/6 + 1/12 + 1/20 + 1/30 + 1/42 without finding a common denominator for all five. (Hint: 1/6 = 1/2 − 1/3.)', a: '5/14. Each fraction is a difference: (1/2 − 1/3) + (1/3 − 1/4) + (1/4 − 1/5) + (1/5 − 1/6) + (1/6 − 1/7). The middle parts cancel, leaving 1/2 − 1/7 = 5/14.' },
       { q: '5 pizzas are shared equally among 12 children. Each child must get exactly 2 pieces, and each piece must be a unit fraction of a pizza (like 1/3 or 1/4). How can the pizzas be cut?', a: 'Each child gets 5/12. Two ways: 1/3 + 1/12 (cut 4 pizzas into thirds and 1 pizza into twelfths), or 1/4 + 1/6 (cut 3 pizzas into quarters and 2 pizzas into sixths).' },
-      { q: 'A tank is full of water. 1/3 of the water is let out. Then 1/3 of the water left is let out, and then 1/3 of the water left again. Now 16 litres are left. How much water was in the full tank?', a: '54 litres. Each time 2/3 is left: 54 → 36 → 24 → 16.' }
+      { q: 'A tank is full of water. Every hour, 1/3 of the water that is in the tank is let out. After 3 hours there are 16 litres left. (a) How much water was in the full tank? (b) After how many hours is less than half of the original water left? (c) How much water has been let out by then?', a: '(a) 54 litres: each hour 2/3 is left, 54 → 36 → 24 → 16.  (b) 2 hours: 24 litres is less than half of 54 (27), but after 1 hour 36 litres is more than half.  (c) 54 − 24 = 30 litres.' }
     ]
   },
 
@@ -126,9 +126,9 @@ module.exports = {
     W.push(H.sub('b', 'A 9 m ribbon is cut into 4 equal pieces. Each piece is  ______  m long.'));
     W.push(H.sub('c', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 40 }));
     W.push(...H.lines(1));
-    W.push(H.sub('d', ['(stretch) 3/4 of a cake is shared equally among 6 children. Each gets  ______  of the whole cake.'.replace('3/4', fr(3, 4))]));
+    W.push(H.sub('d', ['(stretch) 3/4 of a cake is shared by 6 children. Each gets  ______  of the cake.'.replace('3/4', fr(3, 4))]));
     // Q2 unit fractions
-    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top).', { keepNext: true }));
+    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Start here: take away 1/2, then 1/3 … is what is left a unit fraction?', { keepNext: true }));
     W.push(H.sub('a', [fr(7, 10) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
     W.push(H.sub('c', ['Find TWO ways for ' + fr(3, 8) + ':&nbsp;&nbsp; ' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr() + '&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr()]));
     W.push(H.sub(' ', 'Test 1/3, 1/4, 1/5 … in order. How do you know when to stop?', { after: 40 }));
@@ -147,16 +147,17 @@ module.exports = {
     W.push(H.sub('b', 'Work out each sum. Give each answer in its simplest form.', { keepNext: true }));
     { const ws = [6600, 3300];
       const sums = [[[1, 2], [1, 6]], [[1, 2], [1, 6], [1, 12]], [[1, 2], [1, 6], [1, 12], [1, 20]]];
-      W.push(H.tbl(ws, sums.map(sm => H.row([H.cell(['<div style="text-align:left;padding-left:12px">' + sm.map(([a, b]) => fr(a, b)).join(' + ') + ' &nbsp;=</div>'], ws[0], { h: 50 }), H.cell('', ws[1], { h: 50 })])))); }
+      W.push(H.tbl(ws, sums.map(sm => H.row([H.cell(['<div style="text-align:left;padding-left:12px">' + sm.map(([a, b]) => fr(a, b)).join(' + ') + ' &nbsp;=</div>'], ws[0], { h: 36 }), H.cell('', ws[1], { h: 36 })])))); }
     W.push(H.sub('c', ['Predict:&nbsp; ' + fr(1, 2) + ' + ' + fr(1, 6) + ' + ' + fr(1, 12) + ' + … + ' + fr(1, 90) + ' = ________&nbsp;&nbsp; Explain how you know.'], { after: 40 }));
     W.push(...H.lines(1));
     // Q5 backwards
     W.push(H.q(5, ['Ravi spent ' + fr(2, 5) + ' of his money on a game and ' + fr(1, 2) + ' of the remainder on a book. He had $36 left. Draw a model.'], { keepNext: true }));
-    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 760 })])]));
+    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b> draw 5 equal parts; the game takes 2. Cut the rest to find half of it.'], { after: 20 }));
+    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 520 })])]));
     W.push(H.sub('a', 'How much money did Ravi have at first?   __________'));
     W.push(H.sub('b', 'How much did the book cost?   __________'));
     // Q6 digit cards
-    W.push(H.q(6, ['Use the digit cards ' + [1, 2, 3, 4].map(card).join('') + ' once each to fill the boxes. The fractions do not have to be proper.'], { keepNext: true }));
+    W.push(H.q(6, ['Use the digit cards ' + [1, 2, 3, 4].map(card).join('') + ' once each in the boxes (fractions need not be proper).'], { keepNext: true }));
     W.push(H.fig('<div style="text-align:center;font-size:24px;font-weight:700">' + boxfr() + ' &nbsp;+&nbsp; ' + boxfr() + '</div>'));
     W.push(H.sub('a', 'The largest sum:   ______________________'));
     W.push(H.sub('b', 'The smallest sum:   ______________________   Did you test both ways?'));
