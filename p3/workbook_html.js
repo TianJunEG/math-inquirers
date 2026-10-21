@@ -18,7 +18,7 @@ const esc2 = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace
 const fr = (n, d) => `<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.1;margin:0 3px;font-weight:600"><span style="padding:0 3px">${n}</span><span style="border-top:2px solid ${NAVY};padding:0 3px">${d}</span></span>`;
 const rich = s => esc2(s).replace(/\[\[(\d+)\/(\d+)\]\]/g, (m, n, d) => fr(n, d));
 const tick = `<span style="display:inline-block;width:13px;height:13px;border:2px solid ${NAVY};border-radius:3px;background:#fff;vertical-align:-2px;margin:0 5px 0 14px"></span>`;
-const fastTrack = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:12.5px;line-height:1.45"><b>Fast track.</b> Got both Warm-up check questions right and can explain why? Your tutor will say “go to Think Harder”. You still join the exploring and teaching with everyone. Then, while the group works on the core pages, start on the Think Harder pages and the Investigation on the last page of this lesson. Come back for talk time. Different children get different pages on different days.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 40 })])]);
+const fastTrack = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:11.5px;line-height:1.35"><b>Fast track.</b> Both Warm-up check answers right and you can explain why? Your tutor will say “go to Think Harder”. You still join the exploring and teaching. Then, while the group works on the core pages, start on Think Harder and the Investigation page at the end of this lesson. Different children get different pages on different days.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 25 })])]);
 const stairsSvg = () => {
   const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px">`;
   [[1, 20], [2, 130], [3, 270]].forEach(([k, x0]) => {
@@ -42,7 +42,7 @@ const investigation = (n) => {
       out.push(C.gap(40));
     }
   });
-  out.push(...lines(g.lines));
+  out.push(...lines(g.table ? g.lines : g.lines + 3));
   return out;
 };
 const lookBack = (n) => {
@@ -59,13 +59,14 @@ const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
-  out.push(p(t('Fast track? Start here. Then turn the page for the Investigation.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60, align: AlignmentType.CENTER }));
+  out.push(p(t('Fast track? Start here. Then go to the Investigation page at the end of this lesson.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60, align: AlignmentType.CENTER }));
   out.push(banner('Stretch'));
   b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  out.push(...hdr(n, ls.topic, 'INVESTIGATE AND LOOK BACK'));
   out.push(...investigation(n));
   out.push(...lookBack(n));
   return out;

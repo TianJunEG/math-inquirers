@@ -181,8 +181,7 @@ module.exports = {
     H.sub('b', 'What do you notice about the digits? Why is there no carrying?'),
     ...H.lines(1),
     H.sub('c', 'Use your pattern:   10 000 − 4127  =  ________'),
-    H.q(6, '(if time) Letter puzzle. Each letter stands for a digit. Different letters are different digits.', { before: 80, keepNext: true }),
-    H.img('img/p3l2_letters.png', 300, 200),
+    H.q(6, '(if time) Letter puzzle:  AB + AB + AB = CAB.  Each letter stands for a digit. Different letters are different digits.', { before: 80, keepNext: true }),
     H.sub('a', 'A = ______   B = ______   C = ______'),
     H.sub('b', 'The ones column: B + B + B ends in B. Which digits can B be? Try 0 and 5, then check the tens column. How do you know?'),
     ...H.lines(1)

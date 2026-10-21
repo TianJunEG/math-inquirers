@@ -2,6 +2,7 @@
 import json,os,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
+import p2gaps
 N=5; P=f'p2l{N}'
 D=os.path.join(H,'..','split',P,'project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 S={}
@@ -212,6 +213,7 @@ put(f'{P}-exit',exit_slide(f'{P}-exit','I think of a number. I multiply it by 4,
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','key','break','teachrule','ws1','ws1ans','teachparts','teachorder','ws2','ws2ans','teachthree','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{P}-{x}' for x in order]
+p2gaps.add(S,5); order=p2gaps.order(order,5)
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))

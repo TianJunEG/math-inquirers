@@ -2,6 +2,7 @@
 import json,os,sys,math,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
+import p2gaps
 D=os.path.join(H,'..','split','p2l9','project'); S={}
 def put(i,h): S[i]=h
 RED='#D64545'; ORANGE='#F28C38'; GREEN='#BFE3DC'; PINK='#F4A6A6'; BLUE='#9CC9EE'
@@ -292,5 +293,7 @@ put('p2l9-chwalk',sec('p2l9-chwalk','Challenge',body,'Use after pairs have tried
 put('p2l9-talk',talk_slide('p2l9-talk','How did swapping help you with the balance puzzles? Why is a table useful for jug puzzles?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Also ask: "How do you count on past the hour?" Listen for: a level balance means the two sides weigh the same, so the melon can be swapped for 2 apples (or 400 g) and the scale stays level. A table shows how much is in each jug after every pour, so we can check every step. Past the hour: count on to the o’clock first (4:50 to 5:00 is 10 minutes), then count the rest. Praise the reasons, not only the answers.'))
 put('p2l9-exit',exit_slide('p2l9-exit','A lesson starts at 4:50 p.m. and lasts 25 minutes. What time does it end?','5:15 p.m.','Minutes 80 to 90. No talking, no helping. Click to show the answer after the slips are in. Answer: 5:15 p.m. (4:50 to 5:00 is 10 minutes; 15 more minutes is 5:15). A child who writes 4:75 or 5:75 is adding minutes as if an hour had 100 minutes: plan two minutes of catch-up with the time line. Close: "You were real Measure Masters today. Next lesson is Challenge Day!" Stamp the inquiry journal.'))
 
+p2gaps.add(S,9)
 order=['p2l9-title','p2l9-warm1','p2l9-warm2','p2l9-explore1','p2l9-explore2','p2l9-teach1','p2l9-we1','p2l9-try1','p2l9-we2','p2l9-try2','p2l9-key','p2l9-break','p2l9-ws1','p2l9-ws1ans','p2l9-teachlen','p2l9-teachclock','p2l9-teachdur','p2l9-trytime','p2l9-ws2','p2l9-ws2ans','p2l9-stretch','p2l9-challenge','p2l9-chdiag','p2l9-chwalk','p2l9-talk','p2l9-exit']
+order=p2gaps.order(order,9)
 write_deck('Math Inquirers P2: Lesson 9 – Measure Masters',order,{'s1':{'description':'Warm-up and explore','start':'p2l9-title'},'s2':{'description':'Teach: balance puzzles and jug puzzles','start':'p2l9-teach1'},'s3':{'description':'Worksheet with teaching before page 2 (ribbons, clocks, how long)','start':'p2l9-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p2l9-stretch'}})

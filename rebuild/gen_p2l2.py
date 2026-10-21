@@ -1,8 +1,9 @@
 """Math Inquirers P2, Lesson 2: Missing Digit Mysteries. Writes split/p2l2/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit, p2gaps
+import slidekit
 from slidekit import *
+import p2gaps
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p2l2','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 S={}
@@ -203,6 +204,7 @@ put('p2l2-exit',sec('p2l2-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 42
 
 # ---------- write ----------
 order=['p2l2-title','p2l2-warm1','p2l2-warm2','p2l2-explore1','p2l2-explore2','p2l2-teach1','p2l2-try1','p2l2-we2','p2l2-try2','p2l2-teach3','p2l2-try3','p2l2-key','p2l2-break','p2l2-ws1','p2l2-ws1ans','p2l2-teachsq','p2l2-teachtri','p2l2-teachtwo','p2l2-ws2','p2l2-ws2ans','p2l2-stretch','p2l2-challenge','p2l2-chdiag','p2l2-chwalk','p2l2-talk','p2l2-exit']
+p2gaps.add(S,2); order=p2gaps.order(order,2)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

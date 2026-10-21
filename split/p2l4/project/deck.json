@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:18:58Z"
+  "at": "2026-10-21T23:48:56Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 4 – Pattern Machines",
  "order": [
   "p2l4-title",
+  "p2l4-precheck",
   "p2l4-warm1",
   "p2l4-warm2",
   "p2l4-explore1",
@@ -31,7 +32,8 @@
   "p2l4-chdiag",
   "p2l4-chwalk",
   "p2l4-talk",
-  "p2l4-exit"
+  "p2l4-exit",
+  "p2l4-reflect"
  ],
  "cover": "p2l4-title",
  "sections": {

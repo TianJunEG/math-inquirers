@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:15:41Z"
+  "at": "2026-10-21T23:48:33Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 1 – Digit Detectives",
  "order": [
   "p2l1-title",
+  "p2l1-precheck",
   "p2l1-warm1",
   "p2l1-warm2",
   "p2l1-explore1",
@@ -31,7 +32,8 @@
   "p2l1-chdiag",
   "p2l1-chwalk",
   "p2l1-talk",
-  "p2l1-exit"
+  "p2l1-exit",
+  "p2l1-reflect"
  ],
  "cover": "p2l1-title",
  "sections": {

@@ -2,6 +2,7 @@
 import json,os,sys,math,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
+import p2gaps
 D=os.path.join(H,'..','split','p2l10','project'); S={}
 def put(i,h): S[i]=h
 RED='#D64545'; GREEN='#BFE3DC'; PINK='#F4A6A6'; BLUE='#9CC9EE'
@@ -279,5 +280,7 @@ put('p2l10-end',(f'<section id="p2l10-end" data-transition="fade" style="backgro
  f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n<p style="font-size:36px;color:#C9D4EC">Certificates and a last stamp for every inquirer. See you in Primary 3!</p>\n'
  f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates. Ask each child to name one puzzle they enjoyed and say one specific thing they did well in the program. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
 
+p2gaps.add(S,10)
 order=['p2l10-title','p2l10-warm1','p2l10-warm2','p2l10-explore1','p2l10-card1','p2l10-card2','p2l10-card3','p2l10-card4','p2l10-explore2','p2l10-teach1','p2l10-we1','p2l10-try1','p2l10-we2','p2l10-try2','p2l10-we3','p2l10-key','p2l10-break','p2l10-teachgraph','p2l10-ws1','p2l10-ws1ans','p2l10-teachlogic','p2l10-teachgrow','p2l10-ws2','p2l10-ws2ans','p2l10-stretch','p2l10-challenge','p2l10-chdiag','p2l10-chwalk','p2l10-talk','p2l10-exit','p2l10-end']
+order=p2gaps.order(order,10)
 write_deck('Math Inquirers P2: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':'p2l10-stretch'}})

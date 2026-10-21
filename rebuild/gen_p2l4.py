@@ -1,9 +1,10 @@
 """Math Inquirers P2, Lesson 4: Pattern Machines. Writes split/p2l4/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit, p2gaps
+import slidekit
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
+import p2gaps
 RED='#D64545'; BLUE='#4A7FD6'; GREEN='#3DBE7A'; BROWN='#C98A1A'
 D=os.path.join(H,'..','split','p2l4','project'); S={}; ORDER=[]
 def put(i,h): S[i]=h; ORDER.append(i)
@@ -208,6 +209,7 @@ put('p2l4-chwalk',sec('p2l4-chwalk','Challenge',body,'Use after pairs have tried
 put('p2l4-talk',talk_slide('p2l4-talk','72–80 MIN','A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th? What if it repeats every 3 shapes?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: Every 5: yes, 10 and 20 are both in the 5 times table, so both are the LAST shape of a group. Every 3: no. 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape. Praise the reasons, not only the answers.'))
 put('p2l4-exit',exit_slide('p2l4-exit','80–90 MIN','The pattern goes triangle, circle, square, triangle, circle, square … What is the 17th shape? How do you know?','Minutes 80 to 90. Answer: a circle. 15 ends a group (5 groups of 3), so 16 is a triangle and 17 is a circle. Extension: make your own repeating pattern of 4 shapes and write 3 far-place questions about it for a partner, with the answers.'))
 
+p2gaps.add(S,4); ORDER[:]=p2gaps.order(ORDER,4)
 # ---------- write ----------
 if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides'))
 os.makedirs(os.path.join(D,'slides'))

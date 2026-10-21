@@ -2,6 +2,7 @@
 import json,os,sys,math,re
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
+import p2gaps
 D=os.path.join(H,'..','split','p2l8','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True); S={}
 def put(i,h): S[i]=h
 RED='#D64545'; MINT='#D3F1E4'
@@ -424,11 +425,13 @@ ex=stack_svg(hmap([[1,1,1],[1,1,2]]),70,'A stack: a bottom layer 3 cubes long an
 put('p2l8-exit',exit_slide('p2l8-exit','80–90 MIN',f'<div style="display:flex;align-items:center;gap:48px">{ex}{P("How many cubes are in this stack? Every cube sits on the table or on another cube.",42,600)}</div>',
  'Minutes 80 to 90. Answer: 7 (bottom layer 3 + 3 = 6, top layer 1). Children who write 4 counted only the front faces and the top cube; ask "What is under the top cube? What is behind the front row?" Extension: How many more cubes would make the stack 2 layers of 6? (5 more).'))
 
+p2gaps.add(S,8)
 # ---------- write ----------
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 order=['p2l8-title','p2l8-warm1','p2l8-warm2','p2l8-explore1','p2l8-explore2','p2l8-teach1','p2l8-we1','p2l8-try1','p2l8-we2','p2l8-try2','p2l8-we3','p2l8-key','p2l8-break','p2l8-ws1','p2l8-ws1ans','p2l8-teachcube','p2l8-trycube','p2l8-teachnet','p2l8-trynet','p2l8-ws2','p2l8-ws2ans','p2l8-stretch','p2l8-challenge','p2l8-chdiag','p2l8-chwalk','p2l8-talk','p2l8-exit']
+order=p2gaps.order(order,8)
 deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P2: Lesson 8 – Shape Builders','order':order,'cover':'p2l8-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p2l8-title'},'s2':{'description':'Teach: circle pieces, and counting squares and triangles in order','start':'p2l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l8-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p2l8-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}

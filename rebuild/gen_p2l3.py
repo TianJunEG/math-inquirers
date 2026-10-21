@@ -1,9 +1,10 @@
 """Math Inquirers P2, Lesson 3: Legs, Wheels and Arrays. Writes split/p2l3/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
-import slidekit, p2gaps
+import slidekit
 slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
+import p2gaps
 RED='#D64545'
 D=os.path.join(H,'..','split','p2l3','project'); S={}; ORDER=[]
 def put(i,h): S[i]=h; ORDER.append(i)
@@ -241,6 +242,7 @@ put('p2l3-chwalk',sec('p2l3-chwalk','Challenge',body,'Use after pairs have tried
 put('p2l3-talk',talk_slide('p2l3-talk','72–80 MIN','Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3. Follow-up: "And when he shares among 5 friends?" (0 to 4). Praise the reasons, not only the answers.'))
 put('p2l3-exit',exit_slide('p2l3-exit','80–90 MIN','A pen has hens and goats. There are 5 animals and 14 legs. How many hens and how many goats?','Minutes 80 to 90. Answer: 3 hens and 2 goats (6 + 8 = 14 legs, 3 + 2 = 5 animals). Look for a table starting with 5 hens (10 legs). Extension: find all the arrays (at least 2 rows, at least 2 in each row) for 16 counters (3 ways: 2 rows of 8, 4 rows of 4, 8 rows of 2).'))
 
+p2gaps.add(S,3); ORDER[:]=p2gaps.order(ORDER,3)
 # ---------- write ----------
 if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides'))
 os.makedirs(os.path.join(D,'slides'))
