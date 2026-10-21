@@ -137,10 +137,10 @@ module.exports = {
       { q: 'Pens cost $2 each and files cost $3 each. Ben buys 10 items and pays $24. How many files does he buy?', a: '4 files and 6 pens (all pens would be $20; each file instead of a pen adds $1). Check: $12 + $12 = $24.' }
     ],
     stretch: [
-      { q: 'Beads are threaded in the order red, red, blue, yellow, yellow, yellow, and then the order repeats. What colour is the 50th bead? How many yellow beads are there among the first 100 beads?', a: 'Red (50 = 8 × 6 + 2, so it is the 2nd bead of a group). 49 yellow beads: 16 full groups of 6 give 96 beads and 48 yellow, and beads 97 to 100 are red, red, blue, yellow.' },
-      { q: 'Square tables pushed together in one long row seat 2 × (number of tables) + 2 people. A hawker centre has 40 tables. How many people can sit if the tables are put in 8 rows of 5 instead of one long row of 40?', a: '96 (each row of 5 seats 12, and 8 × 12 = 96). One long row seats only 82. Splitting the tables gives more end seats.' },
+      { q: 'Beads repeat in the order red, red, blue, yellow, yellow, yellow. What colour is the 50th bead? How many yellow beads are in the first 100?', a: 'Red (50 = 8 × 6 + 2, so it is the 2nd bead of a group). 49 yellow beads: 16 full groups of 6 give 96 beads and 48 yellow, and beads 97 to 100 are red, red, blue, yellow.' },
+      { q: '40 square tables in one long row seat 2 × 40 + 2 = 82 people. How many can sit if the tables are put in 8 rows of 5 tables instead?', a: '96 (each row of 5 seats 12, and 8 × 12 = 96). One long row seats only 82. Splitting the tables gives more end seats.' },
       { q: 'A farm has chickens and goats. There are 35 heads and 94 legs. How many goats are there?', a: '12 goats and 23 chickens (all chickens would have 70 legs; 24 legs short; each goat adds 2 legs). Check: 48 + 46 = 94.' },
-      { q: 'Work out 1 + 3, then 1 + 3 + 5, then 1 + 3 + 5 + 7. What do you notice? Use it to find 1 + 3 + 5 + … + 39 (the first 20 odd numbers).', a: '4, 9, 16: square numbers. The first 20 odd numbers add up to 20 × 20 = 400. (Each new odd number adds an L-shaped layer to a square of dots.)' },
+      { q: 'Work out 1 + 3, 1 + 3 + 5 and 1 + 3 + 5 + 7. What do you notice? Use it to add the first 20 odd numbers, 1 + 3 + … + 39.', a: '4, 9, 16: square numbers. The first 20 odd numbers add up to 20 × 20 = 400. (Each new odd number adds an L-shaped layer to a square of dots.)' },
       { q: 'Ali saves $3 in week 1. Each week he saves $2 more than the week before. How much does he save in week 15?', a: '$31 ($3 + 14 × $2).' },
       { q: '3, 8, 13, 18, …  What is the first number in this pattern that is greater than 200?', a: '203 (the 41st number: 3 + 40 × 5).' },
       { q: 'Two whole numbers next to each other multiply to give 702. What are they?', a: '26 and 27. 25 × 26 = 650 is too small and 27 × 28 = 756 is too big. Check: 26 × 27 = 702.' },
@@ -165,10 +165,8 @@ module.exports = {
     // Q1 tables and chairs
     W.push(H.q(1, 'At a hawker centre, square tables are pushed together in a row. One chair goes on each free side.', { before: 10, keepNext: true }));
     W.push(H.fig(tablesSvg()));
-    { const ws = [2100, 1300, 1300, 1300, 1300, 1300, 1300];
-      W.push(H.tbl(ws, [H.row(['Tables', '1', '2', '3', '4', '5', '10'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        H.row(['Chairs', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 60 })))])); }
-    W.push(H.sub('a', 'Fill in the table. Rule:   chairs  =  ______ × tables  +  ______'));
+    W.push(H.sub('a', '4 tables:  ______ chairs.   5 tables:  ______ chairs.   10 tables:  ______ chairs.'));
+    W.push(H.sub('', 'Rule in words:   chairs  =  ______ × tables  +  ______'));
     W.push(H.sub('b', 'How many tables are needed to seat exactly 50 people?   ______________'));
     W.push(H.sub('c', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
     W.push(...H.lines(1));
