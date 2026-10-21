@@ -192,11 +192,11 @@ put('p6l7-teach1', sec('p6l7-teach1', '25–26 MIN', body,
 # ================= 7. worked example 1: octagon =================
 oct_prog = [('pen', 'pen down'), ('ctrl', 'repeat {8}', [('motion', 'move {80} steps'), ('motion', 'turn right {45} degrees')])]
 body = h2('Worked example: a regular octagon') + stitle('What turn draws a regular octagon? What is each inside angle?')
-body += step(1, 'Going once round, the turtle turns 360° altogether.', top=320, width=1040, size=34)
-body += step(2, '8 equal turns:  360° ÷ 8 = 45°  at each corner.', top=430, width=1040, size=34)
-body += step(3, 'Inside angle = 180° − 45° = 135°.', top=540, width=1040, size=34)
-body += pin(128, 660, 1040, f'<div style="display:flex;align-items:center;gap:28px"><p style="font-size:32px;font-weight:800;color:{TEAL}">Step 4. Code it:</p>{blocks_svg(oct_prog, "Blocks: pen down, repeat 8: move 80 steps, turn right 45 degrees", 26, 46)}</div>', 'fade', WHITE, 20, '14px 28px')
-body += pin(1230, 300, 560, f'<p style="font-size:30px;font-weight:800;color:{TEAL}">Test it: it closes!</p>' + turtle_svg(8, 45, 500, 500, 'A regular octagon drawn by the turtle, with an arrow at the start', fill=SKY), 'fade', WHITE, 24, '18px 30px')
+body += step(1, 'Going once round, the turtle turns 360° altogether.', top=320, width=1000, size=34)
+body += step(2, '8 equal turns:  360° ÷ 8 = 45°  at each corner.', top=430, width=1000, size=34)
+body += step(3, 'Inside angle = 180° − 45° = 135°.', top=540, width=1000, size=34)
+body += pin(128, 660, 1040, f'<div style="display:flex;align-items:center;gap:28px"><p style="font-size:32px;font-weight:800;color:{TEAL}">Step 4. Code it:</p>{blocks_svg(oct_prog, "Blocks: pen down, repeat 8: move 80 steps, turn right 45 degrees", 26, 46)}</div>', 'fade', WHITE, 20, '14px 28px', 'width:1004px;box-sizing:border-box')
+body += pin(1252, 300, 480, f'<p style="font-size:30px;font-weight:800;color:{TEAL}">Test it: it closes!</p>' + turtle_svg(8, 45, 480, 480, 'A regular octagon drawn by the turtle, with an arrow at the start', fill=SKY), 'fade', WHITE, 24, '18px 30px')
 put('p6l7-we1', sec('p6l7-we1', '26–28 MIN', body,
     'Click through the steps; ask the group to predict each before you reveal it. Think-aloud: "' + SC['think'][0].strip('“”') + '" Step 4: build it live in Scratch and run it. Ask: "What would 8 turns of 135 draw?" (try it: it does not close after 8, because 8 × 135 = 1080, 3 times round, and it draws an 8-point star: a preview of the star slide). '
     + PYNOTE))
@@ -223,11 +223,11 @@ put('p6l7-try2', qa_slide('p6l7-try2', '31–32 MIN', 'Your turn: work backwards
 # ================= 11. worked example 3: the star =================
 star_prog = [('pen', 'pen down'), ('ctrl', 'repeat {5}', [('motion', 'move {150} steps'), ('motion', 'turn right {144} degrees')])]
 body = h2('Worked example: a 5-point star') + stitle('Change ONE number in the pentagon program.')
-body += pin(128, 310, 1080, blocks_svg(star_prog, 'Blocks: pen down, repeat 5: move 150 steps, turn right 144 degrees', 26, 46), None)
-body += step(1, 'Add the turns: 5 × 144° = 720° = 2 full turns. It goes round twice.', top=510, width=1080, size=32)
-body += step(2, 'Star rule: turn = 360° × times round ÷ points = 720° ÷ 5 = 144°.', top=615, width=1080, size=32)
-body += step(3, 'Angle at each point = 180° − 144° = 36°.', top=720, width=1080, size=32)
-body += pin(1260, 300, 532, turtle_svg(5, 144, 470, 470, 'A 5-point star drawn by the turtle with turn 144 degrees', fill=SKY), 'fade', WHITE, 24, '24px 30px')
+body += pin(128, 300, 1080, blocks_svg(star_prog, 'Blocks: pen down, repeat 5: move 150 steps, turn right 144 degrees', 26, 46), None)
+body += step(1, 'Add the turns: 5 × 144° = 720° = 2 full turns. It goes round twice.', top=525, width=1020, size=32)
+body += step(2, 'Star rule: turn = 360° × times round ÷ points = 720° ÷ 5 = 144°.', top=645, width=1020, size=32)
+body += step(3, 'Angle at each point = 180° − 144° = 36°.', top=765, width=1020, size=32)
+body += pin(1260, 300, 472, turtle_svg(5, 144, 440, 440, 'A 5-point star drawn by the turtle with turn 144 degrees', fill=SKY), 'fade', WHITE, 24, '24px 30px')
 put('p6l7-we3', sec('p6l7-we3', '32–34 MIN', body,
     'Ask first: "The pentagon was repeat 5, turn 72. What happens if I double the turn to 144?" Take predictions, then click through. Think-aloud: "' + SC['think'][2].strip('“”') + '" Last click: run it in Scratch and show the star. '
     'Point out: the turtle still turns at 5 corners, but it goes round twice, so the turns add up to 720°, not 360°. The angle at each point is still on a straight line with the turn: 180 − 144 = 36°. Ask: "How many times round would a turn of 216 go?" (5 × 216 = 1080: 3 times; it is the same star drawn the other way round).'))
@@ -258,21 +258,21 @@ put('p6l7-ws1ans', check2('p6l7-ws1ans', '50–52 MIN', 'Page 1: check together'
 trace_prog = [('var', 'set {total} to {0}'), ('ctrl', 'repeat {5}', [('motion', 'move {150} steps'), ('motion', 'turn right {144} degrees'), ('var', 'change {total} by {144}')]), ('looks', 'say {total}')]
 body = h2('Trace the code: a running total') + stitle('Before you run it, follow the code one repeat at a time.')
 body += pin(128, 310, 700, blocks_svg(trace_prog, 'Blocks: set total to 0, repeat 5: move 150 steps, turn right 144 degrees, change total by 144; then say total', 26, 46), None)
-Wt = [220, 200, 220]
+Wt = [190, 170, 190]
 body += trow(900, 300, ['repeat', 'turn', 'total'], Wt, None, True)
 for i in range(5): body += trow(900, 380 + i * 78, [str(i + 1), '144', str(144 * (i + 1))], Wt, 'rise')
-body += pin(1600, 300, 192, p('Each row: add the turn.', 30, 700), None, SOFT, 20, '18px 22px')
+body += pin(128, 640, 640, p('Each row: add the turn to the total.', 30, 700), None, SOFT, 20, '18px 22px')
 body += answer(128, 790, 1664, 'It says 720.   720 ÷ 360 = 2: the turtle goes round 2 times.')
 put('p6l7-teachtrace', sec('p6l7-teachtrace', '52–53 MIN', body,
     'Teach before worksheet page 2 (Q3 traces a different star). Click to add each row while children say the next total. A trace table is how programmers check code by hand: one row for each time round the loop. Ask: "How do we know how many times the turtle went round?" (divide the total by 360).'))
 
 # ================= 17. teach: plan a star =================
 body = h2('Plan a star: 8 points, 3 times round')
-body += step(1, 'Total turning: 3 × 360° = 1080°.', top=270, width=1080, size=34)
-body += step(2, 'Turn: 1080° ÷ 8 = 135°.', top=375, width=1080, size=34)
-body += step(3, 'Angle at each point: 180° − 135° = 45°.', top=480, width=1080, size=34)
-body += pin(128, 600, 1080, f'<div style="display:flex;align-items:center;gap:28px"><p style="font-size:32px;font-weight:800;color:{TEAL}">Step 4. Code:</p>{blocks_svg([("ctrl", "repeat {8}", [("motion", "move {200} steps"), ("motion", "turn right {135} degrees")])], "Blocks: repeat 8: move 200 steps, turn right 135 degrees", 26, 46)}</div>', 'fade', WHITE, 20, '14px 28px')
-body += pin(1260, 270, 532, turtle_svg(8, 135, 470, 470, 'An 8-point star drawn by the turtle with turn 135 degrees', fill=SKY), 'fade', WHITE, 24, '24px 30px')
+body += step(1, 'Total turning: 3 × 360° = 1080°.', top=270, width=1020, size=34)
+body += step(2, 'Turn: 1080° ÷ 8 = 135°.', top=375, width=1020, size=34)
+body += step(3, 'Angle at each point: 180° − 135° = 45°.', top=480, width=1020, size=34)
+body += pin(128, 600, 1080, f'<div style="display:flex;align-items:center;gap:28px"><p style="font-size:32px;font-weight:800;color:{TEAL}">Step 4. Code:</p>{blocks_svg([("ctrl", "repeat {8}", [("motion", "move {200} steps"), ("motion", "turn right {135} degrees")])], "Blocks: repeat 8: move 200 steps, turn right 135 degrees", 26, 46)}</div>', 'fade', WHITE, 20, '14px 28px', 'width:1080px;box-sizing:border-box')
+body += pin(1260, 270, 472, turtle_svg(8, 135, 440, 440, 'An 8-point star drawn by the turtle with turn 135 degrees', fill=SKY), 'fade', WHITE, 24, '24px 30px')
 put('p6l7-teachstar', sec('p6l7-teachstar', '53–54 MIN', body,
     'Teach before worksheet page 2 (Q4 plans two different stars). Click through the steps, then the picture. Say the order out loud: times round → total turning → turn → point angle. Ask: "Which star has sharper points, this one or the 5-point star?" (the 5-point star: 36° is smaller than 45°).'))
 
@@ -319,10 +319,10 @@ dots = ''
 for i in range(12):
     a = math.radians(-90 + 30 * i); x, y = 330 + 170 * math.cos(a), 235 + 170 * math.sin(a)
     dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="16" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>' + T(330 + 212 * math.cos(a), 235 + 212 * math.sin(a) + 10, i, 28, NAVY, 700)
-dots += T(330, 466, 'Jump the same number of dots each time', 28, TEAL, 800)
+dots += T(330, 512, 'Jump the same number of dots each time', 28, TEAL, 800)
 body = h2('Challenge: see it', 60) + '<div style="display:flex;gap:32px;align-items:flex-start">'
 body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Ali’s pentagon (where does it stop?)</p>' + SV(720, 470, ali, 'Ali’s drawing: 5 moves with turns of 108 degrees. It does not get back to the start, which is marked with an arrow; the end is a red dot.', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
-body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: 12 points round a circle</p>' + SV(660, 480, dots, '12 dots round a circle numbered 0 to 11', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
+body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: 12 points round a circle</p>' + SV(660, 530, dots, '12 dots round a circle numbered 0 to 11', 'width:100%;height:500px'), extra='flex:1;min-width:0;padding:20px 24px')
 body += '</div>'
 put('p6l7-chdiag', sec('p6l7-chdiag', 'Challenge', body,
     'Show after pairs have tried, or if they are stuck. The pictures show the problem, not the answer. Q1: "Where would the turtle have to be to close the shape? How many more turns of 108 until the total is a whole number of full turns?" Q2: a star with 12 points joins every k-th dot, and the turn is 30° × k. "Join every 2nd dot. Every 3rd. Which jumps visit all 12 dots?"'))

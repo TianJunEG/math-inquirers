@@ -188,11 +188,11 @@ put(f'{L}-teach2',sec(f'{L}-teach2','30–31 MIN',body,'Teach. Point at the red 
 
 # ---------- 10 we2: subtracting = the jump ----------
 body=h2('Subtracting: the jump from b to a')+card(p('How much warmer is 7 °C than −3 °C?   That is 7 − (−3).',38,700))
-body+=pin(128,400,1664,numline_svg(-5,9,1664,220,label='Number line from minus 5 to 9',ly=150),None)
-body+=pin(128,400,1664,numline_svg(-5,9,1664,220,marks=[(-3,'',SKY),(7,'',YEL)],jumps=[(-3,0,'3',TEAL),(0,7,'7',TEAL)],only=True,label='Jumps from minus 3 to 0 and 0 to 7',ly=150),'fade')
-body+=step(1,'a − b asks: how far is it from b to a? Start at −3, finish at 7.',top=640,size=34)
-body+=step(2,'−3 up to 0 is 3. 0 up to 7 is 7. That is 10 steps to the RIGHT, so the answer is +10.',top=750,size=34)
-body+=answer(128,860,1664,'7 − (−3) = 10.   Check: −3 + 10 = 7 ✓')
+body+=pin(128,370,1664,numline_svg(-5,9,1664,220,label='Number line from minus 5 to 9',ly=150),None)
+body+=pin(128,370,1664,numline_svg(-5,9,1664,220,marks=[(-3,'',SKY),(7,'',YEL)],jumps=[(-3,0,'3',TEAL),(0,7,'7',TEAL)],only=True,label='Jumps from minus 3 to 0 and 0 to 7',ly=150),'fade')
+body+=step(1,'a − b asks: how far is it from b to a? Start at −3, finish at 7.',top=610,size=34)
+body+=step(2,'−3 up to 0 is 3. 0 up to 7 is 7. That is 10 steps to the RIGHT, so the answer is +10.',top=720,size=34)
+body+=answer(128,830,1664,'7 − (−3) = 10.   Check: −3 + 10 = 7 ✓')
 put(f'{L}-we2',sec(f'{L}-we2','31–33 MIN',body,'Click order: the jumps, step 1, step 2, the answer. Think-aloud: "Subtraction finds the difference. 10 − 4 = 6 because from 4 to 10 is 6. The same works below zero: from −3 to 7 is 10." Right means a positive answer, left means a negative answer: 2 − 5 is the jump from 5 to 2, 3 steps LEFT, so −3. Second example if time: −2 − (−8) is the jump from −8 to −2: 6 right, so 6. Do NOT teach "two minuses make a plus" as a rule today; let them see it.'))
 
 # ---------- 11 try2 ----------

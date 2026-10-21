@@ -1,0 +1,68 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:37:22Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P4: Lesson 4 – Fraction Frontier",
+ "order": [
+  "p4l4-title",
+  "p4l4-warm1",
+  "p4l4-warm2",
+  "p4l4-explore1",
+  "p4l4-explore2",
+  "p4l4-teach1",
+  "p4l4-we1",
+  "p4l4-try1",
+  "p4l4-teachline",
+  "p4l4-we2",
+  "p4l4-try2",
+  "p4l4-key",
+  "p4l4-break",
+  "p4l4-ws1",
+  "p4l4-ws1ans",
+  "p4l4-teachcompare",
+  "p4l4-trycompare",
+  "p4l4-teachwhole",
+  "p4l4-teachfind",
+  "p4l4-ws2",
+  "p4l4-ws2ans",
+  "p4l4-stretch",
+  "p4l4-challenge",
+  "p4l4-chdiag",
+  "p4l4-chwalk",
+  "p4l4-talk",
+  "p4l4-exit"
+ ],
+ "cover": "p4l4-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p4l4-title"
+  },
+  "s2": {
+   "description": "Teach: improper fractions, mixed numbers and fraction of a set",
+   "start": "p4l4-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p4l4-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p4l4-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

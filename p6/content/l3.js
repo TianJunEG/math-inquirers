@@ -190,11 +190,11 @@ module.exports = {
     ]
   },
 
-  workbook: H => [
+  workbook: H0 => { const H = Object.assign({}, H0, { sub: (l, t, o) => H0.sub(l, typeof t === 'string' ? t.replace(/ {2,}/g, m => '\u00A0'.repeat(m.length)) : t, o) }); return [
     H.q(1, 'The number line. Numbers get bigger to the right.', { before: 40, keepNext: true }),
     H.fig(numline(-10, 10, { h: 70, ly: 36, marks: [[-8, 'A', SKY], [-3, 'B', SKY], [4, 'C', YEL]], label: 'Number line from minus 10 to 10 with points A, B and C' })),
     H.sub('a', 'Write the number at each letter.      A = ______      B = ______      C = ______'),
-    H.sub('b', 'Smallest first:   3,  −5,  0,  −1,  −12,  7   →  ___________________________'),
+    H.sub('b', 'Smallest first:   3,  −5,  0,  −1,  −12,  7   →  ______________________'),
     H.sub('c', 'Write < or > in each gap.       −4  ____  −9          −1  ____  0          −15  ____  2'),
     H.q(2, 'On a December trip to Harbin, China, Mei wrote down the temperature.', { keepNext: true }),
     H.tbl([2400, 1500, 1500, 1500, 1500, 1500], [
@@ -205,20 +205,20 @@ module.exports = {
     H.sub('a', 'At which time was it warmest?   ______________'),
     H.sub('b', 'How many degrees did it rise from 6 a.m. to 12 noon?   ______________'),
     H.sub('c', 'How many degrees did it fall from 3 p.m. to 9 p.m.?   ______________'),
-    H.sub('d', 'Midnight was 5 degrees colder than 9 p.m. What was the temperature?   ________'),
+    H.sub('d', 'Midnight was 5 degrees colder than 9 p.m. What was the temperature? ______'),
     H.sub('e', 'At noon Singapore was 31 °C. How much warmer was it than Harbin?   ________'),
     H.q(3, 'Heights above sea level are positive. Heights below sea level are negative.', { keepNext: true }),
     H.fig(seaFig()),
 
     H.q(4, 'Work these out. Draw the jumps on the number line to help you.', { pb: true, before: 0, keepNext: true }),
     H.fig(numline(-12, 12, { h: 42, ly: 12, labEvery: 2, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
-    H.sub('a', '−6 + 9 = ________          (b)   4 − 11 = ________          (c)   −3 − 5 = ________'),
-    H.sub('d', '−2 + (−6) = ________     (e)   5 − (−3) = ________        (f)   −1 − (−7) = ________'),
+    H.sub('a', '−6 + 9 = ________       (b)  4 − 11 = ________       (c)  −3 − 5 = ________'),
+    H.sub('d', '−2 + (−6) = ______     (e)  5 − (−3) = ______      (f)  −1 − (−7) = ______'),
     H.q(5, 'Trace the code. Fill in the table to show x after each repeat.', { keepNext: true }),
     H.fig(traceFig()),
     H.q(6, 'Find the bug. Siti wants the lift to go DOWN 8 floors from floor 5. (0 = ground floor)', { keepNext: true }),
     H.fig(codeQ([[0, 'event', 'when flag clicked'], [0, 'var', 'set floor to [5]'], [0, 'control', 'repeat [8]'], [1, 'var', 'change floor by [1]'], [1, 'looks', 'say [floor] for [1] seconds']], ['(a) Her code says this floor last:', '(b) Change ONE block so the lift', 'goes down. New block:', '(c) Now the last floor it says is', 'which basement?'], [0, 2, 4], 'Siti\'s code: set floor to 5, repeat 8: change floor by 1, say floor. Questions with answer lines beside it.')),
     H.q(7, 'Plan your code. A diver starts at sea level (0 m) and goes down 4 m at a time to −28 m.', { keepNext: true }),
     H.fig(planFig())
-  ]
+  ]; }
 };

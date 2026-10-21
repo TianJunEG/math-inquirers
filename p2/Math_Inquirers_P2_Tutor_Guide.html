@@ -1,0 +1,1011 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:13mm 13mm 15mm}
+html,body{background:#EAF3FB}
+body{margin:0;font-family:'Nunito Sans',Arial,sans-serif;color:#1B2A49;font-size:14.6px;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:22px;padding:26px 30px;margin-bottom:18px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:#FFC93C;opacity:.9}
+.cover:before{content:"";position:absolute;right:90px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:#1F7A6F}
+.cover .tag{display:inline-block;background:#FFC93C;color:#1B2A49;font:700 11px 'Nunito Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 12px}
+.cover h1{font:600 32px/1.1 Fredoka,sans-serif;margin:12px 0 6px;max-width:75%;position:relative;z-index:1}
+.cover .sub{font-size:14px;color:#C9D3E6;max-width:75%;position:relative;z-index:1}
+.cover .slog{font:500 15px Fredoka,sans-serif;color:#FFC93C;margin-top:10px;position:relative;z-index:1}
+h1.title{font:600 26px Fredoka,sans-serif;margin:6px 0 10px}
+h2{font:600 21px/1.2 Fredoka,sans-serif;color:#1B2A49;margin:16px 0 8px;padding:6px 14px;background:#fff;border-left:8px solid #FFC93C;border-radius:10px;break-after:avoid}
+h3{font:600 16px/1.25 Fredoka,sans-serif;color:#1F7A6F;margin:12px 0 5px;break-after:avoid}
+p{margin:0 0 8px}
+p.c,div.c{text-align:center}
+ul{margin:2px 0 8px;padding-left:22px}
+li{margin:2px 0}
+li::marker{color:#1F7A6F}
+.sp{height:6px}
+b{font-weight:800}
+img{max-width:100%;height:auto}
+.tb{width:100%;border-collapse:separate;border-spacing:0;margin:6px 0 12px;background:#fff;border:1.5px solid #1B2A49;border-radius:12px;overflow:hidden;font-size:13.2px}
+.tb td{border-top:1px solid #C9D7E6;border-left:1px solid #C9D7E6;padding:6px 8px;vertical-align:top}
+.tb tr:first-child td{border-top:0}
+.tb td:first-child{border-left:0}
+.tb td.hd{background:#FFE7A8;font-weight:700}
+.tb td div{margin:1px 0}
+.tb tr{break-inside:avoid}
+.brk{break-before:page;height:0}
+
+.q{display:flex;gap:10px;align-items:flex-start;margin:7px 0 3px;break-inside:avoid;break-after:avoid}
+.qn{flex:none;width:26px;height:26px;border-radius:50%;background:#FFC93C;border:1.5px solid #1B2A49;display:flex;align-items:center;justify-content:center;font:600 13px Fredoka,sans-serif;margin-top:1px}
+.qt{flex:1}
+.work{height:34px;margin:1px 0 4px 36px;border-bottom:2px dotted #8FA7C2;background:#fff;border-radius:8px 8px 0 0;padding:4px 10px;break-inside:avoid}
+.work span{font-size:11px;font-weight:800;color:#8FA7C2;text-transform:uppercase;letter-spacing:.06em}
+.lv{display:inline-block;font:600 14px Fredoka,sans-serif;border-radius:999px;padding:2px 14px;margin:8px 0 0;border:1.5px solid #1B2A49}
+.lv-core{background:#D3F1E4}.lv-think-harder{background:#D6E9FB}.lv-challenge{background:#FFE2D6}
+</style></head><body><div class="cover"><div class="tag">Math Inquirers Holiday Program</div><h1>Math Inquirers P2 Tutor Guide</h1><div class="sub">Holiday program for children finishing Primary 2</div><div class="slog">Notice it. Test it. Explain why.</div></div><p><b>PRIMARY 2 HOLIDAY PROGRAM</b></p>
+<h2>Math Inquirers Holiday Program</h2>
+<p><i>Notice it. Test it. Explain why.</i></p>
+<p>Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.</p>
+<h3>The program at a glance</h3>
+<table class="tb"><colgroup><col style="width:23.2%"><col style="width:76.8%"></colgroup><tr><td class="hd"><div><b>Level</b></div></td><td><div>Children finishing Primary 2 (ages 8 to 9), going into P3, who are ready for more thinking than standard practice</div></td></tr><tr><td class="hd"><div><b>Length</b></div></td><td><div>10 lessons of 90 minutes, two a week over the 5 weeks of the holidays</div></td></tr><tr><td class="hd"><div><b>Group size</b></div></td><td><div>Up to 8 children per tutor, live online. Pilot with 6. Add a second tutor or helper above 8.</div></td></tr><tr><td class="hd"><div><b>Focus</b></div></td><td><div>Thinking skills: making a list in order, guess and check, drawing a model, working backwards, finding patterns, reasoning and explaining. Not speed drills.</div></td></tr><tr><td class="hd"><div><b>The arc of every lesson</b></div></td><td><div>Start concrete with objects, record in a table, spot the pattern, state the rule, use it (often backwards), then explain why.</div></td></tr><tr><td class="hd"><div><b>What children take home</b></div></td><td><div>A student workbook with an inquiry journal, 10 worksheets and a certificate</div></td></tr><tr><td class="hd"><div><b>Before tutors start</b></div></td><td><div>Every tutor signs the tutor confidentiality agreement before receiving any materials.</div></td></tr></table>
+<h3>Schedule</h3>
+<table class="tb"><colgroup><col style="width:9.1%"><col style="width:9.1%"><col style="width:30.3%"><col style="width:24.2%"><col style="width:27.3%"></colgroup><tr><td class="hd"><div class="c"><b>Week</b></div></td><td class="hd"><div class="c"><b>Lesson</b></div></td><td class="hd"><div class="c"><b>Title</b></div></td><td class="hd"><div class="c"><b>Topic</b></div></td><td class="hd"><div class="c"><b>Big idea</b></div></td></tr><tr><td><div class="c">Week 1a</div></td><td><div class="c">1</div></td><td><div><b>Digit Detectives</b></div></td><td><div>Numbers to 1000</div></td><td><div>Place value</div></td></tr><tr><td><div class="c">Week 1b</div></td><td><div class="c">2</div></td><td><div><b>Missing Digit Mysteries</b></div></td><td><div>Addition and Subtraction within 1000</div></td><td><div>Working backwards</div></td></tr><tr><td><div class="c">Week 2a</div></td><td><div class="c">3</div></td><td><div><b>Legs, Wheels and Arrays</b></div></td><td><div>Multiplication and Division</div></td><td><div>Draw it (arrays)</div></td></tr><tr><td><div class="c">Week 2b</div></td><td><div class="c">4</div></td><td><div><b>Pattern Machines</b></div></td><td><div>Patterns with Multiplication</div></td><td><div>Look for a pattern</div></td></tr><tr><td><div class="c">Week 3a</div></td><td><div class="c">5</div></td><td><div><b>Mystery Number Machines</b></div></td><td><div>Working Backwards</div></td><td><div>Inverse operations</div></td></tr><tr><td><div class="c">Week 3b</div></td><td><div class="c">6</div></td><td><div><b>Market Day</b></div></td><td><div>Money</div></td><td><div>Systematic listing (make a list in order)</div></td></tr><tr><td><div class="c">Week 4a</div></td><td><div class="c">7</div></td><td><div><b>Fair Shares</b></div></td><td><div>Fractions</div></td><td><div>Checking for equal parts</div></td></tr><tr><td><div class="c">Week 4b</div></td><td><div class="c">8</div></td><td><div><b>Shape Builders</b></div></td><td><div>2D and 3D Shapes</div></td><td><div>Spatial reasoning</div></td></tr><tr><td><div class="c">Week 5a</div></td><td><div class="c">9</div></td><td><div><b>Measure Masters</b></div></td><td><div>Length, Mass, Volume and Time</div></td><td><div>Reasoning with equal amounts (swapping)</div></td></tr><tr><td><div class="c">Week 5b</div></td><td><div class="c">10</div></td><td><div><b>Challenge Day</b></div></td><td><div>Mixed Puzzles</div></td><td><div>Choosing a strategy</div></td></tr></table>
+<p>Suggested pairing: two lessons a week, for example Tuesday and Thursday, or Saturday and Sunday. Keep the same time slot all five weeks.</p>
+<div class="brk"></div>
+<h2>The 90-minute lesson routine</h2>
+<p>Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.</p>
+<table class="tb"><colgroup><col style="width:9.1%"><col style="width:14.6%"><col style="width:27.3%"><col style="width:23.2%"><col style="width:25.8%"></colgroup><tr><td class="hd"><div class="c"><b>Minutes</b></div></td><td class="hd"><div class="c"><b>Part</b></div></td><td class="hd"><div class="c"><b>What happens</b></div></td><td class="hd"><div class="c"><b>Face to face</b></div></td><td class="hd"><div class="c"><b>Online</b></div></td></tr><tr><td><div class="c"><b>0–10</b></div></td><td><div><b>Warm-up</b></div></td><td><div>A quick game from the lesson plan. Everyone joins in.</div></td><td><div>Sit in a circle or horseshoe.</div></td><td><div>Cameras on. Answers by thumbs, hands or chat.</div></td></tr><tr><td><div class="c"><b>10–25</b></div></td><td><div><b>Explore</b></div></td><td><div>Hands-on in pairs. Objects first, no writing yet.</div></td><td><div>Materials box on each table.</div></td><td><div>Each child has their own materials at home. Pairs go to breakout rooms.</div></td></tr><tr><td><div class="c"><b>25–35</b></div></td><td><div><b>Mini-lesson</b></div></td><td><div>Tutor builds the table on the board, names the rule and asks what stays the same and what changes.</div></td><td><div>Whiteboard.</div></td><td><div>Shared slide and annotation tool.</div></td></tr><tr><td><div class="c"><b>35–40</b></div></td><td><div><b>Brain break</b></div></td><td><div>Stand, stretch, drink water.</div></td><td><div>A short movement game.</div></td><td><div>Stand up on camera. Count the stretches together.</div></td></tr><tr><td><div class="c"><b>40–70</b></div></td><td><div><b>Worksheet</b></div></td><td><div>Start in pairs, finish alone. Tutor asks “how do you know?” rather than giving answers.</div></td><td><div>Printed workbook, tutor circulates.</div></td><td><div>Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.</div></td></tr><tr><td><div class="c"><b>70–80</b></div></td><td><div><b>Talk time</b></div></td><td><div>Share one answer and explain it. Compare methods.</div></td><td><div>Each child shares in turn.</div></td><td><div>Each child unmutes in turn.</div></td></tr><tr><td><div class="c"><b>80–90</b></div></td><td><div><b>Exit ticket and stamp</b></div></td><td><div>One question on a slip of paper. Stamp the inquiry journal.</div></td><td><div>Paper slip, tutor stamps.</div></td><td><div>Child writes the answer and shows the camera. Tutor stamps the next time or posts it.</div></td></tr></table>
+<h3>Teaching habits that matter</h3>
+<ul>
+<li>Ask “How do you know?” after every answer, right or wrong.</li>
+<li>Wait 10 seconds before helping. Let children struggle a little.</li>
+<li>Praise the thinking (“You checked it two ways”), not just the answer.</li>
+<li>Let children disagree with each other and settle it with objects or a drawing.</li>
+<li>If a child finishes early, use the Challenge or Extension question, not extra drill.</li>
+</ul>
+<h3>Preparing the materials</h3>
+<ul>
+<li>Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.</li>
+<li>Cut-outs used: place-value and digit cards (Lessons 1, 2, 10), play coins and notes (Lesson 6), fraction strips (Lesson 7), paper clock and cube strips (Lesson 9).</li>
+<li>Keep the answer key with the tutor only. Check answers together on screen.</li>
+<li>Use the shared screen or a digital whiteboard for the mini-lesson table.</li>
+</ul>
+<h3>Setting up online</h3>
+<ul>
+<li>Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, 20 counters or small objects, scissors, a split pin or short pencil for the clock, paper and a pencil.</li>
+<li>Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.</li>
+<li>Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.</li>
+<li>Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.</li>
+<li>Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.</li>
+<div class="brk"></div>
+</ul>
+<h2>Materials master list</h2>
+<table class="tb"><colgroup><col style="width:9.1%"><col style="width:26.3%"><col style="width:32.3%"><col style="width:32.3%"></colgroup><tr><td class="hd"><div class="c"><b>Lesson</b></div></td><td class="hd"><div class="c"><b>Title</b></div></td><td class="hd"><div class="c"><b>Face to face</b></div></td><td class="hd"><div class="c"><b>Online set-up</b></div></td></tr><tr><td><div class="c"><b>1</b></div></td><td><div>Digit Detectives</div></td><td><div>Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, a 1000 chart page (rows of 10).</div></td><td><div>Children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the slide 1000-chart pieces.</div></td></tr><tr><td><div class="c"><b>2</b></div></td><td><div>Missing Digit Mysteries</div></td><td><div>Digit cards 0 to 9, base-ten blocks or place-value counters, mini whiteboards, a paper magic triangle with 6 circles and number tiles 110 to 160.</div></td><td><div>Children write column sums on whiteboards and hold them up; number tiles are cut from paper before the lesson. The tutor writes on the slide sums.</div></td></tr><tr><td><div class="c"><b>3</b></div></td><td><div>Legs, Wheels and Arrays</div></td><td><div>About 30 counters per pair, mini whiteboards, squared paper. Optional: picture cards of hens and goats, bicycles and tricycles.</div></td><td><div>Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children hold their arrays and tables up to the camera.</div></td></tr><tr><td><div class="c"><b>4</b></div></td><td><div>Pattern Machines</div></td><td><div>Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters.</div></td><td><div>Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children hold up their tables.</div></td></tr><tr><td><div class="c"><b>5</b></div></td><td><div>Mystery Number Machines</div></td><td><div>Mini whiteboards, counters, paper cups, number machine cards (× 2, × 3, × 4, × 5, × 10 and + or − cards from 1 to 20), paper strips for bars.</div></td><td><div>Machine cards shown on the slide; children write on whiteboards and hold them up. For bars, children draw on paper or fold paper strips into equal parts.</div></td></tr><tr><td><div class="c"><b>6</b></div></td><td><div>Market Day</div></td><td><div>Play money: coins 5¢, 10¢, 20¢, 50¢, $1 and notes $2, $5, $10, $50 (about 6 of each per pair), price tags, mini whiteboards.</div></td><td><div>Print the cut-out coins and notes, or use real money at home. The shop and the toy stall are on the slides; children show their money to the camera.</div></td></tr><tr><td><div class="c"><b>7</b></div></td><td><div>Fair Shares</div></td><td><div>Paper strips of the same length (4 per child), paper squares, scissors, crayons, mini whiteboards.</div></td><td><div>Each child folds paper strips on camera; the tutor shows fraction bars on the slides and children colour their own bars.</div></td></tr><tr><td><div class="c"><b>8</b></div></td><td><div>Shape Builders</div></td><td><div>Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), printed cube nets, mini whiteboards.</div></td><td><div>Children cut circles and build stacks on camera; nets are printed from the back of the workbook, or cut from an empty box.</div></td></tr><tr><td><div class="c"><b>9</b></div></td><td><div>Measure Masters</div></td><td><div>A coat hanger, two paper cups and string (a home-made balance), 20¢ coins or erasers, a glue stick and a spoon; two plastic cups for pouring; a cardboard clock with hands; mini whiteboards.</div></td><td><div>Children build the coat-hanger balance before the lesson and hold it up to the camera. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock.</div></td></tr><tr><td><div class="c"><b>10</b></div></td><td><div>Challenge Day</div></td><td><div>Puzzle cards for 4 stations, play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.</div></td><td><div>Breakout pairs work on one station card each and report back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard.</div></td></tr></table>
+<div class="brk"></div>
+<h2>How to use the scripts</h2>
+<p>Every lesson below is a minute-by-minute script. The slides match it: one slide or two for each part. You do not have to say the words exactly, but keep the questions, because the questions are what makes children think.</p>
+<table class="tb"><colgroup><col style="width:15.2%"><col style="width:84.8%"></colgroup><tr><td class="hd"><div><b>SAY</b></div></td><td><div>Words to say aloud, in plain language for 8- and 9-year-olds. Said in your own voice, not read from the page.</div></td></tr><tr><td class="hd"><div><b>DO</b></div></td><td><div>What you do: set up, hand out, show a slide, or move around the room.</div></td></tr><tr><td class="hd"><div><b>ASK / EXPECT</b></div></td><td><div>Questions to put to the group, with the answer you are listening for. Let children answer before you explain.</div></td></tr><tr><td class="hd"><div><b>IF STUCK</b></div></td><td><div>A ladder of help. Give hint 1, wait ten seconds, then give hint 2. Do not give the answer.</div></td></tr></table>
+<h3>Five habits that run through every script</h3>
+<ul>
+<li>Predict first. Before children test anything, ask for a guess and write it down. A wrong guess is useful because we can test it.</li>
+<li>Wait ten seconds after every question. Count silently. Most children answer in the last four.</li>
+<li>Ask “How do you know?” after right answers too, so that children do not read your face for the answer.</li>
+<li>Praise the thinking, not the answer: “You checked it two ways” beats “Well done”.</li>
+<li>When an answer is wrong, say “Let us test that,” and use objects, not “No”.</li>
+</ul>
+<h3>Answering a wrong answer</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>If…</b></div></td><td class="hd"><div class="c"><b>Then…</b></div></td></tr><tr><td><div>A child gives a wrong answer</div></td><td><div>“Thank you. Let us test it with the counters.” Then build it together.</div></td></tr><tr><td><div>A child gives a right answer but cannot explain</div></td><td><div>“Show me with your counters.” Then: “Tell your partner how you know.”</div></td></tr><tr><td><div>A child says “I do not know”</div></td><td><div>“What do you notice? What could you try first?” Offer hint 1.</div></td></tr><tr><td><div>Two children disagree</div></td><td><div>“Both of you, convince the group using objects.” Let the objects decide.</div></td></tr></table>
+<div class="sp"></div>
+<div class="brk"></div>
+<h2>Lesson 1: Digit Detectives</h2>
+<p>Week 1 (first lesson)   •   Numbers to 1000   •   Workbook: Lesson 1</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Read and build 3-digit numbers by place value (also with more than 9 tens), make every number from a set of digit cards by listing in order, find the biggest and smallest, and use patterns on a 1000 chart to count on and back in 1s, 10s and 100s.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Place value, making a list in order, looking for a pattern, reasoning about zero</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, a 1000 chart page (rows of 10).</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the slide 1000-chart pieces.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Welcome, Digit Detectives! Every 3-digit number is made of just three digits, but WHERE a digit sits changes everything.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Today we find every number hiding in a set of digit cards, and we make sure we do not miss any. Notice it. Test it. Explain why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Place It Right. The tutor turns over digit cards one at a time. Write each one in the hundreds, tens or ones box straight away. No moving! Biggest number wins.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Draw three boxes on your whiteboard: hundreds, tens, ones. I will turn over one digit card at a time. As soon as you see it, write it in a box. No moving it later!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Try to make the BIGGEST number. Where will you put a 9? Where will you put a 1? Why?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>4 hundreds, 6 tens, 2 ones = ?</div></td><td><div>462</div></td></tr><tr><td><div>What is the 8 worth in 384?</div></td><td><div>80</div></td></tr><tr><td><div>10 more than 296?</div></td><td><div>306</div></td></tr><tr><td><div>100 less than 405?</div></td><td><div>305</div></td></tr><tr><td><div>The biggest 3-digit number?</div></td><td><div>999</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You have the cards 3, 5 and 8. How many different 3-digit numbers do you think you can make with them? Write your guess in the corner of your whiteboard.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Take the digit cards 3, 5 and 8.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Make a 3-digit number using each card once. Write it down.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Make as many different numbers as you can.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Circle the biggest and the smallest. Have you got them all?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: put the 3 in the hundreds place first. What can the other two cards do?</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Not sure if you have them all: “How many numbers start with 3? With 5? With 8?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: add a 0 card and make numbers with 0, 3 and 5. Why are there fewer?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many numbers did you make?</div></td><td><div>6: 358, 385, 538, 583, 835, 853.</div></td></tr><tr><td><div>How do you know you have them all?</div></td><td><div>List in order: each card starts 2 numbers, and 3 × 2 = 6.</div></td></tr><tr><td><div>Which is the biggest? The smallest?</div></td><td><div>853 and 358: put the biggest digit first for the biggest.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“5 hundreds, 12 tens and 4 ones. 12 tens is 120, so the number is 500 + 120 + 4 = 624. I can also see it as 6 hundreds, 2 tens, 4 ones, because 10 of the tens make another hundred.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Cards 1, 6 and 9. I keep the hundreds digit the same and swap the other two. 1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961. Each card starts 2 numbers, and 3 cards make 6 numbers. That is how I know I have them all.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“The biggest number has the biggest digit in the hundreds place: 961. The smallest has the smallest digit in the hundreds place: 169. But zero can never go first: 036 is just 36.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Place value: more than 9 tens. 5 hundreds, 12 tens and 4 ones. 12 tens = 120. 500 + 120 + 4 = ?</div></td><td><div>624. Ten of the tens make another hundred.</div></td></tr><tr><td><div>Every number from 1, 6, 9. Fix the hundreds digit, then swap the other two. 1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961. How many? Which is biggest?</div></td><td><div>6 numbers. Biggest 961, smallest 169.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: list in order. Fix the hundreds digit, then swap the others. Each card starts the same number of numbers. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Writing 6 hundreds, 15 tens and 2 ones as 6152 instead of regrouping 15 tens as 1 hundred and 5 tens (752).</li>
+<li>Listing digit-card numbers at random, so one is missed or written twice, or counting 059 as a 3-digit number.</li>
+<li>Counting back in 10s across a hundred: 512, 502, 592 instead of 512, 502, 492.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Human number. Three children stand as hundreds, tens and ones holding digit cards. Swap two of them: is the new number bigger or smaller?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 1 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “How many of your numbers start with this card? Is that all of them?”</li>
+<li>Ask: “What is this digit worth? How many tens is that?”</li>
+<li>Ask: “Point to the number one square below this one on the chart. How much bigger is it?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Fix the hundreds digit first.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Build it with blocks: hundreds, tens and ones. Can 10 tens become a hundred?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “Say the numbers out loud as you count on in 10s. What happens after 590?”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: Use the digit cards 1, 5 and 8 once each. How many different 3-digit numbers can you make? List them in order.</div></td><td><div>6 numbers: 158, 185, 518, 581, 815, 851.</div></td></tr><tr><td><div>Workbook Think Harder 2: Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?</div></td><td><div>3 numbers: 447, 474, 744. The two 4s look the same, so swapping them does not make a new number.</div></td></tr><tr><td><div>Workbook Think Harder 3: What number is 3 hundreds, 14 tens and 6 ones?</div></td><td><div>446 (14 tens = 1 hundred and 4 tens).</div></td></tr><tr><td><div>Workbook Think Harder 4: Ben counts back in 100s from 980: 980, 880, 780 … He stops at the last 3-digit number. What is it? How many numbers did he say?</div></td><td><div>180. He said 9 numbers: 980, 880, 780, 680, 580, 480, 380, 280, 180.</div></td></tr><tr><td><div>Workbook Challenge 5: Mei uses each of the digit cards 1, 2, 3, 4, 5 and 6 once to make two 3-digit numbers. She adds them. What is the smallest total she can make?</div></td><td><div>381, for example 135 + 246. The smallest digits 1 and 2 go in the hundreds places, 3 and 4 in the tens, 5 and 6 in the ones: 300 + 70 + 11 = 381.</div></td></tr><tr><td><div>Workbook Challenge 6: Ali counts in 5s, starting at 3: 3, 8, 13, 18 … Will he say 500? Will he say 998? Explain.</div></td><td><div>He says only numbers ending in 3 or 8. So he will not say 500, but he will say 998.</div></td></tr><tr><td><div>Workbook Challenge 7: Ben writes all the numbers from 300 to 399. How many times does he write the digit 3?</div></td><td><div>120. Hundreds place: 100 times. Tens place (330 to 339): 10 times. Ones place (303, 313, … 393): 10 times. 100 + 10 + 10 = 120.</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who agrees?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“How do you know you found every number from your digit cards?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who is right, and why?</div></td><td><div>401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. We know we have every number because we listed them in order: each card starts the same number of numbers.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Use the digit cards 6, 0 and 2 once each. Write the biggest and the smallest 3-digit number.</div></td><td><div>Biggest 620, smallest 206.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You were real detectives today: you made a list in order, so no number could hide from you.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Hand me your exit ticket and I will stamp your inquiry journal.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Use any three of the cards 1, 3, 5 and 7. How many different 3-digit numbers can you make? (24: 6 for each set of three cards, and there are 4 sets.)</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 407  (b) 752  (c) 3 tens; 13 tens  (d) 70</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) Start with 2: 247, 274. Start with 4: 427, 472. Start with 7: 724, 742.  (b) Biggest 742, smallest 247  (c) 472 (only 28 away from 500)  (d) 2 odd numbers: 247 and 427</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) 509, 590, 905, 950  (b) 0 cannot be the hundreds digit (059 is not a 3-digit number), so only 5 or 9 can start: 2 + 2 = 4 numbers, not 6.</p>
+<p style="padding-left:13px"><b>Q4  </b>Piece A: 348, 349 / 357, 359 / 367, 368.  Piece B: 595, 596, 597 in the middle row and 606 at the bottom.  (a) Down: 10 more. Right: 1 more.  (b) 405 (395, then 405)</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 347, 447  (b) 502, 492  (c) 1000  (d) 700, 699</p>
+<p style="padding-left:13px"><b>Q6  </b>(a) 435  (b) 6 numbers: 102, 111, 120, 201, 210, 300</p>
+<div class="brk"></div>
+<h2>Lesson 2: Missing Digit Mysteries</h2>
+<p>Week 1 (second lesson)   •   Addition and Subtraction within 1000   •   Workbook: Lesson 2</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Find missing digits in 3-digit addition and subtraction by starting at the ones and checking for a carry, use &quot;=&quot; as &quot;is the same as&quot; to balance number sentences, and complete magic squares and triangles with bigger numbers.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Working backwards, guess and check, reasoning about regrouping, balancing, drawing a model</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Digit cards 0 to 9, base-ten blocks or place-value counters, mini whiteboards, a paper magic triangle with 6 circles and number tiles 110 to 160.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Children write column sums on whiteboards and hold them up; number tiles are cut from paper before the lesson. The tutor writes on the slide sums.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Welcome back, detectives! Someone has spilled ink on our sums and some digits have disappeared.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Today we find the missing digits, make both sides of &quot;=&quot; balance, and crack some magic squares. Notice it. Test it. Explain why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Partners to 100 and 1000. The tutor says a number; say its partner. 65 → 35, then 370 → 630, then 125 → 875.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“I say a number. You say its partner to make 100. Ready? 65!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Now partners to 1000. 370! How did you find 630 so fast?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>65 + __ = 100</div></td><td><div>35</div></td></tr><tr><td><div>300 + 450 = ?</div></td><td><div>750</div></td></tr><tr><td><div>700 − 250 = ?</div></td><td><div>450</div></td></tr><tr><td><div>238 + 10 = ?</div></td><td><div>248</div></td></tr><tr><td><div>500 − __ = 120</div></td><td><div>380</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pick any 3-digit number. I predict that its partner to make 999 will be easy to find, with no carrying at all. Do you think I am right? Let us test it.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Pick any 3-digit number, like 358.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Find its partner that makes 999. Check by adding.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Do it for three more numbers.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Look at each column. What do you notice?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: start with the hundreds. What goes with 3 to make 9?</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Not sure: add your two numbers in a column sum to check the total is 999.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: try partners to 1000. What changes in the ones column?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>What did you notice about each column?</div></td><td><div>The two digits in each column add up to 9.</div></td></tr><tr><td><div>Why is there never a carry?</div></td><td><div>No column adds up to more than 9.</div></td></tr><tr><td><div>Find the partner of 274 without adding.</div></td><td><div>725: 2 + 7, 7 + 2 and 4 + 5 all make 9.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“4□7 + 28□ = 723. I start at the ones: 7 plus something ends in 3. 7 + 6 = 13. So the box is 6, and I carry 1 ten.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Tens: something + 8 + the carried 1 ends in 2. 3 + 8 + 1 = 12. So the box is 3, and I carry 1 hundred. Hundreds: 4 + 2 + 1 = 7. It matches! I check by adding: 437 + 286 = 723.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“6□2 − 24□ = 385. Subtraction is harder, so I work backwards and turn it into an addition: 385 + 24□ = 6□2. Ones: 5 + 7 = 12, so the box is 7. Tens: 8 + 4 + 1 = 13, so the box is 3. Hundreds: 3 + 2 + 1 = 6 ✓.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“245 + 130 = 200 + □. I do not need to add. 245 is 45 more than 200, so the box must be 45 more than 130. That is 175. Both sides are 375.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Missing digits: start at the ones. 4□7 + 28□ = 723 Ones: 7 + □ ends in 3, so □ = 6 (13, carry 1). Tens: □ + 8 + 1 ends in 2, so □ = 3 (12, carry 1). Hundreds: 4 + 2 + 1 = 7 ✓</div></td><td><div>437 + 286 = 723.</div></td></tr><tr><td><div>Balance: &quot;=&quot; means &quot;is the same as&quot;. 245 + 130 = 200 + □ 245 is 45 more than 200, so □ is 45 more than 130.</div></td><td><div>175. Both sides are 375.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: start at the ones. Start at the ones column and ask: was there a carry? Check by adding. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Forgetting the carried 1: in Q1c writing 6 in the tens box (8 + 6 = 14) instead of 5 (8 + 5 + 1 = 14).</li>
+<li>Reading &quot;=&quot; as &quot;the answer comes next&quot;: 350 + 140 = 300 + □ answered 490.</li>
+<li>Magic triangle: putting the biggest numbers in the corners when the side total is small (390 needs the smallest corners).</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Balance bodies. Stand like a see-saw with arms out. The tutor says a number sentence: stay level if it is true, tip to one side if it is false.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 2 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “Which column did you start with? Why?”</li>
+<li>Ask: “Was there a carry into this column? How do you know?”</li>
+<li>Ask: “What is each side of the = sign worth? Are they the same?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Start at the ones column.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Try a digit in the box and add. Too big or too small?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “Turn the subtraction into an addition: answer + bottom number = top number.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: Find the missing digits:  5□7 + □48 = 905</div></td><td><div>557 + 348 = 905 (ones 7 + 8 = 15; tens 5 + 4 + 1 = 10; hundreds 5 + 3 + 1 = 9).</div></td></tr><tr><td><div>Workbook Think Harder 2: Find the missing digits:  7□1 − □58 = 263</div></td><td><div>721 − 458 = 263. Check: 263 + 458 = 721.</div></td></tr><tr><td><div>Workbook Think Harder 3: What number makes this true?  538 + 199 = 540 + □</div></td><td><div>197. 538 is 2 less than 540, so □ is 2 less than 199. Both sides are 737.</div></td></tr><tr><td><div>Workbook Think Harder 4: A shop had 905 eggs. It sold some in the morning and 280 in the afternoon. 345 eggs were left. How many eggs were sold in the morning?</div></td><td><div>280. Work backwards: 345 + 280 = 625 eggs after the morning; 905 − 625 = 280.</div></td></tr><tr><td><div>Workbook Challenge 5: Find ALL the ways to fill the boxes:  □□7 + 4□□ = 1000</div></td><td><div>10 ways: 507 + 493, 517 + 483, 527 + 473, 537 + 463, 547 + 453, 557 + 443, 567 + 433, 577 + 423, 587 + 413, 597 + 403. Ones: 7 + 3 = 10. Hundreds: 5 + 4 + 1 = 10. The two tens digits add up to 9 (with the carried 1 they make 10).</div></td></tr><tr><td><div>Workbook Challenge 6: Box A and Box B hold 250 marbles together. Box B and Box C hold 350. Box A and Box C hold 400. How many marbles are in each box?</div></td><td><div>A 150, B 100, C 250. B + C is 100 more than A + B, so C has 100 more than A. A + C = 400, so A = 150 and C = 250. Then B = 250 − 150 = 100.</div></td></tr><tr><td><div>Workbook Challenge 7: Use the digit cards 1, 2, 3, 4, 5 and 6 once each to make two 3-digit numbers. Make the difference as SMALL as possible.</div></td><td><div>47: 412 − 365. The hundreds digits are next to each other (4 and 3); then make 4□□ as small as possible (412) and 3□□ as big as possible (365).</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Why do we start at the ones column when we look for missing digits?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Ravi says 398 + 205 = 400 + 203 without adding. How can he know?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Why do we start at the ones column when we look for missing digits?</div></td><td><div>The ones column can make a carry that changes the tens column, and the tens can change the hundreds, so we must know the ones first. Ravi moved 2 from 205 onto 398: the total does not change, so both sides are 603.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>4□6 + 37□ = 801. Find the missing digits.</div></td><td><div>426 + 375 = 801 (ones: 6 + 5 = 11; tens: 2 + 7 + 1 = 10).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You were digit detectives again: you started at the ones, checked every carry and proved each answer by adding.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Exit ticket, then your stamp.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Make your own missing-digit sum with two boxes that has exactly ONE answer. Swap with a partner. (Check: does any other digit also work?)</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 224 + 355 = 579  (b) 462 + 375 = 837  (c) 386 + 259 = 645</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) 778 − 325 = 453  (b) 543 − 267 = 276</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) 190  (b) 525  (c) 280  (d) Yes. 398 is 2 less than 400 and 205 is 2 more than 203, so both sides are the same (603).</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) 150 (diagonal 80 + 50 + 20)  (b) Top: 10. Middle: 30 and 70. Bottom: 90.  (c) Yes, still magic. New total 450: every line has 3 numbers and each is 100 more, so 150 + 300.</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) Corners 110, 120, 130. Between 110 and 120: 160. Between 120 and 130: 140. Between 130 and 110: 150.  (b) Corners 140, 150, 160. Between 140 and 150: 130. Between 150 and 160: 110. Between 160 and 140: 120.</p>
+<p style="padding-left:13px"><b>Q6  </b>250 and 450 (700 − 200 = 500, half of 500 is 250, 250 + 200 = 450).</p>
+<div class="brk"></div>
+<h2>Lesson 3: Legs, Wheels and Arrays</h2>
+<p>Week 2 (first lesson)   •   Multiplication and Division   •   Workbook: Lesson 3</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Read an array as rows of equal groups and write two multiplication and two division sentences for it; solve &quot;how many of each&quot; legs and wheels puzzles with a table; share with leftovers and decide what the leftover means; find all the arrays for a number.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Draw it (arrays), make a table, guess and check, working in order to find all the ways</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>About 30 counters per pair, mini whiteboards, squared paper. Optional: picture cards of hens and goats, bicycles and tricycles.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children hold their arrays and tables up to the camera.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Welcome back, inquirers! Today we are on a farm and in a bicycle shop. We will count legs and wheels, line things up in neat rows called arrays, and share things out fairly.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Our big question today: when there are two kinds of things mixed up, how can we find out how many of each there are, without guessing wildly?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Legs and wheels count. Picture cards: 4 cars, 5 bicycles, 3 tricycles, 5 dogs, 6 hens, 2 cars and 1 bicycle. Count the wheels or legs in 2s, 3s, 4s or 5s.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Here are some cards. Each card shows some cars, bicycles or animals. Count the wheels or the legs. Count in 2s, 3s, 4s or 5s, not in 1s!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Show me the number with your fingers or on your whiteboard. Then we will click to check.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>3 × 5 = ?</div></td><td><div>15</div></td></tr><tr><td><div>4 groups of 4. How many?</div></td><td><div>16</div></td></tr><tr><td><div>20 ÷ 2 = ?</div></td><td><div>10</div></td></tr><tr><td><div>30 shared equally by 10 children. How many each?</div></td><td><div>3</div></td></tr><tr><td><div>How many 5s make 35?</div></td><td><div>7</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The farmer has only hens and goats in a pen. He counts 16 legs. How many animals do you think there are? Is there only one answer? Write a guess.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. A pen has only hens (2 legs) and goats (4 legs).</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. The farmer counts 16 legs altogether.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Use counters or drawings to find a mix of hens and goats.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Find every mix. Record each one.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: try all hens first. How many hens make 16 legs?</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Then swap one hen for a goat. What happens to the number of legs? Fix it.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: which mix has the most animals? Which has the fewest? How do you know there are no more mixes?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many different mixes did you find?</div></td><td><div>5 mixes: 8 hens; 6 hens and 1 goat; 4 hens and 2 goats; 2 hens and 3 goats; 4 goats.</div></td></tr><tr><td><div>How do you know you have them all?</div></td><td><div>The goats went 0, 1, 2, 3, 4. Five goats would need 20 legs, too many.</div></td></tr><tr><td><div>What happens each time you swap 2 hens for 1 goat?</div></td><td><div>The legs stay at 16: 2 hens have 4 legs, the same as 1 goat.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“3 rows of 4 dots. I count the rows: 3. I count how many in each row: 4. 4, 8, 12. So 3 × 4 = 12. If I turn my head, it is 4 rows of 3, so 4 × 3 = 12 too. Sharing 12 into 3 rows gives 4 in each row: 12 ÷ 3 = 4. Putting 12 in groups of 4 gives 3 groups: 12 ÷ 4 = 3.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Part of this tray is under a cloth. I do not need to see every cookie. The top row shows 5 in each row. The side shows 4 rows. 4 rows of 5 is 20. I can see 8, so 20 − 8 = 12 are hidden.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“6 vehicles, bicycles and cars, 16 wheels. I start with all bicycles: 6 bicycles is 12 wheels. Too few. I swap one bicycle for a car: that adds 2 wheels, 14. Swap again: 16. So 4 bicycles and 2 cars. Check: 8 + 8 = 16 wheels, 4 + 2 = 6 vehicles.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Arrays: rows of equal groups. 3 rows of 4 dots. 3 × 4 = 12 and 4 × 3 = 12. 12 ÷ 3 = 4 and 12 ÷ 4 = 3. A tray of 4 rows of 5 cookies has some under a cloth. We can see 8. How many are hidden?</div></td><td><div>12 hidden (4 rows of 5 is 20, and 20 − 8 = 12).</div></td></tr><tr><td><div>How many of each? Make a table. 6 vehicles: bicycles (2 wheels) and cars (4 wheels). 16 wheels altogether. Start with all bicycles: 6 bicycles, 12 wheels. Swap one bicycle for a car each time: 14, then 16 wheels. How many of each?</div></td><td><div>4 bicycles and 2 cars (8 + 8 = 16 wheels).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: draw it, then make a table. An array is rows of equal groups: rows × number in each row. For &quot;how many of each&quot;, start with all of one kind and swap one at a time in a table. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Counting the hidden part of an array one by one (or guessing) instead of using rows × number in each row and taking away the ones you can see.</li>
+<li>Giving the number of whole groups as the answer when the leftover still needs a place (28 children, vans of 5: writing 5 vans instead of 6).</li>
+<li>In &quot;how many of each&quot; puzzles, matching only one clue (the legs) and forgetting to check the other (the number of animals).</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Array moves. The tutor calls &quot;3 rows of 4!&quot;: do 3 rows of 4 claps, counting 4, 8, 12. Then &quot;5 rows of 2&quot; jumps and &quot;2 rows of 10&quot; stomps.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 3 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: &quot;How many rows? How many in each row? Which multiplication is that?&quot;</li>
+<li>Ask: &quot;What changes each time you swap one animal for the other kind?&quot;</li>
+<li>Ask: &quot;Did you check BOTH clues: the number of animals and the number of legs?&quot;</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: &quot;Draw it. Dots in rows, or circles for heads and sticks for legs.&quot;</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: &quot;Start with all of one kind. Then swap one at a time.&quot;</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: &quot;Make a table so you can see the pattern and do not miss a row.&quot;</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: There are 9 hens and goats on a farm. They have 24 legs altogether. How many hens and how many goats are there?</div></td><td><div>6 hens and 3 goats. Start with 9 hens (18 legs); each swap to a goat adds 2 legs; 3 swaps make 24. Check: 12 + 12 = 24.</div></td></tr><tr><td><div>Workbook Think Harder 2: Ali shares 34 marbles equally among 4 friends, giving as many as he can. How many does each friend get? How many are left over?</div></td><td><div>8 each (4 × 8 = 32) and 2 left over.</div></td></tr><tr><td><div>Workbook Think Harder 3: An array of stickers has 4 rows. Ben counts 12 stickers in the first 3 rows. How many stickers are in the whole array?</div></td><td><div>16 stickers. 3 rows have 12, so each row has 4 (12 ÷ 3 = 4); 4 rows of 4 is 16.</div></td></tr><tr><td><div>Workbook Think Harder 4: 27 children go on a boat ride. Each boat holds 4 children. How many boats are needed? How many empty seats are there?</div></td><td><div>7 boats (6 boats hold 24, and the other 3 children need a boat too). 7 boats have 28 seats, so 1 empty seat.</div></td></tr><tr><td><div>Workbook Challenge 5: A toy shop has tricycles (3 wheels) and toy cars (4 wheels), at least one of each. There are 30 wheels altogether. Find all the ways.</div></td><td><div>2 ways: 6 tricycles and 3 cars (18 + 12); 2 tricycles and 6 cars (6 + 24). With 1, 2, 4, 5 or 7 cars the wheels left are not in the 3 times table.</div></td></tr><tr><td><div>Workbook Challenge 6: Mr Lim has between 20 and 30 sweets. When he puts them in groups of 4, 3 are left over. When he puts them in groups of 5, 2 are left over. How many sweets does he have?</div></td><td><div>27. Groups of 4 with 3 left: 23 or 27. Groups of 5 with 2 left: 22 or 27. Only 27 is in both lists.</div></td></tr><tr><td><div>Workbook Challenge 7: A pen has hens and goats. There are 2 more hens than goats. There are 22 legs altogether. How many hens and how many goats?</div></td><td><div>5 hens and 3 goats. Guess and check: 1 goat and 3 hens make 10 legs; 2 and 4 make 16; 3 and 5 make 22. Check: 12 + 10 = 22.</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“How did a table help you find how many hens and goats?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?</div></td><td><div>No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3. The table shows that every swap changes the legs by the same amount, so we can see how many swaps we need.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>A pen has hens and goats. There are 5 animals and 14 legs. How many hens and how many goats?</div></td><td><div>3 hens and 2 goats (6 + 8 = 14 legs).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Today you drew arrays, made tables and checked both clues. Next time a puzzle has two kinds of things mixed up, start with all of one kind and swap one at a time.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Find all the arrays (at least 2 rows, at least 2 in each row) for 16 counters. (3 ways: 2 rows of 8, 4 rows of 4, 8 rows of 2.)</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 4 × 5 = 20 and 5 × 4 = 20.  (b) 20 ÷ 4 = 5 and 20 ÷ 5 = 4.</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) 30 cups (3 rows of 10).  (b) 18 cups. We can see 12 (10 in the top row and 1 more in each of the other 2 rows), and 30 − 12 = 18.  (c) e.g. &quot;3 rows of 10 is 30, then take away the 12 I can see.&quot;</p>
+<p style="padding-left:13px"><b>Q3  </b>4 hens and 3 goats. Table: 7 hens 0 goats 14 legs; 6, 1, 16; 5, 2, 18; 4, 3, 20. Each swap adds 2 legs. Check: 8 + 12 = 20 legs and 4 + 3 = 7 animals.</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) 5 stickers each (4 × 5 = 20).  (b) 3 left over.  (c) 1 more sticker: 24 stickers give 6 each with none left over.</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 6 vans. 5 vans hold 25 children and the other 3 children need a van too.  (b) 2 empty seats (6 vans hold 30, and 30 − 28 = 2).</p>
+<p style="padding-left:13px"><b>Q6  </b>4 ways: 2 rows of 10, 4 rows of 5, 5 rows of 4, 10 rows of 2. 3 rows does not work (3 rows of 6 is 18, 3 rows of 7 is 21). More than 10 rows would leave fewer than 2 chairs in a row.</p>
+<p style="padding-left:13px"><b>Q7  </b>3 ways: 7 bicycles and 1 tricycle (14 + 3); 4 bicycles and 3 tricycles (8 + 9); 1 bicycle and 5 tricycles (2 + 15). We know these are all: 0, 2 or 4 tricycles leave an odd number of wheels, which bicycles cannot make, and 6 or more tricycles need 18 wheels or more.</p>
+<div class="brk"></div>
+<h2>Lesson 4: Pattern Machines</h2>
+<p>Week 2 (second lesson)   •   Patterns with Multiplication   •   Workbook: Lesson 4</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it to go forwards and backwards; find the numbers that two counting patterns share.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Look for a pattern, make a table, make a list, explain a rule</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children hold up their tables.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Hello, pattern machines! Today we find out what is far, far along a pattern, like the 41st shape, without drawing all 41.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“The secret is groups. If we know the group, the times tables tell us where every group ends.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Pattern rhythm: clap, clap, stomp, clap, clap, stomp … Keep it going. What do we do on beat 9? Beat 10? Beat 20?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Clap, clap, stomp. Clap, clap, stomp. Keep it going with me!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Freeze! What will we do on beat 9? On beat 10? How do you know?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>4, 8, 12, __</div></td><td><div>16</div></td></tr><tr><td><div>50, 45, 40, __</div></td><td><div>35</div></td></tr><tr><td><div>3, 6, 9, 12, __</div></td><td><div>15</div></td></tr><tr><td><div>Count in 4s from 4. What is the 10th number?</div></td><td><div>40</div></td></tr><tr><td><div>2, 5, 8, 11, __</div></td><td><div>14</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Our cube train goes red, red, blue, red, red, blue. What colour do you think cube 20 will be? Write your guess before you build.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Build a cube train: red, red, blue, red, red, blue …</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Stop after 9 cubes.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Predict: what colour is cube 20? Write it down.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Build to check. Which cubes are blue?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: put a finger on each blue cube. Say their numbers. What do you notice?</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>The blue cubes are at 3, 6, 9 … Which table is that? Keep counting in 3s.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: what colour is cube 30? Cube 31? Explain without building.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>What colour is cube 20?</div></td><td><div>Red.</div></td></tr><tr><td><div>How did you know without building?</div></td><td><div>The blue cubes are at 3, 6, 9 … 18, so 19 and 20 are red.</div></td></tr><tr><td><div>Which cubes are blue?</div></td><td><div>The 3 times table: 3, 6, 9, 12, 15, 18 …</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Sun, moon, star, sun, moon, star. The group is 3 shapes long. Every group ends with a star, at 3, 6, 9, 12: the 3 times table. Place 14? 12 is the end of a group, so 13 starts again with a sun, and 14 is a moon.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Where is the 5th star? There is one star at the end of each group, so the 5th star ends the 5th group: 5 × 3 = 15.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Squares made of sticks: 4, 7, 10. Each new square needs only 3 more sticks because it shares a side. I make a table and keep adding 3.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Far places: count in groups. Sun, moon, star, sun, moon, star … The group is 3 shapes. Groups end at 3, 6, 9, 12. What is in place 14?</div></td><td><div>A moon (12 ends a group; 13 sun, 14 moon).</div></td></tr><tr><td><div>Where is the 5th star?. One star in each group, at the end. Stars are at 3, 6, 9, 12, 15. Where is the 5th star? How many moons are in the first 21 shapes?</div></td><td><div>Place 15. 7 moons (21 shapes is 7 groups).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: count in groups. Find the group size. The groups end at the times-table numbers. Jump to the end of a group, then count on. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Saying that a place in the times table (like 20 for a group of 5) is the FIRST shape of a group, when it is the LAST shape.</li>
+<li>Counting the whole pattern one by one to the far place instead of jumping to the end of a group.</li>
+<li>Growing patterns: multiplying by the step (10 squares × 3 = 30) and forgetting the start (the extra stick), instead of using the table or the rule.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Pattern moves: jump, jump, squat, jump, jump, squat … 15 moves. What is move 15?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 4 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: &quot;How long is one group? Where does each group end?&quot;</li>
+<li>Ask: &quot;Is that place the first shape of a group or the last?&quot;</li>
+<li>Ask: &quot;What is the rule? Does it work for every pair in your table?&quot;</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: &quot;Draw a line after each group. Count the groups.&quot;</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: &quot;Find the nearest times-table number before your place. That shape ends a group.&quot;</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: &quot;Make a table and look at how much it goes up each time.&quot;</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: A pattern goes A, B, B, C, A, B, B, C … What is the 25th letter?</div></td><td><div>A. 24 ends a group of 4 (4 × 6 = 24), so 25 starts again with A.</div></td></tr><tr><td><div>Workbook Think Harder 2: Beads go red, yellow, yellow, red, yellow, yellow … How many yellow beads are in the first 18 beads?</div></td><td><div>12 yellow beads (18 beads is 6 groups of 3, with 2 yellow in each).</div></td></tr><tr><td><div>Workbook Think Harder 3: Houses are made of sticks in a row. 1 house uses 5 sticks, 2 houses use 9 sticks, 3 houses use 13 sticks. How many sticks are needed for 6 houses?</div></td><td><div>25 sticks. The rule is add 4: 5, 9, 13, 17, 21, 25.</div></td></tr><tr><td><div>Workbook Think Harder 4: Ali counts in 4s from 4. Mei counts in 10s from 10. Which numbers up to 50 do they both say?</div></td><td><div>20 and 40.</div></td></tr><tr><td><div>Workbook Challenge 5: Mei counts in 4s from 4. Ben counts in 5s from 5. Which is bigger: Mei’s 10th number or Ben’s 8th number?</div></td><td><div>Neither: they are the same. Mei’s 10th number is 40 and Ben’s 8th number is 40.</div></td></tr><tr><td><div>Workbook Challenge 6: Siti builds towers of cubes. Tower 1 has 2 cubes, tower 2 has 5 cubes, tower 3 has 8 cubes. The towers keep growing in the same way. Which tower has 29 cubes?</div></td><td><div>Tower 10. The rule is add 3: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29.</div></td></tr><tr><td><div>Workbook Challenge 7: Frog A starts at 0 and jumps 4 each time: 4, 8, 12 … Frog B starts at 2 and jumps 3 each time: 5, 8, 11 … Which numbers up to 30 do both frogs land on?</div></td><td><div>8 and 20. Frog A: 4, 8, 12, 16, 20, 24, 28. Frog B: 5, 8, 11, 14, 17, 20, 23, 26, 29.</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“What if the pattern repeats every 3 shapes?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th? What if the pattern repeats every 3 shapes?</div></td><td><div>Every 5: yes, 10 and 20 are both in the 5 times table, so both are the last shape of a group. Every 3: no. 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>The pattern goes triangle, circle, square, triangle, circle, square … What is the 17th shape? How do you know?</div></td><td><div>A circle. 15 ends a group (5 groups of 3), so 16 is a triangle and 17 is a circle.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You did not draw 41 shapes today. You found the group, used a times table and counted on. That is how pattern machines think.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Make your own repeating pattern of 4 shapes. Write 3 &quot;far place&quot; questions about it for a partner, with the answers.</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) Square (20 ends a group of 5).  (b) Circle (21 triangle, 22 circle, 23 circle).  (c) Triangle: 40 ends a group (5 × 8 = 40), so 41 starts again.  (d) 12 circles (30 shapes is 6 groups, 2 circles in each).</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) A (16 ends a group of 4; 17 is M, 18 is A).  (b) Place 40 (every H ends a group: 4, 8, 12 … the 10th is 4 × 10).  (c) 7 Ts. They are in places 3, 7, 11, 15, 19, 23, 27; 28 ends the 7th group, and places 29 and 30 are M and A.</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) 18 yellow beads (12 red is 6 groups of 2 red; each group has 3 yellow).  (b) 30 beads (6 groups of 5).</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) 5, 10, 15, 20, 25, 30.  (b) 50 petals.  (c) 7 flowers.  (d) 4 flowers, with 3 petals left over.</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 4, 6, 8, 10, 12, 14.  (b) 22 children.  (c) 9 tables.  (d) Each new table adds 1 seat on the top and 1 on the bottom; the 2 seats at the ends stay the same.</p>
+<p style="padding-left:13px"><b>Q6  </b>Ali: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39. Mei: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Both: 12, 24, 36. They go up by 12 each time.</p>
+<div class="brk"></div>
+<h2>Lesson 5: Mystery Number Machines</h2>
+<p>Week 3 (first lesson)   •   Working Backwards   •   Workbook: Lesson 5</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Find a mystery number in two-step puzzles with +, −, × and ÷ by working backwards (undo the last step first with the opposite operation), check by going forwards, and use before-and-after bar models for stories where an amount changes.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Inverse operations, working backwards, guess and check, before-and-after bar models, checking forwards</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Mini whiteboards, counters, paper cups, number machine cards (× 2, × 3, × 4, × 5, × 10 and + or − cards from 1 to 20), paper strips for bars.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Machine cards shown on the slide; children write on whiteboards and hold them up. For bars, children draw on paper or fold paper strips into equal parts.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Good morning, inquirers! Today you are code-breakers. A number went into a secret machine and something came out. Your job is to run the machine backwards and find the number that went in.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Remember our rule: notice it, test it, explain why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Guess my machine. The tutor is a secret one-step machine. Call out an IN number, hear the OUT, and guess the rule. Then the tutor gives only an OUT: what went IN?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“I am a machine. Give me a number and I will tell you what comes out. Ready? You say 4, I say 12. You say 10, I say 30. What am I doing?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Now I only tell you what comes out: 18. What went in? How did you work it out?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>I think of a number. I multiply it by 2. I get 18. What is it?</div></td><td><div>9</div></td></tr><tr><td><div>I think of a number. I divide it by 5. I get 4. What is it?</div></td><td><div>20</div></td></tr><tr><td><div>I think of a number. I take away 25. I get 40. What is it?</div></td><td><div>65</div></td></tr><tr><td><div>What is the opposite of × 4?</div></td><td><div>÷ 4</div></td></tr><tr><td><div>I think of a number. I multiply it by 3, then add 4. I get 19. What is it?</div></td><td><div>5</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Here are two machine cards: × 2 and + 6. If I put 4 in, what comes out? Now I swap the cards: + 6 first, then × 2. Will the same number come out? Thumbs up or down before we test it.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Pick one × card and one + or − card. Put them in a row: that is your machine.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Secretly choose a start number. Run it through both cards. Say only the OUT.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Your partner works backwards to find your start number. Check it together.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Swap the order of the two cards. Put the same start number in. Is the OUT the same?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: write the machine as boxes and arrows, then put your partner’s OUT number in the last box.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Mixed up: “What was the LAST thing the machine did? Undo that first.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: find an OUT number your partner can NOT undo with whole numbers. Why does it not work?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How did you find your partner’s start number?</div></td><td><div>Undo the last card first with its opposite, then undo the first card.</div></td></tr><tr><td><div>What is the opposite of × 3? Of − 8?</div></td><td><div>÷ 3. + 8.</div></td></tr><tr><td><div>Does it matter which card goes first?</div></td><td><div>Yes. Start 4: × 2 then + 6 gives 14, but + 6 then × 2 gives 20.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Mystery number × 3, then + 4, gives 25. I go backwards. The last step was + 4, so I undo it first with − 4: 25 − 4 = 21. The step before was × 3, so I undo it with ÷ 3: 21 ÷ 3 = 7. Check forwards: 7 × 3 = 21, 21 + 4 = 25. ✓”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Ben gave away 18 stamps, then bought 25, and now has 60. I draw the bars and start at the end. Before he bought 25 he had 60 − 25 = 35. Before he gave away 18 he had 35 + 18 = 53. Check: 53 − 18 = 35, 35 + 25 = 60. ✓”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Mei gave away half her beads, then used 5. She has 9 left. The half she kept is 5 + 9 = 14. The other half is also 14. So she had 14 + 14 = 28.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Two steps: undo the last step first. ? → × 3 → + 4 → 25 Undo + 4: 25 − 4 = 21. Undo × 3: 21 ÷ 3 = ? Check forwards.</div></td><td><div>7 (7 × 3 = 21, 21 + 4 = 25).</div></td></tr><tr><td><div>Before and after: draw the bars. Ben had some stamps. He gave 18 to Mei. Then he bought 25 more. Now he has 60. Before he bought 25: 60 − 25 = 35. Before he gave 18: 35 + 18 = ?</div></td><td><div>53 stamps (check 53 − 18 = 35, 35 + 25 = 60).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: undo it backwards. Start at the end. Undo the LAST step first with its opposite, then the step before. Check by going forwards. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Doing the same step again instead of the opposite (27 × 2 instead of 27 ÷ 2).</li>
+<li>Undoing the steps in the wrong order: the first step first instead of the last step first.</li>
+<li>Bar stories: stopping at one part (one bag or one half) instead of finding the whole, or forgetting to undo one of the changes.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Machine moves. The tutor calls a machine (“× 2 jumps!”, “+ 3 claps!”) on a number on the board, and everyone does the OUT number of moves.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 5 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “What was the last step? What is its opposite?”</li>
+<li>Ask: “Show me your check going forwards. Do you get the OUT number?”</li>
+<li>Ask: “Point to your bar. Which part do you know? Which part is the mystery?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Draw the machine boxes. Write the OUT in the last box.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Cover the first step with your finger. Undo only the last step.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “For bars: start from what is left now and put back each change, from the end to the start.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: A machine does × 4, then + 13. The OUT is 45. What went IN?</div></td><td><div>8 (45 − 13 = 32, 32 ÷ 4 = 8)</div></td></tr><tr><td><div>Workbook Think Harder 2: Ben had some money. He spent $15 on a book. Then his dad gave him $10. Now he has $42. How much money did Ben have at first?</div></td><td><div>$47 (42 − 10 = 32, 32 + 15 = 47)</div></td></tr><tr><td><div>Workbook Think Harder 3: Siti had some beads. She gave half of them to Mei. Then she bought 12 more. Now she has 30 beads. How many beads did Siti have at first?</div></td><td><div>36 (30 − 12 = 18 is half, 18 + 18 = 36)</div></td></tr><tr><td><div>Workbook Think Harder 4: A machine does × 2, then − 3. What goes IN to give OUT 17? What goes IN to give OUT 1?</div></td><td><div>10, and 2 (17 + 3 = 20, 20 ÷ 2 = 10; 1 + 3 = 4, 4 ÷ 2 = 2)</div></td></tr><tr><td><div>Workbook Challenge 5: Siti had some sweets. She gave Ben 1 more than half of them. Now she has 7 sweets left. How many sweets did she have at first?</div></td><td><div>16 (7 + 1 = 8 is half, 8 + 8 = 16; she gave Ben 9)</div></td></tr><tr><td><div>Workbook Challenge 6: A machine does × 2, then − 1. Mei puts a number through the machine 3 times in a row (each OUT goes back in). The final OUT is 17. What number did she start with?</div></td><td><div>3 (17 + 1 = 18, 18 ÷ 2 = 9; 9 + 1 = 10, 10 ÷ 2 = 5; 5 + 1 = 6, 6 ÷ 2 = 3; check 3 → 5 → 9 → 17)</div></td></tr><tr><td><div>Workbook Challenge 7: Three boxes have 30 pens altogether. 5 pens are moved from box A to box B. Then 3 pens are moved from box B to box C. Now all three boxes have the same number of pens. How many pens were in each box at first?</div></td><td><div>A 15, B 8, C 7 (each ends with 10; undo the moves from the end)</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“To undo × 2, then + 6, with OUT 20, Mei takes away 6 first. Ali divides by 2 first. Who is right? Test both.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Why do we undo the LAST step first?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>To undo “× 2, then + 6” with OUT 20, Mei takes away 6 first. Ali divides by 2 first. Who is right?</div></td><td><div>Mei is right: 20 − 6 = 14, 14 ÷ 2 = 7, and 7 × 2 + 6 = 20. Ali gets 20 ÷ 2 = 10, 10 − 6 = 4, but 4 × 2 + 6 = 14, not 20. The last step happened last, so it must be undone first, like taking off shoes before socks.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>I think of a number. I multiply it by 4, then take away 6. I get 14. What is my number?</div></td><td><div>5 (14 + 6 = 20, 20 ÷ 4 = 5; check 5 × 4 = 20, 20 − 6 = 14)</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Today you ran machines backwards and drew before-and-after bars. Code-breakers always check forwards, and you did. Well done, inquirers!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Make a three-step machine with a × card, a ÷ card and a + card. Give a partner only the OUT. Can they find the IN? Which OUT numbers make your machine impossible to undo?</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 10  (b) 16  (c) 24  (d) 9  (undo the last step first: e.g. (a) 27 − 7 = 20, 20 ÷ 2 = 10)</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) IN 4 → OUT 14; IN 10 → OUT 32; OUT 17 ← IN 5; OUT 29 ← IN 9.  (b) Rule: × 3, then + 5. IN 10 gives OUT 35. OUT 26 comes from IN 7.</p>
+<p style="padding-left:13px"><b>Q3  </b>59 stickers (50 − 15 = 35, 35 + 24 = 59; check 59 − 24 = 35, 35 + 15 = 50)</p>
+<p style="padding-left:13px"><b>Q4  </b>30 sweets (one bag: 6 + 4 = 10; 3 bags: 10 × 3 = 30)</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) Mei 18  (b) Ali 14  (c) No: the order of the steps matters  (d) 7 (18 − 4 = 14, 14 ÷ 2 = 7)</p>
+<p style="padding-left:13px"><b>Q6  </b>Ali 9, Ben 14, Siti 17 (40 − 5 − 8 = 27, 27 ÷ 3 = 9; check 9 + 14 + 17 = 40)</p>
+<div class="brk"></div>
+<h2>Lesson 6: Market Day</h2>
+<p>Week 3 (second lesson)   •   Money   •   Workbook: Lesson 6</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Read and write money in dollars and cents, pay exactly with the fewest notes and coins, make a list in order to find every way to pay, give change by counting on, decide whether there is enough money, and work backwards to find how much someone had at first.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Systematic listing (make a list in order), working backwards, counting on, comparing, justifying &quot;there are no more ways&quot;</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Play money: coins 5¢, 10¢, 20¢, 50¢, $1 and notes $2, $5, $10, $50 (about 6 of each per pair), price tags, mini whiteboards.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Print the cut-out coins and notes, or use real money at home. The shop and the toy stall are on the slides; children show their money to the camera.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Welcome to Market Day, inquirers! Today you are shoppers AND shopkeepers. You will pay exactly, give change, and find every way to pay without missing one.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Notice it, test it with play money, and explain why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Market Day shop. Six items with price tags from 85¢ to $57.20. Pay exactly with play notes and coins. Who can pay with the fewest pieces?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Here is our market. The sticker book costs $3.45. That means 3 dollars and 45 cents. Pay exactly with your play money.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Now count your pieces. Who used the fewest? How did you choose?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>Write 345¢ in dollars and cents.</div></td><td><div>$3.45</div></td></tr><tr><td><div>How many cents is $2.05?</div></td><td><div>205¢</div></td></tr><tr><td><div>Which is more: $1.50 or 105¢?</div></td><td><div>$1.50 (150¢)</div></td></tr><tr><td><div>Pay 75¢ with the fewest coins.</div></td><td><div>50¢ + 20¢ + 5¢</div></td></tr><tr><td><div>You have $4.60. The book costs $5. How much more do you need?</div></td><td><div>40¢</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The toy stall has a kite, a ball, a yo-yo, bubbles and a sticker. You have $10. How many different baskets do you think cost EXACTLY $10? Write a guess.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. You have $10. Look at the toy stall: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Choose some toys (at most one of each). How much do they cost? How much change do you get?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Find every basket that costs EXACTLY $10.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Make a list in order so you do not miss one or count one twice.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: start with the most expensive toy. Put it in the basket. How much is left to spend?</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Repeating baskets: “Kite and ball is the same basket as ball and kite.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: which basket gives you the most toys for $10? Which gives exactly $1 change?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many baskets cost exactly $10?</div></td><td><div>3: kite + ball; kite + yo-yo + sticker; ball + yo-yo + bubbles + sticker.</div></td></tr><tr><td><div>How do you know you have them all?</div></td><td><div>Start with the kite in the basket, then without the kite, and list in order.</div></td></tr><tr><td><div>You buy the kite and the bubbles. How much change?</div></td><td><div>$10 − $8 = $2.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Ways to pay $6 with $5 notes, $2 notes and $1 coins. I start with the biggest note: one $5. $1 is left, so one $1 coin. Now no $5: three $2, then two $2 and two $1, one $2 and four $1, no $2 and six $1. The $2 column went 3, 2, 1, 0, so I know I am finished: 5 ways.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Mei spent 80¢ on a drink, then 65¢ on a bun, and has 55¢ left. I work backwards from the end. Before the bun she had 55 + 65 = 120¢. Before the drink she had 120 + 80 = 200¢. That is $2.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Change from $1 for 45¢: I count on like a shopkeeper. 45¢ and 5¢ is 50¢. 50¢ and 50¢ is $1. So the change is 5¢ + 50¢ = 55¢.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Make a list in order: pay $6 with $5, $2 and $1. Start with the biggest note: one $5, then $1. No $5: three $2, two $2, one $2, no $2. Fill up with $1 coins.</div></td><td><div>5 ways.</div></td></tr><tr><td><div>Work backwards with money. Mei bought a drink for 80¢. Then she bought a bun for 65¢. She has 55¢ left. Before the bun: 55¢ + 65¢ = 120¢. Before the drink: 120¢ + 80¢ = ?</div></td><td><div>200¢ = $2.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: in order, and backwards. To find every way, make a list in order: the most of the biggest note first, then one fewer each time. To find what someone had at first, work backwards and put back what was spent. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Mixing up dollars and cents: writing 345¢ as $34.5, or reading $3.05 as $3.50.</li>
+<li>Using a $20 note (there is no $20 note), or not starting with the biggest note that fits when finding the fewest.</li>
+<li>Listing ways with no order, so some ways are missed or the same way is written twice.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Shopkeeper stretch. The tutor calls an amount: reach up high for dollars, touch your toes for cents. “$3.50!” “75¢!” “205¢!” (that is $2.05: reach up!).</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 6 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “Is this in cents or in dollars? How do you know?”</li>
+<li>Ask: “What is the biggest note that is not too much?”</li>
+<li>Ask: “How do you know you have found every way?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Lay out real play money and count it.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Make a table with a column for each note or coin. Start with as many of the biggest as you can.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “Start from the money that is left and put back what was spent.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: How many ways can you pay exactly $10 using $5 notes, $2 notes and $1 coins?</div></td><td><div>10 ways (two $5: 1 way; one $5: 3 ways; no $5: 6 ways)</div></td></tr><tr><td><div>Workbook Think Harder 2: Ali has 4 coins. They are worth $1.25 altogether. Find all the sets of 4 coins he could have.</div></td><td><div>2 sets: $1 + 10¢ + 10¢ + 5¢, and 50¢ + 50¢ + 20¢ + 5¢</div></td></tr><tr><td><div>Workbook Think Harder 3: A bun costs 70¢. Mei pays with a $1 coin. Which coins does she get as change, using the fewest coins?</div></td><td><div>30¢: 20¢ + 10¢</div></td></tr><tr><td><div>Workbook Think Harder 4: Ben has $30. He buys a book for $12 and a pen for $5. How much money does he have left? Can he also buy a game for $15?</div></td><td><div>$13 left. No, he is $2 short.</div></td></tr><tr><td><div>Workbook Challenge 5: Siti had some money. She spent half of it on a book. Then she spent half of what was left on a pen. She had $5 left. How much money did she have at first?</div></td><td><div>$20 ($5 + $5 = $10 before the pen; $10 + $10 = $20)</div></td></tr><tr><td><div>Workbook Challenge 6: Sweets cost 5¢ each and lollipops cost 20¢ each. Ben buys 8 things altogether and spends exactly $1. How many sweets and how many lollipops does he buy?</div></td><td><div>4 sweets and 4 lollipops (20¢ + 80¢ = $1)</div></td></tr><tr><td><div>Workbook Challenge 7: Mei has one $10 note, one $5 note, one $2 note and one $1 coin. How many different amounts can she pay exactly, using one or more of them?</div></td><td><div>15 amounts: $1, $2, $3, $5, $6, $7, $8, $10, $11, $12, $13, $15, $16, $17, $18</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Mei says: To pay $40 with the fewest notes, I use two $20 notes. What would you tell her?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“How did you make sure you found every way to pay?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Mei says: “To pay $40 with the fewest notes, I use two $20 notes.” What would you tell her?</div></td><td><div>There is no $20 note in Singapore. $50 is too much, so we use $10 notes: $10 + $10 + $10 + $10, which is 4 notes. To find every way, start with the most of the biggest note and use one fewer each time, in a table.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>A pen costs $3.65. Pay exactly with the fewest notes and coins.</div></td><td><div>$2 + $1 + 50¢ + 10¢ + 5¢ (5 pieces)</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Great shopping, inquirers! You paid exactly, gave change and made lists in order. A good shopkeeper always checks, and so did you.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Find every way to pay exactly $10 using $5 notes, $2 notes and $1 coins. (There are 10.)</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>Curry puff $1.65: $1 + 50¢ + 10¢ + 5¢ (4).  Notebook $4.30: $2 + $2 + 20¢ + 10¢ (4).  Umbrella $18.75: $10 + $5 + $2 + $1 + 50¢ + 20¢ + 5¢ (7).  Bicycle $76: $50 + $10 + $10 + $5 + $1 (5).</p>
+<p style="padding-left:13px"><b>Q2  </b>7 ways ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H is spare.  (a) 7 ways  (b) $5 + $1 + $1 + $1, and $2 + $2 + $2 + $2</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) 35¢  (b) $24 change: $10 + $10 + $2 + $2 (there is no $20 note)</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) No. The bag and the cap cost $14 + $8 = $22. She has $20, so she is $2 short.  (b) She spends $17: book and cap ($9 + $8), or bag and pen ($14 + $3). Those are the only two pairs.</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 25¢ + 30¢ + 45¢ = 100¢ = $1.00  (b) $20 ($6 + $4 = $10 is half, $10 + $10 = $20)</p>
+<p style="padding-left:13px"><b>Q6  </b>3 ways: 4 erasers; 2 erasers and 5 stickers; 10 stickers. (1 or 3 erasers leave 150¢ or 50¢, which 20¢ stickers cannot make exactly.)</p>
+<div class="brk"></div>
+<h2>Lesson 7: Fair Shares</h2>
+<p>Week 4 (first lesson)   •   Fractions   •   Workbook: Lesson 7</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Recognise equal parts and name fractions with bottom numbers up to 12; compare unit fractions and like fractions; add and take away like fractions within one whole; solve fair-sharing stories with a bar.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Checking for equal parts, comparing with the same whole, drawing bars, explaining</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Paper strips of the same length (4 per child), paper squares, scissors, crayons, mini whiteboards.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Each child folds paper strips on camera; the tutor shows fraction bars on the slides and children colour their own bars.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Good morning, inquirers! Today we are cake cutters and pizza sharers. There is one rule: every share must be FAIR.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“By the end you will name fair shares with fractions, tell which share is bigger, and explain how you know.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Fair or not fair? Six snacks are cut into parts: thumbs up if all the parts are the same size, thumbs down if not.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Look at each snack. Ali and Mei want to share it. Is it fair? Thumbs up for fair, thumbs down for not fair.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Be ready to tell me why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>A pizza is cut into 4 equal slices. What is 1 slice called?</div></td><td><div>One quarter, 1/4</div></td></tr><tr><td><div>How many halves make 1 whole?</div></td><td><div>2</div></td></tr><tr><td><div>How many thirds make 1 whole?</div></td><td><div>3</div></td></tr><tr><td><div>A cake is cut into 5 equal pieces. What is 1 piece called?</div></td><td><div>One fifth, 1/5</div></td></tr><tr><td><div>2 of 7 equal parts are shaded. What fraction is shaded?</div></td><td><div>2/7</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Before we fold: which will be bigger, one quarter of a strip or one eighth of the same strip? Show me 4 fingers for a quarter or 8 fingers for an eighth.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Take 4 paper strips that are the same length.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Keep one whole. Fold one in half, one into quarters and one into eighths.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Open them out. Write the fraction on every part.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Line them up. Then try to fold a strip into 3 equal parts.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck folding: match the two ends exactly, then press the fold flat.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Not sure what to write: “How many equal parts are there? That number goes at the bottom.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: can you fold a strip into 3 equal parts? How do you check they are equal?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>Which part is bigger, 1/4 or 1/8? How do you know?</div></td><td><div>1/4: the same strip cut into fewer parts, so each part is longer.</div></td></tr><tr><td><div>How many eighths fit on one quarter? How many quarters make 1 whole?</div></td><td><div>2 eighths; 4 quarters.</div></td></tr><tr><td><div>How did you fold 3 equal parts? How do you know they are equal?</div></td><td><div>Fold and adjust until the parts match; check by laying one part on another.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Before I name a fraction I check the parts are equal. This bar has 5 parts, all the same size, so the parts are fifths: 5 goes at the bottom. 3 parts are shaded: 3 goes on top. Three fifths.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“One half or one sixth: which is bigger? Same whole. One half is 1 of 2 parts, one sixth is 1 of 6 parts. More parts means smaller parts, so one half is bigger.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Two ninths and four ninths: ninths are the name of the parts, like apples. 2 ninths and 4 ninths are 6 ninths. The parts do not change size, so the bottom number stays 9.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Name the fraction. A bar has 5 equal parts and 3 are shaded. Check the parts are equal, count all the parts (bottom number), then count the shaded parts (top number). What fraction is shaded? What fraction is not?</div></td><td><div>3/5 shaded, 2/5 not shaded; together 5/5, 1 whole.</div></td></tr><tr><td><div>Compare with bars. Bars of the same length cut into halves, thirds and sixths, one part shaded in each. Which is bigger: 1/2, 1/3 or 1/6? Then: which is bigger, 2/7 or 5/7?</div></td><td><div>1/6 &lt; 1/3 &lt; 1/2 (more equal parts, smaller parts). 5/7 &gt; 2/7 (same-size parts, more of them).</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: equal parts. A fraction names equal parts of a whole: the bottom number is how many equal parts, the top number is how many we take. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Naming a fraction when the parts are not equal: circling B or D in Q1.</li>
+<li>Thinking 1/6 is bigger than 1/4 because 6 is bigger than 4 (Q3).</li>
+<li>Adding the bottom numbers too: 2/5 + 1/5 written as 3/10 instead of 3/5 (Q4).</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Fraction turns. Stand up and turn a whole turn, a half turn, a quarter turn, three quarter turns, then freeze.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 7 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “Are all the parts the same size? How do you know?”</li>
+<li>Ask: “What does the bottom number tell us? What does the top number tell us?”</li>
+<li>Ask: “Did you draw both wholes the same length?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Count all the equal parts first. That number goes at the bottom.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Fold or draw a strip to check which part is bigger.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “Colour the parts on a bar, then count them.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: Write these in order, smallest first: 1/3, 1/12, 1/2, 1/5.</div></td><td><div>1/12, 1/5, 1/3, 1/2</div></td></tr><tr><td><div>Workbook Think Harder 2: A ribbon is cut into 9 equal pieces. Mei uses 4 pieces and Siti uses 3 pieces. What fraction of the ribbon is left?</div></td><td><div>2/9 (4 + 3 = 7 pieces used, 9 − 7 = 2 left)</div></td></tr><tr><td><div>Workbook Think Harder 3: 2/7 + ? = 1 whole</div></td><td><div>5/7</div></td></tr><tr><td><div>Workbook Think Harder 4: Ali says: “Half of my pizza is bigger than half of your pizza.” Can he be right? Explain.</div></td><td><div>Yes, if his pizza is bigger. Halves of different-size wholes are different sizes.</div></td></tr><tr><td><div>Workbook Challenge 5: A cake is cut into 12 equal pieces. Mei gets 4/12. Ali and Ben share the rest, but Ali gets 2/12 more than Ben. What fraction does Ben get?</div></td><td><div>3/12 (and Ali gets 5/12): 8 pieces are shared; take away Ali&#x27;s extra 2, share 6 as 3 and 3.</div></td></tr><tr><td><div>Workbook Challenge 6: A paper strip is folded in half, then in half again, then in half again. When you open it, how many equal parts are there? What fraction is each part?</div></td><td><div>8 equal parts; each is 1/8 (1 fold: 2 parts, 2 folds: 4, 3 folds: 8).</div></td></tr><tr><td><div>Workbook Challenge 7: Siti eats 1/2 of a pizza. Then Ravi eats 1/2 of what is left. What fraction of the whole pizza is left now?</div></td><td><div>1/4. After Siti, half is left; Ravi eats half of that half, which is a quarter of the pizza, so a quarter is left.</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Is 1/2 always bigger than 1/4? Can you think of a time when it is not?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Why does the bottom number stay the same when we add 2/9 and 4/9?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Is 1/2 always bigger than 1/4? When could it not be?</div></td><td><div>Only when the wholes are the same size: half a small cupcake is less than a quarter of a big cake. When we add ninths, the parts are still ninths, so only the number of parts changes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Which is bigger, 1/7 or 1/9? Then work out 2/9 + 5/9.</div></td><td><div>1/7 (the same whole cut into fewer parts gives bigger parts). 2/9 + 5/9 = 7/9.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You checked for equal parts, compared fractions with bars and explained why. That is fair and careful maths.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Find all the ways to add two fractions with bottom number 8 to make 1 whole (1/8 + 7/8, 2/8 + 6/8, 3/8 + 5/8, 4/8 + 4/8: 4 ways).</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>A, C, E and F are cut into quarters. (a) B or D: their 4 parts are not the same size, so a part is not a quarter.</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) shaded 3/8, not shaded 5/8  (b) 5/6 and 1/6  (c) 7/10 and 3/10</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) 1/3; 7/9  (b) 1/10, 1/5, 1/4, 1/2  (c) No. Cutting the same whole into 6 equal parts makes smaller parts than cutting it into 4, so 1/6 is smaller than 1/4.</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) 3/5  (b) 7/8  (c) 9/12  (d) 5/6  (e) 4/10</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 5/8  (b) 3/8  (c) Mei, by 1/8</p>
+<p style="padding-left:13px"><b>Q6  </b>Siti. The pizzas are the same size and 1 quarter is the same as 2 eighths; 3 eighths is more than 2 eighths.</p>
+<div class="brk"></div>
+<h2>Lesson 8: Shape Builders</h2>
+<p>Week 4 (second lesson)   •   2D and 3D Shapes   •   Workbook: Lesson 8</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Name semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Spatial reasoning, systematic counting, folding in your head, explaining</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), printed cube nets, mini whiteboards.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Children cut circles and build stacks on camera; nets are printed from the back of the workbook, or cut from an empty box.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Good morning, inquirers! Today we are shape builders. We will cut circles into pieces, hunt for hidden squares and triangles, count cubes we cannot even see, and fold flat paper into a cube.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“The secret for every puzzle today: count in order, so nothing is missed and nothing is counted twice.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Name the solid: a dice, a tissue box, a tin can, a party hat, a drum and a traffic cone. Make the shape with your hands, then name it.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“I will show you something from home. Make its shape with your hands: a cube, a cuboid, a cylinder or a cone. Then we say its name together.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many faces does a cube have?</div></td><td><div>6</div></td></tr><tr><td><div>How many flat faces does a cylinder have?</div></td><td><div>2</div></td></tr><tr><td><div>Cut a circle into 2 equal parts. What is each part called?</div></td><td><div>A semicircle</div></td></tr><tr><td><div>How many quarter circles make 1 whole circle?</div></td><td><div>4</div></td></tr><tr><td><div>Which solid has a tip and can roll?</div></td><td><div>A cone</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Before we cut: if I cut a circle in half, and then cut one half in half again, how many pieces will I have? What will they look like?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Take 2 paper circles that are the same size.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Fold one in half and cut along the fold.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Fold the other in half, then in half again. Open it and cut along both folds.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Use your pieces to make new shapes. Name them.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck folding: fold the circle so the edges match exactly, then press the fold flat.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Not sure of a name: “Count the straight sides. One straight side: semicircle. Two straight sides: quarter circle.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: find 3 different ways to make a whole circle from your pieces.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many quarter circles cover a semicircle exactly?</div></td><td><div>2</div></td></tr><tr><td><div>Find 3 different ways to make a whole circle from your pieces.</div></td><td><div>2 semicircles; 4 quarter circles; 1 semicircle and 2 quarter circles.</div></td></tr><tr><td><div>How many straight sides has a quarter circle? Are they the same length?</div></td><td><div>2, and yes: they meet at a square corner.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“To name a piece I count its straight sides. One straight side and one curved side: a semicircle. Two straight sides that meet at a square corner, and one curved side: a quarter circle. Turning it round does not change its name.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Squares hide inside bigger squares. I count by size: 1 by 1 first, then I slide a 2 by 2 window and count the places it fits, then 3 by 3. Then I add them up.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“For cubes I count layer by layer. Cubes cannot float, so if I see a cube on top, there must be a cube under it, even if I cannot see it.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Find the pieces. A mushroom is made of a semicircle cap, a square stem and 2 quarter circles of grass. Count one kind at a time: 1 straight and 1 curved side, then 2 straight sides and 1 curved side, then 4 straight sides. How many pieces of each kind?</div></td><td><div>Semicircle 1, quarter circles 2, square 1: 4 pieces.</div></td></tr><tr><td><div>Count every square. A grid 3 squares long and 3 squares high. Count by size: 1 by 1, then slide a 2 by 2 window, then the whole grid. How many squares altogether?</div></td><td><div>9 + 4 + 1 = 14 squares.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: count in order. Sort what you count, by size, by the line it sits on or by layer, so you never miss one or count one twice. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Counting only the 1 by 1 squares in Q2a (16 instead of 30).</li>
+<li>Counting only the cubes you can see in Q3 and forgetting the hidden cubes underneath and behind.</li>
+<li>Thinking any 6 joined squares fold into a cube (Q4): B, D and F do not.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Be a shape! Make a semicircle, a cone, a cube and a cylinder with your body when the tutor calls it.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 8 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “How many straight sides does it have? So what is it called?”</li>
+<li>Ask: “Where else can your window fit? Have you tried every place?”</li>
+<li>Ask: “What is holding up that top cube?”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Count one kind or one size at a time, and tick each one.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Build it with cubes, or cut out the net and fold it.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “For a net, pick a bottom square and fold the others up one at a time.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: How many quarter circles make 3 semicircles?</div></td><td><div>6</div></td></tr><tr><td><div>Workbook Think Harder 2: How many squares are in a grid 3 squares long and 2 squares high?</div></td><td><div>8 (6 small + 2 made of 4 small ones)</div></td></tr><tr><td><div>Workbook Think Harder 3: A stack has 2 layers. Each layer is 3 cubes long and 2 cubes wide. How many cubes?</div></td><td><div>12</div></td></tr><tr><td><div>Workbook Think Harder 4: Six squares are joined in a straight line. Can they fold into a cube? Explain.</div></td><td><div>No. When you fold the line round, the 5th square lands on the same face as the 1st and the 6th on the 2nd, and the two ends are left open.</div></td></tr><tr><td><div>Workbook Challenge 5: A pyramid of cubes has a top layer of 1 cube, then a layer 2 by 2, then a layer 3 by 3, then a bottom layer 4 by 4. How many cubes are there?</div></td><td><div>30 (1 + 4 + 9 + 16)</div></td></tr><tr><td><div>Workbook Challenge 6: How many squares can you find in a grid 5 squares long and 5 squares high?</div></td><td><div>55 (25 + 16 + 9 + 4 + 1)</div></td></tr><tr><td><div>Workbook Challenge 7: On a dice, opposite faces add up to 7. You can see 3 faces showing 1, 2 and 3. What numbers are on the 3 faces you cannot see? What do they add up to?</div></td><td><div>6, 5 and 4; they add up to 15.</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“How can you be sure you counted every cube in a stack, even the ones you cannot see?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Why can 6 squares in a 2 by 3 rectangle not fold into a cube?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>How can you be sure you counted every cube in a stack, even the ones you cannot see?</div></td><td><div>Count layer by layer; every cube on top sits on a cube below, so the hidden ones must be there. In a 2 by 3 rectangle, 4 squares meet at a corner, but only 3 faces of a cube meet at a corner, so two squares end up on the same face.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>How many cubes are in a stack with a bottom layer 3 cubes long and 2 cubes deep, and 1 cube on top?</div></td><td><div>7 (6 + 1)</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You named pieces by their sides, counted in order and folded nets in your head. That is real shape building.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>How many squares are in a grid 5 squares long and 5 squares high? (25 + 16 + 9 + 4 + 1 = 55)</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>Square 2, triangle 3, semicircle 4, quarter circle 2. (a) semicircles (b) 11 pieces (c) 3 circles: 3 semicircles are 6 quarter circles, 6 + 6 = 12 quarter circles, and 4 quarter circles make a circle.</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) 1 by 1: 16, 2 by 2: 9, 3 by 3: 4, 4 by 4: 1; 30 squares  (b) 6 on the bottom line + 6 on the line across = 12 triangles</p>
+<p style="padding-left:13px"><b>Q3  </b>(a) A 5, B 8, C 14 (9 + 4 + 1)  (b) 13 more cubes (27 − 14)</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) A, C and E  (b) the new square goes under any one of the 4 squares in the row (4 possible places)</p>
+<p style="padding-left:13px"><b>Q5  </b>Row: 2, 3, 5, 4. Bottom square: 6. (1 and 6, 2 and 5, 3 and 4 are opposite.)</p>
+<div class="brk"></div>
+<h2>Lesson 9: Measure Masters</h2>
+<p>Week 5 (first lesson)   •   Length, Mass, Volume and Time   •   Workbook: Lesson 9</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with a.m. and p.m. and find start times, end times and how long, also across the hour.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Reasoning with equal amounts (swapping), working step by step, keeping a table, counting on in time, checking</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>A coat hanger, two paper cups and string (a home-made balance), 20¢ coins or erasers, a glue stick and a spoon; two plastic cups for pouring; a cardboard clock with hands; mini whiteboards.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Children build the coat-hanger balance before the lesson and hold it up to the camera. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Good morning, Measure Masters! Today we measure how long, how heavy, how much water and how much time.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Some puzzles today have no ruler, no scale with numbers and no marks on the jugs. We will use our heads: notice it, test it, explain why.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Which unit? Show six things one at a time (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing teeth). Children write m, cm, kg, g, ℓ or minutes on whiteboards and explain.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“I will show you something. Write the unit you would use to measure it on your whiteboard: m, cm, kg, g, ℓ or minutes. Show me on three.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Be ready to say why. Why not grams for a bag of rice?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>35 cm + 40 cm = ?</div></td><td><div>75 cm</div></td></tr><tr><td><div>The minute hand points to 6. How many minutes past the hour?</div></td><td><div>30 minutes</div></td></tr><tr><td><div>A 5 ℓ bucket has 2 ℓ of water. How much more fills it?</div></td><td><div>3 ℓ</div></td></tr><tr><td><div>Lunch at 12:30. a.m. or p.m.?</div></td><td><div>p.m.</div></td></tr><tr><td><div>One bag of rice is 5 kg. How heavy are 2 bags?</div></td><td><div>10 kg</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Look at your balance. A glue stick goes in one cup. How many 20¢ coins will balance it? Write your guess before you test.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Hang two paper cups from a coat hanger. Check it is level when the cups are empty.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Put a glue stick in one cup. Guess: how many 20¢ coins will balance it?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Add coins one at a time until the hanger is level. Then try a spoon.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Which is heavier, the glue stick or the spoon? How do you know?</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: check the hanger is level with both cups empty before you start.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Coins keep sliding: put them in the cup one at a time and stop when the hanger is level.</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: find something that balances exactly the same number of coins as your glue stick.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How many coins balanced your glue stick? Your spoon?</div></td><td><div>Open answers. The count depends on the coins and the objects.</div></td></tr><tr><td><div>The glue stick balances 8 coins and the spoon balances 5 coins. Which is heavier?</div></td><td><div>The glue stick: it needs more of the same coin.</div></td></tr><tr><td><div>Your partner used erasers and got a different number. Why?</div></td><td><div>Erasers and coins are different units. To compare, use the same unit.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“A watermelon balances 3 pineapples. One pineapple balances a 2 kg weight. The scale is level, so both sides are equally heavy. I can swap each pineapple for 2 kg: 2, 4, 6. The watermelon is 6 kg.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Now the watermelon balances one pineapple and 4 bags of sugar. The watermelon is 6 kg and the pineapple is 2 kg, so the bags must be the rest: 6 − 2 = 4 kg. 4 bags make 4 kg, so each bag is 1 kg. I check: 2 + 1 + 1 + 1 + 1 = 6 ✓.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“A jug puzzle: a 4 ℓ jug and a 9 ℓ jug, and I want exactly 1 ℓ. I fill the 9 ℓ jug. I pour into the 4 ℓ jug until it is full: 9 − 4 = 5 left. I empty the 4 ℓ jug and pour again: 5 − 4 = 1. I write every pour in a table so I can check it.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Balance puzzle: swap it. A watermelon balances 3 pineapples. One pineapple balances a 2 kg weight. The watermelon also balances 1 pineapple and 4 bags of sugar. How heavy is the watermelon? One bag of sugar?</div></td><td><div>Watermelon 6 kg (2 + 2 + 2). The 4 bags are 6 − 2 = 4 kg, so each bag is 1 kg. Check: 2 + 1 + 1 + 1 + 1 = 6.</div></td></tr><tr><td><div>Jug puzzle: keep a table. You have a 4 ℓ jug and a 9 ℓ jug with no marks. You can fill a jug, empty it, or pour from one into the other. How can you get exactly 1 ℓ?</div></td><td><div>Fill the 9 ℓ jug (0, 9). Pour into the 4 ℓ jug (4, 5). Empty the 4 ℓ jug (0, 5). Pour again (4, 1). 1 ℓ is left in the 9 ℓ jug.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: same on both sides. A level balance means both sides are equally heavy, so you can swap. For jugs, write every pour in a table. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Balance puzzles: adding the masses on the two sides instead of using &quot;both sides are the same&quot;.</li>
+<li>Jug puzzles: writing &quot;pour&quot; without saying how much is in each jug after the pour, so the steps cannot be checked.</li>
+<li>Time: counting on past the hour as if there were 100 minutes in an hour (4:50 + 25 minutes written as 4:75 or 5:75).</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Be a balance! Stand on one leg with your arms out. The tutor calls “heavy left!” or “heavy right!” and you tip, then come back level.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 9 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “The scale is level. What does that tell you?”</li>
+<li>Ask: “What can you swap the melon for?”</li>
+<li>Ask: “How much is in each jug now? Show me in your table.”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Find the thing you know first. Which scale has a number on it?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Swap: put what balances it on the scale instead.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “For jugs, write the two amounts after every pour.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: 3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?</div></td><td><div>Swap the pomelo for 3 apples: 5 apples balance 500 g, so one apple is 100 g. The pomelo is 300 g. Check: 300 + 100 + 100 = 500.</div></td></tr><tr><td><div>Workbook Think Harder 2: You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.</div></td><td><div>Fill the 7 ℓ jug (0, 7). Pour into the 2 ℓ jug (2, 5). Empty the 2 ℓ jug (0, 5). Pour again (2, 3). 3 ℓ is left in the 7 ℓ jug.</div></td></tr><tr><td><div>Workbook Think Harder 3: Mei’s piano lesson ends at 4:15 p.m. It lasted 45 minutes. What time did it start?</div></td><td><div>3:30 p.m. (count back 15 minutes to 4:00, then 30 more minutes to 3:30)</div></td></tr><tr><td><div>Workbook Think Harder 4: Buses to the MRT station leave every 15 minutes. The first bus leaves at 6:50 a.m. Ravi reaches the bus stop at 7:40 a.m. How long does he wait? The ride takes 25 minutes. When does he reach the MRT station?</div></td><td><div>Buses: 6:50, 7:05, 7:20, 7:35, 7:50. He waits 10 minutes for the 7:50 bus and reaches the station at 8:15 a.m. (7:50 to 8:00 is 10 minutes, 15 more minutes).</div></td></tr><tr><td><div>Workbook Challenge 5: You have a 3 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 5 ℓ? List each pour.</div></td><td><div>(3 ℓ, 7 ℓ): fill 7 (0, 7); pour (3, 4); empty 3 (0, 4); pour (3, 1); empty 3 (0, 1); pour (1, 0); fill 7 (1, 7); pour until the 3 ℓ jug is full (3, 5). 5 ℓ in the 7 ℓ jug.</div></td></tr><tr><td><div>Workbook Challenge 6: Scale 1: 2 cubes and 1 ball balance 2 balls. Scale 2: 1 ball and 1 cube balance a 300 g weight. How heavy is one cube? How heavy is one ball?</div></td><td><div>Take one ball off both sides of scale 1: 2 cubes balance 1 ball. On scale 2, swap the ball for 2 cubes: 3 cubes balance 300 g, so a cube is 100 g and a ball is 200 g. Check scale 1: 100 + 100 + 200 = 400 = 200 + 200.</div></td></tr><tr><td><div>Workbook Challenge 7: Mei has 3 lessons in a row. Each lesson is 35 minutes long, with a 10-minute break between lessons. The first lesson starts at 8:15 a.m. What time does the last lesson end?</div></td><td><div>10:20 a.m. (8:15 to 8:50, break to 9:00, 9:00 to 9:35, break to 9:45, 9:45 to 10:20)</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“How did swapping help you with the balance puzzles?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Why is a table useful for jug puzzles?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“How do you count on past the hour?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>A melon balances 2 apples. Can you swap the melon on a scale for 2 apples and keep it level? Why?</div></td><td><div>A level balance means the two sides weigh the same, so the melon can be swapped for 2 apples (or 400 g) and the scale stays level. A table shows how much is in each jug after every pour, so we can check every step and find our way back. Past the hour: count on to the o’clock first (4:50 to 5:00 is 10 minutes), then count the rest.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>A lesson starts at 4:50 p.m. and lasts 25 minutes. What time does it end?</div></td><td><div>5:15 p.m. (4:50 to 5:00 is 10 minutes, 15 more minutes is 5:15)</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You were real Measure Masters today. You swapped things on a balance, you found exact amounts with no marks on the jugs, and you counted time across the hour.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Next lesson is Challenge Day: bring your best thinking!”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Make your own jug puzzle with two jug sizes and a target amount. Check that it can be done, and list every pour.</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 200 g  (b) 400 g  (c) 50 g (the melon is 400 g, the apple is 200 g, so 4 lemons are 200 g)  (d) 8 lemons</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) Fill the 5 ℓ jug. Pour it into the 3 ℓ jug until the 3 ℓ jug is full. 2 ℓ is left in the 5 ℓ jug.  (b) Fill the 3 ℓ jug and pour it into the 5 ℓ jug. Fill the 3 ℓ jug again and pour until the 5 ℓ jug is full (2 ℓ goes in). 1 ℓ is left in the 3 ℓ jug.</p>
+<p style="padding-left:13px"><b>Q3  </b>(3 ℓ jug, 5 ℓ jug) Start 1, 5. 1: empty the 5 ℓ jug: 1, 0. 2: pour the 1 ℓ into the 5 ℓ jug: 0, 1. 3: fill the 3 ℓ jug: 3, 1. 4: pour it into the 5 ℓ jug: 0, 4. 4 ℓ ✓ (A longer way, 6 steps, also works: empty 3: 0, 5; pour into 3: 3, 2; empty 3: 0, 2; pour: 2, 0; fill 5: 2, 5; pour into 3 until full: 3, 4.)</p>
+<p style="padding-left:13px"><b>Q4  </b>(a) 46 cm  (b) 105 cm (64 + 46 = 110, take away the 5 cm overlap)  (c) 5 m each, 3 cuts</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) A 7:25 a.m.  B 4:50 p.m.  (b) 5:25 p.m.  (c) 1 hour 25 minutes</p>
+<div class="brk"></div>
+<h2>Lesson 10: Challenge Day</h2>
+<p>Week 5 (second lesson)   •   Mixed Puzzles   •   Workbook: Lesson 10</p>
+<table class="tb"><colgroup><col style="width:19.2%"><col style="width:80.8%"></colgroup><tr><td class="hd"><div><b>Objective</b></div></td><td><div>Choose a way to start a puzzle (draw it, list it in order, make a table) and use it on mixed puzzles: picture graphs with a key of 5 or 10, a logic grid with exactly one answer, numbers to 1000, money, fractions, and × and ÷ with the 2, 3, 4, 5 and 10 tables. Check the answer and explain it.</div></td></tr><tr><td class="hd"><div><b>Thinking skills</b></div></td><td><div>Choosing a strategy, drawing models, listing in order, making tables, logical elimination, checking, explaining</div></td></tr><tr><td class="hd"><div><b>Materials</b></div></td><td><div>Puzzle cards for 4 stations, play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.</div></td></tr><tr><td class="hd"><div><b>Online set-up</b></div></td><td><div>Breakout pairs work on one station card each and report back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard.</div></td></tr><tr><td class="hd"><div><b>Prepare</b></div></td><td><div>Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>0–2 min   </b><b>Opening</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Welcome to Challenge Day, inquirers! Today’s puzzles mix everything from our ten lessons.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Clever inquirers do not know every answer straight away. They know how to START: draw it, list it, or make a table.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.</p>
+<p><b>2–10 min   </b><b>Warm-up</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Relay review. Six cards, one from each earlier topic: digit cards, missing digits, legs, patterns, change and fractions. Answer, then pass to the next person.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Relay time! I show a card and say a name. That person answers, then picks the next person. A wrong answer gets a friendly “try again”, never a groan.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>Share 40 stickers equally among 5 children. How many each?</div></td><td><div>8</div></td></tr><tr><td><div>It is 10:55 a.m. What time is it 10 minutes later?</div></td><td><div>11:05 a.m.</div></td></tr><tr><td><div>Which is bigger: 1/3 or 1/5 of the same cake?</div></td><td><div>1/3</div></td></tr><tr><td><div>Half of a circle is called a …</div></td><td><div>Semicircle</div></td></tr><tr><td><div>I think of a number and add 30. I get 100. What is my number?</div></td><td><div>70</div></td></tr></table>
+<div class="sp"></div>
+<p><b>10–25 min   </b><b>Explore (in pairs, with objects)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Look at the four station cards. Which one will be hardest? Which way will you start it: draw, list or table? Write your guess.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>1. Four station cards: a picture graph, a logic grid, a coin puzzle and a fraction strip.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>2. Work in pairs. Read the card aloud.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>3. Before you solve it, write how you will start: draw, list or table.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>4. Solve it, check it, and be ready to explain.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Talk to your partner while you work. I will come round and ask you questions.”</i></p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Stuck: “Can you draw it? Can you list the ways in order?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Graph card: “Look at the key first. What is one picture worth?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Finished early: “Is there another answer? How do you know there is not?”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Ask</b></div></td><td class="hd"><div class="c"><b>Expect</b></div></td></tr><tr><td><div>How did you start each card?</div></td><td><div>Open answers. Draw it, list it, or make a table.</div></td></tr><tr><td><div>Which card was hardest? Why?</div></td><td><div>Open answers.</div></td></tr><tr><td><div>What helped when you were stuck?</div></td><td><div>Drawing it, going in order, trying small numbers first, checking with the clues.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>25–35 min   </b><b>Mini-lesson (you teach, they join in)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Mei had some stickers. She gave half to Ben. Then she gave 6 to Siti and had 4 left. I cannot hold that in my head, so I draw a bar cut into two halves. One half went to Ben. The other half is the 6 for Siti and the 4 left: 6 + 4 = 10. Both halves are the same, so Mei had 10 + 10 = 20 stickers. Check: half of 20 is 10, 10 − 6 = 4 ✓.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Digit cards 2, 0 and 5. How many 3-digit numbers? I list them in order, smallest hundreds digit first. 0 cannot go first. 2: 205, 250. 5: 502, 520. Four numbers, and I know I have them all because I went in order.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Chickens and goats: 7 heads and 20 legs. I make a table. 0 goats: 14 legs. 1 goat: 16. 2 goats: 18. 3 goats: 20 ✓. So 3 goats and 4 chickens. Each goat I swap in adds 2 legs.”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Worked example on the slides</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Draw it: a before-and-after story. Mei had some stickers. She gave half of them to Ben. Then she gave 6 to Siti. Now she has 4 left. How many stickers did she have at first?</div></td><td><div>20. The half she kept is 6 + 4 = 10, so she had 10 + 10 = 20. Check: 20 → 10 → 4.</div></td></tr><tr><td><div>Make a table: heads and legs. A farm has chickens and goats. There are 7 heads and 20 legs. How many goats are there?</div></td><td><div>3 goats and 4 chickens. Table: 0 goats 14 legs, 1 goat 16, 2 goats 18, 3 goats 20 ✓. Check: 12 + 8 = 20.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“The key idea today is: how to start a puzzle. Stuck? Draw it, list it in order, or make a table. Say it with me.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:</p>
+<ul>
+<li>Picture graph: counting the pictures instead of using the key (writing 6 instead of 30 for Tuesday).</li>
+<li>Listing: putting 0 first (038 is not a 3-digit number) or missing a number because the list is not in order.</li>
+<li>Logic grid: putting a tick without crossing out the rest of that row and column, so the next clue cannot be used.</li>
+</ul>
+<p><b>35–40 min   </b><b>Brain break</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Freeze with maths. Dance until the music stops, then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Water. Toilet break for anyone who needs it. Keep it to five minutes.</p>
+<p><b>40–70 min   </b><b>Worksheet (pairs, then alone, then stretch)</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Minute 40: give out the workbook. Read the title of Lesson 10 aloud. Say “Pairs first. Talk before you write.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span>Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Circulate and ask:</p>
+<ul>
+<li>Ask: “How did you start this one? Draw, list or table?”</li>
+<li>Ask: “How do you know there is only one answer?”</li>
+<li>Ask: “Show me your check.”</li>
+</ul>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>IF STUCK   </b></span>Hint 1: “Which lesson does this remind you of?”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 2: “Draw it, list it in order, or make a table.”</p>
+<p style="padding-left:60px"><span style="font-size:.86em;"><b>                </b></span>Hint 3: “Try a small number first, then change it one step at a time.”</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Early finishers: give the stretch question first, then the challenge.</p>
+<h3>Stretch and challenge questions</h3>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Question</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>Workbook Think Harder 1: 30 children chose a fruit. In the picture graph each ● stands for 5 children. Apple has ●● and banana has ●●●. The mango row is missing. How many ● should the mango row have?</div></td><td><div>1 ● (apple 10, banana 15, so mango is 30 − 25 = 5 children)</div></td></tr><tr><td><div>Workbook Think Harder 2: How many 3-digit numbers have digits that add up to 3? List them all.</div></td><td><div>6: 102, 111, 120, 201, 210, 300</div></td></tr><tr><td><div>Workbook Think Harder 3: Ravi has 4 boxes of 5 pencils and 3 boxes of 10 pencils. He shares all the pencils equally among 5 friends. How many does each friend get?</div></td><td><div>10 (20 + 30 = 50 pencils; 50 ÷ 5 = 10)</div></td></tr><tr><td><div>Workbook Think Harder 4: 5, 9, 13, 17, … What is the 10th number in this pattern?</div></td><td><div>41 (add 4: 21, 25, 29, 33, 37, 41)</div></td></tr><tr><td><div>Workbook Challenge 5: A picture graph has lost its key. Football has 6 pictures and swimming has 4 pictures. 10 more children chose football than swimming. How many children chose swimming? Football?</div></td><td><div>Swimming 20, football 30 (2 pictures stand for 10 children, so 1 picture stands for 5)</div></td></tr><tr><td><div>Workbook Challenge 6: Ali, Ben, Mei and Siti each have one coin: 10¢, 20¢, 50¢ or $1. Mei has more money than Ali but less than Ben. Ben does not have the $1 coin. Who has which coin?</div></td><td><div>Ali 10¢, Mei 20¢, Ben 50¢, Siti $1. Ben is not $1 and two people have less than him, so Ben has 50¢; then Ali 10¢ and Mei 20¢, and Siti has the $1.</div></td></tr><tr><td><div>Workbook Challenge 7: At a hawker centre, chicken rice costs $4 a plate and noodles cost $3 a bowl. Ravi’s family buys 7 dishes for $25. How many plates of chicken rice do they buy?</div></td><td><div>4 plates of chicken rice and 3 bowls of noodles ($16 + $9 = $25). Table: 0 → $21, 1 → $22, 2 → $23, 3 → $24, 4 → $25 ✓</div></td></tr></table>
+<div class="sp"></div>
+<p><span style="font-size:.86em;">These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.</span></p>
+<p><b>70–80 min   </b><b>Talk time</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.</p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“Which puzzle was hardest today? How did you start it?”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“When is a table better than a drawing?”</i></p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Discussion question</b></div></td><td class="hd"><div class="c"><b>Listen for</b></div></td></tr><tr><td><div>Pick one puzzle and teach it to the group in two sentences: how you started it, and how you know your answer is right.</div></td><td><div>Open answers. Listen for a clear start (I drew bars, I listed in order, I made a table) and a check (I put my answer back into the puzzle). A table is good when we try 0, 1, 2, 3 … and something grows each time; a drawing is good for before-and-after stories and more-than or fewer-than.</div></td></tr></table>
+<div class="sp"></div>
+<p><b>80–90 min   </b><b>Exit ticket and closing</b></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.</p>
+<table class="tb"><colgroup><col style="width:46.5%"><col style="width:53.5%"></colgroup><tr><td class="hd"><div class="c"><b>Exit ticket</b></div></td><td class="hd"><div class="c"><b>Answer</b></div></td></tr><tr><td><div>5 bicycles and tricycles have 13 wheels altogether. How many tricycles are there? How did you start?</div></td><td><div>3 tricycles and 2 bicycles (9 + 4 = 13). A table of 0, 1, 2, 3 tricycles works well.</div></td></tr></table>
+<div class="sp"></div>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>SAY   </b></span><i>“You are real inquirers now: you notice it, test it and explain why. And when you are stuck, you know how to start.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>          </b></span><i>“Give each child a certificate and say one specific thing they did well in the program.”</i></p>
+<p style="padding-left:49px"><span style="font-size:.86em;"><b>DO     </b></span>Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.</p>
+<h3>Extension for children who are ready</h3>
+<p>Write a challenge puzzle for next year’s group, with the answer and a hint that says how to start it. Check it has exactly one answer.</p>
+<h3>Answer key (workbook)</h3>
+<p style="padding-left:13px"><b>Q1  </b>(a) 30  (b) Thursday sold 25 ice-creams: draw 5 pictures (90 − 20 − 30 − 15 = 25)  (c) $30 (15 ice-creams at $2 each)</p>
+<p style="padding-left:13px"><b>Q2  </b>(a) 308, 380, 803, 830  (b) Greatest 830, smallest 308  (c) 308, 380, 803</p>
+<p style="padding-left:13px"><b>Q3  </b>Two 50¢ coins and four 20¢ coins (100¢ + 80¢ = 180¢ = $1.80). Table: 0 → $1.20, 1 → $1.50, 2 → $1.80 ✓</p>
+<p style="padding-left:13px"><b>Q4  </b>Ali: car. Ben: MRT. Mei: bus. Siti: walk.</p>
+<p style="padding-left:13px"><b>Q5  </b>(a) 5/10  (b) 2/10  (c) Mei, Ali, Ben</p>
+<p style="padding-left:13px"><b>Q6  </b>(a) 10, 12, 14: 6 tables seat 14 people  (b) 9 tables (each table adds 2 seats: 4, 6, 8, … 20)</p>
+<div class="brk"></div>
+<h2>Progress tracker</h2>
+<p>After each exit ticket, write S (secure: correct and can explain), D (developing: correct but cannot explain yet) or H (needs help). Use the notes for what to revisit next lesson.</p>
+<table class="tb"><colgroup><col style="width:20.2%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:5.9%"><col style="width:21.2%"></colgroup><tr><td class="hd"><div class="c"><b>Student</b></div></td><td class="hd"><div class="c"><b>L1</b></div></td><td class="hd"><div class="c"><b>L2</b></div></td><td class="hd"><div class="c"><b>L3</b></div></td><td class="hd"><div class="c"><b>L4</b></div></td><td class="hd"><div class="c"><b>L5</b></div></td><td class="hd"><div class="c"><b>L6</b></div></td><td class="hd"><div class="c"><b>L7</b></div></td><td class="hd"><div class="c"><b>L8</b></div></td><td class="hd"><div class="c"><b>L9</b></div></td><td class="hd"><div class="c"><b>L10</b></div></td><td class="hd"><div class="c"><b>Notes</b></div></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+<h3>Ending the program</h3>
+<ul>
+<li>In Lesson 10, give each child a certificate and their completed inquiry journal.</li>
+<li>Send parents a short message through the approved channel: one thing their child did well, and one thing to keep practising.</li>
+<li>Delete or hand over all Student Data within 7 days after the last lesson (this is in the tutor agreement).</li>
+<div class="brk"></div>
+</ul>
+<h2>Tutor checklist</h2>
+<h3>Before each lesson</h3>
+<ul>
+<li>Read the lesson plan and solve the worksheet yourself without looking at the key.</li>
+<li>Check materials are ready, or the online set-up has been sent.</li>
+<li>Test the platform, screen share and annotation tools 10 minutes early (online).</li>
+<li>Print or open the slide deck for the lesson.</li>
+</ul>
+<h3>During the lesson</h3>
+<ul>
+<li>Circulate and ask questions rather than giving answers.</li>
+<li>Use only the approved channels to contact parents. No private messages to children.</li>
+<li>Do not take photos or recordings unless the Company has approved it and parents have consented.</li>
+<li>If you have a concern about a child’s safety or welfare, tell the Company straight away.</li>
+</ul>
+<h3>After the lesson</h3>
+<ul>
+<li>Stamp inquiry journals and fill in the tracker.</li>
+<li>Collect worksheets and answer keys (face to face) and keep them secure.</li>
+<li>Note any child who needs help, and plan a short catch-up at the start of the next lesson.</li>
+<div class="brk"></div>
+</ul>
+<h2>Math Inquirers Holiday Program</h2>
+<p><i>Notice it. Test it. Explain why.</i></p>
+<h3>A 10-lesson holiday maths program for children finishing Primary 2</h3>
+<p>Your child will spend the holidays as a young mathematician: noticing patterns, testing ideas with real objects and explaining their thinking. Lessons are live online in small groups, hands-on, and built around thinking, not speed.</p>
+<h3>What your child will do</h3>
+<ul>
+<li>Lesson 1, Digit Detectives: numbers to 1000</li>
+<li>Lesson 2, Missing Digit Mysteries: addition and subtraction within 1000</li>
+<li>Lesson 3, Legs, Wheels and Arrays: multiplication and division</li>
+<li>Lesson 4, Pattern Machines: patterns with multiplication</li>
+<li>Lesson 5, Mystery Number Machines: working backwards</li>
+<li>Lesson 6, Market Day: money</li>
+<li>Lesson 7, Fair Shares: fractions</li>
+<li>Lesson 8, Shape Builders: 2d and 3d shapes</li>
+<li>Lesson 9, Measure Masters: length, mass, volume and time</li>
+<li>Lesson 10, Challenge Day: mixed puzzles</li>
+</ul>
+<h3>How you can help</h3>
+<ul>
+<li>Ask “How do you know?” when your child tells you an answer.</li>
+<li>Let your child try first. Please sit nearby, but let them find the answer.</li>
+<li>Print the workbook and cut-outs, and keep counters, scissors and a pencil ready.</li>
+</ul>
+<h3>Practical details</h3>
+<table class="tb"><colgroup><col style="width:25.3%"><col style="width:74.7%"></colgroup><tr><td class="hd"><div><b>Dates</b></div></td><td><div>[start date] to [end date], two lessons a week</div></td></tr><tr><td class="hd"><div><b>Time</b></div></td><td><div>[day] and [day], [start time] to [end time]</div></td></tr><tr><td class="hd"><div><b>Where</b></div></td><td><div>Live online video class (link sent after registration)</div></td></tr><tr><td class="hd"><div><b>Group size</b></div></td><td><div>[number] children</div></td></tr><tr><td class="hd"><div><b>Fee</b></div></td><td><div>S$500 introductory (regular S$650), workbook included, payable in 3 instalments</div></td></tr><tr><td class="hd"><div><b>Contact</b></div></td><td><div>[name, phone or email]</div></td></tr></table>
+<p><span style="font-size:.86em;"><i>Math Inquirers Holiday Program is an independent enrichment program. It is inspired by gifted-education-style thinking skills but is not affiliated with, run by or endorsed by the Ministry of Education or any school.</i></span></p></body></html>

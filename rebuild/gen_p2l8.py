@@ -304,21 +304,21 @@ put('p2l8-we3',sec('p2l8-we3','33–34 MIN',body,
 # 12. key
 body=h2('Key idea: count in order')+card(p('Sort what you count: by size, by the line it sits on, or by layer. Then you never miss one or count one twice.',44,700))+card(p('Name a piece by its sides: a semicircle has 1 straight side, a quarter circle has 2.',38,600,MUTED))
 put('p2l8-key',sec('p2l8-key','34–35 MIN',body,
- 'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Counting only the small squares in Q3a (16 instead of 30): ask "Are there bigger squares hiding?" '
- '(2) Calling a quarter circle a semicircle when it is turned (Q2): count its straight sides. '
- '(3) Counting only the cubes you can see in Q4: ask "What is holding up the top cube?" '
- '(4) Thinking any 6 joined squares fold into a cube (Q5).'))
+ 'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Counting only the small squares in Q2a (16 instead of 30): ask "Are there bigger squares hiding?" '
+ '(2) Calling a quarter circle a semicircle when it is turned (Q1): count its straight sides. '
+ '(3) Counting only the cubes you can see in Q3: ask "What is holding up the top cube?" '
+ '(4) Thinking any 6 joined squares fold into a cube (Q4).'))
 
 # 13. break
 put('p2l8-break',break_slide('p2l8-break','35–40 MIN','Be a shape! When the tutor calls a shape, make it with your body: a semicircle (arms in an arch over your head), a cone (hands to a point), a cube (curl up small), a cylinder (stand tall and straight).','Then: a drink of water and back to our seats.',
  'Five minutes. Call the shapes faster and faster. Add "quarter circle" (one arm up, one arm out to the side, then sweep the hand round). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
-put('p2l8-ws1',preview_x('p2l8-ws1','40–50 MIN','Worksheet page 1: with your partner',[('Q1','Circle pieces. Name them, then make whole circles.'),('Q2','The robot. Count one kind of piece at a time and tick it.'),('Q3','Count every square (by size) and every triangle (by the line it sits on).')],'Stuck? Use your paper pieces, or colour each shape you count.',
- 'Minutes 40 to 50. Pairs work together. Ask "How do you know you have them all?" before giving any help. For Q3a, give pairs a paper window to slide (cut a 2 by 2 and a 3 by 3 hole in card).'))
-put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) A semicircle; B and C quarter circles   b) {1/4}   c) 3 circles'),('Q2','Square 2, triangle 3, semicircle 4, quarter circle 2.  Most: semicircles.  11 pieces.'),('Q3','a) 16 + 9 + 4 + 1 = 30 squares     b) 6 + 6 = 12 triangles')],
+put('p2l8-ws1',preview_x('p2l8-ws1','40–50 MIN','Worksheet page 1: with your partner',[('Q1','The robot. Count one kind of piece at a time and tick it. Then make whole circles from pieces.'),('Q2','Count every square (by size) and every triangle (by the line it sits on).')],'Stuck? Use your paper pieces, or colour each shape you count.',
+ 'Minutes 40 to 50. Pairs work together. Ask "How do you know you have them all?" before giving any help. For Q2a, give pairs a paper window to slide (cut a 2 by 2 and a 3 by 3 hole in card).'))
+put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','Square 2, triangle 3, semicircle 4, quarter circle 2'),('Q1 a–c','a) semicircles    b) 11 pieces    c) 3 circles'),('Q2','a) 16 + 9 + 4 + 1 = 30 squares     b) 6 + 6 = 12 triangles')],
  'Click each answer after a pair explains theirs. Q1c: think in quarter circles: 3 semicircles are 6 quarter circles, plus 6 more is 12 quarter circles, and 4 make a circle: 3 circles. Or: 2 semicircles make 1 circle, 4 quarter circles make 1 circle, and the last semicircle with the last 2 quarter circles make 1 more. '
- 'Q2: the ears and the feet are semicircles; the shoulders are quarter circles. Q3a: the 2 by 2 window fits 3 across and 3 down (9 places), the 3 by 3 window fits in 4 places. Q3b: on the bottom line: 3 single parts, 2 made of 2 parts, 1 whole = 6; on the line across: the same, 6.',lw=180,gap=170,size=34))
+ 'Q1: the ears and the feet are semicircles; the shoulders are quarter circles; the hat and the hands are triangles. Q2a: the 2 by 2 window fits 3 across and 3 down (9 places), the 3 by 3 window fits in 4 places. Q2b: on the bottom line: 3 single parts, 2 made of 2 parts, 1 whole = 6; on the line across: the same, 6.',lw=180,gap=170,size=34))
 
 # 16. teach cubes
 cells=hmap([[1,1,1],[2,2,2]])
@@ -327,15 +327,15 @@ w,hh=stack_size(cells,s)
 base=stack_svg(cells,s,'A stack of cubes: a bottom layer 3 long and 2 deep, with a row of 3 cubes on top at the back')
 top=[c for c in cells if c[2]==1]; bot=[c for c in cells if c[2]==0]
 s2=62
-lay=SV(600,330,stack_body([(x,y,0) for x,y,z in top],s2,10,120,(MINT,WHITE,'#9FD8C0'))+T(250,76,'top layer: 3',34,TEAL,700,'start')+stack_body(bot,s2,10,320,(YEL,SOFT,SIDE))+T(270,262,'bottom layer: 6',34,NAVY,700,'start'),'The stack taken apart: a top layer of 3 cubes and a bottom layer of 6 cubes')
+lay=SV(600,330,stack_body([(x,y,0) for x,y,z in top],s2,10,120,(MINT,WHITE,'#9FD8C0'))+T(290,76,'top layer: 3',34,TEAL,700,'start')+stack_body(bot,s2,10,320,(YEL,SOFT,SIDE))+T(290,262,'bottom layer: 6',34,NAVY,700,'start'),'The stack taken apart: a top layer of 3 cubes and a bottom layer of 6 cubes')
 body=h2('Count cubes layer by layer')+stitle('How many cubes are in this stack? Some are hidden!')
 body+=pin(128,320,round(w+16),base)
-body+=stepx(1,'Lift off the top layer in your head: 3 cubes.',left=540,top=320,width=560,size=32,build='fade')
-body+=stepx(2,'Bottom layer: 3 long and 2 deep. 3 + 3 = 6. The back 3 hold up the top layer, so they must be there!',left=540,top=460,width=560,size=32,build='fade')
-body+=pin(1150,320,600,lay,'fade',WHITE,20,'10px 20px')
+body+=stepx(1,'Lift off the top layer in your head: 3 cubes.',left=540,top=320,width=540,size=32,build='fade')
+body+=stepx(2,'Bottom layer: 3 long and 2 deep. 3 + 3 = 6. The back 3 hold up the top layer, so they must be there!',left=540,top=460,width=540,size=32,build='fade')
+body+=pin(1160,320,600,lay,'fade',WHITE,20,'10px 20px')
 body+=ansx(540,720,1262,'3 + 6 = 9 cubes',size=40)
 put('p2l8-teachcube',sec('p2l8-teachcube','52–54 MIN',body,
- 'Teach before worksheet page 2 (Q4 counts the cubes in three stacks). Build this stack with real cubes first, then show the picture. Ask: "How many cubes can you see? How many are there really?" Many children say 6 or 7. '
+ 'Teach before worksheet page 2 (Q3 counts the cubes in three stacks). Build this stack with real cubes first, then show the picture. Ask: "How many cubes can you see? How many are there really?" Many children say 6 or 7. '
  'Click 1: the top layer. Click 2: the bottom layer: point to the right side, where you can see the end of the back row. Click 3: the stack taken apart. Think-aloud: "I count layer by layer. The top layer has 3. The bottom layer is a rectangle 3 long and 2 deep: 6. Cubes cannot float, so there must be cubes under the top ones. 3 + 6 = 9." '
  'On the worksheet the rule is the same: every cube sits on the table or on another cube, and there are no gaps at the back.'))
 
@@ -361,7 +361,7 @@ body+=stepx(2,'Keep folding. The square at the top end folds over to be the lid.
 body+=ansx(600,560,1192,'6 different faces, nothing left open: it folds into a cube ✓',size=34)
 body+=pin(128,690,1664,f'<div style="display:flex;align-items:center;gap:36px">{ub}<p style="font-size:32px;font-weight:700;line-height:1.3">Not a cube net: the 2 bottom squares both fold onto the same face, and there is no lid.</p></div>','fade',SOFT,20,'14px 28px')
 put('p2l8-teachnet',sec('p2l8-teachnet','55–57 MIN',body,
- 'Teach before worksheet page 2 (Q5 asks which nets fold into a cube, Q6 is a dice net). Have a printed copy of this net cut out, or open up a small box. Click 1 and 2: fold it in front of the children. Think-aloud: "I choose a bottom. The squares touching it fold up as walls. The row of 4 wraps round: bottom, wall, top, wall. The two loose squares close the ends. Every square lands on a different face, so it is a cube." '
+ 'Teach before worksheet page 2 (Q4 asks which nets fold into a cube, Q5 is a dice net). Have a printed copy of this net cut out, or open up a small box. Click 1 and 2: fold it in front of the children. Think-aloud: "I choose a bottom. The squares touching it fold up as walls. The row of 4 wraps round: bottom, wall, top, wall. The two loose squares close the ends. Every square lands on a different face, so it is a cube." '
  'Click 4: the shape with two squares under the ends: "When I fold, both of these land on the same face. One face gets two squares, and one face gets none. Not a cube." '
  'Tip for the worksheet: squares that land on the same place, or a row of 5 or more squares, or a 2 by 2 block of squares mean it is not a cube net.'))
 
@@ -378,15 +378,15 @@ for k,(sv,q,a) in enumerate([(na,'Does it fold into a cube?','Yes'),(nbb,'Does i
 body+=soft(128,800,1664,'Two squares in a straight line with one square between them end up opposite each other.',30)
 put('p2l8-trynet',sec('p2l8-trynet','57–58 MIN',body,
  'Whiteboards (or thumbs up and down), then click. a) Yes: this is one of the 11 cube nets. b) No: the 1st and the 3rd square of the row are opposite each other, so the two squares on top of them both fold onto the same face (the lid), and the bottom is open. '
- 'c) E: C, D and E are in a straight line, so when D is the bottom, C and E are the two walls facing each other. Also A is opposite D, and B is opposite F. This is the idea for the dice net in Q6.'))
+ 'c) E: C, D and E are in a straight line, so when D is the bottom, C and E are the two walls facing each other. Also A is opposite D, and B is opposite F. This is the idea for the dice net in Q5.'))
 
 # 20-21. worksheet page 2
-put('p2l8-ws2',preview_x('p2l8-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','Count the cubes, layer by layer. Remember the hidden ones.'),('Q5','Which nets fold into a cube? Then add one square to make a net.'),('Q6','A dice net. Opposite faces add up to 7.')],'Finished early? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. Let children cut out the printed nets from the back of the workbook to check Q5 after they have decided.'))
-put('p2l8-ws2ans',check_x('p2l8-ws2ans','67–70 MIN','Page 2: check together',[('Q4','A 5    B 8    C 14 (9 + 4 + 1)    d) 13 more (27 − 14)'),('Q5','a) A, C and E    b) under any one of the 4 squares in the row'),('Q6','Row: 2, 3, 5, 4.   Bottom square: 6.')],
- 'Click each answer after a child explains. Q4B: one cube is completely hidden at the back, bottom, left. Q4C: count layers: 9 + 4 + 1 = 14. d) a 3 by 3 by 3 cube has 3 layers of 9: 27; 27 − 14 = 13. '
- 'Q5a: B (2 by 3) has a 2 by 2 block; D has two squares that land on the same face; F has a row of 5, which wraps round onto itself. Q5b: the extra square must go under the row (any of the 4 places), so the two loose squares become the top and the bottom. Above the row, or at the ends, it does not work. '
- 'Q6: in the row 2, 3, ?, ?: the 3rd square is opposite the 1st (2), so it is 5; the 4th is opposite the 2nd (3), so it is 4. The top and bottom squares at the left end are opposite each other: 1 and 6.',lw=180,gap=170,size=34))
+put('p2l8-ws2',preview_x('p2l8-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Count the cubes, layer by layer. Remember the hidden ones.'),('Q4','Which nets fold into a cube? Then add one square to make a net.'),('Q5','A dice net. Opposite faces add up to 7.')],'Finished early? Stretch and Challenge come next.',
+ 'Children work alone. Note who needs a short catch-up next lesson. Let children cut out the printed nets from the back of the workbook to check Q4 after they have decided.'))
+put('p2l8-ws2ans',check_x('p2l8-ws2ans','67–70 MIN','Page 2: check together',[('Q3','a) A 5   B 8   C 14 (9 + 4 + 1)    b) 13 more (27 − 14)'),('Q4','a) A, C and E    b) under any one of the 4 squares in the row'),('Q5','Row: 2, 3, 5, 4.   Bottom square: 6.')],
+ 'Click each answer after a child explains. Q3 B: one cube is completely hidden at the back, bottom, left. C: count layers: 9 + 4 + 1 = 14. b) a 3 by 3 by 3 cube has 3 layers of 9: 27; 27 − 14 = 13. '
+ 'Q4a: B (2 by 3) has a 2 by 2 block; D has two squares that land on the same face; F has a row of 5, which wraps round onto itself. Q4b: the extra square must go under the row (any of the 4 places), so the two loose squares become the top and the bottom. Above the row, or at the ends, it does not work. '
+ 'Q5: in the row 2, 3, ?, ?: the 3rd square is opposite the 1st (2), so it is 5; the 4th is opposite the 2nd (3), so it is 4. The top and bottom squares at the left end are opposite each other: 1 and 6.',lw=180,gap=170,size=34))
 
 # 22. stretch
 st=[('1.','How many quarter circles make 2 whole circles and 1 semicircle?'),('2.','A stack is 3 cubes long, 3 cubes wide and 2 cubes high. How many cubes?'),('3.','How many triangles are in a triangle with 3 lines from the top corner to the bottom?')]

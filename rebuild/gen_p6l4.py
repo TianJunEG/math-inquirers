@@ -184,10 +184,10 @@ put(f'{L}-teach2',sec(f'{L}-teach2','30–31 MIN',body,'Teach. Ask first: "Will 
 
 # ---------- 10 we2: run it backwards ----------
 body=h2('Run the machine backwards')+card(p('A machine does × 5, then − 4. OUT is 31. What was IN?    That is the equation 5n − 4 = 31.',38,700))
-body+=pin(128,400,1664,machine([('n','q'),('× 5','op'),('− 4','op'),('31','res')],back='go back: + 4, then ÷ 5',w=1664),None)
-body+=step(1,'Undo the LAST step first: the opposite of − 4 is + 4.   31 + 4 = 35',top=660,size=34)
-body+=step(2,'Then undo × 5 with ÷ 5.   35 ÷ 5 = 7.   So n = 7.',top=760,size=34)
-body+=answer(1180,860,612,'Check: 7 × 5 − 4 = 31 ✓')
+body+=pin(128,380,1664,machine([('n','q'),('× 5','op'),('− 4','op'),('31','res')],back='go back: + 4, then ÷ 5',w=1664),None)
+body+=step(1,'Undo the LAST step first: the opposite of − 4 is + 4.   31 + 4 = 35',top=640,size=34)
+body+=step(2,'Then undo × 5 with ÷ 5.   35 ÷ 5 = 7.   So n = 7.',top=740,size=34)
+body+=answer(1180,830,612,'Check: 7 × 5 − 4 = 31 ✓')
 put(f'{L}-we2',sec(f'{L}-we2','31–33 MIN',body,'Click through. Analogy: "You put on socks, then shoes. To undo, shoes come off first." Think-aloud: "The machine did times 5 and then took away 4. The last thing it did was take away 4, so I undo that first: 31 + 4 = 35. Then undo times 5: 35 ÷ 5 = 7. Check forwards: 7 × 5 = 35, 35 − 4 = 31." A second one if time: (n + 2) × 5 = 45: undo × 5 first (9), then − 2: n = 7.'))
 
 # ---------- 11 try2 ----------

@@ -99,7 +99,7 @@ module.exports = {
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), workbook (challenge round on page 1, planning sheet on page 2), pencil, mini whiteboard, links to the three starter projects (or build them from the slides), certificates, stamps.',
     online: 'Challenge round in teams of 2 in breakout rooms. Building: everyone in the main room with cameras on, asking for help in the chat. Showcase: each child shares their screen for 3 minutes; the group gives two stars and a wish in the chat.',
     warmup: 'Lightning relay: one quick question from each of Lessons 1 to 9, passed round the group. Then five quick questions on the slide.',
-    explore: 'Challenge round in teams of 2: workbook page 1, four puzzles from across the program (hexagon pattern and code, primes, a quick-fire round, digit cards and probability). 1 point for each answer, 1 for a check (by hand or in code), 1 for a clear reason. Then talk: how did you start each puzzle?',
+    explore: 'Challenge round in teams of 2: workbook page 1, three puzzles from across the program (hexagon pattern and code, primes, and a quick-fire round with negatives, machines, angles, clock arithmetic, digit cards and probability). 1 point for each answer, 1 for a check (by hand or in code), 1 for a clear reason. Then talk: how did you start each puzzle?',
     mini: 'From puzzle to program: pick a maths idea, work out the answer by hand first, turn the rule into blocks (input, rule, check, output), test with a value you already know, then add a twist. Starter A, Mystery Machine: the computer picks n from 1 to 20, shows 3n + 4, and checks your guess (backwards: subtract 4, divide by 3). Starter B, Prime or Not?: a loop counts the factors of n with mod; exactly 2 factors means prime. Starter C, Lucky Seven: roll two dice 1000 times and count the 7s; 6 of the 36 results make 7, so expect about 167, never exactly.',
     share: 'Showcase: 3 minutes each. Show the puzzle, run the program, show one test where you knew the answer first, and explain the maths that makes it work.',
     exit: { q: 'Write one thing your program does, one test you did (the input and the answer you expected), and the maths that explains it.', a: 'Open. Look for a test worked out by hand before running the program, and a correct maths reason.' },
@@ -108,18 +108,17 @@ module.exports = {
     key: [
       ['Q1', '(a) 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
       ['Q2', '(a) 49 (factors 1, 7, 49; the only other 2-digit number with exactly 3 factors is 25)  (b) 2 × 2 × 3 × 7  (c) 3 + 37, 11 + 29, 17 + 23 (3 ways)'],
-      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)'],
-      ['Q4', '(a) 12  (b) 6  (c) 4/12 = 1/3 (12, 21, 24, 42)'],
-      ['Q5', '(a) 31; 18  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139 (5 of the 36 results make 8; 1000 × 5 ÷ 36 ≈ 139); the program gives a number near this, not exactly'],
-      ['Q6', 'Open: an idea, the puzzle, its answer worked out by hand, and a twist.'],
-      ['Q7', 'Open: blocks (under 15) and at least two tests worked out before running, one of them an edge case.']
+      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (e) 12 numbers; 6 even  (f) 4/12 = 1/3 (12, 21, 24, 42)'],
+      ['Q4', '(a) 31; 18 ((58 − 4) ÷ 3)  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139: 5 of the 36 equally likely results make 8 (2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2), and 1000 × 5 ÷ 36 ≈ 139; the program gives a number near this, not exactly'],
+      ['Q5', 'Open: an idea, the puzzle, its answer worked out by hand, and a twist.'],
+      ['Q6', 'Open: blocks (under 15) and at least two tests worked out before running, one of them an edge case.']
     ]
   },
 
   script: {
     hook: ['Welcome to our last lesson, inquirers! Two parts today. First a challenge round with puzzles from all nine lessons. Then you become the puzzle maker: you build a small program that sets a maths puzzle, and you show it to the group.', 'Our rule all program long: notice it, test it, explain why. Today you do all three in front of an audience.'],
     warmIntro: ['Lightning relay! I ask a quick question from one of our lessons, you answer, then you pass a new question to someone by saying their name. Ready? First one: what is the 10th term of 3, 7, 11, 15?', 'Which lesson did that question come from? Can you remember the trick we learned?'],
-    predict: ['Look at the four puzzles on page 1. Which one do you think will be hardest? Which lesson does each one come from? Write your guesses at the top of the page.'],
+    predict: ['Look at the puzzles on page 1. Which one do you think will be hardest? Which lesson does each one come from? Write your guesses at the top of the page.'],
     exploreHints: ['Stuck on a puzzle: which lesson does it remind you of? Make a table, list it in order, or draw it.', 'Got an answer: earn the check point. Check it a different way, or test it in code.', 'Finished early: write a rule for Q1 that would make 2027 sticks. Is it possible with hexagons?'],
     think: ['“Hexagon chains: 6, 11, 16 sticks. Each new hexagon shares one side with the last one, so it adds 5 sticks. The first hexagon is 6 = 5 + 1. So n hexagons use 5n + 1 sticks. For 10 hexagons: 51. I can test that in code: start at 6 and change by 5 nine times.”', '“Mystery Machine: the program picks n, works out 3n + 4 and shows it. If it shows 19, I go backwards: 19 − 4 = 15, 15 ÷ 3 = 5. Before I trust the program, I test it with a number I already know: if n is 5 it must show 19.”', '“Lucky Seven: there are 6 × 6 = 36 equally likely results for two dice. 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1 make 7: that is 6 of 36, one sixth. So in 1000 rolls I expect about 167. When I run it I got 152, then 182, then 162: close to 167 but never the same, because the rolls are random.”'],
     circulate: ['Ask: “What answer should your program give for this input? How do you know?”', 'Ask: “What happens with an edge case: 1, 0, or the biggest number?”', 'Ask: “In one sentence, what maths is your program about?”'],
@@ -133,7 +132,7 @@ module.exports = {
     today: 'Take on a challenge round with puzzles from all nine lessons, then plan, build, test and show your own puzzle program.',
     warmGame: 'Lightning relay. The tutor asks a quick question from one of Lessons 1 to 9; whoever answers asks the next question (from the cards on screen) and names the next person.',
     warmQs: [['What is the nth term of 4, 7, 10, 13, …?', '3n + 1'], ['Is 91 a prime number?', 'No: 7 × 13'], ['−5 + 8 − 6 = ?', '−3'], ['A regular hexagon: what angle does the turtle turn at each corner?', '60°'], ['Mean of 7, 9, 11 and 13?', '10']],
-    expSetup: ['Teams of 2. Open the workbook at page 1: the challenge round.', 'Four puzzles from across the program. Do the maths first.', 'Score: 1 point for each answer, 1 for a check (a different way or in code), 1 for a clear reason.', 'After 12 minutes we check together and add up the points.'],
+    expSetup: ['Teams of 2. Open the workbook at page 1: the challenge round.', 'Three puzzles from across the program. Maths first.', 'Score: 1 point for each answer, 1 for a check (a different way or in code), 1 for a clear reason.', 'After 12 minutes we check together and add up the points.'],
     expPic: 'a scoreboard with three columns: answer, check, reason, and a point for each.',
     expAsk: [['How did you start the hexagon puzzle?', 'Make a table of hexagons and sticks; notice + 5 each time; the rule is 5n + 1.'], ['How did you know you had found every way to write 40 as two primes?', 'Go through the primes in order up to 20 and test whether 40 minus each one is prime.'], ['Which check did you do in code?', 'For example, run the hexagon loop, or list the digit-card numbers with nested loops and count the multiples of 3.']],
     mini1: { head: 'Starter A: Mystery Machine', body: ['The program picks n from 1 to 20 and shows 3n + 4.', 'The player works backwards: subtract 4, then divide by 3.', 'Test with a value you know: n = 5 must show 19.'], ans: 'Out 25 → 7. Out 64 → 20. Out 3 is impossible: the smallest OUT for n from 1 to 20 is 7.' },
@@ -142,8 +141,8 @@ module.exports = {
     keyBig: 'Work out the answer by hand first. Then the program is a test: if it agrees with you, you are probably both right; if not, find out which one is wrong.',
     keySmall: 'A good showcase: show the puzzle, run it, show a test you knew the answer to, and explain why it works.',
     brk: 'Turtle moves. The tutor calls a polygon; everyone turns on the spot by its outside angle at every corner (triangle: 120°, square: 90°, hexagon: 60°) and counts until they face the front again.',
-    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round (negatives, machines, turtle angles, clock), Q4 digit cards and probability.',
-    ws2: 'Page 2, on your own (plan and build): Q5 test the starters by hand, Q6 my puzzle program, Q7 blocks and test table, then build it in Scratch.'
+    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round (negatives, machines, turtle angles, clock, digit cards and probability).',
+    ws2: 'Page 2, on your own (plan and build): Q4 test the starters by hand, Q5 my puzzle program, Q6 blocks and test table, then build it in Scratch.'
   },
 
   qbank: {
@@ -179,45 +178,44 @@ module.exports = {
   },
 
   workbook: H => {
-    const hexProg = ['when flag clicked', 'set sticks to 6', { c: 'repeat 14', body: ['change sticks by 5'] }, 'say sticks'];
+    const hexProg = ['set sticks to 6', { c: 'repeat 14', body: ['change sticks by 5'] }, 'say sticks'];
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:center;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     const wt = [2600, 3300, 2700, 1300];
-    const wp = [2400, 7500];
+    const wp = [3600, 6300];
     return [
       H.q(1, 'Chains of hexagons are made from sticks.', { before: 0, keepNext: true }),
-      side(hexChains(), codeSvg(hexProg, 'Code blocks: when flag clicked, set sticks to 6, repeat 14 (change sticks by 5), say sticks', 14)),
+      side(hexChains(), codeSvg(hexProg, 'Code blocks: set sticks to 6, repeat 14 (change sticks by 5), say sticks', 14)),
       H.sub('a', 'Sticks for 10 hexagons?  ____      (b)  Rule for n hexagons:  sticks = __________'),
       H.sub('c', 'How many hexagons can be made with exactly 101 sticks?  ____'),
       H.sub('d', 'Predict what the code says.  ____       Which chain does it check?  ____ hexagons'),
-      H.q(2, 'Prime hunters.', { before: 50, keepNext: true }),
+      H.q(2, 'Prime hunters.', { before: 20, keepNext: true }),
       H.sub('a', 'I have 2 digits and exactly 3 factors. My digits add up to 13. What am I?  ____'),
       H.sub('b', 'Write 84 as a product of prime numbers.  ________________'),
       H.sub('c', 'Find ALL the ways to write 40 as two primes added.  __________________'),
-      H.q(3, 'Quick-fire round.', { before: 50, keepNext: true }),
+      H.q(3, 'Quick-fire round.', { before: 20, keepNext: true }),
       H.sub('a', 'It is −4 °C. It warms up 9 °C, then cools 12 °C. What is it now?  ____'),
       H.sub('b', 'A machine does × 3, then − 10. Which IN number comes OUT unchanged?  ____'),
       H.sub('c', 'A turtle draws a regular polygon, turning 24° at each corner. Sides?  ____'),
       H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ____'),
-      H.q(4, 'Make 2-digit numbers with the digit cards  1  2  3  4  (each card at most once in a number).', { before: 50, keepNext: true }),
-      H.sub('a', 'How many different numbers?  ____          (b)  How many are even?  ____'),
-      H.sub('c', 'One number is picked at random. What is the probability it is a multiple of 3?  ____'),
+      H.sub('e', 'Cards 1, 2, 3, 4 make 2-digit numbers (no card twice). How many?  ____   Even?  ____'),
+      H.sub('f', 'One of them is picked at random. Probability it is a multiple of 3?  ____'),
 
-      H.q(5, 'Maths first! Work out what each starter project should do BEFORE you run it.', { pb: true, before: 0, keepNext: true }),
-      H.sub('a', 'Mystery Machine (× 3, then + 4).  n = 9: what comes out?  ____    Out 58: what went in?  ____'),
-      H.sub('b', 'Prime or Not? How many factors does it count for 91?  ____    Prime or not?  ________'),
+      H.q(4, 'Maths first! Work out what each starter project should do BEFORE you run it.', { pb: true, before: 0, keepNext: true }),
+      H.sub('a', 'Mystery Machine (× 3, then + 4).  n = 9 gives?  ____     OUT 58 came from?  ____'),
+      H.sub('b', 'Prime or Not? How many factors does it count for 91?  ____     Prime?  ____'),
       H.sub('c', 'Lucky Seven, changed to count 8s: about how many 8s in 1000 rolls? Why?'),
       ...H.lines(1),
-      H.q(6, 'My puzzle program: the plan.', { keepNext: true }),
+      H.q(5, 'My puzzle program: the plan.', { keepNext: true }),
       H.tbl(wp, [
-        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'The answer, worked out by hand', 'My twist (what I will change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 80 }), H.cell(' ', wp[1], { h: 80 })]))
+        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'Its answer, worked out by hand', 'My twist (what I change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 50 }), H.cell(' ', wp[1], { h: 50 })]))
       ].flat()),
-      H.q(7, 'Plan the blocks, then test. Draw or write your blocks (under 15). Fill in the test table BEFORE you run each test.', { keepNext: true }),
-      side(`<div style="width:330px;height:215px;border:2px solid #1B2A49;border-radius:8px;background:#FFFFFF"></div>`, pyBox('Python fans (optional): Starter A. To test it with Q5(a), change line 2 to  n = 9', PY_MACHINE)),
+      H.q(6, 'Plan your blocks (under 15) in the box. Fill in each test BEFORE you run it.', { keepNext: true }),
+      side(`<div style="width:330px;height:190px;border:2px solid #1B2A49;border-radius:8px;background:#FFFFFF"></div>`, pyBox('Python fans (optional): Starter A. To test it with Q4(a), change line 2 to  n = 9', PY_MACHINE)),
       H.tbl(wt, [
         H.row(['Input (what I type or set)', 'It should say (by hand)', 'It said', 'Same? ✓'].map((s, i) => H.cell(s, wt[i], { bold: true, fill: 'EDEDED', h: 60 }))),
-        ...[0, 1, 2].map(() => H.row(wt.map(w => H.cell(' ', w, { h: 170 }))))
+        ...['Test 1', 'Test 2', 'Edge case'].map(t => H.row([H.cell(t, wt[0], { bold: true, align: 'left', h: 60 }), ...wt.slice(1).map(w => H.cell(' ', w, { h: 60 }))]))
       ]),
-      H.p('Showcase checklist:   ☐ I can explain the maths    ☐ I tested a value I knew    ☐ I tested an edge case (0, 1, the biggest)    ☐ My twist works', { after: 0 })
+      H.sub('', 'Ready to show?   ☐ I can explain the maths   ☐ I tested a value I knew   ☐ I tested an edge case', { after: 0 })
     ];
   }
 };

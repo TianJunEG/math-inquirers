@@ -16,7 +16,7 @@ const cardsSvg = (digits, label) => {
     const x = x0 + i * (w + gap);
     g += `<rect x="${x}" y="6" width="${w}" height="${h}" rx="10" fill="${Y}" stroke="${N}" stroke-width="3"/>` + txt(x + w / 2, 6 + h / 2 + 12, d, 32);
   });
-  return `<svg aria-label="${esc(label)}" viewBox="0 0 600 76" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  return `<svg aria-label="${esc(label)}" viewBox="0 0 600 76" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:76%">${g}</svg>`;
 };
 
 // number line for Q6: the numbers that round to 2 500 000 (nearest thousand)
@@ -131,13 +131,13 @@ module.exports = {
     const raw = s => [s];
     // Q1 place value
     W.push(H.q(1, 'Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.', { before: 20, keepNext: true }));
-    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.  _________'));
+    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.  ______'));
     W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ________.  The ten thousands digit is ____.'));
     W.push(H.sub('c', 'How many thousands make 3 250 000?   __________'));
     // Q2 digit cards
     W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number.', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
-    W.push(H.sub('a', 'Greatest:  ______________        (b)  Smallest EVEN number:  ______________'));
+    W.push(H.sub('a', 'Greatest:  ____________      (b)  Smallest EVEN:  ____________'));
     W.push(H.sub('c', 'Closest to 6 000 000:  ______________   Test both sides of the target!', { keepNext: true }));
     W.push(H.sub(' ', 'Best just below:  ______________   It is  __________  away.'));
     W.push(H.sub(' ', 'Best just above:  ______________   It is  __________  away.'));
@@ -146,7 +146,7 @@ module.exports = {
     { const clues = ['I am a 7-digit number. My digits are all different.',
       'Rounded to the nearest hundred thousand, I am 7 300 000.',
       'My ten thousands digit is 3 more than my hundred thousands digit.',
-      'My thousands digit is the difference between my ten thousands and hundred thousands digits.',
+      'My thousands digit = my ten thousands digit − my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
       'My digits add up to 32.'];
       W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
@@ -157,7 +157,7 @@ module.exports = {
 
     // ---- page 2 ----
     W.push(H.q(4, 'Ravi used a calculator. Estimate each answer by rounding. Which answers must be wrong?', { pb: true, before: 0, keepNext: true }));
-    { const ws = [3000, 1900, 2700, 2300];
+    { const ws = [3500, 1700, 2500, 2200];
       W.push(H.tbl(ws, [H.row(['Calculation', 'Ravi’s answer', 'My estimate', 'Could be right / Must be wrong'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         ...[['(a)  4987 × 21', '104 727'], ['(b)  3 004 512 ÷ 48', '6259'], ['(c)  2 345 678 + 3 987 654', '5 333 332'], ['(d)  806 × 395', '318 370']].map(([c, a]) =>
           H.row([H.cell(c, ws[0], { h: 90, align: 'left' }), H.cell(a, ws[1], { h: 90 }), H.cell('', ws[2]), H.cell('', ws[3])]))])); }

@@ -99,9 +99,9 @@ module.exports = {
     const W = [];
     W.push(H.q(1, 'Guess and check. Make a table of your tries.', { before: 40, keepNext: true }));
     W.push(H.sub('a', 'Two next-door numbers (like 7 and 8) multiply to make 552. What are they?'));
-    W.push(H.ans('Tries:'));
+    W.push(...H.lines(1));
     W.push(H.ans('Answer:'));
-    W.push(H.sub('b', 'Mei buys some $4 pens and some $7 notebooks. She spends exactly $50. Find ALL the ways.', { keepNext: true }));
+    W.push(H.sub('b', 'Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
     const w = [2200, 1100, 1100, 1100, 1100, 1100, 1100, 1100];
     const cl = (c, i, head) => H.cell(c, w[i], i === 0 || head ? { bold: true, fill: 'EDEDED', h: 40 } : { h: 60 });
     W.push(H.tbl(w, [H.row(['Notebooks', '1', '2', '3', '4', '5', '6', '7'].map((c, i) => cl(c, i, true))),
@@ -110,9 +110,9 @@ module.exports = {
     W.push(H.gap(40));
     W.push(H.ans('Ways:'));
     W.push(H.q(2, 'A farm has chickens and goats. There are 18 heads and 50 legs altogether.', { keepNext: true }));
-    W.push(H.sub('a', 'Suppose all 18 animals are chickens. How many legs is that?  ______   How many legs short?  ______'));
-    W.push(H.sub('b', 'Swapping a chicken for a goat adds ______ legs. So there are ______ goats and ______ chickens.'));
-    W.push(H.sub('c', 'A car park has cars and motorcycles: 24 vehicles and 70 wheels. How many cars are there?'));
+    W.push(H.sub('a', 'Suppose all 18 are chickens. Legs:  ______    Legs short:  ______'));
+    W.push(H.sub('b', 'Each swap to a goat adds ____ legs. So ____ goats and ____ chickens.'));
+    W.push(H.sub('c', 'A car park has cars and motorcycles: 24 vehicles, 70 wheels. How many cars?'));
     W.push(H.ans());
     W.push(H.q(3, 'Work backwards. Start at the end and undo each step, last step first.', { keepNext: true }));
     W.push(H.sub('a', 'Ravi gave away half of his marbles. Then he won 9 marbles and lost 5. Now he has 30. How many did he have at first?'));
@@ -128,7 +128,7 @@ module.exports = {
     W.push(H.tbl(g, [H.row(['', 'Chicken rice', 'Laksa', 'Prata', 'Nasi lemak'].map((c, i) => H.cell(c, g[i], { bold: true, fill: 'EDEDED', h: 50 }))),
       ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, g[0], { bold: true, fill: 'EDEDED', h: 70 }), ...[1, 2, 3, 4].map(i => H.cell('', g[i], { h: 70 }))]))]));
     W.push(H.gap(40));
-    W.push(H.sub('a', 'Ali: ______________   Ben: ______________   Mei: ______________   Siti: ______________'));
+    W.push(H.sub('a', 'Ali: ___________   Ben: ___________   Mei: ___________   Siti: ___________'));
     W.push(H.q(5, 'Draw the queue.', { keepNext: true }));
     W.push(H.sub('a', 'Mei is 7th from the front and 12th from the back of a queue at the MRT gantry. How many people are in the queue?'));
     W.push(H.ans());

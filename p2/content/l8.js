@@ -36,18 +36,7 @@ const hmap = rows => { const c = []; rows.forEach((r, y) => r.forEach((h, x) => 
 const netCells = rows => { const c = []; rows.forEach((r, y) => [...r].forEach((ch, x) => { if (ch === '#') c.push([x, y]); })); return c; };
 const net = (rows, x0, y0, c, fill = SK) => netCells(rows).map(([x, y]) => rect(x0 + x * c, y0 + y * c, c, c, fill)).join('');
 
-// Q1: a circle cut into a semicircle (A) and 2 quarter circles (B, C)
-const q1svg = () => {
-  let s = `<circle cx="90" cy="85" r="62" fill="${W}" stroke="${N}" stroke-width="2.5"/>` + line(90, 23, 90, 147, 2.5, '#D64545', '7 5') + line(90, 85, 152, 85, 2.5, '#D64545', '7 5');
-  s += text(90, 170, 'cut along the lines', 15, N, 'middle', 600);
-  s += line(185, 85, 245, 85, 3) + poly([[258, 85], [242, 76], [242, 94]], N, 1);
-  const cx = 400, cy = 85, r = 70, g = 9;
-  s += path(`M${cx - g} ${cy - r} A${r} ${r} 0 0 0 ${cx - g} ${cy + r} Z`) + text(cx - g - 34, cy + 8, 'A', 22);
-  s += path(`M${cx + g} ${cy - g} L${cx + g} ${cy - g - r} A${r} ${r} 0 0 1 ${cx + g + r} ${cy - g} Z`) + text(cx + g + 26, cy - g - 18, 'B', 22);
-  s += path(`M${cx + g} ${cy + g} L${cx + g + r} ${cy + g} A${r} ${r} 0 0 1 ${cx + g} ${cy + g + r} Z`) + text(cx + g + 26, cy + g + 34, 'C', 22);
-  return svg(600, 178, s, 'A paper circle cut along 2 lines into 3 pieces: A is a half circle, B and C are quarter circles');
-};
-// Q2: robot made of 2 squares, 3 triangles, 4 semicircles and 2 quarter circles; count table on the right
+// Q1: robot made of 2 squares, 3 triangles, 4 semicircles and 2 quarter circles; count table on the right
 const q2svg = () => {
   const x = -150; let s = '';
   s += poly([[300 + x, 8], [262 + x, 58], [338 + x, 58]], SK);                                  // hat: triangle
@@ -63,24 +52,24 @@ const q2svg = () => {
     const y = 48 + k * 62;
     s += `<g transform="translate(0 ${y})">${icon(318)}</g>` + text(360, y + 7, name, 17, N, 'start') + rect(500, y - 22, 70, 46, 'none', 2, ' rx="6" stroke-dasharray="4 3"');
   });
-  return svg(600, 290, s, 'A robot made of shapes, and a table: square, triangle, semicircle, quarter circle, each with a box to write how many');
+  return svg(600, 290, s, 'A robot made of shapes, and a table: square, triangle, semicircle, quarter circle, each with a box to write how many', 470);
 };
-// Q3: a) 4 by 4 grid  b) triangle with 2 lines from the top corner and 1 line across the middle
+// Q2: a) 4 by 4 grid  b) triangle with 2 lines from the top corner and 1 line across the middle
 const q3svg = () => {
   let s = text(14, 22, 'a', 20, N, 'start') + grid(40, 14, 4, 4, 38);
   const A = [440, 12], B = [320, 170], C = [560, 170];
   s += text(300, 22, 'b', 20, N, 'start') + poly([A, B, C]) + line(A[0], A[1], 400, 170) + line(A[0], A[1], 480, 170) + line(380, 91, 500, 91);
-  return svg(600, 182, s, 'a: a grid 4 squares long and 4 squares high. b: a triangle with 2 lines from the top corner to the bottom and 1 line across the middle');
+  return svg(600, 182, s, 'a: a grid 4 squares long and 4 squares high. b: a triangle with 2 lines from the top corner to the bottom and 1 line across the middle', 470);
 };
-// Q4: three stacks
+// Q3: three stacks
 const q4svg = () => {
   const s0 = 34; let s = '';
   s += stack(hmap([[2, 2, 1]]), s0, 40, 160) + text(98, 196, 'A', 20);
   s += stack(hmap([[2, 2], [2, 2]]), s0, 240, 160) + text(298, 196, 'B', 20);
   s += stack(hmap([[1, 1, 1], [2, 2, 1], [3, 2, 1]]), s0, 420, 160) + text(492, 196, 'C', 20);
-  return svg(600, 204, s, 'Three stacks of cubes. A: 3 cubes in a row with 2 cubes on top of the left two. B: a big cube 2 long, 2 deep and 2 high. C: a bottom layer 3 by 3, then a layer 2 by 2 at the back left, then 1 cube on top at the back left');
+  return svg(600, 204, s, 'Three stacks of cubes. A: 3 cubes in a row with 2 cubes on top of the left two. B: a big cube 2 long, 2 deep and 2 high. C: a bottom layer 3 by 3, then a layer 2 by 2 at the back left, then 1 cube on top at the back left', 470);
 };
-// Q5: six nets; Q5b: a shape of 5 squares on a dotted grid
+// Q4: six nets; Q4b: a shape of 5 squares on a dotted grid
 const NETS = [['A', ['.#..', '####', '.#..']], ['B', ['###', '###']], ['C', ['#...', '####', '...#']], ['D', ['.##.', '####']], ['E', ['##..', '.##.', '..##']], ['F', ['#....', '#####']]];
 const q5svg = () => {
   const c = 26; let s = '';
@@ -88,20 +77,20 @@ const q5svg = () => {
     const x = 30 + (i % 3) * 196, y = 12 + Math.floor(i / 3) * 104;
     s += text(x, y + 22, l, 20, N, 'start') + net(rows, x + 24, y + 6, c);
   });
-  return svg(600, 206, s, 'Six shapes made of 6 squares, labelled A to F');
+  return svg(600, 206, s, 'Six shapes made of 6 squares, labelled A to F', 470);
 };
 const q5bsvg = () => {
   const c = 30, x0 = 195, y0 = 6; let s = '';
   for (let i = 0; i <= 7; i++) s += line(x0 + i * c - 30, y0, x0 + i * c - 30, y0 + 4 * c, 1.5, '#B9C7DD', '3 4');
   for (let j = 0; j <= 4; j++) s += line(x0 - 30, y0 + j * c, x0 + 6 * c, y0 + j * c, 1.5, '#B9C7DD', '3 4');
   s += net(['.....', '..#..', '.####', '.....'], x0 - 30, y0, c);
-  return svg(600, 132, s, 'A row of 4 squares with 1 square above the second square, on a dotted grid');
+  return svg(600, 132, s, 'A row of 4 squares with 1 square above the second square, on a dotted grid', 420);
 };
-// Q6: dice net (top flap 1, row 2, 3, ?, ?, bottom flap ?)
+// Q5: dice net (top flap 1, row 2, 3, ?, ?, bottom flap ?)
 const q6svg = () => {
   const c = 50, x0 = 200, y0 = 6; let s = net(['#...', '####', '#...'], x0, y0, c, W);
   [[0, 0, '1'], [0, 1, '2'], [1, 1, '3']].forEach(([x, y, t]) => { s += text(x0 + x * c + c / 2, y0 + y * c + c / 2 + 9, t, 26); });
-  return svg(600, 162, s, 'A dice net: a row of 4 squares with one square above and one below the first square. The top square shows 1, the row starts 2, 3, and three squares are blank');
+  return svg(600, 162, s, 'A dice net: a row of 4 squares with one square above and one below the first square. The top square shows 1, the row starts 2, 3, and three squares are blank', 380);
 };
 
 module.exports = {
@@ -117,18 +106,17 @@ module.exports = {
     share: 'How can you be sure you counted every cube in a stack, even the ones you cannot see?',
     exit: { q: 'How many cubes are in a stack with a bottom layer 3 cubes long and 2 cubes deep, and 1 cube on top?', a: '7 (6 + 1)' },
     mistakes: [
-      'Counting only the 1 by 1 squares in Q3a (16 instead of 30).',
-      'Counting only the cubes you can see in Q4 and forgetting the hidden cubes underneath and behind.',
-      'Thinking any 6 joined squares fold into a cube (Q5): B, D and F do not.'
+      'Counting only the 1 by 1 squares in Q2a (16 instead of 30).',
+      'Counting only the cubes you can see in Q3 and forgetting the hidden cubes underneath and behind.',
+      'Thinking any 6 joined squares fold into a cube (Q4): B, D and F do not.'
     ],
     extension: 'How many squares are in a grid 5 squares long and 5 squares high? (25 + 16 + 9 + 4 + 1 = 55)',
     key: [
-      ['Q1', '(a) A is a semicircle; B and C are quarter circles  (b) 1/4  (c) 3 circles (3 semicircles are 6 quarter circles; 6 + 6 = 12 quarter circles, and 4 make a circle)'],
-      ['Q2', 'Square 2, triangle 3, semicircle 4, quarter circle 2. (a) semicircles (b) 11 pieces'],
-      ['Q3', '(a) 1 by 1: 16, 2 by 2: 9, 3 by 3: 4, 4 by 4: 1; 30 squares  (b) 6 on the bottom line + 6 on the line across = 12 triangles'],
-      ['Q4', 'A 5, B 8, C 14 (9 + 4 + 1). (d) 13 more cubes (27 − 14)'],
-      ['Q5', '(a) A, C and E  (b) the new square goes under any one of the 4 squares in the row (4 possible places)'],
-      ['Q6', 'Row: 2, 3, 5, 4. Bottom square: 6. (1 and 6, 2 and 5, 3 and 4 are opposite.)']
+      ['Q1', 'Square 2, triangle 3, semicircle 4, quarter circle 2. (a) semicircles (b) 11 pieces (c) 3 circles: 3 semicircles are 6 quarter circles, 6 + 6 = 12 quarter circles, and 4 quarter circles make a circle.'],
+      ['Q2', '(a) 1 by 1: 16, 2 by 2: 9, 3 by 3: 4, 4 by 4: 1; 30 squares  (b) 6 on the bottom line + 6 on the line across = 12 triangles'],
+      ['Q3', '(a) A 5, B 8, C 14 (9 + 4 + 1)  (b) 13 more cubes (27 − 14)'],
+      ['Q4', '(a) A, C and E  (b) the new square goes under any one of the 4 squares in the row (4 possible places)'],
+      ['Q5', 'Row: 2, 3, 5, 4. Bottom square: 6. (1 and 6, 2 and 5, 3 and 4 are opposite.)']
     ]
   },
 
@@ -162,8 +150,8 @@ module.exports = {
     keyBig: 'Sort what you count, by size, by the line it sits on or by layer, so you never miss one or count one twice.',
     keySmall: 'Name a piece by its sides: a semicircle has 1 straight side, a quarter circle has 2.',
     brk: 'Be a shape! Make a semicircle, a cone, a cube and a cylinder with your body when the tutor calls it.',
-    ws1: 'Page 1, in pairs: Q1 circle pieces, Q2 the robot, Q3 count every square and triangle.',
-    ws2: 'Page 2, on your own: Q4 count the cubes, Q5 which nets fold into a cube, Q6 the dice net.'
+    ws1: 'Page 1, in pairs: Q1 the robot and circle pieces, Q2 count every square and triangle.',
+    ws2: 'Page 2, on your own: Q3 count the cubes, Q4 which nets fold into a cube, Q5 the dice net.'
   },
 
   qbank: {
@@ -202,30 +190,26 @@ module.exports = {
     const R = (s, o) => rich(H, s, o);
     const sp = n => ' '.repeat(n);
     const out = [];
-    out.push(H.q(1, 'A paper circle is cut into 3 pieces.', { before: 40, keepNext: true }));
-    out.push(H.fig(q1svg()));
-    out.push(H.sub('a', 'Piece A is a ________________.' + sp(6) + 'Pieces B and C are ________________.'));
-    out.push(H.sub('b', R('What fraction of the whole circle is piece B?   ________')));
+    out.push(H.q(1, 'The robot is made of pieces. Count each kind of piece and write how many in the boxes. Tick each piece as you count it.', { before: 40, keepNext: true }));
+    out.push(H.fig(q2svg()));
+    out.push(H.sub('a', 'Which kind is there the most of?  __________' + sp(4) + 'b' + sp(2) + 'Pieces altogether?  _____'));
     out.push(H.sub('c', 'Mei has 3 semicircles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.', { after: 20 }));
     out.push(...H.lines(1));
-    out.push(H.q(2, 'The robot is made of pieces. Count each kind of piece. Tick each one as you count it.', { keepNext: true }));
-    out.push(H.fig(q2svg()));
-    out.push(H.sub('a', 'Which kind of piece is there the most of?   ______________' + sp(6) + 'b' + sp(2) + 'How many pieces altogether?   ______'));
-    out.push(H.q(3, 'Count every shape. Work in order.', { keepNext: true }));
+    out.push(H.q(2, 'Count every shape. Work in order.', { keepNext: true }));
     out.push(H.fig(q3svg()));
     const ws = [1700, 1700, 1700, 1700, 3100];
-    out.push(H.tbl(ws, [H.row(['a   1 by 1', '2 by 2', '3 by 3', '4 by 4', 'Squares altogether'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED' }))), H.row(ws.map(w => H.cell('', w, { h: 170 })))]));
-    out.push(H.sub('b', 'Triangles on the bottom line: ____' + sp(5) + 'on the line across: ____' + sp(5) + 'altogether: ____'));
+    out.push(H.tbl(ws, [H.row(['a   1 by 1', '2 by 2', '3 by 3', '4 by 4', 'Squares altogether'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED' }))), H.row(ws.map(w => H.cell('', w, { h: 120 })))]));
+    out.push(H.sub('b', 'Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____'));
 
-    out.push(H.q(4, 'Count the cubes. Every cube sits on the table or on another cube, and there are no gaps at the back.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(3, 'Count the cubes. Every cube sits on the table or on another cube, and there are no gaps at the back.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.sub('a', 'A:  ______ cubes' + sp(12) + 'B:  ______ cubes' + sp(12) + 'C:  ______ cubes'));
-    out.push(H.sub('d', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
-    out.push(H.q(5, 'Which of these will fold up into a cube? Circle the letters.', { keepNext: true }));
+    out.push(H.sub('b', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
+    out.push(H.q(4, 'Which of these will fold up into a cube? Circle the letters.', { keepNext: true }));
     out.push(H.fig(q5svg()));
     out.push(H.sub('b', 'Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.', { keepNext: true }));
     out.push(H.fig(q5bsvg()));
-    out.push(H.q(6, 'On a dice, the numbers on opposite faces add up to 7. This net folds into a dice. Write the missing numbers.', { keepNext: true }));
+    out.push(H.q(5, 'On a dice, the numbers on opposite faces add up to 7. This net folds into a dice. Write the missing numbers.', { keepNext: true }));
     out.push(H.fig(q6svg()));
     return out;
   }

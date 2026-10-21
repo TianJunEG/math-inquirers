@@ -19,7 +19,7 @@ const afterModel = () => {
   for (let i = 0; i < 3; i++) s += box(90 + i * 64, 34, 64, 32, YEL);
   s += T(78, 99, 'Mei', { anchor: 'end' });
   for (let i = 0; i < 4; i++) s += box(90 + i * 64, 78, 64, 32, SKY);
-  s += T(470, 78, 'Draw the Before model', { size: 14, weight: 400 }) + T(470, 96, 'in the working space.', { size: 14, weight: 400 });
+  s += T(470, 78, 'Draw the Before model', { size: 14, weight: 400 }) + T(470, 96, 'on the right of this.', { size: 14, weight: 400 });
   return svg(600, 120, 'After model: Siti has 3 equal units and Mei has 4 equal units', s);
 };
 
@@ -39,12 +39,11 @@ module.exports = {
     extension: 'Make up your own before-and-after story where the total stays the same and the answer is 24. Swap with a partner and solve each other’s story with a model.',
     key: [
       ['Q1', '(a) 1/6 (1/4 of the 2/3 that was left)  (b) $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)'],
-      ['Q2', '(a) 84 (giving does not change the total)  (b) 48 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)  (c) 36'],
+      ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
       ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
-      ['Q4', '(a) T  (b) D  (c) O (the blue pens)  (d) D'],
-      ['Q5', '(a) $24 before and $24 after  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
-      ['Q6', '(a) $50 each (difference $30 = 3 units, 1 unit = $10; Siti $10, Mei $40)  (b) Mei $40, Siti $10'],
-      ['Q7', '(a) Blue (only red beads were added)  (b) 70 (blue 4 units, red 3 units → 6 units; 3 units = 30, 1 unit = 10)  (c) 100']
+      ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
+      ['Q5', '(a) $50 each (difference $30 = 3 units, 1 unit = $10; Siti $10, Mei $40)  (b) Mei $40, Siti $10'],
+      ['Q6', '(a) Blue (only red beads were added)  (b) 70 (blue 4 units, red 3 units → 6 units; 3 units = 30, 1 unit = 10)  (c) 100']
     ]
   },
 
@@ -75,7 +74,7 @@ module.exports = {
     keySmall: 'Fraction of a remainder: cut the parts that are left into equal units.',
     brk: 'Fraction stretch. Arms wide is the whole. Show 1/2, then 1/4, then 3/4 of the whole with your arms. Touch your toes for 0!',
     ws1: 'Page 1, in pairs: Q1 fraction of a remainder, Q2 the sticker swap (total stays the same), Q3 Ali and Ben’s marbles.',
-    ws2: 'Page 2, on your own: Q4 what stays the same, Q5 the same gift for both, Q6 the same spending for both, Q7 the bead box.'
+    ws2: 'Page 2, on your own: Q4 the same gift for both, Q5 the same spending for both, Q6 the bead box.'
   },
 
   qbank: {
@@ -111,35 +110,27 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p('Draw a model for every question. First ask: what stays the same?', { after: 60 }),
-    H.q(1, 'Ravi had some money. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. He had $36 left.', { before: 60, keepNext: true }),
+    H.p('Draw a model for every question. First ask: what stays the same?', { after: 40 }),
+    H.q(1, 'Ravi had some money. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. He had $36 left.', { before: 40, keepNext: true }),
     H.fig(raviBar()),
     H.sub('a', 'What fraction of his money did he spend on the pen?'), H.ans(),
-    H.sub('b', 'How much money did Ravi have at first?'), ...H.lines(2), H.ans(),
+    H.sub('b', 'How much money did Ravi have at first?'), H.ans(),
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
     H.fig(afterModel()),
     H.sub('a', 'How many stickers did they have altogether after the swap?'), H.ans(),
-    H.sub('b', 'How many stickers did Siti have at first?'), ...H.lines(2), H.ans(),
-    H.sub('c', 'How many stickers did Mei have at first?'), H.ans(),
+    H.sub('b', 'How many stickers did Siti have at first? How many did Mei have at first?'), H.ans('Siti: __________     Mei:'),
     H.q(3, 'Ali has 50 marbles and Ben has 30 marbles. Ali wants to give Ben some of his marbles.', { keepNext: true }),
-    H.sub('a', 'Ben says, “Ali must give me 20 marbles so that we have the same number, because he has 20 more than me.” Is Ben right? Explain.'), ...H.lines(2),
-    H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), ...H.lines(2), H.ans(),
+    H.sub('a', 'Ben says, “Ali must give me 20 marbles so that we have the same number, because he has 20 more than me.” Is Ben right? Explain.'), ...H.lines(1),
+    H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
 
-    H.q(4, 'What stays the same? Write T (the total), D (the difference) or O (one amount).', { pb: true, before: 0 }),
-    H.tbl([7900, 2000], [
-      H.row([H.cell('Story', 7900, { bold: true, fill: 'D9D9D9' }), H.cell('T, D or O', 2000, { bold: true, fill: 'D9D9D9' })]),
-      ...[['(a)  Ali gives Mei 5 of his stickers.'], ['(b)  Ben and his sister each save $2 more.'], ['(c)  A shop puts more red pens into a box of red and blue pens.'], ['(d)  Mei and Siti each spend $10.']]
-        .map(([s]) => H.row([H.cell(s, 7900, { align: 'left' }), H.cell('', 2000)]))
-    ]),
-    H.gap(60),
-    H.q(5, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
-    H.sub('a', 'What was the difference between their money before? After?'), H.ans('Before:  $________      After:'),
+    H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { pb: true, before: 0, keepNext: true }),
+    H.sub('a', 'What stays the same: the total or the difference? How much is it?'), H.ans(),
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
-    H.q(6, 'Mei had $90 and Siti had $60. Each of them spent the same amount of money. Then Siti had 1/4 as much money as Mei.', { keepNext: true }),
+    H.q(5, 'Mei had $90 and Siti had $60. Each of them spent the same amount of money. Then Siti had 1/4 as much money as Mei.', { keepNext: true }),
     H.sub('a', 'How much money did each girl spend?'), ...H.lines(2), H.ans(),
     H.sub('b', 'How much money did each girl have left?'), H.ans('Mei:  $________     Siti:'),
-    H.q(7, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
+    H.q(6, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
     H.sub('a', 'Which colour of beads did not change?'), H.ans(),
     H.sub('b', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
     H.sub('c', 'How many beads are in the box now?'), H.ans()

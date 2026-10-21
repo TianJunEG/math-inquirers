@@ -206,8 +206,8 @@ ov3=SV(580,360,rmark(mt,(mt[0]-10,mt[1]),mb,26,RED)+rmark(mt,(mt[0]+10,mt[1]),mb
 body=h2('Right angles where lines meet')+stitle('How many right angles can you find in this picture?')
 body+=pin(128,300,580,base)
 body+=ostep(128,300,1,'List every point where lines meet: 4 corners and 2 middle points.',ov1,580,360,dx=620,dy=0,tw=1044,size=32)
-body+=ostep(128,300,2,'Each corner has 1 right angle: 4.',ov2,580,360,dx=620,dy=110,tw=1044,size=32)
-body+=ostep(128,300,3,'Each middle point has 2 right angles, one on each side of the line: 2 + 2 = 4.',ov3,580,360,dx=620,dy=210,tw=1044,size=32)
+body+=ostep(128,300,2,'Each corner has 1 right angle: 4.',ov2,580,360,dx=620,dy=135,tw=1044,size=32)
+body+=ostep(128,300,3,'Each middle point has 2 right angles, one on each side of the line: 2 + 2 = 4.',ov3,580,360,dx=620,dy=245,tw=1044,size=32)
 body+=answer(748,700,1044,'4 + 4 = 8 right angles')
 put(PFX+'we2',S_(PFX+'we2','31–33 MIN',body,'Click through. Think-aloud: "If I look at the whole picture I will lose count. So I make a list of the meeting points and visit them one by one. At a corner, 1 right angle. Where the middle line meets the top, there is a right angle on its left and one on its right: 2." Ask: "At the middle of the top, is there an angle made of both right angles together?" (That is a straight line, 2 right angles: we do not count it as a right angle.) Parallel example: the worksheet window has two lines.'))
 
@@ -229,7 +229,7 @@ put(PFX+'try2',S_(PFX+'try2','33–34 MIN',body,'Whiteboards, then click. a) 4: 
 perp=SV(200,150,LN(30,130,180,130,NAVY,7)+LN(70,20,70,130,NAVY,7)+rmark((70,130),(180,130),(70,20),26,RED,5),'two perpendicular lines')
 para=SV(200,150,LN(20,120,150,30,NAVY,7)+LN(60,140,190,50,NAVY,7)+LN(150,30,190,4,NAVY,3,'8 8')+LN(190,50,200,43,NAVY,3,'8 8'),'two parallel lines')
 Fsvg=SV(260,330,LN(50,20,50,310,NAVY,10)+LN(50,20,220,20,NAVY,10)+LN(50,165,190,165,NAVY,10)+T(24,190,'a',40,TEAL)+T(140,70,'b',40,TEAL)+T(130,215,'c',40,TEAL),'The letter F made of 3 lines: a is upright, b is the top line, c is the middle line')
-defbox=lambda svg_,t: f'<div style="display:flex;align-items:center;gap:20px">{svg_}<p style="font-size:32px;font-weight:600;line-height:1.3">{t}</p></div>'
+defbox=lambda svg_,t: f'<div style="display:flex;align-items:center;gap:20px"><div style="flex:none">{svg_}</div><p style="font-size:32px;font-weight:600;line-height:1.3">{t}</p></div>'
 body=h2('Perpendicular and parallel lines')
 body+=pin(128,230,760,defbox(perp,'<b>Perpendicular</b> lines meet at a right angle.'),None,WHITE,20,'16px 24px')
 body+=pin(128,440,760,defbox(para,'<b>Parallel</b> lines stay the same distance apart. They never meet, even if we make them longer.'),None,WHITE,20,'16px 24px')
@@ -275,7 +275,7 @@ put(PFX+'ws2ans',checkrows(PFX+'ws2ans','68–70 MIN','Page 2: check together',[
 
 # ================= 20. stretch =================
 put(PFX+'stretch',cards_slide(PFX+'stretch','For early finishers','Stretch',[('1.','Draw a 4-sided shape with exactly 1 right angle.'),('2.','Can a triangle have 2 right angles? Explain.'),('3.','5 lines start at one point, spread out like a fan. How many angles?')],
- 'For children who finish early. Answers: 1) For example a kite-like shape: draw a right angle along the grid lines with arms of different lengths, then join the ends through a fourth point placed outside so no other corner is square. Check every corner. 2) No. If two corners on the bottom side were right angles, both other sides would go straight up and be parallel, so they would never meet to close the triangle. 3) 4 + 3 + 2 + 1 = 10.',size=38))
+ 'For children who finish early. Answers: 1) For example, on a grid with the bottom-left corner at (0, 0): corners at 0 across 0 up, 4 across 0 up, 3 across 2 up, 0 across 3 up. Only the bottom-left corner is a right angle (check the other three with the checker). 2) No. If two corners on the bottom side were right angles, both other sides would go straight up and be parallel, so they would never meet to close the triangle. 3) 4 + 3 + 2 + 1 = 10.',size=38))
 
 # ================= 21. challenge =================
 put(PFX+'challenge',cards_slide(PFX+'challenge','65–80 MIN','Challenge',[('1.','A long rectangle is cut into 6 squares in a row by 5 lines. How many right angles can you find?'),('2.','Can a 6-sided shape have 6 right angles inside it? What is the most right angles a 6-sided shape can have inside?')],

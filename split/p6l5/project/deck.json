@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:37:16Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P6: Lesson 5 – Every Possible Way",
+ "order": [
+  "p6l5-title",
+  "p6l5-warm1",
+  "p6l5-warm2",
+  "p6l5-explore1",
+  "p6l5-explore2",
+  "p6l5-teach1",
+  "p6l5-we1",
+  "p6l5-try1",
+  "p6l5-teachcode",
+  "p6l5-try2",
+  "p6l5-key",
+  "p6l5-break",
+  "p6l5-teachcards",
+  "p6l5-ws1",
+  "p6l5-ws1ans",
+  "p6l5-teachhand",
+  "p6l5-teachhandcode",
+  "p6l5-teachroute",
+  "p6l5-ws2",
+  "p6l5-ws2ans",
+  "p6l5-stretch",
+  "p6l5-challenge",
+  "p6l5-chdiag",
+  "p6l5-chwalk",
+  "p6l5-talk",
+  "p6l5-exit"
+ ],
+ "cover": "p6l5-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p6l5-title"
+  },
+  "s2": {
+   "description": "Teach: the multiplication rule and nested loops",
+   "start": "p6l5-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p6l5-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p6l5-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
