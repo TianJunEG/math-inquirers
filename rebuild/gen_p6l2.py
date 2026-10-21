@@ -151,10 +151,10 @@ put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. An
 # ---------- teach ----------
 body=h2('Factors come in pairs')+card(p('Find all the factors of 18.',44,700))
 rows=[('1 × 18','1 and 18'),('2 × 9','2 and 9'),('3 × 6','3 and 6'),('4 ×  ?','4 does not divide 18'),('Next pair would be 6 × 3: already have it. Stop.','')]
-body+=trow(128,390,['pair','factors'],[360,420],None,True)
-for i,(a,b) in enumerate(rows[:3]): body+=trow(128,480+i*90,[a,b],[360,420],'rise')
-body+=pin(960,390,832,p('Work in order: 1, 2, 3, 4 … Test each number. Write BOTH numbers of each pair.',34,700),None,WHITE,20,'22px 26px')
-body+=pin(960,560,832,p('4 and 5 do not divide 18. The next pair would be 6 × 3, which we already have, so we stop.',34,700),'fade',SOFT,20,'22px 26px')
+body+=trow(128,390,['pair','factors'],[330,400],None,True)
+for i,(a,b) in enumerate(rows[:3]): body+=trow(128,480+i*90,[a,b],[330,400],'rise')
+body+=pin(1050,390,742,p('Work in order: 1, 2, 3, 4 … Test each number. Write BOTH numbers of each pair.',34,700),None,WHITE,20,'22px 26px')
+body+=pin(1050,560,742,p('4 and 5 do not divide 18. The next pair would be 6 × 3, which we already have, so we stop.',34,700),'fade',SOFT,20,'22px 26px')
 body+=answer(128,780,1664,'18 has 6 factors: 1, 2, 3, 6, 9, 18')
 put(f'{L}-teach1',sec(f'{L}-teach1','25–27 MIN',body,'Teach. Think-aloud: "Factors of 18. 1 × 18, so 1 and 18. 2 × 9, so 2 and 9. 3 × 6. Does 4 go into 18? No. 5? No. The next is 6, and I already have 6. The pairs have met, so I stop." A prime has exactly two factors: 1 and itself. 18 is not prime. 1 is not prime (one factor only). A square number such as 36 has the pair 6 × 6, and 6 is counted once, so 36 has 9 factors.'))
 body=h2('Worked example: is 91 prime?')+card(p('A prime has exactly two factors. Test small numbers.',44,700))

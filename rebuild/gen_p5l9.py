@@ -88,7 +88,7 @@ body+=pin(128,400,1664,machine([('number','q'),('?','op'),('?','op'),('answer','
 W3=[360,360,360]
 body+=trow(128,590,['In','Out'],[300,300],None,True,36)
 for i,(a,b) in enumerate([(2,7),(5,16),(10,31)]):
-    body+=trow(128+(i+1)*0,620+(i+1)*76-76+76,[str(a),str(b)],[300,300],'rise',False,36)
+    body+=trow(128+(i+1)*0,590+80*(i+1),[str(a),str(b)],[300,300],'rise',False,36)
 body+=pin(820,590,972,p('What do you notice? Is the rule "add 5"? Test it on the next number!',36,700),None,SOFT,20,'22px 28px')
 body+=answer(820,740,972,'Rule: times 3, then add 1')
 put(P+'warm1',sec(P+'warm1','0–5 MIN',body,
@@ -107,21 +107,21 @@ import math
 def poly(n,cx,cy,r):
     return [(cx+r*math.sin(2*math.pi*k/n),cy-r*math.cos(2*math.pi*k/n)) for k in range(n)]
 for n,cx in [(2,200),(3,620),(4,1060)]:
-    pts=[(cx-70,130),(cx+70,130)] if n==2 else poly(n,cx,130,95)
+    pts=[(cx-70,105),(cx+70,105)] if n==2 else poly(n,cx,105,80)
     for i in range(len(pts)):
         for j in range(i+1,len(pts)):
             g+=stick(pts[i][0],pts[i][1],pts[j][0],pts[j][1],TEAL,6)
     for (x,y) in pts: g+=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="20" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'
-    g+=txt(cx,268,f'{n} children: {[1,3,6][n-2]} high five{"s" if n>2 else ""}',32,NAVY,font='Nunito Sans, Arial')
-g+=txt(1500,120,'5 children?',44,TEAL)+txt(1500,180,'8 children?',44,TEAL)
+    g+=txt(cx,238,f'{n} children: {[1,3,6][n-2]} high five{"s" if n>2 else ""}',32,NAVY,font='Nunito Sans, Arial')
+g+=txt(1500,90,'5 children?',44,TEAL)+txt(1500,150,'8 children?',44,TEAL)
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Guess first: if all 8 of us high-five everyone else once, how many high fives is that?','Start small: 2 children, then 3, then 4. Draw each child as a dot and each high five as a line.','Make a table: number of children, number of high fives.','Look for a pattern and use it to find the answer for 8.'])
-body=h2('Explore: High Fives')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:8px">{steps}</ol>')
-body+=card(svgwrap(1640,290,'Dots joined by lines: 2 children and 1 line, 3 children and 3 lines, 4 children and 6 lines',g),extra='padding:16px 24px')
+body=h2('Explore: High Fives')+card(chip('EXPLORE')+f'<ol style="font-size:32px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
+body+=card(svgwrap(1640,252,'Dots joined by lines: 2 children and 1 line, 3 children and 3 lines, 4 children and 6 lines',g),extra='padding:16px 24px')
 put(P+'explore1',sec(P+'explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs. Online: breakout rooms, each pair draws dots on a whiteboard and joins them. Predict first: most children guess 8 × 8 = 64 or 8 + 7; write guesses down. Let them draw 2, 3, 4 and 5 dots before they look for the pattern. Early finishers: a class of 30. The picture shows 1, 3 and 6 lines for 2, 3 and 4 children.'))
 
 # 5 explore2
 body=h2('Explore: talk about it')+numcards([('1.','How many high fives for 5 children? For 8? How did you get it?'),('2.','What does the table do? What does each new child add?'),('3.','Class of 30: is there a quick way?')],40)
-put(P+'explore2',sec(P+'explore2','15–25 MIN',body,'Minutes 15 to 25. Gather pairs. Answers: 1) 5 children: 10. 8 children: 28. 2) Table 2, 3, 4, 5, 6, 7, 8 children: 1, 3, 6, 10, 15, 21, 28. The jumps are 2, 3, 4, 5, 6, 7: a new child high-fives everyone already there, so the 4th child adds 3, the 5th adds 4 and so on (the 8th child adds 7). 3) 30 children: each high-fives 29 others, 30 × 29 = 870, but every high five is counted twice (once by each child), so 870 ÷ 2 = 435. Do not push for this if nobody finds it; it returns in Challenge ideas. The big idea for today: a pattern that grows by a growing amount is different from one that grows by the same amount each time, which we study next.'))
+put(P+'explore2',sec(P+'explore2','15–25 MIN',body,'Minutes 15 to 25. Gather pairs. Answers: 1) 5 children: 10. 8 children: 28. 2) Table 2, 3, 4, 5, 6, 7, 8 children: 1, 3, 6, 10, 15, 21, 28. The jumps are 2, 3, 4, 5, 6, 7: a new child high-fives everyone already there, so the 4th child adds 3, the 5th adds 4 and so on (the 8th child adds 7). 3) 30 children: each high-fives 29 others, 30 × 29 = 870, but every high five is counted twice (once by each child), so 870 ÷ 2 = 435. Do not push for this if nobody finds it; it returns in Challenge ideas. Note the jumps 2, 3, 4, 5 … grow each time; today we mostly study patterns that grow by the SAME amount each time.'))
 
 # 6 teach1: matchstick squares
 g=sq_fig(1,40,30)+sq_fig(2,270,30)+sq_fig(3,590,30)
@@ -173,7 +173,7 @@ body+=trow(128,370,['Teh','Kopi','Total','Check'],W5,None,True,34)
 rows=[['6','6','$12 + $18 = $30','too much'],['8','4','$16 + $12 = $28','too little']]
 body+=trow(128,450,rows[0],W5,'rise',False,34)+trow(128,530,rows[1],W5,'rise',False,34)
 body+=trow(128,610,['7','5','$14 + $15 = $29','just right'],W5,'rise',False,34)
-body+=pin(1330,370,462,p('Each swap of a teh for a kopi changes the total by $1. Use that to jump close!',32,700),None,SOFT,20,'18px 24px')
+body+=pin(1420,370,372,p('Each swap of a teh for a kopi changes the total by $1. Use that to jump close!',32,700),None,SOFT,20,'18px 24px')
 body+=answer(128,720,1664,'7 teh and 5 kopi.  Check both facts: 7 + 5 = 12 drinks ✓')
 body+=pin(128,820,1664,p('A good guess uses the first answer: $30 is $1 too much, so swap one kopi for a teh.',34,700),'fade',WHITE,20,'16px 28px')
 put(P+'teachgs',sec(P+'teachgs','54–56 MIN',body,'Teach before worksheet page 2 (Q4). Start with a guess that is easy to check: half and half, 6 and 6 = $30. Too much by $1. Ask: "Which way do we change it?" A teh costs less, so we need more teh and fewer kopi. Each swap (one kopi becomes one teh) takes $1 off. One swap: 7 teh, 5 kopi = $29. Compare a random guess of 2 and 10 (way too much): a table that you CHANGE using what the last row told you finds the answer in 3 or 4 rows. Always check both facts: number of drinks AND the total.'))
@@ -191,8 +191,8 @@ put(P+'teachsup',sec(P+'teachsup',"56–58 MIN",body,'Teach before worksheet pag
 body=h2('Marks taken away')+card(p('A quiz has 12 questions. Each correct answer scores 5 marks and each wrong answer loses 1 mark. Siti answers every question and scores 42. How many are correct?',34,700))
 body+=step(1,'Suppose all 12 are correct:  12 × 5 = 60 marks.',top=450,size=34)
 body+=step(2,'We scored less:  60 − 42 = 18 marks fewer.',top=550,size=34)
-body+=step(3,'Each wrong answer loses the 5 marks AND 1 more mark taken away: 5 + 1 = 6 marks.  18 ÷ 6 = 3 wrong.',top=650,size=34)
-body+=answer(128,760,1664,'9 correct, 3 wrong.  Check: 45 − 3 = 42 ✓')
+body+=step(3,'Each wrong answer loses the 5 marks AND 1 more mark taken away: 5 + 1 = 6 marks.  18 ÷ 6 = 3 wrong.',top=650,size=32)
+body+=answer(128,800,1664,'9 correct, 3 wrong.  Check: 45 − 3 = 42 ✓')
 put(P+'teachmarks',sec(P+'teachmarks','58–60 MIN',body,'Teach before worksheet page 2 (Q6). This is supposition with a twist: a wrong answer costs more than missing out on the 5 marks, because 1 mark is also taken off. Ask after step 2: "What is the difference between a correct answer and a wrong answer?" (6 marks: from +5 to −1.) Check with the other fact: 9 × 5 = 45, minus 3 × 1 = 3, gives 42. Q6b of the worksheet asks why one score is impossible: every score is 100 minus a multiple of 7 in that quiz.'))
 
 # ws2
@@ -202,7 +202,7 @@ put(P+'ws2ans',checks(P+'ws2ans','67–69 MIN','Page 2: check together',[('Q4','
 
 # stretch
 st=[('1.','Ali saves $3 in week 1. Each week he saves $2 more than the week before. How much does he save in week 15?'),('2.','3, 8, 13, 18, …  What is the first number in this pattern that is greater than 200?'),('3.','A test has 10 questions. A correct answer scores 3 marks and 1 mark is taken away for each wrong answer. Siti answered every question and scored 18. How many did she get correct?')]
-put(P+'stretch',sec(P+'stretch','For early finishers',h2('Stretch')+numcards(st,36),'Answers: 1) $31 (week 15 is 14 jumps of $2 after week 1: $3 + $28). 2) 203 (add 5 each time; 3 + 5 × 40 = 203; 198 is the 40th number: 3 + 39 × 5 = 198, which is not above 200). 3) 7 correct and 3 wrong (all correct would be 30; each wrong answer costs 3 + 1 = 4; 12 ÷ 4 = 3 wrong; check 21 − 3 = 18).'))
+put(P+'stretch',sec(P+'stretch','For early finishers',h2('Stretch')+numcards(st,36),'Answers: 1) $31 (week 15 is 14 jumps of $2 after week 1: $3 + $28). 2) 203 (add 5 each time; the 40th number is 3 + 39 × 5 = 198, which is not above 200, so the 41st, 203, is the first). 3) 7 correct and 3 wrong (all correct would be 30; each wrong answer costs 3 + 1 = 4; 12 ÷ 4 = 3 wrong; check 21 − 3 = 18).'))
 ch=[('1.','A dot pattern makes diamonds. Figure 1 has 1 dot. Figure 2 has rows of 1, 3 and 1 dots. Figure 3 has rows of 1, 3, 5, 3 and 1 dots. How many dots are in figure 6?'),('2.','A quiz has 25 questions. A correct answer scores 4 marks, 1 mark is taken away for each wrong answer, and a blank scores 0. Mei left 3 questions blank and scored 68. How many did she get correct?')]
 put(P+'challenge',sec(P+'challenge','65–80 MIN',h2('Challenge')+numcards(ch,34),'Pairs try first, then the "see it" slide, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 61 dots. 2) 18 correct.'))
 # chdiag
