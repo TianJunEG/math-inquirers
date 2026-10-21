@@ -9,7 +9,7 @@ const FF = 'Fredoka, Arial, sans-serif';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const txt = (x, y, s, size = 16, fill = N, anchor = 'middle', weight = 700) =>
   `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="${FF}">${esc(s)}</text>`;
-const svg = (h, label, g) => `<svg aria-label="${esc(label)}" viewBox="0 0 600 ${h}" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+const svg = (h, label, g) => `<svg aria-label="${esc(label)}" viewBox="0 0 600 ${h}" width="330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 
 // Q1: square tables pushed together in a row, one chair on every free side (1, 2, 3 tables: 4, 6, 8 chairs)
 const tablesSvg = () => {
@@ -163,24 +163,21 @@ module.exports = {
     const W = [];
     W.push(H.p('A growing pattern: find what stays the same and what grows each time. Then say the rule in words, like this:  number of sticks = 3 × figure number + 1.', { after: 40 }));
     // Q1 tables and chairs
-    W.push(H.q(1, 'At a hawker centre, square tables are pushed together in a row. One chair goes on each free side.', { before: 20, keepNext: true }));
+    W.push(H.q(1, 'At a hawker centre, square tables are pushed together in a row. One chair goes on each free side.', { before: 10, keepNext: true }));
     W.push(H.fig(tablesSvg()));
     { const ws = [2100, 1300, 1300, 1300, 1300, 1300, 1300];
       W.push(H.tbl(ws, [H.row(['Tables', '1', '2', '3', '4', '5', '10'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
         H.row(['Chairs', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 60 })))])); }
-    W.push(H.sub('a', 'Fill in the table.', { after: 60 }));
-    W.push(H.sub('b', 'Complete the rule:   Number of chairs  =  ______ × number of tables  +  ______'));
-    W.push(H.sub('c', 'How many tables are needed to seat exactly 50 people?   ______________'));
-    W.push(H.sub('d', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44 people.” Is he right? Explain.', { after: 40 }));
-    W.push(...H.lines(2));
+    W.push(H.sub('a', 'Fill in the table. Rule:   chairs  =  ______ × tables  +  ______'));
+    W.push(H.sub('b', 'How many tables are needed to seat exactly 50 people?   ______________'));
+    W.push(H.sub('c', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
+    W.push(...H.lines(1));
     // Q2 matchstick houses
     W.push(H.q(2, 'Matchstick houses are joined in a row.', { keepNext: true }));
     W.push(H.fig(housesSvg()));
-    W.push(H.sub('a', 'How many sticks does each new house add? Why not 6?', { after: 40 }));
-    W.push(...H.lines(1));
-    W.push(H.sub('b', 'Complete the rule:   Number of sticks  =  ______ × number of houses  +  ______'));
-    W.push(H.sub('c', 'How many sticks are needed for 20 houses?   ______________'));
-    W.push(H.sub('d', 'Mei has 200 sticks. What is the greatest number of houses she can make? How many sticks are left over?   ______________________'));
+    W.push(H.sub('a', 'Each new house adds ______ sticks. Why not 6?  ______________________________', { after: 40 }));
+    W.push(H.sub('b', 'Rule:   sticks  =  ______ × houses  +  ______.   For 20 houses:  ______ sticks.'));
+    W.push(H.sub('c', 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________'));
     // Q3 border tiles
     W.push(H.q(3, 'Each figure is a square of white tiles with a border of grey tiles around it.', { keepNext: true }));
     W.push(H.fig(borderSvg()));
@@ -188,31 +185,29 @@ module.exports = {
       W.push(H.tbl(ws, [H.row(['Figure', '1', '2', '3', '4', '10'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
         H.row(['White tiles', '1', '4', '9', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 50 }))),
         H.row(['Grey tiles', '8', '12', '16', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 50 })))])); }
-    W.push(H.sub('a', 'Fill in the table.', { after: 60 }));
-    W.push(H.sub('b', 'Write the rule for the grey tiles in words. Use the picture to explain why it works.', { after: 40 }));
+    W.push(H.sub('a', 'Fill in the table. Write the rule for the grey tiles in words and explain it from the picture.', { after: 20 }));
     W.push(...H.lines(2));
-    W.push(H.sub('c', 'Which figure has 100 grey tiles?   ______________'));
-    W.push(H.sub('d', 'In which figure are there more white tiles than grey tiles for the first time?   ______________'));
+    W.push(H.sub('b', 'Which figure has 100 grey tiles?   ____________'));
+    W.push(H.sub('c', 'First figure with more white tiles than grey tiles?   ____________'));
 
     // ---- page 2 ----
     W.push(H.q(4, 'Guess and check with a table. Adult tickets to the Science Centre cost $12 each and child tickets cost $7 each. A group buys 15 tickets for $145 altogether. How many adult tickets do they buy?', { pb: true, before: 0, keepNext: true }));
     { const ws = [2000, 2000, 3400, 2500];
       W.push(H.tbl(ws, [H.row(['Adult tickets', 'Child tickets', 'Total cost', 'Too much or too little?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
-        H.row([H.cell('5', ws[0], { h: 50 }), H.cell('10', ws[1], { h: 50 }), H.cell('$60 + $70 = $130', ws[2], { h: 50 }), H.cell('too little', ws[3], { h: 50 })]),
-        ...[1, 2, 3].map(() => H.row(ws.map(w => H.cell('', w, { h: 60 }))))])); }
-    W.push(H.p('Answer:  ______ adult tickets and ______ child tickets.', { before: 80, after: 40 }));
+        H.row([H.cell('5', ws[0], { h: 40 }), H.cell('10', ws[1], { h: 40 }), H.cell('$60 + $70 = $130', ws[2], { h: 40 }), H.cell('too little', ws[3], { h: 40 })]),
+        ...[1, 2, 3].map(() => H.row(ws.map(w => H.cell('', w, { h: 50 }))))])); }
+    W.push(H.p('Answer:  ______ adult tickets and ______ child tickets.', { before: 40, after: 20 }));
     // Q5 supposition, coins
     W.push(H.q(5, 'Siti has 30 coins. They are all 20¢ and 50¢ coins, worth $10.20 altogether.', { keepNext: true }));
-    W.push(H.sub('a', 'Suppose all 30 coins were 20¢ coins. How much would they be worth?   ______________'));
-    W.push(H.sub('b', 'Each time a 20¢ coin is changed for a 50¢ coin, the total goes up by   ______________'));
-    W.push(H.sub('c', 'How many 50¢ coins does Siti have? Show your working and check your answer.', { after: 40 }));
-    W.push(...H.lines(3));
+    W.push(H.sub('a', 'If all 30 coins were 20¢: worth ____________.  Each change of a 20¢ for a 50¢ adds ____________.'));
+    W.push(H.sub('b', 'How many 50¢ coins does Siti have? Show your working and check.', { after: 20 }));
+    W.push(...H.lines(2));
     // Q6 marks taken away
     W.push(H.q(6, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
-    W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 40 }));
-    W.push(...H.lines(3));
-    W.push(H.sub('b', 'Mei also answered every question. She says she scored 80 marks. Explain why she must have made a mistake.', { after: 40 }));
-    W.push(...H.lines(3));
+    W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
+    W.push(...H.lines(2));
+    W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong?', { after: 20 }));
+    W.push(...H.lines(2));
     return W;
   }
 };

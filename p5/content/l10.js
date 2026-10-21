@@ -13,7 +13,7 @@ const gridSvg = () => {
   for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++)
     g += `<rect x="${x0 + c * s}" y="${y0 + r * s}" width="${s}" height="${s}" fill="${SKY}" stroke="${N}" stroke-width="3"/>`;
   g += txt(x0 + 2 * s, y0 + 3 * s + 30, '3 rows of 4 small squares', 16);
-  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="0 0 600 220" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="0 0 600 220" width="380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 module.exports = {
@@ -115,19 +115,18 @@ module.exports = {
     W.push(H.p('Choose a start: draw a model, list in order, make a table, work backwards or guess and check. Check your answer against EVERY clue.', { after: 40 }));
     // Q1 backwards
     W.push(H.q(1, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
-    W.push(...H.lines(4));
+    W.push(...H.lines(2));
     W.push(H.ans('Answer:  $'));
     // Q2 logic
     W.push(H.q(2, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
-    ['Ali did not order laksa or satay.', 'The roti prata was ordered by a girl.', 'Ben did not order satay.', 'Mei did not order roti prata.'].forEach((c, i) => W.push(H.p(`Clue ${i + 1}:  ${c}`, { indent: { left: 560 }, after: 30 })));
-    W.push(H.gap(40));
+    ['Clue 1:  Ali did not order laksa or satay.     Clue 2:  The roti prata was ordered by a girl.', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));
     { const ws = [1900, 2000, 2000, 2000, 2000];
       W.push(H.tbl(ws, [H.row(['', 'Chicken rice', 'Laksa', 'Satay', 'Roti prata'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 70 }), ...ws.slice(1).map(w => H.cell('', w, { h: 70 }))]))])); }
-    W.push(H.p('Ali: ________________   Ben: ________________   Mei: ________________   Siti: ________________', { before: 60, after: 20 }));
+        ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 45 }), ...ws.slice(1).map(w => H.cell('', w, { h: 45 }))]))])); }
+    W.push(H.p('Ali: ________________   Ben: ________________   Mei: ________________   Siti: ________________', { before: 20, after: 10 }));
     // Q3 model
     W.push(H.q(3, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.', { keepNext: true }));
-    W.push(...H.lines(4));
+    W.push(...H.lines(2));
     W.push(H.ans('Mei:  $____________    Ravi:  $____________', 0));
 
     // ---- page 2 ----
@@ -135,20 +134,20 @@ module.exports = {
     W.push(H.fig(gridSvg()));
     W.push(H.sub('a', 'Squares of size 1 by 1:   ____________'));
     W.push(H.sub('b', 'Squares of size 2 by 2:   ____________    Squares of size 3 by 3:   ____________'));
-    W.push(H.sub('c', 'How many squares altogether? How do you know there are none bigger?', { after: 40 }));
-    W.push(...H.lines(2));
+    W.push(H.sub('c', 'How many squares altogether? How do you know there are none bigger?', { after: 20 }));
+    W.push(...H.lines(1));
     // Q5 truth
     W.push(H.q(5, 'Ali, Ben and Mei were playing. One of them broke a vase. Ali says, “Ben broke it.” Ben says, “Mei broke it.” Mei says, “I did not break it.” Exactly ONE of the three children is lying. Who broke the vase? Try each child and count the liars.', { keepNext: true }));
     { const ws = [2600, 2400, 2400, 2500];
       W.push(H.tbl(ws, [H.row(['If the vase was broken by …', 'Is Ali lying?', 'Is Ben lying?', 'Is Mei lying?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
-        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 60 }), ...ws.slice(1).map(w => H.cell('', w, { h: 60 }))]))])); }
-    W.push(H.p('Answer:  ______________________ broke the vase.', { before: 80, after: 40 }));
+        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 40 }), ...ws.slice(1).map(w => H.cell('', w, { h: 40 }))]))])); }
+    W.push(H.p('Answer:  ______________________ broke the vase.', { before: 30, after: 10 }));
     // Q6 ages
     W.push(H.q(6, 'Mum is 41 years old and Mei is 9 years old.', { keepNext: true }));
-    W.push(H.sub('a', 'In how many years will Mum be exactly 3 times as old as Mei? Show your table or working.', { after: 40 }));
-    W.push(...H.lines(3));
-    W.push(H.sub('b', 'Which start did you use (draw, list, table, work backwards, guess and check)? Why did you choose it?', { after: 40 }));
+    W.push(H.sub('a', 'In how many years will Mum be exactly 3 times as old as Mei? Show your table or working.', { after: 20 }));
     W.push(...H.lines(2));
+    W.push(H.sub('b', 'Which start did you use? Why did you choose it?', { after: 20 }));
+    W.push(...H.lines(1));
     return W;
   }
 };

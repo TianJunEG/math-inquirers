@@ -18,13 +18,13 @@ const figShops = () => {
 };
 // a tank with two taps and a leak
 const figTaps = () => {
-  let s = `<rect x="150" y="60" width="300" height="130" fill="${WHITE}" stroke="${NAVY}" stroke-width="2.5"/><rect x="152" y="110" width="296" height="78" fill="${SKY}"/>`;
-  s += tx(300, 158, 'holds 240 ℓ', { size: 18 });
-  const tap = (x, lab) => `<path d="M${x - 70} 22 H${x} V44" fill="none" stroke="${NAVY}" stroke-width="10" stroke-linecap="round"/><rect x="${x - 50}" y="12" width="14" height="20" rx="3" fill="${TEAL}"/><line x1="${x}" y1="52" x2="${x}" y2="104" stroke="#7FB2DE" stroke-width="6" stroke-dasharray="8 5"/>` + tx(x - 82, 28, lab, { a: 'end', size: 15 });
-  s += tap(250, 'Tap A: 12 ℓ a minute') + tap(400, '');
-  s += tx(470, 28, 'Tap B: 18 ℓ a minute', { a: 'start', size: 15 });
-  s += `<path d="M450 176 l14 4" stroke="${NAVY}" stroke-width="2"/><circle cx="472" cy="190" r="4" fill="#7FB2DE"/><circle cx="480" cy="204" r="4" fill="#7FB2DE"/><circle cx="488" cy="218" r="4" fill="#7FB2DE"/>` + tx(500, 214, 'crack: 6 ℓ a minute out', { a: 'start', size: 15, fill: RED });
-  return svg(680, 230, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 400);
+  let s = `<rect x="150" y="110" width="300" height="110" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/><rect x="152" y="150" width="296" height="68" fill="${SKY}"/>`;
+  s += tx(300, 195, 'holds 240 ℓ', { size: 22 });
+  s += `<path d="M30 66 H250 V104" fill="none" stroke="${NAVY}" stroke-width="10" stroke-linecap="round"/><path d="M650 66 H350 V104" fill="none" stroke="${NAVY}" stroke-width="10" stroke-linecap="round"/>`;
+  s += `<line x1="250" y1="112" x2="250" y2="146" stroke="#7FB2DE" stroke-width="6" stroke-dasharray="8 5"/><line x1="350" y1="112" x2="350" y2="146" stroke="#7FB2DE" stroke-width="6" stroke-dasharray="8 5"/>`;
+  s += tx(30, 40, 'Tap A: 12 ℓ a min', { a: 'start', size: 22 }) + tx(650, 40, 'Tap B: 18 ℓ a min', { a: 'end', size: 22 });
+  s += `<circle cx="430" cy="232" r="4" fill="#7FB2DE"/><circle cx="440" cy="246" r="4" fill="#7FB2DE"/>` + tx(456, 244, 'crack: 6 ℓ a min out', { a: 'start', size: 22, fill: RED });
+  return svg(680, 260, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 430);
 };
 const figPark = () => svg(440, 132, 'Car park sign: first hour $1.20; after that 60 cents for every half hour or part of a half hour',
   `<rect x="6" y="6" width="428" height="120" rx="14" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/><circle cx="56" cy="66" r="34" fill="${TEAL}"/>` + tx(56, 80, 'P', { size: 40, fill: WHITE }) +
@@ -132,8 +132,7 @@ module.exports = {
       H.row([H.cell('Gym B costs', gw[0], { bold: true, h: 90 }), H.cell('', gw[1]), H.cell('', gw[2]), H.cell('', gw[3])])
     ]);
     return [
-      H.q(1, 'A machine fills 48 bottles every 3 minutes.', { before: 20, keepNext: true }),
-      H.sub('a', 'Complete the rate table.', { keepNext: true, after: 60 }),
+      H.q(1, 'A machine fills 48 bottles every 3 minutes. (a) Complete the rate table.', { before: 20, keepNext: true }),
       rateTbl,
       H.sub('b', 'The machine starts at 9.00 a.m. At what time has it filled 400 bottles?   ________________'),
       H.q(2, 'Three shops sell the same can of drink.', { keepNext: true }),
@@ -146,8 +145,8 @@ module.exports = {
       H.fig(figTaps()),
       H.sub('a', 'Only tap A is turned on. How long does it take to fill the tank?   ________'),
       H.sub('b', 'Both taps are turned on. How long does it take now?   ________'),
-      H.sub('c', 'Both taps are turned on, but there is a crack in the tank that lets out 6 ℓ a minute. How long does it take to fill the tank?   ________'),
-      H.sub('d', 'When the tank is full, both taps are turned off. Water still leaks out of the crack. How long until the tank is half full?   ________'),
+      H.sub('c', 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________'),
+      H.sub('d', 'The tank is full. Both taps are turned off but the crack still leaks. How long until it is half full?   ________'),
 
       H.q(4, 'Printer P prints 30 pages a minute. Printer Q prints 20 pages a minute. A job has 900 pages.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),
