@@ -50,6 +50,12 @@ NODE_PATH=$(npm root -g) node workbook.js     # workbook .docx
 NODE_PATH=$(npm root -g) node guide.js        # tutor guide .docx
 NODE_PATH=$(npm root -g) node trial6.js       # Lesson 6 trial .docx
 
+# Parent practice pack (A + D style PDF, from qbank.json)
+python3 parent_pack.py
+
+# Weekly student and tutor PDFs (zip), sliced from the designed workbook and tutor guide
+python3 weekly.py
+
 # Any Word file -> designed PDF
 python3 docx2pdf_designed.py <file.docx> <out.pdf> "<Title>" "<Subtitle>" "<Footer text>"
 ```
