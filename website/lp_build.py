@@ -38,6 +38,13 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <div class="rule"><b>3</b><h3>Check your answer</h3><p class="muted small">Does it make sense? Try another way.</p></div>
 <div class="rule"><b>4</b><h3>Explain why</h3><p class="muted small">Say or draw why it works. This is where learning sticks.</p></div></div></section>
 
+<section class="sec" id="design"><div class="shead"><span class="eyebrow">How it is designed</span><h2>A maths enrichment program, inspired by research-based approaches used in gifted education</h2><p class="muted">For curious, capable children who enjoy thinking hard about maths, whatever their starting point.</p></div><div class="rules4">
+<div class="rule"><b>&#8593;</b><h3>Low floor, high ceiling</h3><p class="muted small">Every task has an easy way in and room to go further, so no child waits and no child is stuck.</p></div>
+<div class="rule"><b>?</b><h3>Open investigations</h3><p class="muted small">Find every way, spot the pattern, make up your own puzzle, and ask "what if?".</p></div>
+<div class="rule"><b>&#9998;</b><h3>Explain and look back</h3><p class="muted small">Children say why it works, try a second method, and note what was hard.</p></div>
+<div class="rule"><b>&#9733;</b><h3>Beyond the syllabus</h3><p class="muted small">We extend thinking beyond the school syllabus with depth and reasoning, not by racing ahead.</p></div></div>
+<p class="muted small" style="margin-top:14px">Frameworks that inspire the design include low-floor, high-ceiling tasks, P&oacute;lya's problem-solving steps and mathematical habits of mind. We do not identify or test for giftedness, we are not a GEP preparation course, and we do not promise exam or competition results.</p></section>
+
 <section class="sec"><div class="shead"><span class="eyebrow">The 10 lessons</span><h2>What we cover</h2></div><div class="lessons" id="lessons"></div></section>
 
 <section class="two"><div class="tile yel"><span class="tag">Your child takes home</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A 46-page Math Inquirers workbook</li><li>The Inquirer Kit: coins, ten-frames, counters, number strips</li><li>An Inquiry Journal, stamped after every lesson</li><li>A certificate on Challenge Day</li></ul></div>
@@ -66,7 +73,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 
 <section class="sec faq" id="faq"><div class="shead"><span class="eyebrow">Questions</span><h2>Parents often ask</h2></div>
 <details><summary>Who is it for?</summary><p>Children aged 6-8 (typically finishing P1) who enjoy puzzles or finish school work easily. K2 children starting Primary 1 in 2027 are welcome after a free 15-minute readiness check, which we arrange after you register. Puzzles come in three levels, so every child is stretched.</p></details>
-<details><summary>Is it linked to MOE or the GEP?</summary><p>No. Math Inquirers is an independent enrichment program. It builds the thinking habits used in school maths but it is not a GEP preparation course.</p></details>
+<details><summary>Is it linked to MOE or the GEP?</summary><p>No. Math Inquirers is an independent maths enrichment program. It is inspired by research-based approaches used in gifted education, such as low-floor, high-ceiling tasks and explaining why, but we do not identify or test for giftedness, and it is not a GEP preparation course.</p></details>
 <details><summary>Who teaches?</summary><p>Lessons are planned and led by an experienced Singapore primary school maths teacher, using the Math Inquirers lesson plans, slides and workbook.</p></details>
 <details><summary>What if my child misses a lesson?</summary><p>We send that lesson's workbook pages and a short catch-up guide, so your child can do it at home.</p></details>
 <details><summary>How does online work?</summary><p>Live video lessons with the same group of up to 8. We post the printed workbook and kit to you before the first lesson. All your child needs is a laptop or tablet with a camera, on a table with space for the kit.</p></details>

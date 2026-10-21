@@ -211,14 +211,14 @@ W.push(...lines(2));
 W.push(...extra(6));
 W.push(...hdr(7, 'Shapes', 'SHAPE SAFARI'));
 W.push(q(1, 'Count the shapes in the house picture.', { before: 40, keepNext: true }));
-W.push(img('house.png', 250, 159));
+W.push(img('house.png', 200, 127));
 W.push(tbl([2475, 2475, 2475, 2475], [row(['Circle', 'Triangle', 'Square', 'Rectangle'].map(s => cell(s, 2475, { bold: true, fill: 'EDEDED' }))), row(['', '', '', ''].map(s => cell(s, 2475, { h: 160 })))]));
 W.push(gap(40));
 W.push(sub('a', 'Which shape is there the most of?   ____________      (b)  How many shapes altogether?   ____'));
 W.push(q(2, 'Sides and corners. Look at the shapes, then fill in the table.', { keepNext: true }));
-W.push(img('shapes6.png', 560, 107));
+W.push(img('shapes6.png', 440, 84));
 { const ws = [3300, 3300, 3300]; const rs = [['Circle', '0', '0'], ['Triangle', '3', '3'], ['Square', '', ''], ['Pentagon', '', ''], ['Hexagon', '', ''], ['Octagon', '', '']];
-  W.push(tbl(ws, [row(['Shape', 'Straight sides', 'Corners'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED' }))), ...rs.map(r => row(r.map((s, i) => cell(s, ws[i], { h: 50, bold: i === 0, size: 22 }))))])); }
+  W.push(tbl(ws, [row(['Shape', 'Straight sides', 'Corners'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED' }))), ...rs.map(r => row(r.map((s, i) => cell(s, ws[i], { h: 38, bold: i === 0, size: 22 }))))])); }
 W.push(gap(60));
 W.push(sub('a', 'What do you notice about the number of sides and corners?  ______________________'));
 W.push(sub('b', 'A shape has 7 sides. How many corners does it have?   ____'));
