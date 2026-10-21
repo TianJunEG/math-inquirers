@@ -8,7 +8,7 @@ const qline = (tag, text, o = {}) => p([t(tag, { bold: true, size: S }), new Tex
   { indent: { left: 640, hanging: 640 }, tabStops: [{ type: TabStopType.LEFT, position: 640 }], before: 60, after: 60, line: 290 });
 const aline = (tag, text) => p([t(tag, { bold: true, size: 20 }), new TextRun({ children: [new Tab()], font: FONT, size: 20 }), t(text, { size: 20 })],
   { indent: { left: 640, hanging: 640 }, tabStops: [{ type: TabStopType.LEFT, position: 640 }], before: 20, after: 20, line: 260 });
-const tiers = [['core', 'C', 'CORE (Primary 1 syllabus, fluency)'], ['stretch', 'S', 'STRETCH (ahead of grade, two steps)'], ['challenge', 'G', 'GEP-STYLE CHALLENGE (non-routine, justify, find every way)']];
+const tiers = [['core', 'C', 'CORE (low floor: start with objects, drawing or counting)'], ['stretch', 'S', 'THINK HARDER (use this lesson\'s idea in a new setting)'], ['challenge', 'G', 'CHALLENGE (after the topic: extend, justify, make up your own)']];
 const W = [];
 W.push(p(t(PROG.toUpperCase(), { bold: true, size: 40 }), { align: AlignmentType.CENTER, before: 200, after: 60 }));
 W.push(p(t('Question Bank  •  Primary 1', { bold: true, size: 32 }), { align: AlignmentType.CENTER, after: 60 }));
@@ -16,9 +16,9 @@ W.push(p(t(SLOGAN, { italics: true, size: 28, color: '1F3864' }), { align: Align
 W.push(banner('How to use this bank'));
 [
  'Each lesson has three levels. Every child starts with Core, then moves up when they are ready. Challenge questions are the ones to talk about together.',
- 'CORE matches what Primary 1 children learn in school. Use it for warm-ups and for children who need confidence.',
- 'STRETCH goes ahead of the Primary 1 syllabus: two-step problems, patterns with a hidden rule, simple unknowns and larger numbers.',
- 'GEP-STYLE CHALLENGE questions are non-routine. They ask children to find every way, work backwards, test a case, justify an answer or notice what is missing. This is the style of thinking used in gifted-education-type problems. It is not an official GEP standard, and this program is not affiliated with MOE.',
+ 'CORE questions are low floor: a child who has not yet learnt the topic can start them with objects, a drawing, counting or guess-and-check. No special method is needed. Use them for warm-ups and for children who need confidence.',
+ 'THINK HARDER questions need the idea taught in the lesson, used in a new setting: two-step problems, patterns with a hidden rule, simple unknowns and larger numbers.',
+ 'CHALLENGE questions are for children who have finished the topic. They need the lesson idea plus an extension: more than one step, finding every way, working backwards, justifying an answer, changing one thing and asking what happens, or making up a puzzle of their own. Open questions have no single right answer; check the reasoning. This uses low-floor, high-ceiling task ideas and problem-solving habits from gifted-education research. It does not identify gifted children, it is not an official GEP standard, and this program is not affiliated with MOE.',
  'Ask for the reason every time: “How do you know?” A correct answer with no reason is only half done.',
  'Answers are at the back. Do not hand the answer pages to children.'
 ].forEach(s => W.push(p(t(s, { size: 24 }), { after: 100, indent: { left: 300 } })));
