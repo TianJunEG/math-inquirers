@@ -6,7 +6,7 @@ const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHIT
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 let FS = 15;
 const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || FS}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${esc(s)}</text>`;
-const svg = (w, h, label, inner) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(w * 0.75)}px;max-width:100%">${inner}</svg>`;
+const svg = (w, h, label, inner, k = 0.75) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(w * k)}px;max-width:100%">${inner}</svg>`;
 FS = 19; // figures are shown at 75%, so text is 14px or more on the page
 // cm -> px with origin (ox, oy) and s px per cm (y up)
 const M = (ox, oy, s) => (x, y) => [ox + x * s, oy - y * s];
@@ -17,6 +17,7 @@ const ra = (f, dx, dy, k = 9) => `<path d="M${f[0] + dx * k} ${f[1]} V${f[1] + d
 
 // Q1: three triangles, all at 11 px per cm
 const q1Fig = () => {
+  FS = 15;
   const s = 10, oy = 180; let g = '';
   let P = M(60, oy, s);
   g += poly([P(0, 0), P(8, 0), P(0, 6)], YEL) + ra(P(0, 0), 1, -1);
@@ -28,11 +29,14 @@ const q1Fig = () => {
   g += ln(P(9, 0), P(15, 0), true) + ln(P(15, 8), P(15, 0), true) + ra(P(15, 0), -1, -1);
   g += poly([P(0, 0), P(9, 0), P(15, 8)], YEL);
   g += T(405, 30, '(c)', { anchor: 'start', fill: TEAL }) + T(450, 199, '9 cm') + T(474, 133, '17 cm', { anchor: 'end' }) + T(561, 145, '8 cm', { anchor: 'start' });
-  return svg(620, 206, 'Three triangles. (a) right-angled with sides 8 cm, 6 cm and 10 cm. (b) base 14 cm, height 12 cm, sides 13 cm and 15 cm. (c) base 9 cm, height 8 cm outside the triangle, long side 17 cm.', g);
+  const out = svg(620, 206, 'Three triangles. (a) right-angled with sides 8 cm, 6 cm and 10 cm. (b) base 14 cm, height 12 cm, sides 13 cm and 15 cm. (c) base 9 cm, height 8 cm outside the triangle, long side 17 cm.', g, 0.97);
+  FS = 19;
+  return out;
 };
 
 // Q2: rectangle ABCD 10 cm by 6 cm drawn twice; triangle PDC and triangle QDC
 const q2Fig = () => {
+  FS = 15;
   const s = 20; let g = '';
   [[60, 2, 'P', YEL], [340, 7, 'Q', SKY]].forEach(([ox, px, lab, fill]) => {
     const P = M(ox, 160, s);
@@ -40,7 +44,9 @@ const q2Fig = () => {
     g += T(ox - 6, 36, 'A', { anchor: 'end' }) + T(ox + 206, 36, 'B', { anchor: 'start' }) + T(ox + 206, 176, 'C', { anchor: 'start' }) + T(ox - 6, 176, 'D', { anchor: 'end' });
     g += T(P(px, 6)[0], 32, lab) + T(ox + 100, 180, '10 cm') + T(ox - 8, 105, '6 cm', { anchor: 'end' });
   });
-  return svg(600, 188, 'Rectangle ABCD, 10 cm by 6 cm, drawn twice. Left: P on AB and triangle PDC shaded. Right: Q on AB and triangle QDC shaded.', g);
+  const out = svg(600, 188, 'Rectangle ABCD, 10 cm by 6 cm, drawn twice. Left: P on AB and triangle PDC shaded. Right: Q on AB and triangle QDC shaded.', g, 0.97);
+  FS = 19;
+  return out;
 };
 
 // Q3: quadrilateral ABCD split by the diagonal AC (14 cm); heights 5 cm and 3 cm

@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:14:11Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P6: Lesson 2 – Prime Hunters",
+ "order": [
+  "p6l2-title",
+  "p6l2-warm1",
+  "p6l2-warm2",
+  "p6l2-explore1",
+  "p6l2-explore2",
+  "p6l2-teach1",
+  "p6l2-we1",
+  "p6l2-try1",
+  "p6l2-we2",
+  "p6l2-we3",
+  "p6l2-key",
+  "p6l2-break",
+  "p6l2-ws1",
+  "p6l2-ws1ans",
+  "p6l2-teachtrace",
+  "p6l2-teachgold",
+  "p6l2-teachsq",
+  "p6l2-teachplan",
+  "p6l2-ws2",
+  "p6l2-ws2ans",
+  "p6l2-stretch",
+  "p6l2-challenge",
+  "p6l2-chdiag",
+  "p6l2-chwalk",
+  "p6l2-talk",
+  "p6l2-exit"
+ ],
+ "cover": "p6l2-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p6l2-title"
+  },
+  "s2": {
+   "description": "Teach: factors, primes and prime factors, tested in code",
+   "start": "p6l2-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p6l2-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p6l2-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

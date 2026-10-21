@@ -89,7 +89,7 @@ const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.r
 const pyBox = H => {
   const ls = PY.split('\n'), code = part => `<div style="flex:1;text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12px;line-height:1.3;white-space:nowrap">${pyHTML(part.join('\n'))}</div>`;
   return H.tbl([9900], [H.row([H.cell(
-    `<div style="text-align:left;font-weight:700;margin-bottom:3px">Python version (optional): % is mod. Change the message and shift to test Q2; a negative shift decodes.</div><div style="display:flex;gap:16px">${code(ls.slice(0, 5))}${code(ls.slice(5))}</div>`, 9900, { fill: 'DDEBF7', h: 40 })])]);
+    `<div style="text-align:left;font-weight:700;margin-bottom:3px">Python version (optional): % is mod. Change the message and shift to test Q2; a negative shift decodes.</div>${code(ls)}`, 9900, { fill: 'DDEBF7', h: 40 })])]);
 };
 
 module.exports = {

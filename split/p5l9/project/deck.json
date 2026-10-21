@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:14:06Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P5: Lesson 9 – Pattern Generalisers",
+ "order": [
+  "p5l9-title",
+  "p5l9-warm1",
+  "p5l9-warm2",
+  "p5l9-explore1",
+  "p5l9-explore2",
+  "p5l9-teach1",
+  "p5l9-try1",
+  "p5l9-we1",
+  "p5l9-try2",
+  "p5l9-we2",
+  "p5l9-try3",
+  "p5l9-key",
+  "p5l9-break",
+  "p5l9-ws1",
+  "p5l9-ws1ans",
+  "p5l9-teachgs",
+  "p5l9-teachsup",
+  "p5l9-teachmarks",
+  "p5l9-ws2",
+  "p5l9-ws2ans",
+  "p5l9-stretch",
+  "p5l9-challenge",
+  "p5l9-chdiag",
+  "p5l9-chwalk",
+  "p5l9-talk",
+  "p5l9-exit"
+ ],
+ "cover": "p5l9-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p5l9-title"
+  },
+  "s2": {
+   "description": "Teach: growing patterns and the rule in words",
+   "start": "p5l9-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p5l9-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p5l9-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
