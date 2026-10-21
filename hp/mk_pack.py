@@ -127,7 +127,7 @@ d.save("Math_Inquirers_Weekly_Email_Pack.docx")
 
 # ---------- TRACKER + SCREENING ----------
 q=json.load(open('qbank.json'))
-pick=[(1,0),(3,2),(4,2),(5,0),(6,2),(7,1),(8,0),(10,2)]
+pick=[(1,0),(3,2),(4,0),(5,0),(6,0),(7,3),(8,2),(10,1)]
 d=Document();base(d)
 sec=d.sections[0];sec.orientation=WD_ORIENT.LANDSCAPE;sec.page_width,sec.page_height=sec.page_height,sec.page_width
 H(d,"Math Inquirers: Readiness Tracker",0)
@@ -175,23 +175,22 @@ for x in ["Use one to one or in a group of up to 4. Allow about 25 minutes. Read
 "Then ask the extension question once. A good answer earns a star (★). Stars show how far the child can stretch.",
 "Total out of 16. As a guide, 12 or more with 3 or more stars suggests a child who would enjoy olympiad-style problems. Combine this with the lesson tracker; neither alone decides.",
 "These problems use the same kinds of thinking that later maths olympiad papers reward: patterns, listing in order, working backwards and logic. This set is not an official test and is not linked to any school or MOE programme."]: d.add_paragraph(x,style='List Bullet')
-ext={0:"What if the frogs jumped in 3s and 4s up to 60? How do you know before you count?",
+ext={0:"What if the 5th number was 30? How many patterns now? How do you know you have them all?",
 1:"What if there were 15 children and the most votes was 6? Can the votes still all be different?",
-2:"Which pattern would have 61 tiles? How do you know?",
-3:"Make up your own puzzle like this and give it to your tutor.",
+2:"What about exactly 40 sticks? How do you know before you draw?",
+3:"Zoe is 15th from the front and 15th from the back. How many children? Explain your quick way.",
 4:"What if you also had a 50¢ coin? How many totals now?",
-5:"How many triangles with 4 lines? What do you think the pattern is?",
-6:"Make up another clue so that only one order is possible.",
-7:"What if the coins were 20¢, 10¢ and 5¢ and the total was 40¢?"}
-# compute answers' extension notes carefully only where certain
-extans={0:"Both land on 12, 24, 36, 48, 60 (every 12; 3 and 4 meet at 12).",
+5:"How many triangles with 6 lines? What do you think the pattern is?",
+6:"Four friends: Ali, Ben, Mei and Sam. Sam must be last. How many orders?",
+7:"The next number of sticks after 31 that works? How do you know?"}
+extans={0:"7 patterns: start 26 add 1, 22 add 2, 18 add 3, 14 add 4, 10 add 5, 6 add 6, 2 add 7.",
 1:"Yes. Only one way: 6, 5 and 4.",
-2:"The 30th pattern (each pattern adds 2 tiles: 2 x 30 + 1 = 61).",
-3:"Open. Look for a clear puzzle with a correct answer.",
+2:"Yes: 13 squares (4, 7, 10 … 40). The stick numbers are 1 more than the numbers we say counting in 3s, and 39 is one of them.",
+3:"29 children (15 + 15 − 1: Zoe is counted twice).",
 4:"15 different totals (every group of coins gives a different total).",
-5:"15 triangles with 4 lines (1, 3, 6, 10, 15). Pattern: add 2, 3, 4, 5.",
-6:"Open. Look for one that really leaves one answer.",
-7:"9 ways. Look for an ordered, complete list (most 20¢ coins first)."}
+5:"28 triangles with 6 lines (1 + 2 + … + 7). Pattern: add one more each time (3, 6, 10, 15, 21, 28).",
+6:"6 orders (the other three can stand in 3 x 2 x 1 ways). Look for an ordered, complete list.",
+7:"37 (they go up by 6)."}
 rows=[["#","Question","Answer","Extension (★)"]]
 for n,(l,i) in enumerate(pick,1):
     c=q[str(l)]['challenge'][i]
