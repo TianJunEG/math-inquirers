@@ -73,6 +73,6 @@ QA=[
  'A Math Inquirers workbook, the Inquirer Kit, an Inquiry Journal stamped after every lesson, and a certificate.',
  ['Parents also get a short note each week with what we did and one thing to try at home. There is nothing to buy.']),
 ('mi','price','How much does Math Inquirers cost?',
- 'S$650 for 10 lessons of 90 minutes (S$65 a lesson), with the workbook and all materials included. Families in the first intake pay an introductory S$500 (S$50 a lesson).',
+ 'S$650 for 10 lessons of 90 minutes (S$65 a lesson), with the workbook and all materials included. Until Term 1 2027 ends (12 Mar 2027), families pay an introductory S$500 (S$50 a lesson).',
  ['There is no payment at registration: we confirm your child\'s group first, then send payment details.']),
 ]
