@@ -3,7 +3,7 @@
 // guess and check with a table, supposition ("suppose they are all the same").
 // Every pattern term, count and answer below was worked out and checked with a short Python script.
 // Figures are drawn from the stated rules: tables in a row 2 × n + 2 chairs; matchstick houses 5 × n + 1 sticks;
-// an n by n square of white tiles with a grey border has 4 × n + 4 grey tiles.
+// (the border-tiles pattern on the slides: a row of n tiles with a grey border has 2 × n + 6 grey tiles).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const FF = 'Fredoka, Arial, sans-serif';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -50,21 +50,6 @@ const housesSvg = () => {
   return svg(172, 'Matchstick houses in a row: 1 house uses 6 sticks, 2 houses use 11 sticks, 3 houses use 16 sticks', g);
 };
 
-// Q3: an n by n square of white tiles with a one-tile grey border (figures 1, 2, 3)
-const borderSvg = () => {
-  const s = 30; let g = '', ox = 40;
-  [1, 2, 3].forEach(n => {
-    const side = n + 2, y0 = 10 + (5 - side) * s;
-    for (let r = 0; r < side; r++) for (let c = 0; c < side; c++) {
-      const edge = r === 0 || c === 0 || r === side - 1 || c === side - 1;
-      g += `<rect x="${ox + c * s}" y="${y0 + r * s}" width="${s}" height="${s}" fill="${edge ? '#9AA5BD' : WH}" stroke="${N}" stroke-width="2"/>`;
-    }
-    g += txt(ox + side * s / 2, 10 + 5 * s + 26, `Figure ${n}`, 16);
-    ox += side * s + 60;
-  });
-  return svg(196, 'Figure 1 is 1 white tile with a grey border of 8 tiles; figure 2 is a 2 by 2 white square with 12 grey tiles; figure 3 is a 3 by 3 white square with 16 grey tiles', g);
-};
-
 module.exports = {
   lesson: {
     n: 9, week: 5, session: 'A', title: 'Pattern Generalisers', topic: 'Patterns and Number Sense',
@@ -74,7 +59,7 @@ module.exports = {
     online: 'Children have toothpicks and paper squares ready on the desk and build each figure on camera. The tutor shares the slides; pairs work in breakout rooms for the explore and page 1, and hold their tables up to the camera.',
     warmup: 'Guess My Rule: children call out numbers, the tutor puts each through a secret two-step machine (× 3, then + 1) and says what comes out. The first child to say the rule in words wins the round. Then five quick pattern questions on whiteboards.',
     explore: 'High fives: if everyone in our group of 8 high-fives everyone else exactly once, how many high fives is that? Pairs guess first, then start small (2, 3, 4 children), draw dots and lines, make a table and look for a pattern. Finished early: a class of 30.',
-    mini: 'Growing patterns: count each figure, put the counts in a table, see what each new figure adds and WHY from the picture (a new square shares a side, so it adds 3 sticks, not 4). Say the rule in words: sticks = 3 × figure number + 1. Use it for a far figure (figure 25) and backwards (61 sticks: take away 1, divide by 3). See the same pattern two ways (a border of tiles). Before page 2: guess and check with a table (each change moves the total by the same amount); supposition (suppose they are all the cheaper kind, find the gap, divide by the change per swap); marks taken away for a wrong answer (each wrong answer costs the marks you lost AND the marks taken away).',
+    mini: 'Growing patterns: count each figure, put the counts in a table, see what each new figure adds and WHY from the picture (a new square shares a side, so it adds 3 sticks, not 4). Say the rule in words: sticks = 3 × figure number + 1. Use it for a far figure (figure 25) and backwards (61 sticks: take away 1, divide by 3). See the same pattern two ways (a border of tiles, on the slides). Before page 2: guess and check with a table (each change moves the total by the same amount); supposition (suppose they are all the cheaper kind, find the gap, divide by the change per swap); marks taken away for a wrong answer (each wrong answer costs the marks you lost AND the marks taken away).',
     share: 'Mei says: “10 squares in a row need 31 sticks, so 20 squares need 62 sticks.” Is she right? Explain with a picture.',
     exit: { q: 'Figure 1 of a pattern has 6 dots. Each figure has 4 more dots than the figure before.  (a) How many dots are in figure 20?  (b) Which figure has 102 dots?', a: '(a) 82 (6 + 19 × 4, or 4 × 20 + 2)  (b) Figure 25 (102 − 2 = 100, 100 ÷ 4 = 25)' },
     mistakes: [
@@ -86,10 +71,9 @@ module.exports = {
     key: [
       ['Q1', '(a) 10, 12; 10 tables: 22 chairs  (b) Number of chairs = 2 × number of tables + 2  (c) 24 tables (2 × 24 + 2 = 50)  (d) No. 20 tables seat 2 × 20 + 2 = 42, not 44. Doubling counts the 2 end chairs twice.'],
       ['Q2', '(a) 5 sticks: the new house shares a wall with the house before  (b) Number of sticks = 5 × number of houses + 1  (c) 101 sticks  (d) 39 houses (5 × 39 + 1 = 196 sticks), with 4 sticks left over'],
-      ['Q3', '(a) Figure 4: 16 white, 20 grey. Figure 10: 100 white, 44 grey.  (b) Grey tiles = 4 × figure number + 4: a row of tiles along each of the 4 sides, as long as the figure number, and 1 tile in each of the 4 corners  (c) Figure 24 (100 − 4 = 96, 96 ÷ 4 = 24)  (d) Figure 5 (25 white, 24 grey)'],
-      ['Q4', '8 adult tickets and 7 child tickets (8 × $12 + 7 × $7 = $96 + $49 = $145). Each adult ticket in place of a child ticket adds $5.'],
-      ['Q5', '(a) $6.00  (b) 30¢  (c) 14 fifty-cent coins (and 16 twenty-cent coins). $10.20 − $6.00 = $4.20; $4.20 ÷ 30¢ = 14. Check: $7.00 + $3.20 = $10.20.'],
-      ['Q6', '(a) 15 correct (all correct would be 100 marks; each wrong answer costs 5 + 2 = 7 marks; 100 − 65 = 35, 35 ÷ 7 = 5 wrong). Check: 75 − 10 = 65.  (b) Every score is 100 take away a number of 7s (100, 93, 86, 79, …). 100 − 80 = 20 is not a multiple of 7, so 80 is impossible.']
+      ['Q3', '8 adult tickets and 7 child tickets (8 × $12 + 7 × $7 = $96 + $49 = $145). Each adult ticket in place of a child ticket adds $5.'],
+      ['Q4', '(a) $6.00  (b) 30¢  (c) 14 fifty-cent coins (and 16 twenty-cent coins). $10.20 − $6.00 = $4.20; $4.20 ÷ 30¢ = 14. Check: $7.00 + $3.20 = $10.20.'],
+      ['Q5', '(a) 15 correct (all correct would be 100 marks; each wrong answer costs 5 + 2 = 7 marks; 100 − 65 = 35, 35 ÷ 7 = 5 wrong). Check: 75 − 10 = 65.  (b) Every score is 100 take away a number of 7s (100, 93, 86, 79, …). 100 − 80 = 20 is not a multiple of 7, so 80 is impossible.']
     ]
   },
 
@@ -123,8 +107,8 @@ module.exports = {
     keyBig: 'See what stays the same and what grows. Say the rule in words: sticks = 3 × figure number + 1.',
     keySmall: 'Check the rule on every figure. To go backwards, undo the steps in reverse: take away, then divide.',
     brk: 'Pattern moves: clap, clap, stamp, clap, clap, stamp … Do 12 moves together. Then: what is the 20th move? The 30th?',
-    ws1: 'Page 1, in pairs: Q1 tables and chairs, Q2 matchstick houses, Q3 tiles with a border.',
-    ws2: 'Page 2, on your own: Q4 guess and check with a table, Q5 coins by supposition, Q6 the quiz with marks taken away.'
+    ws1: 'Page 1, in pairs: Q1 tables and chairs, Q2 matchstick houses.',
+    ws2: 'Page 2, on your own: Q3 guess and check with a table, Q4 coins by supposition, Q5 the quiz with marks taken away.'
   },
 
   qbank: {
@@ -166,9 +150,9 @@ module.exports = {
     W.push(H.q(1, 'At a hawker centre, square tables are pushed together in a row. One chair goes on each free side.', { before: 10, keepNext: true }));
     W.push(H.fig(tablesSvg()));
     W.push(H.sub('a', '4 tables:  ______ chairs.   5 tables:  ______ chairs.   10 tables:  ______ chairs.'));
-    W.push(H.sub('', 'Rule in words:   chairs  =  ______ × tables  +  ______'));
-    W.push(H.sub('b', 'How many tables are needed to seat exactly 50 people?   ______________'));
-    W.push(H.sub('c', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
+    W.push(H.sub('b', 'Rule in words:   chairs  =  ______ × tables  +  ______'));
+    W.push(H.sub('c', 'How many tables are needed to seat exactly 50 people?   ______________'));
+    W.push(H.sub('d', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
     W.push(...H.lines(1));
     // Q2 matchstick houses
     W.push(H.q(2, 'Matchstick houses are joined in a row.', { keepNext: true }));
@@ -176,32 +160,20 @@ module.exports = {
     W.push(H.sub('a', 'Each new house adds ______ sticks. Why not 6?  ______________________________', { after: 40 }));
     W.push(H.sub('b', 'Rule:   sticks  =  ______ × houses  +  ______.   For 20 houses:  ______ sticks.'));
     W.push(H.sub('c', 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________'));
-    // Q3 border tiles
-    W.push(H.q(3, 'Each figure is a square of white tiles with a border of grey tiles around it.', { keepNext: true }));
-    W.push(H.fig(borderSvg()));
-    { const ws = [2400, 1500, 1500, 1500, 1500, 1500];
-      W.push(H.tbl(ws, [H.row(['Figure', '1', '2', '3', '4', '10'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        H.row(['White tiles', '1', '4', '9', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 50 }))),
-        H.row(['Grey tiles', '8', '12', '16', '', ''].map((s, i) => H.cell(s, ws[i], { bold: i === 0, h: 50 })))])); }
-    W.push(H.sub('a', 'Fill in the table. Write the rule for the grey tiles in words and explain it from the picture.', { after: 20 }));
-    W.push(...H.lines(2));
-    W.push(H.sub('b', 'Which figure has 100 grey tiles?   ____________'));
-    W.push(H.sub('c', 'First figure with more white tiles than grey tiles?   ____________'));
-
     // ---- page 2 ----
-    W.push(H.q(4, 'Guess and check with a table. Adult tickets to the Science Centre cost $12 each and child tickets cost $7 each. A group buys 15 tickets for $145 altogether. How many adult tickets do they buy?', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(3, 'Guess and check with a table. Adult tickets to the Science Centre cost $12 each and child tickets cost $7 each. A group buys 15 tickets for $145 altogether. How many adult tickets do they buy?', { pb: true, before: 0, keepNext: true }));
     { const ws = [2000, 2000, 3400, 2500];
       W.push(H.tbl(ws, [H.row(['Adult tickets', 'Child tickets', 'Total cost', 'Too much or too little?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         H.row([H.cell('5', ws[0], { h: 40 }), H.cell('10', ws[1], { h: 40 }), H.cell('$60 + $70 = $130', ws[2], { h: 40 }), H.cell('too little', ws[3], { h: 40 })]),
         ...[1, 2, 3].map(() => H.row(ws.map(w => H.cell('', w, { h: 50 }))))])); }
     W.push(H.p('Answer:  ______ adult tickets and ______ child tickets.', { before: 40, after: 20 }));
     // Q5 supposition, coins
-    W.push(H.q(5, 'Siti has 30 coins. They are all 20¢ and 50¢ coins, worth $10.20 altogether.', { keepNext: true }));
+    W.push(H.q(4, 'Siti has 30 coins. They are all 20¢ and 50¢ coins, worth $10.20 altogether.', { keepNext: true }));
     W.push(H.sub('a', 'If all 30 coins were 20¢: worth ____________.  Each change of a 20¢ for a 50¢ adds ____________.'));
     W.push(H.sub('b', 'How many 50¢ coins does Siti have? Show your working and check.', { after: 20 }));
     W.push(...H.lines(2));
     // Q6 marks taken away
-    W.push(H.q(6, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
+    W.push(H.q(5, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
     W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
     W.push(...H.lines(2));
     W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong?', { after: 20 }));

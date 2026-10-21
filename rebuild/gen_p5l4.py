@@ -124,9 +124,9 @@ put('teachsplit',sec(f'{L}-teachsplit','54–56 MIN',body,'Teach before workshee
 s=38; P=Mp(70,300,s)
 g=poly([P(0,0),P(10,0),P(10,6),P(0,6)],WHITE,3)+poly([P(0,0),P(6,6),P(10,4)],YEL)
 g+=lab(P(0,6)[0]-14,P(0,6)[1]-8,'A',30,NAVY,'end')+lab(P(10,6)[0]+14,P(10,6)[1]-8,'B',30,NAVY,'start')+lab(P(10,0)[0]+14,P(10,0)[1]+30,'C',30,NAVY,'start')+lab(P(0,0)[0]-14,P(0,0)[1]+30,'D',30,NAVY,'end')+lab(P(6,6)[0],P(6,6)[1]-14,'E',30)+lab(P(10,4)[0]+14,P(10,4)[1]+10,'F',30,NAVY,'start')
-g+=lab(P(3,6)[0],P(3,6)[1]-48,'AE = 6 cm',26,TEAL)+lab(P(8,6)[0],P(8,6)[1]-48,'EB = 4 cm',26,TEAL)+lab(P(10,5)[0]+16,P(10,5)[1]+40,'BF = 2 cm',26,TEAL,'start')
+g+=lab(P(3,6)[0],P(3,6)[1]-48,'AE = 6 cm',26,TEAL)+lab(P(8,6)[0],P(8,6)[1]-48,'EB = 4 cm',26,TEAL)+lab(P(10,4.6)[0]+48,P(10,4.6)[1]+10,'BF = 2 cm',26,TEAL,'start')
 body=h2('Take away the white triangles',62)+card(p('ABCD is a rectangle 10 cm by 6 cm. E is on AB with AE = 6 cm. F is on BC with BF = 2 cm. What is the area of the shaded triangle DEF?',34,700))
-body+=pin(128,390,700,svgwrap(620,350,'Rectangle ABCD, 10 cm by 6 cm. E is on AB with AE 6 cm and EB 4 cm. F is on BC with BF 2 cm and FC 4 cm. Triangle DEF is shaded.',g.replace('V','V')),None,WHITE,24,'12px 20px')
+body+=pin(128,390,700,svgwrap(700,350,'Rectangle ABCD, 10 cm by 6 cm. E is on AB with AE 6 cm and EB 4 cm. F is on BC with BF 2 cm and FC 4 cm. Triangle DEF is shaded.',g.replace('V','V')),None,WHITE,24,'12px 20px')
 body+=step(1,'Rectangle: 10 × 6 = 60 cm².',left=900,top=390,width=892,size=32)
 body+=step(2,'White: ADE = 1/2 × 6 × 6 = 18,  EBF = 1/2 × 4 × 2 = 4,  FCD = 1/2 × 4 × 10 = 20.',left=900,top=490,width=892,size=32)
 body+=step(3,'Shaded = 60 − 18 − 4 − 20 = 18 cm².',left=900,top=640,width=892,size=32)
@@ -134,12 +134,12 @@ put('teachtake',sec(f'{L}-teachtake','56–58 MIN',body,'Teach before worksheet 
 # ---- teach: same area different triangles ----
 s=17; g=''
 for k,(b,h) in enumerate([(10,6),(12,5),(15,4)]):
-    ox=40+[0,230,480][k]; P=Mp(ox,150,s)
+    ox=40+[0,230,470][k]; P=Mp(ox,150,s)
     g+=poly([P(0,0),P(b,0),P(b*0.25,h)],[YEL,SKY,GRN][k],3)+lab(P(b/2,0)[0],P(0,0)[1]+30,f'{b} × {h}',26,NAVY)
 body=h2('Same area, different triangles',62)+card(p('A triangle has an area of 30 cm². What could its base and height be?',38,700))
-body+=step(1,'Area 30 cm², so base × height = 60 (double 30).',top=330,width=1664,size=34)
-body+=step(2,'List pairs that multiply to 60: base 10, height 6;  base 12, height 5;  base 15, height 4;  and more.',top=430,width=1664,size=34)
-body+=pin(128,560,1664,svgwrap(740,190,'Three triangles with base and height 10 by 6, 12 by 5 and 15 by 4. Each has an area of 30 square centimetres.',g),'fade',WHITE,24,'12px 30px')
+body+=step(1,'Area 30 cm², so base × height = 60 (double 30).',top=360,width=1664,size=34)
+body+=step(2,'List pairs that multiply to 60: base 10, height 6;  base 12, height 5;  base 15, height 4;  and more.',top=460,width=1664,size=34)
+body+=pin(128,590,1664,svgwrap(800,190,'Three triangles with base and height 10 by 6, 12 by 5 and 15 by 4. Each has an area of 30 square centimetres.',g),'fade',WHITE,24,'12px 30px')
 body+=pin(128,810,1664,p('Check: 1/2 × 10 × 6 = 30,  1/2 × 12 × 5 = 30,  1/2 × 15 × 4 = 30 ✓',34,800),'fade',SOFT,20,'16px 30px')
 put('teachsame',sec(f'{L}-teachsame','58–60 MIN',body,'Teach before worksheet page 2 (Q5, a triangle of 24 cm² with a base of 12 cm). Think-aloud: "The area is half of base times height, so base times height is DOUBLE the area: 60. Now I need two numbers that multiply to 60, and I can list them in order: 1 and 60, 2 and 30, 3 and 20, 4 and 15, 5 and 12, 6 and 10." On the worksheet they use the same idea with a different area. All the triangles lean in different ways but share the same area: link to same base and same height.'))
 put('ws2',ws_preview(f'{L}-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q3','Split the figure along the diagonal AC.'),('Q4','Rectangle with a shaded triangle: take away three white triangles.'),('Q5','Same area, different triangles.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who give the area of a rectangle by forgetting the 1/2.'))
