@@ -14,13 +14,13 @@ module.exports = {
       mini: 'Build the table on the board: jump 1, 2, 3 … and where it lands. Name the rule ("add 4"). Ask what stays the same and what changes.',
       share: 'Why do the numbers both frogs land on all end in 0?',
       exit: { q: 'Next two numbers: 7, 10, 13, 16, __, __. What is the rule?', a: '19, 22. Add 3.' },
-      mistakes: ['Reading the gap squares instead of the jump size.', 'Writing "add 3" when the numbers go down (take away 3).', 'Restarting the count instead of adding to the last number.'],
+      mistakes: ['Counting the numbers in between instead of the hops (4 to 7 counted as 2).', 'Writing "add 3" when the numbers go down (take away 3).', 'Restarting the count instead of adding to the last number.'],
       extension: 'Pupils invent a rule (start at 1, add 6) and swap with a partner to find it.',
       key: [
         ['Q1', '(a) 8, 10, 14  (b) 15, 25, 35  (c) 9, 15'],
         ['Q2', '(a) 16, 19; add 3  (b) 18, 15; take away 3  (c) 18, 22; add 4'],
         ['Q3', 'Frog 1 lands on 4, 8, 12, 16, 20. Frog 2 lands on 5, 10, 15, 20. Both: 20.'],
-        ['Q4', '(a) 10, 20, 30, 40, 50  (b) They all end in 0 (the 10 times table).'],
+        ['Q4', '(a) 10, 20, 30, 40, 50  (b) They all end in 0. We say them when we count in 10s.'],
         ['Q5', 'Stickers: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. (a) Box 10 has 29. (b) Even, odd, even, odd: they alternate.']
       ]
     },
@@ -82,7 +82,7 @@ module.exports = {
       extension: 'Squares in a row (4, 7, 10 …): find the rule and how many sticks for 10 squares (31).',
       key: [
         ['Q1', 'Place 8: triangle. Place 9: square.'],
-        ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. 30 is in the 3 times table.'],
+        ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
         ['Q3', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
         ['Q4', '7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.']
       ]
@@ -110,11 +110,11 @@ module.exports = {
     },
     {
       n: 6, week: 3, session: 'B', title: 'Coin Combos', topic: 'Money',
-      objective: 'Find all the ways to make an amount, work systematically, and use reasoning to rule out cases.',
+      objective: 'Find all the ways to make an amount, work systematically, use reasoning to rule out cases, and pay in dollars with notes up to $100.',
       skills: 'Systematic listing, comparing, working backwards, justifying "there are no more"',
-      materials: 'Play coins (5¢, 10¢, 20¢, 50¢), about 6 of each per pair, mini whiteboards.',
-      online: 'Print the cut-out coin sheet at the back of the workbook, or use real coins at home.',
-      warmup: 'Coin shop: price tags from 5¢ to 50¢. Pay exactly. Who can pay with the fewest coins?',
+      materials: 'Play coins (5¢, 10¢, 20¢, 50¢, $1), about 6 of each per pair, play notes ($2, $5, $10, $50), mini whiteboards.',
+      online: 'Print the cut-out coins and notes at the back of the workbook, or use real coins and notes at home.',
+      warmup: 'Money shop: six items priced from 65¢ to $65. Pay exactly with coins and notes. Who can pay with the fewest?',
       explore: 'Pairs make 20¢ in as many ways as they can with 20¢, 10¢ and 5¢ coins, recording each on a whiteboard.',
       mini: 'Start with the biggest coin and work down. Use a table: how many 20¢, 10¢, 5¢. Show why we know when we have them all.',
       share: 'Why can’t 35¢ be made with only two coins?',
@@ -122,12 +122,13 @@ module.exports = {
       mistakes: ['Listing the same way twice in a different order (10+5+5 and 5+10+5).', 'Choosing many small coins instead of looking for the fewest.', 'Stopping at the first set in Q4 instead of checking for all of them.'],
       extension: 'Make 50¢ in as many ways as possible using 5¢, 10¢, 20¢ and 50¢.',
       key: [
-        ['Q1', 'A: 1 × 20¢.  B: 2 × 10¢.  C: 1 × 10¢ + 2 × 5¢.  D: 4 × 5¢.  Row E is spare (only 4 ways).  (a) one 20¢ coin  (b) four 5¢ coins  (c) Start with the biggest coin and work down.'],
+        ['Q1', 'A: one 20¢.  B: two 10¢.  C: one 10¢ and two 5¢.  D: four 5¢.  Row E is spare (only 4 ways).  (a) one 20¢ coin  (b) four 5¢ coins  (c) Start with the biggest coin and work down.'],
         ['Q2', '6 ways: 20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢.'],
         ['Q3', '(a) 4 coins: 50¢ + 20¢ + 10¢ + 5¢.  (b) e.g. 50¢ + 10¢ + 10¢ + 5¢ + 5¢ + 5¢, or 20¢ + 20¢ + 20¢ + 10¢ + 10¢ + 5¢.'],
         ['Q4', 'Two sets: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.'],
         ['Q5', 'No. Two coins can total 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.'],
-        ['Q6', '(a) 3 × 10¢ and 3 × 20¢ (30 + 60 = 90).  (b) No. Four coins of 20¢ make only 80¢, which is less than 90¢.']
+        ['Q6', '(a) Three 10¢ and three 20¢ (30 + 60 = 90).  (b) No. Four coins of 20¢ make only 80¢, which is less than 90¢.'],
+        ['Q7', '(a) $10 + $5 + $2 (3 pieces).  (b) Any 3 ways, e.g. $10 + $10; $10 + $5 + $5; $5 + $5 + $5 + $5; $10 + $5 + $2 + $2 + $1. There is no $20 note.  (c) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.']
       ]
     },
     {
@@ -175,16 +176,16 @@ module.exports = {
     },
     {
       n: 9, week: 5, session: 'A', title: 'Measure It!', topic: 'Length',
-      objective: 'Compare and order lengths, measure with equal units, and see why a bigger unit gives a smaller count.',
+      objective: 'Compare and order lengths, measure with equal units and with a centimetre ruler (also when the object does not start at 0), and change a length from one unit to another in both directions.',
       skills: 'Comparing, measuring, unit reasoning, estimating',
-      materials: 'Linking cubes or paper cube strips, paper clips, erasers, objects to measure.',
+      materials: 'Linking cubes or paper cube strips, paper clips, erasers, objects to measure, a cm ruler for each child, mini whiteboards.',
       online: 'Print the cube strip at the back of the workbook; measure household objects.',
       warmup: 'Longer or shorter? Hold up two objects. Predict, then check by laying them side by side. Order three objects.',
       explore: 'Measure a pencil, a book and a shoe with cubes. Estimate first, then measure and compare with the guess. Then measure the same book with hand spans and compare with a partner.',
-      mini: 'Equal units, no gaps or overlaps. A bigger unit gives a smaller number. 1 clip = 2 erasers means a 5-clip desk is 10 erasers.',
+      mini: 'Equal units, no gaps or overlaps. Compare lengths with bars lined up at one end. Measure in cm with a ruler, also when the object does not start at 0 (count the spaces). Change units both ways with a bar picture (1 clip = 3 erasers: 4 clips = 12 erasers; 6 erasers = 2 clips).',
       share: 'Ali measured 6 spans and Mei measured 8 spans for the same desk. Whose hand is bigger? Why?',
-      exit: { q: 'A pencil is 8 cubes. A pen is 3 cubes longer. How long is the pen?', a: '11 cubes' },
-      mistakes: ['Leaving gaps or overlapping the cubes.', 'Not starting at zero.', 'Thinking more units means a bigger unit.'],
+      exit: { q: 'A ribbon lies from the 3 cm mark to the 9 cm mark on a ruler. How long is it?', a: '6 cm' },
+      mistakes: ['Leaving gaps or overlapping the cubes.', 'Not starting at zero.', 'Thinking more units means a bigger unit.', 'Reading the end mark when the object does not start at 0.'],
       extension: 'Measure the same object with two different units and find the rule linking the two counts.',
       key: [
         ['Q1', '(a) C  (b) B  (c) 2 more  (d) 12 units  (e) Same as A (9 − 2 = 7)'],
@@ -198,11 +199,11 @@ module.exports = {
       n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Puzzles',
       objective: 'Use patterns, bonds, graphs, money, shapes, logic, working backwards and measuring in new puzzles, and explain the thinking.',
       skills: 'Applying and connecting ideas, perseverance, explaining',
-      materials: 'Puzzle cards for 4 stations, play coins, cubes, certificates, stamps.',
+      materials: 'Puzzle cards for 4 stations, play coins, cubes, certificates, stamps, mini whiteboards.',
       online: 'Breakout pairs work on one puzzle card each, then report back to the group.',
       warmup: 'Mental maths relay: a chain of quick questions from all 9 lessons passed around the group.',
       explore: 'Station rotation (4 puzzle stations, 8 minutes each): a coin puzzle, a pattern puzzle, a logic puzzle and a measuring puzzle. Online: one puzzle per breakout pair.',
-      mini: 'Review the inquirer rules: notice the pattern, test it with objects, check your answer, explain why.',
+      mini: 'How to start a puzzle: draw it (people in order, bars, number machines), list it in order (coins, pairs, shapes to count), make a table (patterns, things that grow). Then check and explain.',
       share: 'Pick one puzzle and teach it to the group in two sentences.',
       exit: { q: 'My favourite lesson was ____ because ____.', a: 'Open. Use it to plan next steps.' },
       mistakes: ['Rushing: not checking an answer.', 'Not showing how they know.'],

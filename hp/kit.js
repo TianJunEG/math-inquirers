@@ -11,6 +11,17 @@ function coins(){
     y+=100;});
   return svg(430,b);
 }
+function notes(){
+  let b='';
+  for(let i=0;i<6;i++){const x=55+i*105;
+    b+=`<circle cx="${x}" cy="50" r="38" fill="#EBD98A" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="6 4"/><circle cx="${x}" cy="50" r="30" fill="none" stroke="#888" stroke-width="1"/><text x="${x}" y="57" font-size="20" font-weight="800" text-anchor="middle" fill="${NAVY}">$1</text>`;}
+  const rows=[['$2','#D9CCEE',4],['$5','#C8E6C3',4],['$10','#F6C9C9',4],['$50','#C9DBF6',2]];
+  let y=115;
+  rows.forEach(([n,c,k])=>{for(let i=0;i<k;i++){const x=15+i*172;
+    b+=`<rect x="${x}" y="${y}" width="160" height="78" rx="6" fill="${c}" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="6 4"/><rect x="${x+8}" y="${y+8}" width="144" height="62" rx="4" fill="none" stroke="#888" stroke-width="1"/><text x="${x+80}" y="${y+50}" font-size="30" font-weight="800" text-anchor="middle" fill="${NAVY}">${n}</text><text x="${x+148}" y="${y+66}" font-size="10" font-weight="700" text-anchor="end" fill="#555">PLAY MONEY</text>`;}
+    y+=92;});
+  return svg(490,b);
+}
 function cubes(){
   let b=lab(20,22,'Strip A')+lab(20,102,'Strip B');
   [30,110].forEach((y,k)=>{for(let i=0;i<20;i++){const x=20+i*33;
@@ -35,7 +46,7 @@ function strips(){
   return svg(270,b);
 }
 function tiles(){
-  let b=lab(20,30,'Shape and sorting tiles (cut out all 24: 4 shapes × 3 colours × 2 sizes)');
+  let b=lab(20,30,'Shape and sorting tiles (cut out all 24: 4 shapes, 3 colours, 2 sizes)');
   const cols=[[RED,'red'],[YEL,'yellow'],[BLUE,'blue']];
   const shape=(k,x,y,s,c)=>{const big=s==1,a=big?34:20;
     if(k==0)return `<circle cx="${x}" cy="${y}" r="${a}" fill="${c}" stroke="#555" stroke-width="1.2" stroke-dasharray="5 3"/>`;
@@ -50,8 +61,9 @@ function tiles(){
 }
 module.exports=()=>[
  H('Cut-outs','For Lesson 6 (Coin Combos) and Lesson 9 (Measure It!). Cut along the dashed lines and keep the pieces in an envelope.'),
- lab2('Play coins (7 × 5¢, 7 × 10¢, 6 × 20¢, 5 × 50¢)'),coins(),
+ lab2('Play coins (seven 5¢, seven 10¢, six 20¢, five 50¢)'),coins(),
  lab2('Paper cube strips (every square is the same size)'),cubes(),
+ '<div class="brk"></div>',H('Play notes and $1 coins','For Lesson 6 (Coin Combos). Six $1 coins, four $2, four $5, four $10 and two $50 notes.'),notes(),
  '<div class="brk"></div>',H('Inquirer Kit','Nothing needs to be bought. Print, cut out and keep everything in one envelope.'),frames(),
  '<div class="brk"></div>',H('Number strips and sorting tiles',''),strips(),tiles()];
 function lab2(t){return `<div class="kl">${t}</div>`}

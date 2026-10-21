@@ -5,30 +5,53 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 7 \u2013 Shape Safari",
+ "title": "Math Inquirers: Lesson 7 – Shape Safari",
  "order": [
   "l7-title",
   "l7-warm1",
   "l7-warm2",
   "l7-explore1",
   "l7-explore2",
-  "l7-mini1",
-  "l7-mini2",
+  "l7-teach1",
+  "l7-we1",
+  "l7-try1",
+  "l7-we2",
+  "l7-try2",
+  "l7-we3",
   "l7-key",
   "l7-break",
+  "l7-teachpic",
+  "l7-teachsides",
   "l7-ws1",
+  "l7-ws1ans",
+  "l7-teachwho",
+  "l7-teachtri",
   "l7-ws2",
+  "l7-ws2ans",
   "l7-stretch",
   "l7-challenge",
   "l7-chdiag",
+  "l7-chwalk",
   "l7-talk",
   "l7-exit"
  ],
  "cover": "l7-title",
  "sections": {
   "s1": {
-   "description": "Lesson 7: Shape Safari (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l7-title"
+  },
+  "s2": {
+   "description": "Teach: count shapes in order, and make shapes from squares",
+   "start": "l7-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l7-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "l7-stretch"
   }
  },
  "faces": {

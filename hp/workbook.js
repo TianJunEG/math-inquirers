@@ -207,7 +207,7 @@ W.push(sub('a', 'Which way uses the FEWEST coins?')); W.push(ans());
 W.push(sub('b', 'Which way uses the MOST coins?')); W.push(ans());
 W.push(sub('c', 'How do you know you have found ALL the ways?'));
 W.push(...lines(2));
-W.push(q(2, 'Challenge! Find ALL the ways to make 30¢ using 20¢, 10¢ and 5¢ coins. Write each way like this:  1 × 20¢ + 2 × 5¢', { pb: true, before: 0 }));
+W.push(q(2, 'Challenge! Find ALL the ways to make 30¢ using 20¢, 10¢ and 5¢ coins. Write each way like this:  20¢ + 5¢ + 5¢', { pb: true, before: 0 }));
 W.push(...lines(6));
 W.push(q(3, 'Mei wants to pay exactly 85¢ using 5¢, 10¢, 20¢ and 50¢ coins.', { before: 240, keepNext: true }));
 W.push(sub('a', 'What is the smallest number of coins she can use? Which coins are they?')); W.push(ans());
@@ -219,6 +219,12 @@ W.push(...lines(2));
 W.push(q(6, 'Sam has only 10¢ and 20¢ coins. He pays exactly 90¢ using 6 coins.', { keepNext: true }));
 W.push(sub('a', 'How many of each coin does he use?')); W.push(ans());
 W.push(sub('b', 'Can Sam pay 90¢ using exactly 4 coins? Explain.'));
+W.push(...lines(2));
+W.push(q(7, 'Dollars! We also have $1 coins and $2, $5, $10 and $50 notes.', { keepNext: true }));
+W.push(sub('a', 'A toy costs $17. Pay exactly with the fewest notes and coins.')); W.push(ans());
+W.push(sub('b', 'Show 3 different ways to pay exactly $20.'));
+W.push(...lines(3));
+W.push(sub('c', 'Mei has one $50 note and two $10 notes. A bicycle costs $65 and a helmet costs $8. Does she have enough money for both? Explain.'));
 W.push(...lines(2));
 
 /* ---------- LESSON 7 ---------- */
@@ -335,11 +341,14 @@ W.push(p([t('The puzzle I liked best today was ______________________ because __
 W.push(...extra(10));
 /* ---------- APPENDIX: CUT-OUTS ---------- */
 W.push(p(t('Cut-outs', { bold: true, size: 40 }), { pb: true, after: 80, align: AlignmentType.CENTER }));
-W.push(p(t('For Lesson 6 (Coin Combos) and Lesson 9 (Measure It!). Print, cut along the circles and strips, and keep in an envelope.', { size: 24 }), { after: 120, align: AlignmentType.CENTER }));
+W.push(p(t('For Lesson 6 (Coin Combos) and Lesson 9 (Measure It!). Print, cut along the dashed lines, and keep in an envelope.', { size: 24 }), { after: 120, align: AlignmentType.CENTER }));
 W.push(p(t('Play coins', { bold: true, size: 28 }), { after: 60 }));
 W.push(img('coins.png', 600, 369));
 W.push(p(t('Paper cube strips (every square is the same size)', { bold: true, size: 28 }), { before: 120, after: 60 }));
 W.push(img('cubestrip.png', 640, 120));
+W.push(p(t('Play notes and $1 coins', { bold: true, size: 40 }), { pb: true, after: 80, align: AlignmentType.CENTER }));
+W.push(p(t('For Lesson 6 (Coin Combos). Cut along the dashed lines.', { size: 24 }), { after: 120, align: AlignmentType.CENTER }));
+W.push(img('kit_notes.png', 600, 421));
 W.push(p(t('Inquirer Kit', { bold: true, size: 40 }), { pb: true, after: 80, align: AlignmentType.CENTER }));
 W.push(p(t('Nothing needs to be bought. Print, cut out and keep everything in one envelope.', { size: 24 }), { after: 100, align: AlignmentType.CENTER }));
 W.push(img('kit_frames.png', 600, 506));

@@ -198,7 +198,7 @@ def l10a():
         return s
     b=row(50,'Ali',[('?',180,'#BFE3DC',0,NAVY)])
     b+=row(140,'Ben',[('?',180,'#BFE3DC',0,NAVY),('4',4*u,YEL,0,NAVY)])
-    b+=row(230,'Mei',[('?',180,'#BFE3DC',0,NAVY),('4',4*u,YEL,0,NAVY)])+T(x0+300,318,'3 fewer than Ben',24,RED,'end')
+    b+=row(230,'Mei',[('?',180,'#BFE3DC',0,NAVY),('1',u,YEL,0,NAVY),('',3*u,WHITE,1,RED)])+T(x0+300,318,'3 fewer than Ben',24,RED,'end')
     b=b.replace('<rect x="370.0" y="230" width="60"','<rect x="370.0" y="230" width="60"')
     b+=R(60,360,680,120,'#FFF4D1',NAVY,3,12)+T(400,410,'Together they have 29.',32)+T(400,455,'Ben has 4 more than Ali. Mei has 3 fewer than Ben.',24,'#5B6785',weight=600)
     return P(b)
