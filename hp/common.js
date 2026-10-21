@@ -31,5 +31,10 @@ const gap = (n = 120) => p('', { after: n });
 const banner = (s) => tbl([CW], [row([cell(t(s, { bold: true, size: 26 }), CW, { fill: 'EDEDED', align: AlignmentType.LEFT, h: 70 })])]);
 const footer = (txt) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: txt + '  •  Page ', font: FONT, size: 18, color: '777777' }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 18, color: '777777' })] })] });
 const page = { size: { width: 11906, height: 16838 }, margin: { top: 800, right: 1003, bottom: 800, left: 1003 } };
-const dots = (n, c, size = 40) => { let s = ''; for (let i = 0; i < n; i++) { s += '● '; if ((i + 1) % 5 === 0 && i < n - 1) s += '  '; } return p(t(s.trim(), { size, color: c }), { after: 0, align: AlignmentType.LEFT }); };
+const dots = (n, c, size = 40) => { // drawn circles (PNG made by gapkit.py), not a text glyph
+  const sp = Math.round(size * 0.5), f = require('path').join(__dirname, `dots_${n}_${c}.png`);
+  if (!fs.existsSync(f)) require('child_process').execFileSync('python3', [require('path').join(__dirname, 'gapkit.py'), 'dots', String(n), c, String(sp)]);
+  const w = n * (sp + 6) + Math.floor(n / 5) * 14 + 4;
+  return p([new ImageRun({ type: 'png', data: fs.readFileSync(f), transformation: { width: w, height: sp + 2 }, altText: { title: 'dots', description: n + ' pictures', name: 'dots' } })], { after: 0, align: AlignmentType.LEFT });
+};
 module.exports = { D, fs, FONT, CW, t, p, borders, B1, cell, tbl, row, q, sub, ans, lines, img, gap, banner, footer, page, dots, AlignmentType, BorderStyle, WidthType, ShadingType, VerticalAlign, Paragraph, TextRun, Table, TableRow, TableCell };

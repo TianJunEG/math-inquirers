@@ -38,5 +38,5 @@ const lines = n => Array.from({ length: n }, () => '<div class="ln"></div>');
 const img = (file, w, h, align) => `<div class="p img" style="text-align:${align || 'center'}"><img src="data:image/png;base64,${fs.readFileSync(file).toString('base64')}" style="width:${Math.round(w * 1.0)}px;max-width:100%"></div>`;
 const gap = (n = 120) => `<div style="height:${px(n)}"></div>`;
 const banner = s => `<div class="banner kn">${esc(s)}</div>`;
-const dots = (n, c, size = 40) => { let s = ''; for (let i = 0; i < n; i++) { s += '●' + ((i + 1) % 5 === 0 && i < n - 1 ? '   ' : ' '); } return p(t(s.trim(), { size, color: c }), { after: 0, align: 'left' }); };
+const dots = (n, c, size = 40) => { const d = Math.round(size * 0.45); let s = ''; for (let i = 0; i < n; i++) { s += `<span style="display:inline-block;width:${d}px;height:${d}px;border-radius:50%;background:#${c};margin-right:${(i + 1) % 5 === 0 ? 14 : 5}px"></span>`; } return p(new TextRun(s), { after: 0, align: 'left' }); };
 module.exports = { fs, D: {}, FONT: 'x', CW, t, p, cell, tbl, row, q, sub, ans, lines, img, gap, banner, footer: () => '', page: {}, dots, AlignmentType, BorderStyle: {}, WidthType: {}, ShadingType: {}, VerticalAlign: {}, Paragraph: class {}, TextRun, TableCell: class {}, B1: {}, borders: {}, Table: class {}, TableRow: class {} };

@@ -26,13 +26,15 @@ L=[-5,-3,-1,0,2,4,6]
 p7=[(a,b) for a in L for b in L if a-b==7]; chk('L3 inv a-b=7 '+str(p7),p7==[(2,-5),(4,-3),(6,-1)])
 p3=[(a,b) for a in L for b in L if a-b==3]; print('   a-b=3',p3)
 chk('L3 check: 4-(-18)=22; -40+25-60=-75',4+18==22 and -40+25-60==-75)
+chk('L3 a-b=3',p3==[(0,-3),(2,-1)])
 # L4
 m=[(a,b) for a in range(1,10) for b in range(0,10) if 4*a+b==17]; chk('L4 inv machines '+str(m),m==[(2,9),(3,5),(4,1)])
 chk('L4 check: 3*7+10=31; (52-10)/3=14',3*7+10==31 and (52-10)/3==14)
+m21=[(a,b) for a in range(1,10) for b in range(0,10) if 4*a+b==21]; chk('L4 inv OUT21 '+str(m21),m21==[(3,9),(4,5),(5,1)])
 # L5
 ways=[(a,b,c) for a in range(11) for b in range(6) for c in range(3) if 5*a+10*b+20*c==50]
 print('   L5 coin ways',len(ways)); 
-chk('L5 inv coin ways =%d'%len(ways),len(ways)==len(set(ways)))
+chk('L5 inv coin ways =12 (+1 with a 50c coin)',len(ways)==12==len(set(ways)))
 chk('L5 check: 3*4*2=24; 5C2=10',3*4*2==24 and 5*4//2==10)
 import itertools
 # L6
@@ -40,6 +42,7 @@ from fractions import Fraction as F
 two=[(a,b) for a in range(1,7) for b in range(1,7)]
 chk('L6 inv: P(six)=1/6 (not fair vs 5/6); P(sum 7)=1/6; coin 1/2',F(sum(1 for x in range(1,7) if x==6),6)==F(1,6) and F(sum(1 for x,y in two if x+y==7),36)==F(1,6) and F(1,2)==F(1,2))
 chk('L6 check: 5/8; two coins same=2/4',F(5,8)==F(5,8) and sum(1 for a in 'HT' for b in 'HT' if a==b)==2)
+chk('L6 even total 18/36',sum(1 for x,y in two if (x+y)%2==0)==18 and sum(1 for x,y in two if x+y==7)==6)
 # L7
 rows=[]
 for t in (40,72,90,100,120,144,150):
@@ -48,6 +51,9 @@ print('   L7',rows)
 chk('L7 inv table',rows==[(40,9,1),(72,5,1),(90,4,1),(100,18,5),(120,3,1),(144,5,2),(150,12,5)])
 chk('L7 check: 360/40=9; 360-(90+120+60)=90',360//40==9 and 360-270==90)
 # L8
+from collections import Counter
+enc=lambda w,k:''.join(chr((ord(c)-65+k)%26+65) for c in w)
+chk('L8 CAT +8 = KIB, +18 = CAT',enc('CAT',8)=='KIB' and enc('KIB',18)=='CAT')
 inv=[s for s in range(1,26) if (2*s)%26==0]; chk('L8 inv self-decoder shifts '+str(inv),inv==[13])
 chk('L8 inv shift a then 26-a returns original',all(((c+a)+(26-a))%26==c for a in range(1,26) for c in range(26)))
 chk('L8 check: (8+30)%12=2; (Wed+100)%7=2 -> Fri',(8+30)%12==2 and 100%7==2)
@@ -58,6 +64,8 @@ chk('L9 inv base mean 8 median 7',S.mean(d)==8 and S.median(d)==7)
 for new in (24,4,7):
     e=d[:4]+[new]; print('   change 14 ->',new,'mean',S.mean(e),'median',S.median(e))
 chk('L9 inv 14->24 mean 10 median 7; 14->4 mean 6.0 median 6; 14->7 mean 6.6 median 7',S.mean(d[:4]+[24])==10 and S.median(d[:4]+[24])==7 and S.mean(d[:4]+[4])==6 and S.median(d[:4]+[4])==6 and abs(S.mean(d[:4]+[7])-6.6)<1e-9 and S.median(d[:4]+[7])==7)
+chk('L9 modes',Counter(d[:4]+[4]).most_common(1)[0]==(4,2) and Counter(d[:4]+[7]).most_common(1)[0]==(7,2) and max(Counter(d).values())==1)
+chk('L9 two-number change keeps mean',S.mean([6,6,7,9,12])==8)
 chk('L9 check: 4th=10; mean of 2,3,3,4,38 =10 median 3',40-30==10 and S.mean([2,3,3,4,38])==10 and S.median([2,3,3,4,38])==3)
 # L10
 seq=[7*n-3 for n in range(1,16) if 7*n-3<=100]; pp=[x for x in seq if isp(x)]

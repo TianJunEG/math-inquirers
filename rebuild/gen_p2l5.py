@@ -183,8 +183,8 @@ ch=[('1.','A machine does × 2, then − 4. Ravi puts a number in, then puts the
 put(f'{P}-challenge',sec(f'{P}-challenge','Challenge',h2('Challenge')+qcards(ch,38),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Ask for the reason every time. Answers: 1) 6 (go back twice: 12 + 4 = 16, 16 ÷ 2 = 8; 8 + 4 = 12, 12 ÷ 2 = 6; check 6 → 8 → 12). 2) Ben 25, Ali 15 (give the 5 back: Ben 20 + 5, Ali 20 − 5). Ben had 10 more than Ali, not 5, because Ben lost 5 AND Ali gained 5. Extension: if Ben had given 8 and they ended equal, he had 16 more at first (the gap is double the number given). Common wrong answer for 2: "both had 20" or "Ben 25, Ali 20", or "5 more".'))
 
 # 23 chdiag
-m1=machine([('?','q'),('× 2','op'),('− 4','op'),('□','res')],w=760).replace('width:760px;height:130px','width:100%;height:auto')
-m2=machine([('□','q'),('× 2','op'),('− 4','op'),('12','res')],w=760).replace('width:760px;height:130px','width:100%;height:auto')
+m1=machine([('A','q'),('× 2','op'),('− 4','op'),('B','res')],w=760).replace('width:760px;height:130px','width:100%;height:auto')
+m2=machine([('B','q'),('× 2','op'),('− 4','op'),('12','res')],w=760).replace('width:760px;height:130px','width:100%;height:auto')
 q1='<p style="font-size:28px;font-weight:700;color:#1F7A6F">Q1: Twice through the machine</p>'+m1+p('The OUT goes back IN:',30,700,MUTED)+m2
 bw=320
 q2s=(f'<svg aria-label="Before: Ben and Ali have unknown numbers of marbles; Ben gives Ali 5. After: both bars are 20." viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">'

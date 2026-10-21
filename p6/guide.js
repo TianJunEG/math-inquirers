@@ -89,7 +89,7 @@ ask([
 ], 'If…', 'Then…');
 
 L.lessons.forEach(l => {
-  const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
+  const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)], gp = L.gaps[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
   G.push(tbl([1900, 8000], [
@@ -104,6 +104,10 @@ L.lessons.forEach(l => {
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
 
   G.push(seg('2–10 min', 'Warm-up'));
+  doo(['Warm-up check first (slide 2, 3 minutes). It comes out of the 10-minute warm-up: play the game for about 3 minutes and ask only the first three quick questions after it.']);
+  say(['Two quick puzzles. They are new, not from last time. Write your answer AND one reason on your whiteboard. Hold it up when I say.']);
+  ask(gp.check.map(x => [x[0], x[1]]), 'Warm-up check', 'Answer and the reason to listen for');
+  doo(['Fast track (nobody is labelled). If a child has BOTH answers right and a sensible reason, send a private chat message: “Today start on the Think Harder page at minute 40.” Fast-track children still join Explore, the mini-lesson and Talk time; only the worksheet time changes. Tell everyone: “Some of you start on a different page today. It changes every lesson, and you can move any time.” Never say “advanced”, never record the check as a mark, and let any child choose the main pages. A fast-track child who gets stuck goes back to the main page. This works because groups are small (up to 8) and each child has a printed workbook, so you can give children different pages quietly.']);
   doo([d.warmGame]);
   say(s.warmIntro);
   doo(['After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.']);
@@ -135,9 +139,9 @@ L.lessons.forEach(l => {
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Early finishers: give the stretch question first, then the challenge.']);
+  doo(['Early finishers: give the stretch question first, then the challenge, then the Open investigation (it is the last box on the second Think Harder page). Fast-track children start there at minute 40.']);
   G.push(h2('Stretch and challenge questions'));
-  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
+  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge ' + (i + 5) + ': ' + x.q, x.a]), ['Workbook Open investigation (' + gp.inv.kind + '): ' + gp.inv.q, gp.inv.a]], 'Question', 'Answer');
   G.push(tx('These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
   G.push(seg('75–82 min', 'Talk time'));
@@ -149,11 +153,15 @@ L.lessons.forEach(l => {
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
+  G.push(h2('Reflection: What was hard? (1 minute)'));
+  say(['Last minute, just for you. On the last page of today’s lesson, finish the three sentences in the box called “What was hard?”: the hardest part was, I got unstuck by, next time I will try. Nobody marks it, and nobody has to show it. Then I would like to hear ONE sentence from two or three of you. “Pass” is fine.']);
+  doo(['Run it at about minute 88, while you collect exit tickets (slide at the end). Never grade or correct it, and never read it out without the child’s say-so. Praise the strategy, not the speed: say “you ' + gp.reflectEx + ' — that is what got you unstuck”, never “you were quick”. If a child writes “nothing was hard”, ask “what would make it harder?”.']);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   G.push(h2('Extension for children who are ready'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Investigation  ', { bold: true, size: 20 }), t(gp.inv.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */

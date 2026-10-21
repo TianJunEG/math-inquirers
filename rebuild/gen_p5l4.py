@@ -40,7 +40,7 @@ g+=poly([P(0,0),P(2,6),P(0,6)],SKY)+poly([P(2,6),P(8,0),P(8,6)],SKY)+poly([P(0,0
 g+=lab(P(2,6)[0],P(2,6)[1]-10,'any point',28,TEAL)+lab(P(4,0)[0],P(0,0)[1]+36,'8 cm',28)+lab(P(0,3)[0]-14,P(0,3)[1]+10,'6 cm',28,NAVY,'end')
 g+=lab(450,80,'Join the point to the two',28,TEAL,'start')+lab(450,116,'bottom corners. Cut out the',28,TEAL,'start')+lab(450,152,'3 pieces and compare.',28,TEAL,'start')
 steps=''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
-body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
+body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:32px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:4px">{steps}</ol>')
 body+=card(svgwrap(980,262,'A rectangle 8 cm by 6 cm on a grid with a point on the top side joined to the two bottom corners; the middle triangle is yellow and the two corner pieces are blue',g),extra='padding:12px 32px')
 put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs draw the rectangle on grid paper (cut-out page at the back of the workbook) and cut out the three pieces (online: camera up as usual; hold the cut pieces up to the camera). Predict first: what fraction of the rectangle is the triangle? Does it matter where the point is? Early finishers: put the point at the end of the top side. What kind of triangle is it now? Is it still half? (Yes: a right-angled triangle, half of the rectangle.)'))
 body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0]),('3.',DK['expAsk'][2][0])],40)
@@ -177,3 +177,5 @@ put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['e
 order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','teach3','try2','key','break','ws1','ws1ans','teachsplit','teachtake','teachsame','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 sections={'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: base and height, same base same height','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':f'{L}-stretch'}}
 write_deck(L,order,sections,S,'Math Inquirers P5: Lesson 4 – Triangle Areas')
+
+import p5_gaps; p5_gaps.apply(4)

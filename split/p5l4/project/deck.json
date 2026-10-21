@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:20:58Z"
+  "at": "2026-10-21T23:43:02Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 4 – Triangle Areas",
  "order": [
   "p5l4-title",
+  "p5l4-check",
   "p5l4-warm1",
   "p5l4-warm2",
   "p5l4-explore1",
@@ -31,7 +32,8 @@
   "p5l4-chdiag",
   "p5l4-chwalk",
   "p5l4-talk",
-  "p5l4-exit"
+  "p5l4-exit",
+  "p5l4-reflect"
  ],
  "cover": "p5l4-title",
  "sections": {

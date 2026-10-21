@@ -2,7 +2,10 @@
 const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
+const GAPS = require('./content/gaps.json');
+C.forEach((c, i) => { const g = GAPS[String(i + 1)]; c.gaps = g; });
 module.exports = {
+  gaps: GAPS,
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 6',
   slogan: 'Notice it. Test it. Explain why.',

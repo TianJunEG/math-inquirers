@@ -61,7 +61,7 @@ put('p2l10-title',title_slide('p2l10-title',10,'Challenge Day','Mixed puzzles: h
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (how to start a puzzle: draw it, list it, make a table; click to reveal each step and answer), brain break 32 to 36, short teaching 36 to 38, worksheet page 1 38 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 88, certificates 88 to 90.'))
 
 # ---------- 2. warm-up: relay cards ----------
-relay=[('Digit cards','Make the biggest 3-digit number with 4, 0, 7.','740'),('Missing digit','3 □ 5 + 214 = 579. What is □?','6'),('Legs','How many legs do 5 chairs have?','20'),('Patterns','3, 8, 13, 18, __','23'),('Money','A pen costs 65¢. You pay $1. What is your change?','35¢'),('Fractions','1/4 of a pizza is eaten. What fraction is left?','3/4')]
+relay=[('Digit cards','Make the biggest 3-digit number with 4, 0, 7.','740'),('Missing digit','3A5 + 214 = 579. What is A?','6'),('Legs','How many legs do 5 chairs have?','20'),('Patterns','3, 8, 13, 18, __','23'),('Money','A pen costs 65¢. You pay $1. What is your change?','35¢'),('Fractions','1/4 of a pizza is eaten. What fraction is left?','3/4')]
 body=h2('Warm-up: relay review')+p('Answer the card, then pass it on: say the next person’s name.',34,600,MUTED)
 CW=533
 for i,(tag,q,a) in enumerate(relay):
@@ -69,7 +69,7 @@ for i,(tag,q,a) in enumerate(relay):
     body+=pin(L,Tp,CW,chip(tag,TEAL,CREAM,26)+p(q,34,700),None,WHITE,24,'18px 24px',f'box-sizing:border-box;height:280px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+CW-200,Tp+196,170,f'<p style="font-size:40px;font-weight:800;text-align:center">{E(a)}</p>','pop',YEL,16,'8px 14px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p2l10-warm1',sec('p2l10-warm1','0–5 MIN',body,'Minutes 0 to 5. Relay review: one card from each of our earlier topics. Read a card, say a child’s name; that child answers and names the next child. Click to reveal each answer in order. A wrong answer gets a friendly “try again”, never a groan. '
- 'Answers: 740 (biggest digit first; 0 last). 6 (5 + 4 = 9 ones, 2 + 1 = 3 hundreds; the tens must make 7: □ + 1 = 7, so 6; check 365 + 214 = 579). 20 (4, 8, 12, 16, 20). 23 (add 5). 35¢ ($1 = 100¢; 65 + 35 = 100). 3/4 (4 quarters make the whole; 1 eaten, 3 left). Ask after each: "Which lesson does this remind you of?"'))
+ 'Answers: 740 (biggest digit first; 0 last). 6 (5 + 4 = 9 ones, 2 + 1 = 3 hundreds; the tens must make 7: A + 1 = 7, so 6; check 365 + 214 = 579). 20 (4, 8, 12, 16, 20). 23 (add 5). 35¢ ($1 = 100¢; 65 + 35 = 100). 3/4 (4 quarters make the whole; 1 eaten, 3 left). Ask after each: "Which lesson does this remind you of?"'))
 
 qs=[('1.','Share 40 stickers equally among 5 children. How many each?','8'),('2.','It is 10:55 a.m. What time is it 10 minutes later?','11:05 a.m.'),('3.','Which is bigger: 1/3 or 1/5 of the same cake?','1/3'),('4.','Half of a circle is called a …','semicircle'),('5.','I think of a number and add 30. I get 100. What is my number?','70')]
 put('p2l10-warm2',quick('p2l10-warm2','5–8 MIN',qs,'Minutes 5 to 8. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 8 (5 × 8 = 40, count in 5s to 40: 8 jumps). 2) 11:05 a.m. (5 minutes to 11:00, 5 more). 3) 1/3: the cake is cut into fewer pieces, so each piece is bigger. 4) A semicircle. 5) 70 (work backwards: 100 − 30). Ask "How do you know?" for 3: draw two same bars, one cut in 3 and one cut in 5.',size=34))
@@ -101,8 +101,8 @@ def station(sid,n,topic,text,pic,ans,notes):
 dots=lambda k,x,y,r=15: ''.join(f'<circle cx="{x+j*(2*r+8)}" cy="{y}" r="{r}" fill="{TEAL}" stroke="{NAVY}" stroke-width="3"/>' for j in range(k))
 g1=''.join(T(20,64+i*70,d,26,NAVY,'start')+dots(k,186,56+i*70) for i,(d,k) in enumerate([('Monday',3),('Tuesday',5),('Wednesday',2)]))
 g1+=f'<rect x="8" y="8" width="420" height="214" fill="none" stroke="{NAVY}" stroke-width="3"/><circle cx="40" cy="262" r="15" fill="{TEAL}" stroke="{NAVY}" stroke-width="3"/>'+T(70,271,'= 5 books',28,NAVY,'start')
-put('p2l10-card1',station('p2l10-card1',1,'picture graph','Each ● stands for 5 books. Monday ●●●, Tuesday ●●●●●, Wednesday ●●. How many books were read on these 3 days?',svg(440,290,g1,'Picture graph: Monday 3 dots, Tuesday 5 dots, Wednesday 2 dots; each dot stands for 5 books'),'50 books',
- 'Station card 1. Read the key first: one ● is worth 5 books. 3 + 5 + 2 = 10 pictures, and 10 × 5 = 50 books (count in 5s: 5, 10, ... 50). Common mistake: answering 10 (counting the pictures). This card practises: draw it / make a table.'))
+put('p2l10-card1',station('p2l10-card1',1,'picture graph','Each picture stands for 5 books. Monday has 3 pictures, Tuesday 5, Wednesday 2. How many books were read on these 3 days?',svg(440,290,g1,'Picture graph: Monday 3 dots, Tuesday 5 dots, Wednesday 2 dots; each dot stands for 5 books'),'50 books',
+ 'Station card 1. Read the key first: one picture is worth 5 books. 3 + 5 + 2 = 10 pictures, and 10 × 5 = 50 books (count in 5s: 5, 10, ... 50). Common mistake: answering 10 (counting the pictures). This card practises: draw it / make a table.'))
 lg=''.join(T(130+j*100,40,w,26) for j,w in enumerate(['cat','dog','fish']))+''.join(T(2,98+i*60,n,26,NAVY,'start') for i,n in enumerate(['Ali','Ben','Cai']))+''.join(f'<rect x="{80+j*100}" y="{56+i*60}" width="100" height="60" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>' for i in range(3) for j in range(3))
 put('p2l10-card2',station('p2l10-card2',2,'logic grid','Ali, Ben and Cai each have one pet: a cat, a dog or a fish. Ben has the fish. Ali does not have the dog. Who has the cat?',svg(400,250,lg,'A 3 by 3 grid: Ali, Ben and Cai down the side, cat, dog and fish across the top'),'Ali has the cat (Cai has the dog)',
  'Station card 2. Tick Ben and fish, then cross the rest of Ben\u2019s row and the fish column. Ali is not dog, and fish is taken, so Ali has the cat. Cai has the dog. Exactly one solution: each clue was needed. This card practises the logic grid used on worksheet page 2.'))
@@ -189,7 +189,7 @@ body+=pin(128,340,760,graph)+pin(128,340,760,ravi,'fade')
 body+=step(1,'Key: one star is 10 books. Ali: 10, 20, 30, 40. Mei: 20.',left=950,top=340,width=842,size=32)
 body+=step(2,'Ravi: 90 − 40 − 20 = 30 books.',left=950,top=470,width=842,size=32)
 body+=step(3,'30 books is 3 stars. Draw them!',left=950,top=570,width=842,size=32)
-body+=qrow(128,750,1250,'Your turn:','Key ● = 5 children. A row has 4 ●. How many children?',32)+answer(1420,750,372,'20')
+body+=qrow(128,750,1250,'Your turn:','Key: one picture = 5 children. A row has 4 pictures. How many children?',32)+answer(1420,750,372,'20')
 put('p2l10-teachgraph',sec('p2l10-teachgraph','36–38 MIN',body,'Teach before worksheet page 1 (Q1 is a picture graph with a key of 5). Ask first: "Ali has 4 stars. Did he read 4 books?" (No: read the key first.) Click step 1: count in 10s along each row. Step 2: "The total is 90. Ali and Mei read 40 + 20 = 60, so Ravi read the rest: 90 − 60 = 30." Step 3, then the stars appear: "30 books is 10, 20, 30: 3 stars." '
  'Your turn: count in 5s: 5, 10, 15, 20. Common mistake: writing the number of pictures (4) instead of using the key.'))
 

@@ -10,6 +10,18 @@ const hdr = (n, topic, title, pb = true) => [
   `<div class="p ltitle">${title}</div>`,
   `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
 ];
+
+// ---- close-the-gaps pieces: fast-track note, open investigation grid, reflection ----
+const faceSvg = m => `<svg width="30" height="30" viewBox="0 0 30 30" style="vertical-align:middle"><circle cx="15" cy="15" r="13" fill="#FFC93C" stroke="#1B2A49" stroke-width="2"/><circle cx="10" cy="12" r="1.8" fill="#1B2A49"/><circle cx="20" cy="12" r="1.8" fill="#1B2A49"/><path d="${m}" fill="none" stroke="#1B2A49" stroke-width="2" stroke-linecap="round"/></svg>`;
+const tick = '<span style="display:inline-block;width:13px;height:13px;border:2px solid #1B2A49;border-radius:3px;margin:0 5px -2px 14px;background:#fff"></span>';
+const gridSvg = () => { let g = '<svg aria-label="Square grid for drawing shapes" viewBox="0 0 600 190" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">'; for (let r = 0; r < 5; r++) for (let c = 0; c < 16; c++) g += `<rect x="${12 + c * 36}" y="${8 + r * 36}" width="36" height="36" fill="#fff" stroke="#8A94AD" stroke-width="1.5"/>`; return g + '</svg>'; };
+const fastNote = () => `<div class="p" style="border:2px dashed #1F7A6F;background:#EAF6F3;border-radius:6px;padding:4px 10px;margin:2px 0 6px;font-size:12px;line-height:1.3;break-inside:avoid"><b style="color:#1F7A6F">${esc0(L.gaps.common.fast.split('.')[0])}.</b> ${esc0(L.gaps.common.fast.split('.').slice(1).join('.').trim())}</div>`;
+function esc0(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+const reflect = g => `<div class="p" style="border:2.5px solid #1B2A49;border-radius:6px;background:#FFFBEA;padding:7px 12px 4px;margin:10px 4px 0;font-size:14px;line-height:1.5;break-inside:avoid"><div style="font-weight:700;font-size:16px;color:#1F7A6F">What was hard?  <span style="font-weight:400;font-size:12px;color:#5B6785">No marks for this page. Tick, then write one line.</span></div>`
+  + `<div>This lesson felt:${tick}${faceSvg('M9 18 Q15 25 21 18')} easy${tick}${faceSvg('M10 20 H20')} OK${tick}${faceSvg('M9 22 Q15 15 21 22')} tricky</div>`
+  + `<div>The hardest part was <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:62%">&nbsp;</span></div>`
+  + `<div>I got unstuck by:${g.unstuck.map(u => tick + esc0(u)).join('')}</div>`
+  + `<div style="margin-bottom:2px">Next time I will try <span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:63%">&nbsp;</span></div></div>`;
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -20,8 +32,12 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
-  out.push(p(t('Look back: which puzzle was hardest? How did you start it? What would you try next time?', { italics: true, size: 24 }), { before: 160, after: 40 }));
-  out.push(...lines(2));
+  const g = L.gaps[String(n)];
+  out.push(banner('Open investigation'));
+  out.push(q(8, g.invest.title + '. ' + g.invest.text, { before: 140, after: 40, keepNext: true }));
+  if (g.fig === 'grid') out.push(H.fig(gridSvg()));
+  else out.push(...lines(g.invest.lines));
+  out.push(reflect(g));
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');
@@ -30,6 +46,7 @@ W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class=
 L.content.forEach(c => {
   const l = c.lesson;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
+  W.push(fastNote());
   W.push(...c.workbook(H));
   W.push(...extra(l.n));
 });

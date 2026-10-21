@@ -220,7 +220,7 @@ module.exports = {
     W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
     W.push(...H.lines(1));
-    W.push(H.q(7, ['★ (if time) Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '. Hint: look at the twelfths row of your wall.'], { keepNext: true, after: 60 }));
+    W.push(H.q(7, ['(if time) Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '. Hint: look at the twelfths row of your wall.'], { keepNext: true, after: 60 }));
     W.push(H.sub('a', ['______________________     (b)  Which one is equal to ', fr(2, 3), '?   ________']));
     return W;
   }

@@ -272,3 +272,5 @@ put('end',(f'<section id="end" data-transition="fade" style="background:{NAVY};c
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','we3','key','break','ws1','ws1ans','teachsq','teachliar','teachage','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
 write_deck(10,'Math Inquirers P5: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: how to choose a start','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':P+'stretch'}},D)
+
+import p5_gaps; p5_gaps.apply(10)

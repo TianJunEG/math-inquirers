@@ -91,7 +91,7 @@ arr=f'<line x1="920" y1="140" x2="1060" y2="140" stroke="{TEAL}" stroke-width="8
 cal=(f'<rect x="1120" y="40" width="220" height="200" rx="16" fill="{WHITE}" stroke="{NAVY}" stroke-width="6"/><rect x="1120" y="40" width="220" height="56" rx="16" fill="{RED}"/>'
      +txt(1230,200,'?',100,TEAL)+txt(1450,130,'days?',48,TEAL))
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Guess first: is a million seconds about an hour, a day, a week, a month or a year?','Work out how many seconds there are in 1 hour.','Work out how many seconds there are in 1 day.','How many days is 1 000 000 seconds? Compare with your guess.'])
-body=h2('Explore: how long is a million seconds?')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
+body=h2('Explore: how long is a million seconds?')+card(chip('EXPLORE')+f'<ol style="font-size:32px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:4px">{steps}</ol>')
 body+=card(svgwrap(1580,260,'A stopwatch, a counter showing 1 000 000 seconds, an arrow and a calendar page with a question mark',sw+cnt+arr+cal),extra='padding:16px 32px')
 put('p5l1-explore1',sec('p5l1-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs. Everybody writes a guess first and does not change it (most children guess a week, a month or a year). Let them work with pencil first; allow a calculator only for checking. Early finishers: how long is 10 million seconds? More or less than a school term?'))
 
@@ -233,3 +233,5 @@ deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone
  'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(order),'slides')
+
+import p5_gaps; p5_gaps.apply(1)

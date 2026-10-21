@@ -366,3 +366,5 @@ deck = {'v': 4, 'createdOnFiles': {'v': 1, 'at': datetime.datetime.now(datetime.
         'designSystems': []}
 json.dump(deck, open(os.path.join(D, 'deck.json'), 'w'), indent=1, ensure_ascii=False)
 print(len(order), 'slides written to', os.path.normpath(D))
+
+import p6_gaps; p6_gaps.apply(8)

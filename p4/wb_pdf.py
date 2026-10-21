@@ -17,7 +17,7 @@ for line in body.split('\n'):
     if openb: out.append('</div></div>');openb=False
     out.append(line)
 if openb: out.append('</div></div>')
-body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()
+body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()+'.q.open .qn:before{content:""!important}.q.open .qn{padding:1px 9px}'
 html=f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
 open('workbook_full.html','w').write(html)
 foot='<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers P4 Holiday Program  •  Notice it. Test it. Explain why.</span><span>Page <span class="pageNumber"></span></span></div>'

@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:20:58Z"
+  "at": "2026-10-21T23:41:26Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 3 – Before and After",
  "order": [
   "p5l3-title",
+  "p5l3-check",
   "p5l3-warm1",
   "p5l3-warm2",
   "p5l3-explore1",
@@ -30,7 +31,8 @@
   "p5l3-chdiag",
   "p5l3-chwalk",
   "p5l3-talk",
-  "p5l3-exit"
+  "p5l3-exit",
+  "p5l3-reflect"
  ],
  "cover": "p5l3-title",
  "sections": {

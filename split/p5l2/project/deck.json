@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:20:58Z"
+  "at": "2026-10-21T23:41:26Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 2 – Fraction Feats",
  "order": [
   "p5l2-title",
+  "p5l2-check",
   "p5l2-warm1",
   "p5l2-warm2",
   "p5l2-explore1",
@@ -31,7 +32,8 @@
   "p5l2-chdiag",
   "p5l2-chwalk",
   "p5l2-talk",
-  "p5l2-exit"
+  "p5l2-exit",
+  "p5l2-reflect"
  ],
  "cover": "p5l2-title",
  "sections": {

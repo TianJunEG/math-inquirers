@@ -2,6 +2,9 @@
 const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
+const GAPS = require(path.join(__dirname, 'content', 'gaps.js'));
+C.forEach(c => { const g = GAPS[c.lesson.n];
+  c.deck.check = g.check; c.script.check = g.scriptCheck; c.script.reflect = g.scriptReflect; c.investigation = g.inv; });
 module.exports = {
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 5',

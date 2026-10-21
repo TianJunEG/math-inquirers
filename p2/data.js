@@ -2,7 +2,11 @@
 const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
+// Close-the-gaps content (warm-up check, open investigation, reflection): p2/gaps.json, shared with the slide generators.
+const GAPS = require('./gaps.json');
+C.forEach(c => { const g = GAPS[String(c.lesson.n)]; c.gaps = g; if (!c.lesson.key.some(k => k[0] === 'Investigation')) c.lesson.key = [...c.lesson.key, ['Investigation', g.invest.title + ': ' + g.invest.model]]; });
 module.exports = {
+  gaps: GAPS,
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 2',
   slogan: 'Notice it. Test it. Explain why.',

@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:20:58Z"
+  "at": "2026-10-21T23:41:26Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 5 – Volume Vault",
  "order": [
   "p5l5-title",
+  "p5l5-check",
   "p5l5-warm1",
   "p5l5-warm2",
   "p5l5-explore1",
@@ -31,7 +32,8 @@
   "p5l5-chdiag",
   "p5l5-chwalk",
   "p5l5-talk",
-  "p5l5-exit"
+  "p5l5-exit",
+  "p5l5-reflect"
  ],
  "cover": "p5l5-title",
  "sections": {

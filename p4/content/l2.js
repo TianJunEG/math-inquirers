@@ -158,3 +158,34 @@ module.exports = {
     return W;
   }
 };
+
+// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+module.exports.gaps = {
+ "idea": "rounding",
+ "check": [
+  {
+   "q": "A shop says \"about 8 000 people came\" (rounded to the nearest thousand). Which of these could be the real number: 7 499, 7 500, 8 499, 8 500?",
+   "a": "7 500 and 8 499. The real number is from 7 500 to 8 499 (7 499 rounds down to 7 000; 8 500 rounds up to 9 000)."
+  },
+  {
+   "q": "Round 49 960 to the nearest hundred, then round 49 960 to the nearest thousand. Why are both answers 50 000?",
+   "a": "Both are 50 000. 49 960 is past the halfway mark 49 950 (hundreds) and past 49 500 (thousands), so it rounds up each time."
+  }
+ ],
+ "why": "Find the two round numbers and the halfway mark. Halfway or more rounds up.",
+ "invest": {
+  "kind": "Is it always true? Test and explain.",
+  "head": "Double rounding",
+  "intro": "Mei says: \"If I round a number to the nearest hundred, and then round that answer to the nearest thousand, I always get the same answer as rounding to the nearest thousand straight away.\"",
+  "parts": [
+   "Test Mei's idea on at least 5 numbers. Show each test on the lines (number, nearest hundred, then nearest thousand, and straight to the nearest thousand). Include 3 280, 1 449 and 1 450.",
+   "Is Mei always right? If not, write one number that breaks her idea.",
+   "Look at the numbers that break it. What do their last three digits have in common?"
+  ],
+  "lines": 5,
+  "key": "Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\"."
+ },
+ "reflect": "The hardest part for me was working out which way a number like 450 rounds. I got unstuck by drawing the number line with the halfway mark."
+};
+module.exports.lesson.key.push(['Warm-up check', "(a) 7 500 and 8 499. The real number is from 7 500 to 8 499 (7 499 rounds down to 7 000; 8 500 rounds up to 9 000). (b) Both are 50 000. 49 960 is past the halfway mark 49 950 (hundreds) and past 49 500 (thousands), so it rounds up each time."]);
+module.exports.lesson.key.push(['Open investigation', "Double rounding. Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\"."]);

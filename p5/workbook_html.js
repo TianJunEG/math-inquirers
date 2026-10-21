@@ -10,6 +10,12 @@ const hdr = (n, topic, title, pb = true) => [
   `<div class="p ltitle">${title}</div>`,
   `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
 ];
+const bx = '<span style="display:inline-block;width:20px;height:20px;border:2.5px solid #1B2A49;border-radius:5px;vertical-align:-4px;margin:0 6px 0 10px"></span>';
+const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-radius:14px;padding:8px 16px;margin-top:14px;background:#F3FAF8;page-break-inside:avoid"><div style="font-weight:800;font-size:20px;color:#1F7A6F;margin-bottom:4px">What was hard?  <span style="font-weight:400;font-size:16px;color:#444">(just for you: nobody marks this)</span></div>
+<div style="margin:5px 0">The hardest part was ______________________________________________________________</div>
+<div style="margin:5px 0">I got unstuck by:${bx}drawing a picture or model${bx}making a list or table${bx}trying a simpler number${bx}asking my partner${bx}checking my estimate</div>
+<div style="margin:5px 0">Next time I will try ______________________________________________________________</div></div>`;
+const fast = () => `<div class="p" style="border:2.5px dashed #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">Fast track.</b> Got BOTH Warm-up check questions right and can explain why? Your tutor may send you straight to the Think Harder pages and the Open Investigation while the group works this page. Come back for talk time. It is a choice of starting place, not a label, and you can swap at any time.</div>`;
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -20,6 +26,15 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner(n === 7 ? 'Challenge  (for strong thinkers: P6 preview)' : 'Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  const inv = L.content[n - 1].investigation;
+  out.push(p('', { pb: true, after: 0 }));
+  out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
+  out.push(banner('Open investigation: ' + inv.title));
+  out.push(q(8, '(a) ' + inv.parts[0], { before: 120, after: 30, keepNext: true }));
+  out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(b)</b> ${inv.parts[1]}</div>`);
+  out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);
+  out.push(...lines(7));
+  out.push(reflect());
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');
@@ -28,6 +43,7 @@ W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class=
 L.content.forEach(c => {
   const l = c.lesson;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
+  W.push(fast());
   W.push(...c.workbook(H));
   W.push(...extra(l.n));
 });

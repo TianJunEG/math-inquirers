@@ -10,6 +10,29 @@ const hdr = (n, topic, title, pb = true) => [
   `<div class="p ltitle">${title}</div>`,
   `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
 ];
+
+// ---- close-the-gaps additions: fast-track note, open investigation, reflection ----
+const px = n => (n / 15).toFixed(1) + 'px';
+const fastNote = () => `<div class="p" style="margin:2px 4px 0 4px;padding:3px 10px;border-left:6px solid #1F7A6F;background:#F3FBF9;font-size:14px;line-height:1.4;margin-bottom:10px;break-inside:avoid"><b style="color:#1F7A6F">Fast track.</b> Got BOTH warm-up check questions right and can say why? Your tutor may send you straight to the Think Harder pages and this Open investigation while the group works on pages 1 and 2. You still join the explore, the mini-lesson, talk time and the exit ticket. You can ask to come back to page 1 at any time.</div>`;
+const tickBox = '<span style="display:inline-block;width:12px;height:12px;border:2px solid #1B2A49;border-radius:3px;margin:0 4px -2px 10px;background:#fff"></span>';
+const reflectBox = () => `<div class="p" style="margin:14px 4px 4px 4px;padding:6px 12px 8px;border:2.5px dashed #1F7A6F;border-radius:10px;background:#F3FBF9;break-inside:avoid"><div style="font-weight:700;color:#1F7A6F;font-size:16px">What was hard? <span style="font-weight:400;font-size:12.5px;color:#3B4A6B">Take 1 minute at the end. No answer is wrong. Nobody marks this.</span></div><div class="p ans" style="margin:6px 0 2px"><b>The hardest part was</b><span class="al"></span></div><div style="margin:8px 0 2px;font-size:14px"><b>I got unstuck by</b>${tickBox}drawing it${tickBox}making a list or a table${tickBox}trying a smaller number${tickBox}asking my partner${tickBox}reading it again${tickBox}other: ________</div><div class="p ans" style="margin:6px 0 2px"><b>Next time I will try</b><span class="al"></span></div></div>`;
+const investBlock = (g) => {
+  const iv = g.invest, out = [];
+  let top = q('Open', [t(iv.head + '.  ', { bold: true }), t(iv.kind + '  ', { italics: true, color: '1F7A6F' }), t(iv.intro)], { before: 140, after: 60, keepNext: true }).replace('class="p q', 'class="p q open');
+  out.push(top);
+  if (iv.fig) out.push(H.fig(iv.fig));
+  if (iv.table) {
+    const hd = (s) => H.cell(s, 1143, { bold: true, fill: 'EDEDED', h: 40 });
+    const lab = (s) => H.cell(s, 1900, { bold: true, fill: 'EDEDED', h: 40 });
+    const rows = [H.row([lab('Week'), ...[0, 1, 2, 3, 4, 5, 6].map(w => hd(String(w)))])];
+    [['Plant A', 10], ['Plant B', 20], ['Plant C', 10]].forEach(([n, v]) => rows.push(H.row([lab(n + ' (cm)'), H.cell(String(v), 1143, { h: 40 }), ...Array(6).fill('').map(x => H.cell(x, 1143, { h: 40 }))])));
+    out.push(H.tbl([1900, ...Array(7).fill(1143)], rows));
+    out.push(H.gap(40));
+  }
+  iv.parts.forEach((x, i) => out.push(H.sub('abcdef'[i], x, { after: 60 })));
+  out.push(...H.lines(iv.lines + 2));
+  return out;
+};
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -20,6 +43,12 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : 4)); });
+  out.push(p('', { pb: true, after: 0 }));
+  out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
+  out.push(banner('Open investigation  and  What was hard?'));
+  out.push(fastNote());
+  out.push(...investBlock(L.content[n - 1].gaps));
+  out.push(reflectBox());
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');

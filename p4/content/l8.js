@@ -211,3 +211,35 @@ module.exports = {
     return W;
   }
 };
+
+// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+module.exports.gaps = {
+ "idea": "nets and symmetry",
+ "check": [
+  {
+   "q": "A straight row of 6 squares. Could it fold into a cube? Explain.",
+   "a": "No. The first 4 squares wrap round as walls. The 5th lands on top of the 1st and the 6th on top of the 2nd, so nothing makes a lid or a base."
+  },
+  {
+   "q": "How many lines of symmetry has the capital letter H? And the capital letter A? (Think of plain block letters.)",
+   "a": "H has 2 (one up-down and one across). A has 1 (up-down)."
+  }
+ ],
+ "why": "A net needs one base, one lid and four walls with nothing overlapping. A line of symmetry is a fold where both halves match exactly.",
+ "invest": {
+  "kind": "Is it always true? Test and explain.",
+  "head": "A row of four",
+  "intro": "Here is a net: a row of 4 squares with one square above it and one square below it. Mei says: \"A row of 4 squares with ONE square above it and ONE square below it always folds into a cube, wherever the two squares are.\"",
+  "fig": "<svg aria-label=\"A net made of a row of 4 squares with one square above the third square and one square below the second square\" viewBox=\"0 0 600 150\" width=\"600\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%\"><rect x=\"60\" y=\"52\" width=\"44\" height=\"44\" fill=\"#FFC93C\" stroke=\"#1B2A49\" stroke-width=\"3\"/><rect x=\"104\" y=\"52\" width=\"44\" height=\"44\" fill=\"#FFC93C\" stroke=\"#1B2A49\" stroke-width=\"3\"/><rect x=\"148\" y=\"52\" width=\"44\" height=\"44\" fill=\"#FFC93C\" stroke=\"#1B2A49\" stroke-width=\"3\"/><rect x=\"192\" y=\"52\" width=\"44\" height=\"44\" fill=\"#FFC93C\" stroke=\"#1B2A49\" stroke-width=\"3\"/><rect x=\"148\" y=\"8\" width=\"44\" height=\"44\" fill=\"#DDEBF7\" stroke=\"#1B2A49\" stroke-width=\"3\"/><rect x=\"104\" y=\"96\" width=\"44\" height=\"44\" fill=\"#DDEBF7\" stroke=\"#1B2A49\" stroke-width=\"3\"/><text x=\"290\" y=\"62\" font-size=\"16\" font-weight=\"700\" fill=\"#1B2A49\" font-family=\"Fredoka, Arial, sans-serif\">A row of 4 squares,</text><text x=\"290\" y=\"86\" font-size=\"16\" font-weight=\"700\" fill=\"#1B2A49\" font-family=\"Fredoka, Arial, sans-serif\">one square above it and</text><text x=\"290\" y=\"110\" font-size=\"16\" font-weight=\"700\" fill=\"#1B2A49\" font-family=\"Fredoka, Arial, sans-serif\">one square below it.</text></svg>",
+  "parts": [
+   "Test Mei's idea. On squared paper (use the Square grid at the back), draw 4 different nets like this by moving the top square and the bottom square. Fold each one in your head. Do they all fold into a cube?",
+   "Explain why it works. Use the words wall, lid and base.",
+   "What if BOTH extra squares are above the row? Try two. Do they ever fold into a cube? Why or why not?"
+  ],
+  "lines": 4,
+  "key": "Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason."
+ },
+ "reflect": "The hardest part for me was folding the net in my head. I got unstuck by making it with paper."
+};
+module.exports.lesson.key.push(['Warm-up check', "(a) No. The first 4 squares wrap round as walls. The 5th lands on top of the 1st and the 6th on top of the 2nd, so nothing makes a lid or a base. (b) H has 2 (one up-down and one across). A has 1 (up-down)."]);
+module.exports.lesson.key.push(['Open investigation', "A row of four. Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason."]);

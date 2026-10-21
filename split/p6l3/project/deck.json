@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:23:22Z"
+  "at": "2026-10-21T23:43:05Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 3 – Below Zero",
  "order": [
   "p6l3-title",
+  "p6l3-check",
   "p6l3-warm1",
   "p6l3-warm2",
   "p6l3-explore1",
@@ -31,7 +32,8 @@
   "p6l3-chdiag",
   "p6l3-chwalk",
   "p6l3-talk",
-  "p6l3-exit"
+  "p6l3-exit",
+  "p6l3-reflect"
  ],
  "cover": "p6l3-title",
  "sections": {

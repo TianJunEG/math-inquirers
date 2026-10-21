@@ -239,3 +239,5 @@ put(P+'exit',sec(P+'exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 82 
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','we1','try2','we2','try3','key','break','ws1','ws1ans','teachgs','teachsup','teachmarks','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 write_deck(9,'Math Inquirers P5: Lesson 9 – Pattern Generalisers',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: growing patterns and the rule in words','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk and exit','start':P+'stretch'}},D)
+
+import p5_gaps; p5_gaps.apply(9)

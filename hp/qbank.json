@@ -172,7 +172,7 @@
     "a": "10 and 16 (all three are 20)."
    },
    {
-    "q": "□ + □ + 4 = 20, and both boxes are the same number. What is in the box?",
+    "q": "A + A + 4 = 20, and the two As stand for the same number. What number is A?",
     "a": "8 (20 − 4 = 16, and 8 + 8 = 16)."
    },
    {
@@ -280,7 +280,7 @@
     "a": "7"
    },
    {
-    "q": "Key: ● = 2 children. Apple ●●●, Banana ●●●●●, Orange ●●. How many more chose banana than orange?",
+    "q": "Each picture stands for 2 children. Apple has 3 pictures, banana has 5 and orange has 2. How many more children chose banana than orange?",
     "a": "6 more. Banana 2, 4, 6, 8, 10 children; orange 2, 4 children; 10 − 4 = 6 (or: 3 extra pictures, count in 2s: 2, 4, 6)."
    },
    {

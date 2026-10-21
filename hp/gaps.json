@@ -1,0 +1,232 @@
+{
+ "1": {
+  "check": [
+   {
+    "q": "A bunny starts at 1 and hops 3 each time: 1, 4, 7 ... Will it land on 20?",
+    "a": "No. It lands on 19, then 22, so it jumps over 20. (Keep hopping, or notice it only lands on numbers that are 1 more than a 3s number.)"
+   },
+   {
+    "q": "A pattern has 12 as its 2nd number and 18 as its 3rd number. What is its 1st number?",
+    "a": "6. The rule is add 6 (18 − 12), so go back one step: 12 − 6 = 6."
+   }
+  ],
+  "invest": {
+   "title": "What if we change the hops?",
+   "q": "Frog 1 hops in 2s from 0. Frog 2 hops in 3s from 0. Write the numbers up to 30 that BOTH frogs land on. Now change frog 2 to hops of 4, then 5, then 6, and do it again each time. What stays the same? What changes?",
+   "model": "Both land on: with 3s 6, 12, 18, 24, 30; with 4s 4, 8, 12, 16, 20, 24, 28 (every landing of frog 2, because 4 is a number in the 2s); with 5s 10, 20, 30; with 6s 6, 12, 18, 24, 30. Stays the same: 0 is always shared, and the shared numbers always form a pattern with equal jumps. Changes: the size of that jump (6, 4, 10, 6) and how many numbers are shared. Look for: both lists written out, a systematic check, and a reason why the 4s frog shares every landing (4 = 2 + 2). Accept any correct noticing.",
+   "lines": 5
+  },
+  "hard": [
+   "the hops",
+   "finding the rule",
+   "saying why"
+  ]
+ },
+ "2": {
+  "check": [
+   {
+    "q": "A box has 20 sweets. 12 are red and the rest are green. How many are green?",
+    "a": "8. 12 + 8 = 20 (or 12 + 8: 2 + 8 makes 10, and 10 more makes 20)."
+   },
+   {
+    "q": "True or false: 7 + 5 = 6 + 6. How do you know?",
+    "a": "True. Both sides make 12. (7 goes down 1 and 5 goes up 1, so the total stays the same.)"
+   }
+  ],
+  "invest": {
+   "title": "Is it always true?",
+   "q": "Mei says: \"When two numbers make 10, they are both odd or both even.\" Test every pair that makes 10 (0 + 10, 1 + 9, 2 + 8 ...). Is Mei always right? Now test the pairs that make 20. Why do you think it works?",
+   "model": "Yes. All 11 pairs from 0 + 10 to 10 + 0 are both odd or both even (1 + 9, 3 + 7 ... and 0 + 10, 2 + 8 ...); the same holds for all 21 pairs that make 20. Reason (accept child language): when one number goes up by 1 the other goes down by 1, so both change from odd to even together. Or: an odd and an even always make an odd total, never 10 or 20. Look for: testing every pair (not 2 or 3), writing them in order, and a reason that is more than \"it just works\".",
+   "lines": 5
+  },
+  "hard": [
+   "the bonds",
+   "the = sign",
+   "saying why"
+  ]
+ },
+ "3": {
+  "check": [
+   {
+    "q": "1 picture = 1 child. Red has 7 pictures, blue has 5 and green has 3. How many MORE children chose red than green?",
+    "a": "4 more (7 − 3). Compare the two rows: do not add."
+   },
+   {
+    "q": "Our class chose red. Will the whole school choose red too? Why?",
+    "a": "Not necessarily. Only our class voted, so the graph tells us about our class, not the whole school."
+   }
+  ],
+  "invest": {
+   "title": "What if we change the key?",
+   "q": "A picture graph has 1 picture = 1 child: Cats 4, Dogs 6, Fish 2. Draw it again with 1 picture = 2 children. What stays the same? What changes? Could you use 1 picture = 3 children? Why or why not?",
+   "model": "With 1 picture = 2 children: Cats 2 pictures, Dogs 3, Fish 1. Stays the same: 12 children in all, dogs still win, fish still last, the same number of children chose each. Changes: the number of pictures (it halves). A key of 3 does not work: 4 and 2 are not in the 3s, so we would need part of a picture. A key only works when every count is in its counting pattern (here the keys 1 and 2 work). Look for: correct rows, the key written on the graph, and a reason that talks about counting in 2s or 3s.",
+   "lines": 6
+  },
+  "hard": [
+   "reading the key",
+   "comparing",
+   "saying why"
+  ]
+ },
+ "4": {
+  "check": [
+   {
+    "q": "Beads repeat: red, blue, blue, red, blue, blue ... What colour is the 12th bead? How do you know?",
+    "a": "Blue. The pattern repeats every 3 beads, so the 3rd, 6th, 9th and 12th beads end a repeat, and each repeat ends with blue."
+   },
+   {
+    "q": "A row of squares is made with sticks: 1 square uses 4 sticks, 2 squares use 7, 3 squares use 10. How many sticks for 4 squares? Why?",
+    "a": "13. Each new square shares a side, so it needs only 3 more sticks (10 + 3)."
+   }
+  ],
+  "invest": {
+   "title": "Is it always true?",
+   "q": "Mei says: \"In a pattern that repeats every 3 shapes, place 30 is the same shape as place 3.\" Draw your own 3-shape pattern up to place 9. Test Mei on places 6 and 9, then on place 30. Is she always right? What about a pattern that repeats every 4 shapes: which places match place 4?",
+   "model": "Yes, always. Any pattern that repeats every 3 shapes has the same shape in places 3, 6, 9, 12 ... 30 (we say these when we count in 3s, so each one ends a repeat). For a pattern that repeats every 4 shapes, places 4, 8, 12, 16, 20 ... match place 4. Look for: a real 3-shape pattern drawn to place 9, testing before agreeing, and the link to counting in 3s (or 4s). Stretch: ask \"Which place matches place 1 in a 3-shape pattern?\" (places 4, 7, 10 ... 31).",
+   "lines": 5
+  },
+  "hard": [
+   "the core",
+   "the 30th place",
+   "the sticks"
+  ]
+ },
+ "5": {
+  "check": [
+   {
+    "q": "A bag has some marbles. Ali puts in 6 more. Now there are 15. How many were in the bag at first?",
+    "a": "9. Work backwards: 15 − 6 = 9."
+   },
+   {
+    "q": "I think of a number. I take away 2, then I add 7. I get 12. What is my number?",
+    "a": "7. Undo the last step first: 12 − 7 = 5, then undo the first step: 5 + 2 = 7. Check: 7 − 2 = 5, 5 + 7 = 12."
+   }
+  ],
+  "invest": {
+   "title": "Is it always true?",
+   "q": "A number machine adds 6 and then takes away 6. Mei says: \"OUT is always the same as IN.\" Test IN = 3, 10 and 25, and one number you choose. Is Mei always right? Now change the machine: add 6, then take away 4. What happens to every number? Why?",
+   "model": "Yes: adding 6 then taking away 6 puts every number back (the steps undo each other). With add 6 then take away 4: 3 gives 5, 10 gives 12, 25 gives 27, so OUT is always 2 more than IN, because the machine really adds 6 − 4 = 2. Look for: four or more tests, a table, and an explanation using \"undo\" or \"6 then back 6\". Stretch: \"Design a machine that always gives 3 less.\"",
+   "lines": 5
+  },
+  "hard": [
+   "the machine",
+   "undoing the steps",
+   "the queue"
+  ]
+ },
+ "6": {
+  "check": [
+   {
+    "q": "Ben has a 20¢ coin, a 10¢ coin and a 5¢ coin. Which of 25¢, 30¢ and 40¢ can he pay exactly?",
+    "a": "25¢ (20¢ + 5¢) and 30¢ (20¢ + 10¢). Not 40¢: all three coins together make only 35¢."
+   },
+   {
+    "q": "Can you make 25¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢?",
+    "a": "Yes: 10¢ + 10¢ + 5¢. (It is the only way.)"
+   }
+  ],
+  "invest": {
+   "title": "What if we take a coin away?",
+   "q": "Our coins are 5¢, 10¢, 20¢ and 50¢. Put the 5¢ coin away. Which amounts from 5¢ to 50¢ (5¢, 10¢, 15¢ ... 50¢) can you NOT make with the 10¢, 20¢ and 50¢ coins? What do those amounts have in common? Why? (Use your coins.)",
+   "model": "You cannot make 5¢, 15¢, 25¢, 35¢ or 45¢. You can make 10¢, 20¢, 30¢, 40¢ and 50¢. The amounts you cannot make all end in 5: every coin left ends in 0, so any total ends in 0. Extension: put the 10¢ coin away instead (keep 5¢, 20¢, 50¢): now every amount from 5¢ to 50¢ can be made (e.g. 10¢ = 5¢ + 5¢). Look for: using real coins, a list of what works and what fails, and a reason about last digits (accept \"all the coins end in 0\").",
+   "lines": 5
+  },
+  "hard": [
+   "finding all the ways",
+   "knowing I had them all",
+   "the dollars"
+  ]
+ },
+ "7": {
+  "check": [
+   {
+    "q": "A shape has 9 corners. How many straight sides does it have?",
+    "a": "9. A shape has as many straight sides as it has corners."
+   },
+   {
+    "q": "Cut a rectangle from one corner straight to the opposite corner. What two shapes do you get?",
+    "a": "Two triangles (the same size)."
+   }
+  ],
+  "invest": {
+   "title": "Find all the shapes",
+   "q": "Join 3 squares so that whole sides touch. How many different shapes can you make? Turning or flipping a shape does not make a new one. Draw each shape you find. Then try with 4 squares. Use paper squares or counters to help.",
+   "model": "3 squares: 2 shapes (a straight line of 3 and a bent shape, like an L). 4 squares: 5 shapes (a line of 4, an L, a T, an S or Z, and a big square). Look for: whole sides touching (not corners only), noticing that a turned shape is the same shape, and a way to know when there are no more (start with a line, then move one square). The 4-square task is the stretch: accept 3 or 4 shapes with praise for the method.",
+   "lines": 7
+  },
+  "hard": [
+   "sides and corners",
+   "counting triangles",
+   "naming shapes"
+  ]
+ },
+ "8": {
+  "check": [
+   {
+    "q": "Ben is shorter than Cara. Cara is shorter than Dev. Dev is shorter than Eli. Who is second tallest?",
+    "a": "Dev. The order from shortest is Ben, Cara, Dev, Eli."
+   },
+   {
+    "q": "Which number does NOT belong: 4, 8, 12, 15? Give a reason. Can you find a different reason?",
+    "a": "15 (it is not in the 4s; it is the only odd number; it is the only one that ends in 5). Accept any reasoned answer."
+   }
+  ],
+  "invest": {
+   "title": "Find all the ways",
+   "q": "Ali, Mei and Ben stand in a line. Write ALL the different orders they can stand in. How do you know you have them all? Now add a clue: \"Ali is not first.\" How many orders are left? Make up your own clue so that only ONE order is left.",
+   "model": "There are 6 orders: Ali Mei Ben, Ali Ben Mei, Mei Ali Ben, Mei Ben Ali, Ben Ali Mei, Ben Mei Ali. With \"Ali is not first\" 4 are left. Clues that leave exactly one: \"Ali is in front of Ben and Ben is in front of Mei\" (Ali, Ben, Mei), or \"Mei is first and Ali is not last\" (Mei, Ali, Ben). Look for: a systematic list (fix who is first, then list the other two) and the reason \"each of 3 children can be first and then 2 orders follow\". Accept any clue that leaves exactly one order after the child tests it.",
+   "lines": 6
+  },
+  "hard": [
+   "the grid",
+   "the two-loop picture",
+   "the clues"
+  ]
+ },
+ "9": {
+  "check": [
+   {
+    "q": "A ribbon lies from the 4 cm mark to the 11 cm mark on a ruler. How long is it?",
+    "a": "7 cm. Count the spaces from 4 to 11 (or 11 − 4). The ribbon does not start at 0."
+   },
+   {
+    "q": "Ali measures a table with his pencil and gets 5 pencils. Mei measures the same table with a shorter pencil. Will she count more or fewer pencils?",
+    "a": "More. A shorter pencil covers less, so she needs more of them."
+   }
+  ],
+  "invest": {
+   "title": "Is it always true?",
+   "q": "Ben says: \"If I measure the same thing with a SHORTER unit, I always get a BIGGER number.\" Measure your pencil with the cube strip, then with a paper clip (or your finger width). Which unit is shorter? Which one gave the bigger number? Is Ben right? Guess: if a unit is half as long as a cube, what number would you get for your pencil?",
+   "model": "Yes, always: more short units are needed to cover the same length. A unit half as long gives double the number (a pencil of 12 cubes is 24 half cubes). Look for: units laid end to end with no gaps, starting at the end of the pencil, both counts written down, and a reason using \"shorter unit, more of them\". Accept any measured numbers if the shorter unit has the bigger count.",
+   "lines": 5
+  },
+  "hard": [
+   "the ruler",
+   "the units",
+   "guessing"
+  ]
+ },
+ "10": {
+  "check": [
+   {
+    "q": "The pattern is 4, 9, 14, 19 ... What is the 7th number?",
+    "a": "34. The rule is add 5: 24, 29, 34 (or 4 + 6 jumps of 5 = 34)."
+   },
+   {
+    "q": "Make 35¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "20¢ + 10¢ + 5¢. (It is the only way.)"
+   }
+  ],
+  "invest": {
+   "title": "What if we change the jump?",
+   "q": "Three numbers in a row start at 5 and jump by 3: 5, 8, 11. Their total is 24. Change the jump to 1, 2, 4 and 5 and find each total. What stays the same? What changes? Can you find a shortcut for the total?",
+   "model": "Totals: jump 1 gives 5 + 6 + 7 = 18; jump 2 gives 21; jump 3 gives 24; jump 4 gives 27; jump 5 gives 30. Stays the same: the first number is 5 and there are always 3 numbers. Changes: the total goes up by 3 each time the jump goes up by 1. Shortcut: the total is 3 times the middle number (3 times 8 = 24), or 15 plus 3 jumps. Look for: a tidy table of jump and total, and any noticing of the +3 pattern. Stretch: predict the total for a jump of 10 (45).",
+   "lines": 5
+  },
+  "hard": [
+   "the patterns",
+   "the puzzles",
+   "the explaining"
+  ]
+ }
+}

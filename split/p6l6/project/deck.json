@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:16:58Z"
+  "at": "2026-10-21T23:43:05Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 6 – Fair or Unfair?",
  "order": [
   "p6l6-title",
+  "p6l6-check",
   "p6l6-warm1",
   "p6l6-warm2",
   "p6l6-explore1",
@@ -33,7 +34,8 @@
   "p6l6-chdiag",
   "p6l6-chwalk",
   "p6l6-talk",
-  "p6l6-exit"
+  "p6l6-exit",
+  "p6l6-reflect"
  ],
  "cover": "p6l6-title",
  "sections": {

@@ -153,3 +153,5 @@ put('exit',sec(sid('exit'),'82–90 MIN',body,'Minutes 82 to 90. Answers: 8 minu
 
 order=[sid(x) for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teachfree','we2','try2','key','break','ws1','ws1ans','teachpark','teachplans','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 finish(P,S,order,'Math Inquirers P5: Lesson 6 – Rate Racers',{'s1':{'description':'Warm-up and explore','start':sid('title')},'s2':{'description':'Teach: the rate for 1, better buys, taps together','start':sid('teach1')},'s3':{'description':'Worksheet with teaching before each page','start':sid('break')},'s4':{'description':'Stretch, challenge, talk and exit','start':sid('stretch')}},D)
+
+import p5_gaps; p5_gaps.apply(6)

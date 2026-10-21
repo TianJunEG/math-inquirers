@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:23:30Z"
+  "at": "2026-10-21T23:43:05Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 4 – Algebra Machines",
  "order": [
   "p6l4-title",
+  "p6l4-check",
   "p6l4-warm1",
   "p6l4-warm2",
   "p6l4-explore1",
@@ -32,7 +33,8 @@
   "p6l4-chdiag",
   "p6l4-chwalk",
   "p6l4-talk",
-  "p6l4-exit"
+  "p6l4-exit",
+  "p6l4-reflect"
  ],
  "cover": "p6l4-title",
  "sections": {

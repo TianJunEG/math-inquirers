@@ -283,3 +283,5 @@ deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(ORDER),'slides')
+
+import p6_gaps; p6_gaps.apply(10)

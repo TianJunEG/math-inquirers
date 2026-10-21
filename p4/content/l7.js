@@ -189,3 +189,34 @@ module.exports = {
     return W;
   }
 };
+
+// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+module.exports.gaps = {
+ "idea": "area and perimeter",
+ "check": [
+  {
+   "q": "An L-shaped room is made from a 6 m by 4 m rectangle with a 2 m by 1 m piece cut out of one corner. What is the area of the room?",
+   "a": "22 m². The full rectangle is 6 × 4 = 24 m², and 24 − 2 = 22."
+  },
+  {
+   "q": "What is the perimeter of the same L-shaped room? Explain how you know.",
+   "a": "20 m. Cutting a piece out of a corner does not change the perimeter. Push the steps out to the 6 by 4 rectangle: 6 + 4 + 6 + 4 = 20."
+  }
+ ],
+ "why": "For area, split or take away. For perimeter, push the steps out to a rectangle (when all the corners are square corners).",
+ "invest": {
+  "kind": "Is it always true? Test and explain.",
+  "head": "Bigger area, bigger perimeter?",
+  "intro": "Ali says: \"A rectangle with a bigger area always has a bigger perimeter.\"",
+  "parts": [
+   "Test Ali's idea. Find the area and perimeter of a 1 cm by 11 cm rectangle, and of a 4 cm by 4 cm square. Which has the bigger area? Which has the bigger perimeter?",
+   "List ALL the rectangles with whole-cm sides and a perimeter of 24 cm. Write the area of each.",
+   "Is Ali right? Which of your rectangles has the biggest area? What is special about its shape?"
+  ],
+  "lines": 5,
+  "key": "(a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter."
+ },
+ "reflect": "The hardest part for me was finding the missing lengths on the staircase. I got unstuck by writing the lengths on the picture."
+};
+module.exports.lesson.key.push(['Warm-up check', "(a) 22 m². The full rectangle is 6 × 4 = 24 m², and 24 − 2 = 22. (b) 20 m. Cutting a piece out of a corner does not change the perimeter. Push the steps out to the 6 by 4 rectangle: 6 + 4 + 6 + 4 = 20."]);
+module.exports.lesson.key.push(['Open investigation', "Bigger area, bigger perimeter?. (a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter."]);

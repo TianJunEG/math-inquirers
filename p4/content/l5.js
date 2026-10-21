@@ -50,7 +50,7 @@ module.exports = {
     skills: 'Place value to thousandths, zooming in on a number line, ordering, rounding and rounding backwards, systematic listing, bar models, checking every clue',
     materials: 'Digit cards 0 to 9 and a decimal point card for each child, a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money.',
     online: 'Children cut out paper digit cards and a paper decimal point before the lesson and move them on camera. The tutor marks the zoom-in number lines on the slides.',
-    warmup: 'Target 5: draw □.□□ on a whiteboard. The tutor turns over digit cards one at a time; children write each digit in a box straight away (no moving it later). The number closest to 5 wins.',
+    warmup: 'Target 5: draw three empty boxes on a whiteboard with a decimal point after the first box. The tutor turns over digit cards one at a time; children write each digit in a box straight away (no moving it later). The number closest to 5 wins.',
     explore: 'Pairs use the digit cards 2, 5, 8 and a decimal point card to make as many different decimals as they can (the point goes between two digits), list them in order and find the one closest to 5.',
     mini: 'Zoom in on a number line: each step is 0.1, then 0.01, then 0.001. Line up the decimal points and fill empty places with 0 to compare. Round by finding the two neighbours and the halfway mark; to round backwards, find the smallest and largest numbers that round to the answer.',
     share: 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right?',
@@ -69,7 +69,7 @@ module.exports = {
 
   script: {
     hook: ['Good morning, inquirers! Today you are decimal detectives. Decimals hide in prices, in masses, in race times. A tiny digit after the point can win or lose a race.', 'Our rule today: notice the place, test with a number line, explain why.'],
-    warmIntro: ['Draw a box, a decimal point, then two boxes: □.□□. I will turn over a digit card. Write it in a box straight away. You cannot move it later!', 'Our target is 5. The number closest to 5 wins. Where would you put a 4? A 9? A 0?'],
+    warmIntro: ['Draw a box, a decimal point, then two boxes (three empty boxes, with the point after the first). I will turn over a digit card. Write it in a box straight away. You cannot move it later!', 'Our target is 5. The number closest to 5 wins. Where would you put a 4? A 9? A 0?'],
     predict: ['You have the cards 2, 5, 8 and a decimal point. How many different numbers do you think you can make? Write your guess before you start.'],
     exploreHints: ['Stuck: put the point after the first card. Now swap the digit cards around. Then move the point.', 'Not sure if you have them all: “How many numbers start with 2? With 5? With 8? Where can the point go?”', 'Finished early: which number is closest to 50? Which two numbers are closest to each other?'],
     think: ['“Where is the arrow? Between 2.3 and 2.4. I zoom in. That gap is cut into 10 equal steps, so each step is one hundredth, 0.01. The arrow is 6 steps past 2.3, so it is 2.36.”', '“Which is bigger, 4.37 or 4.307? I line up the points. Same ones, same tenths. Hundredths: 7 and 0. 7 hundredths is more, so 4.37 is bigger, even though 4.307 has more digits.”', '“A number with 2 decimal places rounds to 3.8. I look at the number line. The halfway marks are 3.75 and 3.85. 3.75 rounds up to 3.8, so it is the smallest. 3.85 would round up to 3.9, so the largest is 3.84.”'],
@@ -82,7 +82,7 @@ module.exports = {
 
   deck: {
     today: 'Zoom in on number lines, order decimals to 3 places, round and work backwards from a rounded number, and solve money and mass puzzles.',
-    warmGame: 'Target 5. Draw □.□□. The tutor turns over digit cards one at a time; write each digit in a box straight away. The number closest to 5 wins.',
+    warmGame: 'Target 5. Draw three empty boxes with a decimal point after the first. The tutor turns over digit cards one at a time; write each digit in a box straight away. The number closest to 5 wins.',
     warmQs: [['What is the 7 worth in 3.475?', '7 hundredths (0.07)'], ['Write 6 tenths and 4 thousandths as a decimal.', '0.604'], ['Which is bigger: 0.8 or 0.75?', '0.8 (0.80 > 0.75)'], ['Round 4.68 to 1 decimal place.', '4.7'], ['How much more than $3.05 is $5?', '$1.95']],
     expSetup: ['Take the digit cards 2, 5, 8 and the decimal point card.', 'Make a decimal with all four cards. The point goes between two digits.', 'Make as many different numbers as you can. Write each one down.', 'Put them in order. Which one is closest to 5?'],
     expPic: 'digit cards 2, 5 and 8 and a decimal point card, with an example 25.8 and the question “Which is closest to 5?”',
@@ -107,7 +107,7 @@ module.exports = {
       { q: 'A number line from 3 to 4 has 10 equal steps. An arrow points to the 6th step after 3. What number is it? Now zoom in on the gap between that number and the next step, and cut it into 10 smaller steps. A new arrow points to the 5th small step. What number is that?', a: '3.6, then 3.65.' }
     ],
     stretch: [
-      { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
+      { q: 'Find ALL the digits that the letter A can be: 3.A5 < 3.42 (A is one digit)', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
       { q: 'A number with 2 decimal places rounds to 10 when rounded to the nearest whole number. What is the smallest it can be? The largest?', a: 'Smallest 9.50, largest 10.49' },
       { q: 'What number is halfway between 2.6 and 2.7? What number is halfway between 2.6 and 2.61?', a: '2.65 and 2.605' },
       { q: 'Mystery decimal. I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', a: '4.687 (rounds to 4.7, so tenths 6 or 7; tenths 7 would make hundredths 9, 4.79…, too big; so 4.68_ and 4 + 6 + 8 + 7 = 25).' },
@@ -160,3 +160,34 @@ module.exports = {
     H.sub('b', 'Ali takes 2 cans out of the box. What is the mass of the box and cans now?   ________ kg')
   ]
 };
+
+// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+module.exports.gaps = {
+ "idea": "decimals",
+ "check": [
+  {
+   "q": "Which is bigger, 0.8 or 0.75? Explain how you know.",
+   "a": "0.8. It has 8 tenths and 0.75 has only 7 tenths (0.8 = 0.80). More digits does not mean bigger."
+  },
+  {
+   "q": "Write a decimal that is between 3.4 and 3.5. How do you know it fits?",
+   "a": "Any decimal from 3.401 to 3.499, for example 3.45. Write 3.4 as 3.40 and 3.5 as 3.50: 3.45 is between them."
+  }
+ ],
+ "why": "Line up the decimal points and compare place by place. Write extra zeros so every number has the same number of places.",
+ "invest": {
+  "kind": "Is it always true? Test and explain.",
+  "head": "Between two decimals",
+  "intro": "Siti says: \"There is no decimal between 0.35 and 0.36, because they are next to each other.\"",
+  "parts": [
+   "Find a decimal between 0.35 and 0.36. Write it.",
+   "Find as many decimals with 3 decimal places as you can between 0.35 and 0.36. Write them in order. How many are there?",
+   "Is Siti right? Can you find a decimal between 0.35 and your smallest one? What do you think happens if you keep going?"
+  ],
+  "lines": 4,
+  "key": "(a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare."
+ },
+ "reflect": "The hardest part for me was comparing decimals with different numbers of digits. I got unstuck by adding zeros so they had the same length."
+};
+module.exports.lesson.key.push(['Warm-up check', "(a) 0.8. It has 8 tenths and 0.75 has only 7 tenths (0.8 = 0.80). More digits does not mean bigger. (b) Any decimal from 3.401 to 3.499, for example 3.45. Write 3.4 as 3.40 and 3.5 as 3.50: 3.45 is between them."]);
+module.exports.lesson.key.push(['Open investigation', "Between two decimals. (a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare."]);

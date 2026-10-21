@@ -176,3 +176,34 @@ module.exports = {
     return W;
   }
 };
+
+// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+module.exports.gaps = {
+ "idea": "fractions",
+ "check": [
+  {
+   "q": "A recipe needs 9/4 cups of flour. Ali only has a 1-cup scoop. How many full scoops does he fill, and what part of a scoop is left to add?",
+   "a": "2 full scoops and 1/4 of a scoop (9/4 = 2 1/4)."
+  },
+  {
+   "q": "Which is bigger, 3/8 or 3/5? Explain how you know.",
+   "a": "3/5. Both have 3 pieces, but fifths are bigger pieces than eighths, so 3 fifths is more than 3 eighths."
+  }
+ ],
+ "why": "The denominator tells how big the pieces are: more pieces in the whole means smaller pieces. Compare pieces, or make the denominators the same.",
+ "invest": {
+  "kind": "What if we change ...? What stays the same?",
+  "head": "Sharing 24 stickers",
+  "intro": "Mei has 24 stickers. She gives 1/4 of them to Ali. That is 6 stickers. What if she gives a different fraction?",
+  "parts": [
+   "How many stickers does she give if she gives 1/2? ______   1/3? ______   1/6? ______   1/8? ______   1/5? ______  What do you notice about 1/5?",
+   "Which of 1/2, 1/3, 1/4, 1/5 … up to 1/12 of 24 stickers give a whole number of stickers? List ALL of them.",
+   "Mei gets more stickers. What is the smallest number of stickers so that 1/2, 1/3, 1/4, 1/5 AND 1/6 of them are all whole numbers?"
+  ],
+  "lines": 4,
+  "key": "(a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1."
+ },
+ "reflect": "The hardest part for me was comparing 3/8 and 3/5. I got unstuck by drawing two fraction bars."
+};
+module.exports.lesson.key.push(['Warm-up check', "(a) 2 full scoops and 1/4 of a scoop (9/4 = 2 1/4). (b) 3/5. Both have 3 pieces, but fifths are bigger pieces than eighths, so 3 fifths is more than 3 eighths."]);
+module.exports.lesson.key.push(['Open investigation', "Sharing 24 stickers. (a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1."]);

@@ -245,7 +245,7 @@ put('p3l6-teachbetween',sec('p3l6-teachbetween','58–59 MIN',body,
 SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
- [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','★ If time: ALL the twelfths between one half and three quarters.')],
+ [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','If time: ALL the twelfths between one half and three quarters.')],
  'Finished early? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
