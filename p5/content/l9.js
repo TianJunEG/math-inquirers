@@ -70,9 +70,9 @@ module.exports = {
     extension: 'A square grid of matchsticks: a 1 by 1 grid uses 4 sticks, a 2 by 2 grid uses 12 sticks. How many sticks for a 3 by 3 grid? A 10 by 10 grid? (24 and 220: a 10 by 10 grid has 11 rows of 10 sticks across and 11 columns of 10 sticks down.)',
     key: [
       ['Q1', '(a) 10, 12; 10 tables: 22 chairs  (b) Number of chairs = 2 × number of tables + 2  (c) 24 tables (2 × 24 + 2 = 50)  (d) No. 20 tables seat 2 × 20 + 2 = 42, not 44. Doubling counts the 2 end chairs twice.'],
-      ['Q2', '(a) 5 sticks: the new house shares a wall with the house before  (b) Number of sticks = 5 × number of houses + 1  (c) 101 sticks  (d) 39 houses (5 × 39 + 1 = 196 sticks), with 4 sticks left over'],
+      ['Q2', '(a) 5 sticks: the new house shares a wall with the house before  (b) Number of sticks = 5 × number of houses + 1; 20 houses need 101 sticks  (c) 39 houses (5 × 39 + 1 = 196 sticks), with 4 sticks left over'],
       ['Q3', '8 adult tickets and 7 child tickets (8 × $12 + 7 × $7 = $96 + $49 = $145). Each adult ticket in place of a child ticket adds $5.'],
-      ['Q4', '(a) $6.00  (b) 30¢  (c) 14 fifty-cent coins (and 16 twenty-cent coins). $10.20 − $6.00 = $4.20; $4.20 ÷ 30¢ = 14. Check: $7.00 + $3.20 = $10.20.'],
+      ['Q4', '(a) $6.00; up by 30¢  (b) 14 fifty-cent coins (and 16 twenty-cent coins). $10.20 − $6.00 = $4.20; $4.20 ÷ 30¢ = 14. Check: $7.00 + $3.20 = $10.20.'],
       ['Q5', '(a) 15 correct (all correct would be 100 marks; each wrong answer costs 5 + 2 = 7 marks; 100 − 65 = 35, 35 ÷ 7 = 5 wrong). Check: 75 − 10 = 65.  (b) Every score is 100 take away a number of 7s (100, 93, 86, 79, …). 100 − 80 = 20 is not a multiple of 7, so 80 is impossible.']
     ]
   },

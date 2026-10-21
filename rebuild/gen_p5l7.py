@@ -169,8 +169,6 @@ body+=pin(128,350,1664,svgwrap(1030,190,'Two bars: a 15 dollar bar, and a 30 dol
 body+=step(1,'Up: the change is $15. The ORIGINAL price is $15.  $15 out of $15 = 100% increase.',top=570,size=32)
 body+=step(2,'Down: the change is $15. The ORIGINAL price is now $30.  $15 out of $30 = 50% decrease.',top=670,size=32)
 body+=soft(128,780,1664,'Same $15 change, different percentages: each is compared with the amount you START from.',32,'fade')
-put('p5l7-teachchange',sec('p5l7-teachchange','56–58 MIN','Teach before worksheet page 2 (Q5 is a price that goes up and back down). Draw the two bars: $15 and $30. Click 1: the rise is $15, the starting price is $15, so $15 out of $15 is the whole thing again: 100% increase (doubling is a 100% increase, not 200%). Click 2: the fall is $15, but now the starting price is $30. $15 out of $30 is half: 50%. '
- 'Say: "Percentage change = the change out of the starting amount." Ask: "Why are the two percentages not the same, when both changes are $15?" (a different starting amount each time). Write the formula in words, not letters: change ÷ original × 100%. Do not use $4 and $5: that is on the worksheet.'.replace('Teach before worksheet page 2 (Q5 is a price that goes up and back down).','Teach before worksheet page 2 (Q5 is a price that goes up and back down).'),)) if False else None
 put('p5l7-teachchange',sec('p5l7-teachchange','56–58 MIN',body,'Teach before worksheet page 2 (Q5 is a price that goes up and back down). Draw the two bars: $15 and $30. Click 1: the rise is $15, the starting price is $15, so $15 out of $15 is the whole thing again: 100% increase (doubling is a 100% increase, not 200%). Click 2: the fall is $15, but now the starting price is $30. $15 out of $30 is half: 50%. '
  'Say in words: "The percentage change is the change out of the STARTING amount." Ask: "Why are the two percentages not the same, when both changes are $15?" (the starting amount is different each time).'))
 
@@ -203,22 +201,18 @@ put('p5l7-ws2ans',checks('p5l7-ws2ans','67–69 MIN','Page 2: check together',[(
 
 # ---------- stretch / challenge ----------
 st=[('1.','A $90 jacket is 10% off. Then the sale price is a further 10% off. What do you pay? Is it the same as 20% off?'),('2.','A jar has 60 sweets. 25% are red. 40% of the REST are green. How many are green?'),('3.','A $80 bag goes up by 50%, then down by 50%. What is the final price?')]
-put('p5l7-stretch',sec('p5l7-stretch','For early finishers',h2('Stretch')+numcards(st),'Answers: 1) $81. 10% of $90 = $9 off, $81; then 10% of $81 = $8.10 off, $72.90. Wait: a further 10% off the $81 sale price gives $72.90, which is NOT the same as 20% off ($72). Final answer: $72.90 (not $72, because the second 10% is of $81). '
+put('p5l7-stretch',sec('p5l7-stretch','For early finishers',h2('Stretch')+numcards(st),'Answers: 1) $72.90. 10% of $90 = $9 off, so $81; then 10% of $81 = $8.10 off, so $72.90. It is NOT the same as 20% off ($72), because the second 10% is of $81, not of $90. '
  '2) 18 green. Red: 25% of 60 = 15. Rest: 45. 40% of 45 = 18. 3) $60. Up 50%: $80 + $40 = $120. Down 50% of $120 = $60 off, so $60.'))
 ch=[('1.','A price tag says $109, GST included. Ali says the GST is 9% of $109, which is $9.81. Is he right? How much GST is in the price?'),('2.','Mrs Tan spent 40% of her money on groceries and 25% of the remaining money on a gift. She had $54 left. How much money did she have at first?')]
 put('p5l7-challenge',sec('p5l7-challenge','65–80 MIN',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q7 (Q6, the two lamp shops, is only in the workbook). Answers: 1) No. $109 is 109% of the price before GST, so 1% = $1 and the price before GST was $100. The GST is $9, not $9.81. 2) $120. Work backwards: $54 is 75% of the money left after groceries, so that was $72; $72 is 60% of her money, so 10% is $12 and 100% is $120.'))
 # chdiag
-g1=bar(20,70,800,80,109,{}, None,0).replace('stroke-width="0"','stroke-width="0"')
 g1=rect(20,70,640,80,SKY,NAVY,4)+txt(340,122,'price before GST = 100%',30)+rect(660,70,58,80,YEL,NAVY,4)+txt(689,60,'GST 9%',28,TEAL)
 g1+=f'<path d="M20 52 V40 H718 V52" fill="none" stroke="{NAVY}" stroke-width="3"/>'+txt(369,30,'$109 = 109%',34,NAVY)
 g1+=txt(369,200,'1% of the price before GST = ?',32,TEAL,'middle',700,'Nunito Sans, Arial')
-pw=60
-g2=bar(20,60,6*0+4*100,0,1)  # placeholder, replaced below
 g2=''
 for i in range(10): g2+=rect(20+i*72,60,72,70,YEL if i<4 else WHITE,NAVY,4)
 g2+=txt(20+2*72,105,'groceries',26)+txt(20+4*72+3*72,105,'money left = 60% of all',26)
 g2+=f'<path d="M20 148 V160 H{20+4*72-4}" fill="none" stroke="{TEAL}" stroke-width="3"/>'
-g2+=''.join(rect(20+(4+j)*72*1.5,180,108,66,SKY if j else YEL,NAVY,4)+txt(20+(4+j)*72*1.5+54,222,'$?' if False else ('gift' if j==0 else '$54 left'),26) for j in range(0))
 # remainder split in 4 equal sub-parts
 x0=20+4*72; wrem=6*72
 for j in range(4): g2+=rect(x0+j*wrem/4,190,wrem/4,70,YEL if j==0 else SKY,NAVY,4)
@@ -239,7 +233,7 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Which is better for the 
 put('p5l7-talk',sec('p5l7-talk','70–80 MIN',body,'Minutes 70 to 80. Pairs try it with $100 for 2 minutes, then share. Answer: it is exactly the same. GST first: $109, then 20% off ($21.80) is $87.20. Discount first: $80, then 9% GST ($7.20) is $87.20. Each change is a multiplication, and the order of multiplying does not matter. '
  'Second question if time: Mei says "20% off and then 9% GST is the same as 11% off." Is she right? (No: 11% off $100 would be $89, but the real price is $87.20, because the GST is on the smaller sale price.) Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A $30 toy is sold at 20% off. Then 9% GST is added to the sale price. How much do you pay?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p5l7-exit',sec('p5l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: $26.16. 20% of $30 = $6, sale price $24. 9% of $24: 10% = $2.40, 1% = $0.24, so 9% = $2.16. $24 + $2.16 = $26.16. Extension: a shop raises every price by 25%, then has a "20% off everything" sale. Is the sale price more than, less than or the same as the old price? Try $40, $100 and $64. (The same: up 25% then down 20% always gives back the old price.) Wait: check with $100: $125, 20% off is $100. Yes the same!'))
+put('p5l7-exit',sec('p5l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: $26.16. 20% of $30 = $6, sale price $24. 9% of $24: 10% = $2.40, 1% = $0.24, so 9% = $2.16. $24 + $2.16 = $26.16. Extension: a shop raises every price by 25%, then has a "20% off everything" sale. Is the sale price more than, less than or the same as the old price? Try $40, $100 and $64. (The same: up 25% then down 20% always gives back the old price. $40 to $50 to $40; $100 to $125 to $100; $64 to $80 to $64. Siti on the worksheet fell for the opposite trap: it is NOT the same as up 5%.)'))
 
 # ---------- write ----------
 order=['p5l7-title','p5l7-warm1','p5l7-warm2','p5l7-explore1','p5l7-explore2','p5l7-teach1','p5l7-we1','p5l7-try1','p5l7-we2','p5l7-try2','p5l7-key','p5l7-break','p5l7-ws1','p5l7-ws1ans','p5l7-teachrem','p5l7-teachchange','p5l7-teachtable','p5l7-teachdeal','p5l7-ws2','p5l7-ws2ans','p5l7-stretch','p5l7-challenge','p5l7-chdiag','p5l7-chwalk','p5l7-talk','p5l7-exit']
