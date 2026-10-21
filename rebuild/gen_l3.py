@@ -117,12 +117,28 @@ put('l3-ws2ans',check_slide('l3-ws2ans','66–68 MIN','Page 2: check together',[
 st=[('1.','Key: ● = 2 children.  Apple ●●●,  Banana ●●●●●,  Orange ●●.  How many more chose banana than orange?'),('2.','25 children voted: apple 8, banana 6, grape 4, and the rest chose orange. Draw the orange row. Which fruit won?'),('3.','The key is missing. Apple has 4 pictures and 12 children chose apple. Banana has 3 pictures. How many chose banana?')]
 put('l3-stretch',sec('l3-stretch','For early finishers',h2('Stretch')+''.join(card(p(f'<span style="color:#1F7A6F">{a}</span>  {E(b)}',38,600,raw=True)) for a,b in st),'For children who finish early. Answers: 1) 6 more. Banana 2, 4, 6, 8, 10 children; orange 2, 4 children; 10 − 4 = 6 (or: 3 extra pictures, count in 2s: 2, 4, 6). 2) Orange 7 (8 + 6 + 4 = 18, count on from 18 to 25: 7). Apple wins with 8. 3) 9. Count in 3s: 3, 6, 9, 12 is 4 pictures, so 1 picture = 3 children. Banana: 3, 6, 9.'))
 
-# ---- challenge walk-through ----
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: draw bars',38,800,TEAL))
-for i,(t,bg) in enumerate([('Apple has 6, so 24 − 6 = 18 for banana and orange.',WHITE),('Orange is 2 banana bars. So 3 equal bars make 18.',WHITE),('Try banana 5: 5 + 10 = 15 ✗.  Try 6: 6 + 12 = 18 ✓',WHITE),('Banana 6, orange 12',YEL)]): body+=pin(128,330+i*130,800,p(t,32),'rise',bg)
-body+=pin(992,250,800,p('Q2: count in 4s',38,800,TEAL))
-for i,(t,bg) in enumerate([('4, 8, 12 … 40 is 10 counts: 10 pictures in all.',WHITE),('A has 3. B has 3 + 2 = 5. Together: 8 pictures.',WHITE),('C has 10 − 8 = 2 pictures: 4, 8.',WHITE),('C: 8 children',YEL)]): body+=pin(992,330+i*130,800,p(t,32),'rise',bg)
-put('l3-chwalk',sec('l3-chwalk','Challenge',body,'Use after pairs have tried. Q1: draw one bar for banana and two of the same bars for orange; together the three bars are 18. Guess and check is fine: banana 6 and orange 12 make 18, and 6 + 6 + 12 = 24. Q2: check with children: A 12 children, B 20 children, C 8 children, and 12 + 20 + 8 = 40.'))
+# ---- challenge (rewritten for the audit: Q1 "6 more", Q2 key of 2) ----
+ch=[('1.','24 children voted. Apple got 6 votes. Orange got 6 more votes than banana. How many votes did banana and orange get?'),('2.','1 picture = 2 children. 20 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?')]
+put('l3-challenge',sec('l3-challenge','Optional: if you finish early',h2('Challenge')+''.join(card(p(f'<span style="color:#1F7A6F">{a}</span>  {E(b)}',34,600,raw=True)) for a,b in ch),'Use as a pair challenge or in talk time. Ask for the reason every time. More are in the question bank. Answers: 1) Banana 6 and orange 12.  2) 4 children (20 children is 10 pictures in all; A 3 + B 5 = 8, so C has 2 pictures = 4 children).'))
+def bar(x,y,w,col,lab,h=70,q=False):
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{col}" stroke="{NAVY}" stroke-width="4"/>'
+            f'<text x="{x+w/2}" y="{y+h/2+11}" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{E(lab)}</text>')
+u=50
+q1=f'<svg aria-label="Bars: apple 6, banana a mystery, orange the banana bar plus 6" viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" style="width:700px;height:289px">'
+q1+=f'<text x="0" y="52" font-size="30" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">Apple</text>'+bar(150,10,6*u,RED,'6')
+q1+=f'<text x="0" y="152" font-size="30" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">Banana</text>'+bar(150,110,6*u,BLUE,'?')
+q1+=f'<text x="0" y="252" font-size="30" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">Orange</text>'+bar(150,210,6*u,GOLD,'?')+bar(150+6*u,210,6*u,'#FFFFFF','6 more')
+q1+='</svg>'
+G5=[('A',3,RED),('B',5,BLUE),('C',0,GRN)]
+q2=graph(G5,w=700,lw=110,cell=52,rh=70,extra={2:'?'})
+body=h2('Challenge: see it')+'<div style="display:flex;gap:32px;align-items:flex-start">'+card(p('Q1: Votes as bars',28,700,TEAL)+q1)+card(p('Q2: A picture graph, key: ● = 2 children',28,700,TEAL)+q2)+'</div>'
+put('l3-chdiag',sec('l3-chdiag','Optional: if you finish early',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Q1: orange is the banana bar plus 6 more. Q2: A has 3 dots, B has 2 more than A, and C is the part we do not know. Ask: What do you notice? What do we know? What do we not know yet? Can you draw it? Answers are in the Challenge slide notes.'))
+
+body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: take away the extra 6',38,800,TEAL))
+for i,(t,bg) in enumerate([('Apple has 6, so 24 − 6 = 18 for banana and orange.',WHITE),('Orange has 6 more than banana. Take away the extra 6: 18 − 6 = 12.',WHITE),('Share 12 equally: banana 6. Give orange the 6 back: 12.',WHITE),('Banana 6, orange 12.  Check: 6 + 6 + 12 = 24 ✓',YEL)]): body+=pin(128,330+i*130,800,p(t,32),'rise',bg)
+body+=pin(992,250,800,p('Q2: count in 2s',38,800,TEAL))
+for i,(t,bg) in enumerate([('2, 4, 6 … 20 is 10 counts: 10 pictures in all.',WHITE),('A has 3. B has 3 + 2 = 5. Together: 8 pictures.',WHITE),('C has 10 − 8 = 2 pictures: 2, 4.',WHITE),('C: 4 children',YEL)]): body+=pin(992,330+i*130,800,p(t,32),'rise',bg)
+put('l3-chwalk',sec('l3-chwalk','Optional: if you finish early',body,'Use after pairs have tried. Q1: guess and check is fine: banana 6 and orange 12 make 18, and 6 + 6 + 12 = 24. Or take the extra 6 away and share the rest. Q2: A 6 children, B 10 children, C 4 children, and 6 + 10 + 4 = 20.'))
 
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 for old in ['l3-mini1','l3-mini2']:
@@ -134,3 +150,5 @@ deck['order']=['l3-title','l3-warm1','l3-warm2','l3-explore1','l3-explore2','l3-
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l3-title'},'s2':{'description':'Teach: read the key, compare, keys of 2 and 3, missing rows','start':'l3-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l3-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l3-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides')
+
+import p1fix; p1fix.finish(D,3,{'l3-ws2':'58–68 MIN'})

@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T17:16:40Z"
+  "at": "2026-10-21T18:17:50Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 7 – Turtle Geometry",
@@ -10,6 +10,7 @@
   "p6l7-title",
   "p6l7-warm1",
   "p6l7-warm2",
+  "p6l7-setup",
   "p6l7-explore1",
   "p6l7-explore2",
   "p6l7-teach1",

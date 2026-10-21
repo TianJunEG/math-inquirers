@@ -216,7 +216,7 @@ module.exports = {
     W.push(H.sub('b', 'With repeat 100, what is the last number? Explain without running it.'));
     W.push(...H.lines(1));
     // Q5 plan
-    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …  (say … for 1 seconds shows each term in turn; a plain say would only leave the last one on screen.)', { keepNext: true }));
+    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
     { const pal = ps => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + ps.map(([p, i]) => blocks(p, 'Block ' + i, 14).replace('max-width:100%', 'flex:none')).join('') + '</div>';
       W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n) for (1) seconds']], 5]]) + '</div>', 4300,
         ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:150px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }

@@ -47,7 +47,7 @@ const titled = (t, x) => tx(x, 18, t, 16);
 
 const DAYS7 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const juiceSvg = () => svg(600, 200, titled('Cups of sugarcane juice sold each day', 300) +
-  graph({ x: 0, y: 22, w: 600, h: 178, xl: DAYS7, y0: 0, y1: 80, step: 10, lab: 10, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
+  graph({ x: 0, y: 22, w: 600, h: 178, xl: DAYS7, y0: 0, y1: 80, step: 5, lab: 10, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
   'Line graph of cups of sugarcane juice sold: Monday 40, Tuesday 55, Wednesday 50, Thursday 75, Friday 65, Saturday 25, Sunday 30');
 const moneySvg = () => svg(600, 196, titled('Money in each money box at the end of each week', 300) +
   graph({ x: 0, y: 22, w: 600, h: 174, xl: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4', 'Wk 5', 'Wk 6'], y0: 0, y1: 60, step: 5, lab: 10, yt: 'Money ($)', legend: true,
@@ -130,13 +130,13 @@ module.exports = {
       { q: 'Three days of sales add up to 90. Day 1 is 30 and Day 2 is 25. What is Day 3?', a: '35' }
     ],
     stretch: [
-      { q: 'Visitors to a museum: Monday 120, Tuesday 95, Wednesday 140, Thursday 110. Between which two days was the biggest change? Was it an increase or a decrease?', a: 'Tuesday to Wednesday: an increase of 45. (The other changes are down 25 and down 30.)' },
+      { q: 'A table shows that Class 4A has 28 boys and 6 more girls than boys. Class 4B has 63 pupils, with 5 more girls than boys. Which class has more girls?', a: 'Neither: both have 34 girls. (4A: 28 + 6 = 34. 4B: 63 − 5 = 58, 58 ÷ 2 = 29 boys, 29 + 5 = 34 girls.)' },
       { q: 'On a line graph each line on the scale is worth 20. A point is 3 lines above the 40 line. What number does it show?', a: '100 (40 + 20 + 20 + 20)' },
       { q: 'A shop sold 300 kites in 4 days. Day 1: 65, Day 2: 80, Day 4: 90. How many kites were sold on Day 3?', a: '65 (300 − 65 − 80 − 90)' },
       { q: 'Ali’s height: age 7, 120 cm; age 8, 127 cm; age 9, 131 cm; age 10, 137 cm. In which year did he grow the most? How much did he grow altogether from age 7 to age 10?', a: 'From age 7 to 8 (7 cm). Altogether 17 cm.' },
       { q: 'Shop A sold 30, 35, 40 and 45 cakes in weeks 1 to 4. Shop B sold 50, 48, 46 and 44 cakes. In which week did Shop A first sell more than Shop B?', a: 'Week 4 (45 is more than 44).' },
       { q: 'A graph’s scale starts at 40. Mei says a point at 60 is "double" a point at 50 because it is twice as high on the graph. Is she right? Explain.', a: 'No. 60 is only 10 more than 50. It looks twice as high because 50 is 10 above the bottom (40) and 60 is 20 above it.' },
-      { q: 'A table shows that Class 4A has 28 boys and 6 more girls than boys. Class 4B has 63 pupils, with 5 more girls than boys. Which class has more girls?', a: 'Neither: both have 34 girls. (4A: 28 + 6 = 34. 4B: 63 − 5 = 58, 58 ÷ 2 = 29 boys, 29 + 5 = 34 girls.)' },
+      { q: 'Visitors to a museum: Monday 120, Tuesday 95, Wednesday 140, Thursday 110. Between which two days was the biggest change? Was it an increase or a decrease?', a: 'Tuesday to Wednesday: an increase of 45. (The other changes are down 25 and down 30.)' },
       { q: 'The temperature went up by 2 °C every hour from 8 am to 1 pm. At 1 pm it was 33 °C. What was the temperature at 8 am?', a: '23 °C (5 hours, so 10 °C less)' }
     ],
     challenge: [

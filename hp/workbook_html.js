@@ -10,16 +10,17 @@ const hdr = (n, topic, title, pb = true) => [
 ];
 
 const QB = require('./qbank.json');
+const NL = () => new TextRun('<br>');
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
-  out.push(p(t('Use objects, draw a picture or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
+  out.push(p(t('Use objects, draw a picture or make a table. Then write how you know. These pages are for early finishers or for home.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner('Stretch'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('T' + (i + 1), x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q('C' + (i + 1), x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
   return out;
 };
 const stamps=L.lessons.map(ls=>`<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');
@@ -125,7 +126,7 @@ W.push(sub('b', 'What shape will be in place 12?   ____________________'));
 W.push(sub('c', 'Without drawing, what shape will be in place 30?   ____________________'));
 W.push(sub('d', 'How do you know?'));
 W.push(...lines(2));
-W.push(q(3, 'Ben makes a row of triangles with matchsticks.', { keepNext: true, pb: true, before: 0 }));
+W.push(q(3, 'Ben makes a row of triangles with sticks.', { keepNext: true, pb: true, before: 0 }));
 W.push(img('sticks.png', 620, 127));
 W.push(sub('a', 'Count the sticks. Fill in the table. Keep going until you reach 10 triangles.'));
 { const ws = [CW - 7600, ...Array(10).fill(760)]; const vals = { 1: '3', 2: '5', 3: '7' };
@@ -197,15 +198,9 @@ W.push(...lines(6));
 W.push(q(3, 'Mei wants to pay exactly 85¢ using 5¢, 10¢, 20¢ and 50¢ coins.', { before: 240, keepNext: true }));
 W.push(sub('a', 'What is the smallest number of coins she can use? Which coins are they?')); W.push(ans());
 W.push(sub('b', 'Find a different way that uses exactly 6 coins.')); W.push(ans());
-W.push(q(4, 'Ben has 4 coins. They are worth 70¢ altogether. Find ALL the sets of 4 coins he could have.'));
-W.push(...lines(3));
-W.push(q(5, 'Can Ben make 35¢ using only 2 coins? Explain your answer.'));
+W.push(q(4, 'Can Ben make 35¢ using only 2 coins? Explain your answer.'));
 W.push(...lines(2));
-W.push(q(6, 'Sam has only 10¢ and 20¢ coins. He pays exactly 90¢ using 6 coins.', { keepNext: true }));
-W.push(sub('a', 'How many of each coin does he use?')); W.push(ans());
-W.push(sub('b', 'Can Sam pay 90¢ using exactly 4 coins? Explain.'));
-W.push(...lines(2));
-W.push(q(7, 'Dollars! We also have $1 coins and $2, $5, $10 and $50 notes.', { keepNext: true }));
+W.push(q(5, 'Dollars! We also have $1 coins and $2, $5, $10 and $50 notes.', { keepNext: true }));
 W.push(sub('a', 'A toy costs $17. Pay exactly with the fewest notes and coins.')); W.push(ans());
 W.push(sub('b', 'Show 3 different ways to pay exactly $20.'));
 W.push(...lines(3));
@@ -222,20 +217,23 @@ W.push(gap(40));
 W.push(sub('a', 'Which shape is there the most of?   ____________      (b)  How many shapes altogether?   ____'));
 W.push(q(2, 'Sides and corners. Fill in the table.', { keepNext: true }));
 { const ws = [3300, 3300, 3300]; const rs = [['Circle', '0', '0'], ['Triangle', '3', '3'], ['Square', '', ''], ['Pentagon', '', ''], ['Hexagon', '', ''], ['Octagon', '', '']];
-  W.push(tbl(ws, [row(['Shape', 'Sides', 'Corners'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED' }))), ...rs.map(r => row(r.map((s, i) => cell(s, ws[i], { h: 50, bold: i === 0, size: 22 }))))])); }
+  W.push(tbl(ws, [row(['Shape', 'Straight sides', 'Corners'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED' }))), ...rs.map(r => row(r.map((s, i) => cell(s, ws[i], { h: 50, bold: i === 0, size: 22 }))))])); }
 W.push(gap(60));
 W.push(sub('a', 'What do you notice about the number of sides and corners?  ______________________'));
 W.push(sub('b', 'A shape has 7 sides. How many corners does it have?   ____'));
 W.push(q(3, 'Who am I?', { pb: true, before: 0 }));
-W.push(sub('a', 'I have 4 sides. All my sides are the same length. I have 4 corners.   ____________'));
+W.push(sub('a', 'I have 4 sides, all the same length, and 4 square corners.   ____________'));
 W.push(sub('b', 'I have no corners and no straight sides.   ____________'));
 W.push(sub('c', 'I have 6 sides.   ____________'));
 W.push(q(4, 'How many triangles can you find in each picture? Count the small ones first, then the bigger ones.', { keepNext: true }));
 W.push(img('trifigs.png', 560, 131));
 W.push(p([t('A: ____          B: ____          C: ____', { bold: true })], { indent: { left: 1000 }, after: 100 }));
 W.push(q(5, 'Two triangles of the same size are put together along one side. Draw one shape you can make. What is it called?'));
-W.push(...lines(6));
+W.push(...lines(4));
 W.push(p([t('Shape name: ____________________', { bold: true })], { indent: { left: 560 }, before: 120 }));
+W.push(q(6, 'How many squares can you find in this picture? Count the small ones first, then the bigger one.', { keepNext: true }));
+W.push(img('grid2x2.png', 220, 132));
+W.push(ans('Number of squares:', 1000));
 
 /* ---------- LESSON 8 ---------- */
 W.push(...extra(7));
@@ -243,10 +241,11 @@ W.push(...hdr(8, 'Logic and Sorting', 'LOGIC LAB'));
 W.push(q(1, 'Put them in order using the clues.', { before: 40 }));
 W.push(sub('a', 'Ali is taller than Ben. Ben is taller than Mei.   Tallest: ________   Shortest: ________'));
 W.push(sub('b', 'The cat is heavier than the dog. The hen is lighter than the dog.   Heaviest: ________   Lightest: ________'));
-W.push(sub('c', 'The red ribbon is longer than the blue one. The green one is shorter than the blue one. The yellow one is longer than the red one. Write them from longest to shortest:'));
+W.push(sub('c', [t('The red ribbon is longer than the blue one.'), NL(), t('The green one is shorter than the blue one.'), NL(), t('The yellow one is longer than the red one.'), NL(), t('Write them from longest to shortest:')]));
 W.push(p([t('______________,  ______________,  ______________,  ______________')], { indent: { left: 1000 }, after: 100 }));
-W.push(q(2, 'Write each number from 1 to 10 in the right place in the Venn diagram.', { keepNext: true }));
-W.push(img('venn.png', 480, 269));
+W.push(q(2, 'Write each number from 1 to 10 in the right place in the two-loop picture.', { keepNext: true }));
+W.push(p([t('Odd numbers end in 1, 3, 5, 7 or 9. Even numbers end in 0, 2, 4, 6 or 8.', { italics: true })], { indent: { left: 560 }, after: 60, keepNext: true }));
+W.push(img('venn.png', 420, 235));
 W.push(sub('a', 'Numbers that are in BOTH circles: ____________________'));
 W.push(sub('b', 'Why do those numbers belong in the middle?'));
 W.push(...lines(2));
@@ -257,7 +256,7 @@ W.push(p([t('Put a tick where it fits and a cross where it cannot.', { italics: 
 W.push(tbl([2400, 2300, 2300, 2300], [row(['', 'Cat', 'Dog', 'Fish'].map((s, i) => cell(s, i ? 2300 : 2400, { bold: true, fill: 'EDEDED' }))), ...['Ali', 'Mei', 'Ben'].map(n => row([cell(n, 2400, { bold: true, h: 150 }), cell('', 2300), cell('', 2300), cell('', 2300)]))]));
 W.push(p([t('Ali has the ______.   Mei has the ______.   Ben has the ______.', { bold: true })], { indent: { left: 560 }, before: 120, after: 100 }));
 W.push(q(4, 'Four children stand in a line: Ali, Ben, Mei and Sam.', { keepNext: true }));
-W.push(p('Mei is first. Ben is behind Ali. Sam is behind Ben. Where does each child stand?', { indent: { left: 560 }, after: 80 }));
+W.push(p('Mei is first. Ali is in front of Ben. Ben is in front of Sam. Where does each child stand?', { indent: { left: 560 }, after: 80 }));
 W.push(tbl([2475, 2475, 2475, 2475], [row(['1st', '2nd', '3rd', '4th'].map(s => cell(s, 2475, { bold: true, fill: 'EDEDED' }))), row(['', '', '', ''].map(s => cell(s, 2475, { h: 150 })))]));
 W.push(q(5, 'Number riddles. Who am I?', { before: 200, keepNext: true }));
 W.push(sub('a', 'I am between 10 and 20. I am odd. When you count in 5s, you say me.   ____'));
@@ -276,8 +275,8 @@ W.push(sub('a', 'Which ribbon is the longest?   ____       (b)  Which is the sho
 W.push(sub('c', 'How many squares longer is ribbon A than ribbon B?   ____'));
 W.push(sub('d', 'Ribbon A and ribbon B are put end to end. How many squares long is that?   ____'));
 W.push(sub('e', 'Ribbon C is cut shorter by 2 squares. Which ribbon is it now the same length as?   ____'));
-W.push(q(2, 'Measure with cubes. Use the paper cube strip from the back of the workbook (or real cubes). Guess first, then measure.', { keepNext: true }));
-W.push(tbl([3300, 2200, 2200, 2200], [row(['Object', 'My guess', 'Measured', 'Difference'].map((s, i) => cell(s, [3300, 2200, 2200, 2200][i], { bold: true, fill: 'EDEDED' }))), ...['A pencil', 'A book', 'A shoe', 'My choice: ____________'].map(n => row([cell(n, 3300, { h: 110, align: AlignmentType.LEFT }), cell('', 2200), cell('', 2200), cell('', 2200)]))]));
+W.push(q(2, 'Measure with cubes. Use the paper cube strip from the back of the workbook (or real cubes). Guess first, then measure. Write how far off your guess was.', { keepNext: true }));
+W.push(tbl([2900, 1900, 1900, 3200], [row(['Object', 'My guess', 'Measured', 'Difference (guess and measure)'].map((s, i) => cell(s, [2900, 1900, 1900, 3200][i], { bold: true, fill: 'EDEDED' }))), ...['A pencil', 'A book', 'A shoe', 'My choice: ____________'].map(n => row([cell(n, 2900, { h: 110, align: AlignmentType.LEFT }), cell('', 1900), cell('', 1900), cell('', 3200)]))]));
 W.push(sub('a', 'Why must every cube be the same size?'));
 W.push(...lines(1));
 W.push(q(3, 'Ali measures a desk with his hand span. It is 6 spans long. Mei measures the same desk with her hand span. It is 8 spans long.', { pb: true, before: 0 }));
@@ -291,8 +290,10 @@ W.push(q(5, 'Mei’s pencil is 8 cubes long. Ali’s pencil is 3 cubes longer th
 W.push(sub('a', 'How long is Ali’s pencil?   ____ cubes'));
 W.push(sub('b', 'How long is Ben’s pencil?   ____ cubes'));
 W.push(sub('c', 'If all three pencils are put end to end, how many cubes long are they?   ____ cubes'));
-W.push(q(6, 'Challenge! Find something at home that is exactly 10 cubes long. What is it?'));
-W.push(...lines(1));
+W.push(q(6, 'Use your ruler.', { keepNext: true }));
+W.push(sub('a', 'A pencil lies from the 0 cm mark to the 12 cm mark. How long is it?   ____ cm'));
+W.push(sub('b', 'A crayon lies from the 3 cm mark to the 8 cm mark. How long is it?   ____ cm'));
+W.push(sub('c', 'Measure your own pencil with your ruler.   ____ cm.   Is it longer or shorter than 10 cm?   ____________'));
 
 /* ---------- LESSON 10 ---------- */
 W.push(...extra(9));
@@ -311,7 +312,7 @@ W.push(q(4, 'You have one 20¢ coin, two 10¢ coins and two 5¢ coins.'));
 W.push(sub('a', 'How much money do you have?   ____'));
 W.push(sub('b', 'Which of your coins make exactly 35¢?   ______________'));
 W.push(q(5, 'Shapes', { keepNext: true, pb: true, before: 0 }));
-W.push(sub('a', 'I have 4 corners and 4 sides all the same length. What am I?   ____________'));
+W.push(sub('a', 'I have 4 sides, all the same length, and 4 square corners. What am I?   ____________'));
 W.push(sub('b', 'How many triangles are in this picture?   ____', { keepNext: true }));
 W.push(img('apex2.png', 270, 162));
 W.push(q(6, 'Ali is older than Ben. Mei is younger than Ben. Who is the youngest?   ____________'));
@@ -327,6 +328,16 @@ W.push(...extra(10));
 /* ---------- APPENDIX: CUT-OUTS ---------- */
 W.push('<div class="brk"></div>');
 W.push(...require('./kit.js')());
+
+/* ---------- LESSON 10 PUZZLE CARDS ---------- */
+{
+  const K = require('./kit.js').parts;
+  const cards = L.lessons[9].cards;
+  const card = (c, i) => `<div style="border:3px dashed #1B2A49;border-radius:14px;padding:26px 24px;min-height:260px;background:#FFFDF5"><div style="font-weight:800;font-size:22px;color:#1F7A6F;letter-spacing:1px;margin-bottom:14px">${i + 1}.&nbsp; ${c.title.toUpperCase()}</div><div style="font-size:22px;line-height:1.45;color:#1B2A49">${c.text.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</div></div>`;
+  W.push('<div class="brk"></div>');
+  W.push(K.H('Puzzle cards', 'For Lesson 10 (Challenge Day). Cut along the dashed lines. Your tutor tells you which card to start with. Show how you know on a whiteboard or on paper.'));
+  W.push(`<div class="p" style="display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:10px">${cards.map(card).join('')}</div>`);
+}
 
 W.push(`<div class="cert pb"><div class="ci"><div class="ct">CERTIFICATE OF COMPLETION</div><div class="cp">${PROG}</div><div class="cs">Primary 1 Holiday Program</div><div class="cl">This certifies that</div><div class="cn"></div><div class="cl">completed all 10 lessons, solved puzzles, spotted patterns and explained their thinking.</div><div class="cq">${SLOGAN}</div><div class="cl">Tutor: ____________________ &nbsp;&nbsp;&nbsp; Date: ________________</div></div></div>`);
 fs.writeFileSync('workbook_body.html', W.join('\n'));

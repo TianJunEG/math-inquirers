@@ -12,7 +12,7 @@ module.exports = {
     explore: 'Four puzzle stations, one for each way in: A guess and check (two next-door numbers multiply to 210), B heads and legs (10 spiders and beetles, 68 legs), C work backwards (double a number, add 7, get 43), D logic (who has the fish?). Pairs solve as many as they can and write how they started.',
     mini: 'Four ways in. Guess and check with a table: next-door numbers multiplying to 342 (try 20 × 21, too big; 17 × 18, too small; 18 × 19 ✓). Suppose they are all the same: 15 bicycles and tricycles with 38 wheels (all bicycles gives 30 wheels, 8 short, each swap adds 1, so 8 tricycles). Work backwards: half, then − $4, leaves $11 (11 + 4 = 15, 15 × 2 = 30). Before page 2: a logic grid with ticks and crosses; draw a queue (5th from the front and 8th from the back is 4 + 1 + 7 = 12); ages (everyone gets older by the same amount, so the total grows by 2 × the years).',
     share: 'Which way in did you use most today? Pick one puzzle and teach it to the group in two sentences.',
-    exit: { q: 'A farm has ducks and goats: 10 heads and 26 legs. How many goats? Show your way in.', a: '3 goats (and 7 ducks). Suppose all ducks: 20 legs, 6 short, each swap adds 2 legs.' },
+    exit: { q: 'A farm has ducks and goats: 12 heads and 34 legs. How many goats? Show your way in.', a: '5 goats (and 7 ducks). Suppose all ducks: 24 legs, 10 short, each swap adds 2 legs, so 5 swaps. Check: 7 × 2 + 5 × 4 = 34.' },
     mistakes: [
       'Guessing at random instead of using a table, so each try does not tell them whether to go up or down.',
       'Working backwards but doing the same operation again (taking away 4 instead of adding 4) or undoing the steps in the wrong order.',
@@ -98,7 +98,7 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.q(1, 'Guess and check. Make a table of your tries.', { before: 40, keepNext: true }));
-    W.push(H.sub('a', 'Two next-door numbers (like 7 and 8) multiply to make 552. What are they?'));
+    W.push(H.sub('a', 'Two consecutive numbers (next-door numbers, like 7 and 8) multiply to make 552. What are they?'));
     W.push(...H.lines(1));
     W.push(H.ans('Answer:'));
     W.push(H.sub('b', 'Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));

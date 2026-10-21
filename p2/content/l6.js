@@ -32,7 +32,7 @@ module.exports = {
     extension: 'Find every way to pay exactly $10 using $5 notes, $2 notes and $1 coins. (There are 10.)',
     key: [
       ['Q1', 'Curry puff $1.65: $1 + 50¢ + 10¢ + 5¢ (4).  Notebook $4.30: $2 + $2 + 20¢ + 10¢ (4).  Umbrella $18.75: $10 + $5 + $2 + $1 + 50¢ + 20¢ + 5¢ (7).  Bicycle $76: $50 + $10 + $10 + $5 + $1 (5).'],
-      ['Q2', '7 ways ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H is spare.  (a) 7 ways  (b) $5 + $1 + $1 + $1, and $2 + $2 + $2 + $2'],
+      ['Q2', '7 ways ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H is spare: tell children "you may not need every row".  (a) 7 ways  (b) $5 + $1 + $1 + $1, and $2 + $2 + $2 + $2'],
       ['Q3', '(a) 35¢  (b) $24 change: $10 + $10 + $2 + $2 (there is no $20 note)'],
       ['Q4', '(a) No. The bag and the cap cost $14 + $8 = $22. She has $20, so she is $2 short.  (b) She spends $17: book and cap ($9 + $8), or bag and pen ($14 + $3). Those are the only two pairs.'],
       ['Q5', '(a) 25¢ + 30¢ + 45¢ = 100¢ = $1.00  (b) $20 ($6 + $4 = $10 is half, $10 + $10 = $20)'],
@@ -56,7 +56,7 @@ module.exports = {
   deck: {
     today: 'Pay exactly with the fewest notes and coins, list every way in order, give change and work backwards with money.',
     warmGame: 'Market Day shop. Six items with price tags from 85¢ to $57.20. Pay exactly with play notes and coins. Who can pay with the fewest pieces?',
-    warmQs: [['Write 345¢ in dollars and cents.', '$3.45'], ['How many cents is $2.05?', '205¢'], ['Which is more: $1.50 or 105¢?', '$1.50 (150¢)'], ['Pay 75¢ with the fewest coins.', '50¢ + 20¢ + 5¢'], ['You have $4.60. The book costs $5. How much more do you need?', '40¢']],
+    warmQs: [['Write 345¢ in dollars and cents.', '$3.45'], ['How many cents is $2.05?', '205¢'], ['Which is more: $1.50 or 105¢?', '$1.50 (150¢)'], ['Pay 75¢ with the fewest coins.', '50¢ + 20¢ + 5¢'], ['You have 60¢. A sticker costs 85¢. How much more do you need?', '25¢']],
     expSetup: ['You have $10. Look at the toy stall: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1.', 'Choose some toys (at most one of each). How much do they cost? How much change do you get?', 'Find every basket that costs EXACTLY $10.', 'Make a list in order so you do not miss one or count one twice.'],
     expPic: 'a toy stall with a kite, a ball, a yo-yo, a tub of bubbles and a sticker, each with a yellow price tag ($6, $4, $3, $2, $1), and a $10 note.',
     expAsk: [['How many baskets cost exactly $10?', '3: kite + ball; kite + yo-yo + sticker; ball + yo-yo + bubbles + sticker.'], ['How do you know you have them all?', 'Start with the kite in the basket, then without the kite, and list in order.'], ['You buy the kite and the bubbles. How much change?', '$10 − $8 = $2.']],

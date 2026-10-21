@@ -94,7 +94,7 @@ module.exports = {
     online: 'Each child folds paper strips on camera; the tutor shows fraction bars on the slides and children colour their own bars.',
     warmup: 'Fair or not fair? Six snacks are cut into parts. Thumbs up if all the parts are the same size, thumbs down if not, and say why.',
     explore: 'Fold paper strips into halves, quarters and eighths, write the fraction on each part, line the strips up and compare. Then try to fold a strip into 3 equal parts.',
-    mini: 'Equal parts come before fraction names; name the shaded and the not-shaded fraction (bottom number: how many equal parts, top number: how many we take); compare unit fractions with bars of the same length (more parts, smaller parts) and like fractions (count the parts). Before page 2: add like fractions on a bar, fair-sharing stories with a bar, line up halves and eighths of the same whole.',
+    mini: 'Equal parts come before fraction names; name the shaded and the not-shaded fraction (bottom number: how many equal parts, top number: how many we take); compare unit fractions with bars of the same length (more parts, smaller parts) and like fractions (count the parts). Before page 2: add like fractions on a bar, fair-sharing stories with a bar, line up halves and eighths of the same whole. Equivalent fractions (1/4 = 2/8) are a P3 topic: they are shown only with lined-up bars, never written as a rule.',
     share: 'Is 1/2 always bigger than 1/4? When could it not be?',
     exit: { q: 'Which is bigger, 1/7 or 1/9? Then work out 2/9 + 5/9.', a: '1/7 (the same whole cut into fewer parts gives bigger parts). 2/9 + 5/9 = 7/9.' },
     mistakes: [
@@ -104,12 +104,12 @@ module.exports = {
     ],
     extension: 'Find all the ways to add two fractions with bottom number 8 to make 1 whole (1/8 + 7/8, 2/8 + 6/8, 3/8 + 5/8, 4/8 + 4/8: 4 ways).',
     key: [
-      ['Q1', 'A, C, E and F are cut into quarters. (a) B or D: their 4 parts are not the same size, so a part is not a quarter.'],
+      ['Q1', 'A, C, E and F are cut into quarters. (a) B or D: their 4 parts are not the same size, so a part is not a quarter. F is the hardest: all four small triangles are the same size, even though the middle one is upside down.'],
       ['Q2', '(a) shaded 3/8, not shaded 5/8  (b) 5/6 and 1/6  (c) 7/10 and 3/10'],
       ['Q3', '(a) 1/3; 7/9  (b) 1/10, 1/5, 1/4, 1/2  (c) No. Cutting the same whole into 6 equal parts makes smaller parts than cutting it into 4, so 1/6 is smaller than 1/4.'],
       ['Q4', '(a) 3/5  (b) 7/8  (c) 9/12  (d) 5/6  (e) 4/10'],
       ['Q5', '(a) 5/8  (b) 3/8  (c) Mei, by 1/8'],
-      ['Q6', 'Siti. The pizzas are the same size and 1 quarter is the same as 2 eighths; 3 eighths is more than 2 eighths.']
+      ['Q6', 'Siti. The pizzas are the same size and one quarter covers 2 eighths on the bars; 3 eighths is more than 2 eighths. (Equivalent fractions are a P3 topic: show this with bars only and do not write 1/4 = 2/8 as a rule.)']
     ]
   },
 
@@ -172,7 +172,7 @@ module.exports = {
       { q: 'Two fractions with bottom number 9 add up to 1 whole. One of them is 3/9 more than the other. What are they?', a: '6/9 and 3/9 (take away the extra 3 ninths: 6 left; share: 3 and 3; give the 3 back: 6 and 3)' },
       { q: 'How many different ways can you add two fractions with bottom number 6 to make 1 whole? Each fraction must be at least 1/6, and 1/6 + 5/6 and 5/6 + 1/6 count as the same way.', a: '3 ways: 1/6 + 5/6, 2/6 + 4/6, 3/6 + 3/6' },
       { q: 'Ali shades 1/3 of a strip of 6 equal squares. How many squares does he shade?', a: '2 squares (split the 6 squares into 3 equal groups of 2; one group is 1/3)' },
-      { q: 'A pizza is cut into 8 equal slices. Ben eats 1/4 of the pizza. How many slices does he eat?', a: '2 slices (2 eighths make 1 quarter)' },
+      { q: 'A pizza is cut into 8 equal slices. Ben eats 1/4 of the pizza. How many slices does he eat?', a: '2 slices (2 eighths make 1 quarter; show it with bars. Equivalent fractions are a P3 idea, so this is a stretch)' },
       { q: 'A cake is cut into 12 equal pieces. Mei gets 4/12. Ali and Ben share the rest, but Ali gets 2/12 more than Ben. What fraction does Ben get?', a: '3/12 (and Ali gets 5/12): 8 pieces are shared; take away Ali\'s extra 2, share 6 as 3 and 3.' },
       { q: 'A paper strip is folded in half, then in half again, then in half again. When you open it, how many equal parts are there? What fraction is each part?', a: '8 equal parts; each is 1/8 (1 fold: 2 parts, 2 folds: 4, 3 folds: 8).' },
       { q: 'Siti eats 1/2 of a pizza. Then Ravi eats 1/2 of what is left. What fraction of the whole pizza is left now?', a: '1/4. After Siti, half is left; Ravi eats half of that half, which is a quarter of the pizza, so a quarter is left.' }
@@ -202,7 +202,7 @@ module.exports = {
     out.push(H.sub('a', R('What fraction of the cake do they eat altogether?   ________')));
     out.push(H.sub('b', R('What fraction of the cake is left?   ________')));
     out.push(H.sub('c', R('Who eats more? How much more?   ____________________')));
-    out.push(H.q(6, 'Ravi and Siti each have a pizza. The pizzas are the same size. Ravi cuts his into 4 equal slices and eats 1 slice. Siti cuts hers into 8 equal slices and eats 3 slices. Who eats more pizza? Colour the bars to show how you know.', { keepNext: true }));
+    out.push(H.q(6, 'Ravi and Siti each have a pizza. The pizzas are the same size. Ravi cuts his into 4 equal slices and eats 1 slice. Siti cuts hers into 8 equal slices and eats 3 slices. Who eats more pizza? Hint: fold or line up the bars; one quarter covers two eighths. Colour the bars to show how you know.', { keepNext: true }));
     out.push(H.fig(q6svg()));
     out.push(H.ans('Who eats more?'));
     out.push(...H.lines(1));

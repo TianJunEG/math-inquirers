@@ -168,7 +168,7 @@ module.exports = {
       W.push(H.tbl(ws, [H.row(['My number', '× 5', '+ 35', '÷ 5', '− my number'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED' }))),
         ...[0, 1].map(() => H.row(ws.map(w => H.cell('', w, { h: 55 }))))])); }
     W.push(H.sub('a', 'What do you notice?  ______________________________'));
-    W.push(H.sub('b', 'Fill in the blanks.  Multiplying by 5 and then dividing by 5 gives back my ________.  The 35 divided by 5 adds ________.  Taking away my number leaves ________.'));
+    W.push(H.sub('b', 'Fill in the blanks.  × 5 then ÷ 5 gives back my _______.  The 35 ÷ 5 adds _______.  Taking away my number leaves _______.'));
     W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 1 236 plates altogether.', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model.'));
     W.push(H.gap(240));

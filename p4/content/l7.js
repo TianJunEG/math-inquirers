@@ -14,23 +14,26 @@ const poly = (x0, y0, c, pts, fill = SKY, sw = 3) => `<polygon points="${pts.map
 const tx = (x, y, s, size = 17, fill = N, anchor = 'middle', weight = 700) => `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="${F}">${s}</text>`;
 const rect = (x0, y0, c, a, b, w, h, fill = SKY, sw = 3) => `<rect x="${x0 + a * c}" y="${y0 + b * c}" width="${w * c}" height="${h * c}" fill="${fill}" stroke="${N}" stroke-width="${sw}"/>`;
 
+// Side-by-side block: question parts on the left, the figure on the right (saves a whole figure height on the printed page)
+const side = (fig, w, inner) => `<div class="p sub" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:4px;padding-left:0"><div style="flex:1;min-width:0">${inner}</div><div style="flex:none;width:${w}px">${fig}</div></div>`;
+
 // Q1: L-shape, 9 cm by 7 cm with a 5 cm by 3 cm piece missing from the top right
 const q1Svg = () => {
-  const c = 16, x0 = 212, y0 = 6, ox = x0 + c, oy = y0 + c;
+  const c = 16, x0 = 46, y0 = 6, ox = x0 + c, oy = y0 + c;
   let s = grid(x0, y0, 11, 9, c) + poly(ox, oy, c, [[0, 0], [4, 0], [4, 3], [9, 3], [9, 7], [0, 7]]);
   s += tx(ox + 2 * c, oy - 6, '4 cm') + tx(ox - 8, oy + 3.5 * c + 6, '7 cm', 17, N, 'end') + tx(ox + 4.5 * c, oy + 7 * c + 18, '9 cm');
   s += tx(ox + 9 * c + 8, oy + 5 * c + 6, '4 cm', 17, N, 'start');
-  s += tx(ox + 6.5 * c, oy + 3 * c - 6, '? cm', 17, RED) + tx(ox + 4 * c + 6, oy + 1.5 * c + 6, '? cm', 17, RED, 'start');
-  return svg(600, 160, 'An L-shaped figure on a 1 cm grid: top 4 cm, left side 7 cm, bottom 9 cm, right side 4 cm, and two step sides marked with question marks', s);
+  s += tx(ox + 6.5 * c, oy + 3 * c - 6, '? cm', 17, RED) + tx(ox + 4 * c + 6, oy + 1 * c + 4, '? cm', 17, RED, 'start');
+  return svg(280, 156, 'An L-shaped figure on a 1 cm grid: top 4 cm, left side 7 cm, bottom 9 cm, right side 4 cm, and two step sides marked with question marks', s);
 };
 // Q3: blank grid to draw on
 const blankGrid = (cols, rows, c, label) => svg(600, rows * c + 8, label, grid((600 - cols * c) / 2, 4, cols, rows, c));
 // Q4: staircase, 11 cm wide and 6 cm high, layers 3, 7, 11 cm long and 2 cm high
 const q4Svg = () => {
-  const c = 18, x0 = 183, y0 = 4, ox = x0 + c, oy = y0;
+  const c = 18, x0 = 50, y0 = 4, ox = x0 + c, oy = y0;
   let s = grid(x0, y0, 13, 7, c) + poly(ox, oy, c, [[0, 0], [3, 0], [3, 2], [7, 2], [7, 4], [11, 4], [11, 6], [0, 6]]);
   s += tx(ox + 5.5 * c, oy + 6 * c + 17, '11 cm') + tx(ox - 8, oy + 3 * c + 6, '6 cm', 17, N, 'end');
-  return svg(600, 134, 'A staircase figure on a 1 cm grid, 11 cm along the bottom and 6 cm up the left side, with three steps', s);
+  return svg(300, 134, 'A staircase figure on a 1 cm grid, 11 cm along the bottom and 6 cm up the left side, with three steps', s);
 };
 // Q5: 8 cm by 2 cm rectangle with a dashed cut line, and room to draw
 const q5Svg = () => {
@@ -44,12 +47,12 @@ const q5Svg = () => {
 };
 // Q6: photo 8 cm by 6 cm in a frame 1 cm wide
 const q6Svg = () => {
-  const c = 11, x0 = 234, y0 = 4, ox = x0 + c, oy = y0 + c;
+  const c = 12, x0 = 6, y0 = 4, ox = x0 + c, oy = y0 + c;
   let s = grid(x0, y0, 12, 10, c) + rect(ox, oy, c, 0, 0, 10, 8, Y) + rect(ox, oy, c, 1, 1, 8, 6, SKY);
   s += tx(ox + 5.4 * c, oy + 5.6 * c, 'photo', 17, N);
   s += tx(ox + 5 * c, oy + 2 * c - 2, '8 cm', 16) + tx(ox + 1.2 * c, oy + 4 * c + 6, '6 cm', 16, N, 'start');
   s += tx(ox + 10 * c + 8, oy + 0.5 * c + 6, '1 cm', 16, TEAL, 'start');
-  return svg(600, 118, 'An 8 cm by 6 cm photo inside a yellow frame that is 1 cm wide all round, on a 1 cm grid', s);
+  return svg(210, 130, 'An 8 cm by 6 cm photo inside a yellow frame that is 1 cm wide all round, on a 1 cm grid', s);
 };
 
 module.exports = {
@@ -148,40 +151,41 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.q(1, 'This figure has only square corners. Each small square on the grid is 1 cm by 1 cm.', { before: 40, keepNext: true }));
-    W.push(H.fig(q1Svg()));
-    W.push(H.sub('a', 'Use the opposite sides to find the two missing lengths. Write them on the figure.'));
-    W.push(H.sub('b', 'Find the area in TWO ways.', { keepNext: true }));
-    W.push(H.ans('Split it into 2 rectangles:  ______________    Big rectangle take away the missing piece:  ______________'));
-    W.push(H.sub('c', 'Find the perimeter.      Perimeter:  ____________'));
+    W.push(side(q1Svg(), 280, [
+      H.sub('a', 'Use the opposite sides to find the two missing lengths. Write them on the figure.'),
+      H.sub('b', 'Find the area in TWO ways.', { after: 40 }),
+      H.sub('', 'Split it into 2 rectangles:  ______________', { after: 40 }),
+      H.sub('', 'Big rectangle take away the missing piece:  ______________', { after: 40 }),
+      H.sub('c', 'Find the perimeter.   Perimeter:  ________')].join('')));
     W.push(H.q(2, 'Rectangles with whole-cm sides have an area of 24 cm². Find them all. Start with a length of 1 cm.', { keepNext: true }));
     W.push(H.tbl([2400, 1500, 1500, 1500, 1500, 1500], [
       ...['Length (cm)', 'Breadth (cm)', 'Perimeter (cm)'].map(r => H.row([H.cell(r, 2400, { bold: true, fill: 'EDEDED', h: 44 }), ...[0, 1, 2, 3, 4].map(() => H.cell('\u00a0', 1500, { h: 44 }))]))
     ]));
-    W.push(H.sub('a', 'Largest perimeter:  ____ cm by ____ cm          Smallest perimeter:  ____ cm by ____ cm'));
-    W.push(H.sub('b', 'Without drawing: which rectangle with an area of 36 cm² has the smallest perimeter?  ____ by ____ cm'));
+    W.push(H.sub('a', 'Largest perimeter:  ___ by ___ cm     Smallest perimeter:  ___ by ___ cm', { after: 40 }));
+    W.push(H.sub('b', 'Which rectangle with an area of 36 cm² has the smallest perimeter?  ___ by ___ cm'));
     W.push(H.q(3, 'Mei joins 6 square tiles, each 1 cm by 1 cm, edge to edge (whole sides touching).', { keepNext: true }));
     W.push(H.fig(blankGrid(24, 3, 22, 'An empty 1 cm grid for drawing shapes')));
-    W.push(H.sub('a', 'What is the area of any shape she makes?  ________'));
-    W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and a shape with the LARGEST perimeter.'));
+    W.push(H.sub('a', 'What is the area of any shape she makes?  ________', { after: 40 }));
+    W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and one with the LARGEST.', { after: 40 }));
     W.push(H.sub('c', 'Smallest perimeter:  ________        Largest perimeter:  ________'));
 
     W.push(H.q(4, 'Ravi says, "I cannot find the perimeter of this staircase, because the steps are not labelled."', { pb: true, before: 0, keepNext: true }));
-    W.push(H.fig(q4Svg()));
-    W.push(H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step.'));
-    W.push(...H.lines(1));
-    W.push(H.ans('Perimeter:'));
-    W.push(H.sub('b', 'The layers are 3 cm, 7 cm and 11 cm long, and each is 2 cm high. Area:  ________'));
+    W.push(side(q4Svg(), 300, [
+      H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step.'),
+      ...H.lines(1),
+      H.ans('Perimeter:'),
+      H.sub('b', 'The layers are 3 cm, 7 cm and 11 cm long, and each is 2 cm high. Area:  ________')].join('')));
     W.push(H.q(5, 'An 8 cm by 2 cm rectangle is cut along the dashed line. The two pieces are put together to make a square.', { keepNext: true }));
     W.push(H.fig(q5Svg()));
-    W.push(H.sub('a', 'Draw the square on the grid.'));
-    W.push(H.sub('b', 'Area: rectangle ____ cm², square ____ cm².    Perimeter: rectangle ____ cm, square ____ cm.'));
+    W.push(H.sub('a', 'Draw the square on the grid.', { after: 40 }));
+    W.push(H.sub('b', 'Area: rectangle ____ cm², square ____ cm².    Perimeter: rectangle ____ cm, square ____ cm.', { after: 40 }));
     W.push(H.sub('c', 'Ali says, "The area stayed the same, so the perimeter stayed the same too." Is he right? Explain.'));
     W.push(...H.lines(1));
     W.push(H.q(6, 'A photo 8 cm long and 6 cm wide is put in a frame. The frame is 1 cm wide all round.', { keepNext: true }));
-    W.push(H.fig(q6Svg()));
-    W.push(H.sub('a', 'How long and how wide is the whole thing (photo and frame)?  ____ cm by ____ cm'));
-    W.push(H.sub('b', 'Find the area of the frame only.      Area of frame:  ____________'));
-    W.push(H.sub('c', 'Mei found the frame like this: 8 + 8 + 6 + 6 = 28 cm². What did she forget?  ______________________________'));
+    W.push(side(q6Svg(), 210, [
+      H.sub('a', 'How long and how wide is the whole thing (photo and frame)?  ____ cm by ____ cm'),
+      H.sub('b', 'Find the area of the frame only.   Area of frame:  ________'),
+      H.sub('c', 'Mei found the frame like this: 8 + 8 + 6 + 6 = 28 cm². What did she forget?  ________________')].join('')));
     return W;
   }
 };

@@ -39,7 +39,7 @@ const lesson = {
   online: 'Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children hold their arrays and tables up to the camera.',
   warmup: 'Legs and wheels count: six picture cards (4 cars, 5 bicycles, 3 tricycles, 5 dogs, 6 hens, 2 cars and 1 bicycle). Count the wheels or legs in 2s, 3s, 4s or 5s, then click to check.',
   explore: 'Farm legs: a pen has only hens (2 legs) and goats (4 legs). The farmer counts 16 legs. Pairs use counters or drawings to find every possible mix of hens and goats, and record each one.',
-  mini: 'Arrays: rows × number in each row; two multiplication and two division facts from one array; count the hidden part of an array. Then "how many of each": start with all of one kind in a table and swap one at a time.',
+  mini: 'Arrays: rows × number in each row; two multiplication and two division facts from one array; count the hidden part of an array. Then "how many of each": start with all of one kind in a table and swap one at a time. Sharing with leftovers (Q4, Q5) is division with a remainder, a P3 topic: say "3 left over" in words and do not write remainders as "r 3".',
   share: 'Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?',
   exit: { q: 'A pen has hens and goats. There are 5 animals and 14 legs. How many hens and how many goats?', a: '3 hens and 2 goats (6 + 8 = 14 legs).' },
   mistakes: [

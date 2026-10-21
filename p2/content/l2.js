@@ -165,7 +165,7 @@ module.exports = {
     W.push(H.sub('d', 'Ravi says 398 + 205 = 400 + 203 is true. Is he right? Explain how you know without adding.'));
     W.push(...H.lines(2));
 
-    W.push(H.q(4, 'Magic square. Every row, column and diagonal adds up to the same total.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(4, 'Magic square. Every row, column and diagonal adds up to the same total.', { keepNext: true }));
     W.push(H.fig(squareSvg([[80, '', 60], ['', 50, ''], [40, '', 20]])));
     W.push(H.gap(60));
     W.push(H.sub('a', 'What is the magic total? (Find a line with all three numbers.)   ________'));

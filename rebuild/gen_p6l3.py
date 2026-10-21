@@ -114,7 +114,7 @@ put(f'{L}-title',title_slide(f'{L}-title',3,2,'Below Zero','Negative numbers  �
  'Objective: Order and compare negative numbers on a number line; add and subtract with negative numbers by moving along the line (temperature, lifts, sea level); use "change by" a negative number in code and trace a variable that goes below 0. '
  'Materials: laptop or desktop with Scratch 3 open (scratch.mit.edu, no log-in needed), mini whiteboard and marker, workbook, pencil. Tutor: this deck, Scratch open for screen share. '
  'Online set-up: children keep Scratch in one browser tab and the video call in another; ask them to rename the sprite "Dot" so nobody is distracted by costumes. Children share their screen only when asked. Type the minus sign with the keyboard minus key (the hyphen); do not copy and paste a number from the slide or chat, because the slide uses a different minus character that Scratch will not accept. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. '
- 'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+ 'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ---------- 2 warm1: cold city line-up ----------
 cities=[('Singapore',25),('Tokyo',3),('Seoul',-7),('Beijing',-9),('Harbin',-22)]
@@ -231,11 +231,11 @@ body+=step(3,'Test it: run the code and check the last number.',left=960,top=680
 put(f'{L}-teachbug',sec(f'{L}-teachbug','56–57 MIN',body,'Teach before worksheet page 2 (Q6 has a lift bug and Q7 asks them to plan code). Ask first: "Which block is wrong? How do you know?" Only one block needs to change. Show that 5 repeats are still right: 3, 2, 1, 0, −1 is five numbers. Planning tip for Q7: write the start value, how many repeats, and the change each time.'))
 
 # ---------- 18 ws2 ----------
-put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–67 MIN','Worksheet page 2: on your own',[('Q4','Six calculations. Draw the jumps.'),('Q5','Trace the sprite code in the table.'),('Q6','The lift bug: predict, fix, predict again.'),('Q7','Plan the diver\'s code. Then build it in Scratch to test.')],'Finished early? Build Q5 to Q7 in Scratch, or try the Python box.','Children work alone. Paper first, then they may build Q5 to Q7 in Scratch to test their answers. Note who needs a short catch-up next lesson.'))
+put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Six calculations. Draw the jumps.'),('Q5','Trace the sprite code in the table.'),('Q6','The lift bug: predict, fix, predict again.'),('Q7','Plan the diver\'s code. Then build it in Scratch to test.')],'Finished early? Build Q5 to Q7 in Scratch, or try the Python box.','Children work alone. Paper first, then they may build Q5 to Q7 in Scratch to test their answers. Note who needs a short catch-up next lesson.'))
 
 # ---------- 19 ws2ans ----------
 rows=[('Q4','a) 3   b) −7   c) −8   d) −8   e) 8   f) 6'),('Q5','10, −20, −50, −80. It says −80.   b) 4 more repeats'),('Q6','a) 13   b) change floor by −1   c) −3 (B3)'),('Q7','set depth to 0, repeat 7, change depth by −4.   b) 28')]
-put(f'{L}-ws2ans',sec(f'{L}-ws2ans','67–70 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click each answer after a child explains. Q4e: from −3 to 5 is 8 steps right. Q4f: from −7 to −1 is 6 steps right. Q5b: −80 to −200 is 120 more, and 120 ÷ 30 = 4. Q6a: 5 + 8 = 13 (the lift goes UP to floor 13). Q6c: 5 − 8 = −3, the third basement. Q7: 7 × 4 = 28, so 7 repeats reach −28; to come back up in one block, change depth by 28.'))
+put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click each answer after a child explains. Q4e: from −3 to 5 is 8 steps right. Q4f: from −7 to −1 is 6 steps right. Q5b: −80 to −200 is 120 more, and 120 ÷ 30 = 4. Q6a: 5 + 8 = 13 (the lift goes UP to floor 13). Q6c: 5 − 8 = −3, the third basement. Q7: 7 × 4 = 28, so 7 repeats reach −28; to come back up in one block, change depth by 28.'))
 
 # ---------- 20 stretch (new) ----------
 st=[('1.','At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise by 2 p.m.? What was it at 10 p.m.?'),('2.','set n to 10, then repeat 5 times: change n by −4. Then say n. What does it say?'),('3.','What number is exactly halfway between −9 and 3?')]
@@ -278,11 +278,11 @@ put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- 24 talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ben says −8 is bigger than −3 because 8 is bigger than 3. Is he right? Use a thermometer or a lift to explain.',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put(f'{L}-talk',sec(f'{L}-talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answer: No. −8 is further left on the number line, so it is smaller: −8 °C is colder than −3 °C, and floor −8 is lower than floor −3. The digits 8 and 3 tell us how FAR from 0, not which side. Praise reasons that use a picture or a real example. Second question if time: "Why does change by −3 make a number go down?"'))
+put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Answer: No. −8 is further left on the number line, so it is smaller: −8 °C is colder than −3 °C, and floor −8 is lower than floor −3. The digits 8 and 3 tell us how FAR from 0, not which side. Praise reasons that use a picture or a real example. Second question if time: "Why does change by −3 make a number go down?"'))
 
 # ---------- 25 exit ----------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('It is −3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put(f'{L}-exit',sec(f'{L}-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: −5 °C (−3 − 6 = −9, then −9 + 4 = −5). Extension: write a Scratch program that starts temp at −3 and shows each change, then try it.'))
+put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: −5 °C (−3 − 6 = −9, then −9 + 4 = −5). Extension: write a Scratch program that starts temp at −3 and shows each change, then try it.'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachtrace','teachbug','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{L}-{x}' for x in order]

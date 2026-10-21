@@ -126,7 +126,7 @@ body+=pin(780,690,1012,p('Try 1, 2, 3 … in order. Stop when the pairs meet. 36
 put('p4l1-we1',sec('p4l1-we1','20–22 MIN',body,'Make a list in order: today\'s main strategy. Click to add each row while children say it first on whiteboards. Think-aloud: "1 × 36. 2 goes into 36: 2 × 18. 3 × 12. 4 × 9. Does 5 go into 36? No, 36 is not in the 5 times table, so I skip it. 6 × 6. The next number to try is 7, then 8, then 9, but 9 is already in my list (4 × 9). The pairs have met, so I stop." Then click for the factor rainbow: each arch joins a factor pair. 6 has no partner because 6 × 6 uses it twice, so 36 has an odd number of factors (9). We come back to that before page 2.'))
 
 # ---------- 8. your turn ----------
-put('p4l1-try1',tryq('p4l1-try1','22–23 MIN','Your turn: whiteboards','Write the factor pairs in order first. Then list the factors.',[('a','All the factors of 20?','1, 2, 4, 5, 10, 20'),('b','How many factors does 30 have?','8'),('c','All the factors of 16?','1, 2, 4, 8, 16')],
+put('p4l1-try1',tryq('p4l1-try1','22–23 MIN • OPTIONAL','Your turn: whiteboards','Write the factor pairs in order first. Then list the factors.',[('a','All the factors of 20?','1, 2, 4, 5, 10, 20'),('b','How many factors does 30 have?','8'),('c','All the factors of 16?','1, 2, 4, 8, 16')],
  'Whiteboards up together, then click. a) 1 × 20, 2 × 10, 4 × 5 (3 does not go in). b) 1 × 30, 2 × 15, 3 × 10, 5 × 6: 8 factors. c) 1 × 16, 2 × 8, 4 × 4: only 5 factors, because 4 × 4 uses 4 twice. Ask: "Why does 16 have an odd number of factors?" Do not explain fully yet; just notice it.',qw=1000))
 
 # ---------- 9. worked example: common factors ----------
@@ -165,7 +165,7 @@ body+=answer(128,800,1664,'First number in both lists: 24. They meet again at 7:
 put('p4l1-we3',sec('p4l1-we3','26–28 MIN',body,'Click to draw the jumps of 6 (teal, above), then the jumps of 8 (red, below), then circle where both land. Think-aloud: "Bus A leaves at 6, 12, 18, 24 minutes past 7. Bus B at 8, 16, 24. The first number in both lists is 24, the smallest common multiple of 6 and 8." Ask: "Ravi says 6 × 8 = 48, so they meet at 7:48. Is he right?" (They DO meet at 48, but they meet first at 24. Multiplying gives a common multiple, not always the first one.)'))
 
 # ---------- 11. your turn: common multiples ----------
-put('p4l1-try2',tryq('p4l1-try2','28–29 MIN','Your turn: when do they meet?','List the multiples of each number. Find the first one in both lists.',[
+put('p4l1-try2',tryq('p4l1-try2','28–29 MIN • OPTIONAL','Your turn: when do they meet?','List the multiples of each number. Find the first one in both lists.',[
  ('a','Two lights blink every 4 s and every 6 s. They blink together now. Next time together?','after 12 s'),
  ('b','Mei swims every 4 days and goes to the library every 10 days. Both today. Both again in?','20 days'),
  ('c','The smallest number that is a multiple of both 3 and 5?','15')],
@@ -174,7 +174,7 @@ put('p4l1-try2',tryq('p4l1-try2','28–29 MIN','Your turn: when do they meet?','
 # ---------- 12. key ----------
 body=h2('Key idea: hunt in order')+card(p('Factors: try 1, 2, 3 … in order until the pairs meet. Multiples: list them and look for the first number in both lists.',44,700))+card(p('A factor goes into a number exactly. A multiple is in its times table.',38,600,MUTED))
 put('p4l1-key',sec('p4l1-key','29–30 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Listing factors at random and missing one, or stopping too early (for 48, forgetting 6 × 8), instead of trying 1, 2, 3 … in order until the pairs meet. (2) Mixing up factors and multiples: saying 12 is a factor of 4. (3) For common multiples, multiplying the two numbers every time (10 × 15 = 150 minutes) instead of listing the multiples to find the first one they share (30).'))
-put('p4l1-break',break_slide('p4l1-break','30–34 MIN','Factor freeze. I call a number. Stand up if 10 is a factor of it, sit down if not. Then we change 10 to 3, 4 and 5.','Five minutes. Call numbers such as 30, 45, 60, 100, 72, 15. Online: hands up for stand, hands down for sit. Ask: "Which numbers made everyone stand for 3, 4 AND 5?" (60: a common multiple of 3, 4 and 5).'))
+put('p4l1-break',break_slide('p4l1-break','30–34 MIN','Factor freeze. I call a number. Stand up if 10 is a factor of it, sit down if not. Then we change 10 to 3, 4 and 5.','Four minutes. Call numbers such as 30, 45, 60, 100, 72, 15. Online: hands up for stand, hands down for sit. Ask: "Which numbers made everyone stand for 3, 4 AND 5?" (60: a common multiple of 3, 4 and 5).'))
 
 # ---------- worksheet page 1 ----------
 put('p4l1-ws1',ws_preview('p4l1-ws1','34–50 MIN','Worksheet page 1: with your partner',[('Q1','Every factor of 48. Try 1, 2, 3 … in order until the pairs meet.'),('Q2','40 trees in equal rows. Find every way.'),('Q3','18 red beads and 24 blue beads in identical packs. Use common factors.')],'Stuck? Draw the rectangles, or build them with tiles.','Minutes 34 to 50. Walk around. Ask "How do you know you have them all?" before giving any help. Q2 is the rectangles idea again, but the stem now says 2 rows of 20 and 20 rows of 2 are different ways to plant (unlike the explore, where a turned rectangle did not count), so both count. Point children to that sentence. Q3c: check that each pack has the same number of each colour.'))

@@ -75,7 +75,7 @@ L=C['lesson']; DK=C['deck']; QB=C['qbank']; SC=C['script']
 
 # ---------------- 1. title ----------------
 put('p6l9-title',title_slide('p6l9-title',9,5,'Data Detectives','Averages and data  •  lists, adding up, the mean',DK['today'],
- f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan: warm-up 0 to 10 (quick-eye mean, then quick questions), explore at the computer 10 to 25 (class data in a Scratch list), teaching 25 to 35 (click to reveal each step and answer; the mean program with a trace table), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Before the lesson: make the starter project (one sprite, an empty list called data) and share its link, or let children build it from the code slide."))
+ f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan: warm-up 0 to 10 (quick-eye mean, then quick questions), explore at the computer 10 to 25 (class data in a Scratch list), teaching 25 to 35 (click to reveal each step and answer; the mean program with a trace table), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. Before the lesson: make the starter project (one sprite, an empty list called data) and share its link, or let children build it from the code slide."))
 
 # ---------------- 2. warm-up game ----------------
 rounds=[('Round 1','8   12   10   9   11','Mean 10'),('Round 2','20   25   30   35   40','Mean 30'),('Round 3','3   4   5   6   37','Mean 11')]
@@ -216,9 +216,9 @@ put('p6l9-teachif',sec('p6l9-teachif','57–58 MIN',body,
  'Teach before worksheet page 2 (Q6 plans a counting program with a different rule). Ask: "What would go wrong if set zeros to 0 were inside the loop?" (It would be reset every time, so the answer could only be 0 or 1.) "How would you count the matches with MORE than 2 goals?" (change the rule to item i of data > 2: it says 2, for the 3 and the 4.)'))
 
 # ---------------- 19/20. worksheet page 2 ----------------
-put('p6l9-ws2',ws_preview('p6l9-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q5','Trace the mean program, one row per loop. Then make it work for any length.'),('Q6','Singapore temperatures: the mean, then plan the code that counts the hot days.')],'Finished early? Build Q6 in Scratch and test it. Then Stretch and Challenge.',
+put('p6l9-ws2',ws_preview('p6l9-ws2','58–72 MIN','Worksheet page 2: on your own',[('Q5','Trace the mean program, one row per loop. Then make it work for any length.'),('Q6','Singapore temperatures: the mean, then plan the code that counts the hot days.')],'Finished early? Build Q6 in Scratch and test it. Then Stretch and Challenge.',
  'Children work alone. Early finishers build Q6 in Scratch with the temperatures in a list called temps and check that it says what they predicted; Python fans use the box on the page. Note who needs a short catch-up.'))
-put('p6l9-ws2ans',check_slide('p6l9-ws2ans','66–68 MIN','Page 2: check together',[('Q5','total: 5, 14, 20, 32.  Says 8.  Use (length of scores) in repeat and in say: now 9'),('Q6','31 °C;  3 days;  blanks: mean and count;  it says 3')],
+put('p6l9-ws2ans',check_slide('p6l9-ws2ans','72–75 MIN','Page 2: check together',[('Q5','total: 5, 14, 20, 32.  Says 8.  Use (length of scores) in repeat and in say: now 9'),('Q6','31 °C;  3 days;  blanks: mean and count;  it says 3')],
  'Click after a child explains. Q5: i goes 1, 2, 3, 4 and item i is 5, 9, 6, 12; 32 ÷ 4 = 8; with 13 added the total is 45 and the length is 5, so 9. Q6: 29 + 31 + 33 + 30 + 32 + 34 + 28 = 217, 217 ÷ 7 = 31; hotter than 31: 33, 32 and 34. The if compares item i of temps with mean, and change count by 1 counts it.'))
 
 # ---------------- 21. stretch (new items) ----------------
@@ -228,7 +228,7 @@ put('p6l9-stretch',sec('p6l9-stretch','For early finishers',h2('Stretch')+numcar
 
 # ---------------- 22. challenge ----------------
 ch=QB['challenge'][:2]
-put('p6l9-challenge',sec('p6l9-challenge','65–80 MIN',h2('Challenge')+numcards([(f'{i+1}.',c['q']) for i,c in enumerate(ch)],36),
+put('p6l9-challenge',sec('p6l9-challenge','62–75 MIN',h2('Challenge')+numcards([(f'{i+1}.',c['q']) for i,c in enumerate(ch)],36),
  'Use as a pair challenge or in talk time. Ask for the reason every time. More are in the question bank. Answers: 1) '+ch[0]['a']+'  2) '+ch[1]['a']))
 
 # ---------------- 23. challenge: see it ----------------
@@ -246,7 +246,7 @@ q2+=f'<line x1="10" y1="{base-106}" x2="640" y2="{base-106}" stroke="{RED}" stro
 q2+=T(370,base+40,'9 games: mean 30',28)+T(370,base+85,'After game 10: mean 32',28,RED)+T(370,60,'How many points in game 10?',30,TEAL)
 cardsvg=lambda t,s,a: f'<div style="background:{WHITE};border-radius:24px;padding:20px 24px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0"><p style="font-size:30px;font-weight:700;color:{TEAL}">{E(t)}</p>'+svg(760,base+180,s,a,'100%','auto').replace('height:auto;flex:none','height:auto;display:block')+'</div>'
 body=h2('Challenge: see it')+f'<div style="display:flex;gap:32px;align-items:flex-start">'+cardsvg('Q1: one number removed',q1,'Five bars levelled at 8, then four bars levelled at 7, and a dashed box for the removed number')+cardsvg('Q2: the 10th game',q2,'Nine bars at a mean of 30, a dashed tenth bar with a question mark, and a higher line for the new mean 32')+'</div>'
-put('p6l9-chdiag',sec('p6l9-chdiag','65–80 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Ask: What do you notice? What do we know? What do we not know yet? Which totals can you find? Answers are in the Challenge slide notes.'))
+put('p6l9-chdiag',sec('p6l9-chdiag','62–75 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Ask: What do you notice? What do we know? What do we not know yet? Which totals can you find? Answers are in the Challenge slide notes.'))
 
 # ---------------- 24. challenge walk-through ----------------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: compare the totals',38,800,TEAL))
@@ -257,11 +257,11 @@ put('p6l9-chwalk',sec('p6l9-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------------- 25. talk ----------------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(L['share'],42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
-put('p6l9-talk',sec('p6l9-talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Ask them to test ideas in the mean program. Answer: '+SC['talkAns']+' Praise the reasons, not only the answers.'))
+put('p6l9-talk',sec('p6l9-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Ask them to test ideas in the mean program. Answer: '+SC['talkAns']+' Praise the reasons, not only the answers.'))
 
 # ---------------- 26. exit ----------------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],44))+card(p('Write your answer on a slip of paper or in the chat. Show your working. Then collect your stamp.',34))
-put('p6l9-exit',sec('p6l9-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: '+L['exit']['a']+' '+SC['close'][0]+' Extension: '+L['extension']))
+put('p6l9-exit',sec('p6l9-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+L['exit']['a']+' '+SC['close'][0]+' '+SC['close'][1]+' Extension: '+L['extension']))
 
 # ---------------- write ----------------
 for f in os.listdir(SL):

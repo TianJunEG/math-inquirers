@@ -113,6 +113,7 @@ L.lessons.forEach(l => {
   doo(d.expSetup.map((x, i) => (i + 1) + '. ' + x));
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
   stuck(s.exploreHints);
+  if (d.stationCards) { doo(['Station cards (each is also one slide in the deck). One card per breakout pair, about 3 minutes, then swap:']); ask(d.stationCards.map(x => [x[0] + '. ' + x[1], x[2]]), 'Station card', 'Answer'); }
   doo(['At about minute 14, say “Pencils down” and bring the group back together. Take the three questions below, one at a time (about 6 minutes).']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 

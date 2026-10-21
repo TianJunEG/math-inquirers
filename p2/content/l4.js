@@ -73,7 +73,7 @@ const lesson = {
     ['Q3', '(a) 18 yellow beads (12 red is 6 groups of 2 red; each group has 3 yellow).  (b) 30 beads (6 groups of 5).'],
     ['Q4', '(a) 5, 10, 15, 20, 25, 30.  (b) 50 petals.  (c) 7 flowers.  (d) 4 flowers, with 3 petals left over.'],
     ['Q5', '(a) 4, 6, 8, 10, 12, 14.  (b) 22 children.  (c) 9 tables.  (d) Each new table adds 1 seat on the top and 1 on the bottom; the 2 seats at the ends stay the same.'],
-    ['Q6', 'Ali: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39. Mei: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Both: 12, 24, 36. They go up by 12 each time.']
+    ['Q6', 'Ali (12 numbers, ending at 36): 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36. Mei (9 numbers, ending at 36): 4, 8, 12, 16, 20, 24, 28, 32, 36. Both: 12, 24, 36. They go up by 12 each time.']
   ]
 };
 
@@ -191,7 +191,7 @@ const workbook = H => {
   out.push(H.sub('b', 'Children at 10 tables?   ______        (c)  Tables for 20 children?   ______'));
   out.push(H.sub('d', 'Why does the number of children go up by 2 each time?'));
   out.push(...H.lines(1));
-  out.push(H.q(6, 'Ali counts in 3s: 3, 6, 9 … Mei counts in 4s: 4, 8, 12 … Which numbers from 1 to 40 do they BOTH say? Make two lists.', { keepNext: true }));
+  out.push(H.q(6, 'Ali counts in 3s: 3, 6, 9 … Mei counts in 4s: 4, 8, 12 … Which numbers from 1 to 36 do they BOTH say? Make two lists.', { keepNext: true }));
   out.push(H.sub('a', 'Ali:  3,  6,  9,  ____________________________________'));
   out.push(H.sub('b', 'Mei:  4,  8,  12,  ___________________________________'));
   out.push(H.sub('c', 'Both say:   ______________      What do you notice?   ______________'));

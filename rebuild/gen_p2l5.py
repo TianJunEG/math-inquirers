@@ -115,7 +115,7 @@ body=h2('Key idea: undo it backwards')+card(p('Start at the end. Undo the LAST s
 put(f'{P}-key',sec(f'{P}-key','31–32 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Doing the same step again instead of the opposite (27 × 2 instead of 27 ÷ 2). (2) Undoing in the wrong order: the first step first. (3) Bar stories: stopping at one part (one bag, one half) instead of the whole, or forgetting to undo one of the changes.'))
 
 # 12 break
-put(f'{P}-break',break_slide(f'{P}-break','Machine moves. The tutor writes a number and calls a machine: “3, times 2, jumps!” Everyone does the OUT number of jumps (6). Then “+ 4 claps!”','Five minutes. Online: children stay in view of the camera and move in place. Keep the OUT numbers small (under 15).'))
+put(f'{P}-break',break_slide(f'{P}-break','Machine moves. The tutor writes a number and calls a machine: “3, times 2, jumps!” Everyone does the OUT number of jumps (6). Then “+ 4 claps!”','Four minutes. Online: children stay in view of the camera and move in place. Keep the OUT numbers small (under 15).'))
 
 # 13 teachrule
 W3=[400,520,580]
@@ -148,7 +148,7 @@ body+=pin(128,410,1664,svg)
 body+=step(1,'The half Mei kept is the part she used and the part left:  5 + 9 = 14',top=620,size=34)
 body+=step(2,'The two halves are equal, so the other half is also 14.',top=715,size=34)
 body+=step(3,'All her beads:  14 + 14 = 28.  Check: half of 28 is 14,  14 − 5 = 9 ✓',top=810,size=34)
-put(f'{P}-teachparts',sec(f'{P}-teachparts','52–54 MIN',body,'Teach before worksheet page 2 (Q4 uses 3 equal bags instead of 2 halves; do not do Q4 for them). Fold a paper strip in half to show the two equal parts, then fold one half again unevenly for "used" and "left". Common mistake: answering 14 (one half) instead of 28. Ask: "Is 14 ALL her beads, or one part?"'))
+put(f'{P}-teachparts',sec(f'{P}-teachparts','52–55 MIN',body,'Teach before worksheet page 2 (Q4 uses 3 equal bags instead of 2 halves; do not do Q4 for them). Fold a paper strip in half to show the two equal parts, then fold one half again unevenly for "used" and "left". Common mistake: answering 14 (one half) instead of 28. Ask: "Is 14 ALL her beads, or one part?"'))
 
 # 17 teachorder
 body=h2('Does the order matter?')+card(p('Put 2 into each machine. Do they give the same OUT?',40,700))
@@ -156,7 +156,7 @@ body+=pin(128,360,1000,machine([('2','q'),('+ 6','op'),('× 3','op'),('?','res')
 body+=answer(1180,370,612,'A:  2 + 6 = 8,  8 × 3 = 24')+answer(1180,520,612,'B:  2 × 3 = 6,  6 + 6 = 12')
 body+=step(1,'Not the same! The order matters.',top=670,size=34)
 body+=step(2,'What must go into B to give 24?  Go backwards:  24 − 6 = 18,  18 ÷ 3 = 6',top=770,size=34)
-put(f'{P}-teachorder',sec(f'{P}-teachorder','54–55 MIN',body,'Teach before worksheet page 2 (Q5). The top machine is A, the bottom one is B. Children predict first, then click for each OUT. Then step 1 and step 2. Check step 2 forwards: 6 × 3 = 18, 18 + 6 = 24. Link to the explore: "Remember swapping your two cards?"'))
+put(f'{P}-teachorder',sec(f'{P}-teachorder','55–57 MIN',body,'Teach before worksheet page 2 (Q5). The top machine is A, the bottom one is B. Children predict first, then click for each OUT. Then step 1 and step 2. Check step 2 forwards: 6 × 3 = 18, 18 + 6 = 24. Link to the explore: "Remember swapping your two cards?"'))
 
 # 18 teachthree
 bsvg=bars([('Tom',[('?',20,SKY)],''),('Mei',[('?',20,SKY),('3',10,YEL)],''),('Ravi',[('?',20,SKY),('4',13,YEL)],'25 altogether')],unit=15,rowh=58,gap=14,aria='Three bars: Tom, Mei is Tom and 3 more, Ravi is Tom and 4 more, 25 altogether')
@@ -165,14 +165,14 @@ body+=pin(128,400,1664,bsvg)
 body+=step(1,'Take away the extras:  25 − 3 − 4 = 18',top=630,size=32)
 body+=step(2,'Now there are 3 equal bars:  18 ÷ 3 = 6.  Tom has 6.',top=722,size=32)
 body+=step(3,'Mei  6 + 3 = 9,   Ravi  6 + 4 = 10.   Check:  6 + 9 + 10 = 25 ✓',top=814,size=32)
-put(f'{P}-teachthree',sec(f'{P}-teachthree','55–57 MIN',body,'Teach before worksheet page 2 (Q6). Draw Tom’s bar first: the other two are "Tom’s bar and a bit more". Cover the yellow extras with your hand: "If nobody had the extras, there would be 25 − 3 − 4 = 18, in three equal bars." Then give the extras back. Common mistake: 25 ÷ 3 straight away (it does not even work).'))
+put(f'{P}-teachthree',sec(f'{P}-teachthree','For early finishers',body,'Teach for Think Harder 4 (three children and 40 marbles), after page 2 is checked. Draw Tom’s bar first: the other two are "Tom’s bar and a bit more". Cover the yellow extras with your hand: "If nobody had the extras, there would be 25 − 3 − 4 = 18, in three equal bars." Then give the extras back. Common mistake: 25 ÷ 3 straight away (it does not even work).'))
 
 # 19 ws2
-put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Stickers: before-and-after bars. Start from what Siti has now.'),('Q4','Sweets in 3 equal bags. Use the bar: one bag first.'),('Q5','Mei’s and Ali’s machines. Does the order matter?'),('Q6','Three children, 40 marbles. Take away the extras first.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and Q6.'))
+put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Stickers: before-and-after bars. Start from what Siti has now.'),('Q4','Sweets in 3 equal bags. Use the bar: one bag first.'),('Q5','Mei’s and Ali’s machines. Does the order matter?'),('Think Harder','Finished early? Try Think Harder 4: three children and 40 marbles. Take away the extras first.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and Q4. Q6 (three children, 40 marbles) is now Think Harder 4 for early finishers; the slide before the Stretch slide teaches the method.'))
 
 # 20 ws2ans
-put(f'{P}-ws2ans',check_slide(f'{P}-ws2ans','69–72 MIN','Page 2: check together',[('Q3','59 stickers  (50 − 15 = 35,  35 + 24 = 59)'),('Q4','30 sweets  (one bag 6 + 4 = 10,  3 bags 30)'),('Q5','a) 18   b) 14   c) No, the order matters   d) 7'),('Q6','Ali 9,  Ben 14,  Siti 17  (40 − 5 − 8 = 27,  27 ÷ 3 = 9)')],
- 'Click after a child explains. Q3 check: 59 − 24 = 35, 35 + 15 = 50. Q4: one bag had 10 before 4 were taken out; 10 + 10 + 10 = 30. Q5: Mei (5 + 4) × 2 = 18; Ali 5 × 2 + 4 = 14; for Ali to get 18: 18 − 4 = 14, 14 ÷ 2 = 7. Q6 check: 9 + 14 + 17 = 40.'))
+put(f'{P}-ws2ans',check_slide(f'{P}-ws2ans','69–72 MIN','Page 2: check together',[('Q3','59 stickers  (50 − 15 = 35,  35 + 24 = 59)'),('Q4','30 sweets  (one bag 6 + 4 = 10,  3 bags 30)'),('Q5','a) 18   b) 14   c) No, the order matters   d) 7')],
+ 'Click after a child explains. Q3 check: 59 − 24 = 35, 35 + 15 = 50. Q4: one bag had 10 before 4 were taken out; 10 + 10 + 10 = 30. Q5: Mei (5 + 4) × 2 = 18; Ali 5 × 2 + 4 = 14; for Ali to get 18: 18 − 4 = 14, 14 ÷ 2 = 7.'))
 
 # 21 stretch (new items, not on the worksheet)
 st=[('1.','? → + 7 → × 2 → 30.  What went IN?'),('2.','Mei had some stamps. She gave half to Ali, then 3 to Ben. She has 5 left. How many did she have at first?'),('3.','Ben, Ravi and Tom have 31 cards. Ravi has 2 more than Ben. Tom has 5 more than Ben. How many does each have?')]
@@ -210,7 +210,7 @@ put(f'{P}-chwalk',sec(f'{P}-chwalk','Challenge',body,'Use after pairs have tried
 put(f'{P}-talk',talk_slide(f'{P}-talk','To undo “× 2, then + 6” with OUT 20, Mei takes away 6 first. Ali divides by 2 first. Who is right?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Make them test both ways. Answer: Mei is right: 20 − 6 = 14, 14 ÷ 2 = 7, and 7 × 2 + 6 = 20. Ali gets 20 ÷ 2 = 10, 10 − 6 = 4, but 4 × 2 + 6 = 14, not 20. The last step happened last, so it is undone first. Praise the reasons, not only the answers.'))
 put(f'{P}-exit',exit_slide(f'{P}-exit','I think of a number. I multiply it by 4, then take away 6. I get 14. What is my number?','Minutes 80 to 90. Answer: 5 (14 + 6 = 20, 20 ÷ 4 = 5; check 5 × 4 = 20, 20 − 6 = 14). Extension: make a three-step machine with a × card, a ÷ card and a + card for a partner.'))
 
-order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','key','break','teachrule','ws1','ws1ans','teachparts','teachorder','teachthree','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
+order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','key','break','teachrule','ws1','ws1ans','teachparts','teachorder','ws2','ws2ans','teachthree','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{P}-{x}' for x in order]
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):

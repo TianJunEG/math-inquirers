@@ -56,8 +56,8 @@ def digit_cards(ds,w=100,gap=24,aria='Digit cards'):
 # ---------- 1. title ----------
 put('p2l10-title',title_slide('p2l10-title',10,'Challenge Day','Mixed puzzles: how to start a puzzle','Learn three ways to start a puzzle, then use them on mixed challenges.',
  'Objective: Choose a way to start a puzzle (draw it, list it in order, make a table) and use it on mixed puzzles: picture graphs with a key of 5 or 10, a logic grid with exactly one answer, numbers to 1000, money, fractions, and × and ÷ with the 2, 3, 4, 5 and 10 tables. Check the answer and explain it. '
- 'Materials: Puzzle cards for 4 stations, play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps. '
- 'Online: Breakout pairs work on one station card each and report back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard. '
+ 'Materials: Four station cards (one slide each in the deck, printed in the tutor guide), play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps. '
+ 'Online: Each breakout pair gets one station card (the tutor pastes its text into the breakout room chat), works for 3 minutes, swaps with another pair for a second card, then everyone reports back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (how to start a puzzle: draw it, list it, make a table; click to reveal each step and answer), brain break 32 to 36, short teaching 36 to 38, worksheet page 1 38 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 88, certificates 88 to 90.'))
 
 # ---------- 2. warm-up: relay cards ----------
@@ -84,15 +84,35 @@ st+=f'<rect x="{cx_}" y="20" width="270" height="200" rx="16" fill="{WHITE}" str
 fx=950
 st+=f'<rect x="{fx}" y="20" width="270" height="200" rx="16" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/><rect x="{fx+25}" y="95" width="220" height="50" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>'+''.join(f'<line x1="{fx+25+k*44}" y1="95" x2="{fx+25+k*44}" y2="145" stroke="{NAVY}" stroke-width="3"/>' for k in range(1,5))+f'<rect x="{fx+25}" y="95" width="88" height="50" fill="{TEAL}" opacity=".55"/>'+T(fx+135,256,'Fraction strip',28)
 exp=svg(1240,270,st,'Four station cards: a picture graph, a logic grid, coins and a fraction strip')
-steps=['Four station cards: a picture graph, a logic grid, a coin puzzle and a fraction strip.','Work in pairs. Read the card aloud.','Before you solve it, write how you will start: draw, list or table.','Solve it, check it, and be ready to explain.']
+steps=['Your pair gets one station card: a picture graph, a logic grid, a coin puzzle or a fraction strip.','Read the card aloud. Before you solve it, write how you will start: draw, list or table.','Solve it and check it (3 minutes). Then swap cards with another pair.','Be ready to explain how you started and how you know.']
 body=h2('Explore: four puzzle stations')+pin(128,240,1664,chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:8px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',None,WHITE,24,'22px 36px')
-body+=pin(128,560,1664,exp,None,WHITE,24,'14px 20px','align-items:center')
-put('p2l10-explore1',sec('p2l10-explore1','8–14 MIN',body,'Minutes 8 to 14 (stations run until about minute 22). Station cards (print or show one per breakout pair): '
- 'Graph: "Key ★ = 2 children. Red has ★★★★, blue has ★★, green has ★★★. How many children? How many more chose red than blue?" (18; 4 more). '
- 'Logic: "Ali, Ben and Mei each have a different fruit: apple, banana, cherry. Ali does not have the apple. Mei has the cherry. Who has the banana?" (Ali; Ben has the apple). '
- 'Coins: "Make 50¢ with exactly 3 coins (5¢, 10¢, 20¢, 50¢). Is there more than one way?" (20 + 20 + 10 only). '
- 'Fraction strip: "Fold a strip into 5 equal parts. Colour 2/5. What fraction is not coloured?" (3/5). '
- 'Online: give each breakout pair one card. Walk round and ask "How did you start?" before anything else.'))
+body+=pin(128,610,1664,exp,None,WHITE,24,'14px 20px','align-items:center')
+put('p2l10-explore1',sec('p2l10-explore1','8–9 MIN',body,'Minutes 8 to 9. Explain the plan: four station cards (the next four slides). Online, a tutor cannot visit four physical stations, so each breakout pair gets ONE card (paste its text into the breakout room chat), works for 3 minutes, then swaps with another pair for a second card. '
+ 'Round 1 about minutes 9 to 11 and round 2 about minutes 12 to 14. Card 1 (picture graph): answer 50 books. Card 2 (logic grid): Ali has the cat, Cai the dog (Ben has the fish). Card 3 (coins): 2 ways, 50¢ + 10¢ + 5¢ + 5¢ and 20¢ + 20¢ + 20¢ + 10¢. Card 4 (fraction strip): 3/8. '
+ 'Walk round and ask "How did you start?" before anything else.'))
+
+# ---------- 3b. the four station cards (one slide each) ----------
+def station(sid,n,topic,text,pic,ans,notes):
+    body=h2(f'Station card {n}: {topic}')+pin(128,230,930,chip(f'CARD {n}')+p(text,42,700),None,WHITE,24,'26px 36px')
+    body+=pin(1180,230,612,pic,None,WHITE,24,'18px 20px','align-items:center')
+    body+=pin(128,650,1664,p('Before you solve it, write how you will start: draw it, list it or make a table. Then check your answer.',32,700),None,SOFT,20,'16px 28px')
+    body+=answer(128,780,1664,'Answer: '+ans)
+    return sec(sid,'9–14 MIN',body,notes)
+dots=lambda k,x,y,r=15: ''.join(f'<circle cx="{x+j*(2*r+8)}" cy="{y}" r="{r}" fill="{TEAL}" stroke="{NAVY}" stroke-width="3"/>' for j in range(k))
+g1=''.join(T(20,64+i*70,d,26,NAVY,'start')+dots(k,186,56+i*70) for i,(d,k) in enumerate([('Monday',3),('Tuesday',5),('Wednesday',2)]))
+g1+=f'<rect x="8" y="8" width="420" height="214" fill="none" stroke="{NAVY}" stroke-width="3"/><circle cx="40" cy="262" r="15" fill="{TEAL}" stroke="{NAVY}" stroke-width="3"/>'+T(70,271,'= 5 books',28,NAVY,'start')
+put('p2l10-card1',station('p2l10-card1',1,'picture graph','Each ● stands for 5 books. Monday ●●●, Tuesday ●●●●●, Wednesday ●●. How many books were read on these 3 days?',svg(440,290,g1,'Picture graph: Monday 3 dots, Tuesday 5 dots, Wednesday 2 dots; each dot stands for 5 books'),'50 books',
+ 'Station card 1. Read the key first: one ● is worth 5 books. 3 + 5 + 2 = 10 pictures, and 10 × 5 = 50 books (count in 5s: 5, 10, ... 50). Common mistake: answering 10 (counting the pictures). This card practises: draw it / make a table.'))
+lg=''.join(T(130+j*100,40,w,26) for j,w in enumerate(['cat','dog','fish']))+''.join(T(2,98+i*60,n,26,NAVY,'start') for i,n in enumerate(['Ali','Ben','Cai']))+''.join(f'<rect x="{80+j*100}" y="{56+i*60}" width="100" height="60" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>' for i in range(3) for j in range(3))
+put('p2l10-card2',station('p2l10-card2',2,'logic grid','Ali, Ben and Cai each have one pet: a cat, a dog or a fish. Ben has the fish. Ali does not have the dog. Who has the cat?',svg(400,250,lg,'A 3 by 3 grid: Ali, Ben and Cai down the side, cat, dog and fish across the top'),'Ali has the cat (Cai has the dog)',
+ 'Station card 2. Tick Ben and fish, then cross the rest of Ben\u2019s row and the fish column. Ali is not dog, and fish is taken, so Ali has the cat. Cai has the dog. Exactly one solution: each clue was needed. This card practises the logic grid used on worksheet page 2.'))
+cg=''.join(f'<circle cx="{70+k*120}" cy="70" r="{r}" fill="#E5E9F2" stroke="{NAVY}" stroke-width="4"/>'+T(70+k*120,81,l,28) for k,(l,r) in enumerate([('5¢',32),('10¢',36),('20¢',40),('50¢',46)]))+T(260,200,'Make 70¢ with 4 coins',30,TEAL)
+put('p2l10-card3',station('p2l10-card3',3,'coin puzzle','Make 70¢ with exactly 4 coins. You can use 5¢, 10¢, 20¢ and 50¢ coins. Find all the ways.',svg(520,230,cg,'Four coins: 5 cents, 10 cents, 20 cents and 50 cents'),'2 ways: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢',
+ 'Station card 3. List in order, biggest coin first. With 50¢: 20¢ left for 3 coins: 10 + 5 + 5 works (10 + 10 + 0 does not, 5 + 5 + 10 is the same set). Without 50¢: four coins of 20¢ or less: 20 + 20 + 20 + 10 = 70 works; 20 + 20 + 10 + 10 = 60 is too small and 20 + 20 + 20 + 20 = 80 is too big. Exactly 2 ways (checked by a program). Practises: list it in order.'))
+sg=''.join(f'<rect x="{20+k*55}" y="30" width="55" height="70" fill="{PINK if k<3 else (BLUE if k<5 else WHITE)}" stroke="{NAVY}" stroke-width="3"/>' for k in range(8))+T(240,170,'3 red, 2 blue, 3 not coloured',26,TEAL)
+put('p2l10-card4',station('p2l10-card4',4,'fraction strip','A strip is cut into 8 equal parts. 3 parts are red and 2 parts are blue. What fraction is NOT coloured?',svg(480,200,sg,'A strip of 8 equal parts: 3 red, 2 blue and 3 white'),'3/8',
+ 'Station card 4. Draw it: 8 equal parts, 3 red, 2 blue, so 3 + 2 = 5 are coloured and 8 \u2212 5 = 3 are not. The fraction not coloured is 3/8 (3 parts out of 8 equal parts). Common mistake: writing 5/8 (the coloured parts). Practises: draw it.'))
+
 qs=[('1.','How did you start each card? Draw, list or table?'),('2.','Which card was hardest? Why?'),('3.','What helped when you were stuck?')]
 put('p2l10-explore2',sec('p2l10-explore2','14–20 MIN',h2('Explore: talk about it')+numcards(qs,40),'Minutes 14 to 20. Let pairs finish, then gather. What we want them to notice: every card got easier once it was on paper (a drawing, a list in order, or a table). Answers: 1) Open answers; collect one example of each start on the board. 2) Open answers. 3) Listen for: drawing it, going in order, trying small numbers first, checking with every clue. Follow-up: "How do you know there is only one answer to the coin card?" (we listed every 3-coin set in order).'))
 
@@ -152,7 +172,7 @@ put('p2l10-we3',sec('p2l10-we3','28–31 MIN',body,'Worked example: make a table
 
 body=h2('Key idea: how to start a puzzle')+card(p('Stuck? Draw it, list it in order, or make a table.',46,700))+card(p('Then check your answer against every clue and explain why.',38,600,MUTED))
 put('p2l10-key',sec('p2l10-key','31–32 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Q1: counting the pictures instead of using the key (writing 6 instead of 30). (2) Q2: putting 0 first, or missing a number because the list is not in order. (3) Q3: guessing without a table, or not checking that there are exactly 6 coins. (4) Q4: putting a tick without crossing out the rest of that row and column. (5) Q5: forgetting that Mei eats 2 MORE pieces than Ali (not 2 pieces).'))
-put('p2l10-break',break_slide('p2l10-break','Freeze with maths! Dance until the music stops.','Then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.','Five minutes. Online: children stay in view of the camera and move in place. Finish with a drink of water.'))
+put('p2l10-break',break_slide('p2l10-break','Freeze with maths! Dance until the music stops.','Then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.','Four minutes. Online: children stay in view of the camera and move in place. Finish with a drink of water.'))
 
 # ---------- teach before page 1: picture graph ----------
 rows=[('Ali',4),('Mei',2),('Ravi',None)]
@@ -221,13 +241,13 @@ body+=step(1,'Each new table adds 4 people: 6, 10, 14 …',left=1080,top=420,wid
 body+=trow(128,490,['People','6','10','14','18','22','26'],W7,'rise',False,32)
 body+=step(2,'30 people? Keep going: 26, 30. That is 7 tables.',left=1080,top=540,width=712,size=30)
 body+=qrow(128,700,1250,'Your turn:','A pizza has 8 equal slices. Ali eats 3/8. Ben eats 1 slice more than Ali. What fraction is left?',30)+answer(1420,700,372,'1/8')
-put('p2l10-teachgrow',sec('p2l10-teachgrow','55–57 MIN',body,'Teach before worksheet page 2 (Q6 tables in a row; Q5 fractions). Ask first: "How many people at 1 table? 2 tables? Why not 12 for 2 tables?" (the sides that touch lose their seats). Click step 1: the rule is add 4. Then the table fills in: 18, 22, 26. Step 2: "How many tables for 30 people? I keep the table going: 26, then 30 at 7 tables." '
- 'Your turn (fractions, like Q5): Ali eats 3 slices, Ben eats 4 slices, 3 + 4 = 7 slices, so 1 slice of 8 is left: 1/8. Common mistake: Ben eats 1/8 (reading "1 slice more" as "1 slice"). The worksheet uses square tables: do not give the rule away.'))
+put('p2l10-teachgrow',sec('p2l10-teachgrow','55–57 MIN',body,'Teach before worksheet page 2 (Q6 towers of cubes, a growing pattern; Q5 fractions). Ask first: "How many people at 1 table? 2 tables? Why not 12 for 2 tables?" (the sides that touch lose their seats). Click step 1: the rule is add 4. Then the table fills in: 18, 22, 26. Step 2: "How many tables for 30 people? I keep the table going: 26, then 30 at 7 tables." '
+ 'Your turn (fractions, like Q5): Ali eats 3 slices, Ben eats 4 slices, 3 + 4 = 7 slices, so 1 slice of 8 is left: 1/8. Common mistake: Ben eats 1/8 (reading "1 slice more" as "1 slice"). The worksheet uses towers of cubes (4, 8, 12 …): do not give the rule away.'))
 
-put('p2l10-ws2',ws_preview('p2l10-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Logic grid. Tick one, cross the rest of the row and column.'),('Q5','Cake in 10 pieces. Draw it and shade each child’s pieces.'),('Q6','Square tables in a row. Fill the table and find the rule.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q4: check children start with clue 1 and cross out the rest of Siti’s row and the walk column.'))
-put('p2l10-ws2ans',check_slide('p2l10-ws2ans','69–72 MIN','Page 2: check together',[('Q4','Ali car,  Ben MRT,  Mei bus,  Siti walks'),('Q5','a) 5/10   b) 2/10   c) Mei, Ali, Ben'),('Q6','a) 14 people   b) 9 tables')],
+put('p2l10-ws2',ws_preview('p2l10-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Logic grid. Tick one, cross the rest of the row and column.'),('Q5','Cake in 10 pieces. Draw it and shade each child’s pieces.'),('Q6','Towers of cubes. Fill the table and find the rule.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q4: check children start with clue 1 and cross out the rest of Siti’s row and the walk column.'))
+put('p2l10-ws2ans',check_slide('p2l10-ws2ans','69–72 MIN','Page 2: check together',[('Q4','Ali car,  Ben MRT,  Mei bus,  Siti walks'),('Q5','a) 5/10   b) 2/10   c) Mei, Ali, Ben'),('Q6','a) 32 cubes (Tower 8)   b) Tower 9')],
  'Click each answer after a child explains how they started. Q4: Clue 1: Siti walks (cross the rest). Clue 2: Ben is not bus or car, and walk is taken, so Ben goes by MRT. Clue 3: Mei is not car; walk and MRT are taken, so Mei goes by bus. Ali gets the car. Exactly one answer: each clue was needed. '
- 'Q5: Ali 3 pieces, Mei 3 + 2 = 5 pieces, Ben 10 − 8 = 2 pieces. Q6: add 2 each table: 4, 6, 8, 10, 12, 14; for 20 people: 16 at 7 tables, 18 at 8, 20 at 9 tables.'))
+ 'Q5: Ali 3 pieces, Mei 3 + 2 = 5 pieces, Ben 10 − 8 = 2 pieces. Q6: add 4 each tower: 4, 8, 12, 16, 20, 24, 28, 32, so Tower 8 has 32 cubes; 36 cubes is Tower 9 (4 × 9, or keep adding 4: 32, 36).'))
 
 # ---------- stretch (new) ----------
 st=[('1.','Use three of the cards 4, 0, 6, 2. What is the greatest 3-digit number you can make that is less than 500?'),('2.','A farm has ducks and rabbits. There are 10 heads and 26 legs. How many rabbits?'),('3.','Siti, Ravi and Lin sit in a row of 3 chairs. Lin is not at either end. Siti is on the left of Ravi. Who sits on the right end?')]
@@ -259,5 +279,5 @@ put('p2l10-end',(f'<section id="p2l10-end" data-transition="fade" style="backgro
  f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n<p style="font-size:36px;color:#C9D4EC">Certificates and a last stamp for every inquirer. See you in Primary 3!</p>\n'
  f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates. Ask each child to name one puzzle they enjoyed and say one specific thing they did well in the program. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
 
-order=['p2l10-title','p2l10-warm1','p2l10-warm2','p2l10-explore1','p2l10-explore2','p2l10-teach1','p2l10-we1','p2l10-try1','p2l10-we2','p2l10-try2','p2l10-we3','p2l10-key','p2l10-break','p2l10-teachgraph','p2l10-ws1','p2l10-ws1ans','p2l10-teachlogic','p2l10-teachgrow','p2l10-ws2','p2l10-ws2ans','p2l10-stretch','p2l10-challenge','p2l10-chdiag','p2l10-chwalk','p2l10-talk','p2l10-exit','p2l10-end']
+order=['p2l10-title','p2l10-warm1','p2l10-warm2','p2l10-explore1','p2l10-card1','p2l10-card2','p2l10-card3','p2l10-card4','p2l10-explore2','p2l10-teach1','p2l10-we1','p2l10-try1','p2l10-we2','p2l10-try2','p2l10-we3','p2l10-key','p2l10-break','p2l10-teachgraph','p2l10-ws1','p2l10-ws1ans','p2l10-teachlogic','p2l10-teachgrow','p2l10-ws2','p2l10-ws2ans','p2l10-stretch','p2l10-challenge','p2l10-chdiag','p2l10-chwalk','p2l10-talk','p2l10-exit','p2l10-end']
 write_deck('Math Inquirers P2: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':'p2l10-stretch'}})

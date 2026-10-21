@@ -28,24 +28,23 @@ put('l2-teach3',sec('l2-teach3','31–33 MIN',body,'Teach. Imagine a see-saw: bo
 put('l2-try3',try_slide('l2-try3','33–34 MIN','Your turn: balance it','Both sides must be the same.',[('a','7 + 4 = 9 + __','2'),('b','3 + 8 = __ + 6','5'),('c','True or false: 4 + 4 = 8 + 1','False: 8 and 9')],'Whiteboards. For c, children write T or F and show the two totals.'))
 body=h2('Key idea: bonds and equals')+card(p('List bonds in order so none are missed. Bonds of 10 help with bonds of 20.',44,700))+card(p('"=" means both sides have the same value.',38,600,MUTED))
 put('l2-key',sec('l2-key','34–35 MIN',body,'Say the key ideas together. Common mistakes to watch for during the worksheet: (1) Reading "=" as "the answer comes next" (5 + 3 = 4 + __ answered 8). (2) Counting 3 + 7 and 7 + 3 as different pairs when asked for different pairs. (3) Magic triangle: trying numbers at random instead of thinking about the corners.'))
-put('l2-ws1',ws_preview('l2-ws1','40–55 MIN','Worksheet page 1: with your partner',[('Q1','Bonds of 10. Use a ten-frame if you need it.'),('Q2','List the pairs in order, then explain the pattern.'),('Q3','Use bonds of 10 to make bonds of 20.')],'Stuck? Fill a ten-frame with two colours and count each colour.','Minutes 40 to 55. Walk around. Ask "How do you know?" before giving any help.'))
+put('l2-ws1',ws_preview('l2-ws1','40–54 MIN','Worksheet page 1: with your partner',[('Q1','Bonds of 10. Use a ten-frame if you need it.'),('Q2','List the pairs in order, then explain the pattern.'),('Q3','Use bonds of 10 to make bonds of 20.')],'Stuck? Fill a ten-frame with two colours and count each colour.','Minutes 40 to 54. Walk around. Ask "How do you know?" before giving any help.'))
 put('l2-ws1ans',check_slide('l2-ws1ans','55–57 MIN','Page 1: check together',[('Q1','a) 7,   b) 4,   c) 2,   d) 5,   e) 10'),('Q2','2+8, 3+7, 4+6, 5+5.  The second number goes down by 1.  6 different pairs.'),('Q3','a) 20 and 20,   b) 20 and 20,   c) 8, 11, 5')],'Click each answer after a pair explains theirs. Q2c: 0+10, 1+9, 2+8, 3+7, 4+6 and 5+5 are 6 different pairs if turned-round pairs count as the same.'))
-# teach magic triangle (sides of 12)
-body=h2('Magic triangles: think about the corners')+card(p('Put 1, 2, 3, 4, 5 and 6 in the circles so each side adds up to 12.',40,700))
-body+=pin(128,400,520,triangle_svg([None]*6,520,450),None)
-body+=step(1,'Each corner is on TWO sides. Big sides need big corners: try 4, 5 and 6.',left=700,top=400,width=1092,size=34)
-body+=pin(128,400,520,triangle_svg([4,5,6,None,None,None],520,450),'fade')
-body+=step(2,'Side 4 + ? + 5 = 12, so ? = 3.  Side 5 + ? + 6 = 12, so ? = 1.',left=700,top=530,width=1092,size=34)
-body+=step(3,'Side 6 + ? + 4 = 12, so ? = 2. Every number used once ✓',left=700,top=660,width=1092,size=34)
-body+=pin(128,400,520,triangle_svg([4,5,6,3,1,2],520,450),'fade')
-put('l2-teachtri',sec('l2-teachtri','57–59 MIN',body,'Teach before worksheet page 2 (Q5). Here the target is 12, so the BIG numbers go in the corners. On the worksheet the target is 9: ask "Small sides... so which numbers should go in the corners?" but do not tell them. Click order: step 1, corners appear, step 2, step 3, the finished triangle. Check each side aloud: 4 + 3 + 5, 5 + 1 + 6, 6 + 2 + 4.'))
-# teach two numbers
-body=h2('Two numbers: total and difference')+card(p('Two numbers add up to 8. One is 2 more than the other. What are they?',40,700))
-body+=pin(128,400,1664,cubes_svg([(6,SKY,'6 cubes'),(2,YEL,'the extra 2')]),'rise')
-body+=step(1,'Take away the extra 2. 6 cubes are left.',top=540,size=34)
-body+=step(2,'Share the 6 equally: 3 and 3.',top=650,size=34)
-body+=step(3,'Give the extra 2 back to one side: 3 and 5. Check: 3 + 5 = 8, and 5 is 2 more than 3 ✓',top=760,size=34)
-put('l2-teachtwo',sec('l2-teachtwo','59–60 MIN',body,'Teach before worksheet page 2 (Q6). Use real cubes. Take 2 cubes away and put them aside, share the rest into two equal towers, then add the 2 to one tower. Children who guess-and-check are fine too: ask them to check both clues.'))
+# teach before page 2: magic triangle + two numbers, merged into ONE 2-minute slide (audit issue 8)
+body=h2('Two helpers for page 2',64)
+body+=pin(128,230,900,p('Magic triangle: put 1 to 6 in the circles so each side adds up to 12.',32,700))
+body+=pin(128,350,440,triangle_svg([None]*6,440,381),None)
+body+=pin(128,350,440,triangle_svg([4,5,6,None,None,None],440,381),'fade')
+body+=pin(128,350,440,triangle_svg([4,5,6,3,1,2],440,381),'fade')
+body+=step(1,'Each corner is on TWO sides: use the big numbers 4, 5, 6 in the corners.',left=600,top=350,width=430,size=26)
+body+=step(2,'4 + ? + 5 = 12, so ? = 3.   5 + ? + 6 = 12, so ? = 1.',left=600,top=500,width=430,size=26)
+body+=step(3,'6 + ? + 4 = 12, so ? = 2. Every number once ✓',left=600,top=650,width=430,size=26)
+body+=pin(1100,230,692,p('Two numbers add up to 8. One is 2 more than the other. What are they?',32,700))
+body+=pin(1100,380,692,cubes_svg([(6,SKY,'6 cubes'),(2,YEL,'the extra 2')],w=680,h=110),'rise')
+body+=step(1,'Take away the extra 2. 6 cubes are left.',left=1100,top=540,width=692,size=28)
+body+=step(2,'Share the 6 equally: 3 and 3.',left=1100,top=640,width=692,size=28)
+body+=step(3,'Give the 2 back to one side: 3 and 5 ✓ (3 + 5 = 8, and 5 is 2 more than 3)',left=1100,top=740,width=692,size=28)
+put('l2-teachpage2',sec('l2-teachpage2','56–58 MIN',body,'Teach before worksheet page 2, about 2 minutes in all (this slide replaces two separate slides). LEFT, magic triangle (Q5): here the target is 12, so the BIG numbers go in the corners. On the worksheet the target is 9: ask "Small sides... so which numbers should go in the corners?" but do not tell them. Click order: step 1, corners appear, step 2, step 3, the finished triangle. Check each side aloud: 4 + 3 + 5, 5 + 1 + 6, 6 + 2 + 4. RIGHT, two numbers (Q6): use real cubes. Take 2 cubes away and put them aside, share the rest into two equal towers, then add the 2 to one tower. Children who guess-and-check are fine too: ask them to check both clues.'))
 put('l2-ws2',ws_preview('l2-ws2','60–66 MIN','Worksheet page 2: on your own',[('Q4','The equals sign. Work out the side you know first.'),('Q5','Magic triangle. Think about which numbers go in the corners.'),('Q6','Two numbers. Use cubes: take away the extra, share, give it back.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson.'))
 put('l2-ws2ans',check_slide('l2-ws2ans','66–68 MIN','Page 2: check together',[('Q4','a) 4,  b) 4,  c) 6,  d) 2,  e) No: 4 + 4 is 8 but 8 + 1 is 9'),('Q5','Sides of 9: corners 1, 2, 3 with 6, 4, 5 between.  Sides of 10: corners 1, 3, 5'),('Q6','4 and 6.   Challenge: 4 and 8')],'Click each answer after a child explains. Q5: small sides need small corners, so 1, 2, 3 go in the corners for 9. Between 1 and 2: 6; between 2 and 3: 4; between 3 and 1: 5. For 10 the corners are 1, 3, 5 with 6, 2, 4 between.'))
 # stretch new
@@ -61,7 +60,14 @@ for old in ['l2-mini1','l2-mini2']:
     if os.path.exists(f): os.remove(f)
 t=os.path.join(D,'slides','l2-title.html'); s=open(t).read(); s=s.replace('mini-lesson 25 to 35, brain break 35 to 40, worksheet 40 to 70','teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it'); open(t,'w').write(s)
 deck=json.load(open(os.path.join(D,'deck.json')))
-deck['order']=['l2-title','l2-warm1','l2-warm2','l2-explore1','l2-explore2','l2-teach1','l2-try1','l2-teach2','l2-try2','l2-teach3','l2-try3','l2-key','l2-break','l2-ws1','l2-ws1ans','l2-teachtri','l2-teachtwo','l2-ws2','l2-ws2ans','l2-stretch','l2-challenge','l2-chdiag','l2-chwalk','l2-talk','l2-exit']
+deck['order']=['l2-title','l2-warm1','l2-warm2','l2-explore1','l2-explore2','l2-teach1','l2-try1','l2-teach2','l2-try2','l2-teach3','l2-try3','l2-key','l2-break','l2-ws1','l2-ws1ans','l2-teachpage2','l2-ws2','l2-ws2ans','l2-stretch','l2-challenge','l2-chdiag','l2-chwalk','l2-talk','l2-exit']
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l2-title'},'s2':{'description':'Teach: bonds of 10 and 20, and the equals sign','start':'l2-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l2-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l2-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides')
+for old in ['l2-teachtri','l2-teachtwo']:
+    f=os.path.join(D,'slides',old+'.html')
+    if os.path.exists(f): os.remove(f)
+
+# ---- P1 audit fixes (issues 8, 9, 27, 28): timing ----
+import p1fix
+p1fix.finish(D,2,{'l2-ws1':'40–54 MIN','l2-ws1ans':'54–56 MIN','l2-teachpage2':'56–58 MIN','l2-ws2':'58–68 MIN'})

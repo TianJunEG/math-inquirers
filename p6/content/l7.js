@@ -100,9 +100,9 @@ turtle.done()`;
 const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.repeat(m.length)).replace(/ {2,}/g, m => '&nbsp;'.repeat(m.length))).join('<br>');
 const pyBox = H => {
   const ls = PY.split('\n'), code = part => `<div style="text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12.5px;line-height:1.3">${pyHTML(part.join('\n'))}</div>`;
-  return H.tbl([2300, 3800, 3800], [H.row([
-    H.cell('<div style="text-align:left;font-weight:700">Python version (optional)<div style="font-weight:400;margin-top:2px">Prints the turn and the total (144.0 720.0). Test Q1 and Q4. Needs Python with turtle (for example Trinket).</div></div>', 2300, { fill: 'DDEBF7', h: 40 }),
-    H.cell(code(ls.slice(0, 4)), 3800, { h: 40 }), H.cell(code(ls.slice(4)), 3800, { h: 40 })])]);
+  return H.tbl([3100, 3400, 3400], [H.row([
+    H.cell('<div style="text-align:left;font-weight:700">Python version (optional)<div style="font-weight:400;margin-top:2px">Prints the turn and the total (144.0 720.0). Needs Python turtle, e.g. Trinket.</div></div>', 3100, { fill: 'DDEBF7', h: 40 }),
+    H.cell(code(ls.slice(0, 4)), 3400, { h: 40 }), H.cell(code(ls.slice(4)), 3400, { h: 40 })])]);
 };
 
 module.exports = {
@@ -145,7 +145,7 @@ module.exports = {
     today: 'Program a turtle to draw regular polygons and stars, and use the 360° turn to predict every angle before we test it in code.',
     warmGame: 'Turtle says. Stand and face the screen (north). The tutor calls turns; you turn your body and say which way you face. Last one: one full turn in 3 equal turns. How big is each?',
     warmQs: [['Angles on a straight line add up to …?', '180°'], ['How many degrees in a full turn?', '360°'], ['Two angles of a triangle are 50° and 75°. What is the third?', '55°'], ['What is 360 ÷ 8?', '45'], ['Face north. Turn right 90°, then right 180°. Which way do you face?', 'West']],
-    expSetup: ['Open Scratch and add the Pen extension. Build: erase all, go to x: -50 y: 100, point in direction 90, pen down, repeat 4 [move 100, turn ↻ 90].', 'Change it to draw an equilateral triangle. Predict the turn first, then run it.', 'Now a regular pentagon (5 sides) and a regular hexagon (6 sides). Predict, then test.', 'Record sides, turn and “did it close?”. What do sides × turn always make?'],
+    expSetup: ['Add the Pen extension. Build the 4 set-up blocks, then repeat 4 [move 100, turn ↻ 90].', 'Change it to draw an equilateral triangle. Predict the turn first, then run it.', 'Now a regular pentagon (5 sides) and a regular hexagon (6 sides). Predict, then test.', 'Record sides, turn and “did it close?”. What do sides × turn always make?'],
     expPic: 'the square program as coloured blocks (pen down; repeat 4: move 100 steps, turn ↻ 90 degrees) next to the square it draws, with a small turtle arrow at the start.',
     expAsk: [['What turn did the triangle need? What happened if you typed 60?', '120°. Turn 60 draws only half a hexagon: 3 × 60 = 180°, so the turtle does not come home.'], ['What turns did the pentagon and hexagon need?', 'Pentagon 72°, hexagon 60°.'], ['What do sides × turn always make? Why?', '360°: the turtle comes home facing the same way, so it has made one full turn.']],
     mini1: { head: 'Regular octagon: find the turn', body: ['Going round once, the turtle turns 360° altogether.', '8 equal turns: 360 ÷ 8 = ?', 'Inside angle = 180° − turn.', 'Test it: repeat 8 [move 80, turn ↻ ?]'], ans: 'Turn 45°, inside angle 135°.' },
@@ -205,15 +205,15 @@ module.exports = {
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([6400, 3500], [H.row([
-      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it in Scratch. <b>Start every drawing with 4 set-up blocks:</b> erase all, go to x: -50 y: 100, point in direction 90, pen down (this keeps shapes on the stage). The turn block shows an arrow: use turn ↻ (clockwise).', 6400, { align: 'left', h: 30 }),
+      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it in Scratch. Start every drawing with: erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with the ↻ block.', 6400, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3500, { h: 10 })])]);
     return [
       intro,
-      H.q(1, 'Regular polygons. Fill in the table: some rows go forwards, some backwards. Test two rows in Scratch (use move 80, but move 10 for 36 sides).', { before: 40, keepNext: true }),
+      H.q(1, 'Regular polygons. Fill in the table: some rows go forwards, some backwards. Test two rows in Scratch (move 80; but 30 for 24 sides, 10 for 36).', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Mei says a regular polygon can have inside angles of 130°. Is she right? Explain.', { after: 20 }), ...H.lines(1),
-      H.q(2, 'Ben wants a regular nonagon (9 sides). Predict what his program draws, then run it (after the 4 set-up blocks).', { keepNext: true }),
+      H.q(2, 'Ben wants a regular nonagon (9 sides). Predict what his program draws, then run it (after the set-up).', { keepNext: true }),
       H.fig(codeAndFrame(q2prog, 'Ben’s program: when green flag clicked, pen down, repeat 9: move 80 steps, turn ↻ 120 degrees. A box to draw a prediction.', 'Draw your prediction here')),
       H.sub('a', 'What does the turtle draw? Explain.', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Total turning  ________ °        (c)  Fix it: change  ________  to  ________'),
@@ -222,7 +222,7 @@ module.exports = {
       H.fig(codeAndFrame(q3prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn ↻ 80 degrees, change total by 80; then say total. A trace table for total after repeats 1 to 9.', null, { rows: 9, head: 'total' })),
       H.sub('a', 'The sprite says  ________      (b)  Times the turtle goes round  ________', { after: 60 }),
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
-      H.q(4, 'Plan two stars, then test them in Scratch (use move 120 for the 9-point star and move 100 for the 20-point star). Which has sharper points?   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
+      H.q(4, 'Plan two stars, then test them (move 120 for the 9-point star, move 100 for the 20-point). Which has sharper points?   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
       H.q(5, 'Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
       t5,

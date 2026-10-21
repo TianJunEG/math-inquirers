@@ -70,7 +70,7 @@ def numcards(sid, time, title, items, notes, size=38):
 # ---------- 1 title ----------
 notes = (f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} "
          "Time plan: warm-up 0 to 10, explore 10 to 25 (play the Dice Race, then pool the results), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
-         "worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. "
+         "worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. "
          "Before the lesson: have the Explore game program ready to share (Scratch, below on the teach-code slide) and a dice program for children without dice.")
 body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {N}  •  WEEK 3</p>'
         f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(L["title"])}</h1>'
@@ -284,9 +284,9 @@ body += pin(1000, 640, 792, p('Plan on paper first: what goes in each box, and w
 put(f'{PRE}-teachplan', sec(f'{PRE}-teachplan', '58–59 MIN', body, 'Teach before worksheet page 2 (Q5 plans a program for two DICE: let them work out the numbers themselves). Point out each coin needs its own random number: one "pick random" for both coins would make them always the same. If time, run it: answers near 500 (e.g. 489, 512) confirm the game is fair.'))
 
 # ---------- 20-21 worksheet page 2 ----------
-put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '59–67 MIN', 'Worksheet page 2: on your own', [('Q4', 'The Difference Game: fill the 36 outcomes, find each player’s chance, make it fair.'), ('Q5', 'Plan the doubles program. What should it say, and why not exactly?')],
+put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '59–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'The Difference Game: fill the 36 outcomes, find each player’s chance, make it fair.'), ('Q5', 'Plan the doubles program. What should it say, and why not exactly?')],
     'Finished early? Run the Python corner, or try Stretch and Challenge.', 'Children work alone. Note who needs a short catch-up next lesson. Children who finish change the Explore program (or the Python corner) to play the Difference Game 1000 times and check their answer to Q4.'))
-put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '67–70 MIN', 'Page 2: check together', [('Q4', 'Difference 0: 6 ways, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2.  Ali 24/36 = 2/3, Ben 12/36 = 1/3: not fair. Fair: e.g. Ali on 1, 3, 5 and Ben on 0, 2, 4 (18 each)'), ('Q5', 'Gaps 6, 6, a = b.  About 167: P(double) = 6/36 = 1/6 and 1/6 × 1000 = 166 2/3. A count is a whole number, and each run is random.')],
+put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'Difference 0: 6 ways, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2.  Ali 24/36 = 2/3, Ben 12/36 = 1/3: not fair. Fair: e.g. Ali on 1, 3, 5 and Ben on 0, 2, 4 (18 each)'), ('Q5', 'Gaps 6, 6, a = b.  About 167: P(double) = 6/36 = 1/6 and 1/6 × 1000 = 166 2/3. A count is a whole number, and each run is random.')],
     'Click after a child explains. Q4: other fair rules: Ali on 1 and 2 (10 + 8 = 18); or Ali on 0, 1 and 5 (6 + 10 + 2 = 18). Ask: "Each player had 3 differences. Why was it still unfair?" Q5: about 19 runs in 20 land between 145 and 190 doubles. Full key: ' + k['Q4'] + ' | ' + k['Q5'], 32))
 
 # ---------- 22 stretch ----------
@@ -334,11 +334,11 @@ put(f'{PRE}-chwalk', sec(f'{PRE}-chwalk', 'Challenge', body, 'Use after pairs ha
 
 # ---------- 26 talk ----------
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”"'), 42, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put(f'{PRE}-talk', sec(f'{PRE}-talk', '70–80 MIN', body, 'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
+put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
 
 # ---------- 27 exit ----------
 body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 44, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
-put(f'{PRE}-exit', sec(f'{PRE}-exit', '80–90 MIN', body, 'Minutes 80 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
+put(f'{PRE}-exit', sec(f'{PRE}-exit', '82–90 MIN', body, 'Minutes 82 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
 
 # ---------- write ----------
 order = [f'{PRE}-{x}' for x in ['title', 'warm1', 'warm2', 'explore1', 'explore2', 'teach1', 'we1', 'try1', 'teachtwo', 'try2', 'teachcode', 'teachwhy', 'key', 'break', 'teachbag', 'ws1', 'ws1ans', 'teachfair', 'teachplan', 'ws2', 'ws2ans', 'stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit']]

@@ -274,7 +274,7 @@ put('p2l7-key',sec('p2l7-key','31–32 MIN',body,
 
 # 13. break
 put('p2l7-break',break_slide('p2l7-break','32–36 MIN','Fraction turns. Stand up! When the tutor calls a turn, turn that much and freeze: a whole turn, a half turn, a quarter turn, three quarter turns.','Then: a drink of water and back to our seats.',
- 'Five minutes. Face the screen to start. A half turn: you face the back. A quarter turn: you face the side. Three quarter turns: the other side. Try "two quarter turns" (the same as a half turn!). Online: children stay in view of the camera.'))
+ 'Four minutes. Face the screen to start. A half turn: you face the back. A quarter turn: you face the side. Three quarter turns: the other side. Try "two quarter turns" (the same as a half turn!). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
 put('p2l7-ws1',preview_x('p2l7-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','Fair shares? Circle the shapes cut into quarters. Check the parts are equal.'),('Q2','Name the fraction that is shaded and the fraction that is not.'),('Q3','Compare and order fractions. Draw bars to help.')],'Stuck? Fold a paper strip, or draw the bars the same length.',
@@ -331,7 +331,7 @@ body+=pin(1290,370,502,P('Draw both wholes the same length.',34,700),None,SOFT,2
 body+=ansx(1290,560,502,'4 eighths is more than 3 eighths. Mei eats more.',size=34)
 put('p2l7-teachsame',sec('p2l7-teachsame','56–57 MIN',body,
  'Teach before worksheet page 2 (Q6 compares a quarter with eighths). Use the folded strips from Explore: lay the halves strip on the eighths strip. Click 1: one half covers 4 eighths. Click 2: Ben ate 3 eighths, Mei ate the same as 4 eighths, so Mei ate more. '
- 'Think-aloud: "Halves and eighths are different parts, so I cannot just look at the numbers. I draw the same whole twice, the same length, and line the parts up." Ask: "What if Mei\'s pizza were tiny?" Then we cannot compare like this: the wholes must be the same size.'))
+ 'Think-aloud: "Halves and eighths are different parts, so I cannot just look at the numbers. I draw the same whole twice, the same length, and line the parts up." Ask: "What if Mei\'s pizza were tiny?" Then we cannot compare like this: the wholes must be the same size. Equivalent fractions are a P3 topic: show that one half covers 4 eighths with the lined-up strips only, and do not write 1/2 = 4/8 as a rule.'))
 
 # 19-20. worksheet page 2
 put('p2l7-ws2',preview_x('p2l7-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Add and take away. Colour the bars.'),('Q5','The cake story. Draw a bar.'),('Q6','Who eats more pizza? Line up the same whole.')],'Finished early? Stretch and Challenge come next.',

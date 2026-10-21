@@ -211,7 +211,7 @@ module.exports = {
     W.push(H.sub('a', 'All the numbers from 1 to 50 with exactly 3 factors:  ______________'));
     W.push(H.sub('b', 'What do you notice?  ________________     (c)  Next one after 50?  ______'));
     // Q6 plan
-    W.push(H.q(6, 'Plan your code. Put these blocks in order so the sprite says every factor of 40, one per second.', { keepNext: true }));
+    W.push(H.q(6, 'Plan your code. Put the blocks in order so the sprite says every factor of 40.', { keepNext: true }));
     { const lb = (t, p) => `<div style="display:flex;align-items:center;gap:6px"><b style="width:18px">${t}</b>${blocks(p, 'Block ' + t, 14).replace('max-width:100%', 'flex:none')}</div>`;
       const col = xs => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + xs.join('') + '</div>';
       W.push(side('<div style="display:flex;gap:14px">' + col([lb('A', [['look', 'say (d) for (1) seconds']]), lb('B', [['ctl', 'repeat (40)', []]]), lb('C', [['var', 'set d to (1)']])]) + col([lb('D', [['var', 'change d by (1)']]), lb('E', [hat]), lb('F', [['ctl', 'if (40 mod d = 0) then', []]])]) + '</div>', 5600,

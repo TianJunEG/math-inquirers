@@ -114,9 +114,9 @@ put(f'{P}-warm1',sec(f'{P}-warm1','0–5 MIN',body+cards+ans,
  'Strategy to draw out: pay the dollars first with the biggest note that is not too much, then the cents with the biggest coin that fits. Ask: "Someone paid $6.50 with three $2 notes and five 10¢ coins. Is it exact? Is it the fewest?" (Exact, yes. Fewest, no: 8 pieces instead of 3.) Watch for 50¢ and $50 mixed up.'))
 
 # 3 warm2
-qs=[('1.','Write 345¢ in dollars and cents.','$3.45'),('2.','How many cents is $2.05?','205¢'),('3.','Which is more: $1.50 or 105¢?','$1.50'),('4.','Pay 75¢ with the fewest coins.','50¢+20¢+5¢'),('5.','You have $4.60. A book costs $5. How much more do you need?','40¢')]
+qs=[('1.','Write 345¢ in dollars and cents.','$3.45'),('2.','How many cents is $2.05?','205¢'),('3.','Which is more: $1.50 or 105¢?','$1.50'),('4.','Pay 75¢ with the fewest coins.','50¢+20¢+5¢'),('5.','You have 60¢. A sticker costs 85¢. How much more do you need?','25¢')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards, then click. 1) 345¢ is 300¢ and 45¢: $3 and 45¢. 2) $2 is 200¢, so $2.05 is 205¢ (watch for 25¢ or 250¢). 3) $1.50 is 150¢, which is more than 105¢. 4) 50¢ + 20¢ + 5¢, 3 coins. 5) Count on: $4.60 → $5 is 40¢. Ask: "Why does $2.05 need a 0?"'))
+put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards, then click. 1) 345¢ is 300¢ and 45¢: $3 and 45¢. 2) $2 is 200¢, so $2.05 is 205¢ (watch for 25¢ or 250¢). 3) $1.50 is 150¢, which is more than 105¢. 4) 50¢ + 20¢ + 5¢, 3 coins. 5) Count on: 60¢ → 80¢ is 20¢, then 5¢ more to 85¢: 25¢ (cents only, no mixed dollars and cents). Ask: "Why does $2.05 need a 0?"'))
 
 # 4 explore1: toy stall
 toys=[('kite','Kite','$6'),('ball','Ball','$4'),('yoyo','Yo-yo','$3'),('bubbles','Bubbles','$2'),('sticker','Sticker','$1')]
@@ -186,7 +186,7 @@ body=h2('Key idea: in order, and backwards')+card(p('Find every way: make a list
 put(f'{P}-key',sec(f'{P}-key','31–32 MIN',body,'Say the key ideas together. Common mistakes to watch for during the worksheet: (1) Mixing up dollars and cents: 345¢ written as $34.5, or $3.05 read as $3.50. (2) Using a $20 note, or not starting with the biggest note that fits when finding the fewest. (3) Listing ways with no order, so some are missed or written twice.'))
 
 # 12 break
-put(f'{P}-break',break_slide(f'{P}-break','Shopkeeper stretch. The tutor calls an amount: reach up high for dollars, touch your toes for cents. “$3.50!”  “75¢!”  “205¢!” (that is $2.05, so reach up!)','Five minutes. Online: children stay in view of the camera and move in place.'))
+put(f'{P}-break',break_slide(f'{P}-break','Shopkeeper stretch. The tutor calls an amount: reach up high for dollars, touch your toes for cents. “$3.50!”  “75¢!”  “205¢!” (that is $2.05, so reach up!)','Four minutes. Online: children stay in view of the camera and move in place.'))
 
 # 13 teachfew
 body=h2('Fewest notes and coins: dollars first')+card(p('Pay exactly $27.85 with the fewest notes and coins.',40,700))

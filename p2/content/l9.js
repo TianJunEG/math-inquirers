@@ -59,13 +59,13 @@ const clock = (cx, cy, h, m, cap, R = 52) => {
   // hour hand: short, thick, navy.  minute hand: long, thin, red, ending at the minute marks
   s += `<line x1="${cx}" y1="${cy}" x2="${(cx + R * 0.45 * Math.sin(ha)).toFixed(1)}" y2="${(cy - R * 0.45 * Math.cos(ha)).toFixed(1)}" stroke="${N}" stroke-width="7" stroke-linecap="round"/>`;
   s += `<line x1="${cx}" y1="${cy}" x2="${(cx + (R - 4) * Math.sin(ma)).toFixed(1)}" y2="${(cy - (R - 4) * Math.cos(ma)).toFixed(1)}" stroke="${RED}" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="5" fill="${N}"/>`;
-  return s + txt(cx, cy + R + 42, cap, 15, { w: 600 });
+  return s + txt(cx, cy + R + 38, cap, 15, { w: 600 });
 };
-const clocksFig = svg(600, 196,
-  txt(170 - 84, 90, 'A', 22, { c: TEAL }) + clock(170, 86, 7, 25, 'Ali is eating breakfast.') +
-  txt(430 - 84, 90, 'B', 22, { c: TEAL }) + clock(430, 86, 4, 50, 'Ali is at swimming after school.') +
-  txt(300, 192, 'short thick hand = hour     long red hand = minute', 14, { c: TEAL }),
-  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school. The short thick navy hand is the hour hand and the long thin red hand is the minute hand.');
+const clocksFig = svg(600, 188,
+  txt(170 - 84, 86, 'A', 22, { c: TEAL }) + clock(170, 80, 7, 25, 'Ali is eating breakfast.') +
+  txt(430 - 84, 86, 'B', 22, { c: TEAL }) + clock(430, 80, 4, 50, 'Ali is at swimming after school.') +
+  txt(300, 184, 'short thick hand = hour     long red hand = minute', 14, { c: TEAL }),
+  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school. The short thick navy hand is the hour hand and the long thin red hand is the minute hand.').replace('width="600"', 'width="450"');
 
 /* ---------- module ---------- */
 module.exports = {
@@ -170,17 +170,17 @@ module.exports = {
     H.tbl([1300, 4600, 2000, 2000], [
       H.row(['Step', 'What I do', '3 ℓ jug', '5 ℓ jug'].map((s, i) => H.cell(s, [1300, 4600, 2000, 2000][i], { bold: true, fill: 'EDEDED', h: 15 }))),
       H.row([H.cell('Start', 1300, { bold: true, h: 15 }), H.cell('(where Q2 b ended)', 4600, { h: 15 }), H.cell('1 ℓ', 2000, { h: 15 }), H.cell('5 ℓ', 2000, { h: 15 })]),
-      ...[1, 2, 3, 4, 5].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
+      ...[1, 2, 3, 4].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
     ]),
     H.q(4, 'Siti has a red ribbon 64 cm long. Her blue ribbon is 18 cm shorter than the red ribbon.', { keepNext: true }),
     H.sub('a', 'How long is the blue ribbon?   ________ cm'),
     H.sub('b', 'She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.', { keepNext: true }),
     H.fig(ribbonFig),
     H.sub('c', 'Ben cuts a 20 m rope into 4 equal pieces.  Each piece: _____ m   Cuts: _____'),
-    H.q(5, 'Read the clocks. The short thick hand is the hour hand. The long red hand is the minute hand. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
+    H.q(5, 'Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
-    H.sub('a', 'Write each time with a.m. or p.m.   A: ____________   B: ____________'),
-    H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________'),
+    H.sub('a', 'Write each time with a.m. or p.m.   A: ____________   B: ____________', { after: 50 }),
+    H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________', { after: 50 }),
     H.sub('c', 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 12:10 p.m. How long is the trip?   ______________')
   ]
 };

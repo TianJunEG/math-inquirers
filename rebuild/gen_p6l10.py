@@ -74,13 +74,13 @@ C=json.loads(subprocess.run(['node','-e','process.stdout.write(JSON.stringify(re
 L=C['lesson']; DK=C['deck']; QB=C['qbank']; SC=C['script']
 
 PY_A='import random\nn = random.randint(1, 20)\nout = n * 3 + 4\nprint("My machine does x 3, then + 4.")\nprint("Out came", out)\nguess = int(input("What went in? "))\nif guess == n:\n    print("You cracked it!")\nelse:\n    print("No, it was", n)\n'
-PY_B='n = int(input("Give me a whole number: "))\nfactors = 0\nfor d in range(1, n + 1):\n    if n % d == 0:\n        factors = factors + 1\nif factors == 2:\n    print(n, "is prime!")\nelse:\n    print(n, "is not prime. It has", factors, "factors.")\n'
+PY_B='n = int(input("Give me a whole number: "))\nfactors = 0\nfor d in range(1, n + 1):\n    if n % d == 0:\n        factors = factors + 1\nif factors == 2:\n    print(n, "is prime!")\nelse:\n    print(n, "is not prime. It has", factors, "factor(s).")\n'
 PY_C='import random\nsevens = 0\nfor roll in range(1000):\n    if random.randint(1, 6) + random.randint(1, 6) == 7:\n        sevens = sevens + 1\nprint(sevens, "sevens in 1000 rolls")\nprint("We expect about", round(1000 / 6))\n'
 PY_D='hours = int(input("How many hours from 9 o\'clock? "))\nt = (9 + hours) % 12\nif t == 0:\n    t = 12\nprint(t, "o\'clock")\n'
 
 # ---------------- 1. title ----------------
 put('p6l10-title',title_slide('p6l10-title',10,5,'Showcase Challenge','Mixed: maths and code  •  challenge round, then your own puzzle program',DK['today'],
- f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan (this lesson changes the usual routine): warm-up 0 to 10 (lightning relay, quick questions), challenge round 10 to 30 (workbook page 1 in teams of 2, check together, talk about how we started), from puzzle to program 30 to 37 (three starter projects; click to reveal), brain break 37 to 42, plan and build 42 to 60 (teaching for the planning sheet, then workbook page 2 and Scratch; early finishers: stretch and challenge), showcase 60 to 84 (3 minutes each, rubric in the showcase notes), talk and exit ticket 84 to 90, then certificates. Before the lesson: save the three starter projects (A Mystery Machine, B Prime or Not?, C Lucky Seven) as shareable Scratch links, print or fill in certificates, and decide a random showcase order."))
+ f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan (this lesson changes the usual routine): warm-up 0 to 5 (lightning relay; the quick questions are spare), challenge round 5 to 22 (workbook page 1 in teams of 2, check together, talk about how we started), from puzzle to program 22 to 29 (starter projects; click to reveal), brain break 29 to 32, plan and build 32 to 62 (teaching for the planning sheet, then workbook page 2 and Scratch; early finishers: stretch and challenge), showcase 62 to 87 (3 minutes each plus a 20-second switch, rubric in the showcase notes), exit ticket and certificates 87 to 90. Build target: a working copy of one starter with ONE change is full marks; an own idea is optional. Children chose their starter and their twist at the end of Lesson 9. Before the lesson: build the starter projects once (A Mystery Machine, B Prime or Not?, C Lucky Seven and D Clock Jumper) and share them as .sb3 files (children use File, Load from your computer; no account needed) with shared project links as a backup. Print or fill in certificates, and decide a random showcase order. Showcase switching: ask the next child to have their screen ready while the one before answers questions; a child may paste a screenshot of the program into the chat and the tutor runs their file, which removes the switching time."))
 
 # ---------------- 2. warm-up relay ----------------
 relay=[('L1 Patterns','10th term of 3, 7, 11, 15, …?','39'),('L2 Primes','45 as a product of primes?','3 × 3 × 5'),('L3 Below zero','−7 + 10 = ?','3'),
@@ -93,13 +93,7 @@ for i,(lab,q,a) in enumerate(relay):
     body+=pin(L0+250,T0+125,263,p(a,28,800),'pop',YEL,14,'8px 16px','box-sizing:border-box')
 put('p6l10-warm1',sec('p6l10-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Lightning relay: one question from each lesson. Read card L1 and name a child; they answer, then they read the next card and name someone else. Click to show each answer (clicks go L1 to L9). '
- 'Answers: L1 39 (3 + 9 × 4; nth term 4n − 1). L2 3 × 3 × 5. L3 3. L4 8 (21 − 5 = 16, 16 ÷ 2 = 8). L5 10 (4 + 3 + 2 + 1). L6 1/6. L7 45° (360 ÷ 8). L8 11 o’clock (3 + 20 = 23 = 12 + 11). L9 5 (15 ÷ 3). Ask: "Which lesson felt longest ago? Which trick do you still remember?"'))
-
-# ---------------- 3. quick questions ----------------
-qs=[(f'{i+1}.',q,a) for i,(q,a) in enumerate(DK['warmQs'])]
-body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,34) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p6l10-warm2',sec('p6l10-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Whiteboards, then click. Answers: 1) 3n + 1 (check: n = 1 gives 4). 2) No: 91 = 7 × 13 (it looks prime, but it is not). 3) −3 (−5 + 8 = 3, 3 − 6 = −3). 4) 60° (360 ÷ 6). 5) 10 (40 ÷ 4). Ask on 2: "How could a program check this?" (count the factors with mod: that is Starter B later).'))
+ 'Answers: L1 39 (3 + 9 × 4; nth term 4n − 1). L2 3 × 3 × 5. L3 3. L4 8 (21 − 5 = 16, 16 ÷ 2 = 8). L5 10 (4 + 3 + 2 + 1). L6 1/6. L7 45° (360 ÷ 8). L8 11 o’clock (3 + 20 = 23 = 12 + 11). L9 5 (15 ÷ 3). Ask: "Which lesson felt longest ago? Which trick do you still remember?" Spare quick questions if the relay ends early: 1) 3n + 1. 2) No: 91 = 7 × 13. 3) −3. 4) 60°. 5) 10.'))
 
 # ---------------- 4. explore 1: challenge round rules ----------------
 steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
@@ -109,22 +103,22 @@ for r,lab in enumerate(['Q1','Q2','Q3']):
     sb+=''.join(T(125+c*230,116+r*58,'+1',28,MUTED,weight=700) for c in (1,2,3))
 board=svg(940,260,sb,'Scoreboard: for each puzzle Q1 to Q3, plus 1 point for the answer, plus 1 for a check, plus 1 for a reason')
 body=h2('Challenge round: how it works')+'<div style="display:flex;gap:32px;align-items:flex-start">'+card(chip('TEAMS OF 2')+f'<ol style="font-size:30px;font-weight:600;padding-left:44px;margin:0;display:flex;flex-direction:column;gap:8px;line-height:1.3">{steps}</ol>',WHITE,'flex:1;min-width:0')+card(board,WHITE,'flex:none;padding:24px')+'</div>'
-put('p6l10-explore1',sec('p6l10-explore1','10–12 MIN',body,
- 'Minutes 10 to 12. Explain the rules, then send teams of 2 to breakout rooms (or work side by side). Points: 1 for each correct answer, 1 for each check (worked a different way, or tested in code), 1 for each reason they can say aloud. Keep a team tally in the chat or on the board. The point of the check and reason columns: a lucky guess is worth only a third of the points. '
+put('p6l10-explore1',sec('p6l10-explore1','5–7 MIN',body,
+ 'Minutes 5 to 7. Explain the rules, then send teams of 2 to breakout rooms (or work side by side). Points: 1 for each correct answer, 1 for each check (worked a different way, or tested in code), 1 for each reason they can say aloud. Keep a team tally in the chat or on the board. The point of the check and reason columns: a lucky guess is worth only a third of the points. '
  'Predict first: '+SC['predict'][0]))
 
 # ---------------- 5/6. worksheet page 1 (the round) ----------------
-put('p6l10-ws1',ws_preview('p6l10-ws1','12–25 MIN','Challenge round: workbook page 1',[('Q1','Hexagon chains. Find the rule, then predict what the code says.'),('Q2','Prime hunters. Factors, prime factors and prime pairs.'),('Q3','Quick-fire: below zero, machines, turtle turns, clock, digit cards.')],'Stuck? Which lesson does it remind you of? Make a table, list it in order, or draw it.',
- 'Minutes 12 to 25. Visit each team. Ask "How did you start?" and "What is your check?" before giving any help. Hints: '+' '.join(SC['exploreHints'])+' Teams who finish early can test Q1 in Scratch (the four blocks are on the page) or list the Q3e numbers with two nested loops.'))
-put('p6l10-ws1ans',check_slide('p6l10-ws1ans','25–28 MIN','Challenge round: check together',[('Q1','a) 51   b) 5n + 1   c) 20   d) 76: a chain of 15 hexagons'),('Q2','a) 49   b) 2 × 2 × 3 × 7   c) 3 + 37,  11 + 29,  17 + 23'),('Q3','a) −7 °C  b) 5  c) 15  d) 1 o’clock  e) 12; 6  f) 1/3')],
+put('p6l10-ws1',ws_preview('p6l10-ws1','7–19 MIN','Challenge round: workbook page 1',[('Q1','Hexagon chains. Find the rule, then predict what the code says.'),('Q2','Prime hunters. Factors, prime factors and prime pairs.'),('Q3','Quick-fire: below zero, machines, turtle turns, clock, digit cards.')],'Stuck? Which lesson does it remind you of? Make a table, list it in order, or draw it.',
+ 'Minutes 7 to 19. Visit each team. Ask "How did you start?" and "What is your check?" before giving any help. Hints: '+' '.join(SC['exploreHints'])+' Teams who finish early can test Q1 in Scratch (the four blocks are on the page) or list the Q3e numbers with two nested loops.'))
+put('p6l10-ws1ans',check_slide('p6l10-ws1ans','19–21 MIN','Challenge round: check together',[('Q1','a) 51   b) 5n + 1   c) 20   d) 76: a chain of 15 hexagons'),('Q2','a) 49   b) 2 × 2 × 3 × 7   c) 3 + 37,  11 + 29,  17 + 23'),('Q3','a) −7 °C  b) 5  c) 15  d) 1 o’clock  e) 12; 6  f) 1/3')],
  'Click after a team explains; add up the points. Q1: each new hexagon adds 5 sticks (it shares one side), so 5n + 1; 5 × 10 + 1 = 51; 5n + 1 = 101 gives n = 20; the code starts at 6 and adds 5 fourteen times: 6 + 70 = 76, which is 5 × 15 + 1, the chain of 15. '
  'Q2: a 2-digit number with exactly 3 factors is the square of a prime: 25 or 49; digits add to 13: 49. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7. For 40 test every prime up to 20: 3 + 37, 11 + 29, 17 + 23 work; 2, 5, 7, 13, 19 do not (38, 35, 33, 27, 21 are not prime). '
  'Q3: a) −4 + 9 = 5, 5 − 12 = −7. b) 3n − 10 = n, so 2n = 10, n = 5 (or trial: 5 × 3 − 10 = 5). c) 360 ÷ 24 = 15. d) 100 hours = 8 × 12 + 4, so 4 hours on from 9: 1 o’clock. e) 4 × 3 = 12 numbers; even ones end in 2 or 4: 3 + 3 = 6. f) 12, 21, 24, 42 are multiples of 3: 4 of 12 = 1/3.',lw=200))
 
 # ---------------- 7. explore 2: talk ----------------
 body=h2('Challenge round: talk about it')+numcards([(f'{i+1}.',q) for i,(q,a) in enumerate(DK['expAsk'])],38)
-put('p6l10-explore2',sec('p6l10-explore2','28–30 MIN',body,
- 'Minutes 28 to 30. Quick round: one team answers each. Answers: 1) '+DK['expAsk'][0][1]+' 2) '+DK['expAsk'][1][1]+' 3) '+DK['expAsk'][2][1]+' Announce the winning team, then: "Now you stop solving puzzles and start MAKING them."'))
+put('p6l10-explore2',sec('p6l10-explore2','21–22 MIN',body,
+ 'Minutes 21 to 22. Quick round: one team answers each. Answers: 1) '+DK['expAsk'][0][1]+' 2) '+DK['expAsk'][1][1]+' 3) '+DK['expAsk'][2][1]+' Announce the winning team, then: "Now you stop solving puzzles and start MAKING them."'))
 
 # ---------------- 8. teach: from puzzle to program ----------------
 cards4=[('1','Maths first','Pick a puzzle. Work out its answer by hand.'),('2','Blocks','Input → rule → check → output. Under 15 blocks.'),('3','Test it','Use a value you already know the answer to.'),('4','Twist','Change the rule, add a score, or a level 2.')]
@@ -132,7 +126,7 @@ body=h2('From puzzle to program')+p('Every program you build today follows the s
 for i,(n,t,d) in enumerate(cards4):
     body+=pin(128+i*424,330,392,p(n,64,800,TEAL)+p(t,40,800)+p(d,32,600),'rise',WHITE,24,'26px 28px','box-sizing:border-box;height:400px')
 body+=pin(128,780,1664,p('The program is a test of your maths. If they agree, both are probably right.',34,700),'fade',SOFT,20,'18px 28px')
-put('p6l10-teach1',sec('p6l10-teach1','30–31 MIN',body,
+put('p6l10-teach1',sec('p6l10-teach1','22–23 MIN',body,
  'Teach. Click each card. Say: "A program that shows an answer you could not check is not a puzzle, it is a mystery box. So the maths always comes first." Then the three starters, each about one minute. Children do not copy them yet: they choose one at the planning stage after the break.'))
 
 # ---------------- 9. starter A ----------------
@@ -141,11 +135,11 @@ body=h2('Starter A: Mystery Machine')+pin(128,250,820,code_svg(progA,'Code block
 body+=pin(1010,250,782,p('The maths',30,800,TEAL)+p('OUT = 3n + 4.  Backwards: take away 4, then divide by 3.',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(1010,470,782,p('Test it',30,800,TEAL)+p('If n is 5, it must show OUT: 19. Type 5: “You cracked it!”',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(1010,690,782,p('Twist ideas',30,800,TEAL)+p('A different rule each time; keep a score; allow negative numbers.',32,700),'rise',SOFT,20,'20px 28px')
-put('p6l10-we1',sec('p6l10-we1','31–32 MIN',body,
+put('p6l10-we1',sec('p6l10-we1','23–24 MIN',body,
  'Starter A (Lesson 4 idea). Run it on screen. Think-aloud: '+SC['think'][1]+' Note: Scratch uses * for ×. "answer" is what the player typed. The worksheet (Q4a) asks for a different test, n = 9, so do not reveal it. 7 blocks. '
  'Python version (optional):\n'+PY_A+'With n = 5 it prints "Out came 19"; typing 5 gives "You cracked it!", typing 7 gives "No, it was 5".'))
 
-put('p6l10-try1',try_slide('p6l10-try1','32–33 MIN','Your turn: beat the machine','× 3, then + 4. What went IN?',[('a','OUT: 25','7'),('b','OUT: 64','20'),('c','OUT: 3','impossible')],
+put('p6l10-try1',try_slide('p6l10-try1','24–25 MIN','Your turn: beat the machine','× 3, then + 4. What went IN?',[('a','OUT: 25','7'),('b','OUT: 64','20'),('c','OUT: 3','impossible')],
  'Whiteboards. a) 25 − 4 = 21, 21 ÷ 3 = 7. b) 64 − 4 = 60, 60 ÷ 3 = 20. c) 3 − 4 = −1, and −1 ÷ 3 is not a whole number; also the smallest OUT for n from 1 to 20 is 3 × 1 + 4 = 7, so the program can never show 3. Good discussion: knowing what a program can NEVER say is also a test.',44))
 
 # ---------------- 10. starter B ----------------
@@ -156,9 +150,9 @@ body+=pin(L0,240,732,p('Test: type 6',32,800,TEAL))
 body+=trow(L0,300,['d','6 mod d','factors'],W,None,True,30)
 for k,(m,f) in enumerate([(0,1),(0,2),(0,3),(2,3),(1,3),(0,4)]): body+=trow(L0,368+k*64,[str(k+1),str(m),str(f)],W,'rise',30)
 body+=answer(L0,770,732,'4 factors → “Not prime” ✓')
-put('p6l10-we2',sec('p6l10-we2','33–34 MIN',body,
+put('p6l10-we2',sec('p6l10-we2','25–26 MIN',body,
  'Starter B (Lesson 2 idea). "n mod d = 0" means d divides n exactly, so d is a factor. A prime has exactly 2 factors: 1 and itself. Click through the trace for 6: factors 1, 2, 3 and 6 make 4, so not prime. Then run it with 7 (2 factors: prime) and 1 (1 factor: not prime, which is correct: 1 is not a prime). 11 blocks. Worksheet Q4b tests 91, so do not run 91 now. Twist ideas: say how many factors; only accept numbers up to 1000; find the numbers with exactly 3 factors. '
- 'Python version (optional):\n'+PY_B+'Tested: 6 → "6 is not prime. It has 4 factors."  7 → "7 is prime!"  97 → "97 is prime!"  1 → "1 is not prime. It has 1 factors."'))
+ 'Python version (optional):\n'+PY_B+'Tested: 6 → "6 is not prime. It has 4 factor(s)."  7 → "7 is prime!"  97 → "97 is prime!"  1 → "1 is not prime. It has 1 factor(s)."'))
 
 # ---------------- 11. starter C ----------------
 progC=['when flag clicked','set sevens to 0',{'c':'repeat 1000','body':[{'c':'if ((pick random 1 to 6) + (pick random 1 to 6) = 7) then','body':['change sevens by 1']}]},'say (join sevens " sevens")']
@@ -177,17 +171,17 @@ body=h2('Starter C: Lucky Seven')+pin(128,240,1000,code_svg(progC,'Code blocks: 
 body+=pin(128,560,1000,p('6 of the 36 equally likely results make 7: that is 1/6.  1000 ÷ 6 ≈ 167.',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(128,730,1000,p('Our runs: 152, 182, 162. Close to 167, never exactly the same: chance varies.',32,700),'rise',SOFT,20,'20px 28px')
 body+=pin(1300,240,440,grid)
-put('p6l10-we3',sec('p6l10-we3','34–36 MIN',body,
+put('p6l10-we3',sec('p6l10-we3','26–28 MIN',body,
  'Starter C (Lesson 6 idea). Think-aloud: '+SC['think'][2]+' The table: there are 6 × 6 = 36 ways two dice can land, all equally likely; the yellow cells (1 + 6, 2 + 5, … , 6 + 1) make 7. Run it 3 times on screen and write the results: they will differ. A run of 1000 usually lands between about 145 and 190. Worksheet Q4c asks about 8s, so do not count the 8s now. 5 blocks. Twist ideas: let the player pick the total; count every total in a list; compare 100 rolls with 10 000 rolls. '
  'Python version (optional):\n'+PY_C+'Three test runs printed 152, 182 and 162 sevens; the last line always prints "We expect about 167".'))
 
 # ---------------- 12. key ----------------
 body=h2(DK['keyHead'])+card(p(DK['keyBig'],42,700))+card(p(DK['keySmall'],36,600,MUTED))
-put('p6l10-key',sec('p6l10-key','36–37 MIN',body,'Say the key idea together. Common mistakes to watch for while children build: (1) '+L['mistakes'][0]+' (2) '+L['mistakes'][1]+' (3) '+L['mistakes'][2]))
+put('p6l10-key',sec('p6l10-key','28–29 MIN',body,'Say the key idea together. Common mistakes to watch for while children build: (1) '+L['mistakes'][0]+' (2) '+L['mistakes'][1]+' (3) '+L['mistakes'][2]))
 
 # ---------------- 13. break ----------------
-put('p6l10-break',color_slide('p6l10-break',TEAL,'37–42 MIN','Brain break: turtle moves','I call a shape. Turn on the spot by its outside angle at every corner: triangle 120°, square 90°, hexagon 60°.','Count the corners until you face the front again. Then a drink of water and back to the screen.',
- 'Five minutes. Call: square (4 turns of 90°), triangle (3 of 120°), hexagon (6 of 60°), then the surprise: a star (5 turns of 144°, which takes 2 full turns to face the front again). Online: children stay in view of the camera.'))
+put('p6l10-break',color_slide('p6l10-break',TEAL,'29–32 MIN','Brain break: turtle moves','I call a shape. Turn on the spot by its outside angle at every corner: triangle 120°, square 90°, hexagon 60°.','Count the corners until you face the front again. Then a drink of water and back to the screen.',
+ 'Three minutes. Call: square (4 turns of 90°), triangle (3 of 120°), hexagon (6 of 60°), then the surprise: a star (5 turns of 144°, which takes 2 full turns to face the front again). Online: children stay in view of the camera.'))
 
 # ---------------- 14. teach before page 2: plan it ----------------
 progD=['when flag clicked',"ask \"How many hours from 9 o'clock?\" and wait",'set t to ((9 + answer) mod 12)',{'c':'if (t = 0) then','body':['set t to 12']},"say (join t \" o'clock\")"]
@@ -198,7 +192,7 @@ body+=pin(L0,240,712,p('Tests, worked out FIRST',30,800,TEAL))
 body+=trow(L0,300,['h','by hand','it said'],W,None,True,30)
 for k,(h_,bh,said) in enumerate([('5','2 o’clock','2 ✓'),('15','12 o’clock','12 ✓'),('30','3 o’clock','3 ✓')]): body+=trow(L0,368+k*70,[h_,bh,said],W,'rise',30)
 body+=pin(L0,610,712,p('15 is the edge case: 9 + 15 = 24, and 24 mod 12 is 0. Without the if block it says “0 o’clock”.',30,700),'fade',SOFT,20,'18px 24px')
-put('p6l10-teachplan',sec('p6l10-teachplan','42–44 MIN',body,
+put('p6l10-teachplan',sec('p6l10-teachplan','32–34 MIN',body,
  'Teach before worksheet page 2 (Q5 is the planning table, Q6 the blocks and tests). Walk through a FOURTH idea so the starters stay fresh. Think-aloud: "My puzzle: 9 o’clock plus h hours. By hand: 9 + 5 = 14, take away 12: 2 o’clock. 9 + 15 = 24, take away two 12s: 0, which on a clock is 12. 9 + 30 = 39, take away three 12s: 3. I write these tests BEFORE I run anything." Click the rows. Then: "I found a bug with the edge case: without the if block it said 0 o’clock." '
  'Python version (optional):\n'+PY_D+'Tested: 5 → "2 o\'clock", 15 → "12 o\'clock", 30 → "3 o\'clock".'))
 
@@ -207,14 +201,14 @@ body=h2('Test it like a detective')
 tt=[('Known answer','Pick an input you worked out by hand.','Prime or Not? with 7: it must say Prime!'),('Edge case','Try the smallest, 0, 1 or the biggest.','Prime or Not? with 1: 1 factor, so Not prime ✓'),('Random programs','Run it several times. Close, not exact.','Lucky Seven: near 167 each time')]
 for i,(t,d,e) in enumerate(tt):
     body+=pin(128,250+i*215,1664,p(t,36,800,TEAL)+p(d,32,700)+p('e.g. '+e,30,600,MUTED),'rise',WHITE,20,'18px 28px')
-put('p6l10-teachtest',sec('p6l10-teachtest','44–45 MIN',body,
+put('p6l10-teachtest',sec('p6l10-teachtest','34–35 MIN',body,
  'Teach before worksheet page 2. Click each kind of test. Ask: "Why is 1 a good edge case for Prime or Not?" (it is the only whole number with exactly 1 factor; a program that counts badly might call it prime). "If Lucky Seven said 400, what would you think?" (a bug: 400 is far too many; maybe it counts 7 OR something, or never resets sevens to 0).'))
 
 # ---------------- 16/17. worksheet page 2 ----------------
-put('p6l10-ws2',ws_preview('p6l10-ws2','45–58 MIN','Page 2: plan, then build',[('Q4','Maths first: what should each starter do? Work it out by hand.'),('Q5','Your plan: the idea, the puzzle, its answer, your twist.'),('Q6','Your blocks and three tests, written BEFORE you run them.'),('Then','Build it in Scratch (or Python). Under 15 blocks.')],'Finished early? Stretch and Challenge, or give your program a level 2.',
- 'Minutes 45 to 58. Five minutes on Q4 and Q5, then build. Circulate: '+' '.join(SC['circulate'])+' Hints: '+' '.join(SC['hints'])+' Anyone stuck after 5 minutes: build a starter exactly, then change ONE thing (the rule, the range, the total).'))
-put('p6l10-ws2ans',check_slide('p6l10-ws2ans','58–60 MIN','Page 2: check Q4, then get ready',[('Q4a','31;  OUT 58 came from 18'),('Q4b','4 factors (1, 7, 13, 91): not prime'),('Q4c','about 139: 5 of 36 results make 8'),('Q5–6','Open: tests worked out by hand first')],
- 'Click after a child explains. a) 9 × 3 + 4 = 31; (58 − 4) ÷ 3 = 18. b) 91 = 7 × 13, so it has 4 factors. c) 2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2: 5 of the 36 results; 1000 × 5 ÷ 36 is about 139 (138.9), and a real run will be near this, not exactly. Then: 2 minutes to finish and save. Everyone gets their project open and ready to share.',lw=220))
+put('p6l10-ws2',ws_preview('p6l10-ws2','35–60 MIN','Page 2: plan, then build',[('Q4','Maths first: what should each starter do? Work it out by hand.'),('Q5','Your plan: the idea, the puzzle, its answer, your twist.'),('Q6','Your blocks and three tests, written BEFORE you run them.'),('Then','Build it in Scratch (or Python). Under 15 blocks.')],'Finished early? Stretch and Challenge, or give your program a level 2.',
+ 'Minutes 35 to 60. Five minutes on Q4 and Q5, then build for about 20 minutes (test as you go; a working copy of one starter with one change is full marks). Anyone who wants to start from their own idea may, but only after a starter works. Circulate: '+' '.join(SC['circulate'])+' Hints: '+' '.join(SC['hints'])+' Anyone stuck after 5 minutes: build a starter exactly, then change ONE thing (the rule, the range, the total).'))
+put('p6l10-ws2ans',check_slide('p6l10-ws2ans','60–62 MIN','Page 2: check Q4, then get ready',[('Q4a','31;  OUT 58 came from 18'),('Q4b','4 factors (1, 7, 13, 91): not prime'),('Q4c','about 139: 5 of 36 results make 8'),('Q5–6','Open: tests worked out by hand first')],
+ 'Click after a child explains. a) 9 × 3 + 4 = 31; (58 − 4) ÷ 3 = 18. b) 91 = 7 × 13, so it has 4 factors. c) 2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2: 5 of the 36 results; 1000 × 5 ÷ 36 is about 139 (138.9), and a real run will be near this, not exactly. Minutes 60 to 62: finish and save. Everyone gets their project open and ready to share.',lw=220))
 
 # ---------------- 18. stretch ----------------
 st=[('1.','What is the 50th term of 7, 11, 15, 19, …?'),('2.','How many of the numbers 1 to 50 have exactly 3 factors?'),('3.','Two dice are rolled and added. What is the probability that the total is a prime number?')]
@@ -259,8 +253,8 @@ body=h2('Showcase: 3 minutes each')
 for i,(t,a,b) in enumerate(parts):
     body+=pin(128+i*424,260,392,chip(t,YEL,NAVY)+p(a,40,800)+p(b,30,600),None,WHITE,24,'24px 28px','box-sizing:border-box;height:330px')
 body+=pin(128,640,1664,p('Audience: two stars and a wish in the chat.  “I liked … because …”   “I wonder if …”',34,700),None,SOFT,20,'22px 30px')
-put('p6l10-showcase',sec('p6l10-showcase','60–84 MIN',body,
- 'Minutes 60 to 84: about 3 minutes each for up to 8 children (use a timer; random order). A child who did not finish shows their plan and the tests they worked out by hand: that still earns full marks for maths and testing. '
+put('p6l10-showcase',sec('p6l10-showcase','62–87 MIN',body,
+ 'Minutes 62 to 87: about 3 minutes each plus a 20-second switch for up to 8 children (use a timer; random order). The next child has their screen ready while the one before answers questions; a child may paste a screenshot into the chat and the tutor runs their file instead of sharing a screen. A child who did not finish shows their plan and the tests they worked out by hand: that still earns full marks for maths and testing. '
  'SHOWCASE RUBRIC (1 to 3 points each; note it privately, share only the stars and the wish). '
  'Maths: 1 = gives an answer; 2 = correct answer with working; 3 = correct, and can say why the rule works. '
  'Testing: 1 = ran it once; 2 = a test with an answer known in advance; 3 = a known-answer test and an edge case, or a bug found and fixed. '
@@ -270,14 +264,14 @@ put('p6l10-showcase',sec('p6l10-showcase','60–84 MIN',body,
 
 # ---------------- 23. talk ----------------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(SC['talk'][0].strip('“”'),40)+p(SC['talk'][1].strip('“”'),40))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
-put('p6l10-talk',sec('p6l10-talk','84–86 MIN',body,'Minutes 84 to 86. Quick round, one sentence each. '+SC['talkAns']))
+put('p6l10-talk',sec('p6l10-talk','87–88 MIN',body,'Minutes 87 to 88. One question only, one sentence each. If time is short, skip it. , one sentence each. '+SC['talkAns']))
 
 # ---------------- 24. exit ----------------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],42))+card(p('Write it in the chat or on a slip of paper. Then collect your last stamp.',34))
-put('p6l10-exit',sec('p6l10-exit','86–90 MIN',body,'Minutes 86 to 90. '+L['exit']['a']+' Extension to take home: '+L['extension']))
+put('p6l10-exit',sec('p6l10-exit','88–90 MIN',body,'Minutes 88 to 90, then certificates. '+L['exit']['a']+' Extension to take home: '+L['extension']))
 
 # ---------------- 25. end (certificates) ----------------
-put('p6l10-end',color_slide('p6l10-end',NAVY,'WELL DONE, INQUIRERS','Ready for Secondary 1','Notice it. Test it. Explain why.','Certificates and a last stamp for every inquirer.',
+put('p6l10-end',color_slide('p6l10-end',NAVY,'WELL DONE, INQUIRERS','Ten lessons of maths and code','Notice it. Test it. Explain why.','Certificates and a last stamp for every inquirer.',
  'Hand out certificates. '+SC['close'][0]+' '+SC['close'][1]+' Ask each child to name one puzzle or program they enjoyed. Give parents the one-page summary from the tutor guide, with links to Scratch and to the starter projects so children can keep building.',fg=CREAM,sc='#C9D4EC',kc=YEL,tsize=120))
 
 # ---------------- write ----------------

@@ -137,7 +137,7 @@ inner = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YE
          f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(DK["today"])}</p></div>')
 put('p6l8-title', dark('p6l8-title', NAVY, inner,
     f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: before the lesson, build the starter project once from the whole-machine slide: a list called alphabet holding the letters A to Z (add each letter with the add to list block), and everything in the machine except the 3 cipher blocks. Save it as an .sb3 file and share the FILE, not only a link, so children load it with File, Load from your computer. Scratch lists count from item 1, so letter number n (A = 0) is item n + 1. The mod block is in the Operators menu. List blocks in Scratch are red-orange and live in the Variables palette; our slides draw them as simple coloured shapes, so find blocks by the category name on the left, not by colour. '
-    'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+    'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ================= 2. warm1: clock jumps =================
 body = h2('Warm-up: clock jumps') + stitle('Answer on your whiteboard. Which time will it be?')
@@ -230,10 +230,10 @@ full_prog = [('event', 'when green flag clicked'), ('var', 'set {shift} to {3}')
                                                                               [('var', 'set {code} to {join (code) (letter)}')]),
                  ('var', 'change {i} by {1}')]),
              ('looks', 'say {code}')]
-body = h2('The whole code machine') + stitle('Spaces and other symbols are copied across, not coded.')
+body = h2('The whole code machine')
 body += pin(128, 250, 1180, blocks_svg(full_prog, 'The whole code machine: when green flag clicked; set shift to 3; ask Message and wait; set code to empty; set i to 1; repeat length of answer: set letter to letter i of answer; if item number of letter in alphabet is more than 0 then set n, set m, set code (the three cipher blocks) else set code to join code and letter; change i by 1; then say code', 20, 34), None, WHITE, 20, '10px 18px')
-body += pin(1360, 250, 432, p('The tutor’s starter project already has the list alphabet (A to Z) and everything except the 3 cipher blocks.', 28, 700), 'fade', SOFT, 20, '18px 24px')
-body += pin(1360, 520, 432, p('Your job: build the 3 blocks inside the if. The else keeps spaces.', 28, 700), 'fade', WHITE, 20, '18px 24px')
+body += pin(1360, 250, 384, p('The tutor’s starter project already has the list alphabet (A to Z) and everything except the 3 cipher blocks.', 26, 700), 'fade', SOFT, 20, '18px 24px')
+body += pin(1360, 560, 384, p('Your job: build the 3 blocks inside the if. The else copies spaces and other symbols across without coding them.', 26, 700), 'fade', WHITE, 20, '18px 24px')
 put('p6l8-teachloop', sec('p6l8-teachloop', '33–34 MIN', body,
     'Show the whole machine once so children see where the 3 cipher blocks sit. This is more than 15 blocks, so the tutor gives the loop part pre-built in the starter project and children add only the three cipher blocks inside the if (set n, set m, set code). Walk through it in order: ask for the message; code starts empty; i counts the letters; repeat once for each letter of the answer; take letter i; if the letter is in the alphabet list (item # of is more than 0) code it, else copy it (this keeps spaces); add 1 to i; at the end say the code. Without the if, a space is not in the list, item # of gives 0, n becomes -1, and the space would turn into the letter at position shift - 1. Type messages in capital letters. In Scratch the list blocks (item # of, item of, length of list) are in the Variables palette; letter of and length of (a word) are in Operators. Build the starter once before the lesson from this slide and save it as an .sb3 file. A negative number mod 26 should also come out non-negative in Scratch (for example -4 mod 26 is 22): check this in the editor first.'))
 
@@ -291,11 +291,11 @@ put('p6l8-teachcomb', sec('p6l8-teachcomb', '55–56 MIN', body,
     'Teach before worksheet page 2 (Q5 combines other shifts). Use a letter to show it: A → P → E, and A shift 4 → E ✓. Say: a shift is a jump on the clock, and two jumps add. Ask: "What shift undoes shift 15?" (11, since 15 + 11 = 26).'))
 
 # ================= 19–20. ws2 =================
-put('p6l8-ws2', ws_preview('p6l8-ws2', '56–66 MIN', 'Worksheet page 2: on your own',
+put('p6l8-ws2', ws_preview('p6l8-ws2', '56–72 MIN', 'Worksheet page 2: on your own',
     [('Q3', 'Trace the code machine in a table: WAY with shift 5.'), ('Q4', 'Crack Mei’s secret message.'), ('Q5', 'Two shifts in a row.')],
     'Finished early? Stretch and Challenge come next.',
     'Children work alone (they may test in Scratch). Note who needs a short catch-up next lesson.'))
-put('p6l8-ws2ans', check2('p6l8-ws2ans', '66–70 MIN', 'Page 2: check together', [
+put('p6l8-ws2ans', check2('p6l8-ws2ans', '72–75 MIN', 'Page 2: check together', [
     ('Q3', 'W 22, 27, 1, B   A 0, 5, 5, F   Y 24, 29, 3, D   It says BFD.', 1),
     ('Q4', 'BPM is THE.  T to B is shift 8.  THE KEY IS UNDER THE MAT', 2),
     ('Q5', 'a) 15   b) 5   c) The original message: 9 + 17 = 26   d) 13', 1)],
@@ -345,11 +345,11 @@ put('p6l8-chwalk', sec('p6l8-chwalk', 'Challenge', body,
 
 # ================= 25. talk =================
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”'), 40, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put('p6l8-talk', sec('p6l8-talk', '70–80 MIN', body, 'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
+put('p6l8-talk', sec('p6l8-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
 body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
-put('p6l8-exit', sec('p6l8-exit', '80–90 MIN', body, f'Minutes 80 to 90. Answer: {L["exit"]["a"]} Extension: {L["extension"]}'))
+put('p6l8-exit', sec('p6l8-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]} Extension: {L["extension"]}'))
 
 order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-try1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-teachloop', 'p6l8-key', 'p6l8-break',
          'p6l8-ws1', 'p6l8-ws1ans', 'p6l8-teachtrace', 'p6l8-teachcrack', 'p6l8-teachcomb', 'p6l8-ws2', 'p6l8-ws2ans', 'p6l8-stretch', 'p6l8-challenge', 'p6l8-chdiag', 'p6l8-chwalk', 'p6l8-talk', 'p6l8-exit']

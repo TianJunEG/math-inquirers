@@ -13,12 +13,12 @@ const hdr = (n, topic, title, pb = true) => [
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
-  out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
-  out.push(banner('Stretch'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Draw a big, neat diagram first and label every length or angle you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
+  out.push(banner(n === 7 ? 'Stretch  (Q1: preview of P6, percentage change)' : 'Stretch'));
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(n === 7 && i < 2 ? 1 : 3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
-  out.push(banner('Challenge  (for strong thinkers)'));
+  out.push(banner(n === 7 ? 'Challenge  (for strong thinkers: P6 preview)' : 'Challenge  (for strong thinkers)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
   return out;
 };

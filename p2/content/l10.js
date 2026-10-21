@@ -21,18 +21,15 @@ const graphFig = (() => {
   return svg(600, 192, b, 'Picture graph of ice-creams sold. Monday 4 pictures, Tuesday 6, Wednesday 3, Thursday blank. Each picture stands for 5 ice-creams.');
 })();
 const cakeFig = svg(600, 64, `<rect x="50" y="8" width="500" height="48" rx="6" fill="${Y}" stroke="${N}" stroke-width="3"/>` + Array.from({ length: 9 }, (_, i) => `<line x1="${100 + i * 50}" y1="8" x2="${100 + i * 50}" y2="56" stroke="${N}" stroke-width="2.5"/>`).join(''), 'A cake cut into 10 equal pieces in a row');
-const tablesFig = (() => {
-  let b = '', x = 30;
+const towersFig = (() => {
+  // Tower 1 = 4 cubes, Tower 2 = 8 cubes, Tower 3 = 12 cubes (one cube = 9 px high)
+  let b = '', x = 150; const c = 9;
   [1, 2, 3].forEach(n => {
-    const w = n * 40;
-    b += `<rect x="${x}" y="22" width="${w}" height="40" fill="${SKY}" stroke="${N}" stroke-width="2.5"/>`;
-    for (let i = 1; i < n; i++) b += `<line x1="${x + i * 40}" y1="22" x2="${x + i * 40}" y2="62" stroke="${N}" stroke-width="1.5"/>`;
-    for (let i = 0; i < n; i++) b += `<circle cx="${x + 20 + i * 40}" cy="11" r="8" fill="${RED}" stroke="${N}" stroke-width="2"/><circle cx="${x + 20 + i * 40}" cy="73" r="8" fill="${RED}" stroke="${N}" stroke-width="2"/>`;
-    b += `<circle cx="${x - 11}" cy="42" r="8" fill="${RED}" stroke="${N}" stroke-width="2"/><circle cx="${x + w + 11}" cy="42" r="8" fill="${RED}" stroke="${N}" stroke-width="2"/>`;
-    b += txt(x + w / 2, 104, n + (n === 1 ? ' table' : ' tables'), 15);
-    x += w + 90;
+    for (let i = 0; i < 4 * n; i++) b += `<rect x="${x}" y="${118 - (i + 1) * c}" width="${c * 3}" height="${c}" fill="${Y}" stroke="${N}" stroke-width="1.5"/>`;
+    b += txt(x + c * 1.5, 138, 'Tower ' + n, 15);
+    x += 110;
   });
-  return svg(600, 112, b, '1 table seats 4 people, 2 tables pushed together seat 6, 3 tables seat 8');
+  return `<svg viewBox="0 0 600 146" width="420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three towers of cubes. Tower 1 has 4 cubes, Tower 2 has 8 cubes, Tower 3 has 12 cubes" style="max-width:100%">${b}</svg>`;
 })();
 const W5 = [2300, 1900, 1900, 1900, 1900];
 
@@ -57,7 +54,7 @@ module.exports = {
       ['Q3', 'Two 50¢ coins and four 20¢ coins (100¢ + 80¢ = 180¢ = $1.80). Table: 0 → $1.20, 1 → $1.50, 2 → $1.80 ✓'],
       ['Q4', 'Ali: car. Ben: MRT. Mei: bus. Siti: walk.'],
       ['Q5', '(a) 5/10  (b) 2/10  (c) Mei, Ali, Ben'],
-      ['Q6', '(a) 12, 15, 18 cubes in Towers 4, 5, 6; Tower 8 has 24 cubes (each tower adds 3: 3, 6, 9, 12, 15, 18, 21, 24)  (b) Tower 10 (30 cubes: 3 × 10, or keep adding 3 to 30)']
+      ['Q6', '(a) 16, 20, 24 cubes in Towers 4, 5, 6; Tower 8 has 32 cubes (each tower adds 4: 4, 8, 12, 16, 20, 24, 28, 32)  (b) Tower 9 (36 cubes: 4 × 9, or keep adding 4: 32, 36)']
     ]
   },
 
@@ -151,13 +148,13 @@ module.exports = {
     H.sub('a', 'What fraction of the cake does Mei eat?   ________'),
     H.sub('b', 'What fraction of the cake does Ben eat?   ________'),
     H.sub('c', 'Order the children, the one who eats the most first.  __________________'),
-    H.q(6, 'Square tables are pushed together in a row.', { keepNext: true }),
-    H.fig(tablesFig),
+    H.q(6, 'Ben builds towers with cubes. Tower 1 has 4 cubes, Tower 2 has 8 cubes and Tower 3 has 12 cubes. Keep the pattern going.', { keepNext: true }),
+    H.fig(towersFig),
     H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
-      H.row(['Tables', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: true, fill: 'EDEDED', h: 30 }))),
-      H.row(['People', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: i === 0, h: 80 })))
+      H.row(['Tower', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: true, fill: 'EDEDED', h: 30 }))),
+      H.row(['Cubes', '4', '8', '12', '', '', ''].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: i === 0, h: 60 })))
     ]),
-    H.sub('a', 'How many people can sit at 6 tables?   ________'),
-    H.sub('b', 'How many tables are needed for 20 people?   ________')
+    H.sub('a', 'How many cubes are in Tower 8?   ________', { after: 60 }),
+    H.sub('b', 'Which tower has 36 cubes?   Tower ________')
   ]
 };

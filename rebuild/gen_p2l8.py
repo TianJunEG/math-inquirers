@@ -311,7 +311,7 @@ put('p2l8-key',sec('p2l8-key','31–32 MIN',body,
 
 # 13. break
 put('p2l8-break',break_slide('p2l8-break','32–36 MIN','Be a shape! When the tutor calls a shape, make it with your body: a semicircle (arms in an arch over your head), a cone (hands to a point), a cube (curl up small), a cylinder (stand tall and straight).','Then: a drink of water and back to our seats.',
- 'Five minutes. Call the shapes faster and faster. Add "quarter circle" (one arm up, one arm out to the side, then sweep the hand round). Online: children stay in view of the camera.'))
+ 'Four minutes. Call the shapes faster and faster. Add "quarter circle" (one arm up, one arm out to the side, then sweep the hand round). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
 put('p2l8-ws1',preview_x('p2l8-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The robot. Count one kind of piece at a time and tick it. Then make whole circles from pieces.'),('Q2','Count every square (by size) and every triangle (by the line it sits on).')],'Stuck? Use your paper pieces, or colour each shape you count.',

@@ -40,9 +40,10 @@ function box(P, L, B, H, o = {}) {
   s += `<polygon points="${pts(P, [[L, 0, 0], [L, 0, B], [L, H, B], [L, H, 0]])}" fill="none" stroke="${NAVY}" ${e}/>`;
   if (o.labels) {
     const [a, b, c] = o.labels;
-    if (a) { const [x, y] = P(L / 2, 0, 0); s += tx(x, y + 22, a); }
-    if (b) { const [x, y] = P(0, H / 2, 0); s += tx(x - 8, y + 6, b, { a: 'end' }); }
-    if (c) { const [x, y] = P(L, 0, B / 2); s += tx(x + 10, y + 18, c, { a: 'start' }); }
+    const ls = o.lsize || 16;
+    if (a) { const [x, y] = P(L / 2, 0, 0); s += tx(x, y + ls + 6, a, { size: ls }); }
+    if (b) { const [x, y] = P(0, H / 2, 0); s += tx(x - 8, y + 6, b, { a: 'end', size: ls }); }
+    if (c) { const [x, y] = P(L, 0, B / 2); s += tx(x + 10, y + ls + 2, c, { a: 'start', size: ls }); }
   }
   if (o.water !== undefined && o.water > 0 && o.wlabel) {
     const [x1, y1] = P(L * 0.12, 0, 0), [, y2] = P(L * 0.12, o.water, 0);
@@ -52,26 +53,26 @@ function box(P, L, B, H, o = {}) {
   }
   return s;
 }
-const svg = (w, h, label, inner, dw) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${dw || w}px;max-width:100%">${inner}</svg>`;
+const svg = (w, h, label, inner, dw, vb) => `<svg aria-label="${esc(label)}" viewBox="${vb || '0 0 ' + w + ' ' + h}" xmlns="http://www.w3.org/2000/svg" style="width:${dw || w}px;max-width:100%">${inner}</svg>`;
 
 const figQ1 = () => svg(300, 150, 'A solid cuboid built from 1-centimetre cubes: 4 cubes long, 3 cubes deep and 2 cubes high',
   box(OB(40, 130, 44), 4, 3, 2, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }));
 const figQ3 = () => svg(440, 300, 'A glass tank 50 cm long, 30 cm wide and 40 cm high with water 18 cm deep, drawn to scale',
   box(OB(80, 260, 5), 50, 30, 40, { water: 18, wlabel: '18 cm', labels: ['50 cm', '40 cm', '30 cm'] }));
 const figQ4 = () => {
-  let s = box(OB(70, 230, 5), 40, 25, 30, { water: 15, wlabel: '15 cm', labels: ['40 cm', '30 cm', '25 cm'] });
+  let s = box(OB(70, 230, 5), 40, 25, 30, { water: 15, wlabel: '15 cm', labels: ['40 cm', '30 cm', '25 cm'], lsize: 24 });
   const cubeAt = (x0, y0) => box(OB(x0, y0, 5), 10, 10, 10, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'] });
   s += cubeAt(370, 120) + cubeAt(440, 120) + cubeAt(510, 120) + cubeAt(405, 210) + cubeAt(475, 210);
-  s += tx(395, 140, '10 cm', { size: 15 }) + tx(470, 236, '5 metal cubes', { size: 15 });
-  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 250);
+  s += tx(395, 140, '10 cm', { size: 22 }) + tx(480, 248, '5 metal cubes', { size: 22 });
+  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 300, '-40 44 630 225');
 };
 const figQ5 = () => svg(250, 230, 'A 4 by 4 by 4 cube built from 64 small cubes, painted on the outside',
   box(OB(16, 200, 38), 4, 4, 4, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }), 175);
 const figQ6 = () => {
-  let s = box(OB(60, 200, 4), 30, 20, 24, { water: 24, labels: ['30 cm', '24 cm', '20 cm'] });
-  s += box(OB(330, 200, 4), 40, 30, 25, { water: 0, labels: ['40 cm', '25 cm', '30 cm'] });
-  s += tx(150, 52, 'Container A (full)', { size: 16 }) + tx(440, 52, 'Tank B (empty)', { size: 16 });
-  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 230);
+  let s = box(OB(60, 200, 4), 30, 20, 24, { water: 24, labels: ['30 cm', '24 cm', '20 cm'], lsize: 24 });
+  s += box(OB(330, 200, 4), 40, 30, 25, { water: 0, labels: ['40 cm', '25 cm', '30 cm'], lsize: 24 });
+  s += tx(150, 52, 'Container A (full)', { size: 22 }) + tx(440, 52, 'Tank B (empty)', { size: 22 });
+  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 300, '-40 28 640 215');
 };
 
 module.exports = {
@@ -184,16 +185,15 @@ module.exports = {
 
       H.q(4, 'A tank has a base 40 cm by 25 cm. The water in it is 15 cm deep. Ali drops in 5 metal cubes with edges of 10 cm. They sink to the bottom and are completely under water.', { pb: true, before: 0, keepNext: true }),
       H.fig(figQ4()),
-      H.sub('a', 'What is the total volume of the 5 cubes?   ____________ cm³        (b)  How many cm does the water rise?   ________'),
-      H.sub('c', 'How deep is the water now?   ________ cm'),
+      H.sub('a', 'Volume of 5 cubes: ______ cm³   (b) Rise: ____ cm   (c) Depth now: ____ cm'),
       H.sub('d', 'Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
       H.q(5, 'A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.', { keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + figQ5() + '</div>', 3000, { h: 20 }),
         H.cell('<div>' + t('How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
       H.q(6, 'Container A is full of water. Tank B is empty.', { keepNext: true }),
       H.fig(figQ6()),
-      H.sub('a', 'How many litres of water are in container A?   ____________ ℓ'),
-      H.sub('b', 'All the water in A is poured into B. How deep is the water in B?   ________ cm'),
+      H.sub('a', 'How many litres of water are in container A?   __________ ℓ'),
+      H.sub('b', 'All of A is poured into B. How deep is the water in B?   ______ cm'),
       H.sub('c', 'Then some water is poured back from B into A until the water in A and B is equally deep. How deep is it?', { keepNext: true }),
       ...H.lines(1)
     ];

@@ -123,3 +123,7 @@ deck['order']=['l4-title','l4-warm1','l4-warm2','l4-explore1','l4-explore2','l4-
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l4-title'},'s2':{'description':'Teach: find the core, grow a pattern, work backwards','start':'l4-teach1'},'s3':{'description':'Worksheet with a check after each page','start':'l4-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l4-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides')
+
+import p1fix
+p1fix.sub_all(D,[('21 matchsticks or straws per pair','21 straws, lolly sticks or paper strips per pair (never real matches)'),('growing matchstick pattern','growing stick pattern'),('matchstick','stick'),('straws, toothpicks or pencils','straws, lolly sticks or paper strips')])
+p1fix.finish(D,4,{'l4-ws1':'40–54 MIN','l4-ws1ans':'54–56 MIN','l4-ws2':'56–68 MIN'})

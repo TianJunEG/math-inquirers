@@ -122,3 +122,8 @@ deck['order']=['cover','routine','rules','l1-title','l1-warm1','l1-warm2','l1-ex
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'cover'},'s2':{'description':'Teach: find the rule, test a number, fill the gaps','start':'l1-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l1-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l1-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides')
+
+# ---- P1 audit fixes (issues 8, 9, 27, 28): timing and routine slide ----
+import p1fix
+p1fix.finish(D,1,{'l1-ws2':'58–68 MIN'})
+p1fix.patch(D,'routine',[('<td>40–70</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then stretch</td>','<td>40–72</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then check together. Think Harder and Challenge are for early finishers or home.</td>'),('<td>70–80</td>','<td>72–80</td>')])

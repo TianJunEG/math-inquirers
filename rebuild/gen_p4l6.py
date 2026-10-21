@@ -153,7 +153,7 @@ g+=txt(270,322,'A',40,TEAL)+txt(830,322,'B',40,TEAL)+txt(1392,322,'C',40,TEAL)
 body=h2('Your turn: estimate first')+p('Smaller or bigger than a right angle? Estimate to the nearest 10°.',34,600,MUTED)
 body+=pin(128,320,1664,svgwrap(1664,340,'Three angles drawn to size: A is 30 degrees, B is 100 degrees, C is 145 degrees',g),None,WHITE,24,'0px')
 for i,a in enumerate(['A: about 30°','B: about 100°','C: about 145°']): body+=answer(128+i*568,700,500,a)
-put('try1',sec(f'{P}-try1','21–23 MIN',body,'Whiteboards: children write an estimate for each before you click. Benchmarks: a right angle is 90°, a straight line is 180°, half a right angle is 45°. A is less than half a right angle: about 30°. B is just more than a right angle: about 100°. C is between a right angle and a straight line, nearer the straight line: about 145°. They measure with a protractor on the worksheet; here we only estimate. Estimates within 15° are good.'))
+put('try1',sec(f'{P}-try1','21–23 MIN • OPTIONAL',body,'Whiteboards: children write an estimate for each before you click. Benchmarks: a right angle is 90°, a straight line is 180°, half a right angle is 45°. A is less than half a right angle: about 30°. B is just more than a right angle: about 100°. C is between a right angle and a straight line, nearer the straight line: about 145°. They measure with a protractor on the worksheet; here we only estimate. Estimates within 15° are good.'))
 
 # ---------- 8. teach: compass turns ----------
 g=compass(270,270,200,hi=('NW','E'))+turn_arrow(270,270,120,135,4)
@@ -165,12 +165,12 @@ body+=step(3,'Count 3 steps clockwise from NW: N, NE, E.',left=740,top=570,width
 body+=answer(740,670,1052,'Face E.')
 body+=pin(740,770,1052,p('Another: face E, turn 225° anticlockwise. 5 steps: NE, N, NW, W, SW.',32,700),'fade',SOFT,20,'16px 26px')
 put('teach2',sec(f'{P}-teach2','23–27 MIN',body,'Teach. Children stand facing the front (North) and act it out. Think-aloud: "I face North-West. Each step on the compass is 45 degrees, so 135 degrees is 3 steps. Clockwise is the way clock hands go: North, North-East, East. I face East." Common mistake: counting NW itself as the first step. Point with a finger: move first, then count. Then the second example: 225° is 5 steps; anticlockwise from E: NE, N, NW, W, SW. Ask: "What turn would get back from SW to E?" (225° clockwise, or 135° anticlockwise, the shorter way).'))
-put('try2',try_slide(f'{P}-try2','27–28 MIN','Your turn: compass turns','Count the 45° steps. Stand up and turn if it helps.',[('a','Face N. Turn 45° clockwise.','NE'),('b','Face S. Turn 3/4 turn clockwise.','E'),('c','Smallest turn from E to NW?','135° anticl.')],'Whiteboards. a) 1 step: NE. b) A 3/4 turn is 270° = 6 steps clockwise from S: SW, W, NW, N, NE, E. Or think: 3/4 clockwise is the same as 1/4 anticlockwise, and 1/4 anticlockwise from S is E. c) Clockwise from E to NW is 5 steps (225°); anticlockwise is 3 steps (135°), so the smallest turn is 135° anticlockwise.',size=36))
+put('try2',try_slide(f'{P}-try2','27–28 MIN • OPTIONAL','Your turn: compass turns','Count the 45° steps. Stand up and turn if it helps.',[('a','Face N. Turn 45° clockwise.','NE'),('b','Face S. Turn 3/4 turn clockwise.','E'),('c','Smallest turn from E to NW?','135° anticl.')],'Whiteboards. a) 1 step: NE. b) A 3/4 turn is 270° = 6 steps clockwise from S: SW, W, NW, N, NE, E. Or think: 3/4 clockwise is the same as 1/4 anticlockwise, and 1/4 anticlockwise from S is E. c) Clockwise from E to NW is 5 steps (225°); anticlockwise is 3 steps (135°), so the smallest turn is 135° anticlockwise.',size=36))
 
 # ---------- 10. key ----------
 body=h2('Key idea: count the turn')+card(p('A full turn is 360°: 4 right angles, 8 compass steps of 45°, 12 clock spaces of 30°. Estimate first, then measure.',44,700))+card(p('Angles side by side add up. The corner of a square or rectangle is 90°.',38,600,MUTED))
 put('key',sec(f'{P}-key','28–30 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Reading the wrong protractor scale (40° written as 140°) instead of starting from the 0 on the arm and checking with an estimate. (2) Counting the numbers on the clock instead of the spaces between them, or measuring the bigger way round (210° instead of 150° at 7 o’clock). (3) Compass turns: mixing up clockwise and anticlockwise, or counting the starting direction as the first 45° step.'))
-put('break',break_slide(f'{P}-break','30–34 MIN','Compass dance. Face North. On each clap, jump a quarter turn clockwise: N, E, S, W, N! Then half turns. Then 45° steps, saying each direction.','Five minutes. Online: children stand in view of the camera; the screen is North. Finish with "Turn to face the screen" from different directions: who turned the smallest way?'))
+put('break',break_slide(f'{P}-break','30–34 MIN','Compass dance. Face North. On each clap, jump a quarter turn clockwise: N, E, S, W, N! Then half turns. Then 45° steps, saying each direction.','Four minutes. Online: children stand in view of the camera; the screen is North. Finish with "Turn to face the screen" from different directions: who turned the smallest way?'))
 
 # ---------- teach: every angle in a fan (Q2) ----------
 O=(300,330); g=''
@@ -200,11 +200,11 @@ body+=pin(128,225,410,svgwrap(400,400,'A clock at 2 o’clock with the angle bet
 body+=pin(560,225,410,svgwrap(400,400,'A clock at 10 o’clock with the angle between the hands marked',g2),'fade')
 body+=step(1,'360° ÷ 12 = 30° for each space.',left=1000,top=240,width=732,size=32)
 body+=step(2,'2 o’clock: 2 spaces. 2 × 30° = 60°.',left=1000,top=340,width=732,size=32)
-body+=step(3,'10 o’clock: go the SHORTER way. Also 2 spaces: 60°.',left=1000,top=440,width=732,size=32)
-body+=step(4,'Think Harder: the minute hand turns 30° every 5 minutes, so 6° a minute.',left=1000,top=560,width=732,size=30)
-body+=answer(128,680,1664,'Think Harder: 6:05 to 6:20 is 15 minutes:  15 × 6° = 90°')
+body+=step(3,'10 o’clock: the SHORTER way is 2 spaces: 60°.',left=1000,top=440,width=732,size=32)
+body+=step(4,'Think Harder: minute hand, 6° a minute.',left=1000,top=590,width=732,size=30)
+body+=answer(128,730,1664,'Think Harder: 6:05 to 6:20 is 15 minutes:  15 × 6° = 90°')
 put('teachclock',sec(f'{P}-teachclock','53–54 MIN',body,'Teach before worksheet page 2 (Q3). Link back to explore: 3 o’clock was 90° = 3 spaces, so one space is 30°. Click 1: 2 o’clock. Click 2 shows 10 o’clock: "Is it 10 spaces? No: go the shorter way, from 10 to 12, 2 spaces." Then the minute hand: it goes all the way round (360°) in 60 minutes, so 360 ÷ 60 = 6° a minute, or 30° every 5 minutes. Count on with a paper clock: 6:05 to 6:20 is 3 jumps of 5 minutes, 3 × 30° = 90°.'))
-put('tryclock',try_slide(f'{P}-tryclock','54–56 MIN','Your turn: clock angles','Count the spaces the shorter way. 1 space = 30°.',[('a','The angle between the hands at 9 o’clock?','90°'),('b','The angle between the hands at 6 o’clock?','180°'),('c','Think Harder: the minute hand turns from 4:00 to 4:40. How many degrees?','240°')],'Whiteboards. a) From 9 to 12 is 3 spaces: 90°. b) 6 spaces: 180°, a straight line. c) 40 minutes × 6° = 240°, or 8 jumps of 5 minutes × 30°. Note: c is more than a half turn; that is fine for a turn of the hand.',size=34))
+put('tryclock',try_slide(f'{P}-tryclock','54–56 MIN • OPTIONAL','Your turn: clock angles','Count the spaces the shorter way. 1 space = 30°.',[('a','The angle between the hands at 9 o’clock?','90°'),('b','The angle between the hands at 6 o’clock?','180°'),('c','Think Harder: the minute hand turns from 4:00 to 4:40. How many degrees?','240°')],'Whiteboards. a) From 9 to 12 is 3 spaces: 90°. b) 6 spaces: 180°, a straight line. c) 40 minutes × 6° = 240°, or 8 jumps of 5 minutes × 30°. Note: c is more than a half turn; that is fine for a turn of the hand.',size=34))
 
 # ---------- teach: corners of squares and rectangles (Q5) ----------
 g=''

@@ -70,8 +70,8 @@ def numcards(sid, time, title, items, notes, size=38):
 # ---------- 1 title ----------
 notes = (f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} "
          "Time plan: warm-up 0 to 10, explore 10 to 25 (paper first, then at the computer), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
-         "worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. "
-         "Before the lesson: share the starter project “Every Order” as an .sb3 file (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so "join tea topping" saying 21 means green with pearls.")
+         "worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. "
+         "Before the lesson: share the starter project “Every Order” as an .sb3 file (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so \"join tea topping\" saying 21 means green with pearls.")
 body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {N}  •  WEEK 3</p>'
         f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(L["title"])}</h1>'
         f'<p style="font-size:44px;color:#C9D4EC">Counting  •  nested loops</p>'
@@ -262,9 +262,9 @@ body += box(830, 650, 962, '1 + 2 = 3,  3 + 3 = 6,  4 + 6 = 10 routes to B', 'po
 put(f'{PRE}-teachroute', sec(f'{PRE}-teachroute', '60–61 MIN', body, 'Teach before worksheet page 2 (Q5 uses a 3 by 3 grid with a puddle: do not solve it here). Clicks: the 1s on the edges, the first note, the other numbers, the second note, the answer. Check by listing: a route is 3 rights and 2 ups in some order, e.g. RRRUU, RRURU …; there are 10 of them. Ask: "If a point were blocked by a puddle, what number would you write there?" (0: no routes go through it) but let them use this on the worksheet themselves.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '61–68 MIN', 'Worksheet page 2: on your own', [('Q4', 'Seven friends shake hands. Then find Ali’s mistake.'), ('Q5', 'Routes: add as you go. Then put 0 at the puddle.'), ('Q6', 'Plan the handshake program for 7 friends, then build it to test Q4.')],
+put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '61–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'Seven friends shake hands. Then find Ali’s mistake.'), ('Q5', 'Routes: add as you go. Then put 0 at the puddle.'), ('Q6', 'Plan the handshake program for 7 friends, then build it to test Q4.')],
     'Finished early? Stretch and Challenge come next.', 'Children work alone. Note who needs a short catch-up next lesson. Children who finish Q6 build it in Scratch (or Python) and check that it agrees with Q4.'))
-put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '68–70 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21   c) 10 people'), ('Q5', 'a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
+put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21   c) 10 people'), ('Q5', 'a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
     'Click after a child explains. Q4c: 9 + 8 + 7 + … + 1 = 45, so 10 people; or try n × (n − 1) ÷ 2 = 45. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
 
 # ---------- 21 stretch (not printed in the workbook) ----------
@@ -304,11 +304,11 @@ put(f'{PRE}-chwalk', sec(f'{PRE}-chwalk', 'Challenge', body, 'Use after pairs ha
 
 # ---------- 25 talk ----------
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”"'), 42, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put(f'{PRE}-talk', sec(f'{PRE}-talk', '70–80 MIN', body, 'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
+put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
 
 # ---------- 26 exit ----------
 body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
-put(f'{PRE}-exit', sec(f'{PRE}-exit', '80–90 MIN', body, 'Minutes 80 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
+put(f'{PRE}-exit', sec(f'{PRE}-exit', '82–90 MIN', body, 'Minutes 82 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
 
 # ---------- write ----------
 order = [f'{PRE}-{x}' for x in ['title', 'warm1', 'warm2', 'explore1', 'explore2', 'teach1', 'we1', 'try1', 'teachcode', 'try2', 'key', 'break', 'teachcards', 'ws1', 'ws1ans', 'teachhand', 'teachhandcode', 'teachroute', 'ws2', 'ws2ans', 'stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit']]

@@ -149,7 +149,7 @@ module.exports = {
     W.push(H.sub('b', 'The cards 2, 7, 4 made 6 numbers. Why do 0, 5, 9 make fewer?'));
     W.push(...H.lines(2));
 
-    W.push(H.q(4, 'These are pieces cut from a 1000 chart. Each row has 10 numbers. Fill in the empty squares.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(4, 'These are pieces cut from a 1000 chart. Each row has 10 numbers. Fill in the empty squares.', { keepNext: true }));
     W.push(H.fig(pieceSvg()));
     W.push(H.sub('a', 'On the chart, one square DOWN is ______ more.  One square RIGHT is ______ more.'));
     W.push(H.sub('b', 'Which number is 2 squares below 385 on the chart?  ________'));

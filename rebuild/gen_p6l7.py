@@ -129,7 +129,7 @@ inner = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YE
          f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(DK["today"])}</p></div>')
 put('p6l7-title', dark('p6l7-title', NAVY, inner,
     f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: before the lesson, check every child can open scratch.mit.edu and add the Pen extension (the button at the bottom left of the block menu). The turtle is any sprite with its pen down; in Scratch the turn block is "turn ↻ … degrees" (clockwise), shown on our slides as "turn right". '
-    'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+    'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ================= 2. warm-up 1: turtle says =================
 cx, cy = 210, 210
@@ -158,12 +158,12 @@ put('p6l7-warm2', sec('p6l7-warm2', '5–10 MIN', body,
 setup_prog = [('pen', 'erase all'), ('motion', 'go to x: {-50} y: {100}'), ('motion', 'point in direction {90}'), ('pen', 'pen down')]
 body = h2('Set-up: keep your drawing on the stage')
 body += pin(128, 260, 700, blocks_svg(setup_prog, 'The 4 set-up blocks: erase all, go to x: -50 y: 100, point in direction 90, pen down', 34, 62), None)
-body += step(1, 'The stage is 480 wide and 360 tall. The turtle starts in the middle and shapes grow to the right and DOWN.', left=900, top=260, width=892, size=30)
-body += step(2, 'Start at x: -50, y: 100 and the shapes stay on the stage. Put these 4 blocks first in EVERY drawing.', left=900, top=440, width=892, size=30)
-body += step(3, 'Turn blocks show an arrow. Use turn ↻ (clockwise): that is the turn right we talk about.', left=900, top=620, width=892, size=30)
-body += soft(128, 650, 700, 'Sizes that fit: up to 15 sides, move 80 (36 sides: move 10). Stars: 5 points move 150, 8 points move 200, 9 points move 120, 20 points move 100.', 28)
+body += step(1, 'The stage is 480 wide and 360 tall. The turtle starts in the middle and shapes grow to the right and DOWN.', left=900, top=260, width=836, size=30)
+body += step(2, 'Start at x: -50, y: 100 and the shapes stay on the stage. Put these 4 blocks first in EVERY drawing.', left=900, top=440, width=836, size=30)
+body += step(3, 'Turn blocks show an arrow. Use turn ↻ (clockwise): that is the turn right we talk about.', left=900, top=620, width=836, size=30)
+body += soft(128, 650, 700, 'Sizes that fit: up to 10 sides move 80; 12 to 15 sides move 50; 24 sides move 30; 36 sides move 10. Stars: 5 points move 150, 8 points move 200, 9 points move 120, 20 points move 100.', 28)
 put('p6l7-setup', sec('p6l7-setup', '10–11 MIN', body,
-    'Before pairs start building. Children add the Pen extension, then build these 4 blocks and keep them at the top of every program. Why: the sprite starts at (0, 0) and the turtle turns right, so shapes grow down and to the right; an octagon with move 80 reaches y = -193 and falls off the bottom edge (-180) when started at the middle, and a sprite is held at the edge, so the lines kink and the drawing looks like a maths mistake. Starting at x: -50, y: 100, facing 90, every shape in this lesson stays on the stage (checked by computer for the triangle to 15-gon with the moves shown, the stars on the worksheet, and the 10-point star in the challenge). Only the rosette in the extension needs go to x: 0 y: 0. In Scratch the turn block is "turn ↻ (15) degrees" (clockwise) and "turn ↺" (anticlockwise); there are no words right or left on it, so say "the clockwise arrow". Type negative numbers with the keyboard minus key. Block colours on our slides are simplified: find blocks by the category name on the left (Motion, Pen, Control, Variables, Looks).'))
+    'Before pairs start building. Children add the Pen extension, then build these 4 blocks and keep them at the top of every program. Why: the sprite starts at (0, 0) and the turtle turns right, so shapes grow down and to the right; an octagon with move 80 reaches y = -193 and falls off the bottom edge (-180) when started at the middle, and a sprite is held at the edge, so the lines kink and the drawing looks like a maths mistake. Starting at x: -50, y: 100, facing 90, every shape in this lesson stays on the stage (checked by computer: triangle to 10-gon with move 80 or 100, 12 to 15 sides with move 50, 24 sides with move 30, 36 sides with move 10, the stars on the worksheet and the 10-point star in the challenge; a 12-gon with move 80 would NOT fit). Only the rosette in the extension needs go to x: 0 y: 0. In Scratch the turn block is "turn ↻ (15) degrees" (clockwise) and "turn ↺" (anticlockwise); there are no words right or left on it, so say "the clockwise arrow". Type negative numbers with the keyboard minus key. Block colours on our slides are simplified: find blocks by the category name on the left (Motion, Pen, Control, Variables, Looks).'))
 
 # ================= 4. explore 1 =================
 sq_prog = [('event', 'when green flag clicked'), ('pen', 'pen down'), ('ctrl', 'repeat {4}', [('motion', 'move {100} steps'), ('motion', 'turn ↻ {90} degrees')])]
@@ -174,7 +174,7 @@ pic = SV(bw + 230, max(bh, 180), bb + sq, 'The square program as blocks: when gr
 lst = ''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
 body = h2('Explore: at the computer')
 body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
-body += card(f'<div style="display:flex;align-items:center;gap:40px">{pic}<p style="font-size:30px;font-weight:600;color:{MUTED};line-height:1.3">Record in a table: sides, turn, did it close? Start with the 4 set-up blocks from the last slide.</p></div>', extra='padding:12px 40px')
+body += card(f'<div style="display:flex;align-items:center;gap:40px">{pic}<p style="font-size:30px;font-weight:600;color:{MUTED};line-height:1.3">Record in a table: sides, turn, did it close? Begin with the 4 set-up blocks.</p></div>', extra='padding:12px 40px')
 put('p6l7-explore1', sec('p6l7-explore1', '11–15 MIN', body,
     'Minutes 10 to 15 (pairs keep going until 25). One child drives Scratch, the other predicts the turn BEFORE each run; swap for each shape. Build the square program together first and run it. Then the challenge: change one number to get an equilateral triangle. Expect many pairs to type 60 (the inside angle): let them run it. It draws only half a hexagon. Ask: "How far did the turtle turn altogether? Did it come home?" '
     'Then pentagon (5 sides) and hexagon (6 sides). Finished early: a regular shape with 10 sides. Online: breakout rooms, the driver shares their screen. Every run starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so each run starts clean and stays on the stage. Pairs add the other blocks below them. Use the clockwise arrow turn block.'))
@@ -302,11 +302,11 @@ put('p6l7-teachsum', sec('p6l7-teachsum', '54–55 MIN', body,
     'Teach before worksheet page 2 (Q5 builds the table for 3, 4, 5, 6 and 10 sides and asks for the rule; do not give the rule here). Step 2 is the clever bit: every corner gives a straight line (180°), and the turns inside those straight lines add up to exactly one full turn. Ask: "Does the turtle way work for a shape that is not regular?" (yes: the turns still add up to 360°).'))
 
 # ================= 19–20. worksheet page 2 =================
-put('p6l7-ws2', ws_preview('p6l7-ws2', '55–66 MIN', 'Worksheet page 2: on your own',
+put('p6l7-ws2', ws_preview('p6l7-ws2', '55–72 MIN', 'Worksheet page 2: on your own',
     [('Q3', 'Trace the star program: fill in total after each repeat.'), ('Q4', 'Plan two stars: total, turn, point angle. Test them.'), ('Q5', 'Add up the inside angles. Find a rule for n sides.')],
     'Finished early? Stretch and Challenge come next.',
     'Children work alone (they may test in Scratch). Note who needs a short catch-up next lesson.'))
-put('p6l7-ws2ans', check2('p6l7-ws2ans', '66–70 MIN', 'Page 2: check together', [
+put('p6l7-ws2ans', check2('p6l7-ws2ans', '72–75 MIN', 'Page 2: check together', [
     ('Q3', '80, 160, 240 … 720.  Says 720.  Round 2 times.  A 9-point star, 100° points.', 2),
     ('Q4', '9 points, 4 round: 1440°, 160°, 20°.   20 points, 3 round: 1080°, 54°, 126°.', 2),
     ('Q5', '180°, 360°, 540°, 720°, 1440°.  +180° each time.  Rule: (n − 2) × 180°', 2)],
@@ -348,11 +348,11 @@ put('p6l7-chwalk', sec('p6l7-chwalk', 'Challenge', body,
 
 # ================= 25. talk =================
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”'), 40, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put('p6l7-talk', sec('p6l7-talk', '70–80 MIN', body, 'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
+put('p6l7-talk', sec('p6l7-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
 body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
-put('p6l7-exit', sec('p6l7-exit', '80–90 MIN', body, f'Minutes 80 to 90. Answer: {L["exit"]["a"]}. Children who write 175 sides and 5° have swapped the two steps: ask "Which angle does the turtle turn?" Extension: {L["extension"]}'))
+put('p6l7-exit', sec('p6l7-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]}. Children who write 175 sides and 5° have swapped the two steps: ask "Which angle does the turtle turn?" Extension: {L["extension"]}'))
 
 # ---------- write ----------
 order = ['p6l7-title', 'p6l7-warm1', 'p6l7-warm2', 'p6l7-setup', 'p6l7-explore1', 'p6l7-explore2', 'p6l7-teach1', 'p6l7-we1', 'p6l7-try1', 'p6l7-we2', 'p6l7-try2', 'p6l7-we3', 'p6l7-key', 'p6l7-break',

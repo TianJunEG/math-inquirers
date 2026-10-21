@@ -30,7 +30,7 @@ const Q1NETS = [
   ['F', [[0, 0], [1, 0], [0, 1], [1, 1], [2, 1], [3, 1]]]
 ];
 const q1Svg = () => {
-  const c = 20, pw = 200, ph = 96;
+  const c = 20, pw = 200, ph = 84;
   let s = '';
   Q1NETS.forEach(([L, cells], i) => {
     const px = (i % 3) * pw, py = Math.floor(i / 3) * ph, [w, h] = dims(cells);
@@ -41,23 +41,24 @@ const q1Svg = () => {
   return svg(600, 2 * ph, 'Six shapes made of 6 squares, labelled A to F, each with a tick box', s);
 };
 // Q2: net with letters (A–E, B–D, C–F opposite)
+const side = (fig, w, inner) => `<div class="p sub" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:4px;padding-left:0"><div style="flex:1;min-width:0">${inner}</div><div style="flex:none;width:${w}px">${fig}</div></div>`;
 const q2Svg = () => {
-  const c = 44, cells = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 2], [3, 2]];
+  const c = 36, cells = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 2], [3, 2]];
   const lab = { '0,0': 'A', '0,1': 'B', '1,1': 'C', '2,1': 'D', '2,2': 'E', '3,2': 'F' };
-  return svg(600, 3 * c + 8, 'A net of a cube with faces lettered A to F', net(cells, c, (600 - 4 * c) / 2, 4, lab, SKY, 24));
+  return svg(4 * c + 8, 3 * c + 8, 'A net of a cube with faces lettered A to F', net(cells, c, 4, 4, lab, SKY, 22));
 };
 // Q3: two dice nets with some numbers missing
 const q3Svg = () => {
-  const c = 36;
+  const c = 30;
   const a = [...row4(1), [0, 0], [3, 2]], la = { '0,0': '1', '2,1': '4', '3,1': '2', '0,1': '', '1,1': '', '3,2': '' };
   const b = [[0, 0], [1, 0], [1, 1], [2, 1], [2, 2], [3, 2]], lb = { '0,0': '5', '1,1': '1', '2,2': '3' };
-  let s = tx(70, 22, '(a)', 18, TEAL) + net(a, c, 70, 32, la, WH, 26) + tx(350, 22, '(b)', 18, TEAL) + net(b, c, 350, 32, lb, WH, 26);
+  let s = tx(70, 22, '(a)', 18, TEAL) + net(a, c, 70, 32, la, WH, 24) + tx(350, 22, '(b)', 18, TEAL) + net(b, c, 350, 32, lb, WH, 24);
   return svg(600, 3 * c + 40, 'Two dice nets. Net (a) shows 1, 4 and 2. Net (b) shows 5, 1 and 3. The other squares are empty.', s);
 };
 // Q4: complete the symmetric figures (only half is drawn)
 const half = (pts, c, x0, y0) => `<polyline points="${pts.map(([a, b]) => `${x0 + a * c},${y0 + b * c}`).join(' ')}" fill="none" stroke="${N}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>`;
 const q4Svg = () => {
-  const c = 22, ax = 30, ay = 30, bx = 330, by = 30;
+  const c = 20, ax = 30, ay = 30, bx = 330, by = 30;
   let s = tx(ax, 18, '(a)', 18, TEAL, 'start') + grid(ax, ay, 10, 7, c) + `<line x1="${ax + 5 * c}" y1="${ay - 10}" x2="${ax + 5 * c}" y2="${ay + 7 * c + 10}" stroke="${RED}" stroke-width="3" stroke-dasharray="8 6"/>`;
   s += half([[5, 0], [3, 2], [3, 5], [1, 7], [4, 7], [5, 6]], c, ax, ay);
   s += tx(bx, 18, '(b)', 18, TEAL, 'start') + grid(bx, by, 10, 8, c) + `<line x1="${bx - 10}" y1="${by + 4 * c}" x2="${bx + 10 * c + 10}" y2="${by + 4 * c}" stroke="${RED}" stroke-width="3" stroke-dasharray="8 6"/>`;
@@ -67,7 +68,7 @@ const q4Svg = () => {
 // Q5: lines of symmetry
 const Q5SH = [['a', [[0, 0], [1, 0], [2, 0], [1, 1], [1, 2]]], ['b', [[0, 0], [2, 0], [0, 1], [1, 1], [2, 1], [0, 2], [2, 2]]], ['c', [[1, 0], [0, 1], [1, 1], [2, 1], [1, 2]]], ['d', [[1, 0], [2, 0], [0, 1], [1, 1]]]];
 const q5Svg = () => {
-  const c = 30, pw = 150;
+  const c = 26, pw = 150;
   let s = '';
   Q5SH.forEach(([L, cells], i) => {
     const [w, h] = dims(cells), px = i * pw;
@@ -89,8 +90,8 @@ const q6Grid = (x0, y0, c) => {
   s += `<line x1="${x0 - 22}" y1="${y0 + 2 * c}" x2="${x0 + 4 * c + 12}" y2="${y0 + 2 * c}" stroke="${RED}" stroke-width="3" stroke-dasharray="7 5"/>`;
   return s;
 };
-const q6Svg = () => svg(600, 4 * 30 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
-  [50, 250, 450].map(x => q6Grid(x, 34, 30)).join(''));
+const q6Svg = () => svg(600, 4 * 26 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
+  [50, 250, 450].map(x => q6Grid(x, 34, 26)).join(''));
 
 module.exports = {
   lesson: {
@@ -114,7 +115,7 @@ module.exports = {
       ['Q1', '(a) 3 shapes: A, C and E; one shape that does not fold, with a reason, for example: B has two squares on the same side of the row of 4, so both close the same end. D has 5 squares in a row: the 5th lands on the 1st. F has a 2 by 2 block: 4 squares meet at one corner, but only 3 faces of a cube meet at a corner.'],
       ['Q2', 'Opposite A: E.  Opposite B: D.  Opposite C: F.'],
       ['Q3', '(a) The long row reads 3, 5, 4, 2 (left to right) and the square below the right end is 6.  (b) Top row 5, 4; middle row 1, 2; bottom row 3, 6.  (c) 1 and 6 are the ends of a step, so they are opposite and add up to 7.'],
-      ['Q4', '(a) The rocket: the right half is the left half flipped. Corners go to (counting squares from the left edge of the grid): nose on the line, shoulders 2 squares to the right of the line going down to the fins 4 squares to the right at the bottom, then the bottom edge 1 square right of the line and the notch up at the line.  (b) The fish: the bottom half is the top half flipped, so each point is the same number of squares below the line as it is above (tail tip 2 squares, back 1 to 3 squares, nose on the line).'],
+      ['Q4', '(a) Rocket: flip each corner across the dashed line, the same number of squares on the other side: shoulders 2 squares to the right of the line, fin tips 4 squares to the right at the bottom, bottom edge ends 1 square right of the line, notch on the line, then join.  (b) Fish: flip each corner below the line, the same number of squares: tail tip 2 below, then 1 below, back 3 below, 2 below, nose on the line.'],
       ['Q5', '(a) 1 (up-down)  (b) 2 (up-down and across)  (c) 4 (up-down, across and both corner-to-corner)  (d) 0'],
       ['Q6', '2 ways: shade A2 (the up-down line becomes a line of symmetry) or shade D3 (the across line becomes a line of symmetry). No other square works.']
     ]
@@ -176,11 +177,11 @@ module.exports = {
       { q: 'How many different nets of a cube are there? (Turned or flipped copies count as the same net.)', a: '11.' },
       { q: 'An open box (a cube with no lid) is made from 5 squares. Of the 12 different shapes made of 5 squares joined edge to edge, how many fold into an open box? (Turned or flipped copies count as the same.)', a: '8. Only 4 shapes do not fold: the row of 5, the V (an L with arms of 3 and 3), the U (a C shape) and the P (a 2 by 2 block with one extra square).' },
       { q: 'Ravi shades the 4 squares along one diagonal of a 4 by 4 grid (top left to bottom right). How many lines of symmetry does the pattern have?', a: '2: the diagonal it lies on, and the other diagonal of the grid.' },
-      { q: 'Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Find both.', a: 'The middle square and the 4 corners (an X), or the middle square and the 4 edge-middle squares (a plus).' },
+      { q: 'Ali says: "On a dice, the numbers on the 4 side faces always add up to 14." Is he right? Explain.', a: 'Yes. The 4 side faces are two opposite pairs, and each pair adds up to 7: 7 + 7 = 14.' },
       { q: 'A cube has faces numbered 1 to 6 (not a normal dice). Face 1 touches faces 2, 3, 4 and 5. Face 2 touches faces 1, 3, 5 and 6. Which face is opposite 1? Opposite 2? Opposite 3?', a: 'Opposite 1 is 6 (the only face it does not touch). Opposite 2 is 4. That leaves 3 and 5, so opposite 3 is 5.' },
       { q: 'Three dice are stacked in a tower on a table. The top face of the tower shows 5. What is the total of the numbers on all the faces you cannot see (the faces touching each other and the table)?', a: '16. The top dice: its bottom is 2 (5 + 2 = 7). The middle dice: top and bottom are opposite, 7. The bottom dice: top and bottom, 7. 2 + 7 + 7 = 16.' },
       { q: 'In how many ways can you shade exactly 2 squares of a 3 by 3 grid so that the up-down line through the middle is a line of symmetry?', a: '6. Both squares in the middle column: 3 ways. One square in each side column, in the same row: 3 ways.' },
-      { q: 'Ali says: "On a dice, the numbers on the 4 side faces always add up to 14." Is he right? Explain.', a: 'Yes. The 4 side faces are two opposite pairs, and each pair adds up to 7: 7 + 7 = 14.' }
+      { q: 'Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Find both.', a: 'The middle square and the 4 corners (an X), or the middle square and the 4 edge-middle squares (a plus).' }
     ]
   },
 
@@ -188,22 +189,21 @@ module.exports = {
     const W = [];
     W.push(H.q(1, 'Each shape is made of 6 squares. Which ones fold into a cube? Tick them.', { before: 40, keepNext: true }));
     W.push(H.fig(q1Svg()));
-    W.push(H.sub('a', 'How many shapes did you tick?  ________        Shape that does NOT fold:  ____ . Explain why:'));
+    W.push(H.sub('a', 'Shapes ticked: ____     Shape that does NOT fold: ____ . Explain why:'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'This net folds into a cube. Which letter is opposite …', { keepNext: true }));
-    W.push(H.fig(q2Svg()));
-    W.push(H.sub('a', 'A?  ________        B?  ________        C?  ________'));
+    W.push(side(q2Svg(), 160, [H.sub('a', 'A?  ________', { after: 40 }), H.sub('b', 'B?  ________', { after: 40 }), H.sub('c', 'C?  ________')].join('')));
     W.push(H.q(3, 'On a dice, the numbers on opposite faces add up to 7. Write the missing numbers on each dice net.', { keepNext: true }));
     W.push(H.fig(q3Svg()));
-    W.push(H.sub('c', 'In (b), how did you find the number opposite 1?  ____________________________'));
+    W.push(H.sub('', 'In net (b), how did you find the number opposite 1?  ____________________________'));
 
     W.push(H.q(4, 'Complete each figure so that the dashed line is a line of symmetry.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(q4Svg()));
-    W.push(H.p('Count the squares from the line to each corner. Put a dot the same number of squares on the other side, then join the dots.', { after: 60 }));
+    W.push(H.sub('', 'Count the squares from the line to each corner. Put a dot the same number of squares on the other side, then join the dots.'));
     W.push(H.q(5, 'Draw ALL the lines of symmetry on each shape. Then write how many.', { keepNext: true }));
     W.push(H.fig(q5Svg()));
-    W.push(H.sub('a', '________      (b)  ________      (c)  ________      (d)  ________'));
-    W.push(H.q(6, 'Shade ONE more square so that one of the dashed lines becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each way.', { keepNext: true }));
+    W.push(H.sub('', '(a) ________      (b) ________      (c) ________      (d) ________'));
+    W.push(H.q(6, 'Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each.', { keepNext: true }));
     W.push(H.fig(q6Svg()));
     W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________'));
     W.push(H.sub('b', 'Why can no other square work? Choose one square and explain.'));

@@ -110,3 +110,6 @@ deck['order']=['l5-title','l5-warm1','l5-warm2','l5-explore1','l5-explore2','l5-
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l5-title'},'s2':{'description':'Teach: working backwards, step by step','start':'l5-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l5-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l5-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides; wrote',len(S))
+
+import p1fix
+p1fix.finish(D,5,{'l5-ws1':'42–52 MIN','l5-ws1ans':'52–54 MIN','l5-teachbar':'54–56 MIN','l5-teachq1':'56–57 MIN','l5-teachq2':'57–58 MIN','l5-ws2':'58–68 MIN'})

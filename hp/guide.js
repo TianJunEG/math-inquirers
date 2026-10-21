@@ -43,8 +43,8 @@ const R = [
   ['10–25', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['25–35', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['35–40', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
-  ['40–70', 'Worksheet', 'Start in pairs, finish alone. Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
-  ['70–80', 'Talk time', 'Share one answer and explain it. Compare methods.', 'Each child shares in turn.', 'Each child unmutes in turn.'],
+  ['40–72', 'Worksheet', 'Start in pairs, finish alone, then check together (the last 4 minutes, starting with a 1-minute stand-up stretch). Tutor asks “how do you know?” rather than giving answers. Think Harder (T) and Challenge (C) are for early finishers or home.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
+  ['72–80', 'Talk time', 'Share one answer and explain it. Compare methods.', 'Each child shares in turn.', 'Each child unmutes in turn.'],
   ['80–90', 'Exit ticket and stamp', 'One question on a slip of paper. Stamp the inquiry journal.', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the camera. Tutor stamps the next time or posts it.']
 ];
 G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1450), hd('What happens', 2700), hd('Face to face', 2300), hd('Online', 2550)]), ...R.map(r => row([c2(r[0], 900, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2700), c2(r[3], 2300), c2(r[4], 2550)]))]));
@@ -54,7 +54,7 @@ G.push(h2('Teaching habits that matter'));
 G.push(h2('Setting up face to face'));
 ['Seat children in pairs. Keep a materials box per pair so no time is lost.', 'Print the workbook double-sided and staple it. Print the cut-out page on card for Lessons 6 and 9.', 'Keep the answer key with the tutor only. Collect worksheets at the end unless the group is told to keep them.', 'Use a whiteboard or large paper for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
-['Send parents the workbook and materials list one week before. Needed: counters or coins, two colours of paper pieces, a cup, straws or toothpicks, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
+['Send parents the workbook and materials list one week before. Needed: counters or coins, two colours of paper pieces, a cup, straws or lolly sticks (never real matches or toothpicks), paper, a pencil and a cm ruler (Lesson 9).', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
 G.push(h1('Materials master list', true));
 G.push(tbl([900, 2600, 3200, 3200], [row([hd('Lesson', 900), hd('Title', 2600), hd('Face to face', 3200), hd('Online set-up', 3200)]), ...L.lessons.map(l => row([c2(String(l.n), 900, { align: AlignmentType.CENTER, bold: true }), c2(l.title, 2600), c2(l.materials, 3200), c2(l.online, 3200)]))]));
@@ -113,6 +113,7 @@ L.lessons.forEach(l => {
   doo(d.expSetup.map((x, i) => (i + 1) + '. ' + x));
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
   stuck(s.exploreHints);
+  if (l.cards) { doo(['Print the Puzzle cards page from the back of the workbook (or show the Lesson 10 cards slide). Pairs get ONE card for 10 minutes, then swap with another pair for 4 minutes. Answers:']); ask(l.cards.map(c => [c.title + ': ' + c.text, c.answer]), 'Puzzle card', 'Answer'); }
   doo(['At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 
@@ -128,18 +129,18 @@ L.lessons.forEach(l => {
   G.push(seg('35–40 min', 'Brain break'));
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
 
-  G.push(seg('40–70 min', 'Worksheet (pairs, then alone, then stretch)'));
-  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 40 to 52: pairs work together on the first page. Minutes 52 to 62: each child works alone on the second page. Minutes 62 to 70: stretch and challenge.']);
+  G.push(seg('40–72 min', 'Worksheet (pairs, then alone, then check together)'));
+  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'About minutes 40 to 55: pairs work together on the first page, with a short teaching slide before it and a check-together slide after it. About minutes 55 to 68: each child works alone on the second page (a short teaching slide first, then 10 minutes of work; the exact times are on each slide). Minutes 68 to 72: everyone stands up and stretches for a minute, then check the second page together. Think Harder (T1 to T4) and Challenge (C1 to C3) are not a timed part of the lesson: they are for children who finish early, or for home.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Early finishers: give the stretch question first, then the challenge.']);
+  doo(['Early finishers: give Think Harder T1 first (it is in the workbook), then the Stretch slide, then the Challenge.']);
   G.push(h2('Stretch and challenge questions'));
-  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
-  G.push(tx('These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
+  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder T' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge C' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
+  G.push(tx('These are the questions on the two Think Harder pages in the workbook (T1 to T4 and C1 to C3). The Stretch slide has three more questions; their answers are in the answer key below. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
-  G.push(seg('70–80 min', 'Talk time'));
+  G.push(seg('72–80 min', 'Talk time'));
   doo(['Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.']);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');

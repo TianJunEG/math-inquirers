@@ -113,8 +113,8 @@ put(f'{L}-title',title_slide(f'{L}-title',4,2,'Algebra Machines','Expressions an
  'Find a machine’s rule and write it with a letter, run machines backwards to solve equations, and build a machine in code.',
  'Objective: Find the rule of a function machine from a table and write it with a letter (OUT = 3n + 2); see that the order of steps matters and use brackets; solve simple equations by running the machine backwards (undo the last step first) and check forwards; build an input-rule-output program and use a search loop to test an answer. '
  'Materials: laptop or desktop with Scratch 3 (scratch.mit.edu), mini whiteboard and marker, workbook, pencil. Tutor: this deck, Scratch open for screen share. '
- 'Online set-up: for the explore, children work in pairs in breakout rooms; one partner shares their screen with the machine running and types in the numbers the other partner calls out. Page 1 of the worksheet is paper only. '
- 'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+ 'Online set-up: for the explore, children work in pairs in breakout rooms; one partner shares their screen with the machine running and types in the numbers the other partner calls out. Page 1 of the worksheet is paper only. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. '
+ 'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ---------- 2 warm1: guess my rule ----------
 rounds=[('Round A','3 → 8|7 → 12|20 → 25','add 5:   n + 5'),('Round B','2 → 10|5 → 25|9 → 45','times 5:   5n'),('Round C','2 → 3|6 → 11|10 → 19','× 2, then − 1:   2n − 1'),('Round D','1 → 5|4 → 14|10 → 32','× 3, then + 2:   3n + 2')]
@@ -230,11 +230,11 @@ body+=pin(1420,400,372,p('Try 7: 10, 20, 14, 7 ✓',32,700),None,SOFT,16,'18px 2
 put(f'{L}-teachtrick',sec(f'{L}-teachtrick','56–57 MIN',body,'Teach before worksheet page 2 (Q7). First try it with a number (7: 10, 20, 14, 7). Then click to build the n column. "Testing one number shows it works once; the letter shows it works for EVERY number." Doubling n + 3 doubles both parts: 2n + 6. This is the Secondary 1 idea of simplifying an expression.'))
 
 # ---------- 19 ws2 ----------
-put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–67 MIN','Worksheet page 2: on your own',[('Q4','Predict what the machine code says.'),('Q5','Trace the loop in the table. Write its rule with n.'),('Q6','Plan a search for 8n − 5 = 91, then check backwards.'),('Q7','The number trick: try it, then use n to explain it.')],'Finished early? Build Q4 to Q6 in Scratch to test, or try the Python box.','Children work alone, paper first, then they may build Q4 to Q6 in Scratch to test. Note who needs a short catch-up next lesson.'))
+put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Predict what the machine code says.'),('Q5','Trace the loop in the table. Write its rule with n.'),('Q6','Plan a search for 8n − 5 = 91, then check backwards.'),('Q7','The number trick: try it, then use n to explain it.')],'Finished early? Build Q4 to Q6 in Scratch to test, or try the Python box.','Children work alone, paper first, then they may build Q4 to Q6 in Scratch to test. Note who needs a short catch-up next lesson.'))
 
 # ---------- 20 ws2ans ----------
 rows=[('Q4','a) 13    b) −1    c) 16'),('Q5','says 5, 9, 13, 17.   b) 4n + 1   c) 41'),('Q6','set n to 0, until (n * 8) − 5 = 91, change n by 1.  Says 12.'),('Q7','Always 3:  n + 5,  2n + 10,  2n + 6,  n + 3,  3')]
-put(f'{L}-ws2ans',sec(f'{L}-ws2ans','67–70 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click after a child explains. Q4: OUT = 2n − 7; 2 × 3 − 7 = −1; backwards: 25 + 7 = 32, ÷ 2 = 16. Q5: n goes 1, 2, 3, 4 and then becomes 5 after the last repeat; with repeat 10 the last n is 10: 4 × 10 + 1 = 41. Q6: backwards 91 + 5 = 96, 96 ÷ 8 = 12. Q7: with 7: 12, 24, 20, 10, 3; with 10: 15, 30, 26, 13, 3. Halving 2n + 6 gives n + 3; taking away n leaves 3.'))
+put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click after a child explains. Q4: OUT = 2n − 7; 2 × 3 − 7 = −1; backwards: 25 + 7 = 32, ÷ 2 = 16. Q5: n goes 1, 2, 3, 4 and then becomes 5 after the last repeat; with repeat 10 the last n is 10: 4 × 10 + 1 = 41. Q6: backwards 91 + 5 = 96, 96 ÷ 8 = 12. Q7: with 7: 12, 24, 20, 10, 3; with 10: 15, 30, 26, 13, 3. Halving 2n + 6 gives n + 3; taking away n leaves 3.'))
 
 # ---------- 21 stretch (new) ----------
 st=[('1.','IN 3 gives OUT 11. IN 7 gives OUT 23. The rule is "× a number, then + a number". Find it.'),('2.','set n to 2, then repeat 3 times: set n to (n × 2) + 1. Then say n. What does it say?'),('3.','Solve (n + 6) × 4 = 60.')]
@@ -266,11 +266,11 @@ put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- 25 talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('To solve 4n + 7 = 43, Ravi tries n = 1, 2, 3 … like the computer. Mei runs the machine backwards. Which way is better, and when?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put(f'{L}-talk',sec(f'{L}-talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Both get n = 9. Backwards is quicker by hand and works for big numbers (4n + 7 = 4007 would take Ravi 1000 tries). Trying every n is easy to code and also works when there is no easy backwards step, like n × n + n = 90 (n = 9). But a search must stop: if there is no whole-number answer, it would run forever. Praise answers that say WHEN each is better.'))
+put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Both get n = 9. Backwards is quicker by hand and works for big numbers (4n + 7 = 4007 would take Ravi 1000 tries). Trying every n is easy to code and also works when there is no easy backwards step, like n × n + n = 90 (n = 9). But a search must stop: if there is no whole-number answer, it would run forever. Praise answers that say WHEN each is better.'))
 
 # ---------- 26 exit ----------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A machine does × 4, then + 5.   (a) IN 6: what is OUT?   (b) OUT 45: what was IN?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put(f'{L}-exit',sec(f'{L}-exit','80–90 MIN',body,'Minutes 80 to 90. Answers: (a) 29 (6 × 4 + 5).  (b) 10 (45 − 5 = 40, 40 ÷ 4 = 10; check 10 × 4 + 5 = 45). Extension: write the rule with n (4n + 5) and build it in Scratch.'))
+put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 29 (6 × 4 + 5).  (b) 10 (45 − 5 = 40, 40 ÷ 4 = 10; check 10 × 4 + 5 = 45). Extension: write the rule with n (4n + 5) and build it in Scratch.'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachcode','teachsearch','teachtrick','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{L}-{x}' for x in order]

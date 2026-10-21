@@ -9,7 +9,7 @@ data = json.loads(subprocess.run(['node', '-e', "const L=require(process.argv[1]
                                  capture_output=True, text=True, check=True).stdout)
 Q = data['q']; info = data['info']
 REAL = ('Paper, a pencil and, for coding lessons, a computer with Scratch (free at scratch.mit.edu). Let your child show you the program and explain what each block does.' if NUM == '6' else 'Coins, notes, cups, string, paper strips or blocks. Try it with objects or a drawing before writing.')
-LEVELNAME = 'Secondary 1 bridge' if NUM == '6' else 'Primary ' + NUM
+LEVELNAME = 'Maths and coding bridge' if NUM == '6' else 'Primary ' + NUM
 PICK = {'core': 4, 'stretch': 3, 'challenge': 2}
 LEVEL = {'core': 'Core', 'stretch': 'Think Harder', 'challenge': 'Challenge'}
 # per lesson: what your child learns, a tip for the parent, a question to ask

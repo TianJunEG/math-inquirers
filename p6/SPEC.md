@@ -2,11 +2,11 @@
 
 **Who:** children who have just finished the PSLE (P6, age 12), going into Secondary 1 in 2027. Online-first, live video, groups of up to 8. Each child needs a laptop or desktop (a tablet works for Scratch but is slower).
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program, but the Explore and Workbook parts often happen at the computer.
-**Approach:** enrichment that bridges to Secondary 1 maths, with every lesson's puzzle also explored in code. No exam drilling: they have just finished the PSLE. Slogan: "Notice it. Test it. Explain why." In this program "test it" often means "test it in code".
+**Approach:** enrichment toward secondary maths and coding, with every lesson's puzzle also explored in code. Some topics (negative numbers, primes, simple equations, angles in polygons) are met directly in lower-secondary maths; others (sequences and the nth term, counting, probability, modular arithmetic) are enrichment, so do not describe the whole programme as Secondary 1 content. No exam drilling: they have just finished the PSLE. Slogan: "Notice it. Test it. Explain why." In this program "test it" often means "test it in code".
 **Coding environment:** Scratch 3 (free, in the browser at scratch.mit.edu; many children met block coding in school). Every lesson also gives an optional Python version of the same task (10 to 20 lines) for children who already know Python. Draw code blocks on slides and in the workbook as our own simple coloured block shapes in SVG (rounded rectangles with the block text, e.g. "repeat 10", "change n by 3", "say n"), never Scratch's logo or the cat sprite.
 
 ## The 10 lessons
-| n | Week | Title | Maths (Sec 1 bridge) | Coding idea | Puzzle focus |
+| n | Week | Title | Maths (enrichment toward secondary maths) | Coding idea | Puzzle focus |
 |---|---|---|---|---|---|
 | 1 | 1A | Code the Pattern | Sequences and the nth term | loops and a variable | growing patterns, predicting the 100th term, checking it in code |
 | 2 | 1B | Prime Hunters | Primes, factors, prime factorisation | if, mod (remainder), a counter | sieve by hand, a prime checker, Goldbach pairs, numbers with exactly 3 factors |
@@ -21,7 +21,8 @@
 
 ## P6 level rules
 - Children know all of primary maths: whole numbers, fractions, decimals, percentage, ratio, rate and speed, simple algebra with one letter (expressions and simple equations), average, angles, circles, area and volume, pie charts.
-- Secondary 1 ideas are introduced gently and concretely: negative numbers, primes and prime factorisation, sequences and the nth term, simple equations with a letter. No index notation beyond squares, no surds, no formal proofs.
+- Ideas that lead towards secondary maths are introduced gently and concretely: negative numbers, primes and prime factorisation, sequences and the nth term, simple equations with a letter. Say "enrichment toward secondary maths and coding", not "Secondary 1 content".
+- Blocks assumed known before Lesson 1 (a 10-minute Scratch warm-up video or one-page handout is sent beforehand): green flag, repeat, make a variable, set and change a variable, say ... for ... seconds. Taught inside the lessons: if, mod, ask and answer (L4), lists (L8, L9), the Pen extension (L7). Use only block names from the official Scratch 3 palette; see docs/audit/fixes_p6.md for the editor check list. No index notation beyond squares, no surds, no formal proofs.
 - Coding stays small: each program is under about 15 blocks (or 20 lines of Python). The maths comes first; code is the way we test and extend it.
 - Every answer must be worked out and checked; "find all" puzzles must list every case; probability claims must be correct (state what we expect and why a simulation varies).
 - Plain English for 12-year-olds. Singapore context is fine.

@@ -21,7 +21,7 @@ module.exports = {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Heuristics',
     objective: 'Choose a way to start a puzzle (draw a model, list in order, make a table, work backwards, guess and check or suppose, use a logic grid), solve competition-style problems, check every clue, and explain why the chosen start works.',
     skills: 'Choosing a heuristic, working backwards with fractions, logic grids, models with units, systematic listing, supposition, checking against every clue, explaining',
-    materials: 'Puzzle cards for 4 stations (backwards, logic, counting, guess and check), mini whiteboards, scrap paper, a 3 by 4 grid drawn on paper, certificates, stamps.',
+    materials: 'Four puzzle cards shown on the slide, or sent as images to each breakout room (backwards, logic, counting, guess and check), mini whiteboards, scrap paper, a 3 by 4 grid drawn on paper, certificates, stamps.',
     online: 'Each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together. Children hold their working up to the camera.',
     warmup: 'Mix-up relay: one quick question from each of the earlier lessons (place value, fractions, area of a triangle, volume, rate, percentage, angles, patterns). Read a card, say a child\'s name; that child answers and names the next child. Then five quick questions on whiteboards.',
     explore: 'Puzzle menu: pairs choose 2 of 4 puzzle cards (backwards number puzzle, pets logic, squares on a grid, two numbers). They write the answer AND how they started: draw, list, table, work backwards or guess and check.',
@@ -36,7 +36,7 @@ module.exports = {
     extension: 'Write your own logic puzzle with four people and four things. Test it on a friend: does it have exactly ONE answer? Which clue could you take away without ruining it?',
     key: [
       ['Q1', '$63. Work backwards: 15 × 2 = 30 before the gift; 30 + 12 = 42 before lunch; 42 is 2/3 of the money, so 1/3 is 21 and the start is 63. Check: 63 − 21 = 42, 42 − 12 = 30, 30 ÷ 2 = 15 left.'],
-      ['Q2', 'Ali: chicken rice. Ben: laksa. Mei: satay. Siti: roti prata. (Clue 2 and 4: roti prata is Siti\'s. Ali is then chicken rice by clue 1. Ben is not satay, so laksa, and Mei has satay.)'],
+      ['Q2', 'Ali: chicken rice. Ben: laksa. Mei: satay. Siti: roti prata. (Clue 2 says a girl ordered the roti prata, so it is Mei or Siti, and clue 4 rules out Mei: roti prata is Siti\'s. Ali is then chicken rice by clue 1. Ben is not satay, so laksa, and Mei has satay.)'],
       ['Q3', 'Mei $60, Ravi $55. Model: Mei is 4 units; Ravi is 3 units and $10. 7 units + $10 = $115, so 7 units = $105 and 1 unit = $15. Mei 4 × 15 = $60, Ravi 3 × 15 + 10 = $55. Check: 60 + 55 = 115 and 3/4 of 60 = 45, 45 + 10 = 55.'],
       ['Q4', '(a) 12 squares of size 1 by 1  (b) 6 squares of size 2 by 2 and 2 squares of size 3 by 3  (c) 12 + 6 + 2 = 20 squares. (There are none bigger: the grid is only 3 rows tall.)'],
       ['Q5', 'Ben broke the vase. Try each child: if Ali did it, Ali and Ben both lie (2 liars); if Mei did it, Ali and Mei both lie (2 liars); if Ben did it, only Ben lies (1 liar). Only Ben fits.'],
@@ -90,7 +90,7 @@ module.exports = {
     stretch: [
       { q: 'Siti spent 2/5 of her money, then 1/3 of what was left. She had $24 left at the end. How much did she start with?', a: '$60. Work backwards: $24 is 2/3 of what was left, so that was $36; $36 is 3/5 of her money, so 1/5 is $12 and she started with $60. Check: 60 − 24 = 36, 36 − 12 = 24.' },
       { q: 'How many 3-digit numbers have digits that add up to 5? List them all in order.', a: '15 numbers: 104, 113, 122, 131, 140, 203, 212, 221, 230, 302, 311, 320, 401, 410, 500.' },
-      { q: 'The sum of two numbers that are next to each other (consecutive) is 145. What are the two numbers?', a: '72 and 73 (145 is 1 more than twice 72).' },
+      { q: 'The sum of two consecutive numbers (numbers that are next to each other, like 40 and 41) is 145. What are the two numbers?', a: '72 and 73 (145 is 1 more than twice 72).' },
       { q: 'A snail climbs 3 m up a 10 m wall each day, and slips down 2 m each night. On which day does it reach the top?', a: 'Day 8. After 7 days and nights it is at 7 m. On day 8 it climbs 3 m to reach 10 m before it can slip.' },
       { q: 'Ben has 14 coins, all 50¢ and 20¢ coins, worth $4.90. How many of each?', a: '7 fifty-cent coins and 7 twenty-cent coins (all 20¢ would be $2.80; $2.10 short; each swap adds 30¢; 210 ÷ 30 = 7).' },
       { q: 'What is the smallest whole number bigger than 1 that leaves a remainder of 1 when divided by 2, by 3, by 4, by 5 and by 6?', a: '61 (it is 1 more than a multiple of 2, 3, 4, 5 and 6; the smallest such multiple is 60).' },
@@ -119,7 +119,7 @@ module.exports = {
     W.push(H.ans('Answer:  $'));
     // Q2 logic
     W.push(H.q(2, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
-    ['Clue 1:  Ali did not order laksa or satay.     Clue 2:  The roti prata was ordered by a girl.', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));
+    ['Clue 1:  Ali did not order laksa or satay.', 'Clue 2:  The roti prata was ordered by a girl (Mei and Siti are girls; Ali and Ben are boys).', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));
     { const ws = [1900, 2000, 2000, 2000, 2000];
       W.push(H.tbl(ws, [H.row(['', 'Chicken rice', 'Laksa', 'Satay', 'Roti prata'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
         ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 45 }), ...ws.slice(1).map(w => H.cell('', w, { h: 45 }))]))])); }

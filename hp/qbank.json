@@ -358,7 +358,7 @@
     "a": "21 tiles in the 10th. 31 tiles is the 15th."
    },
    {
-    "q": "Matchstick triangles in a row use 3, 5, 7 sticks. Ben has 25 sticks. How many triangles can he make? How many sticks are left over?",
+    "q": "Triangles made of sticks in a row use 3, 5, 7 sticks. Ben has 25 sticks. How many triangles can he make? How many sticks are left over?",
     "a": "12 triangles use 25 sticks exactly. Keep adding 2: 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. None left over."
    },
    {

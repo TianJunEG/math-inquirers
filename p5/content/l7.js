@@ -33,7 +33,7 @@ const barFig = () => {
 module.exports = {
   lesson: {
     n: 7, week: 4, session: 'A', title: 'Percentage Puzzles', topic: 'Percentage',
-    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; find a percentage increase or decrease by comparing the change with the original amount; and spot the classic percentage traps.',
+    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; and spot the classic percentage traps. (A preview of P6, on the Think Harder page: find a percentage increase or decrease by comparing the change with the original amount.)',
     skills: 'Asking "percentage of what?", building from 10% and 1%, bar models, making a table, comparing deals, explaining a trap',
     materials: 'Mini whiteboard and marker, workbook, pencil, a hundred-square page (or squared paper), a calculator for checking only at the end of each page.',
     online: 'Children keep the workbook and a whiteboard in front of the camera. The tutor screen-shares the slides and draws bar models with the annotation tool. Calculators stay closed until the check-together slides.',
@@ -49,9 +49,9 @@ module.exports = {
       ['Q2', '(a) $128 (20% of $160 = $32)  (b) $11.52 (10% of $128 = $12.80, 1% = $1.28; $12.80 − $1.28)  (c) $139.52  (d) Shop A, by 48¢ ($140 − $139.52)'],
       ['Q3', '(a) $100 (25% of $80 = $20)  (b) $80 (20% of $100 = $20)  (c) No. The 20% is taken from $100, not from $80. 20% of $100 is $20, the same $20 that was added, so the price is back to $80, not $84.'],
       ['Q4', '(a) $24 (20% of $120)  (b) $24 (25% of the $96 left)  (c) $72  (d) 60%. The 25% is of the $96 left, not of $120, so she spent $48 of $120 = 40% and 60% is left ($72 out of $120).'],
-      ['Q5', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
-      ['Q6', 'Girls 24, boys 16. Glasses: girls 6 (25% of 24), boys 8 (50% of 16), whole class 14.  (a) 35% (14 out of 40)'],
-      ['Q7', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
+      ['Q5', 'Girls 24, boys 16. Glasses: girls 6 (25% of 24), boys 8 (50% of 16), whole class 14.  (a) 35% (14 out of 40)'],
+      ['Think Harder Q1 (a P6 preview: percentage change)', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
+      ['Think Harder Q2', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
     ]
   },
 
@@ -82,7 +82,7 @@ module.exports = {
     keySmall: 'Take the discount off first, then work out GST on the sale price. After a change, the new amount is the new whole.',
     brk: 'Percent stretch. The tutor calls out a percentage: 100% is standing tall with arms up, 50% is hands on your head, 25% is hands on your knees, 0% is sitting down. Then 75%? (hands on shoulders).',
     ws1: 'Page 1, in pairs: Q1 build percentages of $240, Q2 two shops and GST, Q3 up 25% then down 20%.',
-    ws2: 'Page 2, on your own: Q4 percentage of a remainder, Q5 percentage increase and decrease, Q6 glasses in a class, Q7 the better deal.'
+    ws2: 'Page 2, on your own: Q4 percentage of a remainder, Q5 glasses in a class. Think Harder: Q1 percentage increase and decrease (a P6 preview), Q2 the better deal.'
   },
 
   qbank: {
@@ -92,15 +92,15 @@ module.exports = {
       { q: 'A meal costs $30 before GST. GST is 9%. How much is the meal with GST?', a: '$32.70 (9% of $30 = $2.70)' },
       { q: '24 of the 40 pupils in a class walk to school. What percentage walk to school?', a: '60% (24 out of 40 = 60 out of 100)' },
       { q: 'Ali had $60. He spent 25% of it. How much did he have left?', a: '$45' },
-      { q: 'The price of a pen went up from $20 to $25. What is the percentage increase?', a: '25% ($5 out of $20)' }
+      { q: '21 of the 60 seats in a hall are empty. What percentage of the seats are empty?', a: '35% (21 out of 60 = 35 out of 100)' }
     ],
     stretch: [
+      { q: 'At a hawker centre, a plate of chicken rice went up from $4 to $5. A month later, it went back down from $5 to $4. (a) Find the percentage increase from $4 to $5. (b) Find the percentage decrease from $5 to $4. (c) Both changes are $1. Why are the two percentages different? Hint: percentage change = the change out of the amount you START with.', a: '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) Each change is compared with its own starting amount: $1 out of $4 is a bigger part than $1 out of $5. (Percentage change is a P6 skill: a preview.)' },
+      { q: 'A box of cereal costs $15 in two shops. Shop X: "Buy 3, get 1 free!"  Shop Y: "30% off every box!"  Mei buys 4 boxes. (a) How much does she pay at each shop? Which is the better buy, and by how much? (b) Shop X\'s deal is really how many percent off?', a: '(a) Shop X $45 (she pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% off (1 box free out of 4, $15 off $60)' },
       { q: 'Siti says, "15% of $80 is $8 + $4 = $12." Explain her method. Use it to find 15% of $46.', a: 'She found 10% ($8) and 5% (half of 10%, $4) and added them. 15% of $46 = $4.60 + $2.30 = $6.90.' },
       { q: 'A $250 bicycle is sold at a 12% discount. How much money is saved? What is the sale price?', a: 'Saved $30 (10% = $25, 2% = $5); sale price $220.' },
       { q: 'A watch costs $80 before GST. GST is 9%. Mei pays with a $100 note. How much change does she get?', a: '$12.80 (GST $7.20, so the watch costs $87.20)' },
       { q: 'Siti had $200. She spent 40% of it on shoes and 50% of the rest on a bag. How much money did she have left?', a: '$60 (shoes $80, $120 left, bag $60, $60 left)' },
-      { q: 'The price of a $60 bag went up by 10%. A month later it went up by 10% again. What is the new price? Why is it not $72?', a: '$72.60. $60 → $66 → $72.60. The second 10% is 10% of $66, which is $6.60, not $6.' },
-      { q: 'A tank can hold 800 ℓ of water. It is 35% full. How many more litres are needed to fill it?', a: '520 ℓ (65% of 800 ℓ; or 800 − 280)' },
       { q: 'Which is bigger: 30% of 70 or 70% of 30? Try another pair like this. What do you notice?', a: 'They are the same: both are 21. In general, a% of b is the same as b% of a (for example 4% of 25 = 25% of 4 = 1).' },
       { q: 'Ravi scored 18 out of 25 in Test A and 27 out of 40 in Test B. In which test did he do better?', a: 'Test A: 72% (18 out of 25) is more than 67.5% (27 out of 40).' }
     ],
@@ -141,19 +141,12 @@ module.exports = {
     H.sub('a', 'The bag cost  ________        (b)  The book cost  ________        (c)  Money left  ________'),
     H.sub('d', 'Ben says, "She spent 20% + 25% = 45%, so 55% of her money is left." What percentage of her money is really left? Explain.', { after: 40 }),
     ...H.lines(1),
-    H.q(5, 'At a hawker centre, a plate of chicken rice went up from $4 to $5. A month later, it went back down from $5 to $4.', { keepNext: true }),
-    H.sub('a', 'Percentage increase from $4 to $5:  ________        (b)  Percentage decrease from $5 to $4:  ________'),
-    H.sub('c', 'Both changes are $1. Why are the two percentages different?', { after: 40 }),
-    ...H.lines(1),
-    H.q(6, 'There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.', { keepNext: true }),
+    H.q(5, 'There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.', { keepNext: true }),
     H.tbl([3300, 2200, 2200, 2200], [
       H.row([' ', 'Girls', 'Boys', 'Whole class'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: true, fill: 'D9D9D9', h: 40 }))),
       H.row(['Number of pupils', ' ', ' ', '40'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: !i, h: 60 }))),
       H.row(['Wear glasses', ' ', ' ', ' '].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: !i, h: 60 })))
     ]),
-    H.sub('a', 'What percentage of the whole class wear glasses?      ____________'),
-    H.q(7, 'A box of cereal costs $15 in two shops. Shop X: "Buy 3, get 1 free!"  Shop Y: "30% off every box!"  Mei buys 4 boxes.', { keepNext: true }),
-    H.sub('a', 'Mei pays at Shop X:  ________    at Shop Y:  ________    Better buy:  ________  by  ________'),
-    H.sub('b', 'Shop X\'s deal is really how many percent off?      ____________')
+    H.sub('a', 'What percentage of the whole class wear glasses?      ____________')
   ]
 };

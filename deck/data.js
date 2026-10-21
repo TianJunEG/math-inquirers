@@ -43,7 +43,7 @@ module.exports = {
  ws2: 'Page 2, on your own: Q6 and Q7, then Part B, where you take your own vote.'
 },
 4: {
- today: 'Find the core of a repeating pattern, predict far places, and grow a matchstick pattern.',
+ today: 'Find the core of a repeating pattern, predict far places, and grow a stick pattern.',
  warmGame: 'Clap-snap-stomp. The tutor starts a pattern. The class says what comes next, then what comes in the 10th place.',
  warmQs: [['clap, snap, stomp, clap, snap, stomp. What is the 7th action?', 'Clap'], ['What is the 8th action?', 'Snap'], ['What is the 9th action?', 'Stomp'], ['What is the 10th action?', 'Clap']],
  expSetup: ['Build 1 triangle with 3 sticks. Count the sticks.', 'Build 2 triangles in a row so they share a side. Count the sticks.', 'Build 3 triangles. Count the sticks.', 'Predict the 4th before you build it.'],
@@ -82,7 +82,7 @@ module.exports = {
  keyHead: 'Key idea: work in order', keyBig: 'Start with the biggest coin and work down. Use a table so you do not repeat a way.', keySmall: 'Same coins in a different order count as one way.',
  brk: 'Coin toss count. Toss a pretend coin: heads, 5 star jumps; tails, 10 knee lifts. Count the total together.',
  ws1: 'Page 1, in pairs: Q1 the table for 20¢, Q2 the ways to make 30¢.',
- ws2: 'Page 2, on your own: Q3 three coins, Q4 which coins, Q5 why 35¢ cannot be made with two coins.'
+ ws2: 'Page 2, on your own: Q3 85¢ with the fewest coins, Q4 why 35¢ cannot be made with two coins, Q5 dollars.'
 },
 7: {
  today: 'Describe shapes by their sides and corners, then count the triangles hiding in a picture.',
@@ -91,12 +91,12 @@ module.exports = {
  expSetup: ['Take a paper square.', 'Fold it corner to corner and cut along the fold.', 'What two shapes do you have?', 'Put them together a different way. Name each new shape.'],
  expPic: 'a paper square folded corner to corner, with scissors along the fold, and two triangles lying beside it.',
  expAsk: [['What two shapes did you cut?', 'Two triangles of the same size.'], ['What new shapes can you make with them?', 'Square, bigger triangle, parallelogram.'], ['How many sides does each new shape have?', 'Square 4, bigger triangle 3, parallelogram 4.']],
- mini1: { head: 'Sides and corners', table: [['Shape', 'Triangle', 'Square', 'Pentagon'], ['Sides', '3', '4', '5'], ['Corners', '3', '4', '5']], body: ['What do you notice?', 'Predict: how many sides and corners has an octagon?'], ans: 'Sides = corners. Octagon: 8 and 8.' },
- mini2: { head: 'Counting triangles', body: ['A big triangle has one line from the top corner down to the bottom.', 'Count the small triangles first: 2.', 'Then the big ones made of more than one small triangle: 1.', 'How many triangles altogether?'], ans: '3 (2 small + 1 big).' },
- keyHead: 'Key idea: count in order', keyBig: 'Count small shapes first, then bigger shapes made of smaller ones.', keySmall: 'A square is also a special rectangle: ask “why?”.',
+ mini1: { head: 'Squares hide inside squares', body: ['A 2 by 2 grid. How many squares can you see?', 'Count the small ones first: 4. The whole grid is a square too: 1 more.', 'How many squares altogether?'], ans: '5 (4 small + 1 big).' },
+ mini2: { head: 'A 3 by 3 grid: count by size', body: ['Small squares: 9.', 'Squares made of 4 small ones (2 by 2): 4.', 'The whole grid: 1.', 'How many squares altogether?'], ans: '14 (9 + 4 + 1).' },
+ keyHead: 'Key idea: count in order', keyBig: 'Count small shapes first, then bigger shapes made of smaller ones.', keySmall: 'On the house picture, a square goes in the Square column only.',
  brk: 'Shape statues. The tutor calls a shape; make it with your body or hands. Triangle, square, circle.',
  ws1: 'Page 1, in pairs: Q1 count the shapes, Q2 the sides and corners table, Q3 riddles.',
- ws2: 'Page 2, on your own: Q4 count the triangles, Q5 make new shapes.'
+ ws2: 'Page 2, on your own: Q3 riddles, Q4 count the triangles, Q5 make new shapes, Q6 squares in a 2 by 2 grid.'
 },
 8: {
  today: 'Order things from clues, sort with two rules in a Venn diagram and use a grid to solve a puzzle.',
@@ -124,20 +124,20 @@ module.exports = {
  keyHead: 'Key idea: equal units', keyBig: 'Use equal units, no gaps, no overlaps, and start at zero.', keySmall: 'A bigger unit gives a smaller number.',
  brk: 'Giant steps. Take your biggest step and your smallest step across the room. Count each: which needs more steps?',
  ws1: 'Page 1, in pairs: Q1 compare lengths, Q2 estimate and measure.',
- ws2: 'Page 2, on your own: Q3 hand spans, Q4 clips and erasers, Q5 cube puzzles.'
+ ws2: 'Page 2, on your own: Q3 hand spans, Q4 clips and erasers, Q5 cube puzzles, Q6 measure with a cm ruler.'
 },
 10: {
  today: 'Use everything we have learned in new puzzles and explain our thinking.',
  warmGame: 'Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.',
  warmQs: [['Count in 3s: 3, 6, 9, __', '12'], ['10 = 4 + __', '6'], ['Red 4, blue 6: how many more are blue?', '2'], ['I think of a number, add 4, get 9. What is it?', '5'], ['Which coins make 15¢ with two coins?', '10¢ + 5¢']],
- expSetup: ['Four stations, eight minutes at each: coins, patterns, logic, measuring.', 'Work in pairs. Read the puzzle card aloud.', 'Test your idea with objects.', 'Write your answer and why you know.'],
- expPic: 'four tables in a room, each with a puzzle card and materials: play coins, a pattern strip, a clue card and linking cubes.',
- expAsk: [['What did you do first at each station?', 'Open answers.'], ['Which station was hardest? Why?', 'Open answers.'], ['What helped you when you were stuck?', 'An inquirer rule: notice, test, check, explain.']],
- mini1: { head: 'Station A: coins and patterns', body: ['Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', 'Pattern: 5, 8, 11, 14 … What is the 10th number?'], ans: 'Coins: 20¢ + 20¢ + 5¢. Pattern: add 3. Count on: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, so the 10th is 32.' },
- mini2: { head: 'Station B: logic and measuring', body: ['Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Who is the shortest?', 'Measure: a ribbon is 12 cubes long. A string is 5 cubes shorter. How long is the string?'], ans: 'Logic: Ali. Measure: 7 cubes.' },
+ expSetup: ['Four puzzle cards: coins, patterns, logic, measuring. Pairs get ONE card for 10 minutes.', 'Read the card aloud and test your idea with objects.', 'Then swap cards with another pair for a second 4-minute round.', 'Write your answer and why you know. Online: one card per breakout room; each pair reports in 30 seconds.'],
+ expPic: 'four puzzle cards (coins, patterns, logic, measuring) with materials: play coins, a pattern strip, a clue card and linking cubes.',
+ expAsk: [['What did you do first with each card?', 'Open answers.'], ['Which puzzle was hardest? Why?', 'Open answers.'], ['What helped you when you were stuck?', 'An inquirer rule: notice, test, check, explain.']],
+ mini1: { head: 'Cards 1 and 2: coins and patterns', body: ['Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', 'Pattern: 5, 8, 11, 14 … What is the 10th number?'], ans: 'Coins: 20¢ + 20¢ + 5¢. Pattern: add 3. Count on: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, so the 10th is 32.' },
+ mini2: { head: 'Cards 3 and 4: logic and measuring', body: ['Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Who is the shortest?', 'Measure: a pencil is 6 cubes long. A pen is 4 cubes longer. Put them end to end. How long is that?'], ans: 'Logic: Ali (order Mei, Ben, Sam, Ali). Measure: pen 10 cubes, end to end 16 cubes.' },
  keyHead: 'Key idea: the inquirer rules', keyBig: 'Notice the pattern. Test it with objects. Check your answer. Explain why.', keySmall: 'These four rules work in every lesson.',
  brk: 'Freeze dance with maths. When the music stops, the tutor shows a number; make that many with your body.',
  ws1: 'Page 1, in pairs: Q1 to Q5, mixed puzzles.',
- ws2: 'Page 2, on your own: Q6 to Q9, including a puzzle of your own.'
+ ws2: 'Page 2, on your own: Q5 to Q8. Q9, a puzzle of your own, is for talk time.'
 }
 };

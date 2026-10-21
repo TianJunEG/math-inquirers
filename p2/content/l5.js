@@ -34,8 +34,7 @@ module.exports = {
       ['Q2', '(a) IN 4 → OUT 14; IN 10 → OUT 32; OUT 17 ← IN 5; OUT 29 ← IN 9.  (b) Rule: × 3, then + 5. IN 10 gives OUT 35. OUT 26 comes from IN 7.'],
       ['Q3', '59 stickers (50 − 15 = 35, 35 + 24 = 59; check 59 − 24 = 35, 35 + 15 = 50)'],
       ['Q4', '30 sweets (one bag: 6 + 4 = 10; 3 bags: 10 × 3 = 30)'],
-      ['Q5', '(a) Mei 18  (b) Ali 14  (c) No: the order of the steps matters  (d) 7 (18 − 4 = 14, 14 ÷ 2 = 7)'],
-      ['Q6', 'Ali 9, Ben 14, Siti 17 (40 − 5 − 8 = 27, 27 ÷ 3 = 9; check 9 + 14 + 17 = 40)']
+      ['Q5', '(a) Mei 18  (b) Ali 14  (c) No: the order of the steps matters  (d) 7 (18 − 4 = 14, 14 ÷ 2 = 7)']
     ]
   },
 
@@ -66,7 +65,7 @@ module.exports = {
     keySmall: 'Opposites: + and − undo each other. × and ÷ undo each other.',
     brk: 'Machine moves. The tutor calls a machine (“× 2 jumps!”, “+ 3 claps!”) on a number on the board, and everyone does the OUT number of moves.',
     ws1: 'Page 1, in pairs: Q1 two-step mystery machines, Q2 machine tables and finding a two-step rule.',
-    ws2: 'Page 2, on your own: Q3 before-and-after stickers, Q4 sweets in equal bags, Q5 does the order matter, Q6 three children and 40 marbles.'
+    ws2: 'Page 2, on your own: Q3 before-and-after stickers, Q4 sweets in equal bags, Q5 does the order matter. (The three-children marbles problem is now Think Harder 4.)'
   },
 
   qbank: {
@@ -82,9 +81,9 @@ module.exports = {
       { q: 'A machine does × 4, then + 13. The OUT is 45. What went IN?', a: '8 (45 − 13 = 32, 32 ÷ 4 = 8)' },
       { q: 'Ben had some money. He spent $15 on a book. Then his dad gave him $10. Now he has $42. How much money did Ben have at first?', a: '$47 (42 − 10 = 32, 32 + 15 = 47)' },
       { q: 'Siti had some beads. She gave half of them to Mei. Then she bought 12 more. Now she has 30 beads. How many beads did Siti have at first?', a: '36 (30 − 12 = 18 is half, 18 + 18 = 36)' },
+      { q: 'Ali, Ben and Siti have 40 marbles altogether. Ben has 5 more marbles than Ali. Siti has 8 more marbles than Ali. How many marbles does each child have? Draw a bar for each child.', a: 'Ali 9, Ben 14, Siti 17 (40 − 5 − 8 = 27, 27 ÷ 3 = 9; check 9 + 14 + 17 = 40)' },
       { q: 'A machine does × 2, then − 3. What goes IN to give OUT 17? What goes IN to give OUT 1?', a: '10, and 2 (17 + 3 = 20, 20 ÷ 2 = 10; 1 + 3 = 4, 4 ÷ 2 = 2)' },
       { q: 'I think of a number. I divide it by 3, then multiply by 10. I get 50. What is my number?', a: '15 (50 ÷ 10 = 5, 5 × 3 = 15)' },
-      { q: 'Ali and Ben have 26 marbles altogether. Ben has 6 more than Ali. How many marbles does each boy have?', a: 'Ali 10, Ben 16 (26 − 6 = 20, 20 ÷ 2 = 10)' },
       { q: 'A bus had some people on it. At the first stop, 12 got off and 5 got on. At the second stop, 8 got off. Now there are 20 people on the bus. How many were on the bus at first?', a: '35 (20 + 8 = 28, 28 − 5 = 23, 23 + 12 = 35)' },
       { q: 'A machine multiplies by a number, then adds a number. IN 1 gives OUT 9. IN 3 gives OUT 19. What does the machine do?', a: '× 5, then + 4 (1 × 5 + 4 = 9 and 3 × 5 + 4 = 19; × 2, × 3, × 4 and × 10 do not fit both)' }
     ],
@@ -128,10 +127,7 @@ module.exports = {
       H.sub('a', 'Mei’s machine does + 4, then × 2. What comes out?   ________'),
       H.sub('b', 'Ali’s machine does × 2, then + 4. What comes out?   ________'),
       H.sub('c', 'Do the two machines always give the same answer?   ________'),
-      H.sub('d', 'What must Ali put IN to get the same OUT as Mei?   ________'),
-      H.q(6, 'Ali, Ben and Siti have 40 marbles altogether. Ben has 5 more marbles than Ali. Siti has 8 more marbles than Ali. How many marbles does each child have? Draw a bar for each child.', { keepNext: true }),
-      ...H.lines(3),
-      H.sub('', 'Ali  ________      Ben  ________      Siti  ________')
+      H.sub('d', 'What must Ali put IN to get the same OUT as Mei?   ________')
     ];
   }
 };

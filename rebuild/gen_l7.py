@@ -86,7 +86,7 @@ sc=36
 def strip_th(L):
     def f(x,i): return gridb(x+3,3,4,1,sc,3)+hi(x+3+i*sc,3,L*sc,sc)
     return f
-body=h2('Worked example: rectangles in a strip')+stitle('A strip of 4 squares. How many rectangles? Squares count too.')
+body=h2('Worked example: rectangles in a strip')+stitle('A strip of 4 squares. How many rectangles? In this puzzle only, count squares as rectangles too.')
 body+=pin(128,320,400,base)+pin(128,480,364,p('Count by length: shortest first.',34,700),None,SOFT,20,'18px 28px')
 for k,(L,n) in enumerate([(1,4),(2,3),(3,2),(4,1)]):
     t=thumbs(n,150,42,strip_th(L),16,f'rectangles {L} squares long')
@@ -110,7 +110,7 @@ body+=answer(128,770,1104,'Only 2 different shapes: the line and the L.')
 put('l7-we3',sec('l7-we3','33–34 MIN',body,'Use 3 real squares (paper or pattern blocks) under the visualiser. Click through the steps. Think-aloud: "I start with all three in a row. Now I move one end square up, so it sits on top of its neighbour: an L. What if I move the middle square up? Then it only touches at corners: not allowed. If I turn the L or flip it over, it is the same L, just turned. So with 3 squares there are only 2 shapes." Let children try to find a third one with their own squares: every try is a line or an L. The stretch asks the same question with 4 squares.'))
 
 # ---------- 12. key idea ----------
-body=h2('Key idea: count in order')+card(p('Count the smallest shapes first. Then count the bigger shapes made of smaller ones. Add them up.',44,700))+card(p('Turning or flipping a shape does not make a new shape.',38,600,MUTED))
+body=h2('Key idea: count in order')+card(p('Count the smallest shapes first. Then count the bigger shapes made of smaller ones. Add them up.',44,700))+card(p('Turning or flipping a shape does not make a new shape.',38,600,MUTED))+card(p('On the house picture, a square goes in the Square column only.',38,600,MUTED))
 put('l7-key',sec('l7-key','34–35 MIN',body,'Say the key ideas together. Common mistakes to watch for during the worksheet: (1) Counting only the small shapes: in the square with both lines from corner to corner (Q4 picture C) children write 4 instead of 8. Ask "Are there bigger triangles made of 2 small ones?" (2) In the house picture (Q1), counting a square window in both the Square and the Rectangle columns. Each shape goes in one column only. (3) Saying a circle has 1 side, or counting the same side twice when going round a shape: put a dot where you start. (4) Thinking a turned or flipped shape is a new one.'))
 
 # ---------- 14. teach before page 1: counting shapes in a picture ----------
@@ -190,8 +190,8 @@ for k,(t,parts) in enumerate([('Made of 1 small part: 3',[(0,1),(1,2),(2,3)]),('
 body+=answer(608,770,1128,'3 + 2 + 1 = 6 triangles')
 put('l7-teachtri',sec('l7-teachtri','55–57 MIN',body,'Teach before worksheet page 2 (Q4 asks for the triangles in 3 pictures; this picture is not one of them). Ask first: "How many triangles?" Take guesses. Click through the sizes. Think-aloud: "I count the small triangles first: 1, 2, 3. Now triangles made of 2 small parts: the left two together, the right two together: 2. Then all 3 parts: the whole big triangle: 1. 3 + 2 + 1 = 6." Ask "Is the middle part with the right part a triangle?" Yes. Watch for children who stop after the small ones.'))
 
-put('l7-ws2',ws_preview('l7-ws2','57–68 MIN','Worksheet page 2: on your own',[('Q3','Who am I? Cross out the shapes that do not fit each clue.'),('Q4','Count the triangles. Small ones first, then bigger ones.'),('Q5','Two same-size triangles, joined along one side. Draw one and name it.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q5, children can use the two triangles they cut in Explore.'))
-put('l7-ws2ans',check_slide('l7-ws2ans','68–70 MIN','Page 2: check together',[('Q3','a) square,   b) circle,   c) hexagon'),('Q4','A: 3,    B: 2,    C: 8  (4 small + 4 made of 2 small ones)'),('Q5','Any correct shape and its name: a square, a bigger triangle, a parallelogram or a rectangle')],'Click each answer after a child explains. Q4A: 2 small + the whole triangle = 3. Q4B: the line from corner to corner makes 2 triangles; the square is not a triangle. Q4C: 4 small triangles meet in the middle; each line from corner to corner also cuts the square into 2 big triangles, and there are 2 such lines, so 4 big ones: 4 + 4 = 8. Q5: hold up the Explore shapes to check each drawing.'))
+put('l7-ws2',ws_preview('l7-ws2','57–68 MIN','Worksheet page 2: on your own',[('Q3','Who am I? Cross out the shapes that do not fit each clue.'),('Q4','Count the triangles. Small ones first, then bigger ones.'),('Q5','Two same-size triangles, joined along one side. Draw one and name it.'),('Q6','How many squares can you find in the 2 by 2 grid? Small ones first, then the bigger one.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q5, children can use the two triangles they cut in Explore.'))
+put('l7-ws2ans',check_slide('l7-ws2ans','68–70 MIN','Page 2: check together',[('Q3','a) square,   b) circle,   c) hexagon'),('Q4','A: 3,    B: 2,    C: 8  (4 small + 4 made of 2 small ones)'),('Q5','Any correct shape and its name: a square, a bigger triangle, a parallelogram or a rectangle'),('Q6','5 squares:  4 small + 1 big')],'Click each answer after a child explains. Q4A: 2 small + the whole triangle = 3. Q4B: the line from corner to corner makes 2 triangles; the square is not a triangle. Q4C: 4 small triangles meet in the middle; each line from corner to corner also cuts the square into 2 big triangles, and there are 2 such lines, so 4 big ones: 4 + 4 = 8. Q5: hold up the Explore shapes to check each drawing.'))
 
 # ---------- stretch (new items) ----------
 st=[('1.','How many squares are in a grid 3 squares long and 2 squares high?'),('2.','How many rectangles are in a grid 2 squares long and 2 squares high? (Squares count too.)'),('3.','Join 4 same-size squares, whole sides touching. How many different shapes can you make? (Turns and flips are the same shape.)')]
@@ -205,9 +205,9 @@ for i,t in enumerate(['The big square: 1','Medium squares (the 4 quarters): 4','
 put('l7-chwalk',sec('l7-chwalk','Challenge',body,'Use after pairs have tried. Q1: the same idea as the 2-line triangle we counted (3 + 2 + 1 = 6), now with 5 small parts. Children who know the pattern 3, 6, 10 can add the next jumps: 10 + 5 = 15. Ask: "Which triangles are made of 4 parts?" (the left 4 and the right 4). Q2: the quarter that is cut up still counts as a medium square. Watch for 8 (forgetting the big square) or 5 (forgetting the tiny ones).'))
 
 # ---------- exit ticket (new: the old one repeated worksheet Q4B) ----------
-eg=SV(372,192,gridb(6,6,4,2,90),'A grid 4 squares long and 2 squares high')
+eg=SV(372,372,gridb(6,6,3,3,120),'A grid 3 squares long and 3 squares high')
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('How many squares are in this grid? Count every size.',46,600)+eg)+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('l7-exit',sec('l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 11 (8 small squares + 3 squares made of 4 small ones: a 2 by 2 window fits in 3 places). Children who write 8 counted only the small squares: ask "Are there any bigger squares hiding?" Extension: How many squares are in a grid 4 squares long and 3 squares high? (12 + 6 + 2 = 20).'))
+put('l7-exit',sec('l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 14 (9 small squares + 4 squares made of 4 small squares + 1 whole grid). This is the grid we counted in the worked example, so it checks the core idea. Children who write 9 counted only the small squares: ask "Are there any bigger squares hiding?" Extension: how many squares are in a grid 4 squares long and 2 squares high? (11: 8 + 3). Then 4 long and 3 high? (20: 12 + 6 + 2).'))
 
 
 # ---------- aria-labels on the kept diagrams (pictures unchanged) ----------
@@ -225,8 +225,11 @@ for old in ['l7-mini1','l7-mini2']:
     if os.path.exists(f): os.remove(f)
 t=os.path.join(D,'slides','l7-title.html'); s=open(t).read(); s=s.replace('mini-lesson 25 to 35, brain break 35 to 40, worksheet 40 to 70','teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it').replace('Describe shapes by their sides and corners, then count the triangles hiding in a picture.','Find every shape hiding in a picture by counting in order, describe shapes by sides and corners, and make new shapes from squares.'); open(t,'w').write(s)
 deck=json.load(open(os.path.join(D,'deck.json')))
-deck['order']=['l7-title','l7-warm1','l7-warm2','l7-explore1','l7-explore2','l7-teach1','l7-we1','l7-try1','l7-we2','l7-try2','l7-we3','l7-key','l7-break','l7-teachpic','l7-teachsides','l7-ws1','l7-ws1ans','l7-teachwho','l7-teachtri','l7-ws2','l7-ws2ans','l7-stretch','l7-challenge','l7-chdiag','l7-chwalk','l7-talk','l7-exit']
+deck['order']=['l7-title','l7-warm1','l7-warm2','l7-explore1','l7-explore2','l7-teach1','l7-we1','l7-try1','l7-key','l7-break','l7-teachpic','l7-teachsides','l7-ws1','l7-ws1ans','l7-teachwho','l7-teachtri','l7-ws2','l7-ws2ans','l7-stretch','l7-we2','l7-try2','l7-we3','l7-challenge','l7-chdiag','l7-chwalk','l7-talk','l7-exit']
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l7-title'},'s2':{'description':'Teach: count shapes in order, and make shapes from squares','start':'l7-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l7-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'l7-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 missing=[i for i in deck['order'] if not os.path.exists(os.path.join(D,'slides',i+'.html'))]
 print(len(deck['order']),'slides; wrote',len(S),'missing',missing)
+
+import p1fix
+p1fix.finish(D,7,{'l7-teach1':'25–28 MIN','l7-we1':'28–31 MIN','l7-try1':'31–34 MIN','l7-teachtri':'55–58 MIN','l7-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','we2','try2','we3'))

@@ -55,7 +55,7 @@ module.exports = {
     n: 9, week: 5, session: 'A', title: 'Pattern Generalisers', topic: 'Patterns and Number Sense',
     objective: 'Continue growing patterns drawn as figures, say the rule for any figure in words (for example, number of sticks = 3 × figure number + 1) and explain it from the picture, work backwards from a total to find the figure, and solve “two kinds of things” problems with a guess-and-check table and with supposition.',
     skills: 'Looking for a pattern, making a table, describing the rule in words, working backwards, guess and check, supposition, explaining from a picture',
-    materials: 'Matchsticks or toothpicks (about 40), square paper tiles or the square grid from the cut-out pages, mini whiteboard, workbook.',
+    materials: 'Matchsticks or toothpicks (about 20 per child, 40 if possible), square paper tiles or the square grid from the cut-out pages, mini whiteboard, workbook.',
     online: 'Children have toothpicks and paper squares ready on the desk and build each figure on camera. The tutor shares the slides; pairs work in breakout rooms for the explore and page 1, and hold their tables up to the camera.',
     warmup: 'Guess My Rule: children call out numbers, the tutor puts each through a secret two-step machine (× 3, then + 1) and says what comes out. The first child to say the rule in words wins the round. Then five quick pattern questions on whiteboards.',
     explore: 'High fives: if everyone in our group of 8 high-fives everyone else exactly once, how many high fives is that? Pairs guess first, then start small (2, 3, 4 children), draw dots and lines, make a table and look for a pattern. Finished early: a class of 30.',

@@ -78,11 +78,11 @@ module.exports = {
     warmIntro: ['Shape hunt! In two minutes find a circle, a triangle, a square and a rectangle in the room (at home for online). Bring one of each, or point to them.'],
     predict: ['I will fold this square corner to corner and cut along the fold. What shapes do you think I will get?'],
     exploreHints: ['Stuck: line up the long edges so the shapes touch with no gaps.', 'Not sure of the name: “Count the sides and the corners. What is the name for 4 sides?”', 'Finished early: can you make a rectangle? A bigger triangle?'],
-    think: ['“A triangle has 3 sides and 3 corners. A square has 4 sides and 4 corners. I notice the number of sides is always the same as the number of corners. So an octagon, with 8 sides, has 8 corners.”', '“Counting triangles in this picture: I count the small triangles first: 2. Then I look for a big triangle made of more than one small one: 1. Total 3.”', '“A square is also a special rectangle. Why? It has 4 corners that are square, like a rectangle.”'],
+    think: ['“A triangle has 3 sides and 3 corners. A square has 4 sides and 4 corners. I notice the number of sides is always the same as the number of corners. So an octagon, with 8 sides, has 8 corners.”', '“Counting triangles in this picture: I count the small triangles first: 2. Then I look for a big triangle made of more than one small one: 1. Total 3.”', '“In a counting puzzle we can count a square as a special rectangle. Why? It has 4 square corners, like a rectangle. But on the house picture in Q1, a square goes in the Square column only, so we count each shape once.”'],
     circulate: ['Ask: “How many sides? How many corners? What do you notice?”', 'Ask: “Did you count the small triangles first? Now look for the big one.”', 'Ask: “Which shape am I? I have 4 sides and all are equal.”'],
     hints: ['Hint 1: “Trace the shape with your finger and count each side.”', 'Hint 2: “Colour each small shape a different colour.”', 'Hint 3: “Count the small shapes first, then the bigger shapes.”'],
     talk: ['“Is a square a rectangle? What makes you say so?”', '“How did you make sure you did not miss any triangles?”'],
-    talkAns: 'A square has 4 square corners like a rectangle, so it is a special rectangle. Count small triangles first, then bigger ones made of smaller ones.',
+    talkAns: 'A square has 4 square corners like a rectangle, so it is a special rectangle. (On the Q1 house picture each shape goes in one column only.) Count small triangles first, then bigger ones made of smaller ones.',
     close: ['“You counted in order and explained why a square is also a rectangle. That is careful maths.”']
   },
   8: {
@@ -110,14 +110,14 @@ module.exports = {
     close: ['“You measured fairly today and you can say why equal units matter.”']
   },
   10: {
-    hook: ['Welcome to challenge day! There are four stations: coins, patterns, logic and measuring. At each one we use the four inquirer rules: notice, test, check, explain.'],
+    hook: ['Welcome to challenge day! There are four puzzle cards: coins, patterns, logic and measuring. With every card we use the four inquirer rules: notice, test, check, explain.'],
     warmIntro: ['Mental maths relay: I ask a quick question from one of our lessons and we pass it round. Remember: give a wrong answer a gentle “try again”, not a groan.'],
-    predict: ['Look at the four stations. Which do you think will be hardest? Write your guess.'],
-    exploreHints: ['Stuck: say the inquirer rule that might help.', 'Rushing: “Check your answer a different way before you move on.”', 'Finished early: make a puzzle for the next station.'],
-    think: ['“Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. I try 20 + 20 + 5 = 45. ✓ Three coins.”', '“Pattern: 5, 8, 11, 14 … The rule is add 3. I make a table of places 1 to 10 and keep adding 3: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. The 10th number is 32.”', '“Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Order from tallest: Mei, Ben, Sam, Ali. Ali is shortest.”', '“Measure: a ribbon is 12 cubes long. A string is 5 cubes shorter. 12 − 5 = 7 cubes.”'],
+    predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair gets ONE card for 10 minutes, then you swap with another pair.'],
+    exploreHints: ['Stuck: say the inquirer rule that might help.', 'Rushing: “Check your answer a different way before you move on.”', 'Finished early: make a puzzle for the other pair, then swap.'],
+    think: ['“Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. I try 20 + 20 + 5 = 45. ✓ Three coins.”', '“Pattern: 5, 8, 11, 14 … The rule is add 3. I make a table of places 1 to 10 and keep adding 3: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. The 10th number is 32.”', '“Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Order from tallest: Mei, Ben, Sam, Ali. Ali is shortest.”', '“Measure: a pencil is 6 cubes long. A pen is 4 cubes longer, so the pen is 6 + 4 = 10 cubes. End to end they are 6 + 10 = 16 cubes. (Not 6 + 4: the 4 is only the extra bit.)”'],
     circulate: ['Ask: “Which inquirer rule helps you here?”', 'Ask: “How do you know your answer is right? Show me.”', 'Ask: “What would you do differently next time?”'],
     hints: ['Hint 1: “Which lesson does this remind you of?”', 'Hint 2: “Test it with objects.”', 'Hint 3: “Explain it to your partner out loud.”'],
-    talk: ['“Which station was hardest? Why?”', '“What helped you when you were stuck?”'],
+    talk: ['“Write a puzzle for a friend (workbook Q9) with its answer. Swap with a partner and solve it.”', '“Which puzzle was hardest? Why? What helped you when you were stuck?”'],
     talkAns: 'Open answers. Listen for the inquirer rules: noticing a pattern, testing with objects, checking and explaining.',
     close: ['“You are real inquirers now. Here is your certificate and your completed inquiry journal.”', 'Give each child a certificate. Tell them one specific thing they did well.']
   }
