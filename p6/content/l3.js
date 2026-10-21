@@ -13,9 +13,9 @@ const rowParts = (x, y, text, kind, fs, rh) => {
   let out = '', cx = x + pad;
   for (const sg of segs) {
     if (sg[0] === '[') {
-      const v = sg.slice(1, -1), pw = Math.max(tw(v, fs) + fs * 0.9, fs * 1.6), ph = fs * 1.3;
+      const v = sg.slice(1, -1), pw = Math.max(tw(v, fs) + fs * 1.1, fs * 1.6), ph = fs * 1.3;
       out += `<rect x="${cx.toFixed(0)}" y="${(y + (rh - ph) / 2).toFixed(0)}" width="${pw.toFixed(0)}" height="${ph.toFixed(0)}" rx="${(ph / 2).toFixed(0)}" fill="${fill === WHITE ? SKY : WHITE}" stroke="${NAVY}" stroke-width="1.5"/><text x="${(cx + pw / 2).toFixed(0)}" y="${(y + rh / 2 + fs * 0.36).toFixed(0)}" font-size="${fs}" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${esc(v)}</text>`;
-      cx += pw + fs * 0.25;
+      cx += pw + fs * 0.35;
     } else if (sg.trim()) {
       out += `<text x="${cx.toFixed(0)}" y="${(y + rh / 2 + fs * 0.36).toFixed(0)}" font-size="${fs}" font-weight="700" fill="${fg}" font-family="Arial">${esc(sg.trim())}</text>`;
       cx += tw(sg.trim(), fs) + fs * 0.25;
