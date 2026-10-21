@@ -47,7 +47,7 @@ const lesson = {
     'Giving the number of whole groups as the answer when the leftover still needs a place (28 children, vans of 5: writing 5 vans instead of 6).',
     'In "how many of each" puzzles, matching only one clue (the legs) and forgetting to check the other (the number of animals).'
   ],
-  extension: 'Find all the arrays (at least 2 rows, at least 2 in each row) for 24 counters, using rows of 2, 3, 4, 5 or 10 only where the facts are in our tables.',
+  extension: 'Find all the arrays (at least 2 rows, at least 2 in each row) for 16 counters. (3 ways: 2 rows of 8, 4 rows of 4, 8 rows of 2.)',
   key: [
     ['Q1', '(a) 4 × 5 = 20 and 5 × 4 = 20.  (b) 20 ÷ 4 = 5 and 20 ÷ 5 = 4.'],
     ['Q2', '(a) 30 cups (3 rows of 10).  (b) 18 cups. We can see 12 (10 in the top row and 1 more in each of the other 2 rows), and 30 − 12 = 18.  (c) e.g. "3 rows of 10 is 30, then take away the 12 I can see."'],
@@ -138,8 +138,6 @@ const qbank = {
 };
 
 const workbook = H => {
-  const blank = (ws, n, h = 80) => Array.from({ length: n }, () => H.row(ws.map(w => H.cell('\u00a0', w, { h }))));
-  const head = (ws, labels) => H.row(labels.map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9' })));
   const out = [];
   const hw = [2400, 1500, 1500, 1500, 1500, 1500];
   const hr = (lab, first) => H.row([H.cell(lab, hw[0], { bold: true, fill: 'D9D9D9', h: 80 }), H.cell(first || '\u00a0', hw[1], { h: 80 }), ...hw.slice(2).map(w => H.cell('\u00a0', w, { h: 80 }))]);

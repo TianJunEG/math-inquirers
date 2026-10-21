@@ -277,11 +277,11 @@ put('p2l7-break',break_slide('p2l7-break','35–40 MIN','Fraction turns. Stand u
  'Five minutes. Face the screen to start. A half turn: you face the back. A quarter turn: you face the side. Three quarter turns: the other side. Try "two quarter turns" (the same as a half turn!). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
-put('p2l7-ws1',preview_x('p2l7-ws1','40–50 MIN','Worksheet page 1: with your partner',[('Q1','Fair shares? Which shapes are cut into quarters? Check the parts are equal.'),('Q2','Name the fraction that is shaded and the fraction that is not.'),('Q3','Compare and order fractions. Draw bars to help.')],'Stuck? Fold a paper strip, or draw the bars the same length.',
- 'Minutes 40 to 50. Pairs work together. Ask "How do you know?" before giving any help. For Q1, give pairs a paper square to fold if they are unsure about E (corner to corner). For Q3d ask "What does the 6 tell us?"'))
-put('p2l7-ws1ans',check_x('p2l7-ws1ans','50–52 MIN','Page 1: check together',[('Q1','A, C, E and F.   B and D: the 4 parts are not equal.'),('Q2','a) {3/8}, {5/8}    b) {5/6}, {1/6}    c) {7/10}, {3/10}'),('Q3 a–c','a) {1/3}    b) {7/9}    c) {1/10}, {1/5}, {1/4}, {1/2}'),('Q3 d','No. 6 equal parts are smaller than 4 equal parts of the same whole.')],
+put('p2l7-ws1',preview_x('p2l7-ws1','40–50 MIN','Worksheet page 1: with your partner',[('Q1','Fair shares? Circle the shapes cut into quarters. Check the parts are equal.'),('Q2','Name the fraction that is shaded and the fraction that is not.'),('Q3','Compare and order fractions. Draw bars to help.')],'Stuck? Fold a paper strip, or draw the bars the same length.',
+ 'Minutes 40 to 50. Pairs work together. Ask "How do you know?" before giving any help. For Q1, give pairs a paper square to fold if they are unsure about E (corner to corner). For Q3c ask "What does the 6 tell us?"'))
+put('p2l7-ws1ans',check_x('p2l7-ws1ans','50–52 MIN','Page 1: check together',[('Q1','A, C, E and F.   B and D: the 4 parts are not equal.'),('Q2','a) {3/8}, {5/8}    b) {5/6}, {1/6}    c) {7/10}, {3/10}'),('Q3 a, b','a) {1/3} and {7/9}     b) {1/10}, {1/5}, {1/4}, {1/2}'),('Q3 c','No. 6 equal parts are smaller than 4 equal parts of the same whole.')],
  'Click each answer after a pair explains theirs. Q1: F surprises many children: the triangle cut by joining the middles of its sides makes 4 triangles that are all the same size, the middle one is just turned upside down. E: the 4 triangles of a square cut corner to corner are all the same. '
- 'B: the cuts do not go through the middle. D: the strips are different widths. Q2c: count the shaded squares one by one: 7 of 10. Q3c: more parts means smaller parts, so tenths are smallest.',lw=230,gap=160,size=34))
+ 'B: the cuts do not go through the middle. D: the strips are different widths. Q2c: count the shaded squares one by one: 7 of 10. Q3b: more parts means smaller parts, so tenths are smallest.',lw=230,gap=160,size=34))
 
 # 16. teach before page 2: adding
 def add_ov(stage):
@@ -334,11 +334,11 @@ put('p2l7-teachsame',sec('p2l7-teachsame','56–57 MIN',body,
  'Think-aloud: "Halves and eighths are different parts, so I cannot just look at the numbers. I draw the same whole twice, the same length, and line the parts up." Ask: "What if Mei\'s pizza were tiny?" Then we cannot compare like this: the wholes must be the same size.'))
 
 # 19-20. worksheet page 2
-put('p2l7-ws2',preview_x('p2l7-ws2','57–67 MIN','Worksheet page 2: on your own',[('Q4','Add and take away. Colour the bars.'),('Q5','The cake story. Draw a bar.'),('Q6','Who eats more pizza? Line up the same whole.'),('Q7','Cut a sandwich into 4 equal parts in 3 different ways.')],'Finished early? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. For Q6, check children draw both bars the same length. For Q7, ask "Are all 4 parts the same size? How do you know?"'))
-put('p2l7-ws2ans',check_x('p2l7-ws2ans','67–70 MIN','Page 2: check together',[('Q4','a) {3/5}   b) {7/8}   c) {9/12}   d) {5/6}   e) {4/10}'),('Q5','a) {5/8}    b) {3/8}    c) Mei, by {1/8}'),('Q6','Siti. {1/4} is 2 eighths, and 3 eighths is more.'),('Q7','Any 3: strips across, strips down, 2 by 2, corner to corner')],
+put('p2l7-ws2',preview_x('p2l7-ws2','57–67 MIN','Worksheet page 2: on your own',[('Q4','Add and take away. Colour the bars.'),('Q5','The cake story. Draw a bar.'),('Q6','Who eats more pizza? Line up the same whole.')],'Finished early? Stretch and Challenge come next.',
+ 'Children work alone. Note who needs a short catch-up next lesson. For Q6, check children draw both bars the same length.'))
+put('p2l7-ws2ans',check_x('p2l7-ws2ans','67–70 MIN','Page 2: check together',[('Q4','a) {3/5}   b) {7/8}   c) {9/12}   d) {5/6}   e) {4/10}'),('Q5','a) {5/8}    b) {3/8}    c) Mei, by {1/8}'),('Q6','Siti. {1/4} is 2 eighths, and 3 eighths is more.')],
  'Click each answer after a child explains. Q4d: 6 sixths make 1 whole, so 5/6 more. Q4e: 7 tenths take away 3 tenths is 4 tenths. Q5: 2 + 3 = 5 slices eaten (5/8); 8 − 5 = 3 left (3/8); Mei ate 3 slices, Ali 2: Mei ate 1/8 more. '
- 'Q6: the pizzas are the same size; Ravi\'s 1 quarter covers 2 eighths, Siti ate 3 eighths. Q7: strips across, strips down, a 2 by 2 grid, or both lines from corner to corner. Any way where all 4 parts are the same size is right.',lw=200,gap=160,size=34))
+ 'Q6: the pizzas are the same size; Ravi\'s 1 quarter covers 2 eighths, Siti ate 3 eighths.',lw=200,gap=160,size=34))
 
 # 21. stretch (new items)
 st=[('1.','Ali\'s ribbon and Mei\'s ribbon are each cut into thirds. Mei\'s {1/3} is longer than Ali\'s {1/3}. How can that be?'),('2.','Write all the fractions with bottom number 5 that are bigger than {2/5} and smaller than 1 whole.'),('3.','A bar has 12 equal parts. Ben shades {1/12}, then {2/12} more, then {3/12} more. How much is not shaded?')]

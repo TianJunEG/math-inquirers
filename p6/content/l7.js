@@ -53,47 +53,57 @@ function blocks(prog, o = {}) {
 
 // a corner of a shape: the turtle walks along AB, turns at B, walks along BC (turn 70°, inside 110°)
 const cornerFig = () => {
-  const t = 70, B = [330, 70], L = 170, r = Math.PI / 180;
-  const A = [B[0] - L, B[1]], C = [B[0] + 150 * Math.cos(t * r), B[1] + 150 * Math.sin(t * r)];
-  const arc = (rad, a1, a2, col) => `<path d="M${(B[0] + rad * Math.cos(a1 * r)).toFixed(1)} ${(B[1] + rad * Math.sin(a1 * r)).toFixed(1)} A${rad} ${rad} 0 0 1 ${(B[0] + rad * Math.cos(a2 * r)).toFixed(1)} ${(B[1] + rad * Math.sin(a2 * r)).toFixed(1)}" fill="none" stroke="${col}" stroke-width="4"/>`;
-  const lab = (rad, a, s, col) => `<text x="${(B[0] + rad * Math.cos(a * r)).toFixed(1)}" y="${(B[1] + rad * Math.sin(a * r) + 6).toFixed(1)}" font-size="16" font-weight="700" text-anchor="middle" fill="${col}" font-family="Arial">${s}</text>`;
-  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees. 70 + 110 = 180." viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" style="width:520px;max-width:100%">`;
-  s += `<line x1="${B[0]}" y1="${B[1]}" x2="${B[0] + 150}" y2="${B[1]}" stroke="${NAVY}" stroke-width="3" stroke-dasharray="8 6"/>`;
-  s += `<polyline points="${A.join(',')} ${B.join(',')} ${C.map(v => v.toFixed(1)).join(',')}" fill="none" stroke="${NAVY}" stroke-width="5" stroke-linejoin="round"/>`;
-  s += `<polygon points="${A[0] + 70},${B[1] - 9} ${A[0] + 92},${B[1]} ${A[0] + 70},${B[1] + 9}" fill="${TEAL}"/>`;
-  s += arc(52, 0, t, RED) + arc(34, t, 180, TEAL);
-  s += lab(90, t / 2, 'turn 70°', RED) + lab(62, (t + 180) / 2 + 12, 'inside 110°', TEAL);
-  s += `<text x="${B[0] + 160}" y="${B[1] + 6}" font-size="15" fill="${NAVY}" font-family="Arial">straight on</text>`;
-  s += `<text x="20" y="200" font-size="16" font-weight="700" fill="${NAVY}" font-family="Arial">turn + inside angle = 180°</text>`;
-  s += `<text x="20" y="222" font-size="15" fill="${NAVY}" font-family="Arial">(they sit on one straight line)</text>`;
+  const t = 70, B = [150, 34], r = Math.PI / 180;
+  const A = [20, B[1]], C = [B[0] + 95 * Math.cos(t * r), B[1] + 95 * Math.sin(t * r)];
+  const pt = (rad, a) => [(B[0] + rad * Math.cos(a * r)).toFixed(1), (B[1] + rad * Math.sin(a * r)).toFixed(1)];
+  const arc = (rad, a1, a2, col) => `<path d="M${pt(rad, a1).join(' ')} A${rad} ${rad} 0 0 1 ${pt(rad, a2).join(' ')}" fill="none" stroke="${col}" stroke-width="3.5"/>`;
+  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:210px;max-width:100%">`;
+  s += `<line x1="${B[0]}" y1="${B[1]}" x2="${B[0] + 110}" y2="${B[1]}" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/>`;
+  s += `<polyline points="${A.join(',')} ${B.join(',')} ${C.map(v => v.toFixed(1)).join(',')}" fill="none" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/>`;
+  s += `<polygon points="60,${B[1] - 8} 80,${B[1]} 60,${B[1] + 8}" fill="${TEAL}"/>`;
+  s += arc(40, 0, t, RED) + arc(26, t, 180, TEAL);
+  const [tx, ty] = pt(62, 30), [ix, iy] = pt(48, 140);
+  s += `<text x="${tx}" y="${(+ty + 5).toFixed(1)}" font-size="15" font-weight="700" fill="${RED}" font-family="Arial">turn 70°</text>`;
+  s += `<text x="${ix}" y="${(+iy + 12).toFixed(1)}" font-size="15" font-weight="700" text-anchor="end" fill="${TEAL}" font-family="Arial">inside 110°</text>`;
+  s += `<text x="${B[0] + 30}" y="${B[1] - 8}" font-size="14" fill="${NAVY}" font-family="Arial">straight on</text>`;
   return s + '</svg>';
 };
 
-// blocks on the left, an empty drawing frame on the right
-const codeAndFrame = (prog, label, frameText) => {
-  const b = blocks(prog), W = 600, fx = b.w + 30, H = Math.max(b.h, 190);
-  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${H + 4}" xmlns="http://www.w3.org/2000/svg" style="width:580px;max-width:100%">` + b.svg;
-  if (frameText) s += `<rect x="${fx}" y="2" width="${W - fx - 4}" height="${H}" rx="12" fill="${WHITE}" stroke="${NAVY}" stroke-width="2" stroke-dasharray="7 5"/><text x="${fx + 12}" y="24" font-size="14" fill="${NAVY}" font-family="Arial">${esc(frameText)}</text>`;
+// blocks on the left; on the right an empty drawing frame, or a trace table (after repeat 1..rows, value blank)
+const codeAndFrame = (prog, label, frameText, trace) => {
+  const b = blocks(prog, { fs: 14, h: 25 }), W = 600, fx = b.w + 30;
+  const Ht = Math.max(b.h, trace ? (trace.rows + 1) * 22 + 4 : 140);
+  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${Ht + 4}" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">` + b.svg;
+  if (frameText) s += `<rect x="${fx}" y="2" width="${W - fx - 4}" height="${Ht}" rx="12" fill="${WHITE}" stroke="${NAVY}" stroke-width="2" stroke-dasharray="7 5"/><text x="${fx + 12}" y="22" font-size="14" fill="${NAVY}" font-family="Arial">${esc(frameText)}</text>`;
+  if (trace) {
+    const c1 = 130, c2 = 130, x0 = W - c1 - c2 - 6;
+    s += `<rect x="${x0}" y="2" width="${c1 + c2}" height="22" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><text x="${x0 + c1 / 2}" y="18" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">after repeat</text><text x="${x0 + c1 + c2 / 2}" y="18" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${esc(trace.head)}</text>`;
+    let d = '';
+    for (let i = 1; i <= trace.rows; i++) { const y = 2 + 22 * i; d += `<text x="${x0 + c1 / 2}" y="${y + 16}" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${i}</text>`; }
+    s += `<rect x="${x0}" y="24" width="${c1 + c2}" height="${22 * trace.rows}" fill="${WHITE}" stroke="${NAVY}" stroke-width="2"/>` + d;
+    s += `<path d="M${x0 + c1} 2 V${24 + 22 * trace.rows}${Array.from({ length: trace.rows - 1 }, (_, i) => ` M${x0} ${46 + 22 * i} H${x0 + c1 + c2}`).join('')}" stroke="${NAVY}" stroke-width="1" fill="none"/>`;
+  }
   return s + '</svg>';
 };
 
 const PY = `import turtle
 t = turtle.Turtle()
-n = 5          # number of points (or sides)
-k = 2          # times round: 1 for a polygon
+n, k = 5, 2   # points, rounds
 turn = 360 * k / n
-total = 0
 for i in range(n):
     t.forward(150)
     t.right(turn)
-    total = total + turn
-print("turn", turn, "total", total, "angle", 180 - turn)
+print(turn, n * turn)
 turtle.done()`;
-// output when run: turn 144.0 total 720.0 angle 36.0
+// checked by running it (with a recording stand-in for the turtle window): prints "144.0 720.0" (the turn, then the total turning)
 
-const pyBox = H => H.tbl([9900], [H.row([H.cell(
-  `<div style="text-align:left"><div style="font-weight:700;margin-bottom:4px">Python version (optional): the same turtle in Python. Change n and k to test your answers to Q1 and Q5.</div><div style="font-family:'Liberation Mono',Consolas,monospace;font-size:13.5px;line-height:1.35;white-space:pre">${esc(PY)}</div></div>`,
-  9900, { fill: 'DDEBF7', h: 60 })])]);
+const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.repeat(m.length)).replace(/ {2,}/g, m => '&nbsp;'.repeat(m.length))).join('<br>');
+const pyBox = H => {
+  const ls = PY.split('\n'), code = part => `<div style="text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12.5px;line-height:1.3">${pyHTML(part.join('\n'))}</div>`;
+  return H.tbl([2300, 3800, 3800], [H.row([
+    H.cell('<div style="text-align:left;font-weight:700">Python version (optional)<div style="font-weight:400;margin-top:2px">Prints the turn and the total. Test Q1 and Q4.</div></div>', 2300, { fill: 'DDEBF7', h: 40 }),
+    H.cell(code(ls.slice(0, 4)), 3800, { h: 40 }), H.cell(code(ls.slice(4)), 3800, { h: 40 })])]);
+};
 
 module.exports = {
   lesson: {
@@ -110,12 +120,11 @@ module.exports = {
     mistakes: ['Using the inside angle as the turn: turn 60° for a triangle draws half a hexagon, and turn 108° for a pentagon does not close.', 'Dividing 180 by the number of sides instead of 360, or forgetting that turn + inside angle = 180°.', 'Stars: thinking the turns always add up to 360°. A star goes round more than once, so its turns add up to 720°, 1080° and so on.'],
     extension: 'Draw a rosette: repeat 12 [draw a square, then turn right 30]. How far does the turtle turn altogether? (12 × (360 + 30) = 4680° = 13 full turns.) Design your own rosette and predict its total turning before you run it.',
     key: [
-      ['Q1', '9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  12 sides: 30°, 150°.  18 sides: 20°, 160°.  36 sides: 10°, 170°.  Sides × turn = 360° every time.  (a) The turtle makes one full turn to come home facing the same way.  (b) 180°: the turn and the inside angle sit on one straight line.  (c) The turn gets smaller, the inside angle gets closer to 180° and the shape looks more and more like a circle.'],
-      ['Q2', '(a) An equilateral triangle, drawn 3 times over (after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn to 40° (360 ÷ 9).'],
-      ['Q3', '(a) Turn 15° (180 − 165), 24 sides (360 ÷ 15): repeat 24 [move, turn right 15].  (b) 15 sides (360 ÷ 24); inside angle 156°.  (c) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
-      ['Q4', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times round (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
-      ['Q5', '9 points, 4 times round: 1440°, turn 160°, point 20°.  18 points, 5 times round: 1800°, turn 100°, point 80°.  20 points, 3 times round: 1080°, turn 54°, point 126°.  (b) The 9-point star that goes round 4 times (20° points).'],
-      ['Q6', 'Triangle 60°, 180°.  Square 90°, 360°.  Pentagon 108°, 540°.  Hexagon 120°, 720°.  (a) 180° more each time  (b) 1440° (check: 10 × 144° = 1440°)  (c) (n − 2) × 180°, or n × 180° − 360°']
+      ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
+      ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
+      ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
+      ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  20 points, 3 times round: total 1080°, turn 54°, point 126°.  Sharper points: the 9-point star (20°).'],
+      ['Q5', 'Each inside angle: 60°, 90°, 108°, 120°, 144°.  Added: 180°, 360°, 540°, 720°, 1440°.  (a) 180°  (b) (n − 2) × 180°, or n × 180° − 360°']
     ]
   },
 
@@ -145,8 +154,8 @@ module.exports = {
     keyBig: 'Going once round a closed shape, the turtle turns 360° altogether. A regular polygon with n sides turns 360° ÷ n at each corner, and its inside angle is 180° − turn.',
     keySmall: 'A star goes round more than once: turn = 360° × times round ÷ points.',
     brk: 'Turtle dance. Walk a square on the spot: step, quarter turn, four times. Then a triangle: step, turn a third of a turn, three times. Then a hexagon.',
-    ws1: 'Page 1, in pairs at the computer: Q1 the polygon table, Q2 Ben’s buggy nonagon, Q3 work backwards from an angle.',
-    ws2: 'Page 2, on your own: Q4 trace the star program, Q5 plan three stars, Q6 add up the inside angles and find a rule.'
+    ws1: 'Page 1, in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
+    ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars, Q5 add up the inside angles and find a rule.'
   },
 
   qbank: {
@@ -182,57 +191,42 @@ module.exports = {
   },
 
   workbook: H => {
-    const head = ['Regular polygon', 'Sides', 'Turn angle', 'Inside angle', 'Sides × turn'], w1 = [2700, 1800, 1800, 1800, 1800];
-    const rows1 = [['Equilateral triangle', '3', '120°', '60°', '360°'], ['Nonagon', '9', '', '', ''], ['Decagon', '10', '', '', ''], ['Dodecagon', '12', '', '', ''], ['18-gon', '18', '', '', ''], ['36-gon', '36', '', '', '']];
-    const t1 = H.tbl(w1, [H.row(head.map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22 }))),
-      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 60, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: i < 2 }))))]);
-    const q2prog = [['event', 'when green flag clicked'], ['pen', 'erase all'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn right {120} degrees']]]];
-    const q4prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn right {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
-    const w4 = [1800, ...Array(9).fill(900)];
-    const t4 = H.tbl(w4, [H.row([H.cell('After repeat', w4[0], { bold: true, fill: 'EDEDED', size: 20 }), ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => H.cell(String(i), 900, { bold: true, fill: 'EDEDED', size: 22 }))]),
-      H.row([H.cell('total', w4[0], { bold: true, size: 22, h: 90 }), ...Array(9).fill(0).map(() => H.cell('', 900, { h: 90 }))])]);
-    const w5 = [1700, 2000, 2200, 2000, 2000];
-    const t5 = H.tbl(w5, [H.row(['Points', 'Times round', 'Total turning', 'Turn angle', 'Angle at each point'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 21 }))),
-      ...[['5', '2', '720°', '144°', '36°'], ['9', '4', '', '', ''], ['18', '5', '', '', ''], ['20', '3', '', '', '']].map((r, j) => H.row(r.map((s, i) => H.cell(s, w5[i], { h: 60, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: i < 2 }))))]);
-    const w6 = [2700, 1600, 2600, 3000];
-    const t6 = H.tbl(w6, [H.row(['Regular polygon', 'Sides', 'Each inside angle', 'All inside angles added'].map((s, i) => H.cell(s, w6[i], { bold: true, fill: 'D9D9D9', size: 21 }))),
-      ...[['Equilateral triangle', '3'], ['Square', '4'], ['Pentagon', '5'], ['Hexagon', '6']].map(r => H.row([H.cell(r[0], w6[0], { h: 55, size: 22, bold: true }), H.cell(r[1], w6[1], { h: 55, size: 22, bold: true }), H.cell('', w6[2]), H.cell('', w6[3])]))]);
+    const w1 = [2475, 2475, 2475, 2475];
+    const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
+    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 50 }))),
+      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 45, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
+    const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn right {120} degrees']]]];
+    const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn right {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
+    const w4 = [1700, 2000, 2200, 2000, 2000];
+    const t4 = H.tbl(w4, [H.row(['Points', 'Times round', 'Total turning', 'Turn angle', 'Point angle'].map((s, i) => H.cell(s, w4[i], { bold: true, fill: 'D9D9D9', size: 21, h: 45 }))),
+      ...[['5', '2', '720°', '144°', '36°'], ['9', '4', '', '', ''], ['20', '3', '', '', '']].map((r, j) => H.row(r.map((s, i) => H.cell(s, w4[i], { h: 45, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: i < 2 }))))]);
+    const w5 = [2900, 1400, 1400, 1400, 1400, 1400];
+    const t5 = H.tbl(w5, [H.row(['Sides', '3', '4', '5', '6', '10'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 22, h: 45 }))),
+      H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
+      H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
+    const intro = H.tbl([6400, 3500], [H.row([
+      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it in Scratch.', 6400, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3500, { h: 10 })])]);
     return [
-      H.p('The turtle (our sprite with its pen down) turns at every corner. The turn is measured from “straight on”, so it is the OUTSIDE angle. Maths first, then test it in Scratch.', { after: 20 }),
-      H.fig(cornerFig()),
-      H.q(1, 'Regular polygons: all sides equal, all angles equal. Work out each turn and inside angle. Then test two rows in Scratch.', { before: 40, keepNext: true }),
+      intro,
+      H.q(1, 'Regular polygons. Fill in the table: some rows go forwards, some backwards. Test two rows in Scratch.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),
-      H.sub('b', 'Add the turn angle and the inside angle in any row. What do you get? Why?', { after: 20 }), ...H.lines(1),
-      H.sub('c', 'What happens to the angles as the number of sides grows? What does the 36-gon look like on screen?', { after: 20 }), ...H.lines(1),
-      H.q(2, 'Ben wants to draw a regular nonagon (9 sides). Predict what his program draws before you run it.', { keepNext: true }),
-      H.fig(codeAndFrame(q2prog, 'Ben’s program: when green flag clicked, erase all, pen down, repeat 9: move 80 steps, turn right 120 degrees. A box to draw a prediction.', 'Draw your prediction here')),
+      H.sub('b', 'Mei says a regular polygon can have inside angles of 130°. Is she right? Explain.', { after: 20 }), ...H.lines(1),
+      H.q(2, 'Ben wants a regular nonagon (9 sides). Predict what his program draws, then run it.', { keepNext: true }),
+      H.fig(codeAndFrame(q2prog, 'Ben’s program: when green flag clicked, pen down, repeat 9: move 80 steps, turn right 120 degrees. A box to draw a prediction.', 'Draw your prediction here')),
       H.sub('a', 'What does the turtle draw? Explain.', { after: 20 }), ...H.lines(1),
-      H.sub('b', 'How many degrees does the turtle turn altogether?', { after: 10 }), H.ans('Answer:  ________ °'),
-      H.sub('c', 'Fix Ben’s program. Which number must change, and to what?', { after: 10 }), H.ans('Answer:'),
-      H.q(3, 'Plan your code: work backwards from an angle.', { keepNext: true }),
-      H.sub('a', 'Each inside angle of a regular polygon is 165°. Find the turn angle and the number of sides. Then write the repeat block.', { after: 10 }),
-      H.ans('Turn ______ °     Sides ______     repeat ____ [ move 50, turn right ____ ]'),
-      H.sub('b', 'A regular polygon has a turn angle of 24°. How many sides does it have? What is each inside angle?', { after: 10 }),
-      H.ans('Sides ______      Inside angle ______ °'),
-      H.sub('c', 'Mei says a regular polygon can have inside angles of 130°. Is she right? Explain.', { after: 20 }), ...H.lines(2),
+      H.sub('b', 'Total turning  ________ °        (c)  Fix it: change  ________  to  ________'),
 
-      H.q(4, 'Trace the code. This program keeps a running total of how far the turtle has turned.', { pb: true, before: 0, keepNext: true }),
-      H.fig(codeAndFrame(q4prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn right 80 degrees, change total by 80; then say total. A box to sketch the drawing.', 'Sketch what it draws')),
-      H.p('Fill in the value of total after each repeat.', { after: 20 }),
+      H.q(3, 'Trace the code. The program keeps a running total of how far the turtle has turned. Fill in the table.', { pb: true, before: 0, keepNext: true }),
+      H.fig(codeAndFrame(q3prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn right 80 degrees, change total by 80; then say total. A trace table for total after repeats 1 to 9.', null, { rows: 9, head: 'total' })),
+      H.sub('a', 'The sprite says  ________      (b)  Times the turtle goes round  ________', { after: 60 }),
+      H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
+      H.q(4, 'Plan two stars, then test them in Scratch. Which has sharper points?   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
-      H.sub('a', 'What does the sprite say at the end?   ________', { after: 60 }),
-      H.sub('b', 'How many times does the turtle go round? How do you know?   ____________________________', { after: 60 }),
-      H.sub('c', 'What shape does it draw?   ________________', { after: 60 }),
-      H.sub('d', 'What is the angle at each point of the shape?   ________ °'),
-      H.q(5, 'Plan three stars. A star goes round more than once:  turn = 360° × times round ÷ points.  The angle at each point = 180° − turn.', { keepNext: true }),
+      H.q(5, 'Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
       t5,
-      H.sub('b', 'Which of your stars has the sharpest points? Test it in Scratch.   ______________________'),
-      H.q(6, 'Add up the inside angles of regular polygons.', { keepNext: true }),
-      t6,
-      H.sub('a', 'What do you add each time the polygon gets one more side?   ________ °', { after: 60 }),
-      H.sub('b', 'Predict the total for a regular decagon (10 sides). Check it with your answer to Q1.   ________ °', { after: 60 }),
-      H.sub('c', 'Write a rule for the total of the inside angles of a polygon with n sides.   ______________________'),
+      H.sub('a', 'One more side adds  ______ °      (b)  For n sides:  total = ______________'),
       pyBox(H)
     ];
   }

@@ -25,7 +25,7 @@ const rowParts = (x, y, text, kind, fs, rh) => {
 };
 // prog: [[indent, kind, text], ...]; returns {g, w, h} drawn from (ox, oy)
 const blocksG = (prog, fs, ox = 0, oy = 0) => {
-  const rh = fs * 1.9, arm = fs, foot = fs * 0.8; let shapes = '', texts = '', y = oy + (prog[0][1] === 'event' ? fs * 0.6 : 2), maxx = 0; const stack = [];
+  const rh = fs * 1.75, arm = fs, foot = fs * 0.75; let shapes = '', texts = '', y = oy + (prog[0][1] === 'event' ? fs * 0.6 : 2), maxx = 0; const stack = [];
   const close = lv => { while (stack.length && stack[stack.length - 1][0] >= lv) { const [, x, yt, w] = stack.pop(); shapes += `<path d="M${x} ${yt} H${x + w} V${yt + rh} H${x + arm} V${y} H${x + w} V${y + foot} H${x} Z" fill="${TEAL}" stroke="${NAVY}" stroke-width="2" stroke-linejoin="round"/>`; y += foot; } };
   for (const [lv, kind, text] of prog) {
     close(lv); const x = ox + 2 + lv * arm; let [parts, w] = rowParts(x, y, text, kind, fs, rh); w = Math.max(w, fs * 4);
@@ -57,36 +57,50 @@ const traceTable = (x, y, heads, rows, cw, rh = 30) => {
   rows.forEach((r, j) => r.forEach((t, i) => { s += `<rect x="${x + i * cw}" y="${y + (j + 1) * rh}" width="${cw}" height="${rh}" fill="${WHITE}" stroke="${NAVY}" stroke-width="1.5"/><text x="${x + i * cw + cw / 2}" y="${y + (j + 1) * rh + rh / 2 + 5}" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${esc(t)}</text>`; }));
   return s;
 };
-const pyBox = (code, out) => {
-  const ls = code.split('\n'), h = 44 + ls.length * 20 + 26;
-  let s = `<svg aria-label="Optional Python version of the thermometer program" viewBox="0 0 600 ${h}" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%"><rect x="2" y="2" width="596" height="${h - 4}" rx="12" fill="${SKY}" stroke="${NAVY}" stroke-width="2"/>`;
-  s += `<text x="18" y="26" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">Know Python? The thermometer program from today (optional)</text>`;
-  ls.forEach((l, i) => { s += `<text x="24" y="${50 + i * 20}" font-size="15" fill="${NAVY}" font-family="Courier New, monospace" xml:space="preserve">${esc(l)}</text>`; });
-  s += `<text x="18" y="${50 + ls.length * 20 + 6}" font-size="14" fill="${NAVY}" font-family="Arial">It prints the same numbers as the Scratch program. Try it, then change −3 to −4.</text></svg>`;
-  return s;
-};
 const PY = 'temp = 5\nfor hour in range(6):\n    temp = temp + (-3)\n    print(temp)';
+const planFig = () => {
+  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'var', 'set depth to [      ]'], [0, 'control', 'repeat [      ]'], [1, 'var', 'change depth by [      ]'], [1, 'looks', 'say [depth] for [1] seconds']], 14, 4, 6);
+  let s = `<svg aria-label="Plan with blanks: set depth to blank, repeat blank, change depth by blank, say depth. Question (b) beside it, and an optional Python box." viewBox="0 0 600 186" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
+  s += `<text x="300" y="18" font-size="15" fill="${NAVY}" font-family="Arial">(a) Fill in the three blanks.</text>`;
+  s += `<text x="300" y="42" font-size="15" fill="${NAVY}" font-family="Arial">(b) After the loop, which number in</text><text x="320" y="62" font-size="15" fill="${NAVY}" font-family="Arial">“change depth by ___” brings her</text><text x="320" y="82" font-size="15" fill="${NAVY}" font-family="Arial">back to sea level?</text><line x1="446" y1="84" x2="596" y2="84" stroke="#8A94AD" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+  s += `<rect x="300" y="94" width="296" height="90" rx="10" fill="${SKY}" stroke="${NAVY}" stroke-width="1.5"/><text x="310" y="111" font-size="14" font-weight="700" fill="${TEAL}" font-family="Arial">Know Python? Today’s thermometer:</text>`;
+  PY.split('\n').forEach((l, i) => { s += `<text x="314" y="${130 + i * 16}" font-size="14" fill="${NAVY}" font-family="Courier New, monospace" xml:space="preserve">${esc(l)}</text>`; });
+  return s + '</svg>';
+};
 
+// sea-level picture on the left, the three questions with answer lines on the right
 const seaFig = () => {
-  const lvl = 150, sc = 6, Y = v => lvl - v * sc;
-  let s = `<svg aria-label="Sea level picture: a seagull at 9 m, a diver at minus 6 m and a crab at minus 15 m" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">`;
-  s += `<rect x="150" y="${lvl}" width="440" height="${260 - lvl}" fill="${SKY}"/><path d="M150 ${lvl} q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="${NAVY}" stroke-width="2"/>`;
-  s += `<line x1="90" y1="${Y(12)}" x2="90" y2="${Y(-17)}" stroke="${NAVY}" stroke-width="2"/>`;
-  for (let v = -15; v <= 10; v += 5) s += `<line x1="84" y1="${Y(v)}" x2="96" y2="${Y(v)}" stroke="${NAVY}" stroke-width="2"/><text x="76" y="${Y(v) + 5}" font-size="14" text-anchor="end" fill="${v === 0 ? TEAL : NAVY}" font-weight="${v === 0 ? 700 : 400}" font-family="Arial">${N(v)} m</text>`;
-  s += `<text x="470" y="${lvl - 8}" font-size="14" font-weight="700" fill="${TEAL}" font-family="Arial">sea level: 0 m</text>`;
-  // seagull
-  s += `<path d="M230 ${Y(9)} q14 -14 28 0 q14 -14 28 0" fill="none" stroke="${NAVY}" stroke-width="3"/><text x="300" y="${Y(9) + 5}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">seagull: 9 m</text>`;
-  // diver
-  s += `<ellipse cx="260" cy="${Y(-6)}" rx="30" ry="9" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><circle cx="296" cy="${Y(-6)}" r="9" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><text x="318" y="${Y(-6) + 5}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">diver: −6 m</text>`;
-  // crab
-  s += `<ellipse cx="420" cy="${Y(-15) - 4}" rx="18" ry="10" fill="${RED}" stroke="${NAVY}" stroke-width="2"/><path d="M402 ${Y(-15) - 4} l-8 6 M438 ${Y(-15) - 4} l8 6" stroke="${NAVY}" stroke-width="2"/><text x="450" y="${Y(-15)}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">crab: −15 m</text>`;
-  s += `<line x1="96" y1="${Y(9)}" x2="220" y2="${Y(9)}" stroke="${NAVY}" stroke-dasharray="4 4"/><line x1="96" y1="${Y(-6)}" x2="225" y2="${Y(-6)}" stroke="${NAVY}" stroke-dasharray="4 4"/><line x1="96" y1="${Y(-15)}" x2="398" y2="${Y(-15)}" stroke="${NAVY}" stroke-dasharray="4 4"/>`;
+  const lvl = 92, sc = 5, Y = v => lvl - v * sc;
+  let s = `<svg aria-label="Sea level picture: a seagull at 9 m, a diver at minus 6 m and a crab at minus 15 m, with three questions beside it" viewBox="0 0 600 186" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
+  s += `<rect x="100" y="${lvl}" width="230" height="${186 - lvl}" fill="${SKY}"/><path d="M100 ${lvl} q11.5 -6 23 0 t23 0 t23 0 t23 0 t23 0 t23 0 t23 0 t23 0 t23 0 t23 0" fill="none" stroke="${NAVY}" stroke-width="2"/>`;
+  s += `<line x1="62" y1="${Y(12)}" x2="62" y2="${Y(-17)}" stroke="${NAVY}" stroke-width="2"/>`;
+  for (let v = -15; v <= 10; v += 5) s += `<line x1="56" y1="${Y(v)}" x2="68" y2="${Y(v)}" stroke="${NAVY}" stroke-width="2"/><text x="50" y="${Y(v) + 5}" font-size="14" text-anchor="end" fill="${v === 0 ? TEAL : NAVY}" font-weight="${v === 0 ? 700 : 400}" font-family="Arial">${N(v)} m</text>`;
+  s += `<line x1="68" y1="${Y(9)}" x2="140" y2="${Y(9)}" stroke="${NAVY}" stroke-dasharray="4 4"/><line x1="68" y1="${Y(-6)}" x2="140" y2="${Y(-6)}" stroke="${NAVY}" stroke-dasharray="4 4"/><line x1="68" y1="${Y(-15)}" x2="205" y2="${Y(-15)}" stroke="${NAVY}" stroke-dasharray="4 4"/>`;
+  s += `<path d="M146 ${Y(9)} q11 -12 22 0 q11 -12 22 0" fill="none" stroke="${NAVY}" stroke-width="3"/><text x="196" y="${Y(9) + 5}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">seagull: 9 m</text>`;
+  s += `<ellipse cx="166" cy="${Y(-6)}" rx="22" ry="7" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><circle cx="194" cy="${Y(-6)}" r="7" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><text x="208" y="${Y(-6) + 5}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">diver: −6 m</text>`;
+  s += `<ellipse cx="222" cy="${Y(-15) - 3}" rx="14" ry="8" fill="${RED}" stroke="${NAVY}" stroke-width="2"/><text x="242" y="${Y(-15) + 2}" font-size="15" font-weight="700" fill="${NAVY}" font-family="Arial">crab: −15 m</text>`;
+  s += `<text x="236" y="${lvl - 8}" font-size="14" font-weight="700" fill="${TEAL}" font-family="Arial">sea level</text>`;
+  const qs = [['(a) How far above the diver', 'is the seagull?'], ['(b) How far below the diver', 'is the crab?'], ['(c) The diver swims up 4 m, then', 'down 11 m. Her height now?']];
+  qs.forEach((q, i) => { const y = 22 + i * 58; s += `<text x="350" y="${y}" font-size="15" fill="${NAVY}" font-family="Arial">${esc(q[0])}</text><text x="370" y="${y + 22}" font-size="15" fill="${NAVY}" font-family="Arial">${esc(q[1])}</text><line x1="${370 + tw(q[1], 15) * 0.86 + 8}" y1="${y + 24}" x2="596" y2="${y + 24}" stroke="#8A94AD" stroke-width="1.5" stroke-dasharray="3 3"/>`; });
   return s + '</svg>';
 };
 
 const traceFig = () => {
-  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'motion', 'set x to [40]'], [0, 'control', 'repeat [4]'], [1, 'motion', 'change x by [−30]'], [0, 'looks', 'say [x position]']], 16, 4, 6);
-  return `<svg aria-label="Code: set x to 40, repeat 4: change x by minus 30, then say x position. Beside it an empty trace table." viewBox="0 0 600 ${Math.max(b.h + 12, 190)}" xmlns="http://www.w3.org/2000/svg" style="width:580px;max-width:100%">${b.g}${traceTable(330, 14, ['After repeat', 'x'], [['start', '40'], ['1', ''], ['2', ''], ['3', ''], ['4', '']], 120)}</svg>`;
+  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'motion', 'set x to [40]'], [0, 'control', 'repeat [4]'], [1, 'motion', 'change x by [−30]'], [0, 'looks', 'say [x position]']], 14, 4, 6);
+  let s = `<svg aria-label="Code: set x to 40, repeat 4: change x by minus 30, then say x position. Beside it an empty trace table and two questions." viewBox="0 0 600 ${Math.max(Math.ceil(b.h) + 8, 150)}" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
+  s += traceTable(250, 8, ['repeat', 'start', '1', '2', '3', '4'], [['x', '40', '', '', '', '']], 57, 28);
+  const qs = [['(a) What does the sprite say at the end?', ''], ['(b) How many MORE repeats would take', 'it to x = −200?']];
+  s += `<text x="250" y="96" font-size="15" fill="${NAVY}" font-family="Arial">(a) What does it say at the end?</text><line x1="478" y1="98" x2="596" y2="98" stroke="#8A94AD" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+  s += `<text x="250" y="124" font-size="15" fill="${NAVY}" font-family="Arial">(b) How many MORE repeats would</text><text x="270" y="146" font-size="15" fill="${NAVY}" font-family="Arial">take it to x = −200?</text><line x1="410" y1="148" x2="596" y2="148" stroke="#8A94AD" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+  return s + '</svg>';
+};
+
+// code blocks on the left, questions with answer lines on the right (lines: text rows; blanks: row indexes that get an answer line)
+const codeQ = (prog, lines, blanks, label) => {
+  const b = blocksG(prog, 14, 4, 6); const H2 = Math.max(Math.ceil(b.h) + 6, lines.length * 25 + 12);
+  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 600 ${H2}" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">${b.g}`;
+  lines.forEach((t, i) => { const y = 20 + i * 25; s += `<text x="310" y="${y}" font-size="15" fill="${NAVY}" font-family="Arial">${esc(t)}</text>`; if (blanks.includes(i)) s += `<line x1="${310 + tw(t, 15) * 0.86 + 8}" y1="${y + 2}" x2="596" y2="${y + 2}" stroke="#8A94AD" stroke-width="1.5" stroke-dasharray="3 3"/>`; });
+  return s + '</svg>';
 };
 
 module.exports = {
@@ -177,46 +191,34 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p('Numbers below zero are negative: −3 is read “negative 3”. On a number line, numbers get bigger to the right.', { after: 60 }),
-    H.q(1, 'The number line.', { before: 60, keepNext: true }),
-    H.fig(numline(-10, 10, { h: 74, ly: 38, marks: [[-8, 'A', SKY], [-3, 'B', SKY], [4, 'C', YEL]], label: 'Number line from minus 10 to 10 with points A, B and C' })),
+    H.q(1, 'The number line. Numbers get bigger to the right.', { before: 40, keepNext: true }),
+    H.fig(numline(-10, 10, { h: 70, ly: 36, marks: [[-8, 'A', SKY], [-3, 'B', SKY], [4, 'C', YEL]], label: 'Number line from minus 10 to 10 with points A, B and C' })),
     H.sub('a', 'Write the number at each letter.      A = ______      B = ______      C = ______'),
-    H.sub('b', 'Put these in order, smallest first:      3,   −5,   0,   −1,   −12,   7'), H.ans(),
+    H.sub('b', 'Smallest first:   3,  −5,  0,  −1,  −12,  7   →  ___________________________'),
     H.sub('c', 'Write < or > in each gap.       −4  ____  −9          −1  ____  0          −15  ____  2'),
     H.q(2, 'On a December trip to Harbin, China, Mei wrote down the temperature.', { keepNext: true }),
     H.tbl([2400, 1500, 1500, 1500, 1500, 1500], [
-      H.row(['Time', '6 a.m.', '9 a.m.', '12 noon', '3 p.m.', '9 p.m.'].map((s, i) => H.cell(s, i ? 1500 : 2400, { bold: true, fill: 'D9D9D9' }))),
-      H.row(['Temperature', '−24 °C', '−19 °C', '−13 °C', '−11 °C', '−20 °C'].map((s, i) => H.cell(s, i ? 1500 : 2400, { bold: !i })))
+      H.row(['Time', '6 a.m.', '9 a.m.', '12 noon', '3 p.m.', '9 p.m.'].map((s, i) => H.cell(s, i ? 1500 : 2400, { bold: true, fill: 'D9D9D9', h: 40 }))),
+      H.row(['Temperature', '−24 °C', '−19 °C', '−13 °C', '−11 °C', '−20 °C'].map((s, i) => H.cell(s, i ? 1500 : 2400, { bold: !i, h: 40 })))
     ]),
-    H.gap(60),
-    H.sub('a', 'At which time was it warmest?'), H.ans(),
-    H.sub('b', 'How many degrees did the temperature rise from 6 a.m. to 12 noon?'), H.ans(),
-    H.sub('c', 'How many degrees did it fall from 3 p.m. to 9 p.m.?'), H.ans(),
-    H.sub('d', 'At midnight it was 5 degrees colder than at 9 p.m. What was the temperature at midnight?'), H.ans(),
-    H.sub('e', 'At 12 noon it was 31 °C in Singapore. How many degrees warmer was Singapore than Harbin at noon?'), H.ans(),
+    H.gap(40),
+    H.sub('a', 'At which time was it warmest?   ______________'),
+    H.sub('b', 'How many degrees did it rise from 6 a.m. to 12 noon?   ______________'),
+    H.sub('c', 'How many degrees did it fall from 3 p.m. to 9 p.m.?   ______________'),
+    H.sub('d', 'Midnight was 5 degrees colder than 9 p.m. What was the temperature?   ________'),
+    H.sub('e', 'At noon Singapore was 31 °C. How much warmer was it than Harbin?   ________'),
     H.q(3, 'Heights above sea level are positive. Heights below sea level are negative.', { keepNext: true }),
     H.fig(seaFig()),
-    H.sub('a', 'How far above the diver is the seagull?'), H.ans(),
-    H.sub('b', 'How far below the diver is the crab?'), H.ans(),
-    H.sub('c', 'The diver swims up 4 m, then down 11 m. What is the diver’s height now?'), H.ans(),
 
     H.q(4, 'Work these out. Draw the jumps on the number line to help you.', { pb: true, before: 0, keepNext: true }),
-    H.fig(numline(-12, 12, { h: 50, ly: 16, labEvery: 2, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
+    H.fig(numline(-12, 12, { h: 42, ly: 12, labEvery: 2, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
     H.sub('a', '−6 + 9 = ________          (b)   4 − 11 = ________          (c)   −3 − 5 = ________'),
     H.sub('d', '−2 + (−6) = ________     (e)   5 − (−3) = ________        (f)   −1 − (−7) = ________'),
     H.q(5, 'Trace the code. Fill in the table to show x after each repeat.', { keepNext: true }),
     H.fig(traceFig()),
-    H.sub('a', 'What does the sprite say at the end?'), H.ans(),
-    H.sub('b', 'How many MORE repeats would take the sprite to x = −200?'), H.ans(),
-    H.q(6, 'Floors in Siti’s building are numbered …, −3, −2, −1, 0, 1, 2, … (0 is the ground floor). The lift starts at floor 5. Siti wants it to go DOWN 8 floors, one floor at a time, saying each floor. Here is her code.', { keepNext: true }),
-    H.fig(blocksSvg([[0, 'event', 'when flag clicked'], [0, 'var', 'set floor to [5]'], [0, 'control', 'repeat [8]'], [1, 'var', 'change floor by [1]'], [1, 'looks', 'say [floor] for [1] seconds']], 'Siti\'s code: set floor to 5, repeat 8: change floor by 1, say floor', 16, 300)),
-    H.sub('a', 'What is the last floor her code says?'), H.ans(),
-    H.sub('b', 'Change ONE block so the lift goes down. Write the new block.'), H.ans('New block:'),
-    H.sub('c', 'Now what is the last floor it says? Which basement is that?'), H.ans(),
-    H.q(7, 'Plan your code. A diver starts at sea level (0 m) and goes down 4 m at a time, saying her depth each time, until she reaches −28 m.', { keepNext: true }),
-    H.fig(blocksSvg([[0, 'event', 'when flag clicked'], [0, 'var', 'set depth to [      ]'], [0, 'control', 'repeat [      ]'], [1, 'var', 'change depth by [      ]'], [1, 'looks', 'say [depth] for [1] seconds']], 'Plan with blanks: set depth to blank, repeat blank, change depth by blank, say depth', 16, 300)),
-    H.sub('a', 'Fill in the three blanks above.'),
-    H.sub('b', 'After the loop, which number in “change depth by ____” brings her straight back to sea level?'), H.ans(),
-    H.fig(pyBox(PY))
+    H.q(6, 'Find the bug. Siti wants the lift to go DOWN 8 floors from floor 5. (0 = ground floor)', { keepNext: true }),
+    H.fig(codeQ([[0, 'event', 'when flag clicked'], [0, 'var', 'set floor to [5]'], [0, 'control', 'repeat [8]'], [1, 'var', 'change floor by [1]'], [1, 'looks', 'say [floor] for [1] seconds']], ['(a) Her code says this floor last:', '(b) Change ONE block so the lift', 'goes down. New block:', '(c) Now the last floor it says is', 'which basement?'], [0, 2, 4], 'Siti\'s code: set floor to 5, repeat 8: change floor by 1, say floor. Questions with answer lines beside it.')),
+    H.q(7, 'Plan your code. A diver starts at sea level (0 m) and goes down 4 m at a time to −28 m.', { keepNext: true }),
+    H.fig(planFig())
   ]
 };

@@ -83,7 +83,7 @@ const sticksSvg = () => {
     g += `<text x="${x + ws[i] / 2}" y="${bot + 34}" font-size="17" font-weight="700" text-anchor="middle" fill="${TEAL}" font-family="Fredoka, Arial, sans-serif">Pattern ${k}</text>`;
     x += ws[i] + gap;
   });
-  return `<svg aria-label="Matchstick squares: patterns 1, 2 and 3" viewBox="0 0 600 112" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  return `<svg aria-label="Matchstick squares: patterns 1, 2 and 3" viewBox="0 0 600 112" width="440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 const pyBox = (H, title, code, note) => H.p([`<div style="border:2px solid ${N};border-radius:12px;background:#FFF4D1;padding:6px 14px;margin-left:40px;display:flex;gap:16px;align-items:center"><pre style="flex:none;margin:2px 0;font-family:'Courier New',monospace;font-size:14px;line-height:1.3;white-space:pre">${esc(code)}</pre><div><div style="font-weight:700;color:${TEAL};font-size:15px">${esc(title)}</div><div style="font-size:14px;color:#3B4A6B">${esc(note)}</div></div></div>`], { after: 0 });
@@ -187,46 +187,43 @@ module.exports = {
     const hat = ['hat', 'when green flag clicked'];
     const side = (left, wl, right) => H.tbl([wl, 9900 - wl], [H.row([H.cell(['<div style="padding:4px 8px">' + left + '</div>'], wl, { h: 60 }), H.cell(right, 9900 - wl, { h: 60, align: 'left' })])]);
     // Q1 matchstick squares
-    W.push(H.q(1, 'Matchstick squares. Each new pattern adds one more square to the row. (The nth term means the term in position n.)', { before: 0, keepNext: true }));
+    W.push(H.q(1, 'Matchstick squares. Each new pattern adds one more square. Fill in the table.', { before: 0, keepNext: true }));
     W.push(H.fig(sticksSvg()));
     { const ws = [2700, 1200, 1200, 1200, 1200, 1200, 1200];
       W.push(H.tbl(ws, [H.row([H.cell('Pattern n', ws[0], { bold: true, fill: 'EDEDED', h: 40 }), ...[1, 2, 3, 4, 5, 6].map(k => H.cell(String(k), 1200, { bold: true, fill: 'EDEDED', h: 40 }))]),
         H.row([H.cell('Sticks', ws[0], { bold: true, h: 70 }), H.cell('4', 1200, { h: 70 }), ...[0, 0, 0, 0, 0].map(() => H.cell('', 1200, { h: 70 }))])])); }
-    W.push(H.sub('a', 'Fill in the table. Each new square adds ____ sticks. Why not 4? ___________________________'));
+    W.push(H.sub('a', 'Each new square adds ____ sticks. Why not 4? __________________'));
     W.push(H.sub('b', 'Complete the rule:   sticks  =  ______ × n  +  ______'));
-    W.push(H.sub('c', 'Sticks in pattern 100:  ______      (d)  Which pattern has 61 sticks?  ______'));
+    W.push(H.sub('c', 'Pattern 100 has ______ sticks.    (d)  Which pattern has 61 sticks? ____'));
     // Q2 rules
     W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term.', { keepNext: true }));
     { const ws = [3300, 1900, 2500, 2200];
       W.push(H.tbl(ws, [H.row(['Sequence', 'Difference', 'nth term', '100th term'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         ...[['a', '6,  10,  14,  18,  …'], ['b', '1,  6,  11,  16,  …'], ['c', '9,  11,  13,  15,  …'], ['d', '0.5,  1,  1.5,  2,  …']].map(([l, s]) =>
-          H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 70, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
+          H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 50, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
     // Q3 in the sequence?
     W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …', { keepNext: true }));
-    W.push(H.sub('a', 'Rule for the nth term:   ____________'));
-    W.push(H.sub('b', 'Is 101 in the sequence? If it is, which term is it?   ____________'));
-    W.push(H.sub('c', 'Is 150 in the sequence? Explain.'));
-    W.push(...H.lines(1));
-    W.push(pyBox(H, 'Python corner (optional): a term tester', 'first = 5\nstep = 3\nterm = first\nfor pos in range(1, 101):\n    print(pos, term)\n    term = term + step',
-      'It prints the first 100 terms of 5, 8, 11, … Change first and step to check your answers to Q1 and Q2.'));
+    W.push(H.sub('a', 'nth term:  __________     (b)  Is 101 a term? Which one?  __________'));
+    W.push(H.sub('c', 'Is 150 in the sequence? Explain.  ____________________________'));
+    W.push(pyBox(H, 'Python corner (optional): a term tester', 'term = 5\nfor pos in range(1, 101):\n    print(pos, term)\n    term = term + 3',
+      'It prints the first 100 terms of 5, 8, 11, … Change the 5 and the 3 to check your answers to Q1 and Q2.'));
 
     // ---- page 2: code ----
     W.push(H.q(4, 'Predict, then trace. What does this code make the sprite say? Fill in the trace table.', { pb: true, before: 0, keepNext: true }));
-    { const tr = H.tbl([2000, 3400], [H.row([H.cell('Time round the loop', 2000, { bold: true, fill: 'EDEDED', h: 50 }), H.cell('x after "change"', 3400, { bold: true, fill: 'EDEDED', h: 50 })]),
-        ...[1, 2, 3, 4].map(k => H.row([H.cell(String(k), 2000, { h: 45 }), H.cell('', 3400, { h: 45 })]))]);
-      W.push(side(blocks([hat, ['var', 'set x to (2)'], ['ctl', 'repeat (4)', [['var', 'change x by (5)'], ['look', 'say (x) for (1) seconds']]]], 'Code: set x to 2, repeat 4: change x by 5, say x'), 4300, [tr])); }
-    W.push(H.sub('a', 'What is the last number the sprite says?   ________'));
-    W.push(H.sub('b', 'Change repeat 4 to repeat 100. What is the last number now? Explain without running it.'));
+    { const tr = H.tbl([2000, 3400], [H.row([H.cell('Loop', 2000, { bold: true, fill: 'EDEDED', h: 40 }), H.cell('x after "change"', 3400, { bold: true, fill: 'EDEDED', h: 40 })]),
+        ...[1, 2, 3, 4].map(k => H.row([H.cell(String(k), 2000, { h: 25 }), H.cell('', 3400, { h: 25 })]))]);
+      W.push(side(blocks([hat, ['var', 'set x to (2)'], ['ctl', 'repeat (4)', [['var', 'change x by (5)'], ['look', 'say (x) for (1) seconds']]]], 'Code: set x to 2, repeat 4: change x by 5, say x', 14), 4300, [tr, '<div style="text-align:left;padding:8px 4px 0">(a)  The last number it says:  ________</div>'])); }
+    W.push(H.sub('b', 'With repeat 100, what is the last number? Explain without running it.'));
     W.push(...H.lines(1));
     // Q5 plan
-    W.push(H.q(5, 'Plan your code. Use only these blocks to make the sprite say the first 20 terms of   4,  10,  16,  22,  …   Write or draw your program in the box, with the blocks in order.', { keepNext: true }));
-    W.push(H.fig([[hat], [['var', 'set n to ( )']], [['ctl', 'repeat ( )', []]], [['var', 'change n by ( )']], [['look', 'say (n)']]].map((p, i) => blocks(p, 'Block ' + (i + 1), 14)).join('&nbsp;')));
-    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 480 })])]));
-    W.push(H.sub('a', 'What is the last number your sprite says?   ________'));
+    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
+    { const pal = ps => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + ps.map(([p, i]) => blocks(p, 'Block ' + i, 14).replace('max-width:100%', 'flex:none')).join('') + '</div>';
+      W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n)']], 5]]) + '</div>', 4300,
+        ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:150px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
     // Q6 bug
     W.push(H.q(6, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));
-    W.push(side(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n'), 4300,
-      ['(a)  What number does her code say?   ________', ' ', '(b)  Use the rule for the nth term.', 'What is the 50th term really?   ________']));
+    W.push(side(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n', 14), 4300,
+      ['(a)  Her code says:   ________', ' ', '(b)  Use the rule for the nth term.', 'The 50th term is really:   ________']));
     W.push(H.sub('c', 'Fix her code. Explain the bug in one sentence.'));
     W.push(...H.lines(1));
     return W;

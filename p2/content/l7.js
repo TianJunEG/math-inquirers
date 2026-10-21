@@ -49,16 +49,20 @@ const q1svg = () => {
   const ap = [550, 100 - 40 * Math.sqrt(3)], bl = [510, 100], br = [590, 100], ml = [530, (ap[1] + 100) / 2], mr = [570, (ap[1] + 100) / 2], mb = [550, 100];
   s += poly([ap, bl, br]) + poly([ml, mr, mb], Y);
   ['A', 'B', 'C', 'D', 'E', 'F'].forEach((l, i) => { s += text(50 + i * 100, 136, l, 20); });
-  return svg(600, 145, s, 'Six shapes A to F, each cut into 4 parts with 1 part shaded');
+  return `<div style="width:520px;margin:0 auto">` + svg(600, 142, s, 'Six shapes A to F, each cut into 4 parts with 1 part shaded') + '</div>';
 };
-// Q2: a) 3 of 8, b) 5 of 6, c) 7 of 10
+// Q2: a) 3 of 8, b) 5 of 6, c) 7 of 10, with answer boxes under each picture
 const q2svg = () => {
-  let s = text(12, 26, 'a', 20, N, 'start') + bar(30, 55, 180, 50, 8, [0, 3, 5]);
-  s += text(242, 26, 'b', 20, N, 'start') + pie(310, 80, 62, 6, [0, 1, 3, 4, 5]);
-  s += text(402, 26, 'c', 20, N, 'start');
+  let s = text(12, 24, 'a', 20, N, 'start') + bar(30, 42, 170, 40, 8, [0, 3, 5]);
+  s += text(232, 24, 'b', 20, N, 'start') + pie(300, 62, 50, 6, [0, 1, 3, 4, 5]);
+  s += text(402, 24, 'c', 20, N, 'start');
   const on = ['0,0', '0,1', '0,3', '0,4', '1,1', '1,2', '1,4'];
-  for (let r = 0; r < 2; r++) for (let c = 0; c < 5; c++) s += rect(420 + c * 34, 46 + r * 34, 34, 34, on.includes(r + ',' + c) ? Y : W);
-  return svg(600, 150, s, 'a: a bar of 8 equal parts with 3 shaded; b: a circle of 6 equal parts with 5 shaded; c: a grid of 10 equal squares with 7 shaded');
+  for (let r = 0; r < 2; r++) for (let c = 0; c < 5; c++) s += rect(420 + c * 32, 30 + r * 32, 32, 32, on.includes(r + ',' + c) ? Y : W);
+  [115, 300, 505].forEach(cx => {
+    s += text(cx - 42, 136, 'shaded', 14, N, 'middle', 600) + text(cx + 42, 136, 'not shaded', 14, N, 'middle', 600);
+    s += `<rect x="${cx - 70}" y="142" width="56" height="44" rx="6" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="4 3"/><rect x="${cx + 14}" y="142" width="56" height="44" rx="6" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="4 3"/>`;
+  });
+  return svg(600, 190, s, 'a: a bar of 8 equal parts with 3 shaded; b: a circle of 6 equal parts with 5 shaded; c: a grid of 10 equal squares with 7 shaded; under each, a box for the shaded fraction and a box for the not-shaded fraction');
 };
 // Q4: bars to colour + the sums
 const q4svg = () => {
@@ -80,7 +84,6 @@ const q4svg = () => {
 };
 const q5svg = () => svg(600, 62, text(10, 38, 'Cake', 18, N, 'start') + bar(70, 12, 480, 40, 8), 'A bar of 8 equal parts for the cake');
 const q6svg = () => svg(600, 120, text(70, 42, 'Ravi', 18, N, 'end') + bar(85, 15, 480, 40, 4) + text(70, 102, 'Siti', 18, N, 'end') + bar(85, 75, 480, 40, 8), 'Two bars the same length: Ravi\'s pizza in 4 equal parts and Siti\'s pizza in 8 equal parts');
-const q7svg = () => svg(600, 140, [60, 245, 430].map(x => rect(x, 10, 120, 120)).join(''), 'Three empty squares to cut into 4 equal parts');
 
 module.exports = {
   lesson: {
@@ -95,19 +98,18 @@ module.exports = {
     share: 'Is 1/2 always bigger than 1/4? When could it not be?',
     exit: { q: 'Which is bigger, 1/7 or 1/9? Then work out 2/9 + 5/9.', a: '1/7 (the same whole cut into fewer parts gives bigger parts). 2/9 + 5/9 = 7/9.' },
     mistakes: [
-      'Naming a fraction when the parts are not equal: calling the shaded part of B or D in Q1 a quarter.',
+      'Naming a fraction when the parts are not equal: circling B or D in Q1.',
       'Thinking 1/6 is bigger than 1/4 because 6 is bigger than 4 (Q3).',
       'Adding the bottom numbers too: 2/5 + 1/5 written as 3/10 instead of 3/5 (Q4).'
     ],
     extension: 'Find all the ways to add two fractions with bottom number 8 to make 1 whole (1/8 + 7/8, 2/8 + 6/8, 3/8 + 5/8, 4/8 + 4/8: 4 ways).',
     key: [
-      ['Q1', 'A, C, E and F are cut into quarters. B and D are not: their 4 parts are not the same size.'],
+      ['Q1', 'A, C, E and F are cut into quarters. (a) B or D: their 4 parts are not the same size, so a part is not a quarter.'],
       ['Q2', '(a) shaded 3/8, not shaded 5/8  (b) 5/6 and 1/6  (c) 7/10 and 3/10'],
-      ['Q3', '(a) 1/3  (b) 7/9  (c) 1/10, 1/5, 1/4, 1/2  (d) No. Cutting the same whole into 6 equal parts makes smaller parts than cutting it into 4, so 1/6 is smaller than 1/4.'],
+      ['Q3', '(a) 1/3; 7/9  (b) 1/10, 1/5, 1/4, 1/2  (c) No. Cutting the same whole into 6 equal parts makes smaller parts than cutting it into 4, so 1/6 is smaller than 1/4.'],
       ['Q4', '(a) 3/5  (b) 7/8  (c) 9/12  (d) 5/6  (e) 4/10'],
       ['Q5', '(a) 5/8  (b) 3/8  (c) Mei, by 1/8'],
-      ['Q6', 'Siti. The pizzas are the same size and 1 quarter is the same as 2 eighths; 3 eighths is more than 2 eighths.'],
-      ['Q7', 'Any 3 ways with 4 equal parts, for example 4 strips across, 4 strips down, a 2 by 2 grid, or both lines from corner to corner.']
+      ['Q6', 'Siti. The pizzas are the same size and 1 quarter is the same as 2 eighths; 3 eighths is more than 2 eighths.']
     ]
   },
 
@@ -142,7 +144,7 @@ module.exports = {
     keySmall: 'Same whole: more equal parts means smaller parts.',
     brk: 'Fraction turns. Stand up and turn a whole turn, a half turn, a quarter turn, three quarter turns, then freeze.',
     ws1: 'Page 1, in pairs: Q1 which shapes are cut into quarters, Q2 name the fraction shaded and not shaded, Q3 compare and order.',
-    ws2: 'Page 2, on your own: Q4 add and take away, Q5 the cake story, Q6 who eats more pizza, Q7 four equal parts in 3 ways.'
+    ws2: 'Page 2, on your own: Q4 add and take away, Q5 the cake story, Q6 who eats more pizza.'
   },
 
   qbank: {
@@ -159,7 +161,7 @@ module.exports = {
       { q: 'A ribbon is cut into 9 equal pieces. Mei uses 4 pieces and Siti uses 3 pieces. What fraction of the ribbon is left?', a: '2/9 (4 + 3 = 7 pieces used, 9 − 7 = 2 left)' },
       { q: '2/7 + ? = 1 whole', a: '5/7' },
       { q: 'Ali says: “Half of my pizza is bigger than half of your pizza.” Can he be right? Explain.', a: 'Yes, if his pizza is bigger. Halves of different-size wholes are different sizes.' },
-      { q: 'Use one of the cards 3, 5 and 8 as the bottom number of 1/□. Which card makes the biggest fraction? Which makes the smallest?', a: '3 makes the biggest (1/3); 8 makes the smallest (1/8).' },
+      { q: 'Draw 3 squares. Cut each one into 4 EQUAL parts in a different way.', a: 'Any 3 of: 4 strips across, 4 strips down, a 2 by 2 grid, both lines from corner to corner (4 same triangles). Every part must be the same size.' },
       { q: 'Ravi eats 3/8 of a pizza. Ben eats 2/8 of the same pizza. How much more does Ravi eat? How much of the pizza is left?', a: '1/8 more; 3/8 is left (5 eighths eaten).' },
       { q: 'A strip is cut into 4 equal parts. Then each part is cut in half. How many parts are there now? What is each part called?', a: '8 parts; each part is one eighth (1/8). 2 eighths make 1 quarter.' },
       { q: 'Siti shades 4/12 of a shape. Then she shades 5/12 more. How much of the shape is NOT shaded?', a: '3/12 (9 twelfths shaded, 12 − 9 = 3)' }
@@ -180,26 +182,18 @@ module.exports = {
   workbook: H => {
     const R = (s, o) => rich(H, s, o);
     const out = [];
-    out.push(H.p(R('A fraction names EQUAL parts of a whole. Check that the parts are equal before you name a fraction.'), { after: 60 }));
-    out.push(H.q(1, R('Fair shares? Each shape has 4 parts and 1 part is shaded. Which shapes are cut into quarters (4 EQUAL parts)?'), { before: 60, keepNext: true }));
+    out.push(H.q(1, R('Fair shares? Each shape has 4 parts and 1 part is shaded. Circle the shapes that are cut into quarters (4 EQUAL parts).'), { before: 40, keepNext: true }));
     out.push(H.fig(q1svg()));
-    out.push(H.sub('a', 'Circle the letters of the shapes that are cut into quarters:      A      B      C      D      E      F'));
-    out.push(H.sub('b', 'Choose one shape that is NOT cut into quarters. Explain how you know.', { after: 40 }));
-    out.push(...H.lines(2));
-    out.push(H.q(2, 'What fraction is shaded? What fraction is NOT shaded?', { keepNext: true }));
+    out.push(H.sub('a', 'Choose one shape that is NOT cut into quarters. Explain how you know.', { after: 20 }));
+    out.push(...H.lines(1));
+    out.push(H.q(2, 'What fraction is shaded? What fraction is NOT shaded? Write them in the boxes.', { keepNext: true }));
     out.push(H.fig(q2svg()));
-    out.push(H.tbl([2400, 2500, 2500, 2500], [
-      H.row([H.cell('', 2400, { fill: 'EDEDED' }), ...['a', 'b', 'c'].map(l => H.cell(l, 2500, { bold: true, fill: 'EDEDED' }))]),
-      H.row([H.cell('Shaded', 2400, { bold: true, h: 220 }), H.cell('', 2500), H.cell('', 2500), H.cell('', 2500)]),
-      H.row([H.cell('Not shaded', 2400, { bold: true, h: 220 }), H.cell('', 2500), H.cell('', 2500), H.cell('', 2500)])
-    ]));
+    const sp = n => '\u00a0'.repeat(n);
     out.push(H.q(3, 'Compare the fractions. Draw bars the same length if it helps.', { keepNext: true }));
-    out.push(H.sub('a', R('Circle the bigger fraction:      {1/3}      or      {1/8}')));
-    out.push(H.sub('b', R('Circle the bigger fraction:      {5/9}      or      {7/9}')));
-    out.push(H.sub('c', R('Write these in order, smallest first:      {1/5}      {1/2}      {1/10}      {1/4}'), { after: 40 }));
-    out.push(H.ans('Smallest first:'));
-    out.push(H.sub('d', R('Mei says: “{1/6} is bigger than {1/4}, because 6 is bigger than 4.” Is she right? Explain.'), { after: 40 }));
-    out.push(...H.lines(2));
+    out.push(H.sub('a', R('Circle the bigger fraction in each pair:' + sp(6) + '{1/3}' + sp(2) + 'or' + sp(2) + '{1/8}' + sp(12) + '{5/9}' + sp(2) + 'or' + sp(2) + '{7/9}')));
+    out.push(H.sub('b', R('Smallest first:' + sp(3) + '{1/5}' + sp(2) + '{1/2}' + sp(2) + '{1/10}' + sp(2) + '{1/4}' + sp(6) + '_____' + sp(3) + '_____' + sp(3) + '_____' + sp(3) + '_____')));
+    out.push(H.sub('c', R('Mei says: “{1/6} is bigger than {1/4}, because 6 is bigger than 4.” Is she right? Explain.'), { after: 20 }));
+    out.push(...H.lines(1));
 
     out.push(H.q(4, 'Add or take away. Colour the bars to help you. Write each answer in the box.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
@@ -212,8 +206,6 @@ module.exports = {
     out.push(H.fig(q6svg()));
     out.push(H.ans('Who eats more?'));
     out.push(...H.lines(1));
-    out.push(H.q(7, 'Cut each sandwich into 4 EQUAL parts. Find 3 different ways.', { keepNext: true }));
-    out.push(H.fig(q7svg()));
     return out;
   }
 };

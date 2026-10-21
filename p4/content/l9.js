@@ -46,20 +46,17 @@ const svg = (w, h, body, label) => `<svg aria-label="${label}" viewBox="0 0 ${w}
 const titled = (t, x) => tx(x, 18, t, 16);
 
 const DAYS7 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-const juiceSvg = () => svg(600, 290, titled('Cups of sugarcane juice sold each day', 300) +
-  graph({ x: 0, y: 26, w: 600, h: 264, xl: DAYS7, y0: 0, y1: 80, step: 10, lab: 10, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
+const juiceSvg = () => svg(600, 200, titled('Cups of sugarcane juice sold each day', 300) +
+  graph({ x: 0, y: 22, w: 600, h: 178, xl: DAYS7, y0: 0, y1: 80, step: 10, lab: 10, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
   'Line graph of cups of sugarcane juice sold: Monday 40, Tuesday 55, Wednesday 50, Thursday 75, Friday 65, Saturday 25, Sunday 30');
-const moneySvg = () => svg(600, 300, titled('Money in each money box at the end of each week', 300) +
-  graph({ x: 0, y: 26, w: 600, h: 274, xl: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4', 'Wk 5', 'Wk 6'], y0: 0, y1: 60, step: 5, lab: 10, yt: 'Money ($)', legend: true,
+const moneySvg = () => svg(600, 196, titled('Money in each money box at the end of each week', 300) +
+  graph({ x: 0, y: 22, w: 600, h: 174, xl: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4', 'Wk 5', 'Wk 6'], y0: 0, y1: 60, step: 5, lab: 10, yt: 'Money ($)', legend: true,
     series: [{ v: [10, 20, 30, 40, 50, 60], c: TEAL, name: 'Ali' }, { v: [30, 35, 40, 45, 50, 55], c: RED, mark: 'sq', dash: true, name: 'Mei' }] }),
   'Two line graphs: Ali has 10, 20, 30, 40, 50, 60 dollars in weeks 1 to 6; Mei has 30, 35, 40, 45, 50, 55 dollars');
-const durianSvg = () => svg(600, 270, titled('Durians sold each day', 300) +
-  graph({ x: 0, y: 26, w: 600, h: 244, xl: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], y0: 0, y1: 100, step: 10, lab: 20, yt: 'Number of durians', series: [{ v: [50, 70, null, 40, 80], c: N }] }),
-  'Line graph of durians sold: Monday 50, Tuesday 70, Wednesday missing, Thursday 40, Friday 80');
-const shopsSvg = () => svg(600, 270,
+const shopsSvg = () => svg(600, 182,
   tx(150, 18, 'Shop A: phone cases sold', 15) + tx(450, 18, 'Shop B: phone cases sold', 15) +
-  graph({ x: 0, y: 26, w: 295, h: 244, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 0, y1: 100, step: 20, lab: 20, yt: 'Number sold', series: [{ v: [20, 40, 60, 80], c: N }] }) +
-  graph({ x: 305, y: 26, w: 295, h: 244, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 40, y1: 60, step: 4, lab: 4, yt: 'Number sold', series: [{ v: [44, 48, 52, 56], c: N }] }),
+  graph({ x: 0, y: 22, w: 295, h: 160, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 0, y1: 100, step: 20, lab: 20, yt: 'Number sold', series: [{ v: [20, 40, 60, 80], c: N }] }) +
+  graph({ x: 305, y: 22, w: 295, h: 160, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 40, y1: 60, step: 4, lab: 4, yt: 'Number sold', series: [{ v: [44, 48, 52, 56], c: N }] }),
   'Two line graphs that look the same. Shop A: 20, 40, 60, 80 on a scale from 0 to 100. Shop B: 44, 48, 52, 56 on a scale from 40 to 60');
 
 module.exports = {
@@ -71,7 +68,7 @@ module.exports = {
     online: 'Children use a printed blank grid or squared paper and hold it up to the camera; the tutor plots on the slide graphs while children call out where each point goes.',
     warmup: 'Which graph tells the story? Four small line graphs (up then down, flat, steadily up, steadily down) and four stories (a bath filling, a hawker centre from 10 am to 3 pm, a candle burning, a piggy bank nobody touches). Children match each story to a graph and say why.',
     explore: 'Pairs plot a line graph from a table: the number of people in the queue at a chicken rice stall every half hour from 11:00 to 2:00 (4, 9, 18, 22, 15, 7, 3). They choose a scale, plot and join the points, then write three things the graph tells them (longest queue, fastest growth, best time to buy).',
-    mini: 'Read a line graph: title, axes, scale (each line is worth 10; halfway between 20 and 30 is 25). The biggest change is the steepest line: list the change between neighbours and say up or down. Missing values in a table: use the row and column totals, then check that both ways give the same grand total. Before page 2: two lines on one graph (where they cross the values are the same, the gap is the difference, the steeper line grows faster); a missing point from the total; check where the scale starts before comparing two graphs.',
+    mini: 'Read a line graph: title, axes, scale (each line is worth 10; halfway between 20 and 30 is 25). The biggest change is the steepest line: list the change between neighbours and say up or down. Missing values in a table: use the row and column totals, then check that both ways give the same grand total. Before page 2: two lines on one graph (where they cross the values are the same, the gap is the difference, the steeper line grows faster); values that go up by the same amount each time; check where the scale starts before comparing two graphs.',
     share: 'Two graphs show the same numbers, but one line looks much steeper. How can that be? How would you draw a fair graph?',
     exit: { q: 'Visitors: Mon 35, Tue 50, Wed 20, Thu 45. Between which two days was the biggest change? Was it an increase or a decrease?', a: 'Tuesday to Wednesday: a decrease of 30.' },
     mistakes: [
@@ -81,12 +78,11 @@ module.exports = {
     ],
     extension: 'Draw two line graphs of the same numbers (52, 54, 56, 58): one that makes the change look huge and one that makes it look tiny. Write a sentence a shop owner might say with each graph.',
     key: [
-      ['Q1', '(a) 75  (b) Wednesday to Thursday, up 25 cups  (c) Friday to Saturday, down 40 cups. It is the steepest line going down.  (d) 20 (75 − 55)  (e) e.g. the office workers do not come to work on Saturday and Sunday.'],
+      ['Q1', '(a) 75 cups; 55 cups (25 + 30)  (b) Wednesday to Thursday, up 25  (c) Friday to Saturday, down 40  (d) It is the steepest line going down. A reason such as: the office workers do not come to work on Saturday and Sunday.'],
       ['Q2', '4A Week 2: 47.  4B Week 1: 41.  4C total: 97.  Totals: Week 1 124, Week 2 128, altogether 252.  (a) 4B (41 is more than 29)  (b) 146 (128 + 6 + 6 + 6)'],
-      ['Q3', '(a) Day 1: 10, Day 3: 18, Day 4: 22. 4 more pages each day (26 − 14 = 12 over 3 days).  (b) 90 pages'],
-      ['Q4', '(a) $40  (b) Week 5 ($50 each); Week 6  (c) Ali $10, Mei $5  (d) $15 (Ali $80, Mei $65)'],
-      ['Q5', '(a) 60 (300 − 50 − 70 − 40 − 80)  (b) point at 60 on Wednesday, joined to Tuesday and Thursday  (c) Thursday to Friday: an increase of 40'],
-      ['Q6', '(a) Shop A: 60.  Shop B: 12.  (b) No. The scales are different: Shop A’s starts at 0 and each line is 20; Shop B’s starts at 40 and each line is 4. Shop A’s sales went up 48 more than Shop B’s.']
+      ['Q3', '(a) $40; $10  (b) Week 5 ($50 each); Week 6  (c) $15 (Ali $80, Mei $65)'],
+      ['Q4', 'Day 1: 10, Day 3: 18, Day 4: 22.  (a) 4 more each day (26 − 14 = 12 over 3 days); 90 pages'],
+      ['Q5', '(a) Shop A: 60.  Shop B: 12.  (b) No. The scales are different: Shop A’s starts at 0 and each line is 20; Shop B’s starts at 40 and each line is 4. Shop A’s sales went up by 48 more than Shop B’s.']
     ]
   },
 
@@ -110,7 +106,7 @@ module.exports = {
   deck: {
     today: 'Read line graphs and tables, find missing values, compare two lines and catch a graph that misleads.',
     warmGame: 'Which graph tells the story? Match four stories (a bath filling, a hawker centre from 10 am to 3 pm, a candle burning, a piggy bank nobody touches) to four line shapes, and say why.',
-    warmQs: [['75 − 48 = ?', '27'], ['On a scale in 10s, what is halfway between 40 and 50?', '45'], ['38 + 47 + 15 = ?', '100'], ['Four numbers add up to 200. Three of them are 45, 60 and 50. What is the fourth?', '45'], ['Which is the bigger change: 120 to 95, or 60 to 90?', '60 to 90 (30, not 25)']],
+    warmQs: [['75 − 48 = ?', '27'], ['On a scale in 10s, what is halfway between 40 and 50?', '45'], ['38 + 47 + 15 = ?', '100'], ['Four numbers total 200. Three are 45, 60 and 50. The fourth?', '45'], ['Bigger change: 120 to 95, or 60 to 90?', '60 to 90 (30)']],
     expSetup: ['Look at the table: people in the queue at a chicken rice stall every half hour.', 'Choose a scale for the side of your grid (how much is each line worth?).', 'Plot each point and join the points with straight lines.', 'Write three things your graph tells you.'],
     expPic: 'a table of queue lengths (11:00 4, 11:30 9, 12:00 18, 12:30 22, 1:00 15, 1:30 7, 2:00 3) beside an empty graph grid with the times along the bottom.',
     expAsk: [['When was the queue longest?', '12:30, with 22 people.'], ['Between which two times did the queue grow the most?', '11:30 to 12:00: up 9 people (the steepest line going up).'], ['When is the best time to buy chicken rice? Why?', '2:00 (3 people), or 11:00 (4 people): the shortest queues.']],
@@ -120,8 +116,8 @@ module.exports = {
     keyBig: 'Read the scale before you read a point. The steeper the line, the bigger the change.',
     keySmall: 'Totals help you find missing values. Always check where the scale starts before you compare two graphs.',
     brk: 'Human line graph. The tutor tells a story ("the temperature rises slowly, then drops fast"). Move your arm like the line: slow climb, fast drop, flat.',
-    ws1: 'Page 1, in pairs: Q1 the sugarcane juice graph, Q2 the library table, Q3 Siti’s pages.',
-    ws2: 'Page 2, on your own: Q4 two money boxes, Q5 the missing durian point, Q6 the two shops.'
+    ws1: 'Page 1, in pairs: Q1 the sugarcane juice graph, Q2 the library table.',
+    ws2: 'Page 2, on your own: Q3 two money boxes, Q4 Siti’s pages, Q5 the two shops.'
   },
 
   qbank: {
@@ -158,51 +154,37 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    W.push(H.p('A line graph shows how something changes. Read the title, the axes and the scale before you answer.', { after: 60 }));
-    W.push(H.q(1, 'A sugarcane juice stall is next to an office building. The line graph shows how many cups it sold each day for one week.', { before: 60, keepNext: true }));
+    W.push(H.q(1, 'A sugarcane juice stall is next to an office building. The line graph shows how many cups it sold each day for one week. Read the scale first!', { before: 40, keepNext: true }));
     W.push(H.fig(juiceSvg()));
-    W.push(H.sub('a', 'How many cups were sold on Thursday?   ________'));
-    W.push(H.sub('b', 'Between which two days did sales go UP the most? By how many cups?'));
-    W.push(H.ans());
-    W.push(H.sub('c', 'Between which two days did sales go DOWN the most? How can you tell from the graph without working out every change?'));
-    W.push(...H.lines(2));
-    W.push(H.sub('d', 'How many more cups were sold on Thursday than on Saturday and Sunday together?   ________'));
-    W.push(H.sub('e', 'Give a reason why the sales drop at the weekend.'));
+    W.push(H.sub('a', 'Cups sold on Thursday?  ______    On Saturday and Sunday together?  ______'));
+    W.push(H.sub('b', 'Biggest increase: from ________ to ________, up by ______ cups'));
+    W.push(H.sub('c', 'Biggest decrease: from ________ to ________, down by ______ cups'));
+    W.push(H.sub('d', 'How can you see (c) on the graph without working out every change? Why might sales drop on those days?'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'The table shows how many books three classes borrowed from the library. Fill in the missing numbers.', { keepNext: true }));
     const ws = [2475, 2475, 2475, 2475];
-    const r = (cells, head) => H.row(cells.map((c, i) => H.cell(c, ws[i], head || i === 0 ? { bold: true, fill: 'EDEDED', h: 90 } : { h: 90 })));
+    const r = (cells, head) => H.row(cells.map((c, i) => H.cell(c, ws[i], head || i === 0 ? { bold: true, fill: 'EDEDED', h: 36 } : { h: 36 })));
     W.push(H.tbl(ws, [r(['Class', 'Week 1', 'Week 2', 'Total'], true), r(['4A', '38', '', '85']), r(['4B', '', '29', '70']), r(['4C', '45', '52', '']), r(['Total', '', '', ''])]));
-    W.push(H.gap(60));
-    W.push(H.sub('a', 'Which class borrowed more books in Week 1 than in Week 2?   ________'));
-    W.push(H.sub('b', 'In Week 3, every class borrowed 6 more books than it did in Week 2. How many books were borrowed altogether in Week 3?'));
-    W.push(H.ans());
-    W.push(H.q(3, 'Siti reads a storybook. Each day she reads more pages than the day before, by the same number of pages each time.', { keepNext: true }));
-    const wd = [1650, 1650, 1650, 1650, 1650, 1650];
-    W.push(H.tbl(wd, [H.row(['Day', '1', '2', '3', '4', '5'].map((c, i) => H.cell(c, wd[i], { bold: true, fill: 'EDEDED', h: 80 }))),
-      H.row(['Pages', '', '14', '', '', '26'].map((c, i) => H.cell(c, wd[i], i === 0 ? { bold: true, fill: 'EDEDED', h: 110 } : { h: 110 })))]));
-    W.push(H.gap(60));
-    W.push(H.sub('a', 'Fill in the table. How many more pages does she read each day?   ________'));
-    W.push(H.sub('b', 'How many pages does she read in the 5 days altogether?   ________'));
+    W.push(H.gap(40));
+    W.push(H.sub('a', 'Which class borrowed more in Week 1 than in Week 2?  ________'));
+    W.push(H.sub('b', 'In Week 3, each class borrowed 6 more books than in Week 2. Week 3 total?  ______'));
 
-    W.push(H.q(4, 'Ali and Mei each have a money box. The line graph shows how much money was in each box at the end of each week.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(3, 'The graph shows how much money Ali and Mei had in their money boxes at the end of each week.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(moneySvg()));
-    W.push(H.sub('a', 'How much money did Mei have in Week 3?   $______'));
-    W.push(H.sub('b', 'In which week did they have the same amount?  Week ____     In which week did Ali first have more than Mei?  Week ____'));
-    W.push(H.sub('c', 'How much does Ali save each week?  $______      How much does Mei save each week?  $______'));
-    W.push(H.sub('d', 'They keep saving in the same way. How much more than Mei will Ali have in Week 8? Show how you know.'));
-    W.push(H.ans());
-    W.push(H.q(5, 'The line graph shows how many durians a stall sold from Monday to Friday. The point for Wednesday is missing. The stall sold 300 durians altogether.', { keepNext: true }));
-    W.push(H.fig(durianSvg()));
-    W.push(H.sub('a', 'How many durians were sold on Wednesday?   ________'));
-    W.push(H.sub('b', 'Mark the point for Wednesday on the graph and join it to the line.'));
-    W.push(H.sub('c', 'Between which two days was the biggest change? Was it an increase or a decrease?'));
-    W.push(H.ans());
-    W.push(H.q(6, 'Two shops drew line graphs of the phone cases they sold. Ravi says, “Both shops’ sales went up by the same amount, because the lines look the same.”', { keepNext: true }));
+    W.push(H.sub('a', 'Mei’s money in Week 3?  $______     Ali saves each week?  $______'));
+    W.push(H.sub('b', 'Same amount in Week ____     Ali first has more in Week ____'));
+    W.push(H.sub('c', 'They keep saving the same way. In Week 8, Ali has $______ more than Mei.'));
+    W.push(H.q(4, 'Siti reads more pages each day, always the same number more. Fill in the table.', { keepNext: true }));
+    const wd = [1650, 1650, 1650, 1650, 1650, 1650];
+    W.push(H.tbl(wd, [H.row(['Day', '1', '2', '3', '4', '5'].map((c, i) => H.cell(c, wd[i], { bold: true, fill: 'EDEDED', h: 30 }))),
+      H.row(['Pages', '', '14', '', '', '26'].map((c, i) => H.cell(c, wd[i], i === 0 ? { bold: true, fill: 'EDEDED', h: 50 } : { h: 50 })))]));
+    W.push(H.gap(40));
+    W.push(H.sub('a', 'How many more each day?  ______     Pages in the 5 days?  ______'));
+    W.push(H.q(5, 'Two shops drew line graphs of the phone cases they sold. Ravi says, “Both shops’ sales went up by the same amount, because the lines look the same.”', { keepNext: true }));
     W.push(H.fig(shopsSvg()));
-    W.push(H.sub('a', 'From January to April, by how many did sales go up at Shop A?  ______    At Shop B?  ______'));
+    W.push(H.sub('a', 'January to April: Shop A went up by ______.  Shop B went up by ______.'));
     W.push(H.sub('b', 'Is Ravi right? Explain why the two graphs look the same.'));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     return W;
   }
 };

@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:30:13Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P6: Lesson 9 – Data Detectives",
+ "order": [
+  "p6l9-title",
+  "p6l9-warm1",
+  "p6l9-warm2",
+  "p6l9-explore1",
+  "p6l9-explore2",
+  "p6l9-teach1",
+  "p6l9-we1",
+  "p6l9-code1",
+  "p6l9-try1",
+  "p6l9-we2",
+  "p6l9-change",
+  "p6l9-key",
+  "p6l9-break",
+  "p6l9-teachmed",
+  "p6l9-ws1",
+  "p6l9-ws1ans",
+  "p6l9-teachany",
+  "p6l9-teachif",
+  "p6l9-ws2",
+  "p6l9-ws2ans",
+  "p6l9-stretch",
+  "p6l9-challenge",
+  "p6l9-chdiag",
+  "p6l9-chwalk",
+  "p6l9-talk",
+  "p6l9-exit"
+ ],
+ "cover": "p6l9-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore: class data in a list",
+   "start": "p6l9-title"
+  },
+  "s2": {
+   "description": "Teach: the mean, the mean program, missing values",
+   "start": "p6l9-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p6l9-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p6l9-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

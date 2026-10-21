@@ -7,13 +7,13 @@ const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
 // missing-sign puzzles: numbers with empty circles between them
 const signsSvg = () => {
   const rows = [['a', [7, 6, 4], 38], ['b', [48, 6, 2], 16], ['c', [9, 3, 5], 8], ['d', [12, 3, 2, 5], 14]];
-  let s = `<svg aria-label="Four number sentences with empty circles for the missing signs" viewBox="0 0 600 264" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let s = `<svg aria-label="Four number sentences with empty circles for the missing signs" viewBox="0 0 600 224" width="440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   rows.forEach(([l, nums, t], i) => {
-    const y = 36 + i * 64; let x = 80;
+    const y = 30 + i * 54; let x = 80;
     s += tx(30, y + 8, '(' + l + ')', 20, TEAL);
     nums.forEach((n, k) => {
       s += tx(x, y + 9, n, 28); x += 52;
-      if (k < nums.length - 1) { s += `<circle cx="${x}" cy="${y}" r="21" fill="${WH}" stroke="${N}" stroke-width="3"/>`; x += 52; }
+      if (k < nums.length - 1) { s += `<circle cx="${x}" cy="${y}" r="20" fill="${WH}" stroke="${N}" stroke-width="3"/>`; x += 52; }
     });
     s += tx(x, y + 9, '=', 28) + tx(x + 52, y + 9, t, 28);
   });
@@ -23,7 +23,7 @@ const signsSvg = () => {
 // machine chain: ? -> x6 -> -18 -> /4 -> 30
 const machineSvg = () => {
   const cells = [['?', Y], ['× 6', G], ['− 18', G], ['÷ 4', G], ['30', SKY]];
-  let s = `<svg aria-label="Number machine chain: a number goes in, times 6, take away 18, divide by 4, and 30 comes out" viewBox="0 0 600 100" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let s = `<svg aria-label="Number machine chain: a number goes in, times 6, take away 18, divide by 4, and 30 comes out" viewBox="0 0 600 100" width="420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   cells.forEach(([t, f], i) => {
     const x = 6 + i * 120;
     s += `<rect x="${x}" y="18" width="88" height="62" rx="12" fill="${f}" stroke="${N}" stroke-width="3"/>` + tx(x + 44, 58, t, 26);
@@ -35,7 +35,7 @@ const machineSvg = () => {
 // two number chains with blanks
 const chainSvg = () => {
   const rows = [['a', ['', '', '13', '21', '']], ['b', ['4', '', '', '18', '']]];
-  let s = `<svg aria-label="Two number chains with missing numbers" viewBox="0 0 600 150" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let s = `<svg aria-label="Two number chains with missing numbers" viewBox="0 0 600 150" width="360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   rows.forEach(([l, cells], i) => {
     const y = 14 + i * 70;
     s += tx(30, y + 38, '(' + l + ')', 20, TEAL);
@@ -144,7 +144,7 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.p('Brackets first. Then × and ÷, working from left to right. Then + and −, working from left to right.', { after: 80 }));
-    W.push(H.q(1, 'Work out. Underline the part you do first.', { before: 60, keepNext: true }));
+    W.push(H.q(1, 'Work out. Underline the part you do first.', { before: 40, keepNext: true }));
     W.push(H.sub('a', '36 + 14 × 5  =  ____________'));
     W.push(H.sub('b', '(36 + 14) × 5  =  ____________'));
     W.push(H.sub('c', '72 ÷ 8 × 3  =  ____________'));
@@ -160,29 +160,24 @@ module.exports = {
 
     W.push(H.q(4, 'A number goes into this machine chain. 30 comes out.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(machineSvg()));
-    W.push(H.sub('a', 'Work backwards. What number went in?'));
-    W.push(H.ans('Number in:'));
-    W.push(H.sub('b', 'Check: put your number through the machine going forwards.'));
-    W.push(...H.lines(1));
-    W.push(H.q(5, 'Number trick. Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. Try it with three different numbers.', { keepNext: true }));
+    W.push(H.sub('a', ['Work backwards. What number went in?  ________      <b style="color:#1F7A6F">b</b>  Check it going forwards.']));
+    W.push(H.q(5, 'Number trick. Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. Try it with two different numbers.', { keepNext: true }));
     { const ws = [1980, 1980, 1980, 1980, 1980];
       W.push(H.tbl(ws, [H.row(['My number', '× 5', '+ 35', '÷ 5', '− my number'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED' }))),
-        ...[0, 1, 2].map(() => H.row(ws.map(w => H.cell('', w, { h: 110 }))))])); }
+        ...[0, 1].map(() => H.row(ws.map(w => H.cell('', w, { h: 55 }))))])); }
     W.push(H.sub('a', 'What do you notice?  ______________________________'));
     W.push(H.sub('b', 'Explain why it works. A bar model can help.'));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 1 236 plates altogether.', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model.'));
-    W.push(H.gap(800));
+    W.push(H.gap(240));
     W.push(H.sub('b', 'How many plates of chicken rice did it sell?'));
     W.push(H.ans());
     W.push(H.sub('c', 'How many more plates of chicken rice than laksa did it sell?'));
     W.push(H.ans());
     W.push(H.q(7, 'Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
     W.push(H.fig(chainSvg()));
-    W.push(H.sub('a', 'Fill in chain (a). Work backwards from 13 and 21.'));
-    W.push(H.sub('b', 'Fill in chain (b). Guess the 2nd number, then check. Show your tries.'));
-    W.push(...H.lines(1));
+    W.push(H.sub('a', ['Chain (a): work backwards from 13 and 21.     <b style="color:#1F7A6F">b</b>  Chain (b): guess the 2nd number, then check.']));
     return W;
   }
 };

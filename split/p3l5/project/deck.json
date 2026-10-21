@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:00:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P3: Lesson 5 – Remainder Riddles",
+ "order": [
+  "p3l5-title",
+  "p3l5-warm1",
+  "p3l5-warm2",
+  "p3l5-explore1",
+  "p3l5-explore2",
+  "p3l5-teach1",
+  "p3l5-we1",
+  "p3l5-try1",
+  "p3l5-we2",
+  "p3l5-try2",
+  "p3l5-key",
+  "p3l5-break",
+  "p3l5-teachback",
+  "p3l5-ws1",
+  "p3l5-ws1ans",
+  "p3l5-teachlist",
+  "p3l5-teachbig",
+  "p3l5-teachtable",
+  "p3l5-ws2",
+  "p3l5-ws2ans",
+  "p3l5-stretch",
+  "p3l5-challenge",
+  "p3l5-chdiag",
+  "p3l5-chwalk",
+  "p3l5-talk",
+  "p3l5-exit"
+ ],
+ "cover": "p3l5-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p3l5-title"
+  },
+  "s2": {
+   "description": "Teach: remainders and what they mean",
+   "start": "p3l5-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p3l5-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p3l5-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

@@ -54,20 +54,20 @@ function blocks(nodes, label, fs = 15) {
 }
 // optional Python version in a small dashed box
 function pyBox(lines, title) {
-  const lh = 19, W = 380, Hh = 62 + lines.length * lh;
+  const lh = 17, W = 380, Hh = 58 + lines.length * lh;
   let s = `<svg aria-label="${escx(title.replace('|', ' '))}" viewBox="0 0 ${W} ${Hh}" xmlns="http://www.w3.org/2000/svg" style="width:${W}px;max-width:100%"><rect x="2" y="2" width="${W - 4}" height="${Hh - 4}" rx="10" fill="${WHITE}" stroke="${NAVY}" stroke-width="2" stroke-dasharray="7 5"/>`;
   title.split('|').forEach((tl, i) => { s += `<text x="16" y="${25 + i * 19}" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial, sans-serif">${escx(tl)}</text>`; });
-  lines.forEach((l, i) => { s += `<text x="16" y="${70 + i * lh}" font-size="14" fill="${NAVY}" font-family="Courier New, monospace" xml:space="preserve" style="white-space:pre">${escx(l)}</text>`; });
+  lines.forEach((l, i) => { s += `<text x="16" y="${66 + i * lh}" font-size="14" fill="${NAVY}" font-family="Courier New, monospace" xml:space="preserve" style="white-space:pre">${escx(l)}</text>`; });
   return s + '</svg>';
 }
 const cards = ds => {
-  let s = `<svg aria-label="Digit cards ${ds.join(', ')}" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
-  ds.forEach((d, i) => { const x = 300 - ds.length * 40 + i * 80 + 8; s += `<rect x="${x}" y="4" width="52" height="52" rx="9" fill="${i % 2 ? SKY : YEL}" stroke="${NAVY}" stroke-width="3"/><text x="${x + 26}" y="42" font-size="30" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Fredoka, Arial">${d}</text>`; });
+  let s = `<svg aria-label="Digit cards ${ds.join(', ')}" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" style="width:240px;max-width:100%">`;
+  ds.forEach((d, i) => { const x = 120 - ds.length * 30 + i * 60 + 4; s += `<rect x="${x}" y="4" width="52" height="52" rx="9" fill="${i % 2 ? SKY : YEL}" stroke="${NAVY}" stroke-width="3"/><text x="${x + 26}" y="42" font-size="30" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Fredoka, Arial">${d}</text>`; });
   return s + '</svg>';
 };
 // 3 by 3 grid of streets, A bottom left, B top right, puddle at P (1 along, 1 up). Small circles at the corners to write in.
 const grid = () => {
-  const c = 62, x0 = 34, y0 = 28; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 270 250" xmlns="http://www.w3.org/2000/svg" style="width:270px;max-width:100%">`;
+  const c = 48, x0 = 34, y0 = 26; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 230 204" xmlns="http://www.w3.org/2000/svg" style="width:230px;max-width:100%">`;
   for (let i = 0; i <= 3; i++) s += `<line x1="${x0}" y1="${y0 + i * c}" x2="${x0 + 3 * c}" y2="${y0 + i * c}" stroke="${NAVY}" stroke-width="4"/><line x1="${x0 + i * c}" y1="${y0}" x2="${x0 + i * c}" y2="${y0 + 3 * c}" stroke="${NAVY}" stroke-width="4"/>`;
   for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="15" fill="${isP ? SKY : WHITE}" stroke="${NAVY}" stroke-width="2.5"/>`; }
   s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 30}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 12}" y="${y0 - 8}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
@@ -94,7 +94,7 @@ module.exports = {
     extension: 'Write a program that counts every 3-digit number whose digits add up to 5 (three loops, one inside another). Then change 5 to other totals: which total gives the most numbers?',
     key: [
       ['Q1', '(a) 12 (4 × 3)  (b) 24 (4 × 3 × 2)  (c) 2 extra pairs: with 5 pairs, 4 × 5 × 2 = 40; with 4 pairs only 4 × 4 × 2 = 32.'],
-      ['Q2', '(a) 9 (3 choices for the tens, as 0 cannot go first, then 3 for the ones: 3 × 3)  (b) 30, 35, 38, 50, 53, 58, 80, 83, 85  (c) 18 (3 × 3 × 2)'],
+      ['Q2', '(a) 9 (3 choices for the tens, as 0 cannot go first, then 3 for the ones: 3 × 3): 30, 35, 38, 50, 53, 58, 80, 83, 85  (b) 18 (3 × 3 × 2)'],
       ['Q3', '(a) a 1, b 1: 11;  1, 2: 12;  1, 3: 13;  1, 4: 14;  2, 1: 21;  2, 2: 22  (b) 12 (3 × 4)  (c) 34  (d) 20 (5 × 4)'],
       ['Q4', '(a) 21 (6 + 5 + 4 + 3 + 2 + 1)  (b) Every handshake has been counted twice, once for each person: 42 ÷ 2 = 21.  (c) 10 people (9 + 8 + … + 1 = 45, or 10 × 9 ÷ 2 = 45)'],
       ['Q5', '(a) 20 (corner numbers, bottom row up: 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20)  (b) 8 (put 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8). 12 routes go through P.'],
@@ -169,38 +169,34 @@ module.exports = {
     const L = t => '<b style="color:#1F7A6F">' + t + '</b> ';
     const blank = w => '<span style="display:inline-block;width:' + w + 'px;border-bottom:2px dotted #8A94AD"></span>';
     const traceW = [1100, 1100, 2100];
-    const trace = H.tbl(traceW, [H.row(['a', 'b', 'Sprite says'].map((s, i) => H.cell(s, traceW[i], { bold: true, fill: 'D9D9D9', h: 50 }))), ...[1, 2, 3, 4, 5, 6].map(() => H.row(traceW.map(w => H.cell('', w, { h: 190 }))))]);
+    const trace = H.tbl(traceW, [H.row(['a', 'b', 'Sprite says'].map((s, i) => H.cell(s, traceW[i], { bold: true, fill: 'D9D9D9', h: 50 }))), ...[1, 2, 3, 4, 5, 6].map(() => H.row(traceW.map(w => H.cell('', w, { h: 165 }))))]);
     const codeAndTrace = H.tbl([5300, 4600], [H.row([
       H.cell('<div style="text-align:left">' + blocks(listCode, 'Code: set a to 1, repeat 3 times: set b to 1, repeat 4 times: say join a b, change b by 1; then change a by 1', 14) + '</div>', 5300, { h: 40 }),
       H.cell('<div>' + trace + tx(L('(b)') + 'How many things does it say altogether? ' + blank(50) + '<br>' + L('(c)') + 'The last thing it says? ' + blank(50) + '<br>' + L('(d)') + 'If “repeat 3” becomes “repeat 5”, how many things will it say? ' + blank(50)) + '</div>', 4600, { h: 30 })])]);
     const py = pyBox(['teas = ["milk", "green", "taro"]', 'toppings = ["pearls", "jelly"]', 'count = 0', 'for tea in teas:', '    for top in toppings:', '        print(tea, "tea with", top)', '        count = count + 1', 'print(count, "orders")'], 'Python corner (optional): our Explore|program. Change the lists to test Q1.');
     const planAndPy = H.tbl([4200, 5700], [H.row([
       H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set count to 0, set a to 1, repeat a gap: set b to 1, repeat a gap: if a gap then change count by 1; change b by 1; change a by 1; say count', 13) + '</div>', 4200, { h: 30 }),
-      H.cell('<div>' + tx(L('(a)') + 'What will the program say? ' + blank(50) + '<br>Does it agree with Q4(a)? ' + blank(50) + '<br>' + L('(b)') + 'If the test is changed to <b>a = b</b>, what will it say? What is it counting now?<br>' + blank(330) + '<br><br>') + py + '</div>', 5700, { h: 30 })])]);
-    const routes = H.tbl([3600, 6300], [H.row([H.cell('<div>' + grid() + '</div>', 3600, { h: 20 }), H.cell(tx('Write in every circle the number of routes from A to that point. A gets 1. Each other circle = the number on its left + the number below it.<br><br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br><br>' + L('(b)') + 'A puddle covers the blue point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6300, { h: 40 })])]);
+      H.cell('<div>' + tx(L('(a)') + 'What will the program say? ' + blank(50) + '<br>Does it agree with Q4(a)? ' + blank(50) + '<br>' + L('(b)') + 'If the test is changed to <b>a = b</b>, what will it say? What is it counting now?<br>' + blank(330) + '<br>') + py + '</div>', 5700, { h: 30 })])]);
+    const routes = H.tbl([3600, 6300], [H.row([H.cell('<div>' + grid() + '</div>', 3600, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the blue point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6300, { h: 40 })])]);
     return [
-      H.q(1, 'Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps for camp. When choices come one after another, multiply.', { before: 20, keepNext: true }),
-      H.sub('a', 'An outfit is 1 T-shirt and 1 pair of shorts. How many different outfits?   ______'),
-      H.sub('b', 'Now every outfit has a cap as well. How many different outfits now?   ______'),
-      H.sub('c', 'Mei wants at least 40 different outfits (T-shirt, shorts and cap), so she buys more pairs of shorts. What is the fewest number of extra pairs she must buy? Show how you know.', { keepNext: true }),
+      H.q(1, 'Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps for camp.', { before: 20, keepNext: true }),
+      H.sub('a', 'Outfits of 1 T-shirt and 1 pair of shorts: how many?  _____    (b)  With a cap too?  _____'),
+      H.sub('c', 'Mei wants at least 40 outfits with a cap. What is the fewest number of extra pairs of shorts she must buy? Show how you know.', { keepNext: true }),
       ...H.lines(1),
       H.q(2, 'Digit cards. Use each card at most once in a number. A number cannot start with 0.', { keepNext: true }),
-      H.fig(cards([0, 3, 5, 8])),
-      H.sub('a', 'How many 2-digit numbers can you make?   ______     List them from smallest to largest:', { keepNext: true }),
-      ...H.lines(1),
-      H.sub('b', 'How many 3-digit numbers can you make? Write the multiplication.   ______________'),
+      H.tbl([3300, 6600], [H.row([H.cell('<div>' + cards([0, 3, 5, 8]) + '</div>', 3300, { h: 20 }), H.cell(tx(L('(a)') + 'How many 2-digit numbers can you make? ' + blank(50) + '<br>List them from smallest to largest:<br>' + blank(420) + '<br>' + L('(b)') + 'How many 3-digit numbers? Write the multiplication. ' + blank(110)), 6600, { h: 30 })])]),
       H.q(3, 'Trace the code. (a) Fill in a, b and what the sprite says, for the first 6 things it says.', { keepNext: true }),
       codeAndTrace,
 
       H.q(4, 'Seven friends meet. Every pair of friends shakes hands once.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'How many handshakes are there? Show your list or your method.', { keepNext: true }),
       ...H.lines(1),
-      H.sub('b', 'Ali says, “Each person shakes 6 hands, so there are 7 × 6 = 42 handshakes.” What is wrong? Fix his working.', { keepNext: true }),
+      H.sub('b', 'Ali says, “Each person shakes 6 hands, so 7 × 6 = 42 handshakes.” What is wrong? Fix it.', { keepNext: true }),
       ...H.lines(1),
-      H.sub('c', 'At another party there are 45 handshakes. How many people are at the party?   ______'),
+      H.sub('c', 'Another party has 45 handshakes. How many people are there?   ______'),
       H.q(5, 'Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
       routes,
-      H.q(6, 'Plan your code. Fill in the gaps so the program counts the handshakes for the 7 friends in Q4: how many times each loop runs, and the test after “if” that keeps each handshake once.', { keepNext: true }),
+      H.q(6, 'Plan your code. Fill in the 3 gaps so the program counts the handshakes for the 7 friends in Q4. The test after “if” must keep each handshake once.', { keepNext: true }),
       planAndPy
     ];
   }
