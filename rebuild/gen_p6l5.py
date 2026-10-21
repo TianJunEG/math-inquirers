@@ -71,7 +71,7 @@ def numcards(sid, time, title, items, notes, size=38):
 notes = (f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} "
          "Time plan: warm-up 0 to 10, explore 10 to 25 (paper first, then at the computer), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
          "worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. "
-         "Before the lesson: put the starter project “Every Order” in the chat (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1).")
+         "Before the lesson: share the starter project “Every Order” as an .sb3 file (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so "join tea topping" saying 21 means green with pearls.")
 body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {N}  •  WEEK 3</p>'
         f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(L["title"])}</h1>'
         f'<p style="font-size:44px;color:#C9D4EC">Counting  •  nested loops</p>'
@@ -106,20 +106,20 @@ def menu_svg():
     for i, (nm, col) in enumerate([('milk', '#F3D9B1'), ('green', '#BFE3DC'), ('taro', '#C9B6E4')]):
         x = 60 + i * 150
         s += f'<path d="M{x} 90 L{x + 100} 90 L{x + 88} 210 L{x + 12} 210 Z" fill="{col}" stroke="{NAVY}" stroke-width="4"/><line x1="{x + 62}" y1="70" x2="{x + 56}" y2="150" stroke="{RED}" stroke-width="7" stroke-linecap="round"/>'
-        s += f'<text x="{x + 50}" y="250" font-size="28" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{nm}</text>'
+        s += f'<text x="{x + 50}" y="250" font-size="28" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{i + 1} {nm}</text>'
     s += f'<text x="530" y="120" font-size="28" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">toppings</text>'
-    s += f'<circle cx="545" cy="160" r="16" fill="{NAVY}"/><text x="575" y="170" font-size="28" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">pearls</text>'
-    s += f'<rect x="530" y="190" width="30" height="30" rx="6" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/><text x="575" y="216" font-size="28" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">jelly</text>'
+    s += f'<circle cx="545" cy="160" r="16" fill="{NAVY}"/><text x="575" y="170" font-size="28" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">1 pearls</text>'
+    s += f'<rect x="530" y="190" width="30" height="30" rx="6" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/><text x="575" y="216" font-size="28" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">2 jelly</text>'
     s += f'<text x="530" y="270" font-size="28" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">later: M or L</text></svg>'
     return s
-start_code = blocks_svg([('hat', 'when start clicked'), ('var', 'set tea to [1]'), ('ctrl', 'repeat [3]', [('look', 'say tea for 1 seconds'), ('var', 'change tea by [1]')])], 'Starter code: set tea to 1, repeat 3: say tea, change tea by 1', 26)
+start_code = blocks_svg([('hat', 'when green flag clicked'), ('var', 'set tea to [1]'), ('ctrl', 'repeat [3]', [('look', 'say tea for 1 seconds'), ('var', 'change tea by [1]')])], 'Starter code: set tea to 1, repeat 3: say tea, change tea by 1', 26)
 steps = ''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
 body = h2('Explore: the bubble tea shop') + (f'<div style="display:flex;gap:32px;align-items:flex-start">'
         f'<div style="background:{WHITE};border-radius:24px;padding:26px 34px;display:flex;flex-direction:column;gap:12px;flex:1;min-width:0">{chip("EXPLORE")}<ol style="font-size:32px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3;margin:0">{steps}</ol></div>'
         f'<div style="display:flex;flex-direction:column;gap:18px;flex:none">{menu_svg().replace("height:560px", "height:310px").replace("viewBox=\"0 0 760 560\"", "viewBox=\"0 0 760 310\"")}<div style="background:{WHITE};border-radius:20px;padding:14px 20px">{start_code}</div></div></div>')
 put(f'{PRE}-explore1', sec(f'{PRE}-explore1', '10–15 MIN', body,
     'Minutes 10 to 25 (this slide 10 to 15). ' + L['explore'] + ' Predict first: ' + SC['predict'][0] + ' Paper list first (about 5 minutes), then the computer. '
-    'The starter project says tea 1, 2, 3. Children drag a second "repeat 2" block inside the first one (with set topping to 1 before it and change topping by 1 inside it) and use "say join tea topping". Hints: ' + ' '.join(SC['exploreHints']) +
+    'The starter project says tea 1, 2, 3 (the menu board shows the numbers: 1 milk, 2 green, 3 taro; 1 pearls, 2 jelly; so "join tea topping" saying 21 means green with pearls). Children drag a second "repeat 2" block inside the first one (with set topping to 1 before it and change topping by 1 inside it) and use "say join tea topping". Hints: ' + ' '.join(SC['exploreHints']) +
     ' Online: ' + L['online'] + '\nPython version (for children who know Python):\n' + 'teas = ["milk", "green", "taro"]\ntoppings = ["pearls", "jelly"]\ncount = 0\nfor tea in teas:\n    for top in toppings:\n        print(tea, "tea with", top)\n        count = count + 1\nprint(count, "orders")'))
 
 # ---------- 5 explore 2 ----------
@@ -161,7 +161,7 @@ put(f'{PRE}-try1', try_slide(f'{PRE}-try1', '29–30 MIN', 'Your turn: whiteboar
     'Whiteboards up together, then click. a) 5 × 4 = 20. b) 3 × 3 = 9: AA, AB, AC, BA, BB, BC, CA, CB, CC. c) 4 × 3 = 12: gold can go to any of 4, then silver to one of the other 3. Ask: "Why is c not 4 × 4?" (one runner cannot win both).', size=36))
 
 # ---------- 9 teach code: nested loops ----------
-outfit_code = [('hat', 'when start clicked'), ('var', 'set shirt to [1]'), ('ctrl', 'repeat [3]', [('var', 'set shorts to [1]'), ('ctrl', 'repeat [2]', [('look', 'say [join shirt shorts] for 1 seconds'), ('var', 'change shorts by [1]')]), ('var', 'change shirt by [1]')])]
+outfit_code = [('hat', 'when green flag clicked'), ('var', 'set shirt to [1]'), ('ctrl', 'repeat [3]', [('var', 'set shorts to [1]'), ('ctrl', 'repeat [2]', [('look', 'say [join shirt shorts] for 1 seconds'), ('var', 'change shorts by [1]')]), ('var', 'change shirt by [1]')])]
 body = h2('Let the computer list them: nested loops')
 body += pin(128, 240, 960, blocks_svg(outfit_code, 'Code: set shirt to 1, repeat 3: set shorts to 1, repeat 2: say join shirt shorts, change shorts by 1; change shirt by 1', 26), None, WHITE, 20, '18px 22px')
 body += box(1150, 240, 642, 'The OUTER loop picks the shirt. The INNER loop picks the shorts.', None, SOFT, 32)
@@ -169,7 +169,7 @@ body += box(1150, 420, 642, 'The inner loop runs all the way round for EACH shir
 body += box(1150, 570, 642, 'It says:  11, 12, 21, 22, 31, 32', 'rise', WHITE, 32)
 body += pin(1150, 700, 642, p('3 × 2 = 6 things said ✓', 38, 800), 'pop', YEL, 20, '18px 26px')
 put(f'{PRE}-teachcode', sec(f'{PRE}-teachcode', '30–32 MIN', body,
-    'Teach the code. Share your screen and build it live in Scratch if you can. Think-aloud: ' + SC['think'][1] + ' Point at "set shorts to 1": "Why must this go INSIDE the outer loop?" (so the shorts start again from 1 for every shirt; if it were outside, shirt 2 would start at shorts 3 and say nothing new). '
+    'Teach the code. Share your screen and build it live in Scratch if you can. Think-aloud: ' + SC['think'][1] + ' Point at "set shorts to 1": "Why must this go INSIDE the outer loop?" (so the shorts start again from 1 for every shirt; if it were outside, shirt 2 would start at shorts 3 and say 23 and 24, which are not real outfits). '
     '"join shirt shorts" sticks the two numbers together: shirt 2 and shorts 1 says 21. Ask: "What would it say with repeat 4 inside?" (3 × 4 = 12 things). '
     '\nPython version:\ncount = 0\nfor shirt in range(1, 4):\n    for shorts in range(1, 3):\n        print(shirt, shorts)\n        count = count + 1\nprint(count, "outfits")'))
 
@@ -228,7 +228,7 @@ body += pin(780, 800, 1012, p('Count the lines in the picture: 10 ✓', 36, 800)
 put(f'{PRE}-teachhand', sec(f'{PRE}-teachhand', '57–59 MIN', body, 'Teach before worksheet page 2 (Q4). Think-aloud: ' + SC['think'][2] + ' Ask: "With 6 friends?" (5 + 4 + 3 + 2 + 1 = 15, or 6 × 5 ÷ 2). Do not do 7 friends: that is the worksheet.'))
 
 # ---------- 17 handshake code ----------
-hand_code = [('hat', 'when start clicked'), ('var', 'set count to [0]'), ('var', 'set a to [1]'), ('ctrl', 'repeat [5]', [('var', 'set b to [1]'), ('ctrl', 'repeat [5]', [('ctrl', 'if [a < b] then', [('var', 'change count by [1]')]), ('var', 'change b by [1]')]), ('var', 'change a by [1]')]), ('look', 'say count')]
+hand_code = [('hat', 'when green flag clicked'), ('var', 'set count to [0]'), ('var', 'set a to [1]'), ('ctrl', 'repeat [5]', [('var', 'set b to [1]'), ('ctrl', 'repeat [5]', [('ctrl', 'if [a < b] then', [('var', 'change count by [1]')]), ('var', 'change b by [1]')]), ('var', 'change a by [1]')]), ('look', 'say count')]
 body = h2('Test it in code: keep only a < b', 64)
 body += pin(128, 225, 720, blocks_svg(hand_code, 'Code: set count to 0, set a to 1, repeat 5: set b to 1, repeat 5: if a < b then change count by 1; change b by 1; change a by 1; say count', 24), None, WHITE, 20, '14px 18px')
 body += box(900, 240, 892, 'The loops check every pair (a, b): 5 × 5 = 25 pairs.', None, SOFT, 32)

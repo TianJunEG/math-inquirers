@@ -1,3 +1,6 @@
+# NOTE (P1 audit fixes): hp/qbank.json has been edited directly since this generator was last run, and the P1 audit fixes
+# (reordered Think Harder lists, new items, reworded items) were applied to qbank.json. Do NOT re-run this script to
+# regenerate qbank.json unless the same edits are merged here first. Only the L7 core template below was updated.
 import json, itertools
 
 def cyc(core, pos):
@@ -190,7 +193,9 @@ chal = [
 B[6] = (core, stretch, chal)
 
 # ---------- Lesson 7: shapes ----------
-core = [('How many sides and corners does a %s have?' % n, '%d sides and %d corners' % (k, k)) for n, k in [('triangle', 3), ('square', 4), ('pentagon', 5), ('hexagon', 6), ('octagon', 8)]]
+core = [('How many sides and corners does a %s have?' % n, '%d sides and %d corners' % (k, k)) for n, k in [('triangle', 3), ('square', 4)]]
+# audit fix 7a/22: give the name and the number of sides in the question ("a" / "an" chosen from the first letter)
+core += [('Here is %s %s (a shape with %d straight sides). How many corners does it have?' % ('an' if n[0] in 'aeiou' else 'a', n, k), '%d corners' % k) for n, k in [('pentagon', 5), ('hexagon', 6), ('octagon', 8)]]
 core.append(('I have no corners and no straight sides. What shape am I?', 'A circle'))
 stretch = [
  ('I have 4 sides. All my sides are the same length. What shape am I?', 'A square'),

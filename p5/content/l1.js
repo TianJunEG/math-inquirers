@@ -122,7 +122,7 @@ module.exports = {
       { q: 'A heart beats about 70 times a minute. About how many days does it take to beat 1 000 000 times?', a: 'About 10 days. 70 × 60 × 24 = 100 800 beats a day, and 1 000 000 ÷ 100 800 is just under 10.' },
       { q: 'Put brackets into 1 + 2 × 3 + 4 × 5 + 6 to make the answer as big as possible. You may use more than one pair. What is the biggest answer?', a: '231: (1 + 2) × (3 + 4) × (5 + 6) = 3 × 7 × 11. With no brackets it is only 33.' },
       { q: 'I am a 7-digit odd number. My digits are all different and add up to 42. Rounded to the nearest hundred thousand, I am 7 000 000. I am the smallest number that fits. Who am I?', a: '6 953 487. Seven different digits adding to 42 must be 3, 4, 5, 6, 7, 8, 9 (the biggest seven digits add to exactly 42), so there is no 0. The number is between 6 950 000 and 7 049 999, so it starts 6 9 with 5, 7 or 8 next; the smallest is 6 95 then 3, 4, 8, 7 (it must end in an odd digit).' },
-      { q: 'Ali writes all the whole numbers from 1 to 1 000 000. How many digits does he write?', a: '5 888 896.  9 × 1 + 90 × 2 + 900 × 3 + 9000 × 4 + 90 000 × 5 + 900 000 × 6 + 7 = 9 + 180 + 2700 + 36 000 + 450 000 + 5 400 000 + 7.' }
+      { q: 'Ali writes all the whole numbers from 1 to 1000. How many digits does he write? (Go further: how many if he writes all the numbers from 1 to 1 000 000?)', a: '2893.  9 × 1 + 90 × 2 + 900 × 3 + 4 = 9 + 180 + 2700 + 4.  Go further: 5 888 896  (9 × 1 + 90 × 2 + 900 × 3 + 9000 × 4 + 90 000 × 5 + 900 000 × 6 + 7 = 9 + 180 + 2700 + 36 000 + 450 000 + 5 400 000 + 7).' }
     ]
   },
 
@@ -135,7 +135,7 @@ module.exports = {
     W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ________.  The ten thousands digit is ____.'));
     W.push(H.sub('c', 'How many thousands make 3 250 000?   __________'));
     // Q2 digit cards
-    W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number.', { keepNext: true }));
+    W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number. A 7-digit number cannot start with 0.', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
     W.push(H.sub('a', 'Greatest:  ____________      (b)  Smallest EVEN:  ____________'));
     W.push(H.sub('c', 'Closest to 6 000 000:  ______________   Test both sides of the target!', { keepNext: true }));
@@ -152,7 +152,7 @@ module.exports = {
       W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
-        H.row(ws.map(w => H.cell('', w, { h: 200 })))])); }
+        H.row(ws.map(w => H.cell('', w, { h: 110 })))])); }
     W.push(H.sub(' ', 'I am  ______________________'));
 
     // ---- page 2 ----

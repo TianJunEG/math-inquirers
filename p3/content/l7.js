@@ -113,7 +113,7 @@ module.exports = {
     keySmall: 'Same perimeter does not mean same area. List the rectangles in order to find them all.',
     brk: 'Perimeter march: march on the spot and trace a big square in the air, counting its 4 sides. Then stretch tall and thin like a 9 by 1 garden, then wide like a 5 by 5 garden.',
     ws1: 'Page 1, in pairs: Q1 area and perimeter on a grid, Q2 every rectangle with an 18 m fence, Q3 a square and a rectangle with the same perimeter.',
-    ws2: 'Page 2, on your own: Q4 an L-shape with missing sides, Q5 a staircase, Q6 add one square.'
+    ws2: 'Page 2, on your own: Q4 an L-shape with missing sides, Q5 a staircase, then Q6 add one square if you have time.'
   },
 
   qbank: {
@@ -138,7 +138,7 @@ module.exports = {
     challenge: [
       { q: 'Find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area?', a: '11 by 1, 10 by 2, 9 by 3, 8 by 4, 7 by 5, 6 by 6: 6 rectangles. The 6 cm by 6 cm square has the biggest area, 36 cm².' },
       { q: 'A rectangle is made of 2 same-size squares side by side. Its perimeter is 36 cm. What is its area?', a: 'The perimeter is 6 sides of a small square, so each side is 6 cm. Area 2 × 36 = 72 cm².' },
-      { q: 'A rectangle 6 cm by 4 cm is cut into two rectangles with one straight cut. Find the total perimeter of the two pieces. Is there more than one answer?', a: 'Yes, two answers. Cut across the 6 cm sides: 20 + 4 + 4 = 28 cm. Cut along the 6 cm sides: 20 + 6 + 6 = 32 cm. The new cut adds 2 new sides.' },
+      { q: 'A rectangle 6 cm by 4 cm is cut into two rectangles with one straight cut that is parallel to one side. Find the total perimeter of the two pieces. Is there more than one answer?', a: 'Yes, two answers. A cut parallel to the 4 cm sides is 4 cm long: 20 + 4 + 4 = 28 cm. A cut parallel to the 6 cm sides is 6 cm long: 20 + 6 + 6 = 32 cm.' },
       { q: 'A square has a perimeter of 20 cm. Four of these squares are put together to make one big square. What is the perimeter of the big square?', a: 'Small side 5 cm, big side 10 cm, perimeter 40 cm.' },
       { q: 'Each small square is 1 cm by 1 cm. Draw a figure of 7 squares with a perimeter of 12 cm, and another with a perimeter of 16 cm.', a: 'For example: a 2 by 4 rectangle with one corner square missing (12 cm); a row of 7 squares (16 cm).' },
       { q: 'The area of a rectangle is 36 cm². Its length is 4 times its breadth. Find its perimeter.', a: 'Try breadths: 1 and 4 (area 4), 2 and 8 (16), 3 and 12 (36). So 12 cm by 3 cm, perimeter 30 cm.' },
@@ -167,6 +167,7 @@ module.exports = {
         H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
         ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('\u00a0', w, { h: 20 }))))
       ]),
+      H.p('You may not need all the rows.', { after: 20 }),
       H.gap(20),
       H.sub('a', 'Which garden has the biggest area?   ______________'),
       H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?   ____________ cm²', { after: 60 }),
@@ -177,7 +178,7 @@ module.exports = {
       side(q4Fig(), H.sub('a', 'What is its area?   ________ cm²') + H.sub('b', 'What is its perimeter?   ________ cm')),
       H.sub('c', 'Ben fills in the gaps with squares to make a 4 by 4 square. What happens to the perimeter? What happens to the area?'),
       ...H.lines(1),
-      H.q(6, 'This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. Shade it.', { keepNext: true }),
+      H.q(6, '(if time) This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. Shade it.', { keepNext: true }),
       H.fig(q5Fig()),
       H.sub('a', 'In grid (a), add a square so that the perimeter becomes 12 cm.'),
       H.sub('b', 'In grid (b), add a square so that the perimeter stays 10 cm.'),

@@ -82,7 +82,7 @@
     "a": "19 blocks for 6 steps. 31 blocks make 10 steps (add 3 each time)."
    },
    {
-    "q": "A pattern adds the same number each time. Its 5th number is 20 and it starts at a whole number more than 0. How many different patterns can you make? List the first number and the rule for each.",
+    "q": "A pattern adds a number bigger than 0 each time, its 5th number is 20, and it starts at a whole number bigger than 0. How many different patterns can you make? List the first number and the rule for each.",
     "a": "4 patterns: start 16 add 1; start 12 add 2; start 8 add 3; start 4 add 4."
    },
    {
@@ -282,12 +282,12 @@
     "a": "Orange 15, banana 13, apple 12. Orange wins by 2."
    },
    {
-    "q": "24 children voted. Apple got 6 votes. Orange got twice as many as banana. How many votes did banana and orange get?",
-    "a": "Banana 6 and orange 12."
+    "q": "24 children voted. Apple got 6 votes. Orange got 6 more votes than banana. How many votes did banana and orange get?",
+    "a": "Banana 6 and orange 12. (24 − 6 = 18 for banana and orange; take away the extra 6: 12, share: 6 each; give orange the 6 back.)"
    },
    {
-    "q": "1 picture = 4 children. 40 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?",
-    "a": "8 children (10 pictures in all; A 3 + B 5 = 8, so C has 2 pictures)."
+    "q": "1 picture = 2 children. 20 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?",
+    "a": "4 children (20 ÷ 2 = 10 pictures in all, counting in 2s to 20; A 3 + B 5 = 8, so C has 2 pictures = 4 children)."
    }
   ]
  },
@@ -408,6 +408,22 @@
   ],
   "stretch": [
    {
+    "q": "Ben had some marbles. He gave 5 to Mei, then won 3. Now he has 12. How many did he start with?",
+    "a": "14 (12 − 3 + 5)"
+   },
+   {
+    "q": "Ben had some stickers. He gave away 6, got 4, then gave away 3. Now he has 10. How many did he have at first?",
+    "a": "15 (work backwards: 10 + 3 = 13, 13 − 4 = 9, 9 + 6 = 15; check 15 − 6 + 4 − 3 = 10)"
+   },
+   {
+    "q": "A number machine adds the same number each time. IN 4 gives OUT 9. What is the rule? What is OUT when IN is 12? What is IN when OUT is 20?",
+    "a": "Add 5. OUT is 17 when IN is 12. IN is 15 when OUT is 20."
+   },
+   {
+    "q": "I think of a number. I add 4, then I take away 7. I get 8. What is my number?",
+    "a": "11"
+   },
+   {
     "q": "I think of a number. I add 5, then I take away 3. I get 9. What is my number?",
     "a": "7"
    },
@@ -416,20 +432,8 @@
     "a": "6"
    },
    {
-    "q": "I think of a number. I add 4, then I take away 7. I get 8. What is my number?",
-    "a": "11"
-   },
-   {
     "q": "I think of a number. I add 9, then I take away 4. I get 12. What is my number?",
     "a": "7"
-   },
-   {
-    "q": "A number machine adds the same number each time. IN 4 gives OUT 9. What is the rule? What is OUT when IN is 12? What is IN when OUT is 20?",
-    "a": "Add 5. OUT is 17 when IN is 12. IN is 15 when OUT is 20."
-   },
-   {
-    "q": "Ben had some marbles. He gave 5 to Mei, then won 3. Now he has 12. How many did he start with?",
-    "a": "14 (12 − 3 + 5)"
    }
   ],
   "challenge": [
@@ -462,8 +466,8 @@
     "a": "13 (the steps are +1 in total, so 14 − 1)."
    },
    {
-    "q": "Ali is 5 years older than Ben. In 3 years’ time their ages will add up to 25. How old is each now?",
-    "a": "Ben 7 and Ali 12."
+    "q": "Ali and Ben have 20 marbles together. Ali has 4 more than Ben. How many marbles does each have?",
+    "a": "Ben 8 and Ali 12. (Take away the extra 4: 16 left, share: 8 and 8, give Ali the 4 back: 12.)"
    },
    {
     "q": "A snail climbs 3 cm each day and slides back 1 cm each night. It starts at the bottom of a 9 cm wall. On which day does it reach the top?",
@@ -508,6 +512,22 @@
   ],
   "stretch": [
    {
+    "q": "A bag costs $34. Ali pays with a $50 note. How much change does he get?",
+    "a": "$16. Count on from $34: $36, $40, $50. That is $2 + $4 + $10 = $16."
+   },
+   {
+    "q": "Make 70¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. Find every set.",
+    "a": "2 sets: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢."
+   },
+   {
+    "q": "Sam has only 10¢ and 20¢ coins. He pays exactly 90¢ using 6 coins. How many of each coin does he use?",
+    "a": "Three 10¢ and three 20¢ (30 + 60 = 90)."
+   },
+   {
+    "q": "What is the fewest number of coins to make 45¢?",
+    "a": "3 coins (20¢ + 20¢ + 5¢)"
+   },
+   {
     "q": "How many ways can you make 25¢ using 20¢, 10¢ and 5¢ coins?",
     "a": "4 ways. (20+5; 10+10+5; 10+5+5+5; 5+5+5+5+5)"
    },
@@ -520,16 +540,8 @@
     "a": "3 ways. (10+10; 10+5+5; 5+5+5+5)"
    },
    {
-    "q": "A bag costs $34. Ali pays with a $50 note. How much change does he get?",
-    "a": "$16. Count on from $34: $36, $40, $50. That is $2 + $4 + $10 = $16."
-   },
-   {
     "q": "What is the fewest number of coins to make 65¢ from 5¢, 10¢, 20¢ and 50¢?",
     "a": "3 coins (50¢ + 10¢ + 5¢)"
-   },
-   {
-    "q": "What is the fewest number of coins to make 45¢?",
-    "a": "3 coins (20¢ + 20¢ + 5¢)"
    },
    {
     "q": "Ali buys a ruler for 35¢. He pays with a 50¢ coin. Which coins could he get back as change?",
@@ -550,8 +562,8 @@
     "a": "7 totals: 5, 10, 15, 20, 25, 30, 35."
    },
    {
-    "q": "Which amounts from 5¢ to 50¢ cannot be made using only 20¢ and 10¢ coins?",
-    "a": "Every amount that does not end in 0: 5, 15, 25, 35 and 45 cannot be made."
+    "q": "Which amounts in 5¢ steps (5¢, 10¢, 15¢ … 50¢) cannot be made using only 20¢ and 10¢ coins?",
+    "a": "5¢, 15¢, 25¢, 35¢ and 45¢. (Every amount that does not end in 0.)"
    },
    {
     "q": "Why can 35¢ never be made with only two coins from 5¢, 10¢, 20¢ and 50¢?",
@@ -582,16 +594,16 @@
     "a": "4 sides and 4 corners"
    },
    {
-    "q": "How many sides and corners does a pentagon have?",
-    "a": "5 sides and 5 corners"
+    "q": "Here is a pentagon (a shape with 5 straight sides). How many corners does it have?",
+    "a": "5 corners"
    },
    {
-    "q": "How many sides and corners does a hexagon have?",
-    "a": "6 sides and 6 corners"
+    "q": "Here is a hexagon (a shape with 6 straight sides). How many corners does it have?",
+    "a": "6 corners"
    },
    {
-    "q": "How many sides and corners does a octagon have?",
-    "a": "8 sides and 8 corners"
+    "q": "Here is an octagon (a shape with 8 straight sides). How many corners does it have?",
+    "a": "8 corners"
    },
    {
     "q": "I have no corners and no straight sides. What shape am I?",
@@ -600,7 +612,23 @@
   ],
   "stretch": [
    {
-    "q": "I have 4 sides. All my sides are the same length. What shape am I?",
+    "q": "Fold a square along a diagonal and cut. Which shapes do you get?",
+    "a": "2 triangles of the same size"
+   },
+   {
+    "q": "Two same-size triangles can make a square. Can they also make a bigger triangle? Draw how.",
+    "a": "Yes. Join them along a short side (the two equal short sides touching) to make one bigger triangle. Joining along the long side makes a square instead."
+   },
+   {
+    "q": "How many squares are in a grid 3 squares long and 2 squares high?",
+    "a": "8 (6 small squares + 2 squares made of 4 small ones)"
+   },
+   {
+    "q": "Join 4 same-size squares, whole sides touching. How many different shapes can you make? (Turns and flips are the same shape.)",
+    "a": "5 shapes: a line of 4, a 2 by 2 square, an L, a T and a zigzag."
+   },
+   {
+    "q": "I have 4 sides, all the same length, and 4 square corners. What shape am I?",
     "a": "A square"
    },
    {
@@ -616,16 +644,8 @@
     "a": "7 sides"
    },
    {
-    "q": "Fold a square along a diagonal and cut. Which shapes do you get?",
-    "a": "2 triangles of the same size"
-   },
-   {
-    "q": "Two same-size triangles can make a square. Can they also make a bigger triangle? Draw how.",
-    "a": "Yes. Join them along a short side (the two equal short sides touching) to make one bigger triangle. Joining along the long side makes a square instead."
-   },
-   {
-    "q": "Which shape has the same number of sides as a rectangle but is not a rectangle? Say why.",
-    "a": "A parallelogram or a rhombus has 4 sides but its corners are not square."
+    "q": "Draw a shape with 4 straight sides that is NOT a square. Is it a rectangle?",
+    "a": "Open. A long rectangle has 4 square corners, so it is a rectangle. A slanted shape with 4 sides does not have square corners, so it is not a rectangle."
    }
   ],
   "challenge": [
@@ -766,15 +786,35 @@
     "a": "Ali’s, by 3 cubes."
    },
    {
-    "q": "Which is longer: 8 cubes or 8 paper clips? Why can we not tell?",
-    "a": "We cannot tell. The units are different sizes."
+    "q": "A rope is 8 cubes long. A string is 8 paper clips long. Do we know which is longer? Why not?",
+    "a": "No. A cube and a paper clip are different lengths, so 8 of each are not the same."
    },
    {
     "q": "Put in order from shortest: 11 cubes, 7 cubes, 9 cubes, 12 cubes.",
     "a": "7, 9, 11, 12"
+   },
+   {
+    "q": "A ribbon lies from the 2 cm mark to the 7 cm mark on a ruler. How long is it?",
+    "a": "5 cm (count the spaces: 7 − 2)"
    }
   ],
   "stretch": [
+   {
+    "q": "A caterpillar is 9 cubes long. It grows 2 cubes each day. How long is it after 3 days?",
+    "a": "15 cubes"
+   },
+   {
+    "q": "A string is 15 cubes long. A rope is 8 cubes longer. How long is the rope?",
+    "a": "23 cubes"
+   },
+   {
+    "q": "A ribbon lies from the 3 cm mark to the 11 cm mark. How long is it?",
+    "a": "8 cm (count the spaces from 3 to 11, or 11 − 3)"
+   },
+   {
+    "q": "A pencil is 3 erasers long. A ruler is 2 pencils long. A desk is 4 rulers long. How many erasers long is the desk?",
+    "a": "24 erasers (a ruler is 3 + 3 = 6 erasers; a desk is 6 + 6 + 6 + 6 = 24)"
+   },
    {
     "q": "1 clip is as long as 3 cubes. A pen is 12 cubes long. How many clips long is the pen?",
     "a": "4 clips"
@@ -786,14 +826,6 @@
    {
     "q": "Ali’s desk is 6 spans long. Mei’s desk is 9 spans long, but they measured the same desk. Whose hand is bigger?",
     "a": "Ali’s. A bigger span needs fewer spans to cover the same desk."
-   },
-   {
-    "q": "A caterpillar is 9 cubes long. It grows 2 cubes each day. How long is it after 3 days?",
-    "a": "15 cubes"
-   },
-   {
-    "q": "A string is 15 cubes long. A rope is 8 cubes longer. How long is the rope?",
-    "a": "23 cubes"
    }
   ],
   "challenge": [
@@ -818,7 +850,7 @@
     "a": "6 erasers per pen; 4 pens."
    },
    {
-    "q": "A ruler is 12 cubes long. Ali measures a desk by laying the ruler end to end 4 times and then 5 more cubes. How long is the desk in cubes?",
+    "q": "A stick is 12 cubes long. Ali measures a desk by laying the stick end to end 4 times and then 5 more cubes. How long is the desk in cubes?",
     "a": "53 cubes."
    },
    {

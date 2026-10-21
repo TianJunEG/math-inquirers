@@ -47,11 +47,12 @@ const triSvg = () => {
     pos.forEach(([x, y], i) => { s += `<circle cx="${ox + x}" cy="${y}" r="26" fill="${i < 3 ? Y : WH}" stroke="${N}" stroke-width="3"/>`; });
     return s;
   };
-  let s = `<svg aria-label="Two empty magic triangles and the numbers 110 to 160" viewBox="0 0 600 350" width="480" xmlns="http://www.w3.org/2000/svg" style="width:480px;max-width:100%">`;
+  let s = `<svg aria-label="Two empty magic triangles and the numbers 110 to 160" viewBox="0 0 600 392" width="480" xmlns="http://www.w3.org/2000/svg" style="width:480px;max-width:100%">`;
   s += `<g transform="translate(0,34)">${one(0, '(a) Each side = 390')}${one(300, '(b) Each side = 420')}</g>`;
+  s += `<rect x="40" y="296" width="520" height="86" rx="12" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="6 4"/>` + T(300, 320, 'Number tiles: use all six in EACH triangle', 18, TEAL);
   [110, 120, 130, 140, 150, 160].forEach((n, i) => {
-    const x = 45 + i * 88;
-    s += `<rect x="${x}" y="302" width="70" height="40" rx="8" fill="${SKY}" stroke="${N}" stroke-width="2.5"/>` + T(x + 35, 331, n, 22);
+    const x = 60 + i * 82;
+    s += `<rect x="${x}" y="332" width="70" height="40" rx="8" fill="${SKY}" stroke="${N}" stroke-width="2.5"/>` + T(x + 35, 361, n, 22);
   });
   return s + '</svg>';
 };
@@ -130,7 +131,7 @@ module.exports = {
       { q: 'Find the missing digits:  5□7 + □48 = 905', a: '557 + 348 = 905 (ones 7 + 8 = 15; tens 5 + 4 + 1 = 10; hundreds 5 + 3 + 1 = 9).' },
       { q: 'Find the missing digits:  7□1 − □58 = 263', a: '721 − 458 = 263. Check: 263 + 458 = 721.' },
       { q: 'What number makes this true?  538 + 199 = 540 + □', a: '197. 538 is 2 less than 540, so □ is 2 less than 199. Both sides are 737.' },
-      { q: 'A shop had 905 eggs. It sold some in the morning and 280 in the afternoon. 345 eggs were left. How many eggs were sold in the morning?', a: '280. Work backwards: 345 + 280 = 625 eggs after the morning; 905 − 625 = 280.' },
+      { q: 'A shop had 905 eggs. It sold some in the morning and 260 in the afternoon. 345 eggs were left. How many eggs were sold in the morning?', a: '300. Work backwards: 345 + 260 = 605 eggs after the morning sales; 905 − 605 = 300.' },
       { q: 'What number makes this true?  900 − □ = 450 + 175', a: '275 (450 + 175 = 625 and 900 − 625 = 275).' },
       { q: '125 + 250 + □ = 1000. What is □?', a: '625' },
       { q: 'The numbers 20, 40, 60, 80, 100, 120, 140, 160 and 180 make a magic square. What is the magic total? Which number goes in the middle?', a: '300 (all nine add up to 900, shared equally by the 3 rows). The middle is 100.' },
@@ -161,7 +162,7 @@ module.exports = {
     W.push(H.sub('a', '350 + 140  =  300 + ______'));
     W.push(H.sub('b', '625 − 200  =  ______ − 100'));
     W.push(H.sub('c', '480 + ______  =  500 + 260'));
-    W.push(H.sub('d', 'Ravi says 398 + 205 = 400 + 203 is true. Is he right? Explain WITHOUT working out both sides.'));
+    W.push(H.sub('d', 'Ravi says 398 + 205 = 400 + 203 is true. Is he right? Explain how you know without adding.'));
     W.push(...H.lines(2));
 
     W.push(H.q(4, 'Magic square. Every row, column and diagonal adds up to the same total.', { pb: true, before: 0, keepNext: true }));
@@ -171,10 +172,10 @@ module.exports = {
     W.push(H.sub('b', 'Fill in the empty squares.'));
     W.push(H.sub('c', 'Add 100 to every number. Is it still a magic square? What is the new total? Explain.'));
     W.push(...H.lines(2));
-    W.push(H.q(5, 'Magic triangles. Use the numbers 110, 120, 130, 140, 150 and 160 once each in each triangle.', { keepNext: true }));
+    W.push(H.q(5, 'Magic triangles. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total. Do it for (a) and then (b).', { keepNext: true }));
     W.push(H.fig(triSvg()));
-    W.push(H.sub('a', 'Each side adds up to 390. Which numbers are in the corners?  __________'));
-    W.push(H.sub('b', 'Each side adds up to 420. Which numbers are in the corners?  __________'));
+    W.push(H.sub('a', 'Each side adds up to 390. Write the numbers in the circles. Which numbers are in the corners?  __________'));
+    W.push(H.sub('b', 'Each side adds up to 420. Write the numbers in the circles. Which numbers are in the corners?  __________'));
     W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model.', { keepNext: true }));
     W.push(...H.lines(4));
     W.push(H.p([H.t('Answer:   ____________   and   ____________', { bold: true })], { indent: { left: 560 }, before: 60 }));

@@ -84,7 +84,7 @@ module.exports = {
     keySmall: 'Odd or even? Choose the ones digit first.',
     brk: 'Place value moves. The tutor says a 4-digit number: jump for each thousand, clap for each hundred, tap your knees for each ten, touch your toes for each one.',
     ws1: 'Page 1, in pairs: Q1 cards 3, 0, 7, 5; Q2 every number from 2, 0, 5, 5; Q3 patterns.',
-    ws2: 'Page 2, on your own: Q4 place value puzzles; Q5 what number am I?; Q6 digits that add up to 3.'
+    ws2: 'Page 2, on your own: Q4 place value puzzles; Q5(a) what number am I?; then Q5(b) and Q6 (digits that add up to 3) if you have time.'
   },
 
   qbank: {
@@ -151,10 +151,10 @@ module.exports = {
     H.sub('a', 'Read the clues.', { keepNext: true }),
     H.tbl([9900], [H.row([H.cell(['Clue 1:  I am between 6000 and 7000.', 'Clue 2:  My ones digit is half of my thousands digit.', 'Clue 3:  My hundreds digit is the sum of my other three digits.'], 9900, { align: 'left', fill: 'EDEDED', h: 90 })])]),
     H.ans('I am:'),
-    H.sub('b', 'I am a 4-digit ODD number. All my digits are different. My digits add up to 6. What is the greatest number I can be? What is the smallest?'),
+    H.sub('b', '★ (if time) I am a 4-digit ODD number. All my digits are different. My digits add up to 6. What is the greatest number I can be? What is the smallest?'),
     H.ans('Greatest:'),
     H.ans('Smallest:'),
-    H.q(6, 'How many 4-digit numbers have digits that add up to 3? Make a list in order. Start with the biggest thousands digit.', { keepNext: true }),
+    H.q(6, '★ (if time) How many 4-digit numbers have digits that add up to 3? Make a list in order. Start with the biggest thousands digit.', { keepNext: true }),
     H.tbl([2400, 7500], [
       H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),
       H.row([H.cell('Thousands digit 2', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),

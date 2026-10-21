@@ -140,7 +140,7 @@ mpic=machine([('IN','q'),('× 3','op'),('+ 2','op'),('OUT','res')],w=700).replac
 right=card(mpic+blocks_svg(MACH,28,'Machine program: when flag clicked, ask IN? and wait, set out to answer times 3 plus 2, say out'),extra='flex:none;width:780px;padding:24px 28px;gap:24px')
 body=h2('Explore: build a secret machine')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (purple), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
+ 'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (light blue), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
  'Then pairs go to breakout rooms. Each child changes the rule to a secret two-step rule (one × and one + or −), shares their screen, and types in the IN numbers the partner calls out. The partner tries to write the rule with n using as few IN numbers as possible. '
  'Early finishers: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. '
  +PY_NOTE))
@@ -205,7 +205,7 @@ put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your 
 
 # ---------- 15 ws1ans ----------
 rows=[('Q1','a) 3n + 3, OUT 33    b) 5n − 2, IN 10    c) 4n − 3, OUT 77'),('Q2','a) P 32, Q 23   b) P = (n + 3) × 4,  Q = 4n + 3   c) No'),('Q3','a) 8    b) 10    c) 12    d) 24')]
-put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains. Q1c: IN goes up 2, OUT goes up 8, so × 4; 4 × 2 = 8, OUT 5, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
+put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains. Q1c: IN goes up 1, OUT goes up 4, so × 4; 4 × 1 = 4, OUT 1, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
 
 # ---------- 16 teach code ----------
 body=h2('Predict what the code says')

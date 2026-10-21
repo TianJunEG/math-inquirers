@@ -18,7 +18,7 @@ const rad = d => d * Math.PI / 180;
 
 // Q1: six angles. [letter, first arm direction (degrees, anticlockwise from east), size, arm 1 length, arm 2 length]
 // a 90 (turned), b 45, c 120, d 90 (one short arm), e 150, f 70 (long arms)
-const ANG = [['a', 25, 90, 62, 62], ['b', 60, 45, 66, 66], ['c', 10, 120, 58, 58], ['d', 0, 90, 70, 34], ['e', 200, 150, 52, 52], ['f', 100, 70, 72, 72]];
+const ANG = [['a', 25, 90, 62, 62], ['b', 60, 45, 66, 66], ['c', 10, 120, 58, 58], ['d', 0, 90, 70, 34], ['e', 200, 150, 52, 52], ['f', 100, 60, 72, 72]];
 const q1Fig = () => {
   let b = '';
   ANG.forEach(([l, d1, sz, L1, L2], i) => {
@@ -85,7 +85,7 @@ module.exports = {
     objective: 'Compare angles with a right angle using a folded-paper checker, count the angles at a point and the right angles in shapes and figures in an organised way, find a pattern in the counts, and find and draw perpendicular and parallel lines.',
     skills: 'Organised counting, pattern spotting, checking with a tool, explaining',
     materials: 'Scrap paper to fold a right-angle checker, a ruler, mini whiteboards, square grid paper.',
-    online: 'Each child folds a right-angle checker on camera and goes on a 2-minute right-angle hunt at home; the tutor shares the grid slides to draw on.',
+    online: 'Each child folds a right-angle checker on camera and goes on a 2-minute right-angle hunt at home; the tutor shares the grid slides to draw on. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Clock angles: is the angle between the hands at 3, 1, 5, 9, 10 and 4 o’clock a right angle, smaller or bigger? Show it with your arms. Then quick questions.',
     explore: 'Fold any scrap of paper twice to make a right-angle checker. Hunt for 3 right angles, 1 angle smaller and 1 angle bigger than a right angle. Why is the folded corner always a right angle?',
     mini: 'The size of an angle is how far it opens, not how long its arms are. Count the angles at a point: small ones first (4 lines: 3 + 2 + 1 = 6) and look for the pattern 1, 3, 6, 10. Count right angles inside a shape corner by corner (an L has 6 corners but 5 right angles inside); count right angles where lines meet point by point. Perpendicular and parallel lines: list every pair. Before page 2: parallel and perpendicular lines on a square grid (same steps; swap the steps and turn).',
@@ -130,7 +130,7 @@ module.exports = {
     keySmall: 'An angle’s size is how far it opens, not how long its arms are.',
     brk: 'Body angles. Make a right angle with your arms, then a smaller angle, then a bigger one. Now hold your arms parallel, then perpendicular.',
     ws1: 'Page 1, in pairs: Q1 sort six angles, Q2 right angles inside shapes, Q3 angles at a point.',
-    ws2: 'Page 2, on your own: Q4 lines in letters, Q5 draw lines on a grid, Q6 right angles in a window.'
+    ws2: 'Page 2, on your own: Q4 lines in letters, Q5 draw lines on a grid (Q5c is Think Harder, if you have time), Q6 right angles in a window.'
   },
 
   qbank: {
@@ -146,10 +146,10 @@ module.exports = {
       { q: 'I have 4 sides and 4 right angles. My sides are not all the same length. What shape am I? How many pairs of parallel lines do I have?', a: 'A rectangle. 2 pairs of parallel lines.' },
       { q: 'A U shape is made of 5 squares: 3 squares in a row with 1 more square on top of each end square. How many right angles are inside it?', a: '6 (it has 8 corners; the 2 corners at the bottom of the gap are bigger than a right angle inside the shape).' },
       { q: 'At which o’clock times do the hands of a clock make a right angle?', a: '3 o’clock and 9 o’clock' },
-      { q: 'The # sign is made of 4 lines. How many pairs of parallel lines does it have? How many pairs of perpendicular lines?', a: '2 pairs of parallel lines and 4 pairs of perpendicular lines.' },
+      { q: 'The # sign is made of 4 lines: 2 upright lines and 2 lines across. How many pairs of parallel lines does it have? How many pairs of perpendicular lines?', a: '2 pairs of parallel lines and 4 pairs of perpendicular lines.' },
       { q: 'Draw me on square grid paper: (a) I have 4 sides, exactly 2 right angles and exactly 1 pair of parallel lines. (b) I have 4 sides and 2 pairs of parallel lines, but no right angles.', a: '(a) For example a shape with a long bottom, a shorter top parallel to it, one upright side and one slanted side. (b) For example a slanted parallelogram or a rhombus with no square corners.' },
       { q: 'How many right angles can you find in the letter E (4 straight lines)?', a: '4: 1 at the top corner, 2 where the middle line meets the upright line, 1 at the bottom corner.' },
-      { q: 'Which is bigger: the angle between the clock hands at 4 o’clock or at 8 o’clock?', a: 'They are the same: at both times the hands are 4 hour-marks apart.' },
+      { q: 'Is the smaller angle between the clock hands at 4 o’clock the same size as at 8 o’clock?', a: 'Yes, in both the hands are 4 hour-marks apart the short way round.' },
       { q: 'How many pairs of parallel lines does a rectangle have? How many pairs of perpendicular lines?', a: '2 pairs of parallel lines and 4 pairs of perpendicular lines.' }
     ],
     challenge: [
@@ -159,9 +159,9 @@ module.exports = {
       { q: 'How many right angles are there in the letter F (3 straight lines)?', a: '3: 1 at the top corner and 2 where the middle line meets the upright line.' },
       { q: 'The letter E is made of 4 lines. List every pair of lines. How many pairs are there altogether?', a: '6 pairs: 3 pairs of parallel lines (the 3 short lines) and 3 pairs of perpendicular lines (the upright line with each short line).' },
       { q: 'Ben says: “A shape with 4 sides and 2 pairs of parallel lines must have right angles.” Is he right?', a: 'No. A slanted parallelogram (or a rhombus) has 2 pairs of parallel lines but no right angles.' },
-      { q: 'A 4-sided shape has 3 right angles. What can you say about its 4th angle? Can a 5-sided shape have exactly 3 right angles? Draw one.', a: 'The 4th angle is a right angle too (the shape is a rectangle). Yes: cut one corner off a rectangle with one slanted cut.' },
+      { q: 'A 4-sided shape has 3 right angles. Draw it. Test the 4th angle with your checker. Can a 5-sided shape have exactly 3 right angles? Draw one.', a: 'The 4th angle is a right angle too (it is a rectangle). Yes: cut one corner off a rectangle with one slanted cut.' },
       { q: 'A long rectangle is cut into 6 squares in a row by 5 lines. How many right angles can you find?', a: '24. 4 at the corners, and each of the 5 lines makes 2 right angles at the top and 2 at the bottom: 4 + 5 × 4 = 24.' },
-      { q: 'Can a 6-sided shape have 6 right angles inside it? What is the most right angles a 6-sided shape can have inside?', a: 'No. The most is 5, for example an L shape: walking round, the square corners all turn the same way, and 4 turns the same way bring you back to the start, so one corner of 6 must turn the other way (a dent).' }
+      { q: 'Can a 6-sided shape have 6 right angles inside it? What is the most right angles a 6-sided shape can have inside?', a: 'No. The most is 5, for example an L shape. Children try to draw 6 square corners and always find a dent. A proof is not expected.' }
     ]
   },
 
@@ -193,7 +193,7 @@ module.exports = {
       H.q(5, 'Use a ruler. Draw on the grid.', { keepNext: true }),
       H.fig(q5Fig()),
       H.sub('a', 'Through C, draw a line parallel to AB.     (b)  Through D, draw a line perpendicular to AB.'),
-      H.sub('c', 'Through G, draw a line perpendicular to EF. Check it with your checker.'),
+      H.sub('c', 'Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker. Hint: try 1 right and 2 down.'),
       H.q(6, 'How many right angles can you find in this window?', { keepNext: true }),
       side(q6Fig(), H.sub('', 'Visit every point where lines meet. Write how many right angles are at each point, then add.') + H.sub('', 'Right angles altogether:  ________'))
     ];

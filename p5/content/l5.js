@@ -63,15 +63,15 @@ const figQ4 = () => {
   const cubeAt = (x0, y0) => box(OB(x0, y0, 5), 10, 10, 10, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'] });
   s += cubeAt(370, 120) + cubeAt(440, 120) + cubeAt(510, 120) + cubeAt(405, 210) + cubeAt(475, 210);
   s += tx(395, 140, '10 cm', { size: 15 }) + tx(470, 236, '5 metal cubes', { size: 15 });
-  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 400);
+  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 250);
 };
 const figQ5 = () => svg(250, 230, 'A 4 by 4 by 4 cube built from 64 small cubes, painted on the outside',
-  box(OB(16, 200, 38), 4, 4, 4, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }));
+  box(OB(16, 200, 38), 4, 4, 4, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }), 175);
 const figQ6 = () => {
   let s = box(OB(60, 200, 4), 30, 20, 24, { water: 24, labels: ['30 cm', '24 cm', '20 cm'] });
   s += box(OB(330, 200, 4), 40, 30, 25, { water: 0, labels: ['40 cm', '25 cm', '30 cm'] });
   s += tx(150, 52, 'Container A (full)', { size: 16 }) + tx(440, 52, 'Tank B (empty)', { size: 16 });
-  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 400);
+  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 230);
 };
 
 module.exports = {
@@ -150,7 +150,7 @@ module.exports = {
     challenge: [
       { q: 'A big cube is painted on the outside and cut into small cubes of the same size. 96 small cubes have exactly one painted face. How many small cubes are there altogether?', a: '216 (each face has 96 ÷ 6 = 16 = 4 × 4 one-face cubes, so the cube is 6 cubes along each edge: 6 × 6 × 6)' },
       { q: 'How many different cuboids can be built with exactly 64 one-centimetre cubes, using all of them each time?', a: '7 (1 × 1 × 64, 1 × 2 × 32, 1 × 4 × 16, 1 × 8 × 8, 2 × 2 × 16, 2 × 4 × 8, 4 × 4 × 4)' },
-      { q: 'Tank A has a base 30 cm by 20 cm and water 30 cm deep. Tank B has a base 40 cm by 30 cm and is empty. Water is poured from A into B until the water in both tanks is equally deep. How deep is it?', a: '10 cm (18 000 cm³ shared over 600 + 1200 = 1800 cm²)' },
+      { q: 'A tank has a base 40 cm by 30 cm. A cube with edges of 10 cm sits on the bottom, and the water is 6 cm deep around it. How much water is in the tank?', a: '6600 cm³ = 6.6 ℓ (40 × 30 × 6 − 10 × 10 × 6 = 7200 − 600; the cube is taller than the water, so only 6 cm of it is under water)' },
       { q: 'Water in a tank is 15 cm deep. When 4 identical bricks are put in, the water rises to 18 cm. 6 more of the same bricks are put in. How deep is the water now? (The bricks stay under water.)', a: '22.5 cm (each brick raises it 3 ÷ 4 = 0.75 cm; 10 bricks raise it 7.5 cm)' },
       { q: 'A 5 by 5 by 5 cube is built from 1-cm cubes. All the cubes that cannot be seen from outside are taken out, so it is hollow. How many cubes are left?', a: '98 (125 − 3 × 3 × 3)' },
       { q: 'Bricks measure 2 cm by 3 cm by 4 cm. They are all placed the same way up to build a solid cube. What is the fewest number of bricks needed?', a: '72 (the smallest cube edge is 12 cm, the smallest common multiple of 2, 3 and 4: 6 × 4 × 3 = 72 bricks)' },
@@ -167,12 +167,12 @@ module.exports = {
     const pw = [2700, 2400, 2400, 2400];
     const paintTbl = H.tbl(pw, [
       H.row(['Painted faces', '3 faces', '2 faces', '1 face'].map((s, i) => H.cell(s, pw[i], { bold: true, fill: 'D9D9D9', h: 50 }))),
-      H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 120 }), H.cell('', pw[1]), H.cell('', pw[2]), H.cell('', pw[3])])
+      H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 70 }), H.cell('', pw[1]), H.cell('', pw[2]), H.cell('', pw[3])])
     ]);
     return [
       H.q(1, 'This solid cuboid is built from 1-cm cubes.', { before: 20, keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figQ1() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes to turn it into a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
+        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes to the solid, without taking any away, until the whole solid is a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
       ...H.lines(1),
       H.q(2, 'Ravi has 36 one-centimetre cubes. He uses all of them to build one cuboid. Turning a cuboid round does not make a new one.', { keepNext: true }),
       H.sub('a', 'List every cuboid he can build (length × breadth × height). Work in order. How many are there?', { keepNext: true }),

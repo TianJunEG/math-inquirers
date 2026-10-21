@@ -66,8 +66,8 @@ put('p3l4-title',title_slide('p3l4-title',4,2,'Model Makers','Word Problems: Bar
  'Draw bar models for word problems: parts of a whole, comparing, times as many, and before and after.',
  'Objective: Draw bar models for part-whole, comparison, times-as-many and before-and-after word problems, and use them to solve two-step problems and check the answers. Heuristics taught: draw a model; before and after (look for what stays the same). '
  'Materials: Multilink cubes (about 30 per pair), strips of squared paper, scissors, mini whiteboards and markers. '
- 'Online: Tutor builds the bars on the slides. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+ 'Online: Tutor builds the bars on the slides. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide. '
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2 warm1: arm bars ----------
 def mini(kind):
@@ -190,52 +190,54 @@ put('p3l4-teachgive',sec('p3l4-teachgive','57–58 MIN',body,'Teach before works
 
 # ---------- 18 teach same amount given ----------
 k=20
-g=(NM(108,'Siti')+R(200,70,12*k,64,SKY,'$12')+R(200+12*k,70,6*k,64,YEL,'?')+BH(200,200+18*k,64,True,'1 unit',30)
-   +NM(202,'Mei')+R(200,164,30*k,64,SKY,'$30')+R(200+30*k,164,6*k,64,YEL,'?')+VL(200+18*k,156,236)
-   +BH(200+18*k,200+36*k,234,False,'1 unit = the difference, $18',30))
-body=h2('Before and after: what stays the same?')+card(p('Mei has $30 and Siti has $12. Their aunt gives each girl the same amount. Now Mei has twice as much as Siti. How much did each girl get?',36,700))
-body+=pin(128,400,1664,svgwrap('After: Siti 12 plus a gift is 1 unit; Mei 30 plus the same gift is 2 units; the difference 18 is 1 unit',1664,296,g),'rise')
-body+=step(1,'Both get the same, so the difference stays the same:  $30 − $12 = $18.',top=705,size=34)
-body+=step(2,'Mei 2 units, Siti 1 unit, so 1 unit = $18. Siti now has $18: she got $6.',top=805,size=34)
-put('p3l4-teachsame',sec('p3l4-teachsame','58–60 MIN',body,'Teach the second heuristic: BEFORE AND AFTER, look for what stays the same. Before worksheet Q6. Ask: "When both girls get $5, what happens to the gap between them?" Show with two cube towers, add 2 cubes to each: the gap does not change. Then click the model. Check aloud: Siti $12 + $6 = $18, Mei $30 + $6 = $36, and $36 is twice $18. Compare with Q5: when one gives to the other, the TOTAL stays the same; when both get the same, the DIFFERENCE stays the same.'))
+g=(NM(108,'Siti')+R(200,70,12*k,64,SKY,'$12')+R(200+12*k,70,5*k,64,YEL,'$5')+BH(200,200+17*k,64,True,'$17 after',30)
+   +NM(202,'Mei')+R(200,164,30*k,64,SKY,'$30')+R(200+30*k,164,5*k,64,YEL,'$5')+VL(200+12*k,156,236)+VL(200+17*k,156,236)
+   +BH(200+17*k,200+35*k,234,False,'difference $18 (same as before)',30))
+body=h2('Before and after: what stays the same?')+card(p('Mei has $30 and Siti has $12. Their aunt gives each girl $5. How much more does Mei have than Siti before? How much more after?',36,700))
+body+=pin(128,400,1664,svgwrap('Siti 12 plus 5 and Mei 30 plus 5: the gap between them is 18 both before and after',1664,296,g),'rise')
+body+=step(1,'Before: $30 − $12 = $18.   After: Mei $35, Siti $17, and $35 − $17 = $18.',top=705,size=34)
+body+=step(2,'Both get the same, so the difference stays the same: $18.',top=805,size=34)
+put('p3l4-teachsame',sec('p3l4-teachsame','58–60 MIN',body,'Teach the second heuristic: BEFORE AND AFTER, look for what stays the same. Before worksheet Q6. Ask: "When both girls get $5, what happens to the gap between them?" Show with two cube towers, add 2 cubes to each: the gap does not change. Then click the model. Check aloud: Siti $12 + $5 = $17, Mei $30 + $5 = $35, and $35 − $17 = $18, the same gap as before. Compare with Q5: when one gives to the other, the TOTAL stays the same; when both get the same, the DIFFERENCE stays the same.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','Give to make equal. Is Ravi right?'),('Q6','Grandma gives both boys the same. What stays the same?')],'Finished early? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes. Note who needs a short catch-up next lesson.'))
+put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','Give to make equal. Is Ravi right?'),('Q6','Grandma gives both boys $10. What stays the same?')],'Finished early? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes. Note who needs a short catch-up next lesson.'))
 put('p3l4-ws2ans',check_rows('p3l4-ws2ans','67–69 MIN','Page 2: check together',[
  ('Q4','Ben 63, Ali 87   (150 − 24 = 126, 126 ÷ 2 = 63)'),
  ('Q5a','19 stickers: both then have 66'),
  ('Q5b','38 is the whole difference: they would just swap'),
- ('Q6','a) the difference, $27      b) $9 for each boy')],
- 'Click after a child explains with their model. Q4 check: 63 + 87 = 150 and 87 − 63 = 24. Q5: difference 85 − 47 = 38, give half: 19. Ravi\'s 38 leaves Mei with 47 and Siti with 85. Q6: the difference $27 stays the same; after, Ali has 2 units and Ben 1 unit, so 1 unit = $27; Ben had $18, so Grandma gave $9. Check: $54 = 2 × $27.',lw=210,gap=150))
+ ('Q6','a) $27      b) $27      c) the difference stays the same')],
+ 'Click after a child explains with their model. Q4 check: 63 + 87 = 150 and 87 − 63 = 24. Q5: difference 85 − 47 = 38, give half: 19. Ravi\'s 38 leaves Mei with 47 and Siti with 85. Q6: after Grandma, Ali has $55 and Ben $28, so $55 − $28 = $27; before, $45 − $18 = $27. Both boys got the same amount, so the difference stays the same.',lw=210,gap=150))
 
 # ---------- 21 stretch ----------
 st=[('1.','A bag of rice and a bag of flour weigh 9 kg altogether. The rice is 3 kg heavier. How heavy is each bag?'),('2.','Ben had 3 times as many marbles as Ravi. Ben gave Ravi 20 marbles, and then they had the same. How many did Ben have at first?'),('3.','A bag of sugar and 2 bags of flour weigh 1700 g. Each bag of flour is 400 g heavier than the sugar. How heavy is the sugar?')]
 put('p3l4-stretch',sec('p3l4-stretch','For early finishers',h2('Stretch')+numbered(st,36),'For children who finish early. Answers: 1) Flour 3 kg, rice 6 kg (9 − 3 = 6, 6 ÷ 2 = 3). 2) 60: the difference is 2 units and Ben gave half of it, so 1 unit = 20; Ravi had 20, Ben 60 (then 40 and 40). 3) 300 g: take away the two extras, 1700 − 800 = 900 for 3 equal units, 900 ÷ 3 = 300 (flour 700 g each).'))
 
 # ---------- 22 challenge ----------
-ch=[('1.','Mei and Siti had the same number of stickers. Mei gave away 36 and Siti gave away 108. Now Mei has 4 times as many as Siti. How many stickers did each girl have at first?'),('2.','A pencil box and 3 pens cost $25 altogether. The pencil box costs $5 more than one pen. How much does one pen cost?')]
-put('p3l4-challenge',sec('p3l4-challenge','Challenge',h2('Challenge')+numbered(ch,38),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 132 each. Now Siti has 1 unit and Mei 4 units; Siti gave away 72 more than Mei, so 3 units = 72 and 1 unit = 24; Siti had 24 + 108 = 132 (Mei 96 + 36 = 132). 2) $5: take away the extra $5, then 4 equal pen units = $20; the box costs $10.'))
+ch=[('1.','Ali and Ben have 120 stickers altogether. Ali has 3 times as many as Ben. Ali gives 20 stickers to Ben. How many stickers does each boy have now?'),('2.','A pencil box and 3 pens cost $25 altogether. The pencil box costs $5 more than one pen. How much does one pen cost?')]
+put('p3l4-challenge',sec('p3l4-challenge','Challenge',h2('Challenge')+numbered(ch,38),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) At first Ben 1 unit, Ali 3 units; 4 units = 120, so Ben 30 and Ali 90. After giving 20: Ali 70, Ben 50. 2) $5: take away the extra $5, then 4 equal pen units = $20; the box costs $10.'))
 
 # ---------- 23 chdiag ----------
-k=560/132
-g=(T(345,40,'At first: the same',28,TEAL,w=800)+NM(118,'Mei',28)+R(100,80,560-36*k,60,SKY,'?',size=28)+R(660-36*k,80,36*k,60,WHITE,'36',True,28)
-   +NM(228,'Siti',28)+R(100,190,560-108*k,60,SKY,'?',size=28)+R(660-108*k,190,108*k,60,WHITE,'108',True,28)
-   +T(345,320,'dashed = given away',26,MUTED,w=700)+T(345,400,'Now Mei has 4 times',28,NAVY,w=800)+T(345,440,'as many as Siti.',28,NAVY,w=800))
-q1=svgwrap('Two equal bars for Mei and Siti with 36 and 108 given away',690,470,g,'width:100%;height:auto')
+k=560/120
+g=(T(345,34,'At first',28,TEAL,w=800)+NM(100,'Ben',28)+R(100,62,560/4,56,SKY,'?',size=28)
+   +NM(176,'Ali',28)+''.join(R(100+140*m,138,140,56,SKY,'?' if m==0 else '',size=28) for m in range(3))+BV(62,194,680,'120',28)
+   +T(345,250,'After Ali gives 20',28,TEAL,w=800)
+   +NM(306,'Ben',28)+R(100,268,140,56,SKY,'?',size=28)+R(240,268,60,56,YEL,'+20',size=26)
+   +NM(382,'Ali',28)+R(100,344,420,56,SKY,'?',size=28)+R(520,344,60,56,WHITE,'20',True,26))
+q1=svgwrap('Before bars: Ben 1 unit, Ali 3 units, 120 altogether. After bars: Ben gets 20 more, Ali has 20 fewer',690,470,g,'width:100%;height:auto')
 pw=150
 g=(NM(78,'Box',28)+R(90,40,pw,60,SKY,'?',size=28)+R(90+pw,40,80,60,YEL,'$5',size=28)
    +''.join(NM(178+i*90,'Pen',28)+R(90,140+i*90,pw,60,SKY,'?',size=28) for i in range(3))
    +BV(40,380,350,'$25',30)+T(345,440,'One pen = ?',28,TEAL,w=800))
 q2=svgwrap('A box bar that is a pen bar plus 5 dollars, and three pen bars, 25 dollars altogether',690,470,g,'width:100%;height:auto')
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q1: Same at first</p>'+q1,extra='flex:1;min-width:0;padding:20px 24px')+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q2: Box and pens</p>'+q2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q1: Before and after</p>'+q1,extra='flex:1;min-width:0;padding:20px 24px')+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q2: Box and pens</p>'+q2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p3l4-chdiag',sec('p3l4-chdiag','Challenge',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: What stays the same? What do we know? Which bar is longer now, and by how much? For Q2: what if we took the $5 away? Answers are in the Challenge slide notes.'))
 
 # ---------- 24 chwalk ----------
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: draw the bars NOW',38,800,TEAL))
-for i,t in enumerate(['Now: Siti 1 unit, Mei 4 units.','Siti gave away 108 − 36 = 72 more, so Mei has 72 more: 3 units = 72.','1 unit = 24. Siti had 24 + 108 = 132.','Check: Mei 4 × 24 = 96, 96 + 36 = 132 ✓']): body+=pin(128,330+i*130,800,p(t,32),'rise',WHITE)
+body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: draw the bars BEFORE and AFTER',38,800,TEAL))
+for i,t in enumerate(['Before: Ben 1 unit, Ali 3 units, so 4 units = 120.','1 unit = 120 ÷ 4 = 30. Ben 30, Ali 90.','Ali gives 20: Ali 90 − 20 = 70, Ben 30 + 20 = 50.','Check: 70 + 50 = 120 ✓ (the total stays the same)']): body+=pin(128,330+i*130,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: take away the extra',38,800,TEAL))
 for i,t in enumerate(['Take the $5 off the box: $25 − $5 = $20.','Now 4 equal pen bars make $20.','1 pen = $20 ÷ 4 = $5. The box is $10.','Check: $10 + 3 × $5 = $25 ✓']): body+=pin(992,330+i*130,800,p(t,32),'rise',WHITE)
-put('p3l4-chwalk',sec('p3l4-chwalk','Challenge',body,'Use after pairs have tried. Q1 is a before-and-after problem where the start is the same: draw the AFTER bars, then put the given-away pieces back. The gap between the girls now (3 units) is the extra that Siti gave away. Q2 uses the same "take away the extra" idea as worksheet Q4.'))
+put('p3l4-chwalk',sec('p3l4-chwalk','Challenge',body,'Use after pairs have tried. Q1 is a before-and-after problem: draw the BEFORE bars first (Ben 1 unit, Ali 3 units), find the units, then move 20 from Ali to Ben. The total stays the same. Q2 uses the same "take away the extra" idea as worksheet Q4.'))
 
 # ---------- 25-26 talk, exit ----------
 put('p3l4-talk',talk_slide('p3l4-talk','Mei and Siti are each given $5. Why does the difference between them stay the same?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. Expected: both bars grow by the same piece, so the gap between their ends does not change. Follow-up: "When Mei GIVES Siti $5, what stays the same?" (the total). "How can a model help you check your answer?" (put the answers back: the parts must make the whole and the difference must match).'))

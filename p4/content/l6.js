@@ -50,14 +50,14 @@ const compass = () => {
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles, (c) two squares sharing a corner
 const corners = () => {
-  let s = `<svg aria-label="Three drawings. (a) A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side. (b) A square with two lines from its bottom left corner making three angles: 15 degrees, angle b and 48 degrees. (c) Two squares share a corner and overlap by 30 degrees; angle c is the big angle between their outer sides." viewBox="0 0 600 205" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">`;
+  let s = `<svg aria-label="Three drawings. (a) A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side. (b) A square with two lines from its bottom left corner making three angles: 15 degrees, angle b and 48 degrees. (c) Two squares share a corner and overlap by 30 degrees; angle c is the big angle between their outer sides." viewBox="0 0 600 205" xmlns="http://www.w3.org/2000/svg" style="width:540px;max-width:100%">`;
   // (a) rectangle 150 x 100, top-left corner A
   const A = [20, 50];
   s += `<rect x="20" y="50" width="150" height="100" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
   const e = [170, 50 + 150 * Math.tan(rad(32))];
   s += L(A, e) + arc(A[0], A[1], 30, -32, 0) + arc(A[0], A[1], 22, -90, -32);
-  let q = pt(A[0], A[1], 48, -16); s += T(q[0], q[1] + 6, 'a', 19, TEAL);
-  q = pt(A[0], A[1], 40, -61); s += T(q[0], q[1] + 6, '58°', 18, TEAL);
+  let q = pt(A[0], A[1], 88, -13); s += T(q[0], q[1] + 6, 'a', 19, TEAL);
+  q = pt(A[0], A[1], 64, -64); s += T(q[0] + 4, q[1] + 6, '58°', 18, TEAL);
   s += T(95, 190, '(a) rectangle', 17, TEAL);
   // (b) square 140, bottom-left corner B
   const B = [205, 170];
@@ -72,11 +72,24 @@ const corners = () => {
   const O = [470, 165], S = 100;
   const sqp = d0 => [O, pt(O[0], O[1], S, d0), pt(O[0], O[1], S * Math.SQRT2, d0 + 45), pt(O[0], O[1], S, d0 + 90)].map(p => p.map(v => v.toFixed(1)).join(',')).join(' ');
   s += `<polygon points="${sqp(0)}" fill="${SKY}" stroke="${NAVY}" stroke-width="3" opacity="0.9"/><polygon points="${sqp(60)}" fill="${YEL}" fill-opacity="0.45" stroke="${NAVY}" stroke-width="3"/>`;
-  s += arc(O[0], O[1], 40, 60, 90, RED) + arc(O[0], O[1], 22, 0, 150);
-  q = pt(O[0], O[1], 56, 75); s += T(q[0], q[1] + 5, '30°', 18, RED);
-  q = pt(O[0], O[1], 30, 120); s += T(q[0] - 2, q[1] + 6, 'c', 19, TEAL);
+  s += arc(O[0], O[1], 36, 60, 90, RED, 3) + arc(O[0], O[1], 78, 0, 150, TEAL, 3);
+  q = pt(O[0], O[1], 52, 75); s += T(q[0], q[1] + 6, '30°', 16, RED);
+  q = pt(O[0], O[1], 94, 125); s += T(q[0], q[1] + 6, 'c', 20, TEAL);
   s += T(470, 196, '(c) two squares', 17, TEAL);
   return s + '</svg>';
+};
+
+// Think Harder challenge 9: two squares sharing corner O. Outside sides make 160°, overlap is the unknown.
+const overlapFig = () => {
+  const O = [250, 150], S = 105;
+  const sqp = d0 => [O, pt(O[0], O[1], S, d0), pt(O[0], O[1], S * Math.SQRT2, d0 + 45), pt(O[0], O[1], S, d0 + 90)].map(p => p.map(v => v.toFixed(1)).join(',')).join(' ');
+  let s = `<svg aria-label="Two squares share the corner O and overlap. The angle between their outside sides is 160 degrees. The angle where they overlap is marked with a question mark." viewBox="0 0 500 175" xmlns="http://www.w3.org/2000/svg" style="width:380px;max-width:100%">`;
+  s += `<polygon points="${sqp(0)}" fill="${SKY}" stroke="${NAVY}" stroke-width="3" opacity="0.9"/><polygon points="${sqp(70)}" fill="${YEL}" fill-opacity="0.45" stroke="${NAVY}" stroke-width="3"/>`;
+  s += arc(O[0], O[1], 38, 70, 90, RED, 3) + arc(O[0], O[1], 82, 0, 160, TEAL, 3);
+  s += L(pt(O[0], O[1], 38, 80), pt(O[0], O[1], 118, 80), 2, RED);
+  let q = pt(O[0], O[1], 134, 80); s += T(q[0], q[1] + 8, '?', 26, RED);
+  q = pt(O[0], O[1], 98, 128); s += T(q[0], q[1] + 6, '160°', 17, TEAL);
+  return s + `<circle cx="${O[0]}" cy="${O[1]}" r="3.5" fill="${NAVY}"/>` + T(O[0] + 4, O[1] + 20, 'O', 18) + '</svg>';
 };
 
 module.exports = {
@@ -96,10 +109,10 @@ module.exports = {
     key: [
       ['Q1', 'a 40°,  b 115°,  c 75°,  d 150° (allow 2° either way; estimates within about 20° are good).  b and d are bigger than a right angle.'],
       ['Q2', '(a) 6 angles  (b) ∠AOB 30°, ∠BOC 60°, ∠COD 45°, ∠AOC 90°, ∠BOD 105°, ∠AOD 135°  (c) ∠AOC'],
-      ['Q3', '(a) 120°  (b) 150°  (c) 1 o’clock and 11 o’clock  (d) 150° (25 minutes × 6°)'],
+      ['Q3', '(a) 120°  (b) 150°  (c) 1 o’clock and 11 o’clock'],
       ['Q4', '(a) N  (b) E  (c) 135° clockwise  (d) NE'],
-      ['Q5', '(a) ∠a = 32° (90° − 58°)  (b) ∠b = 27° (90° − 15° − 48°)  (c) ∠c = 150° (90° + 90° − 30°)'],
-      ['Q6', '(a) SW (N → E → NE → SW)  (b) Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.']
+      ['Q5', '(a) ∠a = 32° (90° − 58°)  (b) ∠b = 27° (90° − 15° − 48°)  (c) ∠c = 150° (90° + 90° − 30°; the 30° overlap is counted twice)'],
+      ['Q6', '(a) SW (N → E → NE → SW)']
     ]
   },
 
@@ -146,12 +159,14 @@ module.exports = {
       { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)' },
       { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.' },
       { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)' },
-      { q: 'The corner of a square is cut into two angles. One angle is 4 times as big as the other. Find both angles.', a: '18° and 72° (5 equal parts make 90°, so one part is 18°)' },
+      { q: 'A robot starts facing N. Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.', a: 'Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.' },
       { q: 'Mei faces W. She turns clockwise until she faces SE. How many degrees does she turn?', a: '225° (W → NW → N → NE → E → SE: 5 steps of 45°)' },
       { q: 'Four rays come out of one point, making 3 angles side by side: 25°, 40° and 25°. How many angles are there altogether? What is the biggest?', a: '6 angles (25°, 40°, 25°, 65°, 65°, 90°); the biggest is 90°.' },
       { q: 'Ravi faces N and turns anticlockwise to face S. Then he turns anticlockwise again to face E. How many degrees has he turned altogether?', a: '270° (180° + 90°)' },
-      { q: 'In a rectangle, a line from one corner makes a 27° angle with the long side. What angle does it make with the short side?', a: '63° (90° − 27°)' }
+      { q: 'In a rectangle, a line from one corner makes a 27° angle with the long side. What angle does it make with the short side?', a: '63° (90° − 27°)' },
+      { q: 'The corner of a square is cut into two angles. One angle is 4 times as big as the other. Find both angles.', a: '18° and 72° (5 equal parts make 90°, so one part is 18°)' }
     ],
+
     challenge: [
       { q: 'What is the angle between the hands of a clock at 3:30?', a: '75° (the minute hand points to 6; the hour hand is halfway from 3 to 4, so it is 2 and a half spaces from the 6: 30° + 30° + 15°)' },
       { q: 'Five rays come out of one point and make 4 equal angles side by side. The angle between the two outside rays is 120°. How many angles can you find altogether? How many of them are right angles?', a: '10 angles (4 + 3 + 2 + 1). Each small angle is 30°, so the right angles are the 3-part angles: 2 of them.' },
@@ -161,12 +176,12 @@ module.exports = {
       { q: 'Mei faces S and turns clockwise to face NE. Ali faces S and turns anticlockwise to face NE. How many more degrees did Mei turn than Ali?', a: '90° (Mei 225°, Ali 135°)' },
       { q: 'What is the angle between the hands of a clock at 9:30?', a: '105° (the hour hand is halfway between 9 and 10; from it to the 6 is 3 and a half spaces: 3 × 30° + 15°)' },
       { q: 'The corner of a square is cut into 3 angles. The middle angle is twice the smallest. The biggest is 3 times the smallest. Find all three angles.', a: '15°, 30° and 45° (6 equal parts make 90°, so one part is 15°)' },
-      { q: 'Two squares share one corner and overlap. The angle between their outside sides is 160°. What is the angle where they overlap?', a: '20° (90° + 90° = 180°, and 180° − 160° = 20°)' }
+      { q: 'Two squares share one corner O and overlap, like Q5(c). The angle covered by both squares together (from the outside side of one square to the outside side of the other) is 160°. What is the angle where the squares overlap?', a: '20° (90° + 90° = 180°, and 180° − 160° = 20°)', fig: overlapFig() }
     ]
   },
 
   workbook: H => [
-    H.q(1, 'Estimate each angle first. Then measure it with your protractor.', { before: 40, keepNext: true }),
+    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first.', { before: 40, keepNext: true }),
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
       H.row(['Angle', 'a', 'b', 'c', 'd'].map((s, i) => H.cell(s, i ? 1875 : 2400, { bold: true, fill: 'EDEDED' }))),
@@ -184,19 +199,16 @@ module.exports = {
     H.q(3, 'Clock angles. A clock face has 12 equal spaces in 360°. Find the smaller angle.', { pb: true, before: 0, keepNext: true }),
     H.sub('a', 'At 4 o’clock:  ________          (b)  At 7 o’clock:  ________'),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
-    H.sub('d', 'How many degrees does the minute hand turn from 3:10 to 3:35?   ________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
     H.fig(compass()),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
     H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),
     H.sub('d', 'Ravi turns 90° anticlockwise and ends up facing NW. At first he faced:   ______'),
-    H.q(5, 'The corners of squares and rectangles are 90°. Find the angles marked a, b and c.', { keepNext: true }),
+    H.q(5, 'The corners of squares and rectangles are 90°. Find the angles marked a, b and c. In (c) two squares share the corner O. The angle where they overlap is 30°. Angle c is the whole angle covered by the two squares together.', { keepNext: true }),
     H.fig(corners()),
     H.sub('', '∠a = ________          ∠b = ________          ∠c = ________'),
     H.q(6, 'A robot starts facing N.', { keepNext: true }),
-    H.sub('a', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______'),
-    H.sub('b', 'Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.'),
-    ...H.lines(1)
+    H.sub('a', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______')
   ]
 };

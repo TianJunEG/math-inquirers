@@ -29,7 +29,7 @@ module.exports = {
     explore: 'Pairs use 24 square tiles to build every different rectangle that uses all the tiles (a 3 by 8 and an 8 by 3 count as the same). They record each one as a multiplication and decide how they know they have found them all.',
     mini: 'Factor pairs in order: 36 = 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6 (5 does not divide 36); stop when the pairs meet and draw a factor rainbow. Common factors: 12 apples and 18 oranges share the factors 1, 2, 3, 6, so 6 bags with 2 apples and 3 oranges each. Common multiples: buses every 6 and 8 minutes meet again after 24 minutes. Before page 2: square numbers have an odd number of factors (100 has 9; 18 has 6); for riddles, list the multiples of the bigger number first, then check each clue.',
     share: 'Ali says: "Bigger numbers always have more factors." Is he right? Give an example to show it.',
-    exit: { q: 'Write all the factors of 18. Then find the smallest number that is a multiple of both 4 and 9.', a: '1, 2, 3, 6, 9, 18. The smallest common multiple of 4 and 9 is 36.' },
+    exit: { q: 'Write all the factors of 28. Then find the smallest number that is a multiple of both 6 and 9.', a: '1, 2, 4, 7, 14, 28. The smallest common multiple of 6 and 9 is 18.' },
     mistakes: [
       'Listing factors at random and missing one, or stopping too early (for 48, forgetting 6 × 8), instead of trying 1, 2, 3 … in order until the pairs meet.',
       'Mixing up factors and multiples: saying 12 is a factor of 4, or listing 4, 8, 12 as the factors of 4.',
@@ -88,7 +88,7 @@ module.exports = {
       { q: 'What is the smallest number that is a multiple of both 4 and 6?', a: '12' }
     ],
     stretch: [
-      { q: 'How many factors does 36 have? List them in order.', a: '9 factors: 1, 2, 3, 4, 6, 9, 12, 18, 36.' },
+      { q: 'How many factors does 72 have? List them in order.', a: '12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72.' },
       { q: 'One lighthouse flashes every 6 seconds. Another flashes every 9 seconds. They flash together now. After how many seconds will they next flash together?', a: '18 seconds (6, 12, 18 and 9, 18).' },
       { q: 'Find all the common factors of 24 and 36.', a: '1, 2, 3, 4, 6, 12' },
       { q: 'I am a multiple of 7 between 50 and 80. My digits add up to 11. Who am I?', a: '56 (the multiples of 7 are 56, 63, 70, 77; only 5 + 6 = 11).' },
@@ -103,7 +103,7 @@ module.exports = {
       { q: 'What is the smallest number that has exactly 6 factors?', a: '12 (1, 2, 3, 4, 6, 12). Every number below 12 has fewer than 6 factors.' },
       { q: 'Ali counts in 6s from 6. Mei counts in 8s from 8. Both stop at 100. How many numbers do they both say?', a: '4: 24, 48, 72, 96.' },
       { q: 'Ravi runs one lap of a track every 4 minutes. Siti runs one lap every 6 minutes. They start together at the start line. How many laps has each run when they are next at the start line together?', a: 'After 12 minutes: Ravi has run 3 laps and Siti 2 laps.' },
-      { q: 'Find a number between 20 and 40 that has exactly 4 factors, and both of its factor pairs use odd numbers only.', a: '21 (1 × 21, 3 × 7), 27 (1 × 27, 3 × 9), 33 (1 × 33, 3 × 11), 35 (1 × 35, 5 × 7) or 39 (1 × 39, 3 × 13). Any one of these.' },
+      { q: 'Find a number between 20 and 40 that has exactly 4 factors and is odd.', a: '21 (1 × 21, 3 × 7), 27 (1 × 27, 3 × 9), 33 (1 × 33, 3 × 11), 35 (1 × 35, 5 × 7) or 39 (1 × 39, 3 × 13). Any one of these.' },
       { q: 'Three school bells ring every 4 minutes, every 6 minutes and every 10 minutes. They all ring together at 9:00 am. When do they next all ring together?', a: '10:00 am. The smallest common multiple of 4, 6 and 10 is 60 minutes.' },
       { q: 'I am a number less than 100. When I am divided by 2, 3, 4, 5 or 6, there is always 1 left over. I am bigger than 1. Who am I?', a: '61. One less than the number is a common multiple of 2, 3, 4, 5 and 6: 60. 60 + 1 = 61 (the next one, 121, is too big).' },
       { q: 'There are 20 closed lockers, numbered 1 to 20. Child 1 opens every locker. Child 2 changes every 2nd locker (opens it if it is closed, closes it if it is open). Child 3 changes every 3rd locker, and so on, up to child 20. Which lockers are open at the end?', a: '1, 4, 9 and 16. Each locker is changed once for every factor of its number. Only numbers with an odd number of factors (1, 4, 9, 16: a number times itself) end up open.' }
@@ -113,7 +113,7 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.q(1, 'Hunt down every factor of 48. (A factor goes into 48 exactly.)', { before: 40, keepNext: true }));
-    W.push(H.sub('a', 'Write the factor pairs of 48 in order. You may not need every row.', { keepNext: true }));
+    W.push(H.sub('a', 'Write the factor pairs of 48 in order. You may not need every box.', { keepNext: true }));
     W.push(H.tbl([1650, 1650, 1650, 1650, 1650, 1650], [
       H.row(['1 × 48', '__ × __', '__ × __', '__ × __', '__ × __', '__ × __'].map(s => H.cell(s, 1650, { h: 70 })))
     ]));
@@ -122,7 +122,7 @@ module.exports = {
     W.push(H.ans('Factors:'));
     W.push(H.sub('c', 'How many factors does 48 have? ______   How did you know when to stop looking?'));
     W.push(...H.lines(1));
-    W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row.', { keepNext: true }));
+    W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row. (2 rows of 20 trees and 20 rows of 2 trees are different ways to plant.)', { keepNext: true }));
     W.push(H.sub('a', 'Find every way. One way is 4 rows of 10 trees. Fill in the table. You may not need every column.', { keepNext: true }));
     W.push(H.tbl([2298, 1086, 1086, 1086, 1086, 1086, 1086, 1086], [
       H.row([H.cell('Rows', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['4', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))]),
@@ -150,7 +150,7 @@ module.exports = {
     W.push(H.gap(60));
     W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
     W.push(...H.lines(1));
-    W.push(H.sub('c', 'Find ALL the numbers from 1 to 60 that have exactly 3 factors.'));
+    W.push(H.sub('c', 'Find ALL the numbers from 1 to 60 that have exactly 3 factors. Hint: look at your answer to (b).'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
     W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?'));

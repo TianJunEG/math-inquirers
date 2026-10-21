@@ -113,7 +113,7 @@ put(f'{L}-title',title_slide(f'{L}-title',3,2,'Below Zero','Negative numbers  �
  'Use a number line to compare, add and subtract negative numbers, and make a variable in code go below zero.',
  'Objective: Order and compare negative numbers on a number line; add and subtract with negative numbers by moving along the line (temperature, lifts, sea level); use "change by" a negative number in code and trace a variable that goes below 0. '
  'Materials: laptop or desktop with Scratch 3 open (scratch.mit.edu, no log-in needed), mini whiteboard and marker, workbook, pencil. Tutor: this deck, Scratch open for screen share. '
- 'Online set-up: children keep Scratch in one browser tab and the video call in another; ask them to rename the sprite "Dot" so nobody is distracted by costumes. Children share their screen only when asked. '
+ 'Online set-up: children keep Scratch in one browser tab and the video call in another; ask them to rename the sprite "Dot" so nobody is distracted by costumes. Children share their screen only when asked. Type the minus sign with the keyboard minus key (the hyphen); do not copy and paste a number from the slide or chat, because the slide uses a different minus character that Scratch will not accept. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. '
  'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
 
 # ---------- 2 warm1: cold city line-up ----------
@@ -149,7 +149,7 @@ right=card(stage+blocks_svg(THERMO,26,'Thermometer program: when flag clicked, s
 body=h2('Explore: the stage is a number line')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 1 minute: show the x number under the stage as you drag the sprite left and right. "The stage is a number line. The middle is 0. Left of the middle is negative." Then children work in pairs (breakout rooms online), each on their own computer. '
- 'Step 2: Dot starts at 0, change x by 100 takes it to 100, change x by −250 takes it to −150. Step 3: the variable is made with "Make a Variable" (call it temp). There is no "decrease" block: to go down you change by a negative number. Step 4: they must write the prediction on the whiteboard BEFORE clicking. '
+ 'Step 2: Dot starts at 0, change x by 100 takes it to 100, change x by −250 takes it to −150. Step 3: make the variable live in your screen share: Variables, Make a Variable, type temp, OK (children copy you). Type negative numbers with the keyboard minus key, never by pasting from the slide. There is no "decrease" block: to go down you change by a negative number. Step 4: they must write the prediction on the whiteboard BEFORE clicking. '
  'The program says 2, −1, −4, −7, −10, −13. Early finishers: add "if temp < 0 then say Below zero!" inside the loop, or make Dot glide to x = temp × 10 each time so it walks along the stage. '
  +PY_NOTE))
 

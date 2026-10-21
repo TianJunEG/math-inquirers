@@ -43,7 +43,7 @@ put('p3l5-title',title_slide('p3l5-title','LESSON 5  •  WEEK 3','Remainder Rid
  'Heuristics taught today: WORK BACKWARDS (start number = groups × size + leftover) and MAKE A LIST (list the numbers that fit one clue, then test each with the other clue). '
  'Materials: 25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers. '
  'Online: children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls; whiteboards are held up to the camera. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up game ----------
 calls=[('23 in 4s','5 groups, 3 left'),('17 in 3s','5 groups, 2 left'),('26 in 8s','3 groups, 2 left'),('41 in 6s','6 groups, 5 left')]
@@ -204,7 +204,7 @@ put('p3l5-teachtable',sec('p3l5-teachtable','57–58 MIN',body,
 
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l5-ws2',ws_preview('p3l5-ws2','58–66 MIN','Worksheet page 2: on your own',
- [('Q4','What number am I? List, then test. Part b: find ALL the numbers.'),('Q5','Dividing by 8: every remainder, and the biggest one.'),('Q6','The party tables. Fill in the table until the rows match.')],
+ [('Q4','What number am I? List, then test. Part b: find ALL the numbers.'),('Q5','Dividing by 8: every remainder, and the biggest one.'),('Q6','If time: the party tables. Fill in the table until the rows match.')],
  'Finished early? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Check that every child writes a list for Q4 and fills the table for Q6.'))
 put('p3l5-ws2ans',check_slide('p3l5-ws2ans','66–70 MIN','Page 2: check together',

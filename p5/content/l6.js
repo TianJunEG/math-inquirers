@@ -14,7 +14,7 @@ const figShops = () => {
     `<rect x="${x}" y="8" width="180" height="32" rx="12" fill="${NAVY}"/><rect x="${x}" y="28" width="180" height="12" fill="${NAVY}"/>` +
     tx(x + 90, 31, name, { fill: WHITE, size: 17 }) + tx(x + 90, 70, l1, { size: 17 }) + tx(x + 90, 100, l2, { size: 22 }) + (l3 ? tx(x + 90, 126, l3, { size: 15, fill: RED }) : '');
   return svg(600, 144, 'Shop A: 6 cans for $4.20. Shop B: 4 cans for $2.92. Shop C: pack of 10 cans for $7.80, get 2 more cans free.',
-    board(10, 'SHOP A', 'Pack of 6 cans', '$4.20', '', WHITE) + board(210, 'SHOP B', 'Pack of 4 cans', '$2.92', '', WHITE) + board(410, 'SHOP C', 'Pack of 10 cans', '$7.80', '+ 2 cans FREE!', '#FFF0C2'), 440);
+    board(10, 'SHOP A', 'Pack of 6 cans', '$4.20', '', WHITE) + board(210, 'SHOP B', 'Pack of 4 cans', '$2.92', '', WHITE) + board(410, 'SHOP C', 'Pack of 10 cans', '$7.80', '+ 2 cans FREE!', '#FFF0C2'), 300);
 };
 // a tank with two taps and a leak
 const figTaps = () => {
@@ -24,7 +24,7 @@ const figTaps = () => {
   s += `<line x1="250" y1="112" x2="250" y2="146" stroke="#7FB2DE" stroke-width="6" stroke-dasharray="8 5"/><line x1="350" y1="112" x2="350" y2="146" stroke="#7FB2DE" stroke-width="6" stroke-dasharray="8 5"/>`;
   s += tx(30, 40, 'Tap A: 12 ℓ a min', { a: 'start', size: 22 }) + tx(650, 40, 'Tap B: 18 ℓ a min', { a: 'end', size: 22 });
   s += `<circle cx="430" cy="232" r="4" fill="#7FB2DE"/><circle cx="440" cy="246" r="4" fill="#7FB2DE"/>` + tx(456, 244, 'crack: 6 ℓ a min out', { a: 'start', size: 22, fill: RED });
-  return svg(680, 260, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 430);
+  return svg(680, 260, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 250);
 };
 const figPark = () => svg(440, 132, 'Car park sign: first hour $1.20; after that 60 cents for every half hour or part of a half hour',
   `<rect x="6" y="6" width="428" height="120" rx="14" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/><circle cx="56" cy="66" r="34" fill="${TEAL}"/>` + tx(56, 80, 'P', { size: 40, fill: WHITE }) +
@@ -41,13 +41,13 @@ module.exports = {
     warmup: 'Better Buy Showdown: three pairs of packs (pens, juice, eggs). Children point left or right for the better buy, then prove it with the price of one. Then five quick rate questions.',
     explore: 'Printer race: Printer A prints 72 pages in 4 minutes and Printer B prints 50 pages in 2 minutes. Pairs build a rate table for each printer, decide which is faster, then predict and work out how long both printers together take to print 430 pages.',
     mini: 'A rate tells how much for 1 unit: per minute, per kg, per can. Find the value of 1 first, then multiply to scale up or divide to find how long. Better buy: compare the price of 1 (or of the same number of items). Working together: add the rates; a leak or drain takes its rate away. Worked examples: pens at two shops; two taps and a leak filling a 180 ℓ tank.',
-    share: 'Tap A fills a tank in 20 minutes. Tap B fills it in 30 minutes. Ben says that together they take 50 minutes. Mei says 25 minutes. Who is right?',
+    share: 'Is the biggest pack always the best buy? Give an example with numbers.',
     exit: { q: 'Tap A fills 15 ℓ a minute and tap B fills 10 ℓ a minute. How long do both taps together take to fill a 200 ℓ tank? How long if a leak also lets out 5 ℓ a minute?', a: '8 minutes (200 ÷ 25); with the leak 10 minutes (200 ÷ 20)' },
     mistakes: ['Adding or averaging the times when taps or printers work together (20 min and 30 min gives 50 min or 25 min) instead of adding the rates.', 'Choosing the better buy by the pack price, or dividing a free-gift deal by the cans paid for instead of all the cans received.', 'Charges “for every half hour or part of it”: dividing exactly instead of rounding up to the next half hour, or charging the first hour twice.'],
     extension: 'Make a better-buy poster: three pack sizes of the same snack where the biggest pack is NOT the best buy. Swap with a partner: can they find the best buy and prove it?',
     key: [
       ['Q1', '(a) Bottles: 16, 48, 80; minutes for 160 bottles: 10; 12 minutes: 192 bottles  (b) 9.25 a.m. (400 ÷ 16 = 25 minutes)'],
-      ['Q2', '(a) A 70¢, B 73¢, C 65¢ (Shop C gives 12 cans for $7.80)  (b) Shop C  (c) $13.64: one deal from C (12 cans) and 2 packs from B (8 cans) make exactly 20 cans; $7.80 + $5.84 = $13.64'],
+      ['Q2', '(a) A 70¢, B 73¢, C 65¢ (Shop C gives 12 cans for $7.80)  (b) Shop C  (c) Three ways make exactly 20 cans: 1 deal from C (12 cans) + 2 packs from B = $7.80 + $5.84 = $13.64 (the cheapest); 2 packs from A + 2 packs from B = $8.40 + $5.84 = $14.24; 5 packs from B = $14.60. Any correct way with its correct cost is fine'],
       ['Q3', '(a) 20 minutes (240 ÷ 12)  (b) 8 minutes (240 ÷ 30)  (c) 10 minutes (240 ÷ 24)  (d) 20 minutes (120 ÷ 6)'],
       ['Q4', '(a) 18 minutes (900 ÷ 50)  (b) 20 minutes (P prints 150 pages alone in 5 min; 750 ÷ 50 = 15 min more)  (c) 540 pages (both work 18 min: P 30 × 18 = 540, Q 20 × 18 = 360)'],
       ['Q5', '(a) $4.80 (3 h 35 min: first hour $1.20, then 2 h 35 min is 5 half hours and 5 min, so 6 lots of 60¢ = $3.60)  (b) 3 hours ($3.60 − $1.20 = $2.40 = 4 half hours after the first hour)'],
@@ -60,11 +60,11 @@ module.exports = {
     warmIntro: ['Better Buy Showdown! Two packs of the same thing. Point left or right: which is the better buy? Then prove it.', 'Pens: 3 for $2.40, or 5 for $3.80. Point now. Who can prove it?'],
     predict: ['Printer A prints 72 pages in 4 minutes. Printer B prints 50 pages in 2 minutes. Which is faster? Now both print a 430-page job together. Guess the time before you work it out.'],
     exploreHints: ['Stuck: how many pages does each printer print in 1 minute? Start the table with 1 minute.', 'Not sure how to compare: “Compare the same number of minutes for both printers.”', 'Finished early: how many pages should go to each printer so both finish at the same time?'],
-    think: ['“5 kg of rice cost $9.50. I want the price of 1 kg first: $9.50 ÷ 5 = $1.90. Now anything is easy: 3 kg is 3 × $1.90 = $5.70. And backwards: $13.30 buys 13.30 ÷ 1.90 = 7 kg.”', '“Pens: 3 for $1.95 is 65¢ each. 5 for $3.10 is 62¢ each. So the 5-pack is the better buy, if I need that many. I check another way: 15 pens cost 5 × $1.95 = $9.75 or 3 × $3.10 = $9.30.”', '“Two taps fill 9 ℓ and 6 ℓ each minute. Together, every minute, 15 ℓ go in. 180 ÷ 15 = 12 minutes. A leak takes out 3 ℓ a minute, so only 12 ℓ stay in each minute: 180 ÷ 12 = 15 minutes.”'],
+    think: ['“5 kg of rice cost $9.50. I want the price of 1 kg first: $9.50 ÷ 5 = $1.90. Now anything is easy: 3 kg is 3 × $1.90 = $5.70. And backwards: $13.30 is 1330 cents and 1 kg costs 190 cents, so 1330 ÷ 190 = 133 ÷ 19 = 7 kg.”', '“Pens: 3 for $1.95 is 65¢ each. 5 for $3.10 is 62¢ each. So the 5-pack is the better buy, if I need that many. I check another way: 15 pens cost 5 × $1.95 = $9.75 or 3 × $3.10 = $9.30.”', '“Two taps fill 9 ℓ and 6 ℓ each minute. Together, every minute, 15 ℓ go in. 180 ÷ 15 = 12 minutes. A leak takes out 3 ℓ a minute, so only 12 ℓ stay in each minute: 180 ÷ 12 = 15 minutes.”'],
     circulate: ['Ask: “What is the rate for 1? One minute, one can, one kilogram?”', 'Ask: “How many cans do you really get in that deal?”', 'Ask: “Each minute, how much goes in and how much comes out?”'],
     hints: ['Hint 1: “Find the amount for 1 unit first.”', 'Hint 2: “Make a table: 1 minute, 2 minutes, 5 minutes … or draw a timeline.”', 'Hint 3: “Working together? Add the rates, not the times.”'],
-    talk: ['“Tap A fills a tank in 20 minutes, tap B in 30 minutes. Ben says together 50 minutes, Mei says 25 minutes. Who is right?”', '“Is the biggest pack always the best buy?”'],
-    talkAns: 'Neither. Together the taps must be faster than either tap alone, so the answer is less than 20 minutes. Pretend the tank holds 60 ℓ (a number both 20 and 30 go into): tap A fills 3 ℓ a minute and tap B 2 ℓ a minute, so together 5 ℓ a minute and 60 ÷ 5 = 12 minutes. The biggest pack is not always the best buy: compare the price of 1, and think about how many you really need.',
+    talk: ['“Is the biggest pack always the best buy? Give an example with numbers.”', '“Where did you see a bigger pack that was NOT the better buy today?”'],
+    talkAns: 'No. Compare the price of 1: for example 3 pens for $1.95 is 65¢ a pen but 5 pens for $3.10 is 62¢ a pen (here the bigger pack is better); but if the 10-pack costs $7.50 and the 4-pack costs $2.80, the 4-pack is 70¢ a pen and the 10-pack is 75¢ a pen, so the small pack is the better buy. The better buy also depends on how many you really need.',
     close: ['“Today you found the rate for 1 and raced with it: scaling up, working backwards, adding taps together and catching the free-gift trap. Notice it, test it, explain why.”']
   },
 
@@ -108,7 +108,7 @@ module.exports = {
       { q: 'Printer P prints a job in 6 minutes. Printer Q prints the same job in 3 minutes. How long do they take working together?', a: '2 minutes (pretend the job is 6 pages: P prints 1 page a minute, Q 2 pages, together 3 a minute)' },
       { q: 'Siti buys pens at 3 for $2 and sells them at 2 for $2. How many pens must she buy and sell to make a profit of $10?', a: '30 pens (6 pens cost $4 and sell for $6: $2 profit for every 6 pens)' },
       { q: 'A machine starts at 9.52 a.m. and makes 50 cups a minute. At 10.00 a.m. a second machine starts, making 30 cups a minute. At what time have they made 1600 cups altogether?', a: '10.15 a.m. (400 cups by 10.00; 1200 ÷ 80 = 15 minutes more)' },
-      { q: 'Ken paints 4 m of fence in 10 minutes. Dan paints 6 m of fence in 12 minutes. Working together, how long do they take to paint 54 m of fence?', a: '1 hour (in 1 hour Ken paints 24 m and Dan 30 m: 54 m)' },
+      { q: 'Ben needs at least 20 cans. Shop A sells 6 cans for $4.20, shop B sells 4 cans for $2.92 and shop C sells a deal of 10 cans for $7.80 with 2 cans free. He can buy from more than one shop, but only whole packs. What is the least he can pay?', a: '$13.64 (1 deal from C and 2 packs from B make 20 cans). Check the bigger totals: 22 cans cost at least $14.92 (C + A + B) and 24 cans cost at least $15.60 (2 deals from C), so they cannot be cheaper.' },
       { q: 'A tap fills 9 ℓ a minute. How long does it take to fill an empty tank 60 cm long, 50 cm wide and 45 cm high?', a: '15 minutes (135 000 cm³ = 135 ℓ; 135 ÷ 9)' },
       { q: 'Ravi reads 24 pages an hour and Siti reads 18 pages an hour. They start the same 360-page book at the same time. When Ravi finishes, how many pages does Siti still have to read?', a: '90 pages (Ravi takes 15 hours; Siti reads 270 pages in that time)' },
       { q: '3 cats eat 3 fish in 3 minutes. At this rate, how many cats are needed to eat 100 fish in 100 minutes?', a: '3 cats (each cat eats 1 fish every 3 minutes, so the 3 cats eat 1 fish a minute: 100 fish in 100 minutes)' },
@@ -122,14 +122,14 @@ module.exports = {
     const L = s => '<b style="color:#1F7A6F">' + s + '</b> ';
     const rw = [2400, 1500, 1500, 1500, 1500, 1500];
     const rateTbl = H.tbl(rw, [
-      H.row([H.cell('Minutes', rw[0], { bold: true, fill: 'D9D9D9', h: 45 }), ...['1', '3', '5', '', '12'].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 45, fill: s ? 'EDEDED' : undefined }))]),
-      H.row([H.cell('Bottles', rw[0], { bold: true, fill: 'D9D9D9', h: 45 }), ...['', '48', '', '160', ''].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 45, fill: s ? 'EDEDED' : undefined }))])
+      H.row([H.cell('Minutes', rw[0], { bold: true, fill: 'D9D9D9', h: 38 }), ...['1', '3', '5', '', '12'].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 38, fill: s ? 'EDEDED' : undefined }))]),
+      H.row([H.cell('Bottles', rw[0], { bold: true, fill: 'D9D9D9', h: 38 }), ...['', '48', '', '160', ''].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 38, fill: s ? 'EDEDED' : undefined }))])
     ]);
     const gw = [2400, 2500, 2500, 2500];
     const gymTbl = H.tbl(gw, [
       H.row(['Number of visits', '5', '10', '15'].map((s, i) => H.cell(s, gw[i], { bold: true, fill: 'D9D9D9', h: 50 }))),
-      H.row([H.cell('Gym A costs', gw[0], { bold: true, h: 90 }), H.cell('', gw[1]), H.cell('', gw[2]), H.cell('', gw[3])]),
-      H.row([H.cell('Gym B costs', gw[0], { bold: true, h: 90 }), H.cell('', gw[1]), H.cell('', gw[2]), H.cell('', gw[3])])
+      H.row([H.cell('Gym A costs', gw[0], { bold: true, h: 60 }), H.cell('', gw[1]), H.cell('', gw[2]), H.cell('', gw[3])]),
+      H.row([H.cell('Gym B costs', gw[0], { bold: true, h: 60 }), H.cell('', gw[1]), H.cell('', gw[2]), H.cell('', gw[3])])
     ]);
     return [
       H.q(1, 'A machine fills 48 bottles every 3 minutes. (a) Complete the rate table.', { before: 20, keepNext: true }),
@@ -137,16 +137,13 @@ module.exports = {
       H.sub('b', 'The machine starts at 9.00 a.m. At what time has it filled 400 bottles?   ________________'),
       H.q(2, 'Three shops sell the same can of drink.', { keepNext: true }),
       H.fig(figShops()),
-      H.sub('a', 'Find the price of 1 can at each shop.    A ________    B ________    C ________'),
+      H.sub('a', 'Price of 1 can:   A ________   B ________   C ________'),
       H.sub('b', 'Which shop is the best buy?   ________'),
-      H.sub('c', 'Ben needs at least 20 cans. He can buy from more than one shop, but only whole packs. What is the least he can pay? Show which packs he buys.', { keepNext: true }),
+      H.sub('c', 'Ben needs exactly 20 cans. He may buy from more than one shop, but only whole packs. Find one way and work out the cost.', { keepNext: true }),
       ...H.lines(1),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
-      H.fig(figTaps()),
-      H.sub('a', 'Only tap A is turned on. How long does it take to fill the tank?   ________'),
-      H.sub('b', 'Both taps are turned on. How long does it take now?   ________'),
-      H.sub('c', 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________'),
-      H.sub('d', 'The tank is full. Both taps are turned off but the crack still leaks. How long until it is half full?   ________'),
+      H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
+        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________<br>' + L('(d)') + 'The tank is full. Both taps are turned off but the crack still leaks. How long until it is half full?   ________'), 6300, { h: 40 })])]),
 
       H.q(4, 'Printer P prints 30 pages a minute. Printer Q prints 20 pages a minute. A job has 900 pages.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),

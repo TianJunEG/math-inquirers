@@ -71,7 +71,7 @@ const qtext = (x, y, t, bold) => `<text x="${x}" y="${y}" font-size="15" ${bold 
 
 // Q1: three IN/OUT tables with a rule line beside each
 const rulesFig = () => {
-  const T = [['a', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['b', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['c', ['2', '4', '6', '8', '20'], ['5', '13', '21', '29', '']]];
+  const T = [['a', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['b', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['c', ['1', '2', '3', '4', '20'], ['1', '5', '9', '13', '']]];
   let s = `<svg aria-label="Three tables of IN and OUT numbers with gaps, and a line to write each rule" viewBox="0 0 600 214" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
   T.forEach(([l, ins, outs], k) => {
     const y = 6 + k * 70;

@@ -40,7 +40,15 @@ def blocks(prog, fs=28, h=52):
         s = ''
         for it in items:
             kind, t = it[0], it[1]; bg, fg = BC[kind]
-            if len(it) > 2:
+            if len(it) > 3:
+                # if / else: two arms and an 'else' bar between them
+                w = max(lw(t), 180); inner, y2 = draw(it[2], x + arm, y + h + 3)
+                yb1 = max(y2, y + h + 24); h2 = round(h * 0.7); wm = max(arm + cwid('else', fs) + 2 * pad, 120)
+                inner2, y3 = draw(it[3], x + arm, yb1 + h2 + 3)
+                yb2 = max(y3, yb1 + h2 + 24); wb = max(w * 0.45, 120)
+                s += f'<path d="M{x} {y} H{x+w:.1f} V{y+h} H{x+arm} V{yb1} H{x+wm:.1f} V{yb1+h2} H{x+arm} V{yb2} H{x+wb:.1f} V{yb2+22} H{x} Z" fill="{bg}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>' + txt(x, y, t, fg) + inner + f'<text x="{x+pad}" y="{yb1+h2/2+fs*0.36:.1f}" font-size="{fs}" font-weight="700" fill="{fg}" font-family="Arial">else</text>' + inner2
+                mx[0] = max(mx[0], x + w); y = yb2 + 25
+            elif len(it) > 2:
                 w = max(lw(t), 180); inner, y2 = draw(it[2], x + arm, y + h + 3)
                 yb = max(y2, y + h + 24); wb = max(w * 0.45, 120)
                 s += f'<path d="M{x} {y} H{x+w:.1f} V{y+h} H{x+arm} V{yb} H{x+wb:.1f} V{yb+22} H{x} Z" fill="{bg}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>' + txt(x, y, t, fg) + inner
@@ -128,7 +136,7 @@ inner = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YE
          f'<p style="font-size:44px;color:#C9D4EC">Clock (modular) arithmetic</p>'
          f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(DK["today"])}</p></div>')
 put('p6l8-title', dark('p6l8-title', NAVY, inner,
-    f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: share a starter project with a list called alphabet holding the letters A to Z (add each letter with the add to list block, or use the list monitor import). Scratch lists count from item 1, so letter number n (A = 0) is item n + 1. The mod block is in the Operators menu. Dark-blue Scratch blocks for lists are drawn on our slides as simple coloured shapes. '
+    f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: before the lesson, build the starter project once from the whole-machine slide: a list called alphabet holding the letters A to Z (add each letter with the add to list block), and everything in the machine except the 3 cipher blocks. Save it as an .sb3 file and share the FILE, not only a link, so children load it with File, Load from your computer. Scratch lists count from item 1, so letter number n (A = 0) is item n + 1. The mod block is in the Operators menu. List blocks in Scratch are red-orange and live in the Variables palette; our slides draw them as simple coloured shapes, so find blocks by the category name on the left, not by colour. '
     'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
 
 # ================= 2. warm1: clock jumps =================
@@ -153,7 +161,7 @@ body = h2('Explore: make a code strip')
 body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
 body += card(strip_svg(3, (23, 24, 25), 1560, 'Shift-3 code strip: the top row is A to Z, the bottom row starts at D. X, Y and Z are highlighted and sit above A, B and C.'), extra='padding:14px 28px')
 put('p6l8-explore1', sec('p6l8-explore1', '10–15 MIN', body,
-    'Minutes 10 to 15 (pairs keep going until 25). Children write A to Z on paper, then the alphabet again underneath, starting with D under A. They code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: send coded names privately in the chat. Finished early: invent your own shift and send a coded word with one clue.'))
+    'Minutes 10 to 15 (pairs keep going until 25). Children write A to Z on paper, then the alphabet again underneath, starting with D under A. They code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: children hold their coded name on paper up to the camera (or the tutor reads out the coded names) and partners decode on paper. Finished early: invent your own shift and send a coded word with one clue.'))
 
 # ================= 5. explore2 =================
 body = h2('Explore: talk about it') + ''.join(card(p(num(f'{i+1}.', q), 40, 600, raw=True)) for i, (q, a) in enumerate(DK['expAsk']))
@@ -212,8 +220,22 @@ body += step(2, 'E = 4.  4 − 4 = 0, and 0 is A.      B = 1.  1 − 4 = −3, +
 body += answer(128, 510, 1664, 'AEB is WAX')
 body += pin(128, 610, 1100, blocks_svg(loop, 'Blocks: set n to (item number of the letter in alphabet) minus 1; set m to (n plus shift) mod 26; set code to join code and item (m plus 1) of alphabet', 24, 42), 'fade', WHITE, 24, '14px 24px')
 body += pin(1280, 640, 512, p('The Scratch code machine runs these 3 blocks for each letter. Lists start at item 1, so letter n is item n + 1.', 28, 700), 'fade', SOFT, 20, '18px 24px')
-put('p6l8-we3', sec('p6l8-we3', '32–34 MIN', body,
-    'Click through the decoding steps, then the Scratch blocks. Think-aloud: "' + SC['think'][2].strip('“”') + '" Decoding with shift 4 is the same as coding with shift 22, because 26 − 4 = 22. The blocks run once for each letter of the message: "for each letter" is a repeat loop. Build it live from the starter project and code HELLO. ' + PYNOTE))
+put('p6l8-we3', sec('p6l8-we3', '32–33 MIN', body,
+    'Click through the decoding steps, then the Scratch blocks. Think-aloud: "' + SC['think'][2].strip('“”') + '" Decoding with shift 4 is the same as coding with shift 22, because 26 − 4 = 22. The blocks run once for each letter of the message: "for each letter" is a repeat loop. The next slide shows the whole machine. Build it live from the starter project and code HELLO. ' + PYNOTE))
+
+# ================= 11b. the whole code machine (loop + space check) =================
+full_prog = [('event', 'when green flag clicked'), ('var', 'set {shift} to {3}'), ('looks', 'ask {Message?} and wait'), ('var', 'set {code} to { }'), ('var', 'set {i} to {1}'),
+             ('ctrl', 'repeat {length of (answer)}', [('var', 'set {letter} to {letter (i) of (answer)}'),
+                 ('ctrl', 'if {(item # of (letter) in alphabet) > 0} then', [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')],
+                                                                              [('var', 'set {code} to {join (code) (letter)}')]),
+                 ('var', 'change {i} by {1}')]),
+             ('looks', 'say {code}')]
+body = h2('The whole code machine') + stitle('Spaces and other symbols are copied across, not coded.')
+body += pin(128, 250, 1180, blocks_svg(full_prog, 'The whole code machine: when green flag clicked; set shift to 3; ask Message and wait; set code to empty; set i to 1; repeat length of answer: set letter to letter i of answer; if item number of letter in alphabet is more than 0 then set n, set m, set code (the three cipher blocks) else set code to join code and letter; change i by 1; then say code', 20, 34), None, WHITE, 20, '10px 18px')
+body += pin(1360, 250, 432, p('The tutor’s starter project already has the list alphabet (A to Z) and everything except the 3 cipher blocks.', 28, 700), 'fade', SOFT, 20, '18px 24px')
+body += pin(1360, 520, 432, p('Your job: build the 3 blocks inside the if. The else keeps spaces.', 28, 700), 'fade', WHITE, 20, '18px 24px')
+put('p6l8-teachloop', sec('p6l8-teachloop', '33–34 MIN', body,
+    'Show the whole machine once so children see where the 3 cipher blocks sit. This is more than 15 blocks, so the tutor gives the loop part pre-built in the starter project and children add only the three cipher blocks inside the if (set n, set m, set code). Walk through it in order: ask for the message; code starts empty; i counts the letters; repeat once for each letter of the answer; take letter i; if the letter is in the alphabet list (item # of is more than 0) code it, else copy it (this keeps spaces); add 1 to i; at the end say the code. Without the if, a space is not in the list, item # of gives 0, n becomes -1, and the space would turn into the letter at position shift - 1. Type messages in capital letters. In Scratch the list blocks (item # of, item of, length of list) are in the Variables palette; letter of and length of (a word) are in Operators. Build the starter once before the lesson from this slide and save it as an .sb3 file. A negative number mod 26 should also come out non-negative in Scratch (for example -4 mod 26 is 22): check this in the editor first.'))
 
 # ================= 12. key =================
 body = h2(DK['keyHead']) + card(p(DK['keyBig'], 44, 700)) + card(p(DK['keySmall'], 38, 600, MUTED))
@@ -329,7 +351,7 @@ put('p6l8-talk', sec('p6l8-talk', '70–80 MIN', body, 'Minutes 70 to 80. Pairs 
 body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
 put('p6l8-exit', sec('p6l8-exit', '80–90 MIN', body, f'Minutes 80 to 90. Answer: {L["exit"]["a"]} Extension: {L["extension"]}'))
 
-order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-try1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-key', 'p6l8-break',
+order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-try1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-teachloop', 'p6l8-key', 'p6l8-break',
          'p6l8-ws1', 'p6l8-ws1ans', 'p6l8-teachtrace', 'p6l8-teachcrack', 'p6l8-teachcomb', 'p6l8-ws2', 'p6l8-ws2ans', 'p6l8-stretch', 'p6l8-challenge', 'p6l8-chdiag', 'p6l8-chwalk', 'p6l8-talk', 'p6l8-exit']
 assert set(order) == set(S), set(order) ^ set(S)
 for f in os.listdir(os.path.join(D, 'slides')):

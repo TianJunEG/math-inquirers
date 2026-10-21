@@ -44,7 +44,7 @@ module.exports = {
     extension: 'Draw last-digit circles for all the tables from 1 to 9 and group the tables that make the same shape. Explain why 1 and 9, 2 and 8, 3 and 7, 4 and 6 pair up.',
     key: [
       ['Q1', 'Table: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90  (a) The tens digit goes up by 1 and the ones digit goes down by 1; the two digits add up to 9; the tens digit is 1 less than the number of nines.  (b) In 9 × 8 the tens digit is 1 less than 8, so it is 7, and 7 + 2 = 9, so 9 × 8 = 72. 81 is 9 × 9.'],
-      ['Q2', 'Table: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 (from 7, 14, 21, 28, 35, 42, 49, 56, 63, 70): all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). Tables 2, 4, 6, 8 give only even last digits; the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
+      ['Q2', 'Table: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 (from 7, 14, 21, 28, 35, 42, 49, 56, 63, 70): all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). The 6s give only even last digits (and the 2s, 4s and 8s do too); the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
       ['Q3', '(a) 5 × 8 = 40, 2 × 8 = 16, so 7 × 8 = 56  (b) For example 5 × 6 + 4 × 6 = 30 + 24 = 54, or 10 × 6 − 6 = 54.'],
       ['Q4', 'Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
       ['Q5', '(a) 2 rows of 18, 3 of 12, 4 of 9, 6 of 6, 9 of 4, 12 of 3, 18 of 2  (b) 7 ways  (c) 6 rows of 6: turned round it is the same, so it has no partner. That is why the number of ways is odd.'],
@@ -99,7 +99,7 @@ module.exports = {
     keySmall: 'When there are many answers, make a list in order so none are missed.',
     brk: 'Times-table jumps. Tutor calls a fact like 6 × 3: children do that many star jumps in groups of 6, counting 6, 12, 18 aloud.',
     ws1: 'Page 1, in pairs: Q1 patterns in the 9s, Q2 last digits of the 7s, Q3 split an array.',
-    ws2: 'Page 2, on your own: Q4 grid puzzle, Q5 every way to arrange 36 chairs, Q6 number riddle.'
+    ws2: 'Page 2, on your own: Q4 grid puzzle, Q5 every way to arrange 36 chairs, Q6 number riddle if you have time.'
   },
 
   qbank: {
@@ -155,7 +155,7 @@ module.exports = {
         H.row([C('7 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
         H.row([C('Last digit', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('4', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
-    out.push(H.sub('a', 'Find ALL the other tables from 2 to 9 that also use all ten last digits.   ______'));
+    out.push(H.sub('a', 'Test the 3, 6 and 9 times tables. Which of them also use all ten last digits?   ______'));
     out.push(H.sub('b', 'Without working out 7 × 46, what is its last digit? Explain.'));
     out.push(...H.lines(1));
     // Q3
@@ -177,7 +177,7 @@ module.exports = {
       ])); }
     out.push(H.p('Hint: which number can be made in only one way?', { after: 60 }));
     out.push(H.q(5, 'Ben puts 36 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. 3 rows of 12 is different from 12 rows of 3.', { keepNext: true }));
-    out.push(H.sub('a', 'Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows … in order.', { keepNext: true }));
+    out.push(H.sub('a', 'Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows … in order. Not every number of rows works. Write down only the ways that work, and stop when you have all of them.', { keepNext: true }));
     { const ws = [2300, 950, 950, 950, 950, 950, 950, 950, 950];
       out.push(H.tbl(ws, [
         H.row([C('Number of rows', ws[0], { bold: true, fill: 'EDEDED' }), C('2', 950), ...Array.from({ length: 7 }, () => C('', 950, { h: 140 }))]),
@@ -186,7 +186,7 @@ module.exports = {
     out.push(H.sub('b', 'How many ways are there?   ______'));
     out.push(H.sub('c', 'Most ways come in pairs, like 2 rows of 18 and 18 rows of 2. Which way has no partner? Why?'));
     out.push(...H.lines(2));
-    out.push(H.q(6, 'Number riddle.', { keepNext: true }));
+    out.push(H.q(6, '(if time) Number riddle.', { keepNext: true }));
     out.push(H.sub('a', 'Find ALL the 2-digit numbers that can be divided exactly by 6 AND by 8. Hint: list the 2-digit numbers you can divide exactly by 8 (16, 24, 32 …), then test each one.'));
     out.push(...H.lines(2));
     out.push(H.sub('b', 'I am one of your numbers. My digits add up to 12. What number am I?'));

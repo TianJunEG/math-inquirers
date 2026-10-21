@@ -77,7 +77,7 @@ put('p3l3-title',title_slide('p3l3-title',3,2,'Times Table Treasure','Tables of 
  'Objective: Find and explain patterns in the 6, 7, 8 and 9 times tables, use last-digit patterns, split an array into facts we know, and solve grid and list puzzles in a careful order. Heuristics taught: look for a pattern; make a systematic list. '
  'Materials: Multiplication square (1 to 10), dot paper, coloured pencils, a ruler, mini whiteboards. '
  'Online: Tutor draws on the digit-circle slide. Each child draws 10 dots round a circle (like a clock) labelled 0 to 9, and has dot paper and coloured pencils. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2 warm1: Buzz ----------
 strip=''
@@ -171,8 +171,8 @@ put('p3l3-key',sec('p3l3-key','33–35 MIN',body,'Say the key idea together. Com
 put('p3l3-break',break_slide('p3l3-break','Times-table jumps. I call a fact like 6 × 3: do 3 jumps and count 6, 12, 18 out loud.','Then: a drink of water and back to our seats.','Five minutes. Call 6 × 3, 7 × 2, 8 × 3, 9 × 2. Online: children stay in view of the camera and jump on the spot.'))
 
 # ---------- 14-15 worksheet page 1 ----------
-put('p3l3-ws1',ws_preview('p3l3-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Patterns in the 9 times table. Notice, test, explain.'),('Q2','Last digits of the 7 times table. Which other tables use every digit?'),('Q3','Split 7 rows of 8 dots. Then split 9 × 6 your own way.')],'Stuck? Write the table in order and look at the ones digits.',
- 'Minutes 40 to 52. Pairs work together. Walk around and ask "What pattern do you notice? Does it work every time?" For Q1b push for the pattern that catches Ali: the tens digit is one less than the number of nines. For Q2a pairs may need the digit circles from the explore.'))
+put('p3l3-ws1',ws_preview('p3l3-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Patterns in the 9 times table. Notice, test, explain.'),('Q2','Last digits of the 7 times table. Test the 3, 6 and 9 tables: which use every digit?'),('Q3','Split 7 rows of 8 dots. Then split 9 × 6 your own way.')],'Stuck? Write the table in order and look at the ones digits.',
+ 'Minutes 40 to 52. Pairs work together. Walk around and ask "What pattern do you notice? Does it work every time?" For Q1b push for the pattern that catches Ali: the tens digit is one less than the number of nines. For Q2a pairs test only the 3, 6 and 9 tables (6 gives only even digits) and may need the digit circles from the explore.'))
 put('p3l3-ws1ans',check_rows('p3l3-ws1ans','52–54 MIN','Page 1: check together',[
  ('Q1','9, 18, 27, 36, 45, 54, 63, 72, 81, 90'),
  ('Q1a','Tens digit up 1, ones digit down 1. Digits add to 9.'),
@@ -180,7 +180,7 @@ put('p3l3-ws1ans',check_rows('p3l3-ws1ans','52–54 MIN','Page 1: check together
  ('Q2','7, 4, 1, 8, 5, 2, 9, 6, 3, 0.   a) 3 and 9   b) 2'),
  ('Q3','a) 40, 16, 56    b) e.g. 30 + 24 = 54')],
  'Click each answer after a pair explains theirs. Q1a also accept: the tens digit is 1 less than the number of nines. Q1b: the digit-sum test alone is not enough, because 81 also has digits adding to 9; the tens-digit pattern shows 9 × 8 must be in the 70s. '
- 'Q2a: the 3s go 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 and the 9s go 9, 8, 7 … 0. Ask why the even tables cannot work (all their answers are even) and why the 5s cannot (only 5 and 0). Q2b: 7 × 6 = 42 ends in 2; 7 × 46 = 322. Q3b: any correct split, e.g. 5 × 6 + 4 × 6 or 10 × 6 − 6.'))
+ 'Q2a: the 3s go 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 and the 9s go 9, 8, 7 … 0. The 6s give only even digits (6, 2, 8, 4, 0). Ask why the even tables cannot work (all their answers are even) and why the 5s cannot (only 5 and 0). Q2b: 7 × 6 = 42 ends in 2; 7 × 46 = 322. Q3b: any correct split, e.g. 5 × 6 + 4 × 6 or 10 × 6 − 6.'))
 
 # ---------- 16 teach grid ----------
 GW=[130,180,180]
@@ -213,7 +213,7 @@ body+=step(3,'Add the digits: 2 + 1 = 3 ✓   (42 → 6,  63 → 9,  84 → 12) 
 put('p3l3-teachboth',sec('p3l3-teachboth','57–58 MIN',body,'Teach before worksheet Q6. Strategy: list the numbers for ONE clue in order, then test the other clues one at a time. Ask: "Why list the 7s, not the 3s?" (There are fewer of them, so the list is shorter.) Children may notice 21, 42, 63, 84 go up in 21s. Do not do Q6 (6 and 8) here.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','Grid puzzle. Find a number that can be made in only one way.'),('Q5','Every way to put 36 chairs in equal rows. Go in order.'),('Q6','Number riddle. List one clue, then test the others.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
+put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','Grid puzzle. Find a number that can be made in only one way.'),('Q5','Every way to put 36 chairs in equal rows. Go in order. Only write the ways that work.'),('Q6','If time: number riddle. List one clue, then test the others.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
 put('p3l3-ws2ans',check_rows('p3l3-ws2ans','66–68 MIN','Page 2: check together',[
  ('Q4','Rows 7, 9, 6.   Columns 8, 6, 9.'),
  ('Q4','56, 42, 63  /  72, 54, 81  /  48, 36, 54'),

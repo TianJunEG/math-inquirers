@@ -1,4 +1,4 @@
-// P4 student workbook (A + D style). Run in p2/:  node workbook_html.js && python3 wb_pdf.py
+// P4 student workbook (A + D style). Run in p4/:  node workbook_html.js && python3 wb_pdf.py
 const C = require('../hp/common_html.js');
 const { fs, t, p, q, lines, banner, AlignmentType } = C;
 const L = require('./data.js');
@@ -13,13 +13,13 @@ const hdr = (n, topic, title, pb = true) => [
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
-  out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
+  out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Do these when you finish early, or take them home.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner('Stretch'));
   b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Challenge  (for strong thinkers)'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : 4)); });
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');

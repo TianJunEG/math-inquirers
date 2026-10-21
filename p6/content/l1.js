@@ -94,7 +94,7 @@ module.exports = {
     objective: 'Continue a sequence, find the rule for the nth term of a sequence with a constant difference, use it to find far terms such as the 100th, work backwards to decide whether a number is in a sequence, and test predictions with a loop and a variable in Scratch.',
     skills: 'Pattern spotting, generalising with a letter, predicting, testing in code, debugging (counting the jumps)',
     materials: 'Laptop or desktop with Scratch 3 open (scratch.mit.edu, no account needed), about 25 matchsticks or toothpicks per child (or squared paper), mini whiteboard, workbook. Optional: a Python editor for children who already know Python.',
-    online: 'The tutor shares the slides and a Scratch window. Send the four starter blocks (or a starter project link) in the chat before the lesson. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.',
+    online: 'The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.',
     warmup: 'Next! Pattern quick-fire: six sequence cards (add, take away, square numbers, doubling, Fibonacci, decimals). Teams race to give the next two terms; a bonus point for the rule.',
     explore: 'Pairs build matchstick triangles in a row (3, 5, 7 sticks), make a table, predict the sticks for pattern 10 and pattern 100 without building them, then check pattern 10 with a loop and a variable in Scratch.',
     mini: 'Term-to-term rule (add 3) versus the rule for the nth term (3n + 2): the difference tells you the times table, then compare to find what to add or take away. Find the 100th term. Test it in code: set term to the 1st term, repeat 99, change term by 3, say term. The 100th term is only 99 jumps from the 1st. Before page 1: work backwards to decide whether a number is in a sequence. Before page 2: trace a loop in a table, plan a program (say first, then change) and find a jump-count bug.',
@@ -111,7 +111,7 @@ module.exports = {
       ['Q2', '(a) difference 4; 4n + 2; 402  (b) 5; 5n − 4; 496  (c) 2; 2n + 7; 207  (d) 0.5; 0.5n (or n ÷ 2); 50'],
       ['Q3', '(a) 4n + 1  (b) Yes. 101 − 1 = 100 = 4 × 25, so 101 is the 25th term.  (c) No. Every term is 1 more than a multiple of 4, so every term is odd; 150 is even. (150 − 1 = 149 is not a multiple of 4.)'],
       ['Q4', 'Trace: x is 7, 12, 17, 22.  (a) 22  (b) 502. x starts at 2 and 100 jumps of 5 add 500.'],
-      ['Q5', 'Program: when green flag clicked; set n to 4; repeat 20 [say n; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2)'],
+      ['Q5', 'Program: when green flag clicked; set n to 4; repeat 20 [say n for 1 seconds; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2), the last number it says. It says one term per second.'],
       ['Q6', '(a) 203 (3 + 50 × 4)  (b) 199 (4 × 50 − 1)  (c) Change repeat 50 to repeat 49. The 1st term is already there before the loop starts, so the 50th term is only 49 jumps away.']
     ]
   },
@@ -216,9 +216,9 @@ module.exports = {
     W.push(H.sub('b', 'With repeat 100, what is the last number? Explain without running it.'));
     W.push(...H.lines(1));
     // Q5 plan
-    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
+    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …  (say … for 1 seconds shows each term in turn; a plain say would only leave the last one on screen.)', { keepNext: true }));
     { const pal = ps => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + ps.map(([p, i]) => blocks(p, 'Block ' + i, 14).replace('max-width:100%', 'flex:none')).join('') + '</div>';
-      W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n)']], 5]]) + '</div>', 4300,
+      W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n) for (1) seconds']], 5]]) + '</div>', 4300,
         ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:150px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
     // Q6 bug
     W.push(H.q(6, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));

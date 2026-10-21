@@ -110,7 +110,7 @@ put('p2l7-title',title_slide('p2l7-title','P2  •  LESSON 7  •  WEEK 4','Fair
  'Objective: Recognise equal parts and name fractions (halves, thirds, quarters, up to twelfths); compare unit fractions and like fractions; add and take away like fractions within one whole; solve fair-sharing stories with a bar. '
  'Materials: 4 paper strips of the same length per child (A4 cut lengthwise), paper circles, scissors, crayons, mini whiteboards. '
  'Online: each child has 4 paper strips, a crayon and scissors on camera; the tutor shows fraction bars on the slides. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 (page 1 in pairs, short teaching before page 2, a check-together slide after each page), talk time 70 to 80, exit ticket 80 to 90.'))
+ 'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90.'))
 
 # 2. warm1: fair or not fair?
 def snack(i):
@@ -143,8 +143,8 @@ put('p2l7-warm1',sec('p2l7-warm1','0–5 MIN',body,
 qs=[('1.','A pizza is cut into 4 equal slices. What is 1 slice called?','one quarter, {1/4}'),('2.','How many halves make 1 whole?','2'),('3.','How many thirds make 1 whole?','3'),
     ('4.','A cake is cut into 5 equal pieces. What is 1 piece called?','one fifth, {1/5}'),('5.','2 of 7 equal parts are shaded. What fraction is shaded?','{2/7}')]
 body=h2('Quick questions')+''.join(qrowx(128,250+i*128,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(ansx(1420,250+i*128,372,c,size=34) for i,(a,b,c) in enumerate(qs))
-put('p2l7-warm2',sec('p2l7-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Read each question aloud, give thinking time, take answers on whiteboards, then click to show. Ask "How do you know?" each time. '
+put('p2l7-warm2',sec('p2l7-warm2','5–8 MIN',body,
+ 'Minutes 5 to 8. Read each question aloud, give thinking time, take answers on whiteboards, then click to show. Ask "How do you know?" each time. '
  'Answers: 1) one quarter, written 1/4 ("1 of 4 equal parts")  2) 2  3) 3  4) one fifth, 1/5  5) 2/7. '
  'For 5, show how we write it: the bottom number is how many EQUAL parts the whole has (7), the top number is how many we take (2). Watch for children who write 2/5 (shaded over not shaded): ask "How many parts are there altogether?"'))
 
@@ -160,15 +160,15 @@ for k,(lab,n) in enumerate(rows):
 pic=SV(1620,330,g,'Four paper strips the same length: one whole, one folded into halves, one into quarters and one into eighths, with each part labelled')
 body=h2('Explore: fold fair shares')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take 4 paper strips that are the same length.</li><li>Keep one whole. Fold one in half, one into quarters and one into eighths.</li><li>Open them out. Write the fraction on every part.</li><li>Line them up. Then try to fold a strip into 3 equal parts!</li></ol>',extra='padding:24px 40px')
 body+=pin(128,560,1664,pic,None,WHITE,24,'8px 22px')
-put('p2l7-explore1',sec('p2l7-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. Each child folds their own strips; pairs compare. Show how to fold in half by matching the ends. Quarters: fold in half, then in half again. Eighths: in half three times. '
+put('p2l7-explore1',sec('p2l7-explore1','8–14 MIN',body,
+ 'Minutes 8 to 14. Each child folds their own strips; pairs compare. Show how to fold in half by matching the ends. Quarters: fold in half, then in half again. Eighths: in half three times. '
  'Children write 1/2, 1/4 or 1/8 on each part and line the strips up under each other, left ends together. '
  'Thirds are hard on purpose: there is no "fold in half" trick. Let them try (roll the strip into an S and flatten it, then check the 3 parts are the same length). Online: the same with paper strips on camera.'))
 
 # 5. explore2
 items=[('1.','Which part is bigger, {1/4} or {1/8}? How do you know?'),('2.','How many eighths fit on one quarter? How many quarters make 1 whole?'),('3.','How did you fold 3 equal parts? How do you know they are equal?')]
-put('p2l7-explore2',sec('p2l7-explore2','15–25 MIN',h2('Explore: talk about it')+qcards(items,40),
- 'Minutes 15 to 25. Let pairs keep working, then gather them. Answers: 1) 1/4 is bigger. The strip is the same length, but cut into 4 parts instead of 8, so each part is longer. Put the strips together to show it. '
+put('p2l7-explore2',sec('p2l7-explore2','14–20 MIN',h2('Explore: talk about it')+qcards(items,40),
+ 'Minutes 14 to 20. Let pairs keep working, then gather them. Answers: 1) 1/4 is bigger. The strip is the same length, but cut into 4 parts instead of 8, so each part is longer. Put the strips together to show it. '
  '2) 2 eighths fit on 1 quarter; 4 quarters make 1 whole (and 8 eighths make 1 whole). '
  '3) Any fair method: fold and adjust until the 3 parts are the same length, then check by folding one part on top of another. Praise checking. '
  'Ask: "Is 1/8 bigger because 8 is bigger than 4?" No! More parts means each part is smaller. We use this idea all lesson.'))
@@ -199,7 +199,7 @@ body+=ostep(128,320,1,'Count the parts. Both bars have 3 parts.',thirds_pic(1),7
 body+=ostep(128,320,2,'Are the parts the same size? Bar A: yes. Bar B: no.',thirds_pic(2),710,350,dx=770,dy=92,tw=894)
 body+=ostep(128,320,3,'Only EQUAL parts have a fraction name. Each part of bar A is {1/3}. Bar B is not cut into thirds.',thirds_pic(3),710,350,dx=770,dy=228,tw=894)
 body+=pin(128,700,1664,f'<div style="display:flex;align-items:center;gap:30px"><p style="width:860px;flex:none;font-size:34px;font-weight:700;line-height:1.3">Equal parts can look different. All of these rectangles are cut into halves.</p>{halfpic}</div>','fade',SOFT,20,'14px 28px')
-put('p2l7-teach1',sec('p2l7-teach1','25–27 MIN',body,
+put('p2l7-teach1',sec('p2l7-teach1','20–22 MIN',body,
  'Teach. Ask first: "Ali says both bars are cut into thirds. Do you agree?" Take votes. Click 1: count the parts together: 3 and 3. Click 2: "Are they the same size?" Bar A yes, bar B no: one part is much bigger. Click 3: only equal parts get a fraction name. "One third means 1 of 3 EQUAL parts." '
  'Click 4: equal parts can look different. Each rectangle is cut into 2 equal parts: down the middle, across the middle, or corner to corner (fold one triangle onto the other: they match). '
  'Think-aloud: "Before I name a fraction, I check two things: how many parts, and are they all the same size? If they are not the same size, I cannot use a fraction name."'))
@@ -213,7 +213,7 @@ body+=ostep(128,370,1,'Are the parts equal? Yes. Count them: 5 equal parts. They
 body+=stepx(2,'Count the shaded parts: 3. The top number is 3. Shaded: {3/5}',top=560,width=1664,size=36,build='fade')
 body+=stepx(3,'Not shaded: 2 parts. Not shaded: {2/5}',top=680,width=1664,size=36,build='fade')
 body+=ansx(128,800,1100,'Check: {3/5} and {2/5} make {5/5}, 1 whole ✓',size=36)
-put('p2l7-we1',sec('p2l7-we1','27–29 MIN',body,
+put('p2l7-we1',sec('p2l7-we1','22–25 MIN',body,
  'Click to reveal each step; ask the group to predict before each click. Think-aloud: "First I check the parts are equal. They are. I count all the parts: 1, 2, 3, 4, 5. Five equal parts are called fifths, so 5 goes at the bottom. Now I count the shaded parts: 3. That goes on top: three fifths. The parts that are not shaded: 2, so two fifths." '
  'Say: "The bottom number tells us how many equal parts make the whole. The top number tells us how many parts we are talking about." The check: 3 fifths and 2 fifths make 5 fifths, the whole bar. Watch for 3/2 (shaded over not shaded).'))
 
@@ -225,7 +225,7 @@ body=h2('Your turn: name the fraction')+stitle('Whiteboards: what fraction is sh
 tops=[300,520,680]
 for k,(pic,ph,q,a) in enumerate([(p_a,200,'Shaded? Not shaded?','{2/3}  and  {1/3}'),(p_b,100,'Shaded? Not shaded?','{5/12}  and  {7/12}'),(p_c,100,'Is the shaded part {1/3}?','No: the parts are not equal')]):
     body+=pin(128,tops[k],300,pic,None,WHITE,20,'8px 20px')+qrowx(500,tops[k]+(40 if k==0 else 0),860,'abc'[k],q,36)+ansx(1400,tops[k]+(40 if k==0 else 0),392,a,size=34)
-put('p2l7-try1',sec('p2l7-try1','29–30 MIN',body,
+put('p2l7-try1',sec('p2l7-try1','25–26 MIN',body,
  'Whiteboards up together, then click. a) 3 equal parts, 2 shaded: 2/3 shaded, 1/3 not shaded. b) 12 equal parts (twelfths); count the shaded ones carefully, they are not next to each other: 5, so 5/12 shaded and 7/12 not shaded (5 + 7 = 12). '
  'c) The trap: 3 parts, 1 shaded, but the parts are not the same size, so the shaded part is NOT one third. Ask: "What would we need to change to make it thirds?"'))
 
@@ -242,7 +242,7 @@ body+=stepx(2,'{1/2} is 1 of 2 parts. {1/6} is 1 of 6 parts.',left=1130,top=470,
 body+=stepx(3,'More equal parts: each part is smaller.',left=1130,top=610,width=662,size=32,build='fade')
 body+=ansx(128,760,950,'Smallest to biggest: {1/6}, {1/3}, {1/2}',size=36)
 body+=soft(1130,760,662,'A pizza shared by 6, not 2: each slice is smaller.',32)
-put('p2l7-we2',sec('p2l7-we2','30–32 MIN',body,
+put('p2l7-we2',sec('p2l7-we2','26–28 MIN',body,
  'Click through. Hold up the folded strips from Explore. Think-aloud: "All the bars are the same length, so it is the same whole. One half is 1 of 2 parts. One sixth is 1 of 6 parts. When I cut the same whole into more parts, each part gets smaller. So one sixth is the smallest and one half is the biggest." '
  'Story: "One pizza for 2 children, or one pizza for 6 children: when do you get a bigger slice?" Common mistake: "1/6 is bigger because 6 is bigger than 2". Answer with the strips, not just words. Only compare like this when the wholes are the same size.'))
 
@@ -255,30 +255,30 @@ body+=stepx(1,'Both are sevenths: the parts are the same size.',left=1130,top=33
 body+=stepx(2,'Count the parts: 2 sevenths and 5 sevenths.',left=1130,top=470,width=662,size=32,build='fade')
 body+=ansx(1130,610,662,'{5/7} is bigger than {2/7}',size=36)
 body+=soft(128,760,1664,'Same bottom number? The parts are the same size, so compare the top numbers.',34)
-put('p2l7-we3',sec('p2l7-we3','32–33 MIN',body,
+put('p2l7-we3',sec('p2l7-we3','28–30 MIN',body,
  'Click through. Think-aloud: "Both are sevenths, so every part is the same size. Then it is just like counting apples: 5 sevenths is more than 2 sevenths." '
  'Contrast with the last slide: there the top numbers were all 1 and the parts were different sizes; here the bottom numbers are the same and only the number of parts changes. Ask: "Which is bigger, 4/9 or 7/9? How do you know?" (7/9, more ninths).'))
 
 # 11. try2
-put('p2l7-try2',try_x('p2l7-try2','33–34 MIN','Your turn: which is bigger?','Draw bars if it helps. Same whole every time.',
+put('p2l7-try2',try_x('p2l7-try2','30–31 MIN','Your turn: which is bigger?','Draw bars if it helps. Same whole every time.',
  [('a','Which is bigger: {1/5} or {1/10}?','{1/5}'),('b','Which is bigger: {3/11} or {8/11}?','{8/11}'),('c','Smallest first: {1/3}, {1/12}, {1/6}','{1/12}, {1/6}, {1/3}')],
  'Whiteboards, then click. a) 1/5: the same whole cut into 5 parts gives bigger parts than cut into 10. b) 8/11: both are elevenths, and 8 elevenths is more than 3 elevenths. c) 1/12, 1/6, 1/3: more parts, smaller part. Ask a child to explain c without using the words "bigger number".',size=36,gap=160))
 
 # 12. key
 body=h2('Key idea: equal parts')+card(P('A fraction names EQUAL parts of a whole. The bottom number: how many equal parts. The top number: how many we take.',44,700))+card(P('Same whole: more equal parts means smaller parts. So {1/8} is smaller than {1/4}.',38,600,MUTED))
-put('p2l7-key',sec('p2l7-key','34–35 MIN',body,
+put('p2l7-key',sec('p2l7-key','31–32 MIN',body,
  'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Naming a fraction when the parts are not equal (Q1 B and D): ask "Are all 4 parts the same size?" '
  '(2) Thinking 1/6 is bigger than 1/4 because 6 is bigger than 4 (Q3): fold or draw the strips. '
  '(3) Adding the bottom numbers too: 2/5 + 1/5 written as 3/10 (Q4). The parts are still fifths, so only the top numbers are added. '
  '(4) Writing shaded over not shaded (3/5 instead of 3/8).'))
 
 # 13. break
-put('p2l7-break',break_slide('p2l7-break','35–40 MIN','Fraction turns. Stand up! When the tutor calls a turn, turn that much and freeze: a whole turn, a half turn, a quarter turn, three quarter turns.','Then: a drink of water and back to our seats.',
+put('p2l7-break',break_slide('p2l7-break','32–36 MIN','Fraction turns. Stand up! When the tutor calls a turn, turn that much and freeze: a whole turn, a half turn, a quarter turn, three quarter turns.','Then: a drink of water and back to our seats.',
  'Five minutes. Face the screen to start. A half turn: you face the back. A quarter turn: you face the side. Three quarter turns: the other side. Try "two quarter turns" (the same as a half turn!). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
-put('p2l7-ws1',preview_x('p2l7-ws1','40–50 MIN','Worksheet page 1: with your partner',[('Q1','Fair shares? Circle the shapes cut into quarters. Check the parts are equal.'),('Q2','Name the fraction that is shaded and the fraction that is not.'),('Q3','Compare and order fractions. Draw bars to help.')],'Stuck? Fold a paper strip, or draw the bars the same length.',
- 'Minutes 40 to 50. Pairs work together. Ask "How do you know?" before giving any help. For Q1, give pairs a paper square to fold if they are unsure about E (corner to corner). For Q3c ask "What does the 6 tell us?"'))
+put('p2l7-ws1',preview_x('p2l7-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','Fair shares? Circle the shapes cut into quarters. Check the parts are equal.'),('Q2','Name the fraction that is shaded and the fraction that is not.'),('Q3','Compare and order fractions. Draw bars to help.')],'Stuck? Fold a paper strip, or draw the bars the same length.',
+ 'Minutes 36 to 50. Pairs work together. Ask "How do you know?" before giving any help. For Q1, give pairs a paper square to fold if they are unsure about E (corner to corner). For Q3c ask "What does the 6 tell us?"'))
 put('p2l7-ws1ans',check_x('p2l7-ws1ans','50–52 MIN','Page 1: check together',[('Q1','A, C, E and F.   B and D: the 4 parts are not equal.'),('Q2','a) {3/8}, {5/8}    b) {5/6}, {1/6}    c) {7/10}, {3/10}'),('Q3 a, b','a) {1/3} and {7/9}     b) {1/10}, {1/5}, {1/4}, {1/2}'),('Q3 c','No. 6 equal parts are smaller than 4 equal parts of the same whole.')],
  'Click each answer after a pair explains theirs. Q1: F surprises many children: the triangle cut by joining the middles of its sides makes 4 triangles that are all the same size, the middle one is just turned upside down. E: the 4 triangles of a square cut corner to corner are all the same. '
  'B: the cuts do not go through the middle. D: the strips are different widths. Q2c: count the shaded squares one by one: 7 of 10. Q3b: more parts means smaller parts, so tenths are smallest.',lw=230,gap=160,size=34))
@@ -334,9 +334,9 @@ put('p2l7-teachsame',sec('p2l7-teachsame','56–57 MIN',body,
  'Think-aloud: "Halves and eighths are different parts, so I cannot just look at the numbers. I draw the same whole twice, the same length, and line the parts up." Ask: "What if Mei\'s pizza were tiny?" Then we cannot compare like this: the wholes must be the same size.'))
 
 # 19-20. worksheet page 2
-put('p2l7-ws2',preview_x('p2l7-ws2','57–67 MIN','Worksheet page 2: on your own',[('Q4','Add and take away. Colour the bars.'),('Q5','The cake story. Draw a bar.'),('Q6','Who eats more pizza? Line up the same whole.')],'Finished early? Stretch and Challenge come next.',
+put('p2l7-ws2',preview_x('p2l7-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Add and take away. Colour the bars.'),('Q5','The cake story. Draw a bar.'),('Q6','Who eats more pizza? Line up the same whole.')],'Finished early? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. For Q6, check children draw both bars the same length.'))
-put('p2l7-ws2ans',check_x('p2l7-ws2ans','67–70 MIN','Page 2: check together',[('Q4','a) {3/5}   b) {7/8}   c) {9/12}   d) {5/6}   e) {4/10}'),('Q5','a) {5/8}    b) {3/8}    c) Mei, by {1/8}'),('Q6','Siti. {1/4} is 2 eighths, and 3 eighths is more.')],
+put('p2l7-ws2ans',check_x('p2l7-ws2ans','69–72 MIN','Page 2: check together',[('Q4','a) {3/5}   b) {7/8}   c) {9/12}   d) {5/6}   e) {4/10}'),('Q5','a) {5/8}    b) {3/8}    c) Mei, by {1/8}'),('Q6','Siti. {1/4} is 2 eighths, and 3 eighths is more.')],
  'Click each answer after a child explains. Q4d: 6 sixths make 1 whole, so 5/6 more. Q4e: 7 tenths take away 3 tenths is 4 tenths. Q5: 2 + 3 = 5 slices eaten (5/8); 8 − 5 = 3 left (3/8); Mei ate 3 slices, Ali 2: Mei ate 1/8 more. '
  'Q6: the pizzas are the same size; Ravi\'s 1 quarter covers 2 eighths, Siti ate 3 eighths.',lw=200,gap=160,size=34))
 
@@ -375,8 +375,8 @@ put('p2l7-chwalk',sec('p2l7-chwalk','Challenge',body,
  'Q2 uses the "take away the extra, share, give it back" idea: 8 pieces, take away 2, share 6 as 3 and 3, give the 2 to Ali. Ben 3/12, Ali 5/12, Mei 4/12.'))
 
 # 25. talk
-put('p2l7-talk',talk_slide('p2l7-talk','70–80 MIN','Is {1/2} always bigger than {1/4}? Can you think of a time when it is not?',
- 'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answer: when the wholes are the same size, yes, 1/2 is bigger. But half of a small cupcake is less than a quarter of a big cake! Fractions only compare like this when the wholes are the same. Praise the reasons, not only the answers.'))
+put('p2l7-talk',talk_slide('p2l7-talk','72–80 MIN','Is {1/2} always bigger than {1/4}? Can you think of a time when it is not?',
+ 'Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: when the wholes are the same size, yes, 1/2 is bigger. But half of a small cupcake is less than a quarter of a big cake! Fractions only compare like this when the wholes are the same. Praise the reasons, not only the answers.'))
 
 # 26. exit
 put('p2l7-exit',exit_slide('p2l7-exit','80–90 MIN',P('Which is bigger, {1/7} or {1/9}? Then work out {2/9} + {5/9}.',46,600),

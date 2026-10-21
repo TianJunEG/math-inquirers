@@ -85,7 +85,7 @@ def check(sid,time,title,rows,notes,top=250,gap=135,size=36,lw=150):
 # ---------- title ----------
 OBJ='Continue a sequence, find the rule for the nth term of a sequence with a constant difference, use it to find far terms such as the 100th, work backwards to decide whether a number is in a sequence, and test predictions with a loop and a variable in Scratch.'
 MAT='Laptop or desktop with Scratch 3 open (scratch.mit.edu, no account needed), about 25 matchsticks or toothpicks per child (or squared paper), mini whiteboard, workbook. Optional: a Python editor for children who already know Python.'
-ONL='The tutor shares the slides and a Scratch window. Send the four starter blocks (or a starter project link) in the chat before the lesson. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.'
+ONL='The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.'
 put(f'{L}-title',f'''<section id="{L}-title" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">
 <p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON 1  •  WEEK 1  •  MATHS + CODE</p>
 <h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">Code the Pattern</h1>
@@ -193,8 +193,8 @@ put(f'{L}-ws1ans',check(f'{L}-ws1ans','54–56 MIN','Page 1: check together',[('
  'Click after a pair explains. Q1a: 4 sticks for the first square, then only 3 for each new square because it shares a side. Q2d: the difference is 0.5 and the terms are exactly the 0.5 times table, so nothing to add. Q3b: 4n + 1 = 101, 4n = 100, n = 25.',size=36,gap=150))
 
 # ---------- before page 2: trace, plan, bug ----------
-prog=[HAT,('var','set x to (1)'),('ctl','repeat (3)',[('var','change x by (4)'),('look','say (x)')])]
-body=h2('Trace the code in a table')+pin(128,260,640,blocks(prog,34,'Code: set x to 1, repeat 3: change x by 4, say x'),None)
+prog=[HAT,('var','set x to (1)'),('ctl','repeat (3)',[('var','change x by (4)'),('look','say (x) for (1) seconds')])]
+body=h2('Trace the code in a table')+pin(128,260,640,blocks(prog,34,'Code: set x to 1, repeat 3: change x by 4, say x for 1 seconds'),None)
 Wt=[260,260]
 body+=trow(900,260,['Loop','x'],Wt,None,True)
 for i,(a,b) in enumerate([('1','5'),('2','9'),('3','13')]): body+=trow(900,350+i*90,[a,b],Wt,'rise')
@@ -221,7 +221,7 @@ body+=step(2,'It says 2 + 20 × 4 = 82. But the rule 4n − 2 gives 78.',top=640
 body+=step(3,'Fix: 1st term to 20th term is 19 jumps, so repeat 19 (2 + 19 × 4 = 78 ✓).',top=750,size=34)
 put(f'{L}-teachbug',sec(f'{L}-teachbug','58–59 MIN',body,'Teach before worksheet page 2 (Q6). This is the fence-post idea: 5 posts have 4 gaps. When the maths and the code disagree, find which one is wrong and why. Ask: "Is there another fix?" (yes: start n at −2, the 0th term, and keep repeat 20).'))
 put(f'{L}-ws2',ws_preview(f'{L}-ws2','59–67 MIN','Worksheet page 2: the code, on your own',[('Q4','Predict, then trace the loop in a table.'),('Q5','Plan your code: say the first 20 terms of 4, 10, 16, 22, …'),('Q6','Spot the bug in Mei’s code, then fix it.')],'Write on paper first, then test in Scratch. Finished early? Stretch and Challenge come next.','Children work alone. Let them test Q4 to Q6 in Scratch AFTER writing their prediction. Note who needs a short catch-up next lesson.'))
-put(f'{L}-ws2ans',check(f'{L}-ws2ans','67–69 MIN','Page 2: check together',[('Q4','x: 7, 12, 17, 22.  a) 22   b) 502 (2 + 100 × 5)'),('Q5','set n to 4, repeat 20 [say n, change n by 6].  Last said: 118'),('Q6','a) 203   b) 199 (4n − 1)   c) repeat 49: the 1st term needs no jump')],
+put(f'{L}-ws2ans',check(f'{L}-ws2ans','67–69 MIN','Page 2: check together',[('Q4','x: 7, 12, 17, 22.  a) 22   b) 502 (2 + 100 × 5)'),('Q5','set n to 4, repeat 20 [say n for 1 seconds, change n by 6].  Last said: 118'),('Q6','a) 203   b) 199 (4n − 1)   c) repeat 49: the 1st term needs no jump')],
  'Click after a child explains. Q5: say must come before change. The last number said is the 20th term, 6 × 20 − 2 = 118 (n ends at 124 but it is never said). Q6: 3 + 50 × 4 = 203 is the 51st term.',size=36,gap=150))
 
 # ---------- stretch, challenge ----------

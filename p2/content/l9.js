@@ -51,18 +51,21 @@ const ribbonFig = (() => {
 })();
 
 const clock = (cx, cy, h, m, cap, R = 52) => {
+  // numerals sit OUTSIDE the ring of minute marks so the long hand can reach the marks without covering a numeral
   let s = `<circle cx="${cx}" cy="${cy}" r="${R}" fill="${W}" stroke="${N}" stroke-width="4"/>`;
-  for (let i = 0; i < 60; i++) { const a = i * Math.PI / 30, r1 = i % 5 ? R - 6 : R - 10; s += `<line x1="${(cx + r1 * Math.sin(a)).toFixed(1)}" y1="${(cy - r1 * Math.cos(a)).toFixed(1)}" x2="${(cx + (R - 2) * Math.sin(a)).toFixed(1)}" y2="${(cy - (R - 2) * Math.cos(a)).toFixed(1)}" stroke="${N}" stroke-width="${i % 5 ? 1 : 2.5}"/>`; }
-  for (let n = 1; n <= 12; n++) { const a = n * Math.PI / 6; s += txt((cx + (R - 21) * Math.sin(a)).toFixed(1), (cy - (R - 21) * Math.cos(a) + 5).toFixed(1), n, 14); }
+  for (let i = 0; i < 60; i++) { const a = i * Math.PI / 30, r1 = i % 5 ? R - 6 : R - 11; s += `<line x1="${(cx + r1 * Math.sin(a)).toFixed(1)}" y1="${(cy - r1 * Math.cos(a)).toFixed(1)}" x2="${(cx + (R - 2) * Math.sin(a)).toFixed(1)}" y2="${(cy - (R - 2) * Math.cos(a)).toFixed(1)}" stroke="${N}" stroke-width="${i % 5 ? 1 : 2.5}"/>`; }
+  for (let n = 1; n <= 12; n++) { const a = n * Math.PI / 6; s += txt((cx + (R + 15) * Math.sin(a)).toFixed(1), (cy - (R + 15) * Math.cos(a) + 5.5).toFixed(1), n, 15); }
   const ha = ((h % 12) * 30 + m * 0.5) * Math.PI / 180, ma = m * 6 * Math.PI / 180;
+  // hour hand: short, thick, navy.  minute hand: long, thin, red, ending at the minute marks
   s += `<line x1="${cx}" y1="${cy}" x2="${(cx + R * 0.45 * Math.sin(ha)).toFixed(1)}" y2="${(cy - R * 0.45 * Math.cos(ha)).toFixed(1)}" stroke="${N}" stroke-width="7" stroke-linecap="round"/>`;
-  s += `<line x1="${cx}" y1="${cy}" x2="${(cx + R * 0.78 * Math.sin(ma)).toFixed(1)}" y2="${(cy - R * 0.78 * Math.cos(ma)).toFixed(1)}" stroke="${RED}" stroke-width="4" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="5" fill="${N}"/>`;
-  return s + txt(cx, cy + R + 22, cap, 15, { w: 600 });
+  s += `<line x1="${cx}" y1="${cy}" x2="${(cx + (R - 4) * Math.sin(ma)).toFixed(1)}" y2="${(cy - (R - 4) * Math.cos(ma)).toFixed(1)}" stroke="${RED}" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="5" fill="${N}"/>`;
+  return s + txt(cx, cy + R + 42, cap, 15, { w: 600 });
 };
-const clocksFig = svg(600, 136,
-  txt(90, 24, 'A', 22, { c: TEAL }) + clock(170, 56, 7, 25, 'Ali is eating breakfast.') +
-  txt(350, 24, 'B', 22, { c: TEAL }) + clock(430, 56, 4, 50, 'Ali is at swimming after school.'),
-  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school.');
+const clocksFig = svg(600, 196,
+  txt(170 - 84, 90, 'A', 22, { c: TEAL }) + clock(170, 86, 7, 25, 'Ali is eating breakfast.') +
+  txt(430 - 84, 90, 'B', 22, { c: TEAL }) + clock(430, 86, 4, 50, 'Ali is at swimming after school.') +
+  txt(300, 192, 'short thick hand = hour     long red hand = minute', 14, { c: TEAL }),
+  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school. The short thick navy hand is the hour hand and the long thin red hand is the minute hand.');
 
 /* ---------- module ---------- */
 module.exports = {
@@ -70,8 +73,8 @@ module.exports = {
     n: 9, week: 5, session: 'A', title: 'Measure Masters', topic: 'Length, Mass, Volume and Time',
     objective: 'Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with a.m. and p.m. and find start times, end times and how long, also across the hour.',
     skills: 'Reasoning with equal amounts (swapping), working step by step, keeping a table, counting on in time, checking',
-    materials: 'A coat hanger, two paper cups and string (a home-made balance), 20¢ coins or erasers, a glue stick and a spoon; two plastic cups for pouring; a cardboard clock with hands; mini whiteboards.',
-    online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock.',
+    materials: 'A coat hanger, two paper cups, string, a glue stick, a spoon and about 20 20¢ coins (a home-made balance; backup: a ruler balanced on a pencil); for the jug puzzles two cups or bottles of different size (about 3 and 5 units), a jug of dry rice or sand (or water), and tape marking 3 and 5 units; a cardboard clock with hands; mini whiteboards.',
+    online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
     warmup: 'Which unit? The tutor shows six things (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing your teeth). Children show m, cm, kg, g, ℓ or minutes on whiteboards, then explain.',
     explore: 'Balance lab with a coat-hanger balance: how many 20¢ coins balance a glue stick? A spoon? Guess first, then test. Which is heavier, and how do you know without putting them on the balance together?',
     mini: 'A level balance means both sides are equally heavy, so we can swap one thing for whatever balances it (watermelon = 3 pineapples; pineapple = 2 kg; so watermelon = 6 kg; watermelon = pineapple + 4 bags, so the 4 bags are 4 kg). Jug puzzles: fill, pour or empty, and write every pour in a table (4 ℓ and 9 ℓ jugs: fill 9, pour into 4 twice, emptying in between, leaves 1 ℓ).',
@@ -174,7 +177,7 @@ module.exports = {
     H.sub('b', 'She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.', { keepNext: true }),
     H.fig(ribbonFig),
     H.sub('c', 'Ben cuts a 20 m rope into 4 equal pieces.  Each piece: _____ m   Cuts: _____'),
-    H.q(5, 'Read the clocks.', { keepNext: true }),
+    H.q(5, 'Read the clocks. The short thick hand is the hour hand. The long red hand is the minute hand. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
     H.sub('a', 'Write each time with a.m. or p.m.   A: ____________   B: ____________'),
     H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________'),

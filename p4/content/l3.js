@@ -71,7 +71,7 @@ module.exports = {
       ['Q2', '(a) 7 × 6 − 4 = 38  (b) 48 ÷ 6 × 2 = 16  (c) 9 ÷ 3 + 5 = 8  (d) 12 ÷ 3 + 2 × 5 = 14. Each puzzle has only one answer.'],
       ['Q3', '(a) 41  (b) (4 + 8) × 5 − 3 = 57  (c) 4 + 8 × (5 − 3) = 20  (d) (4 + 8) × (5 − 3) = 12 × 2 = 24'],
       ['Q4', '(a) 23. Work backwards: 30 × 4 = 120, 120 + 18 = 138, 138 ÷ 6 = 23.  (b) Check: 23 × 6 = 138, 138 − 18 = 120, 120 ÷ 4 = 30.'],
-      ['Q5', 'The answer is always 7 (for example 3: 15, 50, 10, 7). (a) It is always 7.  (b) Multiplying by 5 and then dividing by 5 gets you back to your number. The 35 is shared into 5 groups too, so you get your number and 7 more. Taking away your number leaves 7.'],
+      ['Q5', 'The answer is always 7 (for example 3: 15, 50, 10, 7). (a) It is always 7.  (b) Blanks: number, 7, 7. Multiplying by 5 and then dividing by 5 gets you back to your number. The 35 divided by 5 adds 7. Taking away your number leaves 7.'],
       ['Q6', '(a) Chicken rice: 3 units. Laksa: 1 unit. 4 units = 1 236.  (b) 1 unit = 1 236 ÷ 4 = 309. Chicken rice = 3 × 309 = 927 plates.  (c) 2 units = 618 more plates.'],
       ['Q7', '(a) 5, 8, 13, 21, 34 (21 − 13 = 8, 13 − 8 = 5, 13 + 21 = 34).  (b) 4, 7, 11, 18, 29.']
     ]
@@ -119,15 +119,17 @@ module.exports = {
       { q: 'Work out 4 236 ÷ 6.', a: '706' }
     ],
     stretch: [
-      { q: 'Work out 120 − 4 × (18 + 7).', a: '20 (18 + 7 = 25, 4 × 25 = 100, 120 − 100 = 20).' },
+      { q: 'There are 2 340 red and blue beads. There are 4 times as many blue beads as red beads. How many red beads are there?', a: '468 (5 units = 2 340, 1 unit = 468).' },
       { q: 'Put ONE pair of brackets in 3 + 5 × 6 − 2 to make the answer 46.', a: '(3 + 5) × 6 − 2 = 8 × 6 − 2 = 46.' },
       { q: 'Write +, −, × or ÷ in each gap to make this true:  12 __ 4 __ 5 = 15', a: '12 ÷ 4 × 5 = 15 (the only way).' },
-      { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' },
-      { q: 'There are 2 340 red and blue beads. There are 4 times as many blue beads as red beads. How many red beads are there?', a: '468 (5 units = 2 340, 1 unit = 468).' },
+      { q: 'Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. The answer is always 7. Explain why it always works. A bar model can help.', a: 'Multiplying by 5 and then dividing by 5 gets back to your number. The 35 divided by 5 adds 7. Taking away your number leaves the 7. So the answer is always 7.' },
+      { q: 'Work out 120 − 4 × (18 + 7).', a: '20 (18 + 7 = 25, 4 × 25 = 100, 120 − 100 = 20).' },
       { q: 'In this chain, each number after the first two is the sum of the two before it. Fill in the gaps: 3, __, __, 17, __', a: '3, 7, 10, 17, 27.' },
       { q: 'A plate of noodles costs $4 and a drink costs $2. Ravi buys 3 plates of noodles and 2 drinks. Write ONE number sentence for the total cost and work it out.', a: '3 × 4 + 2 × 2 = 16, so $16.' },
-      { q: 'Is 50 − 20 − 10 the same as 50 − (20 − 10)? Explain.', a: 'No. 50 − 20 − 10 = 20 (left to right), but 50 − (20 − 10) = 50 − 10 = 40.' }
+      { q: 'Is 50 − 20 − 10 the same as 50 − (20 − 10)? Explain.', a: 'No. 50 − 20 − 10 = 20 (left to right), but 50 − (20 − 10) = 50 − 10 = 40.' },
+      { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' }
     ],
+
     challenge: [
       { q: 'Use four 4s and any of +, −, ×, ÷ and brackets to make 5.', a: 'For example (4 × 4 + 4) ÷ 4 = 20 ÷ 4 = 5.' },
       { q: 'Start at 7. If a number is even, halve it. If it is odd, multiply it by 3 and add 1. How many steps does it take to reach 1?', a: '16 steps: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.' },
@@ -166,8 +168,7 @@ module.exports = {
       W.push(H.tbl(ws, [H.row(['My number', '× 5', '+ 35', '÷ 5', '− my number'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED' }))),
         ...[0, 1].map(() => H.row(ws.map(w => H.cell('', w, { h: 55 }))))])); }
     W.push(H.sub('a', 'What do you notice?  ______________________________'));
-    W.push(H.sub('b', 'Explain why it works. A bar model can help.'));
-    W.push(...H.lines(1));
+    W.push(H.sub('b', 'Fill in the blanks.  Multiplying by 5 and then dividing by 5 gives back my ________.  The 35 divided by 5 adds ________.  Taking away my number leaves ________.'));
     W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 1 236 plates altogether.', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model.'));
     W.push(H.gap(240));

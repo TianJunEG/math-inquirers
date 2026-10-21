@@ -85,7 +85,7 @@ module.exports = {
     objective: 'Find all the factors of a number using factor pairs, decide whether a number is prime by testing small divisors, write a number as a product of primes with a factor tree, use mod (the remainder), if and a counter in code to count factors, and explore Goldbach pairs and numbers with exactly 3 factors.',
     skills: 'Systematic listing (factor pairs), testing and ruling out, reasoning about when to stop, tracing code, generalising (squares of primes)',
     materials: 'Laptop or desktop with Scratch 3 open, a printed 1 to 100 grid (or squared paper), two coloured pencils, mini whiteboard, workbook. Optional: a Python editor for children who already know Python.',
-    online: 'Share the 1 to 100 grid on screen and annotate it while children work on their own printed or hand-drawn grid. Send the prime checker blocks in the chat. Children hold their grid up to the camera at minute 22.',
+    online: 'Share the 1 to 100 grid on screen and annotate it while children work on their own printed or hand-drawn grid. Build the prime checker together in your shared Scratch window; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Children hold their grid up to the camera at minute 22.',
     warmup: 'Factor pair race: six number cards (12, 16, 20, 24, 29, 30). Pairs race to say every factor pair. One card has only one pair: which one, and why?',
     explore: 'The sieve of Eratosthenes by hand on a 1 to 100 grid: cross out 1, circle 2 and cross out its other multiples, then do the same for 3, 5 and 7. Count the primes and decide why we can stop after 7.',
     mini: 'Factors come in pairs; stop when the pairs meet (36 has 9 factors because 6 × 6 counts once). A prime has exactly 2 factors; 1 is not prime. Test 91: 2, 3 and 5 fail, 7 works (7 × 13), so it is not prime; stop testing once d × d is bigger than the number. Factor trees: 60 = 2 × 2 × 3 × 5 whichever way you split it. Code: n mod d is the remainder; if it is 0, d is a factor; a counter counts the factors; count = 2 means prime. Before page 2: trace a loop with mod, Goldbach pairs (20 = 3 + 17 = 7 + 13), and counting the factors of square numbers.',
@@ -96,14 +96,14 @@ module.exports = {
       'Missing factors by not working in pairs, or counting the middle factor of a square number twice (6 in 36).',
       'Stopping a factor tree at a number that is not prime (72 = 2 × 2 × 18), or reading mod as division (thinking 10 mod 4 is 2.5 instead of the remainder 2).'
     ],
-    extension: 'Put the prime checker inside a second loop so n goes 1, 2, 3, … 100 and the sprite says only the primes. Does it find 25 primes, like the sieve?',
+    extension: 'First add if count = 2 then say prime, else say not prime after the loop. Then put the prime checker inside a second loop so n goes 1, 2, 3, … 100 and the sprite says only the primes. Does it find 25 primes, like the sieve?',
     key: [
       ['Q1', '28: 1, 2, 4, 7, 14, 28 (6 factors, not prime).  31: 1, 31 (2, prime).  49: 1, 7, 49 (3, not prime).  51: 1, 3, 17, 51 (4, not prime: 51 = 3 × 17).  1: 1 (1 factor, not prime).  (a) 67, 83 and 97 are prime (57 = 3 × 19, 77 = 7 × 11, 99 = 9 × 11).  (b) No. 8 + 7 = 15, a multiple of 3, so 87 = 3 × 29.'],
       ['Q2', '(a) 72 = 2 × 2 × 2 × 3 × 3  (b) 150 = 2 × 3 × 5 × 5  (c) 126 (2 × 3 × 3 × 7)'],
       ['Q3', 'd = 1 to 6.  6 mod d: 0, 0, 0, 2, 1, 0.  count after each loop: 1, 2, 3, 3, 3, 4.  (a) 4 (the factors 1, 2, 3, 6)  (b) It says 2, so 13 is prime: its only factors are 1 and 13.'],
       ['Q4', '(a) 24 = 5 + 19 = 7 + 17 = 11 + 13 (3 ways)  (b) 36 = 5 + 31 = 7 + 29 = 13 + 23 = 17 + 19 (4 ways)  (c) An odd total needs one even and one odd number. The only even prime is 2, and 27 − 2 = 25 is not prime.'],
       ['Q5', '(a) 4, 9, 25, 49  (b) They are squares of primes (2 × 2, 3 × 3, 5 × 5, 7 × 7). Their factors are 1, the prime and the square.  (c) 121 (11 × 11)'],
-      ['Q6', 'E, C, B. Inside B: F (with A inside F), then D. It says 1, 2, 4, 5, 8, 10, 20, 40: 8 numbers.']
+      ['Q6', 'E, C, B. Inside B: F (with A inside F), then D. It says 1, 2, 4, 5, 8, 10, 20, 40 (8 numbers, one per second).']
     ]
   },
 
@@ -133,7 +133,7 @@ module.exports = {
     expPic: 'the first three rows of a 1 to 100 grid with 2 and 3 circled and the multiples of 2 crossed out.',
     expAsk: [['How many primes are there from 1 to 100?', '25.'], ['Why could we stop after crossing out the multiples of 7?', 'The next prime is 11, and 11 × 11 = 121 is bigger than 100. Every smaller multiple of 11 (22, 33, … 99) has a smaller factor, so it is already crossed out.'], ['Is 1 prime? Is 2 prime?', '1 is not: it has only one factor. 2 is prime (factors 1 and 2), the only even prime.']],
     mini1: { head: 'Is 91 prime?', body: ['Not even; 9 + 1 = 10 is not a multiple of 3; does not end in 0 or 5.', 'Try 7: 91 ÷ 7 = 13.', 'Stop testing once d × d is bigger than the number (10 × 10 = 100).'], ans: 'Not prime: 91 = 7 × 13.' },
-    mini2: { head: 'Prime checker in code (n = 15)', body: ['repeat n: if n mod d = 0 then change count by 1; change d by 1.', 'n mod d is the remainder. 0 means d is a factor.', 'At the end, count = 2 means prime.'], ans: 'Factors 1, 3, 5 and 15: count = 4, so it says "not prime".' },
+    mini2: { head: 'Prime checker in code (n = 15)', body: ['repeat n: if n mod d = 0 then change count by 1; change d by 1.', 'n mod d is the remainder. 0 means d is a factor.', 'At the end, count = 2 means prime.'], ans: 'Factors 1, 3, 5 and 15: count = 4, not 2, so 15 is not prime.' },
     keyHead: 'Key idea: exactly two factors',
     keyBig: 'A prime has exactly 2 factors: 1 and itself. Test 2, 3, 5, 7, … until d × d is bigger than the number.',
     keySmall: 'n mod d gives the remainder. n mod d = 0 means d is a factor of n.',
@@ -211,10 +211,10 @@ module.exports = {
     W.push(H.sub('a', 'All the numbers from 1 to 50 with exactly 3 factors:  ______________'));
     W.push(H.sub('b', 'What do you notice?  ________________     (c)  Next one after 50?  ______'));
     // Q6 plan
-    W.push(H.q(6, 'Plan your code. Put these blocks in order so the sprite says every factor of 40.', { keepNext: true }));
+    W.push(H.q(6, 'Plan your code. Put these blocks in order so the sprite says every factor of 40, one per second.', { keepNext: true }));
     { const lb = (t, p) => `<div style="display:flex;align-items:center;gap:6px"><b style="width:18px">${t}</b>${blocks(p, 'Block ' + t, 14).replace('max-width:100%', 'flex:none')}</div>`;
       const col = xs => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + xs.join('') + '</div>';
-      W.push(side('<div style="display:flex;gap:14px">' + col([lb('A', [['look', 'say (d)']]), lb('B', [['ctl', 'repeat (40)', []]]), lb('C', [['var', 'set d to (1)']])]) + col([lb('D', [['var', 'change d by (1)']]), lb('E', [hat]), lb('F', [['ctl', 'if (40 mod d = 0) then', []]])]) + '</div>', 5600,
+      W.push(side('<div style="display:flex;gap:14px">' + col([lb('A', [['look', 'say (d) for (1) seconds']]), lb('B', [['ctl', 'repeat (40)', []]]), lb('C', [['var', 'set d to (1)']])]) + col([lb('D', [['var', 'change d by (1)']]), lb('E', [hat]), lb('F', [['ctl', 'if (40 mod d = 0) then', []]])]) + '</div>', 5600,
         [txt('My order (show what goes inside):', '2px 4px 0'), dl, txt('How many numbers does it say?  ______', '10px 4px 0')]));
     }
     return W;

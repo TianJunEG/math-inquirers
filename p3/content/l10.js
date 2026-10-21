@@ -46,10 +46,10 @@ module.exports = {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed puzzles: bar graphs and logic',
     objective: 'Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking.',
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
-    materials: 'Puzzle cards for 4 stations (graph, logic, list, measure), digit cards 0 to 9, a 1 m 20 cm string, play money, squared paper, mini whiteboards, certificates, stamps.',
-    online: 'Each breakout pair gets one station card on screen and reports back; logic grids and graphs are shared on screen and annotated together.',
+    materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps.',
+    online: 'Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
     warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
-    explore: 'Station rotation in pairs (pick 2 of 4, about 7 minutes each): Graph (read a bar graph of fruit sold and write 3 true facts), Logic (a 3 by 3 clue card), List (make every 3-digit number from 3 digit cards), Measure (cut a 1 m 20 cm string into 3 pieces, each 10 cm longer than the one before). Write the answer and how you started.',
+    explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',
     mini: 'How to start a puzzle: draw it (a queue: 4th from the front and 6th from the back means 4 + 6 − 1 = 9 people), make a table (a logic grid: a tick in a box means crosses in the rest of its row and column), read the scale of a bar graph (what does one space stand for? halfway between two lines). Then list it in order before page 2.',
     share: 'Pick one puzzle and teach it to the group: how did you START it, and how do you know your answer is right?',
     exit: { q: 'Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? Which start did you use?', a: '7 people (3 in front, Ali, 3 behind: 4 + 4 − 1 = 7). Draw it.' },
@@ -71,8 +71,8 @@ module.exports = {
   script: {
     hook: ['Welcome to Challenge Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
     warmIntro: ['Relay chain: I ask the first question. The answer is the start of the next question, so listen carefully and pass it on. If someone is stuck, the group can help with a hint, not the answer.'],
-    predict: ['Look at the four stations. Which one do you think will be the hardest? Write your guess, and we will see at the end.'],
-    exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'Graph station: “What does one space on the scale stand for?”', 'Logic station: “Find a clue that tells you something for sure. Put a cross where it cannot be.”', 'Finished early: make a puzzle card for the next pair.'],
+    predict: ['Look at the two stations. Which one do you think will be harder? Write your guess, and we will see at the end.'],
+    exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'List station: “Start with the smallest digit in the hundreds place. How many numbers does each digit give?”', 'Measure station: “Draw the three pieces. What if all three were the same? What is extra?”', 'Finished early: make a puzzle card for the next pair.'],
     think: [
       '“Siti is 4th from the front and 6th from the back. I draw the queue: 3 people in front of Siti, Siti, then 5 people behind her. 3 + 1 + 5 = 9. If I add 4 + 6 I count Siti twice, so I take 1 away: 10 − 1 = 9.”',
       '“A logic grid: Ben does not like curry puff or popiah, so I put two crosses in Ben’s row. Only kaya toast is left, so a tick. A tick means crosses in the rest of that column, so nobody else has kaya toast.”',
@@ -88,9 +88,9 @@ module.exports = {
     today: 'Choose how to start a puzzle: draw it, list it or make a table. Solve a logic grid and read a bar graph with a scale.',
     warmGame: 'Relay chain. Each answer is passed on and becomes the start of the next question.',
     warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2'], ['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
-    expSetup: ['Pick 2 of the 4 stations: Graph, Logic, List, Measure.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer and how you started.'],
-    expPic: 'four station cards: a small bar graph, a 3 by 3 logic grid, three digit cards, and a string with a ruler.',
-    expAsk: [['How did you start each puzzle?', 'Open: draw it, list it, make a table.'], ['How many numbers did the List station make? How do you know you have them all?', '6 numbers: 2 for each hundreds digit, listed in order.'], ['Measure station: how long is each piece of string?', '30 cm, 40 cm and 50 cm (take away the extra 10 + 20 = 30 cm, 90 cm ÷ 3 = 30 cm).']],
+    expSetup: ['Two stations, 7 minutes each: List, then Measure.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer and how you started.'],
+    expPic: 'two station cards: three digit cards, and a 120 cm ribbon to be cut into 3 pieces.',
+    expAsk: [['How did you start each puzzle?', 'Open: draw it, list it, make a table.'], ['How many numbers did the List station make? How do you know you have them all?', '6 numbers: 2 for each hundreds digit, listed in order.'], ['Measure station: how long is each piece of ribbon?', '30 cm, 40 cm and 50 cm (take away the extra 10 + 20 = 30 cm, 90 cm ÷ 3 = 30 cm).']],
     mini1: { head: 'Draw it: a queue', body: ['Siti is 4th from the front and 6th from the back of a queue.', 'How many people are in the queue?'], ans: '9 people: 3 in front, Siti, 5 behind (4 + 6 − 1 = 9).' },
     mini2: { head: 'Make a table: a logic grid', body: ['Ben, Siti and Ravi each like a different snack: curry puff, kaya toast, popiah.', 'Ben does not like curry puff or popiah. Ravi does not like curry puff. Who likes what?'], ans: 'Ben: kaya toast. Ravi: popiah. Siti: curry puff.' },
     keyHead: 'Key idea: how to start a puzzle',
@@ -98,7 +98,7 @@ module.exports = {
     keySmall: 'Logic grid: a tick means crosses in the rest of its row and column. Bar graph: read the scale first.',
     brk: 'Freeze dance with maths. When the music stops, the tutor shows a 24-hour time; make the clock hands with your arms.',
     ws1: 'Page 1, in pairs: Q1 the drinks bar graph, Q2 the CCA logic grid.',
-    ws2: 'Page 2, on your own: Q3 queues, Q4 digit cards, Q5 matchstick squares, Q6 a number riddle.'
+    ws2: 'Page 2, on your own: Q3 queues, Q4 digit cards, Q5 matchstick squares, then Q6 a number riddle if you have time.'
   },
   qbank: {
     core: [
@@ -116,7 +116,7 @@ module.exports = {
       { q: 'Use the digits 3, 0, 6 and 9 once each. Make the largest even 4-digit number and the smallest odd 4-digit number.', a: 'Largest even: 9630. Smallest odd: 3069.' },
       { q: 'A bar graph shows stamps: Ali 35 and Ben 20. Mei has 15 more than Ben. Siti has as many as Ali and Ben together. How many stamps do the four children have altogether?', a: '145 (Mei 35, Siti 55; 35 + 20 + 35 + 55 = 145)' },
       { q: 'Ali, Ben and Siti stand in a line. Ali is not first. Ben is just behind Siti. Who is first?', a: 'Siti (the order is Siti, Ben, Ali)' },
-      { q: 'A snail climbs a wall 12 m high. Each day it climbs up 5 m, and each night it slides down 2 m. On which day does it reach the top?', a: 'Day 4 (end of each day: 5, 8, 11, 14 m; it passes 12 m on day 4)' },
+      { q: 'A snail climbs a wall 12 m high. Each day it climbs up 5 m, and each night it slides down 2 m. On which day does it reach the top?', a: 'Day 4 (highest point each day: 5, 8, 11, 14 m; it passes 12 m on day 4)' },
       { q: 'Two numbers add up to 100. Their difference is 24. What are the numbers?', a: '62 and 38' }
     ],
     challenge: [
@@ -142,7 +142,7 @@ module.exports = {
     W.push(sub('d', 'Which two drinks together sold exactly 100 cups?   ________ and ________'));
     W.push(q(2, 'Ali, Mei, Ravi and Siti are each in a different CCA. Use the clues: put a ✓ or a cross in each box, then write each child’s CCA in the last column.', { keepNext: true }));
     W.push(sub('Clue 1', 'Ali is not in the choir and does not play chess.', { after: 40 }));
-    W.push(sub('Clue 2', 'Mei and Ravi went to watch their friend sing in the choir concert.', { after: 40 }));
+    W.push(sub('Clue 2', 'Mei and Ravi are not in the choir.', { after: 40 }));
     W.push(sub('Clue 3', 'The swimmer’s name has 4 letters.'));
     { const ws = [1500, 1600, 1600, 1600, 1600, 2000];
       W.push(tbl(ws, [row(['', 'Chess', 'Choir', 'Football', 'Swimming', 'CCA'].map((s, i) => cell(s, ws[i], { bold: true, fill: i === 5 ? 'D9D9D9' : 'EDEDED', h: 40 }))),
@@ -164,7 +164,7 @@ module.exports = {
         row(['Sticks', '4', '7', '10', '', '', ''].map((s, i) => cell(s, ws[i], { bold: i === 0, h: 60, size: 24 })))])); }
     W.push(sub('a', 'How many sticks are needed for 8 squares?   ____'));
     W.push(sub('b', 'Ben uses 31 sticks. How many squares does he make?   ____'));
-    W.push(q(6, 'I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
+    W.push(q(6, '(if time) I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
     W.push(...lines(2));
     return W;
   }

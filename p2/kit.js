@@ -53,20 +53,50 @@ function clock() {
   }
   b += `<circle cx="${cx}" cy="${cy}" r="7" fill="${NAVY}"/>`;
   // hands to cut out
-  b += `<rect x="470" y="120" width="26" height="150" rx="10" fill="${RED}" stroke="${NAVY}" stroke-width="2" ${dash}/><rect x="530" y="70" width="18" height="200" rx="8" fill="${TEAL}" stroke="${NAVY}" stroke-width="2" ${dash}/>`;
-  b += lab(462, 300, 'hour hand') + lab(512, 330, 'minute hand');
-  b += note(450, 380, 'Cut out the clock and the hands.') + note(450, 402, 'Pin them at the centre with a') + note(450, 424, 'split pin or a short pencil.');
+  // same colours as the clock in Lesson 9: hour hand = short, thick, navy; minute hand = long, thin, red
+  b += `<rect x="470" y="120" width="28" height="150" rx="10" fill="${NAVY}" stroke="${NAVY}" stroke-width="2" ${dash}/><rect x="534" y="70" width="12" height="200" rx="6" fill="${RED}" stroke="${NAVY}" stroke-width="2" ${dash}/>`;
+  b += lab(440, 300, 'hour hand') + lab(440, 322, '(short, thick)') + lab(520, 346, 'minute hand') + lab(520, 368, '(long, thin)');
+  b += note(450, 400, 'Cut out the clock and the hands.') + note(450, 422, 'Pin them at the centre with a') + note(450, 444, 'split pin or a short pencil.');
   return svg(470, b);
+}
+// Lesson 8: the six nets A to F from the workbook figure, to cut out and fold. Dashed = cut, solid = fold.
+function nets() {
+  const NETS = [['A', ['.#..', '####', '.#..']], ['B', ['###', '###']], ['C', ['#...', '####', '...#']], ['D', ['.##.', '####']], ['E', ['##..', '.##.', '..##']], ['F', ['#....', '#####']]];
+  const c = 52; let b = '';
+  NETS.forEach(([l, rows], i) => {
+    const ox = 30 + (i % 2) * 350, oy = 44 + Math.floor(i / 2) * 200;
+    const has = (x, y) => !!rows[y] && rows[y][x] === '#';
+    let cells = '', cut = '';
+    rows.forEach((r, y) => [...r].forEach((ch, x) => {
+      if (ch !== '#') return;
+      const X = ox + x * c, Y = oy + y * c;
+      cells += `<rect x="${X}" y="${Y}" width="${c}" height="${c}" fill="${SKY}" stroke="${NAVY}" stroke-width="1.5"/>`;
+      if (!has(x, y - 1)) cut += `M${X} ${Y}h${c}`;
+      if (!has(x, y + 1)) cut += `M${X} ${Y + c}h${c}`;
+      if (!has(x - 1, y)) cut += `M${X} ${Y}v${c}`;
+      if (!has(x + 1, y)) cut += `M${X + c} ${Y}v${c}`;
+    }));
+    b += `<text x="${ox}" y="${oy - 14}" font-size="24" font-weight="800" fill="${TEAL}">Net ${l}</text>` + cells + `<path d="${cut}" fill="none" stroke="${NAVY}" stroke-width="3" ${dash}/>`;
+  });
+  b += note(30, 640, 'Cut along the dashed lines. Fold along the solid lines. Which nets fold up into a cube?');
+  return svg(660, b);
+}
+// two extra $1 coins so that the all-$1 way in Lesson 6 Q2 (eight $1 coins) is possible
+function spareDollars() {
+  let b = '';
+  for (let i = 0; i < 2; i++) { const x = 55 + i * 105; b += `<circle cx="${x}" cy="50" r="38" fill="#EBD98A" stroke="${NAVY}" stroke-width="2.5" ${dash}/><circle cx="${x}" cy="50" r="30" fill="none" stroke="#888" stroke-width="1"/><text x="${x}" y="57" font-size="20" font-weight="800" text-anchor="middle" fill="${NAVY}">$1</text>`; }
+  return lab2('Two spare $1 coins') + svg(100, b);
 }
 const kit = () => [
   H('Cut-outs', 'For the P2 program. Cut along the dashed lines and keep the pieces in one envelope.'),
   lab2('Place-value cards (Lessons 1, 2 and 10)'), placeValue(),
-  '<div class="brk"></div>', H('Digit cards', 'Two sets of 0 to 9 (Lessons 1 and 2).'), digits(),
+  '<div class="brk"></div>', H('Digit cards', 'Two sets of 0 to 9 (Lessons 1 and 10).'), digits(),
   lab2('Fraction strips (Lesson 7)'), fractions(),
   '<div class="brk"></div>', H('Paper clock', 'For Lesson 9 (time).'), clock(),
-  lab2('Paper cube strips (Lesson 9)'), P.cubes(),
-  '<div class="brk"></div>', H('Play coins', 'For Lesson 6 (Market Day).'), P.coins(),
-  '<div class="brk"></div>', H('Play notes and $1 coins', 'For Lesson 6 (Market Day).'), P.notes()
+  lab2('Paper strips of numbered squares (Lesson 9: ribbons and lengths)'), P.cubes(),
+  '<div class="brk"></div>', H('Cube nets', 'For Lesson 8 (Shape Builders). Cut out each net and try folding it. Which ones make a cube?'), nets(),
+  '<div class="brk"></div>', H('Play coins', 'For Lesson 6 (Market Day). Seven 5¢, seven 10¢, six 20¢ and five 50¢. Keep spare coins in the envelope.'), P.coins(),
+  '<div class="brk"></div>', H('Play notes and $1 coins', 'For Lesson 6 (Market Day). Eight $1 coins (six here and two spare below), four $2, four $5, four $10 and two $50 notes. Keep spare coins in the envelope.'), P.notes(), spareDollars()
 ];
 module.exports = kit;
-module.exports.parts = { placeValue, digits, fractions, clock };
+module.exports.parts = { placeValue, digits, fractions, clock, nets };

@@ -86,7 +86,7 @@ module.exports = {
     mini1: { head: 'Place value: more than 9 tens', body: ['5 hundreds, 12 tens and 4 ones.', '12 tens = 120.', '500 + 120 + 4 = ?'], ans: '624. Ten of the tens make another hundred.' },
     mini2: { head: 'Every number from 1, 6, 9', body: ['Fix the hundreds digit, then swap the other two.', '1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961.', 'How many? Which is biggest?'], ans: '6 numbers. Biggest 961, smallest 169.' },
     keyHead: 'Key idea: list in order', keyBig: 'Fix the hundreds digit, then swap the others. Each card starts the same number of numbers.', keySmall: 'Zero can never be the hundreds digit. Biggest digit first makes the biggest number.',
-    brk: 'Human number. Three children stand as hundreds, tens and ones holding digit cards. Swap two of them: is the new number bigger or smaller?',
+    brk: 'Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Show your new number on camera. Is it bigger or smaller?',
     ws1: 'Page 1, in pairs: Q1 place value, Q2 the cards 2, 7, 4, Q3 the cards with a zero.',
     ws2: 'Page 2, on your own: Q4 chart pieces, Q5 count on and back, Q6 digit riddles.'
   },
@@ -108,7 +108,7 @@ module.exports = {
       { q: 'I am a 3-digit number. My digits add up to 4. Find all the numbers I could be.', a: '10 numbers: 103, 112, 121, 130, 202, 211, 220, 301, 310, 400.' },
       { q: 'Use the digit cards 2, 5 and 9 once each. Which number you can make is closest to 600?', a: '592 (only 8 away).' },
       { q: 'How many 3-digit numbers have 7 in the hundreds place and 0 in the ones place?', a: '10: 700, 710, 720, … 790.' },
-      { q: 'On a 1000 chart with rows of 10, which number is just below 495? Which number is just above 501?', a: '505 is below 495. 491 is above 501.' }
+      { q: 'On a 1000 chart with rows of 10, which number is directly below 495 (one square down)? Which number is directly above 501 (one square up)?', a: '505 is directly below 495. 491 is directly above 501.' }
     ],
     challenge: [
       { q: 'Use any three of the digit cards 1, 3, 5 and 7. How many different 3-digit numbers can you make?', a: '24. Leave out one card (4 choices); each set of 3 cards makes 6 numbers: 6 + 6 + 6 + 6 = 24.' },

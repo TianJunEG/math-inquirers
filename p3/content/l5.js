@@ -8,7 +8,7 @@ module.exports = {
     objective: 'Divide with remainders, check that the remainder is smaller than the number we divide by, decide what the leftover means in a story, work backwards from groups and leftovers, and solve "what number am I?" riddles by making a list.',
     skills: 'Division with remainders, interpreting the remainder (one more group or leave it out), working backwards (groups × size + leftover), making a systematic list and testing each clue, making a table',
     materials: '25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers.',
-    online: 'Children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls. Share the screen for the slides; children hold whiteboards up to the camera.',
+    online: 'Children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls. Share the screen for the slides; children hold whiteboards up to the camera. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Leftover Lucky Dip: the tutor calls a number of sweets and a group size (23 in 4s). Children show the number of groups on one hand and the leftover on the other, then explain with a times-table fact.',
     explore: 'Pairs put 25 counters into groups of 2, 3, 4, 5 and 6 and record the groups and the leftover in a table. They notice that 25 leaves 1 over for 2, 3, 4 and 6, and nothing for 5, and explain why (24 is in the 2, 3, 4 and 6 tables).',
     mini: 'The remainder is always smaller than the number we divide by. Check with groups × size + leftover. Then read the story: does the leftover need one more group (vans), or do only full groups count (boxes, things you can buy)?',
@@ -77,7 +77,7 @@ module.exports = {
     keySmall: 'Then ask: does the leftover need one more group, or is it left out?',
     brk: 'Clap-and-stomp groups. The tutor calls “Clap 17 in 5s!” Everyone claps in groups of 5, then stomps once for each leftover clap. Then 23 in 4s and 20 in 6s.',
     ws1: 'Page 1, in pairs: Q1 sharing stickers and fixing a wrong remainder, Q2 what the leftover means, Q3 working backwards and repacking.',
-    ws2: 'Page 2, on your own: Q4 what number am I (list and test, find all), Q5 the biggest remainder, Q6 the party tables (make a table).'
+    ws2: 'Page 2, on your own: Q4 what number am I (list and test, find all), Q5 the biggest remainder, then Q6 the party tables (make a table) if you have time.'
   },
 
   qbank: {
@@ -93,7 +93,7 @@ module.exports = {
       { q: 'Mei has 53 beads. She makes bracelets with 8 beads each. How many bracelets can she make? How many more beads does she need to make one more bracelet?', a: '6 bracelets (53 ÷ 8 = 6 r 5). She needs 3 more beads (56 − 53).' },
       { q: 'I am a number between 20 and 30. When I am divided by 4, the remainder is 3. When I am divided by 6, the remainder is 5. What number am I?', a: '23 (remainder 3 when ÷ 4: 23 and 27; 23 ÷ 6 = 3 r 5, 27 ÷ 6 = 4 r 3)' },
       { q: 'What is the biggest 2-digit number that leaves a remainder of 8 when it is divided by 9?', a: '98 (9 × 10 + 8 = 98; 99 ÷ 9 has no remainder)' },
-      { q: 'A boat can carry 9 people. 100 people want to cross the river. How many trips must the boat make?', a: '12 trips (100 ÷ 9 = 11 r 1; the last person needs a trip too)' },
+      { q: 'A boat can carry 9 people at a time. 100 people want to cross the river. How many boatloads are needed?', a: '12 boatloads (100 ÷ 9 = 11 r 1; the last person needs a boatload too)' },
       { q: 'Siti fills 9 bags with 7 oranges each and has 5 oranges left over. She packs all the oranges again into bags of 8. How many full bags does she get? How many are left over?', a: '68 oranges (9 × 7 + 5). 68 ÷ 8 = 8 r 4: 8 full bags, 4 left over.' },
       { q: 'A pattern goes circle, triangle, square, circle, triangle, square, … What is the 50th shape?', a: 'Triangle (50 ÷ 3 = 16 r 2; the 2nd shape in the repeat)' },
       { q: 'Find all the 2-digit numbers less than 40 that leave a remainder of 2 when divided by 3 AND when divided by 4.', a: '14, 26 and 38 (each is 2 more than a number in both the 3 and 4 tables: 12, 24, 36)' },
@@ -145,7 +145,7 @@ module.exports = {
     W.push(H.sub('a', 'Write ALL the remainders you could get when you divide a number by 8.', { keepNext: true }));
     W.push(H.ans());
     W.push(H.sub('b', 'A number between 60 and 70 is divided by 8. The remainder is as big as it can be. What is the number?   ____'));
-    W.push(H.q(6, 'At a class party, children sit at tables. If 6 children sit at each table, 5 children have no seat. If 7 children sit at each table, every seat is filled and nobody is left over.', { keepNext: true }));
+    W.push(H.q(6, '(if time) At a class party, children sit at tables. If 6 children sit at each table, 5 children have no seat. If 7 children sit at each table, every seat is filled and nobody is left over.', { keepNext: true }));
     const tw = [3300, 1100, 1100, 1100, 1100, 1100, 1100];
     W.push(H.tbl(tw, [
       H.row([H.cell('Number of tables', tw[0], { bold: true, fill: 'D9D9D9', size: 22 }), ...[1, 2, 3, 4, 5, 6].map(i => H.cell(String(i), tw[i], { bold: true, fill: 'D9D9D9' }))]),

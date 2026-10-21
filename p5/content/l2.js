@@ -27,7 +27,7 @@ const stickerBar = () => {
 module.exports = {
   lesson: {
     n: 2, week: 1, session: 'B', title: 'Fraction Feats', topic: 'Fractions: Four Operations',
-    objective: 'Link fractions and division (3 ÷ 4 = 3/4) and divide a proper fraction by a whole number; write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums.',
+    objective: 'Link fractions and division (3 ÷ 4 = 3/4) and (as a preview of P6) divide a proper fraction by a whole number; write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums.',
     skills: 'Fraction and division, drawing a model (bar, pizza), testing in order and knowing when to stop, fraction of a remainder, working backwards, looking for a pattern, testing both ways',
     materials: 'Paper circles (6 per child) to cut as pizzas, scissors, a strip of paper for bar models, digit cards 1 to 4, mini whiteboard, workbook.',
     online: 'Children cut out six paper circles before the lesson and fold or cut them on camera. The tutor shares the slides and draws the bar models live. Pairs work in breakout rooms for the explore and page 1.',
@@ -43,7 +43,7 @@ module.exports = {
     ],
     extension: 'Write 1 as the sum of three different unit fractions. Is there more than one way? (Only one: 1/2 + 1/3 + 1/6.)',
     key: [
-      ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) 1/8  (d) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)'],
+      ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)  (d) stretch: 1/8'],
       ['Q2', '(a) 1/2 + 1/5  (b) 1/4 + 1/5  (c) 1/3 + 1/24 and 1/4 + 1/8. (1/5 leaves 7/40, not a unit fraction; after that the first part is less than half of 3/8, so stop.)'],
       ['Q3', '(a) 120  (b) 60  (c) 1/4. Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.'],
       ['Q4', '(a) 1/30, 1/42. The bottom numbers are 1 × 2, 2 × 3, 3 × 4, 4 × 5, …  (b) 2/3, 3/4, 4/5  (c) 9/10. 1/90 is the 9th term (9 × 10), and each sum is 1 take away the next unit fraction.'],
@@ -93,7 +93,7 @@ module.exports = {
       { q: 'Work out 5/6 − 1/4.', a: '7/12' },
       { q: 'Find 3/5 of 15.', a: '9' },
       { q: 'Work out 2/3 × 9/10.', a: '3/5' },
-      { q: 'Work out 6/7 ÷ 3.', a: '2/7' }
+      { q: 'Work out 3/5 × 1/2 + 1/10.', a: '2/5 (3/10 + 1/10 = 4/10)' }
     ],
     stretch: [
       { q: 'Write 2/3 as the sum of two different unit fractions.', a: '1/2 + 1/6 (the only way).' },
@@ -102,8 +102,8 @@ module.exports = {
       { q: '4 litres of juice are poured equally into 6 bottles. How much juice is in each bottle?', a: '4/6 = 2/3 of a litre.' },
       { q: 'Which is bigger, 5/6 or 6/7? Explain without finding common denominators.', a: '6/7. 5/6 is 1/6 short of 1 and 6/7 is only 1/7 short of 1, and 1/7 is smaller than 1/6.' },
       { q: 'A rope 3/4 m long is cut into 3 equal pieces. How long is each piece?', a: '1/4 m (3/4 ÷ 3).' },
-      { q: 'Find a fraction between 1/3 and 1/2 with 12 as the bottom number.', a: '5/12 (1/3 = 4/12 and 1/2 = 6/12).' },
-      { q: 'Half of a number is 15. What is 2/5 of the number?', a: '12. The number is 30, and 2/5 of 30 = 12.' }
+      { q: 'Find a fraction between 2/5 and 1/2 with 20 as the bottom number.', a: '9/20 (2/5 = 8/20 and 1/2 = 10/20).' },
+      { q: 'Which is bigger, 7/8 of 24 or 5/6 of 30?', a: '5/6 of 30. 7/8 of 24 = 21 and 5/6 of 30 = 25.' }
     ],
     challenge: [
       { q: 'Write 1 as the sum of three different unit fractions. Find all the ways.', a: 'Only one way: 1/2 + 1/3 + 1/6. (The biggest part must be 1/2, and then 1/2 = 1/3 + 1/6 is the only split into two different unit fractions.)' },
@@ -124,9 +124,9 @@ module.exports = {
     W.push(H.q(1, 'Sharing. Remember: a ÷ b = a/b.', { before: 20, keepNext: true }));
     W.push(H.sub('a', '5 pizzas are shared equally among 8 children. Each gets  ______  of a pizza.'));
     W.push(H.sub('b', 'A 9 m ribbon is cut into 4 equal pieces. Each piece is  ______  m long.'));
-    W.push(H.sub('c', ['3/4 of a cake is shared equally among 6 children. Each gets  ______  of the whole cake.'.replace('3/4', fr(3, 4))]));
-    W.push(H.sub('d', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 40 }));
+    W.push(H.sub('c', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 40 }));
     W.push(...H.lines(1));
+    W.push(H.sub('d', ['(stretch) 3/4 of a cake is shared equally among 6 children. Each gets  ______  of the whole cake.'.replace('3/4', fr(3, 4))]));
     // Q2 unit fractions
     W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top).', { keepNext: true }));
     W.push(H.sub('a', [fr(7, 10) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));

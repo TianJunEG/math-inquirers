@@ -27,8 +27,8 @@ function trayFig() {
 function cyclesFig() {
   const wheel = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${W}" stroke="${N}" stroke-width="4"/><circle cx="${x}" cy="${y}" r="4" fill="${N}"/>`;
   let g = wheel(70, 100, 34) + wheel(200, 100, 34) + `<path d="M70 100 L120 52 L175 52 L200 100 M120 52 L135 100 L70 100 M175 52 L170 34 M160 34 L184 34" fill="none" stroke="${TEAL}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="108" y="40" width="26" height="9" rx="4" fill="${N}"/>` + txt(135, 160, 'bicycle: 2 wheels', { size: 20 });
-  g += wheel(500, 96, 38) + wheel(380, 112, 22) + wheel(418, 112, 22) + `<path d="M399 112 L460 70 L500 96 M460 70 L452 44 M440 44 L466 44 M399 112 L470 112" fill="none" stroke="${RED}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="420" y="74" width="28" height="9" rx="4" fill="${N}"/>` + txt(440, 160, 'tricycle: 3 wheels', { size: 20 });
-  return svg(600, 172, 'A bicycle with 2 wheels and a tricycle with 3 wheels', g, 360);
+  g += wheel(500, 96, 38) + [372, 414].map(x => `<ellipse cx="${x}" cy="108" rx="11" ry="28" fill="${W}" stroke="${N}" stroke-width="4"/><circle cx="${x}" cy="108" r="3" fill="${N}"/>`).join('') + `<path d="M372 108 L414 108 M393 108 L460 70 L500 96 M460 70 L452 44 M440 44 L466 44" fill="none" stroke="${RED}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="408" y="62" width="30" height="9" rx="4" fill="${N}"/>` + txt(440, 160, 'tricycle: 3 wheels', { size: 20 });
+  return svg(600, 172, 'A bicycle with 2 wheels and a tricycle with 3 wheels: one big front wheel and two rear wheels side by side', g, 360);
 }
 
 const lesson = {
@@ -55,7 +55,7 @@ const lesson = {
     ['Q4', '(a) 5 stickers each (4 × 5 = 20).  (b) 3 left over.  (c) 1 more sticker: 24 stickers give 6 each with none left over.'],
     ['Q5', '(a) 6 vans. 5 vans hold 25 children and the other 3 children need a van too.  (b) 2 empty seats (6 vans hold 30, and 30 − 28 = 2).'],
     ['Q6', '4 ways: 2 rows of 10, 4 rows of 5, 5 rows of 4, 10 rows of 2. 3 rows does not work (3 rows of 6 is 18, 3 rows of 7 is 21). More than 10 rows would leave fewer than 2 chairs in a row.'],
-    ['Q7', '3 ways: 7 bicycles and 1 tricycle (14 + 3); 4 bicycles and 3 tricycles (8 + 9); 1 bicycle and 5 tricycles (2 + 15). We know these are all: 0, 2 or 4 tricycles leave an odd number of wheels, which bicycles cannot make, and 6 or more tricycles need 18 wheels or more.']
+    ['Q7', '3 ways: 7 bicycles and 1 tricycle (14 + 3); 4 bicycles and 3 tricycles (8 + 9); 1 bicycle and 5 tricycles (2 + 15). We know these are all: 0, 2 or 4 tricycles leave an odd number of wheels, which bicycles cannot make, and 6 or more tricycles need 18 wheels or more. Accept a child\u2019s own wording at this level, for example: "I tried 0, 1, 2, 3, 4, 5 tricycles in order; 6 tricycles is already 18 wheels." The odd/even reason is a bonus.']
   ]
 };
 
@@ -163,8 +163,10 @@ const workbook = H => {
   out.push(H.sub('c', 'What is the smallest number of extra stickers Ravi needs so that none are left over?   ______'));
   out.push(H.q(5, '28 children go on a trip. Each van holds 5 children.', { keepNext: true }));
   out.push(H.sub('a', 'How many vans are needed?   ______        (b)  How many empty seats?   ______'));
-  out.push(H.q(6, 'Mr Tan puts 20 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. Find ALL the ways. Start with 2 rows.', { keepNext: true }));
-  out.push(H.tbl(hw, [hr('Rows', '2'), hr('Chairs in each row', ''), hr('Does it work?', '')]));
+  out.push(H.q(6, 'Mr Tan puts 20 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. Find ALL the ways. Start with 2 rows. Stop when the number of rows is bigger than the number of chairs in each row.', { keepNext: true }));
+  { const w6 = [2100, 867, 867, 867, 867, 867, 867, 867, 867, 864];
+    const r6 = (lab, vals) => H.row([H.cell(lab, w6[0], { bold: true, fill: 'D9D9D9', h: 80 }), ...w6.slice(1).map((w, i) => H.cell(vals ? String(vals[i]) : '\u00a0', w, { h: 80 }))]);
+    out.push(H.tbl(w6, [r6('Rows', [2, 3, 4, 5, 6, 7, 8, 9, 10]), r6('Chairs in each row'), r6('Does it work?')])); }
   out.push(H.q(7, 'Challenge! A shop has some bicycles and some tricycles. There are 17 wheels altogether. Find ALL the ways. Start with 1 tricycle.', { keepNext: true }));
   out.push(H.fig(cyclesFig()));
   out.push(H.tbl(hw, [hr('Tricycles', '1'), hr('Bicycles', ''), hr('Wheels', '')]));

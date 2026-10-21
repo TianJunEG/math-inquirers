@@ -81,8 +81,8 @@ put('p3l6-title',title_slide('p3l6-title','LESSON 6  •  WEEK 3','Fraction Wall
  'Objective: Use a fraction wall to find equivalent fractions, compare and order fractions by making the parts the same size, and add and subtract like and related fractions within one whole. '
  'Heuristics taught today: DRAW A MODEL (fraction wall or bar) and MAKE THE PARTS THE SAME SIZE (change one fraction to an equal fraction before comparing or adding). '
  'Materials: 7 paper strips per child, all the same length (24 cm works well), ruler, coloured pencils, scissors, mini whiteboards. '
- 'Online: children cut seven 24 cm strips from A4 paper before the lesson (or print the fraction strip page); marks every 12, 8, 6, 4, 3 and 2 cm give halves, thirds, quarters, sixths, eighths and twelfths. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
+ 'Online: send the printed fraction strip page instead of asking children to measure and cut strips; marks every 12, 8, 6, 4, 3 and 2 cm give halves, thirds, quarters, sixths, eighths and twelfths. '
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up: Fraction Flash ----------
 def circle8(sh):
@@ -294,7 +294,7 @@ body+=pin(992,250,800,p('Q2: make the parts the same size',38,800,TEAL))
 for i,t in enumerate(['Change Siti’s thirds to twelfths:  '+F(2,3)+' = '+F(8,12),F(8,12)+' is more than '+F(7,12)+'. Siti drinks more.',F(8,12)+' − '+F(7,12)+' = '+F(1,12)+' of a bottle more.']):
     body+=pin(992,330+i*140,800,rp(t,28),'rise',WHITE)
 put('p3l6-chwalk',sec('p3l6-chwalk','Challenge',body,
- 'Use after pairs have tried. Q1: work in order from the biggest piece, as in the coin lesson. With a half: the other half needs 4 pieces; 1/4 + 1/8 + 1/8 is only 3 pieces, and 1/4 + three eighths is too much, so only four eighths. Without a half: four quarters is only 4 pieces; three quarters + two eighths works; two quarters + eighths needs 4 eighths, which is 6 pieces. '
+ 'Use after pairs have tried. Q1: work in order from the biggest piece, as in the list-in-order puzzles earlier in the program. With a half: the other half needs 4 pieces; 1/4 + 1/8 + 1/8 is only 3 pieces, and 1/4 + three eighths is too much, so only four eighths. Without a half: four quarters is only 4 pieces; three quarters + two eighths works; two quarters + eighths needs 4 eighths, which is 6 pieces. '
  'Q2: the thirds are cut into 4 each to make twelfths (2/3 = 8/12).'))
 
 # ---------- 25. talk ----------

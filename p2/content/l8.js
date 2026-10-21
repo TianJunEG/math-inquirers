@@ -86,37 +86,30 @@ const q5bsvg = () => {
   s += net(['.....', '..#..', '.####', '.....'], x0 - 30, y0, c);
   return svg(600, 132, s, 'A row of 4 squares with 1 square above the second square, on a dotted grid', 420);
 };
-// Q5: dice net (top flap 1, row 2, 3, ?, ?, bottom flap ?)
-const q6svg = () => {
-  const c = 50, x0 = 200, y0 = 6; let s = net(['#...', '####', '#...'], x0, y0, c, W);
-  [[0, 0, '1'], [0, 1, '2'], [1, 1, '3']].forEach(([x, y, t]) => { s += text(x0 + x * c + c / 2, y0 + y * c + c / 2 + 9, t, 26); });
-  return svg(600, 162, s, 'A dice net: a row of 4 squares with one square above and one below the first square. The top square shows 1, the row starts 2, 3, and three squares are blank', 380);
-};
 
 module.exports = {
   lesson: {
     n: 8, week: 4, session: 'B', title: 'Shape Builders', topic: '2D and 3D Shapes',
     objective: 'Name semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube.',
     skills: 'Spatial reasoning, systematic counting, folding in your head, explaining',
-    materials: 'Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), printed cube nets, mini whiteboards.',
-    online: 'Children cut circles and build stacks on camera; nets are printed from the back of the workbook, or cut from an empty box.',
+    materials: 'Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook), mini whiteboards.',
+    online: 'Children cut circles and build stacks on camera; the six nets A to F are on a cut-out page near the back of the workbook (print and cut them before the lesson), or cut a net from an empty box.',
     warmup: 'Name the solid: a dice, a tissue box, a tin can, a party hat, a drum and a traffic cone. Children make the solid with their hands, then name it (cube, cuboid, cylinder, cone).',
     explore: 'Cut one paper circle into 2 semicircles and another into 4 quarter circles. Make new shapes with the pieces and find different ways to make a whole circle.',
-    mini: 'A semicircle has 1 straight side and 1 curved side; a quarter circle has 2 straight sides meeting at a square corner and 1 curved side. Count the pieces in a picture one kind at a time; count every square by size (slide a window); count triangles by the line they sit on. Before page 2: count cubes layer by layer (cubes do not float, so hidden cubes hold up the top ones); fold nets in your head (each square must land on a new face; squares in a line with one square between them are opposite).',
+    mini: 'A semicircle has 1 straight side and 1 curved side; a quarter circle has 2 straight sides meeting at a square corner and 1 curved side. Count the pieces in a picture one kind at a time; count every square by size (slide a window); count triangles by the line they sit on. Before page 2: count cubes layer by layer (cubes do not float, so hidden cubes hold up the top ones); cut out nets A to F and fold them (each square must land on a new face; squares in a line with one square between them are opposite). Nets are not in the P1 to P3 syllabus, so they are taught with real paper nets.',
     share: 'How can you be sure you counted every cube in a stack, even the ones you cannot see?',
     exit: { q: 'How many cubes are in a stack with a bottom layer 3 cubes long and 2 cubes deep, and 1 cube on top?', a: '7 (6 + 1)' },
     mistakes: [
       'Counting only the 1 by 1 squares in Q2a (16 instead of 30).',
       'Counting only the cubes you can see in Q3 and forgetting the hidden cubes underneath and behind.',
-      'Thinking any 6 joined squares fold into a cube (Q4): B, D and F do not.'
+      'Thinking any 6 joined squares fold into a cube (Q4): B, D and F do not (cutting out and folding shows why).'
     ],
     extension: 'How many squares are in a grid 5 squares long and 5 squares high? (25 + 16 + 9 + 4 + 1 = 55)',
     key: [
       ['Q1', 'Square 2, triangle 3, semicircle 4, quarter circle 2. (a) semicircles (b) 11 pieces (c) 3 circles: 3 semicircles are 6 quarter circles, 6 + 6 = 12 quarter circles, and 4 quarter circles make a circle.'],
       ['Q2', '(a) 1 by 1: 16, 2 by 2: 9, 3 by 3: 4, 4 by 4: 1; 30 squares  (b) 6 on the bottom line + 6 on the line across = 12 triangles'],
       ['Q3', '(a) A 5, B 8, C 14 (9 + 4 + 1)  (b) 13 more cubes (27 − 14)'],
-      ['Q4', '(a) A, C and E  (b) the new square goes under any one of the 4 squares in the row (4 possible places)'],
-      ['Q5', 'Row: 2, 3, 5, 4. Bottom square: 6. (1 and 6, 2 and 5, 3 and 4 are opposite.)']
+      ['Q4', '(a) A, C and E fold into a cube (children cut out and fold to check)  (b) the new square goes under any one of the 4 squares in the row (4 possible places)']
     ]
   },
 
@@ -151,7 +144,7 @@ module.exports = {
     keySmall: 'Name a piece by its sides: a semicircle has 1 straight side, a quarter circle has 2.',
     brk: 'Be a shape! Make a semicircle, a cone, a cube and a cylinder with your body when the tutor calls it.',
     ws1: 'Page 1, in pairs: Q1 the robot and circle pieces, Q2 count every square and triangle.',
-    ws2: 'Page 2, on your own: Q3 count the cubes, Q4 which nets fold into a cube, Q5 the dice net.'
+    ws2: 'Page 2, on your own: Q3 count the cubes, Q4 cut out the nets and find which fold into a cube.'
   },
 
   qbank: {
@@ -159,7 +152,7 @@ module.exports = {
       { q: 'How many quarter circles make a whole circle?', a: '4' },
       { q: 'How many semicircles make a whole circle?', a: '2' },
       { q: 'How many faces does a cube have?', a: '6' },
-      { q: 'How many squares are in a grid 2 squares long and 2 squares high?', a: '5 (4 small + 1 big)' },
+      { q: 'How many squares of ALL sizes are in a grid 2 squares long and 2 squares high? (Small ones and one big one.)', a: '5 (4 small + 1 big)' },
       { q: 'A tower has 3 cubes. Ali builds 2 more towers just like it. How many cubes are there altogether?', a: '9' },
       { q: 'Which solid has 2 flat faces that are circles and 1 curved face?', a: 'A cylinder' }
     ],
@@ -201,16 +194,14 @@ module.exports = {
     out.push(H.tbl(ws, [H.row(['a   1 by 1', '2 by 2', '3 by 3', '4 by 4', 'Squares altogether'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED' }))), H.row(ws.map(w => H.cell('', w, { h: 120 })))]));
     out.push(H.sub('b', 'Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____'));
 
-    out.push(H.q(3, 'Count the cubes. Every cube sits on the table or on another cube, and there are no gaps at the back.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(3, 'Count the cubes. Every cube is on the table or sits on top of another cube. Stack A is only 1 cube deep.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.sub('a', 'A:  ______ cubes' + sp(12) + 'B:  ______ cubes' + sp(12) + 'C:  ______ cubes'));
     out.push(H.sub('b', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
-    out.push(H.q(4, 'Which of these will fold up into a cube? Circle the letters.', { keepNext: true }));
+    out.push(H.q(4, 'Cut out nets A to F from the cut-out page and try folding each one. Then circle the letters of the nets that fold up into a cube.', { keepNext: true }));
     out.push(H.fig(q5svg()));
     out.push(H.sub('b', 'Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.', { keepNext: true }));
     out.push(H.fig(q5bsvg()));
-    out.push(H.q(5, 'On a dice, the numbers on opposite faces add up to 7. This net folds into a dice. Write the missing numbers.', { keepNext: true }));
-    out.push(H.fig(q6svg()));
     return out;
   }
 };

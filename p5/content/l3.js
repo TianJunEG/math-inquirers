@@ -29,7 +29,7 @@ module.exports = {
     objective: 'Solve fraction word problems with units and before-and-after models: fraction of a remainder, giving between two people (the total stays the same), both getting or spending the same amount (the difference stays the same), and one amount that does not change.',
     skills: 'Drawing bar models, choosing what stays the same, splitting parts into equal units, working backwards, checking an answer against every condition',
     materials: 'Mini whiteboard and marker, 24 counters or paper squares (two colours), paper strips for bar models, workbook, pencil.',
-    online: 'The tutor shares the slides and builds each bar model click by click. Children draw their models on whiteboards and hold them up to the camera together. For the explore, each child moves paper squares on the desk with the camera pointing down.',
+    online: 'The tutor shares the slides and builds each bar model click by click. Children draw their models on whiteboards and hold them up to the camera together. For the explore, children move 18 + 6 paper squares on the desk with the camera up as usual and hold the table up to the camera; or use the interactive version on the slide.',
     warmup: 'What’s left? A jar has 120 marbles. Three cards are turned over one at a time: give away 1/4, give away 1/3 of what is left, give away 5/6 of what is left. Children track what is left on whiteboards (90, 60, 10).',
     explore: 'Counter swap. Ali has 18 counters and Mei has 6. Pairs move counters from Ali to Mei one at a time and record Ali, Mei, the total and the difference in a table. Then they start again and give BOTH children 2 more counters each time. What never changes in each table? When does Mei have 1/2 as many as Ali?',
     mini: 'Fractions become equal units in a bar. Fraction of a remainder: cut the parts that are left into equal units so every part is the same size. Before you draw a before-and-after model, ask what stays the same: the total (one gives to the other), the difference (both get or spend the same) or one amount (only the other changes). Draw that part the same in both models.',
@@ -42,7 +42,7 @@ module.exports = {
       ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
       ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
       ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
-      ['Q5', '(a) Blue (only red beads were added)  (b) 70 (blue 4 units, red 3 units → 6 units; 3 units = 30, 1 unit = 10)  (c) 100']
+      ['Q5', '(a) Blue (only red beads were added)  (b) blue 4 units; 4 units; the whole box is 10 units (blue is 2 out of every 5, so 4 units = 2 parts and 1 part = 2 units)  (c) 70 (red 3 units at first and 6 units now, so 3 units = 30 and 1 unit = 10)  (d) 100']
     ]
   },
 
@@ -128,7 +128,8 @@ module.exports = {
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
     H.q(5, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
     H.sub('a', 'Which colour of beads did not change?'), H.ans(),
-    H.sub('b', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
-    H.sub('c', 'How many beads are in the box now?'), H.ans()
+    H.sub('b', 'Before: red 3 units, blue ______ units. After: blue is 2 out of every 5, so if blue is still ______ units, the whole box is ______ units.'),
+    H.sub('c', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
+    H.sub('d', 'How many beads are in the box now?'), H.ans()
   ]
 };

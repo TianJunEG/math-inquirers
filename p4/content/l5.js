@@ -103,17 +103,17 @@ module.exports = {
       { q: 'Write 3 ones, 4 tenths and 7 thousandths as a decimal.', a: '3.407' },
       { q: 'What is the value of the digit 6 in 12.365?', a: '6 hundredths (0.06)' },
       { q: 'Which is greater, 0.9 or 0.89? How do you know?', a: '0.9. Line up the points: 0.90 and 0.89. 9 tenths is more than 8 tenths.' },
-      { q: 'Round 7.462 to 2 decimal places.', a: '7.46' },
+      { q: 'Round 7.46 to 1 decimal place.', a: '7.5' },
       { q: 'Round 15.96 to 1 decimal place.', a: '16.0' },
       { q: 'Ali buys 3 pens at $1.25 each. How much does he pay?', a: '$3.75' }
     ],
     stretch: [
-      { q: 'Write these in order, smallest first: 0.6, 0.066, 0.606, 0.66, 0.06', a: '0.06, 0.066, 0.6, 0.606, 0.66 (as 0.060, 0.066, 0.600, 0.606, 0.660)' },
+      { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
       { q: 'A number with 2 decimal places rounds to 10 when rounded to the nearest whole number. What is the smallest it can be? The largest?', a: 'Smallest 9.50, largest 10.49' },
       { q: 'What number is halfway between 2.6 and 2.7? What number is halfway between 2.6 and 2.61?', a: '2.65 and 2.605' },
       { q: 'A ribbon 4.8 m long is cut into 6 equal pieces. How long is each piece? Ravi uses 4 of the pieces. How much ribbon does he use?', a: '0.8 m each; 3.2 m' },
       { q: 'Siti buys 4 notebooks that cost the same. She pays with a $10 note and gets $2.60 change. How much does one notebook cost?', a: '$1.85 ($10 − $2.60 = $7.40, $7.40 ÷ 4 = $1.85)' },
-      { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
+      { q: 'Write these in order, smallest first: 0.6, 0.066, 0.606, 0.66, 0.06', a: '0.06, 0.066, 0.6, 0.606, 0.66 (as 0.060, 0.066, 0.600, 0.606, 0.660)' },
       { q: 'Mei is 1.38 m tall. Ben is 0.15 m taller than Mei. Ali is 0.09 m shorter than Ben. How tall is Ali?', a: '1.44 m (Ben 1.53 m)' },
       { q: 'Use the digit cards 2, 4, 7 and a decimal point once each (the point goes between two digits). Which number is closest to 50?', a: '47.2 (2.8 away; the next closest is 42.7)' }
     ],
@@ -159,7 +159,7 @@ module.exports = {
     H.fig(scales()),
     H.sub('a', 'What is the mass of one can?   ________ kg'),
     H.sub('b', 'Ali takes 2 cans out of the box. What is the mass of the box and cans now?   ________ kg'),
-    H.q(7, 'Mystery decimal. I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', { keepNext: true }),
+    H.q(7, '★ Mystery decimal (a bit harder). I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', { keepNext: true }),
     ...H.lines(1),
     H.ans('I am:')
   ]

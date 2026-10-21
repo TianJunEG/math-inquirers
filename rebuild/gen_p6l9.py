@@ -1,7 +1,9 @@
 """Math Inquirers P6 (post-PSLE maths + coding bridge) - Lesson 9: Data Detectives. Writes split/p6l9/project."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
+import slidekit
 from slidekit import *
+slidekit.FOOT = FOOT = 'Math Inquirers P6  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p6l9','project'); SL=os.path.join(D,'slides'); os.makedirs(SL,exist_ok=True)
 S={}; ORDER=[]
 def put(i,h): S[i]=h; ORDER.append(i)

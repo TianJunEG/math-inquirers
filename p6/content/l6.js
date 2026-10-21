@@ -73,8 +73,8 @@ const spinner = () => {
   s += `<line x1="${cx}" y1="${cy}" x2="${cx + 30}" y2="${cy - 44}" stroke="${NAVY}" stroke-width="6" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="9" fill="${NAVY}"/>`;
   return s + '</svg>';
 };
-const coinCode = [['hat', 'when start clicked'], ['var', 'set heads to [0]'], ['ctrl', 'repeat [1000]', [['ctrl', 'if [pick random 1 to 2] = [1] then', [['var', 'change heads by [1]']]]]], ['look', 'say heads']];
-const planCode = [['hat', 'when start clicked'], ['var', 'set doubles to [0]'], ['ctrl', 'repeat [1000]', [['var', 'set a to pick random 1 to [?]'], ['var', 'set b to pick random 1 to [?]'], ['ctrl', 'if [?] then', [['var', 'change doubles by [1]']]]]], ['look', 'say doubles']];
+const coinCode = [['hat', 'when green flag clicked'], ['var', 'set heads to [0]'], ['ctrl', 'repeat [1000]', [['ctrl', 'if [pick random 1 to 2] = [1] then', [['var', 'change heads by [1]']]]]], ['look', 'say heads']];
+const planCode = [['hat', 'when green flag clicked'], ['var', 'set doubles to [0]'], ['ctrl', 'repeat [1000]', [['var', 'set a to pick random 1 to [?]'], ['var', 'set b to pick random 1 to [?]'], ['ctrl', 'if [?] then', [['var', 'change doubles by [1]']]]]], ['look', 'say doubles']];
 
 module.exports = {
   lesson: {
@@ -82,7 +82,7 @@ module.exports = {
     objective: 'Write a probability as a fraction (ways it can happen out of equally likely outcomes), list all 36 outcomes for two dice, decide whether a game is fair, change a game to make it fair, and run a game 1000 times in code, explaining why the result is close to what we expect but not exact.',
     skills: 'Listing equally likely outcomes, fractions in simplest form, expected number = fraction × number of tries, judging fairness, simulating with random numbers',
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), two dice per pair (or the tutor’s dice program), a coin, coloured counters and a paper bag, mini whiteboards, tally sheet.',
-    online: 'Children roll real dice at home; anyone without dice uses the tutor’s shared dice program. Pairs play the Explore game in breakout rooms and type their tallies into the chat so the group total can be added up.',
+    online: 'Children roll real dice at home; anyone without dice builds the dice program live in the shared Scratch window (pick random 1 to 6, twice) and uses that. This lesson is enrichment: probability is new to most children, so keep it playful. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Pairs play the Explore game in breakout rooms and type their tallies into the chat so the group total can be added up.',
     warmup: 'Where on the line? Six events (roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10). Teams place each on a 0 to 1 probability line and give the fraction.',
     explore: 'The Dice Race: roll two dice and add. Player A wins on 2, 3, 4, 10, 11 or 12; player B wins on 5, 6, 7, 8 or 9. Pairs predict, play 20 rounds, tally the wins, then add up the whole group’s results.',
     mini: 'Probability = number of ways it can happen ÷ number of equally likely outcomes, written as a fraction. Two dice give 6 × 6 = 36 equally likely outcomes (a nested loop!). A game is fair when every player has the same probability of winning. Expected number = probability × number of tries; a simulation lands close to this, but not exactly, because each run is random.',

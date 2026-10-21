@@ -42,10 +42,10 @@ module.exports = {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Puzzles',
     objective: 'Choose a way to start a puzzle (draw it, list it in order, make a table) and use it on mixed puzzles: picture graphs with a key of 5 or 10, a logic grid with exactly one answer, numbers to 1000, money, fractions, and × and ÷ with the 2, 3, 4, 5 and 10 tables. Check the answer and explain it.',
     skills: 'Choosing a strategy, drawing models, listing in order, making tables, logical elimination, checking, explaining',
-    materials: 'Puzzle cards for 4 stations, play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.',
-    online: 'Breakout pairs work on one station card each and report back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard.',
+    materials: 'Four station cards (one slide each in the deck, and printed in the tutor guide), play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.',
+    online: 'Each breakout pair gets one station card (the tutor pastes its text into the breakout room chat), works for 3 minutes, then swaps with another pair for a second card, and everyone reports back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard.',
     warmup: 'Relay review: six quick cards, one from each earlier topic (digits, missing digits, legs, patterns, change, fractions). The answer is passed round the group.',
-    explore: 'Station rotation (4 stations, about 3 minutes each, or one card per breakout pair): a picture graph with a key, a logic grid, a coin puzzle and a fraction strip puzzle. Pairs write how they started each one.',
+    explore: 'Four station cards, one per breakout pair, about 3 minutes each, then pairs swap cards (a tutor cannot visit four physical stations online): Card 1 a picture graph with a key of 5, Card 2 a logic grid about pets, Card 3 a coin puzzle (70¢ with exactly 4 coins), Card 4 a fraction strip cut into 8 parts. Pairs write how they started each one: draw, list or table.',
     mini: 'How to start a puzzle. Draw it: bars for before-and-after stories (Mei gave half her stickers away, then 6 more, and has 4 left: the half she kept is 4 + 6 = 10, so she had 20). List it in order: digit cards 2, 0, 5 make 205, 250, 502, 520 (0 cannot go first). Make a table: 7 heads and 20 legs, chickens and goats; try 0, 1, 2, 3 goats until the legs are 20 (3 goats, 4 chickens). Then check and explain.',
     share: 'Pick one puzzle and teach it to the group in two sentences: how you started it, and how you know your answer is right.',
     exit: { q: '5 bicycles and tricycles have 13 wheels altogether. How many tricycles are there? How did you start?', a: '3 tricycles and 2 bicycles (9 + 4 = 13). A table of 0, 1, 2, 3 tricycles works well.' },
@@ -57,7 +57,7 @@ module.exports = {
       ['Q3', 'Two 50¢ coins and four 20¢ coins (100¢ + 80¢ = 180¢ = $1.80). Table: 0 → $1.20, 1 → $1.50, 2 → $1.80 ✓'],
       ['Q4', 'Ali: car. Ben: MRT. Mei: bus. Siti: walk.'],
       ['Q5', '(a) 5/10  (b) 2/10  (c) Mei, Ali, Ben'],
-      ['Q6', '(a) 10, 12, 14: 6 tables seat 14 people  (b) 9 tables (each table adds 2 seats: 4, 6, 8, … 20)']
+      ['Q6', '(a) 12, 15, 18 cubes in Towers 4, 5, 6; Tower 8 has 24 cubes (each tower adds 3: 3, 6, 9, 12, 15, 18, 21, 24)  (b) Tower 10 (30 cubes: 3 × 10, or keep adding 3 to 30)']
     ]
   },
 
@@ -78,15 +78,16 @@ module.exports = {
     today: 'Learn three ways to start a puzzle, then use them on mixed challenges.',
     warmGame: 'Relay review. Six cards, one from each earlier topic: digit cards, missing digits, legs, patterns, change and fractions. Answer, then pass to the next person.',
     warmQs: [['Share 40 stickers equally among 5 children. How many each?', '8'], ['It is 10:55 a.m. What time is it 10 minutes later?', '11:05 a.m.'], ['Which is bigger: 1/3 or 1/5 of the same cake?', '1/3'], ['Half of a circle is called a …', 'Semicircle'], ['I think of a number and add 30. I get 100. What is my number?', '70']],
-    expSetup: ['Four station cards: a picture graph, a logic grid, a coin puzzle and a fraction strip.', 'Work in pairs. Read the card aloud.', 'Before you solve it, write how you will start: draw, list or table.', 'Solve it, check it, and be ready to explain.'],
+    expSetup: ['Your pair gets one station card: a picture graph, a logic grid, a coin puzzle or a fraction strip.', 'Read the card aloud. Before you solve it, write how you will start: draw, list or table.', 'Solve it and check it (3 minutes). Then swap cards with another pair.', 'Be ready to explain how you started and how you know.'],
     expPic: 'four puzzle cards on a table: a picture graph with a key, a 3 by 3 logic grid, play coins and a paper strip folded into equal parts.',
+    stationCards: [("Card 1: picture graph", "Each ● stands for 5 books. Monday ●●●, Tuesday ●●●●●, Wednesday ●●. How many books were read on these 3 days?", "50 books (10 pictures × 5)"), ("Card 2: logic grid", "Ali, Ben and Cai each have one pet: a cat, a dog or a fish. Ben has the fish. Ali does not have the dog. Who has the cat?", "Ali has the cat (Ben has the fish, so Ali and Cai share cat and dog; Ali is not the dog, so Cai has the dog)"), ("Card 3: coin puzzle", "Make 70¢ with exactly 4 coins. You can use 5¢, 10¢, 20¢ and 50¢ coins. Find all the ways.", "2 ways: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢"), ("Card 4: fraction strip", "A strip is cut into 8 equal parts. 3 parts are red and 2 parts are blue. What fraction is NOT coloured?", "3/8")],
     expAsk: [['How did you start each card?', 'Open answers. Draw it, list it, or make a table.'], ['Which card was hardest? Why?', 'Open answers.'], ['What helped when you were stuck?', 'Drawing it, going in order, trying small numbers first, checking with the clues.']],
     mini1: { head: 'Draw it: a before-and-after story', body: ['Mei had some stickers. She gave half of them to Ben.', 'Then she gave 6 to Siti. Now she has 4 left.', 'How many stickers did she have at first?'], ans: '20. The half she kept is 6 + 4 = 10, so she had 10 + 10 = 20. Check: 20 → 10 → 4.' },
     mini2: { head: 'Make a table: heads and legs', body: ['A farm has chickens and goats.', 'There are 7 heads and 20 legs.', 'How many goats are there?'], ans: '3 goats and 4 chickens. Table: 0 goats 14 legs, 1 goat 16, 2 goats 18, 3 goats 20 ✓. Check: 12 + 8 = 20.' },
     keyHead: 'Key idea: how to start a puzzle', keyBig: 'Stuck? Draw it, list it in order, or make a table.', keySmall: 'Then check your answer against every clue and explain why.',
     brk: 'Freeze with maths. Dance until the music stops, then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.',
     ws1: 'Page 1, in pairs: Q1 picture graph, Q2 digit cards, Q3 coins in a table.',
-    ws2: 'Page 2, on your own: Q4 logic grid, Q5 cake fractions, Q6 tables in a row.'
+    ws2: 'Page 2, on your own: Q4 logic grid, Q5 cake fractions, Q6 towers of cubes.'
   },
 
   qbank: {

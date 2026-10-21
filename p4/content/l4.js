@@ -73,8 +73,7 @@ module.exports = {
       ['Q3', '(a) 8 units = 24, 1 unit = 3, 3 units = 9 children.  (b) 5 units = 15 children (24 − 9 = 15).'],
       ['Q4', '(a) >  (3/4 = 6/8)  (b) >  (2/3 = 8/12)  (c) <  (4/9 is less than a half, 5/8 is more)  (d) >  (fifths are bigger pieces than sevenths)  (e) 7/12, 2/3, 5/6'],
       ['Q5', '(a) 3 units = 27, 1 unit = 9, 5 units = 45 sweets.  (b) 2 units = 18 sweets are not red.'],
-      ['Q6', '1/3 = 4/12 and 3/4 = 9/12. The fractions in between: 5/12, 6/12, 7/12, 8/12. That is 4 fractions (4/12 and 9/12 are equal to 1/3 and 3/4, so they do not count).'],
-      ['Q7', '17/6 = 2 5/6. Between 2 and 3: 13/6, 14/6, 15/6, 16/6, 17/6. Odd numerators: 13/6, 15/6, 17/6. 15/6 = 2 1/2 is exactly in the middle and 13/6 is closer to 2, so only 17/6 is closer to 3.']
+      ['Q6', '1/3 = 4/12 and 3/4 = 9/12. The fractions in between: 5/12, 6/12, 7/12, 8/12. That is 4 fractions (4/12 and 9/12 are equal to 1/3 and 3/4, so they do not count).']
     ]
   },
 
@@ -107,7 +106,7 @@ module.exports = {
     keyHead: 'Key idea: fractions can be more than 1', keyBig: 'The denominator tells how many pieces make 1 whole: 7/3 = 2 1/3.', keySmall: 'Fraction of a set: the denominator gives the units. Find 1 unit, then the units you need.',
     brk: 'Fraction stand-up. I call a fraction: stand up if it is more than 1, sit down if it is less than 1, hands on your head if it is exactly 1. 5/4, 3/8, 6/6, 9/5, 7/12, 12/12.',
     ws1: 'Page 1, in pairs: Q1 fraction bars, Q2 number line, Q3 fraction of a set.',
-    ws2: 'Page 2, on your own: Q4 compare, Q5 find the whole, Q6 find all the fractions, Q7 who am I?'
+    ws2: 'Page 2, on your own: Q4 compare, Q5 find the whole, Q6 find all the fractions.'
   },
 
   qbank: {
@@ -120,15 +119,17 @@ module.exports = {
       { q: 'Work out 3/10 + 2/5.', a: '7/10 (2/5 = 4/10)' }
     ],
     stretch: [
-      { q: 'How many quarters are there in 4 3/4?', a: '19 (4 wholes = 16 quarters, plus 3).' },
+      { q: 'Ben ate 7/4 pizzas and Ravi ate 1 5/8 pizzas. Who ate more?', a: 'Ben. 7/4 = 14/8 = 1 6/8, which is more than 1 5/8.' },
       { q: 'Siti has 40 beads. 3/8 of them are blue. How many beads are NOT blue?', a: '25 (1 unit = 5, blue = 15, not blue = 5 units = 25).' },
       { q: 'Put these fractions in order, smallest first: 2/3, 1/2, 5/6, 7/12', a: '1/2, 7/12, 2/3, 5/6 (6/12, 7/12, 8/12, 10/12).' },
-      { q: '2/5 of a number is 16. What is the number?', a: '40 (2 units = 16, 1 unit = 8, 5 units = 40).' },
+      { q: 'Who am I? I am an improper fraction. My denominator is 6. I am between 2 and 3. My numerator is an odd number. I am closer to 3 than to 2. Make a list, then cross out the ones that do not fit.', a: '17/6 = 2 5/6. Between 2 and 3: 13/6, 14/6, 15/6, 16/6, 17/6. Odd numerators: 13/6, 15/6, 17/6. 15/6 = 2 1/2 is exactly in the middle and 13/6 is closer to 2, so only 17/6 is closer to 3.' },
       { q: 'Find ALL the fractions with denominator 10 that are bigger than 1/5 but smaller than 1/2.', a: '3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10 do not count).' },
       { q: 'A ribbon is 3 m long. Mei cuts it into pieces that are each 1/4 m long. How many pieces does she get?', a: '12 pieces (4 in each metre).' },
-      { q: 'Ben ate 7/4 pizzas and Ravi ate 1 5/8 pizzas. Who ate more?', a: 'Ben. 7/4 = 14/8 = 1 6/8, which is more than 1 5/8.' },
-      { q: 'Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. Is he right? Explain.', a: 'No. Both have 3 pieces, but sevenths are smaller pieces than fifths, so 3/5 is bigger.' }
+      { q: 'How many quarters are there in 4 3/4?', a: '19 (4 wholes = 16 quarters, plus 3).' },
+      { q: 'Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. Is he right? Explain.', a: 'No. Both have 3 pieces, but sevenths are smaller pieces than fifths, so 3/5 is bigger.' },
+      { q: '2/5 of a number is 16. What is the number?', a: '40 (2 units = 16, 1 unit = 8, 5 units = 40).' }
     ],
+
     challenge: [
       { q: 'How many fractions with denominator 12 are bigger than 1/4 but smaller than 2/3?', a: '4: 4/12, 5/12, 6/12, 7/12 (1/4 = 3/12 and 2/3 = 8/12 do not count).' },
       { q: 'Mei spent 1/3 of her money on a book and 1/4 of her money on a pen. She had $25 left. How much money did she have at first?', a: '$60. Book 4/12, pen 3/12, so 5/12 is left. 5 units = $25, 1 unit = $5, 12 units = $60.' },
@@ -173,10 +174,6 @@ module.exports = {
     W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '.'], { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.ans('How many?'));
-    W.push(H.q(7, 'Who am I? I am an improper fraction. My denominator is 6. I am between 2 and 3. My numerator is an odd number. I am closer to 3 than to 2.', { keepNext: true }));
-    W.push(H.sub('a', 'Make a list, then cross out the ones that do not fit.'));
-    W.push(...H.lines(2));
-    W.push(H.ans('I am:'));
     return W;
   }
 };

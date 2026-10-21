@@ -190,7 +190,7 @@ put(f'{PRE}-try2', try_slide(f'{PRE}-try2', '31–32 MIN', 'Your turn: use the t
     'Children look at the table. a) 5 + 6 and 6 + 5. b) 1 + 3, 2 + 2, 3 + 1. c) 10, 11 or 12: 3 + 2 + 1 = 6 ways. Ask: "Which total is most likely? Least likely?" (7; 2 and 12).', size=38))
 
 # ---------- 11 teach code: run the game 1000 times ----------
-game_code = [('hat', 'when start clicked'), ('var', 'set A to [0]'), ('var', 'set B to [0]'), ('ctrl', 'repeat [1000]', [('var', 'set total to [pick random 1 to 6] + [pick random 1 to 6]'), ('ctrl', 'if [total > 4] and [total < 10] then', [('var', 'change B by [1]')], [('var', 'change A by [1]')])]), ('look', 'say A for 2 seconds'), ('look', 'say B')]
+game_code = [('hat', 'when green flag clicked'), ('var', 'set A to [0]'), ('var', 'set B to [0]'), ('ctrl', 'repeat [1000]', [('var', 'set total to [pick random 1 to 6] + [pick random 1 to 6]'), ('ctrl', 'if [total > 4] and [total < 10] then', [('var', 'change B by [1]')], [('var', 'change A by [1]')])]), ('look', 'say A for 2 seconds'), ('look', 'say B')]
 body = h2('Test it: let the computer play 1000 games', 64)
 body += pin(128, 222, 1060, blocks_svg(game_code, 'Code: set A and B to 0, repeat 1000: set total to two random numbers 1 to 6 added, if total is more than 4 and less than 10 change B by 1, else change A by 1; then say A and B', 24), None, WHITE, 20, '14px 18px')
 body += box(1240, 240, 552, 'Expect A: 1/3 × 1000 = 333 1/3', None, SOFT, 32)
@@ -274,7 +274,7 @@ body += pin(820, 680, 972, p('Same probability of winning: the game is fair ✓'
 put(f'{PRE}-teachfair', sec(f'{PRE}-teachfair', '56–58 MIN', body, 'Teach before worksheet page 2 (Q4, the Difference Game: do not do it here). Ask first: "Fair or not? Thumbs up or down." Many say Ali wins only 1/3 (two heads, two tails versus one of each). Use two different coins (a 10¢ and a 20¢) so HT and TH are clearly different. Then: "How could we change an unfair game to make it fair?" (change which outcomes win, or give different points).'))
 
 # ---------- 19 teach plan ----------
-coin_plan = [('hat', 'when start clicked'), ('var', 'set same to [0]'), ('ctrl', 'repeat [1000]', [('var', 'set a to pick random 1 to [2]'), ('var', 'set b to pick random 1 to [2]'), ('ctrl', 'if [a = b] then', [('var', 'change same by [1]')])]), ('look', 'say same')]
+coin_plan = [('hat', 'when green flag clicked'), ('var', 'set same to [0]'), ('ctrl', 'repeat [1000]', [('var', 'set a to pick random 1 to [2]'), ('var', 'set b to pick random 1 to [2]'), ('ctrl', 'if [a = b] then', [('var', 'change same by [1]')])]), ('look', 'say same')]
 body = h2('Plan your code: the two-coin game', 64)
 body += pin(128, 225, 820, blocks_svg(coin_plan, 'Code: set same to 0, repeat 1000: set a to pick random 1 to 2, set b to pick random 1 to 2, if a = b then change same by 1; say same', 26), None, WHITE, 20, '16px 20px')
 body += box(1000, 240, 792, 'a and b are the two coins: 1 = heads, 2 = tails.', None, SOFT, 32)

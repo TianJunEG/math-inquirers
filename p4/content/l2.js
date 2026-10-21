@@ -98,11 +98,11 @@ module.exports = {
       { q: 'Round 6352 to the nearest hundred.', a: '6400' }
     ],
     stretch: [
-      { q: 'What is the smallest whole number that rounds to 80 000 when rounded to the nearest thousand?', a: '79 500' },
+      { q: 'I am a 5-digit number. All my digits are the same. Rounded to the nearest ten thousand, I am 60 000. Who am I?', a: '55 555 (66 666 rounds to 70 000; 44 444 rounds to 40 000).' },
       { q: 'Use the digit cards 1, 4, 6, 7 and 9 once each. Make the 5-digit number that is closest to 70 000.', a: '69 741 (259 away; the closest number above 70 000 is 71 469, which is 1469 away).' },
       { q: 'Find the rule and write the next two numbers: 17 250, 19 500, 21 750, ____, ____', a: 'Add 2250 each time: 24 000, 26 250.' },
       { q: 'How many whole numbers round to 3500 when rounded to the nearest hundred?', a: '100 (from 3450 to 3549).' },
-      { q: 'I am a 5-digit number. All my digits are the same. Rounded to the nearest ten thousand, I am 60 000. Who am I?', a: '55 555 (66 666 rounds to 70 000; 44 444 rounds to 40 000).' },
+      { q: 'What is the smallest whole number that rounds to 80 000 when rounded to the nearest thousand?', a: '79 500' },
       { q: 'Estimate 8 × 6102 by rounding 6102 to the nearest thousand first. Is the exact answer more or less than your estimate?', a: '8 × 6000 = 48 000. More, because 6102 was rounded down (exact: 48 816).' },
       { q: 'How many 5-digit numbers have all five digits the same?', a: '9 (11 111, 22 222, … 99 999).' },
       { q: 'What is the largest 5-digit odd number with all its digits different?', a: '98 765' }
@@ -127,11 +127,11 @@ module.exports = {
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
       ...['47 285', '63 950', '9049', '80 503'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
     ]));
-    W.push(H.q(2, 'Work backwards.', { keepNext: true }));
+    W.push(H.q(2, 'Work backwards.  (A star ★ means a bit harder.)', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
-    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.'));
+    W.push(H.sub('b', '★  A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));
     W.push(H.sub('a', 'Round 4982 to the nearest thousand and estimate the total.   Estimate:  ____________'));
@@ -140,7 +140,7 @@ module.exports = {
     W.push(H.sub('c', 'Work out the exact total.   Exact total:  ____________'));
 
     W.push(H.q(4, 'Number riddles. Who am I?', { pb: true, before: 0, keepNext: true }));
-    W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My tens digit is double my ones digit. All my digits are different.'));
+    W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My ones digit is 1 and my tens digit is double my ones digit.'));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.'));
     W.push(...H.lines(2));

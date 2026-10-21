@@ -1,4 +1,4 @@
-// Assembles the P3 program from p2/content/l1.js … l10.js into the same shapes the P1 builders use.
+// Assembles the P3 program from p3/content/l1.js … l10.js into the same shapes the P1 builders use.
 const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));

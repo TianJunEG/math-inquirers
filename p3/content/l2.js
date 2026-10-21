@@ -160,7 +160,7 @@ module.exports = {
     H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 40, keepNext: true }),
     H.fig(svg('Two column sums with missing digits', 200,
       colsum(['3?47', '25?8', '?025'], '+', 110, 20, 40, 50, '(a)') + colsum(['7?03', '?46?', '2538'], '−', 410, 20, 40, 50, '(b)'), 520)),
-    H.sub('c', 'Check (b) by adding: 2538  +  ________  =  ________'),
+    H.sub('c', 'Hint for (b): turn it round and add, 2538 + □46□ = 7□03. Check (b) by adding: 2538  +  ________  =  ________'),
     H.q(2, 'Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', { keepNext: true }),
     H.fig(cardsSvg(['1', '2', '3', '4', '5', '6'])),
     H.sub('a', 'Make the sum as GREAT as possible.          ________  +  ________  =  ________'),
@@ -184,7 +184,7 @@ module.exports = {
     H.q(6, 'Shape puzzle. Each shape stands for a digit. Different shapes are different digits.', { before: 80, keepNext: true }),
     H.fig(svg('Shape sum: star circle plus star circle plus star circle equals triangle star circle', 64, shapeLine('SC+SC+SC=TSC'), 400)),
     H.sub('a', '★ = ______   ● = ______   ▲ = ______'),
-    H.sub('b', 'How do you know? Start with the ones column.'),
+    H.sub('b', 'The ones column: ● + ● + ● ends in ●. Which digits can ● be? Try 0 and 5, then check the tens column. How do you know?'),
     ...H.lines(1)
   ]
 };

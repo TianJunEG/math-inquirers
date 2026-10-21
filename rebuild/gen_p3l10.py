@@ -78,9 +78,9 @@ def bar_graph(data,top,stepv,k,bw=110,slot=170,aria='Bar graph',title='',ylab=''
 put('p3l10-title',title_slide('p3l10-title',10,5,'Challenge Day','Mixed puzzles: bar graphs and logic',
  'Choose how to start a puzzle, solve a logic grid, read a bar graph with a scale, and explain our thinking.',
  'Objective: Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking. Heuristics taught: (1) draw it, list it or make a table to start; (2) a logic grid: a tick means crosses in the rest of its row and column. '
- 'Materials: Puzzle cards for 4 stations (graph, logic, list, measure), digit cards 0 to 9, a 1 m 20 cm string and a ruler, squared paper, mini whiteboards, certificates, stamps. '
- 'Online: Each breakout pair gets one station card on screen and reports back; logic grids and graphs are shared on screen and annotated together. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (how to start a puzzle: draw it, make a table, read the scale; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket and certificates 80 to 90.'))
+ 'Materials: Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. '
+ 'Online: Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together. '
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (how to start a puzzle: draw it, make a table, read the scale; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket and certificates 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up: relay chain ----------
 chain=[('Start','6 × 9','54'),('Then','add 46','100'),('Then','multiply by 7','700'),('Then','take away 250','450'),('Then','divide by 5','90'),('Last','change to h and min','1 h 30 min')]
@@ -100,19 +100,17 @@ put('p3l10-warm2',sec('p3l10-warm2','5–10 MIN',body,'Minutes 5 to 10. One ques
 
 # ---------- explore ----------
 g=''
-tiles=['Graph','Logic','List','Measure']
+tiles=['List','Measure']
 for i,t in enumerate(tiles):
-    x=10+i*405
-    g+=f'<rect x="{x}" y="10" width="380" height="230" rx="18" fill="#FFF4D1" stroke="{NAVY}" stroke-width="4"/>'+T(x+190,226,t,32)
-g+=''.join(f'<rect x="{60+j*70}" y="{180-h}" width="46" height="{h}" fill="{c}" stroke="{NAVY}" stroke-width="3"/>' for j,(h,c) in enumerate([(120,YEL),(70,SKY),(150,TEAL),(95,RED)]))+f'<line x1="45" y1="180" x2="345" y2="180" stroke="{NAVY}" stroke-width="4"/>'
-g+=''.join(f'<rect x="{445+c*80}" y="{30+r*40}" width="80" height="40" fill="{YEL if r==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/>' for r in range(4) for c in range(4))
-g+=''.join(f'<rect x="{870+j*90}" y="60" width="70" height="90" rx="10" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(905+j*90,122,d,48) for j,d in enumerate('369'))
-g+=f'<path d="M1255 70 Q1330 30 1400 90 T1540 80" fill="none" stroke="{RED}" stroke-width="7" stroke-linecap="round"/><rect x="1250" y="130" width="310" height="44" rx="6" fill="#FFE9A8" stroke="{NAVY}" stroke-width="3"/>'+''.join(f'<line x1="{1262+j*26}" y1="130" x2="{1262+j*26}" y2="{150 if j%2 else 142}" stroke="{NAVY}" stroke-width="3"/>' for j,_ in enumerate(range(12)))
-pic=svg(1630,250,g,'Four puzzle stations: a bar graph, a logic grid, digit cards 3, 6 and 9, and a string with a ruler')
-put('p3l10-explore1',explore1('p3l10-explore1','10–15 MIN',['Pick 2 of the 4 stations: Graph, Logic, List, Measure.','Work in pairs. Read the puzzle card aloud.','Before you solve it, decide: draw it, list it or make a table?','Write the answer and how you started.'],pic,
- 'Minutes 10 to 25. Station cards: Graph: a bar graph of fruit sold; write 3 true facts (one "how many more", one "altogether"). Logic: a 3 by 3 clue card. List: make every 3-digit number from the cards 3, 6, 9 (there are 6). '
- 'Measure: cut a 1 m 20 cm string into 3 pieces so each piece is 10 cm longer than the one before (30 cm, 40 cm, 50 cm). Pairs spend about 7 minutes at each of their 2 stations. Online: one station card per breakout pair, then report back.'))
-put('p3l10-explore2',talk_qs('p3l10-explore2','15–25 MIN','Explore: talk about it',['How did you start each puzzle?','List station: how many numbers? How do you know you have them all?','Measure station: how long is each piece of string?'],
+    x=10+i*810
+    g+=f'<rect x="{x}" y="10" width="790" height="230" rx="18" fill="#FFF4D1" stroke="{NAVY}" stroke-width="4"/>'+T(x+395,226,t,32)
+g+=''.join(f'<rect x="{255+j*100}" y="50" width="76" height="110" rx="10" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(293+j*100,128,d,56) for j,d in enumerate('369'))
+g+=f'<rect x="870" y="90" width="670" height="60" fill="#FFE9A8" stroke="{NAVY}" stroke-width="4"/>'+T(1205,128,'120 cm ribbon: 3 pieces, each 10 cm longer',30)+f'<path d="M870 80 Q870 66 884 66 L1190 66 Q1205 66 1205 50 Q1205 66 1220 66 L1526 66 Q1540 66 1540 80" fill="none" stroke="{NAVY}" stroke-width="4"/>'
+pic=svg(1630,250,g,'Two puzzle stations: digit cards 3, 6 and 9, and a 120 cm ribbon to cut into 3 pieces')
+put('p3l10-explore1',explore1('p3l10-explore1','10–15 MIN',['Two stations, 7 minutes each: List, then Measure.','Work in pairs. Read the puzzle card aloud.','Before you solve it, decide: draw it, list it or make a table?','Write the answer and how you started.'],pic,
+ 'Minutes 10 to 25. Two stations only, so that the rotation fits online. Share the List card first (7 minutes), then the Measure card (7 minutes); the tutor shares each card when the timer ends. Pairs stay in the same breakout room. List: make every 3-digit number from the cards 3, 6, 9 (there are 6). '
+ 'Measure: a 120 cm ribbon is cut into 3 pieces, each piece 10 cm longer than the one before. Draw it and find each piece (30 cm, 40 cm, 50 cm). The graph and logic puzzles come next on worksheet page 1. Online: one station card on screen at a time, then report back.'))
+put('p3l10-explore2',talk_qs('p3l10-explore2','15–25 MIN','Explore: talk about it',['How did you start each puzzle?','List station: how many numbers? How do you know you have them all?','Measure station: how long is each piece of ribbon?'],
  'Minutes 15 to 25. Gather the pairs. Answers: 1) Open: listen for "I drew it", "I listed them in order", "I made a table". 2) 6 numbers: 369, 396, 639, 693, 936, 963. Each hundreds digit has 2 numbers, so 3 × 2 = 6. 3) 30 cm, 40 cm and 50 cm: take away the extras (10 cm and 20 cm) from 120 cm: 90 cm, so 30 cm each; then give the extras back. Check: 30 + 40 + 50 = 120.'))
 
 # ---------- teach 1: how to start ----------
@@ -215,7 +213,7 @@ body+=step(1,'In front of Mei: 1 person. Then Mei, then 3 people, then Ben.',top
 body+=answer(128,730,1664,'1 + 1 + 3 + 1 = 6 people.  Count your drawing to check.')
 put('p3l10-teachbetween',sec('p3l10-teachbetween','57–58 MIN',body,
  'Teach before worksheet page 2 (Q3). Ask first: "Is it 2 + 3 = 5?" No: that forgets Ben. Click the drawing, the step and the answer. Think-aloud: "I draw Mei 2nd, so 1 person in front. Then the 3 between, then Ben. Count every person: 6." The worksheet Q3b has different names; let children draw it themselves.'))
-put('p3l10-ws2',ws_preview('p3l10-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Queues. Draw the people.'),('Q4','Digit cards 2, 5, 8. List them in order.'),('Q5','Matchstick squares. Make a table.'),('Q6','A number riddle. Find ALL the answers.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6: check that children list every case (ones digit 1, 3 or 5) and cross out, not stop at the first answer.'))
+put('p3l10-ws2',ws_preview('p3l10-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Queues. Draw the people.'),('Q4','Digit cards 2, 5, 8. List them in order.'),('Q5','Matchstick squares. Make a table.'),('Q6','If time: a number riddle. Find ALL the answers.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6: check that children list every case (ones digit 1, 3 or 5) and cross out, not stop at the first answer.'))
 put('p3l10-ws2ans',check_slide('p3l10-ws2ans','67–70 MIN','Page 2: check together',[('Q3','a) 7 people   b) 6 people'),('Q4','258, 285, 528, 582, 825, 852.   Odd: 2.   Closest to 600: 582'),('Q5','13, 16, 19.   8 squares: 25 sticks.   31 sticks: 10 squares'),('Q6','411, 321, 213')],
  'Click after a child explains. Q3a: 2 in front, Ben, 4 behind: 7 (3 + 5 − 1). Q3b: 1 in front of Ali, Ali, 3 between, Siti: 6. Q4: odd ones end in 5: 285 and 825. 582 is 18 from 600; 528 is 72 away. '
  'Q5: the first square needs 4 sticks, each new square adds 3 (it shares a side). 8 squares: 4 + 7 × 3 = 25. Keep the table going: 22, 25, 28, 31 at 10 squares. Q6: digits add to 6, none 0, odd: ones digit 1 (hundreds and tens add to 5: 41 or 32, hundreds bigger: 411, 321), ones 3 (add to 3: 21: 213), ones 5 (add to 1: impossible).'))
@@ -223,7 +221,7 @@ put('p3l10-ws2ans',check_slide('p3l10-ws2ans','67–70 MIN','Page 2: check toget
 # ---------- stretch, challenge ----------
 st=[('1.','A bar graph shows stamps: Ali 35 and Ben 20. Mei has 15 more than Ben. Siti has as many as Ali and Ben together. How many stamps altogether?'),('2.','Ali, Ben and Siti stand in a line. Ali is not first. Ben is just behind Siti. Who is first?'),('3.','A snail climbs a 12 m wall. Each day it climbs up 5 m; each night it slides down 2 m. On which day does it reach the top?')]
 put('p3l10-stretch',sec('p3l10-stretch','For early finishers',h2('Stretch')+''.join(num_card(a,b,34) for a,b in st),
- 'For children who finish early. Answers: 1) 145 (Mei 20 + 15 = 35; Siti 35 + 20 = 55; 35 + 20 + 35 + 55 = 145). 2) Siti: if Ben is just behind Siti, the line is Siti, Ben, Ali or Ali, Siti, Ben; Ali is not first, so Siti, Ben, Ali. 3) Day 4: make a table: end of day 1: 5 m (night 3 m), day 2: 8 m (night 6 m), day 3: 11 m (night 9 m), day 4: 9 + 5 = 14 m, past the top. Many children say day 4 because 12 ÷ 3 = 4, which is the right day but the wrong reason: check the table.'))
+ 'For children who finish early. Answers: 1) 145 (Mei 20 + 15 = 35; Siti 35 + 20 = 55; 35 + 20 + 35 + 55 = 145). 2) Siti: if Ben is just behind Siti, the line is Siti, Ben, Ali or Ali, Siti, Ben; Ali is not first, so Siti, Ben, Ali. 3) Day 4: make a table: end of day 1: highest point 5 m (night: slides back to 3 m), day 2: highest point 8 m (night: 6 m), day 3: highest point 11 m (night: 9 m), day 4: 9 + 5 = 14 m, past the top. Many children say day 4 because 12 ÷ 3 = 4, which is the right day but the wrong reason: check the table.'))
 ch=[('1.','In a queue, Siti is 6th from the front and Ravi is 4th from the back. There are 3 children between them, and Siti is in front of Ravi. How many children are in the queue?'),('2.','A bar graph shows paper collected by 4 classes. 3P1 collected 10 kg more than 3P2. 3P3 collected the same as 3P1. 3P4 collected 5 kg less than 3P2. Altogether: 135 kg. How much did each class collect?')]
 put('p3l10-challenge',sec('p3l10-challenge','Challenge',h2('Challenge')+''.join(num_card(a,b,34) for a,b in ch),
  'Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) 13 children (5 in front of Siti, Siti, 3 between, Ravi, 3 behind Ravi: 5 + 1 + 3 + 1 + 3 = 13). 2) 3P1 40 kg, 3P2 30 kg, 3P3 40 kg, 3P4 25 kg (compare everything with 3P2: the extras are +10, +10 and −5, so 135 − 15 = 120 kg is 4 equal parts of 30 kg).'))
