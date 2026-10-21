@@ -98,7 +98,7 @@ def clock(hr, cx=200, cy=200, r=170, hand=TEAL, ghost=None, label='', mark=None)
     if ghost is not None: s += hnd(ghost, '#9AA6C0', 8, 0.5)
     s += hnd(hr, hand) + f'<circle cx="{cx}" cy="{cy}" r="12" fill="{NAVY}"/>'
     return s
-def clock_arc(h1, h2, cx=200, cy=200, r=125, col=RED):
+def clock_arc(h1, h2, cx=200, cy=200, r=92, col=RED):
     a1 = math.radians(-90 + 30 * (h1 % 12)); a2 = math.radians(-90 + 30 * (h2 % 12))
     large = 1 if ((h2 - h1) % 12) > 6 else 0
     return f'<path d="M{cx + r * math.cos(a1):.1f} {cy + r * math.sin(a1):.1f} A{r} {r} 0 {large} 1 {cx + r * math.cos(a2):.1f} {cy + r * math.sin(a2):.1f}" fill="none" stroke="{col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="3 14"/>'
@@ -164,11 +164,11 @@ W0 = 420
 base = SV(W0, W0, clock(9), 'A clock showing 9 o’clock')
 ov = SV(W0, W0, clock(2, ghost=9) + clock_arc(9, 2), 'The hour hand moves 5 hours from 9 round to 2, past 12')
 body = h2('Clock arithmetic: wrap round') + stitle('9 o’clock + 5 hours. Count on, then use mod.')
-body += pin(128, 270, W0, base)
-body += ostep(128, 270, 1, 'Count on 5 hours: 10, 11, 12, 1, 2.  The hand wraps round past 12.', ov, W0, W0, dx=W0 + 40, dy=0, tw=1664 - W0 - 40, size=32)
-body += ostep(128, 270, 2, 'With adding: 9 + 5 = 14. A clock has only 12 numbers, so take away 12: 14 − 12 = 2.', None, dx=W0 + 40, dy=130, tw=1664 - W0 - 40, size=32)
-body += ostep(128, 270, 3, 'In maths: 14 mod 12 = 2. “mod” means the remainder when you divide: 14 = 1 × 12 + 2.', None, dx=W0 + 40, dy=260, tw=1664 - W0 - 40, size=32)
-body += soft(128, 740, 1664, 'On a clock with m numbers, n mod m is where you land after n steps. Landing on 0 is the same as landing on 12.', 32)
+body += pin(128, 300, W0, base)
+body += ostep(128, 300, 1, 'Count on 5 hours: 10, 11, 12, 1, 2.  The hand wraps round past 12.', ov, W0, W0, dx=W0 + 40, dy=0, tw=1664 - W0 - 40, size=32)
+body += ostep(128, 300, 2, 'With adding: 9 + 5 = 14. A clock has only 12 numbers, so take away 12: 14 − 12 = 2.', None, dx=W0 + 40, dy=130, tw=1664 - W0 - 40, size=32)
+body += ostep(128, 300, 3, 'In maths: 14 mod 12 = 2. “mod” means the remainder when you divide: 14 = 1 × 12 + 2.', None, dx=W0 + 40, dy=260, tw=1664 - W0 - 40, size=32)
+body += soft(128, 760, 1664, 'On a clock with m numbers, n mod m is where you land after n steps. Landing on 0 is the same as landing on 12.', 32)
 put('p6l8-teach1', sec('p6l8-teach1', '25–27 MIN', body,
     'Teach. Use a real clock or the picture. Click 1: the hand sweeps from 9 to 2. Click 2: the addition and subtracting a full turn. Click 3: the word "mod". Think-aloud: "' + SC['think'][0].strip('“”') + '" Say: mod is just the remainder: 14 ÷ 12 = 1 remainder 2. Note: on a real clock we write 12 where maths writes 0; both mean the top of the clock.'))
 
@@ -180,8 +180,8 @@ body += pin(128, 280, 460, ring_base)
 body += ostep(128, 280, 1, 'A week wraps round after 7 days, like a clock after 12. So use mod 7.', None, dx=520, dy=0, tw=1144, size=32)
 body += ostep(128, 280, 2, '45 ÷ 7 = 6 remainder 3, so 45 mod 7 = 3. Six whole weeks bring us back to Thursday.', None, dx=520, dy=115, tw=1144, size=32)
 body += ostep(128, 280, 3, 'Then 3 more days: Friday, Saturday, Sunday.', ring_ov, 460, 460, dx=520, dy=230, tw=1144, size=32)
-body += answer(648, 560, 1144, 'In 45 days it is Sunday')
-body += soft(648, 680, 1144, 'Check: 6 × 7 = 42, and 42 + 3 = 45 ✓. Do not count today as day 1.', 32)
+body += answer(648, 660, 1144, 'In 45 days it is Sunday')
+body += soft(648, 780, 1144, 'Check: 6 × 7 = 42, and 42 + 3 = 45 ✓. Do not count today as day 1.', 32)
 put('p6l8-we1', sec('p6l8-we1', '27–29 MIN', body,
     'Click through; ask the group to predict before each reveal. Think-aloud: "45 days is 6 whole weeks and 3 days. The whole weeks do nothing, because after 7 days it is the same day again. So only the remainder matters: 3 days after Thursday is Sunday." Watch for: counting today as day 1 (that gives Saturday). Ask: "What day was it 45 days ago?" (Thursday − 3 = Monday).'))
 
@@ -315,9 +315,9 @@ put('p6l8-chdiag', sec('p6l8-chdiag', 'Challenge', body, 'Show after pairs have 
 
 # ================= 24. chwalk =================
 body = h2('Challenge: walk-through') + pin(128, 250, 800, p('Q1: the × 2 code', 34, 800, TEAL))
-for i, t in enumerate(['A = 0, and 0 × 2 = 0, so A becomes A.', 'N = 13, and 13 × 2 = 26, and 26 mod 26 = 0: A again!', 'Two letters give A, so a code A could be A or N.', 'Every code number is even: only 13 code letters used.']): body += pin(128, 330 + i * 110, 800, p(t, 30), 'rise', WHITE)
+for i, t in enumerate(['A = 0, and 0 × 2 = 0, so A becomes A.', 'N = 13, and 13 × 2 = 26, and 26 mod 26 = 0: A again!', 'Two letters give A, so a code A could be A or N.', 'Every code number is even: only 13 code letters used.']): body += pin(128, 330 + i * 130, 800, p(t, 30), 'rise', WHITE)
 body += pin(992, 250, 800, p('Q2: the × 3 code', 34, 800, TEAL))
-for i, t in enumerate(['C = 2: 2 × 3 = 6 = G.   A = 0: 0 = A.', 'B = 1: 1 × 3 = 3 = D.   So CAB is GAD.', 'Could two letters match? That needs 3 × (difference) to be a multiple of 26.', 'It never works: 3 and 26 share no factor. All 26 differ ✓']): body += pin(992, 330 + i * 110, 800, p(t, 30), 'rise', WHITE)
+for i, t in enumerate(['C = 2: 2 × 3 = 6 = G.   A = 0: 0 = A.', 'B = 1: 1 × 3 = 3 = D.   So CAB is GAD.', 'Could two letters match? That needs 3 × (difference) to be a multiple of 26.', 'It never works: 3 and 26 share no factor. All 26 differ ✓']): body += pin(992, 330 + i * 130, 800, p(t, 30), 'rise', WHITE)
 put('p6l8-chwalk', sec('p6l8-chwalk', 'Challenge', body,
     'Use after pairs have tried. Q1: doubling loses information: every code number is even, so only 13 different code letters can appear and each stands for two letters (n and n + 13). That is why a code must be able to be undone: the shift code always can. Q2: ×3 works because 3 and 26 share no common factor; ×13 or ×2 do not. Link: the clock with jumps of 5 (visits all 12 numbers) and jumps of 4 (does not) from the question bank.'))
 

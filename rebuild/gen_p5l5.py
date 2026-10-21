@@ -62,7 +62,7 @@ body+=pin(128,450,680,svgwrap(680,400,'A tank 40 cm long, 25 cm wide and 30 cm h
 body+=step(1,'Water now:  40 × 25 × 12 = 12 000 cm³ = 12 ℓ',left=860,top=450,width=932,size=32)
 body+=step(2,'8 ℓ = 8000 cm³.  One cm of height holds  40 × 25 = 1000 cm³.',left=860,top=570,width=932,size=32)
 body+=step(3,'The water rises  8000 ÷ 1000 = 8 cm.   Now 12 + 8 = 20 cm deep.',left=860,top=690,width=932,size=32)
-body+=pin(860,820,932,p('Check: 40 × 25 × 20 = 20 000 cm³ = 20 ℓ = 12 ℓ + 8 ℓ ✓',34,700),'fade',SOFT,20,'16px 28px')
+body+=pin(860,845,932,p('Check: 40 × 25 × 20 = 20 000 cm³ = 20 ℓ = 12 ℓ + 8 ℓ ✓',34,700),'fade',SOFT,20,'16px 28px')
 put('we1',sec(sid('we1'),'27–30 MIN',body,'Click to reveal each step and let children say it first. Think-aloud: "The water is a cuboid too: 40 by 25 by 12. That is 12 000 cm3, and 1000 cm3 is 1 litre, so 12 litres. Adding 8 litres is 8000 cm3. The floor of the tank is 40 x 25 = 1000 cm2, so every centimetre of depth holds 1000 cm3. That means 8000 cm3 is 8 cm more." Stress: change litres to cm3 BEFORE dividing. The drawing is to scale: the tank is 30 cm tall and the water is 12 cm, so the water is a bit less than half way. Ask: "How many more litres fill the tank to the top?" (40 x 25 x 10 = 10 000 cm3 = 10 litres).'))
 put('try1',try_slide(sid('try1'),'30–31 MIN','Your turn: whiteboards','Change litres to cm³ before you divide.',[('a','Base 20 cm by 10 cm, water 6 cm deep. How many ℓ?','1.2 ℓ'),('b','Base 30 cm by 20 cm. 3 ℓ of water. How deep?','5 cm'),('c','Base 25 cm by 20 cm, water 4 cm deep. Add 1.5 ℓ. New depth?','7 cm')],'Whiteboards up together, then click. a) 20 x 10 x 6 = 1200 cm3 = 1.2 litres. b) 3 litres = 3000 cm3; base 600 cm2; 3000 / 600 = 5 cm. c) 1.5 litres = 1500 cm3; base 500 cm2; 1500 / 500 = 3 cm more, so 4 + 3 = 7 cm. Watch for children who write 1.5 / 500 or who answer c with 3 cm (the rise, not the new depth).',size=36))
 
@@ -115,13 +115,13 @@ put('teachpaint',sec(sid('teachpaint'),'54–57 MIN',body,'Teach before workshee
 # ---------- teach before page 2: pouring ----------
 Pa=OB(100,330,6); Pb=OB(450,330,6)
 g=box(Pa,20,10,24,water=24,labels=['20 cm','24 cm','10 cm'],size=26,sw=3)+box(Pb,30,20,14,water=0,labels=['30 cm','14 cm','20 cm'],size=26,sw=3)
-g+=tb(170,150,'A (full)',28,TEAL)+tb(580,240,'B (empty)',28,TEAL)
+g+=tb(170,150,'A (full)',28,TEAL)+tb(600,190,'B (empty)',28,TEAL)
 body=h2('Pouring from one tank into another')+card(p('Container A (20 × 10 × 24 cm) is full of water. It is poured into empty tank B (base 30 × 20 cm). How deep is the water in B?',36,700))
-body+=pin(128,430,800,svgwrap(780,380,'Container A, 20 cm by 10 cm by 24 cm, full of water, and empty tank B with base 30 cm by 20 cm, drawn to the same scale',g),None)
-body+=step(1,'Water in A:  20 × 10 × 24 = 4800 cm³.  The amount does not change when we pour.',left=960,top=430,width=832,size=32)
-body+=step(2,'Base of B is 30 × 20 = 600 cm².   4800 ÷ 600 = 8 cm deep.',left=960,top=560,width=832,size=32)
-body+=step(3,'Pour some back until the depths are equal: both bases share the water. Bases: 200 + 600 = 800 cm².',left=960,top=690,width=832,size=32)
-body+=pin(960,830,832,p('4800 ÷ 800 = 6 cm in each.  Check: 200 × 6 + 600 × 6 = 4800 ✓',34,800),'fade',YEL,20,'14px 28px')
+body+=pin(128,430,780,svgwrap(780,380,'Container A, 20 cm by 10 cm by 24 cm, full of water, and empty tank B with base 30 cm by 20 cm, drawn to the same scale',g),None)
+body+=step(1,'Water in A:  20 × 10 × 24 = 4800 cm³.  The amount does not change when we pour.',left=930,top=430,width=862,size=32)
+body+=step(2,'Base of B is 30 × 20 = 600 cm².   4800 ÷ 600 = 8 cm deep.',left=930,top=560,width=862,size=32)
+body+=step(3,'Pour back until the depths are equal. Both bases share: 200 + 600 = 800 cm².',left=930,top=690,width=862,size=32)
+body+=pin(930,840,862,p('4800 ÷ 800 = 6 cm in each.  Check: 200 × 6 + 600 × 6 = 4800 ✓',34,800),'fade',YEL,20,'14px 28px')
 put('teachpour',sec(sid('teachpour'),'57–60 MIN',body,'Teach before worksheet page 2 (Q6). Ask first: "Does the amount of water change when we pour it?" (No: the volume is the same, only the shape changes.) Click through. Think-aloud: "Volume stays 4800. Base of B is 600, so depth 8. Now both containers: the water is shared over both floors. Equal depth d means 200 x d + 600 x d = 4800, so 800 x d = 4800 and d = 6 cm. I add the two base areas, then divide." Do not use letters with the children: say "the same depth" and divide 4800 by 800. Check: A holds 200 x 6 = 1200 cm3 and B holds 600 x 6 = 3600 cm3 and 1200 + 3600 = 4800.'))
 put('ws2',ws_preview(sid('ws2'),'60–67 MIN','Worksheet page 2: on your own',[('Q4','The metal cubes sink. Find the rise, then the new depth.'),('Q5','The 4 × 4 × 4 painted cube. Check that you get 64.'),('Q6','Container A into tank B, then equal depth.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who still divide litres by cm2 without changing the unit.'))
 put('ws2ans',checks(sid('ws2ans'),'67–69 MIN','Page 2: check together',[('Q4','a) 5000 cm³   b) 5 cm   c) 20 cm   d) 3000 cm³'),('Q5','3 faces 8,  2 faces 24,  1 face 24,  no paint 8  (total 64)'),('Q6','a) 14.4 ℓ   b) 12 cm   c) 8 cm')],
@@ -139,7 +139,7 @@ g2=box(Pt,30,20,30,water=10,labels=['30 cm','30 cm','20 cm'],size=26,sw=3)+box(P
 def dcard(title,svgs,w): return card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">{title}</p>'+svgs,extra='flex:1;min-width:0;padding:20px 24px')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=dcard('Q1: Two tanks, to scale',svgwrap(780,390,'Tank A, 30 cm by 20 cm, with water 30 cm deep and empty tank B, 40 cm by 30 cm, drawn to the same scale',g1,'width:100%;height:auto'),0)
-body+=dcard('Q2: The upright block',svgwrap(520,420,'A tank with base 30 cm by 20 cm, water 10 cm deep, and a block 10 cm by 10 cm by 15 cm standing on the bottom',g2,'width:100%;height:auto'),0)+'</div>'
+body+=dcard('Q2: The upright block',svgwrap(520,420,'A tank with base 30 cm by 20 cm, water 10 cm deep, and a block 10 cm by 10 cm by 15 cm standing on the bottom',g2,'width:470px;height:auto;align-self:center'),0)+'</div>'
 put('chdiag',sec(sid('chdiag'),'65–80 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer, and are drawn to scale. Ask: What do you notice? What stays the same when the water is poured? In Q2, how tall is the block compared with the water? Is it completely under water? What floor area does the water have now? Answers are in the Challenge slide notes.'))
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: the water is shared',38,800,TEAL))
 for i,t in enumerate(['Water: 30 × 20 × 30 = 18 000 cm³','Both floors: 600 + 1200 = 1800 cm²','18 000 ÷ 1800 = 10 cm','Check: 600 × 10 + 1200 × 10 = 18 000 ✓']): body+=pin(128,330+i*105,800,p(t,32),'rise',WHITE)

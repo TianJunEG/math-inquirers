@@ -220,12 +220,12 @@ Rx,Ry=20,40
 rec=rectfig(Rx,Ry,6,4,vline(Rx+3*c,Ry,4)+hline(Rx,Ry+2*c,6),'')
 dia=rectfig(Rx+7*c+30,Ry,6,4,dline(Rx+7*c+30,Ry,6,4),'')
 sq=rectfig(Rx+14*c+60,Ry,4,4,vline(Rx+14*c+60+2*c,Ry,4)+hline(Rx+14*c+60,Ry+2*c,4)+dline(Rx+14*c+60,Ry,4,4)+f'<line x1="{Rx+14*c+60+4*c}" y1="{Ry}" x2="{Rx+14*c+60}" y2="{Ry+4*c}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="10 7"/>','')
-lab=T(Rx+3*c,Ry+4*c+50,'rectangle: 2',34)+T(Rx+7*c+30+3*c,Ry+4*c+50,'the diagonal does not fit',30,NAVY)+T(Rx+14*c+60+2*c,Ry+4*c+50,'square: 4',34)
-f1=SV(19*c+80,4*c+90,rec+dia+sq+lab,'A rectangle with 2 lines of symmetry, the same rectangle with a diagonal fold that does not match, and a square with 4 lines of symmetry')
+lab=T(Rx+3*c,Ry+4*c+62,'rectangle: 2',34)+T(Rx+7*c+30+3*c,Ry+4*c+62,'the diagonal does not fit',30,NAVY)+T(Rx+14*c+60+2*c,Ry+4*c+62,'square: 4',34)
+f1=SV(19*c+80,4*c+110,rec+dia+sq+lab,'A rectangle with 2 lines of symmetry, the same rectangle with a diagonal fold that does not match, and a square with 4 lines of symmetry')
 body=h2('Find ALL the lines of symmetry')+pin(128,250,19*c+80,f1,None,WHITE,20,'10px 10px')
-body+=ostep(128,250,1,'A rectangle: up-down and across. That is 2 lines.',None,0,0,dx=0,dy=0,tw=1664).replace('top:250px','top:610px')
-body+=ostep(128,250,2,'Is the corner-to-corner line a line of symmetry? Fold along it: the long side lands on the short side, so the halves do NOT match. Not this one.',None,0,0,dx=0,dy=0,tw=1664,size=32).replace('top:250px','top:700px')
-body+=ostep(128,250,3,'A square has 4 lines: up-down, across and both corner-to-corner lines.',None,0,0,dx=0,dy=0,tw=1664).replace('top:250px','top:820px')
+body+=ostep(128,250,1,'A rectangle: up-down and across. That is 2 lines.',None,0,0,dx=0,dy=0,tw=1664).replace('top:250px','top:640px')
+body+=ostep(128,250,2,'Is the corner-to-corner line a line of symmetry? Fold along it: the long side lands on the short side, so the halves do NOT match. Not this one.',None,0,0,dx=0,dy=0,tw=1664,size=32).replace('top:250px','top:725px')
+body+=ostep(128,250,3,'A square has 4 lines: up-down, across and both corner-to-corner lines.',None,0,0,dx=0,dy=0,tw=1664).replace('top:250px','top:830px')
 put('p4l8-teachlines',sec('p4l8-teachlines','57–58 MIN',body,'Teach before worksheet page 2 (Q5). Use a paper rectangle: fold it up-down and across (the halves match) and then fold it corner to corner (the corners do not meet: the long edge lies beside the short edge). Systematic method: try up-down, across, then the two corner-to-corner lines, and mark each that works. Mention: a shape can have 0 lines (like the letter Z); that is a perfectly good answer.'))
 
 # ---------- teach before page 2: shade to make symmetric ----------
@@ -279,7 +279,7 @@ dl2={(0,0):'3',(1,1):'1',(1,0):'2',(2,1):'?'}
 NETX=[(0,0),(1,0),(1,1),(2,1),(3,1),(3,2)]
 exfig=SV(4*c+20,3*c+20,cellsq(NETX,c,10,10,WHITE,dl2,40),'A dice net with 3, 2, 1 and a question mark in the squares, and two more empty squares')
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{exfig}'+p('This dice net shows 3, 2 and 1. Opposite faces add up to 7. Which number goes in the square marked "?"',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l8-exit',sec('p4l8-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 4. The squares 3, 2, 1, ? and the next one form a staircase: the "?" is at the far end of the step from the 3, so it is opposite the 3, and 3 + 4 = 7. Children who write 6 or 5 chose a square next to it. Extension: fill in the other two squares (the one right of "?" is opposite 2, so 5; the bottom-right one is opposite 1, so 6).'))
+put('p4l8-exit',sec('p4l8-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 4. The 3, 2, 1 and ? squares make a staircase: the 3 and the ? are the two ends of the step, so they are opposite, and 3 + 4 = 7. Children who write 6 or 5 chose a square next to it. Extension: fill in the other two squares. The square right of the ? is opposite the 1, so 6; the bottom-right square is opposite the 2, so 5.'))
 
 # ---------- write ----------
 order=['p4l8-title','p4l8-warm1','p4l8-warm2','p4l8-explore1','p4l8-explore2','p4l8-teach1','p4l8-we1','p4l8-try1','p4l8-we2','p4l8-try2','p4l8-key','p4l8-break','p4l8-ws1','p4l8-ws1ans','p4l8-teachsym','p4l8-teachlines','p4l8-teachshade','p4l8-try3','p4l8-ws2','p4l8-ws2ans','p4l8-stretch','p4l8-challenge','p4l8-chdiag','p4l8-chwalk','p4l8-talk','p4l8-exit']
