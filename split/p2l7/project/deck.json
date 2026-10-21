@@ -8,6 +8,7 @@
  "title": "Math Inquirers P2: Lesson 7 – Fair Shares",
  "order": [
   "p2l7-title",
+  "p2l7-precheck",
   "p2l7-warm1",
   "p2l7-warm2",
   "p2l7-explore1",
@@ -33,7 +34,8 @@
   "p2l7-chdiag",
   "p2l7-chwalk",
   "p2l7-talk",
-  "p2l7-exit"
+  "p2l7-exit",
+  "p2l7-reflect"
  ],
  "cover": "p2l7-title",
  "sections": {

@@ -172,7 +172,7 @@ H(d,"Screening Set: tutor guide and answer key",0)
 for x in ["Use one to one or in a group of up to 4. Allow about 25 minutes. Read each question aloud if needed.",
 "Do not give hints in the first attempt. After 2 minutes you may give one hint, and score it as 'with a hint'.",
 "Score each question: 2 = correct and explains why (without hint); 1 = correct, or right idea with a hint; 0 = not yet.",
-"Then ask the extension question once. A good answer earns a star (★). Stars show how far the child can stretch.",
+"Then ask the extension question once. A good answer earns a star. Stars show how far the child can stretch.",
 "Total out of 16. As a guide, 12 or more with 3 or more stars suggests a child who would enjoy olympiad-style problems. Combine this with the lesson tracker; neither alone decides.",
 "These problems use the same kinds of thinking that later maths olympiad papers reward: patterns, listing in order, working backwards and logic. This set is not an official test and is not linked to any school or MOE programme."]: d.add_paragraph(x,style='List Bullet')
 ext={0:"What if the 5th number was 30? How many patterns now? How do you know you have them all?",
@@ -191,7 +191,7 @@ extans={0:"7 patterns: start 26 add 1, 22 add 2, 18 add 3, 14 add 4, 10 add 5, 6
 5:"28 triangles with 6 lines (1 + 2 + … + 7). Pattern: add one more each time (3, 6, 10, 15, 21, 28).",
 6:"6 orders (the other three can stand in 3 x 2 x 1 ways). Look for an ordered, complete list.",
 7:"37 (they go up by 6)."}
-rows=[["#","Question","Answer","Extension (★)"]]
+rows=[["#","Question","Answer","Extension (star)"]]
 for n,(l,i) in enumerate(pick,1):
     c=q[str(l)]['challenge'][i]
     rows.append([n,c['q'],c['a'],ext[n-1]])

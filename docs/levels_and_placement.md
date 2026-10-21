@@ -8,7 +8,7 @@ Each level is a three-year age band that overlaps the next (6-8, 7-9, 8-10, 9-11
 | P4 | Ages 9-11 | Primary 4 |
 | P5 | Ages 10-12 | Primary 5 |
 | P6 | Ages 11-13 (Maths + coding bridge) | Primary 6, after PSLE |
-Pages show the age name first and the school level in brackets, e.g. "Ages 8-10 (finishing P3)".
+Pages show the age name first and the school level in brackets, e.g. "Ages 8-10 (covers P3 topics)".
 ## Placement
 1. Parent takes the free 30-minute diagnostic for the level matching their child's age.
 2. Result: 70% or more = enrol at that level. 40-69% = enrol at that level; tutor note that support may help (or choose one level down). Under 40% = recommend one level down.

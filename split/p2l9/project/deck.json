@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T18:15:42Z"
+  "at": "2026-10-21T23:49:36Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 9 – Measure Masters",
  "order": [
   "p2l9-title",
+  "p2l9-precheck",
   "p2l9-warm1",
   "p2l9-warm2",
   "p2l9-explore1",
@@ -32,7 +33,8 @@
   "p2l9-chdiag",
   "p2l9-chwalk",
   "p2l9-talk",
-  "p2l9-exit"
+  "p2l9-exit",
+  "p2l9-reflect"
  ],
  "cover": "p2l9-title",
  "sections": {

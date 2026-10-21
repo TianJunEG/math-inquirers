@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 E=html.escape
 LV=sys.argv[1]; R=os.path.dirname(os.path.abspath(__file__))+'/..'
 d=json.load(open(f'{R}/diag/content/{LV}.json'))
-NUM=int(LV[1:]); AGE=d['ageName']; SCH={1:'finishing Primary 1',2:'finishing Primary 2',3:'finishing Primary 3',4:'finishing Primary 4',5:'finishing Primary 5',6:'after the PSLE'}[NUM]
+NUM=int(LV[1:]); AGE=d['ageName']; SCH={1:'Covers Primary 1 topics',2:'Covers Primary 2 topics',3:'Covers Primary 3 topics',4:'Covers Primary 4 topics',5:'Covers Primary 5 topics',6:'For children after the PSLE'}[NUM]
 DOWN={1:None,2:('P1','Ages 6-8'),3:('P2','Ages 7-9'),4:('P3','Ages 8-10'),5:('P4','Ages 9-11'),6:('P5','Ages 10-12')}[NUM]
 UP={1:('P2','Ages 7-9'),2:('P3','Ages 8-10'),3:('P4','Ages 9-11'),4:('P5','Ages 10-12'),5:('P6','Ages 11-13'),6:None}[NUM]
 css=open(f'{R}/fonts/fonts.css').read()+'''
@@ -34,7 +34,7 @@ for name,L in items:
     for it in L: it['_n']=k;k+=1
 def qhtml(L): return ''.join(f'<div class="q"><span class="n">{it["_n"]}</span><div><div class="qt">{E(it["q"])}</div><div class="box"></div></div></div>' for it in L)
 P=[]
-P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Check</div><h1>{AGE}</h1><p class="sub">Typically children {SCH}, and open to a year either side  •  About {d["minutes"]} minutes  •  No calculator</p>
+P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Check</div><h1>{AGE}</h1><p class="sub">{SCH}. Open to a year either side  •  About {d["minutes"]} minutes  •  No calculator</p>
 <div class="name"><span>Name:</span><span>Date:</span></div>
 <div class="card"><b>How it works.</b> Your child answers on their own. Read a question aloud if they ask, but do not help with the maths. If they are stuck, say "Try your best, or skip it", and move on. Write the answer in the box. Working on scrap paper is fine.</div>
 <span class="sec">Warm-up</span>{qhtml(d["foundation"])}{FOOT("Page 1")}</div>''')
