@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:15:25Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P4: Lesson 8 – Symmetry and Nets",
+ "order": [
+  "p4l8-title",
+  "p4l8-warm1",
+  "p4l8-warm2",
+  "p4l8-explore1",
+  "p4l8-explore2",
+  "p4l8-teach1",
+  "p4l8-we1",
+  "p4l8-try1",
+  "p4l8-we2",
+  "p4l8-try2",
+  "p4l8-key",
+  "p4l8-break",
+  "p4l8-ws1",
+  "p4l8-ws1ans",
+  "p4l8-teachsym",
+  "p4l8-teachlines",
+  "p4l8-teachshade",
+  "p4l8-try3",
+  "p4l8-ws2",
+  "p4l8-ws2ans",
+  "p4l8-stretch",
+  "p4l8-challenge",
+  "p4l8-chdiag",
+  "p4l8-chwalk",
+  "p4l8-talk",
+  "p4l8-exit"
+ ],
+ "cover": "p4l8-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p4l8-title"
+  },
+  "s2": {
+   "description": "Teach: fold nets in your head, opposite faces",
+   "start": "p4l8-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p4l8-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p4l8-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

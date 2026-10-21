@@ -201,8 +201,8 @@ put('p6l8-we2', sec('p6l8-we2', '29–31 MIN', body,
 
 # ================= 10. try2 =================
 put('p6l8-try2', qa_slide('p6l8-try2', '31–32 MIN', 'Your turn: code and decode', 'Letter numbers: A = 0 … Z = 25.',
-    [('a', 'Code CAT with shift 3.', 'FDW'), ('b', 'Code YES with shift 4. (Y = 24)', 'CIW'), ('c', 'Decode LION. It was made with shift 3. (Careful: I − 3?)', 'IFLK')],
-    'Whiteboards, then click. a) C(2)+3=5=F, A(0)+3=3=D... wait: A = 0, 0 + 3 = 3 = D. So CAT is FDW (C 2 → F 5, A 0 → D 3, T 19 → W 22). b) Y 24 + 4 = 28, 28 mod 26 = 2 = C; E 4 + 4 = 8 = I; S 18 + 4 = 22 = W: CIW. c) Decode LION with shift 3: L 11 − 3 = 8 = I; I 8 − 3 = 5 = F; O 14 − 3 = 11 = L; N 13 − 3 = 10 = K: IFLK. Hmm: it is a made-up word; the point is the subtracting. Ask: "Which letters would go below 0 when decoding?" (A, B, C).'))
+    [('a', 'Code CAT with shift 3.', 'FDW'), ('b', 'Code YES with shift 4. (Y = 24)', 'CIW'), ('c', 'Decode FRGH. It was made with shift 3.', 'CODE')],
+    'Whiteboards, then click. a) C 2 + 3 = 5 = F, A 0 + 3 = 3 = D, T 19 + 3 = 22 = W: FDW. b) Y 24 + 4 = 28, 28 mod 26 = 2 = C; E 4 + 4 = 8 = I; S 18 + 4 = 22 = W: CIW (the wrap-round case). c) Decoding subtracts: F 5 − 3 = 2 = C, R 17 − 3 = 14 = O, G 6 − 3 = 3 = D, H 7 − 3 = 4 = E: CODE. Ask: Which letters go below 0 when decoding with shift 3? (A, B and C: add 26.)'))
 
 # ================= 11. we3: decode and the Scratch machine =================
 loop = [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')]
@@ -291,34 +291,26 @@ body = h2('Challenge') + ''.join(card(p(num(f'{i+1}.', x['q']), 36, 600, raw=Tru
 put('p6l8-challenge', sec('p6l8-challenge', 'Challenge', body, 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(ch))))
 
 # ================= 23. challenge: see it =================
-def mulstrip(k, picks, w=720):
+def mulstrip(picks, w=720, y0=44):
     cw = w / 13; s = ''
     for r in range(2):
         for i in range(13):
-            idx = i + 13 * r; x = i * cw; y = 30 + r * 70
-            hi = idx in picks
-            s += f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="56" fill="{YEL if hi else WHITE}" stroke="{NAVY}" stroke-width="3"/>' + T(x + cw / 2, y + 28, ABC[idx], 26) + T(x + cw / 2, y + 50, idx, 20, MUTED, 600)
-    return s
-codes = ''
-for k, (lab, x0, y0) in enumerate([('A (0)', 60, 330), ('N (13)', 330, 330)]): pass
-a_svg = (f'<rect x="20" y="8" width="680" height="40" fill="none"/>' + T(360, 28, 'letters 0 to 25', 26, TEAL, 800) + mulstrip(2, (0, 13), 720)[0:0])
-def mulpic(k):
-    s = T(360, 24, f'Each letter number × {k}, then mod 26', 28, TEAL, 800)
-    s += mulstrip(k, (0, 13), 720).replace('y="30"', 'y="40"')
+            idx = i + 13 * r; x = i * cw; y = y0 + r * 70
+            s += f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="56" fill="{YEL if idx in picks else WHITE}" stroke="{NAVY}" stroke-width="3"/>' + T(x + cw / 2, y + 28, ABC[idx], 26) + T(x + cw / 2, y + 50, idx, 20, MUTED, 600)
     return s
 ex = ''
 for i, (lbl, n_) in enumerate([('A', 0), ('N', 13), ('B', 1), ('O', 14)]):
     x = 100 + i * 170
-    ex += f'<rect x="{x-70}" y="250" width="150" height="90" rx="14" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>' + T(x + 5, 285, f'{lbl} = {n_}', 28) + T(x + 5, 322, f'× 2 = {(n_*2)}', 28, TEAL, 800)
-dg = T(360, 30, 'Mei’s code: × 2, then mod 26', 30, TEAL, 800) + mulstrip(2, (0, 13), 720).replace('y="30"', 'y="48"').replace('y="100"', 'y="118"') + ex + T(360, 400, 'What comes out for N? And for A?', 30, NAVY, 700)
-dg2 = T(360, 30, 'Ben’s code: × 3, then mod 26', 30, TEAL, 800) + mulstrip(3, (2, 0, 1), 720).replace('y="30"', 'y="48"').replace('y="100"', 'y="118"')
+    ex += f'<rect x="{x-70}" y="210" width="150" height="90" rx="14" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>' + T(x + 5, 245, f'{lbl} = {n_}', 28) + T(x + 5, 282, f'× 2 = {n_*2}', 28, TEAL, 800)
+dg = T(360, 30, 'Mei’s code: × 2, then mod 26', 30, TEAL, 800) + mulstrip((0, 13, 1, 14)) + ex + T(360, 350, 'What comes out for N? And for A?', 30, NAVY, 700)
+dg2 = T(360, 30, 'Ben’s code: × 3, then mod 26', 30, TEAL, 800) + mulstrip((2, 0, 1))
 for i, (lbl, n_) in enumerate([('C', 2), ('A', 0), ('B', 1)]):
     x = 150 + i * 190
-    dg2 += f'<rect x="{x-70}" y="250" width="160" height="90" rx="14" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>' + T(x + 10, 285, f'{lbl} = {n_}', 28) + T(x + 10, 322, f'× 3 = {n_*3}', 28, TEAL, 800)
-dg2 += T(360, 400, 'Does any code letter appear twice?', 30, NAVY, 700)
+    dg2 += f'<rect x="{x-70}" y="210" width="160" height="90" rx="14" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>' + T(x + 10, 245, f'{lbl} = {n_}', 28) + T(x + 10, 282, f'× 3 = {n_*3}', 28, TEAL, 800)
+dg2 += T(360, 350, 'Does any code letter appear twice?', 30, NAVY, 700)
 body = h2('Challenge: see it', 60) + '<div style="display:flex;gap:32px;align-items:flex-start">'
-body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: the × 2 code</p>' + SV(720, 430, dg, 'The alphabet as numbers 0 to 25 in two rows. Mei’s code multiplies by 2 then takes mod 26. Boxes show A = 0, N = 13, B = 1, O = 14 each times 2.', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
-body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: the × 3 code</p>' + SV(720, 430, dg2, 'The alphabet as numbers 0 to 25 in two rows. Ben’s code multiplies by 3 then takes mod 26. Boxes show C = 2, A = 0 and B = 1 each times 3.', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
+body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: the × 2 code</p>' + SV(720, 380, dg, 'The alphabet as numbers 0 to 25 in two rows. Mei’s code multiplies by 2 then takes mod 26. Boxes show A = 0, N = 13, B = 1, O = 14 each times 2.', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
+body += card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: the × 3 code</p>' + SV(720, 380, dg2, 'The alphabet as numbers 0 to 25 in two rows. Ben’s code multiplies by 3 then takes mod 26. Boxes show C = 2, A = 0 and B = 1 each times 3.', 'width:100%;height:auto'), extra='flex:1;min-width:0;padding:20px 24px')
 body += '</div>'
 put('p6l8-chdiag', sec('p6l8-chdiag', 'Challenge', body, 'Show after pairs have tried, or if they are stuck. The pictures show the problem, not the answer. Q1: "What is 13 × 2? What letter is number 26 mod 26?" Q2: "Fill in the three code letters. Could two different letters ever give the same number?"'))
 

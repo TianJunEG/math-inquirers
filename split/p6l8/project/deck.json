@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:15:13Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P6: Lesson 8 – Secret Codes",
+ "order": [
+  "p6l8-title",
+  "p6l8-warm1",
+  "p6l8-warm2",
+  "p6l8-explore1",
+  "p6l8-explore2",
+  "p6l8-teach1",
+  "p6l8-we1",
+  "p6l8-try1",
+  "p6l8-we2",
+  "p6l8-try2",
+  "p6l8-we3",
+  "p6l8-key",
+  "p6l8-break",
+  "p6l8-ws1",
+  "p6l8-ws1ans",
+  "p6l8-teachtrace",
+  "p6l8-teachcrack",
+  "p6l8-teachcomb",
+  "p6l8-ws2",
+  "p6l8-ws2ans",
+  "p6l8-stretch",
+  "p6l8-challenge",
+  "p6l8-chdiag",
+  "p6l8-chwalk",
+  "p6l8-talk",
+  "p6l8-exit"
+ ],
+ "cover": "p6l8-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p6l8-title"
+  },
+  "s2": {
+   "description": "Teach: clock arithmetic and Caesar codes",
+   "start": "p6l8-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p6l8-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p6l8-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
