@@ -197,8 +197,8 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 (function(){
 "use strict";
 var BRAND="Preciouslyours Learning", DAY=86400000, DOMAIN="preciouslyours.example/r/";
-var DEFAULT_RULES={puzzleReward:"voucher",voucherValue:20,windowDays:60,firstOnly:false,cashPct:50,cashoutBlock:100,rates:{parent:{program:40,kit:5},tutor:{program:40,kit:5}}};
-var PRODUCTS={program:{name:"Math Inquirers holiday program",price:420},kit:{name:"Math Inquirers home book and kit",price:35}};
+var DEFAULT_RULES={puzzleReward:"voucher",voucherValue:20,windowDays:60,firstOnly:false,cashPct:50,cashoutBlock:100,rates:{parent:{program:50,kit:5},tutor:{program:50,kit:5}}};
+var PRODUCTS={program:{name:"Math Inquirers holiday program",price:500},kit:{name:"Math Inquirers home book and kit",price:35}};
 var LESSONS=[["Count with the Frog","Number patterns and skip counting"],["Number Bond Inquiry","Parts and wholes to 20"],["Let's Plan the Fruit Party","Picture graphs and tallies"],["Pattern Inquiry","Shape and number patterns"],["Mystery Number","Working backwards"],["Coin Combos","Money and finding every way"],["Shape Safari","2D shapes, sides and corners"],["Logic Lab","Clues, sorting and Venn diagrams"],["Measure It!","Length with non-standard units"],["Challenge Day","Mixed puzzles and the certificate"]];
 var LEVELS=["Nursery / K1","K2","Primary 1","Primary 2","Primary 3","Primary 4","Primary 5","Primary 6","Secondary"];
 function defRules(){return JSON.parse(JSON.stringify(DEFAULT_RULES))}
