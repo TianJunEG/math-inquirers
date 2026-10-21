@@ -131,30 +131,28 @@ module.exports = {
     const raw = s => [s];
     // Q1 place value
     W.push(H.q(1, 'Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.', { before: 20, keepNext: true }));
-    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.   ________________'));
-    W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ______________.  The digit in the ten thousands place is ______.'));
-    W.push(H.sub('c', 'How many thousands make 3 250 000?   ______________'));
+    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.  _________'));
+    W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ________.  The ten thousands digit is ____.'));
+    W.push(H.sub('c', 'How many thousands make 3 250 000?   __________'));
     // Q2 digit cards
     W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number.', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
-    W.push(H.sub('a', 'The greatest number:   ____________________'));
-    W.push(H.sub('b', 'The smallest EVEN number:   ____________________'));
-    W.push(H.sub('c', 'The number closest to 6 000 000. Test both sides of the target!', { keepNext: true }));
-    W.push(H.sub(' ', 'Best number just below:  ________________   It is  __________  away.'));
-    W.push(H.sub(' ', 'Best number just above:  ________________   It is  __________  away.'));
-    W.push(H.sub(' ', 'The closest number is  ________________'));
+    W.push(H.sub('a', 'Greatest:  ______________        (b)  Smallest EVEN number:  ______________'));
+    W.push(H.sub('c', 'Closest to 6 000 000:  ______________   Test both sides of the target!', { keepNext: true }));
+    W.push(H.sub(' ', 'Best just below:  ______________   It is  __________  away.'));
+    W.push(H.sub(' ', 'Best just above:  ______________   It is  __________  away.'));
     // Q3 riddle
-    W.push(H.q(3, 'Digit riddle. Start with the clue that fixes the most digits. Fill in the chart, then check every clue.', { keepNext: true }));
+    W.push(H.q(3, 'Digit riddle. Start with the clue that fixes the most digits. Then check every clue.', { keepNext: true }));
     { const clues = ['I am a 7-digit number. My digits are all different.',
       'Rounded to the nearest hundred thousand, I am 7 300 000.',
       'My ten thousands digit is 3 more than my hundred thousands digit.',
-      'My thousands digit is my ten thousands digit take away my hundred thousands digit.',
+      'My thousands digit is the difference between my ten thousands and hundred thousands digits.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
       'My digits add up to 32.'];
       W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
-        H.row(ws.map(w => H.cell('', w, { h: 260 })))])); }
+        H.row(ws.map(w => H.cell('', w, { h: 200 })))])); }
     W.push(H.sub(' ', 'I am  ______________________'));
 
     // ---- page 2 ----

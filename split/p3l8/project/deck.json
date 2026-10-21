@@ -1,0 +1,66 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:34:55Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P3: Lesson 8 – Angle and Line Detectives",
+ "order": [
+  "p3l8-title",
+  "p3l8-warm1",
+  "p3l8-warm2",
+  "p3l8-explore1",
+  "p3l8-explore2",
+  "p3l8-teach1",
+  "p3l8-we1",
+  "p3l8-try1",
+  "p3l8-teach2",
+  "p3l8-we2",
+  "p3l8-try2",
+  "p3l8-teach3",
+  "p3l8-key",
+  "p3l8-break",
+  "p3l8-ws1",
+  "p3l8-ws1ans",
+  "p3l8-teachgrid",
+  "p3l8-ws2",
+  "p3l8-ws2ans",
+  "p3l8-stretch",
+  "p3l8-challenge",
+  "p3l8-chdiag",
+  "p3l8-chwalk",
+  "p3l8-talk",
+  "p3l8-exit"
+ ],
+ "cover": "p3l8-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p3l8-title"
+  },
+  "s2": {
+   "description": "Teach: count in order, look for a pattern, perpendicular and parallel",
+   "start": "p3l8-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before page 2",
+   "start": "p3l8-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p3l8-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

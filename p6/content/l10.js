@@ -108,7 +108,7 @@ module.exports = {
     key: [
       ['Q1', '(a) 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
       ['Q2', '(a) 49 (factors 1, 7, 49; the only other 2-digit number with exactly 3 factors is 25)  (b) 2 × 2 × 3 × 7  (c) 3 + 37, 11 + 29, 17 + 23 (3 ways)'],
-      ['Q3', '(a) −7 °C  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (109 = 9 × 12 + 1)  (e) 18 (6 × 13 − 5 × 12)'],
+      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)'],
       ['Q4', '(a) 12  (b) 6  (c) 4/12 = 1/3 (12, 21, 24, 42)'],
       ['Q5', '(a) 31; 18  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139 (5 of the 36 results make 8; 1000 × 5 ÷ 36 ≈ 139); the program gives a number near this, not exactly'],
       ['Q6', 'Open: an idea, the puzzle, its answer worked out by hand, and a twist.'],
@@ -142,7 +142,7 @@ module.exports = {
     keyBig: 'Work out the answer by hand first. Then the program is a test: if it agrees with you, you are probably both right; if not, find out which one is wrong.',
     keySmall: 'A good showcase: show the puzzle, run it, show a test you knew the answer to, and explain why it works.',
     brk: 'Turtle moves. The tutor calls a polygon; everyone turns on the spot by its outside angle at every corner (triangle: 120°, square: 90°, hexagon: 60°) and counts until they face the front again.',
-    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round, Q4 digit cards and probability.',
+    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round (negatives, machines, turtle angles, clock), Q4 digit cards and probability.',
     ws2: 'Page 2, on your own (plan and build): Q5 test the starters by hand, Q6 my puzzle program, Q7 blocks and test table, then build it in Scratch.'
   },
 
@@ -179,30 +179,28 @@ module.exports = {
   },
 
   workbook: H => {
-    const hexProg = ['set n to 1', 'set sticks to 6', { c: 'repeat 14', body: ['change sticks by 5', 'change n by 1'] }, 'say sticks'];
+    const hexProg = ['when flag clicked', 'set sticks to 6', { c: 'repeat 14', body: ['change sticks by 5'] }, 'say sticks'];
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:center;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     const wt = [2600, 3300, 2700, 1300];
     const wp = [2400, 7500];
     return [
       H.q(1, 'Chains of hexagons are made from sticks.', { before: 0, keepNext: true }),
-      side(hexChains(), codeSvg(hexProg, 'Code blocks: set n to 1, set sticks to 6, repeat 14 (change sticks by 5, change n by 1), say sticks', 14)),
+      side(hexChains(), codeSvg(hexProg, 'Code blocks: when flag clicked, set sticks to 6, repeat 14 (change sticks by 5), say sticks', 14)),
       H.sub('a', 'Sticks for 10 hexagons?  ____      (b)  Rule for n hexagons:  sticks = __________'),
       H.sub('c', 'How many hexagons can be made with exactly 101 sticks?  ____'),
       H.sub('d', 'Predict what the code says.  ____       Which chain does it check?  ____ hexagons'),
-      H.q(2, 'Prime hunters.', { before: 80, keepNext: true }),
+      H.q(2, 'Prime hunters.', { before: 50, keepNext: true }),
       H.sub('a', 'I have 2 digits and exactly 3 factors. My digits add up to 13. What am I?  ____'),
       H.sub('b', 'Write 84 as a product of prime numbers.  ________________'),
       H.sub('c', 'Find ALL the ways to write 40 as two primes added.  __________________'),
-      H.q(3, 'Quick-fire round.', { before: 80, keepNext: true }),
+      H.q(3, 'Quick-fire round.', { before: 50, keepNext: true }),
       H.sub('a', 'It is −4 °C. It warms up 9 °C, then cools 12 °C. What is it now?  ____'),
       H.sub('b', 'A machine does × 3, then − 10. Which IN number comes OUT unchanged?  ____'),
       H.sub('c', 'A turtle draws a regular polygon, turning 24° at each corner. Sides?  ____'),
       H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ____'),
-      H.sub('e', 'The mean of 5 numbers is 12. A 6th number makes the mean 13. What is it?  ____'),
-      H.q(4, 'Make 2-digit numbers with the digit cards  1  2  3  4  (each card at most once in a number).', { before: 80, keepNext: true }),
+      H.q(4, 'Make 2-digit numbers with the digit cards  1  2  3  4  (each card at most once in a number).', { before: 50, keepNext: true }),
       H.sub('a', 'How many different numbers?  ____          (b)  How many are even?  ____'),
       H.sub('c', 'One number is picked at random. What is the probability it is a multiple of 3?  ____'),
-      H.p('Team score (1 point for each answer, each check and each reason):  ______ / 45', { after: 0, align: 'right' }),
 
       H.q(5, 'Maths first! Work out what each starter project should do BEFORE you run it.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Mystery Machine (× 3, then + 4).  n = 9: what comes out?  ____    Out 58: what went in?  ____'),

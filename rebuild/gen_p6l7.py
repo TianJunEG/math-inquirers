@@ -141,8 +141,8 @@ body = h2('Warm-up: Turtle says') + stitle('Stand up and face the screen: that i
 body += pin(128, 310, 420, SV(420, 440, comp, 'A compass with N, E, S and W. A turtle arrow points north.'))
 cmds = [('1.', 'Turn right 90°', 'East'), ('2.', 'Turn right 180°', 'West'), ('3.', 'Turn left 270°', 'North'), ('4.', 'Turn right 45°', 'North-east'), ('5.', 'Turn right 360°', 'Still north-east')]
 for i, (a, b, c) in enumerate(cmds):
-    body += qrow(620, 300 + i * 108, 700, a, b, 36) + answer(1360, 300 + i * 108, 432, c)
-body += qrow(620, 850 - 4, 700, '6.', 'A full turn in 3 equal turns?', 34).replace('top:846px', 'top:840px') + answer(1360, 840, 432, '120° each')
+    body += qrow(620, 290 + i * 104, 700, a, b, 36) + answer(1360, 290 + i * 104, 432, c)
+body += qrow(620, 815, 700, '6.', 'A full turn in 3 equal turns?', 34) + answer(1360, 815, 432, '120° each')
 put('p6l7-warm1', sec('p6l7-warm1', '0–5 MIN', body,
     'Minutes 0 to 5. Turtle says. Everyone stands (online: stand back from the camera). The turns follow on from each other: each one starts where the last one ended. Call each turn, children turn their bodies, then ask "Which way are you facing?" and click to show it. '
     '1) right 90 from north: east. 2) right 180 from east: west. 3) left 270 from west: north (left 270 is the same as right 90). 4) right 45: north-east. 5) right 360: a full turn, still north-east. 6) "Make one full turn in 3 equal turns. How big is each?" 360 ÷ 3 = 120°. Ask: "Which other turn would have done the same as left 270?" (right 90). Keep this picture in mind: a full turn is 360°.'))
@@ -156,14 +156,14 @@ put('p6l7-warm2', sec('p6l7-warm2', '5–10 MIN', body,
 
 # ================= 4. explore 1 =================
 sq_prog = [('event', 'when green flag clicked'), ('pen', 'pen down'), ('ctrl', 'repeat {4}', [('motion', 'move {100} steps'), ('motion', 'turn right {90} degrees')])]
-bb, bw, bh = blocks(sq_prog, 26, 48)
+bb, bw, bh = blocks(sq_prog, 24, 42)
 sqp, _ = fit(turtle_pts(4, 90), 0, 0, 170, 170)
 sq = f'<g transform="translate({bw+40},{bh/2-85:.0f})"><polygon points="{" ".join(f"{a:.1f},{b:.1f}" for a, b in sqp)}" fill="{SKY}" stroke="{NAVY}" stroke-width="5"/>{arrow(sqp[0][0], sqp[0][1], 0, 28)}</g>'
 pic = SV(bw + 230, max(bh, 180), bb + sq, 'The square program as blocks: when green flag clicked, pen down, repeat 4: move 100 steps, turn right 90 degrees. Beside it, the square it draws, with a turtle arrow at the start.')
 lst = ''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
 body = h2('Explore: at the computer')
-body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:34px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:10px;line-height:1.3">{lst}</ol>')
-body += card(f'<div style="display:flex;align-items:center;gap:40px">{pic}<p style="font-size:30px;font-weight:600;color:{MUTED};line-height:1.3">Record in a table: sides, turn, did it close?</p></div>', extra='padding:20px 40px')
+body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
+body += card(f'<div style="display:flex;align-items:center;gap:40px">{pic}<p style="font-size:30px;font-weight:600;color:{MUTED};line-height:1.3">Record in a table: sides, turn, did it close?</p></div>', extra='padding:12px 40px')
 put('p6l7-explore1', sec('p6l7-explore1', '10–15 MIN', body,
     'Minutes 10 to 15 (pairs keep going until 25). One child drives Scratch, the other predicts the turn BEFORE each run; swap for each shape. Build the square program together first and run it. Then the challenge: change one number to get an equilateral triangle. Expect many pairs to type 60 (the inside angle): let them run it. It draws only half a hexagon. Ask: "How far did the turtle turn altogether? Did it come home?" '
     'Then pentagon (5 sides) and hexagon (6 sides). Finished early: a regular shape with 10 sides. Online: breakout rooms, the driver shares their screen. Tip: add "erase all" and "go to x: 0 y: 0" at the top so each run starts clean.'))
