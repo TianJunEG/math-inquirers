@@ -21,7 +21,7 @@
     "How many 4-digit numbers can you make altogether now? What stayed the same? What changed? Why?"
    ],
    "lines": 4,
-   "model": "Starting with 1: 1023, 1032, 1203, 1230, 1302, 1320 (6 numbers). 6 start with 2 and 6 start with 3. None start with 0 (0123 is only a 3-digit number). Altogether 18, not 24. Same: each of the cards 1, 2, 3 still makes 6 numbers. Changed: 0 cannot go first, so 6 numbers are lost (24 - 6 = 18). Look for: a list in order, a count by first digit, and the reason that zero cannot lead. Extension: how many are even? (10 with the cards 0, 1, 2, 3; 12 with the cards 1, 2, 3, 4.)"
+   "model": "Starting with 1: 1023, 1032, 1203, 1230, 1302, 1320 (6 numbers). 6 start with 2 and 6 start with 3. None start with 0 (0123 is only a 3-digit number). Altogether 18, not 24. Same: each of the cards 1, 2, 3 still makes 6 numbers. Changed: 0 cannot go first, so 6 numbers are lost (24 − 6 = 18). Look for: a list in order, a count by first digit, and the reason that zero cannot lead. Extension: how many are even? (10 with the cards 0, 1, 2, 3; 12 with the cards 1, 2, 3, 4.)"
   },
   "reflect": [
    "making the list in order",
@@ -34,7 +34,7 @@
    {
     "q": "Ali had some marbles. He won 1250 more and then had 4000. How many did he have at first?",
     "a": "2750",
-    "why": "Work backwards: take away what he won. 4000 - 1250 = 2750. Check: 2750 + 1250 = 4000."
+    "why": "Work backwards: take away what he won. 4000 − 1250 = 2750. Check: 2750 + 1250 = 4000."
    },
    {
     "q": "Find the missing digit A:  3A47 + 2865 = 6212. Say how you know.",
@@ -44,14 +44,14 @@
   ],
   "inv": {
    "title": "Is it always true? The reverse trick",
-   "intro": "Take a 3-digit number whose first digit is bigger than its last digit, like 842. Reverse it to make 248. Subtract the smaller from the bigger: 842 - 248 = 594.",
+   "intro": "Take a 3-digit number whose first digit is bigger than its last digit, like 842. Reverse it to make 248. Subtract the smaller from the bigger: 842 − 248 = 594.",
    "parts": [
     "Try 4 more numbers of your own. Write each subtraction and its answer.",
     "What do you notice about all your answers? Compare with a partner.",
     "Is it always true? Test it on a number that ends in 0, like 720, then explain why you think it works."
    ],
    "lines": 4,
-   "model": "Every answer is in the 99 times table: 99 x (first digit - last digit). 842 - 248 = 594 = 99 x 6 (8 - 2 = 6); 720 - 27 = 693 = 99 x 7. This is true for every 3-digit number whose first digit is bigger than its last (checked by computer for all of them). Why: the middle digit is in the same place in both numbers, so it cancels. The hundreds and ones swap places, so each step of difference between the first and last digits adds 99 (100 - 1). Look for: several tests, spotting the 99s (not only 495; 495 appears only when the digits differ by 5), and any reason about the middle digit. Extension: when is the answer exactly 495?"
+   "model": "Every answer is in the 99 times table: 99 × (first digit − last digit). 842 − 248 = 594 = 99 × 6 (8 − 2 = 6); 720 − 27 = 693 = 99 × 7. This is true for every 3-digit number whose first digit is bigger than its last (checked by computer for all of them). Why: the middle digit is in the same place in both numbers, so it cancels. The hundreds and ones swap places, so each step of difference between the first and last digits adds 99 (100 − 1). Look for: several tests, spotting the 99s (not only 495; 495 appears only when the digits differ by 5), and any reason about the middle digit. Extension: when is the answer exactly 495?"
   },
   "reflect": [
    "carrying",
@@ -67,21 +67,21 @@
     "why": "84 is 70 + 14 (10 sevens and 2 sevens). 54 and 74 are not 7 times anything."
    },
    {
-    "q": "Use 6 x 7 = 42 to work out 6 x 14 and 6 x 6 without a table. Say how you did it.",
+    "q": "Use 6 × 7 = 42 to work out 6 × 14 and 6 × 6 without a table. Say how you did it.",
     "a": "84 and 36",
-    "why": "14 is double 7, so double 42 = 84. 6 x 6 is one 6 less than 6 x 7: 42 - 6 = 36."
+    "why": "14 is double 7, so double 42 = 84. 6 × 6 is one 6 less than 6 × 7: 42 − 6 = 36."
    }
   ],
   "inv": {
    "title": "Is it always true? Digit sums",
    "intro": "In the 9 times table the digits of each answer add up to 9: 9, 18 (1 + 8), 27 (2 + 7), 36 (3 + 6) ...",
    "parts": [
-    "Carry on the 9 times table to 9 x 12. Add the digits of each answer. Is the total ALWAYS 9? Write what you find.",
-    "Try the 3 times table and the 6 times table up to x 12. Add the digits of each answer. What do you notice?",
+    "Carry on the 9 times table to 9 × 12. Add the digits of each answer. Is the total ALWAYS 9? Write what you find.",
+    "Try the 3 times table and the 6 times table up to × 12. Add the digits of each answer. What do you notice?",
     "Try the 4 times table. Is it the same? What can you say about the 3, 6 and 9 times tables?"
    ],
    "lines": 4,
-   "model": "9 times table: the digit sum is 9 for 9 x 1 to 9 x 10 and for 9 x 12 = 108, but 9 x 11 = 99 gives 9 + 9 = 18. So 'always 9' is false, but 18 is also in the 9 times table (and 1 + 8 = 9 again). 3 and 6 times tables: every digit sum is in the 3 times table (3, 6, 9, 12, ...). 4 times table: digit sums 4, 8, 3, 7, 2, 6, 10 ... include numbers that are not in the 3 times table (4, 8), so it is not the same. Conclusion: the digit sum of any answer in the 3, 6 or 9 table is in the 3 times table; for the 9 table it is in the 9 times table. Look for: testing past x 10, finding the counterexample 99, and revising the claim instead of just saying 'no'. Do not expect a proof."
+   "model": "9 times table: the digit sum is 9 for 9 × 1 to 9 × 10 and for 9 × 12 = 108, but 9 × 11 = 99 gives 9 + 9 = 18. So 'always 9' is false, but 18 is also in the 9 times table (and 1 + 8 = 9 again). 3 and 6 times tables: every digit sum is in the 3 times table (3, 6, 9, 12, ...). 4 times table: digit sums 4, 8, 3, 7, 2, 6, 10 ... include numbers that are not in the 3 times table (4, 8), so it is not the same. Conclusion: the digit sum of any answer in the 3, 6 or 9 table is in the 3 times table; for the 9 table it is in the 9 times table. Look for: testing past × 10, finding the counterexample 99, and revising the claim instead of just saying 'no'. Do not expect a proof."
   },
   "reflect": [
    "remembering the facts",
@@ -99,7 +99,7 @@
    {
     "q": "A pen and a book cost $9 together. The book costs $5 more than the pen. How much is the pen?",
     "a": "$2",
-    "why": "Take away the extra $5: 9 - 5 = 4. Two equal bars share 4, so the pen is $2 (the book is $7)."
+    "why": "Take away the extra $5: 9 − 5 = 4. Two equal bars share 4, so the pen is $2 (the book is $7)."
    }
   ],
   "inv": {
@@ -200,18 +200,18 @@
   "check": [
    {
     "q": "A rectangle has a perimeter of 14 cm and one side is 3 cm long. What is its area?",
-    "a": "12 cm2",
-    "why": "Two sides of 3 cm use 6 cm, so the other two sides share 8 cm: 4 cm each. Area 3 x 4 = 12 cm2."
+    "a": "12 cm²",
+    "why": "Two sides of 3 cm use 6 cm, so the other two sides share 8 cm: 4 cm each. Area 3 × 4 = 12 cm²."
    },
    {
-    "q": "Two different rectangles both have an area of 12 cm2. Can they have different perimeters? Show two examples.",
+    "q": "Two different rectangles both have an area of 12 cm². Can they have different perimeters? Show two examples.",
     "a": "Yes, e.g. 26 cm and 16 cm",
     "why": "1 by 12 has perimeter 26 cm; 2 by 6 has 16 cm; 3 by 4 has 14 cm."
    }
   ],
   "inv": {
    "title": "What if we change it? What stays the same?",
-   "intro": "A square with sides 4 cm has area 16 cm2 and perimeter 16 cm. Make it 1 cm longer one way and 1 cm shorter the other way. You get a 5 cm by 3 cm rectangle.",
+   "intro": "A square with sides 4 cm has area 16 cm² and perimeter 16 cm. Make it 1 cm longer one way and 1 cm shorter the other way. You get a 5 cm by 3 cm rectangle.",
    "parts": [
     "Work out the area and perimeter of the 5 by 3 rectangle. What changed? What stayed the same?",
     "Do the same for a 6 cm square (7 by 5) and a 10 cm square (11 by 9). Fill in the table. Then choose a square of your own.",
@@ -234,7 +234,7 @@
     ]
    },
    "lines": 3,
-   "model": "4 by 4: perimeter 16, area 16 becomes 5 by 3: perimeter 16, area 15. 6 cm: 24 and 36 become 7 by 5: 24 and 35. 10 cm: 40 and 100 become 11 by 9: 40 and 99. The perimeter stays the same and the area is always exactly 1 cm2 smaller. This is true for every square (checked by computer for sides 2 to 499). Why: move the bottom row of 4 squares to the right side. The new column is only 3 squares tall, so 3 squares fit and 1 is left over. Look for: several tests, the pattern 'area drops by 1', and any picture or cut-and-move reason. Extension: what if we make it 2 cm longer and 2 cm shorter? (area drops by 4; perimeter still the same)."
+   "model": "4 by 4: perimeter 16, area 16 becomes 5 by 3: perimeter 16, area 15. 6 cm: 24 and 36 become 7 by 5: 24 and 35. 10 cm: 40 and 100 become 11 by 9: 40 and 99. The perimeter stays the same and the area is always exactly 1 cm² smaller. This is true for every square (checked by computer for sides 2 to 499). Why: move the bottom row of 4 squares to the right side. The new column is only 3 squares tall, so 3 squares fit and 1 is left over. Look for: several tests, the pattern 'area drops by 1', and any picture or cut-and-move reason. Extension: what if we make it 2 cm longer and 2 cm shorter? (area drops by 4; perimeter still the same)."
   },
   "reflect": [
    "finding missing sides",
@@ -280,7 +280,7 @@
     ]
    },
    "lines": 3,
-   "model": "Steps 1 to 4: right angles 4, 5, 6, 7; bigger than a right angle 0, 1, 2, 3; all corners 4, 6, 8, 10. So right-angle corners = steps + 3, bigger corners = steps - 1, all corners = 2 x steps + 2. 10 steps: 13, 9 and 22 (checked by computer by building each staircase). The total is always even because each new step adds 2 corners (one right angle and one dent). Look for: careful organised counting, a table, a stated rule, and a prediction that can be checked. Early finishers draw the 10-step staircase to test the prediction."
+   "model": "Steps 1 to 4: right angles 4, 5, 6, 7; bigger than a right angle 0, 1, 2, 3; all corners 4, 6, 8, 10. So right-angle corners = steps + 3, bigger corners = steps − 1, all corners = 2 × steps + 2. 10 steps: 13, 9 and 22 (checked by computer by building each staircase). The total is always even because each new step adds 2 corners (one right angle and one dent). Look for: careful organised counting, a table, a stated rule, and a prediction that can be checked. Early finishers draw the 10-step staircase to test the prediction."
   },
   "reflect": [
    "counting angles",

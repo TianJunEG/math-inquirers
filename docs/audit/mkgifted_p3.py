@@ -1,0 +1,86 @@
+import json
+G={}
+def L(n,**k): G[str(n)]=k
+L(1,
+ check=[{"q":"A shop sells stickers in boxes of 1000, packs of 100 and bundles of 10. Mei buys 2 boxes, 13 packs and 4 bundles. How many stickers does she buy?","a":"3340","why":"13 packs of 100 is 1300, so 2000 + 1300 = 3300, then 40 more."},
+        {"q":"Use the cards 4, 0, 9, 3 once each. What is the smallest ODD 4-digit number? Say how you know it is the smallest.","a":"3049","why":"Odd means the ones digit is 9 or 3. Try both: 3049 and 4093. 0 cannot go first."}],
+ inv={"title":"What if one card changes?","intro":"The cards 1, 2, 3, 4 make 24 four-digit numbers: 6 start with each card. Now change the 4 card to a 0, so the cards are 0, 1, 2, 3.",
+  "parts":["Make a list in order of the numbers that start with 1. How many are there?","How many start with 2? With 3? With 0?","How many 4-digit numbers can you make altogether now? What stayed the same? What changed? Why?"],"lines":4,
+  "model":"Starting with 1: 1023, 1032, 1203, 1230, 1302, 1320 (6 numbers). 6 start with 2 and 6 start with 3. None start with 0 (0123 is only a 3-digit number). Altogether 18, not 24. Same: each of the cards 1, 2, 3 still makes 6 numbers. Changed: 0 cannot go first, so 6 numbers are lost (24 - 6 = 18). Look for: a list in order, a count by first digit, and the reason that zero cannot lead. Extension: how many are even? (10 with the cards 0, 1, 2, 3; 12 with the cards 1, 2, 3, 4.)"},
+ reflect=["making the list in order","renaming (15 hundreds)","working out the clues"])
+L(2,
+ check=[{"q":"Ali had some marbles. He won 1250 more and then had 4000. How many did he have at first?","a":"2750","why":"Work backwards: take away what he won. 4000 - 1250 = 2750. Check: 2750 + 1250 = 4000."},
+        {"q":"Find the missing digit A:  3A47 + 2865 = 6212. Say how you know.","a":"A = 3","why":"Ones 7 + 5 = 12, carry 1. Tens 4 + 6 + 1 = 11, carry 1. Hundreds A + 8 + 1 must end in 2, so A = 3."}],
+ inv={"title":"Is it always true? The reverse trick","intro":"Take a 3-digit number whose first digit is bigger than its last digit, like 842. Reverse it to make 248. Subtract the smaller from the bigger: 842 - 248 = 594.",
+  "parts":["Try 4 more numbers of your own. Write each subtraction and its answer.","What do you notice about all your answers? Compare with a partner.","Is it always true? Test it on a number that ends in 0, like 720, then explain why you think it works."],"lines":4,
+  "model":"Every answer is in the 99 times table: 99 x (first digit - last digit). 842 - 248 = 594 = 99 x 6 (8 - 2 = 6); 720 - 27 = 693 = 99 x 7. This is true for every 3-digit number whose first digit is bigger than its last (checked by computer for all of them). Why: the middle digit is in the same place in both numbers, so it cancels. The hundreds and ones swap places, so each step of difference between the first and last digits adds 99 (100 - 1). Look for: several tests, spotting the 99s (not only 495; 495 appears only when the digits differ by 5), and any reason about the middle digit. Extension: when is the answer exactly 495?"},
+ reflect=["carrying","finding missing digits","magic squares and pyramids"])
+L(3,
+ check=[{"q":"Which of these numbers are in the 7 times table: 49, 54, 63, 74, 84? Say how you know.","a":"49, 63 and 84","why":"84 is 70 + 14 (10 sevens and 2 sevens). 54 and 74 are not 7 times anything."},
+        {"q":"Use 6 x 7 = 42 to work out 6 x 14 and 6 x 6 without a table. Say how you did it.","a":"84 and 36","why":"14 is double 7, so double 42 = 84. 6 x 6 is one 6 less than 6 x 7: 42 - 6 = 36."}],
+ inv={"title":"Is it always true? Digit sums","intro":"In the 9 times table the digits of each answer add up to 9: 9, 18 (1 + 8), 27 (2 + 7), 36 (3 + 6) ...",
+  "parts":["Carry on the 9 times table to 9 x 12. Add the digits of each answer. Is the total ALWAYS 9? Write what you find.","Try the 3 times table and the 6 times table up to x 12. Add the digits of each answer. What do you notice?","Try the 4 times table. Is it the same? What can you say about the 3, 6 and 9 times tables?"],"lines":4,
+  "model":"9 times table: the digit sum is 9 for 9 x 1 to 9 x 10 and for 9 x 12 = 108, but 9 x 11 = 99 gives 9 + 9 = 18. So 'always 9' is false, but 18 is also in the 9 times table (and 1 + 8 = 9 again). 3 and 6 times tables: every digit sum is in the 3 times table (3, 6, 9, 12, ...). 4 times table: digit sums 4, 8, 3, 7, 2, 6, 10 ... include numbers that are not in the 3 times table (4, 8), so it is not the same. Conclusion: the digit sum of any answer in the 3, 6 or 9 table is in the 3 times table; for the 9 table it is in the 9 times table. Look for: testing past x 10, finding the counterexample 99, and revising the claim instead of just saying 'no'. Do not expect a proof."},
+ reflect=["remembering the facts","spotting the pattern","explaining why"])
+L(4,
+ check=[{"q":"Ali has 70 stickers and Ben has 30. Ali gives Ben some stickers so that they have the same number. How many does Ali give? Draw a bar model.","a":"20","why":"The difference is 40. Ali gives half of the difference: 20. Then both have 50."},
+        {"q":"A pen and a book cost $9 together. The book costs $5 more than the pen. How much is the pen?","a":"$2","why":"Take away the extra $5: 9 - 5 = 4. Two equal bars share 4, so the pen is $2 (the book is $7)."}],
+ inv={"title":"What stays the same?","intro":"Mei is 13 years old and her brother is 5.",
+  "parts":["Fill in the table for the next 5 years.","What stays the same every year? What changes? How does it change?","Will Mei ever be exactly DOUBLE her brother's age? When? What about TRIPLE? Explain."],
+  "table":{"cols":["Years from now","Mei's age","Brother's age","Difference","Total of both ages"],"rows":["now","1","2","3","4","5"]},"lines":3,
+  "model":"Table (Mei, brother, difference, total): now 13, 5, 8, 18; 1: 14, 6, 8, 20; 2: 15, 7, 8, 22; 3: 16, 8, 8, 24; 4: 17, 9, 8, 26; 5: 18, 10, 8, 28. Same: the difference is always 8. Changes: both ages go up by 1 and the total goes up by 2 each year. Double: in 3 years (16 and 8). Mei is double when her brother's age equals the difference, 8. Triple: never again. She was triple last year (12 and 4), and after that the ratio only gets smaller. Look for: using the table, noticing the difference is constant, and a bar-model reason for 'double' (her brother's bar is the same length as the difference). Extension: when did she last have 3 times his age?"},
+ reflect=["drawing the bar model","before and after stories","finding what stays the same"])
+L(5,
+ check=[{"q":"A number divided by 7 gives 5 with remainder 4. What is the number? Say how you know.","a":"39","why":"Work backwards: 5 groups of 7 is 35, and 4 left over makes 39."},
+        {"q":"Which of these can NOT be a remainder when we divide by 6: 0, 4, 6, 9? Say why.","a":"6 and 9","why":"A remainder must be smaller than 6. If 6 or more were left, another group of 6 would fit."}],
+ inv={"title":"Is it always true? Three in a row","intro":"Write any three whole numbers in a row, like 14, 15, 16. Exactly one of them is in the 3 times table (15).",
+  "parts":["Try 5 different starting numbers (make one of them bigger than 100). Circle the number in the 3 times table each time. Is it always exactly one?","Explain why. Think about the remainders when you divide by 3.","What if we change it? Try 4 numbers in a row and the 4 times table. Then try only 2 numbers in a row and the 3 times table."],"lines":4,
+  "model":"Always true: among 3 numbers in a row there is exactly one in the 3 times table. Remainders when dividing by 3 go 1, 2, 0, 1, 2, 0, ... so in any 3 in a row each remainder 0, 1, 2 appears once, and remainder 0 means it is in the table. With 4 in a row and the 4 times table it is also exactly one (remainders 0, 1, 2, 3 repeat). With only 2 in a row and the 3 times table it is NOT always true (4 and 5 have none). In general, n numbers in a row always have exactly one in the n times table. Look for: several tests including a big number, the remainder cycle as the reason, and a counterexample for the 2 in a row case."},
+ reflect=["dividing","reading the remainder","riddles with two clues"])
+L(6,
+ check=[{"q":"Mei says: \"1/4 of a pizza is bigger than 1/3 of the same pizza, because 4 is bigger than 3.\" Is she right? Draw it.","a":"No: 1/3 is bigger","why":"More equal parts means each part is smaller. Quarters are smaller than thirds."},
+        {"q":"How many eighths make 3/4? Say how you know.","a":"6 eighths","why":"3/4 = 6/8. Double the top and the bottom, or look at the wall: two eighths fill one quarter."}],
+ inv={"title":"Find all the ways","intro":"Make exactly [[3/4]] using pieces of [[1/2]], [[1/4]] and [[1/8]]. You may use as many of each as you like. Order does not matter ([[1/2]] + [[1/4]] is the same way as [[1/4]] + [[1/2]]).",
+  "parts":["List every way. Start with the most halves.","How do you know you have found them all?","What if we want exactly 1 whole instead? Do you think there will be more ways or fewer? Test your idea."],"lines":5,
+  "model":"3/4 is the same as 6/8. The 6 ways (halves, quarters, eighths): 1 half + 1 quarter; 1 half + 2 eighths; 3 quarters; 2 quarters + 2 eighths; 1 quarter + 4 eighths; 6 eighths. Systematic: fix the number of halves (1 or 0), then the quarters, then fill with eighths. For 1 whole there are 9 ways, so more. Look for: a list in order, an organised method for 'all', and a reason that more room means more ways. Using the fraction wall is expected."},
+ reflect=["equal fractions","comparing fractions","adding and taking away fractions"])
+L(7,
+ check=[{"q":"A rectangle has a perimeter of 14 cm and one side is 3 cm long. What is its area?","a":"12 cm2","why":"Two sides of 3 cm use 6 cm, so the other two sides share 8 cm: 4 cm each. Area 3 x 4 = 12 cm2."},
+        {"q":"Two different rectangles both have an area of 12 cm2. Can they have different perimeters? Show two examples.","a":"Yes, e.g. 26 cm and 16 cm","why":"1 by 12 has perimeter 26 cm; 2 by 6 has 16 cm; 3 by 4 has 14 cm."}],
+ inv={"title":"What if we change it? What stays the same?","intro":"A square with sides 4 cm has area 16 cm2 and perimeter 16 cm. Make it 1 cm longer one way and 1 cm shorter the other way. You get a 5 cm by 3 cm rectangle.",
+  "parts":["Work out the area and perimeter of the 5 by 3 rectangle. What changed? What stayed the same?","Do the same for a 6 cm square (7 by 5) and a 10 cm square (11 by 9). Fill in the table. Then choose a square of your own.","Is it always true? Draw the 4 by 4 square and explain what happens to the area."],
+  "table":{"cols":["Square side","New rectangle","Perimeter of square","Perimeter of rectangle","Area of square","Area of rectangle"],"rows":["4 cm","6 cm","10 cm","my own"]},"lines":3,
+  "model":"4 by 4: perimeter 16, area 16 becomes 5 by 3: perimeter 16, area 15. 6 cm: 24 and 36 become 7 by 5: 24 and 35. 10 cm: 40 and 100 become 11 by 9: 40 and 99. The perimeter stays the same and the area is always exactly 1 cm2 smaller. This is true for every square (checked by computer for sides 2 to 499). Why: move the bottom row of 4 squares to the right side. The new column is only 3 squares tall, so 3 squares fit and 1 is left over. Look for: several tests, the pattern 'area drops by 1', and any picture or cut-and-move reason. Extension: what if we make it 2 cm longer and 2 cm shorter? (area drops by 4; perimeter still the same)."},
+ reflect=["finding missing sides","listing all the rectangles","telling area from perimeter"])
+L(8,
+ check=[{"q":"Draw a rectangle. Draw a straight line from one corner to the opposite corner. You get two triangles. How many right angles does each triangle have? How do you know?","a":"1 right angle each","why":"Only the corner that was not cut is still a right angle. The corners that were cut are split into two smaller angles."},
+        {"q":"True or false: two lines that are parallel can also be perpendicular. Say why.","a":"False","why":"Parallel lines never meet. Perpendicular lines meet at a right angle, so they do meet."}],
+ inv={"title":"Staircase corners: find the pattern","intro":"A 1-step staircase is 1 square. A 2-step staircase has 3 squares (a column of 2 beside a column of 1). A 3-step staircase has 6 squares.","fig":"stairs",
+  "parts":["Count the corners of each staircase where the inside angle is a right angle. Then count the corners where the inside angle is BIGGER than a right angle. Draw the 4-step staircase and fill in the table.","What pattern do you see? Use it to fill in the 10-step row without drawing.","Is the number of corners always an even number? Why do you think so?"],
+  "table":{"cols":["Steps","Right-angle corners","Corners bigger than a right angle","All corners"],"rows":["1","2","3","4","10 (predict)"]},"lines":3,
+  "model":"Steps 1 to 4: right angles 4, 5, 6, 7; bigger than a right angle 0, 1, 2, 3; all corners 4, 6, 8, 10. So right-angle corners = steps + 3, bigger corners = steps - 1, all corners = 2 x steps + 2. 10 steps: 13, 9 and 22 (checked by computer by building each staircase). The total is always even because each new step adds 2 corners (one right angle and one dent). Look for: careful organised counting, a table, a stated rule, and a prediction that can be checked. Early finishers draw the 10-step staircase to test the prediction."},
+ reflect=["counting angles","parallel or perpendicular","using the right-angle checker"])
+L(9,
+ check=[{"q":"Which is heavier: 2 kg 40 g or 2400 g? Say how you know.","a":"2400 g","why":"Change to one unit: 2 kg 40 g = 2040 g, and 2040 g is less than 2400 g."},
+        {"q":"A film starts at 15:50 and lasts 1 hour 25 minutes. When does it end? Write the time in 12-hour time.","a":"5:15 p.m. (17:15)","why":"15:50 + 1 h = 16:50. 10 minutes more gets to 17:00, and 15 more makes 17:15, which is 5:15 p.m."}],
+ inv={"title":"Find all the ways to pay","intro":"Ali pays exactly 50 cents using only 5-cent, 10-cent and 20-cent coins. He can use as many of each coin as he likes.",
+  "parts":["Find all the ways. Write each way in the table (how many of each coin).","Which way uses the FEWEST coins? Which uses the MOST?","How do you know you have found them all?"],
+  "table":{"cols":["20-cent coins","10-cent coins","5-cent coins"],"rows":["","","","","","","","","","","",""]},"lines":2,
+  "model":"There are 12 ways (20c, 10c, 5c coins): 2,1,0; 2,0,2; 1,3,0; 1,2,2; 1,1,4; 1,0,6; 0,5,0; 0,4,2; 0,3,4; 0,2,6; 0,1,8; 0,0,10. Fewest coins: two 20c and one 10c (3 coins). Most: ten 5c coins (10 coins). Systematic method: fix the number of 20c coins (2, then 1, then 0), then the number of 10c coins, then fill with 5c coins. Look for: an organised list, no repeats (the same set of coins in a different order is one way), and the reason for being sure. Extension: what if we also have a 50c coin? (13 ways)."},
+ reflect=["changing units","working with money","the 24-hour clock"])
+L(10,
+ check=[{"q":"Ali, Ben and Mei stand in a line. Ben stands somewhere in front of Mei (not always right in front). List every possible order.","a":"3 orders","why":"Ali Ben Mei; Ben Ali Mei; Ben Mei Ali. Listing by who is first helps to find them all."},
+        {"q":"A bar graph scale goes 0, 20, 40, 60. A bar ends half way between 40 and 60. How many does it show?","a":"50","why":"Read the scale first: each jump is 20, so half way is 10 more than 40."}],
+ inv={"title":"Handshakes: draw it, list it, make a table","intro":"Some friends meet. Everyone shakes hands with every other friend once. Two friends make 1 handshake.",
+  "parts":["Find the number of handshakes for 3, 4, 5 and 6 friends. Draw dots and lines, or make a list, to help. Fill in the table.","What pattern do you see? Use it to find the handshakes for 10 friends.","Could there ever be exactly 20 handshakes? Explain."],
+  "table":{"cols":["Friends","Handshakes","How many more than the row above?"],"rows":["2","3","4","5","6","10 (predict)"]},"lines":3,
+  "model":"2 friends: 1; 3: 3; 4: 6; 5: 10; 6: 15. The extra amount goes up by 2, 3, 4, 5, so 7 friends: 21, 8: 28, 9: 36, 10: 45. Reason: each new friend shakes hands with everyone already there. 10 friends: 9 + 8 + 7 + ... + 1 = 45. 20 handshakes is impossible: 6 friends give 15 and 7 friends give 21 (checked by computer for every group size). Look for: a drawing or an organised list, the pattern in the jumps, and a sensible check of the 20 claim using the table. Extension: how many for 20 friends? (190)"},
+ reflect=["choosing how to start","the logic grid","reading the bar graph"])
+def fx(o):
+    if isinstance(o,str): return o.replace(' x ',' × ').replace('cm2','cm²').replace(' - ',' − ')
+    if isinstance(o,list): return [fx(i) for i in o]
+    if isinstance(o,dict): return {k:fx(v) for k,v in o.items()}
+    return o
+G=fx(G)
+json.dump(G,open('p3/gifted.json','w'),indent=1,ensure_ascii=False)
+print('ok',len(G))
