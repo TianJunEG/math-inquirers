@@ -26,7 +26,7 @@ This repository holds the source files that build every program document, plus c
 | `k2/` | K2 readiness check |
 | `wbstyles/` | Workbook style mock-ups |
 | `mascot/` | Mascot sketches (placeholders until a designer draws the final) |
-| `website/` | Website prototype (`referral.html`), sign-up page (`mi_signup.html`, built by `lp_build.py`), parent questions hub (`hub/`) |
+| `website/` | Website prototype (`referral.html`), sign-up page (`mi_signup.html`, built by `lp_build.py`), parent questions hub (`hub/`), Weekly Dose Online puzzle practice (`weekly_dose_online.html`) |
 | `review/` | Lesson pitch and slide review (markdown) |
 | `p1/` | Older enrichment worksheet set |
 
