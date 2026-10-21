@@ -23,17 +23,17 @@ E = html.escape
 
 # ---- per-level settings that are facts of the program (names from docs/levels_and_placement.md; kit from pN/kit.js) ----
 LV = {
-    2: dict(age='Ages 8-9', school='P2', long='Primary 2', kit=[
+    2: dict(age='Ages 7-9', school='P2', long='Primary 2', kit=[
         ('Place-value cards', [1, 2, 10]), ('Digit cards', [1, 10]), ('Fraction strips', [7]), ('Paper clock', [9]),
         ('Paper strips of numbered squares', [9]), ('Cube nets', [8]), ('Play coins', [6]), ('Play notes and $1 coins', [6])]),
-    3: dict(age='Ages 9-10', school='P3', long='Primary 3', kit=[
+    3: dict(age='Ages 8-10', school='P3', long='Primary 3', kit=[
         ('Digit cards', [1, 2]), ('Fraction wall', [6]), ('Square grid', [7]), ('Right-angle testers', [8]),
         ('Play coins', [9]), ('Play notes and $1 coins', [9])]),
-    4: dict(age='Ages 10-11', school='P4', long='Primary 4', kit=[
+    4: dict(age='Ages 9-11', school='P4', long='Primary 4', kit=[
         ('Fraction wall', [4]), ('Square grid', [7, 8]), ('Dot grid', [8]), ('Cube net', [8]), ('Right-angle testers', [6])]),
-    5: dict(age='Ages 11-12', school='P5', long='Primary 5', kit=[
+    5: dict(age='Ages 10-12', school='P5', long='Primary 5', kit=[
         ('Fraction wall', [2, 3]), ('Square grid', [4]), ('Dot grid', [8]), ('Cube net', [5])]),
-    6: dict(age='Ages 12-13', school='P6', long='Primary 6', kit=[
+    6: dict(age='Ages 11-13', school='P6', long='Primary 6', kit=[
         ('Unplugged code cards', [1, 4, 7]), ('Square grid', [7, 9])]),
 }
 
@@ -46,7 +46,7 @@ def load(n):
 def names(n):
     v = LV[n]
     if n == 6:
-        return dict(short=f'P6 {v["age"]}', full=f'Ages 12-13 (finishing P6), maths + coding bridge', head='Ages 12-13 (finishing P6)', tag='Maths + coding bridge')
+        return dict(short=f'P6 {v["age"]}', full=f'Ages 11-13 (finishing P6), maths + coding bridge', head='Ages 11-13 (finishing P6)', tag='Maths + coding bridge')
     return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (finishing P{n})', head=f'{v["age"]} (finishing P{n})', tag='')
 
 
