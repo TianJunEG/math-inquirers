@@ -10,13 +10,13 @@ const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
 
 // seven digit cards in a row
 const cardsSvg = (digits, label) => {
-  const w = 58, h = 74, gap = 16, tot = digits.length * w + (digits.length - 1) * gap, x0 = (600 - tot) / 2;
+  const w = 50, h = 62, gap = 16, tot = digits.length * w + (digits.length - 1) * gap, x0 = (600 - tot) / 2;
   let g = '';
   digits.forEach((d, i) => {
     const x = x0 + i * (w + gap);
-    g += `<rect x="${x}" y="6" width="${w}" height="${h}" rx="10" fill="${Y}" stroke="${N}" stroke-width="3"/>` + txt(x + w / 2, 6 + h / 2 + 14, d, 38);
+    g += `<rect x="${x}" y="6" width="${w}" height="${h}" rx="10" fill="${Y}" stroke="${N}" stroke-width="3"/>` + txt(x + w / 2, 6 + h / 2 + 12, d, 32);
   });
-  return `<svg aria-label="${esc(label)}" viewBox="0 0 600 88" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  return `<svg aria-label="${esc(label)}" viewBox="0 0 600 76" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 // number line for Q6: the numbers that round to 2 500 000 (nearest thousand)
@@ -51,7 +51,7 @@ module.exports = {
     ],
     extension: 'Use the digit cards 0 to 9, each at most once, to make the 7-digit number closest to 5 000 000. (5 012 346 is 12 346 away and 4 987 653 is 12 347 away, so 5 012 346 wins by 1.)',
     key: [
-      ['Q1', '(a) 5 308 040  (b) seven million, sixty thousand, five hundred  (c) 400 000; 8  (d) 3250'],
+      ['Q1', '(a) 5 308 040  (b) 400 000; 8  (c) 3250'],
       ['Q2', '(a) 9 865 320  (b) 2 035 698  (c) Just below: 5 986 320 (13 680 away). Just above: 6 023 589 (23 589 away). Closest: 5 986 320.'],
       ['Q3', '7 253 609. Rounding gives 7 2 with ten thousands digit 5 or more, or 7 3 with ten thousands digit 4 or less. "3 more" only works for 7 25: 2 + 3 = 5. Then thousands 5 − 2 = 3, hundreds 6, tens 0, and 7 + 2 + 5 + 3 + 6 + 0 = 23, so the ones digit is 32 − 23 = 9.'],
       ['Q4', '(a) about 100 000: could be right  (b) about 60 000: must be wrong  (c) about 6 300 000: must be wrong  (d) about 320 000: could be right'],
@@ -129,37 +129,33 @@ module.exports = {
   workbook: H => {
     const W = [];
     const raw = s => [s];
-    W.push(H.p('Read big numbers in groups of three from the right:  4 | 053 | 200  is four million, fifty-three thousand, two hundred.', { after: 40 }));
     // Q1 place value
-    W.push(H.q(1, 'Place value.', { before: 20, keepNext: true }));
-    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.   ______________________'));
-    W.push(H.sub('b', 'Write in words:  7 060 500', { after: 40 }));
-    W.push(...H.lines(1));
-    W.push(H.sub('c', 'In 6 482 315, the digit 4 stands for ______________.  The digit in the ten thousands place is ______.'));
-    W.push(H.sub('d', 'How many thousands make 3 250 000?   ______________'));
+    W.push(H.q(1, 'Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.', { before: 20, keepNext: true }));
+    W.push(H.sub('a', 'Write in numerals: five million, three hundred and eight thousand and forty.   ________________'));
+    W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ______________.  The digit in the ten thousands place is ______.'));
+    W.push(H.sub('c', 'How many thousands make 3 250 000?   ______________'));
     // Q2 digit cards
     W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number.', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
-    W.push(H.sub('a', 'The greatest number:   ______________________'));
-    W.push(H.sub('b', 'The smallest EVEN number:   ______________________'));
-    W.push(H.sub('c', 'The number closest to 6 000 000. Test both sides!', { keepNext: true, after: 60 }));
-    { const ws = [3300, 3300, 3300];
-      W.push(H.tbl(ws, [H.row(['Best number just below', 'Best number just above', 'Closest number'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        H.row([H.cell('', ws[0], { h: 120 }), H.cell('', ws[1], { h: 120 }), H.cell('', ws[2], { h: 120 })]),
-        H.row([H.cell('_______ away', ws[0], { h: 40 }), H.cell('_______ away', ws[1], { h: 40 }), H.cell('', ws[2], { h: 40 })])])); }
+    W.push(H.sub('a', 'The greatest number:   ____________________'));
+    W.push(H.sub('b', 'The smallest EVEN number:   ____________________'));
+    W.push(H.sub('c', 'The number closest to 6 000 000. Test both sides of the target!', { keepNext: true }));
+    W.push(H.sub(' ', 'Best number just below:  ________________   It is  __________  away.'));
+    W.push(H.sub(' ', 'Best number just above:  ________________   It is  __________  away.'));
+    W.push(H.sub(' ', 'The closest number is  ________________'));
     // Q3 riddle
     W.push(H.q(3, 'Digit riddle. Start with the clue that fixes the most digits. Fill in the chart, then check every clue.', { keepNext: true }));
-    ['I am a 7-digit number. My digits are all different.',
+    { const clues = ['I am a 7-digit number. My digits are all different.',
       'Rounded to the nearest hundred thousand, I am 7 300 000.',
       'My ten thousands digit is 3 more than my hundred thousands digit.',
       'My thousands digit is my ten thousands digit take away my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
-      'My digits add up to 32.'].forEach((c, i) => W.push(H.p(`Clue ${i + 1}:  ${c}`, { indent: { left: 560 }, after: 30 })));
-    W.push(H.gap(40));
+      'My digits add up to 32.'];
+      W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
-      W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        H.row(ws.map(w => H.cell('', w, { h: 130 })))])); }
-    W.push(H.p('I am  ______________________', { indent: { left: 560 }, before: 80, after: 0 }));
+      W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
+        H.row(ws.map(w => H.cell('', w, { h: 260 })))])); }
+    W.push(H.sub(' ', 'I am  ______________________'));
 
     // ---- page 2 ----
     W.push(H.q(4, 'Ravi used a calculator. Estimate each answer by rounding. Which answers must be wrong?', { pb: true, before: 0, keepNext: true }));

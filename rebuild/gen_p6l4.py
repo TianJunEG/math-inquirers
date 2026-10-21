@@ -154,7 +154,7 @@ put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Le
 W=[200,150,150,150,150]
 body=h2('From a table to a rule')
 body+=trow(128,240,['IN  n','1','2','3','4'],W,None,True)+trow(128,330,['OUT','7','11','15','19'],W,None)
-body+=pin(1180,240,612,p('+4 each time',40,800,TEAL)+p('When IN goes up by 1, OUT goes up by 4.',32,600),'fade',SOFT,20,'20px 28px')
+body+=pin(1180,240,560,p('+4 each time',40,800,TEAL)+p('When IN goes up by 1, OUT goes up by 4.',32,600),'fade',SOFT,20,'20px 28px')
 body+=step(1,'OUT goes up by 4 each time, so the rule has × 4 in it: 4n.',top=470,size=36)
 body+=step(2,'Test: IN 1 gives 4 × 1 = 4. But OUT is 7, so add 3.',top=580,size=36)
 body+=step(3,'Rule: OUT = 4n + 3.   Check IN 4: 4 × 4 + 3 = 19 ✓',top=690,size=36)
