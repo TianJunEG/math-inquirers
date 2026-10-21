@@ -1,0 +1,68 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:11:41Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P6: Lesson 6 – Fair or Unfair?",
+ "order": [
+  "p6l6-title",
+  "p6l6-warm1",
+  "p6l6-warm2",
+  "p6l6-explore1",
+  "p6l6-explore2",
+  "p6l6-teach1",
+  "p6l6-we1",
+  "p6l6-try1",
+  "p6l6-teachtwo",
+  "p6l6-try2",
+  "p6l6-teachcode",
+  "p6l6-teachwhy",
+  "p6l6-key",
+  "p6l6-break",
+  "p6l6-teachbag",
+  "p6l6-ws1",
+  "p6l6-ws1ans",
+  "p6l6-teachfair",
+  "p6l6-teachplan",
+  "p6l6-ws2",
+  "p6l6-ws2ans",
+  "p6l6-stretch",
+  "p6l6-challenge",
+  "p6l6-chdiag",
+  "p6l6-chwalk",
+  "p6l6-talk",
+  "p6l6-exit"
+ ],
+ "cover": "p6l6-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p6l6-title"
+  },
+  "s2": {
+   "description": "Teach: probability as a fraction, two dice, 1000 games in code",
+   "start": "p6l6-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p6l6-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p6l6-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

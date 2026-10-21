@@ -197,16 +197,15 @@ module.exports = {
 
     // ---- page 2 ----
     W.push(H.q(3, 'Predict, then trace. This code counts the factors of 6. Fill in the trace table.', { pb: true, before: 0, keepNext: true }));
-    { const tr = H.tbl([1300, 2200, 2200], [H.row(['d', '6 mod d', 'count after'].map((s, i) => H.cell(s, [1300, 2200, 2200][i], { bold: true, fill: 'EDEDED', h: 30 }))),
-        ...[1, 2, 3, 4, 5, 6].map(k => H.row([H.cell(String(k), 1300, { h: 20 }), H.cell(k === 1 ? '0' : '', 2200, { h: 20 }), H.cell(k === 1 ? '1' : '', 2200, { h: 20 })]))]);
+    { const tr = H.tbl([1300, 2200, 2200], [H.row(['d', '6 mod d', 'count after'].map((s, i) => H.cell(s, [1300, 2200, 2200][i], { bold: true, fill: 'EDEDED', h: 20 }))),
+        ...[1, 2, 3, 4, 5, 6].map(k => H.row([H.cell(String(k), 1300, { h: 5 }), H.cell(k === 1 ? '0' : '', 2200, { h: 12 }), H.cell(k === 1 ? '1' : '', 2200, { h: 12 })]))]);
       W.push(side(blocks([hat, ['var', 'set count to (0)'], ['var', 'set d to (1)'], ['ctl', 'repeat (6)', [['ctl', 'if (6 mod d = 0) then', [['var', 'change count by (1)']]], ['var', 'change d by (1)']]], ['look', 'say (count)']], 'Code: set count to 0, d to 1; repeat 6: if 6 mod d = 0 then change count by 1; change d by 1; then say count', 14), 4100,
-        [tr, txt('(a)  What does it say at the end?  ______', '8px 4px 0'), txt('(b)  Change both 6s to 13. What does it say now? What does that tell you about 13?'), dl])); }
+        [tr, txt('(a)  What does it say at the end?  ______', '8px 4px 0'), txt('(b)  Change both 6s to 13. What does it say? Why?'), dl])); }
     // Q4 Goldbach
-    W.push(H.q(4, 'Goldbach’s guess: every even number above 2 is the sum of two primes. Write each number as a sum of two primes.', { keepNext: true }));
+    W.push(H.q(4, 'Goldbach’s guess: every even number above 2 is a sum of two primes.', { keepNext: true }));
     W.push(H.sub('a', '24 in every way:  ________________________________'));
     W.push(H.sub('b', '36 in every way:  ________________________________'));
     W.push(H.sub('c', 'Explain why 27 cannot be the sum of two primes.'));
-    W.push(...H.lines(1));
     // Q5 exactly 3 factors
     W.push(H.q(5, 'Exactly 3 factors.', { keepNext: true }));
     W.push(H.sub('a', 'All the numbers from 1 to 50 with exactly 3 factors:  ______________'));
@@ -216,7 +215,7 @@ module.exports = {
     { const lb = (t, p) => `<div style="display:flex;align-items:center;gap:6px"><b style="width:18px">${t}</b>${blocks(p, 'Block ' + t, 14).replace('max-width:100%', 'flex:none')}</div>`;
       const col = xs => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + xs.join('') + '</div>';
       W.push(side('<div style="display:flex;gap:14px">' + col([lb('A', [['look', 'say (d)']]), lb('B', [['ctl', 'repeat (40)', []]]), lb('C', [['var', 'set d to (1)']])]) + col([lb('D', [['var', 'change d by (1)']]), lb('E', [hat]), lb('F', [['ctl', 'if (40 mod d = 0) then', []]])]) + '</div>', 5600,
-        [txt('My order (show which blocks go inside):', '2px 4px 0'), dl, dl, txt('How many numbers does it say?  ______', '10px 4px 0')]));
+        [txt('My order (show what goes inside):', '2px 4px 0'), dl, txt('How many numbers does it say?  ______', '10px 4px 0')]));
     }
     return W;
   }

@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:11:47Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P5: Lesson 1 – Million Puzzles",
+ "order": [
+  "p5l1-title",
+  "p5l1-warm1",
+  "p5l1-warm2",
+  "p5l1-explore1",
+  "p5l1-explore2",
+  "p5l1-teach1",
+  "p5l1-try1",
+  "p5l1-we1",
+  "p5l1-try2",
+  "p5l1-we2",
+  "p5l1-key",
+  "p5l1-break",
+  "p5l1-ws1",
+  "p5l1-ws1ans",
+  "p5l1-teachest",
+  "p5l1-teachbrackets",
+  "p5l1-trybrackets",
+  "p5l1-teachfind",
+  "p5l1-ws2",
+  "p5l1-ws2ans",
+  "p5l1-stretch",
+  "p5l1-challenge",
+  "p5l1-chdiag",
+  "p5l1-chwalk",
+  "p5l1-talk",
+  "p5l1-exit"
+ ],
+ "cover": "p5l1-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p5l1-title"
+  },
+  "s2": {
+   "description": "Teach: place value, closest to a target, digit riddles",
+   "start": "p5l1-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p5l1-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p5l1-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

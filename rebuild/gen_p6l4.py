@@ -178,8 +178,8 @@ body+=pin(128,240,1100,machine([('n','q'),('+ 2','op'),('× 5','op'),('A','res')
 body+=pin(128,400,1100,machine([('n','q'),('× 5','op'),('+ 2','op'),('B','res')],w=1100),None)
 body+=pin(1280,240,512,p('IN 4:  (4 + 2) × 5 = 30',36,800),'fade',SOFT,20,'22px 26px')+pin(1280,400,512,p('IN 4:  4 × 5 + 2 = 22',36,800),'fade',SOFT,20,'22px 26px')
 body+=step(1,'Same steps, different order, different OUT.',top=580,size=36)
-body+=step(2,'A: OUT = (n + 2) × 5    The brackets say "do this first".',top=690,size=36)
-body+=step(3,'B: OUT = 5n + 2    Times comes before add, so no brackets are needed.',top=800,size=36)
+body+=step(2,'A: OUT = (n + 2) × 5.  The brackets say “do this first”.',top=690,size=36)
+body+=step(3,'B: OUT = 5n + 2.  Times comes before add, so no brackets are needed.',top=800,size=36)
 put(f'{L}-teach2',sec(f'{L}-teach2','30–31 MIN',body,'Teach. Ask first: "Will both machines give the same OUT for IN 4?" Thumbs up or down, then click. Remind them of the order rule from primary school: brackets first, then × and ÷, then + and −. (n + 2) × 5 can also be written 5(n + 2). Do NOT say whether A and B can ever match: that is worksheet Q2(c).'))
 
 # ---------- 10 we2: run it backwards ----------

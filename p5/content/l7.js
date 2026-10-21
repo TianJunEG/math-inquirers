@@ -25,10 +25,9 @@ const barFig = () => {
   let s = '';
   const x0 = 40, w = 52;
   for (let i = 0; i < 10; i++) s += `<rect x="${x0 + i * w}" y="30" width="${w}" height="38" fill="${WH}" stroke="${N}" stroke-width="2.5"/>`;
-  s += `<path d="M${x0} 22 V14 H${x0 + 10 * w} V22" fill="none" stroke="${N}" stroke-width="2"/>` + tx(x0 + 5 * w, 12, '$120', 16);
-  s += tx(x0 - 6, 55, 'At first', 14, TEAL, 'end', 700).replace('x="34"', 'x="34"');
+  s += `<path d="M${x0} 24 V16 H${x0 + 10 * w} V24" fill="none" stroke="${N}" stroke-width="2"/>` + tx(x0 + 5 * w, 12, '$120', 16);
   s += tx(x0 + 5 * w, 92, 'Each part is 10% of $120. Shade the bag. Then split what is left into 4 equal parts.', 14, N, 'middle', 600);
-  return svg(600, 100, 'A bar for 120 dollars cut into 10 equal parts', s.replace(tx(x0 - 6, 55, 'At first', 14, TEAL, 'end', 700), ''));
+  return svg(600, 100, 'A bar for 120 dollars cut into 10 equal parts', s);
 };
 
 module.exports = {

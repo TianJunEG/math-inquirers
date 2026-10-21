@@ -15,52 +15,49 @@ const ra = (f, dx, dy, k = 9) => `<path d="M${f[0] + dx * k} ${f[1]} V${f[1] + d
 
 // Q1: three triangles, all at 11 px per cm
 const q1Fig = () => {
-  const s = 11, oy = 196; let g = '';
-  // (a) right-angled: legs 8 (base) and 6, slanting side 10
+  const s = 10, oy = 180; let g = '';
   let P = M(60, oy, s);
   g += poly([P(0, 0), P(8, 0), P(0, 6)], YEL) + ra(P(0, 0), 1, -1);
-  g += T(60, 40, '(a)', { anchor: 'start', fill: TEAL }) + T(104, 216, '8 cm') + T(53, 167, '6 cm', { anchor: 'end' }) + T(111, 152, '10 cm', { anchor: 'start' });
-  // (b) base 14, top corner above the point 5 cm along, height 12; sides 13 and 15
+  g += T(60, 30, '(a)', { anchor: 'start', fill: TEAL }) + T(100, 199, '8 cm') + T(53, 155, '6 cm', { anchor: 'end' }) + T(105, 142, '10 cm', { anchor: 'start' });
   P = M(205, oy, s);
   g += poly([P(0, 0), P(14, 0), P(5, 12)], SKY) + ln(P(5, 12), P(5, 0), true) + ra(P(5, 0), 1, -1);
-  g += T(205, 40, '(b)', { anchor: 'start', fill: TEAL }) + T(282, 216, '14 cm') + T(225, 130, '13 cm', { anchor: 'end' }) + T(316, 130, '15 cm', { anchor: 'start' }) + T(265, 160, '12 cm', { anchor: 'start' });
-  // (c) obtuse: base 9, top corner 6 cm past the end of the base, height 8; long side 17
+  g += T(205, 30, '(b)', { anchor: 'start', fill: TEAL }) + T(275, 199, '14 cm') + T(224, 120, '13 cm', { anchor: 'end' }) + T(306, 120, '15 cm', { anchor: 'start' }) + T(260, 146, '12 cm', { anchor: 'start' });
   P = M(405, oy, s);
   g += ln(P(9, 0), P(15, 0), true) + ln(P(15, 8), P(15, 0), true) + ra(P(15, 0), -1, -1);
   g += poly([P(0, 0), P(9, 0), P(15, 8)], YEL);
-  g += T(405, 40, '(c)', { anchor: 'start', fill: TEAL }) + T(454.5, 216, '9 cm') + T(476, 142, '17 cm', { anchor: 'end' }) + T(578, 155, '8 cm', { anchor: 'start' });
-  return svg(620, 226, 'Three triangles. (a) right-angled with sides 8 cm, 6 cm and 10 cm. (b) base 14 cm, height 12 cm, sides 13 cm and 15 cm. (c) base 9 cm, height 8 cm outside the triangle, long side 17 cm.', g);
+  g += T(405, 30, '(c)', { anchor: 'start', fill: TEAL }) + T(450, 199, '9 cm') + T(474, 133, '17 cm', { anchor: 'end' }) + T(561, 145, '8 cm', { anchor: 'start' });
+  return svg(620, 206, 'Three triangles. (a) right-angled with sides 8 cm, 6 cm and 10 cm. (b) base 14 cm, height 12 cm, sides 13 cm and 15 cm. (c) base 9 cm, height 8 cm outside the triangle, long side 17 cm.', g);
 };
 
 // Q2: rectangle ABCD 10 cm by 6 cm drawn twice; triangle PDC and triangle QDC
 const q2Fig = () => {
-  const s = 22; let g = '';
-  [[50, 2, 'P', YEL], [330, 7, 'Q', SKY]].forEach(([ox, px, lab, fill]) => {
-    const P = M(ox, 166, s);
+  const s = 20; let g = '';
+  [[60, 2, 'P', YEL], [340, 7, 'Q', SKY]].forEach(([ox, px, lab, fill]) => {
+    const P = M(ox, 160, s);
     g += poly([P(0, 0), P(10, 0), P(10, 6), P(0, 6)], WHITE) + poly([P(px, 6), P(0, 0), P(10, 0)], fill);
-    g += T(ox - 6, 30, 'A', { anchor: 'end' }) + T(ox + 226, 30, 'B', { anchor: 'start' }) + T(ox + 226, 182, 'C', { anchor: 'start' }) + T(ox - 6, 182, 'D', { anchor: 'end' });
-    g += T(P(px, 6)[0], 26, lab) + T(ox + 110, 188, '10 cm') + T(ox - 8, 105, '6 cm', { anchor: 'end' });
+    g += T(ox - 6, 36, 'A', { anchor: 'end' }) + T(ox + 206, 36, 'B', { anchor: 'start' }) + T(ox + 206, 176, 'C', { anchor: 'start' }) + T(ox - 6, 176, 'D', { anchor: 'end' });
+    g += T(P(px, 6)[0], 32, lab) + T(ox + 100, 180, '10 cm') + T(ox - 8, 105, '6 cm', { anchor: 'end' });
   });
-  return svg(600, 196, 'Rectangle ABCD, 10 cm by 6 cm, drawn twice. Left: P on AB and triangle PDC shaded. Right: Q on AB and triangle QDC shaded.', g);
+  return svg(600, 188, 'Rectangle ABCD, 10 cm by 6 cm, drawn twice. Left: P on AB and triangle PDC shaded. Right: Q on AB and triangle QDC shaded.', g);
 };
 
 // Q3: quadrilateral ABCD split by the diagonal AC (14 cm); heights 5 cm and 3 cm
 const splitFig = () => {
-  const P = M(90, 170, 30); let g = '';
+  const P = M(90, 150, 26); let g = '';
   g += poly([P(0, 0), P(4, 5), P(14, 0), P(9, -3)], SKY) + ln(P(0, 0), P(14, 0));
   g += ln(P(4, 5), P(4, 0), true) + ra(P(4, 0), 1, -1) + ln(P(9, -3), P(9, 0), true) + ra(P(9, 0), 1, 1);
-  g += T(80, 176, 'A', { anchor: 'end' }) + T(210, 14, 'B') + T(520, 176, 'C', { anchor: 'start' }) + T(360, 284, 'D');
-  g += T(216, 100, '5 cm', { anchor: 'start' }) + T(366, 222, '3 cm', { anchor: 'start' }) + T(590, 40, 'AC = 14 cm', { anchor: 'end', fill: TEAL });
-  return svg(600, 292, 'Four-sided figure ABCD with diagonal AC of 14 cm. The height from B to AC is 5 cm and the height from D to AC is 3 cm.', g);
+  g += T(80, 156, 'A', { anchor: 'end' }) + T(194, 14, 'B') + T(464, 156, 'C', { anchor: 'start' }) + T(324, 248, 'D');
+  g += T(200, 90, '5 cm', { anchor: 'start' }) + T(330, 200, '3 cm', { anchor: 'start' }) + T(590, 40, 'AC = 14 cm', { anchor: 'end', fill: TEAL });
+  return svg(600, 254, 'Four-sided figure ABCD with diagonal AC of 14 cm. The height from B to AC is 5 cm and the height from D to AC is 3 cm.', g);
 };
 
 // Q4: rectangle ABCD 12 cm by 8 cm; E on AB with AE = 4 cm; F on BC with BF = 4 cm; triangle DEF shaded
 const takeFig = () => {
-  const P = M(150, 250, 26); let g = '';
+  const P = M(150, 222, 22); let g = '';
   g += poly([P(0, 0), P(12, 0), P(12, 8), P(0, 8)], WHITE) + poly([P(0, 0), P(4, 8), P(12, 4)], YEL);
-  g += T(142, 38, 'A', { anchor: 'end' }) + T(470, 38, 'B', { anchor: 'start' }) + T(470, 266, 'C', { anchor: 'start' }) + T(142, 266, 'D', { anchor: 'end' }) + T(254, 30, 'E') + T(470, 151, 'F', { anchor: 'start' });
-  g += T(202, 32, '4 cm') + T(358, 32, '8 cm') + T(472, 98, '4 cm', { anchor: 'start' }) + T(472, 204, '4 cm', { anchor: 'start' }) + T(140, 150, '8 cm', { anchor: 'end' }) + T(306, 274, '12 cm');
-  return svg(600, 282, 'Rectangle ABCD, 12 cm by 8 cm. E is on AB with AE 4 cm and EB 8 cm. F is on BC with BF 4 cm and FC 4 cm. Triangle DEF is shaded.', g);
+  g += T(142, 42, 'A', { anchor: 'end' }) + T(422, 42, 'B', { anchor: 'start' }) + T(422, 238, 'C', { anchor: 'start' }) + T(142, 238, 'D', { anchor: 'end' }) + T(238, 34, 'E') + T(422, 139, 'F', { anchor: 'start' });
+  g += T(194, 36, '4 cm') + T(326, 36, '8 cm') + T(424, 94, '4 cm', { anchor: 'start' }) + T(424, 184, '4 cm', { anchor: 'start' }) + T(140, 139, '8 cm', { anchor: 'end' }) + T(282, 246, '12 cm');
+  return svg(600, 252, 'Rectangle ABCD, 12 cm by 8 cm. E is on AB with AE 4 cm and EB 8 cm. F is on BC with BF 4 cm and FC 4 cm. Triangle DEF is shaded.', g);
 };
 
 module.exports = {
@@ -158,7 +155,7 @@ module.exports = {
     H.fig(q2Fig()),
     H.sub('a', 'Area of triangle PDC = ____________ cm²          (b)  Area of triangle QDC = ____________ cm²'),
     H.sub('c', 'Explain why the two triangles have the same area.'), ...H.lines(1),
-    H.sub('d', 'In the left rectangle, what is the total area of the two white parts?'), H.ans(),
+    H.sub('d', 'In the left rectangle, what is the total area of the two white parts?   ____________ cm²'),
 
     H.q(3, 'Find the area of the figure ABCD. Split it into two triangles along AC.', { pb: true, before: 0, keepNext: true }),
     H.fig(splitFig()),
@@ -169,8 +166,8 @@ module.exports = {
     H.sub('b', 'White triangles:   ADE = ________ cm²     EBF = ________ cm²     FCD = ________ cm²'),
     H.sub('c', 'Area of the shaded triangle DEF = ______________ cm²'),
     H.q(5, 'Mei draws a triangle with a base of 8 cm and a height of 6 cm.', { keepNext: true }),
-    H.sub('a', 'What is the area of Mei’s triangle?'), H.ans(),
-    H.sub('b', 'Siti’s triangle has the same area but a base of 12 cm. What is its height?'), H.ans(),
+    H.sub('a', 'What is the area of Mei’s triangle?   ____________ cm²'),
+    H.sub('b', 'Siti’s triangle has the same area but a base of 12 cm. What is its height?   ________ cm'),
     H.sub('c', 'Give the base and height of one more triangle with the same area.'), H.ans('Base: ________ cm     Height:')
   ]
 };
