@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T08:00:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P2: Lesson 5 – Mystery Number Machines",
+ "order": [
+  "p2l5-title",
+  "p2l5-warm1",
+  "p2l5-warm2",
+  "p2l5-explore1",
+  "p2l5-explore2",
+  "p2l5-teach1",
+  "p2l5-we1",
+  "p2l5-try1",
+  "p2l5-we2",
+  "p2l5-try2",
+  "p2l5-key",
+  "p2l5-break",
+  "p2l5-teachrule",
+  "p2l5-ws1",
+  "p2l5-ws1ans",
+  "p2l5-teachparts",
+  "p2l5-teachorder",
+  "p2l5-teachthree",
+  "p2l5-ws2",
+  "p2l5-ws2ans",
+  "p2l5-stretch",
+  "p2l5-challenge",
+  "p2l5-chdiag",
+  "p2l5-chwalk",
+  "p2l5-talk",
+  "p2l5-exit"
+ ],
+ "cover": "p2l5-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p2l5-title"
+  },
+  "s2": {
+   "description": "Teach: undo it backwards, and before-and-after bars",
+   "start": "p2l5-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p2l5-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p2l5-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
