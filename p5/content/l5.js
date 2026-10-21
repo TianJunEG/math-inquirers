@@ -63,7 +63,7 @@ const figQ4 = () => {
   const cubeAt = (x0, y0) => box(OB(x0, y0, 5), 10, 10, 10, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'] });
   s += cubeAt(370, 120) + cubeAt(440, 120) + cubeAt(510, 120) + cubeAt(405, 210) + cubeAt(475, 210);
   s += tx(395, 140, '10 cm', { size: 15 }) + tx(470, 236, '5 metal cubes', { size: 15 });
-  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 470);
+  return svg(600, 260, 'A tank with base 40 cm by 25 cm and water 15 cm deep, and 5 metal cubes with edges of 10 cm, drawn to the same scale', s, 400);
 };
 const figQ5 = () => svg(250, 230, 'A 4 by 4 by 4 cube built from 64 small cubes, painted on the outside',
   box(OB(16, 200, 38), 4, 4, 4, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }));
@@ -71,7 +71,7 @@ const figQ6 = () => {
   let s = box(OB(60, 200, 4), 30, 20, 24, { water: 24, labels: ['30 cm', '24 cm', '20 cm'] });
   s += box(OB(330, 200, 4), 40, 30, 25, { water: 0, labels: ['40 cm', '25 cm', '30 cm'] });
   s += tx(150, 52, 'Container A (full)', { size: 16 }) + tx(440, 52, 'Tank B (empty)', { size: 16 });
-  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 470);
+  return svg(600, 240, 'Container A, 30 cm by 20 cm by 24 cm, full of water, and empty tank B, 40 cm by 30 cm by 25 cm, drawn to the same scale', s, 400);
 };
 
 module.exports = {
