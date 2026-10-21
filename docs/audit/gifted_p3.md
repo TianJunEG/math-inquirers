@@ -51,7 +51,7 @@ From `docs/gifted_research.md` section 3, restricted to what the P3 materials ac
 
 **Safe, and supported by what is in the lessons**
 - "A maths enrichment programme for curious, capable children finishing Primary 3, focused on reasoning and problem solving."
-- "Inspired by approaches used in gifted and talented education: low-floor, high-ceiling tasks, Polya-style problem-solving steps (understand, plan, do, check) and mathematical habits of mind (listing in order, spotting patterns, testing claims)." Name only the frameworks used; do not imply endorsement.
+- "Inspired by approaches used in gifted and talented education: low-floor, high-ceiling tasks, Polya-style heuristics (draw a picture, make a list, look for a pattern, work backwards, check) and mathematical habits of mind (listing in order, spotting patterns, testing claims)." Name only the frameworks used; do not imply endorsement.
 - "Open-ended investigations with room to go further, whatever your child's starting point." (true for the ten explore tasks)
 - "We emphasise explaining why, testing a claim, and learning from mistakes." (true: Ravi/Mei error-analysis prompts, "how do you know?" routine)
 - "Extends thinking within Primary 3 topics" (not "ahead of the syllabus"): criterion 12 is 2 in nine of ten lessons.
