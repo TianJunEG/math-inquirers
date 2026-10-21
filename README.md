@@ -10,7 +10,7 @@ This repository holds the source files that build every program document, plus c
 | Folder | What is in it |
 |---|---|
 | `outputs/workbook/` | Student workbook: designed PDF (A + D style) and the Word version |
-| `outputs/designed/` | Tutor guide, question bank, parent practice pack, Lesson 6 trial, readiness tracker, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
+| `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, readiness tracker, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
 | `outputs/brand/` | Workbook style options, mascot sketches |
 | `outputs/older/` | Earlier versions kept for reference |
 
@@ -29,6 +29,11 @@ This repository holds the source files that build every program document, plus c
 | `website/` | Website prototype (`referral.html`), sign-up page (`mi_signup.html`, built by `lp_build.py`), parent questions hub (`hub/`) |
 | `review/` | Lesson pitch and slide review (markdown) |
 | `p1/` | Older enrichment worksheet set |
+
+## Two looks
+
+- Student pages (workbook, weekly student pages): A + D style, grid paper, yellow "No." tape labels (`hp/wb_style.css`).
+- Parent pages (Weekly Dose of Thinking Math, free taster): parent edition "Magazine" style, plain white, red numbers, teal side panels (`hp/parent_style.css`).
 
 ## Rebuilding
 
@@ -50,7 +55,7 @@ NODE_PATH=$(npm root -g) node workbook.js     # workbook .docx
 NODE_PATH=$(npm root -g) node guide.js        # tutor guide .docx
 NODE_PATH=$(npm root -g) node trial6.js       # Lesson 6 trial .docx
 
-# Parent practice pack (A + D style PDF, from qbank.json)
+# Weekly Dose of Thinking Math, the parent practice pack (parent edition style, parent_style.css, from qbank.json)
 python3 parent_pack.py
 
 # Weekly student and tutor PDFs (zip), sliced from the designed workbook and tutor guide
