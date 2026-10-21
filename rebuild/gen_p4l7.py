@@ -75,7 +75,7 @@ put('p4l7-title',title_slide('p4l7-title','LESSON 7  •  WEEK 4','Area Architec
  'Thinking strategies taught today: SPLIT IT or TAKE AWAY, PUSH THE STEPS OUT, and MAKE A LIST IN ORDER. '
  'Materials: 1 cm square tiles or 24 paper squares per child, 1 cm grid paper, scissors, a 30 cm ruler, mini whiteboards, a paper strip 8 squares by 2 squares for cutting. '
  'Online: children cut out paper squares and 1 cm grid strips before the lesson and build on camera; the tutor draws on the grid figures on the slides. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up game ----------
 jobs=[('A fence round a school field','P','goes round the edge'),('Carpet for a bedroom floor','A','covers the inside'),('Lace round a tablecloth','P','goes round the edge'),
@@ -90,8 +90,8 @@ for i,(t,k,why) in enumerate(jobs):
     L=128+(i%3)*(CW+32); Tp=290+(i//3)*300
     cards+=pin(L,Tp,CW,f'<p style="font-size:24px;font-weight:800;color:{TEAL}">JOB {i+1}</p><p style="font-family:{HF};font-size:38px;font-weight:600;line-height:1.15">{E(t)}</p>',None,WHITE,24,'18px 28px',f'box-sizing:border-box;height:270px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     ans+=pin(L+20,Tp+156,CW-40,f'<div style="display:flex;align-items:center;gap:18px">{jobicon(k)}<p style="font-size:32px;font-weight:800;line-height:1.2">{k}: {E(why)}</p></div>','pop',SOFT,16,'8px 16px',f'box-sizing:border-box;border:3px solid {NAVY}')
-put('p4l7-warm1',sec('p4l7-warm1','0–5 MIN',body+cards+ans,
- 'Minutes 0 to 5. Area or Perimeter? Children make two cards (or write A and P on two halves of a whiteboard). Read each job aloud. Count 3, 2, 1 and everyone shows A or P. Then click to reveal (clicks go job 1 to job 6). '
+put('p4l7-warm1',sec('p4l7-warm1','4–6 MIN',body+cards+ans,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Area or Perimeter? Children make two cards (or write A and P on two halves of a whiteboard). Read each job aloud. Count 3, 2, 1 and everyone shows A or P. Then click to reveal (clicks go job 1 to job 6). '
  'Ask each time: "Why?" Listen for "it covers the floor" (area, square units like m²) and "it goes round the edge" (perimeter, units like m). '
  'Job 5 is the one to argue about: the wood goes round the photo, so it is perimeter; the glass in the frame would be area. Quick finisher: "Make up a job where you need BOTH." (A garden: grass seed for the area, a fence for the perimeter.) '
  'Watch for children who say "area is length times breadth" without knowing what it measures: ask them to point to the area on the slide.'))
@@ -99,7 +99,7 @@ put('p4l7-warm1',sec('p4l7-warm1','0–5 MIN',body+cards+ans,
 # ---------- 3. quick questions ----------
 qs=[('1.','Area of a rectangle 7 cm by 6 cm?','42 cm²'),('2.','Perimeter of a square with sides of 9 cm?','36 cm'),('3.','Area 48 cm², length 8 cm. Breadth?','6 cm'),('4.','Perimeter of a rectangle 12 cm by 5 cm?','34 cm'),('5.','A square has perimeter 28 cm. Its area?','49 cm²')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l7-warm2',sec('p4l7-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. Insist on units: cm for perimeter, cm² for area. After 3 ask: "How did you find the breadth?" (48 ÷ 8, or which number times 8 makes 48). After 5: "Why is the side 7?" (28 ÷ 4 = 7, all four sides are equal), then 7 × 7 = 49. Answers: 42 cm², 36 cm, 6 cm, 34 cm, 49 cm².'))
+put('p4l7-warm2',sec('p4l7-warm2','6–8 MIN',body,'Minutes 6 to 8. Whiteboards up together, then click. Insist on units: cm for perimeter, cm² for area. After 3 ask: "How did you find the breadth?" (48 ÷ 8, or which number times 8 makes 48). After 5: "Why is the side 7?" (28 ÷ 4 = 7, all four sides are equal), then 7 × 7 = 49. Answers: 42 cm², 36 cm, 6 cm, 34 cm, 49 cm².'))
 
 # ---------- 4. explore ----------
 c=40; g=''
@@ -256,10 +256,32 @@ c=46
 X=2*c
 ex=SV(10*c,7*c,grid(0,0,10,7,c)+PL(X,c,c,[(0,0),(5,0),(5,2),(7,2),(7,5),(0,5)])+T(X+3.5*c,c+5*c+40,'7 cm',30)+T(X-10,c+2.5*c+10,'5 cm',30,NAVY,'end')+T(X+6*c,c+2*c+36,'2 cm',28,RED)+T(X+5*c+10,c+1*c+10,'2 cm',28,RED,'start'),'A 7 cm by 5 cm rectangle with a 2 cm square cut from one corner')
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{ex}'+p('A 7 cm by 5 cm rectangle has a 2 cm by 2 cm square cut from one corner. Find the area and the perimeter of the shape left.',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l7-exit',sec('p4l7-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: area 35 − 4 = 31 cm²; perimeter 24 cm, the same as the 7 by 5 rectangle (push the corner back out). Children who write 20 cm for the perimeter forgot the two new sides; children who write 31 cm mixed up area and perimeter. Extension: Ravi has 24 m of fencing for a rectangular pen with whole-metre sides. One side is a wall and needs no fence. What is the largest area? (72 m²: 6 m, 12 m, 6 m.)'))
+put('p4l7-exit',sec('p4l7-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: area 35 − 4 = 31 cm²; perimeter 24 cm, the same as the 7 by 5 rectangle (push the corner back out). Children who write 20 cm for the perimeter forgot the two new sides; children who write 31 cm mixed up area and perimeter. Extension: Ravi has 24 m of fencing for a rectangular pen with whole-metre sides. One side is a wall and needs no fence. What is the largest area? (72 m²: 6 m, 12 m, 6 m.)'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l7.js')+"').gaps))"]))
+_ID='p4l7'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l7-title','p4l7-warm1','p4l7-warm2','p4l7-explore1','p4l7-explore2','p4l7-teach1','p4l7-we1','p4l7-try1','p4l7-we2','p4l7-try2','p4l7-we3','p4l7-key','p4l7-break','p4l7-ws1','p4l7-ws1ans','p4l7-teachstair','p4l7-teachcut','p4l7-teachframe','p4l7-try3','p4l7-ws2','p4l7-ws2ans','p4l7-stretch','p4l7-challenge','p4l7-chdiag','p4l7-chwalk','p4l7-talk','p4l7-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:20:20Z"
+  "at": "2026-10-21T23:44:57Z"
  },
  "lists": "css",
  "title": "Math Inquirers P4: Lesson 3 – Operation Detectives",
  "order": [
   "p4l3-title",
+  "p4l3-check",
   "p4l3-warm1",
   "p4l3-warm2",
   "p4l3-explore1",
@@ -33,7 +34,8 @@
   "p4l3-chdiag",
   "p4l3-chwalk",
   "p4l3-talk",
-  "p4l3-exit"
+  "p4l3-exit",
+  "p4l3-reflect"
  ],
  "cover": "p4l3-title",
  "sections": {

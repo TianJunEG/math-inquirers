@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:20:20Z"
+  "at": "2026-10-21T23:44:54Z"
  },
  "lists": "css",
  "title": "Math Inquirers P4: Lesson 2 – Big Number Puzzles",
  "order": [
   "p4l2-title",
+  "p4l2-check",
   "p4l2-warm1",
   "p4l2-warm2",
   "p4l2-explore1",
@@ -32,7 +33,8 @@
   "p4l2-chdiag",
   "p4l2-chwalk",
   "p4l2-talk",
-  "p4l2-exit"
+  "p4l2-exit",
+  "p4l2-reflect"
  ],
  "cover": "p4l2-title",
  "sections": {

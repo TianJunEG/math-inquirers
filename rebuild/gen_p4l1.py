@@ -51,7 +51,7 @@ put('p4l1-title',title_slide('p4l1-title','LESSON 1  •  WEEK 1','Factor Hunter
  'Thinking strategies taught today: MAKE A LIST IN ORDER, LOOK FOR A PATTERN and USE THE CLUES ONE AT A TIME. '
  'Materials: 36 square tiles or squared paper per pair, mini whiteboards, coloured pencils, a 1 to 50 number strip. '
  'Online: children cut 24 paper squares (or use squared paper) before the lesson and build rectangles on camera; the tutor marks the bus time line and the factor rainbow on the slides. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up game: Fizz-Buzz ----------
 BW,BH,GX,GY=120,100,8,130
@@ -67,15 +67,15 @@ body+=pin(128,420,W2,svgwrap(W2,H2,'Multiples of 3 outlined in teal',fizz),'fade
 body+=pin(128,420,W2,svgwrap(W2,H2,'Multiples of 4 underlined in red',buzz),'fade')
 body+=pin(128,420,W2,svgwrap(W2,H2,'12 and 24 filled yellow',both),'pop')
 body+=pin(128,740,1664,p('Fizz-Buzz numbers: 12 and 24. They are common multiples of 3 and 4. What comes next? (36)',36,700),'fade',SOFT,20,'20px 30px')
-put('p4l1-warm1',sec('p4l1-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Fizz-Buzz. Count round the group (online: in the order of the video tiles), one number each. A multiple of 3 is "Fizz", a multiple of 4 is "Buzz", a multiple of both is "Fizz-Buzz". A child who slips starts the next round. Go to 40 if it is going well. '
+put('p4l1-warm1',sec('p4l1-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Fizz-Buzz. Count round the group (online: in the order of the video tiles), one number each. A multiple of 3 is "Fizz", a multiple of 4 is "Buzz", a multiple of both is "Fizz-Buzz". A child who slips starts the next round. Go to 40 if it is going well. '
  'Before you start, ask for a prediction: "Which number will be the first Fizz-Buzz?" Then click: the teal boxes are the multiples of 3, the red lines the multiples of 4, and yellow shows the numbers in both: 12 and 24. Ask: "What is the next Fizz-Buzz? How do you know without counting?" (36: they go up in 12s). '
  'Introduce the words: 12 is a MULTIPLE of 3 and of 4, so it is a COMMON MULTIPLE. That idea comes back with the buses later.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','Is 7 a factor of 56?','Yes: 7 × 8'),('2.','The first five multiples of 6?','6, 12, 18, 24, 30'),('3.','A common multiple of 4 and 6?','12, 24, 36 …'),('4.','Is 45 a multiple of 4?','No'),('5.','Write 18 as a product: 3 ways.','1×18, 2×9, 3×6')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1100,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1268,250+i*125,524,c) for i,(a,b,c) in enumerate(qs))
-put('p4l1-warm2',sec('p4l1-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, whiteboards up together, then click to show. Ask after 1: "Is 56 a factor of 7 too?" (No: a factor goes INTO the number; 56 is a multiple of 7.) After 3: "Is there a smaller common multiple than 24?" (12). After 4: 44 and 48 are the multiples of 4 around 45, so 45 is not one. After 5: "Did anyone find a fourth way?" (no: after 3 × 6 the next would be 6 × 3, the same pair turned round). Answers: yes, 6 12 18 24 30, 12 (or 24, 36), no, 1 × 18 / 2 × 9 / 3 × 6.'))
+put('p4l1-warm2',sec('p4l1-warm2','6–8 MIN',body,'Minutes 6 to 8. Read each aloud, whiteboards up together, then click to show. Ask after 1: "Is 56 a factor of 7 too?" (No: a factor goes INTO the number; 56 is a multiple of 7.) After 3: "Is there a smaller common multiple than 24?" (12). After 4: 44 and 48 are the multiples of 4 around 45, so 45 is not one. After 5: "Did anyone find a fourth way?" (no: after 3 × 6 the next would be 6 × 3, the same pair turned round). Answers: yes, 6 12 18 24 30, 12 (or 24, 36), no, 1 × 18 / 2 × 9 / 3 × 6.'))
 
 # ---------- 4. explore: what to do ----------
 DASH=' stroke-dasharray="6 5"'
@@ -244,10 +244,32 @@ put('p4l1-chwalk',sec('p4l1-chwalk','Early finishers / take-home',body,'Use afte
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ali says: "Bigger numbers always have more factors." Is he right? Find an example to show it.',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p4l1-talk',sec('p4l1-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: Ali is wrong. 24 has 8 factors, but 29, which is bigger, has only 2 (1 and 29). One example is enough to show he is wrong (like Siti\'s claim earlier). Second question if time: "Why did the 36-tile rectangles give an odd number of factors?" (6 × 6: 6 is its own partner). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Write all the factors of 28. Then find the smallest number that is a multiple of both 6 and 9.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l1-exit',sec('p4l1-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: 1, 2, 4, 7, 14, 28. The smallest common multiple of 6 and 9 is 18 (6, 12, 18 and 9, 18). Extension: which numbers from 1 to 50 have exactly 4 factors? (15 numbers: 6, 8, 10, 14, 15, 21, 22, 26, 27, 33, 34, 35, 38, 39, 46.)'))
+put('p4l1-exit',sec('p4l1-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: 1, 2, 4, 7, 14, 28. The smallest common multiple of 6 and 9 is 18 (6, 12, 18 and 9, 18). Extension: which numbers from 1 to 50 have exactly 4 factors? (15 numbers: 6, 8, 10, 14, 15, 21, 22, 26, 27, 33, 34, 35, 38, 39, 46.)'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l1.js')+"').gaps))"]))
+_ID='p4l1'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l1-title','p4l1-warm1','p4l1-warm2','p4l1-explore1','p4l1-explore2','p4l1-teach1','p4l1-we1','p4l1-try1','p4l1-we2','p4l1-we3','p4l1-try2','p4l1-key','p4l1-break','p4l1-ws1','p4l1-ws1ans','p4l1-teachodd','p4l1-teachriddle','p4l1-teachtest','p4l1-ws2','p4l1-ws2ans','p4l1-stretch','p4l1-challenge','p4l1-chdiag','p4l1-chwalk','p4l1-talk','p4l1-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

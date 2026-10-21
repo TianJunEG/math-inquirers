@@ -74,7 +74,7 @@ put('p4l2-title',title_slide('p4l2-title','LESSON 2  •  WEEK 1','Big Number Pu
  'Thinking strategies taught today: DRAW A NUMBER LINE, WORK BACKWARDS, MAKE A LIST IN ORDER and USE THE CLUES ONE AT A TIME. '
  'Materials: Digit cards 0 to 9 (one set per child), mini whiteboards, a place-value chart (ten thousands to ones), a blank number line strip. '
  'Online: children cut out paper digit cards before the lesson and move them on camera; the tutor marks the number lines on the slides. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up: Place It Right (5 digits) ----------
 def dcards(digits,x0=0,y=6,w=96,h=124,gap=26,fill=YEL):
@@ -93,15 +93,15 @@ g+=txt(1370,250,'cards still to come …',30,MUTED,weight=600,font='Nunito Sans,
 body=h2('Warm-up: Place It Right')+card(p('I turn over one digit card at a time. Write it in a box straight away. No moving it later! Round 1: biggest wins. Round 2: closest to 50 000 wins.',36,700))
 body+=pin(128,400,1664,svgwrap(1600,270,'Five empty place-value boxes TTh, Th, H, T, O and a digit card 4 waiting to be placed',g),None,WHITE,24,'12px 32px')
 body+=pin(128,740,1664,p('Round 2: where does a 4 go? A 5? Is 49 999 or 50 100 closer to 50 000?',36,700),'fade',SOFT,20,'20px 30px')
-put('p4l2-warm1',sec('p4l2-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Place It Right with 5 digits. Children draw five boxes: TTh, Th, H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After five cards, read the numbers aloud: biggest wins. '
+put('p4l2-warm1',sec('p4l2-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Place It Right with 5 digits. Children draw five boxes: TTh, Th, H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After five cards, read the numbers aloud: biggest wins. '
  'Round 2: closest to 50 000 wins. Click to show the thinking question. Talk: "A 4 or a 5 in the ten thousands place. If you have a 4, you want the other digits BIG (49 9..). If you have a 5, you want them small (50 1..)." 49 999 is 1 away and 50 100 is 100 away. '
  'Listen for children who compare the distances; that is rounding thinking, and it comes straight back in the explore.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','What is the 7 worth in 47 352?','7000'),('2.','Sixty thousand and forty-five in numerals?','60 045'),('3.','1000 more than 59 600?','60 600'),('4.','40 000 + 3000 + 50 + 8 = ?','43 058'),('5.','36 815 to the nearest 1000?','37 000')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l2-warm2',sec('p4l2-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, whiteboards up together, then click. After 2: watch for 6045 or 600 045; say it as "60 thousand, 0 hundreds, 4 tens, 5 ones". After 3: the thousands digit was 9, so the ten thousands digit changes too. After 4: the 0 holds the hundreds place. After 5: 36 815 is between 36 000 and 37 000; ask "Is it nearer 36 000 or 37 000?" Do not teach the halfway rule yet. Answers: 7000, 60 045, 60 600, 43 058, 37 000.'))
+put('p4l2-warm2',sec('p4l2-warm2','6–8 MIN',body,'Minutes 6 to 8. Read each aloud, whiteboards up together, then click. After 2: watch for 6045 or 600 045; say it as "60 thousand, 0 hundreds, 4 tens, 5 ones". After 3: the thousands digit was 9, so the ten thousands digit changes too. After 4: the 0 holds the hundreds place. After 5: 36 815 is between 36 000 and 37 000; ask "Is it nearer 36 000 or 37 000?" Do not teach the halfway rule yet. Answers: 7000, 60 045, 60 600, 43 058, 37 000.'))
 
 # ---------- 4. explore: what to do ----------
 nl=NL(49000,51000,700,1500,150)
@@ -243,10 +243,32 @@ put('p4l2-chwalk',sec('p4l2-chwalk','Early finishers / take-home',body,'Use afte
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Who is right?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p4l2-talk',sec('p4l2-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 each time (49 999 → 50 000 to the nearest 10 because 9 ones round up). Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, to 50 000. Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Round 74 652 to the nearest thousand. Then write the smallest whole number that rounds to 74 000 to the nearest thousand.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l2-exit',sec('p4l2-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: 75 000 (652 is past halfway). The smallest whole number that rounds to 74 000 is 73 500. Extension: how many whole numbers round to 45 000 to the nearest thousand AND to 50 000 to the nearest ten thousand? (500: from 45 000 to 45 499.)'))
+put('p4l2-exit',sec('p4l2-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: 75 000 (652 is past halfway). The smallest whole number that rounds to 74 000 is 73 500. Extension: how many whole numbers round to 45 000 to the nearest thousand AND to 50 000 to the nearest ten thousand? (500: from 45 000 to 45 499.)'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l2.js')+"').gaps))"]))
+_ID='p4l2'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l2-title','p4l2-warm1','p4l2-warm2','p4l2-explore1','p4l2-explore2','p4l2-we1','p4l2-try1','p4l2-we2','p4l2-try2','p4l2-we4','p4l2-we3','p4l2-key','p4l2-break','p4l2-ws1','p4l2-ws1ans','p4l2-teachriddle','p4l2-teachpattern','p4l2-teachcards','p4l2-ws2','p4l2-ws2ans','p4l2-stretch','p4l2-challenge','p4l2-chdiag','p4l2-chwalk','p4l2-talk','p4l2-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

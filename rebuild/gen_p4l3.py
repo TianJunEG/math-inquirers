@@ -69,7 +69,7 @@ put('p4l3-title',title_slide('p4l3-title','LESSON 3  •  WEEK 2','Operation Det
  'Thinking strategies taught today: ESTIMATE, TEST AND ADJUST (guess and check), WORK BACKWARDS and DRAW A BAR MODEL. '
  'Materials: mini whiteboards and markers; paper number cards 0 to 9; sign cards +, −, ×, ÷ and two pairs of bracket cards per child; scrap paper for bar models. '
  'Online: children write on whiteboards and hold them up to the camera; before the lesson they cut out the sign and bracket cards so they can move them on camera in the explore task. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up game: target numbers ----------
 g=tiles([('2','n'),('4','n'),('5','n'),('9','n')],0,10,110,130,30,70)+tiles([('+','s'),('−','s'),('×','s'),('÷','s')],620,30,90,90,24,56)
@@ -80,15 +80,15 @@ for i,(t,a) in enumerate(targets):
     L=128+i*424
     body+=pin(L,490,392,p('TARGET',28,800,TEAL)+f'<p style="font-family:{HF};font-size:110px;font-weight:600;line-height:1">{t}</p>',None,WHITE,24,'20px 28px',f'box-sizing:border-box;height:330px;align-items:center;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,700,344,p(a,40,800),'pop',SOFT,16,'12px 18px',f'box-sizing:border-box;align-items:center;border:3px solid {NAVY}')
-put('p4l3-warm1',sec('p4l3-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Target Numbers. Children copy the four cards 2, 4, 5 and 9 onto their whiteboards. Point to one target at a time: "Make 13. Go!" The first child to show a correct number sentence wins a point; then ask for a SECOND way. Click to show one way for each target (clicks reveal 13, 22, 36, 81 in order). '
+put('p4l3-warm1',sec('p4l3-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Target Numbers. Children copy the four cards 2, 4, 5 and 9 onto their whiteboards. Point to one target at a time: "Make 13. Go!" The first child to show a correct number sentence wins a point; then ask for a SECOND way. Click to show one way for each target (clicks reveal 13, 22, 36, 81 in order). '
  'Other ways: 13 = 2 × 9 − 5; 22 = 2 × 9 + 4; 81 needs brackets: (4 + 5) × 9. '
  'Listen for children who write 2 + 4 × 5 and say 30: ask them to say which part they did first. That question leads straight into today\'s lesson. Finisher: "Can you make 100?" (Let them try; it cannot be done with these cards and signs, which is a good thing to notice.)'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','25 × 4 = ?','100'),('2.','4 800 ÷ 6 = ?','800'),('3.','99 × 6 = ?','594'),('4.','1 000 − 368 = ?','632'),('5.','45 × 20 = ?','900')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l3-warm2',sec('p4l3-warm2','5–8 MIN',body,'Minutes 5 to 8. Mental maths. Read each aloud, whiteboards up together, then click. Ask for the clever way: 3) 100 × 6 = 600, then take away one 6: 594. 4) Count on from 368: 32 to 400, then 600 more: 632. 5) 45 × 2 = 90, then × 10 = 900. Answers: 100, 800, 594, 632, 900.'))
+put('p4l3-warm2',sec('p4l3-warm2','6–8 MIN',body,'Minutes 6 to 8. Mental maths. Read each aloud, whiteboards up together, then click. Ask for the clever way: 3) 100 × 6 = 600, then take away one 6: 594. 4) Count on from 368: 32 to 400, then 600 more: 632. 5) 45 × 2 = 90, then × 10 = 900. Answers: 100, 800, 594, 632, 900.'))
 
 # ---------- 4. explore ----------
 g=tiles([('6','n'),('+','s'),('4','n'),('×','s'),('3','n'),('−','s'),('2','n')],330,80,100,110,18,60)
@@ -226,10 +226,32 @@ put('p4l3-chwalk',sec('p4l3-chwalk','Early finishers / take-home',body,'Use afte
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ben says 20 − 8 + 2 = 10 because you add first. Mei says the answer is 14. Who is right? Why?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p4l3-talk',sec('p4l3-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: Mei is right. With only + and − we work from left to right: 20 − 8 = 12, then 12 + 2 = 14. Ben worked out 8 + 2 first; to do that we would need brackets: 20 − (8 + 2) = 10. Second question if time: "How did you know which sign to try first in the missing-sign puzzles?" (estimate: a big target needs ×, a small one may need ÷ or −). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Work out  50 − 6 × (3 + 4).  Show the step you did first.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l3-exit',sec('p4l3-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: 8. Brackets first: 3 + 4 = 7; then 6 × 7 = 42; then 50 − 42 = 8. Common wrong answers: 308 (50 − 6 = 44, 44 × 7) and 47 (working left to right inside out). Extension: use four 4s and any signs and brackets to make every number from 0 to 9.'))
+put('p4l3-exit',sec('p4l3-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: 8. Brackets first: 3 + 4 = 7; then 6 × 7 = 42; then 50 − 42 = 8. Common wrong answers: 308 (50 − 6 = 44, 44 × 7) and 47 (working left to right inside out). Extension: use four 4s and any signs and brackets to make every number from 0 to 9.'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l3.js')+"').gaps))"]))
+_ID='p4l3'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l3-title','p4l3-warm1','p4l3-warm2','p4l3-explore1','p4l3-explore2','p4l3-teach1','p4l3-try1','p4l3-we1','p4l3-try2','p4l3-we2','p4l3-try3','p4l3-key','p4l3-break','p4l3-ws1','p4l3-ws1ans','p4l3-teachback','p4l3-trytrick','p4l3-teachbar','p4l3-teachchain','p4l3-ws2','p4l3-ws2ans','p4l3-stretch','p4l3-challenge','p4l3-chdiag','p4l3-chwalk','p4l3-talk','p4l3-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

@@ -47,7 +47,7 @@ put('p4l10-title',title_slide('p4l10-title','LESSON 10  •  WEEK 5','Challenge 
  'Thinking strategies today: GUESS AND CHECK WITH A TABLE, SUPPOSE (heads and legs), WORK BACKWARDS, LOGIC GRID, DRAW IT. '
  'Materials: Four puzzle cards (A to D) for the explore stations, mini whiteboards, counters or cubes, certificates, stamps. '
  'Online: pairs go to breakout rooms with one puzzle card each and report back; the tutor ticks and crosses the logic grid on the slide as children call out. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90, certificates 88 to 90 (last slide). The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 89, certificates 89 to 90 (last slide). The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up: who am I? ----------
 CW,CH=56,46
@@ -73,8 +73,8 @@ body+=pin(128,240,564,overlay([28,91],RED,'28 and 91 circled',True),'fade')
 body+=pin(760,540,1032,p(clues[3],34,700),'rise',WHITE,20,'16px 26px')
 body+=answer(760,660,1032,'I am 91.  (28 is even.)')
 body+=pin(760,780,1032,p('Every clue crosses numbers out. Which clue did the most work?',30,700),'fade',SOFT,20,'16px 26px')
-put('p4l10-warm1',sec('p4l10-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Who am I? Children have a 1 to 100 grid (or a whiteboard list). Click one clue at a time; after each, children cross out every number that no longer fits. Clicks: clue 1, clue 2, the 7 times table shades (14, 21, 28 … 98), clue 3, 28 and 91 are circled, clue 4, the answer, the question. '
+put('p4l10-warm1',sec('p4l10-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Who am I? Children have a 1 to 100 grid (or a whiteboard list). Click one clue at a time; after each, children cross out every number that no longer fits. Clicks: clue 1, clue 2, the 7 times table shades (14, 21, 28 … 98), clue 3, 28 and 91 are circled, clue 4, the answer, the question. '
  'Clue 3 check: 1 + 4, 2 + 1, 2 + 8 = 10 ✓, 3 + 5, 4 + 2, 4 + 9, 5 + 6, 6 + 3, 7 + 0, 7 + 7, 8 + 4, 9 + 1 = 10 ✓, 9 + 8. So 28 and 91; clue 4 leaves 91. '
  'Second riddle if time: I am a 2-digit number in the 9 times table. My tens digit is 3 more than my ones digit. Who am I? (63: the 9 times table gives 18, 27, 36, 45, 54, 63, 72, 81, 90, 99; only 63 has tens 3 more than ones.) '
  'Ask: "Which clue did the most work?" (clue 2: it left only 13 numbers).'))
@@ -82,7 +82,7 @@ put('p4l10-warm1',sec('p4l10-warm1','0–5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','Buses every 6 min and every 8 min leave together at 9:00. Next together?','9:24'),('2.','Round 45 678 to the nearest thousand.','46 000'),('3.','3/4 of 24 = ?','18'),('4.','0.6 × 4 = ?','2.4'),('5.','Turn clockwise from N to SW. How many degrees?','225°')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,34) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l10-warm2',sec('p4l10-warm2','5–8 MIN',body,'Minutes 5 to 8. One question from earlier lessons each. Whiteboards up together, then click, and ask "Which lesson is this from?" 1) 9:24: the first common multiple of 6 and 8 is 24 (Factor Hunters). 2) 46 000: the hundreds digit is 6, so round up (Big Number Puzzles). 3) 24 ÷ 4 = 6, 6 × 3 = 18 (Fraction Frontier). 4) 6 tenths × 4 = 24 tenths = 2.4 (Decimal Detectives). 5) N to E is 90°, to S is 180°, to SW is 45° more: 225° (Angle Turns).'))
+put('p4l10-warm2',sec('p4l10-warm2','6–8 MIN',body,'Minutes 6 to 8. One question from earlier lessons each. Whiteboards up together, then click, and ask "Which lesson is this from?" 1) 9:24: the first common multiple of 6 and 8 is 24 (Factor Hunters). 2) 46 000: the hundreds digit is 6, so round up (Big Number Puzzles). 3) 24 ÷ 4 = 6, 6 × 3 = 18 (Fraction Frontier). 4) 6 tenths × 4 = 24 tenths = 2.4 (Decimal Detectives). 5) N to E is 90°, to S is 180°, to SW is 45° more: 225° (Angle Turns).'))
 
 # ---------- 4. explore ----------
 cards=[('A','Guess and check','Two next-door numbers','multiply to 210.'),('B','Heads and legs','Spiders and beetles:','10 bugs, 68 legs.'),('C','Work backwards','Double it, add 7.','I get 43.'),('D','Logic','Ali, Mei, Ravi: cat,','dog, fish. Who has what?')]
@@ -265,7 +265,29 @@ put('p4l10-end',f'<section id="p4l10-end" data-transition="fade" style="backgrou
  f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates and the stamped inquiry journals. Ask each child to name one puzzle they enjoyed and one way in they will use again. Tell each child one specific thing they did well this holiday. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n')
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l10.js')+"').gaps))"]))
+_ID='p4l10'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–89 MIN',_body,
+ 'Minutes 88 to 89 (1 minute, then certificates). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l10-title','p4l10-warm1','p4l10-warm2','p4l10-explore1','p4l10-explore2','p4l10-teach1','p4l10-we1','p4l10-try1','p4l10-we2','p4l10-try2','p4l10-we3','p4l10-key','p4l10-break','p4l10-ws1','p4l10-ws1ans','p4l10-teachlogic','p4l10-teachqueue','p4l10-teachages','p4l10-ws2','p4l10-ws2ans','p4l10-stretch','p4l10-challenge','p4l10-chdiag','p4l10-chwalk','p4l10-talk','p4l10-exit','p4l10-end']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.insert(len(order)-1,f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

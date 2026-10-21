@@ -94,7 +94,7 @@ put('title',title_slide(f'{P}-title','LESSON 6  •  WEEK 3','Angle Turns','Angl
  'Thinking strategies today: ESTIMATE FIRST (compare with 90° and 180°), COUNT THE TURN (12 clock spaces, 8 compass steps), WORK IN ORDER (every angle in a fan), WORK BACKWARDS (undo a turn). '
  'Materials: A protractor and a ruler for each child, a paper clock with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall. '
  'Online: children use their own protractor and a paper clock at home; the screen is North for the turning games, and children stand and turn on camera. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up game ----------
 g=compass(260,260,190,hi=('N',))
@@ -102,15 +102,15 @@ body=h2('Warm-up: Robot turns')+pin(128,230,540,svgwrap(520,520,'An 8-point comp
 calls=[('Face N. Quarter turn clockwise.','E'),('Face N. Half turn.','S'),('Face N. Three-quarter turn clockwise.','W'),('Face N. Turn 45° clockwise.','NE')]
 for i,(a,b) in enumerate(calls):
     body+=qrow(720,250+i*150,800,f'{i+1}.',a,36)+answer(1580,250+i*150,212,b)
-put('warm1',sec(f'{P}-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Robot turns. Everyone stands and faces the front of the room: that is North (online: the screen is North). Read each call; children turn, then point and say the direction they face. Click to show it. Start every call from North. '
+put('warm1',sec(f'{P}-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Robot turns. Everyone stands and faces the front of the room: that is North (online: the screen is North). Read each call; children turn, then point and say the direction they face. Click to show it. Start every call from North. '
  'Then play faster rounds without the slide: "From where you are now: quarter turn anticlockwise! Half turn! 45° clockwise!" Children who end up facing the wrong way watch a partner and try again. '
  'Ask: "How many quarter turns make a full turn?" (4) "How many 45° turns make a quarter turn?" (2) "Is a half turn clockwise different from a half turn anticlockwise?" (no: you end up facing the same way). Listen for children who say "clockwise is the way the clock hands go". Online: on a mirrored self-view a turn looks reversed, so say "turn to your right" for clockwise, and tell children to ignore their own picture.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','How many degrees in a right angle?','90°'),('2.','How many degrees in a half turn?','180°'),('3.','How many right angles make a full turn?','4'),('4.','Face N. Quarter turn anticlockwise. Now?','W'),('5.','Which is bigger: a 3/4 turn or 250°?','3/4 turn')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. 1) 90°. 2) 180°: two right angles. 3) 4, so a full turn is 4 × 90° = 360°. 4) W: stand up and do it if anyone hesitates. 5) A 3/4 turn is 3 × 90° = 270°, which is more than 250°. Ask: "How many degrees in a 1/4 turn? A 1/8 turn?" (90°, 45°: we need 45° today for the compass).'))
+put('warm2',sec(f'{P}-warm2','6–8 MIN',body,'Minutes 6 to 8. Whiteboards up together, then click. 1) 90°. 2) 180°: two right angles. 3) 4, so a full turn is 4 × 90° = 360°. 4) W: stand up and do it if anyone hesitates. 5) A 3/4 turn is 3 × 90° = 270°, which is more than 250°. Ask: "How many degrees in a 1/4 turn? A 1/8 turn?" (90°, 45°: we need 45° today for the compass).'))
 
 # ---------- 4. explore: what to do ----------
 g=clock(100,100,92,3,0,nums='main')+rsq((100,100),26,0,RED)
@@ -268,10 +268,32 @@ put('chwalk',sec(f'{P}-chwalk','Early finishers / take-home',body,'Use after pai
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Is turning 270° clockwise the same as turning 90° anticlockwise? How do you know?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('talk',sec(f'{P}-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then test it standing up: everyone faces North and does both turns. Answer: yes, you end up facing the same way (both from N end at W), because 270° + 90° = 360°, a full turn. The turns are different sizes, but the direction you end up facing is the same. Second question if time: "Ben says the angle at 3 o’clock is smaller than at 9 o’clock because 3 is smaller than 9. Who agrees?" (both are 90°: 3 spaces the shorter way). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Face N. Turn 135° clockwise. Which way do you face? What is the angle between the clock hands at 5 o’clock?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('exit',sec(f'{P}-exit','85–90 MIN',body,'Minutes 85 to 90. Answers: SE (3 steps of 45°: NE, E, SE). 150° (5 spaces of 30°). Extension: find all the o’clock times when the smaller angle between the hands is more than 90° (4, 5, 6, 7 and 8 o’clock).'))
+put('exit',sec(f'{P}-exit','85–88 MIN',body,'Minutes 85 to 88. Answers: SE (3 steps of 45°: NE, E, SE). 150° (5 spaces of 30°). Extension: find all the o’clock times when the smaller angle between the hands is more than 90° (4, 5, 6, 7 and 8 o’clock).'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l6.js')+"').gaps))"]))
+_ID='p4l6'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=[f'{P}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','key','break','teachfan','ws1','ws1ans','teachclock','tryclock','teachrect','teachrobot','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

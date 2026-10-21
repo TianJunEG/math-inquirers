@@ -159,7 +159,7 @@ L.lessons.forEach(l => {
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
-  G.push(seg('88–90 min', 'What was hard? (1 minute)'));
+  G.push(seg(l.n === 10 ? '88–89 min' : '88–90 min', 'What was hard? (1 minute)'));
   say([s.reflect || ('Turn to the last page of today’s lesson, to the box called What was hard? Finish three lines: the hardest part was, I got unstuck by, next time I will try. One minute, no talking.'), 'Model one yourself first: “' + l.gaps.reflect + '” Then ask one child to share a line, not always the fastest child. Thank them for the strategy they used.']);
   doo(['Run it in about one minute. Share one answer only. Never grade it, never correct it and do not collect it for marking. Praise the strategy (“you drew it”, “you tried a smaller number”), not the speed or the score. Use it later to see which strategies each child reaches for.']);
   G.push(h2('Extension for children who are ready'));

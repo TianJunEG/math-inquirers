@@ -82,7 +82,7 @@ put('p4l9-title',title_slide('p4l9-title','LESSON 9  •  WEEK 5','Data Detectiv
  'Thinking strategies today: READ THE SCALE FIRST, LIST THE CHANGES, and WORK FROM THE TOTAL. '
  'Materials: Mini whiteboards, a ruler and two coloured pencils per child, printed blank graph grids (or squared paper), the queue table for the explore task. '
  'Online: children use a printed blank grid or squared paper and hold it up to the camera; the tutor plots on the slide graphs while children call out where each point goes. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up: which graph tells the story ----------
 def mini(kind):
@@ -97,15 +97,15 @@ for i,k in enumerate('ABCD'):
 stories=[('1.','A bath filling with water from the tap','C'),('2.','People at a hawker centre from 10 am to 3 pm','A'),('3.','The height of a candle as it burns','D'),('4.','Money in a piggy bank that nobody touches','B')]
 for i,(a,b,c) in enumerate(stories):
     body+=qrow(128,540+i*92,1250,a,b,32)+answer(1420,540+i*92,372,'Graph '+c)
-put('p4l9-warm1',sec('p4l9-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Which graph tells the story? The graphs have no numbers on purpose: we read the SHAPE. Read story 1 aloud. Children point at (or write the letter of) the matching graph, then say why before you click. Clicks reveal the answers in order. '
+put('p4l9-warm1',sec('p4l9-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Which graph tells the story? The graphs have no numbers on purpose: we read the SHAPE. Read story 1 aloud. Children point at (or write the letter of) the matching graph, then say why before you click. Clicks reveal the answers in order. '
  'Answers: 1) Graph C: the water goes up steadily. 2) Graph A: people arrive for lunch, then leave. 3) Graph D: the candle gets shorter steadily. 4) Graph B: nothing changes, so the line is flat. '
  'Ask: "Could the hawker centre graph be another shape on a rainy day?" "Make up a story for a line that goes DOWN, then UP." (e.g. water in a bathtub as it drains and is filled again). Listen for "steep" and "flat": we use those words all lesson.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','75 − 48 = ?','27'),('2.','Scale in 10s: halfway between 40 and 50?','45'),('3.','38 + 47 + 15 = ?','100'),('4.','Four numbers total 200. Three are 45, 60 and 50. The fourth?','45'),('5.','Bigger change: 120 to 95, or 60 to 90?','60 to 90 (30)')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l9-warm2',sec('p4l9-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. Each one is a skill for today: 1) 27, the size of a change. 2) 45, reading halfway between two grid lines. 3) 100: add 85 + 15. 4) 45: 45 + 60 + 50 = 155, 200 − 155 = 45. 5) 60 to 90 is a change of 30; 120 to 95 is a change of 25. A change can go up or down: we compare the SIZE of the change.'))
+put('p4l9-warm2',sec('p4l9-warm2','6–8 MIN',body,'Minutes 6 to 8. Whiteboards up together, then click. Each one is a skill for today: 1) 27, the size of a change. 2) 45, reading halfway between two grid lines. 3) 100: add 85 + 15. 4) 45: 45 + 60 + 50 = 155, 200 − 155 = 45. 5) 60 to 90 is a change of 30; 120 to 95 is a change of 25. A change can go up or down: we compare the SIZE of the change.'))
 
 # ---------- 4. explore ----------
 times=['11:00','11:30','12:00','12:30','1:00','1:30','2:00']; ppl=[4,9,18,22,15,7,3]
@@ -249,10 +249,32 @@ put('p4l9-chwalk',sec('p4l9-chwalk','Early finishers / take-home',body,'Use afte
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Two graphs show the same numbers, but one line looks much steeper. How can that be? How would you draw a fair graph?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p4l9-talk',sec('p4l9-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: the scales are different. If a scale starts at a big number, or each line is worth very little, a small change looks huge. To compare fairly, use the same scale for both graphs, starting at 0. Second question if time: "Why did we list the changes instead of just looking at the highest point?" (the highest point shows the biggest number, not the biggest change). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Visitors: Mon 35, Tue 50, Wed 20, Thu 45. Between which two days was the biggest change? Was it an increase or a decrease?',44,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l9-exit',sec('p4l9-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: Tuesday to Wednesday, a decrease of 30 (the other changes are up 15 and up 25). Watch for children who choose Wednesday to Thursday (the biggest INCREASE, 25). Extension: draw two line graphs of 52, 54, 56, 58, one that makes the change look huge and one that makes it look tiny.'))
+put('p4l9-exit',sec('p4l9-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: Tuesday to Wednesday, a decrease of 30 (the other changes are up 15 and up 25). Watch for children who choose Wednesday to Thursday (the biggest INCREASE, 25). Extension: draw two line graphs of 52, 54, 56, 58, one that makes the change look huge and one that makes it look tiny.'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l9.js')+"').gaps))"]))
+_ID='p4l9'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l9-title','p4l9-warm1','p4l9-warm2','p4l9-explore1','p4l9-explore2','p4l9-teach1','p4l9-we1','p4l9-try1','p4l9-we2','p4l9-try2','p4l9-key','p4l9-break','p4l9-ws1','p4l9-ws1ans','p4l9-teachtwo','p4l9-teachsteps','p4l9-teachscale','p4l9-ws2','p4l9-ws2ans','p4l9-stretch','p4l9-challenge','p4l9-chdiag','p4l9-chwalk','p4l9-talk','p4l9-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

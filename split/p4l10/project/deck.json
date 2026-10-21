@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:20:21Z"
+  "at": "2026-10-21T23:44:46Z"
  },
  "lists": "css",
  "title": "Math Inquirers P4: Lesson 10 – Challenge Day",
  "order": [
   "p4l10-title",
+  "p4l10-check",
   "p4l10-warm1",
   "p4l10-warm2",
   "p4l10-explore1",
@@ -33,6 +34,7 @@
   "p4l10-chwalk",
   "p4l10-talk",
   "p4l10-exit",
+  "p4l10-reflect",
   "p4l10-end"
  ],
  "cover": "p4l10-title",

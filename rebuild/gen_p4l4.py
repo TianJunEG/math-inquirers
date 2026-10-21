@@ -92,7 +92,7 @@ put('p4l4-title',title_slide('p4l4-title','LESSON 4  •  WEEK 2','Fraction Fron
  'Thinking strategies taught today: DRAW A MODEL (fraction bars, number lines, bar models), MAKE A LIST IN ORDER and COMPARE WITH A BENCHMARK (one half). '
  'Materials: paper strips (one per child, to fold into halves, quarters and eighths), paper circles to cut into quarters, 30 counters, mini whiteboards and markers. '
  'Online: before the lesson children cut out 3 paper circles and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up: more or less than a half ----------
 cards=[(3,8,'Less: half of 8 is 4'),(5,9,'More: half of 9 is 4½'),(6,12,'Exactly a half'),(7,10,'More: half of 10 is 5'),(2,5,'Less: half of 5 is 2½'),(4,7,'More: half of 7 is 3½')]
@@ -102,8 +102,8 @@ for i,(n,d,a) in enumerate(cards):
     L=128+(i%3)*(CW+32); T=300+(i//3)*300
     body+=pin(L,T,CW,f'<p style="font-family:{HF};font-weight:600;text-align:center">{fr(n,d,66)}</p>',None,WHITE,24,'14px 22px',f'box-sizing:border-box;height:270px;align-items:center;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+20,T+196,CW-40,p(a,32,800),'pop',SOFT,16,'10px 18px',f'box-sizing:border-box;align-items:center;border:3px solid {NAVY}')
-put('p4l4-warm1',sec('p4l4-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. More or less than a half? Point to one card at a time. Children show thumbs up (more than a half), thumbs down (less) or a flat hand (exactly a half), then you click to reveal (clicks go 3/8, 5/9, 6/12, 7/10, 2/5, 4/7). '
+put('p4l4-warm1',sec('p4l4-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). More or less than a half? Point to one card at a time. Children show thumbs up (more than a half), thumbs down (less) or a flat hand (exactly a half), then you click to reveal (clicks go 3/8, 5/9, 6/12, 7/10, 2/5, 4/7). '
  'Ask each time: "How do you know?" The quick test: find half of the denominator and compare it with the numerator. 3/8: half of 8 is 4, and 3 is less than 4. 5/9: half of 9 is 4 and a half, and 5 is more. 6/12: half of 12 is 6, exactly a half. '
  'Listen for children who say "5/9 is less because 9 is big". That idea comes back when we compare fractions later.'))
 
@@ -113,7 +113,7 @@ qs=[('1.',f'{fr(1,2,S30)} of 18 = ?','9'),('2.',f'{fr(1,4,S30)} of 20 = ?','5'),
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     t=240+i*132; body+=rq(128,t,1250,a,b,40)+ra(1420,t,372,c,'pop',40)
-put('p4l4-warm2',sec('p4l4-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, whiteboards up together, then click. Ask for the method: 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. 4) 3/4 = 6/8, and 6/8 + 1/8 = 7/8. 5) 1 whole = 10/10, take away 3/10: 7/10. Answers: 9, 5, 8, 7/8, 7/10.'))
+put('p4l4-warm2',sec('p4l4-warm2','6–8 MIN',body,'Minutes 6 to 8. Read each aloud, whiteboards up together, then click. Ask for the method: 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. 4) 3/4 = 6/8, and 6/8 + 1/8 = 7/8. 5) 1 whole = 10/10, take away 3/10: 7/10. Answers: 9, 5, 8, 7/8, 7/10.'))
 
 # ---------- 4. explore: pizza party ----------
 def pizza(cx,cy,r,filled):
@@ -271,10 +271,32 @@ put('p4l4-chwalk',sec('p4l4-chwalk','Early finishers / take-home',body,'Use afte
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(f'Which is more: {mx(2,1,3,40)} pizzas or {fr(9,4,40)} pizzas? Mei says {fr(9,4,40)} because 9 is a big number. Is she right?',42,600,raw=True))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p4l4-talk',sec('p4l4-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: 2 1/3 is more. 9/4 = 2 1/4, so both have 2 wholes; a third is bigger than a quarter (sharing a pizza among 3 gives bigger slices than among 4). Mei looked only at the 9, but quarters are small pieces. Second question if time: "Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?" (fifths are bigger pieces, so 3/5 is bigger). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(f'Write {fr(23,5,44)} as a mixed number. Then find {fr(3,5,44)} of 25.',46,600,raw=True))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('p4l4-exit',sec('p4l4-exit','85–90 MIN',body,'Minutes 85 to 90. Answers: 23/5 = 4 3/5 (23 ÷ 5 = 4 remainder 3). 3/5 of 25 = 15 (1 unit = 5, 3 units = 15). Extension: find a fraction between 2/3 and 3/4 (for example 17/24, because 2/3 = 16/24 and 3/4 = 18/24).'))
+put('p4l4-exit',sec('p4l4-exit','85–88 MIN',body,'Minutes 85 to 88. Answers: 23/5 = 4 3/5 (23 ÷ 5 = 4 remainder 3). 3/5 of 25 = 15 (1 unit = 5, 3 units = 15). Extension: find a fraction between 2/3 and 3/4 (for example 17/24, because 2/3 = 16/24 and 3/4 = 18/24).'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l4.js')+"').gaps))"]))
+_ID='p4l4'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=['p4l4-title','p4l4-warm1','p4l4-warm2','p4l4-explore1','p4l4-explore2','p4l4-teach1','p4l4-we1','p4l4-try1','p4l4-teachline','p4l4-we2','p4l4-try2','p4l4-key','p4l4-break','p4l4-ws1','p4l4-ws1ans','p4l4-teachcompare','p4l4-teachcompare2','p4l4-trycompare','p4l4-teachwhole','p4l4-teachfind','p4l4-ws2','p4l4-ws2ans','p4l4-stretch','p4l4-challenge','p4l4-chdiag','p4l4-chwalk','p4l4-talk','p4l4-exit']
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

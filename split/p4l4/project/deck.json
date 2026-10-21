@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:20:20Z"
+  "at": "2026-10-21T23:44:59Z"
  },
  "lists": "css",
  "title": "Math Inquirers P4: Lesson 4 – Fraction Frontier",
  "order": [
   "p4l4-title",
+  "p4l4-check",
   "p4l4-warm1",
   "p4l4-warm2",
   "p4l4-explore1",
@@ -34,7 +35,8 @@
   "p4l4-chdiag",
   "p4l4-chwalk",
   "p4l4-talk",
-  "p4l4-exit"
+  "p4l4-exit",
+  "p4l4-reflect"
  ],
  "cover": "p4l4-title",
  "sections": {

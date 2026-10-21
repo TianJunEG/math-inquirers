@@ -72,7 +72,7 @@ put('title',title_slide(f'{P}-title','LESSON 5  •  WEEK 3','Decimal Detectives
  'Thinking strategies today: ZOOM IN (what is one step worth?), LINE UP THE POINTS, MAKE A LIST IN ORDER, DRAW A BAR MODEL. '
  'Materials: Digit cards 0 to 9 and a decimal point card for each child, a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money. '
  'Online: children cut out paper digit cards and a paper decimal point before the lesson and move them on camera; the tutor marks the zoom-in number lines on the slides. '
- 'Time plan: warm-up game 0 to 5, quick questions 5 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
+ 'Time plan: Warm-up check 1 to 4 (two questions on the key idea; children who get both right and can say why start on the Think Harder pages at minute 34), warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18, teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, worksheet page 1 from 34 to 50 and check together 50 to 53, short teaching before page 2 from 53 to 58, worksheet page 2 from 58 to 76 and check together 76 to 80, talk time 80 to 85, exit ticket 85 to 88, What was hard? reflection 88 to 90. The Challenge slides and the Think Harder pages are for early finishers and for take-home: they have no fixed time slot. Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).'))
 
 # ---------- 2. warm-up game ----------
 g=''
@@ -87,15 +87,15 @@ g+=f'<rect x="1340" y="60" width="250" height="150" rx="20" fill="{SOFT}" stroke
 body=h2('Warm-up: Target 5')+card(p('I turn over one digit card at a time. Write it in a box straight away. No moving it later! The number closest to 5 wins.',38,700))
 body+=pin(128,420,1664,svgwrap(1600,280,'Three empty boxes for ones, tenths and hundredths with a decimal point, a digit card 6 waiting, and the target 5',g),None,WHITE,24,'16px 32px')
 body+=pin(128,770,1664,p('Where would you put a 4? A 5? A 9? Is a 6 in the ones box a good idea?',36,700),'fade',SOFT,20,'20px 30px')
-put('warm1',sec(f'{P}-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Target 5. Children draw three empty boxes with a point after the first on a whiteboard. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, everyone reads their number aloud; the number closest to 5 wins (work out how far each is from 5). '
+put('warm1',sec(f'{P}-warm1','4–6 MIN',body,
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Target 5. Children draw three empty boxes with a point after the first on a whiteboard. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, everyone reads their number aloud; the number closest to 5 wins (work out how far each is from 5). '
  'Play 3 rounds: target 5, then target 2.5, then the smallest number possible. Click to show the thinking question. Talk: "A 4 or a 5 belongs in the ones box: 4.9 something or 5.0 something is close to 5. A 9 in the ones box is a disaster. A 9 in the hundredths box hardly matters: it is only 9 hundredths." '
  'Listen for children who say "the ones digit matters most, then the tenths". That is the key idea of today.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','What is the 7 worth in 3.475?','0.07'),('2.','6 tenths and 4 thousandths = ?','0.604'),('3.','Which is bigger: 0.8 or 0.75?','0.8'),('4.','Round 4.68 to 1 decimal place.','4.7'),('5.','How much more than $3.05 is $5?','$1.95')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, whiteboards up together, then click to show. 1) 7 hundredths. 2) Watch for 0.64: the 4 must be in the thousandths place, so the hundredths place needs a 0. 3) Many children say 0.75 because 75 > 8. Write 0.80 under 0.75: 8 tenths beats 7 tenths. Do not settle it fully: it comes back in the teaching. 4) 4.68 is between 4.6 and 4.7, nearer 4.7. 5) Count on: $3.05 → $4 is 95¢, $4 → $5 is $1, so $1.95.'))
+put('warm2',sec(f'{P}-warm2','6–8 MIN',body,'Minutes 6 to 8. Read each aloud, whiteboards up together, then click to show. 1) 7 hundredths. 2) Watch for 0.64: the 4 must be in the thousandths place, so the hundredths place needs a 0. 3) Many children say 0.75 because 75 > 8. Write 0.80 under 0.75: 8 tenths beats 7 tenths. Do not settle it fully: it comes back in the teaching. 4) 4.68 is between 4.6 and 4.7, nearer 4.7. 5) Count on: $3.05 → $4 is 95¢, $4 → $5 is $1, so $1.95.'))
 
 # ---------- 4. explore: what to do ----------
 g=dcards(['2','5','8','.'],40,30,110,140)+f'<rect x="620" y="40" width="380" height="120" rx="18" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/>'+txt(810,90,'for example',28,MUTED,weight=600,font='Nunito Sans, Arial')+txt(810,142,'25.8',52)
@@ -244,10 +244,32 @@ put('chwalk',sec(f'{P}-chwalk','Early finishers / take-home',body,'Use after pai
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('talk',sec(f'{P}-talk','80–85 MIN',body,'Minutes 80 to 85. Pairs talk for 2 minutes, then share. Answer: Ben is wrong. Line up the points: 3.405 and 3.450. Same ones, same tenths; 0 hundredths is less than 5 hundredths, so 3.405 is smaller. A number line check: 3.405 is just past 3.40; 3.45 is halfway to 3.5. Second question if time: "Why does 3.45 = 3.450, but 3.45 is not the same as 3.045?" (a 0 at the end adds nothing; a 0 after the point moves the other digits to smaller places). Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Write 2.8, 2.08 and 2.088 in order, smallest first. Then round 2.088 to 1 decimal place.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put('exit',sec(f'{P}-exit','85–90 MIN',body,'Minutes 85 to 90. Answer: 2.08, 2.088, 2.8 (as 2.080, 2.088, 2.800). 2.088 rounds to 2.1 (neighbours 2.0 and 2.1, halfway 2.05). Extension: use the digit cards 1, 3, 5, 7 and a decimal point to make the number with 2 decimal places that is closest to 40 (37.51).'))
+put('exit',sec(f'{P}-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: 2.08, 2.088, 2.8 (as 2.080, 2.088, 2.800). 2.088 rounds to 2.1 (neighbours 2.0 and 2.1, halfway 2.05). Extension: use the digit cards 1, 3, 5, 7 and a decimal point to make the number with 2 decimal places that is closest to 40 (37.51).'))
 
 # ---------- write ----------
+# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
+import subprocess as _sp
+_G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l5.js')+"').gaps))"]))
+_ID='p4l5'
+_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
+for _i,_c in enumerate(_G['check']):
+    _t=290+_i*300
+    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
+    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
+S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
+ 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
+ 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
+ 'A GOOD REASON: '+_G['why']+' '
+ 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
+_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
+for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
+    _body+=pin(128,320+_i*170,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
+_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
+S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
+ 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+
 order=[f'{P}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','we3','try2','key','break','ws1','ws1ans','teachcards','teachbar','teachmass','teachclue','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):
