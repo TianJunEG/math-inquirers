@@ -78,7 +78,7 @@ body=h2('Worksheet page 2: on your own')+card(p('<span style="color:#1F7A6F;font
 put('l5-ws2',sec('l5-ws2','61–68 MIN',body,'Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and circles for Q4.'))
 
 # 20. page 2 go-through
-rows=[('Q3','Mei 13,  Ben 7,  Mei has 6 more than Ben,  28 altogether'),('Q4a','13 children are behind Mei (20 − 7)'),('Q4b','15 children: 8 + 8 counts Ali twice, so 16 − 1')]
+rows=[('Q3','Mei 13,  Ben 7,  Mei has 6 more than Ben,  28 altogether'),('Q4a','13 children are behind Mei (20 − 7)'),('Q4b','5 children: 3 + 3 counts Ali twice, so 6 − 1')]
 body=h2('Page 2: check together')+''.join(qrow(128,260+i*150,1664,a,'',38).replace('</span>  </p>','</span></p>') for i,(a,b) in enumerate(rows))+''.join(answer(330,260+i*150,1462,b) for i,(a,b) in enumerate(rows))
 put('l5-ws2ans',sec('l5-ws2ans','68–70 MIN',body,'Click each answer after a child explains. Q3: Mei = 8 + 5 = 13, Ben = 13 − 6 = 7, difference 13 − 7 = 6, total 8 + 13 + 7 = 28. Q4a: Mei is not behind herself, so 20 − 7 = 13. Q5: check that each story has one clear answer.'))
 
@@ -111,5 +111,6 @@ deck['sections']={'s1':{'description':'Warm-up and explore','start':'l5-title'},
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides; wrote',len(S))
 
+import p1gifted; p1gifted.apply(D,5)
 import p1fix
 p1fix.finish(D,5,{'l5-ws1':'42–52 MIN','l5-ws1ans':'52–54 MIN','l5-teachbar':'54–56 MIN','l5-teachq1':'56–57 MIN','l5-teachq2':'57–58 MIN','l5-ws2':'58–68 MIN'})

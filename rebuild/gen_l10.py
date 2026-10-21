@@ -105,7 +105,7 @@ body+=step(2,'Now triangles made of two small ones: the big one, 3.',left=800,to
 body+=pin(128,250,600,o3,'fade')
 body+=step(3,'3 triangles. Small first, then bigger, so none are missed.',left=800,top=520,width=992,size=34)
 body+=qrow(128,740,1250,'Your turn:','I have 4 sides and 4 corners. Only the opposite sides are the same length. What am I?',32)+answer(1420,740,372,'A rectangle')
-put('l10-teachtri',sec('l10-teachtri','55–57 MIN',body,'Teach before worksheet page 2 (Q5). Click: step 1, then each small triangle lights up as you count. Step 2, then the whole outline. Step 3. Think-aloud: "I count in order: the smallest first, then ones made of two pieces, then three pieces. That way I do not miss the big one or count one twice." The worksheet picture has TWO lines from the top: do not count it for them; ask "What are the smallest ones? Which ones are made of two?" Your turn (a shape riddle like Q5a): a rectangle. A square has all 4 sides the same, so it does not fit "only the opposite sides".'))
+put('l10-teachtri',sec('l10-teachtri','55–57 MIN',body,'Teach before worksheet page 2 (Q5). Click: step 1, then each small triangle lights up as you count. Step 2, then the whole outline. Step 3. Think-aloud: "I count in order: the smallest first, then ones made of two pieces, then three pieces. That way I do not miss the big one or count one twice." The teaching picture has TWO lines from the top (the worksheet picture has one, so it is easier): ask "What are the smallest ones? Which ones are made of two?" Your turn (a shape riddle like Q5a): a rectangle. A square has all 4 sides the same, so it does not fit "only the opposite sides".'))
 
 # ---------- teach: longer than, then end to end ----------
 cr=row_svg('Crayon',[(5,PINK,'solid')],56,190,after='5',aria='Crayon 5 cubes')
@@ -119,7 +119,7 @@ body+=step(2,'End to end: 5 + 12 = 17 cubes. Not 5 + 7!',top=780,size=34)
 put('l10-teachlen',sec('l10-teachlen','57–58 MIN',body,'Teach before worksheet page 2 (Q8). Click the ruler bar, step 1, the end-to-end bar, step 2. Think-aloud: "7 longer is not the ruler\'s length: it is the extra bit. The ruler is the crayon\'s 5 and 7 more: 12. End to end means both whole lengths: 5 + 12 = 17." Common mistake: 5 + 7 = 12 given as the end-to-end answer.'))
 
 put('l10-ws2',ws_preview('l10-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q5','Shapes. Count the small triangles first, then bigger ones.'),('Q6','Older and younger. Draw a line, oldest at the top.'),('Q7','Mystery number. Draw the machine and go backwards.'),('Q8','Pencil and pen. Draw the bars.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q9: check that the puzzle has exactly one answer and that the child can say how to start it.'))
-put('l10-ws2ans',check_slide('l10-ws2ans','66–68 MIN','Page 2: check together',[('Q5','a) A square   b) 6 triangles'),('Q6','Mei is the youngest.'),('Q7','5'),('Q8','a) 10 cubes   b) 16 cubes')],'Click each answer after a child explains how they started. Q5b: 3 small; 2 made of two small ones (left and middle, middle and right); 1 made of all three: 3 + 2 + 1 = 6. Q6: line, oldest at the top: Ali, Ben, Mei. Q7: undo the last step first: 10 + 4 = 14, 14 − 9 = 5. Check 5 + 9 = 14, 14 − 4 = 10. Q8: pen 6 + 4 = 10; end to end 6 + 10 = 16.'))
+put('l10-ws2ans',check_slide('l10-ws2ans','66–68 MIN','Page 2: check together',[('Q5','a) A square   b) 3 triangles'),('Q6','Mei is the youngest.'),('Q7','5'),('Q8','a) 10 cubes   b) 16 cubes')],'Click each answer after a child explains how they started. Q5b (one line from the top corner, picture on the page): 2 small triangles and 1 big one made of both = 3. The 3 + 2 + 1 = 6 count is the teaching picture with two lines. Q6: line, oldest at the top: Ali, Ben, Mei. Q7: undo the last step first: 10 + 4 = 14, 14 − 9 = 5. Check 5 + 9 = 14, 14 − 4 = 10. Q8: pen 6 + 4 = 10; end to end 6 + 10 = 16.'))
 
 # ---------- stretch (new) ----------
 st=[('1.','Mei thinks of a number, adds 7, takes away 2 and gets 19. Ben does the same and gets 25. How much bigger is Ben\'s number?'),('2.','4, 9, 14, 19, …  Which number in this pattern is closest to 50?'),('3.','Ali has 5 coins worth 60¢. He has only 5¢, 10¢ and 20¢ coins. Find every possible set.')]
@@ -182,4 +182,5 @@ p1fix.sub_all(D,[('Puzzle cards for 4 stations','the four puzzle cards (coins, p
 d=json.load(open(os.path.join(D,'deck.json'))); 
 if 'l10-cards' not in d['order']: d['order'].insert(d['order'].index('l10-explore1')+1,'l10-cards')
 json.dump(d,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
+import p1gifted; p1gifted.apply(D,10)
 p1fix.finish(D,10,{'l10-explore1':'10–11 MIN','l10-explore2':'21–25 MIN','l10-ws2':'58–68 MIN'})

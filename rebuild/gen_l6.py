@@ -78,7 +78,7 @@ body=h2('Exactly 3 coins')+card(p('Make 25¢ with exactly 3 coins (5¢, 10¢, 20
 put('l6-teachexact',sec('l6-teachexact','56–57 MIN',body,'Optional teaching for early finishers, before Think Harder T2 (ALL the sets of 4 coins worth 70¢). Model trying every biggest-coin start, not stopping at the first answer.'))
 # swap coins
 body=h2('Swap coins to reach the total')+card(p('5 coins, only 5¢ and 10¢, worth 35¢. How many of each?',40,700))+step(1,'Start with all 5¢: five 5¢ = 25¢. We need 10¢ more.',top=420,size=36)+step(2,'Each swap of a 5¢ for a 10¢ adds 5¢. 25 → 30 → 35: 2 swaps.',top=530,size=36)+step(3,'So two 10¢ and three 5¢. Check: 20 + 15 = 35, 5 coins ✓',top=640,size=36)
-put('l6-teachswap',sec('l6-teachswap','57–58 MIN',body,'Optional teaching for early finishers, before Think Harder T3 (Sam\'s 90¢). Act it out with play coins: lay out five 5¢, then swap one at a time and count the total aloud.'))
+put('l6-teachswap',sec('l6-teachswap','57–58 MIN',body,'Optional teaching for early finishers, before Think Harder T2 (Sam\'s 90¢). Act it out with play coins: lay out five 5¢, then swap one at a time and count the total aloud.'))
 
 # dollars: notes and $1 coins
 def money_strip(w=1664,h=130):
@@ -124,5 +124,6 @@ deck['sections']={'s1':{'description':'Warm-up and explore','start':'l6-title'},
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides')
 
+import p1gifted; p1gifted.apply(D,6)
 import p1fix
 p1fix.finish(D,6,{'l6-ws1':'40–52 MIN','l6-ws1ans':'52–54 MIN','l6-teachfew':'54–56 MIN','l6-teachnotes':'56–57 MIN','l6-trynotes':'57–58 MIN','l6-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','teachexact','teachswap'))
