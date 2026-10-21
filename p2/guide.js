@@ -166,6 +166,7 @@ L.lessons.forEach(l => {
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Q8  ', { bold: true, size: 20 }), t('Open investigation (' + gp.invest.title + '). ' + gp.invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */
