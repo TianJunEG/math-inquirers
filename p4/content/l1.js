@@ -6,12 +6,12 @@ const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
 
 // Q2: one way to plant 40 trees (4 rows of 10)
 const treesSvg = () => {
-  let s = `<svg aria-label="One way: 40 trees planted in 4 rows of 10" viewBox="0 0 600 170" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let s = `<svg aria-label="One way: 40 trees planted in 4 rows of 10" viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   for (let r = 0; r < 4; r++) for (let c = 0; c < 10; c++) {
-    const x = 120 + c * 40, y = 26 + r * 36;
-    s += `<circle cx="${x}" cy="${y}" r="13" fill="${TEAL}" stroke="${N}" stroke-width="2"/>`;
+    const x = 150 + c * 34, y = 16 + r * 24;
+    s += `<circle cx="${x}" cy="${y}" r="9" fill="${TEAL}" stroke="${N}" stroke-width="2"/>`;
   }
-  s += txt(60, 85, '4 rows', 18, TEAL) + txt(300, 166, '10 trees in each row', 16, TEAL);
+  s += txt(90, 58, '4 rows', 16, TEAL) + txt(303, 114, '10 trees in each row', 15, TEAL);
   return s + '</svg>';
 };
 
@@ -132,9 +132,8 @@ module.exports = {
     W.push(H.gap(60));
     W.push(H.sub('b', 'List all the factors of 48 in order.'));
     W.push(H.ans('Factors:'));
-    W.push(H.ans('How many factors?'));
-    W.push(H.sub('c', 'How did you know when to stop looking?'));
-    W.push(...H.lines(2));
+    W.push(H.sub('c', 'How many factors does 48 have? ______   How did you know when to stop looking?'));
+    W.push(...H.lines(1));
     W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row.', { keepNext: true }));
     W.push(H.fig(treesSvg()));
     W.push(H.sub('a', 'Find every way. Fill in the table. You may not need every row.', { keepNext: true }));

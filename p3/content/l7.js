@@ -156,8 +156,8 @@ module.exports = {
       H.fig(q1Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
         H.row(['Figure', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
-        H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 50 }))]),
-        H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 50 }))])
+        H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 30 }))]),
+        H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 30 }))])
       ]),
       H.gap(40),
       H.sub('a', 'Which two figures have the same area but different perimeters?   ________'),
@@ -165,7 +165,7 @@ module.exports = {
       H.q(2, 'Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List ALL the gardens she can make, in order.', { keepNext: true }),
       H.tbl([2475, 2475, 2475, 2475], [
         H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
-        ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('\u00a0', w, { h: 40 }))))
+        ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('\u00a0', w, { h: 20 }))))
       ]),
       H.gap(40),
       H.sub('a', 'Which garden has the biggest area?   ______________'),

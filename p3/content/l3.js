@@ -8,7 +8,7 @@ const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size ||
 // 7 rows of 8 dots, split after row 5
 const arraySvg = () => {
   const rows = 7, cols = 8, gx = 34, gy = 30, x0 = 120, y0 = 30;
-  let s = `<svg aria-label="An array of 7 rows of 8 dots split into 5 rows and 2 rows" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:440px;max-width:100%">`;
+  let s = `<svg aria-label="An array of 7 rows of 8 dots split into 5 rows and 2 rows" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:330px;max-width:100%">`;
   for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
     const y = y0 + r * gy + (r >= 5 ? 18 : 0);
     s += `<circle cx="${x0 + c * gx}" cy="${y}" r="11" fill="${r < 5 ? YEL : SKY}" stroke="${NAVY}" stroke-width="2"/>`;
@@ -137,30 +137,28 @@ module.exports = {
   workbook: H => {
     const out = [];
     const C = (s, w, o) => H.cell(s, w, o);
-    out.push(H.p('Look for a pattern and test it. Use facts you know to find facts you do not know.', { after: 80 }));
     // Q1
-    out.push(H.q(1, 'Patterns in the 9 times table.', { before: 100, keepNext: true }));
+    out.push(H.q(1, 'Patterns in the 9 times table. Look for a pattern and test it.', { before: 60, keepNext: true }));
     out.push(H.sub('a', 'Fill in the answers.', { keepNext: true }));
     { const ws = [1400, 850, 850, 850, 850, 850, 850, 850, 850, 850, 850];
       out.push(H.tbl(ws, [
         H.row([C('9 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
-        H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), C('9', 850), C('18', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 150 }))])
+        H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), C('9', 850), C('18', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
     out.push(H.sub('b', 'Look at the tens digits and the ones digits. Write TWO patterns you notice.'));
-    out.push(...H.lines(2));
+    out.push(...H.lines(1));
     out.push(H.sub('c', 'Ali says 9 × 8 = 81, because 8 + 1 = 9. Use a pattern to explain why he is wrong.'));
-    out.push(...H.lines(2));
+    out.push(...H.lines(1));
     // Q2
     out.push(H.q(2, 'Last digits in the 7 times table.', { keepNext: true }));
-    out.push(H.sub('a', 'Fill in the answers and their last digits.', { keepNext: true }));
+    out.push(H.sub('a', 'Work out each answer in your head. Write only its LAST digit.', { keepNext: true }));
     { const ws = [1400, 850, 850, 850, 850, 850, 850, 850, 850, 850, 850];
       out.push(H.tbl(ws, [
         H.row([C('7 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
-        H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('14', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 130 }))]),
-        H.row([C('Last digit', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('4', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 130 }))])
+        H.row([C('Last digit', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('4', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
-    out.push(H.sub('b', 'Which of the digits 0 to 9 appear as a last digit?   ______________________'));
-    out.push(H.sub('c', 'Find ALL the other times tables from 2 to 9 whose last digits use all ten digits 0 to 9.   ____________'));
+    out.push(H.sub('b', 'Which of the digits 0 to 9 appear as a last digit?   ________'));
+    out.push(H.sub('c', 'Find ALL the other times tables from 2 to 9 whose last digits also use all ten digits.   ______'));
     out.push(H.sub('d', 'Without working out 7 × 46, what is its last digit? Explain.'));
     out.push(...H.lines(1));
     // Q3
@@ -168,12 +166,12 @@ module.exports = {
     out.push(H.fig(arraySvg()));
     out.push(H.sub('a', '5 × 8 = ______      2 × 8 = ______      so  7 × 8 = ______'));
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));
-    out.push(...H.lines(2));
+    out.push(...H.lines(1));
     // ---------- page 2 ----------
     out.push(H.q(4, 'Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
-      const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 150, size: 26 });
-      const v = s => C(s, 2475, { bold: true, h: 150, size: 26 });
+      const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 120, size: 26 });
+      const v = s => C(s, 2475, { bold: true, h: 120, size: 26 });
       out.push(H.tbl(ws, [
         H.row([hd('×'), hd(''), hd(''), hd('')]),
         H.row([hd(''), v('56'), v(''), v('')]),

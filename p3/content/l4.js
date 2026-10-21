@@ -26,12 +26,12 @@ const q1Fig = () => {
 };
 const q2Fig = () => {
   const x = 90, h = 34, k = 400 / 473, mei = Math.round(345 * k), ali = Math.round(473 * k), ben = Math.round(394 * k);
-  const ys = [36, 100, 164];
+  const ys = [12, 62, 112];
   let s = name(ys[0] + 24, 'Mei') + rect(x, ys[0], mei, h, SKY, '345');
   s += name(ys[1] + 24, 'Ali') + rect(x, ys[1], mei, h, SKY, '') + rect(x + mei, ys[1], ali - mei, h, YEL, '128') + txt(x + ali + 18, ys[1] + 24, '?', { size: 20, fill: TEAL });
   s += name(ys[2] + 24, 'Ben') + rect(x, ys[2], ben, h, '#D3F1E4', '?') + rect(x + ben, ys[2], ali - ben, h, WHITE, '79', { dash: true });
   s += `<line x1="${x + mei}" y1="${ys[0]}" x2="${x + mei}" y2="${ys[1] + h}" stroke="${NAVY}" stroke-width="1.5" stroke-dasharray="4 4"/><line x1="${x + ali}" y1="${ys[1]}" x2="${x + ali}" y2="${ys[2] + h}" stroke="${NAVY}" stroke-width="1.5" stroke-dasharray="4 4"/>`;
-  return svg('Comparison bars for Mei, Ali and Ben', 212, s);
+  return svg('Comparison bars for Mei, Ali and Ben', 156, s, 420);
 };
 const q3Fig = () => {
   const x = 90, u = 90, h = 36, y1 = 20, y2 = 76;
@@ -155,14 +155,12 @@ module.exports = {
 
   workbook: H => {
     const out = [];
-    out.push(H.p('Draw a model. Label what you know. Put a ? on what you want to find. Check your answer in the model.', { after: 80 }));
+    out.push(H.p('Draw a model. Label what you know. Put a ? on what you want to find.', { after: 40 }));
     // Q1
-    out.push(H.q(1, 'A bakery made 1250 buns. It sold 486 buns in the morning and 378 buns in the afternoon.', { before: 100, keepNext: true }));
+    out.push(H.q(1, 'A bakery made 1250 buns. It sold 486 buns in the morning and 378 buns in the afternoon.', { before: 60, keepNext: true }));
     out.push(H.fig(q1Fig()));
-    out.push(H.sub('a', 'How many buns were left?'));
-    out.push(H.ans());
-    out.push(H.sub('b', 'How many more buns were sold in the morning than in the afternoon?'));
-    out.push(H.ans());
+    out.push(H.sub('a', 'How many buns were left?   ________'));
+    out.push(H.sub('b', 'How many more buns were sold in the morning than in the afternoon?   ________'));
     // Q2
     out.push(H.q(2, 'Mei has 345 stickers. Ali has 128 more stickers than Mei. Ben has 79 fewer stickers than Ali.', { keepNext: true }));
     out.push(H.fig(q2Fig()));
@@ -177,19 +175,17 @@ module.exports = {
     out.push(H.sub('c', 'How many more beads does Siti have than Ravi?   ______'));
     // ---------- page 2 ----------
     out.push(H.q(4, 'Ali and Ben have 150 marbles altogether. Ali has 24 more marbles than Ben. How many marbles does each boy have?', { pb: true, before: 0, keepNext: true }));
-    out.push(H.fig(drawBox(140)));
-    out.push(H.p('Ben: ________      Ali: ________', { after: 60 }));
+    out.push(H.fig(drawBox(120)));
+    out.push(H.sub('', 'Ben: ________      Ali: ________'));
     out.push(H.q(5, 'Mei has 85 stickers. Siti has 47 stickers. Mei gives some stickers to Siti so that they both have the same number.', { keepNext: true }));
-    out.push(H.fig(drawBox(130)));
-    out.push(H.sub('a', 'How many stickers does Mei give Siti?'));
-    out.push(H.ans());
+    out.push(H.fig(drawBox(110)));
+    out.push(H.sub('a', 'How many stickers does Mei give Siti?   ________'));
     out.push(H.sub('b', 'Ravi says, "Mei must give Siti 38 stickers, because 85 − 47 = 38." What mistake did Ravi make?'));
     out.push(...H.lines(2));
     out.push(H.q(6, 'Ali has $45. Ben has $18. Grandma gives each boy the same amount of money. Now Ali has twice as much money as Ben.', { keepNext: true }));
-    out.push(H.fig(drawBox(140)));
+    out.push(H.fig(drawBox(120)));
     out.push(H.sub('a', 'What stays the same before and after Grandma gives the money?   ______________'));
-    out.push(H.sub('b', 'How much money did Grandma give each boy?'));
-    out.push(H.ans());
+    out.push(H.sub('b', 'How much money did Grandma give each boy?   ________'));
     return out;
   }
 };
