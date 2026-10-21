@@ -203,7 +203,7 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 <div class="draft" id="draft"><b>Draft for Jasmine:</b> class times, the WhatsApp number and contact email are placeholders marked "to confirm". Remove this note before sharing.</div>
 <main id="top">
 <section class="hero"><div class="sec"><span class="eyebrow">December holidays 2026 · Primary 1</span><h1>Math Inquirers <mark>Holiday</mark> Program</h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Ten hands-on lessons where children solve puzzles, test ideas with objects and explain their answers. Live online in small groups of up to 8, from your own home.</p>
-<div class="eb" id="ebBadge"><span>Price</span><span class="big" id="ebPrice"></span><span id="ebLeft" style="font-weight:700"></span></div>
+<div class="eb" id="ebBadge"><span>Introductory price</span><span class="big" id="ebPrice"></span><s id="ebFull"></s><span id="ebLeft" style="font-weight:700"></span></div>
 <div class="row" style="margin-top:6px"><a class="btn yel" href="#register">Register now</a><a class="btn ghost" href="#classes">See class times</a></div></div><div id="art"></div></section>
 
 <section class="facts" id="program"><div class="fact"><div class="v">10 lessons</div><div class="l">90 minutes each, over 5 weeks</div></div><div class="fact"><div class="v">Up to 8</div><div class="l">children in each group</div></div><div class="fact"><div class="v">Live online</div><div class="l">from home, workbook posted to you</div></div><div class="fact"><div class="v">All included</div><div class="l">workbook, kit, journal, certificate</div></div></section>
@@ -223,14 +223,13 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 
 <section class="sec" id="classes"><div class="shead"><span class="eyebrow">Class times</span><h2>Choose a group</h2><p class="muted">Each group meets twice a week for 5 weeks. Times are to confirm.</p></div><div class="sessions" id="sess"></div></section>
 
-<section class="sec" id="price"><div class="shead"><span class="eyebrow">Price</span><h2>One price, everything included</h2></div><div class="pricebox"><div class="pcard hot"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:var(--card)">Program fee</span><div class="amt" id="pR"></div><p>10 lessons of 90 minutes: S$50 a lesson, workbook included.</p></div><div class="pcard"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px">Current students</span><div class="amt" id="pE"></div><p id="pEnote"></p></div></div><p class="small muted">For 15 hours of teaching, the printed workbook, cut-out kit, Inquiry Journal and certificate. No payment now: we confirm your place first and then send payment details.</p></section>
+<section class="sec" id="price"><div class="shead"><span class="eyebrow">Price</span><h2>Everything included</h2></div><div class="pricebox"><div class="pcard hot"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:var(--card)">Introductory price</span><div class="amt" id="pE"></div><p id="pEnote"></p></div><div class="pcard"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px">Regular price</span><div class="amt" id="pR"></div><p>S$65 a lesson, from the next intake.</p></div></div><p class="small muted">For 15 hours of teaching, the printed workbook, cut-out kit, Inquiry Journal and certificate. No payment now: we confirm your place first and then send payment details.</p></section>
 
 <section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Fill this in and send it to us on WhatsApp. We reply within 2 working days to confirm the group and send payment details. Groups are small, so seats go in order of registration.</p><p class="small">WhatsApp: <b id="waShow"></b><br>Email: <b id="emShow"></b></p></div>
 <form class="card" id="reg"><div class="grid2"><div class="field"><label for="r1">Parent's name</label><input id="r1" autocomplete="name"></div><div class="field"><label for="r2">Mobile</label><input id="r2" type="tel" autocomplete="tel"></div></div>
 <div class="grid2"><div class="field"><label for="r3">Child's name</label><input id="r3"></div><div class="field"><label for="r4">Level in 2026</label><select id="r4"><option>Primary 1</option><option>K2 (starting P1 in 2027, free readiness check)</option><option>Primary 2</option></select></div></div>
 <div class="field"><label for="r5">Group</label><select id="r5"></select></div>
 <div class="field"><label for="r6">Anything we should know? <span class="muted" style="font-weight:600">(optional)</span></label><textarea id="r6" style="min-height:70px"></textarea></div>
-<label class="check" for="r8"><input type="checkbox" id="r8"><span>My child is a current Math Inquirers student (S$450)</span></label>
 <label class="check" for="r7"><input type="checkbox" id="r7"><span>I agree to Math Inquirers (Preciouslyours Pte Ltd) using these details to arrange the class and contact me about it.</span></label>
 <div id="regMsg"></div><button class="btn" type="submit">Send on WhatsApp</button></form></section>
 
@@ -240,7 +239,7 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 <details><summary>Who teaches?</summary><p>Lessons are planned and led by an experienced Singapore primary school maths teacher, using the Math Inquirers lesson plans, slides and workbook.</p></details>
 <details><summary>What if my child misses a lesson?</summary><p>We send that lesson's workbook pages and a short catch-up guide, so your child can do it at home.</p></details>
 <details><summary>How does online work?</summary><p>Live video lessons with the same group of up to 8. We post the printed workbook and kit to you before the first lesson. All your child needs is a laptop or tablet with a camera, on a table with space for the kit.</p></details>
-<details><summary>How do I pay?</summary><p>There is nothing to pay when you register. We confirm the group first, then send payment details. The current-student price is for children already in a Math Inquirers class or a past program.</p></details></section>
+<details><summary>How do I pay?</summary><p>There is nothing to pay when you register. We confirm the group first, then send payment details. The introductory price is for families who register for this first intake.</p></details></section>
 </main>
 <footer><div><b>Math Inquirers</b><p style="margin-top:6px">A Primary 1 holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><br>Email: <span id="emFoot"></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA.</p></div></footer>
 </div>
@@ -252,7 +251,7 @@ var CONFIG={
   whatsapp:"6590000000",           /* to confirm: number with 65, no spaces */
   whatsappShow:"+65 9000 0000 (to confirm)",
   email:"hello@mathinquirers.example (to confirm)",
-  price:500, current:450,
+  price:650, intro:500,
   classes:[
     {id:"A",name:"Group A",mode:"Online",days:"Mon & Thu",time:"9:30–11:00am",start:"Mon 23 Nov",venue:"Live video class"},
     {id:"B",name:"Group B",mode:"Online",days:"Tue & Fri",time:"2:30–4:00pm",start:"Tue 24 Nov",venue:"Live video class"},
@@ -279,10 +278,11 @@ function heroArt(){
 }
 
 $("art").outerHTML=heroArt();
-$("ebPrice").textContent="S$"+CONFIG.price;
-$("ebLeft").textContent="workbook included · S$"+CONFIG.current+" for current students";
-$("pE").textContent="S$"+CONFIG.current;$("pR").textContent="S$"+CONFIG.price;
-$("pEnote").textContent="For children already in a Math Inquirers class or a past program. Save S$"+(CONFIG.price-CONFIG.current)+".";
+$("ebPrice").textContent="S$"+CONFIG.intro;
+$("ebFull").textContent="S$"+CONFIG.price;
+$("ebLeft").textContent="first intake · workbook included";
+$("pE").textContent="S$"+CONFIG.intro;$("pR").textContent="S$"+CONFIG.price;
+$("pEnote").textContent="First intake only: S$50 a lesson, workbook included. Save S$"+(CONFIG.price-CONFIG.intro)+".";
 $("lessons").innerHTML=LESSONS.map(function(l,i){return '<div class="lesson"><div class="n">'+(i+1)+'</div><div class="t">'+l[0]+'</div><div class="s">'+l[1]+'</div></div>'}).join("");
 $("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill '+(c.mode==="Online"?"p-ok":"p-wait")+'">'+esc(c.mode)+'</span><span class="small muted">Up to 8 children</span></div><h3>'+esc(c.name)+'</h3><p><b>'+esc(c.days)+'</b>, '+esc(c.time)+'<br><span class="muted small">Starts '+esc(c.start)+' · '+esc(c.venue)+'</span></p><a class="btn sm" href="#register" data-pick="'+c.id+'" style="justify-self:start">Choose '+esc(c.name)+'</a></div>'}).join("");
 $("r5").innerHTML=CONFIG.classes.map(function(c){return '<option value="'+c.id+'">'+esc(c.name+" · "+c.mode+" · "+c.days+", "+c.time+" · from "+c.start)+'</option>'}).join("")+'<option value="any">Any group is fine</option>';
@@ -294,7 +294,7 @@ $("reg").addEventListener("submit",function(e){
   var f={p:$("r1").value.trim(),m:$("r2").value.trim(),c:$("r3").value.trim(),l:$("r4").value,g:$("r5").options[$("r5").selectedIndex].text,n:$("r6").value.trim()};
   if(!f.p||!f.m||!f.c){$("regMsg").innerHTML='<div class="msg no">Fill in your name, mobile and your child\'s name.</div>';return}
   if(!$("r7").checked){$("regMsg").innerHTML='<div class="msg no">Tick the consent box so we can contact you.</div>';return}
-  var price=$("r8").checked?"current-student S$"+CONFIG.current:"S$"+CONFIG.price;
+  var price="introductory S$"+CONFIG.intro;
   var msg="Hi! I'd like to register for the Math Inquirers December Holiday Program.\n\nParent: "+f.p+"\nMobile: "+f.m+"\nChild: "+f.c+" ("+f.l+")\nGroup: "+f.g+"\nPrice: "+price+(f.n?"\nNote: "+f.n:"");
   var url="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(msg);
   $("regMsg").innerHTML='<div class="waout"><div class="msg ok">Almost done. Tap the button to send this on WhatsApp.</div><pre>'+esc(msg)+'</pre><div class="row"><a class="btn teal" href="'+url+'" target="_blank" rel="noopener">Open WhatsApp</a><button class="btn alt sm" type="button" id="cp">Copy message</button></div><p class="small muted">If WhatsApp does not open, copy the message and send it to '+esc(CONFIG.whatsappShow)+' or '+esc(CONFIG.email)+'.</p></div>';
