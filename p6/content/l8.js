@@ -67,7 +67,7 @@ const strip = () => {
   return s + `<path d="${d}" stroke="${NAVY}" stroke-width="1"/></svg>`;
 };
 const codeFig = (prog, label) => {
-  const b = blocks(prog, { fs: 14, h: 26 }), w = Math.max(b.w, 300);
+  const b = blocks(prog, { fs: 15, h: 28 }), w = Math.max(b.w, 300);
   return `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${b.h}" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(w * 0.93)}px;max-width:100%">${b.svg}</svg>`;
 };
 
@@ -87,10 +87,9 @@ print(code)`;
 
 const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.repeat(m.length)).replace(/ {2,}/g, m => '&nbsp;'.repeat(m.length))).join('<br>');
 const pyBox = H => {
-  const ls = PY.split('\n'), code = part => `<div style="text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12.5px;line-height:1.3">${pyHTML(part.join('\n'))}</div>`;
-  return H.tbl([2100, 3600, 4200], [H.row([
-    H.cell('<div style="text-align:left;font-weight:700">Python version (optional)<div style="font-weight:400;margin-top:2px">% is mod. Change the message and shift to test Q2. A negative shift decodes.</div></div>', 2100, { fill: 'DDEBF7', h: 40 }),
-    H.cell(code(ls.slice(0, 5)), 3600, { h: 40 }), H.cell(code(ls.slice(5)), 4200, { h: 40 })])]);
+  const ls = PY.split('\n'), code = part => `<div style="flex:1;text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12px;line-height:1.3;white-space:nowrap">${pyHTML(part.join('\n'))}</div>`;
+  return H.tbl([9900], [H.row([H.cell(
+    `<div style="text-align:left;font-weight:700;margin-bottom:3px">Python version (optional): % is mod. Change the message and shift to test Q2; a negative shift decodes.</div><div style="display:flex;gap:16px">${code(ls.slice(0, 5))}${code(ls.slice(5))}</div>`, 9900, { fill: 'DDEBF7', h: 40 })])]);
 };
 
 module.exports = {

@@ -4,8 +4,10 @@
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 15}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${esc(s)}</text>`;
-const svg = (w, h, label, inner) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${w}px;max-width:100%">${inner}</svg>`;
+let FS = 15;
+const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || FS}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${esc(s)}</text>`;
+const svg = (w, h, label, inner) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(w * 0.75)}px;max-width:100%">${inner}</svg>`;
+FS = 19; // figures are shown at 75%, so text is 14px or more on the page
 // cm -> px with origin (ox, oy) and s px per cm (y up)
 const M = (ox, oy, s) => (x, y) => [ox + x * s, oy - y * s];
 const poly = (pts, fill = WHITE) => `<polygon points="${pts.map(p => p.join(',')).join(' ')}" fill="${fill}" stroke="${NAVY}" stroke-width="2" stroke-linejoin="round"/>`;
@@ -76,7 +78,7 @@ module.exports = {
     extension: 'On a grid, draw as many different triangles as you can with area 6 cm² using a base of 4 cm. Where can the top corner go? (Anywhere on the line 3 cm above the base.)',
     key: [
       ['Q1', '(a) 24 cm² (1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
-      ['Q2', '(a) 30 cm²  (b) 30 cm²  (c) Both have base DC = 10 cm and height 6 cm (P and Q are on AB, 6 cm above DC).  (d) 30 cm² (60 − 30: the triangle is half the rectangle, so the white parts are the other half)'],
+      ['Q2', '(a) 30 cm²  (b) 30 cm²  (c) Both have base DC = 10 cm and height 6 cm (P and Q are on AB, 6 cm above DC).'],
       ['Q3', '56 cm² (triangle ABC 1/2 × 14 × 5 = 35, triangle ACD 1/2 × 14 × 3 = 21)'],
       ['Q4', '(a) 96 cm²  (b) ADE 16 cm², EBF 16 cm², FCD 24 cm²  (c) 40 cm² (96 − 56)'],
       ['Q5', '(a) 24 cm²  (b) 4 cm  (c) any base and height that multiply to 48, e.g. base 16 cm and height 3 cm, or base 6 cm and height 8 cm (or base 8 cm and height 6 cm leaning over)']
@@ -150,24 +152,23 @@ module.exports = {
     H.q(1, 'Find the area of each triangle. The drawings are to scale.', { before: 40, keepNext: true }),
     H.fig(q1Fig()),
     H.sub('a', 'Area of (a) = __________ cm²       (b)  Area of (b) = __________ cm²       (c)  Area of (c) = __________ cm²'),
-    H.sub('d', 'Which lengths in (b) did you NOT need? Why not?'), ...H.lines(1),
+    H.sub('d', 'In (b), which lengths did you NOT need?   ______________________'),
     H.q(2, 'ABCD is a rectangle 10 cm by 6 cm. P and Q are points on AB.', { keepNext: true }),
     H.fig(q2Fig()),
     H.sub('a', 'Area of triangle PDC = ____________ cm²          (b)  Area of triangle QDC = ____________ cm²'),
     H.sub('c', 'Explain why the two triangles have the same area.'), ...H.lines(1),
-    H.sub('d', 'In the left rectangle, what is the total area of the two white parts?   ____________ cm²'),
 
     H.q(3, 'Find the area of the figure ABCD. Split it into two triangles along AC.', { pb: true, before: 0, keepNext: true }),
     H.fig(splitFig()),
-    H.ans('Area:'),
+    H.sub('', 'Area of ABCD = ______________ cm²'),
     H.q(4, 'ABCD is a rectangle. Find the area of the shaded triangle DEF.', { keepNext: true }),
     H.fig(takeFig()),
     H.sub('a', 'Area of the rectangle ABCD = ______________ cm²'),
-    H.sub('b', 'White triangles:   ADE = ________ cm²     EBF = ________ cm²     FCD = ________ cm²'),
+    H.sub('b', 'ADE = ______ cm²    EBF = ______ cm²    FCD = ______ cm²'),
     H.sub('c', 'Area of the shaded triangle DEF = ______________ cm²'),
     H.q(5, 'Mei draws a triangle with a base of 8 cm and a height of 6 cm.', { keepNext: true }),
     H.sub('a', 'What is the area of Mei’s triangle?   ____________ cm²'),
     H.sub('b', 'Siti’s triangle has the same area but a base of 12 cm. What is its height?   ________ cm'),
-    H.sub('c', 'Give the base and height of one more triangle with the same area.'), H.ans('Base: ________ cm     Height:')
+    H.sub('c', 'One more triangle with the same area:  base ______ cm, height ______ cm')
   ]
 };
