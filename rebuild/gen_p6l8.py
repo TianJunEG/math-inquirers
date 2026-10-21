@@ -176,12 +176,12 @@ put('p6l8-teach1', sec('p6l8-teach1', '25–27 MIN', body,
 ring_base = SV(460, 460, dayring(3), 'A week as a ring of 7 days: Mon, Tue, Wed, Thu, Fri, Sat, Sun. Thursday is highlighted.')
 ring_ov = SV(460, 460, dayring(3, 6), 'The ring with Thursday and then Sunday, 3 days later, highlighted')
 body = h2('A week is a 7-day clock') + stitle('Today is Thursday. What day is it in 45 days?')
-body += pin(128, 280, 460, ring_base)
-body += ostep(128, 280, 1, 'A week wraps round after 7 days, like a clock after 12. So use mod 7.', None, dx=520, dy=0, tw=1144, size=32)
-body += ostep(128, 280, 2, '45 ÷ 7 = 6 remainder 3, so 45 mod 7 = 3. Six whole weeks bring us back to Thursday.', None, dx=520, dy=115, tw=1144, size=32)
-body += ostep(128, 280, 3, 'Then 3 more days: Friday, Saturday, Sunday.', ring_ov, 460, 460, dx=520, dy=230, tw=1144, size=32)
-body += answer(648, 660, 1144, 'In 45 days it is Sunday')
-body += soft(648, 780, 1144, 'Check: 6 × 7 = 42, and 42 + 3 = 45 ✓. Do not count today as day 1.', 32)
+body += pin(128, 310, 460, ring_base)
+body += ostep(128, 310, 1, 'A week wraps round after 7 days, like a clock after 12. So use mod 7.', None, dx=520, dy=0, tw=1144, size=32)
+body += ostep(128, 310, 2, '45 ÷ 7 = 6 remainder 3, so 45 mod 7 = 3. Six whole weeks bring us back to Thursday.', None, dx=520, dy=115, tw=1144, size=32)
+body += ostep(128, 310, 3, 'Then 3 more days: Friday, Saturday, Sunday.', ring_ov, 460, 460, dx=520, dy=230, tw=1144, size=32)
+body += answer(648, 700, 1144, 'In 45 days it is Sunday')
+body += soft(648, 800, 1144, 'Check: 6 × 7 = 42, and 42 + 3 = 45 ✓. Do not count today as day 1.', 32)
 put('p6l8-we1', sec('p6l8-we1', '27–29 MIN', body,
     'Click through; ask the group to predict before each reveal. Think-aloud: "45 days is 6 whole weeks and 3 days. The whole weeks do nothing, because after 7 days it is the same day again. So only the remainder matters: 3 days after Thursday is Sunday." Watch for: counting today as day 1 (that gives Saturday). Ask: "What day was it 45 days ago?" (Thursday − 3 = Monday).'))
 

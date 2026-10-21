@@ -1,0 +1,65 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:17:34Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P5: Lesson 3 – Before and After",
+ "order": [
+  "p5l3-title",
+  "p5l3-warm1",
+  "p5l3-warm2",
+  "p5l3-explore1",
+  "p5l3-explore2",
+  "p5l3-teach1",
+  "p5l3-try1",
+  "p5l3-teach2",
+  "p5l3-try2",
+  "p5l3-key",
+  "p5l3-break",
+  "p5l3-ws1",
+  "p5l3-ws1ans",
+  "p5l3-teachdiff",
+  "p5l3-trydiff",
+  "p5l3-teachone",
+  "p5l3-ws2",
+  "p5l3-ws2ans",
+  "p5l3-stretch",
+  "p5l3-challenge",
+  "p5l3-chdiag",
+  "p5l3-chwalk",
+  "p5l3-talk",
+  "p5l3-exit"
+ ],
+ "cover": "p5l3-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p5l3-title"
+  },
+  "s2": {
+   "description": "Teach: fraction of a remainder and the total that stays the same",
+   "start": "p5l3-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p5l3-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p5l3-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

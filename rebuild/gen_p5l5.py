@@ -139,7 +139,7 @@ g2=box(Pt,30,20,30,water=10,labels=['30 cm','30 cm','20 cm'],size=26,sw=3)+box(P
 def dcard(title,svgs,w): return card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">{title}</p>'+svgs,extra='flex:1;min-width:0;padding:20px 24px')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=dcard('Q1: Two tanks, to scale',svgwrap(780,390,'Tank A, 30 cm by 20 cm, with water 30 cm deep and empty tank B, 40 cm by 30 cm, drawn to the same scale',g1,'width:100%;height:auto'),0)
-body+=dcard('Q2: The upright block',svgwrap(520,420,'A tank with base 30 cm by 20 cm, water 10 cm deep, and a block 10 cm by 10 cm by 15 cm standing on the bottom',g2,'width:470px;height:auto;align-self:center'),0)+'</div>'
+body+=dcard('Q2: The upright block',svgwrap(520,420,'A tank with base 30 cm by 20 cm, water 10 cm deep, and a block 10 cm by 10 cm by 15 cm standing on the bottom',g2,'width:520px;height:auto;align-self:center'),0)+'</div>'
 put('chdiag',sec(sid('chdiag'),'65–80 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer, and are drawn to scale. Ask: What do you notice? What stays the same when the water is poured? In Q2, how tall is the block compared with the water? Is it completely under water? What floor area does the water have now? Answers are in the Challenge slide notes.'))
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: the water is shared',38,800,TEAL))
 for i,t in enumerate(['Water: 30 × 20 × 30 = 18 000 cm³','Both floors: 600 + 1200 = 1800 cm²','18 000 ÷ 1800 = 10 cm','Check: 600 × 10 + 1200 × 10 = 18 000 ✓']): body+=pin(128,330+i*105,800,p(t,32),'rise',WHITE)
