@@ -1,0 +1,9 @@
+node_modules/
+fonts/fonts.css
+__pycache__/
+*.jpg
+*_sheet*.png
+hp/workbook_body.html
+hp/workbook_full.html
+hp/designed/*.html
+*.bak

@@ -1,0 +1,910 @@
+{
+ "1": {
+  "core": [
+   {
+    "q": "Write the next two numbers and the rule: 4, 7, 10, 13, __, __",
+    "a": "16, 19. Add 3."
+   },
+   {
+    "q": "Write the next two numbers and the rule: 5, 10, 15, 20, __, __",
+    "a": "25, 30. Add 5."
+   },
+   {
+    "q": "Write the next two numbers and the rule: 1, 5, 9, 13, __, __",
+    "a": "17, 21. Add 4."
+   },
+   {
+    "q": "Write the next two numbers and the rule: 50, 45, 40, 35, __, __",
+    "a": "30, 25. Take away 5."
+   },
+   {
+    "q": "Write the next two numbers and the rule: 7, 9, 11, 13, __, __",
+    "a": "15, 17. Add 2."
+   },
+   {
+    "q": "Write the next two numbers and the rule: 100, 90, 80, 70, __, __",
+    "a": "60, 50. Take away 10."
+   }
+  ],
+  "stretch": [
+   {
+    "q": "Fill in the missing numbers: 3, 8, __, 18, __, 28",
+    "a": "13 and 23. Add 5."
+   },
+   {
+    "q": "Fill in the missing numbers: 40, __, 28, __, 16, 10",
+    "a": "34 and 22. Take away 6."
+   },
+   {
+    "q": "A pattern starts at 3 and adds 5 each time. What is the 8th number?",
+    "a": "38"
+   },
+   {
+    "q": "A pattern starts at 2 and adds 4 each time. What is the 7th number?",
+    "a": "26"
+   },
+   {
+    "q": "A pattern starts at 60 and takes away 5 each time. What is the 9th number?",
+    "a": "20"
+   },
+   {
+    "q": "Is 30 in the pattern 4, 8, 12, 16 … ? How do you know?",
+    "a": "No. The pattern goes 28, 32, so it skips 30."
+   },
+   {
+    "q": "5, 10, 15, 22, 25, 30. Which number does not belong? What should it be?",
+    "a": "22 does not belong. It should be 20."
+   },
+   {
+    "q": "Start at 50 and take away 7 each time. What is the first number below 20?",
+    "a": "15 (50, 43, 36, 29, 22, 15)."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Frog A jumps in 3s from 0. Frog B jumps in 4s from 0. Which numbers up to 40 do both frogs land on? (Do not count 0.)",
+    "a": "12, 24 and 36."
+   },
+   {
+    "q": "I am in the counting patterns of 3s and of 5s. I am more than 10 and less than 40. Which numbers can I be?",
+    "a": "15 and 30."
+   },
+   {
+    "q": "Ali saves $2 in week 1, $5 in week 2, $8 in week 3 and so on. In which week does he save $29? How much does he save in week 12?",
+    "a": "Week 10 ($29). Week 12: $35. The rule is add 3."
+   },
+   {
+    "q": "2, 4, 7, 11, 16, __ . What is the next number? Explain the pattern.",
+    "a": "22. The gaps grow: add 2, add 3, add 4, add 5, then add 6."
+   },
+   {
+    "q": "A staircase needs 4 blocks for 1 step, 7 blocks for 2 steps and 10 blocks for 3 steps. How many blocks for 6 steps? How many steps can be built with 31 blocks?",
+    "a": "19 blocks for 6 steps. 31 blocks make 10 steps (add 3 each time)."
+   },
+   {
+    "q": "A pattern adds the same number each time. Its 5th number is 20 and it starts at a whole number more than 0. How many different patterns can you make? List the first number and the rule for each.",
+    "a": "4 patterns: start 16 add 1; start 12 add 2; start 8 add 3; start 4 add 4."
+   },
+   {
+    "q": "Frog A starts at 3 and jumps 4 each time. Frog B starts at 5 and jumps 3 each time. Which numbers up to 40 do both frogs land on?",
+    "a": "11, 23 and 35."
+   },
+   {
+    "q": "1, 2, 4, 7, 11, 16 … What is the 8th number? Explain how the pattern grows.",
+    "a": "29. The gaps are 1, 2, 3, 4, 5, 6, 7, so the 7th is 22 and the 8th is 29."
+   },
+   {
+    "q": "Ali counts up from 2 in 3s. Mei counts up from 1 in 4s. Which numbers up to 50 are in both patterns?",
+    "a": "5, 17, 29 and 41."
+   }
+  ]
+ },
+ "2": {
+  "core": [
+   {
+    "q": "10 = 3 + __",
+    "a": "7"
+   },
+   {
+    "q": "10 = __ + 8",
+    "a": "2"
+   },
+   {
+    "q": "10 = 6 + __",
+    "a": "4"
+   },
+   {
+    "q": "20 = 5 + __",
+    "a": "15"
+   },
+   {
+    "q": "20 = __ + 12",
+    "a": "8"
+   },
+   {
+    "q": "20 = 17 + __",
+    "a": "3"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "5 + 4 = 6 + __",
+    "a": "3"
+   },
+   {
+    "q": "8 + 2 = 7 + __",
+    "a": "3"
+   },
+   {
+    "q": "9 + 6 = __ + 10",
+    "a": "5"
+   },
+   {
+    "q": "12 + 3 = 10 + __",
+    "a": "5"
+   },
+   {
+    "q": "4 + __ + 3 = 10",
+    "a": "3"
+   },
+   {
+    "q": "__ + 6 + 6 = 20",
+    "a": "8"
+   },
+   {
+    "q": "6 + 4 = 10, so 16 + 4 = __ and 26 + 4 = __",
+    "a": "20 and 30"
+   },
+   {
+    "q": "Write three different ways to make 12 with two numbers.",
+    "a": "For example 6 + 6, 7 + 5, 9 + 3, 10 + 2, 8 + 4."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Put 1, 2, 3, 4, 5 and 6 in the triangle so each side adds to 9. Corners 1, 2 and 3. What goes in the middle of each side?",
+    "a": "Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5."
+   },
+   {
+    "q": "Corners 4, 5 and 6, and the numbers 1, 2, 3 in the middles. What do all the sides add to? Where does each middle number go?",
+    "a": "Each side adds to 12. Between 4 and 5: 3. Between 5 and 6: 1. Between 6 and 4: 2."
+   },
+   {
+    "q": "Two numbers add to 14. One is 2 more than the other. What are they?",
+    "a": "6 and 8."
+   },
+   {
+    "q": "Two numbers add to 20. One is 6 more than the other. What are they?",
+    "a": "7 and 13."
+   },
+   {
+    "q": "Ali has 12 stickers in two hands. The left hand has 4 more than the right. How many in each hand?",
+    "a": "Left 8, right 4."
+   },
+   {
+    "q": "Three different numbers from 3 to 7 add to 15. What can they be? Find both ways.",
+    "a": "3, 5, 7 and 4, 5, 6."
+   },
+   {
+    "q": "How many different pairs make 8 if the order matters (0 + 8 and 8 + 0 are different)? How many if the order does not matter?",
+    "a": "9 pairs when the order matters; 5 pairs when it does not (0+8, 1+7, 2+6, 3+5, 4+4)."
+   },
+   {
+    "q": "Three different numbers from 1 to 7 add up to 10. Find every set of three.",
+    "a": "1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5."
+   },
+   {
+    "q": "Put 1 to 6 in the magic triangle so each side adds to 11. What goes in the corners and middles?",
+    "a": "Corners 2, 4, 6. Between 2 and 4: 5. Between 4 and 6: 1. Between 6 and 2: 3."
+   },
+   {
+    "q": "Ali has 20 stickers. He keeps 9 and shares the rest between Ben and Mei. Ben gets 3 more than Mei. How many does each get?",
+    "a": "Ben 7, Mei 4."
+   }
+  ]
+ },
+ "3": {
+  "core": [
+   {
+    "q": "A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). Which fruit got the most votes?",
+    "a": "Orange"
+   },
+   {
+    "q": "A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). Which fruit got the fewest votes?",
+    "a": "Grape"
+   },
+   {
+    "q": "A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). How many more children chose orange than grape?",
+    "a": "5 (9 − 4)"
+   },
+   {
+    "q": "A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). How many children voted altogether?",
+    "a": "25 (7 + 5 + 9 + 4)"
+   },
+   {
+    "q": "Pets: Dog 6, Cat 4, Fish 6, Bird 2. Which two pets got the same number of votes?",
+    "a": "Dog and fish"
+   },
+   {
+    "q": "Pets: Dog 6, Cat 4, Fish 6, Bird 2. How many more children chose dog than bird?",
+    "a": "4 (6 − 2)"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "1 picture = 2 children. Red has 3 pictures, blue has 5 and green has 4. How many children chose blue?",
+    "a": "10"
+   },
+   {
+    "q": "1 picture = 2 children. Red has 3 pictures, blue has 5 and green has 4. How many children voted altogether?",
+    "a": "24 (12 pictures × 2)"
+   },
+   {
+    "q": "1 picture = 2 children. Red has 3 pictures and blue has 5. How many more children chose blue than red?",
+    "a": "4 (2 more pictures × 2)"
+   },
+   {
+    "q": "1 picture = 2 children. Six children chose pizza. How many pictures should we draw?",
+    "a": "3"
+   },
+   {
+    "q": "1 picture = 2 children. A half picture means 1 child. Apple has 3 pictures and a half. How many children chose apple?",
+    "a": "7"
+   },
+   {
+    "q": "Banana has 3 pictures and apple has 8 pictures (1 picture = 1 child). How many more children chose apple?",
+    "a": "5"
+   }
+  ],
+  "challenge": [
+   {
+    "q": "18 children voted. 7 chose apple and 5 chose orange. The rest chose grapes. How many chose grapes?",
+    "a": "6"
+   },
+   {
+    "q": "Votes: A 8, B 5, C 6. Then 4 more children join and all choose B. Which fruit wins now, and by how many votes?",
+    "a": "B wins with 9, which is 1 more than A."
+   },
+   {
+    "q": "12 children voted for three fruits. No two fruits got the same number of votes. The most votes was 5. How many votes did each fruit get?",
+    "a": "5, 4 and 3."
+   },
+   {
+    "q": "Mei says 7 children chose apple. Banana got 4 fewer than apple and orange got 8. How many children voted?",
+    "a": "18 (7 + 3 + 8)"
+   },
+   {
+    "q": "Our class chose grapes. Ben says, “So the whole school loves grapes.” Is he right? Give two reasons.",
+    "a": "No. Only our class voted, and other classes may choose differently. A small group may not match a big group."
+   },
+   {
+    "q": "1 picture = 3 children. Apple has 4 pictures, banana 2 and orange 5. Then 7 more children join and all choose banana. Which fruit wins now, and by how many votes?",
+    "a": "Orange 15, banana 13, apple 12. Orange wins by 2."
+   },
+   {
+    "q": "24 children voted. Apple got 6 votes. Orange got twice as many as banana. How many votes did banana and orange get?",
+    "a": "Banana 6 and orange 12."
+   },
+   {
+    "q": "1 picture = 4 children. 40 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?",
+    "a": "8 children (10 pictures in all; A 3 + B 5 = 8, so C has 2 pictures)."
+   }
+  ]
+ },
+ "4": {
+  "core": [
+   {
+    "q": "The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one?",
+    "a": "circle"
+   },
+   {
+    "q": "The pattern is star, heart, star, heart, star, heart … What is the 9th one?",
+    "a": "star"
+   },
+   {
+    "q": "The pattern is red, red, blue, red, red, blue, red … What is the 8th one?",
+    "a": "red"
+   },
+   {
+    "q": "The pattern is A, B, C, D, A, B, C … What is the 11th one?",
+    "a": "C"
+   },
+   {
+    "q": "The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?",
+    "a": "dog"
+   },
+   {
+    "q": "The pattern is sun, moon, sun, moon, sun, moon … What is the 15th one?",
+    "a": "sun"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "Pattern: circle, triangle, triangle, square, circle, triangle, triangle, square … What is the 14th shape?",
+    "a": "triangle"
+   },
+   {
+    "q": "Same pattern: how many triangles are in the first 20 shapes?",
+    "a": "10 (5 groups of 4, with 2 triangles in each group)"
+   },
+   {
+    "q": "Same pattern: in which places do the squares come? Write the first five.",
+    "a": "4, 8, 12, 16, 20"
+   },
+   {
+    "q": "Red, blue, blue, red, blue, blue … What colour is the 20th bead?",
+    "a": "blue"
+   },
+   {
+    "q": "Red, blue, blue, red, blue, blue … How many blue beads are in the first 12 beads?",
+    "a": "8"
+   },
+   {
+    "q": "A pattern repeats every 5 shapes. Is the 25th shape the same as the 5th? Why?",
+    "a": "Yes. 25 is a multiple of 5, so it is the last shape of a group, like the 5th."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Squares in a row use 4 sticks for 1 square, 7 sticks for 2 squares and 10 sticks for 3 squares. How many sticks for 8 squares?",
+    "a": "25 (4 + 3 × 7)"
+   },
+   {
+    "q": "Using the same pattern, how many squares can you make with 22 sticks?",
+    "a": "7 (22 − 1 = 21, 21 ÷ 3 = 7)"
+   },
+   {
+    "q": "Tiles: the 1st pattern has 3 tiles, the 2nd has 5, the 3rd has 7. How many tiles in the 10th pattern? Which pattern has 31 tiles?",
+    "a": "21 tiles in the 10th. 31 tiles is the 15th."
+   },
+   {
+    "q": "Matchstick triangles in a row use 3, 5, 7 sticks. Ben has 25 sticks. How many triangles can he make? How many sticks are left over?",
+    "a": "12 triangles use 25 sticks exactly (3 + 2 × 11). None left over."
+   },
+   {
+    "q": "A pattern repeats: star, moon, sun, star, moon, sun … What is the 100th shape? Explain how you know without drawing 100 shapes.",
+    "a": "Star. 99 is a multiple of 3, so the 99th shape ends a group (a sun) and the 100th starts the pattern again: star."
+   },
+   {
+    "q": "Squares in a row use 4, 7, 10 … sticks. Ben has 50 sticks. How many squares can he make? How many sticks are left?",
+    "a": "16 squares use 49 sticks. 1 stick is left."
+   },
+   {
+    "q": "Beads repeat in a pattern of 5: red, red, blue, blue, green. How many green beads are in the first 47 beads?",
+    "a": "9 green beads (9 full groups of 5 and 2 red beads left over)."
+   },
+   {
+    "q": "Dots: 1, 3, 6, 10, 15 … What are the next two numbers? What is the 10th number?",
+    "a": "21 and 28. The 10th is 55 (add 2, 3, 4, … each time)."
+   }
+  ]
+ },
+ "5": {
+  "core": [
+   {
+    "q": "I think of a number. I add 3. I get 8. What is my number?",
+    "a": "5"
+   },
+   {
+    "q": "I think of a number. I add 6. I get 14. What is my number?",
+    "a": "8"
+   },
+   {
+    "q": "I think of a number. I add 5. I get 12. What is my number?",
+    "a": "7"
+   },
+   {
+    "q": "I think of a number. I add 9. I get 17. What is my number?",
+    "a": "8"
+   },
+   {
+    "q": "I think of a number. I take away 4. I get 6. What is my number?",
+    "a": "10"
+   },
+   {
+    "q": "I think of a number. I take away 7. I get 3. What is my number?",
+    "a": "10"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "I think of a number. I add 5, then I take away 3. I get 9. What is my number?",
+    "a": "7"
+   },
+   {
+    "q": "I think of a number. I add 6, then I take away 2. I get 10. What is my number?",
+    "a": "6"
+   },
+   {
+    "q": "I think of a number. I add 4, then I take away 7. I get 8. What is my number?",
+    "a": "11"
+   },
+   {
+    "q": "I think of a number. I add 9, then I take away 4. I get 12. What is my number?",
+    "a": "7"
+   },
+   {
+    "q": "A number machine adds the same number each time. IN 4 gives OUT 9. What is the rule? What is OUT when IN is 12? What is IN when OUT is 20?",
+    "a": "Add 5. OUT is 17 when IN is 12. IN is 15 when OUT is 20."
+   },
+   {
+    "q": "Ben had some marbles. He gave 5 to Mei, then won 3. Now he has 12. How many did he start with?",
+    "a": "14 (12 − 3 + 5)"
+   }
+  ],
+  "challenge": [
+   {
+    "q": "I think of a number. I add 6, take away 4, then add 5. I get 17. What is my number?",
+    "a": "10 (17 − 5 + 4 − 6)"
+   },
+   {
+    "q": "A number machine has two steps: add 3, then add 4. IN 5 gives OUT 12. What is IN when OUT is 20?",
+    "a": "13 (the same as adding 7)"
+   },
+   {
+    "q": "Zoe is 6th from the front of a queue and 6th from the back. How many children are in the queue?",
+    "a": "11"
+   },
+   {
+    "q": "Ben is 4th in a queue. There are 3 children behind him. How many children are in the queue?",
+    "a": "7"
+   },
+   {
+    "q": "Ali has 8 marbles. Mei has 5 more than Ali. Ben has 6 fewer than Mei. How many marbles do the three have altogether?",
+    "a": "8 + 13 + 7 = 28"
+   },
+   {
+    "q": "There are 20 children. 7 are boys. Of the girls, 4 are wearing red. How many girls are not wearing red?",
+    "a": "9 (20 − 7 = 13 girls; 13 − 4 = 9)"
+   },
+   {
+    "q": "I think of a number. I add 7, take away 3, add 5, then take away 8. I get 14. What is my number?",
+    "a": "13 (the steps are +1 in total, so 14 − 1)."
+   },
+   {
+    "q": "Ali is 5 years older than Ben. In 3 years’ time their ages will add up to 25. How old is each now?",
+    "a": "Ben 7 and Ali 12."
+   },
+   {
+    "q": "A snail climbs 3 cm each day and slides back 1 cm each night. It starts at the bottom of a 9 cm wall. On which day does it reach the top?",
+    "a": "Day 4 (3, 5, 7, then 9 on the fourth day before it can slide back)."
+   }
+  ]
+ },
+ "6": {
+  "core": [
+   {
+    "q": "Pay exactly 15¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "5¢ + 10¢"
+   },
+   {
+    "q": "Pay exactly 25¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "5¢ + 20¢"
+   },
+   {
+    "q": "Pay exactly 30¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "10¢ + 20¢"
+   },
+   {
+    "q": "Pay exactly 40¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "20¢ + 20¢"
+   },
+   {
+    "q": "Pay exactly 55¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "5¢ + 50¢"
+   },
+   {
+    "q": "Pay exactly 60¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
+    "a": "10¢ + 50¢"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "How many ways can you make 25¢ using 20¢, 10¢ and 5¢ coins?",
+    "a": "4 ways. (20+5; 10+10+5; 10+5+5+5; 5×5)"
+   },
+   {
+    "q": "How many ways can you make 30¢ using 20¢, 10¢ and 5¢ coins?",
+    "a": "6 ways."
+   },
+   {
+    "q": "How many ways can you make 20¢ using only 10¢ and 5¢ coins?",
+    "a": "3 ways. (10+10; 10+5+5; 5×4)"
+   },
+   {
+    "q": "What is the fewest number of coins to make 65¢ from 5¢, 10¢, 20¢ and 50¢?",
+    "a": "3 coins (50¢ + 10¢ + 5¢)"
+   },
+   {
+    "q": "What is the fewest number of coins to make 45¢?",
+    "a": "3 coins (20¢ + 20¢ + 5¢)"
+   },
+   {
+    "q": "Ali buys a ruler for 35¢. He pays with a 50¢ coin. Which coins could he get back as change?",
+    "a": "15¢: 10¢ + 5¢ (or three 5¢ coins)."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Make 35¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. How many ways are there?",
+    "a": "1 way: 20¢ + 10¢ + 5¢"
+   },
+   {
+    "q": "Make 40¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. Find them all.",
+    "a": "2 ways: 20¢ + 10¢ + 5¢ + 5¢; 10¢ + 10¢ + 10¢ + 10¢"
+   },
+   {
+    "q": "You have one 5¢, one 10¢ and one 20¢ coin. How many different totals can you make using one, two or all three coins? List them.",
+    "a": "7 totals: 5, 10, 15, 20, 25, 30, 35."
+   },
+   {
+    "q": "Which amounts from 5¢ to 50¢ cannot be made using only 20¢ and 10¢ coins?",
+    "a": "Every amount that is not a multiple of 10, so 5, 15, 25, 35 and 45 cannot be made."
+   },
+   {
+    "q": "Why can 35¢ never be made with only two coins from 5¢, 10¢, 20¢ and 50¢?",
+    "a": "Two coins can make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them."
+   },
+   {
+    "q": "Ali pays 55¢ with exactly 5 coins. He uses at least one 5¢, one 10¢ and one 20¢ coin. Which coins does he use?",
+    "a": "20¢ + 10¢ + 10¢ + 10¢ + 5¢ (the only way)."
+   },
+   {
+    "q": "You have one 5¢, one 10¢, one 20¢ and one 50¢ coin. How many different amounts can you make using any of them?",
+    "a": "15 different amounts."
+   },
+   {
+    "q": "A sweet costs 15¢ and a biscuit costs 20¢. Ben spends exactly 90¢ and buys some of each. How many sweets and biscuits does he buy?",
+    "a": "2 sweets and 3 biscuits."
+   }
+  ]
+ },
+ "7": {
+  "core": [
+   {
+    "q": "How many sides and corners does a triangle have?",
+    "a": "3 sides and 3 corners"
+   },
+   {
+    "q": "How many sides and corners does a square have?",
+    "a": "4 sides and 4 corners"
+   },
+   {
+    "q": "How many sides and corners does a pentagon have?",
+    "a": "5 sides and 5 corners"
+   },
+   {
+    "q": "How many sides and corners does a hexagon have?",
+    "a": "6 sides and 6 corners"
+   },
+   {
+    "q": "How many sides and corners does a octagon have?",
+    "a": "8 sides and 8 corners"
+   },
+   {
+    "q": "I have no corners and no straight sides. What shape am I?",
+    "a": "A circle"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "I have 4 sides. All my sides are the same length. What shape am I?",
+    "a": "A square"
+   },
+   {
+    "q": "How many sides do 3 triangles have altogether?",
+    "a": "9"
+   },
+   {
+    "q": "How many corners do 5 squares have altogether?",
+    "a": "20"
+   },
+   {
+    "q": "A shape has 7 corners. How many sides has it?",
+    "a": "7 sides"
+   },
+   {
+    "q": "Fold a square along a diagonal and cut. Which shapes do you get?",
+    "a": "2 triangles of the same size"
+   },
+   {
+    "q": "Two same-size triangles can make a square. Can they also make a bigger triangle? Draw how.",
+    "a": "Yes. Join them along a short side (the two equal short sides touching) to make one bigger triangle. Joining along the long side makes a square instead."
+   },
+   {
+    "q": "Which shape has the same number of sides as a rectangle but is not a rectangle? Say why.",
+    "a": "A parallelogram or a rhombus has 4 sides but its corners are not square."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "A square has both diagonals drawn. How many triangles can you find?",
+    "a": "8 (4 small and 4 made of two small ones)"
+   },
+   {
+    "q": "A big triangle has 1 line from the top corner to the bottom. How many triangles? What about 2 lines? 3 lines?",
+    "a": "3, 6 and 10 triangles."
+   },
+   {
+    "q": "A square is split into a 2 by 2 grid of 4 small squares. How many squares can you find altogether?",
+    "a": "5 (4 small + 1 big)"
+   },
+   {
+    "q": "A square is split into a 3 by 3 grid of 9 small squares. How many squares are there altogether?",
+    "a": "14 (9 small + 4 of size 2 by 2 + 1 big)"
+   },
+   {
+    "q": "Ali cuts a rectangle along one line and gets two triangles. Where did he cut?",
+    "a": "From one corner to the opposite corner."
+   },
+   {
+    "q": "I have 6 sides. I can be made from 6 equal triangles. What shape am I?",
+    "a": "A hexagon"
+   },
+   {
+    "q": "Three squares are joined in a row to make a long rectangle. How many rectangles can you find altogether? (A square counts as a rectangle.)",
+    "a": "6 (3 single squares, 2 pairs and 1 whole row)."
+   },
+   {
+    "q": "A triangle has 4 lines drawn from the top corner to the bottom. How many triangles are there? Follow the pattern 3, 6, 10 …",
+    "a": "15."
+   },
+   {
+    "q": "A square is cut into 4 equal squares. One of the small squares is cut into 4 even smaller squares. How many squares can you find altogether?",
+    "a": "9 (1 big, 4 medium, 4 tiny)."
+   }
+  ]
+ },
+ "8": {
+  "core": [
+   {
+    "q": "Ali is taller than Ben. Ben is taller than Mei. Who is the tallest? Who is the shortest?",
+    "a": "Ali is tallest; Mei is shortest."
+   },
+   {
+    "q": "The cat is heavier than the hen. The hen is heavier than the mouse. Who is the lightest?",
+    "a": "The mouse"
+   },
+   {
+    "q": "Red, blue and green ribbons. Red is longer than blue. Green is shorter than blue. Which ribbon is the longest?",
+    "a": "Red"
+   },
+   {
+    "q": "Which number is the odd one out: 2, 4, 6, 9, 10? Why?",
+    "a": "9. It is the only odd number."
+   },
+   {
+    "q": "Sort these numbers into odd and even: 3, 8, 5, 12, 7, 10.",
+    "a": "Odd: 3, 5, 7. Even: 8, 12, 10."
+   }
+  ],
+  "stretch": [
+   {
+    "q": "In a race, Sam is ahead of Tia. Tia is ahead of Raj. Mei is ahead of Sam. Who is third?",
+    "a": "Tia (order: Mei, Sam, Tia, Raj)."
+   },
+   {
+    "q": "Tia does not drink milk. Sam drinks neither milk nor juice. Raj drinks the third drink. The drinks are milk, juice and water. Who drinks what?",
+    "a": "Sam: water. Tia: juice. Raj: milk."
+   },
+   {
+    "q": "Numbers 1 to 12. Which are multiples of 2? Which are multiples of 3? Which are both?",
+    "a": "Multiples of 2: 2, 4, 6, 8, 10, 12. Multiples of 3: 3, 6, 9, 12. Both: 6 and 12."
+   },
+   {
+    "q": "Numbers 1 to 12. Which are in neither the 2 times table nor the 3 times table?",
+    "a": "1, 5, 7 and 11"
+   },
+   {
+    "q": "Which is the odd one out: 3, 6, 9, 11, 12? Give a reason.",
+    "a": "11. It is not in the 3 times table."
+   },
+   {
+    "q": "Ali, Ben and Mei have a cat, a dog and a fish. Ali has no dog. Mei has no fish. Ben has neither a cat nor a fish. Who has which pet?",
+    "a": "Ben: dog. Mei: cat. Ali: fish."
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Four friends stand in a line. Ali is not first. Ben is ahead of Ali. Sam is last. Mei is behind Ali. In what order do they stand?",
+    "a": "Ben, Ali, Mei, Sam."
+   },
+   {
+    "q": "Three boxes are labelled “Apples”, “Oranges” and “Mixed”. Every label is wrong. You may take one fruit from one box. Which box should you pick from, and why?",
+    "a": "Pick from the box labelled “Mixed”. Its label is wrong, so it holds only one kind of fruit. If you take out an apple, that box is Apples. The box labelled “Oranges” cannot be oranges, and apples are taken, so it is Mixed. The box labelled “Apples” must be Oranges."
+   },
+   {
+    "q": "Ali, Ben and Mei are 6, 7 and 8 years old. Ali is older than Mei. Ali is not the oldest. How old is each?",
+    "a": "Mei 6, Ali 7, Ben 8."
+   },
+   {
+    "q": "A number between 20 and 40 is in the 5 times table and is odd. It is also one less than a number in the 4 times table. What is it?",
+    "a": "35 (35 + 1 = 36, which is in the 4 times table)."
+   },
+   {
+    "q": "Draw a Venn diagram for numbers 1 to 10 with the rules “even” and “more than 5”. Which numbers go in the middle? Which go outside both?",
+    "a": "Middle: 6, 8, 10. Outside both: 1, 3, 5."
+   },
+   {
+    "q": "Five friends run a race. D is first. E is last. B finishes directly behind A. C is not second. In what order do they finish?",
+    "a": "D, A, B, C, E."
+   },
+   {
+    "q": "A secret number is between 10 and 30. It is even and in the 3 times table. It is 2 more than a number in the 5 times table. What is it?",
+    "a": "12."
+   },
+   {
+    "q": "Numbers 1 to 20. How many are multiples of 2 only, 3 only, both, and neither?",
+    "a": "2 only: 7. 3 only: 3. Both: 3 (6, 12, 18). Neither: 7."
+   }
+  ]
+ },
+ "9": {
+  "core": [
+   {
+    "q": "A pencil is 7 cubes long. A pen is 10 cubes long. How many cubes longer is the pen?",
+    "a": "3"
+   },
+   {
+    "q": "A ribbon is 12 cubes long. You cut off 5 cubes. How long is the piece left?",
+    "a": "7 cubes"
+   },
+   {
+    "q": "Ali’s book is 9 cubes long and Mei’s book is 6 cubes long. Whose is longer? By how much?",
+    "a": "Ali’s, by 3 cubes."
+   },
+   {
+    "q": "Which is longer: 8 cubes or 8 paper clips? Why can we not tell?",
+    "a": "We cannot tell. The units are different sizes."
+   },
+   {
+    "q": "Put in order from shortest: 11 cubes, 7 cubes, 9 cubes, 12 cubes.",
+    "a": "7, 9, 11, 12"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "1 clip is as long as 3 cubes. A pen is 12 cubes long. How many clips long is the pen?",
+    "a": "4 clips"
+   },
+   {
+    "q": "1 clip is as long as 3 cubes. A ruler is 5 clips long. How many cubes long is the ruler?",
+    "a": "15 cubes"
+   },
+   {
+    "q": "Ali’s desk is 6 spans long. Mei’s desk is 9 spans long, but they measured the same desk. Whose hand is bigger?",
+    "a": "Ali’s. A bigger span needs fewer spans to cover the same desk."
+   },
+   {
+    "q": "A caterpillar is 9 cubes long. It grows 2 cubes each day. How long is it after 3 days?",
+    "a": "15 cubes"
+   },
+   {
+    "q": "A string is 15 cubes long. A rope is 8 cubes longer. How long is the rope?",
+    "a": "23 cubes"
+   }
+  ],
+  "challenge": [
+   {
+    "q": "A rope is 20 cubes long. Ali cuts it into pieces that are each 4 cubes long. How many pieces does he get? How many cuts does he make?",
+    "a": "5 pieces and 4 cuts."
+   },
+   {
+    "q": "A train has 3 carriages. Each is 6 cubes long. There is a gap of 1 cube between carriages. How long is the whole train?",
+    "a": "20 cubes (18 + 2)"
+   },
+   {
+    "q": "A caterpillar is 9 cubes long and grows 2 cubes each day. On which day is it 21 cubes long?",
+    "a": "Day 6 (9 + 2 × 6 = 21)."
+   },
+   {
+    "q": "A red ribbon is 5 cubes long. A blue ribbon is 3 cubes longer than red. A green ribbon is 2 cubes shorter than blue. How long are the three ribbons end to end?",
+    "a": "5 + 8 + 6 = 19 cubes"
+   },
+   {
+    "q": "1 clip = 2 erasers and 1 pen = 3 clips. How many erasers long is the pen? How many pens are as long as 24 erasers?",
+    "a": "6 erasers per pen; 4 pens."
+   },
+   {
+    "q": "A ruler is 12 cubes long. Ali measures a desk by laying the ruler end to end 4 times and then 5 more cubes. How long is the desk in cubes?",
+    "a": "53 cubes."
+   },
+   {
+    "q": "Ali’s pencil is 9 cubes. Mei’s is 2 cubes shorter than Ali’s. Ben’s is 3 cubes longer than Mei’s. How long are all three pencils together?",
+    "a": "9 + 7 + 10 = 26 cubes."
+   },
+   {
+    "q": "A ribbon 30 cubes long is cut into three pieces. The first is 4 cubes longer than the second. The third is 4 cubes shorter than the second. How long is each piece?",
+    "a": "14, 10 and 6 cubes."
+   }
+  ]
+ },
+ "10": {
+  "core": [
+   {
+    "q": "Count in 3s: 3, 6, 9, __, __",
+    "a": "12, 15"
+   },
+   {
+    "q": "10 = 4 + __ and 20 = 12 + __",
+    "a": "6 and 8"
+   },
+   {
+    "q": "Red 4, blue 6, green 3. How many more are blue than green?",
+    "a": "3"
+   },
+   {
+    "q": "I think of a number. I add 4. I get 9. What is it?",
+    "a": "5"
+   },
+   {
+    "q": "Make 15¢ with two coins from 5¢, 10¢ and 20¢.",
+    "a": "10¢ + 5¢"
+   },
+   {
+    "q": "How many sides does a hexagon have?",
+    "a": "6"
+   }
+  ],
+  "stretch": [
+   {
+    "q": "A pattern starts at 5 and adds 3 each time. What is the 10th number?",
+    "a": "32"
+   },
+   {
+    "q": "Ali has 12 stickers. He gives 5 to Mei and then gets 3 more. How many does he have now?",
+    "a": "10"
+   },
+   {
+    "q": "Which three coins from 5¢, 10¢, 20¢ and 50¢ make 45¢?",
+    "a": "20¢ + 20¢ + 5¢"
+   },
+   {
+    "q": "A ribbon is 12 cubes. A string is 5 cubes shorter. How long is the string?",
+    "a": "7 cubes"
+   },
+   {
+    "q": "Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Who is the shortest?",
+    "a": "Ali"
+   }
+  ],
+  "challenge": [
+   {
+    "q": "Two numbers add to 12 and differ by 2. What are they?",
+    "a": "5 and 7"
+   },
+   {
+    "q": "1 triangle uses 3 sticks, 2 triangles use 5 sticks. How many sticks for 9 triangles? How many triangles with 25 sticks?",
+    "a": "19 sticks for 9; 12 triangles for 25 sticks."
+   },
+   {
+    "q": "How many ways can you make 30¢ using 20¢, 10¢ and 5¢ coins?",
+    "a": "6 ways."
+   },
+   {
+    "q": "Ali, Ben and Mei are first, second and third in a race. Ali is not first. Ben is ahead of Mei. Ali is behind Mei. Who is first?",
+    "a": "Ben (order: Ben, Mei, Ali)."
+   },
+   {
+    "q": "A square has both diagonals drawn. How many triangles are there? Explain how you counted.",
+    "a": "8: 4 small and 4 made of two small ones."
+   },
+   {
+    "q": "Invent a puzzle that needs two steps. Give it to a friend. Write its answer.",
+    "a": "Open."
+   },
+   {
+    "q": "Frog A jumps in 3s from 0 and frog B jumps in 5s from 0. Which numbers up to 60 do both land on?",
+    "a": "15, 30, 45 and 60."
+   },
+   {
+    "q": "Ali has some stickers. Ben has 4 more than Ali. Mei has 3 fewer than Ben. Together they have 29. How many does each have?",
+    "a": "Ali 8, Ben 12, Mei 9."
+   },
+   {
+    "q": "Make 70¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. How many ways are there?",
+    "a": "2 ways: 50¢ + 10¢ + 5¢ + 5¢ and 20¢ + 20¢ + 20¢ + 10¢."
+   }
+  ]
+ }
+}

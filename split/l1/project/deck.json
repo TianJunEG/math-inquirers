@@ -1,0 +1,48 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 1 \u2013 Count with the Frog",
+ "order": [
+  "cover",
+  "routine",
+  "rules",
+  "l1-title",
+  "l1-warm1",
+  "l1-warm2",
+  "l1-explore1",
+  "l1-explore2",
+  "l1-mini1",
+  "l1-mini2",
+  "l1-key",
+  "l1-break",
+  "l1-ws1",
+  "l1-ws2",
+  "l1-stretch",
+  "l1-challenge",
+  "l1-chdiag",
+  "l1-talk",
+  "l1-exit"
+ ],
+ "cover": "cover",
+ "sections": {
+  "s1": {
+   "description": "Lesson 1: Count with the Frog (90 minutes).",
+   "start": "cover"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

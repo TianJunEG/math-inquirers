@@ -1,0 +1,45 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 7 \u2013 Shape Safari",
+ "order": [
+  "l7-title",
+  "l7-warm1",
+  "l7-warm2",
+  "l7-explore1",
+  "l7-explore2",
+  "l7-mini1",
+  "l7-mini2",
+  "l7-key",
+  "l7-break",
+  "l7-ws1",
+  "l7-ws2",
+  "l7-stretch",
+  "l7-challenge",
+  "l7-chdiag",
+  "l7-talk",
+  "l7-exit"
+ ],
+ "cover": "l7-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 7: Shape Safari (90 minutes).",
+   "start": "l7-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

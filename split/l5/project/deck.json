@@ -1,0 +1,45 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 5 \u2013 Mystery Number",
+ "order": [
+  "l5-title",
+  "l5-warm1",
+  "l5-warm2",
+  "l5-explore1",
+  "l5-explore2",
+  "l5-mini1",
+  "l5-mini2",
+  "l5-key",
+  "l5-break",
+  "l5-ws1",
+  "l5-ws2",
+  "l5-stretch",
+  "l5-challenge",
+  "l5-chdiag",
+  "l5-talk",
+  "l5-exit"
+ ],
+ "cover": "l5-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 5: Mystery Number (90 minutes).",
+   "start": "l5-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

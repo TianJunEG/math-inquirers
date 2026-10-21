@@ -1,0 +1,45 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 9 \u2013 Measure It",
+ "order": [
+  "l9-title",
+  "l9-warm1",
+  "l9-warm2",
+  "l9-explore1",
+  "l9-explore2",
+  "l9-mini1",
+  "l9-mini2",
+  "l9-key",
+  "l9-break",
+  "l9-ws1",
+  "l9-ws2",
+  "l9-stretch",
+  "l9-challenge",
+  "l9-chdiag",
+  "l9-talk",
+  "l9-exit"
+ ],
+ "cover": "l9-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 9: Measure It (90 minutes).",
+   "start": "l9-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

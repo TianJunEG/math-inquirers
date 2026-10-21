@@ -1,0 +1,45 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 8 \u2013 Logic and Sorting",
+ "order": [
+  "l8-title",
+  "l8-warm1",
+  "l8-warm2",
+  "l8-explore1",
+  "l8-explore2",
+  "l8-mini1",
+  "l8-mini2",
+  "l8-key",
+  "l8-break",
+  "l8-ws1",
+  "l8-ws2",
+  "l8-stretch",
+  "l8-challenge",
+  "l8-chdiag",
+  "l8-talk",
+  "l8-exit"
+ ],
+ "cover": "l8-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 8: Logic and Sorting (90 minutes).",
+   "start": "l8-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

@@ -1,0 +1,45 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 3 \u2013 Fruit Party Graphs",
+ "order": [
+  "l3-title",
+  "l3-warm1",
+  "l3-warm2",
+  "l3-explore1",
+  "l3-explore2",
+  "l3-mini1",
+  "l3-mini2",
+  "l3-key",
+  "l3-break",
+  "l3-ws1",
+  "l3-ws2",
+  "l3-stretch",
+  "l3-challenge",
+  "l3-chdiag",
+  "l3-talk",
+  "l3-exit"
+ ],
+ "cover": "l3-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 3: Fruit Party Graphs (90 minutes).",
+   "start": "l3-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

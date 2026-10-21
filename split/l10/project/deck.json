@@ -1,0 +1,46 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T03:15:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers: Lesson 10 \u2013 Challenge Day",
+ "order": [
+  "l10-title",
+  "l10-warm1",
+  "l10-warm2",
+  "l10-explore1",
+  "l10-explore2",
+  "l10-mini1",
+  "l10-mini2",
+  "l10-key",
+  "l10-break",
+  "l10-ws1",
+  "l10-ws2",
+  "l10-stretch",
+  "l10-challenge",
+  "l10-chdiag",
+  "l10-talk",
+  "l10-exit",
+  "end"
+ ],
+ "cover": "l10-title",
+ "sections": {
+  "s1": {
+   "description": "Lesson 10: Challenge Day (90 minutes).",
+   "start": "l10-title"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

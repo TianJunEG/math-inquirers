@@ -1,0 +1,732 @@
+<title>Preciouslyours Learning</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
+<style>
+/* Layout: squared-paper page; navy hero with an illustrated maths scene; colour-blocked sections with chunky offset-shadow cards; 1120px column. */
+:root{
+  --navy:#1B2A49; --cream:#FFF9EC; --yellow:#FFC93C; --teal:#1F7A6F; --red:#D64545; --coral:#FF7A59; --green:#3DBE7A;
+  --bg:#F6F9FD; --grid:#E2ECF6; --card:#FFFFFF; --fg:#1B2A49; --muted:#56637A; --ink:#1B2A49; --line:#CBD8E6;
+  --sky:#D6E9FB; --soft:#FFF0C4; --peach:#FFE2D6; --mint:#D3F1E4; --lilac:#E6DFFB;
+  --tealsoft:#DCEFEA; --redsoft:#F8DEDE; --greysoft:#E3EAF2; --btn:#1B2A49; --btnfg:#FFFFFF; --hero:#1B2A49; --herofg:#FFF9EC; --herosub:#C9D3E6;
+  --head:'Fredoka','Nunito Sans',system-ui,sans-serif; --body:'Nunito Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1626; --grid:#18233A; --card:#18233A; --fg:#EEF2F8; --muted:#A6B1C6; --ink:#8EA2C8; --line:#2C3A55;
+  --sky:#1D3150; --soft:#3A3217; --peach:#41271F; --mint:#173A2F; --lilac:#2B2650;
+  --tealsoft:#173A3A; --redsoft:#47242A; --greysoft:#253149; --btn:#FFC93C; --btnfg:#1B2A49; --teal:#5FC5B5; --red:#F07B7B; --hero:#0A1120; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1626; --grid:#18233A; --card:#18233A; --fg:#EEF2F8; --muted:#A6B1C6; --ink:#8EA2C8; --line:#2C3A55;
+  --sky:#1D3150; --soft:#3A3217; --peach:#41271F; --mint:#173A2F; --lilac:#2B2650;
+  --tealsoft:#173A3A; --redsoft:#47242A; --greysoft:#253149; --btn:#FFC93C; --btnfg:#1B2A49; --teal:#5FC5B5; --red:#F07B7B; --hero:#0A1120; color-scheme:dark}
+*{box-sizing:border-box}
+body{background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--fg);font:16px/1.55 var(--body);padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance;line-height:1.08}
+h1{font-size:clamp(36px,6vw,64px);letter-spacing:-.01em} h2{font-size:clamp(28px,3.6vw,40px)} h3{font-size:21px}
+p{margin:0} ul{margin:0}
+a{color:inherit}
+mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);color:inherit;padding:0 .08em}
+.hero mark{background:linear-gradient(transparent 60%,var(--coral) 60%,var(--coral) 92%,transparent 92%)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:18px 0 12px}
+.brand{font-family:var(--head);font-size:23px;font-weight:600;display:flex;align-items:center;gap:10px;background:none;border:0;color:var(--fg);cursor:pointer;padding:0}
+.brand i{width:40px;height:40px;border-radius:12px;background:var(--yellow);color:#1B2A49;display:grid;place-items:center;font-style:normal;font-size:22px;border:2.5px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49;transform:rotate(-6deg)}
+.nav{display:flex;flex-wrap:wrap;gap:2px;margin-left:auto;align-items:center;background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:4px}
+.tab{font:800 14.5px var(--body);background:none;color:var(--fg);border:0;border-radius:999px;padding:8px 13px;cursor:pointer}
+.tab[aria-current="true"]{background:var(--fg);color:var(--bg)}
+.tab:hover{background:var(--sky)} .tab[aria-current="true"]:hover{background:var(--fg)}
+.tab:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.brand:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.demo{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;border:1.5px dashed var(--muted);border-radius:12px;padding:8px 12px;font-size:13px;color:var(--muted);background:var(--bg)}
+.demo b{font-weight:800;color:var(--fg)}
+.demo select{width:auto;padding:4px 8px;font-size:13px;max-width:220px}
+.demo label{display:flex;gap:6px;align-items:center}
+.demo input[type=checkbox]{width:auto}
+.btn{font:800 15.5px var(--body);background:var(--btn);color:var(--btnfg);border:2.5px solid var(--btn);border-radius:14px;padding:11px 20px;cursor:pointer;display:inline-block;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.28);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.28)}
+.btn.alt{background:var(--card);color:var(--fg);border-color:var(--ink);box-shadow:0 4px 0 var(--ink)}
+.btn.sm{padding:6px 13px;font-size:13.5px;border-radius:11px;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.btn.alt.sm{box-shadow:0 3px 0 var(--ink)}
+.btn.yel{background:var(--yellow);color:#1B2A49;border-color:#1B2A49;box-shadow:0 4px 0 #1B2A49}
+.btn.coral{background:var(--coral);color:#1B2A49;border-color:#1B2A49;box-shadow:0 4px 0 #1B2A49}
+.btn.teal{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.ghost{background:transparent;color:var(--herofg);border-color:var(--herofg);box-shadow:0 4px 0 rgba(255,255,255,.35)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+main{padding:22px 0 50px;display:grid;gap:56px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:22px}
+.pop{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;box-shadow:6px 6px 0 var(--ink);padding:24px}
+.sec{display:grid;gap:14px;align-content:start;min-width:0}
+.lead{font-size:18.5px;color:var(--muted);max-width:54ch}
+.eyebrow{justify-self:start;font:800 12.5px var(--body);letter-spacing:.08em;text-transform:uppercase;background:var(--card);color:var(--fg);border:2px solid var(--ink);border-radius:999px;padding:4px 12px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.two.wide{grid-template-columns:1.4fr 1fr}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.muted{color:var(--muted)} .small{font-size:13.5px}
+.shead{display:grid;gap:10px;max-width:720px}
+/* hero */
+.hero{background:var(--hero);color:var(--herofg);border-radius:32px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center;position:relative;overflow:hidden;border:2.5px solid #1B2A49;box-shadow:8px 8px 0 var(--yellow)}
+.hero .lead{color:var(--herosub)}
+.hero .eyebrow{background:var(--yellow);color:#1B2A49;border-color:#1B2A49}
+.slogan{font-family:var(--head);font-size:24px;color:var(--yellow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{font:800 13px var(--body);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,.1);color:var(--herofg);border:1.5px solid rgba(255,255,255,.35)}
+.art{width:100%;height:auto;max-width:540px;justify-self:center}
+.art text{font-family:var(--head)}
+@media (prefers-reduced-motion:no-preference){
+  .frog{animation:bob 2.4s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
+  .hop{stroke-dasharray:7 7;animation:dash 1.6s linear infinite}
+  .wob{animation:wob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+}
+@keyframes bob{0%,100%{transform:translateY(0)}45%{transform:translateY(-14px)}60%{transform:translateY(0)}}
+@keyframes dash{to{stroke-dashoffset:-28}}
+@keyframes wob{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+/* sticker facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fact{border:2.5px solid var(--ink);border-radius:20px;padding:16px 18px;box-shadow:5px 5px 0 var(--ink);color:#1B2A49}
+.fact:nth-child(1){background:#FFF0C4;transform:rotate(-1.5deg)} .fact:nth-child(2){background:#D6E9FB;transform:rotate(1deg)} .fact:nth-child(3){background:#D3F1E4;transform:rotate(-.8deg)} .fact:nth-child(4){background:#FFE2D6;transform:rotate(1.4deg)}
+.fact .v{font:600 30px var(--head)}
+.fact .l{font-size:13.5px;font-weight:700;opacity:.8}
+.rules4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rule{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:18px;display:grid;gap:8px;align-content:start;box-shadow:5px 5px 0 var(--ink)}
+.rule b{width:44px;height:44px;border-radius:50%;background:var(--yellow);color:#1B2A49;display:grid;place-items:center;font:600 22px var(--head);border:2.5px solid #1B2A49}
+.rule:nth-child(2) b{background:#7CC8F5} .rule:nth-child(3) b{background:var(--green)} .rule:nth-child(4) b{background:var(--coral)}
+.lessons{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.lesson{border:2.5px solid var(--ink);border-radius:20px;padding:14px;display:grid;gap:6px;align-content:start;color:#1B2A49;min-height:150px}
+.lesson .n{font:600 40px var(--head);line-height:1}
+.lesson .t{font:600 17px var(--head);line-height:1.15}
+.lesson .s{font-size:13px;font-weight:600;opacity:.75}
+.lesson:nth-child(5n+1){background:#FFF0C4} .lesson:nth-child(5n+2){background:#D6E9FB} .lesson:nth-child(5n+3){background:#D3F1E4} .lesson:nth-child(5n+4){background:#FFE2D6} .lesson:nth-child(5n+5){background:#E6DFFB}
+.sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.session{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:18px;display:grid;gap:8px;align-content:start;box-shadow:5px 5px 0 var(--ink)}
+.seats{display:flex;gap:5px;flex-wrap:wrap}
+.seats i{width:18px;height:18px;border-radius:50%;background:var(--card);border:2px solid var(--ink)}
+.seats i.f{background:var(--coral)}
+.band{border:2.5px solid var(--ink);border-radius:30px;padding:clamp(22px,3.5vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.band.peach{background:var(--peach)} .band.yel{background:var(--soft)} .band.mint{background:var(--mint)}
+.tile{border:2.5px solid var(--ink);border-radius:24px;padding:22px;display:grid;gap:10px;align-content:start;box-shadow:6px 6px 0 var(--ink);background:var(--card)}
+.tile.yel{background:var(--soft)} .tile.sky{background:var(--sky)} .tile.mint{background:var(--mint)} .tile.peach{background:var(--peach)}
+.tile .tag{justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:3px 10px}
+.tile .price{font:600 28px var(--head)}
+.tile .vis{height:120px;border-radius:16px;border:2px solid var(--ink);background:var(--card);display:grid;place-items:center;overflow:hidden}
+.email{background:var(--card);border:2.5px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);overflow:hidden;transform:rotate(-1.5deg)}
+.email .top{background:var(--navy);color:#FFF9EC;padding:10px 14px;font-size:13px;display:flex;gap:6px;align-items:center}
+.email .top i{width:10px;height:10px;border-radius:50%;background:var(--coral)} .email .top i:nth-child(2){background:var(--yellow)} .email .top i:nth-child(3){background:var(--green)}
+.email .body{padding:16px;display:grid;gap:8px}
+.email .puz{font:600 32px var(--head);letter-spacing:.12em;background:var(--soft);border-radius:12px;padding:6px 12px;color:#1B2A49;justify-self:start}
+/* forms */
+.field{display:grid;gap:5px;margin-bottom:12px;min-width:0}
+.field label,.flabel{font-weight:800;font-size:14px}
+input,select,textarea{font:16px var(--body);color:var(--fg);background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:10px 12px;width:100%;min-width:0}
+input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{flex:1;display:flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:9px 12px;cursor:pointer;font-weight:700;min-width:120px}
+.seg input,.check input{width:auto}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-bottom:12px}
+.check input{margin-top:4px;accent-color:var(--teal)}
+.opt{display:grid;gap:8px}
+.opt label{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:2px solid var(--line);border-radius:14px;padding:10px 12px;cursor:pointer}
+.opt label:has(input:checked){border-color:var(--ink);background:var(--soft)}
+.opt label.full{opacity:.6}
+.opt input{width:auto;accent-color:var(--teal)}
+.summary{background:var(--bg);border:2px dashed var(--line);border-radius:14px;padding:12px 14px;display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.summary div{display:flex;justify-content:space-between;gap:10px}
+.summary .tot{font-weight:800;font-size:19px;border-top:1.5px solid var(--line);padding-top:6px;margin-top:4px}
+/* data */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.kpi{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px 16px}
+.kpi .v{font:600 30px var(--head);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13px;color:var(--muted);font-weight:700}
+.kpi.main{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.kpi.main .l{color:#C9D2E6}
+.linkbox{display:flex;flex-wrap:wrap;gap:8px}
+.linkbox code{flex:1;min-width:200px;background:var(--soft);border:2px dashed var(--ink);border-radius:12px;padding:10px 12px;font:700 15px ui-monospace,Menlo,monospace;overflow-wrap:anywhere;color:var(--fg)}
+.tbl{overflow-x:auto;border:2px solid var(--line);border-radius:16px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 14px;background:var(--bg);white-space:nowrap}
+td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+td.num,th.num{text-align:right}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-weight:800;font-size:12.5px;white-space:nowrap}
+.p-wait{background:var(--soft);color:var(--fg)} .p-ok{background:var(--tealsoft);color:var(--teal)} .p-end{background:var(--greysoft);color:var(--muted)} .p-bad{background:var(--redsoft);color:var(--red)}
+.bar60{height:6px;background:var(--greysoft);border-radius:4px;margin-top:6px;min-width:90px;overflow:hidden}
+.bar60 i{display:block;height:100%;background:var(--yellow)}
+.msg{padding:12px 14px;border-radius:14px;font-weight:700}
+.msg.ok{background:var(--tealsoft);color:var(--teal)} .msg.no{background:var(--redsoft);color:var(--red)} .msg.info{background:var(--soft);color:var(--fg)}
+.empty{padding:26px;text-align:center;color:var(--muted)}
+.rates{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px 12px;align-items:center}
+.rates span{font-weight:800;font-size:14px}
+.subtabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line);padding-bottom:10px}
+.subtabs .tab{border:2px solid transparent}
+.faq{max-width:820px}
+.faq details{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:14px 18px}
+.faq summary{font:600 18px var(--head);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";font-size:24px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:8px;color:var(--muted)}
+footer{border-top:2.5px solid var(--ink);padding:26px 0 44px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;font-size:14px;color:var(--muted)}
+footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
+@media (max-width:900px){.lessons{grid-template-columns:repeat(3,1fr)}.facts,.rules4{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.hero,.two,.two.wide,.band,.grid2,footer{grid-template-columns:1fr}.three{grid-template-columns:1fr}.nav{margin-left:0;border-radius:18px}.hero{box-shadow:5px 5px 0 var(--yellow)}}
+@media (max-width:520px){.lessons{grid-template-columns:1fr 1fr}.facts,.rules4{grid-template-columns:1fr}.fact{transform:none!important}}
+.lvls{display:flex;flex-wrap:wrap;gap:8px}
+.lvl{font:600 16px var(--head);border:2.5px solid var(--ink);background:var(--card);color:var(--fg);border-radius:999px;padding:8px 18px;cursor:pointer}
+.lvl.on{background:var(--yellow);color:#1B2A49;box-shadow:0 4px 0 var(--ink)}
+.pzcard{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:2.5px solid var(--ink);border-radius:26px;box-shadow:7px 7px 0 var(--ink);overflow:hidden;background:var(--card)}
+.pzl{padding:26px;display:grid;gap:14px;align-content:start;background:var(--soft)}
+.pzl .tag{justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:3px 10px}
+.pzl .big{font:600 clamp(36px,5vw,56px) var(--head);line-height:1;color:var(--fg)}
+.pzr{padding:26px;display:grid;gap:12px;align-content:start;border-left:2.5px dashed var(--ink)}
+.voucher{display:grid;gap:2px;justify-items:center;text-align:center;border:2.5px dashed var(--ink);border-radius:18px;padding:16px;background:var(--mint)}
+.voucher span{font-size:13px;font-weight:700}
+.voucher b{font:600 30px var(--head);letter-spacing:.06em}
+@media (max-width:820px){.pzcard{grid-template-columns:1fr}.pzr{border-left:0;border-top:2.5px dashed var(--ink)}}
+</style>
+
+
+<div class="wrap">
+  <header class="bar">
+    <button class="brand" data-go="home"><i>P</i><span id="brandName">Preciouslyours Learning</span></button>
+    <nav class="nav" id="nav" aria-label="Site"></nav>
+  </header>
+  <div class="demo" id="demo"></div>
+  <main id="view"></main>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var BRAND="Preciouslyours Learning", DAY=86400000, DOMAIN="preciouslyours.example/r/";
+var DEFAULT_RULES={puzzleReward:"voucher",voucherValue:20,windowDays:60,firstOnly:false,cashPct:50,cashoutBlock:100,rates:{parent:{program:40,kit:5},tutor:{program:40,kit:5}}};
+var PRODUCTS={program:{name:"Math Inquirers holiday program",price:420},kit:{name:"Math Inquirers home book and kit",price:35}};
+var LESSONS=[["Count with the Frog","Number patterns and skip counting"],["Number Bond Inquiry","Parts and wholes to 20"],["Let's Plan the Fruit Party","Picture graphs and tallies"],["Pattern Inquiry","Shape and number patterns"],["Mystery Number","Working backwards"],["Coin Combos","Money and finding every way"],["Shape Safari","2D shapes, sides and corners"],["Logic Lab","Clues, sorting and Venn diagrams"],["Measure It!","Length with non-standard units"],["Challenge Day","Mixed puzzles and the certificate"]];
+var LEVELS=["Nursery / K1","K2","Primary 1","Primary 2","Primary 3","Primary 4","Primary 5","Primary 6","Secondary"];
+function defRules(){return JSON.parse(JSON.stringify(DEFAULT_RULES))}
+function blank(){return{accounts:[],referrals:[],ledger:[],rules:defRules(),offset:0,sessions:[],enrolments:[],orders:[],subscribers:[],tutorApps:[],submissions:[],vouchers:[]}}
+var S=blank();
+var ui={pzLevel:"p1",pz:{},view:"home",me:null,paynow:null,visitRef:"",fromEmail:false,toast:null,dbOn:false,adminTab:"overview",redeem:"",done:{},
+  f:{signup:{name:"",email:"",role:"parent"},sub:{name:"",email:"",level:"",code:"",consent:false,i_math:true,i_eng:false,i_sci:false,i_tips:false},
+     enrol:{parent:"",email:"",mobile:"",child:"",level:"Primary 1",session:"",code:"",consent:false,useCredits:false,voucher:"",notes:""},
+     kit:{name:"",email:"",code:"",consent:false},pzs:{child:"",email:"",why:"",consent:false},
+     tutor:{name:"",email:"",mobile:"",subjects:"",years:"",mode:"Both",about:"",consent:false},
+     cls:{name:"",mode:"Face to face",days:"",time:"",start:"",venue:"",cap:8}}};
+try{ui.me=localStorage.getItem("pl_me")||null}catch(e){}
+var dbDoc=null,lastJson="",canAdmin=true;
+var VIEWS=["home","puzzles","math-inquirers","enrol","emails","refer","tutors","admin"];
+try{var h=(location.hash||"").slice(1);if(VIEWS.indexOf(h)>=0)ui.view=h}catch(e){}
+
+/* ---------- helpers ---------- */
+function now(){return Date.now()+S.offset*DAY}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function uid(p){return p+Math.random().toString(36).slice(2,8)}
+function fmt(ts){return new Date(ts).toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"})}
+function money(n){n=Math.round(Number(n)*100)/100;return "S$"+(n%1?n.toFixed(2):n.toFixed(0))}
+function split(t){var c=Math.round(t*S.rules.cashPct)/100;return{cash:c,credit:Math.round((t-c)*100)/100}}
+function isCash(l){return l.kind==="cash"}
+function acct(id){return S.accounts.find(function(a){return a.id===id})}
+function acctByEmail(e){return S.accounts.find(function(a){return a.email===e})}
+function byCode(c){c=(c||"").trim().toUpperCase();return c?S.accounts.find(function(a){return a.code===c}):null}
+function mkCode(name){var base=(name.replace(/[^A-Za-z]/g,"").toUpperCase()+"XXXX").slice(0,4),c;do{c=base+"-"+Math.random().toString(36).slice(2,6).toUpperCase()}while(S.accounts.some(function(a){return a.code===c}));return c}
+function balance(id){return S.ledger.filter(function(l){return l.accountId===id&&!isCash(l)}).reduce(function(s,l){return s+l.amount},0)}
+function cashDue(id){return S.ledger.filter(function(l){return l.accountId===id&&isCash(l)}).reduce(function(s,l){return s+l.amount},0)}
+function daysLeft(r){return Math.ceil((r.joinedAt+S.rules.windowDays*DAY-now())/DAY)}
+function validEmail(e){return /^\S+@\S+\.\S+$/.test(e)}
+function sess(id){return S.sessions.find(function(s){return s.id===id})}
+function taken(id){return S.enrolments.filter(function(e){return e.sessionId===id&&(e.status==="paid"||e.status==="awaiting")}).length}
+function seatsLeft(s){return Math.max(0,(s.cap||8)-taken(s.id))}
+function status(r){
+  var credited=r.conversions.some(function(c){return c.credit>0}),dl=daysLeft(r);
+  if(credited)return{k:"ok",t:"Converted"};
+  if(dl<=0)return{k:"end",t:"Window ended"};
+  return{k:"wait",t:r.kind==="list"?"On mailing list":"Signed up"};
+}
+function seatDots(s){var t=taken(s.id),c=s.cap||8,o="";for(var i=0;i<c;i++)o+='<i class="'+(i<t?"f":"")+'"></i>';return '<div class="seats" aria-label="'+t+' of '+c+' seats taken">'+o+'</div>'}
+
+/* ---------- storage ---------- */
+function save(){var j=JSON.stringify(S);lastJson=j;if(dbDoc){dbDoc.set(JSON.parse(j)).catch(function(){ui.toast={k:"no",t:"Could not save. Check your connection and try again."};render()})}}
+function load(d){if(!d)return;var b=blank();Object.keys(b).forEach(function(k){if(d[k]!==undefined)b[k]=d[k]});b.rules=Object.assign(defRules(),d.rules||{});b.rules.rates=Object.assign(defRules().rates,b.rules.rates||{});S=b}
+
+/* ---------- referral core ---------- */
+function attach(email,name,code,kind){
+  code=(code||"").trim();if(!code)return null;
+  var ref=byCode(code);
+  if(!ref)return{k:"info",t:"The referral code "+code.toUpperCase()+" was not found, so no referral was recorded."};
+  if(ref.email===email)return{k:"info",t:"You cannot use your own referral code."};
+  if(acctByEmail(email))return{k:"info",t:"Referral codes are for new families, and this email already has an account."};
+  var ex=S.referrals.find(function(r){return r.email===email});
+  if(ex)return ex.referrerId===ref.id?null:{k:"info",t:"This email was already referred by someone else, who keeps the referral."};
+  S.referrals.push({id:uid("r"),referrerId:ref.id,name:name,email:email,kind:kind,joinedAt:now(),conversions:[]});
+  return{k:"ok",t:"Referred by "+ref.name+"."};
+}
+function conv(email,product,channel,who){
+  var r=S.referrals.find(function(x){return x.email===email});if(!r)return null;
+  var ref=acct(r.referrerId);if(!ref)return null;
+  var c={id:uid("c"),ts:now(),product:product,channel:channel,credit:0,note:""};
+  if(daysLeft(r)<=0)c.note="Outside the "+S.rules.windowDays+"-day window";
+  else if(S.rules.firstOnly&&r.conversions.some(function(x){return x.credit>0}))c.note="Already rewarded once";
+  else{c.credit=S.rules.rates[ref.role][product]||0;c.note=channel==="email"?"Bought through a weekly email":channel==="link"?"Through the referral link":"Through the website";}
+  r.conversions.push(c);
+  var sp=split(c.credit),nt=(who||r.name)+" · "+PRODUCTS[product].name;
+  if(sp.credit>0)S.ledger.push({id:uid("l"),ts:now(),accountId:ref.id,amount:sp.credit,kind:"credit",type:"earn",refId:r.id,note:nt});
+  if(sp.cash>0)S.ledger.push({id:uid("l"),ts:now(),accountId:ref.id,amount:sp.cash,kind:"cash",type:"earn",refId:r.id,note:nt});
+  return c.credit>0?ref.name+" earned "+money(c.credit)+" ("+money(sp.cash)+" cash + "+money(sp.credit)+" credit).":"No referral reward: "+c.note.toLowerCase()+".";
+}
+
+/* ---------- actions ---------- */
+function toast(k,t){ui.toast={k:k,t:t}}
+function signup(){
+  var f=ui.f.signup,email=f.email.trim().toLowerCase(),name=f.name.trim();
+  if(!name||!validEmail(email)){toast("no","Enter your name and a valid email address.");return render()}
+  var ex=acctByEmail(email);
+  if(ex){ui.me=ex.id;toast("info","You already have an account, so we signed you in.");return finishMe()}
+  var a={id:uid("a"),name:name,email:email,role:f.role,code:mkCode(name),createdAt:now()};
+  S.accounts.push(a);save();ui.me=a.id;toast("ok","Account created. Your referral link is ready.");f.name="";f.email="";finishMe();
+}
+function finishMe(){try{localStorage.setItem("pl_me",ui.me)}catch(e){}render()}
+function subscribe(){
+  var f=ui.f.sub,email=f.email.trim().toLowerCase(),name=f.name.trim(),code=f.code||ui.visitRef;
+  if(!name||!validEmail(email)){toast("no","Enter your name and a valid email address.");return render()}
+  if(!f.consent){toast("no","Tick the consent box so we are allowed to email you.");return render()}
+  if(S.subscribers.some(function(s){return s.email===email})){ui.done.sub={k:"info",t:"You are already on the list. Look out for the next email on Sunday."};return render()}
+  var ints=[["i_math","Maths puzzles"],["i_eng","English and reading"],["i_sci","Science at home"],["i_tips","Study tips for parents"]].filter(function(x){return f[x[0]]}).map(function(x){return x[1]});
+  S.subscribers.push({id:uid("s"),name:name,email:email,level:f.level,interests:ints,joinedAt:now(),code:(code||"").toUpperCase()});
+  var m=attach(email,name,code,"list");save();
+  ui.done.sub={k:"ok",t:"You're on the list, "+name+". The first email arrives this Sunday with a free puzzle pack."+(m&&m.k==="ok"?" "+m.t:"")};
+  if(m&&m.k!=="ok")toast("info",m.t);
+  ui.f.sub=Object.assign(ui.f.sub,{name:"",email:"",code:"",consent:false});render();
+}
+function enrol(){
+  var f=ui.f.enrol,email=f.email.trim().toLowerCase(),code=f.code||ui.visitRef,s=sess(f.session);
+  if(!f.parent.trim()||!validEmail(email)||!f.mobile.trim()||!f.child.trim()){toast("no","Fill in the parent's name, email, mobile and the child's name.");return render()}
+  if(!s){toast("no","Choose a class.");return render()}
+  if(!f.consent){toast("no","Tick the consent box to continue.");return render()}
+  var full=seatsLeft(s)<=0,a=acctByEmail(email),use=0,vv=voucher(f.voucher),vd=0;
+  if(f.voucher.trim()&&(!vv||vv.usedAt)){toast("no",!vv?"That voucher code was not found. Check it or leave the box empty.":"That voucher has already been used.");return render()}
+  if(!full&&vv){vd=Math.min(vv.value,PRODUCTS.program.price);vv.usedAt=now()}
+  if(!full&&f.useCredits&&a)use=Math.min(balance(a.id),PRODUCTS.program.price-vd);
+  var ch=ui.fromEmail?"email":(code?"link":"website");
+  var m=attach(email,f.parent.trim(),code,"program");
+  var e={id:uid("e"),ts:now(),parent:f.parent.trim(),email:email,mobile:f.mobile.trim(),child:f.child.trim(),level:f.level,sessionId:s.id,code:(code||"").toUpperCase(),channel:ch,status:full?"waitlist":"awaiting",creditsUsed:use,voucher:vd?vv.code:"",voucherOff:vd,due:PRODUCTS.program.price-use-vd,notes:f.notes.trim()};
+  S.enrolments.push(e);
+  if(use>0)S.ledger.push({id:uid("l"),ts:now(),accountId:a.id,amount:-use,kind:"credit",type:"redeem",note:"Used on Math Inquirers for "+e.child});
+  save();
+  ui.done.enrol={e:e,m:m};
+  ui.f.enrol=Object.assign(ui.f.enrol,{child:"",notes:"",consent:false,useCredits:false,code:"",voucher:""});render();window.scrollTo(0,0);
+}
+function buyKit(){
+  var f=ui.f.kit,email=f.email.trim().toLowerCase(),code=f.code||ui.visitRef;
+  if(!f.name.trim()||!validEmail(email)){toast("no","Enter your name and a valid email address.");return render()}
+  if(!f.consent){toast("no","Tick the consent box to continue.");return render()}
+  var m=attach(email,f.name.trim(),code,"program");
+  S.orders.push({id:uid("o"),ts:now(),name:f.name.trim(),email:email,product:"kit",due:PRODUCTS.kit.price,channel:ui.fromEmail?"email":(code?"link":"website"),status:"awaiting"});save();
+  ui.done.kit={k:"ok",t:"Order received. Pay "+money(PRODUCTS.kit.price)+" by PayNow and we will email the download link and post the kit."+(m&&m.k==="ok"?" "+m.t:"")};
+  ui.f.kit=Object.assign(ui.f.kit,{code:"",consent:false});render();
+}
+function applyTutor(){
+  var f=ui.f.tutor,email=f.email.trim().toLowerCase();
+  if(!f.name.trim()||!validEmail(email)||!f.mobile.trim()||!f.subjects.trim()){toast("no","Fill in your name, email, mobile and the subjects you teach.");return render()}
+  if(!f.consent){toast("no","Tick the consent box to continue.");return render()}
+  S.tutorApps.push({id:uid("t"),ts:now(),name:f.name.trim(),email:email,mobile:f.mobile.trim(),subjects:f.subjects.trim(),years:f.years,mode:f.mode,about:f.about.trim(),status:"new"});save();
+  ui.done.tutor={k:"ok",t:"Thanks, "+f.name.trim()+". We will contact you within a week to arrange a short chat and a trial lesson."};
+  ui.f.tutor={name:"",email:"",mobile:"",subjects:"",years:"",mode:"Both",about:"",consent:false};render();
+}
+function markPaid(kind,id){
+  var x=kind==="e"?S.enrolments.find(function(e){return e.id===id}):S.orders.find(function(o){return o.id===id});if(!x||x.status==="paid")return;
+  x.status="paid";x.paidAt=now();
+  var r=conv(x.email,kind==="e"?"program":"kit",x.channel,kind==="e"?x.parent+" ("+x.child+")":x.name);
+  save();toast("ok","Marked as paid."+(r?" "+r:""));render();
+}
+function approveTutor(id){
+  var t=S.tutorApps.find(function(x){return x.id===id});if(!t)return;t.status="approved";
+  var a=acctByEmail(t.email);
+  if(!a){a={id:uid("a"),name:t.name,email:t.email,role:"tutor",code:mkCode(t.name),createdAt:now()};S.accounts.push(a)}else a.role="tutor";
+  save();toast("ok",t.name+" approved. Their tutor referral code is "+a.code+".");render();
+}
+function redeem(){
+  var a=acct(ui.me),n=Math.floor(Number(ui.redeem));if(!a)return;
+  if(!n||n<1){toast("no","Enter how many credits to use.");return render()}
+  if(n>balance(a.id)){toast("no","You only have "+money(balance(a.id))+" in credits.");return render()}
+  S.ledger.push({id:uid("l"),ts:now(),accountId:a.id,amount:-n,kind:"credit",type:"redeem",note:"Credits used on a purchase"});save();
+  ui.redeem="";toast("ok",money(n)+" in credits will come off your next payment.");render();
+}
+function payout(id){var a=acct(id),d=cashDue(id);if(!a||d<=0)return;S.ledger.push({id:uid("l"),ts:now(),accountId:id,amount:-d,kind:"cash",type:"payout",note:"Cash paid out"+(a.paynow?" by PayNow to "+a.paynow:"")});save();toast("ok","Marked "+money(d)+" as paid to "+a.name+".");render()}
+function savePaynow(){var a=acct(ui.me);if(!a)return;var v=(ui.paynow||"").trim();if(!v){toast("no","Enter a PayNow mobile number or UEN.");return render()}a.paynow=v;save();toast("ok","PayNow details saved.");render()}
+function cashOut(){var a=acct(ui.me);if(!a||a.role!=="tutor")return;var B=S.rules.cashoutBlock||100,bal=balance(a.id),n=Math.floor(bal/B)*B;
+  if(n<B){toast("no","You need at least "+money(B)+" in credits to cash out.");return render()}
+  var ts=now();S.ledger.push({id:uid("l"),ts:ts,accountId:a.id,amount:-n,kind:"credit",type:"cashout",note:"Credits cashed out"});
+  S.ledger.push({id:uid("l"),ts:ts,accountId:a.id,amount:n,kind:"cash",type:"cashout",note:"From credits cashed out ("+(n/B)+" × "+money(B)+")"});
+  save();toast("ok",money(n)+" of credits moved to cash. It will be paid with the next PayNow payout.");render()}
+function addClass(){
+  var f=ui.f.cls;if(!f.name.trim()||!f.days.trim()||!f.time.trim()||!f.start.trim()){toast("no","Fill in the class name, days, time and start date.");return render()}
+  S.sessions.push({id:uid("g"),name:f.name.trim(),mode:f.mode,days:f.days.trim(),time:f.time.trim(),start:f.start.trim(),venue:f.venue.trim(),cap:Math.max(1,Number(f.cap)||8),open:true});save();
+  ui.f.cls={name:"",mode:"Face to face",days:"",time:"",start:"",venue:"",cap:8};toast("ok","Class added.");render();
+}
+
+/* ---------- shared bits ---------- */
+function navHtml(){
+  var t=[["home","Home"],["puzzles","Puzzles"],["math-inquirers","Math Inquirers"],["emails","Free weekly emails"],["refer","Refer & earn"],["tutors","For tutors"]];
+  if(canAdmin)t.push(["admin","Admin"]);
+  return t.map(function(x){return '<button class="tab" data-go="'+x[0]+'" aria-current="'+(ui.view===x[0])+'">'+x[1]+'</button>'}).join("")+'<button class="btn yel sm" data-go="enrol" style="margin-left:6px;padding:8px 16px">Enrol</button>';
+}
+function demoHtml(){
+  var me=acct(ui.me),d=new Date(now()).toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"});
+  var opts='<option value="">No referral link</option>'+S.accounts.map(function(a){return '<option value="'+esc(a.code)+'"'+(a.code===ui.visitRef?" selected":"")+'>Link from '+esc(a.name)+'</option>'}).join("");
+  return '<span><b>Prototype controls</b></span><span>Date: <b>'+esc(d)+'</b></span>'+
+   '<button class="btn sm alt" data-clock="7">+7 days</button><button class="btn sm alt" data-clock="30">+30 days</button>'+(S.offset?'<button class="btn sm alt" data-clock="0">Today</button>':'')+
+   '<label for="vr">Visitor came via</label><select id="vr" data-bind="visitRef">'+opts+'</select>'+
+   '<label><input type="checkbox" id="fe" data-bind="fromEmail"'+(ui.fromEmail?" checked":"")+'> from a weekly email</label>'+
+   '<span style="margin-left:auto">'+(me?'Signed in: <b>'+esc(me.name)+'</b> <button class="btn sm alt" data-act="signout">Sign out</button>':'Not signed in')+'</span>';
+}
+function footHtml(){
+  return '<div><b>'+BRAND+'</b><p style="margin-top:6px">Small-group classes and free weekly learning ideas for families in Singapore. Run by Preciouslyours Pte Ltd.</p><p style="margin-top:6px">Not affiliated with MOE or the Gifted Education Programme.</p></div>'+
+  '<div><b>Explore</b><p style="margin-top:6px"><a href="#math-inquirers" data-go="math-inquirers">Math Inquirers</a><br><a href="#emails" data-go="emails">Free weekly emails</a><br><a href="#refer" data-go="refer">Refer &amp; earn</a><br><a href="#tutors" data-go="tutors">Teach with us</a></p></div>'+
+  '<div><b>Contact</b><p style="margin-top:6px">Email: hello@preciouslyours.example<br>WhatsApp: to be added<br>We handle your details under the PDPA and only use them for the purpose you sign up for.</p></div>';
+}
+function toastHtml(){var t=ui.toast;ui.toast=null;return t?'<div class="msg '+t.k+'" role="status">'+esc(t.t)+'</div>':''}
+function inp(id,bind,val,type,extra){return '<input id="'+id+'" '+(type?'type="'+type+'" ':'')+'data-bind="'+bind+'" value="'+esc(val)+'" '+(extra||"")+'>'}
+function fld(label,id,html){return '<div class="field"><label for="'+id+'">'+label+'</label>'+html+'</div>'}
+function chk(id,bind,on,text){return '<label class="check" for="'+id+'"><input type="checkbox" id="'+id+'" data-bind="'+bind+'"'+(on?" checked":"")+'><span>'+text+'</span></label>'}
+function codeField(id,bind,val){var v=val||ui.visitRef,r=byCode(v);return fld('Referral code <span class="muted" style="font-weight:600">(optional)</span>',id,inp(id,bind,v,"",'placeholder="e.g. LEEA-4F2K" autocapitalize="characters"')+(r?'<span class="small" style="color:var(--teal);font-weight:700">Referred by '+esc(r.name)+'</span>':''))}
+function journal(){
+  var r=[["Notice the pattern",1],["Test it with objects",1],["Check your answer",1],["Explain why",0]];
+  return '<div class="journal" aria-hidden="true"><div class="row" style="justify-content:space-between"><h3>My Inquiry Journal</h3><span class="small" style="font-weight:800">Lesson 6</span></div>'+
+  r.map(function(x,i){return '<div class="jrow"><b>'+(i+1)+'</b><span>'+x[0]+'</span><div class="stamp'+(x[1]?' on':'')+'">'+(x[1]?'DONE':'')+'</div></div>'}).join("")+'</div>';
+}
+function sessionCards(pick){
+  var open=S.sessions.filter(function(s){return s.open!==false});
+  if(!open.length)return '<div class="card empty">Class times for the next holiday will be posted here soon. Join the free weekly emails to hear first.</div>';
+  return '<div class="sessions">'+open.map(function(s){var l=seatsLeft(s);
+    return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill '+(s.mode==="Online"?"p-ok":"p-wait")+'">'+esc(s.mode)+'</span><span class="small muted">'+(l?l+' of '+(s.cap||8)+' seats left':'Full, join the waitlist')+'</span></div><h3>'+esc(s.name)+'</h3><p><b>'+esc(s.days)+'</b>, '+esc(s.time)+'<br><span class="muted small">Starts '+esc(s.start)+(s.venue?' · '+esc(s.venue):'')+'</span></p>'+seatDots(s)+
+    (pick?'<button class="btn sm '+(l?'':'alt')+'" data-pick="'+s.id+'" style="justify-self:start;margin-top:4px">'+(l?'Enrol in this class':'Join waitlist')+'</button>':'')+'</div>'}).join("")+'</div>';
+}
+
+/* ---------- puzzles ---------- */
+var PUZZLES=[
+ {id:"k2",level:"K2",title:"Number riddle",big:"? + 2 = 7",q:"I am a number. When you add 2 to me, you get 7. What number am I?",a:["5"],hint:"Count back 2 from 7 on your fingers.",why:"7 take away 2 is 5. Check: 5 + 2 = 7."},
+ {id:"p1",level:"Primary 1",title:"Frog hops",big:"3, 6, 9, ?",q:"A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?",a:["21"],hint:"Keep adding 3, or count 7 jumps of 3.",why:"7 hops of 3 is 3 + 3 + 3 + 3 + 3 + 3 + 3 = 21."},
+ {id:"p2",level:"Primary 2",title:"Coin count",big:"6 coins = 45¢",q:"Mei has 6 coins. They are all 10¢ or 5¢ coins and add up to 45¢. How many 10¢ coins does she have?",a:["3"],hint:"Try 6 coins of 5¢ first (30¢). Each swap to a 10¢ adds 5¢.",why:"Six 5¢ coins make 30¢. We need 15¢ more, and each swap adds 5¢, so swap 3 coins: 3 × 10¢ + 3 × 5¢ = 45¢."},
+ {id:"p3",level:"Primary 3",title:"Double and one more",big:"2, 5, 11, 23, ?",q:"Each number is double the one before, plus 1: 2, 5, 11, 23 … What comes next?",a:["47"],hint:"Double 23, then add 1.",why:"23 × 2 = 46, and 46 + 1 = 47."},
+ {id:"p46",level:"Primary 4–6",title:"Age puzzle",big:"3× now, 2× later",q:"Ali is 3 times as old as Ben. In 4 years, Ali will be twice as old as Ben. How old is Ali now?",a:["12"],hint:"Try Ben = 2, 3, 4 … and check both clues.",why:"If Ben is 4, Ali is 12. In 4 years they are 8 and 16, and 16 is twice 8."}
+];
+function pz(id){return PUZZLES.find(function(p){return p.id===id})}
+function norm(s){return String(s||"").trim().toLowerCase().replace(/[^0-9a-z]/g,"")}
+function rewardName(){return S.rules.puzzleReward==="trial"?"free trial lesson":money(S.rules.voucherValue)+" voucher"}
+function puzzleStrip(){
+  return '<div class="lvls" role="tablist">'+PUZZLES.map(function(p){return '<button class="lvl'+(ui.pzLevel===p.id?' on':'')+'" data-lvl="'+p.id+'" role="tab" aria-selected="'+(ui.pzLevel===p.id)+'">'+p.level+'</button>'}).join("")+'</div>'+puzzleCard(pz(ui.pzLevel),true);
+}
+function puzzleCard(p,withSubmit){
+  var st=ui.pz[p.id]||{},res=st.res;
+  var sub=ui.done["pz_"+p.id];
+  return '<div class="pzcard"><div class="pzl"><span class="tag">'+p.level+' · '+esc(p.title)+'</span><div class="big">'+esc(p.big)+'</div><p style="font-size:18px">'+esc(p.q)+'</p>'+
+  '<div class="row"><input id="pa-'+p.id+'" data-bind="pz.'+p.id+'.ans" value="'+esc(st.ans||"")+'" placeholder="Your answer" style="max-width:180px" inputmode="numeric"><button class="btn yel" data-check="'+p.id+'">Check</button><button class="btn alt sm" data-hint="'+p.id+'">'+(st.hint?"Hide hint":"Hint")+'</button></div>'+
+  (st.hint?'<div class="msg info">'+esc(p.hint)+'</div>':'')+
+  (res==="ok"?'<div class="msg ok">Correct! Now the important part: can your child explain why? <br><span style="font-weight:600">'+esc(p.why)+'</span></div>':res==="no"?'<div class="msg no">Not yet. Try it with objects, then check again.</div>':'')+
+  '</div>'+(withSubmit?'<div class="pzr">'+(sub?'<div class="msg '+sub.k+'">'+esc(sub.t)+'</div>'+(sub.code?'<div class="voucher"><span>Your voucher</span><b>'+esc(sub.code)+'</b><span>'+esc(sub.val)+'</span></div>':'')+'<button class="btn sm alt" data-act="again-pz" data-id="'+p.id+'" style="justify-self:start">Enter another child</button>':submitForm(p))+'</div>':'')+'</div>';
+}
+function submitForm(p){
+  var f=ui.f.pzs;
+  return '<form class="sec" id="pzForm" data-id="'+p.id+'"><div><h3>Send in your answer</h3><p class="small muted">Correct entries win a <b>'+rewardName()+'</b>'+(S.rules.puzzleReward==="trial"?' for Math Inquirers':' off any program')+'. One prize per child each week.</p></div>'+
+  '<div class="grid2">'+fld("Child's name","pz-c",inp("pz-c","f.pzs.child",f.child))+fld("Parent's email","pz-e",inp("pz-e","f.pzs.email",f.email,"email"))+'</div>'+
+  fld('How did your child work it out? <span class="muted" style="font-weight:600">(optional)</span>',"pz-w",'<textarea id="pz-w" data-bind="f.pzs.why" style="min-height:64px">'+esc(f.why)+'</textarea>')+
+  chk("pz-k","f.pzs.consent",f.consent,"I agree to "+BRAND+" contacting me about this entry and sending the weekly puzzle email.")+
+  '<button class="btn" type="submit">Submit answer</button></form>';
+}
+function check(id){var p=pz(id),st=ui.pz[id]=ui.pz[id]||{};st.res=p.a.indexOf(norm(st.ans))>=0?"ok":"no";render()}
+function submitPuzzle(id){
+  var p=pz(id),f=ui.f.pzs,st=ui.pz[id]||{},email=f.email.trim().toLowerCase(),child=f.child.trim();
+  if(!child||!validEmail(email)){toast("no","Enter your child's name and a valid email.");return render()}
+  if(!norm(st.ans)){toast("no","Type your answer in the box first.");return render()}
+  if(!f.consent){toast("no","Tick the consent box to send your entry.");return render()}
+  var wk=weekKey(),dup=S.submissions.find(function(s){return s.email===email&&norm(s.child)===norm(child)&&s.week===wk&&s.correct});
+  var ok=p.a.indexOf(norm(st.ans))>=0;
+  var s={id:uid("z"),ts:now(),week:wk,puzzle:id,level:p.level,child:child,email:email,answer:st.ans,why:f.why.trim(),correct:ok,reward:null,code:ui.visitRef||""};
+  var res={k:"info",t:""};
+  if(ok&&!dup){
+    if(S.rules.puzzleReward==="trial"){s.reward="trial";res={k:"ok",t:"Correct! "+child+" has won a free trial lesson. We will email you to book a time."}}
+    else{var v={code:"PUZ-"+Math.random().toString(36).slice(2,6).toUpperCase(),value:S.rules.voucherValue,email:email,child:child,issuedAt:now(),usedAt:null};S.vouchers.push(v);s.reward=v.code;res={k:"ok",t:"Correct! "+child+" has won a "+money(v.value)+" voucher. Use it when you enrol.",code:v.code,val:money(v.value)+" off any program · valid 60 days"}}
+  } else if(ok){res={k:"info",t:"Correct again! "+child+" already has this week's prize. Come back next Sunday for a new puzzle."}}
+  else res={k:"no",t:"Thanks for entering. That answer is not right yet. Try the hint and send it again."};
+  S.submissions.push(s);
+  if(!S.subscribers.some(function(x){return x.email===email})){S.subscribers.push({id:uid("s"),name:"Parent of "+child,email:email,level:p.level,interests:["Maths puzzles"],joinedAt:now(),code:(ui.visitRef||"").toUpperCase()});attach(email,"Parent of "+child,ui.visitRef,"list")}
+  save();ui.done["pz_"+id]=res;if(ok)ui.f.pzs.why="";render();
+}
+function weekKey(){var d=new Date(now());d.setHours(0,0,0,0);d.setDate(d.getDate()-d.getDay());return d.toISOString().slice(0,10)}
+function voucher(code){code=(code||"").trim().toUpperCase();return code?S.vouchers.find(function(v){return v.code===code}):null}
+function puzzlesView(){
+  return toastHtml()+'<section class="hero"><div class="sec"><span class="eyebrow">Puzzle of the week</span><h1>Five levels. <mark>One</mark> big question: why?</h1><p class="lead">A new puzzle for each level every Sunday. Solve it together, then send in the answer to win a '+rewardName()+'.</p><div class="chips"><span class="chip">K2 to Primary 6</span><span class="chip">New every Sunday</span><span class="chip">Free to enter</span></div></div>'+heroArt()+'</section>'+
+  '<section class="sec">'+puzzleStrip()+'</section>'+
+  '<section class="sec"><div class="shead"><span class="eyebrow">How it works</span><h2>Solve, explain, win</h2></div><div class="rules4">'+[["Pick a level","Choose the puzzle that fits your child, or try a harder one."],["Solve it together","Use objects. Ask “How do you know?”"],["Send it in","One entry per child each week, by Sunday night."],["Win","Correct answers get a "+rewardName()+"."]].map(function(x,i){return '<div class="rule"><b>'+(i+1)+'</b><h3>'+x[0]+'</h3><p class="muted small">'+x[1]+'</p></div>'}).join("")+'</div></section>';
+}
+
+/* ---------- pages ---------- */
+function heroArt(){
+  var nl='',i;for(i=0;i<=10;i++){var x=20+i*44;nl+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="12" stroke="#1B2A49" stroke-width="3"/><text x="'+x+'" y="38" font-size="20" text-anchor="middle" fill="#1B2A49">'+i+'</text>'}
+  var tf='',r,c,fill=[1,1,1,1,1,2,2,0,0,0];for(r=0;r<2;r++)for(c=0;c<5;c++){var k=r*5+c;tf+='<rect x="'+(c*36)+'" y="'+(r*36)+'" width="36" height="36" fill="#fff" stroke="#1B2A49" stroke-width="3"/>'+(fill[k]?'<circle cx="'+(c*36+18)+'" cy="'+(r*36+18)+'" r="12" fill="'+(fill[k]==1?'#D64545':'#FFC93C')+'" stroke="#1B2A49" stroke-width="2"/>':'')}
+  return '<svg class="art" viewBox="0 0 520 430" role="img" aria-label="A frog hopping along a number line, a ten-frame with counters, coins and a pattern puzzle">'+
+  '<rect x="8" y="16" width="504" height="400" rx="44" fill="#D6E9FB" stroke="#1B2A49" stroke-width="3"/>'+
+  '<g transform="translate(48,62) rotate(-5)"><g class="wob">'+tf+'</g></g>'+
+  '<g transform="translate(330,52)"><circle cx="40" cy="40" r="36" fill="#C9CED6" stroke="#1B2A49" stroke-width="3"/><circle cx="40" cy="40" r="28" fill="none" stroke="#1B2A49" stroke-width="1.5" stroke-dasharray="4 4"/><text x="40" y="48" font-size="22" text-anchor="middle" fill="#1B2A49">50¢</text>'+
+  '<circle cx="118" cy="62" r="28" fill="#E1E4E9" stroke="#1B2A49" stroke-width="3"/><text x="118" y="69" font-size="18" text-anchor="middle" fill="#1B2A49">20¢</text>'+
+  '<circle cx="84" cy="112" r="22" fill="#EEF0F3" stroke="#1B2A49" stroke-width="3"/><text x="84" y="118" font-size="15" text-anchor="middle" fill="#1B2A49">10¢</text></g>'+
+  '<g transform="translate(60,182) rotate(-3)"><rect width="230" height="64" rx="16" fill="#FFC93C" stroke="#1B2A49" stroke-width="3"/><text x="115" y="43" font-size="30" text-anchor="middle" fill="#1B2A49" letter-spacing="4">2, 4, 6, ?</text></g>'+
+  '<g transform="translate(306,196)"><rect width="196" height="56" rx="18" fill="#fff" stroke="#1B2A49" stroke-width="3"/><path d="M30 56 L22 76 L50 56" fill="#fff" stroke="#1B2A49" stroke-width="3" stroke-linejoin="round"/><rect x="24" y="50" width="30" height="8" fill="#fff"/><text x="98" y="36" font-size="19" text-anchor="middle" fill="#1B2A49">Why does it work?</text></g>'+
+  '<g transform="translate(20,330)">'+nl+'<line x1="20" y1="0" x2="460" y2="0" stroke="#1B2A49" stroke-width="3"/>'+
+  '<path class="hop" d="M20 -4 Q64 -70 108 -4" fill="none" stroke="#FF7A59" stroke-width="4"/><path class="hop" d="M108 -4 Q152 -70 196 -4" fill="none" stroke="#FF7A59" stroke-width="4"/><path class="hop" d="M196 -4 Q240 -70 284 -4" fill="none" stroke="#FF7A59" stroke-width="4"/>'+
+  '<g transform="translate(284,-30)"><g class="frog"><ellipse cx="0" cy="8" rx="30" ry="22" fill="#3DBE7A" stroke="#1B2A49" stroke-width="3"/><circle cx="-13" cy="-12" r="10" fill="#fff" stroke="#1B2A49" stroke-width="3"/><circle cx="13" cy="-12" r="10" fill="#fff" stroke="#1B2A49" stroke-width="3"/><circle cx="-11" cy="-11" r="4" fill="#1B2A49"/><circle cx="15" cy="-11" r="4" fill="#1B2A49"/><path d="M-10 12 Q0 20 10 12" fill="none" stroke="#1B2A49" stroke-width="3" stroke-linecap="round"/></g></g></g>'+
+  '</svg>';
+}
+function homeView(){
+  return toastHtml()+
+  '<section class="hero"><div class="sec"><span class="eyebrow">Small groups · Primary school · Singapore</span><h1>Help your child <mark>think</mark>, not just memorise.</h1><p class="lead">Hands-on classes of up to 8 children, a free puzzle every week, and prizes for the best young thinkers.</p><div class="row" style="margin-top:8px"><button class="btn yel" data-go="math-inquirers">See Math Inquirers</button><button class="btn ghost" data-go="puzzles">Try this week\'s puzzle</button></div><div class="chips"><span class="chip">Up to 8 per group</span><span class="chip">Face to face or online</span><span class="chip">Nothing to buy</span></div></div>'+heroArt()+'</section>'+
+  '<section class="sec"><div class="shead"><span class="eyebrow">Puzzle of the week</span><h2>Pick your level. Can you solve it?</h2><p class="muted">Check your answer here. Send it in by Sunday to win a '+rewardName()+'.</p></div>'+puzzleStrip()+'</section>'+
+  '<section class="sec"><div class="shead"><span class="eyebrow">Programs</span><h2>What we run</h2></div><div class="three">'+
+  '<div class="tile yel"><span class="tag">Holiday program · Primary 1</span><div class="vis" style="background:#FFF9EC">'+miniJournal()+'</div><h3>Math Inquirers</h3><p class="muted">10 lessons over 5 weeks. Children notice patterns, test ideas with objects and explain their thinking.</p><p class="price">'+money(PRODUCTS.program.price)+' <span class="small muted" style="font-family:var(--body)">for 15 hours</span></p><button class="btn sm" data-go="math-inquirers" style="justify-self:start">Details and class times</button></div>'+
+  '<div class="tile sky"><span class="tag">Home edition</span><div class="vis">'+miniCoins()+'</div><h3>Book and kit</h3><p class="muted">A print-at-home puzzle book with cut-out coins, ten-frames and counters. Different puzzles from the class.</p><p class="price">'+money(PRODUCTS.kit.price)+'</p><button class="btn sm alt" data-go="math-inquirers" data-anchor="kit" style="justify-self:start">Buy the home edition</button></div>'+
+  '<div class="tile mint"><span class="tag">Coming next</span><div class="vis" style="font:600 46px var(--head);color:#1B2A49">P2 · P3 · ?</div><h3>More programs</h3><p class="muted">Programs for other levels and subjects are on the way. Tell us what you want when you join the weekly emails.</p><button class="btn sm alt" data-go="emails" style="justify-self:start">Tell us</button></div>'+
+  '</div></section>'+
+  '<section class="band peach"><div class="sec"><span class="eyebrow">Free every Sunday</span><h2>A puzzle and a tip, every week</h2><p class="muted">One short email: a puzzle for each level, a tip that works at home, and first news of new classes. Unsubscribe any time.</p>'+emailMock()+'</div>'+subForm(true)+'</section>'+
+  '<section class="two"><div class="tile yel"><span class="tag">Refer &amp; earn</span><h3>Tell a friend, earn cash and credits</h3><p class="muted">Get your own link. When a friend enrols within '+S.rules.windowDays+' days, you earn '+money(S.rules.rates.parent.program)+': half in cash, half as credits.</p><button class="btn sm" data-go="refer" style="justify-self:start">Get my link</button></div>'+
+  '<div class="tile mint"><span class="tag">For tutors</span><h3>Teach Math Inquirers</h3><p class="muted">Join our tutor network. We give you the lesson plans, slides, workbook and training. You teach small groups.</p><button class="btn sm alt" data-go="tutors" style="justify-self:start">Find out more</button></div></section>';
+}
+function miniJournal(){return '<svg viewBox="0 0 200 110" width="86%" aria-hidden="true"><rect x="6" y="6" width="188" height="98" rx="14" fill="#fff" stroke="#1B2A49" stroke-width="3"/><text x="20" y="32" font-family="Fredoka" font-size="16" fill="#1B2A49">My Inquiry Journal</text>'+[0,1,2,3,4].map(function(i){return '<circle cx="'+(32+i*34)+'" cy="70" r="13" fill="'+(i<3?'#1F7A6F':'#fff')+'" stroke="#1F7A6F" stroke-width="2.5" stroke-dasharray="'+(i<3?'0':'4 3')+'"/>'+(i<3?'<path d="M'+(26+i*34)+' 70 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none"/>':'')}).join("")+'</svg>'}
+function miniCoins(){return '<svg viewBox="0 0 200 110" width="86%" aria-hidden="true">'+[[45,55,32,"50¢","#C9CED6"],[110,45,26,"20¢","#E1E4E9"],[160,70,22,"10¢","#EEF0F3"],[95,88,18,"5¢","#F4F5F7"]].map(function(c){return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="'+c[2]+'" fill="'+c[4]+'" stroke="#1B2A49" stroke-width="3" stroke-dasharray="6 3"/><text x="'+c[0]+'" y="'+(c[1]+6)+'" font-family="Fredoka" font-size="'+(c[2]>24?17:13)+'" text-anchor="middle" fill="#1B2A49">'+c[3]+'</text>'}).join("")+'</svg>'}
+function emailMock(){var pz=PUZZLES[2];return '<div class="email" aria-hidden="true"><div class="top"><i></i><i></i><i></i><span style="margin-left:8px">This week: '+esc(pz.title)+'</span></div><div class="body"><b>Hi parents,</b><span class="puz">'+esc(pz.big||"?")+'</span><span class="small muted">'+esc(pz.q)+'</span><span class="small"><b>Tip:</b> ask "How do you know?" before checking the answer.</span></div></div>'}
+
+function subForm(compact){
+  var f=ui.f.sub;
+  if(ui.done.sub)return '<div class="card sec"><div class="msg '+ui.done.sub.k+'">'+esc(ui.done.sub.t)+'</div><button class="btn sm alt" data-act="again-sub" style="justify-self:start">Sign up someone else</button></div>';
+  return '<form class="card" id="subForm"><div class="grid2">'+fld("Your name","sb-n",inp("sb-n","f.sub.name",f.name,"",'autocomplete="name"'))+fld("Email","sb-e",inp("sb-e","f.sub.email",f.email,"email",'autocomplete="email"'))+'</div>'+
+  (compact?'':fld("Your child's level","sb-l",'<select id="sb-l" data-bind="f.sub.level"><option value="">Choose…</option>'+LEVELS.map(function(l){return '<option'+(l===f.level?" selected":"")+'>'+l+'</option>'}).join("")+'</select>')+
+   '<div class="field"><span class="flabel">I am interested in</span><div class="grid2">'+[["i_math","Maths puzzles"],["i_eng","English and reading"],["i_sci","Science at home"],["i_tips","Study tips for parents"]].map(function(x){return chk("sb-"+x[0],"f.sub."+x[0],f[x[0]],x[1])}).join("")+'</div></div>')+
+  codeField("sb-c","f.sub.code",f.code)+
+  chk("sb-k","f.sub.consent",f.consent,'I agree to receive weekly emails from '+BRAND+'. I can unsubscribe at any time.')+
+  '<button class="btn" type="submit">Send me the weekly emails</button></form>';
+}
+function emailsView(){
+  return toastHtml()+'<section class="two"><div class="sec"><span class="eyebrow">Free · every Sunday</span><h1>Weekly learning emails</h1><p class="lead">Short, practical and free. Each email has something to do together in 10 minutes.</p>'+emailMock()+
+  '<div class="card sec"><h3>What you get</h3><ul style="padding-left:18px;display:grid;gap:6px"><li>A puzzle for your child, with the answer and how to talk about it</li><li>A tip that works at the kitchen table</li><li>A free printable each month</li><li>First notice of new classes and holiday programs</li></ul><p class="small muted">We send to the email you give us and nothing else. Unsubscribe from any email.</p></div></div>'+subForm(false)+'</section>';
+}
+function miView(){
+  var R=S.rules;
+  return toastHtml()+
+  '<section class="hero"><div class="sec"><span class="eyebrow">Holiday program · Primary 1</span><h1>Math Inquirers</h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Ten hands-on lessons where children solve puzzles, test ideas with objects and explain their answers. Built for curious Primary 1 children who are ready for more than worksheets.</p><div class="row" style="margin-top:6px"><button class="btn yel" data-go="enrol">Enrol now</button><button class="btn ghost" data-scroll="classes">See class times</button></div></div>'+heroArt()+'</section>'+
+  '<section class="facts"><div class="fact"><div class="v">10 lessons</div><div class="l">90 minutes each, over 5 weeks</div></div><div class="fact"><div class="v">Up to 8</div><div class="l">children in each group</div></div><div class="fact"><div class="v">2 ways</div><div class="l">face to face or online</div></div><div class="fact"><div class="v">'+money(PRODUCTS.program.price)+'</div><div class="l">for 15 hours, all materials included</div></div></section>'+
+  '<section class="sec"><span class="eyebrow">How children learn</span><h2>The four Inquirer rules</h2><div class="rules4">'+
+  [["Notice the pattern","Look closely before rushing to an answer."],["Test it with objects","Use counters, coins and strips to check an idea."],["Check your answer","Does it make sense? Try another way."],["Explain why","Say or draw why it works. This is where learning sticks."]].map(function(x,i){return '<div class="rule"><b>'+(i+1)+'</b><h3>'+x[0]+'</h3><p class="muted small">'+x[1]+'</p></div>'}).join("")+'</div></section>'+
+  '<section class="sec"><span class="eyebrow">The 10 lessons</span><h2>What we cover</h2><div class="lessons">'+LESSONS.map(function(l,i){return '<div class="lesson"><div class="n">'+(i+1)+'</div><div><div class="t">'+l[0]+'</div><div class="s">'+l[1]+'</div></div></div>'}).join("")+'</div></section>'+
+  '<section class="two"><div class="card sec"><h3>Your child takes home</h3><ul style="padding-left:18px;display:grid;gap:6px"><li>A 46-page Math Inquirers workbook</li><li>The Inquirer Kit: coins, ten-frames, counters and number strips</li><li>An Inquiry Journal, stamped after every lesson</li><li>A certificate on Challenge Day</li></ul></div><div class="card sec"><h3>You get</h3><ul style="padding-left:18px;display:grid;gap:6px"><li>A short note after each week: what we did and one thing to try at home</li><li>Notes on where your child is ready to be stretched further</li><li>The free weekly learning emails</li></ul><p class="small muted">Nothing to buy. Online families print the kit pages at home.</p></div></section>'+
+  '<section class="sec" id="classes"><span class="eyebrow">Next intake</span><h2>Class times</h2>'+sessionCards(true)+'</section>'+
+  '<section class="band" id="kit"><div class="sec"><span class="eyebrow">Home edition</span><h2>Math Inquirers book and kit</h2><p class="muted">For families who cannot make the class times, or want more after the program. Print-at-home puzzle book with answers for parents and the cut-out kit. Different puzzles from the class.</p><p><b style="font-size:22px">'+money(PRODUCTS.kit.price)+'</b></p></div>'+kitForm()+'</section>'+
+  '<section class="sec faq"><span class="eyebrow">Questions</span><h2>Parents often ask</h2>'+
+  [["Is this for children who are already strong in maths?","It suits children who enjoy puzzles and finish school work easily, but any Primary 1 child who is curious will do well. The puzzles have three levels, so everyone is stretched."],
+   ["Is it linked to MOE or the GEP?","No. Math Inquirers is an independent enrichment program. It builds the thinking habits used in school maths but it is not a GEP preparation course."],
+   ["What if my child misses a lesson?","Each lesson's workbook pages and a short catch-up guide are sent to you, so your child can do it at home."],
+   ["How does online work?","Classes run live on video with the same group of up to 8. Print the kit pages before the first lesson."],
+   ["How do I pay?","After you enrol you get PayNow details. Your place is held for 3 days while payment is made."]].map(function(q){return '<details><summary>'+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join("")+'</section>';
+}
+function kitForm(){
+  var f=ui.f.kit;
+  if(ui.done.kit)return '<div class="card sec"><div class="msg ok">'+esc(ui.done.kit.t)+'</div><p class="small muted">PayNow to UEN: to be added. Reference: your email.</p><button class="btn sm alt" data-act="again-kit" style="justify-self:start">Order another</button></div>';
+  return '<form class="card" id="kitForm"><div class="grid2">'+fld("Your name","k-n",inp("k-n","f.kit.name",f.name))+fld("Email","k-e",inp("k-e","f.kit.email",f.email,"email"))+'</div>'+codeField("k-c","f.kit.code",f.code)+chk("k-k","f.kit.consent",f.consent,"I agree to "+BRAND+" using my details to process this order.")+'<button class="btn" type="submit">Order for '+money(PRODUCTS.kit.price)+'</button></form>';
+}
+function enrolView(){
+  var f=ui.f.enrol;
+  if(ui.done.enrol){var e=ui.done.enrol.e,s=sess(e.sessionId)||{},m=ui.done.enrol.m;
+    return '<section class="card sec" style="max-width:720px"><span class="eyebrow">'+(e.status==="waitlist"?"On the waitlist":"Place held")+'</span><h1>'+(e.status==="waitlist"?"You're on the waitlist":"Thank you, "+esc(e.parent))+'</h1>'+
+    '<p class="lead">'+(e.status==="waitlist"?esc(s.name)+' is full. We will email you if a seat opens.':'We are holding a seat for '+esc(e.child)+' in '+esc(s.name)+' ('+esc(s.days)+', '+esc(s.time)+'), starting '+esc(s.start)+'.')+'</p>'+
+    (e.status==="waitlist"?'':'<div class="summary"><div><span>Math Inquirers holiday program</span><span>'+money(PRODUCTS.program.price)+'</span></div>'+(e.voucherOff?'<div><span>Voucher '+esc(e.voucher)+'</span><span>−'+money(e.voucherOff)+'</span></div>':'')+(e.creditsUsed?'<div><span>Credits used</span><span>−'+money(e.creditsUsed)+'</span></div>':'')+'<div class="tot"><span>To pay</span><span>'+money(e.due)+'</span></div></div><div class="msg info">Pay by PayNow to UEN (to be added) within 3 days. Use your child\'s name as the reference. You will get a confirmation email once payment is received.</div>')+
+    (m?'<div class="msg '+m.k+'">'+esc(m.t)+'</div>':'')+
+    '<div class="row"><button class="btn" data-act="again-enrol">Enrol another child</button><button class="btn alt" data-go="refer">Get your own referral link</button></div></section>';}
+  var a=acctByEmail(f.email.trim().toLowerCase()),bal=a?balance(a.id):0,s=sess(f.session),vv=voucher(f.voucher),vd=(vv&&!vv.usedAt)?Math.min(vv.value,PRODUCTS.program.price):0,use=(f.useCredits&&a&&s&&seatsLeft(s)>0)?Math.min(bal,PRODUCTS.program.price-vd):0;
+  var open=S.sessions.filter(function(x){return x.open!==false});
+  return toastHtml()+'<section class="two wide"><form class="card sec" id="enrolForm"><div><span class="eyebrow">Math Inquirers</span><h1 style="font-size:clamp(28px,4vw,40px)">Enrol your child</h1></div>'+
+  '<div><span class="flabel">1. Choose a class</span>'+(open.length?'<div class="opt" style="margin-top:8px">'+open.map(function(x){var l=seatsLeft(x);return '<label class="'+(l?'':'full')+'"><input type="radio" name="sess" value="'+x.id+'" data-bind="f.enrol.session"'+(f.session===x.id?" checked":"")+'><span><b>'+esc(x.name)+'</b> · '+esc(x.mode)+'<br><span class="small muted">'+esc(x.days)+', '+esc(x.time)+' · starts '+esc(x.start)+'</span></span><span class="small" style="font-weight:800">'+(l?l+' left':'Waitlist')+'</span></label>'}).join("")+'</div>':'<div class="msg info" style="margin-top:8px">No classes are open yet.</div>')+'</div>'+
+  '<div><span class="flabel">2. Your child</span><div class="grid2" style="margin-top:8px">'+fld("Child's name","en-c",inp("en-c","f.enrol.child",f.child))+fld("Level in 2026","en-l",'<select id="en-l" data-bind="f.enrol.level">'+LEVELS.slice(0,4).map(function(l){return '<option'+(l===f.level?" selected":"")+'>'+l+'</option>'}).join("")+'</select>')+'</div></div>'+
+  '<div><span class="flabel">3. Parent details</span><div class="grid2" style="margin-top:8px">'+fld("Parent's name","en-p",inp("en-p","f.enrol.parent",f.parent,"",'autocomplete="name"'))+fld("Mobile","en-m",inp("en-m","f.enrol.mobile",f.mobile,"tel",'autocomplete="tel"'))+'</div>'+fld("Email","en-e",inp("en-e","f.enrol.email",f.email,"email",'autocomplete="email"'))+
+  (a&&bal>0?chk("en-u","f.enrol.useCredits",f.useCredits,'Use my credits ('+money(bal)+' available)'):'')+
+  codeField("en-r","f.enrol.code",f.code)+fld('Voucher code <span class="muted" style="font-weight:600">(optional)</span>',"en-v",inp("en-v","f.enrol.voucher",f.voucher,"",'placeholder="e.g. PUZ-7K2Q" autocapitalize="characters"')+(f.voucher.trim()?(vd?'<span class="small" style="color:var(--teal);font-weight:700">'+money(vd)+' off applied</span>':'<span class="small" style="color:var(--red);font-weight:700">'+(vv?'Already used':'Code not found')+'</span>'):''))+fld('Anything we should know? <span class="muted" style="font-weight:600">(optional)</span>',"en-n",'<textarea id="en-n" data-bind="f.enrol.notes">'+esc(f.notes)+'</textarea>')+'</div>'+
+  chk("en-k","f.enrol.consent",f.consent,"I agree to "+BRAND+" using these details to run the class and contact me about it.")+
+  '<button class="btn" type="submit">'+(s&&seatsLeft(s)<=0?"Join the waitlist":"Hold my child's seat")+'</button></form>'+
+  '<div class="sec"><div class="card sec"><h3>Summary</h3><div class="summary"><div><span>Math Inquirers (10 lessons)</span><span>'+money(PRODUCTS.program.price)+'</span></div>'+(vd?'<div><span>Voucher</span><span>−'+money(vd)+'</span></div>':'')+(use?'<div><span>Credits</span><span>−'+money(use)+'</span></div>':'')+'<div class="tot"><span>To pay</span><span>'+money(PRODUCTS.program.price-use-vd)+'</span></div></div><p class="small muted">Workbook, kit, journal and certificate included. Pay by PayNow after you enrol.</p></div>'+journal()+'</div></section>';
+}
+function referView(){
+  var a=acct(ui.me);
+  if(!a){var f=ui.f.signup;
+    return toastHtml()+'<section class="two"><div class="sec"><span class="eyebrow">Refer &amp; earn</span><h1>Share what helps. Earn cash and credits.</h1><p class="lead">Parents and tutors get a personal link. When a friend enrols or buys within '+S.rules.windowDays+' days of signing up, including through a weekly email, you earn a reward: half paid to you by PayNow, half as credits.</p>'+
+    '<div class="card">'+ratesTable()+'<p class="small muted" style="margin-top:12px">Credits work on any of our programs or products, for any child. Tutors can also turn credits into cash in blocks of '+money(S.rules.cashoutBlock)+'. Rewards are added once the friend has paid.</p></div></div>'+
+    '<form class="card" id="signupForm"><h3>Get your referral link</h3><p class="muted small" style="margin:4px 0 14px">Free. Your link is ready straight away.</p>'+fld("Your name","su-n",inp("su-n","f.signup.name",f.name,"",'autocomplete="name"'))+fld("Email","su-e",inp("su-e","f.signup.email",f.email,"email",'autocomplete="email"'))+
+    '<div class="field"><span class="flabel">I am a</span><div class="seg"><label><input type="radio" name="role" value="parent" data-bind="f.signup.role"'+(f.role==="parent"?" checked":"")+'> Parent</label><label><input type="radio" name="role" value="tutor" data-bind="f.signup.role"'+(f.role==="tutor"?" checked":"")+'> Tutor</label></div></div>'+
+    '<button class="btn" type="submit">Get my link</button>'+(S.accounts.length?'<p class="small muted" style="margin-top:14px">Prototype: sign in as an existing account</p><div class="row" style="margin-top:6px">'+S.accounts.map(function(x){return '<button type="button" class="btn alt sm" data-me="'+x.id+'">'+esc(x.name)+'</button>'}).join("")+'</div>':'')+'</form></section>';}
+  var mine=S.referrals.filter(function(r){return r.referrerId===a.id}).sort(function(x,y){return y.joinedAt-x.joinedAt});
+  var earned=S.ledger.filter(function(l){return l.accountId===a.id&&l.type==="earn"}).reduce(function(s,l){return s+l.amount},0);
+  var open=mine.filter(function(r){return status(r).k==="wait"}).length,link="https://"+DOMAIN+a.code,B=S.rules.cashoutBlock||100,bal=balance(a.id);
+  var led=S.ledger.filter(function(l){return l.accountId===a.id}).sort(function(x,y){return y.ts-x.ts});
+  var msg="Hi! I get free weekly learning emails from "+BRAND+", with puzzles and ideas for kids. Their Math Inquirers holiday program for Primary 1 is good too. Have a look: "+link;
+  return toastHtml()+
+  '<section class="sec"><div><span class="eyebrow">Refer &amp; earn · '+a.role+'</span><h1 style="font-size:clamp(28px,4vw,40px)">Hi '+esc(a.name.split(" ")[0])+'</h1></div>'+
+  '<div class="card sec"><h3>Your referral link</h3><div class="linkbox"><code>'+esc(link)+'</code><button class="btn" data-copy="'+esc(link)+'">Copy link</button></div>'+
+  fld("Message to send","sh",'<textarea id="sh" readonly>'+esc(msg)+'</textarea>')+
+  '<div class="row"><button class="btn alt sm" data-copy="'+esc(msg)+'">Copy message</button><span class="muted small">Code: <b>'+esc(a.code)+'</b> (friends can also type this in when they sign up). The web address is a placeholder.</span></div></div></section>'+
+  '<section class="kpis"><div class="kpi main"><div class="v">'+money(cashDue(a.id))+'</div><div class="l">Cash to be paid to you</div></div><div class="kpi main"><div class="v">'+money(bal)+'</div><div class="l">Credits available</div></div><div class="kpi"><div class="v">'+money(earned)+'</div><div class="l">Earned so far</div></div><div class="kpi"><div class="v">'+mine.length+'</div><div class="l">Friends referred</div></div><div class="kpi"><div class="v">'+open+'</div><div class="l">Still in '+S.rules.windowDays+'-day window</div></div></section>'+
+  '<section class="sec"><h2>Your referrals</h2>'+refTable(mine,false)+'</section>'+
+  '<section class="two"><div class="sec"><h2>Cash and credits</h2><div class="card sec"><h3>Cash payouts</h3><p class="muted small">Paid by PayNow at the end of each month.</p><div class="row"><input id="pn" placeholder="PayNow mobile or UEN" data-bind="paynow" value="'+esc(ui.paynow!=null?ui.paynow:(a.paynow||""))+'" style="max-width:220px"><button class="btn alt sm" data-act="savepaynow">Save</button></div>'+(a.paynow?'<p class="small muted">Paying to: <b>'+esc(a.paynow)+'</b></p>':'<p class="small" style="color:var(--red)">Add your PayNow details so we can pay you.</p>')+'</div>'+
+  '<div class="card sec"><h3>Use your credits</h3><p class="muted small">Credits come off any program or product, for any child. You can also tick "Use my credits" when you enrol.</p>'+
+  (a.role==="tutor"?'<div class="msg info">Tutors can turn credits into cash in blocks of '+money(B)+'.<div class="row" style="margin-top:8px"><button class="btn sm teal" data-act="cashout"'+(bal<B?" disabled":"")+'>Cash out '+money(Math.max(B,Math.floor(bal/B)*B))+'</button>'+(bal<B?'<span class="small muted">'+money(B-bal)+' more credits needed</span>':'')+'</div></div>':'')+
+  '<div class="row"><input id="rd" type="number" min="1" placeholder="Credits to use" data-bind="redeem" value="'+esc(ui.redeem)+'" style="max-width:170px"><button class="btn teal sm" data-act="redeem">Use credits</button></div></div></div>'+
+  '<div class="sec"><h2>Reward history</h2>'+ledgerTable(led,false)+'</div></section>';
+}
+function ratesTable(){
+  var r=S.rules.rates;function c(t){var sp=split(t);return '<span>'+money(t)+'<div class="muted small" style="font-weight:600">'+money(sp.cash)+' cash + '+money(sp.credit)+' credit</div></span>'}
+  return '<div class="rates"><span>When a friend…</span><span>Parent</span><span>Tutor</span><span>enrols in Math Inquirers</span>'+c(r.parent.program)+c(r.tutor.program)+'<span>buys the home kit</span>'+c(r.parent.kit)+c(r.tutor.kit)+'</div>';
+}
+function tutorsView(){
+  var f=ui.f.tutor;
+  return toastHtml()+'<section class="hero"><div class="sec"><span class="eyebrow">Tutor network</span><h1>Teach Math Inquirers</h1><p class="lead">You bring the teaching. We bring the program: lesson plans, slides, workbook, kit, training and the families.</p></div><div class="card" style="background:#FFF9EC;color:#1B2A49;border:0"><h3>What you get</h3><ul style="padding-left:18px;display:grid;gap:6px;margin-top:8px"><li>10 ready lessons with scripts and answer keys</li><li>Slides for face to face and online classes</li><li>Small groups of up to 8 children</li><li>Your own referral link: '+money(S.rules.rates.tutor.program)+' per family who enrols</li><li>Cash out credits in blocks of '+money(S.rules.cashoutBlock)+'</li></ul></div></section>'+
+  '<section class="two"><div class="sec"><h2>How joining works</h2><div class="sec">'+[["Apply","Tell us what you teach and when you are free."],["Chat and trial","A 20-minute call, then you teach one trial lesson."],["Training","We walk you through the program and the four Inquirer rules."],["Teach","We fill your group and you teach. You are paid per group."]].map(function(x,i){return '<div class="row" style="align-items:flex-start;flex-wrap:nowrap"><div class="rule" style="padding:0;border:0;background:none"><b>'+(i+1)+'</b></div><div><b>'+x[0]+'</b><p class="muted small">'+x[1]+'</p></div></div>'}).join("")+'</div><p class="small muted">Tutors sign a short confidentiality agreement before receiving the materials.</p></div>'+
+  (ui.done.tutor?'<div class="card sec"><div class="msg ok">'+esc(ui.done.tutor.t)+'</div></div>':
+  '<form class="card" id="tutorForm"><h3>Apply to join</h3><div class="grid2" style="margin-top:12px">'+fld("Name","t-n",inp("t-n","f.tutor.name",f.name))+fld("Mobile","t-m",inp("t-m","f.tutor.mobile",f.mobile,"tel"))+'</div>'+fld("Email","t-e",inp("t-e","f.tutor.email",f.email,"email"))+
+  '<div class="grid2">'+fld("Subjects and levels","t-s",inp("t-s","f.tutor.subjects",f.subjects,"",'placeholder="e.g. Primary maths, P1–P4"'))+fld("Years teaching","t-y",'<select id="t-y" data-bind="f.tutor.years">'+["","Less than 1","1–3","3–5","More than 5"].map(function(y){return '<option'+(y===f.years?" selected":"")+' value="'+y+'">'+(y||"Choose…")+'</option>'}).join("")+'</select>')+'</div>'+
+  fld("I can teach","t-mo",'<select id="t-mo" data-bind="f.tutor.mode">'+["Both","Face to face","Online"].map(function(y){return '<option'+(y===f.mode?" selected":"")+'>'+y+'</option>'}).join("")+'</select>')+
+  fld('About you <span class="muted" style="font-weight:600">(optional)</span>',"t-a",'<textarea id="t-a" data-bind="f.tutor.about">'+esc(f.about)+'</textarea>')+
+  chk("t-k","f.tutor.consent",f.consent,"I agree to "+BRAND+" using these details to assess my application.")+'<button class="btn" type="submit">Send application</button></form>')+'</section>';
+}
+function refTable(list,admin){
+  if(!list.length)return '<div class="card empty">No referrals yet. Share your link and they will appear here.</div>';
+  var w=S.rules.windowDays;
+  return '<div class="tbl"><table><thead><tr>'+(admin?'<th>Referrer</th>':'')+'<th>Friend</th><th>Signed up</th><th>How</th><th>Status</th><th>'+w+'-day window</th><th class="num">Reward</th></tr></thead><tbody>'+
+  list.map(function(r){var s=status(r),dl=Math.max(0,Math.min(w,daysLeft(r))),cr=r.conversions.reduce(function(t,c){return t+c.credit},0),last=r.conversions.length?r.conversions[r.conversions.length-1]:null;
+    return '<tr>'+(admin?'<td>'+esc((acct(r.referrerId)||{name:"?"}).name)+'</td>':'')+'<td><b>'+esc(r.name)+'</b><div class="muted small">'+esc(r.email)+'</div></td><td>'+fmt(r.joinedAt)+'</td><td>'+(r.kind==="list"?"Weekly emails":"Enrolment or order")+(last?'<div class="muted small">'+esc(last.note)+'</div>':'')+'</td><td><span class="pill p-'+s.k+'">'+s.t+'</span></td><td>'+(daysLeft(r)<=0?'<span class="muted small">Closed</span>':dl+' days left<div class="bar60"><i style="width:'+Math.round(dl/w*100)+'%"></i></div>')+'</td><td class="num">'+(cr?money(cr):'–')+'</td></tr>'}).join("")+'</tbody></table></div>';
+}
+function ledgerTable(list,admin){
+  if(!list.length)return '<div class="card empty">No rewards yet.</div>';
+  return '<div class="tbl"><table><thead><tr><th>Date</th>'+(admin?'<th>Account</th>':'')+'<th>What</th><th>Type</th><th class="num">Amount</th></tr></thead><tbody>'+
+  list.map(function(l){return '<tr><td>'+fmt(l.ts)+'</td>'+(admin?'<td>'+esc((acct(l.accountId)||{name:"?"}).name)+'</td>':'')+'<td>'+esc(l.note)+'</td><td><span class="pill '+(isCash(l)?'p-ok':'p-wait')+'">'+(isCash(l)?'Cash':'Credit')+'</span></td><td class="num"><b style="color:var(--'+(l.amount>0?'teal':'red')+')">'+(l.amount>0?'+':'−')+money(Math.abs(l.amount))+'</b></td></tr>'}).join("")+'</tbody></table></div>';
+}
+/* ---------- admin ---------- */
+function adminView(){
+  var tabs=[["overview","Overview"],["enrol","Enrolments & orders"],["puzzles","Puzzle entries"],["classes","Classes"],["list","Mailing list"],["tutors","Tutors"],["refs","Referrals & payouts"]];
+  var body={overview:aOverview,puzzles:aPuzzles,enrol:aEnrol,classes:aClasses,list:aList,tutors:aTutors,refs:aRefs}[ui.adminTab]||aOverview;
+  return toastHtml()+'<section class="sec"><div><span class="eyebrow">Admin</span><h1 style="font-size:clamp(28px,4vw,40px)">Run the business</h1></div><div class="subtabs">'+tabs.map(function(t){return '<button class="tab" data-atab="'+t[0]+'" aria-current="'+(ui.adminTab===t[0])+'">'+t[1]+'</button>'}).join("")+'</div></section>'+body();
+}
+function stp(s){return s==="paid"?'<span class="pill p-ok">Paid</span>':s==="waitlist"?'<span class="pill p-end">Waitlist</span>':'<span class="pill p-wait">Awaiting payment</span>'}
+function aPuzzles(){
+  var Z=S.submissions.slice().sort(function(a,b){return b.ts-a.ts}),ok=Z.filter(function(z){return z.correct}).length,used=S.vouchers.filter(function(v){return v.usedAt}).length;
+  var trials=Z.filter(function(z){return z.reward==="trial"});
+  return '<section class="kpis"><div class="kpi main"><div class="v">'+Z.length+'</div><div class="l">Entries</div></div><div class="kpi"><div class="v">'+ok+'</div><div class="l">Correct</div></div><div class="kpi"><div class="v">'+S.vouchers.length+'</div><div class="l">Vouchers issued</div></div><div class="kpi"><div class="v">'+used+'</div><div class="l">Vouchers used</div></div><div class="kpi"><div class="v">'+trials.length+'</div><div class="l">Free trials won</div></div></section>'+
+  '<section class="two"><div class="card sec"><h3>Prize for correct answers</h3><div class="seg"><label><input type="radio" name="pr" value="voucher" data-bind="S.rules.puzzleReward"'+(S.rules.puzzleReward!=="trial"?" checked":"")+'> Credit voucher</label><label><input type="radio" name="pr" value="trial" data-bind="S.rules.puzzleReward"'+(S.rules.puzzleReward==="trial"?" checked":"")+'> Free trial lesson</label></div>'+fld("Voucher value (S$)","pv",'<input id="pv" type="number" min="0" data-bind="S.rules.voucherValue" value="'+S.rules.voucherValue+'">')+'<p class="small muted">One prize per child each week. Vouchers are single use, for any program, and are entered on the enrolment form.</p></div>'+
+  '<div class="card sec"><h3>This week\'s puzzles</h3>'+PUZZLES.map(function(p){return '<p><b>'+p.level+':</b> '+esc(p.title)+' <span class="muted small">(answer '+esc(p.a[0])+')</span></p>'}).join("")+'</div></section>'+
+  '<section class="sec"><h2>Entries</h2>'+(Z.length?'<div class="tbl"><table><thead><tr><th>Date</th><th>Child</th><th>Level</th><th>Answer</th><th>How they explained it</th><th>Result</th><th>Prize</th></tr></thead><tbody>'+Z.map(function(z){var v=z.reward&&z.reward!=="trial"?voucher(z.reward):null;return '<tr><td>'+fmt(z.ts)+'</td><td><b>'+esc(z.child)+'</b><div class="muted small">'+esc(z.email)+'</div></td><td>'+esc(z.level)+'</td><td>'+esc(z.answer)+'</td><td class="small">'+esc(z.why||"–")+'</td><td>'+(z.correct?'<span class="pill p-ok">Correct</span>':'<span class="pill p-bad">Not yet</span>')+'</td><td>'+(z.reward==="trial"?'Free trial':v?esc(v.code)+'<div class="muted small">'+(v.usedAt?'Used '+fmt(v.usedAt):'Not used yet')+'</div>':'–')+'</td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No entries yet.</div>')+'</section>';
+}
+function aOverview(){
+  var paid=S.enrolments.filter(function(e){return e.status==="paid"}),rev=paid.reduce(function(s,e){return s+e.due},0)+S.orders.filter(function(o){return o.status==="paid"}).reduce(function(s,o){return s+o.due},0);
+  var seats=S.sessions.reduce(function(s,x){return s+(x.cap||8)},0),filled=S.sessions.reduce(function(s,x){return s+taken(x.id)},0);
+  var cashOwed=S.accounts.reduce(function(s,a){return s+Math.max(0,cashDue(a.id))},0);
+  var awaiting=S.enrolments.filter(function(e){return e.status==="awaiting"}).length+S.orders.filter(function(o){return o.status==="awaiting"}).length;
+  return '<section class="kpis"><div class="kpi main"><div class="v">'+money(rev)+'</div><div class="l">Payments received</div></div><div class="kpi"><div class="v">'+filled+' / '+seats+'</div><div class="l">Seats filled</div></div><div class="kpi"><div class="v">'+awaiting+'</div><div class="l">Awaiting payment</div></div><div class="kpi"><div class="v">'+S.subscribers.length+'</div><div class="l">Mailing list</div></div><div class="kpi"><div class="v">'+S.tutorApps.filter(function(t){return t.status==="new"}).length+'</div><div class="l">New tutor applications</div></div><div class="kpi"><div class="v">'+money(cashOwed)+'</div><div class="l">Referral cash owed</div></div></section>'+
+  '<section class="sec"><h2>Classes</h2>'+sessionCards(false)+'</section>';
+}
+function aEnrol(){
+  var E=S.enrolments.slice().sort(function(a,b){return b.ts-a.ts}),O=S.orders.slice().sort(function(a,b){return b.ts-a.ts});
+  return '<section class="sec"><h2>Enrolments</h2>'+(E.length?'<div class="tbl"><table><thead><tr><th>Date</th><th>Child</th><th>Parent</th><th>Class</th><th>Came via</th><th class="num">Due</th><th>Status</th><th></th></tr></thead><tbody>'+E.map(function(e){var s=sess(e.sessionId)||{name:"?"};return '<tr><td>'+fmt(e.ts)+'</td><td><b>'+esc(e.child)+'</b><div class="muted small">'+esc(e.level)+'</div></td><td>'+esc(e.parent)+'<div class="muted small">'+esc(e.email)+'<br>'+esc(e.mobile)+'</div></td><td>'+esc(s.name)+'</td><td>'+(e.channel==="email"?"Weekly email":e.channel==="link"?"Referral "+esc(e.code):"Website")+'</td><td class="num">'+money(e.due)+(e.creditsUsed?'<div class="muted small">'+money(e.creditsUsed)+' credits</div>':'')+'</td><td>'+stp(e.status)+'</td><td>'+(e.status==="awaiting"?'<button class="btn sm teal" data-paid="e:'+e.id+'">Mark paid</button>':'')+'</td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No enrolments yet.</div>')+'<p class="small muted">Referral rewards are added when you mark an enrolment as paid.</p></section>'+
+  '<section class="sec"><h2>Home kit orders</h2>'+(O.length?'<div class="tbl"><table><thead><tr><th>Date</th><th>Name</th><th>Came via</th><th class="num">Due</th><th>Status</th><th></th></tr></thead><tbody>'+O.map(function(o){return '<tr><td>'+fmt(o.ts)+'</td><td><b>'+esc(o.name)+'</b><div class="muted small">'+esc(o.email)+'</div></td><td>'+(o.channel==="email"?"Weekly email":o.channel==="link"?"Referral":"Website")+'</td><td class="num">'+money(o.due)+'</td><td>'+stp(o.status)+'</td><td>'+(o.status==="awaiting"?'<button class="btn sm teal" data-paid="o:'+o.id+'">Mark paid</button>':'')+'</td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No kit orders yet.</div>')+'</section>';
+}
+function aClasses(){
+  var f=ui.f.cls;
+  return '<section class="sec"><h2>Classes</h2>'+(S.sessions.length?'<div class="tbl"><table><thead><tr><th>Class</th><th>Mode</th><th>When</th><th>Starts</th><th class="num">Seats</th><th></th></tr></thead><tbody>'+S.sessions.map(function(s){return '<tr><td><b>'+esc(s.name)+'</b>'+(s.venue?'<div class="muted small">'+esc(s.venue)+'</div>':'')+'</td><td>'+esc(s.mode)+'</td><td>'+esc(s.days)+', '+esc(s.time)+'</td><td>'+esc(s.start)+'</td><td class="num">'+taken(s.id)+' / '+(s.cap||8)+'</td><td><button class="btn sm alt" data-toggle="'+s.id+'">'+(s.open===false?"Reopen":"Close")+'</button></td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No classes yet. Add the first one below.</div>')+'</section>'+
+  '<form class="card" id="clsForm" style="max-width:760px"><h3>Add a class</h3><div class="grid2" style="margin-top:12px">'+fld("Name","c-n",inp("c-n","f.cls.name",f.name,"",'placeholder="e.g. Group D"'))+fld("Mode","c-m",'<select id="c-m" data-bind="f.cls.mode">'+["Face to face","Online"].map(function(y){return '<option'+(y===f.mode?" selected":"")+'>'+y+'</option>'}).join("")+'</select>')+fld("Days","c-d",inp("c-d","f.cls.days",f.days,"",'placeholder="e.g. Tue & Fri"'))+fld("Time","c-t",inp("c-t","f.cls.time",f.time,"",'placeholder="e.g. 2:30–4:00pm"'))+fld("Start date","c-s",inp("c-s","f.cls.start",f.start,"",'placeholder="e.g. Tue 24 Nov 2026"'))+fld("Venue","c-v",inp("c-v","f.cls.venue",f.venue))+fld("Seats","c-c",inp("c-c","f.cls.cap",f.cap,"number",'min="1" max="12"'))+'</div><button class="btn" type="submit">Add class</button></form>';
+}
+function aList(){
+  var L=S.subscribers.slice().sort(function(a,b){return b.joinedAt-a.joinedAt});
+  var lv={};L.forEach(function(s){lv[s.level||"Not given"]=(lv[s.level||"Not given"]||0)+1});
+  return '<section class="kpis"><div class="kpi main"><div class="v">'+L.length+'</div><div class="l">Subscribers</div></div>'+Object.keys(lv).slice(0,5).map(function(k){return '<div class="kpi"><div class="v">'+lv[k]+'</div><div class="l">'+esc(k)+'</div></div>'}).join("")+'</section>'+
+  '<section class="sec"><h2>Mailing list</h2>'+(L.length?'<div class="tbl"><table><thead><tr><th>Joined</th><th>Name</th><th>Child level</th><th>Interests</th><th>Referral</th></tr></thead><tbody>'+L.map(function(s){var r=byCode(s.code);return '<tr><td>'+fmt(s.joinedAt)+'</td><td><b>'+esc(s.name)+'</b><div class="muted small">'+esc(s.email)+'</div></td><td>'+esc(s.level||"–")+'</td><td class="small">'+esc((s.interests||[]).join(", ")||"–")+'</td><td>'+(r?esc(r.name):'–')+'</td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No subscribers yet.</div>')+'<p class="small muted">Everyone on this list ticked the consent box. Sending the weekly email itself would be done from an email service in the live version.</p></section>';
+}
+function aTutors(){
+  var T=S.tutorApps.slice().sort(function(a,b){return b.ts-a.ts});
+  return '<section class="sec"><h2>Tutor applications</h2>'+(T.length?'<div class="tbl"><table><thead><tr><th>Date</th><th>Name</th><th>Teaches</th><th>Experience</th><th>Mode</th><th>Status</th><th></th></tr></thead><tbody>'+T.map(function(t){var a=acctByEmail(t.email);return '<tr><td>'+fmt(t.ts)+'</td><td><b>'+esc(t.name)+'</b><div class="muted small">'+esc(t.email)+'<br>'+esc(t.mobile)+'</div></td><td>'+esc(t.subjects)+'</td><td>'+esc(t.years||"–")+'</td><td>'+esc(t.mode)+'</td><td>'+(t.status==="approved"?'<span class="pill p-ok">Approved</span>'+(a?'<div class="muted small">Code '+esc(a.code)+'</div>':''):'<span class="pill p-wait">New</span>')+'</td><td>'+(t.status==="new"?'<button class="btn sm teal" data-approve="'+t.id+'">Approve</button>':'')+'</td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No applications yet.</div>')+'<p class="small muted">Approving a tutor gives them a tutor account and referral code.</p></section>';
+}
+function aRefs(){
+  var R=S.rules,sum=function(f){return S.ledger.filter(f).reduce(function(s,l){return s+l.amount},0)};
+  var tot=sum(function(l){return !isCash(l)&&l.amount>0}),used=-sum(function(l){return !isCash(l)&&l.amount<0}),cashE=sum(function(l){return isCash(l)&&l.amount>0}),cashP=-sum(function(l){return isCash(l)&&l.amount<0});
+  var owed=S.accounts.filter(function(a){return cashDue(a.id)>0});
+  function num(id,path,val){return '<input id="'+id+'" type="number" min="0" data-bind="S.rules.'+path+'" value="'+val+'">'}
+  return '<section class="kpis"><div class="kpi main"><div class="v">'+money(cashE-cashP)+'</div><div class="l">Cash to pay out</div></div><div class="kpi"><div class="v">'+money(cashP)+'</div><div class="l">Cash paid</div></div><div class="kpi"><div class="v">'+money(tot-used)+'</div><div class="l">Credits outstanding</div></div><div class="kpi"><div class="v">'+money(used)+'</div><div class="l">Credits used or cashed out</div></div><div class="kpi"><div class="v">'+S.accounts.length+'</div><div class="l">Referral accounts</div></div></section>'+
+  '<section class="sec"><h2>Cash payouts due</h2>'+(owed.length?'<div class="tbl"><table><thead><tr><th>Account</th><th>PayNow</th><th class="num">Due</th><th></th></tr></thead><tbody>'+owed.map(function(a){return '<tr><td><b>'+esc(a.name)+'</b><div class="muted small">'+a.role+'</div></td><td>'+(a.paynow?esc(a.paynow):'<span style="color:var(--red)">Not given yet</span>')+'</td><td class="num"><b>'+money(cashDue(a.id))+'</b></td><td class="num"><button class="btn sm teal" data-pay="'+a.id+'">Mark as paid</button></td></tr>'}).join("")+'</tbody></table></div>':'<div class="card empty">No cash is owed right now.</div>')+'</section>'+
+  '<section class="two"><div class="sec"><h2>Rules</h2><div class="card sec"><div class="grid2">'+fld("Window after sign-up (days)","rw",num("rw","windowDays",R.windowDays))+fld("Paid in cash (%)","rc",num("rc","cashPct",R.cashPct))+fld("Tutor cash-out block (S$)","rb",num("rb","cashoutBlock",R.cashoutBlock))+'</div>'+
+  '<div class="rates"><span>Reward (S$)</span><span>Parent</span><span>Tutor</span><span>Program</span>'+num("r1","rates.parent.program",R.rates.parent.program)+num("r2","rates.tutor.program",R.rates.tutor.program)+'<span>Home kit</span>'+num("r3","rates.parent.kit",R.rates.parent.kit)+num("r4","rates.tutor.kit",R.rates.tutor.kit)+'</div>'+
+  chk("r5","S.rules.firstOnly",R.firstOnly,"Reward only the first purchase per friend")+'<p class="muted small">Changes apply from now on. Past rewards stay as issued.</p></div></div>'+
+  '<div class="sec"><h2>Safeguards</h2><div class="card"><ul style="padding-left:18px;display:grid;gap:6px"><li>People cannot use their own code.</li><li>Codes are for new families: an email with an account cannot be referred.</li><li>The first referrer of an email keeps it for the whole window.</li><li>No reward after day '+R.windowDays+', even from a weekly email.</li><li>Rewards are added only when payment is marked as received.</li><li>Cash is paid only to accounts with PayNow details.</li><li>Only tutors can turn credits into cash, in full blocks of '+money(R.cashoutBlock)+'.</li></ul></div></div></section>'+
+  '<section class="sec"><h2>All referrals</h2>'+refTable(S.referrals.slice().sort(function(a,b){return b.joinedAt-a.joinedAt}),true)+'</section>'+
+  '<section class="sec"><h2>All reward activity</h2>'+ledgerTable(S.ledger.slice().sort(function(a,b){return b.ts-a.ts}),true)+'</section>'+
+  '<section class="row"><button class="btn alt sm" data-act="wipe">Clear all prototype data</button><span class="muted small">'+(ui.dbOn?'Saved in the shared prototype database.':'Shared storage is not available here, so changes last only in this tab.')+'</span></section>';
+}
+
+function render(){
+  document.getElementById("nav").innerHTML=navHtml();
+  document.getElementById("demo").innerHTML=demoHtml();
+  document.getElementById("foot").innerHTML=footHtml();
+  var v={home:homeView,puzzles:puzzlesView,"math-inquirers":miView,enrol:enrolView,emails:emailsView,refer:referView,tutors:tutorsView,admin:canAdmin?adminView:homeView}[ui.view]||homeView;
+  var ae=document.activeElement,fid=ae&&ae.id&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)?ae.id:null,ss=null,se=null;
+  try{if(fid&&ae.selectionStart!=null){ss=ae.selectionStart;se=ae.selectionEnd}}catch(x){}
+  document.getElementById("view").innerHTML=v();
+  if(fid){var el=document.getElementById(fid);if(el){el.focus({preventScroll:true});try{if(ss!=null)el.setSelectionRange(ss,se)}catch(x){}}}
+}
+function go(v,anchor){ui.view=v;ui.done={};ui.pz={};render();try{history.replaceState(null,"","#"+v)}catch(e){}
+  var el=anchor&&document.getElementById(anchor);if(el)el.scrollIntoView({behavior:"smooth"});else window.scrollTo(0,0)}
+
+/* ---------- events ---------- */
+function setPath(obj,path,val){var p=path.split("."),o=obj;for(var i=0;i<p.length-1;i++){if(o[p[i]]==null)o[p[i]]={};o=o[p[i]]}o[p[p.length-1]]=val}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-lvl],[data-check],[data-hint],[data-go],[data-clock],[data-copy],[data-act],[data-me],[data-pay],[data-paid],[data-atab],[data-approve],[data-toggle],[data-pick],[data-scroll]");if(!t)return;
+  var d=t.dataset;
+  if(d.lvl){ui.pzLevel=d.lvl;render();return}
+  if(d.check){check(d.check);return}
+  if(d.hint){var hs=ui.pz[d.hint]=ui.pz[d.hint]||{};hs.hint=!hs.hint;render();return}
+  if(d.act==="again-pz"){ui.done["pz_"+d.id]=null;render();return}
+  if(d.go){e.preventDefault();go(d.go,d.anchor);return}
+  if(d.scroll){var el=document.getElementById(d.scroll);if(el)el.scrollIntoView({behavior:"smooth"});return}
+  if(d.pick){ui.f.enrol.session=d.pick;go("enrol");return}
+  if(d.atab){ui.adminTab=d.atab;render();return}
+  if(d.pay){payout(d.pay);return}
+  if(d.paid){var p=d.paid.split(":");markPaid(p[0],p[1]);return}
+  if(d.approve){approveTutor(d.approve);return}
+  if(d.toggle){var s=sess(d.toggle);if(s){s.open=s.open===false;save();render()}return}
+  if(d.clock!==undefined){S.offset=d.clock==="0"?0:S.offset+Number(d.clock);save();render();return}
+  if(d.me){ui.me=d.me;ui.paynow=null;finishMe();return}
+  if(d.copy){var done=function(){t.textContent="Copied"};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(d.copy).then(done,function(){t.textContent="Select the text to copy"});else t.textContent="Select the text to copy";return}
+  var a=d.act;
+  if(a==="signout"){ui.me=null;try{localStorage.removeItem("pl_me")}catch(x){}render()}
+  else if(a==="savepaynow")savePaynow();
+  else if(a==="cashout")cashOut();
+  else if(a==="redeem")redeem();
+  else if(a==="again-sub"){ui.done.sub=null;render()}
+  else if(a==="again-kit"){ui.done.kit=null;render()}
+  else if(a==="again-enrol"){ui.done.enrol=null;render()}
+  else if(a==="wipe"){if(d.sure){var keepS=S.sessions.map(function(s){return Object.assign({},s)});S=blank();S.sessions=keepS;ui.me=null;save();toast("ok","All records cleared. Classes kept.");render()}else{d.sure="1";t.textContent="Click again to erase all records"}}
+});
+document.addEventListener("submit",function(e){if(e.target.id==="pzForm"){e.preventDefault();submitPuzzle(e.target.dataset.id);return}var id=e.target.id,fn={signupForm:signup,subForm:subscribe,enrolForm:enrol,kitForm:buyKit,tutorForm:applyTutor,clsForm:addClass}[id];if(fn){e.preventDefault();fn()}});
+var LIVE={"f.enrol.voucher":1,"f.enrol.session":1,"f.enrol.useCredits":1,"visitRef":1,"fromEmail":1,"f.enrol.email":0};
+function onInput(e){
+  var t=e.target,b=t.dataset&&t.dataset.bind;if(!b)return;
+  var val=t.type==="checkbox"?t.checked:t.value;
+  if(b.indexOf("S.rules.")===0){if(t.type==="number")val=Number(val)||0;setPath(S,b.slice(2),val);if(S.rules.windowDays<1)S.rules.windowDays=1;save();if(t.type==="radio")render();return}
+  setPath(ui,b,val);
+  if(e.type==="change"&&(LIVE[b]||b==="f.enrol.email"))render();
+}
+document.addEventListener("input",onInput);document.addEventListener("change",onInput);
+window.addEventListener("hashchange",function(){var h=(location.hash||"").slice(1);if(VIEWS.indexOf(h)>=0&&h!==ui.view){ui.view=h;render()}});
+
+/* ---------- boot ---------- */
+render();
+(async function(){
+  try{var u=await window.claude.use("user");if(u&&typeof u.canEdit==="function")canAdmin=!!u.canEdit()}catch(e){}
+  try{
+    var db=await window.claude.use("db");
+    if(db){dbDoc=db.doc("app/state");ui.dbOn=true;
+      dbDoc.onSnapshot(function(s){if(!s.exists)return;var d=s.data(),j=JSON.stringify(d);if(j===lastJson)return;lastJson=j;load(d);
+        var ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)&&ae.id&&ae.id!=="vr")return;render()},function(){ui.dbOn=false});}
+  }catch(e){}
+  render();
+})();
+})();
+</script>
