@@ -3,6 +3,44 @@ H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
 D=os.path.join(H,'..','split','l6','project'); S={}
 def put(i,h): S[i]=h
+# --- warm-up 1: coin shop with priced items ---
+def _item(kind):
+    N=NAVY
+    if kind=='sweet':
+        g=f'<polygon points="30,80 6,58 6,102" fill="{YEL}" stroke="{N}" stroke-width="4"/><polygon points="130,80 154,58 154,102" fill="{YEL}" stroke="{N}" stroke-width="4"/><ellipse cx="80" cy="80" rx="52" ry="38" fill="#D64545" stroke="{N}" stroke-width="4"/><path d="M58 62 Q80 80 58 98 M80 50 Q102 80 80 110" stroke="#FFF9EC" stroke-width="6" fill="none"/>'
+    elif kind=='pencil':
+        g=f'<g transform="rotate(-35 80 80)"><rect x="10" y="64" width="110" height="32" fill="{YEL}" stroke="{N}" stroke-width="4"/><rect x="0" y="64" width="18" height="32" fill="#F2A7A7" stroke="{N}" stroke-width="4"/><polygon points="120,64 152,80 120,96" fill="#F3D9B1" stroke="{N}" stroke-width="4"/><polygon points="142,75 152,80 142,85" fill="{N}"/></g>'
+    elif kind=='eraser':
+        g=f'<g transform="rotate(-12 80 80)"><rect x="18" y="50" width="124" height="60" rx="10" fill="#FFFFFF" stroke="{N}" stroke-width="4"/><rect x="18" y="50" width="62" height="60" rx="10" fill="{TEAL}" stroke="{N}" stroke-width="4"/></g>'
+    elif kind=='sticker':
+        st=lambda cx,cy,c: f'<polygon points="{cx},{cy-18} {cx+6},{cy-6} {cx+19},{cy-5} {cx+9},{cy+5} {cx+12},{cy+18} {cx},{cy+11} {cx-12},{cy+18} {cx-9},{cy+5} {cx-19},{cy-5} {cx-6},{cy-6}" fill="{c}" stroke="{N}" stroke-width="2"/>'
+        g=f'<rect x="28" y="14" width="104" height="132" rx="10" fill="{SKY}" stroke="{N}" stroke-width="4"/>'+st(58,46,YEL)+st(102,46,'#D64545')+st(58,90,TEAL)+st(102,90,YEL)+st(80,124,'#D64545')
+    elif kind=='ruler':
+        g=f'<g transform="rotate(-30 80 80)"><rect x="-4" y="58" width="168" height="44" rx="6" fill="{YEL}" stroke="{N}" stroke-width="4"/>'+''.join(f'<line x1="{8+i*12}" y1="58" x2="{8+i*12}" y2="{78 if i%2==0 else 70}" stroke="{N}" stroke-width="3"/>' for i in range(13))+'</g>'
+    else:  # juice
+        g=f'<rect x="44" y="40" width="72" height="108" rx="6" fill="#F28C38" stroke="{N}" stroke-width="4"/><polygon points="44,40 80,22 116,40" fill="#F7B26B" stroke="{N}" stroke-width="4"/><circle cx="80" cy="98" r="20" fill="#FFF9EC" stroke="{N}" stroke-width="3"/><line x1="98" y1="30" x2="112" y2="2" stroke="#D64545" stroke-width="7" stroke-linecap="round"/>'
+    return f'<svg aria-label="{kind}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:170px;height:170px;flex:none">{g}</svg>'
+def _tag(price):
+    return (f'<svg aria-label="price tag {price}" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:100px">'
+            f'<polygon points="4,50 40,6 214,6 214,94 40,94" fill="{YEL}" stroke="{NAVY}" stroke-width="4" stroke-linejoin="round"/>'
+            f'<circle cx="38" cy="50" r="9" fill="#FFF9EC" stroke="{NAVY}" stroke-width="4"/>'
+            f'<text x="132" y="68" font-size="54" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{price}</text></svg>')
+shop=[('sweet','Sweet','5¢','5¢  (1 coin)'),('pencil','Pencil','15¢','10¢ + 5¢  (2 coins)'),('eraser','Eraser','20¢','20¢  (1 coin)'),
+      ('sticker','Stickers','35¢','20¢ + 10¢ + 5¢  (3 coins)'),('ruler','Ruler','45¢','20¢ + 20¢ + 5¢  (3 coins)'),('juice','Juice box','50¢','50¢  (1 coin)')]
+body=h2('Warm-up: the Coin Shop')+p('Pay exactly. Who can pay with the fewest coins?',36,600,MUTED)
+CW=533; cards=''; ans=''
+for i,(k,name,price,a) in enumerate(shop):
+    L=128+(i%3)*(CW+32); T=290+(i//3)*300
+    inner=(f'<div style="display:flex;align-items:center;gap:20px">{_item(k)}<div style="display:flex;flex-direction:column;gap:10px">'
+           f'<p style="font-family:{HF};font-size:40px;font-weight:600">{E(name)}</p>{_tag(price)}</div></div>')
+    cards+=pin(L,T,CW,inner,None,WHITE,24,'16px 22px',f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
+    ans+=pin(L+20,T+190,CW-40,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(a)}</p>','pop',SOFT,16,'12px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
+put('l6-warm1',sec('l6-warm1','0–5 MIN',body+cards+ans,
+ 'Minutes 0 to 5. The Coin Shop. Hand out play coins (5¢, 10¢, 20¢, 50¢). Point to one item at a time: "The pencil costs 15¢. Pay exactly. Can you pay with fewer coins than your partner?" '
+ 'Children lay their coins out, then you click to show the fewest-coins way for that item (clicks reveal Sweet, Pencil, Eraser, Stickers, Ruler, Juice box in order). '
+ 'Fewest coins: Sweet 5¢ = 5¢ (1 coin). Pencil 15¢ = 10¢ + 5¢ (2). Eraser 20¢ = 20¢ (1). Stickers 35¢ = 20¢ + 10¢ + 5¢ (3). Ruler 45¢ = 20¢ + 20¢ + 5¢ (3). Juice box 50¢ = 50¢ (1). '
+ 'Ask: "Someone paid 15¢ with three 5¢ coins. Is that right?" (Yes, it is exactly 15¢, just not the fewest.) "Why does the 50¢ coin win for the juice box?" '
+ 'Quick finisher: "Buy the pencil AND the eraser. How much? Fewest coins?" (35¢: 20¢ + 10¢ + 5¢, 3 coins). Watch for: children who count the number of coins instead of the value.'))
 qs=[('1.','Pay 15¢ with two coins.','10¢ + 5¢'),('2.','Pay 30¢ with the fewest coins.','20¢ + 10¢'),('3.','Pay 25¢ with two coins.','20¢ + 5¢'),('4.','Pay 40¢ with two coins.','20¢ + 20¢')]
 body=h2('Quick questions')+''.join(qrow(128,260+i*150,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,260+i*150,372,c) for i,(a,b,c) in enumerate(qs))
 put('l6-warm2',sec('l6-warm2','5–10 MIN',body,'Minutes 5 to 10. Children show the coins with play money, then click to reveal. Ask: "Could you pay 40¢ with two coins another way?" (no: only 20¢ + 20¢).'))
