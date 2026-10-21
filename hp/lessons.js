@@ -9,7 +9,7 @@ module.exports = {
       skills: 'Pattern spotting, rule finding, generalising',
       materials: 'Paper number strip 0 to 50 (or floor tape), counters, two crayons.',
       online: 'Slide number line the tutor can mark on; each child uses a paper strip and a pencil.',
-      warmup: 'Skip-count stomp: count in 2s, 5s and 3s as a class. Clap on every multiple, whisper on the rest.',
+      warmup: 'Skip-count stomp: count in 2s, 5s and 3s as a class. Stomp on the numbers in the count, whisper the rest.',
       explore: 'Pairs hop a counter along the number strip: frog 1 in 4s, frog 2 in 5s. Mark where each lands. Which numbers do both frogs land on?',
       mini: 'Build the table on the board: jump 1, 2, 3 … and where it lands. Name the rule ("add 4"). Ask what stays the same and what changes.',
       share: 'Why do the numbers both frogs land on all end in 0?',
@@ -139,13 +139,13 @@ module.exports = {
       online: 'Each child has a paper square to fold and cut on camera; shape hunt at home.',
       warmup: 'Shape hunt: find a circle, a triangle, a square and a rectangle in the room or at home in 2 minutes.',
       explore: 'Fold a paper square along a diagonal and cut: what two shapes do you get? Put them together a different way. What new shapes can you make?',
-      mini: 'Build the table: shape, sides, corners. Notice the numbers are the same. Predict the octagon. Then count triangles in figures systematically (small first, then bigger).',
+      mini: 'Count squares in grids and rectangles in strips by size, smallest first; make shapes from 3 squares (turns and flips are the same). Before the worksheet: count shapes in a picture one kind at a time, mark a starting dot when counting sides, cross out shapes for riddles, count triangles small first.',
       share: 'How many triangles are in a square with both diagonals drawn (lines joining opposite corners)? How do you make sure you do not miss any?',
-      exit: { q: 'How many triangles are in a square cut by ONE line from corner to corner?', a: '2' },
-      mistakes: ['Counting only the small triangles in figure C (answer 4 instead of 8).', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has 1 side.'],
-      extension: 'Triangle with 1 line from the top: 3 triangles. With 2 lines: 6. Predict 3 lines (10).',
+      exit: { q: 'How many squares are in a grid 4 squares long and 2 squares high?', a: '11 (8 small + 3 made of 4 small ones)' },
+      mistakes: ['Counting only the small triangles in Q4 picture C (4 instead of 8): look for bigger triangles made of 2 small ones.', 'Counting a square window in both the Square and the Rectangle columns in Q1.', 'Thinking a turned or flipped shape is a new one.', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has 1 side.'],
+      extension: 'How many squares in a grid 4 long and 3 high? (12 + 6 + 2 = 20)',
       key: [
-        ['Q1', 'Circle 1, triangle 2, square 3, rectangle 2. (b) Squares. (c) 8 shapes.'],
+        ['Q1', 'Circle 1, triangle 2, square 3, rectangle 2. (a) Squares. (b) 8 shapes.'],
         ['Q2', 'Square 4 and 4, pentagon 5 and 5, hexagon 6 and 6, octagon 8 and 8. The number of sides equals the number of corners. 7 sides means 7 corners.'],
         ['Q3', '(a) square  (b) circle  (c) hexagon'],
         ['Q4', 'A: 3  B: 2  C: 8 (4 small + 4 made of two small ones)'],
@@ -160,7 +160,7 @@ module.exports = {
       online: 'Children sort objects from home by a rule shown on the slide and explain the rule on camera.',
       warmup: 'Guess my number: the tutor thinks of a number from 1 to 20. Children ask yes/no questions to find it in as few questions as they can.',
       explore: 'Overlap two string loops. Sort a mixed set of buttons or objects by two rules and find the ones that belong in the middle.',
-      mini: 'Model the grid: put a tick where it fits and a cross where it cannot. Each cross helps another cell. Draw the Venn for numbers 1 to 10.',
+      mini: 'Model the grid: one tick in each row and column, crosses where it cannot be. Each cross helps another cell. Sort numbers 10 to 20 into a Venn diagram (less than 15, even): ask both questions for every number.',
       share: 'There can be more than one correct odd one out. Can you give a second reason?',
       exit: { q: 'Ben is shorter than Mei. Mei is shorter than Ali. Who is the tallest?', a: 'Ali' },
       mistakes: ['Putting numbers in the overlap that only fit one rule.', 'Giving up on the grid instead of using a cross to rule out.', 'Guessing a line-up without checking all the clues.'],
@@ -171,7 +171,7 @@ module.exports = {
         ['Q3', 'Ali: fish. Mei: cat. Ben: dog.'],
         ['Q4', '1st Mei, 2nd Ali, 3rd Ben, 4th Sam'],
         ['Q5', '(a) 15  (b) 30  (c) 14'],
-        ['Q6', 'Accept any reasoned answer: 11 is not in the 3 times table; or 6 is the only even number.']
+        ['Q6', 'Accept any reasoned answer: 11, because we do not say it when counting in 3s (it is also the only 2-digit number); or 6, the only even number.']
       ]
     },
     {

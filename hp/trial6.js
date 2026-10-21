@@ -33,17 +33,17 @@ G.push(kv([
 ]));
 G.push(h2('The 60 minutes'));
 G.push(tbl([1300, 1900, 6700], [row([hd('Minutes', 1300), hd('Part', 1900), hd('What happens', 6700)]),
-  ...[['0–5', 'Warm-up', 'Coin shop: quick questions with the coins on their desks'], ['5–15', 'Explore', 'In pairs, make 20¢ in as many ways as they can'], ['15–23', 'Mini-lesson', 'Worked examples and the key idea'], ['23–25', 'Brain break', 'Coin toss count, standing up'], ['25–45', 'Worksheet', 'Pairs first, then on their own, then stretch'], ['45–53', 'Talk time', 'Share and explain why'], ['53–60', 'Exit ticket', 'One question on a slip, collect, one-sentence reflection']].map(r => row([c2(r[0], 1300, { bold: true }), c2(r[1], 1900, { bold: true }), c2(r[2], 6700)]))]));
+  ...[['0–5', 'Warm-up', 'Money shop: pay for six items with play coins and notes, fewest pieces'], ['5–15', 'Explore', 'In pairs, make 20¢ in as many ways as they can'], ['15–23', 'Mini-lesson', 'Worked examples and the key idea'], ['23–25', 'Brain break', 'Coin toss count, standing up'], ['25–45', 'Worksheet', 'Pairs first, then on their own, then stretch'], ['45–53', 'Talk time', 'Share and explain why'], ['53–60', 'Exit ticket', 'One question on a slip, collect, one-sentence reflection']].map(r => row([c2(r[0], 1300, { bold: true }), c2(r[1], 1900, { bold: true }), c2(r[2], 6700)]))]));
 G.push(gap(40));
 G.push(h2('Running it with 29 pupils'));
 ['Seat pupils in pairs before the lesson and put the envelope on the desk. Decide who is the trio.', 'Use signals: “Pencils down” for attention, and “Show me” for pairs to hold up their whiteboard so that you can scan the room in ten seconds.', 'Split the room into three zones and visit each zone in turn while pairs work, so that every pair is asked at least one question.', 'When a pair is stuck, give hint 1 and move on. Come back in two minutes. Do not rescue a pair too quickly.', 'For pupils who find the work hard, start the table with the ways that use no 20¢ coin. For fast finishers, give the stretch question, then the challenge.', 'Count out loud from the back of the room: “Ten seconds to finish” and “Five seconds”, so that pupils can plan their finish.'].forEach(s => G.push(bu(s)));
 
 /* ---------- Script ---------- */
 G.push(h1('Script'));
-G.push(seg('0–5 min', 'Warm-up: Coin shop'));
-doo(['Pupils already have the coin sheet on the desk. Hold up a price tag (or write it on the board) for each question. Pairs show the coins, then hold them up.']);
-say(['Welcome to the coin shop! I will show you a price tag. You and your partner pay for it with your coins. Show me.']);
-ask([['Pay 15¢ using two coins.', '5¢ + 10¢'], ['Pay 25¢ using two coins.', '5¢ + 20¢'], ['Pay 30¢ using two coins.', '10¢ + 20¢'], ['Pay 35¢ using three coins.', '20¢ + 10¢ + 5¢'], ['Who used the fewest coins for 30¢? How many?', '2 coins. You cannot do it with only one.']]);
+G.push(seg('0–5 min', 'Warm-up: Money shop'));
+doo(['Pupils already have play coins (5¢, 10¢, 20¢, 50¢, $1) and play notes ($2, $5, $10, $50) on the desk. Point to one item on the Money Shop slide at a time. Pairs lay out the money, then you click to show the fewest way.']);
+say(['Welcome to the money shop! Look at the price tag. Is it cents or dollars? Pay exactly with your coins and notes. Can you use fewer pieces than your partner?']);
+ask([['Eraser 65¢.', '50¢ + 10¢ + 5¢ (3 coins)'], ['Pencil 80¢.', '50¢ + 20¢ + 10¢ (3 coins)'], ['Sticker book $3.', '$2 note + $1 coin'], ['Water bottle $12.', '$10 + $2 (2 notes)'], ['Toy car $25.', '$10 + $10 + $5 (3 notes)'], ['Scooter $65.', '$50 + $10 + $5 (3 notes)']]);
 
 G.push(seg('5–15 min', 'Explore: how many ways make 20¢?'));
 say(['Today we are going to find every way to make 20¢ using only 20¢, 10¢ and 5¢ coins. First, a prediction. How many different ways do you think there are? Write your guess on your whiteboard.', 'Make 20¢ with your coins. Then change some coins to make 20¢ a different way. Draw or write each way. Keep going. Talk to your partner. I will come and ask questions.']);

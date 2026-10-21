@@ -62,7 +62,7 @@ module.exports = {
     close: ['“Working backwards is a big idea. You explained it in your own words today.”']
   },
   6: {
-    hook: ['Welcome to the coin shop! Today we find every way to pay for something with coins, and we make sure we do not miss any and do not count the same way twice.'],
+    hook: ['Welcome to the money shop! Today we pay with coins and notes, find every way to make an amount, and make sure we do not miss any and do not count the same way twice.'],
     warmIntro: ['Here is the price tag: 30¢. Pay exactly with your play coins. Who can do it with the fewest coins?', 'Show me. How many coins did you use?'],
     predict: ['How many different ways do you think there are to make 20¢ with 20¢, 10¢ and 5¢ coins? Write a guess.'],
     exploreHints: ['Stuck: start with the biggest coin that fits, then fill the rest.', 'Not sure if two ways are different: “Same coins in a different order is the same way.”', 'Finished early: find the ways to make 30¢. How will you know you have them all?'],
@@ -90,11 +90,11 @@ module.exports = {
     warmIntro: ['I am thinking of a number from 1 to 20. You may ask yes or no questions. Who can find it with the fewest questions?', 'What was your best question? Why was it good? (“Is it more than 10?” cuts the possibilities in half.)'],
     predict: ['Here are some buttons. I will sort them into two loops that overlap. Where do you think the buttons that follow both rules will go?'],
     exploreHints: ['Stuck: read one rule at a time. Which buttons follow rule 1?', 'Not sure where a button goes: “Does it follow BOTH rules? Then it goes in the middle.”', 'Finished early: make a new rule and sort again.'],
-    think: ['“Tia does not drink milk. Sam does not drink milk or juice. I put a cross where it cannot be. Sam cannot have milk or juice, so Sam has water. Now Tia cannot have milk and water is taken, so Tia has juice. Raj has milk.”', '“A Venn diagram: numbers 1 to 10. Even numbers in one loop, bigger than 5 in the other. 6, 8 and 10 are both even and bigger than 5, so they go in the middle.”', '“Every time I write a cross I check whether it gives me a new clue.”'],
+    think: ['“Tia does not drink milk. Sam does not drink milk or juice. I put a cross where it cannot be. Sam cannot have milk or juice, so Sam has water. Now Tia cannot have milk and water is taken, so Tia has juice. Raj has milk.”', '“A Venn diagram: numbers 10 to 20. Less than 15 in one loop, even in the other. For each number I ask both questions. 12: less than 15? Yes. Even? Yes. So 12 goes in the middle. 16: less than 15? No. Even? Yes. So 16 goes in the even loop only.”', '“Every time I write a cross I check whether it gives me a new clue.”'],
     circulate: ['Ask: “Which box can you fill in now? What clue tells you?”', 'Ask: “Does this number follow both rules?”', 'Ask: “How do you know the answer is the only one?”'],
     hints: ['Hint 1: “Find a clue that tells you something for sure.”', 'Hint 2: “Put a cross where it cannot be.”', 'Hint 3: “Which row or column has only one box left?”'],
-    talk: ['“Which clue helped you most? Why?”', '“Why does 6 go in the middle of the Venn diagram?”'],
-    talkAns: '6 is even AND bigger than 5, so it follows both rules and goes where the two loops overlap.',
+    talk: ['“Which clue helped you most? Why?”', '“Why does 12 go in the middle of the Venn diagram?”'],
+    talkAns: '12 is less than 15 AND even, so it follows both rules and goes where the two loops overlap.',
     close: ['“You used crosses to make a clue, and then a new clue. That is how inquirers solve puzzles.”']
   },
   9: {

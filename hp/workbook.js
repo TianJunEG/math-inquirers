@@ -265,7 +265,7 @@ W.push(img('venn.png', 480, 269));
 W.push(sub('a', 'Numbers that are in BOTH circles: ____________________'));
 W.push(sub('b', 'Why do those numbers belong in the middle?'));
 W.push(...lines(2));
-W.push(q(3, 'Who has which pet? Ali, Mei and Ben each have ONE pet: a cat, a dog or a fish.', { pb: true, before: 0 }));
+W.push(q(3, 'Who has which pet? Ali, Mei and Ben each have a different pet: a cat, a dog or a fish.', { pb: true, before: 0 }));
 W.push(p('Clue 1: Ali does not have a cat or a dog.', { indent: { left: 560 }, after: 40 }));
 W.push(p('Clue 2: Mei does not have a dog.', { indent: { left: 560 }, after: 100 }));
 W.push(p([t('Put a tick where it fits and a cross where it cannot.', { italics: true })], { indent: { left: 560 }, after: 80 }));

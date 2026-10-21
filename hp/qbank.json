@@ -684,20 +684,20 @@
     "a": "Tia (order: Mei, Sam, Tia, Raj)."
    },
    {
-    "q": "Tia does not drink milk. Sam drinks neither milk nor juice. Raj drinks the third drink. The drinks are milk, juice and water. Who drinks what?",
-    "a": "Sam: water. Tia: juice. Raj: milk."
+    "q": "Ana, Bo and Cy each have a different toy: a ball, a kite or a yo-yo. Bo does not have the kite. Cy has the ball. Who has which toy?",
+    "a": "Cy: ball. Bo: yo-yo. Ana: kite."
    },
    {
     "q": "Numbers 1 to 12. Which do we say when counting in 2s? Which when counting in 3s? Which in both?",
     "a": "Counting in 2s: 2, 4, 6, 8, 10, 12. Counting in 3s: 3, 6, 9, 12. Both: 6 and 12."
    },
    {
-    "q": "Numbers 1 to 12. Which are in neither the 2 times table nor the 3 times table?",
+    "q": "Numbers 1 to 12. Which do we NOT say when counting in 2s or when counting in 3s?",
     "a": "1, 5, 7 and 11"
    },
    {
     "q": "Which is the odd one out: 3, 6, 9, 11, 12? Give a reason.",
-    "a": "11. It is not in the 3 times table."
+    "a": "11. We do not say it when counting in 3s."
    },
    {
     "q": "Ali, Ben and Mei have a cat, a dog and a fish. Ali has no dog. Mei has no fish. Ben has neither a cat nor a fish. Who has which pet?",
@@ -718,8 +718,8 @@
     "a": "Mei 6, Ali 7, Ben 8."
    },
    {
-    "q": "A number between 20 and 40 is in the 5 times table and is odd. It is also one less than a number in the 4 times table. What is it?",
-    "a": "35 (35 + 1 = 36, which is in the 4 times table)."
+    "q": "A number between 20 and 40 is odd, and we say it when counting in 5s. It is also one less than a number we say when counting in 4s. What is it?",
+    "a": "35. The odd ones are 25 and 35. 25 + 1 = 26: not said counting in 4s. 35 + 1 = 36: yes."
    },
    {
     "q": "Draw a Venn diagram for numbers 1 to 10 with the rules “even” and “more than 5”. Which numbers go in the middle? Which go outside both?",
@@ -730,7 +730,7 @@
     "a": "D, A, B, C, E."
    },
    {
-    "q": "A secret number is between 10 and 30. It is even and in the 3 times table. It is 2 more than a number in the 5 times table. What is it?",
+    "q": "A secret number is between 10 and 30. It is even, and you say it when counting in 3s. It is 2 more than a number you say when counting in 5s. What is it?",
     "a": "12."
    },
    {
