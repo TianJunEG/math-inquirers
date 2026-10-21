@@ -67,3 +67,4 @@ module.exports=()=>[
  '<div class="brk"></div>',H('Inquirer Kit','Nothing needs to be bought. Print, cut out and keep everything in one envelope.'),frames(),
  '<div class="brk"></div>',H('Number strips and sorting tiles',''),strips(),tiles()];
 function lab2(t){return `<div class="kl">${t}</div>`}
+module.exports.parts={coins,notes,cubes,frames,strips,tiles,svg,H,lab,note,lab2};
