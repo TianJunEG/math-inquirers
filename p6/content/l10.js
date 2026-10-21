@@ -52,7 +52,7 @@ const listMon = (name, vals, x, y, fs = 16) => {
   });
   return { s, w, h: rh * (vals.length + 1) + 10 };
 };
-const codeSvg = (prog, aria) => { const b = blocks(prog); return `<svg aria-label="${esc(aria)}" viewBox="0 0 ${b.w} ${b.h}" xmlns="http://www.w3.org/2000/svg" style="width:${b.w}px;max-width:100%">${b.svg}</svg>`; };
+const codeSvg = (prog, aria, fs) => { const b = blocks(prog, fs); return `<svg aria-label="${esc(aria)}" viewBox="0 0 ${b.w} ${b.h}" xmlns="http://www.w3.org/2000/svg" style="width:${b.w}px;max-width:100%">${b.svg}</svg>`; };
 const codeFig = (prog, aria, list) => {
   const b = blocks(prog);
   let extra = '', W = b.w, Hh = b.h;
@@ -63,7 +63,7 @@ const pyBox = (title, code) => `<div style="margin:0"><div style="border:2px sol
 
 // hexagon chains made of sticks: 1, 2 and 3 hexagons (pointy-top, sharing upright sides)
 const hexChains = () => {
-  const r = 24, w = Math.sqrt(3) * r, cy = 46;
+  const r = 20, w = Math.sqrt(3) * r, cy = 32;
   let s = '';
   const stick = (x1, y1, x2, y2) => `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${NAVY}" stroke-width="7" stroke-linecap="round"/><line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${YEL}" stroke-width="3.5" stroke-linecap="round"/>`;
   let x0 = 20;
@@ -73,10 +73,11 @@ const hexChains = () => {
       const v = [-90, -30, 30, 90, 150, 210].map(a => [cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)]);
       for (let e = 0; e < 6; e++) { if (k > 0 && e === 4) continue; const a = v[e], b = v[(e + 1) % 6]; s += stick(a[0], a[1], b[0], b[1]); }
     }
-    s += `<text x="${(x0 + n * w / 2).toFixed(1)}" y="${cy + r + 30}" font-size="15" font-weight="700" text-anchor="middle" fill="${TEAL}" font-family="Arial">${n} hexagon${n > 1 ? 's' : ''}: ${lab}</text>`;
-    x0 += n * w + 46;
+    const mx = x0 + Math.max(n * w, 70) / 2;
+    s += `<text x="${mx.toFixed(1)}" y="${cy + r + 22}" font-size="15" font-weight="700" text-anchor="middle" fill="${TEAL}" font-family="Arial">${n} hexagon${n > 1 ? 's' : ''}</text><text x="${mx.toFixed(1)}" y="${cy + r + 40}" font-size="15" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${lab}</text>`;
+    x0 += Math.max(n * w, 70) + 30;
   });
-  return `<svg aria-label="Hexagon chains made of sticks: 1 hexagon uses 6 sticks, 2 hexagons use 11 sticks, 3 hexagons use 16 sticks" viewBox="0 0 ${Math.ceil(x0)} 106" xmlns="http://www.w3.org/2000/svg" style="width:${Math.ceil(x0)}px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Hexagon chains made of sticks: 1 hexagon uses 6 sticks, 2 hexagons use 11 sticks, 3 hexagons use 16 sticks" viewBox="0 0 ${Math.ceil(x0)} 100" xmlns="http://www.w3.org/2000/svg" style="width:${Math.ceil(x0)}px;max-width:100%">${s}</svg>`;
 };
 
 const PY_MACHINE = `import random
@@ -182,26 +183,25 @@ module.exports = {
     const wt = [2600, 3300, 2700, 1300];
     const wp = [2400, 7500];
     return [
-      H.p('Challenge round, in teams of 2. Score 1 point for each answer, 1 for a check (a different way or in code) and 1 for a clear reason.', { after: 30 }),
-      H.q(1, 'Chains of hexagons are made from sticks.', { before: 30, keepNext: true }),
-      side(hexChains(), codeSvg(hexProg, 'Code blocks: set n to 1, set sticks to 6, repeat 14 (change sticks by 5, change n by 1), say sticks')),
-      H.sub('a', 'How many sticks for 10 hexagons?  ____        (b)  Write a rule for n hexagons:  sticks = ____________'),
+      H.q(1, 'Chains of hexagons are made from sticks.', { before: 0, keepNext: true }),
+      side(hexChains(), codeSvg(hexProg, 'Code blocks: set n to 1, set sticks to 6, repeat 14 (change sticks by 5, change n by 1), say sticks', 14)),
+      H.sub('a', 'Sticks for 10 hexagons?  ____      (b)  Rule for n hexagons:  sticks = __________'),
       H.sub('c', 'How many hexagons can be made with exactly 101 sticks?  ____'),
-      H.sub('d', 'Predict what the code says.  ____      Which chain does it check?  ______ hexagons'),
-      H.q(2, 'Prime hunters.', { keepNext: true }),
+      H.sub('d', 'Predict what the code says.  ____       Which chain does it check?  ____ hexagons'),
+      H.q(2, 'Prime hunters.', { before: 80, keepNext: true }),
       H.sub('a', 'I am a 2-digit number with exactly 3 factors. My digits add up to 13. What am I?  ____'),
-      H.sub('b', 'Write 84 as a product of prime numbers.  ______________________'),
-      H.sub('c', 'Find ALL the ways to write 40 as the sum of two prime numbers.  ______________________________'),
-      H.q(3, 'Quick-fire round.', { keepNext: true }),
-      H.sub('a', 'It is −4 °C. The temperature rises 9 °C, then falls 12 °C. What is it now?  ______'),
-      H.sub('b', 'A machine does × 3, then − 10. Which number goes IN and comes OUT the same?  ______'),
-      H.sub('c', 'A turtle draws a regular polygon, turning 24° at every corner. How many sides?  ______'),
-      H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ______'),
-      H.sub('e', 'The mean of 5 numbers is 12. A 6th number makes the mean 13. What is the 6th number?  ______'),
-      H.q(4, 'Make 2-digit numbers with the digit cards  1   2   3   4  (each card at most once in a number).', { keepNext: true }),
-      H.sub('a', 'How many different numbers can you make?  ____         (b)  How many of them are even?  ____'),
-      H.sub('c', 'One of the numbers is picked at random. What is the probability that it is a multiple of 3?  ____'),
-      H.p('Team score:  ______ / 45', { after: 0, align: 'right' }),
+      H.sub('b', 'Write 84 as a product of prime numbers.  ____________________'),
+      H.sub('c', 'Find ALL the ways to write 40 as the sum of two primes.  ______________________'),
+      H.q(3, 'Quick-fire round.', { before: 80, keepNext: true }),
+      H.sub('a', 'It is −4 °C. It warms up 9 °C, then cools 12 °C. What is it now?  ____'),
+      H.sub('b', 'A machine does × 3, then − 10. Which number comes OUT the same as it went IN?  ____'),
+      H.sub('c', 'A turtle draws a regular polygon, turning 24° at each corner. How many sides?  ____'),
+      H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ____'),
+      H.sub('e', 'The mean of 5 numbers is 12. A 6th number makes the mean 13. What is it?  ____'),
+      H.q(4, 'Make 2-digit numbers with the digit cards  1  2  3  4  (each card at most once in a number).', { before: 80, keepNext: true }),
+      H.sub('a', 'How many different numbers?  ____          (b)  How many are even?  ____'),
+      H.sub('c', 'One number is picked at random. What is the probability it is a multiple of 3?  ____'),
+      H.p('Team score (1 point for each answer, each check and each reason):  ______ / 45', { after: 0, align: 'right' }),
 
       H.q(5, 'Maths first! Work out what each starter project should do BEFORE you run it.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Mystery Machine (× 3, then + 4). If n is 9, what comes out?  ____      Out came 58. What went in?  ____'),
@@ -210,16 +210,15 @@ module.exports = {
       ...H.lines(1),
       H.q(6, 'My puzzle program: the plan.', { keepNext: true }),
       H.tbl(wp, [
-        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'The answer, worked out by hand', 'My twist (what I will change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 70 }), H.cell('', wp[1], { h: 150 })]))
+        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'The answer, worked out by hand', 'My twist (what I will change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 50 }), H.cell('', wp[1], { h: 50 })]))
       ].flat()),
       H.q(7, 'Plan the blocks, then test. Draw or write your blocks (under 15). Fill in the test table BEFORE you run each test.', { keepNext: true }),
-      H.tbl([9900], [H.row([H.cell('', 9900, { h: 1300 })])]),
+      side(`<div style="width:330px;height:190px;border:2px solid #1B2A49;border-radius:8px;background:#FFFFFF"></div>`, pyBox('Python fans (optional): Starter A. To test it with Q5(a), change line 2 to  n = 9', PY_MACHINE)),
       H.tbl(wt, [
         H.row(['Input (what I type or set)', 'It should say (by hand)', 'It said', 'Same? ✓'].map((s, i) => H.cell(s, wt[i], { bold: true, fill: 'EDEDED', h: 60 }))),
-        ...[0, 1, 2].map(() => H.row(wt.map(w => H.cell('', w, { h: 95 }))))
+        ...[0, 1, 2].map(() => H.row(wt.map(w => H.cell(' ', w, { h: 160 }))))
       ]),
-      H.p('Showcase checklist:   ☐ I can explain the maths    ☐ I tested a value I knew    ☐ I tested an edge case (0, 1, the biggest)    ☐ My twist works', { after: 30 }),
-      pyBox('Python fans (optional): Starter A in Python. To test it with Q5(a), change line 2 to  n = 9', PY_MACHINE)
+      H.p('Showcase checklist:   ☐ I can explain the maths    ☐ I tested a value I knew    ☐ I tested an edge case (0, 1, the biggest)    ☐ My twist works', { after: 0 })
     ];
   }
 };

@@ -17,7 +17,7 @@ const angleIn = (px, py, pw, ph, d0, d1, r, name) => {
   const xs = ps.map(p => p[0]), ys = ps.map(p => p[1]);
   const cx = px + pw / 2 - (Math.min(...xs) + Math.max(...xs)) / 2, cy = py + ph / 2 - (Math.min(...ys) + Math.max(...ys)) / 2;
   const lab = pt(cx, cy, 48, (d0 + d1) / 2);
-  return L([cx, cy], pt(cx, cy, r, d0)) + L([cx, cy], pt(cx, cy, r, d1)) + arc(cx, cy, 28, d0, d1) + T(lab[0], lab[1] + 6, name, 18, TEAL) + `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3.5" fill="${NAVY}"/>`;
+  return L([cx, cy], pt(cx, cy, r, d0)) + L([cx, cy], pt(cx, cy, r, d1)) + arc(cx, cy, 28, d0, d1) + T(lab[0], lab[1] + 7, name, 22, TEAL) + `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3.5" fill="${NAVY}"/>`;
 };
 const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c and d" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:420px;max-width:100%">` +
   `<rect x="2" y="2" width="596" height="356" rx="12" fill="${WHITE}" stroke="#C9D4EC" stroke-width="2"/><line x1="300" y1="12" x2="300" y2="348" stroke="#C9D4EC" stroke-width="2"/><line x1="12" y1="180" x2="588" y2="180" stroke="#C9D4EC" stroke-width="2"/>` +
@@ -28,24 +28,24 @@ const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c an
 const fan = () => {
   const O = [250, 222], R = 200;
   let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
-  [[0, 'A'], [30, 'B'], [90, 'C'], [135, 'D']].forEach(([d, n]) => { s += L(O, pt(O[0], O[1], R, d)); const q = pt(O[0], O[1], R + 18, d); s += T(q[0], q[1] + 6, n, 18); });
+  [[0, 'A'], [30, 'B'], [90, 'C'], [135, 'D']].forEach(([d, n]) => { s += L(O, pt(O[0], O[1], R, d)); const q = pt(O[0], O[1], R + 18, d); s += T(q[0], q[1] + 8, n, 24); });
   s += arc(O[0], O[1], 120, 0, 30) + arc(O[0], O[1], 60, 30, 90) + arc(O[0], O[1], 90, 90, 135);
-  let q = pt(O[0], O[1], 145, 15); s += T(q[0], q[1] + 6, '30°', 16, TEAL);
-  q = pt(O[0], O[1], 82, 60); s += T(q[0], q[1] + 6, '60°', 16, TEAL);
-  q = pt(O[0], O[1], 115, 112.5); s += T(q[0], q[1] + 6, '45°', 16, TEAL);
-  return s + `<circle cx="${O[0]}" cy="${O[1]}" r="4" fill="${NAVY}"/>` + T(O[0] - 4, O[1] + 24, 'O', 18) + '</svg>';
+  let q = pt(O[0], O[1], 145, 15); s += T(q[0] + 8, q[1] + 7, '30°', 21, TEAL);
+  q = pt(O[0], O[1], 84, 60); s += T(q[0] + 6, q[1] + 7, '60°', 21, TEAL);
+  q = pt(O[0], O[1], 118, 112.5); s += T(q[0], q[1] + 7, '45°', 21, TEAL);
+  return s + `<circle cx="${O[0]}" cy="${O[1]}" r="4" fill="${NAVY}"/>` + T(O[0] - 4, O[1] + 26, 'O', 22) + '</svg>';
 };
 
 // Q4: 8-point compass
 const compass = () => {
-  const c = [80, 80];
-  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:84px;max-width:100%">`;
+  const c = [100, 100];
+  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:118px;max-width:100%">`;
   ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'].forEach((n, i) => {
     const d = i * 45, main = i % 2 === 0;
-    s += L(c, pt(c[0], c[1], main ? 52 : 40, d), main ? 3 : 2);
-    const q = pt(c[0], c[1], main ? 66 : 62, d); s += T(q[0], q[1] + 5, n, main ? 15 : 13, main ? NAVY : TEAL);
+    s += L(c, pt(c[0], c[1], main ? 62 : 46, d), main ? 4 : 3);
+    const q = pt(c[0], c[1], main ? 80 : 74, d); s += T(q[0], q[1] + 8, n, main ? 26 : 22, main ? NAVY : TEAL);
   });
-  return s + `<circle cx="80" cy="80" r="5" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/></svg>`;
+  return s + `<circle cx="100" cy="100" r="7" fill="${YEL}" stroke="${NAVY}" stroke-width="2.5"/></svg>`;
 };
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles, (c) two squares sharing a corner
@@ -56,26 +56,26 @@ const corners = () => {
   s += `<rect x="20" y="50" width="150" height="100" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
   const e = [170, 50 + 150 * Math.tan(rad(32))];
   s += L(A, e) + arc(A[0], A[1], 30, -32, 0) + arc(A[0], A[1], 22, -90, -32);
-  let q = pt(A[0], A[1], 48, -16); s += T(q[0], q[1] + 6, 'a', 16, TEAL);
-  q = pt(A[0], A[1], 40, -61); s += T(q[0], q[1] + 6, '58°', 14, TEAL);
-  s += T(95, 190, '(a) rectangle', 15, TEAL);
+  let q = pt(A[0], A[1], 48, -16); s += T(q[0], q[1] + 6, 'a', 19, TEAL);
+  q = pt(A[0], A[1], 40, -61); s += T(q[0], q[1] + 6, '58°', 18, TEAL);
+  s += T(95, 190, '(a) rectangle', 17, TEAL);
   // (b) square 140, bottom-left corner B
   const B = [205, 170];
   s += `<rect x="205" y="30" width="140" height="140" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
   s += L(B, [345, 170 - 140 * Math.tan(rad(15))]) + L(B, [345, 170 - 140 * Math.tan(rad(42))]);
   s += arc(B[0], B[1], 70, 0, 15) + arc(B[0], B[1], 44, 15, 42) + arc(B[0], B[1], 30, 42, 90);
-  q = pt(B[0], B[1], 92, 7.5); s += T(q[0], q[1] + 6, '15°', 14, TEAL);
-  q = pt(B[0], B[1], 62, 28.5); s += T(q[0], q[1] + 6, 'b', 16, TEAL);
-  q = pt(B[0], B[1], 52, 66); s += T(q[0], q[1] + 6, '48°', 14, TEAL);
-  s += T(275, 196, '(b) square', 15, TEAL);
+  q = pt(B[0], B[1], 92, 7.5); s += T(q[0], q[1] + 6, '15°', 18, TEAL);
+  q = pt(B[0], B[1], 62, 28.5); s += T(q[0], q[1] + 6, 'b', 19, TEAL);
+  q = pt(B[0], B[1], 52, 66); s += T(q[0], q[1] + 6, '48°', 18, TEAL);
+  s += T(275, 196, '(b) square', 17, TEAL);
   // (c) two squares of side 100 sharing corner O: one with sides at 0° and 90°, one with sides at 60° and 150°
   const O = [470, 165], S = 100;
   const sqp = d0 => [O, pt(O[0], O[1], S, d0), pt(O[0], O[1], S * Math.SQRT2, d0 + 45), pt(O[0], O[1], S, d0 + 90)].map(p => p.map(v => v.toFixed(1)).join(',')).join(' ');
   s += `<polygon points="${sqp(0)}" fill="${SKY}" stroke="${NAVY}" stroke-width="3" opacity="0.9"/><polygon points="${sqp(60)}" fill="${YEL}" fill-opacity="0.45" stroke="${NAVY}" stroke-width="3"/>`;
   s += arc(O[0], O[1], 40, 60, 90, RED) + arc(O[0], O[1], 22, 0, 150);
-  q = pt(O[0], O[1], 56, 75); s += T(q[0], q[1] + 5, '30°', 14, RED);
-  q = pt(O[0], O[1], 30, 120); s += T(q[0] - 2, q[1] + 6, 'c', 16, TEAL);
-  s += T(470, 196, '(c) two squares', 15, TEAL);
+  q = pt(O[0], O[1], 56, 75); s += T(q[0], q[1] + 5, '30°', 18, RED);
+  q = pt(O[0], O[1], 30, 120); s += T(q[0] - 2, q[1] + 6, 'c', 19, TEAL);
+  s += T(470, 196, '(c) two squares', 17, TEAL);
   return s + '</svg>';
 };
 
