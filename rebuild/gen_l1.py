@@ -39,18 +39,18 @@ put('l1-warm2',sec('l1-warm2','5–10 MIN',body,'Minutes 5 to 10. Read each ques
 # ---- teach 1: the rule is the jump ----
 N=[2,8,14,20,'?']
 body=h2('The rule is the jump')+card(p('A number pattern follows a rule. The rule tells us how much we jump from one number to the next.',40,700))
-body+=pin(128,400,1664,track(N),None)
-for k in range(3): body+=pin(128,400,1664,track(N,['+6','+6','+6','+6'],only=k),'fade')
-body+=pin(128,400,1664,track(N,['+6','+6','+6','+6'],only=3),'fade')+pin(128,400,1664,fill_box(N,4,'26'),'pop')
-body+=pin(128,680,1664,p('Check EVERY pair of neighbours, not just the first. The rule is add 6, so the next number is 20 + 6 = 26.',36,700),'fade',SOFT,20,'22px 30px')
+body+=pin(128,420,1664,track(N),None)
+for k in range(3): body+=pin(128,420,1664,track(N,['+6','+6','+6','+6'],only=k),'fade')
+body+=pin(128,420,1664,track(N,['+6','+6','+6','+6'],only=3),'fade')+pin(128,420,1664,fill_box(N,4,'26'),'pop')
+body+=pin(128,700,1664,p('Check EVERY pair of neighbours. The rule is add 6, so the next number is 20 + 6 = 26.',36,700),'fade',SOFT,20,'22px 30px')
 put('l1-teach1',sec('l1-teach1','25–27 MIN',body,'Teach. Point at 2 and 8 and ask: "How far is it from 2 to 8?" Count the hops on the strip with the children: 3, 4, 5, 6, 7, 8. Six hops. Click to show +6. Then ask the same for 8 to 14 and 14 to 20, clicking after each. Click 4 shows the next jump and 26. Think-aloud: "The numbers are 2, 8, 14, 20. They go up. How much from 2 to 8? Six. From 8 to 14? Six. From 14 to 20? Six. I check every pair of neighbours and it is always six. So my rule is add 6. The next number is 20 + 6 = 26." Watch for children who count the numbers in between (3, 4, 5, 6, 7 is five numbers) instead of counting the hops (six). Show them: put a finger on 2, then say a number for every hop.'))
 
 # ---- worked example 1: is 30 in the pattern? ----
 body=h2('Worked example: is 30 in the pattern?')+card(p('2, 8, 14, 20, 26 …  Is 30 in this pattern?',44,700))
 body+=step(1,'The rule is add 6. Keep jumping:  26 + 6 = 32.',top=430)
 body+=step(2,'The pattern goes 26, then 32. It jumps right over 30. So 30 is NOT in the pattern.',top=540)
-body+=step(3,'Is 38 in it?  32 + 6 = 38.  Yes!',top=690)
-body+=pin(128,800,1664,p('A rule lets us test any number. We do not guess: we keep jumping.',34,700,MUTED),'fade')
+body+=step(3,'Is 38 in it?  32 + 6 = 38.  Yes!',top=650)
+body+=pin(128,770,1664,p('A rule lets us test any number. We do not guess: we keep jumping.',34,700,MUTED),'fade')
 put('l1-we1',sec('l1-we1','27–29 MIN',body,'Click to reveal each step. Before each click, ask the group to predict it. Many children say "yes" to 30 because it "feels close". Ask: "How can we test it?" Think-aloud: "My rule is add 6. 26 + 6 = 32. The pattern lands on 26 and then on 32. It never lands on 30, so 30 is not in the pattern. Is 38 in it? 32 + 6 = 38, yes." Count on from 26 on the strip if children are unsure: 27, 28, 29, 30, 31, 32.'))
 
 # ---- try 1 ----
@@ -84,7 +84,7 @@ body+=pin(128,760,1664,p('What do you notice? Each one is 6 more than the one be
 put('l1-teachboth',sec('l1-teachboth','55–57 MIN',body,'Teach before worksheet page 2 (Q4 uses counting in 2s and in 5s, so we practise with 2s and 3s here; do not do 2s and 5s for them). Write the two lists on the board one under the other and ring the matches. Think-aloud: "I write the 2s in a row. Then I write the 3s under them. Now I look for numbers that are in both rows: 6, 12, 18." Ask: "Is 9 in both? No, we do not say 9 when we count in 2s."'))
 
 # ---- teach before page 2: growing table ----
-W=[230]+[150]*6
+W=[200]+[110]*6
 body=h2('Fill a table: add to the last box')+card(p('Box 1 has 1 sticker. Each box has 4 more stickers than the box before.',40,700))
 body+=trow(128,400,['Box','1','2','3','4','5','6'],W,None,True)
 body+=trow(128,490,['Stickers','1','5','9','13','17','21'],W,'rise')

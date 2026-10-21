@@ -17,6 +17,12 @@ def _item(kind):
         g=f'<rect x="28" y="14" width="104" height="132" rx="10" fill="{SKY}" stroke="{N}" stroke-width="4"/>'+st(58,46,YEL)+st(102,46,'#D64545')+st(58,90,TEAL)+st(102,90,YEL)+st(80,124,'#D64545')
     elif kind=='ruler':
         g=f'<g transform="rotate(-30 80 80)"><rect x="-4" y="58" width="168" height="44" rx="6" fill="{YEL}" stroke="{N}" stroke-width="4"/>'+''.join(f'<line x1="{8+i*12}" y1="58" x2="{8+i*12}" y2="{78 if i%2==0 else 70}" stroke="{N}" stroke-width="3"/>' for i in range(13))+'</g>'
+    elif kind=='bottle':
+        g=f'<rect x="58" y="10" width="44" height="22" rx="5" fill="{TEAL}" stroke="{N}" stroke-width="4"/><path d="M62 32 L98 32 L112 56 L112 146 Q112 154 104 154 L56 154 Q48 154 48 146 L48 56 Z" fill="{SKY}" stroke="{N}" stroke-width="4"/><rect x="48" y="86" width="64" height="34" fill="{YEL}" stroke="{N}" stroke-width="3"/>'
+    elif kind=='car':
+        g=f'<path d="M14 104 L14 84 Q16 74 28 72 L50 70 L66 46 Q70 42 78 42 L112 42 Q120 42 124 48 L138 70 L146 72 Q154 74 154 86 L154 104 Z" fill="#D64545" stroke="{N}" stroke-width="4" stroke-linejoin="round"/><path d="M72 50 L84 50 L84 70 L60 70 Z M92 50 L110 50 L124 70 L92 70 Z" fill="{SKY}" stroke="{N}" stroke-width="3"/><circle cx="44" cy="108" r="17" fill="{N}"/><circle cx="44" cy="108" r="7" fill="#EDEDED"/><circle cx="124" cy="108" r="17" fill="{N}"/><circle cx="124" cy="108" r="7" fill="#EDEDED"/>'
+    elif kind=='scooter':
+        g=f'<line x1="112" y1="24" x2="128" y2="122" stroke="{N}" stroke-width="7" stroke-linecap="round"/><line x1="96" y1="24" x2="128" y2="24" stroke="{N}" stroke-width="8" stroke-linecap="round"/><rect x="30" y="112" width="96" height="14" rx="7" fill="{TEAL}" stroke="{N}" stroke-width="4"/><circle cx="36" cy="132" r="15" fill="{YEL}" stroke="{N}" stroke-width="4"/><circle cx="128" cy="132" r="15" fill="{YEL}" stroke="{N}" stroke-width="4"/>'
     else:  # juice
         g=f'<rect x="44" y="40" width="72" height="108" rx="6" fill="#F28C38" stroke="{N}" stroke-width="4"/><polygon points="44,40 80,22 116,40" fill="#F7B26B" stroke="{N}" stroke-width="4"/><circle cx="80" cy="98" r="20" fill="#FFF9EC" stroke="{N}" stroke-width="3"/><line x1="98" y1="30" x2="112" y2="2" stroke="#D64545" stroke-width="7" stroke-linecap="round"/>'
     return f'<svg aria-label="{kind}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:170px;height:170px;flex:none">{g}</svg>'
@@ -25,9 +31,9 @@ def _tag(price):
             f'<polygon points="4,50 40,6 214,6 214,94 40,94" fill="{YEL}" stroke="{NAVY}" stroke-width="4" stroke-linejoin="round"/>'
             f'<circle cx="38" cy="50" r="9" fill="#FFF9EC" stroke="{NAVY}" stroke-width="4"/>'
             f'<text x="132" y="68" font-size="54" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{price}</text></svg>')
-shop=[('sweet','Sweet','5¢','5¢  (1 coin)'),('pencil','Pencil','15¢','10¢ + 5¢  (2 coins)'),('eraser','Eraser','20¢','20¢  (1 coin)'),
-      ('sticker','Stickers','35¢','20¢ + 10¢ + 5¢  (3 coins)'),('ruler','Ruler','45¢','20¢ + 20¢ + 5¢  (3 coins)'),('juice','Juice box','50¢','50¢  (1 coin)')]
-body=h2('Warm-up: the Coin Shop')+p('Pay exactly. Who can pay with the fewest coins?',36,600,MUTED)
+shop=[('eraser','Eraser','65¢','50¢ + 10¢ + 5¢  (3 coins)'),('pencil','Pencil','80¢','50¢ + 20¢ + 10¢  (3 coins)'),('sticker','Sticker book','$3','$2 note + $1 coin'),
+      ('bottle','Water bottle','$12','$10 + $2  (2 notes)'),('car','Toy car','$25','$10 + $10 + $5  (3 notes)'),('scooter','Scooter','$65','$50 + $10 + $5  (3 notes)')]
+body=h2('Warm-up: the Money Shop')+p('Pay exactly with coins and notes. Who can pay with the fewest?',36,600,MUTED)
 CW=533; cards=''; ans=''
 for i,(k,name,price,a) in enumerate(shop):
     L=128+(i%3)*(CW+32); T=290+(i//3)*300
@@ -36,11 +42,11 @@ for i,(k,name,price,a) in enumerate(shop):
     cards+=pin(L,T,CW,inner,None,WHITE,24,'16px 22px',f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     ans+=pin(L+20,T+190,CW-40,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(a)}</p>','pop',SOFT,16,'12px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('l6-warm1',sec('l6-warm1','0–5 MIN',body+cards+ans,
- 'Minutes 0 to 5. The Coin Shop. Hand out play coins (5¢, 10¢, 20¢, 50¢). Point to one item at a time: "The pencil costs 15¢. Pay exactly. Can you pay with fewer coins than your partner?" '
- 'Children lay their coins out, then you click to show the fewest-coins way for that item (clicks reveal Sweet, Pencil, Eraser, Stickers, Ruler, Juice box in order). '
- 'Fewest coins: Sweet 5¢ = 5¢ (1 coin). Pencil 15¢ = 10¢ + 5¢ (2). Eraser 20¢ = 20¢ (1). Stickers 35¢ = 20¢ + 10¢ + 5¢ (3). Ruler 45¢ = 20¢ + 20¢ + 5¢ (3). Juice box 50¢ = 50¢ (1). '
- 'Ask: "Someone paid 15¢ with three 5¢ coins. Is that right?" (Yes, it is exactly 15¢, just not the fewest.) "Why does the 50¢ coin win for the juice box?" '
- 'Quick finisher: "Buy the pencil AND the eraser. How much? Fewest coins?" (35¢: 20¢ + 10¢ + 5¢, 3 coins). Watch for: children who count the number of coins instead of the value.'))
+ 'Minutes 0 to 5. The Money Shop. Hand out play money: coins (5¢, 10¢, 20¢, 50¢, $1) and notes ($2, $5, $10, $50). Point to one item at a time: "The pencil costs 80¢. Pay exactly. Can you pay with fewer pieces of money than your partner?" '
+ 'Children lay out their money, then you click to show the fewest way for that item (clicks reveal Eraser, Pencil, Sticker book, Water bottle, Toy car, Scooter in order). '
+ 'Fewest: Eraser 65¢ = 50¢ + 10¢ + 5¢ (3). Pencil 80¢ = 50¢ + 20¢ + 10¢ (3). Sticker book $3 = $2 + $1 (2). Water bottle $12 = $10 + $2 (2). Toy car $25 = $10 + $10 + $5 (3). Scooter $65 = $50 + $10 + $5 (3). '
+ 'Ask: "Cents or dollars? How do you know?" (the ¢ sign or the $ sign). "Someone paid $12 with six $2 notes. Is that right?" (Yes, exactly $12, just not the fewest.) "Why do we start with the biggest note that is not too big?" '
+ 'Quick finisher: "Buy the water bottle AND the toy car. How much? Fewest notes?" ($37: $10 + $10 + $10 + $5 + $2, 5 notes). Watch for: children who count how many pieces instead of the value, and children who mix up 50¢ and $50.'))
 qs=[('1.','Pay 15¢ with two coins.','10¢ + 5¢'),('2.','Pay 30¢ with the fewest coins.','20¢ + 10¢'),('3.','Pay 25¢ with two coins.','20¢ + 5¢'),('4.','Pay 40¢ with two coins.','20¢ + 20¢')]
 body=h2('Quick questions')+''.join(qrow(128,260+i*150,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,260+i*150,372,c) for i,(a,b,c) in enumerate(qs))
 put('l6-warm2',sec('l6-warm2','5–10 MIN',body,'Minutes 5 to 10. Children show the coins with play money, then click to reveal. Ask: "Could you pay 40¢ with two coins another way?" (no: only 20¢ + 20¢).'))

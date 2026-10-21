@@ -5,30 +5,51 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 3 \u2013 Fruit Party Graphs",
+ "title": "Math Inquirers: Lesson 3 – Fruit Party Graphs",
  "order": [
   "l3-title",
   "l3-warm1",
   "l3-warm2",
   "l3-explore1",
   "l3-explore2",
-  "l3-mini1",
-  "l3-mini2",
+  "l3-teach1",
+  "l3-try1",
+  "l3-teach2",
+  "l3-try2",
+  "l3-teach3",
+  "l3-try3",
   "l3-key",
   "l3-break",
   "l3-ws1",
+  "l3-ws1ans",
+  "l3-teachwho",
+  "l3-teachtally",
   "l3-ws2",
+  "l3-ws2ans",
   "l3-stretch",
   "l3-challenge",
   "l3-chdiag",
+  "l3-chwalk",
   "l3-talk",
   "l3-exit"
  ],
  "cover": "l3-title",
  "sections": {
   "s1": {
-   "description": "Lesson 3: Fruit Party Graphs (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l3-title"
+  },
+  "s2": {
+   "description": "Teach: read the key, compare, keys of 2 and 3, missing rows",
+   "start": "l3-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l3-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "l3-stretch"
   }
  },
  "faces": {

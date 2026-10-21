@@ -5,30 +5,53 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 9 \u2013 Measure It",
+ "title": "Math Inquirers: Lesson 9 – Measure It",
  "order": [
   "l9-title",
   "l9-warm1",
   "l9-warm2",
   "l9-explore1",
   "l9-explore2",
-  "l9-mini1",
-  "l9-mini2",
+  "l9-teach1",
+  "l9-we1",
+  "l9-try1",
+  "l9-teachcm",
+  "l9-we2",
+  "l9-try2",
   "l9-key",
   "l9-break",
   "l9-ws1",
+  "l9-ws1ans",
+  "l9-teachunit",
+  "l9-teachconv",
+  "l9-tryconv",
+  "l9-teachmore",
   "l9-ws2",
+  "l9-ws2ans",
   "l9-stretch",
   "l9-challenge",
   "l9-chdiag",
+  "l9-chwalk",
   "l9-talk",
   "l9-exit"
  ],
  "cover": "l9-title",
  "sections": {
   "s1": {
-   "description": "Lesson 9: Measure It (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l9-title"
+  },
+  "s2": {
+   "description": "Teach: fair measuring, comparing, and the cm ruler",
+   "start": "l9-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l9-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "l9-stretch"
   }
  },
  "faces": {
