@@ -69,8 +69,8 @@ cols=[(30,'30% shaded'),(45,'45% shaded'),(64,'64% shaded')]
 body=h2('Warm-up: Hundred-Square Snap')+card(p('Each big square has 100 small squares. Write the percentage SHADED and the percentage NOT shaded. Whiteboards up together!',36,700),extra='padding:24px 40px')
 for i,(n,lab) in enumerate(cols):
     L=128+i*580
-    body+=pin(L,350,420,hundred(n,400),None,WHITE,20,'4px 4px')
-    body+=pin(L,790,420,p(f'{n}% shaded,  {100-n}% not shaded',32,800),'pop',YEL,20,'14px 18px')
+    body+=pin(L,380,420,hundred(n,400),None,WHITE,20,'4px 4px')
+    body+=pin(L,820,500,p(f'{n}% shaded,  {100-n}% not shaded',32,800),'pop',YEL,20,'14px 18px')
 put('p5l7-warm1',sec('p5l7-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Hundred-Square Snap. Show the three squares one at a time (cover the other two with your hand or paper online). Children write on whiteboards: the percentage shaded and the percentage NOT shaded, then hold them up together. Click to show the answers. '
  'Square 1: 30 shaded (3 full rows) so 30% shaded, 70% not shaded. Square 2: 45 shaded (4 rows and 5 more) so 45% and 55%. Square 3: 64 shaded (6 rows and 4 more) so 64% and 36%. '
@@ -105,11 +105,11 @@ g+=f'<path d="M10 100 V112 H1650 V100" fill="none" stroke="{NAVY}" stroke-width=
 body=h2('Build any percentage from 10%, 5% and 1%')+pin(128,250,1664,svgwrap(1660,168,'A bar cut into 10 equal parts, each part 10 percent, making the whole 100 percent',g),None,WHITE,20,'8px 0px')
 for i,(a,b) in enumerate([('10%','divide by 10'),('5%','half of 10%'),('1%','divide by 100')]):
     L=128+i*568
-    body+=pin(L,460,528,p(a,60,800,TEAL)+p(b,38,700),None,WHITE,20,'18px 28px')
+    body+=pin(L,460,480,p(a,60,800,TEAL)+p(b,38,700),None,WHITE,20,'18px 28px')
 ex=[('10% of $80 = $8','80 ÷ 10'),('5% of $80 = $4','half of $8'),('1% of $80 = $0.80','80 ÷ 100')]
 for i,(a,b) in enumerate(ex):
     L=128+i*568
-    body+=pin(L,670,528,p(a,38,800),'rise',YEL,20,'16px 24px')
+    body+=pin(L,670,480,p(a,36,800),'rise',YEL,20,'16px 24px')
 body+=soft(128,790,1664,'Percent means "out of 100", so 1% is one of the 100 equal parts.',34,'fade')
 put('p5l7-teach1',sec('p5l7-teach1','25–27 MIN',body,'Teach. Point to the bar: "100% is the whole thing. Cut it into 10 equal parts: each part is 10%." Then the three tools. Click to show each example with $80 (a different amount from the worksheet): 10% of $80 = $8; 5% is half of that, $4; 1% is $80 ÷ 100 = $0.80. '
  'Ask: "How can we make 15% from these?" (10% + 5% = $8 + $4 = $12.) "35%?" (3 × 10% + 5%.) Think-aloud: "I never learn a new rule for each percentage. I build it from 10%, 5% and 1%." '
@@ -129,7 +129,7 @@ put('p5l7-try1',try_slide('p5l7-try1','29–30 MIN','Your turn: build it','Use 1
 
 # ---------- 9. worked example: discount then GST ----------
 body=h2('Discount first, then GST')+card(p('A fan costs $120 before GST. It is sold at 15% off. Then 9% GST is added to the SALE price. What do you pay?',36,700),extra='padding:24px 40px')
-body+=pin(128,350,1664,machine([('$120','q'),('15% off','op'),('$102','res'),('+ 9% GST','op'),('$111.18','res')],None,1664,130),None)
+body+=pin(128,350,1664,machine([('$120','q'),('15% off','op'),('$102','res'),('9% GST','op'),('$111.18','res')],None,1664,130),None)
 body+=step(1,'15% of $120 = $12 + $6 = $18.   Sale price = $120 − $18 = $102.',top=520,size=32)
 body+=step(2,'GST is 9% of the SALE price $102.   10% = $10.20,  1% = $1.02.   9% = $10.20 − $1.02 = $9.18.',top=620,size=32)
 body+=step(3,'Pay = $102 + $9.18 = $111.18.',top=720,size=32)
@@ -154,10 +154,10 @@ put('p5l7-ws1ans',checks('p5l7-ws1ans','52–54 MIN','Page 1: check together',[(
 g=bar(10,10,1640,90,4,{0:YEL},{0:'spent',1:'$20',2:'$20',3:'$20'},4,36)
 g+=f'<path d="M10 120 V132 H1650 V120" fill="none" stroke="{NAVY}" stroke-width="3"/>'+txt(830,170,'Ali had $80: 4 equal parts of $20 (25% each)',32,TEAL,'middle',700,'Nunito Sans, Arial')
 body=h2('Percentage of the REMAINDER')+card(p('Ali had $80. He spent 25% of it. Then he spent 40% of the money LEFT. How much is left at the end? What percentage of $80 is that?',34,700),extra='padding:22px 40px')
-body+=pin(128,350,1664,svgwrap(1660,190,'A bar of 80 dollars cut into 4 equal parts of 20 dollars, the first part spent',g),None,WHITE,20,'8px 0px')
-body+=step(1,'25% of $80 = $20 spent.  Left: $60.   The NEW whole is $60.',top=570,size=32)
-body+=step(2,'40% of $60: 10% = $6, so 40% = $24.   Left: $60 − $24 = $36.',top=670,size=32)
-body+=step(3,'$36 out of $80 = 45 out of 100.   Do NOT add 25% and 40%!',top=770,size=32)
+body+=pin(128,370,1664,svgwrap(1660,190,'A bar of 80 dollars cut into 4 equal parts of 20 dollars, the first part spent',g),None,WHITE,20,'8px 0px')
+body+=step(1,'25% of $80 = $20 spent.  Left: $60.   The NEW whole is $60.',top=590,size=32)
+body+=step(2,'40% of $60: 10% = $6, so 40% = $24.   Left: $60 − $24 = $36.',top=690,size=32)
+body+=step(3,'$36 out of $80 = 45 out of 100.   Do NOT add 25% and 40%!',top=790,size=32)
 put('p5l7-teachrem',sec('p5l7-teachrem','54–56 MIN',body,'Teach before worksheet page 2 (Q4 has a remainder). Draw the bar of $80 in 4 equal parts: each part is $20, which is 25%. Click 1: one part spent, $60 left, and that $60 is the NEW whole. Click 2: the 40% is of $60, not of $80. 10% of $60 is $6, so 40% is $24. $36 is left. '
  'Click 3: the trap. 25% + 40% = 65% suggests 35% is left, which would be $28. Wrong. The real fraction left is $36 out of $80: 36 ÷ 80 = 0.45, so 45%. Ask: "Why can we not add 25% and 40%?" (they are percentages of different wholes: $80 and $60). Check: spent $20 + $24 = $44, which is 55% of $80, and 55% + 45% = 100%.'))
 
@@ -165,24 +165,23 @@ put('p5l7-teachrem',sec('p5l7-teachrem','54–56 MIN',body,'Teach before workshe
 g=rect(10,10,500,70,YEL,NAVY,4)+txt(260,58,'$15',40)+rect(10,110,1000,70,SKY,NAVY,4)+txt(510,158,'$30',40)
 g+=f'<path d="M520 112 V150" stroke="{TEAL}" stroke-width="0"/>'+rect(510,10,500,70,WHITE,TEAL,4).replace('fill="#FFFFFF"','fill="none"').replace(f'stroke="{TEAL}"',f'stroke="{TEAL}" stroke-dasharray="12 8"')+txt(760,58,'+ $15',38,TEAL)
 body=h2('Percentage change: compare with the ORIGINAL')+card(p('A ticket costs $15. The price DOUBLES to $30. Then it goes back from $30 to $15. Find each percentage change.',34,700),extra='padding:22px 40px')
-body+=pin(128,350,1664,svgwrap(1030,190,'Two bars: a 15 dollar bar, and a 30 dollar bar that is the first bar plus another 15 dollars',g),None,WHITE,20,'8px 20px')
-body+=step(1,'Up: the change is $15. The ORIGINAL price is $15.  $15 out of $15 = 100% increase.',top=570,size=32)
-body+=step(2,'Down: the change is $15. The ORIGINAL price is now $30.  $15 out of $30 = 50% decrease.',top=670,size=32)
-body+=soft(128,780,1664,'Same $15 change, different percentages: each is compared with the amount you START from.',32,'fade')
+body+=pin(128,370,1664,svgwrap(1030,190,'Two bars: a 15 dollar bar, and a 30 dollar bar that is the first bar plus another 15 dollars',g),None,WHITE,20,'8px 20px')
+body+=step(1,'Up: the change is $15. The ORIGINAL price is $15.  $15 out of $15 = 100% increase.',top=590,size=32)
+body+=step(2,'Down: the change is $15. The ORIGINAL price is now $30.  $15 out of $30 = 50% decrease.',top=690,size=32)
+body+=soft(128,795,1664,'Same $15 change, different percentages: each is compared with the amount you START from.',32,'fade')
 put('p5l7-teachchange',sec('p5l7-teachchange','56–58 MIN',body,'Teach before worksheet page 2 (Q5 is a price that goes up and back down). Draw the two bars: $15 and $30. Click 1: the rise is $15, the starting price is $15, so $15 out of $15 is the whole thing again: 100% increase (doubling is a 100% increase, not 200%). Click 2: the fall is $15, but now the starting price is $30. $15 out of $30 is half: 50%. '
  'Say in words: "The percentage change is the change out of the STARTING amount." Ask: "Why are the two percentages not the same, when both changes are $15?" (the starting amount is different each time).'))
 
 # ---------- teach: table for groups ----------
-W=[480,300,300,300]
+W=[430,260,260,340]
 body=h2('Groups in a class: make a table')+card(p('50 pupils. 40% are boys. 30% of the boys and 10% of the girls have a bicycle. What percentage of the class have a bicycle?',34,700),extra='padding:22px 40px')
-body+=trow(128,350,['','Boys','Girls','Whole class'],W,None,True,34)
-body+=trow(128,440,['Number of pupils','20','30','50'],W,'rise',False,34)
-body+=trow(128,530,['Have a bicycle','6','3','9'],W,'rise',False,34)
-body+=pin(1560,350,232,p('Fill in the easy parts first.',30,700),None,SOFT,20,'18px 24px')
+body+=trow(128,372,['','Boys','Girls','Whole class'],W,None,True,34)
+body+=trow(128,462,['Number of pupils','20','30','50'],W,'rise',False,34)
+body+=trow(128,552,['Have a bicycle','6','3','9'],W,'rise',False,34)
 body+=step(1,'Boys: 40% of 50 = 20.   Girls: 50 − 20 = 30.',top=640,size=32)
 body+=step(2,'Bicycles: 30% of 20 = 6,   10% of 30 = 3,   6 + 3 = 9.',top=730,size=32)
 body+=answer(128,820,1664,'9 out of 50 = 18 out of 100 = 18%')
-put('p5l7-teachtable',sec('p5l7-teachtable','58–59 MIN',body,'Teach before worksheet page 2 (Q6 has a table for a class). Fill the table row by row, click by click. Boys: 40% of 50: 10% is 5, so 40% is 20. Girls: the rest, 30. Bicycles: boys 30% of 20 = 6 (10% is 2, so 30% is 6); girls 10% of 30 = 3. Whole class: 6 + 3 = 9. Last step: 9 out of 50. To turn it into a percentage: multiply top and bottom by 2 to get 18 out of 100. Ask: "Why can we not just add 30% and 10%?" (they are percentages of different groups: 20 boys and 30 girls).'))
+put('p5l7-teachtable',sec('p5l7-teachtable','58–59 MIN',body,'Teach before worksheet page 2 (Q6 has a table for a class). Fill the table row by row, click by click. Boys: 40% of 50: 10% is 5, so 40% is 20. Girls: the rest, 30. Bicycles: boys 30% of 20 = 6 (10% is 2, so 30% is 6); girls 10% of 30 = 3. Whole class: 6 + 3 = 9. Tip for the table: fill in the easy parts first. Last step: 9 out of 50. To turn it into a percentage: multiply top and bottom by 2 to get 18 out of 100. Ask: "Why can we not just add 30% and 10%?" (they are percentages of different groups: 20 boys and 30 girls).'))
 
 # ---------- teach: compare deals ----------
 body=h2('Which deal is better? Work out the real price')+card(p('Pens cost $10 each. Deal A: buy 2, get 1 free. Deal B: 30% off every pen. You want 3 pens.',34,700),extra='padding:22px 40px')
@@ -206,21 +205,21 @@ put('p5l7-stretch',sec('p5l7-stretch','For early finishers',h2('Stretch')+numcar
 ch=[('1.','A price tag says $109, GST included. Ali says the GST is 9% of $109, which is $9.81. Is he right? How much GST is in the price?'),('2.','Mrs Tan spent 40% of her money on groceries and 25% of the remaining money on a gift. She had $54 left. How much money did she have at first?')]
 put('p5l7-challenge',sec('p5l7-challenge','65–80 MIN',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q7 (Q6, the two lamp shops, is only in the workbook). Answers: 1) No. $109 is 109% of the price before GST, so 1% = $1 and the price before GST was $100. The GST is $9, not $9.81. 2) $120. Work backwards: $54 is 75% of the money left after groceries, so that was $72; $72 is 60% of her money, so 10% is $12 and 100% is $120.'))
 # chdiag
-g1=rect(20,70,640,80,SKY,NAVY,4)+txt(340,122,'price before GST = 100%',30)+rect(660,70,58,80,YEL,NAVY,4)+txt(689,60,'GST 9%',28,TEAL)
-g1+=f'<path d="M20 52 V40 H718 V52" fill="none" stroke="{NAVY}" stroke-width="3"/>'+txt(369,30,'$109 = 109%',34,NAVY)
-g1+=txt(369,200,'1% of the price before GST = ?',32,TEAL,'middle',700,'Nunito Sans, Arial')
+g1=rect(20,70,640,80,SKY,NAVY,4)+txt(340,122,'price before GST = 100%',30)+rect(660,70,58,80,YEL,NAVY,4)+txt(630,185,'GST = 9%',28,TEAL)
+g1+=f'<path d="M20 58 V46 H718 V58" fill="none" stroke="{NAVY}" stroke-width="3"+/>'.replace('+/>','/>')+txt(369,34,'$109 = 109%',34,NAVY)
+g1+=txt(369,232,'1% of the price before GST = ?',30,TEAL,'middle',700,'Nunito Sans, Arial')
 g2=''
-for i in range(10): g2+=rect(20+i*72,60,72,70,YEL if i<4 else WHITE,NAVY,4)
-g2+=txt(20+2*72,105,'groceries',26)+txt(20+4*72+3*72,105,'money left = 60% of all',26)
-g2+=f'<path d="M20 148 V160 H{20+4*72-4}" fill="none" stroke="{TEAL}" stroke-width="3"/>'
-# remainder split in 4 equal sub-parts
+for i in range(10): g2+=rect(20+i*72,64,72,70,YEL if i<4 else WHITE,NAVY,4)
+g2+=txt(20+2*72,54,'groceries',26)+txt(20+7*72,54,'money left',26)
 x0=20+4*72; wrem=6*72
-for j in range(4): g2+=rect(x0+j*wrem/4,190,wrem/4,70,YEL if j==0 else SKY,NAVY,4)
-g2+=txt(x0+wrem/8,235,'gift',26)+txt(x0+wrem*5/8,235,'$54 left',26)+txt(x0+wrem/2,180,'split the money left into 4 equal parts',24,TEAL,'middle',700,'Nunito Sans, Arial')
-g2+=txt(20+360,290,'whole = ?   Work backwards.',30,TEAL,'middle',700,'Nunito Sans, Arial')
+g2+=f'<path d="M{x0} 146 V156 H{x0+wrem} V146" fill="none" stroke="{TEAL}" stroke-width="3"/>'
+for j in range(4): g2+=rect(x0+j*wrem/4,196,wrem/4,70,YEL if j==0 else SKY,NAVY,4)
+g2+=txt(x0+wrem/8,241,'gift',26)+txt(x0+wrem*5/8,241,'$54 left',26)
+g2+=txt(x0+wrem/2,184,'cut the money left into 4 equal parts',24,TEAL,'middle',700,'Nunito Sans, Arial')
+g2+=txt(20+360,310,'whole = ?   Work backwards.',30,TEAL,'middle',700,'Nunito Sans, Arial')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: What is the whole?</p>'+svgwrap(740,230,'A bar showing 109 percent made of 100 percent price before GST and 9 percent GST',g1).replace('width:740px;height:230px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Money left, then a gift</p>'+svgwrap(740,310,'A bar of 10 equal parts, 4 for groceries, and the remaining 6 parts cut into 4 equal parts: one for a gift and three that are 54 dollars',g2).replace('width:740px;height:310px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: What is the whole?</p>'+svgwrap(740,250,'A bar showing 109 percent made of 100 percent price before GST and 9 percent GST',g1).replace('width:740px;height:250px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Money left, then a gift</p>'+svgwrap(740,330,'A bar of 10 equal parts, 4 for groceries, and the remaining 6 parts cut into 4 equal parts: one for a gift and three that are 54 dollars',g2).replace('width:740px;height:330px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p5l7-chdiag',sec('p5l7-chdiag','65–80 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: What is the whole in Q1, and what is it 100% of? In Q2, which amount is the new whole after the groceries? How many equal parts is $54? Answers are in the Challenge slide notes.'))
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: the whole is the price BEFORE GST',34,800,TEAL))
 for i,t in enumerate(['$109 = 100% + 9% = 109%','1% = $109 ÷ 109 = $1','GST = 9% of $100 = $9','Ali used 9% of $109: wrong whole!']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)

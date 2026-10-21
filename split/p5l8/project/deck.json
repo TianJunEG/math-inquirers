@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:31:41Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P5: Lesson 8 – Angle Chasers",
+ "order": [
+  "p5l8-title",
+  "p5l8-warm1",
+  "p5l8-warm2",
+  "p5l8-explore1",
+  "p5l8-explore2",
+  "p5l8-teach1",
+  "p5l8-we1",
+  "p5l8-try1",
+  "p5l8-teachshapes",
+  "p5l8-we2",
+  "p5l8-try2",
+  "p5l8-key",
+  "p5l8-break",
+  "p5l8-ws1",
+  "p5l8-ws1ans",
+  "p5l8-teachchain",
+  "p5l8-teachcombo",
+  "p5l8-teachcases",
+  "p5l8-ws2",
+  "p5l8-ws2ans",
+  "p5l8-stretch",
+  "p5l8-challenge",
+  "p5l8-chdiag",
+  "p5l8-chwalk",
+  "p5l8-talk",
+  "p5l8-exit"
+ ],
+ "cover": "p5l8-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p5l8-title"
+  },
+  "s2": {
+   "description": "Teach: angle facts and angle chases",
+   "start": "p5l8-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before page 2",
+   "start": "p5l8-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p5l8-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
