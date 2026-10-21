@@ -219,7 +219,7 @@ body+=answer(128,810,1664,'Only Ali gives exactly 1 liar. Ali broke the window.'
 put(P+'teachliar',sec(P+'teachliar','56–58 MIN',body,'Teach before worksheet page 2 (Q5). Try each suspect and count the liars: this is a table of cases. If Ali did it: Ali says Ben did it, which is a lie; Ben says "I did not", which is true; Mei says Ali did it, which is true. One liar: fits. If Ben did it: Ali is true, Ben is lying, Mei is lying: two liars, does not fit. If Mei did it: Ali is lying, Ben is true, Mei is lying: two liars, does not fit. Only Ali. Ask: "Why can we be sure there is only one answer?" (We tried every suspect.)'))
 
 # teach ages
-W5=[300,260,260,300]
+W5=[240,200,200,260]
 body=h2('Keep the age gap the same')+card(p('Dad is 38 and Sam is 10. In how many years will Dad be exactly 3 times as old as Sam?',34,700))
 body+=trow(128,400,['Years later','Dad','Sam','3 × Sam'],W5,None,True,34)
 for i,(y,d,sm) in enumerate([(1,39,11),(2,40,12),(3,41,13),(4,42,14)]):

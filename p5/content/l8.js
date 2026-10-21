@@ -53,15 +53,15 @@ const pl = (p, name, dx, dy, size = 20) => tx(p[0] + dx, p[1] + dy, name, size, 
 
 // ---------- Q1: two lines crossing (left) and four angles round a point (right) ----------
 const q1Fig = () => {
-  const O = [140, 80], A = P(...O, 95, 200), B = P(...O, 95, 20), C = P(...O, 95, 132), D = P(...O, 95, 312);
+  const O = [140, 96], A = P(...O, 95, 200), B = P(...O, 95, 20), C = P(...O, 95, 132), D = P(...O, 95, 312);
   chk(O, A, C, 68, 'AOC'); chk(O, B, C, 112, 'BOC'); chk(O, B, D, 68, 'BOD'); chk(O, A, D, 112, 'AOD');
   let s = line(A, B) + line(C, D) + arc(O, A, C, 30, '68°', RED, 58);
   s += pl(A, 'A', -14, 6) + pl(B, 'B', 14, 6) + pl(C, 'C', -4, -10) + pl(D, 'D', 6, 20) + pl(O, 'O', 14, 20);
-  const Q = [430, 80], d1 = P(...Q, 80, 0), d2 = P(...Q, 80, 95), d3 = P(...Q, 80, 225), d4 = P(...Q, 80, 295);
+  const Q = [430, 96], d1 = P(...Q, 80, 0), d2 = P(...Q, 80, 95), d3 = P(...Q, 80, 225), d4 = P(...Q, 80, 295);
   chk(Q, d1, d2, 95, 'q1'); chk(Q, d2, d3, 130, 'q2'); chk(Q, d3, d4, 70, 'q3'); chk(Q, d4, d1, 65, 'q4');
   s += [d1, d2, d3, d4].map(d => line(Q, d)).join('');
   s += arc(Q, d1, d2, 26, '95°', RED, 50) + arc(Q, d2, d3, 26, '130°', RED, 52) + arc(Q, d3, d4, 26, '70°', RED, 50) + arc(Q, d4, d1, 26, '?', RED, 48);
-  return svg(600, 170, 'Left: two straight lines AB and CD cross at O and angle AOC is 68 degrees. Right: four angles meet at a point and measure 95, 130, 70 and a question mark degrees.', s, 0.85);
+  return svg(600, 190, 'Left: two straight lines AB and CD cross at O and angle AOC is 68 degrees. Right: four angles meet at a point and measure 95, 130, 70 and a question mark degrees.', s, 0.85);
 };
 
 // ---------- Q2: parallelogram ABCD (A = 72), rhombus PQRS (P = 64) with diagonal PR, trapezium (A = 110, B = 80) ----------
@@ -74,7 +74,7 @@ const q3Fig = () => {
   // rhombus
   const p = [236, 150], q = [p[0] + 96, p[1]], sp = P(...p, 96, 64), r = [sp[0] + 96, sp[1]];
   chk(p, q, sp, 64, 'QPS'); chk(q, p, r, 116, 'PQR'); chk(p, q, r, 32, 'QPR'); chkEq(p, q, q, r, 'PQ QR'); chkEq(p, q, p, sp, 'PQ PS');
-  s += poly([p, q, r, sp], SKY) + line(p, r, TEAL, 3, '7 5') + arc(p, q, sp, 26, '64°', RED, 46) + arc(p, q, r, 62, '?', RED, 84);
+  s += poly([p, q, r, sp], SKY) + line(p, r, TEAL, 3, '7 5') + arc(p, q, sp, 26) + (() => { const t = P(...p, 62, 50); return tx(t[0], t[1] + 6, '64°', 18, RED); })() + arc(p, q, r, 62, '?', RED, 84);
   s += tick(p, q) + tick(q, r) + tick(r, sp) + tick(sp, p);
   s += pl(p, 'P', -10, 14) + pl(q, 'Q', 8, 16) + pl(r, 'R', 12, 2) + pl(sp, 'S', -12, 2);
   // trapezium: AB // DC, A = 110, B = 80

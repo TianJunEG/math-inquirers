@@ -5,7 +5,7 @@ const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED 
 const F = 'Arial, sans-serif';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const tx = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 16}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.fill || NAVY}" font-family="${F}">${esc(s)}</text>`;
-const svg = (w, h, label, inner) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${w}px;max-width:100%">${inner}</svg>`;
+const svg = (w, h, label, inner, dw) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${dw || w}px;max-width:100%">${inner}</svg>`;
 
 // three shop price boards
 const figShops = () => {
@@ -14,7 +14,7 @@ const figShops = () => {
     `<rect x="${x}" y="8" width="180" height="32" rx="12" fill="${NAVY}"/><rect x="${x}" y="28" width="180" height="12" fill="${NAVY}"/>` +
     tx(x + 90, 31, name, { fill: WHITE, size: 17 }) + tx(x + 90, 70, l1, { size: 17 }) + tx(x + 90, 100, l2, { size: 22 }) + (l3 ? tx(x + 90, 126, l3, { size: 15, fill: RED }) : '');
   return svg(600, 144, 'Shop A: 6 cans for $4.20. Shop B: 4 cans for $2.92. Shop C: pack of 10 cans for $7.80, get 2 more cans free.',
-    board(10, 'SHOP A', 'Pack of 6 cans', '$4.20', '', WHITE) + board(210, 'SHOP B', 'Pack of 4 cans', '$2.92', '', WHITE) + board(410, 'SHOP C', 'Pack of 10 cans', '$7.80', '+ 2 cans FREE!', '#FFF0C2'));
+    board(10, 'SHOP A', 'Pack of 6 cans', '$4.20', '', WHITE) + board(210, 'SHOP B', 'Pack of 4 cans', '$2.92', '', WHITE) + board(410, 'SHOP C', 'Pack of 10 cans', '$7.80', '+ 2 cans FREE!', '#FFF0C2'), 500);
 };
 // a tank with two taps and a leak
 const figTaps = () => {
@@ -24,7 +24,7 @@ const figTaps = () => {
   s += tap(250, 'Tap A: 12 ℓ a minute') + tap(400, '');
   s += tx(470, 28, 'Tap B: 18 ℓ a minute', { a: 'start', size: 15 });
   s += `<path d="M450 176 l14 4" stroke="${NAVY}" stroke-width="2"/><circle cx="472" cy="190" r="4" fill="#7FB2DE"/><circle cx="480" cy="204" r="4" fill="#7FB2DE"/><circle cx="488" cy="218" r="4" fill="#7FB2DE"/>` + tx(500, 214, 'crack: 6 ℓ a minute out', { a: 'start', size: 15, fill: RED });
-  return svg(680, 230, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s);
+  return svg(680, 230, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 440);
 };
 const figPark = () => svg(440, 132, 'Car park sign: first hour $1.20; after that 60 cents for every half hour or part of a half hour',
   `<rect x="6" y="6" width="428" height="120" rx="14" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/><circle cx="56" cy="66" r="34" fill="${TEAL}"/>` + tx(56, 80, 'P', { size: 40, fill: WHITE }) +
@@ -122,8 +122,8 @@ module.exports = {
     const L = s => '<b style="color:#1F7A6F">' + s + '</b> ';
     const rw = [2400, 1500, 1500, 1500, 1500, 1500];
     const rateTbl = H.tbl(rw, [
-      H.row([H.cell('Minutes', rw[0], { bold: true, fill: 'D9D9D9', h: 70 }), ...['1', '3', '5', '', '12'].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 70, fill: s ? 'EDEDED' : undefined }))]),
-      H.row([H.cell('Bottles', rw[0], { bold: true, fill: 'D9D9D9', h: 70 }), ...['', '48', '', '160', ''].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 70, fill: s ? 'EDEDED' : undefined }))])
+      H.row([H.cell('Minutes', rw[0], { bold: true, fill: 'D9D9D9', h: 45 }), ...['1', '3', '5', '', '12'].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 45, fill: s ? 'EDEDED' : undefined }))]),
+      H.row([H.cell('Bottles', rw[0], { bold: true, fill: 'D9D9D9', h: 45 }), ...['', '48', '', '160', ''].map((s, i) => H.cell(s, rw[i + 1], { bold: true, h: 45, fill: s ? 'EDEDED' : undefined }))])
     ]);
     const gw = [2400, 2500, 2500, 2500];
     const gymTbl = H.tbl(gw, [
@@ -141,7 +141,7 @@ module.exports = {
       H.sub('a', 'Find the price of 1 can at each shop.    A ________    B ________    C ________'),
       H.sub('b', 'Which shop is the best buy?   ________'),
       H.sub('c', 'Ben needs at least 20 cans. He can buy from more than one shop, but only whole packs. What is the least he can pay? Show which packs he buys.', { keepNext: true }),
-      ...H.lines(2),
+      ...H.lines(1),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
       H.fig(figTaps()),
       H.sub('a', 'Only tap A is turned on. How long does it take to fill the tank?   ________'),
