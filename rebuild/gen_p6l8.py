@@ -207,12 +207,11 @@ put('p6l8-try2', qa_slide('p6l8-try2', '31–32 MIN', 'Your turn: code and decod
 # ================= 11. we3: decode and the Scratch machine =================
 loop = [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')]
 body = h2('Decoding: add 26 if you go below 0') + stitle('Decode AEB. It was made with shift 4.')
-body += step(1, 'A = 0.  0 − 4 = −4: below 0. Add 26: −4 + 26 = 22, and 22 is W.', top=300, width=1000, size=32)
-body += step(2, 'E = 4.  4 − 4 = 0, and 0 is A.', top=405, width=1000, size=32)
-body += step(3, 'B = 1.  1 − 4 = −3, + 26 = 23, and 23 is X.', top=510, width=1000, size=32)
-body += answer(128, 625, 1000, 'AEB is WAX')
-body += pin(1180, 290, 612, f'<p style="font-size:30px;font-weight:800;color:{TEAL}">The code machine in Scratch</p>' + blocks_svg(loop, 'Blocks: set n to (item number of the letter in alphabet) minus 1; set m to (n plus shift) mod 26; set code to join code and item (m plus 1) of alphabet', 20, 38), 'fade', WHITE, 24, '20px 24px')
-body += soft(128, 745, 1664, 'Scratch lists start at item 1, so letter number n is item n + 1. That is why the blocks say − 1 and + 1.', 32)
+body += step(1, 'A = 0.  0 − 4 = −4: below 0. Add 26: −4 + 26 = 22, and 22 is W.', top=300, width=1664, size=32)
+body += step(2, 'E = 4.  4 − 4 = 0, and 0 is A.      B = 1.  1 − 4 = −3, + 26 = 23, and 23 is X.', top=405, width=1664, size=32)
+body += answer(128, 510, 1664, 'AEB is WAX')
+body += pin(128, 610, 1100, blocks_svg(loop, 'Blocks: set n to (item number of the letter in alphabet) minus 1; set m to (n plus shift) mod 26; set code to join code and item (m plus 1) of alphabet', 24, 42), 'fade', WHITE, 24, '14px 24px')
+body += pin(1280, 640, 512, p('The Scratch code machine runs these 3 blocks for each letter. Lists start at item 1, so letter n is item n + 1.', 28, 700), 'fade', SOFT, 20, '18px 24px')
 put('p6l8-we3', sec('p6l8-we3', '32–34 MIN', body,
     'Click through the decoding steps, then the Scratch blocks. Think-aloud: "' + SC['think'][2].strip('“”') + '" Decoding with shift 4 is the same as coding with shift 22, because 26 − 4 = 22. The blocks run once for each letter of the message: "for each letter" is a repeat loop. Build it live from the starter project and code HELLO. ' + PYNOTE))
 
@@ -240,23 +239,23 @@ put('p6l8-ws1ans', check2('p6l8-ws1ans', '50–52 MIN', 'Page 1: check together'
 # ================= 16. teach trace =================
 trace_blocks = [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')]
 body = h2('Trace the code: SKY with shift 10') + stitle('A trace table follows the program one letter at a time.')
-body += pin(128, 300, 1000, blocks_svg(trace_blocks, 'Three blocks: set n to letter number, set m to (n plus shift) mod 26, set code to join code and the letter at m plus 1', 20, 38), None, WHITE, 20, '16px 24px')
+body += pin(128, 290, 1100, blocks_svg(trace_blocks, 'Three blocks: set n to letter number, set m to (n plus shift) mod 26, set code to join code and the letter at m plus 1', 24, 42), None, WHITE, 20, '12px 24px')
 Wt = [180, 150, 200, 300, 220]
-body += trow(128, 480, ['letter', 'n', 'n + 10', 'm = mod 26', 'code'], Wt, None, True, 34)
+body += trow(128, 520, ['letter', 'n', 'n + 10', 'm = mod 26', 'code'], Wt, None, True, 34)
 for i, (l, n_) in enumerate(zip('SKY', [18, 10, 24])):
     m = (n_ + 10) % 26
-    body += trow(128, 560 + i * 78, [l, str(n_), str(n_ + 10), str(m), ABC[m]], Wt, 'rise', False, 34)
-body += answer(128, 810, 1664, 'The program says CUI (SKY: Y gives 34, 34 mod 26 = 8, which is I)')
+    body += trow(128, 600 + i * 78, [l, str(n_), str(n_ + 10), str(m), ABC[m]], Wt, 'rise', False, 34)
+body += answer(128, 850, 1664, 'The program says CUI (SKY: Y gives 34, 34 mod 26 = 8, which is I)')
 put('p6l8-teachtrace', sec('p6l8-teachtrace', '52–54 MIN', body,
     'Teach before worksheet page 2 (Q3 traces WAY with shift 5; this is a different word). Click to add each row: S = 18 → 28 → 2 = C; K = 10 → 20 = U; Y = 24 → 34 → 8 = I. Ask: "Which letter needed the mod?" (S and Y, because the number went past 25). A trace table is how programmers check code by hand.'))
 
 # ================= 17. teach crack =================
 body = h2('Crack the code') + card(p('YMNX NX KZS.   No shift given. How do we crack it?', 40, 700), extra='padding:24px 40px')
-body += step(1, 'Look for short words. NX looks like IS (the same letters appear in YMNX).', top=410, size=32)
-body += step(2, 'N → I: N = 13 and I = 8. Shift back 5 (13 − 5 = 8). Try S: X = 23 − 5 = 18 = S ✓', top=515, size=32)
-body += step(3, 'Decode every letter with shift 5: YMNX is THIS, NX is IS, KZS is FUN.', top=620, size=32)
-body += answer(128, 740, 1664, 'THIS IS FUN')
-body += soft(128, 850, 1664, 'Only 25 shifts are possible. A computer can try them all in a blink.', 30)
+body += step(1, 'Look for short words. NX looks like IS (the same letters appear in YMNX).', top=400, size=32)
+body += step(2, 'N → I: N = 13 and I = 8. Shift back 5 (13 − 5 = 8). Try S: X = 23 − 5 = 18 = S ✓', top=495, size=32)
+body += step(3, 'Decode every letter with shift 5: YMNX is THIS, NX is IS, KZS is FUN.', top=590, size=32)
+body += answer(128, 700, 1664, 'THIS IS FUN')
+body += soft(128, 800, 1664, 'Only 25 shifts are possible. A computer can try them all in a blink.', 30)
 put('p6l8-teachcrack', sec('p6l8-teachcrack', '54–55 MIN', body,
     'Teach before worksheet page 2 (Q4 cracks a different message by finding a repeated 3-letter word). Think-aloud: "A short word is the best clue. A two-letter word that makes sense is IS, IT, IN, AT, OF. If NX is IS, N went to I, so the shift is 5 backwards. Then I test it on the other words." Show the crack program (Python): for shift in range(1, 26) prints every shift: the one that reads as English wins. In Scratch: repeat 25, change shift by 1, decode and say. This is called brute force.'))
 
@@ -296,7 +295,7 @@ def mulstrip(picks, w=720, y0=44):
     for r in range(2):
         for i in range(13):
             idx = i + 13 * r; x = i * cw; y = y0 + r * 70
-            s += f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="56" fill="{YEL if idx in picks else WHITE}" stroke="{NAVY}" stroke-width="3"/>' + T(x + cw / 2, y + 28, ABC[idx], 26) + T(x + cw / 2, y + 50, idx, 20, MUTED, 600)
+            s += f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="56" fill="{YEL if idx in picks else WHITE}" stroke="{NAVY}" stroke-width="3"/>' + T(x + cw / 2, y + 28, ABC[idx], 26) + T(x + cw / 2, y + 51, idx, 24, MUTED, 600)
     return s
 ex = ''
 for i, (lbl, n_) in enumerate([('A', 0), ('N', 13), ('B', 1), ('O', 14)]):
