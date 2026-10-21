@@ -59,7 +59,7 @@ const traceTable = (x, y, heads, rows, cw, rh = 30) => {
 };
 const PY = 'temp = 5\nfor hour in range(6):\n    temp = temp + (-3)\n    print(temp)';
 const planFig = () => {
-  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'var', 'set depth to [      ]'], [0, 'control', 'repeat [      ]'], [1, 'var', 'change depth by [      ]'], [1, 'looks', 'say [depth] for [1] seconds']], 14, 4, 6);
+  const b = blocksG([[0, 'event', 'when green flag clicked'], [0, 'var', 'set depth to [      ]'], [0, 'control', 'repeat [      ]'], [1, 'var', 'change depth by [      ]'], [1, 'looks', 'say [depth] for [1] seconds']], 14, 4, 6);
   let s = `<svg aria-label="Plan with blanks: set depth to blank, repeat blank, change depth by blank, say depth. Question (b) beside it, and an optional Python box." viewBox="0 0 600 186" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
   s += `<text x="300" y="18" font-size="15" fill="${NAVY}" font-family="Arial">(a) Fill in the three blanks.</text>`;
   s += `<text x="300" y="40" font-size="15" fill="${NAVY}" font-family="Arial">(b) After the loop she is at −28 m.</text><text x="320" y="58" font-size="15" fill="${NAVY}" font-family="Arial">One more block: change depth by ______.</text><text x="320" y="76" font-size="15" fill="${NAVY}" font-family="Arial">What number brings her back to 0 m?</text>`;
@@ -86,7 +86,7 @@ const seaFig = () => {
 };
 
 const traceFig = () => {
-  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'motion', 'set x to [40]'], [0, 'control', 'repeat [4]'], [1, 'motion', 'change x by [−30]'], [0, 'looks', 'say [x position]']], 14, 4, 6);
+  const b = blocksG([[0, 'event', 'when green flag clicked'], [0, 'motion', 'set x to [40]'], [0, 'control', 'repeat [4]'], [1, 'motion', 'change x by [−30]'], [0, 'looks', 'say [x position]']], 14, 4, 6);
   let s = `<svg aria-label="Code: set x to 40, repeat 4: change x by minus 30, then say x position. Beside it an empty trace table and two questions." viewBox="0 0 600 ${Math.max(Math.ceil(b.h) + 8, 150)}" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
   s += traceTable(250, 8, ['repeat', 'start', '1', '2', '3', '4'], [['x', '40', '', '', '', '']], 57, 28);
   const qs = [['(a) What does the sprite say at the end?', ''], ['(b) How many MORE repeats would take', 'it to x = −200?']];
@@ -146,7 +146,7 @@ module.exports = {
     warmGame: 'Cold city line-up. Five cities at 7 a.m. on a December morning: Singapore 25 °C, Tokyo 3 °C, Seoul −7 °C, Beijing −9 °C, Harbin −22 °C. Put them in order from coldest to warmest, then find how many degrees warmer Tokyo is than Seoul.',
     warmQs: [['It is 3 °C. It falls 5 degrees. What is it now?', '−2 °C'], ['Which is colder: −7 °C or −2 °C?', '−7 °C'], ['Count back in 3s: 6, 3, 0, __, __', '−3, −6'], ['What number is 4 less than 1?', '−3'], ['A lift is at B1. It goes down 2 floors. Where is it?', 'B3']],
     expSetup: ['In Scratch, set x to 0: the sprite is in the middle of the stage.', 'Predict, then test: change x by 100, then change x by −250. Where is the sprite?', 'Build the thermometer: set temp to 5, repeat 6: change temp by −3, say temp.', 'Predict the last number it says. Then click the flag and check.'],
-    expPic: 'the Scratch stage drawn as a number line from −240 to 240 with a yellow dot at −150, and the thermometer program drawn as coloured blocks (when flag clicked, set temp to 5, repeat 6, change temp by −3, say temp).',
+    expPic: 'the Scratch stage drawn as a number line from −240 to 240 with a yellow dot at −150, and the thermometer program drawn as coloured blocks (when green flag clicked, set temp to 5, repeat 6, change temp by −3, say temp).',
     expAsk: [['Where did the sprite end up after +100 and then −250?', 'x = −150'], ['What was the last number the thermometer said?', '−13 (2, −1, −4, −7, −10, −13)'], ['How do we make a variable go down in Scratch?', 'Change it by a negative number: adding a negative moves left.']],
     mini1: { head: 'Up and down the line', body: ['It is −4 °C at 6 a.m. It rises 9 degrees by noon, then falls 7 degrees by night.', 'Split each jump at 0: −4 up to 0 is 4, then 5 more; 5 down to 0, then 2 more.', 'What is the temperature at noon, and at night?'], ans: 'Noon 5 °C, night −2 °C.' },
     mini2: { head: 'Subtracting: the jump from b to a', body: ['How much warmer is 7 °C than −3 °C? That is 7 − (−3).', 'Start at −3 and count to 7: 3 up to 0, then 7 more.', 'What is 7 − (−3)?'], ans: '10 (check: −3 + 10 = 7).' },
@@ -217,7 +217,7 @@ module.exports = {
     H.q(5, 'Trace the code. Fill in the table to show x after each repeat.', { keepNext: true }),
     H.fig(traceFig()),
     H.q(6, 'Find the bug. Siti wants the lift to go DOWN 8 floors from floor 5. (0 = ground floor)', { keepNext: true }),
-    H.fig(codeQ([[0, 'event', 'when flag clicked'], [0, 'var', 'set floor to [5]'], [0, 'control', 'repeat [8]'], [1, 'var', 'change floor by [1]'], [1, 'looks', 'say [floor] for [1] seconds']], ['(a) Her code says this floor last:', '(b) Change ONE block so the lift', 'goes down. New block:', '(c) Now the last floor it says is', 'which basement?'], [0, 2, 4], 'Siti\'s code: set floor to 5, repeat 8: change floor by 1, say floor. Questions with answer lines beside it.')),
+    H.fig(codeQ([[0, 'event', 'when green flag clicked'], [0, 'var', 'set floor to [5]'], [0, 'control', 'repeat [8]'], [1, 'var', 'change floor by [1]'], [1, 'looks', 'say [floor] for [1] seconds']], ['(a) Her code says this floor last:', '(b) Change ONE block so the lift', 'goes down. New block:', '(c) Now the last floor it says is', 'which basement?'], [0, 2, 4], 'Siti\'s code: set floor to 5, repeat 8: change floor by 1, say floor. Questions with answer lines beside it.')),
     H.q(7, 'Plan your code. A diver starts at sea level (0 m) and goes down 4 m at a time to −28 m.', { keepNext: true }),
     H.fig(planFig())
   ]; }

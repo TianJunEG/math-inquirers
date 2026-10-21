@@ -168,7 +168,7 @@ module.exports = {
   },
 
   workbook: H => {
-    const meanProg = ['when flag clicked', 'set total to 0', 'set i to 1', { c: 'repeat 4', body: ['change total by (item i of scores)', 'change i by 1'] }, 'say (total / 4)'];
+    const meanProg = ['when green flag clicked', 'set total to 0', 'set i to 1', { c: 'repeat 4', body: ['change total by (item i of scores)', 'change i by 1'] }, 'say (total / 4)'];
     const planProg = ['set count to 0', 'set i to 1', { c: 'repeat (length of temps)', body: [{ c: 'if (item i of temps) > ( _____ ) then', body: ['change ( _____ ) by 1'] }, 'change i by 1'] }, 'say count'];
     const w1 = [3300, 1100, 1100, 1100, 1100, 1100, 1100];
     const w3 = [4000, 3400, 2500];
@@ -194,7 +194,7 @@ module.exports = {
       ...H.lines(2),
 
       H.q(5, 'Trace the code. The list called scores holds 5, 9, 6 and 12 (item 1 is 5, item 2 is 9, and so on). Fill in the trace table, one row for each time round the loop.', { pb: true, before: 0, keepNext: true }),
-      side(codeSvg(meanProg, 'Code blocks: when flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4.'),
+      side(codeSvg(meanProg, 'Code blocks: when green flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4.'),
         H.tbl(w4, [
           H.row(['Loop', 'i', 'item i', 'total'].map((s, i) => H.cell(s, w4[i], { bold: true, fill: 'EDEDED', h: 60 }))),
           ...['1st', '2nd', '3rd', '4th'].map(s => H.row([H.cell(s, w4[0], { bold: true, h: 75 }), H.cell('', w4[1], { h: 75 }), H.cell('', w4[2], { h: 75 }), H.cell('', w4[3], { h: 75 })]))

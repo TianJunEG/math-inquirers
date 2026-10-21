@@ -209,6 +209,6 @@ module.exports = {
     H.fig(corners()),
     H.sub('', '∠a = ________          ∠b = ________          ∠c = ________'),
     H.q(6, 'A robot starts facing N.', { keepNext: true }),
-    H.sub('a', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______')
+    H.sub('', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______')
   ]
 };

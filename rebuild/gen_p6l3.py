@@ -106,7 +106,7 @@ def ans_rows(rows,top=250,gapy=130,lw=200,size=36):
 
 PY_MAIN='temp = 5\nfor hour in range(6):\n    temp = temp + (-3)\n    print(temp)'
 PY_NOTE='Optional Python version (same program, for children who know Python): '+' | '.join(PY_MAIN.split('\n'))+'   Output: 2, -1, -4, -7, -10, -13 (one per line).'
-THERMO=[(0,'event','when flag clicked'),(0,'var','set temp to [5]'),(0,'control','repeat [6]'),(1,'var','change temp by [−3]'),(1,'looks','say [temp] for [1] seconds')]
+THERMO=[(0,'event','when green flag clicked'),(0,'var','set temp to [5]'),(0,'control','repeat [6]'),(1,'var','change temp by [−3]'),(1,'looks','say [temp] for [1] seconds')]
 
 # ---------- 1 title ----------
 put(f'{L}-title',title_slide(f'{L}-title',3,2,'Below Zero','Negative numbers  •  Code: a sprite on a number line',
@@ -145,7 +145,7 @@ stage=(f'<svg aria-label="The Scratch stage is a number line: x goes from minus 
  +'</svg>')
 steps=['Set x to 0. Your sprite (call it Dot) is in the middle.','Predict, then test: change x by 100, then change x by −250. Where is Dot?','Build the thermometer program on the right.','Predict the LAST number it says. Then click the flag.']
 left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:32px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',extra='flex:1;min-width:0')
-right=card(stage+blocks_svg(THERMO,26,'Thermometer program: when flag clicked, set temp to 5, repeat 6: change temp by minus 3, say temp for 1 seconds'),extra='flex:none;width:760px;padding:20px 24px;gap:10px')
+right=card(stage+blocks_svg(THERMO,26,'Thermometer program: when green flag clicked, set temp to 5, repeat 6: change temp by minus 3, say temp for 1 seconds'),extra='flex:none;width:760px;padding:20px 24px;gap:10px')
 body=h2('Explore: the stage is a number line')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 1 minute: show the x number under the stage as you drag the sprite left and right. "The stage is a number line. The middle is 0. Left of the middle is negative." Then children work in pairs (breakout rooms online), each on their own computer. '
@@ -214,7 +214,7 @@ put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+a
 
 # ---------- 16 teach trace ----------
 body=h2('Trace the code in a table')
-body+=pin(128,240,700,blocks_svg([(0,'event','when flag clicked'),(0,'motion','set x to [20]'),(0,'control','repeat [3]'),(1,'motion','change x by [−15]'),(0,'looks','say [x position]')],32,'set x to 20, repeat 3: change x by minus 15, then say x position'),None)
+body+=pin(128,240,700,blocks_svg([(0,'event','when green flag clicked'),(0,'motion','set x to [20]'),(0,'control','repeat [3]'),(1,'motion','change x by [−15]'),(0,'looks','say [x position]')],32,'set x to 20, repeat 3: change x by minus 15, then say x position'),None)
 W=[300,300]
 body+=trow(1000,240,['After repeat','x'],W,None,True)
 body+=trow(1000,320,['start','20'],W,None)
@@ -224,7 +224,7 @@ put(f'{L}-teachtrace',sec(f'{L}-teachtrace','54–56 MIN',body,'Teach before wor
 
 # ---------- 17 teach bug ----------
 body=h2('Find the bug')+card(p('Ravi wants a countdown that says 3, 2, 1, 0, −1. His code says 3, 4, 5, 6, 7.',38,700))
-body+=pin(128,400,760,blocks_svg([(0,'event','when flag clicked'),(0,'var','set n to [3]'),(0,'control','repeat [5]'),(1,'looks','say [n] for [1] seconds'),(1,'var','change n by [1]')],32,'Ravi\'s code: set n to 3, repeat 5: say n, change n by 1'),None)
+body+=pin(128,400,760,blocks_svg([(0,'event','when green flag clicked'),(0,'var','set n to [3]'),(0,'control','repeat [5]'),(1,'looks','say [n] for [1] seconds'),(1,'var','change n by [1]')],32,'Ravi\'s code: set n to 3, repeat 5: say n, change n by 1'),None)
 body+=step(1,'Read each block. Which one makes n go UP?',left=960,top=400,width=772,size=34)
 body+=step(2,'Fix it: change n by −1. Now n goes 3, 2, 1, 0, −1 ✓',left=960,top=530,width=772,size=34)
 body+=step(3,'Test it: run the code and check the last number.',left=960,top=680,width=772,size=34)

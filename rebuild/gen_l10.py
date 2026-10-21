@@ -118,8 +118,8 @@ body+=pin(128,670,1664,to,'rise')
 body+=step(2,'End to end: 5 + 12 = 17 cubes. Not 5 + 7!',top=780,size=34)
 put('l10-teachlen',sec('l10-teachlen','57–58 MIN',body,'Teach before worksheet page 2 (Q8). Click the ruler bar, step 1, the end-to-end bar, step 2. Think-aloud: "7 longer is not the ruler\'s length: it is the extra bit. The ruler is the crayon\'s 5 and 7 more: 12. End to end means both whole lengths: 5 + 12 = 17." Common mistake: 5 + 7 = 12 given as the end-to-end answer.'))
 
-put('l10-ws2',ws_preview('l10-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q5','Shapes. Count the small triangles first, then bigger ones.'),('Q6','Older and younger. Draw a line, oldest at the top.'),('Q7','Mystery number. Draw the machine and go backwards.'),('Q8','Pencil and pen. Draw the bars.'),('Q9','Make a puzzle for a friend, with the answer.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q9: check that the puzzle has exactly one answer and that the child can say how to start it.'))
-put('l10-ws2ans',check_slide('l10-ws2ans','66–68 MIN','Page 2: check together',[('Q5','a) A square   b) 6 triangles'),('Q6','Mei is the youngest.'),('Q7','5'),('Q8','a) 10 cubes   b) 16 cubes'),('Q9','Open: swap puzzles and solve them.')],'Click each answer after a child explains how they started. Q5b: 3 small; 2 made of two small ones (left and middle, middle and right); 1 made of all three: 3 + 2 + 1 = 6. Q6: line, oldest at the top: Ali, Ben, Mei. Q7: undo the last step first: 10 + 4 = 14, 14 − 9 = 5. Check 5 + 9 = 14, 14 − 4 = 10. Q8: pen 6 + 4 = 10; end to end 6 + 10 = 16.'))
+put('l10-ws2',ws_preview('l10-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q5','Shapes. Count the small triangles first, then bigger ones.'),('Q6','Older and younger. Draw a line, oldest at the top.'),('Q7','Mystery number. Draw the machine and go backwards.'),('Q8','Pencil and pen. Draw the bars.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q9: check that the puzzle has exactly one answer and that the child can say how to start it.'))
+put('l10-ws2ans',check_slide('l10-ws2ans','66–68 MIN','Page 2: check together',[('Q5','a) A square   b) 6 triangles'),('Q6','Mei is the youngest.'),('Q7','5'),('Q8','a) 10 cubes   b) 16 cubes')],'Click each answer after a child explains how they started. Q5b: 3 small; 2 made of two small ones (left and middle, middle and right); 1 made of all three: 3 + 2 + 1 = 6. Q6: line, oldest at the top: Ali, Ben, Mei. Q7: undo the last step first: 10 + 4 = 14, 14 − 9 = 5. Check 5 + 9 = 14, 14 − 4 = 10. Q8: pen 6 + 4 = 10; end to end 6 + 10 = 16.'))
 
 # ---------- stretch (new) ----------
 st=[('1.','Mei thinks of a number, adds 7, takes away 2 and gets 19. Ben does the same and gets 25. How much bigger is Ben\'s number?'),('2.','4, 9, 14, 19, …  Which number in this pattern is closest to 50?'),('3.','Ali has 5 coins worth 60¢. He has only 5¢, 10¢ and 20¢ coins. Find every possible set.')]
@@ -142,6 +142,14 @@ def tidy(sid,labels,fix_fonts=False):
     open(f,'w').write(s)
 tidy('l10-explore1',['Four puzzle stations: coins, patterns, logic and measuring'])
 tidy('l10-chdiag',['Stickers drawn as bars for Ali, Ben and Mei','Four empty coin boxes for exactly 4 coins making 70 cents'],True)
+# ---------- puzzle cards slide (audit 1: the four cards, pairs get ONE card for 10 minutes, swap for 4) ----------
+import subprocess
+CARDS=json.loads(subprocess.run(['node','-e',"console.log(JSON.stringify(require('./hp/lessons.js').lessons[9].cards))"],capture_output=True,text=True,cwd=os.path.join(H,'..')).stdout)
+body=h2('Puzzle cards: pick one')+p('Your pair gets ONE card for 10 minutes. Then swap with another pair for 4 minutes.',34,600,MUTED)
+for k,c in enumerate(CARDS):
+    L=128+(k%2)*848; T=330+(k//2)*330
+    body+=pin(L,T,816,p(E(c['title']),38,800,TEAL)+p(E(c['text']),34,600,raw=True),None,WHITE,24,'22px 30px',f'box-sizing:border-box;min-height:290px;border:4px dashed {NAVY}')
+put('l10-cards',sec('l10-cards','11–21 MIN',body,'Minutes 11 to 21. Each pair works on ONE puzzle card for 10 minutes (the printed cards are on the Puzzle cards page of the workbook; online, one card per breakout room). Then pairs swap cards with another pair for a 4-minute second round (21 to 25, with Explore: talk about it). Each pair reports back in 30 seconds. Answers: Coins) 20¢ + 20¢ + 5¢ (the only way). Patterns) 32: add 3 each time, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. Logic) Mei, Ben, Sam, Ali. Measuring) 16 cubes: the pen is 10 cubes, and 6 + 10 = 16.'))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 for old in ['l10-mini1','l10-mini2']:
     f=os.path.join(D,'slides',old+'.html')
@@ -156,3 +164,22 @@ deck['order']=['l10-title','l10-warm1','l10-warm2','l10-explore1','l10-explore2'
 deck['sections']={'s1':{'description':'Warm-up and explore','start':'l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and close','start':'l10-stretch'}}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(deck['order']),'slides; wrote',len(S))
+
+import re, p1fix
+for sid,pairs in {'l10-explore1':[('Four stations, eight minutes at each: coins, patterns, logic, measuring.','Four puzzle cards: coins, patterns, logic, measuring. Your pair gets ONE card for 10 minutes. Then swap cards with another pair for 4 minutes.')],
+                  'l10-explore2':[('What did you do first at each station?','What did you do first on your card?'),('Which station was hardest? Why?','Which card was hardest? Why?')]}.items():
+    p1fix.patch(D,sid,pairs)
+f=os.path.join(D,'slides','l10-explore1.html'); t=open(f).read()
+t=re.sub(r'<aside>.*?</aside>','<aside>Minutes 10 to 11. Explain the plan, then move to the next slide with the four puzzle cards. Each pair works on ONE card for 10 minutes (11 to 21), then swaps with another pair for a 4-minute second round (21 to 25). Materials: the four puzzle cards (workbook Puzzle cards page), play coins, cubes, mini whiteboards. Online: one card per breakout room; each pair reports back in 30 seconds.</aside>',t,flags=re.S); open(f,'w').write(t)
+f=os.path.join(D,'slides','l10-explore2.html'); t=open(f).read()
+t=re.sub(r'<aside>.*?</aside>','<aside>Minutes 21 to 25. Pairs swap cards with another pair for the second 4-minute round, then gather to answer these. Keep report-backs to 30 seconds each; shorten them if time is tight. Answers: 1) Open answers.  2) Open answers.  3) An inquirer rule: notice, test, check, explain.</aside>',t,flags=re.S); open(f,'w').write(t)
+f=os.path.join(D,'slides','l10-talk.html'); t=open(f).read()
+if 'Q9' not in t:
+    t=t.replace('Pick one puzzle and teach it to the group in two sentences.','Make a puzzle for a friend (workbook Q9) with its answer. Swap it with a partner and solve it. Then pick one puzzle and teach it to the group in two sentences.')
+    t=re.sub(r'<aside>Minutes 70 to 80\.','<aside>Minutes 72 to 80. Q9 (make a puzzle for a friend) is done here, not on worksheet page 2: pairs write a puzzle with its answer, swap, and solve each other\'s.',t)
+    open(f,'w').write(t)
+p1fix.sub_all(D,[('Puzzle cards for 4 stations','the four puzzle cards (coins, patterns, logic, measuring)'),('Online: one puzzle per breakout pair.',''),('Online: Breakout pairs work on one puzzle card each, then report back to the group.','Online: one card per breakout room; each pair reports back in 30 seconds.')])
+d=json.load(open(os.path.join(D,'deck.json'))); 
+if 'l10-cards' not in d['order']: d['order'].insert(d['order'].index('l10-explore1')+1,'l10-cards')
+json.dump(d,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
+p1fix.finish(D,10,{'l10-explore1':'10–11 MIN','l10-explore2':'21–25 MIN','l10-ws2':'58–68 MIN'})

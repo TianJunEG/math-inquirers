@@ -95,7 +95,7 @@ const twoMachines = () => {
 };
 // Q4: machine code on the left; questions and the optional Python box on the right
 const askFig = () => {
-  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'looks', 'ask [IN?] and wait'], [0, 'var', 'set out to [(answer * 2) − 7]'], [0, 'looks', 'say [out]']], 14, 4, 6);
+  const b = blocksG([[0, 'event', 'when green flag clicked'], [0, 'looks', 'ask [IN?] and wait'], [0, 'var', 'set out to [(answer * 2) − 7]'], [0, 'looks', 'say [out]']], 14, 4, 6);
   let s = `<svg aria-label="Code: ask IN? and wait, set out to answer times 2 minus 7, say out. Questions and an optional Python box beside it." viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
   s += qline(300, 16, '(a) You type 10. It says') + qline(300, 38, '(b) You type 3. It says') + qline(300, 60, '(c) To make it say 25, type');
   s += `<rect x="290" y="72" width="306" height="86" rx="10" fill="${SKY}" stroke="${NAVY}" stroke-width="1.5"/><text x="300" y="90" font-size="14" font-weight="700" fill="${TEAL}" font-family="Arial">Know Python? The explore machine:</text>`;
@@ -104,7 +104,7 @@ const askFig = () => {
 };
 // Q5: loop code on the left; trace table and questions on the right
 const loopFig = () => {
-  const b = blocksG([[0, 'event', 'when flag clicked'], [0, 'var', 'set n to [1]'], [0, 'control', 'repeat [4]'], [1, 'looks', 'say [(n * 4) + 1] for [1] seconds'], [1, 'var', 'change n by [1]']], 14, 4, 6);
+  const b = blocksG([[0, 'event', 'when green flag clicked'], [0, 'var', 'set n to [1]'], [0, 'control', 'repeat [4]'], [1, 'looks', 'say [(n * 4) + 1] for [1] seconds'], [1, 'var', 'change n by [1]']], 14, 4, 6);
   let s = `<svg aria-label="Code: set n to 1, repeat 4: say n times 4 plus 1, change n by 1. An empty trace table and questions beside it." viewBox="0 0 600 ${Math.max(Math.ceil(b.h) + 6, 152)}" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">${b.g}`;
   s += traceTable(330, 4, ['repeat', 'n', 'it says'], [['1', '1', ''], ['2', '', ''], ['3', '', ''], ['4', '', '']], 80, 20);
   s += qline(300, 124, '(b) The rule: it says') + qline(300, 146, '(c) With repeat 10, the last number is');
@@ -154,7 +154,7 @@ module.exports = {
     warmGame: 'Guess my rule. The tutor is a machine with a secret rule. Call out IN numbers, hear the OUT, and guess the rule. Rounds: n + 5, 5n, 2n − 1, 3n + 2. Check each rule on every pair.',
     warmQs: [['n = 6. What is 4n?', '24'], ['n = 6. What is n + 9?', '15'], ['n = 6. What is 3n − 5?', '13'], ['2n = 18. What is n?', '9'], ['n = 6. What is (n + 4) × 2?', '20']],
     expSetup: ['Build the machine in Scratch: ask IN? and wait, set out to (answer * 3) + 2, say out.', 'Change the rule to your own secret two-step rule.', 'Share your screen. Your partner calls IN numbers and you type them in.', 'Your partner writes your rule with n, using as few IN numbers as possible. Then swap.'],
-    expPic: 'a machine drawn as boxes (IN → × 3 → + 2 → OUT) above the Scratch program drawn as coloured blocks (when flag clicked, ask IN? and wait, set out to (answer * 3) + 2, say out).',
+    expPic: 'a machine drawn as boxes (IN → × 3 → + 2 → OUT) above the Scratch program drawn as coloured blocks (when green flag clicked, ask IN? and wait, set out to (answer * 3) + 2, say out).',
     expAsk: [['Which IN numbers were most useful?', 'Numbers in a row show the × part; IN 0 shows the + part.'], ['How did you write the rule with n?', 'The × part first, then the + or − part, e.g. 3n + 2.'], ['The machine × 3, + 2 says 20. How can you find IN without guessing?', 'Run it backwards: 20 − 2 = 18, 18 ÷ 3 = 6.']],
     mini1: { head: 'From a table to a rule', body: ['IN 1, 2, 3, 4 gives OUT 7, 11, 15, 19.', 'OUT goes up 4 each time, so × 4. 4 × 1 = 4, but OUT is 7, so + 3.', 'What is the rule? Check it on IN 4.'], ans: 'OUT = 4n + 3 (4 × 4 + 3 = 19).' },
     mini2: { head: 'Run the machine backwards', body: ['A machine does × 5, then − 4. OUT is 31. That is 5n − 4 = 31.', 'Undo the last step first: 31 + 4 = 35. Then undo × 5: 35 ÷ 5.', 'What is n? Check forwards.'], ans: 'n = 7 (7 × 5 − 4 = 31).' },

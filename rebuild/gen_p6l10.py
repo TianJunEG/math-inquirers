@@ -130,8 +130,8 @@ put('p6l10-teach1',sec('p6l10-teach1','22–23 MIN',body,
  'Teach. Click each card. Say: "A program that shows an answer you could not check is not a puzzle, it is a mystery box. So the maths always comes first." Then the three starters, each about one minute. Children do not copy them yet: they choose one at the planning stage after the break.'))
 
 # ---------------- 9. starter A ----------------
-progA=['when flag clicked','set n to (pick random 1 to 20)','ask (join "OUT: " ((n * 3) + 4)) and wait',{'c':'if (answer = n) then','body':['say "You cracked it!"'],'els':['say (join "No, it was " n)']}]
-body=h2('Starter A: Mystery Machine')+pin(128,250,820,code_svg(progA,'Code blocks: when flag clicked, set n to pick random 1 to 20, ask join OUT: and n times 3 plus 4 and wait, if answer equals n then say You cracked it! else say join No, it was, n',28))
+progA=['when green flag clicked','set n to (pick random 1 to 20)','ask (join "OUT: " ((n * 3) + 4)) and wait',{'c':'if (answer = n) then','body':['say "You cracked it!"'],'els':['say (join "No, it was " n)']}]
+body=h2('Starter A: Mystery Machine')+pin(128,250,820,code_svg(progA,'Code blocks: when green flag clicked, set n to pick random 1 to 20, ask join OUT: and n times 3 plus 4 and wait, if answer equals n then say You cracked it! else say join No, it was, n',28))
 body+=pin(1010,250,782,p('The maths',30,800,TEAL)+p('OUT = 3n + 4.  Backwards: take away 4, then divide by 3.',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(1010,470,782,p('Test it',30,800,TEAL)+p('If n is 5, it must show OUT: 19. Type 5: “You cracked it!”',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(1010,690,782,p('Twist ideas',30,800,TEAL)+p('A different rule each time; keep a score; allow negative numbers.',32,700),'rise',SOFT,20,'20px 28px')
@@ -143,8 +143,8 @@ put('p6l10-try1',try_slide('p6l10-try1','24–25 MIN','Your turn: beat the machi
  'Whiteboards. a) 25 − 4 = 21, 21 ÷ 3 = 7. b) 64 − 4 = 60, 60 ÷ 3 = 20. c) 3 − 4 = −1, and −1 ÷ 3 is not a whole number; also the smallest OUT for n from 1 to 20 is 3 × 1 + 4 = 7, so the program can never show 3. Good discussion: knowing what a program can NEVER say is also a test.',44))
 
 # ---------------- 10. starter B ----------------
-progB=['when flag clicked','ask "Give me a whole number" and wait','set factors to 0','set d to 1',{'c':'repeat (answer)','body':[{'c':'if ((answer mod d) = 0) then','body':['change factors by 1']},'change d by 1']},{'c':'if (factors = 2) then','body':['say "Prime!"'],'els':['say "Not prime"']}]
-body=h2('Starter B: Prime or Not?')+pin(128,232,800,code_svg(progB,'Code blocks: when flag clicked, ask give me a whole number and wait, set factors to 0, set d to 1, repeat answer times (if answer mod d equals 0 then change factors by 1; change d by 1), if factors equals 2 then say Prime! else say Not prime',24))
+progB=['when green flag clicked','ask "Give me a whole number" and wait','set factors to 0','set d to 1',{'c':'repeat (answer)','body':[{'c':'if ((answer mod d) = 0) then','body':['change factors by 1']},'change d by 1']},{'c':'if (factors = 2) then','body':['say "Prime!"'],'els':['say "Not prime"']}]
+body=h2('Starter B: Prime or Not?')+pin(128,232,800,code_svg(progB,'Code blocks: when green flag clicked, ask give me a whole number and wait, set factors to 0, set d to 1, repeat answer times (if answer mod d equals 0 then change factors by 1; change d by 1), if factors equals 2 then say Prime! else say Not prime',24))
 W=[150,220,190]; L0=1060
 body+=pin(L0,240,732,p('Test: type 6',32,800,TEAL))
 body+=trow(L0,300,['d','6 mod d','factors'],W,None,True,30)
@@ -155,7 +155,7 @@ put('p6l10-we2',sec('p6l10-we2','25–26 MIN',body,
  'Python version (optional):\n'+PY_B+'Tested: 6 → "6 is not prime. It has 4 factor(s)."  7 → "7 is prime!"  97 → "97 is prime!"  1 → "1 is not prime. It has 1 factor(s)."'))
 
 # ---------------- 11. starter C ----------------
-progC=['when flag clicked','set sevens to 0',{'c':'repeat 1000','body':[{'c':'if ((pick random 1 to 6) + (pick random 1 to 6) = 7) then','body':['change sevens by 1']}]},'say (join sevens " sevens")']
+progC=['when green flag clicked','set sevens to 0',{'c':'repeat 1000','body':[{'c':'if ((pick random 1 to 6) + (pick random 1 to 6) = 7) then','body':['change sevens by 1']}]},'say (join sevens " sevens")']
 g=''
 for a in range(7):
     for b in range(7):
@@ -167,7 +167,7 @@ for a in range(7):
             s7=(a+b==7)
             g+=f'<rect x="{x}" y="{y}" width="58" height="58" rx="8" fill="{YEL if s7 else WHITE}" stroke="{NAVY}" stroke-width="2"/>'+T(x+29,y+40,a+b,26,NAVY,weight=800 if s7 else 600)
 grid=svg(436,436,g,'A 6 by 6 table of two-dice totals; the six cells with total 7 are yellow',400,400)
-body=h2('Starter C: Lucky Seven')+pin(128,240,1000,code_svg(progC,'Code blocks: when flag clicked, set sevens to 0, repeat 1000 (if pick random 1 to 6 plus pick random 1 to 6 equals 7 then change sevens by 1), say join sevens and the word sevens',24))
+body=h2('Starter C: Lucky Seven')+pin(128,240,1000,code_svg(progC,'Code blocks: when green flag clicked, set sevens to 0, repeat 1000 (if pick random 1 to 6 plus pick random 1 to 6 equals 7 then change sevens by 1), say join sevens and the word sevens',24))
 body+=pin(128,560,1000,p('6 of the 36 equally likely results make 7: that is 1/6.  1000 ÷ 6 ≈ 167.',34,700),'rise',WHITE,20,'20px 28px')
 body+=pin(128,730,1000,p('Our runs: 152, 182, 162. Close to 167, never exactly the same: chance varies.',32,700),'rise',SOFT,20,'20px 28px')
 body+=pin(1300,240,440,grid)
@@ -184,9 +184,9 @@ put('p6l10-break',color_slide('p6l10-break',TEAL,'29–32 MIN','Brain break: tur
  'Three minutes. Call: square (4 turns of 90°), triangle (3 of 120°), hexagon (6 of 60°), then the surprise: a star (5 turns of 144°, which takes 2 full turns to face the front again). Online: children stay in view of the camera.'))
 
 # ---------------- 14. teach before page 2: plan it ----------------
-progD=['when flag clicked',"ask \"How many hours from 9 o'clock?\" and wait",'set t to ((9 + answer) mod 12)',{'c':'if (t = 0) then','body':['set t to 12']},"say (join t \" o'clock\")"]
+progD=['when green flag clicked',"ask \"How many hours from 9 o'clock?\" and wait",'set t to ((9 + answer) mod 12)',{'c':'if (t = 0) then','body':['set t to 12']},"say (join t \" o'clock\")"]
 body=h2('Plan it: a worked example')+pin(128,240,860,p('Clock Jumper (Lesson 8)',32,800,TEAL)+p('Puzzle: it is 9 o’clock. What time is it h hours from now?',32,700)+p('By hand: add, then remove whole 12s. 0 left means 12 o’clock.',32,600),None,WHITE,20,'20px 28px')
-body+=pin(128,520,860,code_svg(progD,"Code blocks: when flag clicked, ask how many hours from 9 o'clock and wait, set t to 9 plus answer mod 12, if t equals 0 then set t to 12, say join t o'clock",26))
+body+=pin(128,520,860,code_svg(progD,"Code blocks: when green flag clicked, ask how many hours from 9 o'clock and wait, set t to 9 plus answer mod 12, if t equals 0 then set t to 12, say join t o'clock",26))
 W=[180,260,200]; L0=1080
 body+=pin(L0,240,712,p('Tests, worked out FIRST',30,800,TEAL))
 body+=trow(L0,300,['h','by hand','it said'],W,None,True,30)

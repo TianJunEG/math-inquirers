@@ -137,8 +137,8 @@ put('p6l9-we1',sec('p6l9-we1','27–29 MIN',body,
  'Click to reveal each step. Think-aloud: '+SC['think'][0]+' Why the check works: levelling moves the extra cubes above the mean into the gaps below it, so "how much above" must equal "how much below". Common mistake: dividing by 4 because 0 "is nothing" (10 ÷ 4 = 2.5 is wrong).'))
 
 # ---------------- 8. code it ----------------
-prog=['when flag clicked','set total to 0','set i to 1',{'c':'repeat (length of data)','body':['change total by (item i of data)','change i by 1']},'say (total / (length of data))']
-body=h2('Code it: the mean machine')+pin(128,250,700,code_svg(prog,'Code blocks: when flag clicked, set total to 0, set i to 1, repeat length of data (change total by item i of data, change i by 1), say total divided by length of data',28))
+prog=['when green flag clicked','set total to 0','set i to 1',{'c':'repeat (length of data)','body':['change total by (item i of data)','change i by 1']},'say (total / (length of data))']
+body=h2('Code it: the mean machine')+pin(128,250,700,code_svg(prog,'Code blocks: when green flag clicked, set total to 0, set i to 1, repeat length of data (change total by item i of data, change i by 1), say total divided by length of data',28))
 W=[150,150,190,190]; L0=1000
 body+=pin(L0,240,792,p('data:  3,  0,  4,  1,  2',34,800,TEAL))
 body+=trow(L0,310,['loop','i','item i','total'],W,None,True,32)

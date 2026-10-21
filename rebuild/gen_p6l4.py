@@ -106,7 +106,7 @@ def ans_rows(rows,top=250,gapy=130,lw=200,size=36):
 
 PY_MAIN='n = int(input("IN? "))\nout = n * 3 + 2\nprint("OUT:", out)'
 PY_NOTE='Optional Python version (same machine, for children who know Python): '+' | '.join(PY_MAIN.split('\n'))+'   Typing 4 prints OUT: 14; typing 10 prints OUT: 32.'
-MACH=[(0,'event','when flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 3) + 2]'),(0,'looks','say [out]')]
+MACH=[(0,'event','when green flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 3) + 2]'),(0,'looks','say [out]')]
 
 # ---------- 1 title ----------
 put(f'{L}-title',title_slide(f'{L}-title',4,2,'Algebra Machines','Expressions and equations  •  Code: input, rule, output',
@@ -137,7 +137,7 @@ put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboard
 steps=['Build the machine on the right. (* means ×. Find "ask" in Sensing and the green blocks in Operators.)','Change the rule to your OWN secret two-step rule.','Share your screen. Your partner calls IN numbers; you type them in.','Your partner writes your rule with n. Fewest IN numbers wins. Then swap.']
 left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:31px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',extra='flex:1;min-width:0')
 mpic=machine([('IN','q'),('× 3','op'),('+ 2','op'),('OUT','res')],w=700).replace('width:700px;height:130px','width:700px;height:130px;flex:none')
-right=card(mpic+blocks_svg(MACH,28,'Machine program: when flag clicked, ask IN? and wait, set out to answer times 3 plus 2, say out'),extra='flex:none;width:780px;padding:24px 28px;gap:24px')
+right=card(mpic+blocks_svg(MACH,28,'Machine program: when green flag clicked, ask IN? and wait, set out to answer times 3 plus 2, say out'),extra='flex:none;width:780px;padding:24px 28px;gap:24px')
 body=h2('Explore: build a secret machine')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (light blue), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
@@ -209,14 +209,14 @@ put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+a
 
 # ---------- 16 teach code ----------
 body=h2('Predict what the code says')
-body+=pin(128,240,860,blocks_svg([(0,'event','when flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 4) − 1]'),(0,'looks','say [out]')],32,'when flag clicked, ask IN? and wait, set out to answer times 4 minus 1, say out'),None)
+body+=pin(128,240,860,blocks_svg([(0,'event','when green flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 4) − 1]'),(0,'looks','say [out]')],32,'when green flag clicked, ask IN? and wait, set out to answer times 4 minus 1, say out'),None)
 for i,(q,a) in enumerate([('You type 5. It says …','19'),('You type 0. It says …','−1'),('What do you type to get 35?','9  (35 + 1 = 36, 36 ÷ 4 = 9)')]):
     body+=qrow(128,520+i*120,980,'',q,34)+answer(1140,520+i*120,652,a)
 put(f'{L}-teachcode',sec(f'{L}-teachcode','54–55 MIN',body,'Teach before worksheet page 2 (Q4). "answer" holds whatever was typed in. * means ×. The rule is OUT = 4n − 1. Ask: "Typing 0 gives a negative number. Where have we seen that before?" (Lesson 3). The last one is the machine run backwards. Python version: n = int(input("IN? ")) | out = n * 4 - 1 | print(out)  (typing 5 prints 19).'))
 
 # ---------- 17 teach search ----------
 body=h2('Let the computer search')+card(p('Solve 6n + 5 = 71 by trying n = 0, 1, 2, 3 … until it works.',38,700))
-body+=pin(128,400,900,blocks_svg([(0,'event','when flag clicked'),(0,'var','set n to [0]'),(0,'control','repeat until [(n * 6) + 5 = 71]'),(1,'var','change n by [1]'),(0,'looks','say [n]')],32,'set n to 0, repeat until n times 6 plus 5 equals 71: change n by 1, then say n'),None)
+body+=pin(128,400,900,blocks_svg([(0,'event','when green flag clicked'),(0,'var','set n to [0]'),(0,'control','repeat until [(n * 6) + 5 = 71]'),(1,'var','change n by [1]'),(0,'looks','say [n]')],32,'set n to 0, repeat until n times 6 plus 5 equals 71: change n by 1, then say n'),None)
 body+=step(1,'n = 0 gives 5, n = 1 gives 11, n = 2 gives 17 … not 71 yet, keep going.',left=1020,top=400,width=712,size=32)
 body+=step(2,'It stops when n = 11 (66 + 5 = 71) and says 11.',left=1020,top=560,width=712,size=32)
 body+=step(3,'By hand, backwards: 71 − 5 = 66, 66 ÷ 6 = 11 ✓',left=1020,top=700,width=712,size=32)

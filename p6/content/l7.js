@@ -193,8 +193,8 @@ module.exports = {
   workbook: H => {
     const w1 = [2475, 2475, 2475, 2475];
     const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
-    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 50 }))),
-      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 45, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
+    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 42 }))),
+      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 36, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
     const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn ↻ {120} degrees']]]];
     const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn ↻ {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
     const w4 = [1700, 2000, 2200, 2000, 2000];
@@ -204,9 +204,9 @@ module.exports = {
     const t5 = H.tbl(w5, [H.row(['Sides', '3', '4', '5', '6', '10'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 22, h: 45 }))),
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
-    const intro = H.tbl([6400, 3500], [H.row([
-      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it. Start every drawing with erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with ↻.', 6400, { align: 'left', h: 30 }),
-      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3500, { h: 10 })])]);
+    const intro = H.tbl([7300, 2600], [H.row([
+      H.cell('The turtle turns by the OUTSIDE angle, from “straight on”: turn + inside angle = 180°. Start every drawing with erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with ↻.', 7300, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,
       H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
