@@ -25,9 +25,9 @@ def _row(x,y,text,kind,fs,rh):
     parts=[]; cx=x+pad
     for sg in segs:
         if sg.startswith('['):
-            v=sg[1:-1]; pw=tw(v,fs)+fs*0.9; ph=fs*1.3
+            v=sg[1:-1]; pw=max(tw(v,fs)+fs*1.1,fs*1.6); ph=fs*1.3
             parts.append(f'<rect x="{cx:.0f}" y="{y+(rh-ph)/2:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="{ph/2:.0f}" fill="{SKY if fill==WHITE else WHITE}" stroke="{NAVY}" stroke-width="2"/><text x="{cx+pw/2:.0f}" y="{y+rh/2+fs*0.36:.0f}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">{E(v)}</text>')
-            cx+=pw+fs*0.25
+            cx+=pw+fs*0.35
         else:
             t=sg.strip()
             if t:
@@ -117,11 +117,11 @@ put(f'{L}-title',title_slide(f'{L}-title',4,2,'Algebra Machines','Expressions an
  'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90.'))
 
 # ---------- 2 warm1: guess my rule ----------
-rounds=[('Round A','3 → 8     7 → 12     20 → 25','add 5:   n + 5'),('Round B','2 → 10     5 → 25     9 → 45','times 5:   5n'),('Round C','2 → 3     6 → 11     10 → 19','× 2, then − 1:   2n − 1'),('Round D','1 → 5     4 → 14     10 → 32','× 3, then + 2:   3n + 2')]
+rounds=[('Round A','3 → 8|7 → 12|20 → 25','add 5:   n + 5'),('Round B','2 → 10|5 → 25|9 → 45','times 5:   5n'),('Round C','2 → 3|6 → 11|10 → 19','× 2, then − 1:   2n − 1'),('Round D','1 → 5|4 → 14|10 → 32','× 3, then + 2:   3n + 2')]
 body=h2('Warm-up: guess my rule')+p('I am a machine. Here is what came out. What is my rule?',34,600,MUTED)
 for i,(r,pairs,a) in enumerate(rounds):
     Lf=128+(i%2)*848; T=300+(i//2)*290
-    body+=pin(Lf,T,816,f'<p style="font-family:{HF};font-size:36px;font-weight:600;color:{TEAL}">{E(r)}</p><p style="font-size:46px;font-weight:800">{E(pairs)}</p>',None,WHITE,24,'18px 28px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
+    body+=pin(Lf,T,816,f'<p style="font-family:{HF};font-size:36px;font-weight:600;color:{TEAL}">{E(r)}</p><p style="font-size:42px;font-weight:800">{"&nbsp;&nbsp;&nbsp;&nbsp;".join(E(x) for x in pairs.split("|"))}</p>',None,WHITE,24,'18px 28px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(Lf+24,T+150,768,f'<p style="font-size:36px;font-weight:800">{E(a)}</p>','pop',SOFT,16,'12px 20px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Guess my rule. Play each round live first: children call out an IN number, you say the OUT (use the rule on the card), and they guess. Then click to show the rule. Ask: "Which IN numbers helped most?" '
@@ -154,7 +154,7 @@ put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Le
 W=[200,150,150,150,150]
 body=h2('From a table to a rule')
 body+=trow(128,240,['IN  n','1','2','3','4'],W,None,True)+trow(128,330,['OUT','7','11','15','19'],W,None)
-body+=pin(1080,240,712,p('+4 each time',40,800,TEAL)+p('When IN goes up by 1, OUT goes up by 4.',32,600),'fade',SOFT,20,'20px 28px')
+body+=pin(1180,240,612,p('+4 each time',40,800,TEAL)+p('When IN goes up by 1, OUT goes up by 4.',32,600),'fade',SOFT,20,'20px 28px')
 body+=step(1,'OUT goes up by 4 each time, so the rule has × 4 in it: 4n.',top=470,size=36)
 body+=step(2,'Test: IN 1 gives 4 × 1 = 4. But OUT is 7, so add 3.',top=580,size=36)
 body+=step(3,'Rule: OUT = 4n + 3.   Check IN 4: 4 × 4 + 3 = 19 ✓',top=690,size=36)
@@ -217,9 +217,9 @@ put(f'{L}-teachcode',sec(f'{L}-teachcode','54–55 MIN',body,'Teach before works
 # ---------- 17 teach search ----------
 body=h2('Let the computer search')+card(p('Solve 6n + 5 = 71 by trying n = 0, 1, 2, 3 … until it works.',38,700))
 body+=pin(128,400,900,blocks_svg([(0,'event','when flag clicked'),(0,'var','set n to [0]'),(0,'control','repeat until [(n * 6) + 5 = 71]'),(1,'var','change n by [1]'),(0,'looks','say [n]')],32,'set n to 0, repeat until n times 6 plus 5 equals 71: change n by 1, then say n'),None)
-body+=step(1,'n = 0 gives 5, n = 1 gives 11, n = 2 gives 17 … not 71 yet, keep going.',left=1080,top=400,width=712,size=32)
-body+=step(2,'It stops when n = 11 (66 + 5 = 71) and says 11.',left=1080,top=560,width=712,size=32)
-body+=step(3,'By hand, backwards: 71 − 5 = 66, 66 ÷ 6 = 11 ✓',left=1080,top=700,width=712,size=32)
+body+=step(1,'n = 0 gives 5, n = 1 gives 11, n = 2 gives 17 … not 71 yet, keep going.',left=1020,top=400,width=712,size=32)
+body+=step(2,'It stops when n = 11 (66 + 5 = 71) and says 11.',left=1020,top=560,width=712,size=32)
+body+=step(3,'By hand, backwards: 71 − 5 = 66, 66 ÷ 6 = 11 ✓',left=1020,top=700,width=712,size=32)
 put(f'{L}-teachsearch',sec(f'{L}-teachsearch','55–56 MIN',body,'Teach before worksheet page 2 (Q6 plans a search). "repeat until" is in Control; the = block is in Operators. The computer is not clever, it is fast: it tries every n. Our backwards method is clever: it goes straight there. Both give 11. Ask: "What happens if the equation has no whole-number answer, like 6n + 5 = 70?" (it never stops: press the red stop sign). Python version: n = 0 | while n * 6 + 5 != 71: n = n + 1 | print(n)  (prints 11).'))
 
 # ---------- 18 teach trick ----------
@@ -249,11 +249,11 @@ def mini_machine(cells,label,w=760,h=130):
     return machine(cells,w=w).replace(f'width:{w}px;height:130px','width:100%;height:auto').replace('aria-label="Number machine"',f'aria-label="{E(label)}"')
 q1=(mini_machine([('n','q'),('× 3','op'),('− 4','op'),('n','res')],'Machine: n, times 3, minus 4, gives the same n')+
     '<svg aria-label="A table to try IN numbers: IN 1, 2, 3, 4 with OUT left empty" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">'+
-    ''.join(f'<rect x="{80+i*150}" y="20" width="150" height="70" fill="{YEL if i==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/><text x="{155+i*150}" y="68" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{t}</text>' for i,t in enumerate(['IN','1','2','3','4']))+
-    ''.join(f'<rect x="{80+i*150}" y="90" width="150" height="70" fill="{YEL if i==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/><text x="{155+i*150}" y="138" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{t}</text>' for i,t in enumerate(['OUT','?','?','?','?']))+
+    ''.join(f'<rect x="{30+i*140}" y="20" width="140" height="70" fill="{YEL if i==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/><text x="{100+i*140}" y="68" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{t}</text>' for i,t in enumerate(['IN','1','2','3','4']))+
+    ''.join(f'<rect x="{30+i*140}" y="90" width="140" height="70" fill="{YEL if i==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/><text x="{100+i*140}" y="138" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{t}</text>' for i,t in enumerate(['OUT','?','?','?','?']))+
     f'<text x="380" y="220" font-size="30" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Arial">When is OUT the same as IN?</text></svg>')
-q2=(mini_machine([('?','q'),('× 2','op'),('+ 1','op'),('□','op'),('× 2','op'),('+ 1','op'),('63','res')],'Two joined machines: unknown IN, times 2, plus 1, a middle box, times 2, plus 1, giving 63',w=760)+
-    f'<svg aria-label="IN 5 gives 11 in the middle and 23 at the end" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><text x="380" y="60" font-size="32" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">Test: 5  →  11  →  23</text><rect x="230" y="110" width="300" height="80" rx="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><text x="380" y="162" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">Which way do we go?</text></svg>')
+q2=(f'<p style="font-size:26px;font-weight:700;color:{MUTED}">Machine 1</p>'+mini_machine([('?','q'),('× 2','op'),('+ 1','op'),('□','res')],'First machine: unknown IN, times 2, plus 1, gives the middle box')+f'<p style="font-size:26px;font-weight:700;color:{MUTED}">Machine 2</p>'+mini_machine([('□','q'),('× 2','op'),('+ 1','op'),('63','res')],'Second machine: the middle box, times 2, plus 1, gives 63')+
+    f'<svg aria-label="IN 5 gives 11 in the middle and 23 at the end" viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><text x="380" y="40" font-size="32" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">Test: 5 → 11 → 23</text><rect x="160" y="60" width="440" height="66" rx="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><text x="380" y="104" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">Which way do we go?</text></svg>')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card(f'<p style="font-size:28px;font-weight:700;color:{TEAL}">Q1: Same in, same out</p>'+q1,extra='flex:1;min-width:0;padding:20px 24px')+card(f'<p style="font-size:28px;font-weight:700;color:{TEAL}">Q2: Two machines joined</p>'+q2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put(f'{L}-chdiag',sec(f'{L}-chdiag','Challenge',body,'Show after pairs have tried, or if they are stuck. The pictures show the problem, not the answer. Ask: For Q1, fill in the table: is OUT catching up with IN? For Q2, what is in the middle box when OUT is 63?'))
 

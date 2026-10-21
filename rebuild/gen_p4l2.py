@@ -63,9 +63,9 @@ class NL:
         g=f'<rect x="{s.X(a)}" y="{y0}" width="{s.X(b)-s.X(a)}" height="{h}" rx="8" fill="{col}" opacity=".55" stroke="{NAVY}" stroke-width="2"/>'
         if label: g+=txt((s.X(a)+s.X(b))/2,y0-12,label,28)
         return g
-    def mark(s,v,label,col=RED,up=True):
+    def mark(s,v,label,col=RED,anchor='end'):
         x=s.X(v); y=s.y-24
-        return f'<polygon points="{x},{y} {x-14},{y-26} {x+14},{y-26}" fill="{col}" stroke="{NAVY}" stroke-width="2"/>'+txt(x,y-38,label,32,col)
+        return f'<polygon points="{x},{y} {x-14},{y-26} {x+14},{y-26}" fill="{col}" stroke="{NAVY}" stroke-width="2"/>'+txt(x-10 if anchor=='end' else x,y-38,label,32,col,anchor)
 
 # ---------- 1. title ----------
 put('p4l2-title',title_slide('p4l2-title','LESSON 2  •  WEEK 1','Big Number Puzzles','Numbers to 100 000',
@@ -104,7 +104,7 @@ body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in
 put('p4l2-warm2',sec('p4l2-warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, whiteboards up together, then click. After 2: watch for 6045 or 600 045; say it as "60 thousand, 0 hundreds, 4 tens, 5 ones". After 3: the thousands digit was 9, so the ten thousands digit changes too. After 4: the 0 holds the hundreds place. After 5: 36 815 is between 36 000 and 37 000; ask "Is it nearer 36 000 or 37 000?" Do not teach the halfway rule yet. Answers: 7000, 60 045, 60 600, 43 058, 37 000.'))
 
 # ---------- 4. explore: what to do ----------
-nl=NL(49000,51000,700,1560,150)
+nl=NL(49000,51000,700,1500,150)
 g=dcards([2,4,5,7,9],20,10,90,116,20)+nl.base(250,(49000,49500,50000,50500,51000),(50000,))+txt(1130,40,'Which numbers round to 50 000?',30,TEAL,font='Nunito Sans, Arial')
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Take the digit cards 2, 4, 5, 7 and 9.','Make a 5-digit number using each card once. Write it down.','Round it to the nearest thousand. Does it round to 50 000?','Find ALL the numbers that round to 50 000. Which is closest to 50 000?'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
@@ -150,15 +150,15 @@ put('p4l2-try2',tryq('p4l2-try2','30–31 MIN','Your turn: work backwards','Draw
 # ---------- 10. two clues together ----------
 nl=NL(4140,4260,80,1540,120)
 base=nl.base(10,(4150,4200,4250),())
-b1=nl.band(4245,4254.9,SKY,y0=150,h=34)+txt(nl.X(4250),214,'nearest 10 → 4250',28,NAVY)
+b1=nl.band(4245,4254.9,SKY,y0=200,h=34)+txt(nl.X(4250),268,'nearest 10 → 4250',28,NAVY)
 b2=nl.band(4150,4249.9,YEL,y0=36,h=34)+txt(nl.X(4200),26,'nearest 100 → 4200',28,NAVY)
-WN,HN=1620,230
+WN,HN=1620,280
 body=h2('Two clues: where do they overlap?')+card(p('A whole number rounds to 4250 to the nearest 10, AND to 4200 to the nearest 100. Find all the numbers.',36,700))
 body+=pin(128,390,WN,svgwrap(WN,HN,'Number line from 4140 to 4260',base),None,WHITE,24,'10px 20px')
 body+=pin(128,390,WN,svgwrap(WN,HN,'Yellow band 4150 to 4249 for the nearest 100',b2),'fade',None,0,'10px 20px')
 body+=pin(128,390,WN,svgwrap(WN,HN,'Blue band 4245 to 4254 for the nearest 10',b1),'fade',None,0,'10px 20px')
-body+=step(1,'Nearest 100 is 4200: from 4150 to 4249.   Nearest 10 is 4250: from 4245 to 4254.',top=670,size=32)
-body+=answer(128,780,1664,'In both: 4245, 4246, 4247, 4248, 4249  (5 numbers)')
+body+=step(1,'Nearest 100 is 4200: from 4150 to 4249.   Nearest 10 is 4250: from 4245 to 4254.',top=710,size=32)
+body+=answer(128,815,1664,'In both: 4245, 4246, 4247, 4248, 4249  (5 numbers)')
 put('p4l2-we4',sec('p4l2-we4','31–32 MIN',body,'Teach before worksheet page 1 (Q2b has two rounding clues). Click the yellow band (clue 2), then the blue band (clue 1). Ask: "Which numbers are in BOTH bands?" Check one at the edge: 4250 rounds to 4250 to the nearest 10, but to 4300 to the nearest 100, so it is out. 4244 rounds to 4240, so it is out too.'))
 
 # ---------- 11. estimate with a bar model ----------
@@ -187,7 +187,7 @@ put('p4l2-ws1ans',checks('p4l2-ws1ans','52–54 MIN','Page 1: check together',[(
 # ---------- teach: riddle with a rounding clue ----------
 body=h2('Number riddles: strongest clue first')+card(p('I am a 5-digit number. Rounded to the nearest thousand, I am 20 000. My digits add up to 5. My ones digit is 3.',38,700))
 body+=step(1,'Rounding clue: I am from 19 500 to 20 499.',top=420,size=34)
-body+=step(2,'19 5.. : 1 + 9 is already 10, too much for 5. So I start 20 …',top=520,size=34)
+body+=step(2,'Starting 19: 1 + 9 = 10, already more than 5. So I start 20 …',top=520,size=34)
 body+=step(3,'2 + 0 + ? + ? + 3 = 5, so the hundreds and tens are 0.',top=620,size=34)
 body+=answer(128,730,1664,'I am 20 003.   Check every clue ✓')
 put('p4l2-teachriddle',sec('p4l2-teachriddle','54–56 MIN',body,'Teach before worksheet page 2 (Q4a starts with a rounding clue). Use the clues one at a time: the rounding clue turns a huge list into a short range. Ask after step 1: "Which numbers between 19 500 and 20 499 could have digits that add to only 5?" Check at the end: 20 003 rounds to 20 000; 2 + 0 + 0 + 0 + 3 = 5; ones digit 3. For Q4b ("find ALL"), remind them: list in order, starting with the smallest ten thousands digit.'))
@@ -204,9 +204,9 @@ put('p4l2-teachpattern',sec('p4l2-teachpattern','56–58 MIN',body,'Teach before
 g=dcards([0,2,4,7,9],10,10,96,124,26)
 body=h2('Digit cards: choose the ones digit first')+pin(128,240,640,svgwrap(620,150,'Digit cards 0, 2, 4, 7 and 9',g),None)
 body+=pin(820,250,972,p('Use 0, 2, 4, 7 and 9 once each.',38,700),None,WHITE,20,'26px 32px')
-body+=step(1,'Largest ODD number: the ones digit must be 7 or 9. Keep 9 for the front, so 7 goes last: 94 207.',top=430,size=32)
-body+=step(2,'Smallest EVEN number: 0 cannot go first, so start 20. The last digit must be even: only 4 is left. 20 794.',top=550,size=32)
-body+=step(3,'Closest to 50 000: try 49 … (biggest after: 49 720) and 70 … (70 249). 49 720 is only 280 away.',top=670,size=32)
+body+=step(1,'Largest ODD: the ones digit must be 7 or 9. Keep 9 in front, 7 last: 94 207.',top=430,size=32)
+body+=step(2,'Smallest EVEN: 0 cannot go first, so 2 then 0. The only even card left is 4: 20 794.',top=550,size=32)
+body+=step(3,'Closest to 50 000: 49 720 (280 away) beats 70 249 (20 249 away).',top=670,size=32)
 put('p4l2-teachcards',sec('p4l2-teachcards','58–60 MIN',body,'Teach before worksheet page 2 (Q6). Think-aloud for step 1: "Odd means the ones digit is odd. I decide that FIRST, then put the biggest of the rest in front." Step 2: "Smallest: the smallest digit that is not 0 goes first, then 0. The ones digit must be even, and the only even card left is 4." Step 3: compare the best number on each side of 50 000. Ask: "Why not 4 … something?" (we need a 9 in the thousands to get close: 49 720).'))
 
 # ---------- worksheet page 2 ----------

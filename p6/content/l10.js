@@ -84,7 +84,8 @@ const PY_MACHINE = `import random
 n = random.randint(1, 20)
 out = n * 3 + 4
 print("My machine does x 3, then + 4.")
-guess = int(input("Out came " + str(out) + ". What went in? "))
+print("Out came", out)
+guess = int(input("What went in? "))
 if guess == n:
     print("You cracked it!")
 else:
@@ -210,13 +211,13 @@ module.exports = {
       ...H.lines(1),
       H.q(6, 'My puzzle program: the plan.', { keepNext: true }),
       H.tbl(wp, [
-        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'The answer, worked out by hand', 'My twist (what I will change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 50 }), H.cell('', wp[1], { h: 50 })]))
+        ['My idea (Starter A, B, C or my own)', 'The maths puzzle it asks', 'The answer, worked out by hand', 'My twist (what I will change or add)'].map(s => H.row([H.cell(s, wp[0], { bold: true, fill: 'EDEDED', align: 'left', h: 80 }), H.cell(' ', wp[1], { h: 80 })]))
       ].flat()),
       H.q(7, 'Plan the blocks, then test. Draw or write your blocks (under 15). Fill in the test table BEFORE you run each test.', { keepNext: true }),
-      side(`<div style="width:330px;height:190px;border:2px solid #1B2A49;border-radius:8px;background:#FFFFFF"></div>`, pyBox('Python fans (optional): Starter A. To test it with Q5(a), change line 2 to  n = 9', PY_MACHINE)),
+      side(`<div style="width:330px;height:215px;border:2px solid #1B2A49;border-radius:8px;background:#FFFFFF"></div>`, pyBox('Python fans (optional): Starter A. To test it with Q5(a), change line 2 to  n = 9', PY_MACHINE)),
       H.tbl(wt, [
         H.row(['Input (what I type or set)', 'It should say (by hand)', 'It said', 'Same? ✓'].map((s, i) => H.cell(s, wt[i], { bold: true, fill: 'EDEDED', h: 60 }))),
-        ...[0, 1, 2].map(() => H.row(wt.map(w => H.cell(' ', w, { h: 160 }))))
+        ...[0, 1, 2].map(() => H.row(wt.map(w => H.cell(' ', w, { h: 170 }))))
       ]),
       H.p('Showcase checklist:   ☐ I can explain the maths    ☐ I tested a value I knew    ☐ I tested an edge case (0, 1, the biggest)    ☐ My twist works', { after: 0 })
     ];

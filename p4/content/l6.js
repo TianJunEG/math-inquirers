@@ -26,8 +26,8 @@ const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c an
 
 // Q2: a fan of 4 rays from O: OA at 0°, OB at 30°, OC at 90°, OD at 135°
 const fan = () => {
-  const O = [250, 222], R = 200;
-  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
+  const O = [250, 228], R = 188;
+  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
   [[0, 'A'], [30, 'B'], [90, 'C'], [135, 'D']].forEach(([d, n]) => { s += L(O, pt(O[0], O[1], R, d)); const q = pt(O[0], O[1], R + 18, d); s += T(q[0], q[1] + 8, n, 24); });
   s += arc(O[0], O[1], 120, 0, 30) + arc(O[0], O[1], 60, 30, 90) + arc(O[0], O[1], 90, 90, 135);
   let q = pt(O[0], O[1], 145, 15); s += T(q[0] + 8, q[1] + 7, '30°', 21, TEAL);
@@ -39,7 +39,7 @@ const fan = () => {
 // Q4: 8-point compass
 const compass = () => {
   const c = [100, 100];
-  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:118px;max-width:100%">`;
+  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:104px;max-width:100%">`;
   ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'].forEach((n, i) => {
     const d = i * 45, main = i % 2 === 0;
     s += L(c, pt(c[0], c[1], main ? 62 : 46, d), main ? 4 : 3);
@@ -181,7 +181,7 @@ module.exports = {
     ...H.lines(1),
     H.sub('c', 'Which angle is a right angle?   ________'),
 
-    H.q(3, 'Clock angles. A full turn is 360° and a clock face has 12 equal spaces. Find the smaller angle between the hands.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, 'Clock angles. A clock face has 12 equal spaces in 360°. Find the smaller angle.', { pb: true, before: 0, keepNext: true }),
     H.sub('a', 'At 4 o’clock:  ________          (b)  At 7 o’clock:  ________'),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.sub('d', 'How many degrees does the minute hand turn from 3:10 to 3:35?   ________'),

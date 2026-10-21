@@ -25,9 +25,9 @@ def _row(x,y,text,kind,fs,rh):
     parts=[]; cx=x+pad
     for sg in segs:
         if sg.startswith('['):
-            v=sg[1:-1]; pw=tw(v,fs)+fs*0.9; ph=fs*1.3
+            v=sg[1:-1]; pw=max(tw(v,fs)+fs*1.1,fs*1.6); ph=fs*1.3
             parts.append(f'<rect x="{cx:.0f}" y="{y+(rh-ph)/2:.0f}" width="{pw:.0f}" height="{ph:.0f}" rx="{ph/2:.0f}" fill="{SKY if fill==WHITE else WHITE}" stroke="{NAVY}" stroke-width="2"/><text x="{cx+pw/2:.0f}" y="{y+rh/2+fs*0.36:.0f}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">{E(v)}</text>')
-            cx+=pw+fs*0.25
+            cx+=pw+fs*0.35
         else:
             t=sg.strip()
             if t:
