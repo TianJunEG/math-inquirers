@@ -482,6 +482,14 @@
     "a": "5¢ + 20¢"
    },
    {
+    "q": "Pay exactly $15 with the fewest notes. The notes are $2, $5, $10 and $50.",
+    "a": "$10 + $5 (2 notes)"
+   },
+   {
+    "q": "Pay exactly $26 with the fewest notes and coins. You have $1 coins and $2, $5, $10 and $50 notes.",
+    "a": "$10 + $10 + $5 + $1 (4 pieces)"
+   },
+   {
     "q": "Pay exactly 30¢ using two coins from 5¢, 10¢, 20¢ and 50¢.",
     "a": "10¢ + 20¢"
    },
@@ -510,6 +518,10 @@
    {
     "q": "How many ways can you make 20¢ using only 10¢ and 5¢ coins?",
     "a": "3 ways. (10+10; 10+5+5; 5+5+5+5)"
+   },
+   {
+    "q": "A bag costs $34. Ali pays with a $50 note. How much change does he get?",
+    "a": "$16. Count on from $34: $36, $40, $50. That is $2 + $4 + $10 = $16."
    },
    {
     "q": "What is the fewest number of coins to make 65¢ from 5¢, 10¢, 20¢ and 50¢?",

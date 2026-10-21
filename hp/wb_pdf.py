@@ -10,13 +10,13 @@ for line in body.split('\n'):
     if core.startswith('<div class="brk"></div>'):
         pre='<div class="brk"></div>';core=core[len(pre):]
     if core.startswith('<div class="p q'):
-        if openb: out.append('</div>')
-        out.append(pre+'<div class="qbox">'+core);openb=True;continue
+        if openb: out.append('</div></div>')
+        out.append(pre+'<div class="qwrap"><div class="qbox">'+core);openb=True;continue
     if openb and not pre and any(core.startswith(x) or x in core[:40] for x in INBOX):
         out.append(core);continue
-    if openb: out.append('</div>');openb=False
+    if openb: out.append('</div></div>');openb=False
     out.append(line)
-if openb: out.append('</div>')
+if openb: out.append('</div></div>')
 body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('wb_style.css').read()
 html=f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
 open('workbook_full.html','w').write(html)
