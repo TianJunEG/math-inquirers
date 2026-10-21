@@ -30,7 +30,7 @@ items=[
 rows=''.join(f'<tr><td><b>{n}</b></td><td>{s}</td><td>{l}</td>{sc()}</tr>' for a,n,s,l in items)
 cover='<div class="cover"><div class="tag">Math Inquirers Holiday Program</div><h1>K2 Readiness Check</h1><div class="sub">A 15-minute check for K2 children who want to join before starting Primary 1</div><div class="slog">Notice it. Test it. Explain why.</div></div>'
 p1=cover+'''<h2>Why we check</h2><p>Math Inquirers is built on the Primary 1 syllabus and goes beyond it. K2 children have not met P1 maths yet, so some will fly and some will feel lost. The check tells us who will enjoy the group, who needs a little support first, and who will get more from a later intake. It is short and friendly: children should feel they played some number games.</p>
-<h2>How to run it</h2><ul><li><b>Time:</b> about 15 minutes, one child at a time. Face to face, or on video with the parent setting out the counters.</li>
+<h2>How to run it</h2><ul><li><b>Time:</b> about 15 minutes, one child at a time. On video, with the parent setting out the counters beside the child.</li>
 <li><b>You need:</b> about 25 counters (buttons or coins are fine), number cards 9, 14, 17 and 20, the child sheet (last page) and a pencil.</li>
 <li><b>Parent:</b> may sit in, but asks them not to help or prompt. Online, the parent only moves objects when asked.</li>
 <li><b>Tone:</b> say "Let's play some number games." Praise effort, not right answers. Never say "wrong"; say "Let's try another one."</li>

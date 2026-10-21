@@ -127,7 +127,7 @@ pages.append(f'''<div class="page">{head('✓','Look only after you have tried',
 {foot(7)}</div>''')
 pages.append(f'''<div class="page">{head('+','Keep thinking','Want more?')}
 <div class="panel"><h3>Weekly Dose of Thinking Math</h3><p style="margin:0">Join our free list. Each week you get a new set of puzzles and a five-minute "explain why" question for the dinner table.</p><p style="margin:8px 0 0;font-weight:700;color:#1F7A6F">[Sign-up link or QR code]</p></div>
-<div class="panel"><h3>Math Inquirers Holiday Program</h3><p style="margin:0">Ten 90-minute lessons over five weeks, in small groups of up to 8 children. Face to face or online. Hands-on puzzles, a printed workbook with a cut-out kit, a stamped Inquiry Journal and a certificate.</p><p style="margin:8px 0 0;font-weight:700;color:#1F7A6F">[Dates, fee and sign-up link]</p></div>
+<div class="panel"><h3>Math Inquirers Holiday Program</h3><p style="margin:0">Ten 90-minute lessons over five weeks, live online in small groups of up to 8 children. Hands-on puzzles, a printed workbook posted to your home with a cut-out kit, a stamped Inquiry Journal and a certificate.</p><p style="margin:8px 0 0;font-weight:700;color:#1F7A6F">[Dates, fee and sign-up link]</p></div>
 <div class="panel" style="border-top-color:#FFC93C"><h3 style="color:#1B2A49">Questions?</h3><p style="margin:0;font-weight:700">[Name, email or phone]</p></div>
 <p style="font-size:12px;color:#5B6785;margin-top:26px">Math Inquirers is enrichment for thinking skills. It does not promise exam results and is not affiliated with the Ministry of Education or the Gifted Education Programme. We will only email you if you sign up, and you can unsubscribe at any time. Preciouslyours Pte Ltd, Singapore.</p>
 {foot(8)}</div>''')

@@ -16,12 +16,12 @@ const c2 = (s, w, o = {}) => cell(s, w, { size: 20, align: AlignmentType.LEFT, h
 G.push(p(t('PRIMARY 1 HOLIDAY PROGRAM', { bold: true, size: 22, color: '666666' }), { after: 20 }));
 G.push(p(t(PROG, { bold: true, size: 52 }), { after: 40 }));
 G.push(p(t(SLOGAN, { italics: true, size: 30, color: '1F3864' }), { after: 120 }));
-G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Everything works face to face or online.'));
+G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.'));
 G.push(h2('The program at a glance'));
 G.push(tbl([2300, 7600], [
   ['Level', 'Primary 1 (ages 6 to 7), for children ready for more thinking than standard practice'],
   ['Length', '10 lessons of 90 minutes, two a week over the 5 weeks of the holidays'],
-  ['Group size', 'Up to 8 children per tutor, face to face or online. Pilot with 6. Add a second tutor or helper above 8.'],
+  ['Group size', 'Up to 8 children per tutor, live online. Pilot with 6. Add a second tutor or helper above 8.'],
   ['Focus', 'Thinking skills: spotting patterns, stating rules, working backwards, reasoning and explaining. Not speed drills.'],
   ['The arc of every lesson', 'Start concrete with objects, record in a table, spot the pattern, state the rule, use it (often backwards), then explain why.'],
   ['What children take home', 'A student workbook with an inquiry journal, 10 worksheets and a certificate'],
