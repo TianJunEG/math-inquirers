@@ -139,20 +139,20 @@ def tri_svg(w=1000,h=250):
     return f'<svg aria-label="Matchstick triangles: patterns 1, 2 and 3 use 3, 5 and 7 sticks; table with question marks for patterns 10 and 100" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px;flex:none">{g}</svg>'
 steps=['Build matchstick triangles in a row: pattern 1 has 1 triangle, pattern 2 has 2, pattern 3 has 3.','Count the sticks in each pattern. Make a table.','Predict the sticks in pattern 10 and in pattern 100. Do not build them!','Check pattern 10 in Scratch with a loop and a variable.']
 inner=chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;margin:0;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>'
-body=h2('Explore: what to do')+card(inner)+card(tri_svg(1100,242),extra='align-items:center;padding:16px 40px')
+body=h2('Explore: what to do')+card(inner)+card(tri_svg(1450,320),extra='align-items:center;padding:12px 40px')
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs build with matchsticks (online: draw the sticks as lines). Insist on a written prediction for pattern 100 BEFORE anyone opens Scratch. Then Scratch: make a variable called sticks; blocks: when green flag clicked, set sticks to 3, repeat 9, change sticks by 2, say sticks. It says 21 (pattern 10). Ask: "Why repeat 9 and not 10?" Python (optional, for children who know it): sticks = 3, then for i in range(9): sticks = sticks + 2, then print(sticks). Prints 21.'))
 body=h2('Explore: talk about it')+talkcard('1.','How many sticks are in pattern 10?')+talkcard('2.','How many in pattern 100? How did you get it without building it?')+talkcard('3.','Which pattern uses exactly 75 sticks?')
 put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Pairs keep working, then gather. Answers: 1) 21. 2) 201: each new triangle adds 2 sticks, so 3 + 2 × 99 = 201; or "2 sticks per triangle plus 1 extra", 2 × 100 + 1 = 201. Both are right: celebrate both methods. 3) Pattern 37: work backwards, 75 − 1 = 74, 74 ÷ 2 = 37. Ask who checked pattern 100 in Scratch with repeat 99.'))
 
 # ---------- teach ----------
-W6=[230,150,150,150,150,150]
+W6=[190,118,118,118,118,118]
 body=h2('Two kinds of rule')+card(p('7, 9, 11, 13, 15, …',48,700))
 body+=trow(128,400,['n','1','2','3','4','5'],W6,None,True)
 body+=trow(128,490,['term','7','9','11','13','15'],W6,None)
 body+=trow(128,580,['2 × n','2','4','6','8','10'],W6,'rise')
 body+=pin(1180,400,612,p('Term-to-term rule: add 2. Good for the NEXT term.',34,700),None,WHITE,20,'22px 26px')
-body+=pin(1180,560,612,p('The difference is 2, so compare with the 2 times table. Each term is 5 more.',34,700),'fade',SOFT,20,'22px 26px')
-body+=pin(128,720,1664,p('Rule for the nth term:  2 × n + 5,  written  2n + 5.   Good for ANY term: the 50th is 2 × 50 + 5 = 105.',36,800),'fade',YEL,20,'20px 30px')
+body+=pin(1180,540,612,p('The difference is 2, so compare with the 2 times table. Each term is 5 more.',34,700),'fade',SOFT,20,'22px 26px')
+body+=pin(128,750,1664,p('Rule for the nth term:  2 × n + 5,  written  2n + 5.   Good for ANY term: the 50th is 2 × 50 + 5 = 105.',36,800),'fade',YEL,20,'20px 30px')
 put(f'{L}-teach1',sec(f'{L}-teach1','25–27 MIN',body,'Teach. n means the position (1st, 2nd, 3rd …). Think-aloud: "Add 2 each time. That gets me the next term, but for the 50th I would add 2 forty-nine times. The difference is 2, so I write the 2 times table underneath (click). Every term is 5 more than the 2 times-table number (click). So the term in position n is 2 × n + 5. In algebra we write 2n + 5, the same letter idea you used for the PSLE." Check with n = 3: 2 × 3 + 5 = 11, which matches.'))
 body=h2('Worked example: the 100th term')+card(p('Find the 100th term of  5, 8, 11, 14, …',44,700))
 body+=step(1,'The difference is 3, so compare with the 3 times table: 3, 6, 9, 12.',top=410,size=36)
@@ -201,7 +201,7 @@ for i,(a,b) in enumerate([('1','5'),('2','9'),('3','13')]): body+=trow(900,350+i
 body+=pin(128,660,1664,p('It says 5, 9, 13.  With repeat 50, the last number is 1 + 4 × 50 = 201.',36,800),'fade',YEL,20,'20px 30px')
 put(f'{L}-teachtrace',sec(f'{L}-teachtrace','56–57 MIN',body,'Teach before worksheet page 2 (Q4). Point at each block in order and say what the computer does: "x is 1. Loop 1: change x by 4, x is 5, say 5." Click a row after children say it. Then ask for repeat 50 WITHOUT tracing 50 rows: x starts at 1 and gets 50 jumps of 4. Python (optional):\nx = 1\nfor i in range(3):\n    x = x + 4\n    print(x)\nPrints 5, 9, 13.'))
 prog=[HAT,('var','set n to (7)'),('ctl','repeat (10)',[('look','say (n) for (1) seconds'),('var','change n by (5)')])]
-body=h2('Plan your code: say the first 10 terms of 7, 12, 17, …')+pin(128,260,700,blocks(prog,32,'Code: set n to 7, repeat 10: say n, change n by 5'),None)
+body=h2('Plan your code: say 10 terms of 7, 12, 17, …')+pin(128,260,700,blocks(prog,32,'Code: set n to 7, repeat 10: say n, change n by 5'),None)
 body+=step(1,'set n to the 1st term: 7.',left=880,top=260,width=912,size=34)
 body+=step(2,'say BEFORE change, so the 1st term is said.',left=880,top=380,width=912,size=34)
 body+=step(3,'10 terms said: repeat 10.',left=880,top=500,width=912,size=34)

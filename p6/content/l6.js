@@ -185,7 +185,12 @@ module.exports = {
       H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
       H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
       H.sub('d', 'Change who wins on which differences so that the game is fair.', { keepNext: true }), ...H.lines(1),
-      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
+      H.q(5, 'True or false? Circle T or F, then write why.', { keepNext: true }),
+      H.tbl([3300, 3300, 3300], [
+        H.row(['(a) After 4 tails in a row, heads is more likely next.', '(b) With two dice, a total of 12 is as likely as a total of 7.', '(c) If I roll a dice 60 times, I will get exactly ten 6s.'].map(x => H.cell(tx(x), 3300, { h: 40, fill: 'EDEDED' }))),
+        H.row([0, 1, 2].map(() => H.cell('T     /     F', 3300, { h: 30, bold: true }))),
+        H.row([0, 1, 2].map(() => H.cell(tx('Why?'), 3300, { h: 330 })))]),
+      H.q(6, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
       H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
         H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])
     ];

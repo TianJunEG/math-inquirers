@@ -106,7 +106,7 @@ put('p4l3-explore2',sec('p4l3-explore2','15–25 MIN',body,'Minutes 15 to 25. Le
 rules=p('The order',34,800,TEAL)+p('1.  Brackets first',38,700)+p('2.  × and ÷, from left to right',38,700)+p('3.  + and −, from left to right',38,700)
 body=h2('Order of operations')+pin(128,250,620,rules,None,SOFT,24,'26px 32px','box-sizing:border-box')
 body+=pin(840,250,952,p('40 − 8 × 3 + 6 ÷ 2',60,700),None,WHITE,24,'22px 32px')
-body+=step(1,'No brackets. Do × and ÷ first: 8 × 3 = 24 and 6 ÷ 2 = 3.',left=840,top=400,width=952,size=34)
+body+=step(1,'No brackets. × and ÷ first: 8 × 3 = 24, 6 ÷ 2 = 3.',left=840,top=400,width=952,size=34)
 body+=step(2,'Now 40 − 24 + 3. Go from left to right: 40 − 24 = 16.',left=840,top=530,width=952,size=34)
 body+=step(3,'16 + 3 = 19.',left=840,top=660,width=952,size=34)
 body+=answer(840,770,952,'40 − 8 × 3 + 6 ÷ 2 = 19')
