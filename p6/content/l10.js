@@ -215,7 +215,7 @@ module.exports = {
         H.row(['Input (what I type or set)', 'It should say (by hand)', 'It said', 'Same? ✓'].map((s, i) => H.cell(s, wt[i], { bold: true, fill: 'EDEDED', h: 60 }))),
         ...['Test 1', 'Test 2', 'Edge case'].map(t => H.row([H.cell(t, wt[0], { bold: true, align: 'left', h: 60 }), ...wt.slice(1).map(w => H.cell(' ', w, { h: 60 }))]))
       ]),
-      H.sub('', 'Ready to show?   ☐ I can explain the maths   ☐ I tested a value I knew   ☐ I tested an edge case', { after: 0 })
+      H.sub('', 'Ready to show?   [  ] I can explain the maths   [  ] I tested a value I knew   [  ] I tested an edge case', { after: 0 })
     ];
   }
 };
