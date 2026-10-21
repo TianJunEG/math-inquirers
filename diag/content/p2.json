@@ -1,0 +1,95 @@
+{
+  "level": "P2",
+  "ageName": "Ages 8-9",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "What is 10 more than 64?",
+      "a": "74",
+      "work": "Watch if the child changes the tens digit only. Common error: 65 (adds 1).",
+      "skill": "Place value to 100"
+    },
+    {
+      "q": "Which is smaller, 58 or 85?",
+      "a": "58",
+      "work": "Common error: reading digits the wrong way round. Ask which digit is the tens.",
+      "skill": "Comparing numbers to 100"
+    },
+    {
+      "q": "What is 16 - 9?",
+      "a": "7",
+      "work": "Look for a strategy (take 6 then 3, or count on from 9). Note if counting by ones.",
+      "skill": "Subtract within 20"
+    },
+    {
+      "q": "What is 45 + 30?",
+      "a": "75",
+      "work": "Check the child adds tens to tens. Common error: 48 or 345.",
+      "skill": "Add within 100"
+    }
+  ],
+  "core": [
+    {
+      "q": "What is the value of the digit 6 in 462?",
+      "a": "60",
+      "work": "Common error: answering 6. Ask what 462 is made of (4 hundreds, 6 tens, 2 ones).",
+      "skill": "Place value to 1000"
+    },
+    {
+      "q": "5_ + 27 = 81. What digit goes in the blank?",
+      "a": "4",
+      "work": "Look for working backwards (81 - 27 = 54). Common error: guessing 5 or 6.",
+      "skill": "Missing digits"
+    },
+    {
+      "q": "There are 4 rows of stars with 5 stars in each row. How many stars?",
+      "a": "20",
+      "work": "Does the child skip count, repeat add (5+5+5+5) or know it? All fine. Common error: 9.",
+      "skill": "Arrays and multiplication"
+    },
+    {
+      "q": "A machine doubles a number, then adds 3. I put in 5. What comes out?",
+      "a": "13",
+      "work": "Watch the order. Common error: 16 (adds 3 first, then doubles) or 8.",
+      "skill": "Two-step machines"
+    },
+    {
+      "q": "A pen costs $1.20. A ruler costs $0.85. How much for both?",
+      "a": "$2.05",
+      "work": "Watch for dollars and cents handled separately. Common error: $1.105 or $2.5.",
+      "skill": "Money"
+    },
+    {
+      "q": "A pizza is cut into 4 equal parts. I eat 3 parts. What fraction of the pizza did I eat?",
+      "a": "3/4",
+      "work": "Common error: 3/3 or 1/4. Ask what the bottom number tells us.",
+      "skill": "Fractions"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "I think of a number. I double it, then add 3, and I get 17. What was my number?",
+      "a": "7",
+      "work": "Does the child work backwards (17 - 3 = 14, half of 14)? Or guess and check, which is also fine.",
+      "skill": "Reverse two-step reasoning"
+    },
+    {
+      "q": "I am a 2-digit number. My tens digit is 2 more than my ones digit. My digits add up to 10. Who am I?",
+      "a": "64",
+      "work": "Look for a systematic list of pairs that add to 10. Common error: 73 or 55 (meets only one clue).",
+      "skill": "Number riddles"
+    }
+  ],
+  "topics": [
+    "place value to 100",
+    "comparing and ordering",
+    "add and subtract within 100",
+    "numbers to 1000",
+    "missing digits",
+    "arrays and multiplication",
+    "two-step machines",
+    "money (dollars and cents)",
+    "fractions",
+    "reasoning puzzles"
+  ]
+}

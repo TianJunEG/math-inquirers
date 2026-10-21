@@ -1,0 +1,93 @@
+{
+  "level": "P3",
+  "ageName": "Ages 9-10",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "47 + 38 = ?",
+      "a": "85",
+      "work": "Watch for forgetting to carry the 1 (gives 75).",
+      "skill": "Add 2-digit numbers with carrying"
+    },
+    {
+      "q": "305 - 128 = ?",
+      "a": "177",
+      "work": "Watch for borrowing across the zero; common error 223 (smaller digit minus bigger).",
+      "skill": "Subtract 3-digit numbers with borrowing"
+    },
+    {
+      "q": "There are 4 packets. Each packet has 8 stickers. How many stickers in all?",
+      "a": "32",
+      "work": "Does the child know 8 x 4 or count/add in 8s? Note speed and strategy.",
+      "skill": "Times tables 2, 3, 4, 5, 10"
+    },
+    {
+      "q": "24 sweets are shared equally among 3 children. How many sweets does each child get?",
+      "a": "8",
+      "work": "Check the child shares equally (division), not subtracts 24 - 3.",
+      "skill": "Sharing equally (division)"
+    }
+  ],
+  "core": [
+    {
+      "q": "Find the missing digit: 2 _ 7 + 358 = 645. What digit goes in the blank?",
+      "a": "8",
+      "work": "Ask how they found it. Good: work from the ones (7 + 8 = 15, carry). Weak: guess and check only.",
+      "skill": "Missing digits in addition"
+    },
+    {
+      "q": "Mei has 3 times as many stickers as Ravi. Together they have 48 stickers. How many stickers does Mei have?",
+      "a": "36",
+      "work": "Look for a bar model: Ravi 1 unit, Mei 3 units, 4 units = 48, 1 unit = 12. Common error: 16 (that is 48 / 3) or 12 (Ravi's).",
+      "skill": "Bar model: times as many"
+    },
+    {
+      "q": "52 children sit in rows of 8. How many full rows are there, and how many children are left over?",
+      "a": "6 full rows, 4 left over",
+      "work": "Child should use 8 x 6 = 48. Error: 7 rows from rounding up, or giving only 6.",
+      "skill": "Division with remainder (8 times table)"
+    },
+    {
+      "q": "Fill in the blank: 3/4 = ?/12",
+      "a": "9",
+      "work": "Does the child multiply top and bottom by 3? Common error: adding 8 to both (11/12).",
+      "skill": "Equivalent fractions"
+    },
+    {
+      "q": "A rectangle is 9 cm long and 4 cm wide. What is its area? Write your answer with units.",
+      "a": "36 square cm",
+      "work": "Common error: giving perimeter 26 cm or writing 36 cm without 'square'. Ask what area means.",
+      "skill": "Area of a rectangle"
+    },
+    {
+      "q": "A film starts at 2:45 p.m. and lasts 1 hour 50 minutes. At what time does it end?",
+      "a": "4:35 p.m.",
+      "work": "Look for jumping: +1 hour = 3:45, +15 min = 4:00, +35 min = 4:35. Common error: 3:95 or 4:15.",
+      "skill": "Time: adding hours and minutes"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "I think of a number. I multiply it by 6, then subtract 4. My answer is 38. What is my number?",
+      "a": "7",
+      "work": "Strong reasoners work backwards: 38 + 4 = 42, 42 / 6 = 7. Others guess and check, which is also fine.",
+      "skill": "Working backwards"
+    },
+    {
+      "q": "Use the digits 2, 5 and 8 to make 2-digit numbers. Each number must use two different digits. How many different numbers can you make?",
+      "a": "6",
+      "work": "Are they listing in order (25, 28, 52, 58, 82, 85)? Common errors: 3 or 9 (allowing repeats).",
+      "skill": "Systematic listing"
+    }
+  ],
+  "topics": [
+    "Addition and subtraction with regrouping",
+    "Missing digits",
+    "Bar models",
+    "Division with remainders",
+    "Equivalent fractions",
+    "Area of rectangles",
+    "Time",
+    "Working backwards and systematic listing"
+  ]
+}

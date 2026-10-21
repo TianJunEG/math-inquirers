@@ -1,0 +1,93 @@
+{
+  "level": "P6",
+  "ageName": "Ages 12-13",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "What is 2 1/2 - 3/4? Give your answer as a fraction or mixed number.",
+      "a": "1 3/4 (or 7/4)",
+      "work": "Check regrouping or conversion to improper fractions (10/4 - 3/4). Common error: 1 1/4 or 2 1/4.",
+      "skill": "Fraction subtraction with mixed numbers"
+    },
+    {
+      "q": "A shirt costs $60. It is discounted by 25%. What is the new price in dollars?",
+      "a": "45",
+      "work": "Check 25% of 60 = 15, then subtract. Common error: answering 15.",
+      "skill": "Percentage discount"
+    },
+    {
+      "q": "Two angles of a triangle are 52 and 63 degrees. What is the third angle, in degrees?",
+      "a": "65",
+      "work": "Angle sum is 180. Common error: using 360 or arithmetic slip.",
+      "skill": "Angle sum of triangle"
+    },
+    {
+      "q": "A car travels 135 km in 1 hour 30 minutes. What is its average speed in km per hour?",
+      "a": "90",
+      "work": "Child must convert 1 h 30 min to 1.5 h. Common error: 135 / 1.30 or 135 / 30.",
+      "skill": "Speed and rate"
+    }
+  ],
+  "core": [
+    {
+      "q": "A number machine doubles the input and then adds 5. The output is 31. What was the input?",
+      "a": "13",
+      "work": "Look for working backwards (31 - 5, then halve). Common error: halving first or giving 26.",
+      "skill": "Number machines and simple algebra"
+    },
+    {
+      "q": "How many prime numbers are there between 30 and 50?",
+      "a": "5",
+      "work": "Primes are 31, 37, 41, 43, 47. Common errors: including 39 or 49, or counting 1.",
+      "skill": "Primes"
+    },
+    {
+      "q": "The temperature is -4 degrees C at night. It rises by 9 degrees by noon, then falls by 12 degrees by evening. What is the evening temperature in degrees C?",
+      "a": "-7",
+      "work": "Check number line use: -4 + 9 = 5, 5 - 12 = -7. Common error: answering 7.",
+      "skill": "Negative numbers"
+    },
+    {
+      "q": "A bag has 4 red, 3 blue and 5 green marbles. One marble is picked at random. What is the probability it is NOT green? Give a fraction in simplest form.",
+      "a": "7/12",
+      "work": "Total is 12, not green is 7. Common error: 5/12, or 7/5 (comparing to green).",
+      "skill": "Simple probability"
+    },
+    {
+      "q": "The mean of 5 numbers is 12. Four of the numbers are 8, 10, 15 and 11. What is the fifth number?",
+      "a": "16",
+      "work": "Total must be 60; the four add to 44. Common error: finding the mean of the four numbers.",
+      "skill": "Mean"
+    },
+    {
+      "q": "It is 10 o'clock now on a 12-hour clock. What time will it be 17 hours later? Give the hour only.",
+      "a": "3",
+      "work": "10 + 17 = 27, 27 - 24 = 3 (or 17 mod 12 = 5, then 10 + 5 = 15 -> 3). Common error: answering 27 or 5.",
+      "skill": "Clock arithmetic"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "A robot faces North. It repeats this instruction 6 times: 'turn 90 degrees clockwise'. Which direction does it face at the end?",
+      "a": "South",
+      "work": "6 x 90 = 540 = 360 + 180, so it ends facing the opposite way. Common error: East or West from miscounting turns; look for the child listing each turn.",
+      "skill": "Logic and sequencing with turns"
+    },
+    {
+      "q": "Using the digits 1, 2, 3 and 4, with no digit used more than once, how many different 3-digit even numbers can be made?",
+      "a": "12",
+      "work": "Last digit 2 or 4 (2 ways), then 3 x 2 for the others. Common error: 24 (ignoring evenness) or listing incompletely.",
+      "skill": "Counting possibilities"
+    }
+  ],
+  "topics": [
+    "Number machines and simple algebra",
+    "Primes",
+    "Negative numbers",
+    "Probability",
+    "Mean",
+    "Clock arithmetic",
+    "Counting possibilities",
+    "Turns and sequencing logic"
+  ]
+}

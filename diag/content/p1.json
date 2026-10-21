@@ -1,0 +1,95 @@
+{
+  "level": "P1",
+  "ageName": "Ages 7-8",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "What number comes just after 14?",
+      "a": "15",
+      "work": "Watch whether the child counts on from 14 or restarts from 1.",
+      "skill": "Counting to 20"
+    },
+    {
+      "q": "Which is bigger, 17 or 12?",
+      "a": "17",
+      "work": "Ask how they know. Common error: choosing the number said first.",
+      "skill": "Comparing numbers"
+    },
+    {
+      "q": "I have 6 sweets. I get 3 more. How many sweets now?",
+      "a": "9",
+      "work": "Watch for counting on fingers or objects (fine) versus guessing.",
+      "skill": "Add within 20"
+    },
+    {
+      "q": "What shape has 3 sides?",
+      "a": "triangle",
+      "work": "Accept 'triangle'. Note if the child confuses it with a square or says 'pyramid'.",
+      "skill": "Shapes"
+    }
+  ],
+  "core": [
+    {
+      "q": "What number goes with 7 to make 10?",
+      "a": "3",
+      "work": "Does the child know the bond, or count up from 7 on fingers?",
+      "skill": "Number bonds to 10"
+    },
+    {
+      "q": "Here is a pattern: 5, 10, 15, then what comes next?",
+      "a": "20",
+      "work": "Look for counting in 5s. Common error: 16 (adding 1) or 25.",
+      "skill": "Number patterns"
+    },
+    {
+      "q": "A pencil costs 40 cents. An eraser costs 30 cents. How much for both?",
+      "a": "70 cents",
+      "work": "Watch tens-and-ones thinking (4 tens + 3 tens). Common error: 7 cents or 10 cents.",
+      "skill": "Money"
+    },
+    {
+      "q": "5 children like apples. 3 like bananas. 2 like grapes. How many more like apples than grapes?",
+      "a": "3",
+      "work": "Common error: adding (7) or giving the apple count (5) instead of comparing.",
+      "skill": "Reading graphs / comparing"
+    },
+    {
+      "q": "A pen is 8 cubes long. A ruler is 12 cubes long. How many cubes longer is the ruler?",
+      "a": "4",
+      "work": "Does the child compare (12 - 8) or add? Ask them to show with fingers or cubes.",
+      "skill": "Length"
+    },
+    {
+      "q": "Ali is taller than Ben. Ben is taller than Cai. Who is the shortest?",
+      "a": "Cai",
+      "work": "Ask the child to line them up. Common error: answering Ben or Ali.",
+      "skill": "Logic"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "Two numbers add up to 10. One is 4 more than the other. What are the two numbers?",
+      "a": "3 and 7",
+      "work": "Look for trial and error with bonds to 10 (good). Common error: 4 and 6, which only differ by 2.",
+      "skill": "Reasoning with bonds"
+    },
+    {
+      "q": "I have 5 coins. Some are 10-cent coins and some are 5-cent coins. Together they make 40 cents. How many of each?",
+      "a": "3 ten-cent coins and 2 five-cent coins",
+      "work": "Look for guess-and-check. Common error: 4 and 1, which has the right count but makes 45 cents.",
+      "skill": "Money reasoning"
+    }
+  ],
+  "topics": [
+    "counting to 20",
+    "comparing numbers",
+    "add within 20",
+    "basic shapes",
+    "number bonds to 10",
+    "number patterns",
+    "money (cents)",
+    "simple graphs",
+    "length comparison",
+    "logic ordering"
+  ]
+}

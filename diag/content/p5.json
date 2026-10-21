@@ -1,0 +1,92 @@
+{
+  "level": "P5",
+  "ageName": "Ages 11-12",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "What is 5/6 - 1/3? Give your answer as a fraction in simplest form.",
+      "a": "1/2",
+      "work": "Look for converting 1/3 to 2/6; common error: subtracting numerators and denominators (4/3) or leaving 3/6.",
+      "skill": "Subtract unlike fractions"
+    },
+    {
+      "q": "A ribbon 2.4 m long is cut into 6 equal pieces. How long is each piece, in metres?",
+      "a": "0.4",
+      "work": "Check place value; common error is 0.04 or 4 from misplacing the decimal point.",
+      "skill": "Divide decimals"
+    },
+    {
+      "q": "A box holds 24 pencils. How many pencils are in 35 boxes?",
+      "a": "840",
+      "work": "Watch the multiplication method (24 x 35 = 24 x 30 + 24 x 5); common error: dropping the carried tens.",
+      "skill": "Multiply 2-digit by 2-digit"
+    },
+    {
+      "q": "A rectangle has a perimeter of 36 cm and a length of 11 cm. What is its area in square centimetres?",
+      "a": "77",
+      "work": "Child should find width 7 cm first (36 / 2 - 11). Common error: using 36 - 22 = 14 as the width or answering 7.",
+      "skill": "Perimeter and area of rectangle"
+    }
+  ],
+  "core": [
+    {
+      "q": "Round 4,386,512 to the nearest hundred thousand.",
+      "a": "4400000 (4,400,000)",
+      "work": "Look at the ten-thousands digit (8). Common errors: 4,300,000 (truncating) or 4,390,000 (wrong place).",
+      "skill": "Place value and rounding to 10 million"
+    },
+    {
+      "q": "Sam spent 2/5 of his money on a book. He then spent 1/3 of the remainder on lunch. He had $24 left. How much money did he have at first, in dollars?",
+      "a": "60",
+      "work": "Best seen with a bar model: remainder is 3/5, lunch is 1/5 of total, left 2/5 = $24. Common error: treating 1/3 as a fraction of the whole.",
+      "skill": "Fraction word problem (fraction of remainder)"
+    },
+    {
+      "q": "The area of a triangle is 40 square cm. Its base is 16 cm. What is its height in cm?",
+      "a": "5",
+      "work": "Child should use area = 1/2 x base x height. Common error: forgetting the 1/2 and answering 2.5, or dividing 40 by 16 only.",
+      "skill": "Area of triangle"
+    },
+    {
+      "q": "A tank is 50 cm long, 30 cm wide and 40 cm high. A tap fills it at 6 litres per minute. How many minutes to fill it completely? (1 litre = 1000 cubic cm)",
+      "a": "10",
+      "work": "Volume 60,000 cubic cm = 60 L. Common errors: not converting to litres, or adding the dimensions.",
+      "skill": "Volume and rate"
+    },
+    {
+      "q": "In a class of 40 pupils, 60% are girls. 25% of the girls wear glasses. How many girls wear glasses?",
+      "a": "6",
+      "work": "Girls = 24, then a quarter = 6. Common error: taking 25% of 40 (10).",
+      "skill": "Percentage of a quantity"
+    },
+    {
+      "q": "Three angles of a quadrilateral are 90, 110 and 75 degrees. What is the fourth angle, in degrees?",
+      "a": "85",
+      "work": "Angle sum of quadrilateral is 360. Common error: using 180.",
+      "skill": "Angles in a quadrilateral"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "Look at the pattern 2, 5, 10, 17, 26, ... What is the 10th number in the pattern?",
+      "a": "101",
+      "work": "Look for differences 3,5,7,9 or the rule n x n + 1. Common error: guessing a constant difference.",
+      "skill": "Number patterns (square-plus-one)"
+    },
+    {
+      "q": "Ali has 3 times as many stickers as Ben. After Ali gives 18 stickers to Ben, Ali has twice as many as Ben. How many stickers did Ali have at first?",
+      "a": "162",
+      "work": "Bar-model or before-after reasoning. Ben starts with 54. Common error: answering Ben's amount (54) or ignoring the change in total.",
+      "skill": "Before-and-after heuristic"
+    }
+  ],
+  "topics": [
+    "Place value and rounding to 10 million",
+    "Fraction operations and word problems",
+    "Area of triangle",
+    "Volume and rate",
+    "Percentage",
+    "Angles in quadrilaterals",
+    "Patterns and heuristics"
+  ]
+}

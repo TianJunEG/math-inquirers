@@ -1,0 +1,93 @@
+{
+  "level": "P4",
+  "ageName": "Ages 10-11",
+  "minutes": 30,
+  "foundation": [
+    {
+      "q": "5000 - 1346 = ?",
+      "a": "3654",
+      "work": "Watch for borrowing across zeros; common error 4346 or 3764.",
+      "skill": "Subtract 4-digit numbers"
+    },
+    {
+      "q": "A bag has 9 sweets. How many sweets are in 7 bags?",
+      "a": "63",
+      "work": "Check recall of 9 x 7; note if the child skip-counts slowly.",
+      "skill": "Times tables 6 to 9"
+    },
+    {
+      "q": "Fill in the blank: 2/3 = ?/12",
+      "a": "8",
+      "work": "Does the child multiply top and bottom by 4? Common error: 2 + 9 = 11.",
+      "skill": "Equivalent fractions"
+    },
+    {
+      "q": "A rectangle is 7 cm long and 6 cm wide. What is its area? Write your answer with units.",
+      "a": "42 square cm",
+      "work": "Common error: giving perimeter 26 cm or omitting 'square'.",
+      "skill": "Area of a rectangle"
+    }
+  ],
+  "core": [
+    {
+      "q": "Write down all the factors of 18.",
+      "a": "1, 2, 3, 6, 9, 18",
+      "work": "Look for pairs (1 x 18, 2 x 9, 3 x 6). Common errors: missing 1 or 18, or listing multiples (18, 36...).",
+      "skill": "Factors"
+    },
+    {
+      "q": "Round 48,572 to the nearest thousand.",
+      "a": "49,000",
+      "work": "Check which digit they look at (the hundreds digit, 5). Common error: 48,000 or 48,600.",
+      "skill": "Rounding 5-digit numbers"
+    },
+    {
+      "q": "12 + 6 x 3 - 4 = ?",
+      "a": "26",
+      "work": "Multiplication first: 6 x 3 = 18, then 12 + 18 - 4. Common error: 50 (left to right).",
+      "skill": "Order of operations"
+    },
+    {
+      "q": "2 and 3/5 + 1 and 4/5 = ? Write your answer as a mixed number.",
+      "a": "4 and 2/5",
+      "work": "Look for 3/5 + 4/5 = 7/5 = 1 and 2/5, then add whole numbers. Also accept 22/5. Common error: 3 and 7/5 left unconverted, or 4 and 7/10.",
+      "skill": "Adding mixed numbers"
+    },
+    {
+      "q": "A ribbon is 3.7 m long. Another ribbon is 2.85 m long. What is the total length? Write your answer in metres.",
+      "a": "6.55 m",
+      "work": "Check place-value alignment of decimal points. Common error: 6.12 or 5.82 (misaligned).",
+      "skill": "Adding decimals"
+    },
+    {
+      "q": "A rectangle has a perimeter of 36 cm. It is 11 cm long. How wide is it?",
+      "a": "7 cm",
+      "work": "Look for 36 / 2 = 18, then 18 - 11 = 7. Common errors: 25 (36 - 11) or 14.",
+      "skill": "Perimeter of rectangles"
+    }
+  ],
+  "stretch": [
+    {
+      "q": "I am a number between 30 and 50. I am a multiple of 4 and a multiple of 6. My digits add up to 9. What number am I?",
+      "a": "36",
+      "work": "Look for listing multiples of 4 and 6 (common: 36, 48) then using the digit clue. Accept guess and check with reasoning.",
+      "skill": "Common multiples and number puzzles"
+    },
+    {
+      "q": "Ben has 3 times as many marbles as Cara. Ben gives 12 marbles to Cara. Now they have the same number. How many marbles did Ben have at first?",
+      "a": "36",
+      "work": "Bar model: after the gift, Ben's 3 units minus 12 equals Cara's 1 unit plus 12, so 2 units = 24, 1 unit = 12. Cara 12, Ben 36.",
+      "skill": "Bar model: transfer problem"
+    }
+  ],
+  "topics": [
+    "Subtraction and times tables",
+    "Factors and multiples",
+    "Rounding 5-digit numbers",
+    "Order of operations",
+    "Fractions (mixed numbers)",
+    "Decimals",
+    "Area and perimeter",
+    "Bar models and number puzzles"
+  ]
+}
