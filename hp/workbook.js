@@ -23,7 +23,7 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
   const row2 = p([t('I got unstuck by ...   ', { bold: true, size: 20 }), ...['counters or objects', 'drawing it', 'asking someone', 'trying again'].flatMap(gopt)], { after: 20, line: 260 });
   const row3 = p([t('Next time I will try ...  ______________________     It felt:  ', { bold: true, size: 20 }), ...['easy', 'OK', 'hard'].flatMap((w, i) => [gimg(`gap_face_${i + 1}.png`, 20), t(' ' + w + '   ', { size: 19 })])], { after: 0, line: 260 });
   return [gap(30), tbl([CW], [row([cell([p([t('What was hard?  ', { bold: true, size: 26, color: '1F7A6F' }), t('A one-minute look-back. There are no right answers. Tick or write.', { size: 19 })], { after: 30 }), row1, row2, row3], CW, { fill: 'FFFDF5', align: AlignmentType.LEFT, h: 50 })])])]; };
-const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Open investigation: ' + v.title), q('?', v.q, { before: 60, after: 20, keepNext: true }), ...lines(3)]; };
+const invest = (n) => { const v = GAPS[String(n)].invest; return [p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60, pb: true }), banner('Open investigation: ' + v.title), q('?', v.q, { before: 100, after: 40, keepNext: true }), ...lines(v.lines + 3 || 8), ...refl(n)]; };
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -87,7 +87,6 @@ W.push(sub('b', 'Look at the numbers of stickers. Are they odd or even? What pat
 W.push(...lines(2));
 
 /* ---------- LESSON 2 ---------- */
-W.push(...refl(1));
 W.push(...extra(1));
 W.push(...hdr(2, 'Whole Numbers: Number Bonds', 'NUMBER BOND INQUIRY')); W.push(fast(), gap(40));
 W.push(q(1, 'Number bonds of 10. Fill in the blanks.', { before: 40, keepNext: true }));
@@ -116,7 +115,6 @@ W.push(ans('Answer:', 560));
 W.push(p([t('Think harder: two numbers add up to 12. One is 4 more than the other. What are they?   ', { size: 24 }), t('___________', { size: 24 })], { indent: { left: 560 }, after: 100 }));
 
 /* ---------- LESSON 3 ---------- */
-W.push(...refl(2));
 W.push(...extra(2));
 W.push(...hdr(3, 'Picture Graphs', 'LET’S PLAN THE FRUIT PARTY!')); W.push(fast(), gap(40));
 W.push(p('Our teacher wants to buy fruit for a class party. Every child voted for ONE fruit. The picture graph shows the votes.', { after: 120 }));
@@ -145,7 +143,6 @@ W.push(q(9, 'Why might two groups choose different fruits?'));
 W.push(...lines(2));
 
 /* ---------- LESSON 4 ---------- */
-W.push(...refl(3));
 W.push(...extra(3));
 W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast(), gap(40));
 W.push(q(1, 'Look at the shape pattern. Draw the missing shapes in places 8 and 9.', { before: 60 }));
@@ -176,7 +173,6 @@ W.push(...lines(2));
 
 /* ---------- LESSON 5 ---------- */
 const mach = (cells) => { const ws = cells.map(c => c.w); return tbl(ws, [row(cells.map(c => cell(c.text, c.w, { fill: c.fill, bold: c.bold, h: 110, size: 26 })))]); };
-W.push(...refl(4));
 W.push(...extra(4));
 W.push(...hdr(5, 'Working Backwards', 'MYSTERY NUMBER')); W.push(fast(), gap(40));
 W.push(p('To find a mystery number, work backwards. Do the opposite steps in the opposite order.', { italics: true, after: 80 }));
@@ -213,7 +209,6 @@ W.push(q(5, 'Make your own mystery number story. Give it to a friend to solve!')
 W.push(...lines(3));
 
 /* ---------- LESSON 6 ---------- */
-W.push(...refl(5));
 W.push(...extra(5));
 W.push(...hdr(6, 'Money', 'COIN COMBOS')); W.push(fast(), gap(40));
 W.push(p('We have 5¢, 10¢, 20¢ and 50¢ coins. You can use the same kind of coin more than once.', { after: 100 }));
@@ -240,7 +235,6 @@ W.push(sub('c', 'Mei has one $50 note and two $10 notes. A bicycle costs $65 and
 W.push(...lines(2));
 
 /* ---------- LESSON 7 ---------- */
-W.push(...refl(6));
 W.push(...extra(6));
 W.push(...hdr(7, 'Shapes', 'SHAPE SAFARI')); W.push(fast(), gap(40));
 W.push(q(1, 'Count the shapes in the house picture.', { before: 40, keepNext: true }));
@@ -270,7 +264,6 @@ W.push(img('grid2x2.png', 220, 132));
 W.push(ans('Number of squares:', 1000));
 
 /* ---------- LESSON 8 ---------- */
-W.push(...refl(7));
 W.push(...extra(7));
 W.push(...hdr(8, 'Logic and Sorting', 'LOGIC LAB')); W.push(fast(), gap(40));
 W.push(q(1, 'Put them in order using the clues.', { before: 40 }));
@@ -302,7 +295,6 @@ W.push(p('Explain why. Then try to find a second reason!', { indent: { left: 560
 W.push(...lines(2));
 
 /* ---------- LESSON 9 ---------- */
-W.push(...refl(8));
 W.push(...extra(8));
 W.push(...hdr(9, 'Length', 'MEASURE IT!')); W.push(fast(), gap(40));
 W.push(q(1, 'Three ribbons are made of equal squares.', { before: 40, keepNext: true }));
@@ -332,7 +324,6 @@ W.push(sub('b', 'A crayon lies from the 3 cm mark to the 8 cm mark. How long is 
 W.push(sub('c', 'Measure your own pencil with your ruler.   ____ cm.   Is it longer or shorter than 10 cm?   ____________'));
 
 /* ---------- LESSON 10 ---------- */
-W.push(...refl(9));
 W.push(...extra(9));
 W.push(...hdr(10, 'Mixed Puzzles', 'CHALLENGE DAY!')); W.push(fast(), gap(40));
 W.push(p([t('Show how you know. Remember the inquirer rules!', { italics: true })], { after: 60 }));
@@ -361,7 +352,6 @@ W.push(q(9, 'Make a challenge puzzle for a friend. Write the puzzle and the answ
 W.push(...lines(4));
 W.push(p([t('The puzzle I liked best today was ______________________ because ______________________', { size: 24 })], { before: 240, after: 100 }));
 
-W.push(...refl(10));
 W.push(...extra(10));
 /* ---------- APPENDIX: CUT-OUTS ---------- */
 W.push(p(t('Cut-outs', { bold: true, size: 40 }), { pb: true, after: 80, align: AlignmentType.CENTER }));
