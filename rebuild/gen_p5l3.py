@@ -34,7 +34,7 @@ put('warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards: re
 def counters(n,x,y,r=19,fill=YEL,gap=47):
     return ''.join(f'<circle cx="{x+i*gap}" cy="{y}" r="{r}" fill="{fill}" stroke="{NAVY}" stroke-width="3"/>' for i in range(n))
 g=txt(70,50,'Ali',34,NAVY,'end',700,'Nunito Sans, Arial')+counters(18,100,40)+txt(70,110,'Mei',34,NAVY,'end',700,'Nunito Sans, Arial')+counters(6,100,100,fill=SKY)
-g+=f'<path d="M1010 60 Q1060 90 1010 118" fill="none" stroke="{TEAL}" stroke-width="5"/>'+txt(1230,95,'Ali gives Mei 1 counter at a time',32,TEAL,'middle',800,'Nunito Sans, Arial')
+g+=f'<path d="M1000 50 H1050 M1030 36 L1052 50 L1030 64" fill="none" stroke="{TEAL}" stroke-width="5"/>'+txt(1075,60,'Ali gives Mei',32,TEAL,'start',800,'Nunito Sans, Arial')+txt(1075,100,'1 counter at a time',32,TEAL,'start',800,'Nunito Sans, Arial')
 steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
 body+=card(svgwrap(1500,140,'Ali has a row of 18 counters and Mei a row of 6 counters; Ali gives Mei counters one at a time',g),extra='padding:14px 32px')
@@ -128,14 +128,14 @@ put('stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+numcards(st
 ch=[('1.','Ali and Ben had $90 altogether. Ali spent 1/3 of his money and Ben spent $10. Then they had the same amount of money. How much did Ali have at first?'),('2.','Mei is 1/4 as old as her father. In 12 years she will be 1/2 as old as her father. How old is Mei now?')]
 put('challenge',sec(f'{L}-challenge','65–80 MIN',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are NOT on the workbook. Answers: 1) $48 (Ali has 3 units and keeps 2 after spending 1 unit; Ben has $90 − 3 units, and after spending $10 he has $80 − 3 units, which equals the 2 units Ali keeps; so 5 units = $80, 1 unit = $16; Ali $48, Ben $42; both have $32 left). 2) 6 years old (the difference is 3 units now and 1 unit in 12 years, so 3 old units = 1 new unit; Mei now 1 unit = 6, father 24; in 12 years 18 and 36).'))
 # chdiag
-g1=txt(60,70,'Ali',32,NAVY,'end',700,'Nunito Sans, Arial')+pbar(80,36,120,[(2,YEL,'',2),(1,RED,'spends 1/3',1)])+txt(60,190,'Ben',32,NAVY,'end',700,'Nunito Sans, Arial')+pbar(80,156,120,[(2.2,SKY,'',1),(0.8,RED,'spends $10',1)])
-g1+=txt(80,270,'Ali + Ben = $90.   After spending, they have the same.',28,TEAL,'start',800,'Nunito Sans, Arial')
-g2=txt(110,64,'Now',30,TEAL,'end',800,'Nunito Sans, Arial')+txt(110,110,'Mei',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,76,120,[(1,YEL,'',1)],h=50)+txt(110,176,'Dad',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,142,120,[(4,SKY,'',4)],h=50)
-g2+=txt(110,246,'In 12 years',30,TEAL,'end',800,'Nunito Sans, Arial')+txt(110,290,'Mei',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,256,120,[(1,YEL,'',1),(0.5,RED,'+12',1)],h=50)+txt(110,356,'Dad',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,322,120,[(4,SKY,'',4),(0.5,RED,'+12',1)],h=50)
-g2+=txt(130,420,'Mei is half of Dad in 12 years.',28,TEAL,'start',800,'Nunito Sans, Arial')
+g1=txt(110,70,'Ali',32,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,36,150,[(2,YEL,'',2),(1,RED,'spent',1)])+txt(110,190,'Ben',32,NAVY,'end',700,'Nunito Sans, Arial')+pbar(130,156,150,[(2.3,SKY,'',1),(0.7,RED,'$10',1)])
+g1+=txt(130,270,'Ali + Ben = $90.',30,TEAL,'start',800,'Nunito Sans, Arial')+txt(130,310,'After spending, they have the same.',30,TEAL,'start',800,'Nunito Sans, Arial')
+g2=txt(210,64,'Now',30,TEAL,'end',800,'Nunito Sans, Arial')+txt(210,110,'Mei',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(230,76,120,[(1,YEL,'',1)],h=50)+txt(210,176,'Dad',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(230,142,120,[(4,SKY,'',4)],h=50)
+g2+=txt(210,246,'In 12 years',30,TEAL,'end',800,'Nunito Sans, Arial')+txt(210,290,'Mei',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(230,256,120,[(1,YEL,'',1),(0.5,RED,'+12',1)],h=50)+txt(210,356,'Dad',30,NAVY,'end',700,'Nunito Sans, Arial')+pbar(230,322,120,[(4,SKY,'',4),(0.5,RED,'+12',1)],h=50)
+g2+=txt(230,420,'Mei is half of Dad in 12 years.',28,TEAL,'start',800,'Nunito Sans, Arial')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Spending, then equal</p>'+svgwrap(780,300,'Ali has 3 equal units and spends 1; Ben spends 10 dollars; the two have 90 dollars altogether',g1,True),extra='flex:1;min-width:0;padding:20px 24px')
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Ages now and later</p>'+svgwrap(780,440,'Mei is 1 unit and Dad is 4 units now; in 12 years Mei is half of Dad',g2,True),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Spending, then equal</p>'+svgwrap(780,330,'Ali has 3 equal units and spends 1; Ben spends 10 dollars; the two have 90 dollars altogether',g1,True),extra='flex:1;min-width:0;padding:20px 24px')
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Ages now and later</p>'+svgwrap(800,440,'Mei is 1 unit and Dad is 4 units now; in 12 years Mei is half of Dad',g2,True),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('chdiag',sec(f'{L}-chdiag','65–80 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the situation, not the answer. Ask: What stays the same in Q1 after Ali and Ben spend? (They end up equal.) In Q2, what stays the same? (The difference between the ages.) Which unit is "1 unit" in the later picture? Answers are in the Challenge slide notes.'))
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: Ali and Ben, equal after',38,800,TEAL))
 rows1=['Ali spends 1/3: he keeps 2 units, spends 1 unit.','Ben also has 2 units left, and spent $10.','Total: 3 units + 2 units + $10 = $90, so 5 units = $80.','1 unit = $16. Ali had 3 units = $48 ✓']

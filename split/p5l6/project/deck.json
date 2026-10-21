@@ -1,0 +1,66 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T17:19:29Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P5: Lesson 6 – Rate Racers",
+ "order": [
+  "p5l6-title",
+  "p5l6-warm1",
+  "p5l6-warm2",
+  "p5l6-explore1",
+  "p5l6-explore2",
+  "p5l6-teach1",
+  "p5l6-we1",
+  "p5l6-try1",
+  "p5l6-teachfree",
+  "p5l6-we2",
+  "p5l6-try2",
+  "p5l6-key",
+  "p5l6-break",
+  "p5l6-ws1",
+  "p5l6-ws1ans",
+  "p5l6-teachpark",
+  "p5l6-teachplans",
+  "p5l6-ws2",
+  "p5l6-ws2ans",
+  "p5l6-stretch",
+  "p5l6-challenge",
+  "p5l6-chdiag",
+  "p5l6-chwalk",
+  "p5l6-talk",
+  "p5l6-exit"
+ ],
+ "cover": "p5l6-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p5l6-title"
+  },
+  "s2": {
+   "description": "Teach: the rate for 1, better buys, taps together",
+   "start": "p5l6-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p5l6-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p5l6-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

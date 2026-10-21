@@ -18,12 +18,12 @@ const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 const chkEq = (a, b, c, d, name) => { if (Math.abs(dist(a, b) - dist(c, d)) > 0.05) throw new Error('Sides ' + name + ' are not equal'); };
 const chkPar = (a, b, c, d, name) => { const x = (b[0] - a[0]) * (d[1] - c[1]) - (b[1] - a[1]) * (d[0] - c[0]); if (Math.abs(x) > 0.5) throw new Error('Not parallel ' + name); };
 
-const svg = (w, h, label, inner) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${w}px;max-width:100%">${inner}</svg>`;
+const svg = (w, h, label, inner, k = 1) => `<svg aria-label="${esc(label)}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(w * k)}px;max-width:100%">${inner}</svg>`;
 const tx = (x, y, s, size = 16, fill = N, anchor = 'middle', weight = 700) => `<text x="${f1(x)}" y="${f1(y)}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="${F}">${esc(s)}</text>`;
 const line = (a, b, col = N, sw = 3, dash = '') => `<line x1="${f1(a[0])}" y1="${f1(a[1])}" x2="${f1(b[0])}" y2="${f1(b[1])}" stroke="${col}" stroke-width="${sw}" stroke-linecap="round"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
 const poly = (pts, fill = SKY, sw = 3) => `<polygon points="${pts.map(p => f1(p[0]) + ',' + f1(p[1])).join(' ')}" fill="${fill}" stroke="${N}" stroke-width="${sw}" stroke-linejoin="round"/>`;
 // angle arc at v between rays to a and b (the smaller angle). label: text at the middle of the wedge, or '' for none
-const arc = (v, a, b, r, label = '', col = RED, lr = 0, fs = 16) => {
+const arc = (v, a, b, r, label = '', col = RED, lr = 0, fs = 18) => {
   const a1 = Math.atan2(a[1] - v[1], a[0] - v[0]), a2 = Math.atan2(b[1] - v[1], b[0] - v[0]);
   let d = a2 - a1; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
   const p1 = [v[0] + r * Math.cos(a1), v[1] + r * Math.sin(a1)], p2 = [v[0] + r * Math.cos(a2), v[1] + r * Math.sin(a2)];
@@ -49,7 +49,7 @@ const parr = (a, b) => {
   const t = [m[0] + u[0] * 8, m[1] + u[1] * 8], p = [m[0] - u[0] * 6 + nn[0] * 7, m[1] - u[1] * 6 + nn[1] * 7], q = [m[0] - u[0] * 6 - nn[0] * 7, m[1] - u[1] * 6 - nn[1] * 7];
   return `<polyline points="${f1(p[0])},${f1(p[1])} ${f1(t[0])},${f1(t[1])} ${f1(q[0])},${f1(q[1])}" fill="none" stroke="${TEAL}" stroke-width="3"/>`;
 };
-const pl = (p, name, dx, dy, size = 18) => tx(p[0] + dx, p[1] + dy, name, size, N);
+const pl = (p, name, dx, dy, size = 20) => tx(p[0] + dx, p[1] + dy, name, size, N);
 
 // ---------- Q1: two lines crossing (left) and four angles round a point (right) ----------
 const q1Fig = () => {
@@ -61,20 +61,10 @@ const q1Fig = () => {
   chk(Q, d1, d2, 95, 'q1'); chk(Q, d2, d3, 130, 'q2'); chk(Q, d3, d4, 70, 'q3'); chk(Q, d4, d1, 65, 'q4');
   s += [d1, d2, d3, d4].map(d => line(Q, d)).join('');
   s += arc(Q, d1, d2, 26, '95°', RED, 50) + arc(Q, d2, d3, 26, '130°', RED, 52) + arc(Q, d3, d4, 26, '70°', RED, 50) + arc(Q, d4, d1, 26, '?', RED, 48);
-  return svg(600, 170, 'Left: two straight lines AB and CD cross at O and angle AOC is 68 degrees. Right: four angles meet at a point and measure 95, 130, 70 and a question mark degrees.', s);
+  return svg(600, 170, 'Left: two straight lines AB and CD cross at O and angle AOC is 68 degrees. Right: four angles meet at a point and measure 95, 130, 70 and a question mark degrees.', s, 0.85);
 };
 
-// ---------- Q2: isosceles triangle ABC (AB = AC), angle A = 48, D on BC extended ----------
-const q2Fig = () => {
-  const A = [250, 14], h = 140, hb = h * Math.tan(rad(24)), B = [250 - hb, 14 + h], C = [250 + hb, 14 + h], D = [250 + hb + 110, 14 + h];
-  chk(A, B, C, 48, 'A'); chk(B, A, C, 66, 'B'); chk(C, B, A, 66, 'ACB'); chk(C, A, D, 114, 'ACD'); chkEq(A, B, A, C, 'AB AC');
-  let s = poly([A, B, C], SKY) + line(C, D) + tick(A, B) + tick(A, C);
-  s += arc(A, B, C, 36, '48°', RED, 62) + arc(B, A, C, 36, '?', RED, 62) + arc(C, B, A, 30, '?', RED, 56) + arc(C, A, D, 52, '?', RED, 82);
-  s += pl(A, 'A', 0, -2 - 4) + pl(B, 'B', -14, 16) + pl(C, 'C', 4, 20) + pl(D, 'D', 12, 6);
-  return svg(600, 178, 'Triangle ABC with AB equal to AC and angle A 48 degrees. The side BC is extended to D. The angles at B, at C inside the triangle and angle ACD are question marks.', s);
-};
-
-// ---------- Q3: parallelogram ABCD (A = 72), rhombus PQRS (P = 64) with diagonal PR, trapezium (A = 110, B = 80) ----------
+// ---------- Q2: parallelogram ABCD (A = 72), rhombus PQRS (P = 64) with diagonal PR, trapezium (A = 110, B = 80) ----------
 const q3Fig = () => {
   // parallelogram: A bottom-left, sides 120 and 80
   const A = [16, 150], B = [A[0] + 120, A[1]], Dd = P(...A, 80, 72), C = [Dd[0] + 120, Dd[1]];
@@ -88,7 +78,7 @@ const q3Fig = () => {
   s += tick(p, q) + tick(q, r) + tick(r, sp) + tick(sp, p);
   s += pl(p, 'P', -10, 14) + pl(q, 'Q', 8, 16) + pl(r, 'R', 12, 2) + pl(sp, 'S', -12, 2);
   // trapezium: AB // DC, A = 110, B = 80
-  const tA = [418, 40], tB = [tA[0] + 100, tA[1]], tD = P(...tA, 100, 250);
+  const tA = [462, 40], tB = [tA[0] + 100, tA[1]], tD = P(...tA, 100, 250);
   // leg BC leaves B at maths angle 260 (angle ABC = 80) and reaches the level of D
   const L = (tD[1] - tB[1]) / Math.sin(rad(80));
   const BC = P(...tB, L, 260);
@@ -96,11 +86,11 @@ const q3Fig = () => {
   chk(tA, tB, tD, 110, 'trap A'); chk(tB, tA, C2, 80, 'trap B'); chkPar(tA, tB, tD, C2, 'trap AB DC'); chk(tD, tA, C2, 70, 'trap D'); chk(C2, tD, tB, 100, 'trap C');
   s += poly([tA, tB, C2, tD], SKY) + parr(tA, tB) + parr(tD, C2) + arc(tA, tB, tD, 24, '110°', RED, 50) + arc(tB, tA, C2, 24, '80°', RED, 46) + arc(tD, tA, C2, 24, '?', RED, 46) + arc(C2, tB, tD, 24, '?', RED, 46);
   s += pl(tA, 'A', -14, 2) + pl(tB, 'B', 14, 2) + pl(C2, 'C', 14, 18) + pl(tD, 'D', -14, 18);
-  s += tx(76, 176, 'Parallelogram', 15, TEAL, 'middle', 600) + tx(284, 176, 'Rhombus', 15, TEAL, 'middle', 600) + tx(468, 176, 'Trapezium', 15, TEAL, 'middle', 600);
-  return svg(600, 184, 'Three shapes. A parallelogram ABCD with angle A 72 degrees and equal opposite sides. A rhombus PQRS with angle P 64 degrees, all sides equal, and the diagonal PR drawn dashed. A trapezium ABCD with AB parallel to DC, angle A 110 degrees and angle B 80 degrees.', s);
+  s += tx(76, 176, 'Parallelogram', 15, TEAL, 'middle', 600) + tx(284, 176, 'Rhombus', 15, TEAL, 'middle', 600) + tx(500, 176, 'Trapezium', 15, TEAL, 'middle', 600);
+  return svg(600, 184, 'Three shapes. A parallelogram ABCD with angle A 72 degrees and equal opposite sides. A rhombus PQRS with angle P 64 degrees, all sides equal, and the diagonal PR drawn dashed. A trapezium ABCD with AB parallel to DC, angle A 110 degrees and angle B 80 degrees.', s, 1);
 };
 
-// ---------- Q4: triangle ABC, D on BC, AB = AD, angle B = 62, angle DAC = 38 ----------
+// ---------- Q4 (chain): triangle ABC, D on BC, AB = AD, angle B = 62, angle DAC = 38 ----------
 const q4Fig = () => {
   const L = 130, B = [50, 168], A = P(...B, L, 62), D = [B[0] + 2 * L * Math.cos(rad(62)), B[1]];
   const DC = L * Math.sin(rad(38)) / Math.sin(rad(24)), C = [D[0] + DC, B[1]];
@@ -108,7 +98,7 @@ const q4Fig = () => {
   let s = poly([A, B, C], SKY) + line(A, D) + tick(B, A) + tick(A, D);
   s += arc(B, C, A, 34, '62°', RED, 60) + arc(A, D, C, 38, '38°', RED, 66);
   s += pl(A, 'A', 0, -8) + pl(B, 'B', -12, 16) + pl(D, 'D', 0, 22) + pl(C, 'C', 14, 16);
-  return svg(600, 190, 'Triangle ABC. D is a point on BC with AB equal to AD. Angle ABC is 62 degrees and angle DAC is 38 degrees. The line AD is drawn.', s);
+  return svg(600, 190, 'Triangle ABC. D is a point on BC with AB equal to AD. Angle ABC is 62 degrees and angle DAC is 38 degrees. The line AD is drawn.', s, 0.85);
 };
 
 // ---------- Q5: parallelogram ABCD, E on DC with DA = DE, angle ABC = 56 ----------
@@ -119,7 +109,7 @@ const q5Fig = () => {
   let s = poly([A, B, C, D], SKY) + line(A, E) + tick(D, A) + tick(D, E);
   s += arc(B, A, C, 30, '56°', RED, 56);
   s += pl(A, 'A', -2, -10) + pl(B, 'B', 4, -10) + pl(C, 'C', 14, 18) + pl(D, 'D', -12, 18) + pl(E, 'E', 0, 22);
-  return svg(600, 190, 'Parallelogram ABCD with E a point on the side DC and DA equal to DE. Angle ABC is 56 degrees. The line AE is drawn.', s);
+  return svg(600, 190, 'Parallelogram ABCD with E a point on the side DC and DA equal to DE. Angle ABC is 56 degrees. The line AE is drawn.', s, 0.85);
 };
 
 module.exports = {
@@ -138,11 +128,10 @@ module.exports = {
     extension: 'Draw a triangle and put the three angle labels 40°, 60° and 80° on the corners. Cut the corners off and fit them together. Now do the same with any four-sided shape. Explain in one sentence why a four-sided shape always gives 360°. (Hint: draw a line from one corner to the opposite corner.)',
     key: [
       ['Q1', '(a) 112° (angles on a straight line: 180° − 68°)  (b) 68° (vertically opposite AOC)  (c) 112° (vertically opposite BOC)  (d) 65° (angles at a point: 360° − 95° − 130° − 70°)'],
-      ['Q2', '(a) 66° (isosceles, so the base angles are equal: 180° − 48° = 132°, 132° ÷ 2)  (b) 66°  (c) 114° (angles on a straight line: 180° − 66°)'],
-      ['Q3', '(a) Parallelogram: B = 108° (adjacent angles add up to 180°), C = 72° (opposite A), D = 108° (opposite B)  (b) Rhombus: PQR = 116° (180° − 64°). Triangle PQR is isosceles (PQ = QR), so QPR = (180° − 116°) ÷ 2 = 32°  (c) Trapezium: D = 70° (180° − 110°), C = 100° (180° − 80°)'],
-      ['Q4', '(a) ADB = 62° (AB = AD, so the base angles are equal)  (b) BAD = 56° (180° − 62° − 62°)  (c) ADC = 118° (angles on a straight line: 180° − 62°)  (d) ACD = 24° (180° − 118° − 38°)'],
-      ['Q5', '(a) ADC = 56° (opposite angles of a parallelogram are equal)  (b) DEA = 62° (DA = DE, so (180° − 56°) ÷ 2)  (c) AEC = 118° (straight line: 180° − 62°)  (d) EAB = 62° (angle DAB = 180° − 56° = 124°, then 124° − 62°)'],
-      ['Q6', '(a) Two triangles: 50°, 50°, 80° (the 50° angle is a base angle) or 50°, 65°, 65° (50° is the top angle)  (b) Only 100°, 40°, 40°: the 100° angle must be the top angle, because two angles of 100° would already be 200°  (c) No. Two obtuse angles are each more than 90°, so together they are more than 180°.']
+      ['Q2', '(a) Parallelogram: B = 108° (adjacent angles add up to 180°), C = 72° (opposite A), D = 108° (opposite B)  (b) Rhombus: PQR = 116° (180° − 64°). Triangle PQR is isosceles (PQ = QR), so QPR = (180° − 116°) ÷ 2 = 32°  (c) Trapezium: D = 70° (180° − 110°), C = 100° (180° − 80°)'],
+      ['Q3', '(a) ADB = 62° (AB = AD, so the base angles are equal)  (b) BAD = 56° (180° − 62° − 62°)  (c) ADC = 118° (angles on a straight line: 180° − 62°)  (d) ACD = 24° (180° − 118° − 38°)'],
+      ['Q4', '(a) ADC = 56° (opposite angles of a parallelogram are equal)  (b) DEA = 62° (DA = DE, so (180° − 56°) ÷ 2)  (c) AEC = 118° (straight line: 180° − 62°)  (d) EAB = 62° (angle DAB = 180° − 56° = 124°, then 124° − 62°)'],
+      ['Q5', '(a) Two triangles: 50°, 50°, 80° (the 50° angle is a base angle) or 50°, 65°, 65° (50° is the top angle)  (b) Only one: 100°, 40°, 40°. The 100° angle must be the top angle, because two angles of 100° would already be 200°.']
     ]
   },
 
@@ -172,8 +161,8 @@ module.exports = {
     keyBig: 'Find one angle. Say WHY. Use it to find the next one. That is an angle chase.',
     keySmall: 'Do not measure the drawing: use straight line 180°, point 360°, triangle 180°, equal base angles, and the shape facts.',
     brk: 'Angle statues. The tutor calls an angle: 90° is arms in an L, 180° is arms straight out, 45° is arms half-way. Children make it with their arms on camera. Then call 360° (turn all the way round!).',
-    ws1: 'Page 1, in pairs: Q1 lines and points, Q2 isosceles triangle, Q3 parallelogram, rhombus and trapezium.',
-    ws2: 'Page 2, on your own: Q4 angle chase in a triangle, Q5 parallelogram and isosceles triangle, Q6 find every case.'
+    ws1: 'Page 1, in pairs: Q1 straight lines, a point and vertically opposite angles, Q2 parallelogram, rhombus and trapezium.',
+    ws2: 'Page 2, on your own: Q3 angle chase in a triangle, Q4 parallelogram and isosceles triangle, Q5 find every isosceles triangle.'
   },
 
   qbank: {
@@ -209,36 +198,28 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p('An angle chase is a chain. Find one angle, say WHY, and use it to find the next one. Drawings are not to scale, so do not use a protractor.', { after: 40 }),
-    H.q(1, 'Left: two straight lines AB and CD cross at O. Right: four angles meet at a point.', { before: 20, keepNext: true }),
+    H.q(1, 'Left: straight lines AB and CD cross at O. Right: four angles meet at a point. Drawings are not to scale, so do not use a protractor.', { before: 20, keepNext: true }),
     H.fig(q1Fig()),
-    H.sub('a', 'Angle BOC = ________     (b)  Angle BOD = ________     (c)  Angle AOD = ________', { after: 40 }),
+    H.sub('a', 'Angle BOC = ______    (b) Angle BOD = ______    (c) Angle AOD = ______', { after: 40 }),
     H.sub('d', 'The missing angle at the point on the right = ________.   Which angle fact did you use? ______________________', { after: 40 }),
-    H.q(2, 'Triangle ABC has AB = AC and angle A = 48°. The side BC is extended to D.', { keepNext: true, before: 100 }),
-    H.fig(q2Fig()),
-    H.sub('a', 'Angle ABC = ________     (b)  Angle ACB = ________     (c)  Angle ACD = ________', { after: 40 }),
-    H.p('Reason for (a): ______________________________________________________', { after: 40 }),
-    H.q(3, 'Find the missing angles. Write each angle fact you use.', { keepNext: true, before: 100 }),
+    H.q(2, 'Find the missing angles. Write each angle fact you use.', { keepNext: true, before: 100 }),
     H.fig(q3Fig()),
     H.sub('a', 'Parallelogram:   angle B = ______   angle C = ______   angle D = ______', { after: 40 }),
     H.sub('b', 'Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),
     H.sub('c', 'Trapezium:   angle D = ______   angle C = ______', { after: 40 }),
-
-    H.q(4, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle and write the reason.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle and write the reason.', { pb: true, before: 0, keepNext: true }),
     H.fig(q4Fig()),
-    H.sub('a', 'Angle ADB = ______  because ________________________________________', { after: 40 }),
-    H.sub('b', 'Angle BAD = ______  because ________________________________________', { after: 40 }),
-    H.sub('c', 'Angle ADC = ______  because ________________________________________', { after: 40 }),
-    H.sub('d', 'Angle ACD = ______  because ________________________________________', { after: 40 }),
-    H.q(5, 'ABCD is a parallelogram. E is a point on DC with DA = DE. Angle ABC = 56°.', { keepNext: true, before: 100 }),
+    H.sub('a', 'Angle ADB = _____  because ______________________', { after: 40 }),
+    H.sub('b', 'Angle BAD = ______  because ______________________', { after: 40 }),
+    H.sub('c', 'Angle ADC = ______  because ______________________', { after: 40 }),
+    H.sub('d', 'Angle ACD = ______  because ______________________', { after: 40 }),
+    H.q(4, 'ABCD is a parallelogram. E is a point on DC with DA = DE. Angle ABC = 56°.', { keepNext: true, before: 60 }),
     H.fig(q5Fig()),
-    H.sub('a', 'Angle ADC = ______   (b)  Angle DEA = ______   (c)  Angle AEC = ______   (d)  Angle EAB = ______', { after: 40 }),
-    H.p('Show how you found angle EAB: ____________________________________________', { after: 40 }),
-    H.q(6, 'An isosceles triangle has one angle of 50°. What could the other two angles be? Find every case.', { keepNext: true, before: 100 }),
-    H.sub('a', 'List both triangles:  ________________________   and   ________________________', { after: 40 }),
+    H.sub('a', 'ADC = _____    (b) DEA = _____    (c) AEC = _____    (d) EAB = _____', { after: 40 }),
+    H.ans('Show how you found angle EAB:', 20),
+    H.q(5, 'An isosceles triangle has one angle of 50°. What could the other two angles be? Find every case.', { keepNext: true, before: 60 }),
+    H.sub('a', 'List both:  _________________  and  _________________', { after: 40 }),
     H.sub('b', 'An isosceles triangle has one angle of 100°. How many different triangles can you make? Explain.', { after: 40 }),
-    ...H.lines(1),
-    H.sub('c', 'Mei says, "A triangle can have two obtuse angles." Is she right? Explain.', { after: 40 }),
     ...H.lines(1)
   ]
 };

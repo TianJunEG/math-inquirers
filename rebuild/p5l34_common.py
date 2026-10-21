@@ -34,8 +34,9 @@ def checks(sid,time,title,rows,notes,top=250,gapy=150,size=34,lw=170):
 def svgwrap(w,h,label,inner,fit=False):
     st=f'width:100%;height:auto;display:block' if fit else f'width:{w}px;height:{h}px;flex:none'
     return f'<svg aria-label="{E(label)}" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" style="{st}">{inner}</svg>'
-def txt(x,y,s,size=40,fill=NAVY,anchor='middle',weight=700,font='Fredoka, Arial'):
-    return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{fill}" font-family="{font}">{E(str(s))}</text>'
+def txt(x,y,s,size=40,fill=NAVY,anchor='middle',weight=700,font='Fredoka, Arial',halo=None):
+    hl=f' stroke="{halo}" stroke-width="9" paint-order="stroke" stroke-linejoin="round"' if halo else ''
+    return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{fill}" font-family="{font}"{hl}>{E(str(s))}</text>'
 def poly(pts,fill=WHITE,sw=4,dash=False):
     d=' stroke-dasharray="12 8"' if dash else ''
     return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x,y in pts)}" fill="{fill}" stroke="{NAVY}" stroke-width="{sw}" stroke-linejoin="round"{d}/>'
@@ -53,7 +54,7 @@ def bars(rows,unit,x0=170,y0=10,bh=64,gap=26,lab_size=34,seg_size=30,label='Bar 
         x=x0
         for n,fill,t in segs:
             for i in range(n): s+=rect(x+i*unit,y,unit,bh,fill,3)
-            if t: s+=txt(x+n*unit/2,y+bh/2+10,t,seg_size,NAVY,'middle',800,'Nunito Sans, Arial')
+            if t: s+=txt(x+n*unit/2,y+bh/2+10,t,seg_size,NAVY,'middle',800,'Nunito Sans, Arial',halo=fill)
             x+=n*unit
         maxx=max(maxx,x); y+=bh+gap
     W=w or int(maxx+30)
@@ -91,7 +92,7 @@ def pbar(x,y,scale,parts,h=64,sw=3,lab=None,labsize=32,seg=30):
         n=n[0] if n else 1; w=v*scale
         s+=rect(cx,y,w,h,fill,sw)
         for i in range(1,n): s+=line((cx+i*w/n,y),(cx+i*w/n,y+h),2)
-        if t: s+=txt(cx+w/2,y+h/2+10,t,seg,NAVY,'middle',800,'Nunito Sans, Arial')
+        if t: s+=txt(cx+w/2,y+h/2+10,t,seg,NAVY,'middle',800,'Nunito Sans, Arial',halo=fill)
         cx+=w
     return s
 def vbrace(x,y1,y2,text,size=30,left=False):

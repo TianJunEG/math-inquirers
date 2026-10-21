@@ -17,7 +17,7 @@ const shopsFig = () => {
   };
   return svg(600, 120, 'Two price tags. Shop A: rice cooker 160 dollars before GST, 20 percent off, 9 percent GST added at the till. Shop B: the same rice cooker for 140 dollars, GST included.',
     tag(4, Y, ['$160 before GST', '20% OFF today!', '9% GST added at the till'], 'Shop A') +
-    tag(312, SKY, ['$140', 'GST already included', 'No sale today'], 'Shop B'));
+    tag(312, SKY, ['$140', 'GST already included', 'No sale today'], 'Shop B'), 0.8);
 };
 
 // Q4: a bar of $120 cut into 10 equal parts, with an empty bar for the remainder
@@ -118,16 +118,13 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p('Percent means "out of 100". To find 10% of an amount, divide it by 10. Then build other percentages from 10%, 5% and 1%.', { after: 60 }),
-    H.q(1, 'Build percentages of $240. Fill in the table.', { before: 40, keepNext: true }),
+    H.q(1, 'Percent means "out of 100". Build percentages of $240 from 10%, 5% and 1%. Fill in the table.', { before: 20, keepNext: true }),
     H.tbl([2100, 1300, 1300, 1300, 1300, 1300, 1300], [
       H.row(['Percentage', '10%', '5%', '1%', '15%', '35%', '99%'].map((s, i) => H.cell(s, i ? 1300 : 2100, { bold: true, fill: 'D9D9D9', h: 40 }))),
-      H.row(['of $240', ' ', ' ', ' ', ' ', ' ', ' '].map((s, i) => H.cell(s, i ? 1300 : 2100, { bold: !i, h: 90 })))
+      H.row(['of $240', ' ', ' ', ' ', ' ', ' ', ' '].map((s, i) => H.cell(s, i ? 1300 : 2100, { bold: !i, h: 50 })))
     ]),
-    H.sub('a', 'Show how you found 35% from the boxes you already had.', { after: 40 }),
-    ...H.lines(1),
-    H.sub('b', 'Show a quick way to find 99% of $240.', { after: 40 }),
-    ...H.lines(1),
+    H.sub('a', 'How did you find 35% from the boxes you already had?  ____________________________', { after: 40 }),
+    H.sub('b', 'A quick way to find 99% of $240:  ____________________________', { after: 40 }),
     H.q(2, 'Mei wants a rice cooker. Two shops sell the same one. GST is 9%.', { keepNext: true }),
     H.fig(shopsFig()),
     H.sub('a', 'Shop A: the price after 20% off, before GST.      ____________'),
@@ -137,7 +134,7 @@ module.exports = {
     H.q(3, 'A T-shirt cost $80. The shop raised its price by 25%. A month later, it cut the new price by 20%.', { keepNext: true }),
     H.sub('a', 'The price after the 25% rise:   ____________          (b)  The price after the 20% cut:   ____________'),
     H.sub('c', 'Siti says, "Up 25% and then down 20% is the same as up 5%, so the final price is $84." Is she right? Explain.', { after: 40 }),
-    ...H.lines(2),
+    ...H.lines(1),
 
     H.q(4, 'Siti had $120. She spent 20% of her money on a bag. Then she spent 25% of the remaining money on a book.', { pb: true, before: 0, keepNext: true }),
     H.fig(barFig()),

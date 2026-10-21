@@ -139,7 +139,41 @@ var L=[
    {lv:"Think Harder",t:"Two numbers add up to 15. The bigger one is 3 more than the smaller one. What is the bigger number?",a:"9",h:"Try pairs that make 15: 10 and 5, 9 and 6, … Which pair is 3 apart?",w:"9 + 6 = 15, and 9 is 3 more than 6. The bigger number is 9."},
    {lv:"Challenge",t:"Exactly 4 coins make 50¢. The coins can be 5¢, 10¢ or 20¢. How many different sets of 4 coins can you find?",a:"2",h:"Make a list in order: try two 20¢ coins, then one 20¢, then none.",w:"Two 20¢: 20 + 20 + 5 + 5. One 20¢: 20 + 10 + 10 + 10. No 20¢: four coins make at most 40¢. So there are 2 sets."}]}
 ];
-var KEY="mi-weekly-dose-online-v1",done={};
+var X={
+1:[{lv:"Core",t:"Fill the gap: 20, 18, 16, __, 12",a:"14",h:"What is taken away each time? Check 20 to 18.",w:"The rule is take away 2. 16 − 2 = 14, and 14 − 2 = 12 checks the next number."},
+ {lv:"Think Harder",t:"A pattern goes 5, 10, 15, 20, … What is the 8th number?",a:"40",h:"Keep counting in 5s and count how many numbers you have said.",w:"5, 10, 15, 20, 25, 30, 35, 40. The 8th number is 40."},
+ {lv:"Challenge",t:"The rule is add 3 and the pattern starts at 4. Which of these is in the pattern?",c:["13","14","15"],a:"13",h:"Write the pattern: 4, 7, …",w:"4, 7, 10, 13, 16. Only 13 is in the pattern."}],
+2:[{lv:"Core",t:"7 + __ = 10",a:"3",h:"How many more to get from 7 up to 10?",w:"7 + 3 = 10, so the missing number is 3."},
+ {lv:"Think Harder",t:"9 + 6 = 10 + __",a:"5",h:"Work out 9 + 6 first.",w:"9 + 6 = 15, and 10 + 5 = 15. So the missing number is 5."},
+ {lv:"Challenge",t:"2, 5 and a mystery number make 12 altogether. What is the mystery number?",a:"5",h:"Add 2 and 5 first.",w:"2 + 5 = 7. 12 − 7 = 5, so the mystery number is 5."}],
+3:[{lv:"Core",t:"Key: 1 picture = 5 children. Pears has 3 pictures. How many children chose pears?",a:"15",h:"Count in 5s for each picture.",w:"5, 10, 15. Three pictures stand for 15 children."},
+ {lv:"Think Harder",t:"Key: 1 picture = 2 children. 12 children chose grapes. How many pictures does grapes need?",a:"6",h:"How many 2s make 12? Count in 2s.",w:"2, 4, 6, 8, 10, 12. That is 6 pictures."},
+ {lv:"Challenge",t:"Key: 1 picture = 2 children. Apples has 5 pictures and oranges has 3. How many children are there altogether?",a:"16",h:"Count all the pictures first.",w:"5 + 3 = 8 pictures. 8 pictures of 2 children: 2, 4, 6, 8, 10, 12, 14, 16. So 16 children."}],
+4:[{lv:"Core",t:"circle, square, circle, square, … What is the 7th shape?",c:["Circle","Square"],a:"Circle",h:"Which shapes come in the odd places: 1st, 3rd, 5th?",w:"Circles are 1st, 3rd, 5th, 7th. The 7th shape is a circle."},
+ {lv:"Think Harder",t:"1 triangle uses 3 sticks, 2 triangles in a row use 5 sticks, 3 triangles use 7 sticks. How many sticks for 4 triangles?",a:"9",h:"How many sticks are added for each new triangle?",w:"Each new triangle adds 2 sticks: 3, 5, 7, 9. So 4 triangles use 9 sticks."},
+ {lv:"Challenge",t:"A, B, C, A, B, C, … How many As are in the first 10 letters?",a:"4",h:"A is the 1st letter of each set of 3. Where does each A land?",w:"A is the 1st, 4th, 7th and 10th letter. That is 4 As."}],
+5:[{lv:"Core",t:"I think of a number and add 4. The answer is 11. What was my number?",a:"7",h:"Do the opposite of adding 4.",w:"11 − 4 = 7. Check: 7 + 4 = 11."},
+ {lv:"Think Harder",t:"I think of a number and double it. Then I add 3. I end with 11. What was my number?",a:"4",h:"Undo the last step first: take away 3.",w:"11 − 3 = 8. Undo the doubling: half of 8 is 4. Check: 4 + 4 = 8, 8 + 3 = 11."},
+ {lv:"Challenge",t:"I think of a number, add 5, then take away 2. I end with 10. What was my number?",a:"7",h:"Work backwards, last step first.",w:"Undo take away 2: 10 + 2 = 12. Undo add 5: 12 − 5 = 7. Check: 7 + 5 = 12, 12 − 2 = 10."}],
+6:[{lv:"Core",t:"You have a 50¢ coin and a 20¢ coin. How many cents do you have altogether?",a:"70",h:"Start with 50 and count on 20.",w:"50 + 20 = 70 cents."},
+ {lv:"Think Harder",t:"A sticker costs 60¢. You pay with a $1 coin, which is 100¢. How many cents change do you get?",a:"40",h:"How many cents from 60 up to 100?",w:"100 − 60 = 40. You get 40¢ change."},
+ {lv:"Challenge",t:"How many different ways can you make 30¢ using only 10¢ and 5¢ coins?",a:"4",h:"Make a list in order: start with three 10¢ coins, then two, then one, then none.",w:"Three 10¢. Two 10¢ and two 5¢. One 10¢ and four 5¢. No 10¢ and six 5¢. That is 4 ways."}],
+7:[{lv:"Core",t:"How many corners does a triangle have?",a:"3",h:"Draw a triangle and count where two sides meet.",w:"A triangle has 3 sides and 3 corners."},
+ {lv:"Think Harder",t:"A shape has 4 sides that are all the same length and 4 square corners. What is it?",c:["Square","Triangle","Circle"],a:"Square",h:"Which shape has 4 equal sides?",w:"A shape with 4 equal sides and 4 square corners is a square."},
+ {lv:"Challenge",t:"How many sides do 2 squares and 1 triangle have altogether?",a:"11",h:"A square has 4 sides and a triangle has 3.",w:"4 + 4 + 3 = 11 sides."}],
+8:[{lv:"Core",t:"Sam's cap is red, blue or green. It is not red and not blue. What colour is it?",c:["Red","Blue","Green"],a:"Green",h:"Cross out the colours it cannot be.",w:"It is not red and not blue, so it must be green."},
+ {lv:"Think Harder",t:"Ann is taller than Ben. Ben is taller than Cal. Who is the shortest?",c:["Ann","Ben","Cal"],a:"Cal",h:"Draw three lines of different heights to match the clues.",w:"Ann is tallest, then Ben, then Cal. Cal is the shortest."},
+ {lv:"Challenge",t:"Ali, Bo and Cy stand in a line. Cy is first. Bo is not last. Who is in the middle?",c:["Ali","Bo"],a:"Bo",h:"Cy takes the first place. Who can be last?",w:"Cy is first. Bo is not last, so Ali is last. That leaves Bo in the middle."}],
+9:[{lv:"Core",t:"A pencil is 8 cubes long. A crayon is 5 cubes long. How many cubes longer is the pencil?",a:"3",h:"Line them up and find the difference.",w:"8 − 5 = 3. The pencil is 3 cubes longer."},
+ {lv:"Think Harder",t:"Two ribbons are each 6 clips long. They are laid end to end. How many clips long are they altogether?",a:"12",h:"Add the two lengths.",w:"6 + 6 = 12 clips."},
+ {lv:"Challenge",t:"A red stick is 9 cubes long. The blue stick is 4 cubes shorter than red. The green stick is 2 cubes longer than blue. How long is the green stick?",a:"7",h:"Find the blue stick first.",w:"Blue: 9 − 4 = 5. Green: 5 + 2 = 7 cubes."}],
+10:[{lv:"Core",t:"What comes next? 2, 4, 6, 8, __",a:"10",h:"What is added each time?",w:"The rule is add 2. 8 + 2 = 10."},
+ {lv:"Think Harder",t:"Mia has 15 stickers. She gives 6 to a friend and then gets 3 more. How many stickers does she have now?",a:"12",h:"Do it one step at a time.",w:"15 − 6 = 9, and 9 + 3 = 12 stickers."},
+ {lv:"Challenge",t:"A box has 12 balls. 3 are red and 4 are blue. The rest are green. How many are green?",a:"5",h:"Add the red and blue first.",w:"3 + 4 = 7 are red or blue. 12 − 7 = 5 are green."}]
+};
+var ORD={"Core":0,"Think Harder":1,"Challenge":2};
+L.forEach(function(l){l.q=l.q.concat(X[l.n]).map(function(q,i){return{q:q,i:i}}).sort(function(a,b){return ORD[a.q.lv]-ORD[b.q.lv]||a.i-b.i}).map(function(o){return o.q})});
+var KEY="mi-weekly-dose-online-v2",done={};
 try{done=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){done={}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -149,7 +183,7 @@ function weeksNav(){
   document.getElementById("weeks").innerHTML=[1,2,3,4,5].map(function(w){
     var ls=L.filter(function(l){return Math.ceil(l.n/2)===w}),got=0;
     ls.forEach(function(l){l.q.forEach(function(_,i){if(done[l.n+"-"+i])got++})});
-    return '<button class="wk" role="tab" type="button" id="tab-w'+w+'" aria-selected="'+(w===week)+'" data-w="'+w+'">Week '+w+' <small>'+got+' of 6</small></button>';
+    return '<button class="wk" role="tab" type="button" id="tab-w'+w+'" aria-selected="'+(w===week)+'" data-w="'+w+'">Week '+w+' <small>'+got+' of 12</small></button>';
   }).join("");
 }
 function lessonHtml(l){
@@ -161,7 +195,7 @@ function lessonHtml(l){
       :'<label class="row"><span class="sr" style="position:absolute;left:-9999px">Answer</span><input class="ans" id="a-'+id+'" inputmode="numeric" autocomplete="off" placeholder="Answer"></label>';
     h+='<div class="q'+(ok?' done':'')+'" id="q-'+id+'"><span class="n">'+(i+1)+'</span><div><p class="qt">'+esc(q.t)+'</p><div class="row">'+input+'<button class="btn" type="button" data-check="'+id+'">Check</button><button class="btn ghost" type="button" data-hint="'+id+'">Hint</button></div><div id="f-'+id+'">'+(ok?'<div class="msg ok">Solved. Ask: how do you know?</div><div class="note"><b>Why: </b>'+esc(q.w)+'</div>':'')+'</div></div></div>';
   });
-  return '<section class="lesson" aria-labelledby="h-'+l.n+'"><div class="hd"><div class="big">'+(l.n<10?"0":"")+l.n+'</div><div><div class="tp">Lesson '+l.n+'  •  '+esc(l.topic)+'</div><h2 id="h-'+l.n+'">'+esc(l.title)+'</h2></div><div class="score">'+got+' of 3 solved</div></div>'+
+  return '<section class="lesson" aria-labelledby="h-'+l.n+'"><div class="hd"><div class="big">'+(l.n<10?"0":"")+l.n+'</div><div><div class="tp">Lesson '+l.n+'  •  '+esc(l.topic)+'</div><h2 id="h-'+l.n+'">'+esc(l.title)+'</h2></div><div class="score">'+got+' of '+l.q.length+' solved</div></div>'+
    '<div class="cols"><div>'+h+'</div><aside class="side"><h3>Ask</h3><p>'+esc(l.ask)+'</p><h3>Tip for you</h3><p>'+esc(l.tip)+'</p><h3>In class</h3><p>These puzzles practise the same ideas as Lesson '+l.n+', with new numbers.</p></aside></div></section>';
 }
 function render(){
@@ -187,7 +221,7 @@ document.addEventListener("click",function(e){
     document.getElementById("q-"+id).classList.add("done");
     var sc=document.getElementById("q-"+id).closest(".lesson").querySelector(".score");
     var n=+id.split("-")[0],l=L.filter(function(x){return x.n===n})[0];
-    sc.textContent=l.q.filter(function(_,i){return done[n+"-"+i]}).length+" of 3 solved";weeksNav();
+    sc.textContent=l.q.filter(function(_,i){return done[n+"-"+i]}).length+" of "+l.q.length+" solved";weeksNav();
   }else{
     tries[id]=(tries[id]||0)+1;
     f.innerHTML='<div class="msg no">Not yet. '+(tries[id]>=2?'Here is the thinking:':'Try the hint, then check again.')+'</div>'+(tries[id]>=2?'<div class="note"><b>Why: </b>'+esc(q.w)+'</div>':'');
