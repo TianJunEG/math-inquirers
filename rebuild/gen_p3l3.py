@@ -122,7 +122,7 @@ body+=trow(128,345,['Answer']+[str(8*i) for i in range(1,11)],W,None,False,34)
 body+=trow(128,440,['Last digit']+[str(8*i%10) for i in range(1,11)],W,'rise',False,34)
 body+=pin(128,560,1664,p('Notice it: the last digits go 8, 6, 4, 2, 0 and then repeat.',38,700),'fade',SOFT,20,'20px 30px')
 body+=pin(128,670,1664,p('Test it: 8 × 11 = 88 and 8 × 12 = 96. Do they carry on the pattern? (8, 6: yes!)',38,700),'fade',WHITE,20,'20px 30px')
-body+=pin(128,780,1664,p('Explain why: each answer is 8 more. Adding 8 to the ones digit is like taking away 2 and adding 10.',36,700),'fade',WHITE,20,'20px 30px')
+body+=pin(128,780,1664,p('Explain why: adding 8 is the same as adding 10 and taking away 2, so the ones digit goes down by 2.',36,700),'fade',WHITE,20,'20px 30px')
 put('p3l3-teach1',sec('p3l3-teach1','25–27 MIN',body,
  'Teach the first heuristic: LOOK FOR A PATTERN. Say: "Mathematicians notice a pattern, test it, then explain why it works. That is our slogan!" Click 1 shows the last digits. Ask: "What do you notice?" before click 2. Click 3: test the pattern on numbers beyond the table. Click 4: explain why: 8 = 10 − 2, so every time we add 8 the ones digit goes down by 2 (and the tens digit goes up). '
  'Think-aloud: "Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then again. So the pattern repeats every 5." Do not teach the 9s patterns here: children discover them in worksheet Q1.'))

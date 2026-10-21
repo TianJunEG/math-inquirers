@@ -167,9 +167,9 @@ module.exports = {
     const L = t => '<b style="color:#1F7A6F">' + t + '</b> ';
     const blank = w => '<span style="display:inline-block;width:' + w + 'px;border-bottom:2px dotted #8A94AD"></span>';
     const dw = [1500, 1400, 1400, 1400, 1400, 1400, 1400];
-    const diff = H.tbl(dw, [H.row(['Difference', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, dw[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
-      ...[1, 2, 3, 4, 5, 6].map(r => H.row([H.cell(String(r), dw[0], { bold: true, fill: 'D9D9D9', h: 40 }), ...[1, 2, 3, 4, 5, 6].map(c => H.cell(r === 1 || r === c ? String(Math.abs(r - c)) : '', dw[c], { h: 40 }))]))]);
-    const py = pyBox(['import random', 'a_wins = 0', 'b_wins = 0', 'for game in range(1000):', '    d1 = random.randint(1, 6)', '    d2 = random.randint(1, 6)', '    if 5 <= d1 + d2 <= 9:', '        b_wins = b_wins + 1', '    else:', '        a_wins = a_wins + 1', 'print(a_wins, b_wins)'], 'Python corner (optional): the Explore|game, 1000 times. Change it for Q4.', 320);
+    const diff = H.tbl(dw, [H.row(['Difference', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, dw[i], { bold: true, fill: 'D9D9D9', h: 34 }))),
+      ...[1, 2, 3, 4, 5, 6].map(r => H.row([H.cell(String(r), dw[0], { bold: true, fill: 'D9D9D9', h: 34 }), ...[1, 2, 3, 4, 5, 6].map(c => H.cell(r === 1 || r === c ? String(Math.abs(r - c)) : '', dw[c], { h: 34 }))]))]);
+    const py = pyBox(['import random', 'a_wins = 0', 'b_wins = 0', 'for game in range(1000):', '    d1 = random.randint(1, 6)', '    d2 = random.randint(1, 6)', '    if 5 <= d1 + d2 <= 9:', '        b_wins = b_wins + 1', '    else:', '        a_wins = a_wins + 1', 'print(a_wins, b_wins)'], 'Python corner (optional): the Explore|game. Change it to test Q4.', 320);
     return [
       H.q(1, 'Ben’s spinner has 8 equal parts: 3 red (R), 2 blue (B), 2 yellow (Y) and 1 green (G). Write each probability as a fraction in its simplest form.', { before: 20, keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + spinner() + '</div>', 3000, { h: 20 }), H.cell(tx(L('(a)') + 'P(red) = ' + blank(70) + '      ' + L('(b)') + 'P(not yellow) = ' + blank(70) + '<br>' + L('(c)') + 'Ben makes the spinner in code and spins it 1000 times. About how many reds do you expect? ' + blank(70) + '<br>' + L('(d)') + 'His program says 362 reds. Ben says, “My program is wrong!” Do you agree? Explain.<br>' + blank(430) + '<br>' + blank(430)), 6900, { h: 30 })])]),
@@ -181,15 +181,13 @@ module.exports = {
       H.sub('c', 'Start again with 4 red and 6 blue. How many blue counters must be added so that P(red) = 1/5?   ________'),
 
       H.q(4, 'The Difference Game. Roll two dice. The difference is the bigger number minus the smaller (0 if they are the same). Ali wins on 0, 1 or 2. Ben wins on 3, 4 or 5.', { pb: true, before: 0, keepNext: true }),
-      H.tbl([5300, 4600], [H.row([H.cell('<div>' + diff + '</div>', 5300, { h: 20 }), H.cell(tx(L('(a)') + 'Complete the table of differences.<br>' + L('(b)') + 'P(Ali wins) = ' + blank(60) + '<br>P(Ben wins) = ' + blank(60) + '<br>' + L('(c)') + 'Is the game fair? Explain.<br>' + blank(300) + '<br>' + L('(d)') + 'Change who wins on which differences so the game is fair.<br>' + blank(300)), 4600, { h: 30 })])]),
-      H.q(5, 'True or false? Circle T or F, then say why.', { keepNext: true }),
-      H.sub('a', 'After 4 tails in a row, heads is more likely next.   T / F   Why? ' + '_'.repeat(22)),
-      H.sub('b', 'With two dice, a total of 12 is as likely as 7.   T / F   Why? ' + '_'.repeat(25)),
-      H.sub('c', 'Roll a dice 60 times: you get exactly ten 6s.   T / F   Why? ' + '_'.repeat(25)),
-      H.q(6, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
-      H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 13) + '</div>', 5000, { h: 30 }), H.cell('<div>' + py + '</div>', 4900, { h: 30 })])]),
-      H.sub('a', 'About what number will it say? Show your fraction.   ______________'),
-      H.sub('b', 'Why will it not say exactly 1000 × 1/6?', { keepNext: true }), ...H.lines(1)
+      H.tbl([5200, 4700], [H.row([H.cell('<div>' + diff + '</div>', 5200, { h: 20 }), H.cell('<div>' + py + '</div>', 4700, { h: 20 })])]),
+      H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
+      H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
+      H.sub('d', 'Change who wins on which differences so that the game is fair.', { keepNext: true }), ...H.lines(1),
+      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
+      H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
+        H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])
     ];
   }
 };

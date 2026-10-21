@@ -26,7 +26,7 @@ const wall = () => {
     for (let i = 0; i < d; i++) {
       s += `<rect x="${r1(x0 + i * w)}" y="${y}" width="${r1(w)}" height="${h}" fill="${fill}" stroke="${NAVY}" stroke-width="2"/>`;
       if (d === 1) s += `<text x="${x0 + W / 2}" y="${y + 30}" font-size="20" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="${FF}">1 whole</text>`;
-      else s += sfr(x0 + i * w + w / 2, y + 22, 1, d, 15);
+      else s += sfr(x0 + i * w + w / 2, y + 22, 1, d, 17);
     }
   });
   return s + '</svg>';

@@ -32,7 +32,7 @@ const q1Fig = () => {
     b += ln(vx, vy, vx + p1[0], vy + p1[1]) + ln(vx, vy, vx + p2[0], vy + p2[1]) + dot(vx, vy, 4);
     b += txt(cx, 148, l, { size: 22 });
   });
-  return svg(600, 158, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 560);
+  return svg(600, 158, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 500);
 };
 // Q2: four shapes (unit u, y up inside each shape)
 const shapeAt = (pts, x0, y0, u, H) => pts.map(([a, b]) => [x0 + a * u, y0 + (H - b) * u]);
@@ -44,14 +44,14 @@ const q2Fig = () => {
   const trap = [[0, 0], [5, 0], [3, 3], [0, 3]];
   let b = poly(shapeAt(plus, 40, 54, u, 3)) + poly(shapeAt(stair, 175, 54, u, 3)) + poly(shapeAt(house, 300, 0, u, 5)) + poly(shapeAt(trap, 440, 54, u, 3));
   [['A', 82], ['B', 217], ['C', 356], ['D', 510]].forEach(([l, x]) => { b += txt(x, 172, l, { size: 22 }); });
-  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 450);
+  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 400);
 };
 // Q3: 6 lines from one point, spread out like a fan (5 gaps of 30 degrees)
 const q3Fig = () => {
-  const ox = 300, oy = 196, L = 170; let b = '';
+  const ox = 190, oy = 196, L = 170; let b = '';
   [15, 45, 75, 105, 135, 165].forEach(d => { b += ln(ox, oy, ox + L * Math.cos(rad(d)), oy - L * Math.sin(rad(d)), { sw: 4 }); });
   b += dot(ox, oy, 6) + txt(ox, oy + 26, 'O', { size: 22 });
-  return svg(600, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 270);
+  return svg(380, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 215);
 };
 // Q4: letters made of straight lines
 const q4Fig = () => {
@@ -75,7 +75,7 @@ const q5Fig = () => {
   b += seg([1, 6], [5, 2]) + seg([9, 6], [13, 4]);
   const lab = (a, bb, s, dx, dy) => dot(...P(a, bb), 5.5) + txt(P(a, bb)[0] + dx, P(a, bb)[1] + dy, s, { size: 20 });
   b += lab(1, 6, 'A', -14, 20) + lab(5, 2, 'B', 14, -6) + lab(3, 4, 'D', -16, -6) + lab(7, 5, 'C', 14, 20) + lab(9, 6, 'E', -14, 20) + lab(13, 4, 'F', 16, -6) + lab(11, 5, 'G', -4, 24);
-  return svg(560, 280, b, 'A square grid. Line AB goes 1 square right and 1 square up at each step, and D is on AB. Point C is not on AB. Line EF goes 2 squares right and 1 square up at each step, and G is on EF.', 450);
+  return svg(560, 280, b, 'A square grid. Line AB goes 1 square right and 1 square up at each step, and D is on AB. Point C is not on AB. Line EF goes 2 squares right and 1 square up at each step, and G is on EF.', 400);
 };
 // Q6: a window: rectangle with one line across and one line down through the middle
 const q6Fig = () => svg(240, 160, `<rect x="20" y="15" width="200" height="130" fill="${S}" stroke="${N}" stroke-width="4"/>` + ln(120, 15, 120, 145) + ln(20, 80, 220, 80), 'A rectangle with one line from the middle of the top to the middle of the bottom and one line from the middle of the left side to the middle of the right side', 220);
@@ -171,7 +171,7 @@ module.exports = {
     return [
       H.q(1, 'Fold a right-angle checker. Use it to sort the angles a to f.', { before: 20, keepNext: true }),
       H.fig(q1Fig()),
-      H.sub('', 'Smaller than a right angle: ________    Right angle: ________    Bigger: ________'),
+      H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
       H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker.', { keepNext: true }),
       H.fig(q2Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
@@ -179,21 +179,21 @@ module.exports = {
         H.row([H.cell('Right angles inside', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell(' ', w, { h: 40 }))])
       ]),
       H.q(3, 'These 6 lines all start at point O.', { keepNext: true }),
-      side(q3Fig(), H.sub('a', 'How many angles can you find? Count the small angles first, then the angles made of 2 small ones, and so on.') + H.sub('', 'Made of 1 small angle: ____     2: ____     3: ____     4: ____     5: ____') + H.sub('', 'Total: ________')),
+      side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
       H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
 
-      H.q(4, 'Look at the lines in these letters.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Look at the lines in these letters. Write Yes or No in the table.', { pb: true, before: 0, keepNext: true }),
       H.fig(q4Fig()),
       H.tbl(W6, [
         H.row(['Letter', 'E', 'H', 'T', 'L', 'Z', 'N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),
-        H.row([H.cell('Parallel lines? (Yes/No)', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))]),
-        H.row([H.cell('Perpendicular lines? (Yes/No)', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))])
+        H.row([H.cell('Parallel lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))]),
+        H.row([H.cell('Perpendicular lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))])
       ]),
-      H.sub('b', 'In the letter E, how many pairs of parallel lines are there?  ____   Pairs of perpendicular lines?  ____'),
+      H.sub('b', 'In the letter E: pairs of parallel lines ____    pairs of perpendicular lines ____'),
       H.q(5, 'Use a ruler. Draw on the grid.', { keepNext: true }),
       H.fig(q5Fig()),
-      H.sub('a', 'Draw a line through C that is parallel to AB.        (b)  Draw a line through D that is perpendicular to AB.'),
-      H.sub('c', 'Draw a line through G that is perpendicular to EF. Check it with your checker.'),
+      H.sub('a', 'Through C, draw a line parallel to AB.     (b)  Through D, draw a line perpendicular to AB.'),
+      H.sub('c', 'Through G, draw a line perpendicular to EF. Check it with your checker.'),
       H.q(6, 'How many right angles can you find in this window?', { keepNext: true }),
       side(q6Fig(), H.sub('', 'Visit every point where lines meet. Write how many right angles are at each point, then add.') + H.sub('', 'Right angles altogether:  ________'))
     ];

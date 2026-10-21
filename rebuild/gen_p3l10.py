@@ -38,7 +38,7 @@ def person(x,y,fill,label='',lab_fill=NAVY):
             +(T(x,y+122,label,26,lab_fill) if label else ''))
 def queue(n,special,w=1664,h=230,gap=None,show=None,aria='A queue of people',ends=True):
     """special: {index: (fill,label)}; show: indexes to draw (default all)"""
-    gap=gap or min(150,(w-260)/max(n-1,1)); x0=150; b=''
+    gap=gap or min(150,(w-280)/max(n-1,1)); x0=180; b=''
     if ends: b+=T(40,90,'FRONT',26,TEAL,'start')+f'<polygon points="40,104 20,116 40,128" fill="{TEAL}"/><line x1="40" y1="116" x2="110" y2="116" stroke="{TEAL}" stroke-width="5"/>'
     for i in range(n):
         if show is not None and i not in show: continue
@@ -83,7 +83,7 @@ put('p3l10-title',title_slide('p3l10-title',10,5,'Challenge Day','Mixed puzzles:
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (how to start a puzzle: draw it, make a table, read the scale; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket and certificates 80 to 90.'))
 
 # ---------- 2. warm-up: relay chain ----------
-chain=[('Start','6 × 9','54'),('Then','add 46','100'),('Then','multiply by 7','700'),('Then','take away 250','450'),('Then','divide by 5','90'),('Last','that many minutes in hours and minutes','1 h 30 min')]
+chain=[('Start','6 × 9','54'),('Then','add 46','100'),('Then','multiply by 7','700'),('Then','take away 250','450'),('Then','divide by 5','90'),('Last','change to h and min','1 h 30 min')]
 body=h2('Warm-up: Relay chain')+p('Each answer is passed on. It is the start of the next question.',36,600,MUTED)
 CWd=530
 for i,(k_,t,a) in enumerate(chain):
@@ -105,7 +105,7 @@ for i,t in enumerate(tiles):
     x=10+i*405
     g+=f'<rect x="{x}" y="10" width="380" height="230" rx="18" fill="#FFF4D1" stroke="{NAVY}" stroke-width="4"/>'+T(x+190,226,t,32)
 g+=''.join(f'<rect x="{60+j*70}" y="{180-h}" width="46" height="{h}" fill="{c}" stroke="{NAVY}" stroke-width="3"/>' for j,(h,c) in enumerate([(120,YEL),(70,SKY),(150,TEAL),(95,RED)]))+f'<line x1="45" y1="180" x2="345" y2="180" stroke="{NAVY}" stroke-width="4"/>'
-g+=''.join(f'<rect x="{485+c*80}" y="{40+r*45}" width="80" height="45" fill="{YEL if r==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/>' for r in range(4) for c in range(4))
+g+=''.join(f'<rect x="{445+c*80}" y="{30+r*40}" width="80" height="40" fill="{YEL if r==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/>' for r in range(4) for c in range(4))
 g+=''.join(f'<rect x="{870+j*90}" y="60" width="70" height="90" rx="10" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(905+j*90,122,d,48) for j,d in enumerate('369'))
 g+=f'<path d="M1255 70 Q1330 30 1400 90 T1540 80" fill="none" stroke="{RED}" stroke-width="7" stroke-linecap="round"/><rect x="1250" y="130" width="310" height="44" rx="6" fill="#FFE9A8" stroke="{NAVY}" stroke-width="3"/>'+''.join(f'<line x1="{1262+j*26}" y1="130" x2="{1262+j*26}" y2="{150 if j%2 else 142}" stroke="{NAVY}" stroke-width="3"/>' for j,_ in enumerate(range(12)))
 pic=svg(1630,250,g,'Four puzzle stations: a bar graph, a logic grid, digit cards 3, 6 and 9, and a string with a ruler')
@@ -132,7 +132,6 @@ base=queue(9,sp,show={3},aria='A queue with Siti')
 front=queue(9,{0:(SKY,'1'),1:(SKY,'2'),2:(SKY,'3')},show={0,1,2},ends=False,aria='3 people in front of Siti')
 back=queue(9,{4:(GREEN,''),5:(GREEN,''),6:(GREEN,''),7:(GREEN,''),8:(GREEN,'')},show={4,5,6,7,8},ends=False,aria='5 people behind Siti')
 gap=min(150,(1664-260)/8)
-arcs=(f'<path d="M150 10 L150 0 L{150+3*gap} 0 L{150+3*gap} 10" fill="none" stroke="{TEAL}" stroke-width="0"/>')
 body=h2('Draw it: a queue')+card(p('Siti is 4th from the front and 6th from the back of a queue. How many people are in the queue?',38,700))
 body+=pin(128,380,1664,base)+pin(128,380,1664,front,'fade')+pin(128,380,1664,back,'fade')
 body+=step(1,'4th from the front: 3 people in front of Siti.',top=620,size=34)
@@ -191,7 +190,6 @@ for i,t in enumerate(['Even: the ones digit is 0, 2, 4 or 6.','70 ✓   52 ✓  
 put('p3l10-teachlist',sec('p3l10-teachlist','54–56 MIN',body,
  'Teach before worksheet page 2 (Q4 and Q6). Left: "I list them in order. Start with 3 in the hundreds place: 369, 396. Then 6: 639, 693. Then 9: 936, 963. Two for each first digit, so 6. Even numbers end in an even digit: only 6 is even, so 396 and 936." '
  'Right: "For a find-ALL riddle, I list every case for one clue, then cross out the ones that break another clue." The worksheet uses different digits and an odd-number riddle: do not do them here.'))
-tables=f'<g>'+''.join(f'<rect x="{40+i*120}" y="60" width="110" height="110" rx="10" fill="{WOOD if False else "#F3D9B1"}" stroke="{NAVY}" stroke-width="4"/>' for i in range(1)) if False else ''
 def tbl_row(n,x0=20,y0=70,s=90):
     b=''
     for i in range(n): b+=f'<rect x="{x0+i*s}" y="{y0}" width="{s}" height="{s}" fill="#F3D9B1" stroke="{NAVY}" stroke-width="4"/>'
@@ -215,9 +213,8 @@ body=h2('Draw it: people in between')+card(p('Mei is 2nd from the front. Ben is 
 body+=pin(128,370,1664,q2)+pin(128,370,1664,q2b,'fade')
 body+=step(1,'In front of Mei: 1 person. Then Mei, then 3 people, then Ben.',top=620,size=34)
 body+=answer(128,730,1664,'1 + 1 + 3 + 1 = 6 people.  Count your drawing to check.')
-body=body.replace('Mei is 2nd from the front. Ben is last. There are 3 people between them.','Mei is 2nd from the front. Ben is last. There are 3 people between them.')
 put('p3l10-teachbetween',sec('p3l10-teachbetween','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q3). Hmm-moment: "Is it 2 + 3 = 5?" No: that forgets Ben. Click the drawing, the step and the answer. Think-aloud: "I draw Mei 2nd, so 1 person in front. Then the 3 between, then Ben. Count every person: 6." The worksheet Q3b has different names; let children draw it themselves.'))
+ 'Teach before worksheet page 2 (Q3). Ask first: "Is it 2 + 3 = 5?" No: that forgets Ben. Click the drawing, the step and the answer. Think-aloud: "I draw Mei 2nd, so 1 person in front. Then the 3 between, then Ben. Count every person: 6." The worksheet Q3b has different names; let children draw it themselves.'))
 put('p3l10-ws2',ws_preview('p3l10-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Queues. Draw the people.'),('Q4','Digit cards 2, 5, 8. List them in order.'),('Q5','Matchstick squares. Make a table.'),('Q6','A number riddle. Find ALL the answers.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6: check that children list every case (ones digit 1, 3 or 5) and cross out, not stop at the first answer.'))
 put('p3l10-ws2ans',check_slide('p3l10-ws2ans','67–70 MIN','Page 2: check together',[('Q3','a) 7 people   b) 6 people'),('Q4','258, 285, 528, 582, 825, 852.   Odd: 2.   Closest to 600: 582'),('Q5','13, 16, 19.   8 squares: 25 sticks.   31 sticks: 10 squares'),('Q6','411, 321, 213')],
  'Click after a child explains. Q3a: 2 in front, Ben, 4 behind: 7 (3 + 5 − 1). Q3b: 1 in front of Ali, Ali, 3 between, Siti: 6. Q4: odd ones end in 5: 285 and 825. 582 is 18 from 600; 528 is 72 away. '
@@ -231,13 +228,8 @@ ch=[('1.','In a queue, Siti is 6th from the front and Ravi is 4th from the back.
 put('p3l10-challenge',sec('p3l10-challenge','Challenge',h2('Challenge')+''.join(num_card(a,b,34) for a,b in ch),
  'Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) 13 children (5 in front of Siti, Siti, 3 between, Ravi, 3 behind Ravi: 5 + 1 + 3 + 1 + 3 = 13). 2) 3P1 40 kg, 3P2 30 kg, 3P3 40 kg, 3P4 25 kg (compare everything with 3P2: the extras are +10, +10 and −5, so 135 − 15 = 120 kg is 4 equal parts of 30 kg).'))
 # see it
-qg=''
-xs=lambda i: 40+i*58
-for i in range(13):
-    f=YEL if i==5 else (GREEN if i==9 else WHITE)
-    if i in (5,9): qg+=f'<circle cx="{xs(i)}" cy="60" r="20" fill="{f}" stroke="{NAVY}" stroke-width="4"/><rect x="{xs(i)-22}" y="84" width="44" height="54" rx="16" fill="{f}" stroke="{NAVY}" stroke-width="4"/>'
-qg=(T(40,30,'FRONT',26,TEAL,'start')+person(80,70,YEL,'Siti')+person(560,70,GREEN,'Ravi')+
-    T(80,250,'6th from front',26,TEAL)+T(560,250,'4th from back',26,TEAL)+
+qg=(T(40,30,'FRONT',26,TEAL,'start')+person(110,70,YEL,'Siti')+person(560,70,GREEN,'Ravi')+
+    T(20,250,'6th from front',26,TEAL,'start')+T(560,250,'4th from back',26,TEAL)+
     ''.join(f'<rect x="{230+j*80}" y="96" width="50" height="62" rx="14" fill="{PINK}" stroke="{NAVY}" stroke-width="3"/>' for j in range(3))+T(320,62,'3 between',26,RED)+
     f'<rect x="40" y="300" width="720" height="150" rx="14" fill="{SOFT}" stroke="{NAVY}" stroke-width="3"/>'+T(400,360,'How many are in front of Siti?',28)+T(400,410,'How many are behind Ravi?',28))
 d1=svg(800,480,qg,'Queue: Siti 6th from the front, 3 children between, Ravi 4th from the back')
@@ -246,7 +238,7 @@ for i,(n,lab,extra) in enumerate([('3P1','3P2 + 10',1),('3P2','?',0),('3P3','sam
     y=30+i*95
     bb+=T(10,y+52,n,30,anchor='start')+f'<rect x="110" y="{y}" width="300" height="64" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>'
     if extra==1: bb+=f'<rect x="410" y="{y}" width="100" height="64" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(460,y+43,'10',28)
-    if extra==-1: bb+=f'<rect x="360" y="{y}" width="50" height="64" fill="{WHITE}" stroke="{RED}" stroke-width="4" stroke-dasharray="8 6"/>'+T(385,y+100,'5',26,RED)
+    if extra==-1: bb+=f'<rect x="360" y="{y}" width="50" height="64" fill="{WHITE}" stroke="{RED}" stroke-width="4" stroke-dasharray="8 6"/>'+T(385,y+43,'5',26,RED)
     bb+=T(640,y+43,lab,26,MUTED)
 bb+=f'<rect x="40" y="420" width="720" height="70" rx="14" fill="{SOFT}" stroke="{NAVY}" stroke-width="3"/>'+T(400,466,'All four bars together: 135 kg',30)
 d2=svg(800,500,bb,'Four bars: 3P1 is 3P2 plus 10, 3P2 unknown, 3P3 same as 3P1, 3P4 is 3P2 minus 5, total 135 kg')

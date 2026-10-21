@@ -8,7 +8,7 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 // ---------- code blocks: our own simple coloured shapes (never Scratch artwork) ----------
 // prog: [kind, text] or [kind, text, [children]] for a C-shaped block; {…} marks a white slot.
 const BC = { event: [YEL, NAVY], ctrl: [WHITE, NAVY], motion: [SKY, NAVY], pen: [TEAL, WHITE], var: [RED, WHITE], looks: [YEL, NAVY] };
-const cwid = (s, fs) => [...s].reduce((a, c) => a + fs * (/[iltfjr .,:()'|]/.test(c) ? 0.32 : /[A-Zmw%×]/.test(c) ? 0.76 : 0.58), 0);
+const cwid = (s, fs) => [...s].reduce((a, c) => a + fs * (/[iltfjr .,:()'|]/.test(c) ? 0.36 : /[A-Zmw%×]/.test(c) ? 0.78 : 0.62), 0);
 const segs = t => t.split(/(\{[^}]*\})/).filter(s => s.trim()).map(s => s[0] === '{' ? { t: s.slice(1, -1), slot: true } : { t: s.trim(), slot: false });
 function blocks(prog, o = {}) {
   const fs = o.fs || 15, h = o.h || 30, pad = 9, arm = 16, gap = 6, sp = 8;

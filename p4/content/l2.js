@@ -143,7 +143,7 @@ module.exports = {
     W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My tens digit is double my ones digit. All my digits are different.'));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.'));
-    W.push(...H.lines(1));
+    W.push(...H.lines(2));
     W.push(H.ans('How many numbers?'));
     W.push(H.q(5, 'Find the rule. Write the next numbers.', { keepNext: true }));
     W.push(H.sub('a', '23 450,   24 450,   25 450,   ________,   ________'));

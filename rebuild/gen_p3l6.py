@@ -101,7 +101,7 @@ def hexa(sh):
     pts=[(cx+R*math.cos(math.radians(60*i)),cy+R*math.sin(math.radians(60*i))) for i in range(6)]
     for i in range(6):
         a,c=pts[i],pts[(i+1)%6]
-        b+=f'<polygon points="{cx},{cy} {a[0]:.2f},{a[1]:.2f} {c[0]:.2f},{c[1]:.2f}" fill="{SKY if i<sh else WHITE}" stroke="{NAVY}" stroke-width="4"/>'
+        b+=f'<polygon points="{cx},{cy} {a[0]:.2f},{a[1]:.2f} {c[0]:.2f},{c[1]:.2f}" fill="{YEL if i<sh else WHITE}" stroke="{NAVY}" stroke-width="4"/>'
     return svgwrap('Regular hexagon cut into 6 equal triangles, 5 shaded',240,240,b)
 def bar10():
     return svgwrap('Bar cut into 10 equal parts, 7 shaded',240,240,bar(5,90,230,70,10,[RED]*7,3,False))
@@ -199,12 +199,13 @@ put('p3l6-ws1ans',check_raw('p3l6-ws1ans','52–54 MIN','Page 1: check together'
  'Click after a pair explains. Q1(d): 1/2 = 2/4 = 3/6 = 4/8 = 6/12; the bottom number is always double the top (top and bottom multiplied by the same number). Q2: (d) 3/4 = 6/8; (e) same top number, sevenths are bigger than ninths; (f) 2/3 = 8/12 and 3/4 = 9/12. (g) In twelfths: 4/12, 5/12, 6/12, 9/12.',165,34))
 
 # ---------- 15. teach before page 2: adding ----------
-bsv=svgwrap('A bottle shown as a bar cut into 6 equal parts: 2 parts teal, 1 part yellow',1664,110,bar(4,8,1656,92,6,[TEAL,TEAL,YEL],4,False)+sfr(4+1656/6,62,1,3,30,WHITE)+sfr(4+1656/6*2.5,62,1,6,30))
+pw6=1656/6
+bsv=svgwrap('A bottle shown as a bar cut into 6 equal parts: 2 parts teal, 1 part yellow',1664,170,bar(4,86,1656,80,6,[TEAL,TEAL,YEL],4,False)+f'<path d="M8 80 L8 70 L{4+2*pw6-4:.1f} 70 L{4+2*pw6-4:.1f} 80" fill="none" stroke="{TEAL}" stroke-width="4"/>'+sfr(4+pw6,30,1,3,26,TEAL)+sfr(4+pw6*2.5,30,1,6,26,NAVY))
 body=h2('Add fractions: draw a bar')+card(rp('Ali drinks '+F(1,3)+' of a bottle of water, then '+F(1,6)+' of the bottle more. How much has he drunk?',36,700))
-body+=pin(128,420,1664,bsv,'rise')
-body+=step(1,'Make the parts the same size:  '+F(1,3)+' = '+F(2,6),top=560,size=32)
-body+=step(2,F(2,6)+' + '+F(1,6)+' = '+F(3,6)+' = '+F(1,2)+'.  Add the top numbers only: the parts are still sixths.',top=670,size=32)
-body+=step(3,'Left in the bottle:  '+F(6,6)+' − '+F(3,6)+' = '+F(3,6)+' = '+F(1,2),top=780,size=32)
+body+=pin(128,390,1664,bsv,'rise')
+body+=step(1,'Make the parts the same size:  '+F(1,3)+' = '+F(2,6),top=575,size=32)
+body+=step(2,F(2,6)+' + '+F(1,6)+' = '+F(3,6)+' = '+F(1,2)+'.  Add the top numbers only: the parts are still sixths.',top=685,size=32)
+body+=step(3,'Left in the bottle:  '+F(6,6)+' − '+F(3,6)+' = '+F(3,6)+' = '+F(1,2),top=795,size=32)
 put('p3l6-teachadd',sec('p3l6-teachadd','54–56 MIN',body,
  'Teach before worksheet page 2 (Q4 and Q5). Heuristic: DRAW A BAR. Click 1: the bar cut into sixths; the two teal parts are the third (the 1/3 label sits across both), the yellow part is the extra sixth. '
  'Think-aloud: "1/3 and 1/6 are different-sized parts, so I change 1/3 into sixths: 2/6. Now 2 sixths and 1 sixth make 3 sixths. The parts are still sixths, so the bottom number stays 6." '
@@ -214,7 +215,7 @@ put('p3l6-tryadd',try_raw('p3l6-tryadd','56–57 MIN','Your turn: add and subtra
  'Whiteboards. a) 1/5 = 2/10, 3/10 + 2/10 = 5/10 = 1/2. b) 1/2 = 4/8, 4/8 + 3/8 = 7/8. c) 1/3 = 3/9, 7/9 − 3/9 = 4/9. Check that nobody adds the bottom numbers.',38,165))
 
 # ---------- 17. teach: partners that make one whole ----------
-psv=svgwrap('A bar cut into 10 equal parts with 3 parts shaded',1664,100,bar(4,8,1656,84,10,[TEAL]*3,4,True,26))
+psv=svgwrap('A bar cut into 10 equal parts with 3 parts shaded',1664,100,bar(4,8,1656,84,10,[YEL]*3,4,True,26))
 body=h2('Partners that make one whole')+card(rp('Which fraction joins '+F(3,10)+' to make one whole?',38,700))
 body+=pin(128,400,1664,psv)
 body+=step(1,'One whole = '+F(10,10)+'.   '+F(10,10)+' − '+F(3,10)+' = '+F(7,10)+'  fills the gap.',top=540,size=32)
@@ -241,6 +242,7 @@ body+=step(2,'In between:  '+F(3,8)+',  '+F(4,8)+',  '+F(5,8)+'.  The ends are n
 put('p3l6-teachbetween',sec('p3l6-teachbetween','58–59 MIN',body,
  'Teach before worksheet page 2 (Q7). The number line is cut into 8 equal steps from 0 to 1. Click through. Stress: list them in order so none is missed, and do not count the end fractions. Ask: "Which of the three is the same as 1/2?" (4/8).'))
 
+SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
  [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','ALL the twelfths between one half and three quarters.')],
@@ -248,9 +250,9 @@ put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your ow
  'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
  [('Q3','(a) A, B, D   (b) C: '+F(2,6)+' = '+F(1,3)+',  E: '+F(3,8)),
-  ('Q4',F(5,7)+'  '+F(5,8)+'  '+F(9,12)+'='+F(3,4)+'  '+F(3,6)+'='+F(1,2)+'  '+F(7,10)+'  '+F(8,10)+'='+F(4,5)),
+  ('Q4',(SP).join(['(a) '+F(5,7),'(b) '+F(5,8),'(c) '+F(9,12)+' = '+F(3,4),'(d) '+F(3,6)+' = '+F(1,2),'(e) '+F(7,10),'(f) '+F(8,10)+' = '+F(4,5)])),
   ('Q5','(a) '+F(5,6)+'   (b) '+F(1,6)+'   (c) '+F(3,6)+' = '+F(1,2)+' more'),
-  ('Q6',F(1,4)+'+'+F(6,8)+'  '+F(2,3)+'+'+F(4,12)+'  '+F(3,8)+'+'+F(5,8)+'  '+F(5,12)+'+'+F(7,12)+'  '+F(1,6)+'+'+F(5,6)),
+  ('Q6',(SP).join([F(a,b)+' + '+F(c,d) for a,b,c,d in [(1,4,6,8),(2,3,4,12),(3,8,5,8),(5,12,7,12),(1,6,5,6)]])),
   ('Q7',F(7,12)+' and '+F(8,12)+'.   (b) '+F(8,12)+' = '+F(2,3))],
  'Click after a child explains. Q3: B is 2/8 and D is 3/12, both equal to 1/4. Q4: (b) 2/8 + 3/8; (c) 4/12 + 5/12; (d) 5/6 − 2/6; (e) 10/10 − 3/10; (f) 5/10 + 3/10. Q5: 2/3 = 4/6; 1/6 + 4/6 = 5/6; 6/6 − 5/6 = 1/6; 4/6 − 1/6 = 3/6. '
  'Q6: 1/4 needs 3/4 = 6/8; 2/3 needs 1/3 = 4/12; 5/12 needs 7/12; 3/8 needs 5/8; 1/6 needs 5/6. Q7: 1/2 = 6/12 and 3/4 = 9/12, so 7/12 and 8/12.',128,30))
@@ -271,7 +273,7 @@ c1=(f'<rect x="10" y="40" width="720" height="70" fill="{WHITE}" stroke="{NAVY}"
     +bar(10,195,360,64,1,[YEL],3,False)+sfr(190,226,1,2,26)
     +bar(10,280,180,64,1,[SKY],3,False)+sfr(100,311,1,4,26)
     +bar(10,365,90,64,1,[TEAL],3,False)+sfr(55,396,1,8,24,WHITE)
-    +T(420,330,'Same length as the whole:',24,MUTED,'start')+T(420,362,'2 halves, 4 quarters, 8 eighths',24,MUTED,'start'))
+    +T(400,300,'Same length as the whole:',24,MUTED,'start')+T(400,334,'2 halves, 4 quarters',24,MUTED,'start')+T(400,368,'or 8 eighths.',24,MUTED,'start'))
 sv1=svgwrap('An empty whole bar and the half, quarter and eighth pieces drawn to the same scale',740,440,c1,'width:100%;height:auto')
 c2=(T(10,40,'Siti drinks',28,TEAL,'start')+bar(10,56,720,80,3,[YEL,YEL],4,True,26)
     +T(10,200,'Ravi drinks',28,TEAL,'start')+bar(10,216,720,80,12,[SKY]*7,3,False)
@@ -283,9 +285,9 @@ put('p3l6-chdiag',sec('p3l6-chdiag','Challenge',body,
 
 # ---------- 24. challenge walk-through ----------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: biggest piece first',38,800,TEAL))
-for i,t in enumerate(['With a '+F(1,2)+': 4 pieces must make the other '+F(1,2)+'. Four '+F(1,8)+' ✓',
-                      F(1,4)+' + three '+F(1,8)+' is '+F(5,8)+': too much. Only 1 way with a half.',
-                      'No half: 5 pieces from quarters and eighths. Three '+F(1,4)+' + two '+F(1,8)+' ✓',
+for i,t in enumerate(['With a '+F(1,2)+': four '+F(1,8)+' make the other '+F(1,2)+' ✓',
+                      F(1,4)+' + three '+F(1,8)+' = '+F(5,8)+': too much. 1 way with a half.',
+                      'No half: three '+F(1,4)+' + two '+F(1,8)+' = 1 whole ✓',
                       '2 ways altogether.']):
     body+=pin(128,330+i*140,800,rp(t,28),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: make the parts the same size',38,800,TEAL))

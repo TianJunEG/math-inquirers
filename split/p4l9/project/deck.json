@@ -1,0 +1,66 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:32:55Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P4: Lesson 9 – Data Detectives",
+ "order": [
+  "p4l9-title",
+  "p4l9-warm1",
+  "p4l9-warm2",
+  "p4l9-explore1",
+  "p4l9-explore2",
+  "p4l9-teach1",
+  "p4l9-we1",
+  "p4l9-try1",
+  "p4l9-we2",
+  "p4l9-try2",
+  "p4l9-key",
+  "p4l9-break",
+  "p4l9-ws1",
+  "p4l9-ws1ans",
+  "p4l9-teachtwo",
+  "p4l9-teachsteps",
+  "p4l9-teachscale",
+  "p4l9-ws2",
+  "p4l9-ws2ans",
+  "p4l9-stretch",
+  "p4l9-challenge",
+  "p4l9-chdiag",
+  "p4l9-chwalk",
+  "p4l9-talk",
+  "p4l9-exit"
+ ],
+ "cover": "p4l9-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p4l9-title"
+  },
+  "s2": {
+   "description": "Teach: reading line graphs, the biggest change, missing values in tables",
+   "start": "p4l9-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p4l9-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p4l9-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

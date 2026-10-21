@@ -67,7 +67,7 @@ const cards = ds => {
 };
 // 3 by 3 grid of streets, A bottom left, B top right, puddle at P (1 along, 1 up). Small circles at the corners to write in.
 const grid = () => {
-  const c = 48, x0 = 34, y0 = 26; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 230 204" xmlns="http://www.w3.org/2000/svg" style="width:230px;max-width:100%">`;
+  const c = 44, x0 = 34, y0 = 26; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" style="width:220px;max-width:100%">`;
   for (let i = 0; i <= 3; i++) s += `<line x1="${x0}" y1="${y0 + i * c}" x2="${x0 + 3 * c}" y2="${y0 + i * c}" stroke="${NAVY}" stroke-width="4"/><line x1="${x0 + i * c}" y1="${y0}" x2="${x0 + i * c}" y2="${y0 + 3 * c}" stroke="${NAVY}" stroke-width="4"/>`;
   for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="15" fill="${isP ? SKY : WHITE}" stroke="${NAVY}" stroke-width="2.5"/>`; }
   s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 30}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 12}" y="${y0 - 8}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
@@ -175,7 +175,7 @@ module.exports = {
       H.cell('<div>' + trace + tx(L('(b)') + 'How many things does it say altogether? ' + blank(50) + '<br>' + L('(c)') + 'The last thing it says? ' + blank(50) + '<br>' + L('(d)') + 'If “repeat 3” becomes “repeat 5”, how many things will it say? ' + blank(50)) + '</div>', 4600, { h: 30 })])]);
     const py = pyBox(['teas = ["milk", "green", "taro"]', 'toppings = ["pearls", "jelly"]', 'count = 0', 'for tea in teas:', '    for top in toppings:', '        print(tea, "tea with", top)', '        count = count + 1', 'print(count, "orders")'], 'Python corner (optional): our Explore|program. Change the lists to test Q1.');
     const planAndPy = H.tbl([4200, 5700], [H.row([
-      H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set count to 0, set a to 1, repeat a gap: set b to 1, repeat a gap: if a gap then change count by 1; change b by 1; change a by 1; say count', 13) + '</div>', 4200, { h: 30 }),
+      H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set count to 0, set a to 1, repeat a gap: set b to 1, repeat a gap: if a gap then change count by 1; change b by 1; change a by 1; say count', 14) + '</div>', 4200, { h: 30 }),
       H.cell('<div>' + tx(L('(a)') + 'What will the program say? ' + blank(50) + '<br>Does it agree with Q4(a)? ' + blank(50) + '<br>' + L('(b)') + 'If the test is changed to <b>a = b</b>, what will it say? What is it counting now?<br>' + blank(330) + '<br>') + py + '</div>', 5700, { h: 30 })])]);
     const routes = H.tbl([3600, 6300], [H.row([H.cell('<div>' + grid() + '</div>', 3600, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the blue point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6300, { h: 40 })])]);
     return [
@@ -188,15 +188,14 @@ module.exports = {
       H.q(3, 'Trace the code. (a) Fill in a, b and what the sprite says, for the first 6 things it says.', { keepNext: true }),
       codeAndTrace,
 
-      H.q(4, 'Seven friends meet. Every pair of friends shakes hands once.', { pb: true, before: 0, keepNext: true }),
-      H.sub('a', 'How many handshakes are there? Show your list or your method.', { keepNext: true }),
+      H.q(4, 'Seven friends meet. Every pair of friends shakes hands once. (a) How many handshakes are there? Show your method.', { pb: true, before: 0, keepNext: true }),
       ...H.lines(1),
-      H.sub('b', 'Ali says, “Each person shakes 6 hands, so 7 × 6 = 42 handshakes.” What is wrong? Fix it.', { keepNext: true }),
+      H.sub('b', 'Ali says, “7 × 6 = 42 handshakes.” What is wrong? Fix it.', { keepNext: true }),
       ...H.lines(1),
       H.sub('c', 'Another party has 45 handshakes. How many people are there?   ______'),
       H.q(5, 'Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
       routes,
-      H.q(6, 'Plan your code. Fill in the 3 gaps so the program counts the handshakes for the 7 friends in Q4. The test after “if” must keep each handshake once.', { keepNext: true }),
+      H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4.', { keepNext: true }),
       planAndPy
     ];
   }

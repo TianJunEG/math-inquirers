@@ -102,9 +102,9 @@ fb=(f'<rect x="10" y="40" width="{2100*k}" height="80" rx="8" fill="{SKY}" strok
     f'<rect x="{10+(2100-850)*k}" y="40" width="{850*k}" height="80" rx="8" fill="{WHITE}" stroke="{RED}" stroke-width="4" stroke-dasharray="12 8"/>'+
     T(10+(2100-850)*k/2,92,'left: ?',32)+T(10+(2100-425)*k,92,'used 850 g',32,RED)+
     f'<path d="M10 30 L10 14 L{10+2100*k} 14 L{10+2100*k} 30" fill="none" stroke="{TEAL}" stroke-width="4"/>')
-fb=svg(1320,150,f'<g transform="translate(0,30)">{fb}</g>'+T(10+1050*k,30,'2 kg 100 g',28,TEAL),'Bar: 2 kg 100 g of flour, 850 g used, the rest left')
+fb=svg(1320,140,f'<g transform="translate(0,18)">{fb}</g>'+T(10+1050*k,24,'2 kg 100 g',28,TEAL),'Bar: 2 kg 100 g of flour, 850 g used, the rest left')
 body=h2('Worked example: change, then work')+card(p('A bag has 2 kg 100 g of flour. Mum uses 850 g. How much flour is left?',40,700))
-body+=pin(128,370,1664,fb)
+body+=pin(128,364,1664,fb)
 body+=step(1,'Change to grams:  2 kg 100 g = 2000 g + 100 g = 2100 g',top=530,size=34)
 body+=step(2,'Take away:  2100 g − 850 g = 1250 g',top=630,size=34)
 body+=step(3,'Change back:  1250 g = 1000 g + 250 g = 1 kg 250 g',top=730,size=34)

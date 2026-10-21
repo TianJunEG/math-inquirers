@@ -1,0 +1,68 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:32:54Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P4: Lesson 3 – Operation Detectives",
+ "order": [
+  "p4l3-title",
+  "p4l3-warm1",
+  "p4l3-warm2",
+  "p4l3-explore1",
+  "p4l3-explore2",
+  "p4l3-teach1",
+  "p4l3-try1",
+  "p4l3-we1",
+  "p4l3-try2",
+  "p4l3-we2",
+  "p4l3-try3",
+  "p4l3-key",
+  "p4l3-break",
+  "p4l3-ws1",
+  "p4l3-ws1ans",
+  "p4l3-teachback",
+  "p4l3-trytrick",
+  "p4l3-teachbar",
+  "p4l3-teachchain",
+  "p4l3-ws2",
+  "p4l3-ws2ans",
+  "p4l3-stretch",
+  "p4l3-challenge",
+  "p4l3-chdiag",
+  "p4l3-chwalk",
+  "p4l3-talk",
+  "p4l3-exit"
+ ],
+ "cover": "p4l3-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p4l3-title"
+  },
+  "s2": {
+   "description": "Teach: order of operations, missing signs and brackets",
+   "start": "p4l3-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p4l3-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p4l3-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
