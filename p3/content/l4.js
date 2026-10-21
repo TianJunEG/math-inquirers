@@ -63,8 +63,8 @@ module.exports = {
     extension: 'Write your own before-and-after story, draw its model and check it. Swap with a partner.',
     key: [
       ['Q1', '(a) 1250 − 486 − 378 = 386 buns  (b) 486 − 378 = 108 more'],
-      ['Q2', '(a) Ali 345 + 128 = 473  (b) Ben 473 − 79 = 394  (c) 345 + 473 + 394 = 1212 stickers'],
-      ['Q3', '(a) 4 units; 1 unit = 248 ÷ 4 = 62 beads  (b) Siti 3 × 62 = 186  (c) 2 units = 124 more'],
+      ['Q2', '(a) Ali 345 + 128 = 473; Ben 473 − 79 = 394  (b) 345 + 473 + 394 = 1212 stickers'],
+      ['Q3', '(a) 4 units; 1 unit = 248 ÷ 4 = 62 beads  (b) Siti has 3 × 62 = 186; 2 units = 124 more than Ravi'],
       ['Q4', 'Take away the extra: 150 − 24 = 126; 126 ÷ 2 = 63. Ben 63, Ali 63 + 24 = 87. Check 63 + 87 = 150.'],
       ['Q5', '(a) 19 stickers (difference 38, give half; both have 66)  (b) 38 is the whole difference. Giving 38 would leave Mei with 47 and Siti with 85: they just swap. Mei must give half of the difference.'],
       ['Q6', '(a) The difference: $45 − $18 = $27 stays the same  (b) After: Ali 2 units, Ben 1 unit, so 1 unit = $27. Ben now has $27, so Grandma gave each boy $27 − $18 = $9. Check: $54 = 2 × $27.']
@@ -164,15 +164,13 @@ module.exports = {
     // Q2
     out.push(H.q(2, 'Mei has 345 stickers. Ali has 128 more stickers than Mei. Ben has 79 fewer stickers than Ali.', { keepNext: true }));
     out.push(H.fig(q2Fig()));
-    out.push(H.sub('a', 'How many stickers does Ali have?   ______'));
-    out.push(H.sub('b', 'How many stickers does Ben have?   ______'));
-    out.push(H.sub('c', 'How many stickers do the three children have altogether?   ______'));
+    out.push(H.sub('a', 'Ali has ______ stickers.      Ben has ______ stickers.'));
+    out.push(H.sub('b', 'How many stickers do the three children have altogether?   ______'));
     // Q3
     out.push(H.q(3, 'Siti has 3 times as many beads as Ravi. They have 248 beads altogether.', { keepNext: true }));
     out.push(H.fig(q3Fig()));
     out.push(H.sub('a', 'How many units are there altogether?   ______      1 unit = ______ beads'));
-    out.push(H.sub('b', 'How many beads does Siti have?   ______'));
-    out.push(H.sub('c', 'How many more beads does Siti have than Ravi?   ______'));
+    out.push(H.sub('b', 'Siti has ______ beads. She has ______ more beads than Ravi.'));
     // ---------- page 2 ----------
     out.push(H.q(4, 'Ali and Ben have 150 marbles altogether. Ali has 24 more marbles than Ben. How many marbles does each boy have?', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(drawBox(120)));

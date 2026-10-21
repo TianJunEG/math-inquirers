@@ -77,12 +77,11 @@ body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in
 put('p2l2-warm2',sec('p2l2-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards up together, then click. For 3 ask: "How did you take 250 from 700?" (700 − 200 = 500, then − 50 = 450). For 5: "Which is easier: count on from 120 to 500, or take away?" (count on: 120 → 200 is 80, 200 → 500 is 300, so 380). Answers: 35, 750, 450, 248, 380.'))
 
 # ---------- 4. explore ----------
-g=colsum('358','641','999','+',x0=10,y0=40,c=110,size=64,shade=True)
-for k in range(1,4): g+=txt(10+50+k*110,36,'9?',30,TEAL)
-g+=f'<rect x="560" y="80" width="560" height="200" rx="18" fill="{SOFT}" stroke="{NAVY}" stroke-width="4"/>'+txt(840,160,'Pick any 3-digit number.',34)+txt(840,215,'Find its partner to 999.',34,TEAL)
+g=colsum('358','641','999','+',x0=10,y0=50,c=96,size=60,shade=True)
+for k in range(1,4): g+=txt(10+50+k*96,44,'9?',34,TEAL)
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Pick any 3-digit number, like 358.','Find its partner that makes 999. Check by adding.','Do it for three more numbers.','Look at each column. What do you notice?'])
-body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
-body+=card(svgwrap(1160,400,'Column sum 358 + 641 = 999 with each column shaded',g).replace('width:1160px;height:400px','width:780px;height:269px'),extra='padding:12px 32px;align-items:flex-start')
+body=h2('Explore: what to do')+'<div style="display:flex;gap:32px;align-items:flex-start">'+card(chip('EXPLORE')+f'<ol style="font-size:38px;font-weight:600;padding-left:56px;display:flex;flex-direction:column;gap:14px">{steps}</ol>',extra='flex:1;min-width:0')
+body+=card(svgwrap(440,410,'Column sum 358 + 641 = 999 with each column shaded',g),extra='flex:none;padding:20px 32px')+'</div>'
 put('p2l2-explore1',sec('p2l2-explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs choose their own 3-digit numbers and find partners to 999, checking with a column sum. Do not explain the pattern; let them find it. Early finishers: "Now find partners to 1000. What changes?" (the ones add up to 10 and the tens and hundreds to 9, because of the carry).'))
 body=h2('Explore: talk about it')+numcards([('1.','What did you notice about each column?'),('2.','Why is there never a carry when you make 999?'),('3.','Find the partner of 274 without adding.')],40)
 put('p2l2-explore2',sec('p2l2-explore2','15–25 MIN',body,'Minutes 15 to 25. Gather the group. Answers: 1) The two digits in each column add up to 9. 2) No column adds up to more than 9, so nothing is carried. 3) 725 (2 + 7, 7 + 2 and 4 + 5 all make 9). Push: "So if I know the answer and one number, can I find a missing digit?" That is today\'s mystery.'))
@@ -102,11 +101,11 @@ put('p2l2-try1',try_slide('p2l2-try1','28–30 MIN','Your turn: whiteboards','Fi
 g=colsum('6?2','24?','385','−',x0=10,y0=0)
 g2=colsum('385','24?','6?2','+',x0=10,y0=0)
 body=h2('Subtraction: work backwards')+pin(128,240,440,svgwrap(420,340,'Column subtraction 6 box 2 minus 24 box equals 385',g).replace('width:420px;height:340px','width:360px;height:291px'),None,WHITE,24,'16px 30px')
-body+=pin(620,240,440,svgwrap(420,340,'The same sum turned into an addition',g2).replace('width:420px;height:340px','width:360px;height:291px'),'fade',SOFT,24,'16px 30px')
-body+=step(1,'Turn it round: 385 + 24□ = 6□2',left=1110,top=240,width=682,size=34)
-body+=step(2,'Ones: 5 + □ ends in 2. 5 + 7 = 12, so □ = 7.',left=1110,top=370,width=682,size=34)
-body+=step(3,'Tens: 8 + 4 + 1 = 13, so □ = 3. Hundreds: 3 + 2 + 1 = 6 ✓',left=1110,top=500,width=682,size=34)
-body+=answer(128,680,1664,'632 − 247 = 385')
+body+=pin(650,240,440,svgwrap(420,340,'The same sum turned into an addition',g2).replace('width:420px;height:340px','width:360px;height:291px'),'fade',SOFT,24,'16px 30px')
+body+=step(1,'Turn it round: 385 + 24□ = 6□2',left=1180,top=240,width=612,size=34)
+body+=step(2,'Ones: 5 + □ ends in 2. 5 + 7 = 12, so □ = 7.',left=1180,top=370,width=612,size=34)
+body+=step(3,'Tens: 8 + 4 + 1 = 13, so □ = 3. Hundreds: 3 + 2 + 1 = 6 ✓',left=1180,top=520,width=612,size=34)
+body+=answer(128,700,1664,'632 − 247 = 385')
 put('p2l2-we2',sec('p2l2-we2','30–32 MIN',body,'Work backwards: the answer plus the number we took away gives back the number we started with. Click 1 shows the turned-round sum, then each step. Think-aloud: "Subtraction with gaps is hard, so I undo it. 385 + 247 must make 632." Check the other way at the end: 632 − 247. Ones: 2 − 7 cannot be done, so take a ten: 12 − 7 = 5 ✓.'))
 put('p2l2-try2',try_slide('p2l2-try2','32–33 MIN','Your turn: subtraction','Turn it into an addition first.',[('a','8□5 − 321 = 514','3'),('b','74□ − 2□8 = 465','3 and 7'),('c','9□4 − □37 = 517','5 and 4')],'Whiteboards. a) 514 + 321 = 835. b) 465 + 2□8: ones 5 + 8 = 13, so 3; tens 6 + □ + 1 ends in 4, so 7; hundreds 4 + 2 + 1 = 7 ✓: 743 − 278. c) 517 + □37: ones 7 + 7 = 14; tens 1 + 3 + 1 = 5; hundreds 5 + □ = 9, so 4: 954 − 437.'))
 
@@ -115,8 +114,8 @@ body=h2('"=" means "is the same as"')+card(p('245 + 130 = 200 + □',48,700))
 body+=pin(128,400,1100,seesaw_svg('245 + 130','200 + ?'),None)
 body+=step(1,'245 is 45 MORE than 200.',left=1260,top=400,width=532,size=34)
 body+=step(2,'So □ must be 45 more than 130.',left=1260,top=530,width=532,size=34)
-body+=step(3,'□ = 175. Check: both sides are 375 ✓',left=1260,top=660,width=532,size=34)
-body+=pin(128,700,1100,p('You can also work out one side: 245 + 130 = 375, then 375 − 200 = 175.',32,700),'fade',SOFT,20,'18px 28px')
+body+=step(3,'□ = 175. Check: both sides are 375 ✓',left=1260,top=690,width=532,size=34)
+body+=pin(128,700,1060,p('You can also work out one side: 245 + 130 = 375, then 375 − 200 = 175.',32,700),'fade',SOFT,20,'18px 28px')
 put('p2l2-teach3',sec('p2l2-teach3','33–34 MIN',body,'Teach. Ask first: "What goes in the box?" Some children say 375 because "the answer comes next". The see-saw must balance: both sides the same. Click through. Two ways: compare (look for the difference between 245 and 200), or work out the full side and subtract. Comparing is faster with big numbers, and it is how Ravi\'s question on the worksheet works.'))
 put('p2l2-try3',try_slide('p2l2-try3','34–35 MIN','Your turn: balance it','Both sides must be the same.',[('a','320 + 150 = 400 + □','70'),('b','560 − 100 = □ − 200','660'),('c','True or false: 199 + 302 = 200 + 301','True: 501')],'Whiteboards. a) 320 is 80 less than 400, so □ is 80 less than 150: 70. b) Left side is 460, so □ − 200 = 460: □ = 660. c) 199 is 1 less than 200 and 302 is 1 more than 301. Both sides are 501.'))
 body=h2('Key idea: start at the ones')+card(p('Start at the ones column and ask: was there a carry? Check by adding the whole numbers.',44,700))+card(p('Turn a subtraction into an addition to work backwards. "=" means both sides are the same.',38,600,MUTED))
@@ -178,7 +177,7 @@ put('p2l2-stretch',sec('p2l2-stretch','For early finishers',h2('Stretch')+numcar
 ch=[('1.','Find ALL the ways to fill the boxes:  □□7 + 4□□ = 1000'),('2.','Box A and Box B hold 250 marbles together. Box B and Box C hold 350. Box A and Box C hold 400. How many marbles are in each box?')]
 put('p2l2-challenge',sec('p2l2-challenge','65–80 MIN',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 10 ways: 507 + 493, 517 + 483, 527 + 473, 537 + 463, 547 + 453, 557 + 443, 567 + 433, 577 + 423, 587 + 413, 597 + 403. 2) A 150, B 100, C 250.'))
 g1=colsum('??7','4??','1000','+',x0=40,y0=40,c=100,size=56)
-for k in range(1,4): g1+=f'<circle cx="{40+50+k*100-50}" cy="30" r="20" fill="{WHITE}" stroke="{TEAL}" stroke-width="3" stroke-dasharray="6 4"/>'
+for k in range(0,3): g1+=f'<circle cx="{40+50+k*100}" cy="30" r="20" fill="{WHITE}" stroke="{TEAL}" stroke-width="3" stroke-dasharray="6 4"/>'
 g1+=txt(450,470,'Which digits can go in each box?',30,TEAL)
 g2=''
 for i,(lab,col) in enumerate([('A',SKY),('B',YEL),('C','#BFE3DC')]):

@@ -86,7 +86,7 @@ const sticksSvg = () => {
   return `<svg aria-label="Matchstick squares: patterns 1, 2 and 3" viewBox="0 0 600 112" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
-const pyBox = (H, title, code, note) => H.p([`<div style="border:2px solid ${N};border-radius:12px;background:#FFF4D1;padding:8px 14px;margin-left:40px"><div style="font-weight:700;color:${TEAL};font-size:15px">${esc(title)}</div><pre style="margin:4px 0;font-family:'Courier New',monospace;font-size:14px;line-height:1.35;white-space:pre">${esc(code)}</pre><div style="font-size:14px;color:#3B4A6B">${esc(note)}</div></div>`], { after: 0 });
+const pyBox = (H, title, code, note) => H.p([`<div style="border:2px solid ${N};border-radius:12px;background:#FFF4D1;padding:6px 14px;margin-left:40px;display:flex;gap:16px;align-items:center"><pre style="flex:none;margin:2px 0;font-family:'Courier New',monospace;font-size:14px;line-height:1.3;white-space:pre">${esc(code)}</pre><div><div style="font-weight:700;color:${TEAL};font-size:15px">${esc(title)}</div><div style="font-size:14px;color:#3B4A6B">${esc(note)}</div></div></div>`], { after: 0 });
 
 module.exports = {
   lesson: {
@@ -97,7 +97,7 @@ module.exports = {
     online: 'The tutor shares the slides and a Scratch window. Send the four starter blocks (or a starter project link) in the chat before the lesson. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.',
     warmup: 'Next! Pattern quick-fire: six sequence cards (add, take away, square numbers, doubling, Fibonacci, decimals). Teams race to give the next two terms; a bonus point for the rule.',
     explore: 'Pairs build matchstick triangles in a row (3, 5, 7 sticks), make a table, predict the sticks for pattern 10 and pattern 100 without building them, then check pattern 10 with a loop and a variable in Scratch.',
-    mini: 'Term-to-term rule (add 3) versus the rule for the nth term (3n + 2): the difference tells you the times table, then compare to find what to add or take away. Find the 100th term. Test it in code: set term to the 1st term, repeat 99, change term by 3, say term. The 100th term is only 99 jumps from the 1st. Before page 1: trace a loop in a table. Before page 2: plan a program (say first, then change), find a jump-count bug, and work backwards to decide whether a number is in a sequence.',
+    mini: 'Term-to-term rule (add 3) versus the rule for the nth term (3n + 2): the difference tells you the times table, then compare to find what to add or take away. Find the 100th term. Test it in code: set term to the 1st term, repeat 99, change term by 3, say term. The 100th term is only 99 jumps from the 1st. Before page 1: work backwards to decide whether a number is in a sequence. Before page 2: trace a loop in a table, plan a program (say first, then change) and find a jump-count bug.',
     share: 'Ali says the 100th term of 7, 10, 13, … is 7 + 3 × 100 = 307. Is he right? Explain with a rule, a picture or code.',
     exit: { q: 'The sequence 8, 11, 14, 17, … (a) Write the rule for the nth term. (b) Find the 100th term. (c) A loop starts at the 1st term. How many times must it repeat "change by 3" to reach the 100th term?', a: '(a) 3n + 5  (b) 305  (c) 99 times' },
     mistakes: [
@@ -107,13 +107,12 @@ module.exports = {
     ],
     extension: 'Make the program say the position and the term together (for example "term 7 is 23") using a second variable pos and the join block. Then make it stop at the first term bigger than 1000.',
     key: [
-      ['Q1', '(a) 4, 7, 10, 13, 16, 19  (b) 3. Each new square shares one side with the square before it, so it needs only 3 new sticks.  (c) sticks = 3 × n + 1  (d) 301  (e) Pattern 20 (3 × 20 + 1 = 61)'],
+      ['Q1', '(a) 4, 7, 10, 13, 16, 19. Each new square adds 3 sticks, not 4, because it shares one side with the square before it.  (b) sticks = 3 × n + 1  (c) 301  (d) Pattern 20 (3 × 20 + 1 = 61)'],
       ['Q2', '(a) difference 4; 4n + 2; 402  (b) 5; 5n − 4; 496  (c) 2; 2n + 7; 207  (d) 0.5; 0.5n (or n ÷ 2); 50'],
-      ['Q3', '(a) x: 7, 12, 17, 22. The last number said is 22.  (b) 502. x starts at 2 and 100 jumps of 5 add 500.'],
-      ['Q4', '(a) when green flag clicked; set n to 4; repeat 20 [say n for 1 seconds; change n by 6]. Say must come before change (or start n at −2 and change first).  (b) 118 (the 20th term: 6 × 20 − 2)'],
-      ['Q5', '(a) 203 (3 + 50 × 4)  (b) 199 (4 × 50 − 1)  (c) Change repeat 50 to repeat 49. The 1st term is already there before the loop starts, so the 50th term is only 49 jumps away.'],
-      ['Q6', '(a) 4n + 1  (b) Yes. 101 − 1 = 100 = 4 × 25, so 101 is the 25th term.  (c) No. Every term is 1 more than a multiple of 4, so every term is odd; 150 is even. (150 − 1 = 149 is not a multiple of 4.)'],
-      ['Q7', 'Open. Examples: 5, 10, 15, 20 (5n); 401, 402, 403, 404 (n + 400); 104, 108, 112, 116 (4n + 100). Check by putting n = 100 into the rule.']
+      ['Q3', '(a) 4n + 1  (b) Yes. 101 − 1 = 100 = 4 × 25, so 101 is the 25th term.  (c) No. Every term is 1 more than a multiple of 4, so every term is odd; 150 is even. (150 − 1 = 149 is not a multiple of 4.)'],
+      ['Q4', 'Trace: x is 7, 12, 17, 22.  (a) 22  (b) 502. x starts at 2 and 100 jumps of 5 add 500.'],
+      ['Q5', 'Program: when green flag clicked; set n to 4; repeat 20 [say n; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2)'],
+      ['Q6', '(a) 203 (3 + 50 × 4)  (b) 199 (4 × 50 − 1)  (c) Change repeat 50 to repeat 49. The 1st term is already there before the loop starts, so the 50th term is only 49 jumps away.']
     ]
   },
 
@@ -147,8 +146,8 @@ module.exports = {
     keyBig: 'The difference tells you the times table. Compare with it to find what to add or take away.',
     keySmall: 'From the 1st term to the nth term there are n − 1 jumps. Test your rule in code.',
     brk: 'Pattern moves: clap, clap, stomp, clap, clap, stomp … Do 12 moves together. Then predict: what is the 20th move? The 30th?',
-    ws1: 'Page 1, in pairs: Q1 matchstick squares, Q2 rules and 100th terms, Q3 trace the code.',
-    ws2: 'Page 2, on your own: Q4 plan your code, Q5 spot the bug, Q6 is it in the sequence, Q7 make your own.'
+    ws1: 'Page 1, in pairs: Q1 matchstick squares, Q2 rules and 100th terms, Q3 is it in the sequence?',
+    ws2: 'Page 2, on your own: Q4 trace the code, Q5 plan your code, Q6 spot the bug.'
   },
 
   qbank: {
@@ -186,59 +185,50 @@ module.exports = {
   workbook: H => {
     const W = [];
     const hat = ['hat', 'when green flag clicked'];
-    W.push(H.p('A sequence is a list of numbers that follows a rule. The nth term is the term in position n. Work out the maths first, then test it in code.', { after: 60 }));
+    const side = (left, wl, right) => H.tbl([wl, 9900 - wl], [H.row([H.cell(['<div style="padding:4px 8px">' + left + '</div>'], wl, { h: 60 }), H.cell(right, 9900 - wl, { h: 60, align: 'left' })])]);
     // Q1 matchstick squares
-    W.push(H.q(1, 'Matchstick squares. Each new pattern adds one more square to the row.', { before: 40, keepNext: true }));
+    W.push(H.q(1, 'Matchstick squares. Each new pattern adds one more square to the row. (The nth term means the term in position n.)', { before: 0, keepNext: true }));
     W.push(H.fig(sticksSvg()));
-    W.push(H.sub('a', 'Fill in the table.', { keepNext: true }));
     { const ws = [2700, 1200, 1200, 1200, 1200, 1200, 1200];
-      W.push(H.tbl(ws, [H.row([H.cell('Pattern n', ws[0], { bold: true, fill: 'EDEDED' }), ...[1, 2, 3, 4, 5, 6].map(k => H.cell(String(k), 1200, { bold: true, fill: 'EDEDED' }))]),
-        H.row([H.cell('Sticks', ws[0], { bold: true }), H.cell('4', 1200, { h: 120 }), ...[0, 0, 0, 0, 0].map(() => H.cell('', 1200))])])); }
-    W.push(H.sub('b', 'Each new square adds ______ sticks. Why not 4?'));
-    W.push(...H.lines(1));
-    W.push(H.sub('c', 'Complete the rule:   sticks  =  ______ × n  +  ______'));
-    W.push(H.sub('d', 'How many sticks are in pattern 100?   ________'));
-    W.push(H.sub('e', 'Which pattern uses exactly 61 sticks?   ________'));
+      W.push(H.tbl(ws, [H.row([H.cell('Pattern n', ws[0], { bold: true, fill: 'EDEDED', h: 40 }), ...[1, 2, 3, 4, 5, 6].map(k => H.cell(String(k), 1200, { bold: true, fill: 'EDEDED', h: 40 }))]),
+        H.row([H.cell('Sticks', ws[0], { bold: true, h: 70 }), H.cell('4', 1200, { h: 70 }), ...[0, 0, 0, 0, 0].map(() => H.cell('', 1200, { h: 70 }))])])); }
+    W.push(H.sub('a', 'Fill in the table. Each new square adds ____ sticks. Why not 4? ___________________________'));
+    W.push(H.sub('b', 'Complete the rule:   sticks  =  ______ × n  +  ______'));
+    W.push(H.sub('c', 'Sticks in pattern 100:  ______      (d)  Which pattern has 61 sticks?  ______'));
     // Q2 rules
     W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term.', { keepNext: true }));
     { const ws = [3300, 1900, 2500, 2200];
-      W.push(H.tbl(ws, [H.row(['Sequence', 'Difference', 'nth term', '100th term'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9' }))),
+      W.push(H.tbl(ws, [H.row(['Sequence', 'Difference', 'nth term', '100th term'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         ...[['a', '6,  10,  14,  18,  …'], ['b', '1,  6,  11,  16,  …'], ['c', '9,  11,  13,  15,  …'], ['d', '0.5,  1,  1.5,  2,  …']].map(([l, s]) =>
-          H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 120, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
-    // Q3 trace
-    W.push(H.q(3, 'Predict, then trace. What does this code make the sprite say?', { keepNext: true }));
-    W.push(H.fig(blocks([hat, ['var', 'set x to (2)'], ['ctl', 'repeat (4)', [['var', 'change x by (5)'], ['look', 'say (x) for (1) seconds']]]], 'Code: set x to 2, repeat 4: change x by 5, say x')));
-    { const ws = [3100, 1700, 1700, 1700, 1700];
-      W.push(H.tbl(ws, [H.row([H.cell('Time round the loop', ws[0], { bold: true, fill: 'EDEDED' }), ...[1, 2, 3, 4].map(k => H.cell(String(k), 1700, { bold: true, fill: 'EDEDED' }))]),
-        H.row([H.cell('x after "change"', ws[0], { bold: true }), ...[1, 2, 3, 4].map(() => H.cell('', 1700, { h: 120 }))])])); }
-    W.push(H.sub('a', 'Fill in the table. What is the last number the sprite says?   ________'));
-    W.push(H.sub('b', 'Change repeat 4 to repeat 100. What is the last number now? Explain without running it.'));
-    W.push(...H.lines(1));
-
-    // ---- page 2 ----
-    W.push(H.q(4, 'Plan your code. Use only these blocks (some more than once if you like) to make the sprite say the first 20 terms of   4,  10,  16,  22,  …', { pb: true, before: 0, keepNext: true }));
-    W.push(H.fig([[hat], [['var', 'set n to ( )']], [['ctl', 'repeat ( )', []]], [['var', 'change n by ( )']], [['look', 'say (n) for (1) seconds']]].map((p, i) => blocks(p, 'Block ' + (i + 1))).join('&nbsp;&nbsp;')));
-    W.push(H.sub('a', 'Write or draw your program in the box. Put the blocks in order.', { keepNext: true }));
-    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 1250 })])]));
-    W.push(H.sub('b', 'What is the last number your sprite says?   ________'));
-    // Q5 bug
-    W.push(H.q(5, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));
-    W.push(H.fig(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n')));
-    W.push(H.sub('a', 'What number does her code say?   ________'));
-    W.push(H.sub('b', 'Use the rule for the nth term. What is the 50th term really?   ________'));
-    W.push(H.sub('c', 'Fix her code. Explain the bug in one sentence.'));
-    W.push(...H.lines(2));
-    // Q6 in the sequence?
-    W.push(H.q(6, 'Look at the sequence   5,  9,  13,  17,  …', { keepNext: true }));
+          H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 70, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
+    // Q3 in the sequence?
+    W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …', { keepNext: true }));
     W.push(H.sub('a', 'Rule for the nth term:   ____________'));
     W.push(H.sub('b', 'Is 101 in the sequence? If it is, which term is it?   ____________'));
     W.push(H.sub('c', 'Is 150 in the sequence? Explain.'));
     W.push(...H.lines(1));
-    // Q7 make your own
-    W.push(H.q(7, 'Make your own. Write the first four terms of a sequence whose 100th term is 500, and its rule. Can you find a second one?'));
-    W.push(...H.lines(2));
     W.push(pyBox(H, 'Python corner (optional): a term tester', 'first = 5\nstep = 3\nterm = first\nfor pos in range(1, 101):\n    print(pos, term)\n    term = term + step',
       'It prints the first 100 terms of 5, 8, 11, … Change first and step to check your answers to Q1 and Q2.'));
+
+    // ---- page 2: code ----
+    W.push(H.q(4, 'Predict, then trace. What does this code make the sprite say? Fill in the trace table.', { pb: true, before: 0, keepNext: true }));
+    { const tr = H.tbl([2000, 3400], [H.row([H.cell('Time round the loop', 2000, { bold: true, fill: 'EDEDED', h: 50 }), H.cell('x after "change"', 3400, { bold: true, fill: 'EDEDED', h: 50 })]),
+        ...[1, 2, 3, 4].map(k => H.row([H.cell(String(k), 2000, { h: 45 }), H.cell('', 3400, { h: 45 })]))]);
+      W.push(side(blocks([hat, ['var', 'set x to (2)'], ['ctl', 'repeat (4)', [['var', 'change x by (5)'], ['look', 'say (x) for (1) seconds']]]], 'Code: set x to 2, repeat 4: change x by 5, say x'), 4300, [tr])); }
+    W.push(H.sub('a', 'What is the last number the sprite says?   ________'));
+    W.push(H.sub('b', 'Change repeat 4 to repeat 100. What is the last number now? Explain without running it.'));
+    W.push(...H.lines(1));
+    // Q5 plan
+    W.push(H.q(5, 'Plan your code. Use only these blocks to make the sprite say the first 20 terms of   4,  10,  16,  22,  …   Write or draw your program in the box, with the blocks in order.', { keepNext: true }));
+    W.push(H.fig([[hat], [['var', 'set n to ( )']], [['ctl', 'repeat ( )', []]], [['var', 'change n by ( )']], [['look', 'say (n)']]].map((p, i) => blocks(p, 'Block ' + (i + 1), 14)).join('&nbsp;')));
+    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 480 })])]));
+    W.push(H.sub('a', 'What is the last number your sprite says?   ________'));
+    // Q6 bug
+    W.push(H.q(6, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));
+    W.push(side(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n'), 4300,
+      ['(a)  What number does her code say?   ________', ' ', '(b)  Use the rule for the nth term.', 'What is the 50th term really?   ________']));
+    W.push(H.sub('c', 'Fix her code. Explain the bug in one sentence.'));
+    W.push(...H.lines(1));
     return W;
   }
 };

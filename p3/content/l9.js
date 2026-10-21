@@ -98,8 +98,7 @@ module.exports = {
     W.push(sub('a', '3 m 6 cm  =  ________ cm              (b)  2 kg 450 g  =  ________ g'));
     W.push(sub('c', '4080 ml  =  ____ ℓ  ____ ml           (d)  1 m 75 cm  +  85 cm  =  ____ m  ____ cm'));
     W.push(q(2, 'Four bags of rice are weighed:     1 kg 300 g      1030 g      1 kg      1 kg 3 g', { keepNext: true }));
-    W.push(sub('a', 'Put them in order, from the lightest to the heaviest.'));
-    W.push(...lines(1));
+    W.push(sub('a', 'Order them, lightest first:  ________,  ________,  ________,  ________'));
     W.push(sub('b', 'Ben says, “1 kg 30 g is the same as 130 g.” Explain his mistake.'));
     W.push(...lines(1));
     W.push(q(3, 'Mei has a ribbon 3 m long. She cuts 4 pieces from it. Each piece is 65 cm long.', { keepNext: true }));
@@ -110,10 +109,9 @@ module.exports = {
     { const ws = [1980, 1980, 1980, 1980, 1980];
       W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
         row(['$7.85', '$4.60', '$6.90', '$2.35', '$5.50'].map((s, i) => cell(s, ws[i], { h: 40, size: 26 })))])); }
-    W.push(sub('a', 'Can she buy the book, the puzzle and the water bottle? Show how you know.'));
-    W.push(...lines(1));
+    W.push(sub('a', 'Can she buy the book, the puzzle and the water bottle? Show how you know.  ______________________'));
     W.push(sub('b', 'Which 3 things should she buy to spend as much of her $20 as she can? How much change will she get?'));
-    W.push(...lines(2));
+    W.push(...lines(1));
     // ---------- page 2 ----------
     W.push(q(5, 'The 24-hour clock. After 12 noon, add 12 to the hour.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];

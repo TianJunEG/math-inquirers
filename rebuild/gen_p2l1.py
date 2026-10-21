@@ -158,7 +158,7 @@ body+=qrow(128,730,1250,'Your turn:','Which number is just below 296? Just above
 put('p2l1-teachchart',sec('p2l1-teachchart','54–56 MIN',body,'Teach before worksheet page 2 (Q4 has chart pieces). Look for a pattern: point along a row (+1 each time) and down a column (+10 each time; the ones digit stays the same). Ask: "What is just below 296? It is not on our piece!" Go down a column: 296, 306, because 10 more than 296 crosses the hundred. Just above 281 is 10 less: 271.'))
 
 # ---------- teach: count across a hundred ----------
-rows=[('Count on in 10s:','385, 395, ___, ___','405, 415'),('Count back in 10s:','628, 618, 608, ___, ___','598, 588'),('Count on in 100s:','63, 163, 263, ___','363')]
+rows=[('Count on in 10s:','475, 485, ___, ___','495, 505'),('Count back in 10s:','628, 618, 608, ___, ___','598, 588'),('Count on in 100s:','63, 163, 263, ___','363')]
 body=h2('Counting past a hundred')+p('Say each number aloud. Watch what happens to the hundreds digit.',34,600,MUTED)
 for i,(a,b,c) in enumerate(rows):
     body+=qrow(128,330+i*150,1250,a,b,38)+answer(1420,330+i*150,372,c)

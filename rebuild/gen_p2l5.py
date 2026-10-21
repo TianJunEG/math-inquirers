@@ -118,7 +118,7 @@ put(f'{P}-key',sec(f'{P}-key','34–35 MIN',body,'Say the key idea together. Com
 put(f'{P}-break',break_slide(f'{P}-break','Machine moves. The tutor writes a number and calls a machine: “3, times 2, jumps!” Everyone does the OUT number of jumps (6). Then “+ 4 claps!”','Five minutes. Online: children stay in view of the camera and move in place. Keep the OUT numbers small (under 15).'))
 
 # 13 teachrule
-W3=[440,560,620]
+W3=[400,520,580]
 body=h2('Find a two-step rule: guess and test')+card(p('A machine does  × a number,  then  + a number.   IN 1 gives OUT 7.   IN 4 gives OUT 13.',38,700))
 body+=trow(128,390,['Guess','Make IN 1 give 7','Test IN 4: is it 13?'],W3,None,True,32)
 gs=[['× 2, then + 5','1 × 2 + 5 = 7','4 × 2 + 5 = 13  yes'],['× 3, then + 4','1 × 3 + 4 = 7','4 × 3 + 4 = 16  not this one'],['× 4, then + 3','1 × 4 + 3 = 7','4 × 4 + 3 = 19  not this one']]

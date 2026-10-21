@@ -4,26 +4,15 @@ const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
   `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="${F}">${s}</text>`;
 
-// Q2: one way to plant 40 trees (4 rows of 10)
-const treesSvg = () => {
-  let s = `<svg aria-label="One way: 40 trees planted in 4 rows of 10" viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
-  for (let r = 0; r < 4; r++) for (let c = 0; c < 10; c++) {
-    const x = 150 + c * 34, y = 16 + r * 24;
-    s += `<circle cx="${x}" cy="${y}" r="9" fill="${TEAL}" stroke="${N}" stroke-width="2"/>`;
-  }
-  s += txt(90, 58, '4 rows', 16, TEAL) + txt(303, 114, '10 trees in each row', 15, TEAL);
-  return s + '</svg>';
-};
-
 // Q4: bus timetable strip (minutes after 6:00)
 const busSvg = () => {
-  const x0 = 40, k = 4.2;
-  let s = `<svg aria-label="A time line from 6:00 am to 7:00 am marked every 5 minutes" viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  const x0 = 40, k = 8;
+  let s = `<svg aria-label="A time line from 6:00 am to 7:00 am marked every 5 minutes" viewBox="0 36 600 72" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   s += `<line x1="${x0}" y1="60" x2="${x0 + 60 * k}" y2="60" stroke="${N}" stroke-width="3"/>`;
   for (let m = 0; m <= 60; m += 5) {
     const x = x0 + m * k, big = m % 15 === 0;
     s += `<line x1="${x}" y1="${big ? 48 : 53}" x2="${x}" y2="${big ? 72 : 67}" stroke="${N}" stroke-width="${big ? 3 : 2}"/>`;
-    if (m % 10 === 0 || m % 15 === 0) s += txt(x, 96, m === 0 ? '6:00' : m === 60 ? '7:00' : ':' + String(m).padStart(2, '0'), 15);
+    if (m % 10 === 0 || m % 15 === 0) s += txt(x, 98, m === 60 ? '7:00' : '6:' + String(m).padStart(2, '0'), 14);
   }
   s += txt(x0 + 60 * k + 40, 66, 'am', 16, TEAL, 'start');
   return s + '</svg>';
@@ -123,11 +112,10 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    W.push(H.p('A factor goes into a number exactly. A multiple is in the number\'s times table. 6 is a factor of 24, and 24 is a multiple of 6.', { after: 80 }));
-    W.push(H.q(1, 'Hunt down every factor of 48.', { before: 60, keepNext: true }));
+    W.push(H.q(1, 'Hunt down every factor of 48. (A factor goes into 48 exactly.)', { before: 40, keepNext: true }));
     W.push(H.sub('a', 'Write the factor pairs of 48 in order. You may not need every row.', { keepNext: true }));
     W.push(H.tbl([1650, 1650, 1650, 1650, 1650, 1650], [
-      H.row(['1 × 48', '____ × ____', '____ × ____', '____ × ____', '____ × ____', '____ × ____'].map(s => H.cell(s, 1650, { h: 110 })))
+      H.row(['1 × 48', '__ × __', '__ × __', '__ × __', '__ × __', '__ × __'].map(s => H.cell(s, 1650, { h: 70 })))
     ]));
     W.push(H.gap(60));
     W.push(H.sub('b', 'List all the factors of 48 in order.'));
@@ -135,22 +123,21 @@ module.exports = {
     W.push(H.sub('c', 'How many factors does 48 have? ______   How did you know when to stop looking?'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row.', { keepNext: true }));
-    W.push(H.fig(treesSvg()));
-    W.push(H.sub('a', 'Find every way. Fill in the table. You may not need every row.', { keepNext: true }));
-    W.push(H.tbl([1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100], [
-      H.row([H.cell('Rows', 1100, { bold: true, fill: 'EDEDED' }), ...['4', '', '', '', '', '', '', ''].map(s => H.cell(s, 1100))]),
-      H.row([H.cell('Trees in a row', 1100, { bold: true, fill: 'EDEDED' }), ...['10', '', '', '', '', '', '', ''].map(s => H.cell(s, 1100))])
+    W.push(H.sub('a', 'Find every way. One way is 4 rows of 10 trees. Fill in the table. You may not need every column.', { keepNext: true }));
+    W.push(H.tbl([2298, 1086, 1086, 1086, 1086, 1086, 1086, 1086], [
+      H.row([H.cell('Rows', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['4', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))]),
+      H.row([H.cell('Trees in each row', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['10', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))])
     ]));
     W.push(H.gap(60));
     W.push(H.ans('How many ways?'));
     W.push(H.q(3, 'Mei has 18 red beads and 24 blue beads. She puts them into identical packs. Every pack has the same number of red beads and the same number of blue beads. No beads are left over.', { keepNext: true }));
-    W.push(H.sub('a', 'Factors of 18:  ________________________     Factors of 24:  ________________________________'));
+    W.push(H.sub('a', 'Factors of 18:  _______________     Factors of 24:  ____________________'));
     W.push(H.sub('b', 'Common factors of 18 and 24:  ________________________'));
-    W.push(H.sub('c', 'What is the greatest number of packs she can make?  ______   Each pack has ______ red and ______ blue.'));
+    W.push(H.sub('c', 'Greatest number of packs:  ______    Each pack has  ______ red and  ______ blue.'));
 
     W.push(H.q(4, 'At an interchange, Bus 33 leaves every 10 minutes and Bus 51 leaves every 15 minutes. Both buses leave at 6:00 am.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(busSvg()));
-    W.push(H.sub('a', 'Bus 33 leaves at 6:00, 6:10, ______, ______ …    Bus 51 leaves at 6:00, ______, ______ …'));
+    W.push(H.sub('a', 'Bus 33:  6:00, 6:10, ______, ______ …      Bus 51:  6:00, ______, ______ …'));
     W.push(H.ans('They next leave together at:'));
     W.push(H.sub('b', 'How many times do they leave together from 6:00 am to 8:00 am? Count 6:00 and 8:00 too.'));
     W.push(H.ans('Number of times:'));
@@ -162,14 +149,14 @@ module.exports = {
     ]));
     W.push(H.gap(60));
     W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     W.push(H.sub('c', 'Find ALL the numbers from 1 to 60 that have exactly 3 factors.'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
     W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?'));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
-    W.push(...H.lines(3));
+    W.push(...H.lines(2));
     return W;
   }
 };

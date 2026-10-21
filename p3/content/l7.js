@@ -38,7 +38,7 @@ const q1Fig = () => {
   let b = bgGrid(x0, y0, 22, 5, c);
   b += cellsFig(sh(FA, 1, 1), x0, y0, c) + cellsFig(sh(FB, 6, 1), x0, y0, c) + cellsFig(sh(FC, 12, 1), x0, y0, c) + cellsFig(sh(FD, 17, 1), x0, y0, c);
   [['A', 3], ['B', 8.5], ['C', 13.5], ['D', 18.5]].forEach(([l, cx]) => { b += txt(x0 + cx * c, y0 + 5 * c + 26, l, { size: 22 }); });
-  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 470);
+  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 420);
 };
 // Q3: L-shape, 10 cm by 7 cm with a 4 cm by 3 cm corner cut away (scale 22 px per cm)
 const q3Fig = () => {
@@ -159,7 +159,7 @@ module.exports = {
         H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 30 }))]),
         H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 30 }))])
       ]),
-      H.gap(40),
+      H.gap(20),
       H.sub('a', 'Which two figures have the same area but different perimeters?   ________'),
       H.sub('b', 'Which figures have the same perimeter but different areas?   ________'),
       H.q(2, 'Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List ALL the gardens she can make, in order.', { keepNext: true }),
@@ -167,10 +167,9 @@ module.exports = {
         H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
         ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('\u00a0', w, { h: 20 }))))
       ]),
-      H.gap(40),
+      H.gap(20),
       H.sub('a', 'Which garden has the biggest area?   ______________'),
-      H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?'),
-      H.ans('Answer:'),
+      H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?   ____________ cm²', { after: 60 }),
 
       H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure.', { pb: true, before: 0, keepNext: true }),
       side(q3Fig(), H.sub('', 'Missing sides:  ____ and ____') + H.sub('a', 'Area = __________ cm²') + H.sub('b', 'Perimeter = __________ cm')),

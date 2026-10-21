@@ -1,0 +1,68 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:24:58Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P3: Lesson 1 – Number Sleuths",
+ "order": [
+  "p3l1-title",
+  "p3l1-warm1",
+  "p3l1-warm2",
+  "p3l1-explore1",
+  "p3l1-explore2",
+  "p3l1-teach1",
+  "p3l1-we1",
+  "p3l1-we2",
+  "p3l1-try1",
+  "p3l1-teach2",
+  "p3l1-key",
+  "p3l1-break",
+  "p3l1-teachpat",
+  "p3l1-ws1",
+  "p3l1-ws1ans",
+  "p3l1-teachrename",
+  "p3l1-teachclues",
+  "p3l1-tryclues",
+  "p3l1-teachsum",
+  "p3l1-ws2",
+  "p3l1-ws2ans",
+  "p3l1-stretch",
+  "p3l1-challenge",
+  "p3l1-chdiag",
+  "p3l1-chwalk",
+  "p3l1-talk",
+  "p3l1-exit"
+ ],
+ "cover": "p3l1-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p3l1-title"
+  },
+  "s2": {
+   "description": "Teach: greatest, smallest and make a list in order",
+   "start": "p3l1-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p3l1-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p3l1-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

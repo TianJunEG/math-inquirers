@@ -52,13 +52,14 @@ const listMon = (name, vals, x, y, fs = 16) => {
   });
   return { s, w, h: rh * (vals.length + 1) + 10 };
 };
+const codeSvg = (prog, aria) => { const b = blocks(prog); return `<svg aria-label="${esc(aria)}" viewBox="0 0 ${b.w} ${b.h}" xmlns="http://www.w3.org/2000/svg" style="width:${b.w}px;max-width:100%">${b.svg}</svg>`; };
 const codeFig = (prog, aria, list) => {
   const b = blocks(prog);
   let extra = '', W = b.w, Hh = b.h;
   if (list) { const m = listMon(list[0], list[1], b.w + 40, 2); extra = m.s; W = b.w + 40 + m.w + 4; Hh = Math.max(Hh, m.h + 6); }
   return `<svg aria-label="${esc(aria)}" viewBox="0 0 ${W} ${Hh}" xmlns="http://www.w3.org/2000/svg" style="width:${W}px;max-width:100%">${b.svg}${extra}</svg>`;
 };
-const pyBox = (title, code) => `<div class="p" style="margin:6px 0 4px"><div style="border:2px solid ${TEAL};border-radius:10px;padding:6px 12px;background:#F3FAF8"><div style="font-weight:700;color:${TEAL};font-size:14px">${esc(title)}</div><pre style="margin:2px 0 0;font-family:'Courier New',monospace;font-size:13px;line-height:1.3;color:${NAVY}">${esc(code)}</pre></div></div>`;
+const pyBox = (title, code) => `<div style="margin:0"><div style="border:2px solid ${TEAL};border-radius:10px;padding:6px 12px;background:#F3FAF8"><div style="font-weight:700;color:${TEAL};font-size:14px">${esc(title)}</div><pre style="margin:2px 0 0;font-family:'Courier New',monospace;font-size:11.5px;line-height:1.3;color:${NAVY}">${esc(code).replace(/\n/g, '&#10;')}</pre></div></div>`;
 
 const PY_MEAN = `data = [3, 0, 4, 1, 2]        # goals in 5 matches
 total = 0
@@ -72,6 +73,13 @@ for value in data:
     if value > mean:
         above = above + 1
 print("Above the mean:", above)`;
+
+const PY_WB = `data = [3, 0, 4, 1, 2]
+total = 0
+for value in data:
+    total = total + value
+mean = total / len(data)
+print("Mean:", mean)`;
 
 module.exports = {
   lesson: {
@@ -91,9 +99,9 @@ module.exports = {
       ['Q1', '(a) 30  (b) 6  (c) −2, +1, −4, +2, +3; they add up to 0 (the values above and below the mean balance)'],
       ['Q2', '(a) 68 points (17 × 4)  (b) 19 (68 − 15 − 20 − 14)  (c) 22 (5 × 18 = 90, 90 − 68 = 22)'],
       ['Q3', '(a) stays the same: 10 (60 ÷ 6)  (b) goes up: 13  (c) goes down: 9 (36 ÷ 4)  (d) goes up: 16 (80 ÷ 5)'],
-      ['Q4', '(a) total after each loop: 5, 14, 20, 32 (i = 1, 2, 3, 4; items 5, 9, 6, 12)  (b) 8  (c) repeat (length of scores) and say total ÷ (length of scores); it now says 9 (45 ÷ 5)'],
-      ['Q5', '(a) $22 (154 ÷ 7)  (b) $15  (c) $12  (d) 6 pupils  (e) Not fair: the one $69 pulls the mean up, and 6 of the 7 pupils get less than $22. The median $15 describes a typical pupil better.'],
-      ['Q6', '(a) 31 °C (217 ÷ 7)  (b) 3 days (33, 32 and 34)  (c) the blanks are mean and count; the program says 3']
+      ['Q4', '(a) $22 (154 ÷ 7)  (b) $15  (c) $12  (d) 6 pupils  (e) Not fair: the one $69 pulls the mean up, and 6 of the 7 pupils get less than $22. The median $15 describes a typical pupil better.'],
+      ['Q5', 'Trace: i = 1, 2, 3, 4; item i = 5, 9, 6, 12; total = 5, 14, 20, 32.  (a) 8 (32 ÷ 4)  (b) repeat (length of scores) and say total ÷ (length of scores); it should now say 9 (45 ÷ 5)'],
+      ['Q6', '(a) 31 °C (217 ÷ 7)  (b) 3 days (33, 32 and 34)  (c) Blank 1: mean.  Blank 2: count.  It says 3.']
     ]
   },
 
@@ -123,8 +131,8 @@ module.exports = {
     keyBig: 'Mean = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
     keySmall: 'One extreme value can pull the mean a long way. Then the median (middle value) or mode (most common) may describe a typical value better.',
     brk: 'Dice jumps. Roll two dice on screen: everyone does that many star jumps. Three rounds. What was the mean number of jumps per round?',
-    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes, Q4 trace the mean program.',
-    ws2: 'Page 2, on your own: Q5 a misleading mean (median and mode), Q6 Singapore temperatures and plan the code that counts days above the mean.'
+    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes, Q4 a misleading mean (median and mode).',
+    ws2: 'Page 2, on your own: Q5 trace the mean program, Q6 Singapore temperatures and plan the code that counts the days above the mean.'
   },
 
   qbank: {
@@ -161,52 +169,45 @@ module.exports = {
 
   workbook: H => {
     const meanProg = ['when flag clicked', 'set total to 0', 'set i to 1', { c: 'repeat 4', body: ['change total by (item i of scores)', 'change i by 1'] }, 'say (total / 4)'];
-    const planProg = ['set count to 0', 'set i to 1', { c: 'repeat (length of temps)', body: [{ c: 'if (item i of temps) > ( ________ ) then', body: ['change ( ________ ) by 1'] }, 'change i by 1'] }, 'say count'];
+    const planProg = ['set count to 0', 'set i to 1', { c: 'repeat (length of temps)', body: [{ c: 'if (item i of temps) > ( _____ ) then', body: ['change ( _____ ) by 1'] }, 'change i by 1'] }, 'say count'];
     const w1 = [3300, 1100, 1100, 1100, 1100, 1100, 1100];
-    const w3 = [4400, 2700, 2800];
-    const w4 = [2000, 2000, 3000, 2900];
+    const w3 = [4000, 3400, 2500];
+    const w4 = [1500, 1000, 1700, 1700];
+    const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     return [
-      H.p('Mean = total ÷ how many values.      Total = mean × how many values.', { after: 40 }),
-      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 40, keepNext: true }),
+      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 0, keepNext: true }),
       H.sub('a', 'What is the total?   ________          (b)  What is the mean?   ________'),
-      H.sub('c', 'Check by balancing. Write how far each value is above (+) or below (−) the mean. Then add up the bottom row.', { keepNext: true }),
-      H.tbl(w1, [
-        H.row([H.cell('Value', w1[0], { bold: true, fill: 'EDEDED' }), ...['4', '7', '2', '8', '9'].map(s => H.cell(s, 1100, { bold: true })), H.cell('Add up', 1100, { bold: true, fill: 'EDEDED' })]),
-        H.row([H.cell('Above (+) or below (−)', w1[0], { bold: true, fill: 'EDEDED', h: 110 }), ...Array(6).fill(0).map(() => H.cell('', 1100, { h: 110 }))])
-      ]),
-      H.q(2, 'Siti played a game 4 times. Her mean score was 17 points. Her first three scores were 15, 20 and 14.', { keepNext: true }),
-      H.sub('a', 'What was her total for the 4 games?   ________'),
-      H.sub('b', 'What was her 4th score?   ________'),
-      H.sub('c', 'She plays a 5th game. What must she score to make her mean exactly 18?   ________'),
-      H.q(3, 'The data 6, 8, 10, 12, 14 has a mean of 10. For each change, predict first: will the mean go up, go down or stay the same? Then work out the new mean.', { keepNext: true }),
+      H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }),
+      H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____'),
+      H.q(2, 'Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14.', { keepNext: true }),
+      H.sub('a', 'Her total for the 4 games?  ______          (b)  Her 4th score?  ______'),
+      H.sub('c', 'She plays a 5th game. What must she score to make her mean exactly 18?   ______'),
+      H.q(3, 'The data 6, 8, 10, 12, 14 has a mean of 10. Predict first: up, down or the same? Then work out the new mean.', { keepNext: true }),
       H.tbl(w3, [
-        H.row(['Change', 'Up, down or the same?', 'New mean'].map((s, i) => H.cell(s, w3[i], { bold: true, fill: 'EDEDED' }))),
-        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 90 }), H.cell('', w3[1]), H.cell('', w3[2])]))
+        H.row(['Change', 'Up, down or the same?', 'New mean'].map((s, i) => H.cell(s, w3[i], { bold: true, fill: 'EDEDED', h: 40 }))),
+        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 45 }), H.cell('', w3[1], { h: 45 }), H.cell('', w3[2], { h: 45 })]))
       ]),
-      H.q(4, 'Trace the code. The list called scores holds 5, 9, 6 and 12.', { keepNext: true }),
-      H.fig(codeFig(meanProg, 'Code blocks: when flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4. Beside it, the list scores: 5, 9, 6, 12.', ['scores', ['5', '9', '6', '12']])),
-      H.sub('a', 'Fill in the trace table, one row for each time round the loop.', { keepNext: true }),
-      H.tbl(w4, [
-        H.row(['Loop', 'i', 'item i of scores', 'total after the loop'].map((s, i) => H.cell(s, w4[i], { bold: true, fill: 'EDEDED' }))),
-        ...['1st', '2nd', '3rd', '4th'].map(s => H.row([H.cell(s, w4[0], { bold: true, h: 70 }), H.cell('', w4[1]), H.cell('', w4[2]), H.cell('', w4[3])]))
-      ]),
-      H.sub('b', 'What does the sprite say?   ________'),
-      H.sub('c', 'Jo adds a 5th score, 13, to the list. Which two blocks must change so the program works for a list of ANY length? What should it say now?'),
-      ...H.lines(2),
-
-      H.q(5, 'Seven P6 pupils get this pocket money each week:   $10,  $12,  $12,  $15,  $16,  $20,  $69', { pb: true, before: 0, keepNext: true }),
-      H.p('Median: the middle value when the data is in order.     Mode: the value that appears most often.', { after: 40 }),
-      H.sub('a', 'Mean   ________        (b)  Median   ________        (c)  Mode   ________'),
+      H.q(4, 'Seven P6 pupils get this pocket money each week:   $10,  $12,  $12,  $15,  $16,  $20,  $69', { keepNext: true }),
+      H.sub('a', 'Mean  ____      (b)  Median (middle value)  ____      (c)  Mode (most often)  ____'),
       H.sub('d', 'How many of the pupils get less than the mean?   ________'),
       H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.'),
-      ...H.lines(3),
+      ...H.lines(2),
+
+      H.q(5, 'Trace the code. The list called scores holds 5, 9, 6 and 12 (item 1 is 5, item 2 is 9, and so on). Fill in the trace table, one row for each time round the loop.', { pb: true, before: 0, keepNext: true }),
+      side(codeSvg(meanProg, 'Code blocks: when flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4.'),
+        H.tbl(w4, [
+          H.row(['Loop', 'i', 'item i', 'total'].map((s, i) => H.cell(s, w4[i], { bold: true, fill: 'EDEDED', h: 60 }))),
+          ...['1st', '2nd', '3rd', '4th'].map(s => H.row([H.cell(s, w4[0], { bold: true, h: 75 }), H.cell('', w4[1], { h: 75 }), H.cell('', w4[2], { h: 75 }), H.cell('', w4[3], { h: 75 })]))
+        ])),
+      H.sub('a', 'What does the sprite say?   ________'),
+      H.sub('b', 'Jo adds a 5th score, 13, to the list. Which two blocks must change so the program works for a list of ANY length? What should it say now?'),
+      ...H.lines(2),
       H.q(6, 'The highest temperature each day for a week in Singapore, in °C:   29,  31,  33,  30,  32,  34,  28', { keepNext: true }),
-      H.sub('a', 'What is the mean temperature?   ________ °C'),
-      H.sub('b', 'On how many days was it hotter than the mean?   ________'),
+      H.sub('a', 'Mean temperature?  ____ °C          (b)  Days hotter than the mean?  ____'),
       H.sub('c', 'Plan your code. The variable mean already holds your answer to (a). Fill in the two blanks so the program counts the days hotter than the mean. What will it say?', { keepNext: true }),
-      H.fig(codeFig(planProg, 'Code blocks with two blanks: set count to 0, set i to 1, repeat length of temps (if item i of temps is greater than blank then change blank by 1; change i by 1), say count. Beside it, the list temps.', ['temps', ['29', '31', '33', '30', '32', '34', '28']])),
-      H.p('Blank 1:  ____________      Blank 2:  ____________      It says:  ________', { after: 60 }),
-      H.p([pyBox('Python fans (optional): the mean program. Type it in. Does it agree with you?', PY_MEAN)], { after: 0 })
+      side(codeSvg(planProg, 'Code blocks with two blanks: set count to 0, set i to 1, repeat length of temps (if item i of temps is greater than blank then change blank by 1; change i by 1), say count.'),
+        pyBox('Python (optional): put the temperatures in data. Does it agree with (a)?', PY_WB)),
+      H.sub('', 'Blank 1:  ____________        Blank 2:  ____________        It says:  ________')
     ];
   }
 };

@@ -34,8 +34,8 @@ const wall = () => {
 
 // Q2 shapes, all cut into equal parts
 const shapes = () => {
-  let s = `<svg aria-label="Five shapes A to E, each cut into equal parts with some parts shaded" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px">`;
-  const lab = (x, t) => `<text x="${x}" y="160" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="${FF}">${t}</text>`;
+  let s = `<svg aria-label="Five shapes A to E, each cut into equal parts with some parts shaded" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:370px">`;
+  const lab = (x, t) => `<text x="${x}" y="164" font-size="24" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="${FF}">${t}</text>`;
   // A: square with both diagonals: 4 equal triangles, top one shaded
   { const x = 10, y = 20, a = 100;
     s += `<polygon points="${x},${y} ${x + a},${y} ${x + a / 2},${y + a / 2}" fill="${YEL}"/>`;
@@ -63,13 +63,11 @@ const shapes = () => {
   return s + '</svg>';
 };
 
-// Q6 partner cards
+// Q6 partner cards in one row (yellow and blue mixed)
 const cards = () => {
-  const top = [[1, 4], [2, 3], [3, 8], [5, 12], [1, 6]], bot = [[7, 12], [6, 8], [5, 6], [5, 8], [4, 12]];
-  let s = `<svg aria-label="Ten fraction cards in two rows" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px">`;
-  const card = (x, y, n, d, fill) => `<rect x="${x}" y="${y}" width="90" height="70" rx="10" fill="${fill}" stroke="${NAVY}" stroke-width="2.5"/>` + sfr(x + 45, y + 34, n, d, 22);
-  top.forEach(([n, d], i) => { s += card(15 + i * 117, 8, n, d, YEL); });
-  bot.forEach(([n, d], i) => { s += card(15 + i * 117, 142, n, d, SKY); });
+  const all = [[1, 4, YEL], [7, 12, SKY], [2, 3, YEL], [6, 8, SKY], [3, 8, YEL], [5, 6, SKY], [5, 12, YEL], [5, 8, SKY], [1, 6, YEL], [4, 12, SKY]];
+  let s = `<svg aria-label="Ten fraction cards: five yellow and five blue" viewBox="0 0 600 76" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px">`;
+  all.forEach(([n, d, f], i) => { const x = 4 + i * 59.6; s += `<rect x="${r1(x)}" y="4" width="52" height="68" rx="9" fill="${f}" stroke="${NAVY}" stroke-width="2.5"/>` + sfr(x + 26, 37, n, d, 20); });
   return s + '</svg>';
 };
 
@@ -99,7 +97,7 @@ module.exports = {
       ['Q3', '(a) A, B and D (A: 1 of 4 equal parts; B: 2/8 = 1/4; D: 3/12 = 1/4).  (b) C: 2/6 (= 1/3) shaded.  E: 3/8 shaded.'],
       ['Q4', '(a) 5/7  (b) 2/8 + 3/8 = 5/8  (c) 4/12 + 5/12 = 9/12 (= 3/4)  (d) 5/6 − 2/6 = 3/6 (= 1/2)  (e) 10/10 − 3/10 = 7/10  (f) 5/10 + 3/10 = 8/10 (= 4/5).'],
       ['Q5', '(a) 1/6 + 4/6 = 5/6 of the fence.  (b) 1/6 is not painted.  (c) 4/6 − 1/6 = 3/6 = 1/2 of the fence more in the afternoon.'],
-      ['Q6', '(a) 1/4 and 6/8;  2/3 and 4/12;  3/8 and 5/8;  5/12 and 7/12;  1/6 and 5/6.  (b) Any correct pair with different bottom numbers, e.g. 1/2 + 4/8, 1/3 + 8/12, 3/4 + 2/8, 2/5 + 6/10.'],
+      ['Q6', '1/4 and 6/8;  2/3 and 4/12;  3/8 and 5/8;  5/12 and 7/12;  1/6 and 5/6.'],
       ['Q7', '(a) 7/12 and 8/12 (1/2 = 6/12 and 3/4 = 9/12; the end fractions are not between).  (b) 8/12 = 2/3.']
     ]
   },
@@ -208,26 +206,22 @@ module.exports = {
     W.push(H.q(3, 'Each shape is cut into equal parts.', { pb: true, before: 0, keepNext: true, after: 20 }));
     W.push(H.fig(shapes()));
     W.push(H.sub('a', ['Which shapes have exactly ', fr(1, 4), ' shaded?   ________']));
-    W.push(H.sub('b', 'For each of the other shapes, write the fraction that is shaded.   ________________'));
+    W.push(H.sub('b', 'Write the fraction shaded in each of the other shapes.   ________________'));
     W.push(H.q(4, 'Add or subtract. Make the parts the same size first.', { keepNext: true }));
-    const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;________`, 'font-size:20px'), '<div style="height:26px"></div>'], 3300, { h: 70 });
+    const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;______`, 'font-size:20px;white-space:nowrap')], 3300, { h: 150 });
     W.push(H.tbl(cw, [
       H.row([sum('a', [2, 7], '+', [3, 7]), sum('b', [1, 4], '+', [3, 8]), sum('c', [1, 3], '+', [5, 12])]),
       H.row([sum('d', [5, 6], '−', [1, 3]), sum('e', 1, '−', [3, 10]), sum('f', [1, 2], '+', [3, 10])])
     ]));
-    W.push(H.q(5, ['Ravi paints ', fr(1, 6), ' of a fence in the morning and ', fr(2, 3), ' of the same fence in the afternoon. Draw a bar to help you.'], { keepNext: true }));
-    W.push(H.sub('a', 'What fraction of the fence has he painted?   ________'));
-    W.push(H.sub('b', 'What fraction of the fence is not painted yet?   ________'));
-    W.push(H.sub('c', 'How much more of the fence did he paint in the afternoon than in the morning?   ________', { keepNext: true }));
-    W.push(...H.lines(1));
-    W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true }));
-    W.push(H.sub('a', 'Join each yellow card to the blue card that makes one whole with it.', { keepNext: true, after: 20 }));
+    W.push(H.q(5, ['Ravi paints ', fr(1, 6), ' of a fence in the morning and ', fr(2, 3), ' of it in the afternoon. Draw a bar.'], { keepNext: true }));
+    W.push(H.sub('a', 'What fraction has he painted?   ________        (b)  What fraction is not painted?   ________'));
+    W.push(H.sub('c', 'How much more did he paint in the afternoon than in the morning?   ________'));
+    W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true, after: 40 }));
+    W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
-    W.push(H.sub('b', 'Write one more pair of fractions with different bottom numbers that make one whole.   ________________'));
-    W.push(H.q(7, 'Fractions in between.', { keepNext: true }));
-    W.push(H.sub('a', ['Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '.'], { keepNext: true }));
-    W.push(H.ans());
-    W.push(H.sub('b', ['Which one of your fractions is equal to ', fr(2, 3), '?   ________']));
+    W.push(...H.lines(1));
+    W.push(H.q(7, ['Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '.'], { keepNext: true, after: 60 }));
+    W.push(H.sub('a', ['______________________     (b)  Which one is equal to ', fr(2, 3), '?   ________']));
     return W;
   }
 };

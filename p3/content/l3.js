@@ -7,20 +7,20 @@ const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size ||
 
 // 7 rows of 8 dots, split after row 5
 const arraySvg = () => {
-  const rows = 7, cols = 8, gx = 34, gy = 30, x0 = 120, y0 = 30;
-  let s = `<svg aria-label="An array of 7 rows of 8 dots split into 5 rows and 2 rows" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:330px;max-width:100%">`;
+  const rows = 7, cols = 8, gx = 30, gy = 25, x0 = 120, y0 = 22;
+  let s = `<svg aria-label="An array of 7 rows of 8 dots split into 5 rows and 2 rows" viewBox="0 0 560 214" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
   for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
     const y = y0 + r * gy + (r >= 5 ? 18 : 0);
-    s += `<circle cx="${x0 + c * gx}" cy="${y}" r="11" fill="${r < 5 ? YEL : SKY}" stroke="${NAVY}" stroke-width="2"/>`;
+    s += `<circle cx="${x0 + c * gx}" cy="${y}" r="9.5" fill="${r < 5 ? YEL : SKY}" stroke="${NAVY}" stroke-width="2"/>`;
   }
   const yl = y0 + 4 * gy + 24;
   s += `<line x1="${x0 - 30}" y1="${yl}" x2="${x0 + 7 * gx + 30}" y2="${yl}" stroke="#D64545" stroke-width="3" stroke-dasharray="8 6"/>`;
   // brackets on the right
-  const bx = x0 + 7 * gx + 40;
-  const br = (ya, yb, label) => `<path d="M${bx} ${ya} h12 V${yb} h-12" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + txt(bx + 24, (ya + yb) / 2 + 6, label, { a: 'start', size: 17 });
+  const bx = x0 + 7 * gx + 36;
+  const br = (ya, yb, label) => `<path d="M${bx} ${ya} h12 V${yb} h-12" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + txt(bx + 22, (ya + yb) / 2 + 8, label, { a: 'start', size: 24 });
   s += br(y0 - 12, y0 + 4 * gy + 12, '5 rows of 8');
-  s += br(y0 + 5 * gy + 6, y0 + 6 * gy + 30, '2 rows of 8');
-  s += txt(40, y0 + 2 * gy + 6, '7 rows', { size: 16, fill: TEAL });
+  s += br(y0 + 5 * gy + 8, y0 + 6 * gy + 30, '2 rows of 8');
+  s += txt(50, y0 + 3 * gy + 8, '7 rows', { size: 24, fill: TEAL });
   return s + '</svg>';
 };
 
@@ -43,8 +43,8 @@ module.exports = {
     ],
     extension: 'Draw last-digit circles for all the tables from 1 to 9 and group the tables that make the same shape. Explain why 1 and 9, 2 and 8, 3 and 7, 4 and 6 pair up.',
     key: [
-      ['Q1', '(a) 9, 18, 27, 36, 45, 54, 63, 72, 81, 90  (b) The tens digit goes up by 1 and the ones digit goes down by 1; the two digits add up to 9; the tens digit is 1 less than the number of nines.  (c) In 9 × 8 the tens digit is 1 less than 8, so it is 7, and 7 + 2 = 9, so 9 × 8 = 72. 81 is 9 × 9.'],
-      ['Q2', '(a) Answers 7, 14, 21, 28, 35, 42, 49, 56, 63, 70; last digits 7, 4, 1, 8, 5, 2, 9, 6, 3, 0  (b) All ten digits 0 to 9, each once  (c) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). Tables 2, 4, 6, 8 give only even last digits; the 5s give only 5 and 0.  (d) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
+      ['Q1', 'Table: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90  (a) The tens digit goes up by 1 and the ones digit goes down by 1; the two digits add up to 9; the tens digit is 1 less than the number of nines.  (b) In 9 × 8 the tens digit is 1 less than 8, so it is 7, and 7 + 2 = 9, so 9 × 8 = 72. 81 is 9 × 9.'],
+      ['Q2', 'Table: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 (from 7, 14, 21, 28, 35, 42, 49, 56, 63, 70): all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). Tables 2, 4, 6, 8 give only even last digits; the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
       ['Q3', '(a) 5 × 8 = 40, 2 × 8 = 16, so 7 × 8 = 56  (b) For example 5 × 6 + 4 × 6 = 30 + 24 = 54, or 10 × 6 − 6 = 54.'],
       ['Q4', 'Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
       ['Q5', '(a) 2 rows of 18, 3 of 12, 4 of 9, 6 of 6, 9 of 4, 12 of 3, 18 of 2  (b) 7 ways  (c) 6 rows of 6: turned round it is the same, so it has no partner. That is why the number of ways is odd.'],
@@ -138,31 +138,28 @@ module.exports = {
     const out = [];
     const C = (s, w, o) => H.cell(s, w, o);
     // Q1
-    out.push(H.q(1, 'Patterns in the 9 times table. Look for a pattern and test it.', { before: 60, keepNext: true }));
-    out.push(H.sub('a', 'Fill in the answers.', { keepNext: true }));
+    out.push(H.q(1, 'Patterns in the 9 times table. Fill in the answers.', { before: 60, keepNext: true }));
     { const ws = [1400, 850, 850, 850, 850, 850, 850, 850, 850, 850, 850];
       out.push(H.tbl(ws, [
         H.row([C('9 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
         H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), C('9', 850), C('18', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
-    out.push(H.sub('b', 'Look at the tens digits and the ones digits. Write TWO patterns you notice.'));
+    out.push(H.sub('a', 'Look at the tens digits and the ones digits. Write TWO patterns you notice.'));
     out.push(...H.lines(1));
-    out.push(H.sub('c', 'Ali says 9 × 8 = 81, because 8 + 1 = 9. Use a pattern to explain why he is wrong.'));
+    out.push(H.sub('b', 'Ali says 9 × 8 = 81, because 8 + 1 = 9. Use a pattern to explain why he is wrong.'));
     out.push(...H.lines(1));
     // Q2
-    out.push(H.q(2, 'Last digits in the 7 times table.', { keepNext: true }));
-    out.push(H.sub('a', 'Work out each answer in your head. Write only its LAST digit.', { keepNext: true }));
+    out.push(H.q(2, 'Last digits in the 7 times table. Write only the LAST digit of each answer.', { keepNext: true }));
     { const ws = [1400, 850, 850, 850, 850, 850, 850, 850, 850, 850, 850];
       out.push(H.tbl(ws, [
         H.row([C('7 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
         H.row([C('Last digit', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('4', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
-    out.push(H.sub('b', 'Which of the digits 0 to 9 appear as a last digit?   ________'));
-    out.push(H.sub('c', 'Find ALL the other times tables from 2 to 9 whose last digits also use all ten digits.   ______'));
-    out.push(H.sub('d', 'Without working out 7 × 46, what is its last digit? Explain.'));
+    out.push(H.sub('a', 'Find ALL the other tables from 2 to 9 that also use all ten last digits.   ______'));
+    out.push(H.sub('b', 'Without working out 7 × 46, what is its last digit? Explain.'));
     out.push(...H.lines(1));
     // Q3
-    out.push(H.q(3, 'Mei does not know 7 × 8. She splits the array of 7 rows of 8 dots into two parts.', { keepNext: true }));
+    out.push(H.q(3, 'Mei does not know 7 × 8. She splits 7 rows of 8 dots into two parts.', { keepNext: true }));
     out.push(H.fig(arraySvg()));
     out.push(H.sub('a', '5 × 8 = ______      2 × 8 = ______      so  7 × 8 = ______'));
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));

@@ -128,6 +128,7 @@ module.exports = {
     W.push(...H.lines(1));
     W.push(H.q(3, 'Ravi packs marbles into bags of 8. He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
     W.push(H.sub('a', 'How many marbles does Ravi have?   ____'));
+    W.push(...H.lines(1));
     W.push(H.sub('b', 'He tips them all out and packs them again into bags of 9. How many full bags does he get? How many marbles are left over?', { keepNext: true }));
     W.push(H.ans('Full bags: ______     Left over:'));
 

@@ -51,7 +51,7 @@ def blocks_svg(prog,fs=30,label='Code blocks',scale=1.0):
         if kind=='control':
             stack.append((lv,x,y,w)); texts+=parts
         elif kind=='event':
-            shapes.append(f'<path d="M{x} {y+rh} V{y+fs*0.5} Q{x+fs*2} {y-fs*0.55} {x+fs*4} {y+fs*0.5} H{x+w-10} Q{x+w} {y+fs*0.5} {x+w} {y+fs*0.5+10} V{y+rh} Z" fill="{BK[kind][0]}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>'); texts+=parts
+            shapes.append(f'<path d="M{x} {y+rh} V{y+fs*0.15} Q{x+fs*2} {y-fs*0.75} {x+fs*4} {y+fs*0.15} H{x+w-10} Q{x+w} {y+fs*0.15} {x+w} {y+fs*0.15+10} V{y+rh} Z" fill="{BK[kind][0]}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>'); texts+=parts
         else:
             shapes.append(f'<rect x="{x}" y="{y:.0f}" width="{w:.0f}" height="{rh:.0f}" rx="10" fill="{BK[kind][0]}" stroke="{NAVY}" stroke-width="3"/>'); texts+=parts
         maxx=max(maxx,x+w); y+=rh
@@ -70,11 +70,13 @@ def numline_svg(lo,hi,w=1664,h=190,marks=(),jumps=(),every=1,lab_every=1,label='
             s.append(f'<line x1="{X(v):.1f}" y1="{ly-(14 if big else 9)}" x2="{X(v):.1f}" y2="{ly+(14 if big else 9)}" stroke="{NAVY}" stroke-width="{4 if v==0 else 3}"/>')
             if big: s.append(f'<text x="{X(v):.1f}" y="{ly+14+fs+2}" font-size="{fs}" font-weight="{800 if v==0 else 600}" text-anchor="middle" fill="{TEAL if v==0 else NAVY}" font-family="Arial">{v if v>=0 else "−"+str(-v)}</text>')
             v+=every
-    for v,t,col in marks:
+    for m in marks:
+        v,t,col=m[:3]; dy=m[3] if len(m)>3 else 26
         s.append(f'<circle cx="{X(v):.1f}" cy="{ly}" r="13" fill="{col}" stroke="{NAVY}" stroke-width="3"/>')
-        if t: s.append(f'<text x="{X(v):.1f}" y="{ly-26}" font-size="{fs}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{E(t)}</text>')
-    for a,b,t,col in jumps:
-        xa,xb=X(a),X(b); xm=(xa+xb)/2; hh=min(ly-fs-20,40+abs(xb-xa)*0.18); cy=ly-8-2*hh
+        if t: s.append(f'<text x="{X(v):.1f}" y="{ly-dy}" font-size="{fs}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{E(t)}</text>')
+    for j in jumps:
+        a,b,t,col=j[:4]
+        xa,xb=X(a),X(b); xm=(xa+xb)/2; hh=j[4] if len(j)>4 else min(ly-fs-20,40+abs(xb-xa)*0.18); cy=ly-8-2*hh
         s.append(f'<path d="M{xa:.1f} {ly-8} Q{xm:.1f} {cy:.1f} {xb:.1f} {ly-8}" fill="none" stroke="{col}" stroke-width="5"/>')
         dx,dy=xb-xm,(ly-8)-cy; n=(dx*dx+dy*dy)**0.5; ux,uy=dx/n,dy/n
         bx,by=xb-22*ux,ly-8-22*uy
@@ -120,7 +122,7 @@ body=h2('Warm-up: cold city line-up')+p('7 a.m. on a December morning. Line the 
 for i,(c,t) in enumerate(cities):
     body+=pin(128+i*338,330,306,f'<p style="font-family:{HF};font-size:36px;font-weight:600">{E(c)}</p><p style="font-size:48px;font-weight:800;color:{TEAL if t>=0 else RED}">{N(t)} °C</p>',None,WHITE,20,'16px 22px',f'box-sizing:border-box;border:3px solid {NAVY}')
 body+=pin(128,500,1664,numline_svg(-25,30,1664,150,every=5,lab_every=5,label='Number line from minus 25 to 30',ly=80),None)
-body+=pin(128,500,1664,numline_svg(-25,30,1664,150,marks=[(t,c[:3],YEL if t>=0 else SKY) for c,t in cities],every=5,lab_every=5,label='Cities placed on the number line',only=True,ly=80),'fade')
+body+=pin(128,500,1664,numline_svg(-25,30,1664,150,marks=[(t,c[:3],YEL if t>=0 else SKY,60 if c=='Seoul' else 26) for c,t in cities],every=5,lab_every=5,label='Cities placed on the number line',only=True,ly=80),'fade')
 body+=answer(128,670,1664,'Coldest to warmest:  Harbin −22,  Beijing −9,  Seoul −7,  Tokyo 3,  Singapore 25')
 body+=qrow(128,790,1100,'Then:','How many degrees warmer is Tokyo than Seoul?',34)+answer(1260,790,532,'10 degrees')
 put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,
@@ -137,9 +139,9 @@ put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboard
 stage=(f'<svg aria-label="The Scratch stage is a number line: x goes from minus 240 to 240" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="width:700px;height:304px;flex:none">'
  f'<rect x="20" y="10" width="720" height="250" rx="14" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>'
  f'<line x1="20" y1="135" x2="740" y2="135" stroke="{NAVY}" stroke-width="3" stroke-dasharray="10 8"/>'
- +''.join(f'<line x1="{380+v*1.5:.0f}" y1="125" x2="{380+v*1.5:.0f}" y2="145" stroke="{NAVY}" stroke-width="3"/>' for v in range(-200,201,100))
+ +''.join(f'<line x1="{380+v*1.5:.0f}" y1="125" x2="{380+v*1.5:.0f}" y2="145" stroke="{NAVY}" stroke-width="3"/>' for v in (-100,0,100))
  +f'<circle cx="{380-150*1.5:.0f}" cy="105" r="26" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/><text x="{380-150*1.5:.0f}" y="66" font-size="26" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">Dot</text>'
- +''.join(f'<text x="{x}" y="300" font-size="28" font-weight="{800 if v=="0" else 600}" text-anchor="middle" fill="{TEAL if v=="0" else NAVY}" font-family="Arial">{v}</text>' for x,v in [(36,'−240'),(230,'−100'),(380,'0'),(530,'100'),(724,'240')])
+ +''.join(f'<text x="{x}" y="300" font-size="28" font-weight="{800 if v=="0" else 600}" text-anchor="middle" fill="{TEAL if v=="0" else NAVY}" font-family="Arial">{v}</text>' for x,v in [(52,'−240'),(230,'−100'),(380,'0'),(530,'100'),(712,'240')])
  +'</svg>')
 steps=['Set x to 0. Your sprite (call it Dot) is in the middle.','Predict, then test: change x by 100, then change x by −250. Where is Dot?','Build the thermometer program on the right.','Predict the LAST number it says. Then click the flag.']
 left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:32px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',extra='flex:1;min-width:0')
@@ -168,7 +170,7 @@ put(f'{L}-teach1',sec(f'{L}-teach1','25–27 MIN',body,'Teach. Click 1: the thre
 body=h2('Worked example: up and down the line')+card(p('It is −4 °C at 6 a.m. It rises 9 degrees by noon. Then it falls 7 degrees by night.',38,700))
 body+=pin(128,410,1664,numline_svg(-8,8,1664,230,label='Number line from minus 8 to 8',ly=160),None)
 body+=pin(128,410,1664,numline_svg(-8,8,1664,230,jumps=[(-4,5,'+9',TEAL)],only=True,label='Jump of plus 9 from minus 4 to 5',ly=160),'fade')
-body+=pin(128,410,1664,numline_svg(-8,8,1664,230,jumps=[(5,-2,'−7',RED)],only=True,label='Jump of minus 7 from 5 to minus 2',ly=160),'fade')
+body+=pin(128,410,1664,numline_svg(-8,8,1664,230,jumps=[(5,-2,'−7',RED,55)],only=True,label='Jump of minus 7 from 5 to minus 2',ly=160),'fade')
 body+=step(1,'Rise 9: from −4, 4 up to 0, then 5 more. Noon: 5 °C.   (−4 + 9 = 5)',top=670,size=34)
 body+=step(2,'Fall 7: from 5, 5 down to 0, then 2 more. Night: −2 °C.   (5 − 7 = −2)',top=780,size=34)
 put(f'{L}-we1',sec(f'{L}-we1','27–29 MIN',body,'Click order: the +9 jump, the −7 jump, step 1, step 2. Ask before each jump: "Which way do we move? Where do we cross zero?" Think-aloud: "Rising means moving right. From −4 it takes 4 to reach 0. I still have 5 of my 9 left, so I land on 5. Falling means moving left: 5 to get down to 0, 2 more to −2." Splitting the jump at 0 is the key move.'))
@@ -223,9 +225,9 @@ put(f'{L}-teachtrace',sec(f'{L}-teachtrace','54–56 MIN',body,'Teach before wor
 # ---------- 17 teach bug ----------
 body=h2('Find the bug')+card(p('Ravi wants a countdown that says 3, 2, 1, 0, −1. His code says 3, 4, 5, 6, 7.',38,700))
 body+=pin(128,400,760,blocks_svg([(0,'event','when flag clicked'),(0,'var','set n to [3]'),(0,'control','repeat [5]'),(1,'looks','say [n] for [1] seconds'),(1,'var','change n by [1]')],32,'Ravi\'s code: set n to 3, repeat 5: say n, change n by 1'),None)
-body+=step(1,'Read each block. Which one makes n go UP?',left=960,top=400,width=832,size=34)
-body+=step(2,'Fix it: change n by −1. Now n goes 3, 2, 1, 0, −1 ✓',left=960,top=530,width=832,size=34)
-body+=step(3,'Test it: run the code and check the last number.',left=960,top=680,width=832,size=34)
+body+=step(1,'Read each block. Which one makes n go UP?',left=960,top=400,width=772,size=34)
+body+=step(2,'Fix it: change n by −1. Now n goes 3, 2, 1, 0, −1 ✓',left=960,top=530,width=772,size=34)
+body+=step(3,'Test it: run the code and check the last number.',left=960,top=680,width=772,size=34)
 put(f'{L}-teachbug',sec(f'{L}-teachbug','56–57 MIN',body,'Teach before worksheet page 2 (Q6 has a lift bug and Q7 asks them to plan code). Ask first: "Which block is wrong? How do you know?" Only one block needs to change. Show that 5 repeats are still right: 3, 2, 1, 0, −1 is five numbers. Planning tip for Q7: write the start value, how many repeats, and the change each time.'))
 
 # ---------- 18 ws2 ----------
@@ -251,7 +253,7 @@ grid+=f'<text x="205" y="400" font-size="30" font-weight="700" text-anchor="midd
 for i,v in enumerate(range(-4,5)):
     x=430+(i%3)*105; y=40+(i//3)*105
     grid+=f'<rect x="{x}" y="{y}" width="88" height="88" rx="14" fill="{SKY if v<0 else (YEL if v>0 else WHITE)}" stroke="{NAVY}" stroke-width="3"/><text x="{x+44}" y="{y+58}" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Arial">{N(v)}</text>'
-grid+=f'<text x="590" y="400" font-size="28" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">Which tile goes in the middle?</text></svg>'
+grid+=f'<text x="590" y="400" font-size="28" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Arial">Where does 0 go?</text></svg>'
 tl='<svg aria-label="A time line from midnight to 10 a.m.: plus 2 each hour until 7 a.m., then plus 3 each hour" viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">'
 for h in range(11):
     x=50+h*66; tl+=f'<line x1="{x}" y1="210" x2="{x}" y2="240" stroke="{NAVY}" stroke-width="3"/>'

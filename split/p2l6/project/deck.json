@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T08:00:00Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P2: Lesson 6 – Market Day",
+ "order": [
+  "p2l6-title",
+  "p2l6-warm1",
+  "p2l6-warm2",
+  "p2l6-explore1",
+  "p2l6-explore2",
+  "p2l6-teach1",
+  "p2l6-we1",
+  "p2l6-try1",
+  "p2l6-we2",
+  "p2l6-try2",
+  "p2l6-key",
+  "p2l6-break",
+  "p2l6-teachfew",
+  "p2l6-ws1",
+  "p2l6-ws1ans",
+  "p2l6-teachchange",
+  "p2l6-teachenough",
+  "p2l6-teachlist2",
+  "p2l6-ws2",
+  "p2l6-ws2ans",
+  "p2l6-stretch",
+  "p2l6-challenge",
+  "p2l6-chdiag",
+  "p2l6-chwalk",
+  "p2l6-talk",
+  "p2l6-exit"
+ ],
+ "cover": "p2l6-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p2l6-title"
+  },
+  "s2": {
+   "description": "Teach: dollars and cents, lists in order, working backwards",
+   "start": "p2l6-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p2l6-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p2l6-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
