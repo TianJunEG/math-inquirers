@@ -3,7 +3,7 @@
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', T = '#1F7A6F', W = '#FFFFFF';
 
 // a row of digit cards (workbook figure)
-const cardsSvg = (ds, maxw = 330) => {
+const cardsSvg = (ds, maxw = 250) => {
   const w = 76, g = 16, tot = ds.length * w + (ds.length - 1) * g, x0 = (600 - tot) / 2;
   let s = `<svg aria-label="Digit cards ${ds.join(', ')}" viewBox="0 0 600 104" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:${maxw}px">`;
   ds.forEach((d, i) => {
@@ -121,28 +121,26 @@ module.exports = {
 
   workbook: H => [
     H.p('Digit cards: use each card once in each number. A 4-digit number cannot start with 0.', { after: 80 }),
-    H.q(1, 'Use these digit cards once each to make 4-digit numbers.', { before: 60, keepNext: true }),
+    H.q(1, 'Use these digit cards once each to make 4-digit numbers.', { before: 40, keepNext: true }),
     H.fig(cardsSvg(['3', '0', '7', '5'])),
     H.sub('a', 'The greatest number:   ______________'),
     H.sub('b', 'The smallest number:   ______________'),
     H.sub('c', 'The greatest ODD number:   ______________'),
     H.sub('d', 'The number closest to 5000:   ______________'),
-    H.sub('e', 'How do you know your answer to (d) is the closest?'),
-    ...H.lines(2),
-    H.q(2, 'Make a list in order. Write ALL the 4-digit numbers you can make with these cards. Start with the smallest.', { keepNext: true }),
-    H.fig(cardsSvg(['2', '0', '5', '5'])),
+    H.sub('e', 'Why is (d) the closest?   ______________________________'),
+    H.q(2, 'Make a list in order. Write ALL the 4-digit numbers you can make with the cards  2,  0,  5,  5.  Start with the smallest.', { keepNext: true }),
     H.tbl([2400, 7500], [
-      H.row([H.cell('Starting with 2', 2400, { bold: true, fill: 'EDEDED', h: 170 }), H.cell('', 7500)]),
-      H.row([H.cell('Starting with 5', 2400, { bold: true, fill: 'EDEDED', h: 170 }), H.cell('', 7500)])
+      H.row([H.cell('Starting with 2', 2400, { bold: true, fill: 'EDEDED', h: 110 }), H.cell('', 7500)]),
+      H.row([H.cell('Starting with 5', 2400, { bold: true, fill: 'EDEDED', h: 110 }), H.cell('', 7500)])
     ]),
-    H.gap(40),
+    H.gap(20),
     H.sub('a', 'How many numbers did you find?   ______'),
     H.sub('b', 'How many of them are greater than 5200?   ______'),
     H.q(3, 'Look for a pattern. Write the next two numbers.', { keepNext: true }),
     H.sub('a', '9850,   9750,   9650,   ________,   ________'),
     H.sub('b', '1234,   2345,   3456,   ________,   ________'),
     H.sub('c', '1000,   1001,   1003,   1006,   1010,   ________,   ________'),
-    H.sub('d', 'The pattern 3000, 3250, 3500, 3750, … keeps going. What is the first number in the pattern that is greater than 5000?   ________'),
+    H.sub('d', '3000,  3250,  3500,  3750,  …   The first number greater than 5000 is   ________'),
 
     H.q(4, 'Place value puzzles.', { pb: true, before: 0, keepNext: true }),
     H.sub('a', '4 thousands, 15 hundreds, 2 tens and 7 ones make   ____________'),
@@ -153,8 +151,9 @@ module.exports = {
     H.sub('a', 'Read the clues.', { keepNext: true }),
     H.tbl([9900], [H.row([H.cell(['Clue 1:  I am between 6000 and 7000.', 'Clue 2:  My ones digit is half of my thousands digit.', 'Clue 3:  My hundreds digit is the sum of my other three digits.'], 9900, { align: 'left', fill: 'EDEDED', h: 90 })])]),
     H.ans('I am:'),
-    H.sub('b', 'I am a 4-digit ODD number. All my digits are different. My digits add up to 6.'),
-    H.p('The greatest number I can be:   ________        The smallest number I can be:   ________', { indent: { left: 600 }, after: 120 }),
+    H.sub('b', 'I am a 4-digit ODD number. All my digits are different. My digits add up to 6. What is the greatest number I can be? What is the smallest?'),
+    H.ans('Greatest:'),
+    H.ans('Smallest:'),
     H.q(6, 'How many 4-digit numbers have digits that add up to 3? Make a list in order. Start with the biggest thousands digit.', { keepNext: true }),
     H.tbl([2400, 7500], [
       H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),

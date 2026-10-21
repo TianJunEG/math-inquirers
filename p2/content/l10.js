@@ -11,16 +11,15 @@ const graphFig = (() => {
   const rows = [['Monday', 4], ['Tuesday', 6], ['Wednesday', 3], ['Thursday', null]];
   let b = '';
   rows.forEach(([d, k], i) => {
-    const y = 6 + i * 42;
-    b += `<rect x="0" y="${y}" width="600" height="40" fill="${i % 2 ? W : SKY}"/>` + txt(12, y + 26, d, 16, { a: 'start' });
-    if (k) for (let j = 0; j < k; j++) b += cone(130 + j * 36, y + 2);
-    else b += txt(130, y + 26, 'Draw the pictures for Thursday here.', 15, { a: 'start', c: TEAL, w: 600 });
+    const y = 4 + i * 37;
+    b += `<rect x="0" y="${y}" width="600" height="37" fill="${i % 2 ? W : SKY}"/>` + txt(12, y + 24, d, 16, { a: 'start' });
+    if (k) for (let j = 0; j < k; j++) b += cone(130 + j * 36, y + 1);
+    else b += txt(130, y + 24, 'Draw the pictures for Thursday here.', 15, { a: 'start', c: TEAL, w: 600 });
   });
-  b += `<rect x="0" y="6" width="600" height="168" fill="none" stroke="${N}" stroke-width="2"/><line x1="118" y1="6" x2="118" y2="174" stroke="${N}" stroke-width="2"/>`;
-  b += cone(200, 182) + txt(236, 208, '= 5 ice-creams', 17, { a: 'start' });
-  return svg(600, 222, b, 'Picture graph of ice-creams sold. Monday 4 pictures, Tuesday 6, Wednesday 3, Thursday blank. Each picture stands for 5 ice-creams.');
+  b += `<rect x="0" y="4" width="600" height="148" fill="none" stroke="${N}" stroke-width="2"/><line x1="118" y1="4" x2="118" y2="152" stroke="${N}" stroke-width="2"/>`;
+  b += cone(200, 156) + txt(236, 182, '= 5 ice-creams', 17, { a: 'start' });
+  return svg(600, 192, b, 'Picture graph of ice-creams sold. Monday 4 pictures, Tuesday 6, Wednesday 3, Thursday blank. Each picture stands for 5 ice-creams.');
 })();
-const cardsFig = svg(600, 70, [3, 0, 8].map((d, i) => `<rect x="${210 + i * 64}" y="6" width="52" height="60" rx="8" fill="${W}" stroke="${N}" stroke-width="3"/>` + txt(236 + i * 64, 48, d, 32)).join(''), 'Three digit cards: 3, 0 and 8');
 const cakeFig = svg(600, 64, `<rect x="50" y="8" width="500" height="48" rx="6" fill="${Y}" stroke="${N}" stroke-width="3"/>` + Array.from({ length: 9 }, (_, i) => `<line x1="${100 + i * 50}" y1="8" x2="${100 + i * 50}" y2="56" stroke="${N}" stroke-width="2.5"/>`).join(''), 'A cake cut into 10 equal pieces in a row');
 const tablesFig = (() => {
   let b = '', x = 30;
@@ -58,8 +57,7 @@ module.exports = {
       ['Q3', 'Two 50¢ coins and four 20¢ coins (100¢ + 80¢ = 180¢ = $1.80). Table: 0 → $1.20, 1 → $1.50, 2 → $1.80 ✓'],
       ['Q4', 'Ali: car. Ben: MRT. Mei: bus. Siti: walk.'],
       ['Q5', '(a) 5/10  (b) 2/10  (c) Mei, Ali, Ben'],
-      ['Q6', '(a) 10, 12, 14: 6 tables seat 14 people  (b) 9 tables (each table adds 2 seats: 4, 6, 8, … 20)'],
-      ['Q7', '463 (4 + 6 + 3 = 13, and 6 is double 3)']
+      ['Q6', '(a) 10, 12, 14: 6 tables seat 14 people  (b) 9 tables (each table adds 2 seats: 4, 6, 8, … 20)']
     ]
   },
 
@@ -88,7 +86,7 @@ module.exports = {
     keyHead: 'Key idea: how to start a puzzle', keyBig: 'Stuck? Draw it, list it in order, or make a table.', keySmall: 'Then check your answer against every clue and explain why.',
     brk: 'Freeze with maths. Dance until the music stops, then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.',
     ws1: 'Page 1, in pairs: Q1 picture graph, Q2 digit cards, Q3 coins in a table.',
-    ws2: 'Page 2, on your own: Q4 logic grid, Q5 cake fractions, Q6 tables in a row, Q7 mystery number.'
+    ws2: 'Page 2, on your own: Q4 logic grid, Q5 cake fractions, Q6 tables in a row.'
   },
 
   qbank: {
@@ -124,15 +122,13 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p('Before you start each puzzle, think: draw it, list it, or make a table? Then check your answer.', { after: 40 }),
-    H.q(1, 'The picture graph shows the ice-creams a stall sold.', { before: 40, keepNext: true }),
+    H.q(1, 'The picture graph shows the ice-creams a stall sold. (Stuck? Draw it, list it, or make a table!)', { before: 40, keepNext: true }),
     H.fig(graphFig),
     H.sub('a', 'How many ice-creams were sold on Tuesday?   ________'),
     H.sub('b', 'How many more were sold on Tuesday than on Wednesday?   ________'),
-    H.sub('c', '90 ice-creams were sold in the 4 days. Draw the pictures for Thursday on the graph.'),
+    H.sub('c', '90 ice-creams were sold in the 4 days. Draw Thursday’s pictures on the graph.'),
     H.sub('d', 'Each ice-cream costs $2. How much money did the stall get on Wednesday?   ________'),
-    H.q(2, 'Use each digit card once to make a 3-digit number.', { keepNext: true }),
-    H.fig(cardsFig),
+    H.q(2, 'Use the digit cards  3,  0  and  8  once each to make a 3-digit number.', { keepNext: true }),
     H.sub('a', 'List ALL the 3-digit numbers you can make, in order.   ________________________________'),
     H.sub('b', 'Greatest: ________     Smallest: ________'),
     H.sub('c', 'Which of your numbers are between 300 and 810?   ________________________'),
@@ -144,7 +140,7 @@ module.exports = {
     ]),
     H.sub('', 'Ben has ______ 50¢ coins and ______ 20¢ coins.'),
     H.q(4, 'Ali, Mei, Siti and Ben each go to school a different way: bus, MRT, car or walking. Put a tick where it fits and a cross where it cannot.', { pb: true, before: 0, keepNext: true }),
-    H.p('Clue 1: Siti lives next to the school, so she walks.   Clue 2: Ben does not go by bus or by car.   Clue 3: Mei does not go by car.', { after: 60, indent: { left: 560 } }),
+    H.fig('<div style="text-align:left;padding-left:40px;line-height:1.6">Clue 1: Siti lives next to the school, so she walks.<br>Clue 2: Ben does not go by bus or by car.<br>Clue 3: Mei does not go by car.</div>'),
     H.tbl(W5, [
       H.row(['', 'Bus', 'MRT', 'Car', 'Walk'].map((s, i) => H.cell(s, W5[i], { bold: true, fill: 'EDEDED', h: 30 }))),
       ...['Ali', 'Mei', 'Siti', 'Ben'].map(n => H.row([H.cell(n, W5[0], { bold: true, h: 50 }), ...[1, 2, 3, 4].map(i => H.cell('', W5[i], { h: 50 }))]))
@@ -162,7 +158,6 @@ module.exports = {
       H.row(['People', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: i === 0, h: 30 })))
     ]),
     H.sub('a', 'How many people can sit at 6 tables?   ________'),
-    H.sub('b', 'How many tables are needed for 20 people?   ________'),
-    H.q(7, 'Who am I? I am a 3-digit number. My hundreds digit is 4. My tens digit is double my ones digit. My digits add up to 13.   ________')
+    H.sub('b', 'How many tables are needed for 20 people?   ________')
   ]
 };

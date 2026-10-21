@@ -94,28 +94,24 @@ module.exports = {
     const { q, sub, ans, lines, p, tbl, row, cell, gap, t } = H;
     const W = [];
     // ---------- page 1 ----------
-    W.push(p([t('Trick 1: change to ONE unit first.  1 m = 100 cm    1 kg = 1000 g    1 ℓ = 1000 ml    $1 = 100¢', { bold: true })], { after: 60 }));
-    W.push(q(1, 'Change the units.', { before: 80, keepNext: true }));
-    W.push(sub('a', '3 m 6 cm  =  ________ cm'));
-    W.push(sub('b', '2 kg 450 g  =  ________ g'));
-    W.push(sub('c', '4080 ml  =  ____ ℓ  ____ ml'));
-    W.push(sub('d', '1 m 75 cm  +  85 cm  =  ____ m  ____ cm'));
+    W.push(q(1, 'Trick 1: change to ONE unit.   1 m = 100 cm    1 kg = 1000 g    1 ℓ = 1000 ml    $1 = 100¢', { before: 40, keepNext: true }));
+    W.push(sub('a', '3 m 6 cm  =  ________ cm              (b)  2 kg 450 g  =  ________ g'));
+    W.push(sub('c', '4080 ml  =  ____ ℓ  ____ ml           (d)  1 m 75 cm  +  85 cm  =  ____ m  ____ cm'));
     W.push(q(2, 'Four bags of rice are weighed:     1 kg 300 g      1030 g      1 kg      1 kg 3 g', { keepNext: true }));
     W.push(sub('a', 'Put them in order, from the lightest to the heaviest.'));
     W.push(...lines(1));
     W.push(sub('b', 'Ben says, “1 kg 30 g is the same as 130 g.” Explain his mistake.'));
-    W.push(...lines(2));
-    W.push(q(3, 'Mei has a ribbon 3 m long. She cuts 4 pieces from it. Each piece is 65 cm long.', { keepNext: true }));
-    W.push(sub('a', 'How much ribbon does she cut off altogether? Give your answer in m and cm.   ____ m  ____ cm'));
-    W.push(sub('b', 'How much ribbon is left?   ________ cm'));
-    W.push(sub('c', 'Can she cut one more 65 cm piece? If not, how much more ribbon does she need?'));
     W.push(...lines(1));
+    W.push(q(3, 'Mei has a ribbon 3 m long. She cuts 4 pieces from it. Each piece is 65 cm long.', { keepNext: true }));
+    W.push(sub('a', 'How much ribbon does she cut off altogether?   ____ m  ____ cm'));
+    W.push(sub('b', 'How much ribbon is left?   ________ cm'));
+    W.push(sub('c', 'Can she cut one more 65 cm piece? If not, how much more ribbon does she need?   ________'));
     W.push(q(4, 'Siti has $20. She wants to buy 3 different things from this list.', { keepNext: true }));
     { const ws = [1980, 1980, 1980, 1980, 1980];
-      W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 60 }))),
-        row(['$7.85', '$4.60', '$6.90', '$2.35', '$5.50'].map((s, i) => cell(s, ws[i], { h: 80, size: 26 })))])); }
+      W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
+        row(['$7.85', '$4.60', '$6.90', '$2.35', '$5.50'].map((s, i) => cell(s, ws[i], { h: 40, size: 26 })))])); }
     W.push(sub('a', 'Can she buy the book, the puzzle and the water bottle? Show how you know.'));
-    W.push(...lines(2));
+    W.push(...lines(1));
     W.push(sub('b', 'Which 3 things should she buy to spend as much of her $20 as she can? How much change will she get?'));
     W.push(...lines(2));
     // ---------- page 2 ----------

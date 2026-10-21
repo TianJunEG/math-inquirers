@@ -220,10 +220,12 @@ module.exports = {
     W.push(H.sub('b', 'What fraction of the fence is not painted yet?   ________'));
     W.push(H.sub('c', 'How much more of the fence did he paint in the afternoon than in the morning?   ________', { keepNext: true }));
     W.push(...H.lines(2));
-    W.push(H.q(6, 'Partners that make ONE WHOLE. Join each yellow card to the blue card that makes one whole with it.', { keepNext: true, after: 20 }));
+    W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true }));
+    W.push(H.sub('a', 'Join each yellow card to the blue card that makes one whole with it.', { keepNext: true, after: 20 }));
     W.push(H.fig(cards()));
     W.push(H.sub('b', 'Write one more pair of fractions with different bottom numbers that make one whole.   ________________'));
-    W.push(H.q(7, ['Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '.'], { keepNext: true }));
+    W.push(H.q(7, 'Fractions in between.', { keepNext: true }));
+    W.push(H.sub('a', ['Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '.'], { keepNext: true }));
     W.push(H.ans());
     W.push(H.sub('b', ['Which one of your fractions is equal to ', fr(2, 3), '?   ________']));
     return W;

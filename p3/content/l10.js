@@ -20,7 +20,7 @@ const drinksGraph = () => {
   });
   s += txt(22, y0 - 120, 'Number of cups', { size: 15, extra: ` transform="rotate(-90 22 ${y0 - 120})"` });
   s += txt(x0 + 255, y0 + 46, 'Drink', { size: 15 });
-  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:500px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:470px;max-width:100%">${s}</svg>`;
 };
 // Matchstick squares: 1, 2 and 3 squares in a row
 const sticks = () => {
@@ -65,8 +65,7 @@ module.exports = {
       ['Q3', '(a) 7 people (3 + 5 − 1)  (b) 6th from the back (9 − 4 + 1)  (c) 6 people (Ali 2nd, 3 between, Siti 6th and last)'],
       ['Q4', '(a) 258, 285, 528, 582, 825, 852  (b) 2 odd numbers: 285 and 825  (c) 582 (18 away from 600)'],
       ['Q5', '(a) 13, 16, 19 sticks (add 3 each time)  (b) 25 sticks  (c) 10 squares'],
-      ['Q6', 'Mei 450 g, Siti 750 g (1200 − 300 = 900; 900 ÷ 2 = 450; 450 + 300 = 750)'],
-      ['Q7', '411, 321, 213 (3 numbers)']
+      ['Q6', '411, 321, 213 (3 numbers: the ones digit is 1, 3 or 5; list each case)']
     ]
   },
   script: {
@@ -98,8 +97,8 @@ module.exports = {
     keyBig: 'Stuck? Draw it, list it in order, or make a table. Then check every clue.',
     keySmall: 'Logic grid: a tick means crosses in the rest of its row and column. Bar graph: read the scale first.',
     brk: 'Freeze dance with maths. When the music stops, the tutor shows a 24-hour time; make the clock hands with your arms.',
-    ws1: 'Page 1, in pairs: Q1 the drinks bar graph, Q2 the CCA logic grid, Q3 queues.',
-    ws2: 'Page 2, on your own: Q4 digit cards, Q5 matchstick squares, Q6 sharing flour, Q7 a number riddle.'
+    ws1: 'Page 1, in pairs: Q1 the drinks bar graph, Q2 the CCA logic grid.',
+    ws2: 'Page 2, on your own: Q3 queues, Q4 digit cards, Q5 matchstick squares, Q6 a number riddle.'
   },
   qbank: {
     core: [
@@ -144,19 +143,19 @@ module.exports = {
     W.push(sub('c', 'How many cups of Lime juice were sold?   ____   Now draw its bar on the graph.'));
     W.push(sub('d', 'Which two drinks together sold exactly 100 cups?   ____________ and ____________'));
     W.push(q(2, 'Ali, Mei, Ravi and Siti are each in a different CCA: Chess, Choir, Football or Swimming. Use the clues. Put a ✓ or a cross in each box.', { keepNext: true }));
-    W.push(p([t('Clue 1: Ali is not in the choir and does not play chess.', { size: 24 })], { after: 20 }));
-    W.push(p([t('Clue 2: Mei and Ravi went to watch their friend sing in the choir concert.', { size: 24 })], { after: 20 }));
-    W.push(p([t('Clue 3: The swimmer’s name has 4 letters.', { size: 24 })], { after: 60 }));
+    W.push(sub('Clue 1', 'Ali is not in the choir and does not play chess.', { after: 40 }));
+    W.push(sub('Clue 2', 'Mei and Ravi went to watch their friend sing in the choir concert.', { after: 40 }));
+    W.push(sub('Clue 3', 'The swimmer’s name has 4 letters.'));
     { const ws = [2300, 1900, 1900, 1900, 1900];
       W.push(tbl(ws, [row(['', 'Chess', 'Choir', 'Football', 'Swimming'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 50 }))),
-        ...['Ali', 'Mei', 'Ravi', 'Siti'].map(n => row([cell(n, ws[0], { bold: true, h: 70 }), ...[1, 2, 3, 4].map(i => cell('', ws[i]))]))])); }
+        ...['Ali', 'Mei', 'Ravi', 'Siti'].map(n => row([cell(n, ws[0], { bold: true, h: 55 }), ...[1, 2, 3, 4].map(i => cell('', ws[i]))]))])); }
     W.push(sub('a', 'Who is in each CCA?   Chess ________   Choir ________   Football ________   Swimming ________'));
-    W.push(q(3, 'Draw it! Queues.', { keepNext: true }));
+    // ---------- page 2 ----------
+    W.push(q(3, 'Draw it! Queues.', { pb: true, before: 0, keepNext: true }));
     W.push(sub('a', 'Ben is 3rd from the front and 5th from the back of a queue. How many people are in the queue?   ____'));
     W.push(sub('b', 'There are 9 people in a queue. Mei is 4th from the front. What is her place from the back?   ____'));
     W.push(sub('c', 'Ali is 2nd from the front. Siti is last. There are 3 people between Ali and Siti. How many people are in the queue?   ____'));
-    // ---------- page 2 ----------
-    W.push(q(4, 'List it! Make 3-digit numbers with these cards. Use each card once in every number.', { pb: true, before: 0, keepNext: true }));
+    W.push(q(4, 'List it! Make 3-digit numbers with these cards. Use each card once in every number.', { keepNext: true }));
     W.push(fig(digitCards()));
     W.push(sub('a', 'List ALL the numbers, in order from smallest to largest.'));
     W.push(...lines(1));
@@ -170,10 +169,7 @@ module.exports = {
     W.push(sub('a', 'Fill in the table.'));
     W.push(sub('b', 'How many sticks are needed for 8 squares?   ____'));
     W.push(sub('c', 'Ben uses 31 sticks. How many squares does he make?   ____'));
-    W.push(q(6, 'Siti and Mei share 1 kg 200 g of flour. Siti gets 300 g more than Mei. How much flour does each girl get?', { keepNext: true }));
-    W.push(...lines(2));
-    W.push(ans('Mei: ________ g      Siti:'));
-    W.push(q(7, 'I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
+    W.push(q(6, 'I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
     W.push(...lines(2));
     W.push(p([t('The puzzle I liked best in the whole program was ______________ because ______________', { size: 24 })], { before: 160, after: 60 }));
     return W;

@@ -38,7 +38,7 @@ const q1Fig = () => {
   let b = bgGrid(x0, y0, 22, 5, c);
   b += cellsFig(sh(FA, 1, 1), x0, y0, c) + cellsFig(sh(FB, 6, 1), x0, y0, c) + cellsFig(sh(FC, 12, 1), x0, y0, c) + cellsFig(sh(FD, 17, 1), x0, y0, c);
   [['A', 3], ['B', 8.5], ['C', 13.5], ['D', 18.5]].forEach(([l, cx]) => { b += txt(x0 + cx * c, y0 + 5 * c + 26, l, { size: 22 }); });
-  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 450);
+  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 520);
 };
 // Q3: L-shape, 10 cm by 7 cm with a 4 cm by 3 cm corner cut away (scale 22 px per cm)
 const q3Fig = () => {
@@ -52,22 +52,15 @@ const q3Fig = () => {
 const q4Fig = () => {
   const c = 30, x0 = 10, y0 = 6;
   const cells = []; [4, 3, 2, 1].forEach((h, i) => { for (let k = 0; k < h; k++) cells.push([1 + i, 4 - k]); });
-  return svg(200, 190, bgGrid(x0, y0, 6, 6, c) + cellsFig(cells, x0, y0, c), 'A staircase figure on a 1 cm grid: columns of 4, 3, 2 and 1 squares standing side by side', 140);
+  return svg(200, 190, bgGrid(x0, y0, 6, 6, c) + cellsFig(cells, x0, y0, c), 'A staircase figure on a 1 cm grid: columns of 4, 3, 2 and 1 squares standing side by side', 170);
 };
 // Q5: L of 4 squares, drawn twice (for a and b)
 const q5Fig = () => {
   const c = 30, L = [[2, 1], [2, 2], [2, 3], [3, 3]];
   let b = '';
   [[40, '(a)'], [340, '(b)']].forEach(([x0, l]) => { b += txt(x0 + 90, 22, l, { size: 20 }) + bgGrid(x0, 32, 6, 5, c) + cellsFig(L, x0, 32, c); });
-  return svg(600, 190, b, 'Two copies of an L shape made of 4 squares on a 1 cm grid: 3 squares in a column with 1 more square to the right of the bottom one', 380);
+  return svg(600, 190, b, 'Two copies of an L shape made of 4 squares on a 1 cm grid: 3 squares in a column with 1 more square to the right of the bottom one', 400);
 };
-// Q6: two blank grids to draw on
-const q6Fig = () => {
-  const c = 28; let b = '';
-  [[20, '(a)'], [320, '(b)']].forEach(([x0, l]) => { b += txt(x0 + 126, 20, l, { size: 20 }) + bgGrid(x0, 30, 9, 5, c); });
-  return svg(600, 176, b, 'Two empty 1 cm square grids for drawing', 400);
-};
-
 module.exports = {
   lesson: {
     n: 7, week: 4, session: 'A', title: 'Area Architects', topic: 'Area and Perimeter',
@@ -77,19 +70,18 @@ module.exports = {
     online: 'Children cut 12 squares from squared paper (or draw on squared paper) and hold up their rectangles to the camera; the tutor shares a grid slide to draw on.',
     warmup: 'Area or perimeter? The tutor reads a job (fence a garden, tile a floor). Children trace a finger round the edge for perimeter or wipe a flat palm for area. Then quick questions on squares and rectangles.',
     explore: 'Use exactly 12 squares to make every different rectangle. Record the length, breadth and perimeter of each. Which has the longest perimeter? The shortest?',
-    mini: 'List rectangles with a perimeter of 20 cm in order (length + breadth = 10). Push the steps of a staircase out to see it has the same perimeter as a rectangle; watch out for dents. Find the area of an L-shape two ways: cut it into rectangles, or fill in the corner and take it away. Before page 2: what happens to the perimeter when one square is added; squeezed and stretched shapes; squares with the same perimeter as a rectangle.',
+    mini: 'List rectangles with a perimeter of 20 cm in order (length + breadth = 10). Push the steps of a staircase out to see it has the same perimeter as a rectangle; watch out for dents. Find the area of an L-shape two ways: cut it into rectangles, or fill in the corner and take it away. Before page 1: a square with the same perimeter as a rectangle. Before page 2: what happens to the perimeter when one square is added.',
     share: 'Two gardens have the same perimeter. Must they have the same area? Give an example.',
     exit: { q: 'A rectangle has a perimeter of 16 cm. Its length is 5 cm. What is its area?', a: '15 cm² (breadth 3 cm because 5 + 3 = 8, half of 16)' },
     mistakes: ['Mixing up area and perimeter, or writing cm for an area (it is cm²).', 'Counting the squares along the edge instead of the edges (for perimeter, count the sides of the squares, not the squares).', 'Pushing out the sides of a shape with a dent: the two walls of a dent must be added on.'],
     extension: 'Find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (11 by 1, 10 by 2, 9 by 3, 8 by 4, 7 by 5, 6 by 6; the 6 by 6 square, 36 cm²)',
     key: [
       ['Q1', 'A: 8 cm², 12 cm.  B: 8 cm², 14 cm.  C: 9 cm², 12 cm.  D: 5 cm², 12 cm.  (a) A and B (both 8 cm²).  (b) A, C and D (all 12 cm).'],
-      ['Q2', 'Length + breadth = 9 m: 8 by 1 (8 m²), 7 by 2 (14 m²), 6 by 3 (18 m²), 5 by 4 (20 m²). 4 rectangles. Biggest area: 5 m by 4 m, 20 m².'],
-      ['Q3', 'Missing sides: 4 cm and 3 cm. (a) Area 58 cm² (6 × 7 + 4 × 4 = 42 + 16, or 10 × 7 − 4 × 3 = 70 − 12).  (b) Perimeter 34 cm (10 + 7 + 10 + 7: push the step out).'],
-      ['Q4', '(a) 10 cm²  (b) 16 cm  (c) The perimeter stays 16 cm (same as a 4 by 4 square); the area goes up by 6 cm² to 16 cm².'],
-      ['Q5', '(a) Any square that touches the L along only one side, e.g. above the top square: perimeter 12 cm.  (b) Only one place: the square to the right of the middle square (it touches 2 sides).  (c) No: to make 8 cm the new square would have to touch 3 sides, and there is no such gap.'],
-      ['Q6', '(a) A 2 by 3 rectangle (the only one).  (b) Any shape with no 2 by 2 block of squares, e.g. a row of 6 or an L.  (c) 14 cm. 6 squares have 24 sides; joining them needs at least 5 touches, and each touch hides 2 sides: 24 − 10 = 14.'],
-      ['Q7', 'Rectangle perimeter 7 + 3 + 7 + 3 = 20 cm. Square side 20 ÷ 4 = 5 cm. Area 5 × 5 = 25 cm².']
+      ['Q2', 'Length + breadth = 9 m: 8 by 1 (8 m²), 7 by 2 (14 m²), 6 by 3 (18 m²), 5 by 4 (20 m²). 4 gardens. Biggest area: 5 m by 4 m, 20 m².'],
+      ['Q3', 'Rectangle perimeter 7 + 3 + 7 + 3 = 20 cm. Square side 20 ÷ 4 = 5 cm. Area 5 × 5 = 25 cm².'],
+      ['Q4', 'Missing sides 4 cm (10 − 6) and 3 cm (7 − 4). (a) Area 58 cm² (6 × 7 + 4 × 4 = 42 + 16, or 10 × 7 − 4 × 3 = 70 − 12).  (b) Perimeter 34 cm (push the step out: 10 + 7 + 10 + 7).'],
+      ['Q5', '(a) 10 cm²  (b) 16 cm  (c) The perimeter stays 16 cm (same as the 4 by 4 square); the area goes up by 6 cm² to 16 cm².'],
+      ['Q6', '(a) Any square that touches the L along only one side, e.g. above the top square: perimeter 12 cm.  (b) Only one place: the square to the right of the middle square (it touches 2 sides).  (c) No. To make 8 cm the new square would have to touch 3 sides of the L, and there is no such gap.']
     ]
   },
 
@@ -119,8 +111,8 @@ module.exports = {
     keyBig: 'Perimeter: push the steps out (but add the walls of a dent). Area: cut it into rectangles, or fill it in and take away.',
     keySmall: 'Same perimeter does not mean same area. List the rectangles in order to find them all.',
     brk: 'Perimeter march: march on the spot and trace a big square in the air, counting its 4 sides. Then stretch tall and thin like a 9 by 1 garden, then wide like a 5 by 5 garden.',
-    ws1: 'Page 1, in pairs: Q1 area and perimeter on a grid, Q2 every rectangle with an 18 m fence, Q3 an L-shape with missing sides.',
-    ws2: 'Page 2, on your own: Q4 staircase, Q5 add one square, Q6 six squares, Q7 a square and a rectangle with the same perimeter.'
+    ws1: 'Page 1, in pairs: Q1 area and perimeter on a grid, Q2 every rectangle with an 18 m fence, Q3 a square and a rectangle with the same perimeter.',
+    ws2: 'Page 2, on your own: Q4 an L-shape with missing sides, Q5 a staircase, Q6 add one square.'
   },
 
   qbank: {
@@ -140,7 +132,7 @@ module.exports = {
       { q: 'How many tiles 2 cm by 2 cm are needed to cover a mat 10 cm by 8 cm?', a: '5 tiles along and 4 tiles down: 20 tiles.' },
       { q: 'A rectangle has an area of 18 cm² and a perimeter of 18 cm. Find its length and breadth.', a: '6 cm and 3 cm (6 × 3 = 18 and 6 + 3 + 6 + 3 = 18).' },
       { q: 'Mei’s garden is 9 m by 5 m. Ali’s garden is 7 m by 7 m. Whose garden needs the longer fence? Whose has the bigger area?', a: 'Both fences are 28 m. Ali’s garden has the bigger area: 49 m² against 45 m².' },
-      { q: 'Draw a figure of 5 squares (each 1 cm by 1 cm) with a perimeter of 10 cm.', a: 'A 2 by 2 square with one more square joined to one side (the only shape that works).' }
+      { q: 'Use exactly 6 squares (each 1 cm by 1 cm), whole sides touching. Draw a figure with a perimeter of 10 cm and one with a perimeter of 14 cm. What is the biggest perimeter possible?', a: '10 cm: only the 2 by 3 rectangle. 14 cm: any shape with no 2 by 2 block, e.g. a row of 6. 14 cm is the biggest: 6 squares have 24 sides, they need at least 5 touches to join, and each touch hides 2 sides (24 − 10 = 14).' }
     ],
     challenge: [
       { q: 'Find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area?', a: '11 by 1, 10 by 2, 9 by 3, 8 by 4, 7 by 5, 6 by 6: 6 rectangles. The 6 cm by 6 cm square has the biggest area, 36 cm².' },
@@ -155,45 +147,42 @@ module.exports = {
     ]
   },
 
-  workbook: H => [
-    H.q(1, 'Each small square is 1 cm by 1 cm. Find the area (in cm²) and the perimeter (in cm) of each figure.', { before: 20, keepNext: true }),
-    H.fig(q1Fig()),
-    H.tbl([2475, 1856, 1856, 1857, 1856], [
-      H.row(['Figure', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
-      H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 60 }))]),
-      H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 60 }))])
-    ]),
-    H.gap(30),
-    H.sub('a', 'Which two figures have the same area but different perimeters?   ________'),
-    H.sub('b', 'Which figures have the same perimeter but different areas?   ________'),
-    H.q(2, 'Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List ALL the gardens she can make, in order.', { keepNext: true }),
-    H.tbl([2475, 2475, 2475, 2475], [
-      H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
-      ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('', w, { h: 60 }))))
-    ]),
-    H.gap(30),
-    H.sub('a', 'Which garden has the biggest area?   ______________'),
-    H.q(3, 'Find the two missing sides first. Then find the area and the perimeter of this figure.', { keepNext: true }),
-    H.fig(q3Fig()),
-    H.sub('a', 'Area = ____________ cm²'),
-    H.sub('b', 'Perimeter = ____________ cm'),
+  workbook: H => {
+    // figure on the left, questions on the right (keeps a question and its picture together on one page)
+    const side = (fig, right) => `<div class="p img" style="display:flex;align-items:center;gap:22px;text-align:left"><div style="flex:none">${fig}</div><div style="flex:1">${right}</div></div>`;
+    return [
+      H.q(1, 'Each small square is 1 cm by 1 cm. Find the area (in cm²) and the perimeter (in cm) of each figure.', { before: 20, keepNext: true }),
+      H.fig(q1Fig()),
+      H.tbl([2475, 1856, 1856, 1857, 1856], [
+        H.row(['Figure', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
+        H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 90 }))]),
+        H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 90 }))])
+      ]),
+      H.gap(40),
+      H.sub('a', 'Which two figures have the same area but different perimeters?   ________'),
+      H.sub('b', 'Which figures have the same perimeter but different areas?   ________'),
+      H.q(2, 'Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List ALL the gardens she can make, in order.', { keepNext: true }),
+      H.tbl([2475, 2475, 2475, 2475], [
+        H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
+        ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('', w, { h: 80 }))))
+      ]),
+      H.gap(40),
+      H.sub('a', 'Which garden has the biggest area?   ______________'),
+      H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?'),
+      H.ans('Answer:'),
 
-    H.q(4, 'Look at this staircase.', { pb: true, before: 0, keepNext: true }),
-    H.fig(q4Fig()),
-    H.sub('a', 'What is its area?   ________ cm²          (b)  What is its perimeter?   ________ cm'),
-    H.sub('c', 'Ben fills in the gaps with squares to make a 4 by 4 square. What happens to the perimeter? What happens to the area?'),
-    ...H.lines(2),
-    H.q(5, 'This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. Shade it.', { keepNext: true }),
-    H.fig(q5Fig()),
-    H.sub('a', 'In grid (a), make the perimeter 12 cm.        (b)  In grid (b), keep the perimeter 10 cm.'),
-    H.sub('c', 'Can you add one square so that the perimeter becomes 8 cm? Explain.'),
-    ...H.lines(2),
-    H.q(6, 'Use exactly 6 squares, whole sides touching. Draw your figures on the grids.', { keepNext: true }),
-    H.fig(q6Fig()),
-    H.sub('a', 'Draw a figure with a perimeter of 10 cm.          (b)  Draw a figure with a perimeter of 14 cm.'),
-    H.sub('c', 'What is the biggest perimeter a figure of 6 squares can have? How do you know?'),
-    ...H.lines(1),
-    H.q(7, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. What is the area of the square?'),
-    H.ans('Answer:')
-  ]
+      H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure.', { pb: true, before: 0, keepNext: true }),
+      side(q3Fig(), H.sub('', 'Missing sides:  ____ and ____') + H.sub('a', 'Area = __________ cm²') + H.sub('b', 'Perimeter = __________ cm')),
+      H.q(5, 'Look at this staircase.', { keepNext: true }),
+      side(q4Fig(), H.sub('a', 'What is its area?   ________ cm²') + H.sub('b', 'What is its perimeter?   ________ cm')),
+      H.sub('c', 'Ben fills in the gaps with squares to make a 4 by 4 square. What happens to the perimeter? What happens to the area?'),
+      ...H.lines(1),
+      H.q(6, 'This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. Shade it.', { keepNext: true }),
+      H.fig(q5Fig()),
+      H.sub('a', 'In grid (a), add a square so that the perimeter becomes 12 cm.'),
+      H.sub('b', 'In grid (b), add a square so that the perimeter stays 10 cm.'),
+      H.sub('c', 'Can you add one square so that the perimeter becomes 8 cm? Explain.'),
+      ...H.lines(1)
+    ];
+  }
 };
