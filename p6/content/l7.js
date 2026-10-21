@@ -205,11 +205,11 @@ module.exports = {
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([6400, 3500], [H.row([
-      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it in Scratch. Start every drawing with: erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with the ↻ block.', 6400, { align: 'left', h: 30 }),
+      H.cell('The turtle turns by the OUTSIDE angle, measured from “straight on”. So turn + inside angle = 180°. Maths first, then test it. Start every drawing with erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with ↻.', 6400, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3500, { h: 10 })])]);
     return [
       intro,
-      H.q(1, 'Regular polygons. Fill in the table: some rows go forwards, some backwards. Test two rows in Scratch (move 80; but 30 for 24 sides, 10 for 36).', { before: 40, keepNext: true }),
+      H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Mei says a regular polygon can have inside angles of 130°. Is she right? Explain.', { after: 20 }), ...H.lines(1),
