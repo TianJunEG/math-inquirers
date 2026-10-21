@@ -256,6 +256,7 @@ put('end',dark_slide('end','WELL DONE, INQUIRERS','Keep asking why',f'<p style="
 
 # ---------- write ----------
 order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-we1','p3l10-try1','p3l10-we2','p3l10-try2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-teachtable','p3l10-teachbetween','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
+import p3_gifted; order[:]=p3_gifted.add(S,order,10)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',

@@ -244,6 +244,7 @@ put('p3l4-exit',exit_slide('p3l4-exit','Ali has 3 times as many stickers as Ben.
 
 # ---------- write ----------
 order=['p3l4-title','p3l4-warm1','p3l4-warm2','p3l4-explore1','p3l4-explore2','p3l4-we1','p3l4-try1','p3l4-we2','p3l4-try2','p3l4-key','p3l4-break','p3l4-teachunits','p3l4-tryunits','p3l4-ws1','p3l4-ws1ans','p3l4-teachtd','p3l4-teachgive','p3l4-teachsame','p3l4-ws2','p3l4-ws2ans','p3l4-stretch','p3l4-challenge','p3l4-chdiag','p3l4-chwalk','p3l4-talk','p3l4-exit']
+import p3_gifted; order[:]=p3_gifted.add(S,order,4)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))

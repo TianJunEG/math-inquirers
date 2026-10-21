@@ -17,7 +17,7 @@ const NL = () => new TextRun({ break: 1, font: 'Arial', size: 26 });
 const GAPS = require('./gaps.json');
 const gimg = (file, px) => new C.D.ImageRun({ type: 'png', data: fs.readFileSync(file), transformation: { width: px, height: px }, altText: { title: file, description: file, name: file } });
 const gopt = (txt) => [gimg('gap_box.png', 15), t(' ' + txt + '    ', { size: 19 })];
-const fast = () => tbl([CW], [row([cell([p([t('Fast track. ', { bold: true, size: 19, color: '1F7A6F' }), t('Got both warm-up check questions right and can say why? Ask your tutor. You may go straight to the Think Harder and Challenge pages and the Open investigation while the group works on this page. Come back to the group for talk time.', { size: 19 })], { after: 0, line: 240 })], CW, { fill: 'E8F5F2', align: AlignmentType.LEFT, h: 40 })])]);
+const fast = () => tbl([CW], [row([cell([p([t('Fast track. ', { bold: true, size: 19, color: '1F7A6F' }), t('Got both warm-up check questions right and can say why? Ask your tutor. You may go straight to the Think Harder and Challenge pages and the Open investigation while the group works on this page. Come back to the group for talk time.', { size: 19 })], { after: 0, line: 240 })], CW, { fill: 'E8F5F2', align: AlignmentType.LEFT, h: 20 })])]);
 const refl = (n) => { const h = GAPS[String(n)].hard;
   const row1 = p([t('The hardest part was ...   ', { bold: true, size: 20 }), ...h.flatMap(gopt), ...gopt('something else: ____________')], { after: 20, line: 260 });
   const row2 = p([t('I got unstuck by ...   ', { bold: true, size: 20 }), ...['counters or objects', 'drawing it', 'asking someone', 'trying again'].flatMap(gopt)], { after: 20, line: 260 });
@@ -55,7 +55,7 @@ W.push(gap(40));
 W.push(p(t('Tutor: ______________________    Program dates: ______________________', { size: 22 }), { before: 160, after: 0 }));
 
 /* ---------- LESSON 1 ---------- */
-W.push(...hdr(1, 'Whole Numbers: Number Patterns', 'COUNT WITH THE FROG!')); W.push(fast(), gap(40));
+W.push(...hdr(1, 'Whole Numbers: Number Patterns', 'COUNT WITH THE FROG!')); W.push(fast());
 W.push(p('Look for the pattern. Fill in the missing numbers.', { italics: true, after: 80 }));
 W.push(q(1, 'Skip counting. Fill in the blanks.'));
 W.push(sub('a', 'Counting in 2s:   2,  4,  6,  ____,  ____,  12,  ____,  16'));
@@ -88,7 +88,7 @@ W.push(...lines(2));
 
 /* ---------- LESSON 2 ---------- */
 W.push(...extra(1));
-W.push(...hdr(2, 'Whole Numbers: Number Bonds', 'NUMBER BOND INQUIRY')); W.push(fast(), gap(40));
+W.push(...hdr(2, 'Whole Numbers: Number Bonds', 'NUMBER BOND INQUIRY')); W.push(fast());
 W.push(q(1, 'Number bonds of 10. Fill in the blanks.', { before: 40, keepNext: true }));
 { const items = ['10 = 3 + ____', '10 = ____ + 6', '10 = 8 + ____', '10 = ____ + 5', '10 = 0 + ____']; const w = CW / 5; W.push(tbl(Array(5).fill(w), [row(items.map(s => cell(s, w, { size: 24, h: 170 })))])); }
 W.push(q(2, 'List the pairs that make 10, from the smallest first number.', { keepNext: true }));
@@ -116,7 +116,7 @@ W.push(p([t('Think harder: two numbers add up to 12. One is 4 more than the othe
 
 /* ---------- LESSON 3 ---------- */
 W.push(...extra(2));
-W.push(...hdr(3, 'Picture Graphs', 'LET’S PLAN THE FRUIT PARTY!')); W.push(fast(), gap(40));
+W.push(...hdr(3, 'Picture Graphs', 'LET’S PLAN THE FRUIT PARTY!')); W.push(fast());
 W.push(p('Our teacher wants to buy fruit for a class party. Every child voted for ONE fruit. The picture graph shows the votes.', { after: 120 }));
 W.push(p([t('Key:  ', { bold: true }), (() => { const f = require('path').join(__dirname, 'dots_1_333333.png'); if (!fs.existsSync(f)) require('child_process').execFileSync('python3', [require('path').join(__dirname, 'gapkit.py'), 'dots', '1', '333333', '14']); return new C.D.ImageRun({ type: 'png', data: fs.readFileSync(f), transformation: { width: 20, height: 16 }, altText: { title: 'one picture', description: 'one picture', name: 'one picture' } }); })(), t(' = 1 child')], { after: 100 }));
 { const rows = [['Apple', 6, 'C0392B'], ['Banana', 5, 'B8860B'], ['Orange', 8, 'E67E22'], ['Grape', 3, '7D3C98'], ['Watermelon', 5, '1E8449']];
@@ -144,7 +144,7 @@ W.push(...lines(2));
 
 /* ---------- LESSON 4 ---------- */
 W.push(...extra(3));
-W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast(), gap(40));
+W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast());
 W.push(q(1, 'Look at the shape pattern. Draw the missing shapes in places 8 and 9.', { before: 60 }));
 W.push(img('shapes.png', 640, 92));
 W.push(q(2, 'The pattern keeps going in the same way.'));
@@ -174,7 +174,7 @@ W.push(...lines(2));
 /* ---------- LESSON 5 ---------- */
 const mach = (cells) => { const ws = cells.map(c => c.w); return tbl(ws, [row(cells.map(c => cell(c.text, c.w, { fill: c.fill, bold: c.bold, h: 110, size: 26 })))]); };
 W.push(...extra(4));
-W.push(...hdr(5, 'Working Backwards', 'MYSTERY NUMBER')); W.push(fast(), gap(40));
+W.push(...hdr(5, 'Working Backwards', 'MYSTERY NUMBER')); W.push(fast());
 W.push(p('To find a mystery number, work backwards. Do the opposite steps in the opposite order.', { italics: true, after: 80 }));
 W.push(q(1, 'I think of a number. Find my number and write it in the yellow box.', { keepNext: true }));
 W.push(sub('a', 'I add 5. I get 12.', { after: 40, keepNext: true }));
@@ -210,7 +210,7 @@ W.push(...lines(3));
 
 /* ---------- LESSON 6 ---------- */
 W.push(...extra(5));
-W.push(...hdr(6, 'Money', 'COIN COMBOS')); W.push(fast(), gap(40));
+W.push(...hdr(6, 'Money', 'COIN COMBOS')); W.push(fast());
 W.push(p('We have 5¢, 10¢, 20¢ and 50¢ coins. You can use the same kind of coin more than once.', { after: 100 }));
 W.push(q(1, 'Show different ways to make exactly 20¢ using only 20¢, 10¢ and 5¢ coins. Write how many of each coin in the table.', { before: 100, keepNext: true }));
 { const ws = [2500, 2470, 2470, 2460];
@@ -236,7 +236,7 @@ W.push(...lines(2));
 
 /* ---------- LESSON 7 ---------- */
 W.push(...extra(6));
-W.push(...hdr(7, 'Shapes', 'SHAPE SAFARI')); W.push(fast(), gap(40));
+W.push(...hdr(7, 'Shapes', 'SHAPE SAFARI')); W.push(fast());
 W.push(q(1, 'Count the shapes in the house picture.', { before: 40, keepNext: true }));
 W.push(img('house.png', 200, 127));
 W.push(tbl([2475, 2475, 2475, 2475], [row(['Circle', 'Triangle', 'Square', 'Rectangle'].map(s => cell(s, 2475, { bold: true, fill: 'EDEDED' }))), row(['', '', '', ''].map(s => cell(s, 2475, { h: 160 })))]));
@@ -265,7 +265,7 @@ W.push(ans('Number of squares:', 1000));
 
 /* ---------- LESSON 8 ---------- */
 W.push(...extra(7));
-W.push(...hdr(8, 'Logic and Sorting', 'LOGIC LAB')); W.push(fast(), gap(40));
+W.push(...hdr(8, 'Logic and Sorting', 'LOGIC LAB')); W.push(fast());
 W.push(q(1, 'Put them in order using the clues.', { before: 40 }));
 W.push(sub('a', 'Ali is taller than Ben. Ben is taller than Mei.   Tallest: ________   Shortest: ________'));
 W.push(sub('b', 'The cat is heavier than the dog. The hen is lighter than the dog.   Heaviest: ________   Lightest: ________'));
@@ -296,7 +296,7 @@ W.push(...lines(2));
 
 /* ---------- LESSON 9 ---------- */
 W.push(...extra(8));
-W.push(...hdr(9, 'Length', 'MEASURE IT!')); W.push(fast(), gap(40));
+W.push(...hdr(9, 'Length', 'MEASURE IT!')); W.push(fast());
 W.push(q(1, 'Three ribbons are made of equal squares.', { before: 40, keepNext: true }));
 W.push(img('ribbons.png', 400, 160));
 W.push(sub('a', 'Which ribbon is the longest?   ____       (b)  Which is the shortest?   ____'));
@@ -325,7 +325,7 @@ W.push(sub('c', 'Measure your own pencil with your ruler.   ____ cm.   Is it lon
 
 /* ---------- LESSON 10 ---------- */
 W.push(...extra(9));
-W.push(...hdr(10, 'Mixed Puzzles', 'CHALLENGE DAY!')); W.push(fast(), gap(40));
+W.push(...hdr(10, 'Mixed Puzzles', 'CHALLENGE DAY!')); W.push(fast());
 W.push(p([t('Show how you know. Remember the inquirer rules!', { italics: true })], { after: 60 }));
 W.push(q(1, 'Pattern:   3,   8,   13,   18,   ____,   ____       Rule: ______________', { before: 40 }));
 W.push(q(2, 'Two numbers add up to 12. One is 2 more than the other. What are they?   ____ and ____'));

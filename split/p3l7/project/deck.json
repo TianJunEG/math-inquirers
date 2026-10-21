@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:26:16Z"
+  "at": "2026-10-21T23:45:49Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 7 – Area Architects",
  "order": [
   "p3l7-title",
+  "p3l7-warmcheck",
   "p3l7-warm1",
   "p3l7-warm2",
   "p3l7-explore1",
@@ -31,7 +32,8 @@
   "p3l7-chdiag",
   "p3l7-chwalk",
   "p3l7-talk",
-  "p3l7-exit"
+  "p3l7-exit",
+  "p3l7-reflect"
  ],
  "cover": "p3l7-title",
  "sections": {

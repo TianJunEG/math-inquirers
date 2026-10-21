@@ -8,6 +8,7 @@
  "title": "Math Inquirers P3: Lesson 6 – Fraction Walls",
  "order": [
   "p3l6-title",
+  "p3l6-warmcheck",
   "p3l6-warm1",
   "p3l6-warm2",
   "p3l6-explore1",
@@ -32,7 +33,8 @@
   "p3l6-chdiag",
   "p3l6-chwalk",
   "p3l6-talk",
-  "p3l6-exit"
+  "p3l6-exit",
+  "p3l6-reflect"
  ],
  "cover": "p3l6-title",
  "sections": {

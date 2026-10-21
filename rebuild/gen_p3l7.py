@@ -287,6 +287,7 @@ put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 15 cm
 order=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','we2','try2','teach3','key','break','teachsq','ws1','ws1ans','teachadd','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[PFX+o for o in order]
 os.makedirs(os.path.join(D,'slides'),exist_ok=True)
+import p3_gifted; order[:]=p3_gifted.add(S,order,7)  # close-the-gaps: warm-up check + look-back slides
 for f in os.listdir(os.path.join(D,'slides')):
     if f.startswith(PFX) and f[:-5] not in order: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

@@ -275,6 +275,7 @@ put('p3l5-exit',sec('p3l5-exit','80–90 MIN',body,
  'Minutes 80 to 90. Answer: 52 ÷ 6 = 8 r 4. 9 cars are needed: the 4 children left over still need a car. Extension: Find the smallest number bigger than 1 that leaves a remainder of 1 when divided by 2, 3, 4, 5 and 6 (61).'))
 
 # ---------- write ----------
+import p3_gifted; ORDER[:]=p3_gifted.add(S,ORDER,5)  # close-the-gaps: warm-up check + look-back slides
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

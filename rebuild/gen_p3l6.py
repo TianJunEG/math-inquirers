@@ -309,6 +309,7 @@ put('p3l6-exit',sec('p3l6-exit','80–90 MIN',body,
  'Minutes 80 to 90. Answer: No. 1/4 = 2/8, so 1/4 + 1/8 = 2/8 + 1/8 = 3/8. We add the parts, not the bottom numbers. Extension: How many different ways can you fill one whole bar using 1/2, 1/4 and 1/8 pieces, as many of each as you like? (9 ways.)'))
 
 # ---------- write ----------
+import p3_gifted; ORDER[:]=p3_gifted.add(S,ORDER,6)  # close-the-gaps: warm-up check + look-back slides
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
