@@ -55,7 +55,7 @@ def pencil_svg(blocks,u=100,aria='Pencil measured with blocks'):
     b=f'<rect x="0" y="10" width="{6*u-50}" height="46" rx="6" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/><polygon points="{6*u-50},10 {6*u},33 {6*u-50},56" fill="#F2C9A0" stroke="{NAVY}" stroke-width="4" stroke-linejoin="round"/>'
     b+=f'<line x1="2" y1="0" x2="2" y2="140" stroke="{RED}" stroke-width="4" stroke-dasharray="8 6"/>'
     for x,w,f in blocks: b+=f'<rect x="{x*u+2}" y="70" width="{w*u-4}" height="{min(w,1)*u*0.6}" rx="6" fill="{f}" stroke="{NAVY}" stroke-width="4"/>'
-    return f'<svg aria-label="{E(aria)}" viewBox="0 0 {W} {Hh}" xmlns="http://www.w3.org/2000/svg" style="width:{W}px;height:{Hh}px">{b}</svg>'
+    return f'<svg aria-label="{E(aria)}" viewBox="0 0 {W} {Hh}" xmlns="http://www.w3.org/2000/svg" style="width:{W}px;height:{Hh}px;flex-shrink:0">{b}</svg>'
 
 def side(inner,extra=''): return 'flex-direction:row;align-items:center;gap:40px;'+extra
 
@@ -70,9 +70,9 @@ r2=pencil_svg([(i*1.5,1,GREEN) for i in range(4)],aria='Pencil measured with 4 c
 r3=pencil_svg([(0,2,'#9CC9EE'),(2,1,GREEN),(3,2,'#9CC9EE'),(5,1,GREEN)],aria='Pencil measured with big and small blocks')
 cap=lambda t,col: p(t,36,800,col)
 body=h2('Measure fairly: equal units')+p('The same pencil is measured three ways. Which way is fair?',34,600,MUTED)
-body+=pin(128,300,1664,r1+cap('✓  Equal cubes, touching, starting at the end: 6 cubes',TEAL),'rise',extra=side(''))
-body+=pin(128,460,1664,r2+cap('✗  Gaps: only 4 cubes, but the pencil did not get shorter',RED),'rise',extra=side(''))
-body+=pin(128,620,1664,r3+cap('✗  Big and small blocks: "4" does not tell us the length',RED),'rise',extra=side(''))
+body+=pin(128,300,1664,r1+cap('✓  Fair: equal cubes, touching, starting at the end: 6 cubes',TEAL),'rise',extra=side(''))
+body+=pin(128,460,1664,r2+cap('Not fair: gaps. Only 4 cubes, but the pencil did not get shorter.',RED),'rise',extra=side(''))
+body+=pin(128,620,1664,r3+cap('Not fair: big and small blocks. "4" does not tell us the length.',RED),'rise',extra=side(''))
 body+=pin(128,790,1664,p('Same-size units, no gaps, no overlaps, start at the end. Then everyone gets the same number.',34,700),'fade',SOFT,20,'20px 30px')
 put('l9-teach1',sec('l9-teach1','25–27 MIN',body,'Teach: the idea and why. Hold up a real pencil and some cubes. Click 1: six equal cubes from the very end of the pencil, touching. Click 2: the same pencil with gaps. Ask: "Is the pencil really 4 cubes long? Did it shrink?" (No: the gaps are length we did not count.) Click 3: big and small blocks. Ask: "If Ali says 4 blocks and Mei says 6 cubes, who has the longer pencil?" (We cannot tell: the units are not the same.) Click 4: read the rule together. Think-aloud: "Rules for measuring: equal units, no gaps, no overlaps, start at the end. If I break a rule, my number is not fair." Link back to the explore: "This is why you and your partner got different numbers of hand spans."'))
 
@@ -189,6 +189,16 @@ if a1 in s:
     s=s.replace(a1,'A ribbon lies from the 3 cm mark to the 9 cm mark on a ruler. How long is it?').replace(a2,'Answer: 6 cm (count the spaces from 3 to 9, or 9 − 3 = 6). A child who writes 9 has read the end mark only. ')
     open(ex,'w').write(s)
 
+
+# ---------- kept slides: accessibility and minimum text size ----------
+import re
+def tidy(sid,labels,fix_fonts=False):
+    f=os.path.join(D,'slides',sid+'.html'); s=open(f).read(); k=iter(labels)
+    s=re.sub(r'<svg (?!aria-label)',lambda m:f'<svg aria-label="{next(k)}" ',s)
+    if fix_fonts: s=s.replace('font-size="22"','font-size="26"').replace('font-size="24"','font-size="25"')
+    open(f,'w').write(s)
+tidy('l9-explore1',['A pencil measured with a row of cubes, starting exactly at the tip'])
+tidy('l9-chdiag',['Three pencils drawn as cube bars: Ali 9, Mei 2 shorter, Ben 3 longer than Mei','A 30-cube ribbon cut into three pieces shown as bars'],True)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 for old in ['l9-mini1','l9-mini2']:
     f=os.path.join(D,'slides',old+'.html')

@@ -46,9 +46,9 @@ G1=[('Red',4,RED),('Blue',7,BLUE),('Green',3,GRN),('Yellow',4,GOLD)]
 body=h2('Read the key, then compare')+pin(128,240,1000,graph(G1),None)+keybox(1180,240,612,'Key:  ● = 1 child')
 body+=pin(1180,370,612,p('Our favourite colours',34,700,MUTED),None)
 body+=step(1,'Read the key: ● = 1 child.  Most: blue (7).  Fewest: green (3).  Same: red and yellow (4).',top=540,size=32)
-body+=step(2,'How many more chose blue than green? Match each green with a blue. 4 blues have no partner:  7 − 3 = 4.',top=645,size=32)
+body+=step(2,'How many more blue than green? Match each green with a blue. 4 blues are left:  7 − 3 = 4.',top=645,size=32)
 body+=pin(128,240,1000,graph(G1,marks={(1,j):(YEL,'',NAVY) for j in range(3,7)},overlay=True),'fade')
-body+=step(3,'How many altogether? Add every row:  7 + 3 = 10,  4 + 4 = 8,  10 + 8 = 18 children.',top=780,size=32)
+body+=step(3,'How many altogether? Add every row:  7 + 3 = 10,  4 + 4 = 8,  10 + 8 = 18 children.',top=750,size=32)
 put('l3-teach1',sec('l3-teach1','25–27 MIN',body,'Teach. Point to the key first: "Before I count anything, I read the key. One dot stands for one child." Click 1: most, fewest, same. Click 2 and 3: how many more. Put a finger on each green dot and the blue dot above it: "This green has a partner … this one … this one. These 4 blues have no partner, so blue has 4 more." Think-aloud from the lesson script: "How many more chose blue than green? I do not add. I compare. Blue has 7 and green has 3. The difference is 7 − 3 = 4." Click 4: altogether. "I look for a 10: 7 + 3 = 10. Then 4 + 4 = 8. 10 + 8 = 18." Watch for children who add (7 + 3 = 10) when asked "how many more".'))
 
 # ---- try 1 ----
@@ -64,9 +64,9 @@ body=h2('A key of 2: count in 2s')+pin(128,240,1000,graph(G3),None)+keybox(1180,
 body+=step(1,'Read the key first: each ● stands for 2 children.',top=470,size=34)
 body+=step(2,'Noodles: count in 2s.  2, 4, 6, 8, 10, 12.  12 children chose noodles.',top=575,size=34)
 body+=pin(128,240,1000,graph(G3,marks={(1,j):(YEL,str(2*(j+1)),NAVY) for j in range(6)},overlay=True),'fade')
-body+=step(3,'How many more chose noodles than rice? Noodles has 4 more pictures: 2, 4, 6, 8.  8 more children.',top=680,size=34)
+body+=step(3,'How many more noodles than rice? 4 more pictures: 2, 4, 6, 8.  8 more children.',top=680,size=34)
 body+=pin(128,240,1000,graph(G3,marks={(1,j):(TEAL,str(2*(j-1)),WHITE) for j in range(2,6)},overlay=True),'fade')
-body+=pin(128,800,1664,p('Why a key of 2? When many children vote, the rows stay short. But we must count in 2s.',32,700,MUTED),'fade')
+body+=pin(128,810,1664,p('Why a key of 2? When many children vote, the rows stay short. But we must count in 2s.',32,700,MUTED),'fade')
 put('l3-teach2',sec('l3-teach2','28–30 MIN',body,'Teach. Ask first: "How many children chose noodles?" Many children count the dots and say 6. Point to the key: "Each dot is 2 children." Click to step 2, then click to put the counting numbers on the dots and count in 2s together. Step 3: rice has 2 dots, so noodles has 4 extra dots; click to show them and count them in 2s: 8. Check: noodles 12 children, rice 4 children, 12 − 4 = 8. Think-aloud: "I always read the key first. One dot is 2 children, so I count in 2s, not 1s." Pizza: 2, 4, 6, 8. Total: 12 dots, count in 2s to 24.'))
 
 # ---- try 2 ----

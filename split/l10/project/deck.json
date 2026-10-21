@@ -5,22 +5,32 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 10 \u2013 Challenge Day",
+ "title": "Math Inquirers: Lesson 10 – Challenge Day",
  "order": [
   "l10-title",
   "l10-warm1",
   "l10-warm2",
   "l10-explore1",
   "l10-explore2",
-  "l10-mini1",
-  "l10-mini2",
+  "l10-teach1",
+  "l10-we1",
+  "l10-try1",
+  "l10-we2",
+  "l10-try2",
+  "l10-we3",
   "l10-key",
   "l10-break",
+  "l10-teachgraph",
   "l10-ws1",
+  "l10-ws1ans",
+  "l10-teachtri",
+  "l10-teachlen",
   "l10-ws2",
+  "l10-ws2ans",
   "l10-stretch",
   "l10-challenge",
   "l10-chdiag",
+  "l10-chwalk",
   "l10-talk",
   "l10-exit",
   "end"
@@ -28,8 +38,20 @@
  "cover": "l10-title",
  "sections": {
   "s1": {
-   "description": "Lesson 10: Challenge Day (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l10-title"
+  },
+  "s2": {
+   "description": "Teach: how to start a puzzle (draw it, list it, make a table)",
+   "start": "l10-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l10-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk, exit and close",
+   "start": "l10-stretch"
   }
  },
  "faces": {
