@@ -95,8 +95,7 @@ module.exports = {
       ['Q2', '(a) about 500 (1/2 × 1000)  (b) No. The flips are random, so each run gives a slightly different count near 500. Exactly 500 happens only about 1 run in 40.  (c) about 200 (1/5 × 1000)'],
       ['Q3', '(a) 4/10 = 2/5  (b) 2 red (6 red, 6 blue: 6/12 = 1/2)  (c) 10 blue (4 red out of 20: 4/20 = 1/5)'],
       ['Q4', '(a) Differences: 0 appears 6 times, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2 (36 in all).  (b) Ali 24/36 = 2/3, Ben 12/36 = 1/3  (c) Not fair: Ali is twice as likely to win, even though each has 3 differences.  (d) Any split with 18 outcomes each, e.g. Ali on 1, 3, 5 (odd) and Ben on 0, 2, 4 (even); or Ali on 1, 2 and Ben on 0, 3, 4, 5; or Ali on 0, 1, 5 and Ben on 2, 3, 4.'],
-      ['Q5', '(a) False: the coin has no memory; heads is still 1/2.  (b) False: a total of 12 is 1/36 (6 + 6 only) but 7 is 6/36 = 1/6.  (c) False: we expect about 10 (1/6 × 60), but the count is random: 8 or 13 are quite normal.'],
-      ['Q6', 'Gaps: 6, 6, a = b.  (a) About 167: P(double) = 6/36 = 1/6, and 1/6 × 1000 = 166 2/3.  (b) A count must be a whole number, and each run is random, so it lands near 167 (about 19 runs in 20 between 145 and 190), not exactly on it.']
+      ['Q5', 'Gaps: 6, 6, a = b.  (a) About 167: P(double) = 6/36 = 1/6, and 1/6 × 1000 = 166 2/3.  (b) A count must be a whole number, and each run is random, so it lands near 167 (about 19 runs in 20 between 145 and 190), not exactly on it.']
     ]
   },
 
@@ -127,7 +126,7 @@ module.exports = {
     keySmall: 'Expected number = probability × tries. 1000 random games land close to it, but not exactly.',
     brk: 'Human dice. The tutor rolls a dice: 1 or 2, five star jumps; 3 or 4, touch your toes five times; 5 or 6, spin round once. Which will we do most? (Each has the same chance: 2/6 = 1/3.)',
     ws1: 'Page 1, in pairs: Q1 the spinner, Q2 predict the coin program, Q3 change the bag.',
-    ws2: 'Page 2, on your own: Q4 the Difference Game, Q5 true or false, Q6 plan the doubles program.'
+    ws2: 'Page 2, on your own: Q4 the Difference Game (and the Python corner), Q5 plan the doubles program.'
   },
 
   qbank: {
@@ -185,12 +184,7 @@ module.exports = {
       H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
       H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
       H.sub('d', 'Change who wins on which differences so that the game is fair.', { keepNext: true }), ...H.lines(1),
-      H.q(5, 'True or false? Circle T or F, then write why.', { keepNext: true }),
-      H.tbl([3300, 3300, 3300], [
-        H.row(['(a) After 4 tails in a row, heads is more likely next.', '(b) With two dice, a total of 12 is as likely as a total of 7.', '(c) If I roll a dice 60 times, I will get exactly ten 6s.'].map(x => H.cell(tx(x), 3300, { h: 40, fill: 'EDEDED' }))),
-        H.row([0, 1, 2].map(() => H.cell('T     /     F', 3300, { h: 30, bold: true }))),
-        H.row([0, 1, 2].map(() => H.cell(tx('Why?'), 3300, { h: 330 })))]),
-      H.q(6, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
+      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
       H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
         H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])
     ];

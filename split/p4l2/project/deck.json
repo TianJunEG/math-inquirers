@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:33:20Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P4: Lesson 2 – Big Number Puzzles",
+ "order": [
+  "p4l2-title",
+  "p4l2-warm1",
+  "p4l2-warm2",
+  "p4l2-explore1",
+  "p4l2-explore2",
+  "p4l2-we1",
+  "p4l2-try1",
+  "p4l2-we2",
+  "p4l2-try2",
+  "p4l2-we4",
+  "p4l2-we3",
+  "p4l2-key",
+  "p4l2-break",
+  "p4l2-ws1",
+  "p4l2-ws1ans",
+  "p4l2-teachriddle",
+  "p4l2-teachpattern",
+  "p4l2-teachcards",
+  "p4l2-ws2",
+  "p4l2-ws2ans",
+  "p4l2-stretch",
+  "p4l2-challenge",
+  "p4l2-chdiag",
+  "p4l2-chwalk",
+  "p4l2-talk",
+  "p4l2-exit"
+ ],
+ "cover": "p4l2-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p4l2-title"
+  },
+  "s2": {
+   "description": "Teach: rounding, working backwards and estimating",
+   "start": "p4l2-we1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p4l2-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p4l2-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

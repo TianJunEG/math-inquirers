@@ -39,7 +39,7 @@ const fan = () => {
 // Q4: 8-point compass
 const compass = () => {
   const c = [80, 80];
-  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:96px;max-width:100%">`;
+  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style="width:84px;max-width:100%">`;
   ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'].forEach((n, i) => {
     const d = i * 45, main = i % 2 === 0;
     s += L(c, pt(c[0], c[1], main ? 52 : 40, d), main ? 3 : 2);
@@ -50,7 +50,7 @@ const compass = () => {
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles, (c) two squares sharing a corner
 const corners = () => {
-  let s = `<svg aria-label="Three drawings. (a) A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side. (b) A square with two lines from its bottom left corner making three angles: 15 degrees, angle b and 48 degrees. (c) Two squares share a corner and overlap by 30 degrees; angle c is the big angle between their outer sides." viewBox="0 0 600 205" xmlns="http://www.w3.org/2000/svg" style="width:450px;max-width:100%">`;
+  let s = `<svg aria-label="Three drawings. (a) A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side. (b) A square with two lines from its bottom left corner making three angles: 15 degrees, angle b and 48 degrees. (c) Two squares share a corner and overlap by 30 degrees; angle c is the big angle between their outer sides." viewBox="0 0 600 205" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">`;
   // (a) rectangle 150 x 100, top-left corner A
   const A = [20, 50];
   s += `<rect x="20" y="50" width="150" height="100" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
@@ -189,7 +189,7 @@ module.exports = {
     H.fig(compass()),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
-    H.sub('c', 'Siti faces NE and wants to face S. Smallest turn?  _________  (degrees, which way)'),
+    H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),
     H.sub('d', 'Ravi turns 90° anticlockwise and ends up facing NW. At first he faced:   ______'),
     H.q(5, 'The corners of squares and rectangles are 90°. Find the angles marked a, b and c.', { keepNext: true }),
     H.fig(corners()),
@@ -197,6 +197,6 @@ module.exports = {
     H.q(6, 'A robot starts facing N.', { keepNext: true }),
     H.sub('a', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______'),
     H.sub('b', 'Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.'),
-    ...H.lines(2)
+    ...H.lines(1)
   ]
 };
