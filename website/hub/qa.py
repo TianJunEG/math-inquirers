@@ -75,4 +75,7 @@ QA=[
 ('mi','price','How much does Math Inquirers cost?',
  'S$650 for 10 lessons of 90 minutes (S$65 a lesson), with the workbook and all materials included. Until Term 1 2027 ends (12 Mar 2027), families pay an introductory S$500 (S$50 a lesson).',
  ['Families who join in the first intake are founding families: they keep S$50 a lesson for all of 2027 if they enrol in every term. New families from Term 2 2027 pay S$65 a lesson, and everyone pays S$65 from January 2028.', 'There is no payment at registration: we confirm your child\'s group first, then send payment details.']),
+('mi','refund','What if we need to cancel?',
+ 'You can cancel within 60 days of paying. Before the first lesson, we refund everything you have paid. After lessons start, we refund what you have paid for the lessons your child has not attended yet.',
+ ['For example, with 7 of 10 lessons left you get 7/10 of the fee back. If you pay in instalments, any instalment not yet due is simply cancelled. The workbook and kit are yours to keep.', 'After 60 days, fees are not refundable. To cancel, message us on WhatsApp or email and we refund by PayNow.']),
 ]

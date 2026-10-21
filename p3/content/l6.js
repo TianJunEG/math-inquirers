@@ -20,7 +20,7 @@ const sfr = (x, y, n, d, size = 16, col = NAVY) =>
 // fraction wall: rows 1, 1/2, 1/3, 1/4, 1/6, 1/8, 1/12, each row split into equal parts
 const wall = () => {
   const dens = [1, 2, 3, 4, 6, 8, 12], x0 = 10, W = 580, h = 46;
-  let s = `<svg aria-label="Fraction wall: one whole, halves, thirds, quarters, sixths, eighths and twelfths" viewBox="0 0 600 ${dens.length * h + 4}" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px">`;
+  let s = `<svg aria-label="Fraction wall: one whole, halves, thirds, quarters, sixths, eighths and twelfths" viewBox="0 0 600 ${dens.length * h + 4}" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px">`;
   dens.forEach((d, r) => {
     const y = 2 + r * h, w = W / d, fill = d === 1 ? YEL : (r % 2 ? SKY : WHITE);
     for (let i = 0; i < d; i++) {
@@ -34,7 +34,7 @@ const wall = () => {
 
 // Q2 shapes, all cut into equal parts
 const shapes = () => {
-  let s = `<svg aria-label="Five shapes A to E, each cut into equal parts with some parts shaded" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px">`;
+  let s = `<svg aria-label="Five shapes A to E, each cut into equal parts with some parts shaded" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:500px">`;
   const lab = (x, t) => `<text x="${x}" y="160" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="${FF}">${t}</text>`;
   // A: square with both diagonals: 4 equal triangles, top one shaded
   { const x = 10, y = 20, a = 100;
@@ -66,7 +66,7 @@ const shapes = () => {
 // Q6 partner cards
 const cards = () => {
   const top = [[1, 4], [2, 3], [3, 8], [5, 12], [1, 6]], bot = [[7, 12], [6, 8], [5, 6], [5, 8], [4, 12]];
-  let s = `<svg aria-label="Ten fraction cards in two rows" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px">`;
+  let s = `<svg aria-label="Ten fraction cards in two rows" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px">`;
   const card = (x, y, n, d, fill) => `<rect x="${x}" y="${y}" width="90" height="70" rx="10" fill="${fill}" stroke="${NAVY}" stroke-width="2.5"/>` + sfr(x + 45, y + 34, n, d, 22);
   top.forEach(([n, d], i) => { s += card(15 + i * 117, 8, n, d, YEL); });
   bot.forEach(([n, d], i) => { s += card(15 + i * 117, 142, n, d, SKY); });
@@ -95,8 +95,8 @@ module.exports = {
     extension: 'How many different ways can you fill one whole bar using 1/2, 1/4 and 1/8 pieces, as many of each as you like? (9 ways. Work in order: two halves; one half with the other half made of quarters and eighths in 3 ways; no halves, with 4, 3, 2, 1 or 0 quarters filled up with eighths: 5 ways.)',
     key: [
       ['Q1', '(a) 2, 3, 4, 6: 1/2 = 2/4 = 3/6 = 4/8 = 6/12.  (b) 4, 8: 2/3 = 4/6 = 8/12.  (c) 6, 9: 3/4 = 6/8 = 9/12.  (d) The bottom number is always double the top number (the top and bottom are multiplied by the same number).'],
-      ['Q2', '(a) A, B and D (A: 1 of 4 equal parts; B: 2/8 = 1/4; D: 3/12 = 1/4).  (b) C: 2/6 (= 1/3) shaded.  E: 3/8 shaded.'],
-      ['Q3', '(a) >  (b) <  (c) =  (d) > (3/4 = 6/8)  (e) < (same top number; sevenths are bigger than ninths)  (f) < (2/3 = 8/12, 3/4 = 9/12)  (g) 1/3, 5/12, 1/2, 3/4 (4/12, 5/12, 6/12, 9/12).'],
+      ['Q2', '(a) >  (b) <  (c) =  (d) > (3/4 = 6/8)  (e) < (same top number; sevenths are bigger than ninths)  (f) < (2/3 = 8/12, 3/4 = 9/12)  (g) 1/3, 5/12, 1/2, 3/4 (4/12, 5/12, 6/12, 9/12).'],
+      ['Q3', '(a) A, B and D (A: 1 of 4 equal parts; B: 2/8 = 1/4; D: 3/12 = 1/4).  (b) C: 2/6 (= 1/3) shaded.  E: 3/8 shaded.'],
       ['Q4', '(a) 5/7  (b) 2/8 + 3/8 = 5/8  (c) 4/12 + 5/12 = 9/12 (= 3/4)  (d) 5/6 − 2/6 = 3/6 (= 1/2)  (e) 10/10 − 3/10 = 7/10  (f) 5/10 + 3/10 = 8/10 (= 4/5).'],
       ['Q5', '(a) 1/6 + 4/6 = 5/6 of the fence.  (b) 1/6 is not painted.  (c) 4/6 − 1/6 = 3/6 = 1/2 of the fence more in the afternoon.'],
       ['Q6', '(a) 1/4 and 6/8;  2/3 and 4/12;  3/8 and 5/8;  5/12 and 7/12;  1/6 and 5/6.  (b) Any correct pair with different bottom numbers, e.g. 1/2 + 4/8, 1/3 + 8/12, 3/4 + 2/8, 2/5 + 6/10.'],
@@ -150,8 +150,8 @@ module.exports = {
     keyBig: 'To compare or add fractions, the parts must be the same size. Use the wall, or change one fraction to an equal fraction with the same bottom number.',
     keySmall: 'When we add, we add the top numbers. The bottom number (the size of the parts) stays the same.',
     brk: 'Fraction turns. The tutor calls a turn: “a quarter turn!”, “a half turn!”, “three quarters of a turn!”, “two quarters!” Children turn on the spot and freeze. Which calls make the same turn?',
-    ws1: 'Page 1, in pairs: Q1 the fraction wall and equal fractions, Q2 which shapes show one quarter, Q3 compare and order.',
-    ws2: 'Page 2, on your own: Q4 add and subtract, Q5 Ravi paints a fence, Q6 partners that make one whole, Q7 all the twelfths between one half and three quarters.'
+    ws1: 'Page 1, in pairs: Q1 the fraction wall and equal fractions, Q2 compare and order.',
+    ws2: 'Page 2, on your own: Q3 which shapes show one quarter, Q4 add and subtract, Q5 Ravi paints a fence, Q6 partners that make one whole, Q7 all the twelfths between one half and three quarters.'
   },
 
   qbank: {
@@ -195,11 +195,7 @@ module.exports = {
     W.push(H.sub('b', [fr(2, 3), ' = ', fr(BOX, 6), ' = ', fr(BOX, 12), '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)&nbsp;&nbsp;', fr(3, 4), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
     W.push(H.sub('d', 'Look at your answers to (a). What do you notice about the top and bottom numbers?', { keepNext: true, after: 0 }));
     W.push(...H.lines(1));
-    W.push(H.q(2, 'Each shape is cut into equal parts.', { keepNext: true, after: 20 }));
-    W.push(H.fig(shapes()));
-    W.push(H.sub('a', ['Which shapes have exactly ', fr(1, 4), ' shaded?   ________']));
-    W.push(H.sub('b', 'For each of the other shapes, write the fraction that is shaded.   ________________'));
-    W.push(H.q(3, ['Write ', '&gt;', ', ', '&lt;', ' or = in each circle.'], { keepNext: true }));
+    W.push(H.q(2, ['Write ', '&gt;', ', ', '&lt;', ' or = in each circle.'], { keepNext: true }));
     const cw = [3300, 3300, 3300];
     const cmp = (l, a, b) => H.cell([div(`(${l})&nbsp;&nbsp;${fr(...a)}${OV}${fr(...b)}`, 'font-size:20px')], 3300, { h: 110 });
     W.push(H.tbl(cw, [
@@ -209,8 +205,12 @@ module.exports = {
     W.push(H.sub('g', ['Put in order, smallest first:&nbsp;&nbsp;', fr(5, 12), ',&nbsp;&nbsp;', fr(1, 2), ',&nbsp;&nbsp;', fr(1, 3), ',&nbsp;&nbsp;', fr(3, 4)], { keepNext: true }));
     W.push(H.ans('Smallest first:'));
 
-    W.push(H.q(4, 'Add or subtract. Make the parts the same size first.', { pb: true, before: 0, keepNext: true }));
-    const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;________`, 'font-size:20px'), '<div style="height:46px"></div>'], 3300, { h: 90 });
+    W.push(H.q(3, 'Each shape is cut into equal parts.', { pb: true, before: 0, keepNext: true, after: 20 }));
+    W.push(H.fig(shapes()));
+    W.push(H.sub('a', ['Which shapes have exactly ', fr(1, 4), ' shaded?   ________']));
+    W.push(H.sub('b', 'For each of the other shapes, write the fraction that is shaded.   ________________'));
+    W.push(H.q(4, 'Add or subtract. Make the parts the same size first.', { keepNext: true }));
+    const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;________`, 'font-size:20px'), '<div style="height:26px"></div>'], 3300, { h: 70 });
     W.push(H.tbl(cw, [
       H.row([sum('a', [2, 7], '+', [3, 7]), sum('b', [1, 4], '+', [3, 8]), sum('c', [1, 3], '+', [5, 12])]),
       H.row([sum('d', [5, 6], '−', [1, 3]), sum('e', 1, '−', [3, 10]), sum('f', [1, 2], '+', [3, 10])])
@@ -219,7 +219,7 @@ module.exports = {
     W.push(H.sub('a', 'What fraction of the fence has he painted?   ________'));
     W.push(H.sub('b', 'What fraction of the fence is not painted yet?   ________'));
     W.push(H.sub('c', 'How much more of the fence did he paint in the afternoon than in the morning?   ________', { keepNext: true }));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true }));
     W.push(H.sub('a', 'Join each yellow card to the blue card that makes one whole with it.', { keepNext: true, after: 20 }));
     W.push(H.fig(cards()));

@@ -20,7 +20,7 @@ const drinksGraph = () => {
   });
   s += txt(22, y0 - 120, 'Number of cups', { size: 15, extra: ` transform="rotate(-90 22 ${y0 - 120})"` });
   s += txt(x0 + 255, y0 + 46, 'Drink', { size: 15 });
-  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:470px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">${s}</svg>`;
 };
 // Matchstick squares: 1, 2 and 3 squares in a row
 const sticks = () => {
@@ -33,12 +33,12 @@ const sticks = () => {
     s += txt(ox + n * u / 2, 20 + u + 32, `${n} square${n > 1 ? 's' : ''}: ${[4, 7, 10][j]} sticks`, { size: 15 });
     ox += n * u + 70;
   });
-  return `<svg aria-label="Matchstick squares: 1 square uses 4 sticks, 2 squares use 7 sticks, 3 squares use 10 sticks" viewBox="0 0 600 115" xmlns="http://www.w3.org/2000/svg" style="width:500px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Matchstick squares: 1 square uses 4 sticks, 2 squares use 7 sticks, 3 squares use 10 sticks" viewBox="0 0 600 115" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">${s}</svg>`;
 };
 const digitCards = () => {
   let s = '';
   ['2', '5', '8'].forEach((d, i) => { s += `<rect x="${10 + i * 70}" y="6" width="56" height="64" rx="8" fill="${YEL}" stroke="${NAVY}" stroke-width="3"/>` + txt(38 + i * 70, 50, d, { size: 30 }); });
-  return `<svg aria-label="Digit cards 2, 5 and 8" viewBox="0 0 600 76" xmlns="http://www.w3.org/2000/svg" style="width:500px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Digit cards 2, 5 and 8" viewBox="0 0 600 76" xmlns="http://www.w3.org/2000/svg" style="width:380px;max-width:100%">${s}</svg>`;
 };
 
 module.exports = {
@@ -138,18 +138,16 @@ module.exports = {
     W.push(p([t('Before you start, choose: draw it, list it or make a table. Then check every clue.', { italics: true })], { after: 40 }));
     W.push(q(1, 'A drinks stall sold 200 cups of drinks on Monday. The bar graph shows the cups sold, but the bar for Lime juice is missing.', { before: 60, keepNext: true }));
     W.push(fig(drinksGraph()));
-    W.push(sub('a', 'Of the four drinks shown, which sold the most cups?   ____________'));
-    W.push(sub('b', 'How many more cups of Kopi than Teh were sold?   ____'));
+    W.push(sub('a', 'Of the four drinks shown, which sold the most?   __________     (b)  How many more cups of Kopi than Teh?   ____'));
     W.push(sub('c', 'How many cups of Lime juice were sold?   ____   Now draw its bar on the graph.'));
     W.push(sub('d', 'Which two drinks together sold exactly 100 cups?   ____________ and ____________'));
-    W.push(q(2, 'Ali, Mei, Ravi and Siti are each in a different CCA: Chess, Choir, Football or Swimming. Use the clues. Put a ✓ or a cross in each box.', { keepNext: true }));
+    W.push(q(2, 'Ali, Mei, Ravi and Siti are each in a different CCA: Chess, Choir, Football or Swimming. Use the clues. Put a ✓ or a cross in each box. Then write each child’s CCA in the last column.', { keepNext: true }));
     W.push(sub('Clue 1', 'Ali is not in the choir and does not play chess.', { after: 40 }));
     W.push(sub('Clue 2', 'Mei and Ravi went to watch their friend sing in the choir concert.', { after: 40 }));
     W.push(sub('Clue 3', 'The swimmer’s name has 4 letters.'));
-    { const ws = [2300, 1900, 1900, 1900, 1900];
-      W.push(tbl(ws, [row(['', 'Chess', 'Choir', 'Football', 'Swimming'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 50 }))),
-        ...['Ali', 'Mei', 'Ravi', 'Siti'].map(n => row([cell(n, ws[0], { bold: true, h: 55 }), ...[1, 2, 3, 4].map(i => cell('', ws[i]))]))])); }
-    W.push(sub('a', 'Who is in each CCA?   Chess ________   Choir ________   Football ________   Swimming ________'));
+    { const ws = [1500, 1600, 1600, 1600, 1600, 2000];
+      W.push(tbl(ws, [row(['', 'Chess', 'Choir', 'Football', 'Swimming', 'CCA'].map((s, i) => cell(s, ws[i], { bold: true, fill: i === 5 ? 'D9D9D9' : 'EDEDED', h: 40 }))),
+        ...['Ali', 'Mei', 'Ravi', 'Siti'].map(n => row([cell(n, ws[0], { bold: true, h: 45 }), ...[1, 2, 3, 4, 5].map(i => cell('', ws[i]))]))])); }
     // ---------- page 2 ----------
     W.push(q(3, 'Draw it! Queues.', { pb: true, before: 0, keepNext: true }));
     W.push(sub('a', 'Ben is 3rd from the front and 5th from the back of a queue. How many people are in the queue?   ____'));
@@ -165,13 +163,12 @@ module.exports = {
     W.push(fig(sticks()));
     { const ws = [2100, 1300, 1300, 1300, 1300, 1300, 1300];
       W.push(tbl(ws, [row(['Squares', '1', '2', '3', '4', '5', '6'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 50 }))),
-        row(['Sticks', '4', '7', '10', '', '', ''].map((s, i) => cell(s, ws[i], { bold: i === 0, h: 80, size: 24 })))])); }
+        row(['Sticks', '4', '7', '10', '', '', ''].map((s, i) => cell(s, ws[i], { bold: i === 0, h: 60, size: 24 })))])); }
     W.push(sub('a', 'Fill in the table.'));
     W.push(sub('b', 'How many sticks are needed for 8 squares?   ____'));
     W.push(sub('c', 'Ben uses 31 sticks. How many squares does he make?   ____'));
     W.push(q(6, 'I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
     W.push(...lines(2));
-    W.push(p([t('The puzzle I liked best in the whole program was ______________ because ______________', { size: 24 })], { before: 160, after: 60 }));
     return W;
   }
 };

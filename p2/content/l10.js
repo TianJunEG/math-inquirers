@@ -52,7 +52,7 @@ module.exports = {
     mistakes: ['Picture graph: counting the pictures instead of using the key (writing 6 instead of 30 for Tuesday).', 'Listing: putting 0 first (038 is not a 3-digit number) or missing a number because the list is not in order.', 'Logic grid: putting a tick without crossing out the rest of that row and column, so the next clue cannot be used.'],
     extension: 'Write a challenge puzzle for next year’s group, with the answer and a hint that says how to start it. Check it has exactly one answer.',
     key: [
-      ['Q1', '(a) 30  (b) 15 more  (c) Thursday 25 ice-creams: draw 5 pictures (90 − 20 − 30 − 15 = 25)  (d) $30 (15 ice-creams at $2 each)'],
+      ['Q1', '(a) 30  (b) Thursday sold 25 ice-creams: draw 5 pictures (90 − 20 − 30 − 15 = 25)  (c) $30 (15 ice-creams at $2 each)'],
       ['Q2', '(a) 308, 380, 803, 830  (b) Greatest 830, smallest 308  (c) 308, 380, 803'],
       ['Q3', 'Two 50¢ coins and four 20¢ coins (100¢ + 80¢ = 180¢ = $1.80). Table: 0 → $1.20, 1 → $1.50, 2 → $1.80 ✓'],
       ['Q4', 'Ali: car. Ben: MRT. Mei: bus. Siti: walk.'],
@@ -122,40 +122,39 @@ module.exports = {
   },
 
   workbook: H => [
-    H.q(1, 'The picture graph shows the ice-creams a stall sold. (Stuck? Draw it, list it, or make a table!)', { before: 40, keepNext: true }),
+    H.q(1, 'The picture graph shows the ice-creams a stall sold.', { before: 40, keepNext: true }),
     H.fig(graphFig),
-    H.sub('a', 'How many ice-creams were sold on Tuesday?   ________'),
-    H.sub('b', 'How many more were sold on Tuesday than on Wednesday?   ________'),
-    H.sub('c', '90 ice-creams were sold in the 4 days. Draw Thursday’s pictures on the graph.'),
-    H.sub('d', 'Each ice-cream costs $2. How much money did the stall get on Wednesday?   ________'),
+    H.sub('a', 'How many ice-creams were sold on Tuesday?   ______'),
+    H.sub('b', '90 ice-creams were sold in the 4 days. Draw Thursday’s pictures on the graph.'),
+    H.sub('c', 'Each ice-cream costs $2. How much did the stall get on Wednesday?  ______'),
     H.q(2, 'Use the digit cards  3,  0  and  8  once each to make a 3-digit number.', { keepNext: true }),
-    H.sub('a', 'List ALL the 3-digit numbers you can make, in order.   ________________________________'),
+    H.sub('a', 'List ALL the numbers in order.  ______________________________'),
     H.sub('b', 'Greatest: ________     Smallest: ________'),
-    H.sub('c', 'Which of your numbers are between 300 and 810?   ________________________'),
+    H.sub('c', 'Which of them are between 300 and 810?  ______________________'),
     H.q(3, 'Ben has 6 coins. They are all 50¢ and 20¢ coins. Together they are worth $1.80. How many of each coin does he have? Make a table.', { keepNext: true }),
     H.tbl([3300, 3300, 3300], [
       H.row(['Number of 50¢', 'Number of 20¢', 'Total'].map(s => H.cell(s, 3300, { bold: true, fill: 'EDEDED', h: 30 }))),
       H.row([H.cell('0', 3300, { h: 30 }), H.cell('6', 3300, { h: 30 }), H.cell('$1.20', 3300, { h: 30 })]),
-      ...[1, 2, 3].map(() => H.row([H.cell('', 3300, { h: 30 }), H.cell('', 3300, { h: 30 }), H.cell('', 3300, { h: 30 })]))
+      ...[1, 2, 3].map(() => H.row([H.cell('\u00a0', 3300, { h: 20 }), H.cell('\u00a0', 3300, { h: 20 }), H.cell('\u00a0', 3300, { h: 20 })]))
     ]),
     H.sub('', 'Ben has ______ 50¢ coins and ______ 20¢ coins.'),
     H.q(4, 'Ali, Mei, Siti and Ben each go to school a different way: bus, MRT, car or walking. Put a tick where it fits and a cross where it cannot.', { pb: true, before: 0, keepNext: true }),
     H.fig('<div style="text-align:left;padding-left:40px;line-height:1.6">Clue 1: Siti lives next to the school, so she walks.<br>Clue 2: Ben does not go by bus or by car.<br>Clue 3: Mei does not go by car.</div>'),
     H.tbl(W5, [
       H.row(['', 'Bus', 'MRT', 'Car', 'Walk'].map((s, i) => H.cell(s, W5[i], { bold: true, fill: 'EDEDED', h: 30 }))),
-      ...['Ali', 'Mei', 'Siti', 'Ben'].map(n => H.row([H.cell(n, W5[0], { bold: true, h: 50 }), ...[1, 2, 3, 4].map(i => H.cell('', W5[i], { h: 50 }))]))
+      ...['Ali', 'Mei', 'Siti', 'Ben'].map(n => H.row([H.cell(n, W5[0], { bold: true, h: 40 }), ...[1, 2, 3, 4].map(i => H.cell('', W5[i], { h: 40 }))]))
     ]),
     H.sub('', 'Ali: ________   Mei: ________   Siti: ________   Ben: ________'),
     H.q(5, 'A cake is cut into 10 equal pieces. Ali eats 3/10 of the cake. Mei eats 2 more pieces than Ali. Ben eats the rest.', { keepNext: true }),
     H.fig(cakeFig),
     H.sub('a', 'What fraction of the cake does Mei eat?   ________'),
     H.sub('b', 'What fraction of the cake does Ben eat?   ________'),
-    H.sub('c', 'Put the children in order, from the one who eats the most.   ______________________'),
+    H.sub('c', 'Order the children, the one who eats the most first.  __________________'),
     H.q(6, 'Square tables are pushed together in a row.', { keepNext: true }),
     H.fig(tablesFig),
     H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
       H.row(['Tables', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: true, fill: 'EDEDED', h: 30 }))),
-      H.row(['People', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: i === 0, h: 30 })))
+      H.row(['People', '4', '6', '8', '', '', ''].map((s, i) => H.cell(s, i ? 1250 : 2400, { bold: i === 0, h: 80 })))
     ]),
     H.sub('a', 'How many people can sit at 6 tables?   ________'),
     H.sub('b', 'How many tables are needed for 20 people?   ________')

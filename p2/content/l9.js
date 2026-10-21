@@ -133,8 +133,7 @@ module.exports = {
       { q: 'Three ribbons, each 30 cm long, are glued end to end in a line. Each join overlaps by 2 cm. How long is the long ribbon?', a: '86 cm (30 + 30 + 30 = 90; there are 2 joins, so take away 2 + 2 = 4)' },
       { q: 'A tank has 20 ℓ of water. A tap adds 5 ℓ every 10 minutes. The tap is turned on at 9:40 a.m. At what time does the tank have 40 ℓ?', a: '10:20 a.m. (20 ℓ more is 4 lots of 5 ℓ, which takes 4 lots of 10 minutes = 40 minutes)' },
       { q: 'A box with 4 same books in it is 1000 g. The empty box is 200 g. How heavy is one book?', a: '200 g (the books are 1000 − 200 = 800 g; 200 + 200 + 200 + 200 = 800)' },
-      { q: 'Ali’s clock is 10 minutes fast. It shows 3:05 p.m. What is the real time?', a: '2:55 p.m.' },
-      { q: 'A snail crawls 20 cm every 5 minutes. How far does it crawl in 30 minutes?', a: '120 cm (30 minutes is 6 lots of 5 minutes; 6 lots of 20 cm is 120 cm)' }
+      { q: 'Ali’s clock is 10 minutes fast. It shows 3:05 p.m. What is the real time?', a: '2:55 p.m.' }
     ],
     challenge: [
       { q: '1 melon balances 2 pineapples. 1 pineapple balances 3 apples. 1 apple balances 2 lemons. How many lemons balance 1 melon?', a: '12 lemons (1 melon = 6 apples, and each apple = 2 lemons)' },

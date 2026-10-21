@@ -149,7 +149,7 @@ put('p2l3-we1',sec('p2l3-we1','28–30 MIN',body,'Click to reveal each step. Thi
 
 # ---------- 7. teach: how many of each (table) ----------
 body=h2('How many of each? Make a table')+pin(128,240,1664,p('Bicycles (2 wheels) and cars (4 wheels). 6 vehicles and 16 wheels altogether. How many of each?',36,700),None,WHITE,20,'18px 28px')
-W3=[240,200,420]
+W3=[220,170,360]
 body+=trow(128,410,['Bicycles','Cars','Wheels'],W3,None,True)
 for i,r in enumerate([['6','0','12  too few'],['5','1','14  too few'],['4','2','16  ✓']]): body+=trow(128,500+i*90,r,W3,'rise')
 body+=pin(1100,410,692,p('Start with ALL bicycles:  6 × 2 = 12 wheels.',34,700),'fade',WHITE,20,'20px 26px')
@@ -245,7 +245,7 @@ put('p2l3-exit',exit_slide('p2l3-exit','80–90 MIN','A pen has hens and goats. 
 if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides'))
 os.makedirs(os.path.join(D,'slides'))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
-deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
+deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
       'title':'Math Inquirers P2: Lesson 3 – Legs, Wheels and Arrays','order':ORDER,'cover':'p2l3-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p2l3-title'},'s2':{'description':'Teach: arrays, and how many of each with a table','start':'p2l3-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l3-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p2l3-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},

@@ -124,9 +124,7 @@ module.exports = {
     W.push(H.q(2, 'Divide. Then decide what to do with the leftover.', { keepNext: true }));
     W.push(H.sub('a', '75 pupils go on a trip. A minibus holds 9 pupils. How many minibuses are needed?   ____'));
     W.push(H.sub('b', 'Mei has $60. A book costs $7. How many books can she buy?   ____'));
-    W.push(H.sub('c', 'A farmer packs 87 eggs into boxes of 6.', { after: 40 }));
-    W.push(H.p('How many boxes can he fill completely?   ____      How many boxes does he need to hold ALL the eggs?   ____', { indent: { left: 560 }, after: 60 }));
-    W.push(H.p('Show your working:', { indent: { left: 560 }, after: 0 }));
+    W.push(H.sub('c', 'A farmer packs 87 eggs into boxes of 6. How many boxes can he fill completely?   ____      How many boxes does he need to hold ALL the eggs?   ____', { keepNext: true }));
     W.push(...H.lines(1));
     W.push(H.q(3, 'Ravi packs marbles into bags of 8. He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
     W.push(H.sub('a', 'How many marbles does Ravi have?   ____'));

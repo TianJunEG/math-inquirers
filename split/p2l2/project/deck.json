@@ -1,0 +1,67 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-21T12:21:42Z"
+ },
+ "lists": "css",
+ "title": "Math Inquirers P2: Lesson 2 – Missing Digit Mysteries",
+ "order": [
+  "p2l2-title",
+  "p2l2-warm1",
+  "p2l2-warm2",
+  "p2l2-explore1",
+  "p2l2-explore2",
+  "p2l2-teach1",
+  "p2l2-try1",
+  "p2l2-we2",
+  "p2l2-try2",
+  "p2l2-teach3",
+  "p2l2-try3",
+  "p2l2-key",
+  "p2l2-break",
+  "p2l2-ws1",
+  "p2l2-ws1ans",
+  "p2l2-teachsq",
+  "p2l2-teachtri",
+  "p2l2-teachtwo",
+  "p2l2-ws2",
+  "p2l2-ws2ans",
+  "p2l2-stretch",
+  "p2l2-challenge",
+  "p2l2-chdiag",
+  "p2l2-chwalk",
+  "p2l2-talk",
+  "p2l2-exit"
+ ],
+ "cover": "p2l2-title",
+ "sections": {
+  "s1": {
+   "description": "Warm-up and explore",
+   "start": "p2l2-title"
+  },
+  "s2": {
+   "description": "Teach: missing digits, working backwards and balance",
+   "start": "p2l2-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "p2l2-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "p2l2-stretch"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}

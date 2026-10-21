@@ -38,15 +38,16 @@ const q1Fig = () => {
   let b = bgGrid(x0, y0, 22, 5, c);
   b += cellsFig(sh(FA, 1, 1), x0, y0, c) + cellsFig(sh(FB, 6, 1), x0, y0, c) + cellsFig(sh(FC, 12, 1), x0, y0, c) + cellsFig(sh(FD, 17, 1), x0, y0, c);
   [['A', 3], ['B', 8.5], ['C', 13.5], ['D', 18.5]].forEach(([l, cx]) => { b += txt(x0 + cx * c, y0 + 5 * c + 26, l, { size: 22 }); });
-  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 520);
+  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 470);
 };
 // Q3: L-shape, 10 cm by 7 cm with a 4 cm by 3 cm corner cut away (scale 22 px per cm)
 const q3Fig = () => {
-  const k = 22, x0 = 190, y0 = 34;
+  const k = 22, x0 = 80, y0 = 34;
   const P = [[0, 0], [6, 0], [6, 3], [10, 3], [10, 7], [0, 7]].map(([a, b]) => `${x0 + a * k},${y0 + b * k}`).join(' ');
   let b = `<polygon points="${P}" fill="${S}" stroke="${N}" stroke-width="3.5" stroke-linejoin="miter"/>`;
-  b += txt(x0 + 3 * k, y0 - 10, '6 cm') + txt(x0 - 12, y0 + 3.5 * k + 6, '7 cm', { anchor: 'end' }) + txt(x0 + 5 * k, y0 + 7 * k + 26, '10 cm') + txt(x0 + 10 * k + 12, y0 + 5 * k + 6, '4 cm', { anchor: 'start' });
-  return svg(600, 220, b, 'An L-shaped figure. Bottom 10 cm, left side 7 cm, top 6 cm, right side 4 cm. The step in the top right corner has no lengths marked.', 360);
+  const o = { size: 22 };
+  b += txt(x0 + 3 * k, y0 - 10, '6 cm', o) + txt(x0 - 12, y0 + 3.5 * k + 7, '7 cm', { size: 22, anchor: 'end' }) + txt(x0 + 5 * k, y0 + 7 * k + 28, '10 cm', o) + txt(x0 + 10 * k + 12, y0 + 5 * k + 7, '4 cm', { size: 22, anchor: 'start' });
+  return svg(380, 222, b, 'An L-shaped figure. Bottom 10 cm, left side 7 cm, top 6 cm, right side 4 cm. The step in the top right corner has no lengths marked.', 320);
 };
 // Q4: staircase 4, 3, 2, 1 squares high
 const q4Fig = () => {
@@ -58,7 +59,7 @@ const q4Fig = () => {
 const q5Fig = () => {
   const c = 30, L = [[2, 1], [2, 2], [2, 3], [3, 3]];
   let b = '';
-  [[40, '(a)'], [340, '(b)']].forEach(([x0, l]) => { b += txt(x0 + 90, 22, l, { size: 20 }) + bgGrid(x0, 32, 6, 5, c) + cellsFig(L, x0, 32, c); });
+  [[40, '(a)'], [340, '(b)']].forEach(([x0, l]) => { b += txt(x0 + 90, 24, l, { size: 24 }) + bgGrid(x0, 32, 6, 5, c) + cellsFig(L, x0, 32, c); });
   return svg(600, 190, b, 'Two copies of an L shape made of 4 squares on a 1 cm grid: 3 squares in a column with 1 more square to the right of the bottom one', 400);
 };
 module.exports = {
@@ -155,8 +156,8 @@ module.exports = {
       H.fig(q1Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
         H.row(['Figure', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
-        H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 90 }))]),
-        H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('', w, { h: 90 }))])
+        H.row([H.cell('Area (cm²)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 50 }))]),
+        H.row([H.cell('Perimeter (cm)', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell('\u00a0', w, { h: 50 }))])
       ]),
       H.gap(40),
       H.sub('a', 'Which two figures have the same area but different perimeters?   ________'),
@@ -164,7 +165,7 @@ module.exports = {
       H.q(2, 'Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List ALL the gardens she can make, in order.', { keepNext: true }),
       H.tbl([2475, 2475, 2475, 2475], [
         H.row(['Length (m)', 'Breadth (m)', 'Check: perimeter', 'Area (m²)'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED' }))),
-        ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('', w, { h: 80 }))))
+        ...[0, 1, 2, 3, 4].map(() => H.row([2475, 2475, 2475, 2475].map(w => H.cell('\u00a0', w, { h: 40 }))))
       ]),
       H.gap(40),
       H.sub('a', 'Which garden has the biggest area?   ______________'),

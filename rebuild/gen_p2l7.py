@@ -241,7 +241,7 @@ body+=stepx(1,'Same whole: all the bars are the same length.',left=1130,top=330,
 body+=stepx(2,'{1/2} is 1 of 2 parts. {1/6} is 1 of 6 parts.',left=1130,top=470,width=662,size=32,build='fade')
 body+=stepx(3,'More equal parts: each part is smaller.',left=1130,top=610,width=662,size=32,build='fade')
 body+=ansx(128,760,950,'Smallest to biggest: {1/6}, {1/3}, {1/2}',size=36)
-body+=soft(1130,760,662,'Share a pizza with 6 friends: you get less!',32)
+body+=soft(1130,760,662,'A pizza shared by 6, not 2: each slice is smaller.',32)
 put('p2l7-we2',sec('p2l7-we2','30–32 MIN',body,
  'Click through. Hold up the folded strips from Explore. Think-aloud: "All the bars are the same length, so it is the same whole. One half is 1 of 2 parts. One sixth is 1 of 6 parts. When I cut the same whole into more parts, each part gets smaller. So one sixth is the smallest and one half is the biggest." '
  'Story: "One pizza for 2 children, or one pizza for 6 children: when do you get a bigger slice?" Common mistake: "1/6 is bigger because 6 is bigger than 2". Answer with the strips, not just words. Only compare like this when the wholes are the same size.'))
@@ -306,8 +306,9 @@ put('p2l7-tryadd',try_x('p2l7-tryadd','54–55 MIN','Your turn: add and take awa
 
 # 17. story
 base=SV(1100,140,bar(10,10,1080,110,10),'A bar for a cake cut into 10 equal pieces')
-ov1=SV(1100,140,''.join(R(10+108*i,10,108,110,YEL) for i in range(4))+T(10+108*2,82,'Ben',40),'4 pieces coloured for Ben')
-ov2=SV(1100,140,''.join(R(10+108*i,10,108,110,SKY) for i in range(4,7))+T(10+108*5.5,82,'Siti',40),'3 pieces coloured for Siti')
+def tag(x,y,t,w=110): return R(x-w/2,y-30,w,46,WHITE,NAVY,3,12)+T(x,y+6,t,32)
+ov1=SV(1100,140,''.join(R(10+108*i,10,108,110,YEL) for i in range(4))+tag(10+108*2,65,'Ben'),'4 pieces coloured for Ben')
+ov2=SV(1100,140,''.join(R(10+108*i,10,108,110,SKY) for i in range(4,7))+tag(10+108*5.5,65,'Siti'),'3 pieces coloured for Siti')
 body=h2('Fair-sharing stories: draw a bar')+card(P('A cake is cut into 10 equal pieces. Ben eats 4 pieces. Siti eats 3 pieces. What fraction of the cake is eaten? What fraction is left?',36,700),extra='padding:20px 40px')
 body+=pin(128,400,1100,base)
 body+=colstep(128,400,1100,1,'Draw a bar of 10 equal parts. Colour Ben\'s 4: {4/10}.',ov1,140,0,32)
@@ -355,12 +356,10 @@ g=''
 for k,n in enumerate([4,7]):
     y=20+k*250
     g+=sfrac(60,y+35,1,n,30)+bar(120,y,560,70,n,(0,))
-g+=T(400,190,'Unit fractions in between?',30,MUTED)+R(120,140+0,560,0,'none')
-for k in range(2): g+=R(120,120+k*0,560,0,'none')
-g+=''.join(R(120+i*140,215,120,40,WHITE,NAVY,3,8)+T(180+i*140,246,'1/?',26,MUTED) for i in range(4))
+g+=T(400,150,'Which fractions with 1 on top',28,MUTED)+T(400,186,'fit in between?',28,MUTED)+R(340,200,120,46,WHITE,NAVY,3,10)+T(400,234,'?',30,TEAL)
 d1=SV(700,360,g,'Bars for one quarter and one seventh of the same whole, with blank cards for the fractions in between')
-g=bar(20,30,660,90,12,(0,1,2,3),SKY)+T(20+55*2,90,'Mei',30)+T(20+55*4,162,'Ali and Ben share these 8 pieces',28,MUTED,700,'start')
-g+=R(40,220,300,80,YEL,NAVY,4,10)+T(190,272,'Ben',34)+R(360,220,300,80,YEL,NAVY,4,10)+T(510,272,'Ben + 2 more',30)+T(350,340,'Ali',30,MUTED)
+g=bar(20,30,660,90,12,(0,1,2,3),SKY)+R(65,52,90,46,WHITE,NAVY,3,12)+T(110,86,'Mei',30)+T(240,162,'Ali and Ben share these 8 pieces',28,MUTED,700,'start')
+g+=R(40,220,300,80,YEL,NAVY,4,10)+T(190,272,'Ben: ?',34)+R(360,220,300,80,YEL,NAVY,4,10)+T(510,272,'Ali: Ben + 2',32)
 d2=SV(700,360,g,'A bar of 12 pieces: 4 for Mei; the other 8 shared by Ben and Ali, where Ali has 2 more than Ben')
 def chcol(t,svg): return f'<div style="background:{WHITE};border-radius:24px;padding:20px 24px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0"><p style="font-size:28px;font-weight:700;color:{TEAL}">{E(t)}</p>{svg}</div>'
 body=h2('Challenge: see it',60)+f'<div style="display:flex;gap:32px;align-items:flex-start">{chcol("Q1: between one seventh and one quarter",d1)}{chcol("Q2: sharing a cake of 12 pieces",d2)}</div>'
