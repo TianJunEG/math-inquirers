@@ -94,8 +94,8 @@ def letter(k,c=30):
 body=h2('Warm-up: Fold It in Your Head')+p('How many lines of symmetry? Show with your fingers.',36,600,MUTED)
 CW=533; cards=''; ans=''
 for i,k in enumerate('HTELUZ'):
-    L=128+(i%3)*(CW+32); Tp=270+(i//3)*310
-    cards+=pin(L,Tp,CW,f'<div style="display:flex;align-items:center;gap:24px">{letter(k)}<p style="font-family:{HF};font-size:80px;font-weight:700">{k}</p></div>',None,WHITE,24,'14px 28px',f'box-sizing:border-box;height:290px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
+    L=128+(i%3)*(CW+32); Tp=320+(i//3)*300
+    cards+=pin(L,Tp,CW,f'<div style="display:flex;align-items:center;gap:24px">{letter(k)}<p style="font-family:{HF};font-size:80px;font-weight:700">{k}</p></div>',None,WHITE,24,'14px 28px',f'box-sizing:border-box;height:280px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     ans+=pin(L+250,Tp+60,CW-280,f'<p style="font-size:34px;font-weight:800;line-height:1.2">{LANS[k]}</p><p style="font-size:26px;font-weight:600;color:{MUTED}">{LWHY[k]}</p>','pop',SOFT,16,'10px 16px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p4l8-warm1',sec('p4l8-warm1','0–5 MIN',body+cards+ans,
  'Minutes 0 to 5. Fold It in Your Head. Show one letter at a time (the clicks reveal H, T, E, L, U, Z in order). Count 3, 2, 1: fingers up for the number of lines of symmetry. Then a child shows with a finger where the fold line goes. '
@@ -130,7 +130,7 @@ body=h2('Fold it in your head: base, walls, lid')+stitle('Is this a net of a cub
 body+=pin(128,300,W_,base)+pin(128,300,W_,o1,'fade')+pin(128,300,W_,o2,'fade')+pin(128,300,W_,o3,'fade')+pin(128,300,W_,o4,'fade')
 for k,t in enumerate(['Choose a base: a square with lots of neighbours. Colour it.','The squares touching it fold UP to be walls: left, right and back.','This square hangs from the right wall. When the wall stands up, it swings round to the FRONT.','The last square is joined to the right wall too: it folds over the top. It is the lid.']):
     body+=ostep(128,300,k+1,t,None,0,0,dx=480+20,dy=0,tw=1164,size=32).replace('top:300px',f'top:{300+k*125}px')
-body+=answer(628,800,1164,'1 base + 4 walls + 1 lid, no overlaps: it IS a net.')
+body+=answer(628,830,1164,'1 base + 4 walls + 1 lid, no overlaps: it IS a net.')
 put('p4l8-teach1',sec('p4l8-teach1','25–28 MIN',body,'Use 6 paper squares, tape and a real cube if possible. Ask first: "Do you think this folds into a cube?" Take guesses. Click 1: the base (yellow). Click 2: fold the left, right and back squares up with your finger: they stand like walls. Click 3: "This square hangs from the RIGHT wall, so when the wall stands up it swings round to the front." Click 4: the lid. Think-aloud: "A cube has 6 faces: one base, one lid and four walls. I check I have all four walls: left, right, back, front, and nothing is in the same place twice." Then fold the paper model to prove it.'))
 
 # ---------- 7. worked example: a net that fails ----------

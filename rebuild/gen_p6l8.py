@@ -245,7 +245,7 @@ body += trow(128, 520, ['letter', 'n', 'n + 10', 'm = mod 26', 'code'], Wt, None
 for i, (l, n_) in enumerate(zip('SKY', [18, 10, 24])):
     m = (n_ + 10) % 26
     body += trow(128, 600 + i * 78, [l, str(n_), str(n_ + 10), str(m), ABC[m]], Wt, 'rise', False, 34)
-body += answer(128, 850, 1664, 'The program says CUI (SKY: Y gives 34, 34 mod 26 = 8, which is I)')
+body += answer(128, 830, 1664, 'The program says CUI (Y gives 34, and 34 mod 26 = 8 = I)')
 put('p6l8-teachtrace', sec('p6l8-teachtrace', '52–54 MIN', body,
     'Teach before worksheet page 2 (Q3 traces WAY with shift 5; this is a different word). Click to add each row: S = 18 → 28 → 2 = C; K = 10 → 20 = U; Y = 24 → 34 → 8 = I. Ask: "Which letter needed the mod?" (S and Y, because the number went past 25). A trace table is how programmers check code by hand.'))
 

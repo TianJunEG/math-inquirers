@@ -45,7 +45,7 @@ def line(a,b,sw=3,dash=False,col=NAVY):
 def rect(x,y,w,h,fill=WHITE,sw=4,rx=0,dash=False):
     d=' stroke-dasharray="10 7"' if dash else ''
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{NAVY}" stroke-width="{sw}"{d}/>'
-def bars(rows,unit,x0=170,y0=10,bh=64,gap=26,lab_size=34,seg_size=30,label='Bar model',w=None,extra='',lab_x=None):
+def bars(rows,unit,x0=170,y0=10,bh=64,gap=26,lab_size=34,seg_size=30,label='Bar model',w=None,extra='',lab_x=None,h=None):
     """rows: list of (label, [(units, fill, text)]). Every unit is drawn as its own box so equal units are visible."""
     s=''; y=y0; maxx=0
     for lab,segs in rows:
@@ -57,7 +57,7 @@ def bars(rows,unit,x0=170,y0=10,bh=64,gap=26,lab_size=34,seg_size=30,label='Bar 
             x+=n*unit
         maxx=max(maxx,x); y+=bh+gap
     W=w or int(maxx+30)
-    return svgwrap(W,int(y-gap+y0+4),label,s+extra)
+    return svgwrap(W,max(int(y-gap+y0+4),h or 0),label,s+extra)
 def brace(x1,x2,y,text,size=30,up=False):
     d=-1 if up else 1
     mid=(x1+x2)/2
@@ -81,3 +81,25 @@ def write_deck(L,order,sections,S,title,D=None):
         assert len(re.findall(r'<[a-z]',h))<=200,(i,len(re.findall(r'<[a-z]',h)))
         a=re.search(r'<aside>(.*?)</aside>',h,re.S).group(1); assert len(a)<=4000,(i,len(a))
     print(len(order),'slides')
+
+def pbar(x,y,scale,parts,h=64,sw=3,lab=None,labsize=32,seg=30):
+    """One bar split into parts: (value, fill, text, nunits). Width = value*scale. Returns svg fragments."""
+    s=''
+    if lab: s+=txt(x-14,y+h/2+11,lab,labsize,NAVY,'end',700,'Nunito Sans, Arial')
+    cx=x
+    for v,fill,t,*n in parts:
+        n=n[0] if n else 1; w=v*scale
+        s+=rect(cx,y,w,h,fill,sw)
+        for i in range(1,n): s+=line((cx+i*w/n,y),(cx+i*w/n,y+h),2)
+        if t: s+=txt(cx+w/2,y+h/2+10,t,seg,NAVY,'middle',800,'Nunito Sans, Arial')
+        cx+=w
+    return s
+def vbrace(x,y1,y2,text,size=30,left=False):
+    """Brace beside a bar: from y1 to y2 at x (opens to the bar)."""
+    d=-1 if left else 1; m=(y1+y2)/2
+    return (f'<path d="M{x} {y1} q{10*d} 0 {10*d} 12 V{m-10} q0 10 {10*d} 10 q{-10*d} 0 {-10*d} 10 V{y2-12} q0 12 {10*d} 12" fill="none" stroke="{TEAL}" stroke-width="4"/>'
+            +txt(x+(26 if not left else -26)*1,m+10,text,size,TEAL,'start' if not left else 'end',800,'Nunito Sans, Arial'))
+def hbrace(x1,x2,y,text,size=30):
+    m=(x1+x2)/2
+    return (f'<path d="M{x1} {y} v10 q0 10 10 10 H{m-10} q10 0 10 10 q0 -10 10 -10 H{x2-10} q10 0 10 -10 v-10" fill="none" stroke="{TEAL}" stroke-width="4"/>'
+            +txt(m,y+60,text,size,TEAL,'middle',800,'Nunito Sans, Arial'))
