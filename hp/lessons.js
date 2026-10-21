@@ -42,8 +42,8 @@ module.exports = {
         ['Q2', '(a) 2+8, 3+7, 4+6, 5+5  (b) The second number goes down by 1  (c) 6 different bonds'],
         ['Q3', '(a) 20 and 20  (b) 20 and 20  (c) 8, 11, 5'],
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
-        ['Q5', '(a) Corners 1, 2, 3. Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) The corners must be 1, 2, 3 in any order (rotations and flips are the same solution).  (c) Corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
-        ['Q6', '(a) 4 and 6  (b) 4 and 8']
+        ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
+        ['Q6', '4 and 6.  Challenge: 4 and 8.']
       ]
     },
     {
@@ -118,7 +118,7 @@ module.exports = {
       explore: 'Pairs make 20¢ in as many ways as they can with 20¢, 10¢ and 5¢ coins, recording each on a whiteboard.',
       mini: 'Start with the biggest coin and work down. Use a table: how many 20¢, 10¢, 5¢. Show why we know when we have them all.',
       share: 'Why can’t 35¢ be made with only two coins?',
-      exit: { q: 'Make 25¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', a: '10¢ + 10¢ + 5¢.' },
+      exit: { q: 'Make 40¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', a: '20¢ + 10¢ + 10¢.' },
       mistakes: ['Listing the same way twice in a different order (10+5+5 and 5+10+5).', 'Choosing many small coins instead of looking for the fewest.', 'Stopping at the first set in Q4 instead of checking for all of them.'],
       extension: 'Make 50¢ in as many ways as possible using 5¢, 10¢, 20¢ and 50¢.',
       key: [

@@ -5,30 +5,49 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 6 \u2013 Coin Combos",
+ "title": "Math Inquirers: Lesson 6 – Coin Combos",
  "order": [
   "l6-title",
   "l6-warm1",
   "l6-warm2",
   "l6-explore1",
   "l6-explore2",
-  "l6-mini1",
-  "l6-mini2",
+  "l6-teach1",
+  "l6-we1",
+  "l6-try1",
   "l6-key",
   "l6-break",
   "l6-ws1",
+  "l6-ws1ans",
+  "l6-teachfew",
+  "l6-teachexact",
+  "l6-teachswap",
   "l6-ws2",
+  "l6-ws2ans",
   "l6-stretch",
   "l6-challenge",
   "l6-chdiag",
+  "l6-chwalk",
   "l6-talk",
   "l6-exit"
  ],
  "cover": "l6-title",
  "sections": {
   "s1": {
-   "description": "Lesson 6: Coin Combos (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l6-title"
+  },
+  "s2": {
+   "description": "Teach: every way, in order",
+   "start": "l6-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l6-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "l6-stretch"
   }
  },
  "faces": {

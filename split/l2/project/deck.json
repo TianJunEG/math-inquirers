@@ -5,30 +5,51 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 2 \u2013 Number Bond Inquiry",
+ "title": "Math Inquirers: Lesson 2 – Number Bond Inquiry",
  "order": [
   "l2-title",
   "l2-warm1",
   "l2-warm2",
   "l2-explore1",
   "l2-explore2",
-  "l2-mini1",
-  "l2-mini2",
+  "l2-teach1",
+  "l2-try1",
+  "l2-teach2",
+  "l2-try2",
+  "l2-teach3",
+  "l2-try3",
   "l2-key",
   "l2-break",
   "l2-ws1",
+  "l2-ws1ans",
+  "l2-teachtri",
+  "l2-teachtwo",
   "l2-ws2",
+  "l2-ws2ans",
   "l2-stretch",
   "l2-challenge",
   "l2-chdiag",
+  "l2-chwalk",
   "l2-talk",
   "l2-exit"
  ],
  "cover": "l2-title",
  "sections": {
   "s1": {
-   "description": "Lesson 2: Number Bond Inquiry (90 minutes).",
+   "description": "Warm-up and explore",
    "start": "l2-title"
+  },
+  "s2": {
+   "description": "Teach: bonds of 10 and 20, and the equals sign",
+   "start": "l2-teach1"
+  },
+  "s3": {
+   "description": "Worksheet with teaching before each page",
+   "start": "l2-break"
+  },
+  "s4": {
+   "description": "Stretch, challenge, talk and exit",
+   "start": "l2-stretch"
   }
  },
  "faces": {

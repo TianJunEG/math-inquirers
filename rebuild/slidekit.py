@@ -43,3 +43,48 @@ def answer(left,top,width,text,build='pop'):
     return pin(left,top,width,f'<p style="font-size:40px;font-weight:800;line-height:1.2">{E(text)}</p>',build,YEL,20,'18px 26px')
 def qrow(left,top,width,label,text,size=38):
     return pin(left,top,width,f'<p style="font-size:{size}px;font-weight:600;line-height:1.3"><span style="color:{TEAL};font-weight:800">{E(label)}</span>  {E(text)}</p>',None,WHITE,20,'18px 28px')
+
+def trow(left,top,cells,widths,build=None,header=False,size=36):
+    bg=YEL if header else WHITE
+    inner=''.join(f'<div style="width:{w}px;padding:14px 18px;font-size:{size}px;font-weight:{800 if header else 600};text-align:center">{E(c)}</div>' for c,w in zip(cells,widths))
+    b=f' data-build-in="{build}"' if build else ''
+    return f'<div{b} style="position:absolute;left:{left}px;top:{top}px;display:flex;background:{bg};border:3px solid {NAVY};border-radius:12px">{inner}</div>'
+def triangle_svg(nums=None,w=600,h=520,label=''):
+    pos=[(300,60),(70,450),(530,450),(185,255),(300,450),(415,255)]  # A,B,C, AB, BC, CA
+    s=f'<svg aria-label="Magic triangle {E(label)}" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px"><polygon points="300,60 70,450 530,450" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linejoin="round"/>'
+    for i,(x,y) in enumerate(pos):
+        corner=i<3
+        s+=f'<circle cx="{x}" cy="{y}" r="44" fill="{YEL if corner else WHITE}" stroke="{NAVY}" stroke-width="5"/>'
+        if nums and nums[i] is not None: s+=f'<text x="{x}" y="{y+17}" font-size="48" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{nums[i]}</text>'
+    return s+'</svg>'
+def cubes_svg(groups,w=1100,h=110,size=70):
+    """groups: list of (count, colour, label)"""
+    s=f'<svg aria-label="cubes" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px">'; x=4
+    for n,col,lab in groups:
+        x0=x
+        for i in range(n):
+            s+=f'<rect x="{x}" y="6" width="{size}" height="{size}" rx="8" fill="{col}" stroke="{NAVY}" stroke-width="4"/>'; x+=size+8
+        if lab: s+=f'<text x="{(x0+x-8)/2}" y="{size+34}" font-size="28" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">{E(lab)}</text>'
+        x+=30
+    return s+'</svg>'
+def seesaw_svg(left,right,w=1100,h=260,tilt=0):
+    return (f'<svg aria-label="Balance: {E(left)} and {E(right)}" viewBox="0 0 1100 260" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px">'
+            f'<g transform="rotate({tilt} 550 150)"><rect x="80" y="140" width="940" height="22" rx="10" fill="{NAVY}"/>'
+            f'<rect x="110" y="40" width="340" height="96" rx="18" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/><text x="280" y="106" font-size="54" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{E(left)}</text>'
+            f'<rect x="650" y="40" width="340" height="96" rx="18" fill="{SOFT}" stroke="{NAVY}" stroke-width="4"/><text x="820" y="106" font-size="54" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{E(right)}</text></g>'
+            f'<polygon points="550,162 490,250 610,250" fill="{TEAL}" stroke="{NAVY}" stroke-width="4"/></svg>')
+def ws_preview(sid,time,title,items,tip,notes):
+    inner=''.join(p(f'<span style="color:#1F7A6F;font-weight:800">{E(a)}</span>  {E(b)}',38,600,raw=True) for a,b in items)
+    return sec(sid,time,h2(title)+card(inner)+card(p(tip,34,600,MUTED)),notes)
+def check_slide(sid,time,title,rows,notes,lw=200):
+    body=h2(title)
+    for i,(a,b) in enumerate(rows):
+        top=250+i*130
+        body+=pin(128,top,lw-20,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'18px 24px')
+        body+=answer(128+lw,top,1664-lw,b)
+    return sec(sid,time,body,notes)
+def try_slide(sid,time,title,sub,rows,notes,size=40):
+    body=h2(title)+p(sub,34,600,MUTED)
+    for i,(a,b,c) in enumerate(rows):
+        body+=qrow(128,340+i*150,1250,a,b,size)+answer(1420,340+i*150,372,c)
+    return sec(sid,time,body,notes)
