@@ -147,7 +147,7 @@ def spinner6():
         a0 = math.radians(i * 60 - 90); a1 = math.radians((i + 1) * 60 - 90); am = (a0 + a1) / 2
         s += f'<path d="M{cx},{cy} L{cx + r * math.cos(a0):.1f},{cy + r * math.sin(a0):.1f} A{r},{r} 0 0 1 {cx + r * math.cos(a1):.1f},{cy + r * math.sin(a1):.1f} Z" fill="{cols[i]}" stroke="{NAVY}" stroke-width="4"/>'
         s += f'<text x="{cx + 115 * math.cos(am):.1f}" y="{cy + 115 * math.sin(am) + 14:.1f}" font-size="40" font-weight="700" text-anchor="middle" fill="{WHITE if cols[i] == RED else NAVY}" font-family="Fredoka, Arial">{labs[i]}</text>'
-    return s + f'<line x1="{cx}" y1="{cy}" x2="{cx + 50}" y2="{cy - 80}" stroke="{NAVY}" stroke-width="10" stroke-linecap="round"/><circle cx="{cx}" cy="{cy}" r="14" fill="{NAVY}"/></svg>'
+    return s + f'<line x1="{cx}" y1="{cy}" x2="{cx + 30}" y2="{cy - 48}" stroke="{NAVY}" stroke-width="10" stroke-linecap="round"/><circle cx="{cx}" cy="{cy}" r="14" fill="{NAVY}"/></svg>'
 body = h2('Worked example: a spinner') + pin(128, 240, 380, spinner6(), None)
 body += step(1, '6 equal parts, so 6 equally likely outcomes.', left=560, top=250, width=1232, size=36)
 body += step(2, 'Yellow is 2 parts:  P(yellow) = 2/6 = 1/3.', left=560, top=370, width=1232, size=36)
@@ -204,13 +204,13 @@ put(f'{PRE}-teachcode', sec(f'{PRE}-teachcode', '32–33 MIN', body,
 
 # ---------- 12 why not exactly ----------
 runs = [102, 101, 85, 103, 97]
-bsv = f'<svg aria-label="Bar chart: five runs of 600 rolls gave 102, 101, 85, 103 and 97 sixes; a dashed line marks 100" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" style="width:900px;height:520px;flex:none">'
+bsv = f'<svg aria-label="Bar chart: five runs of 600 rolls gave 102, 101, 85, 103 and 97 sixes; a dashed line marks 100" viewBox="0 -40 900 560" xmlns="http://www.w3.org/2000/svg" style="width:900px;height:560px;flex:none">'
 base = 440; sc = 3.4
 for v in (0, 50, 100):
     y = base - v * sc; bsv += f'<line x1="110" y1="{y}" x2="880" y2="{y}" stroke="#C9D4EC" stroke-width="2"/><text x="96" y="{y + 10}" font-size="28" font-weight="700" text-anchor="end" fill="{NAVY}" font-family="Nunito Sans, Arial">{v}</text>'
 for i, v in enumerate(runs):
     x = 150 + i * 145; bsv += f'<rect x="{x}" y="{base - v * sc:.0f}" width="90" height="{v * sc:.0f}" fill="{TEAL}" stroke="{NAVY}" stroke-width="3"/><text x="{x + 45}" y="{base - v * sc - 12:.0f}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{v}</text><text x="{x + 45}" y="{base + 40}" font-size="28" font-weight="700" text-anchor="middle" fill="{MUTED}" font-family="Nunito Sans, Arial">run {i + 1}</text>'
-bsv += f'<line x1="110" y1="{base - 100 * sc}" x2="880" y2="{base - 100 * sc}" stroke="{RED}" stroke-width="5" stroke-dasharray="14 10"/><text x="880" y="{base - 100 * sc - 60}" font-size="28" font-weight="800" text-anchor="end" fill="{RED}" font-family="Nunito Sans, Arial">expected: 1/6 × 600 = 100</text></svg>'
+bsv += f'<line x1="110" y1="{base - 100 * sc}" x2="880" y2="{base - 100 * sc}" stroke="{RED}" stroke-width="5" stroke-dasharray="14 10"/><text x="880" y="{base - 100 * sc - 95}" font-size="28" font-weight="800" text-anchor="end" fill="{RED}" font-family="Nunito Sans, Arial">expected: 1/6 × 600 = 100</text></svg>'
 body = h2('Close, but not exact') + p('A program rolls a dice 600 times and counts the 6s. We ran it 5 times.', 34, 600, MUTED)
 body += pin(128, 320, 900, bsv, None)
 body += box(1080, 330, 712, 'Each roll is random, so each run wobbles around 100.', 'rise', WHITE, 32)

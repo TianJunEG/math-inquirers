@@ -30,12 +30,12 @@ const Q1NETS = [
   ['F', [[0, 0], [1, 0], [0, 1], [1, 1], [2, 1], [3, 1]]]
 ];
 const q1Svg = () => {
-  const c = 24, pw = 200, ph = 112;
+  const c = 20, pw = 200, ph = 96;
   let s = '';
   Q1NETS.forEach(([L, cells], i) => {
     const px = (i % 3) * pw, py = Math.floor(i / 3) * ph, [w, h] = dims(cells);
     s += `<rect x="${px + 4}" y="${py + 4}" width="${pw - 8}" height="${ph - 8}" rx="10" fill="${WH}" stroke="${N}" stroke-width="1.5" opacity="0.9"/>`;
-    s += tx(px + 22, py + 30, L, 20, TEAL) + `<rect x="${px + 12}" y="${py + 42}" width="22" height="22" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
+    s += tx(px + 22, py + 26, L, 20, TEAL) + `<rect x="${px + 12}" y="${py + 36}" width="22" height="22" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
     s += net(cells, c, px + 44 + (150 - w * c) / 2, py + (ph - h * c) / 2, {}, SKY);
   });
   return svg(600, 2 * ph, 'Six shapes made of 6 squares, labelled A to F, each with a tick box', s);
@@ -48,7 +48,7 @@ const q2Svg = () => {
 };
 // Q3: two dice nets with some numbers missing
 const q3Svg = () => {
-  const c = 42;
+  const c = 36;
   const a = [...row4(1), [0, 0], [3, 2]], la = { '0,0': '1', '2,1': '4', '3,1': '2', '0,1': '', '1,1': '', '3,2': '' };
   const b = [[0, 0], [1, 0], [1, 1], [2, 1], [2, 2], [3, 2]], lb = { '0,0': '5', '1,1': '1', '2,2': '3' };
   let s = tx(70, 22, '(a)', 18, TEAL) + net(a, c, 70, 32, la, WH, 26) + tx(350, 22, '(b)', 18, TEAL) + net(b, c, 350, 32, lb, WH, 26);
@@ -111,10 +111,10 @@ module.exports = {
     ],
     extension: 'How many different nets of a cube are there? (11, if turned or flipped copies count as the same.) Draw as many as you can on squared paper.',
     key: [
-      ['Q1', '(a) 3 shapes: A, C and E.  (b) For example: B has two squares on the same side of the row of 4, so both close the same end. D has 5 squares in a row: the 5th lands on the 1st. F has a 2 by 2 block: 4 squares meet at one corner, but only 3 faces of a cube meet at a corner.'],
+      ['Q1', '(a) 3 shapes: A, C and E; one shape that does not fold, with a reason, for example: B has two squares on the same side of the row of 4, so both close the same end. D has 5 squares in a row: the 5th lands on the 1st. F has a 2 by 2 block: 4 squares meet at one corner, but only 3 faces of a cube meet at a corner.'],
       ['Q2', 'Opposite A: E.  Opposite B: D.  Opposite C: F.'],
-      ['Q3', '(a) The long row reads 3, 5, 4, 2 (left to right) and the square below the right end is 6.  (b) Top row 5, 4; middle row 1, 2; bottom row 3, 6.'],
-      ['Q4', '(a) A rocket: the right half matches the left, each corner the same number of squares from the line (shoulders 2 squares out, fins 4 squares out at the bottom, a notch 1 square up in the middle of the bottom).  (b) A fish: the bottom half matches the top (tail tip 2 squares below the line, body 3 squares below the line at its widest, nose on the line).'],
+      ['Q3', '(a) The long row reads 3, 5, 4, 2 (left to right) and the square below the right end is 6.  (b) Top row 5, 4; middle row 1, 2; bottom row 3, 6.  (c) 1 and 6 are the ends of a step, so they are opposite and add up to 7.'],
+      ['Q4', '(a) The rocket: the right half is the left half flipped. Corners go to (counting squares from the left edge of the grid): nose on the line, shoulders 2 squares to the right of the line going down to the fins 4 squares to the right at the bottom, then the bottom edge 1 square right of the line and the notch up at the line.  (b) The fish: the bottom half is the top half flipped, so each point is the same number of squares below the line as it is above (tail tip 2 squares, back 1 to 3 squares, nose on the line).'],
       ['Q5', '(a) 1 (up-down)  (b) 2 (up-down and across)  (c) 4 (up-down, across and both corner-to-corner)  (d) 0'],
       ['Q6', '2 ways: shade A2 (the up-down line becomes a line of symmetry) or shade D3 (the across line becomes a line of symmetry). No other square works.']
     ]
@@ -174,7 +174,7 @@ module.exports = {
     challenge: [
       { q: 'Two dice are glued together face to face, and the two glued faces show the same number. The numbers on all the faces you can still see add up to 36. What number is on the glued faces?', a: '3. Two dice have 21 + 21 = 42 altogether. The hidden faces add up to 42 − 36 = 6, and they show the same number, so each is 3.' },
       { q: 'How many different nets of a cube are there? (Turned or flipped copies count as the same net.)', a: '11.' },
-      { q: 'An open box (a cube with no lid) is made from 5 squares. How many different shapes of 5 squares fold into an open box? (Turned or flipped copies count as the same.)', a: '8. Of the 12 shapes made of 5 squares, only the row of 5, the 2 by 2 block with one extra (the P shape), the W-shaped zigzag and the V shape... do not; check each by folding.' },
+      { q: 'An open box (a cube with no lid) is made from 5 squares. Of the 12 different shapes made of 5 squares joined edge to edge, how many fold into an open box? (Turned or flipped copies count as the same.)', a: '8. Only 4 shapes do not fold: the row of 5, the V (an L with arms of 3 and 3), the U (a C shape) and the P (a 2 by 2 block with one extra square).' },
       { q: 'Ravi shades the 4 squares along one diagonal of a 4 by 4 grid (top left to bottom right). How many lines of symmetry does the pattern have?', a: '2: the diagonal it lies on, and the other diagonal of the grid.' },
       { q: 'Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Find both.', a: 'The middle square and the 4 corners (an X), or the middle square and the 4 edge-middle squares (a plus).' },
       { q: 'A cube has faces numbered 1 to 6 (not a normal dice). Face 1 touches faces 2, 3, 4 and 5. Face 2 touches faces 1, 3, 5 and 6. Which face is opposite 1? Opposite 2? Opposite 3?', a: 'Opposite 1 is 6 (the only face it does not touch). Opposite 2 is 4. That leaves 3 and 5, so opposite 3 is 5.' },
@@ -188,16 +188,14 @@ module.exports = {
     const W = [];
     W.push(H.q(1, 'Each shape is made of 6 squares. Which ones fold into a cube? Tick them.', { before: 40, keepNext: true }));
     W.push(H.fig(q1Svg()));
-    W.push(H.sub('a', 'How many shapes did you tick?  ________'));
-    W.push(H.sub('b', 'Choose one shape that does NOT fold into a cube. Explain why.      Shape  ____'));
+    W.push(H.sub('a', 'How many shapes did you tick?  ________        Shape that does NOT fold:  ____ . Explain why:'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'This net folds into a cube. Which letter is opposite …', { keepNext: true }));
     W.push(H.fig(q2Svg()));
     W.push(H.sub('a', 'A?  ________        B?  ________        C?  ________'));
     W.push(H.q(3, 'On a dice, the numbers on opposite faces add up to 7. Write the missing numbers on each dice net.', { keepNext: true }));
     W.push(H.fig(q3Svg()));
-    W.push(H.sub('c', 'In (b), how did you find the number opposite 1?'));
-    W.push(...H.lines(1));
+    W.push(H.sub('c', 'In (b), how did you find the number opposite 1?  ____________________________'));
 
     W.push(H.q(4, 'Complete each figure so that the dashed line is a line of symmetry.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(q4Svg()));
