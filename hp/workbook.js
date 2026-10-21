@@ -335,7 +335,7 @@ W.push(q(7, 'I think of a number. I add 9. Then I take away 4. I get 10. What is
 W.push(q(8, 'A pencil is 6 cubes long. A pen is 4 cubes longer than the pencil.', { keepNext: true }));
 W.push(sub('a', 'How long is the pen?   ____ cubes'));
 W.push(sub('b', 'Put the pen and the pencil end to end. How long are they together?   ____ cubes'));
-W.push(q(9, 'Make a challenge puzzle for a friend. Write the puzzle and the answer.', { keepNext: true }));
+W.push(q(9, 'Make a challenge puzzle for a friend. Write the puzzle and the answer. (We do this in talk time.)', { keepNext: true }));
 W.push(...lines(4));
 W.push(p([t('The puzzle I liked best today was ______________________ because ______________________', { size: 24 })], { before: 240, after: 100 }));
 

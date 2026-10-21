@@ -1,0 +1,586 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:13mm 13mm 15mm}
+html,body{background:#EAF3FB}
+body{margin:0;font-family:'Nunito Sans',Arial,sans-serif;color:#1B2A49;font-size:14.6px;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:22px;padding:26px 30px;margin-bottom:18px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:#FFC93C;opacity:.9}
+.cover:before{content:"";position:absolute;right:90px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:#1F7A6F}
+.cover .tag{display:inline-block;background:#FFC93C;color:#1B2A49;font:700 11px 'Nunito Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 12px}
+.cover h1{font:600 32px/1.1 Fredoka,sans-serif;margin:12px 0 6px;max-width:75%;position:relative;z-index:1}
+.cover .sub{font-size:14px;color:#C9D3E6;max-width:75%;position:relative;z-index:1}
+.cover .slog{font:500 15px Fredoka,sans-serif;color:#FFC93C;margin-top:10px;position:relative;z-index:1}
+h1.title{font:600 26px Fredoka,sans-serif;margin:6px 0 10px}
+h2{font:600 21px/1.2 Fredoka,sans-serif;color:#1B2A49;margin:16px 0 8px;padding:6px 14px;background:#fff;border-left:8px solid #FFC93C;border-radius:10px;break-after:avoid}
+h3{font:600 16px/1.25 Fredoka,sans-serif;color:#1F7A6F;margin:12px 0 5px;break-after:avoid}
+p{margin:0 0 8px}
+p.c,div.c{text-align:center}
+ul{margin:2px 0 8px;padding-left:22px}
+li{margin:2px 0}
+li::marker{color:#1F7A6F}
+.sp{height:6px}
+b{font-weight:800}
+img{max-width:100%;height:auto}
+.tb{width:100%;border-collapse:separate;border-spacing:0;margin:6px 0 12px;background:#fff;border:1.5px solid #1B2A49;border-radius:12px;overflow:hidden;font-size:13.2px}
+.tb td{border-top:1px solid #C9D7E6;border-left:1px solid #C9D7E6;padding:6px 8px;vertical-align:top}
+.tb tr:first-child td{border-top:0}
+.tb td:first-child{border-left:0}
+.tb td.hd{background:#FFE7A8;font-weight:700}
+.tb td div{margin:1px 0}
+.tb tr{break-inside:avoid}
+.brk{break-before:page;height:0}
+
+.q{display:flex;gap:10px;align-items:flex-start;margin:7px 0 3px;break-inside:avoid;break-after:avoid}
+.qn{flex:none;width:26px;height:26px;border-radius:50%;background:#FFC93C;border:1.5px solid #1B2A49;display:flex;align-items:center;justify-content:center;font:600 13px Fredoka,sans-serif;margin-top:1px}
+.qt{flex:1}
+.work{height:34px;margin:1px 0 4px 36px;border-bottom:2px dotted #8FA7C2;background:#fff;border-radius:8px 8px 0 0;padding:4px 10px;break-inside:avoid}
+.work span{font-size:11px;font-weight:800;color:#8FA7C2;text-transform:uppercase;letter-spacing:.06em}
+.lv{display:inline-block;font:600 14px Fredoka,sans-serif;border-radius:999px;padding:2px 14px;margin:8px 0 0;border:1.5px solid #1B2A49}
+.lv-core{background:#D3F1E4}.lv-think-harder{background:#D6E9FB}.lv-challenge{background:#FFE2D6}
+</style></head><body><div class="cover"><div class="tag">Math Inquirers Holiday Program</div><h1>Question Bank</h1><div class="sub">Core, stretch and challenge questions for every lesson, with answers</div><div class="slog">Notice it. Test it. Explain why.</div></div><h2>MATH INQUIRERS HOLIDAY PROGRAM</h2>
+<h2>Question Bank  •  Primary 1</h2>
+<p class="c"><i>Notice it. Test it. Explain why.</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>How to use this bank</b></div></td></tr></table>
+<p style="padding-left:16px">Each lesson has three levels. Every child starts with Core, then moves up when they are ready. Challenge questions are the ones to talk about together.</p>
+<p style="padding-left:16px">CORE matches what Primary 1 children learn in school. Use it for warm-ups and for children who need confidence.</p>
+<p style="padding-left:16px">STRETCH goes ahead of the Primary 1 syllabus: two-step problems, patterns with a hidden rule, simple unknowns and larger numbers.</p>
+<p style="padding-left:16px">GEP-STYLE CHALLENGE questions are non-routine. They ask children to find every way, work backwards, test a case, justify an answer or notice what is missing. This is the style of thinking used in gifted-education-type problems. It is not an official GEP standard, and this program is not affiliated with MOE.</p>
+<p style="padding-left:16px">Ask for the reason every time: “How do you know?” A correct answer with no reason is only half done.</p>
+<p style="padding-left:16px">Answers are at the back. Do not hand the answer pages to children.</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>What each lesson practises</b></div></td></tr></table>
+<table class="tb"><colgroup><col style="width:16.2%"><col style="width:47.5%"><col style="width:36.4%"></colgroup><tr><td><div><b>Lesson 1</b></div></td><td><div>Count with the Frog (Number Patterns)</div></td><td><div>6 + 8 + 9 questions</div></td></tr><tr><td><div><b>Lesson 2</b></div></td><td><div>Number Bond Inquiry (Number Bonds)</div></td><td><div>6 + 8 + 10 questions</div></td></tr><tr><td><div><b>Lesson 3</b></div></td><td><div>Let’s Plan the Fruit Party (Picture Graphs)</div></td><td><div>6 + 6 + 8 questions</div></td></tr><tr><td><div><b>Lesson 4</b></div></td><td><div>Pattern Inquiry (Repeating and Growing Patterns)</div></td><td><div>6 + 6 + 8 questions</div></td></tr><tr><td><div><b>Lesson 5</b></div></td><td><div>Mystery Number (Working Backwards)</div></td><td><div>6 + 7 + 9 questions</div></td></tr><tr><td><div><b>Lesson 6</b></div></td><td><div>Coin Combos (Money)</div></td><td><div>8 + 9 + 8 questions</div></td></tr><tr><td><div><b>Lesson 7</b></div></td><td><div>Shape Safari (2D Shapes)</div></td><td><div>6 + 9 + 9 questions</div></td></tr><tr><td><div><b>Lesson 8</b></div></td><td><div>Logic Lab (Logic and Sorting)</div></td><td><div>5 + 6 + 8 questions</div></td></tr><tr><td><div><b>Lesson 9</b></div></td><td><div>Measure It! (Length)</div></td><td><div>6 + 7 + 8 questions</div></td></tr><tr><td><div><b>Lesson 10</b></div></td><td><div>Challenge Day (Mixed Puzzles)</div></td><td><div>6 + 5 + 9 questions</div></td></tr></table>
+<div class="brk"></div>
+<h2>Lesson 1: Count with the Frog</h2>
+<p><i>Number Patterns  •  Week 1</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Write the next two numbers and the rule: 4, 7, 10, 13, __, __</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;Write the next two numbers and the rule: 5, 10, 15, 20, __, __</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Write the next two numbers and the rule: 1, 5, 9, 13, __, __</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;Write the next two numbers and the rule: 50, 45, 40, 35, __, __</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Write the next two numbers and the rule: 7, 9, 11, 13, __, __</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;Write the next two numbers and the rule: 100, 90, 80, 70, __, __</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;Fill in the missing numbers: 3, 8, __, 18, __, 28</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Fill in the missing numbers: 40, __, 28, __, 16, 10</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;A pattern starts at 3 and adds 5 each time. What is the 8th number?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;A pattern starts at 2 and adds 4 each time. What is the 7th number?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;A pattern starts at 60 and takes away 5 each time. What is the 9th number?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;Is 30 in the pattern 4, 8, 12, 16 … ? How do you know?</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;5, 10, 15, 22, 25, 30. Which number does not belong? What should it be?</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;Start at 50 and take away 7 each time. What is the first number below 20?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Frog A jumps in 3s from 0. Frog B jumps in 4s from 0. Which numbers up to 40 do both frogs land on? (Do not count 0.)</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;I am in the counting patterns of 3s and of 5s. I am more than 10 and less than 40. Which numbers can I be?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Ali saves $2 in week 1, $5 in week 2, $8 in week 3 and so on. In which week does he save $29? How much does he save in week 12?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;2, 4, 7, 11, 16, __ . What is the next number? Explain the pattern.</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;A staircase needs 4 blocks for 1 step, 7 blocks for 2 steps and 10 blocks for 3 steps. How many blocks for 6 steps? How many steps can be built with 31 blocks?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;A pattern adds a number bigger than 0 each time, its 5th number is 20, and it starts at a whole number bigger than 0. How many different patterns can you make? List the first number and the rule for each.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Frog A starts at 3 and jumps 4 each time. Frog B starts at 5 and jumps 3 each time. Which numbers up to 40 do both frogs land on?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;1, 2, 4, 7, 11, 16 … What is the 8th number? Explain how the pattern grows.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;Ali counts up from 2 in 3s. Mei counts up from 1 in 4s. Which numbers up to 50 are in both patterns?</p>
+<div class="brk"></div>
+<h2>Lesson 2: Number Bond Inquiry</h2>
+<p><i>Number Bonds  •  Week 1</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;10 = 3 + __</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;10 = __ + 8</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;10 = 6 + __</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;20 = 5 + __</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;20 = __ + 12</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;20 = 17 + __</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;5 + 4 = 6 + __</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;8 + 2 = 7 + __</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;9 + 6 = __ + 10</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;12 + 3 = 10 + __</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;4 + __ + 3 = 10</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;__ + 6 + 6 = 20</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;6 + 4 = 10, so 16 + 4 = __ and 26 + 4 = __</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;Write three different ways to make 12 with two numbers.</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Put 1, 2, 3, 4, 5 and 6 in the triangle so each side adds to 9. Corners 1, 2 and 3. What goes in the middle of each side?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Corners 4, 5 and 6, and the numbers 1, 2, 3 in the middles. What do all the sides add to? Where does each middle number go?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Two numbers add to 14. One is 2 more than the other. What are they?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Two numbers add to 20. One is 6 more than the other. What are they?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Ali has 12 stickers in two hands. The left hand has 4 more than the right. How many in each hand?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Three different numbers from 3 to 7 add to 15. What can they be? Find both ways.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;How many different pairs make 8 if the order matters (0 + 8 and 8 + 0 are different)? How many if the order does not matter?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Three different numbers from 1 to 7 add up to 10. Find every set of three.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;Put 1 to 6 in the magic triangle so each side adds to 11. What goes in the corners and middles?</p>
+<p style="padding-left:35px"><b>G10.</b>&emsp;Ali has 20 stickers. He keeps 9 and shares the rest between Ben and Mei. Ben gets 3 more than Mei. How many does each get?</p>
+<div class="brk"></div>
+<h2>Lesson 3: Let’s Plan the Fruit Party</h2>
+<p><i>Picture Graphs  •  Week 2</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). Which fruit got the most votes?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). Which fruit got the fewest votes?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). How many more children chose orange than grape?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;A picture graph shows: Apple 7, Banana 5, Orange 9, Grape 4 (1 picture = 1 child). How many children voted altogether?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Pets: Dog 6, Cat 4, Fish 6, Bird 2. Which two pets got the same number of votes?</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;Pets: Dog 6, Cat 4, Fish 6, Bird 2. How many more children chose dog than bird?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;1 picture = 2 children. Red has 3 pictures, blue has 5 and green has 4. How many children chose blue?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;1 picture = 2 children. Red has 3 pictures, blue has 5 and green has 4. How many children voted altogether?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;1 picture = 2 children. Red has 3 pictures and blue has 5. How many more children chose blue than red?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;1 picture = 2 children. Six children chose pizza. How many pictures should we draw?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;1 picture = 2 children. A half picture means 1 child. Apple has 3 pictures and a half. How many children chose apple?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;Banana has 3 pictures and apple has 8 pictures (1 picture = 1 child). How many more children chose apple?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;18 children voted. 7 chose apple and 5 chose orange. The rest chose grapes. How many chose grapes?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Votes: A 8, B 5, C 6. Then 4 more children join and all choose B. Which fruit wins now, and by how many votes?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;12 children voted for three fruits. No two fruits got the same number of votes. The most votes was 5. How many votes did each fruit get?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Mei says 7 children chose apple. Banana got 4 fewer than apple and orange got 8. How many children voted?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Our class chose grapes. Ben says, “So the whole school loves grapes.” Is he right? Give two reasons.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;1 picture = 3 children. Apple has 4 pictures, banana 2 and orange 5. Then 7 more children join and all choose banana. Which fruit wins now, and by how many votes?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;24 children voted. Apple got 6 votes. Orange got 6 more votes than banana. How many votes did banana and orange get?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;1 picture = 2 children. 20 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?</p>
+<div class="brk"></div>
+<h2>Lesson 4: Pattern Inquiry</h2>
+<p><i>Repeating and Growing Patterns  •  Week 2</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;The pattern is star, heart, star, heart, star, heart … What is the 9th one?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;The pattern is red, red, blue, red, red, blue, red … What is the 8th one?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;The pattern is A, B, C, D, A, B, C … What is the 11th one?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;The pattern is sun, moon, sun, moon, sun, moon … What is the 15th one?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;Pattern: circle, triangle, triangle, square, circle, triangle, triangle, square … What is the 14th shape?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Same pattern: how many triangles are in the first 20 shapes?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Same pattern: in which places do the squares come? Write the first five.</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;Red, blue, blue, red, blue, blue … What colour is the 20th bead?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;Red, blue, blue, red, blue, blue … How many blue beads are in the first 12 beads?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;A pattern repeats every 5 shapes. Is the 25th shape the same as the 5th? Why?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Squares in a row use 4 sticks for 1 square, 7 sticks for 2 squares and 10 sticks for 3 squares. How many sticks for 8 squares?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Using the same pattern, how many squares can you make with 22 sticks?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Tiles: the 1st pattern has 3 tiles, the 2nd has 5, the 3rd has 7. How many tiles in the 10th pattern? Which pattern has 31 tiles?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Triangles made of sticks in a row use 3, 5, 7 sticks. Ben has 25 sticks. How many triangles can he make? How many sticks are left over?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;A pattern repeats: star, moon, sun, star, moon, sun … What is the 100th shape? Explain how you know without drawing 100 shapes.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Squares in a row use 4, 7, 10 … sticks. Ben has 50 sticks. How many squares can he make? How many sticks are left?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Beads repeat in a pattern of 5: red, red, blue, blue, green. How many green beads are in the first 47 beads?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Dots: 1, 3, 6, 10, 15 … What are the next two numbers? What is the 10th number?</p>
+<div class="brk"></div>
+<h2>Lesson 5: Mystery Number</h2>
+<p><i>Working Backwards  •  Week 3</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;I think of a number. I add 3. I get 8. What is my number?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;I think of a number. I add 6. I get 14. What is my number?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;I think of a number. I add 5. I get 12. What is my number?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;I think of a number. I add 9. I get 17. What is my number?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;I think of a number. I take away 4. I get 6. What is my number?</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;I think of a number. I take away 7. I get 3. What is my number?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;Ben had some marbles. He gave 5 to Mei, then won 3. Now he has 12. How many did he start with?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Ben had some stickers. He gave away 6, got 4, then gave away 3. Now he has 10. How many did he have at first?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;A number machine adds the same number each time. IN 4 gives OUT 9. What is the rule? What is OUT when IN is 12? What is IN when OUT is 20?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;I think of a number. I add 4, then I take away 7. I get 8. What is my number?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;I think of a number. I add 5, then I take away 3. I get 9. What is my number?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;I think of a number. I add 6, then I take away 2. I get 10. What is my number?</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;I think of a number. I add 9, then I take away 4. I get 12. What is my number?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;I think of a number. I add 6, take away 4, then add 5. I get 17. What is my number?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;A number machine has two steps: add 3, then add 4. IN 5 gives OUT 12. What is IN when OUT is 20?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Zoe is 6th from the front of a queue and 6th from the back. How many children are in the queue?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Ben is 4th in a queue. There are 3 children behind him. How many children are in the queue?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Ali has 8 marbles. Mei has 5 more than Ali. Ben has 6 fewer than Mei. How many marbles do the three have altogether?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;There are 20 children. 7 are boys. Of the girls, 4 are wearing red. How many girls are not wearing red?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;I think of a number. I add 7, take away 3, add 5, then take away 8. I get 14. What is my number?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Ali and Ben have 20 marbles together. Ali has 4 more than Ben. How many marbles does each have?</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;A snail climbs 3 cm each day and slides back 1 cm each night. It starts at the bottom of a 9 cm wall. On which day does it reach the top?</p>
+<div class="brk"></div>
+<h2>Lesson 6: Coin Combos</h2>
+<p><i>Money  •  Week 3</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Pay exactly 15¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;Pay exactly 25¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Pay exactly $15 with the fewest notes. The notes are $2, $5, $10 and $50.</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;Pay exactly $26 with the fewest notes and coins. You have $1 coins and $2, $5, $10 and $50 notes.</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Pay exactly 30¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;Pay exactly 40¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<p style="padding-left:35px"><b>C7.</b>&emsp;Pay exactly 55¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<p style="padding-left:35px"><b>C8.</b>&emsp;Pay exactly 60¢ using two coins from 5¢, 10¢, 20¢ and 50¢.</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;A bag costs $34. Ali pays with a $50 note. How much change does he get?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Make 70¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. Find every set.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Sam has only 10¢ and 20¢ coins. He pays exactly 90¢ using 6 coins. How many of each coin does he use?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;What is the fewest number of coins to make 45¢?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;How many ways can you make 25¢ using 20¢, 10¢ and 5¢ coins?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;How many ways can you make 30¢ using 20¢, 10¢ and 5¢ coins?</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;How many ways can you make 20¢ using only 10¢ and 5¢ coins?</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;What is the fewest number of coins to make 65¢ from 5¢, 10¢, 20¢ and 50¢?</p>
+<p style="padding-left:35px"><b>S9.</b>&emsp;Ali buys a ruler for 35¢. He pays with a 50¢ coin. Which coins could he get back as change?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Make 35¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. How many ways are there?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Make 40¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. Find them all.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;You have one 5¢, one 10¢ and one 20¢ coin. How many different totals can you make using one, two or all three coins? List them.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Which amounts in 5¢ steps (5¢, 10¢, 15¢ … 50¢) cannot be made using only 20¢ and 10¢ coins?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Why can 35¢ never be made with only two coins from 5¢, 10¢, 20¢ and 50¢?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Ali pays 55¢ with exactly 5 coins. He uses at least one 5¢, one 10¢ and one 20¢ coin. Which coins does he use?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;You have one 5¢, one 10¢, one 20¢ and one 50¢ coin. How many different amounts can you make using any of them?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;A sweet costs 15¢ and a biscuit costs 20¢. Ben spends exactly 90¢ and buys some of each. How many sweets and biscuits does he buy?</p>
+<div class="brk"></div>
+<h2>Lesson 7: Shape Safari</h2>
+<p><i>2D Shapes  •  Week 4</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;How many sides and corners does a triangle have?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;How many sides and corners does a square have?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Here is a pentagon (a shape with 5 straight sides). How many corners does it have?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;Here is a hexagon (a shape with 6 straight sides). How many corners does it have?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Here is an octagon (a shape with 8 straight sides). How many corners does it have?</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;I have no corners and no straight sides. What shape am I?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;Fold a square along a diagonal and cut. Which shapes do you get?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Two same-size triangles can make a square. Can they also make a bigger triangle? Draw how.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;How many squares are in a grid 3 squares long and 2 squares high?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;Join 4 same-size squares, whole sides touching. How many different shapes can you make? (Turns and flips are the same shape.)</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;I have 4 sides, all the same length, and 4 square corners. What shape am I?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;How many sides do 3 triangles have altogether?</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;How many corners do 5 squares have altogether?</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;A shape has 7 corners. How many sides has it?</p>
+<p style="padding-left:35px"><b>S9.</b>&emsp;Draw a shape with 4 straight sides that is NOT a square. Is it a rectangle?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;A square has both diagonals drawn. How many triangles can you find?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;A big triangle has 1 line from the top corner to the bottom. How many triangles? What about 2 lines? 3 lines?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;A square is split into a 2 by 2 grid of 4 small squares. How many squares can you find altogether?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;A square is split into a 3 by 3 grid of 9 small squares. How many squares are there altogether?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Ali cuts a rectangle along one line and gets two triangles. Where did he cut?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;I have 6 sides. I can be made from 6 equal triangles. What shape am I?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Three squares are joined in a row to make a long rectangle. How many rectangles can you find altogether? (A square counts as a rectangle.)</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;A triangle has 4 lines drawn from the top corner to the bottom. How many triangles are there? Follow the pattern 3, 6, 10 …</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;A square is cut into 4 equal squares. One of the small squares is cut into 4 even smaller squares. How many squares can you find altogether?</p>
+<div class="brk"></div>
+<h2>Lesson 8: Logic Lab</h2>
+<p><i>Logic and Sorting  •  Week 4</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Ali is taller than Ben. Ben is taller than Mei. Who is the tallest? Who is the shortest?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;The cat is heavier than the hen. The hen is heavier than the mouse. Who is the lightest?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Red, blue and green ribbons. Red is longer than blue. Green is shorter than blue. Which ribbon is the longest?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;Which number is the odd one out: 2, 4, 6, 9, 10? Why?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Sort these numbers into odd and even: 3, 8, 5, 12, 7, 10.</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;In a race, Sam is ahead of Tia. Tia is ahead of Raj. Mei is ahead of Sam. Who is third?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Ana, Bo and Cy each have a different toy: a ball, a kite or a yo-yo. Bo does not have the kite. Cy has the ball. Who has which toy?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Numbers 1 to 12. Which do we say when counting in 2s? Which when counting in 3s? Which in both?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;Numbers 1 to 12. Which do we NOT say when counting in 2s or when counting in 3s?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;Which is the odd one out: 3, 6, 9, 11, 12? Give a reason.</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;Ali, Ben and Mei have a cat, a dog and a fish. Ali has no dog. Mei has no fish. Ben has neither a cat nor a fish. Who has which pet?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Four friends stand in a line. Ali is not first. Ben is ahead of Ali. Sam is last. Mei is behind Ali. In what order do they stand?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Three boxes are labelled “Apples”, “Oranges” and “Mixed”. Every label is wrong. You may take one fruit from one box. Which box should you pick from, and why?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Ali, Ben and Mei are 6, 7 and 8 years old. Ali is older than Mei. Ali is not the oldest. How old is each?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;A number between 20 and 40 is odd, and we say it when counting in 5s. It is also one less than a number we say when counting in 4s. What is it?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Draw a Venn diagram for numbers 1 to 10 with the rules “even” and “more than 5”. Which numbers go in the middle? Which go outside both?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Five friends run a race. D is first. E is last. B finishes directly behind A. C is not second. In what order do they finish?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;A secret number is between 10 and 30. It is even, and you say it when counting in 3s. It is 2 more than a number you say when counting in 5s. What is it?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Numbers 1 to 20. How many do we say only when counting in 2s, only in 3s, in both, and in neither?</p>
+<div class="brk"></div>
+<h2>Lesson 9: Measure It!</h2>
+<p><i>Length  •  Week 5</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;A pencil is 7 cubes long. A pen is 10 cubes long. How many cubes longer is the pen?</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;A ribbon is 12 cubes long. You cut off 5 cubes. How long is the piece left?</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Ali’s book is 9 cubes long and Mei’s book is 6 cubes long. Whose is longer? By how much?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;A rope is 8 cubes long. A string is 8 paper clips long. Do we know which is longer? Why not?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Put in order from shortest: 11 cubes, 7 cubes, 9 cubes, 12 cubes.</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;A ribbon lies from the 2 cm mark to the 7 cm mark on a ruler. How long is it?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;A caterpillar is 9 cubes long. It grows 2 cubes each day. How long is it after 3 days?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;A string is 15 cubes long. A rope is 8 cubes longer. How long is the rope?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;A ribbon lies from the 3 cm mark to the 11 cm mark. How long is it?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;A pencil is 3 erasers long. A ruler is 2 pencils long. A desk is 4 rulers long. How many erasers long is the desk?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;1 clip is as long as 3 cubes. A pen is 12 cubes long. How many clips long is the pen?</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;1 clip is as long as 3 cubes. A ruler is 5 clips long. How many cubes long is the ruler?</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;Ali’s desk is 6 spans long. Mei’s desk is 9 spans long, but they measured the same desk. Whose hand is bigger?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;A rope is 20 cubes long. Ali cuts it into pieces that are each 4 cubes long. How many pieces does he get? How many cuts does he make?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;A train has 3 carriages. Each is 6 cubes long. There is a gap of 1 cube between carriages. How long is the whole train?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;A caterpillar is 9 cubes long and grows 2 cubes each day. On which day is it 21 cubes long?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;A red ribbon is 5 cubes long. A blue ribbon is 3 cubes longer than red. A green ribbon is 2 cubes shorter than blue. How long are the three ribbons end to end?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;1 clip = 2 erasers and 1 pen = 3 clips. How many erasers long is the pen? How many pens are as long as 24 erasers?</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;A stick is 12 cubes long. Ali measures a desk by laying the stick end to end 4 times and then 5 more cubes. How long is the desk in cubes?</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Ali’s pencil is 9 cubes. Mei’s is 2 cubes shorter than Ali’s. Ben’s is 3 cubes longer than Mei’s. How long are all three pencils together?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;A ribbon 30 cubes long is cut into three pieces. The first is 4 cubes longer than the second. The third is 4 cubes shorter than the second. How long is each piece?</p>
+<div class="brk"></div>
+<h2>Lesson 10: Challenge Day</h2>
+<p><i>Mixed Puzzles  •  Week 5</i></p>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>CORE (Primary 1 syllabus, fluency)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Count in 3s: 3, 6, 9, __, __</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;10 = 4 + __ and 20 = 12 + __</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Red 4, blue 6, green 3. How many more are blue than green?</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;I think of a number. I add 4. I get 9. What is it?</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Make 15¢ with two coins from 5¢, 10¢ and 20¢.</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;How many sides does a hexagon have?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>STRETCH (ahead of grade, two steps)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>S1.</b>&emsp;A pattern starts at 5 and adds 3 each time. What is the 10th number?</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Ali has 12 stickers. He gives 5 to Mei and then gets 3 more. How many does he have now?</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Which three coins from 5¢, 10¢, 20¢ and 50¢ make 45¢?</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;A ribbon is 12 cubes. A string is 5 cubes shorter. How long is the string?</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Who is the shortest?</p>
+<div class="sp"></div>
+<table class="tb"><colgroup><col style="width:100.0%"></colgroup><tr><td class="hd"><div><b>GEP-STYLE CHALLENGE (non-routine, justify, find every way)</b></div></td></tr></table>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Two numbers add to 12 and differ by 2. What are they?</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;1 triangle uses 3 sticks, 2 triangles use 5 sticks. How many sticks for 9 triangles? How many triangles with 25 sticks?</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;How many ways can you make 30¢ using 20¢, 10¢ and 5¢ coins?</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Ali, Ben and Mei are first, second and third in a race. Ali is not first. Ben is ahead of Mei. Ali is behind Mei. Who is first?</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;A square has both diagonals drawn. How many triangles are there? Explain how you counted.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Invent a puzzle that needs two steps. Give it to a friend. Write its answer.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Frog A jumps in 3s from 0 and frog B jumps in 5s from 0. Which numbers up to 60 do both land on?</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Ali has some stickers. Ben has 4 more than Ali. Mei has 3 fewer than Ben. Together they have 29. How many does each have?</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;Make 70¢ using exactly 4 coins from 5¢, 10¢, 20¢ and 50¢. How many ways are there?</p>
+<div class="brk"></div>
+<h2>Answer key (tutor only)</h2>
+<h3>Lesson 1: Count with the Frog</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;16, 19. Add 3.</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;25, 30. Add 5.</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;17, 21. Add 4.</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;30, 25. Take away 5.</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;15, 17. Add 2.</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;60, 50. Take away 10.</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;13 and 23. Add 5.</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;34 and 22. Take away 6.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;38</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;26</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;20</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;No. The pattern goes 28, 32, so it skips 30.</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;22 does not belong. It should be 20.</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;15 (50, 43, 36, 29, 22, 15).</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;12, 24 and 36.</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;15 and 30.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Week 10 ($29). Week 12: $35. The rule is add 3.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;22. The gaps grow: add 2, add 3, add 4, add 5, then add 6.</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;19 blocks for 6 steps. 31 blocks make 10 steps (add 3 each time).</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;4 patterns: start 16 add 1; start 12 add 2; start 8 add 3; start 4 add 4.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;11, 23 and 35.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;29. The gaps are 1, 2, 3, 4, 5, 6, 7, so the 7th is 22 and the 8th is 29.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;5, 17, 29 and 41.</p>
+<h3>Lesson 2: Number Bond Inquiry</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;2</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;4</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;15</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;8</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;5</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;5</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;8</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;20 and 30</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;For example 6 + 6, 7 + 5, 9 + 3, 10 + 2, 8 + 4.</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Each side adds to 12. Between 4 and 5: 3. Between 5 and 6: 1. Between 6 and 4: 2.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;6 and 8.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;7 and 13.</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Left 8, right 4.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;3, 5, 7 and 4, 5, 6.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;9 pairs when the order matters; 5 pairs when it does not (0+8, 1+7, 2+6, 3+5, 4+4).</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;Corners 2, 4, 6. Between 2 and 4: 5. Between 4 and 6: 1. Between 6 and 2: 3.</p>
+<p style="padding-left:35px"><b>G10.</b>&emsp;Ben 7, Mei 4.</p>
+<h3>Lesson 3: Let’s Plan the Fruit Party</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Orange</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;Grape</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;5 (9 − 4)</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;25 (7 + 5 + 9 + 4)</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Dog and fish</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;4 (6 − 2)</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;10</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;24 (12 pictures, each worth 2: count in 2s)</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;4 (2 more pictures, each worth 2: 2, 4)</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;5</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;6</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;B wins with 9, which is 1 more than A.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;5, 4 and 3.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;18 (7 + 3 + 8)</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;No. Only our class voted, and other classes may choose differently. A small group may not match a big group.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Orange 15, banana 13, apple 12. Orange wins by 2.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;Banana 6 and orange 12. (24 − 6 = 18 for banana and orange; take away the extra 6: 12, share: 6 each; give orange the 6 back.)</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;4 children (20 ÷ 2 = 10 pictures in all, counting in 2s to 20; A 3 + B 5 = 8, so C has 2 pictures = 4 children).</p>
+<h3>Lesson 4: Pattern Inquiry</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;circle</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;star</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;red</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;C</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;dog</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;sun</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;triangle</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;10. The core circle, triangle, triangle, square has 2 triangles. Count the cores in 4s: 4, 8, 12, 16, 20, so there are 5 cores. Count the triangles in 2s: 2, 4, 6, 8, 10.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;4, 8, 12, 16, 20</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;blue</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;8</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;Yes. Count in 5s: 5, 10, 15, 20, 25. Each of these ends the core, so the 25th is the last shape of the core, like the 5th.</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;25. Keep adding 3: 4, 7, 10, 13, 16, 19, 22, 25.</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;7. Keep the table going: 4, 7, 10, 13, 16, 19, 22 sticks. 22 sticks make 7 squares.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;21 tiles in the 10th. 31 tiles is the 15th.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;12 triangles use 25 sticks exactly. Keep adding 2: 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25. None left over.</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Star. Every place we say when counting in 3s ends the core with a sun. We say 99 when counting in 3s, so the 99th is a sun and the 100th starts again: star.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;16 squares use 49 sticks. 1 stick is left.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;9 green beads. Green is the 5th bead of each core, so greens are at 5, 10, 15 … 45: count in 5s, that is 9 numbers. Beads 46 and 47 are red.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;21 and 28. The 10th is 55 (add 2, 3, 4, … each time).</p>
+<h3>Lesson 5: Mystery Number</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;5</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;8</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;8</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;10</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;10</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;14 (12 − 3 + 5)</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;15 (work backwards: 10 + 3 = 13, 13 − 4 = 9, 9 + 6 = 15; check 15 − 6 + 4 − 3 = 10)</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Add 5. OUT is 17 when IN is 12. IN is 15 when OUT is 20.</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;11</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;6</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;10 (17 − 5 + 4 − 6)</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;13 (the same as adding 7)</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;11</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;7</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;8 + 13 + 7 = 28</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;9 (20 − 7 = 13 girls; 13 − 4 = 9)</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;13 (the steps are +1 in total, so 14 − 1).</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Ben 8 and Ali 12. (Take away the extra 4: 16 left, share: 8 and 8, give Ali the 4 back: 12.)</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;Day 4 (3, 5, 7, then 9 on the fourth day before it can slide back).</p>
+<h3>Lesson 6: Coin Combos</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;5¢ + 10¢</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;5¢ + 20¢</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;$10 + $5 (2 notes)</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;$10 + $10 + $5 + $1 (4 pieces)</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;10¢ + 20¢</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;20¢ + 20¢</p>
+<p style="padding-left:35px"><b>C7.</b>&emsp;5¢ + 50¢</p>
+<p style="padding-left:35px"><b>C8.</b>&emsp;10¢ + 50¢</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;$16. Count on from $34: $36, $40, $50. That is $2 + $4 + $10 = $16.</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;2 sets: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Three 10¢ and three 20¢ (30 + 60 = 90).</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;3 coins (20¢ + 20¢ + 5¢)</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;4 ways. (20+5; 10+10+5; 10+5+5+5; 5+5+5+5+5)</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;6 ways.</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;3 ways. (10+10; 10+5+5; 5+5+5+5)</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;3 coins (50¢ + 10¢ + 5¢)</p>
+<p style="padding-left:35px"><b>S9.</b>&emsp;15¢: 10¢ + 5¢ (or three 5¢ coins).</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;1 way: 20¢ + 10¢ + 5¢</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;2 ways: 20¢ + 10¢ + 5¢ + 5¢; 10¢ + 10¢ + 10¢ + 10¢</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;7 totals: 5, 10, 15, 20, 25, 30, 35.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;5¢, 15¢, 25¢, 35¢ and 45¢. (Every amount that does not end in 0.)</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Two coins can make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;20¢ + 10¢ + 10¢ + 10¢ + 5¢ (the only way).</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;15 different amounts.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;2 sweets and 3 biscuits.</p>
+<h3>Lesson 7: Shape Safari</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;3 sides and 3 corners</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;4 sides and 4 corners</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;5 corners</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;6 corners</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;8 corners</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;A circle</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;2 triangles of the same size</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Yes. Join them along a short side (the two equal short sides touching) to make one bigger triangle. Joining along the long side makes a square instead.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;8 (6 small squares + 2 squares made of 4 small ones)</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;5 shapes: a line of 4, a 2 by 2 square, an L, a T and a zigzag.</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;A square</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;9</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;20</p>
+<p style="padding-left:35px"><b>S8.</b>&emsp;7 sides</p>
+<p style="padding-left:35px"><b>S9.</b>&emsp;Open. A long rectangle has 4 square corners, so it is a rectangle. A slanted shape with 4 sides does not have square corners, so it is not a rectangle.</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;8 (4 small and 4 made of two small ones)</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;3, 6 and 10 triangles.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;5 (4 small + 1 big)</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;14 (9 small + 4 of size 2 by 2 + 1 big)</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;From one corner to the opposite corner.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;A hexagon</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;6 (3 single squares, 2 pairs and 1 whole row).</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;15.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;9 (1 big, 4 medium, 4 tiny).</p>
+<h3>Lesson 8: Logic Lab</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;Ali is tallest; Mei is shortest.</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;The mouse</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Red</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;9. It is the only odd number.</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;Odd: 3, 5, 7. Even: 8, 12, 10.</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;Tia (order: Mei, Sam, Tia, Raj).</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;Cy: ball. Bo: yo-yo. Ana: kite.</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;Counting in 2s: 2, 4, 6, 8, 10, 12. Counting in 3s: 3, 6, 9, 12. Both: 6 and 12.</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;1, 5, 7 and 11</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;11. We do not say it when counting in 3s.</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;Ben: dog. Mei: cat. Ali: fish.</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;Ben, Ali, Mei, Sam.</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;Pick from the box labelled “Mixed”. Its label is wrong, so it holds only one kind of fruit. If you take out an apple, that box is Apples. The box labelled “Oranges” cannot be oranges, and apples are taken, so it is Mixed. The box labelled “Apples” must be Oranges.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Mei 6, Ali 7, Ben 8.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;35. The odd ones are 25 and 35. 25 + 1 = 26: not said counting in 4s. 35 + 1 = 36: yes.</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;Middle: 6, 8, 10. Outside both: 1, 3, 5.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;D, A, B, C, E.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;12.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;2 only: 7. 3 only: 3. Both: 3 (6, 12, 18). Neither: 7.</p>
+<h3>Lesson 9: Measure It!</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;7 cubes</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;Ali’s, by 3 cubes.</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;No. A cube and a paper clip are different lengths, so 8 of each are not the same.</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;7, 9, 11, 12</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;5 cm (count the spaces: 7 − 2)</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;15 cubes</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;23 cubes</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;8 cm (count the spaces from 3 to 11, or 11 − 3)</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;24 erasers (a ruler is 3 + 3 = 6 erasers; a desk is 6 + 6 + 6 + 6 = 24)</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;4 clips</p>
+<p style="padding-left:35px"><b>S6.</b>&emsp;15 cubes</p>
+<p style="padding-left:35px"><b>S7.</b>&emsp;Ali’s. A bigger span needs fewer spans to cover the same desk.</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;5 pieces and 4 cuts.</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;20 cubes (18 + 2)</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;Day 6. Keep adding 2: day 1 11, day 2 13, day 3 15, day 4 17, day 5 19, day 6 21.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;5 + 8 + 6 = 19 cubes</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;6 erasers per pen; 4 pens.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;53 cubes.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;9 + 7 + 10 = 26 cubes.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;14, 10 and 6 cubes.</p>
+<h3>Lesson 10: Challenge Day</h3>
+<p style="padding-left:35px"><b>C1.</b>&emsp;12, 15</p>
+<p style="padding-left:35px"><b>C2.</b>&emsp;6 and 8</p>
+<p style="padding-left:35px"><b>C3.</b>&emsp;3</p>
+<p style="padding-left:35px"><b>C4.</b>&emsp;5</p>
+<p style="padding-left:35px"><b>C5.</b>&emsp;10¢ + 5¢</p>
+<p style="padding-left:35px"><b>C6.</b>&emsp;6</p>
+<p style="padding-left:35px"><b>S1.</b>&emsp;32</p>
+<p style="padding-left:35px"><b>S2.</b>&emsp;10</p>
+<p style="padding-left:35px"><b>S3.</b>&emsp;20¢ + 20¢ + 5¢</p>
+<p style="padding-left:35px"><b>S4.</b>&emsp;7 cubes</p>
+<p style="padding-left:35px"><b>S5.</b>&emsp;Ali</p>
+<p style="padding-left:35px"><b>G1.</b>&emsp;5 and 7</p>
+<p style="padding-left:35px"><b>G2.</b>&emsp;19 sticks for 9; 12 triangles for 25 sticks.</p>
+<p style="padding-left:35px"><b>G3.</b>&emsp;6 ways.</p>
+<p style="padding-left:35px"><b>G4.</b>&emsp;Ben (order: Ben, Mei, Ali).</p>
+<p style="padding-left:35px"><b>G5.</b>&emsp;8: 4 small and 4 made of two small ones.</p>
+<p style="padding-left:35px"><b>G6.</b>&emsp;Open.</p>
+<p style="padding-left:35px"><b>G7.</b>&emsp;15, 30, 45 and 60.</p>
+<p style="padding-left:35px"><b>G8.</b>&emsp;Ali 8, Ben 12, Mei 9.</p>
+<p style="padding-left:35px"><b>G9.</b>&emsp;2 ways: 50¢ + 10¢ + 5¢ + 5¢ and 20¢ + 20¢ + 20¢ + 10¢.</p></body></html>

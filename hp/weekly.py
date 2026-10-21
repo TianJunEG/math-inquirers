@@ -24,7 +24,7 @@ for i, t in enumerate(wb):
 special = {}
 for i, t in enumerate(wb):
     fl = first_line(t)
-    for key in ['My Inquiry Journal', 'Cut-outs', 'Play notes and $1 coins', 'Inquirer Kit', 'Number strips and sorting tiles', 'CERTIFICATE OF COMPLETION']:
+    for key in ['My Inquiry Journal', 'Cut-outs', 'Play notes and $1 coins', 'Inquirer Kit', 'Number strips and sorting tiles', 'Puzzle cards', 'CERTIFICATE OF COMPLETION']:
         if fl.startswith(key): special.setdefault(key, i)
 end_lessons = min(v for k, v in special.items() if k != 'My Inquiry Journal')
 order = sorted(starts)
@@ -41,7 +41,7 @@ def guide_pages(n):
     return list(range(tstart[n], tstart[n + 1] if n + 1 in tstart else tend))
 
 EXTRA = {1: (['My Inquiry Journal'], ['Inquirer Kit']), 3: ([], ['Cut-outs', 'Play notes and $1 coins']),
-         5: ([], ['Number strips and sorting tiles', 'CERTIFICATE OF COMPLETION'])}
+         5: ([], ['Number strips and sorting tiles', 'Puzzle cards', 'CERTIFICATE OF COMPLETION'])}
 
 def write(src, pages, path):
     r = PdfReader(src); w = PdfWriter()
