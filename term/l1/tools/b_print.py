@@ -24,11 +24,16 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 """
 
 
-def hdr(d, tag, title=None):
-    return (f'<div class="lh"><span class="lbadge">Term {d["term"]} • Lesson {d["lesson_in_term"]}</span><span class="ltopic">Whole Numbers: tens and ones</span>'
+def hdr(d, tag, title=None, mi=False):
+    head = (f'<div class="lh"><span class="lbadge">Term {d["term"]} • Lesson {d["lesson_in_term"]}</span><span class="ltopic">Whole Numbers: tens and ones</span>'
             f'<span style="margin-left:auto;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">{tag}</span></div>'
             + (f'<div class="ltitle">{E(title)}</div>' if title else '')
             + '<div class="namer"><b>Name</b><span></span><b>Date</b><span style="max-width:120px"></span></div>')
+    if not mi:
+        return head
+    i = head.index('<div class="ltitle">') if '<div class="ltitle">' in head else head.index('<div class="namer">')
+    img = f'<img alt="Mi the dolphin" src="{mi_uri()}" style="width:24mm;height:auto;flex:none;margin-left:8px">'
+    return head[:i] + f'<div style="display:flex;align-items:flex-start"><div style="flex:1;min-width:0">' + head[i:] + f'</div>{img}</div>'
 
 
 def qbox(q, label=None, draw=False):
@@ -50,7 +55,7 @@ def kit_page(d):
 def workbook_html(d, key=False):
     t = d['tiers']; inv = t['investigation']
     P = []
-    P.append(f'<div class="page">{hdr(d, "Start here", d["title"].upper() + "!")}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">Use your bundles, your kit or a drawing. Say your answer out loud, then write it.</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
+    P.append(f'<div class="page">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">Use your bundles, your kit or a drawing. Say your answer out loud, then write it.</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Start here")}' + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">Use objects, draw a picture, or open a bundle. Then write how you know. Choose any question, in any order.</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">Choose any question. You do not have to finish them all.</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
@@ -103,7 +108,7 @@ def parent_html(d):
     li = lambda xs, cls='': ''.join(f'<li>{E(x)}</li>' for x in xs)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{PARENT_CSS}'
             '@page{size:A4;margin:12mm 15mm}body{font-size:13.2px;line-height:1.38}.side h3{font-size:15px}.panel{padding:10px 14px;margin-bottom:10px}.panel h3{font-size:16px}.tips li{margin-bottom:6px}.hd{margin:0 0 10px}.big{font-size:60px}'
-            f'</style></head><body><div class="hd"><div class="big">1</div><div><div class="tp">Level 1 • Term 1 • Lesson 1 • For parents</div><h1>{E(d["title"])}</h1></div></div>'
+            f'</style></head><body><div class="hd"><img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto"><div class="big">1</div><div><div class="tp">Level 1 • Term 1 • Lesson 1 • For parents</div><h1>{E(d["title"])}</h1></div></div>'
             f'<div class="cols"><div><div class="kick">What we did</div><p style="margin:3px 0 8px">{E(p["summary"])}</p>'
             f'<div class="quote">{E(d["big_idea"])}. Ten singles tie into one bundle.</div>'
             f'<div class="kick">Try at home (5 minutes)</div><ol class="tips">{li(p["try_home"])}</ol>'

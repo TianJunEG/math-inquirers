@@ -26,7 +26,7 @@ You write ONE lesson as ONE data file, `term/l1/lessons/lNN.json`, copy the shap
 - Tutor voice: warm, plain, "we"; SAY lines under about 60 words, read aloud at 120 words a minute.
 - Labels everywhere: **Start here / Think harder / Go further / Investigation**. Never Core, Challenge, Stretch, Fast track, "early finishers", "strong thinkers", "gifted", "advanced". The validator rejects them.
 - No unicode shape or emoji glyphs; pictures are SVG from `tools/svg.py`.
-- Mascot: not decided (see `mascot/`; the frog is the holiday course mascot). Do not use a mascot in Term 1 lessons until the owner chooses.
+- Mascot: **Mi the dolphin** (owner-chosen; `term/l1/assets/mi_dolphin_transparent.png`, never edit the image). Use small and consistently: title and goodbye slides large (slide field `mascot: {size:"l", say:"..."}`), at most 2 small spot appearances (`size:"s"`, e.g. Remember and Look-back), tutor guide cover, parent header, workbook page 1 corner (24 mm, must not take writing space). Not on every page or slide (validator: at most 5 slides). Mi says only short friendly lines (title: "Hi, I'm Mi. Let's notice, test and explain why!"), never about answers or numbers. Do not show or rely on the calculator: the program teaches mental and written methods.
 - Shared look: palette navy `#1B2A49`, teal `#1F7A6F`, yellow `#FFC93C`, cream `#FFF9EC`; Fredoka headings, Nunito Sans body; slides 1920x1080 modern2; workbook A + D grid paper.
 
 ## Shared assets to reuse (do not rebuild)

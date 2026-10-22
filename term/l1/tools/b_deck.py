@@ -39,7 +39,7 @@ def para(text, size=44, weight=600, color=None):
 
 def card(head, items, size=40):
     inner = chip(head, 26) if head else ''
-    inner += ''.join(f'<p style="font-size:{size}px;font-weight:600;line-height:1.3">{E(i)}</p>' for i in items)
+    inner += ''.join(f'<p style="font-size:{size}px;font-weight:600;line-height:1.3;color:{NAVY}">{E(i)}</p>' for i in items)
     return f'<div style="{CARD}padding:24px 40px;display:flex;flex-direction:column;gap:12px">{inner}</div>'
 
 
@@ -188,7 +188,7 @@ def slide_html(d, s):
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(s["title"])}</h1>'
                 f'<p style="font-size:44px;color:#C9D4EC">{E(s.get("subtitle", ""))}</p>'
-                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
+                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
         style = f'{bg};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px;position:relative;overflow:hidden'
     else:
         if dark:
@@ -198,6 +198,13 @@ def slide_html(d, s):
         inner = render_blocks(d, s['blocks'])
         body = h + inner
         style = f'{bg};font-family:{BF};padding:72px 128px 100px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden'
+    mi = s.get('mascot')
+    if mi:
+        w = 420 if mi['size'] == 'l' else 170
+        bub = ''
+        if mi.get('say'):
+            bub = (f'<div style="position:absolute;right:{128 + w + 30}px;bottom:{70 + w - 80}px;max-width:520px;background:#FFFFFF;color:{NAVY};border-radius:28px;padding:18px 28px;font-size:34px;font-weight:700;line-height:1.25;box-shadow:0 6px 18px rgba(0,0,0,0.2)">{E(mi["say"])}</div>')
+        body += f'{bub}<img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:{110 if mi["size"] == "l" else 128}px;bottom:{70 if mi["size"] == "l" else 60}px;width:{w}px;height:auto">'
     return (f'<section id="{s["id"]}" data-transition="fade" data-theme="modern2" style="{style}">\n{deco}\n{pill}\n{body}\n{foot}\n<aside>{E(s["note"])}</aside>\n</section>\n')
 
 

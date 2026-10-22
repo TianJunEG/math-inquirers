@@ -95,7 +95,7 @@ def build_html(d):
     sm = slide_map(d); pm = part_map(d); segs = segment_timeline(d)
     used = sum(s['used'] for s in segs); slow = sum(slow_used(s) for s in segs)
     H = []
-    H.append(f'<div class="cover"><div class="k">TUTOR GUIDE • LEVEL {d["level"]} • TERM {d["term"]} • LESSON {d["lesson_in_term"]} OF 10</div><h1>{E(d["title"])}</h1><p><b>Big idea:</b> {E(d["big_idea"])}. {E(d["child_idea"])}</p><p>90 minutes • live online or face to face • up to 8 children • ages {d["ages"]} • Notice it. Test it. Explain why.</p></div>')
+    H.append(f'<div class="cover" style="position:relative"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:22px;top:14px;width:110px"><div class="k">TUTOR GUIDE • LEVEL {d["level"]} • TERM {d["term"]} • LESSON {d["lesson_in_term"]} OF 10</div><h1>{E(d["title"])}</h1><p><b>Big idea:</b> {E(d["big_idea"])}. {E(d["child_idea"])}</p><p>90 minutes • live online or face to face • up to 8 children • ages {d["ages"]} • Notice it. Test it. Explain why.</p></div>')
     H.append('<h2>1. At a glance</h2><table>')
     rows = [('Strand', E(d['moe']['strand']) + ' (' + '; '.join(E(x) for x in d['moe']['topics']) + ')<div class="small">' + E(d['moe']['note']) + '</div>'),
             ('Objectives', '<ul>' + ''.join(f'<li>{E(o)}</li>' for o in d['objectives']) + '</ul>'),

@@ -272,6 +272,16 @@ def check_pages(d):
     ok('pages: workbook page fill ' + ', '.join(f'{f:.0%}' for f in fills) + ' (kit page excluded)')
 
 
+def check_mascot(d):
+    ms = [s for s in d['slides'] if s.get('mascot')]
+    if len(ms) > 5: fail(f'mascot: Mi appears on {len(ms)} slides (max 5, modest use)')
+    for s in ms:
+        say = s['mascot'].get('say', '')
+        if re.search(r'\d', say) or len(say.split()) > 14: fail(f"mascot: Mi's line on {s['id']} must be short and say nothing about answers or numbers")
+    if not os.path.exists(os.path.join(L1, 'assets', 'mi_dolphin_transparent.png')): fail('mascot: term/l1/assets/mi_dolphin_transparent.png missing')
+    else: ok(f'mascot: Mi on {len(ms)} slides, short friendly lines only')
+
+
 def check_rec(d):
     for k, r in d['rec'].items():
         n = words(r['say'])
@@ -387,7 +397,7 @@ def check_answers(d):
 
 def check_all(num):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:

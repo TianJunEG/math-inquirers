@@ -173,3 +173,10 @@ def slide_time(d, s):
 def font_css():
     path = os.path.join(ROOT, 'fonts', 'fonts.css')
     return open(path, encoding='utf-8').read()
+
+
+def mi_uri():
+    """Mi the dolphin (owner-chosen mascot) as a data URI. The image file is never edited."""
+    import base64
+    with open(os.path.join(L1, 'assets', 'mi_dolphin_transparent.png'), 'rb') as f:
+        return 'data:image/png;base64,' + base64.b64encode(f.read()).decode()
