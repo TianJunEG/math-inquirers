@@ -5,6 +5,7 @@ const BUD = require('./budget.json').lessons;   // written by rebuild/p5_budget.
 const fm = x => String(x);
 const partOf = (n, title) => BUD[String(n)].parts.find(q => q.title.startsWith(title));
 const rg = q => q ? fm(q.start) + '–' + fm(q.end) : '';
+const PAIRWORK = { 1: 6, 2: 6, 3: 6, 4: 6.5, 5: 6, 6: 6, 7: 6, 8: 6.5, 9: 5.5, 10: 6 };   // minutes of pair work in the explore (rebuild/p5_gaps.py has the same table)
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -109,51 +110,55 @@ REC.RULES.upload.forEach(x => G.push(bu(x)));
 L.lessons.forEach(l => {
   CURL = l; SEGS.length = 0;
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
+  const BP = t => partOf(l.n, t), P1 = BP('Worksheet page 1'), K1 = BP('Check page 1'), TS = BP('Short teaching'), P2 = BP('Worksheet page 2'), K2 = BP('Check page 2'), EX = BP('Explore'), BUF = BP('Buffer');
+  const dur = q => fm(q.end - q.start);
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
   G.push(tbl([1900, 8000], [
     ['Objective', l.objective], ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
     ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.'],
+    ['Clock checkpoints', 'Explore done at ' + fm(EX.end) + ', mini-lesson done at ' + fm(BP('Mini-lesson').end) + ', brain break done at ' + fm(BP('Brain break').end) + ', page 1 done at ' + fm(P1.end) + ', check page 1 done at ' + fm(K1.end) + (TS ? ', short teaching done at ' + fm(TS.end) : '') + ', page 2 done at ' + fm(P2.end) + ', check page 2 done at ' + fm(K2.end) + ', talk time done at ' + fm(BP('Talk time').end) + ', buffer ' + dur(BUF) + ' minutes (' + rg(BUF) + '). If you are more than 2 minutes behind at the end of the brain break, use the cut-first ladder in the routine section.'],
+    ['Take-home (starred in the workbook)', l.take + '. Say once that the starred parts are for home, and do not wait for them. Their answers are on the check slides and in the key below.'],
     ['Watching the recording', 'A child who missed the live lesson watches the recording. They need: ' + l.materials + ' The REC lines tell them when to pause; the chapter list at the end of this lesson shows each part.']
   ].map(r => row([cell(r[0], 1900, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 60 }), c2(r[1], 8000, { h: 60 })]))));
   G.push(gap(40));
 
-  pushSeg('0 min', 'Opening (before the clock starts)');
+  pushSeg(BP('Opening'), 'Opening (inside the 90 minutes)');
   say(s.hook);
-  doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
+  doo(['Greet the children with a wave and in the chat (do not go round naming every child), say in one sentence that the lesson is recorded, show the lesson title slide and read “Today we will…” aloud. Keep the hook short: ' + fm(BP('Opening').end - BP('Opening').start) + ' minutes in all.']);
 
-  pushSeg('0–3 min', 'Sneak-peek puzzles (private answers)');
+  pushSeg(BP('Sneak'), 'Sneak-peek puzzles (private answers)');
   ask(d.check.map((x, i) => [(i === 0 ? 'Puzzle 1 (access): ' : 'Puzzle 2 (thinking): ') + x[0], x[1]]), 'Puzzle', 'Listen for');
   doo(s.check);
-  pushSeg('3–9 min', 'Warm-up');
-  doo(['Minutes 3 to 9: the warm-up game below (one or two rounds only) and then the quick questions. If you are short of time, ask only the first three quick questions.']);
+  pushSeg(BP('Warm-up'), 'Warm-up');
+  doo(['Minutes ' + rg(BP('Warm-up')) + ': the warm-up game below (ONE round only) and then four quick questions. If you are short of time, skip quick question 4.']);
   doo([d.warmGame]);
   say(s.warmIntro);
-  doo(['After the game, ask the quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.']);
+  doo(['After the game, ask the four quick questions on the warm-up slides. Use thumbs or a whisper to partners before taking answers.']);
   ask(d.warmQs.map(x => [x[0], x[1]]));
 
-  pushSeg('9–21 min', 'Explore (in pairs, with objects)');
+  pushSeg(EX, 'Explore (in pairs, with objects)');
   say(s.predict);
   doo(d.expSetup.map((x, i) => (i + 1) + '. ' + x));
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
   stuck(s.exploreHints);
-  doo(['Go further what-if (on the second explore slide, for anyone who wants more, so nobody waits): ' + d.whatIf[0] + ' (Answer: ' + d.whatIf[1] + ')', 'At about minute 19, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.']);
+  doo(['Go further what-if (on the second explore slide, for anyone who wants more, so nobody waits): ' + d.whatIf[0] + ' (Answer: ' + d.whatIf[1] + ')', 'Pair work is at most ' + fm(PAIRWORK[l.n]) + ' minutes after the 30 seconds of silent thinking: at minute ' + fm(EX.end - 4) + ', say “Pencils down” and bring the group back together. Take the two questions below, one at a time (about a minute each).']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 
-  pushSeg('21–33 min', 'Mini-lesson (you teach, they join in)');
+  pushSeg(BP('Mini-lesson'), 'Mini-lesson (you teach, they join in)');
   doo(['Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.']);
   say(s.think);
   G.push(tbl([4600, 5300], [row([hd('Worked example on the slides', 4600), hd('Answer', 5300)]), row([c2(d.mini1.head + '. ' + (d.mini1.body || []).join(' '), 4600), c2(d.mini1.ans, 5300)]), row([c2(d.mini2.head + '. ' + (d.mini2.body || []).join(' '), 4600), c2(d.mini2.ans, 5300)])]));
   G.push(gap(40));
   say([d.keyHead.replace(/^Key idea: /, 'The key idea today is: ') + '. ' + d.keyBig + ' Say it with me.']);
-  doo(['Show the key idea slide at minutes 32 to 33. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:']);
+  doo(['Show the key idea slide in the last minute or two of the mini-lesson (its slide shows the minutes). The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:']);
   l.mistakes.forEach(m => G.push(bu(m)));
 
-  pushSeg('33–37 min', 'Brain break');
-  doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
+  pushSeg(BP('Brain break'), 'Brain break');
+  doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to ' + dur(BP('Brain break')) + ' minutes.']);
 
-  pushSeg('37–72 min', 'Workbook (page 1 in pairs, check, teaching, page 2 alone)');
-  doo(['Minute 37: give out the workbook. Say “Pairs first. Talk before you write.”', 'Minutes 37 to 49: pairs work on page 1. Minutes 49 to 53: check page 1 together (four minutes, so every part can be explained). Minutes 53 to 58: the short teaching slides for the page 2 question types. Minutes 58 to 72: each child works alone on page 2; it is a menu, not a wall, so nobody has to finish. Minutes 72 to 76: check page 2 together.']);
+  pushSeg({ start: P1.start, end: K2.end }, 'Workbook (page 1 in pairs, check, teaching, page 2 alone, check)');
+  doo(['Minute ' + fm(P1.start) + ': give out the workbook. Say “Pairs first. Talk before you write. The starred parts are for home.”', 'Minutes ' + rg(P1) + ': pairs work on page 1: ' + l.p1 + '. Minutes ' + rg(K1) + ': check page 1 together (one pair explains the heaviest question, you click through the rest). ' + (TS ? 'Minutes ' + rg(TS) + ': the short teaching slides for the page 2 questions that stay in class. ' : 'There is no short teaching in this lesson: go straight to page 2. ') + 'Minutes ' + rg(P2) + ': each child works alone on page 2: ' + l.solo + '; it is a menu, not a wall, so nobody has to finish. Stop at minute ' + fm(P2.end) + '. Minutes ' + rg(K2) + ': check page 2 together (only the questions that were set).']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.', 'After question ' + L.choiceQ(l.n) + ' you may choose: carry on, or try Think harder. You can swap at any time.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
@@ -164,17 +169,19 @@ L.lessons.forEach(l => {
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder A' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further B' + (i + 1) + ': ' + x.q, x.a]), ...(l.pose ? [['Make up your own (printed under Go further, after 30 seconds of silent thinking): ' + l.pose, 'Open-ended. Check that a partner can solve it and that exactly one answer fits; ask “what if you changed one number?”']] : [])], 'Question', 'Answer');
   G.push(tx('These are the questions on the Think harder and Go further pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
-  pushSeg('76–82 min', 'Talk time');
-  doo(L.scripts[l.n].talkRules.concat(['Bring the group back to a circle (or camera on, mics on). Pairs talk for 2 minutes first.']));
+  pushSeg(BP('Talk time'), 'Talk time');
+  doo(L.scripts[l.n].talkRules.concat(['Bring the group back to a circle (or camera on, mics on). 30 seconds of silent thinking, pairs talk for 2 minutes, volunteers share for 1 and a half minutes. Finish by saying that the first step of the Investigation is take-home (or the opener of the next lesson); do not do it in class.']));
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
 
-  pushSeg('82–90 min', 'Exit ticket, reflection and closing');
+  pushSeg(BP('Exit'), 'Exit ticket, reflection and closing');
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
   doo(s.reflect);
-  doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (private to you, never shown to children). If a child is marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
+  doo([(l.n === 10 ? 'Hand out the certificates (about 12 seconds each, shown on camera and sent through the approved channel) and type the last stamp in the chat. ' : 'Type each child’s stamp in the chat in one message (you can also stamp the inquiry journal at the next lesson). ') + 'Mark S, D or H in the progress tracker at the back of this guide (private to you, never shown to children). If a child is marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
+  pushSeg(BUF, 'Floating time (the buffer) and close');
+  doo(['The buffer is ' + dur(BUF) + ' minutes of floating time at the end. It has no script. It is what absorbs a late start or a slow breakout room, so it is spent first when the lesson runs late. If it is still there, use it for the Go further what-if, a pair that needs a catch-up, or an early goodbye.']);
   G.push(h2('Extension for anyone who wants more'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));

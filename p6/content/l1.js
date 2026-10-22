@@ -224,7 +224,7 @@ module.exports = {
     W.push(H.q(5, '★ Take-home. Plan your code with these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
     { const pal = ps => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + ps.map(([p, i]) => blocks(p, 'Block ' + i, 14).replace('max-width:100%', 'flex:none')).join('') + '</div>';
       W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n) for (1) seconds']], 5]]) + '</div>', 4300,
-        ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:150px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
+        ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:132px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
     // Q6 bug
     W.push(H.q(6, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));
     W.push(side(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n', 14), 4300,
