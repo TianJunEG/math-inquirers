@@ -24,9 +24,17 @@
     var hm = /^\s*(multiples|common|divisors)\(([^)]*)\)\s*$/.exec(expr);
     if (hm) return HELP[hm[1]].apply(null, hm[2].split(',').map(function (x) { return calc(x, env); }));
     var s = expr; Object.keys(env).sort(function (a, b) { return b.length - a.length; }).forEach(function (k) { s = s.replace(new RegExp('\\b' + k + '\\b', 'g'), env[k]); });
-    var m = /^\s*(\d+)\s*\/\/\s*(\d+)\s*$/.exec(s); if (m) return Math.floor(+m[1] / +m[2]);
+    return arith(s);
+  }
+  // small evaluator: + - * / // % and brackets, with // as whole-number division (so "(a+b)//2 + 1" works anywhere in an expression)
+  function arith(s) {
     if (!/^[\d\s+\-*/%().]*$/.test(s)) throw new Error('bad expression');
-    return Function('"use strict";return (' + s + ')')();
+    var toks = s.match(/\/\/|[\d.]+|[-+*/%()]/g) || [], p = 0;
+    function peek() { return toks[p]; }
+    function prim() { var t = toks[p++]; if (t === '(') { var v = sum(); p++; return v; } if (t === '-') return -prim(); if (t === '+') return prim(); return parseFloat(t); }
+    function prod() { var v = prim(); while (/^(\*|\/|\/\/|%)$/.test(peek() || '')) { var o = toks[p++], r = prim(); v = o === '*' ? v * r : o === '/' ? v / r : o === '%' ? v % r : Math.floor(v / r); } return v; }
+    function sum() { var v = prod(); while (peek() === '+' || peek() === '-') { var o = toks[p++], r = prod(); v = o === '+' ? v + r : v - r; } return v; }
+    var out = sum(); if (p < toks.length) throw new Error('bad expression'); return out;
   }
   var WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   function numWord(n) { n = +n; if (n < 20) return WORDS[n]; if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? '-' + WORDS[n % 10] : ''); return String(n); }
