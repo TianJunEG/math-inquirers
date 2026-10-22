@@ -215,8 +215,236 @@ def profiles():
 def diag():
     verify_diag(); cut_tables(); profiles()
 
+# ================================================================ SCORES (Part 1)
+# Criteria order: Participate, Difficulty fit, Fun/interest, Confidence, Motivation, Social/online.
+# Difficulty fit uses 5 = just right (the brief's "3 = just right" would make the six-score mean meaningless); direction is in the note.
+CRIT = ['Participate', 'Difficulty fit', 'Fun / interest', 'Confidence', 'Motivation', 'Social / online']
+PERSONA = ['LOW', 'MIDDLE', 'HIGH']
+LESSON_TITLE = {1: 'Factor Hunters', 2: 'Big Number Puzzles', 3: 'Operation Detectives', 4: 'Fraction Frontier', 5: 'Decimal Detectives',
+                6: 'Angle Turns', 7: 'Area Architects II', 8: 'Symmetry and Nets', 9: 'Data Detectives', 10: 'Challenge Day'}
+SCORES = {
+1: {
+ 'LOW': [(3, "Check Q1 (lifts at every 3rd and 5th floor) can be started by listing; Q2 (Siti's '30, 60, 90') needs the factor/multiple split that is only taught at min 18-20"),
+         (2, "TOO HARD: ws1 Q1 pairs of 48 (3 x 16, 4 x 12), ws2 Q5 table and Q6a four-clue riddle solo in 18 min; three new ideas in 5 min before page 2"),
+         (3, "24-tile rectangles (explore) and the bus time line are concrete; Fizz-Buzz is fun until you slip"),
+         (3, "'Not this one' is modelled (we1, we2) and Q1 gives '1 x 48' plus empty boxes, but the min-1 check is cold and Q6b asks for a written example"),
+         (3, "Buses and bead packs give a purpose; progress is shown only by the end stamp"),
+         (3, "Fizz-Buzz goes round the video tiles and 'a child who slips starts the next round' is public; page-1 partner may be sent to Think Harder at min 34")],
+ 'MIDDLE': [(4, "Both check items can be started; Q2 may get an answer with no reason"),
+            (4, "Page 1 right; page 2 Q5/Q6 stretch but are reachable; reading is easy (329 words over two pages)"),
+            (4, "Tiles, Fizz-Buzz, bus puzzle"),
+            (4, "Worked examples, boxes on Q1 and the 'Stuck?' hint line carry them"),
+            (3, "Nothing shows progress inside the lesson except the stamp"),
+            (4, "Pair talk on explore and ws1, sentence starters at talk time")],
+ 'HIGH': [(5, "Both check items solved in seconds"),
+          (3, "TOO EASY: quick questions, 12-min mini-lesson and ws1/ws2; Think Harder (Q1-3 same-type, Q4 and locker Q7 good) only starts at min 34"),
+          (4, "Locker problem (Challenge Q7) and 'find ALL pairs of bus gaps' (Open) are the highlights; the warm games are trivial"),
+          (4, "Early wins; risk is skipping the one-sentence reason and missing the fast track"),
+          (4, "Open investigation gives a real goal (six gap pairs, systematic list)"),
+          (3, "7 min of page checks and 5 min of teach-before-page-2 on pages they skipped; works alone from 34 to 80")]},
+2: {
+ 'LOW': [(2, "Check Q1 ('which could be the real number: 7 499, 7 500, 8 499, 8 500') needs the halfway rule taught at min 18; Q2 asks why both answers are 50 000, so nothing to write at min 1"),
+         (2, "TOO HARD: ws1 Q1 12-cell rounding table with 63 950, 9049, 80 503 traps; Q2 smallest/largest (62 500 / 63 499); ws2 Q4a riddle has four clues"),
+         (3, "Place It Right (irreversible boxes) is a good game; the digit-card explore needs the 'no 0 card so start 49' insight"),
+         (2, "Cold check, then page 1 opens on the carry trap ('Watch out for 9s'); Q2b hint 'Start at 5340 and check each one' is the one kind scaffold"),
+         (3, "Stadium-size numbers and 'what can a rounded number hide' are a fair hook"),
+         (3, "Digit cards 0-9 are not in the workbook cut-outs, so a child without them cannot join the explore; '60 045' on whiteboards is public")],
+ 'MIDDLE': [(4, "Check items doable by testing the four numbers"),
+            (3, "Page 1 table plus ws2 Q4-Q6 in 18 min is dense; reading 242 words"),
+            (4, "Place It Right, digit cards, stadium hook"),
+            (3, "Trap items (63 950) catch most children once; 'Stuck?' number line helps"),
+            (4, "Finding 'ALL' numbers that round to 50 000 has a clear aim"),
+            (4, "Pair explore and compare-and-argue at talk time (Siti/Ravi)")],
+ 'HIGH': [(5, "Both check items quick, but the reason sentence must be written"),
+          (3, "TOO EASY for core pages; we4 (two clues) shown at 25-27 is 'no longer on the worksheet'"),
+          (4, "Place It Right and the five-digit riddles; Open investigation 'double rounding' (test 1 449 and 1 450) is excellent"),
+          (4, "Quick wins; the double-rounding conjecture is a real discovery"),
+          (4, "Challenge 'how many 5-digit numbers have digit sum 3' and palindrome puzzle give targets"),
+          (3, "Listens to page checks on traps already avoided; solo 34-80")]},
+3: {
+ 'LOW': [(3, "Check Q1 (one pair of brackets in 2 + 3 x 4 to make 20) is a try-it puzzle; Q2 (Ravi: 10 - 2 x 3 = 24) needs the order taught at min 18"),
+         (1, "FAR TOO HARD: quick questions 4 800 / 6, 99 x 6, 45 x 20 on whiteboards; ws2 Q6 1 236 / 4 = 309; four methods in 5 min before page 2"),
+         (2, "Target Numbers is a race ('first child to show a correct number sentence wins a point') that the slow child never wins; quick questions are 'boards up together'"),
+         (2, "ws1 Q1a (36 + 14 x 5) is the very trap, Q1c (72 / 8 x 3) is the second; Q7 guess-and-check chains fail in public"),
+         (3, "Number tricks that always end in 7 are a real hook if the child reaches Q5"),
+         (2, "Speed race and boards-up under time pressure; ws2 has four multi-part items solo, with the tutor unable to see the page")],
+ 'MIDDLE': [(4, "Check items workable; Q2 maybe answered as 24"),
+            (3, "Page 2 is four different tasks (machine, trick, bar model, chains) in 18 min"),
+            (4, "Target Numbers, odd/even stand-crouch break, number trick"),
+            (3, "Worked examples good; the trap (36 + 14 x 5) is hit once and corrected"),
+            (4, "'Why does the trick always give 7?' is a good puzzle"),
+            (3, "Race element helps some, discourages others")],
+ 'HIGH': [(5, "Both check items instant"),
+          (3, "TOO EASY: core pages and the mental-maths questions; Think Harder (Challenge Q5 plus/minus puzzle, Q6 Mei's money) is right"),
+          (5, "Target Numbers ('can you make 100?'), four 4s, make-any-target Open investigation are real puzzles"),
+          (4, "Fast wins; rushing risk on left-to-right slips"),
+          (4, "Open investigation 'make targets 1 to 12 from 2, 3, 4, 5' gives an aim"),
+          (3, "Waits through ws1 check and the bar-model teach-before while on Think Harder")]},
+4: {
+ 'LOW': [(3, "Warm 'more or less than a half?' thumbs are low-floor; check Q1 ('9/4 cups of flour') uses improper fractions that are only named at min 13-18"),
+         (2, "TOO HARD: quick questions 2/3 = ?/12 and 3/4 + 1/8; ws2 Q4 five comparisons (4/9 vs 5/8) each needing 'how you know'; five ideas in the 5 min before page 2"),
+         (4, "Pizza slices cut from paper circles are tactile and relatable; the fraction wall is in the cut-outs"),
+         (3, "ws1 Q1 (count shaded fifths) is a sure win; Q4 asks for a written reason four times"),
+         (3, "Pizza and sweet-jar contexts are purposeful; progress not visible"),
+         (3, "Three paper circles must be pre-cut at home; a wrong 'bigger denominator' answer is aired in the talk-time Mei/Ravi claims")],
+ 'MIDDLE': [(4, "Thumbs and the pizza explore start everyone"),
+            (3, "Four ideas in 12 min plus five in 5 min is heavy; Q4-Q6 solo in 18 min"),
+            (4, "Pizza party, fraction wall"),
+            (3, "Q1 bars and Q3 given bar model give early success; comparing is the hard part"),
+            (4, "'Find ALL the twelfths' and 'is Mei right?' invite reasons"),
+            (4, "Pairs on bars; thumbs warm-up is safe")],
+ 'HIGH': [(5, "Check items fast; the 3/8 vs 3/5 reason is one line"),
+          (3, "TOO EASY: Q1-Q5 and the comparing tools; Challenge (half is 3 more than a third; Siti's book) fits"),
+          (3, "Fractions of sets are routine; Challenge and 'fraction between 2/3 and 3/4' are the fun parts"),
+          (4, "Quick wins"),
+          (4, "Open investigation 'which fractions of 24 stickers are whole?' links back to Lesson 1 factors"),
+          (3, "Page checks on pages skipped; work alone")]},
+5: {
+ 'LOW': [(2, "Check Q1 is the classic 0.8 vs 0.75 and Q2 ('a decimal between 3.4 and 3.5, how do you know it fits?') wants place-value reasoning in 90 seconds"),
+         (1, "FAR TOO HARD: thousandths, steps of 0.1/0.01/0.001, rounding to 1 dp and to whole numbers, rounding backwards, 12-number lists, 2.40 / 6; four ideas in 5 min before page 2"),
+         (3, "Target 5 digit-box game and the 2.36 m ruler link are fun; then the abstract run starts at min 18"),
+         (2, "Warm2 Q3 (0.8 vs 0.75) is deliberately left unsettled in public; Q3b/Q3c rounding detective; ends on the exit 'order 2.8, 2.08, 2.088'"),
+         (3, "Prices and masses (cans, $9.40 bar model) give purpose"),
+         (2, "Digit and decimal-point cards must be cut at home; 3 rounds of irreversible Target 5 in 2 min is rushed")],
+ 'MIDDLE': [(3, "Check Q2 open answer is fine; Q1 many say 0.75"),
+            (3, "Dense: five teaching slides then page 2 Q4 lists 12 numbers and Q6 needs decimal division"),
+            (4, "Target 5, zoom-in lines"),
+            (3, "Misconception (more digits = bigger) is met and corrected; page 1 Q1 zoom lines are tricky"),
+            (4, "Detective theme with 'check every clue'"),
+            (3, "Pairs on page 1; solo page 2 is long")],
+ 'HIGH': [(5, "Both check items instant"),
+          (3, "TOO EASY: ordering and rounding; Challenge (2.459 clue, apples and pear) and Open 'no decimal between 0.35 and 0.36?' are right"),
+          (4, "Open investigation (is there a next decimal?) is the best idea in the lesson"),
+          (4, "Quick wins on core"),
+          (4, "Closest-to puzzles (Think Harder) and 'make your own' Challenge"),
+          (3, "Waits through three slides on place-value chart and page checks")]},
+6: {
+ 'LOW': [(4, "Robot turns and the paper clock are physical; check Q2 (90 - 35) is easy and Q1 can be done with fingers on a compass"),
+         (3, "A LITTLE TOO HARD: protractor (inside/outside scale, c and d turned) is the gate; arithmetic is light; page 2 four tasks in 18 min"),
+         (4, "Standing turns, compass dance, paper clock hands-on"),
+         (3, "ws1 Q1 'My estimate' can never be wrong and answers within 2 degrees count; Q5 corner sums are quick"),
+         (4, "Clocks and robots are everyday; stamp"),
+         (3, "Protractor, ruler and paper clock must be at home (only right-angle testers are in the workbook); the tutor cannot see protractor placement; mirrored self-view reverses turns")],
+ 'MIDDLE': [(4, "Everyone can turn and answer"),
+            (4, "Right pitch; page 1 measuring takes the time"),
+            (4, "Standing and moving, clock puzzles"),
+            (4, "Estimate-first routine protects against 140 vs 40"),
+            (4, "Fan of angles 'find ALL' has an aim"),
+            (4, "Whole-body activity on camera, pairs on fan")],
+ 'HIGH': [(5, "Check items instant"),
+          (2, "TOO EASY: protractor, clock spaces, compass; 'What is the angle at 3:30?' (75) is the first real challenge"),
+          (3, "Challenge Q1 (3:30) and the two-squares overlap are good; most of the lesson is procedural"),
+          (4, "Early wins"),
+          (3, "Open 'splitting a corner into three angles' (7 sets) has an aim but only for the fast track"),
+          (3, "Stand-and-turn games are shared; waits through measuring checks")]},
+7: {
+ 'LOW': [(3, "Check Q1/Q2 are spoken (6 m x 4 m room, 2 m x 1 m cut from a corner) with no picture; Q2 asks 'explain how you know' the perimeter is unchanged"),
+         (2, "TOO HARD: 21 sub-items in 34 min (1.6 min each); missing lengths, area two ways, staircase, frame; 'layers' (Q4b) undefined"),
+         (4, "12 tiles, A/P cards, 'six tiles' (Q3) and the body-shapes break are hands-on"),
+         (3, "Q3 any six-tile shape works; Q2 table fills row by row; Q4a 'show Ravi' needs a written method"),
+         (4, "Architects with fences and carpets is a good hook"),
+         (3, "24 paper squares and scissors prepared at home; square-grid page is provided")],
+ 'MIDDLE': [(4, "Check Q1 workable from the words"),
+            (3, "Dense page 2 (staircase, cut-and-rearrange, frame)"),
+            (4, "Tiles and A/P cards"),
+            (4, "Q3 and Q2 give wins; border Q6c is a good 'what did she forget'"),
+            (4, "Same area, different perimeter is a real surprise"),
+            (4, "Pair tile work")],
+ 'HIGH': [(5, "Check items instant"),
+          (3, "TOO EASY on core; Challenge (two paths cross the garden; 9 by 4 cut into a square) is right"),
+          (4, "Six-tile perimeters, Ravi's fence (extension), paths puzzle"),
+          (4, "Early wins"),
+          (4, "Open 'bigger area, bigger perimeter?' with all six 24 cm rectangles"),
+          (3, "Work alone from 34; page checks on pages skipped")]},
+8: {
+ 'LOW': [(4, "Check Q1 (straight row of 6 squares, can fold paper) and Q2 (H and A, fingers) need almost no reading"),
+         (4, "A BIT HARD in places: fold-in-the-head (ws1 Q1 shapes B, D, F) and drawing mirror images (Q4) are spatial, not arithmetic; no calculations"),
+         (5, "Paper cube, dice nets, mirror-partner break, letters with fingers"),
+         (4, "Q3 dice nets use the known 7-sum; ws1 mostly ticks and numbers; cube net is in the workbook"),
+         (4, "'I made a cube' is visible progress"),
+         (3, "6 paper squares, tape and scissors must be ready; folding on camera is hard to check")],
+ 'MIDDLE': [(4, "Everyone can fold or finger-answer"),
+            (4, "Good pitch; coordinate Q6 (A2, D3) is the stretch"),
+            (5, "Nets, dice, mirrors"),
+            (4, "Tick/draw rather than write; Q5 diagonal trap is taught first"),
+            (4, "Eleven nets is a good 'find them all'"),
+            (4, "Pair folding, mirror partner on camera")],
+ 'HIGH': [(5, "Check items instant"),
+          (3, "TOO EASY on core; Think Harder (22-square cuboid net, two glued dice) fits"),
+          (5, "Design your own dice, X and plus symmetry puzzle"),
+          (4, "Quick wins"),
+          (4, "Open 'row of four' (16 cases) is excellent"),
+          (3, "Works alone; checks on skipped pages")]},
+9: {
+ 'LOW': [(4, "Warm 'which graph tells the story' has no numbers; check Q1 (halfway between 100 and 150) is easy; Q2 asks for an abstract reason about scales"),
+         (3, "A BIT HARD: scale reading is fine; 85 - 38 and 70 - 29 regrouping, same-jump table, and Q5 'two shops' scale argument are abstract"),
+         (3, "Sugarcane juice and money boxes are fine; plotting 7 points with a ruler can drag"),
+         (4, "Q1a (read Thursday = 75) is a sure first win; table totals can be checked two ways"),
+         (3, "Some purpose in 'catch the misleading graph'"),
+         (3, "Printed blank grid, ruler and two pencils must be ready (the workbook has no graph grid for Lesson 9); 'choose a scale' alone is exposing")],
+ 'MIDDLE': [(4, "Everyone can match graph to story"),
+            (4, "Right pitch; Q5 is the stretch"),
+            (3, "Graphs are only mildly exciting"),
+            (4, "Reading and totals give early wins"),
+            (3, "'Is the graph telling the truth?' is the one hook"),
+            (4, "Pair plotting")],
+ 'HIGH': [(5, "Check items instant"),
+          (2, "TOO EASY: reading values, listing changes, table totals; only Challenge (tanks cross at 4 h) and the scale argument stretch"),
+          (3, "Mostly reading; the misleading-graph idea is nice"),
+          (3, "Quick wins but little to be proud of"),
+          (2, "Open 'three plants' is a calculation table; little curiosity"),
+          (3, "Waits through slides on reading and totals")]},
+10: {
+ 'LOW': [(3, "Check Q1 (ducks/rabbits, 8 animals, 22 legs) can be guessed or drawn; Q2 (add 7, double, get 30) can be undone; 'Who am I?' grid is easy"),
+         (2, "TOO HARD: four puzzle cards in 5 min; ws1 Q1a (next-door numbers make 552 = 23 x 24), Q1b ($4 pens, $7 notebooks); ws2 Q6 'in 5 years' ages"),
+         (3, "Logic and queue puzzles are fun; five puzzle types back to back are not"),
+         (3, "The hook normalises 'you do not know how to start'; the logic grid (Q4) is a likely win; the group 'teach one puzzle' is exposing"),
+         (4, "Certificate, last stamp and a specific thing each child did well"),
+         (3, "Breakout pair per card then report back; talk-time 'teach it in two sentences'")],
+ 'MIDDLE': [(4, "Who am I and puzzle cards start everyone"),
+            (3, "Hard but sequenced: four ways in are taught one at a time"),
+            (4, "Puzzles are the fun part"),
+            (4, "Strategy names ('suppose', 'work backwards') give hooks; certificate"),
+            (5, "No new topic; certificate; 'tell a specific thing'"),
+            (4, "Pairs and talk time")],
+ 'HIGH': [(5, "Cards and Who am I are instant"),
+          (4, "Right: competition-style puzzles; the heads-and-legs suppose method and Challenge are new"),
+          (5, "Four puzzle stations, logic grid, make-your-own heads-and-legs"),
+          (5, "Real struggle on real puzzles with a method to try"),
+          (5, "Open 'ring toss scores' (3 and 5 points) find ALL; certificate"),
+          (4, "Breakout pairs, teach to the group")]},
+}
+
+
+def table_scores():
+    rows = []
+    for n in range(1, 11):
+        r = [n, LESSON_TITLE[n]]
+        for p in PERSONA:
+            sc = [x[0] for x in SCORES[n][p]]
+            r.append(round(sum(sc) / 6, 2))
+        rows.append(r)
+    return rows
+
+def heatmap():
+    print('| Lesson | LOW | MIDDLE | HIGH |')
+    print('|---|---|---|---|')
+    for n, t, a, b, c in table_scores():
+        print(f'| {n} {t} | {a:.2f} | {b:.2f} | {c:.2f} |')
+    for i, p in enumerate(PERSONA):
+        print(p, 'mean of lesson means', round(sum(r[2 + i] for r in table_scores()) / 10, 2))
+    print('criterion means (all lessons):')
+    for k, c in enumerate(CRIT):
+        print(' ', c, {p: round(sum(SCORES[n][p][k][0] for n in range(1, 11)) / 10, 2) for p in PERSONA})
+    cells = sorted(((table_scores()[n - 1][2 + i], n, p) for n in range(1, 11) for i, p in enumerate(PERSONA)))
+    print('weakest 8 cells:', cells[:8]); print('strongest 6 cells:', cells[-6:])
+
+
 if __name__ == '__main__':
     what = sys.argv[1] if len(sys.argv) > 1 else 'all'
     if what in ('load', 'all'): load()
     if what in ('time', 'all'): time()
     if what in ('diag', 'all'): diag()
+    if what in ('heat', 'all'): heatmap()
+
+
