@@ -23,6 +23,14 @@ const afterModel = () => {
   return svg(600, 120, 'After model: Siti has 3 equal units and Mei has 4 equal units', s);
 };
 
+// Q5(b): five empty parts for the After box (3 red parts and 2 blue parts to be drawn)
+const fiveBar = () => {
+  let s = T(110, 41, 'The box after', { anchor: 'end' });
+  for (let i = 0; i < 5; i++) s += box(122 + i * 90, 16, 90, 40);
+  s += T(350, 74, 'Shade 3 parts red and 2 parts blue.', { size: 14, weight: 400 });
+  return svg(600, 84, 'Five empty equal parts for the box after: 3 parts red and 2 parts blue to be drawn', s);
+};
+
 module.exports = {
   lesson: {
     n: 3, week: 2, session: 'A', title: 'Before and After', topic: 'Fraction Word Problems',
@@ -30,7 +38,7 @@ module.exports = {
     skills: 'Drawing bar models, choosing what stays the same, splitting parts into equal units, working backwards, checking an answer against every condition',
     materials: 'Mini whiteboard and marker, 24 counters or paper squares (two colours), paper strips for bar models, workbook, pencil.',
     online: 'The tutor shares the slides and builds each bar model click by click. Children draw their models on whiteboards and hold them up to the camera together. For the explore, children move 18 + 6 paper squares on the desk with the camera up as usual and hold the table up to the camera; or use the interactive version on the slide.',
-    warmup: 'What’s left? A jar has 120 marbles. Three cards are turned over one at a time: give away 1/4, give away 1/3 of what is left, give away 5/6 of what is left. Children track what is left on whiteboards (90, 60, 10).',
+    warmup: 'What’s left? A jar has 120 marbles. Two cards are turned over one at a time: give away 1/4 of the jar, then give away 1/3 of what is left. Children draw what is LEFT as a new bar and write the number on whiteboards (90, then 60). Tutor extension for a group that is ready: a third card, give away 5/6 of what is left (10 left).',
     explore: 'Counter swap. Ali has 18 counters and Mei has 6. Pairs move counters from Ali to Mei one at a time and record Ali, Mei, the total and the difference in a table. Then they start again and give BOTH children 2 more counters each time. What never changes in each table? When does Mei have 1/2 as many as Ali?',
     mini: 'Fractions become equal units in a bar. Fraction of a remainder: cut the parts that are left into equal units so every part is the same size. Before you draw a before-and-after model, ask what stays the same: the total (one gives to the other), the difference (both get or spend the same) or one amount (only the other changes). Draw that part the same in both models.',
     share: 'Ali has 50 marbles and Mei has 30. Ali gives Mei some marbles. Can the difference still be 20 afterwards?',
@@ -38,7 +46,7 @@ module.exports = {
     mistakes: ['Taking the second fraction of the whole amount instead of the remainder (1/4 of the remainder read as 1/4 of all the money).', 'Thinking the difference goes down by 10 when one person gives the other 10 (it goes down by 20: one loses 10, the other gains 10).', 'Keeping the units from the Before model when the thing that stays the same is a different amount, so the units in the two models are not the same size.'],
     extension: 'Make up your own before-and-after story where the total stays the same and the answer is 24. Swap with a partner and solve each other’s story with a model.',
     key: [
-      ['Q1', '(a) 1/6 (1/4 of the 2/3 that was left)  (b) $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)'],
+      ['Q1', '(a) $20, $10, $30 (book 1/3 of $60 = $20, remainder $40, pen 1/4 of $40 = $10, left $30)  (b) Too little ($30 left is less than $36): Ravi had $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)  (d) 1/6 (1/4 of the 2/3 that was left)'],
       ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
       ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
       ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
@@ -48,7 +56,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome back, inquirers! Today’s problems all have a story with a BEFORE and an AFTER: someone spends money, gives away stickers, or gets a bit older.', 'The trick that makes them easy is to notice what stays the same. Notice it, test it, explain why.'],
-    warmIntro: ['A jar has 120 marbles. I will turn over three cards. After each card, write how many marbles are LEFT. Careful: read whether the card says “of the whole jar” or “of what is left”.', 'How did you find 1/3 of what was left? Show me your bar.'],
+    warmIntro: ['A jar has 120 marbles. I will turn over two cards. After each card, draw what is LEFT as a new bar and write how many marbles are left. Each card tells you what to take the fraction of: “of the jar” or “of what is left”. I will read it twice.', 'Volunteers: how did you find 1/3 of what was left? Show your bar if you like.'],
     predict: ['Ali has 18 counters and Mei has 6. Ali gives Mei counters one at a time. Before you move any, predict: what will happen to the total? To the difference?', 'Now both children get 2 more counters each time. Predict again: total or difference, which one stays the same?'],
     exploreHints: ['Stuck: make a table with four columns, Ali, Mei, total, difference, and fill one row after every move.', 'Not sure about the difference: line the two rows of counters up side by side and count the extra ones.', 'Finished early: how many counters must Ali give so that Mei has 1/3 as many as Ali? (He gives 0: she already does, 6 is 1/3 of 18.) What about 3/5 as many? (Ali gives 3: 15 and 9.)'],
     think: ['“Mei spent 2/5 on a bag, so I draw 5 parts and shade 2. Then 1/2 of the REMAINDER on shoes. The remainder is 3 parts and I can’t halve 3 parts nicely, so I cut every part into 2. Now there are 10 equal units: bag 4, shoes 3, left 3.”', '“3 units are $27, so 1 unit is $9 and 10 units are $90. Check: bag $36, shoes $27, left $27. That adds to $90.”', '“Ali gives Ben 14 cards. Did the total change? No, the cards only moved. So the total after is still 96. After, Ali has 1/3 as many as Ben: Ali 1 unit, Ben 3 units. 4 units = 96, 1 unit = 24. Ali had 14 more before: 38.”'],
@@ -61,7 +69,7 @@ module.exports = {
 
   deck: {
     today: 'Draw before-and-after models, find what stays the same, and solve fraction stories with units.',
-    warmGame: 'What’s left? A jar has 120 marbles. Turn over one card at a time: give away 1/4; give away 1/3 of what is left; give away 5/6 of what is left. Children write how many are left after each card.',
+    warmGame: 'What’s left? A jar has 120 marbles. Turn over one card at a time: give away 1/4 of the jar; give away 1/3 of what is left. Children draw what is left as a new bar and write how many are left after each card. (Tutor extension: a third card, 5/6 of what is left.)',
     warmQs: [['What is 2/5 of 45?', '18'], ['3/4 of a number is 27. What is the number?', '36'], ['What is 1/3 of 3/4?', '1/4'], ['Ali has 12 more stickers than Ben. Each gets 5 more. What is the difference now?', 'Still 12'], ['Ali has 30 cards and Ben has 20. Ali gives Ben 5. What is the total now?', 'Still 50']],
     expSetup: ['Ali takes 18 counters. Mei takes 6 counters.', 'Ali gives Mei 1 counter at a time. After each move write Ali, Mei, the total and the difference in a table.', 'Start again from 18 and 6. This time give BOTH children 2 more counters each time. Fill in a new table.', 'What never changes in each table? When does Mei have 1/2 as many counters as Ali?'],
     expPic: 'two rows of counters: Ali’s row of 18 yellow counters and Mei’s row of 6 blue counters, with an arrow from Ali’s row to Mei’s row.',
@@ -112,16 +120,16 @@ module.exports = {
     H.p('Draw a model for every question. First ask: what stays the same?', { after: 40 }),
     H.q(1, 'Ravi had some money. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. He had $36 left.', { before: 40, keepNext: true }),
     H.fig(raviBar()),
-    H.p(['<b style="color:' + TEAL + '">Start here:</b> guess that Ravi had $60 at first. Work out the book, the pen and what is left. Is that too much or too little compared with $36?'], { after: 20 }),
-    H.sub('a', 'What fraction of his money did he spend on the pen?   ____________'),
-    H.sub('b', 'How much money did Ravi have at first?'), H.ans(),
+    H.sub('a', 'Try $60 first. The book costs $______, the pen costs $______, and $______ is left.'),
+    H.sub('b', 'Ravi really had $36 left, not $30. Was $60 too much or too little for the money he had at first? How much money did Ravi have at first?'), H.ans(),
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
+    H.sub('d', '(try this one if you like) What fraction of his money did he spend on the pen?   ____________'),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
     H.fig(afterModel()),
     H.sub('a', 'How many stickers did they have altogether after the swap?   ____________'),
     H.sub('b', 'How many stickers did Siti have at first? How many did Mei have at first?'), H.ans('Siti: __________     Mei:'),
-    H.q(3, 'Ali has 50 marbles and Ben has 30 marbles. Ali wants to give Ben some of his marbles.', { pb: true, before: 0, keepNext: true }),
-    H.sub('a', 'Ben says, “Ali must give me 20 marbles so that we have the same number, because he has 20 more than me.” Is Ben right? Explain.'), ...H.lines(1),
+    H.q(3, 'Ali has 50 marbles and Ben has 30 marbles. Ali gives some of his marbles to Ben (Ali has fewer afterwards and Ben has more).', { pb: true, before: 0, keepNext: true }),
+    H.sub('a', 'Ben says, “If Ali gives me 20 marbles, we will have the same number, because Ali has 20 more than me.” Test it: after Ali gives 20, Ali has ______ and Ben has ______. Is Ben right? Explain.'), ...H.lines(1),
     H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
 
     H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
@@ -130,7 +138,8 @@ module.exports = {
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
     H.q(5, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
     H.sub('a', 'Which colour of beads did not change?'), H.ans(),
-    H.sub('b', 'Before: red 3 units, blue ______ units. After: blue is 2 out of every 5, so if blue is still ______ units, the whole box is ______ units.'),
+    H.sub('b', 'Before: red 3 units, blue ______ units. After: the box has 5 equal parts. 3 parts are red and 2 parts are blue. Draw the 5 parts below. Blue is still ______ units, so 2 parts = ______ units and the whole box is ______ units.'),
+    H.fig(fiveBar()),
     H.sub('c', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
     H.sub('d', 'How many beads are in the box now?'), H.ans()
   ]

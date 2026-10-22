@@ -19,7 +19,7 @@ with sync_playwright() as p:
         for sid in d['order']:
             h=open(os.path.join(D,'slides',sid+'.html')).read()
             pg.set_content('<html><body style="margin:0"><div style="width:1920px;height:1080px;position:relative">'+h+'</div></body></html>')
-            pg.add_style_tag(content='section{width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden} aside{display:none}')
+            pg.add_style_tag(content='section{width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden} aside{display:none} *{margin:0}')
             pg.wait_for_timeout(30)
             r=pg.evaluate(JS); tot+=1
             if r: bad+=1; print('OVERFLOW',sid,r)

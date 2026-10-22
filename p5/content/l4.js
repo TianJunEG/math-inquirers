@@ -85,7 +85,7 @@ module.exports = {
     key: [
       ['Q1', '(a) 24 cm² (1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
       ['Q2', '(a) 30 cm²  (b) 30 cm²  (c) Both have base DC = 10 cm and height 6 cm (P and Q are on AB, 6 cm above DC).'],
-      ['Q3', '56 cm² (triangle ABC 1/2 × 14 × 5 = 35, triangle ACD 1/2 × 14 × 3 = 21)'],
+      ['Q3', '(a) 5 cm; 35 cm² (1/2 × 14 × 5)  (b) 3 cm; 21 cm² (1/2 × 14 × 3)  (c) 56 cm²'],
       ['Q4', '(a) 96 cm²  (b) ADE 16 cm², EBF 16 cm², FCD 24 cm²  (c) 40 cm² (96 − 56)'],
       ['Q5', '(a) 24 cm²  (b) 4 cm  (c) any base and height that multiply to 48, e.g. base 16 cm and height 3 cm, or base 6 cm and height 8 cm (or base 8 cm and height 6 cm leaning over)']
     ]
@@ -157,6 +157,7 @@ module.exports = {
     H.p('Area of a triangle = 1/2 × base × height. The height meets the base at a right angle.', { after: 40 }),
     H.q(1, 'Find the area of each triangle. The drawings are to scale.', { before: 40, keepNext: true }),
     H.fig(q1Fig()),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> the little square marks a right angle. The height is the side that makes a right angle with the base. A slanting side is NOT the height. A dashed line shows a height. In (c) the height is outside the triangle: the dashed base line is only there to meet it.'], { after: 20 }),
     H.sub('a', 'Area of (a) = __________ cm²       (b)  Area of (b) = __________ cm²       (c)  Area of (c) = __________ cm²'),
     H.sub('d', 'In (b), which lengths did you NOT need?   ______________________'),
     H.q(2, 'ABCD is a rectangle 10 cm by 6 cm. P and Q are points on AB.', { keepNext: true }),
@@ -166,8 +167,12 @@ module.exports = {
 
     H.q(3, 'Find the area of the figure ABCD. Split it into two triangles along AC.', { pb: true, before: 0, keepNext: true }),
     H.fig(splitFig()),
-    H.sub('', 'Area of ABCD = ______________ cm²'),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> AC = 14 cm is the base of BOTH triangles. Read the two heights from the picture.'], { after: 20 }),
+    H.sub('a', 'Height of triangle ABC = ______ cm.   Area of ABC = ______ cm²'),
+    H.sub('b', 'Height of triangle ACD = ______ cm.   Area of ACD = ______ cm²'),
+    H.sub('c', 'Area of ABCD = ______________ cm²'),
     H.q(4, 'ABCD is a rectangle. Find the area of the shaded triangle DEF.', { keepNext: true }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> the three white triangles ADE, EBF and FCD are what is left over. Find their areas, then take them away from the rectangle.'], { after: 20 }),
     H.fig(takeFig()),
     H.sub('a', 'Area of the rectangle ABCD = ______________ cm²'),
     H.sub('b', 'ADE = ______ cm²    EBF = ______ cm²    FCD = ______ cm²'),

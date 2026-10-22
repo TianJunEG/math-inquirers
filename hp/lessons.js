@@ -7,7 +7,7 @@ module.exports = {
       n: 1, week: 1, session: 'A', title: 'Count with the Frog', topic: 'Number Patterns',
       objective: 'Skip count in 2s, 3s and 5s; find and state an add or take-away rule; notice numbers that both counting patterns share.',
       skills: 'Pattern spotting, rule finding, generalising',
-      materials: 'Paper number strip 0 to 50 (or floor tape), counters, two crayons.',
+      materials: 'Paper number strip 0 to 50 (printed in the Inquirer Kit at the back of the workbook; or floor tape), counters, two crayons.',
       online: 'Slide number line the tutor can mark on; each child uses a paper strip and a pencil.',
       warmup: 'Skip-count stomp: count in 2s, 5s and 3s as a class. Stomp on the numbers in the count, whisper the rest.',
       explore: 'Pairs hop a counter along the number strip: frog 1 in 4s, frog 2 in 5s. Mark where each lands. Which numbers do both frogs land on?',
@@ -20,9 +20,9 @@ module.exports = {
         ['Q1', '(a) 8, 10, 14  (b) 15, 25, 35  (c) 9, 15'],
         ['Q2', '(a) 16, 19; add 3  (b) 18, 15; take away 3  (c) 18, 22; add 4'],
         ['Q3', 'Frog 1 lands on 4, 8, 12, 16, 20. Frog 2 lands on 5, 10, 15, 20. Both: 20.'],
-        ['Q4', '(a) 10, 20, 30, 40, 50  (b) They all end in 0. We say them when we count in 10s.'],
+        ['Q4', '(a) 10, 20, 30  (b) They all end in 0. We say them when we count in 10s. (Up to 50 the answer is 10, 20, 30, 40, 50: see Think harder T4.)'],
         ['Q5', 'Stickers: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. (a) Box 10 has 29. (b) Even, odd, even, odd: they alternate.'],
-        ['Stretch slide', '1) Yes to 39, no to 40  2) 22 does not belong; it should be 20  3) Add 4; the 1st number is 3']
+        ['Think harder slide', '1) Yes to 39, no to 40  2) 6  3) Add 4; the 1st number is 3']
       ]
     },
     {
@@ -45,7 +45,7 @@ module.exports = {
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
         ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
         ['Q6', '4 and 6.  Challenge: 4 and 8.'],
-        ['Stretch slide', '1) 10 and 16  2) 8  3) 6 pairs']
+        ['Think harder slide', '1) 10 and 16  2) 8  3) 6 pairs']
       ]
     },
     {
@@ -53,8 +53,8 @@ module.exports = {
       objective: 'Read and build a picture graph, compare and total data, and judge what a class vote can and cannot tell us.',
       skills: 'Data reading, comparing, sampling awareness, weighing other factors',
       materials: 'Sticky dots, 5 fruit pictures on the wall, counters.',
-      online: 'Poll on the slide (thumbs and chat) and a shared graph the tutor builds live.',
-      warmup: 'Quick vote: each child votes for ONE fruit with a sticky dot (online: type it in chat).',
+      online: 'Poll on the slide (thumbs up, no typing needed) and a shared graph the tutor builds live.',
+      warmup: 'Quick vote: each child votes for ONE fruit with a sticky dot (online: a thumbs up when the tutor points to a fruit, no typing needed).',
       explore: 'Pairs turn the class vote into a picture graph with one counter per child, then read it aloud: most, fewest, same, how many more.',
       mini: 'Key = 1 child. Count by 5s to total quickly. If everyone had one vote, the total is the number of children.',
       share: 'Would the Primary 6 pupils choose the same fruit? What else should the teacher think about before buying?',
@@ -67,7 +67,7 @@ module.exports = {
         ['Q6', '(a) No.  (b) Only our class voted. Other classes may like different fruits.'],
         ['Q7', 'Accept sensible ideas: cost, how many are needed, easy to share, keeps fresh, messy to eat, any child who cannot eat it.'],
         ['Part B', 'Depends on the class vote. Q9: different children like different things, and a small group may not match a whole school.'],
-        ['Stretch slide', '1) 6 more  2) Orange 7, apple wins with 8  3) 9']
+        ['Think harder slide', '1) 6 more  2) Orange 7, apple wins with 8  3) 9']
       ]
     },
     {
@@ -88,7 +88,7 @@ module.exports = {
         ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
         ['Q3', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
         ['Q4', '7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.'],
-        ['Stretch slide', '1) circle  2) 9 Bs  3) Yes: count in 5s, 25 ends a core, like the 5th']
+        ['Think harder slide', '1) circle  2) 9 Bs  3) Yes: count in 5s, 25 ends a core, like the 5th']
       ]
     },
     {
@@ -110,30 +110,30 @@ module.exports = {
         ['Q3', '(a) Mei 13  (b) Ben 7  (c) Mei has 6 more than Ben  (d) 28 altogether'],
         ['Q4', '(a) 13 children (20 − 7)  (b) 5 children (3 + 3 − 1, Ali is counted twice). Talk time: 8th from both ends is 15.'],
         ['Q5', 'Open: check that the story has a clear answer.'],
-        ['Stretch slide', '1) 10 children  2) 7 sweets  3) 11']
+        ['Think harder slide', '1) 10 children  2) 7 sweets  3) 11']
       ]
     },
     {
       n: 6, week: 3, session: 'B', title: 'Coin Combos', topic: 'Money',
-      objective: 'Find all the ways to make an amount, work systematically, use reasoning to rule out cases, and pay in dollars with notes up to $100.',
+      objective: 'Find all the ways to make an amount, work systematically and use reasoning to rule out cases. (Paying in dollars is an extra on the Think harder page.)',
       skills: 'Systematic listing, comparing, working backwards, justifying "there are no more"',
       materials: 'Play coins (5¢, 10¢, 20¢, 50¢, $1), about 6 of each per pair, play notes ($2, $5, $10, $50), mini whiteboards.',
       online: 'Print the cut-out coins and notes at the back of the workbook, or use real coins and notes at home.',
-      warmup: 'Money shop: six items priced from 65¢ to $65. Pay exactly with coins and notes. Who can pay with the fewest?',
+      warmup: 'Money shop: three price tags in cents only (eraser 65¢, pencil 80¢, sticker 30¢). Pay exactly with coins. Any way that pays exactly is a good way. Then look for a way with fewer coins.',
       explore: 'Pairs make 20¢ in as many ways as they can with 20¢, 10¢ and 5¢ coins, recording each on a whiteboard.',
       mini: 'Start with the biggest coin and work down. Use a table: how many 20¢, 10¢, 5¢. Show why we know when we have them all.',
       share: 'Why can’t 35¢ be made with only two coins?',
-      exit: { q: 'Make 40¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', a: '20¢ + 10¢ + 10¢.' },
+      exit: { q: 'Show one way to make 30¢ with 20¢, 10¢ and 5¢ coins.', a: 'Any correct way, for example 20¢ + 10¢, or 10¢ + 10¢ + 10¢, or 20¢ + 5¢ + 5¢.' },
       mistakes: ['Listing the same way twice in a different order (10+5+5 and 5+10+5).', 'Choosing many small coins instead of looking for the fewest.', 'Stopping at the first set in Think Harder T1 instead of checking for all of them.'],
       extension: 'Make 50¢ in as many ways as possible using 5¢, 10¢, 20¢ and 50¢.',
       key: [
         ['Q1', 'A: one 20¢.  B: two 10¢.  C: one 10¢ and two 5¢.  D: four 5¢.  Row E is spare (only 4 ways).  (a) one 20¢ coin  (b) four 5¢ coins  (c) Start with the biggest coin and work down.'],
-        ['Q2', '6 ways: 20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢.'],
+        ['Q2', '4 ways to make 25¢: 20+5; 10+10+5; 10+5+5+5; five 5¢. (Worked on the slide.)'],
         ['Q3', '(a) 4 coins: 50¢ + 20¢ + 10¢ + 5¢.  (b) e.g. 50¢ + 10¢ + 10¢ + 5¢ + 5¢ + 5¢, or 20¢ + 20¢ + 20¢ + 10¢ + 10¢ + 5¢.'],
         ['Q4', 'No. Two coins can total 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.'],
-        ['Q5', '(a) $10 + $5 + $2 (3 pieces).  (b) Any 3 ways, e.g. $10 + $10; $10 + $5 + $5; $5 + $5 + $5 + $5; $10 + $5 + $2 + $2 + $1. There is no $20 note.  (c) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
-        ['Think Harder T1 to T4', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 4 ways (20+5; 10+10+5; 10+5+5+5; five 5¢).'],
-        ['Stretch slide', '1) 9 ways  2) $10 + $1 + $1 and $5 + $5 + $2  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
+        ['Q5', 'Dollars are now Think harder T5: (a) $10 + $5 + $2 (3 pieces).  (b) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
+        ['Think harder T1 to T5', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 6 ways to make 30¢ (20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢).  T5: see Q5 above.'],
+        ['Think harder slide', '1) 9 ways  2) $10 + $1 + $1 and $5 + $5 + $2  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
       ]
     },
     {
@@ -144,9 +144,9 @@ module.exports = {
       online: 'Each child has a paper square to fold and cut on camera; shape hunt at home.',
       warmup: 'Shape hunt: find a circle, a triangle, a square and a rectangle in the room or at home in 2 minutes.',
       explore: 'Fold a paper square along a diagonal and cut: what two shapes do you get? Put them together a different way. What new shapes can you make?',
-      mini: 'Count squares in grids by size, smallest first (a 2 by 2 grid, then a 3 by 3 grid). Rectangles in strips and shapes made from 3 squares are for early finishers. Before the worksheet: count shapes in a picture one kind at a time, mark a starting dot when counting sides, cross out shapes for riddles, count triangles small first.',
+      mini: 'Count squares in grids by size, smallest first (a 2 by 2 grid, then a 3 by 3 grid). Rectangles in strips and shapes made from 3 squares are optional extras. Before the worksheet: count shapes in a picture one kind at a time, mark a starting dot when counting sides, cross out shapes for riddles, count triangles small first.',
       share: 'How many triangles are in a square with both diagonals drawn (lines joining opposite corners)? How do you make sure you do not miss any?',
-      exit: { q: 'How many squares are in a 3 by 3 grid? (3 squares long and 3 squares high)', a: '14 (9 small + 4 made of 4 small ones + 1 made of all 9)' },
+      exit: { q: 'A shape has 6 sides. How many corners does it have? What is the shape called?', a: '6 corners. It is a hexagon.' },
       mistakes: ['Counting only the small triangles in the talk-time picture (4 instead of 8): look for bigger triangles made of 2 small ones.', 'Counting a square window in both the Square and the Rectangle columns in Q1.', 'Thinking a turned or flipped shape is a new one.', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has a straight side (it has 0 straight sides).'],
       extension: 'How many squares in a grid 4 long and 2 high? (8 + 3 = 11) Then 4 long and 3 high? (12 + 6 + 2 = 20)',
       key: [
@@ -156,7 +156,7 @@ module.exports = {
         ['Q4', 'A: 3  B: 2. (The square with both diagonals, 8 triangles, is the talk-time question: 4 small + 4 made of two small ones.)'],
         ['Q5', 'Accept any correct shape with its name: rectangle, square, bigger triangle or parallelogram.'],
         ['Q6', '5 squares (4 small + 1 big)'],
-        ['Stretch slide', '1) 6  2) 9  3) Yes to both: the square again, and one big triangle with a long side twice as long']
+        ['Think harder slide', '1) 6  2) 9  3) Yes to both: the square again, and one big triangle with a long side twice as long']
       ]
     },
     {
@@ -177,9 +177,9 @@ module.exports = {
         ['Q2', 'Both (less than 6 and odd): 1, 3, 5. Only less than 6: 2, 4. Only odd: 7, 9. Outside both: 6, 8, 10. (b) 1, 3, 5: they are less than 6 AND odd.'],
         ['Q3', 'Ali: fish. Mei: cat. Ben: dog.'],
         ['Q4', '1st Mei, 2nd Ali, 3rd Ben, 4th Sam'],
-        ['Q5', '(a) 15  (b) 30  (c) 14'],
+        ['Q5', '(a) 15.  Think harder T5: (a) 30  (b) 14'],
         ['Q6', 'Accept any reasoned answer: 11, because we do not say it when counting in 3s (it is also the only 2-digit number); or 6, the only even number.'],
-        ['Stretch slide', '1) Ben cat, Cara fish, Dan dog, Ali rabbit  2) Eve, Ben, Ali, Dan, Cara  3) 10, 20 and 30']
+        ['Think harder slide', '1) Ben cat, Cara fish, Dan dog, Ali rabbit  2) Eve, Ben, Ali, Dan, Cara  3) 10, 20 and 30']
       ]
     },
     {
@@ -202,7 +202,7 @@ module.exports = {
         ['Q4', '(a) 10 erasers  (b) 6 clips'],
         ['Q5', 'Ali 11 cubes, Ben 6 cubes. All three together: 25 cubes.'],
         ['Q6', '(a) 12 cm  (b) 5 cm (8 − 3)  (c) Open: check the child started at the 0 mark and compared with 10 cm.'],
-        ['Stretch slide', '1) 5 cubes each and 2 cuts  2) Ben: six clips of 2 cubes is 12 cubes  3) The 11 cm mark']
+        ['Think harder slide', '1) 5 cubes each and 2 cuts  2) Ben: six clips of 2 cubes is 12 cubes  3) The 11 cm mark']
       ]
     },
     {
@@ -210,9 +210,9 @@ module.exports = {
       objective: 'Use patterns, bonds, graphs, money, shapes, logic, working backwards and measuring in new puzzles, and explain the thinking.',
       skills: 'Applying and connecting ideas, perseverance, explaining',
       materials: 'Four puzzle cards (coins, patterns, logic, measuring; printed in the workbook and shown on the Lesson 10 slide), play coins, cubes, certificates, stamps, mini whiteboards.',
-      online: 'One puzzle card per breakout room (the tutor pastes the card into the room chat). Pairs swap cards at minute 20 and report back to the group in 30 seconds each.',
-      warmup: 'Mental maths relay: a chain of quick questions from all 9 lessons passed around the group.',
-      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Pairs get ONE card for 10 minutes, then swap cards with another pair for a second 4-minute round. Online: one card per breakout room; each pair reports in 30 seconds.',
+      online: 'The four cards are printed in the workbook and shown on the slide. Each pair chooses one card. Pairs swap at minute 20. Reporting back is optional: say one thing you tried, not the answer.',
+      warmup: 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.',
+      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Each pair chooses ONE card for 10 minutes, then swaps with another pair for a second 4-minute round. Reporting back is optional: one thing you tried, not the answer.',
       cards: [
         { title: 'Coins', text: 'Make 45¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', answer: '20¢ + 20¢ + 5¢ (the only way).' },
         { title: 'Patterns', text: '5, 8, 11, 14 … What is the 10th number? Show how you know.', answer: '32. Add 3 each time: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32.' },
@@ -235,7 +235,7 @@ module.exports = {
         ['Q8', 'Pen 10 cubes. End to end 16 cubes.'],
         ['Q9', 'Open. Done at talk time: swap puzzles with a partner and solve each other\u2019s.'],
         ['Puzzle cards', 'Coins: 20¢ + 20¢ + 5¢.  Patterns: 32.  Logic: Mei, Ben, Sam, Ali.  Measuring: 16 cubes.'],
-        ['Stretch slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
+        ['Think harder slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
       ]
     }
   ]

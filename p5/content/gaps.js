@@ -19,7 +19,7 @@ const L = {
   },
   2: {
     sneak: [
-      ['Three pizzas are shared equally among 4 friends. Draw the pizzas and show how you would cut them. How much pizza does each friend get?', '3/4 of a pizza each. For example cut every pizza into 4 quarters (12 quarters) and give each friend 3. Any fair cutting is fine, such as 1/2 + 1/4 each (cut 2 pizzas in halves and 1 pizza in quarters).'],
+      ['Two pizzas are shared equally among 4 friends. Draw the pizzas and show how you would cut them. How much pizza does each friend get?', '1/2 of a pizza each. For example cut each pizza in half: that makes 4 halves, one for each friend. Any fair cutting is fine (for example cutting each pizza into quarters and giving each friend 2 quarters).'],
       ['Mei spends 1/3 of her money on a book. Then she spends 1/2 of the money she has LEFT on lunch. What fraction of her money has she spent altogether? Use the bar.', '2/3. After the book 2/3 is left; half of 2/3 is 1/3 (lunch); 1/3 + 1/3 = 2/3. The half is a half of what is LEFT, not of everything.']
     ],
     pic: 'bar3',
@@ -32,7 +32,7 @@ const L = {
       ['Ali has 40 cards and Mei has 20. Ali gives Mei some cards and then they have the same number. How many cards did Ali give? What stays the same?', '10. The TOTAL stays 60, so each has 30 afterwards and Ali gives 40 − 30 = 10. Counters or a drawing help.']
     ],
     whatIf: ['Ali has 19 counters and Mei has 6 (25 altogether). Ali gives Mei counters one at a time. Can Mei ever have exactly as many as Ali? Why or why not? Try 24 altogether too.', 'No for 25: equal shares would be 12 and a half each, so an odd total can never be shared equally. With 24 (18 and 6) it works: 12 each after Ali gives 6. The total never changes when they only swap counters.'],
-    solo: 'Q4 (a) (b) and Q5 (a) (b)', praise: 'You drew the before and after bars side by side. That is how you saw what stayed the same.'
+    solo: 'Q3 (a), Q4 (a) (b) and Q5 (a) (b)', praise: 'You drew the before and after bars side by side. That is how you saw what stayed the same.'
   },
   4: {
     sneak: [
@@ -96,7 +96,7 @@ const L = {
 // short answers shown on the slide when the tutor clicks to reveal (full answers are in the notes and the guide)
 const SHORT = {
   1: ['6973 (27 below 7000) beats 7369 (369 above).', '(4 + 6) × 5 − 3 = 47'],
-  2: ['3/4 of a pizza each', '2/3 of her money'],
+  2: ['1/2 of a pizza each', '2/3 of her money'],
   3: ['(a) 36   (b) 24 older, then 24 older', '10 cards. The total stays 60.'],
   4: ['Yes, they match: 1/2 each, 12 squares', 'No. 30 cm² every time.'],
   5: ['24 cubes (12 in a layer, 2 layers)', '5 cm'],

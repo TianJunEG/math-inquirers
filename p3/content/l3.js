@@ -31,7 +31,7 @@ module.exports = {
     skills: 'Look for a pattern, make a systematic list, use known facts, explain why',
     materials: 'Multiplication square (1 to 10), dot paper, coloured pencils, a ruler, mini whiteboards.',
     online: 'Tutor draws on a shared digit-circle slide. Each child draws 10 dots round a circle (like a clock) labelled 0 to 9, and has dot paper and coloured pencils.',
-    warmup: 'Buzz! Count round the group from 1 to 70. Say "Buzz" instead of any number in the 7 times table. Play again with 6s (to 60), then 8s (to 80).',
+    warmup: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. On a number in the 7 times table, hold up an open palm (Buzz) instead of saying it. A missed Buzz is just "a tricky one, let us check on the strip". Only the 7s are played.',
     explore: 'Last-digit circles. Pairs draw 10 dots round a circle labelled 0 to 9. For the 6 times table they join the last digits in order (6, 2, 8, 4, 0, back to 6). Then they try the 4s and the 8s. Which tables make the same shape? Why does the 6s shape never touch an odd digit?',
     mini: 'Look for a pattern: in the 8 times table the last digits go 8, 6, 4, 2, 0 and repeat, so only the ones digit decides the last digit (8 × 23 ends like 8 × 3). Then split an array into two facts we know: 6 × 8 = 5 × 8 + 1 × 8, and 9 × 7 = 10 × 7 − 7.',
     share: 'Why is every answer in the 6 times table even, but the 7 times table has odd and even answers?',
@@ -44,9 +44,9 @@ module.exports = {
     extension: 'Draw last-digit circles for all the tables from 1 to 9 and group the tables that make the same shape. Explain why 1 and 9, 2 and 8, 3 and 7, 4 and 6 pair up.',
     key: [
       ['Q1', 'Table: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90  (a) The tens digit goes up by 1 and the ones digit goes down by 1; the two digits add up to 9; the tens digit is 1 less than the number of nines.  (b) In 9 × 8 the tens digit is 1 less than 8, so it is 7, and 7 + 2 = 9, so 9 × 8 = 72. 81 is 9 × 9.'],
-      ['Q2', 'Table: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 (from 7, 14, 21, 28, 35, 42, 49, 56, 63, 70): all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). The 6s give only even last digits (and the 2s, 4s and 8s do too); the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
+      ['Q2', 'Answer row (given): 7, 14, 21, 28, 35, 42, 49, 56, 63, 70. Last digits: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0: all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). The 6s give only even last digits (and the 2s, 4s and 8s do too); the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
       ['Q3', '(a) 5 × 8 = 40, 2 × 8 = 16, so 7 × 8 = 56  (b) For example 5 × 6 + 4 × 6 = 30 + 24 = 54, or 10 × 6 − 6 = 54.'],
-      ['Q4', 'Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
+      ['Q4', '(if time) Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
       ['Q5', '(a) 2 rows of 18, 3 of 12, 4 of 9, 6 of 6, 9 of 4, 12 of 3, 18 of 2  (b) 7 ways  (c) 6 rows of 6: turned round it is the same, so it has no partner. That is why the number of ways is odd.'],
       ['Q6', '(a) 24, 48, 72, 96  (b) 48 (digit sums: 24 → 6, 48 → 12, 72 → 9, 96 → 15)']
     ]
@@ -54,12 +54,12 @@ module.exports = {
 
   script: {
     hook: ['Today we are treasure hunters inside the times tables. The 6, 7, 8 and 9 tables are full of hidden patterns. If you can spot a pattern, you can use it to check answers and to find answers you have never learnt.'],
-    warmIntro: ['We are going to count round the group. When it is a number in the 7 times table, do not say it. Say "Buzz!" instead.', 'Which numbers did we Buzz? What do you notice about them?'],
+    warmIntro: ['We are going to count round the group up to 40. The 7s strip is on the screen. When it is a number in the 7 times table, do not say it: hold up an open palm. That is a Buzz! If anyone misses one, that is fine: it is a tricky one and we check on the strip.', 'Which numbers did we Buzz? What do you notice about them?'],
     predict: ['Here is a circle with the digits 0 to 9, like a clock. I write the 6 times table and look only at the last digit: 6, 12, 18 … the last digits are 6, 2, 8. If I join those dots in order, what shape do you think we will get? Will it ever touch an odd digit?'],
     exploreHints: [
       'Stuck: write the table down the side of your page first, then circle the last digit of each answer.',
       'Confused: "Look only at the ones digit. 6 × 3 = 18, so we join to the 8."',
-      'Ready for more: try the 7s. How many dots does it touch? Try the 3s and compare.'
+      'Ready for more: the Go further what-if on the slide (the 5s and the 9s). Or try the 7s and the 3s and compare.'
     ],
     think: [
       '"Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then 8, 6, 4, 2, 0 again. So the pattern repeats every 5."',
@@ -83,7 +83,7 @@ module.exports = {
 
   deck: {
     today: 'Find hidden patterns in the 6, 7, 8 and 9 times tables, use them to check answers, and solve times-table puzzles in order.',
-    warmGame: 'Buzz! Count round the group from 1. Say "Buzz" instead of any number in the 7 times table. Then play with 6s and 8s.',
+    warmGame: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. Hold up an open palm (Buzz) instead of saying a number in the 7 times table. Only the 7s are played.',
     warmQs: [['6 × 7 = ?', '42'], ['9 × 9 = ?', '81'], ['8 × ? = 64', '8'], ['Which is bigger: 6 × 8 or 7 × 7?', '7 × 7 = 49 is 1 more than 6 × 8 = 48']],
     expSetup: ['Draw 10 dots round a circle. Label them 0 to 9, like a clock.', 'Write the 6 times table. Circle the last digit of each answer.', 'Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.', 'Now do the same for the 4s and the 8s. Compare the shapes.'],
     expPic: 'a circle of 10 dots labelled 0 to 9 with a star joining 6, 2, 8, 4, 0.',
@@ -144,7 +144,7 @@ module.exports = {
         H.row([C('9 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
         H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), C('9', 850), C('18', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
-    out.push(H.sub('a', 'Look at the tens digits and the ones digits. Write TWO patterns you notice.'));
+    out.push(H.sub('a', 'Look at the tens digits and the ones digits. Finish the sentences.  The tens digits go ______________.  The ones digits go ______________.'));
     out.push(...H.lines(1));
     out.push(H.sub('b', 'Ali says 9 × 8 = 81, because 8 + 1 = 9. Use a pattern to explain why he is wrong.'));
     out.push(...H.lines(1));
@@ -153,6 +153,7 @@ module.exports = {
     { const ws = [1400, 850, 850, 850, 850, 850, 850, 850, 850, 850, 850];
       out.push(H.tbl(ws, [
         H.row([C('7 ×', ws[0], { bold: true, fill: 'D9D9D9' }), ...Array.from({ length: 10 }, (_, i) => C(String(i + 1), 850, { bold: true, fill: 'EDEDED' }))]),
+        H.row([C('Answer', ws[0], { bold: true, fill: 'EDEDED' }), ...['7', '14', '21', '28', '35', '42', '49', '56', '63', '70'].map(x => C(x, 850))]),
         H.row([C('Last digit', ws[0], { bold: true, fill: 'EDEDED' }), C('7', 850), C('4', 850), ...Array.from({ length: 8 }, () => C('', 850, { h: 90 }))])
       ])); }
     out.push(H.sub('a', 'Test the 3, 6 and 9 times tables. Which of them also use all ten last digits?   ______'));
@@ -165,7 +166,7 @@ module.exports = {
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));
     out.push(...H.lines(1));
     // ---------- page 2 ----------
-    out.push(H.q(4, 'Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
       const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 120, size: 26 });
       const v = s => C(s, 2475, { bold: true, h: 120, size: 26 });
@@ -175,9 +176,9 @@ module.exports = {
         H.row([hd(''), v(''), v(''), v('81')]),
         H.row([hd(''), v('48'), v('36'), v('')])
       ])); }
-    out.push(H.p('Hint: which number can be made in only one way?', { after: 60 }));
-    out.push(H.q(5, 'Ben puts 36 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. 3 rows of 12 is different from 12 rows of 3.', { keepNext: true }));
-    out.push(H.sub('a', 'Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows … in order. Not every number of rows works. Write down only the ways that work, and stop when you have all of them.', { keepNext: true }));
+    out.push(H.p('Hint: 81 = 9 × 9 and 56 = 7 × 8.', { after: 60 }));
+    out.push(H.q(5, 'Ben puts 36 chairs in equal rows (at least 2 rows, at least 2 chairs in each row). Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows, and so on.', { keepNext: true }));
+    out.push(H.sub('a', 'Write only the ways that work. 3 rows of 12 is different from 12 rows of 3. Stop when you have all of them.', { keepNext: true }));
     { const ws = [2300, 950, 950, 950, 950, 950, 950, 950, 950];
       out.push(H.tbl(ws, [
         H.row([C('Number of rows', ws[0], { bold: true, fill: 'EDEDED' }), C('2', 950), ...Array.from({ length: 7 }, () => C('', 950, { h: 140 }))]),

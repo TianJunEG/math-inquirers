@@ -1,5 +1,14 @@
 // Math Inquirers P3 — Lesson 5: Remainder Riddles (Division)
 // Heuristics taught: work backwards (groups × size + leftover) and make a list (then test each clue).
+const NV = '#1B2A49', YL = '#FFC93C';
+const shareSvg = () => {
+  let s = `<svg aria-label="Six empty plates and 47 counters to share" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">`;
+  for (let i = 0; i < 6; i++) s += `<circle cx="${60 + i * 96}" cy="42" r="34" fill="#fff" stroke="${NV}" stroke-width="3" stroke-dasharray="7 5"/>`;
+  s += `<text x="300" y="104" font-size="16" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">47 counters to share among the 6 plates</text>`;
+  for (let k = 0; k < 47; k++) s += `<circle cx="${40 + (k % 12) * 46}" cy="${126 + Math.floor(k / 12) * 20}" r="8" fill="${YL}" stroke="${NV}" stroke-width="2"/>`;
+  return s + '</svg>';
+};
+
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A',
@@ -13,7 +22,7 @@ module.exports = {
     explore: 'Pairs put 25 counters into groups of 2, 3, 4, 5 and 6 and record the groups and the leftover in a table. They notice that 25 leaves 1 over for 2, 3, 4 and 6, and nothing for 5, and explain why (24 is in the 2, 3, 4 and 6 tables).',
     mini: 'The remainder is always smaller than the number we divide by. Check with groups × size + leftover. Then read the story: does the leftover need one more group (vans), or do only full groups count (boxes, things you can buy)?',
     share: 'Why can the remainder never be as big as the number we divide by?',
-    exit: { q: '52 children go on a ride. Each car holds 6 children. How many cars are needed? Write the division and explain what the leftover means.', a: '52 ÷ 6 = 8 r 4. 9 cars are needed: the 4 children left over still need a car.' },
+    exit: { q: '29 children go on a ride. Each car holds 4 children. How many cars are needed? Write the division and explain what the leftover means.', a: '29 ÷ 4 = 7 r 1. 8 cars are needed: the 1 child left over still needs a car.' },
     mistakes: [
       'Leaving a remainder that is as big as, or bigger than, the number we divide by (60 ÷ 7 = 7 r 11).',
       'Giving the division answer when the story needs one more group (minibuses, boxes for ALL the eggs), or adding one when only full groups count (books she can buy).',
@@ -22,7 +31,7 @@ module.exports = {
     extension: 'Find the smallest number bigger than 1 that leaves a remainder of 1 when it is divided by 2, 3, 4, 5 and 6. (61: it is one more than 60, which is in all five tables.)',
     key: [
       ['Q1', '(a) 7 each, 5 left over (6 × 7 = 42, 47 − 42 = 5).  (b) 1 more (48 = 6 × 8).  (c) The remainder 11 is bigger than 7, so another group of 7 fits: 60 ÷ 7 = 8 r 4 (7 × 8 = 56, 60 − 56 = 4).'],
-      ['Q2', '(a) 75 ÷ 9 = 8 r 3, so 9 minibuses (the 3 pupils left over need a bus too).  (b) 60 ÷ 7 = 8 r 4, so 8 books ($4 is not enough for another).  (c) 87 ÷ 6 = 14 r 3: 14 full boxes; 15 boxes to hold all the eggs.'],
+      ['Q2', '(a) 75 ÷ 9 = 8 r 3, so 9 minibuses (the 3 pupils left over need a bus too).  (b) 60 ÷ 7 = 8 r 4, so 8 books ($4 is not enough for another).  (c) 87 ÷ 6 = 14 r 3: 14 full boxes.  (d) 15 boxes to hold all the eggs.'],
       ['Q3', '(a) 12 × 8 + 5 = 96 + 5 = 101 marbles.  (b) 101 ÷ 9 = 11 r 2: 11 full bags, 2 marbles left over (9 × 11 = 99).'],
       ['Q4', '(a) Remainder 3 when ÷ 5: 43, 48, 53, 58. Remainders when ÷ 4: 3, 0, 1, 2. I am 53.  (b) 11, 23, 35 and 47 (remainder 5 when ÷ 6: 11, 17, 23, 29, 35, 41, 47; only 11, 23, 35, 47 leave 3 when ÷ 4). They go up in 12s.'],
       ['Q5', '(a) 0, 1, 2, 3, 4, 5, 6, 7 (the remainder must be smaller than 8).  (b) 63 (biggest remainder 7; 56 + 7 = 63; 64 + 7 = 71 is too big).'],
@@ -37,7 +46,7 @@ module.exports = {
     exploreHints: [
       'Stuck: make the groups with counters and push the leftovers to one side.',
       'Use a times-table fact: 6 × 4 = 24, so 25 in groups of 4 is 6 groups and 1 left over.',
-      'Ready for more: try 49 counters. Which group sizes leave 1 over? Why?'
+      'Ready for more: the Go further what-if on the slide: try 49 counters. Which group sizes leave 1 over? Why?'
     ],
     think: [
       '“38 sweets for 5 children. I count in 5s: 5 × 7 = 35, 5 × 8 = 40, too many. So each child gets 7.”',
@@ -117,19 +126,22 @@ module.exports = {
     const ws = [2700, 1800, 1800, 1800, 1800];
     W.push(H.p('When we share or make groups, some may be left over. The leftover is called the remainder. It is always smaller than the number we divide by.', { after: 100 }));
     W.push(H.q(1, 'Siti shares 47 stickers equally among 6 friends.', { before: 100, keepNext: true }));
+    W.push(H.fig(shareSvg()));
     W.push(H.sub('a', 'How many stickers does each friend get?   ____      How many are left over?   ____'));
     W.push(H.sub('b', 'What is the smallest number of extra stickers Siti needs so that none are left over?   ____'));
     W.push(H.sub('c', 'Ben works out 60 ÷ 7. He writes:  60 ÷ 7 = 7 remainder 11.  What is wrong? Write the correct answer.', { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.q(2, 'Divide. Then decide what to do with the leftover.', { keepNext: true }));
-    W.push(H.sub('a', '75 pupils go on a trip. A minibus holds 9 pupils. How many minibuses are needed?   ____'));
-    W.push(H.sub('b', 'Mei has $60. A book costs $7. How many books can she buy?   ____'));
-    W.push(H.sub('c', 'A farmer packs 87 eggs into boxes of 6. How many boxes can he fill completely?   ____      How many boxes does he need to hold ALL the eggs?   ____', { keepNext: true }));
+    W.push(H.sub('a', '75 pupils. 1 minibus holds 9 pupils. How many minibuses?   ____'));
+    W.push(H.sub('b', '$60. 1 book costs $7. How many books can Mei buy?   ____'));
+    W.push(H.sub('c', '87 eggs. 1 box holds 6 eggs. How many boxes are FULL?   ____', { keepNext: true }));
+    W.push(H.sub('d', 'How many boxes hold ALL the eggs?   ____', { keepNext: true }));
     W.push(...H.lines(1));
     W.push(H.q(3, 'Ravi packs marbles into bags of 8. He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
+    W.push(H.p('Hint: draw 12 bags of 8, then 5 more.', { after: 20 }));
     W.push(H.sub('a', 'How many marbles does Ravi have?   ____'));
     W.push(...H.lines(1));
-    W.push(H.sub('b', 'He tips them all out and packs them again into bags of 9. How many full bags does he get? How many marbles are left over?', { keepNext: true }));
+    W.push(H.sub('b', '(if time) He tips them all out and packs them again into bags of 9. How many full bags does he get? How many marbles are left over?', { keepNext: true }));
     W.push(H.ans('Full bags: ______     Left over:'));
 
     W.push(H.q(4, 'What number am I? Make a list, then test each number.', { pb: true, before: 0, keepNext: true }));
@@ -139,7 +151,7 @@ module.exports = {
       H.row([H.cell('Remainder when ÷ 4', ws[0], { bold: true, fill: 'EDEDED', size: 22 }), ...[1, 2, 3, 4].map(i => H.cell('', ws[i], { h: 140 }))])
     ]));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'I am a 2-digit number less than 50. When I am divided by 6, the remainder is 5. When I am divided by 4, the remainder is 3. Find ALL the numbers I could be.', { keepNext: true }));
+    W.push(H.sub('b', '(if time) I am a 2-digit number less than 50. When I am divided by 6, the remainder is 5. When I am divided by 4, the remainder is 3. Find ALL the numbers I could be.', { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.q(5, 'Dividing by 8.', { keepNext: true }));
     W.push(H.sub('a', 'Write ALL the remainders you could get when you divide a number by 8. Hint: share 9, 10, 11, … counters into groups of 8. What is left over each time?', { keepNext: true }));

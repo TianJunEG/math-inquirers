@@ -22,7 +22,7 @@ module.exports = {
     objective: 'Read and write money in dollars and cents, pay exactly with the fewest notes and coins, make a list in order to find every way to pay, give change by counting on, decide whether there is enough money, and work backwards to find how much someone had at first.',
     skills: 'Systematic listing (make a list in order), working backwards, counting on, comparing, justifying "there are no more ways"',
     materials: 'Play money: coins 5¢, 10¢, 20¢, 50¢, $1 and notes $2, $5, $10, $50 (about 6 of each per pair), price tags, mini whiteboards.',
-    online: 'Print the cut-out coins and notes, or use real money at home. The shop and the toy stall are on the slides; children show their money to the camera.',
+    online: 'Print the cut-out coins and notes, or use real money at home. No play money? Draw each coin and note on paper. The shop and the toy stall are on the slides; children show their money to the camera.',
     warmup: 'Market Day shop: six items priced from 85¢ to $57.20. Pay exactly with notes and coins. Who can pay with the fewest pieces of money?',
     explore: 'The toy stall: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1. Each pair has $10. They choose toys (at most one of each), find the cost and the change, then try to find every basket that costs exactly $10, listing them in order.',
     mini: 'Money in dollars and cents ($3.45 = 345¢). Make a list in order: biggest note first, then one fewer each time, in a table. Work backwards from the money that is left: put back each amount spent, from the last to the first.',
@@ -35,7 +35,7 @@ module.exports = {
       ['Q2', '7 ways ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H is spare: tell children "you may not need every row".  (a) 7 ways  (b) $5 + $1 + $1 + $1, and $2 + $2 + $2 + $2'],
       ['Q3', '(a) 35¢  (b) $24 change: $10 + $10 + $2 + $2 (there is no $20 note)'],
       ['Q4', '(a) No. The bag and the cap cost $14 + $8 = $22. She has $20, so she is $2 short.  (b) She spends $17: book and cap ($9 + $8), or bag and pen ($14 + $3). Those are the only two pairs.'],
-      ['Q5', '(a) 25¢ + 30¢ + 45¢ = 100¢ = $1.00  (b) $20 ($6 + $4 = $10 is half, $10 + $10 = $20)'],
+      ['Q5', '(a) 25¢ + 30¢ + 45¢ = 100¢ = $1.00  (Think harder 1 is the half-money puzzle with the kite and the ball: $20.)'],
       ['Q6', '3 ways: 4 erasers; 2 erasers and 5 stickers; 10 stickers. (1 or 3 erasers leave 150¢ or 50¢, which 20¢ stickers cannot make exactly.)']
     ]
   },
@@ -80,6 +80,7 @@ module.exports = {
       { q: 'Ben had some money. He spent $6 and has $9 left. How much money did he have at first?', a: '$15' }
     ],
     stretch: [
+      { q: 'Ben spent half of his money on a kite. Then he spent $4 on a ball. He had $6 left. How much money did Ben have at first? Tip: draw his money as a bar cut in half.', a: '$20 ($6 + $4 = $10 is the half he kept after the kite, so the other half is also $10: $10 + $10 = $20).' },
       { q: 'How many ways can you pay exactly $10 using $5 notes, $2 notes and $1 coins?', a: '10 ways (1 + 3 + 6)' },
       { q: 'Ali has 4 coins. They are worth $1.25 altogether. Find all the sets of 4 coins he could have.', a: '2 sets: $1 + 10¢ + 10¢ + 5¢, and 50¢ + 50¢ + 20¢ + 5¢' },
       { q: 'How many different ways can you pay exactly 40¢ using 5¢, 10¢ and 20¢ coins? Make a list in order, starting with the most 20¢ coins.', a: '9 ways: two 20¢ (1 way); one 20¢ and 20¢ more (3 ways); no 20¢ (5 ways).' },
@@ -108,11 +109,11 @@ module.exports = {
     const items = [['Curry puff', '$1.65'], ['Notebook', '$4.30'], ['Umbrella', '$18.75'], ['Bicycle', '$76']];
     const w2 = [1300, 2150, 2150, 2150, 2150];
     return [
-      H.p('Coins: 5¢, 10¢, 20¢, 50¢, $1.   Notes: $2, $5, $10, $50, $100.   (There is no $20 note.)   100¢ = $1.', { after: 40 }),
+      H.p('Coins: 5¢, 10¢, 20¢, 50¢, $1.   Notes: $2, $5, $10, $50, $100.   (There is no $20 note.)   100¢ = $1.   Careful: 50¢ is a coin, $50 is a note.', { after: 40 }),
       H.q(1, 'Pay exactly. Use the FEWEST notes and coins you can.', { before: 60, keepNext: true }),
       H.tbl(w1, [H.row(['Item', 'Price', 'Notes and coins I use', 'Pieces'].map((s, i) => hd(s, w1[i]))),
         ...items.map(([a, b]) => H.row([H.cell(a, w1[0], { bold: true, h: 130 }), H.cell(b, w1[1], { bold: true, size: 26 }), H.cell('', w1[2]), H.cell('', w1[3])]))]),
-      H.q(2, 'Find EVERY way to pay exactly $8 using $5 notes, $2 notes and $1 coins. Make a list in order: start with the most $5 notes.', { keepNext: true }),
+      H.q(2, 'Find EVERY way to pay exactly $8 using $5 notes, $2 notes and $1 coins. Make a list in order: start with the most $5 notes. You may not need every row.', { keepNext: true }),
       H.tbl(w2, [H.row(['Way', 'Number of $5', 'Number of $2', 'Number of $1', 'Pieces altogether'].map((s, i) => hd(s, w2[i]))),
         ...'ABCDEFGH'.split('').map(l => H.row([H.cell(l, w2[0], { bold: true, h: 60 }), H.cell('', w2[1]), H.cell('', w2[2]), H.cell('', w2[3]), H.cell('', w2[4])]))]),
       H.sub('a', 'How many ways are there?   ________'),
@@ -131,7 +132,6 @@ module.exports = {
       ...H.lines(2),
       H.q(5, 'Work backwards.', { keepNext: true }),
       H.sub('a', 'Mei spent 45¢ on a sweet and 30¢ on a pencil. She has 25¢ left. How much money did she have at first? Write it in dollars and cents.   ________'),
-      H.sub('b', 'Ben spent half of his money on a kite. Then he spent $4 on a ball. He had $6 left. How much money did Ben have at first? Tip: draw his money as a bar cut in half.   ________'),
       H.q(6, 'Stickers cost 20¢ each. Erasers cost 50¢ each. Siti spends exactly $2. How many stickers and erasers could she buy? Find ALL the ways. (She might buy only one kind.)', { keepNext: true }),
       ...H.lines(3)
     ];

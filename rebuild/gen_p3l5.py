@@ -170,9 +170,9 @@ put('p3l5-teachback',sec('p3l5-teachback','40–42 MIN',body,
 put('p3l5-ws1',ws_preview('p3l5-ws1','42–52 MIN','Worksheet page 1: with your partner',
  [('Q1','Siti’s stickers. Is the remainder smaller than 6? Then fix Ben’s mistake.'),('Q2','Minibuses, books and egg boxes: what does the leftover mean?'),('Q3','Ravi’s marbles: work backwards, then pack them again.')],
  'Stuck? Use counters, or count up in the times table.',
- 'Minutes 42 to 52. Walk around. Ask "Is your remainder smaller than the number you divided by?" and "What happens to the leftover in this story?" before giving any help. For Q2c check that pairs give two different answers.'))
+ 'Minutes 42 to 52. Walk around. Ask "Is your remainder smaller than the number you divided by?" and "What happens to the leftover in this story?" before giving any help. For Q2c and Q2d check that pairs give two different answers.'))
 put('p3l5-ws1ans',check_slide('p3l5-ws1ans','52–54 MIN','Page 1: check together',
- [('Q1','(a) 7 each, 5 left over   (b) 1 more   (c) 11 is bigger than 7, so 8 r 4'),('Q2','(a) 9 minibuses   (b) 8 books   (c) 14 full boxes; 15 boxes for all'),('Q3','(a) 12 × 8 + 5 = 101   (b) 11 full bags, 2 left over')],
+ [('Q1','(a) 7 each, 5 left over   (b) 1 more   (c) 11 is bigger than 7, so 8 r 4'),('Q2','(a) 9 minibuses   (b) 8 books   (c) 14 full boxes   (d) 15 boxes for all'),('Q3','(a) 12 × 8 + 5 = 101   (b) 11 full bags, 2 left over')],
  'Click after a pair explains. Q1: 6 × 7 = 42, 47 − 42 = 5; 48 is in the 6 table, so 1 more sticker. Q1c: 7 × 8 = 56, 60 − 56 = 4. Q2: 75 ÷ 9 = 8 r 3 (the 3 pupils need a bus: 9); 60 ÷ 7 = 8 r 4 ($4 is not enough: 8); 87 ÷ 6 = 14 r 3. Q3: 9 × 11 = 99, so 101 ÷ 9 = 11 r 2.'))
 
 # ---------- 16. teach before page 2: make a list ----------
@@ -209,7 +209,7 @@ put('p3l5-ws2',ws_preview('p3l5-ws2','58–66 MIN','Worksheet page 2: on your ow
  'Children work alone. Note who needs a short catch-up next lesson. Check that every child writes a list for Q4 and fills the table for Q6.'))
 put('p3l5-ws2ans',check_slide('p3l5-ws2ans','66–70 MIN','Page 2: check together',
  [('Q4','(a) 53   (b) 11, 23, 35, 47 (they go up in 12s)'),('Q5','(a) 0, 1, 2, 3, 4, 5, 6, 7   (b) 63'),('Q6','(a) 5 tables, 35 children   (b) 5 empty seats')],
- 'Click after a child explains. Q4a: 43, 48, 53, 58; divided by 4 they leave 3, 0, 1, 2, so 53. Q4b: remainder 5 when ÷ 6: 11, 17, 23, 29, 35, 41, 47; test ÷ 4: 11, 23, 35, 47 leave 3. Ask: "Why do they go up in 12s?" (12 is in both the 4 and 6 tables). '
+ 'Click after a child explains. Q4a: 43, 48, 53, 58; divided by 4 they leave 3, 0, 1, 2, so 53. Q4b (if time): remainder 5 when ÷ 6: 11, 17, 23, 29, 35, 41, 47; test ÷ 4: 11, 23, 35, 47 leave 3. Ask: "Why do they go up in 12s?" (12 is in both the 4 and 6 tables). '
  'Q5b: biggest remainder 7; 56 + 7 = 63. Q6: rows 11/7, 17/14, 23/21, 29/28, 35/35. With 8 at each table: 40 seats − 35 children = 5 empty.'))
 
 # ---------- 21. stretch (new items) ----------
@@ -270,9 +270,9 @@ put('p3l5-talk',sec('p3l5-talk','70–80 MIN',body,
  'Answer: If the leftover were as big as the group size, we could make one more group, so the remainder is always smaller. The 3 pupils left over still need a seat, so we need one more minibus. Praise the reasons, not only the answers.'))
 
 # ---------- 26. exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('52 children go on a ride. Each car holds 6 children. How many cars are needed? Write the division and explain the leftover.',44,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('29 children go on a ride. Each car holds 4 children. How many cars are needed? Write the division and explain the leftover.',44,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
 put('p3l5-exit',sec('p3l5-exit','80–90 MIN',body,
- 'Minutes 80 to 90. Answer: 52 ÷ 6 = 8 r 4. 9 cars are needed: the 4 children left over still need a car. Extension: Find the smallest number bigger than 1 that leaves a remainder of 1 when divided by 2, 3, 4, 5 and 6 (61).'))
+ 'Minutes 80 to 90. Answer: 29 ÷ 4 = 7 r 1. 8 cars are needed: the 1 child left over still needs a car. Extension: Find the smallest number bigger than 1 that leaves a remainder of 1 when divided by 2, 3, 4, 5 and 6 (61).'))
 
 # ---------- write ----------
 import p3_gifted; ORDER[:]=p3_gifted.add(S,ORDER,5)  # close-the-gaps: warm-up check + look-back slides

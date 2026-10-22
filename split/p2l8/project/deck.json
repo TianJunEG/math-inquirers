@@ -12,6 +12,7 @@
   "p2l8-warm1",
   "p2l8-warm2",
   "p2l8-explore1",
+  "p2l8-goexp",
   "p2l8-explore2",
   "p2l8-teach1",
   "p2l8-we1",
@@ -52,7 +53,7 @@
    "start": "p2l8-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk and exit",
+   "description": "Think harder, go further, talk and exit",
    "start": "p2l8-stretch"
   }
  },

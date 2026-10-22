@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:05:44Z"
+  "at": "2026-10-22T00:17:54Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 4 – Pattern Machines",
@@ -12,6 +12,7 @@
   "p2l4-warm1",
   "p2l4-warm2",
   "p2l4-explore1",
+  "p2l4-goexp",
   "p2l4-explore2",
   "p2l4-teach1",
   "p2l4-we1",
@@ -50,7 +51,7 @@
    "start": "p2l4-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk and exit",
+   "description": "Think harder, go further, talk and exit",
    "start": "p2l4-stretch"
   }
  },

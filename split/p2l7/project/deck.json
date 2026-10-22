@@ -12,6 +12,7 @@
   "p2l7-warm1",
   "p2l7-warm2",
   "p2l7-explore1",
+  "p2l7-goexp",
   "p2l7-explore2",
   "p2l7-teach1",
   "p2l7-we1",
@@ -52,7 +53,7 @@
    "start": "p2l7-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk and exit",
+   "description": "Think harder, go further, talk and exit",
    "start": "p2l7-stretch"
   }
  },

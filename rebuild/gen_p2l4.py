@@ -139,8 +139,8 @@ put('p2l4-break',break_slide('p2l4-break','32–36 MIN','Brain break','Pattern m
 
 # ---------- 5. worksheet page 1 ----------
 put('p2l4-ws1',ws_preview('p2l4-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The shape pattern. Draw a line after each group of 5.'),('Q2','M, A, T, H. Where do the groups end?'),('Q3','The bead string. Count the groups first.')],'Mark the end of each group. Use the times table to jump ahead.','Minutes 36 to 50. Walk around. Ask "How long is one group? Where does each group end?" before giving any help.'))
-put('p2l4-ws1ans',check_slide('p2l4-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) square   b) circle   c) triangle   d) 12 circles'),('Q2','a) A   b) place 40   c) 7 Ts'),('Q3','18 yellow beads,  30 beads altogether')],
- 'Click each answer after a pair explains. Q1: 20 ends a group (square); 23 is the 3rd shape (circle); 40 ends a group, so 41 is the 1st shape (triangle); 30 shapes is 6 groups with 2 circles each. Q2: 16 ends a group, so 18 is the 2nd letter, A; every H ends a group, the 10th at 4 × 10 = 40; Ts are at 3, 7, 11, 15, 19, 23, 27, and 29, 30 are M, A. Q3: 12 red is 6 groups; 6 × 3 = 18 yellow; 6 × 5 = 30 beads.'))
+put('p2l4-ws1ans',check_slide('p2l4-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) square   b) circle   c) triangle'),('Q2','a) A   b) place 40   c) 7 Ts'),('Q3','18 yellow beads,  30 beads altogether')],
+ 'Click each answer after a pair explains. Q1: 20 ends a group (square); 23 is the 3rd shape (circle); 40 ends a group, so 41 is the 1st shape (triangle); (the circles in the first 30 shapes is Think harder 1: 6 groups with 2 circles each). Q2: 16 ends a group, so 18 is the 2nd letter, A; every H ends a group, the 10th at 4 × 10 = 40; Ts are at 3, 7, 11, 15, 19, 23, 27, and 29, 30 are M, A. Q3: 12 red is 6 groups; 6 × 3 = 18 yellow; 6 × 5 = 30 beads.'))
 
 # ---------- 6. teaching before page 2 ----------
 W7=[190,110,110,110,110,110]

@@ -12,15 +12,15 @@ put('title',title_slide(f'{L}-title','LESSON 3  •  WEEK 2','Before and After',
 
 # ---- 2. warm-up game: what's left ----
 bar=bars([('',[(3,YEL,'given away'),(9,SKY,'left')])],135,x0=10,y0=8,bh=70,label='A jar of 120 marbles cut into 12 equal units; 3 units given away, 9 left',seg_size=32)
-body=h2("Warm-up: What's left?")+card(p('A jar has 120 marbles. I turn over three cards, one at a time. After each card, write how many marbles are LEFT. Read every card carefully: "of the jar" or "of what is left"?',36,700))
+body=h2("Warm-up: What's left?")+card(p('A jar has 120 marbles. I turn over two cards, one at a time. After each card, draw what is LEFT as a new bar and write how many marbles are left. Each card says what to take the fraction of: "of the jar" or "of what is left".',36,700))
 body+=pin(128,420,1664,bar+p('Each unit is 10 marbles. Card 1 gives away 3 units.',30,600,MUTED),None,WHITE,24,'16px 30px')
-cards=[('Card 1','Give away 1/4 of the jar.','90 left'),('Card 2','Give away 1/3 of what is left.','60 left'),('Card 3','Give away 5/6 of what is left.','10 left')]
+cards=[('Card 1','Give away 1/4 of the jar.','90 left'),('Card 2','Give away 1/3 of what is left.','60 left')]
 for i,(a,b,c) in enumerate(cards):
-    body+=qrow(128,640+i*100,1250,a,b,36)+answer(1420,640+i*100,372,c)
+    body+=qrow(128,660+i*110,1250,a,b,36)+answer(1420,660+i*110,372,c)
 put('warm1',sec(f'{L}-warm1','0–4 MIN',body,
- 'Minutes 0 to 4. What is left? Children have mini whiteboards. Say "Card 1" and read it; give thinking time; children write the number left and hold up boards together; click to show the answer. Then Card 2 and Card 3. '
- 'Talk: Card 2 says "of what is left", so we take 1/3 of 90, not 1/3 of 120 (90 − 30 = 60). Card 3: 5/6 of 60 is 50, so 10 are left. Ask: "Did anyone take 1/3 of 120? What would that give? (40; the story would be different.)" '
- 'The bar shows the first card: 120 is cut into 12 units of 10, and 1/4 is 3 units. Listen for children who draw the remainder as a new bar. Answers: 90, 60, 10. This is the idea of the whole lesson: after each step the amount we start from changes.'))
+ 'Minutes 0 to 4. What is left? Children have mini whiteboards. Say "Card 1" and read it; give thinking time; children write the number left and hold up boards together; click to show the answer. Then Card 2. '
+ 'Talk: Card 2 says "of what is left", so we take 1/3 of 90, not 1/3 of 120 (90 − 30 = 60). Tutor extension if the group is ready: a third card, give away 5/6 of what is left (5/6 of 60 is 50, so 10 are left). Ask: "Did anyone take 1/3 of 120? What would that give? (40; the story would be different.)" '
+ 'The bar shows the first card: 120 is cut into 12 units of 10, and 1/4 is 3 units. Listen for children who draw the remainder as a new bar. Answers: 90, 60. This is the idea of the whole lesson: after each step the amount we start from changes.'))
 
 # ---- 3. quick questions ----
 qs=[('1.','What is 2/5 of 45?','18'),('2.','3/4 of a number is 27. What is the number?','36'),('3.','What is 1/3 of 3/4?','1/4'),('4.','Ali has 12 more stickers than Ben. They each get 5 more. How many more does Ali have now?','Still 12'),('5.','Ali has 30 cards and Ben has 20. Ali gives Ben 5. How many cards do they have altogether now?','Still 50')]

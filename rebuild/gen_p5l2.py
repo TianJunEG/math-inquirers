@@ -125,12 +125,12 @@ g=''
 for i,(a,b,c,d) in enumerate(pairs):
     x=30+i*400
     g+=f'<rect x="{x}" y="20" width="360" height="200" rx="20" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/>'+sfr(x+90,100,a,b,56)+T(x+180,128,'or',36,TEAL)+sfr(x+270,100,c,d,56)
-body=h2('Warm-up: Fraction Face-off')+card(p('Which fraction is bigger? One finger for the first, two fingers for the second. Give a reason: no common denominators allowed!',36,700))
+body=h2('Warm-up: Fraction Face-off')+card(p('Which fraction is bigger? One finger for the first, two fingers for the second. Whisper a reason to your partner. Volunteers share.',36,700))
 body+=pin(128,400,1664,svgwrap(1640,240,'Four pairs of fractions: 3/5 or 3/7, 5/6 or 6/7, 4/9 or 1/2, 7/8 or 8/7',g),None,WHITE,24,'16px 12px')
 body+=pin(128,700,1664,p('Clues to use: same top number? Close to 1? More than a half? More than a whole?',36,700),'fade',SOFT,20,'20px 30px')
 put('p5l2-warm1',sec('p5l2-warm1','0–4 MIN',body,
- 'Minutes 0 to 4. Fraction Face-off. Point to one pair at a time; children show 1 or 2 fingers, then explain. Answers and reasons: 3/5 is bigger than 3/7 (same top number: fewer, bigger pieces, fifths are bigger than sevenths). 6/7 is bigger than 5/6 (5/6 is 1/6 short of 1, 6/7 is only 1/7 short, and 1/7 is smaller than 1/6). 1/2 is bigger than 4/9 (4/9 is less than 4.5/9). 8/7 is bigger than 7/8 (8/7 is more than 1 and 7/8 is less than 1). '
- 'Listen for the reasons. Praise "compare to a half" and "how far from 1" as strategies; these come back in the lesson.'))
+ 'Minutes 0 to 4. Fraction Face-off. Point to one pair at a time; children show 1 or 2 fingers (nobody has to explain a finger), then pairs whisper a reason and ONLY volunteers share it; never ask a child because of the finger they showed. Answers and reasons: 3/5 is bigger than 3/7 (same top number: fewer, bigger pieces, fifths are bigger than sevenths). 6/7 is bigger than 5/6 (5/6 is 1/6 short of 1, 6/7 is only 1/7 short, and 1/7 is smaller than 1/6). 1/2 is bigger than 4/9 (4/9 is less than 4.5/9). 8/7 is bigger than 7/8 (8/7 is more than 1 and 7/8 is less than 1). '
+ 'Listen for the reasons that volunteers give. Praise "compare to a half" and "how far from 1" as strategies; these come back in the lesson.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','Write 3 ÷ 4 as a fraction','3/4'),('2.','2/3 + 1/6 = ?','5/6'),('3.','3/4 of 20 = ?','15'),('4.','2/5 × 3/4 = ?','3/10'),('5.','4/5 ÷ 2 = ?','2/5')]
@@ -202,8 +202,8 @@ put('p5l2-break',break_slide('p5l2-break','33–37 MIN','Fraction freeze: walk o
 
 # ---------- worksheet page 1 ----------
 put('p5l2-ws1',ws_preview('p5l2-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Sharing, and fraction and division.'),('Q2','Unit fraction puzzles: test in order, then say when to stop.'),('Q3','Fraction of a remainder: finish the model.')],'Stuck? Draw a bar and cut it into equal units.','Minutes 37 to 49. Walk around. Ask "Is that a fraction of the whole or of the remainder?" before giving any help on Q3. Q2c: ask "How do you know you have found both ways?"'))
-put('p5l2-ws1ans',check_raw('p5l2-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 5/8   b) 9/4 = 2 1/4 m   c) Group A: 2/3 is more than 3/5   d) (stretch) 1/8'),('Q2','a) 1/2 + 1/5   b) 1/4 + 1/5   c) 1/3 + 1/24 and 1/4 + 1/8'),('Q3','a) 120   b) 60   c) 1/4')],
- 'Click each answer after a pair explains. Q1c: 2/3 = 10/15, 3/5 = 9/15; or each child in A is 1/3 short of a pizza, in B 2/5 short. Q1d (stretch, a P6 preview): 3/4 ÷ 6 = 1/8 (3 quarters shared by 6 children is half a quarter each, and half of 1/4 is 1/8). Q2: 7/10 − 1/2 = 2/10 = 1/5, so 1/2 + 1/5. 9/20 − 1/4 = 9/20 − 5/20 = 4/20 = 1/5, so 1/4 + 1/5. 3/8: 1/3 leaves 1/24; 1/4 leaves 1/8; 1/5 leaves 7/40 (not a unit fraction); after that the first part is less than half of 3/8, so stop. Q3: Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.',gap=170))
+put('p5l2-ws1ans',check_raw('p5l2-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 5/8   b) 9/4 = 2 1/4 m   c) Group A: 2/3 is more than 3/5   d) (try this one) 1/8'),('Q2','a) 1/2 + 1/5   b) 1/4 + 1/5   c) 1/3 + 1/24 and 1/4 + 1/8'),('Q3','a) 120   b) 60   c) 1/4')],
+ 'Click each answer after a pair explains. Q1c: 2/3 = 10/15, 3/5 = 9/15; or each child in A is 1/3 short of a pizza, in B 2/5 short. Q1d (try this one, a P6 preview): 3/4 ÷ 6 = 1/8 (3 quarters shared by 6 children is half a quarter each, and half of 1/4 is 1/8). Q2: 7/10 − 1/2 = 2/10 = 1/5, so 1/2 + 1/5. 9/20 − 1/4 = 9/20 − 5/20 = 4/20 = 1/5, so 1/4 + 1/5. 3/8: 1/3 leaves 1/24; 1/4 leaves 1/8; 1/5 leaves 7/40 (not a unit fraction); after that the first part is less than half of 3/8, so stop. Q3: Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.',gap=170))
 
 # ---------- teach: pattern ----------
 body=h2('Look for a pattern')+card(rp(f'{F(1,7)} − {F(1,8)} = {F(1,56)} and {F(1,8)} − {F(1,9)} = {F(1,72)}.   What is {F(1,10)} − {F(1,11)}?',34,700))

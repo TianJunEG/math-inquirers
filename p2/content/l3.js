@@ -54,8 +54,7 @@ const lesson = {
     ['Q3', '4 hens and 3 goats. Table: 7 hens 0 goats 14 legs; 6, 1, 16; 5, 2, 18; 4, 3, 20. Each swap adds 2 legs. Check: 8 + 12 = 20 legs and 4 + 3 = 7 animals.'],
     ['Q4', '(a) 5 stickers each (4 × 5 = 20).  (b) 3 left over.  (c) 1 more sticker: 24 stickers give 6 each with none left over.'],
     ['Q5', '(a) 6 vans. 5 vans hold 25 children and the other 3 children need a van too.  (b) 2 empty seats (6 vans hold 30, and 30 − 28 = 2).'],
-    ['Q6', '4 ways: 2 rows of 10, 4 rows of 5, 5 rows of 4, 10 rows of 2. 3 rows does not work (3 rows of 6 is 18, 3 rows of 7 is 21). More than 10 rows would leave fewer than 2 chairs in a row.'],
-    ['Q7', '3 ways: 7 bicycles and 1 tricycle (14 + 3); 4 bicycles and 3 tricycles (8 + 9); 1 bicycle and 5 tricycles (2 + 15). We know these are all: 0, 2 or 4 tricycles leave an odd number of wheels, which bicycles cannot make, and 6 or more tricycles need 18 wheels or more. Accept a child\u2019s own wording at this level, for example: "I tried 0, 1, 2, 3, 4, 5 tricycles in order; 6 tricycles is already 18 wheels." The odd/even reason is a bonus.']
+    ['Q6', '4 ways: 2 rows of 10, 4 rows of 5, 5 rows of 4, 10 rows of 2. 3 rows does not work (3 rows of 6 is 18, 3 rows of 7 is 21). More than 10 rows would leave fewer than 2 chairs in a row.']
   ]
 };
 
@@ -115,6 +114,7 @@ const qbank = {
     { q: '25 pencils are tied in bundles of 5. How many bundles are there?', a: '5 bundles (25 ÷ 5 = 5).' }
   ],
   stretch: [
+    { q: 'A shop has some bicycles (2 wheels) and some tricycles (3 wheels), at least one of each. There are 17 wheels altogether. Find ALL the ways. Start with 1 tricycle, then 2 tricycles, and so on. Make a table or use counters. How do you know you have found them all?', a: '3 ways: 7 bicycles and 1 tricycle (14 + 3); 4 bicycles and 3 tricycles (8 + 9); 1 bicycle and 5 tricycles (2 + 15). 0, 2 or 4 tricycles leave an odd number of wheels, which bicycles cannot make, and 6 or more tricycles need 18 wheels or more.', fig: cyclesFig() },
     { q: 'There are 9 hens and goats on a farm. They have 24 legs altogether. How many hens and how many goats are there?', a: '6 hens and 3 goats. Start with 9 hens (18 legs); each swap to a goat adds 2 legs; 3 swaps make 24. Check: 12 + 12 = 24.' },
     { q: 'Ali shares 34 marbles equally among 4 friends, giving as many as he can. How many does each friend get? How many are left over?', a: '8 each (4 × 8 = 32) and 2 left over.' },
     { q: 'An array of stickers has 4 rows. Ben counts 12 stickers in the first 3 rows. How many stickers are in the whole array?', a: '16 stickers. 3 rows have 12, so each row has 4 (12 ÷ 3 = 4); 4 rows of 4 is 16.' },
@@ -158,20 +158,15 @@ const workbook = H => {
   out.push(H.gap(30));
   out.push(H.sub('a', 'How many hens and how many goats?    ______ hens    ______ goats'));
   // ---- page 2 (on your own)
-  out.push(H.q(4, 'Ravi has 23 stickers. He shares them equally among 4 friends, giving each friend as many as he can.', { pb: true, before: 0, keepNext: true }));
+  out.push(H.q(4, 'Ravi has 23 stickers. He shares them equally among 4 friends, giving each friend as many as he can. Tip: draw 4 friends and deal out the stickers one at a time.', { pb: true, before: 0, keepNext: true }));
   out.push(H.sub('a', 'How many does each friend get?   ______        (b)  How many are left over?   ______'));
   out.push(H.sub('c', 'What is the smallest number of extra stickers Ravi needs so that none are left over?   ______'));
   out.push(H.q(5, '28 children go on a trip. Each van holds 5 children.', { keepNext: true }));
   out.push(H.sub('a', 'How many vans are needed?   ______        (b)  How many empty seats?   ______'));
-  out.push(H.q(6, 'Mr Tan puts 20 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. Find ALL the ways. Start with 2 rows. Stop when the number of rows is bigger than the number of chairs in each row.', { keepNext: true }));
+  out.push(H.q(6, 'Mr Tan puts 20 chairs in equal rows. There must be at least 2 rows and at least 2 chairs in each row. Find ALL the ways. Try 2 rows, 3 rows, 4 rows and so on. Stop at 10 rows.', { keepNext: true }));
   { const w6 = [2100, 867, 867, 867, 867, 867, 867, 867, 867, 864];
     const r6 = (lab, vals) => H.row([H.cell(lab, w6[0], { bold: true, fill: 'D9D9D9', h: 80 }), ...w6.slice(1).map((w, i) => H.cell(vals ? String(vals[i]) : '\u00a0', w, { h: 80 }))]);
     out.push(H.tbl(w6, [r6('Rows', [2, 3, 4, 5, 6, 7, 8, 9, 10]), r6('Chairs in each row'), r6('Does it work?')])); }
-  out.push(H.q(7, 'A shop has some bicycles (2 wheels) and some tricycles (3 wheels), at least one of each. There are 17 wheels altogether. Use counters or the table to find ALL the ways. Start with 1 tricycle.', { keepNext: true }));
-  out.push(H.fig(cyclesFig()));
-  out.push(H.tbl(hw, [hr('Tricycles', '1'), hr('Bicycles', ''), hr('Wheels', '')]));
-  out.push(H.sub('a', 'How do you know you have found them all?'));
-  out.push(...H.lines(1));
   return out;
 };
 

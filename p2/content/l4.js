@@ -68,7 +68,7 @@ const lesson = {
   ],
   extension: 'Make your own repeating pattern of 4 shapes. Write 3 "far place" questions about it for a partner, with the answers.',
   key: [
-    ['Q1', '(a) Square (20 ends a group of 5).  (b) Circle (21 triangle, 22 circle, 23 circle).  (c) Triangle: 40 ends a group (5 × 8 = 40), so 41 starts again.  (d) 12 circles (30 shapes is 6 groups, 2 circles in each).'],
+    ['Q1', '(a) Square (20 ends a group of 5).  (b) Circle (21 triangle, 22 circle, 23 circle).  (c) Triangle: 40 ends a group (5 × 8 = 40), so 41 starts again.'],
     ['Q2', '(a) A (16 ends a group of 4; 17 is M, 18 is A).  (b) Place 40 (every H ends a group: 4, 8, 12 … the 10th is 4 × 10).  (c) 7 Ts. They are in places 3, 7, 11, 15, 19, 23, 27; 28 ends the 7th group, and places 29 and 30 are M and A.'],
     ['Q3', '(a) 18 yellow beads (12 red is 6 groups of 2 red; each group has 3 yellow).  (b) 30 beads (6 groups of 5).'],
     ['Q4', '(a) 5, 10, 15, 20, 25, 30.  (b) 50 petals.  (c) 7 flowers.  (d) 4 flowers, with 3 petals left over.'],
@@ -133,6 +133,7 @@ const qbank = {
     { q: 'A number pattern goes 10, 20, 30 … What is the 8th number?', a: '80' }
   ],
   stretch: [
+    { q: 'Look at the shape pattern in the Start here page again (places 1 to 10). How many circles are there in the first 30 shapes? How do you know?', a: '12 circles (30 shapes is 6 groups of 5, with 2 circles in each group).', fig: shapeFig() },
     { q: 'A pattern goes A, B, B, C, A, B, B, C … What is the 25th letter?', a: 'A. 24 ends a group of 4 (4 × 6 = 24), so 25 starts again with A.' },
     { q: 'Beads go red, yellow, yellow, red, yellow, yellow … How many yellow beads are in the first 18 beads?', a: '12 yellow beads (18 beads is 6 groups of 3, with 2 yellow in each).' },
     { q: 'Houses are made of sticks in a row. 1 house uses 5 sticks, 2 houses use 9 sticks, 3 houses use 13 sticks. How many sticks are needed for 6 houses?', a: '25 sticks. The rule is add 4: 5, 9, 13, 17, 21, 25.' },
@@ -159,18 +160,17 @@ const workbook = H => {
   const out = [];
   const hr = (ws, lab, vals, h = 80) => H.row([H.cell(lab, ws[0], { bold: true, fill: 'D9D9D9', h }), ...vals.map((v, i) => H.cell(v || ' ', ws[i + 1], { h }))]);
   // ---- page 1 (in pairs)
-  out.push(H.q(1, 'This pattern keeps going in the same way. Here are places 1 to 10.', { before: 20, keepNext: true }));
+  out.push(H.q(1, 'This pattern keeps going in the same way. Here are places 1 to 10. Tip: draw a line after the LAST shape of each group.', { before: 20, keepNext: true }));
   out.push(H.fig(shapeFig()));
   out.push(H.sub('a', 'What shape is in place 20?   __________        (b)  In place 23?   __________'));
   out.push(H.sub('c', 'What shape is in place 41?   __________     How do you know?'));
   out.push(...H.lines(1));
-  out.push(H.sub('d', 'How many circles are there in the first 30 shapes?   ______'));
   out.push(H.q(2, 'Ali writes the letters M, A, T, H again and again.', { keepNext: true }));
   out.push(H.fig(letterFig()));
   out.push(H.sub('a', 'What is the 18th letter?   ______        (b)  Where is the 10th letter H?   place ______'));
   out.push(H.sub('c', 'Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.'));
   out.push(...H.lines(1));
-  out.push(H.q(3, 'Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … She uses 12 red beads. The string ends with 3 yellow beads. Tip: draw the string in groups, or thread beads on a pencil with counters.', { keepNext: true }));
+  out.push(H.q(3, 'Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … It has 12 red beads and ends with yellow beads. Tip: draw one group, then count the groups.', { keepNext: true }));
   out.push(H.fig(beadFig()));
   out.push(H.sub('a', 'How many yellow beads?   ______        (b)  How many beads altogether?   ______'));
   // ---- page 2 (on your own)

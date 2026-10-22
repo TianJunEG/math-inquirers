@@ -164,7 +164,7 @@ body+=pin(128,560,1664,pic,None,WHITE,24,'8px 22px')
 put('p2l7-explore1',sec('p2l7-explore1','8–14 MIN',body,
  'Minutes 8 to 14. Each child folds their own strips; pairs compare. Show how to fold in half by matching the ends. Quarters: fold in half, then in half again. Eighths: in half three times. '
  'Children write 1/2, 1/4 or 1/8 on each part and line the strips up under each other, left ends together. '
- 'Thirds are hard on purpose: there is no "fold in half" trick. Let them try (roll the strip into an S and flatten it, then check the 3 parts are the same length). Online: the same with paper strips on camera.'))
+ 'Thirds are hard on purpose: there is no "fold in half" trick. Let them try (roll the strip into an S and flatten it, then check the 3 parts are the same length). Online: the same with paper strips on camera. Say before they start: "Thirds are tricky for everybody, grown-ups too. A strip that does not come out equal is a good try, not a mistake: tell me what you notice." Nothing is marked. Fractions are written as 1/2 on slides and as stacked fractions in the workbook: both mean the same.'))
 
 # 5. explore2
 items=[('1.','Which part is bigger, {1/4} or {1/8}? How do you know?'),('2.','How many eighths fit on one quarter? How many quarters make 1 whole?'),('3.','How did you fold 3 equal parts? How do you know they are equal?')]

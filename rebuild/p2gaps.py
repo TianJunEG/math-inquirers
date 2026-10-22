@@ -44,7 +44,7 @@ def reflect(K):
     notes=('Minutes 87 to 89 (Lesson 10: 85 to 87). Looking back: about 2 minutes, on the small box on the last core page of the workbook (every child reaches it). Children finish one line, two lines or all three, and tick what helped. A pass is always allowed. No marks and no wrong answers. '
       'Tutor script: SAY: '+C['refSay']+' DO: '+C['refDo']+' '+C['close'])
     return sec(f'p2l{K}-reflect','87–89 MIN',body,notes)
-LABELS=[('For early finishers','Think harder'),('>Stretch<','>Think harder<'),('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),
+LABELS=[('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),('Early finishers','Any child who would like more'),('early finishers','any child who would like more'),('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further come next.'),('For early finishers','Think harder'),('>Stretch<','>Think harder<'),('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),
         ('For children who finish early. ','Open to any child who chooses it. '),('For children who finish early','Open to any child who chooses it'),('children who finish early','any child who chooses to'),
         ('for strong thinkers','for any thinker'),('for early finishers','for any child who chooses it')]
 def add(S,K):
@@ -64,9 +64,12 @@ def add(S,K):
     S[f'{P}-exit']=e
     for k in list(S):
         for a,b in LABELS: S[k]=S[k].replace(a,b)
-    for suf in ('challenge','chdiag','chwalk'):
+        S[k]=re.sub(r'([Ww])hiteboards up( together)?',lambda m:m.group(1)+'hiteboards face down until 3, 2, 1 (or show only the tutor; never read a board out)',S[k])
+    for suf,lab in (('stretch','THINK HARDER'),('challenge','GO FURTHER'),('chdiag','GO FURTHER'),('chwalk','GO FURTHER')):
         k=f'{P}-{suf}'
-        if k in S: S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further')
+        if k in S:
+            if suf!='stretch': S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further')
+            S[k]=re.sub(r'(<p style="position:absolute;right:128px;top:64px;[^>]*>)[^<]*(</p>)',lambda m:m.group(1)+lab+m.group(2),S[k],count=1)
     t=f'{P}-talk'
     S[t]=S[t].replace('“I know because …”','“I know because …”   “Pass.”')
     S[t]=S[t].replace('</aside>',' Talk time rules: you choose volunteers first ("Who would like to share?"); never cold-call a child by name; any child may say pass; no public tallies, scores or rankings.</aside>')

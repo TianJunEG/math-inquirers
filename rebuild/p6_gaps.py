@@ -14,17 +14,17 @@ def short(a,limit=215):
     return out
 
 def sneak_slide(L,g):
-    body=h2('Sneak-peek puzzles')+f'<p style="font-size:28px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. Show your answer only to your tutor: own paper held up to them, or a private chat message.</p>'
-    top=300
+    body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. Show your answer only to your tutor: own paper held up to them, or a private chat message.</p>'
+    top=270
     for i,(q,a) in enumerate(g['sneak']):
         lab='Puzzle 1: try it with objects, a drawing or counting' if i==0 else 'Puzzle 2: have a think'
-        qh=math.ceil(len(q)/78)*48+36+34
-        a=short(a,190)
-        ah=math.ceil(len(a)/90)*40+30
-        body+=pin(128,top,1664,f'<p style="font-size:26px;font-weight:800;color:{TEAL}">{E(lab)}</p><p style="font-size:34px;font-weight:700;line-height:1.3">{E(q)}</p>',None,WHITE,20,'14px 28px','box-sizing:border-box')
-        body+=pin(128,top+qh+6,1664,f'<p style="font-size:30px;font-weight:800;line-height:1.25">{E(a)}</p>','pop',YEL,20,'12px 26px','box-sizing:border-box')
-        top+=qh+6+ah+20
-    assert top-20<=925,(L,top)
+        qh=math.ceil(len(q)/84)*44+30+30
+        a=short(a,150)
+        ah=math.ceil(len(a)/96)*38+28
+        body+=pin(128,top,1664,f'<p style="font-size:26px;font-weight:800;color:{TEAL}">{E(lab)}</p><p style="font-size:32px;font-weight:700;line-height:1.3">{E(q)}</p>',None,WHITE,20,'12px 28px','box-sizing:border-box')
+        body+=pin(128,top+qh+6,1664,f'<p style="font-size:28px;font-weight:800;line-height:1.25">{E(a)}</p>','pop',YEL,20,'10px 26px','box-sizing:border-box')
+        top+=qh+6+ah+14
+    assert top-14<=925,(L,top)
     notes=("Minutes 2 to 5 (3 minutes). These are ideas we have not learnt yet: say so, and say that guessing and \"I do not know\" are welcome and nobody is marked. Read the two puzzles aloud. Puzzle 1 is an access puzzle: any child can try it with objects, a drawing or counting, so everyone can get a first win. Puzzle 2 is a thinking puzzle on today's idea. "
       "Answers are shown PRIVATELY: own paper held up to you only, or a private chat message. Never boards held up for the group, never read wrong answers aloud. Click to reveal each answer at minute 5, then say: \"Both of these are what we learn today.\" "
       "Answers: "+' '.join(f'Puzzle {i+1}: {a}' for i,(q,a) in enumerate(g['sneak']))+" "
@@ -45,10 +45,11 @@ def reflect_slide(L,g):
         body+=pin(128,280+i*120,1664,f'<p style="font-size:48px;font-weight:800;line-height:1.2;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'20px 34px','box-sizing:border-box')
     body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">What helped me (tick):</p><p style="font-size:34px;font-weight:600;line-height:1.35">I drew or built it   •   I tried a smaller example   •   I checked my answer   •   I asked for help</p><p style="font-size:34px;font-weight:600;line-height:1.35">I am still stuck (my tutor will check in privately)   •   pass</p>',None,WHITE,20,'20px 34px','box-sizing:border-box')
     body+=pin(128,820,1664,f'<p style="font-size:28px;font-weight:600;line-height:1.3;color:{MUTED}">Write it in the “Looking back” box on your Finish page. Nobody has to share it.</p>',None)
-    notes=("Minutes 86 to 88 (2 minutes), after the exit slip. Everyone has the box: it is on the Finish page, a page every child reaches. Say: \"Two minutes, just for you. Finish: something I did well, the hardest part was, and tick what helped. You can write pass. If you are still stuck, tick that box and I will check in with you privately.\" "
+    notes=(("Minutes 88 to 90 (2 minutes), after the exit slip; hand out the certificates at the end of it. " if L=='p6l10' else '')+"Minutes 86 to 88 (2 minutes), after the exit slip. Everyone has the box: it is on the Finish page, a page every child reaches. Say: \"Two minutes, just for you. Finish: something I did well, the hardest part was, and tick what helped. You can write pass. If you are still stuck, tick that box and I will check in with you privately.\" "
       "Never collect it in front of the group and never read an answer out. You may read a child's box privately afterwards and reply by private chat message. Praise the strategy, not the speed: say \"you "+g['reflectEx']+", and that is what got you unstuck\", never \"you were quick\". "
       "If a child ticks I am still stuck, check in privately that day. If a child writes \"everything\" or \"I am bad at maths\", say privately: \"Thank you for telling me. Let's find one small thing that worked today,\" and point to a specific item they got right. If a child writes that nothing was hard, ask what would make it harder.")
-    return sec(f'{L}-reflect','86–88 MIN',body,notes)
+    if L=='p6l10': notes=notes.replace('Minutes 86 to 88 (2 minutes), after the exit slip.','').replace('Minutes 88 to 90 (2 minutes), after the exit slip; hand out','Minutes 88 to 90 (2 minutes), after the exit slip; hand out')
+    return sec(f'{L}-reflect','88–90 MIN' if L=='p6l10' else '86–88 MIN',body,notes)
 
 # ---- neutral wording over every slide of the lesson ----
 SUBS=[
@@ -83,6 +84,7 @@ def clean(L,D):
             s=s.replace('0–5 MIN','5–8 MIN').replace('Minutes 0 to 5','Minutes 5 to 8')
         if sid.endswith('-warm2') and not L.endswith('l10'):
             s=s.replace('5–10 MIN','8–10 MIN').replace('Minutes 5 to 10','Minutes 8 to 10')
+        if L=='p6l10': s=s.replace('40–72 MIN','35–60 MIN')
         if sid.endswith('-exit'):
             s=s.replace('82–90 MIN','82–86 MIN').replace('Minutes 82 to 90.','Minutes 82 to 86.')
         if s!=o: open(pth,'w').write(s)

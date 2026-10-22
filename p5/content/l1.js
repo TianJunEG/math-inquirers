@@ -37,8 +37,8 @@ module.exports = {
     n: 1, week: 1, session: 'A', title: 'Million Puzzles', topic: 'Numbers to 10 Million',
     objective: 'Read, write and compare numbers up to 10 million; solve digit-card and digit-riddle puzzles with place value (testing the best number just below and just above a target); estimate to check large calculations; and use the order of operations and brackets to hit target numbers.',
     skills: 'Place value to 10 million, testing both sides of a target, reasoning from clues in order, estimating by rounding, order of operations with brackets, making a list in order',
-    materials: 'Digit cards 0 to 9 (one set per child), a 7-column place-value mat (M, HTh, TTh, Th, H, T, O), mini whiteboard, a calculator for the explore only, workbook.',
-    online: 'Children cut out paper digit cards and draw a 7-box place-value mat before the lesson and hold them up to the camera. The tutor shares the slides and writes on the place-value chart. Pairs work in breakout rooms for the explore and page 1.',
+    materials: 'Digit cards 0 to 9 (one set per child), a 7-column place-value mat (M, HTh, TTh, Th, H, T, O), mini whiteboard, a calculator for the explore (every child needs one; a phone calculator is fine), workbook.',
+    online: 'Children cut out paper digit cards and draw a 7-box place-value mat before the lesson and hold them up to the camera. The tutor shares the slides and writes on the place-value chart. Pairs work in breakout rooms for the explore and page 1. Before the lesson, ask every parent to put a calculator (a phone calculator is fine) next to the child for the explore.',
     warmup: 'Million Maker: the tutor turns over digit cards one at a time; children write each digit in one of seven place-value boxes straight away and cannot move it. Closest to 5 000 000 wins. Then five quick questions on whiteboards.',
     explore: 'How long is a million seconds? Pairs guess first (an hour, a day, a week, a month or a year), then work out the seconds in an hour and in a day and use them to find how many days a million seconds lasts.',
     mini: 'Read 7-digit numbers in groups of three from the right; tell the value of a digit apart from how many thousands a number has. Closest to a target with digit cards: build the best number just below and the best just above, then compare the gaps. Digit riddles: use the rounding clue to fix the first digits, follow the clues in order and check every clue at the end. Before page 2: estimate by rounding to catch wrong calculator answers; brackets first, then × and ÷, then + and −; for "find all" with rounding, write the range first.',
@@ -142,14 +142,14 @@ module.exports = {
     W.push(H.sub(' ', 'Best just below:  ______________   It is  __________  away.'));
     W.push(H.sub(' ', 'Best just above:  ______________   It is  __________  away.'));
     // Q3 riddle
-    W.push(H.q(3, 'Digit riddle. Start with the clue that fixes the most digits. Then check every clue.', { keepNext: true }));
+    W.push(H.q(3, 'Digit riddle. Use the clues one at a time. Then check every clue.', { keepNext: true }));
     { const clues = ['I am a 7-digit number. My digits are all different.',
       'Rounded to the nearest hundred thousand, I am 7 300 000.',
       'My ten thousands digit is 3 more than my hundred thousands digit.',
       'My thousands digit = my ten thousands digit − my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
       'My digits add up to 32.',
-      'START HERE: Clue 2 means I start 7 2 … or 7 3 …  Try both with Clue 3.'];
+      'START HERE: Clue 2 means I start 7 2 … or 7 3 …  Try both with Clue 3. Which start fits?'];
       W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => i < 6 ? `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}` : `<b style="color:${TEAL}">${esc(c)}</b>`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
@@ -172,6 +172,7 @@ module.exports = {
     // Q6 find all
     W.push(H.q(6, 'A 7-digit number rounded to the nearest thousand is 2 500 000. Its digits add up to 9.', { keepNext: true }));
     W.push(H.fig(roundLine()));
+    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b> numbers from 2 500 000 up begin 2 5 0 …  Those three digits add to 7, so the last four digits must add to ____. Try 2 500 002 first.'], { after: 20 }));
     W.push(H.sub('a', 'Write the range first. The smallest number that rounds to 2 500 000 is ____________ and the greatest is ____________.'));
     W.push(H.sub('b', 'Find ALL the numbers. Make a list in order. How do you know you have them all?', { after: 40 }));
     W.push(...H.lines(3));

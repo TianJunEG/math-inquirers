@@ -9,7 +9,7 @@ module.exports = {
     think: ['“Look at the table. The numbers are 2, 8, 14, 20. I notice they go up. How much from 2 to 8? Six. From 8 to 14? Six. From 14 to 20? Six. I check every pair of neighbours and it is always six.”', '“So my rule is add 6. To find the 5th number I add 6 to the 4th: 20 + 6 = 26.”', '“Now look at the numbers that go down. If they get smaller, my rule is take away. Always check: does my rule work on the last pair too?”'],
     circulate: ['Point to a number and ask: “How do you know this number is in the pattern?”', 'Ask: “What is the jump size? Show me on the strip.”', 'Ask: “Check your rule on the last pair as well. Does it still work?”'],
     hints: ['Hint 1: “Look at two neighbours. How far apart are they?”', 'Hint 2: “Hop your counter and count each hop out loud.”', 'Hint 3: do the first one together, then let the child do the next one alone.'],
-    talk: ['“Who found numbers that both frogs landed on? Tell us.”', '“Why do the numbers both frogs share all end in 0?”'],
+    talk: ['“Who would like to tell us numbers that both frogs landed on?”', '“Why do the numbers both frogs share all end in 0?”'],
     talkAns: 'Jumps of 5 land on numbers ending in 0 or 5. Jumps of 4 always land on even numbers. A number that is both must end in 0.',
     close: ['“Today you noticed a rule, tested it with a counter and explained why. That is what an inquirer does.”', '“Take your inquiry journal and I will stamp it when you hand me your exit ticket.”']
   },
@@ -27,7 +27,7 @@ module.exports = {
   },
   3: {
     hook: ['A teacher wants to buy fruit for a class party, but she cannot ask every child one by one. How can we help her? We can make a picture graph.'],
-    warmIntro: ['Everyone chooses ONE fruit. Put your sticky dot on it. (Online: type your fruit in the chat.)', 'Look at the wall. Which fruit do you think won? Why do you think so?'],
+    warmIntro: ['Everyone chooses ONE fruit. Put your sticky dot on it. (Online: when I point to a fruit, give a thumbs up for yours. No typing needed.)', 'Look at the wall. Which fruit do you think won? Why do you think so?'],
     predict: ['Predict: which fruit will have the most votes and which will have the fewest? Write your guesses down.'],
     exploreHints: ['Stuck: draw one row for each fruit first, then add the counters.', 'Confused about the key: “One counter stands for one child. Write it on your graph.”', 'Finished early: ask “How many more votes did the winner get than the fruit in last place?”'],
     think: ['“How many more chose green than blue? I do not add. I compare. Line up the two rows. Green has 7 and blue has 3. The difference is 7 − 3 = 4.”', '“How many children voted altogether? I add all the rows: 5 + 3 + 7 = 15.”', '“A quick way to count: count in 5s. 5, 10, 15, then three more: 18.”'],
@@ -63,7 +63,7 @@ module.exports = {
   },
   6: {
     hook: ['Welcome to the money shop! Today we pay with coins and notes, find every way to make an amount, and make sure we do not miss any and do not count the same way twice.'],
-    warmIntro: ['Here is the price tag: 30¢. Pay exactly with your play coins. Who can do it with the fewest coins?', 'Show me. How many coins did you use?'],
+    warmIntro: ['Here are three price tags in cents: an eraser 65¢, a pencil 80¢ and a sticker 30¢. Pick one and pay exactly with your play coins. Any way that pays exactly is a good way.', 'Now look for a way that uses fewer coins. How many coins did you use? Tell your partner.'],
     predict: ['How many different ways do you think there are to make 20¢ with 20¢, 10¢ and 5¢ coins? Write a guess.'],
     exploreHints: ['Stuck: start with the biggest coin that fits, then fill the rest.', 'Not sure if two ways are different: “Same coins in a different order is the same way.”', 'Finished early: find the ways to make 30¢. How will you know you have them all?'],
     think: ['“Ways to make 15¢ with 10¢ and 5¢ coins. I start with the biggest coin: one 10¢. Then 5¢ is left, so one 5¢ coin. That is one way: 10 + 5.”', '“Now no 10¢ coin. Only 5¢ coins: 5 + 5 + 5. That is two ways altogether.”', '“25¢ with 20¢, 10¢ and 5¢: with a 20¢, 20 + 5. With 10¢ but no 20¢, 10 + 10 + 5 and 10 + 5 + 5 + 5. With only 5¢, 5 + 5 + 5 + 5 + 5. That is 4 ways. I used a table so I did not repeat any.”'],
@@ -87,7 +87,7 @@ module.exports = {
   },
   8: {
     hook: ['Today we are logic inquirers. We will use clues and crosses to find an answer that is hiding. Every cross we write helps us fill in another box.'],
-    warmIntro: ['I am thinking of a number from 1 to 20. You may ask yes or no questions. Who can find it with the fewest questions?', 'What was your best question? Why was it good? (“Is it more than 10?” cuts the possibilities in half.)'],
+    warmIntro: ['I am thinking of a number from 1 to 20. You may ask yes or no questions. Let us see how few questions we need together.', 'Who would like to share a question they liked? Why was it good? (“Is it more than 10?” cuts the possibilities in half.)'],
     predict: ['Here are some buttons. I will sort them into two loops that overlap. Where do you think the buttons that follow both rules will go?'],
     exploreHints: ['Stuck: read one rule at a time. Which buttons follow rule 1?', 'Not sure where a button goes: “Does it follow BOTH rules? Then it goes in the middle.”', 'Finished early: make a new rule and sort again.'],
     think: ['“Tia does not drink milk. Sam does not drink milk or juice. I put a cross where it cannot be. Sam cannot have milk or juice, so Sam has water. Now Tia cannot have milk and water is taken, so Tia has juice. Raj has milk.”', '“A Venn diagram: numbers 10 to 20. Less than 15 in one loop, even in the other. For each number I ask both questions. 12: less than 15? Yes. Even? Yes. So 12 goes in the middle. 16: less than 15? No. Even? Yes. So 16 goes in the even loop only.”', '“Every time I write a cross I check whether it gives me a new clue.”'],
@@ -111,8 +111,8 @@ module.exports = {
   },
   10: {
     hook: ['Welcome to challenge day! There are four puzzle cards: coins, patterns, logic and measuring. With every card we use the four inquirer rules: notice, test, check, explain.'],
-    warmIntro: ['Mental maths relay: I ask a quick question from one of our lessons and we pass it round. Remember: give a wrong answer a gentle “try again”, not a groan.'],
-    predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair gets ONE card for 10 minutes, then you swap with another pair.'],
+    warmIntro: ['Whiteboard round: I ask a quick question from one of our lessons. Everybody writes the answer on a whiteboard at the same time. There is no passing round and nobody is put on the spot. If your answer is different from your neighbour’s, that is a good thing to talk about.', 'It is fine to say “I am not sure”. A try-again is always welcome.'],
+    predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair chooses ONE card for 10 minutes, then you swap with another pair. It is fine to report back one thing you tried, not the answer.'],
     exploreHints: ['Stuck: say the inquirer rule that might help.', 'Rushing: “Check your answer a different way before you move on.”', 'Finished early: make a puzzle for the other pair, then swap.'],
     think: ['“Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. I try 20 + 20 + 5 = 45. ✓ Three coins.”', '“Pattern: 5, 8, 11, 14 … The rule is add 3. I make a table of places 1 to 10 and keep adding 3: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. The 10th number is 32.”', '“Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Order from tallest: Mei, Ben, Sam, Ali. Ali is shortest.”', '“Measure: a pencil is 6 cubes long. A pen is 4 cubes longer, so the pen is 6 + 4 = 10 cubes. End to end they are 6 + 10 = 16 cubes. (Not 6 + 4: the 4 is only the extra bit.)”'],
     circulate: ['Ask: “Which inquirer rule helps you here?”', 'Ask: “How do you know your answer is right? Show me.”', 'Ask: “What would you do differently next time?”'],

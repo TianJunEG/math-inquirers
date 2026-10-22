@@ -68,7 +68,7 @@ COMMON={'warmcheck':(2,5),'warm1':(5,8),'warm2':(8,10),'explore1':(10,15),'explo
 PL={
 1:dict(teach1=(25,27),we1=(27,29),we2=(29,30),try1=(30,31),teach2=(31,34),key=(34,35),teachpat=(40,42),ws1=(42,52),teachrename=(54,55),teachclues=(55,56),tryclues=(56,57),teachsum=(57,58),ws2=(58,65)),
 2:dict(teach1=(25,27),try1=(27,28),teach2=(28,30),teach3=(30,33),try2=(33,34),key=(34,35),ws1=(40,52),teachmagic=(54,55),teachpyr=(55,56),teach999=(56,57),teachshape=(57,58),ws2=(58,65)),
-3:dict(teach1=(25,27),we1=(27,28),try1=(28,29),teach2=(29,31),we2=(31,32),try2=(32,33),key=(33,35),ws1=(40,52),teachgrid=(54,56),teachlist=(56,57),teachboth=(57,58),ws2=(58,65)),
+3:dict(teach1=(25,27),we1=(27,28),try1=(28,29),teach2=(29,31),we2=(31,32),try2=(32,33),key=(33,35),ws1=(40,52),teachlist=(54,56),teachgrid=(56,57),teachboth=(57,58),ws2=(58,65)),
 4:dict(we1=(25,27),try1=(27,28),we2=(28,31),try2=(31,33),key=(33,35),teachunits=(40,41),tryunits=(41,42),ws1=(42,52),teachtd=(54,56),teachgive=(56,57),teachsame=(57,58),ws2=(58,65)),
 5:dict(teach1=(25,27),we1=(27,29),try1=(29,30),we2=(30,32),try2=(32,33),key=(33,35),teachback=(40,42),ws1=(42,52),teachlist=(54,56),teachbig=(56,57),teachtable=(57,58),ws2=(58,65)),
 6:dict(teach1=(25,26),we1=(26,28),try1=(28,29),we2=(29,31),try2=(31,33),key=(33,35),ws1=(40,52),teachadd=(54,55),tryadd=(55,56),teachpairs=(56,57),teachbetween=(57,58),ws2=(58,65)),

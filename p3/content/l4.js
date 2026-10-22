@@ -78,7 +78,7 @@ module.exports = {
     exploreHints: [
       'Stuck: build two towers the same height first. Then move cubes until one is 4 taller.',
       'Confused: "Take the extra 4 cubes away first. Share what is left fairly. Then put the 4 back."',
-      'Ready for more: try 30 cubes where one tower is 4 times as tall as the other.'
+      'Ready for more: the Go further what-if on the slide (3 towers, 30 cubes). Or: 30 cubes where one tower is 4 times as tall as the other.'
     ],
     think: [
       '"A hall has 1500 seats: 645 red, 480 blue and the rest green. It is one whole cut into parts, so I draw ONE bar for 1500 and cut it into 645, 480 and a question mark. Whole take away the parts: 1500 − 645 = 855, 855 − 480 = 375. Check: 645 + 480 + 375 = 1500."',
@@ -160,11 +160,13 @@ module.exports = {
     // Q1
     out.push(H.q(1, 'A bakery made 1250 buns. It sold 486 buns in the morning and 378 buns in the afternoon.', { before: 60, keepNext: true }));
     out.push(H.fig(q1Fig()));
+    out.push(H.p('Hint: add the two amounts sold first (486 + 378). Then take that away from 1250.', { after: 20 }));
     out.push(H.sub('a', 'How many buns were left?   ________'));
     out.push(H.sub('b', 'How many more buns were sold in the morning than in the afternoon?   ________'));
     // Q2
     out.push(H.q(2, 'Mei has 345 stickers. Ali has 128 more stickers than Mei. Ben has 79 fewer stickers than Ali.', { keepNext: true }));
     out.push(H.fig(q2Fig()));
+    out.push(H.p('Hint: find Ali first (compare with Mei). Then find Ben (compare with Ali, not Mei).', { after: 20 }));
     out.push(H.sub('a', 'Ali has ______ stickers.      Ben has ______ stickers.'));
     out.push(H.sub('b', 'How many stickers do the three children have altogether?   ______'));
     // Q3

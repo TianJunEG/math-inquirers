@@ -3,7 +3,7 @@ import sys
 body=open('workbook_body.html').read()
 import re as _re
 out=[];openb=False
-INBOX=('class="p sub','class="p ans','class="ln"','<table class="tb"','class="p img','<div style="height:')
+INBOX=('class="p easy"','class="p sub','class="p ans','class="ln"','<table class="tb"','class="p img','<div style="height:')
 for line in body.split('\n'):
     core=line
     pre=''

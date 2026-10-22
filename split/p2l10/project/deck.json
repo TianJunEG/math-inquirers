@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:05:44Z"
+  "at": "2026-10-22T00:17:55Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 10 – Challenge Day",
@@ -12,6 +12,7 @@
   "p2l10-warm1",
   "p2l10-warm2",
   "p2l10-explore1",
+  "p2l10-goexp",
   "p2l10-card1",
   "p2l10-card2",
   "p2l10-card3",
@@ -56,7 +57,7 @@
    "start": "p2l10-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk, exit and certificates",
+   "description": "Think harder, go further, talk, exit and certificates",
    "start": "p2l10-stretch"
   }
  },

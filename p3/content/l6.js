@@ -81,7 +81,7 @@ module.exports = {
     materials: 'The printed fraction strip page (7 strips per child, all the same length, 24 cm), coloured pencils, scissors, mini whiteboards.',
     online: 'Send the printed fraction strip page instead of asking children to measure and cut strips. Marks every 12, 8, 6, 4, 3 and 2 cm give halves, thirds, quarters, sixths, eighths and twelfths. Share the screen for the slides. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Fraction Flash: four shapes cut into equal parts appear on screen. Children write the fraction shaded on whiteboards, then click to check. Ask: “How do you know the parts are equal?”',
-    explore: 'Pairs fold and mark paper strips into halves, quarters, eighths, thirds, sixths and twelfths, label every part and stack them into a fraction wall. They look for pieces that line up exactly (1/2 = 2/4 = 4/8 …) and test whether eighths can cover 1/3 exactly (they cannot).',
+    explore: 'Pairs use the printed fraction strips (or fold and mark paper strips) into halves, quarters, eighths, thirds, sixths and twelfths, label every part and stack them into a fraction wall. They look for pieces that line up exactly (1/2 = 2/4 = 4/8 …) and test whether eighths can cover 1/3 exactly (they cannot).',
     mini: 'Every row of the wall is one whole cut into equal parts; more parts means smaller parts. Equal fractions line up on the wall: multiply the top and bottom by the same number. To compare or add, make the parts the same size first, then compare or add the top numbers only.',
     share: 'Why is 1/8 smaller than 1/6, even though 8 is bigger than 6?',
     exit: { q: 'Ali says 1/4 + 1/8 = 2/12. Is he right? Write the correct answer and show how you know.', a: 'No. 1/4 = 2/8, so 1/4 + 1/8 = 2/8 + 1/8 = 3/8. We add the parts, not the bottom numbers.' },
@@ -98,16 +98,16 @@ module.exports = {
       ['Q4', '(a) 5/7  (b) 2/8 + 3/8 = 5/8  (c) 4/12 + 5/12 = 9/12 (= 3/4)  (d) 5/6 − 2/6 = 3/6 (= 1/2)  (e) 10/10 − 3/10 = 7/10  (f) 5/10 + 3/10 = 8/10 (= 4/5).'],
       ['Q5', '(a) 1/6 + 4/6 = 5/6 of the fence.  (b) 1/6 is not painted.  (c) 4/6 − 1/6 = 3/6 = 1/2 of the fence more in the afternoon.'],
       ['Q6', '1/4 and 6/8;  2/3 and 4/12;  3/8 and 5/8;  5/12 and 7/12;  1/6 and 5/6.'],
-      ['Q7', '(a) 7/12 and 8/12 (1/2 = 6/12 and 3/4 = 9/12; the end fractions are not between).  (b) 8/12 = 2/3.']
+      ['Think harder 1', '(a) 7/12 and 8/12 (1/2 = 6/12 and 3/4 = 9/12; the end fractions are not between).  (b) 8/12 = 2/3.']
     ]
   },
 
   script: {
     hook: ['Welcome, wall builders! Today we build a fraction wall and use it to spot fractions that look different but are the same amount, to decide which fraction is bigger, and to add fractions without falling into the bottom-number trap.'],
     warmIntro: ['Look at the shape. How many equal parts? How many are shaded? Write the fraction on your whiteboard.', 'How do you know the parts are equal? What would go wrong if they were not?'],
-    predict: ['Which is bigger: one sixth of a strip or one eighth of the same strip? Write a guess before we fold.'],
+    predict: ['Which is bigger: one sixth of a strip or one eighth of the same strip? Write a guess before we start.'],
     exploreHints: [
-      'Stuck: fold the strip in half, then in half again, then again. How many parts now?',
+      'Stuck: look at the printed strips, or fold a paper strip in half, then in half again, then again. How many parts now?',
       'For thirds: roll the strip into an S shape until the three parts are the same, or mark every 8 cm.',
       'Ready for more: find three different pieces that together cover exactly one half.'
     ],
@@ -135,7 +135,7 @@ module.exports = {
     today: 'Build a fraction wall, find equal fractions, compare fractions by making the parts the same size, and add related fractions.',
     warmGame: 'Fraction Flash. Four shapes cut into equal parts appear on screen (eighths of a circle, sixths of a rectangle, sixths of a hexagon, tenths of a bar). Children write the fraction shaded, then click to check.',
     warmQs: [['How many quarters make one whole?', '4'], ['Which is bigger: 1/3 or 1/5?', '1/3'], ['1/2 = ?/10', '5'], ['2/9 + 4/9', '6/9'], ['1 − 2/5', '3/5']],
-    expSetup: ['Take 7 paper strips, all the same length.', 'Keep one whole. Fold or mark the others into 2, 4, 8, 3, 6 and 12 equal parts.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
+    expSetup: ['Take 7 paper strips, all the same length.', 'Keep one whole. Use the printed strips (or fold or mark paper strips) for 2, 4, 8, 3, 6 and 12 equal parts.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
     expPic: 'A small fraction wall: one whole, halves, quarters and eighths, all with equal parts and a dashed line at one half.',
     expAsk: [
       ['How many 1/8 pieces fit exactly on 1/2?', '4 (1/2 = 4/8).'],
@@ -149,7 +149,7 @@ module.exports = {
     keySmall: 'When we add, we add the top numbers. The bottom number (the size of the parts) stays the same.',
     brk: 'Fraction turns. The tutor calls a turn: “a quarter turn!”, “a half turn!”, “three quarters of a turn!”, “two quarters!” Children turn on the spot and freeze. Which calls make the same turn?',
     ws1: 'Page 1, in pairs: Q1 the fraction wall and equal fractions, Q2 compare and order.',
-    ws2: 'Page 2, on your own: Q3 which shapes show one quarter, Q4 add and subtract, Q5 Ravi paints a fence, Q6 partners that make one whole, Q7 all the twelfths between one half and three quarters.'
+    ws2: 'Page 2, on your own: Q3 which shapes show one quarter, Q4 add and subtract, Q5 Ravi paints a fence, Q6 partners that make one whole (Think harder: all the twelfths between one half and three quarters.)'
   },
 
   qbank: {
@@ -162,6 +162,7 @@ module.exports = {
       { q: 'A bar is cut into 5 equal parts and 2 parts are shaded (2/5). Now cut every part into 2 equal pieces. How many small pieces are shaded now, out of how many pieces? Write it as 2/5 = ?/10.', a: '4 (4 small pieces shaded out of 10: 2/5 = 4/10)' }
     ],
     stretch: [
+      { q: 'Find ALL the fractions with bottom number 12 that are bigger than 1/2 but smaller than 3/4. Hint: look at the twelfths row of your wall. Which one is equal to 2/3?', a: '7/12 and 8/12 (1/2 = 6/12 and 3/4 = 9/12; the end fractions are not between). 8/12 = 2/3.' },
       { q: 'Which is bigger, 3/5 or 7/10? Show how you know.', a: '7/10 (3/5 = 6/10, and 7/10 is bigger than 6/10)' },
       { q: 'Siti reads 1/4 of a book on Monday and 1/2 of the book on Tuesday. What fraction of the book has she read? What fraction is left?', a: 'She has read 3/4 (1/4 + 2/4). 1/4 is left.' },
       { q: 'Put these in order, smallest first: 2/3, 5/6, 7/12.', a: '7/12, 2/3, 5/6 (7/12, 8/12, 10/12)' },
@@ -195,7 +196,7 @@ module.exports = {
     W.push(...H.lines(1));
     W.push(H.q(2, ['Write ', '&gt;', ', ', '&lt;', ' or = in each circle.'], { keepNext: true }));
     const cw = [3300, 3300, 3300];
-    const cmp = (l, a, b) => H.cell([div(`(${l})&nbsp;&nbsp;${fr(...a)}${OV}${fr(...b)}`, 'font-size:20px')], 3300, { h: 110 });
+    const cmp = (l, a, b) => H.cell([div(`(${l})&nbsp;&nbsp;${fr(...a)}&nbsp;&nbsp;${OV}&nbsp;&nbsp;${fr(...b)}`, 'font-size:22px')], 3300, { h: 110 });
     W.push(H.tbl(cw, [
       H.row([cmp('a', [1, 5], [1, 7]), cmp('b', [3, 8], [5, 8]), cmp('c', [2, 3], [4, 6])]),
       H.row([cmp('d', [3, 4], [5, 8]), cmp('e', [4, 9], [4, 7]), cmp('f', [2, 3], [3, 4])])
@@ -220,8 +221,6 @@ module.exports = {
     W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
     W.push(...H.lines(1));
-    W.push(H.q(7, ['(if time) Find ALL the fractions with bottom number 12 that are bigger than ', fr(1, 2), ' but smaller than ', fr(3, 4), '. Hint: look at the twelfths row of your wall.'], { keepNext: true, after: 60 }));
-    W.push(H.sub('a', ['______________________     (b)  Which one is equal to ', fr(2, 3), '?   ________']));
     return W;
   }
 };

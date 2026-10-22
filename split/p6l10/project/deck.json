@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:43:06Z"
+  "at": "2026-10-22T00:18:09Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 10 – Showcase Challenge",
@@ -11,6 +11,7 @@
   "p6l10-check",
   "p6l10-warm1",
   "p6l10-explore1",
+  "p6l10-go",
   "p6l10-ws1",
   "p6l10-ws1ans",
   "p6l10-explore2",
@@ -46,7 +47,7 @@
    "start": "p6l10-teach1"
   },
   "s3": {
-   "description": "Plan and build (early finishers: stretch and challenge)",
+   "description": "Plan and build (Think harder and Go further are open to everyone)",
    "start": "p6l10-break"
   },
   "s4": {

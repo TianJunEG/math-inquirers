@@ -126,12 +126,12 @@ put('p3l6-warm2',sec('p3l6-warm2','5–10 MIN',body,
 
 # ---------- 4. explore: what to do ----------
 mini=wall_svg([1,2,4,8],1400,52,None,24,0.5,'A fraction wall with one whole, halves, quarters and eighths and a dashed line at one half').replace('style="width:1400px;height:216px;display:block"','style="width:100%;height:auto;display:block"')
-steps_html='<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in ['Take 7 paper strips, all the same length.','Keep one whole. Fold or mark the others into 2, 4, 8, 3, 6 and 12 equal parts.','Label every part and stack the strips into a wall.','Ask: which pieces line up exactly?'])+'</ol>'
+steps_html='<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in ['Take the 7 strips from the printed strip page (or 7 paper strips, all the same length).','Keep one whole. Use the strips for 2, 4, 8, 3, 6 and 12 equal parts (or fold or mark paper strips).','Label every part and stack the strips into a wall.','Ask: which pieces line up exactly?'])+'</ol>'
 body=h2('Explore: what to do')+card(chip('EXPLORE')+steps_html,extra='padding:22px 40px;gap:8px')+card(mini,extra='padding:16px 24px')
 put('p3l6-explore1',sec('p3l6-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Pairs fold halves, quarters and eighths (fold in half again and again). For thirds, sixths and twelfths, mark every 8 cm, 4 cm and 2 cm on a 24 cm strip (or roll the strip into an S until the three parts match). '
+ 'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Pairs use the printed strips (online) or fold halves, quarters and eighths (face to face: fold in half again and again). For thirds, sixths and twelfths, mark every 8 cm, 4 cm and 2 cm on a 24 cm strip (or roll the strip into an S until the three parts match). '
  'Children label every part (1/2, 1/4 …) and stack the strips. Stress: the parts in a row must be equal, or they are not halves, thirds … '
- 'Hints: "Which pieces line up with the dashed line at one half?" Ready for more: "Find three different pieces that together cover exactly one half." (e.g. 1/4 + 1/8 + 1/8, or 1/3 + 1/6, or 1/4 + 1/6 + 1/12). '
+ 'Hints: "Which pieces line up with the dashed line at one half?" Ready for more: "Find three different pieces that together cover exactly one half." (with three DIFFERENT pieces the only way is 1/4 + 1/6 + 1/12; 1/4 + 1/8 + 1/8 repeats a piece). '
  'Online: children hold their wall up to the camera.'))
 
 # ---------- 5. explore: talk ----------
@@ -240,12 +240,12 @@ body+=pin(128,410,1664,nlsv)
 body+=step(1,'Change the ends to eighths:  '+F(1,4)+' = '+F(2,8)+',   '+F(3,4)+' = '+F(6,8),top=600,size=32)
 body+=step(2,'In between:  '+F(3,8)+',  '+F(4,8)+',  '+F(5,8)+'.  The ends are not “between”. So 3 fractions.',top=720,size=32)
 put('p3l6-teachbetween',sec('p3l6-teachbetween','58–59 MIN',body,
- 'Teach before worksheet page 2 (Q7). The number line is cut into 8 equal steps from 0 to 1. Click through. Stress: list them in order so none is missed, and do not count the end fractions. Ask: "Which of the three is the same as 1/2?" (4/8).'))
+ 'Teach before page 2 (it also prepares Think harder 1). The number line is cut into 8 equal steps from 0 to 1. Click through. Stress: list them in order so none is missed, and do not count the end fractions. Ask: "Which of the three is the same as 1/2?" (4/8).'))
 
 SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
- [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','If time: ALL the twelfths between one half and three quarters.')],
+ [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('TH','Think harder: ALL the twelfths between one half and three quarters.')],
  'Ready for more? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
@@ -253,9 +253,9 @@ put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together'
   ('Q4',(SP).join(['(a) '+F(5,7),'(b) '+F(5,8),'(c) '+F(9,12)+' = '+F(3,4),'(d) '+F(3,6)+' = '+F(1,2),'(e) '+F(7,10),'(f) '+F(8,10)+' = '+F(4,5)])),
   ('Q5','(a) '+F(5,6)+'   (b) '+F(1,6)+'   (c) '+F(3,6)+' = '+F(1,2)+' more'),
   ('Q6',(SP).join([F(a,b)+' + '+F(c,d) for a,b,c,d in [(1,4,6,8),(2,3,4,12),(3,8,5,8),(5,12,7,12),(1,6,5,6)]])),
-  ('Q7',F(7,12)+' and '+F(8,12)+'.   (b) '+F(8,12)+' = '+F(2,3))],
+  ('TH 1',F(7,12)+' and '+F(8,12)+'.   '+F(8,12)+' = '+F(2,3))],
  'Click after a child explains. Q3: B is 2/8 and D is 3/12, both equal to 1/4. Q4: (b) 2/8 + 3/8; (c) 4/12 + 5/12; (d) 5/6 − 2/6; (e) 10/10 − 3/10; (f) 5/10 + 3/10. Q5: 2/3 = 4/6; 1/6 + 4/6 = 5/6; 6/6 − 5/6 = 1/6; 4/6 − 1/6 = 3/6. '
- 'Q6: 1/4 needs 3/4 = 6/8; 2/3 needs 1/3 = 4/12; 5/12 needs 7/12; 3/8 needs 5/8; 1/6 needs 5/6. Q7: 1/2 = 6/12 and 3/4 = 9/12, so 7/12 and 8/12.',128,30))
+ 'Q6: 1/4 needs 3/4 = 6/8; 2/3 needs 1/3 = 4/12; 5/12 needs 7/12; 3/8 needs 5/8; 1/6 needs 5/6. Think harder 1: 1/2 = 6/12 and 3/4 = 9/12, so 7/12 and 8/12.',128,30))
 
 # ---------- 21. stretch (new items) ----------
 body=h2('Stretch')+items([('1.',F(1,3)+' + '+BOX+' = '+F(5,6)+'.  What goes in the box?'),('2.','Put in order, smallest first:  '+F(1,2)+',  '+F(2,5)+',  '+F(7,10)),('3.','Find all the fractions with bottom number 10 between '+F(1,5)+' and '+F(1,2)+'.')],36)

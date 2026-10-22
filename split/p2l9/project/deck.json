@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:05:44Z"
+  "at": "2026-10-22T00:17:55Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 9 – Measure Masters",
@@ -12,6 +12,7 @@
   "p2l9-warm1",
   "p2l9-warm2",
   "p2l9-explore1",
+  "p2l9-goexp",
   "p2l9-explore2",
   "p2l9-teach1",
   "p2l9-we1",
@@ -51,7 +52,7 @@
    "start": "p2l9-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk and exit",
+   "description": "Think harder, go further, talk and exit",
    "start": "p2l9-stretch"
   }
  },

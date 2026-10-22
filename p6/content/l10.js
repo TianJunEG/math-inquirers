@@ -97,18 +97,18 @@ module.exports = {
     objective: 'Use ideas from all nine lessons (sequences, primes, negative numbers, algebra, counting, probability, angles, clock arithmetic, averages) in a mixed challenge round, then plan, build, test and present a small puzzle program, working out the maths by hand first and explaining why it works.',
     skills: 'Choosing a strategy, connecting topics, planning code, testing with a known answer, presenting and explaining',
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), workbook (challenge round on page 1, planning sheet on page 2), pencil, mini whiteboard, the starter projects as .sb3 files (A Mystery Machine, B Prime or Not?, C Lucky Seven, D Clock Jumper; children use File, Load from your computer), or build them from the slides, certificates, stamps.',
-    online: 'Challenge round in teams of 2 in breakout rooms. Building: everyone in the main room with cameras on, asking for help in the chat. Showcase: each child shares their screen for 3 minutes; the group gives two stars and a wish in the chat. Children may paste a screenshot into the chat instead and the tutor runs their file, which removes screen-share switching. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour.',
-    warmup: 'Lightning relay: one quick question from each of Lessons 1 to 9, passed round the group. Then five quick questions on the slide.',
-    explore: 'Challenge round in teams of 2: workbook page 1, three puzzles from across the program (hexagon pattern and code, primes, and a quick-fire round with negatives, machines, angles, clock arithmetic, digit cards and probability). 1 point for each answer, 1 for a check (by hand or in code), 1 for a clear reason. Then talk: how did you start each puzzle?',
+    online: 'Challenge round in teams of 2 in breakout rooms. Building: everyone in the main room with cameras on, asking for help in the chat. Showcase: in two rounds of 4, each child shares their screen for 2 minutes 30 seconds; the audience writes one question for each presenter and the tutor posts stars first (two stars and a question). A child may show a screenshot and the tutor runs the file. Children may paste a screenshot into the chat instead and the tutor runs their file, which removes screen-share switching. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour.',
+    warmup: 'Lightning relay: one quick question from each of Lessons 1 to 9, passed round the group by volunteers. Then five quick questions on the slide.',
+    explore: 'Challenge round in teams of 2: workbook page 1, three puzzles from across the program (hexagon pattern and code, primes, and a quick-fire round with negatives, machines, angles and clock arithmetic). 1 point for each answer, 1 for a check (by hand or in code), 1 for a clear reason; each team keeps its own score on page 1 and shows it only if the team wants to. Then talk: how did you start each puzzle?',
     mini: 'From puzzle to program: pick a maths idea, work out the answer by hand first, turn the rule into blocks (input, rule, check, output), test with a value you already know, then add a twist. Starter A, Mystery Machine: the computer picks n from 1 to 20, shows 3n + 4, and checks your guess (backwards: subtract 4, divide by 3). Starter B, Prime or Not?: a loop counts the factors of n with mod; exactly 2 factors means prime. Starter C, Lucky Seven: roll two dice 1000 times and count the 7s; 6 of the 36 results make 7, so expect about 167, never exactly.',
-    share: 'Showcase: 3 minutes each. Show the puzzle, run the program, show one test where you knew the answer first, and explain the maths that makes it work.',
+    share: 'Showcase: 2 minutes 30 seconds each, in two rounds of 4. Show the puzzle, run the program, show one test where you knew the answer first, and explain the maths that makes it work.',
     exit: { q: 'Write one thing your program does, one test you did (the input and the answer you expected), and the maths that explains it.', a: 'Open. Look for a test worked out by hand before running the program, and a correct maths reason.' },
     mistakes: ['Coding before working out the maths, so there is no way to tell whether the output is right.', 'Testing only once, or only with the value the program happened to show, instead of a value worked out by hand (and an edge case such as 1 or 0).', 'Showcase: reading the code block by block instead of explaining the maths puzzle and why the program works.'],
     extension: 'Level up your program: ask 5 questions and keep a score, let the player choose the rule, or count every dice total in a list. Write a Python version and check it gives the same results.',
     key: [
       ['Q1', '(a) 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
       ['Q2', '(a) 49 (factors 1, 7, 49; the only other 2-digit number with exactly 3 factors is 25)  (b) 2 × 2 × 3 × 7  (c) 3 + 37, 11 + 29, 17 + 23 (3 ways)'],
-      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (e) 12 numbers; 6 even  (f) 4/12 = 1/3 (12, 21, 24, 42)'],
+      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (parts e and f are now in Think harder 5)'],
       ['Q4', '(a) 31; 18 ((58 − 4) ÷ 3)  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139: 5 of the 36 equally likely results make 8 (2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2), and 1000 × 5 ÷ 36 ≈ 139; the program gives a number near this, not exactly'],
       ['Q5', 'Open: an idea, the puzzle, its answer worked out by hand, and a twist.'],
       ['Q6', 'Open: blocks (under 15) and at least two tests worked out before running, one of them an edge case.']
@@ -117,7 +117,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome to our last lesson, inquirers! Two parts today. First a challenge round with puzzles from all nine lessons. Then you become the puzzle maker: you build a small program that sets a maths puzzle, and you show it to the group.', 'Our rule all program long: notice it, test it, explain why. Today you do all three in front of an audience.'],
-    warmIntro: ['Lightning relay! I ask a quick question from one of our lessons, you answer, then you pass a new question to someone by saying their name. Ready? First one: what is the 10th term of 3, 7, 11, 15?', 'Which lesson did that question come from? Can you remember the trick we learned?'],
+    warmIntro: ['Lightning relay! I ask a quick question from one of our lessons and ask for a volunteer to answer. The child who answers reads the next card and invites someone who has not had a turn. “Pass” is always fine, and the next person helps. Ready? First one: what is the 10th term of 3, 7, 11, 15?', 'Which lesson did that question come from? Can you remember the trick we learned?'],
     predict: ['Look at the puzzles on page 1. Which one do you think will be hardest? Which lesson does each one come from? Write your guesses at the top of the page.'],
     exploreHints: ['Stuck on a puzzle: which lesson does it remind you of? Make a table, list it in order, or draw it.', 'Got an answer: earn the check point. Check it a different way, or test it in code.', 'Finished early: write a rule for Q1 that would make 2027 sticks. Is it possible with hexagons?'],
     think: ['“Hexagon chains: 6, 11, 16 sticks. Each new hexagon shares one side with the last one, so it adds 5 sticks. The first hexagon is 6 = 5 + 1. So n hexagons use 5n + 1 sticks. For 10 hexagons: 51. I can test that in code: start at 6 and change by 5 nine times.”', '“Mystery Machine: the program picks n, works out 3n + 4 and shows it. If it shows 19, I go backwards: 19 − 4 = 15, 15 ÷ 3 = 5. Before I trust the program, I test it with a number I already know: if n is 5 it must show 19.”', '“Lucky Seven: there are 6 × 6 = 36 equally likely results for two dice. 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1 make 7: that is 6 of 36, one sixth. So in 1000 rolls I expect about 167. When I run it I got 152, then 182, then 162: close to 167 but never the same, because the rolls are random.”'],
@@ -130,9 +130,9 @@ module.exports = {
 
   deck: {
     today: 'Take on a challenge round with puzzles from all nine lessons, then plan, build, test and show your own puzzle program.',
-    warmGame: 'Lightning relay. The tutor asks a quick question from one of Lessons 1 to 9; whoever answers asks the next question (from the cards on screen) and names the next person.',
+    warmGame: 'Lightning relay. The tutor asks a quick question from one of Lessons 1 to 9 and asks for a volunteer; the child who answers asks the next question (from the cards on screen) and invites someone who has not had a turn. Pass is always fine.',
     warmQs: [['What is the nth term of 4, 7, 10, 13, …?', '3n + 1'], ['Is 91 a prime number?', 'No: 7 × 13'], ['−5 + 8 − 6 = ?', '−3'], ['A regular hexagon: what angle does the turtle turn at each corner?', '60°'], ['Mean of 7, 9, 11 and 13?', '10']],
-    expSetup: ['Teams of 2. Open the workbook at page 1: the challenge round.', 'Three puzzles from across the program. Maths first.', 'Score: 1 point for each answer, 1 for a check (a different way or in code), 1 for a clear reason.', 'After 12 minutes we check together and add up the points.'],
+    expSetup: ['Teams of 2. Open the workbook at page 1: the challenge round.', 'Three puzzles from across the program. Maths first.', 'Score: 1 point for each answer, 1 for a check, 1 for a clear reason. Keep your own score on page 1.', 'After 10 minutes we check together.'],
     expPic: 'a scoreboard with three columns: answer, check, reason, and a point for each.',
     expAsk: [['How did you start the hexagon puzzle?', 'Make a table of hexagons and sticks; notice + 5 each time; the rule is 5n + 1.'], ['How did you know you had found every way to write 40 as two primes?', 'Go through the primes in order up to 20 and test whether 40 minus each one is prime.'], ['Which check did you do in code?', 'For example, run the hexagon loop, or list the digit-card numbers with nested loops and count the multiples of 3.']],
     mini1: { head: 'Starter A: Mystery Machine', body: ['The program picks n from 1 to 20 and shows 3n + 4.', 'The player works backwards: subtract 4, then divide by 3.', 'Test with a value you know: n = 5 must show 19.'], ans: 'Out 25 → 7. Out 64 → 20. Out 3 is impossible: the smallest OUT for n from 1 to 20 is 7.' },
@@ -141,9 +141,13 @@ module.exports = {
     keyBig: 'Work out the answer by hand first. Then the program is a test: if it agrees with you, you are probably both right; if not, find out which one is wrong.',
     keySmall: 'A good showcase: show the puzzle, run it, show a test you knew the answer to, and explain why it works.',
     brk: 'Turtle moves. The tutor calls a polygon; everyone turns on the spot by its outside angle at every corner (triangle: 120°, square: 90°, hexagon: 60°) and counts until they face the front again.',
-    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round (negatives, machines, turtle angles, clock, digit cards and probability).',
+    ws1: 'Page 1, in teams of 2 (the challenge round): Q1 hexagon chains and code, Q2 primes, Q3 quick-fire round (negatives, machines, turtle angles, clock).',
     ws2: 'Page 2, on your own (plan and build): Q4 test the starters by hand, Q5 my puzzle program, Q6 blocks and test table, then build it in Scratch.'
   },
+
+  moved: [
+    { q: 'Cards 1, 2, 3, 4 make 2-digit numbers (no card twice). (a) How many numbers? How many are even? (b) One of the numbers is picked at random. What is the probability it is a multiple of 3?', a: '(a) 12 numbers (4 × 3); 6 are even (3 + 3). (b) 4/12 = 1/3 (12, 21, 24, 42).' }
+  ],
 
   qbank: {
     core: [
@@ -197,8 +201,6 @@ module.exports = {
       H.sub('b', 'A machine does × 3, then − 10. Which IN number comes OUT unchanged?  ____'),
       H.sub('c', 'A turtle draws a regular polygon, turning 24° at each corner. Sides?  ____'),
       H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ____'),
-      H.sub('e', 'Cards 1, 2, 3, 4 make 2-digit numbers (no card twice). How many?  ____   Even?  ____'),
-      H.sub('f', 'One of them is picked at random. Probability it is a multiple of 3?  ____'),
 
       H.q(4, 'Maths first! Work out what each starter project should do BEFORE you run it.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Mystery Machine (× 3, then + 4).  n = 9 gives?  ____     OUT 58 came from?  ____'),
