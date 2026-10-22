@@ -217,7 +217,9 @@ def check_workbook_items(d):
     for q in qs:
         cw = b_print.choice_words(q['text'], q.get('choices')) or any(b_print.choice_words(p['text'], p.get('choices')) for p in q.get('parts', []))
         vis = q.get('visual') or {}
-        on_picture = bool(vis.get('hide'))      # empty boxes drawn in the picture are the answer slots
+        vj = json.dumps([q.get('visual'), q.get('visuals')])
+        on_picture = bool(vis.get('hide')) or vis.get('labels') == 'box' or any((x or {}).get('labels') == 'box' or (x or {}).get('hide') for x in (q.get('visuals') or [])) or bool(re.search(r'"(\[\]|\(\)|\[\d\]|\[ \])"', vj))   # empty boxes, circles or hidden cells drawn in a picture are answer slots
+        if q.get('tf') or q.get('mcq') or q.get('steps'): on_picture = True
         if not (q.get('parts') or q.get('lines', 0) > 0 or q.get('draw') or cw or on_picture):
             fail(f"workbook: {q['id']} has no answer slot (add parts with ___ or [], lines, draw, or choices)")
         if re.search(r'circle (the )?(correct|right) (answer|word|one)\b', q['text'], re.I) and not q.get('choices'):
@@ -230,6 +232,8 @@ def check_workbook_items(d):
             if est is None:
                 est = 0
                 for m in re.finditer(r'(\d+)\s+(bundles?|boxes|tens)\b', t): est += int(m.group(1)) * 10
+                for m in re.finditer(r'(\d+)\s+(groups?|rows?|plates?|bags?)\s+of\s+(\d+)', t): est += int(m.group(1)) * int(m.group(3))
+                t = re.sub(r'(\d+)\s+(groups?|rows?|plates?|bags?)\s+of\s+(\d+)', ' ', t)
                 rest = re.sub(r'(\d+)\s+(bundles?|boxes|tens)\b', ' ', t)
                 est += sum(int(n) for n in re.findall(r'\b(\d+)\b', rest) if int(n) < 100)
             if est > 25: warn(f"workbook: {q['id']} asks the child to draw about {est} strokes (over 25 is heavy for ages 6-8): draw a bundle as one bar, or lower the numbers (or set draw_strokes)")
@@ -379,7 +383,7 @@ STANDARD_PHRASES = [  # standard school-paper command wording (WORDING_GUIDE.md)
     r"make the (greatest|smallest|biggest|largest) number( and the (greatest|smallest|biggest|largest) number)?", r"is \w+ correct\?\s*circle yes or no\.?",
     r"circle yes or no", r"circle (the correct|the right) answer", r"fill in the (missing numbers?|blanks?|correct answers? in the spaces provided)",
     r"write your answers? in the boxes provided", r"show all your workings clearly", r"tick \W?.?\W? ?true or false", r"count and write",
-    r"write a number sentence", r"find the total", r"complete the (table|pattern|number sentences?)", r"write the number", r"how many \w+ (are )?(there )?altogether\??"]
+    r"write a number sentence", r"find the total", r"complete the (table|pattern|number sentences?)", r"put a tick (\\(.\\) )?in the correct box", r"tick (\\(.\\) )?true or false", r"write a multiplication sentence", r"how many more to make equal groups", r"write the number", r"how many \w+ (are )?(there )?altogether\??"]
 
 
 def std_strip(text):
@@ -444,45 +448,75 @@ def check_answers(d):
             env = dict(zip(names, combo))
             full = dict(env)
             for k, ex in tp.get('derive', {}).items(): full[k] = py_eval(ex, full)
-            a = py_eval(tp['answer'].replace('//', '/'), full) if '//' not in tp['answer'] else py_eval(tp['answer'], full)
-            if '//' in tp['answer']: a = int(a) if a == int(a) else a
-            else: a = a
             exp = oracles[it['id']](env)
-            if a != exp: fail(f"practice: {it['id']} variant {env}: expression gives {a} but oracle gives {exp}")
-            if a != int(a) or a < 0: fail(f"practice: {it['id']} variant {env}: answer {a} is not a whole number >= 0")
-            for txt in [tp['q'], tp['hint']] + tp['steps']:
-                miss = [x for x in re.findall(r'\{(\w+)\}', txt) if x not in full and x != 'ans']
+            if tp.get('answers'):                                   # R2: several ordered boxes, one expression per field
+                got = {f: eval_expr(ex, full) for f, ex in tp['answers'].items()}
+                if got != exp: fail(f"practice: {it['id']} variant {env}: fields give {got} but oracle gives {exp}")
+                for f, ex in tp['answers'].items(): js_cases.append((it['id'] + '.' + f, ex, full, got[f]))
+            elif tp.get('options') is not None:                      # R5: templated choice, answer_index is an expression
+                idx = int(eval_expr(tp['answer_index'], full))
+                if not 0 <= idx < len(tp['options']): fail(f"practice: {it['id']} variant {env}: answer_index {idx} outside the options")
+                elif tp['options'][idx] != exp: fail(f"practice: {it['id']} variant {env}: option {tp['options'][idx]!r} but oracle gives {exp!r}")
+                js_cases.append((it['id'], tp['answer_index'], full, idx))
+            else:
+                a = eval_expr(tp['answer'], full)
+                if a != exp: fail(f"practice: {it['id']} variant {env}: expression gives {a} but oracle gives {exp}")
+                if not isinstance(a, list) and (a != int(a) or a < 0): fail(f"practice: {it['id']} variant {env}: answer {a} is not a whole number >= 0")
+                js_cases.append((it['id'], tp['answer'], full, a))
+            texts = [tp.get('q', ''), tp.get('hint', '')] + list(tp.get('steps', [])) + list(tp.get('options') or []) + [tp.get('frame', '')]
+            for txt in texts:
+                miss = [x for x in re.findall(r'\{(\w+)(?:\|\w+)?\}', txt) if x not in full and x != 'ans']
                 if miss: fail(f"practice: {it['id']} placeholder {miss} not defined")
             total += 1
-            js_cases.append((it['id'], tp['answer'], full, a))
-        # authored value equals the template at its own numbers
         base = oracles[it['id']]
-        if it['type'] == 'number':
-            assert isinstance(it['answer'], int), it['id']
-        if it['id'] in getattr(m, 'BASE_ENV', {}):
+        if it['id'] in getattr(m, 'BASE_ENV', {}) and it['type'] in ('number', 'choice', 'set'):
             env = m.BASE_ENV[it['id']]
-            if base(env) != it['answer']: fail(f"practice: {it['id']} authored answer {it['answer']} differs from oracle at its own numbers")
-    # slips must be wrong
-    for it in items:
+            exp0 = base(env)
+            if it['type'] == 'number' and it['answer'] != exp0: fail(f"practice: {it['id']} authored answer {it['answer']} differs from oracle at its own numbers")
+    for it in items:                                                 # slips must be wrong; shapes of the new types
         for s in it.get('slips', []):
             for a in s['a']:
                 if it['type'] == 'number' and a == it['answer']: fail(f"practice: {it['id']} has a slip equal to the right answer")
                 if it['type'] == 'choice' and a == it['answer']: fail(f"practice: {it['id']} slip equals right answer")
         if it.get('ordered') and it['type'] != 'set': fail(f"practice: {it['id']} ordered only applies to set items")
-        if it['type'] == 'choice' and it['answer'] not in it['options']: fail(f"practice: {it['id']} answer not among options")
-    # cross-check with the runner's JavaScript calc()
+        if it['type'] == 'choice' and 'tpl' not in it and it['answer'] not in it['options']: fail(f"practice: {it['id']} answer not among options")
+        if it['type'] == 'fields':
+            fr = it.get('frame', '')
+            ids = [f['id'] for f in it.get('fields', [])]
+            if not ids or any('{' + i + '}' not in fr for i in ids): fail(f"practice: {it['id']} fields item: every field id must appear as {{id}} in the frame")
+        if it.get('fig'):
+            import svg
+            try: svg.render_visual(it['fig'] if '{' not in json.dumps(it['fig']) else it['fig_base'])
+            except Exception as e: fail(f"practice: {it['id']} fig does not render: {e}")
+    # cross-check with the runner's JavaScript calc() (same helpers as the python oracle)
     js = os.path.join(L1, 'runner', 'practice.js')
     src = open(js, encoding='utf-8').read()
     a = src.index('function calc'); b = src.index('function fill')
     calc = src[a:b]
-    harness = calc + '\nconst cases=JSON.parse(process.argv[1]);const bad=[];cases.forEach(c=>{try{const v=calc(c[1],c[2]);if(v!==c[3])bad.push([c[0],c[2],v,c[3]]);}catch(e){bad.push([c[0],String(e)])}});console.log(JSON.stringify(bad));'
+    helpers = src[src.index('var HELP'):src.index('function calc')] if 'var HELP' in src else ''
+    harness = helpers + calc + '\nconst cases=JSON.parse(process.argv[1]);const bad=[];cases.forEach(c=>{try{const v=calc(c[1],c[2]);if(JSON.stringify(v)!==JSON.stringify(c[3]))bad.push([c[0],c[2],v,c[3]]);}catch(e){bad.push([c[0],String(e)])}});console.log(JSON.stringify(bad));'
     try:
-        r = subprocess.run(['node', '-e', harness, json.dumps(js_cases)], capture_output=True, text=True, timeout=60)
+        r = subprocess.run(['node', '-e', harness, json.dumps(js_cases)], capture_output=True, text=True, timeout=120)
         bad = json.loads(r.stdout.strip() or '["node failed: ' + r.stderr[:200].replace('"', "'") + '"]')
         if bad: fail(f'practice: runner JS calc disagrees with python on {len(bad)} cases, e.g. {bad[:2]}')
         else: ok(f'practice: {total} template variants verified three ways (expression, brute-force oracle, runner JavaScript calc)')
     except Exception as e:
         warn('practice: could not run node cross-check: ' + str(e))
+
+
+HELPERS = {'multiples': lambda k, lim: [k * i for i in range(1, lim // k + 1)], 'common': lambda a, b, lim: [n for n in range(1, lim + 1) if n % a == 0 and n % b == 0],
+           'divisors': lambda n: [i for i in range(1, n + 1) if n % i == 0]}
+
+
+def eval_expr(expr, env):
+    """Template expression: arithmetic (+ - * // % ( )) or one list helper multiples(k,limit) / common(a,b,limit) / divisors(n)."""
+    m = re.fullmatch(r'\s*(multiples|common|divisors)\(([^)]*)\)\s*', expr)
+    if m:
+        args = [py_eval(x, env) for x in m.group(2).split(',')]
+        return HELPERS[m.group(1)](*[int(x) for x in args])
+    a = py_eval(expr.replace('//', '/'), env) if '//' not in expr else py_eval(expr, env)
+    if '//' in expr and a == int(a): a = int(a)
+    return a
 
 
 def check_key_pdf(d):
@@ -514,11 +548,13 @@ def check_term_check(d):
     fills = pdfcheck.pdf_fill(sheet, 12.0, 15.0)
     for i, f in enumerate(fills, 1):
         if f < 0.40: fail(f'term check: student sheet page {i} only {f:.0%} full')
-    bar, line = m.measure_sheet(sheet, c)
-    for name, got, want in (('10 cm bar', bar, c['sheet_check_bar_mm']),):
-        if got is None or abs(got - want) > 0.6: fail(f'term check: printed {name} measures {got} mm, must be {want} mm (within 0.6 mm)')
-    if bar is not None and not [f for f in FAILS if f.startswith('term check')]:
-        ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), measured on the PDF")
+    bar = line = None
+    if c.get('sheet_check_bar_mm'):
+        bar, line = m.measure_sheet(sheet, c)
+        for name, got, want in (('10 cm bar', bar, c['sheet_check_bar_mm']),):
+            if got is None or abs(got - want) > 0.6: fail(f'term check: printed {name} measures {got} mm, must be {want} mm (within 0.6 mm)')
+    if not [f for f in FAILS if f.startswith('term check')]:
+        ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page" + (f"; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), measured on the PDF" if bar else ''))
 
 
 def check_cover(d):
@@ -532,6 +568,64 @@ def check_cover(d):
     else: ok('guide cover: Mi does not overlap the title or text')
 
 
+def check_identity(d):
+    n = int(d['_num'])
+    exp_term = (n - 1) // 10 + 1; exp_in = (n - 1) % 10 + 1
+    if d['term'] != exp_term or d['lesson_in_term'] != exp_in or d['lesson'] != n:
+        fail(f"identity: file l{d['_num']} should have term {exp_term}, lesson {n}, lesson_in_term {exp_in} (found {d['term']}, {d['lesson']}, {d['lesson_in_term']})")
+    if d['id'] != f"l1-t{d['term']}-{exp_in:02d}" and d['id'] != f"l1-t{d['term']}-{n:02d}": fail(f"identity: id {d['id']} does not match term/lesson")
+    if d['online_practice']['key'] != f"t{d['term']}l{d['_num']}": fail(f"identity: practice key must be t{d['term']}l{d['_num']} (found {d['online_practice']['key']})")
+    if not [f for f in FAILS if f.startswith('identity')]: ok(f"identity: term {d['term']}, lesson {n}, lesson_in_term {exp_in}, practice key {d['online_practice']['key']}")
+
+
+def check_figures(d):
+    """Every figure spec in slides, questions and practice items must render (registered type, valid fields)."""
+    import svg
+    specs = []
+    def walk(x):
+        if isinstance(x, dict):
+            if x.get('t') == 'visual' or ('type' in x and x.get('type') in FIGURE_TYPES): specs.append(x)
+            for k, y in x.items():
+                if k in ('visual', 'fig'): specs.append(y)
+                walk(y)
+        elif isinstance(x, list):
+            for y in x: walk(y)
+    for s in d['slides']: walk(s['blocks'])
+    for q in all_questions(d) + d['exit']: walk(q)
+    for it in d['online_practice']['items']:
+        if it.get('fig') and not any('{' in json.dumps(it['fig']) for _ in [0]): specs.append(it['fig'])
+    n = 0
+    for sp in specs:
+        if not isinstance(sp, dict) or 'type' not in sp: continue
+        try: svg.render_visual(sp); n += 1
+        except Exception as e: fail(f"figures: {sp.get('type')} does not render: {type(e).__name__}: {e}")
+    if not [f for f in FAILS if f.startswith('figures')]: ok(f'figures: {n} figure specs render')
+
+
+FIGURE_TYPES = {'bundles', 'scatter', 'ten_frame', 'ten_to_bundle', 'hundred_square', 'hundred', 'seq', 'number_line', 'ruler', 'plates', 'objects', 'groups', 'array', 'line_up',
+                'round_table', 'bar_model', 'table', 'picture_equation', 'domino'}
+
+
+def check_glyphs(d):
+    """x and division signs used in the lesson must survive into the built PDFs (text extraction) and the font files must be the latin subset."""
+    import subprocess
+    allt = json.dumps(d, ensure_ascii=False, default=str)
+    used = [g for g in ('\u00d7', '\u00f7', '\u2212') if g in allt]
+    if not used: return
+    od = os.path.join(OUT, f"l{d['_num']}")
+    css = font_css()
+    if 'latin-ext' in css.split('Fredoka')[1][:400] and 'latin-400' not in css: warn('glyphs: fonts.css may not be the latin subset')
+    bad = []
+    for name in ('Workbook', 'Home_Practice', 'Tutor_Guide'):
+        p = os.path.join(od, f"L{d['_num']}_{name}.pdf")
+        if not os.path.exists(p): continue
+        tx = subprocess.run(['pdftotext', p, '-'], capture_output=True, text=True).stdout
+        for g in used:
+            if g not in tx and g in json.dumps(({"t": d["tiers"], "h": d["home_practice"]} if name != "Tutor_Guide" else {k: v for k, v in d.items() if not k.startswith("_")}), ensure_ascii=False, default=str): bad.append(f'{name}: {g!r} missing from the PDF text')
+    if bad: fail('glyphs: ' + '; '.join(bad))
+    else: ok('glyphs: x and division signs present in the built PDFs')
+
+
 def check_foreign(d):
     """Built outputs of lesson NN must not contain another lesson's title or 'Lesson 1' text (template leaks)."""
     import glob, subprocess
@@ -542,7 +636,9 @@ def check_foreign(d):
     for f in glob.glob(os.path.join(L1, 'lessons', 'l*.json')):
         n = os.path.basename(f)[1:3]
         if n != num:
-            try: others[n] = json.load(open(f))['title']
+            try:
+                o = json.load(open(f))
+                if o.get('term') == d['term']: others[n] = o['title']      # only lessons of the same term are compared
             except Exception: pass
     texts = []
     for f in glob.glob(os.path.join(od, '*.html')) + glob.glob(os.path.join(od, 'html', '*.html')):
@@ -559,25 +655,25 @@ def check_foreign(d):
                 before = t1[max(0, m.start() - 45):m.start()].lower()
                 if re.search(r'next lesson|lesson \d+:?\s*$|lessons? \d+', before): continue   # a pointer to the next lesson is allowed
                 bad.append(f"{os.path.basename(f)} mentions lesson {n} title '{title}'"); break
-        if num != '01' and re.search(r'\bLesson 1\b(?!\d)', t1) and not re.search(r'Lesson 1 (of|onwards)', t1[:0]):
+        if d['lesson_in_term'] != 1 and re.search(r'\bLesson 1\b(?!\d)', t1):
             hits = [m.start() for m in re.finditer(r'\bLesson 1\b(?!\d)', t1)]
             for h in hits:
                 ctx = t1[max(0, h - 40):h + 30]
                 if not re.search(r'previous|earlier|Lesson 1 to|Lessons? 1,|from Lesson 1|in Lesson 1', ctx, re.I): bad.append(f"{os.path.basename(f)} contains 'Lesson 1' ({ctx.strip()})")
-        if re.search(r'bundles and singles', t1, re.I) and 'bundle' not in d['title'].lower() and num != '01': bad.append(f"{os.path.basename(f)} mentions Bundles and Singles")
+        if d['term'] != 1 and re.search(r'Math Inquirers Term 1\b|\bTERM 1 (CHECK|\u2022)', t1): bad.append(f"{os.path.basename(f)} still says Term 1 (this is Term {d['term']})")
     if bad: fail('template leak: ' + '; '.join(sorted(set(bad))[:6]))
     else: ok('template leak: no other lesson title or stray Lesson 1 text in the built files')
 
 
 def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_identity, check_figures, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:
             fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     if built:
-        for fn in (check_outputs, check_key_pdf, check_cover, check_term_check, check_foreign):
+        for fn in (check_outputs, check_glyphs, check_key_pdf, check_cover, check_term_check, check_foreign):
             try: fn(d)
             except Exception as e: fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     return d

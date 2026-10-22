@@ -128,7 +128,7 @@ def qs_block(d, ids, short):
 
 
 def blanks_dash(t):
-    return re.sub(r'_{2,}', lambda m: '_' * (len(m.group(0)) + 3), E(t)).replace('[]', f'<span style="display:inline-block;width:44px;height:44px;border:3px solid {NAVY};border-radius:10px;background:#fff;vertical-align:middle;margin:0 6px"></span>')
+    return blank_tokens(re.sub(r'_{2,}', lambda m: '_' * (len(m.group(0)) + 3), E(t)), 'deck').replace('[]', f'<span style="display:inline-block;width:44px;height:44px;border:3px solid {NAVY};border-radius:10px;background:#fff;vertical-align:middle;margin:0 6px"></span>')
 
 
 def answers_block(d, ids):

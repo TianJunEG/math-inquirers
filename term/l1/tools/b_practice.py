@@ -1,14 +1,54 @@
 """Online practice: writes out/lNN/practice/ (runner + data) in the format of practice/public (see practice/README.md)."""
-import json, os, shutil, sys
+import json, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
+
+
+def _subst(obj, env):
+    if isinstance(obj, str):
+        m = re.fullmatch(r'\{(\w+)\}', obj)
+        if m and m.group(1) in env: return env[m.group(1)]
+        return re.sub(r'\{(\w+)\}', lambda mm: str(env.get(mm.group(1), mm.group(0))), obj)
+    if isinstance(obj, list): return [_subst(x, env) for x in obj]
+    if isinstance(obj, dict): return {k: _subst(v, env) for k, v in obj.items()}
+    return obj
+
+
+def _prepare_items(items):
+    """Render item.fig to inline SVG at build time (item.svg); a figure with {vars} is drawn for every variant (tpl.svgs, up to 80 combinations)."""
+    import copy, itertools, json as _j, svg
+    out = copy.deepcopy(items)
+    warns = []
+    for it in out:
+        fig = it.pop('fig', None); base = it.pop('fig_base', None)
+        if not fig: continue
+        if '{' not in _j.dumps(fig):
+            it['svg'] = svg.render_visual(fig)
+            if it.get('tpl'): warns.append(f"{it['id']}: the picture is shown only for the authored numbers (variants have no picture); use fig with {{vars}} and fig_base")
+        else:
+            it['svg'] = svg.render_visual(base)
+            tp = it['tpl']; names = list(tp['vars'])
+            combos = list(itertools.product(*[tp['vars'][n] for n in names]))
+            if len(combos) > 80: warns.append(f"{it['id']}: {len(combos)} variants, pictures drawn for the first 80 only"); combos = combos[:80]
+            svgs = {}
+            for combo in combos:
+                env = dict(zip(names, combo))
+                full = dict(env)
+                for k, ex in tp.get('derive', {}).items():
+                    full[k] = eval(re.sub(r'\b(%s)\b' % '|'.join(map(re.escape, full)), lambda m: str(full[m.group(1)]), ex).replace('//', '//'))
+                svgs[_j.dumps(env, separators=(',', ':'))] = svg.render_visual(_subst(fig, full))
+            tp['svgs'] = svgs
+        if len(it['svg']) > 60000: warns.append(f"{it['id']}: picture is {len(it['svg']) // 1000} KB")
+    return out, warns
 
 
 def build_practice(d):
     op = d['online_practice']
     od = outdir(d, 'practice')
     os.makedirs(os.path.join(od, 'data'), exist_ok=True)
-    data = {'title': op['title'], 'level': d['level'], 'lesson': d['lesson_in_term'], 'term': d['term'], 'topic': op['topic'], 'items': op['items']}
+    items, pw = _prepare_items(op['items'])
+    for w in pw: print('WARN  practice picture:', w)
+    data = {'runner': 2, 'title': op['title'], 'level': d['level'], 'lesson': d['lesson_in_term'], 'term': d['term'], 'topic': op['topic'], 'items': items}
     json.dump(data, open(os.path.join(od, 'data', op['key'] + '.json'), 'w'), ensure_ascii=False)
     # the Term 1 runner (term/l1/runner): relative paths, answer-order aware, shuffled choices (the level-wide runner in practice/public is untouched)
     shutil.copy(os.path.join(L1, 'runner', 'practice.js'), os.path.join(od, 'practice.js'))

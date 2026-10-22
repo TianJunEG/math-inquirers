@@ -79,7 +79,7 @@ def line_html(d, part, t0, sec, ln, sm):
     return f'<div class="ln {k}{" opt" if ln.get("optional") else ""}"><span class="ts">{ts}</span><span class="kd">{kd}</span><span class="tx">{txt}{extra}</span></div>'
 
 
-bx = lambda s: E(s).replace('[]', '<span class="boxb"></span>')
+bx = lambda s: blank_tokens(E(s), 'guide')
 
 
 def q_html(q, tier_label=None):

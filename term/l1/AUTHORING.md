@@ -129,3 +129,21 @@ Safest to skip or make up: Lesson 4. Hardest to miss: Lessons 1 and 5 to 7.
 - **End-of-term check generator** is now `tools/b_check.py` (built by `build.sh` for any lesson with an `end_of_term_check` block; Term 2 and later reuse it; set `dotbox: true` on a question that needs the dot box). The old `assets/l10_extras.py` only forwards to `build.sh 10`.
 - **Mi without the calculator:** if the owner supplies `term/l1/assets/mi_dolphin_nocalc.png` (same size, never edit the original) the builders use it automatically everywhere.
 - The answer-key PDF check fails if a section heading is left at the bottom of a page with its block on the next.
+
+## Term 2 (lessons 11-20)
+
+**Identity.** Every lesson JSON carries `term` (1 or 2), `lesson` (global 1-20), `lesson_in_term` (1-10), `id` (`l1-t2-NN`) and practice key `t{term}l{NN}` (Term 2: `t2l11`...). Footers and badges read "Math Inquirers Term 2 • Lesson 3" from `lesson_in_term`. The leak check is keyed on `lesson_in_term`: "Lesson 1" is allowed only in a lesson whose `lesson_in_term` is 1, and a "Term 1" footer is a FAIL in Term 2.
+
+**Stub.** `lessons/l11.json` has `stub: true` and exists only to prove the templates. Replace it entirely when writing the real Lesson 11 (copy its question forms as examples).
+
+**Figures** (`tools/figs2.py`): `objects`, `groups` (plate/bag/box/jar/cup; `counts`, `empty`, `label_each`, `total`), `array` (`hide`, `shade_rows`, `pairs`, `ring_left_over`, `row_label`, `col_label`), `line_up` (queue; labels ordinal/number/box/none; `highlight`, `between`), `round_table`, `bar_model` (compare, part-whole, units, brace, gap, transfer arrow), `table` (cells: text, `[]`, `[2]`, `()`, `[ ]` or an icon), `picture_equation` (six distinct symbols), two-colour `ten_frame` (list `filled`), `domino`. 32 icon names (child1-6, apple, cookie, counter, counter_red/yellow, coin ...). Kits: `ten_frame`, `groups_mat`, `unit_strips`, `array_mat`, `people`, `plates`, shapes incl. star and heart.
+
+**Question fields**: `visuals` (side by side), `tf` (true/false tick table), `mcq`, `steps` (labelled lines), `draw` (bool or number of lines), `draw_strokes`, `choices`. Workbook: `hint_p2`, `kits`. Tokens: `___` (width by length), `[]`, `[2]`/`[3]` linked boxes, `()` sign circle, `[ ]` tick box, `{eq}` frame.
+
+**Runner v2** (`runner/`, `runner: 2`): `fig`/`fig_base` pictures (per-variant pictures capped at 80 combinations), `ordered` sets, `type:'fields'` with `frame` `{id}` and per-field `tpl.answers`, templated choice (`tpl.options` + `answer_index`), helpers `multiples`, `common`, `divisors`, formatters `{n|ord}` and `{n|word}`. Every variant is verified three ways; supply an independent oracle in `verify/lNN_checks.py`.
+
+**End-of-term check**: `tools/b_check.py` builds it from `end_of_term_check` (optional `sheet_check_bar_mm`, `measure_note`, `line_pct`, `dotbox`).
+
+**Checks added**: identity, figures render, glyphs (× ÷ − survive in PDFs), slide privacy, `next_materials`, workbook slot rules, real-PDF page/fill.
+
+**Deferred (not built)**: venn2, `price_tag`, dot_cards, formatters beyond ord/word, richer `picture_equation`, shapes beyond star/heart, more than 80 picture variants per item.

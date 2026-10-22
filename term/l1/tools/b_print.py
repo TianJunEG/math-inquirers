@@ -29,9 +29,15 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .p1 .qbox:has(svg.h100)>.vis{width:292px!important}
 .tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
 .tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
+.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.nar{width:150px!important}.vis.nar.rt{width:175px!important}
+.visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
+.tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
+.mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
+.stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
@@ -65,19 +71,37 @@ def choice_html(words):
     return '<span class="yn">' + ''.join(f'<span>{E(w)}</span>' for w in words) + '</span>'
 
 
+def _vis_html(v):
+    if v.get('type') == 'ruler':   # true 1:1 scale on paper
+        return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
+    wide = v.get('type') in ('table', 'bar_model', 'line_up')
+    nar = v.get('type') in ('round_table', 'domino', 'array')
+    return f'<div class="vis{" wide" if wide else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+
+
 def qbox(q, label=None, draw=False):
     lab = label or q['id']
-    vis = f'<div class="vis">{svg.render_visual(q["visual"])}</div>' if q.get('visual') else ''
-    if q.get('visual', {}).get('type') == 'ruler':   # true 1:1 scale on paper
-        v = q['visual']
-        vis = f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
+    vis = _vis_html(q['visual']) if q.get('visual') else ''
+    if q.get('visuals'):      # two or more pictures in one question, side by side
+        k = len(q['visuals'])
+        vis += f'<div class="visrow" style="--n:{k}">' + ''.join(_vis_html(v) for v in q['visuals']) + '</div>'
     parts = ''
     if q.get('parts'):
         for p in q['parts']:
             cw = choice_words(p['text'], p.get('choices'))
             parts += f'<div class="sub"><span class="sl">{E("(" + p["l"] + ")") if p["l"] else ""}</span><span>{blanks(p["text"])}</span>{choice_html(cw) if cw else ""}</div>'
-    if q.get('draw'): vis += '<div class="draw"></div>'
+    if q.get('draw'):
+        nd = q['draw'] if isinstance(q['draw'], int) and not isinstance(q['draw'], bool) else 1
+        vis += ''.join('<div class="draw" style="height:%dpx"></div>' % (105 if nd == 1 else 70) for _ in range(nd))
+    if q.get('tf'):           # statement / True / False with tick boxes
+        rows = ''.join(f'<tr><td>{blanks(r["s"])}</td><td class="tk"><i class="bx"></i></td><td class="tk"><i class="bx"></i></td></tr>' for r in q['tf'])
+        parts += f'<table class="tf"><tr><th>Statement</th><th>True</th><th>False</th></tr>{rows}</table><div class="pins2">Put a tick (\u2713) in the correct box.</div>'
+    if q.get('mcq'):          # options (1) to (4) with a bracket at the right margin
+        opts = ''.join(f'<div class="mo"><span class="mn">({i})</span><span>{blanks(str(o))}</span></div>' for i, o in enumerate(q['mcq']['options'], 1))
+        parts += f'<div class="mcq"><div>{opts}</div>' + ('<span class="mbr">(&nbsp;&nbsp;&nbsp;&nbsp;)</span>' if q['mcq'].get('bracket', True) else '') + '</div>'
     ln = ''.join('<div class="ln"></div>' for _ in range(q.get('lines', 0)))
+    if q.get('steps'):        # labelled step lines
+        ln += ''.join(f'<div class="stp"><b>{E(s)}</b><span class="ln" style="flex:1"></span></div>' for s in q['steps'])
     cq = choice_words(q['text'], q.get('choices'))
     if cq and not any(choice_words(p['text'], p.get('choices')) for p in q.get('parts', [])): parts += f'<div class="sub">{choice_html(cq)}</div>'
     return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{blanks(q["text"])}</span></div>{vis}{parts}{ln}</div>'
@@ -94,7 +118,7 @@ def workbook_html(d, key=False):
     t = d['tiers']; inv = t['investigation']
     P = []
     P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question {wb(d, "choice_after", 3)} you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p1", "Use objects, your kit or a drawing. Say your answer out loud, then write it."))}</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
-    P.append(f'<div class="page">{hdr(d, "Start here")}' + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
+    P.append(f'<div class="page">{hdr(d, "Start here")}' + (f'<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p2"))}</p>' if wb(d, 'hint_p2') else '') + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p3", "Use objects, draw a picture or make a table. Then write how you know. Choose any question, in any order."))}</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p4", "Choose any question. You do not have to finish them all."))}</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
     ex = ''.join(qbox(q, 'E' + q['id'][1:] if False else q['id']) for q in d['exit'])
@@ -111,9 +135,9 @@ def workbook_html(d, key=False):
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
     body = ''.join(P)
-    for i in sorted(set(d.get('_tight', ())) | set(d.get('_tight2', ())), reverse=True):    # pages measured over full get tighter spacing
+    for i in sorted(set(d.get('_tight', ())) | set(d.get('_tight2', ())) | set(d.get('_tight3', ())), reverse=True):    # pages measured over full get tighter spacing
         parts = body.split('<div class="page')
-        if i + 1 < len(parts): parts[i + 1] = (' tight tight2' if i in d.get('_tight2', ()) else ' tight') + parts[i + 1]
+        if i + 1 < len(parts): parts[i + 1] = (' tight tight2 tight3' if i in d.get('_tight3', ()) else (' tight tight2' if i in d.get('_tight2', ()) else ' tight')) + parts[i + 1]
         body = '<div class="page'.join(parts)
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{body}</body></html>'
 
@@ -180,16 +204,21 @@ def build_print(d, pw):
     f = f'Math Inquirers Term {d["term"]} \u2022 Notice it. Test it. Explain why.'
     # workbook: re-render with tighter spacing on the overflowing page until the real PDF has exactly the designed pages
     want = workbook_html(d).count('<div class="page')
-    d.setdefault('_tight', set()); d.setdefault('_tight2', set())
-    for attempt in range(5):
+    d.setdefault('_tight', set()); d.setdefault('_tight2', set()); d.setdefault('_tight3', set())
+    for attempt in range(8):
         path = render('workbook', workbook_html(d), f + f' \u2022 Lesson {d["lesson_in_term"]}', f'L{n}_Workbook.pdf')
         got = pdfcheck.pdf_pages(path)
         if got == want: break
         fills = pdfcheck.pdf_fill(path)
-        orphan = next((i for i, x in enumerate(fills) if x < 0.15 and i > 0), None)
-        bad = (orphan - 1) if orphan is not None else max(range(len(fills)), key=lambda i: fills[i])
-        if bad in d['_tight']: d['_tight2'].add(bad)
-        d['_tight'].add(bad)
+        bads = []; hi = -1                       # map PDF pages to designed pages: an orphan page belongs to the designed page before it
+        for i, x in enumerate(fills):
+            if x < 0.40 and i > 0 and fills[i - 1] >= 0.88: bads.append(hi)
+            else: hi += 1
+        bads = bads or [max(range(len(fills)), key=lambda i: fills[i])]
+        for bad in bads:
+            if bad in d['_tight2']: d['_tight3'].add(bad)
+            if bad in d['_tight']: d['_tight2'].add(bad)
+            d['_tight'].add(bad)
     render('workbook_key', key_html(d), f + ' \u2022 Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
     for lvl in (0, 1, 2):
         d['_home_tight'] = lvl

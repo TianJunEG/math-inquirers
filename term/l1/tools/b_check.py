@@ -159,7 +159,7 @@ def sheet_html(d):
                      + ''.join(f'<div class="sub2"><span>{blanks2(p["text"])}</span></div>' for p in o['parts'])
                      + '<div class="foot">You may skip this one. It is not marked.</div></div>')
             body += '<div style="text-align:center;font-family:Fredoka;font-size:22px;color:#1F7A6F;margin:18px 0 4px">Well done for trying your best!</div>'
-        if pg == total:
+        if pg == total and c.get('sheet_check_bar_mm'):
             body += (f'<div class="foot" style="margin-top:14px"><b>Print check (for the grown-up):</b> this bar must measure exactly 10 cm. If it does not, print again at 100% (actual size).</div>'
                      f'<div style="margin:6px 0 0 4px">{check_bar_svg(c["sheet_check_bar_mm"])}</div>')
         pages.append(f'<div class="page p{pg}">{body}</div>')
@@ -352,7 +352,8 @@ def longest_dark_run_mm(pdf, page, dpi=254, y_range=None):
 
 def measure_sheet(pdf, c):
     """Measure the printed 10 cm bar (last page) on the rendered PDF. Returns (bar_mm, line_mm)."""
-    bar_target = c['sheet_check_bar_mm']
+    bar_target = c.get('sheet_check_bar_mm')
+    if not bar_target: return None, None
     runs4 = longest_dark_run_mm(pdf, c['sheet_pages'])
     bar = min((r for r, _ in runs4 if abs(r - bar_target) < 3), key=lambda r: abs(r - bar_target), default=None)
     return bar, bar
@@ -384,9 +385,10 @@ def build_check(d, pw):
     print('tutor key pages', nk, 'fill', ', '.join(f'{f:.0%}' for f in kfill), '| parent note pages', nn)
     if nn != 1:
         print('FAIL parent note must be one page'); ok = False
-    bar, _ = measure_sheet(sheet, c)
-    print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm')
-    if bar is None or abs(bar - c['sheet_check_bar_mm']) > 0.6:
-        print(f'FAIL printed bar is {bar} mm, should be {c["sheet_check_bar_mm"]} mm'); ok = False
+    if c.get('sheet_check_bar_mm'):       # the printed-length check bar is optional (only checks that need a ruler have one)
+        bar, _ = measure_sheet(sheet, c)
+        print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm')
+        if bar is None or abs(bar - c['sheet_check_bar_mm']) > 0.6:
+            print(f'FAIL printed bar is {bar} mm, should be {c["sheet_check_bar_mm"]} mm'); ok = False
     print('built check files in', od)
     return ok

@@ -200,6 +200,9 @@ def shapes_kit(shapes, size=70):
             st = f'fill="{c}" stroke="#555" stroke-width="2" stroke-dasharray="6 4"'
             if k == 'circle': p.append(f'<circle cx="{cx}" cy="{cy}" r="{a}" {st}/>')
             elif k == 'square': p.append(f'<rect x="{cx - a}" y="{cy - a}" width="{size}" height="{size}" {st}/>')
+            elif k == 'star':
+                pts = ' '.join(f'{cx + (a if j % 2 == 0 else a * 0.45) * math.sin(j * math.pi / 5):.1f},{cy - (a if j % 2 == 0 else a * 0.45) * math.cos(j * math.pi / 5):.1f}' for j in range(10)); p.append(f'<polygon points="{pts}" {st}/>')
+            elif k == 'heart': p.append(f'<path d="M{cx} {cy + a} C{cx - a * 1.6} {cy - a * 0.2} {cx - a * 0.7} {cy - a * 1.1} {cx} {cy - a * 0.3} C{cx + a * 0.7} {cy - a * 1.1} {cx + a * 1.6} {cy - a * 0.2} {cx} {cy + a}" {st}/>')
             elif k == 'rect': p.append(f'<rect x="{cx - a * 1.3}" y="{cy - a * 0.7}" width="{size * 1.3}" height="{size * 0.7}" {st}/>')
             else: p.append(f'<polygon points="{cx},{cy - a} {cx + a * 1.1},{cy + a * 0.8} {cx - a * 1.1},{cy + a * 0.8}" {st}/>')
     rows = (i + cols - 1) // cols
@@ -253,6 +256,10 @@ def plates_mat(labels=('LEFT', 'RIGHT')):
 
 def kit_figure(spec):
     t = spec['type']
+    import figs2
+    r = figs2.render_kit(spec)
+    if r is not None:
+        return r
     if t == 'base_ten': return kit_page_svg()
     if t == 'ten_frame': return ten_frame_kit()
     if t == 'plates': return plates_mat(tuple(spec.get('labels', ('LEFT', 'RIGHT'))))
@@ -384,6 +391,12 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
 
 def render_visual(v):
     t = v['type']
+    import figs2
+    r = figs2.render(v)
+    if r is not None:
+        return r
+    if t == 'ten_frame' and isinstance(v.get('filled'), (list, tuple)):
+        return figs2.ten_frame2(tuple(v['filled']), tuple(v.get('extra', (0, 0))))
     if t == 'bundles':
         return bundles(v['tens'], v['ones'], None, v.get('style', 'sticks'))
     if t == 'scatter':

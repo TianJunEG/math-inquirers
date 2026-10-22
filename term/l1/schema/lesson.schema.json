@@ -470,11 +470,15 @@
     },
     "workbook": {
       "type": "object",
-      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed."
+      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed. | hint_p2: intro line on page 2 | kits types added in Term 2: ten_frame, groups_mat, unit_strips, array_mat, people (see AUTHORING.md)"
     },
     "limits": {
       "type": "object",
       "description": "optional reading-load limits for the validator warning: max_child_words (default 40), max_parent_words (default 90)"
+    },
+    "stub": {
+      "type": "boolean",
+      "description": "true for a lesson file that only exercises the template (not a real lesson)"
     }
   },
   "$defs": {
@@ -569,7 +573,11 @@
           "type": "object"
         },
         "draw": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "integer"
+          ],
+          "description": "true = one drawing box; an integer = that many small boxes"
         },
         "answer": {
           "type": "string"
@@ -603,11 +611,27 @@
         },
         "parts_note": {
           "description": "part labels print as (a), (b); blanks: __ short, ___ standard, ____.._______ longer, [] box"
+        },
+        "visuals": {
+          "type": "array",
+          "description": "two or more figures side by side in one question"
+        },
+        "tf": {
+          "type": "array",
+          "description": "[{s: statement, ans: 'T'|'F'}] printed as a Statement / True / False tick table"
+        },
+        "mcq": {
+          "type": "object",
+          "description": "{options:[..], bracket:true}: options (1) to (4) with a bracket at the right margin; the key lists the answer"
+        },
+        "steps": {
+          "type": "array",
+          "description": "labels printed before ruled lines (for example Step 1, Step 2)"
         }
       }
     },
     "visual": {
-      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out)"
+      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out) | Term 2: objects, groups, array, line_up, round_table, bar_model, table, picture_equation, ten_frame with filled:[red,yellow], domino"
     }
   }
 }

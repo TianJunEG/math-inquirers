@@ -170,12 +170,28 @@ def p_html(s):
 BLANK_MM = {2: 9, 3: 17, 4: 22, 5: 30, 6: 40, 7: 55}   # 7 or more underscores = the longest line      # printed width of an answer line by the number of underscores (3 = the standard blank)
 
 
+_BOX = {'print': (36, 2.5, 9), 'deck': (46, 3, 10), 'guide': (14, 1.5, 3)}
+
+
+def blank_tokens(t, kind='print'):
+    """Replace answer tokens in ALREADY-ESCAPED text: {eq} = [] () [] = [], [2] and [3] linked boxes (two- and three-digit answers),
+    [ ] a tick box, () an empty circle for + - x / (the sign), [] one answer box."""
+    s, bw, rad = _BOX[kind]
+    box = lambda m=None: f'<span style="display:inline-block;width:{s}px;height:{s}px;border:{bw}px solid #1B2A49;border-radius:{rad}px;background:#fff;vertical-align:middle;margin:0 {max(2, s // 8) if m is None else m}px"></span>'
+    circ = lambda: f'<span style="display:inline-block;width:{s}px;height:{s}px;border:{bw}px solid #1B2A49;border-radius:50%;background:#fff;vertical-align:middle;margin:0 {max(2, s // 8)}px"></span>'
+    tick = lambda: f'<span style="display:inline-block;width:{int(s * 0.8)}px;height:{int(s * 0.8)}px;border:{bw}px solid #1B2A49;border-radius:3px;background:#fff;vertical-align:middle;margin:0 {max(2, s // 8)}px"></span>'
+    t = t.replace('{eq}', '[] () [] = []')
+    t = re.sub(r'\[(\d)\]', lambda m: '<span style="white-space:nowrap">' + ''.join(box(1) for _ in range(int(m.group(1)))) + '</span>', t)
+    t = t.replace('[ ]', '\x00T\x00').replace('()', '\x00C\x00').replace('[]', '\x00B\x00')
+    return t.replace('\x00T\x00', tick()).replace('\x00C\x00', circ()).replace('\x00B\x00', box())
+
+
 def blanks(text):
     """Answer blanks in a question: __ (2 underscores) a short line for one digit, ___ the standard line, ____ to _______ longer lines
-    for words or numbers with units, and [] an empty answer box (a clear square for ages 6-8)."""
+    for words or numbers with units, [] an answer box, [2] [3] linked boxes, () a sign circle, [ ] a tick box, {eq} the equation frame."""
     t = E(text)
     t = re.sub(r'_{2,}', lambda m: f'<span class="al" style="min-width:{BLANK_MM[min(len(m.group(0)), 7)]}mm"></span>', t)
-    return t.replace('[]', '<span class="boxb"></span>')
+    return blank_tokens(t, 'print')
 
 
 def kits(d):
