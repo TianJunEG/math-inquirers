@@ -16,7 +16,7 @@
    "Multiplication and division word problems: divide within 20, multiply within 40 (Primary 1, Multiplication and Division, p. 31)",
    "Count money in dollars (Primary 1, Money, p. 31): whole dollars only, no notes, coins or cents until Term 3"
   ],
-  "note": "Strand label for the tutor only. This is an added lesson (gap from the word-problem books analysis: the price or size of one from a group). Start here is Primary 1 content: share a total equally to find one (within 20), then multiply to find many (within 40), in whole dollars. BEYOND PRIMARY 1 ON PURPOSE: Think harder and Go further chain the two steps with different numbers (the price of 7 from the price of 3), use the words a dozen and such, ask how many can be bought, and compare the price of one in two shops. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is only whole dollars and $1 tokens (counters): no notes, coins or cents until Term 3. Vocabulary taught here: each, a dozen, such. This lesson also holds the 20-minute end-of-term check (minutes 37 to 57); the check key, the grown-up note and the record sheet are in the Check files. Contest tag (tutor only): price of one first, then many; how many can be bought; compare the price of one."
+  "note": "Strand label for the tutor only. This is an added lesson (gap from the word-problem books analysis: the price or size of one from a group). Start here is Primary 1 content: share a total equally to find one (within 20), then multiply to find many (within 40), in whole dollars. BEYOND PRIMARY 1 ON PURPOSE: Think harder and Go further chain the two steps with different numbers (the price of 7 from the price of 3), use the words a dozen and such, ask how many can be bought, and compare the price of one in two shops. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is only whole dollars and $1 tokens (counters): no notes, coins or cents until Term 3. Vocabulary taught here: each, a dozen, such. This lesson also holds the 20-minute end-of-term check (minutes 35 to 55); the check key, the grown-up note and the record sheet are in the Check files. Contest tag (tutor only): price of one first, then many; how many can be bought; compare the price of one."
  },
  "contest_moves": [
   "find the price of one first, then the price of many",
@@ -33,14 +33,14 @@
  ],
  "joining_cold": {
   "remember": [
-   "12 counters shared equally onto 3 plates (Lesson 17, taught again with plates)",
-   "Each and in all: 3 bags with 4 counters in each bag (Lessons 15 and 18, taught again with a picture)",
-   "A strip of 4 equal parts with the whole strip 20 (Lesson 18, taught again with a picture)"
+   "12 counters shared equally onto 3 plates (Term 2 Lesson 7, taught again with plates)",
+   "Each and in all: 3 bags with 4 counters in each bag (Term 2 Lessons 5 and 8, taught again with a picture)",
+   "A strip of 4 equal parts with the whole strip 20 (Term 2 Lesson 8, taught again with a picture)"
   ],
   "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up deals counters onto plates, shows bags with the same number in each bag and shows a strip cut into equal parts. The words each, a dozen and such, and the idea of a price, are taught in Explore and the Mini-lesson.",
   "holiday_topics_revisited": [],
   "safe_to_miss": false,
-  "note": "Try not to miss this lesson: it holds the end-of-term check. A child who misses it takes the check at the make-up slot (small group, a parent beside the child on camera) and watches the recording for the lesson. The lesson itself builds on Lessons 15 to 18 (groups, tables, sharing, stories), and a child who joins here without them can follow the warm-up and the first workbook page, but the check will cover lessons the child did not attend: mark those questions as not taught."
+  "note": "Try not to miss this lesson: it holds the end-of-term check. A child who misses it takes the check at the make-up slot (small group, a parent beside the child on camera) BEFORE watching the recording: the check is not in the recording. The lesson itself builds on Term 2 Lessons 5 to 8 (groups, tables, sharing, stories), and a child who joins here without them can follow the warm-up and the first workbook page, but the check will cover lessons the child did not attend: mark those questions as not taught."
  },
  "materials": {
   "child": [
@@ -84,54 +84,54 @@
     "id": "explore",
     "title": "Explore",
     "start": 12,
-    "end": 24
+    "end": 22
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 24,
-    "end": 33
+    "start": 22,
+    "end": 31
    },
    {
     "id": "break",
     "title": "Brain break",
-    "start": 33,
-    "end": 37
+    "start": 31,
+    "end": 35
    },
    {
     "id": "exit",
     "title": "End-of-term check",
-    "start": 37,
-    "end": 57
+    "start": 35,
+    "end": 55
    },
    {
     "id": "work",
     "title": "Workbook",
-    "start": 57,
-    "end": 79
+    "start": 55,
+    "end": 80
    },
    {
     "id": "talk",
     "title": "Talk time",
-    "start": 79,
-    "end": 83
+    "start": 80,
+    "end": 84
    },
    {
     "id": "look",
     "title": "Look-back",
-    "start": 83,
-    "end": 85
+    "start": 84,
+    "end": 86
    },
    {
     "id": "flex",
     "title": "Flex time and goodbye",
-    "start": 85,
+    "start": 86,
     "end": 90
    }
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Lesson 20 is the last lesson of the term, so it holds the end-of-term check. The check is taken straight after the brain break (minutes 37 to 57, the part End-of-term check) while children are fresh, not at the very end as in Term 1; the Start here workbook follows it (minutes 57 to 79, 22 minutes). The exit ticket (E1 to E3) is not done live: the check is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 12 minutes (find one, find many, find one then many with tokens and a strip); the Mini-lesson has 9 (the two steps, writing them, the words each, a dozen and such). The check has 8 short questions and one optional Think harder item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 5 minutes are the standing buffer; nothing new is started in it.",
+  "notes": "Lesson 20 is the last lesson of the term, so it holds the end-of-term check. The check is taken straight after the brain break (minutes 35 to 55, the part End-of-term check) while children are fresh, not at the very end as in Term 1; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the check is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (find one, find many, find one then many with tokens and a strip); the Mini-lesson has 9 (the two steps, writing them, the words each, a dozen and such). The check has 8 short questions and one optional Think harder item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 5 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
    "In a slow class the workbook part runs over: take the time from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
    "the optional slide and the optional exit ticket",
@@ -172,8 +172,8 @@
    "action": "Stand up. Count in twos and fives with the moves, then sit down."
   },
   "exit": {
-   "say": "Recording: the private check is taken live or at the make-up slot. Ask your grown-up how to take it.",
-   "action": "Pause. Ask a grown-up and your tutor how to take the private check."
+   "say": "Recording: the private check is not recorded. Skip ahead to the workbook part.",
+   "action": "Skip to the workbook. Take the check as your tutor arranged, not from the video."
   },
   "work": {
    "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
@@ -208,7 +208,7 @@
      ]
     }
    ],
-   "note": "Lesson 10 of Term 2, 90 minutes, the last lesson of the term. Objective: find the cost of one by sharing a total equally, then the cost of many; use each, a dozen and such. This lesson also holds the 20-minute end-of-term check, taken after the brain break on private paper. Plain statement for families: dividing within 20 and multiplying within 40 in whole dollars is Primary 1 work; finding the price of 7 from the price of 3, a dozen, such and how-many-can-be-bought go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 33, brain break 33 to 37, end-of-term check 37 to 57, workbook 57 to 79, talk 79 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "note": "Lesson 10 of Term 2, 90 minutes, the last lesson of the term. Objective: find the cost of one by sharing a total equally, then the cost of many; use each, a dozen and such. This lesson also holds the 20-minute end-of-term check, taken after the brain break on private paper. Plain statement for families: dividing within 20 and multiplying within 40 in whole dollars is Primary 1 work; finding the price of 7 from the price of 3, a dozen, such and how-many-can-be-bought go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, end-of-term check 35 to 55, workbook 55 to 80, talk 80 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
    "subtitle": "Find one, then find many",
    "mascot": {
     "size": "l",
@@ -298,7 +298,7 @@
      "text": "Each bag has the same number."
     }
    ],
-   "note": "Three bags with 4 counters in each bag. We say each bag has 4, and in all means every bag together. Ask: how many counters in all (12); 5 bags with 2 in each bag (10); 4 groups of 5 (20). This is Lessons 15 and 18 taught again. A child who is unsure adds one bag at a time and says the total each time."
+   "note": "Three bags with 4 counters in each bag. We say each bag has 4, and in all means every bag together. Ask: how many counters in all (12); 5 bags with 2 in each bag (10); 4 groups of 5 (20). This is Term 2 Lessons 5 and 8 taught again. A child who is unsure adds one bag at a time and says the total each time."
   },
   {
    "id": "s-rem3",
@@ -329,7 +329,7 @@
      "text": "4 equal parts. The whole strip is 20."
     }
    ],
-   "note": "A strip is cut into 4 equal parts, and the whole strip is 20. Ask: how big is each part (5); 3 parts of 5 (15); 6 shared into 2 equal parts (3). This is Lesson 18 taught again: a strip shows equal groups. A child who is unsure counts 5, 10, 15, 20 on fingers and counts the fingers."
+   "note": "A strip is cut into 4 equal parts, and the whole strip is 20. Ask: how big is each part (5); 3 parts of 5 (15); 6 shared into 2 equal parts (3). This is Term 2 Lesson 8 taught again: a strip shows equal groups. A child who is unsure counts 5, 10, 15, 20 on fingers and counts the fingers."
   },
   {
    "id": "s-sneak",
@@ -460,7 +460,7 @@
      ]
     }
    ],
-   "note": "Round 2, about 3.5 minutes. Now we know the cost of one: 1 pen costs $3. For 4 pens children put 3 tokens by each pen and count all the tokens (12). Ask: how much do 4 pens cost (12). Say: 4 groups of $3 is $12. Link to Lesson 15: groups of. Answer: $12. A child who loses count puts the tokens in a row of 3 and counts in 3s."
+   "note": "Round 2, about 3.5 minutes. Now we know the cost of one: 1 pen costs $3. For 4 pens children put 3 tokens by each pen and count all the tokens (12). Ask: how much do 4 pens cost (12). Say: 4 groups of $3 is $12. Link to Term 2 Lesson 5: groups of. Answer: $12. A child who loses count puts the tokens in a row of 3 and counts in 3s."
   },
   {
    "id": "s-explore3",
@@ -490,13 +490,21 @@
      "t": "list",
      "ordered": false,
      "items": [
-      "Find 1 pen first: share $20 into 4 equal parts.",
-      "Then take 3 parts.",
+      "4 pens cost $20.",
       "How much do 3 pens cost?"
      ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Find 1 pen first: share $20 into 4 equal parts.",
+      "Then take 3 parts."
+     ],
+     "reveal": true
     }
    ],
-   "note": "Round 3, about 3.5 minutes. 4 pens cost $20. How much do 3 pens cost? Children share 20 tokens onto 4 pens (5 each) and then take 3 pens (15). The strip shows 4 equal parts for the 4 pens, and 3 parts are the 3 pens. Ask: how much does 1 pen cost (5); how much do 3 pens cost (15). Say: find one first, then find many. Answers: $5 and $15."
+   "note": "Round 3, about 3.5 minutes. 4 pens cost $20. How much do 3 pens cost? Children share 20 tokens onto 4 pens (5 each) and then take 3 pens (15). The strip shows 4 equal parts for the 4 pens, and 3 parts are the 3 pens. Ask: how much does 1 pen cost (5); how much do 3 pens cost (15). Say: find one first, then find many. Answers: $5 and $15. The steps (find 1 pen first, then take 3 parts) appear on the next slide, after the children have tried."
   },
   {
    "id": "s-m1",
@@ -528,10 +536,11 @@
      "items": [
       "Step 1: find 1. Share the cost equally.",
       "Step 2: find many. Count that many ones."
-     ]
+     ],
+     "reveal": true
     }
    ],
-   "note": "5 cups cost $15. How much do 2 cups cost? Step 1 finds 1 cup: $15 shared equally among 5 cups. Step 2 finds 2 cups: 2 groups of that. Ask: how much does 1 cup cost (3); how much do 2 cups cost (6). Reveal one step at a time and let children say each number first. Always say find one first."
+   "note": "5 cups cost $15. How much do 2 cups cost? Step 1 finds 1 cup: $15 shared equally among 5 cups. Step 2 finds 2 cups: 2 groups of that. Ask: how much does 1 cup cost (3); how much do 2 cups cost (6). The steps card appears on the next slide, after the children have answered. Children say each number first. Always say find one first."
   },
   {
    "id": "s-m2",
@@ -686,7 +695,7 @@
      ]
     }
    ],
-   "note": "Answers: 1 pencil costs $3 and 4 pencils cost $12. Read each answer aloud so a child watching the recording can mark their own work. Children mark their own in another colour. Never ask a child to show a wrong answer to the group."
+   "note": "Answers: 1 pencil costs $3 and 4 pencils cost $12. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-break",
@@ -739,7 +748,8 @@
      ]
     }
    ],
-   "note": "Introduce the check for about a minute: 8 questions and one optional Think harder question (about 20 minutes), on your own private paper; not a race; you may skip any question; no answers are read out; nothing is shown to the group. Children take out the closed sheet only now. The paper lies flat on the table. Grown-ups sit nearby but do not help with answers. Follow the check key (L20_Check_Tutor_Key.pdf). The number is in the grown-up note, never on a slide."
+   "note": "Introduce the check for about a minute: 8 questions and one optional Think harder question (about 20 minutes), on your own private paper; not a race; you may skip any question; no answers are read out; nothing is shown to the group. Children take out the closed sheet only now. The paper lies flat on the table. Grown-ups sit nearby but do not help with answers. Follow the check key (L20_Check_Tutor_Key.pdf). The number is in the grown-up note, never on a slide.",
+   "no_record": true
   },
   {
    "id": "s-check2",
@@ -765,7 +775,8 @@
      ]
     }
    ],
-   "note": "Say thank you. The grown-up takes one clear photo of each of the 3 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use a few minutes of the workbook time to finish. The number is in the grown-up note, never on a slide."
+   "note": "Say thank you. The grown-up takes one clear photo of each of the 3 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use a few minutes of the workbook time to finish. The number is in the grown-up note, never on a slide.",
+   "no_record": true
   },
   {
    "id": "s-ws1",
@@ -787,7 +798,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own with tokens; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: 4 pens cost $20. Question 2: 1 pen costs $3 and we want 4 pens. Question 3: a strip of 6 buns for $12."
+   "note": "Read questions 1 to 3 aloud. Children work on their own with tokens; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: 4 pens cost $16. Question 2: 1 pen costs $2 and we want 7 pens. Question 3: a strip of 6 buns for $12."
   },
   {
    "id": "s-ws1ans",
@@ -804,7 +815,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Answers: Q1 $5; Q2 $12; Q3 $2."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $4; Q2 $14; Q3 $2."
   },
   {
    "id": "s-ws2",
@@ -826,7 +837,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: 3 books cost $15; find 1 book, then 2 books. Question 5: Lily says 1 pen costs $4; is she correct? Question 6: each book costs $3 and Kumar buys 5 books."
+   "note": "Read questions 4 to 6 aloud. Question 4: 3 books cost $15; find 1 book, then 2 books. Question 5: 5 pens cost $15 and Lily says 1 pen costs $4; is she correct? Question 6: each book costs $4 and Kumar buys 3 books."
   },
   {
    "id": "s-ws2ans",
@@ -843,7 +854,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 $5 and $10; Q5 No, 1 pen costs $3; Q6 $15."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 $5 and $10; Q5 No, 1 pen costs $3; Q6 $12."
   },
   {
    "id": "s-choice",
@@ -1026,12 +1037,12 @@
      "t": "card",
      "head": "NEXT TERM",
      "items": [
-      "Term 3, Lesson 21: What Time Is It?",
-      "Have ready: the Lesson 21 workbook, a pencil and paper. Your tutor will tell you the start date."
+      "Term 3: What Time Is It? (the first lesson)",
+      "Have ready: the first Term 3 workbook, a pencil and paper. Your tutor will tell you the start date."
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. A child who needs longer to finish the check may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide. Remind families that the tutor sends a short note of progress words, never a mark.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 86 to 90 are flex time: the buffer. A child who needs longer to finish the check may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide. Remind families that the tutor sends a short note of progress words, never a mark.",
    "mascot": {
     "size": "l",
     "say": "Great thinking this term!"
@@ -1088,8 +1099,8 @@
        "What we do"
       ],
       [
-       "Is it always true?",
-       "If 1 pen costs $3, 2 pens cost $6"
+       "Does 1 cost more?",
+       "Mei says 1 pen costs $6 at 4 pens for $12. Is she right?"
       ],
       [
        "Make a shop puzzle",
@@ -1129,7 +1140,7 @@
      "short": false
     }
    ],
-   "note": "OPTIONAL, only if the whole class has finished and you are on time. A short exit ticket: read each question aloud twice, children write on page 5, then check their own ticket on the next slide. Nobody holds the ticket up to the camera. Skip it if you are behind: the check was the exit for this lesson.",
+   "note": "OPTIONAL, only if the whole class has finished and you are on time. A short exit ticket: read each question aloud twice, with the four options of question 2, children write on page 5, then check their own ticket on the next slide. Nobody holds the ticket up to the camera. Skip it if you are behind: the check was the exit for this lesson.",
    "optional": true
   },
   {
@@ -1147,7 +1158,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children check their own ticket in a different colour. Answers: $3; option 2, $10; $3 and $9. The exit ticket is never the end-of-term check and never shown to the group.",
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $3; option 2, $15; $2 and $8. The exit ticket is never the end-of-term check and never shown to the group.",
    "optional": true
   }
  ],
@@ -1166,8 +1177,13 @@
       "text": "@rec"
      },
      {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "s": 12
+     },
+     {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see your page and hands; cameras off is fine too. Pencil ready, and your tokens and your closed check sheet on the table."
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your tokens and your closed check sheet on the table."
      },
      {
       "k": "SAY",
@@ -1178,13 +1194,8 @@
       "text": "Today we find one first, and then we find many. After our break we take our end-of-term check on our own paper. It is not a race, and nobody sees your answers."
      },
      {
-      "k": "DO",
-      "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
-      "s": 12
-     },
-     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1343,7 +1354,7 @@
      {
       "k": "WORK",
       "text": "Children count out 20 tokens and deal them one at a time onto 4 pens until every pen has the same.",
-      "s": 120
+      "s": 90
      },
      {
       "k": "ASK",
@@ -1365,7 +1376,7 @@
      {
       "k": "WORK",
       "text": "Children put 3 tokens by each of 4 pens and count all the tokens.",
-      "s": 100
+      "s": 70
      },
      {
       "k": "ASK",
@@ -1387,7 +1398,7 @@
      {
       "k": "WORK",
       "text": "Children share 20 tokens onto 4 pens, then take 3 pens and count their tokens.",
-      "s": 130
+      "s": 100
      },
      {
       "k": "ASK",
@@ -1486,7 +1497,7 @@
      },
      {
       "k": "READ",
-      "text": "One pencil costs 3 dollars. Four pencils cost 12 dollars. Mark your own in another colour."
+      "text": "One pencil costs 3 dollars. Four pencils cost 12 dollars. Tick your own work with a tick."
      },
      {
       "k": "NOTE",
@@ -1541,7 +1552,7 @@
      },
      {
       "k": "DO",
-      "text": "Children open the closed check sheet, with a pencil. Grown-ups sit nearby and do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
+      "text": "Pause the recording now. Children open the closed check sheet, with a pencil. Grown-ups sit nearby and do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
       "s": 30
      },
      {
@@ -1559,7 +1570,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4. Jenny has 3 jars. Each jar has 5 sweets. Part a: fill in the boxes: blank times blank equals blank. Part b: count in 2s: 2, 4, 6, blank, 10. Question 5. Siti shares 16 stickers equally among 4 friends. Kumar puts 10 pens into boxes, 2 pens in each box. Part a: each of Siti's friends gets blank stickers. Part b: Kumar needs blank boxes. Question 6. Mei has 4 bags. Each bag has 5 sweets. She gives 3 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left."
+      "text": "Question 4. Jenny has 3 jars. Each jar has 5 sweets. Part a: fill in the boxes: blank times blank equals blank. Part b: count in 2s: 2, 4, 6, blank, 10. Question 5. Siti shares 16 stickers equally among 4 friends. Kumar puts 10 pens into boxes, 2 pens in each box. Part a: each of Siti's friends gets blank stickers. Part b: Kumar needs blank boxes. Question 6. Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left."
      },
      {
       "k": "WORK",
@@ -1577,7 +1588,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 7. Each shape is a number. The heart plus the heart equals 18. Ben says the heart is 8. Part a: is Ben correct? Circle Yes or No. Part b: the heart is blank. Question 8. 6 buns cost 18 dollars. Part a: 1 bun costs blank dollars. Part b: 4 buns cost blank dollars. The last question is a Think harder question, and it is optional. You may skip it. Ravi is 8th from the front and 8th from the back of a line. Mei says there are 16 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line."
+      "text": "Question 7. Each shape is a number. The heart plus the heart equals 18. Ben says the heart is 8. Part a: is Ben correct? Circle Yes or No. Part b: the heart is blank. Question 8. 8 buns cost 16 dollars. Part a: 1 bun costs blank dollars. Part b: 5 buns cost blank dollars. The last question is a Think harder question, and it is optional. You may skip it. Ravi is 8th from the front and 8th from the back of a line. Mei says there are 16 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line."
      },
      {
       "k": "WORK",
@@ -1620,12 +1631,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: 4 pens cost 20 dollars. How much does 1 pen cost? Question 2: 1 pen costs 3 dollars. How much do 4 pens cost? Fill in the blanks. Question 3: 6 buns cost 12 dollars. How much does 1 bun cost? Look at the strip."
+      "text": "Page 1, Start here. Question 1: 4 pens cost 16 dollars. How much does 1 pen cost? Question 2: 1 pen costs 2 dollars. How much do 7 pens cost? Fill in the blanks. Question 3: 6 buns cost 12 dollars. How much does 1 bun cost? Look at the strip."
      },
      {
       "k": "WORK",
       "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 320
+      "s": 420
      },
      {
       "k": "SLIDE",
@@ -1633,7 +1644,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 5 dollars. Question 2: 12 dollars. Question 3: 2 dollars. Mark your own page in another colour."
+      "text": "Question 1: 4 dollars. Question 2: 14 dollars. Question 3: 2 dollars. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1645,12 +1656,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: 3 books cost 15 dollars. Fill in the blanks. Question 5: 4 pens cost 12 dollars. Lily says 1 pen costs 4 dollars. Is Lily correct? Question 6: each book costs 3 dollars. Kumar buys 5 books. How much do the 5 books cost?"
+      "text": "Page 2. Question 4: 3 books cost 15 dollars. Fill in the blanks. Look at the strip. Question 5: 5 pens cost 15 dollars. Lily says 1 pen costs 4 dollars. Is Lily correct? Question 6: each book costs 4 dollars. Kumar buys 3 books. How much do the 3 books cost?"
      },
      {
       "k": "WORK",
       "text": "Page 2, questions 4 to 6.",
-      "s": 320
+      "s": 480
      },
      {
       "k": "SLIDE",
@@ -1658,7 +1669,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: 5 dollars and 10 dollars. Question 5: no, 1 pen costs 3 dollars. Question 6: 15 dollars."
+      "text": "Question 4: 5 dollars and 10 dollars. Question 5: no, 1 pen costs 3 dollars. Question 6: 12 dollars."
      },
      {
       "k": "SLIDE",
@@ -1676,11 +1687,11 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 210
+      "s": 90
      },
      {
       "k": "STUCK",
-      "text": "Q1: share 20 between 4 pens. Q2: put 3 by each of 4 pens. Q3: count the parts of the strip, then share 12. Q4: find 1 book first, then 2 books. Q5: put Lily's number into the story: 4 groups of 4 is 16. Q6: 5 groups of 3."
+      "text": "Q1: share 16 between 4 pens. Q2: put 2 by each of 7 pens. Q3: count the parts of the strip, then share 12. Q4: find 1 book first, then 2 books. Q5: put Lily's number into the story: 5 groups of 4 is 20. Q6: 3 groups of 4."
      },
      {
       "k": "STUCK",
@@ -1688,7 +1699,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder chains the two steps with different numbers and uses a dozen, such and how many can be bought (beyond Primary 1 on purpose). Go further has two kinds of item, money left over and a comparison of two shops. Do not announce who is on which page. The check came first, so some children are tired: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+      "text": "Think harder chains the two steps with different numbers and uses a dozen, such and how many can be bought (beyond Primary 1 on purpose). Go further has two kinds of item, money left over and a comparison of two shops. Do not announce who is on which page. The check came first, so some children are tired, and Start here takes a middle child about 16 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -1715,12 +1726,12 @@
      {
       "k": "WORK",
       "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 30
+      "s": 20
      },
      {
       "k": "ASK",
       "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 50
+      "resp": 35
      },
      {
       "k": "SLIDE",
@@ -1759,7 +1770,7 @@
      {
       "k": "WORK",
       "text": "Children fill in the look-back box on page 5.",
-      "s": 45
+      "s": 35
      }
     ]
    },
@@ -1772,7 +1783,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 21, What Time Is It? You need your Lesson 21 workbook, a pencil and paper. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers, for the whole term. Next term starts with What Time Is It?, the first lesson of Term 3. You need your Term 3 workbook, a pencil and paper. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1802,7 +1813,7 @@
      },
      {
       "k": "READ",
-      "text": "Optional exit ticket. Question 1: 3 pencils cost 9 dollars. How much does 1 pencil cost? Question 2: each sticker costs 2 dollars. How much do 5 stickers cost? Write its number in the bracket. Question 3: 4 buns cost 12 dollars. Fill in the blanks.",
+      "text": "Optional exit ticket. Question 1: 3 pencils cost 9 dollars. How much does 1 pencil cost? Question 2: each sticker costs 5 dollars. How much do 3 stickers cost? Option 1: 8 dollars. Option 2: 15 dollars. Option 3: 2 dollars. Option 4: 53 dollars. Write its number in the bracket. Question 3: 5 cakes cost 10 dollars. Fill in the blanks: 1 cake costs blank dollars; 4 cakes cost blank dollars.",
       "optional": true
      },
      {
@@ -1818,7 +1829,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 3 dollars. Question 2: option 2, 10 dollars. Question 3: 3 dollars and 9 dollars. Check your own ticket in a different colour.",
+      "text": "Question 1: 3 dollars. Question 2: option 2, 15 dollars. Question 3: 2 dollars and 8 dollars. Tick your own ticket with a tick.",
       "optional": true
      },
      {
@@ -1840,7 +1851,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "4 pens cost $20. How much does 1 pen cost?",
+    "text": "4 pens cost $16. How much does 1 pen cost? Use tokens or draw.",
     "parts": [
      {
       "l": "",
@@ -1849,16 +1860,16 @@
       "val": 5
      }
     ],
-    "answer": "$5",
+    "answer": "$4",
     "val": [
-     5
+     4
     ],
-    "hint": "Share $20 equally among 4 pens. Use tokens.",
-    "solution": "$20 shared equally among 4 pens is $5 each. Check: 4 groups of $5 make $20.",
+    "hint": "Share $16 equally among 4 pens. Use tokens.",
+    "solution": "$16 shared equally among 4 pens is $4 each. Check: 4 groups of $4 make $16.",
     "mistakes": [
-     "Writing 24 (adding 20 and 4).",
-     "Writing 80 (multiplying).",
-     "Writing 20 (the total)."
+     "Writing 20 (adding 16 and 4).",
+     "Writing 64 (multiplying).",
+     "Writing 16 (the total)."
     ],
     "mins": 2.5,
     "visual": {
@@ -1868,43 +1879,43 @@
      "per_row": 4
     },
     "draw": true,
-    "draw_strokes": 20
+    "draw_strokes": 16
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "1 pen costs $3. How much do 4 pens cost? Fill in the blanks.",
+    "text": "1 pen costs $2. How much do 7 pens cost? Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "4 × 3 = [2]",
-      "ans": "12",
-      "val": 12
+      "text": "7 × 2 = [2]",
+      "ans": "14",
+      "val": 14
      },
      {
       "l": "b",
-      "text": "4 pens cost $[2].",
-      "ans": "12",
-      "val": 12
+      "text": "7 pens cost $[2].",
+      "ans": "14",
+      "val": 14
      }
     ],
-    "answer": "12; $12",
+    "answer": "14; $14",
     "val": [
-     12,
-     12
+     14,
+     14
     ],
-    "hint": "Put 3 tokens by each pen and count them all.",
-    "solution": "4 groups of $3 is 3 + 3 + 3 + 3 = 12, so 4 pens cost $12.",
+    "hint": "Put 2 tokens by each pen and count them all.",
+    "solution": "7 groups of $2 is 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14, so 7 pens cost $14.",
     "mistakes": [
-     "Writing 7 (adding 3 and 4).",
-     "Writing 3 (the cost of 1 pen)."
+     "Writing 9 (adding 2 and 7).",
+     "Writing 2 (the cost of 1 pen)."
     ],
     "mins": 2.5,
     "visual": {
      "type": "objects",
      "icon": "pen",
-     "n": 4,
+     "n": 7,
      "per_row": 4
     }
    },
@@ -2004,7 +2015,7 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "4 pens cost $12. Lily says 1 pen costs $4. Look at the picture.",
+    "text": "5 pens cost $15. Lily says 1 pen costs $4. Look at the picture.",
     "parts": [
      {
       "l": "a",
@@ -2028,52 +2039,52 @@
      "No",
      3
     ],
-    "hint": "Put Lily's number back: 4 groups of $4.",
-    "solution": "4 groups of $4 make $16, not $12. So Lily is not correct. $12 shared equally among 4 pens is $3 each. Check: 4 groups of $3 make $12.",
+    "hint": "Put Lily's number back: 5 groups of $4.",
+    "solution": "5 groups of $4 make $20, not $15. So Lily is not correct. $15 shared equally among 5 pens is $3 each. Check: 5 groups of $3 make $15.",
     "mistakes": [
-     "Saying Yes because 4 is the number of pens.",
-     "Writing 12 for 1 pen."
+     "Saying Yes because 4 is close to 3.",
+     "Writing 15 for 1 pen."
     ],
     "mins": 3,
     "visual": {
      "type": "objects",
      "icon": "pen",
-     "n": 4,
-     "per_row": 4
+     "n": 5,
+     "per_row": 5
     }
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Each book costs $3. Kumar buys 5 books. How much do the 5 books cost?",
+    "text": "Each book costs $4. Kumar buys 3 books. How much do the 3 books cost? Use tokens or draw.",
     "parts": [
      {
       "l": "",
-      "text": "The 5 books cost $[2].",
-      "ans": "15",
-      "val": 15
+      "text": "The 3 books cost $[2].",
+      "ans": "12",
+      "val": 12
      }
     ],
-    "answer": "$15",
+    "answer": "$12",
     "val": [
-     15
+     12
     ],
-    "hint": "Each means for one. Count 5 groups of $3.",
-    "solution": "5 groups of $3: 3 + 3 + 3 + 3 + 3 = 15, so the 5 books cost $15.",
+    "hint": "Each means for one. Count 3 groups of $4.",
+    "solution": "3 groups of $4: 4 + 4 + 4 = 12, so the 3 books cost $12.",
     "mistakes": [
-     "Writing 8 (adding 3 and 5).",
-     "Writing 3."
+     "Writing 7 (adding 4 and 3).",
+     "Writing 4."
     ],
     "mins": 2.5,
     "visual": {
      "type": "objects",
      "icon": "book",
-     "n": 5,
-     "per_row": 5
+     "n": 3,
+     "per_row": 3
     },
     "draw": true,
-    "draw_strokes": 15
+    "draw_strokes": 12
    }
   ],
   "think": [
@@ -2081,28 +2092,28 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "3 books cost $12. Fill in the blanks. Look at the strip.",
+    "text": "4 cups cost $12. Fill in the blanks. Look at the strip.",
     "parts": [
      {
       "l": "a",
-      "text": "1 book costs $[].",
-      "ans": "4",
-      "val": 4
+      "text": "1 cup costs $[].",
+      "ans": "3",
+      "val": 3
      },
      {
       "l": "b",
-      "text": "7 books cost $[2].",
-      "ans": "28",
-      "val": 28
+      "text": "7 cups cost $[2].",
+      "ans": "21",
+      "val": 21
      }
     ],
-    "answer": "$4; $28",
+    "answer": "$3; $21",
     "val": [
-     4,
-     28
+     3,
+     21
     ],
-    "hint": "Find 1 book first. Then find 7 books.",
-    "solution": "$12 shared equally among 3 books is $4 each. 7 books cost 7 groups of $4, which is $28. Check: 3 groups of $4 make $12.",
+    "hint": "Find 1 cup first. Then find 7 cups.",
+    "solution": "$12 shared equally among 4 cups is $3 each. 7 cups cost 7 groups of $3, which is $21. Check: 4 groups of $3 make $12.",
     "mistakes": [
      "Writing 84 (12 × 7).",
      "Writing 19 (12 + 7).",
@@ -2113,12 +2124,12 @@
      "type": "bar_model",
      "bars": [
       {
-       "name": "3 books",
-       "len": 3
+       "name": "4 cups",
+       "len": 4
       }
      ],
      "units": {
-      "n": 3,
+      "n": 4,
       "text": "?"
      },
      "brace": {
@@ -2163,31 +2174,31 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Wei pays $18 for 6 such cups. Fill in the blanks.",
+    "text": "Wei pays $24 for 6 such cups. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
       "text": "1 cup costs $[].",
-      "ans": "3",
-      "val": 3
+      "ans": "4",
+      "val": 4
      },
      {
       "l": "b",
       "text": "4 such cups cost $[2].",
-      "ans": "12",
-      "val": 12
+      "ans": "16",
+      "val": 16
      }
     ],
-    "answer": "$3; $12",
+    "answer": "$4; $16",
     "val": [
-     3,
-     12
+     4,
+     16
     ],
     "hint": "Such means the cups are the same, so each costs the same.",
-    "solution": "$18 shared equally among 6 cups is $3 each. 4 such cups cost 4 groups of $3, which is $12.",
+    "solution": "$24 shared equally among 6 cups is $4 each. 4 such cups cost 4 groups of $4, which is $16.",
     "mistakes": [
-     "Writing 18 for 4 cups.",
-     "Writing 7 (3 + 4)."
+     "Writing 24 for 4 cups.",
+     "Writing 8 (4 + 4)."
     ],
     "mins": 3.5
    },
@@ -2195,31 +2206,31 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "5 pens cost $15. Ben has $12. Fill in the blanks.",
+    "text": "4 pens cost $8. Ben has $10. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
       "text": "1 pen costs $[].",
-      "ans": "3",
-      "val": 3
+      "ans": "2",
+      "val": 2
      },
      {
       "l": "b",
       "text": "Ben can buy [] pens.",
-      "ans": "4",
-      "val": 4
+      "ans": "5",
+      "val": 5
      }
     ],
-    "answer": "$3; 4 pens",
+    "answer": "$2; 5 pens",
     "val": [
-     3,
-     4
+     2,
+     5
     ],
-    "hint": "Find 1 pen first. Then count how many groups of $3 fit in $12.",
-    "solution": "$15 shared equally among 5 pens is $3 each. $12 holds 4 groups of $3, so Ben can buy 4 pens.",
+    "hint": "Find 1 pen first. Then count how many groups of $2 fit in $10.",
+    "solution": "$8 shared equally among 4 pens is $2 each. $10 holds 5 groups of $2, so Ben can buy 5 pens.",
     "mistakes": [
-     "Writing 5 pens (the number in the story).",
-     "Writing 36 (12 × 3)."
+     "Writing 4 pens (the number in the story).",
+     "Writing 20 (10 × 2)."
     ],
     "mins": 4
    }
@@ -2268,7 +2279,7 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "6 pens cost $18. Mei has $20. She buys 4 pens. Fill in the blanks.",
+    "text": "8 pens cost $24. Mei has $30. She buys 5 pens. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
@@ -2278,28 +2289,28 @@
      },
      {
       "l": "b",
-      "text": "4 pens cost $[2].",
-      "ans": "12",
-      "val": 12
+      "text": "5 pens cost $[2].",
+      "ans": "15",
+      "val": 15
      },
      {
       "l": "c",
-      "text": "Mei has $[] left.",
-      "ans": "8",
-      "val": 8
+      "text": "Mei has $[2] left.",
+      "ans": "15",
+      "val": 15
      }
     ],
-    "answer": "$3; $12; $8",
+    "answer": "$3; $15; $15",
     "val": [
      3,
-     12,
-     8
+     15,
+     15
     ],
     "hint": "Find 1 pen first, then 4 pens, then what is left from $20.",
-    "solution": "$18 shared equally among 6 pens is $3 each. 4 pens cost $12. $20 - $12 = $8 is left.",
+    "solution": "$24 shared equally among 8 pens is $3 each. 5 pens cost $15. $30 - $15 = $15 is left.",
     "mistakes": [
-     "Taking 18 away from 20.",
-     "Forgetting to take the cost away from $20."
+     "Taking 24 away from 30.",
+     "Forgetting to take the cost away from $30."
     ],
     "mins": 5
    },
@@ -2383,13 +2394,13 @@
    "page": 5,
    "tier": "investigation",
    "title": "Which pack costs less?",
-   "first": "A pack of 2 pens costs $6. How much does 1 pen cost?",
-   "text": "A pack of 5 pens costs $15. Does 1 pen cost less in this pack? Why?",
+   "first": "A pack of 2 pens costs $8. How much does 1 pen cost?",
+   "text": "A pack of 5 pens costs $20. Does 1 pen cost less in this pack? Why?",
    "lines": 4,
-   "answer": "No. In both packs 1 pen costs $3 ($6 shared between 2 pens, and $15 shared among 5 pens), so 1 pen does not cost less in the bigger pack. Finding the price of one lets us compare packs of different sizes.",
+   "answer": "No. In both packs 1 pen costs $4 ($8 shared between 2 pens, and $20 shared among 5 pens), so 1 pen does not cost less in the bigger pack. Finding the price of one lets us compare packs of different sizes.",
    "val": [
-    "3",
-    "3"
+    "4",
+    "4"
    ],
    "look_for": "A child who finds $3 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
    "mistakes": [
@@ -2423,53 +2434,53 @@
   },
   {
    "id": "E2",
-   "text": "Each sticker costs $2. How much do 5 stickers cost? Write its number in the bracket.",
+   "text": "Each sticker costs $5. How much do 3 stickers cost? Write its number in the bracket.",
    "parts": [],
-   "answer": "(2) $10",
+   "answer": "(2) $15",
    "val": [
     2
    ],
-   "solution": "Each sticker costs $2, so 5 stickers cost 5 groups of $2, which is $10.",
+   "solution": "Each sticker costs $5, so 3 stickers cost 3 groups of $5, which is $15.",
    "mistakes": [
-    "Choosing (1) $7 by adding 2 and 5.",
-    "Choosing (3) $3 by taking 2 from 5."
+    "Choosing (1) $8 by adding 5 and 3.",
+    "Choosing (3) $2 by taking 3 from 5."
    ],
    "mcq": {
     "options": [
-     "$7",
-     "$10",
-     "$3",
-     "$25"
+     "$8",
+     "$15",
+     "$2",
+     "$53"
     ],
     "bracket": true
    }
   },
   {
    "id": "E3",
-   "text": "4 buns cost $12. Fill in the blanks.",
+   "text": "5 cakes cost $10. Fill in the blanks.",
    "parts": [
     {
      "l": "a",
-     "text": "1 bun costs $[].",
-     "ans": "3",
-     "val": 3
+     "text": "1 cake costs $[].",
+     "ans": "2",
+     "val": 2
     },
     {
      "l": "b",
-     "text": "3 buns cost $[].",
-     "ans": "9",
-     "val": 9
+     "text": "4 cakes cost $[].",
+     "ans": "8",
+     "val": 8
     }
    ],
-   "answer": "$3; $9",
+   "answer": "$2; $8",
    "val": [
-    3,
-    9
+    2,
+    8
    ],
-   "solution": "$12 shared equally among 4 buns is $3 each. 3 buns cost 3 groups of $3, which is $9.",
+   "solution": "$10 shared equally among 5 cakes is $2 each. 4 cakes cost 4 groups of $2, which is $8.",
    "mistakes": [
-    "Writing 12 for 3 buns.",
-    "Writing 7 (adding 3 and 4)."
+    "Writing 10 for 4 cakes.",
+    "Writing 9 (5 + 4)."
    ]
   }
  ],
@@ -2511,7 +2522,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Each cup costs $3. Fill in the blanks. 6 × 3 = ___ . 6 cups cost $___",
+   "text": "Each cup costs $3. Fill in the blanks. 6 × 3 = ___ . 6 cups cost $___ (× means groups of)",
    "answer": "18; $18",
    "val": [
     18,
@@ -2530,10 +2541,10 @@
   {
    "id": "H4",
    "tier": "think",
-   "text": "A dozen eggs cost $24. How much do 4 eggs cost? $___",
-   "answer": "$8",
-   "val": 8,
-   "solution": "A dozen is 12 eggs. $24 shared equally among 12 eggs is $2 each. 4 eggs cost 4 groups of $2, which is $8."
+   "text": "A dozen eggs cost $36. How much do 4 eggs cost? $___",
+   "answer": "$12",
+   "val": 12,
+   "solution": "A dozen is 12 eggs. $36 shared equally among 12 eggs is $3 each. 4 eggs cost 4 groups of $3, which is $12."
   },
   {
    "id": "H5",
@@ -2671,11 +2682,11 @@
     "id": "c3",
     "tier": "core",
     "type": "fields",
-    "q": "Look at the strip. Fill in the boxes.",
+    "q": "3 books cost $15. Look at the strip. Fill in the boxes.",
     "hint": "Find 1 book first. Then find 2 books.",
     "steps": [
-     "Share the cost equally among the books.",
-     "Then count 2 groups."
+     "$15 shared equally among 3 books is $5.",
+     "2 groups of $5 make $10."
     ],
     "slips": [],
     "frame": "1 book costs ${u}. 2 books cost ${v}.",
@@ -2741,7 +2752,7 @@
       "t": "n*u",
       "v": "u+u"
      },
-     "q": "Look at the strip. Fill in the boxes.",
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
      "frame": "1 book costs ${u}. 2 books cost ${v}.",
      "answers": {
       "u": "u",
@@ -2775,7 +2786,7 @@
       "a": [
        "yes"
       ],
-      "say": "Put $4 back: 4 groups of $4. Do they make $12?"
+      "say": "Put Lily's number back: 4 groups of it. Do they make the total?"
      }
     ],
     "fig": {
@@ -2792,23 +2803,31 @@
     },
     "tpl": {
      "vars": {
-      "k": [
+      "u": [
        2,
        3,
        4,
        5
+      ],
+      "k": [
+       0,
+       1
       ]
      },
-     "q": "4 pens cost $12. Lily says 1 pen costs ${k}. Is Lily correct?",
+     "derive": {
+      "t": "4*u",
+      "c": "u+k"
+     },
+     "q": "4 pens cost ${t}. Lily says 1 pen costs ${c}. Is Lily correct?",
      "options": [
       "yes",
       "no"
      ],
-     "answer_index": "((k-3)*(k-3))%3",
+     "answer_index": "k",
      "hint": "Put Lily's number back: 4 groups of her number.",
      "steps": [
-      "4 groups of ${k} make 4 × {k}.",
-      "The pens cost $12.",
+      "4 groups of ${c} make 4 × {c}.",
+      "The pens cost ${t}.",
       "The answer is {ans}."
      ]
     }
@@ -2894,15 +2913,15 @@
     "id": "t1",
     "tier": "stretch",
     "type": "fields",
-    "q": "Look at the strip. Fill in the boxes.",
+    "q": "3 books cost $12. Look at the strip. Fill in the boxes.",
     "easier": "c3",
     "hint": "Find 1 book first. Then find the cost of many.",
     "steps": [
-     "Share the cost equally to find 1 book.",
-     "Then count that many groups."
+     "$12 shared equally among 3 books is $4.",
+     "7 groups of $4 make $28."
     ],
     "slips": [],
-    "frame": "1 book costs ${u}. {m} books cost ${w}.",
+    "frame": "1 book costs ${u}. 7 books cost ${w}.",
     "fields": [
      {
       "id": "u",
@@ -2969,7 +2988,7 @@
       "t": "n*u",
       "w": "m*u"
      },
-     "q": "Look at the strip. Fill in the boxes.",
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
      "frame": "1 book costs ${u}. {m} books cost ${w}.",
      "answers": {
       "u": "u",
@@ -3006,7 +3025,6 @@
     "tpl": {
      "vars": {
       "u": [
-       1,
        2,
        3
       ],
@@ -3213,11 +3231,11 @@
   "menu": [
    {
     "id": "M1",
-    "title": "Is it always true?",
+    "title": "Does 1 cost more if we buy more?",
     "minutes": 4,
-    "tutor": "Mei says: if 1 pen costs $3, then 2 pens cost $6 and 3 pens cost $9. Is it always true that more pens cost more? Test it with tokens.",
-    "rec": "Recording: pause. If 1 pen costs $3, do 2 pens cost $6 and 3 pens cost $9? Test it with tokens.",
-    "answer": "Yes, when every pen costs the same. Each pen adds another $3: 3, 6, 9. A shop that gives a cheaper price for more pens would break the rule, so we say such pens or each."
+    "tutor": "Mei says: 2 pens cost $6, so 1 pen costs $3. At 4 pens for $12, 1 pen costs $6. Is Mei right? Test it with tokens.",
+    "rec": "Recording: pause. Mei says 1 pen costs $3 for 2 pens at $6, but $6 for 4 pens at $12. Is she right?",
+    "answer": "No. $12 shared equally among 4 pens is $3 each, the same as before. 1 pen costs the same when each pen costs the same, so we say such pens or each."
    },
    {
     "id": "M2",
@@ -3238,12 +3256,13 @@
   ]
  },
  "parent": {
-  "summary": "We found the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\"), then the cost of many, with tokens and a strip. We met the words each, a dozen and such. Money is whole dollars only. Sharing within 20 and multiplying within 40 is Primary 1 work; chaining the steps with different numbers, a dozen, such and how many can be bought go past the school Primary 1 syllabus on purpose. Your child also took the end-of-term check.",
+  "summary": "We found the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\"), then the cost of many, with tokens and a strip. We met the words each, a dozen and such. Money is whole dollars only. Sharing within 20 and multiplying within 40 is Primary 1 work; chaining the steps, a dozen, such and how many can be bought go past the Primary 1 syllabus on purpose. Your child may also have taken the end-of-term check.",
   "words": [
    "each: for one",
    "a dozen: 12",
    "such: of the same kind",
-   "find one first: share the total equally to find the price of 1"
+   "find one first: share the total equally to find the price of 1",
+   "×: groups of (6 × 3 is 6 groups of 3)"
   ],
   "try_home": [
    "Shop: put 3 small things on the table and a price of $6 for the three. Ask your child to find the price of 1, then of 2, using tokens.",
@@ -3254,13 +3273,13 @@
    "What do we find first?",
    "How do you know your answer is right?"
   ],
-  "when_stuck": "Let your child share tokens or counters one at a time, and wait 10 seconds before helping. Asking ‘how many do we want?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next term, Lesson 21: What Time Is It? Your tutor will tell you the start date. Online practice: your tutor will share the practice link.",
+  "when_stuck": "Let your child share tokens or counters one at a time, and wait 10 seconds before helping. Asking ‘how many do we want?’ works better than giving the answer. Please do not teach a rule or the division sign: tokens and ‘share equally’ are enough. Money is whole dollars only. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next term, the first lesson of Term 3: What Time Is It? Your tutor will tell you the start date. Online practice: your tutor will share the practice link.",
   "quote": "Find one, then find many.",
   "report_line": "Your child is learning to find the cost of one by sharing equally, and then the cost of many. This week: pens, buns and books in whole dollars.",
   "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 21 workbook (print it a week before the first lesson of next term)",
+   "The printed workbook for the first lesson of Term 3 (print it a week before the first lesson of next term)",
    "A toy or real clock with a face, if you have one (optional)",
    "Pencil, rubber and paper"
   ]
@@ -3277,15 +3296,15 @@
  "tutor_prep": [
   "Solve every workbook question yourself first, and the 8 check questions and the optional check question with the key (L20_Check_Tutor_Key.pdf). Money is whole dollars only; do not bring notes or coins into the lesson.",
   "A week before, send the families the grown-up note (L20_Check_Parent_Note.pdf), the check sheet (L20_Check_Student.pdf, 3 pages, print at 100%) and the lesson materials: the workbook with the tokens kit page (a grown-up cuts out the tokens), a few small shop items, and a closed envelope for the check sheet. A family with no printer tells you: arrange the make-up slot.",
-  "Have the slides open. Check the order of the lesson: the check is straight after the brain break, minutes 37 to 57, then the workbook. Have the tutor key, a clock and the record sheet ready (the record sheet is deleted when the note is sent).",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
+  "Have the slides open. Check the order of the lesson: the check is straight after the brain break, minutes 35 to 55, then the workbook. Have the tutor key, a clock and the record sheet ready (the record sheet is deleted when the note is sent).",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. PAUSE the recording for the whole check (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
   "Be plain with families: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the steps with different numbers, a dozen, such and how many can be bought go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Use the words shared equally, not a division sign. The tokens and the strip are the method, not a rule to recite."
  ],
  "workbook": {
   "header": "Division and money: find one first",
   "hint_p1": "A token is $1. Share the tokens to find 1. Count groups to find many.",
   "hint_p2": "Find 1 first. Then find many. Each means for one.",
-  "hint_p3": "Use tokens or draw a strip. Find 1 first. Choose any question.",
+  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such cups are cups the same. Choose any question.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "choice_after": 3,
   "inv_intro": "",
@@ -3330,7 +3349,7 @@
  "end_of_term_check": {
   "title": "Term 2 end-of-term check",
   "minutes": 20,
-  "where": "Lesson 20 (the last lesson of the term), minutes 37 to 57, the part End-of-term check, straight after the brain break; or at the make-up slot",
+  "where": "Lesson 20 (the last lesson of the term), minutes 35 to 55, the part End-of-term check, straight after the brain break; or at the make-up slot",
   "plan_note": "Plan, section 5, and the owner decisions of 22 Oct 2026: the check takes 20 minutes, is privately returned, shows no ranking and no score to the group, and gives a parent report line per term. It has 8 short questions and one optional Think harder item so that it fits 20 minutes by real timing: Lessons 13 and 14 share question 3 and Lessons 15 and 16 share question 4, so every lesson of the term is still checked. All items are Start here level, and the optional item is contest-style and never scored. Question 7 asks the child to check a friend's number by putting it back, which is the claim-testing the term line talks about. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The check sits straight after the brain break (not at the end of the lesson as in Term 1) so children are fresh. The student sheet has no pictures except the ten-frames in question 3, because the sheet generator draws only a few figure types.",
   "sheet_pages": 3,
   "child_rules": [
@@ -3542,7 +3561,7 @@
     "page": 2,
     "tier": "start",
     "skill": "A times story with a second step (Lesson 18)",
-    "text": "Mei has 4 bags. Each bag has 5 sweets. She gives 3 sweets to Ben.",
+    "text": "Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben.",
     "parts": [
      {
       "l": "a",
@@ -3557,18 +3576,18 @@
       "val": 17
      }
     ],
-    "say": "Question 6. Mei has 4 bags. Each bag has 5 sweets. She gives 3 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left.",
-    "answer": "20; 17",
+    "say": "Question 6. Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left.",
+    "answer": "15; 11",
     "val": [
-     20,
-     17
+     15,
+     11
     ],
-    "solution": "4 groups of 5 is 20 sweets. She gives 3 away: 20 - 3 = 17.",
+    "solution": "5 groups of 3 is 15 sweets. She gives 4 away: 15 - 4 = 11.",
     "right": "Both correct.",
-    "partly": "Part a right and part b wrong (for example 23), or part b right from a wrong part a.",
+    "partly": "Part a right and part b wrong (for example 19), or part b right from a wrong part a.",
     "mistakes": [
-     "(a) 9 (adding 4 and 5).",
-     "(b) 23 (adding 3) or 3."
+     "(a) 8 (adding 5 and 3).",
+     "(b) 19 (adding 4) or 4."
     ]
    },
    {
@@ -3614,33 +3633,33 @@
     "page": 3,
     "tier": "start",
     "skill": "Find one first, then many (Lesson 20)",
-    "text": "6 buns cost $18.",
+    "text": "8 buns cost $16.",
     "parts": [
      {
       "l": "a",
       "text": "1 bun costs $___.",
-      "ans": "3",
-      "val": 3
+      "ans": "2",
+      "val": 2
      },
      {
       "l": "b",
-      "text": "4 buns cost $___.",
-      "ans": "12",
-      "val": 12
+      "text": "5 buns cost $___.",
+      "ans": "10",
+      "val": 10
      }
     ],
-    "say": "Question 8. 6 buns cost 18 dollars. Part a: 1 bun costs blank dollars. Part b: 4 buns cost blank dollars.",
-    "answer": "$3; $12",
+    "say": "Question 8. 8 buns cost 16 dollars. Part a: 1 bun costs blank dollars. Part b: 5 buns cost blank dollars.",
+    "answer": "$2; $10",
     "val": [
-     3,
-     12
+     2,
+     10
     ],
-    "solution": "$18 shared equally among 6 buns is $3 each. 4 buns cost 4 groups of $3, which is $12.",
+    "solution": "$16 shared equally among 8 buns is $2 each. 5 buns cost 5 groups of $2, which is $10.",
     "right": "Both correct.",
     "partly": "Part a right and part b wrong, or part b right from a wrong part a.",
     "mistakes": [
-     "(a) 24 (adding) or 108.",
-     "(b) 18 (the total) or 7 (3 + 4)."
+     "(a) 24 (adding) or 128.",
+     "(b) 16 (the total) or 7 (2 + 5)."
     ]
    }
   ],
@@ -3764,7 +3783,7 @@
   "give": [
    "A week before: send the grown-up note (L20_Check_Parent_Note.pdf) and the check sheet (L20_Check_Student.pdf, 3 pages) with the lesson materials. Families print the sheet at 100%, fold it or put it in an envelope, and keep it closed. A family with no printer tells you: arrange another way (for example the make-up slot).",
    "Tell the group in the opening and at s-check1: the check is on your own paper, takes about 20 minutes, is not a race, may be skipped in part, and nothing is shown to the group.",
-   "Start at minute 37 and finish by minute 57. Children open the sheet only when you say. The paper lies flat on the table and is never held up. A grown-up sits nearby and may read a question again, but gives no help with answers. Cameras may be on or off.",
+   "Start at minute 35 and finish by minute 55. Children open the sheet only when you say. The paper lies flat on the table and is never held up. A grown-up sits nearby and may read a question again, but gives no help with answers. Cameras may be on or off.",
    "Read each page aloud, one question at a time (the script has the words). Then leave quiet work time: about 3 minutes for page 1, 3.5 for page 2 and 4 for page 3. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
    "Allowed: fingers and counters. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the sheet over and draws quietly.",
    "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 3, say Pencils down (slide s-check2). Do not collect or look at any sheet."
@@ -3824,12 +3843,12 @@
    "The tutor never marks in front of the group and never says who finished first or last.",
    "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the note goes to the parent only; no private message to any child.",
    "No score, no x out of 8, no ranking, no tally, no comparison between children.",
-   "The recording captures the tutor, the shared screen and any voice that is not muted; pause it during silent work if the platform allows. The WhatsApp number is never on a slide."
+   "The recording captures the tutor, the shared screen and any voice that is not muted: the recording is paused for the whole check (slides s-check1 and s-check2) and restarted for the workbook. The WhatsApp number is never on a slide."
   ],
   "page_instructions": [
-   "Fill in the correct answers in the spaces provided.",
-   "Fill in the correct answers in the spaces provided.",
-   "Fill in the correct answers in the spaces provided. Circle Yes or No where you see it."
+   "Fill in the blanks.",
+   "Fill in the blanks.",
+   "Fill in the blanks. Circle Yes or No where you see it."
   ],
   "timing_model": {
    "child_seconds": {
@@ -3845,5 +3864,6 @@
    "stretch_seconds": 60,
    "slow_child_factor": 1.4
   }
- }
+ },
+ "rec_pause_say": "Say once to the camera: the recording pauses now for the private check, and starts again for the workbook. Pause the recording before you read the first question."
 }

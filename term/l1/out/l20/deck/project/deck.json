@@ -15,7 +15,9 @@
   "s-explore1",
   "s-explore2",
   "s-explore3",
+  "s-explore3-ans",
   "s-m1",
+  "s-m1-ans",
   "s-m2",
   "s-m3",
   "s-m3b",
@@ -85,7 +87,10 @@
    "start": "s-end"
   }
  },
- "no_record": [],
+ "no_record": [
+  "s-check1",
+  "s-check2"
+ ],
  "faces": {
   "fredoka": {
    "family": "Fredoka",
