@@ -128,7 +128,7 @@ module.exports = {
       { q: 'A number line from 3 to 4 has 10 equal steps. An arrow points to the 6th step after 3. What number is it? Now zoom in on the gap between that number and the next step, and cut it into 10 smaller steps. A new arrow points to the 5th small step. What number is that?', a: '3.6, then 3.65.' }
     ],
     stretch: [
-      { q: 'Find ALL the digits that the letter A can be: 3.A5 < 3.42 (A is one digit)', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
+      { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42 (one digit in the box)', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
       { q: 'A number with 2 decimal places rounds to 10 when rounded to the nearest whole number. What is the smallest it can be? The largest?', a: 'Smallest 9.50, largest 10.49' },
       { q: 'What number is halfway between 2.6 and 2.7? What number is halfway between 2.6 and 2.61?', a: '2.65 and 2.605' },
       { q: 'Mystery decimal. I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', a: '4.687 (rounds to 4.7, so tenths 6 or 7; tenths 7 would make hundredths 9, 4.79…, too big; so 4.68_ and 4 + 6 + 8 + 7 = 25).' },
@@ -159,12 +159,14 @@ module.exports = {
     H.sub('', 'A = _______    B = _______    C = _______    D = _______    E = _______'),
     H.sub('f', 'Which arrow, A to E, shows a number that rounds to 7?  _____'),
     H.q(2, 'Order and compare.', { keepNext: true }),
+    H.sub('', 'Start here: write each number with 3 decimal places (3.5 is 3.500). Compare the tenths first, then the hundredths.', { keepNext: true }),
     H.sub('a', 'Write in order, smallest first:   3.405,   3.45,   3.054,   3.5,   3.045'),
     H.sub('', '_________,  _________,  _________,  _________,  _________'),
     H.sub('b', 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right? Explain.'),
     ...H.lines(1),
     H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4. Use the number line: it is marked in hundredths.', { keepNext: true }),
     H.fig(roundLine()),
+    H.sub('', 'Start here: 7.45 is halfway between 7.4 and 7.5, and it rounds up. Put a finger on 7.40. Which marks round to 7.4?', { keepNext: true }),
     H.sub('a', 'What is the smallest it can be?  ________     The largest?  ________'),
 
     H.q(4, 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point goes after the FIRST digit, like 3.69.', { pb: true, before: 0, keepNext: true }),

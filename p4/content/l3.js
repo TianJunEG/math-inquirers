@@ -123,9 +123,9 @@ module.exports = {
       { q: 'Put ONE pair of brackets in 3 + 5 × 6 − 2 to make the answer 46.', a: '(3 + 5) × 6 − 2 = 8 × 6 − 2 = 46.' },
       { q: 'Write +, −, × or ÷ in each gap to make this true:  12 __ 4 __ 5 = 15', a: '12 ÷ 4 × 5 = 15 (the only way).' },
       { q: 'Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. The answer is always 7. Explain why it always works. A bar model can help.', a: 'Multiplying by 5 and then dividing by 5 gets back to your number. The 35 divided by 5 adds 7. Taking away your number leaves the 7. So the answer is always 7.' },
-      { q: 'Work out 120 − 4 × (18 + 7).', a: '20 (18 + 7 = 25, 4 × 25 = 100, 120 − 100 = 20).' },
+      { q: 'Ali worked out 120 − 4 × (18 + 7) and got 2900. Which step did he do in the wrong order? What is the correct answer?', a: 'He did 120 − 4 = 116 first and then 116 × 25 = 2900. Multiplying comes before subtracting: 18 + 7 = 25 (brackets first), 4 × 25 = 100, 120 − 100 = 20.' },
       { q: 'In this chain, each number after the first two is the sum of the two before it. Fill in the gaps: 3, __, __, 17, __', a: '3, 7, 10, 17, 27.' },
-      { q: 'Use each of the numbers 2, 3, 4 and 5 once in  a + b × c − d  (a, b, c and d are the four numbers, in any order) to make the biggest answer you can.', a: '21, from 3 + 4 × 5 − 2 (or 3 + 5 × 4 − 2). Put the two biggest numbers in the × and use the smallest to take away.' },
+      { q: 'Use each of the numbers 2, 3, 4 and 5 once in  □ + □ × □ − □  (one number in each box, in any order) to make the biggest answer you can.', a: '21, from 3 + 4 × 5 − 2 (or 3 + 5 × 4 − 2). Put the two biggest numbers in the × and use the smallest to take away.' },
       { q: 'Is 50 − 20 − 10 the same as 50 − (20 − 10)? Explain.', a: 'No. 50 − 20 − 10 = 20 (left to right), but 50 − (20 − 10) = 50 − 10 = 40.' },
       { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' },
       { q: 'Look at 4 + 8 × 5 − 3. Mei puts TWO pairs of brackets in it and makes 24. Where could she put them?', a: '(4 + 8) × (5 − 3) = 12 × 2 = 24.' },
@@ -133,9 +133,9 @@ module.exports = {
     ],
     challenge: [
       { q: 'Use four 4s and any of +, −, ×, ÷ and brackets to make each of the numbers 1, 2, 3, 4 and 5. Which one was hardest?', a: 'For example 1 = (4 + 4) ÷ (4 + 4); 2 = 4 ÷ 4 + 4 ÷ 4; 3 = (4 + 4 + 4) ÷ 4; 4 = 4 + (4 − 4) × 4; 5 = (4 × 4 + 4) ÷ 4. Other ways are possible.' },
-      { q: 'Ali has $56 more than Ben. Together they have $300. How much money does Ben have?', a: '$122 (300 − 56 = 244, 244 ÷ 2 = 122; Ali has $178).' },
+      { q: 'Ali has $56 more than Ben. Together they have $300. (a) How much money does Ben have? (b) Ali gives Ben some money so that they have the same amount. How much does he give? (c) What if they had $400 together and Ali still had $56 more? Does the amount Ali gives change? Explain.', a: '(a) $122 (300 − 56 = 244, 244 ÷ 2 = 122; Ali has $178). (b) $28, which is half of the $56 gap. (c) Ben $172 and Ali $228, and Ali still gives $28. The amount to give is half the gap, whatever the total, because only the gap matters.' },
       { q: 'Use 3, 4, 5 and 6 once each, with any signs and brackets, to make 24. Find two different ways.', a: 'For example 6 × (5 − 4 + 3) = 24 and (3 + 5 − 4) × 6 = 24. Other ways are possible.' },
-      { q: 'The same number a is used three times in  a × a − a = 30. What is the number a?', a: '6 (6 × 6 − 6 = 36 − 6 = 30). Try 5: 20, too small; try 7: 42, too big.' },
+      { q: 'The same number goes in all three boxes:  □ × □ − □ = 30. What is the number?', a: '6 (6 × 6 − 6 = 36 − 6 = 30). Try 5: 20, too small; try 7: 42, too big.' },
       { q: 'In a number chain, each number after the first two is the sum of the two before it. The 5th number is 30 and the 6th number is 49. What is the 1st number?', a: '3. Work backwards: 4th = 49 − 30 = 19, 3rd = 30 − 19 = 11, 2nd = 19 − 11 = 8, 1st = 11 − 8 = 3. The chain is 3, 8, 11, 19, 30, 49.' },
       { q: 'Ravi has 3 times as many stickers as Siti. Ravi gives 20 of his stickers to Siti, and now they have the same number. How many stickers did each child have at first?', a: 'Siti 20, Ravi 60. Draw bars: Ravi 3 units, Siti 1 unit. After the gift they are equal, so Ravi’s 2 extra units are 20 + 20 = 40. 1 unit = 20.' },
       { q: 'Put + or − in each gap so that the answer is 7:  1 __ 2 __ 3 __ 4 __ 5 __ 6 = 7. Find ALL the ways.', a: '2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. (All + makes 21, which is 14 too many. Changing a + to a − takes that number away twice, so the numbers we change must add up to 7: 2 and 5, or 3 and 4.)' },
@@ -147,7 +147,7 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.p('Brackets first. Then × and ÷, working from left to right. Then + and −, working from left to right.', { after: 80 }));
-    W.push(H.q(1, 'Work out. A story helps: 36 + 14 × 5 means 36 stickers and then 5 more packs of 14 stickers. Underline the part you do first.', { before: 40, keepNext: true }));
+    W.push(H.q(1, 'Work out. A story helps: 36 + 14 × 5 means 36 stickers and then 5 more packs of 14 stickers. Underline the part you do first. Start here: draw the 5 packs of 14 stickers (or count in 14s), then add the 36.', { before: 40, keepNext: true }));
     W.push(H.sub('a', '36 + 14 × 5  =  ____________'));
     W.push(H.sub('b', '(36 + 14) × 5  =  ____________'));
     W.push(H.sub('c', '72 ÷ 8 × 3  =  ____________'));
@@ -156,6 +156,7 @@ module.exports = {
     W.push(H.q(2, 'Missing signs. Write +, −, × or ÷ in each circle to make the number sentence true. You may use a sign more than once.', { keepNext: true }));
     W.push(H.fig(signsSvg()));
     W.push(H.q(3, 'Brackets change the answer. Look at  4 + 8 × 5 − 3', { keepNext: true }));
+    W.push(H.sub('', 'Start here: do (a) first. Then try brackets round a different pair each time: round 4 + 8, round 5 − 3, round 8 × 5 − 3. Write each answer.', { keepNext: true }));
     W.push(H.sub('a', 'With no brackets:   4 + 8 × 5 − 3  =  ________'));
     W.push(H.sub('b', 'Put in ONE pair of brackets to make 57:     4  +  8  ×  5  −  3  =  57'));
     W.push(H.sub('c', 'Put in ONE pair of brackets to make 20:     4  +  8  ×  5  −  3  =  20'));

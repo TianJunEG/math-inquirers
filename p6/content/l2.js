@@ -200,8 +200,8 @@ module.exports = {
     W.push(H.p([`<div style="border:2px solid ${N};border-radius:12px;background:#FFF4D1;padding:6px 14px;margin-left:40px"><div style="font-size:14px;color:#3B4A6B"><b style="color:${TEAL};font-size:15px">Python corner (optional): a factor finder.</b>  n % d is n mod d. It lists the factors of n and counts them. Change n to check Q1.</div><pre style="margin:4px 0 2px;font-family:'Courier New',monospace;font-size:14px;line-height:1.3;white-space:pre">${esc('n = 28\nf = [d for d in range(1, n + 1) if n % d == 0]\nprint(f, len(f))')}</pre></div>`], { after: 0 }));
 
     // ---- page 2 ----
-    W.push(H.q(3, 'Predict, then trace. This code counts the factors of 6. Fill in the trace table.', { pb: true, before: 0, keepNext: true }));
-    { const tr = H.tbl([1300, 2200, 2200], [H.row(['d', '6 mod d (left over)', 'count after'].map((s, i) => H.cell(s, [1300, 2200, 2200][i], { bold: true, fill: 'EDEDED', h: 20 }))),
+    W.push(H.q(3, 'Predict, then trace. This code counts the factors of 6 (6 mod d = left over). Fill in the table.', { pb: true, before: 0, keepNext: true }));
+    { const tr = H.tbl([1300, 2200, 2200], [H.row(['d', '6 mod d', 'count after'].map((s, i) => H.cell(s, [1300, 2200, 2200][i], { bold: true, fill: 'EDEDED', h: 20 }))),
         ...[1, 2, 3, 4, 5, 6].map(k => H.row([H.cell(String(k), 1300, { h: 5 }), H.cell(k === 1 ? '0' : '', 2200, { h: 12 }), H.cell(k === 1 ? '1' : '', 2200, { h: 12 })]))]);
       W.push(side(blocks([hat, ['var', 'set count to (0)'], ['var', 'set d to (1)'], ['ctl', 'repeat (6)', [['ctl', 'if (6 mod d = 0) then', [['var', 'change count by (1)']]], ['var', 'change d by (1)']]], ['look', 'say (count)']], 'Code: set count to 0, d to 1; repeat 6: if 6 mod d = 0 then change count by 1; change d by 1; then say count', 14), 4100,
         [tr, txt('(a)  What does it say at the end?  ______', '8px 4px 0'), txt('(b)  Change both 6s to 13. What does it say? Why?'), dl])); }
@@ -218,7 +218,7 @@ module.exports = {
     { const lb = (t, p) => `<div style="display:flex;align-items:center;gap:6px"><b style="width:18px">${t}</b>${blocks(p, 'Block ' + t, 14).replace('max-width:100%', 'flex:none')}</div>`;
       const col = xs => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + xs.join('') + '</div>';
       W.push(side('<div style="display:flex;gap:14px">' + col([lb('A', [['look', 'say (d) for (1) seconds']]), lb('B', [['ctl', 'repeat (40)', []]]), lb('C', [['var', 'set d to (1)']])]) + col([lb('D', [['var', 'change d by (1)']]), lb('E', [hat]), lb('F', [['ctl', 'if (40 mod d = 0) then', []]])]) + '</div>', 5600,
-        [txt('My order (Q3 is a model; show what goes inside):', '2px 4px 0'), dl, txt('How many numbers does it say?  ______', '10px 4px 0')]));
+        [txt('My order (show what goes inside):', '2px 4px 0'), dl, txt('How many numbers does it say?  ______', '10px 4px 0')]));
     }
     return W;
   }

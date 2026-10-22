@@ -73,10 +73,11 @@ function clockPage() {
   // bring from home
   b += `<rect x="14" y="796" width="672" height="150" rx="12" fill="#F3FBF9" stroke="${TEAL}" stroke-width="3"/>`;
   b += `<text x="34" y="830" font-size="20" font-weight="800" fill="${TEAL}" font-family="Nunito Sans, Arial">Bring from home (not printed here)</text>`;
-  ['A clear 180 degree protractor and a 30 cm ruler (Lesson 6). Ask your tutor if you do not have them.',
+  ['A clear 180 degree protractor and a 30 cm ruler. Lesson 6 starts with them, so have them ready.',
+    'No protractor? Tell your tutor before Lesson 6: the tutor has spares, or you can share with a partner.',
     'A ruler and two coloured pencils (Lessons 7 and 9). Scissors and tape (Lessons 4, 6, 7 and 8).',
     'Squared paper, if you want extra: the Square grid page can be cut into 1 cm squares for Lessons 7 and 8.'].forEach((t, i) => {
-    b += `<text x="34" y="${862 + i * 28}" font-size="15" fill="${NAVY}" font-family="Nunito Sans, Arial">• ${t}</text>`;
+    b += `<text x="34" y="${858 + i * 24}" font-size="15" fill="${NAVY}" font-family="Nunito Sans, Arial">• ${t}</text>`;
   });
   return svg(960, b);
 }

@@ -21,7 +21,7 @@ G.push(p(t(SLOGAN, { italics: true, size: 30, color: '1F3864' }), { after: 120 }
 G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.'));
 G.push(h2('The program at a glance'));
 G.push(tbl([2300, 7600], [
-  ['Level', 'Children finishing Primary 3 (ages 9 to 10), going into P4, who are ready for more thinking than standard practice'],
+  ['Level', 'Children aged 8 to 10 who are in or have finished Primary 3 maths, and who are ready for more thinking than standard practice'],
   ['Length', '10 lessons of 90 minutes, two a week over the 5 weeks of the holidays'],
   ['Group size', 'Up to 8 children per tutor, live online. Pilot with 6. Add a second tutor or helper above 8.'],
   ['Focus', 'Thinking skills: making a list in order, guess and check, drawing a model, working backwards, finding patterns, reasoning and explaining. Not speed drills.'],
@@ -42,10 +42,10 @@ G.push(h1('The 90-minute lesson routine', true));
 G.push(tx('Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.'));
 const R = [
   ['0–10', 'Opening and warm-up', '0 to 2 opening. 2 to 5 sneak-peek puzzles (own paper, nobody marked). 5 to 8 a quick game. 8 to 10 five quick questions.', 'Sit in a circle or horseshoe.', 'Cameras on. Sneak-peek answers written on own paper and shown only to the tutor on camera. Game answers by thumbs or hands.'],
-  ['10–25', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
+  ['10–25', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms; the tutor visits every room at least once.'],
   ['25–35', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['35–40', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
-  ['40–70', 'Worksheet', 'Page 1 (Start here) in pairs, short teaching, page 2 alone. After question 3 any child may choose Think harder or the Investigation. Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera for the tutor only. Tutor checks one or two answers each.'],
+  ['40–70', 'Worksheet', 'Page 1 (Start here) in pairs, short teaching, page 2 alone. After question 3 any child may choose Think harder or the Investigation. Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera for the tutor only. Tutor checks one or two answers each. Pairs in breakout rooms are visited at least once.'],
   ['70–80', 'Talk time', 'Share one answer and explain it. Compare methods.', 'Volunteers share. Passing is always fine.', 'Volunteers unmute. The tutor asks for volunteers first, never calls a child by name cold, and keeps no public tallies or rankings.'],
   ['80–90', 'Exit ticket, look back and stamp', '80 to 86 exit ticket on a slip of paper. 86 to 88 look back (2 minutes, short and safe, pass allowed). 88 to 90 stamp the inquiry journal and close.', 'Paper slip, tutor stamps.', 'Child writes the answer and shows it to the tutor only. Tutor stamps the next time or posts it.']
 ];
@@ -58,7 +58,7 @@ G.push(h2('Sneak-peek puzzles, choice and look-back (every lesson)'));
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: digit cards (Lessons 1, 2), fraction wall (Lesson 6), square grid (Lesson 7), right-angle tester (Lesson 8), play coins and notes (Lesson 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
-['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, scissors, a ruler, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Lessons are recorded on the approved platform so that children who miss one can catch up; follow “Recording the lesson” in this guide. Do not make your own recordings or photos. Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
+['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, scissors, a ruler, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. The tutor visits every breakout room at least once in each pair activity, so no pair works unseen for the whole activity. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Lessons are recorded on the approved platform so that children who miss one can catch up; follow “Recording the lesson” in this guide. Do not make your own recordings or photos. Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
 G.push(h1('Materials master list', true));
 G.push(tbl([900, 2600, 3200, 3200], [row([hd('Lesson', 900), hd('Title', 2600), hd('Face to face', 3200), hd('Online set-up', 3200)]), ...L.lessons.map(l => row([c2(String(l.n), 900, { align: AlignmentType.CENTER, bold: true }), c2(l.title, 2600), c2(l.materials, 3200), c2(l.online, 3200)]))]));
@@ -143,7 +143,7 @@ L.lessons.forEach(l => {
   doo(d.expSetup.map((x, i) => (i + 1) + '. ' + x));
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
   stuck(s.exploreHints);
-  doo(['Pairs work from minute 10. If a pair finishes the first task, they may take the Go further what-if on the slide (do not say who). At about minute 15 bring the group back together and take the three questions below, one at a time (minutes 15 to 25).']);
+  doo(['Pairs work from minute 10. If a pair finishes the first task, they may take the Go further what-if on the slide (do not say who). Online: visit each breakout room at least once between minutes 10 and 15 (about 1 minute per room; with four pairs that fits), and say which room you are visiting so nobody is surprised. At about minute 15 bring the group back together and take the three questions below, one at a time (minutes 15 to 25).']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 
   pushSeg('25–35 min', 'Mini-lesson (you teach, they join in)');
@@ -159,7 +159,7 @@ L.lessons.forEach(l => {
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
 
   pushSeg('40–70 min', 'Worksheet (Start here pages, then your choice)');
-  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 40 to 52: page 1 (Start here) in pairs; where the deck has a short teaching slide, it comes first. Minutes 52 to 54: check page 1 together. Minutes 54 to ' + PL.ws2[0] + ': short teaching before page 2. Minutes ' + PL.ws2[0] + ' to ' + PL.ws2[1] + ': each child works alone on page 2. Minutes ' + PL.ws2ans[0] + ' to ' + PL.ws2ans[1] + ': check page 2 together. Minutes ' + PL.stretch[0] + ' to 70: everyone chooses Think harder, Go further or the Investigation. A child who finishes early starts on one of them at once, and any child may choose them after question 3 of page 1.']);
+  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 40 to 52: page 1 (Start here) in pairs (online, visit each breakout room at least once in these minutes); where the deck has a short teaching slide, it comes first. Minutes 52 to 54: check page 1 together. Minutes 54 to ' + PL.ws2[0] + ': short teaching before page 2. Minutes ' + PL.ws2[0] + ' to ' + PL.ws2[1] + ': each child works alone on page 2. Minutes ' + PL.ws2ans[0] + ' to ' + PL.ws2ans[1] + ': check page 2 together. Minutes ' + PL.stretch[0] + ' to 70: everyone chooses Think harder, Go further or the Investigation. A child who finishes early starts on one of them at once, and any child may choose them after question 3 of page 1.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
@@ -179,7 +179,7 @@ L.lessons.forEach(l => {
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   G.push(h2('Look back (minutes 86 to 88, two minutes)'));
   say(['Turn to the last page of today’s lesson and find Look back. Tick or write one thing for each line: something you did well, the hardest part, and what helped you. There are no right answers, and you may pass on any line.', 'Would anyone like to share something they did well, or what helped? Thank you. When you got stuck and tried something else, that is exactly what mathematicians do.']);
-  doo(['Give a full 2 minutes. Never collect the page, mark it or read it out in front of the group: children keep it. A child who ticked “I am still stuck (my tutor will check in with me)” gets a check-in in the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a private message. Check in again at the start of the next lesson, in the open session. Invite volunteers only. Praise the strategy (“you drew it and that got you unstuck”), not the speed or the answer.']);
+  doo(['Give a full 2 minutes. Never collect the page, mark it or read it out in front of the group: children keep it. You do not see the page, so say: “If something is still puzzling you, you can show this page to a grown-up at home, or tell me at the start of next lesson.” At the start of the next lesson, in the open session, invite anyone who would like another look at a puzzle (volunteers only, by hand signal or in the chat); never a private message. Invite volunteers only. Praise the strategy (“you drew it and that got you unstuck”), not the speed or the answer.']);
   say(s.close);
   doo(['Minutes 88 to 90. Stamp the inquiry journal when a child has shown you their exit ticket. Mark S, D or H in the progress tracker at the back of this guide (it is for you only). If a child is marked D or H, plan two minutes of quiet catch-up at the start of the next lesson.']);
   G.push(h2('Extension for children who want more'));

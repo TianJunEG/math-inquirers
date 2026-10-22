@@ -73,7 +73,7 @@ const cornerFig = () => {
 const codeAndFrame = (prog, label, frameText, trace) => {
   const b = blocks(prog, { fs: 14, h: 25 }), W = 600, fx = b.w + 30;
   const Ht = Math.max(b.h, trace ? (trace.rows + 1) * 22 + 4 : 140);
-  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${Ht + 4}" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">` + b.svg;
+  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${Ht + 4}" xmlns="http://www.w3.org/2000/svg" style="width:${trace ? 560 : 400}px;max-width:100%">` + b.svg;
   if (frameText) s += `<rect x="${fx}" y="2" width="${W - fx - 4}" height="${Ht}" rx="12" fill="${WHITE}" stroke="${NAVY}" stroke-width="2" stroke-dasharray="7 5"/><text x="${fx + 12}" y="22" font-size="14" fill="${NAVY}" font-family="Arial">${esc(frameText)}</text>`;
   if (trace) {
     const c1 = 130, c2 = 130, x0 = W - c1 - c2 - 6;
@@ -198,8 +198,8 @@ module.exports = {
   workbook: H => {
     const w1 = [2475, 2475, 2475, 2475];
     const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
-    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 42 }))),
-      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 26, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
+    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 30 }))),
+      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 16, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
     const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn ↻ {120} degrees']]]];
     const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn ↻ {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
     const w4 = [1700, 2000, 2200, 2000, 2000];
@@ -210,11 +210,11 @@ module.exports = {
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('<div style="text-align:left;line-height:1.35;font-size:14.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:left;line-height:1.35;font-size:13.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,
-      H.p(['<div style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:3px 10px;margin:2px 0 0;text-align:left;font-size:13.5px;line-height:1.3"><b style="color:#1F7A6F">Try it first.</b> Stand up and walk a square: step, turn right a quarter turn (90°), and repeat until you are home facing the way you began. Quarter turns made: ____ Degrees turned altogether: ____ <span style="color:#3B4A6B">(Or draw it on paper.)</span></div>'], { after: 0 }),
+      H.p(['<div style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:3px 10px;margin:2px 0 0;text-align:left;font-size:13.5px;line-height:1.3"><b style="color:#1F7A6F">Try it first.</b> Stand up and walk a square (step, turn right 90°, repeat until you are home facing the way you began). Quarter turns: ____ Degrees altogether: ____ <span style="color:#3B4A6B">(Or draw it.)</span></div>'], { after: 0 }),
       H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),

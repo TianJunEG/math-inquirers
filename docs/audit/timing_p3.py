@@ -72,6 +72,11 @@ ITEMS = {
 }
 # pair-task minutes for the Explore block (hands-on, MID pair, includes setting up the cards/paper)
 EXPLORE_X = {1: 6, 2: 8, 3: 9, 4: 7, 5: 7, 6: 10, 7: 7, 8: 7, 9: 9, 10: 15}  # L10 = two 7-minute stations + 1 switch
+EXPLORE_X_FIX = {1: 6, 2: 7, 3: 6.5, 4: 7, 5: 7, 6: 7.5, 7: 7, 8: 7, 9: 7, 10: 9}  # after the explore fixes in the report
+DEMOTE = {8: 5}     # lesson -> index in ITEMS (0-based) of the page-2 item that becomes 'if time' / take-home
+# FIX: teaching slides cut (they only serve an 'if time' item, or are a second try-it that the worksheet itself repeats)
+DROP_SLIDES = {1: ['teachsum', 'tryclues'], 2: ['teachshape'], 3: ['teachboth'], 4: ['tryunits'], 5: ['teachtable'],
+               6: ['tryadd'], 7: ['teachadd'], 8: ['try1'], 9: ['teach24'], 10: []}
 MAT_EXTRA = {6: 45}  # L6: extra seconds to find/mark the 7 strips on top of the standard materials time
 EXIT_WORK = {1: 3.0, 2: 3.0, 3: 3.0, 4: 3.5, 5: 3.0, 6: 3.0, 7: 3.0, 8: 3.0, 9: 3.5, 10: 3.5}
 LOW_F, HIGH_F = 1.7, 0.6  # LOW child takes 1.7 x MID time (plus help), HIGH child 0.6 x
@@ -98,7 +103,7 @@ def slides(n):
             'Math Inquirers P3 Holiday Program • Notice it. Test it. Explain why.', '').strip()
         rows.append(dict(id=sid.split('-', 1)[-1], a=int(m.group(1)) if m else None, b=int(m.group(2)) if m else None,
                          vis=len(vis.split()), notes=len(notes.split()), asks=len(re.findall(r'\bAsk\b', notes)),
-                         yourturn='Your turn' in vis))
+                         yourturn='Your turn' in vis, q=notes.count('?'), steps=len(re.findall(r'Step \d', vis))))
     return rows
 
 def nw(x):
@@ -110,98 +115,115 @@ def say(words): return words / W_SAY * 60
 def read(words): return words / W_READ * 60
 
 # ---- one lesson ------------------------------------------------------------------------------
-def lesson(n, C, P):
+def teach_slide(s, P):
+    """cost (speak, wait, act, trans, words) in seconds for one teaching / try-it slide."""
+    sl = P['slide']; dur = (s['b'] - s['a']) * 60 if s['a'] is not None else 60
+    if s['id'].startswith('try'):
+        w = round(s['vis'] * 0.55)          # the problem text; the answers are hidden until the click
+        return dict(speak=read(w), wait=30 + 15, act=max(60, 0.6 * dur), trans=sl, words=w)
+    w = round(s['vis'] * 0.8)               # tutor explains / thinks aloud around the slide text
+    asks = max(s['asks'], 1 if s['q'] >= 1 else 0)
+    d = dict(speak=say(w), wait=asks * 30 + s['steps'] * 10, act=0, trans=sl, words=w)
+    if s['yourturn']:
+        d['act'] += 60; d['wait'] += 30
+    return d
+
+def lesson(n, C, P, fix=False):
     c = C[n]; S = slides(n); sc, dk, gf = c['script'], c['deck'], c['gf']
     sl, mv, mat, act, tmove = P['slide'], P['move'], P['mat'], P['act'], P['tmove']
+    if fix: mv = mv / 2; tmove = tmove / 2        # FIX: pre-assigned rooms, auto-move and auto-close
     REC = 10
     parts = {}
-    # 1 Opening
-    sp = say(nw(sc['hook'])) + read(nw(dk['today'])); wt = GROUP * 3; tr = 0
-    parts['Opening'] = dict(speak=sp + REC * 0, wait=wt, act=0, trans=tr, rec=REC, words=nw(sc['hook']) + nw(dk['today']))
-    # 2 sneak-peek + game + quick questions
+    def add(name, speak, wait, actv, trans, words, **extra):
+        parts[name] = dict(speak=speak, wait=wait, act=actv, trans=trans, rec=REC, words=words, **extra)
+    # 1 Opening: hook, "Today we will", greet each child by name (3 s each); title slide is already up
+    add('Opening', say(nw(sc['hook'])) + read(nw(dk['today'])), GROUP * 3, 0, 0, nw(sc['hook']) + nw(dk['today']))
+    # 2 Sneak-peek + game + quick questions
     q1, q2 = nw(gf['check'][0]['q']), nw(gf['check'][1]['q'])
-    nq = len(dk['warmQs']); qw = sum(nw(x[0]) for x in dk['warmQs'])
+    wq = dk['warmQs'][:3] if fix else dk['warmQs']          # FIX: three quick questions, the rest go to take-home
+    nq = len(wq); qw = sum(nw(x[0]) for x in wq)
     asks_game = sum(1 for l in sc['warmIntro'][1:] if '?' in l)
-    sp = say(nw(SNEAK_SAY)) + read(q1 + q2) + say(nw(sc['warmIntro'])) + read(qw)
-    wt = 2 * 30 + asks_game * 30 + nq * 30 + 5          # 2 hold-ups, game questions, 10s+20s per quick question
-    ac = 2 * 60 + 180                                   # 1 min per puzzle, 3 min game play
-    tr = 3 * sl                                         # warmcheck, warm1, warm2
-    parts['Sneak-peek + warm-up game + quick questions'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC,
-        words=nw(SNEAK_SAY) + q1 + q2 + nw(sc['warmIntro']) + qw)
+    add('Sneak-peek + warm-up game + quick questions',
+        say(nw(SNEAK_SAY)) + read(q1 + q2) + say(nw(sc['warmIntro'])) + read(qw),
+        (1 if fix else 2) * 30 + asks_game * 30 + nq * 30 + 5,   # hold-ups (FIX: one for both puzzles), game questions, 30 s per quick question
+        2 * 60 + (120 if fix else 180),              # 1 min per puzzle, game play (FIX: 2 min)
+        3 * sl, nw(SNEAK_SAY) + q1 + q2 + nw(sc['warmIntro']) + qw)
     # 3 Explore
     ea = sum(nw(x[0]) for x in dk['expAsk'])
-    sp = say(nw(sc['predict'])) + read(nw(dk['expSetup'])) + say(nw(WORK_SAY)) + read(ea)
-    wt = 30 + 30 + len(dk['expAsk']) * 30               # write prediction/thumbs hold-up, tutor check, 3 questions
-    ac = EXPLORE_X[n] * 60 * act
-    tr = mat + MAT_EXTRA.get(n, 0) + 2 * mv + 2 * sl
-    parts['Explore'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC, words=nw(sc['predict']) + nw(dk['expSetup']) + ea)
-    # 4 Mini-lesson (slides starting 25..34 excluding the 'break')
+    add('Explore', say(nw(sc['predict'])) + read(nw(dk['expSetup'])) + say(nw(WORK_SAY)) + read(ea),
+        30 + 30 + len(dk['expAsk']) * 30,            # prediction hold-up, tutor check-in, three group questions
+        (EXPLORE_X_FIX[n] if fix else EXPLORE_X[n]) * 60 * act,
+        mat + (0 if fix else MAT_EXTRA.get(n, 0)) + 2 * mv + 2 * sl, nw(sc['predict']) + nw(dk['expSetup']) + ea)
+    # 4 Mini-lesson = slides starting at minutes 25..34
     mini = [s for s in S if s['a'] is not None and 25 <= s['a'] < 35]
-    sp = wt = ac = tr = 0; words = 0
+    if fix and len(mini) >= 7:                      # FIX: merge the shortest 'we' into the next try-it slide
+        drop = min((x for x in mini if x['id'].startswith('we')), key=lambda x: x['vis'], default=None)
+        mini = [x for x in mini if x is not drop]
+    t = dict(speak=0, wait=0, act=0, trans=0, words=0)
     for s in mini:
-        tr += sl
-        if s['id'].startswith('try'):
-            w = round(s['vis'] * 0.55); sp += read(w); ac += 60; wt += 30 + 15; words += w
-        elif s['id'] == 'key':
-            w = nw(dk['keyHead']) + nw(dk['keyBig']) + 8; sp += say(w) + 10; words += w
+        if s['id'] == 'key':
+            w = nw(dk['keyHead']) + nw(dk['keyBig']) + 8
+            d = dict(speak=say(w) + 10, wait=0, act=0, trans=sl, words=w)
         else:
-            w = round(s['vis'] * 0.8); sp += say(w); wt += s['asks'] * 30; words += w
-            if s['yourturn']: ac += 60; wt += 30
-    parts['Mini-lesson'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC, words=words, slides=len(mini))
-    # 5 Brain break
-    sp = say(nw(dk['brk'])) + say(nw(BRK_TAIL))
-    parts['Brain break'] = dict(speak=sp, wait=0, act=120 + 150, trans=sl, rec=REC, words=nw(dk['brk']) + nw(BRK_TAIL))
-    # 6 Worksheet
-    ws1 = next(s for s in S if s['id'] == 'ws1'); ws2 = next(s for s in S if s['id'] == 'ws2')
+            d = teach_slide(s, P)
+        for k in t: t[k] += d[k]
+    add('Mini-lesson', t['speak'], t['wait'], t['act'], t['trans'], t['words'], slides=len(mini))
+    # 5 Brain break: 2 min movement + 2.5 min water / toilet / settle back (the guide caps it at five)
+    add('Brain break', say(nw(dk['brk'])) + say(nw(BRK_TAIL)), 0, 120 + 150, sl, nw(dk['brk']) + nw(BRK_TAIL))
+    # 6 Worksheet (40-70)
+    byid = {s['id']: s for s in S}
+    ws1, ws2 = byid['ws1'], byid['ws2']
     pre = [s for s in S if s['a'] is not None and 40 <= s['a'] < ws1['a'] and not s['id'].startswith(('ws', 'stretch'))]
     mid = [s for s in S if s['a'] is not None and 54 <= s['a'] < ws2['a'] and not s['id'].startswith(('ws', 'stretch'))]
-    def teach(lst):
-        sp = wt = ac = tr = 0; words = 0
+    sp = wt = ac = tr = words = 0; detail = {}
+    def acc(label, d):
+        nonlocal sp, wt, ac, tr, words
+        sp += d['speak']; wt += d['wait']; ac += d['act']; tr += d['trans']; words += d.get('words', 0)
+        detail[label] = (d['speak'] + d['wait'] + d['act'] + d['trans']) / 60
+    def sumslides(lst):
+        z = dict(speak=0, wait=0, act=0, trans=0, words=0)
         for s in lst:
-            tr += sl
-            if s['id'].startswith('try'):
-                w = round(s['vis'] * 0.55); sp += read(w); ac += 60; wt += 30 + 15; words += w
-            else:
-                w = round(s['vis'] * 0.8); sp += say(w); wt += s['asks'] * 30; words += w
-                if s['yourturn']: ac += 60; wt += 30
-        return sp, wt, ac, tr, words
-    it = ITEMS[n]; p1 = it[:3]; p2 = it[3:]
+            d = teach_slide(s, P)
+            for k in z: z[k] += d[k]
+        return z
+    it = [list(i) for i in ITEMS[n]]
+    if fix and n in DEMOTE: it[DEMOTE[n]][2] = 1
+    p1, p2 = it[:3], it[3:]
+    if fix:
+        pre = [x for x in pre if x['id'] not in DROP_SLIDES[n]]; mid = [x for x in mid if x['id'] not in DROP_SLIDES[n]]
     p1_min = sum(i[1] for i in p1) * act
     p2_min = sum(i[1] for i in p2 if not i[2]) * act
-    psp, pwt, pac, ptr, pw = teach(pre)
-    msp, mwt, mac, mtr, mw = teach(mid)
-    chk1 = 3 * 40 + say(round(next(s for s in S if s['id'] == 'ws1ans')['vis'] * 0.5))
-    chk2 = 3 * 40 + say(round(next(s for s in S if s['id'] == 'ws2ans')['vis'] * 0.5))
-    sp = say(nw(START_SAY) + nw(PAIRS_SAY) + nw(CHOICE_SAY)) + psp + msp
-    wt = pwt + mwt + 3 * 40 * 2 - 0                      # question waits inside the two answer checks
-    wt = pwt + mwt + 6 * 40                              # (kept explicit: 3 questions x 40 s x 2 checks)
-    sp += say(round(next(s for s in S if s['id'] == 'ws1ans')['vis'] * 0.5)) + say(round(next(s for s in S if s['id'] == 'ws2ans')['vis'] * 0.5))
-    ac = pac + mac + 120 + p1_min * 60 + (p2_min * 60 + 30) + 120 + 0    # start 2 min; p1 work; p2 work+settle; choice
-    ac += 3 * 60 * 0                                      # choice block counted below
-    tr = ptr + mtr + 2 * mv + 4 * sl + 2 * sl            # pairs in/out; ws1, ws1ans, ws2, ws2ans slides; 2 Think harder slides
-    # choose block: 3 min nominal minus the slide changes already counted
-    ac_choice = 3 * 60 - 2 * sl
-    ac = ac - 120 + 120                                  # no-op for clarity
-    ac += ac_choice
-    parts['Worksheet'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC, words=nw(START_SAY) + nw(PAIRS_SAY) + nw(CHOICE_SAY) + pw + mw,
-        slides=len(pre) + len(mid) + 6, p1_min=p1_min, p2_min=p2_min, start=120)
-    # 7 Talk
+    sw = nw(START_SAY) + nw(PAIRS_SAY)
+    acc('teaching slides before page 1', sumslides(pre))
+    acc('hand out + get started (2 min)', dict(speak=say(sw), wait=0, act=120, trans=0, words=sw))
+    acc('breakout in + out', dict(speak=0, wait=0, act=0, trans=2 * mv))
+    acc('page 1 pairs work (Q1-Q3)', dict(speak=0, wait=0, act=p1_min * 60, trans=sl))
+    CHK = 60 if fix else 3 * 40                   # FIX: self-check slide, tutor probes one or two answers only
+    a1 = round(byid['ws1ans']['vis'] * 0.5)
+    acc('check page 1 (3 questions)', dict(speak=say(a1), wait=CHK, act=0, trans=sl, words=a1))
+    acc('teaching slides before page 2', sumslides(mid))
+    acc('page 2 alone (compulsory Q4-Q6)', dict(speak=0, wait=0, act=p2_min * 60 + 30, trans=sl))
+    a2 = round(byid['ws2ans']['vis'] * 0.5)
+    acc('check page 2 (3 questions)', dict(speak=say(a2), wait=CHK, act=0, trans=sl, words=a2))
+    cw = nw(CHOICE_SAY)
+    acc('choose Think harder / Go further (3 min)', dict(speak=say(cw), wait=0, act=180 - 2 * sl - say(cw), trans=2 * sl, words=cw))
+    add('Worksheet', sp, wt, ac, tr, words, slides=len(pre) + len(mid) + 6, p1_min=p1_min, p2_min=p2_min, detail=detail)
+    # 7 Talk time
     sh = nw(c['lesson']['share']); tw = nw(sc['talk']); ans = nw(sc['talkAns'])
-    sp = say(tw) + read(sh) + say(ans) + read(q2)
-    wt = 3 * 30 + 30 + 30                                # three volunteer questions, puzzle-2 revisit, follow-up
-    ac = 120                                             # partner talk 2 min
-    tr = sl + tmove
-    parts['Talk time'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC, words=tw + sh + ans + q2)
-    # 8 Exit + look-back + close
+    add('Talk time', say(tw) + read(sh) + say(ans) + read(q2),
+        3 * 30 + 30 + 30,                            # three volunteer questions, puzzle-2 revisit, follow-up
+        120,                                         # partner talk, 2 min (notes: "Pairs talk for 2 minutes, then share")
+        sl + tmove, tw + sh + ans + q2)
+    # 8 Exit ticket + look-back + close
     ex = nw(c['lesson']['exit']['q'])
-    sp = say(nw(EXIT_SAY)) + read(ex) + say(nw(LB_SAY1) + nw(LB_SAY2)) + say(nw(sc['close']))
-    wt = 30 + GROUP * 6 + 30 + 20                        # hold-up of tickets, tutor scans 8 papers, volunteer share, stuck check
-    ac = EXIT_WORK[n] * 60 * act + 120                   # exit work + 2 min look-back
-    tr = 3 * sl + mat * 0.8                              # exit, reflect (+ end slide) ; find slip of paper
+    ac = EXIT_WORK[n] * 60 * act + 120               # exit work + a full 2 minutes of look-back
     if n == 10:
-        ac += GROUP * 30 + 60                            # 8 certificates with one specific praise each + volunteers
-    parts['Exit ticket + look-back + close'] = dict(speak=sp, wait=wt, act=ac, trans=tr, rec=REC,
-        words=nw(EXIT_SAY) + ex + nw(LB_SAY1) + nw(LB_SAY2) + nw(sc['close']))
+        ac += GROUP * (20 if fix else 30) + (30 if fix else 60)   # 8 certificates with one specific praise each (FIX: 20 s), volunteers
+    add('Exit ticket + look-back + close',
+        say(nw(EXIT_SAY)) + read(ex) + say(nw(LB_SAY1) + nw(LB_SAY2)) + say(nw(sc['close'])),
+        30 + GROUP * 6 + 30 + 20,                    # tickets to camera, tutor scans 8 papers, volunteer share, stuck check
+        ac, 3 * sl + mat * 0.8,                      # exit, look-back, end slide; find a slip of paper
+        nw(EXIT_SAY) + ex + nw(LB_SAY1) + nw(LB_SAY2) + nw(sc['close']))
     for k in parts:
         p = parts[k]; p['total'] = (p['speak'] + p['wait'] + p['act'] + p['trans'] + p['rec']) / 60
     return parts, S
@@ -239,13 +261,37 @@ def main():
         for n in range(1, 11):
             res, S = out[n]; r = res['central']
             print(f"\n### Lesson {n}: {C[n]['lesson']['title']}\n")
-            print('| Part | Scripted | Speak | Wait | Activity | Trans | REC | Need (central) | Diff | Flag |')
-            print('|---|---|---|---|---|---|---|---|---|---|')
+            print('| Part | Scripted | Speak | Wait | Activity | Trans | REC | Need (central) | Diff | Flag | Range low-high |')
+            print('|---|---|---|---|---|---|---|---|---|---|---|')
             for (k, sm) in SCRIPTED:
                 p = r[k]; d = p['total'] - sm
-                print(f"| {k} | {sm} | {p['speak']/60:.1f} | {p['wait']/60:.1f} | {p['act']/60:.1f} | {p['trans']/60:.1f} | {p['rec']/60:.2f} | {p['total']:.1f} | {d:+.1f} | {flag(d)} |")
-            tot = sum(p['total'] for p in r.values())
-            print(f"| TOTAL | 90 | | | | | | {tot:.1f} | {tot-90:+.1f} | |")
+                print(f"| {k} | {sm} | {p['speak']/60:.1f} | {p['wait']/60:.1f} | {p['act']/60:.1f} | {p['trans']/60:.1f} | {p['rec']/60:.2f} | {p['total']:.1f} | {d:+.1f} | {flag(d)} | {res['low'][k]['total']:.1f}-{res['high'][k]['total']:.1f} |")
+            tot = {pn: sum(p['total'] for p in res[pn].values()) for pn in res}
+            print(f"| TOTAL | 90 | | | | | | {tot['central']:.1f} | {tot['central']-90:+.1f} | | {tot['low']:.1f}-{tot['high']:.1f} |")
+            print('\nWorksheet block detail (central, minutes): ' + '; '.join(f"{k} {v:.1f}" for k, v in r['Worksheet']['detail'].items()))
+            byid = {s['id']: s for s in S}
+            P = PARAMS['central']
+            w1 = (byid['ws1']['b'] - byid['ws1']['a']) - 2 - 2 * P['move'] / 60
+            w2 = (byid['ws2']['b'] - byid['ws2']['a']) - 0.5
+            it = ITEMS[n]
+            row = []
+            for nm, f in (('LOW', LOW_F), ('MID', 1.0), ('HIGH', HIGH_F)):
+                row.append(f"{nm} {items_done(w1, it[:3], f):.1f}/3 + {items_done(w2, it[3:], f):.1f}/3")
+            print(f"Items finished in the scripted windows (page 1 work time {w1:.1f} min; page 2 work time {w2:.1f} min): " + '; '.join(row))
+            print(f"MID minutes needed: page 1 {sum(i[1] for i in it[:3]):.1f}, page 2 compulsory {sum(i[1] for i in it[3:] if not i[2]):.1f}, page 2 incl. if-time {sum(i[1] for i in it[3:]):.1f}")
+            print(f"Slides {len(S)}; spoken+read-aloud words (central model) {sum(p['words'] for p in r.values())}")
+
+def fixed_table():
+    C = load()
+    print('FIXED scenario (central): part needs per lesson')
+    names = [k for k, _ in SCRIPTED]
+    print('lesson | ' + ' | '.join(n[:10] for n in names) + ' | total (low-high)')
+    for n in range(1, 11):
+        r = {pn: lesson(n, C, PARAMS[pn], fix=True)[0] for pn in PARAMS}
+        c = r['central']
+        tot = {pn: sum(p['total'] for p in r[pn].values()) for pn in r}
+        print(f"L{n:2d} | " + ' | '.join(f"{c[k]['total']:.1f}" for k in names) + f" | {tot['central']:.1f} ({tot['low']:.1f}-{tot['high']:.1f})")
 
 if __name__ == '__main__':
     main()
+    if '--fix' in sys.argv: fixed_table()

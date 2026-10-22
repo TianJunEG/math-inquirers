@@ -71,7 +71,7 @@ const clocksFig = svg(600, 188,
 module.exports = {
   lesson: {
     n: 9, week: 5, session: 'A', title: 'Measure Masters', topic: 'Length, Mass, Volume and Time',
-    objective: 'Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with a.m. and p.m. and find start times, end times and how long, also across the hour.',
+    objective: 'Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with am and pm and find start times, end times and how long, also across the hour.',
     skills: 'Reasoning with equal amounts (swapping), working step by step, keeping a table, counting on in time, checking',
     materials: 'A coat hanger, two paper cups, string, a glue stick, a spoon and about 20 20¢ coins (a home-made balance; backup: a ruler balanced on a pencil); for the jug puzzles two cups or bottles of different size (about 3 and 5 units), a jug of dry rice or sand (or water), and tape marking 3 and 5 units; a cardboard clock with hands; mini whiteboards.',
     online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. No coat-hanger balance at home? The tutor balances a ruler on a pencil on camera and pairs share one view. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
@@ -79,7 +79,7 @@ module.exports = {
     explore: 'Balance lab with a coat-hanger balance: how many 20¢ coins balance a glue stick? A spoon? Guess first, then test. Which is heavier, and how do you know without putting them on the balance together?',
     mini: 'A level balance means both sides are equally heavy, so we can swap one thing for whatever balances it (watermelon = 3 pineapples; pineapple = 2 kg; so watermelon = 6 kg; watermelon = pineapple + 4 bags, so the 4 bags are 4 kg). Jug puzzles: fill, pour or empty, and write every pour in a table (4 ℓ and 9 ℓ jugs: fill 9, pour into 4 twice, emptying in between, leaves 1 ℓ).',
     share: 'A melon balances 2 apples. Can you swap the melon on a scale for 2 apples and keep it level? Why?',
-    exit: { q: 'A lesson starts at 4:50 p.m. and lasts 25 minutes. What time does it end?', a: '5:15 p.m. (4:50 to 5:00 is 10 minutes, 15 more minutes is 5:15)' },
+    exit: { q: 'A lesson starts at 4:50 pm and lasts 25 minutes. What time does it end?', a: '5:15 pm (4:50 to 5:00 is 10 minutes, 15 more minutes is 5:15)' },
     mistakes: ['Balance puzzles: adding the masses on the two sides instead of using "both sides are the same".', 'Jug puzzles: writing "pour" without saying how much is in each jug after the pour, so the steps cannot be checked.', 'Time: counting on past the hour as if there were 100 minutes in an hour (4:50 + 25 minutes written as 4:75 or 5:75).'],
     extension: 'Make your own jug puzzle with two jug sizes and a target amount. Check that it can be done, and list every pour.',
     key: [
@@ -87,7 +87,7 @@ module.exports = {
       ['Q2', '(a) Fill the 5 ℓ jug. Pour it into the 3 ℓ jug until the 3 ℓ jug is full. 2 ℓ is left in the 5 ℓ jug.  (b) Fill the 3 ℓ jug and pour it into the 5 ℓ jug. Fill the 3 ℓ jug again and pour until the 5 ℓ jug is full (2 ℓ goes in). 1 ℓ is left in the 3 ℓ jug.'],
       ['Q3', '(3 ℓ jug, 5 ℓ jug) Start 0, 0. 1: fill the 5 ℓ jug: 0, 5. 2: pour into the 3 ℓ jug until it is full: 3, 2. 3: empty the 3 ℓ jug: 0, 2. 4: pour the 2 ℓ into the 3 ℓ jug: 2, 0. 5: fill the 5 ℓ jug: 2, 5. 6: pour into the 3 ℓ jug until it is full (1 ℓ fits): 3, 4. 4 ℓ ✓ (6 steps is the shortest way; checked by search.)'],
       ['Q4', '(a) 46 cm  (b) 105 cm (64 + 46 = 110, take away the 5 cm overlap)'],
-      ['Q5', '(a) A 7:25 a.m.  B 4:50 p.m.  (b) 5:25 p.m.  (c) 45 minutes (10:45 to 11:00 is 15 minutes, 30 more)']
+      ['Q5', '(a) A 7:25 am  B 4:50 pm  (b) 5:25 pm  (c) 45 minutes (10:45 to 11:00 is 15 minutes, 30 more)']
     ]
   },
 
@@ -107,7 +107,7 @@ module.exports = {
   deck: {
     today: 'Solve balance, jug and ribbon puzzles, and work out times and how long things take.',
     warmGame: 'Which unit? Show six things one at a time (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing teeth). Children write m, cm, kg, g, ℓ or minutes on whiteboards and explain.',
-    warmQs: [['35 cm + 40 cm = ?', '75 cm'], ['The minute hand points to 6. How many minutes past the hour?', '30 minutes'], ['A 5 ℓ bucket has 2 ℓ of water. How much more fills it?', '3 ℓ'], ['Lunch at 12:30. a.m. or p.m.?', 'p.m.'], ['One bag of rice is 5 kg. How heavy are 2 bags?', '10 kg']],
+    warmQs: [['35 cm + 40 cm = ?', '75 cm'], ['The minute hand points to 6. How many minutes past the hour?', '30 minutes'], ['A 5 ℓ bucket has 2 ℓ of water. How much more fills it?', '3 ℓ'], ['Lunch at 12:30. am or pm?', 'pm'], ['One bag of rice is 5 kg. How heavy are 2 bags?', '10 kg']],
     expSetup: ['Hang two paper cups from a coat hanger. Check it is level when the cups are empty.', 'Put a glue stick in one cup. Guess: how many 20¢ coins will balance it?', 'Add coins one at a time until the hanger is level. Then try a spoon.', 'Which is heavier, the glue stick or the spoon? How do you know?'],
     expPic: 'a coat hanger with a paper cup hanging from each end: a glue stick in one cup and a pile of 20¢ coins in the other, and the hanger level.',
     expAsk: [['How many coins balanced your glue stick? Your spoon?', 'Open answers. The count depends on the coins and the objects.'], ['The glue stick balances 8 coins and the spoon balances 5 coins. Which is heavier?', 'The glue stick: it needs more of the same coin.'], ['Your partner used erasers and got a different number. Why?', 'Erasers and coins are different units. To compare, use the same unit.']],
@@ -116,7 +116,7 @@ module.exports = {
     keyHead: 'Key idea: same on both sides', keyBig: 'A level balance means both sides are equally heavy, so you can swap. For jugs, write every pour in a table.', keySmall: 'For time, count on to the o’clock first, then count the rest.',
     brk: 'Be a balance! Stand on one leg with your arms out. The tutor calls “heavy left!” or “heavy right!” and you tip, then come back level.',
     ws1: 'Page 1, in pairs: Q1 balance scales, Q2 pouring with a 3 ℓ and a 5 ℓ jug.',
-    ws2: 'Page 2, on your own: Q3 the 4 ℓ jug puzzle in a table, Q4 ribbons in cm and m, Q5 clocks, a.m. and p.m., and how long.'
+    ws2: 'Page 2, on your own: Q3 the 4 ℓ jug puzzle in a table, Q4 ribbons in cm and m, Q5 clocks, am and pm, and how long.'
   },
 
   qbank: {
@@ -124,32 +124,32 @@ module.exports = {
       { q: 'One bag of flour balances 2 bags of sugar. A bag of sugar is 300 g. How heavy is the bag of flour?', a: '600 g (300 + 300)' },
       { q: 'A bucket holds 10 ℓ. It has 4 ℓ of water in it. Ali pours in 3 ℓ more. How many more litres are needed to fill it?', a: '3 ℓ (4 + 3 = 7, and 10 − 7 = 3)' },
       { q: 'A ribbon is 90 cm long. Mei cuts off 25 cm. How long is the piece that is left?', a: '65 cm' },
-      { q: 'A cartoon starts at 5:40 p.m. and lasts 30 minutes. What time does it end?', a: '6:10 p.m.' },
-      { q: 'Write a.m. or p.m. Ben eats lunch at 12:30 ____. He goes to bed at 8:45 ____.', a: 'p.m. and p.m.' },
+      { q: 'A cartoon starts at 5:40 pm and lasts 30 minutes. What time does it end?', a: '6:10 pm' },
+      { q: 'Write am or pm. Ben eats lunch at 12:30 ____. He goes to bed at 8:45 ____.', a: 'pm and pm' },
       { q: 'The minute hand points to 7. How many minutes past the hour is it?', a: '35 minutes (count in 5s: 5, 10, 15, 20, 25, 30, 35)' }
     ],
     stretch: [
       { q: 'Ben cuts a 20 m rope into 4 equal pieces. How long is each piece? How many cuts does he make?', a: '5 m each (5 + 5 + 5 + 5 = 20). 3 cuts: the last piece needs no cut.' },
-      { q: 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 12:10 p.m. How long is the trip?', a: '1 hour 25 minutes (10:45 to 11:00 is 15 minutes, 11:00 to 12:00 is 1 hour, 12:00 to 12:10 is 10 minutes).' },
+      { q: 'Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 12:10 pm. How long is the trip?', a: '1 hour 25 minutes (10:45 to 11:00 is 15 minutes, 11:00 to 12:00 is 1 hour, 12:00 to 12:10 is 10 minutes).' },
       { q: '3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?', a: 'Apple 100 g, pomelo 300 g (5 apples balance 500 g).' },
       { q: 'You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.', a: 'Fill 7, pour into 2, empty 2, pour again: 3 ℓ is left in the 7 ℓ jug.' },
-      { q: 'Mei’s piano lesson ends at 4:15 p.m. It lasted 45 minutes. What time did it start?', a: '3:30 p.m. (count back 15 minutes to 4:00, then 30 more minutes to 3:30)' },
-      { q: 'Buses to the MRT station leave every 15 minutes. The first bus leaves at 6:50 a.m. Ravi reaches the bus stop at 7:40 a.m. How long does he wait? The ride takes 25 minutes. When does he reach the MRT station?', a: 'Buses: 6:50, 7:05, 7:20, 7:35, 7:50. He waits 10 minutes for the 7:50 bus and reaches the station at 8:15 a.m. (7:50 to 8:00 is 10 minutes, 15 more minutes).' },
+      { q: 'Mei’s piano lesson ends at 4:15 pm. It lasted 45 minutes. What time did it start?', a: '3:30 pm (count back 15 minutes to 4:00, then 30 more minutes to 3:30)' },
+      { q: 'Buses to the MRT station leave every 15 minutes. The first bus leaves at 6:50 am. Ravi reaches the bus stop at 7:40 am. How long does he wait? The ride takes 25 minutes. When does he reach the MRT station?', a: 'Buses: 6:50, 7:05, 7:20, 7:35, 7:50. He waits 10 minutes for the 7:50 bus and reaches the station at 8:15 am (7:50 to 8:00 is 10 minutes, 15 more minutes).' },
       { q: 'Three ribbons, each 30 cm long, are glued end to end in a line. Each join overlaps by 2 cm. How long is the long ribbon?', a: '86 cm (30 + 30 + 30 = 90; there are 2 joins, so take away 2 + 2 = 4)' },
-      { q: 'A tank has 20 ℓ of water. A tap adds 5 ℓ every 10 minutes. The tap is turned on at 9:40 a.m. At what time does the tank have 40 ℓ?', a: '10:20 a.m. (20 ℓ more is 4 lots of 5 ℓ, which takes 4 lots of 10 minutes = 40 minutes)' },
+      { q: 'A tank has 20 ℓ of water. A tap adds 5 ℓ every 10 minutes. The tap is turned on at 9:40 am. At what time does the tank have 40 ℓ?', a: '10:20 am (20 ℓ more is 4 lots of 5 ℓ, which takes 4 lots of 10 minutes = 40 minutes)' },
       { q: 'A box with 4 same books in it is 1000 g. The empty box is 200 g. How heavy is one book?', a: '200 g (the books are 1000 − 200 = 800 g; 200 + 200 + 200 + 200 = 800)' },
-      { q: 'Ali’s clock is 10 minutes fast. It shows 3:05 p.m. What is the real time?', a: '2:55 p.m.' }
+      { q: 'Ali’s clock is 10 minutes fast. It shows 3:05 pm. What is the real time?', a: '2:55 pm' }
     ],
     challenge: [
       { q: 'A basket with 4 apples is 700 g. The same basket with 2 apples is 500 g. How heavy is the empty basket?', a: '300 g (the 2 extra apples are 200 g)' },
       { q: 'A rope 40 cm long is cut into pieces 10 cm long. Each cut takes 2 minutes. How long does the cutting take?', a: '6 minutes (4 pieces need only 3 cuts)' },
-      { q: 'A film is 1 hour 40 minutes long. It ends at 12:20 p.m. What time did it start?', a: '10:40 a.m. (1 hour before 12:20 p.m. is 11:20 a.m., then 40 minutes earlier is 10:40 a.m.)' },
-      { q: 'Ali’s watch loses 5 minutes every hour. He sets it to the right time at 8:00 a.m. What does his watch show at 12 noon?', a: '11:40 a.m. (4 hours, 5 minutes slow each hour: 20 minutes slow)' },
+      { q: 'A film is 1 hour 40 minutes long. It ends at 12:20 pm. What time did it start?', a: '10:40 am (1 hour before 12:20 pm is 11:20 am, then 40 minutes earlier is 10:40 am)' },
+      { q: 'Ali’s watch loses 5 minutes every hour. He sets it to the right time at 8:00 am. What does his watch show at 12 noon?', a: '11:40 am (4 hours, 5 minutes slow each hour: 20 minutes slow)' },
       { q: 'Make up your own jug puzzle: choose two jug sizes between 2 ℓ and 9 ℓ and a target amount, and check that it can be done by listing every pour. Then try this: with a 4 ℓ jug and a 6 ℓ jug, can you ever measure exactly 5 ℓ? Explain why or why not.', a: 'Open. Example: a 3 ℓ and a 7 ℓ jug make 5 ℓ (see the pours in the question above). With a 4 ℓ and a 6 ℓ jug you can only ever measure 2 ℓ, 4 ℓ or 6 ℓ: both jugs hold an even number of litres, so every pour, fill or empty changes the amounts by even numbers. 5 is odd, so it is impossible.' },
       { q: 'Ravi has a 5 ℓ jug, a 3 ℓ jug and a big bucket. How can he get exactly 7 ℓ of water in the bucket?', a: 'One way: fill the 5 ℓ jug and pour it into the 3 ℓ jug until that is full: 2 ℓ is left. Pour the 2 ℓ into the bucket. Then fill the 5 ℓ jug and pour it all into the bucket: 2 + 5 = 7 ℓ. (Other ways work too, e.g. 1 ℓ + 3 ℓ + 3 ℓ. Whole jugs alone give 3, 5, 6, 8, 9, 10 …, never 7.)' },
       { q: 'You have a 3 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 5 ℓ? List each pour.', a: '(3 ℓ, 7 ℓ): fill 7 (0, 7); pour (3, 4); empty 3 (0, 4); pour (3, 1); empty 3 (0, 1); pour (1, 0); fill 7 (1, 7); pour until the 3 ℓ jug is full (3, 5). 5 ℓ in the 7 ℓ jug.' },
       { q: 'Scale 1: 2 cubes and 1 ball balance 2 balls. Scale 2: 1 ball and 1 cube balance a 300 g weight. How heavy is one cube? How heavy is one ball?', a: 'Take one ball off both sides of scale 1: 2 cubes balance 1 ball. On scale 2, swap the ball for 2 cubes: 3 cubes balance 300 g, so a cube is 100 g and a ball is 200 g. Check scale 1: 100 + 100 + 200 = 400 = 200 + 200.' },
-      { q: 'Mei has 3 lessons in a row. Each lesson is 35 minutes long, with a 10-minute break between lessons. The first lesson starts at 8:15 a.m. What time does the last lesson end?', a: '10:20 a.m. (8:15 to 8:50, break to 9:00, 9:00 to 9:35, break to 9:45, 9:45 to 10:20)' }
+      { q: 'Mei has 3 lessons in a row. Each lesson is 35 minutes long, with a 10-minute break between lessons. The first lesson starts at 8:15 am. What time does the last lesson end?', a: '10:20 am (8:15 to 8:50, break to 9:00, 9:00 to 9:35, break to 9:45, 9:45 to 10:20)' }
     ]
   },
 
@@ -181,8 +181,8 @@ module.exports = {
     H.fig(ribbonFig),
     H.q(5, 'Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
-    H.sub('a', 'Write each time with a.m. or p.m.   A: ____________   B: ____________', { after: 50 }),
+    H.sub('a', 'Write each time with am or pm.   A: ____________   B: ____________', { after: 50 }),
     H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________', { after: 50 }),
-    H.sub('c', 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 11:30 a.m. How long is the trip?   ______________')
+    H.sub('c', 'Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?   ______________')
   ]
 };

@@ -47,9 +47,9 @@ module.exports = {
     objective: 'Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking.',
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
     materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
+    online: 'Two stations, about 7 minutes each. The timer on the screen is a guide, not a race: there is no rush, and a pair may pass on a station. Pairs stay in one breakout room, and the tutor visits every room at least once. The tutor shares the next station card when the 7 minutes are up. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
     warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
-    explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',
+    explore: 'Two stations, about 7 minutes each, in pairs (the timer is a guide, not a race; a pair may pass on a station): List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Take your time. Write the answer, or how far you got, and how you started.',
     mini: 'How to start a puzzle: draw it (a queue: 4th from the front and 6th from the back means 4 + 6 − 1 = 9 people), make a table (a logic grid: a tick in a box means crosses in the rest of its row and column), read the scale of a bar graph (what does one space stand for? halfway between two lines). Then list it in order before page 2.',
     share: 'Choose one puzzle. How did you START it, and how do you know your answer is right? (Share, share with a partner, or pass.)',
     exit: { q: 'Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? Which start did you use?', a: '7 people (3 in front, Ali, 3 behind: 4 + 4 − 1 = 7). Draw it.' },
@@ -65,7 +65,7 @@ module.exports = {
       ['Q3', '(a) 7 people (3 + 5 − 1)  (b) 6 people (Ali 2nd, 3 between, Siti 6th and last)'],
       ['Q4', '(a) 258, 285, 528, 582, 825, 852  (b) 2 odd numbers: 285 and 825  (c) 582 (18 away from 600)'],
       ['Q5', 'Table: 13, 16, 19 sticks (add 3 each time)  (a) 25 sticks  (b) 10 squares'],
-      ['Q6', '411, 321, 213 (3 numbers: the ones digit is 1, 3 or 5; list each case)']
+      ['Q6', '411, 321, 213 (3 numbers: the digits are 1, 1, 4 or 1, 2, 3, and the ones digit must be odd; list each case)']
     ]
   },
   script: {
@@ -88,7 +88,7 @@ module.exports = {
     today: 'Choose how to start a puzzle: draw it, list it or make a table. Solve a logic grid and read a bar graph with a scale.',
     warmGame: 'Relay chain. Each answer is passed on and becomes the start of the next question.',
     warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2'], ['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
-    expSetup: ['Two stations, 7 minutes each: List, then Measure.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer and how you started.'],
+    expSetup: ['Two stations, about 7 minutes each: List, then Measure. The timer is a guide, not a race. You may pass on a station.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer, or how far you got, and how you started.'],
     expPic: 'two station cards: three digit cards, and a 120 cm ribbon to be cut into 3 pieces.',
     expAsk: [['How did you start each puzzle?', 'Open: draw it, list it, make a table.'], ['How many numbers did the List station make? How do you know you have them all?', '6 numbers: 2 for each hundreds digit, listed in order.'], ['Measure station: how long is each piece of ribbon?', '30 cm, 40 cm and 50 cm (take away the extra 10 + 20 = 30 cm, 90 cm ÷ 3 = 30 cm).']],
     mini1: { head: 'Draw it: a queue', body: ['Siti is 4th from the front and 6th from the back of a queue.', 'How many people are in the queue?'], ans: '9 people: 3 in front, Siti, 5 behind (4 + 6 − 1 = 9).' },

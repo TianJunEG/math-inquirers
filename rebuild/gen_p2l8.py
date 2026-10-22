@@ -147,8 +147,8 @@ def quarter(cx,cy,r,rot=0,fill=SKY):  # square corner at (cx,cy), curve to the u
 
 # 1. title
 put('p2l8-title',title_slide('p2l8-title','P2  •  LESSON 8  •  WEEK 4','Shape Builders','2D and 3D Shapes',
- 'Build shapes from semicircles and quarter circles, count every hidden square, triangle and cube, and find which nets fold into a cube.',
- 'Objective: Name and describe semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube and find opposite faces. '
+ 'Build shapes from half circles and quarter circles, count every hidden square, triangle and cube, and find which nets fold into a cube.',
+ 'Objective: Name and describe half circles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube and find opposite faces. '
  'Materials: paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook, cut out before the lesson), mini whiteboards. '
  'Online: children cut paper circles and build stacks on camera; the tutor shows the stacks and nets on the slides; a cereal box cut open shows a net. No linking cubes at home? Use sugar cubes, dice or small boxes, or draw each stack layer by layer. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90.'))
@@ -186,10 +186,10 @@ put('p2l8-warm1',sec('p2l8-warm1','0–5 MIN',body,
  'Watch for children who call the cube a square: a square is flat, a cube is a solid with 6 square faces.'))
 
 # 3. warm2
-qs=[('1.','How many faces does a cube have?','6'),('2.','How many flat faces does a cylinder have?','2'),('3.','Cut a circle into 2 equal parts. What is each part called?','a semicircle'),('4.','How many quarter circles make 1 whole circle?','4'),('5.','Which solid has a tip and can roll?','a cone')]
+qs=[('1.','How many faces does a cube have?','6'),('2.','How many flat faces does a cylinder have?','2'),('3.','Cut a circle into 2 equal parts. What is each part called?','a half circle'),('4.','How many quarter circles make 1 whole circle?','4'),('5.','Which solid has a tip and can roll?','a cone')]
 body=h2('Quick questions')+''.join(qrowx(128,250+i*128,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(ansx(1420,250+i*128,372,c,size=34) for i,(a,b,c) in enumerate(qs))
 put('p2l8-warm2',sec('p2l8-warm2','5–8 MIN',body,
- 'Minutes 5 to 8. Read each question aloud, give thinking time, take answers, then click. Answers: 1) 6  2) 2 (the top and the bottom; the side is curved)  3) a semicircle (half circle)  4) 4  5) a cone. '
+ 'Minutes 5 to 8. Read each question aloud, give thinking time, take answers, then click. Answers: 1) 6  2) 2 (the top and the bottom; the side is curved)  3) a half circle (half circle)  4) 4  5) a cone. '
  'For 1, hold up a cube and count the faces with the children, putting a finger on each: front, back, left, right, top, bottom. Ask: "How do you know you did not count a face twice?" (go in pairs: front and back, left and right, top and bottom).'))
 
 # 4. explore1
@@ -199,53 +199,53 @@ g+=semi(520,145,105,0,YEL)+semi(520,165,105,180,YEL)
 g+=CI(870,130,105,SKY)+f'<path d="M1010 130 L1100 130" stroke="{NAVY}" stroke-width="6"/><polygon points="1118,130 1096,118 1096,142" fill="{NAVY}"/>'
 g+=quarter(1270,120,100,0,MINT)+quarter(1270,140,100,90,MINT)+quarter(1250,140,100,180,MINT)+quarter(1250,120,100,270,MINT)
 g+=T(1480,110,'Then make',32,MUTED)+T(1480,150,'new shapes!',32,MUTED)
-pic=SV(1620,270,g,'One paper circle cut into 2 semicircles, and one paper circle cut into 4 quarter circles')
+pic=SV(1620,270,g,'One paper circle cut into 2 half circles, and one paper circle cut into 4 quarter circles')
 body=h2('Explore: circle pieces')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take 2 paper circles that are the same size.</li><li>Fold one in half and cut along the fold.</li><li>Fold the other in half, then in half again. Open it and cut along both folds.</li><li>Use your pieces to make new shapes. Name them!</li></ol>',extra='padding:24px 40px')
 body+=pin(128,580,1664,pic,None,WHITE,24,'8px 22px')
 put('p2l8-explore1',sec('p2l8-explore1','8–14 MIN',body,
- 'Minutes 8 to 14. Each child cuts their own circles (draw round a cup if there are no ready-made circles). One circle gives 2 semicircles; the other gives 4 quarter circles. Children then put pieces together: whole straight sides must touch. '
- 'Things to make: a whole circle in different ways, a semicircle from 2 quarter circles, a "fan", a "wave" (two semicircles side by side, one turned over). Online: the same on camera.'))
+ 'Minutes 8 to 14. Each child cuts their own circles (draw round a cup if there are no ready-made circles). One circle gives 2 half circles; the other gives 4 quarter circles. Children then put pieces together: whole straight sides must touch. '
+ 'Things to make: a whole circle in different ways, a half circle from 2 quarter circles, a "fan", a "wave" (two half circles side by side, one turned over). Online: the same on camera.'))
 
 # 5. explore2
-items=[('1.','How many quarter circles cover a semicircle exactly?'),('2.','Find 3 different ways to make a whole circle from your pieces.'),('3.','How many straight sides has a quarter circle? Are they the same length?')]
+items=[('1.','How many quarter circles cover a half circle exactly?'),('2.','Find 3 different ways to make a whole circle from your pieces.'),('3.','How many straight sides has a quarter circle? Are they the same length?')]
 put('p2l8-explore2',sec('p2l8-explore2','14–20 MIN',h2('Explore: talk about it')+qcards(items,40),
- 'Minutes 14 to 20. Let pairs keep building, then gather them. Answers: 1) 2.  2) 2 semicircles; 4 quarter circles; 1 semicircle and 2 quarter circles.  3) 2 straight sides, and yes, they are the same length (each goes from the middle of the circle to its edge). They meet at a square corner. '
- 'Ask: "What fraction of the circle is a semicircle? A quarter circle?" (1/2 and 1/4: last lesson!).'))
+ 'Minutes 14 to 20. Let pairs keep building, then gather them. Answers: 1) 2.  2) 2 half circles; 4 quarter circles; 1 half circle and 2 quarter circles.  3) 2 straight sides, and yes, they are the same length (each goes from the middle of the circle to its edge). They meet at a square corner. '
+ 'Ask: "What fraction of the circle is a half circle? A quarter circle?" (1/2 and 1/4: last lesson!).'))
 
-# 6. teach1: semicircles and quarter circles
+# 6. teach1: half circles and quarter circles
 base=SV(1664,300,CI(190,150,120,SKY)+T(190,295,'',24),'A whole circle')
-ov1=SV(1664,300,L(190,26,190,274,6,RED,'14 10')+f'<path d="M370 150 L450 150" stroke="{NAVY}" stroke-width="6"/><polygon points="468,150 446,138 446,162" fill="{NAVY}"/>'+semi(610,150,120,270,YEL)+semi(640,150,120,90,YEL),'cut through the middle: 2 semicircles')
-ov2=SV(1664,300,f'<path d="M790 150 L870 150" stroke="{NAVY}" stroke-width="6"/><polygon points="888,150 866,138 866,162" fill="{NAVY}"/>'+quarter(1060,140,120,270,MINT)+quarter(1060,160,120,180,MINT)+T(1360,130,'2 quarter',34,TEAL)+T(1360,172,'circles',34,TEAL),'cut a semicircle in half again: 2 quarter circles')
-body=h2('Semicircles and quarter circles')
+ov1=SV(1664,300,L(190,26,190,274,6,RED,'14 10')+f'<path d="M370 150 L450 150" stroke="{NAVY}" stroke-width="6"/><polygon points="468,150 446,138 446,162" fill="{NAVY}"/>'+semi(610,150,120,270,YEL)+semi(640,150,120,90,YEL),'cut through the middle: 2 half circles')
+ov2=SV(1664,300,f'<path d="M790 150 L870 150" stroke="{NAVY}" stroke-width="6"/><polygon points="888,150 866,138 866,162" fill="{NAVY}"/>'+quarter(1060,140,120,270,MINT)+quarter(1060,160,120,180,MINT)+T(1360,130,'2 quarter',34,TEAL)+T(1360,172,'circles',34,TEAL),'cut a half circle in half again: 2 quarter circles')
+body=h2('Half circles and quarter circles')
 body+=pin(128,240,1664,base)
-body+=colstep(128,240,1664,1,'Cut a circle in half through its middle: 2 semicircles. A semicircle has 1 straight side and 1 curved side.',ov1,300,0,32)
-body+=colstep(128,240,1664,2,'Cut a semicircle in half again: 2 quarter circles. A quarter circle has 2 straight sides and 1 curved side.',ov2,300,108,32)
+body+=colstep(128,240,1664,1,'Cut a circle in half through its middle: 2 half circles. A half circle has 1 straight side and 1 curved side.',ov1,300,0,32)
+body+=colstep(128,240,1664,2,'Cut a half circle in half again: 2 quarter circles. A quarter circle has 2 straight sides and 1 curved side.',ov2,300,108,32)
 body+=soft(128,780,1664,'The 2 straight sides of a quarter circle are the same length, and they meet at a square corner.',32)
 put('p2l8-teach1',sec('p2l8-teach1','20–22 MIN',body,
- 'Teach. Hold up a paper circle. Click 1: fold and cut through the middle. "Each half is a semicircle: semi means half. How many sides? One straight side, one curved side." Click 2: cut one semicircle again: "Each piece is a quarter of the circle: a quarter circle. Two straight sides and one curved side." Click 3: put the two straight sides of a quarter circle against a ruler: the same length, and they make a square corner like the corner of a page. '
- 'Think-aloud: "To name a piece I count its straight sides and look for a curved side. One straight and one curved: semicircle. Two straight that meet at a square corner, and one curved: quarter circle."'))
+ 'Teach. Hold up a paper circle. Click 1: fold and cut through the middle. "Each half is a half circle (some people call it a semicircle). How many sides? One straight side, one curved side." Click 2: cut one half circle again: "Each piece is a quarter of the circle: a quarter circle. Two straight sides and one curved side." Click 3: put the two straight sides of a quarter circle against a ruler: the same length, and they make a square corner like the corner of a page. '
+ 'Think-aloud: "To name a piece I count its straight sides and look for a curved side. One straight and one curved: half circle. Two straight that meet at a square corner, and one curved: quarter circle."'))
 
 # 7. we1: find the pieces
 mush=semi(250,190,150,0,SKY)+R(190,190,120,120,SKY)+quarter(190,310,70,270,SKY)+quarter(310,310,70,0,SKY)
-base=SV(520,330,mush,'A mushroom made of a semicircle cap, a square stem and 2 quarter circles of grass')
-ov1=SV(520,330,TICK(250,135,22),'tick on the semicircle')
+base=SV(520,330,mush,'A mushroom made of a half circle cap, a square stem and 2 quarter circles of grass')
+ov1=SV(520,330,TICK(250,135,22),'tick on the half circle')
 ov2=SV(520,330,TICK(150,290,16,RED)+TICK(350,290,16,RED),'ticks on the 2 quarter circles')
 ov3=SV(520,330,TICK(250,255,20,'#3A6EA5'),'tick on the square')
 body=h2('Worked example: find the pieces')+stitle('This mushroom is made of pieces. How many of each kind? Tick each piece as you count.')
 body+=pin(128,320,520,base)
-body+=ostep(128,320,1,'1 straight side and 1 curved side: semicircle. 1 of them.',ov1,520,330,dx=580,dy=0,tw=1084,size=32)
+body+=ostep(128,320,1,'1 straight side and 1 curved side: half circle. 1 of them.',ov1,520,330,dx=580,dy=0,tw=1084,size=32)
 body+=ostep(128,320,2,'2 straight sides with a square corner and 1 curved side: quarter circles. 2 of them.',ov2,520,330,dx=580,dy=100,tw=1084,size=32)
 body+=ostep(128,320,3,'4 straight sides, all the same length: square. 1 of them.',ov3,520,330,dx=580,dy=244,tw=1084,size=32)
 body+=ansx(708,700,1084,'1 + 2 + 1 = 4 pieces',size=38)
-body+=soft(128,800,1664,'Notice: the 2 quarter circles together would make 1 more semicircle.',30)
+body+=soft(128,800,1664,'Notice: the 2 quarter circles together would make 1 more half circle.',30)
 put('p2l8-we1',sec('p2l8-we1','22–25 MIN',body,
- 'Click to reveal each step. Think-aloud: "I count one kind of piece at a time and tick it, so I never miss one or count one twice. The cap has one straight side along the bottom and a curved side: a semicircle. The grass pieces each have two straight sides meeting in a square corner and a curved side: quarter circles, even though they face different ways. The stem has 4 straight sides, all the same: a square." '
+ 'Click to reveal each step. Think-aloud: "I count one kind of piece at a time and tick it, so I never miss one or count one twice. The cap has one straight side along the bottom and a curved side: a half circle. The grass pieces each have two straight sides meeting in a square corner and a curved side: quarter circles, even though they face different ways. The stem has 4 straight sides, all the same: a square." '
  'Ask: "Does turning a quarter circle make it a different shape?" No. This is the same thinking as the robot on the worksheet.'))
 
 # 8. try1
 put('p2l8-try1',try_x('p2l8-try1','25–26 MIN','Your turn: circle pieces','Use your paper pieces to check.',
- [('a','How many quarter circles make a semicircle?','2'),('b','Ben has 2 semicircles and 4 quarter circles. How many whole circles can he make?','2 circles'),('c','What fraction of a whole circle is 1 quarter circle?','{1/4}')],
- 'Whiteboards, then click. a) 2. b) 2 semicircles make 1 circle and 4 quarter circles make another: 2 circles. Push: "What if he had 1 semicircle and 2 quarter circles?" (1 circle). c) 1/4: the circle is cut into 4 equal parts.',size=36,gap=160))
+ [('a','How many quarter circles make a half circle?','2'),('b','Ben has 2 half circles and 4 quarter circles. How many whole circles can he make?','2 circles'),('c','What fraction of a whole circle is 1 quarter circle?','{1/4}')],
+ 'Whiteboards, then click. a) 2. b) 2 half circles make 1 circle and 4 quarter circles make another: 2 circles. Push: "What if he had 1 half circle and 2 quarter circles?" (1 circle). c) 1/4: the circle is cut into 4 equal parts.',size=36,gap=160))
 
 # 9. we2: squares in a 3 by 3 grid
 c=100; base=SV(320,320,gridb(10,10,3,3,c),'A 3 by 3 grid of squares')
@@ -303,23 +303,23 @@ put('p2l8-we3',sec('p2l8-we3','30–31 MIN',body,
  'Ask: "Is the shape under the line across a triangle?" No: it has 4 sides. The worksheet picture has 2 lines from the top: count the same way.'))
 
 # 12. key
-body=h2('Key idea: count in order')+card(p('Sort what you count: by size, by the line it sits on, or by layer. Then you never miss one or count one twice.',44,700))+card(p('Name a piece by its sides: a semicircle has 1 straight side, a quarter circle has 2.',38,600,MUTED))
+body=h2('Key idea: count in order')+card(p('Sort what you count: by size, by the line it sits on, or by layer. Then you never miss one or count one twice.',44,700))+card(p('Name a piece by its sides: a half circle has 1 straight side, a quarter circle has 2.',38,600,MUTED))
 put('p2l8-key',sec('p2l8-key','31–32 MIN',body,
  'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Counting only the small squares in Q2a (16 instead of 30): ask "Are there bigger squares hiding?" '
- '(2) Calling a quarter circle a semicircle when it is turned (Q1): count its straight sides. '
+ '(2) Calling a quarter circle a half circle when it is turned (Q1): count its straight sides. '
  '(3) Counting only the cubes you can see in Q3: ask "What is holding up the top cube?" '
  '(4) Thinking any 6 joined squares fold into a cube (Q4).'))
 
 # 13. break
-put('p2l8-break',break_slide('p2l8-break','32–36 MIN','Be a shape! When the tutor calls a shape, make it with your body: a semicircle (arms in an arch over your head), a cone (hands to a point), a cube (curl up small), a cylinder (stand tall and straight).','Then: a drink of water and back to our seats.',
+put('p2l8-break',break_slide('p2l8-break','32–36 MIN','Be a shape! When the tutor calls a shape, make it with your body: a half circle (arms in an arch over your head), a cone (hands to a point), a cube (curl up small), a cylinder (stand tall and straight).','Then: a drink of water and back to our seats.',
  'Four minutes. Call the shapes faster and faster. Add "quarter circle" (one arm up, one arm out to the side, then sweep the hand round). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
 put('p2l8-ws1',preview_x('p2l8-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The robot. Count one kind of piece at a time and tick it. Then make whole circles from pieces.'),('Q2','Count every square (by size) and every triangle (by the line it sits on).')],'Stuck? Use your paper pieces, or colour each shape you count.',
  'Minutes 36 to 50. Pairs work together. Ask "How do you know you have them all?" before giving any help. For Q2a, give pairs a paper window to slide (cut a 2 by 2 and a 3 by 3 hole in card).'))
-put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','Square 2, triangle 3, semicircle 4, quarter circle 2'),('Q1 a–c','a) semicircles    b) 11 pieces    c) 3 circles'),('Q2','a) 16 + 9 + 4 + 1 = 30 squares     b) 6 + 6 = 12 triangles')],
- 'Click each answer after a pair explains theirs. Q1c: think in quarter circles: 3 semicircles are 6 quarter circles, plus 6 more is 12 quarter circles, and 4 make a circle: 3 circles. Or: 2 semicircles make 1 circle, 4 quarter circles make 1 circle, and the last semicircle with the last 2 quarter circles make 1 more. '
- 'Q1: the ears and the feet are semicircles; the shoulders are quarter circles; the hat and the hands are triangles. Q2a: the 2 by 2 window fits 3 across and 3 down (9 places), the 3 by 3 window fits in 4 places. Q2b: on the bottom line: 3 single parts, 2 made of 2 parts, 1 whole = 6; on the line across: the same, 6.',lw=180,gap=170,size=34))
+put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','Square 2, triangle 3, half circle 4, quarter circle 2'),('Q1 a–c','a) half circles    b) 11 pieces    c) 3 circles'),('Q2','a) 16 + 9 + 4 + 1 = 30 squares     b) 6 + 6 = 12 triangles')],
+ 'Click each answer after a pair explains theirs. Q1c: think in quarter circles: 3 half circles are 6 quarter circles, plus 6 more is 12 quarter circles, and 4 make a circle: 3 circles. Or: 2 half circles make 1 circle, 4 quarter circles make 1 circle, and the last half circle with the last 2 quarter circles make 1 more. '
+ 'Q1: the ears and the feet are half circles; the shoulders are quarter circles; the hat and the hands are triangles. Q2a: the 2 by 2 window fits 3 across and 3 down (9 places), the 3 by 3 window fits in 4 places. Q2b: on the bottom line: 3 single parts, 2 made of 2 parts, 1 whole = 6; on the line across: the same, 6.',lw=180,gap=170,size=34))
 
 # 16. teach cubes
 cells=hmap([[1,1,1],[2,2,2]])

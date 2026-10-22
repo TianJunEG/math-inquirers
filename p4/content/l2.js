@@ -104,8 +104,8 @@ module.exports = {
       { q: 'How many whole numbers round to 3500 when rounded to the nearest hundred?', a: '100 (from 3450 to 3549).' },
       { q: 'A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.', a: '5350, 5351, 5352, 5353, 5354 (5 numbers). To the nearest 10 it is 5345 to 5354; to the nearest 100 it is 5350 to 5449; both: 5350 to 5354.' },
       { q: 'Estimate 8 × 6102 by rounding 6102 to the nearest thousand first. Is the exact answer more or less than your estimate?', a: '8 × 6000 = 48 000. More, because 6102 was rounded down (exact: 48 816).' },
-      { q: 'The crowd at the first concert was 38 000 to the nearest thousand. At the second concert it was 41 000 to the nearest thousand. What is the smallest and the largest the difference between the two crowds could be?', a: 'Smallest 2001 (40 500 − 38 499). Largest 3999 (41 499 − 37 500).' },
-      { q: 'What is the largest 5-digit odd number with all its digits different?', a: '98 765' }
+      { q: 'The crowd at a concert was 38 000 when rounded to the nearest thousand. What is the smallest and the largest the crowd could have been?', a: 'Smallest 37 500 and largest 38 499 (37 499 rounds down to 37 000 and 38 500 rounds up to 39 000).' },
+      { q: 'What is the largest 5-digit odd number with all its digits different that rounds to 90 000 when rounded to the nearest ten thousand?', a: '94 875. Numbers that round to 90 000 go up to 94 999. The first two digits are 9 and 4, then the biggest digits left are 8 and 7, and the ones digit must be odd, so 5 (not 6).' }
     ],
     challenge: [
       { q: 'Ali counts on in 1000s, starting at 3456. He stops at the last number below 100 000. What is the last number he says? How many numbers does he say?', a: '99 456. He says 97 numbers (3456, 4456, … 99 456).' },
@@ -134,7 +134,8 @@ module.exports = {
     W.push(H.fig(lineSvg()));
     W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________', { keepNext: true }));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
-    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.'));
+    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.', { keepNext: true }));
+    W.push(H.sub('', 'Start here: 5345 is halfway between 5340 and 5350. Does 5345 round up or down? What about 5344?  ____________', { keepNext: true }));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));
     W.push(H.sub('a', 'Round 4982 to the nearest thousand and estimate the total.   Estimate:  ____________'));
@@ -146,7 +147,8 @@ module.exports = {
     W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My ones digit is 1 and my tens digit is double my ones digit.', { keepNext: true }));
     W.push(H.sub('', 'Hint: the numbers that round to 48 000 are from 47 500 to 48 499. Which of them have 6 in the hundreds place?', { keepNext: true }));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.'));
+    W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.', { keepNext: true }));
+    W.push(H.sub('', 'Start here: the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.', { keepNext: true }));
     W.push(...H.lines(2));
     W.push(H.ans('How many numbers?'));
     W.push(H.q(5, 'Find the rule. Write the next numbers.', { keepNext: true }));

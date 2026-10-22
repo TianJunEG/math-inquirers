@@ -60,6 +60,13 @@ const cmpSvg = () => {
   return s + '</svg>';
 };
 
+// Q6 scaffold: an empty strip of 12 equal boxes (twelfths), numbered 1 to 12, for shading
+const stripSvg = () => {
+  let s = `<svg aria-label="A strip of 12 equal boxes, numbered 1 to 12, ready to shade" viewBox="0 0 600 70" width="440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  for (let i = 0; i < 12; i++) s += `<rect x="${20 + i * 46}" y="8" width="46" height="34" fill="${WH}" stroke="${N}" stroke-width="2.5"/>` + tx(43 + i * 46, 62, i + 1, 14, TEAL);
+  return s + '</svg>';
+};
+
 module.exports = {
   lesson: {
     n: 4, week: 2, session: 'B', title: 'Fraction Frontier', topic: 'Fractions',
@@ -135,8 +142,8 @@ module.exports = {
       { q: 'Put these fractions in order, smallest first: 2/3, 1/2, 5/6, 7/12', a: '1/2, 7/12, 2/3, 5/6 (6/12, 7/12, 8/12, 10/12).' },
       { q: 'Who am I? I am an improper fraction. My denominator is 6. I am between 2 and 3. My numerator is an odd number. I am closer to 3 than to 2. Make a list, then cross out the ones that do not fit.', a: '17/6 = 2 5/6. Between 2 and 3: 13/6, 14/6, 15/6, 16/6, 17/6. Odd numerators: 13/6, 15/6, 17/6. 15/6 = 2 1/2 is exactly in the middle and 13/6 is closer to 2, so only 17/6 is closer to 3.' },
       { q: 'Find ALL the fractions with denominator 10 that are bigger than 1/5 but smaller than 1/2.', a: '3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10 do not count).' },
-      { q: 'A ribbon is 3 m long. Mei cuts it into pieces that are each 1/4 m long. How many pieces does she get?', a: '12 pieces (4 in each metre).' },
-      { q: 'How many quarters are there in 4 3/4?', a: '19 (4 wholes = 16 quarters, plus 3).' },
+      { q: 'A ribbon is 3 m long. Mei cuts pieces that are each 1/4 m long. How many pieces can she cut? (Count the quarters in each metre.)', a: '12 pieces (4 in each metre).' },
+      { q: 'Mei has a ribbon 4 3/4 m long. She cuts it into pieces that are each 1/4 m long. She uses 5 of the pieces for a bow. How much ribbon is left? Write the answer as a mixed number.', a: '3 1/2 m. 4 3/4 m is 19 quarters; 19 − 5 = 14 quarters left, and 14/4 = 3 2/4 = 3 1/2.' },
       { q: 'Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. Is he right? Explain.', a: 'No. Both have 3 pieces, but sevenths are smaller pieces than fifths, so 3/5 is bigger.' },
       { q: '2/5 of a number is 16. What is the number?', a: '40 (2 units = 16, 1 unit = 8, 5 units = 40).' }
     ],
@@ -170,6 +177,7 @@ module.exports = {
     W.push(H.sub('a', ['How many wear glasses? ______      <b style="color:#1F7A6F">b</b>  How many do NOT wear glasses? ______']));
 
     W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. In (c), write how you know.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.sub('', 'Start here: fold or draw two strips of the same length. For (a): fold a strip into quarters, then fold each quarter in half. 3 quarters = ____ eighths.', { keepNext: true }));
     W.push(H.sub('a', [fr(3, 4), box, fr(5, 8)]));
     W.push(H.sub('b', [fr(2, 3), box, fr(7, 12)]));
     W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     The two bars below are the same length. Write how you know:  ______________________']));
@@ -177,12 +185,14 @@ module.exports = {
     W.push(H.sub('d', [fr(3, 5), box, fr(3, 7)]));
     W.push(H.sub('e', ['Put in order, smallest first:   ', fr(2, 3), ',  ', fr(5, 6), ',  ', fr(7, 12), '        ________,  ________,  ________']));
     W.push(H.q(5, ['', fr(3, 5), ' of the sweets in a jar are red. There are 27 red sweets.'], { keepNext: true }));
+    W.push(H.sub('', 'Start here: take 27 counters for the red sweets. Put them into 3 equal groups. How many counters are in each group?  ______', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model. How many sweets are in the jar?'));
     W.push(H.gap(700));
     W.push(H.ans());
     W.push(H.sub('b', 'How many sweets are NOT red?'));
     W.push(H.ans());
-    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Hint: draw a strip of 12 equal boxes and shade ', fr(1, 3), ' of it, then ', fr(3, 4), '.'], { keepNext: true }));
+    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Start here: on the strip, shade ', fr(1, 3), ' of the boxes, then ', fr(3, 4), '. The boxes in between are your answers.'], { keepNext: true }));
+    W.push(H.fig(stripSvg()));
     W.push(...H.lines(2));
     W.push(H.ans('How many?'));
     return W;

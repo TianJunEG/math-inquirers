@@ -97,10 +97,10 @@ def add(S,order,ln):
     dw=', '.join(g['didwell'])
     c1=card(p('Something I did well:',40,800)+p('Tick one: '+dw+', or something else.',28,500,MUTED))
     c2=card(p('The hardest part was ...',40,800)+p('For example: '+ex2+', or something else.',28,500,MUTED))
-    c3=card(p('What helped me:',40,800)+p('Tick one: drawing a picture, making a list, trying a number and checking, I asked for help, or I am still stuck (my tutor will check in with me).',28,500,MUTED))
+    c3=card(p('What helped me:',40,800)+p('Tick one: drawing a picture, making a list, trying a number and checking, I asked for help, or I am still stuck (I can show a grown-up at home).',28,500,MUTED))
     body=h2('Look back')+p('Two minutes. Open the last page of today’s lesson. Tick or write. You may pass on any line.',32,600,MUTED)+c1+c2+c3
     notes=('Minutes 86 to 88. Look back: short and safe. SAY: "Turn to the last page of today and find Look back. Tick or write one thing for each line. There are no right answers, and you may pass on any line." Give a full 2 minutes. '
-      'The page is never collected, marked or read out in front of the group. Children keep their page. A child who ticked "I am still stuck" gets a check-in in the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never a private message. '
+      'The page is never collected, marked or read out in front of the group. Children keep their page. The tutor does not see the page, so say: "If something is still puzzling you, you can show this page to a grown-up at home, or tell me at the start of next lesson." At the start of the next lesson, in the open session, invite anyone who would like another look at a puzzle (volunteers only, by hand signal or in the chat; never a private message). '
       'Invite volunteers only (one or two) to share something they did well, or what helped. Praise the strategy ("you drew it and that got you unstuck"), not the speed or the answer. Then stamp the journal and close (minutes 88 to 90).')
     S[pre+'reflect']=sec(pre+'reflect',f'{pl["reflect"][0]}–{pl["reflect"][1]} MIN',body,notes)
     new=list(order)

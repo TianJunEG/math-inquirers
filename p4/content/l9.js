@@ -131,8 +131,8 @@ module.exports = {
     ],
     stretch: [
       { q: 'A table shows that Class 4A has 28 boys and 6 more girls than boys. Class 4B has 63 pupils, with 5 more girls than boys. Which class has more girls?', a: 'Neither: both have 34 girls. (4A: 28 + 6 = 34. 4B: 63 − 5 = 58, 58 ÷ 2 = 29 boys, 29 + 5 = 34 girls.)' },
-      { q: 'On a line graph each line on the scale is worth 20. A point is 3 lines above the 40 line. What number does it show?', a: '100 (40 + 20 + 20 + 20)' },
-      { q: 'A shop sold 300 kites in 4 days. Day 1: 65, Day 2: 80, Day 4: 90. How many kites were sold on Day 3?', a: '65 (300 − 65 − 80 − 90)' },
+      { q: 'A graph\'s scale starts at 100 and each line is worth 25. Ali\'s point is 3 lines above the start and Mei\'s point is 7 lines above the start. How much more is Mei\'s number than Ali\'s? Mei says hers is more than double Ali\'s. Is she right?', a: 'Ali 175 and Mei 275, so Mei has 100 more. She is not right: double Ali\'s is 350, and 275 is less than that. (The point looks more than twice as high above the start: 7 lines against 3 lines, but the numbers start at 100.)' },
+      { q: 'A stall\'s line graph starts on Monday with 40 cups sold. The line goes up by 15 cups each day until Wednesday, then down by 15 cups each day. How many cups were sold on Friday? Which day sold the same as Thursday?', a: 'Monday 40, Tuesday 55, Wednesday 70, Thursday 55, Friday 40. Friday: 40 cups. Thursday (55) matches Tuesday (55).' },
       { q: 'Ali’s height: age 7, 120 cm; age 8, 127 cm; age 9, 131 cm; age 10, 137 cm. In which year did he grow the most? How much did he grow altogether from age 7 to age 10?', a: 'From age 7 to 8 (7 cm). Altogether 17 cm.' },
       { q: 'Shop A sold 30, 35, 40 and 45 cakes in weeks 1 to 4. Shop B sold 50, 48, 46 and 44 cakes. In which week did Shop A first sell more than Shop B?', a: 'Week 4 (45 is more than 44).' },
       { q: 'A graph’s scale starts at 40. Mei says a point at 60 is "double" a point at 50 because it is twice as high on the graph. Is she right? Explain.', a: 'No. 60 is only 10 more than 50. It looks twice as high because 50 is 10 above the bottom (40) and 60 is 20 above it.' },
@@ -171,6 +171,12 @@ module.exports = {
 
     W.push(H.q(3, 'The graph shows how much money Ali and Mei had in their money boxes at the end of each week.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(moneySvg()));
+    W.push(H.sub('', 'Start here: read each dot and write the money in the table. Then (a), (b) and (c) can use your table.', { keepNext: true }));
+    { const wm = [1650, 1650, 1650, 1650, 1650, 1650, 1650];
+      W.push(H.tbl(wm, [H.row(['Week', '1', '2', '3', '4', '5', '6'].map((c, i) => H.cell(c, wm[i], { bold: true, fill: 'EDEDED', h: 30 }))),
+        H.row(['Ali', '', '', '', '', '', ''].map((c, i) => H.cell(c, wm[i], i === 0 ? { bold: true, fill: 'EDEDED', h: 36 } : { h: 36 }))),
+        H.row(['Mei', '', '', '', '', '', ''].map((c, i) => H.cell(c, wm[i], i === 0 ? { bold: true, fill: 'EDEDED', h: 36 } : { h: 36 })))])); }
+    W.push(H.gap(40));
     W.push(H.sub('a', 'Mei’s money in Week 3?  $______     Ali saves each week?  $______'));
     W.push(H.sub('b', 'Same amount in Week ____     Ali first has more in Week ____'));
     W.push(H.sub('c', 'They keep saving the same way. In Week 8, Ali has $______ more than Mei.'));
@@ -182,6 +188,7 @@ module.exports = {
     W.push(H.sub('a', 'How many more each day?  ______     Pages in the 5 days?  ______'));
     W.push(H.q(5, 'Two shops drew line graphs of the phone cases they sold. Ravi says, “Both shops’ sales went up by the same amount, because the lines look the same.”', { keepNext: true }));
     W.push(H.fig(shopsSvg()));
+    W.push(H.sub('', 'Start here: read the scale of each graph.  Shop A starts at ____ and each line is worth ____.   Shop B starts at ____ and each line is worth ____.', { keepNext: true }));
     W.push(H.sub('a', 'January to April: Shop A went up by ______.  Shop B went up by ______.'));
     W.push(H.sub('b', 'Is Ravi right? Explain why the two graphs look the same.'));
     W.push(...H.lines(1));

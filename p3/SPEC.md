@@ -1,6 +1,6 @@
 # Math Inquirers P3 Holiday Program — content spec
 
-**Who:** children finishing Primary 3 (going into P4 in 2027), age 9. Online-first, live video, groups of up to 8.
+**Who:** children aged 8 to 10 who are in or have finished Primary 3. Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
 **Approach:** enrichment, non-routine puzzles and heuristics, on topics chosen to complement the P3 school year. Slogan: "Notice it. Test it. Explain why."
 Syllabus source: Tampines North Primary 2026 P3 scheme of work (numbers to 10 000; + −; money; tables of 6, 7, 8, 9; × ÷; word problems; bar graphs; angles; perpendicular and parallel lines; fractions; length, mass and volume; area and perimeter; time).

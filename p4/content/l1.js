@@ -142,13 +142,14 @@ module.exports = {
     W.push(H.sub('b', 'How many times do they leave together from 6:00 am to 8:00 am? Count 6:00 and 8:00 too.'));
     W.push(H.ans('Number of times:'));
     W.push(H.q(5, 'Count the factors.', { keepNext: true }));
+    W.push(H.sub('', 'Start here: use 6 counters. Make equal rows: 1 row of 6, 2 rows of 3, 3 rows of 2, 6 rows of 1. Each different number of rows is a factor. Then try 9 counters.', { keepNext: true }));
     W.push(H.sub('a', 'Fill in the table.', { keepNext: true }));
     W.push(H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
       H.row([H.cell('Number', 2400, { bold: true, fill: 'EDEDED' }), ...['6', '9', '10', '15', '16', '25'].map(s => H.cell(s, 1250, { bold: true, fill: 'EDEDED' }))]),
       H.row([H.cell('How many factors?', 2400, { bold: true }), ...Array(6).fill('').map(s => H.cell(s, 1250, { h: 130 }))])
     ]));
     W.push(H.gap(60));
-    W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
+    W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them? (Tip: write each number as pairs, like 6 = 1 × 6 and 2 × 3. A pair like 3 × 3 counts one factor.)'));
     W.push(...H.lines(1));
     W.push(H.sub('c', 'Is 49 a number with exactly 3 factors? List its factors to check. How could your answer to (b) have told you?'));
     W.push(H.ans('Factors of 49:'));
@@ -157,7 +158,8 @@ module.exports = {
     W.push(H.sub('', 'Step 1: the numbers between 30 and 70 that are multiples of 3 AND 4 (count in 12s): ______, ______, ______', { keepNext: true }));
     W.push(H.sub('', 'Step 2: cross out any multiple of 8. Left: ______ and ______.   Step 3: use the last clue.', { keepNext: true }));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
+    W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.', { keepNext: true }));
+    W.push(H.sub('', 'Start here: write the first six multiples of 3 on one line and of 6 on another. Is every number in the 6 line also in the 3 line? Is every number in the 3 line also in the 6 line?', { keepNext: true }));
     W.push(...H.lines(2));
     return W;
   }
