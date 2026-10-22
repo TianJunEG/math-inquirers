@@ -55,3 +55,7 @@ Total: 19 / 24
 - Explore and mini-lesson have about 3 spare minutes before the flex buffer; talk and exit are over their minutes only in the slow-class model.
 - Lesson 15 told families to have the Lesson 16 workbook with the 100 square page, 2 or 3 coloured pencils and about 20 small things: this lesson uses exactly those. The Lesson 17 hand-off (about 20 counters or buttons, 5 plates or cups) follows the plan and must be matched by the Lesson 17 materials.
 - Online practice: no pictures on the templated number-line and 100 square items (variable jump lists cannot be drawn by the template); the answers are numbers and choices.
+
+## Fix pass (independent audits, Term 2 batch 4)
+
+Validator 0 FAIL 0 WARN; 110 answer checks; workbook fill 94/96/97/89/97%; slow-class model 82:2x with mini 11:50 of 12 and explore 13:14 of 14. Changes: reveal slides for s-m1, s-m2 and the new s-m3c "Double it" (so the doubling in T1 is taught, with different numbers: 2 x 5 and 4 x 5), warm-up cut to five questions with 30 s waits and no answers on s-rem1/s-rem2, T3 new numbers (50, 27, 65), Start here slots 8:00 and 7:30, key accepts either order, G1 and Investigation wording, start position of the frog beside the 1, greeting then notice then recording, ticks not colours or stars, brain break without whispering. See audit/FIXES_L16.md.

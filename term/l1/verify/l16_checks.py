@@ -65,10 +65,11 @@ def run(d):
     eq(truth, [True, False, True, False], 'S6'); eq(['T' if t else 'F' for t in truth], T['S6']['val'], 'S6 val'); eq(st, ['5 × 4 = 20', '3 × 10 = 40', '6 × 2 = 12', '8 × 5 = 35'], 'S6 statements')
     eq(all(land(a, b) <= 40 for a, b in [(5, 8), (2, 6), (10, 4), (5, 4)]), True, 'Start here products within 40')
     # ---- Think harder
-    v = T['T1']['visual']; eq((v['rows'], v['cols'], v['shade_rows']), (4, 6, [1, 2]), 'T1 picture'); eq((land(6, 2), land(6, 2) + land(6, 2), land(6, 4)), (12, 24, 24), 'T1'); eq(T['T1']['val'], [12, 24], 'T1 val')
+    v = T['T1']['visual']; eq((v['rows'], v['cols'], v['shade_rows']), (4, 5, [1, 2]), 'T1 picture'); eq((land(5, 2), land(5, 2) + land(5, 2), land(5, 4)), (10, 20, 20), 'T1'); eq(T['T1']['val'], [10, 20], 'T1 val')
+    eq(sl['s-m3c']['blocks'][0]['cols'][0][0]['cols'] != v['cols'], True, 'T1 does not repeat the class doubling picture (4 x 6)'); eq((sl['s-m3c']['blocks'][0]['cols'][0][0]['rows'], sl['s-m3c']['blocks'][0]['cols'][0][0]['cols'], land(6, 2) + land(6, 2)), (4, 6, 24), 's-m3c class doubling')
     eq(all(land(n_, 4) == 2 * land(n_, 2) for n_ in range(1, 11)), True, 'T1 the 4s are the 2s doubled (1 to 10)')
     v = T['T2']['visual']; eq((v['rows'], v['cols']), ([1, 4], [1, 10]), 'T2 square 1 to 40'); eq(both(2, 5, 40), [10, 20, 30, 40], 'T2'); eq(T['T2']['val'], [10, 20, 30, 40], 'T2 val')
-    eq([x in landing(5, 60) for x in (35, 28, 45)], [True, False, True], 'T3'); eq([last_digit(x) for x in (35, 28, 45)], [5, 8, 5], 'T3 last digits'); eq(T['T3']['val'], ['Yes', 'No', 'Yes'], 'T3 val')
+    eq([x in landing(5, 70) for x in (50, 27, 65)], [True, False, True], 'T3'); eq([last_digit(x) for x in (50, 27, 65)], [0, 7, 5], 'T3 last digits'); eq([x in (35, 28, 15, 40, 33) for x in (50, 27, 65)], [False] * 3, 'T3 does not reuse class numbers'); eq(T['T3']['val'], ['Yes', 'No', 'Yes'], 'T3 val')
     eq((count_to(5, 30), count_to(2, 18), count_to(10, 40)), (6, 9, 4), 'missing jumps (home and practice use these)')
     # ---- Go further
     row = T['G1']['visual']['rows'][0]; eq([int(x) for x in row], landing(4, 40), 'G1 the 4s'); eq(both(4, 5, 40), [20, 40], 'G1'); eq(T['G1']['val'], [20, 40], 'G1 val')
@@ -77,7 +78,7 @@ def run(d):
     eq((count_to(5, 40), count_to(4, 40), count_to(4, 40) - count_to(5, 40)), (8, 10, 2), 'G3'); eq(T['G3']['val'], [8, 10, 2], 'G3 val')
     # ---- Investigation
     eq([last_digit(x) for x in landing(5, 40)], [5, 0, 5, 0, 5, 0, 5, 0], 'I1 first step'); eq(sorted(set(last_digit(x) for x in landing(5, 100)) & set(last_digit(x) for x in landing(2, 100))), [0], 'I1 only 0 is shared')
-    eq(all(last_digit(x) == 0 for x in both(2, 5, 200)), True, 'I1 everything in both ends in 0 (to 200)'); eq([x in landing(2, 40) for x in (10, 15, 20, 25)], [True, False, True, False], 'I1 tests')
+    eq(all(last_digit(x) == 0 for x in both(2, 5, 200)), True, 'I1 everything in both ends in 0 (to 200)'); eq([x in landing(2, 40) and x in landing(5, 40) for x in (10, 15, 20, 25)], [True, False, True, False], 'I1 tests: in both tables')
     # ---- Exit ticket and home practice
     eq([jumps(5, 6)[i] for i in (2, 4)], [15, 25], 'E1'); eq(X['E1']['val'], [15, 25], 'E1 val')
     opts = X['E2']['mcq']['options']; tr = []
@@ -91,18 +92,22 @@ def run(d):
     eq([H['H1']['val'], H['H2']['val'], H['H3']['val'], H['H4']['val'], H['H5']['val']], [[8, 12], [10, 20, 30], 30, [10, 20], 28], 'home vals')
     # ---- sneak-peek, warm-up, slides, talk, spare time
     eq(land(5, 4), 20, 'sneak 1'); eq(d['sneak_peek']['val1'], 20, 'sneak 1 val'); eq(both(2, 5, 20), [10, 20], 'sneak 2')
-    eq(sl['s-rem1']['blocks'][1]['shade'], landing(2, 40), 's-rem1 shaded cells are the 2s'); eq((landing(2, 20)[-1] + 2, landing(5, 40)[-1], landing(10, 20)[-1] + 10), (20 + 2 - 2 + 2 - 2 + 2, 40, 30), 'warm-up 1 pieces') if False else None
+    eq(sl['s-rem1']['blocks'][1]['shade'], landing(2, 18), 's-rem1 shaded cells are the 2s up to 18 (20 is asked)'); eq((landing(2, 20)[-1] + 2, landing(5, 40)[-1], landing(10, 20)[-1] + 10), (20 + 2 - 2 + 2 - 2 + 2, 40, 30), 'warm-up 1 pieces') if False else None
     eq((18 + 2, 35 + 5, 20 + 10), (20, 40, 30), 'warm-up counts'); eq((land(5, 4), land(5, 3), count_to(2, 8)), (20, 15, 4), 'warm-up number line'); eq((6 + 6, 12 + 6, land(5, 3)), (12, 18, 15), 'warm-up bags')
-    nl = sl['s-rem2']['blocks'][0]['jumps']; eq((len(nl), nl[-1][1]), (3, 15), 's-rem2 picture'); g = sl['s-rem3']['blocks'][0]; eq((g['n'], g['each'], jumps(6, 5)), (5, 6, [6, 12, 18, 24, 30]), 's-rem3 picture')
-    rows = sl['s-m1']['blocks'][0]['rows'][1:]; eq([r[2] for r in rows], [f'{k} × 5 = {jumps(5, 8)[k - 1]}' for k in range(1, 9)], 's-m1 facts'); eq([r[1] for r in rows], [f'{k} five{"s" if k > 1 else ""} is {jumps(5, 8)[k - 1]}' for k in range(1, 9)], 's-m1 say it')
-    cards = [b for b in sl['s-m2']['blocks'] if b['t'] == 'cols'][0]['cols']; eq([f'{k} × 2 = {jumps(2, 6)[k - 1]}' for k in range(1, 7)], cards[0][0]['items'], 's-m2 twos'); eq([f'{k} × 10 = {jumps(10, 4)[k - 1]}' for k in range(1, 5)], cards[1][0]['items'], 's-m2 tens')
+    nl = sl['s-rem2']['blocks'][0]['jumps']; eq((len(nl), nl[-1][1], land(5, 3), land(5, 4)), (2, 10, 15, 20), 's-rem2 picture shows two jumps; the next lands on 15, four land on 20'); g = sl['s-rem3']['blocks'][0]; eq((g['n'], g['each'], jumps(6, 5)), (5, 6, [6, 12, 18, 24, 30]), 's-rem3 picture')
+    rows = sl['s-m1']['blocks'][0]['rows'][1:]; eq([r[2] for r in rows], [f'{k} × 5 = {jumps(5, 8)[k - 1]}' for k in range(1, 7)], 's-m1 facts (6 rows on the question slide)'); eq([r[1] for r in rows], [f'{k} five{"s" if k > 1 else ""} is {jumps(5, 8)[k - 1]}' for k in range(1, 7)], 's-m1 say it')
+    eq([b['text'] for b in sl['s-m1-ans']['blocks'] if b['t'] == 'answer'], ['7 fives is 35: 7 × 5 = 35. 8 fives is 40: 8 × 5 = 40.'], 's-m1 answer slide'); eq((land(5, 7), land(5, 8)), (35, 40), 's-m1 hidden facts')
+    cards = [b for b in sl['s-m2']['blocks'] if b['t'] == 'cols'][0]['cols']; eq([f'{k} × 2 = {jumps(2, 6)[k - 1]}' for k in range(1, 4)], cards[0][0]['items'], 's-m2 twos'); eq([f'{k} × 10 = {jumps(10, 4)[k - 1]}' for k in range(1, 3)], cards[1][0]['items'], 's-m2 tens'); eq((land(2, 4), land(10, 3)), (8, 30), 's-m2 asked facts are not on the question slide')
     eq([sorted(set(last_digit(x) for x in landing(s_, 100))) for s_ in (5, 10, 2)], [[0, 5], [0], [0, 2, 4, 6, 8]], 's-m3 last digits')
     eq((6 + 5, land(5, 6), 4 + 3, land(3, 4)), (11, 30, 7, 12), 's-m3b')
-    eq([land(5, 3), land(2, 6), land(10, 4), land(5, 8)], [15, 12, 40, 40], 's-m4'); eq([r[2] for r in sl['s-m4a']['blocks'][0]['rows'][1:]], ['15', '12', '40', '40'], 's-m4a')
-    eq([r[1].count('+') + 1 for r in sl['s-m4a']['blocks'][0]['rows'][1:]], [3, 6, 4, 8], 's-m4a jumps counts')
+    eq([land(2, 7), land(2, 9), land(10, 2)], [14, 18, 20], 's-m4'); eq([r[2] for r in sl['s-m4a']['blocks'][0]['rows'][1:]], ['14', '18', '20'], 's-m4a')
+    eq([r[1].count('+') + 1 for r in sl['s-m4a']['blocks'][0]['rows'][1:]], [7, 9, 2], 's-m4a jumps counts')
     eq([count_to(5, 30), count_to(5, 25), count_to(5, 40), count_to(2, 12), count_to(10, 40)], [6, 5, 8, 6, 4], 'explore')
     sa = sl['s-sneakans']['blocks'][0]; eq(sa['outline'], both(2, 5, 40), 's-sneakans outline'); eq(sorted(sa['shade'] + sa['shade2'] + sa['outline']), sorted(set(landing(2, 40)) | set(landing(5, 40))), 's-sneakans covers the 2s and 5s')
     eq([x in landing(5, 60) for x in (15, 40, 28, 33)], [True, True, False, False], 'talk')
+    eq(len([l for g in d['script']['segments'] if g['part'] == 'remember' for l in g['lines'] if l['k'] == 'ASK']), 5, 'warm-up asks five questions')
+    eq('That is 0' in sl['s-explore1']['blocks'][0]['items'][0] and 'just to the left of the 1' in d['workbook']['kits'][0]['intro'], True, 'the start (0) is placed beside the square on the slide and the kit page')
+    eq('5 × 6 = 30 is also right' in d['exit'][2]['answer'], True, 'E3 key accepts either order')
     eq([x in landing(5, 100) for x in (10, 20, 30, 40, 50, 60)], [True] * 6, 'optional slide and M1'); eq([land(5, 2 * k) for k in range(1, 5)], landing(10, 40), 'M1 reason: a jump of 10 is two jumps of 5'); eq(land(5, 6), 30, 'M3')
     # ---- online practice items without templates
     items = {i['id']: i for i in d['online_practice']['items']}
