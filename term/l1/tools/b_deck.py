@@ -37,7 +37,7 @@ def para(text, size=44, weight=600, color=None):
 
 
 def card(head, items, size=40):
-    inner = chip(head, 26) if head else ''
+    inner = chip(head, 30) if head else ''
     inner += ''.join(f'<p style="font-size:{size}px;font-weight:600;line-height:1.3;color:{NAVY}">{E(i)}</p>' for i in items)
     return f'<div style="{CARD}padding:24px 40px;display:flex;flex-direction:column;gap:12px">{inner}</div>'
 
@@ -149,12 +149,12 @@ def lookback(d):
             ('The hardest part was ...', opts(lb['hardest'])),
             ('What helped me', opts(lb['helped'])),
             ('Next time I will try', opts(lb['next'])),
-            ('', opts(['I am still stuck (my tutor will come and help)', 'I would like to pass']))]
+            ('', opts(['I am still stuck (I will ask in the class chat or show my tutor on camera)', 'I would like to pass']))]
     inner = ''
     for k, (a, b) in enumerate(rows):
         inner += (f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:32px;font-weight:800;color:{TEAL}">{E(a)}</p>'
-                  f'<p style="font-size:27px;font-weight:600;line-height:1.55">{b}</p></div>')
-    return chip('Three minutes. There are no right answers. You can pass. Nobody reads it out.', 28) + f'<div style="{CARD}padding:26px 40px;display:flex;flex-direction:column">{inner}</div>'
+                  f'<p style="font-size:31px;font-weight:600;line-height:1.5">{b}</p></div>')
+    return chip('Three minutes. There are no right answers. You can pass. Nobody reads it out.', 30) + f'<div style="{CARD}padding:26px 40px;display:flex;flex-direction:column">{inner}</div>'
 
 
 def render_blocks(d, blocks, cols=1):
@@ -189,18 +189,18 @@ def slide_html(d, s):
     if dark:
         bg = f'background:linear-gradient(135deg,{NAVY} 0%,#101B33 100%);color:{CREAM}'
         deco = bubbles() if kind == 'title' else bar()
-        pill = f'<p style="position:absolute;right:128px;top:64px;font-size:28px;font-weight:700;letter-spacing:2px;color:{YEL}">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(foot_text(d))}</p>'
+        pill = f'<p style="position:absolute;right:128px;top:64px;font-size:32px;font-weight:700;letter-spacing:2px;color:{YEL}">{time}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:60px;width:1400px;font-size:28px;color:#B7C3DD">{E(foot_text(d))}</p>'
     else:
         bg = f'background:{SOFTBG};color:{NAVY}'
         deco = bar()
-        pill = f'<p style="position:absolute;right:128px;top:52px;font-size:26px;font-weight:800;letter-spacing:2px;color:{TEAL};background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 22px">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:48px;width:1400px;font-size:24px;color:#5B6785">{E(foot_text(d))}</p>'
+        pill = f'<p style="position:absolute;right:128px;top:52px;font-size:30px;font-weight:800;letter-spacing:2px;color:{TEAL};background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 22px">{time}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:44px;width:1400px;font-size:28px;color:#5B6785">{E(foot_text(d))}</p>'
     if kind == 'title':
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(s["title"])}</h1>'
                 f'<p style="font-size:44px;color:#C9D4EC">{E(s.get("subtitle", ""))}</p>'
-                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
+                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
         style = f'{bg};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px;position:relative;overflow:hidden'
     else:
         if dark:

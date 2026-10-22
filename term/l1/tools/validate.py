@@ -121,6 +121,7 @@ def check_timing(d):
         used += u; slow += sl
         flag = 'ok'
         if u > a: flag = 'OVER'; fail(f"timing: {s['part']} script needs {mmss(u)} but only {mmss(a)} is allocated")
+        elif sl > a and s['part'] != 'flex': flag = 'OVER (slow class)'; warn(f"timing: {s['part']} OVER in the slow-class scenario ({mmss(sl)} needed, {mmss(a)} allocated): the buffer absorbs it, keep it under the flex minutes")
         elif s['part'] != 'flex' and u < 0.70 * a: flag = 'LOOSE'; warn(f"timing: {s['part']} uses only {mmss(u)} of {mmss(a)}")
         elif u > 0.97 * a: flag = 'TIGHT'; warn(f"timing: {s['part']} is tight ({mmss(u)} of {mmss(a)})")
         rows.append((s['part'], a, u, sl, flag))

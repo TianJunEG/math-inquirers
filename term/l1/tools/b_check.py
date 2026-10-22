@@ -243,11 +243,16 @@ def key_html(d):
         H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(minus(q["text"]))}<div class="ans">Answer: {E(minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
                  f'<div class="small"><b>R:</b> {E(right)} <b>P:</b> {E(partly)}</div><div class="small"><b>Worked:</b> {E(minus(q["solution"]))}</div>'
                  f'<div class="small"><b>Watch for:</b> {E("; ".join(q["mistakes"]))}</div></div>')
-    H.append('<div class="note"><b>Question 9, part (a):</b> in the photo the page is flat, so measure the drawn line against the 10 cm print-check bar on the same page (the line should be 57% to 63% of the bar). '
-             'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the line as right if the child\'s answer to part (b) is right. Never ask a child to show the line to the camera.</div>')
+    dq = [i for i, q in enumerate(qs, 1) if q.get('dotbox') or q['id'] == 'C9']
+    if c.get('measure_note'):
+        H.append(f'<div class="note">{E(c["measure_note"])}</div>')
+    elif dq:
+        lo, hi = c.get('line_pct', [57, 63])
+        H.append(f'<div class="note"><b>Question {dq[0]}, part (a):</b> in the photo the page is flat, so measure the drawn line against the 10 cm print-check bar on the same page (the line should be {lo}% to {hi}% of the bar). '
+                 'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the line as right if the child\'s answer to part (b) is right. Never ask a child to show the line to the camera.</div>')
     H.append('<h2 class="pb">5. Tutor record sheet (tutor only; one per child; delete after the note is sent)</h2>')
     H.append('<p>Child (first name only): <span style="display:inline-block;width:260px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span> &nbsp; Date taken: <span style="display:inline-block;width:120px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span></p>')
-    H.append('<table class="rec"><tr>' + ''.join(f'<th>Q{q["id"][1:]}<br><span class="small">L{q["lesson"]}</span></th>' for q in qs) + '<th>Think<br>harder</th></tr><tr>' + '<td></td>' * 11 + '</tr></table>')
+    H.append('<table class="rec"><tr>' + ''.join(f'<th>Q{q["id"][1:]}<br><span class="small">L{q["lesson"]}</span></th>' for q in qs) + '<th>Think<br>harder</th></tr><tr>' + '<td></td>' * (len(qs) + 1) + '</tr></table>')
     H.append('<p class="small">Write R, P, N or T in each box. R = 1 point, P = 0.5, N = 0, T = left out. Then work out each strand score and choose a word from the table.</p>')
     H.append('<table><tr><th>Strand (parent name)</th><th>Questions</th><th>Points / counted</th><th>Word</th></tr>' + ''.join(
         f'<tr><td>{E(s["parent_name"])}</td><td>{", ".join("Q" + x[1:] for x in s["questions"])}</td><td>&nbsp;</td><td>' + ''.join(f'<span class="tick"></span>{E(W[k])} ' for k in ('showing', 'getting', 'beginning')) + '</td></tr>' for s in c['strands']) + '</table>')

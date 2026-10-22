@@ -105,7 +105,7 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>The hardest part was ...</b>{bx(lb["hardest"])}</div>'
             f'<div class="r"><b>What helped me:</b>{bx(lb["helped"])}</div>'
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
-            '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my tutor will come and help)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
+            '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (I will ask in the class chat or show my tutor on camera)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
     P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
              f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
@@ -143,7 +143,7 @@ def home_html(d):
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
             f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
             f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
-            f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link, key <b>{d["online_practice"]["key"]}</b>.</p></div></body></html>')
+            f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link.</p></div></body></html>')
 
 
 def parent_html(d):

@@ -137,7 +137,7 @@ def build_html(d):
     # questions
     H.append('<h2 class="pb">4. Questions, answers, hints and common mistakes</h2>')
     sp = d['sneak_peek']
-    H.append(f'<h3>Sneak-peek puzzles ({rng("sneak")})</h3><div class="q"><b>Puzzle 1 (access):</b> {E(sp["q1"])}<div class="a">Answer: {E(sp["a1"])}</div><b>Puzzle 2 (think):</b> {E(sp["q2"])}<div class="a">Answer: {E(sp["a2"])}</div><div class="m">Unmarked. Papers are shown to the camera once, together. Reveal the answers where your script says (usually Talk time).</div></div>')
+    H.append(f'<h3>Sneak-peek puzzles ({rng("sneak")})</h3><div class="q"><b>Puzzle 1 (access):</b> {E(sp["q1"])}<div class="a">Answer: {E(sp["a1"])}</div><b>Puzzle 2 (think):</b> {E(sp["q2"])}<div class="a">Answer: {E(sp["a2"])}</div><div class="m">Unmarked. Never put answers on boards in front of the group and never read a name with an answer. {E(sp.get("note", "Reveal the answers where your script says (usually Talk time)."))}</div></div>')
     H.append('<h3>Start here (workbook pages 1 and 2)</h3>')
     for q in d['tiers']['start']: H.append(q_html(q))
     H.append('<h3>Think harder (page 3): the taught idea in a new setting</h3>')
@@ -151,7 +151,7 @@ def build_html(d):
     H.append(f'<h3>Exit ticket ({rng("exit")}): 3 questions</h3>')
     for q in d['exit']: H.append(q_html(dict(q, hint='', mins=None)))
     lb = d['look_back']
-    H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (my tutor will come and help)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
+    H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (I will ask in the class chat or show my tutor on camera)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
     H.append('<h2>5. Home practice and online practice</h2><table><tr><th>#</th><th>Tier</th><th>Question</th><th>Answer</th></tr>')
     for h in d['home_practice']: H.append(f'<tr><td>{h["id"]}</td><td>{TIER_NAME[h["tier"]]}</td><td>{E(h["text"])}</td><td>{E(h["answer"])}</td></tr>')
     H.append('</table>')
