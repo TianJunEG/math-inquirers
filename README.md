@@ -10,7 +10,7 @@ This repository holds the source files that build every program document, plus c
 | Folder | What is in it |
 |---|---|
 | `outputs/workbook/` | Student workbook: designed PDF (A + D style) and the Word version |
-| `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, readiness tracker, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
+| `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, progress notes, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
 | `outputs/brand/` | Workbook style options, mascot sketches |
 | `outputs/older/` | Earlier versions kept for reference |
 
@@ -18,7 +18,7 @@ This repository holds the source files that build every program document, plus c
 
 | Folder | Builds |
 |---|---|
-| `hp/` | Workbook, tutor guide, question bank, Lesson 6 trial, weekly email pack, readiness tracker; lesson content lives in `lessons.js`, `scripts.js`, `qbank.json` |
+| `hp/` | Workbook, tutor guide, question bank, Lesson 6 trial, weekly email pack, progress notes; lesson content lives in `lessons.js`, `scripts.js`, `qbank.json` |
 | `deck/` | Slide content data (`data.js`), also read by the tutor guide |
 | `split/` | The 10 published lesson decks and the 60-minute trial deck (`project/deck.json` + `project/slides/*.html`) |
 | `diag/` | Diagram slides added to the decks |

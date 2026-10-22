@@ -202,7 +202,7 @@ def build_email(n, d, tmp):
             b.append('<li>Lesson %d deck: %s</li>' % (l['n'], E(u)))
         b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Go further questions yourself.</li>')
         b.append('<li>Check your materials are ready. Lesson %d: %s Lesson %d: %s</li>' % (la['n'], E(la['materials']), lb['n'], E(lb['materials'])))
-        b.append('<li>After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.</li></ol>')
+        b.append('<li>After each lesson, fill in the Progress Notes for each child (30 seconds each) and send me the sheet.</li></ol>')
         b.append('<p>Please do not forward the answer pages to parents.</p><p>Thank you,<br>[Your name]</p></div></div>')
     b.append('<div class="lessonpage"><h2>Week 5 closing email to parents</h2><div class="mail"><p class="subj">Subject: Math Inquirers %s: thank you, and your child\'s certificate</p><p>Dear parents,</p>' % E(nm['short']))
     for para in ['Thank you for joining us for the Math Inquirers Holiday Program (%s). Your child\'s Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child\'s name.' % nm['head'],

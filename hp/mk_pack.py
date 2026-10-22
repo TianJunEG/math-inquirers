@@ -110,9 +110,9 @@ Attached are the minute-by-minute scripts with answers for both lessons, and the
   Lesson {2*w} deck: https://claude.ai/artifact/{ids[1]}
 
 Before the lesson, please:
-  1. Read both scripts once and try the Challenge questions yourself.
+  1. Read both scripts once and try the Go further questions yourself.
   2. Check you have counters, coins and cut-outs ready (see the materials list in the guide).
-  3. After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.
+  3. After each lesson, fill in the Progress Notes for each child (30 seconds each) and send me the sheet.
 
 Please do not forward the answer pages to parents.
 
@@ -125,76 +125,33 @@ P(d,"Subject: Math Inquirers: thank you, and your child's certificate",b=True)
 for para in ["Dear parents,","Thank you for joining us for the Math Inquirers Holiday Program. Your child's Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child's name.","We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?","If your child showed a love for puzzles, we may invite them to a short challenge session in the next holiday. We will contact you if so.","Warm regards,\n[Your name]"]: P(d,para)
 d.save("Math_Inquirers_Weekly_Email_Pack.docx")
 
-# ---------- TRACKER + SCREENING ----------
-q=json.load(open('qbank.json'))
-pick=[(1,0),(3,2),(4,0),(5,0),(6,0),(7,3),(8,2),(10,1)]
+# ---------- PROGRESS NOTES ----------
 d=Document();base(d)
 sec=d.sections[0];sec.orientation=WD_ORIENT.LANDSCAPE;sec.page_width,sec.page_height=sec.page_height,sec.page_width
-H(d,"Math Inquirers: Readiness Tracker",0)
-P(d,"Who is ready to go further? We look at how a child thinks, not only the score. Tick after each lesson (30 seconds per child).")
-H(d,"The four signs",1)
-table(d,[["Code","Sign","What you see or hear"],
- ["A","Solved a Challenge question alone","Got the answer without hints, and showed how (counters, drawing or words)."],
- ["B","Found a second way","Used a different method or found another answer, and said how it is different."],
- ["C","Noticed a pattern and said why","Said 'it always goes up by 3 because…', not just 'it goes up'."],
- ["D","Stretched it to a new case","Said what would happen with a bigger number or a changed rule, and checked it."]],[2,7,14])
+H(d,"Math Inquirers: Progress Notes",0)
+P(d,"A short note after each lesson on what each child tried, enjoyed and found tricky. It feeds the weekly message to parents. It is not a test and it does not rank or label anyone. Use usernames or first names only. Keep it to 30 seconds per child.")
+H(d,"Four things worth noting",1)
+table(d,[["Code","What to look for","Example"],
+ ["A","Had a go","Tried the Start here questions, used counters, a drawing or words."],
+ ["B","Explained a step","Said how they got an answer, or why a pattern works."],
+ ["C","Tried something harder","Chose Think harder, Go further or the Investigation, in their own time."],
+ ["D","Needs another look","Something to revisit next lesson, with a gentle way to help."]],[2,7,14])
 P(d,"")
 H(d,"Lesson log: copy one page per lesson",1)
 P(d,"Lesson number: ______   Date: ____________   Tutor: ____________________")
-rows=[["Child","A","B","C","D","Total","Note (what they said or did)"]]+[[f"{i}.","","","","","",""] for i in range(1,9)]
-table(d,rows,[5,1.5,1.5,1.5,1.5,2,11])
+rows=[["Child (username)","A","B","C","D","What they said or did, and something to celebrate"]]+[[f"{i}.","","","","",""] for i in range(1,9)]
+table(d,rows,[5,1.5,1.5,1.5,1.5,13])
 P(d,"")
 d.add_page_break()
 H(d,"Programme summary: one row per child",1)
-P(d,"Write each lesson's total (0 to 4) in the box. Then add up in the last columns.")
-rows=[["Child"]+[f"L{i}" for i in range(1,11)]+["Lessons with 3+","Decision"]]+[[f"{i}."]+[""]*10+["",""] for i in range(1,9)]
-table(d,rows,[4]+[1.4]*10+[2.5,3])
+P(d,"Tick or jot one line per lesson. At the end of the programme this becomes the closing note to the family.")
+rows=[["Child"]+[f"L{i}" for i in range(1,11)]+["Favourite moment","Next step to suggest"]]+[[f"{i}."]+[""]*10+["",""] for i in range(1,9)]
+table(d,rows,[4]+[1.4]*10+[3,3])
 P(d,"")
-H(d,"How to decide",1)
-for x in ["3 or 4 in at least 3 lessons: invite to the Challenge Group and give the Screening Set below.",
-"2 in most lessons: keep going and give more Think Harder questions in class.",
-"Mostly 0 or 1: do not worry. Check understanding of the core questions first. Many children grow later in the programme.",
-"One lesson alone means little. Look at the pattern across lessons, and at what the child actually says.",
-"Use this to guide extra challenge, not to label a child. Do not share rankings between families."]: d.add_paragraph(x,style='List Bullet')
-# screening student sheet
-from docx.enum.section import WD_SECTION
-ns=d.add_section(WD_SECTION.NEW_PAGE);ns.orientation=WD_ORIENT.PORTRAIT;ns.page_width,ns.page_height=ns.page_height,ns.page_width
-H(d,"Challenge Screening Set: child sheet",0)
-P(d,"Name: ________________________   Date: ____________")
-P(d,"Take your time. For each question, show how you found your answer with a drawing, counters or words. Then tell your tutor why.",i=True)
-for n,(l,i) in enumerate(pick,1):
-    c=q[str(l)]['challenge'][i]
-    P(d,f"{n}. {c['q']}",b=True)
-    P(d,"_"*80)
-# key
-ns=d.add_section(WD_SECTION.NEW_PAGE);ns.orientation=WD_ORIENT.LANDSCAPE;ns.page_width,ns.page_height=ns.page_height,ns.page_width
-H(d,"Screening Set: tutor guide and answer key",0)
-for x in ["Use one to one or in a group of up to 4. Allow about 25 minutes. Read each question aloud if needed.",
-"Do not give hints in the first attempt. After 2 minutes you may give one hint, and score it as 'with a hint'.",
-"Score each question: 2 = correct and explains why (without hint); 1 = correct, or right idea with a hint; 0 = not yet.",
-"Then ask the extension question once. A good answer earns a star. Stars show how far the child can stretch.",
-"Total out of 16. As a guide, 12 or more with 3 or more stars suggests a child who would enjoy olympiad-style problems. Combine this with the lesson tracker; neither alone decides.",
-"These problems use the same kinds of thinking that later maths olympiad papers reward: patterns, listing in order, working backwards and logic. This set is not an official test and is not linked to any school or MOE programme."]: d.add_paragraph(x,style='List Bullet')
-ext={0:"What if the 5th number was 30? How many patterns now? How do you know you have them all?",
-1:"What if there were 15 children and the most votes was 6? Can the votes still all be different?",
-2:"What about exactly 40 sticks? How do you know before you draw?",
-3:"Zoe is 15th from the front and 15th from the back. How many children? Explain your quick way.",
-4:"What if you also had a 50¢ coin? How many totals now?",
-5:"How many triangles with 6 lines? What do you think the pattern is?",
-6:"Four friends: Ali, Ben, Mei and Sam. Sam must be last. How many orders?",
-7:"The next number of sticks after 31 that works? How do you know?"}
-extans={0:"7 patterns: start 26 add 1, 22 add 2, 18 add 3, 14 add 4, 10 add 5, 6 add 6, 2 add 7.",
-1:"Yes. Only one way: 6, 5 and 4.",
-2:"Yes: 13 squares (4, 7, 10 … 40). The stick numbers are 1 more than the numbers we say counting in 3s, and 39 is one of them.",
-3:"29 children (15 + 15 − 1: Zoe is counted twice).",
-4:"15 different totals (every group of coins gives a different total).",
-5:"28 triangles with 6 lines (1 + 2 + … + 7). Pattern: add one more each time (3, 6, 10, 15, 21, 28).",
-6:"6 orders (the other three can stand in 3 x 2 x 1 ways). Look for an ordered, complete list.",
-7:"37 (they go up by 6)."}
-rows=[["#","Question","Answer","Extension (star)"]]
-for n,(l,i) in enumerate(pick,1):
-    c=q[str(l)]['challenge'][i]
-    rows.append([n,c['q'],c['a'],ext[n-1]])
-table(d,rows,[1,9,6,8])
-P(d,"")
-d.save("Math_Inquirers_Readiness_Tracker_and_Screening_Set.docx")
+H(d,"How to use the notes",1)
+for x in ["Write what you saw, not a score. Quote the child's own words where you can.",
+"Always start the weekly message with something the child did well.",
+"If a child tried something harder, tell the family so they can enjoy it with them, and mention the next level only if the family asks.",
+"If a child found a lesson tricky, say what helped and what to try at home. Do not compare children or share notes between families.",
+"Notes are private to the tutor and the child's own family. Do not record anything beyond learning in class."]: d.add_paragraph(x,style='List Bullet')
+d.save("Math_Inquirers_Progress_Notes.docx")

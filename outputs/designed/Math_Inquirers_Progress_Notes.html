@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/claude/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:13mm 13mm 15mm}
+html,body{background:#EAF3FB}
+body{margin:0;font-family:'Nunito Sans',Arial,sans-serif;color:#1B2A49;font-size:14.6px;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:22px;padding:26px 30px;margin-bottom:18px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:#FFC93C;opacity:.9}
+.cover:before{content:"";position:absolute;right:90px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:#1F7A6F}
+.cover .tag{display:inline-block;background:#FFC93C;color:#1B2A49;font:700 11px 'Nunito Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 12px}
+.cover h1{font:600 32px/1.1 Fredoka,sans-serif;margin:12px 0 6px;max-width:75%;position:relative;z-index:1}
+.cover .sub{font-size:14px;color:#C9D3E6;max-width:75%;position:relative;z-index:1}
+.cover .slog{font:500 15px Fredoka,sans-serif;color:#FFC93C;margin-top:10px;position:relative;z-index:1}
+h1.title{font:600 26px Fredoka,sans-serif;margin:6px 0 10px}
+h2{font:600 21px/1.2 Fredoka,sans-serif;color:#1B2A49;margin:16px 0 8px;padding:6px 14px;background:#fff;border-left:8px solid #FFC93C;border-radius:10px;break-after:avoid}
+h3{font:600 16px/1.25 Fredoka,sans-serif;color:#1F7A6F;margin:12px 0 5px;break-after:avoid}
+p{margin:0 0 8px}
+p.c,div.c{text-align:center}
+ul{margin:2px 0 8px;padding-left:22px}
+li{margin:2px 0}
+li::marker{color:#1F7A6F}
+.sp{height:6px}
+b{font-weight:800}
+img{max-width:100%;height:auto}
+.tb{width:100%;border-collapse:separate;border-spacing:0;margin:6px 0 12px;background:#fff;border:1.5px solid #1B2A49;border-radius:12px;overflow:hidden;font-size:13.2px}
+.tb td{border-top:1px solid #C9D7E6;border-left:1px solid #C9D7E6;padding:6px 8px;vertical-align:top}
+.tb tr:first-child td{border-top:0}
+.tb td:first-child{border-left:0}
+.tb td.hd{background:#FFE7A8;font-weight:700}
+.tb td div{margin:1px 0}
+.tb tr{break-inside:avoid}
+.brk{break-before:page;height:0}
+
+.q{display:flex;gap:10px;align-items:flex-start;margin:7px 0 3px;break-inside:avoid;break-after:avoid}
+.qn{flex:none;width:26px;height:26px;border-radius:50%;background:#FFC93C;border:1.5px solid #1B2A49;display:flex;align-items:center;justify-content:center;font:600 13px Fredoka,sans-serif;margin-top:1px}
+.qt{flex:1}
+.work{height:34px;margin:1px 0 4px 36px;border-bottom:2px dotted #8FA7C2;background:#fff;border-radius:8px 8px 0 0;padding:4px 10px;break-inside:avoid}
+.work span{font-size:11px;font-weight:800;color:#8FA7C2;text-transform:uppercase;letter-spacing:.06em}
+.lv{display:inline-block;font:600 14px Fredoka,sans-serif;border-radius:999px;padding:2px 14px;margin:8px 0 0;border:1.5px solid #1B2A49}
+.lv-core{background:#D3F1E4}.lv-think-harder{background:#D6E9FB}.lv-challenge{background:#FFE2D6}
+</style></head><body><div class="cover"><div class="tag">Math Inquirers Holiday Program</div><h1>Progress Notes</h1><div class="sub">Short notes after each lesson</div><div class="slog">Notice it. Test it. Explain why.</div></div>
+<p>A short note after each lesson on what each child tried, enjoyed and found tricky. It feeds the weekly message to parents. It is not a test and it does not rank or label anyone. Use usernames or first names only. Keep it to 30 seconds per child.</p>
+<h2>Four things worth noting</h2>
+<table class="tb"><colgroup><col style="width:8.7%"><col style="width:30.4%"><col style="width:60.9%"></colgroup><tr><td class="hd"><div><b>Code</b></div></td><td class="hd"><div><b>What to look for</b></div></td><td class="hd"><div><b>Example</b></div></td></tr><tr><td><div>A</div></td><td><div>Had a go</div></td><td><div>Tried the Start here questions, used counters, a drawing or words.</div></td></tr><tr><td><div>B</div></td><td><div>Explained a step</div></td><td><div>Said how they got an answer, or why a pattern works.</div></td></tr><tr><td><div>C</div></td><td><div>Tried something harder</div></td><td><div>Chose Think harder, Go further or the Investigation, in their own time.</div></td></tr><tr><td><div>D</div></td><td><div>Needs another look</div></td><td><div>Something to revisit next lesson, with a gentle way to help.</div></td></tr></table>
+<div class="sp"></div>
+<h2>Lesson log: copy one page per lesson</h2>
+<p>Lesson number: ______   Date: ____________   Tutor: ____________________</p>
+<table class="tb"><colgroup><col style="width:20.8%"><col style="width:6.2%"><col style="width:6.2%"><col style="width:6.2%"><col style="width:6.2%"><col style="width:54.2%"></colgroup><tr><td class="hd"><div><b>Child (username)</b></div></td><td class="hd"><div><b>A</b></div></td><td class="hd"><div><b>B</b></div></td><td class="hd"><div><b>C</b></div></td><td class="hd"><div><b>D</b></div></td><td class="hd"><div><b>What they said or did, and something to celebrate</b></div></td></tr><tr><td><div>1.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>2.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>3.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>4.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>5.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>6.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>7.</div></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>8.</div></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+<div class="sp"></div><div class="brk"></div>
+<h2>Programme summary: one row per child</h2>
+<p>Tick or jot one line per lesson. At the end of the programme this becomes the closing note to the family.</p>
+<table class="tb"><colgroup><col style="width:16.7%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:5.8%"><col style="width:12.5%"><col style="width:12.5%"></colgroup><tr><td class="hd"><div><b>Child</b></div></td><td class="hd"><div><b>L1</b></div></td><td class="hd"><div><b>L2</b></div></td><td class="hd"><div><b>L3</b></div></td><td class="hd"><div><b>L4</b></div></td><td class="hd"><div><b>L5</b></div></td><td class="hd"><div><b>L6</b></div></td><td class="hd"><div><b>L7</b></div></td><td class="hd"><div><b>L8</b></div></td><td class="hd"><div><b>L9</b></div></td><td class="hd"><div><b>L10</b></div></td><td class="hd"><div><b>Favourite moment</b></div></td><td class="hd"><div><b>Next step to suggest</b></div></td></tr><tr><td><div>1.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>2.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>3.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>4.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>5.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>6.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>7.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><div>8.</div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+<div class="sp"></div>
+<h2>How to use the notes</h2>
+<ul>
+<li>Write what you saw, not a score. Quote the child&#x27;s own words where you can.</li>
+<li>Always start the weekly message with something the child did well.</li>
+<li>If a child tried something harder, tell the family so they can enjoy it with them, and mention the next level only if the family asks.</li>
+<li>If a child found a lesson tricky, say what helped and what to try at home. Do not compare children or share notes between families.</li>
+<li>Notes are private to the tutor and the child&#x27;s own family. Do not record anything beyond learning in class.</li>
+</ul></body></html>
