@@ -53,7 +53,7 @@ const L = {
     ],
     whatIf: ['Try other numbers of cubes: 12, 16, 18, 20, 24 and 30. Which number gives the MOST different cuboids? Which numbers up to 30 give only ONE?', '24 gives the most, 6 cuboids (12, 16, 18 and 20 give 4 each; 30 gives 5). Only the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29 (and 1) give just one cuboid, a single row: 1 × 1 × n. Checked by listing every case.'],
     pose: 'Make up a tank puzzle with a stone: choose the base, the depth of the water and the stone. Swap and solve.',
-    solo: 'Q4 (a) to (c) and Q5', praise: 'Thinking of the water as layers of cubes got you unstuck.'
+    solo: 'Q4 (a) (b), then Q6 (a) (b)', praise: 'Thinking of the water as layers of cubes got you unstuck.'
   },
   6: {
     sneak: [
@@ -62,7 +62,7 @@ const L = {
     ],
     whatIf: ['Printer A prints 18 pages a minute and printer B prints 25 pages a minute. Together they print 430 pages in 10 minutes. How many pages should each printer be given so that both finish at exactly the same time?', 'Printer A gets 180 pages (18 × 10) and printer B gets 250 pages (25 × 10); 180 + 250 = 430. If both work for the whole 10 minutes they finish together.'],
     pose: 'Make up a better-buy puzzle with three packs of the same thing. Which pack is the best buy? Swap and check.',
-    solo: 'Q4 (a), Q6 (a) and then Q5', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
+    solo: 'Q4 (a), then Q6 (a) (b)', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
   },
   7: {
     sneak: [

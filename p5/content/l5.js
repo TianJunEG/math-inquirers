@@ -171,10 +171,10 @@ module.exports = {
       H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 70 }), H.cell('8 corners', pw[1]), H.cell('12 edges × ____ = ____', pw[2]), H.cell('6 faces × ____ = ____', pw[3])])
     ]);
     return [
-      H.p(['<b style="color:#1F7A6F">Words and signs.</b> cm³ means cubic centimetres (1 cm³ is one small cube). ℓ means litres: 1 ℓ = 1000 cm³. The three edges of a cuboid are the length, the breadth (how wide) and the height.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Words and signs.</b> cm³ means cubic centimetres (1 cm³ is one small cube). 1 litre (ℓ) = 1000 cm³. A cuboid has a length, a breadth (how wide) and a height.'], { after: 20 }),
       H.q(1, 'This solid cuboid is built from 1-cm cubes.', { before: 20, keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figQ1() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes to the solid, without taking any away, until the whole solid is a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
+        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes, without taking any away, until the solid is a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
       ...H.lines(1),
       H.q(2, 'Ravi has 36 one-centimetre cubes. He uses all of them to build one cuboid. Turning a cuboid round does not make a new one.', { keepNext: true }),
       H.sub('a', 'List every cuboid he can build (length × breadth × height). Work in order. How many are there?', { keepNext: true }),
@@ -187,17 +187,35 @@ module.exports = {
 
       H.q(4, 'A tank has a base 40 cm by 25 cm. The water in it is 15 cm deep. Ali drops in 5 metal cubes with edges of 10 cm. They sink to the bottom and are completely under water.', { pb: true, before: 0, keepNext: true }),
       H.fig(figQ4()),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> the base is 40 × 25 = ______ cm². A layer of water 1 cm deep over the base is ______ cm³. The cubes take up space, so the water has to rise.'], { after: 20 }),
       H.sub('a', 'Volume of 5 cubes: ______ cm³   (b) Rise: ____ cm   (c) Depth now: ____ cm'),
-      H.sub('d', 'Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
+      H.sub('d', '(try this one if you like) Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
       H.q(5, 'A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.', { keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + figQ5() + '</div>', 3000, { h: 20 }),
-        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge there are 4 cubes: 2 corners and ____ cubes between them. On one face, the cubes that are not on an edge make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
+        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge there are 4 cubes: 2 corners and ____ between them. On one face, the cubes not on an edge make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
       H.q(6, 'Container A is full of water. Tank B is empty.', { keepNext: true }),
       H.fig(figQ6()),
       H.sub('a', 'How many litres of water are in container A?   __________ ℓ'),
       H.sub('b', 'All of A is poured into B. How deep is the water in B?   ______ cm'),
-      H.sub('c', 'Then some water is poured back from B into A until the water in A and B is equally deep. How deep is it?', { keepNext: true }),
+      H.sub('c', '(try this one if you like) Then some water is poured back from B into A until the water in A and B is equally deep. How deep is it?', { keepNext: true }),
       ...H.lines(1)
     ];
   }
 };
+
+// ---- figures for the printed Think harder (A1, A4) and Go further (B2, B3) items ----
+{
+  // A1: the box 9 cm long, 6 cm wide and 5 cm high (no grid: the 2-cm cubes are for the child to imagine)
+  module.exports.qbank.stretch[0].fig = svg(260, 150, 'A box 9 cm long, 6 cm wide and 5 cm high',
+    box(OB(40, 130, 15), 9, 6, 5, { fill: [WTOP, '#FFFFFF', '#DCE6F2'], labels: ['9 cm', '5 cm', '6 cm'], lsize: 15 }), 230);
+  // A4 and B2: a 3 by 4 by 5 cuboid made of 1-cm cubes, painted on the outside
+  const cub = () => svg(250, 170, 'A cuboid 5 cubes long, 4 cubes wide and 3 cubes high, built from 1-centimetre cubes and painted on the outside',
+    box(OB(20, 150, 30), 5, 4, 3, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }), 180);
+  module.exports.qbank.stretch[3].fig = cub();
+  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 2].fig = cub();
+  // B3: tank 30 x 20 with water 10 cm deep and a block 10 x 10 x 15 standing on the bottom
+  let g = box(OB(30, 200, 5), 30, 20, 25, { water: 10, wlabel: '10 cm', labels: ['30 cm', '', '20 cm'], lsize: 17 });
+  g += box(OB(30 + 5 * 10, 200, 5), 10, 10, 15, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'], labels: ['10 cm', '15 cm', ''], lsize: 15 });
+  g += tx(285, 80, 'block 10 × 10 × 15', { size: 15, a: 'start' });
+  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 1].fig = svg(400, 230, 'A tank with base 30 cm by 20 cm and water 10 cm deep. A block 10 cm by 10 cm by 15 cm stands upright on the bottom.', g, 260);
+}

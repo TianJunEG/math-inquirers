@@ -24,7 +24,7 @@ How to read it. **A** = minutes the content needs if the worksheet is held to th
 
 
 * No lesson fits at the typical setting. Typical totals are 93.4 to 105.3 minutes (best case 77.3 to 90.9; slow 98.5 to 110.5). In the best case (optional slides and speaker-note ASKs skipped, 20 s slide changes, 60 s breakout moves) 9 of 10 lessons fit; Lesson 10 does not.
-* Every lesson has the same shape: the lead-in parts overrun (sneak-peek +3.5, warm-up +3.1, explore +3.6 on average, all ten lessons OVER on each), page 1 of the worksheet is OVER in 9 lessons (+1.5 to +8.9), and the worksheet's page-2 solo block has 3.4 to 9.4 minutes of unused time (the cushion that the printed choice questions use).
+* Every lesson has the same shape: the lead-in parts overrun (sneak-peek +3.5, warm-up +3.1, explore +3.6 on average, all ten lessons OVER on each), page 1 of the worksheet is OVER in 9 lessons and TIGHT in the other (range +1.5 to +8.9), and the worksheet's page-2 solo block has 3.4 to 9.4 minutes of unused time (the cushion that the printed choice questions use).
 * If a tutor skips the optional "your turn" slides and the speaker-note ASKs (as the guide allows) the typical total falls by 7.0 to 15.0 minutes (mean 10.8) to 84.0-91.5 minutes (Lesson 10: 98.3).
 * Lessons running long (typical total over 90): L10 (+15.3), L3 (+14.9), L7 (+14.5), L1 (+9.6), L2 (+8.8), L8 (+6.1), L4 (+6.0), L5 (+5.4), L6 (+3.9), L9 (+3.4). Lessons running short: none. Loose parts (3+ min spare): worksheet page 2 in all ten lessons, the mini-lesson in L9 and L10.
 * With the fixes in section 6 the typical need is 76.2 to 86.6 minutes (best 67.7-77.5, slow 80.2-90.8) and every lesson keeps at least 3 minutes of cushion.
@@ -357,18 +357,18 @@ Reading: the first "p1" columns count page-1 questions finished in the pairs win
 ## 5. Where the time goes
 
 
-| L | Speak | Wait | Activity | Transition | REC | Total (worksheet at priority) | Lean script (skip optional + note ASKs) | Slide changes (n x 25 s) | Breakout moves (4 x 90 s + pair talk) |
+| L | Speak | Wait | Activity | Transition | REC | Total (worksheet at priority) | Lean script (skip optional + note ASKs) | Slide changes (n x 25 s) | Breakout moves (4 x 90 s + 60 s pair talk) |
 |--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| 1 | 13.6 | 23.5 | 40.5 | 20.0 | 2.0 | 99.6 | 87.5 | 24 (10.0 min) | 7.0-7.5 |
-| 2 | 11.5 | 21.3 | 44.0 | 20.0 | 2.0 | 98.8 | 88.9 | 24 (10.0 min) | 7.0-7.5 |
-| 3 | 12.5 | 25.8 | 44.3 | 20.4 | 2.0 | 104.9 | 89.9 | 25 (10.4 min) | 7.0-7.5 |
-| 4 | 11.4 | 22.4 | 39.4 | 20.8 | 2.0 | 96.0 | 84.4 | 26 (10.8 min) | 7.0-7.5 |
-| 5 | 11.2 | 21.1 | 40.7 | 20.4 | 2.0 | 95.4 | 85.7 | 25 (10.4 min) | 7.0-7.5 |
-| 6 | 11.6 | 21.7 | 38.6 | 20.0 | 2.0 | 93.9 | 84.0 | 24 (10.0 min) | 7.0-7.5 |
-| 7 | 13.9 | 23.7 | 44.5 | 20.4 | 2.0 | 104.5 | 91.5 | 25 (10.4 min) | 7.0-7.5 |
-| 8 | 11.5 | 22.1 | 40.5 | 20.0 | 2.0 | 96.1 | 84.8 | 24 (10.0 min) | 7.0-7.5 |
-| 9 | 11.3 | 19.1 | 41.5 | 19.6 | 2.0 | 93.4 | 85.3 | 23 (9.6 min) | 7.0-7.5 |
-| 10 | 12.7 | 20.4 | 49.0 | 21.1 | 2.1 | 105.3 | 98.3 | 25 (10.4 min) | 7.0-7.5 |
+| 1 | 13.6 | 23.5 | 40.5 | 20.0 | 2.0 | 99.6 | 87.5 | 24 (10.0 min) | 7.0 |
+| 2 | 11.5 | 21.3 | 44.0 | 20.0 | 2.0 | 98.8 | 88.9 | 24 (10.0 min) | 7.0 |
+| 3 | 12.5 | 25.8 | 44.3 | 20.4 | 2.0 | 104.9 | 89.9 | 25 (10.4 min) | 7.0 |
+| 4 | 11.4 | 22.4 | 39.4 | 20.8 | 2.0 | 96.0 | 84.4 | 26 (10.8 min) | 7.0 |
+| 5 | 11.2 | 21.1 | 40.7 | 20.4 | 2.0 | 95.4 | 85.7 | 25 (10.4 min) | 7.0 |
+| 6 | 11.6 | 21.7 | 38.6 | 20.0 | 2.0 | 93.9 | 84.0 | 24 (10.0 min) | 7.0 |
+| 7 | 13.9 | 23.7 | 44.5 | 20.4 | 2.0 | 104.5 | 91.5 | 25 (10.4 min) | 7.0 |
+| 8 | 11.5 | 22.1 | 40.5 | 20.0 | 2.0 | 96.1 | 84.8 | 24 (10.0 min) | 7.0 |
+| 9 | 11.3 | 19.1 | 41.5 | 19.6 | 2.0 | 93.4 | 85.3 | 23 (9.6 min) | 7.0 |
+| 10 | 12.7 | 20.4 | 49.0 | 21.1 | 2.1 | 105.3 | 98.3 | 25 (10.4 min) | 7.0 |
 | mean | 12.1 | 22.1 | 42.3 | 20.3 | 2.0 | | | | |
 
 Three biggest time sinks across the level (typical tutor):
@@ -380,7 +380,7 @@ Three biggest time sinks across the level (typical tutor):
 Other findings about the plan:
 
 * **Slide counts are similar, not unusual:** 27 (L9) to 30 (L4), 28.5 on average, 24 live slides after the four take-home slides. L4 has the most (30), L9 the fewest.
-* **Script word counts:** SAY lines 287 (L4) to 418 (L7), median 322. L7 is unusually large (+30%), driven by a 4-paragraph, 207-word think-aloud; L1 (345) and L8 (344) are next. Slide text is heaviest on L7 (2 179 visible words) and on single slides: sneak-peek slides carry 110 to 146 words, and L10's warm-up slide 165 words.
+* **Script word counts:** SAY lines 287 (L4) to 418 (L7), median 322. L7 is unusually large (+30%), driven by a 4-paragraph, 207-word think-aloud; L1 (345) and L8 (344) are next. Slide text is heaviest on L7 (2 180 visible words in the deck, 1 825 on the live slides; median about 1 960 and 1 600) and on single slides: the sneak-peek slide carries up to 144 words and L10's warm-up slide 163 words.
 * **Unscheduled or inconsistent items found while walking through:** L3 trytrick and teachchain have no minute badge; the explore slides are badged 8-13 and 13-18 while the guide says pencils down at 16; L6 page 1 has two questions yet the printed line says "after question 3" (also true of L9); the L10 final minute has no guide segment, no REC cue and no budget; L10 slide `end` notes say "Minutes 88 to 90" and the badge says 89-90.
 * **REC cue lines** are not "under ten seconds": at 135 wpm the average is 11.9 s and the worksheet cue is 17 s. Over a lesson that is 2.0 min of speech, and it also adds ten "Recording: pause now..." sentences that a live class hears.
 
@@ -401,6 +401,24 @@ All numbers in this section come from the same model re-run with the fixes switc
 **F11 Standing cushion.** Hold 2-3 minutes inside the page-2 solo block (WS-d) as an unallocated buffer. If earlier parts overrun, the tutor spends the buffer first, then the choice questions at the end of page 2, and never the checks, exit ticket or Looking back. In lessons where the cushion is above 4 minutes the extra is the printed choice question (L4 Q6, L5 Q6, L8 Q6, L9 Q5) or, in L6, the first Think Harder item.
 
 ### Per-lesson fixes and budgets
+
+
+### After-fix summary
+
+| L | Opening | Sneak | Warm-up | Explore | Mini | Break | Worksheet (a+b+c+d+e) | Talk | Exit | Looking back | Final minute | Need after fixes best / typical / slow | Cushion (typical) |
+|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 1 | 1.5 | 5.5 | 5.5 | 12.0 | 8.0 | 3.5 | 43.5 (18.0 + 2.5 + 3.5 + 17.0 + 2.5) | 3.5 | 3.5 | 3.5 | - | 74.7 / 85.8 / 89.8 | 4.2 |
+| 2 | 1.5 | 5.0 | 5.0 | 13.0 | 5.0 | 3.5 | 47.0 (17.5 + 2.0 + 4.0 + 20.0 + 3.5) | 3.5 | 3.0 | 3.5 | - | 76.8 / 85.8 / 89.8 | 4.2 |
+| 3 | 1.5 | 5.0 | 5.0 | 12.0 | 5.0 | 4.0 | 48.0 (16.5 + 2.0 + 2.5 + 23.0 + 4.0) | 3.5 | 2.5 | 3.5 | - | 77.5 / 85.4 / 89.2 | 4.6 |
+| 4 | 1.5 | 5.0 | 5.0 | 12.5 | 8.0 | 3.5 | 44.0 (17.5 + 2.5 + 3.5 + 18.0 + 2.5) | 4.0 | 3.0 | 3.5 | - | 72.4 / 82.6 / 86.7 | 7.4 |
+| 5 | 1.5 | 5.0 | 5.0 | 13.5 | 8.0 | 3.5 | 43.0 (18.5 + 2.0 + 5.0 + 15.5 + 2.0) | 3.5 | 3.5 | 3.5 | - | 73.5 / 84.9 / 89.0 | 5.1 |
+| 6 | 1.5 | 5.0 | 5.0 | 11.5 | 7.5 | 3.5 | 46.0 (17.5 + 1.5 + 2.5 + 22.0 + 2.5) | 3.5 | 3.0 | 3.5 | - | 67.7 / 76.2 / 80.2 | 13.8 |
+| 7 | 1.5 | 5.0 | 5.0 | 12.0 | 5.5 | 3.5 | 46.0 (16.0 + 2.0 + 3.5 + 21.0 + 3.5) | 4.0 | 4.0 | 3.5 | - | 76.4 / 85.9 / 89.8 | 4.1 |
+| 8 | 1.5 | 5.0 | 5.0 | 14.0 | 8.5 | 3.5 | 42.5 (19.0 + 2.5 + 3.5 + 15.0 + 2.5) | 4.0 | 2.5 | 3.5 | - | 73.2 / 83.5 / 87.5 | 6.5 |
+| 9 | 1.5 | 5.0 | 5.0 | 14.5 | 6.5 | 3.5 | 44.0 (18.0 + 2.0 + 4.0 + 17.5 + 2.5) | 3.5 | 3.0 | 3.5 | - | 73.3 / 83.3 / 87.3 | 6.7 |
+| 10 | 1.5 | 5.0 | 5.0 | 13.0 | 6.5 | 3.5 | 41.5 (16.5 + 1.5 + 3.5 + 17.0 + 3.0) | 3.5 | 4.5 | 3.5 | 2.5 | 77.3 / 86.6 / 90.8 | 3.4 |
+
+Every row adds to 90.0. The five worksheet figures are WS-a + WS-b + WS-c + WS-d + WS-e (page 2 solo includes the standing cushion). A SLOW tutor uses almost all of the cushion in L1, L2, L3, L5, L7 and L9-L10 (L10 ends 0.8 min over); BEST tutors finish 12 to 22 minutes early and have that time for the Think Harder, Go further and Investigation pages.
 
 
 #### Lesson 1

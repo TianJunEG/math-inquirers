@@ -432,7 +432,7 @@ def main():
             fm2('LOW', a), fm2('LOW', b), fm2('MID', a), fm2('MID', b), fm2('HIGH', a), fm2('HIGH', b)))
 
     print('\n### Where the time goes (TYPICAL tutor, whole lesson, minutes) and effect of skipping optional items\n')
-    print('| L | Speak | Wait | Activity | Transition | REC | Total (worksheet at priority) | Lean script (skip optional + note ASKs) | Slide changes (n x 25 s) | Breakout moves (4 x 90 s + pair talk) |')
+    print('| L | Speak | Wait | Activity | Transition | REC | Total (worksheet at priority) | Lean script (skip optional + note ASKs) | Slide changes (n x 25 s) | Breakout moves (4 x 90 s + 60 s pair talk) |')
     print('|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|')
     tot = {k: 0 for k in ('speak', 'wait', 'act', 'trans', 'rec')}
     for n in sorted(allres):
@@ -440,7 +440,7 @@ def main():
         c = {k: sum(r['c'][k] for r in rows) for k in tot}
         for k in tot: tot[k] += c[k]
         t = allres[n]['sc']['TYPICAL']['tot']; lean = allres[n]['sc']['LEAN']['tot']
-        print('| %d | %s | %s | %s | %s | %s | %s | %s | %d (%.1f min) | 7.0-7.5 |' % (n, f1(c['speak']), f1(c['wait']), f1(c['act']), f1(c['trans']), f1(c['rec']), f1(t['A']), f1(lean['A']), allres[n]['slides'] - 4, (allres[n]['slides'] - 4) * 25 / 60.0))
+        print('| %d | %s | %s | %s | %s | %s | %s | %s | %d (%.1f min) | 7.0 |' % (n, f1(c['speak']), f1(c['wait']), f1(c['act']), f1(c['trans']), f1(c['rec']), f1(t['A']), f1(lean['A']), allres[n]['slides'] - 4, (allres[n]['slides'] - 4) * 25 / 60.0))
     print('| mean | %s | %s | %s | %s | %s | | | | |' % tuple(f1(tot[k] / 10) for k in ('speak', 'wait', 'act', 'trans', 'rec')))
 
     print('\n### Proposed budgets after the fixes (TYPICAL tutor)\n')
