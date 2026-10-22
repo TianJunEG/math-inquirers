@@ -143,3 +143,9 @@ for p in [.4,.5,.6,.7,.8]:
     d=dist([p]*8); print(f' p={p}: {sum(v for k,v in d.items() if k>=5):.0%}')
 # how many main-6 correct does a P(stretch)=.2 typical child need; chance of 8/8 for a strong child
 d=dist([.97,.9,.95,.9,.85,.95,.6,.55]); print('strong child P(8/8)=',f"{d[8]:.0%}",' P(7)=',f"{d[7]:.0%}", ' P(6)=',f"{d[6]:.0%}")
+
+print("\n== Proposed replacement items ==")
+print('L2 PRE1 gentler 3[x]2 + 416 = 788:', [x for x in range(10) if 302+10*x+416==788])
+print('L5 PRE one-step +7 OUT 12 -> IN', 12-7, '; two-step x2 then +7 OUT 17 -> IN', (17-7)//2)
+print('Diag pattern item (period 4: tri,circle,circle,square) 10th:', ['triangle','circle','circle','square'][(10-1)%4])
+print('Diag time item 4:50pm + 25 min =', divmod(4*60+50+25,60))

@@ -6,7 +6,7 @@
     "years": "1776-1831",
     "country_or_region": "France (Paris)",
     "who": "A French girl who taught herself mathematics from her father's books",
-    "story": "Sophie Germain lived in Paris more than 200 years ago. As a teenager she began reading the books in her father's library, and she taught herself Latin and Greek so that she could read even more of them. Her parents were not happy about it, but she kept learning. Later she wrote to famous mathematicians using a man's name, M. Le Blanc. One of them, the great mathematician Gauss, praised her ideas about numbers, and he went on praising her after he found out who she really was. Sophie was fascinated by prime numbers, which have exactly two factors: 1 and themselves. She studied primes p where 2 times p plus 1 is also prime. Today these are called Sophie Germain primes. She also won a prize from the Paris Academy of Sciences for her work on how thin metal plates vibrate.",
+    "story": "Sophie Germain lived in Paris more than 200 years ago. As a teenager she began reading the books in her father's library, and she taught herself Latin and Greek so that she could read even more of them. Her parents were not happy about it, but she kept learning. Later she wrote to famous mathematicians using a man's name, M. Le Blanc. One of them, the great mathematician Gauss, praised her ideas about numbers, and later he found out who she really was. Sophie was fascinated by prime numbers, which have exactly two factors: 1 and themselves. She studied primes p where 2 times p plus 1 is also prime. Today these are called Sophie Germain primes. She also won a prize from the Paris Academy of Sciences for her work on how thin metal plates vibrate.",
     "link_to_lesson": "Today you hunt for factors, and Sophie studied prime numbers, the numbers with only two factors.",
     "try_it": {
       "q": "Take 7. Is 2 times 7 plus 1 a prime? List the factors of your answer to prove it. Then try 5.",
@@ -20,7 +20,7 @@
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "A stack of old books with a small key tag showing 2p+1 on a number card (a pen-name mask is optional); not a portrait.",
-    "story_words": 142
+    "story_words": 137
   },
   {
     "lesson": 2,
@@ -29,7 +29,7 @@
     "years": "about 1170 - about 1240/1250",
     "country_or_region": "Italy (Pisa), schooled in Bugia, now Bejaia, Algeria",
     "who": "An Italian merchant's son who helped Europe learn the digits 0 to 9",
-    "story": "Leonardo of Pisa, whom we now call Fibonacci, lived about 800 years ago. His father was a merchant official who worked in Bugia, a trading town in North Africa that is now Bejaia in Algeria. Leonardo went there as a boy and learned to count with ten digits, 0 to 9, where each digit's place gives its value. In 1202 he finished a book, the Liber Abaci, which showed Italian merchants how to use these digits for money, trade and bookkeeping. Before that, many people in Europe wrote numbers with Roman numerals, which have no place value and no zero. Place value is what lets ten digits write any big number, such as 47 305. Leonardo did not invent these digits, but his book helped them spread across Europe.",
+    "story": "Leonardo of Pisa, whom we now call Fibonacci, lived about 800 years ago. His father was a merchant official who worked in Bugia, a trading town in North Africa that is now Bejaia in Algeria. Leonardo went there as a boy and learned to count with ten digits, 0 to 9, where each digit's place gives its value. In 1202 he finished a book, the Liber Abaci, which showed merchants how to use these digits for money, trade and bookkeeping. Place value is what lets ten digits write any big number, such as 47 305. Leonardo did not invent these digits, but his book helped them spread across Europe.",
     "link_to_lesson": "Today you read and build numbers up to 100 000, and place value is the idea that Leonardo's book helped spread.",
     "try_it": {
       "q": "Use the digits 7, 0, 4, 9 and 2 once each. Write the biggest 5-digit number and the smallest 5-digit number you can.",
@@ -42,7 +42,7 @@
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "Ten digit tiles 0 to 9 sitting in labelled place-value columns, with a small merchant's scale beside them.",
-    "story_words": 129
+    "story_words": 109
   },
   {
     "lesson": 3,
@@ -75,7 +75,7 @@
     "years": "about 1550 BC (the date of his copy of the papyrus)",
     "country_or_region": "Ancient Egypt",
     "who": "An Egyptian scribe who copied a maths book on papyrus",
-    "story": "About 3,500 years ago in Egypt, a scribe named Ahmes wrote out a long maths book on a roll of papyrus. We call it the Rhind Papyrus, named after the man who bought it in Luxor in 1858. Ahmes copied it from an older work. The book has problems about bread, fields and sharing. It also has a big table that writes fractions with 2 on top, such as 2 out of 3, 2 out of 5 and 2 out of 7, by using unit fractions, which have 1 on top. The table goes all the way up to 2 out of 101. A scribe's table like this saved time, because people could look up an answer instead of working it out every time. Parts of the papyrus are now kept in the British Museum in London.",
+    "story": "About 3,500 years ago in Egypt, a scribe named Ahmes wrote out a long maths book on a roll of papyrus. We call it the Rhind Papyrus, named after the man who bought it in Luxor in 1858. Ahmes copied it from an older work. The book has problems about food, fields and building. It also has a big table that writes fractions with 2 on top, such as 2 out of 3, 2 out of 5 and 2 out of 7, by using unit fractions, which have 1 on top. The table goes all the way up to 2 out of 101. Parts of the papyrus are now kept in the British Museum in London.",
     "link_to_lesson": "Today you work with fractions, and Ahmes's papyrus shows people sharing and writing fractions 3,500 years ago.",
     "try_it": {
       "q": "Egyptian scribes liked unit fractions. Write 5/8 as two different unit fractions added together. (Hint: start with 1/2.)",
@@ -88,7 +88,7 @@
     "confidence": "medium",
     "legend_note": "",
     "icon_idea": "A rolled papyrus scroll with the fractions 1/2 and 1/4 drawn on it in a simple reed-pen style, plus a small bread-loaf cut into pieces.",
-    "story_words": 137
+    "story_words": 116
   },
   {
     "lesson": 5,
@@ -97,7 +97,7 @@
     "years": "1548-1620",
     "country_or_region": "Flanders (born in Bruges, now Belgium)",
     "who": "A Flemish mathematician who wrote a short book to teach decimals to everyone",
-    "story": "Simon Stevin was born in Bruges, in what is now Belgium, in 1548. He worked on many things, from trigonometry to the science of water and weights. In 1585 he published a small book called The Tenth (La Thiende) about decimal fractions. Stevin did not invent decimals. Mathematicians in the Arab world and in China had used them before. What he did was explain them clearly for the people who needed them. He said they would be useful for surveyors, carpet-makers, wine-gaugers, mint-masters, stargazers and every kind of merchant. His idea was that if you divide everything into tenths, hundredths and thousandths, sums with money and measures become much easier. This is why we still use decimals for money and for measuring today.",
+    "story": "Simon Stevin was born in Bruges, in what is now Belgium, in 1548. He worked on many things, from trigonometry to the science of water and weights. In 1585 he published a small book called The Tenth (La Thiende) about decimal fractions. Stevin did not invent decimals. Others had used them before him. What he did was explain them clearly for the people who needed them. He said they would be useful for surveyors, carpet-makers, wine-gaugers, mint-masters, stargazers and every kind of merchant. He showed how to split a whole into tenths, hundredths and thousandths and how to calculate with them. We still use decimals this way for money and measuring today.",
     "link_to_lesson": "Today you work with tenths, hundredths and thousandths, which is exactly what Stevin's small book explained.",
     "try_it": {
       "q": "Write 3 + 4/10 + 5/100 as a decimal. Then add 2.8 to your answer.",
@@ -105,13 +105,12 @@
     },
     "source_urls": [
       "https://mathshistory.st-andrews.ac.uk/Biographies/Stevin/",
-      "https://www.britannica.com/print/article/565994",
-      "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/simon-stevin"
+      "https://www.britannica.com/print/article/565994"
     ],
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "A ruler marked in tenths with a bold decimal point, next to a small tape measure and a coin; not a portrait.",
-    "story_words": 123
+    "story_words": 112
   },
   {
     "lesson": 6,
@@ -142,7 +141,7 @@
     "years": "lived in the 3rd century AD (exact dates unknown)",
     "country_or_region": "China (the kingdom of Wei)",
     "who": "A Chinese mathematician who explained why old area rules work",
-    "story": "Very little is known about Liu Hui's life, except that he lived in China in the 3rd century AD. What we do know is his work. China had an old maths book called The Nine Chapters on the Mathematical Art. Its first chapter gives rules for finding the area of fields shaped like rectangles, triangles, trapeziums and circles. Liu Hui wrote notes on the book. He did not just say, use this rule. He worked to show why each rule gives the right answer, and he often did it with careful pictures and reasoning about shapes. That asking why is a big part of being a mathematician. When you explain why length times width gives the area of a rectangle, you are doing what Liu Hui did.",
+    "story": "Very little is known about Liu Hui's life, except that he lived in China in the 3rd century AD. What we do know is his work. China had an old maths book called The Nine Chapters on the Mathematical Art. Its first chapter gives rules for finding the area of fields shaped like rectangles, triangles, trapeziums and circles. Liu Hui wrote notes on the book. He did not just say, use this rule. He worked to show why each rule gives the right answer, and he did it with careful reasoning about shapes. That asking why is a big part of being a mathematician. When you explain why length times width gives the area of a rectangle, you are doing what Liu Hui did.",
     "link_to_lesson": "Today you find the area of rectangles and squares, and Liu Hui explained why the area rules for fields work.",
     "try_it": {
       "q": "A rectangular field is 12 m long and 5 m wide. Find its area and its perimeter. Then explain why the area rule works using rows of squares.",
@@ -156,7 +155,7 @@
     "confidence": "medium",
     "legend_note": "",
     "icon_idea": "A brush pen beside a bamboo scroll showing a small field drawn as a rectangle on a square grid.",
-    "story_words": 127
+    "story_words": 124
   },
   {
     "lesson": 8,
@@ -165,7 +164,7 @@
     "years": "1882-1935",
     "country_or_region": "Germany (born in Erlangen)",
     "who": "A German mathematician who found a link between symmetry and things that stay the same",
-    "story": "Emmy Noether was born in Erlangen, Germany, in 1882. When she wanted to study mathematics at university, women were only allowed to sit in on classes if the teacher gave permission. She kept going, and in 1907 she earned her doctorate. For years she worked without pay. Later, she was invited to Gottingen, where for a time her lectures had to be advertised under another professor's name. Still she carried on, and her students admired her. In 1918 she proved a famous idea now called Noether's theorem. It says that when something in nature has a kind of symmetry, there is a matching quantity that stays the same. One example is that energy stays the same when the rules do not change over time. Symmetry is not only pretty. It tells us deep things.",
+    "story": "Emmy Noether was born in Erlangen, Germany, in 1882. When she wanted to study mathematics at university, women were only allowed to sit in on classes if the teacher gave permission. She kept going, and in 1907 she earned her doctorate. For years she worked without pay. Later, she was invited to G\u00f6ttingen, where for a time her lectures had to be advertised under another professor's name. Still she carried on. In 1918 she proved a famous idea now called Noether's theorem. It says that when something in nature has a kind of symmetry, there is a matching quantity that stays the same. One example is that energy stays the same when the rules do not change over time. Symmetry is not only pretty. It tells us deep things.",
     "link_to_lesson": "Today you explore symmetry, and Emmy showed that symmetry is useful as well as beautiful.",
     "try_it": {
       "q": "How many lines of symmetry does a square have? How many does a rectangle that is not a square have?",
@@ -178,16 +177,16 @@
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "A butterfly with matching wings and a dotted mirror line down the middle, sitting on a small chalkboard.",
-    "story_words": 134
+    "story_words": 129
   },
   {
     "lesson": 9,
     "topic": "Tables and line graphs",
     "name": "Florence Nightingale",
     "years": "1820-1910",
-    "country_or_region": "England (born in Florence, Italy)",
+    "country_or_region": "Britain (born in Florence, Italy)",
     "who": "A British nurse who used charts to show people what the numbers meant",
-    "story": "Florence Nightingale was born in Florence, Italy, in 1820, and grew up in England. She is best known as a nurse, but she also loved numbers and statistics. During the Crimean War in the 1850s she collected figures about the hospitals for soldiers. They showed that many more soldiers became sick from dirty, crowded conditions than from the fighting. She knew that long lists of numbers are hard to read, so she drew special charts to make the facts easy to see. Her ideas helped to bring in cleaner, safer hospitals. In 1858 she became the first woman to be elected a Fellow of the Statistical Society of London, now called the Royal Statistical Society. She showed that a clear table or graph can help people make better decisions.",
+    "story": "Florence Nightingale was born in Florence, Italy, in 1820. She is best known as a nurse, but she also loved numbers and statistics. During the Crimean War in the 1850s she collected figures about the hospitals for soldiers. They showed that many more soldiers became sick from dirty, crowded conditions than from the fighting. She knew that long lists of numbers are hard to read, so she drew special charts to make the facts easy to see. Her ideas helped to bring in cleaner, safer hospitals. In 1858 she became the first woman to be elected a Fellow of the Statistical Society of London, now called the Royal Statistical Society. She showed that a clear table or graph can help people make better decisions.",
     "link_to_lesson": "Today you read tables and line graphs, and Florence used tables and charts to make numbers easy to understand.",
     "try_it": {
       "q": "A table shows the temperature: 9 am 26 degrees, 12 noon 31 degrees, 3 pm 33 degrees, 6 pm 29 degrees. Between which two times did it rise the most, and by how much?",
@@ -200,7 +199,7 @@
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "A small oil lamp beside a simple line graph with a rising and falling line, drawn in friendly flat colours; not a portrait.",
-    "story_words": 129
+    "story_words": 124
   },
   {
     "lesson": 10,
@@ -209,7 +208,7 @@
     "years": "1977-2017",
     "country_or_region": "Iran (Tehran) and the USA",
     "who": "An Iranian mathematician who loved hard problems and took her time over them",
-    "story": "Maryam Mirzakhani grew up in Tehran, Iran. She loved solving maths problems, and she was the first girl to join Iran's team at the International Mathematical Olympiad, a competition for school students from around the world. She won a gold medal in 1994. She went back in 1995, got a perfect score, and won gold again. Later she studied at Harvard University in the USA and became a professor at Stanford University. She has been described as a slow thinker who took time with each problem, trying things out and making pictures of what might be going on. Her work on hard problems about shapes won her the Fields Medal in 2014. She was the first woman to win it. Her story shows that patience and trying different ways in can solve big problems.",
+    "story": "Maryam Mirzakhani grew up in Tehran, Iran. She loved mathematics, and she was the first girl to join Iran's team at the International Mathematical Olympiad, a competition for school students from around the world. She won a gold medal in 1994. She went back in 1995, got a perfect score, and won gold again. Later she studied at Harvard University in the USA and became a professor at Stanford University. She has been described as a slow thinker who took her time over each problem. Her work on hard problems about shapes won her the Fields Medal in 2014. She was the first woman to win it. Her story shows that patience and trying different ways in can solve big problems.",
     "link_to_lesson": "Today you choose a strategy for tricky puzzles, and Maryam became a champion by being patient and trying new ways in.",
     "try_it": {
       "q": "A farmer has hens (2 legs) and rabbits (4 legs). There are 5 animals and 14 legs in all. How many of each? Try guess and check, or suppose they are all hens.",
@@ -224,6 +223,6 @@
     "confidence": "high",
     "legend_note": "",
     "icon_idea": "A gold-coloured medal beside a notebook page with a path of loops and arrows drawn inside a polygon; not a portrait.",
-    "story_words": 134
+    "story_words": 121
   }
 ]

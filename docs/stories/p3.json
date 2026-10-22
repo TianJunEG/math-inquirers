@@ -1,0 +1,194 @@
+[
+ {
+  "lesson": 1,
+  "name": "Al-Khwarizmi",
+  "years": "about 780 to about 850",
+  "country_or_region": "Baghdad (now Iraq); possibly from Khwarazm (now Uzbekistan)",
+  "who": "A scholar who wrote about the ten-digit number system.",
+  "story": "Al-Khwarizmi lived about 1,200 years ago and worked in the city of Baghdad. He wrote a book that explained how to write and calculate with the Hindu-Arabic numbers, using ten digits, 0 to 9. Each digit's place tells us its value. Later, the book was translated into Latin, and people in Europe learned the system too. The word \"algorithm\", meaning a set of steps, comes from a Latin form of his name. Historians are not sure exactly where he was born.",
+  "link_to_lesson": "Today's place value to 10 000 is the same idea his book explained: a digit's place tells its value, and 0 holds a place.",
+  "try_it": "Write the number with 7 thousands, 0 hundreds, 4 tens and 2 ones. What would happen to the 4 if we left out the 0?",
+  "try_it_answer": "7 042. Without the 0 we would write 742, and the 4 would be in the hundreds place, so the number would be much smaller.",
+  "icon_idea": "A little scroll with the digits 0 to 9 in a row and a glowing zero.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+   "https://www.britannica.com/biography/al-Khwarizmi",
+   "https://www.newworldencyclopedia.org/entry/Al-Khwarizmi"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 2,
+  "name": "Katherine Johnson",
+  "years": "1918 to 2020",
+  "country_or_region": "USA (West Virginia)",
+  "who": "A NASA maths \"computer\" who checked space flight sums.",
+  "story": "Katherine Johnson was born in West Virginia. As a child she liked counting things, such as her steps and the dishes she washed. She went to college and studied maths. In 1953 she joined NACA, which later became NASA, as a \"computer\". That was a person who did calculations. In 1962 astronaut John Glenn was about to orbit the Earth. He asked her to check the numbers from the electronic computers, using a desk calculator. She checked them, and the flight went ahead.",
+  "link_to_lesson": "Today we add and subtract carefully, and checking an answer by working backwards is exactly the kind of care her job needed.",
+  "try_it": "Sam says 3 482 + 1 659 = 5 141. Check his answer by subtracting. Is he right?",
+  "try_it_answer": "5 141 - 1 659 = 3 482, so Sam is right.",
+  "icon_idea": "A small rocket orbiting a ring, with a tick mark beside it.",
+  "source_urls": [
+   "https://www.nasa.gov/people-of-nasa/katherine-johnson-biography/",
+   "https://computerhistory.org/profile/katherine-johnson/",
+   "https://chalkdustmagazine.com/biographies/significant-figures-katherine-johnson/"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 3,
+  "name": "John Napier",
+  "years": "1550 to 1617",
+  "country_or_region": "Scotland",
+  "who": "A Scottish inventor of number rods for multiplying.",
+  "story": "John Napier lived in Scotland, near Edinburgh. He looked after his family's farms, and maths was his hobby. He invented a set of rods with multiplication tables written on them. People call them Napier's bones. To multiply a big number, you place the rods side by side, read the rows, and add. His book about the rods came out in 1617. Many people used rods like these to help with their sums.",
+  "link_to_lesson": "Napier's rods are made of times tables, so they turn multiplication into reading a table and adding, just like the tables of 6, 7, 8 and 9 we explore today.",
+  "try_it": "Make a rod for 9. Write 9 x 1 up to 9 x 9. What pattern do you see in the tens digits and in the ones digits?",
+  "try_it_answer": "09, 18, 27, 36, 45, 54, 63, 72, 81. The tens digits go up by 1 each time (0 to 8) and the ones digits go down by 1 (9 to 1). Each pair of digits adds to 9.",
+  "icon_idea": "A set of tall thin rods, each with a small times-table grid and diagonal lines.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Napier/",
+   "https://mathshistory.st-andrews.ac.uk/Extras/Napier_rods/",
+   "https://library.si.edu/digital-library/book/rabdologiaseunu00napi"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 4,
+  "name": "Bhaskara II",
+  "years": "1114 to 1185",
+  "country_or_region": "India",
+  "who": "An Indian maths teacher who wrote word problems in verse.",
+  "story": "Bhaskara lived in India about 900 years ago. He wrote a maths book called the Lilavati. It has many word problems, with kings, elephants and pearl necklaces in them. A story often told says the book was named after his daughter. Historians have no proof that this story is true, so it is a legend. What we do know is that Bhaskara thought maths problems could be told as little tales, and that is a good way to learn.",
+  "link_to_lesson": "Today we solve word problems by drawing a bar model, and Bhaskara's book is full of stories that ask us to find an unknown number.",
+  "try_it": "In the style of Bhaskara: a necklace has some pearls. Half of them fall on the floor, a quarter fall on the bed and 5 stay on the string. How many pearls were there? Draw a bar model.",
+  "try_it_answer": "20 pearls. Half and a quarter make three quarters, so the 5 left is one quarter. One quarter is 5, so the whole is 4 x 5 = 20. Check: 10 + 5 + 5 = 20.",
+  "icon_idea": "A string of pearls with one pearl rolling away, and a small speech bubble.",
+  "source_urls": [
+   "https://britannica.com/print/article/64067",
+   "https://en.wikipedia.org/wiki/L%C4%ABl%C4%81vat%C4%AB",
+   "https://old.maa.org/node/116870"
+  ],
+  "confidence": "medium",
+  "legend_note": "A story often told says the Lilavati was named after Bhaskara's daughter (historians have no proof; it is a legend). The necklace problem in try_it is our own, written in the style of the book, not a copy of his."
+ },
+ {
+  "lesson": 5,
+  "name": "Sun Zi",
+  "years": "lived more than 1,500 years ago (exact dates unknown)",
+  "country_or_region": "China",
+  "who": "The author of an old Chinese maths book with a famous remainder riddle.",
+  "story": "Almost nothing is known about the life of Sun Zi. We know the name of a Chinese maths book, the Sunzi Suanjing. Historians are not sure exactly when it was written, but it is more than 1,500 years old. It has a riddle about remainders: find a number that leaves 2 when we share it into groups of 3, leaves 3 in groups of 5, and leaves 2 in groups of 7. The answer is 23. The book also shows a method for riddles like this.",
+  "link_to_lesson": "Today's \"what number am I?\" riddles use division with remainders, just like Sun Zi's riddle.",
+  "try_it": "Check the answer 23 for Sun Zi's riddle by dividing. Then find a number between 10 and 20 that leaves 1 when divided by 4 and leaves 2 when divided by 3.",
+  "try_it_answer": "23 / 3 = 7 r 2, 23 / 5 = 4 r 3, 23 / 7 = 3 r 2, so 23 works. The second riddle: 17 (17 / 4 = 4 r 1 and 17 / 3 = 5 r 2). Of 13 and 17, only 17 fits.",
+  "icon_idea": "A bundle of counting sticks tied in groups, with a few sticks left over.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Sun_Zi/",
+   "https://en.wikipedia.org/wiki/Chinese_remainder_theorem"
+  ],
+  "confidence": "medium",
+  "legend_note": "Dates and author of the Sunzi Suanjing are uncertain; the story says so."
+ },
+ {
+  "lesson": 6,
+  "name": "Fibonacci (Leonardo of Pisa)",
+  "years": "about 1170 to after 1240",
+  "country_or_region": "Italy (learned maths in North Africa)",
+  "who": "An Italian trader's son who taught Europe an easier way to write numbers.",
+  "story": "Fibonacci was born in Pisa, in Italy, about 800 years ago. His father worked in Bugia, a trading town in North Africa. There Fibonacci learned how to calculate with the Hindu-Arabic numbers. Later he travelled to other lands around the Mediterranean Sea. In 1202 he wrote a book called Liber Abaci for people in Europe. It showed how to use these numbers and the fraction bar to solve problems about money and trade.",
+  "link_to_lesson": "Today we use fractions with a bar between the top and bottom numbers, the same fraction bar that his book helped to teach in Europe.",
+  "try_it": "Draw a bar split into 4 equal parts and shade 3 parts. Draw a second bar of the same length split into 8 equal parts. How many eighths must you shade to match 3/4?",
+  "try_it_answer": "6 eighths, because 3/4 = 6/8. Both bars have the same amount shaded.",
+  "icon_idea": "A little sailing boat carrying a scroll with a fraction bar on it.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/DSB/Fibonacci.pdf",
+   "https://r-knott.surrey.ac.uk/fibonacci/fibBio.html",
+   "https://en.wikipedia.org/wiki/Liber_Abaci"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 7,
+  "name": "Liu Hui",
+  "years": "active about 263 CE (exact dates unknown)",
+  "country_or_region": "China",
+  "who": "A Chinese maths thinker who explained why area rules work.",
+  "story": "Liu Hui lived in China about 1,700 years ago. Not much is known about his life. He read an old maths book with many rules for finding areas. Then he wrote notes to explain why the rules work, not only how to use them. For circles, he cut them into many small pieces. He also drew shapes with more and more sides inside a circle and measured their edges. With a shape of 3 072 sides, he found a very good value for pi.",
+  "link_to_lesson": "Today we find area and perimeter, and Liu Hui explained area rules by cutting shapes into pieces and measured the edges of shapes inside a circle.",
+  "try_it": "A rectangle is 8 cm long and 5 cm wide. Find its perimeter and its area. Now cut it along a diagonal. What is the area of each triangle?",
+  "try_it_answer": "Perimeter 2 x (8 + 5) = 26 cm. Area 8 x 5 = 40 square centimetres. Each triangle is half the rectangle, so 20 square centimetres.",
+  "icon_idea": "A circle with a many-sided polygon drawn inside it and a little pair of compasses.",
+  "source_urls": [
+   "https://www.Britannica.Com/biography/Liu-Hui",
+   "https://mathshistory.st-andrews.ac.uk/DSB/Liu_Hui.pdf",
+   "https://en.wikipedia.org/wiki/Liu_Hui"
+  ],
+  "confidence": "medium",
+  "legend_note": "Sources disagree on his exact dates and on the first polygon he started with, so the story gives only the 3 072-sided polygon and says 'about 1,700 years ago'."
+ },
+ {
+  "lesson": 8,
+  "name": "Maryam Mirzakhani",
+  "years": "1977 to 2017",
+  "country_or_region": "Iran (later worked in the USA)",
+  "who": "A mathematician who thought by drawing pictures.",
+  "story": "Maryam Mirzakhani grew up in Tehran, in Iran. As a child she loved reading and thought she might become a writer. Later she found that she loved maths too. At school she won medals at the International Mathematical Olympiad. When she worked on a hard problem, she drew pictures on large sheets of paper, sometimes on the floor. She studied shapes, including the paths of a ball bouncing around a table. In 2014 she was the first woman to win the Fields Medal, a top prize in maths.",
+  "link_to_lesson": "Today we look for angles and for perpendicular and parallel lines in drawings, and she solved shape problems by drawing diagrams.",
+  "try_it": "Draw two parallel lines. Then draw one straight line that crosses both at right angles (perpendicular). How many right angles have you made?",
+  "try_it_answer": "8 right angles: 4 where the line crosses the first parallel line and 4 where it crosses the second.",
+  "icon_idea": "A pencil drawing loops and a billiard-style table outline on a big sheet of paper.",
+  "source_urls": [
+   "https://www.ias.edu/node/203501",
+   "https://news.artnet.com/in-brief/maryam-mirzakhani-fields-winner-doodler-79848",
+   "https://mathshistory.st-andrews.ac.uk/Obituaries/Mirzakhani_NY_Times/",
+   "https://stanfordmag.org/contents/virtuoso-professor-saw-the-beauty-of-math",
+   "https://www.pbs.org/newshour/amp/world/maryam-mirzakhani-groundbreaking-mathematician-fields-medal-winner-dies-40"
+  ],
+  "confidence": "medium",
+  "legend_note": ""
+ },
+ {
+  "lesson": 9,
+  "name": "Eratosthenes",
+  "years": "about 276 BCE to about 194 BCE",
+  "country_or_region": "Cyrene (now Libya) and Alexandria (Egypt), Greek world",
+  "who": "A librarian who measured the size of the Earth.",
+  "story": "Eratosthenes was born in Cyrene, a Greek city in what is now Libya. He later worked in Alexandria, in Egypt, and became the chief librarian of its great library. About 2,200 years ago he measured the size of the Earth. He compared the noon shadows in two Egyptian cities and used the distance between them. His answer was about 250,000 stadia. A stadion was an old unit of length. Historians are not sure how long it was, so we cannot be sure how close he came.",
+  "link_to_lesson": "Today we choose units of length and change between them, and he did his measuring with the unit of his time, the stadion.",
+  "try_it": "Pretend 1 stadion is 200 metres. How many stadia make 1 kilometre? How many metres are in 3 stadia?",
+  "try_it_answer": "5 stadia make 1 km (1 000 / 200 = 5). 3 stadia = 3 x 200 = 600 m.",
+  "icon_idea": "A stick casting a shadow beside a globe, with a tape measure.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Eratosthenes/",
+   "https://www.britannica.com/biography/Eratosthenes",
+   "https://en.wikipedia.org/wiki/Earth%27s_circumference"
+  ],
+  "confidence": "high",
+  "legend_note": "The length of the stadion is not known for sure, so the story does not say how accurate his answer was. The story leaves out the retold detail about the well at Syene, which is not in the sources we read."
+ },
+ {
+  "lesson": 10,
+  "name": "Florence Nightingale",
+  "years": "1820 to 1910",
+  "country_or_region": "England (born in Florence, Italy)",
+  "who": "A nurse who used number pictures to show what the data said.",
+  "story": "Florence Nightingale was born in Italy and grew up in England. She loved maths and asked to study it, and she had tutors. Later, as a nurse in army hospitals, she collected numbers about illness. Then she made coloured diagrams so that everyone could see the numbers at a glance. They showed that cleaner hospitals helped people stay well. She became the first woman to join the Royal Statistical Society. Her graphs show why we draw pictures of data.",
+  "link_to_lesson": "Today's Challenge Day includes bar graphs, and she used pictures of numbers to make comparing easy.",
+  "try_it": "A bar graph shows cups sold: Milo 45, Teh 30, Kopi 55. How many more cups of Kopi than Teh were sold?",
+  "try_it_answer": "55 - 30 = 25 more cups of Kopi.",
+  "icon_idea": "A small lamp beside a colourful wedge-shaped chart.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Nightingale.html",
+   "https://exhibits.lib.lehigh.edu/exhibits/show/data_visualization/science/nightingale",
+   "https://www.kcl.ac.uk/people/florence-nightingale",
+   "https://nrich.maths.org/4790"
+  ],
+  "confidence": "medium",
+  "legend_note": "Sources give 1858 or 1859 for her joining the Royal Statistical Society, so the story gives no year. Only MacTutor states that she asked to study maths and had tutors."
+ }
+]
