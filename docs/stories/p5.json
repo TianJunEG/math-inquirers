@@ -1,0 +1,225 @@
+[
+  {
+    "lesson": 1,
+    "name": "Srinivasa Ramanujan",
+    "years": "1887-1920",
+    "country_or_region": "India",
+    "who": "Taught himself maths from a book and wrote to a professor in England.",
+    "story": "Srinivasa Ramanujan grew up in southern India and taught himself a great deal of maths from a book of results by G. S. Carr. He filled notebooks with his own discoveries, often writing the results without full explanations. In 1913 he posted nine pages of results to the Cambridge mathematician G. H. Hardy, who was astonished and later invited him to England. A story Hardy told is about a visit to Ramanujan, who was unwell. Hardy said his taxi had a dull number, 1729. Ramanujan answered that it was very interesting: it is the smallest number that can be written as the sum of two cubes in two different ways. (Hardy told this from memory, so the exact words may differ.)",
+    "link_to_lesson": "Today you work with big numbers and the four operations, and you can check 1729 yourself with multiplication and addition.",
+    "try_it": {
+      "q": "Check Hardy's taxi number. Work out 12 x 12 x 12, then add 1. Then work out 9 x 9 x 9 and 10 x 10 x 10 and add them. What do you get both times?",
+      "a": "12 x 12 x 12 = 1,728 and 1,728 + 1 = 1,729. 9 x 9 x 9 = 729 and 10 x 10 x 10 = 1,000, and 729 + 1,000 = 1,729. Both give 1,729."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Srinivasa_Ramanujan",
+      "https://famousscientists.org/srinivasa-ramanujan",
+      "https://en.wikipedia.org/wiki/1729_(number)",
+      "https://blogs.ams.org/mathgradblog/2013/08/15/ramanujans-taxicab-number/",
+      "https://mathpages.com/home/kmath028/kmath028.htm"
+    ],
+    "confidence": "high",
+    "legend_note": "Anecdote told by Hardy himself from memory; exact words may differ.",
+    "icon_idea": "A notebook with a pencil and a small taxi-style number plate reading 1729."
+  },
+  {
+    "lesson": 2,
+    "name": "Ahmes (also spelled Ahmose)",
+    "years": "about 1550 BC (the date of his copy)",
+    "country_or_region": "Ancient Egypt",
+    "who": "An Egyptian scribe who copied a maths book that still survives.",
+    "story": "About 3,500 years ago, an Egyptian scribe named Ahmes copied a maths book onto a long roll of papyrus. He said he was only the scribe, copying from an older work that is now lost. The roll starts with tables that show how to write 2 divided by each odd number from 3 to 101 as unit fractions, which are fractions with 1 on top. Another table shows the numbers 1 to 9 divided by 10, and one entry writes 7/10 as 2/3 + 1/30. The roll has many practice problems too. A Scottish collector, Alexander Henry Rhind, bought it in Egypt in 1858, and today it is in the British Museum, so it is called the Rhind papyrus.",
+    "link_to_lesson": "Today you add, subtract, multiply and divide fractions, and Ahmes did the same kind of fraction work, including splitting fractions into unit fractions.",
+    "try_it": {
+      "q": "Ahmes wrote 7/10 as 2/3 + 1/30. Add the two fractions to check he was right.",
+      "a": "2/3 = 20/30, so 20/30 + 1/30 = 21/30, which simplifies to 7/10. He was right."
+    },
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Ahmes/",
+      "https://www.britishmuseum.org/collection/object/Y_EA10057",
+      "https://www.britishmuseum.org/explore/highlights/highlight_objects/aes/r/rhind_mathematical_papyrus.aspx",
+      "https://uwaterloo.ca/math/news/who-was-first-recorded-mathematician-history",
+      "https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A papyrus scroll with a few fraction bars and a reed pen."
+  },
+  {
+    "lesson": 3,
+    "name": "Muhammad ibn Musa al-Khwarizmi",
+    "years": "about 780-about 850",
+    "country_or_region": "Baghdad (now Iraq); family origins uncertain, name points to the Khwarazm region of Central Asia",
+    "who": "A scholar in Baghdad whose book gave us the word algebra.",
+    "story": "More than 1,200 years ago, al-Khwarizmi worked in Baghdad at the House of Wisdom, a famous centre of learning. Around the year 820 he wrote a book on solving problems by restoring and balancing. If you change one side of an equal balance, you do the same to the other side so that it stays equal. He explained his methods in words, and he also used diagrams of squares. The Arabic title of his book gave us the word algebra, and his own name, in its Latin form, gave us the word algorithm, a step-by-step method. Historians know few details about his life and still discuss where he was born.",
+    "link_to_lesson": "Before-and-after problems use the same big idea: keep the amounts balanced and do the same thing to both sides.",
+    "try_it": {
+      "q": "A bag and 5 marbles balance 17 marbles on a scale. Take 5 marbles from both sides. How many marbles are in the bag?",
+      "a": "17 - 5 = 12 marbles in the bag."
+    },
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+      "https://www.britannica.com/biography/al-Khwarizmi",
+      "https://www.historyhit.com/al-khwarizmi-the-father-of-algebra/"
+    ],
+    "confidence": "medium",
+    "legend_note": "",
+    "icon_idea": "A balance scale with a bag on one side and marbles on the other, next to an open book."
+  },
+  {
+    "lesson": 4,
+    "name": "Liu Hui",
+    "years": "3rd century CE (dates uncertain, roughly 220s to 290s)",
+    "country_or_region": "China (kingdom of Wei)",
+    "who": "A Chinese mathematician who explained why old area rules work.",
+    "story": "Liu Hui lived in China in the 3rd century, in the kingdom of Wei. Very little is known about his life, but we know his work. In the year 263 he wrote a commentary on The Nine Chapters on the Mathematical Art, an older book of problems and rules. Its first chapter has rules for finding the areas of fields of different shapes, including triangles. The old book gave the rules without showing why they work, so Liu Hui explained them. He often cut shapes into pieces and moved the pieces around. In one famous example he cut a right-angled triangle into coloured pieces and fitted four copies into a rectangle. His original pictures are lost, so historians have redrawn them.",
+    "link_to_lesson": "Today you find triangle areas, and Liu Hui shows that it helps to ask why a rule works, not just how to use it.",
+    "try_it": {
+      "q": "A right-angled triangle has two short sides of 6 cm and 8 cm. Two copies fit together to make a 6 cm by 8 cm rectangle. What is the area of one triangle?",
+      "a": "Rectangle area = 6 x 8 = 48 square cm. One triangle is half of that: 24 square cm."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Liu_Hui",
+      "https://www.britannica.com/biography/Liu-Hui",
+      "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/liu-hui",
+      "https://en.wikipedia.org/wiki/The_Nine_Chapters_on_the_Mathematical_Art",
+      "https://hkumath.hku.hk/~mks/ProofAndPedagogyInAncientChina.pdf",
+      "https://www.mathsmagiques.fr/pages/truc_mat/textes/douglas/PictThis.pdf",
+      "https://legacy-www.math.harvard.edu/archive/archimedes09/pdf/Binder4.pdf"
+    ],
+    "confidence": "medium",
+    "legend_note": "",
+    "icon_idea": "A coloured paper triangle cut into pieces beside a rectangle, with a brush and an ancient scroll."
+  },
+  {
+    "lesson": 5,
+    "name": "Archimedes",
+    "years": "about 287-about 212 BC",
+    "country_or_region": "Syracuse, Sicily (ancient Greek world)",
+    "who": "An ancient Greek thinker who studied floating objects and volumes.",
+    "story": "Archimedes lived in Syracuse, a Greek city on the island of Sicily, about 2,300 years ago. A story often told about him comes from a Roman writer called Vitruvius, who wrote about two hundred years later. In the story, the king wondered whether his gold wreath had been mixed with cheaper silver. Archimedes noticed the water level rise as he stepped into a bath, and this gave him an idea for testing the wreath by comparing how much water it pushed aside. Historians doubt the details of this tale. What we do know is that Archimedes wrote a real book called On Floating Bodies, and he studied the volumes of solid shapes.",
+    "link_to_lesson": "Today you work out volumes of cuboids and water levels, and the bath story is about using the water a solid pushes aside to measure volume.",
+    "try_it": {
+      "q": "A tank has a base 20 cm by 10 cm. A stone is dropped in and the water level rises by 2 cm. What is the volume of the stone?",
+      "a": "The water rises as a cuboid 20 cm x 10 cm x 2 cm = 400 cubic cm. So the stone has volume 400 cubic cm (400 ml)."
+    },
+    "source_urls": [
+      "https://www.math.nyu.edu/~crorres/Archimedes/Crown/CrownIntro.html",
+      "https://kids.britannica.com/comptons/article-9272938/Archimedes",
+      "https://en.wikipedia.org/wiki/Archimedes",
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Archimedes/"
+    ],
+    "confidence": "high",
+    "legend_note": "A story often told about Archimedes (the bath and the wreath) is from a writer about two hundred years later; historians doubt the details.",
+    "icon_idea": "A bath tub with water ripples and a golden wreath beside it."
+  },
+  {
+    "lesson": 6,
+    "name": "Katherine Johnson",
+    "years": "1918-2020",
+    "country_or_region": "United States",
+    "who": "A NASA mathematician who calculated the paths of spacecraft.",
+    "story": "Katherine Johnson was born in 1918 in West Virginia, USA. In 1937 she graduated from college with degrees in maths and French. In 1953 she joined NACA, the organisation that later became NASA, at its Langley laboratory in Virginia. She started on a team of women who studied data from flight tests. Later she worked out the path, or trajectory, of Alan Shepard's 1961 Freedom 7 flight, America's first human spaceflight. Before John Glenn's orbit of Earth in 1962, Glenn asked her to check the electronic computer's numbers. She checked them using a desk calculator, and she confirmed them.",
+    "link_to_lesson": "Checking a flight path uses rates such as distance per minute, the same idea as today's rate problems.",
+    "try_it": {
+      "q": "Imagine a capsule flies 450 km every minute. How far does it fly in 6 minutes? How far in 1 hour?",
+      "a": "In 6 minutes: 450 x 6 = 2,700 km. In 1 hour (60 minutes): 450 x 60 = 27,000 km."
+    },
+    "source_urls": [
+      "https://computerhistory.org/profile/katherine-johnson/",
+      "https://computerhistory.org/?p=13270",
+      "https://www.nasa.gov/image-article/celebrating-life-career-of-katherine-johnson/"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A small capsule on a curved path around a globe, with a pencil and a desk calculator."
+  },
+  {
+    "lesson": 7,
+    "name": "Florence Nightingale",
+    "years": "1820-1910",
+    "country_or_region": "England (born in Florence, Italy)",
+    "who": "A nurse who used numbers and charts to show what needed fixing.",
+    "story": "Florence Nightingale is best known as a nurse in the Crimean War, but she was also a keen statistician. As a young woman she asked to study mathematics, and her parents eventually allowed her to have tutors. Later she collected hospital records and worked with the statistician William Farr. The records showed that far more soldiers died from illnesses than from wounds. To help officials see this clearly, she used a colourful chart, now called a polar area diagram, with twelve wedges for the twelve months. A picture made the numbers easy to compare. In the late 1850s she became the first woman admitted to the Statistical Society of London.",
+    "link_to_lesson": "Today you use percentages to compare amounts, and Nightingale showed how comparing numbers clearly can help people make good decisions.",
+    "try_it": {
+      "q": "In a survey of 20 pupils, 8 chose red and 5 chose blue. What percentage chose red? What percentage chose blue?",
+      "a": "Red: 8/20 = 40%. Blue: 5/20 = 25%."
+    },
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Nightingale.html",
+      "https://nrich.maths.org/4790",
+      "https://exhibits.lib.lehigh.edu/exhibits/show/data_visualization/science/nightingale",
+      "https://www.kcl.ac.uk/people/florence-nightingale"
+    ],
+    "confidence": "medium",
+    "legend_note": "",
+    "icon_idea": "A round chart with twelve coloured wedges and a small oil lamp beside it."
+  },
+  {
+    "lesson": 8,
+    "name": "Maryam Mirzakhani",
+    "years": "1977-2017",
+    "country_or_region": "Iran (later worked in the United States)",
+    "who": "A mathematician who drew pictures to think about geometry.",
+    "story": "Maryam Mirzakhani grew up in Tehran, Iran. At school she took part in maths competitions and won gold medals at the International Mathematical Olympiad in 1994 and 1995. Later she became a professor at Stanford University in California. She often worked by drawing, sketching on large sheets of paper with formulas written around the pictures. Her young daughter called it painting. One question she studied is about a ball bouncing around a billiard table with straight sides: what paths can the ball follow? In 2014 she became the first woman to win the Fields Medal, one of the highest prizes in maths.",
+    "link_to_lesson": "A bouncing ball's path is made of straight lines and angles, and today you find unknown angles on a straight line.",
+    "try_it": {
+      "q": "A ball hits a straight wall. Its path makes a 35 degree angle with the wall on the way in, and the same 35 degrees on the way out. What is the angle between the path going in and the path going out?",
+      "a": "Angles on a straight line add up to 180 degrees. 180 - 35 - 35 = 110 degrees."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Maryam_Mirzakhani",
+      "https://www.simonsfoundation.org/?p=10839",
+      "https://mathshistory.st-andrews.ac.uk/Obituaries/Mirzakhani_NY_Times/",
+      "https://celebratio.org/media/essaypdf/507_Orig.pdf"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A rectangular billiard table seen from above with a zigzag path of a ball and a pencil."
+  },
+  {
+    "lesson": 9,
+    "name": "Fibonacci (Leonardo of Pisa)",
+    "years": "about 1170-about 1250",
+    "country_or_region": "Italy (also lived in North Africa as a boy)",
+    "who": "An Italian who brought the digits 0 to 9 to Europe and wrote a rabbit puzzle.",
+    "story": "Fibonacci was born around 1170 in Pisa, Italy. As a boy he travelled with his father, a merchant official, to Bugia, now Bejaia in Algeria. There he learned Arabic maths, including the digits 0 to 9 that we use today. In 1202 he wrote a book called Liber Abaci, which showed Europeans how to use these digits for money, trade, fractions and puzzles. One puzzle is about rabbits. Start with one pair. Each month, every grown pair has a new pair, and no rabbit dies. The numbers of pairs go 1, 1, 2, 3, 5, 8 and so on. We call these Fibonacci numbers, but the name was given much later.",
+    "link_to_lesson": "Today you spot a pattern, make a table and say the rule in words, which is exactly how the rabbit numbers work.",
+    "try_it": {
+      "q": "The rabbit numbers are 1, 1, 2, 3, 5, 8. Each number is the sum of the two before it. What are the next three numbers?",
+      "a": "5 + 8 = 13, then 8 + 13 = 21, then 13 + 21 = 34. The next three are 13, 21 and 34."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/Fibonacci",
+      "https://mathshistory.st-andrews.ac.uk/Strick/Fibonacci.pdf"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A pair of cartoon rabbits next to a spiral of squares and the numbers 1, 1, 2, 3, 5, 8."
+  },
+  {
+    "lesson": 10,
+    "name": "George Polya",
+    "years": "1887-1985",
+    "country_or_region": "Hungary (later Switzerland and the United States)",
+    "who": "A teacher who wrote a book about how to solve problems.",
+    "story": "George Polya was born in Budapest, Hungary, in 1887. He later taught in Zurich, Switzerland, and then at Stanford University in the United States. In 1945 he published a book called How to Solve It, which has sold over a million copies. In it he gave four steps for any problem: understand the problem, make a plan, carry out the plan, and look back at your work. Looking back means checking your answer. He also described helpful ideas, called heuristics, such as drawing a picture or working backwards from the answer. Teachers around the world still use his ideas.",
+    "link_to_lesson": "Today is Challenge Day, and Polya's ideas such as drawing a picture, working backwards and checking are the tools you choose from.",
+    "try_it": {
+      "q": "Work backwards. I think of a number, double it and add 6. I get 20. What was my number?",
+      "a": "Undo the steps: 20 - 6 = 14, then 14 divided by 2 = 7. Check: 7 x 2 = 14, 14 + 6 = 20. The number was 7."
+    },
+    "source_urls": [
+      "https://en.wikipedia.org/wiki/How_to_Solve_It",
+      "https://plus.maths.org/content/how-solve-it",
+      "https://en.wikipedia.org/wiki/George_P%C3%B3lya",
+      "https://mathshistory.st-andrews.ac.uk/Strick/polya.pdf",
+      "https://purl.stanford.edu/yy107nn3487",
+      "https://math.libretexts.org/Courses/Coalinga_College/Math_for_Educators_(MATH_010A_and_010B_CID120)/05:_Problem_Solving/5.02:_George_Polya's_Strategy"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A signpost with four arrows (understand, plan, do, look back) and a magnifying glass."
+  }
+]

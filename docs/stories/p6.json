@@ -1,0 +1,218 @@
+{
+  "level": "P6",
+  "stories": [
+    {
+      "lesson": 1,
+      "name": "Fibonacci (Leonardo of Pisa)",
+      "years": "about 1170 to about 1250",
+      "country_or_region": "Italy (educated in North Africa)",
+      "who": "A merchant's son who taught Europe a better way to write numbers",
+      "story": "Leonardo of Pisa, known today as Fibonacci, lived in Italy about 800 years ago. His father was a merchant who worked in Bugia, a port in North Africa (now in Algeria), and Leonardo learned mathematics there. In 1202 he wrote a book called Liber Abaci to teach people in Europe the Hindu-Arabic numbers, the ten digits and place value that we still use. The book also has a puzzle about rabbits. Start with one pair. Every pair has a new pair each month once it is in its second month. How many pairs will there be after a year? Working month by month gives 1, 1, 2, 3, 5, 8, 13 and so on. Each number is the sum of the two before it. We now call this the Fibonacci sequence.",
+      "link_to_lesson": "A sequence follows a rule, and the rabbit rule (add the last two terms) is a sequence you can build with a loop and two variables.",
+      "try_it": "Use Fibonacci's rule to carry on the sequence 1, 1, 2, 3, 5, 8 for four more terms. What is the 10th term?",
+      "try_it_answer": "13, 21, 34, 55. The 10th term is 55.",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/",
+        "https://www.britannica.com/topic/Liber-abaci",
+        "https://www.britannica.com/topic/Fibonacci-number",
+        "https://en.wikipedia.org/wiki/Fibonacci"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A pair of simple rabbits next to a row of number tiles 1, 1, 2, 3, 5.",
+      "word_count": 131
+    },
+    {
+      "lesson": 2,
+      "name": "Sophie Germain",
+      "years": "1776 to 1831",
+      "country_or_region": "France",
+      "who": "A self-taught mathematician who explored prime numbers",
+      "story": "Sophie Germain grew up in Paris about 250 years ago. She taught herself mathematics, mostly from books in her father's library. Her parents did not think maths was a suitable interest for a girl, but she kept studying, and her mother quietly helped her. The École Polytechnique, a university in Paris, did not accept women, so she used a man's name, M. Le Blanc, to get lecture notes and to send her ideas to two leading mathematicians, Lagrange and Gauss. She feared they would not take a woman seriously. Later she won a prize from the French Academy of Sciences for her work on vibrating surfaces. She also used a special kind of prime in her work on a famous number problem, Fermat's Last Theorem. Today these are called Sophie Germain primes: a prime p is one if 2p + 1 is also prime.",
+      "link_to_lesson": "Her primes are built from today's ideas: you must decide whether p and then 2p + 1 have only two factors.",
+      "try_it": "Is 11 a Sophie Germain prime? Is 7? Then list every Sophie Germain prime below 12.",
+      "try_it_answer": "11 is: 2 x 11 + 1 = 23, which is prime. 7 is not: 2 x 7 + 1 = 15 = 3 x 5. Below 12 they are 2 (gives 5), 3 (gives 7), 5 (gives 11) and 11 (gives 23).",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sophie_Germain",
+        "https://www.britannica.com/print/article/230626",
+        "https://cs.appstate.edu/sjg/womeninmath/SophieGermain.html",
+        "https://www.britannica.com/biography/Sophie-Germain"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "An open book with a candle beside it and the numbers 11 and 23 joined by an arrow.",
+      "word_count": 144
+    },
+    {
+      "lesson": 3,
+      "name": "Brahmagupta",
+      "years": "598 to about 670",
+      "country_or_region": "India",
+      "who": "An Indian mathematician who wrote rules for zero and negative numbers",
+      "story": "Brahmagupta was a mathematician and astronomer in India. He was born in 598, and in 628 he finished a long book called the Brahmasphutasiddhanta. In it he wrote down rules for using zero and negative numbers. He called positive numbers fortunes and negative numbers debts. He explained zero as the result of taking a number away from itself, and he gave rules such as: a debt multiplied by a debt is a fortune. This is how we say today that a negative number times a negative number is positive. Not every rule he wrote was right. His idea that zero divided by zero is zero does not work, and today we say that dividing by zero is not allowed. Even great mathematicians make mistakes, and checking each other's ideas is part of how maths grows.",
+      "link_to_lesson": "Brahmagupta's debts and fortunes are a way to think about negative numbers and how they add, subtract and multiply.",
+      "try_it": "Think of debts and fortunes. Work out (-6) x (-4). Then work out (-8) - (-3): you owe 8 dollars and 3 dollars of that debt is taken away.",
+      "try_it_answer": "(-6) x (-4) = 24, a fortune. (-8) - (-3) = -5, a debt of 5 dollars.",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/",
+        "https://www.britannica.com/print/article/77073",
+        "https://www.open.ac.uk/blogs/MathEd/index.php/2022/08/25/the-men-who-invented-zero",
+        "https://www.encyclopedia.com/people/science-and-technology/astronomy-biographies/brahmagupta"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A coin purse and an IOU note placed on a number line either side of zero.",
+      "word_count": 135
+    },
+    {
+      "lesson": 4,
+      "name": "Al-Khwarizmi",
+      "years": "about 780 to about 850",
+      "country_or_region": "Khwarazm (now Uzbekistan) and Baghdad (now Iraq)",
+      "who": "A scholar in Baghdad whose book gave algebra its name",
+      "story": "Al-Khwarizmi lived about 1,200 years ago. He is thought to have come from Khwarazm, in what is now Uzbekistan, and he worked as a scholar in Baghdad at the House of Wisdom, where books from many lands were studied and translated. He wrote a famous book on solving equations. Its Arabic title includes the word al-jabr, which means something like restoring or completing, and al-muqabala, which means balancing. The idea is that you can move a term across an equation and keep both sides equal by doing the same to each side. His book had no letters such as x. He wrote everything in words. The word algebra comes from al-jabr, and the word algorithm comes from the Latin form of his name, Algoritmi.",
+      "link_to_lesson": "Solving an equation by doing the same thing to both sides, and undoing a machine step by step, is the balancing idea from his book.",
+      "try_it": "An algebra machine multiplies the input by 3 and then adds 2. The output is 20. Balance the equation 3x + 2 = 20 to find the input x.",
+      "try_it_answer": "Take 2 from both sides: 3x = 18. Divide both sides by 3: x = 6. Check: 3 x 6 + 2 = 20.",
+      "source_urls": [
+        "https://www.newworldencyclopedia.org/entry/Al-Khwarizmi",
+        "https://findanexpert.unimelb.edu.au/news/81898-why-are-algorithms-called-algorithms",
+        "https://en.wikipedia.org/wiki/Al-Jabr",
+        "https://www.intmath.com/basic-algebra/al-khwarizmi-father-algebra.php",
+        "https://www.downtoearth.org.in/science-technology/why-are-algorithms-called-algorithms-a-brief-history-of-the-persian-polymath-you-ve-likely-never-heard-of-96053"
+      ],
+      "confidence": "medium",
+      "legend_note": "",
+      "icon_idea": "A balance scale with a block marked x on one side and number blocks on the other.",
+      "word_count": 124
+    },
+    {
+      "lesson": 5,
+      "name": "Yang Hui",
+      "years": "about 1238 to about 1298",
+      "country_or_region": "China",
+      "who": "A Chinese maths writer who shared and explained a famous number triangle",
+      "story": "Yang Hui lived in China more than 750 years ago, in the city of Qiantang, which is now Hangzhou. We know little about his life, but several of his books survive. In 1261 he wrote a book explaining methods from the Nine Chapters, an old Chinese maths text. In it he showed a triangle of numbers up to the sixth row. Each row starts and ends with 1, and every number inside is the sum of the two numbers above it. Yang Hui said he had learned the triangle from an earlier mathematician, Jia Xian, whose own book is lost. Because Yang Hui wrote it down and gave credit, we still know about it. In Europe it is called Pascal's triangle, but Pascal wrote about it nearly 400 years later. Yang Hui also wrote about magic squares.",
+      "link_to_lesson": "The numbers in this triangle count the ways of choosing items, which is exactly the kind of counting we do today.",
+      "try_it": "Write the row that comes after 1, 4, 6, 4, 1. The third number in a row tells you how many ways there are to pick 2 things from the row's number of things. How many ways are there to pick 2 students from 5?",
+      "try_it_answer": "The next row is 1, 5, 10, 10, 5, 1. There are 10 ways to pick 2 students from 5 (check by listing the pairs of A, B, C, D, E).",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Yang_Hui/",
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Jia_Xian/",
+        "https://en.wikipedia.org/wiki/Yang_Hui"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A triangle of small dots or counters arranged in rows 1, 2, 3, 4, 5, with a brush and a scroll.",
+      "word_count": 137
+    },
+    {
+      "lesson": 6,
+      "name": "Blaise Pascal",
+      "years": "1623 to 1662",
+      "country_or_region": "France",
+      "who": "A young French mathematician who helped start the maths of chance",
+      "story": "Blaise Pascal was born in France in 1623. He showed his talent early. When he was about 16 he wrote a short book on shapes called conic sections, and a few years later he built a mechanical calculator to help his father, who worked with taxes. In 1654 a man called the Chevalier de Mere put a puzzle about a game of chance to Pascal and to Pierre de Fermat, who lived in another city. If a game between two players stops early, how should the prize be shared fairly? Pascal and Fermat wrote letters to each other about it. Fermat's way was to list all the equally likely ways the game could finish. They used different methods and compared their answers. Their letters are seen as laying the foundations of probability.",
+      "link_to_lesson": "Listing all the equally likely outcomes to find a fair share is the same method we use today to work out probability.",
+      "try_it": "Two players each win a round with probability 1/2. The first to win 3 rounds takes the prize. The game stops when A has 2 wins and B has 1. List the next two rounds (AA, AB, BA, BB). What fraction of the prize should A get?",
+      "try_it_answer": "A wins in AA, AB and BA. Only BB gives B the win. So A should get 3/4 of the prize and B 1/4.",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Pascal.html",
+        "https://en.wikipedia.org/wiki/Blaise_Pascal",
+        "https://york.ac.uk/depts/maths/histstat/pascal.htm",
+        "https://en.wikipedia.org/wiki/Problem_of_points"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "Two dice beside an envelope with a quill pen.",
+      "word_count": 132
+    },
+    {
+      "lesson": 7,
+      "name": "Maryam Mirzakhani",
+      "years": "1977 to 2017",
+      "country_or_region": "Iran (later worked in the USA)",
+      "who": "An Iranian mathematician who explored shapes by drawing",
+      "story": "Maryam Mirzakhani grew up in Tehran, Iran. At school she learned problem solving, and in 1994 and 1995 she won gold medals at the International Mathematical Olympiad. She went on to study at Harvard University in the USA and became a professor at Stanford University. Her research was about shapes and surfaces, including the idea of looking at the universe of all possible billiard tables. She described herself as a slow thinker who needed a lot of time to tidy her ideas. She liked to work by doodling on large sheets of paper and writing formulas around the drawings. Her young daughter called it painting. In 2014 she became the first woman to win the Fields Medal, one of the highest prizes in maths.",
+      "link_to_lesson": "Mirzakhani explored shapes by drawing them, just as the turtle draws polygons and we use angles to plan the turns.",
+      "try_it": "A turtle draws a regular hexagon. How many degrees does it turn at each corner? What is the angle inside each corner?",
+      "try_it_answer": "Turn = 360 / 6 = 60 degrees. Inside angle = 180 - 60 = 120 degrees.",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/",
+        "https://en.wikipedia.org/wiki/Maryam_Mirzakhani",
+        "https://news.stanford.edu/stories/2017/07/maryam-mirzakhani-stanford-mathematician-and-fields-medal-winner-dies",
+        "https://stanfordmag.org/contents/virtuoso-professor-saw-the-beauty-of-math",
+        "https://websites.umass.edu/kratzer/2017/07/15/maryam-mirzakami-and-the-universe-of-all-possible-billiard-tables"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A large sheet of paper with pencil doodles of a hexagon, a looping path and a small ball.",
+      "word_count": 124
+    },
+    {
+      "lesson": 8,
+      "name": "Carl Friedrich Gauss",
+      "years": "1777 to 1855",
+      "country_or_region": "Germany",
+      "who": "A German mathematician who set out the maths of remainders and clocks",
+      "story": "Carl Friedrich Gauss was born in Germany in 1777. He wrote a big book on number theory in Latin, called Disquisitiones Arithmeticae. He finished writing it in 1798, and it was published in 1801, when he was 24. In it he explained congruence. Two numbers are congruent for a number m if they leave the same remainder when divided by m. He used a special three-line sign for this, which is still used today. We can picture it with a clock: on a 12-hour clock, 9 o'clock plus 4 hours is 1 o'clock, not 13. Clocks and calendars repeat, so the numbers wrap around. His book helped make number theory a subject of its own, and mathematicians still study it.",
+      "link_to_lesson": "Clock arithmetic and wrapping letters around the alphabet with mod are the same idea as Gauss's congruence.",
+      "try_it": "It is Monday today. What day will it be 100 days from now? (Hint: divide 100 by 7 and use the remainder.)",
+      "try_it_answer": "100 = 14 x 7 + 2, so the remainder is 2. Two days after Monday is Wednesday.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss",
+        "https://en.wikipedia.org/wiki/Disquisitiones_Arithmeticae",
+        "https://faculty.etsu.edu/gardnerr/3120/notes-Dudley/Dudley-Section-4.pdf",
+        "https://mathshistory.st-andrews.ac.uk/Strick/Gauss.pdf"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A clock face with an arrow that wraps from 12 back to 1.",
+      "word_count": 120
+    },
+    {
+      "lesson": 9,
+      "name": "Florence Nightingale",
+      "years": "1820 to 1910",
+      "country_or_region": "United Kingdom (born in Florence, Italy, to British parents)",
+      "who": "A nurse who used data and pictures to change hospitals",
+      "story": "Florence Nightingale is best known as a nurse, but she was also a pioneer of statistics. She was born in Florence, Italy, in 1820 to British parents. During the Crimean War in the 1850s she managed nursing at a hospital for soldiers, and she and others collected careful records of the numbers of patients and their causes of illness. The records showed that unhealthy, dirty conditions harmed far more soldiers than wounds did. Long tables of numbers are hard to read, so she drew a picture instead: a circle split into twelve slices, one for each month, with coloured wedges whose area showed each amount. She called these diagrams coxcombs, and they were published in 1858. They helped people see the problem and push for cleaner hospitals. She became the first woman member of the Royal Statistical Society.",
+      "link_to_lesson": "Nightingale collected data, summarised it with totals and averages, and used a picture to show the pattern, like a data detective.",
+      "try_it": "A ward counts its visitors on five days: 8, 12, 10, 6, 14. Find the mean number of visitors per day.",
+      "try_it_answer": "Total = 8 + 12 + 10 + 6 + 14 = 50. Mean = 50 / 5 = 10 visitors per day.",
+      "source_urls": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Nightingale.html",
+        "https://www.kcl.ac.uk/people/florence-nightingale",
+        "https://exhibits.lib.lehigh.edu/exhibits/show/data_visualization/science/nightingale",
+        "https://nrich.maths.org/4790"
+      ],
+      "confidence": "high",
+      "legend_note": "",
+      "icon_idea": "A round chart with twelve coloured wedges and a small oil lamp beside it.",
+      "word_count": 138
+    },
+    {
+      "lesson": 10,
+      "name": "Ada Lovelace",
+      "years": "1815 to 1852",
+      "country_or_region": "United Kingdom (England)",
+      "who": "A mathematician who planned, checked and explained a program for a machine that was never built",
+      "story": "Ada Lovelace was born in London in 1815. She studied maths with private tutors, including Augustus De Morgan, and kept learning on her own. In 1843 she translated a French article about Charles Babbage's design for a machine called the Analytical Engine, which was never finished. She added her own notes, and they make up most of the published paper. In one note she showed, step by step, how the machine could work out a list of numbers called Bernoulli numbers. This table is often called the first computer program, but historians still debate that name and how much of the planning was hers. She also checked working carefully, found mistakes and asked for them to be corrected. And she imagined the machine working with symbols such as musical notes, not just numbers.",
+      "link_to_lesson": "Planning steps, testing for mistakes and explaining your work to others is what you do in the Showcase.",
+      "try_it": "Trace this program like a computer. Start with n = 2. Repeat 3 times: change n to n x 2 + 1. What is n at the end?",
+      "try_it_answer": "Start 2. Round 1: 5. Round 2: 11. Round 3: 23. So n = 23.",
+      "source_urls": [
+        "https://britannica.com/biography/Ada-Lovelace",
+        "https://mathshistory.st-andrews.ac.uk/DNB/Lovelace.html",
+        "https://www.sciencefocus.com/future-technology/how-ada-lovelaces-notes-on-the-analytical-engine-created-the-first-computer-program",
+        "https://plus.maths.org/analysing-ada-continued",
+        "https://fermatslibrary.com/s/lovelace-and-babbage-and-the-creation-of-the-1843-notes",
+        "https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/"
+      ],
+      "confidence": "medium",
+      "legend_note": "Often called 'the first computer program'; historians debate this label and how much was her own work (stated in the story).",
+      "icon_idea": "A loom thread turning into music notes and number cards.",
+      "word_count": 133
+    }
+  ]
+}
