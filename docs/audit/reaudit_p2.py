@@ -49,7 +49,7 @@ TIER = {
     7: dict(wb=(6, 0), qc=(6, 0), th=(8, 0), ch=(9, 3), flat=4, flat_printed=2, gf_V=2),
     8: dict(wb=(4, 0), qc=(6, 1), th=(8, 0), ch=(9, 2), flat=2, flat_printed=1, gf_V=1),
     9: dict(wb=(5, 2), qc=(6, 1), th=(10, 0), ch=(9, 0), flat=1, flat_printed=1, gf_V=0),
-    10: dict(wb=(6, 0), qc=(6, 0), th=(8, 0), ch=(9, 1), flat=2, flat_printed=1, gf_V=0),
+    10: dict(wb=(6, 0), qc=(6, 0), th=(8, 0), ch=(9, 1), flat=2, flat_printed=2, gf_V=0),
 }
 VIOL = {  # the actual violations, with reason (Phase 1)
     'L1 WB core Q1': 'b/c need regrouping 15 tens / 13 tens, taught at min 20-24; no concrete scaffold on the page',
