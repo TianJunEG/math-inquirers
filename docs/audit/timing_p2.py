@@ -219,7 +219,7 @@ FIX = {
          ws_p1=[2.3, 2, 5.5], ws_p2=[3.6, 3.5, 4], parts=(7, 7), wsteach={'teachadd': 0, 'teachstory': 0, 'teachsame': 0}),
  8: dict(warm_game=100, ex_work=5.5, ex_mat=30, mini_drop=['we3'], mini_try={'try1': (2, 35), 'try2': (2, 50)},
          ws_p1=[3.8, 5], ws_p2=[6, 4], parts=(4, 3), wsteach={'teachcube': 0, 'teachnet': 0}),
- 9: dict(warm_game=105, ex_work=5.5, ex_mat=45, mini_try={'try1': (2, 50), 'try2': (1, 70)},
+ 9: dict(warm_game=105, ex_work=5.5, ex_mat=45, mini_drop=['try2'], mini_try={'try1': (2, 50)},
          ws_p1=[5, 3], ws_p2=[4, 1.5, 3.8], parts=(5, 4), wsteach={'teachclock': 30, 'teachdur': 0}),
  10: dict(warm_game=120, ex_work=4.5, ex_mat=30, ex_slides_cut=4, exit_s=120, mini_drop=['teach1', 'try1'], mini_try={'try2': (2, 50)},
           ws_p1=[4.5, 3.5], parts=(5, 6), wsteach={'teachlogic': 0, 'teachgrow': 0}),

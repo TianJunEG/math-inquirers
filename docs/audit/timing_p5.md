@@ -62,7 +62,7 @@ How the tables are read. "Scripted" is the guide minutes. "Need" = speak + wait 
 | 9 Pattern Generalisers | **112** (+22) | 100-124 | 121 | 4 | Sneak-peek, Explore, Mini-lesson, WB p1, Talk | - |
 | 10 Challenge Day | **114** (+24) | 101-126 | 121 | 2 | Sneak-peek, Explore, Mini-lesson, WB p1, WB p2, Talk, Exit/close | - |
 
-Time sinks across the level, in minutes over budget per lesson (average of the ten): explore +4.0, sneak-peek +2.7, talk time +2.5, check slides +2.0, opening (pre-clock) +2.0, exit/close +1.6, mini-lesson +1.5, break +0.6, and in the worksheet the page-1 content need is on average 7.9 minutes bigger than its block while page 2 is on average 2.9 minutes looser than its block. Warm-up (+0.8) and teaching (-0.4) are the only parts that roughly hold.
+Time sinks across the level, in minutes over budget per lesson (average of the ten): explore +4.0, sneak-peek +2.7, talk time +2.5, check slides +1.9, opening (pre-clock) +2.0, exit/close +1.6, mini-lesson +1.5, break +0.6, and in the worksheet the page-1 content need is on average 7.9 minutes bigger than its block while page 2 is on average 2.9 minutes looser than its block. Warm-up (+0.8) and teaching (-0.4) are the only parts that roughly hold.
 
 Lessons that run long or short: all ten run long. L7 (+9) and L4 (+11) are closest, L8 (+12); L2 and L6 (+17); L3 (+19); L5 and L1 (+21); L9 (+22) and L10 (+24) are the worst because L9/L10 add a very long explore (18 min) and a 14-15 minute mini-lesson on top of the common over-runs. No lesson runs short in total. Parts that are loose: page 2 in L1, L3, L4 and L8 (the "menu" absorbs the spare minutes, so it is not dead time, but it is time the over-full page 1 and the over-full explore could use).
 
@@ -96,13 +96,15 @@ Parts counted are answer parts (a, b, c ...). "Available" is the block minus sta
 | 9 | 7 | 16.0 vs 7.3 | 2 / 3 / 5 | 5 | 11.5 vs 12.9 | 2 / 3 / 5 |
 | 10 | 3 | 14.0 vs 8.3 | 1 / 1 / 2 | 6 | 15.0 vs 12.9 | 3 / 4 / 6 |
 
-Reading the table. On page 1 a middle pair completes between a quarter and 70 percent of the parts in nine lessons (L5 and L6 under a third, L2, L7 and L9 about 40-45 percent, L1, L3 and L8 about 70 percent); only L4 is close to complete (6 of 7 parts). A LOW pair completes 2-4 parts, so it never reaches the harder Start-here question (the riddle, the unit-fraction puzzle, the water-tank question) and arrives at the check slide with nothing to check. On page 2 everyone has more time than the plan set needs except in L10 (plan set 15.0 min against 12.9 available), but a LOW child only completes the first third of the plan.
+Reading the table. On page 1 a middle pair completes between a quarter and 70 percent of the parts in nine lessons (L5 and L6 under a third, L2, L7 and L9 about 40-45 percent, L1, L3 and L8 about 70 percent; in L10 a middle pair finishes 1 of 3 questions); only L4 is close to complete (6 of 7 parts). A LOW pair completes 2-4 parts, so it never reaches the harder Start-here question (the riddle, the unit-fraction puzzle, the water-tank question) and arrives at the check slide with nothing to check. On page 2 everyone has more time than the plan set needs except in L10 (plan set 15.0 min against 12.9 available), but a LOW child completes only 2-8 parts of the page, mostly the plan set.
 
 The "tier principle" is respected by the content: page 1 items are Core and scaffolded ("Start here" hints), Think harder needs the taught idea and sits on its own page, Challenge/Go further needs the whole topic. The problem is volume, not difficulty.
 
 ## 6. Lesson by lesson
 
 Each table: scripted minutes, then the four components of the estimated need, then the difference and flag. The two worksheet work rows show content need (see section 2). The last two lines are the totals.
+
+Fixes applied to every lesson (see section 7 for the budgets): (1) sneak-peek: one hold-up for both puzzles, drop the volunteer round, intro line shortened to "Guessing is welcome. Nobody is marked.", answer said with one short reason; (2) warm-up: four quick questions and one game round (the guide already allows "only the first three"); (3) explore: pair work capped at 6 minutes (6.5 where pairs stay in the main room, 5.5 in L9), the regroup is two questions not three, materials listed in the pre-lesson message; (4) mini-lesson: every "Your turn" slide keeps items a and b only; (5) talk time: pairs 2 min, volunteers 1.5 min, the Investigation first step moves to take-home or the start of the next lesson (the reflection box stays); (6) check slides: one pair explains the heavy question, the tutor clicks through the rest; (7) stamp: type or send the stamp in the chat (15 s), reflection 75 s.
 
 ### Lesson 1: Million Puzzles
 
@@ -135,7 +137,7 @@ Where the time goes:
 - Page 2: the plan set (Q4 and Q5 a, b) needs 8.0 of 12.9 available: LOOSE, but Q5d (target 100 from 3, 5, 7, 9) alone is 5 min.
 
 Fix for this lesson:
-Remove or move: Q1 (all three parts duplicate quick questions 1-3 of the warm-up) and Q2c (repeats `try2` c and the `we1` worked example) from page 1 to take-home; page 1 in class = Q2 a, b and Q3 (10.0 min of middle-child work). Keep the neutral line "After question 3 you may choose..." (Q3 is still the last page-1 item). Page 2 in class = Q4 a-d and Q5 a; Q5 b-d and Q6 to take-home. Teaching: keep `teachest` and `teachbrackets`; delete `trybrackets` (children do exactly this on Q5 a) and move `teachfind` with Q6 to the take-home pack. Warm-up: one round of Million Maker (change the deck text from "Play 3 rounds"). Explore: question 3 on `explore2` ("about how long is 10 million seconds") and the step-4 comparison move to the Go further what-if, so pairs stop at minute 15 and the regroup is two questions. SAY lines: shorten the second hook paragraph ("Today our numbers grow up to 10 million ...") to one sentence.
+Remove or move: Q1 (all three parts duplicate quick questions 1-3 of the warm-up) and Q2c (repeats `try2` c and the `we1` worked example) from page 1 to take-home; page 1 in class = Q2 a, b and Q3 (10.0 min of middle-child work). Keep the neutral line "After question 3 you may choose..." (Q3 is still the last page-1 item). Page 2 in class = Q4 a-d and Q5 a; Q5 b-d and Q6 to take-home. Teaching: keep `teachest` and `teachbrackets`; delete `trybrackets` (children do exactly this on Q5 a) and move `teachfind` with Q6 to the take-home pack. Warm-up: one round of Million Maker (change the deck text from "Play 3 rounds"). Explore: question 3 on `explore2` ("about how long is 10 million seconds") and the step-4 comparison move to the Go further what-if, so pair work is capped at 6 minutes and the regroup is two questions. SAY lines: shorten the second hook paragraph ("Today our numbers grow up to 10 million ...") to one sentence.
 
 New budgets (min): Opening (inside the 90) 2, Sneak-peek 4.5, Warm-up 6, Explore 13.5, Mini-lesson 11, Brain break 4.5, WB page 1 pairs 15, WB check p1 4, WB teaching 3, WB page 2 alone 8, WB check p2 3.5, Talk time 5.5, Exit/reflect/close 8, Buffer 1.5 (total 90).
 
@@ -162,7 +164,7 @@ New budgets (min): Opening (inside the 90) 2, Sneak-peek 4.5, Warm-up 6, Explore
 Where the time goes:
 
 - Sneak-peek 5.9 (+2.9): pizzas drawn and cut (about 60 s) and the "1/3 then 1/2 of what is left" bar (about 90 s).
-- Explore 16.9 (+4.9): the biggest explore after L6/L9/L10: paper pizzas folded or cut on camera (material time 90 s), "2 pieces each" for 3 pizzas among 4 and 5 among 6 needs 8 min of pair work, plus the breakout round trip 2.5.
+- Explore 16.9 (+4.9): one of the larger explores: paper pizzas folded or cut on camera (material time 90 s), "2 pieces each" for 3 pizzas among 4 and 5 among 6 needs 8 min of pair work, plus the breakout round trip 2.5.
 - Page 1 needs 20.5 min (Q1 4.5, Q2 unit fractions 10.5 with c "two ways for 3/8, test in order, how do you know to stop" 4.5, Q3 5.5); 7.3 available. A LOW pair completes 3 of 10 parts.
 - Page 2 plan set (Q5 and Q4 a, b) needs 10.5 of 12.9; fine. Teaching has three slides in 5 min and none has a "Your turn" slide: 4.5 min, OK.
 - Mini-lesson 12.3 (+0.3) and break are fine.
@@ -436,8 +438,6 @@ Explore: send one card per room as images and ask each pair to solve ONE card an
 
 New budgets (min): Opening (inside the 90) 2, Sneak-peek 4.5, Warm-up 6.5, Explore 14, Mini-lesson 10.5, Brain break 4, WB page 1 pairs 13.5, WB check p1 3, WB teaching 2, WB page 2 alone 7.5, WB check p2 3, Talk time 5.5, Exit/reflect/close 10.5, Buffer 3.5 (total 90).
 
-Fixes applied to every lesson (see section 7 for the budgets): (1) sneak-peek: one hold-up for both puzzles, drop the volunteer round, intro line shortened to "Guessing is welcome. Nobody is marked.", answer said with one short reason; (2) warm-up: four quick questions and one game round (the guide already allows "only the first three"); (3) explore: pair work capped at 6 minutes (6.5 where pairs stay in the main room, 5.5 in L9), the regroup is two questions not three, materials listed in the pre-lesson message; (4) mini-lesson: every "Your turn" slide keeps items a and b only; (5) talk time: pairs 2 min, volunteers 1.5 min, the Investigation first step moves to take-home or the start of the next lesson (the reflection box stays); (6) check slides: one pair explains the heavy question, the tutor clicks through the rest; (7) stamp: type or send the stamp in the chat (15 s), reflection 75 s.
-
 ## 7. Recommended budgets and where the minutes go
 
 Method: each fix is applied in the helper's fix scenario (`plan()` in `docs/audit/timing_p5.py`), the part needs are recomputed, rounded up to half a minute and set as the new budgets; page 2 and the standing buffer take what is left. Same assumptions as in section 2. The new totals are exactly 90.
@@ -475,16 +475,16 @@ What changes, in one place:
 | Page 2 | 14 | 7.5-12 | Plan line names the in-class items only; everything else is "take-home / Think harder" |
 | Check p2 | 4 | 2-3.5 | Only the questions that were set |
 | Talk time | 6 | 5.5 | Pairs 2 min, volunteers 1.5, Investigation first step to take-home or the next lesson's opener |
-| Exit/reflect/close | 8 | 7-10.5 | Typed stamp; reflection 75 s; L10 certificates 12 s each; L3 and L7 exit tickets keep their 3.5 min |
+| Exit/reflect/close | 8 | 7-10.5 | Typed stamp; reflection 75 s; L10 certificates 12 s each; L3 and L7 keep the longer exit ticket |
 | Buffer | 0 | 1.5-5 | see section 8 |
 
 What is moved to take-home (per lesson) is in each lesson's fix note above. It is moved, not cut: the answers, the tier labels and the pass option are untouched. The first-step Investigation prompt stays on its page; only the in-class minutes go.
 
-Honest caveat on the fix: a lesson that fits 90 minutes by this arithmetic keeps roughly two thirds of its in-class worksheet (page 1 about 10 minutes of middle-child work, page 2 about 6-10 minutes). If that is too much content to lose, the alternative is to lengthen the session to about 105 minutes (the estimates in section 3 are 99-114 clock minutes).
+Honest caveat on the fix: a lesson that fits 90 minutes by this arithmetic keeps about half of its worksheet in class (middle-child minutes kept: 37-62 percent, L4 87 percent; page 1 about 9-11 minutes, page 2 about 6-10 minutes). The rest moves to take-home, where page 2 was already designed to be a menu, but the page-1 parts that move are Core parts. If that is too much content to lose, the alternative is to lengthen the session to about 105 minutes (the estimates in section 3 are 99-114 clock minutes).
 
 ## 8. Standing buffer
 
-Yes. Recommended: **3 minutes held back, not scheduled**, placed at the end (88-90 becomes "stamp and goodbye, typed, plus 2-3 minutes of floating time"). With every fixed part already running at or above its budget, no lesson has any slack today, so every glitch lands on the worksheet, which is the least elastic content. A 3-minute buffer covers normal slippage (late arrivals, a mute, a slow breakout) but not the full estimate range of plus or minus 10 minutes, so also add:
+Yes. Recommended: **3 minutes held back, not scheduled** (the plan above leaves 1.5-5, average 2.8, depending on the lesson), placed at the end (88-90 becomes "stamp and goodbye, typed, plus 2-3 minutes of floating time"). With every fixed part already running at or above its budget, no lesson has any slack today, so every glitch lands on the worksheet, which is the least elastic content. A 3-minute buffer covers normal slippage (late arrivals, a mute, a slow breakout) but not the full estimate range of plus or minus 10 minutes, so also add:
 
 1. A printed cut-first list in each tutor script, in this order: the Investigation first step, quick question 4, the Go further what-if, the last in-class item of page 2, the reflection to a one-tick version. These are all "pass is allowed" or optional items, so no rule is broken.
 2. Clock checkpoints in the guide: 21 (explore done), 33 (mini done), 37 (break done), 49 (page 1 done), 58 (teaching done), 76 (page 2 check done). If the tutor is more than 2 minutes behind at 37, cut the first item on the list.
@@ -497,7 +497,7 @@ Yes. Recommended: **3 minutes held back, not scheduled**, placed at the end (88-
 - L3: `ws1` and `ws1ans` slides put Q3 on page 1; the workbook page 2 begins at Q3. For L3, L4, L8, L9 page 1 has only two questions, so the printed line "After question 3 you may choose" (on every page 1) points at a question that is on page 2.
 - L7: `teachchange` and `teachdeal` are labelled 72-76 min (the page-2 check) although they are optional after-page-2 slides.
 - The P5 guide's REC cue lines do not exist yet (`levels/reccues.js` is new, untracked and not required by `p5/guide.js`); `levels/reccues.js` privacy text says to record, while `p5/guide.js` still says "Do not record lessons (this is in the tutor agreement)". The 1.5-minute REC cost is included here.
-- Online set-up text mentions breakout rooms for explore (and page 1) in L1, L2, L6, L9, L10 only; for L3, L4, L5, L7, L8 children work on camera in the main room. The model charges 2.5 min for a breakout round trip in the first group and 1 min for the second group; if all lessons use breakouts for explore and page 1 (as the generic "pairs first" instructions imply), add about 2 minutes to each of L3, L4, L5, L7, L8.
+- Online set-up text mentions breakout rooms for explore (and page 1) in L1, L2, L6, L9, L10 only; for L3, L4, L5, L7, L8 children work on camera in the main room. The model charges 2.5 min for a breakout round trip in the first group and 1 min for the second group; if all lessons use breakouts for explore and page 1 (as the generic "pairs first" instructions imply), add about 3 minutes to each of L3, L4, L5, L7, L8.
 
 ## 10. Caveats
 

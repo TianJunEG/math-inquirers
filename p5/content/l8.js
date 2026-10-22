@@ -129,8 +129,8 @@ module.exports = {
     key: [
       ['Q1', '(a) 112° (angles on a straight line: 180° − 68°)  (b) 68° (vertically opposite AOC)  (c) 112° (vertically opposite BOC)  (d) 65° (angles at a point: 360° − 95° − 130° − 70°)'],
       ['Q2', '(a) Parallelogram: B = 108° (adjacent angles add up to 180°), C = 72° (opposite A), D = 108° (opposite B)  (b) Rhombus: PQR = 116° (180° − 64°). Triangle PQR is isosceles (PQ = QR), so QPR = (180° − 116°) ÷ 2 = 32°  (c) Trapezium: D = 70° (180° − 110°), C = 100° (180° − 80°)'],
-      ['Q3', '(a) ADB = 62° (AB = AD, so the base angles are equal)  (b) BAD = 56° (180° − 62° − 62°)  (c) ADC = 118° (angles on a straight line: 180° − 62°)  (d) ACD = 24° (180° − 118° − 38°)'],
-      ['Q4', '(a) ADC = 56° (opposite angles of a parallelogram are equal)  (b) DEA = 62° (DA = DE, so (180° − 56°) ÷ 2)  (c) AEC = 118° (straight line: 180° − 62°)  (d) EAB = 62° (angle DAB = 180° − 56° = 124°, then 124° − 62°)'],
+      ['Q3', '(a) ADB = 62° (AB = AD, so the base angles are equal; given as the worked start)  (b) BAD = 56° (180° − 62° − 62°)  (c) ADC = 118° (angles on a straight line: 180° − 62°)  (d) ACD = 24° (180° − 118° − 38°)'],
+      ['Q4', '(a) ADC = 56° (opposite angles of a parallelogram are equal)  (b) DEA = 62° (DA = DE, so (180° − 56°) ÷ 2). The rest of this figure, AEC = 118° and EAB = 62°, is Think harder A3.'],
       ['Q5', '(a) Two triangles: 50°, 50°, 80° (the 50° angle is a base angle) or 50°, 65°, 65° (50° is the top angle)  (b) Only one: 100°, 40°, 40°. The 100° angle must be the top angle, because two angles of 100° would already be 200°.']
     ]
   },
@@ -213,17 +213,18 @@ module.exports = {
     H.sub('b', 'Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),
     H.sub('c', 'Trapezium:   angle D = ______   angle C = ______', { after: 40 }),
     H.p('Reasons:  A straight line 180°.   B point 360°.   C vertically opposite angles are equal.   D triangle 180°.   E isosceles: base angles are equal.   F parallelogram or trapezium: neighbours add to 180°.', { pb: true, after: 60 }),
-    H.q(3, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle. Write the reason (a letter A to F, or in words) only for (b) and (d). For (a) and (c) just write the answer.', { before: 0, keepNext: true }),
+    H.q(3, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle. Write the reason (a letter A to F, or in words) for (b) and (d).', { before: 0, keepNext: true }),
     H.fig(q4Fig()),
-    H.sub('a', 'Angle ADB = _____', { after: 40 }),
+    H.p(['<b style="color:#1F7A6F">Worked start:</b> (a) angle ADB = 62° because AB = AD, so the base angles are equal (E). Now use it to find the next angle.'], { after: 20 }),
     H.sub('b', 'Angle BAD = ______  because ______________________', { after: 40 }),
     H.sub('c', 'Angle ADC = ______', { after: 40 }),
     H.sub('d', 'Angle ACD = ______  because ______________________', { after: 40 }),
     H.q(4, 'ABCD is a parallelogram. E is a point on DC with DA = DE. Angle ABC = 56°.', { keepNext: true, before: 60 }),
     H.fig(q5Fig()),
-    H.sub('a', 'ADC = _____    (b) DEA = _____    (c) AEC = _____    (d) EAB = _____', { after: 40 }),
-    H.ans('Show how you found angle EAB:', 20),
+    H.sub('a', 'Angle ADC = _____ because ______________________', { after: 40 }),
+    H.sub('b', 'Angle DEA = _____ because ______________________   (hint: DA = DE)', { after: 40 }),
     H.q(5, 'An isosceles triangle has one angle of 50°. What could the other two angles be? Find every case.', { keepNext: true, before: 60 }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> draw it. Is the 50° angle one of the two equal base angles, or the top angle? Try both.'], { after: 10 }),
     H.sub('a', 'List both:  _________________  and  _________________', { after: 40 }),
     H.sub('b', 'An isosceles triangle has one angle of 100°. How many different triangles can you make? Explain.', { after: 40 }),
     ...H.lines(1)
