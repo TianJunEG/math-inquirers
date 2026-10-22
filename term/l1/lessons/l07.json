@@ -2986,7 +2986,20 @@
   "when_stuck": "Please let your child use real things or draw bars and squares, and wait 10 seconds before helping. Asking what is the next ten? works better than giving the answer.",
   "next": "Lesson 8: Balance and Swap. Your child needs a pencil and paper only.",
   "report_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why. This week: taking away tens and ones, and counting up to find the gap between two numbers.",
-  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
+  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+  "quote": "The difference is a gap. Take away to see what is left. Count up to see the gap."
+ },
+ "workbook": {
+  "header": "Addition and Subtraction",
+  "hint_p1": "Use your kit, a drawing or your fingers. Say your answer out loud, then write it.",
+  "hint_p3": "Use your kit, draw a picture or count up. Then write how you know. Choose any question, in any order.",
+  "kits": [
+   {
+    "type": "base_ten",
+    "title": "Kit page: tens bars and ones squares",
+    "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope."
+   }
+  ]
  },
  "safeguarding": [
   "The kit pieces stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. A grown-up cuts out the kit page before the lesson; children do not use scissors in the session.",
