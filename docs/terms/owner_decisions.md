@@ -54,3 +54,6 @@ Owner chose option 2. The last lesson of each term keeps a 20-minute challenge s
 
 ## 22 Oct 2026 (late): printed workbooks come with payment
 Owner: all workbooks are printed and given to the student upon payment; extension workbooks are not given (meaning of "extension workbooks" to be confirmed by the owner). Consequence for production: the combined term books (5 lessons each) are the standard issue for each paid term; printing and delivery are triggered by payment.
+
+## 22 Oct 2026 (late): extension workbooks (new product, not yet built)
+Extension workbooks = separate extra-challenge workbooks WITH answers, sold to the public (not given with the paid term). Not built yet. Constraints carried over: original problems only (no copying or lightly rewording contest, book or school problems); no MOE/GEP/SASMO claims; neutral tier labels; private-paper safeguarding; answers included for self-study, so wording must work for a parent or child without a tutor. Open for the owner: one per level or per term, price, digital download vs printed, whether they use the same Mi branding and whether they go on the website shop. The paid-term workbooks do not include them.
