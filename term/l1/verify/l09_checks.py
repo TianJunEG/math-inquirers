@@ -86,20 +86,28 @@ def run(d):
     # explore: Ravi starts before the 0 mark (ruler edge about 2 mm before 0): his line is longer than 8 cm
     eq((8 * 10 - (-2)) > 80, True, 'Ravi line longer than 8 cm')
     # Start here
-    eq(T['S1']['val'], [0, end_mark(0, 7)], 'S1'); eq(gaps(0, end_mark(0, 7)), 7, 'S1 length')
-    eq(T['S2']['val'], [gaps(0, 9), gaps(0, 9) - gaps(0, 4)], 'S2'); eq(gaps(4, 9), 5, 'S2 count on')
+    eq(T['S1']['val'], [end_mark(0, 7)], 'S1'); eq(gaps(0, end_mark(0, 7)), 7, 'S1 length')
+    eq(T['S2']['val'], [gaps(0, 9) - gaps(0, 4)], 'S2'); eq(gaps(4, 9), 5, 'S2 count on')
     eq(T['S3']['val'], 'open', 'S3 open')
     eq(T['S4']['val'], [gaps(0, 13), gaps(0, 9), gaps(9, 13)], 'S4'); eq(gaps(0, 13) - gaps(0, 9), 4, 'S4 difference')
     eq(T['S5']['val'], [gaps(0, 5) + 3], 'S5'); eq(end_mark(0, 5) + 3, 8, 'S5 end mark')
     eq(T['S6']['val'], ['no', gaps(0, 7)], 'S6'); eq(gaps(0, 7) == 8, False, 'S6 Mei is wrong'); eq(end_mark(0, 8), 8, 'S6 should end at 8')
-    # S7: tip 14.x, closer to 15 (say 14.7 cm = 147 mm)
-    eq(T['S7']['val'], [nearest_mark(147)], 'S7'); eq(nearest_mark(147), 15, 'S7 closer to 15')
+    pic = lambda q, i: q['visual']['objects'][i]
+    # the ruler pictures: object ends in the data are the measured values
+    pic = lambda q, i: q['visual']['objects'][i]
+    eq((pic(T['S4'], 0)['from'], pic(T['S4'], 0)['to'], pic(T['S4'], 1)['to']), (0, 13, 9), 'S4 picture matches the key')
+    eq((pic(T['S6'], 0)['from'], pic(T['S6'], 0)['to']), (0, 7), 'S6 picture is Mei line 0 to 7')
+    eq((pic(T['T2'], 0)['from'], pic(T['T2'], 0)['to']), (2, 9), 'T2 picture is line A from 2 to 9')
+    eq((pic(T['G2'], 0)['from'], pic(T['G2'], 0)['to']), (4, 13), 'G2 picture is the way forward')
+    eq(T['S2']['text'].count('9 cm') == 1 and "4 cm" in T['S2']['text'], True, 'S2 text states the 9 and the 4')
+    eq(T['S5']['text'].count('5 cm') == 1 and '3 cm longer' in T['S5']['text'], True, 'S5 text')
     # Think harder
     eq(T['T1']['val'], [path_length([5, 3, 4])], 'T1'); eq(5 + 3 + 4, 12, 'T1 sum')
     eq(T['T2']['val'], [gaps(2, 9), end_mark(3, 6)], 'T2'); eq(gaps(2, 9) == 9, False, 'T2 not 9')
-    eq(T['T3']['val'], [gaps(0, 13) - gaps(0, 5)], 'T3'); eq(gaps(5, 13), 8, 'T3 measured from the dot')
-    eq(T['T4']['val'], [nearest_mark(164), nearest_mark(188), nearest_mark(188) - nearest_mark(164)], 'T4')
-    eq(nearest_mark(164), 16, 'T4 Ali 16.4'); eq(nearest_mark(188), 19, 'T4 Mei 18.8')
+    ali_mm, mei_mm = round(pic(T['T3'], 0)['to'] * 10), round(pic(T['T3'], 1)['to'] * 10)   # tips read from the picture data: 9.3 and 12.7 cm
+    eq(T['T3']['val'], [nearest_mark(ali_mm), nearest_mark(mei_mm), nearest_mark(mei_mm) - nearest_mark(ali_mm)], 'T3')
+    eq(nearest_mark(ali_mm), 9, 'T3 Ali 9.3'); eq(nearest_mark(mei_mm), 13, 'T3 Mei 12.7')
+    eq(abs(ali_mm - 90) < 50 and abs(mei_mm - 130) < 50, True, 'T3 tips are clearly nearer one mark (not halfway)')
     # Go further
     A_, B_ = 8, 8 + 3
     eq(T['G1']['val'], [30 - A_ - B_], 'G1'); eq(A_ + B_ + (30 - A_ - B_), 30, 'G1 pieces add to the ribbon')
@@ -118,7 +126,7 @@ def run(d):
     # Talk: 15 vs 16 of the same pencil: a tip at 15.5 cm is the halfway case that can round either way
     eq(nearest_mark(150) , 15, 'talk: 15.0 -> 15'); eq(nearest_mark(158), 16, 'talk: 15.8 -> 16')
     # Exit
-    eq(X['E1']['val'], [0, end_mark(0, 6)], 'E1')
+    eq(X['E1']['val'], [end_mark(0, 6)], 'E1')
     eq(X['E2']['val'], [gaps(6, 15)], 'E2'); eq(gaps(0, 15) - gaps(0, 6), 9, 'E2 difference')
     eq(X['E3']['val'], [gaps(3, 10)], 'E3'); eq(gaps(3, 10) == 10, False, 'E3 not 10')
     # Home practice

@@ -18,7 +18,7 @@
       "Drawing a line of a given length",
       "Comparing lengths: how much longer"
     ],
-    "note": "Strand label for the tutor only (MOE Measurement, length in cm, 1.1 to 1.4). It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Deeper than the holiday cubes-and-ruler lesson, which is warm-up only."
+    "note": "Strand label for the tutor only (MOE Measurement, length in cm, 1.1 to 1.4). It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Deeper than the holiday cubes-and-ruler lesson, which is warm-up only. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026): reading to the nearest cm, a line that starts at another mark, bent paths and the snail are enrichment, taught in class with a real ruler and pictures. Do not describe the program as MOE-aligned to families."
   },
   "contest_moves": [
     "a bent path: add the straight pieces",
@@ -49,7 +49,7 @@
     "child": [
       "A ruler with cm marks, starting at 0 (15 or 30 cm)",
       "3 or 4 things to measure; 10 paper clips (or small same-size things)",
-      "Workbook pages 1 to 5 (A4; page 6 is not used), a pencil, a rubber, spare paper"
+      "Workbook pages 1 to 5 (A4, printed at 100%; page 6 is not used), a pencil, a rubber, spare paper"
     ],
     "tutor": [
       "A real ruler, a pencil and a strip of paper to show on camera; a phone or camera that can look down at the table",
@@ -57,7 +57,7 @@
     ],
     "kit_pages": [],
     "ruler": true,
-    "notes": "Families keep a ruler at home, so no ruler is printed in the workbook. If a child has none, a grown-up can look for any straight-edged ruler or strip marked in centimetres, or tell the tutor before the lesson. Plastic or wooden rulers only, no metal edges. Nothing needs to be bought. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
+    "notes": "Families keep a ruler at home, so no ruler is printed in the workbook. If a child has none, a grown-up can look for any straight-edged ruler or strip marked in centimetres, or tell the tutor before the lesson. Plastic or wooden rulers only, no metal edges. Nothing needs to be bought. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Print the workbook at 100% (actual size, not 'fit to page'): the ruler pictures are real size, so a child can lay their own ruler beside them."
   },
   "workbook": {
     "kits": [],
@@ -602,7 +602,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 1, Start here. Question 1: draw a line 7 centimetres long. Start it at the 0 mark. Question 2: draw a line 4 cm long and a line 9 cm long. Which is longer, and by how much? Question 3: measure your pencil. Write your guess first."
+            "text": "Page 1, Start here. Question 1: in the box, draw a line 7 centimetres long. Start it at the 0 mark. Question 2: draw a line 9 cm long. Ali's line is 4 cm long. How much longer is your line? Question 3: measure your pencil. Write your guess first."
           },
           {
             "k": "WORK",
@@ -615,7 +615,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 1: your line ends at the 7 mark. Question 2: the longer line is 9 cm, and it is 5 cm longer. Question 3: any measure close to your guess is fine. Mark your own page in another colour."
+            "text": "Question 1: your line ends at the 7 mark. Question 2: your line is 5 cm longer than Ali's. Question 3: any measure close to your guess is fine. Mark your own page in another colour."
           },
           {
             "k": "SAY",
@@ -627,11 +627,11 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: Ali and Mei measure pencils. Question 5: draw a line 5 cm long, then a line 3 cm longer than the first. Question 6: Mei's line goes from the 0 mark to the 7 mark. Mei says it is 8 cm long. Is she correct? Question 7: the tip of Ben's spoon is between two marks."
+            "text": "Page 2. Question 4: look at the ruler. How long is each pencil, and how much longer is Ali's? Question 5: Mei's line is 5 cm long. Draw a line 3 cm longer. Question 6: look at Mei's line on the ruler. Mei says it is 8 cm long. Is she correct?"
           },
           {
             "k": "WORK",
-            "text": "Page 2, questions 4 to 7.",
+            "text": "Page 2, questions 4 to 6.",
             "s": 540
           },
           {
@@ -640,7 +640,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 4: 13 cm, 9 cm, and 4 cm longer. Question 5: 8 cm. Question 6: no, her line is 7 cm. Question 7: 15 cm."
+            "text": "Question 4: 13 cm, 9 cm, and 4 cm longer. Question 5: 8 cm. Question 6: no, her line is 7 cm."
           },
           {
             "k": "SLIDE",
@@ -657,7 +657,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1 and Q2 (drawing): put a finger on the 0 mark, slide the ruler to the dot. Q3: guess first, then measure; a guess that is far off is fine. Q6: ask where her line ends on the ruler. Q7: which mark is the tip closer to?"
+            "text": "Q1, Q2 and Q5 (drawing): put a finger on the 0 mark, slide the ruler to the dot. Q3: guess first, then measure; a guess that is far off is fine. Q4 and Q6: the ruler picture is printed at real size, so children may lay their own ruler beside it. Q6: ask where her line ends on the ruler."
           },
           {
             "k": "STUCK",
@@ -1312,7 +1312,7 @@
           "short": true
         }
       ],
-      "note": "Read questions 1 and 2 aloud, then question 3. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. For question 3 a child may measure any pencil: the answer depends on the pencil. After question 3 any child may choose to carry on or try Think harder."
+      "note": "Read questions 1 and 2 aloud, then question 3. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. For question 3 a child may measure any pencil: the answer depends on the pencil, so a grown-up checks it. After question 3 any child may choose to carry on or try Think harder."
     },
     {
       "id": "s-ws1ans",
@@ -1339,20 +1339,19 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 4 to 7. About 9 minutes. Use your ruler"
+          "text": "Questions 4 to 6. About 8 minutes. Use your ruler"
         },
         {
           "t": "qs",
           "ids": [
             "S4",
             "S5",
-            "S6",
-            "S7"
+            "S6"
           ],
           "short": true
         }
       ],
-      "note": "Read question 6 aloud: it is a spot-the-mistake. Read question 7 aloud as well: the tip is between two marks. Children may check any answer by measuring their own pencil against the ruler."
+      "note": "Read question 4 aloud and show where the ruler picture is. Read question 6 aloud: it is a spot-the-mistake with a ruler picture. Children may check any answer by laying their own ruler next to the picture (it is printed at real size)."
     },
     {
       "id": "s-ws2ans",
@@ -1365,8 +1364,7 @@
           "ids": [
             "S4",
             "S5",
-            "S6",
-            "S7"
+            "S6"
           ]
         }
       ],
@@ -1609,17 +1607,13 @@
         "parts": [
           {
             "l": "",
-            "text": "The line starts at the ___ mark and ends at the ___ mark.",
-            "ans": "0 and 7",
-            "val": [
-              0,
-              7
-            ]
+            "text": "Your line ends at the [] mark.",
+            "ans": "7",
+            "val": 7
           }
         ],
-        "answer": "A line from the 0 mark to the 7 mark: it starts at 0, ends at the 7 mark and is 7 cm long",
+        "answer": "The line ends at the 7 mark (it starts at the 0 mark and is 7 cm long)",
         "val": [
-          0,
           7
         ],
         "hint": "Make a dot. Put the 0 mark on the dot. Make a small mark at the 7. Join them with a straight line.",
@@ -1636,41 +1630,35 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Draw a line 4 cm long. Under it, draw a line 9 cm long.",
+        "text": "In the box, draw a line 9 cm long. Ali's line is 4 cm long.",
         "parts": [
           {
-            "l": "a",
-            "text": "The longer line is ___ cm long.",
-            "ans": "9",
-            "val": 9
-          },
-          {
-            "l": "b",
-            "text": "It is ___ cm longer than the shorter line.",
+            "l": "",
+            "text": "Your line is ___ cm longer than Ali's line.",
             "ans": "5",
             "val": 5
           }
         ],
-        "answer": "9 cm; it is 5 cm longer",
+        "answer": "5 cm longer (9 take away 4)",
         "val": [
-          9,
           5
         ],
-        "hint": "Draw the short line first, then the long one under it. To see how much longer, count the cm from 4 to 9.",
-        "solution": "The 9 cm line is the longer one. To find how much longer, count on from 4 to 9: that is 5 jumps. So it is 5 cm longer (9 take away 4 is 5).",
+        "hint": "Draw your line from the 0 mark to the 9 mark. To see how much longer, count the cm from 4 to 9.",
+        "solution": "Your line is 9 cm and Ali's line is 4 cm. Count on from 4 to 9: that is 5 jumps. So your line is 5 cm longer (9 take away 4 is 5).",
         "mistakes": [
           "Writing 13 by adding the two lengths.",
-          "Starting the 9 cm line at a mark other than 0."
+          "Starting the 9 cm line at a mark other than 0.",
+          "Writing 9 (the length of the line you drew)."
         ],
         "mins": 3,
-        "lines": 1,
+        "lines": 0,
         "draw": true
       },
       {
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Measure the length of your pencil. Write your guess first. Then measure to the nearest cm.",
+        "text": "Measure the length of your pencil. Write your guess first. Then measure it in whole cm.",
         "parts": [
           {
             "l": "a",
@@ -1685,9 +1673,9 @@
             "val": "open"
           }
         ],
-        "answer": "OPEN ANSWER, accept any sensible measure (guess and measure within about 3 cm of each other); a new pencil is about 17 to 19 cm. Check: the 0 mark at one end, read the mark at the other end",
+        "answer": "OPEN ANSWER, accept any sensible measure (guess and measure within about 3 cm of each other); a new pencil is about 17 to 19 cm. A grown-up checks with the pencil: the 0 mark at one end, read the mark at the other end",
         "val": "open",
-        "hint": "Put one end of the pencil at the 0 mark. Keep the ruler straight. Read the mark at the other end. If it is between two marks, choose the closer one.",
+        "hint": "Put one end of the pencil at the 0 mark. Keep the ruler straight. Read the mark at the other end. If the end is between two marks, choose the closer mark.",
         "solution": "Put one end of the pencil on the 0 mark and keep the ruler straight. Read the mark at the other end. A new pencil is usually between 17 and 19 cm. If the tip is between two marks, write the closer one.",
         "mistakes": [
           "Starting at the edge of the ruler instead of the 0 mark.",
@@ -1700,7 +1688,7 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Ali's pencil and Mei's pencil both start at the 0 mark of a ruler. Ali's tip is at the 13 mark. Mei's tip is at the 9 mark.",
+        "text": "Look at the ruler. Ali's pencil and Mei's pencil both start at the 0 mark.",
         "parts": [
           {
             "l": "a",
@@ -1733,18 +1721,37 @@
           "Adding 13 + 9 = 22.",
           "Writing 9 as the difference (that is the length of Mei's pencil)."
         ],
-        "mins": 2,
-        "lines": 0
+        "mins": 3,
+        "lines": 0,
+        "visual": {
+          "type": "ruler",
+          "start": 0,
+          "end": 15,
+          "objects": [
+            {
+              "label": "Ali's pencil",
+              "from": 0,
+              "to": 13,
+              "color": "#FFC93C"
+            },
+            {
+              "label": "Mei's pencil",
+              "from": 0,
+              "to": 9,
+              "color": "#BFE8DC"
+            }
+          ]
+        }
       },
       {
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Draw a line 5 cm long. Under it, draw a line 3 cm longer than the first line.",
+        "text": "Mei's line is 5 cm long. In the box, draw a line 3 cm longer than Mei's line.",
         "parts": [
           {
             "l": "",
-            "text": "The second line is ___ cm long.",
+            "text": "Your line is ___ cm long.",
             "ans": "8",
             "val": 8
           }
@@ -1753,11 +1760,11 @@
         "val": [
           8
         ],
-        "hint": "The second line is the first line and 3 more. How long is that? Draw it with the 0 mark at the start.",
-        "solution": "The first line is 5 cm. 3 cm longer is 5 + 3 = 8 cm. Draw it from the 0 mark to the 8 mark, under the first line.",
+        "hint": "Your line is Mei's line and 3 more. How long is that? Draw it with the 0 mark at the start.",
+        "solution": "Mei's line is 5 cm. 3 cm longer is 5 + 3 = 8 cm. Draw it from the 0 mark to the 8 mark.",
         "mistakes": [
           "Drawing a line 3 cm long.",
-          "Starting the second line at the edge of the ruler, so it is a little too long."
+          "Starting the line at the edge of the ruler, so it is a little too long."
         ],
         "mins": 3,
         "lines": 0,
@@ -1767,7 +1774,7 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Mei's line goes from the 0 mark to the 7 mark. Mei says it is 8 cm long.",
+        "text": "Look at Mei's line on the ruler. Mei says it is 8 cm long.",
         "parts": [
           {
             "l": "a",
@@ -1794,33 +1801,20 @@
           "Counting the 0 as one, so the 7 mark looked like 8."
         ],
         "mins": 2.5,
-        "lines": 1
-      },
-      {
-        "id": "S7",
-        "page": 2,
-        "tier": "start",
-        "text": "The tip of Ben's spoon is between the 14 mark and the 15 mark. It is closer to the 15 mark. The spoon starts at the 0 mark.",
-        "parts": [
-          {
-            "l": "",
-            "text": "To the nearest cm, the spoon is ___ cm long.",
-            "ans": "15",
-            "val": 15
-          }
-        ],
-        "answer": "15 cm (the tip is closer to the 15 mark)",
-        "val": [
-          15
-        ],
-        "hint": "Which mark is the tip closer to? That mark is the length to the nearest centimetre.",
-        "solution": "The tip is between 14 and 15 and it is closer to 15. So, to the nearest centimetre, the spoon is 15 cm long.",
-        "mistakes": [
-          "Writing 14 because the tip has not reached 15.",
-          "Writing 14 and a half."
-        ],
-        "mins": 2,
-        "lines": 1
+        "lines": 1,
+        "visual": {
+          "type": "ruler",
+          "start": 0,
+          "end": 10,
+          "objects": [
+            {
+              "label": "Mei's line",
+              "from": 0,
+              "to": 7,
+              "color": "#BFE8DC"
+            }
+          ]
+        }
       }
     ],
     "think": [
@@ -1855,7 +1849,7 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Line A starts at the 2 mark and ends at the 9 mark. Line B starts at the 3 mark and is 6 cm long.",
+        "text": "Look at line A on the ruler. Line B starts at the 3 mark and is 6 cm long.",
         "parts": [
           {
             "l": "a",
@@ -1882,71 +1876,80 @@
           "Taking 6 away from 3, or writing 6 for line B."
         ],
         "mins": 4,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "ruler",
+          "start": 0,
+          "end": 12,
+          "objects": [
+            {
+              "label": "Line A",
+              "from": 2,
+              "to": 9,
+              "color": "#FFC93C"
+            }
+          ]
+        }
       },
       {
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Draw a line 13 cm long in the box. Put a dot on it 5 cm from the start.",
-        "parts": [
-          {
-            "l": "",
-            "text": "The dot is ___ cm from the end of the line.",
-            "ans": "8",
-            "val": 8
-          }
-        ],
-        "answer": "8 cm (13 take away 5)",
-        "val": [
-          8
-        ],
-        "hint": "The whole line is 13 cm. The first part is 5 cm. How many cm are left? You can check by measuring from the dot to the end.",
-        "solution": "The whole line is 13 cm and the part before the dot is 5 cm. The rest is 13 take away 5, which is 8 cm. Check by measuring from the dot to the end of the line.",
-        "mistakes": [
-          "Writing 5, the part that is already known.",
-          "Adding 13 + 5 = 18."
-        ],
-        "mins": 4,
-        "lines": 0,
-        "draw": true
-      },
-      {
-        "id": "T4",
-        "page": 3,
-        "tier": "think",
-        "text": "Both pencils start at 0. Ali's tip is between 16 and 17, closer to 16. Mei's tip is between 18 and 19, closer to 19.",
+        "text": "Look at the ruler. Both pencils start at the 0 mark. Each tip is between two marks.",
         "parts": [
           {
             "l": "a",
-            "text": "To the nearest cm, Ali's pencil is ___ cm and Mei's pencil is ___ cm long.",
-            "ans": "16 and 19",
-            "val": [
-              16,
-              19
-            ]
+            "text": "To the nearest cm, Ali's pencil is ___ cm long.",
+            "ans": "9",
+            "val": 9
           },
           {
             "l": "b",
+            "text": "To the nearest cm, Mei's pencil is ___ cm long.",
+            "ans": "13",
+            "val": 13
+          },
+          {
+            "l": "c",
             "text": "Mei's pencil is ___ cm longer than Ali's.",
-            "ans": "3",
-            "val": 3
+            "ans": "4",
+            "val": 4
           }
         ],
-        "answer": "16 cm; 19 cm; 3 cm longer",
+        "answer": "9 cm; 13 cm; 4 cm longer",
         "val": [
-          16,
-          19,
-          3
+          9,
+          13,
+          4
         ],
-        "hint": "For each pencil, choose the mark that the tip is closer to. Then find how much longer by counting on from 16 to 19.",
-        "solution": "Ali's tip is closer to 16, so 16 cm. Mei's tip is closer to 19, so 19 cm. From 16 to 19 is 3 jumps, so Mei's pencil is 3 cm longer.",
+        "hint": "For each pencil, look at the two marks around the tip. Choose the mark the tip is closer to. Then count on from Ali's length to Mei's.",
+        "solution": "Ali's tip is just past the 9 mark, so it is closer to 9: 9 cm. Mei's tip is just before the 13 mark, so it is closer to 13: 13 cm. From 9 to 13 is 4 jumps, so Mei's pencil is 4 cm longer.",
         "mistakes": [
-          "Choosing the mark the tip has already passed (17 and 18).",
-          "Writing 2 by using 17 and 19."
+          "Choosing the mark the tip has not reached (12 for Mei).",
+          "Writing 10 for Ali because the tip looks nearly there.",
+          "Writing 3 by using 12 and 9."
         ],
-        "mins": 4,
-        "lines": 0
+        "mins": 5,
+        "lines": 0,
+        "visual": {
+          "type": "ruler",
+          "start": 0,
+          "end": 15,
+          "objects": [
+            {
+              "label": "Ali's pencil",
+              "from": 0,
+              "to": 9.3,
+              "color": "#FFC93C"
+            },
+            {
+              "label": "Mei's pencil",
+              "from": 0,
+              "to": 12.7,
+              "color": "#BFE8DC"
+            }
+          ]
+        }
       }
     ],
     "go": [
@@ -1980,7 +1983,7 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "A snail starts at the 4 mark of a long ruler. It crawls to the 13 mark. Then it crawls back 5 cm towards the 0 mark.",
+        "text": "A snail crawls along a long ruler from the 4 mark to the 13 mark. Then it crawls back 5 cm.",
         "parts": [
           {
             "l": "a",
@@ -1990,7 +1993,7 @@
           },
           {
             "l": "b",
-            "text": "In all, the snail has crawled ___ cm.",
+            "text": "The snail has crawled ___ cm in all, counting the way back.",
             "ans": "14",
             "val": 14
           }
@@ -2007,7 +2010,20 @@
           "Writing 4 as the mark (the distance from the start, not the mark)."
         ],
         "mins": 6,
-        "lines": 1
+        "lines": 1,
+        "visual": {
+          "type": "ruler",
+          "start": 0,
+          "end": 15,
+          "objects": [
+            {
+              "label": "The snail's way forward",
+              "from": 4,
+              "to": 13,
+              "color": "#BFE8DC"
+            }
+          ]
+        }
       },
       {
         "id": "G3",
@@ -2032,7 +2048,8 @@
         ],
         "mins": 7,
         "lines": 1,
-        "draw": true
+        "draw": true,
+        "draw_strokes": 3
       }
     ],
     "investigation": {
@@ -2040,9 +2057,9 @@
       "page": 5,
       "tier": "investigation",
       "title": "Does the start mark matter?",
-      "first": "Draw a line 6 cm long. Start it at the 2 mark of your ruler. Which mark does it end at?",
-      "text": "Try 3 more start marks. Each time, draw a line 6 cm long and write where it ends. What do you notice? Start with: I notice ...",
-      "lines": 1,
+      "first": "Draw a line 6 cm long from the 2 mark. Where does it end?",
+      "text": "Try 3 more start marks, 6 cm each time. Lines 1 to 3: write the start and end marks. Line 4: I notice ...",
+      "lines": 4,
       "answer": "The length stays 6 cm every time. From the 2 mark the line ends at 8; from 3 it ends at 9; from 5 it ends at 11. The end mark is always the start mark plus 6, so the end mark take away the start mark is always 6. Reading only the end mark gives the length only when the line starts at 0.",
       "val": [
         "end - start = 6"
@@ -2064,28 +2081,25 @@
   "exit": [
     {
       "id": "E1",
-      "text": "Draw a line 6 cm long on your spare paper. Start it at the 0 mark of your ruler. Then fill in the marks.",
+      "text": "In the box, draw a line 6 cm long. Start at the 0 mark.",
       "parts": [
         {
           "l": "",
-          "text": "It starts at the ___ mark and ends at the ___ mark.",
-          "ans": "0 and 6",
-          "val": [
-            0,
-            6
-          ]
+          "text": "Your line ends at the [] mark.",
+          "ans": "6",
+          "val": 6
         }
       ],
       "answer": "A line from the 0 mark to the 6 mark",
       "val": [
-        0,
         6
       ],
-      "solution": "Put the 0 mark of the ruler on the dot and draw to the 6 mark. The line starts at 0 and ends at 6.",
+      "solution": "Put the 0 mark of the ruler on the dot and draw to the 6 mark. The line ends at the 6 mark.",
       "mistakes": [
         "Starting at the edge of the ruler.",
         "Ending at the 7 mark after counting the 0 as one."
-      ]
+      ],
+      "draw": true
     },
     {
       "id": "E2",
@@ -2175,7 +2189,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Measure a spoon, a toy and a crayon to the nearest cm. Write the 3 lengths in order, shortest first.",
+      "text": "Measure a spoon, a toy and a crayon in whole cm. Write the 3 lengths in order, shortest first.",
       "answer": "OPEN ANSWER, accept any three lengths, written from smallest to largest. A grown-up can check one by measuring again",
       "val": "open",
       "solution": "Put one end at the 0 mark and read the mark at the other end. If the end is between two marks, write the closer one. Then put the numbers in order."
@@ -2800,7 +2814,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned to use a ruler properly. Your child measured things from home, drew lines up to 12 cm and compared lengths. The big idea: start at the 0 mark, read the mark at the other end, and when the end falls between two marks choose the closer one. We also met a line that starts at a different mark.",
+    "summary": "We learned to use a ruler properly. Your child measured things from home, drew lines up to 13 cm and compared lengths. The big idea: start at the 0 mark, read the mark at the other end, and when the end falls between two marks choose the closer one. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions, such as a line that starts at another mark, are harder than school ones.",
     "quote": "Start at the 0 mark. Read the mark at the other end. Between two marks? Choose the closer one.",
     "words": [
       "centimetre (cm): the gap between two marks",
@@ -2833,7 +2847,7 @@
   ],
   "tutor_prep": [
     "Solve every workbook question yourself with a real ruler first. Check that question 3 and the pencil examples work with your own pencil.",
-    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (page 6, the cut-out page, is not used in this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper.",
+    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (page 6, the cut-out page, is not used in this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper. Ask them to print the workbook at 100% (actual size), because the ruler pictures are real size.",
     "Have your own ruler, a pencil and a strip of paper ready, and a camera that can look down at the table. Have the slides open and check the clock or timer is visible on screen share.",
     "Check the recording settings exclude children's video. If a family has no ruler, ask them before the lesson so a grown-up can find one; do not ask the child in front of the group."
   ],
