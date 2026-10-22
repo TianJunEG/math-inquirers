@@ -1,6 +1,6 @@
 # Self-audit: Level 1 Term 1 Lesson 6 (Tens Jump, Ones Hop)
 
-Desk audit by the author (a model); no child has used this lesson. Machine checks: `python3 term/l1/tools/validate.py 06` (19 pass, 0 warn, 0 FAIL). Real-PDF check: workbook 6 pages (fill 96%, 99%, 98%, 90%, 92%, kit page 89%), home sheet 2 pages, parent page 1 page.
+Desk audit by the author (a model); no child has used this lesson. Machine checks (after the fix pass of 22 Oct 2026): `python3 term/l1/tools/validate.py 06` 17 pass, 0 warn, 0 FAIL; 357 answer checks; 1788 practice variants. Real-PDF check: workbook 6 pages (fill 93%, 84%, 87%, 84%, 96%, kit page 91%), home sheet 2 pages (93%, 43%), parent page 1 page (95%).
 
 | # | Criterion | Result | Evidence |
 |---|---|---|---|
@@ -13,7 +13,7 @@ Desk audit by the author (a model); no child has used this lesson. Machine check
 | 7 | Neutral labels, nothing named publicly | PASS | validator; choice slide and page 1 line |
 | 8 | Sneak-peek access plus thinking, unmarked, papers once | PASS | slide 5, script |
 | 9 | No private chat; safeguarding | PASS | no breakout rooms; movement break has a safe-space line |
-| 10 | No overclaims | PASS | validator; strand label tutor-only |
+| 10 | No overclaims | PASS | validator; strand label tutor-only; tutor guide and parent page now say Term 1 goes beyond the school Primary 1 syllabus on purpose, no MOE-aligned claim |
 | 11 | Ruler only if the child has one | PASS | not needed; parent and home mention "a ruler helps" only |
 | 12 | Materials home-findable | PASS | the Lesson 1 kit cut-outs; nothing to buy |
 | 13 | Recording cues short, with child action | PASS | 11 cues |
@@ -27,10 +27,18 @@ Desk audit by the author (a model); no child has used this lesson. Machine check
 
 1 low floor high ceiling 2; 2 depth over speed 2; 3 generalise 2 (jumps never change the ones digit; Investigation Jump road); 4 justify 2 (S6, T3, talk); 5 multiple paths 2 (kit, number line, jump first or hop first); 6 challenge ladder 2; 7 student-led inquiry 1; 8 complexity/context 1; 9 problem posing 1 (spare-time M2 and online g4 only); 10 metacognition 2; 11 pacing/compacting 1; 12 extension not acceleration 2. **Total 20/24.**
 
+## Fix pass, 22 Oct 2026 (after the independent audit)
+
+Independent audit (`audit/WORKBOOK_AUDIT_L06.md`) scored the printed workbook 14/24 on the gifted rubric and 12/14 (86%) on tier compliance. After the fixes, re-scored by the fixer (a model, desk review, same rubric):
+- Gifted rubric, workbook only: 4 justify 1 to 2 (S6, T3c, G2b, Investigation); 5 multiple paths 1 to 2 (G1 asks for two different routes); 9 problem posing 0 to 1 (G1 "a different way" is open, but there is still no make-up item); others unchanged. **17/24**, an estimate.
+- Tier compliance: Start 7/7, Think 4/4, Go 2/3 clear and G1 borderline (open route-finding with two jump sizes, no longer a plain count in tens): **13/14 (93%)**, honestly judged.
+- Start here now stays inside P1 mental calculation (jump and hop, no 2-digit + 2-digit); the exit ticket has no beyond-P1 item (E3 is jump 2 tens then hop 3 from 52).
+- Open items: template and tool issues listed in `audit/FIXES_L06.md` (page 2 has no instruction line, look-back print size, key heading orphan, Mi calculator, Circle wording on the Investigation); no child has used the lesson.
+
 ## Known limits
 
 - **New-topic lesson**: the syllabus placement (mental 2-digit plus or minus tens or ones, no renaming, 2.7) must be checked by the owner or a tutor.
 - Rebuilt on template commit 8bce095: jump pictures now use `svg.number_line` (mini-lesson, explore, sneak-peek answer, optional slide); `workbook.kits` is the base-ten page (same as Lesson 1); template leak check passes; the home sheet was shortened back to 2 pages. Checks now 346, validator 0 FAIL, 0 WARN. Workbook fill 97, 100, 100, 91, 93%, kit 91%.
 - The two small number lines on the "Hop: ones" slide are small (two columns).
-- Investigation writing space on page 5 is one line (template); children may use spare paper.
+- Investigation writing space on page 5 is now 4 lines (template commit 2379b77).
 - Never trialled with children; times and difficulty are modelled.

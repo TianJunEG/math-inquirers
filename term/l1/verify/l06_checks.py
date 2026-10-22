@@ -141,28 +141,38 @@ def run(d):
         strips_ok(s['blocks'], eq)
 
     # Start here
-    eq(T['S1']['val'], [3, 6, walk(26, [('jump', 1)])], 'S1')
-    eq(T['S1']['visual']['tens'] * 10 + T['S1']['visual']['ones'], 26, 'S1 picture')
+    eq(T['S1']['val'], [3, 7, walk(27, [('jump', 1)])], 'S1')
+    eq(T['S1']['visual']['tens'] * 10 + T['S1']['visual']['ones'], 27, 'S1 picture')
     eq(T['S2']['val'], [walk(34, [('jump', 2)])], 'S2')
     eq(T['S3']['val'], [walk(23, [('jump', 1)]), walk(23, [('jump', 4)]), walk(51, [('jump', 3)]), walk(7, [('jump', 6)])], 'S3')
     eq(T['S4']['val'], [walk(34, [('jump', -1)]), walk(58, [('jump', -2)]), walk(58, [('hop', -3)]), walk(62, [('hop', 7)])], 'S4')
     eq(T['S5']['val'], [walk(68, [('jump', -3)])], 'S5')
-    eq(T['S6']['val'], [walk(45, [('jump', 2)])], 'S6'); eq(walk(45, [('hop', 2)]), 47, 'S6 Siti hopped'); eq(47 == 65, False, 'S6 Siti is wrong')
+    eq(T['S6']['val'], [walk(45, [('jump', 2)])], 'S6'); eq(walk(45, [('hop', 2)]), 47, 'S6 Ben hopped'); eq(47 == 65, False, 'S6 Ben is wrong')
     eq(T['S7']['val'], [walk(36, [('jump', 1), ('jump', 1)])], 'S7')
     # Think harder
-    eq(T['T1']['val'], [walk(34, [('jump', 2), ('hop', 5)])], 'T1'); eq(walk(34, [('hop', 5), ('jump', 2)]), 59, 'T1 other order'); eq(34 + 25, 59, 'T1 plain sum')
-    eq(T['T2']['val'], [walk(68, [('jump', -2), ('hop', -4)])], 'T2'); eq(68 - 24, 44, 'T2 plain')
+    eq(T['T1']['val'], [walk(34, [('jump', 2), ('hop', 5)])], 'T1');
+    eq([x['val'] for x in T['T1']['parts']], [[20, walk(34, [('jump', 2)])], [walk(34, [('jump', 2)]), 5, 59], 59], 'T1 frames'); eq(walk(34, [('hop', 5), ('jump', 2)]), 59, 'T1 other order'); eq(34 + 25, 59, 'T1 plain sum')
+    eq(T['T2']['val'], [walk(68, [('jump', -2), ('hop', -4)])], 'T2');
+    eq([x['val'] for x in T['T2']['parts']], [[20, walk(68, [('jump', -2)])], [walk(68, [('jump', -2)]), 4, 44], 44], 'T2 frames'); eq(68 - 24, 44, 'T2 plain')
     a = walk(12, [('jump', 3), ('hop', 4)]); b = walk(12, [('hop', 4), ('jump', 3)])
     eq(a, b, 'T3 same landing'); eq(T['T3']['val'], ['same', a], 'T3'); eq(a, 46, 'T3 value')
     eq(T['T4']['val'], [walk(78, [('jump', -3)])], 'T4'); eq(walk(48, [('jump', 3)]), 78, 'T4 check')
     # Go further
     path = [7]
     while path[-1] < 97: path.append(walk(path[-1], [('jump', 1)]))
-    eq(path, [7, 17, 27, 37, 47, 57, 67, 77, 87, 97], 'G1 path'); eq(T['G1']['val'], [len(path) - 1], 'G1 jumps')
-    eq(fewest_jumps(90), 5, 'G2 by search'); eq(T['G2']['val'], [5], 'G2')
+    eq(path, [7, 17, 27, 37, 47, 57, 67, 77, 87, 97], 'G1 example route of tens')
+    route2 = [7]
+    for j in (2, 2, 2, 2, 1): route2.append(walk(route2[-1], [('jump', j)]))
+    eq(route2, [7, 27, 47, 67, 87, 97], 'G1 example route with 20s'); eq(route2 != path, True, 'G1 two routes differ')
+    eq(sum(1 for a, b in zip(route2, route2[1:]) if b - a in (10, 20)), len(route2) - 1, 'G1 every jump is 10 or 20')
+    eq(T['G1']['val'], ['open'], 'G1 open')
+    eq(fewest_jumps(90), 5, 'G2 by search'); eq(T['G2']['val'], [5], 'G2'); eq(T['G2']['parts'][0]['val'], fewest_jumps(90), 'G2 part a'); eq(walk(7, [('jump', 8)]), 87, 'G2 four jumps of 20 only reach 87')
     eq(fewest_jumps(90) == 4, False, 'G2: 4 jumps are not enough'); eq(max(20 * 4, 0), 80, 'G2 four jumps travel at most 80')
-    g3 = walk(25, [('jump', 3), ('jump', -1), ('jump', 2), ('hop', 4)])
-    eq(T['G3']['val'], [g3], 'G3'); eq(g3, 69, 'G3 value'); eq(walk(25, [('jump', 3)]), 55, 'G3 step 1'); eq(walk(55, [('jump', -1)]), 45, 'G3 step 2'); eq(walk(45, [('jump', 2)]), 65, 'G3 step 3')
+    g3 = walk(25, [('jump', 3), ('jump', -1), ('jump', 2)])
+    eq(g3, 65, 'G3 before the hop'); eq(walk(g3, [('hop', 4)]), 69, 'G3 lands on 69'); eq(T['G3']['parts'][1]['val'], 69 - g3, 'G3 hop')
+    eq(walk(25, [('jump', 3)]), 55, 'G3 step 1'); eq(walk(55, [('jump', -1)]), 45, 'G3 step 2'); eq(walk(45, [('jump', 2)]), 65, 'G3 step 3')
+    eq(T['G3']['parts'][2]['val'], (g3 - 25) // 10, 'G3 net tens'); eq(walk(25, [('jump', 4)]), g3, 'G3 one jump of 4 tens')
+    eq(T['G3']['val'], [4, 4], 'G3')
     # Investigation: jumps of ten from a start never change the ones digit; which starts can land exactly on 50
     reach = [s for s in range(0, 100) if 50 in [walk(s, [('jump', j)]) for j in range(0, 11) if walk(s, [('jump', j)]) <= 99]]
     eq(reach, [0, 10, 20, 30, 40, 50], 'I1 starts that land on 50 (50 itself counts as zero jumps)')
@@ -172,7 +182,7 @@ def run(d):
     eq(digits(walk(34, [('jump', 2)])), (5, 4), 'talk: tens digit changed, ones digit stayed')
     eq(X['E1']['val'], [walk(46, [('jump', 3)])], 'E1')
     eq(X['E2']['val'], [walk(74, [('jump', -3)]), walk(74, [('hop', -3)])], 'E2')
-    eq(X['E3']['val'], [walk(31, [('jump', 2), ('hop', 8)])], 'E3')
+    eq(X['E3']['val'], [walk(52, [('jump', 2)]), walk(52, [('jump', 2), ('hop', 3)])], 'E3')
     # Home practice
     eq(H['H1']['val'], walk(45, [('jump', 3)]), 'H1')
     eq(H['H2']['val'], [walk(86, [('jump', -4)]), walk(86, [('hop', -4)])], 'H2')
