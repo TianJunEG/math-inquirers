@@ -4,7 +4,7 @@ N = sys.argv[1]
 old = 'Math Inquirers Holiday Program  •  Notice it. Test it. Explain why.'
 new = f'Math Inquirers Level {N} Holiday Program  •  Notice it. Test it. Explain why.'
 c = 0
-for f in glob.glob(f'split/p{N}l*/project/slides/*.html'):
+for f in (glob.glob('split/l[0-9]*/project/slides/*.html') if N == '1' else glob.glob(f'split/p{N}l*/project/slides/*.html')):
     s = open(f).read()
     if old in s: open(f, 'w').write(s.replace(old, new)); c += 1
 print('footers fixed:', c)
