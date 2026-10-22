@@ -128,3 +128,4 @@ import p1gifted; p1gifted.apply(D,6)
 import p1gaps; p1gaps.apply(D,6)
 import p1fix
 p1fix.finish(D,6,{'l6-ws1':'40–52 MIN','l6-ws1ans':'52–54 MIN','l6-teachfew':'54–56 MIN','l6-teachnotes':'56–57 MIN','l6-trynotes':'57–58 MIN','l6-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','teachexact','teachswap'))
+import p1neutral; p1neutral.apply(D,6)

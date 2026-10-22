@@ -26,6 +26,18 @@ const figTaps = () => {
   s += `<circle cx="430" cy="232" r="4" fill="#7FB2DE"/><circle cx="440" cy="246" r="4" fill="#7FB2DE"/>` + tx(456, 244, 'crack: 6 ℓ a min out', { a: 'start', size: 22, fill: RED });
   return svg(680, 260, 'A 240-litre tank filled by tap A at 12 litres a minute and tap B at 18 litres a minute, with a crack that lets out 6 litres a minute', s, 250);
 };
+// Q5: a printed time line, 9.40 to 1.40: the first hour, then six half hours (drawn shapes, no glyphs)
+const figTimeline = () => {
+  const x0 = 20, u = 70; // 70 px per half hour
+  const marks = ['9.40', '10.40', '11.10', '11.40', '12.10', '12.40', '1.10', '1.40'];
+  const xs = [0, 2, 3, 4, 5, 6, 7, 8].map(k => x0 + k * u);
+  let s = `<rect x="${xs[0]}" y="40" width="${xs[1] - xs[0]}" height="36" fill="${YEL}" stroke="${NAVY}" stroke-width="2.5"/>` + tx((xs[0] + xs[1]) / 2, 64, 'first hour', { size: 15 });
+  for (let i = 1; i < 7; i++) s += `<rect x="${xs[i]}" y="40" width="${u}" height="36" fill="${WHITE}" stroke="${NAVY}" stroke-width="2.5"/>` + tx(xs[i] + u / 2, 64, 'half hour', { size: 13, w: 400 });
+  marks.forEach((m, i) => { s += `<line x1="${xs[i]}" y1="34" x2="${xs[i]}" y2="84" stroke="${NAVY}" stroke-width="2.5"/>` + tx(xs[i], 102, m, { size: 15 }); });
+  s += tx(x0, 22, 'Ali parks at 9.40 a.m.', { a: 'start', size: 15, fill: TEAL }) + tx(xs[6] + 12, 22, 'leaves 1.15 p.m.', { a: 'middle', size: 15, fill: TEAL });
+  s += `<line x1="${xs[6] + 12}" y1="28" x2="${xs[6] + 12}" y2="40" stroke="${TEAL}" stroke-width="3"/>`;
+  return svg(620, 112, 'A time line from 9.40 a.m. to 1.40 p.m.: the first hour, then six half hours. Ali parks at 9.40 and leaves at 1.15 p.m.', s, 560);
+};
 const figPark = () => svg(440, 132, 'Car park sign: first hour $1.20; after that 60 cents for every half hour or part of a half hour',
   `<rect x="6" y="6" width="428" height="120" rx="14" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/><circle cx="56" cy="66" r="34" fill="${TEAL}"/>` + tx(56, 80, 'P', { size: 40, fill: WHITE }) +
   tx(104, 38, 'CITY CAR PARK', { a: 'start', size: 18, fill: TEAL }) + tx(104, 70, 'First hour:  $1.20', { a: 'start', size: 18 }) +
@@ -38,7 +50,7 @@ module.exports = {
     skills: 'Find the value of 1 unit, make a table, compare, guess and check with a table, draw a timeline, check with a second method',
     materials: 'Mini whiteboards, a calculator for checking only, a stopwatch (or phone), a few real price tags or supermarket flyers if you have them.',
     online: 'Children hold whiteboards up to the camera; the tutor fills the rate tables on the slides. Pairs work in breakout rooms for the Explore. The brain break uses a phone stopwatch.',
-    warmup: 'Better Buy Showdown: three pairs of packs (pens, juice, eggs). Children point left or right for the better buy, then prove it with the price of one. Then five quick rate questions.',
+    warmup: 'Better Buy Showdown: first pair 4 pens for $2.00 or 10 pens for $4.00 (whole numbers, so everyone can start). Children point left or right for the better buy, then prove it with the price of one. Juice and egg pairs (decimal division) are for the tutor to use only if the group is ready. Then five quick rate questions.',
     explore: 'Printer race: Printer A prints 72 pages in 4 minutes and Printer B prints 50 pages in 2 minutes. Pairs build a rate table for each printer, decide which is faster, then predict and work out how long both printers together take to print 430 pages.',
     mini: 'A rate tells how much for 1 unit: per minute, per kg, per can. Find the value of 1 first, then multiply to scale up or divide to find how long. Better buy: compare the price of 1 (or of the same number of items). Working together: add the rates; a leak or drain takes its rate away. Worked examples: pens at two shops; two taps and a leak filling a 180 ℓ tank.',
     share: 'Is the biggest pack always the best buy? Give an example with numbers.',
@@ -57,7 +69,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome, Rate Racers! Today is about “how much for one”: one minute, one kilogram, one can. Once you know the rate for one, you can predict anything: how many pages in an hour, which pack is cheaper, when the tank will be full.', 'Shops, taps, printers and car parks all run on rates. By the end you will spot the trap in “Buy 10, get 2 free!”'],
-    warmIntro: ['Better Buy Showdown! Two packs of the same thing. Point left or right: which is the better buy? Then prove it.', 'Pens: 3 for $2.40, or 5 for $3.80. Point now. Who can prove it?'],
+    warmIntro: ['Better Buy Showdown! Two packs of the same thing. Point left or right: which is the better buy? Then prove it.', 'Pens: 4 for $2.00, or 10 for $4.00. Point now. Who can prove it? Volunteers only, please. The price of ONE pen each time is the fair way to compare.'],
     predict: ['Printer A prints 72 pages in 4 minutes. Printer B prints 50 pages in 2 minutes. Which is faster? Now both print a 430-page job together. Guess the time before you work it out.'],
     exploreHints: ['Stuck: how many pages does each printer print in 1 minute? Start the table with 1 minute.', 'Not sure how to compare: “Compare the same number of minutes for both printers.”', 'Finished early: how many pages should go to each printer so both finish at the same time?'],
     think: ['“5 kg of rice cost $9.50. I want the price of 1 kg first: $9.50 ÷ 5 = $1.90. Now anything is easy: 3 kg is 3 × $1.90 = $5.70. And backwards: $13.30 is 1330 cents and 1 kg costs 190 cents, so 1330 ÷ 190 = 133 ÷ 19 = 7 kg.”', '“Pens: 3 for $1.95 is 65¢ each. 5 for $3.10 is 62¢ each. So the 5-pack is the better buy, if I need that many. I check another way: 15 pens cost 5 × $1.95 = $9.75 or 3 × $3.10 = $9.30.”', '“Two taps fill 9 ℓ and 6 ℓ each minute. Together, every minute, 15 ℓ go in. 180 ÷ 15 = 12 minutes. A leak takes out 3 ℓ a minute, so only 12 ℓ stay in each minute: 180 ÷ 12 = 15 minutes.”'],
@@ -70,7 +82,7 @@ module.exports = {
 
   deck: {
     today: 'Find the rate for 1, compare better buys, add rates when taps and printers work together, and work out charges and price plans.',
-    warmGame: 'Better Buy Showdown. Three pairs of packs: pens (3 for $2.40 or 5 for $3.80), juice (1.5 ℓ for $3.00 or 2 ℓ for $3.80), eggs (10 for $3.20 or 12 for $3.96). Point to the better buy, then prove it with the price of 1.',
+    warmGame: 'Better Buy Showdown. First pair: pens, 4 for $2.00 or 10 for $4.00 (50¢ and 40¢ each). Point to the better buy, then prove it with the price of 1. Tutor extension if the group is ready: juice (1.5 ℓ for $3.00 or 2 ℓ for $3.80) and eggs (10 for $3.20 or 12 for $3.96).',
     warmQs: [['4 kg of rice cost $10. How much is 1 kg?', '$2.50'], ['A printer prints 30 pages a minute. How many pages in 6 minutes?', '180 pages'], ['A tap lets out 450 ml in 3 minutes. How many ml a minute?', '150 ml'], ['Cheese costs $1.20 for 100 g. How much is 1 kg?', '$12'], ['Ali types 40 words a minute. How long for 200 words?', '5 minutes']],
     expSetup: ['Printer A prints 72 pages in 4 minutes. Printer B prints 50 pages in 2 minutes.', 'Make a rate table for each printer: 1, 2, 4 and 10 minutes.', 'Which printer is faster? Show how you know.', 'Predict, then work out: how long do both printers together take to print 430 pages?'],
     expPic: 'two printers side by side, A with “72 pages in 4 min” and B with “50 pages in 2 min”, above two empty rate tables with rows for minutes and pages.',
@@ -137,9 +149,11 @@ module.exports = {
       H.sub('b', 'The machine starts at 9.00 a.m. At what time has it filled 400 bottles?   ________________'),
       H.q(2, 'Three shops sell the same can of drink.', { keepNext: true }),
       H.fig(figShops()),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> Shop A, 6 cans for $4.20, so 1 can costs $4.20 ÷ 6 = ______¢.'], { after: 20 }),
       H.sub('a', 'Price of 1 can:   A ________   B ________   C ________'),
       H.sub('b', 'Which shop is the best buy?   ________'),
       H.sub('c', 'Ben needs exactly 20 cans. He may buy from more than one shop, but only whole packs. Find one way and work out the cost.', { keepNext: true }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> take Shop C’s deal (12 cans for $7.80). How many more cans does Ben still need? Can you make that many from one shop’s packs?'], { after: 20 }),
       ...H.lines(1),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
@@ -152,7 +166,8 @@ module.exports = {
       H.sub('c', 'Mei splits the 900 pages between P and Q so that both printers start together and finish at the same time. How many pages does she give to P?   ________'),
       H.q(5, 'Look at the car park sign.', { keepNext: true }),
       H.fig(figPark()),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> how long is 9.40 a.m. to 1.15 p.m.? Count the first hour, then count the half hours (or parts of a half hour) that are left.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> the time line shows the first hour, then half hours. Circle every half hour that Ali’s car is in the car park (a part of a half hour counts). Count them.'], { after: 10 }),
+      H.fig(figTimeline()),
       H.sub('a', 'Ali parks from 9.40 a.m. to 1.15 p.m. How much does he pay?', { keepNext: true }),
       ...H.lines(1),
       H.sub('b', 'Mei pays $3.60. What is the longest time she could have parked?   ________________'),

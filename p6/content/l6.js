@@ -93,8 +93,8 @@ module.exports = {
     key: [
       ['Q1', '(a) 3/8  (b) 6/8 = 3/4  (c) about 375 (3/8 × 1000)  (d) No. Each spin is random, so the count wobbles around 375; 362 is close. About 19 runs in 20 land between 345 and 405.'],
       ['Q2', '(a) about 500 (1/2 × 1000)  (b) No. The flips are random, so each run gives a slightly different count near 500. Exactly 500 happens only about 1 run in 40.  (c) about 200 (1/5 × 1000)'],
-      ['Q3', '(a) 4/10 = 2/5  (b) 2 red (6 red, 6 blue: 6/12 = 1/2)  (the “add blue to make 1/5” part is now in Think harder 5)'],
-      ['Q4', '(a) Differences: 0 appears 6 times, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2 (36 in all).  (b) Ali 24/36 = 2/3, Ben 12/36 = 1/3  (c) Not fair: Ali is twice as likely to win, even though each has 3 differences.  (Making it fair is now in Think harder 5.)'],
+      ['Q3', '(a) 4/10 = 2/5  (b) 2 red (6 red, 6 blue: 6/12 = 1/2)  (the “add blue to make 1/5” part is now in Think harder 4)'],
+      ['Q4', '(a) Differences: 0 appears 6 times, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2 (36 in all).  (b) Ali 24/36 = 2/3, Ben 12/36 = 1/3  (c) Not fair: Ali is twice as likely to win, even though each has 3 differences.  (Making it fair is now in Think harder 4.)'],
       ['Q5', 'Gaps: 6, 6, a = b.  (a) About 167: P(double) = 6/36 = 1/6, and 1/6 × 1000 = 166 2/3.  (b) A count must be a whole number, and each run is random, so it lands near 167 (about 19 runs in 20 between 145 and 190), not exactly on it.']
     ]
   },

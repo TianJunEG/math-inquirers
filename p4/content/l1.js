@@ -153,7 +153,9 @@ module.exports = {
     W.push(H.sub('c', 'Is 49 a number with exactly 3 factors? List its factors to check. How could your answer to (b) have told you?'));
     W.push(H.ans('Factors of 49:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
-    W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?'));
+    W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?', { keepNext: true }));
+    W.push(H.sub('', 'Step 1: the numbers between 30 and 70 that are multiples of 3 AND 4 (count in 12s): ______, ______, ______', { keepNext: true }));
+    W.push(H.sub('', 'Step 2: cross out any multiple of 8. Left: ______ and ______.   Step 3: use the last clue.', { keepNext: true }));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
     W.push(...H.lines(2));
@@ -161,20 +163,24 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "factors and multiples",
  "check": [
   {
-   "q": "Two lifts. Lift A stops at every 3rd floor (3, 6, 9 …). Lift B stops at every 5th floor (5, 10, 15 …). Which floors from 1 to 40 do BOTH lifts stop at?",
-   "a": "Floors 15 and 30. They are in both lists: they are the multiples of 15."
+   "q": "Ali has 12 sweets. He puts them into bags so that every bag has the same number of sweets, with none left over. Use counters or draw dots. Write ONE way he can do it, like 2 bags of 6.",
+   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win: you may ask privately, can you find another?",
+   "s": "2 bags of 6, 3 bags of 4, 4 bags of 3 ... any way that uses all 12 is right.",
+   "kind": "access"
   },
   {
-   "q": "Siti says: \"The factors of 30 are 30, 60, 90, 120 …\". What has Siti listed? Write the real factors of 30.",
-   "a": "Siti listed the multiples of 30. The factors are 1, 2, 3, 5, 6, 10, 15, 30."
+   "q": "Two lifts. Lift A stops at every 3rd floor (3, 6, 9 ...). Lift B stops at every 5th floor (5, 10, 15 ...). Which floors from 1 to 40 do BOTH lifts stop at?",
+   "a": "Floors 15 and 30. They are in both lists: they are the multiples of 15.",
+   "s": "Floors 15 and 30.",
+   "kind": "think"
   }
  ],
- "why": "A factor goes INTO the number (never bigger than it). A multiple is in its times table (never smaller than it).",
+ "why": "A factor goes INTO a number (the sweets in each bag). A multiple is in a times table (the lift floors). Write both lists and look for what they share.",
  "invest": {
   "kind": "What if we change ...? What stays the same?  Find all the ways.",
   "head": "Bus meeting times",
@@ -185,7 +191,13 @@ module.exports.gaps = {
    "Find ALL the pairs of different gaps (each from 2 to 12 minutes) for two buses that next leave together after exactly 12 minutes. One pair is 3 and 4."
   ],
   "lines": 4,
-  "key": "(a) 18, 12, 30, 42 minutes. (b) The meeting time is always a multiple of both gaps (the smallest common multiple), and never smaller than the bigger gap. When the gaps share no factor except 1 (6 and 5, 6 and 7) the meeting time is their product (30, 42). Accept any true pattern. (c) Six pairs: 2 and 12, 3 and 4, 3 and 12, 4 and 6, 4 and 12, 6 and 12 (checked by brute force). Look for a systematic list (fix one gap, test the others) rather than guesses. A child with 3 or 4 pairs who can explain how they know is doing well. Extension: choose your own meeting time (such as 30) and find all the pairs."
+  "key": "(a) 18, 12, 30, 42 minutes. (b) The meeting time is always a multiple of both gaps (the smallest common multiple), and never smaller than the bigger gap. When the gaps share no factor except 1 (6 and 5, 6 and 7) the meeting time is their product (30, 42). Accept any true pattern. (c) Six pairs: 2 and 12, 3 and 4, 3 and 12, 4 and 6, 4 and 12, 6 and 12 (checked by brute force). Look for a systematic list (fix one gap, test the others) rather than guesses. A child with 3 or 4 pairs who can explain how they know is doing well. Extension: choose your own meeting time (such as 30) and find all the pairs.",
+  "easy": "Write the first five times Bus A leaves (7:00, 7:06, 7:12, ...) and the first five for Bus B (7:00, 7:08, ...). Circle a time that is in both lists."
  },
- "reflect": "The hardest part for me was knowing when to stop listing factors. I got unstuck by writing the pairs in order."
+ "reflect": "Something I did well: I wrote the factor pairs in order. The hardest part was knowing when to stop listing factors. What helped me: writing the pairs in order and asking my partner.",
+ "go2": {
+  "q": "What if we use 36 tiles? What is special about one of the rectangles?",
+  "a": "5 rectangles: 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6. The 6 × 6 is a square: 6 is its own partner, so 36 has an odd number (9) of factors."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
 };

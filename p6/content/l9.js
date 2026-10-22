@@ -188,7 +188,7 @@ module.exports = {
         ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 45 }), H.cell('', w3[1], { h: 45 }), H.cell('', w3[2], { h: 45 })]))
       ]),
       H.q(4, 'Seven P6 pupils get this pocket money each week:   $10,  $12,  $12,  $15,  $16,  $20,  $69', { keepNext: true }),
-      H.sub('a', 'Mean (the total is $154)  ____      (b)  Median (middle value)  ____      (c)  Mode (most often)  ____'),
+      H.sub('a', 'Mean (total $154)  ____     (b)  Median  ____     (c)  Mode  ____'),
       H.sub('d', 'How many of the pupils get less than the mean?   ________'),
       H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.'),
       ...H.lines(2),

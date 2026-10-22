@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 10: Challenge Day (mixed heuristics: working backwards, logic, models, listing, supposition)
+// Math Inquirers P5 — Lesson 10: Challenge Day (mixed strategies: working backwards, logic, models, listing, supposition)
 // Choose a start and explain it: draw a model, list it in order, make a table, work backwards, guess and check / suppose, use a logic grid.
 // Every answer below was worked out and checked with a short Python script (exhaustive search for every "find all" and every logic puzzle).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
@@ -18,12 +18,12 @@ const gridSvg = () => {
 
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Heuristics',
+    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Strategies',
     objective: 'Choose a way to start a puzzle (draw a model, list in order, make a table, work backwards, guess and check or suppose, use a logic grid), solve competition-style problems, check every clue, and explain why the chosen start works.',
-    skills: 'Choosing a heuristic, working backwards with fractions, logic grids, models with units, systematic listing, supposition, checking against every clue, explaining',
+    skills: 'Choosing a strategy, working backwards with fractions, logic grids, models with units, systematic listing, supposition, checking against every clue, explaining',
     materials: 'Four puzzle cards shown on the slide, or sent as images to each breakout room (backwards, logic, counting, guess and check), mini whiteboards, scrap paper, a 3 by 4 grid drawn on paper, certificates, stamps.',
     online: 'Each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together. Children hold their working up to the camera.',
-    warmup: 'Mix-up relay: one quick question from each of the earlier lessons (place value, fractions, area of a triangle, volume, rate, percentage, angles, patterns). Read a card, say a child\'s name; that child answers and names the next child. Then five quick questions on whiteboards.',
+    warmup: 'Mix-up relay: one quick question from each of the earlier lessons (place value, fractions, area of a triangle, volume, rate, percentage, angles, patterns). Read a card and ask for a volunteer (a child may say pass once, or choose a green quick card or an orange think-about-it card); that child answers and invites the next volunteer. Then five quick questions on whiteboards.',
     explore: 'Puzzle menu: pairs choose 2 of 4 puzzle cards (backwards number puzzle, pets logic, squares on a grid, two numbers). They write the answer AND how they started: draw, list, table, work backwards or guess and check.',
     mini: 'How to START: draw a model (units and parts), list in order, make a table, work backwards (undo the last step first), guess and check or suppose, logic grid (a tick means crosses in the rest of its row and column). Check every answer against every clue. Before page 2: count shapes of every size systematically, find who is lying by trying each possibility, and keep the difference in ages the same.',
     share: 'Pick one puzzle and teach it in two sentences: how did you START and how do you know your answer is right? Could another start also work?',
@@ -35,8 +35,8 @@ module.exports = {
     ],
     extension: 'Write your own logic puzzle with four people and four things. Test it on a friend: does it have exactly ONE answer? Which clue could you take away without ruining it?',
     key: [
-      ['Q1', '$63. Work backwards: 15 × 2 = 30 before the gift; 30 + 12 = 42 before lunch; 42 is 2/3 of the money, so 1/3 is 21 and the start is 63. Check: 63 − 21 = 42, 42 − 12 = 30, 30 ÷ 2 = 15 left.'],
-      ['Q2', 'Ali: chicken rice. Ben: laksa. Mei: satay. Siti: roti prata. (Clue 2 says a girl ordered the roti prata, so it is Mei or Siti, and clue 4 rules out Mei: roti prata is Siti\'s. Ali is then chicken rice by clue 1. Ben is not satay, so laksa, and Mei has satay.)'],
+      ['Q1', 'Ali: chicken rice. Ben: laksa. Mei: satay. Siti: roti prata. (Clue 2 says a girl ordered the roti prata, so it is Mei or Siti, and clue 4 rules out Mei: roti prata is Siti\'s. Ali is then chicken rice by clue 1. Ben is not satay, so laksa, and Mei has satay.)'],
+      ['Q2', '$63. Work backwards: 15 × 2 = 30 before the gift; 30 + 12 = 42 before lunch; 42 is 2/3 of the money, so 1/3 is 21 and the start is 63. Check: 63 − 21 = 42, 42 − 12 = 30, 30 ÷ 2 = 15 left.'],
       ['Q3', 'Mei $60, Ravi $55. Model: Mei is 4 units; Ravi is 3 units and $10. 7 units + $10 = $115, so 7 units = $105 and 1 unit = $15. Mei 4 × 15 = $60, Ravi 3 × 15 + 10 = $55. Check: 60 + 55 = 115 and 3/4 of 60 = 45, 45 + 10 = 55.'],
       ['Q4', '(a) 12 squares of size 1 by 1  (b) 6 squares of size 2 by 2 and 2 squares of size 3 by 3  (c) 12 + 6 + 2 = 20 squares. (There are none bigger: the grid is only 3 rows tall.)'],
       ['Q5', 'Ben broke the vase. Try each child: if Ali did it, Ali and Ben both lie (2 liars); if Mei did it, Ali and Mei both lie (2 liars); if Ben did it, only Ben lies (1 liar). Only Ben fits.'],
@@ -46,7 +46,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome to Challenge Day! There is no new topic today. There are puzzles from every lesson, and the only question that matters is: how do you START?', 'Clever inquirers do not always know the answer straight away. They have a toolbox of starts, and they check and explain.'],
-    warmIntro: ['Mix-up relay: I read a card from one of our earlier lessons and say a name. That child answers, then names the next child. A wrong answer gets a friendly "try again", never a groan.'],
+    warmIntro: ['Mix-up relay: I read a card from one of our earlier lessons and say a name. That child answers, then names the next child. A wrong answer gets a friendly "try again", never a groan. You may say "pass" once. The child who just answered may choose a green card (a quick one) or an orange card (a think-about-it one). The tutor keeps a private list so that every child gets a turn before anyone has a second, and asks for volunteers first; nobody is called on by name if they would rather not.'],
     predict: ['Look at the four puzzle cards. Which one do you think will be the hardest? Write your guess in the corner of your whiteboard and we will see at the end.'],
     exploreHints: ['Stuck: "How could you start? Draw it, list it, make a table, work backwards, or guess and check?"', 'Backwards puzzle: "Write the steps going forwards first. Then undo the LAST step first."', 'Logic puzzle: "Find a clue that tells you something for sure. Put a cross where it cannot be."', 'Finished early: make a puzzle card for the next pair.'],
     think: [
@@ -56,14 +56,14 @@ module.exports = {
     ],
     circulate: ['Ask: "How did you start? Is there another start that would work?"', 'Ask: "Did you check your answer against EVERY clue?"', 'Ask: "What would you try first if the numbers were much bigger?"'],
     hints: ['Hint 1: “Draw a bar or a table. Put what you know in it.”', 'Hint 2: “Which clue tells you something for sure? Start there.”', 'Hint 3: “Undo the last step first. Fractions: if half was spent, half is left.”'],
-    talk: ['“Pick one puzzle and teach it in two sentences: how did you start and how do you know you are right?”', '“Which start do you think was the most useful today? When would you NOT use it?”'],
+    talk: ['“Pick one puzzle and tell your partner in two sentences. You can say: I started by ____. I know it is right because ____. You may pass.”', '“Which start do you think was the most useful today? When would you NOT use it?”'],
     talkAns: 'Open. Praise reasons, not just answers. Good answers say what the start does: a model shows how the parts relate, working backwards undoes steps in reverse, a logic grid keeps clues tidy, listing by size makes sure nothing is missed. Different starts can both work.',
     close: ['“Today you used a toolbox of starts and checked every clue. That is how problem solvers work, and it is the end of our Math Inquirers program.”', '“Do the exit ticket on your own, then show me. Then it is certificate time!”']
   },
 
   deck: {
     today: 'Choose a start for a puzzle: draw a model, work backwards, use a logic grid, list in order or guess and check. Then check every clue.',
-    warmGame: 'Mix-up relay. One quick question from each earlier lesson. Read a card, say a name; that child answers and names the next child.',
+    warmGame: 'Mix-up relay. One quick question from each earlier lesson. Read a card; a volunteer answers and invites the next volunteer. You may say pass once.',
     warmQs: [['What is 3/4 of 48?', '36'], ['Area of a triangle with base 10 cm and height 6 cm', '30 cm²'], ['A tap fills 6 litres in 2 minutes. How long to fill 45 litres?', '15 minutes'], ['Two angles on a straight line are 65° and ___', '115°'], ['Next in the pattern: 5, 8, 11, 14, __', '17']],
     expSetup: ['Pick 2 of the 4 puzzle cards. Work in pairs.', 'Write your answer, and write HOW you started (draw, list, table, work backwards, guess and check).', 'Check your answer against every clue.', 'Be ready to teach one card to the group in two sentences.'],
     expPic: 'four puzzle cards laid out on a desk: a number machine, a 3 by 3 logic grid, a grid of squares and two number boxes.',
@@ -74,7 +74,7 @@ module.exports = {
     keyBig: 'Draw it, list it, make a table, work backwards, guess and check or suppose, use a logic grid. Then explain why your start works.',
     keySmall: 'Check your answer against EVERY clue, not just one.',
     brk: 'Puzzle stretch: stand up and show a 3 by 3 grid with your fingers. How many squares can you find on it? Count by size and tell your neighbour.',
-    ws1: 'Page 1, in pairs: Q1 a money puzzle (work backwards), Q2 a food logic grid, Q3 two amounts with a model.',
+    ws1: 'Page 1, in pairs: Q1 a food logic grid, Q2 a money puzzle (work backwards), Q3 two amounts with a model.',
     ws2: 'Page 2, on your own: Q4 how many squares, Q5 who broke the vase, Q6 ages. Say which start you used.'
   },
 
@@ -113,18 +113,18 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.p('Choose a start: draw a model, list in order, make a table, work backwards or guess and check. Check your answer against EVERY clue.', { after: 40 }));
-    // Q1 backwards
-    W.push(H.q(1, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
-    W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> write the steps in order. Then undo the LAST step first.'], { after: 20 }));
-    W.push(...H.lines(1));
-    W.push(H.ans('Answer:  $'));
-    // Q2 logic
-    W.push(H.q(2, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
+    // Q1 logic (was Q2)
+    W.push(H.q(1, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
     ['Clue 1:  Ali did not order laksa or satay.', 'Clue 2:  The roti prata was ordered by a girl (Mei and Siti are girls; Ali and Ben are boys).', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));
     { const ws = [1900, 2000, 2000, 2000, 2000];
       W.push(H.tbl(ws, [H.row(['', 'Chicken rice', 'Laksa', 'Satay', 'Roti prata'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 40 }))),
         ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 34 }), ...ws.slice(1).map(w => H.cell('', w, { h: 34 }))]))])); }
     W.push(H.p('Ali: __________   Ben: __________   Mei: __________   Siti: __________', { before: 20, after: 10 }));
+    // Q2 backwards (was Q1)
+    W.push(H.q(2, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
+    W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> write the steps in order. Then undo the LAST step first.'], { after: 20 }));
+    W.push(...H.lines(1));
+    W.push(H.ans('Answer:  $'));
     // Q3 model
     W.push(H.q(3, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.', { keepNext: true }));
     W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> Mei is 4 equal units. How many units is 3/4 of Mei’s? Where does the $10 go?'], { after: 20 }));

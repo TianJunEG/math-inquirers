@@ -73,8 +73,8 @@ PL={
 5:dict(teach1=(25,27),we1=(27,29),try1=(29,30),we2=(30,32),try2=(32,33),key=(33,35),teachback=(40,42),ws1=(42,52),teachlist=(54,56),teachbig=(56,57),teachtable=(57,58),ws2=(58,65)),
 6:dict(teach1=(25,26),we1=(26,28),try1=(28,29),we2=(29,31),try2=(31,33),key=(33,35),ws1=(40,52),teachadd=(54,55),tryadd=(55,56),teachpairs=(56,57),teachbetween=(57,58),ws2=(58,65)),
 7:dict(teach1=(25,27),try1=(27,28),teach2=(28,30),we2=(30,31),try2=(31,32),teach3=(32,34),key=(34,35),teachsq=(40,41),ws1=(41,52),teachadd=(54,56),ws2=(56,65)),
-8:dict(teach1=(25,27),we1=(27,29),try1=(29,30),teach2=(30,31),we2=(31,32),try2=(32,33),teach3=(33,34),key=(34,35),ws1=(40,52),teachgrid=(54,57),ws2=(57,65)),
-9:dict(teach1=(25,27),we1=(27,29),try1=(29,30),teach2=(30,32),we2=(32,33),try2=(33,34),key=(34,35),teachbudget=(40,42),ws1=(42,52),teach24=(54,56),teachlist=(56,57),ws2=(57,65)),
+8:dict(teach1=(25,27),teach2=(27,29),we2=(29,31),try2=(31,32),teach3=(32,34),key=(34,35),we1=(40,42),try1=(42,43),ws1=(43,52),teachgrid=(54,57),ws2=(57,65)),
+9:dict(teach1=(25,28),we1=(28,31),try1=(31,34),key=(34,35),teachbudget=(40,42),ws1=(42,52),teach2=(54,55),we2=(55,56),teach24=(56,57),ws2=(57,65)),
 10:dict(teach1=(25,26),we1=(26,28),try1=(28,29),we2=(29,31),try2=(31,32),we3=(32,34),key=(34,35),ws1=(40,52),teachlist=(54,56),teachtable=(56,57),teachbetween=(57,58),ws2=(58,65)),
 }
 REFLECT_DO=['I kept trying','I asked a question','I checked my answer','I tried a new idea']

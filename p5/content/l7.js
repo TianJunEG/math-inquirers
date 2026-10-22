@@ -127,6 +127,7 @@ module.exports = {
     H.sub('b', 'A quick way to find 99% of $240:  ____________________________', { after: 40 }),
     H.q(2, 'Mei wants a rice cooker. Two shops sell the same one. GST is 9%.', { keepNext: true }),
     H.fig(shopsFig()),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> find 10% of Shop A’s price by dividing by 10. Then 20% is double that.'], { after: 20 }),
     H.sub('a', 'Shop A: the price after 20% off, before GST.      ____________'),
     H.sub('b', 'Shop A: the GST on the sale price.      ____________'),
     H.sub('c', 'Shop A: the price Mei pays.      ____________'),
@@ -137,6 +138,7 @@ module.exports = {
     ...H.lines(1),
 
     H.q(4, 'Siti had $120. She spent 20% of her money on a bag. Then she spent 25% of the remaining money on a book.', { pb: true, before: 0, keepNext: true }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> 10% of $120 is $______, so 20% of $120 is $______.'], { after: 20 }),
     H.fig(barFig()),
     H.sub('a', 'The bag cost  ________        (b)  The book cost  ________        (c)  Money left  ________'),
     H.sub('d', 'Ben says, "She spent 20% + 25% = 45%, so 55% of her money is left." What percentage of her money is really left? Explain.', { after: 40 }),

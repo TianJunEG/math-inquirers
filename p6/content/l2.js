@@ -102,7 +102,7 @@ module.exports = {
       ['Q2', '(a) 72 = 2 × 2 × 2 × 3 × 3  (b) 150 = 2 × 3 × 5 × 5  (c) 126 (2 × 3 × 3 × 7)'],
       ['Q3', 'd = 1 to 6.  6 mod d: 0, 0, 0, 2, 1, 0.  count after each loop: 1, 2, 3, 3, 3, 4.  (a) 4 (the factors 1, 2, 3, 6)  (b) It says 2, so 13 is prime: its only factors are 1 and 13.'],
       ['Q4', '(a) 24 = 5 + 19 = 7 + 17 = 11 + 13 (3 ways)  (b) An odd total needs one even and one odd number. The only even prime is 2, and 27 − 2 = 25 is not prime.'],
-      ['Q5', '(a) 4, 9, 25 (three numbers up to 30)  (b) They are squares of primes (2 × 2, 3 × 3, 5 × 5). Their factors are 1, the prime and the square.  (The 36 and the 50 versions are Think harder 4 and 5.)'],
+      ['Q5', '(a) 4, 9, 25 (three numbers up to 30)  (b) They are squares of primes (2 × 2, 3 × 3, 5 × 5). Their factors are 1, the prime and the square.  (The 36 and the 50 versions are Think harder 4.)'],
       ['Q6', 'E, C, B. Inside B: F (with A inside F), then D. It says 1, 2, 4, 5, 8, 10, 20, 40 (8 numbers, one per second).']
     ]
   },

@@ -161,17 +161,21 @@ module.exports = {
   ]
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "decimals",
  "check": [
   {
-   "q": "Which is bigger, 0.8 or 0.75? Explain how you know.",
-   "a": "0.8. It has 8 tenths and 0.75 has only 7 tenths (0.8 = 0.80). More digits does not mean bigger."
+   "q": "Ali has 8 ten-cent coins ($0.80). Mei has 7 ten-cent coins and one 5-cent coin ($0.75). Draw the coins. Who has more money?",
+   "a": "Ali has more. $0.80 (8 tenths) is more than $0.75 (7 tenths and 5 hundredths). 0.8 is the same as 0.80, and 0.80 is bigger than 0.75.",
+   "s": "Ali: $0.80 is more than $0.75.",
+   "kind": "access"
   },
   {
-   "q": "Write a decimal that is between 3.4 and 3.5. How do you know it fits?",
-   "a": "Any decimal from 3.401 to 3.499, for example 3.45. Write 3.4 as 3.40 and 3.5 as 3.50: 3.45 is between them."
+   "q": "Write a decimal that is between 3.4 and 3.5. How do you know it fits? Hint: draw a number line from 3.4 to 3.5 with 10 steps.",
+   "a": "Any decimal from 3.401 to 3.499, for example 3.45. Write 3.4 as 3.40 and 3.5 as 3.50: 3.45 sits between them.",
+   "s": "For example 3.45 (3.40 < 3.45 < 3.50).",
+   "kind": "think"
   }
  ],
  "why": "Line up the decimal points and compare place by place. Write extra zeros so every number has the same number of places.",
@@ -185,7 +189,13 @@ module.exports.gaps = {
    "Is Siti right? Can you find a decimal between 0.35 and your smallest one? What do you think happens if you keep going?"
   ],
   "lines": 4,
-  "key": "(a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare."
+  "key": "(a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare.",
+  "easy": "Write 0.35 as 0.350 and 0.36 as 0.360. Now write ONE decimal that sits between them."
  },
- "reflect": "The hardest part for me was comparing decimals with different numbers of digits. I got unstuck by adding zeros so they had the same length."
+ "reflect": "Something I did well: I wrote the extra zeros. The hardest part was comparing decimals with different numbers of digits. What helped me: adding zeros so they had the same length.",
+ "go2": {
+  "q": "What if the target is 50 instead of 5? Which number with these cards is closest to 50?",
+  "a": "52.8 (2.8 away). The next closest, 58.2, is 8.2 away."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
 };

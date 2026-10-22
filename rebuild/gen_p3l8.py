@@ -306,7 +306,7 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Which letters have BOTH a pai
 put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: F and H. F: the top and middle lines are parallel, and each meets the upright line at a right angle. H: the two upright lines are parallel, and the middle line is perpendicular to both. V: two lines that meet, not at a right angle. Z: the top and bottom are parallel, but the slanted line is not perpendicular to them. Extension: how many right angles are in a square drawn as a noughts-and-crosses grid? (36)'))
 
 # ---------- write ----------
-order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','teach3','key','break','ws1','ws1ans','teachgrid','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
+order=['title','warm1','warm2','explore1','explore2','teach1','teach2','we2','try2','teach3','key','break','we1','try1','ws1','ws1ans','teachgrid','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[PFX+o for o in order]
 os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 import p3_gifted; order[:]=p3_gifted.add(S,order,8)  # close-the-gaps: warm-up check + look-back slides

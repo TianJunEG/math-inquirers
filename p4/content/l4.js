@@ -49,13 +49,24 @@ const setSvg = () => {
   return s + '</svg>';
 };
 
+// Q4c scaffold: two bars of the same length, 4/9 and 5/8 shaded (drawn, no glyphs)
+const cmpSvg = () => {
+  const x0 = 120, W = 360;
+  let s = `<svg aria-label="Two bars of the same length. The top bar is cut into 9 equal parts with 4 shaded. The bottom bar is cut into 8 equal parts with 5 shaded." viewBox="0 0 600 130" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  [[9, 4, 14], [8, 5, 72]].forEach(([n, k, y]) => {
+    for (let i = 0; i < n; i++) s += `<rect x="${x0 + i * W / n}" y="${y}" width="${W / n}" height="40" fill="${i < k ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
+    s += sfr(60, y + 16, k, n, 17);
+  });
+  return s + '</svg>';
+};
+
 module.exports = {
   lesson: {
     n: 4, week: 2, session: 'B', title: 'Fraction Frontier', topic: 'Fractions',
     objective: 'Change between improper fractions and mixed numbers using fraction bars and number lines, find a fraction of a set (and the whole set from a part) with a bar model, and compare fractions with different denominators by making the denominators the same, comparing with one half, or comparing pieces of the same numerator.',
     skills: 'Drawing a fraction model, using a number line, drawing a bar model, making a list in order, comparing with a benchmark, explaining a comparison',
-    materials: 'Paper strips (one per child, to fold into halves, quarters and eighths), paper circles to cut into quarters, 30 counters, mini whiteboards and markers.',
-    online: 'Before the lesson children cut out 3 paper circles and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards.',
+    materials: 'Paper strips (one per child, to fold into halves, quarters and eighths), the three pizza circles from the cut-out page (to cut into quarters), 30 counters, mini whiteboards and markers.',
+    online: 'Before the lesson children cut out the 3 pizza circles from the kit page and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards.',
     warmup: 'More or less than a half? The tutor shows a fraction card (3/8, 5/9, 6/12, 7/10, 2/5, 4/7). Thumbs up if it is more than a half, thumbs down if less, flat hand if it is exactly a half. Then explain how you know.',
     explore: 'Pizza party: every pizza is cut into 4 equal slices and Ravi\'s group eats 11 slices. Pairs use paper quarter-slices to build whole pizzas, then write how many pizzas were eaten in two ways (11/4 and 2 3/4) and decide how many slices make exactly 3 pizzas.',
     mini: 'Improper fraction to mixed number with bars: 7/3 = 3 thirds + 3 thirds + 1 third = 2 1/3. Mixed number to improper fraction: 4 2/3 = 12 thirds + 2 thirds = 14/3. Fractions on a number line in thirds. Fraction of a set with a bar model: 3/5 of 30 (5 units = 30, 1 unit = 6, 3 units = 18). Before page 2: compare unlike fractions by making the denominators the same (2/3 = 6/9 > 5/9), by comparing with one half, or by the size of the pieces (2/5 > 2/9); find the whole from a part (2/3 of a bag is 24 marbles, so 36); find ALL fractions between two fractions by changing to the same denominator.',
@@ -158,11 +169,12 @@ module.exports = {
     W.push(H.fig(setSvg()));
     W.push(H.sub('a', ['How many wear glasses? ______      <b style="color:#1F7A6F">b</b>  How many do NOT wear glasses? ______']));
 
-    W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. Then write how you know.', { pb: true, before: 0, keepNext: true }));
-    W.push(H.sub('a', [fr(3, 4), box, fr(5, 8), '     ____________________________']));
-    W.push(H.sub('b', [fr(2, 3), box, fr(7, 12), '     ____________________________']));
-    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     ____________________________']));
-    W.push(H.sub('d', [fr(3, 5), box, fr(3, 7), '     ____________________________']));
+    W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. In (c), write how you know.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.sub('a', [fr(3, 4), box, fr(5, 8)]));
+    W.push(H.sub('b', [fr(2, 3), box, fr(7, 12)]));
+    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     The two bars below are the same length. Write how you know:  ______________________']));
+    W.push(H.fig(cmpSvg()));
+    W.push(H.sub('d', [fr(3, 5), box, fr(3, 7)]));
     W.push(H.sub('e', ['Put in order, smallest first:   ', fr(2, 3), ',  ', fr(5, 6), ',  ', fr(7, 12), '        ________,  ________,  ________']));
     W.push(H.q(5, ['', fr(3, 5), ' of the sweets in a jar are red. There are 27 red sweets.'], { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model. How many sweets are in the jar?'));
@@ -177,20 +189,24 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "fractions",
  "check": [
   {
-   "q": "A recipe needs 9/4 cups of flour. Ali only has a 1-cup scoop. How many full scoops does he fill, and what part of a scoop is left to add?",
-   "a": "2 full scoops and 1/4 of a scoop (9/4 = 2 1/4)."
+   "q": "Fold a paper strip in half, then in half again, then open it. How many equal parts are there? Colour 3 of them. What fraction of the strip is coloured?",
+   "a": "4 equal parts, and 3 of the 4 are coloured, so 3/4 of the strip.",
+   "s": "4 equal parts, 3 coloured: 3/4.",
+   "kind": "access"
   },
   {
-   "q": "Which is bigger, 3/8 or 3/5? Explain how you know.",
-   "a": "3/5. Both have 3 pieces, but fifths are bigger pieces than eighths, so 3 fifths is more than 3 eighths."
+   "q": "A recipe needs 9 scoops of flour. Each scoop is 1/4 of a cup. How many full cups is that, and how much is left over? Draw it if you like.",
+   "a": "2 full cups and 1/4 of a cup left over (9/4 = 2 1/4). Four scoops make one cup: 8 scoops make 2 cups and 1 scoop is left.",
+   "s": "2 full cups and 1/4 cup left: 9/4 = 2 1/4.",
+   "kind": "think"
   }
  ],
- "why": "The denominator tells how big the pieces are: more pieces in the whole means smaller pieces. Compare pieces, or make the denominators the same.",
+ "why": "Four quarters make a whole. Count the quarters in groups of 4: each group is one whole.",
  "invest": {
   "kind": "What if we change ...? What stays the same?",
   "head": "Sharing 24 stickers",
@@ -201,7 +217,13 @@ module.exports.gaps = {
    "Mei gets more stickers. What is the smallest number of stickers so that 1/2, 1/3, 1/4, 1/5 AND 1/6 of them are all whole numbers?"
   ],
   "lines": 4,
-  "key": "(a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1."
+  "key": "(a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1.",
+  "easy": "Draw 24 dots. Circle them in 2 equal groups: how many dots are in one group? That is 1/2 of 24. Now try 3 equal groups."
  },
- "reflect": "The hardest part for me was comparing 3/8 and 3/5. I got unstuck by drawing two fraction bars."
+ "reflect": "Something I did well: I drew fraction bars. The hardest part was comparing 3/8 and 3/5. What helped me: drawing two bars of the same length.",
+ "go2": {
+  "q": "What if each pizza had 8 slices and they ate 19? How many pizzas is that?",
+  "a": "2 pizzas and 3 slices: 19/8 = 2 3/8."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
 };

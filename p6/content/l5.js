@@ -93,10 +93,10 @@ module.exports = {
     mistakes: ['Adding the choices instead of multiplying them (4 T-shirts and 3 shorts gives 7 outfits).', 'Counting each handshake twice (7 × 6 = 42) or letting a person shake their own hand.', 'Digit cards: putting 0 at the front of a number, or using the same card twice.'],
     extension: 'Write a program that counts every 3-digit number whose digits add up to 5 (three loops, one inside another). Then change 5 to other totals: which total gives the most numbers?',
     key: [
-      ['Q1', '(a) 12 (4 × 3)  (b) 24 (4 × 3 × 2)  (the “at least 40 outfits” part is now in Think harder 5)'],
+      ['Q1', '(a) 12 (4 × 3)  (b) 24 (4 × 3 × 2)  (the “at least 40 outfits” part is now in Think harder 4)'],
       ['Q2', '(a) 9 (3 choices for the tens, as 0 cannot go first, then 3 for the ones: 3 × 3): 30, 35, 38, 50, 53, 58, 80, 83, 85  (b) 18 (3 × 3 × 2)'],
       ['Q3', '(a) a 1, b 1: 11;  1, 2: 12;  1, 3: 13;  1, 4: 14;  2, 1: 21;  2, 2: 22  (b) 12 (3 × 4)  (c) 34  (d) 20 (5 × 4)'],
-      ['Q4', '(a) 21 (6 + 5 + 4 + 3 + 2 + 1)  (b) Every handshake has been counted twice, once for each person: 42 ÷ 2 = 21.  (the “45 handshakes” part is now in Think harder 5)'],
+      ['Q4', '(a) 21 (6 + 5 + 4 + 3 + 2 + 1)  (b) Every handshake has been counted twice, once for each person: 42 ÷ 2 = 21.  (the “45 handshakes” part is now in Think harder 4)'],
       ['Q5', '(a) 20 (corner numbers, bottom row up: 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20)  (b) 8 (put 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8). 12 routes go through P.'],
       ['Q6', 'Gaps: repeat 7, repeat 7, if a < b (a > b also works: either keeps each pair once).  (a) 21, the same as Q4(a); the “if” is checked 7 × 7 = 49 times.  (b) It says 7: it counts each person with themselves (a = b), which is not a handshake.']
     ]

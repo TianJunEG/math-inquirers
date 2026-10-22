@@ -71,13 +71,14 @@ const qtext = (x, y, t, bold) => `<text x="${x}" y="${y}" font-size="15" ${bold 
 
 // Q1: three IN/OUT tables with a rule line beside each
 const rulesFig = () => {
-  const T = [['a', ['1', '2', '3', '4', '10'], ['4', '5', '6', '7', '']], ['b', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['c', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['d', ['1', '2', '3', '4', '20'], ['1', '5', '9', '13', '']]];
-  let s = `<svg aria-label="Four tables of IN and OUT numbers with gaps, and a line to write each rule" viewBox="0 0 600 284" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
+  const T = [['b', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['c', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['d', ['1', '2', '3', '4', '20'], ['1', '5', '9', '13', '']]];
+  let s = `<svg aria-label="Four tables of IN and OUT numbers with gaps, and a line to write each rule" viewBox="0 0 600 218" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
+  s += `<text x="2" y="22" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">(a)</text>` + qtext(28, 22, 'IN 1, 2, 3, 4 give OUT 4, 5, 6, 7.   Rule: OUT = n + ____    OUT for IN 10 = ____', false);
   T.forEach(([l, ins, outs], k) => {
-    const y = 6 + k * 70;
+    const y = 30 + k * 62;
     s += `<text x="2" y="${y + 36}" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">(${l})</text>`;
     s += traceTable(28, y, ['IN', ...ins], [['OUT', ...outs]], 52, 28);
-    s += qline(354, y + 36, k === 0 ? 'Rule: OUT = n + ____' : 'Rule: OUT =');
+    s += qline(354, y + 36, 'Rule: OUT =');
   });
   return s + '</svg>';
 };
@@ -199,14 +200,13 @@ module.exports = {
   },
 
   workbook: H0 => { const H = Object.assign({}, H0, { sub: (l, t, o) => H0.sub(l, typeof t === 'string' ? t.replace(/ {2,}/g, m => '\u00A0'.repeat(m.length)) : t, o) }); return [
-    H.q(1, 'Guess my rule. Fill in the gaps. Write each rule with n.', { before: 40, keepNext: true }),
+    H.q(1, 'Guess my rule. Fill in the gaps. Write each rule with n.', { before: 10, keepNext: true }),
     H.fig(rulesFig()),
     H.q(2, 'Two machines use the same steps in a different order.', { keepNext: true }),
     H.fig(twoMachines()),
     H.sub('a', 'Put in 5.     Machine P gives __________     Machine Q gives __________'),
     H.sub('b', 'Write each rule with n.    P:  OUT = __________    Q:  OUT = __________'),
-    H.sub('c', 'Can P and Q ever give the same OUT for the same IN? Explain.'),
-    ...H.lines(1),
+    H.sub('c', 'Can P and Q ever give the same OUT for the same IN? Explain.  ______________________________'),
     H.q(3, 'Run each machine backwards to find n. Then check by going forwards.', { keepNext: true }),
     H.sub('a', 'n → × 6 → − 5 → 43             n = ________     Check: ________________'),
     H.sub('b', '7n + 4 = 74                              n = ________     Check: ________________'),

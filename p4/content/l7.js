@@ -190,20 +190,24 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "area and perimeter",
  "check": [
   {
-   "q": "An L-shaped room is made from a 6 m by 4 m rectangle with a 2 m by 1 m piece cut out of one corner. What is the area of the room?",
-   "a": "22 m². The full rectangle is 6 × 4 = 24 m², and 24 − 2 = 22."
+   "q": "Look at the picture: a 5 by 3 rectangle of squares with one corner square cut out. Count the squares that are left. How many squares is the area?",
+   "a": "14 squares (the full 5 by 3 rectangle is 15 squares, and 1 is cut out).",
+   "s": "14 squares (15 − 1).",
+   "kind": "access"
   },
   {
-   "q": "What is the perimeter of the same L-shaped room? Explain how you know.",
-   "a": "20 m. Cutting a piece out of a corner does not change the perimeter. Push the steps out to the 6 by 4 rectangle: 6 + 4 + 6 + 4 = 20."
+   "q": "The perimeter is the distance all the way round the edge. Is the perimeter of this shape longer than, shorter than or the same as the perimeter of the full 5 by 3 rectangle? Say why.",
+   "a": "The same: 16 units for both. Push the cut-out corner back out. The two edges of the notch are just as long as the two edges of the corner they replace.",
+   "s": "The same (16). Push the corner back out.",
+   "kind": "think"
   }
  ],
- "why": "For area, split or take away. For perimeter, push the steps out to a rectangle (when all the corners are square corners).",
+ "why": "For area, count the squares or take away the piece that is missing. For perimeter, push the corner back out to a rectangle.",
  "invest": {
   "kind": "Is it always true? Test and explain.",
   "head": "Bigger area, bigger perimeter?",
@@ -214,7 +218,13 @@ module.exports.gaps = {
    "Is Ali right? Which of your rectangles has the biggest area? What is special about its shape?"
   ],
   "lines": 5,
-  "key": "(a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter."
+  "key": "(a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter.",
+  "easy": "Draw a 4 cm by 4 cm square on the Square grid. Write its area and its perimeter."
  },
- "reflect": "The hardest part for me was finding the missing lengths on the staircase. I got unstuck by writing the lengths on the picture."
+ "reflect": "Something I did well: I wrote the lengths on the picture. The hardest part was finding the missing lengths on the staircase. What helped me: writing every length I could work out on the picture.",
+ "go2": {
+  "q": "What if you use 24 tiles? Make every rectangle. Which has the smallest perimeter?",
+  "a": "4 rectangles: 1 × 24 (perimeter 50 cm), 2 × 12 (28 cm), 3 × 8 (22 cm) and 4 × 6 (20 cm). The 4 by 6 has the smallest perimeter: it is the closest to a square."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
 };

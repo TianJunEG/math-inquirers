@@ -56,7 +56,7 @@ const L = {
       ['Ali reads 12 pages in 4 minutes. Mei reads 20 pages in 5 minutes. Who reads faster? How can you be sure?', 'Mei. Ali reads 3 pages a minute (12 ÷ 4) and Mei reads 4 pages a minute (20 ÷ 5). Comparing the amount for 1 minute makes it fair.']
     ],
     whatIf: ['Printer A prints 18 pages a minute and printer B prints 25 pages a minute. Together they print 430 pages in 10 minutes. How many pages should each printer be given so that both finish at exactly the same time?', 'Printer A gets 180 pages (18 × 10) and printer B gets 250 pages (25 × 10); 180 + 250 = 430. If both work for the whole 10 minutes they finish together.'],
-    solo: 'Q4 (a), Q5 and Q6 (a)', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
+    solo: 'Q4 (a), Q6 (a) and then Q5', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
   },
   7: {
     sneak: [

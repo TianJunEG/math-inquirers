@@ -113,7 +113,7 @@ put('p6l10-ws1',ws_preview('p6l10-ws1','7–19 MIN','Challenge round: workbook p
 put('p6l10-ws1ans',check_slide('p6l10-ws1ans','19–21 MIN','Challenge round: check together',[('Q1','a) 51   b) 5n + 1   c) 20   d) 76: a chain of 15 hexagons'),('Q2','a) 49   b) 2 × 2 × 3 × 7   c) 3 + 37,  11 + 29,  17 + 23'),('Q3','a) −7 °C  b) 5  c) 15  d) 1 o’clock')],
  'Click after a team explains. Q1: each new hexagon adds 5 sticks (it shares one side), so 5n + 1; 5 × 10 + 1 = 51; 5n + 1 = 101 gives n = 20; the code starts at 6 and adds 5 fourteen times: 6 + 70 = 76, which is 5 × 15 + 1, the chain of 15. '
  'Q2: a 2-digit number with exactly 3 factors is the square of a prime: 25 or 49; digits add to 13: 49. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7. For 40 test every prime up to 20: 3 + 37, 11 + 29, 17 + 23 work; 2, 5, 7, 13, 19 do not (38, 35, 33, 27, 21 are not prime). '
- 'Q3: a) −4 + 9 = 5, 5 − 12 = −7. b) 3n − 10 = n, so 2n = 10, n = 5 (or trial: 5 × 3 − 10 = 5). c) 360 ÷ 24 = 15. d) 100 hours = 8 × 12 + 4, so 4 hours on from 9: 1 o’clock. (Digit cards and probability are now in Think harder 5.)',lw=200))
+ 'Q3: a) −4 + 9 = 5, 5 − 12 = −7. b) 3n − 10 = n, so 2n = 10, n = 5 (or trial: 5 × 3 − 10 = 5). c) 360 ÷ 24 = 15. d) 100 hours = 8 × 12 + 4, so 4 hours on from 9: 1 o’clock. (Digit cards and probability are now in Think harder 4.)',lw=200))
 
 # ---------------- 7. explore 2: talk ----------------
 body=h2('Challenge round: talk about it')+numcards([(f'{i+1}.',q) for i,(q,a) in enumerate(DK['expAsk'])],38)

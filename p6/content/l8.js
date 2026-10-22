@@ -107,10 +107,10 @@ module.exports = {
     mistakes: ['Off by one: counting A as 1 in the maths (we use A = 0, Z = 25), or forgetting that Scratch’s list starts at item 1.', 'Not wrapping round: writing a number bigger than 25 (or below 0 when decoding) instead of taking away or adding 26.', 'Calendars: counting today as day 1 (Saturday + 2 days is Monday, not Sunday), or giving the quotient instead of the remainder for mod.'],
     extension: 'The starter already keeps spaces (if the letter is in the alphabet list, code it, else join the letter itself). Add a “crack” button that says the message decoded with every shift from 1 to 25.',
     key: [
-      ['Q1', '(a) 3 o’clock (15 − 12)  (b) 5 o’clock (30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5)  (c) 7 o’clock (4 − 9 = −5, −5 + 12 = 7)  (d) Monday (100 mod 7 = 2, Saturday + 2)  (e) Thursday (30 mod 7 = 2, Saturday back 2)  (the three “mod” sums are now in Think harder 5)'],
+      ['Q1', '(a) 3 o’clock (15 − 12)  (b) 5 o’clock (30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5)  (c) 7 o’clock (4 − 9 = −5, −5 + 12 = 7)  (d) Monday (100 mod 7 = 2, Saturday + 2)  (e) Thursday (30 mod 7 = 2, Saturday back 2)  (the three “mod” sums are now in Think harder 4)'],
       ['Q2', '(a) WPGGH  (b) CODE IS FUN  (c) 16 (10 + 16 = 26)'],
       ['Q3', 'W: 22, 27, 1, B.  A: 0, 5, 5, F.  Y: 24, 29, 3, D.  The program says BFD.'],
-      ['Q4', '(a) BPM, probably THE  (b) 8 (T = 19, 19 + 8 = 27, 27 mod 26 = 1 = B)  (c) THE (the first word). The whole message, THE KEY IS UNDER THE MAT, is now in Think harder 5.'],
+      ['Q4', '(a) BPM, probably THE  (b) 8 (T = 19, 19 + 8 = 27, 27 mod 26 = 1 = B)  (c) THE (the first word). The whole message, THE KEY IS UNDER THE MAT, is now in Think harder 4.'],
       ['Q5', '(a) 15  (b) 5 (31 mod 26)  (c) He gets the original message back: 9 + 17 = 26, a full turn  (d) 13 (13 + 13 = 26)']
     ]
   },

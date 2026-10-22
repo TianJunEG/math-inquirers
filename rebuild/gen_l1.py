@@ -129,3 +129,4 @@ import p1gaps; p1gaps.apply(D,1)
 import p1fix
 p1fix.finish(D,1,{'l1-ws2':'58–68 MIN'})
 p1fix.patch(D,'routine',[('<td>40–70</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then stretch</td>','<td>40–72</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then check together. Think Harder and Challenge are for early finishers or home.</td>'),('<td>70–80</td>','<td>72–80</td>')])
+import p1neutral; p1neutral.apply(D,1)

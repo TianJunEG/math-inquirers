@@ -32,29 +32,35 @@ def face(k):
 
 def build(D, n):
     g = GAPS[str(n)]; p_ = 'l%d-' % n
-    # ---- Warm-up check ----
-    body = h2('Warm-up check') + chip('Whiteboards: answer and say how you know', TEAL, CREAM, 28)
+    # ---- Sneak-peek puzzles (was "Warm-up check"): private, ungraded, ideas we have not learnt yet ----
+    body = h2('Sneak-peek puzzles') + chip('Ideas we have not learnt yet. A guess is a great start. Your own paper: show only your tutor.', TEAL, CREAM, 28)
+    tags = ['Anyone can try this one: use counters, draw or count', 'Now think about this one']
     for i, c in enumerate(g['check']):
-        q = p(f'<span style="color:{TEAL};font-weight:800">{i + 1}.</span>  {E(c["q"])}', 36, 600, raw=True)
+        q = chip(tags[i], YEL if i == 0 else SKY, NAVY, 24) + p(f'<span style="color:{TEAL};font-weight:800">{i + 1}.</span>  {E(c["q"])}', 36, 600, raw=True)
         if n == 3 and i == 0:
             q += dotrow('Red', 7, '#C0392B') + dotrow('Blue', 5, '#2E6DA4') + dotrow('Green', 3, '#1E8449') + p('1 picture = 1 child', 28, 600, MUTED)
         ans = f'<div data-build-in="pop" style="width:470px;flex:none;background:{YEL};border-radius:20px;padding:18px 26px;display:flex;align-items:center"><p style="font-size:34px;font-weight:800;line-height:1.2">{E(c["short"])}</p></div>'
-        body += f'<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;background:{WHITE};border-radius:24px;padding:24px 34px;display:flex;flex-direction:column;gap:10px">{q}</div>{ans}</div>'
-    notes = ('Minutes 7 to 10 (3 minutes). Two questions on the key idea in a new setting. Children write their answer and how they know on a whiteboard and show it on a count of three; click to show each answer. '
-             'Ask one or two children "How do you know?". Quietly note who got both right and gave a reason: those children may start the worksheet on the Think Harder page (then Challenge and the Open investigation) while the group works on the core page. '
-             'Tell them privately at minute 40; do not announce names or scores. Everyone still joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
+        body += f'<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;background:{WHITE};border-radius:24px;padding:20px 34px;display:flex;flex-direction:column;gap:10px">{q}</div>{ans}</div>'
+    notes = ('Minutes 7 to 10 (3 minutes). SAY: "These two are sneak-peek puzzles. They are ideas we have not learnt yet, so a guess is a great start, and I do not know is welcome. Nobody is marked." '
+             'Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone starts with a win. Question 2 makes you think. '
+             'Answers are shown privately: face to face, each child holds their own paper low so only the tutor sees it; online, children send the answer to the tutor in a private chat message (a parent may type for a child who cannot type yet). '
+             'Never use boards held up in front of the group, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
+             'Click to show each answer to the whole group only after everyone has had a try, and say "Lots of us had a different idea, and that is fine." '
+             'Quietly note who found question 2 easy; you may invite a child to the Think harder page by a PRIVATE message at minute 40, never by name in front of the group. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
     _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '7–10 MIN', body, notes))
-    # ---- Look-back ----
+    # ---- Look-back (2 minutes, short and safe) ----
     def optrow(items):
         return ''.join(f'<span style="display:inline-flex;align-items:center;margin-right:34px;white-space:nowrap">{BOX}{E(x)}</span>' for x in items)
-    rows = [('The hardest part was ...', optrow(g['hard'] + ['something else'])),
-            ('I got unstuck by ...', optrow(['counters or objects', 'drawing it', 'asking someone', 'trying again'])),
-            ('Next time I will try ...', f'<span style="display:inline-flex;align-items:center;gap:14px">write or draw one thing &nbsp;&nbsp; It felt: {face(1)} easy {face(2)} OK {face(3)} hard</span>')]
-    body = h2('What was hard?') + chip('Look back: 1 minute. There are no right answers.', TEAL, CREAM, 28)
-    for a, b in rows:
-        body += card(f'<p style="font-size:38px;font-weight:800;color:{TEAL}">{E(a)}</p><p style="font-size:32px;font-weight:600;line-height:1.5">{b}</p>')
-    notes = ('Minutes 88 to 90 (1 minute, after the exit ticket). Children tick or write the "What was hard?" box in their workbook. Ask one or two children to share one line; never mark or grade it. '
-             'Praise the strategy ("Drawing it got you unstuck"), not the speed. Say: "Tick what was hard, tick what helped you get unstuck, and write one thing you will try next time."')
+    rows = [('Something I did well', f'<span style="color:{MUTED}">write or draw one thing</span>'),
+            ('The hardest part was ...', optrow(g['hard'] + ['something else'])),
+            ('What helped me', optrow(['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'])),
+            ('If you want', optrow(['I am still stuck (my tutor will check in privately)', 'I would like to pass']))]
+    body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Only your tutor may read it, privately.', TEAL, CREAM, 28)
+    for a_, b_ in rows:
+        body += card(f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:30px;font-weight:600;line-height:1.5">{b_}</p>')
+    notes = ('Minutes 88 to 90 (2 minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
+             'It is never marked, never collected in front of the group and never read out; the tutor may read it privately afterwards. If a child ticks "I am still stuck", check in privately next lesson (private chat or a quiet word). '
+             'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. You can pass."')
     _w(D, p_ + 'reflect', sec(p_ + 'reflect', '88–90 MIN', body, notes))
 
 
@@ -81,10 +87,10 @@ def apply(D, n):
     json.dump(deck, open(dj, 'w'), indent=1, ensure_ascii=False)
     p1fix.relabel(D, p_ + 'warm2', '5–7 MIN'); p1fix.relabel(D, p_ + 'exit', '80–88 MIN')
     if 'If time is short, take questions 1 to 3' not in open(os.path.join(D, 'slides', p_ + 'warm2.html')).read():
-        p1fix.patch(D, p_ + 'warm2', [('</aside>', ' If time is short, take questions 1 to 3 only: the 3-minute Warm-up check follows on the next slide.</aside>')], must=False)
-    p1fix.patch(D, p_ + 'title', [('exit ticket 80 to 90.', 'exit ticket 80 to 88, then a one-minute look-back (What was hard?) 88 to 90.'),
-                                   ('warm-up 0 to 10,', 'warm-up 0 to 10 (minutes 7 to 10 are the Warm-up check, which decides who starts the worksheet on the Think Harder page),')], must=False)
-    if os.path.exists(os.path.join(D, 'slides', 'routine.html')): p1fix.patch(D, 'routine', [('<td>A quick game and quick questions</td>', '<td>A quick game, quick questions and a 3-minute Warm-up check</td>'),
-                                ('<td><b>Exit ticket</b></td><td>One question, then a stamp</td>', '<td><b>Exit ticket</b></td><td>One question, then a stamp, then a one-minute look-back: what was hard?</td>'),
-                                ('Think Harder and Challenge are for early finishers or home.</td>', 'Think Harder, Challenge and the Open investigation are for early finishers, home, or children on the fast track.</td>')], must=False)
+        p1fix.patch(D, p_ + 'warm2', [('</aside>', ' If time is short, take questions 1 to 3 only: the 3-minute sneak-peek puzzles follow on the next slide.</aside>')], must=False)
+    p1fix.patch(D, p_ + 'title', [('exit ticket 80 to 90.', 'exit ticket 80 to 88, then a two-minute look-back 88 to 90.'),
+                                   ('warm-up 0 to 10,', 'warm-up 0 to 10 (game 0 to 5, quick questions 5 to 7, sneak-peek puzzles 7 to 10),')], must=False)
+    if os.path.exists(os.path.join(D, 'slides', 'routine.html')): p1fix.patch(D, 'routine', [('<td>A quick game and quick questions</td>', '<td>A quick game, quick questions and 3 minutes of sneak-peek puzzles</td>'),
+                                ('<td><b>Exit ticket</b></td><td>One question, then a stamp</td>', '<td><b>Exit ticket</b></td><td>One question, then a stamp, then a two-minute look-back (you can pass)</td>'),
+                                ('Think Harder and Challenge are for early finishers or home.</td>', 'Think harder, Go further and the Investigation are in every workbook: choose them any time.</td>')], must=False)
     cleanup(D)

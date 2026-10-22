@@ -33,8 +33,8 @@ module.exports = {
     n: 2, week: 1, session: 'B', title: 'Big Number Puzzles', topic: 'Numbers to 100 000',
     objective: 'Round numbers to the nearest 10, 100 and 1000 using a number line, work backwards from a rounded number to find the smallest and largest possible numbers, use rounding to estimate and check, and solve 5-digit number riddles, digit-card puzzles and number patterns.',
     skills: 'Using a number line, working backwards, making a list in order, using the clues one at a time, looking for a pattern',
-    materials: 'Digit cards 0 to 9 (one set per child), mini whiteboards, a place-value chart (ten thousands to ones), a blank number line strip.',
-    online: 'Children cut out paper digit cards before the lesson and move them on camera; the tutor marks the number lines on the slides.',
+    materials: 'Digit cards 0 to 9 (one set per child: cut them from the Digit, point, sign and bracket cards page), mini whiteboards, a place-value chart (ten thousands to ones), a blank number line strip.',
+    online: 'Children cut out the digit cards from the kit page before the lesson and move them on camera; the tutor marks the number lines on the slides.',
     warmup: 'Place It Right (5 digits): the tutor draws digit cards one at a time. After each card, children must write it in the ten thousands, thousands, hundreds, tens or ones box straight away. Round 1: biggest number wins. Round 2: closest to 50 000 wins.',
     explore: 'Pairs use the digit cards 2, 4, 5, 7 and 9 once each to make 5-digit numbers. Which of their numbers round to 50 000 when rounded to the nearest thousand? They try to find them all and decide which one is closest to 50 000.',
     mini: 'Round with a number line: 36 482 lies between 36 000 and 37 000; the halfway mark is 36 500, so it rounds to 36 000 (to the nearest hundred, 36 500). Work backwards: a number that rounds to 25 000 (nearest thousand) is from 24 500 to 25 499. Estimate 7 × 3 089 as 7 × 3 000 = 21 000; the exact answer (21 623) is more, because 3 089 was rounded down. Before page 2: a riddle that starts with a rounding clue (20 003); number patterns (find the rule, then continue); digit-card puzzles: the ones digit decides odd or even, and 0 cannot go first.',
@@ -47,7 +47,7 @@ module.exports = {
     ],
     extension: 'How many whole numbers round to 45 000 to the nearest thousand AND to 50 000 to the nearest ten thousand? (500: from 45 000 to 45 499.)',
     key: [
-      ['Q1', '47 285: 47 290, 47 300, 47 000.  63 950: 63 950, 64 000, 64 000.  9049: 9050, 9000, 9000.  80 503: 80 500, 80 500, 81 000.'],
+      ['Q1', '47 285: 47 290, 47 300, 47 000.  63 950: 63 950, 64 000, 64 000.  Try next: 9049: 9050, 9000, 9000.  80 503: 80 500, 80 500, 81 000.'],
       ['Q2', '(a) Smallest 62 500, largest 63 499  (b) 5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5353, 5354 (10 numbers)'],
       ['Q3', '(a) 6 × 5 000 = 30 000  (b) Less: 4 982 was rounded up to 5 000, so each day was counted as a little more than it really is.  (c) 29 892'],
       ['Q4', '(a) 47 621  (b) 10 001, 10 010, 10 100, 11 000, 20 000 (5 numbers)'],
@@ -125,11 +125,14 @@ module.exports = {
     W.push(H.q(1, 'Round each number. Draw a number line if it helps.', { before: 40, keepNext: true }));
     W.push(H.tbl([2475, 2475, 2475, 2475], [
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
-      ...['47 285', '63 950', '9049', '80 503'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
+      ...['47 285', '63 950'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
     ]));
+    W.push(H.gap(40));
+    W.push(H.sub('', 'Try next, if you have time:   9049  →  ________  ________  ________        80 503  →  ________  ________  ________'));
     W.push(H.q(2, 'Work backwards.', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
+    W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________', { keepNext: true }));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
     W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.'));
     W.push(H.ans('Numbers:'));
@@ -140,7 +143,8 @@ module.exports = {
     W.push(H.sub('c', 'Work out the exact total.   Exact total:  ____________'));
 
     W.push(H.q(4, 'Number riddles. Who am I?', { pb: true, before: 0, keepNext: true }));
-    W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My ones digit is 1 and my tens digit is double my ones digit.'));
+    W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My ones digit is 1 and my tens digit is double my ones digit.', { keepNext: true }));
+    W.push(H.sub('', 'Hint: the numbers that round to 48 000 are from 47 500 to 48 499. Which of them have 6 in the hundreds place?', { keepNext: true }));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.'));
     W.push(...H.lines(2));
@@ -159,17 +163,21 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "rounding",
  "check": [
   {
-   "q": "A shop says \"about 8 000 people came\" (rounded to the nearest thousand). Which of these could be the real number: 7 499, 7 500, 8 499, 8 500?",
-   "a": "7 500 and 8 499. The real number is from 7 500 to 8 499 (7 499 rounds down to 7 000; 8 500 rounds up to 9 000)."
+   "q": "Draw a number line from 7 000 to 8 000. Put a dot at 7 500, halfway. Then put a dot at 7 200. Is the 7 200 dot nearer to 7 000 or to 8 000?",
+   "a": "Nearer to 7 000. 7 200 is only 200 from 7 000 but 800 from 8 000, and it is left of the halfway dot 7 500.",
+   "s": "Nearer to 7 000: it is only 200 away, not 800.",
+   "kind": "access"
   },
   {
-   "q": "Round 49 960 to the nearest hundred, then round 49 960 to the nearest thousand. Why are both answers 50 000?",
-   "a": "Both are 50 000. 49 960 is past the halfway mark 49 950 (hundreds) and past 49 500 (thousands), so it rounds up each time."
+   "q": "A shop says \"about 8 000 people came\" (rounded to the nearest thousand). Which of these could be the real number: 7 499, 7 500, 8 499, 8 500? Hint: draw a number line from 7 000 to 9 000.",
+   "a": "7 500 and 8 499. The real number is from 7 500 to 8 499 (7 499 rounds down to 7 000; 8 500 rounds up to 9 000).",
+   "s": "7 500 and 8 499.",
+   "kind": "think"
   }
  ],
  "why": "Find the two round numbers and the halfway mark. Halfway or more rounds up.",
@@ -183,7 +191,13 @@ module.exports.gaps = {
    "Look at the numbers that break it. What do their last three digits have in common?"
   ],
   "lines": 5,
-  "key": "Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\"."
+  "key": "Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\".",
+  "easy": "Round 3 280 to the nearest hundred. Then round your answer to the nearest thousand. Now round 3 280 straight to the nearest thousand. Did you get the same answer both ways?"
  },
- "reflect": "The hardest part for me was working out which way a number like 450 rounds. I got unstuck by drawing the number line with the halfway mark."
+ "reflect": "Something I did well: I drew the number line. The hardest part was working out which way a number like 450 rounds. What helped me: marking the halfway point on the number line.",
+ "go2": {
+  "q": "Which number you can make is closest to 70 000? Why can you not make 70 000?",
+  "a": "72 459 (2 459 away). 70 000 needs a 0 card and there is none; with the cards 2, 4, 5, 7 and 9 the closest below is 59 742 (10 258 away)."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4a, Q5 and Q6a first. The other parts are a choice for the last few minutes."
 };

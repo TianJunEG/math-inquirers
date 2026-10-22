@@ -6,9 +6,9 @@ Run order in a generator: write the generated slides, then call finish(D, n, tim
 import os, re, glob
 
 LAB = re.compile(r'(position:absolute;right:128px;top:\d+px;[^">]*letter-spacing:2px;[^>]*>)([^<]*)(</p>)')
-OPTIONAL = 'Optional: if you finish early'
+OPTIONAL = 'Your choice'
 FINISHED_OLD = 'Finished early? Stretch and Challenge come next.'
-FINISHED_NEW = 'Finished early? Start Think Harder T1 in your workbook, or try the Stretch slide.'
+FINISHED_NEW = 'Want more? You may choose Think harder T1 in your workbook.'
 CHIP_MARK = 'Stand up and stretch'
 
 
@@ -103,7 +103,7 @@ def finish(D, n, times, optional=('stretch', 'challenge', 'chdiag', 'chwalk')):
     t = _read(D, p + 'title')
     if t is not None:
         t2 = re.sub(r'worksheet 40 to 70( with [^.]*?)?, talk time 70 to 80, exit ticket 80 to 90\.',
-                    lambda m: 'worksheet 40 to 72%s (the last 4 minutes check page 2, after a 1-minute stand-up stretch), talk time 72 to 80, exit ticket 80 to 90. Think Harder and Challenge are for early finishers or home.' % (m.group(1) or ''), t)
+                    lambda m: 'worksheet 40 to 72%s (the last 4 minutes check page 2, after a 1-minute stand-up stretch), talk time 72 to 80, exit ticket 80 to 90. Think harder, Go further and the Investigation are for every child to choose, any time or at home.' % (m.group(1) or ''), t)
         if t2 == t and 'worksheet 40 to 72' not in t:
             print('p1fix: title time plan not found in', p + 'title')
         _write(D, p + 'title', t2)

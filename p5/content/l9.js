@@ -57,7 +57,7 @@ module.exports = {
     skills: 'Looking for a pattern, making a table, describing the rule in words, working backwards, guess and check, supposition, explaining from a picture',
     materials: 'Matchsticks or toothpicks (about 20 per child, 40 if possible), square paper tiles or the square grid from the cut-out pages, mini whiteboard, workbook.',
     online: 'Children have toothpicks and paper squares ready on the desk and build each figure on camera. The tutor shares the slides; pairs work in breakout rooms for the explore and page 1, and hold their tables up to the camera.',
-    warmup: 'Guess My Rule: children call out numbers, the tutor puts each through a secret two-step machine (× 3, then + 1) and says what comes out. The first child to say the rule in words wins the round. Then five quick pattern questions on whiteboards.',
+    warmup: 'Guess My Rule: children call out numbers, the tutor puts each through a secret two-step machine (× 3, then + 1) and says what comes out. Nobody races: everyone tests their idea on the next number, then says the rule in words when they are ready. Then five quick pattern questions on whiteboards.',
     explore: 'High fives: if everyone in our group of 8 high-fives everyone else exactly once, how many high fives is that? Pairs guess first, then start small (2, 3, 4 children), draw dots and lines, make a table and look for a pattern. Finished early: a class of 30.',
     mini: 'Growing patterns: count each figure, put the counts in a table, see what each new figure adds and WHY from the picture (a new square shares a side, so it adds 3 sticks, not 4). Say the rule in words: sticks = 3 × figure number + 1. Use it for a far figure (figure 25) and backwards (61 sticks: take away 1, divide by 3). See the same pattern two ways (a border of tiles, on the slides). Before page 2: guess and check with a table (each change moves the total by the same amount); supposition (suppose they are all the cheaper kind, find the gap, divide by the change per swap); marks taken away for a wrong answer (each wrong answer costs the marks you lost AND the marks taken away).',
     share: 'Mei says: “10 squares in a row need 31 sticks, so 20 squares need 62 sticks.” Is she right? Explain with a picture.',
@@ -176,7 +176,7 @@ module.exports = {
     W.push(H.q(5, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
     W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
     W.push(...H.lines(2));
-    W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong?', { after: 20 }));
+    W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong? Start here: all correct scores 100. Each wrong answer takes off 7. Write the scores for 0, 1, 2, 3 wrong: 100, ____, ____, ____. Is 80 in your list?', { after: 20 }));
     W.push(...H.lines(2));
     return W;
   }

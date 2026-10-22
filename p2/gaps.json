@@ -66,7 +66,7 @@
    "need": "",
    "first": "Easy first step: use counters to try 3 + 5, 7 + 9 and 11 + 13. Are the answers odd or even?",
    "text": "Ali says: \"When I add two odd numbers, I always get an even number.\" (a) Test Ali's idea with 5 pairs of odd 3-digit numbers (for example 345 + 271). (b) Now test odd + even, and even + even. What do you notice? (c) Explain WHY, using pairs of counters or a drawing.",
-   "model": "(a) Ali is right: odd + odd is always even (brute-forced for every pair of 3-digit numbers). (b) Odd + even is always odd; even + even is always even. (c) (Extension, not printed: taking away behaves the same way: odd − odd is even, odd − even is odd.) Why: an odd number is some pairs plus 1 left over, an even number is only pairs. Two odd numbers have two left-overs, and they make one more pair, so no one is left over. Look for: several tests before a claim, then a reason that uses pairs, counters or ones digits, not only “it worked every time”. A ones-digit reason (odd ends in 1, 3, 5, 7, 9) is also fine.",
+   "model": "(a) Ali is right: odd + odd is always even (checked for every pair of 3-digit numbers). (b) Odd + even is always odd; even + even is always even. (c) Why: an odd number is some pairs plus 1 left over, an even number is only pairs. Two odd numbers have two left-overs, and they make one more pair, so no one is left over. Look for: several tests before a claim, then a reason that uses pairs, counters or ones digits, not only \"it worked every time\". A ones-digit reason (odd ends in 1, 3, 5, 7, 9) is also fine. Extension (not printed): taking away behaves the same way: odd − odd is even, odd − even is odd.",
    "lines": 2
   },
   "whatif": {
@@ -132,7 +132,7 @@
    "need": "",
    "first": "Easy first step: write pattern A, 1, 4, 7, 10 ..., up to 30.",
    "text": "Pattern A: 1, 4, 7, 10 ... (add 3 each time). Pattern B: 2, 5, 8, 11 ... Pattern C: 3, 6, 9, 12 ... (a) Write each pattern up to 30. (b) Pick any number from 1 to 30. Which pattern is it in? Can a number be in two patterns? Can a number be in none? (c) Why does this happen?",
-   "model": "(a) A: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28. B: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. C: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. (b) Every number is in exactly ONE pattern (brute-forced for 1 to 99). (c) Counting in 3s, a number is either on the 3s (pattern C), 1 more than a number on the 3s (A), or 2 more (B); there is no other choice. (Extension: if each pattern added 4 you would need) 4 patterns, starting at 1, 2, 3 and 4. Look for: a complete listing, the claim “exactly one” tested on more than one number, and a reason that uses the 3 times table.",
+   "model": "(a) A: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28. B: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. C: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. (b) Every number is in exactly ONE pattern (brute-forced for 1 to 99). (c) Counting in 3s, a number is either on the 3s (pattern C), 1 more than a number on the 3s (A), or 2 more (B); there is no other choice. Extension (not printed): if each pattern added 4 you would need 4 patterns, starting at 1, 2, 3 and 4. Look for: a complete listing, the claim “exactly one” tested on more than one number, and a reason that uses the 3 times table.",
    "lines": 2
   },
   "whatif": {
@@ -280,9 +280,9 @@
  "9": {
   "pre": [
    {
-    "q": "You have a 3 l jug and a 5 l jug. You fill the 5 l jug and pour from it into the 3 l jug until the 3 l jug is full. How much water is left in the 5 l jug? (Try it with two cups and rice, or draw it.)",
-    "a": "2 l (5 - 3 = 2).",
-    "short": "2 l",
+    "q": "You have a 3 ℓ jug and a 5 ℓ jug. You fill the 5 ℓ jug and pour from it into the 3 ℓ jug until the 3 ℓ jug is full. How much water is left in the 5 ℓ jug? (Try it with two cups and rice, or draw it.)",
+    "a": "2 ℓ (5 - 3 = 2).",
+    "short": "2 ℓ",
     "w": "One pour is enough. This is a first win for everyone and previews the pour table."
    },
    {

@@ -212,17 +212,21 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
- "idea": "nets and symmetry",
+ "idea": "symmetry and nets",
  "check": [
   {
-   "q": "A straight row of 6 squares. Could it fold into a cube? Explain.",
-   "a": "No. The first 4 squares wrap round as walls. The 5th lands on top of the 1st and the 6th on top of the 2nd, so nothing makes a lid or a base."
+   "q": "Write a big capital letter H. Draw every fold line where the two halves would match exactly. How many fold lines can you find?",
+   "a": "2 fold lines: one up-down line through the middle and one across the middle. (Plain block H.)",
+   "s": "2 fold lines: up-down and across.",
+   "kind": "access"
   },
   {
-   "q": "How many lines of symmetry has the capital letter H? And the capital letter A? (Think of plain block letters.)",
-   "a": "H has 2 (one up-down and one across). A has 1 (up-down)."
+   "q": "Could a straight row of 6 squares fold into a cube? Cut 6 paper squares and try, if you like. Explain.",
+   "a": "No. The first 4 squares wrap round as walls. The 5th lands on top of the 1st and the 6th on top of the 2nd, so nothing makes a lid or a base.",
+   "s": "No: the 5th and 6th squares land on top of the 1st and 2nd.",
+   "kind": "think"
   }
  ],
  "why": "A net needs one base, one lid and four walls with nothing overlapping. A line of symmetry is a fold where both halves match exactly.",
@@ -237,7 +241,13 @@ module.exports.gaps = {
    "What if BOTH extra squares are above the row? Try two. Do they ever fold into a cube? Why or why not?"
   ],
   "lines": 4,
-  "key": "Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason."
+  "key": "Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason.",
+  "easy": "Cut 6 squares from the Square grid page. Make the net in the picture (a row of 4 squares with one square above it and one below). Fold it. Does it make a cube?"
  },
- "reflect": "The hardest part for me was folding the net in my head. I got unstuck by making it with paper."
+ "reflect": "Something I did well: I made the net with paper. The hardest part was folding the net in my head. What helped me: making it with paper and tape.",
+ "go2": {
+  "q": "What if the longest row has only 3 squares? Can the shape still fold into a cube? Find one.",
+  "a": "Yes. 4 of the 11 cube nets have a longest row of 3 squares. One example: two rows of 3 squares, where the second row starts under the last square of the first row. (One net, the staircase, has no row longer than 2.)"
+ },
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
 };

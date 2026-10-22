@@ -291,11 +291,11 @@ put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check to
 
 # ---------- 22 stretch ----------
 st = QB['stretch'][4:7]
-put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'For early finishers (these are not on the Think Harder page). Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 38))
+put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'Extra questions for any pair that wants them (these are not on the Think harder page). Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 38))
 
 # ---------- 23 challenge ----------
 ch = QB['challenge'][-2:]
-put(f'{PRE}-challenge', numcards(f'{PRE}-challenge', 'Challenge', 'Challenge', [(f'{i + 1}.', x['q']) for i, x in enumerate(ch)], 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are also on the Think Harder page (Q6 and Q7). Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(ch)), 34))
+put(f'{PRE}-challenge', numcards(f'{PRE}-challenge', 'Challenge', 'Challenge', [(f'{i + 1}.', x['q']) for i, x in enumerate(ch)], 'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are also on the Go further page. Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(ch)), 34))
 
 # ---------- 24 challenge: see it ----------
 def grid66():

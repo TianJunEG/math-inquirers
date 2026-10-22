@@ -18,7 +18,7 @@ const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-rad
 <div style="margin:5px 0">What helped me:${bx}a picture or model${bx}a list or table${bx}a simpler number${bx}my partner${bx}I asked for help${bx}checking my estimate</div>
 <div style="margin:5px 0">${bx}I am still stuck (my tutor will check in privately)${bx}Pass</div></div>`;
 // Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
-const choose = () => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">Start here.</b> After question 3 you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
+const choose = () => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question 3</b> you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
 const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2 plan.</b> Start with ${txt}. Then choose what to try next. You do not have to finish the page. The Investigation is on the next page.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {

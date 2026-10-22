@@ -189,32 +189,41 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
- "idea": "reading line graphs",
+ "idea": "line graphs",
  "check": [
   {
-   "q": "A line graph has gridlines at 0, 50, 100, 150 and 200. A point is exactly halfway between the 100 line and the 150 line. What number does it show?",
-   "a": "125. Halfway between 100 and 150 is 100 + 25."
+   "q": "A stall sold cups of juice: Monday 30, Tuesday 45, Wednesday 25. Which day sold the most? Which day sold the fewest? Draw a small bar for each day if you like.",
+   "a": "Tuesday sold the most (45). Wednesday sold the fewest (25).",
+   "s": "Most: Tuesday (45). Fewest: Wednesday (25).",
+   "kind": "access"
   },
   {
-   "q": "Shop A's line graph goes from 40 to 60 and looks very steep. Shop B's graph also goes from 40 to 60 but looks almost flat. Give a reason why this can happen.",
-   "a": "The scales are different. For example, A's graph may start at 40 and have big gaps for each 5, while B's starts at 0 with small gaps. The same numbers can look different, so read the scale first."
+   "q": "A line graph has gridlines at 0, 50, 100, 150 and 200. A point is exactly halfway between the 100 line and the 150 line. What number does it show?",
+   "a": "125. Halfway between 100 and 150 is 100 + 25.",
+   "s": "125.",
+   "kind": "think"
   }
  ],
- "why": "Read the scale before you read a point. The same numbers can look steep or flat if the scale changes.",
+ "why": "Read the scale first: what is each line worth? Halfway between two lines is half of the step.",
  "invest": {
   "kind": "What if we change ...? What stays the same?",
-  "head": "Three plants",
-  "intro": "Plant A is 10 cm tall now and grows 4 cm every week. Plant B is 20 cm tall now and grows 4 cm every week. Plant C is 10 cm tall now and grows 6 cm every week.",
-  "table": true,
+  "head": "Sales have doubled!",
+  "intro": "A shop sold 50 phone cases in May and 100 in June. A newspaper says: \"Sales have doubled!\" (That is true: 100 is twice 50.) The same two numbers can be drawn as a graph that looks like a huge jump or as a graph that looks almost flat.",
   "parts": [
-   "Fill in the table for 6 weeks.",
-   "Look at Plants A and B. What stays the same about their heights every week? On a line graph, what would the two lines look like?",
-   "Does Plant C ever get as tall as Plant B? In which week? Which plant is the tallest at week 6?"
+   "On the first Graph grid, draw a line graph of May and June. Go up in 10s from 0 to 100. Is the line steep or gentle?",
+   "Now draw the same two numbers on the second grid so the rise looks HUGE. Choose a different scale and write it. Then say how you would make the rise look almost flat.",
+   "Which graph is the most honest? What would you ask the newspaper to add to its graph?"
   ],
-  "lines": 3,
-  "key": "(a) A: 10, 14, 18, 22, 26, 30, 34. B: 20, 24, 28, 32, 36, 40, 44. C: 10, 16, 22, 28, 34, 40, 46. (b) B is always 10 cm taller than A. The two lines would be parallel (the same steepness), with B above A. (c) Yes, in week 5 both are 40 cm. In week 6 Plant C is the tallest (46 cm, B is 44 cm). C's line is steeper. Look for children who spot the pattern in the table before drawing anything, and who link the growth per week to how steep the line is."
+  "lines": 4,
+  "key": "(a) Points (May, 50) and (June, 100); on a scale of 0 to 100 in 10s the line rises through 5 lines, a fair picture. (b) Any scale that starts above 0 with small steps makes the jump look huge (for example start at 45 and go up in 5s: 50 is 1 line up, 100 is 11 lines up). A tall scale that goes from 0 to 1000 in 100s makes the same rise look almost flat (50 is half a line, 100 is one line). Same numbers, different picture. (c) A graph that starts at 0, has equal steps and says what each line is worth is the fairest; the headline is only true because the numbers say so. Look for a child who says \"I read the scale before I looked at the line\" and who notices that the numbers did not change, only the drawing did. Easy first step: plot the two points on a 0 to 100 scale in 10s.",
+  "easy": "On the Graph grid, write 0, 10, 20 ... up the side. Plot the points (May, 50) and (June, 100) and join them."
  },
- "reflect": "The hardest part for me was reading between the lines on the scale. I got unstuck by writing what each line was worth."
+ "reflect": "Something I did well: I read the scale first. The hardest part was reading between the lines on the scale. What helped me: writing what each line was worth.",
+ "go2": {
+  "q": "Draw the same graph again with a different scale. Does the story look different? Why?",
+  "a": "Yes. A scale with small steps, or one that starts above 0, makes the line look steeper; big steps make it look flatter. The numbers are the same: only the picture changed."
+ },
+ "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 is a choice for the last few minutes."
 };

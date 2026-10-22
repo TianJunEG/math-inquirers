@@ -108,7 +108,7 @@ module.exports = {
     extension: 'Make the program say the position and the term together (for example "term 7 is 23") using a second variable pos and the join block. Then make it stop at the first term bigger than 1000.',
     key: [
       ['Q1', '(a) 4, 7, 10, 13, 16, 19. Each new square adds 3 sticks, not 4, because it shares one side with the square before it.  (b) sticks = 3 × n + 1  (c) 301  (d) Pattern 20 (3 × 20 + 1 = 61)'],
-      ['Q2', '(a) difference 4; 4n + 2; 402  (b) 5; 5n − 4; 496  (the other two sequences of this question are now Think harder 5)'],
+      ['Q2', '(a) difference 4; 4n + 2; 402  (b) 5; 5n − 4; 496  (the other two sequences of this question are now Think harder 4)'],
       ['Q3', '(a) 4n + 1  (b) Yes. 101 − 1 = 100 = 4 × 25, so 101 is the 25th term.  (c) No. Every term is 1 more than a multiple of 4, so every term is odd; 150 is even. (150 − 1 = 149 is not a multiple of 4.)'],
       ['Q4', 'Trace: x is 7, 12, 17, 22.  (a) 22  (b) 502. x starts at 2 and 100 jumps of 5 add 500.'],
       ['Q5', 'Program: when green flag clicked; set n to 4; repeat 20 [say n for 1 seconds; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2), the last number it says. It says one term per second.'],

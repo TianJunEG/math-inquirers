@@ -204,20 +204,24 @@ module.exports = {
   ]
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
  "idea": "angles and turns",
  "check": [
   {
-   "q": "Ravi faces East. He turns 135° anticlockwise. Which way does he face now?",
-   "a": "North-West. 135° is 3 steps of 45°: East to North-East to North to North-West."
+   "q": "Stand up and face the screen. Turn a quarter turn to your right. Then turn another quarter turn the same way. How many quarter turns did you make? Which way are you facing now, compared with the start?",
+   "a": "2 quarter turns, which is a half turn. You are facing the opposite way (your back is to the screen).",
+   "s": "2 quarter turns: you face the opposite way.",
+   "kind": "access"
   },
   {
    "q": "A square corner is cut into two angles. One angle is 35°. What is the other angle? How do you know?",
-   "a": "55°. A square corner is 90°, and 90° − 35° = 55°."
+   "a": "55°. A square corner is 90°, and 90° − 35° = 55°.",
+   "s": "55° (90° − 35°).",
+   "kind": "think"
   }
  ],
- "why": "A square corner is 90° and a compass step is 45°. Angles side by side add up to the whole turn.",
+ "why": "A square corner is 90° and a half turn is 180°. Angles side by side add up to the whole turn.",
  "invest": {
   "kind": "Find all the ways.",
   "head": "Splitting a corner",
@@ -228,7 +232,13 @@ module.exports.gaps = {
    "What if the corner is a straight line (180°) cut into three angles that are multiples of 30°? Find all the sets. What stays the same?"
   ],
   "lines": 5,
-  "key": "(a) Seven sets: 10, 10, 70; 10, 20, 60; 10, 30, 50; 10, 40, 40; 20, 20, 50; 20, 30, 40; 30, 30, 30 (checked by brute force). (b) A good method: fix the smallest angle, then list the other two in order. Counting in units of 10° helps: three whole numbers that add up to 9. (c) Three sets: 30, 30, 120; 30, 60, 90; 60, 60, 60. What stays the same: the three angles always add up to the whole turn (90° or 180°). Low floor: any three angles that add to 90°. Look for children who realise a list needs a system."
+  "key": "(a) Seven sets: 10, 10, 70; 10, 20, 60; 10, 30, 50; 10, 40, 40; 20, 20, 50; 20, 30, 40; 30, 30, 30 (checked by brute force). (b) A good method: fix the smallest angle, then list the other two in order. Counting in units of 10° helps: three whole numbers that add up to 9. (c) Three sets: 30, 30, 120; 30, 60, 90; 60, 60, 60. What stays the same: the three angles always add up to the whole turn (90° or 180°). Low floor: any three angles that add to 90°. Look for children who realise a list needs a system.",
+  "easy": "A square corner is 90°. Draw it and split it into three EQUAL angles. How big is each one?"
  },
- "reflect": "The hardest part for me was reading the protractor scale. I got unstuck by estimating the angle first."
+ "reflect": "Something I did well: I estimated each angle before I measured. The hardest part was reading the protractor scale. What helped me: starting from the 0 that lines up with one arm.",
+ "go2": {
+  "q": "What if the clock shows half past three (3:30)? Is the angle still 90°? Why not?",
+  "a": "No. It is 75°: at 3:30 the hour hand has moved halfway from 3 to 4, which is 15° past the 3. The minute hand points at 6 (180°) and the hour hand at 105°."
+ },
+ "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 and Q6 are choices for the last few minutes."
 };

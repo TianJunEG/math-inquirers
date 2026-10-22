@@ -175,14 +175,15 @@ module.exports = {
       { q: 'A rectangle has four corners of 90°. Draw any four-sided shape (not a rectangle), tear off its four corners and fit them together round a point. What do the four angles add up to?', a: '360° (a full turn). For the rectangle, 4 × 90° = 360° too.' }
     ],
     stretch: [
-      { q: 'Two straight lines cross. One of the four angles is 38°. What are the other three? How many different sizes are there?', a: '142°, 38°, 142°. There are two different sizes: 38° and 142°.' },
+      { q: 'In parallelogram ABCD, angle A is 3 times angle B. Find angle A and angle B. Give your reason.', a: 'A = 135° and B = 45°. Adjacent angles of a parallelogram add up to 180°, so A and B make 4 equal parts of 45°: B = 45°, A = 135°.' },
       { q: 'An isosceles triangle has an angle of 110°. Find the other two angles. Why is there only one answer?', a: '35° and 35°. 110° cannot be a base angle (two of them would be 220°), so it is the top angle and 180° − 110° = 70° is shared by two equal base angles.' },
       { q: 'In trapezium ABCD, AB is parallel to DC. Angle DAB is 84° and angle ABC is 97°. Find angle ADC and angle BCD.', a: 'ADC = 96° and BCD = 83° (angles between the parallel sides add up to 180°). Check: 84° + 97° + 96° + 83° = 360°.' },
       { q: 'ABCD is a square. CDE is an equilateral triangle, and E is outside the square. Find angle ADE and angle DAE.', a: 'ADE = 150° (90° + 60°). Triangle ADE is isosceles (AD = DE), so DAE = (180° − 150°) ÷ 2 = 15°.' },
       { q: 'Rhombus ABCD has angle ABC = 100°. The diagonal AC is drawn. Find angle BAC.', a: '40° (AB = BC, so triangle ABC is isosceles: (180° − 100°) ÷ 2)' },
       { q: 'What is the smaller angle between the hands of a clock at 5 o\'clock? At 8 o\'clock?', a: '150° at 5 o\'clock (5 × 30°). At 8 o\'clock the big angle is 240°, so the smaller angle is 120°.' },
       { q: 'How many degrees does the minute hand of a clock turn through in 10 minutes? In 45 minutes?', a: '60° (a full turn of 360° takes 60 minutes, so 6° a minute) and 270°.' },
-      { q: 'In a parallelogram ABCD, angle A is 40° bigger than angle B. Find angle A and angle B.', a: 'A = 110°, B = 70°. Adjacent angles add up to 180°; 180° − 40° = 140°, and 140° ÷ 2 = 70°, so A is 70° + 40° = 110°.' }
+      { q: 'In a parallelogram ABCD, angle A is 40° bigger than angle B. Find angle A and angle B.', a: 'A = 110°, B = 70°. Adjacent angles add up to 180°; 180° − 40° = 140°, and 140° ÷ 2 = 70°, so A is 70° + 40° = 110°.' },
+      { q: 'Two straight lines cross. One of the four angles is 38°. What are the other three? How many different sizes are there?', a: '142°, 38°, 142°. There are two different sizes: 38° and 142°.' }
     ],
     challenge: [
       { q: 'Two identical right-angled triangles with angles 30°, 60° and 90° are joined with their shorter sides (the sides opposite the 30° angles) touching, with the right angles together, to make one big triangle. What are the angles of the big triangle?', a: '30°, 30°, 120°. The two right angles make a straight line, and the two 60° angles together make 120°.' },
@@ -198,6 +199,7 @@ module.exports = {
   },
 
   workbook: H => [
+    H.p(['<b style="color:#1F7A6F">Reading angles:</b> angle BOC means the angle at O between the lines OB and OC (the letter in the middle is the corner).'], { after: 20 }),
     H.q(1, 'Left: straight lines AB and CD cross at O. Right: four angles meet at a point. Drawings are not to scale, so do not use a protractor.', { before: 20, keepNext: true }),
     H.fig(q1Fig()),
     H.p(['<b style="color:#1F7A6F">Hint:</b> a straight line is a half-turn, 180°. A full turn is 360°. Where two lines cross, the angles opposite each other are equal (tear and check).'], { after: 20 }),
@@ -205,6 +207,7 @@ module.exports = {
     H.sub('d', 'The missing angle at the point on the right = ________.   Which angle fact did you use? ______________________', { after: 40 }),
     H.q(2, 'Find the missing angles. Write each angle fact you use.', { keepNext: true, before: 100 }),
     H.p(['<b style="color:#1F7A6F">Hint:</b> in a parallelogram, neighbouring angles add to 180° and opposite angles are equal. A rhombus has 4 equal sides, so each triangle made by a diagonal is isosceles. In a trapezium, the angles between the parallel sides add to 180°.'], { after: 20 }),
+    H.p(['<b style="color:#1F7A6F">Write like this:</b> angle B = 108° because neighbours in a parallelogram add to 180°.'], { after: 20 }),
     H.fig(q3Fig()),
     H.sub('a', 'Parallelogram:   angle B = ______   angle C = ______   angle D = ______', { after: 40 }),
     H.sub('b', 'Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),

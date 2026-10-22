@@ -72,7 +72,7 @@ module.exports = {
       ['Q3', '(a) 41  (b) (4 + 8) × 5 − 3 = 57  (c) 4 + 8 × (5 − 3) = 20'],
       ['Q4', '(a) 23. Work backwards: 30 × 4 = 120, 120 + 18 = 138, 138 ÷ 6 = 23.  (b) Check: 23 × 6 = 138, 138 − 18 = 120, 120 ÷ 4 = 30.'],
       ['Q5', 'The answer is always 7 (for example 3: 15, 50, 10, 7). (a) It is always 7.  (b) Blanks: number, 7, 7. Multiplying by 5 and then dividing by 5 gets you back to your number. The 35 divided by 5 adds 7. Taking away your number leaves 7.'],
-      ['Q6', '(a) Chicken rice: 3 units. Laksa: 1 unit. 4 units = 1 236.  (b) 1 unit = 1 236 ÷ 4 = 309. Chicken rice = 3 × 309 = 927 plates.  (c) 2 units = 618 more plates.'],
+      ['Q6', '(a) Chicken rice: 3 units. Laksa: 1 unit. 4 units = 124.  (b) 1 unit = 124 ÷ 4 = 31. Chicken rice = 3 × 31 = 93 plates.  (c) 2 units = 62 more plates.'],
       ['Q7', '(a) 5, 8, 13, 21, 34 (21 − 13 = 8, 13 − 8 = 5, 13 + 21 = 34).  (b) 4, 7, 11, 18, 29.']
     ]
   },
@@ -128,7 +128,8 @@ module.exports = {
       { q: 'Use each of the numbers 2, 3, 4 and 5 once in  a + b × c − d  (a, b, c and d are the four numbers, in any order) to make the biggest answer you can.', a: '21, from 3 + 4 × 5 − 2 (or 3 + 5 × 4 − 2). Put the two biggest numbers in the × and use the smallest to take away.' },
       { q: 'Is 50 − 20 − 10 the same as 50 − (20 − 10)? Explain.', a: 'No. 50 − 20 − 10 = 20 (left to right), but 50 − (20 − 10) = 50 − 10 = 40.' },
       { q: 'I think of a number. I multiply it by 8 and then take away 15. The answer is 425. What is my number?', a: '55 (425 + 15 = 440, 440 ÷ 8 = 55).' },
-      { q: 'Look at 4 + 8 × 5 − 3. Mei puts TWO pairs of brackets in it and makes 24. Where could she put them?', a: '(4 + 8) × (5 − 3) = 12 × 2 = 24.' }
+      { q: 'Look at 4 + 8 × 5 − 3. Mei puts TWO pairs of brackets in it and makes 24. Where could she put them?', a: '(4 + 8) × (5 − 3) = 12 × 2 = 24.' },
+      { q: 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 1 236 plates altogether. How many more plates of chicken rice than laksa did it sell? (Draw a bar model first.)', a: '618 more. 4 units = 1 236, so 1 unit = 309; chicken rice 927, laksa 309; 927 − 309 = 618.' }
     ],
     challenge: [
       { q: 'Use four 4s and any of +, −, ×, ÷ and brackets to make each of the numbers 1, 2, 3, 4 and 5. Which one was hardest?', a: 'For example 1 = (4 + 4) ÷ (4 + 4); 2 = 4 ÷ 4 + 4 ÷ 4; 3 = (4 + 4 + 4) ÷ 4; 4 = 4 + (4 − 4) × 4; 5 = (4 × 4 + 4) ÷ 4. Other ways are possible.' },
@@ -168,7 +169,7 @@ module.exports = {
         ...[0, 1].map(() => H.row(ws.map(w => H.cell('', w, { h: 55 }))))])); }
     W.push(H.sub('a', 'What do you notice?  ______________________________'));
     W.push(H.sub('b', 'Fill in the blanks.  × 5 then ÷ 5 gives back my _______.  The 35 ÷ 5 adds _______.  Taking away my number leaves _______.'));
-    W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 1 236 plates altogether.', { keepNext: true }));
+    W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 124 plates altogether.', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model.'));
     W.push(H.gap(240));
     W.push(H.sub('b', 'How many plates of chicken rice did it sell?'));
@@ -182,20 +183,24 @@ module.exports = {
   }
 };
 
-// ---- close_gaps: warm-up check, open investigation, reflection (docs/audit/close_gaps_p4.md)
+// ---- close_gaps + fix pass: sneak-peek puzzles, Investigation (with an easy first step), Looking back, Go further (docs/audit/close_gaps_p4.md, fixpass_p4.md)
 module.exports.gaps = {
- "idea": "the order of operations",
+ "idea": "order of operations",
  "check": [
   {
-   "q": "Put ONE pair of brackets in  2 + 3 × 4  so that the answer is 20.",
-   "a": "(2 + 3) × 4 = 5 × 4 = 20."
+   "q": "Ali has 2 bags with 4 sweets in each bag, and 3 loose sweets. Draw it. How many sweets has he got? Write a number sentence that matches your drawing.",
+   "a": "11 sweets: 2 × 4 + 3 = 8 + 3 = 11. The bags are counted first (×), then the loose sweets are added (+).",
+   "s": "11 sweets: 2 × 4 + 3 = 11.",
+   "kind": "access"
   },
   {
-   "q": "Ravi says 10 − 2 × 3 = 24. What did he do wrong? What is the right answer?",
-   "a": "He worked from left to right: 10 − 2 = 8, 8 × 3 = 24. Multiplication comes first: 2 × 3 = 6, 10 − 6 = 4."
+   "q": "Put ONE pair of brackets in 2 + 3 × 4 so that the answer is 20.",
+   "a": "(2 + 3) × 4 = 5 × 4 = 20. With no brackets the answer is 14, because 3 × 4 is done first.",
+   "s": "(2 + 3) × 4 = 20. Without brackets it is 14.",
+   "kind": "think"
   }
  ],
- "why": "Brackets first, then × and ÷, then + and −. Brackets change which part is done first.",
+ "why": "A story helps: the bags are counted first, then the loose ones are added. Brackets change which part is done first.",
  "invest": {
   "kind": "Find all the ways.  Make your own and swap.",
   "head": "Make the target",
@@ -206,7 +211,13 @@ module.exports.gaps = {
    "Swap: write a target from 1 to 20 for a partner. Check their number sentence by working it out."
   ],
   "lines": 6,
-  "key": "Every target from 1 to 12 can be made (all of 1 to 20 can, checked by brute force). Model sentences: 1 = (5 − 4) × (3 − 2); 2 = 5 − 4 + 3 − 2; 3 = 5 × 2 − 4 − 3; 4 = 2 + 3 + 4 − 5; 5 = (2 + 3 − 4) × 5; 6 = 2 + 3 − 4 + 5; 7 = 2 + (4 − 3) × 5; 8 = 5 + 4 + 2 − 3; 9 = 2 + 3 × 4 − 5; 10 = (2 × 3 − 4) × 5; 11 = 2 × 5 − 3 + 4; 12 = 2 × (3 + 5) − 4. Many other correct sentences exist: accept any that work out. Look for children who work each sentence out in the right order and check it, and who use brackets on purpose."
+  "key": "Every target from 1 to 12 can be made (all of 1 to 20 can, checked by brute force). Model sentences: 1 = (5 − 4) × (3 − 2); 2 = 5 − 4 + 3 − 2; 3 = 5 × 2 − 4 − 3; 4 = 2 + 3 + 4 − 5; 5 = (2 + 3 − 4) × 5; 6 = 2 + 3 − 4 + 5; 7 = 2 + (4 − 3) × 5; 8 = 5 + 4 + 2 − 3; 9 = 2 + 3 × 4 − 5; 10 = (2 × 3 − 4) × 5; 11 = 2 × 5 − 3 + 4; 12 = 2 × (3 + 5) − 4. Many other correct sentences exist: accept any that work out. Look for children who work each sentence out in the right order and check it, and who use brackets on purpose.",
+  "easy": "Use only + and −. With 2, 3, 4 and 5 (each once) can you make 6? 8? 10? Write a number sentence for each."
  },
- "reflect": "The hardest part for me was remembering to do × before −. I got unstuck by underlining the part to do first."
+ "reflect": "Something I did well: I worked out the order step by step. The hardest part was remembering to do × before −. What helped me: underlining the part to do first.",
+ "go2": {
+  "q": "What if you may use TWO pairs of brackets? Can you get an answer that one pair could not?",
+  "a": "No. Two pairs still give only 16, 28 and 10 (every placement checked by computer). Brackets only change what is done first, and here there are only three different orders that matter: the × first (16), (6 + 4) first (28) or (3 − 2) first (10)."
+ },
+ "cap": "Page 2 is on your own. Aim for Q4, Q5 and Q6 first. Q7 is a choice for the last few minutes."
 };

@@ -34,6 +34,17 @@ const q1Fig = () => {
   });
   return svg(600, 158, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 500);
 };
+// Q3 worked example: 3 lines from one point make 3 angles
+const exFig = () => {
+  const ox = 40, oy = 100, L = 110; let b = '';
+  [20, 60, 100].forEach(d => { b += ln(ox, oy, ox + L * Math.cos(rad(d)), oy - L * Math.sin(rad(d))); });
+  b += dot(ox, oy, 5);
+  b += txt(300, 40, 'Example: 3 lines make 3 angles.', { size: 20, anchor: 'start', fill: G });
+  b += txt(300, 72, 'two small angles (1 and 1)', { size: 18, anchor: 'start' });
+  b += txt(300, 98, 'and one made of both (2).', { size: 18, anchor: 'start' });
+  b += txt(300, 124, 'Total: 1 + 1 + 1 = 3', { size: 18, anchor: 'start' });
+  return svg(560, 130, b, 'Three lines from one point make three angles: two small ones and one made of both', 420);
+};
 // Q2: four shapes (unit u, y up inside each shape)
 const shapeAt = (pts, x0, y0, u, H) => pts.map(([a, b]) => [x0 + a * u, y0 + (H - b) * u]);
 const q2Fig = () => {
@@ -95,7 +106,7 @@ module.exports = {
     extension: 'How many right angles are in a square drawn as a noughts-and-crosses grid (2 lines down and 2 lines across inside it)? (36)',
     key: [
       ['Q1', 'Smaller than a right angle: b, f.  Right angle: a, d.  Bigger than a right angle: c, e.'],
-      ['Q2', 'A 8 (the 4 dent corners are bigger),  B 6 (2 dent corners),  C 3 (the 2 bottom corners and the top of the roof),  D 2.'],
+      ['Q2', 'A 8 (given as the example; the 4 dent corners are bigger),  B 6 (2 dent corners),  C 3 (the 2 bottom corners and the top of the roof),  D 2.'],
       ['Q3', '(a) 5 + 4 + 3 + 2 + 1 = 15 angles.  (b) 8 lines: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28 angles.'],
       ['Q4', '(a) E and H: both.  T and L: perpendicular only.  Z and N: parallel only.  (b) E: 3 pairs of parallel lines and 3 pairs of perpendicular lines.'],
       ['Q5', '(a) A line through C going 1 square right and 1 square up at each step (the same steps as AB).  (b) A line through D going 1 square right and 1 square down at each step.  (c) A line through G going 1 square right and 2 squares down (or 1 left and 2 up) at each step. Check each with the right-angle checker.'],
@@ -173,11 +184,13 @@ module.exports = {
       H.fig(q1Fig()),
       H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
       H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker.', { keepNext: true }),
+      H.p('Hint: put your checker in every corner. A corner that dents INTO the shape is bigger than a right angle, so do not count it. Shape A is done for you.', { after: 20 }),
       H.fig(q2Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
         H.row(['Shape', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
-        H.row([H.cell('Right angles inside', 2475, { bold: true }), ...[1856, 1856, 1857, 1856].map(w => H.cell(' ', w, { h: 40 }))])
+        H.row([H.cell('Right angles inside', 2475, { bold: true }), H.cell('8', 1856, { h: 40, bold: true }), ...[1856, 1857, 1856].map(w => H.cell(' ', w, { h: 40 }))])
       ]),
+      H.fig(exFig()),
       H.q(3, 'These 6 lines all start at point O.', { keepNext: true }),
       side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
       H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),

@@ -123,7 +123,7 @@ module.exports = {
       ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
       ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
       ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
-      ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  (The 20-point star, total 1080°, turn 54°, point 126°, is now Think harder 5.)'],
+      ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  (The 20-point star, total 1080°, turn 54°, point 126°, is now Think harder 4.)'],
       ['Q5', 'Each inside angle: 60°, 90°, 108°, 120°, 144°.  Added: 180°, 360°, 540°, 720°, 1440°.  (a) 180°  (b) (n − 2) × 180°, or n × 180° − 360°']
     ]
   },
@@ -209,7 +209,7 @@ module.exports = {
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('<div style="text-align:left;line-height:1.45"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner. (turn + inside angle = 180°)<br><b>total turning</b> = all the turns added up.<br>Start every drawing with the 4 set-up blocks from your Turtle start file.</div>', 7300, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:left;line-height:1.35;font-size:14.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,

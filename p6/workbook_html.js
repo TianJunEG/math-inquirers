@@ -7,7 +7,7 @@ const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align
 const W = [];
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const LASTQ1 = { 1: 3, 2: 2, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 2, 9: 4, 10: 3 };
-const FASTPTR = n => '<span style="float:right;font-size:11px;line-height:1.2;font-weight:700;color:#1F7A6F;text-align:right;text-decoration:none;max-width:250px;margin-top:2px;letter-spacing:0"><span style="display:inline-block;background:#FFC93C;color:#1B2A49;border:1.5px solid #1B2A49;padding:0 7px;margin-bottom:3px">Start here</span><br>After question ' + LASTQ1[n] + ' you may choose: carry on, or try Think harder.</span>';
+const FASTPTR = n => '<span style="float:right;font-size:11px;line-height:1.2;font-weight:700;color:#1F7A6F;text-align:right;text-decoration:none;max-width:330px;margin-top:2px;letter-spacing:0"><span style="display:inline-block;background:#FFC93C;color:#1B2A49;border:1.5px solid #1B2A49;padding:0 6px;margin-right:4px">Start here</span> After question ' + LASTQ1[n] + ' you may choose: carry on, or try Think harder.</span>';
 const hdr = (n, topic, title, pb = true, fast = false) => [
   `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span></div>`,
   `<div class="p ltitle">${fast ? FASTPTR(n) : ''}${title}</div>`,

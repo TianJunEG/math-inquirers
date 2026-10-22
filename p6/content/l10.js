@@ -108,7 +108,7 @@ module.exports = {
     key: [
       ['Q1', '(a) 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
       ['Q2', '(a) 49 (factors 1, 7, 49; the only other 2-digit number with exactly 3 factors is 25)  (b) 2 × 2 × 3 × 7  (c) 3 + 37, 11 + 29, 17 + 23 (3 ways)'],
-      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (parts e and f are now in Think harder 5)'],
+      ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (parts e and f are now in Think harder 4)'],
       ['Q4', '(a) 31; 18 ((58 − 4) ÷ 3)  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139: 5 of the 36 equally likely results make 8 (2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2), and 1000 × 5 ÷ 36 ≈ 139; the program gives a number near this, not exactly'],
       ['Q5', 'Open: an idea, the puzzle, its answer worked out by hand, and a twist.'],
       ['Q6', 'Open: blocks (under 15) and at least two tests worked out before running, one of them an edge case.']

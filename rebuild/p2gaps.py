@@ -31,7 +31,7 @@ def precheck(K):
 def goexp(K):
     w=G[str(K)]['whatif']
     body=h2('Explore: go further')+p('Finished early, or curious? Try this any time during the explore. It is always your choice.',32,600,MUTED)
-    body+=pin(128,330,1664,f'<p style="font-size:44px;font-weight:700;line-height:1.3;color:{TEAL}">{E(w["q"].replace("Go further: ","What if ... "))}</p>',None,WHITE,24,'36px 44px')
+    body+=pin(128,330,1664,f'<p style="font-size:44px;font-weight:700;line-height:1.3;color:{TEAL}">{E(w["q"].replace("Go further: ","")[:1].upper()+w["q"].replace("Go further: ","")[1:])}</p>',None,WHITE,24,'36px 44px')
     body+=pin(128,640,1664,'<p style="font-size:34px;font-weight:600;line-height:1.3">Write or draw your answer on paper. Tell your partner or the group how you know when we come back together.</p>',None,SOFT,24,'28px 44px')
     notes=('Minutes 8 to 14. Go further (a second what-if question, so nobody waits). Show this slide with the explore slide or post the question in the chat when the pairs go to their breakout rooms. It is for ANY child who finishes the explore task or wants more: say it to the whole group as a choice, never as a prize, and never name who tries it. Pairs stay together unless both children agree to split. '
       f'Answer: {_txt(w["a"])} Take it at the debrief (minute 14) only if a pair offers it.')

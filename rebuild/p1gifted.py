@@ -10,7 +10,7 @@ from slidekit import *
 
 H = os.path.dirname(os.path.abspath(__file__))
 QB = json.load(open(os.path.join(H, '..', 'hp', 'qbank.json')))
-OPT = 'Optional: if you finish early'
+OPT = 'Your choice'
 
 def _w(D, sid, s):
     open(os.path.join(D, 'slides', sid + '.html'), 'w').write(s)
@@ -20,20 +20,20 @@ def apply(D, n):
     st = q['stretch'][4:7]; ch = q['challenge'][-3:]
     assert len(st) == 3 and len(ch) == 3
     # Stretch
-    body = h2('Stretch') + ''.join(card(p(f'<span style="color:#1F7A6F">{i+1}.</span>  {E(x["q"])}', 36, 600, raw=True)) for i, x in enumerate(st))
-    notes = 'For children who finish early (these are on the slide only; Think Harder T1 to T4 are in the workbook). Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))
+    body = h2('Think harder') + ''.join(card(p(f'<span style="color:#1F7A6F">{i+1}.</span>  {E(x["q"])}', 36, 600, raw=True)) for i, x in enumerate(st))
+    notes = 'For any pair that chooses to try more (these are on the slide only; Think harder T1 to T4 are in the workbook). Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))
     _w(D, p_ + 'stretch', sec(p_ + 'stretch', OPT, body, notes))
     # Challenge (three items; the third is open)
-    body = h2('Challenge')
+    body = h2('Go further')
     for i, x in enumerate(ch):
         inner = p(f'<span style="color:#1F7A6F">{i+1}.</span>  {E(x["q"])}', 32, 600, raw=True)
         if i == 2: inner = chip('Make up your own', YEL, NAVY, 24) + inner
         body += card(inner)
-    notes = ('For children who have finished the topic. Use as a pair challenge or in talk time. Ask for the reason every time. '
+    notes = ('For any pair that chooses Go further. Use it as a pair choice, or with volunteers in talk time (never call a child by name). Ask for the reason every time. '
              'Q3 is open: there is no single right answer, so ask children to check each other\'s work. Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(ch)))
     _w(D, p_ + 'challenge', sec(p_ + 'challenge', OPT, body, notes))
     # Walk-through: reveal the answers one at a time
-    body = h2('Challenge: talk it through', 60)
+    body = h2('Go further: talk it through', 60)
     prompts = ['What do we know? Can you draw it, or use counters?', 'Does anything stay the same? Does anything change?', 'Try it. Can your partner break your rule? Change one thing: what happens?']
     for i, x in enumerate(ch):
         a = x['a']
