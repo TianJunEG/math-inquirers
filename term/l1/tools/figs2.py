@@ -516,7 +516,7 @@ def groups_mat(n=6, container='plate'):
     for i in range(n):
         r, c = divmod(i, 2)
         body.append(_container(container, 20 + c * (cw + 30), 20 + r * (ch + 30), cw, ch))
-        body.append(f'<text x="{20 + c * (cw + 30) + cw / 2}" y="{20 + r * (ch + 30) + ch / 2 + 12}" font-size="44" font-weight="800" text-anchor="middle" fill="#B9C7DA" font-family="{FONT}">{i + 1}</text>')
+        body.append(f'<text x="{20 + c * (cw + 30) + cw / 2}" y="{20 + r * (ch + 30) + ch / 2 + 12}" font-size="44" font-weight="800" text-anchor="middle" fill="#7F90AD" font-family="{FONT}">{i + 1}</text>')
     rows = (n + 1) // 2
     return _svg(40 + 2 * cw + 30, 40 + rows * (ch + 30), ''.join(body), 'groups mat')
 

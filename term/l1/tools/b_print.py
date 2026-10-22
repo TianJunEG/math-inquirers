@@ -123,10 +123,21 @@ def qbox(q, label=None, draw=False):
     return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{blanks(q["text"])}</span></div>{vis}{parts}{ln}</div>'
 
 
+NONCUT_KITS = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates'}
+
+
+def kit_note(k):
+    """The same practical advice on every kit page: one side only, who cuts, where the pieces live."""
+    if k.get('type') in NONCUT_KITS:
+        return 'No cutting needed: keep this page flat to use in the lesson. Print it on its own sheet, or on one side only.'
+    return ('Print this page on its own sheet, or on one side only, so cutting never spoils another page. A grown-up cuts; children do not use scissors. '
+            'Keep the pieces in an envelope with your name. We use them again.')
+
+
 def kit_pages(d):
     out = []
     for k in kits(d):
-        out.append(f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">{E(k.get("title", "Kit page"))}</div><p style="font-size:13.5px;margin:2px 0 6px">{E(k.get("intro", "A grown-up cuts these out before the lesson."))}</p><div style="width:{k.get("width", 84)}%">{svg.kit_figure(k)}</div></div>')
+        out.append(f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">{E(k.get("title", "Kit page"))}</div><p style="font-size:13.5px;margin:2px 0 3px">{E(k.get("intro", "A grown-up cuts these out before the lesson."))}</p><p style="font-size:12px;margin:0 0 6px;color:#3B4A6B"><b>{E(kit_note(k))}</b></p><div style="width:{k.get("width", 84)}%">{svg.kit_figure(k)}</div></div>')
     return out
 
 
@@ -212,7 +223,7 @@ def build_print(d, pw):
         hp = os.path.join(outdir(d, 'html'), name + '.html')
         open(hp, 'w', encoding='utf-8').write(html)
         pg = pw.new_page(); pg.goto('file://' + hp, wait_until='networkidle'); pg.wait_for_timeout(500)
-        foot = f'<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>{footer}</span><span>Page <span class="pageNumber"></span></span></div>' if footer else '<div></div>'
+        foot = f'<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm 3mm;display:flex;justify-content:space-between;font-family:Arial"><span>{footer}</span><span>Page <span class="pageNumber"></span></span></div>' if footer else '<div></div>'
         pg.pdf(path=os.path.join(od, pdfname), format=fmt, print_background=True, display_header_footer=bool(footer), header_template='<div></div>', footer_template=foot,
                margin={'top': '14mm', 'bottom': '16mm', 'left': '14mm', 'right': '14mm'} if footer else {'top': '12mm', 'bottom': '12mm', 'left': '15mm', 'right': '15mm'})
         pg.close()
@@ -235,6 +246,10 @@ def build_print(d, pw):
             if bad in d['_tight2']: d['_tight3'].add(bad)
             if bad in d['_tight']: d['_tight2'].add(bad)
             d['_tight'].add(bad)
+    if kits(d):          # a one-sided kit-only PDF, so the kit page is never the back of the exit-ticket page
+        kp = workbook_html(d)
+        head = kp[:kp.index('<body>') + 6]
+        render('kit', head + ''.join(kit_pages(d)) + '</body></html>', f + f' \u2022 Lesson {d["lesson_in_term"]} \u2022 Kit (print one side only)', f'L{n}_Kit_Pages.pdf')
     render('workbook_key', key_html(d), f + ' \u2022 Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
     for lvl in (0, 1, 2):
         d['_home_tight'] = lvl

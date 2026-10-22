@@ -40,6 +40,20 @@ def text_of(path, p):
                           capture_output=True, text=True).stdout
 
 
+NONCUT = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates'}
+
+
+def lesson_info(level, ln):
+    """(kit types in page order, True if the lesson prints real-size content such as a ruler picture)"""
+    try:
+        raw = open(os.path.join(ROOT, 'term', f'l{level}', 'lessons', f'l{ln:02d}.json'), encoding='utf-8').read()
+        d = json.loads(raw)
+        ks = [k.get('type') for k in (d.get('workbook') or {}).get('kits', [{'type': 'base_ten'}])]
+        return ks, '"type": "ruler"' in raw
+    except Exception:
+        return [], False
+
+
 def is_kit(path, p):
     lines = [l.strip() for l in text_of(path, p).split('\n') if l.strip()]
     return bool(lines) and bool(re.search(r'\bKit$', lines[0]))
@@ -106,18 +120,18 @@ def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote):
             c.setFont('Helvetica', 11)
             for i, t in enumerate(['Some lessons end with a kit page: tens bars, number lines, cards and so on.',
                                    'Each kit page has a blank back, so you can cut or tear it out without losing any work.',
-                                   'Tear along the dashed line in the left margin, then cut out the pieces. Keep them in an envelope.']):
+                                   'Tear along the dashed line in the left margin. If the page says cut out, a grown-up cuts the pieces; keep them in an envelope.']):
                 c.drawString(70, 132 - 15 * i, t)
     return overlay(W, H, draw)
 
 
-def gutter_mark(W, H, g):
+def gutter_mark(W, H, g, cut=True):
     def draw(c):
         c.setStrokeColor(HexColor('#888888')); c.setDash(3, 3); c.setLineWidth(0.7)
         x = g - 1.5; c.line(x, 20, x, H - 20); c.setDash()
         c.setFillColor(HexColor('#666666')); c.setFont('Helvetica', 6.5)
         c.saveState(); c.translate(x - 3, H / 2); c.rotate(90)
-        c.drawCentredString(0, 0, 'TEAR OUT here (blank on the back)  -  then cut out the pieces'); c.restoreState()
+        c.drawCentredString(0, 0, 'TEAR OUT here (blank on the back)  -  then cut out the pieces' if cut else 'TEAR OUT here if you like (blank on the back)  -  do not cut this page'); c.restoreState()
     return overlay(W, H, draw)
 
 
@@ -151,11 +165,17 @@ def build_book(level, term, bookno, lessons, kind, ages=''):
         topic, title = lesson_title(wbpath)
         toc.append((f'Lesson {ln}', (re.sub(r'\b(And|Of|The|To|In|On|A)\b', lambda m: m.group(1).lower(), title) or topic, topic), len(seq) + 1))
         toc[-1] = (toc[-1][0], (toc[-1][1][0][:1].upper() + toc[-1][1][0][1:], toc[-1][1][1]), toc[-1][2])
+        ktypes, realsize = lesson_info(level, ln)
+        kn = 0
         for i in range(len(rd.pages)):
             kit = kitmode and is_kit(path, i + 1)
             if kit and len(seq) % 2 == 1:
                 seq.append(None)       # kit page must be a front page (its back is blank)
-            seq.append(('src', rd, i, kit))
+            cut = True
+            if kit:
+                cut = not (kn < len(ktypes) and ktypes[kn] in NONCUT); kn += 1
+            # kit pages and real-size pages (a ruler picture) print at 100%: the page already has 14 mm margins, more than the 12 mm binding strip
+            seq.append(('src', rd, i, kit, cut, bool(kit or (realsize and kind == 'workbook'))))
             if kit:
                 seq.append(None)
     if len(seq) % 2:
@@ -179,11 +199,14 @@ def build_book(level, term, bookno, lessons, kind, ages=''):
         elif item:
             src = item[1].pages[item[2]]
         if src is not None:
-            page.merge_transformed_page(src, Transformation().scale(s, s).translate(tx, ty))
+            if isinstance(item, tuple) and item[5]:
+                page.merge_page(src)               # 100%, no shift
+            else:
+                page.merge_transformed_page(src, Transformation().scale(s, s).translate(tx, ty))
             if item not in ('cover',):
                 page.merge_page(folio(W, H, i, g, odd))
             if isinstance(item, tuple) and item[3]:
-                page.merge_page(gutter_mark(W, H, g)); kits.append(i)
+                page.merge_page(gutter_mark(W, H, g, item[4])); kits.append(i)
         wr.add_page(page)
     os.makedirs(OUT, exist_ok=True)
     name = f'Math_Inquirers_L{level}_T{term}_Book{bookno}_Lessons{a:02d}-{b:02d}_{ {"workbook":"Workbook","key":"AnswerKey_TUTOR","home":"HomePack"}[kind] }_PRINT.pdf'

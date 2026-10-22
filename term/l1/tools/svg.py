@@ -186,6 +186,9 @@ def cards_kit(labels, cols=5, w=130, h=90, round_=False):
         else:
             p.append(f'<rect x="{cx}" y="{cy}" width="{w}" height="{h}" rx="10" fill="#fff" stroke="#777" stroke-width="2" stroke-dasharray="7 5"/>')
         p.append(f'<text x="{cx + w / 2}" y="{cy + h / 2 + h * 0.18}" font-size="{h * 0.5:.0f}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{t}</text>')
+        if str(t) in ('6', '9', '16', '19', '60', '90'):       # so a 6 cannot be turned into a 9
+            uw = len(str(t)) * h * 0.17
+            p.append(f'<line x1="{cx + w / 2 - uw:.1f}" y1="{cy + h / 2 + h * 0.3:.1f}" x2="{cx + w / 2 + uw:.1f}" y2="{cy + h / 2 + h * 0.3:.1f}" stroke="{NAVY}" stroke-width="3.4" stroke-linecap="round"/>')
     rows = (len(labels) + cols - 1) // cols
     return f'<svg viewBox="0 0 {cols * (w + 10) + 6} {rows * (h + 10) + 6}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
 
@@ -219,10 +222,11 @@ def ten_frame_kit():
             for c in range(5):
                 p.append(f'<rect x="{x0 + c * cell}" y="{y0 + r * cell}" width="{cell}" height="{cell}" fill="#fff" stroke="{NAVY}" stroke-width="2.4"/>')
         p.append(f'<rect x="{x0 - 6}" y="{y0 - 6}" width="{5 * cell + 12}" height="{2 * cell + 12}" fill="none" stroke="#777" stroke-width="1.4" stroke-dasharray="7 5"/>')
-    p.append(f'<text x="30" y="400" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Counters: cut out all 20 (10 red, 10 yellow)</text>')
+    p.append(f'<text x="30" y="400" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Counters: cut out all 20 (10 red marked R, 10 yellow marked Y)</text>')
     for row, col in ((0, RED), (1, YEL)):
         for i in range(10):
             p.append(f'<circle cx="{58 + i * 64}" cy="{438 + row * 66}" r="24" fill="{col}" stroke="{NAVY}" stroke-width="1.6" stroke-dasharray="5 3"/>')
+            p.append(f'<text x="{58 + i * 64}" y="{438 + row * 66 + 8}" font-size="22" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{"R" if row == 0 else "Y"}</text>')
     return f'<svg viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
 
 
@@ -297,7 +301,7 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
             elif n in shade2: fill = MINT
             if n in hide: fill = '#F3F6FB'
             P.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" fill="{fill}" stroke="{NAVY}" stroke-width="1.8"/>')
-            fs = cell * (0.30 if n >= 100 else 0.43)
+            fs = cell * (0.37 if n >= 100 else 0.43)
             if n in hide:
                 if tags and n in tags:
                     P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + cell * 0.15}" font-size="{cell * 0.42}" font-weight="700" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">{tags[n]}</text>')
@@ -449,22 +453,22 @@ def place_table(tens, ones, big=False, blank=False):
 
 
 def kit_page_svg():
-    """Cut-out sheet: 9 tens bars + 20 ones squares (A4 width)."""
-    sq = 62
+    """Cut-out sheet: 9 tens bars + 20 ones squares. Every cell is the same square (a bar is ten squares long) with clear gaps between cut lines."""
+    sq = 50; gap = 18
     parts = []
     y = 40
-    parts.append(f'<text x="0" y="22" font-size="22" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Tens bars: cut out all 9 (each bar is one ten)</text>')
+    parts.append(f'<text x="0" y="22" font-size="19" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Tens bars: cut out all 9 (each bar is a ten)</text>')
     for _ in range(9):
         for i in range(10):
-            parts.append(f'<rect x="{i * sq + 2}" y="{y}" width="{sq}" height="{sq - 8}" fill="{SKY}" stroke="{NAVY}" stroke-width="2"/>')
-        parts.append(f'<rect x="0" y="{y - 3}" width="{10 * sq + 4}" height="{sq - 2}" fill="none" stroke="#777" stroke-width="1.6" stroke-dasharray="7 5"/>')
-        y += sq + 6
-    y += 22
-    parts.append(f'<text x="0" y="{y}" font-size="22" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Ones squares: cut out all 20 (each square is one one)</text>')
+            parts.append(f'<rect x="{i * sq + 2}" y="{y}" width="{sq}" height="{sq}" fill="{SKY}" stroke="{NAVY}" stroke-width="2"/>')
+        parts.append(f'<rect x="0" y="{y - 3}" width="{10 * sq + 4}" height="{sq + 6}" fill="none" stroke="#777" stroke-width="1.6" stroke-dasharray="7 5"/>')
+        y += sq + gap
+    y += 10
+    parts.append(f'<text x="0" y="{y}" font-size="19" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Ones squares: cut out all 20 (each is one one)</text>')
     y += 16
     for k in range(20):
         x = (k % 10) * sq + 2
-        yy = y + (k // 10) * (sq + 4)
-        parts.append(f'<rect x="{x}" y="{yy}" width="{sq - 6}" height="{sq - 6}" fill="{SOFT}" stroke="#777" stroke-width="1.6" stroke-dasharray="7 5"/>')
-    y += 2 * (sq + 4) + 6
-    return f'<svg viewBox="0 0 {10 * sq + 8} {y}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(parts)}</svg>'
+        yy = y + (k // 10) * (sq + gap)
+        parts.append(f'<rect x="{x + 4}" y="{yy}" width="{sq - 8}" height="{sq - 8}" fill="{SOFT}" stroke="#777" stroke-width="1.6" stroke-dasharray="7 5"/>')
+    y += 2 * (sq + gap) - 10
+    return f'<svg viewBox="0 0 {10 * sq + 8} {y}" xmlns="http://www.w3.org/2000/svg" style="width:84%;height:auto;display:block">{"".join(parts)}</svg>'
