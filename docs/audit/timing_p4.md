@@ -22,11 +22,12 @@ Status: analysis only. Estimates from a stated model, not stopwatch timings. Not
 
 How to read it. **A** = minutes the content needs if the worksheet is held to the items the printed "Aim for" note names (Start here page plus the priority items on page 2). **B** = clock reading if the tutor lets the worksheet run its full 46 scripted minutes (the other parts take what they need). Best / Typ / Slow are three tutor styles (section 2). "ws left" = minutes of the 46-minute worksheet window still available after every other part has taken what it needs (typical tutor).
 
-* No lesson fits at the typical setting. Typical totals are 93.4 to 105.5 minutes (best case 77.4 to 90.9; slow 98.5 to 110.5). In the best case (all optional slides skipped, 20 s slide changes, 60 s breakout moves) 9 of 10 lessons fit; Lesson 10 does not.
-* Every lesson has the same shape: the first 45 scripted minutes (sneak-peek to brain break and the explore) are about 10 to 14 minutes short, and the worksheet has 3 to 9 minutes of unused solo time on page 2. The lead-in parts overrun (sneak-peek +3.4, warm-up +3.1, explore +3.6 on average); page 1 of the worksheet overruns in 7 lessons (+1.5 to +8.9).
-* If a tutor skips the optional "your turn" slides and the speaker-note ASKs (as the guide allows) the typical total falls by 7 to 15 minutes (mean 10.8) to 84-92 minutes (L10 98.5).
-* Lessons running long by the typical tutor: L3 (+14.9), L7 (+14.5), L10 (+15.3), L1 (+9.6), L2 (+8.8), L4/L8 (+6), L5 (+5.4), L6 (+3.9), L9 (+3.4 over 90 minutes). Short lessons: none. Loose parts (3+ min of spare): worksheet page 2 in all ten lessons (this is the cushion the printed "choice" questions use), the mini-lesson in L9 and L10.
 
+* No lesson fits at the typical setting. Typical totals are 93.4 to 105.3 minutes (best case 77.3 to 90.9; slow 98.5 to 110.5). In the best case (optional slides and speaker-note ASKs skipped, 20 s slide changes, 60 s breakout moves) 9 of 10 lessons fit; Lesson 10 does not.
+* Every lesson has the same shape: the lead-in parts overrun (sneak-peek +3.5, warm-up +3.1, explore +3.6 on average, all ten lessons OVER on each), page 1 of the worksheet is OVER in 9 lessons (+1.5 to +8.9), and the worksheet's page-2 solo block has 3.4 to 9.4 minutes of unused time (the cushion that the printed choice questions use).
+* If a tutor skips the optional "your turn" slides and the speaker-note ASKs (as the guide allows) the typical total falls by 7.0 to 15.0 minutes (mean 10.8) to 84.0-91.5 minutes (Lesson 10: 98.3).
+* Lessons running long (typical total over 90): L10 (+15.3), L3 (+14.9), L7 (+14.5), L1 (+9.6), L2 (+8.8), L8 (+6.1), L4 (+6.0), L5 (+5.4), L6 (+3.9), L9 (+3.4). Lessons running short: none. Loose parts (3+ min spare): worksheet page 2 in all ten lessons, the mini-lesson in L9 and L10.
+* With the fixes in section 6 the typical need is 76.2 to 86.6 minutes (best 67.7-77.5, slow 80.2-90.8) and every lesson keeps at least 3 minutes of cushion.
 
 ## 2. Model and assumptions (same for every level)
 
@@ -70,7 +71,6 @@ Brain break: 3 of the 4 scripted minutes are activity (about 1.75 min play, 1.25
 Columns: scripted minutes, then the typical tutor's speaking, waiting (questions, hold-ups, "your turn" slides), activity (children working, game, break), transition (slide changes, breakouts, worksheet start, greeting) and REC cue minutes, then total needed, difference and flag, then the range best-slow. The worksheet is split into five blocks (WS-a to WS-e) with their scripted windows 34-50, 50-53, 53-58, 58-76, 76-80; its page-2 row (WS-d) counts only the priority items. Flags apply per row.
 
 
-
 #### Lesson 1: Factor Hunters  (28 slides, 345 SAY words, 6 core workbook questions / 16 sub-parts, 404 words)
 
 | Part | Scripted | Speak | Wait | Activity | Transition | REC | **Need** | Diff | Flag | Need range (best-slow) |
@@ -95,7 +95,6 @@ Total needed (worksheet at priority items only): best 79.8 / typical 99.6 / slow
 
 
 **Reading it.** Page 1 (Q1 factor pairs of 48, Q2 40 trees, Q3 18 red and 24 blue beads) is the one page that fits: a MIDDLE child needs about 10 min of the 11 available. Q5 on page 2 (a 7-number factor-count table, the "exactly 3 factors" pattern and 49) is the longest single item of the level at about 7 min, so a LOW child reaches Q4 only. Sneak-peek puzzle 2 (two lifts, floors to 40) needs two lists; 90 s is tight for a LOW child. Fizz-Buzz is scripted at 2 min and fits, but the five quick questions after it do not (4.1 min of waiting alone).
-
 
 
 #### Lesson 2: Big Number Puzzles  (28 slides, 306 SAY words, 6 core workbook questions / 17 sub-parts, 309 words)
@@ -124,7 +123,6 @@ Total needed (worksheet at priority items only): best 81.4 / typical 98.8 / slow
 **Reading it.** Page 1 is the heaviest "Start here" page after Lesson 10: 14.5 min against 11. Q2a/Q2b (smallest and largest number that rounds to 63 000; all numbers that round to 5350) are boundary-case reasoning that sits closer to Think Harder than Core, and Q3c is a 4-digit by 1-digit multiplication on top of an estimate. Explore (find every 5-digit number from the cards 2, 4, 5, 7, 9 that rounds to 50 000: there are only four) is 6 min of enumeration. The mini-lesson has 4 worked examples (we1 to we4) plus 2 optional "your turn" slides.
 
 
-
 #### Lesson 3: Operation Detectives  (29 slides, 330 SAY words, 7 core workbook questions / 15 sub-parts, 324 words)
 
 | Part | Scripted | Speak | Wait | Activity | Transition | REC | **Need** | Diff | Flag | Need range (best-slow) |
@@ -148,8 +146,7 @@ Total needed (worksheet at priority items only): best 81.4 / typical 98.8 / slow
 Total needed (worksheet at priority items only): best 82.8 / typical 104.9 / slow 110.1 min. As scripted (worksheet runs its full 46): best 88.3 / typical 102.3 / slow 105.8. Worksheet time left after the other parts take what they need (typical): 33.7 of 46 scripted; spare after priority items: -14.9.
 
 
-**Reading it.** Highest total after Lessons 7 and 10 in the typical model. The mini-lesson has three optional "your turn" slides (try1, try2, try3) and 7 slides in 12 minutes; the worksheet teaching block has four slides (teachback, trytrick, teachbar, teachchain) for 5 minutes, and trytrick and teachchain carry no minute badge on the deck, so they are unscheduled. Page 1 is 13.8 min of work: Q2 (four missing-sign sentences, the last with three blanks) is trial and error at about 1.2 min each.
-
+**Reading it.** Second-highest typical total (L10 is first, L7 close behind). The mini-lesson has three optional "your turn" slides (try1, try2, try3) and 7 slides in 12 minutes; the worksheet teaching block has four slides (teachback, trytrick, teachbar, teachchain) for 5 minutes, and trytrick and teachchain carry no minute badge on the deck, so they are unscheduled. Page 1 is 13.8 min of work: Q2 (four missing-sign sentences, the last with three blanks) is trial and error at about 1.2 min each.
 
 
 #### Lesson 4: Fraction Frontier  (30 slides, 287 SAY words, 6 core workbook questions / 13 sub-parts, 246 words)
@@ -178,7 +175,6 @@ Total needed (worksheet at priority items only): best 77.3 / typical 96.0 / slow
 **Reading it.** No single part is badly over except the lead-in (sneak, warm-up, explore). Page 1 is 10 min of work and fits. The warm-up quick questions Q4 (3/4 + 1/8) and Q5 (1 - 3/10) need unlike denominators and are not 30-second questions for a LOW child. Explore (cut paper circles into quarters, build 11 slices into pizzas, write it two ways, then "what if 6 slices") is about 6 min of hands-on plus cutting. Largest slide count of the level (30).
 
 
-
 #### Lesson 5: Decimal Detectives  (29 slides, 305 SAY words, 6 core workbook questions / 14 sub-parts, 271 words)
 
 | Part | Scripted | Speak | Wait | Activity | Transition | REC | **Need** | Diff | Flag | Need range (best-slow) |
@@ -203,7 +199,6 @@ Total needed (worksheet at priority items only): best 78.5 / typical 95.4 / slow
 
 
 **Reading it.** Same pattern as Lesson 4. Explore (digit cards 2, 5, 8 and a point: make every number, order them, find the one closest to 5) is 6.5 min and the highest hands-on figure before Lesson 8. Page 1 Q1 (five arrows on a zoomed number line, decide what one step is worth first) is about 4.7 min; LOW finishes one of three page-1 questions.
-
 
 
 #### Lesson 6: Angle Turns  (28 slides, 305 SAY words, 6 core workbook questions / 11 sub-parts, 231 words)
@@ -232,7 +227,6 @@ Total needed (worksheet at priority items only): best 77.4 / typical 93.9 / slow
 **Reading it.** The only lesson whose worksheet is too light on page 2 and too heavy on page 1. Page 1 holds only Q1 and Q2, although the printed line and the guide say "after question 3 you may choose" (Q3 is on page 2). Q1 asks a child who is probably new to the protractor to estimate, extend the arms with a ruler and measure four angles: about 2 min each, 8 min, plus Q2 (name every angle, size each) 5 min, against a 9 min working window (the teachfan slide takes 34-36). Page 2 priority items (Q3, Q4) are only 6.9 min, so there is 9 min of loose time there.
 
 
-
 #### Lesson 7: Area Architects II  (29 slides, 418 SAY words, 6 core workbook questions / 9 sub-parts, 375 words)
 
 | Part | Scripted | Speak | Wait | Activity | Transition | REC | **Need** | Diff | Flag | Need range (best-slow) |
@@ -259,8 +253,7 @@ Total needed (worksheet at priority items only): best 83.8 / typical 104.5 / slo
 **Reading it.** Largest script of the level: 418 SAY words (median 322), of which the mini-lesson think-aloud is 4 paragraphs and 207 words; also the most text on slides (2 179 visible words). Page 1 is 13.5 min (Q1 is a three-part L-shaped figure: missing sides, area two ways, perimeter). The exit ticket (area and perimeter of a 7 by 5 rectangle with a 2 by 2 corner cut out) needs about 2.5 min of child time, so the 3 min slot is exceeded.
 
 
-
-#### Lesson 8: Symmetry and Nets  (28 slides, 344 SAY words, 6 core workbook questions / 7 sub-parts, 196 words)
+#### Lesson 8: Symmetry and Nets  (28 slides, 344 SAY words, 6 core workbook questions / 7 sub-parts, 197 words)
 
 | Part | Scripted | Speak | Wait | Activity | Transition | REC | **Need** | Diff | Flag | Need range (best-slow) |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|:-:|:-:|
@@ -273,7 +266,7 @@ Total needed (worksheet at priority items only): best 83.8 / typical 104.5 / slo
 | WS-a  Start + page 1 (pairs) | 16.0 | 1.0 | 0.5 | 11.5 | 5.4 | 0.3 | **18.8** | +2.8 | OVER | 16.9-19.9 |
 | WS-b  Check page 1 | 3.0 | 0.4 | 1.5 | 0.0 | 0.4 | 0.0 | **2.4** | -0.6 | TIGHT | 2.3-2.4 |
 | WS-c  Teaching before page 2 | 5.0 | 1.2 | 2.9 | 0.0 | 1.7 | 0.0 | **5.8** | +0.8 | TIGHT | 2.0-6.1 |
-| WS-d  Page 2 solo (priority items) | 18.0 | 0.7 | 0.0 | 9.0 | 0.9 | 0.0 | **10.6** | -7.4 | LOOSE | 10.3-10.7 |
+| WS-d  Page 2 solo (priority items) | 18.0 | 0.7 | 0.0 | 9.0 | 0.9 | 0.0 | **10.7** | -7.3 | LOOSE | 10.3-10.7 |
 | WS-e  Check page 2 | 4.0 | 0.3 | 1.5 | 0.0 | 0.4 | 0.0 | **2.2** | -1.8 | OK | 2.2-2.3 |
 | Talk time | 5.0 | 0.7 | 2.0 | 2.0 | 1.4 | 0.2 | **6.3** | +1.3 | TIGHT | 4.7-7.4 |
 | Exit ticket + closing | 3.0 | 0.3 | 0.5 | 1.0 | 0.4 | 0.1 | **2.4** | -0.6 | TIGHT | 2.3-2.5 |
@@ -283,8 +276,7 @@ Total needed (worksheet at priority items only): best 83.8 / typical 104.5 / slo
 Total needed (worksheet at priority items only): best 78.3 / typical 96.1 / slow 101.2 min. As scripted (worksheet runs its full 46): best 90.7 / typical 102.3 / slow 105.7. Worksheet time left after the other parts take what they need (typical): 33.7 of 46 scripted; spare after priority items: -6.1.
 
 
-**Reading it.** Explore is the problem: join six paper squares edge to edge, tape, try to fold into a cube, then draw every shape that works: about 7 min of hands-on, so the part needs 14.5 against 10. Q1 (six nets, which fold into a cube, tick and explain) is mental folding at about 5 min and the hardest page-1 item for LOW children. The exit ticket (dice net) is only 1 min of child time, so closing is slightly loose.
-
+**Reading it.** Explore is the problem: join six paper squares edge to edge, tape, try to fold into a cube, then draw every shape that works: about 7 min of hands-on, so the part needs 14.5 against 10. Q1 (six nets, which fold into a cube, tick and explain) is mental folding at about 5 min and the hardest page-1 item for LOW children. The exit ticket (dice net) is only 1 min of child time, so the closing part needs only about 2.4 min.
 
 
 #### Lesson 9: Data Detectives  (27 slides, 330 SAY words, 5 core workbook questions / 12 sub-parts, 264 words)
@@ -311,7 +303,6 @@ Total needed (worksheet at priority items only): best 78.3 / typical 93.4 / slow
 
 
 **Reading it.** Explore asks children to choose a scale, plot about seven points and join them, then write three findings: 7.5 min hands-on, 14.9 min needed against 10. The mini-lesson has only 6 slides with little new vocabulary and is the one regular part that is LOOSE (about 9 against 12). Page 1 has only two questions (Q1 reading a line graph, Q2 filling a table) so 'after question 3' in the printed line is not reached on this lesson either.
-
 
 
 #### Lesson 10: Challenge Day  (29 slides, 314 SAY words, 6 core workbook questions / 13 sub-parts, 294 words)
@@ -359,9 +350,9 @@ Total needed (worksheet at priority items only): best 90.9 / typical 105.3 / slo
 
 Reading: the first "p1" columns count page-1 questions finished in the pairs window (16 minutes minus the 2 min start and the 3 min of breakout moves = 11 minutes; Lesson 6 has the 2-minute teachfan slide first = 9 minutes). The "p2" columns show priority questions finished + choice questions finished in the 16.5 min of the solo window, before and after (arrow) the window is squeezed by what the other parts really need (tutor skipping optional slides).
 
-* Page 1 is sized for a HIGH child. A MIDDLE child finishes all of page 1 in L1, L4, L5, L9 and not in L2, L3, L6, L7, L8 (2 of 3) or L10 (1 of 3); a LOW child finishes one question in every lesson except L6 and L10 (none).
-* Page 2 (solo): MIDDLE children finish the priority items in 9 of 10 lessons when the lead-in parts do not overrun, and a LOW child finishes 1 to 2 of the priority questions; once the earlier parts run their natural length and the worksheet shrinks, a LOW child loses a priority item in L1, L2, L4, L5, L7, L8 and L10.
-* The Think Harder, Go further and Investigation pages have no slot. They are only reachable by HIGH children (roughly 5 to 9 spare minutes in lessons 1 to 9) and in L6.
+* **Page 1 is sized for a HIGH child.** A MIDDLE child finishes all of page 1 in lessons 1, 4, 5, 9 and not in the other 6 (L2, L3, L7, L8 finish 2 of 3, L6 1 of 2, L10 1 of 3). A LOW child finishes one page-1 question in every lesson except L6 and L10 (none).
+* **Page 2 (solo).** With the windows as scripted a MIDDLE child finishes the priority questions in 10 of 10 lessons and a LOW child 1 or 2 of them. Once the earlier parts take their natural length (the lean tutor), a MIDDLE child loses a priority question in L7 (1 of 2 left), L10 (0 of 2 left); a LOW child loses one in L2 (2 to 1 of 3), L4 (2 to 1 of 2), L5 (2 to 1 of 2), L8 (2 to 1 of 2), L10 (2 to 0 of 2).
+* **Think Harder, Go further and the Investigation have no slot.** Only HIGH children get to them: with the scripted windows a HIGH child has 10 to 15 minutes spare across the two worksheet pages (13 on average), which is one or two Think Harder items; MIDDLE and LOW children have none and the printed text sends them to take-home.
 
 ## 5. Where the time goes
 
@@ -382,13 +373,13 @@ Reading: the first "p1" columns count page-1 questions finished in the pairs win
 
 Three biggest time sinks across the level (typical tutor):
 
-1. **Waiting and hold-ups, 22 min per lesson.** Thirty seconds for each of the 5 warm-up questions, 3 explore questions, the 8 to 10 answer-check questions, 2 sneak-peek hold-ups, the prediction and the talk time; plus 2 to 5 "your turn" and ASK interruptions in the mini-lesson. The script budgets these at a few seconds each.
+1. **Waiting and hold-ups, 22 min per lesson.** Thirty seconds for each of the 5 warm-up questions, 3 explore questions, the six answer-check questions, 2 sneak-peek hold-ups, the prediction and the talk time; plus 2 to 5 "your turn" and ASK interruptions in the mini-lesson. The script budgets these at a few seconds each.
 2. **Transitions, 20 min per lesson.** 23 to 26 slide changes (about 10 min), four breakout moves and the worksheet start (about 8 min), greetings and the 15 s goodbye. The pill timetable on the slides (one badge per slide, as short as one minute) has no time for changing slides.
 3. **Task size in the explore and on worksheet page 1.** Explore needs 12.3 to 16.4 min (scripted 10); page 1 needs 17.5 to 24.9 min including the start (scripted 16). Hands-on tasks in L8, L9, L10 and the 17-min page 1 of L10 are the extreme cases. Smaller items: the sneak-peek puzzles (6.5 against 3) and the Looking back routine (3.5 against 2).
 
 Other findings about the plan:
 
-* **Slide counts are similar, not unusual:** 27 (L9) to 30 (L4), 28.6 on average, 24 live slides after the four take-home slides. L4 has the most (30), L9 the fewest.
+* **Slide counts are similar, not unusual:** 27 (L9) to 30 (L4), 28.5 on average, 24 live slides after the four take-home slides. L4 has the most (30), L9 the fewest.
 * **Script word counts:** SAY lines 287 (L4) to 418 (L7), median 322. L7 is unusually large (+30%), driven by a 4-paragraph, 207-word think-aloud; L1 (345) and L8 (344) are next. Slide text is heaviest on L7 (2 179 visible words) and on single slides: sneak-peek slides carry 110 to 146 words, and L10's warm-up slide 165 words.
 * **Unscheduled or inconsistent items found while walking through:** L3 trytrick and teachchain have no minute badge; the explore slides are badged 8-13 and 13-18 while the guide says pencils down at 16; L6 page 1 has two questions yet the printed line says "after question 3" (also true of L9); the L10 final minute has no guide segment, no REC cue and no budget; L10 slide `end` notes say "Minutes 88 to 90" and the badge says 89-90.
 * **REC cue lines** are not "under ten seconds": at 135 wpm the average is 11.9 s and the worksheet cue is 17 s. Over a lesson that is 2.0 min of speech, and it also adds ten "Recording: pause now..." sentences that a live class hears.
@@ -398,10 +389,10 @@ Other findings about the plan:
 All numbers in this section come from the same model re-run with the fixes switched on (`--fix` tables in the helper; typical tutor). "Need after fixes" shows the best / typical / slow figure for each part so a reader can see the margin.
 
 **F1 Re-budget the clock.** The scripted splits (1 / 3 / 4 / 10 / 12 / 4 / 46 / 5 / 3 / 2) assume zero overhead. With the model's constants the lead-in parts need roughly 1.5 / 5-5.5 / 5 / 11.5-14.5, the closing parts 3.5 / 2.5-4.5 / 3.5. The worksheet gives back 3-5 minutes and takes whatever is left, with a cushion inside page 2 (F11).
-**F2 Sneak-peek puzzles (0.3 min of REC and slide included).** Budget 5-5.5 min (minutes 1.5-7). Give 60 s for puzzle 1 (the objects/drawing one) and 90 s for puzzle 2, then ONE hold-up moment for both papers, not one per puzzle; delete the optional "can anyone find another way?" question. All privacy rules stay (own paper, camera to the tutor only, no names).
+**F2 Sneak-peek puzzles.** Budget 5-5.5 min (minutes 1.5-7). Give 60 s for puzzle 1 (the objects/drawing one) and 90 s for puzzle 2, then ONE hold-up moment for both papers, not one per puzzle; delete the optional "can anyone find another way?" question. All privacy rules stay (own paper, camera to the tutor only, no names).
 **F3 Warm-up.** Keep the game at 90 s and the quick questions at three (Q1 to Q3, the ones that revisit last lesson's idea); move Q4 and Q5 to the Weekly Dose of Thinking Math. Delete the ASK follow-ups in the warm-up speaker notes. Budget 5 min.
 **F4 Explore.** Ask two debrief questions, not three: the third ("What do the side lengths tell us about 24?" and its equivalents) is the first slide of the mini-lesson. Online, name the explore as the only breakout of the first half, with a 60 s auto-close timer; budget 11.5-14.5 min (see table).
-**F5 Mini-lesson.** Keep the worked examples and the key-idea slide; keep one "your turn" slide (the last one) or none (L2, L3, L7); keep at most three of the speaker-note ASKs. Budget 5-8.5 min. The 12 minutes in the script buy 7 slide changes (3 min), 2-3 "your turn" slides (2.2 min each: read, 60 s write, 30 s hold-up, reveal) and 5-7 ASK questions (30 s each), which is the 12 minutes: it leaves no time for the SAY lines (1.5 to 2.2 min).
+**F5 Mini-lesson.** Keep the worked examples and the key-idea slide; keep one "your turn" slide (the last one) or none (L2, L3, L7); keep at most three of the speaker-note ASKs. Budget 5-8.5 min. In the typical model the 12 scripted minutes are about 1.5 min of speech, 2.9 min of slide changes and 6-7 min of "your turn" slides (2.4 min each: change, read, 60 s write, 30 s hold-up, reveal) and speaker-note ASKs (30 s each); the typical need is 8.7 to 13.4 min.
 **F6 Brain break.** 3.5 min (water and toilet before the game, not after).
 **F7 Worksheet.** Keep Start here / check / short teaching / solo page, but re-set the windows to the tables below (page 1 and the opening need 16.5-19 min once the 2 min start and 2 breakout moves are counted). Skip every "your turn"/"Optional" slide in the teaching block and limit speaker-note ASKs to three.
 **F8 Talk time.** Pair talk 60 s (no breakout: online, "tell the grown-up beside you, or write one sentence"); volunteers first; the second discussion question moves to the Weekly Dose. Budget 3.5-4 min.
@@ -471,7 +462,7 @@ worksheet window 47.0 min (was 46), page-2 spare after priority items 3.2 min
 
 #### Lesson 3
 
-- Mini-lesson: cut try1 (20-22), try2 (24-25) and try3 (28-29); keep teach1, we1, we2 and key (4 slides), two ASKs. The three "your turn" slides alone cost about 6.6 min.
+- Mini-lesson: cut try1 (20-22), try2 (24-25) and try3 (28-29); keep teach1, we1, we2 and key (4 slides), two ASKs. The three "your turn" slides alone cost about 7 min.
 - Worksheet teaching: drop trytrick and teachchain (Q7, the choice question, is taught only to a child who picks it; put teachchain in the take-home pack); keep teachback and teachbar.
 - Worksheet: pairs do Q1 and Q2 (9 min of work); Q3 (brackets in 4 + 8 x 5 - 3) is solo, first. Q2(d), the sentence with three blanks, stays as a pass-allowed item.
 
@@ -531,7 +522,7 @@ worksheet window 44.0 min (was 46), page-2 spare after priority items 6.5 min
 - Warm-up: keep Q1-Q3 (the 7 in 3.475 / 6 tenths and 4 thousandths / 0.8 or 0.75); move Q4 and Q5 (round 4.68; $5 - $3.05) to the Weekly Dose.
 - Mini-lesson: cut try1 (22-23); keep try2 (28-29); ASKs on teach1, we2 and the first ASK on we3.
 - Explore: stop the hands-on at 6 min and finish ordering in the debrief (question 1 and 2 only).
-- Worksheet teaching: skip no slides (4 slides, 3.5-5 min) but ASKs only on teachcards and teachclue.
+- Worksheet teaching: no slide is optional (4 slides, 3.5-5 min); limit the ASKs to three.
 
 worksheet window 43.0 min (was 46), page-2 spare after priority items 4.1 min
 
@@ -586,12 +577,12 @@ worksheet window 46.0 min (was 46), page-2 spare after priority items 13.4 min
 
 #### Lesson 7
 
-- SAY: cut the think-aloud from 4 paragraphs and 207 words to 3 paragraphs and about 150 words (drop the paragraph that repeats the L-shape example already on we3).
-- Mini-lesson: cut try1 (22-23) and try2 (26-27); keep teach1, we1, we2, we3, key; ASKs on teach1, we1, we2.
+- SAY: the 4-paragraph, 207-word think-aloud is the longest of the level. Its 4th paragraph and the slide we3 (area 20: list the rectangles, perimeters 42, 24, 18) repeat the 12-tile explore and Q2 (area 24), so drop both (about 50 words and one slide change).
+- Mini-lesson: cut try1 (22-23) and try2 (26-27); keep teach1, we1, we2, key; ASKs on teach1, we1, we2.
 - Worksheet: pair task for Q1: partner A splits the figure into two rectangles, partner B uses big rectangle minus the missing piece, then they compare (about 4 min instead of 6). Q3 (six tiles, smallest and largest perimeter) is the first solo question.
 - Exit ticket: keep the question; budget 4 min (2.5 min of writing) for this lesson only.
 
-worksheet window 45.0 min (was 46), page-2 spare after priority items 2.3 min
+worksheet window 46.0 min (was 46), page-2 spare after priority items 3.3 min
 
 | Part | Old | New budget | New clock (min) | Need after fixes (best / typical / slow) |
 |---|--:|--:|--:|--:|
@@ -599,17 +590,17 @@ worksheet window 45.0 min (was 46), page-2 spare after priority items 2.3 min
 | Sneak-peek puzzles | 3.0 | 5.0 | 1.5-6.5 | 4.9 / 5.0 / 5.1 |
 | Warm-up game + quick questions | 4.0 | 5.0 | 6.5-11.5 | 5.0 / 5.1 / 5.3 |
 | Explore (pairs, objects) | 10.0 | 12.0 | 11.5-23.5 | 10.6 / 11.8 / 13.0 |
-| Mini-lesson (5 slides) | 12.0 | 6.5 | 23.5-30.0 | 4.3 / 6.4 / 6.8 |
-| Brain break | 4.0 | 3.5 | 30.0-33.5 | 3.4 / 3.5 / 3.6 |
-| WS-a  Start + page 1 (pairs) | 16.0 | 16.0 | 33.5-49.5 | 13.3 / 15.9 / 17.0 |
-| WS-b  Check page 1 | 3.0 | 2.0 | 49.5-51.5 | 1.7 / 1.8 / 1.8 |
-| WS-c  Teaching before page 2 | 5.0 | 3.5 | 51.5-55.0 | 2.1 / 3.5 / 3.7 |
-| WS-d  Page 2 solo (priority items) | 18.0 | 20.0 | 55.0-75.0 | 16.4 / 17.7 / 17.8 |
+| Mini-lesson (4 slides) | 12.0 | 5.5 | 23.5-29.0 | 3.6 / 5.6 / 5.9 |
+| Brain break | 4.0 | 3.5 | 29.0-32.5 | 3.4 / 3.5 / 3.6 |
+| WS-a  Start + page 1 (pairs) | 16.0 | 16.0 | 32.5-48.5 | 13.3 / 15.9 / 17.0 |
+| WS-b  Check page 1 | 3.0 | 2.0 | 48.5-50.5 | 1.7 / 1.8 / 1.8 |
+| WS-c  Teaching before page 2 | 5.0 | 3.5 | 50.5-54.0 | 2.1 / 3.5 / 3.7 |
+| WS-d  Page 2 solo (priority items) | 18.0 | 21.0 | 54.0-75.0 | 16.4 / 17.7 / 17.8 |
 | WS-e  Check page 2 | 4.0 | 3.5 | 75.0-78.5 | 3.3 / 3.5 / 3.7 |
 | Talk time | 5.0 | 4.0 | 78.5-82.5 | 3.6 / 3.7 / 3.8 |
 | Exit ticket + closing | 3.0 | 4.0 | 82.5-86.5 | 4.0 / 4.0 / 4.1 |
 | Looking back | 2.0 | 3.5 | 86.5-90.0 | 3.3 / 3.4 / 3.5 |
-| Sum | 90.0 | 90.0 | | typical need 86.7; cushion 3.3 |
+| Sum | 90.0 | 90.0 | | typical need 85.9; cushion 4.1 |
 
 
 
@@ -621,7 +612,7 @@ worksheet window 45.0 min (was 46), page-2 spare after priority items 2.3 min
 - Page 1 Q1 (six nets): LOW children finish only Q1 of 3 on page 1 even at the new 18.5-19 min window; Q2 and Q3 are the 'carry on' questions.
 - Exit ticket is 1 min of child time: closing can end at 2.5 min.
 
-worksheet window 42.5 min (was 46), page-2 spare after priority items 4.4 min
+worksheet window 42.5 min (was 46), page-2 spare after priority items 4.3 min
 
 | Part | Old | New budget | New clock (min) | Need after fixes (best / typical / slow) |
 |---|--:|--:|--:|--:|
@@ -634,7 +625,7 @@ worksheet window 42.5 min (was 46), page-2 spare after priority items 4.4 min
 | WS-a  Start + page 1 (pairs) | 16.0 | 19.0 | 37.5-56.5 | 16.9 / 18.8 / 19.9 |
 | WS-b  Check page 1 | 3.0 | 2.5 | 56.5-59.0 | 2.3 / 2.4 / 2.4 |
 | WS-c  Teaching before page 2 | 5.0 | 3.5 | 59.0-62.5 | 2.0 / 3.4 / 3.7 |
-| WS-d  Page 2 solo (priority items) | 18.0 | 15.0 | 62.5-77.5 | 10.3 / 10.6 / 10.7 |
+| WS-d  Page 2 solo (priority items) | 18.0 | 15.0 | 62.5-77.5 | 10.3 / 10.7 / 10.7 |
 | WS-e  Check page 2 | 4.0 | 2.5 | 77.5-80.0 | 2.2 / 2.2 / 2.3 |
 | Talk time | 5.0 | 4.0 | 80.0-84.0 | 3.7 / 3.8 / 3.8 |
 | Exit ticket + closing | 3.0 | 2.5 | 84.0-86.5 | 2.3 / 2.4 / 2.5 |
@@ -645,7 +636,7 @@ worksheet window 42.5 min (was 46), page-2 spare after priority items 4.4 min
 
 #### Lesson 9
 
-- Explore: 14.5 min (8 min on a chosen scale and the plot, 2 min debrief, 3 min set-up and breakout moves). The five minutes come from the mini-lesson, which is loose in the script (6 slides, 2 'your turn' slides).
+- Explore: about 14.5 min (7.5 min hands-on: choose a scale, plot about seven points, join them, write three findings; about 3 min debrief; 3 min set-up and breakout moves). The extra minutes come from the mini-lesson, which is loose in the script (6 slides, 2 'your turn' slides).
 - Mini-lesson: cut try1 (23-25); keep try2 (27-29); ASKs on we1 only.
 - Worksheet: page 1 has two questions (Q1, Q2): the "after question 3" wording is reached on page 2. Say "after Q2" for this lesson.
 - Cushion 5.6 min: 2 min buffer + Q5 (two shops, 4.0 min) becomes a real choice question.
@@ -677,8 +668,8 @@ worksheet window 44.0 min (was 46), page-2 spare after priority items 5.6 min
 - Explore: do two puzzle cards in the live lesson (A and B, 6 min of hands-on); C and D go in the take-home pack as the first Think Harder tasks.
 - Page 1: Q1a stays (consecutive numbers with product 552); Q1b ($4 pens, $7 notebooks, find ALL the ways, 24-cell table) is moved to take-home; pairs do Q1a and Q2 (about 9 min); Q3 (working backwards) is the first solo question.
 - Mini-lesson: cut try1 (22-23); keep try2 (26-27). 
-- Exit ticket: budget 4.5 min (85-89.5 on the new clock), the heads-and-legs puzzle at about 3 min of child time.
-- Final minute: replace "an individual word for each child" by a 2.5-min whole-group close: certificates and journals are posted/sent with a personal sentence the tutor writes before the lesson; live, three volunteers each name one puzzle and one way in (20 s each), the tutor says one sentence about the group, then goodbye. Add a segment '89-90 Certificates and goodbye' to the guide so it gets a budget and a REC cue (the guide has none).
+- Exit ticket: budget 4.5 min (it is the heaviest exit task of the level; about 3 min of child time).
+- Final minute: replace the per-child comments (8 x ~35 s) by a 2.5-min whole-group close: certificates and journals are posted/sent with a personal sentence the tutor writes before the lesson; live, three volunteers each name one puzzle and one way in (20 s each), the tutor says one sentence about the group, then goodbye. Add a segment '89-90 Certificates and goodbye' to the guide so it gets a budget and a REC cue (the guide has none).
 
 worksheet window 41.5 min (was 46), page-2 spare after priority items 2.4 min
 
@@ -707,7 +698,7 @@ Read the cushion line: "page-2 spare after priority items" is the budgeted WS-d 
 
 ## 7. Standing buffer: yes
 
-Recommendation: a 2-3 minute standing buffer inside the page-2 solo block, shown on the tutor's timeline as "buffer" and nowhere else. Reasons: the model's range for the same lesson is 15+ minutes (e.g. L3 83 to 110 with the unfixed plan; 11 minutes after the fixes), most of that difference is tutor style rather than content, and the worksheet's printed "choice questions" are already the natural place to take it from. A second guard rail: a clock check at the end of the brain break (minute 36 on the new clock); more than 1.5 min behind means skip the next optional item (second 'your turn' slide, the second ASK in WS-c), not the check or the exit ticket.
+Recommendation: a 2-3 minute standing buffer inside the page-2 solo block, shown on the tutor's timeline as "buffer" and nowhere else. Reasons: the model's range for the same lesson is 20 to 27 minutes (e.g. the unfixed plan: L3 spans 82.8 to 110.1), most of that difference is tutor style rather than content, and the worksheet's printed "choice questions" are already the natural place to take it from. A second guard rail: a clock check at the end of the brain break (minute 36 on the new clock); more than 1.5 min behind means skip the next optional item (second 'your turn' slide, the second ASK in WS-c), not the check or the exit ticket.
 
 ## 8. Limits of this audit
 
