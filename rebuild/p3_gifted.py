@@ -49,7 +49,7 @@ def add(S,order,ln):
         s=s.replace('Go further: see it','Go further: see it')
         S[pre+suf]=s
     # ---- title notes: one time plan ----
-    S[pre+'title']=re.sub(r'(PRIMARY 3 +• +LESSON \d+ +• +WEEK \d+)(</p>)',r'\1  •  0–2 MIN\2',S[pre+'title'],count=1)
+    S[pre+'title']=re.sub(r'(LESSON \d+ +• +WEEK \d+)(</p>)',r'\1  •  0–2 MIN\2',S[pre+'title'],count=1)
     t=S[pre+'title']
     m=re.search(r'Time plan:.*?(?=If the class is behind)',t,re.S); assert m,ln
     par=re.search(r'teaching 25 to 35( \([^)]*\))?',m.group(0)); par=par.group(1) if par and par.group(1) else ''

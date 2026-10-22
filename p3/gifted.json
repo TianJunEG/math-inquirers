@@ -1130,7 +1130,7 @@
     ]
    },
    "lines": 3,
-   "model": "Steps 1 to 4: right angles 4, 5, 6, 7; bigger than a right angle 0, 1, 2, 3; all corners 4, 6, 8, 10. So right-angle corners = steps + 3, bigger corners = steps − 1, all corners = 2 × steps + 2. 10 steps: 13, 9 and 22 (checked by computer by building each staircase). The total is always even because each new step adds 2 corners (one right angle and one dent). Look for: careful organised counting, a table, a stated rule, and a prediction that can be checked. Early finishers draw the 10-step staircase to test the prediction.",
+   "model": "Steps 1 to 4: right angles 4, 5, 6, 7; bigger than a right angle 0, 1, 2, 3; all corners 4, 6, 8, 10. So right-angle corners = steps + 3, bigger corners = steps − 1, all corners = 2 × steps + 2. 10 steps: 13, 9 and 22 (checked by computer by building each staircase). The total is always even because each new step adds 2 corners (one right angle and one dent). Look for: careful organised counting, a table, a stated rule, and a prediction that can be checked. Any pair can draw the 10-step staircase to test the prediction.",
    "easy": "Easy first step: draw the 1-step and 2-step staircases. Count the corners of the 2-step staircase."
   },
   "reflect": [
