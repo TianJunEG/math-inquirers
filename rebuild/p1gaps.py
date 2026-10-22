@@ -46,7 +46,7 @@ def build(D, n):
              'Answers are not shown on boards in front of the group: face to face, each child holds their own paper low so only the tutor sees it; online, each child shows their own paper to the tutor on camera, or everyone holds paper to the camera at the same moment. There are no private chat messages. '
              'Never use boards held up in front of the group, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
              'Click to show each answer to the whole group only after everyone has had a try, and say "Lots of us had a different idea, and that is fine." '
-             'Quietly note who found question 2 easy; at minute 40 invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
+             'Look for good ideas to praise in a later lesson; do not keep a list of who found question 2 easy. At minute 40 invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
     _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '7–10 MIN', body, notes))
     # ---- Look-back (2 minutes, short and safe) ----
     def optrow(items):

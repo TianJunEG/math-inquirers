@@ -298,7 +298,10 @@ def model_l10(C, sc, sl, fx=None):
     p.act = (40 + 90) * am; p.trans = slide
     p = Part('Warm-up (lightning relay)', 3); P.append(p)
     p.speak = REC + sec(wc(DK['warmGame']) + sum(wc(x) for x in SC['warmIntro']), SAY_WPM)
-    p.act = (fx.get('relay_n', GROUP) * 20) * am; p.wait = 30; p.trans = slide
+    if fx.get('no_relay'):
+        p.speak = p.act = p.wait = p.trans = 0
+    else:
+        p.act = (fx.get('relay_n', GROUP) * 20) * am; p.wait = 30; p.trans = slide
     p = Part('Challenge round (teams of 2) + check', 15); P.append(p)
     items = [('Q1 hexagon chain a-d (rule, 101 sticks, code)', 1, 4.5), ('Q2 prime hunters a-c (49, 84, all pairs for 40)', 1, 6.0), ('Q3 quick-fire a-d', 1, 4.0)]
     keep = [it for k, it in enumerate(items) if k not in fx.get('ch_move', [])]
@@ -334,7 +337,7 @@ def model_l10(C, sc, sl, fx=None):
     p = Part('Showcase (8 children)', 23); P.append(p)
     # deck/guide: 2 min 30 s each + 20 s switch, the audience question is answered during the switch; quick spoken stars add 15 s
     p.speak = REC + sec(nar('showcase'), READ_WPM)
-    p.act = GROUP * 150 * am
+    p.act = GROUP * fx.get('show_s', 150) * am
     p.wait = GROUP * (20 + (0 if fx.get('stars_chat') else 15))
     p.trans = slide
     p.notes.append('with 6 children: %.1f min' % ((6 * (150 * am + 35) + 60) / 60.0))
@@ -358,11 +361,11 @@ def model_l10(C, sc, sl, fx=None):
     return P, dict(slides=len(sl), mini=mini, ws=[], items=items + [(x[0], 2, x[1]) for x in plan], window=(10, 25))
 
 
-def finishers(n, info, p_ws, am=1.0):
+def finishers(n, info, p_ws, am=1.0, block=35):
     """How many Start-here questions a LOW / MIDDLE / HIGH child completes in the independent window."""
     items = info['items']
     tut = p_ws.need * 60 - sum(i[2] for i in items) * 60 * am - 120   # tutor-led seconds in the worksheet block
-    window = max(0.0, 35 * 60 - tut - 120) / 60.0                      # minutes left for independent work
+    window = max(0.0, block * 60 - tut - 120) / 60.0                      # minutes left for independent work
     out = {}
     for name, mult in (('LOW', 1.6), ('MIDDLE', 1.0), ('HIGH', 0.65)):
         t = 0.0; done = 0.0
@@ -390,16 +393,16 @@ def finishers(n, info, p_ws, am=1.0):
 # ws_move      worksheet items (index into INP[n]['items']) moved to take-home / the Finish page
 # talk_lean    one talk question, pairs talk 90 s;  exit_lean = everyone holds the exit slip up at once + shorter looking-back line
 FX = {
-    1: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, demo=240, ws_merge=['teachplan', 'teachbug'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1),
-    2: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, demo=150, ws_merge=['teachsq', 'teachplan'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
-    3: dict(sneak_lean=1, warm_cut_s=30, warm_q=3, go_drop=1, exp_q=2, ws_merge=['teachbug'], ws_noread=1, check_q=35, exit_lean=1),
-    4: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.5, ws_merge=['teachsearch', 'teachtrick'], ws_noread=1, check_q=35, ws_move=[6], exit_lean=1, talk_lean=1),
-    5: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, ws_merge=['teachhandcode', 'teachroute'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    1: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, demo=240, ws_merge=['teachplan', 'teachbug'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    2: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, demo=150, mini_drop=['try1'], ws_merge=['teachsq', 'teachplan'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    3: dict(sneak_lean=1, warm_cut_s=30, warm_q=3, go_drop=1, ws_merge=['teachbug'], ws_noread=1, check_q=35, exit_lean=1),
+    4: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=6.5, mini_drop=['try1'], ws_merge=['teachsearch', 'teachtrick'], ws_noread=1, check_q=35, ws_move=[6], exit_lean=1, talk_lean=1),
+    5: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, mini_drop=['try2'], ws_merge=['teachhandcode', 'teachroute'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
     6: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, mini_merge=['teachwhy'], ws_merge=['teachplan'], ws_noread=1, check_q=35, exit_lean=1),
-    7: dict(sneak_lean=1, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, exp_slide_merge=1, mini_drop=['try1'], ws_merge=['teachsum'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
-    8: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, mini_drop=['try1'], mini_merge=['teachloop'], demo=120, ws_merge=['teachcomb'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    7: dict(sneak_lean=1, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, exp_slide_merge=1, ws_merge=['teachsum'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    8: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, mini_merge=['teachloop'], demo=120, ws_merge=['teachcomb'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
     9: dict(sneak_lean=1, warm_cut_s=50, warm_q=3, go_drop=1, exp_q=2, exp_act=6.0, demo=150, mini_merge=['change'], ws_merge=['teachif'], ws_noread=1, check_q=35, ws_move=[5], exit_lean=1, talk_lean=1),
-    10: dict(sneak_lean=1, relay_n=6, ch_move=[1], drop_explore2=1, ws_noread=1, check_q=35, mini_drop=['try1'], starters_live=2, water=30, plan_lean=1,
+    10: dict(sneak_lean=1, no_relay=1, show_s=135, ch_move=[1], drop_explore2=1, ws_noread=1, check_q=35, mini_drop=['try1'], starters_live=2, water=30, plan_lean=1,
              stars_chat=1, no_talk=1, exit_lean=1, cert_pdf=1),
 }
 # new budgets per part (minutes) in the order the model prints them; the last number is the flex (buffer) row.
@@ -408,8 +411,20 @@ BUD = {}
 
 def budgets(P):
     import math
-    b = [math.ceil(p.need * 2 - 1e-9) / 2.0 for p in P]
+    b = [round(p.need * 2) / 2.0 for p in P]
     return b, 90 - sum(b)
+
+
+def stats(n, C):
+    c = C[n - 1]; SC = c['script']; sl = load_slides(n)
+    say = sum(wc(x) for k in ('hook', 'warmIntro', 'predict', 'think', 'talk', 'close') for x in SC[k])
+    say += wc(SNEAK_SAY) + wc(PARTNER_SAY) + wc(PAIRS_SAY) + wc(LB_SAY)
+    optional = ('stretch', 'challenge', 'chdiag', 'chwalk')
+    grp = [x for x in sl if x['id'] not in optional]
+    nq = sum(1 for x in c['wb'] if 'class="p q' in x)
+    nsub = sum(1 for x in c['wb'] if 'class="p sub' in x)
+    return dict(slides=len(sl), group_slides=len(grp), vis_words=sum(x['words'] for x in grp), notes_words=sum(wc(x['notes']) for x in sl),
+                say_words=say, wb_q=nq, wb_sub=nsub, builds=sum(x['builds'] for x in grp))
 
 
 def table(n, P, sc_name='central'):
@@ -436,6 +451,10 @@ def main():
             P, info = model_lesson(n, C, sc)
             r[name] = (P, info)
         res[n] = r
+    if '--stats' in sys.argv:
+        for n in range(1, 11):
+            print(n, stats(n, C))
+        return
     if '--fixed' in sys.argv:
         for n in range(1, 11):
             if only and n != only: continue
@@ -451,7 +470,8 @@ def main():
             print('| **Total** | 90 | **%.1f** | **%.1f** (fast %.1f / slow %.1f) | **%.1f** |' % (sum(p.need for p in P0), sum(p.need for p in P), lo, hi, sum(b) + flex))
             if n < 10:
                 wsp = [p for p in P if p.name == 'Worksheet'][0]
-                print('Worksheet finishers after fixes:', finishers(n, info, wsp))
+                wb_bud = b[[p.name for p in P].index('Worksheet')]
+                print('Worksheet finishers after fixes (block %.1f min):' % wb_bud, finishers(n, info, wsp, block=wb_bud))
         return
     if '--json' in sys.argv:
         out = {}

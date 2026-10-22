@@ -184,7 +184,7 @@ def lesson_model(x, sl, sc, fix=False, over=None):
         a = [q for s in slides for q in s['asks']]
         if cap is not None: a = a[:cap]
         return sum(rd(nw(q)) + ASK for q in a)
-    G = lambda k, d: (F[k] if F else d)
+    G = lambda k, d: (F.get(k, d) if F else d)
 
     # 0 Opening
     c = dict(speak=spk(nw(' '.join(sp['hook']))) + spk(nw(dk['today'])) + spk(nw(REC_NOTICE)), wait=0, act=0, trans=GROUP * S['greet'], rec=cue(0))
@@ -215,7 +215,7 @@ def lesson_model(x, sl, sc, fix=False, over=None):
     rows.append(row('Explore (pairs, objects)', 10, c))
 
     # 4 Mini-lesson
-    think_words = nw(' '.join(sp['think']))
+    think_words = nw(' '.join(sp['think'])) - G('think_cut', 0)
     key_words = nw(dk['keyHead']) + nw(dk['keyBig']) + 4
     we = [s for s in B['mini'] if s['id'].startswith('we')]
     tries = [s for s in B['mini'] if s['id'].startswith('try')]
@@ -320,7 +320,7 @@ FIX_OVER = {   # per-lesson overrides of FIXPAR (what each fix assumes; see the 
  2: dict(items=_mv(2, ['Q3']), mini_tries=0, mini_asks=2),
  3: dict(items=_mv(3, ['Q3']), drop=['teachchain'], mini_tries=0, mini_asks=2, teach_asks=2),
  6: dict(items=_mv(6, [], {'Q1': 4.5})),
- 7: dict(items=_mv(7, ['Q3'], {'Q1': 4.0}), mini_tries=0),
+ 7: dict(items=_mv(7, ['Q3'], {'Q1': 4.0}), mini_tries=0, drop=['we3'], think_cut=50),
  10: dict(items=[i for i in _mv(10, ['Q3']) if i[0] != 'Q1'] + [('Q1a', 3.0, 1, True)], explore_hands=6.0, cert_whole_group=True),
 }
 

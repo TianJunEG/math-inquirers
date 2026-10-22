@@ -170,8 +170,8 @@ module.exports = {
     W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and one with the LARGEST.   Smallest:  ______   Largest:  ______'));
 
     W.push(H.q(4, 'Ravi says, "I cannot find the perimeter of this staircase, because the steps are not labelled."', { pb: true, before: 0, keepNext: true }));
+    W.push(tip('walk a finger along the edge of the staircase. How far across? How far down?'));
     W.push(side(q4Svg(), 300, [
-      tip('put a finger on the top-left corner and walk along the edge of the staircase. How far did you go across? How far down?'),
       H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step. Push the steps out: the shape then fits in a ___ cm by ___ cm rectangle.'),
       H.sub('', '___ + ___ + ___ + ___ = ___ cm.   Perimeter:  ________', { after: 40 }),
       H.sub('b', 'Think of the staircase as 3 rows. The rows are 3 cm, 7 cm and 11 cm long, and each row is 2 cm high. Area:  ________')].join('')));
@@ -182,8 +182,8 @@ module.exports = {
     W.push(H.sub('c', 'Ali says, "The area stayed the same, so the perimeter stayed the same too." Is he right? Explain.'));
     W.push(...H.lines(1));
     W.push(H.q(6, 'A photo 8 cm long and 6 cm wide is put in a frame. The frame is 1 cm wide all round.', { keepNext: true }));
+    W.push(tip('draw the 8 by 6 photo and its frame on squared paper. Count the frame squares.'));
     W.push(side(q6Svg(), 210, [
-      tip('on squared paper, draw the photo 8 by 6, then the frame 1 cm wide round it. Count the frame squares.'),
       H.sub('a', 'How long and how wide is the whole thing (photo and frame)?  ____ cm by ____ cm'),
       H.sub('b', 'Find the area of the frame only.   Area of frame:  ________'),
       H.sub('c', 'Mei found the frame like this: 8 + 8 + 6 + 6 = 28 cm². What did she forget?  ________________')].join('')));

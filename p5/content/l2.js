@@ -56,7 +56,7 @@ module.exports = {
     extension: 'Write 1 as the sum of three different unit fractions. Is there more than one way? (Only one: 1/2 + 1/3 + 1/6.)',
     key: [
       ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)'],
-      ['Q2', '(a) 1/4 + 1/5 (9/20 − 5/20 = 4/20 = 1/5)  (b) 1/2 + 1/6 (2/3 − 1/2 = 4/6 − 3/6 = 1/6)  (c) 1/3 + 1/24 and 1/4 + 1/8. (1/5 leaves 7/40, not a unit fraction; after that the first part is less than half of 3/8, so stop.) The worked example is 7/10 = 1/2 + 1/5.'],
+      ['Q2', '(a) 1/4 + 1/5 (9/20 − 5/20 = 4/20 = 1/5)  (b) 1/2 + 1/6 (2/3 − 1/2 = 4/6 − 3/6 = 1/6). The worked example is 7/10 = 1/2 + 1/5. (3/8 in two ways is Think harder A1.)'],
       ['Q3', '(a) 120  (b) 60  (c) 1/4. Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.'],
       ['Q4', '(a) 1/30, 1/42. The bottom numbers are 1 × 2, 2 × 3, 3 × 4, 4 × 5, …  (b) 2/3, 3/4, 4/5  (c) 9/10. 1/90 is the 9th term (9 × 10), and each sum is 1 take away the next unit fraction.'],
       ['Q5', '(a) $120  (b) $36. Model: 10 equal units; game 4, book 3, left 3 units = $36, so 1 unit = $12.'],
@@ -108,12 +108,12 @@ module.exports = {
       { q: 'Mei has 3/4 of a pizza and Ali has 2/3 of a pizza (the pizzas are the same size). Who has more? Draw two bars to show how you know.', a: 'Mei. Cut both bars into 12 equal parts: 3/4 = 9 parts and 2/3 = 8 parts. (Or: Mei is 1/4 short of a whole pizza and Ali is 1/3 short, and 1/4 is less than 1/3.)' }
     ],
     stretch: [
-      { q: 'Write 2/3 as the sum of two different unit fractions.', a: '1/2 + 1/6 (the only way).' },
+      { q: 'Write 3/8 as the sum of two different unit fractions in TWO different ways. How do you know when to stop looking?', a: '1/3 + 1/24 and 1/4 + 1/8. Test 1/3, 1/4, 1/5, … in order: 1/5 leaves 7/40, not a unit fraction; after that the first fraction would be less than half of 3/8, so stop.' },
       { q: 'Ben ate 1/3 of a pizza. Ali ate 1/4 of what was left. What fraction of the pizza is left?', a: '1/2. 2/3 was left after Ben; Ali ate 1/4 of it, so 3/4 of 2/3 = 1/2 is left.' },
       { q: '1/2 − 1/3 = 1/6 and 1/3 − 1/4 = 1/12. Use the pattern to work out 1/4 − 1/5 and 1/9 − 1/10.', a: '1/20 and 1/90 (the bottom numbers multiply: 4 × 5 and 9 × 10).' },
       { q: '4 litres of juice are poured equally into 6 bottles. How much juice is in each bottle?', a: '4/6 = 2/3 of a litre.' },
       { q: 'Which is bigger, 5/6 or 6/7? Explain without finding common denominators.', a: '6/7. 5/6 is 1/6 short of 1 and 6/7 is only 1/7 short of 1, and 1/7 is smaller than 1/6.' },
-      { q: '(Preview of P6) A rope 3/4 m long is cut into 3 equal pieces. How long is each piece? Draw a bar to help.', a: '1/4 m (3/4 ÷ 3: 3 quarters shared by 3 pieces is 1 quarter each).' },
+      { q: '(A puzzle that goes further) A rope 3/4 m long is cut into 3 equal pieces. How long is each piece? Draw a bar to help.', a: '1/4 m (3/4 ÷ 3: 3 quarters shared by 3 pieces is 1 quarter each).' },
       { q: 'Find a fraction between 2/5 and 1/2 with 20 as the bottom number.', a: '9/20 (2/5 = 8/20 and 1/2 = 10/20).' },
       { q: 'Which is bigger, 7/8 of 24 or 5/6 of 30?', a: '5/6 of 30. 7/8 of 24 = 21 and 5/6 of 30 = 25.' }
     ],
@@ -142,9 +142,7 @@ module.exports = {
     // Q2 unit fractions
     W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away a unit fraction. Is what is left a unit fraction?', { keepNext: true }));
     W.push(H.p(['<b style="color:' + TEAL + '">Worked example:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + ': write ' + fr(1, 2) + ' as tenths, ' + fr(5, 10) + '. So ' + fr(7, 10) + ' − ' + fr(5, 10) + ' = ' + fr(2, 10) + ' = ' + fr(1, 5) + ', and ' + fr(7, 10) + ' = ' + fr(1, 2) + ' + ' + fr(1, 5) + '. (The fraction wall at the back of the book shows ' + fr(1, 2) + ' = ' + fr(5, 10) + '.)'], { after: 20 }));
-    W.push(H.sub('a', [fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp; (try 1/3, 1/4, 1/5 … in order)&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(2, 3) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
-    W.push(H.sub('c', ['(try this one if you like) Find TWO ways for ' + fr(3, 8) + ':&nbsp;&nbsp; ' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr() + '&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr() + '&nbsp;&nbsp; How do you know when to stop?'], { after: 40 }));
-    W.push(...H.lines(1));
+    W.push(H.sub('a', [fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp; (try 1/3, 1/4, 1/5 … in turn)&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(2, 3) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
     // Q3 remainder
     W.push(H.q(3, ['Siti had 240 stickers. She gave ' + fr(1, 4) + ' of them to Ben and ' + fr(2, 3) + ' of the REMAINDER to Ali.'], { keepNext: true }));
     W.push(H.fig(stickerBar()));

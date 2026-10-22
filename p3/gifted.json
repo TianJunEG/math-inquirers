@@ -1262,8 +1262,8 @@
     "kind": "access"
    },
    {
-    "q": "A film starts at 3:45 p.m. and lasts 1 hour 30 minutes. When does it end? Say how you counted.",
-    "a": "5:15 p.m.",
+    "q": "A film starts at 3:45 pm and lasts 1 hour 30 minutes. When does it end? Say how you counted.",
+    "a": "5:15 pm",
     "why": "3:45 + 1 h = 4:45. 15 minutes more makes 5:00, and 15 more makes 5:15.",
     "kind": "think"
    }

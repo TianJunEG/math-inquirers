@@ -183,8 +183,8 @@ g1+=txt(450,470,'Which digits can go in each box?',30,TEAL)
 g2=''
 for i,(lab,col) in enumerate([('A',SKY),('B',YEL),('C','#BFE3DC')]):
     x=70+i*240; g2+=f'<rect x="{x}" y="40" width="180" height="150" rx="16" fill="{col}" stroke="{NAVY}" stroke-width="4"/>'+txt(x+90,138,lab,70)
-for i,(t,y) in enumerate([('A + B = 250',260),('B + C = 350',330),('A + C = 400',400)]):
-    g2+=f'<rect x="200" y="{y-44}" width="420" height="60" rx="10" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+txt(410,y-2,t,36)
+for i,(t,y) in enumerate([('Box A + Box B = 250',260),('Box B + Box C = 350',330),('Box A + Box C = 400',400)]):
+    g2+=f'<rect x="200" y="{y-44}" width="420" height="60" rx="10" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+txt(410,y-2,t,30)
 g2+=txt(410,470,'How many in each box?',30,TEAL)
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Make 1000</p>'+svgwrap(820,500,'Column sum box box 7 plus 4 box box equals 1000, with circles for carries',g1,True),extra='flex:1;min-width:0;padding:20px 24px')

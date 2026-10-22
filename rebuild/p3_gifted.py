@@ -79,7 +79,7 @@ def add(S,order,ln):
     box=pin(868,106,924,p(f'<span style="color:{TEAL};font-weight:800">Go further, any time:</span>  {rich(g["go"])}',26,600,raw=True),None,SOFT,20,'12px 22px','box-sizing:border-box')
     k='<p style="position:absolute;left:128px;bottom:64px'; assert k in e,ln
     e=e.replace(k,box+'\n'+k,1)
-    e=aside_add(e,'GO FURTHER (on the slide from minute 10, so nobody waits): '+plain(g['go'])+' Answer: '+plain(g['goans'])+' Any pair may choose it as soon as their first task is done; do not say who is ready for it.')
+    e=aside_add(e,'GO FURTHER (on the slide from minute 10, so nobody waits): '+plain(g['go'])+' Answer: '+plain(g['goans'])+' Any pair may choose it as soon as their first task is done; do not say who is ready for it. Online: visit each breakout room at least once in minutes 10 to 15 (about 1 minute per room).')
     S[pre+'explore1']=e
     # ---- talk time rules ----
     tk=S[pre+'talk']

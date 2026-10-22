@@ -50,7 +50,7 @@ module.exports = {
       ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
       ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
       ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
-      ['Q5', '(a) Blue (only red beads were added)  (b) blue 4 units; 4 units; the whole box is 10 units (blue is 2 out of every 5, so 4 units = 2 parts and 1 part = 2 units)  (c) 70 (red 3 units at first and 6 units now, so 3 units = 30 and 1 unit = 10)  (d) 100']
+      ['Q5', '(a) Blue (only red beads were added)  (b) 2/5 (8 out of 20); 30 beads now; 4/15 (8 out of 30)  (c) The blue beads are still 8, but the jar has more beads in it, so blue is a smaller part of the whole']
     ]
   },
 
@@ -95,13 +95,14 @@ module.exports = {
     ],
     stretch: [
       { q: 'Ravi spent 1/4 of his money on Monday and 2/5 of the remainder on Tuesday. He spent $66 altogether. How much money did he have at first?', a: '$120 (20 units: Monday 5 units, Tuesday 6 units; 11 units = $66, so 1 unit = $6)' },
-      { q: 'A box had red pens and blue pens. 2/3 of the pens were blue. After 12 blue pens were taken out, 1/2 of the pens were blue. How many pens were in the box at first?', a: '36 (the red pens did not change: red 1 unit, blue 2 units at first, 1 unit after; 1 unit = 12)' },
+      { q: 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red. How many beads were in the box at first? How many are in the box now?', a: '70 at first, 100 now (the blue beads did not change: 4 units at first, and 2 parts of 5 after, so 1 part = 2 units and the whole box is 10 units; red 3 units at first and 6 units now, so 3 units = 30 and 1 unit = 10)' },
       { q: 'Mrs Tan is 41 years old and her son is 9. How many years ago was her son’s age 1/5 of her age?', a: '1 year ago (the difference, 32, is 4 units; 1 unit = 8: son 8, Mrs Tan 40)' },
       { q: 'Ben and Siti had $140 altogether. Ben spent 1/2 of his money and Siti spent $20. Then they had the same amount left. How much did Ben have at first?', a: '$80 (Ben 2 units, Siti 1 unit + $20; 3 units = $120, 1 unit = $40)' },
       { q: 'Ali had 40 more stickers than Mei. Each of them was given 10 more stickers. Then Mei had 3/5 as many stickers as Ali. How many stickers did Mei have at first?', a: '50 (the difference, 40, is 2 units; Mei 3 units = 60 after, so 50 at first)' },
       { q: 'A tank was 3/4 full of water. After 18 litres were used, it was 1/2 full. How many litres does the tank hold when it is full?', a: '72 litres (1/4 of the tank = 18 litres)' },
       { q: 'Siti gave 1/3 of her stickers to Mei. Then they had the same number of stickers. Mei had 15 stickers at first. How many did Siti have at first?', a: '45 (Siti 3 units; after giving 1 unit she has 2 units, and Mei has 15 + 1 unit = 2 units, so 1 unit = 15)' },
-      { q: 'Ravi had $45 and Ben had $15. Their aunt gave each of them the same amount of money. Then Ben had 1/2 as much as Ravi. How much did the aunt give each boy?', a: '$15 (the difference, $30, is 1 unit; Ben $30, Ravi $60)' }
+      { q: 'Ravi had $45 and Ben had $15. Their aunt gave each of them the same amount of money. Then Ben had 1/2 as much as Ravi. How much did the aunt give each boy?', a: '$15 (the difference, $30, is 1 unit; Ben $30, Ravi $60)' },
+      { q: 'A box had red pens and blue pens. 2/3 of the pens were blue. After 12 blue pens were taken out, 1/2 of the pens were blue. How many pens were in the box at first?', a: '36 (the red pens did not change: red 1 unit, blue 2 units at first, 1 unit after; 1 unit = 12)' }
     ],
     challenge: [
       { q: 'Make up your own before-and-after story in which the total stays the same and a fraction is used in the After (like “Ali has 1/2 as many as Ben”). Solve it with a model, swap with a partner and check each other. What if the fraction in your story were changed?', a: 'Open-ended. Sample: Ali and Ben have 108 stickers altogether. Ali gives Ben 24 stickers. Then Ali has 1/2 as many stickers as Ben. How many did Ali have at first? (After: 3 units = 108, Ali 36, Ben 72; Ali had 36 + 24 = 60, Ben 48.) Check that the total is the same in both models and that every unit is the same size.' },
@@ -125,22 +126,21 @@ module.exports = {
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
     H.sub('d', '(try this one if you like) What fraction of his money did he spend on the pen?   ____________'),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
+    H.p(['<b style="color:' + TEAL + '">Tip:</b> “3/4 as many” means that for every 3 stickers Siti has, Mei has 4. Try 3 and 4, then 6 and 8, then 9 and 12 … until the total is 84.'], { after: 20 }),
     H.fig(afterModel()),
     H.sub('a', 'How many stickers did they have altogether after the swap?   ____________'),
     H.sub('b', 'How many stickers did Siti have at first? How many did Mei have at first?'), H.ans('Siti: __________     Mei:'),
     H.q(3, 'Ali has 50 marbles and Ben has 30 marbles. Ali gives some of his marbles to Ben (Ali has fewer afterwards and Ben has more).', { pb: true, before: 0, keepNext: true }),
     H.sub('a', 'Ben says, “If Ali gives me 20 marbles, we will have the same number, because Ali has 20 more than me.” Test it: after Ali gives 20, Ali has ______ and Ben has ______. Is Ben right? Explain.'), ...H.lines(1),
-    H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
+    H.sub('b', '(try this one if you like) How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
 
     H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
     H.p(['<b style="color:' + TEAL + '">Start here:</b> try a gift of $10 each. How much does each boy have now? Is Ali’s money 2/3 of Ravi’s? Is the gift too big or too small?'], { after: 20 }),
     H.sub('a', 'What stays the same: the total or the difference? How much is it?'), H.ans(),
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
-    H.q(5, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
-    H.sub('a', 'Which colour of beads did not change?'), H.ans(),
-    H.sub('b', 'Before: red 3 units, blue ______ units. After: the box has 5 equal parts. 3 parts are red and 2 parts are blue. Draw the 5 parts below. Blue is still ______ units, so 2 parts = ______ units and the whole box is ______ units.'),
-    H.fig(fiveBar()),
-    H.sub('c', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
-    H.sub('d', 'How many beads are in the box now?'), H.ans()
+    H.q(5, 'A jar has 12 red beads and 8 blue beads. Then 10 more red beads are put in.', { keepNext: true }),
+    H.sub('a', 'Which colour did not change?'), H.ans(),
+    H.sub('b', 'At first, 8 of the 20 beads were blue. What fraction is that, in its simplest form? ______   Now, how many beads are in the jar? ______ What fraction are blue now? ______'),
+    H.sub('c', 'The blue beads did not change, but the blue FRACTION did. Why? ______________________________________________'),
   ]
 };

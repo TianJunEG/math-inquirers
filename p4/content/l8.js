@@ -91,8 +91,8 @@ const q6Grid = (x0, y0, c) => {
   s += `<line x1="${x0 - 22}" y1="${y0 + 2 * c}" x2="${x0 + 4 * c + 12}" y2="${y0 + 2 * c}" stroke="${RED}" stroke-width="3" stroke-dasharray="7 5"/>`;
   return s;
 };
-const q6Svg = () => svg(600, 4 * 26 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
-  [50, 250, 450].map(x => q6Grid(x, 34, 26)).join(''));
+const q6Svg = () => svg(600, 4 * 22 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
+  [50, 250, 450].map(x => q6Grid(x, 34, 22)).join(''));
 
 module.exports = {
   lesson: {
@@ -206,10 +206,9 @@ module.exports = {
     W.push(H.sub('', '(a) ________      (b) ________      (c) ________      (d) ________'));
     W.push(H.q(6, 'Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each.', { keepNext: true }));
     W.push(H.fig(q6Svg()));
-    W.push(tip('for each shaded square, find its mirror partner on the other side of the dashed line (fold the page or use a small mirror). Is the partner shaded? If not, shade it.'));
-    W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________'));
-    W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?'));
-    W.push(...H.lines(1));
+    W.push(tip('fold the page on the dashed line. Where does each shaded square land? Is that square shaded?'));
+    W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________', { after: 40 }));
+    W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?  ____________'));
     return W;
   }
 };

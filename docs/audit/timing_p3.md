@@ -21,7 +21,7 @@ Analysis only. Nothing in content, guides, decks, builds or outputs was edited, 
 | 9. Measure and Money Masters | 26 | 363 | **94.8** | 86.4-105.6 | +4.8 | Worksheet +3.5; Sneak-peek + game + quick Qs +3.3 | 82.9 |
 | 10. Challenge Day | 29 | 307 | **111.6** | 101.5-124.5 | +21.6 | Explore +8.8; Exit + look-back + close +6.2 | 89.2 |
 
-Parts flagged across the level (central, 10 lessons): Sneak-peek/game/quick questions {'OVER': 10}; Worksheet {'OVER': 10}; Explore {'OK': 4, 'TIGHT': 2, 'OVER': 4}; Mini-lesson {'TIGHT': 4, 'OVER': 2, 'OK': 4}; Talk time {'LOOSE': 8, 'OK': 2}; Exit + look-back + close {'OK': 7, 'TIGHT': 2, 'OVER': 1}; Opening {'OK': 10}; Brain break {'OK': 10}.
+Parts flagged across the level (central, count of lessons): Opening: OK 10; Sneak-peek + game + quick Qs: OVER 10; Explore: OVER 4, TIGHT 2, OK 4; Mini-lesson: OVER 2, TIGHT 4, OK 4; Brain break: OK 10; Worksheet: OVER 10; Talk time: OK 2, LOOSE 8; Exit + look-back + close: OVER 1, TIGHT 2, OK 7.
 
 Size outliers: slide counts run 26 to 29 (L9 smallest, L1 and L10 largest at 29); script SAY words run 244 (L6) to 371 (L3), mean 319, sd 38, so L3, L7 and L9 are about one sd high and nothing is extreme; slide text is highest in L3 (1 899 words against a mean of 1 720). The longest single teaching slides are L7 teach1 (126 words), L3 teachgrid (106) and L5 we1 (104). The tutor guide itself is 81 pages. None of this changes a time estimate by more than 1 min; it is the number of question-and-wait moments and room moves that costs time.
 
@@ -29,7 +29,7 @@ Size outliers: slide counts run 26 to 29 (L9 smallest, L1 and L10 largest at 29)
 
 Average per lesson: speaking 9.8 min, waiting 21.9 min, children's activity 48.6 min, transitions 20.0 min, REC cues 1.3 min. The three biggest sinks against the scripted budget:
 
-1. **The worksheet block (40-70).** It needs 32 to 43 min (mean 37) against 30. Page 1 is scripted as 9 to 12 min but must hold a 2-minute start, two room moves (3 min) and Q1-Q3, which a MID child needs 7.5 to 11 min for, so a MID child finishes only 1.2 to 2.8 of the 3 Start-here items inside the slide time. Between the pages there are 1 to 4 teaching slides that need 1 to 8 min against 3 to 4 scripted, and each 'check together' slide costs about 2.6 min against 2.
+1. **The worksheet block (40-70).** It needs 32 to 43 min (mean 37) against 30. Page 1 is scripted as 9 to 12 min but must hold a 2-minute start, two room moves (3 min) and Q1-Q3, which a MID child needs 7.5 to 11 min for, so inside the slide time a LOW child finishes 0.7 to 1.5 of the 3 Start-here items, a MID child 1.2 to 2.8 and a HIGH child 2.0 to 3.0; on page 2 (Q4-Q6, 'if time' items counted) LOW finishes 0.8 to 1.4, MID 1.5 to 2.3 and HIGH 2.5 to 3.0. Between the pages there are 1 to 4 teaching slides that need 1.3 to 8.4 min against 2 to 4 scripted, and each 'check together' slide costs about 2.6 min against 2.
 2. **Online transitions and waiting.** About 27 slide changes (11 min at 25 s), four room moves (6 min at 90 s) and 2 min of finding materials and slips of paper add up to about 20 min per lesson; the 10 s + 20 s question rule and hold-ups add 22 min of waiting. The scripted budgets treat most of this as free.
 3. **The 2-10 warm-up block.** It needs 11 to 12 min against 8 in every lesson: the fixed sneak-peek puzzles cost about 4.2 min (two 1-minute tries, two camera hold-ups, reading and slide change), the game 3.8 min and 4 or 5 quick questions 2.9 to 3.2 min. Explore is the fourth sink in the lessons with fiddly materials (L6 fractions strips +4.3, L3 circle clocks +3.0, L9 party menu +2.8) and L10 (+8.8).
 
@@ -77,7 +77,7 @@ Workbook minutes per item for a MID child aged 8-10 (core items are multi-part, 
 - Four optional slides (stretch, challenge, chdiag, chwalk) are all labelled 67-70 (3 min); the workbook Think harder items are 4-6 min each, so the 3-minute 'choose' window cannot contain even one for most children. It works only as an invitation to continue at home.
 - L10 Explore: 'two stations, 7 minutes each' (14 min) plus 'at about minute 15 bring the group back together' cannot both be true.
 - L3 and L8: the first item on page 2 is an 'if time' item (L3 Q4) or the compulsory work is 10 min for a 7.5-min window (L8); L4 page 2 is three full modelling problems for 6.5 min.
-- The look-back is scripted as 2 minutes but its own SAY lines plus the volunteer prompt need about 1.9 min before the children start; the full block is about 3.9 min.
+- The look-back is scripted as 2 minutes, which is only the time the children get; the slide change, the 87 words of SAY, one volunteer share and a stuck check-in add about 1.8 min, so the block is about 3.8 min.
 - REC: `p3/guide.js` currently says 'Do not record lessons (this is in the tutor agreement)'. If a REC cue is added to the script the recording policy and the tutor agreement need to agree, or the cue should be reworded.
 - The decks are not wrong in total slide count; the cost is that every slide change is a waiting moment online.
 
@@ -113,7 +113,7 @@ Worksheet window as scripted: page 1 = 10 min on the slide, of which about 5.0 m
 
 - Slide warm2 (8-10): ask only Q1-Q3 (value of the 7 in 4719; 3000 + 40 + 5; 1 more than 4999). Move Q4 (100 less than 6050) and Q5 (7089 or 7098) to the take-home page. Slide warm1: play two rounds (biggest, then smallest), no third round. Sneak-peek: one 'show me' for both puzzles.
 - Delete slides tryclues (56-57) and teachsum (57-58). Q6 is already 'if time', so teachsum only serves the optional item; keep its content in the notes of the Go further slides and show it to anyone who chooses Q6. Keep teachrename and teachclues.
-- Give page 1 more clock (slide ws1 42-52 becomes about 43-55 on the new clock) and turn both 'check together' slides into 60-second self-checks (children hold up the corrected page; ask 'how do you know' on one question only).
+- Give page 1 about 13 min on the slide (2-minute start, 1.5 min of rooms, 9 min of Q1-Q3; it is 10 now) and turn both 'check together' slides into 60-second self-checks (children hold up the corrected page; ask 'how do you know' on one question only).
 - Use pre-assigned breakout rooms with auto-move and auto-close, so each move is about 45 s, not 90 s.
 
 **New budget (sums to 90)**
@@ -130,7 +130,7 @@ Worksheet window as scripted: page 1 = 10 min on the slide, of which about 5.0 m
 | Exit + look-back + close | 10 | 10.6 | 10.6 | **11** | 79-90 |
 | **Total** | 90 | 98.7 | 86.9 | **90** | built-in float 3.1 min (after-fix range 80.0-96.1) |
 
-Worksheet 31 min = teach before p1 2 + start + rooms 4 + page 1 pairs 9 + check p1 2 + teach before p2 3.5 + page 2 alone 6.5 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 31 min = teach before p1 2 + start + rooms 3.5 + page 1 pairs 9.5 + check p1 1.5 + teach before p2 3.5 + page 2 alone 6.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 8.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 2: Cryptarithm Crackers
 
@@ -180,7 +180,7 @@ Worksheet window as scripted: page 1 = 12 min on the slide, of which about 7.0 m
 | Exit + look-back + close | 10 | 10.5 | 10.5 | **11** | 79-90 |
 | **Total** | 90 | 101.8 | 86.3 | **90** | built-in float 3.7 min (after-fix range 79.3-95.4) |
 
-Worksheet 32 min = start + rooms 4 + page 1 pairs 9 + check p1 2 + teach before p2 6.5 + page 2 alone 6.5 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 32 min = start + rooms 3.5 + page 1 pairs 9.5 + check p1 1.5 + teach before p2 6.5 + page 2 alone 6.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 8.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 3: Times Table Treasure
 
@@ -232,7 +232,7 @@ Worksheet window as scripted: page 1 = 12 min on the slide, of which about 7.0 m
 | Exit + look-back + close | 10 | 10.5 | 10.5 | **11.5** | 78.5-90 |
 | **Total** | 90 | 98.7 | 86.5 | **90** | built-in float 3.5 min (after-fix range 79.8-95.2) |
 
-Worksheet 29 min = start + rooms 4 + page 1 pairs 8 + check p1 2 + teach before p2 6 + page 2 alone 5 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 29 min = start + rooms 3.5 + page 1 pairs 9 + check p1 1.5 + teach before p2 5.5 + page 2 alone 5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 7.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 4: Model Makers
 
@@ -284,7 +284,7 @@ Worksheet window as scripted: page 1 = 10 min on the slide, of which about 5.0 m
 | Exit + look-back + close | 10 | 11.1 | 11.1 | **11** | 79-90 |
 | **Total** | 90 | 104.2 | 89.3 | **90** | built-in float 0.7 min (after-fix range 82.1-98.7) |
 
-Worksheet 32 min = teach before p1 2 + start + rooms 4 + page 1 pairs 9 + check p1 2 + teach before p2 4 + page 2 alone 7.5 + check p2 2 + choose 3 (+ -1.5 float).
+Worksheet 32 min = teach before p1 2 + start + rooms 3.5 + page 1 pairs 9.5 + check p1 1.5 + teach before p2 3.5 + page 2 alone 7.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 8.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 5: Remainder Riddles
 
@@ -333,7 +333,7 @@ Worksheet window as scripted: page 1 = 10 min on the slide, of which about 5.0 m
 | Exit + look-back + close | 10 | 10.6 | 10.6 | **10.5** | 79.5-90 |
 | **Total** | 90 | 97.3 | 88.3 | **90** | built-in float 1.7 min (after-fix range 81.2-97.6) |
 
-Worksheet 31 min = teach before p1 2 + start + rooms 4 + page 1 pairs 8 + check p1 2 + teach before p2 3.5 + page 2 alone 7.5 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 31 min = teach before p1 2 + start + rooms 3.5 + page 1 pairs 8.5 + check p1 1.5 + teach before p2 3.5 + page 2 alone 7.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 7.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 6: Fraction Walls
 
@@ -383,7 +383,7 @@ Worksheet window as scripted: page 1 = 12 min on the slide, of which about 7.0 m
 | Exit + look-back + close | 10 | 10.6 | 10.6 | **11** | 79-90 |
 | **Total** | 90 | 105.9 | 84.8 | **90** | built-in float 5.2 min (after-fix range 77.9-94.0) |
 
-Worksheet 30 min = start + rooms 4 + page 1 pairs 9 + check p1 2 + teach before p2 2 + page 2 alone 7 + check p2 2 + choose 3 (+ +1.0 float).
+Worksheet 30 min = start + rooms 3.5 + page 1 pairs 11 + check p1 1.5 + teach before p2 2 + page 2 alone 7 + check p2 2 + choose 3. (Page 1 work needed by a MID child: 8.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 7: Area Architects
 
@@ -415,7 +415,7 @@ Worksheet window as scripted: page 1 = 11 min on the slide, of which about 6.0 m
 **Fixes (no change to answers, tiers or the pass option)**
 
 - Mini-lesson: merge we2 (staircase with no numbers) into try2 and trim teach1 to about 80 words (cut the restated steps; Q2 repeats them). Keep teach3 (area of an L-shape).
-- Delete teachadd (54-56): it prepares Q6, which is 'if time'. Slide ws1 (41-52) becomes 41-54 on the new clock.
+- Delete teachadd (54-56): it prepares Q6, which is 'if time'. Give page 1 about 14 min on the slide (it is 11 now): 2-minute start, 1.5 min of rooms, 10.4 min of Q1-Q3.
 - Explore: 12 squares gives three rectangles (1 x 12, 2 x 6, 3 x 4); record in a 3-row table; pair work about 6 min.
 - Quick questions: first three (8 x 7; perimeter of a 6 cm square; area of 8 cm by 3 cm); the square-root question (area 49) goes to take-home.
 
@@ -433,7 +433,7 @@ Worksheet window as scripted: page 1 = 11 min on the slide, of which about 6.0 m
 | Exit + look-back + close | 10 | 10.6 | 10.6 | **11** | 79-90 |
 | **Total** | 90 | 100.4 | 88.9 | **90** | built-in float 1.1 min (after-fix range 81.5-98.5) |
 
-Worksheet 31 min = teach before p1 2 + start + rooms 4 + page 1 pairs 10.5 + check p1 2 + page 2 alone 8.5 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 31 min = teach before p1 2 + start + rooms 3.5 + page 1 pairs 10.5 + check p1 2 + page 2 alone 8.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 10.0 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 8: Angle and Line Detectives
 
@@ -458,7 +458,7 @@ Worksheet window as scripted: page 1 = 9 min on the slide, of which about 4.0 mi
 **Where the time goes**
 
 - Warm-up block OVER (+2.9).
-- Worksheet OVER (+11.6) - the worst page-1 squeeze: ws1 is only 43-52 (9 min), the two teaching slides before it (we1, try1) use 40-43, and the work window after the 2-minute start and room moves is about 3.5 min for Q1 (fold a right-angle checker and sort six angles, MID 3.5 min), Q2 and Q3 (count the angles made by six lines, MID 4.5 min), which need 11 min. A MID child finishes about 1 of 3. Page 2 (Q4 twelve yes/no answers, Q5 ruler drawing, Q6 window) needs 10 min against 7.5.
+- Worksheet OVER (+11.6) - the worst page-1 squeeze: ws1 is only 43-52 (9 min), the two teaching slides before it (we1, try1) use 40-43, and the work window after the 2-minute start and room moves is about 4 min for Q1 (fold a right-angle checker and sort six angles, MID 3.5 min), Q2 and Q3 (count the angles made by six lines, MID 4.5 min), which need 11 min. A MID child finishes about 1 of 3. Page 2 (Q4 twelve yes/no answers, Q5 ruler drawing, Q6 window) needs 10 min against 7.5.
 - Talk time OK (-2.8).
 
 **Fixes (no change to answers, tiers or the pass option)**
@@ -482,7 +482,7 @@ Worksheet window as scripted: page 1 = 9 min on the slide, of which about 4.0 mi
 | Exit + look-back + close | 10 | 10.6 | 10.6 | **11.5** | 78.5-90 |
 | **Total** | 90 | 102.9 | 86.9 | **90** | built-in float 3.1 min (after-fix range 79.7-96.3) |
 
-Worksheet 31 min = teach before p1 2 + start + rooms 4 + page 1 pairs 10.5 + check p1 2 + teach before p2 1.5 + page 2 alone 7 + check p2 2 + choose 3 (+ -1.0 float).
+Worksheet 31 min = teach before p1 1.5 + start + rooms 3.5 + page 1 pairs 11.5 + check p1 1.5 + teach before p2 1.5 + page 2 alone 7 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 10.0 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 9: Measure and Money Masters
 
@@ -532,7 +532,7 @@ Worksheet window as scripted: page 1 = 10 min on the slide, of which about 5.0 m
 | Exit + look-back + close | 10 | 11.1 | 11.1 | **11.5** | 78.5-90 |
 | **Total** | 90 | 94.8 | 82.9 | **90** | built-in float 7.1 min (after-fix range 76.0-92.0) |
 
-Worksheet 31 min = teach before p1 2 + start + rooms 4 + page 1 pairs 9 + check p1 2 + teach before p2 2.5 + page 2 alone 5.5 + check p2 2 + choose 3 (+ +1.0 float).
+Worksheet 31 min = teach before p1 1.5 + start + rooms 3.5 + page 1 pairs 12 + check p1 1.5 + teach before p2 2.5 + page 2 alone 5.5 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 8.5 min, plus 2 min start and 1.5 min of rooms.)
 
 ### Lesson 10: Challenge Day
 
@@ -568,7 +568,7 @@ Worksheet window as scripted: page 1 = 12 min on the slide, of which about 7.0 m
 - Replace the three page-2 teaching slides with ONE 'recap: draw it, list it, make a table' slide (reuse teachlist); delete teachtable and teachbetween.
 - Certificates: say them in one 20-second sentence each (8 x 20 s = 2.7 min); ask for volunteers on 'a puzzle I enjoyed' once; post the parent summary after the lesson.
 - Exit ticket: the queue question (4th from front, 4th from back) is the easiest item of the lesson; allow 2 min, not 3.5.
-- Make Q6 'if time' only (it already is) and keep the REC cue to one 10-second line per part.
+- Warm-up and checks as in the level-wide pack: first three quick questions (value of the 7 in 4732; 3/8 + 2/8; 47 / 5), 60-second self-checks, pre-assigned rooms.
 
 **New budget (sums to 90)**
 
@@ -580,11 +580,11 @@ Worksheet window as scripted: page 1 = 12 min on the slide, of which about 7.0 m
 | Mini-lesson | 10 | 11.0 | 9.2 | **9.5** | 27-36.5 |
 | Brain break | 5 | 5.3 | 5.3 | **5** | 36.5-41.5 |
 | Worksheet | 30 | 35.9 | 29.4 | **29.5** | 41.5-71 |
-| Talk time | 10 | 6.8 | 6.3 | **6.5** | 71-77.5 |
-| Exit + look-back + close | 10 | 16.2 | 12.9 | **12.5** | 77.5-90 |
+| Talk time | 10 | 6.8 | 6.3 | **6** | 71-77 |
+| Exit + look-back + close | 10 | 16.2 | 12.9 | **13** | 77-90 |
 | **Total** | 90 | 111.6 | 89.2 | **90** | built-in float 0.8 min (after-fix range 81.6-99.2) |
 
-Worksheet 29.5 min = start + rooms 4 + page 1 pairs 11.5 + check p1 2 + teach before p2 1.5 + page 2 alone 7 + check p2 2 + choose 3 (+ -1.5 float).
+Worksheet 29.5 min = start + rooms 3.5 + page 1 pairs 12 + check p1 1.5 + teach before p2 1 + page 2 alone 7 + check p2 1.5 + choose 3. (Page 1 work needed by a MID child: 11.0 min, plus 2 min start and 1.5 min of rooms.)
 
 ## 6. Level-wide fix pack and standing buffer
 
@@ -611,10 +611,11 @@ Changes that apply to every lesson (each keeps all answers, the Core / Think har
 | 7. Area Architects | 1.5 | 9.5 | 13.5 | 11.5 | 5 | 31 | 7 | 11 | 88.9 | 1.1 |
 | 8. Angle and Line Detectives | 1.5 | 9 | 13.5 | 10.5 | 5 | 31 | 8 | 11.5 | 86.9 | 3.1 |
 | 9. Measure and Money Masters | 1.5 | 9 | 15 | 8.5 | 5 | 31 | 8.5 | 11.5 | 82.9 | 7.1 |
-| 10. Challenge Day | 1.5 | 9 | 16.5 | 9.5 | 5 | 29.5 | 6.5 | 12.5 | 89.2 | 0.8 |
+| 10. Challenge Day | 1.5 | 9 | 16.5 | 9.5 | 5 | 29.5 | 6 | 13 | 89.2 | 0.8 |
 | Current guide | 2 | 8 | 15 | 10 | 5 | 30 | 10 | 10 | | |
 
 After the fixes the central need is 82.9 to 89.3 min (range 76.0 to 99.2 across the optimistic and pessimistic sets). Lessons 4, 7 and 10 (and 5) keep less than 2 min of float and need the cut ladder below; L9 has about 7 min of float, which is room to put the five quick questions or a longer page 1 back.
+Budgets that sit more than 0.25 min under the after-fix need (they borrow from the float): L1 Brain break (budget 5, need 5.4); L2 Brain break (budget 5, need 5.4); L3 Brain break (budget 5, need 5.4); L4 Brain break (budget 5, need 5.4); L4 Talk time (budget 7.5, need 7.9); L5 Brain break (budget 5, need 5.4); L6 Brain break (budget 5, need 5.4); L7 Brain break (budget 5, need 5.5); L8 Brain break (budget 5, need 5.4); L9 Brain break (budget 5, need 5.4); L10 Brain break (budget 5, need 5.3); L10 Talk time (budget 6, need 6.3).
 
 ### Standing buffer
 
@@ -628,5 +629,5 @@ The part times live in several places that would all need regenerating together:
 
 - Estimates from the text, not stopwatch timings. Children's real answers, repeated questions, tutor ad-libs, camera and audio problems, late arrivals and parents are ignored; real lessons are likelier to run long than short.
 - The hand-judged inputs are the minutes per workbook item, the pair-task minutes in Explore and the exit-ticket minutes (tables in `docs/audit/timing_p3.py`); changing them by 20% moves a lesson total by 2 to 4 min but does not change the ranking or the conclusion that the worksheet, the warm-up and the transitions are over budget.
-- Sources read: `p3/guide.js`, `p3/data.js`, `p3/content/l1.js`-`l10.js`, `p3/gifted.json`, `p3/workbook_html.js`, the rebuilt `p3/Math_Inquirers_P3_Tutor_Guide.pdf` (81 pages) and `p3/Math_Inquirers_P3_Student_Workbook_Designed.pdf` (58 pages), and all 277 slides with their notes in `split/p3l1`-`split/p3l10`.
+- Sources read: `p3/guide.js`, `p3/data.js`, `p3/content/l1.js`-`l10.js`, `p3/gifted.json`, `p3/workbook_html.js`, the rebuilt `p3/Math_Inquirers_P3_Tutor_Guide.pdf` (81 pages) and `p3/Math_Inquirers_P3_Student_Workbook_Designed.pdf` (58 pages), and all 278 slides with their notes in `split/p3l1`-`split/p3l10`.
 

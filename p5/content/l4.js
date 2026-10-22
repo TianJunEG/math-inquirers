@@ -83,7 +83,7 @@ module.exports = {
     mistakes: ['Using a slanting side as the height (1/2 × 14 × 13 for a 13-14-15 triangle).', 'Forgetting the 1/2 and giving the area of the whole rectangle.', 'For a height outside the triangle, measuring the base all the way to the foot of the height (adding the dashed extension to the base).'],
     extension: 'On a grid, draw as many different triangles as you can with area 6 cm² using a base of 4 cm. Where can the top corner go? (Anywhere on the line 3 cm above the base.)',
     key: [
-      ['Q1', '(a) 24 cm² (1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
+      ['Q1', '(a) 24 cm² (half of the 8 by 6 rectangle: 48 ÷ 2; or 1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
       ['Q2', '(a) 30 cm²  (b) 30 cm²  (c) Both have base DC = 10 cm and height 6 cm (P and Q are on AB, 6 cm above DC).'],
       ['Q3', '(a) 5 cm; 35 cm² (1/2 × 14 × 5)  (b) 3 cm; 21 cm² (1/2 × 14 × 3)  (c) 56 cm²'],
       ['Q4', '(a) 96 cm²  (b) ADE 16 cm², EBF 16 cm², FCD 24 cm²  (c) 40 cm² (96 − 56)'],
@@ -157,7 +157,7 @@ module.exports = {
     H.p('Area of a triangle = 1/2 × base × height. The height meets the base at a right angle.', { after: 40 }),
     H.q(1, 'Find the area of each triangle. The drawings are to scale.', { before: 40, keepNext: true }),
     H.fig(q1Fig()),
-    H.p(['<b style="color:#1F7A6F">Start here:</b> the little square marks a right angle. The height is the side that makes a right angle with the base. A slanting side is NOT the height. A dashed line shows a height. In (c) the height is outside the triangle: the dashed base line is only there to meet it.'], { after: 20 }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> triangle (a) is half of an 8 cm by 6 cm rectangle. Half of ______ = ______ cm². In (b) and (c) the height makes a right angle (the little square) with the base; a slanting side is NOT the height. In (c) the height is outside the triangle.'], { after: 20 }),
     H.sub('a', 'Area of (a) = __________ cm²       (b)  Area of (b) = __________ cm²       (c)  Area of (c) = __________ cm²'),
     H.sub('d', 'In (b), which lengths did you NOT need?   ______________________'),
     H.q(2, 'ABCD is a rectangle 10 cm by 6 cm. P and Q are points on AB.', { keepNext: true }),
@@ -172,10 +172,10 @@ module.exports = {
     H.sub('b', 'Height of triangle ACD = ______ cm.   Area of ACD = ______ cm²'),
     H.sub('c', 'Area of ABCD = ______________ cm²'),
     H.q(4, 'ABCD is a rectangle. Find the area of the shaded triangle DEF.', { keepNext: true }),
-    H.p(['<b style="color:#1F7A6F">Start here:</b> the three white triangles ADE, EBF and FCD are what is left over. Find their areas, then take them away from the rectangle.'], { after: 20 }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> the three white triangles ADE, EBF and FCD are what is left over. Each has a square corner, so each is half of a rectangle. Example: ADE is half of a 4 cm by 8 cm rectangle, so ADE = 16 cm².'], { after: 20 }),
     H.fig(takeFig()),
     H.sub('a', 'Area of the rectangle ABCD = ______________ cm²'),
-    H.sub('b', 'ADE = ______ cm²    EBF = ______ cm²    FCD = ______ cm²'),
+    H.sub('b', 'ADE = 16 cm²    EBF = ______ cm²    FCD = ______ cm²'),
     H.sub('c', 'Area of the shaded triangle DEF = ______________ cm²'),
     H.q(5, 'Mei draws a triangle with a base of 8 cm and a height of 6 cm.', { keepNext: true }),
     H.sub('a', 'What is the area of Mei’s triangle?   ____________ cm²'),
@@ -183,3 +183,34 @@ module.exports = {
     H.sub('c', 'One more triangle with the same area:  base ______ cm, height ______ cm')
   ]
 };
+
+// ---- figures for the printed Think harder (A2 to A4) and Go further (B1 to B3) items (the workbook prints them under the question) ----
+{
+  const fsv = (w, h, label, g, k = 0.8) => { FS = 17; const o = svg(w, h, label, g, k); FS = 19; return o; };
+  const lab = (x, y, s, a = 'middle') => T(x, y, s, { anchor: a });
+  // A2: right-angled triangle 12, 16, 20 with the right angle at the bottom left
+  { const P = M(70, 150, 7); let g = poly([P(0, 0), P(16, 0), P(0, 12)], SKY) + ra(P(0, 0), 1, -1);
+    g += lab(70 + 56, 168, '16 cm') + lab(62, 110, '12 cm', 'end') + lab(70 + 80, 100, '20 cm', 'start');
+    module.exports.qbank.stretch[1].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 12 cm and 16 cm and the long side 20 cm', g, 0.75); }
+  // A3: a square of side 6 cm and a triangle with base 9 cm and an unknown height
+  { let g = poly([[30, 30], [30 + 6 * 12, 30], [30 + 6 * 12, 30 + 6 * 12], [30, 30 + 6 * 12]], YEL) + lab(30 + 36, 30 + 6 * 12 + 18, '6 cm') + lab(30 + 36, 30 + 40, 'square');
+    const x0 = 190; g += poly([[x0, 102], [x0 + 9 * 12, 102], [x0 + 3 * 12, 22]], SKY) + ln([x0 + 3 * 12, 22], [x0 + 3 * 12, 102], true) + ra([x0 + 3 * 12, 102], 1, -1) + lab(x0 + 54, 120, '9 cm') + lab(x0 + 3 * 12 + 8, 66, 'height ?', 'start');
+    module.exports.qbank.stretch[2].fig = fsv(340, 130, 'A square with sides 6 cm and a triangle with base 9 cm and an unknown height; the two have the same area', g, 0.8); }
+  // A4: a rectangle and a triangle with the same base 12 cm and the same height 7 cm
+  { let g = poly([[20, 20], [20 + 12 * 11, 20], [20 + 12 * 11, 20 + 7 * 11], [20, 20 + 7 * 11]], YEL) + lab(20 + 66, 20 + 7 * 11 + 18, '12 cm') + lab(14, 20 + 40, '7 cm', 'end');
+    const x0 = 200; g += poly([[x0, 97], [x0 + 12 * 11, 97], [x0 + 4 * 11, 20]], SKY) + ln([x0 + 4 * 11, 20], [x0 + 4 * 11, 97], true) + ra([x0 + 4 * 11, 97], 1, -1) + lab(x0 + 66, 115, '12 cm') + lab(x0 + 4 * 11 + 8, 60, '7 cm', 'start');
+    module.exports.qbank.stretch[3].fig = fsv(350, 130, 'A rectangle 12 cm by 7 cm and a triangle with base 12 cm and height 7 cm side by side', g, 0.8); }
+  // B1: right-angled triangle 15, 20, 25 with the 25 cm side as the base
+  { const P = M(50, 150, 6.4); let g = poly([P(0, 0), P(20, 0), P(0, 15)], SKY) + ra(P(0, 0), 1, -1) + lab(50 + 64, 168, '20 cm') + lab(42, 110, '15 cm', 'end') + lab(50 + 90, 88, '25 cm', 'start');
+    module.exports.qbank.challenge[6].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 15 cm and 20 cm and the long side 25 cm', g, 0.75); }
+  // B2: two squares side by side (10 cm and 6 cm) and the triangle joining three corners
+  { const s = 11, x0 = 30, y0 = 130; const X = x => x0 + x * s, Y = y => y0 - y * s;
+    let g = poly([[X(0), Y(0)], [X(10), Y(0)], [X(10), Y(10)], [X(0), Y(10)]], WHITE) + poly([[X(10), Y(0)], [X(16), Y(0)], [X(16), Y(6)], [X(10), Y(6)]], WHITE);
+    g += poly([[X(0), Y(0)], [X(10), Y(10)], [X(16), Y(6)]], YEL);
+    g += lab(X(5), Y(0) + 16, '10 cm') + lab(X(13), Y(0) + 16, '6 cm');
+    module.exports.qbank.challenge[7].fig = fsv(310, 175, 'Two squares side by side, a big one with side 10 cm and a small one with side 6 cm. A triangle joins the bottom-left corner of the big square, the top-right corner of the big square and the top-right corner of the small square.', g, 0.9); }
+  // B3: triangle ABC with D on BC, BD = 4 cm, DC = 8 cm
+  { let g = poly([[30, 110], [30 + 12 * 18, 110], [30 + 5 * 18, 20]], SKY) + ln([30 + 5 * 18, 20], [30 + 4 * 18, 110], false) ;
+    g += lab(30 - 4, 118, 'B', 'end') + lab(30 + 12 * 18 + 4, 118, 'C', 'start') + lab(30 + 5 * 18, 14, 'A') + lab(30 + 4 * 18, 128, 'D') + lab(30 + 2 * 18, 140, '4 cm') + lab(30 + 8 * 18, 140, '8 cm');
+    module.exports.qbank.challenge[8].fig = fsv(300, 150, 'Triangle ABC with D on the side BC; BD is 4 cm and DC is 8 cm; A is joined to D', g, 0.9); }
+}

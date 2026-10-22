@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""P3 lesson-timing audit helper.  Run:  python3 docs/audit/timing_p3.py [--md]
+"""P3 lesson-timing audit helper.  Run:  python3 docs/audit/timing_p3.py [--md] [--fix]
 READ-ONLY: reads p3/data.js, p3/gifted.json (via node) and split/p3l*/project/slides/*.html;
-writes nothing except stdout.  It rebuilds the numbers quoted in docs/audit/timing_p3.md.
+writes nothing except stdout.  It rebuilds the numbers quoted in docs/audit/timing_p3.md
+(--md prints per-lesson tables as scripted; --fix prints the part needs after the fix pack in FIX_EXTRA / DROP_SLIDES).
 
 MODEL (identical constants should be used for every level so results compare)
   speech            130 words/min (tutor SAY lines, slide narration, closing words)
