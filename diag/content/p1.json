@@ -124,14 +124,14 @@
     "join": "4 to 6",
     "support": "2 to 3",
     "down": "0 to 1",
-    "stretchIsAFlag": "Brain stretchers (Q11 and Q12) are not part of the placement score. If a child solves one or both and scored 5 or 6 on the main questions, tell your tutor: the child may also try the Ages 7-9 (P2) check and will enjoy the Go further pages.",
+    "stretchIsAFlag": "Brain stretchers (Q11 and Q12) are not part of the placement score. If a child solves one or both and scored 5 or 6 on the main questions, tell your tutor: the child may also try the Ages 7-9 (Level 2) check and will enjoy the Go further pages.",
     "scoreLine": "Warm-up: ____ / 4     Main questions: ____ / 6     Brain stretchers (a bonus, not scored for placement): ____ / 2"
   },
   "parent": {
-    "join": "<b>4, 5 or 6 of the 6 main questions:</b> Join <b>Ages 6-8 (P1)</b>. Most children who meet school expectations score here. In class every child gets time to think and help when stuck. In lessons your child will meet money to $50, reading a ruler and logic puzzles. We start slowly and help every child.",
-    "support": "<b>2 or 3 of 6:</b> Join <b>Ages 6-8 (P1)</b> after a 10-minute chat with a tutor and the free taster lesson, so we can see how your child likes to work.",
+    "join": "<b>4, 5 or 6 of the 6 main questions:</b> Join <b>Ages 6-8 (Level 1)</b>. Most children who meet school expectations score here. In class every child gets time to think and help when stuck. In lessons your child will meet money to $50, reading a ruler and logic puzzles. We start slowly and help every child.",
+    "support": "<b>2 or 3 of 6:</b> Join <b>Ages 6-8 (Level 1)</b> after a 10-minute chat with a tutor and the free taster lesson, so we can see how your child likes to work.",
     "down": "<b>0 or 1 of 6:</b> We suggest the free taster and a chat first. Many children are simply not ready yet, and we would like to help you choose a good starting point.",
-    "stretchRow": "<b>Brain stretchers (Q11 and Q12)</b> do not change the level. If your child gets one or both right and scored 5 or 6 on the main questions, you can also try the Ages 7-9 (P2) check.",
+    "stretchRow": "<b>Brain stretchers (Q11 and Q12)</b> do not change the level. If your child gets one or both right and scored 5 or 6 on the main questions, you can also try the Ages 7-9 (Level 2) check.",
     "strongBox": "<b>Strong?</b><br>Choose the level that fits the score, not the school year. A child who finds this easy will enjoy the Go further pages in class.",
     "gentleBox": "<b>Not yet?</b><br>Every child starts somewhere. A short chat and a free taster lesson let us find the right start. Your child can join at any time."
   },

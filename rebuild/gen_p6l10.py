@@ -1,9 +1,9 @@
-"""Math Inquirers P6 (post-PSLE maths + coding bridge) - Lesson 10: Showcase Challenge. Writes split/p6l10/project."""
+"""Math Inquirers Level 6 (post-PSLE maths + coding bridge) - Lesson 10: Showcase Challenge. Writes split/p6l10/project."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT = FOOT = 'Math Inquirers P6  •  Notice it. Test it. Explain why.'
+slidekit.FOOT = FOOT = 'Math Inquirers Level 6  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p6l10','project'); SL=os.path.join(D,'slides'); os.makedirs(SL,exist_ok=True)
 S={}; ORDER=[]
 def put(i,h): S[i]=h; ORDER.append(i)
@@ -59,7 +59,7 @@ def towers(vals,unit=40,gap=36,col=SKY,hi=None,label=True,aria='towers',mx=None)
     return svg(W,Hh,b,aria)
 def title_slide(sid,n,week,title,sub,today,notes):
     return (f'<section id="{sid}" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
-            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">P6 LESSON {n}  •  WEEK {week}</p>\n<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(title)}</h1>\n<p style="font-size:44px;color:#C9D4EC">{E(sub)}</p>\n'
+            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LEVEL 6  •  LESSON {n}  •  WEEK {week}</p>\n<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(title)}</h1>\n<p style="font-size:44px;color:#C9D4EC">{E(sub)}</p>\n'
             f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(today)}</p></div>\n'
             f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>\n<aside>{E(notes)}</aside>\n</section>\n')
 def color_slide(sid,bg,kicker,title,big,small,notes,fg=CREAM,sc='#D7EFEA',kc=YEL,tsize=110):
@@ -287,7 +287,7 @@ S['p6l10-break']=S['p6l10-break'].replace('Three minutes.','Two minutes.')
 for f in os.listdir(SL):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(SL,f))
 for i,h in S.items(): open(os.path.join(SL,i+'.html'),'w').write(h)
-deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css','title':'Math Inquirers P6: Lesson 10 – Showcase Challenge','order':ORDER,'cover':'p6l10-title',
+deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css','title':'Math Inquirers Level 6: Lesson 10 – Showcase Challenge','order':ORDER,'cover':'p6l10-title',
       'sections':{'s1':{'description':'Warm-up and the challenge round','start':'p6l10-title'},'s2':{'description':'From puzzle to program: three starter projects','start':'p6l10-teach1'},'s3':{'description':'Plan and build (Think harder and Go further are open to everyone)','start':'p6l10-break'},'s4':{'description':'Showcase, talk, exit and certificates','start':'p6l10-showcase'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

@@ -2,10 +2,10 @@
 """Build the extras package for level N (2..6):  python3 levels/mkextras.py 4   (or: all)
 
 Makes, in outputs/designed/:
-  Math_Inquirers_P<N>_Question_Bank.pdf
-  Math_Inquirers_P<N>_Weekly_Email_Pack.pdf
-  Math_Inquirers_P<N>_Free_Taster.pdf
-  Math_Inquirers_P<N>_What_Learners_Get.pdf   (one page)
+  Math_Inquirers_Level<N>_Question_Bank.pdf
+  Math_Inquirers_Level<N>_Weekly_Email_Pack.pdf
+  Math_Inquirers_Level<N>_Free_Taster.pdf
+  Math_Inquirers_Level<N>_What_Learners_Get.pdf   (one page)
 Everything is read from p<N>/data.js (via levels/extras_data.js), p<N>/parent_side.json and
 outputs/deck_urls_all.json / deck_urls_p4_p6.md. No answers or numbers are written here: answers are copied
 from the level's qbank and lesson keys, and a self-check at the end confirms each one is in the built pages.
@@ -45,9 +45,11 @@ def load(n):
 
 def names(n):
     v = LV[n]
+    a = v['age'].replace('Ages ', 'ages ')
     if n == 6:
-        return dict(short=f'P6 {v["age"]}', full=f'Ages 11-13, for children after the PSLE, maths + coding bridge', head='Ages 11-13 (after the PSLE)', tag='Maths + coding bridge')
-    return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (covers P{n} topics)', head=f'{v["age"]} (covers P{n} topics)', tag='')
+        return dict(short=f'Level 6 ({a})', full='Level 6 (ages 11-13), for children after the PSLE, maths + coding bridge', head='Level 6 (ages 11-13, after the PSLE)', tag='Maths + coding bridge')
+    return dict(short=f'Level {n} ({a})', full=f'Level {n} ({a}, covers P{n} topics)', head=f'Level {n} ({a}, covers P{n} topics)', tag='')
+
 
 
 def css():
@@ -137,7 +139,7 @@ def build_qbank(n, d, tmp):
     b.append('</div>')
     body = ''.join(b)
     p = page(body, tmp, 'qb.html')
-    out = os.path.join(OUT, f'Math_Inquirers_P{n}_Question_Bank.pdf')
+    out = os.path.join(OUT, f'Math_Inquirers_Level{n}_Question_Bank.pdf')
     pdf(p, out, f'Math Inquirers {nm["short"]} • Question Bank • Notice it. Test it. Explain why.')
     return out, body
 
@@ -150,7 +152,7 @@ def deck_ids(n):
         if f'p{n}l{k}' in j: ids[k] = j[f'p{n}l{k}']
     if len(ids) < 10:   # P5 is only in the markdown list
         md = open(os.path.join(R, 'outputs', 'deck_urls_p4_p6.md')).read()
-        sec = re.search(r'## P%d\b.*?(?=\n## |\Z)' % n, md, re.S)
+        sec = re.search(r'## Level %d\b.*?(?=\n## |\Z)' % n, md, re.S)
         if sec:
             for m in re.finditer(r'L(\d+) ([A-Za-z0-9]{22})( \(empty\))?', sec.group(0)):
                 if not m.group(3): ids.setdefault(int(m.group(1)), m.group(2))
@@ -166,7 +168,7 @@ def build_email(n, d, tmp):
         'Send the tutor email with the Week N Tutor Scripts and Answers PDF at least two days before. Tutors only; the answers must not go to parents.',
         'Put parents in BCC so no one sees another family\'s email address. Get parents\' consent to email before you start (PDPA).',
         'Replace the words in [square brackets] before sending.',
-        'The PDFs are in the weekly folder (Math_Inquirers_P%d_Weekly_PDFs.zip): Week1_Student_Pages.pdf to Week5_Student_Pages.pdf and Week1_Tutor_Scripts_and_Answers.pdf to Week5_Tutor_Scripts_and_Answers.pdf. The Week 1 student PDF also holds the inquiry journal page and all the cut-outs; the Week 5 PDF ends with the certificate.' % n,
+        'The PDFs are in the weekly folder (Math_Inquirers_Level%d_Weekly_PDFs.zip): Week1_Student_Pages.pdf to Week5_Student_Pages.pdf and Week1_Tutor_Scripts_and_Answers.pdf to Week5_Tutor_Scripts_and_Answers.pdf. The Week 1 student PDF also holds the inquiry journal page and all the cut-outs; the Week 5 PDF ends with the certificate.' % n,
         'The slide deck links in the tutor emails are private to you. Share each deck with the tutor first, or send them the file.']: b.append('<li>%s</li>' % E(x))
     if n == 6: b.append('<li>This level is online-first and children code on a computer, so the Week 1 parent email also asks for a laptop or desktop with Scratch open. Attach the Scratch warm-up handout to the Week 1 email if you have it ready.</li>')
     b.append('</ul>')
@@ -188,7 +190,7 @@ def build_email(n, d, tmp):
         ask2 = side[str(lb['n'])][2]
         b.append('<div class="lessonpage"><h2>Week %d: Lessons %d and %d</h2><h3>Parent email</h3><div class="mail">' % (w, la['n'], lb['n']))
         b.append('<p class="subj">Subject: Math Inquirers %s Week %d: %s</p><p class="att">Attachment: Week%d_Student_Pages.pdf</p>' % (E(nm['short']), w, E(subj_topics), w))
-        b.append('<p>Dear parents,</p><p>This week our Math Inquirers (%s) meet two topics, in lessons %d and %d.</p>%s' % (E(nm['head']), la['n'], lb['n'], learn))
+        b.append('<p>Dear parents,</p><p>This week our Math Inquirers %s meet two topics, in lessons %d and %d.</p>%s' % (E(nm['head']), la['n'], lb['n'], learn))
         b.append('<p>Your child\'s workbook pages for this week are attached. Please print them single-sided if you can. Children will work on the pages in class, so there is no need to finish them in advance.</p>')
         b.append('<p>%s</p>' % E(kitp))
         b.append('<p>One thing to try at home (5 minutes): %s</p><p>Ask your child: %s or %s</p>' % (E(tip), E(ask), E(ask2)))
@@ -205,14 +207,14 @@ def build_email(n, d, tmp):
         b.append('<li>After each lesson, fill in the Progress Notes for each child (30 seconds each) and send me the sheet.</li></ol>')
         b.append('<p>Please do not forward the answer pages to parents.</p><p>Thank you,<br>[Your name]</p></div></div>')
     b.append('<div class="lessonpage"><h2>Week 5 closing email to parents</h2><div class="mail"><p class="subj">Subject: Math Inquirers %s: thank you, and your child\'s certificate</p><p>Dear parents,</p>' % E(nm['short']))
-    for para in ['Thank you for joining us for the Math Inquirers Holiday Program (%s). Your child\'s Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child\'s name.' % nm['head'],
+    for para in ['Thank you for joining us for the Math Inquirers Holiday Program, %s. Your child\'s Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child\'s name.' % nm['head'],
                  'We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?',
                  'If your child showed a love for puzzles, we may invite them to a short challenge session in the next holiday. We will contact you if so.']:
         b.append('<p>%s</p>' % E(para))
     b.append('<p>Warm regards,<br>[Your name]</p></div></div>')
     body = ''.join(b)
     p = page(body, tmp, 'em.html')
-    out = os.path.join(OUT, f'Math_Inquirers_P{n}_Weekly_Email_Pack.pdf')
+    out = os.path.join(OUT, f'Math_Inquirers_Level{n}_Weekly_Email_Pack.pdf')
     pdf(p, out, f'Math Inquirers {nm["short"]} • Weekly Email Pack • Notice it. Test it. Explain why.')
     return out, body
 
@@ -260,7 +262,7 @@ def build_taster(n, d, tmp):
             ('Exit ticket', l1['exit']['q'])]
     mins = ['5 min', '8 min', '5 min', '9 min', '3 min']   # the 30-minute split; the content itself is Lesson 1 as published
     f = [cover('Free 30-minute taster', f'Lesson 1: {l1["title"]} ({l1["topic"]})  •  Math Inquirers {nm["short"]}{" • " + nm["tag"] if nm["tag"] else ""}')]
-    f.append('<h2>What this is</h2><p>A short sample of a real Math Inquirers lesson for %s. It is Lesson 1 of the %s holiday program (%s), shortened to about 30 minutes: a warm-up, a hands-on explore, a mini-lesson, a few worksheet questions and an exit ticket. The same routine runs through all ten 90-minute lessons.</p>' % (E(nm['head']), E(LV[n]['long']), E(l1['title'])))
+    f.append('<h2>What this is</h2><p>A short sample of a real Math Inquirers lesson for %s. It is Lesson 1 of the %s holiday program (%s), shortened to about 30 minutes: a warm-up, a hands-on explore, a mini-lesson, a few worksheet questions and an exit ticket. The same routine runs through all ten 90-minute lessons.</p>' % (E(nm['head']), 'Level %d' % n, E(l1['title'])))
     f.append('<h2>The 30 minutes</h2><table class="tb"><colgroup><col style="width:9%"><col style="width:14%"><col style="width:77%"></colgroup>')
     f.append('<tr><td class="hd">Time</td><td class="hd">Part</td><td class="hd">What happens</td></tr>')
     for (a, t), m in zip(plan, mins): f.append('<tr><td>%s</td><td><b>%s</b></td><td>%s</td></tr>' % (m, a, E(t)))
@@ -298,7 +300,7 @@ def build_taster(n, d, tmp):
         c.drawString(40, 20, f'Free 30-minute taster  •  Math Inquirers {nm["short"]}  •  Notice it. Test it. Explain why.')
         c.drawRightString(pw_ - 40, 20, f'Page {i + 1} of {total}'); c.save(); ob.seek(0)
         pg_.merge_page(PdfReader(ob).pages[0]); w2.add_page(pg_)
-    out = os.path.join(OUT, f'Math_Inquirers_P{n}_Free_Taster.pdf')
+    out = os.path.join(OUT, f'Math_Inquirers_Level{n}_Free_Taster.pdf')
     with open(out, 'wb') as fh: w2.write(fh)
     return out, ''.join(f) + sheet + ''.join(t)
 
@@ -306,7 +308,7 @@ def build_taster(n, d, tmp):
 # ============================================================ (d) WHAT LEARNERS GET (one page)
 def build_wlg(n, d, tmp):
     nm = names(n); Ls = d['lessons']; kit = LV[n]['kit']
-    wbpages = pages_of(os.path.join(R, f'p{n}', f'Math_Inquirers_P{n}_Student_Workbook_Designed.pdf'))
+    wbpages = pages_of(os.path.join(R, f'p{n}', f'Math_Inquirers_Level{n}_Student_Workbook_Designed.pdf'))
     skills = Counter()
     for l in Ls:
         for s in set(x.strip() for x in re.split(r',\s*(?![^()]*\))', l['skills'])): skills[s] += 1
@@ -361,7 +363,7 @@ def build_wlg(n, d, tmp):
 '''
     p = os.path.join(tmp, 'wl.html')
     open(p, 'w').write('<!doctype html><html><head><meta charset="utf-8"><style>%s%s</style></head><body style="padding:12mm 13mm 0">%s</body></html>' % (css().replace('@page{size:A4;margin:13mm 13mm 15mm}', ''), extra, b))
-    out = os.path.join(OUT, f'Math_Inquirers_P{n}_What_Learners_Get.pdf')
+    out = os.path.join(OUT, f'Math_Inquirers_Level{n}_What_Learners_Get.pdf')
     ft = '<div style="width:100%%;font-size:8px;color:#5B6785;padding:0 13mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers %s • What Learners Get • Notice it. Test it. Explain why.</span><span></span></div>' % E(nm['short'])
     with sync_playwright() as pw:
         br = pw.chromium.launch(); pg = br.new_page()
@@ -397,9 +399,9 @@ def main(n):
     with tempfile.TemporaryDirectory() as tmp:
         qb, qbb = build_qbank(n, d, tmp); em, _ = build_email(n, d, tmp); ta, tab = build_taster(n, d, tmp); wl, _ = build_wlg(n, d, tmp)
     probs = check(n, d, {'qb': qbb, 'ta': tab})
-    for f in (qb, em, ta, wl): print(f'P{n}', os.path.basename(f), pages_of(f), 'pages')
-    print(f'P{n} self-check:', 'OK' if not probs else probs)
-    if pages_of(wl) != 1: print(f'WARNING P{n} What Learners Get is {pages_of(wl)} pages')
+    for f in (qb, em, ta, wl): print(f'Level {n}', os.path.basename(f), pages_of(f), 'pages')
+    print(f'Level {n} self-check:', 'OK' if not probs else probs)
+    if pages_of(wl) != 1: print(f'WARNING Level {n} What Learners Get is {pages_of(wl)} pages')
     return not probs
 
 

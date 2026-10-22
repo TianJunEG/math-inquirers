@@ -1,4 +1,4 @@
-"""Fix-pass slides for Math Inquirers P2: 3-minute Sneak-peek puzzles (minutes 1 to 4), an Explore 'Go further' what-if slide, and a 2-minute 'Looking back' slide.
+"""Fix-pass slides for Math Inquirers Level 2: 3-minute Sneak-peek puzzles (minutes 1 to 4), an Explore 'Go further' what-if slide, and a 2-minute 'Looking back' slide.
 Content comes from p2/gaps.json (shared with the workbook and the tutor guide; built by docs/audit/mk_gaps_p2.py).  Usage in a gen_p2lK.py:
     import p2gaps; p2gaps.add(S, K)            # before the slides are written; adds slides, re-times warm-up / exit, applies neutral labels
     order = p2gaps.order(order, K)             # after the order list exists

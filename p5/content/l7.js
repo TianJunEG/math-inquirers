@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 7: Percentage Puzzles (percentage of a quantity, discount, GST, increase and decrease, percentage of a remainder)
+// Math Inquirers Level 5 — Lesson 7: Percentage Puzzles (percentage of a quantity, discount, GST, increase and decrease, percentage of a remainder)
 // Every answer below was worked out and checked with exact fractions in Python. GST in Singapore is 9%.
 
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';

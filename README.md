@@ -1,6 +1,6 @@
 # Math Inquirers
 
-Primary 1 maths holiday program by Preciouslyours Pte Ltd, Singapore.
+Level 1 maths holiday program by Preciouslyours Pte Ltd, Singapore.
 Slogan: **Notice it. Test it. Explain why.**
 
 This repository holds the source files that build every program document, plus copies of the finished files.
@@ -13,6 +13,8 @@ This repository holds the source files that build every program document, plus c
 | `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, progress notes, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
 | `outputs/brand/` | Workbook style options, mascot sketches |
 | `outputs/older/` | Earlier versions kept for reference |
+
+**Level names.** The six levels are called Level 1 to Level 6 (never "P1" to "P6") everywhere a person sees them, and finished files are named `Math_Inquirers_Level<N>_...` (for example `Math_Inquirers_Level3_Tutor_Guide.pdf`). The code names stay `p1` to `p6`, `hp/`, `split/pN*` and `rebuild/gen_pN*`. A hint such as "covers P3 topics" or "Primary 3 topics" means the school year, not the level name. Details: `docs/audit/rename_report.md`.
 
 ## Source folders
 

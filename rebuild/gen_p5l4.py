@@ -1,4 +1,4 @@
-"""Math Inquirers P5, Lesson 4: Triangle Areas. Writes split/p5l4/project (deck.json + slides/*.html). All figures are to scale."""
+"""Math Inquirers Level 5, Lesson 4: Triangle Areas. Writes split/p5l4/project (deck.json + slides/*.html). All figures are to scale."""
 from p5l34_common import *
 L='p5l4'; S={}
 def put(i,h): S[f'{L}-{i}']=h
@@ -176,6 +176,6 @@ put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['e
 
 order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','teach3','try2','key','break','ws1','ws1ans','teachsplit','teachtake','teachsame','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 sections={'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: base and height, same base same height','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Think harder, Go further, talk and exit','start':f'{L}-stretch'}}
-write_deck(L,order,sections,S,'Math Inquirers P5: Lesson 4 – Triangle Areas')
+write_deck(L,order,sections,S,'Math Inquirers Level 5: Lesson 4 – Triangle Areas')
 
 import p5_gaps; p5_gaps.apply(4)

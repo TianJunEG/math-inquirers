@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 10: Challenge Day (mixed, incl. bar graphs and logic)
+// Math Inquirers Level 3, Lesson 10: Challenge Day (mixed, incl. bar graphs and logic)
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';
 const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 16}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial, sans-serif"${o.extra || ''}>${s}</text>`;
 
@@ -48,7 +48,7 @@ module.exports = {
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
     materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
-    warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
+    warmup: 'Relay chain: one quick question from our Level 3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
     explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',
     mini: 'How to start a puzzle: draw it (a queue: 4th from the front and 6th from the back means 4 + 6 − 1 = 9 people), make a table (a logic grid: a tick in a box means crosses in the rest of its row and column), read the scale of a bar graph (what does one space stand for? halfway between two lines). Then list it in order before page 2.',
     share: 'Choose one puzzle. How did you START it, and how do you know your answer is right? (Share, share with a partner, or pass.)',

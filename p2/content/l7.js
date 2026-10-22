@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 7: Fair Shares (fractions)
+// Math Inquirers Level 2, Lesson 7: Fair Shares (fractions)
 // Every shaded drawing is built from EQUAL parts (equal bar widths, equal pie angles) unless the question is about unequal parts.
 
 const N = '#1B2A49', Y = '#FFC93C', SK = '#DDEBF7', TL = '#1F7A6F', W = '#FFFFFF';

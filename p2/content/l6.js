@@ -1,4 +1,4 @@
-// Math Inquirers P2 — Lesson 6: Market Day (money: pay exactly, fewest notes and coins, change, "is there enough?")
+// Math Inquirers Level 2 — Lesson 6: Market Day (money: pay exactly, fewest notes and coins, change, "is there enough?")
 // Singapore money: coins 5¢, 10¢, 20¢, 50¢, $1; notes $2, $5, $10, $50, $100 (no $20 note).
 // Every answer below was worked out and checked; "find all" answers were enumerated by a short program.
 

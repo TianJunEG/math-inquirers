@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 5: Volume Vault (volume of cuboids, liquids, water levels, painted cubes)
+// Math Inquirers Level 5 — Lesson 5: Volume Vault (volume of cuboids, liquids, water levels, painted cubes)
 // Every answer below was worked out with exact fractions and the cube counts were checked by listing every cube.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

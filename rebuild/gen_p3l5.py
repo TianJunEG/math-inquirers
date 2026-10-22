@@ -1,4 +1,4 @@
-"""Math Inquirers P3, Lesson 5: Remainder Riddles. Writes split/p3l5/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 3, Lesson 5: Remainder Riddles. Writes split/p3l5/project (deck.json + slides/*.html)."""
 import json,os,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -280,7 +280,7 @@ import p3_stories; ORDER[:]=p3_stories.add(S,ORDER,5)  # mathematician story bre
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
-deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P3: Lesson 5 – Remainder Riddles','order':ORDER,'cover':'p3l5-title',
+deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers Level 3: Lesson 5 – Remainder Riddles','order':ORDER,'cover':'p3l5-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p3l5-title'},'s2':{'description':'Teach: remainders and what they mean','start':'p3l5-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l5-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p3l5-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

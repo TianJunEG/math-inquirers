@@ -1,8 +1,8 @@
-"""Math Inquirers P2, Lesson 3: Legs, Wheels and Arrays. Writes split/p2l3/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 3: Legs, Wheels and Arrays. Writes split/p2l3/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
-slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
 import p2gaps
 RED='#D64545'
@@ -74,7 +74,7 @@ def icon(g,size=170,label='picture'): return f'<svg aria-label="{E(label)}" view
 def place(g,x,y,s=1): return f'<g transform="translate({x},{y}) scale({s})">{g}</g>'
 
 # ---------- 1. title ----------
-put('p2l3-title',title_slide('p2l3-title','P2  •  LESSON 3  •  WEEK 2','Legs, Wheels and Arrays','Multiplication and Division','Use arrays for × and ÷, find how many of each with a table, and share with leftovers.',
+put('p2l3-title',title_slide('p2l3-title','LEVEL 2  •  LESSON 3  •  WEEK 2','Legs, Wheels and Arrays','Multiplication and Division','Use arrays for × and ÷, find how many of each with a table, and share with leftovers.',
  'Objective: Read an array as rows of equal groups and write two multiplication and two division sentences for it; solve "how many of each" legs and wheels puzzles with a table; share with leftovers and decide what the leftover means; find all the arrays for a number. Tables used: 2, 3, 4, 5 and 10 only. '
  'Level note: sharing with leftovers (Q4, Q5) is division with a remainder, which is a P3 topic. It is a natural lead-in, so say "3 left over" in words and do not write remainders as "r 3". Thinking strategies taught today: DRAW IT (arrays, plates, boats) and MAKE A TABLE (start with all of one kind, swap one at a time; guess and check). '
  'Materials: About 30 counters per pair, mini whiteboards, squared paper. Optional picture cards of hens and goats, bicycles and tricycles. '
@@ -248,7 +248,7 @@ if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides
 os.makedirs(os.path.join(D,'slides'))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P2: Lesson 3 – Legs, Wheels and Arrays','order':ORDER,'cover':'p2l3-title',
+      'title':'Math Inquirers Level 2: Lesson 3 – Legs, Wheels and Arrays','order':ORDER,'cover':'p2l3-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p2l3-title'},'s2':{'description':'Teach: arrays, and how many of each with a table','start':'p2l3-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l3-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l3-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}

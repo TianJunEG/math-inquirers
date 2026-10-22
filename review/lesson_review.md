@@ -1,4 +1,4 @@
-# Math Inquirers P1: lesson pitch and slide teachability review
+# Math Inquirers Level 1: lesson pitch and slide teachability review
 
 Sources reviewed: `deck/data.js`, all 10 lessons' slide HTML (L1, L5 and L8 read in full, the rest read for every mini-lesson, key idea, stretch, challenge, talk and exit slide), `hp/lessons.js`, `hp/scripts.js`, `hp/workbook.js`, `hp/qbank.json` and the Tutor Guide PDF (L5 section in full).
 

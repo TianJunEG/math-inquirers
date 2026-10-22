@@ -1,4 +1,4 @@
-// Math Inquirers P4 — Lesson 5: Decimal Detectives (decimals to 3 places: number lines, comparing and ordering,
+// Math Inquirers Level 4 — Lesson 5: Decimal Detectives (decimals to 3 places: number lines, comparing and ordering,
 // rounding and rounding backwards, digit-card decimals, money and mass puzzles with bar models)
 // Every answer below was worked out and checked (the "find all" and riddle items with a short Python script).
 

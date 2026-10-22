@@ -1,4 +1,4 @@
-// Math Inquirers P3 — Lesson 5: Remainder Riddles (Division)
+// Math Inquirers Level 3 — Lesson 5: Remainder Riddles (Division)
 // Heuristics taught: work backwards (groups × size + leftover) and make a list (then test each clue).
 const NV = '#1B2A49', YL = '#FFC93C';
 const shareSvg = () => {

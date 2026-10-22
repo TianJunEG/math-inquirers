@@ -1,4 +1,4 @@
-// Math Inquirers P2 Holiday Program — Lesson 1: Digit Detectives (Numbers to 1000)
+// Math Inquirers Level 2 Holiday Program — Lesson 1: Digit Detectives (Numbers to 1000)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 

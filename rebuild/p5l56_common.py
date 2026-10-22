@@ -3,7 +3,7 @@ import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.'
 FOOTX=slidekit.FOOT
 RED='#D64545'; WSIDE='#BCD6EE'; WTOP='#EEF5FC'
 def title_slide(sid,label,title,topic,today,notes):

@@ -1,10 +1,10 @@
-"""Math Inquirers P5, Lesson 8: Angle Chasers. Writes split/p5l8/project (deck.json + slides/*.html).
+"""Math Inquirers Level 5, Lesson 8: Angle Chasers. Writes split/p5l8/project (deck.json + slides/*.html).
 Every angle figure is built from coordinates; chk() raises an error if a stated angle is not the real angle."""
 import json,os,sys,datetime,math
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p5l8','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 S={}
 def put(i,h): S[i]=h
@@ -370,7 +370,7 @@ for f in os.listdir(sd):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(sd,f))
 for i,h in S.items(): open(os.path.join(sd,i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':'Math Inquirers P5: Lesson 8 – Angle Chasers','order':order,'cover':'p5l8-title',
+ 'title':'Math Inquirers Level 5: Lesson 8 – Angle Chasers','order':order,'cover':'p5l8-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p5l8-title'},'s2':{'description':'Teach: angle facts and angle chases','start':'p5l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p5l8-break'},'s4':{'description':'Think harder, Go further, talk and exit','start':'p5l8-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

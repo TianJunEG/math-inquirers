@@ -1,9 +1,9 @@
-"""Math Inquirers P3, Lesson 1: Number Sleuths. Writes split/p3l1/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 3, Lesson 1: Number Sleuths. Writes split/p3l1/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P3 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 3 Holiday Program  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p3l1','project'); S={}
 def put(i,h): S[i]=h
 LN=1; TITLE='Number Sleuths'; TOPIC='Numbers to 10 000'; PRE='p3l1-'
@@ -18,7 +18,7 @@ def check2(sid,time,title,rows,notes,gap=150,size=34,lw=170):
     return sec(sid,time,body,notes)
 def title_slide(sid,today,notes):
     return (f'<section id="{sid}" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
-            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">PRIMARY 3  •  LESSON {LN}  •  WEEK 1</p>\n'
+            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LEVEL 3  •  LESSON {LN}  •  WEEK 1</p>\n'
             f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(TITLE)}</h1>\n'
             f'<p style="font-size:44px;color:#C9D4EC">{E(TOPIC)}</p>\n'
             f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(today)}</p></div>\n'
@@ -200,7 +200,7 @@ for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':f'Math Inquirers P3: Lesson {LN} – {TITLE}','order':ORDER,'cover':ORDER[0],
+ 'title':f'Math Inquirers Level 3: Lesson {LN} – {TITLE}','order':ORDER,'cover':ORDER[0],
  'sections':{'s1':{'description':'Warm-up and explore','start':PRE+'title'},'s2':{'description':'Teach: greatest, smallest and make a list in order','start':PRE+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':PRE+'break'},'s4':{'description':'Think harder, go further, talk and exit','start':PRE+'stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

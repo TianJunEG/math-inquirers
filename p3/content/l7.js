@@ -1,4 +1,4 @@
-// Math Inquirers P3 – Lesson 7: Area Architects (Area and perimeter)
+// Math Inquirers Level 3 – Lesson 7: Area Architects (Area and perimeter)
 // Heuristics taught: (1) make a list in order; (2) change the shape (push the steps out; cut it up or fill it in).
 const N = '#1B2A49', Y = '#FFC93C', S = '#DDEBF7', G = '#1F7A6F', W = '#FFFFFF', LG = '#B9C6DE';
 

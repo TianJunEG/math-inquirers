@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 9: Data Detectives (Tables and line graphs)
+// Math Inquirers Level 4 Holiday Program — Lesson 9: Data Detectives (Tables and line graphs)
 // Every answer below was worked out and checked with a script (changes between days, row and column totals,
 // where two lines meet, missing points from totals).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';

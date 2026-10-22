@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 1: Million Puzzles (numbers to 10 million, four operations)
+// Math Inquirers Level 5 — Lesson 1: Million Puzzles (numbers to 10 million, four operations)
 // Heuristics: test the best number just below AND just above a target; use the clues in order and check every clue;
 // estimate by rounding to catch wrong answers; brackets first, then × and ÷, then + and −; write the range before "find all".
 // Every answer below was worked out and checked with a short Python script (exact search over all cases).
@@ -61,7 +61,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Math Inquirers P5! This holiday we play with puzzles that stretch you before P6. Every lesson we notice a pattern, test it and explain why.', 'Today our numbers grow up to 10 million. How big is a million, really? By the end you will know, and you will solve puzzles that most adults get wrong.'],
+    hook: ['Welcome to Math Inquirers Level 5! This holiday we play with puzzles that stretch you before P6. Every lesson we notice a pattern, test it and explain why.', 'Today our numbers grow up to 10 million. How big is a million, really? By the end you will know, and you will solve puzzles that most adults get wrong.'],
     warmIntro: ['Draw seven boxes for millions down to ones. I turn over one digit card at a time. Write it in a box straight away. No moving it later!', 'The winner is the number closest to 5 000 000. Think: where does a 4 go? A 9? A 0?'],
     predict: ['Before any working: how long is a million seconds? An hour, a day, a week, a month or a year? Write your guess in the corner of your whiteboard and do not change it.'],
     exploreHints: ['Stuck: how many seconds in one minute? In one hour? Multiply, do not add.', 'Stuck on days: you know the seconds in one day. How many days make close to 1 000 000? Try 10 days first.', 'Finished early: how long is 10 million seconds? More or less than a school term?'],

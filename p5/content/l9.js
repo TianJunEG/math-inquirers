@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 9: Pattern Generalisers (patterns and number sense)
+// Math Inquirers Level 5 — Lesson 9: Pattern Generalisers (patterns and number sense)
 // Heuristics: look for a pattern, make a table, say the rule in words (no letters), work backwards from a total,
 // guess and check with a table, supposition ("suppose they are all the same").
 // Every pattern term, count and answer below was worked out and checked with a short Python script.

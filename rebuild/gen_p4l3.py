@@ -1,9 +1,9 @@
-"""Math Inquirers P4, Lesson 3: Operation Detectives. Writes split/p4l3/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 4, Lesson 3: Operation Detectives. Writes split/p4l3/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P4 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 4 Holiday Program  •  Notice it. Test it. Explain why.'
 FOOTX=slidekit.FOOT
 D=os.path.join(H,'..','split','p4l3','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 S={}
@@ -244,7 +244,7 @@ for f in os.listdir(sd):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(sd,f))
 for i,h in S.items(): open(os.path.join(sd,i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':'Math Inquirers P4: Lesson 3 – Operation Detectives','order':order,'cover':'p4l3-title',
+ 'title':'Math Inquirers Level 4: Lesson 3 – Operation Detectives','order':order,'cover':'p4l3-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p4l3-title'},'s2':{'description':'Teach: order of operations, missing signs and brackets','start':'p4l3-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p4l3-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p4l3-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

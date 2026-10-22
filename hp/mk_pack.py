@@ -123,7 +123,7 @@ d.add_page_break()
 H(d,"Week 5 closing email to parents",1)
 P(d,"Subject: Math Inquirers: thank you, and your child's certificate",b=True)
 for para in ["Dear parents,","Thank you for joining us for the Math Inquirers Holiday Program. Your child's Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child's name.","We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?","If your child showed a love for puzzles, we may invite them to a short challenge session in the next holiday. We will contact you if so.","Warm regards,\n[Your name]"]: P(d,para)
-d.save("Math_Inquirers_Weekly_Email_Pack.docx")
+d.save("Math_Inquirers_Level1_Weekly_Email_Pack.docx")
 
 # ---------- PROGRESS NOTES ----------
 d=Document();base(d)

@@ -1,4 +1,4 @@
-"""Math Inquirers P3, Lesson 4: Model Makers. Writes split/p3l4/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 3, Lesson 4: Model Makers. Writes split/p3l4/project (deck.json + slides/*.html)."""
 import json,os,sys,math
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -10,7 +10,7 @@ RED='#D64545'
 # ---------- common slide shapes ----------
 def title_slide(sid,n,week,title,topic,today,notes):
     return (f'<section id="{sid}" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
-            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">PRIMARY 3  •  LESSON {n}  •  WEEK {week}</p>\n'
+            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LEVEL 3  •  LESSON {n}  •  WEEK {week}</p>\n'
             f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(title)}</h1>\n'
             f'<p style="font-size:44px;color:#C9D4EC">{E(topic)}</p>\n'
             f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(today)}</p></div>\n'
@@ -250,7 +250,7 @@ assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
-deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P3: Lesson 4 – Model Makers','order':order,'cover':'p3l4-title',
+deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers Level 3: Lesson 4 – Model Makers','order':order,'cover':'p3l4-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p3l4-title'},'s2':{'description':'Teach: draw a model (part-whole and comparison)','start':'p3l4-we1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l4-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p3l4-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

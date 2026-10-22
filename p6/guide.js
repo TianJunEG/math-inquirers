@@ -14,7 +14,7 @@ const hd = (s, w) => cell(s, w, { bold: true, fill: 'D9E2F3', size: 20, h: 70 })
 const c2 = (s, w, o = {}) => cell(s, w, { size: 20, align: AlignmentType.LEFT, h: 70, ...o });
 
 /* ---------- Title ---------- */
-G.push(p(t('PRIMARY 6 HOLIDAY PROGRAM', { bold: true, size: 22, color: '666666' }), { after: 20 }));
+G.push(p(t('LEVEL 6 HOLIDAY PROGRAM', { bold: true, size: 22, color: '666666' }), { after: 20 }));
 G.push(p(t(PROG, { bold: true, size: 52 }), { after: 40 }));
 G.push(p(t(SLOGAN, { italics: true, size: 30, color: '1F3864' }), { after: 120 }));
 G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.'));
@@ -212,5 +212,5 @@ G.push(h2('Practical details'));
 G.push(tbl([2500, 7400], [['Dates', '[start date] to [end date], two lessons a week'], ['Time', '[day] and [day], [start time] to [end time]'], ['Where', 'Live online video class (link sent after registration)'], ['Group size', '[number] children'], ['Fee', 'S$500 introductory (regular S$650), workbook included, payable in 3 instalments'], ['Contact', '[name, phone or email]']].map(r => row([cell(r[0], 2500, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 80 }), c2(r[1], 7400, { h: 80 })]))));
 G.push(p(t('Math Inquirers Holiday Program is an independent enrichment program. It is inspired by thinking-skills enrichment ideas but is not affiliated with, run by or endorsed by the Ministry of Education or any school.', { size: 18, italics: true, color: '666666' }), { before: 200, after: 0 }));
 
-const doc = new D.Document({ styles: { default: { document: { run: { font: 'Arial', size: S } } } }, sections: [{ properties: { page }, footers: { default: footer(PROG + ' P6 • Program guide') }, children: G }] });
-D.Packer.toBuffer(doc).then(b => { fs.writeFileSync('P6_Holiday_Program_Guide.docx', b); console.log('guide built'); });
+const doc = new D.Document({ styles: { default: { document: { run: { font: 'Arial', size: S } } } }, sections: [{ properties: { page }, footers: { default: footer(PROG + ' Level 6 • Program guide') }, children: G }] });
+D.Packer.toBuffer(doc).then(b => { fs.writeFileSync('Math_Inquirers_Level6_Holiday_Program_Guide.docx', b); console.log('guide built'); });

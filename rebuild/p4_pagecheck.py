@@ -3,7 +3,7 @@ before its Investigation + Looking back page. Usage: python3 rebuild/p4_pagechec
 Exit code 1 if a lesson spills onto a third core page, or page 1 / page 2 notes are not where expected."""
 import sys, re
 from pypdf import PdfReader
-f = sys.argv[1] if len(sys.argv) > 1 else '/home/claude/math-inquirers/p4/Math_Inquirers_P4_Student_Workbook_Designed.pdf'
+f = sys.argv[1] if len(sys.argv) > 1 else '/home/claude/math-inquirers/p4/Math_Inquirers_Level4_Student_Workbook_Designed.pdf'
 r = PdfReader(f)
 txt = [(p.extract_text() or '') for p in r.pages]
 start = {}; look = {}

@@ -11,7 +11,7 @@ const aline = (tag, text) => p([t(tag, { bold: true, size: 20 }), new TextRun({ 
 const tiers = [['core', 'C', 'CORE (low floor: start with objects, drawing or counting)'], ['stretch', 'S', 'THINK HARDER (use this lesson\'s idea in a new setting)'], ['challenge', 'G', 'CHALLENGE (after the topic: extend, justify, make up your own)']];
 const W = [];
 W.push(p(t(PROG.toUpperCase(), { bold: true, size: 40 }), { align: AlignmentType.CENTER, before: 200, after: 60 }));
-W.push(p(t('Question Bank  •  Primary 1', { bold: true, size: 32 }), { align: AlignmentType.CENTER, after: 60 }));
+W.push(p(t('Question Bank  •  Level 1', { bold: true, size: 32 }), { align: AlignmentType.CENTER, after: 60 }));
 W.push(p(t(SLOGAN, { italics: true, size: 28, color: '1F3864' }), { align: AlignmentType.CENTER, after: 240 }));
 W.push(banner('How to use this bank'));
 [
@@ -43,4 +43,4 @@ L.lessons.forEach(l => {
   });
 });
 const doc = new D.Document({ styles: { default: { document: { run: { font: 'Arial', size: 24 } } } }, sections: [{ properties: { page }, footers: { default: footer(PROG + '  •  Question Bank') }, children: W }] });
-D.Packer.toBuffer(doc).then(b => { fs.writeFileSync(__dirname + '/Math_Inquirers_P1_Question_Bank.docx', b); console.log('qbank built'); });
+D.Packer.toBuffer(doc).then(b => { fs.writeFileSync(__dirname + '/Math_Inquirers_Level1_Question_Bank.docx', b); console.log('qbank built'); });

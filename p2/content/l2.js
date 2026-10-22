@@ -1,4 +1,4 @@
-// Math Inquirers P2 Holiday Program — Lesson 2: Missing Digit Mysteries (Addition and subtraction within 1000)
+// Math Inquirers Level 2 Holiday Program — Lesson 2: Missing Digit Mysteries (Addition and subtraction within 1000)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const T = (x, y, s, size = 30, fill = N, anchor = 'middle', weight = 700) =>

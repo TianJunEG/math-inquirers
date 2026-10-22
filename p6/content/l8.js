@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 8: Secret Codes (clock / modular arithmetic; lists, letters and mod)
+// Math Inquirers Level 6 — Lesson 8: Secret Codes (clock / modular arithmetic; lists, letters and mod)
 // Every answer below was worked out and checked by computer: letter numbers A = 0 … Z = 25,
 // code number = (letter number + shift) mod 26; clock and calendar answers use mod 12 and mod 7. The Python program was run.
 

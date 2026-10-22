@@ -1,5 +1,5 @@
 # Weekly Dose of Thinking Math: the parent practice pack, parent edition style (B, "Magazine"; see parent_style.css). Built from qbank.json and lessons.js.
-# Level version: run in hp/:  python3 parent_pack_level.py p2   ->  ../p2/Math_Inquirers_P2_Weekly_Dose_of_Thinking_Math.pdf
+# Level version: run in hp/:  python3 parent_pack_level.py p2   ->  ../p2/Math_Inquirers_Level2_Weekly_Dose_of_Thinking_Math.pdf
 # Needs ../pN/data.js and ../pN/parent_side.json ({"1":[learns, tip, ask], ...}).
 import json, html, os, subprocess, sys
 from playwright.sync_api import sync_playwright
@@ -9,7 +9,7 @@ data = json.loads(subprocess.run(['node', '-e', "const L=require(process.argv[1]
                                  capture_output=True, text=True, check=True).stdout)
 Q = data['q']; info = data['info']
 REAL = ('Paper, a pencil and, for coding lessons, a computer with Scratch (free at scratch.mit.edu). Let your child show you the program and explain what each block does.' if NUM == '6' else 'Coins, notes, cups, string, paper strips or blocks. Try it with objects or a drawing before writing.')
-LEVELNAME = 'Maths and coding bridge' if NUM == '6' else 'Primary ' + NUM
+LEVELNAME = 'Level 6: Maths and coding bridge' if NUM == '6' else 'Level ' + NUM
 PICK = {'core': 4, 'stretch': 3, 'challenge': 2}
 LEVEL = {'core': 'Start here', 'stretch': 'Think harder', 'challenge': 'Go further'}
 # per lesson: what your child learns, a tip for the parent, a question to ask
@@ -24,7 +24,7 @@ shapes = ('<svg viewBox="0 0 680 210" width="100%" aria-label="Shapes">'
           '<g transform="translate(420,90) rotate(8)"><rect x="-70" y="-34" width="140" height="68" fill="#DDEBF7" stroke="#1B2A49" stroke-width="4"/></g>'
           '<polygon points="600,30 655,90 600,150 545,90" fill="#D64545" stroke="#1B2A49" stroke-width="4"/></svg>')
 B = []
-B.append(f'''<div class="cover"><div class="kick">For parents  •  {'Primary 6, after the PSLE' if NUM == '6' else 'Primary ' + NUM + ' holiday program'}</div>
+B.append(f'''<div class="cover"><div class="kick">For parents  •  {'Level 6, after the PSLE' if NUM == '6' else 'Level ' + NUM + ' holiday program'}</div>
 <div class="ctitle">Weekly Dose of<br><span>Thinking Math</span></div>
 <div class="lede">One dose a week for five weeks: short sets of questions for every Math Inquirers lesson, a tip for you, and the answers at the back.</div>
 <div class="rule"></div>{shapes}
@@ -69,7 +69,7 @@ foot = f'<div style="width:100%;font-size:9px;color:#5B6785;padding:0 16mm;displ
 with sync_playwright() as p:
     br = p.chromium.launch(); pg = br.new_page()
     pg.goto('file://' + HT, wait_until='networkidle'); pg.wait_for_timeout(800)
-    pg.pdf(path=os.path.join(D, f'Math_Inquirers_P{NUM}_Weekly_Dose_of_Thinking_Math.pdf'), format='A4', print_background=True, display_header_footer=True,
+    pg.pdf(path=os.path.join(D, f'Math_Inquirers_Level{NUM}_Weekly_Dose_of_Thinking_Math.pdf'), format='A4', print_background=True, display_header_footer=True,
            header_template='<div></div>', footer_template=foot, margin={'top': '16mm', 'bottom': '18mm', 'left': '16mm', 'right': '16mm'})
     br.close()
 os.remove(HT)

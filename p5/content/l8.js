@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 8: Angle Chasers (angles on a line and at a point, vertically opposite, triangles, parallelogram, rhombus, trapezium)
+// Math Inquirers Level 5 — Lesson 8: Angle Chasers (angles on a line and at a point, vertically opposite, triangles, parallelogram, rhombus, trapezium)
 // Every figure is built from coordinates and every stated angle is checked by chk() (it throws if the drawing disagrees).
 // Every answer was worked out and checked.
 

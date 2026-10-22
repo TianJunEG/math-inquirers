@@ -1,9 +1,9 @@
-"""Math Inquirers P6, Lesson 6: Fair or Unfair?. Writes split/p6l6/project (deck.json + slides/*.html).
+"""Math Inquirers Level 6, Lesson 6: Fair or Unfair?. Writes split/p6l6/project (deck.json + slides/*.html).
 Content strings (warm-up questions, explore, key idea, question bank, exit) are read from p6/content/l6.js so the deck matches the workbook."""
 import json, os, sys, re, subprocess, math, datetime
 H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 import slidekit
-slidekit.FOOT = 'Math Inquirers P6  •  Notice it. Test it. Explain why.'
+slidekit.FOOT = 'Math Inquirers Level 6  •  Notice it. Test it. Explain why.'
 from slidekit import *
 N = 6; PRE = f'p6l{N}'
 D = os.path.join(H, '..', 'split', PRE, 'project'); os.makedirs(os.path.join(D, 'slides'), exist_ok=True)
@@ -348,7 +348,7 @@ for f in os.listdir(os.path.join(D, 'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D, 'slides', f))
 for sid, h in S.items(): open(os.path.join(D, 'slides', sid + '.html'), 'w').write(h)
 deck = {'v': 4, 'createdOnFiles': {'v': 1, 'at': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}, 'lists': 'css',
-        'title': f'Math Inquirers P6: Lesson {N} – {L["title"]}', 'order': order, 'cover': order[0],
+        'title': f'Math Inquirers Level 6: Lesson {N} – {L["title"]}', 'order': order, 'cover': order[0],
         'sections': {'s1': {'description': 'Warm-up and explore', 'start': f'{PRE}-title'}, 's2': {'description': 'Teach: probability as a fraction, two dice, 1000 games in code', 'start': f'{PRE}-teach1'},
                      's3': {'description': 'Worksheet with teaching before each page', 'start': f'{PRE}-break'}, 's4': {'description': 'Stretch, challenge, talk and exit', 'start': f'{PRE}-stretch'}},
         'faces': {'fredoka': {'family': 'Fredoka', 'href': 'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'}, 'nunito-sans': {'family': 'Nunito Sans', 'href': 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},

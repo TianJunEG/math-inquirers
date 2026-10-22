@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 6: Rate Racers (rate per unit, better buys, taps and printers, charges, comparing plans)
+// Math Inquirers Level 5 — Lesson 6: Rate Racers (rate per unit, better buys, taps and printers, charges, comparing plans)
 // Every answer below was worked out with exact fractions; the "fewest cost" answers were checked against every possible mix of packs.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF', CREAM = '#FFF9EC';

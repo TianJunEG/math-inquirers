@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 8: Symmetry and Nets
+// Math Inquirers Level 4 Holiday Program — Lesson 8: Symmetry and Nets
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 

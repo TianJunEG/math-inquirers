@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 7: Turtle Geometry (angles in polygons; pen drawing with turns)
+// Math Inquirers Level 6 — Lesson 7: Turtle Geometry (angles in polygons; pen drawing with turns)
 // Every answer below was worked out and checked: turn = 360 ÷ sides, inside = 180 − turn,
 // star turn = 360 × times round ÷ points, angle sum = (sides − 2) × 180. The Python program was run.
 

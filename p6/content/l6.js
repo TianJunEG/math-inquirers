@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 6: Fair or Unfair? (probability as a fraction; random numbers; running a game 1000 times)
+// Math Inquirers Level 6 — Lesson 6: Fair or Unfair? (probability as a fraction; random numbers; running a game 1000 times)
 // Every probability below was computed exactly with fractions by listing all equally likely outcomes, and sanity-checked by simulation.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

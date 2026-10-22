@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 1: Factor Hunters (Factors and multiples)
+// Math Inquirers Level 4 Holiday Program — Lesson 1: Factor Hunters (Factors and multiples)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>

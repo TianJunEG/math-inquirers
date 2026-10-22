@@ -1,4 +1,4 @@
-// Math Inquirers P3 — Lesson 6: Fraction Walls (Fractions)
+// Math Inquirers Level 3 — Lesson 6: Fraction Walls (Fractions)
 // Heuristics taught: draw a model (fraction wall / bar) and make the parts the same size (equivalent fractions).
 // Every drawing below cuts a whole into EXACTLY equal parts (widths, angles or grid squares computed from the whole).
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF';

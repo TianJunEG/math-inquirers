@@ -1,10 +1,10 @@
 # Weekly PDFs: student pages (from the designed workbook) and tutor scripts (from the designed tutor guide).
-# Run in hp/ after the workbook and guide are rebuilt:  python3 weekly.py  ->  ../outputs/designed/Math_Inquirers_Weekly_PDFs.zip
+# Run in hp/ after the workbook and guide are rebuilt:  python3 weekly.py  ->  ../outputs/designed/Math_Inquirers_Level1_Weekly_PDFs.zip
 import re, subprocess, zipfile, os, tempfile
 from pypdf import PdfReader, PdfWriter
-WB = '../outputs/workbook/Math_Inquirers_P1_Student_Workbook_Designed.pdf'
-TG = '../outputs/designed/Math_Inquirers_P1_Tutor_Guide.pdf'
-OUT = '../outputs/designed/Math_Inquirers_Weekly_PDFs.zip'
+WB = '../outputs/workbook/Math_Inquirers_Level1_Student_Workbook_Designed.pdf'
+TG = '../outputs/designed/Math_Inquirers_Level1_Tutor_Guide.pdf'
+OUT = '../outputs/designed/Math_Inquirers_Level1_Weekly_PDFs.zip'
 
 def texts(path):
     n = len(PdfReader(path).pages)

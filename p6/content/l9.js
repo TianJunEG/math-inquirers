@@ -1,4 +1,4 @@
-// Math Inquirers P6 (post-PSLE maths + coding bridge) — Lesson 9: Data Detectives (averages and data; lists, adding up, mean)
+// Math Inquirers Level 6 (post-PSLE maths + coding bridge) — Lesson 9: Data Detectives (averages and data; lists, adding up, mean)
 // Every answer below was worked out by hand and checked (means computed exactly; Python programs run).
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

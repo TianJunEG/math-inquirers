@@ -55,7 +55,7 @@ C.forEach(c => { const n = c.lesson.n, g = GAPS[n];
 module.exports = {
   choiceAfter, stuckTick, stuckPlan, stories: STORIES,
   program: 'Math Inquirers Holiday Program',
-  level: 'Primary 5',
+  level: 'Level 5',
   slogan: 'Notice it. Test it. Explain why.',
   timeline: TIMELINE,
   content: C,

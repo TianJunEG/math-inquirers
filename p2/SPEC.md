@@ -1,7 +1,7 @@
-# Math Inquirers P2 Holiday Program — content spec
+# Math Inquirers Level 2 Holiday Program — content spec
 
 **Who:** children finishing Primary 2 (going into P3 in 2027), age 8. Online-first, live video, groups of up to 8.
-**Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
+**Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the Level 1 program.
 **Approach:** enrichment, non-routine puzzles, tagged to the P2 syllabus. Slogan: "Notice it. Test it. Explain why."
 
 ## The 10 lessons
@@ -18,7 +18,7 @@
 | 9 | 5A | Measure Masters | Length, mass, volume, time | balance-scale puzzles, pouring (jug) puzzles, ribbons end to end, time to 5 minutes and durations |
 | 10 | 5B | Challenge Day | Mixed (incl. picture graphs with scales, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; picture graph with a key |
 
-## P2 level rules
+## Level 2 rules
 - Children know: numbers to 1000; + and − within 1000; × and ÷ facts of the 2, 3, 4, 5 and 10 tables (so × and ÷ ARE allowed, within those tables); fractions with denominators up to 12, comparing unit and like fractions, adding/subtracting like fractions within one whole; money in dollars and cents ($2.35); m, cm, kg, g, ℓ; time to 5 minutes, a.m./p.m.; picture graphs with a key; semicircle, quarter circle; cube, cuboid, cone, cylinder.
 - Do NOT use: the 6, 7, 8, 9 tables; long multiplication or long division; decimals other than money; negative numbers; numbers above 1000.
 - Every answer must be worked out and checked; puzzles with "find all" must list every case; logic puzzles must have exactly one solution.
@@ -43,7 +43,7 @@ module.exports = {
 };
 ```
    Workbook helpers `H` (same as hp/common_html.js): `H.q(n, text, {pb, before, keepNext})`, `H.sub(letter, text)`, `H.ans(label?)`, `H.lines(n)` (array — spread it), `H.p(text, {after})`, `H.tbl(widths, rows)`, `H.row(cells)`, `H.cell(text, width, {bold, fill:'D9D9D9'|'EDEDED', h})`, `H.gap(n)`, and `H.fig(svgString)` for an inline SVG drawing (viewBox width about 600, navy #1B2A49 lines, fills from #FFC93C #DDEBF7 #1F7A6F #D64545 #FFFFFF, Arial/Fredoka text ≥ 14px). Start page 2 with `{pb:true, before:0}` on its first question. Widths for tbl sum to 9900. Look at hp/workbook_html.js (lessons 6 and 9) for the style of questions and how answer lines are given.
-2. `rebuild/gen_p2lN.py` writing the slide deck to `split/p2lN/project/` (deck.json + slides/*.html), built with `rebuild/slidekit.py` exactly like the approved P1 generators `rebuild/gen_l2.py`, `gen_l5.py`, `gen_l6.py` (read them). Slide ids `p2lN-…`. deck.json: copy the shape of `split/l6/project/deck.json` (v, createdOnFiles, lists, title "Math Inquirers P2: Lesson N – <Title>", order, cover, sections, faces, designSystems []). About 24–27 slides: title (notes: objective, materials, online set-up, time plan), warm1 (game), warm2 (quick questions, click answers), explore1 (what to do, with a small SVG picture), explore2 (talk about it), teach + worked examples (steps revealed on click) + "your turn" slides, key idea (mistakes in notes only), break, ws1 preview, ws1ans (check together), short teach-before slides for page-2 question types, ws2 preview, ws2ans, stretch (3 NEW items with answers in notes), challenge (2 items), chdiag (an SVG "see it" diagram of the two challenge items, no answers), chwalk (walk-through), talk, exit. Timings follow the 90-minute routine (title notes give the plan).
+2. `rebuild/gen_p2lN.py` writing the slide deck to `split/p2lN/project/` (deck.json + slides/*.html), built with `rebuild/slidekit.py` exactly like the approved P1 generators `rebuild/gen_l2.py`, `gen_l5.py`, `gen_l6.py` (read them). Slide ids `p2lN-…`. deck.json: copy the shape of `split/l6/project/deck.json` (v, createdOnFiles, lists, title "Math Inquirers Level 2: Lesson N – <Title>", order, cover, sections, faces, designSystems []). About 24–27 slides: title (notes: objective, materials, online set-up, time plan), warm1 (game), warm2 (quick questions, click answers), explore1 (what to do, with a small SVG picture), explore2 (talk about it), teach + worked examples (steps revealed on click) + "your turn" slides, key idea (mistakes in notes only), break, ws1 preview, ws1ans (check together), short teach-before slides for page-2 question types, ws2 preview, ws2ans, stretch (3 NEW items with answers in notes), challenge (2 items), chdiag (an SVG "see it" diagram of the two challenge items, no answers), chwalk (walk-through), talk, exit. Timings follow the 90-minute routine (title notes give the plan).
    Slide rules: 1920×1080, one `<section>` per file, inline styles only, padding 128px, footer at bottom:64px, nothing below y 920 except the footer, ≤ 200 elements, no font under 24px, pinned (position:absolute) children only for build-in reveals and fixed layout; notes in one `<aside>` last (≤ 4000 chars). SVGs get an aria-label. Never use the ✗ character (it looks like ×); write "not this one" instead.
 3. Render with `python3 rebuild/preview.py split/p2lN/project <outdir>` (outdir under the scratchpad), fix OVERFLOW and visible overlaps once.
 

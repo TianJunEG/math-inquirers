@@ -1,4 +1,4 @@
-// Math Inquirers P6 Post-PSLE Program — Lesson 1: Code the Pattern (sequences and the nth term; loops and a variable)
+// Math Inquirers Level 6 Post-PSLE Program — Lesson 1: Code the Pattern (sequences and the nth term; loops and a variable)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -117,7 +117,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Math Inquirers P6! The PSLE is done, so there is no exam today: just puzzles, patterns and code.', 'Every lesson we notice a pattern, test it in code, and explain why. Today’s question: how can you find the 100th number in a pattern without writing out all 100?'],
+    hook: ['Welcome to Math Inquirers Level 6! The PSLE is done, so there is no exam today: just puzzles, patterns and code.', 'Every lesson we notice a pattern, test it in code, and explain why. Today’s question: how can you find the 100th number in a pattern without writing out all 100?'],
     warmIntro: ['Pairs. I will show a sequence card. Take your time and type the next two terms in the chat. If you spot the rule, say it. There is no race and there are no points.', 'Careful: not every card adds the same amount each time.'],
     predict: ['Pattern 1 is a triangle made of 3 matchsticks. Each new pattern adds one more triangle in the row. Before you build anything: how many sticks will pattern 100 need? Write your guess in the corner of your whiteboard.'],
     exploreHints: ['Stuck building: lay the triangles point up, point down, point up, so each new triangle shares a stick.', 'Stuck on pattern 100: “How many sticks does each new triangle add? How many new triangles come after the first one?”', 'Finished early: in Scratch, set sticks to 3, repeat 9, change sticks by 2, say sticks. Does it match your pattern 10? Now change it to reach pattern 100.'],

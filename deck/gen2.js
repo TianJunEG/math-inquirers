@@ -19,7 +19,7 @@ const numbered = (items, size = 38) => items.map((q, i) => card(`<p style="font-
 const w = (id, s) => fs.writeFileSync(out + id + '.html', s);
 
 // shared slides
-w('cover', dark('cover', `<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:#FFC93C">PRIMARY 1 HOLIDAY PROGRAM</p>
+w('cover', dark('cover', `<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:#FFC93C">LEVEL 1 HOLIDAY PROGRAM</p>
 <h1 style="font-family:'Fredoka', Arial, sans-serif;font-size:140px;font-weight:600;line-height:1.05">Math Inquirers</h1>
 <p style="font-family:'Fredoka', Arial, sans-serif;font-size:64px;font-weight:500;color:#FFC93C">${SLOGAN}</p>
 <p style="font-size:36px;color:#C9D4EC">10 lessons  •  90 minutes each  •  Face to face or online</p>`, 'Welcome the children by name. Tell them they are inquirers for the next five weeks: they notice patterns, test ideas with real things and explain their thinking. They collect a stamp in their inquiry journal after every lesson.').replace(`<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">${FOOT}</p>\n`, ''));
@@ -91,7 +91,7 @@ ${foot('#D7EFEA')}
 order.push('end');
 sections.s11 = { description: 'Wrap-up and certificates.', start: 'end' };
 const deck = JSON.parse(fs.readFileSync(__dirname + '/project/deck.json', 'utf8'));
-deck.order = order; deck.sections = sections; deck.title = 'Math Inquirers Holiday Program: Primary 1 Lesson Slides';
+deck.order = order; deck.sections = sections; deck.title = 'Math Inquirers Holiday Program: Level 1 Lesson Slides';
 fs.writeFileSync(__dirname + '/project/deck.json', JSON.stringify(deck, null, 2));
 fs.writeFileSync(__dirname + '/stale.json', JSON.stringify(stale));
 console.log(order.length, 'slides');

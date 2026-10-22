@@ -1,4 +1,4 @@
-"""Math Inquirers P5, Lesson 6: Rate Racers. Writes split/p5l6/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 5, Lesson 6: Rate Racers. Writes split/p5l6/project (deck.json + slides/*.html)."""
 import os,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from p5l56_common import *
@@ -153,6 +153,6 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Tap A fills 15 ℓ a minute a
 put('exit',sec(sid('exit'),'82–90 MIN',body,'Minutes 82 to 90. Answers: 8 minutes (15 + 10 = 25 ℓ a minute; 200 / 25 = 8). With the crack, 10 minutes (25 - 5 = 20 ℓ a minute; 200 / 20 = 10). Extension: make a better-buy poster of three pack sizes where the biggest pack is NOT the best buy. Swap with a partner.'))
 
 order=[sid(x) for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teachfree','we2','try2','key','break','ws1','ws1ans','teachpark','teachplans','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
-finish(P,S,order,'Math Inquirers P5: Lesson 6 – Rate Racers',{'s1':{'description':'Warm-up and explore','start':sid('title')},'s2':{'description':'Teach: the rate for 1, better buys, taps together','start':sid('teach1')},'s3':{'description':'Worksheet with teaching before each page','start':sid('break')},'s4':{'description':'Think harder, Go further, talk and exit','start':sid('stretch')}},D)
+finish(P,S,order,'Math Inquirers Level 5: Lesson 6 – Rate Racers',{'s1':{'description':'Warm-up and explore','start':sid('title')},'s2':{'description':'Teach: the rate for 1, better buys, taps together','start':sid('teach1')},'s3':{'description':'Worksheet with teaching before each page','start':sid('break')},'s4':{'description':'Think harder, Go further, talk and exit','start':sid('stretch')}},D)
 
 import p5_gaps; p5_gaps.apply(6)

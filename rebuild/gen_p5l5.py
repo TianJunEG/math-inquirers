@@ -1,4 +1,4 @@
-"""Math Inquirers P5, Lesson 5: Volume Vault. Writes split/p5l5/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 5, Lesson 5: Volume Vault. Writes split/p5l5/project (deck.json + slides/*.html)."""
 import os,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from p5l56_common import *
@@ -154,6 +154,6 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A tank has a base 30 cm by 25
 put('exit',sec(sid('exit'),'82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 1500 cm3 (30 x 25 x 2). (b) 6 litres (30 x 25 x 8 = 6000 cm3). Extension: find every cuboid with whole-number edges and a volume of 60 cm3 (there are 10, from 1 x 1 x 60 to 3 x 4 x 5). Which one is most like a cube? (3 x 4 x 5).'))
 
 order=[sid(x) for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','teachlist','key','break','ws1','ws1ans','teachpaint','teachpour','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
-finish(P,S,order,'Math Inquirers P5: Lesson 5 – Volume Vault',{'s1':{'description':'Warm-up and explore','start':sid('title')},'s2':{'description':'Teach: layers, water in tanks, sinking objects','start':sid('teach1')},'s3':{'description':'Worksheet with teaching before each page','start':sid('break')},'s4':{'description':'Think harder, Go further, talk and exit','start':sid('stretch')}},D)
+finish(P,S,order,'Math Inquirers Level 5: Lesson 5 – Volume Vault',{'s1':{'description':'Warm-up and explore','start':sid('title')},'s2':{'description':'Teach: layers, water in tanks, sinking objects','start':sid('teach1')},'s3':{'description':'Worksheet with teaching before each page','start':sid('break')},'s4':{'description':'Think harder, Go further, talk and exit','start':sid('stretch')}},D)
 
 import p5_gaps; p5_gaps.apply(5)

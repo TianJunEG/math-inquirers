@@ -1,4 +1,4 @@
-"""Math Inquirers P2, Lesson 8: Shape Builders (2D and 3D shapes). Writes split/p2l8/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 8: Shape Builders (2D and 3D shapes). Writes split/p2l8/project (deck.json + slides/*.html)."""
 import json,os,sys,math,re
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -146,7 +146,7 @@ def quarter(cx,cy,r,rot=0,fill=SKY):  # square corner at (cx,cy), curve to the u
     return f'<path transform="rotate({rot} {cx} {cy})" d="M{cx} {cy} L{cx} {cy-r} A{r} {r} 0 0 1 {cx+r} {cy} Z" fill="{fill}" stroke="{NAVY}" stroke-width="4" stroke-linejoin="round"/>'
 
 # 1. title
-put('p2l8-title',title_slide('p2l8-title','P2  •  LESSON 8  •  WEEK 4','Shape Builders','2D and 3D Shapes',
+put('p2l8-title',title_slide('p2l8-title','LEVEL 2  •  LESSON 8  •  WEEK 4','Shape Builders','2D and 3D Shapes',
  'Build shapes from semicircles and quarter circles, count every hidden square, triangle and cube, and find which nets fold into a cube.',
  'Objective: Name and describe semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube and find opposite faces. '
  'Materials: paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook, cut out before the lesson), mini whiteboards. '
@@ -432,7 +432,7 @@ for f in os.listdir(os.path.join(D,'slides')):
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 order=['p2l8-title','p2l8-warm1','p2l8-warm2','p2l8-explore1','p2l8-explore2','p2l8-teach1','p2l8-we1','p2l8-try1','p2l8-we2','p2l8-try2','p2l8-we3','p2l8-key','p2l8-break','p2l8-ws1','p2l8-ws1ans','p2l8-teachcube','p2l8-trycube','p2l8-teachnet','p2l8-trynet','p2l8-ws2','p2l8-ws2ans','p2l8-stretch','p2l8-challenge','p2l8-chdiag','p2l8-chwalk','p2l8-talk','p2l8-exit']
 order=p2gaps.order(order,8)
-deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P2: Lesson 8 – Shape Builders','order':order,'cover':'p2l8-title',
+deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers Level 2: Lesson 8 – Shape Builders','order':order,'cover':'p2l8-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p2l8-title'},'s2':{'description':'Teach: circle pieces, and counting squares and triangles in order','start':'p2l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l8-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l8-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

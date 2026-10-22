@@ -1,4 +1,4 @@
-# Scheme of Work PDF for a level:  python3 levels/scheme.py p2   ->  outputs/schemes/Math_Inquirers_P2_Scheme_of_Work.pdf
+# Scheme of Work PDF for a level:  python3 levels/scheme.py p2   ->  outputs/schemes/Math_Inquirers_Level2_Scheme_of_Work.pdf
 import sys, json, subprocess, os, html
 from playwright.sync_api import sync_playwright
 E = html.escape
@@ -6,7 +6,7 @@ LV = sys.argv[1]; N = LV[1:]; R = os.path.dirname(os.path.dirname(os.path.abspat
 src = os.path.join(R, 'hp/lessons.js') if LV == 'p1' else os.path.join(R, LV, 'data.js')
 js = "const L=require(process.argv[1]);const a=L.lessons;console.log(JSON.stringify(a))"
 ls = json.loads(subprocess.run(['node', '-e', js, src], capture_output=True, text=True, check=True).stdout)
-NAME = {'1': 'Primary 1', '2': 'Primary 2', '3': 'Primary 3', '4': 'Primary 4', '5': 'Primary 5', '6': 'Primary 6 (after the PSLE): Maths and Coding Bridge'}[N]
+NAME = {'1': 'Level 1', '2': 'Level 2', '3': 'Level 3', '4': 'Level 4', '5': 'Level 5', '6': 'Level 6 (after the PSLE): Maths and Coding Bridge'}[N]
 FOR = {'1': 'children whose school year covers Primary 1 topics', '2': 'children whose school year covers Primary 2 topics', '3': 'children whose school year covers Primary 3 topics', '4': 'children whose school year covers Primary 4 topics', '5': 'children whose school year covers Primary 5 topics', '6': 'children who have finished the PSLE'}[N]
 def sk(x): return E(x if isinstance(x, str) else '; '.join(x))
 rows = ''
@@ -36,6 +36,6 @@ hp = os.path.join(out, f'{LV}_scheme.html'); open(hp, 'w').write(f'<!doctype htm
 foot = '<div style="width:100%;font-size:8px;color:#5B6785;padding:0 12mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers ' + NAME.split(' (')[0] + ' Scheme of Work  •  Preciouslyours Pte Ltd</span><span>Page <span class="pageNumber"></span></span></div>'
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page(); pg.goto('file://' + hp, wait_until='networkidle'); pg.wait_for_timeout(500)
-    pg.pdf(path=os.path.join(out, f'Math_Inquirers_P{N}_Scheme_of_Work.pdf'), format='A4', landscape=True, print_background=True, display_header_footer=True, header_template='<div></div>', footer_template=foot, margin={'top': '12mm', 'bottom': '14mm', 'left': '12mm', 'right': '12mm'})
+    pg.pdf(path=os.path.join(out, f'Math_Inquirers_Level{N}_Scheme_of_Work.pdf'), format='A4', landscape=True, print_background=True, display_header_footer=True, header_template='<div></div>', footer_template=foot, margin={'top': '12mm', 'bottom': '14mm', 'left': '12mm', 'right': '12mm'})
     b.close()
 os.remove(hp); print('scheme built', LV)

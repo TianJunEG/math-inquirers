@@ -1,10 +1,10 @@
-"""Math Inquirers P5, Lesson 9: Pattern Generalisers (patterns and number sense). Writes split/p5l9/project (deck.json + slides/*.html).
+"""Math Inquirers Level 5, Lesson 9: Pattern Generalisers (patterns and number sense). Writes split/p5l9/project (deck.json + slides/*.html).
 Growing patterns are drawn from the rule stated on the slide; every answer was checked with a script."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.'
 FOOTX=slidekit.FOOT
 S={}
 def put(i,h): S[i]=h
@@ -238,6 +238,6 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Figure 1 of a pattern has 6 d
 put(P+'exit',sec(P+'exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 82 (dots = 4 × figure number + 2; 4 × 20 + 2 = 82, or 6 + 19 × 4). (b) Figure 25 (102 − 2 = 100, 100 ÷ 4 = 25). Extension: a square grid of matchsticks: 1 by 1 uses 4 sticks, 2 by 2 uses 12. How many for 3 by 3 and 10 by 10? (24 and 220.)'))
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','we1','try2','we2','try3','key','break','ws1','ws1ans','teachgs','teachsup','teachmarks','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
-write_deck(9,'Math Inquirers P5: Lesson 9 – Pattern Generalisers',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: growing patterns and the rule in words','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Think harder, Go further, talk and exit','start':P+'stretch'}},D)
+write_deck(9,'Math Inquirers Level 5: Lesson 9 – Pattern Generalisers',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: growing patterns and the rule in words','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Think harder, Go further, talk and exit','start':P+'stretch'}},D)
 
 import p5_gaps; p5_gaps.apply(9)

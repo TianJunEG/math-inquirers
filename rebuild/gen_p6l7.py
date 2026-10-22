@@ -1,11 +1,11 @@
-"""Math Inquirers P6, Lesson 7: Turtle Geometry. Writes split/p6l7/project (deck.json + slides/*.html).
+"""Math Inquirers Level 6, Lesson 7: Turtle Geometry. Writes split/p6l7/project (deck.json + slides/*.html).
 Text that the tutor guide also reads (today, warm-up, explore, key idea, talk, exit, question bank) comes from p6/content/l7.js.
 Turtle pictures are computed by stepping a turtle (move, turn right) so every polygon and star is geometrically exact."""
 import json, os, sys, math, re, subprocess, datetime
 H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 import slidekit
 from slidekit import *
-slidekit.FOOT = 'Math Inquirers P6  •  Notice it. Test it. Explain why.'
+slidekit.FOOT = 'Math Inquirers Level 6  •  Notice it. Test it. Explain why.'
 ROOT = os.path.join(H, '..')
 D = os.path.join(ROOT, 'split', 'p6l7', 'project'); os.makedirs(os.path.join(D, 'slides'), exist_ok=True)
 C = json.loads(subprocess.check_output(['node', '-e', "const c=require(process.argv[1]);console.log(JSON.stringify({lesson:c.lesson,script:c.script,deck:c.deck,qbank:c.qbank}))", os.path.join(ROOT, 'p6', 'content', 'l7.js')]))
@@ -362,7 +362,7 @@ for f in os.listdir(os.path.join(D, 'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D, 'slides', f))
 for i, h in S.items(): open(os.path.join(D, 'slides', i + '.html'), 'w').write(h)
 deck = {'v': 4, 'createdOnFiles': {'v': 1, 'at': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}, 'lists': 'css',
-        'title': 'Math Inquirers P6: Lesson 7 – Turtle Geometry', 'order': order, 'cover': 'p6l7-title',
+        'title': 'Math Inquirers Level 6: Lesson 7 – Turtle Geometry', 'order': order, 'cover': 'p6l7-title',
         'sections': {'s1': {'description': 'Warm-up and explore at the computer', 'start': 'p6l7-title'}, 's2': {'description': 'Teach: the 360° turn, polygons and stars', 'start': 'p6l7-teach1'},
                      's3': {'description': 'Worksheet with teaching before each page', 'start': 'p6l7-break'}, 's4': {'description': 'Stretch, challenge, talk and exit', 'start': 'p6l7-stretch'}},
         'faces': {'fredoka': {'family': 'Fredoka', 'href': 'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},

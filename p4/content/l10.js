@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 10: Challenge Day (mixed heuristics)
+// Math Inquirers Level 4 Holiday Program — Lesson 10: Challenge Day (mixed heuristics)
 // Every answer below was worked out and checked with a script; each logic puzzle was checked by trying every
 // arrangement, and has exactly one answer. "Find all" questions list every case.
 module.exports = {

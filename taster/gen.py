@@ -72,7 +72,7 @@ def cover_art():
     return SVG(800,440,b,'width:100%')
 RL='<div class="rl">The rule is: ____________________</div>'
 pages=[]
-pages.append(f'''<div class="page"><div class="cover"><div class="kick">Free taster  •  For parents and Primary 1 children</div>
+pages.append(f'''<div class="page"><div class="cover"><div class="kick">Free taster  •  For parents and Level 1 children</div>
 <div class="ctitle">Think Like a<br><span>Mathematician</span></div>
 <div class="lede">Six puzzles to try at home. About 10 minutes each. No shopping needed.</div>
 <div class="rule"></div><div>{cover_art()}</div>

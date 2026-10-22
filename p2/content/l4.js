@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 4: Pattern Machines (patterns with multiplication, tables 2, 3, 4, 5, 10)
+// Math Inquirers Level 2, Lesson 4: Pattern Machines (patterns with multiplication, tables 2, 3, 4, 5, 10)
 // Every answer below was worked out and checked; "find all" answers list every case.
 
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', W = '#FFFFFF';

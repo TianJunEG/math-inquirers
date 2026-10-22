@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 8: Shape Builders (2D and 3D shapes)
+// Math Inquirers Level 2, Lesson 8: Shape Builders (2D and 3D shapes)
 // Counts checked by program: squares in grids, triangles in figures, cubes in stacks, and every net folded by rolling a cube over it.
 
 const N = '#1B2A49', Y = '#FFC93C', SK = '#DDEBF7', TL = '#1F7A6F', W = '#FFFFFF';

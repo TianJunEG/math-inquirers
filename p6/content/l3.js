@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 3: Below Zero (negative numbers; a sprite on a number line; variables below 0)
+// Math Inquirers Level 6 — Lesson 3: Below Zero (negative numbers; a sprite on a number line; variables below 0)
 // Every answer below was worked out and checked (number line jumps, and the code traced by hand and run in Python).
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

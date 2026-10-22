@@ -1,4 +1,4 @@
-// Math Inquirers P4 — Lesson 6: Angle Turns (estimating and measuring angles, finding all the angles in a fan,
+// Math Inquirers Level 4 — Lesson 6: Angle Turns (estimating and measuring angles, finding all the angles in a fan,
 // angles on a clock face, turns on the 8-point compass, angles in squares and rectangles)
 // Every angle in the drawings is drawn to size: coordinates are computed with cos and sin, so a protractor reads true.
 // Every answer below was worked out and checked (compass turns, clock angles and the "find all" items with a short Python script).

@@ -1,4 +1,4 @@
-"""Math Inquirers P2, Lesson 5: Mystery Number Machines. Writes split/p2l5/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 5: Mystery Number Machines. Writes split/p2l5/project (deck.json + slides/*.html)."""
 import json,os,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -11,7 +11,7 @@ def put(i,h): S[i]=h
 # ---------- local helpers (title, game, explore, break, talk, exit, challenge) ----------
 def title_slide(sid,week,title,topic,today,notes):
     return (f'<section id="{sid}" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
-            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">P2  •  LESSON {N}  •  WEEK {week}</p>\n'
+            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LEVEL 2  •  LESSON {N}  •  WEEK {week}</p>\n'
             f'<h1 style="font-family:{HF};font-size:120px;font-weight:600;line-height:1.05">{E(title)}</h1>\n'
             f'<p style="font-size:44px;color:#C9D4EC">{E(topic)}</p>\n'
             f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(today)}</p></div>\n'
@@ -218,7 +218,7 @@ assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
-deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T08:00:00Z'},'lists':'css','title':f'Math Inquirers P2: Lesson {N} – Mystery Number Machines','order':order,'cover':order[0],
+deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T08:00:00Z'},'lists':'css','title':f'Math Inquirers Level 2: Lesson {N} – Mystery Number Machines','order':order,'cover':order[0],
  'sections':{'s1':{'description':'Warm-up and explore','start':f'{P}-title'},'s2':{'description':'Teach: undo it backwards, and before-and-after bars','start':f'{P}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{P}-break'},'s4':{'description':'Think harder, go further, talk and exit','start':f'{P}-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

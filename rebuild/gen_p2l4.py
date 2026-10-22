@@ -1,8 +1,8 @@
-"""Math Inquirers P2, Lesson 4: Pattern Machines. Writes split/p2l4/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 4: Pattern Machines. Writes split/p2l4/project (deck.json + slides/*.html)."""
 import json,os,sys,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
-slidekit.FOOT='Math Inquirers P2 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 2 Holiday Program  •  Notice it. Test it. Explain why.'
 from slidekit import *
 import p2gaps
 RED='#D64545'; BLUE='#4A7FD6'; GREEN='#3DBE7A'; BROWN='#C98A1A'
@@ -69,7 +69,7 @@ def beads(seq,cols,lab='beads',w=1664,h=110,r=44,gap=112,dots=True):
 def cube(x,y,s,col): return f'<rect x="{x}" y="{y}" width="{s}" height="{s}" rx="6" fill="{col}" stroke="{NAVY}" stroke-width="4"/>'
 
 # ---------- 1. title ----------
-put('p2l4-title',title_slide('p2l4-title','P2  •  LESSON 4  •  WEEK 2','Pattern Machines','Patterns with Multiplication','Find far places in a pattern by counting in groups, and find the rule of a growing pattern with a table.',
+put('p2l4-title',title_slide('p2l4-title','LEVEL 2  •  LESSON 4  •  WEEK 2','Pattern Machines','Patterns with Multiplication','Find far places in a pattern by counting in groups, and find the rule of a growing pattern with a table.',
  'Objective: Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it forwards and backwards; find the numbers that two counting patterns share. Tables used: 2, 3, 4, 5 and 10 only. '
  'Thinking strategies taught today: LOOK FOR A PATTERN (group size, where groups end) and MAKE A TABLE / MAKE A LIST (growing patterns, two counting lists). '
  'Materials: Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters. '
@@ -215,7 +215,7 @@ if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides
 os.makedirs(os.path.join(D,'slides'))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P2: Lesson 4 – Pattern Machines','order':ORDER,'cover':'p2l4-title',
+      'title':'Math Inquirers Level 2: Lesson 4 – Pattern Machines','order':ORDER,'cover':'p2l4-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p2l4-title'},'s2':{'description':'Teach: far places by counting in groups','start':'p2l4-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l4-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l4-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}

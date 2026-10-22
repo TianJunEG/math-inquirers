@@ -1,4 +1,4 @@
-"""Math Inquirers P5, Lesson 3: Before and After. Writes split/p5l3/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 5, Lesson 3: Before and After. Writes split/p5l3/project (deck.json + slides/*.html)."""
 from p5l34_common import *
 L='p5l3'; S={}
 def put(i,h): S[f'{L}-{i}']=h
@@ -153,6 +153,6 @@ put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['e
 
 order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','key','break','ws1','ws1ans','teachdiff','trydiff','teachone','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 sections={'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: fraction of a remainder and the total that stays the same','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Think harder, Go further, talk and exit','start':f'{L}-stretch'}}
-write_deck(L,order,sections,S,'Math Inquirers P5: Lesson 3 – Before and After')
+write_deck(L,order,sections,S,'Math Inquirers Level 5: Lesson 3 – Before and After')
 
 import p5_gaps; p5_gaps.apply(3)

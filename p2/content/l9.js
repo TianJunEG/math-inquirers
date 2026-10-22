@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 9: Measure Masters (length, mass, volume, time)
+// Math Inquirers Level 2, Lesson 9: Measure Masters (length, mass, volume, time)
 // Every answer below was worked out and checked (jug pours listed step by step, times counted across the hour).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', W = '#FFFFFF';
 const F = 'font-family="Arial, sans-serif"';

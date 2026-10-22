@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 4: Model Makers (word problems with bar models)
+// Math Inquirers Level 3, Lesson 4: Model Makers (word problems with bar models)
 // Heuristics taught: draw a model; before and after (look for what stays the same).
 
 // ---------- bar-model SVG helpers for the workbook (viewBox 600 wide) ----------

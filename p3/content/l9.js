@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 9: Measure and Money Masters (length, mass, volume, money, time)
+// Math Inquirers Level 3, Lesson 9: Measure and Money Masters (length, mass, volume, money, time)
 module.exports = {
   lesson: {
     n: 9, week: 5, session: 'A', title: 'Measure and Money Masters', topic: 'Length, mass, volume, money and time',

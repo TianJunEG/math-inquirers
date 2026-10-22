@@ -33,7 +33,7 @@ h1{font:600 38px Fredoka;margin:2px 0 0;color:#1B2A49}
 .sl{font-weight:800;color:#1F7A6F}
 .bl{border-bottom:2px solid #1B2A49}
 .cover{background:#fff;background-image:linear-gradient(#E6EEF7 1px,transparent 1px),linear-gradient(90deg,#E6EEF7 1px,transparent 1px);background-size:22px 22px}
-''',cover='''<div style="margin-top:120px"><div style="display:inline-block;background:#1F7A6F;color:#fff;font:800 14px 'Nunito Sans';letter-spacing:.1em;padding:8px 14px">PRIMARY 1 · HOLIDAY PROGRAM</div>
+''',cover='''<div style="margin-top:120px"><div style="display:inline-block;background:#1F7A6F;color:#fff;font:800 14px 'Nunito Sans';letter-spacing:.1em;padding:8px 14px">LEVEL 1 · HOLIDAY PROGRAM</div>
 <h1 style="font:600 96px/0.95 Fredoka;margin:22px 0 0">Math<br><span style="background:linear-gradient(transparent 55%,#FFC93C 55%)">Inquirers</span></h1>
 <p style="font:600 28px Fredoka;color:#1F7A6F;margin:18px 0 0">Notice it. Test it. Explain why.</p></div>
 <svg viewBox="0 0 680 300" width="100%" style="margin-top:60px">'''+''.join(f'<rect x="{40+i*66}" y="{200-h}" width="50" height="{h}" fill="{c}" stroke="#1B2A49" stroke-width="3"/>' for i,(h,c) in enumerate([(40,'#FFC93C'),(70,'#7CC8F5'),(100,'#3DBE7A'),(130,'#FF7A59'),(160,'#FFC93C'),(190,'#7CC8F5'),(160,'#3DBE7A'),(130,'#FF7A59'),(100,'#FFC93C')]))+'''<line x1="20" y1="202" x2="660" y2="202" stroke="#1B2A49" stroke-width="3"/></svg>
@@ -68,7 +68,7 @@ h1{font:600 40px Fredoka;margin:4px 0 0;color:#1B2A49}
 .bl{border-bottom:1.5px solid #1B2A49}
 .cover{background:#fff}
 ''',cover='''<div style="height:26px;background:#FFC93C;margin:-56px -56px 0"></div><div style="margin-top:150px;border-left:8px solid #1F7A6F;padding-left:26px">
-<div style="font:800 15px 'Nunito Sans';letter-spacing:.12em;color:#1F7A6F">PRIMARY 1 · HOLIDAY PROGRAM</div><h1 style="font:600 92px/0.95 Fredoka;margin:14px 0 0">Math<br>Inquirers</h1><p style="font:500 26px Fredoka;color:#56637A;margin:16px 0 0">Notice it. Test it. Explain why.</p></div>
+<div style="font:800 15px 'Nunito Sans';letter-spacing:.12em;color:#1F7A6F">LEVEL 1 · HOLIDAY PROGRAM</div><h1 style="font:600 92px/0.95 Fredoka;margin:14px 0 0">Math<br>Inquirers</h1><p style="font:500 26px Fredoka;color:#56637A;margin:16px 0 0">Notice it. Test it. Explain why.</p></div>
 <svg viewBox="0 0 680 160" width="100%" style="margin-top:110px"><line x1="20" y1="120" x2="660" y2="120" stroke="#1B2A49" stroke-width="3"/>'''+''.join(f'<line x1="{20+i*64}" y1="112" x2="{20+i*64}" y2="128" stroke="#1B2A49" stroke-width="3"/><text x="{20+i*64}" y="152" font-family="Fredoka" font-size="20" text-anchor="middle" fill="#1B2A49">{i*2}</text>' for i in range(11))+''.join(f'<path d="M{20+i*64} 112 Q{52+i*64} 50 {84+i*64} 112" fill="none" stroke="#FF7A59" stroke-width="3" stroke-dasharray="7 6"/>' for i in range(4))+'''</svg>
 <div style="border-top:1.5px solid #1B2A49;margin-top:60px;padding-top:12px;font:700 18px 'Nunito Sans'">Name ________________________________ &emsp; Group __________</div>''',nl=0)
 # ---------- D: Sticker labels ----------
@@ -85,7 +85,7 @@ h1{font:600 44px Fredoka;margin:10px 0 0;color:#1B2A49;text-decoration:underline
 .bl{border:2px dashed #1B2A49;border-radius:6px;height:26px!important;vertical-align:middle;background:#FFFBEF}
 .cover{background:#FFFBEF}
 ''',cover='''<svg viewBox="0 0 680 360" width="100%" style="margin-top:10px">'''+''.join(f'<g transform="translate({x},{y}) rotate({r})"><{t} fill="{c}" stroke="#1B2A49" stroke-width="3"/></g>' for x,y,r,t,c in [(60,60,-10,'rect x="-40" y="-40" width="80" height="80"','#FFC93C'),(250,90,8,'polygon points="0,-50 50,40 -50,40"','#7CC8F5'),(450,60,-6,'rect x="-70" y="-30" width="140" height="60"','#3DBE7A'),(600,170,12,'rect x="-40" y="-40" width="80" height="80"','#FF7A59'),(120,250,6,'polygon points="0,-46 44,34 -44,34"','#FF7A59'),(370,270,-8,'rect x="-60" y="-35" width="120" height="70"','#B9A6F2')])+'''</svg>
-<div style="background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;transform:rotate(-1.5deg);margin-top:10px"><div style="display:inline-block;background:#FFC93C;border:2px solid #1B2A49;font:600 16px Fredoka;padding:2px 12px;transform:rotate(-3deg)">Primary 1 · Holiday Program</div><h1 style="font:600 88px/0.95 Fredoka;margin:14px 0 0">Math Inquirers</h1><p style="font:600 24px Fredoka;color:#1F7A6F;margin:12px 0 0">Notice it. Test it. Explain why.</p></div>
+<div style="background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;transform:rotate(-1.5deg);margin-top:10px"><div style="display:inline-block;background:#FFC93C;border:2px solid #1B2A49;font:600 16px Fredoka;padding:2px 12px;transform:rotate(-3deg)">Level 1 · Holiday Program</div><h1 style="font:600 88px/0.95 Fredoka;margin:14px 0 0">Math Inquirers</h1><p style="font:600 24px Fredoka;color:#1F7A6F;margin:12px 0 0">Notice it. Test it. Explain why.</p></div>
 <div style="border:2px dashed #1B2A49;border-radius:10px;background:#fff;padding:14px 18px;margin-top:60px;font:700 18px 'Nunito Sans'">Name: ______________________________ &emsp; Group: __________</div>''',nl=4)
 
 BASE='''*{box-sizing:border-box}body{margin:0;font-family:'Nunito Sans';color:#1B2A49}

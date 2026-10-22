@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 10: Challenge Day (mixed puzzles: how to start a puzzle)
+// Math Inquirers Level 2, Lesson 10: Challenge Day (mixed puzzles: how to start a puzzle)
 // Every answer below was worked out and checked; the logic grids were checked by a short program for exactly one solution.
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', W = '#FFFFFF';
 const F = 'font-family="Arial, sans-serif"';

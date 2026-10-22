@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 10: Challenge Day (mixed strategies: working backwards, logic, models, listing, supposition)
+// Math Inquirers Level 5 — Lesson 10: Challenge Day (mixed strategies: working backwards, logic, models, listing, supposition)
 // Choose a start and explain it: draw a model, list it in order, make a table, work backwards, guess and check / suppose, use a logic grid.
 // Every answer below was worked out and checked with a short Python script (exhaustive search for every "find all" and every logic puzzle).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';

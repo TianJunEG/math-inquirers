@@ -1,11 +1,11 @@
-"""Math Inquirers P3 – Lesson 8: Angle and Line Detectives. Writes split/p3l8/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 3 – Lesson 8: Angle and Line Detectives. Writes split/p3l8/project (deck.json + slides/*.html)."""
 import json,os,sys,math,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
 D=os.path.join(H,'..','split','p3l8','project'); S={}
 def put(i,h): S[i]=h
 RED='#D64545'; LG='#B9C6DE'; PFX='p3l8-'
-FOOT3='Math Inquirers P3 Holiday Program  •  Notice it. Test it. Explain why.'
+FOOT3='Math Inquirers Level 3 Holiday Program  •  Notice it. Test it. Explain why.'
 
 # ---------- small SVG helpers (navy strokes, yellow/sky fills, Fredoka text) ----------
 def SV(w,h,body,label): return f'<svg aria-label="{E(label)}" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px">{body}</svg>'
@@ -315,7 +315,7 @@ for f in os.listdir(os.path.join(D,'slides')):
     if f.startswith(PFX) and f[:-5] not in order: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P3: Lesson 8 – Angle and Line Detectives','order':order,'cover':PFX+'title',
+      'title':'Math Inquirers Level 3: Lesson 8 – Angle and Line Detectives','order':order,'cover':PFX+'title',
       'sections':{'s1':{'description':'Warm-up and explore','start':PFX+'title'},'s2':{'description':'Teach: count in order, look for a pattern, perpendicular and parallel','start':PFX+'teach1'},
                   's3':{'description':'Worksheet with teaching before page 2','start':PFX+'break'},'s4':{'description':'Think harder, go further, talk and exit','start':PFX+'stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},

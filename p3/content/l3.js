@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 3: Times Table Treasure (tables of 6, 7, 8 and 9)
+// Math Inquirers Level 3, Lesson 3: Times Table Treasure (tables of 6, 7, 8 and 9)
 // Heuristics taught: look for a pattern; make a systematic list (and use facts you know to split an array).
 
 // ---------- small SVG helpers for the workbook (viewBox about 600 wide) ----------

@@ -1,4 +1,4 @@
-// Math Inquirers P6 (post-PSLE maths + coding bridge) — Lesson 10: Showcase Challenge (mixed challenge round, then each child builds and shows a small puzzle program)
+// Math Inquirers Level 6 (post-PSLE maths + coding bridge) — Lesson 10: Showcase Challenge (mixed challenge round, then each child builds and shows a small puzzle program)
 // Every answer below was worked out by hand and checked; every Python program was run.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

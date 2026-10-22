@@ -1,4 +1,4 @@
-"""Math Inquirers P2, Lesson 10: Challenge Day. Writes split/p2l10/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 10: Challenge Day. Writes split/p2l10/project (deck.json + slides/*.html)."""
 import json,os,sys,math,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -12,7 +12,7 @@ def svg(w,h,body,aria,style=''): return f'<svg aria-label="{E(aria)}" viewBox="0
 def T(x,y,s,size=30,fill=NAVY,anchor='middle',weight=800,font='Nunito Sans, Arial'): return f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{fill}" font-family="{font}">{E(str(s))}</text>'
 def title_slide(sid,n,title,sub,today,notes):
     return (f'<section id="{sid}" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
-            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">PRIMARY 2  •  LESSON {n}  •  WEEK 5</p>\n'
+            f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LEVEL 2  •  LESSON {n}  •  WEEK 5</p>\n'
             f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(title)}</h1>\n<p style="font-size:44px;color:#C9D4EC">{E(sub)}</p>\n'
             f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(today)}</p></div>\n'
             f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>\n<aside>{E(notes)}</aside>\n</section>\n')
@@ -283,4 +283,4 @@ put('p2l10-end',(f'<section id="p2l10-end" data-transition="fade" style="backgro
 p2gaps.add(S,10)
 order=['p2l10-title','p2l10-warm1','p2l10-warm2','p2l10-explore1','p2l10-card1','p2l10-card2','p2l10-card3','p2l10-card4','p2l10-explore2','p2l10-teach1','p2l10-we1','p2l10-try1','p2l10-we2','p2l10-try2','p2l10-we3','p2l10-key','p2l10-break','p2l10-teachgraph','p2l10-ws1','p2l10-ws1ans','p2l10-teachlogic','p2l10-teachgrow','p2l10-ws2','p2l10-ws2ans','p2l10-stretch','p2l10-challenge','p2l10-chdiag','p2l10-chwalk','p2l10-talk','p2l10-exit','p2l10-end']
 order=p2gaps.order(order,10)
-write_deck('Math Inquirers P2: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Think harder, go further, talk, exit and certificates','start':'p2l10-stretch'}})
+write_deck('Math Inquirers Level 2: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Think harder, go further, talk, exit and certificates','start':'p2l10-stretch'}})

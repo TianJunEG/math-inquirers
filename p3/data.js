@@ -4,7 +4,7 @@ const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
 module.exports = {
   program: 'Math Inquirers Holiday Program',
-  level: 'Primary 3',
+  level: 'Level 3',
   slogan: 'Notice it. Test it. Explain why.',
   content: C,
   lessons: C.map(c => c.lesson),                                      // like hp/lessons.js .lessons

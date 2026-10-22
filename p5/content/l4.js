@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 4: Triangle Areas (area of a triangle; base and height, heights outside the triangle,
+// Math Inquirers Level 5 — Lesson 4: Triangle Areas (area of a triangle; base and height, heights outside the triangle,
 // same base and same height, triangles in composite figures, shaded-area puzzles).
 // Every figure is drawn to scale from cm coordinates, and every area was checked with exact arithmetic (shoelace formula in Python).
 

@@ -20,9 +20,9 @@ if openb: out.append('</div></div>')
 body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()
 html=f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
 open('workbook_full.html','w').write(html)
-foot='<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.</span><span>Page <span class="pageNumber"></span></span></div>'
+foot='<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.</span><span>Page <span class="pageNumber"></span></span></div>'
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page()
     pg.goto('file://'+__import__('os').path.abspath('workbook_full.html'),wait_until='networkidle');pg.wait_for_timeout(1000)
-    pg.pdf(path='Math_Inquirers_P5_Student_Workbook_Designed.pdf',format='A4',print_background=True,display_header_footer=True,header_template='<div></div>',footer_template=foot,margin={'top':'14mm','bottom':'16mm','left':'14mm','right':'14mm'})
+    pg.pdf(path='Math_Inquirers_Level5_Student_Workbook_Designed.pdf',format='A4',print_background=True,display_header_footer=True,header_template='<div></div>',footer_template=foot,margin={'top':'14mm','bottom':'16mm','left':'14mm','right':'14mm'})
     b.close()

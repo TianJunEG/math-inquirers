@@ -1,4 +1,4 @@
-"""Placement diagnostic PDF. Usage: python3 diag/build_diag.py p3  (reads diag/content/p3.json; writes outputs/diagnostics/Math_Inquirers_P3_Placement_Check.pdf)
+"""Placement diagnostic PDF. Usage: python3 diag/build_diag.py p3  (reads diag/content/p3.json; writes outputs/diagnostics/Math_Inquirers_Level3_Placement_Check.pdf)
 Child sheet (3 pages: warm-up, main+stretch, parent result) plus a separate tutor key PDF."""
 import json,sys,os,html
 from playwright.sync_api import sync_playwright

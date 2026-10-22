@@ -1,4 +1,4 @@
-"""Math Inquirers P2, Lesson 7: Fair Shares (fractions). Writes split/p2l7/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 2, Lesson 7: Fair Shares (fractions). Writes split/p2l7/project (deck.json + slides/*.html)."""
 import json,os,sys,math,re
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -106,7 +106,7 @@ def exit_slide(sid,time,inner,notes):
 
 # =====================================================================
 # 1. title
-put('p2l7-title',title_slide('p2l7-title','P2  •  LESSON 7  •  WEEK 4','Fair Shares','Fractions',
+put('p2l7-title',title_slide('p2l7-title','LEVEL 2  •  LESSON 7  •  WEEK 4','Fair Shares','Fractions',
  'Cut wholes into equal parts, name and compare fractions, and add fractions to share things fairly.',
  'Objective: Recognise equal parts and name fractions (halves, thirds, quarters, up to twelfths); compare unit fractions and like fractions; add and take away like fractions within one whole; solve fair-sharing stories with a bar. '
  'Materials: 4 paper strips of the same length per child (A4 cut lengthwise), paper circles, scissors, crayons, mini whiteboards. '
@@ -390,7 +390,7 @@ for f in os.listdir(os.path.join(D,'slides')):
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 order=['p2l7-title','p2l7-warm1','p2l7-warm2','p2l7-explore1','p2l7-explore2','p2l7-teach1','p2l7-we1','p2l7-try1','p2l7-we2','p2l7-we3','p2l7-try2','p2l7-key','p2l7-break','p2l7-ws1','p2l7-ws1ans','p2l7-teachadd','p2l7-tryadd','p2l7-teachstory','p2l7-teachsame','p2l7-ws2','p2l7-ws2ans','p2l7-stretch','p2l7-challenge','p2l7-chdiag','p2l7-chwalk','p2l7-talk','p2l7-exit']
 order=p2gaps.order(order,7)
-deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P2: Lesson 7 – Fair Shares','order':order,'cover':'p2l7-title',
+deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers Level 2: Lesson 7 – Fair Shares','order':order,'cover':'p2l7-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p2l7-title'},'s2':{'description':'Teach: equal parts, naming and comparing fractions','start':'p2l7-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l7-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l7-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

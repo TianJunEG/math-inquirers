@@ -11,7 +11,7 @@ module.exports = {
   gaps: GAPS,
   stories: STORIES,
   program: 'Math Inquirers Holiday Program',
-  level: 'Primary 2',
+  level: 'Level 2',
   slogan: 'Notice it. Test it. Explain why.',
   content: C,
   lessons: C.map(c => c.lesson),                                      // like hp/lessons.js .lessons

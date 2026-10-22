@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 3: Operation Detectives (Four operations)
+// Math Inquirers Level 4 Holiday Program — Lesson 3: Operation Detectives (Four operations)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF', G = '#EDEDED';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>

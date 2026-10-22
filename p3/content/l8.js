@@ -1,4 +1,4 @@
-// Math Inquirers P3 – Lesson 8: Angle and Line Detectives (Angles, perpendicular and parallel lines)
+// Math Inquirers Level 3 – Lesson 8: Angle and Line Detectives (Angles, perpendicular and parallel lines)
 // Heuristics taught: (1) count in an organised way (visit every corner or meeting point; small angles first); (2) look for a pattern.
 const N = '#1B2A49', Y = '#FFC93C', S = '#DDEBF7', G = '#1F7A6F', W = '#FFFFFF', LG = '#B9C6DE';
 

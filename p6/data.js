@@ -7,7 +7,7 @@ C.forEach((c, i) => { const g = GAPS[String(i + 1)]; c.gaps = g; c.lesson.moved 
 module.exports = {
   gaps: GAPS,
   program: 'Math Inquirers Holiday Program',
-  level: 'Primary 6',
+  level: 'Level 6',
   slogan: 'Notice it. Test it. Explain why.',
   content: C,
   lessons: C.map(c => c.lesson),                                      // like hp/lessons.js .lessons

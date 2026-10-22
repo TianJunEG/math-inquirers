@@ -88,7 +88,7 @@ function spareDollars() {
   return lab2('Two spare $1 coins') + svg(100, b);
 }
 const kit = () => [
-  H('Cut-outs', 'For the P2 program. Cut along the dashed lines and keep the pieces in one envelope.'),
+  H('Cut-outs', 'For the Level 2 program. Cut along the dashed lines and keep the pieces in one envelope.'),
   lab2('Place-value cards (Lessons 1, 2 and 10)'), placeValue(),
   '<div class="brk"></div>', H('Digit cards', 'Two sets of 0 to 9 (Lessons 1 and 10).'), digits(),
   lab2('Fraction strips (Lesson 7)'), fractions(),

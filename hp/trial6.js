@@ -17,7 +17,7 @@ const ask = (rows, a, b) => { G.push(tbl([4600, 5300], [row([hd(a || 'Ask', 4600
 const kv = (rows) => tbl([2200, 7700], rows.map(r => row([cell(r[0], 2200, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 70 }), c2(r[1], 7700)])));
 
 /* ---------- Title ---------- */
-G.push(p(t('TRIAL LESSON  •  60 MINUTES  •  PRIMARY 1', { bold: true, size: 22, color: '666666' }), { after: 20 }));
+G.push(p(t('TRIAL LESSON  •  60 MINUTES  •  LEVEL 1', { bold: true, size: 22, color: '666666' }), { after: 20 }));
 G.push(p(t(PROG, { bold: true, size: 44 }), { after: 40 }));
 G.push(p(t('Lesson 6: Coin Combos', { bold: true, size: 36 }), { after: 40 }));
 G.push(p(t(SLOGAN, { italics: true, size: 28, color: '1F3864' }), { after: 120 }));
@@ -106,7 +106,7 @@ G.push(h2('Pupil voice (ask a few pupils in the last minute)'));
 /* ---------- Student worksheet ---------- */
 const hdr = (title, pb = true) => [
   p([t('Lesson 6', { bold: true, size: 24 })], { align: AlignmentType.RIGHT, after: 60, pb }),
-  tbl([CW], [row([cell(t(PROG.toUpperCase() + '  •  PRIMARY 1', { bold: true, size: 24 }), CW, { fill: 'D9D9D9', h: 100 })]), row([cell(t('MONEY', { bold: true, size: 26 }), CW, { h: 100 })])]),
+  tbl([CW], [row([cell(t(PROG.toUpperCase() + '  •  LEVEL 1', { bold: true, size: 24 }), CW, { fill: 'D9D9D9', h: 100 })]), row([cell(t('MONEY', { bold: true, size: 26 }), CW, { h: 100 })])]),
   p([t('Name: ', { bold: true, size: 24 }), t('______________________   ', { size: 24 }), t('Class: ', { bold: true, size: 24 }), t('_________   ', { size: 24 }), t('Date: ', { bold: true, size: 24 }), t('____________', { size: 24 })], { before: 160, after: 80 }),
   p(t(title, { bold: true, size: 44 }), { align: AlignmentType.CENTER, after: 100, before: 20 })
 ];

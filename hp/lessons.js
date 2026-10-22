@@ -1,4 +1,4 @@
-// Shared content for the Math Inquirers Holiday Program (Primary 1)
+// Shared content for the Math Inquirers Holiday Program (Level 1)
 module.exports = {
   program: 'Math Inquirers Holiday Program',
   slogan: 'Notice it. Test it. Explain why.',

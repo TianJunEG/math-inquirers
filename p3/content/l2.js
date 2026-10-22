@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 2: Cryptarithm Crackers (Addition and subtraction)
+// Math Inquirers Level 3, Lesson 2: Cryptarithm Crackers (Addition and subtraction)
 // Heuristics taught: work backwards (undo with the opposite operation); guess and check (then improve).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', T = '#1F7A6F', R = '#D64545', W = '#FFFFFF';
 const F = 'font-family="Fredoka, Arial"';

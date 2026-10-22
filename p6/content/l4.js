@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 4: Algebra Machines (expressions and simple equations; input, rule, output)
+// Math Inquirers Level 6 — Lesson 4: Algebra Machines (expressions and simple equations; input, rule, output)
 // Every answer below was worked out, checked forwards, and every program was traced by hand and run in Python.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

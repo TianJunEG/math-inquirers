@@ -1,4 +1,4 @@
-// Math Inquirers P6 — Lesson 5: Every Possible Way (counting / combinatorics; nested loops that list every case)
+// Math Inquirers Level 6 — Lesson 5: Every Possible Way (counting / combinatorics; nested loops that list every case)
 // Every counting answer below was enumerated by a program and checked by hand.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';

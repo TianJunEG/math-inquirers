@@ -1,4 +1,4 @@
-// Math Inquirers P6 Post-PSLE Program — Lesson 2: Prime Hunters (primes, factors, prime factorisation; if, mod and a counter)
+// Math Inquirers Level 6 Post-PSLE Program — Lesson 2: Prime Hunters (primes, factors, prime factorisation; if, mod and a counter)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

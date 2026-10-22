@@ -1,4 +1,4 @@
-// Math Inquirers P5 — Lesson 2: Fraction Feats (four operations of fractions, fraction and division)
+// Math Inquirers Level 5 — Lesson 2: Fraction Feats (four operations of fractions, fraction and division)
 // Heuristics: draw a model (bar or pizza); test in order (unit fractions: try 1/2, 1/3, 1/4 … and stop when the first part is too small);
 // find the remainder first, then take the fraction of the remainder; look for a pattern in the sums; test both ways.
 // Every answer below was worked out and checked with Python (fractions module, exact search over all cases).

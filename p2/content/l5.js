@@ -1,4 +1,4 @@
-// Math Inquirers P2 — Lesson 5: Mystery Number Machines (working backwards, two steps, + − × ÷; bar models)
+// Math Inquirers Level 2 — Lesson 5: Mystery Number Machines (working backwards, two steps, + − × ÷; bar models)
 // Every answer below was worked out and checked forwards.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF';

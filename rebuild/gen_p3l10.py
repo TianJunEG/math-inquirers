@@ -1,4 +1,4 @@
-"""Math Inquirers P3, Lesson 10: Challenge Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
+"""Math Inquirers Level 3, Lesson 10: Challenge Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -121,7 +121,7 @@ body=h2('How to start a puzzle')+p('Stuck? Do not just stare. Put the puzzle on 
 for i,(t,ic,use) in enumerate(cards):
     body+=pin(128+i*572,320,480,p(t,44,800,TEAL)+ic+p('Use it for: '+use,30,600),'rise',WHITE,24,'26px 30px')
 body+=pin(128,790,1664,p('A puzzle is hard to hold in your head. On paper you can see it, check it and explain it.',32,700),'fade',SOFT,20,'18px 28px')
-put('p3l10-teach1',sec('p3l10-teach1','25–26 MIN',body,'Teach: the idea and why. "Today mixes everything. Clever inquirers do not know every answer straight away; they know how to START." Click each card and give an example from our P3 lessons: Draw it (bar models in Lesson 4, time lines in Lesson 9). List it (digit puzzles in Lesson 1, budgets in Lesson 9). Make a table (times-table patterns in Lesson 3). Click the last box and read it together. The next slides show each start in action.'))
+put('p3l10-teach1',sec('p3l10-teach1','25–26 MIN',body,'Teach: the idea and why. "Today mixes everything. Clever inquirers do not know every answer straight away; they know how to START." Click each card and give an example from our Level 3 lessons: Draw it (bar models in Lesson 4, time lines in Lesson 9). List it (digit puzzles in Lesson 1, budgets in Lesson 9). Make a table (times-table patterns in Lesson 3). Click the last box and read it together. The next slides show each start in action.'))
 
 # ---------- we1: draw it (queue) ----------
 sp={3:(YEL,'Siti')}
@@ -260,7 +260,7 @@ import p3_stories; order[:]=p3_stories.add(S,order,10)  # mathematician story br
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P3: Lesson 10 – Challenge Day','order':order,'cover':'p3l10-title',
+      'title':'Math Inquirers Level 3: Lesson 10 – Challenge Day','order':order,'cover':'p3l10-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p3l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, make a table, read the scale)','start':'p3l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and close','start':'p3l10-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}

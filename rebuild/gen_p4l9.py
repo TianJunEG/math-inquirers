@@ -1,10 +1,10 @@
-"""Math Inquirers P4, Lesson 9: Data Detectives (tables and line graphs). Writes split/p4l9/project (deck.json + slides/*.html).
+"""Math Inquirers Level 4, Lesson 9: Data Detectives (tables and line graphs). Writes split/p4l9/project (deck.json + slides/*.html).
 Every graph is drawn to scale from the numbers stated on the slide; every answer was checked with a script."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P4 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 4 Holiday Program  •  Notice it. Test it. Explain why.'
 D=os.path.join(H,'..','split','p4l9','project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 S={}
 def put(i,h): S[i]=h
@@ -267,7 +267,7 @@ for f in os.listdir(sd):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(sd,f))
 for i,h in S.items(): open(os.path.join(sd,i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':'Math Inquirers P4: Lesson 9 – Data Detectives','order':order,'cover':'p4l9-title',
+ 'title':'Math Inquirers Level 4: Lesson 9 – Data Detectives','order':order,'cover':'p4l9-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p4l9-title'},'s2':{'description':'Teach: reading line graphs, the biggest change, missing values in tables','start':'p4l9-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p4l9-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p4l9-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

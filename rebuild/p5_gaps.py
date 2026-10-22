@@ -10,7 +10,7 @@ import json,os,re,subprocess,sys
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.'
 ROOT=os.path.join(H,'..')
 RED='#D64545'
 

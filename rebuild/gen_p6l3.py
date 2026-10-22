@@ -1,9 +1,9 @@
-"""Math Inquirers P6, Lesson 3: Below Zero (negative numbers; a sprite on a number line). Writes split/p6l3/project."""
+"""Math Inquirers Level 6, Lesson 3: Below Zero (negative numbers; a sprite on a number line). Writes split/p6l3/project."""
 import json,os,re,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P6  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 6  •  Notice it. Test it. Explain why.'
 RED='#D64545'
 L='p6l3'
 D=os.path.join(H,'..','split',L,'project'); os.makedirs(os.path.join(D,'slides'),exist_ok=True)
@@ -292,7 +292,7 @@ for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':'Math Inquirers P6: Lesson 3 – Below Zero','order':order,'cover':order[0],
+ 'title':'Math Inquirers Level 6: Lesson 3 – Below Zero','order':order,'cover':order[0],
  'sections':{'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: moving along the number line','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':f'{L}-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

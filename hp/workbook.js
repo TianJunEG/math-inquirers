@@ -5,7 +5,7 @@ const PROG = L.program, SLOGAN = L.slogan;
 const W = [];
 const hdr = (n, topic, title, pb = true, tag = 'Start here') => [
   p([t((tag ? tag + '   •   ' : '') + 'Lesson ' + n, { bold: true, size: 24 })], { align: AlignmentType.RIGHT, after: 60, pb }),
-  tbl([CW], [row([cell(t(PROG.toUpperCase() + '  •  PRIMARY 1', { bold: true, size: 24 }), CW, { fill: 'D9D9D9', h: 100 })]), row([cell(t(topic.toUpperCase(), { bold: true, size: 26 }), CW, { h: 100 })])]),
+  tbl([CW], [row([cell(t(PROG.toUpperCase() + '  •  LEVEL 1', { bold: true, size: 24 }), CW, { fill: 'D9D9D9', h: 100 })]), row([cell(t(topic.toUpperCase(), { bold: true, size: 26 }), CW, { h: 100 })])]),
   p([t('Name: ', { bold: true, size: 24 }), t('______________________   ', { size: 24 }), t('Class / Group: ', { bold: true, size: 24 }), t('_________   ', { size: 24 }), t('Date: ', { bold: true, size: 24 }), t('____________', { size: 24 })], { before: 160, after: 120 }),
   p(t(title, { bold: true, size: 44 }), { align: AlignmentType.CENTER, after: 120, before: 20 })
 ];
@@ -48,7 +48,7 @@ const extra = (n) => {
 /* ---------- COVER + PASSPORT ---------- */
 W.push(p(t(PROG.toUpperCase(), { bold: true, size: 48 }), { align: AlignmentType.CENTER, before: 40, after: 60 }));
 W.push(p(t(SLOGAN, { italics: true, size: 32 }), { align: AlignmentType.CENTER, after: 80 }));
-W.push(p(t('Primary 1 Holiday Program  •  10 lessons  •  Student workbook', { size: 24 }), { align: AlignmentType.CENTER, after: 140 }));
+W.push(p(t('Level 1 Holiday Program  •  10 lessons  •  Student workbook', { size: 24 }), { align: AlignmentType.CENTER, after: 140 }));
 W.push(p([t('Name: ', { bold: true }), t('______________________________   '), t('Group: ', { bold: true }), t('__________')], { after: 140 }));
 W.push(banner('My Inquirer Rules'));
 ['1.  Notice the pattern.', '2.  Test it with objects first.', '3.  Check your answer.', '4.  Explain why.'].forEach(s => W.push(p(t(s, { size: 26 }), { before: 40, after: 20, indent: { left: 400 } })));
@@ -394,7 +394,7 @@ W.push(p(t('For Lesson 10 (Challenge Day). Cut out the four cards. Choose a card
     children: [
       p(t('CERTIFICATE OF COMPLETION', { bold: true, size: 48, color: '1F3864' }), { align: AlignmentType.CENTER, before: 200, after: 300 }),
       p(t(PROG, { bold: true, size: 36 }), { align: AlignmentType.CENTER, after: 80 }),
-      p(t('Primary 1 Holiday Program', { size: 28 }), { align: AlignmentType.CENTER, after: 400 }),
+      p(t('Level 1 Holiday Program', { size: 28 }), { align: AlignmentType.CENTER, after: 400 }),
       p(t('This certifies that', { size: 26 }), { align: AlignmentType.CENTER, after: 200 }),
       p(t('________________________________', { size: 34 }), { align: AlignmentType.CENTER, after: 200 }),
       p(t('completed all 10 lessons, solved puzzles, spotted patterns and explained their thinking.', { size: 26 }), { align: AlignmentType.CENTER, after: 400 }),
@@ -404,4 +404,4 @@ W.push(p(t('For Lesson 10 (Challenge Day). Cut out the four cards. Choose a card
 }
 
 const doc = new D.Document({ styles: { default: { document: { run: { font: 'Arial', size: 26 } } } }, sections: [{ properties: { page }, footers: { default: footer(PROG + '  •  ' + SLOGAN) }, children: W }] });
-D.Packer.toBuffer(doc).then(b => { fs.writeFileSync('P1_Holiday_Program_Student_Workbook.docx', b); console.log('workbook built'); });
+D.Packer.toBuffer(doc).then(b => { fs.writeFileSync('Math_Inquirers_Level1_Holiday_Program_Student_Workbook.docx', b); console.log('workbook built'); });

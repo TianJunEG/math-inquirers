@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 1: Number Sleuths (Numbers to 10 000)
+// Math Inquirers Level 3, Lesson 1: Number Sleuths (Numbers to 10 000)
 // Heuristics taught: make a list in order; look for a pattern.
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', T = '#1F7A6F', W = '#FFFFFF';
 

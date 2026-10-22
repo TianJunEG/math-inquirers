@@ -18,7 +18,7 @@ KIT = {
 }
 def sub(s):
     s = s.replace('ages 8 to 9', AGE[N]).replace('going into P3', NEXT[N])
-    s = s.replace('Primary 2', 'Primary %d' % N).replace('PRIMARY 2', 'PRIMARY %d' % N).replace('P2', 'P%d' % N).replace("'./kit.js'", "'./kit.js'")
+    s = s.replace('Primary 2', 'Primary %d' % N).replace('PRIMARY 2', 'PRIMARY %d' % N).replace('Level 2', 'Level %d' % N).replace('LEVEL 2', 'LEVEL %d' % N).replace('Level2_', 'Level%d_' % N).replace('P2', 'P%d' % N).replace("'./kit.js'", "'./kit.js'")
     return s
 for f in ['data.js', 'workbook_html.js', 'wb_pdf.py', 'guide.js']:
     s = sub(open(R + 'p2/' + f).read())
@@ -36,7 +36,7 @@ const P2 = require('../p2/kit.js').parts;
 const K = require('../hp/levelkit.js');
 const {{ H, lab2 }} = P;
 module.exports = () => [
-  H('Cut-outs', 'For the P{N} program. Cut along the dashed lines and keep the pieces in one envelope.'),
+  H('Cut-outs', 'For the Level {N} program. Cut along the dashed lines and keep the pieces in one envelope.'),
   {KIT[N]}
 ];
 """)

@@ -1,4 +1,4 @@
-// Math Inquirers P4 Holiday Program — Lesson 7: Area Architects II (Area and perimeter, rectangles and squares)
+// Math Inquirers Level 4 Holiday Program — Lesson 7: Area Architects II (Area and perimeter, rectangles and squares)
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 

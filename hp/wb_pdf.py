@@ -24,5 +24,5 @@ foot='<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page()
     pg.goto('file://'+__import__('os').path.abspath('workbook_full.html'),wait_until='networkidle');pg.wait_for_timeout(1000)
-    pg.pdf(path='Math_Inquirers_P1_Student_Workbook_Designed.pdf',format='A4',print_background=True,display_header_footer=True,header_template='<div></div>',footer_template=foot,margin={'top':'14mm','bottom':'16mm','left':'14mm','right':'14mm'})
+    pg.pdf(path='Math_Inquirers_Level1_Student_Workbook_Designed.pdf',format='A4',print_background=True,display_header_footer=True,header_template='<div></div>',footer_template=foot,margin={'top':'14mm','bottom':'16mm','left':'14mm','right':'14mm'})
     b.close()

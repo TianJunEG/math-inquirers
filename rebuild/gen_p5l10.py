@@ -1,10 +1,10 @@
-"""Math Inquirers P5, Lesson 10: Challenge Day (mixed strategies). Writes split/p5l10/project (deck.json + slides/*.html).
+"""Math Inquirers Level 5, Lesson 10: Challenge Day (mixed strategies). Writes split/p5l10/project (deck.json + slides/*.html).
 Every answer was checked with a script (exhaustive search for every logic puzzle and every "find all")."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 import slidekit
 from slidekit import *
-slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Explain why.'
+slidekit.FOOT='Math Inquirers Level 5 Holiday Program  •  Notice it. Test it. Explain why.'
 FOOTX=slidekit.FOOT
 S={}
 def put(i,h): S[i]=h
@@ -271,6 +271,6 @@ put('end',(f'<section id="end" data-transition="fade" style="background:{NAVY};c
  f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide. If a child ticked that something is still tricky, tell the whole group that their parent can ask you about it through the usual parent channel; all contact with children stays in the open session.")}</aside>\n</section>\n'))
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','we3','key','break','ws1','ws1ans','teachsq','teachliar','teachage','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
-write_deck(10,'Math Inquirers P5: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: how to choose a start','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':P+'stretch'}},D)
+write_deck(10,'Math Inquirers Level 5: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: how to choose a start','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':P+'stretch'}},D)
 
 import p5_gaps; p5_gaps.apply(10)

@@ -5,7 +5,7 @@ const K = require('../hp/levelkit.js');
 const X = require('./kit_extra.js');
 const { H, lab2 } = P;
 module.exports = () => [
-  H('Cut-outs', 'For the P4 program. Cut along the dashed lines and keep the pieces in one envelope.'),
+  H('Cut-outs', 'For the Level 4 program. Cut along the dashed lines and keep the pieces in one envelope.'),
   lab2('Fraction wall (Lesson 4)'), K.fractionWall(),
   '<div class="brk"></div>', H('Square grid', 'For Lessons 7 and 8. Cut it into 1 cm squares if you need paper squares.'), K.grid(),
   '<div class="brk"></div>', H('Dot grid', 'For Lesson 8 (symmetry).'), K.dots(),
