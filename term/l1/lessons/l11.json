@@ -1,3003 +1,3015 @@
 {
-  "schema_version": 1,
-  "id": "l1-t2-01",
-  "level": 1,
-  "term": 2,
-  "lesson": 11,
-  "lesson_in_term": 1,
-  "title": "STUB: Term 2 Template Check",
-  "big_idea": "Template check for Term 2 figures",
-  "child_idea": "This is a stub lesson used to prove the Term 2 template; it is not a lesson.",
-  "skill": "Structure of numbers",
-  "ages": "6-8",
-  "moe": {
-    "strand": "Whole Numbers",
-    "topics": [
-      "Numbers to 100: counting a set",
-      "Tens and ones (place value)",
-      "Reading and writing numerals"
-    ],
-    "note": "STUB. Not a lesson: it exists only to exercise the Term 2 figure types, answer tokens, runner items and term-aware footers. Lesson 11 (Who Is Where?) replaces this file."
-  },
-  "contest_moves": [
-    "split a number into tens and ones",
-    "digit-clue puzzle (find the number from two clues)"
+ "schema_version": 1,
+ "id": "l1-t2-01",
+ "level": 1,
+ "term": 2,
+ "lesson": 11,
+ "lesson_in_term": 1,
+ "title": "Who Is Where?",
+ "big_idea": "A place in a line has a name, and we can count it from either end",
+ "child_idea": "Every child in a line has a place: 1st, 2nd, 3rd. The place changes when we start from the other end.",
+ "skill": "Deduction",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Whole Numbers",
+  "topics": [
+   "Ordinals: first, second, third, up to tenth",
+   "Position words: front, back, behind, between",
+   "Counting on and back along a line"
   ],
-  "objectives": [
-    "Exercise every Term 2 figure type once in the workbook.",
-    "Exercise the new answer tokens: [], [2], (), [ ], {eq}.",
-    "Exercise the runner: pictures, ordered boxes, list helpers, ordinals, templated choice."
+  "note": "Ordinals 1st to 10th are in the Primary 1 Whole Numbers topics; front, back, behind and between are language, not a syllabus item. Start here is school Primary 1 work. Think harder and Go further go beyond it on purpose: counting a whole line from two places (8 + 8 - 1 style), counting the children between two places, and seating clues round a table are contest-style tutor labels only. The program does not claim to match any school syllabus."
+ },
+ "contest_moves": [
+  "counting both ends of a line (count the child once)",
+  "how many children are between two places",
+  "a line that faces the other way",
+  "seating clues round a table",
+  "ordering from 'beat' clues"
+ ],
+ "objectives": [
+  "Say, read and write the places 1st to 10th, and tell 4 (how many) from 4th (which place).",
+  "Find a child's place in a picture line and place a child from one clue (behind, in front of, between).",
+  "Say one child's place counted from the front and from the back, and count how many children are in front.",
+  "Think harder: find how many children are in a line from two places, and how many are between two places."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Touch and count a row of up to 10 things, one touch for each, and say the last number",
+   "One before and one after a number",
+   "Front, back, behind and between, with four things in a row"
   ],
-  "joining_cold": {
-    "remember": [
-      "Count in tens to 100",
-      "Fingers to make 10 (bonds to 10)",
-      "Ten and some more (11 to 19, then 20s and 30s)"
-    ],
-    "assumes": "Only counting to 20 and showing a number with fingers. Nothing from the holiday course is needed; if the child has done it, skip counting in 10s and bonds to 10 will feel familiar.",
-    "holiday_topics_revisited": [
-      "Skip counting in 10s (Count with the Frog)",
-      "Number bonds to 10 (Number Bond Inquiry)"
-    ],
-    "safe_to_miss": false,
-    "note": "Lesson 1 is one of the hardest to miss in Term 1 (plan, section 2). A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 2."
-  },
-  "materials": {
-    "child": [
-      "About 50 small things of one kind: paper clips, dried pasta, buttons, lolly sticks or straws cut short",
-      "6 hair ties, small cups, paper rings or pieces of string (to hold a bundle), or draw rings on paper",
-      "The printed workbook (pages 1 to 5) and the kit page (tens bars and ones squares), already cut out by a grown-up",
-      "A pencil, a rubber and spare paper"
-    ],
-    "tutor": [
-      "A slide deck and a tray of 30 lolly sticks or straws with three hair ties to show on camera if you wish",
-      "A timer slide or a visible clock"
-    ],
-    "kit_pages": [
-      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; cut out before the lesson"
-    ],
-    "ruler": false,
-    "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
-  },
-  "timing": {
-    "parts": [
-      {
-        "id": "opening",
-        "title": "Opening",
-        "start": 0,
-        "end": 4
-      },
-      {
-        "id": "remember",
-        "title": "Remember warm-up",
-        "start": 4,
-        "end": 10
-      },
-      {
-        "id": "sneak",
-        "title": "Sneak-peek puzzles",
-        "start": 10,
-        "end": 14
-      },
-      {
-        "id": "explore",
-        "title": "Explore",
-        "start": 14,
-        "end": 28
-      },
-      {
-        "id": "mini",
-        "title": "Mini-lesson",
-        "start": 28,
-        "end": 38
-      },
-      {
-        "id": "break",
-        "title": "Brain break",
-        "start": 38,
-        "end": 42
-      },
-      {
-        "id": "work",
-        "title": "Workbook",
-        "start": 42,
-        "end": 70
-      },
-      {
-        "id": "talk",
-        "title": "Talk time",
-        "start": 70,
-        "end": 76
-      },
-      {
-        "id": "exit",
-        "title": "Exit ticket",
-        "start": 76,
-        "end": 82
-      },
-      {
-        "id": "look",
-        "title": "Look-back",
-        "start": 82,
-        "end": 85
-      },
-      {
-        "id": "flex",
-        "title": "Flex time and goodbye",
-        "start": 85,
-        "end": 90
-      }
-    ],
-    "optional_slide": "s-opt",
-    "include_rules": true,
-    "notes": "Lesson 1 of the term has a 4-minute opening because it introduces the routine and the four inquirer rules. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
-  },
-  "sneak_peek": {
-    "q1": "Count the stars. Write how many. You may draw rings round groups to help.",
-    "q2": "Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number of sticks? Circle Yes or No. I know because ___.",
-    "a1": "24 stars",
-    "a2": "Yes. 3 bundles of ten is 30, and 4 more is 34.",
-    "val1": 24
-  },
-  "rec": {
-    "opening": {
-      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your things to bundle. Pause or rewind any time.",
-      "action": "Gather your workbook, pencil, paper and things to bundle. Press play when ready."
-    },
-    "remember": {
-      "say": "Recording: join in! Say the numbers out loud and show your fingers. Pause if you need longer.",
-      "action": "Play along. Say and show each answer before the video does."
-    },
-    "sneak": {
-      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
-      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
-    },
-    "explore": {
-      "say": "Recording: pause now. Grab a handful, make bundles of ten, then build the numbers I call. Press play when you have tried.",
-      "action": "Pause. Grab and bundle, then build each number with your kit. Write what you find."
-    },
-    "mini": {
-      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
-      "action": "Watch and copy the examples. Rewind any step you missed."
-    },
-    "break": {
-      "say": "Recording: stand up and join in! Big jump for a ten, small hop for a one.",
-      "action": "Stand up and jump the tens and hop the ones."
-    },
-    "work": {
-      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
-      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
-    },
-    "talk": {
-      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
-      "action": "Pause. Explain your answer to someone at home, with a reason."
-    },
-    "exit": {
-      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
-      "action": "Pause. Do the exit ticket alone, then play to check it."
-    },
-    "look": {
-      "say": "Recording: pause and fill in your look-back box. You can pass.",
-      "action": "Pause. Fill in the look-back box, or pass."
-    },
-    "flex": {
-      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
-      "action": "Show a grown-up your workbook and tell them one thing you found out."
-    }
-  },
-  "script": {
-    "segments": [
-      {
-        "part": "opening",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-title",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, and your things to bundle on the table."
-          },
-          {
-            "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-routine",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Here is our plan. A warm-up, two puzzles, then we explore with real things. Then I teach you a trick, we move, and you work in your workbook."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-rules",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Four inquirer rules. Notice it: look closely. Test it: try it with real things. Explain why: say how you know. Mistakes help us: a guess is fine and you can always pass."
-          },
-          {
-            "k": "SAY",
-            "text": "A shopkeeper has 47 pencils to count for a customer. Counting one by one is slow, and it is easy to lose count."
-          },
-          {
-            "k": "ASK",
-            "text": "What could the shopkeeper do to count faster? Tell your screen or your grown-up.",
-            "resp": 20
-          },
-          {
-            "k": "SAY",
-            "text": "Today we learn the shopkeeper's trick: bundles of ten."
-          },
-          {
-            "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
-            "s": 25
-          },
-          {
-            "k": "NOTE",
-            "text": "Lesson 1 only: show the routine slide for 20 seconds and name the phases; do not read the table. Say the recording notice in your own words: the recording has the tutor, the shared screen and any voice that is unmuted; children may mute and keep their camera off. Standing routine for every lesson: children are muted unless invited; for a group answer they say it quietly to their own room on a count of three."
-          }
-        ]
-      },
-      {
-        "part": "remember",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-rem1",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Stand up if you can. We clap on every number. Count in tens with me: ten, twenty, thirty, all the way to one hundred."
-          },
-          {
-            "k": "WORK",
-            "text": "Count in tens together, clapping, to 100. Then back from 100 to 0, whispering, with big hands on 50.",
-            "s": 45
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-rem2",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Fingers to ten. I say a number. Show me how many more fingers make ten."
-          },
-          {
-            "k": "ASK",
-            "text": "Six. How many more to make ten?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Three?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Eight?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Five?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Nine?",
-            "resp": 12
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-rem3",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Ten and some more. Look at the full ten-frame and the extra counters."
-          },
-          {
-            "k": "ASK",
-            "text": "Ten and three more makes?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Ten and six more?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Twenty and four more?",
-            "resp": 12
-          },
-          {
-            "k": "ASK",
-            "text": "Thirty and seven more?",
-            "resp": 12
-          },
-          {
-            "k": "STUCK",
-            "text": "If a child hesitates on 24 or 37, say the tens word slowly (twenty... four) and point to the tens and the ones in the picture. Do not move on until most children have answered; this idea is the lesson."
-          },
-          {
-            "k": "NOTE",
-            "text": "Answers: 4, 7, 2, 5, 1 then 13, 16, 24, 37. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20."
-          }
-        ]
-      },
-      {
-        "part": "sneak",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-sneak",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
-          },
-          {
-            "k": "READ",
-            "text": "Puzzle one. Count the stars. Write how many. You may draw rings round groups to help."
-          },
-          {
-            "k": "WORK",
-            "text": "Children count the stars and write the number on their own paper.",
-            "s": 55
-          },
-          {
-            "k": "READ",
-            "text": "Puzzle two. Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number? Circle Yes or No. I know because ___."
-          },
-          {
-            "k": "WORK",
-            "text": "Children write or draw their answer.",
-            "s": 55
-          },
-          {
-            "k": "SAY",
-            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
-          },
-          {
-            "k": "SAY",
-            "text": "Thank you. We will come back to puzzle two in a few minutes."
-          },
-          {
-            "k": "NOTE",
-            "text": "Puzzle 1 answer: 24 stars. Puzzle 2 answer: yes, 3 tens and 4 ones is 34. Look for good ideas to praise later (a child who drew rings of ten, or who said 3 bundles is 30). Do not write scores or keep a list."
-          }
-        ]
-      },
-      {
-        "part": "explore",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-explore1",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Today your hands are the teachers. Grab a handful of your small things, not the whole pile. Make bundles of ten. Count the bundles, then count the singles left over."
-          },
-          {
-            "k": "SAY",
-            "text": "If you finish, try the what-if card: what if you open a bundle?"
-          },
-          {
-            "k": "WORK",
-            "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras; a child who wants to may show their bundles to the camera. Nobody has to.",
-            "s": 200
-          },
-          {
-            "k": "ASK",
-            "text": "Tell me what you have. Say it like this: I have, how many tens, and how many ones.",
-            "resp": 50
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-explore2",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Round two: show me! Use your tens bars and ones squares from the kit page. I call a number. You build it. I will tell you what it should look like, so you can check your own build."
-          },
-          {
-            "k": "SAY",
-            "text": "Seventeen."
-          },
-          {
-            "k": "WORK",
-            "text": "Children build 17, then give a thumbs-up when ready.",
-            "s": 40
-          },
-          {
-            "k": "READ",
-            "text": "Check your own: one bar and seven squares.",
-            "s": 8
-          },
-          {
-            "k": "SAY",
-            "text": "Thirty."
-          },
-          {
-            "k": "WORK",
-            "text": "Build 30.",
-            "s": 35
-          },
-          {
-            "k": "READ",
-            "text": "Check your own: three bars and no squares.",
-            "s": 8
-          },
-          {
-            "k": "SAY",
-            "text": "Fifty-eight."
-          },
-          {
-            "k": "WORK",
-            "text": "Build 58.",
-            "s": 45
-          },
-          {
-            "k": "READ",
-            "text": "Check your own: five bars and eight squares.",
-            "s": 8
-          },
-          {
-            "k": "SAY",
-            "text": "One more. Ravi built thirty-five with 5 bars and 3 squares. Look at your kit. Is Ravi right?"
-          },
-          {
-            "k": "WORK",
-            "text": "Children check with their kit and answer by thumbs up or down, then say why. Answer: no, 5 bars and 3 squares is 53; thirty-five is 3 bars and 5 squares.",
-            "s": 55
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-explore3",
-            "text": ""
-          },
-          {
-            "k": "ASK",
-            "text": "What did you notice? How many singles can be left over? Could you have ten singles left over? Why not?",
-            "resp": 45
-          },
-          {
-            "k": "SAY",
-            "text": "If you have ten singles you can tie them into another bundle. So the singles left over are always nought to nine."
-          },
-          {
-            "k": "STUCK",
-            "text": "A child who counts bundles as ones (3 bundles and 4 singles is 7): hold up a real bundle and say, this one is worth ten. Count it: ten, twenty, thirty, then thirty-one, thirty-two."
-          },
-          {
-            "k": "STUCK",
-            "text": "A child with too few things: use the kit bars and squares for round 1 as well."
-          },
-          {
-            "k": "NOTE",
-            "text": "Main room only: no breakout rooms in this lesson, so you can see every camera. Pairs are optional: a grown-up may check the building. Building with the kit is for every child; the what-if card is for any child who wants it, and nobody is named."
-          }
-        ]
-      },
-      {
-        "part": "mini",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-m1",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Look. Ten single sticks. When I tie them together I have one bundle. One bundle is worth ten."
-          },
-          {
-            "k": "ASK",
-            "text": "How many sticks are in one bundle?",
-            "resp": 12
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m2",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Here are 3 bundles and 4 singles. I count the bundles in tens: ten, twenty, thirty. Then I count the singles: thirty-one, thirty-two, thirty-three, thirty-four. Thirty-four sticks."
-          },
-          {
-            "k": "SAY",
-            "text": "I write it in two boxes. Tens: 3. Ones: 4. That makes 34. The left digit counts the tens. The right digit counts the ones."
-          },
-          {
-            "k": "ASK",
-            "text": "Which digit tells me how many bundles?",
-            "resp": 15
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m3",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Your turn. Write the number for each picture on your paper."
-          },
-          {
-            "k": "WORK",
-            "text": "Children write three numbers.",
-            "s": 50
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m3a",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Twenty-seven, forty, nineteen."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m4",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Look at forty. 4 bundles and no singles. We write a zero in the ones box. If we left it out, the 4 would look like 4 ones. The zero holds the place."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m5",
-            "text": ""
-          },
-          {
-            "k": "ASK",
-            "text": "Twenty-six and sixty-two use the same digits. Which has more sticks, 26 or 62? How do you know?",
-            "resp": 30
-          },
-          {
-            "k": "SAY",
-            "text": "The tens digit is worth more. 62 has 6 bundles. 26 has only 2 bundles. The order of the digits matters."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m5b",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Sometimes you have lots of singles. Here are 2 bundles and 13 singles. Ten of the singles can tie into a new bundle. Now there are 3 bundles and 3 singles. Same sticks, 33 of them."
-          },
-          {
-            "k": "ASK",
-            "text": "Why can we tie up ten singles? What is a bundle worth?",
-            "resp": 20
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-m6",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Quick-fire. I say a number. You tell me the tens and the ones. Forty-seven."
-          },
-          {
-            "k": "ASK",
-            "text": "Sixty?",
-            "resp": 15
-          },
-          {
-            "k": "ASK",
-            "text": "Nineteen?",
-            "resp": 15
-          },
-          {
-            "k": "ASK",
-            "text": "Eighty-two?",
-            "resp": 15
-          },
-          {
-            "k": "WORK",
-            "text": "Count together: tens, then ones: 10, 20, 30, 31, 32, 33, 34.",
-            "s": 20
-          },
-          {
-            "k": "NOTE",
-            "text": "Key words to use every time: bundle (ten), single (one), tens digit, ones digit. Do not teach 'place value' as a term yet. Do not teach carrying. Keep ten singles making a bundle for the Think harder page."
-          },
-          {
-            "k": "STUCK",
-            "text": "If a child reads 34 as 43: ask them to build it with the kit bars and squares and say the tens first."
-          }
-        ]
-      },
-      {
-        "part": "break",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-break",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Stand up and get a sip of water. A big jump for every ten, a small hop for every one. Thirty-four is three big jumps and four small hops."
-          },
-          {
-            "k": "WORK",
-            "text": "Call 12, 25, 40, 31. Children jump the tens and hop the ones. Count the jumps and hops aloud together.",
-            "s": 160
-          }
-        ]
-      },
-      {
-        "part": "work",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-ws1",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "READ",
-            "text": "Page 1, Start here. Question 1: count the sticks and fill in the bundles, the singles and the number. Question 2: draw 3 bundles and 5 singles. Question 3: write the numbers."
-          },
-          {
-            "k": "WORK",
-            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-            "s": 540
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-ws1ans",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Twenty-six. Thirty-five. Forty-two, seventy, nineteen, eighty-five. Mark your own page in another colour."
-          },
-          {
-            "k": "SAY",
-            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-ws2",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 sticks. Question 6: Kumar wrote 43. Is he right? Question 7: draw Ali's 6 bundles and Mei's 6 singles, and write each number."
-          },
-          {
-            "k": "WORK",
-            "text": "Page 2, questions 4 to 7.",
-            "s": 540
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-ws2ans",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Kumar should write thirty-four. Question 7: Ali has sixty, Mei has six."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-choice",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
-          },
-          {
-            "k": "WORK",
-            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-            "s": 300
-          },
-          {
-            "k": "STUCK",
-            "text": "Q2 (drawing): draw a bundle of ten as one long line and a single stick as a short line. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first. Q7: ask how much one bundle is worth."
-          },
-          {
-            "k": "STUCK",
-            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
-          },
-          {
-            "k": "NOTE",
-            "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Slow class: the workbook part needs about 31:50 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
-          }
-        ]
-      },
-      {
-        "part": "talk",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-talk",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "READ",
-            "text": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___."
-          },
-          {
-            "k": "WORK",
-            "text": "Build 40 and 4 with your kit bars and squares. Which one has more?",
-            "s": 50
-          },
-          {
-            "k": "WORK",
-            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-            "s": 60
-          },
-          {
-            "k": "ASK",
-            "text": "Who would like to share? Volunteers first. A pass is always fine.",
-            "resp": 90
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-sneakans",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Remember puzzle two? Mei has 3 bundles and 4 singles. Ben has 34 sticks. Yes! They have the same number, thirty-four."
-          },
-          {
-            "k": "ASK",
-            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
-            "resp": 20
-          },
-          {
-            "k": "NOTE",
-            "text": "Model answer: No. 40 is 4 bundles of ten and no singles. 4 is only 4 singles. 40 has more sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
-          }
-        ]
-      },
-      {
-        "part": "exit",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-exit",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
-          },
-          {
-            "k": "READ",
-            "text": "E1. Look at the bundles and singles. How many sticks are there? E2. Thirty-seven equals how many tens and how many ones? E3. Write the number: seven tens and no ones.",
-            "s": 22
-          },
-          {
-            "k": "WORK",
-            "text": "Children answer E1 to E3 on their own.",
-            "s": 150
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-exitans",
-            "text": ""
-          },
-          {
-            "k": "READ",
-            "text": "Forty-eight. Three tens and seven ones. Seventy, and the zero is needed to show there are no ones."
-          },
-          {
-            "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
-          },
-          {
-            "k": "NOTE",
-            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
-          }
-        ]
-      },
-      {
-        "part": "look",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-look",
-            "text": ""
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
-          },
-          {
-            "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 90
-          }
-        ]
-      },
-      {
-        "part": "flex",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-end",
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Well done, inquirers. Next lesson is Number Words and the Number Line. Please have the number cards cut out from the kit pages, a small toy or a coin, and a pencil and paper. Goodbye, and thank you to the grown-ups."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-opt",
-            "optional": true,
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Optional, only if you are on time: what is the greatest number you can make with 9 bundles and 9 singles? And what happens if you add one more single?",
-            "optional": true
-          },
-          {
-            "k": "WORK",
-            "text": "Short think time, then take two answers.",
-            "s": 90,
-            "optional": true
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-menu",
-            "optional": true,
-            "text": ""
-          },
-          {
-            "k": "SAY",
-            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
-            "optional": true
-          },
-          {
-            "k": "NOTE",
-            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 99; one more is ten bundles, which is called a hundred (next lessons). If the whole class is ahead, use the Spare-time menu (guide section 3) instead of rushing on."
-          }
-        ]
-      }
-    ]
-  },
-  "slides": [
-    {
-      "id": "s-title",
-      "part": "opening",
-      "kind": "title",
-      "title": "Bundles and Singles",
-      "subtitle": "Whole numbers: tens and ones",
-      "blocks": [
-        {
-          "t": "card",
-          "head": "TODAY WE WILL",
-          "items": [
-            "Make bundles of ten, and use them to read and write numbers."
-          ]
-        }
-      ],
-      "note": "Lesson 1 of Term 1, 90 minutes. Objective: read and write two-digit numbers as bundles of ten and single ones. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
-      "mascot": {
-        "size": "l",
-        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
-      }
-    },
-    {
-      "id": "s-routine",
-      "part": "opening",
-      "kind": "light",
-      "title": "Our lesson today",
-      "blocks": [
-        {
-          "t": "table",
-          "header": true,
-          "rows": [
-            [
-              "First",
-              "What we do"
-            ],
-            [
-              "Remember",
-              "Count in tens and show ten with fingers"
-            ],
-            [
-              "Sneak-peek",
-              "Two puzzles. A guess is fine."
-            ],
-            [
-              "Explore",
-              "Bundle real things"
-            ],
-            [
-              "Learn",
-              "Read and write numbers"
-            ],
-            [
-              "Move",
-              "Jump and hop"
-            ],
-            [
-              "Workbook",
-              "Start here, then you choose"
-            ],
-            [
-              "Talk",
-              "Explain your idea"
-            ],
-            [
-              "Exit and look-back",
-              "What did I learn?"
-            ]
-          ]
-        }
-      ],
-      "note": "Show this for about 20 seconds and name the phases only; do not read the table. Lesson 1 only: it introduces the routine every lesson follows."
-    },
-    {
-      "id": "s-rules",
-      "part": "opening",
-      "kind": "light",
-      "title": "Four inquirer rules",
-      "blocks": [
-        {
-          "t": "list",
-          "ordered": true,
-          "items": [
-            "Notice it. Look closely.",
-            "Test it. Try it with real things.",
-            "Explain why. Say how you know.",
-            "Mistakes help us. A guess is fine. You can pass."
-          ]
-        },
-        {
-          "t": "card",
-          "head": "RECORDING",
-          "items": [
-            "We record the tutor, the screen and any voice that is unmuted. You may mute and keep your camera off."
-          ]
-        }
-      ],
-      "note": "Read the four rules together. Say the recording notice in your own words: the platform records the tutor, the shared screen and any voice that is unmuted; children's video is excluded; names are kept off the screen. A child or parent who does not wish to be heard can stay muted, and a camera can stay off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
-    },
-    {
-      "id": "s-rem1",
-      "part": "remember",
-      "kind": "light",
-      "title": "Warm-up: count in tens",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Clap on every number"
-        },
-        {
-          "t": "numrow",
-          "items": [
-            10,
-            20,
-            30,
-            40,
-            50,
-            60,
-            70,
-            80,
-            90,
-            100
-          ]
-        },
-        {
-          "t": "p",
-          "text": "Now count back from 100. Whisper, and big hands on 50!"
-        }
-      ],
-      "note": "Count in tens to 100 with a clap on each number, then back to 0. This is a spiral review of skip counting in tens (holiday topic) and lets a new child join: they hear it before they say it.",
-      "mascot": {
-        "size": "s",
-        "say": "Clap along with me!"
-      }
-    },
-    {
-      "id": "s-rem2",
-      "part": "remember",
-      "kind": "light",
-      "title": "Fingers to ten",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "ten_frame",
-          "filled": 6,
-          "extra": 0
-        },
-        {
-          "t": "p",
-          "text": "I show 6. How many more fingers make 10?"
-        },
-        {
-          "t": "numrow",
-          "items": [
-            6,
-            3,
-            8,
-            5,
-            9
-          ]
-        }
-      ],
-      "note": "Say each number; children show on their fingers how many more make ten. Answers: 6 needs 4, 3 needs 7, 8 needs 2, 5 needs 5, 9 needs 1. Hands up on camera is fine. No writing, no marks."
-    },
-    {
-      "id": "s-rem3",
-      "part": "remember",
-      "kind": "light",
-      "title": "Ten and some more",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "ten_frame",
-          "filled": 10,
-          "extra": 3
-        },
-        {
-          "t": "p",
-          "text": "10 and 3 more is ___"
-        },
-        {
-          "t": "numrow",
-          "items": [
-            "10 + 6",
-            "20 + 4",
-            "30 + 7"
-          ]
-        }
-      ],
-      "note": "Answers: 13, 16, 24, 37. Say the tens word slowly, then the ones: twenty... four. This is the bridge to bundles of ten and singles. Show 20 and 30 as two or three full ten-frames if a child is unsure."
-    },
-    {
-      "id": "s-sneak",
-      "part": "sneak",
-      "kind": "light",
-      "title": "Sneak-peek puzzles",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
-        },
-        {
-          "t": "cols",
-          "cols": [
-            [
-              {
-                "t": "card",
-                "head": "PUZZLE 1: anyone can try",
-                "items": [
-                  "Count the stars. Write how many.",
-                  "You may draw rings round groups."
-                ]
-              },
-              {
-                "t": "visual",
-                "type": "scatter",
-                "n": 24,
-                "seed": 7
-              }
-            ],
-            [
-              {
-                "t": "card",
-                "head": "PUZZLE 2: think",
-                "items": [
-                  "Mei has 3 bundles of ten sticks and 4 single sticks.",
-                  "Ben has 34 sticks.",
-                  "Could they have the same number? Circle Yes or No. I know because ___."
-                ]
-              }
-            ]
-          ]
-        }
-      ],
-      "note": "Puzzle 1 (24 stars) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 24; yes (3 tens and 4 ones is 34). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
-    },
-    {
-      "id": "s-explore1",
-      "part": "explore",
-      "kind": "light",
-      "title": "Explore: grab and bundle",
-      "blocks": [
-        {
-          "t": "list",
-          "ordered": true,
-          "items": [
-            "Grab a handful of small things. Not the whole pile.",
-            "Make bundles of ten: a hair tie, a cup, or a ring on paper.",
-            "Count the bundles. Count the singles left over.",
-            "Say: I have ___ tens and ___ ones."
-          ]
-        },
-        {
-          "t": "card",
-          "head": "WHAT IF?",
-          "items": [
-            "What if you open a bundle? Can you show your number a different way?"
-          ]
-        }
-      ],
-      "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. A child who wants to may show their bundles to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
-    },
-    {
-      "id": "s-explore2",
-      "part": "explore",
-      "kind": "light",
-      "title": "Show me!",
-      "blocks": [
-        {
-          "t": "p",
-          "text": "Build each number with your tens bars and ones squares. Show a thumbs-up when it is built. Then check your own build."
-        },
-        {
-          "t": "visual",
-          "type": "bundles",
-          "tens": 2,
-          "ones": 3,
-          "label": "example: 23 is 2 bars and 3 squares",
-          "style": "kit"
-        },
-        {
-          "t": "numrow",
-          "items": [
-            17,
-            30,
-            58
-          ]
-        }
-      ],
-      "note": "Round 2, about 3 minutes, main room. Call each number aloud and show it on the slide. Children build with the kit bars (tens) and squares (ones) and give a thumbs-up. Read the check line aloud so every child can check their own build; nobody holds anything up to the camera. Keep the builds to three: 17, 30 (the zero case) and 58. Answers: 17 is 1 bar and 7 squares; 30 is 3 bars; 58 is 5 bars and 8 squares. The picture of 23 is only an example. Camera tip: a child may tilt the screen so the table can be seen, but this is not required."
-    },
-    {
-      "id": "s-explore3",
-      "part": "explore",
-      "kind": "light",
-      "title": "What did we notice?",
-      "blocks": [
-        {
-          "t": "list",
-          "items": [
-            "How many singles can be left over?",
-            "Could you have ten singles left over? Why not?",
-            "Is it quicker to count 40 singles, or 4 tens?"
-          ]
-        }
-      ],
-      "note": "Take one or two answers from volunteers. Key idea: the singles left over are always 0 to 9, because ten singles tie into another bundle. Counting in tens is quicker and easier to keep track of. Repeat a child's answer in your own words so the recording picks it up."
-    },
-    {
-      "id": "s-m1",
-      "part": "mini",
-      "kind": "light",
-      "title": "Ten singles make a bundle",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "ten_to_bundle"
-        },
-        {
-          "t": "say",
-          "text": "10 singles = 1 bundle of ten"
-        }
-      ],
-      "note": "Show ten single sticks, then tie them into one bundle. A bundle is worth ten. Ask: how many sticks are in one bundle? Answer: ten."
-    },
-    {
-      "id": "s-m2",
-      "part": "mini",
-      "kind": "light",
-      "title": "Reading 34",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "bundles",
-          "tens": 3,
-          "ones": 4,
-          "label": "3 tens and 4 ones",
-          "table": true
-        },
-        {
-          "t": "p",
-          "text": "30 and 4 more is 34. The left digit counts the tens. The right digit counts the ones."
-        }
-      ],
-      "note": "Think aloud: count the bundles in tens (10, 20, 30) then the singles (31, 32, 33, 34). Write 3 in the tens box and 4 in the ones box. Ask: which digit tells me how many bundles? Answer: the left one, 3."
-    },
-    {
-      "id": "s-m3",
-      "part": "mini",
-      "kind": "light",
-      "title": "Your turn: write the number",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Write on your paper. Timer: 1 minute"
-        },
-        {
-          "t": "cols",
-          "cols": [
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 2,
-                "ones": 7,
-                "size": "s"
-              },
-              {
-                "t": "p",
-                "text": "___"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 4,
-                "ones": 0,
-                "size": "s"
-              },
-              {
-                "t": "p",
-                "text": "___"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 1,
-                "ones": 9,
-                "size": "s"
-              },
-              {
-                "t": "p",
-                "text": "___"
-              }
-            ]
-          ]
-        }
-      ],
-      "note": "Each child writes on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group."
-    },
-    {
-      "id": "s-m3a",
-      "part": "mini",
-      "kind": "light",
-      "title": "Check: write the number",
-      "blocks": [
-        {
-          "t": "cols",
-          "cols": [
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 2,
-                "ones": 7,
-                "size": "s"
-              },
-              {
-                "t": "answer",
-                "text": "27"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 4,
-                "ones": 0,
-                "size": "s"
-              },
-              {
-                "t": "answer",
-                "text": "40"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 1,
-                "ones": 9,
-                "size": "s"
-              },
-              {
-                "t": "answer",
-                "text": "19"
-              }
-            ]
-          ]
-        }
-      ],
-      "note": "Answers: 27, 40, 19. Read each answer aloud so a child watching the recording can mark their own work."
-    },
-    {
-      "id": "s-m4",
-      "part": "mini",
-      "kind": "light",
-      "title": "The zero holds the place",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "bundles",
-          "tens": 4,
-          "ones": 0,
-          "label": "4 tens and 0 ones",
-          "table": true
-        },
-        {
-          "t": "p",
-          "text": "No singles, so the ones box has a 0. Without the 0, 4 would look like 4 ones."
-        }
-      ],
-      "note": "Zero ones means no singles. The zero is needed so the 4 stays in the tens place. A common slip is to write 4 for 4 tens."
-    },
-    {
-      "id": "s-m5",
-      "part": "mini",
-      "kind": "light",
-      "title": "Same digits, different number",
-      "blocks": [
-        {
-          "t": "cols",
-          "cols": [
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 2,
-                "ones": 6,
-                "size": "s",
-                "label": "26"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 6,
-                "ones": 2,
-                "size": "s",
-                "label": "62"
-              }
-            ]
-          ]
-        },
-        {
-          "t": "p",
-          "text": "Which has more sticks? How do you know?"
-        }
-      ],
-      "note": "26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles. 62 has more because the tens digit is worth more. The order of the digits matters. The Talk time question uses the zero case instead, so this idea is not repeated."
-    },
-    {
-      "id": "s-m5b",
-      "part": "mini",
-      "kind": "light",
-      "title": "Ten singles can tie up",
-      "blocks": [
-        {
-          "t": "cols",
-          "cols": [
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 2,
-                "ones": 13,
-                "size": "s",
-                "label": "2 tens and 13 ones"
-              }
-            ],
-            [
-              {
-                "t": "visual",
-                "type": "bundles",
-                "tens": 3,
-                "ones": 3,
-                "size": "s",
-                "label": "3 tens and 3 ones"
-              }
-            ]
-          ]
-        },
-        {
-          "t": "say",
-          "text": "13 ones = 1 ten and 3 ones"
-        }
-      ],
-      "note": "Show 2 bundles and 13 singles, then tie ten of the singles into a third bundle: 3 bundles and 3 singles. Both pictures are 33 sticks. This is the idea Think harder uses (5 tens and 14 ones). Keep it to about a minute: it is a worked example, not a new skill to drill."
-    },
-    {
-      "id": "s-m6",
-      "part": "mini",
-      "kind": "light",
-      "title": "Count: tens, then ones",
-      "blocks": [
-        {
-          "t": "numrow",
-          "items": [
-            10,
-            20,
-            30,
-            31,
-            32,
-            33,
-            34
-          ]
-        },
-        {
-          "t": "chip",
-          "text": "Say it together"
-        }
-      ],
-      "note": "Count the 3 bundles then the 4 singles together. This is the same count as the explore. Keep it short."
-    },
-    {
-      "id": "s-break",
-      "part": "break",
-      "kind": "dark",
-      "title": "Jump the tens, hop the ones",
-      "blocks": [
-        {
-          "t": "p",
-          "text": "A big jump for every ten. A small hop for every one."
-        },
-        {
-          "t": "numrow",
-          "items": [
-            12,
-            25,
-            40,
-            31
-          ]
-        },
-        {
-          "t": "p",
-          "text": "34 is 3 big jumps and 4 small hops. Sip some water."
-        }
-      ],
-      "note": "Four minutes. Stand up on camera. Call each number and have children jump the tens and hop the ones; count the jumps and hops aloud. No equipment. Keep it gentle for small spaces."
-    },
-    {
-      "id": "s-ws1",
-      "part": "work",
-      "kind": "light",
-      "title": "Workbook page 1: Start here",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Questions 1 to 3. Timer: 9 minutes"
-        },
-        {
-          "t": "qs",
-          "ids": [
-            "S1",
-            "S2",
-            "S3"
-          ],
-          "short": true
-        }
-      ],
-      "note": "Read questions 1 and 2 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
-    },
-    {
-      "id": "s-ws1ans",
-      "part": "work",
-      "kind": "light",
-      "title": "Check page 1",
-      "blocks": [
-        {
-          "t": "answers",
-          "ids": [
-            "S1",
-            "S2",
-            "S3"
-          ]
-        }
-      ],
-      "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
-    },
-    {
-      "id": "s-ws2",
-      "part": "work",
-      "kind": "light",
-      "title": "Workbook page 2: Start here",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Questions 4 to 7. Timer: 9 minutes"
-        },
-        {
-          "t": "qs",
-          "ids": [
-            "S4",
-            "S5",
-            "S6"
-          ],
-          "short": true
-        }
-      ],
-      "note": "Read question 6 aloud: it is a spot-the-mistake. Read question 7 aloud as well: draw Ali's and Mei's sticks. Children may draw bundles to decide."
-    },
-    {
-      "id": "s-ws2ans",
-      "part": "work",
-      "kind": "light",
-      "title": "Check page 2",
-      "blocks": [
-        {
-          "t": "answers",
-          "ids": [
-            "S4",
-            "S5",
-            "S6"
-          ]
-        }
-      ],
-      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Kumar should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group. Question 7 answer: Ali has 60 and Mei has 6, because 6 tens is much more than 6 ones."
-    },
-    {
-      "id": "s-choice",
-      "part": "work",
-      "kind": "light",
-      "title": "Choose your next page",
-      "blocks": [
-        {
-          "t": "table",
-          "header": true,
-          "rows": [
-            [
-              "Page",
-              "What it is"
-            ],
-            [
-              "Think harder (page 3)",
-              "Our idea in a new setting"
-            ],
-            [
-              "Go further (page 4)",
-              "Bigger puzzles"
-            ],
-            [
-              "Investigation (page 5)",
-              "A pattern to find"
-            ],
-            [
-              "Check",
-              "Finish and check your own work"
-            ]
-          ]
-        },
-        {
-          "t": "chip",
-          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
-        }
-      ],
-      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
-    },
-    {
-      "id": "s-talk",
-      "part": "talk",
-      "kind": "light",
-      "title": "Talk and explain",
-      "blocks": [
-        {
-          "t": "card",
-          "head": "TALK ABOUT IT",
-          "items": [
-            "Is 40 the same as 4?"
-          ]
-        },
-        {
-          "t": "p",
-          "text": "Use bundles to explain."
-        },
-        {
-          "t": "chip",
-          "text": "I think ... because ..."
-        }
-      ],
-      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 40 is 4 bundles and no singles, and 4 is only 4 singles, so 40 has more. Repeat each child's answer in your own words for the recording."
-    },
-    {
-      "id": "s-sneakans",
-      "part": "talk",
-      "kind": "light",
-      "title": "Back to the sneak-peek",
-      "blocks": [
-        {
-          "t": "visual",
-          "type": "bundles",
-          "tens": 3,
-          "ones": 4,
-          "label": "3 tens and 4 ones is 34",
-          "table": true
-        },
-        {
-          "t": "answer",
-          "text": "Yes! Mei and Ben can have the same number: 34."
-        }
-      ],
-      "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer."
-    },
-    {
-      "id": "s-exit",
-      "part": "exit",
-      "kind": "light",
-      "title": "Exit ticket",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "On your own. No looking back. Timer: 3 minutes"
-        },
-        {
-          "t": "qs",
-          "ids": [
-            "E1",
-            "E2",
-            "E3"
-          ],
-          "short": false
-        }
-      ],
-      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
-    },
-    {
-      "id": "s-exitans",
-      "part": "exit",
-      "kind": "light",
-      "title": "Check the exit ticket",
-      "blocks": [
-        {
-          "t": "answers",
-          "ids": [
-            "E1",
-            "E2",
-            "E3"
-          ]
-        }
-      ],
-      "note": "Read each answer aloud. Children check their own ticket in a different colour."
-    },
-    {
-      "id": "s-look",
-      "part": "look",
-      "kind": "lookback",
-      "title": "Look-back",
-      "blocks": [
-        {
-          "t": "lookback"
-        }
-      ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
-      "mascot": {
-        "size": "s",
-        "say": "Take your time. You can pass."
-      }
-    },
-    {
-      "id": "s-end",
-      "part": "flex",
-      "kind": "dark",
-      "title": "Well done, inquirers!",
-      "blocks": [
-        {
-          "t": "p",
-          "text": "Show a grown-up one thing you found out today."
-        },
-        {
-          "t": "card",
-          "head": "NEXT LESSON",
-          "items": [
-            "Number Words and the Number Line",
-            "Have ready: number cards, a small toy, pencil and paper."
-          ]
-        }
-      ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
-      "mascot": {
-        "size": "l",
-        "say": "Great thinking today!"
-      }
-    },
-    {
-      "id": "s-opt",
-      "part": "flex",
-      "kind": "light",
-      "optional": true,
-      "title": "Go further: what if?",
-      "blocks": [
-        {
-          "t": "p",
-          "text": "What is the greatest number you can make with 9 bundles and 9 singles?"
-        },
-        {
-          "t": "p",
-          "text": "What happens if you add one more single?"
-        },
-        {
-          "t": "visual",
-          "type": "bundles",
-          "tens": 9,
-          "ones": 9,
-          "size": "s"
-        }
-      ],
-      "note": "Optional, only if you are on time. Answer: 99. One more single makes 10 singles, which tie into a tenth bundle: ten bundles. Ten tens have a name: a hundred (Lesson 2 onwards). Take two answers and move on."
-    },
-    {
-      "id": "s-menu",
-      "part": "flex",
-      "kind": "light",
-      "optional": true,
-      "title": "If we have time: pick one",
-      "blocks": [
-        {
-          "t": "table",
-          "header": true,
-          "rows": [
-            [
-              "Activity",
-              "What we do"
-            ],
-            [
-              "Is it always true?",
-              "Add one more single. Does the ones digit always go up by one?"
-            ],
-            [
-              "Make a puzzle",
-              "Write a mystery number puzzle for your grown-up"
-            ],
-            [
-              "Teach it back",
-              "Show how to read 52 with bundles and singles"
-            ]
-          ]
-        },
-        {
-          "t": "chip",
-          "text": "Optional. Everyone may join."
-        }
-      ],
-      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum."
-    }
+  "assumes": "Only counting to 10 with a touch for each thing. Nothing from Term 1 is needed. The words front, back, behind and between are taught again in the warm-up with real things, and the place names 1st, 2nd and 3rd are taught from the start in Explore.",
+  "holiday_topics_revisited": [
+   "Ordering and position words (Logic Lab), used as a warm-up only"
   ],
-  "tiers": {
-    "start": [
-      {
-        "id": "S1",
-        "page": 1,
-        "tier": "start",
-        "text": "Write the place of each child.",
-        "answer": "1st, 2nd, 3rd, 4th, 5th",
-        "val": [
-          "1st",
-          "2nd",
-          "3rd",
-          "4th",
-          "5th"
-        ],
-        "hint": "Start at the door. The first child is 1st.",
-        "solution": "The child nearest the door is 1st, then 2nd, 3rd, 4th and 5th.",
-        "mistakes": [
-          "Counting from the wrong end."
-        ],
-        "mins": 1.5,
-        "visual": {
-          "type": "line_up",
-          "n": 5,
-          "labels": "box"
-        },
-        "parts": [],
-        "lines": 0
-      },
-      {
-        "id": "S2",
-        "page": 1,
-        "tier": "start",
-        "text": "Count the apples.",
-        "answer": "7",
-        "val": 7,
-        "hint": "Touch each apple once.",
-        "solution": "Count 1, 2, 3, 4, 5, 6, 7.",
-        "mistakes": [
-          "Counting one twice."
-        ],
-        "mins": 1.5,
-        "visual": {
-          "type": "objects",
-          "icon": "apple",
-          "n": 7,
-          "per_row": 4
-        },
-        "parts": [
-          {
-            "l": "",
-            "text": "There are [] apples.",
-            "ans": "7",
-            "val": 7
-          }
-        ]
-      },
-      {
-        "id": "S3",
-        "page": 1,
-        "tier": "start",
-        "text": "Fill in the boxes.",
-        "answer": "4 groups of 3 = 12",
-        "val": [
-          4,
-          3,
-          12
-        ],
-        "hint": "Count the plates, then the cookies on one plate.",
-        "solution": "4 plates with 3 cookies each: 3 + 3 + 3 + 3 = 12.",
-        "mistakes": [
-          "Counting plates as cookies."
-        ],
-        "mins": 2.5,
-        "visual": {
-          "type": "groups",
-          "container": "plate",
-          "n": 4,
-          "each": 3,
-          "icon": "cookie",
-          "per_row": 4
-        },
-        "parts": [
-          {
-            "l": "",
-            "text": "[] groups of [] = []",
-            "ans": "4, 3, 12",
-            "val": [
-              4,
-              3,
-              12
-            ]
-          }
-        ]
-      },
-      {
-        "id": "S4",
-        "page": 2,
-        "tier": "start",
-        "text": "Look at the dots. The balls show 2 rows of 3.",
-        "answer": "3 × 4 = 12; Yes",
-        "val": [
-          3,
-          4,
-          12,
-          "Yes"
-        ],
-        "hint": "Count the rows and the dots in one row.",
-        "solution": "3 rows of 4 dots make 12 dots. Turning the page gives 4 rows of 3: also 12.",
-        "mistakes": [
-          "Adding 3 + 4."
-        ],
-        "mins": 2.5,
-        "parts": [
-          {
-            "l": "a",
-            "text": "[] × [] = []",
-            "ans": "3, 4, 12",
-            "val": [
-              3,
-              4,
-              12
-            ]
-          },
-          {
-            "l": "b",
-            "text": "Is 3 × 4 = 4 × 3? Circle Yes or No.",
-            "ans": "Yes",
-            "val": "Yes"
-          }
-        ],
-        "visuals": [
-          {
-            "type": "array",
-            "rows": 3,
-            "cols": 4,
-            "icon": "dot"
-          },
-          {
-            "type": "objects",
-            "icon": "ball",
-            "n": 6,
-            "per_row": 3,
-            "size": "s"
-          }
-        ]
-      },
-      {
-        "id": "S5",
-        "page": 2,
-        "tier": "start",
-        "text": "Fill in the table.",
-        "answer": "4 groups of 3 is 12; 6 groups of 5 is 30",
-        "val": [
-          12,
-          6,
-          5
-        ],
-        "hint": "Total = groups times in each.",
-        "solution": "4 groups of 3 = 12. 30 in 6 groups of 5.",
-        "mistakes": [
-          "Adding the two numbers."
-        ],
-        "mins": 2.5,
-        "visual": {
-          "type": "table",
-          "head": [
-            "Groups",
-            "In each",
-            "Total"
-          ],
-          "rows": [
-            [
-              "4",
-              "3",
-              "[]"
-            ],
-            [
-              "[]",
-              "5",
-              "30"
-            ],
-            [
-              "2",
-              "[]",
-              "10"
-            ]
-          ]
-        },
-        "parts": []
-      },
-      {
-        "id": "S6",
-        "page": 2,
-        "tier": "start",
-        "text": "Siti has 36 beads. Dev has 19 more beads than Siti. Fill in the boxes.",
-        "answer": "Dev has 55 beads; 91 altogether",
-        "val": [
-          55,
-          91
-        ],
-        "hint": "Dev has the same as Siti and 19 more.",
-        "solution": "36 + 19 = 55. 36 + 55 = 91.",
-        "mistakes": [
-          "Subtracting 19."
-        ],
-        "mins": 3,
-        "visual": {
-          "type": "bar_model",
-          "bars": [
-            {
-              "name": "Siti",
-              "len": 36,
-              "text": "36"
-            },
-            {
-              "name": "Dev",
-              "len": 55,
-              "segments": [
-                {
-                  "v": 36,
-                  "text": "36"
-                },
-                {
-                  "v": 19,
-                  "text": "19"
-                }
-              ]
-            }
-          ],
-          "brace": {
-            "text": "[]",
-            "over": "all"
-          }
-        },
-        "parts": [
-          {
-            "l": "a",
-            "text": "Dev has [2] beads.",
-            "ans": "55",
-            "val": 55
-          },
-          {
-            "l": "b",
-            "text": "They have [2] beads altogether.",
-            "ans": "91",
-            "val": 91
-          }
-        ]
-      }
+  "safe_to_miss": true,
+  "note": "Nothing later in Term 2 needs the place names, so this is a safe lesson to miss; the plan names Lesson 14 as the safest. A child who misses it watches the recording and does workbook pages 1 and 2. Lesson 20 may include one place-in-a-line question."
+ },
+ "materials": {
+  "child": [
+   "Ten small things of any kind in a row on the table: toys, cups, spoons or shoes (they can all be different)",
+   "One coin or button as a marker, and a small piece of paper to write FRONT on",
+   "The printed workbook (pages 1 to 5) and the kit page (place cards and number cards), already cut out by a grown-up",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "A slide deck and ten small things in a row on your table, with a paper marked FRONT, to show on camera if you wish",
+   "A clock or timer on your own device, not on the shared screen"
+  ],
+  "kit_pages": [
+   "Page 6 of the workbook: ten place cards (1st to 10th) and ten number cards (1 to 10); a grown-up cuts them out before the lesson"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: toys, cups, spoons or shoes are all fine. No matches, toothpicks or anything sharp. Small things stay on the table: nothing goes in the mouth or ears."
+ },
+ "workbook": {
+  "header": "Places in a line: who is where?",
+  "hint_p1": "Use your things in a row. Say your answer out loud, then write it.",
+  "hint_p2": "Look at the picture first. Then read the question.",
+  "hint_p3": "Draw the line or use your things in a row. Choose any question, in any order.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "home_hint": "Use toys in a row, or draw the line.",
+  "choice_after": 3,
+  "kits": [
+   {
+    "type": "cards",
+    "labels": [
+     "1st",
+     "2nd",
+     "3rd",
+     "4th",
+     "5th",
+     "6th",
+     "7th",
+     "8th",
+     "9th",
+     "10th",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
     ],
-    "think": [
-      {
-        "id": "T1",
-        "page": 3,
-        "tier": "think",
-        "text": "Six children sit round a table. Kumar sits between Mei and Siti. Who sits in the empty seat?",
-        "answer": "Kumar",
-        "val": [
-          "Kumar"
-        ],
-        "hint": "Look at the seat between Mei and Siti.",
-        "solution": "The empty seat is between Mei (3) and Siti (5), so it is Kumar.",
-        "mistakes": [
-          "Choosing Ravi."
-        ],
-        "mins": 4,
-        "visual": {
-          "type": "round_table",
-          "seats": 6,
-          "names": {
-            "1": "Ben",
-            "2": "Ali",
-            "3": "Mei",
-            "5": "Siti",
-            "6": "Ravi"
-          },
-          "hide": [
-            4
-          ]
-        },
-        "parts": [
-          {
-            "l": "",
-            "text": "The child in the empty seat is ______.",
-            "ans": "Kumar",
-            "val": "Kumar"
-          }
-        ]
-      },
-      {
-        "id": "T2",
-        "page": 3,
-        "tier": "think",
-        "text": "Add the counters.",
-        "answer": "15; 14",
-        "val": [
-          15,
-          14
-        ],
-        "hint": "Fill the first frame to 10 with counters, then count on the rest.",
-        "solution": "7 + 8: take 3 from the 8 to make 10, then 10 + 5 = 15. A double is two of the same: 7 + 7 = 14.",
-        "mistakes": [
-          "Writing 78."
-        ],
-        "mins": 3,
-        "visuals": [
-          {
-            "type": "ten_frame",
-            "filled": [
-              7,
-              0
-            ],
-            "extra": [
-              0,
-              8
-            ]
-          },
-          {
-            "type": "domino",
-            "left": 7,
-            "right": 7
-          }
-        ],
-        "parts": [
-          {
-            "l": "a",
-            "text": "7 + 8 = [2]",
-            "ans": "15",
-            "val": 15
-          },
-          {
-            "l": "b",
-            "text": "7 + 7 = [2]",
-            "ans": "14",
-            "val": 14
-          }
-        ]
-      },
-      {
-        "id": "T3",
-        "page": 3,
-        "tier": "think",
-        "text": "Each shape stands for a number. Find the numbers.",
-        "answer": "Circle is 5, triangle is 2",
-        "val": [
-          5,
-          2
-        ],
-        "hint": "Two circles make 10.",
-        "solution": "2 circles = 10, so a circle is 5. 5 + triangle = 7, so a triangle is 2.",
-        "mistakes": [
-          "Guessing without checking."
-        ],
-        "mins": 5,
-        "visual": {
-          "type": "picture_equation",
-          "rows": [
-            {
-              "items": [
-                {
-                  "sym": "circle",
-                  "n": 2
-                }
-              ],
-              "op": "+",
-              "total": "10"
-            },
-            {
-              "items": [
-                {
-                  "sym": "circle",
-                  "n": 1
-                },
-                {
-                  "sym": "triangle",
-                  "n": 1
-                }
-              ],
-              "op": "+",
-              "total": "7"
-            }
-          ],
-          "values": {
-            "circle": "[]",
-            "triangle": "[]"
-          }
-        }
-      }
-    ],
-    "go": [
-      {
-        "id": "G1",
-        "page": 4,
-        "tier": "go",
-        "text": "Which is the same as 4 × 3?",
-        "answer": "(1) 3 + 3 + 3 + 3",
-        "val": [
-          1
-        ],
-        "hint": "Work out each one.",
-        "solution": "4 × 3 = 12 and 3 + 3 + 3 + 3 = 12.",
-        "mistakes": [
-          "Choosing 4 + 4 + 4 + 4."
-        ],
-        "mins": 4,
-        "mcq": {
-          "options": [
-            "3 + 3 + 3 + 3",
-            "4 + 4 + 4 + 4",
-            "3 + 4",
-            "4 + 3 + 3"
-          ],
-          "bracket": true
-        }
-      },
-      {
-        "id": "G2",
-        "page": 4,
-        "tier": "go",
-        "text": "20 pencils are put in 4 equal packs. How many are in each pack?",
-        "answer": "5",
-        "val": [
-          5
-        ],
-        "hint": "Split the strip into 4 equal cells and share 20.",
-        "solution": "20 shared into 4 equal packs is 5 in each pack, because 4 × 5 = 20.",
-        "mistakes": [
-          "Giving 16."
-        ],
-        "mins": 5,
-        "visual": {
-          "type": "bar_model",
-          "bars": [
-            {
-              "name": "Pencils",
-              "len": 20,
-              "text": ""
-            }
-          ],
-          "units": {
-            "n": 4,
-            "text": "[]"
-          },
-          "brace": {
-            "text": "20"
-          }
-        },
-        "parts": [
-          {
-            "l": "",
-            "text": "20 ÷ 4 = []",
-            "ans": "5",
-            "val": 5
-          }
-        ],
-        "steps": [
-          "Step 1",
-          "Step 2"
-        ]
-      },
-      {
-        "id": "G3",
-        "page": 4,
-        "tier": "go",
-        "text": "Ali has 30 stickers and Mei has 18. Ali gives Mei some so they have the same. How many does Ali give?",
-        "answer": "6",
-        "val": [
-          6
-        ],
-        "hint": "Together they have 48. Share equally.",
-        "solution": "48 shared between 2 is 24. 30 - 24 = 6.",
-        "mistakes": [
-          "Saying 12."
-        ],
-        "mins": 5,
-        "visual": {
-          "type": "bar_model",
-          "bars": [
-            {
-              "name": "Ali",
-              "len": 30,
-              "text": "30"
-            },
-            {
-              "name": "Mei",
-              "len": 18,
-              "text": "18"
-            }
-          ],
-          "arrow": {
-            "from": 0,
-            "to": 1,
-            "v": "?"
-          }
-        },
-        "parts": [
-          {
-            "l": "",
-            "text": "Ali gives [] stickers.",
-            "ans": "6",
-            "val": 6
-          }
-        ]
-      }
-    ],
-    "investigation": {
-      "id": "I1",
-      "page": 5,
-      "tier": "investigation",
-      "title": "Swap the numbers",
-      "first": "Work out 2 × 5 and 5 × 2. Then try 3 × 4 and 4 × 3.",
-      "text": "Always, sometimes or never: swapping the two numbers in a multiplication gives the same answer. Try 6 × 2. Write what you notice.",
-      "lines": 4,
-      "answer": "Always (for the numbers tried): 10 and 10, 12 and 12, 12 and 12.",
-      "val": [
-        "always"
-      ],
-      "look_for": "Several examples tried and a sentence about what stays the same.",
-      "mistakes": [
-        "Trying only one pair."
-      ],
-      "mins": 8
-    }
+    "cols": 5,
+    "title": "Kit page: place cards and number cards",
+    "intro": "A grown-up cuts these out before the lesson. The top two rows say which place. The bottom two rows say how many."
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 4
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 4,
+    "end": 10
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 10,
+    "end": 14
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 14,
+    "end": 28
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 28,
+    "end": 38
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 38,
+    "end": 42
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 42,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "skip_order": [
+   "In a slow class the Explore and the workbook run over: take it from the 5-minute flex buffer and shorten the choice time (pages 3 to 5 can go home)",
+   "the optional slide and the spare-time menu",
+   "the third Explore round (turning the line around) can move into the mini-lesson",
+   "never shorten the exit ticket reading or the look-back"
+  ],
+  "notes": "Lesson 1 of Term 2 has a 4-minute opening because it adds a one-minute routine card for children who are new this term (the four things to know). Start here is about 18 minutes for a middle child, so most children reach Think harder in class; Go further and the Investigation are for home or next time. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the mini-lesson runs 10:11 of 10:00, the workbook 28:18 of 28:00 and talk time 6:03 of 6:00, and the whole lesson needs 83:58 of 90:00. The buffer absorbs this, so do not plan to use the menu in a slow class."
+ },
+ "sneak_peek": {
+  "q1": "Draw 5 dots in a line. The door is on the left. Colour the 2nd dot.",
+  "q2": "Mei is 4th in the line. Ben stands right behind Mei. How many children are in front of Ben? Write the number.",
+  "a1": "The dot next to the door is 1st. The 2nd dot is the one after it.",
+  "a2": "4. Ben is 5th. In front of Ben are the 1st, the 2nd, the 3rd and Mei, who is 4th.",
+  "val1": 2,
+  "val2": 4
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and ten small things for a row. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, paper, place cards and ten small things. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Touch and say each answer out loud before I do. Pause if you need longer.",
+   "action": "Play along. Touch your things and say each answer before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Line up six things, put the place cards under them, then turn the line around. Press play when you have tried.",
+   "action": "Pause. Make your line of six things, add the place cards, then turn the line around."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Do each move in order: first, second, third.",
+   "action": "Stand up and do each move in the order called."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. Press play to check it. Then page 2.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Pages 3 to 5 are for any time."
   },
   "talk": {
-    "question": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___.",
-    "starter": "I think ... because ...",
-    "answer": "No. 40 is 4 bundles of ten and 0 singles. 4 is only 4 singles. 40 has more sticks, because the 4 in 40 counts bundles of ten.",
-    "look_for": "A reason that uses tens and ones (not just 'because 40 is bigger'). A child may say the zero holds the place."
+   "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+   "action": "Pause. Explain your answer to someone at home, with a reason."
   },
-  "exit": [
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Welcome to Term 2. Pencil ready. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording. Welcome anyone who is new this term: every idea today is taught from the start, and nobody is expected to know Term 1.",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-routine"
+     },
+     {
+      "k": "SAY",
+      "text": "Four things to know. Listen first, then try: a guess is a good start. Answer on three, with fingers, or with a thumbs up. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
+     },
+     {
+      "k": "SAY",
+      "text": "Think of a race. Who wins? We call that place first. Then comes second, then third. Today we learn the names of places in a line, and how to find who is where."
+     },
+     {
+      "k": "ASK",
+      "text": "Say it with me on three: first, second, third.",
+      "resp": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Let us warm up."
+     },
+     {
+      "k": "NOTE",
+      "text": "New this term? The routine slide takes about one minute and covers what a child who missed the first term needs. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Warm-up one. Put seven small things in a row on your table. Touch each one once, and count in a quiet voice."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set seven things in a row, touch each once and count quietly.",
+      "s": 35
+     },
+     {
+      "k": "ASK",
+      "text": "How many things are there? Show me on your fingers.",
+      "resp": 10
+     },
+     {
+      "k": "SAY",
+      "text": "The last number you say tells how many. We touch each thing once, and we do not miss any."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Warm-up two. Look at the number line. The 6 has an empty box on each side. Put a finger on the 6."
+     },
+     {
+      "k": "ASK",
+      "text": "What number goes in the box just before 6? Say it on three.",
+      "resp": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What number goes in the box just after 6?",
+      "resp": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What number comes just after 9?",
+      "resp": 8
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Warm-up three. Look at the line of children. The door is on the left. The child nearest the door is at the front. The child farthest from the door is at the back."
+     },
+     {
+      "k": "ASK",
+      "text": "Who is at the front? Who is at the back?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "Who is behind Kumar?",
+      "resp": 8
+     },
+     {
+      "k": "ASK",
+      "text": "Who is between Kumar and Jenny?",
+      "resp": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now line up four things on your table in the same way, with the door on your left. Touch the one at the front, then the one at the back."
+     },
+     {
+      "k": "WORK",
+      "text": "Children line up four things, door on the left, and touch the front and the back.",
+      "s": 30
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who confuses front and back: put a finger on the door, then slide along the row. The thing next to the door is at the front. A child with no small things: draw four dots on paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 7; 5, 7, 10; Aisha at the front, Jenny at the back; Wei is behind Kumar; Wei is between Kumar and Jenny. Children answer with fingers, thumbs or a whispered word. Nobody writes. A child who has never used these words sees them once on a picture and once with their own things."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Draw 5 dots in a line. The door is on the left. Colour the 2nd dot."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw and colour on their own paper.",
+      "s": 50
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Mei is 4th in the line. Ben stands right behind Mei. How many children are in front of Ben? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write their answer on their own paper.",
+      "s": 55
+     },
+     {
+      "k": "SAY",
+      "text": "Thank you. Keep your paper and your own answer: nobody shows it. We will come back to puzzle two in a little while, and you can check your own thinking then."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: the dot right after the one next to the door. Puzzle 2 answer: 4. Ben is 5th, so 4 children are in front of him. The usual answers are 4 and 5 (a child who says 3 forgot Mei, a child who says 5 gave Ben's place). Look for a drawing of dots with names or numbers. Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today your things are children in a line. Put six things in a row. Write FRONT on a small paper and put it at one end. That end is the door."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set up six things in a row and a paper marked FRONT at one end.",
+      "s": 50
+     },
+     {
+      "k": "SAY",
+      "text": "The thing next to FRONT is first. Then second, third, fourth, fifth, sixth. Touch each thing and say its place with me."
+     },
+     {
+      "k": "WORK",
+      "text": "Say first to sixth together, twice, touching each thing.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "We can write the places short: 1st, 2nd, 3rd, 4th, 5th, 6th. Put your coin on the thing I call, then take it off."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 4th, 2nd, 5th, 1st, 6th. After each call the children place a coin; the tutor looks around the gallery.",
+      "s": 70
+     },
+     {
+      "k": "ASK",
+      "text": "Which place is the last thing in your row? Say it on three.",
+      "resp": 10
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Take your place cards from the kit page. Put 1st under the first thing, 2nd under the second thing, and so on up to 6th."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put the place cards 1st to 6th under their six things.",
+      "s": 70
+     },
+     {
+      "k": "ASK",
+      "text": "How many things are in your row? Show me on your fingers.",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "What place is the last thing? Say it.",
+      "resp": 10
+     },
+     {
+      "k": "SAY",
+      "text": "The number 6 says how many. The word 6th says which one. Now take away the last three things, and the cards that go with them."
+     },
+     {
+      "k": "WORK",
+      "text": "Children take away three things and the cards 4th, 5th and 6th.",
+      "s": 25
+     },
+     {
+      "k": "ASK",
+      "text": "How many things are left? What place is the last thing now?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Three things, and the last one is 3rd. A number says how many. A place says which one."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Now put the three things back, so the row has six again. Move the FRONT paper to the other end of the row. The things have not moved, but the front is on the other side."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put back three things and move the FRONT paper to the other end.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Which thing is first now? Touch it.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Touch the thing that was 2nd before. What place is it now? Count from the new front.",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "It was 2nd from the old front. It is 5th from the new front. The old front is the back now. We say from the front and from the back."
+     },
+     {
+      "k": "ASK",
+      "text": "What did you notice? Volunteers first.",
+      "resp": 45
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who counts from the wrong end: put a finger on the paper marked FRONT, then slide along the row. A child who says 4 for 4th: ask, how many things are in front of it? A child with no small things: draw dots on paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only: no breakout rooms. The three rounds are objects first, then cards, then the other end. Answers: 6; 6th; 3 and 3rd; the old last thing is first now; the old 2nd thing is 5th now. Praise a reason, not speed. Repeat a child's answer in your own words so the recording picks it up."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at the place names. 1st, 2nd, 3rd, then 4th, 5th, 6th, 7th, 8th, 9th, 10th. Most places end in th. Only three are different: 1st, 2nd, 3rd."
+     },
+     {
+      "k": "ASK",
+      "text": "Say the places with me, from 1st to 10th.",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "Here is a line with the door on the left. The red numbers on the bottom say the place from the front. The words on top say the place from the back."
+     },
+     {
+      "k": "ASK",
+      "text": "Look at the child in the ring. What place is the child from the front? What place from the back?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Same child, two places. From the front, 2nd. From the back, 5th. The child did not move. We only counted from the other end."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Ben is 5th. How many children are in front of Ben? Count the ones in the ring: 1st, 2nd, 3rd, 4th. Four children. The place is 5th, but only 4 are in front."
+     },
+     {
+      "k": "ASK",
+      "text": "If Ben is 6th, how many children are in front of him? Show me on your fingers.",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "The number in front is one less than the place."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "A clue puzzle. Aisha is 2nd. Kumar stands right behind Aisha. Right behind means the very next place. Who is 3rd?"
+     },
+     {
+      "k": "ASK",
+      "text": "Whisper the answer to your grown-up, then say it with me on three: who is 3rd?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Now Wei stands right behind Kumar. What place is Wei?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Ben is 6th. How many children are in front of Ben? Then: Mei is 3rd. Siti stands right behind Mei. What place is Siti? Write both answers on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the two answers on their own paper. Wait until most have stopped writing.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a",
+      "s": 15
+     },
+     {
+      "k": "READ",
+      "text": "Ben is 6th, so 5 children are in front of him. Siti stands right behind Mei, so Siti is 4th."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own work in a different colour. If you got one wrong, look at the picture again."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m6"
+     },
+     {
+      "k": "SAY",
+      "text": "A little extra for Think harder. Aisha is 3rd from the front and 3rd from the back. Two children are in front of her, and two are behind her."
+     },
+     {
+      "k": "ASK",
+      "text": "How many children are in the line? Count Aisha only once. Show me on your fingers.",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Two in front, Aisha, two behind. That is five. It is not six: 3 and 3 would count Aisha twice."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m7"
+     },
+     {
+      "k": "SAY",
+      "text": "And now the children between two places. The bracket is under the 2nd and the 6th. Between them are the 3rd, the 4th and the 5th. That is three children."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words every time: front, back, behind, in front of, between, right behind, the place. The one new idea is that a place has a name and depends on the end you count from. The rule 'one less than the place' is said in words with the picture. The both-ends idea and 'between' are Think harder previews; Start here never needs them. Do not teach teens (11th, 12th) today."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who says Ben is 6th so 6 are in front: put a finger on each child in front of Ben and count them aloud. A child who counts the child in the ring as well: slide the ring off, then count."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and take a sip of water. We will move in order. When I call a place, do the move for that place. Keep the moves small."
+     },
+     {
+      "k": "WORK",
+      "text": "Call: 1st clap, 2nd stamp, 3rd turn around, 4th touch your toes, 5th jump once. Do the whole list twice. Then call the moves in a new order: 3rd, 5th, 1st, last.",
+      "s": 140
+     },
+     {
+      "k": "SAY",
+      "text": "Last move: the last one is the move you did last. Which move is that? Sit down gently."
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: study the picture. The door is on the left. Tick True or False for each sentence. Question 2: fill in the places of the children under the picture. Question 3: count the children. Then write the place of the last child."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: True, False, True. Question 2: 1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th. Question 3: 10 children, and the last child is 10th. Check your own page in another colour."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: Aisha is 2nd. Kumar stands right behind her. What place is Kumar? Question 5: Jenny is 2nd from the front in a line of 6. What place is she from the back? Question 6: Wei is 1st, Lily is 3rd, and Kumar stands between them. What place is Kumar? Question 7: Ben is 5th. How many children are in front of Ben?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 7. Move to the answer slide only when most children have stopped writing.",
+      "s": 600
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Answers for page 2. If you are still working, carry on and check later. Question 4: 3rd. Question 5: 5th. Question 6: 2nd. Question 7: 4 children."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+      "s": 150
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: touch each child in order from the door. Q2: say first, second, third as you touch each child. Q3: count the children with a touch for each, then say the place of the last. Q5: put your things in a row of 6 and count from the other end. Q7: put a finger on each child in front of Ben."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class. Open the next lesson with one short catch-up question for the whole group. Never a private message to a child, never a private room."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Q1 is True or False so a child can tick without writing a place name."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Ali is 2nd in the line. Mei says Ali is also 6th. Can both be true? How?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think for a moment. Use your things in a row, or draw a line, and show your grown-up.",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 90
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Mei is 4th and Ben stands right behind her. Ben is 5th. Four children are in front of him: the 1st, the 2nd, the 3rd and Mei."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 20
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes, both can be true if the line has 7 children. Counting from the front Ali is 2nd, and counting from the back Ali is 6th. A line of 7 is the only length that works, but accept any good reason that names the other end. Volunteers first; never call a child by name to answer; no tallies, no rankings. Repeat each child's answer in your own words for the recording."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5. I will read them to you."
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: Ben is 4th in the line. How many children are in front of Ben? Question 2: Mei is 5th from the front in a line of 6 children. What place is Mei from the back? Question 3: Aisha is 3rd. Kumar is right behind Aisha. Wei is right behind Kumar. What place is Wei?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 150
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 3 children. Question 2: 2nd from the back. Question 3: Wei is 5th."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick the ones you got right, in a different colour. Well done. Show your ticket to a grown-up."
+     },
+     {
+      "k": "ASK",
+      "text": "Show me with your fingers how many you got right: three, two, one, or none yet. A pass is fine.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Look at the room as a whole, not at any one tile. If many children show one or two fingers, spend two minutes at the start of Lesson 12 on counting from the other end and on how many are in front, in the open session, no names. Do not write a child's name next to an answer and do not read out anyone's result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. If you still need help, tick I am still stuck and show your grown-up. You can pass. Nobody reads it out."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 90
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, skip the optional slide and the menu, finish the look-back and go straight to goodbye. Do not start anything new. Optional slide answer: 9th. Mei is 3rd and Ben is 7th; with 2 more children between them Ben is pushed back 2 places (7 + 2 = 9). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. Mei is 3rd and Ben is 7th. Two more children join the line between Mei and Ben. What place is Ben now?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Bar Strips. You need a sheet with strips to cut, two colouring pencils, about 20 counters such as buttons or coins, a pencil and paper. Your grown-up will see the list in the note."
+     },
+     {
+      "k": "SAY",
+      "text": "Goodbye, and thank you to the grown-ups."
+     }
+    ]
+   }
+  ]
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Who Is Where?",
+   "subtitle": "Places in a line",
+   "blocks": [
     {
-      "id": "E1",
-      "text": "Fill in the boxes. 2 bags have 3 sweets in each bag.",
-      "parts": [
-        {
-          "l": "",
-          "text": "[] groups of [] = []",
-          "ans": "2, 3, 6",
-          "val": [
-            2,
-            3,
-            6
-          ]
-        }
-      ],
-      "answer": "2 groups of 3 = 6",
-      "val": [
-        2,
-        3,
-        6
-      ],
-      "solution": "2 bags of 3 sweets: 3 + 3 = 6.",
-      "mistakes": [
-        "Counting bags only."
-      ],
-      "lines": 0
-    },
-    {
-      "id": "E2",
-      "text": "Put a tick in the correct box.",
-      "tf": [
-        {
-          "s": "2 groups of 5 is 10.",
-          "ans": "T"
-        },
-        {
-          "s": "3 × 4 = 7.",
-          "ans": "F"
-        }
-      ],
-      "answer": "True; False",
-      "val": [
-        "T",
-        "F"
-      ],
-      "solution": "2 groups of 5 is 10 (True). 3 × 4 is 12, not 7 (False).",
-      "mistakes": [
-        "Ticking both boxes."
-      ]
-    },
-    {
-      "id": "E3",
-      "text": "Write the answer.",
-      "parts": [
-        {
-          "l": "",
-          "text": "3 groups of 2 = []",
-          "ans": "6",
-          "val": 6
-        }
-      ],
-      "answer": "6",
-      "val": [
-        6
-      ],
-      "solution": "2 + 2 + 2 = 6.",
-      "mistakes": [
-        "Counting all as pens."
-      ]
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Name the place of each child in a line.",
+      "Find who is where from clues."
+     ]
     }
-  ],
-  "look_back": {
-    "hardest": [
-      "knowing which digit is the tens",
-      "making bundles of ten",
-      "the zero in 40 or 70",
-      "opening a bundle (Think harder)",
-      "something else"
-    ],
-    "helped": [
-      "bundles or objects",
-      "drawing it",
-      "trying again",
-      "I asked for help",
-      "I was not stuck"
-    ],
-    "next": [
-      "drawing it",
-      "using objects",
-      "checking my answer",
-      "asking a question"
-    ]
+   ],
+   "note": "Lesson 1 of Term 2, 90 minutes. Objective: name places 1st to 10th, count a place from the front and from the back, and find who is where from clues. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
   },
-  "home_practice": [
+  {
+   "id": "s-routine",
+   "part": "opening",
+   "kind": "light",
+   "title": "How our lessons work",
+   "blocks": [
     {
-      "id": "H1",
-      "tier": "start",
-      "text": "3 groups of 5 = [] .",
-      "answer": "15",
-      "val": 15,
-      "solution": "5 + 5 + 5 = 15."
-    },
-    {
-      "id": "H2",
-      "tier": "start",
-      "text": "6 ÷ 2 = [] .",
-      "answer": "3",
-      "val": 3,
-      "solution": "6 shared into 2 equal groups is 3 each."
-    },
-    {
-      "id": "H3",
-      "tier": "start",
-      "text": "Circle Yes or No. Is 2 × 5 = 5 × 2?",
-      "answer": "Yes",
-      "val": "Yes",
-      "solution": "Both are 10."
-    },
-    {
-      "id": "H4",
-      "tier": "think",
-      "text": "{eq}  Write a multiplication sentence for 4 bags of 3 sweets.",
-      "answer": "4 × 3 = 12",
-      "val": 12,
-      "solution": "4 groups of 3 is 12."
-    },
-    {
-      "id": "H5",
-      "tier": "go",
-      "text": "Make equal groups from 12 counters in two different ways. Draw both.",
-      "answer": "Any: 2 groups of 6, 3 groups of 4, 4 groups of 3, 6 groups of 2.",
-      "val": "open",
-      "solution": "Each way uses all 12 counters."
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Listen first, then try. A guess is a good start.",
+      "Answer on three, with fingers, or with a thumbs up.",
+      "Tick your own work on the answer slide.",
+      "Still stuck? Tick the box on your look-back page and show your grown-up."
+     ]
     }
-  ],
-  "online_practice": {
-    "key": "t2l11",
-    "title": "Template check",
-    "topic": "Stub",
-    "items": [
-      {
-        "id": "c1",
-        "tier": "core",
-        "type": "number",
-        "q": "How many apples are there?",
-        "answer": 7,
-        "fig": {
-          "type": "objects",
-          "icon": "apple",
-          "n": "{n}",
-          "per_row": 5
-        },
-        "fig_base": {
-          "type": "objects",
-          "icon": "apple",
-          "n": 7,
-          "per_row": 5
-        },
-        "hint": "Touch each apple once.",
-        "steps": [
-          "Count the apples one by one.",
-          "There are 7."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "n": [
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ]
-          },
-          "q": "How many apples are there?",
-          "answer": "n",
-          "hint": "Touch each apple once.",
-          "steps": [
-            "Count the apples one by one.",
-            "There are {ans}."
-          ]
-        }
-      },
-      {
-        "id": "c2",
-        "tier": "core",
-        "type": "fields",
-        "q": "Fill in the boxes.",
-        "frame": "{a} groups of {b} = {c}",
-        "fields": [
-          {
-            "id": "a",
-            "answer": 4
-          },
-          {
-            "id": "b",
-            "answer": 3
-          },
-          {
-            "id": "c",
-            "answer": 12
-          }
-        ],
-        "fig": {
-          "type": "groups",
-          "container": "plate",
-          "n": "{a}",
-          "each": "{b}",
-          "icon": "apple",
-          "per_row": 5
-        },
-        "fig_base": {
-          "type": "groups",
-          "container": "plate",
-          "n": 4,
-          "each": 3,
-          "icon": "apple",
-          "per_row": 5
-        },
-        "hint": "Count the plates, then the apples on one plate.",
-        "steps": [
-          "Count the plates.",
-          "Count the apples on one plate.",
-          "Total: {a} × {b} = {c}."
-        ],
-        "tpl": {
-          "vars": {
-            "a": [
-              2,
-              3,
-              4,
-              5
-            ],
-            "b": [
-              2,
-              3,
-              4,
-              5
-            ]
-          },
-          "q": "Fill in the boxes.",
-          "frame": "{a} groups of {b} = {c}",
-          "answers": {
-            "a": "a",
-            "b": "b",
-            "c": "a*b"
-          },
-          "derive": {
-            "c": "a*b"
-          },
-          "hint": "Count the plates, then the apples on one plate.",
-          "steps": [
-            "Count the plates.",
-            "Count the apples on one plate.",
-            "{a} × {b} = {c}."
-          ]
-        }
-      },
-      {
-        "id": "c3",
-        "tier": "core",
-        "type": "choice",
-        "q": "Is 7 odd or even?",
-        "options": [
-          "even",
-          "odd"
-        ],
-        "answer": "odd",
-        "hint": "Pair up 7 counters. Is one left over?",
-        "steps": [
-          "Pair up 7 counters.",
-          "One is left over, so 7 is odd."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "n": [
-              7,
-              12,
-              15,
-              20,
-              23
-            ]
-          },
-          "q": "Is {n} odd or even?",
-          "options": [
-            "even",
-            "odd"
-          ],
-          "answer_index": "n % 2",
-          "hint": "Pair up {n} counters. Is one left over?",
-          "steps": [
-            "Pair up {n} counters.",
-            "The answer is {ans}."
-          ]
-        }
-      },
-      {
-        "id": "c4",
-        "tier": "core",
-        "type": "set",
-        "ordered": true,
-        "q": "Count in 5s up to 20. Type the numbers with a comma between.",
-        "answer": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "hint": "Add 5 each time.",
-        "steps": [
-          "5, 10, 15, 20."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "k": [
-              2,
-              5,
-              10
-            ],
-            "lim": [
-              20,
-              30,
-              40
-            ]
-          },
-          "ordered": true,
-          "q": "Count in {k}s up to {lim}. Type the numbers with a comma between.",
-          "answer": "multiples(k,lim)",
-          "hint": "Add {k} each time.",
-          "steps": [
-            "The numbers are {ans}."
-          ]
-        }
-      },
-      {
-        "id": "c5",
-        "tier": "core",
-        "type": "number",
-        "q": "Mei is 5th in the queue. How many children are in front of her?",
-        "answer": 4,
-        "hint": "Count the children before 5th.",
-        "steps": [
-          "1st, 2nd, 3rd, 4th are in front.",
-          "4 children."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "n": [
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ]
-          },
-          "q": "Mei is {n|ord} in the queue. How many children are in front of her?",
-          "answer": "n-1",
-          "hint": "Count the children before {n|ord}.",
-          "steps": [
-            "{n|word} children stand at the front, and Mei makes it {n|ord}.",
-            "{ans} children are in front."
-          ]
-        }
-      },
-      {
-        "id": "c6",
-        "tier": "core",
-        "type": "choice",
-        "q": "Which is the same as 3 groups of 4?",
-        "options": [
-          "3 + 3 + 3 + 3",
-          "4 + 4 + 4",
-          "3 + 4",
-          "4 × 4"
-        ],
-        "answer": "4 + 4 + 4",
-        "hint": "Write 4 three times.",
-        "steps": [
-          "3 groups of 4 is 4 + 4 + 4."
-        ],
-        "slips": []
-      },
-      {
-        "id": "t1",
-        "tier": "stretch",
-        "type": "number",
-        "q": "Ben is 8th from the front and 8th from the back. How many children are in the line?",
-        "answer": 15,
-        "easier": "c5",
-        "hint": "Ben is counted twice.",
-        "steps": [
-          "7 children in front, 7 behind, and Ben.",
-          "7 + 7 + 1 = 15."
-        ],
-        "slips": []
-      },
-      {
-        "id": "t2",
-        "tier": "stretch",
-        "type": "fields",
-        "q": "Fill in the boxes.",
-        "frame": "{a} + {b} = {c}",
-        "fields": [
-          {
-            "id": "a",
-            "answer": 7
-          },
-          {
-            "id": "b",
-            "answer": 7
-          },
-          {
-            "id": "c",
-            "answer": 14
-          }
-        ],
-        "easier": "c2",
-        "hint": "A double is two of the same.",
-        "steps": [
-          "Double 7 is 7 + 7 = 14."
+   ],
+   "note": "New-here card, about one minute. Read the four lines slowly. It replaces the longer routine and rules slides of Term 1 for children who joined this term, and it is the same card in every opening of the term. Nobody holds paper to the camera: answers are said together on three, shown with fingers or a thumbs up, or ticked on the child's own page. The still-stuck tick is private: a grown-up may photograph the look-back page after class."
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: touch and count",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "cup",
+     "n": 7,
+     "per_row": 7
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 7 small things in a row.",
+      "Touch each one once.",
+      "The last number tells how many."
+     ]
+    }
+   ],
+   "note": "Children set seven small things in a row and touch each one once while they count in a quiet voice. This is spiral review of counting and it lets a child who is new join: they see how it is done before they try. The picture shows seven cups for the tutor's own count. Answer: 7. A child who says a number for every touch but loses count can slide the things into a tidy row first.",
+   "mascot": {
+    "size": "s",
+    "say": "Ready? Off we go!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Just before, just after",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 1,
+     "end": 10,
+     "step": 1,
+     "label_every": 1,
+     "hide": [
+      5,
+      7
+     ],
+     "highlight": [
+      6
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Which numbers go in the empty boxes?"
+    }
+   ],
+   "note": "The 6 is marked. The two boxes beside it are the number just before and the number just after. Answers: 5 and 7, then 10 for just after 9. Children answer with fingers or a whispered number on three. Nobody writes. This reminds children that a place in a line is next to the places on both sides."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Front, back, behind, between",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 4,
+     "labels": "none",
+     "names": {
+      "1": "Aisha",
+      "2": "Kumar",
+      "3": "Wei",
+      "4": "Jenny"
+     }
+    },
+    {
+     "t": "chip",
+     "text": "The door is on the left. The front is next to the door."
+    }
+   ],
+   "note": "Point to the door on the picture. The child nearest the door (Aisha) is at the front. The child farthest from the door (Jenny) is at the back. Wei is behind Kumar. Wei is between Kumar and Jenny. Then each child lines up four small things the same way on the table. The four words front, back, behind and between are taught here once with a picture and once with real things."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Draw 5 dots in a line.",
+         "The door is on the left.",
+         "Colour the 2nd dot."
         ]
-      },
-      {
-        "id": "t3",
-        "tier": "stretch",
-        "type": "set",
-        "q": "Which numbers are in both the 2s and the 5s? Count to 40. Type the numbers with a comma between.",
-        "answer": [
-          10,
-          20,
-          30,
-          40
-        ],
-        "easier": "c4",
-        "hint": "Write the 5s, then cross out the odd ones.",
-        "steps": [
-          "Numbers in both: 10, 20, 30, 40."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "a": [
-              2
-            ],
-            "b": [
-              5
-            ],
-            "lim": [
-              30,
-              40,
-              50
-            ]
-          },
-          "q": "Which numbers are in both the {a}s and the {b}s? Count to {lim}. Type the numbers with a comma between.",
-          "answer": "common(a,b,lim)",
-          "hint": "Write the {b}s, then keep the ones in the {a}s.",
-          "steps": [
-            "Numbers in both: {ans}."
-          ]
-        }
-      },
-      {
-        "id": "g1",
-        "tier": "challenge",
-        "type": "number",
-        "q": "What is 2 x 6?",
-        "answer": 12,
-        "easier": "t1",
-        "hint": "Double 6.",
-        "steps": [
-          "6 + 6 = 12."
-        ],
-        "slips": [],
-        "tpl": {
-          "vars": {
-            "n": [
-              6,
-              8,
-              12,
-              18
-            ]
-          },
-          "q": "What is 2 x {n}? ",
-          "answer": "2*n",
-          "hint": "Double {n}.",
-          "steps": [
-            "{n} + {n} = {ans}."
-          ]
-        }
-      },
-      {
-        "id": "g2",
-        "tier": "challenge",
-        "type": "set",
-        "ordered": true,
-        "q": "Fill in both blanks: 4 + 4 + 4 = [] x [] . Type the two numbers with a comma between them.",
-        "answer": [
-          3,
-          4
-        ],
-        "easier": "t2",
-        "hint": "3 groups of 4.",
-        "steps": [
-          "3 groups of 4: 3 × 4."
-        ],
-        "slips": []
-      },
-      {
-        "id": "g3",
-        "tier": "challenge",
-        "type": "selfcheck",
-        "q": "Make up your own groups puzzle for a grown-up.",
-        "hint": "Pick the answer first.",
-        "steps": [
-          "Check that your puzzle has one answer."
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Mei is 4th in the line.",
+         "Ben stands right behind Mei.",
+         "How many children are in front of Ben? Write the number."
         ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: any child can draw dots and colour one. Puzzle 2 is a thinking question on the lesson idea: the number in front is one less than the place. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and keep it. Nobody holds paper to the camera and there is no private chat. Answers: the dot after the one next to the door; 4. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: make a line",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 6 things in a row.",
+      "Write FRONT on a paper. Put it at one end.",
+      "The thing next to FRONT is 1st. Touch each thing and say its place."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal"
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Objects first, no writing. Children set up six things and a FRONT paper, then say first, second, third, fourth, fifth, sixth together twice while they touch each thing. Call 4th, 2nd, 5th, 1st and 6th and have children place a coin; look around the gallery. The picture shows the written short forms 1st to 6th. Say the word and show the short form together. Answer: the last thing in a row of six is 6th."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "How many? Which place?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal",
+     "highlight": [
+      6
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "HOW MANY?",
+        "items": [
+         "There are 6 children.",
+         "The number 6 says how many."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "WHICH PLACE?",
+        "items": [
+         "The last child is 6th.",
+         "The word 6th says which one."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Children put the place cards 1st to 6th under their six things. Ask: how many things? 6. What place is the last thing? 6th. The number says how many; the place says which one. Then take away the last three things and the cards 4th, 5th and 6th: 3 things are left and the last one is 3rd. In a row, the place of the last thing is the same as the number of things, but the two words do different jobs."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Turn the line around",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal",
+     "names": {
+      "1": "6th",
+      "2": "5th",
+      "3": "4th",
+      "4": "3rd",
+      "5": "2nd",
+      "6": "1st"
+     },
+     "highlight": [
+      2
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Top words: the place counted from the other end. Bottom words: the place counted from the front."
+    }
+   ],
+   "note": "Round 3, about 4 minutes. Children move the FRONT paper to the other end of their row. The things stay where they are. The picture shows both counts at once: the bottom words are the places from the front (the door is on the left), the top words are the places from the other end. The ringed child is 2nd from the front and 5th from the other end. Ask: which thing is first now? What did you notice? Say the words from the front and from the back. Do not use numbers on a board."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "The place names",
+   "blocks": [
+    {
+     "t": "numrow",
+     "items": [
+      "1st",
+      "2nd",
+      "3rd",
+      "4th",
+      "5th"
+     ]
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "6th",
+      "7th",
+      "8th",
+      "9th",
+      "10th"
+     ]
+    },
+    {
+     "t": "card",
+     "head": "REMEMBER",
+     "items": [
+      "Say first, second, third, fourth ... tenth.",
+      "Only 1st, 2nd and 3rd end differently."
+     ]
+    }
+   ],
+   "note": "Read the places with the children: first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth. The short forms end in st, nd, rd or th. Most end in th. Watch for 2th and 3th written for 2nd and 3rd. Ask: what is after 7th (8th)? What is before 10th (9th)? Stop at 10th today: 11th and 12th are not needed."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "From the front, from the back",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal",
+     "names": {
+      "1": "6th",
+      "2": "5th",
+      "3": "4th",
+      "4": "3rd",
+      "5": "2nd",
+      "6": "1st"
+     },
+     "highlight": [
+      2
+     ]
+    },
+    {
+     "t": "card",
+     "head": "SAME CHILD",
+     "items": [
+      "From the front: 2nd.",
+      "From the back: 5th."
+     ]
+    }
+   ],
+   "note": "The picture is the line from Explore. Bottom words count from the front (the door). Top words count from the back. Ask the group to read both places for the ringed child: 2nd from the front, 5th from the back. The child did not move. We only counted from the other end. Common slip: a child counts from the wrong end. Slide a finger from the door, then from the other end."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "How many are in front?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 7,
+     "labels": "ordinal",
+     "names": {
+      "5": "Ben"
+     },
+     "highlight": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "card",
+     "head": "BEN IS 5TH",
+     "items": [
+      "The 4 children in the rings are in front of Ben."
+     ]
+    }
+   ],
+   "note": "Ben is 5th. The four children in the rings are in front of him: 1st, 2nd, 3rd, 4th. The place is 5th but the number in front is 4. Ask: if Ben is 6th, how many are in front? 5. Say the rule in words: the number in front is one less than the place. This is the idea behind sneak-peek puzzle 2."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "A clue puzzle",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 5,
+     "labels": "ordinal",
+     "names": {
+      "2": "Aisha"
+     }
+    },
+    {
+     "t": "card",
+     "head": "CLUES",
+     "items": [
+      "Aisha is 2nd.",
+      "Kumar stands right behind Aisha."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Right behind means the very next place."
+    }
+   ],
+   "note": "Ask: who is 3rd? Kumar. Then say Wei stands right behind Kumar and ask the place of Wei: 4th. Right behind means the very next place after. Keep to one clue at a time. The answers are not on the slide: children answer on three or whisper to a grown-up first."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Write on your paper. About 1 minute"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "HOW MANY?",
+        "items": [
+         "Ben is 6th.",
+         "How many children are in front of Ben?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "WHICH PLACE?",
+        "items": [
+         "Mei is 3rd.",
+         "Siti stands right behind Mei.",
+         "What place is Siti?"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Each child writes two answers on their own paper. Wait until most children have stopped writing. Do not ask children to hold boards or papers up. If a child finishes early, they may check by lining up their things and counting."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: your turn",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "HOW MANY?",
+        "items": [
+         "Ben is 6th."
+        ]
+       },
+       {
+        "t": "answer",
+        "text": "5 children are in front of Ben"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "WHICH PLACE?",
+        "items": [
+         "Mei is 3rd. Siti is right behind."
+        ]
+       },
+       {
+        "t": "answer",
+        "text": "Siti is 4th"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Ben is 6th, so 5 children are in front. Siti is right behind Mei, so Siti is 4th. If a child wrote 6 for the first, ask them to put a finger on each child in front of Ben and count."
+  },
+  {
+   "id": "s-m6",
+   "part": "mini",
+   "kind": "light",
+   "title": "Extra: counting both ends",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 5,
+     "labels": "ordinal",
+     "names": {
+      "3": "Aisha"
+     },
+     "highlight": [
+      3
+     ]
+    },
+    {
+     "t": "card",
+     "head": "AISHA IS 3RD FROM THE FRONT AND 3RD FROM THE BACK",
+     "items": [
+      "2 in front + Aisha + 2 behind = 5 children."
+     ]
+    }
+   ],
+   "note": "THINK HARDER PREVIEW: Start here never needs this idea. Aisha is 3rd from the front and 3rd from the back. Two children are in front, two are behind, and Aisha is counted once, so the line has 5 children. 3 + 3 = 6 counts Aisha twice. Ask: why is it 5 and not 6? Take one answer and move on."
+  },
+  {
+   "id": "s-m7",
+   "part": "mini",
+   "kind": "light",
+   "title": "Extra: between two places",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 7,
+     "labels": "ordinal",
+     "between": [
+      2,
+      6
+     ]
+    },
+    {
+     "t": "card",
+     "head": "BETWEEN THE 2ND AND THE 6TH",
+     "items": [
+      "The 3rd, 4th and 5th: 3 children."
+     ]
+    }
+   ],
+   "note": "THINK HARDER PREVIEW: Start here never needs this idea. The red bracket marks the children between the 2nd and the 6th. They are the 3rd, the 4th and the 5th: 3 children. The two end children are not between. Ask: is the 2nd child between? No. Take one answer and move on."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Moves in order",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "1st: clap"
+    },
+    {
+     "t": "p",
+     "text": "2nd: stamp"
+    },
+    {
+     "t": "p",
+     "text": "3rd: turn around"
+    },
+    {
+     "t": "p",
+     "text": "4th: touch your toes"
+    },
+    {
+     "t": "p",
+     "text": "5th: jump once"
+    },
+    {
+     "t": "p",
+     "text": "Do the moves in order. Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Call the list in order, then twice, then call moves out of order (3rd, 5th, 1st, last). No equipment, small moves, keep it gentle for small spaces. A child may stay seated and move only their arms. The last move is the move you did last: the 5th."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. About 8 minutes"
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. Question 1 is a True or False tick table, so no place names need writing. After question 3 any child may choose to carry on or try Think harder. The pictures on this slide are small; the printed page has the full picture."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Question 1: True, False, True. Question 2: 1st to 8th. Question 3: 10 children and the last is 10th."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 7. About 10 minutes"
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read the four questions aloud, one at a time, and show where the picture is. Remind children that right behind means the very next place. Question 5 asks for the place counted from the back; children may line up six things and count from the other end. Question 7 asks how many children are in front, not the place. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 4: Kumar is 3rd. Question 5: Jenny is 5th from the back. Question 6: Kumar is 2nd. Question 7: 4 children. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Our idea in a new setting"
+      ],
+      [
+       "Go further (page 4)",
+       "Bigger puzzles"
+      ],
+      [
+       "Investigation (page 5)",
+       "Two places for one child"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. You can swap at any time."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "ALI AND MEI",
+     "items": [
+      "Ali is 2nd in the line.",
+      "Mei says Ali is also 6th."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Can both be true? How?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes, if the line has 7 children. Mei counted from the back. Accept any reason that names the other end. Repeat each child's answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 5,
+     "labels": "ordinal",
+     "names": {
+      "4": "Mei",
+      "5": "Ben"
+     },
+     "highlight": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "4 children are in front of Ben. Ben is 5th."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Mei is 4th and Ben stands right behind her, so Ben is 5th. In front of him are the 1st, the 2nd, the 3rd and Mei: 4 children. Say: some of you may have found a good reason. Do not read out anyone's earlier answer."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back. About 3 minutes"
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and show fingers for how many they got right."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children check their own ticket in a different colour. Question 1: Ben is 4th, so 3 children are in front. Question 2: Mei is 2nd from the back. Question 3: Wei is 5th."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: two more join",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mei is 3rd. Ben is 7th."
+    },
+    {
+     "t": "p",
+     "text": "Two more children join the line between Mei and Ben. What place is Ben now?"
+    }
+   ],
+   "note": "Optional, only if you are on time. Answer: 9th. Two children join between them, so Ben moves back 2 places: 7 and 2 more is 9. Take two answers and move on. A child who says 7th is thinking of Ben's old place.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Always, sometimes, never?",
+       "The 3rd from the front is the 3rd from the back. How often?"
+      ],
+      [
+       "Make a puzzle",
+       "Make a place puzzle for your grown-up"
+      ],
+      [
+       "Act it out",
+       "Make a line of toys and swap two places"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Bar Strips. Bring a sheet with strips to cut, 2 colouring pencils and about 20 counters."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class was ahead, you showed the optional slide and used the Spare-time menu before this goodbye.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  }
+ ],
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Study the picture. The door is on the left.",
+    "answer": "True, False, True",
+    "val": [
+     "True",
+     "False",
+     "True"
+    ],
+    "hint": "Start at the door. Touch each child in order and say the places.",
+    "solution": "Aisha is 1st, Kumar is 2nd, Wei is 3rd, Jenny is 4th and Lily is 5th. So 'Wei is 3rd' is true. 'Jenny is 5th' is false, because Jenny is 4th. Lily is the last child, so she is behind Jenny: true.",
+    "mistakes": [
+     "Counting from the wrong end.",
+     "Saying Jenny is 5th because Lily was missed."
+    ],
+    "mins": 2,
+    "parts": [],
+    "lines": 0,
+    "tf": [
+     {
+      "s": "Wei is 3rd."
+     },
+     {
+      "s": "Jenny is 5th."
+     },
+     {
+      "s": "Lily is behind Jenny."
+     }
+    ],
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 5,
+      "labels": "none",
+      "names": {
+       "1": "Aisha",
+       "2": "Kumar",
+       "3": "Wei",
+       "4": "Jenny",
+       "5": "Lily"
       }
+     }
     ]
-  },
-  "parent": {
-    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Tens and ones is familiar school work. Opening a bundle (5 tens and 14 ones is 6 tens and 4 ones) goes further, and is in Think harder and Go further.",
-    "words": [
-      "bundle or ten: ten single things tied together",
-      "single or one: a thing on its own",
-      "tens digit: the left digit, it counts the bundles",
-      "ones digit: the right digit, it counts the singles"
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Fill in the places of the children. The door is on the left.",
+    "answer": "1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th",
+    "val": [
+     "1st",
+     "2nd",
+     "3rd",
+     "4th",
+     "5th",
+     "6th",
+     "7th",
+     "8th"
     ],
-    "try_home": [
-      "Bundle it: grab a handful of pasta, clips or buttons. Tie bundles of ten with hair ties or cups. Ask: how many tens and how many ones? Write the number together. Small things stay on the table, away from mouths and little brothers and sisters.",
-      "Show me: say a number up to 60 and let your child build it with bundles and singles. Swap roles and make a mistake on purpose for them to find.",
-      "Spot it: look at page numbers, lift buttons or door numbers. Ask: how many tens is that? Which digit tells you?"
+    "hint": "Start at the door. The child next to the door is 1st. Say each place as you write it.",
+    "solution": "The child next to the door is 1st. Then 2nd, 3rd, 4th, 5th, 6th, 7th and 8th for the last child.",
+    "mistakes": [
+     "Writing 2th or 3th.",
+     "Counting from the wrong end.",
+     "Writing 1 instead of 1st."
     ],
-    "ask": [
-      "How do you know?",
-      "Which digit tells how many bundles?",
-      "What if you opened a bundle?"
-    ],
-    "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Please do not hurry or say it is easy. If the look-back page says 'I am still stuck', please photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept up to 90 days.",
-    "next": "Next lesson: the stub has no next lesson.",
-    "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: reading and writing two-digit numbers from bundles of ten and single ones.",
-    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-    "quote": "A number is tens and ones. Ten singles tie into one bundle.",
-    "next_materials": [
-      "A pencil and paper.",
-      "Twenty small things (pasta or buttons)."
+    "mins": 2.5,
+    "parts": [],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 8,
+      "labels": "box"
+     }
     ]
-  },
-  "safeguarding": [
-    "Small things stay on the table: nothing goes in the mouth or ears, and nothing is left where a younger brother or sister can reach it. No matches, toothpicks or anything sharp. Use hair ties, cups or paper rings. No rubber bands: they can flick.",
-    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
-    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
-    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Count the children. The door is on the left.",
+    "answer": "10 children; the last child is 10th",
+    "val": [
+     10,
+     "10th"
+    ],
+    "hint": "Touch each child once and count. The last number says how many. Then say the place of the last child.",
+    "solution": "Count 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. There are 10 children. The last child is 10th.",
+    "mistakes": [
+     "Writing 10 for both blanks.",
+     "Miscounting a child twice."
+    ],
+    "mins": 2.5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [2] children in the line.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "b",
+      "text": "The last child is ___ in the line.",
+      "ans": "10th",
+      "val": "10th"
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 10,
+      "labels": "none"
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Aisha is 2nd in the line. Kumar stands right behind Aisha.",
+    "answer": "Kumar is 3rd",
+    "val": [
+     "3rd"
+    ],
+    "hint": "Right behind means the very next place after Aisha.",
+    "solution": "Aisha is 2nd. The very next place is 3rd, so Kumar is 3rd.",
+    "mistakes": [
+     "Writing 1st because Kumar is behind.",
+     "Writing 2nd, Aisha's own place."
+    ],
+    "mins": 2.5,
+    "parts": [
+     {
+      "l": "",
+      "text": "Kumar is ___ in the line.",
+      "ans": "3rd",
+      "val": "3rd"
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 6,
+      "labels": "none",
+      "names": {
+       "2": "Aisha"
+      }
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Jenny is 2nd from the front in a line of 6 children.",
+    "answer": "5th from the back",
+    "val": [
+     "5th"
+    ],
+    "hint": "Put 6 things in a row. Count from the far end to Jenny's thing.",
+    "solution": "Count from the back: Lily's place is 1st, then 2nd, 3rd, 4th, and Jenny is 5th from the back. Check: the places from the front and the back are 2 and 5 and they make 7, one more than 6.",
+    "mistakes": [
+     "Writing 2nd again.",
+     "Writing 4th by counting only the children behind Jenny."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "",
+      "text": "Jenny is ___ from the back.",
+      "ans": "5th",
+      "val": "5th"
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 6,
+      "labels": "none",
+      "names": {
+       "2": "Jenny"
+      }
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Wei is 1st. Lily is 3rd. Kumar stands between Wei and Lily.",
+    "answer": "Kumar is 2nd",
+    "val": [
+     "2nd"
+    ],
+    "hint": "Between means in the middle of the two. Which place is between 1st and 3rd?",
+    "solution": "Wei is 1st and Lily is 3rd. The place between them is 2nd, so Kumar is 2nd.",
+    "mistakes": [
+     "Writing 4th.",
+     "Writing 1st or 3rd, the place of one of the clues."
+    ],
+    "mins": 2.5,
+    "parts": [
+     {
+      "l": "",
+      "text": "Kumar is ___ in the line.",
+      "ans": "2nd",
+      "val": "2nd"
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 6,
+      "labels": "none",
+      "names": {
+       "1": "Wei",
+       "3": "Lily"
+      }
+     }
+    ]
+   },
+   {
+    "id": "S7",
+    "page": 2,
+    "tier": "start",
+    "text": "Ben is 5th in the line.",
+    "answer": "4 children",
+    "val": [
+     4
+    ],
+    "hint": "Put a finger on each child in front of Ben and count them.",
+    "solution": "The children in front of Ben are 1st, 2nd, 3rd and 4th. That is 4 children. Ben himself is 5th, and he is not in front of himself.",
+    "mistakes": [
+     "Writing 5, Ben's own place.",
+     "Writing 6 by counting Ben and the child behind."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] children in front of Ben.",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 8,
+      "labels": "none",
+      "names": {
+       "5": "Ben"
+      }
+     }
+    ]
+   }
   ],
-  "tutor_prep": [
-    "Solve every workbook question yourself first.",
-    "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups. Small things stay away from mouths and from younger children.",
-    "Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
-    "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
-  ],
-  "spare_time": {
-    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
-    "rules": [
-      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
-      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
-      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei is 5th from the front and 5th from the back.",
+    "answer": "No; 9 children",
+    "val": [
+     "No",
+     9
     ],
-    "menu": [
-      {
-        "id": "M1",
-        "title": "Is it always true?",
-        "minutes": 4,
-        "tutor": "Mei says: if you add one more single stick, the ones digit goes up by one. Is that always true? Try 23, 47 and 39 with your sticks or kit.",
-        "rec": "Recording: pause. Try 23, 47 and 39 with one more single each. Is Mei always right?",
-        "answer": "Not always. 23 and 47 become 24 and 48. 39 plus one single makes ten singles, which tie into a new bundle: 40. It is true unless the ones digit is 9."
-      },
-      {
-        "id": "M2",
-        "title": "Make a puzzle for your grown-up",
-        "minutes": 4,
-        "tutor": "Pick a secret number. Write two clues about its tens and its ones, like: it has 4 bundles and the ones digit is 7. Give it to your grown-up to solve.",
-        "rec": "Recording: pause. Write a mystery number puzzle with two clues for a grown-up to solve.",
-        "answer": "No single answer. Check that the clues fit the secret number and fit only one number."
-      },
-      {
-        "id": "M3",
-        "title": "Teach it back",
-        "minutes": 3,
-        "tutor": "Pretend your grown-up or a toy has never seen bundles. Teach them how to read 52 using bundles and singles.",
-        "rec": "Recording: pause. Teach a grown-up how to read 52 with bundles and singles.",
-        "answer": "52 is 5 bundles of ten and 2 singles. The left digit counts the bundles, the right digit counts the singles."
+    "hint": "Draw the line. Put Mei in the middle. Count the children in front of Mei and the children behind her.",
+    "solution": "In front of Mei are 4 children. Behind Mei are 4 children. Together with Mei that is 4 + 1 + 4 = 9 children. Kumar's 10 counted Mei twice (5 + 5).",
+    "mistakes": [
+     "Adding 5 + 5 = 10 and counting Mei twice.",
+     "Forgetting Mei and writing 8."
+    ],
+    "mins": 5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Kumar says there are 10 children in the line. Is Kumar correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No"
+     },
+     {
+      "l": "b",
+      "text": "There are ___ children in the line.",
+      "ans": "9",
+      "val": 9
+     }
+    ],
+    "lines": 0,
+    "draw": true,
+    "draw_strokes": 12
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Ali is 3rd and Mei is 9th in a line of 10 children.",
+    "answer": "5 children",
+    "val": [
+     5
+    ],
+    "hint": "The children between are the ones after the 3rd and before the 9th. Say their places.",
+    "solution": "The children between Ali and Mei are 4th, 5th, 6th, 7th and 8th. That is 5 children. Ali and Mei are not between themselves.",
+    "mistakes": [
+     "Writing 6 by doing 9 - 3.",
+     "Counting Ali and Mei as well and writing 7."
+    ],
+    "mins": 4,
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] children between Ali and Mei.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 10,
+      "labels": "ordinal",
+      "names": {
+       "3": "Ali",
+       "9": "Mei"
       }
+     }
     ]
-  },
-  "workbook": {
-    "header": "Template check: Term 2 figures",
-    "hint_p1": "Use counters or a drawing. Say your answer out loud, then write it.",
-    "hint_p2": "Work in order. Read each box carefully.",
-    "hint_p3": "Use objects or draw a picture. Choose any question.",
-    "kits": [
-      {
-        "type": "ten_frame",
-        "title": "Kit page: ten-frames and counters",
-        "intro": "A grown-up cuts these out before the lesson."
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "The door is on the right. Count the places from the door.",
+    "answer": "6th",
+    "val": [
+     "6th"
+    ],
+    "hint": "Put a finger on the door and count along the line to Jason.",
+    "solution": "The door is on the right, so the child next to the door is 1st. Counting along to the left, Jason is the 6th child. Check: he is 2nd from the left end, and 7 - 2 + 1 = 6.",
+    "mistakes": [
+     "Counting from the left end and writing 2nd.",
+     "Writing 5th by missing one child."
+    ],
+    "mins": 4,
+    "parts": [
+     {
+      "l": "",
+      "text": "Jason is ___ in the line.",
+      "ans": "6th",
+      "val": "6th"
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "line_up",
+      "n": 7,
+      "labels": "none",
+      "names": {
+       "6": "Jason"
       },
-      {
-        "type": "groups_mat",
-        "n": 6,
-        "title": "Kit page: plates",
-        "intro": "Put counters on the plates. No cutting."
-      },
-      {
-        "type": "unit_strips",
-        "title": "Kit page: strips",
-        "intro": "Cut a strip to any length at the dotted lines."
-      },
-      {
-        "type": "array_mat",
-        "title": "Kit page: array mat",
-        "intro": "Lay counters on the squares."
-      },
-      {
-        "type": "people",
-        "title": "Kit page: people",
-        "intro": "Cut out the people for lining up."
+      "front": "right"
+     }
+    ]
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "There are 8 children in a line. Wei is 2nd from the front. Lily is 3rd from the back.",
+    "answer": "3 children",
+    "val": [
+     3
+    ],
+    "hint": "Find Lily's place from the front first. Then say the places between.",
+    "solution": "Lily is 3rd from the back, so she is 6th from the front (8 children: 8 - 3 + 1 = 6). Wei is 2nd. Between them are the 3rd, 4th and 5th: 3 children.",
+    "mistakes": [
+     "Writing 4 by doing 6 - 2.",
+     "Forgetting to turn Lily's place around."
+    ],
+    "mins": 5,
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] children between Wei and Lily.",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "lines": 0,
+    "draw": true,
+    "draw_strokes": 12
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Six children sit round a table. The seats are numbered 1 to 6. Ali is in seat 1, Mei is in seat 3 and Ben is in seat 5.",
+    "answer": "Seat 2; seat 4; seat 6",
+    "val": [
+     2,
+     4,
+     6
+    ],
+    "hint": "Find the seat next to both children. For opposite, count three seats round the table.",
+    "solution": "(a) Seat 2 is next to seat 1 and seat 3, so Siti sits in seat 2. (b) Opposite seat 1 is seat 4, three seats round. (c) Seat 6 is next to seat 5 and seat 1, so Kumar sits in seat 6.",
+    "mistakes": [
+     "Putting Siti in seat 4.",
+     "Choosing seat 3 as opposite seat 1."
+    ],
+    "mins": 6,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Siti sits between Ali and Mei. Siti is in seat ___.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "Ravi sits opposite Ali. Ravi is in seat ___.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "c",
+      "text": "Kumar sits between Ben and Ali. Kumar is in seat ___.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "lines": 0,
+    "visuals": [
+     {
+      "type": "round_table",
+      "seats": 6,
+      "names": {
+       "1": "1 Ali",
+       "2": "2",
+       "3": "3 Mei",
+       "4": "4",
+       "5": "5 Ben",
+       "6": "6"
       }
+     }
     ]
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A line has 13 children. Mei is 4th from the front. Ben is 3rd from the back.",
+    "answer": "6 children; 7th",
+    "val": [
+     6,
+     "7th"
+    ],
+    "hint": "Turn Ben's place around to count from the front. For the middle, there are the same number of children on each side.",
+    "solution": "(a) Ben is 11th from the front (13 - 3 + 1 = 11). Between the 4th and the 11th are the 5th to the 10th: 6 children. (b) The middle child has 6 children in front and 6 behind, so is 7th.",
+    "mistakes": [
+     "Writing 7 for (a) by doing 11 - 4.",
+     "Writing 6th or 6 for the middle child."
+    ],
+    "mins": 6,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] children between Mei and Ben.",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "b",
+      "text": "The middle child is ___ from the front.",
+      "ans": "7th",
+      "val": "7th"
+     }
+    ],
+    "lines": 0
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Four children ran a race. Siti was 1st. Ben beat Ali. Ali beat Mei.",
+    "answer": "Ben 2nd; Mei 4th",
+    "val": [
+     "2nd",
+     "4th"
+    ],
+    "hint": "Siti is 1st. Ben beat Ali, so Ben is in front of Ali. Write the three names in order.",
+    "solution": "Siti is 1st. Ben beat Ali, and Ali beat Mei, so the order is Siti, Ben, Ali, Mei. Ben was 2nd and Mei was 4th.",
+    "mistakes": [
+     "Putting Ali 2nd.",
+     "Writing 3rd for Mei."
+    ],
+    "mins": 5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ben was ___.",
+      "ans": "2nd",
+      "val": "2nd"
+     },
+     {
+      "l": "b",
+      "text": "Mei was ___.",
+      "ans": "4th",
+      "val": "4th"
+     }
+    ],
+    "lines": 1
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Two places for one child",
+   "first": "Draw 5 dots in a line. Write 1st to 5th above the dots. Below the dots, write the places counting from the back.",
+   "text": "Do the same for a line of 8 dots. Pick 3 children. For each, add the place from the front and the place from the back. Line 4: I notice ...",
+   "lines": 4,
+   "answer": "For a line of 5, every child's two places add to 6: 1 and 5, 2 and 4, 3 and 3, 4 and 2, 5 and 1. For a line of 8 they add to 9. The two places always add to one more than the number of children, because the child is counted once from each end.",
+   "val": [
+    "add to 6",
+    "add to 9"
+   ],
+   "look_for": "A child who writes both places for several children, adds them, and notices the total is the same for every child in one line, and one more than the number of children. Praise the notice, not the speed.",
+   "mistakes": [
+    "Counting from the same end twice.",
+    "Trying only one child."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Ali is 2nd in the line. Mei says Ali is also 6th. Can both be true? How?",
+  "starter": "I think ... because ...",
+  "answer": "Yes. If the line has 7 children, Ali is 2nd counting from the front and 6th counting from the back. Mei counted from the other end.",
+  "look_for": "A reason that names the other end (the back) and, for a strong answer, the number of children in the line. Praise the reason, not who is right."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Ben is 4th in the line.",
+   "answer": "3 children",
+   "val": [
+    3
+   ],
+   "hint": "Use your things in a row or draw dots.",
+   "solution": "The children in front of Ben are the 1st, 2nd and 3rd. That is 3 children, because Ben himself is 4th.",
+   "mistakes": [
+    "Writing 4, Ben's own place."
+   ],
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] children in front of Ben.",
+     "ans": "3",
+     "val": 3
+    }
+   ]
   },
-  "stub": true
+  {
+   "id": "E2",
+   "text": "Mei is 5th from the front in a line of 6 children.",
+   "answer": "2nd from the back",
+   "val": [
+    "2nd"
+   ],
+   "hint": "Use your things in a row or draw dots.",
+   "solution": "Mei is 5th from the front, so only 1 child is behind her. Counting from the back: that child is 1st and Mei is 2nd.",
+   "mistakes": [
+    "Writing 1st or 5th."
+   ],
+   "parts": [
+    {
+     "l": "",
+     "text": "Mei is ___ from the back.",
+     "ans": "2nd",
+     "val": "2nd"
+    }
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "Aisha is 3rd in the line. Kumar is right behind Aisha. Wei is right behind Kumar.",
+   "answer": "Wei is 5th",
+   "val": [
+    "5th"
+   ],
+   "hint": "Use your things in a row or draw dots.",
+   "solution": "Aisha is 3rd. Kumar is right behind, so Kumar is 4th. Wei is right behind Kumar, so Wei is 5th.",
+   "mistakes": [
+    "Writing 4th."
+   ],
+   "parts": [
+    {
+     "l": "",
+     "text": "Wei is ___ in the line.",
+     "ans": "5th",
+     "val": "5th"
+    }
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "saying 1st, 2nd, 3rd",
+   "counting from the back",
+   "4 or 4th",
+   "how many are between",
+   "something else"
+  ],
+  "helped": [
+   "my things in a row",
+   "touching each one",
+   "drawing the line",
+   "I asked for help",
+   "I was not stuck"
+  ],
+  "next": [
+   "use my things in a row",
+   "draw the line",
+   "check my answer",
+   "ask a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Put 6 toys in a row. Put a coin on the 4th toy from the front. Then write: the coin is on the toy that is ___ from the back.",
+   "answer": "3rd",
+   "val": "3rd",
+   "solution": "From the front the coin is on the 4th toy. Count from the back: the last toy is 1st, then 2nd, then the coin toy is 3rd."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Kumar is 7th in the line. How many children are in front of Kumar?",
+   "answer": "6 children",
+   "val": 6,
+   "solution": "The children in front are the 1st to the 6th. That is 6 children. Kumar himself is the 7th."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Aisha is 2nd. Wei is right behind Aisha. Lily is right behind Wei. Lily is ___ in the line.",
+   "answer": "4th",
+   "val": "4th",
+   "solution": "Wei is right behind Aisha, so Wei is 3rd. Lily is right behind Wei, so Lily is 4th."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Jenny is 4th from the front and 4th from the back. How many children are in the line? Write: I know because ...",
+   "answer": "7 children",
+   "val": 7,
+   "solution": "In front of Jenny are 3 children, behind her are 3 children, and Jenny makes 1. 3 + 1 + 3 = 7. It is not 8, because 4 + 4 counts Jenny twice."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "Draw a line of 9 children. Ali is in the middle. Ben stands 2 places behind Ali. Ben is ___ from the front.",
+   "answer": "7th",
+   "val": "7th",
+   "solution": "A line of 9 has 4 children in front of the middle child and 4 behind, so Ali is 5th. Ben is 2 places behind Ali, so Ben is 5 + 2 = 7th."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l11",
+  "title": "Who Is Where?",
+  "topic": "Places in a line",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "The door is on the left. What place is the child in the ring? Type just the number: for 3rd, type 3.",
+    "answer": 3,
+    "hint": "Start at the door and count along to the child in the ring.",
+    "steps": [
+     "Start at the door. The child next to the door is 1st.",
+     "Count along to the child in the ring.",
+     "The child is 3rd."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is how many children are in the line. The question asks for the place of the child in the ring."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       5,
+       6,
+       7,
+       8
+      ],
+      "k": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "The door is on the left. What place is the child in the ring? Type just the number: for 3rd, type 3.",
+     "answer": "k",
+     "hint": "Start at the door and count along to the child in the ring.",
+     "steps": [
+      "Start at the door. The child next to the door is 1st.",
+      "Count along to the child in the ring.",
+      "The child is {k|ord}."
+     ]
+    },
+    "fig": {
+     "type": "line_up",
+     "n": "{n}",
+     "labels": "none",
+     "highlight": [
+      "{k}"
+     ]
+    },
+    "fig_base": {
+     "type": "line_up",
+     "n": 6,
+     "labels": "none",
+     "highlight": [
+      3
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "The child in the ring is 5th in the line. How many children are in front of this child?",
+    "answer": 4,
+    "hint": "Count the children before the ring. The ring is on the 5th child.",
+    "steps": [
+     "The children in front are the 1st, 2nd, 3rd and 4th.",
+     "That is 4 children.",
+     "The child in the ring is not in front of themselves."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is the place of the child in the ring. Count only the children in front."
+     },
+     {
+      "a": [
+       6
+      ],
+      "say": "6 counts the child in the ring and one more. Count only the children in front."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "derive": {
+      "m": "k+2"
+     },
+     "q": "The child in the ring is {k|ord} in the line. How many children are in front of this child?",
+     "answer": "k-1",
+     "hint": "Count the children before the ring. The ring is on the {k|ord} child.",
+     "steps": [
+      "The children in front have one place less than the child in the ring.",
+      "{k} take away 1 is {ans}.",
+      "{ans} children are in front."
+     ]
+    },
+    "fig": {
+     "type": "line_up",
+     "n": "{m}",
+     "labels": "none",
+     "highlight": [
+      "{k}"
+     ]
+    },
+    "fig_base": {
+     "type": "line_up",
+     "n": 7,
+     "labels": "none",
+     "highlight": [
+      5
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Mei is 4th in the line. Which sentence is true?",
+    "options": [
+     "3 children are in front of Mei.",
+     "4 children are in front of Mei.",
+     "5 children are in front of Mei.",
+     "4 children are behind Mei."
+    ],
+    "answer": "3 children are in front of Mei.",
+    "hint": "Count the places before 4th: 1st, 2nd, 3rd.",
+    "steps": [
+     "The places before 4th are 1st, 2nd and 3rd.",
+     "So 3 children are in front of Mei.",
+     "The line may be longer, so we cannot say how many are behind."
+    ],
+    "slips": [
+     {
+      "a": [
+       "4 children are in front of Mei."
+      ],
+      "say": "4 is Mei's place. Count only the children in front of her."
+     }
+    ]
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "number",
+    "q": "There are 8 children in a line. Aisha is 3rd from the front. What place is Aisha from the back? Type just the number.",
+    "answer": 6,
+    "hint": "Count from the back end: 1st, 2nd, and so on, up to Aisha.",
+    "steps": [
+     "Aisha is 3rd from the front, so 2 children are in front of her.",
+     "The other 5 children are behind her.",
+     "Counting from the back, Aisha is 6th."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 children are behind Aisha. Aisha is 6th: count her too."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "f": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "There are {n} children in a line. Aisha is {f|ord} from the front. What place is Aisha from the back? Type just the number.",
+     "answer": "n-f+1",
+     "hint": "Count from the back end: 1st, 2nd, and so on, up to Aisha.",
+     "steps": [
+      "The places from the front and the back add to one more than the number of children.",
+      "{n} + 1 take away {f} is {ans}.",
+      "Aisha is {ans|ord} from the back."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei is 5th from the front and 5th from the back. How many children are in the line?",
+    "answer": 9,
+    "hint": "Draw the line. Count the children in front of Mei, Mei herself and the children behind.",
+    "steps": [
+     "4 children are in front of Mei and 4 are behind.",
+     "4 + 1 + 4 = 9.",
+     "It is not 10, because 5 + 5 counts Mei twice."
+    ],
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "10 counts Mei twice. Count her only once."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "q": "Mei is {k|ord} from the front and {k|ord} from the back. How many children are in the line?",
+     "answer": "2*k-1",
+     "hint": "Draw the line. Count the children in front of Mei, Mei herself and the children behind.",
+     "steps": [
+      "{k} take away 1 children are in front of Mei, and the same number are behind.",
+      "Count Mei once: that is 2 times {k} take away 1.",
+      "There are {ans} children in the line."
+     ]
+    },
+    "easier": "c2"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ali is 3rd and Mei is 9th in a line. How many children are between them?",
+    "answer": 5,
+    "hint": "Say the places between: after the 3rd and before the 9th.",
+    "steps": [
+     "The places between are 4th, 5th, 6th, 7th and 8th.",
+     "That is 5 children."
+    ],
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 is 9 take away 3, which counts Mei. Between does not count Ali or Mei."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       7,
+       8,
+       9
+      ]
+     },
+     "q": "Ali is {a|ord} and Mei is {b|ord} in a line. How many children are between them?",
+     "answer": "b-a-1",
+     "hint": "Say the places between: after the {a|ord} and before the {b|ord}.",
+     "steps": [
+      "Take {a} from {b}, then take 1 more, because neither Ali nor Mei is between.",
+      "{b} take away {a} take away 1 is {ans}.",
+      "{ans} children are between them."
+     ]
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "set",
+    "ordered": true,
+    "q": "Ali is 3rd and Mei is 7th. List the places of the children between them. Type the numbers with a comma between.",
+    "answer": [
+     4,
+     5,
+     6
+    ],
+    "easier": "c3",
+    "hint": "Count on from 3rd, but stop before 7th.",
+    "steps": [
+     "After the 3rd comes the 4th.",
+     "Stop just before the 7th.",
+     "The places are 4, 5, 6."
+    ],
+    "slips": [
+     {
+      "a": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "say": "3 and 7 are Ali and Mei. They are not between themselves."
+     }
+    ]
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A line has 13 children. Which place is the child in the middle? Type just the number.",
+    "answer": 7,
+    "hint": "The middle child has the same number of children in front and behind.",
+    "steps": [
+     "Take the middle child away. 12 children are left.",
+     "Half of 12 is 6 in front and 6 behind.",
+     "So the middle child is 7th."
+    ],
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 children are in front of the middle child. The middle child is 7th."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       7,
+       9,
+       11,
+       13,
+       15
+      ]
+     },
+     "q": "A line has {n} children. Which place is the child in the middle? Type just the number.",
+     "answer": "(n+1)/2",
+     "hint": "The middle child has the same number of children in front and behind.",
+     "steps": [
+      "Take the middle child away. The other children make two equal groups.",
+      "Half of {n} take away 1 are in front of the middle child.",
+      "The middle child is {ans|ord}."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A line has 13 children. Mei is 4th from the front. Ben is 3rd from the back. How many children are between Mei and Ben?",
+    "answer": 6,
+    "hint": "Find Ben's place from the front first. Then say the places between.",
+    "steps": [
+     "Ben is 11th from the front, because 13 take away 3, add 1, is 11.",
+     "Between the 4th and the 11th are the 5th to the 10th.",
+     "That is 6 children."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is 11 take away 4. Between does not count Ben, so take away one more."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       10,
+       11,
+       12,
+       13,
+       14
+      ]
+     },
+     "q": "A line has {n} children. Mei is 4th from the front. Ben is 3rd from the back. How many children are between Mei and Ben?",
+     "answer": "n-7",
+     "hint": "Find Ben's place from the front first. Then say the places between.",
+     "steps": [
+      "Ben is {n} take away 3, add 1, from the front.",
+      "Between Mei (4th) and Ben are the places after the 4th and before Ben.",
+      "That is {ans} children."
+     ]
+    },
+    "easier": "t2"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make up your own place puzzle for a grown-up. Give two clues and ask for the place of one child.",
+    "hint": "Pick the answer first. Then write the clues.",
+    "steps": [
+     "Check your puzzle with toys in a row.",
+     "Make sure the clues fit only one answer.",
+     "Ask a grown-up to solve it without looking at your answer."
+    ]
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We learned the names of places in a line: 1st, 2nd, 3rd up to 10th. Your child lined up real things, counted places from the front and from the back, and found who is where from clues. The big idea: a place has a name, and it depends on which end you start from. The Start here questions are school Primary 1 work; the Think harder questions, such as how many children are in a line when you know a place from both ends, go beyond it on purpose.",
+  "quote": "A place has a name. Start from the front or from the back.",
+  "words": [
+   "1st, 2nd, 3rd: place names that say which one",
+   "front: the end of the line next to the door",
+   "back: the far end of the line",
+   "right behind: the very next place after",
+   "between: in the middle of two places"
+  ],
+  "try_home": [
+   "Line it up: put 6 toys in a row. Ask your child to put a coin on the 3rd toy, then on the 5th. Swap: your child calls, you place.",
+   "At the lift, bus stop or shop: Who is 1st? What place are we? How many people are in front of us?",
+   "Turn it around: after the toys are in a row, ask which toy is 2nd from the front. What place is it from the back?"
+  ],
+  "ask": [
+   "How do you know?",
+   "Which end are you counting from?",
+   "How many are in front of you?"
+  ],
+  "when_stuck": "Let your child touch each toy in order and say the places aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
+  "next": "Lesson 12: Bar Strips: More and Fewer. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "report_line": "Your child is learning to name places in a line, to count them from either end and to find who is where from clues. This week: the places 1st to 10th, and counting from the front and from the back.",
+  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "next_materials": [
+   "The printed Lesson 12 workbook, with the strips kit page cut out by a grown-up",
+   "Two colouring pencils in two different colours",
+   "About 20 counters (buttons, coins or pasta)",
+   "A pencil and spare paper"
+  ]
+ },
+ "safeguarding": [
+  "Small things stay on the table: nothing goes in the mouth or ears. Use toys, cups, spoons or shoes; no matches, toothpicks or anything sharp.",
+  "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
+  "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
+  "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself with a row of real things first. Check the numbers in Go further question 1 against the table picture: seat 1 is at the top and the seats go round clockwise.",
+  "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the place cards and number cards) printed and cut out by a grown-up, ten small things for a row, a coin or button, a small paper to write FRONT on, a pencil and spare paper.",
+  "Have ten small things in a row on your table and a paper marked FRONT, and the slides open. Draw nothing under the webcam: the recording cannot show it.",
+  "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
+  "Say plainly if a parent asks: Start here is school Primary 1 work (places up to 10th). Think harder and Go further go beyond it on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with a picture or a row of real things."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
+   "A few children ahead: a few children may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Always, sometimes, never?",
+    "minutes": 4,
+    "tutor": "Is the 3rd from the front always the 3rd from the back? Use a row of 5 things, then 6, then 7. Is it always, sometimes or never?",
+    "rec": "Recording: pause. Line up 5, then 6, then 7 things. Is the 3rd from the front ever the 3rd from the back?",
+    "answer": "Sometimes. In a row of 5 the middle thing is 3rd from both ends. In a row of 6 it is 3rd from the front and 4th from the back. In a row of 7 it is 3rd from the front and 5th from the back."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Make a place puzzle with two clues, for example: Mei is 2nd. Ravi is right behind Mei. Ask your grown-up for the place of one child. Check the answer with toys.",
+    "rec": "Recording: pause. Make a place puzzle with two clues for a grown-up. Check the answer with toys in a row.",
+    "answer": "No single answer. The puzzle should have one answer that fits with toys in a row."
+   },
+   {
+    "id": "M3",
+    "title": "Act it out",
+    "minutes": 3,
+    "tutor": "Line up 5 toys. Swap two of them. Say the new place of each toy that moved. Then swap two more and say the places again.",
+    "rec": "Recording: pause. Line up 5 toys. Swap two. Say the new place of each toy that moved.",
+    "answer": "If the 2nd and the 4th toy swap, the toy that was 2nd is now 4th and the toy that was 4th is now 2nd. The other toys keep their places."
+   }
+  ]
+ }
 }

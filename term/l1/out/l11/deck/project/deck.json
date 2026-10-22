@@ -5,11 +5,10 @@
   "at": "2026-10-22T00:00:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers Level 1 Term 2: Lesson 1 \u2013 STUB: Term 2 Template Check",
+ "title": "Math Inquirers Level 1 Term 2: Lesson 1 \u2013 Who Is Where?",
  "order": [
   "s-title",
   "s-routine",
-  "s-rules",
   "s-rem1",
   "s-rem2",
   "s-rem3",
@@ -20,11 +19,11 @@
   "s-m1",
   "s-m2",
   "s-m3",
-  "s-m3a",
   "s-m4",
   "s-m5",
-  "s-m5b",
+  "s-m5a",
   "s-m6",
+  "s-m7",
   "s-break",
   "s-ws1",
   "s-ws1ans",
@@ -36,9 +35,9 @@
   "s-exit",
   "s-exitans",
   "s-look",
-  "s-end",
   "s-opt",
-  "s-menu"
+  "s-menu",
+  "s-end"
  ],
  "cover": "s-title",
  "sections": {
@@ -84,7 +83,7 @@
   },
   "s11": {
    "description": "Flex time and goodbye",
-   "start": "s-end"
+   "start": "s-opt"
   }
  },
  "faces": {
