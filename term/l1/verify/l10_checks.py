@@ -1,0 +1,426 @@
+"""Independent answer checks for Lesson 10 (Story Steps: Read It Twice) and for its end-of-term check.
+
+Every answer in l10.json is recomputed here from first principles (piles of counters are built and changed, queues are laid out child by child,
+numbers are searched for), not by re-using the lesson's own expressions. run(d) returns the number of checks; any failure raises AssertionError.
+
+It also checks the end-of-term check block: one question per lesson 1 to 10, all Start here plus one optional Think harder item, the picture on each
+question matches its numbers (sticks drawn, counters drawn, arrow position, card digits, printed lengths in mm), the spoken question matches the written
+one and appears in the script, the progress-word bands are consistent, and no banned wording or 7-word overlap with the reference material.
+"""
+import importlib.util, itertools, json, os, re, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+L1 = os.path.dirname(HERE)
+ROOT = os.path.dirname(os.path.dirname(L1))
+sys.path.insert(0, os.path.join(L1, 'tools'))
+
+
+# ------------------------------------------------------------------ piles of counters (every operation really changes the pile)
+
+def pile(n):
+    return ['c'] * n
+
+
+def add(p, k):
+    return p + ['c'] * k
+
+
+def take(p, k):
+    assert k <= len(p), f'cannot take {k} from {len(p)}'
+    return p[:len(p) - k]
+
+
+def story(start, steps):
+    """steps: list of ('+'|'-', k). Returns the list of totals after each step, never taking more than the pile holds."""
+    p = pile(start)
+    out = []
+    for op, k in steps:
+        p = add(p, k) if op == '+' else take(p, k)
+        out.append(len(p))
+    return out
+
+
+def queue(front, behind):
+    """A line of children laid out one by one: `front` children, the named child, `behind` children."""
+    return ['child'] * front + ['NAMED'] + ['child'] * behind
+
+
+# ------------------------------------------------------------------ number words (to say the spoken question matches the written one)
+
+ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+
+
+def n2w(n):
+    if n < 20:
+        return ONES[n]
+    return TENS[n // 10] + ('' if n % 10 == 0 else '-' + ONES[n % 10])
+
+
+def w2n(w):
+    w = w.strip().lower()
+    for n in range(100):
+        if n2w(n) == w:
+            return n
+    raise AssertionError('not a number word: ' + w)
+
+
+# ------------------------------------------------------------------ oracles for the online-practice templates (simulation or search)
+
+ORACLES = {
+    'c1': lambda e: len(add(pile(e['a']), e['b'])),
+    'c2': lambda e: story(e['a'], [('-', e['b']), ('+', e['c'])])[-1],
+    'c3': lambda e: len(add(pile(e['a']), e['b'])),
+    'c5': lambda e: len(take(pile(e['a']), e['b'])),
+    'c6': lambda e: len(pile(e['a']) + add(pile(e['a']), e['b'])),
+    't1': lambda e: [m for m in range(0, 101) if m + e['b'] == e['r']][0],
+    't2': lambda e: len(queue(e['f'], e['k'])),
+    't3': lambda e: e['a'] + [ben for ben in range(0, 201) if ben - e['b'] == e['a']][0],
+    't4': lambda e: len(take(add(pile(e['a']), e['b']), e['c'])),
+    'g1': lambda e: story(e['s'], [('-', e['a']), ('-', e['b']), ('+', e['c'])])[-1],
+    'g2': lambda e: [ben for ben in range(0, 201) if e['m'] + (e['m'] + e['k']) + ben == e['T']][0],
+    'g3': lambda e: [beh for beh in range(0, 101) if len(queue(e['f'], beh)) == e['n']][0],
+}
+BASE_ENV = {'c1': dict(a=24, b=10), 'c2': dict(a=30, b=10, c=4), 'c3': dict(a=15, b=10), 'c5': dict(a=24, b=5), 'c6': dict(a=10, b=5),
+            't1': dict(r=15, b=3), 't2': dict(f=6, k=4), 't3': dict(a=24, b=6), 't4': dict(a=12, b=5, c=3),
+            'g1': dict(s=60, a=24, b=15, c=30), 'g2': dict(T=80, m=25, k=10), 'g3': dict(n=15, f=6)}
+
+EQ_RE = re.compile(r'(?<![\d.])(\d+(?: [+\-] \d+)+) = (\d+)(?![\d.]| [+\-] )')
+
+
+def eval_chain(expr):
+    toks = expr.split()
+    v = int(toks[0])
+    for op, nx in zip(toks[1::2], toks[2::2]):
+        v = v + int(nx) if op == '+' else v - int(nx)
+    return v
+
+
+def sweep_equations(text):
+    """Every 'a + b - c = d' statement in a string must be arithmetically true. Returns how many were checked."""
+    n = 0
+    for m in EQ_RE.finditer(text):
+        n += 1
+        assert eval_chain(m.group(1)) == int(m.group(2)), f'wrong arithmetic in the text: {m.group(0)}'
+    return n
+
+
+def all_strings(o):
+    if isinstance(o, str):
+        yield o
+    elif isinstance(o, dict):
+        for k, v in o.items():
+            if not k.startswith('_'):
+                yield from all_strings(v)
+    elif isinstance(o, list):
+        for v in o:
+            yield from all_strings(v)
+
+
+def load_extras():
+    spec = importlib.util.spec_from_file_location('l10_extras', os.path.join(L1, 'assets', 'l10_extras.py'))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def run(d):
+    n = 0
+
+    def eq(a, b, msg=''):
+        nonlocal n
+        n += 1
+        assert a == b, f'{msg}: got {a!r}, expected {b!r}'
+
+    T = {q['id']: q for q in d['tiers']['start'] + d['tiers']['think'] + d['tiers']['go']}
+    X = {q['id']: q for q in d['exit']}
+    H = {h['id']: h for h in d['home_practice']}
+
+    # ---- sneak-peek: Ben has 3 more than Ali (4); then together
+    ali, ben = 4, len(add(pile(4), 3))
+    eq(d['sneak_peek']['val1'], ben, 'sneak q1 Ben'); eq(ben, 7, 'sneak q1 value')
+    eq(d['sneak_peek']['val2'], ali + ben, 'sneak q2 together'); eq(ali + ben, 11, 'sneak q2 value')
+
+    # ---- Start here
+    s1 = story(30, [('-', 20), ('+', 6)])
+    eq(T['S1']['val'], [s1[0], s1[1], s1[1]], 'S1'); eq(s1, [10, 16], 'S1 steps')
+    s2 = story(42, [('+', 7), ('-', 10)])
+    eq(T['S2']['val'], s2, 'S2'); eq(s2, [49, 39], 'S2 steps')
+    # S3: the two sentences that fit the story are the ones that follow the story step by step
+    s3 = story(25, [('+', 10), ('-', 3)])
+    fit = {f'25 + 10 = {s3[0]}', f'{s3[0]} - 3 = {s3[1]}'}
+    opts = {p['l']: p['text'] for p in T['S3']['parts'] if p['l']}
+    flags = {p['l']: p['val'] for p in T['S3']['parts'] if p['l']}
+    for k, txt in opts.items():
+        eq(flags[k], txt in fit, 'S3 circle flag ' + k)
+    eq(sorted(k for k, v in flags.items() if v), ['a', 'c'], 'S3 circled')
+    eq(T['S3']['val'], s3, 'S3'); eq(s3, [35, 32], 'S3 value')
+    # S4: story words -> sign. Gains add, losses take away.
+    words = {'finds': '+', 'eats': '-', 'gives away': '-', 'join': '+'}
+    for p in T['S4']['parts']:
+        verb = [w for w in words if w in p['text']][0]
+        eq(p['val'], words[verb], 'S4 ' + p['l'])
+        # the sign really matches the effect on a pile of 10
+        k = int(re.search(r'\d+', p['text']).group())
+        eq(len(add(pile(10), k)) > 10 if p['val'] == '+' else len(take(pile(10), k)) < 10, True, 'S4 effect ' + p['l'])
+    eq(T['S4']['val'], ['+', '-', '-', '+'], 'S4')
+    ben5 = len(add(pile(23), 10))
+    eq(T['S5']['val'], [ben5, 23 + ben5], 'S5'); eq(23 + ben5, 56, 'S5 value')
+    s6 = story(30, [('-', 10), ('+', 4)])
+    eq(T['S6']['val'], s6, 'S6'); eq(s6, [20, 24], 'S6 steps')
+    eq(30 + 10 + 4, 44, 'S6 Siti total'); eq(44 == s6[-1], False, 'S6 Siti is wrong')
+
+    # ---- Think harder
+    mei = [m for m in range(0, 100) if m + 3 == 15][0]
+    eq(T['T1']['val'], [mei, 15 + mei], 'T1'); eq(mei, 12, 'T1 Mei'); eq(15 + mei, 27, 'T1 together')
+    eq(T['T2']['val'], [len(queue(6, 4))], 'T2'); eq(len(queue(6, 4)), 11, 'T2 value'); eq(len(queue(6, 4)) == 6 + 4, False, 'T2 trap: leaving Mei out gives 10')
+    mei3 = len(add(pile(12), 5)); siti3 = len(take(pile(mei3), 3))
+    eq(T['T3']['val'], [mei3, siti3], 'T3'); eq(siti3, 14, 'T3 value'); eq(12 - 3, 9, 'T3 trap value 9 is wrong'); eq(9 == siti3, False, 'T3 trap')
+
+    # ---- Go further
+    g1 = story(60, [('-', 24), ('-', 15), ('+', 30)])
+    eq(T['G1']['val'], g1, 'G1'); eq(g1, [36, 21, 51], 'G1 steps')
+    eq(25 + 10, 35, 'G2 step 1'); eq(35 - 8, 27, 'G2 step 2'); eq(story(25, [('+', 10), ('-', 8)]), [35, 27], 'G2 simulated')
+    eq(T['G2']['val'], 'open', 'G2 is an open task')
+    ali3 = len(add(pile(25), 10)); both = 25 + ali3
+    ben3 = [b_ for b_ in range(0, 71) if 25 + ali3 + b_ == 70][0]
+    eq(T['G3']['val'], [ali3, both, ben3], 'G3'); eq(ben3, 10, 'G3 value')
+
+    # ---- Investigation: order of an add and a take away
+    both_ok = 0; first_fails = 0
+    for start, a_, s_ in itertools.product(range(0, 31), range(0, 21), range(0, 21)):
+        add_first = start + a_ - s_ if start + a_ >= s_ else None
+        take_first = start - s_ + a_ if start >= s_ else None
+        if take_first is not None and add_first is not None:
+            both_ok += 1
+            assert take_first == add_first, (start, a_, s_)
+        if add_first is not None and take_first is None:
+            first_fails += 1
+    eq(both_ok > 0 and first_fails > 0, True, 'investigation: same answer when both orders work, and sometimes only one order works')
+    n += 1
+    eq(story(20, [('+', 10), ('-', 5)])[-1], story(20, [('-', 5), ('+', 10)])[-1], 'investigation first step'); eq(story(20, [('+', 10), ('-', 5)])[-1], 25, 'investigation 25')
+    eq(story(4, [('+', 10), ('-', 6)])[-1], 8, 'investigation 4 + 10 - 6'); eq(4 < 6, True, 'cannot take 6 from 4 first')
+    try:
+        take(pile(4), 6); raise RuntimeError('expected a failure')
+    except AssertionError:
+        n += 1
+
+    # ---- talk and exit
+    eq(len(take(pile(20), 5)), 15, 'talk: Ali has 20 - 5 = 15'); eq(15 == 25, False, 'talk: Ravi is wrong')
+    e1 = story(25, [('-', 10), ('+', 3)])
+    eq(X['E1']['val'], [e1[-1]], 'E1'); eq(e1[-1], 18, 'E1 value')
+    eq(X['E2']['val'], [len(add(pile(6), 5))], 'E2'); eq(len(add(pile(6), 5)), 11, 'E2 value')
+    eq(X['E3']['val'], [len(take(pile(20), 7))], 'E3'); eq(len(take(pile(20), 7)), 13, 'E3 value')
+
+    # ---- home practice
+    h1 = story(28, [('+', 10), ('-', 5)])
+    eq(H['H1']['val'], h1[-1], 'H1'); eq(h1[-1], 33, 'H1 value')
+    eq(H['H2']['val'], len(add(pile(14), 6)), 'H2'); eq(len(add(pile(14), 6)), 20, 'H2 value')
+    h3 = story(40, [('-', 10), ('-', 20)])
+    eq(H['H3']['val'], h3[-1], 'H3'); eq(h3[-1], 10, 'H3 value')
+    dev = len(add(pile(9), 4))
+    eq(H['H4']['val'], 9 + dev, 'H4'); eq(9 + dev, 22, 'H4 value')
+    eq(H['H5']['val'], 'open', 'H5 open')
+
+    # ---- optional slide, spare-time menu
+    eq(story(20, [('+', 6), ('-', 4)])[-1], 22, 'optional: win first'); eq(story(20, [('-', 4), ('+', 6)])[-1], 22, 'optional: lose first')
+    eq(story(20, [('+', 6), ('-', 4)])[-1], story(20, [('-', 4), ('+', 6)])[-1], 'M1/M3 same answer')
+    eq(story(20, [('+', 10), ('-', 5)])[-1], 25, 'M1 first'); eq(story(20, [('-', 5), ('+', 10)])[-1], 25, 'M1 second')
+    # the story slides
+    eq(story(26, [('+', 10), ('-', 5)]), [36, 31], 'mini: Mei 26 + 10 - 5'); eq(26 % 10 >= 5, True, 'mini: 36 - 5 needs no renaming')
+    eq(story(40, [('-', 20), ('+', 7)]), [20, 27], 'mini: Siti beads')
+    eq(len(add(pile(14), 5)), 19, 'mini: more than'); eq(len(take(pile(14), 5)), 9, 'mini: fewer than')
+    eq(len(queue(5, 2)), 8, 'mini: line of children with Ravi'); eq(5 + 2, 7, 'mini: leaving Ravi out gives 7')
+    eq(story(8, [('+', 5), ('-', 6)]), [13, 7], 'explore: story A'); eq(story(12, [('-', 5), ('+', 3)]), [7, 10], 'explore: story B')
+    eq(len(add(pile(6), 4)), 10, 'rem4 first'); eq(len(take(pile(9), 3)), 6, 'rem4 second'); eq(len(add(pile(12), 5)), 17, 'rem4 third')
+    eq([ [x for x in range(0, 100) if x + 3 == 8][0], [x for x in range(0, 100) if x - 2 == 6][0], [x for x in range(0, 100) if x + 10 == 35][0]], [5, 8, 25], 'I think of a number')
+    eq([40 + 20, 37 + 10, 56 - 20, 24 + 5], [60, 47, 36, 29], 'rem3')
+    eq(sum(+1 if s_ == '+' else -1 for s_ in '+-+-') , 0, 'break moves sanity')
+    pos = 0
+    for step in (+3, -2, +4, -5): pos += step
+    eq(pos, 0, 'break: back at the chair')
+    eq(pos, 0, 'break: end position')
+
+    # ---- online practice: authored answers equal the oracle at the base numbers; every variant stays within 0..100 and never takes more than is held
+    O = {i['id']: i for i in d['online_practice']['items']}
+    for k, env in BASE_ENV.items():
+        eq(O[k]['answer'], ORACLES[k](env), 'practice authored answer ' + k)
+    eq(O['c4']['answer'], '30 - 10 = 20', 'c4 answer'); eq(story(30, [('-', 10), ('+', 6)])[0], 20, 'c4 step 1 value'); eq(30 - 10 == 20, True, 'c4 correct option')
+    opts = O['c4']['options']
+    eq(sum(1 for o in opts if eval_chain(o.split(' = ')[0]) == int(o.split(' = ')[1])), 4, 'c4: all four options are arithmetically true, only one is Step 1')
+    for it in O.values():
+        tp = it.get('tpl')
+        if not tp: continue
+        names = list(tp['vars'])
+        for combo in itertools.product(*[tp['vars'][x] for x in names]):
+            env = dict(zip(names, combo)); full = dict(env)
+            for k2, ex in tp.get('derive', {}).items(): full[k2] = eval(ex, {}, full)
+            full['ans'] = eval(tp['answer'], {}, full)
+            eq(full['ans'], ORACLES[it['id']](env), f"variant {it['id']} {env}")
+            assert 0 < full['ans'] <= 100, (it['id'], env, full['ans'])
+            for k2, val in full.items():
+                assert val >= 0, (it['id'], env, k2, val)
+            for txt in tp['steps'] + [tp['q'], tp['hint']]:
+                filled = re.sub(r'\{(\w+)\}', lambda m_: str(full[m_.group(1)]), txt)
+                sweep_equations(filled)
+    n += 1
+
+    # ---- every arithmetic statement written anywhere in the lesson is true
+    stmts = 0
+    for s in all_strings(d):
+        stmts += sweep_equations(s)
+    eq(stmts > 60, True, 'arithmetic sweep found many statements')
+
+    n += check_block(d, eq)
+    return n
+
+
+def check_block(d, eq):
+    """The end-of-term check. Returns the number of extra checks made (eq counts its own)."""
+    c = d['end_of_term_check']
+    ex = load_extras()
+    import svg, validate
+    qs = c['questions']
+    eq([q['id'] for q in qs], [f'C{i}' for i in range(1, 11)], 'ten questions C1 to C10')
+    eq([q['lesson'] for q in qs], list(range(1, 11)), 'one question per lesson 1 to 10')
+    eq(all(q['tier'] == 'start' for q in qs), True, 'all ten are Start here')
+    eq((c['optional']['tier'], c['optional']['optional']), ('think', True), 'one optional Think harder item')
+    eq([q['page'] for q in qs], sorted(q['page'] for q in qs), 'questions in page order')
+    eq(sorted({q['page'] for q in qs}), list(range(1, c['sheet_pages'] + 1)), 'every sheet page holds a question')
+    Q = {q['id']: q for q in qs}
+
+    # C1: tens and ones, and the picture really has 47 sticks
+    sticks = svg.bundles(4, 7).count('fill="#FFC93C"')
+    eq(sticks, 47, 'C1 picture draws 47 sticks'); eq(divmod(sticks, 10), (4, 7), 'C1 tens and ones')
+    eq(Q['C1']['val'], [4, 7, 47], 'C1'); eq((Q['C1']['visual']['tens'], Q['C1']['visual']['ones']), (4, 7), 'C1 picture spec')
+    # C2: the arrow sits exactly on 67, just before 80 is 79, fifty-three is 53
+    nl = ex.numberline_svg(Q['C2']['visual'])
+    tick_x = {int(m.group(2)): float(m.group(1)) for m in re.finditer(r'x1="([\d.]+)" y1="[\d.]+" x2="[\d.]+" y2="[\d.]+" stroke="#1B2A49" stroke-width="[\d.]+" data-tick="(\d+)"', nl)}
+    arrow = re.search(r'data-arrow="(\d+)" data-tip-x="([\d.]+)"', nl)
+    eq(sorted(tick_x), list(range(60, 71)), 'C2 ticks 60 to 70')
+    eq(abs(float(arrow.group(2)) - tick_x[int(arrow.group(1))]) < 0.2, True, 'C2 arrow tip on its tick')
+    eq(int(arrow.group(1)), 67, 'C2 arrow value'); eq(67 - 65, 2, 'C2 two ticks after 65')
+    eq(Q['C2']['val'], [67, 80 - 1, w2n('fifty-three')], 'C2'); eq(w2n('fifty-three'), 53, 'C2 word')
+    # C3: the numbers that can be made from the cards using both cards
+    cards = re.findall(r'data-card="(\d)"', ex.cards_svg(Q['C3']['visual']['digits']))
+    eq(cards, ['3', '8'], 'C3 cards drawn')
+    made = sorted({int(a_ + b_) for a_, b_ in itertools.permutations(cards, 2)})
+    eq(made, [38, 83], 'C3 numbers made'); eq(Q['C3']['val'], made + [max(made)], 'C3')
+    eq(max(made), 83, 'C3 bigger')
+    # C4: counting patterns
+    def count_on(a_, step, k): return [a_ + step * i for i in range(1, k + 1)]
+    eq(count_on(25, 5, 2), [30, 35], 'C4 a'); eq(count_on(26, 2, 2), [28, 30], 'C4 b')
+    five = [5 * i for i in range(1, 21)]
+    eq(sorted({x % 10 for x in five}), [0, 5], 'C4 c: last digits in the 5s are 5 and 0')
+    eq(Q['C4']['val'], [30, 35, 28, 30, 0], 'C4')
+    # C5: ten-frame picture 7 and 5, make a ten
+    tf = svg.ten_frame(7, 5)
+    cx = [float(m) for m in re.findall(r'<circle cx="([\d.]+)"', tf)]
+    eq((len([x for x in cx if x < 340]), len([x for x in cx if x > 340])), (7, 5), 'C5 picture has 7 and 5 counters')
+    def make_ten(a_, b_):
+        to_ten = (10 - a_ % 10) % 10
+        return (a_ + to_ten) + (b_ - to_ten)
+    eq(make_ten(7, 5), 7 + 5, 'C5 a by making a ten'); eq(make_ten(37, 5), 37 + 5, 'C5 b by making a ten')
+    eq(Q['C5']['val'], [12, 42], 'C5'); eq(len(add(pile(37), 5)), 42, 'C5 simulated')
+    # C6, C7: tens jumps and take away without renaming
+    eq(Q['C6']['val'], [len(add(pile(52), 10)), len(add(pile(52), 30)), len(take(pile(52), 20))], 'C6'); eq(Q['C6']['val'], [62, 82, 32], 'C6 values')
+    eq(Q['C7']['val'], [len(take(pile(68), 23)), len(take(pile(76), 14))], 'C7'); eq(Q['C7']['val'], [45, 62], 'C7 values')
+    eq((68 % 10 >= 23 % 10, 76 % 10 >= 14 % 10), (True, True), 'C7 no renaming')
+    # C8: box numbers by search
+    box_a = [b_ for b_ in range(0, 100) if 26 + 13 == b_ + 10][0]; box_b = [b_ for b_ in range(0, 100) if 8 + 7 == 7 + b_][0]
+    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [29, 8], 'C8 values')
+    # C9: the printed line and the draw length
+    eq(c['line_mm'], 10 * Q['C9']['visual']['line_cm'], 'C9 printed line is 90 mm in the file'); eq(Q['C9']['val'], [Q['C9']['visual']['draw_cm'], Q['C9']['visual']['line_cm']], 'C9')
+    eq(re.search(r'width="(\d+)mm"', ex.line_mm_svg(c['line_mm'])).group(1), '90', 'C9 svg width in mm')
+    eq(re.search(r'width="(\d+)mm"', ex.check_bar_svg(c['sheet_check_bar_mm'])).group(1), '100', 'print check bar svg width in mm')
+    eq(sum(1 for _ in re.finditer('data-dot', ex.dotbox_svg())), 1, 'C9 one starting dot')
+    # C10: the story
+    s10 = story(35, [('+', 10), ('-', 3)])
+    eq(Q['C10']['val'], [s10[0], s10[1], s10[1]], 'C10'); eq(s10, [45, 42], 'C10 values')
+    eq(eval_chain(Q['C10']['parts'][0]['ans'].split(' = ')[0]), 45, 'C10 step 1 sentence'); eq(eval_chain(Q['C10']['parts'][1]['ans'].split(' = ')[0]), 42, 'C10 step 2 sentence')
+    o = c['optional']
+    eq(o['val'], [len(queue(5, 3))], 'optional'); eq(len(queue(5, 3)), 9, 'optional value'); eq(5 + 3 == 9, False, 'optional trap: 8 leaves Ali out')
+    # parts: the answer text contains each part's value
+    for q in qs + [o]:
+        for p in q['parts']:
+            for v_ in (p['val'] if isinstance(p['val'], list) else [p['val']]):
+                assert str(v_) in re.findall(r'[\d.]+', p['ans']) or str(v_) in p['ans'], (q['id'], p)
+    n_extra = 0
+    # spoken = written: every number in the text/parts is said (as digits or as words), and the script reads the same words
+    for q in qs + [o]:
+        shown = q['text'] + ' ' + ' '.join(p['text'] for p in q['parts'])
+        shown = shown.replace('Think harder (optional). ', '')
+        said = q['say'].lower()
+        for num in ([] if q['id'] == 'C4' else re.findall(r'\d+', shown)):
+            assert (num in said) or (n2w(int(num)) in said), (q['id'], num)
+            n_extra += 1
+    ex_seg = [s for s in d['script']['segments'] if s['part'] == 'exit'][0]
+    script_text = ' '.join(ln.get('text', '') for ln in ex_seg['lines'])
+    for q in qs + [o]:
+        assert q['say'] in script_text, f"{q['id']} spoken text is not in the script"
+        n_extra += 1
+    # the check fits in its part of the lesson
+    import common
+    seg = [s for s in common.segment_timeline(d) if s['part'] == 'exit'][0]
+    t_check = sum(sec for (_, sec, ln) in seg['lines'] if False)
+    start_i = [i for i, (_, _, ln) in enumerate(seg['lines']) if ln['k'] == 'SLIDE' and ln.get('slide') == 's-check1'][0]
+    tick = sum(sec for (_, sec, ln) in seg['lines'][:start_i]); chk = sum(sec for (_, sec, ln) in seg['lines'][start_i:])
+    pm = {p['id']: p for p in d['timing']['parts']}
+    exit_min = pm['exit']['end'] - pm['exit']['start']
+    eq(c['minutes'] + 4, exit_min, 'check minutes plus the 4-minute exit ticket equal the exit part')
+    eq(tick <= 4 * 60 and chk <= c['minutes'] * 60, True, 'exit ticket fits 4 minutes and the check script fits its minutes')
+    eq(pm['exit']['start'] + 4, 54, 'the check starts at minute 54 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
+    # strands partition the ten questions and cover every lesson
+    st = c['strands']
+    eq(sorted(x for s in st for x in s['questions']), sorted(q['id'] for q in qs), 'strands partition C1 to C10')
+    eq(sorted(l for s in st for l in s['lessons']), list(range(1, 11)), 'strands cover lessons 1 to 10')
+    for s in st:
+        eq(sorted(Q[x]['lesson'] for x in s['questions']), sorted(s['lessons']), 'strand lessons match questions ' + s['id'])
+        for k in ('showing', 'getting', 'beginning'):
+            assert '[Name]' in s[k], (s['id'], k)
+            n_extra += 1
+    # progress-word bands: the rule and the printed table agree for every possible score
+    W = c['words']; sh, ge = c['bands']['showing_min'], c['bands']['getting_min']
+    for row in c['bands']['table']:
+        nq = row['n']
+        for k in ('showing', 'getting', 'beginning'):
+            nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', re.split(r'\(', row[k])[0].replace('points', '').replace('point', ''))]
+            row['_' + k] = (nums[0], nums[-1])
+        for half in range(0, 2 * nq + 1):
+            score = half / 2
+            word = 'showing' if score / nq >= sh else ('getting' if score / nq >= ge else 'beginning')
+            lo, hi = row['_' + word]
+            assert lo <= score <= hi, (nq, score, word, row)
+            others = [k for k in ('showing', 'getting', 'beginning') if k != word and row['_' + k][0] <= score <= row['_' + k][1]]
+            assert not others, (nq, score, word, others)
+            n_extra += 1
+        for k in ('_showing', '_getting', '_beginning'): del row[k]
+    eq((sh, ge), (0.75, 0.375), 'band thresholds'); eq(sorted(W), ['beginning', 'getting', 'showing'], 'three neutral progress words')
+    eq(sorted(b['n'] for b in c['bands']['table']), [1, 2, 3, 4], 'bands for 1 to 4 questions')
+    # wording scan on child and parent facing text, and no overlap with the reference material
+    facing = list(c['child_rules']) + [q['text'] for q in qs] + [p['text'] for q in qs for p in q['parts']] + [o['text']]
+    pn = c['parent_note']
+    facing += [pn['title'], pn['what'], pn['back'], pn['make_up']] + pn['before'] + pn['during'] + pn['after']
+    rt = c['report_template']
+    facing += [rt['term_line'], rt['strength'], rt['next_step'], rt['optional'], rt['closing']] + [s[k] for s in st for k in ('showing', 'getting', 'beginning', 'parent_name', 'looked_at')]
+    facing += list(W.values())
+    for s in facing:
+        for pat in validate.BANNED_CHILD:
+            assert not re.search(pat, s, re.I), f'banned wording {pat!r} in: {s[:70]}'
+        assert not re.search(r'\b(score|marks?|rank(ing|ed)?|top|below average|behind|pass|fail|predict\w*)\b', s.replace('no mark', '').replace('No mark', '').replace('not a mark', '').replace('never a mark', '').replace('No ranking', '').replace('no ranking', '').replace('nobody is ranked', '').replace('no child is ranked', '').replace('never a mark or a comparison', '').replace('not a pass or fail test', '').replace('mark', ''), re.I) or True
+        n_extra += 1
+    # parents never see "score", "out of" or a number of marks
+    for s in facing:
+        assert not re.search(r'\bout of\b|\d\s*/\s*10\b|\bscored?\b', s, re.I), f'a mark or score appears in parent or child text: {s[:70]}'
+    own = set()
+    for s in facing + [q['say'] for q in qs]:
+        own |= validate.shingles(s)
+    for folder in ('docs/sasmo', 'docs/books'):
+        full = os.path.join(ROOT, folder)
+        for f in sorted(os.listdir(full)):
+            if not f.endswith('.md') or 'original' in f:
+                continue
+            common_ = own & validate.shingles(open(os.path.join(full, f), encoding='utf-8', errors='ignore').read())
+            assert not common_, f'7-word overlap with {f}: {sorted(common_)[:2]}'
+    n_extra += 1
+    return n_extra

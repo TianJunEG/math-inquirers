@@ -1,0 +1,3735 @@
+{
+  "schema_version": 1,
+  "id": "l1-t1-10",
+  "level": 1,
+  "term": 1,
+  "lesson": 10,
+  "lesson_in_term": 10,
+  "title": "Story Steps: Read It Twice",
+  "big_idea": "One operation per step",
+  "child_idea": "Read a story twice. Then write one number sentence for each step: add, or take away.",
+  "skill": "Reading and planning",
+  "ages": "6-8",
+  "moe": {
+    "strand": "Addition and Subtraction",
+    "topics": [
+      "Addition and subtraction within 100 in word problems",
+      "Two-step stories: one operation per step",
+      "Comparing: more than, fewer than"
+    ],
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term check (plan, section 5), built as the block end_of_term_check."
+  },
+  "contest_moves": [
+    "two-step story, one operation per step",
+    "reversed wording (fewer than, more than)",
+    "reading trap: who is in the group",
+    "three-step story"
+  ],
+  "objectives": [
+    "Read a short story twice: first to say what it is about, then to pick out the numbers and the question.",
+    "Write one number sentence for each step of a two-step story (add or take away within 100) and answer in a sentence.",
+    "Choose add or take away from the words of the story (gets, gives away, more than, fewer than), not from the order of the numbers.",
+    "Take the Term 1 end-of-term check on private paper: 10 questions, one from each lesson of the term."
+  ],
+  "joining_cold": {
+    "remember": [
+      "'I think of a number' (add or take away a small number to find it)",
+      "Story words: which words mean add and which mean take away",
+      "Adding and taking away tens and ones: 40 + 20, 37 + 10, 56 - 20, 24 + 5"
+    ],
+    "assumes": "Only counting to 20, showing a number with fingers or counters, and knowing 10 more or 10 fewer than a tens number. Every number used in Start here stays within 100 and no Start here take away needs renaming. A child who has done Lessons 1 to 9 will find the tens and ones work familiar; a new child gets every idea in the warm-up.",
+    "holiday_topics_revisited": [
+      "'I think of a number'"
+    ],
+    "safe_to_miss": false,
+    "note": "Lesson 10 is the last lesson of the term and holds the end-of-term check, so it is hard to miss: the lesson is recorded, the check is taken at the make-up slot (same private procedure, see the check key). A child who joins late is not lost: the warm-up gives what the stories need, the check is optional for the child, and the report line covers only the lessons attended."
+  },
+  "materials": {
+    "child": [
+      "About 20 counters: buttons, coins, pasta or the kit squares",
+      "Workbook, pencil, rubber, spare paper",
+      "Closed check sheet (4 pages) and a ruler with cm"
+    ],
+    "tutor": [
+      "A slide deck, and a few counters to act out a story on camera if you wish",
+      "The check key and the private return plan (L10_Check_Tutor_Key.pdf), and a blank record sheet for each child",
+      "A visible clock or a timer slide kept off the screen during the check"
+    ],
+    "kit_pages": [
+      "Page 6 of the workbook (tens bars and ones squares): the squares make good counters; cut out before the lesson"
+    ],
+    "ruler": true,
+    "notes": "A ruler with centimetres is needed for question 9 of the check only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the check sheet at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 8,
+        "end": 12
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 12,
+        "end": 19
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 19,
+        "end": 27
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 27,
+        "end": 30
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 30,
+        "end": 46
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 46,
+        "end": 50
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket and end-of-term check",
+        "start": 50,
+        "end": 83
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 83,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "skip_order": [
+      "the optional slide",
+      "the second explore story",
+      "the quick-fire in the mini-lesson",
+      "the choice time in the workbook (pages 3 to 5 can go home)",
+      "never shorten the end-of-term check"
+    ],
+    "notes": "Lesson 10 is the last lesson of the term, so it holds the end-of-term check: the part named Exit ticket and end-of-term check (minutes 50 to 83) is a 4-minute exit ticket followed by a 29-minute check (the check is taken on private paper; see the tutor key). To make room, Explore, the Mini-lesson and the Workbook are shorter than in other lessons: the workbook has 5 Start here questions, and Think harder, Go further and the Investigation can be taken home. The last 5 minutes are the standing buffer; a child who needs more time for the check may use it, and nothing new is started in it."
+  },
+  "sneak_peek": {
+    "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles has Ben? You may draw them.",
+    "q2": "How many marbles do Ali and Ben have altogether? Write the number, and write what you did first.",
+    "a1": "7",
+    "a2": "11. First find Ben's marbles: 4 + 3 = 7. Then add Ali's 4: 4 + 7 = 11.",
+    "val1": 7,
+    "val2": 11
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, counters and a ruler. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper, counters and a ruler. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Use your fingers or counters, and say each answer before I do. Pause if you need longer.",
+      "action": "Play along. Say each answer out loud before the video does. Pause if you need longer."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Act out each story with counters, then say how many. Press play when you have tried.",
+      "action": "Pause. Act out each story with counters, one step at a time, and say your answer."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the worked examples. Rewind any step you missed."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. Press play to check it. Then page 2.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Pages 3 to 5 are for any time."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+      "action": "Pause. Explain your answer to someone at home, with a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket alone. The private check is for the live lesson; ask your grown-up how to take it.",
+      "action": "Pause. Do the exit ticket alone. Ask a grown-up and your tutor how to take the private check."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing the term! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out this term."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! A step forward to add, a step back to take away.",
+      "action": "Stand up and step it out: forward to add, back to take away."
+    }
+  },
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Good morning, inquirers! This is our last lesson of the term. Pencil, paper, your workbook and some counters on the table, please. Today we read stories twice. At the end we do our end-of-term check on your own paper. This lesson is recorded: me and the screen only. You may switch your camera off whenever you like."
+          },
+          {
+            "k": "DO",
+            "text": "Greet each child by first name. Check each camera shows the child and the table, and that the closed check sheet, a ruler and a pencil are ready.",
+            "s": 30
+          },
+          {
+            "k": "NOTE",
+            "text": "Lesson 10 only: say once that the check is private and not a race. Routine slides and the four inquirer rules are not repeated; they were introduced in Lesson 1."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "I think of a number. Use your fingers or counters to find it. I add 3, and I get 8. What is my number?"
+          },
+          {
+            "k": "ASK",
+            "text": "I take away 2, and I get 6. What was my number?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "I add 10, and I get thirty-five. What was my number?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "Story words. Gets, finds and buys mean add. Gives away, eats and loses mean take away."
+          },
+          {
+            "k": "ASK",
+            "text": "Siti eats 3 sweets. Add or take away?",
+            "resp": 6
+          },
+          {
+            "k": "ASK",
+            "text": "Ali finds 5 more shells?",
+            "resp": 6
+          },
+          {
+            "k": "ASK",
+            "text": "Mei gives away 2 stickers?",
+            "resp": 6
+          },
+          {
+            "k": "ASK",
+            "text": "4 more children join?",
+            "resp": 6
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Tens and ones, quickly. Think of bundles of ten."
+          },
+          {
+            "k": "ASK",
+            "text": "Forty plus twenty?",
+            "resp": 8
+          },
+          {
+            "k": "ASK",
+            "text": "Thirty-seven plus ten?",
+            "resp": 8
+          },
+          {
+            "k": "ASK",
+            "text": "Fifty-six take away twenty?",
+            "resp": 8
+          },
+          {
+            "k": "ASK",
+            "text": "Twenty-four plus five?",
+            "resp": 8
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem4"
+          },
+          {
+            "k": "READ",
+            "text": "Story to number sentence. Ben has 6 cards. He gets 4 more. Which number sentence fits: 6 plus 4, or 6 take away 4?"
+          },
+          {
+            "k": "ASK",
+            "text": "Which one fits? And what is the answer?",
+            "resp": 14
+          },
+          {
+            "k": "ASK",
+            "text": "Siti has 9 beads and loses 3. Which sentence, and the answer?",
+            "resp": 14
+          },
+          {
+            "k": "ASK",
+            "text": "Ali has 12 marbles and wins 5. Which sentence, and the answer?",
+            "resp": 14
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates on 47 or 36, say the tens word slowly (forty... seven) and point to the bundles: 37 + 10 is one more bundle."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: 5, 8, 25; take away, add, take away, add; 60, 47, 36, 29; then 6 + 4 = 10, 9 - 3 = 6, 12 + 5 = 17. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles has Ben? You may draw them."
+          },
+          {
+            "k": "WORK",
+            "text": "Children draw or write the number on their own paper.",
+            "s": 40
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. How many marbles do Ali and Ben have altogether? Write the number, and write what you did first."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 55
+          },
+          {
+            "k": "HOLD",
+            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
+            "s": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. We will come back to puzzle two later."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 7. Puzzle 2 answer: 11 (first Ben has 4 + 3 = 7, then 4 + 7). Look for good ideas to praise later (a drawing of two groups, or a child who said Ben first). Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today your counters are the teachers. I read a story twice. You act it out, one step at a time."
+          },
+          {
+            "k": "READ",
+            "text": "Story A. Mei has 8 buttons. She gets 5 more. Then she gives away 6. How many buttons has Mei now?"
+          },
+          {
+            "k": "READ",
+            "text": "Mei has 8 buttons. She gets 5 more. Then she gives away 6."
+          },
+          {
+            "k": "WORK",
+            "text": "Round 1: children act out story A with counters or the kit squares. Tutor scans the cameras and asks a few children to show their counters.",
+            "s": 70
+          },
+          {
+            "k": "ASK",
+            "text": "How many buttons has Mei now? What did you do first?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "Read it twice. First read: who is in the story and what happens? Second read: which numbers, and what is the question?"
+          },
+          {
+            "k": "READ",
+            "text": "Story B. Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3. How many stickers has Ravi now?"
+          },
+          {
+            "k": "WORK",
+            "text": "Round 2: children act out story B with counters, one step at a time.",
+            "s": 60
+          },
+          {
+            "k": "ASK",
+            "text": "How many stickers has Ravi now? Which step came first?",
+            "resp": 18
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? How many steps did each story have? Did each step add or take away?",
+            "resp": 35
+          },
+          {
+            "k": "SAY",
+            "text": "Each step is one thing: one add or one take away. Step 2 starts from the answer to Step 1."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who loses count: put the first number out, then add or remove counters one step at a time and say the new total after each step. A child with too few counters: use the kit squares."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: story A 7 (8 + 5 = 13, then 13 - 6 = 7); story B 10 (12 - 5 = 7, then 7 + 3 = 10). Main room only: no breakout rooms, so you can see every camera. Building with counters is for every child."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Our trick: read it twice, then one number sentence for each step."
+          },
+          {
+            "k": "ASK",
+            "text": "How many number sentences do we write for a story with two steps?",
+            "resp": 10
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "Mei has 26 stickers. Ali gives her 10 more. Then she gives 5 to Ben. Step 1: she gets more, so add. Twenty-six plus ten is thirty-six. Step 2: she gives away, so take away. Thirty-six take away five is thirty-one."
+          },
+          {
+            "k": "ASK",
+            "text": "Where did the thirty-six come from?",
+            "resp": 10
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Siti has 40 beads. She uses 20 for a bracelet. Then she buys 7 more beads. How many beads has Siti now? Write Step 1 and Step 2."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write two number sentences on their own paper.",
+            "s": 55
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3a"
+          },
+          {
+            "k": "READ",
+            "text": "Forty take away twenty is twenty. Twenty plus seven is twenty-seven."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "SAY",
+            "text": "More than and fewer than. Ali has 14. Ben has 5 more, so Ben has 19. Ben has 5 fewer, so Ben has 9. Ask: who has more?"
+          },
+          {
+            "k": "ASK",
+            "text": "Ben has 5 more than Ali, and Ali has 14. Does Ben have more or fewer?",
+            "resp": 10
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "SAY",
+            "text": "A trap! Ravi is in a line. 5 children are in front of Ravi and 2 are behind him. How many children are in the line? Count Ravi too: 5 plus 2 plus 1 is 8."
+          },
+          {
+            "k": "ASK",
+            "text": "Who is in the group? Did we count everyone?",
+            "resp": 12
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child reads fewer than as add: ask who has more, and who has the bigger number. If a child leaves Ravi out: put counters in a line on camera and touch each one."
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: step, read it twice, more than, fewer than, number sentence. Do not teach bar strips (Lesson 12). Keep every Start here step within 100 and without renaming; the Think harder page has the first renaming."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and sip some water. Small steps forward to add, small steps back to take away. Add 3, take away 2, add 4, take away 5. Where do you end up?"
+          },
+          {
+            "k": "WORK",
+            "text": "Call the four moves. Children step or lean forward and back, in the space they have. Count aloud together. Everyone ends back at the chair.",
+            "s": 110
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: Ben has 30 cards. He gives away 20. Then he gets 6 more. Fill in the steps. Question 2: Mei has 42 stickers. She gets 7 more. Then she gives 10 to Ali. Write a number sentence for each step. Question 3: Ravi has 25 pencils. He buys 10 more. Then he loses 3. Circle the two number sentences he needs."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 330
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: ten, then sixteen. Question 2: forty-nine, then thirty-nine. Question 3: circle 25 plus 10 and 35 take away 3. Ravi has thirty-two. Mark your own page in another colour."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: write plus or minus for each story. Question 5: Ali has 23 marbles. Ben has 10 more than Ali. How many marbles altogether? Question 6: A bus has 30 children. 10 get off. Then 4 get on. Siti wrote 30 plus 10, then plus 4. What did she do wrong? Write the right steps."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 6.",
+            "s": 270
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 4: plus, minus, minus, plus. Question 5: Ben has thirty-three. They have fifty-six. Question 6: children who get off leave the bus, so take away. Thirty take away ten is twenty. Twenty plus four is twenty-four."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can take pages 3 to 5 home."
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+            "s": 40
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1: say what happens first; gives away means take away. Q2: use counters, one step at a time. Q3: ask which sentence starts from the answer of the first. Q4: does the word make it bigger or smaller? Q5: find Ben first. Q6: ask who leaves the bus."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. You check in during the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for ideas taught today in a new setting (reversed wording, the group trap). Go further is mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. This part is short because the check follows: Start here pages 1 and 2 are the target; pages 3 to 5 may go home."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Ravi says: Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25. Do you agree? Use counters to explain."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 20 and take 5 away with your counters. Is Ravi right?",
+            "s": 35
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 50
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 35
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? Ben has 3 more than Ali, and Ali has 4. Ben has seven. Together they have eleven."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 12
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: No. Fewer means less. Ali has 20 - 5 = 15. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 100
+          },
+          {
+            "k": "HOLD",
+            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
+            "s": 25
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Eighteen. Eleven. Thirteen."
+          },
+          {
+            "k": "SAY",
+            "text": "Check your own ticket in a different colour. Well done. Now we put the workbook away for the check."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-check1"
+          },
+          {
+            "k": "SAY",
+            "text": "The end-of-term check. Ten questions, one from each lesson. It is on your own paper and it is not a race. You may skip any question. I will not say any answers, and I will not show anyone's paper."
+          },
+          {
+            "k": "DO",
+            "text": "Children take out the closed check sheet, a pencil and a ruler. Grown-ups sit nearby and do not give answers. Paper flat on the table, not held up. Name on page 1.",
+            "s": 40
+          },
+          {
+            "k": "READ",
+            "text": "Page 1. Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Question 2. Part a: look at the number line. Which number is the arrow pointing to? Part b: write the number just before eighty. Part c: write fifty-three in digits."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 1 (questions 1 and 2). Walk the cameras; say nothing about right or wrong. If asked, re-read a question to the whole group.",
+            "s": 240
+          },
+          {
+            "k": "SAY",
+            "text": "Turn to page 2."
+          },
+          {
+            "k": "READ",
+            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the bigger number. Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. You may make a ten first."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 2 (questions 3 to 5).",
+            "s": 300
+          },
+          {
+            "k": "MOVE",
+            "text": "One-minute stretch: stand, shake out your hands, sip some water. Paper stays on the table.",
+            "s": 45
+          },
+          {
+            "k": "SAY",
+            "text": "Turn to page 3. You need your ruler for question 9."
+          },
+          {
+            "k": "READ",
+            "text": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20. Question 7. Write 68 take away 23. Write 76 take away 14. Question 8. Write the number that goes in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 3 (questions 6 to 9).",
+            "s": 360
+          },
+          {
+            "k": "SAY",
+            "text": "Turn to page 4."
+          },
+          {
+            "k": "READ",
+            "text": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben. Write Step 1 and Step 2, one number sentence for each. Then write how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 4: question 10, then the optional Think harder question if they wish.",
+            "s": 240
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-check2"
+          },
+          {
+            "k": "SAY",
+            "text": "Pencils down. Check that your name is on page 1 and close your sheet. Well done for trying your best. Grown-ups, please take one photo of each page today, as in the note. I will send a short note about your learning, never a mark."
+          },
+          {
+            "k": "DO",
+            "text": "Say nothing about answers. Remind the group that no score is shown and no answer is read out. Children who did not finish may use the flex time at the end.",
+            "s": 25
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who says they cannot do a question: say to the whole group that skipping is fine and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
+          },
+          {
+            "k": "NOTE",
+            "text": "Check key, private return plan, record sheet and the parent note templates are in L10_Check_Tutor_Key.pdf. Do not collect, look at or mark any paper during the lesson. Photos and notes go to the parent contact only; never a message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Exit ticket tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs another go (two or three wrong). Never read out a child's result. This is not the end-of-term check."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. You can pass. Nobody reads it out."
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5.",
+            "s": 55
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? You need only a pencil, paper and counters. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: Ali has 20 marbles. He wins 6 and loses 4. Does it matter which comes first?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. A child who needs more time for the check may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 22 either way; same answer, order does not matter when both orders can be done."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Story Steps",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Read stories twice and write one step at a time.",
+            "Then we show what we learned this term."
+          ]
+        }
+      ],
+      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 19, mini-lesson 19 to 27, brain break 27 to 30, workbook 30 to 46, talk 46 to 50, exit ticket and end-of-term check 50 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off. Say that the check at the end is on private paper and is not a race.",
+      "subtitle": "Read it twice: addition and subtraction in stories",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: I think of a number",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Use your fingers or counters"
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 8,
+                "extra": 0
+              }
+            ],
+            [
+              {
+                "t": "p",
+                "text": "I think of a number. I add 3. I get 8."
+              },
+              {
+                "t": "p",
+                "text": "What is my number?"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "+ 3 = 8",
+            "- 2 = 6",
+            "+ 10 = 35"
+          ]
+        }
+      ],
+      "note": "Say: I think of a number, I add 3, I get 8. Children use fingers or counters to find the number: 5 (8 take away 3). Then: I think of a number, I take away 2, I get 6 (answer 8). Then: I think of a number, I add 10, I get 35 (answer 25). This is the holiday-course game I think of a number, used only as a warm-up; no writing.",
+      "mascot": {
+        "size": "s",
+        "say": "Think it through with me!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "Story words",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "If the story says",
+              "We usually"
+            ],
+            [
+              "gets, finds, buys, joins, altogether",
+              "add"
+            ],
+            [
+              "gives away, eats, loses, leaves, how many left",
+              "take away"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Add or take away? Say it."
+        }
+      ],
+      "note": "Read the two rows aloud, then ask: Siti eats 3 sweets (take away). Ali finds 5 more shells (add). Mei gives away 2 stickers (take away). 4 more children join (add). Children answer aloud or with a thumb up for add and down for take away. Say that today we also meet the words more than and fewer than."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Tens and ones, quickly",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 3,
+          "ones": 7,
+          "size": "s",
+          "label": "37"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "40 + 20",
+            "37 + 10",
+            "56 - 20",
+            "24 + 5"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Say the answers. Think of tens and ones."
+        }
+      ],
+      "note": "Answers: 60, 47, 36, 29. Show 37 as 3 bundles and 7 singles: 37 + 10 is one more bundle, 47. 56 - 20 takes 2 bundles, 36. 24 + 5 adds 5 singles, 29. This is spiral review of adding and taking away tens and ones, so a child who joins cold can do the lesson. Say the tens word slowly: forty-seven."
+    },
+    {
+      "id": "s-rem4",
+      "part": "remember",
+      "kind": "light",
+      "title": "Story to number sentence",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Ben has 6 cards. He gets 4 more."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "6 + 4",
+            "6 - 4"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Which one fits the story?"
+        }
+      ],
+      "note": "Read each short story twice and ask which number sentence fits, then the answer. Ben has 6 cards and gets 4 more: 6 + 4 = 10. Siti has 9 beads and loses 3: 9 - 3 = 6. Ali has 12 marbles and wins 5: 12 + 5 = 17. Children answer aloud or show a thumb up for the first sentence and down for the second. No writing yet."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Ali has 4 marbles.",
+                  "Ben has 3 more marbles than Ali.",
+                  "How many marbles has Ben?",
+                  "You may draw them."
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "How many marbles do Ali and Ben have altogether?",
+                  "Write the number. Write what you did first."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 is an access question: any child can draw 4 marbles and 3 more, and count. Puzzle 2 is the thinking question on the key idea (two steps). Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and everyone holds the paper to the camera once, at the same moment, after puzzle 2. Do not read answers aloud. Puzzle 1 answer 7; puzzle 2 answer 11, first Ben has 4 + 3 = 7."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: act it out",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Listen once. Picture the story.",
+            "Listen again. Put out counters for the first number.",
+            "Do each step with your counters.",
+            "Say: how many now?"
+          ]
+        },
+        {
+          "t": "card",
+          "head": "STORY A",
+          "items": [
+            "Mei has 8 buttons. She gets 5 more. Then she gives away 6."
+          ]
+        }
+      ],
+      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more. Then she gives away 6. How many buttons has Mei now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask a few children to show their counters to the camera. Answer for the tutor: 7."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Read it twice",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "FIRST READ",
+                "items": [
+                  "Who is in the story?",
+                  "What happens?",
+                  "No numbers yet."
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "SECOND READ",
+                "items": [
+                  "Which numbers?",
+                  "What is the question?",
+                  "One step at a time."
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "t": "card",
+          "head": "STORY B",
+          "items": [
+            "Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3."
+          ]
+        }
+      ],
+      "note": "Round 2, about 3 minutes. Read story B twice, with a first read for who and what, then a second read for the numbers and the question: Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3. How many stickers has Ravi now? Children act it out: 12 - 5 = 7, then 7 + 3 = 10. Answer for the tutor: 10. Praise the two reads, not the speed."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "How many steps did each story have?",
+            "Did each step add, or take away?",
+            "Where did Step 2 start?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key ideas: each story had two steps; each step was one add or one take away; Step 2 starts from the answer to Step 1. Repeat a child's answer in your own words so the recording picks it up. This sets up the mini-lesson."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Read it twice, then step by step",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "FIRST READ",
+                "items": [
+                  "Who? What happens?"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "SECOND READ",
+                "items": [
+                  "Which numbers? What is asked?"
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "t": "say",
+          "text": "One step, one number sentence"
+        }
+      ],
+      "note": "Name the routine: read it twice, then write one number sentence for each step. First read: who and what, no numbers. Second read: the numbers and the question. Then each step is one add or one take away. Ask: how many number sentences for a two-step story? Answer: two."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Mei's stickers",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "STORY",
+          "items": [
+            "Mei has 26 stickers. Ali gives her 10 more. Then she gives 5 to Ben. How many stickers has Mei now?"
+          ]
+        },
+        {
+          "t": "table",
+          "header": false,
+          "rows": [
+            [
+              "Step 1",
+              "26 + 10 = 36"
+            ],
+            [
+              "Step 2",
+              "36 - 5 = 31"
+            ],
+            [
+              "Answer",
+              "Mei has 31 stickers."
+            ]
+          ]
+        }
+      ],
+      "note": "Think aloud. First read: Mei, stickers, Ali gives, she gives to Ben. Second read: 26, 10 more, 5 to Ben. Step 1: gets more, so add, 26 + 10 = 36 (one more bundle of ten). Step 2: gives away, so take away, 36 - 5 = 31 (no renaming: 6 - 5 = 1). Write the answer in a sentence. Ask: where did 36 come from? Answer: from Step 1."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn: two steps",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write Step 1 and Step 2 on your paper. About 1 minute."
+        },
+        {
+          "t": "card",
+          "head": "STORY",
+          "items": [
+            "Siti has 40 beads. She uses 20 for a bracelet. Then she buys 7 more beads. How many beads has Siti now?"
+          ]
+        },
+        {
+          "t": "table",
+          "header": false,
+          "rows": [
+            [
+              "Step 1",
+              "___"
+            ],
+            [
+              "Step 2",
+              "___"
+            ]
+          ]
+        }
+      ],
+      "note": "Read the story twice. Each child writes on their own paper; walk the cameras. Do not ask children to hold boards up in front of the group. Answer for the tutor: 40 - 20 = 20, then 20 + 7 = 27."
+    },
+    {
+      "id": "s-m3a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: two steps",
+      "blocks": [
+        {
+          "t": "table",
+          "header": false,
+          "rows": [
+            [
+              "Step 1",
+              "40 - 20 = 20"
+            ],
+            [
+              "Step 2",
+              "20 + 7 = 27"
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "Siti has 27 beads."
+        }
+      ],
+      "note": "Answers: 40 - 20 = 20 and 20 + 7 = 27. Read each answer aloud so a child watching the recording can mark their own work. Ask: which words told us to take away? (uses) And to add? (buys more)."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "More than, fewer than",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "The words",
+              "The step"
+            ],
+            [
+              "Ben has 5 more than Ali. Ali has 14.",
+              "14 + 5 = 19"
+            ],
+            [
+              "Ben has 5 fewer than Ali. Ali has 14.",
+              "14 - 5 = 9"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Ask: who has more?"
+        }
+      ],
+      "note": "More than and fewer than compare two people. Ali has 14. Ben has 5 more, so Ben has 14 + 5 = 19. Ben has 5 fewer, so Ben has 14 - 5 = 9. Always ask who has more. Then the person with more has the bigger number. Keep it to one minute; the reversed wording (Ravi has more, find Mei) is for Think harder."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Who is in the group?",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "STORY",
+          "items": [
+            "Ravi is in a line. There are 5 children in front of Ravi and 2 behind him. How many children are in the line?"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Count Ravi too!"
+        },
+        {
+          "t": "p",
+          "text": "5 + 2 + 1 = 8"
+        }
+      ],
+      "note": "A reading trap. Draw the line on camera or with counters: 5 children, then Ravi, then 2 children. 5 + 2 = 7 leaves Ravi out, so add 1 more: 8 children. Ask: who is in the group? Always check you counted everyone, including the person in the story. This is the taught idea for the Think harder page."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Step it out",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "A step forward for add. A step back for take away."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "+ 3",
+            "- 2",
+            "+ 4",
+            "- 5"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Where do you end up? Sip some water."
+        }
+      ],
+      "note": "Three minutes. Stand up on camera. Call each move; children take small steps forward and back, or lean forward and back, in the space they have: add 3, take away 2, add 4, take away 5. Count aloud together. After the four moves, everyone is back at the chair: 3, 1, 5, 0. No equipment; keep it gentle for small spaces."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Timer: 5 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud, twice. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may carry on or try Think harder. Question 1 shows the steps; question 2 asks for the two sentences; question 3 asks which sentences to circle."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 1: 10, 10 and 16, 16. Question 2: 49 then 39. Question 3: circle 25 + 10 = 35 and 35 - 3 = 32; Ravi has 32. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 6. Timer: 5 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read question 4 aloud: write + or - for each story. Read question 5 aloud, twice: Ben has more than Ali, so find Ben first. Read question 6 aloud: it is a spot-the-mistake. Children may draw counters to decide. Children who finish page 2 may choose Think harder, Go further or the Investigation, or finish at home."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      ],
+      "note": "Question 4: plus, minus, minus, plus. Question 5: Ben has 33, together 56. Question 6: Siti added the 10, but children who get off leave the bus; the right steps are 30 - 10 = 20 and 20 + 4 = 24. Read each answer aloud. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Our idea in a new setting"
+            ],
+            [
+              "Go further (page 4)",
+              "Bigger stories"
+            ],
+            [
+              "Investigation (page 5)",
+              "Does the order matter?"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. Pages 3 to 5 can go home."
+        }
+      ],
+      "note": "Invite the whole group at once: when you have finished Start here you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. This lesson is short because the end-of-term check follows, so these pages can also be done at home; model answers are in the tutor guide."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "RAVI SAYS",
+          "items": [
+            "Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Do you agree? Use counters to explain."
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Fewer means less, so Ali has 20 - 5 = 15. Repeat each child's answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Ben has 3 more than Ali, and Ali has 4."
+        },
+        {
+          "t": "table",
+          "header": false,
+          "rows": [
+            [
+              "Step 1",
+              "Ben has 4 + 3 = 7"
+            ],
+            [
+              "Step 2",
+              "Together 4 + 7 = 11"
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "11 marbles altogether."
+        }
+      ],
+      "note": "Reveal puzzle 2 now. Say: many of you wrote a good first step. Do not read out anyone's earlier answer. The first step is finding Ben's marbles, 4 + 3 = 7; the second is putting them together, 4 + 7 = 11."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back. Timer: 2 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Children answer on page 5 of the workbook. After the timer everyone holds the ticket to the camera at the same moment, once, so only the tutor sees it (no private chat). Read each question aloud twice. This is a short story-steps ticket, not part of the end-of-term check."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour. Tell the tutor tracker (tutor only) S, D or H as before: S secure on all three, D developing, H needs another go; the exit ticket is never the end-of-term check and never shown to the group."
+    },
+    {
+      "id": "s-check1",
+      "part": "exit",
+      "kind": "light",
+      "title": "Our end-of-term check",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Your own paper. Nobody sees your answers."
+        },
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Open your check sheet. Name on page 1.",
+            "Pencil and ruler ready.",
+            "I read each question. Then you write.",
+            "You may skip a question.",
+            "It is not a race."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "AFTER",
+          "items": [
+            "A grown-up takes a photo of each page and sends it to the tutor.",
+            "Nothing is shown to the group."
+          ]
+        }
+      ],
+      "note": "Introduce the check for about a minute: 10 questions, one from each lesson, on your own private paper; not a race; you may skip any question; no answers are said aloud; nothing is shown to the group. Children take out the closed sheet only now. Cameras show the child and the table, with the paper flat and out of view. Grown-ups sit nearby but do not help with answers. Follow the check key (L10_Check_Tutor_Key.pdf)."
+    },
+    {
+      "id": "s-check2",
+      "part": "exit",
+      "kind": "light",
+      "title": "Pencils down",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Check your name is on page 1.",
+            "Close the sheet. Put your pencil down.",
+            "A grown-up takes one photo of each page, flat and from above.",
+            "Send it privately to your tutor."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "WELL DONE",
+          "items": [
+            "You tried your best. We share words about your learning, never marks."
+          ]
+        }
+      ],
+      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view, and sends them to the program's parent contact today, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use the flex time at the end."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby); never a direct message.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up one thing you found out this term."
+        },
+        {
+          "t": "card",
+          "head": "NEXT TERM",
+          "items": [
+            "Term 2, Lesson 11: Who Is Where?",
+            "You need a pencil, paper and counters."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. A child who needs longer to finish the check may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide. Remind families that the tutor sends a short note of progress words, never a mark.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking this term!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: what if?",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Ali has 20 marbles. He wins 6 and loses 4."
+        },
+        {
+          "t": "p",
+          "text": "Does it matter which comes first?"
+        },
+        {
+          "t": "table",
+          "header": false,
+          "rows": [
+            [
+              "Win first",
+              "20 + 6 - 4"
+            ],
+            [
+              "Lose first",
+              "20 - 4 + 6"
+            ]
+          ]
+        }
+      ],
+      "note": "Optional, only if you are on time. Win first: 20 + 6 = 26, 26 - 4 = 22. Lose first: 20 - 4 = 16, 16 + 6 = 22. Same answer. Take two answers and move on.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Does the order of the steps matter?"
+            ],
+            [
+              "Make a story puzzle",
+              "Write a two-step story for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Teach a toy to read a story twice"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Read it twice. Ben has 30 cards. He gives away 20. Then he gets 6 more.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Step 1: 30 - 20 = ___",
+            "ans": "10",
+            "val": 10
+          },
+          {
+            "l": "b",
+            "text": "Step 2: ___ + 6 = ___",
+            "ans": "10, 16",
+            "val": [
+              10,
+              16
+            ]
+          },
+          {
+            "l": "c",
+            "text": "Ben has ___ cards now.",
+            "ans": "16",
+            "val": 16
+          }
+        ],
+        "answer": "Step 1: 30 - 20 = 10. Step 2: 10 + 6 = 16. Ben has 16 cards.",
+        "val": [
+          10,
+          16,
+          16
+        ],
+        "hint": "Say what happens first. Gives away means take away. Gets more means add.",
+        "solution": "First, Ben gives away 20, so we take away: 30 - 20 = 10. Then he gets 6 more, so we add: 10 + 6 = 16. Ben has 16 cards now.",
+        "mistakes": [
+          "Adding the 20 (30 + 20) because 20 is in the story.",
+          "Using 30 again in Step 2 instead of the 10 left after Step 1."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Mei has 42 stickers. She gets 7 more. Then she gives 10 to Ali. Write a number sentence for each step.",
+        "parts": [
+          {
+            "l": "",
+            "text": "Mei has ___ stickers now.",
+            "ans": "39",
+            "val": 39
+          }
+        ],
+        "answer": "Step 1: 42 + 7 = 49. Step 2: 49 - 10 = 39. Mei has 39 stickers.",
+        "val": [
+          49,
+          39
+        ],
+        "hint": "Use counters or draw it. What happens first? Then what happens next?",
+        "solution": "Step 1: she gets 7 more, so add: 42 + 7 = 49. Step 2: she gives 10 away, so take away: 49 - 10 = 39. Mei has 39 stickers now.",
+        "mistakes": [
+          "Using 42 again in Step 2 (42 - 10 = 32).",
+          "Adding both numbers (42 + 7 + 10)."
+        ],
+        "mins": 3,
+        "lines": 2
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Ravi has 25 pencils. He buys 10 more. Then he loses 3. Circle the two number sentences Ravi needs. Then answer.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "25 + 10 = 35",
+            "ans": "circle",
+            "val": true
+          },
+          {
+            "l": "b",
+            "text": "25 - 10 = 15",
+            "ans": "do not circle",
+            "val": false
+          },
+          {
+            "l": "c",
+            "text": "35 - 3 = 32",
+            "ans": "circle",
+            "val": true
+          },
+          {
+            "l": "d",
+            "text": "35 + 3 = 38",
+            "ans": "do not circle",
+            "val": false
+          },
+          {
+            "l": "",
+            "text": "Ravi has ___ pencils now.",
+            "ans": "32",
+            "val": 32
+          }
+        ],
+        "answer": "Circle 25 + 10 = 35 and 35 - 3 = 32. Ravi has 32 pencils.",
+        "val": [
+          35,
+          32
+        ],
+        "hint": "Buys more means add. Loses means take away. The second step starts from the answer to the first.",
+        "solution": "Step 1: buys 10 more, so 25 + 10 = 35. Step 2: loses 3, so 35 - 3 = 32. The sentences 25 - 10 = 15 and 35 + 3 = 38 use the wrong sign.",
+        "mistakes": [
+          "Circling 25 - 3 = 22 because both numbers are in the story.",
+          "Circling a sentence with the wrong sign."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Story words tell us what to do. Write + for add or - for take away.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ali finds 5 more shells. ___",
+            "ans": "+",
+            "val": "+"
+          },
+          {
+            "l": "b",
+            "text": "Siti eats 3 sweets. ___",
+            "ans": "-",
+            "val": "-"
+          },
+          {
+            "l": "c",
+            "text": "Mei gives away 4 stickers. ___",
+            "ans": "-",
+            "val": "-"
+          },
+          {
+            "l": "d",
+            "text": "6 more children join the line. ___",
+            "ans": "+",
+            "val": "+"
+          }
+        ],
+        "answer": "+, -, -, +",
+        "val": [
+          "+",
+          "-",
+          "-",
+          "+"
+        ],
+        "hint": "Does the story word make the number bigger or smaller? Gets more makes it bigger.",
+        "solution": "Finds more means add (+). Eats means take away (-). Gives away means take away (-). Join means more, so add (+).",
+        "mistakes": [
+          "Choosing + for gives away because there is a number in the sentence.",
+          "Choosing - for join."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Ali has 23 marbles. Ben has 10 more marbles than Ali. How many marbles do they have altogether? Draw if you like.",
+        "parts": [
+          {
+            "l": "",
+            "text": "They have ___ marbles altogether.",
+            "ans": "56",
+            "val": 56
+          }
+        ],
+        "draw": true,
+        "answer": "Step 1: Ben has 23 + 10 = 33. Step 2: 23 + 33 = 56. They have 56 marbles.",
+        "val": [
+          33,
+          56
+        ],
+        "hint": "Read it twice. First find how many Ben has. Then put Ali and Ben together.",
+        "solution": "Step 1: Ben has 10 more than Ali, so 23 + 10 = 33. Step 2: altogether means add Ali and Ben: 23 + 33 = 56 marbles.",
+        "mistakes": [
+          "Answering 33 (stopping after Step 1).",
+          "Adding 23 + 10 and calling that altogether."
+        ],
+        "mins": 3,
+        "lines": 2
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "A bus has 30 children. 10 get off. Then 4 get on. Siti writes 30 + 10 = 40 and 40 + 4 = 44. What did Siti do wrong? Write the right steps and the answer.",
+        "parts": [
+          {
+            "l": "",
+            "text": "There are ___ children on the bus now.",
+            "ans": "24",
+            "val": 24
+          }
+        ],
+        "answer": "Get off means take away: 30 - 10 = 20. Then 20 + 4 = 24. There are 24 children.",
+        "val": [
+          20,
+          24
+        ],
+        "hint": "Who leaves the bus? Do they make the bus fuller or emptier?",
+        "solution": "Children who get off leave the bus, so take away: 30 - 10 = 20. Then 4 get on, so add: 20 + 4 = 24. Siti added the 10 instead of taking it away.",
+        "mistakes": [
+          "Not saying what went wrong (any clear sentence about get off meaning take away is fine).",
+          "Writing 44 again."
+        ],
+        "mins": 3,
+        "lines": 3
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Ravi has 15 marbles. Ravi has 3 more marbles than Mei. Hint: who has more, Ravi or Mei?",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Mei has ___ marbles.",
+            "ans": "12",
+            "val": 12
+          },
+          {
+            "l": "b",
+            "text": "They have ___ marbles altogether.",
+            "ans": "27",
+            "val": 27
+          }
+        ],
+        "answer": "Mei has 12 marbles. Together they have 27.",
+        "val": [
+          12,
+          27
+        ],
+        "hint": "Ravi has more, so Mei has fewer. Draw two groups of counters and compare them.",
+        "solution": "Ravi has 3 more than Mei, so Mei has 3 fewer than Ravi: 15 - 3 = 12. Together: 15 + 12 = 27 marbles.",
+        "mistakes": [
+          "Adding 15 + 3 = 18 because the word more is there.",
+          "Answering 12 for the second part."
+        ],
+        "mins": 4,
+        "lines": 1
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei is in a line to buy lunch. There are 6 children in front of Mei. There are 4 children behind Mei. How many children are in the line?",
+        "parts": [
+          {
+            "l": "",
+            "text": "There are ___ children in the line.",
+            "ans": "11",
+            "val": 11
+          }
+        ],
+        "draw": true,
+        "answer": "11 children (6 + 4 + 1, counting Mei).",
+        "val": [
+          11
+        ],
+        "hint": "Draw the line of children. Did you draw Mei too?",
+        "solution": "The children in front are 6 and behind are 4: 6 + 4 = 10. Mei is in the line as well, so 10 + 1 = 11 children.",
+        "mistakes": [
+          "Answering 10 and leaving Mei out."
+        ],
+        "mins": 4,
+        "lines": 0
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles has Siti?",
+        "parts": [
+          {
+            "l": "",
+            "text": "Siti has ___ marbles.",
+            "ans": "14",
+            "val": 14
+          }
+        ],
+        "answer": "Mei has 17. Siti has 14 marbles.",
+        "val": [
+          17,
+          14
+        ],
+        "hint": "Find Mei first. Then Siti has fewer than Mei.",
+        "solution": "Step 1: Mei has 5 more than Ben: 12 + 5 = 17. Step 2: Siti has 3 fewer than Mei: 17 - 3 = 14 marbles.",
+        "mistakes": [
+          "Taking 3 from 12 (Siti is compared with Mei, not Ben).",
+          "Answering 17 (stopping after Step 1)."
+        ],
+        "mins": 4,
+        "lines": 2
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "A shop has 60 pencils. It sells 24 on Monday and 15 on Tuesday. On Wednesday a box of 30 pencils comes in. How many pencils does the shop have now?",
+        "parts": [
+          {
+            "l": "",
+            "text": "The shop has ___ pencils now.",
+            "ans": "51",
+            "val": 51
+          }
+        ],
+        "answer": "Step 1: 60 - 24 = 36. Step 2: 36 - 15 = 21. Step 3: 21 + 30 = 51. The shop has 51 pencils.",
+        "val": [
+          36,
+          21,
+          51
+        ],
+        "hint": "There are three things that happen, so there are three steps. Write one number sentence for each.",
+        "solution": "Monday: 60 - 24 = 36. Tuesday: 36 - 15 = 21. Wednesday a box comes in, so add: 21 + 30 = 51 pencils.",
+        "mistakes": [
+          "Adding 24 and 15 and taking that from 60 but forgetting the box.",
+          "Starting each step from 60 again."
+        ],
+        "mins": 6,
+        "lines": 3
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Here are two steps. Step 1: 25 + 10 = 35. Step 2: 35 - 8 = 27. Write a story that fits both steps. End with a question. Swap with a grown-up: do they get 27?",
+        "parts": [],
+        "answer": "Any story where 25 grows by 10 and then 8 are taken away, and the question asks how many now. The answer is 27.",
+        "val": "open",
+        "hint": "Pick who and what. Step 1 adds 10. Step 2 takes away 8. What could 25 be?",
+        "solution": "For example: Ali has 25 stickers. He gets 10 more. Then he gives 8 to his sister. How many stickers has Ali now? 25 + 10 = 35, 35 - 8 = 27.",
+        "mistakes": [
+          "A story where the second step starts from 25 instead of 35.",
+          "No question at the end."
+        ],
+        "mins": 6,
+        "lines": 4
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Mei, Ali and Ben have 70 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells has Ben?",
+        "parts": [
+          {
+            "l": "",
+            "text": "Ben has ___ shells.",
+            "ans": "10",
+            "val": 10
+          }
+        ],
+        "answer": "Ali has 35. Mei and Ali have 60. Ben has 10 shells.",
+        "val": [
+          35,
+          60,
+          10
+        ],
+        "hint": "Find Ali first. Then find how many Mei and Ali have together.",
+        "solution": "Step 1: Ali has 25 + 10 = 35. Step 2: Mei and Ali have 25 + 35 = 60. Step 3: Ben has the rest: 70 - 60 = 10 shells.",
+        "mistakes": [
+          "Answering 35 or 60 (stopping early).",
+          "Taking only Mei's shells from 70."
+        ],
+        "mins": 6,
+        "lines": 3
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "title": "Does the order matter?",
+      "first": "Start at 20. Add 10, then take away 5. Start again: take away 5 first, then add 10. Same answer?",
+      "text": "Pick your own numbers. Try both orders. Is the answer always the same? When can one order not work?",
+      "lines": 4,
+      "answer": "Both orders give the same answer (20 + 10 - 5 = 25 and 20 - 5 + 10 = 25) whenever both orders can be done. But the order can matter for what you are allowed to do: from 4 you cannot take away 6 first, though 4 + 10 - 6 = 8 works. So: the answer is the same, but you cannot take away more than you have.",
+      "val": [
+        "same answer when both orders can be done",
+        "cannot take away more than you have"
+      ],
+      "look_for": "A child who tests several numbers, says what they notice, and finds a case where taking away first is not possible (start 4, take away 6).",
+      "mistakes": [
+        "Testing only one example and saying always.",
+        "Thinking the answer changes because the numbers change places."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Ravi says: \"Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25.\" Do you agree? Use counters to explain.",
+    "starter": "I think ... because ...",
+    "answer": "No. Fewer means less. Ali has 5 fewer than 20, so Ali has 20 - 5 = 15 stickers. Siti has more than Ali, so 25 cannot be right.",
+    "look_for": "A reason that uses the word fewer or less and shows 20 with 5 taken away (not just because 25 is too big)."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "A bus has 25 children. 10 get off. Then 3 get on. How many children are on the bus now?",
+      "parts": [
+        {
+          "l": "",
+          "text": "___ children",
+          "ans": "18",
+          "val": 18
+        }
+      ],
+      "answer": "18 (25 - 10 = 15, then 15 + 3 = 18)",
+      "val": [
+        18
+      ],
+      "solution": "Get off means take away: 25 - 10 = 15. Get on means add: 15 + 3 = 18.",
+      "mistakes": [
+        "Writing 38 (adding the 10).",
+        "Writing 15 (stopping after Step 1)."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Ben has 6 stickers. Mei has 5 more stickers than Ben. How many stickers has Mei?",
+      "parts": [
+        {
+          "l": "",
+          "text": "___ stickers",
+          "ans": "11",
+          "val": 11
+        }
+      ],
+      "answer": "11 (6 + 5)",
+      "val": [
+        11
+      ],
+      "solution": "Mei has more than Ben, so add: 6 + 5 = 11.",
+      "mistakes": [
+        "Writing 1 (taking away).",
+        "Writing 5."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "Ali has 7 fewer marbles than Mei. Mei has 20 marbles. How many marbles has Ali?",
+      "parts": [
+        {
+          "l": "",
+          "text": "___ marbles",
+          "ans": "13",
+          "val": 13
+        }
+      ],
+      "answer": "13 (20 - 7)",
+      "val": [
+        13
+      ],
+      "solution": "Ali has fewer, so take away: 20 - 7 = 13.",
+      "mistakes": [
+        "Writing 27 (adding because the number 7 is there).",
+        "Writing 7."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "reading the story twice",
+      "add or take away",
+      "more than, fewer than",
+      "the check",
+      "something else"
+    ],
+    "helped": [
+      "counters",
+      "drawing it",
+      "reading twice",
+      "I asked for help",
+      "I was not stuck"
+    ],
+    "next": [
+      "drawing it",
+      "counters",
+      "checking",
+      "asking"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "Ali has 28 marbles. He wins 10. Then he gives 5 away. How many now?",
+      "answer": "33",
+      "val": 33,
+      "solution": "Step 1: 28 + 10 = 38. Step 2: 38 - 5 = 33."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Mei has 14 stickers. Siti has 6 more. How many has Siti?",
+      "answer": "20",
+      "val": 20,
+      "solution": "Siti has more, so add: 14 + 6 = 20."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "40 pencils: 10 are red, 20 are blue, the rest green. How many green?",
+      "answer": "10",
+      "val": 10,
+      "solution": "Take away the red and the blue: 40 - 10 = 30, then 30 - 20 = 10."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Ben has 9 sweets, 4 fewer than Dev. How many sweets altogether?",
+      "answer": "22",
+      "val": 22,
+      "solution": "Ben has fewer, so Dev has more: 9 + 4 = 13. Together: 9 + 13 = 22."
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "At home: make up a two-step story with numbers within 100. Write one number sentence for each step. Ask a grown-up to solve it.",
+      "answer": "Any two-step story with the right sentences. Check each step: the second sentence starts from the answer to the first.",
+      "val": "open",
+      "solution": "A grown-up checks that each step has one add or one take away, and that the answer sentence matches the question."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l10",
+    "title": "Story Steps: Read It Twice",
+    "topic": "Two-step stories",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "Mei has 24 stickers. Ali gives her 10 more. How many stickers has Mei now?",
+        "answer": 34,
+        "hint": "Gives her more means Mei gets more. Add.",
+        "steps": [
+          "Mei gets more, so add.",
+          "24 + 10: one more ten, 34.",
+          "Mei has 34 stickers."
+        ],
+        "slips": [
+          {
+            "a": [
+              14
+            ],
+            "say": "14 is 24 - 10. Ali gives her more, so Mei has more. Add."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              12,
+              23,
+              34,
+              45,
+              56
+            ],
+            "b": [
+              10,
+              20,
+              5,
+              6
+            ]
+          },
+          "q": "Mei has {a} stickers. Ali gives her {b} more. How many stickers has Mei now?",
+          "answer": "a+b",
+          "hint": "Gives her more means Mei gets more. Add.",
+          "steps": [
+            "Mei gets more, so add.",
+            "{a} + {b}.",
+            "Mei has {ans} stickers."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "A bus has 30 children. 10 get off. Then 4 get on. How many children are on the bus now?",
+        "answer": 24,
+        "hint": "Two steps. Get off means take away. Get on means add.",
+        "steps": [
+          "Step 1: 10 get off, so take away: 30 - 10 = 20.",
+          "Step 2: 4 get on, so add: 20 + 4 = 24.",
+          "There are 24 children."
+        ],
+        "slips": [
+          {
+            "a": [
+              44
+            ],
+            "say": "44 adds the children who got off. Children who get off leave the bus, so take away."
+          },
+          {
+            "a": [
+              20
+            ],
+            "say": "20 is the answer to Step 1. There is one more step: 4 get on."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              30,
+              40,
+              50,
+              60,
+              45
+            ],
+            "b": [
+              10,
+              20,
+              5
+            ],
+            "c": [
+              3,
+              4,
+              6
+            ]
+          },
+          "derive": {
+            "m": "a-b"
+          },
+          "q": "A bus has {a} children. {b} get off. Then {c} get on. How many children are on the bus now?",
+          "answer": "a-b+c",
+          "hint": "Two steps. Get off means take away. Get on means add.",
+          "steps": [
+            "Step 1: {b} get off, so take away: {a} - {b} = {m}.",
+            "Step 2: {c} get on, so add: {m} + {c} = {ans}.",
+            "There are {ans} children."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "Ben has 15 cards. Ali has 10 more cards than Ben. How many cards has Ali?",
+        "answer": 25,
+        "hint": "Ali has more than Ben, so Ali has the bigger number. Add.",
+        "steps": [
+          "Ali has more, so add.",
+          "15 + 10 = 25.",
+          "Ali has 25 cards."
+        ],
+        "slips": [
+          {
+            "a": [
+              5
+            ],
+            "say": "5 is 15 - 10. Ali has more than Ben, so add."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              12,
+              15,
+              23,
+              34
+            ],
+            "b": [
+              5,
+              10,
+              20
+            ]
+          },
+          "q": "Ben has {a} cards. Ali has {b} more cards than Ben. How many cards has Ali?",
+          "answer": "a+b",
+          "hint": "Ali has more than Ben, so Ali has the bigger number. Add.",
+          "steps": [
+            "Ali has more, so add.",
+            "{a} + {b}.",
+            "Ali has {ans} cards."
+          ]
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "choice",
+        "q": "Siti has 30 beads. She uses 10 for a bracelet. Then she buys 6 more. Which number sentence is Step 1?",
+        "options": [
+          "30 - 10 = 20",
+          "30 + 10 = 40",
+          "30 + 6 = 36",
+          "10 + 6 = 16"
+        ],
+        "answer": "30 - 10 = 20",
+        "hint": "What happens first in the story? Uses means take away.",
+        "steps": [
+          "The first thing that happens is she uses 10 beads.",
+          "Uses means take away: 30 - 10 = 20.",
+          "Step 2 will be 20 + 6 = 26."
+        ],
+        "slips": [
+          {
+            "a": [
+              "30 + 10 = 40"
+            ],
+            "say": "She uses 10 beads, so she has fewer. Take away."
+          },
+          {
+            "a": [
+              "30 + 6 = 36"
+            ],
+            "say": "Buying 6 more is Step 2, and it starts from the beads she has left."
+          }
+        ]
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "number",
+        "q": "Ali has 24 marbles. Ben has 5 fewer marbles than Ali. How many marbles has Ben?",
+        "answer": 19,
+        "hint": "Ben has fewer, so Ben has the smaller number. Take away.",
+        "steps": [
+          "Ben has fewer, so take away.",
+          "24 - 5 = 19.",
+          "Ben has 19 marbles."
+        ],
+        "slips": [
+          {
+            "a": [
+              29
+            ],
+            "say": "29 is 24 + 5. Ben has fewer than Ali, so take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              24,
+              35,
+              48,
+              50
+            ],
+            "b": [
+              5,
+              10,
+              6,
+              3
+            ]
+          },
+          "q": "Ali has {a} marbles. Ben has {b} fewer marbles than Ali. How many marbles has Ben?",
+          "answer": "a-b",
+          "hint": "Ben has fewer, so Ben has the smaller number. Take away.",
+          "steps": [
+            "Ben has fewer, so take away.",
+            "{a} - {b}.",
+            "Ben has {ans} marbles."
+          ]
+        }
+      },
+      {
+        "id": "c6",
+        "tier": "core",
+        "type": "number",
+        "q": "Mei has 10 beads. Siti has 5 more beads than Mei. How many beads do they have altogether?",
+        "answer": 25,
+        "hint": "Two steps. First find how many Siti has. Then put them together.",
+        "steps": [
+          "Step 1: Siti has 5 more than Mei: 10 + 5 = 15.",
+          "Step 2: altogether: 10 + 15 = 25.",
+          "They have 25 beads."
+        ],
+        "slips": [
+          {
+            "a": [
+              15
+            ],
+            "say": "15 is how many Siti has. Altogether means Mei and Siti together."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              10,
+              12,
+              20,
+              24
+            ],
+            "b": [
+              5,
+              10,
+              6
+            ]
+          },
+          "derive": {
+            "s": "a+b"
+          },
+          "q": "Mei has {a} beads. Siti has {b} more beads than Mei. How many beads do they have altogether?",
+          "answer": "a+a+b",
+          "hint": "Two steps. First find how many Siti has. Then put them together.",
+          "steps": [
+            "Step 1: Siti has {b} more than Mei: {a} + {b} = {s}.",
+            "Step 2: altogether: {a} + {s} = {ans}.",
+            "They have {ans} beads."
+          ]
+        }
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ravi has 15 marbles. Ravi has 3 more marbles than Mei. How many marbles has Mei?",
+        "answer": 12,
+        "hint": "Ravi has more, so Mei has fewer. Take away.",
+        "steps": [
+          "Ravi has 3 more than Mei, so Mei has 3 fewer than Ravi.",
+          "15 - 3 = 12.",
+          "Mei has 12 marbles."
+        ],
+        "slips": [
+          {
+            "a": [
+              18
+            ],
+            "say": "18 is 15 + 3. Ravi has MORE than Mei, so Mei has fewer. Take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "r": [
+              15,
+              18,
+              22,
+              27
+            ],
+            "b": [
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "q": "Ravi has {r} marbles. Ravi has {b} more marbles than Mei. How many marbles has Mei?",
+          "answer": "r-b",
+          "hint": "Ravi has more, so Mei has fewer. Take away.",
+          "steps": [
+            "Ravi has {b} more than Mei, so Mei has {b} fewer than Ravi.",
+            "{r} - {b}.",
+            "Mei has {ans} marbles."
+          ]
+        },
+        "easier": "c3"
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Mei is in a line. There are 6 children in front of Mei and 4 children behind Mei. How many children are in the line?",
+        "answer": 11,
+        "hint": "Draw the line. Did you draw Mei too?",
+        "steps": [
+          "6 in front and 4 behind: 6 + 4 = 10.",
+          "Mei is in the line too: 10 + 1 = 11.",
+          "There are 11 children."
+        ],
+        "slips": [
+          {
+            "a": [
+              10
+            ],
+            "say": "10 leaves out Mei. Count Mei too."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "f": [
+              4,
+              5,
+              6,
+              8
+            ],
+            "k": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "s": "f+k"
+          },
+          "q": "Mei is in a line. There are {f} children in front of Mei and {k} children behind Mei. How many children are in the line?",
+          "answer": "f+k+1",
+          "hint": "Draw the line. Did you draw Mei too?",
+          "steps": [
+            "{f} in front and {k} behind: {f} + {k} = {s}.",
+            "Mei is in the line too: {s} + 1 = {ans}.",
+            "There are {ans} children."
+          ]
+        },
+        "easier": "c2"
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ali has 24 cards. Ali has 6 fewer cards than Ben. How many cards have they altogether?",
+        "answer": 54,
+        "hint": "Ali has fewer, so Ben has more. Find Ben first.",
+        "steps": [
+          "Ben has 6 more than Ali: 24 + 6 = 30.",
+          "Altogether: 24 + 30 = 54.",
+          "They have 54 cards."
+        ],
+        "slips": [
+          {
+            "a": [
+              30
+            ],
+            "say": "30 is Ben's cards. Altogether means Ali and Ben together."
+          },
+          {
+            "a": [
+              42
+            ],
+            "say": "42 is 24 + 24 - 6. Ali has fewer than Ben, so Ben has more: 24 + 6."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              24,
+              30,
+              35,
+              40
+            ],
+            "b": [
+              6,
+              5,
+              10
+            ]
+          },
+          "derive": {
+            "s": "a+b"
+          },
+          "q": "Ali has {a} cards. Ali has {b} fewer cards than Ben. How many cards have they altogether?",
+          "answer": "a+a+b",
+          "hint": "Ali has fewer, so Ben has more. Find Ben first.",
+          "steps": [
+            "Ben has {b} more than Ali: {a} + {b} = {s}.",
+            "Altogether: {a} + {s} = {ans}.",
+            "They have {ans} cards."
+          ]
+        },
+        "easier": "c6"
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles has Siti?",
+        "answer": 14,
+        "hint": "Find Mei first. Siti is compared with Mei, not with Ben.",
+        "steps": [
+          "Mei has 5 more than Ben: 12 + 5 = 17.",
+          "Siti has 3 fewer than Mei: 17 - 3 = 14.",
+          "Siti has 14 marbles."
+        ],
+        "slips": [
+          {
+            "a": [
+              9
+            ],
+            "say": "9 is 12 - 3. Siti has 3 fewer than Mei, not than Ben."
+          },
+          {
+            "a": [
+              17
+            ],
+            "say": "17 is how many Mei has. Siti has 3 fewer than Mei."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              12,
+              15,
+              20
+            ],
+            "b": [
+              5,
+              6,
+              8
+            ],
+            "c": [
+              3,
+              4,
+              2
+            ]
+          },
+          "derive": {
+            "m": "a+b"
+          },
+          "q": "Ben has {a} marbles. Mei has {b} more marbles than Ben. Siti has {c} fewer marbles than Mei. How many marbles has Siti?",
+          "answer": "a+b-c",
+          "hint": "Find Mei first. Siti is compared with Mei, not with Ben.",
+          "steps": [
+            "Mei has {b} more than Ben: {a} + {b} = {m}.",
+            "Siti has {c} fewer than Mei: {m} - {c} = {ans}.",
+            "Siti has {ans} marbles."
+          ]
+        },
+        "easier": "c5"
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "A shop has 60 pencils. It sells 24 on Monday and 15 on Tuesday. Then a box of 30 pencils comes in. How many pencils does the shop have now?",
+        "answer": 51,
+        "hint": "Three things happen, so write three number sentences.",
+        "steps": [
+          "Monday: 60 - 24 = 36.",
+          "Tuesday: 36 - 15 = 21.",
+          "The box comes in: 21 + 30 = 51."
+        ],
+        "slips": [
+          {
+            "a": [
+              21
+            ],
+            "say": "21 is the answer after two steps. A box of 30 pencils comes in, so add."
+          },
+          {
+            "a": [
+              99
+            ],
+            "say": "99 is 60 + 24 + 15. Selling means take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              60,
+              70,
+              80
+            ],
+            "a": [
+              24,
+              15,
+              20
+            ],
+            "b": [
+              15,
+              12,
+              10
+            ],
+            "c": [
+              30,
+              20,
+              10
+            ]
+          },
+          "derive": {
+            "m": "s-a",
+            "n": "s-a-b"
+          },
+          "q": "A shop has {s} pencils. It sells {a} on Monday and {b} on Tuesday. Then a box of {c} pencils comes in. How many pencils does the shop have now?",
+          "answer": "s-a-b+c",
+          "hint": "Three things happen, so write three number sentences.",
+          "steps": [
+            "Monday: {s} - {a} = {m}.",
+            "Tuesday: {m} - {b} = {n}.",
+            "The box comes in: {n} + {c} = {ans}."
+          ]
+        },
+        "easier": "t4"
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Mei, Ali and Ben have 80 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells has Ben?",
+        "answer": 20,
+        "hint": "Find Ali first. Then find how many Mei and Ali have together.",
+        "steps": [
+          "Ali has 25 + 10 = 35.",
+          "Mei and Ali have 25 + 35 = 60.",
+          "Ben has 80 - 60 = 20 shells."
+        ],
+        "slips": [
+          {
+            "a": [
+              45
+            ],
+            "say": "45 is 80 - 35. Ben has the rest after Mei AND Ali."
+          },
+          {
+            "a": [
+              60
+            ],
+            "say": "60 is how many Mei and Ali have together. Ben has the rest."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "T": [
+              80,
+              90
+            ],
+            "m": [
+              20,
+              25,
+              30
+            ],
+            "k": [
+              5,
+              10
+            ]
+          },
+          "derive": {
+            "al": "m+k",
+            "both": "m+m+k"
+          },
+          "q": "Mei, Ali and Ben have {T} shells altogether. Mei has {m} shells. Ali has {k} more shells than Mei. How many shells has Ben?",
+          "answer": "T-m-m-k",
+          "hint": "Find Ali first. Then find how many Mei and Ali have together.",
+          "steps": [
+            "Ali has {m} + {k} = {al}.",
+            "Mei and Ali have {m} + {al} = {both}.",
+            "Ben has {T} - {both} = {ans} shells."
+          ]
+        },
+        "easier": "t3"
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "There are 15 children in a line, counting Mei. 6 children stand in front of Mei. How many children stand behind Mei?",
+        "answer": 8,
+        "hint": "Mei is one of the 15. Take her away too.",
+        "steps": [
+          "15 children in the line. Mei is one of them.",
+          "6 are in front of Mei and 1 is Mei: 6 + 1 = 7.",
+          "15 - 7 = 8 children stand behind Mei."
+        ],
+        "slips": [
+          {
+            "a": [
+              9
+            ],
+            "say": "9 is 15 - 6. Mei is one of the 15 and does not stand behind herself."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              12,
+              15,
+              18,
+              20
+            ],
+            "f": [
+              4,
+              6,
+              7,
+              9
+            ]
+          },
+          "derive": {
+            "u": "f+1"
+          },
+          "q": "There are {n} children in a line, counting Mei. {f} children stand in front of Mei. How many children stand behind Mei?",
+          "answer": "n-f-1",
+          "hint": "Mei is one of the {n}. Take her away too.",
+          "steps": [
+            "{n} children in the line. Mei is one of them.",
+            "{f} are in front of Mei and 1 is Mei: {f} + 1 = {u}.",
+            "{n} - {u} = {ans} children stand behind Mei."
+          ]
+        },
+        "easier": "t2"
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Make up your own two-step story with one add and one take away. Write the question. Solve it, then check each step.",
+        "hint": "Pick a start number first. Step 1 adds. Step 2 takes away from the new number.",
+        "steps": [
+          "Check Step 1 is one add or one take away.",
+          "Check Step 2 starts from the answer to Step 1.",
+          "For example: Ali has 20 marbles. He wins 6. Then he loses 4. 20 + 6 = 26, then 26 - 4 = 22."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Then your child took the end-of-term check on private paper.",
+    "words": [
+      "step: one thing that happens",
+      "read it twice: story, then numbers",
+      "more than, fewer than: compare",
+      "number sentence: 26 + 10 = 36"
+    ],
+    "try_home": [
+      "Act it out: tell a story with two steps (I have 12, I win 5, then I give 3 away). Your child does each step with buttons.",
+      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?'",
+      "Make it up: your child makes up a two-step story for you. Solve it together, one step at a time."
+    ],
+    "ask": [
+      "What happens first? What happens next?",
+      "Do we add or take away? How do you know?",
+      "Did we count everyone?"
+    ],
+    "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine.",
+    "next": "Term 2, Lesson 11: Who Is Where? Your child needs a pencil, paper and counters. Please send the check photos as in the grown-up note; your tutor sends back progress words, never a mark.",
+    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and the end-of-term check.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "quote": "One step at a time. Read it twice, then write one number sentence for each step."
+  },
+  "safeguarding": [
+    "Counters stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. The ruler is for drawing lines only.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "The sneak-peek and exit-ticket answers are shown on the child's own paper to the camera at the same moment, once. The end-of-term check is different: papers stay flat on the table, are never held up or read out, and no answer is said aloud.",
+    "The check comes back to the tutor privately: the parent takes one photo of each page and sends it to the program's parent contact, never a chat with the child. The tutor sends the parent a note of progress words only. No score is shown to the group, no ranking, no comparison between children, no private message to a child.",
+    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded. A child may keep the camera off.",
+    "A child who ticks 'I am still stuck' gets a check-in in the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed, and so is skipping any check question."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question and every check question yourself first. Read the check key (L10_Check_Tutor_Key.pdf) and the private return plan.",
+    "A week before: send the grown-up note (L10_Check_Parent_Note.pdf). Families print the workbook pages 1 to 6 and the 4-page check sheet at 100%, cut out the kit page, find counters, a pencil and a ruler. The check sheet stays closed (in an envelope or folded) until the tutor says.",
+    "Have the slides open and check that the timer slide is not on screen during the check. Test the recording settings: children's video excluded.",
+    "Print or open one record sheet for each child (tutor only). Decide with the owner which parent contact address receives the photos (the one given at enrolment)."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide. In this lesson the buffer may first be needed by children finishing the check.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Mei says: you can add and take away in any order and get the same answer. Is that always true? Try 20 + 10 - 5, then 20 - 5 + 10, then 4 - 6 + 10.",
+        "rec": "Recording: pause. Try 20 + 10 - 5 and 20 - 5 + 10. Then try 4 - 6 first. What do you notice?",
+        "answer": "20 + 10 - 5 = 25 and 20 - 5 + 10 = 25: the same. But from 4 you cannot take away 6 first. The answer is the same when both orders can be done."
+      },
+      {
+        "id": "M2",
+        "title": "Make a story puzzle",
+        "minutes": 4,
+        "tutor": "Write a two-step story for your grown-up with numbers within 100. Write the question. Keep your own answer secret, then check theirs.",
+        "rec": "Recording: pause. Write a two-step story and a question for your grown-up to solve.",
+        "answer": "No single answer. Check that each step is one add or one take away and the question matches."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend a toy has never heard of reading a story twice. Teach it using: Ali has 20 marbles, wins 6 and loses 4.",
+        "rec": "Recording: pause. Teach a toy or a grown-up to read a story twice. Use 20, win 6, lose 4.",
+        "answer": "First read: who and what. Second read: the numbers and the question. Step 1: 20 + 6 = 26. Step 2: 26 - 4 = 22."
+      }
+    ]
+  },
+  "workbook": {
+    "header": "Story steps",
+    "hint_p1": "Use counters or a drawing. Read the story twice. Say your answer out loud, then write it.",
+    "hint_p3": "Use counters, draw a picture or draw the line of children. Then write how you know. Choose any question, in any order.",
+    "hint_p4": "Choose any question. Write one number sentence for each step. You do not have to finish them all.",
+    "kits": [
+      {
+        "type": "base_ten",
+        "title": "Kit page: tens bars and ones squares",
+        "intro": "A grown-up cuts these out before the lesson. The squares make good counters for acting out stories. A bar is a ten."
+      }
+    ]
+  },
+  "end_of_term_check": {
+    "title": "Term 1 end-of-term check",
+    "minutes": 29,
+    "where": "Lesson 10 (the last lesson of the term), minutes 54 to 83 inside the part Exit ticket and end-of-term check; or at the make-up slot",
+    "plan_note": "Plan, section 5: about 20 to 30 minutes, 10 questions, one per lesson, privately returned, no ranking, no score shown to the group, parent report line per term. Owner brief for this build: Lessons 1 to 9 fairly (one question each) plus one story question; all at Start here level, with one clearly marked optional Think harder item. The plan's mix of 4 Start here, 4 Think harder and 2 Go further is replaced by 10 Start here questions and one optional Think harder item: the owner decides if the mix returns.",
+    "sheet_pages": 4,
+    "child_rules": [
+      "This is a check for you and your tutor.",
+      "It is not a race. Nobody else sees your answers.",
+      "Do your best. You may skip any question.",
+      "Question 9 needs your ruler.",
+      "The last question is a Think harder question. It is optional."
+    ],
+    "child_footer": "Math Inquirers Term 1 end-of-term check. Print at 100% (actual size).",
+    "questions": [
+      {
+        "id": "C1",
+        "lesson": 1,
+        "strand": "numbers",
+        "page": 1,
+        "tier": "start",
+        "skill": "Tens and ones: read a picture of sticks in tens and ones",
+        "text": "Count the sticks.",
+        "visual": {
+          "type": "bundles",
+          "tens": 4,
+          "ones": 7
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "___ tens and ___ ones",
+            "ans": "4 tens and 7 ones",
+            "val": [
+              4,
+              7
+            ]
+          },
+          {
+            "l": "b",
+            "text": "___ sticks altogether",
+            "ans": "47",
+            "val": 47
+          }
+        ],
+        "say": "Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether.",
+        "answer": "4 tens and 7 ones; 47 sticks",
+        "val": [
+          4,
+          7,
+          47
+        ],
+        "solution": "4 bundles of ten is 40, and 7 singles makes 47.",
+        "right": "4, 7 and 47 all correct.",
+        "partly": "Any one of the three correct (for example 47 but not the tens and ones).",
+        "mistakes": [
+          "47 written as 74.",
+          "Counting each bundle as one stick (4 + 7 = 11)."
+        ]
+      },
+      {
+        "id": "C2",
+        "lesson": 2,
+        "strand": "numbers",
+        "page": 1,
+        "tier": "start",
+        "skill": "Number line to 100, the number just before, a number word in digits",
+        "text": "Look at the number line. Then answer.",
+        "visual": {
+          "type": "numberline",
+          "lo": 60,
+          "hi": 70,
+          "arrow": 67,
+          "labels": [
+            60,
+            65,
+            70
+          ]
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "The arrow shows ___",
+            "ans": "67",
+            "val": 67
+          },
+          {
+            "l": "b",
+            "text": "The number just before 80 is ___",
+            "ans": "79",
+            "val": 79
+          },
+          {
+            "l": "c",
+            "text": "Write in digits: fifty-three ___",
+            "ans": "53",
+            "val": 53
+          }
+        ],
+        "say": "Question 2. Part a: look at the number line. Which number is the arrow pointing to? Part b: write the number just before eighty. Part c: write fifty-three in digits.",
+        "answer": "67; 79; 53",
+        "val": [
+          67,
+          79,
+          53
+        ],
+        "solution": "The arrow is 2 steps after 65, so 67. Just before 80 is 79. Fifty-three is 5 tens and 3 ones: 53.",
+        "right": "All three correct.",
+        "partly": "One or two of the three correct.",
+        "mistakes": [
+          "(a) 66 or 68 from miscounting ticks.",
+          "(b) 81 (after instead of before) or 70.",
+          "(c) 35 (digits swapped) or 503."
+        ]
+      },
+      {
+        "id": "C3",
+        "lesson": 3,
+        "strand": "numbers",
+        "page": 2,
+        "tier": "start",
+        "skill": "Make two numbers from two cards and say which is bigger",
+        "text": "You have two cards. Use both cards to make two different numbers.",
+        "visual": {
+          "type": "digitcards",
+          "digits": [
+            3,
+            8
+          ]
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "The two numbers are ___ and ___",
+            "ans": "38 and 83 (either order)",
+            "val": [
+              38,
+              83
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The bigger number is ___",
+            "ans": "83",
+            "val": 83
+          }
+        ],
+        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the bigger number.",
+        "answer": "38 and 83; the bigger is 83",
+        "val": [
+          38,
+          83,
+          83
+        ],
+        "solution": "Put 3 first and 8 second to make 38. Put 8 first and 3 second to make 83. 83 has 8 tens and 38 has 3 tens, so 83 is bigger.",
+        "right": "38 and 83 (either order) and 83 as the bigger.",
+        "partly": "Both numbers made but the bigger one wrong, or only one number made and the bigger one right.",
+        "mistakes": [
+          "Writing 3 and 8 (single cards).",
+          "Writing 38 twice.",
+          "Saying 38 is bigger because 8 is the bigger digit."
+        ]
+      },
+      {
+        "id": "C4",
+        "lesson": 4,
+        "strand": "numbers",
+        "page": 2,
+        "tier": "start",
+        "skill": "Counting patterns in 5s and 2s, and what we see in the last digit",
+        "text": "Count on and fill in the gaps.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "15, 20, 25, ___, ___",
+            "ans": "30, 35",
+            "val": [
+              30,
+              35
+            ]
+          },
+          {
+            "l": "b",
+            "text": "22, 24, 26, ___, ___",
+            "ans": "28, 30",
+            "val": [
+              28,
+              30
+            ]
+          },
+          {
+            "l": "c",
+            "text": "When we count in 5s, every number ends in 5 or ___",
+            "ans": "0",
+            "val": 0
+          }
+        ],
+        "say": "Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives.",
+        "answer": "30, 35; 28, 30; 0",
+        "val": [
+          30,
+          35,
+          28,
+          30,
+          0
+        ],
+        "solution": "In 5s: 25, 30, 35. In 2s: 26, 28, 30. Numbers in the 5s end in 5 or 0.",
+        "right": "All five gaps and the last digit correct.",
+        "partly": "At least one part correct.",
+        "mistakes": [
+          "(a) 26, 27 (counting in ones).",
+          "(b) 27, 28 (counting in ones).",
+          "(c) a digit other than 0."
+        ]
+      },
+      {
+        "id": "C5",
+        "lesson": 5,
+        "strand": "addsub",
+        "page": 2,
+        "tier": "start",
+        "skill": "Add by making a ten, then with a tens number",
+        "text": "Look at the ten frames. You may make a ten first.",
+        "visual": {
+          "type": "tenframes",
+          "a": 7,
+          "b": 5
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "7 + 5 = ___",
+            "ans": "12",
+            "val": 12
+          },
+          {
+            "l": "b",
+            "text": "37 + 5 = ___",
+            "ans": "42",
+            "val": 42
+          }
+        ],
+        "say": "Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. You may make a ten first.",
+        "answer": "12; 42",
+        "val": [
+          12,
+          42
+        ],
+        "solution": "7 + 3 = 10, and 2 more makes 12. 37 + 3 = 40, and 2 more makes 42.",
+        "right": "Both correct.",
+        "partly": "One correct.",
+        "mistakes": [
+          "(b) 32 or 312 (joining digits or forgetting the tens).",
+          "(a) 11 or 13 from a counting slip."
+        ]
+      },
+      {
+        "id": "C6",
+        "lesson": 6,
+        "strand": "addsub",
+        "page": 3,
+        "tier": "start",
+        "skill": "Add and take away tens (jumps of ten)",
+        "text": "Jump in tens. Write the answers.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "52 + 10 = ___",
+            "ans": "62",
+            "val": 62
+          },
+          {
+            "l": "b",
+            "text": "52 + 30 = ___",
+            "ans": "82",
+            "val": 82
+          },
+          {
+            "l": "c",
+            "text": "52 - 20 = ___",
+            "ans": "32",
+            "val": 32
+          }
+        ],
+        "say": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20.",
+        "answer": "62; 82; 32",
+        "val": [
+          62,
+          82,
+          32
+        ],
+        "solution": "Adding 10 makes the tens digit one bigger: 62. 3 tens more is 82. 2 tens fewer is 32. The ones digit stays 2.",
+        "right": "All three correct.",
+        "partly": "One or two correct.",
+        "mistakes": [
+          "(a) 53 (adding to the ones).",
+          "(c) 72 (adding instead of taking away) or 30."
+        ]
+      },
+      {
+        "id": "C7",
+        "lesson": 7,
+        "strand": "addsub",
+        "page": 3,
+        "tier": "start",
+        "skill": "Take away tens and ones without renaming",
+        "text": "Take away. Write the answers.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "68 - 23 = ___",
+            "ans": "45",
+            "val": 45
+          },
+          {
+            "l": "b",
+            "text": "76 - 14 = ___",
+            "ans": "62",
+            "val": 62
+          }
+        ],
+        "say": "Question 7. Write 68 take away 23. Write 76 take away 14.",
+        "answer": "45; 62",
+        "val": [
+          45,
+          62
+        ],
+        "solution": "68 - 20 = 48, then 48 - 3 = 45. 76 - 10 = 66, then 66 - 4 = 62.",
+        "right": "Both correct.",
+        "partly": "One correct.",
+        "mistakes": [
+          "(a) 55 (taking 13 or forgetting the 3).",
+          "(b) 70 or 62 reversed as 26."
+        ]
+      },
+      {
+        "id": "C8",
+        "lesson": 8,
+        "strand": "addsub",
+        "page": 3,
+        "tier": "start",
+        "skill": "Equals as a balance: a box number",
+        "text": "Write the number that goes in the box.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "26 + 13 = [box] + 10",
+            "ans": "29",
+            "val": 29
+          },
+          {
+            "l": "b",
+            "text": "8 + 7 = 7 + [box]",
+            "ans": "8",
+            "val": 8
+          }
+        ],
+        "say": "Question 8. Write the number that goes in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box.",
+        "answer": "29; 8",
+        "val": [
+          29,
+          8
+        ],
+        "solution": "(a) 26 + 13 = 39, and 39 is 29 + 10, so the box is 29. (b) Both sides must have the same total: 8 + 7 = 15, and 7 + 8 = 15, so the box is 8.",
+        "right": "Both correct.",
+        "partly": "One correct.",
+        "mistakes": [
+          "(a) 39 (writing the total of the left side).",
+          "(b) 15 (the total instead of the missing number)."
+        ]
+      },
+      {
+        "id": "C9",
+        "lesson": 9,
+        "strand": "length",
+        "page": 3,
+        "tier": "start",
+        "skill": "Draw a line of a given length and measure a printed line to the nearest centimetre",
+        "text": "Use your ruler.",
+        "visual": {
+          "type": "ruler_task",
+          "draw_cm": 6,
+          "line_cm": 9
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "Draw a line 6 cm long. Start at the dot.",
+            "ans": "A line from the dot, 6 cm long (5.7 to 6.3 cm)",
+            "val": 6
+          },
+          {
+            "l": "b",
+            "text": "This line is ___ cm long.",
+            "ans": "9",
+            "val": 9
+          }
+        ],
+        "say": "Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?",
+        "answer": "a line 6 cm long; 9 cm",
+        "val": [
+          6,
+          9
+        ],
+        "solution": "Put the 0 mark of the ruler on the dot, draw to the 6 mark. The printed line starts at the 0 mark and ends at 9.",
+        "right": "A line 5.7 to 6.3 cm long that starts at the dot, and 9.",
+        "partly": "One of the two correct (a line between 5.5 and 6.5 cm counts as correct for part a if the photo is not clear).",
+        "mistakes": [
+          "Starting the line at 1 on the ruler (a 5 cm line).",
+          "(b) 10 (counting marks instead of gaps) or reading from the edge of the ruler."
+        ]
+      },
+      {
+        "id": "C10",
+        "lesson": 10,
+        "strand": "stories",
+        "page": 4,
+        "tier": "start",
+        "skill": "A two-step story, one operation per step",
+        "text": "Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Step 1: [wide]",
+            "ans": "35 + 10 = 45",
+            "val": 45
+          },
+          {
+            "l": "b",
+            "text": "Step 2: [wide]",
+            "ans": "45 - 3 = 42",
+            "val": 42
+          },
+          {
+            "l": "c",
+            "text": "Mei has ___ stickers now.",
+            "ans": "42",
+            "val": 42
+          }
+        ],
+        "say": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben. Write Step 1 and Step 2, one number sentence for each. Then write how many stickers Mei has now.",
+        "answer": "35 + 10 = 45; 45 - 3 = 42; Mei has 42 stickers",
+        "val": [
+          45,
+          42,
+          42
+        ],
+        "solution": "Step 1: she gets 10 more, so add: 35 + 10 = 45. Step 2: she gives 3 away, so take away: 45 - 3 = 42.",
+        "right": "Both step sentences have the right operation and numbers (any clear layout) and the answer is 42.",
+        "partly": "The answer 42 without steps, or one correct step sentence, or both sentences right with one slip in the arithmetic.",
+        "mistakes": [
+          "32 (taking the 10 away from 35 and adding 3 or similar).",
+          "48 (adding both numbers).",
+          "Using 35 again in Step 2."
+        ]
+      }
+    ],
+    "optional": {
+      "id": "CT",
+      "tier": "think",
+      "optional": true,
+      "lesson": 10,
+      "strand": "stories",
+      "skill": "Reading trap: who is in the group",
+      "text": "Think harder (optional). Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?",
+      "parts": [
+        {
+          "l": "",
+          "text": "___ children",
+          "ans": "9",
+          "val": 9
+        }
+      ],
+      "say": "The last question is a Think harder question, and it is optional. You may skip it. Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?",
+      "answer": "9 children (5 + 3 + 1, counting Ali)",
+      "val": [
+        9
+      ],
+      "solution": "5 in front and 3 behind makes 8, and Ali is in the line as well: 8 + 1 = 9.",
+      "mistakes": [
+        "8 (leaving Ali out)."
+      ],
+      "note": "Never scored. A correct answer adds a strength sentence to the note; a blank or wrong answer changes nothing."
+    },
+    "strands": [
+      {
+        "id": "numbers",
+        "parent_name": "Numbers, tens and ones",
+        "moe_label": "Whole Numbers",
+        "lessons": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "questions": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "looked_at": "reading and writing numbers to 100 as tens and ones, number lines, comparing numbers and counting patterns",
+        "showing": "[Name] is showing this often: reading and writing numbers to 100 as tens and ones, finding numbers on a number line, comparing numbers made from two cards and spotting counting patterns.",
+        "getting": "[Name] is getting there with reading and writing numbers as tens and ones, number lines, comparing numbers and counting patterns. A few more rounds with real things will help.",
+        "beginning": "[Name] is just beginning with seeing numbers as tens and ones. Bundling real things in tens, and counting in tens and fives together, are good next steps."
+      },
+      {
+        "id": "addsub",
+        "parent_name": "Adding and taking away",
+        "moe_label": "Addition and Subtraction",
+        "lessons": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "questions": [
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ],
+        "looked_at": "adding by making a ten, jumping in tens, taking away tens and ones, and using = as a balance",
+        "showing": "[Name] is showing this often: adding by making a ten, jumping in tens, taking away tens and ones, and using the equals sign as a balance.",
+        "getting": "[Name] is getting there with adding by making a ten, jumping in tens, taking away and using the equals sign as a balance. Counters and a number line will help.",
+        "beginning": "[Name] is just beginning with adding and taking away within 100. Counters, a number line and small steps (add 10, take away 10) are good next steps."
+      },
+      {
+        "id": "length",
+        "parent_name": "Measuring length",
+        "moe_label": "Length",
+        "lessons": [
+          9
+        ],
+        "questions": [
+          "C9"
+        ],
+        "looked_at": "drawing a line of a given length and reading a length in centimetres with a ruler",
+        "showing": "[Name] is showing this often: drawing a line of a given length and reading a length in centimetres with a ruler.",
+        "getting": "[Name] is getting there with using a ruler: starting at the 0 mark and reading the length in centimetres.",
+        "beginning": "[Name] is just beginning with using a ruler. Measuring things at home in centimetres, always starting at the 0 mark, is a good next step."
+      },
+      {
+        "id": "stories",
+        "parent_name": "Reading and solving stories",
+        "moe_label": "Addition and Subtraction in context",
+        "lessons": [
+          10
+        ],
+        "questions": [
+          "C10"
+        ],
+        "looked_at": "reading a story twice and writing one step at a time",
+        "showing": "[Name] is showing this often: reading a story twice and writing one step at a time.",
+        "getting": "[Name] is getting there with story steps: one add or one take away at a time, and starting the next step from the last answer.",
+        "beginning": "[Name] is just beginning with story steps. Acting a story out with counters, one step at a time, is a good next step."
+      }
+    ],
+    "words": {
+      "showing": "Showing this often",
+      "getting": "Getting there",
+      "beginning": "Just beginning"
+    },
+    "bands": {
+      "rule": "Each question counts 1 if right, 0.5 if partly right, 0 if not yet, and is left out if not taught. Strand score = points / questions counted.",
+      "showing_min": 0.75,
+      "getting_min": 0.375,
+      "table": [
+        {
+          "n": 4,
+          "showing": "3 to 4 points",
+          "getting": "1.5 to 2.5 points",
+          "beginning": "0 to 1 point"
+        },
+        {
+          "n": 3,
+          "showing": "2.5 to 3 points",
+          "getting": "1.5 to 2 points",
+          "beginning": "0 to 1 point"
+        },
+        {
+          "n": 2,
+          "showing": "1.5 to 2 points",
+          "getting": "1 point",
+          "beginning": "0 to 0.5 point"
+        },
+        {
+          "n": 1,
+          "showing": "1 point (right)",
+          "getting": "0.5 point (partly right)",
+          "beginning": "0 points (not yet)"
+        }
+      ]
+    },
+    "give": [
+      "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) with the lesson materials. Families print the 4-page check sheet at 100%, fold it or put it in an envelope, and keep it closed.",
+      "Tell the group in the opening and at s-check1: the check is on your own paper, is not a race, may be skipped in part, and nothing is shown to the group.",
+      "Start at minute 54, after the exit ticket. Children open the sheet only when you say. Cameras show the child and the table; the paper lies flat and is not held up. A grown-up sits nearby and may read a question again, but gives no help with answers.",
+      "Read each page aloud, one question at a time, twice if a child asks (ask the whole group: say the question number you want again). Then give about 5 minutes of quiet work per page. Say nothing about right or wrong, and read no answers.",
+      "Allowed: fingers, counters, the kit squares and the ruler for question 9. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the sheet over and draws quietly.",
+      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, say Pencils down (slide s-check2). Do not collect or look at any sheet."
+    ],
+    "after": [
+      "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view including the 10 cm bar on page 4) and sends them to the program's parent contact (the address given at enrolment). Never to a child, never to a personal phone, never into the class chat.",
+      "Within 3 days: the tutor marks from the photos with the key below, on the tutor record sheet (tutor only). Nothing is written on the child's paper and no mark or score goes back to the child or the group.",
+      "The tutor chooses a progress word for each strand from the bands below and writes the parent note from the templates: the term line, four strand lines, one named strength and one next step. Sent only to the parent contact. No marks, no x out of 10, no ranking, no comparison with other children, no prediction.",
+      "Delete the photos and the record sheet from personal devices once the note is sent (keep only the note in the family file).",
+      "At the start of Term 2 say to the whole group: thank you for taking the check; there is nothing to share and nothing to fear. Never name a child or an answer."
+    ],
+    "late": [
+      "A child who was away or whose family prefers another time: take the check at the make-up slot (a small group, a parent beside the child on camera). The tutor never sits alone with one child on a private call.",
+      "A child who joined late: the family may choose to leave out questions for lessons the child did not attend. Mark those questions not taught; they are left out of the strand score, and a strand with no question taught gets no line.",
+      "A family that does not want the check: no problem. The child does the Lesson 10 work as usual and the report line uses the tutor's own notes only.",
+      "A child who is upset or stuck: remind the group (open session) that every question can be skipped. Do not single the child out. The grown-up may stop the check at any time."
+    ],
+    "parent_note": {
+      "title": "The Term 1 end-of-term check: a note for grown-ups",
+      "what": "In the last lesson of the term your child does a short check on paper: 10 questions, one from each lesson of the term, and one optional Think harder question. It takes about 30 minutes. It helps us see what each child has learned and what to practise next. It is not a pass or fail test. No mark is shared, there is no league table and nobody is compared with anyone else.",
+      "before": [
+        "Print the 4-page check sheet at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler.",
+        "Keep the sheet folded or in an envelope until the tutor says to open it.",
+        "Have a pencil, a rubber, a ruler with centimetres and a quiet table. Counters and fingers are fine."
+      ],
+      "during": [
+        "Sit nearby. You may ask the tutor to read a question again, but please do not give answers or hints.",
+        "Skipping a question is fine. If your child is upset, you may stop at any time.",
+        "The camera shows your child and the table; the paper stays flat on the table."
+      ],
+      "after": [
+        "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view.",
+        "Send the photos to the program's parent contact (the address you gave when you enrolled). Please do not send them to your child's tutor privately in a chat, and never through a child.",
+        "We delete the photos after the progress note is sent."
+      ],
+      "back": "Within a few days we send you a short note: the term line, a progress word for each of four areas (Showing this often, Getting there, Just beginning), one thing your child did well and one next step. It is never a mark or a comparison. If you would rather not do the check, tell us: that is fine.",
+      "make_up": "Missed the lesson or need another time? Every lesson is recorded and the check can be taken at the make-up slot."
+    },
+    "report_template": {
+      "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+      "intro": "Term 1 progress note for [Name]",
+      "strength": "One thing [Name] did well this term: [the tutor adds one named strength from their own notes, for example: explained why 62 is bigger than 26 using bundles].",
+      "next_step": "One next step: [the tutor adds one next step, for example: act out two-step stories with counters at home].",
+      "optional": "[Name] also tried the optional Think harder question. (Add this line only if the child answered it; never add a line if not.)",
+      "closing": "This note is about [Name]'s own learning this term. It is not a mark and it does not compare children.",
+      "example_words": {
+        "numbers": "showing",
+        "addsub": "getting",
+        "length": "showing",
+        "stories": "getting"
+      }
+    },
+    "privacy_checklist": [
+      "Sheets are never held up to the camera and never read out.",
+      "No answer is said aloud during or after the check.",
+      "The tutor never marks in front of the group and never says who finished first or last.",
+      "Photos go to the parent contact only; the note goes to the parent contact only; no private message to any child.",
+      "No score, no x out of 10, no ranking, no tally, no comparison between children.",
+      "The recording shows the tutor and the screen only; pause it during silent work if the platform allows."
+    ],
+    "sheet_check_bar_mm": 100,
+    "line_mm": 90
+  }
+}
