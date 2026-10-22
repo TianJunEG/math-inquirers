@@ -78,10 +78,10 @@ def reflect_slide(n, G):
     body += pin(128, 340, 1664, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px')
     body += pin(128, 460, 1664, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px')
     opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help']
-    inner = p('What helped me:', 40, 700) + '<p style="font-size:32px;font-weight:600;line-height:1.9">' + ''.join(f'{_box()}{E(o)}' for o in opts) + '</p>'
-    inner += f'<p style="font-size:32px;font-weight:600;line-height:1.9">{_box()}<b>I am still stuck</b> (my tutor will check in with me){_box()}other: ______</p>'
+    inner = p('What helped me:', 40, 700) + '<p style="font-size:30px;font-weight:600;line-height:1.6">' + ''.join(f'{_box()}{E(o)}' for o in opts) + '</p>'
+    inner += f'<p style="font-size:30px;font-weight:600;line-height:1.6">{_box()}<b>I am still stuck</b> (my tutor will check in with me){_box()}other: ______</p>'
+    inner += f'<p style="font-size:30px;font-weight:700;line-height:1.6;color:{TEAL}">{_box()}<b>I pass today.</b> That is always fine.</p>'
     body += pin(128, 580, 1664, inner, None, WHITE, 20, '22px 34px')
-    body += pin(128, 840, 1664, f'<p style="font-size:32px;font-weight:700;color:{TEAL}">{_box()}<b>I pass today.</b> That is always fine.</p>', None)
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me). '
              'Say: "You can write, tick or pass. Ticking I am still stuck is a good thing to do: it tells me where to help." Model one yourself first: "' + G['reflect'] + '" '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
