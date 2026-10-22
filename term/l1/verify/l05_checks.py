@@ -148,7 +148,8 @@ def run(d):
     eq(T['S4']['val'], [to_next_ten(28), 6 - to_next_ten(28), kit_add(2, 8, 6)], 'S4')
     sv = T['S4']['visual']; eq(sv['tens'] * 10 + sv['ones'], 28, 'S4 picture is 28')
     eq(T['S5']['val'], [to_next_ten(35), kit_add(3, 5, 7)], 'S5')
-    eq(T['S6']['val'], [count_all(9, 6), kit_add(1, 8, 5), kit_add(4, 7, 6), kit_add(5, 6, 8)], 'S6')
+    eq(T['S6']['val'], [count_all(9, 6), kit_add(1, 8, 5), kit_add(2, 7, 5), to_next_ten(47), kit_add(4, 7, 6)], 'S6')
+    eq(T['S6']['val'][2] < 40, True, 'S6 c stays within 40'); eq(6 - to_next_ten(47), 3, 'S6 d: 6 is 3 and 3')
     eq(T['S7']['val'], [count_all(8, 6)], 'S7 right answer')
     eq(8 + 2 + 6 == 14, False, 'S7: Siti added all 6 again (16)'); eq(8 + 2 + 6, 16, 'S7 Siti wrote 16')
     eq(6 - 2, 4, 'S7: only 4 are left of the 6')
@@ -168,7 +169,9 @@ def run(d):
     eq(18 + 12, 30, 'T4 pair')
 
     # ---- Go further
-    eq(sum([18, 7, 12, 23, 3, 17]), 80, 'G1 total'); eq(T['G1']['val'], [80], 'G1')
+    eq(sum([18, 7, 12, 23, 3, 17]), 80, 'G1 total'); eq(T['G1']['val'], [80, 13], 'G1')
+    g1b = [n for n in range(0, 100) if sum([18, 7, 12, 23, n, 17]) == 90]
+    eq(g1b, [13], 'G1 b: the only number that replaces the 3 to give 90')
     eq(18 + 12 + 7 + 3 + 23 + 17, 80, 'G1 pairs'); eq(7 + 23 + 18 + 12 + 3 + 17, 80, 'G1 second pairing: 30 + 30 + 20')
     eq(sum(range(1, 10)), 45, 'G2 1 to 9'); eq(sum(range(1, 11)), 55, 'G2 1 to 10'); eq(T['G2']['val'], [45, 55], 'G2')
     eq([(x, 10 - x) for x in range(1, 5)], [(1, 9), (2, 8), (3, 7), (4, 6)], 'G2 four pairs of ten'); eq(45 - 40, 5, 'G2 the 5 has no partner')

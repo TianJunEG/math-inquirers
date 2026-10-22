@@ -17,7 +17,7 @@
    "Addition within 100 by making a ten (mental method first)",
    "Written algorithms are not taught in this lesson"
   ],
-  "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Syllabus check for the owner or a tutor: the P1 outline names adding more than two 1-digit numbers, addition within 100 and mental calculation of a 2-digit number plus ones without renaming. Crossing a ten (28 + 6) by making a ten is this program's own mental method, placed in Start here by the plan; confirm that placement."
+  "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026): crossing a ten (28 + 6, 47 + 6), totals above 40 and, in Go further, sums to 100. Do not describe it to families as matching or aligned to the school syllabus. Every Start here item above the school range is scaffolded (frames, tens bars, blanks that name the next ten) so it can be explored in class; if a child cannot do it after exploring, point them to Think harder honestly rather than relabel it. The P1 outline names adding more than two 1-digit numbers, addition within 100 and mental addition of a 2-digit number and ones without renaming."
  },
  "contest_moves": [
   "add by making tens (pair the numbers that make 10)",
@@ -45,7 +45,7 @@
  "materials": {
   "child": [
    "About 20 small things of two kinds (buttons, pasta, clips)",
-   "Paper to draw a ten-frame on, or the tens bar from the kit page",
+   "Paper (a grown-up can rule two rows of five boxes as a ten-frame beforehand) or the tens bar from the kit page",
    "The printed workbook and the kit page, cut out by a grown-up",
    "A pencil, a rubber and spare paper"
   ],
@@ -705,7 +705,7 @@
      },
      {
       "k": "READ",
-      "text": "Two, four, thirty-four. Five, forty-two. Fifteen, twenty-three, fifty-three, sixty-four. Question 7: Siti should write fourteen, because she forgot that two of the six were already used."
+      "text": "Two, four, thirty-four. Five, forty-two. Fifteen, twenty-three, thirty-two, three more, fifty-three. Question 7: Siti is wrong. She should write fourteen, because she forgot that two of the six were already used."
      },
      {
       "k": "SLIDE",
@@ -814,7 +814,7 @@
      },
      {
       "k": "READ",
-      "text": "Thirteen. Forty-three. Nineteen, and I added six and four first."
+      "text": "Thirteen. Forty-three. Nineteen, and six and four make ten."
      },
      {
       "k": "SAY",
@@ -1763,7 +1763,8 @@
      "Miscounting when counting every dot one by one."
     ],
     "mins": 3,
-    "lines": 0
+    "lines": 0,
+    "draw_strokes": 14
    },
    {
     "id": "S3",
@@ -1911,44 +1912,48 @@
      },
      {
       "l": "c",
-      "text": "47 + 6 = ___",
-      "ans": "53",
-      "val": 53
+      "text": "27 + 5 = ___",
+      "ans": "32",
+      "val": 32
      },
      {
       "l": "d",
-      "text": "56 + 8 = ___",
-      "ans": "64",
-      "val": 64
+      "text": "47 needs ___ more to make 50. 47 + 6 = ___",
+      "ans": "3 and 53",
+      "val": [
+       3,
+       53
+      ]
      }
     ],
-    "answer": "15, 23, 53, 64",
+    "answer": "15, 23, 32, 3 more, 53",
     "val": [
      15,
      23,
-     53,
-     64
+     32,
+     3,
+     53
     ],
     "hint": "Fill in the missing numbers to make the next ten. Take that many from the second number. Then add what is left.",
-    "solution": "(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 47 + 3 = 50, 50 + 3 = 53. (d) 56 + 4 = 60, 60 + 4 = 64.",
+    "solution": "(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 27 + 3 = 30, 30 + 2 = 32. (d) 47 needs 3 more to make 50, 6 is 3 and 3, so 47 + 3 = 50 and 50 + 3 = 53.",
     "mistakes": [
      "Moving the right amount to make the ten but then adding the whole second number.",
      "Making a ten with the wrong number (for example 9 + 6 = 9 + 4 + 2)."
     ],
-    "mins": 3,
+    "mins": 3.5,
     "lines": 0
    },
    {
     "id": "S7",
     "page": 2,
     "tier": "start",
-    "text": "Siti adds 8 + 6. Here is her working: 8 + 2 = 10, then 10 + 6 = 16. Fill in a to c.",
+    "text": "Siti adds 8 + 6. Here is her working: 8 + 2 = 10, then 10 + 6 = 16. Answer (a), (b) and (c).",
     "parts": [
      {
       "l": "a",
-      "text": "Siti’s answer: right or wrong? Circle Right or Wrong.",
-      "ans": "No",
-      "val": "no"
+      "text": "Is Siti right? Circle Right or Wrong.",
+      "ans": "Wrong",
+      "val": "wrong"
      },
      {
       "l": "b",
@@ -1963,7 +1968,7 @@
       "val": 4
      }
     ],
-    "answer": "No. The right answer is 14. 10 + 6 should be 10 + 4: she moved 2 from the 6, so only 4 are left.",
+    "answer": "Wrong. The right answer is 14. 10 + 6 should be 10 + 4: she moved 2 from the 6, so only 4 are left.",
     "val": [
      14
     ],
@@ -2045,15 +2050,8 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Three of these sums make 30: 17 + 13, 18 + 12, 19 + 12, 16 + 14. Circle the sum that does not.",
-    "parts": [
-     {
-      "l": "",
-      "text": "I know because ___.",
-      "ans": "9 and 2 make 11, not 10",
-      "val": "because"
-     }
-    ],
+    "text": "Circle the sum that does not make 30. Then write how you know.",
+    "parts": [],
     "answer": "19 + 12 (it makes 31). The ones 9 and 2 make 11, not 10.",
     "val": [
      "19 + 12",
@@ -2066,7 +2064,13 @@
      "Choosing 18 + 12 because 18 looks big."
     ],
     "mins": 3,
-    "lines": 2
+    "lines": 3,
+    "choices": [
+     "17 + 13",
+     "18 + 12",
+     "19 + 12",
+     "16 + 14"
+    ]
    },
    {
     "id": "T4",
@@ -2100,26 +2104,34 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Show your working on the lines.",
+    "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Then change one number. Show your working on the lines.",
     "parts": [
      {
-      "l": "",
+      "l": "a",
       "text": "The total is ___.",
       "ans": "80",
       "val": 80
+     },
+     {
+      "l": "b",
+      "text": "Change the 3 so the total is 90. The new number is ___.",
+      "ans": "13",
+      "val": 13
      }
     ],
-    "answer": "80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40)",
+    "answer": "(a) 80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40). (b) 13: 80 + 10 = 90, so the 3 changes to 13.",
     "val": [
-     80
+     80,
+     13
     ],
-    "hint": "Which numbers have ones that make 10? Try 8 and 2, 7 and 3. Tick each number once you have used it.",
-    "solution": "18 + 12 = 30. 7 + 3 = 10. 23 + 17 = 40. 30 + 10 + 40 = 80. Another way: 7 + 23 = 30, 18 + 12 = 30, 3 + 17 = 20, total 80.",
+    "hint": "Which numbers have ones that make 10? Try 8 and 2, 7 and 3. For (b), how much must the total go up?",
+    "solution": "(a) 18 + 12 = 30. 7 + 3 = 10. 23 + 17 = 40. 30 + 10 + 40 = 80. Another way: 7 + 23 = 30, 18 + 12 = 30, 3 + 17 = 20, total 80. (b) The total must go up from 80 to 90, which is 10 more. The 3 must become 3 + 10 = 13.",
     "mistakes": [
      "Adding left to right and losing the running total.",
-     "Using a number twice or leaving one out."
+     "Using a number twice or leaving one out.",
+     "Changing the 3 to 10 (the total goes up by 7, not 10)."
     ],
-    "mins": 5,
+    "mins": 6,
     "lines": 3
    },
    {
@@ -2179,7 +2191,7 @@
    "tier": "investigation",
    "title": "Move the fewest",
    "first": "Draw 9 dots and 6 dots. To make a ten with the 9, how many dots do you move? Now try 8 + 7.",
-   "text": "Pick two numbers from 5 to 9. You can fill the first frame or the second. Which way moves fewer dots? Does the same way always move fewer? Write how you know.",
+   "text": "Pick two numbers from 5 to 9. Draw their dots. Try making a ten with the first number, then with the second. Which way moves fewer dots? Does the same way always move fewer? Write how you know.",
    "lines": 4,
    "answer": "Fill up the bigger number: it has the fewest empty spaces, so you move the fewest dots. The number moved is 10 minus the bigger number. 9 + 6: move 1, not 4. 8 + 7: move 2, not 3. If the two numbers are the same (7 + 7), either way moves 3.",
    "val": [
@@ -2256,7 +2268,7 @@
     },
     {
      "l": "",
-     "text": "I added ___ and ___ first.",
+     "text": "Which two numbers make 10? ___ and ___.",
      "ans": "6 and 4",
      "val": [
       6,
@@ -2272,7 +2284,7 @@
    ],
    "solution": "6 + 4 = 10. 10 + 9 = 19.",
    "mistakes": [
-    "Adding 6 + 9 first (15) and then slipping.",
+    "Writing 6 and 9 as the pair that makes 10 (6 + 9 is 15).",
     "Not noticing that 6 and 4 make a ten."
    ]
   }
@@ -2765,7 +2777,7 @@
     "id": "t3",
     "tier": "stretch",
     "type": "choice",
-    "q": "Three of these sums make 30. Which sum does not?",
+    "q": "Which sum does not make 30?",
     "options": [
      "17 + 13",
      "18 + 12",
@@ -2992,7 +3004,7 @@
   ]
  },
  "parent": {
-  "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10.",
+  "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10. Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten), with frames and blanks to help.",
   "words": [
    "ten-frame: a box of ten spaces, two rows of five",
    "make a ten: move some counters so that one group is full",
@@ -3027,7 +3039,8 @@
   "Solve every workbook question yourself first, making a ten each time.",
   "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 20 small things of two kinds and a sheet of paper for a ten-frame.",
   "Have the slides open and check the kit page is visible on screen share. Have a paper ten-frame and two kinds of counters to show on camera if you wish.",
-  "Check the recording settings exclude children's video."
+  "Check the recording settings exclude children's video.",
+  "Be plain with families: Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten, totals above 40). Do not call it MOE-aligned. Start here items above the school range are scaffolded; the tier labels stay honest."
  ],
  "spare_time": {
   "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
@@ -3066,7 +3079,7 @@
  "workbook": {
   "header": "Addition: make tens first",
   "hint_p1": "Use counters, your kit or a drawing. Say your answer out loud, then write it.",
-  "hint_p3": "Use counters, a ten-frame or a drawing. Then write how you know. Choose any question, in any order.",
+  "hint_p3": "Use counters, a tens bar or a drawing. Then write how you know. Choose any question, in any order.",
   "choice_after": 3,
   "home_hint": "Use counters or draw a ten-frame.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
