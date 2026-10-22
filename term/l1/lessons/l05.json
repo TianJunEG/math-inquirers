@@ -3041,6 +3041,8 @@
   "header": "Addition: make tens first",
   "hint_p1": "Use counters, your kit or a drawing. Say your answer out loud, then write it.",
   "hint_p3": "Use counters, a ten-frame or a drawing. Then write how you know. Choose any question, in any order.",
+  "choice_after": 3,
+  "home_hint": "Use counters or draw a ten-frame.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "kits": [
    {
