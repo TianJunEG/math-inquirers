@@ -84,6 +84,9 @@ def main():
             todo.append((out, m.group(0).strip()))
         if 'class="draft"' in page:
             todo.append((out, 'draft banner for Jasmine still on the page'))
+    # syllabus map is a self-contained full document: copy it, do not wrap it
+    os.makedirs(os.path.join(DIST, 'syllabus'), exist_ok=True)
+    shutil.copy(os.path.join(HERE, 'syllabus', 'index.html'), os.path.join(DIST, 'syllabus', 'index.html'))
     open(os.path.join(DIST, '404.html'), 'w').write(
         '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Page not found | Math Inquirers</title><link rel="stylesheet" href="/fonts.css">'
@@ -92,7 +95,7 @@ def main():
         '<p>Notice it. Test it. Explain why.</p><p><a href="/">Back to Math Inquirers</a></p></main></body></html>\n')
     open(os.path.join(DIST, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n' + (f'Sitemap: {BASE}/sitemap.xml\n' if BASE else ''))
     if BASE:
-        urls = ''.join(f'<url><loc>{BASE}/{o.replace("index.html", "")}</loc></url>' for _, o, _, _ in PAGES)
+        urls = ''.join(f'<url><loc>{BASE}/{o.replace("index.html", "")}</loc></url>' for _, o, _, _ in PAGES) + f'<url><loc>{BASE}/syllabus/</loc></url>'
         open(os.path.join(DIST, 'sitemap.xml'), 'w').write(
             '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     # _headers / _redirects work on Cloudflare Pages and Netlify
@@ -101,7 +104,7 @@ def main():
         "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n"
         "  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n"
         '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n')
-    open(os.path.join(DIST, '_redirects'), 'w').write('/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n'
+    open(os.path.join(DIST, '_redirects'), 'w').write('/syllabus /syllabus/ 301\n/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n'
                                                   + ''.join('/%s /%s/ 301\n' % (L['slug'], L['slug']) for L in LEVELS))
     print('built', DIST)
     for p in sorted(os.listdir(DIST)):

@@ -19,7 +19,7 @@ OUT = os.path.join(HERE, 'level_pages')
 
 # TODO(singapore-map): when the Singapore row / tier-level syllabus map page exists, set this to its
 # URL path (for example '/singapore-syllabus/') and the link appears in the "Not affiliated" note.
-SYLLABUS_MAP_URL = None
+SYLLABUS_MAP_URL = '/syllabus/'
 
 LEVELS = [
     dict(n=1, a=6, b=8, builds='Primary 1 maths', full='Ages 6-8 (builds on Primary 1 maths)',
