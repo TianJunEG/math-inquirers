@@ -67,7 +67,7 @@ All new. This is where Level 6 touches P6 strands, as reasoning lessons, not dri
 | 10 | Ratio Recipes: parts, not amounts | Ratio, equivalent ratios, a:b:c, sharing in a ratio (Number P6); bar models; Sec 1 ratio | S: share with counters in 1:3. T: same amount added to both parts (what stays the same). G: three-way ratio, one given difference; make up a ratio puzzle with one answer | Modelling with bars |
 | 11 | Fractions of Fractions: area models | Fraction x fraction (P5); division by a whole number or proper fraction (P6); Singapore model drawing | S: fold paper for 1/2 of 1/3. T: divide a fraction by a whole, then by a fraction, by picture. G: telescoping product 1/2 x 2/3 x ... ; why does dividing by 1/2 double? | Visualising |
 | 12 | Percent Change Detective: up 20 then down 20 | Percentage: discount, GST, interest (P5); increase and decrease, find the whole (P6); repeated change is beyond primary; compound loop in code | S: 10% and 25% of a price with a grid. T: find the original after a discount. G: +20% then -20%, is it back to start? Interest over 10 years | Spotting hidden wholes |
-| 13 | Rate and Speed Stories | Rate (P5); speed, average speed, distance-time graphs (speed is in no primary year; secondary); race simulation | S: read a distance-time picture. T: meet-in-the-middle journeys. G: average speed there and back; steeper line means? | Comparing change |
+| 13 | Rate Stories | Rate (P5, revisited); unit rates, comparing rates (per hour, per item), tables and simple line graphs of change; speed removed from the program (not in any primary year, owner decision) | S: read a rate from a table. T: compare two rates in a new setting. G: which rate is better value, and why? | Comparing change |
 | 14 | Circles and Pi: measure it, then estimate it | Circumference and area of circles (P6; Hong Kong P6 pi); estimate pi with random dots in code | S: measure round objects at home, find the ratio. T: composite shapes with semicircles. G: why is area ~ 3.14 r x r? dart-throwing estimate (spiral of lesson 6) | Estimating |
 | 15 | Volume and Nets: cubes in boxes | Volume of cube and cuboid (P5; inverse problems P6), nets (P4), surface area (not in primary); painted-cube counts | S: build a cuboid from 24 cubes, list all. T: water level rises; pour between tanks. G: painted-cube counts for n x n x n; same volume, least surface | Seeing in 3D |
 | 16 | Angle Chasing | Angles in geometric figures: lines, triangles, parallel lines (P5 for lines, points and triangles; P6 for composite figures; parallel-line angles not in primary); turtle spiral | S: angles on a line and at a point. T: isosceles and exterior angle puzzles. G: a chase needing two steps and a proof sentence; use the polygon turn from lesson 7 | Chaining deductions |
@@ -130,7 +130,7 @@ MOE strand names and year placement are now verified (see the top block). Legend
 | Decimals | | t (12, 14) | | | Not a P6 Standard strand (decimals are P4 and P5), so not a P6 gap |
 | Percentage | | M (12) | | t (28) | School practice outpaces us (multi-step, GST, discount chains) |
 | Ratio | | M (10) | t (23) | | Same |
-| Rate and speed | | M (13) | M (23) | | Rate is P5; speed is in no primary year |
+| Rate | | M (13) | M (23) | | Rate is P5; speed removed from the program |
 | Algebra (letter, expressions, simple equations) | M (4) | | M (19-21) | | Strongest strand |
 | Average (total = average x number) | | | | M (28) | Moved from holiday L9 |
 | Pie charts and data | | | | M (28-29) | |
@@ -152,7 +152,7 @@ Olympiad-type problem moves worked in (original problems only, no contest items 
 - Q9 Go further: one "find all" or "is it always true?" item.
 - Q10 Explain: "write one sentence on why" or "trace this code and say what it prints".
 
-Topics per term: T1 sequence rule, factors, signed moves, machine backwards, counting, fair game, turn angle, clock sum, code trace; T2 ratio share, fraction of fraction, percent change, speed, circle, volume, angle chase, scale; T3 expand, solve, inequality, coordinates, graph, power, HCF/LCM, binary; T4 mean and outlier, scatter, tree, arrangement, recursion, logic, strategy. Mark each strand "secure / growing / not yet" and use it to plan support for the next term (and to decide the catch-up pack for late joiners).
+Topics per term: T1 sequence rule, factors, signed moves, machine backwards, counting, fair game, turn angle, clock sum, code trace; T2 ratio share, fraction of fraction, percent change, rate, circle, volume, angle chase, scale; T3 expand, solve, inequality, coordinates, graph, power, HCF/LCM, binary; T4 mean and outlier, scatter, tree, arrangement, recursion, logic, strategy. Mark each strand "secure / growing / not yet" and use it to plan support for the next term (and to decide the catch-up pack for late joiners).
 
 **Parent report line per term (neutral, evidence based; no scores or predictions):**
 - T1: "This term [Name] tested number patterns, primes, negatives, chance, angles and codes, in Scratch. [Name] showed [one observed example]. Next term we move to ratio, percent and shapes."
@@ -179,7 +179,7 @@ Total about 75-80 person-days from a human-only baseline. These are guesses from
 1. Who is the intake: children in P6 (PSLE written exams, usually Sept-Oct, fall in Term 3-4), children after PSLE only, or also Sec 1 (age 13)? Term 3 may clash with prelims; should it be lighter, with the Studio lesson optional?
 2. Are Term 2 entries allowed (catch-up pack), or Term 1 only? Do 11-13 year olds need a gap term after the holiday course?
 3. Python: which environment (offline editor, or a browser tool with no account) fits our no-accounts, nothing-uploaded rule?
-4. How closely should Term 2 follow the MOE P6 syllabus (ratio, percent, speed)? The PDF has been checked: ratio is P6 (p. 43). May we name PSLE on the page, and with what wording?
+4. How closely should Term 2 follow the MOE P6 syllabus (ratio, percent)? The PDF has been checked: ratio is P6 (p. 43). May we name PSLE on the page, and with what wording?
 5. Is Term 1 L9 (data) moved to Term 4 acceptable, or keep the mean in Term 1 for continuity with the holiday course?
 6. Which SASMO grade levels does ages 11-13 map to? A Grade 5-8 file is needed for section 4.
 7. Homework and take-home work: expected weekly, or none?
