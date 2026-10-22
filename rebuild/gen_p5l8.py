@@ -302,7 +302,7 @@ body+=ostep(128,330,1,'Angle XZY = 55°.   Reason: XY = XZ, so the base angles a
 body+=ostep(128,330,2,'Angle YXZ = 180° − 55° − 55° = 70°.   Reason: angles in a triangle.',ov2,W4,H4,dx=660,dy=115,tw=1004,size=30)
 body+=ostep(128,330,3,'Angle WXY = 180° − 55° = 125°.   Reason: neighbouring angles of a parallelogram.',ov3,W4,H4,dx=660,dy=230,tw=1004,size=30)
 body+=ostep(128,330,4,'Angle WXZ = 125° − 70° = 55°.   The big angle WXY is made of WXZ and ZXY.',ov4,W4,H4,dx=660,dy=345,tw=1004,size=30)
-put('p5l8-teachcombo',sec('p5l8-teachcombo','53–55 MIN',body,'Teach before worksheet page 2 (Q4 is a parallelogram with an isosceles triangle, two steps; the shape here is different. Think harder A3 continues Q4's figure). Ask first: "Which two sides are equal, XY and XZ. Which angles are opposite them?" Angle XZY (opposite XY) and angle XYZ (opposite XZ): both 55°. '
+put('p5l8-teachcombo',sec('p5l8-teachcombo','53–55 MIN',body,'Teach before worksheet page 2 (Q4 is a parallelogram with an isosceles triangle, two steps; the shape here is different. Think harder A3 continues the figure of Q4). Ask first: "Which two sides are equal, XY and XZ. Which angles are opposite them?" Angle XZY (opposite XY) and angle XYZ (opposite XZ): both 55°. '
  'Click 1: 55°. Click 2: triangle XYZ: 180 − 110 = 70°. Click 3: in the parallelogram neighbouring angles add up to 180°, so angle WXY = 180 − 55 = 125°. Click 4: angle WXY is made of two smaller angles, WXZ and ZXY, so WXZ = 125 − 70 = 55°. '
  'Check: triangle WXZ: angle W is 55° (opposite angle to Y), and 55 + 55 = 110, so angle WZX = 70°, which with XZY = 55° makes angle Z = 125° ✓ (neighbouring angles Y and Z add up to 180°).'))
 

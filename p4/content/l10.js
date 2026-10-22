@@ -173,7 +173,7 @@ module.exports.gaps = {
   "key": "(a) You cannot get 1, 2, 4 or 7. You can get 3, 5, 6 (3 + 3), 8 (3 + 5), 9 (3 + 3 + 3), 10 (5 + 5) and every score from 8 up to 20 (checked by brute force up to 30). (b) After 7 you can get every score: 8, 9 and 10 can be made, and adding a 3 gives the next ones. (c) With 4 and 6 every score is even, so all the odd scores are impossible, and 2 as well (every even score from 4 up is possible). Why: both rings score even numbers, and even + even is even. Look for a systematic list or table, and for children who can say WHY about the even scores.",
   "easy": "List the scores you can get with ONE ring: 3 or 5. Then with TWO rings: 3 + 3, 3 + 5 and 5 + 5. Write each total."
  },
- "reflect": "Something I did well: I tried a table when I was stuck. The hardest part was choosing which way in to use. What helped me: trying a table first, then checking every fact.",
+ "reflect": "Something I did well: I tried a table when I was stuck. The hardest part was choosing which way in to use. What helped me: trying a table first, then checking every fact. One thing I could try next: making a table of my tries.",
  "go2": {
   "q": "What if 10 bugs have 65 legs? Could that happen? Why or why not?",
   "a": "No. Spiders have 8 legs and beetles 6: both are even numbers, so the total number of legs is always even, and 65 is odd."

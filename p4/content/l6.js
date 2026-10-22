@@ -237,7 +237,7 @@ module.exports.gaps = {
   "key": "(a) Seven sets: 10, 10, 70; 10, 20, 60; 10, 30, 50; 10, 40, 40; 20, 20, 50; 20, 30, 40; 30, 30, 30 (checked by brute force). (b) A good method: fix the smallest angle, then list the other two in order. Counting in units of 10° helps: three whole numbers that add up to 9. (c) Three sets: 30, 30, 120; 30, 60, 90; 60, 60, 60. What stays the same: the three angles always add up to the whole turn (90° or 180°). Low floor: any three angles that add to 90°. Look for children who realise a list needs a system.",
   "easy": "A square corner is 90°. Draw it and split it into three EQUAL angles. How big is each one?"
  },
- "reflect": "Something I did well: I estimated each angle before I measured. The hardest part was reading the protractor scale. What helped me: starting from the 0 that lines up with one arm.",
+ "reflect": "Something I did well: I estimated each angle before I measured. The hardest part was reading the protractor scale. What helped me: starting from the 0 that lines up with one arm. One thing I could try next: checking my estimate before I read the protractor.",
  "go2": {
   "q": "What if the clock shows half past three (3:30)? Is the angle still 90°? Why not?",
   "a": "No. It is 75°: at 3:30 the hour hand has moved halfway from 3 to 4, which is 15° past the 3. The minute hand points at 6 (180°) and the hour hand at 105°."

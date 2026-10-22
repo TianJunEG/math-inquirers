@@ -219,7 +219,7 @@ module.exports.gaps = {
   "key": "(a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare.",
   "easy": "Write 0.35 as 0.350 and 0.36 as 0.360. Now write ONE decimal that sits between them."
  },
- "reflect": "Something I did well: I wrote the extra zeros. The hardest part was comparing decimals with different numbers of digits. What helped me: adding zeros so they had the same length.",
+ "reflect": "Something I did well: I wrote the extra zeros. The hardest part was comparing decimals with different numbers of digits. What helped me: adding zeros so they had the same length. One thing I could try next: writing the zeros in a place-value chart.",
  "go2": {
   "q": "What if the target is 50 instead of 5? Which number with these cards is closest to 50?",
   "a": "52.8 (2.8 away). The next closest, 58.2, is 8.2 away."

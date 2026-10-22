@@ -75,14 +75,17 @@ def reflect_slide(n, G):
     t0, t1 = ('88–90 MIN', '88 to 90 (2 minutes)') if n != 10 else ('87–89 MIN', '87 to 89 (2 minutes)')
     body = h2('Looking back')
     body += p('2 minutes. Write, tick or pass: you choose. Nobody marks it and it is not shown to the group. Your tutor may look at it on camera if you hold it up.', 30, 600, MUTED)
-    body += pin(128, 340, 1664, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px')
-    body += pin(128, 460, 1664, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px')
-    opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help']
-    inner = p('What helped me:', 40, 700) + '<p style="font-size:30px;font-weight:600;line-height:1.6">' + ''.join(f'{_box()}{E(o)}' for o in opts) + '</p>'
-    inner += f'<p style="font-size:30px;font-weight:600;line-height:1.6">{_box()}<b>I am still stuck</b> (my tutor will check in with me){_box()}other: ______</p>'
-    inner += f'<p style="font-size:30px;font-weight:700;line-height:1.6;color:{TEAL}">{_box()}<b>I pass today.</b> That is always fine.</p>'
-    body += pin(128, 580, 1664, inner, None, WHITE, 20, '22px 34px')
-    notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me). '
+    body += pin(128, 340, 820, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px')
+    body += pin(972, 340, 820, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px')
+    opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help', 'other: ______']
+    inner = p('What helped me:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'{_box(w=22)}{E(o)}' for o in opts) + '</p>'
+    body += pin(128, 480, 820, inner, None, WHITE, 20, '20px 28px')
+    opts2 = ['drawing it', 'a list or table', 'a smaller number', 'a partner', 'another question like this', 'other: ______']
+    inner = p('One thing I could try next:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'{_box(w=22)}{E(o)}' for o in opts2) + '</p>'
+    body += pin(972, 480, 820, inner, None, WHITE, 20, '20px 28px')
+    inner = f'<p style="font-size:28px;font-weight:600;line-height:1.5">{_box(w=22)}<b>I am still stuck</b> (my tutor will check in with me){_box(w=22)}<b style="color:{TEAL}">I pass on this one, or today.</b> That is always fine.</p>'
+    body += pin(128, 800, 1664, inner, None, WHITE, 20, '16px 28px')
+    notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me; one thing I could try next). '
              'Say: "You can write, tick or pass. Ticking I am still stuck is a good thing to do: it tells me where to help." Model one yourself first: "' + G['reflect'] + '" '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
              'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos or private messages. '

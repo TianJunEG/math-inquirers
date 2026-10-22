@@ -42,16 +42,64 @@ def pic_tri():
         s+=f'<text x="{x0+(k+1)*w/4-10}" y="100" font-size="24" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">{k}</text>'
         x0+=(k+1)*w/2+110
     return s+'</svg>'
-PICS={'bar3':pic_bar3,'hund':pic_hund,'tri':pic_tri}
+def _svg(label,w,h,inner):
+    return f'<svg aria-label="{label}" viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px;flex:none">{inner}</svg>'
+def pic_cards():
+    s=''
+    for i,d in enumerate('3679'):
+        x=10+i*84
+        s+=f'<rect x="{x}" y="6" width="70" height="88" rx="10" fill="#FFFFFF" stroke="{NAVY}" stroke-width="4"/><text x="{x+35}" y="68" font-size="52" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{d}</text>'
+    return _svg('Four digit cards: 3, 6, 7 and 9',360,100,s)
+def pic_bars2():
+    s=''
+    for r,(nm,n) in enumerate((('Ali',4),('Mei',2))):
+        y=6+r*46
+        s+=f'<text x="70" y="{y+30}" font-size="28" font-weight="700" text-anchor="end" fill="{NAVY}" font-family="Nunito Sans, Arial">{nm}</text>'
+        for i in range(n): s+=f'<rect x="{84+i*90}" y="{y}" width="90" height="38" fill="{"#FFC93C" if r==0 else "#DDEBF7"}" stroke="{NAVY}" stroke-width="3"/><text x="{84+i*90+45}" y="{y+28}" font-size="24" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">10</text>'
+    return _svg('Two bars: Ali has 40 cards (4 units of 10) and Mei has 20 cards (2 units of 10)',460,100,s)
+def pic_grid64():
+    s=''
+    for r in range(4):
+        for c in range(6): s+=f'<rect x="{10+c*24}" y="{4+r*24}" width="24" height="24" fill="#FFFFFF" stroke="{NAVY}" stroke-width="2"/>'
+    s+=f'<rect x="10" y="4" width="144" height="96" fill="none" stroke="{NAVY}" stroke-width="4"/><line x1="10" y1="100" x2="154" y2="4" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 6"/>'
+    return _svg('A rectangle 6 squares wide and 4 squares tall on squared paper with a diagonal from one corner to the opposite corner',170,104,s)
+def pic_box432():
+    sx=30; ox,oy=14,96
+    def P(x,y,z): return (ox+x*sx+z*sx*0.433, oy-y*sx*0.62-z*sx*0.25)
+    def poly(pts,fill): return '<polygon points="'+' '.join(f'{a:.1f},{b:.1f}' for a,b in (P(*q) for q in pts))+f'" fill="{fill}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>'
+    s=poly([(0,0,0),(4,0,0),(4,2,0),(0,2,0)],'#FFC93C')+poly([(0,2,0),(4,2,0),(4,2,3),(0,2,3)],'#FFE08A')+poly([(4,0,0),(4,0,3),(4,2,3),(4,2,0)],'#F2B92E')
+    for i in range(1,4):
+        a=P(i,0,0);b=P(i,2,0);s+=f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" stroke="{NAVY}" stroke-width="1.5"/>'
+    a=P(0,1,0);b=P(4,1,0);s+=f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" stroke="{NAVY}" stroke-width="1.5"/>'
+    s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">4 long</text><text x="{P(4,1,1.5)[0]+8:.0f}" y="{P(4,1,1.5)[1]+8:.0f}" font-size="22" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">3 wide, 2 tall</text>'
+    return _svg('A box 4 cubes long, 3 cubes wide and 2 cubes tall',330,112,s)
+def pic_bar12():
+    s=f'<text x="0" y="30" font-size="26" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">12 litres in 4 minutes</text>'
+    for i in range(4): s+=f'<rect x="{10+i*160}" y="44" width="160" height="46" fill="#FFFFFF" stroke="{NAVY}" stroke-width="4"/><text x="{10+i*160+80}" y="76" font-size="24" font-weight="700" text-anchor="middle" fill="{MUTED}" font-family="Nunito Sans, Arial">minute {i+1}</text>'
+    return _svg('A bar for 12 litres cut into 4 empty equal parts, one for each minute',660,100,s)
+def pic_rt30():
+    s=f'<path d="M20 90 L20 10 M20 90 L110 90" stroke="{NAVY}" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M20 90 L98 45" stroke="{TEAL}" stroke-width="5" stroke-linecap="round"/>'
+    s+=f'<path d="M20 78 H32 V90" fill="none" stroke="{NAVY}" stroke-width="3"/><path d="M60 90 A40 40 0 0 0 55 70" fill="none" stroke="#D64545" stroke-width="4"/><text x="70" y="78" font-size="22" font-weight="800" fill="#D64545" font-family="Nunito Sans, Arial">30&#176;</text><text x="30" y="40" font-size="26" font-weight="800" fill="#D64545" font-family="Nunito Sans, Arial">?</text>'
+    return _svg('A right angle with a line drawn from the corner that makes a 30 degree angle with one arm and leaves a question mark angle with the other',130,100,s)
+def pic_logic3():
+    s=''
+    cols=('red','blue','green'); rows=('Ali','Mei','Ravi')
+    for j,c in enumerate(cols): s+=f'<text x="{150+j*110+55}" y="22" font-size="24" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{c}</text>'
+    for i,r in enumerate(rows):
+        s+=f'<text x="120" y="{54+i*28}" font-size="24" font-weight="700" text-anchor="end" fill="{NAVY}" font-family="Nunito Sans, Arial">{r}</text>'
+        for j in range(3): s+=f'<rect x="{150+j*110}" y="{30+i*28}" width="110" height="28" fill="#FFFFFF" stroke="{NAVY}" stroke-width="3"/>'
+    return _svg('An empty table with Ali, Mei and Ravi down the side and red, blue and green across the top',490,116,s)
+PICS={'bar3':pic_bar3,'hund':pic_hund,'tri':pic_tri,'cards':pic_cards,'bars2':pic_bars2,'grid64':pic_grid64,'box432':pic_box432,'bar12':pic_bar12,'rt30':pic_rt30,'logic3':pic_logic3}
+PICPOS={'bar3':1,'bars2':1}   # every other picture sits under puzzle 1 of the sneak-peek slide (index 0)
 
 def check_slide_html(n,rows,pic,notes):
     body=h2('Sneak-peek puzzles')+p('Ideas we have not learnt yet. Guessing is welcome. "I do not know" is welcome. Nobody is marked.',32,600,MUTED)
     top=300; pics={}
     if pic:
-        pics[1 if pic in ('bar3',) else 0]=PICS[pic]()
+        pics[PICPOS.get(pic,0)]=PICS[pic]()
     for i,r in enumerate(rows):
         q,a,short=r[0],r[1],(r[2] if len(r)>2 else r[1])
-        lines=-(-len(q)//62); hq=lines*40+56+(100 if i in pics else 0)
+        lines=-(-len(q)//62); hq=lines*40+56+(120 if i in pics else 0)
         inner=f'<p style="font-size:30px;font-weight:600;line-height:1.3"><span style="color:{TEAL};font-weight:800">{i+1}.</span>  {E(q)}</p>'
         if i in pics: inner+=pics[i]
         body+=pin(128,top,1150,inner,None,WHITE,20,'16px 28px')

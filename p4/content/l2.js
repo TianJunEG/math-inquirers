@@ -197,7 +197,7 @@ module.exports.gaps = {
   "key": "Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\".",
   "easy": "Round 3 280 to the nearest hundred. Then round your answer to the nearest thousand. Now round 3 280 straight to the nearest thousand. Did you get the same answer both ways?"
  },
- "reflect": "Something I did well: I drew the number line. The hardest part was working out which way a number like 450 rounds. What helped me: marking the halfway point on the number line.",
+ "reflect": "Something I did well: I drew the number line. The hardest part was working out which way a number like 450 rounds. What helped me: marking the halfway point on the number line. One thing I could try next: a number line for every rounding question.",
  "go2": {
   "q": "Which number you can make is closest to 70 000? Why can you not make 70 000?",
   "a": "72 459 (2 459 away). 70 000 needs a 0 card and there is none; with the cards 2, 4, 5, 7 and 9 the closest below is 59 742 (10 258 away)."

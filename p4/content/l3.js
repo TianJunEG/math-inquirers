@@ -217,7 +217,7 @@ module.exports.gaps = {
   "key": "Every target from 1 to 12 can be made (all of 1 to 20 can, checked by brute force). Model sentences: 1 = (5 − 4) × (3 − 2); 2 = 5 − 4 + 3 − 2; 3 = 5 × 2 − 4 − 3; 4 = 2 + 3 + 4 − 5; 5 = (2 + 3 − 4) × 5; 6 = 2 + 3 − 4 + 5; 7 = 2 + (4 − 3) × 5; 8 = 5 + 4 + 2 − 3; 9 = 2 + 3 × 4 − 5; 10 = (2 × 3 − 4) × 5; 11 = 2 × 5 − 3 + 4; 12 = 2 × (3 + 5) − 4. Many other correct sentences exist: accept any that work out. Look for children who work each sentence out in the right order and check it, and who use brackets on purpose.",
   "easy": "Use only + and −. With 2, 3, 4 and 5 (each once) can you make 6? 8? 10? Write a number sentence for each."
  },
- "reflect": "Something I did well: I worked out the order step by step. The hardest part was remembering to do × before −. What helped me: underlining the part to do first.",
+ "reflect": "Something I did well: I worked out the order step by step. The hardest part was remembering to do × before −. What helped me: underlining the part to do first. One thing I could try next: writing the order of steps above the sum before I start.",
  "go2": {
   "q": "What if you may use TWO pairs of brackets? Can you get an answer that one pair could not?",
   "a": "No. Two pairs still give only 16, 28 and 10 (every placement checked by computer). Brackets only change what is done first, and here there are only three different orders that matter: the × first (16), (6 + 4) first (28) or (3 − 2) first (10)."

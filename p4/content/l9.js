@@ -223,7 +223,7 @@ module.exports.gaps = {
   "key": "(a) Points (May, 50) and (June, 100); on a scale of 0 to 100 in 10s the line rises through 5 lines, a fair picture. (b) Any scale that starts above 0 with small steps makes the jump look huge (for example start at 45 and go up in 5s: 50 is 1 line up, 100 is 11 lines up). A tall scale that goes from 0 to 1000 in 100s makes the same rise look almost flat (50 is half a line, 100 is one line). Same numbers, different picture. (c) A graph that starts at 0, has equal steps and says what each line is worth is the fairest; the headline is only true because the numbers say so. Look for a child who says \"I read the scale before I looked at the line\" and who notices that the numbers did not change, only the drawing did. Easy first step: plot the two points on a 0 to 100 scale in 10s.",
   "easy": "On the Graph grid, write 0, 10, 20 ... up the side. Plot the points (May, 50) and (June, 100) and join them."
  },
- "reflect": "Something I did well: I read the scale first. The hardest part was reading between the lines on the scale. What helped me: writing what each line was worth.",
+ "reflect": "Something I did well: I read the scale first. The hardest part was reading between the lines on the scale. What helped me: writing what each line was worth. One thing I could try next: writing the scale before I read any numbers.",
  "go2": {
   "q": "Draw the same graph again with a different scale. Does the story look different? Why?",
   "a": "Yes. A scale with small steps, or one that starts above 0, makes the line look steeper; big steps make it look flatter. The numbers are the same: only the picture changed."

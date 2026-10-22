@@ -245,7 +245,7 @@ module.exports.gaps = {
   "key": "Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason.",
   "easy": "Cut 6 squares from the Square grid page. Make the net in the picture (a row of 4 squares with one square above it and one below). Fold it. Does it make a cube?"
  },
- "reflect": "Something I did well: I made the net with paper. The hardest part was folding the net in my head. What helped me: making it with paper and tape.",
+ "reflect": "Something I did well: I made the net with paper. The hardest part was folding the net in my head. What helped me: making it with paper and tape. One thing I could try next: folding paper to check my answer.",
  "go2": {
   "q": "What if the longest row has only 3 squares? Can the shape still fold into a cube? Find one.",
   "a": "Yes. 4 of the 11 cube nets have a longest row of 3 squares. One example: two rows of 3 squares, where the second row starts under the last square of the first row. (One net, the staircase, has no row longer than 2.)"

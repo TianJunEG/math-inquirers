@@ -197,7 +197,7 @@ module.exports.gaps = {
   "key": "(a) 18, 12, 30, 42 minutes. (b) The meeting time is always a multiple of both gaps (the smallest common multiple), and never smaller than the bigger gap. When the gaps share no factor except 1 (6 and 5, 6 and 7) the meeting time is their product (30, 42). Accept any true pattern. (c) Six pairs: 2 and 12, 3 and 4, 3 and 12, 4 and 6, 4 and 12, 6 and 12 (checked by brute force). Look for a systematic list (fix one gap, test the others) rather than guesses. A child with 3 or 4 pairs who can explain how they know is doing well. Extension: choose your own meeting time (such as 30) and find all the pairs.",
   "easy": "Write the first five times Bus A leaves (7:00, 7:06, 7:12, ...) and the first five for Bus B (7:00, 7:08, ...). Circle a time that is in both lists."
  },
- "reflect": "Something I did well: I wrote the factor pairs in order. The hardest part was knowing when to stop listing factors. What helped me: writing the pairs in order and asking my partner.",
+ "reflect": "Something I did well: I wrote the factor pairs in order. The hardest part was knowing when to stop listing factors. What helped me: writing the pairs in order and asking my partner. One thing I could try next: making a table of the factor pairs.",
  "go2": {
   "q": "What if we use 36 tiles? What is special about one of the rectangles?",
   "a": "5 rectangles: 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6. The 6 × 6 is a square: 6 is its own partner, so 36 has an odd number (9) of factors."

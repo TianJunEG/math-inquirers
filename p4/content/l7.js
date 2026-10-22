@@ -222,7 +222,7 @@ module.exports.gaps = {
   "key": "(a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter.",
   "easy": "Draw a 4 cm by 4 cm square on the Square grid. Write its area and its perimeter."
  },
- "reflect": "Something I did well: I wrote the lengths on the picture. The hardest part was finding the missing lengths on the staircase. What helped me: writing every length I could work out on the picture.",
+ "reflect": "Something I did well: I wrote the lengths on the picture. The hardest part was finding the missing lengths on the staircase. What helped me: writing every length I could work out on the picture. One thing I could try next: pushing the steps out to make a rectangle.",
  "go2": {
   "q": "What if you use 24 tiles? Make every rectangle. Which has the smallest perimeter?",
   "a": "4 rectangles: 1 × 24 (perimeter 50 cm), 2 × 12 (28 cm), 3 × 8 (22 cm) and 4 × 6 (20 cm). The 4 by 6 has the smallest perimeter: it is the closest to a square."
