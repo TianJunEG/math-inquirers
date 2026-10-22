@@ -1,0 +1,120 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:14mm 14mm 16mm 14mm}
+*{box-sizing:border-box}
+html{background:#fff}
+body{margin:0;font-family:'Fredoka','Inter',Arial,sans-serif;color:#1B2A49;font-size:17.5px;line-height:1.38;background-color:#fff;background-image:linear-gradient(#E3ECF6 1px,transparent 1px),linear-gradient(90deg,#E3ECF6 1px,transparent 1px);background-size:22px 22px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.p{break-inside:avoid}
+.pb{break-before:page}
+.kn{break-after:avoid}
+.lh{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.lbadge{background:#1F7A6F;color:#FFF9EC;border-radius:999px;padding:6px 18px;font-weight:700;font-size:17px}
+.ltopic{font-weight:600;color:#1F7A6F;font-size:16px;letter-spacing:.3px}
+.ltitle{font-size:38px;font-weight:700;line-height:1.05;margin:2px 0 10px;color:#1B2A49}
+.namer{display:flex;align-items:flex-end;gap:8px;font-size:14px;color:#3B4A6B;margin-bottom:14px}
+.namer span{flex:1;border-bottom:2px dotted #8A94AD;height:18px}
+.q{display:flex;align-items:flex-start;gap:10px;font-weight:600}
+.qn{flex:none;width:30px;height:30px;border-radius:50%;background:#FFC93C;color:#1B2A49;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;position:relative;top:-1px}
+.qt{flex:1}
+.sub{display:flex;gap:8px;padding-left:40px;align-items:baseline}
+.sl{flex:none;width:24px;height:24px;border-radius:7px;background:#FFF0C2;color:#1B2A49;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.ans{display:flex;gap:8px;align-items:flex-end}
+.al{flex:1;max-width:300px;border-bottom:2px dotted #8A94AD;height:20px}
+.ln{border-bottom:2px dotted #8A94AD;height:28px;margin:4px 0 0 40px;break-inside:avoid}
+.banner{background:#1F7A6F;color:#FFF9EC;border-radius:14px;padding:7px 18px;font-weight:700;font-size:19px;margin:8px 0 6px}
+table.tb{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #1B2A49;border-radius:14px;overflow:hidden;margin:6px 0;break-inside:avoid}
+table.tb td{border:1px solid #C9D4EC;vertical-align:middle;font-size:16px}
+.img{margin:6px 0}
+.img img{height:auto}
+.badge{display:inline-block;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:8px 22px;font-weight:700;font-size:16px;letter-spacing:.5px}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:28px;height:262mm;padding:44px 40px;position:relative;break-inside:avoid}
+.ctitle{font-size:96px;font-weight:700;line-height:.95;margin-top:40px}
+.ctitle span{color:#FFC93C}
+.cslogan{font-size:28px;font-weight:600;color:#FFC93C;margin-top:26px}
+.cname{margin-top:34px;font-size:18px;display:flex;gap:8px;align-items:flex-end;color:#C9D4EC}
+.cname i{flex:1;border-bottom:2px dotted #C9D4EC;height:20px}
+.rules{position:absolute;left:40px;right:40px;bottom:44px;background:#fff;color:#1B2A49;border-radius:22px;padding:20px 26px}
+.rt{font-size:24px;font-weight:700;color:#1F7A6F;margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:17px;font-weight:600}
+.rg b{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#FFC93C;align-items:center;justify-content:center;margin-right:8px}
+.jt{font-size:40px;font-weight:700}
+.jsub{color:#3B4A6B;margin-bottom:16px;font-size:17px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stamp{background:#fff;border-radius:18px;border:2px solid #1B2A49;padding:12px 16px;height:128px;position:relative}
+.sn{font-weight:700;color:#1F7A6F;font-size:15px}
+.st{font-weight:600;font-size:17px;margin-top:2px}
+.sc{position:absolute;right:14px;bottom:12px;width:58px;height:58px;border:3px dashed #8A94AD;border-radius:50%}
+.cert{height:262mm;display:flex;align-items:center;justify-content:center}
+.ci{border:6px double #1B2A49;border-radius:24px;padding:48px 40px;text-align:center;background:#fff;width:100%}
+.ct{font-size:40px;font-weight:700;color:#1B2A49;margin-bottom:24px}
+.cp{font-size:30px;font-weight:700;color:#1F7A6F}
+.cs{font-size:20px;margin-bottom:28px}
+.cl{font-size:19px;margin:12px 0}
+.cn{border-bottom:3px dotted #1B2A49;height:44px;max-width:420px;margin:12px auto}
+.cq{font-size:30px;font-weight:700;color:#1F7A6F;margin:26px 0 36px}
+
+.brk{break-before:page;height:0;margin:0;padding:0}
+
+.kt{font-family:Fredoka,sans-serif;font-size:34px;font-weight:600;color:#1B2A49;text-align:center}.ks{text-align:center;font-size:16px;margin:4px 0 10px}.kl{font-weight:800;font-size:18px;color:#1B2A49;margin:12px 0 4px}
+
+/* ===== A + D combined style ===== */
+.lh{gap:0;margin:0 0 4px;border-bottom:3px solid #1F7A6F}
+.lbadge{border-radius:0;background:#1F7A6F;color:#fff;padding:8px 18px;font-weight:600}
+.ltopic{background:#fff;padding:8px 14px;flex:1;text-transform:uppercase;font-size:13px;letter-spacing:.08em;font-family:'Nunito Sans',sans-serif;font-weight:800}
+.ltitle{text-decoration:underline wavy #FFC93C 4px;text-underline-offset:10px;margin:10px 0 16px}
+.namer{background:#fff;border:2px dashed #1B2A49;border-radius:8px;padding:8px 12px}
+.namer span{border-bottom:1.5px solid #1B2A49}
+.qbox{background:#fff;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49;padding:24px 14px 10px;margin:22px 4px 16px 4px;position:relative;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.qbox .q{margin-top:0!important}
+.qbox .qn{position:absolute;left:-9px;top:-15px;width:auto;height:auto;border-radius:2px;background:#FFC93C;border:2px solid #1B2A49;padding:1px 11px;font-size:16px;transform:rotate(-4deg);top:-15px}
+.qbox .qn:before{content:"No. "}
+.qn{border-radius:3px}
+.sub{padding-left:2px}
+.sl{width:auto;height:auto;background:none;border-radius:0;color:#1F7A6F;font-weight:800;font-size:16px;font-family:'Nunito Sans',sans-serif}
+.ln{margin-left:4px}
+.ans{padding-left:4px!important}
+.al{border-bottom:2px dashed #1B2A49}
+.banner{border-radius:3px;display:inline-block;padding:5px 16px;transform:rotate(-1deg);border:2px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49}
+table.tb{border-radius:4px}
+.cover{background:none;color:#1B2A49;border-radius:0;padding:10px 0 0}
+.ccard{background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;margin-top:6px}
+.cover .badge{background:#1F7A6F;color:#fff;border-radius:0;font-family:'Nunito Sans',sans-serif;font-weight:800;letter-spacing:.1em;font-size:14px;padding:6px 12px}
+.ctitle{color:#1B2A49;margin-top:14px;font-weight:600}
+.ctitle span{color:#1B2A49;background:linear-gradient(transparent 55%,#FFC93C 55%)}
+.cslogan{color:#1F7A6F;margin-top:16px}
+.cover .cname{color:#1B2A49;background:#fff;border:2px dashed #1B2A49;border-radius:10px;padding:14px 18px;margin-top:30px}
+.cover .cname i{border-bottom:1.5px solid #1B2A49}
+.cover .rules{position:static;margin-top:24px;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49}
+.rg b{border-radius:3px;border:2px solid #1B2A49;transform:rotate(-4deg)}
+.sc{border-radius:6px}
+.stamp{border-radius:4px;box-shadow:3px 3px 0 #1B2A49}
+body{font-size:16.5px}
+.qbox{padding:20px 12px 8px;margin:18px 4px 12px 4px}
+.ln{height:25px;margin-top:2px}
+.ltitle{margin:8px 0 12px}
+.namer{margin-bottom:8px}
+.qbox{break-inside:avoid}
+.qwrap{padding-top:16px;break-inside:avoid}.qwrap>.qbox{margin-top:2px}
+
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{min-width:70px!important;height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+
+.pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
+.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
+.vis{width:310px;margin:6px 0 6px 4px}
+.al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
+.choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
+.lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
+.bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
+.wl{border-bottom:2px dotted #8A94AD;height:24px}
+.boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
+.keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
+.keybox .a{font-weight:800;color:#1F7A6F}
+body{background-image:none}</style></head><body><h1 style="font-family:Fredoka;margin:0;color:#1B2A49">Answer key: Lesson 5, Make-a-Ten Adding</h1><p style="font-size:13px;margin:2px 0 8px"><b>For the tutor and grown-ups.</b> Keep this page away from the child until they have finished and checked their own work. Ask <i>how do you know?</i> before saying right or wrong.</p><div class="banner">Start here (pages 1 and 2)</div><div class="keybox"><b>S1.</b> Fill the first ten-frame by moving counters from the second one. Then add.<div class="a">Answer: 1 more; 10 and 3; 9 + 4 = 13</div><div style="font-size:12.5px">The first frame has 1 empty space, so 9 needs 1 more. Move 1 counter from the 4. The first frame is full (10) and 3 are left. 10 + 3 = 13.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 10 and 4: forgetting to take the moved counter away from the 4.; Counting all the counters again and slipping (12 or 14).</div></div><div class="keybox"><b>S2.</b> Draw 7 dots and 6 dots in the box. Ring ten dots to make a ten. Then write the sums.<div class="a">Answer: 7 + 6 = 10 + 3 = 13 (ten dots ringed, 3 left over)</div><div style="font-size:12.5px">Ring the 7 dots and 3 of the 6 dots to make ten. The other 3 dots are outside the ring. So 7 + 6 = 10 + 3 = 13.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Ringing ten dots but forgetting the dots left outside.; Miscounting when counting every dot one by one.</div></div><div class="keybox"><b>S3.</b> How many more make the next ten?<div class="a">Answer: 3, 2, 4, 1</div><div style="font-size:12.5px">(a) 7 and 3 make 10. (b) 18 is 1 ten and 8 ones, and 8 and 2 make 10, so 18 + 2 = 20. (c) 6 and 4 make 10, so 26 + 4 = 30. (d) 9 and 1 make 10, so 39 + 1 = 40.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing the next ten itself (20 for part b).; Counting from the tens digit instead of the ones digit.</div></div><div class="keybox"><b>S4.</b> Add 6 to 28. Make a ten first.<div class="a">Answer: 2 more; 6 = 2 and 4; 28 + 6 = 34</div><div style="font-size:12.5px">28 needs 2 more to make 30. Split 6 into 2 and 4. 28 + 2 = 30, and 30 + 4 = 34.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 36: adding all 6 after reaching 30, when 2 of the 6 were already used.; Splitting 6 into 2 and 3 or another wrong pair.</div></div><div class="keybox"><b>S5.</b> Add 7 to 35. Make a ten first.<div class="a">Answer: 5 more; 35 + 7 = 42</div><div style="font-size:12.5px">35 needs 5 more to make 40. 7 is 5 and 2. 35 + 5 = 40, and 40 + 2 = 42.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 47 (adding 7 to the 4 tens).; Forgetting the 2 left over after the ten.</div></div><div class="keybox"><b>S6.</b> Add. Make a ten first if it helps.<div class="a">Answer: 15, 23, 53, 64</div><div style="font-size:12.5px">(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 47 + 3 = 50, 50 + 3 = 53. (d) 56 + 4 = 60, 60 + 4 = 64.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Moving the right amount to make the ten but then adding the whole second number.; Making a ten with the wrong number (for example 9 + 6 = 9 + 4 + 2).</div></div><div class="keybox"><b>S7.</b> Siti adds 8 + 6. She writes: 8 + 2 = 10, then 10 + 6 = 16. Is Siti right? Write the right answer. Say what she forgot.<div class="a">Answer: No. 14. She moved 2 from the 6 to make the ten, so only 4 are left: 10 + 4 = 14.</div><div style="font-size:12.5px">8 + 2 = 10 uses 2 of the 6. Only 4 are left, so the sum is 10 + 4 = 14. Siti added all 6 again.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Saying she is right because 10 + 6 looks like a good sum.; Writing 14 without saying what she forgot (a spoken reason is fine).</div></div><div class="banner">Think harder (page 3)</div><div class="keybox"><b>T1.</b> Mei adds 4 + 9 + 6. She finds two numbers that make 10 first. Which two? What is the total?<div class="a">Answer: 4 and 6 make 10. The total is 19.</div><div style="font-size:12.5px">4 and 6 make 10. 10 + 9 = 19. Check the long way: 4 + 9 = 13, and 13 + 6 = 19.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding the first two numbers (4 + 9) and stopping or slipping.; Thinking the pair must sit side by side.</div></div><div class="keybox"><b>T2.</b> Add 8 + 5 + 2 + 7. Find the pairs that make a ten. Write your pairs.<div class="a">Answer: 22 (8 + 2 = 10, 5 + 7 = 12, 10 + 12 = 22)</div><div style="font-size:12.5px">8 + 2 = 10. 5 + 7 = 12 (5 + 5 + 2). 10 + 12 = 22.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding from left to right and losing track.; Using a number twice or leaving one out.</div></div><div class="keybox"><b>T3.</b> Three sums make 30. One does not. Which one? 17 + 13, 18 + 12, 19 + 12, 16 + 14. Say how you know without adding every one.<div class="a">Answer: 19 + 12 (it makes 31). The ones 9 and 2 make 11, not 10.</div><div style="font-size:12.5px">7 + 3 = 10, 8 + 2 = 10 and 6 + 4 = 10, so those make 30. 9 + 2 = 11, so 19 + 12 is 31.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding every sum one by one and slipping.; Choosing 18 + 12 because 18 looks big.</div></div><div class="keybox"><b>T4.</b> Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles has he in all? Show your pair.<div class="a">Answer: 64 (18 + 12 = 30, 30 + 34 = 64)</div><div style="font-size:12.5px">18 + 12 = 30. 30 + 34 = 64. The order does not change the total.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Leaving out one group of marbles.; Adding 18 + 34 first and slipping on the ten.</div></div><div class="banner">Go further (page 4)</div><div class="keybox"><b>G1.</b> Add 18 + 7 + 12 + 23 + 3 + 17. Look for pairs that make a ten or a tens number. Show your pairs.<div class="a">Answer: 80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40)</div><div style="font-size:12.5px">18 + 12 = 30. 7 + 3 = 10. 23 + 17 = 40. 30 + 10 + 40 = 80. Another way: 7 + 23 = 30, 18 + 12 = 30, 3 + 17 = 20, total 80.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding left to right and losing the running total.; Using a number twice or leaving one out.</div></div><div class="keybox"><b>G2.</b> Add the numbers 1 to 9: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9. Look for pairs that make 10. Then find 1 to 10.<div class="a">Answer: 45 and 55 (four pairs of 10, and the 5 is left)</div><div style="font-size:12.5px">1 + 9, 2 + 8, 3 + 7 and 4 + 6 make four tens: 40. The 5 has no partner. 40 + 5 = 45. Adding 10 makes 55.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Forgetting the 5 in the middle has no partner.; Making only three pairs.</div></div><div class="keybox"><b>G3.</b> Write a sum of 6 numbers that makes 100. Use pairs that make a ten or a tens number. Show your pairs.<div class="a">Answer: Any six numbers that total 100. For example 45 + 5 + 20 + 17 + 3 + 10 = 100 (45 + 5 = 50, 17 + 3 = 20, 20 + 10 = 30).</div><div style="font-size:12.5px">Choose pairs first: 50 + 20 + 30 = 100. Then split each into two numbers, for example 45 + 5, 17 + 3, 20 + 10. Add them to check.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing numbers that total 90 or 110: add every number to check.; Using fewer than 6 numbers.</div></div><div class="banner">Investigation (page 5): Move the fewest</div><div class="keybox"><div class="a">Fill up the bigger number: it has the fewest empty spaces, so you move the fewest dots. The number moved is 10 minus the bigger number. 9 + 6: move 1, not 4. 8 + 7: move 2, not 3. If the two numbers are the same (7 + 7), either way moves 3.</div><div style="font-size:12px"><b>Look for:</b> A child who tries several pairs, records how many dots moved each way, and notices the bigger number is closer to ten. Credit any clear reason, such as the bigger number has fewer empty spaces.</div></div><div class="banner">Exit ticket (page 5)</div><div class="keybox"><b>E1.</b> Add by making a ten.<div class="a">Answer: 13</div><div style="font-size:12.5px">7 + 3 = 10. 6 is 3 and 3, so 10 + 3 = 13.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 16 (10 + 6).; Writing 12 or 14 after counting on fingers.</div></div><div class="keybox"><b>E2.</b> Add by making a ten.<div class="a">Answer: 43</div><div style="font-size:12.5px">38 + 2 = 40. 5 is 2 and 3, so 40 + 3 = 43.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 45 (40 + 5).; Writing 33 or 83.</div></div><div class="keybox"><b>E3.</b> Add 6 + 9 + 4. Which two numbers did you add first?<div class="a">Answer: 19. 6 and 4 make 10, then 10 + 9 = 19.</div><div style="font-size:12.5px">6 + 4 = 10. 10 + 9 = 19.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding 6 + 9 first (15) and then slipping.; Not noticing that 6 and 4 make a ten.</div></div><div class="banner">Sneak-peek puzzles (not in the workbook)</div><div class="keybox">1. 12 stars.<br>2. Yes. Nothing was added or taken away. 9 + 5 = 14 and 10 + 4 = 14.</div></body></html>
