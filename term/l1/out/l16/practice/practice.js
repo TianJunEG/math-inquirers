@@ -39,14 +39,14 @@
   var WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   function numWord(n) { n = +n; if (n < 20) return WORDS[n]; if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? '-' + WORDS[n % 10] : ''); return String(n); }
   function ordinal(n) { n = +n; var r = n % 100, s = (r >= 11 && r <= 13) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th'); return n + s; }
-  function fill(str, env) { return String(str).replace(/\{(\w+)(?:\|(\w+))?\}/g, function (m, k, f) { if (env[k] == null) return m; var v = env[k]; if (Array.isArray(v)) v = v.join(', '); return f === 'ord' ? ordinal(v) : f === 'word' ? numWord(v) : v; }); }
+  function fill(str, env, keep) { return String(str).replace(/\{(\w+)(?:\|(\w+))?\}/g, function (m, k, f) { if (env[k] == null || (keep && keep.indexOf(k) > -1)) return m; var v = env[k]; if (Array.isArray(v)) v = v.join(', '); return f === 'ord' ? ordinal(v) : f === 'word' ? numWord(v) : v; }); }
   function variantOf(item, avoid) {
     var t = item.tpl, names = Object.keys(t.vars), env, tries = 0;
     do { env = {}; names.forEach(function (n) { var a = t.vars[n]; env[n] = a[Math.floor(Math.random() * a.length)]; }); tries++; } while (avoid && JSON.stringify(env) === avoid && tries < 12);
     var all = Object.assign({}, env); Object.keys(t.derive || {}).forEach(function (k) { all[k] = calc(t.derive[k], all); });
     var v = { id: item.id, tier: item.tier, q: fill(t.q, all), hint: fill(t.hint, all), slips: [], easier: item.easier, variantKey: JSON.stringify(env), isVariant: true, base: item };
     if (t.answers) {                                    // several ordered boxes
-      v.type = 'fields'; v.frame = fill(t.frame, all);
+      v.type = 'fields'; v.frame = fill(t.frame, all, Object.keys(t.answers));     // box names stay as boxes even when a number has the same name
       v.fields = Object.keys(t.answers).map(function (k) { return { id: k, answer: calc(t.answers[k], all) }; });
       all.ans = v.fields.map(function (f) { return f.answer; }).join(', ');
     } else if (t.options) {                             // templated choice
@@ -88,7 +88,7 @@
     });
     return out;
   }
-  function show(a, item) { if (item && item.type === 'fields') return item.frame.replace(/\{(\w+)\}/g, function (m, k) { return item.fields.filter(function (f) { return f.id === k; })[0].answer; }); return Array.isArray(a) ? a.join(', ') : String(a); }
+  function show(a, item) { if (item && item.type === 'fields') return item.frame.replace(/\{(\w+)\}/g, function (m, k) { var f = item.fields.filter(function (f) { return f.id === k; })[0]; return f ? f.answer : m; }); return Array.isArray(a) ? a.join(', ') : String(a); }
 
   function items() { return L.items.filter(function (i) { return i.tier === tier; }); }
   function current() { var it = items()[idx]; return st[it.id] && st[it.id].variant ? st[it.id].variant : it; }
@@ -108,7 +108,7 @@
     var box = h('div', { id: 'ans', class: 'row' });
     if (item.type === 'fields') {
       box = h('div', { id: 'ans', class: 'row' });
-      item.frame.split(/(\{\w+\})/).forEach(function (part) { var m = /^\{(\w+)\}$/.exec(part); if (m) box.appendChild(h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', size: '3', style: 'width:4.2rem;text-align:center', 'data-f': m[1], 'aria-label': 'Box ' + m[1] })); else if (part) box.appendChild(h('span', { text: part, style: 'font-size:1.15em;font-weight:700' })); });
+      item.frame.split(/(\{\w+\})/).forEach(function (part) { var m = /^\{(\w+)\}$/.exec(part); if (m && !item.fields.some(function (f) { return f.id === m[1]; })) m = null; if (m) box.appendChild(h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', size: '3', style: 'width:4.2rem;text-align:center', 'data-f': m[1], 'aria-label': 'Box ' + m[1] })); else if (part) box.appendChild(h('span', { text: part, style: 'font-size:1.15em;font-weight:700' })); });
     }
     if (item.type === 'number') box.appendChild(h('input', { type: 'text', inputmode: 'decimal', autocomplete: 'off', 'aria-label': 'Your answer', id: 'ansf' }));
     if (item.type === 'set') { box.appendChild(h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'aria-label': 'Your answers, separated by commas' })); }
@@ -155,7 +155,7 @@
     var sig = JSON.stringify(a); if (s.tries === 1 && s.last === sig) { fb.appendChild(box('plain', h('p', { text: 'That is the same answer as before. Read the hint and try a different one.' }))); return; }
     s.last = sig; s.tries++;
     if (s.tries === 1) {
-      var slip = slipFor(item, a), msg = slip || (j.order ? 'Those are the right numbers, but check which one goes in each blank.' : j.part && item.type !== 'number' ? (j.extra ? 'Some of these fit, but one does not. Check each one.' : 'Those fit. Are there more? Keep looking.') : 'Not quite yet. Have another go.');
+      var slip = slipFor(item, a), msg = slip || (j.order ? 'Those are the right numbers, but not in the right order. Check the order.' : j.part && item.type !== 'number' ? (j.extra ? 'Some of these fit, but one does not. Check each one.' : 'Those fit. Are there more? Keep looking.') : 'Not quite yet. Have another go.');
       if (j.wrong) { Array.prototype.forEach.call(document.querySelectorAll('#ans input'), function (i) { if (j.wrong.indexOf(i.getAttribute('data-f')) > -1) i.style.borderColor = '#B5481F'; }); msg = 'Look again at the boxes with a red edge.'; }
       fb.appendChild(box('try', [h('h2', { text: 'Not yet. Try once more.' }), h('p', { text: msg }), h('p', { class: 'sub', style: 'margin:.4rem 0 0', text: 'Hint: ' + item.hint })]));
     } else { s.state = 'shown'; saved[base.id] = 1; persist(); render(); }
