@@ -439,6 +439,18 @@ def heatmap():
     cells = sorted(((table_scores()[n - 1][2 + i], n, p) for n in range(1, 11) for i, p in enumerate(PERSONA)))
     print('weakest 8 cells:', cells[:8]); print('strongest 6 cells:', cells[-6:])
 
+def lesson_md():
+    out=[]
+    for n in range(1,11):
+        out.append(f"### Lesson {n}: {LESSON_TITLE[n]}\n")
+        for pe in PERSONA:
+            sc=SCORES[n][pe]; m=sum(x[0] for x in sc)/6
+            out.append(f"**{pe}** (mean {m:.2f})\n")
+            out.append("| Criterion | Score | Evidence |\n|---|---|---|")
+            for c,(v,t) in zip(CRIT,sc): out.append(f"| {c} | {v} | {t} |")
+            out.append("")
+    return "\n".join(out)
+
 
 if __name__ == '__main__':
     what = sys.argv[1] if len(sys.argv) > 1 else 'all'
@@ -446,5 +458,6 @@ if __name__ == '__main__':
     if what in ('time', 'all'): time()
     if what in ('diag', 'all'): diag()
     if what in ('heat', 'all'): heatmap()
+    if what == 'lessons': print(lesson_md())
 
 
