@@ -218,7 +218,7 @@ put('p4l2-ws2ans',checks('p4l2-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(2)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(2)))
+put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(2)))
 ch=[('1.','How many 5-digit numbers have digits that add up to 3?'),('2.','The distance counter on Mr Tan\'s car shows 39 993 km. It reads the same forwards and backwards. What is the next number like this the counter will show? How many more kilometres is that?')]
 put('p4l2-challenge',sec('p4l2-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q7. Answers: 1) 15 (10 starting with 1, 4 starting with 2, and 30 000). 2) 40 004, which is 11 km more.'))
 g1=''

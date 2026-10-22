@@ -1,0 +1,8 @@
+{
+  "name": "mi-tutor-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tutor console: the lesson screen (slide + timer) is shared on the laptop; notes and remote control run on the tutor's phone.",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "ws": "8.18.0" }
+}

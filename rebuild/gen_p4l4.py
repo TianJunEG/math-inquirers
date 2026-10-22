@@ -244,7 +244,7 @@ put('p4l4-ws2ans',checks('p4l4-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(4)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l4-stretch',sec('p4l4-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(4)))
+put('p4l4-stretch',sec('p4l4-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(4)))
 ch=[('1.','Half of a number is 3 more than a third of the number. What is the number?'),('2.','Siti read 2/5 of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?')]
 put('p4l4-challenge',sec('p4l4-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q6 and Q7. Answers: 1) 18 (half = 3 sixths, a third = 2 sixths, so 1 sixth = 3). 2) 150 pages (Monday 4 tenths, Tuesday 3 tenths, 3 tenths left = 45).'))
 g1=f'<rect x="40" y="70" width="680" height="80" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/><rect x="40" y="70" width="340" height="80" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+txt(210,122,'a half',34)

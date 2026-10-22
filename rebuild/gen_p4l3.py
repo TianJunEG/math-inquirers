@@ -195,7 +195,7 @@ put('p4l3-ws2ans',checks('p4l3-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(3)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l3-stretch',sec('p4l3-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(3)))
+put('p4l3-stretch',sec('p4l3-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(3)))
 ch=[('1.','Put + or − in each gap so that the answer is 7:  1 __ 2 __ 3 __ 4 __ 5 __ 6 = 7. Find ALL the ways.'),('2.','Mei spent half of her money on a book. Then she spent $6 on lunch. Then she spent half of what was left on a gift. She had $9 left. How much money did she have at first?')]
 put('p4l3-challenge',sec('p4l3-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) 2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. 2) $48 (work backwards: 9 × 2 = 18, 18 + 6 = 24, 24 × 2 = 48).'))
 g1=''

@@ -233,7 +233,7 @@ put('p4l7-ws2ans',checks('p4l7-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(7)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l7-stretch',sec('p4l7-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(7)))
+put('p4l7-stretch',sec('p4l7-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(7)))
 ch=[('1.','A garden is 10 m long and 8 m wide. Two paths 1 m wide cross it: one along its length and one across its width. What area of the garden is NOT path?'),('2.','A rectangle 9 cm long and 4 cm wide is cut into 2 pieces. The pieces fit together exactly to make a square. How long is a side of the square? Did the perimeter go up or down?')]
 put('p4l7-challenge',sec('p4l7-challenge','Any time • take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q6 and Q7. Answers: 1) 63 m² (slide the paths to the edges: the grass is 9 m by 7 m). 2) 6 cm (the area is 36 cm² and 6 × 6 = 36); the perimeter went down from 26 cm to 24 cm.'))
 c=40

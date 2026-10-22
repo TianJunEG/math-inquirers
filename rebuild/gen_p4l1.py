@@ -216,7 +216,7 @@ put('p4l1-ws2ans',checks('p4l1-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(1)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l1-stretch',sec('p4l1-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(1)))
+put('p4l1-stretch',sec('p4l1-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(1)))
 ch=[('1.','There are 20 closed lockers, numbered 1 to 20. Child 1 opens every locker. Child 2 changes every 2nd locker (opens it if closed, closes it if open). Child 3 changes every 3rd locker, and so on, up to child 20. Which lockers are open at the end?'),('2.','I am a number less than 100. When I am divided by 2, 3, 4, 5 or 6, there is always 1 left over. I am bigger than 1. Who am I?')]
 put('p4l1-challenge',sec('p4l1-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,34),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q7 and Q6. Answers: 1) Lockers 1, 4, 9 and 16: each locker is changed once for every factor of its number, and only numbers with an odd number of factors end up open. 2) 61: one less than the number is a common multiple of 2, 3, 4, 5 and 6, which is 60.'))
 g1=''

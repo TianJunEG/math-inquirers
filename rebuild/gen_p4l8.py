@@ -256,7 +256,7 @@ put('p4l8-ws2ans',checks('p4l8-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(8)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l8-stretch',sec('p4l8-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(8)))
+put('p4l8-stretch',sec('p4l8-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(8)))
 ch=[('1.','Two dice are glued together face to face, and the two glued faces show the same number. The numbers on all the faces you can still see add up to 36. What number is on the glued faces?'),('2.','Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Find both.')]
 put('p4l8-challenge',sec('p4l8-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 3 (two dice have 42 altogether; the 2 hidden faces are equal and 42 − 36 = 6, so each is 3). 2) The centre and the 4 corners (an X), or the centre and the 4 edge-middle squares (a plus).'))
 c=60

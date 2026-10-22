@@ -228,7 +228,7 @@ put('p4l10-ws2ans',checks('p4l10-ws2ans','76–80 MIN','Page 2: check together',
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(10)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l10-stretch',sec('p4l10-stretch','Any time • take-home',h2('Think harder')+numgrid(st,30),th_notes(10)))
+put('p4l10-stretch',sec('p4l10-stretch','Any time • take-home',h2('Think harder')+numgrid(st,34),th_notes(10)))
 ch=[('1.','A hawker centre has 15 tables. Some seat 4 people and some seat 6. There are 76 seats altogether. (a) How many tables seat 6? (b) What is the fewest and the most seats 15 tables could have? (c) Could the centre have 77 seats? Explain.'),('2.','Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 left. How many did she have at first?')]
 put('p4l10-challenge',sec('p4l10-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) (a) 8 tables seat 6 (and 7 seat 4). (b) Fewest 60 (all seat 4), most 90 (all seat 6). (c) No: every table seats an even number of people, so the total is even and 77 is odd. The diagrams that follow show part (a). 2) 32 stickers.'))
 g1=''

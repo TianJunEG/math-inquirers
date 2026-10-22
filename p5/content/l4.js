@@ -193,15 +193,15 @@ module.exports = {
     g += lab(70 + 56, 168, '16 cm') + lab(62, 110, '12 cm', 'end') + lab(70 + 80, 100, '20 cm', 'start');
     module.exports.qbank.stretch[1].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 12 cm and 16 cm and the long side 20 cm', g, 0.75); }
   // A3: a square of side 6 cm and a triangle with base 9 cm and an unknown height
-  { let g = poly([[30, 30], [30 + 6 * 12, 30], [30 + 6 * 12, 30 + 6 * 12], [30, 30 + 6 * 12]], YEL) + lab(30 + 36, 30 + 6 * 12 + 18, '6 cm') + lab(30 + 36, 30 + 40, 'square');
-    const x0 = 190; g += poly([[x0, 102], [x0 + 9 * 12, 102], [x0 + 3 * 12, 22]], SKY) + ln([x0 + 3 * 12, 22], [x0 + 3 * 12, 102], true) + ra([x0 + 3 * 12, 102], 1, -1) + lab(x0 + 54, 120, '9 cm') + lab(x0 + 3 * 12 + 8, 66, 'height ?', 'start');
+  { let g = poly([[20, 30], [20 + 6 * 12, 30], [20 + 6 * 12, 30 + 6 * 12], [20, 30 + 6 * 12]], YEL) + lab(20 + 36, 30 + 6 * 12 + 18, '6 cm') + lab(20 + 36, 30 + 40, 'square');
+    const x0 = 130; g += poly([[x0, 102], [x0 + 9 * 12, 102], [x0 + 3 * 12, 22]], SKY) + ln([x0 + 3 * 12, 22], [x0 + 3 * 12, 102], true) + ra([x0 + 3 * 12, 102], 1, -1) + lab(x0 + 54, 120, '9 cm') + lab(x0 + 9 * 12 + 6, 62, 'height ?', 'start');
     module.exports.qbank.stretch[2].fig = fsv(340, 130, 'A square with sides 6 cm and a triangle with base 9 cm and an unknown height; the two have the same area', g, 0.8); }
   // A4: a rectangle and a triangle with the same base 12 cm and the same height 7 cm
   { let g = poly([[20, 20], [20 + 12 * 11, 20], [20 + 12 * 11, 20 + 7 * 11], [20, 20 + 7 * 11]], YEL) + lab(20 + 66, 20 + 7 * 11 + 18, '12 cm') + lab(14, 20 + 40, '7 cm', 'end');
     const x0 = 200; g += poly([[x0, 97], [x0 + 12 * 11, 97], [x0 + 4 * 11, 20]], SKY) + ln([x0 + 4 * 11, 20], [x0 + 4 * 11, 97], true) + ra([x0 + 4 * 11, 97], 1, -1) + lab(x0 + 66, 115, '12 cm') + lab(x0 + 4 * 11 + 8, 60, '7 cm', 'start');
     module.exports.qbank.stretch[3].fig = fsv(350, 130, 'A rectangle 12 cm by 7 cm and a triangle with base 12 cm and height 7 cm side by side', g, 0.8); }
   // B1: right-angled triangle 15, 20, 25 with the 25 cm side as the base
-  { const P = M(50, 150, 6.4); let g = poly([P(0, 0), P(20, 0), P(0, 15)], SKY) + ra(P(0, 0), 1, -1) + lab(50 + 64, 168, '20 cm') + lab(42, 110, '15 cm', 'end') + lab(50 + 90, 88, '25 cm', 'start');
+  { const P = M(80, 150, 6.4); let g = poly([P(0, 0), P(20, 0), P(0, 15)], SKY) + ra(P(0, 0), 1, -1) + lab(80 + 64, 168, '20 cm') + lab(72, 110, '15 cm', 'end') + lab(80 + 90, 88, '25 cm', 'start');
     module.exports.qbank.challenge[6].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 15 cm and 20 cm and the long side 25 cm', g, 0.75); }
   // B2: two squares side by side (10 cm and 6 cm) and the triangle joining three corners
   { const s = 11, x0 = 30, y0 = 130; const X = x => x0 + x * s, Y = y => y0 - y * s;

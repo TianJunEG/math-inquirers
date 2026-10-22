@@ -220,7 +220,7 @@ put('ws2ans',checks(f'{P}-ws2ans','76–80 MIN','Page 2: check together',[('Q4',
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(5)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(5)))
+put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(5)))
 ch=[('1.','A number with 3 decimal places rounds to 2.46 (to 2 decimal places). Its digits add up to 20. What is the number?'),('2.','3 apples and 1 pear weigh 0.95 kg. 1 apple and 1 pear weigh 0.45 kg. All the apples weigh the same. What is the mass of the pear?')]
 put('challenge',sec(f'{P}-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 2.459 (it is from 2.455 to 2.464; 2 + 4 + 5 + 9 = 20; 2.46_ would need an 8, but 2.468 rounds to 2.47). 2) 0.2 kg (the extra 2 apples weigh 0.95 − 0.45 = 0.5 kg, so 1 apple is 0.25 kg and the pear is 0.45 − 0.25 = 0.2 kg). More are in the question bank and on the Think Harder pages.'))
 g1=nline(60,700,190,20,{0:'2.45',10:'2.46',20:'2.47'},big=(5,15),band=(5,14.6),lab=28,ticksize=14)

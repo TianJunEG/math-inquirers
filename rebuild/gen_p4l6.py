@@ -248,7 +248,7 @@ put('ws2ans',checks(f'{P}-ws2ans','76–80 MIN','Page 2: check together',[('Q3',
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(6)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(6)))
+put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,34),th_notes(6)))
 ch=[('1.','What is the angle between the hands of a clock at 3:30?'),('2.','Five rays come out of one point and make 4 equal angles side by side. The angle between the two outside rays is 120°. How many angles can you find altogether? How many are right angles?')]
 put('challenge',sec(f'{P}-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 75°. At 3:30 the minute hand points to 6, but the hour hand is HALFWAY between 3 and 4 (half an hour has passed). From the hour hand to 4 is half a space (15°), from 4 to 6 is 2 spaces (60°): 75°. 2) 10 angles (4 small, 3 of two parts, 2 of three parts, 1 of four parts). Each small angle is 120 ÷ 4 = 30°, so the three-part angles are 90°: 2 right angles. More are in the question bank and on the Think Harder pages.'))
 g1=clock(230,225,200,3,30)

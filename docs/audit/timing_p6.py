@@ -46,7 +46,7 @@ PAIRS_SAY = ('Pairs first. Read each question aloud and talk about it before you
              'I am not looking for speed. I am looking for good thinking.')
 WS_OPEN = 'Minute 40: give out the workbook. Read the title of the lesson aloud. Say Pairs first. Talk before you write.'
 LB_SAY_SHORT = ('Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. '
-                'You can write pass. If you are still stuck, tick that box and I will check in with you in the open session.')
+                'You can write pass. Nobody marks this. If you are still stuck, tick that box and I will check in with you in the open session.')
 LB_SAY = ('Two minutes, just for you, in the Looking back box on the Finish page. Finish: something I did well, the hardest part was, '
           'and tick what helped you. You can write pass. If you are still stuck, tick that box and I will check in with you in the open '
           'session, in the shared room, with your parent nearby. Nobody marks this and nobody has to show it.')
@@ -172,7 +172,7 @@ def model_lesson(n, C, sc, fx=None):
     cap = 15 if fx.get('sneak_lean') else 25
     ans = sum(min(cap, wc(x[1])) for x in GP['sneak'])
     p.speak = REC + sec(wc(SNEAK_SAY), SAY_WPM) + sec(sum(wc(x[0]) for x in GP['sneak']), READ_WPM) + sec(ans + wc(SNEAK_CLOSE), SAY_WPM)
-    # as written: a hold-up-your-paper moment for each puzzle + one volunteer round
+    # as written: a hold-up-your-paper moment for each puzzle + 30 s of reaction when the answers are revealed
     p.wait = 30 if fx.get('sneak_lean') else 2 * 30 + 10 + 20
     p.act = (I['sneak'][0] + I['sneak'][1]) * am
     p.trans = slide
@@ -383,7 +383,7 @@ def finishers(n, info, p_ws, am=1.0, block=35):
 
 
 # ---- proposed fixes (applied by model_lesson(..., fx=FX[n])) -----------------------------------------------
-# sneak_lean   one hold-up moment for both puzzles, no volunteer round, answers said in 15 words each
+# sneak_lean   one hold-up moment for both puzzles, no reaction round, answers said in 15 words each
 # warm_cut_s / warm_q   seconds cut from the game / number of quick questions kept (the first N in the deck order)
 # go_drop      the Go further what-if leaves the group flow (it stays in the chat and on the workbook); exp_q = discussion questions kept
 # exp_act      minutes of child task time in Explore after the cut; exp_slide_merge = explore slides merged away

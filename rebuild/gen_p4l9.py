@@ -219,7 +219,7 @@ put('p4l9-ws2ans',checks('p4l9-ws2ans','76–80 MIN','Page 2: check together',[(
 from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
 st=th_items(9)
 def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
-put('p4l9-stretch',sec('p4l9-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,28),th_notes(9)))
+put('p4l9-stretch',sec('p4l9-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,32),th_notes(9)))
 ch=[('1.','Four teams scored 100 points. Team A scored twice as many as Team B. Team C scored 10 more than Team B. Team D scored 22. Find each team’s points.'),('2.','Tank A has 80 litres and loses 6 litres each hour. Tank B has 20 litres and gains 9 litres each hour. After how many hours do they hold the same amount?')]
 put('p4l9-challenge',sec('p4l9-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) A 34, B 17, C 27, D 22. 2) After 4 hours: 56 litres each.'))
 gq=''
