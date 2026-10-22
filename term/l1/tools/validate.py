@@ -282,6 +282,24 @@ def check_mascot(d):
     else: ok(f'mascot: Mi on {len(ms)} slides, short friendly lines only')
 
 
+def check_outputs(d):
+    """Measure the REAL rendered PDFs (page count and ink fill), if built. FAIL on orphan or near-empty pages."""
+    import pdfcheck, b_print
+    od = os.path.join(OUT, f"l{d['_num']}")
+    want = {'Workbook': (b_print.workbook_html(d).count('<div class="page'), (14, 16)), 'Home_Practice': (2, (14, 16)), 'Parent_Summary': (1, (12, 12))}
+    for name, (n, mg) in want.items():
+        path = os.path.join(od, f"L{d['_num']}_{name}.pdf")
+        if not os.path.exists(path):
+            warn(f'outputs: {name} not built yet, real page check skipped'); continue
+        got = pdfcheck.pdf_pages(path); fills = pdfcheck.pdf_fill(path, *mg)
+        txt = ', '.join(f'{f:.0%}' for f in fills)
+        if got != n: fail(f'outputs: {name} PDF has {got} pages but {n} are designed (a question block spilled onto an orphan page); fill {txt}')
+        for i, f in enumerate(fills, 1):
+            if f < 0.40: fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
+            elif f < 0.80 and not (name == 'Home_Practice' and i == 2): warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')
+        if got == n and all(f >= 0.40 for f in fills): ok(f'outputs: {name} PDF {got} pages, fill (measured on the PDF) {txt}')
+
+
 def check_rec(d):
     for k, r in d['rec'].items():
         n = words(r['say'])
@@ -397,7 +415,7 @@ def check_answers(d):
 
 def check_all(num):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_outputs, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:

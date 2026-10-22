@@ -16,7 +16,7 @@ h3{font-size:15px;margin:12px 0 4px;break-after:avoid}
 .cover{background:#1B2A49;color:#FFF9EC;border-radius:18px;padding:26px 28px;margin-bottom:14px}
 .cover .k{color:#FFC93C;font-weight:800;letter-spacing:.14em;font-size:11px}
 .cover h1{color:#fff;font-size:44px;margin:6px 0}
-.cover p{margin:4px 0;font-size:14px}
+.cover p{margin:4px 130px 4px 0;font-size:14px}
 table{border-collapse:collapse;width:100%;margin:6px 0;font-size:11.8px}
 th{background:#FFC93C;text-align:left;padding:4px 7px;border:1px solid #1B2A49}
 td{padding:4px 7px;border:1px solid #C9D4EC;vertical-align:top}

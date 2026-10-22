@@ -14,7 +14,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .vis{width:310px;margin:6px 0 6px 4px}
 .al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
 .lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
@@ -32,7 +32,7 @@ def hdr(d, tag, title=None, mi=False):
     if not mi:
         return head
     i = head.index('<div class="ltitle">') if '<div class="ltitle">' in head else head.index('<div class="namer">')
-    img = f'<img alt="Mi the dolphin" src="{mi_uri()}" style="width:24mm;height:auto;flex:none;margin-left:8px">'
+    img = f'<img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto;flex:none;margin:-2px 0 -8px 8px">'
     return head[:i] + f'<div style="display:flex;align-items:flex-start"><div style="flex:1;min-width:0">' + head[i:] + f'</div>{img}</div>'
 
 
@@ -55,7 +55,7 @@ def kit_page(d):
 def workbook_html(d, key=False):
     t = d['tiers']; inv = t['investigation']
     P = []
-    P.append(f'<div class="page">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">Use your bundles, your kit or a drawing. Say your answer out loud, then write it.</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
+    P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">Use your bundles, your kit or a drawing. Say your answer out loud, then write it.</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Start here")}' + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">Use objects, draw a picture, or open a bundle. Then write how you know. Choose any question, in any order.</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">Choose any question. You do not have to finish them all.</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
@@ -95,10 +95,10 @@ def home_html(d):
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{E(h["text"])}</span></div>' + '<div class="ln"></div>' * (3 if h['id'] == 'H5' else 1) + '</div>'
+        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{E(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
-            f'<div class="page">{hdr(d, "Home practice", "Bundles and Singles: practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use real things or draw bundles. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
+            f'<div class="page hm">{hdr(d, "Home practice", "Bundles and Singles: practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use real things or draw bundles. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
             f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing the bundles.</p>{ans}'
             f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link, key <b>{d["online_practice"]["key"]}</b>.</p></div></body></html>')
 
