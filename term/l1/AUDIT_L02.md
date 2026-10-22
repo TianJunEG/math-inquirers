@@ -62,3 +62,7 @@ Independent auditor's 17/24 re-scored by the fix author (a model, not independen
 Owner decision of 22 Oct 2026 applied: tutor guide (strand note and prep list) and parent summary now say that Term 1 goes beyond the school Primary 1 syllabus on purpose; nothing says MOE-aligned.
 
 Open: (1) syllabus check for the new-topic lesson (number-line scale, nearer ten) still with the owner or a tutor; (2) Start here still long (S4 and S5 involve reading and writing number words); (3) no table for the Investigation (template); (4) the T-page numbered line is not printed (children use their cards, frog or a drawing); (5) home sheet prints ___ not boxes (template).
+
+## Update (second fix pass, 22 Oct 2026)
+
+Machine state: validate 02 = 18 pass, 2 WARN (opening 1:58 of 3:00 and exit 4:04 of 6:00 are loose, explained), 0 FAIL; 448 answer checks, 221 practice variants; leak check clean. Script 74:40, slow 88:27. Workbook 7 pages (88, 96, 87, 86, 90, 82, 83%), home 2, parent 1. All pages, key, home, parent and changed slides viewed. Changes in `audit/FIXES2_L02.md`. Opening now 3 minutes, Explore 15, to fit the recording, muting and camera statement.
