@@ -150,10 +150,10 @@ def run(d):
     eq(T['S6']['val'], [walk(45, [('jump', 2)])], 'S6'); eq(walk(45, [('hop', 2)]), 47, 'S6 Ben hopped'); eq(47 == 65, False, 'S6 Ben is wrong')
     eq(T['S7']['val'], [walk(36, [('jump', 1), ('jump', 1)])], 'S7')
     # Think harder
-    eq(T['T1']['val'], [walk(34, [('jump', 2), ('hop', 5)])], 'T1');
-    eq([x['val'] for x in T['T1']['parts']], [[20, walk(34, [('jump', 2)])], [walk(34, [('jump', 2)]), 5, 59], 59], 'T1 frames'); eq(walk(34, [('hop', 5), ('jump', 2)]), 59, 'T1 other order'); eq(34 + 25, 59, 'T1 plain sum')
-    eq(T['T2']['val'], [walk(68, [('jump', -2), ('hop', -4)])], 'T2');
-    eq([x['val'] for x in T['T2']['parts']], [[20, walk(68, [('jump', -2)])], [walk(68, [('jump', -2)]), 4, 44], 44], 'T2 frames'); eq(68 - 24, 44, 'T2 plain')
+    eq(T['T1']['val'], [walk(23, [('jump', 4), ('hop', 5)])], 'T1');
+    eq([x['val'] for x in T['T1']['parts']], [[40, walk(23, [('jump', 4)])], [walk(23, [('jump', 4)]), 5, 68], 68], 'T1 frames'); eq(walk(23, [('hop', 5), ('jump', 4)]), 68, 'T1 other order'); eq(23 + 45, 68, 'T1 plain sum')
+    eq(T['T2']['val'], [walk(79, [('jump', -3), ('hop', -5)])], 'T2');
+    eq([x['val'] for x in T['T2']['parts']], [[30, walk(79, [('jump', -3)])], [walk(79, [('jump', -3)]), 5, 44], 44], 'T2 frames'); eq(79 - 35, 44, 'T2 plain')
     a = walk(12, [('jump', 3), ('hop', 4)]); b = walk(12, [('hop', 4), ('jump', 3)])
     eq(a, b, 'T3 same landing'); eq(T['T3']['val'], ['same', a], 'T3'); eq(a, 46, 'T3 value')
     eq(T['T4']['val'], [walk(78, [('jump', -3)])], 'T4'); eq(walk(48, [('jump', 3)]), 78, 'T4 check')

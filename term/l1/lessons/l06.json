@@ -17,7 +17,7 @@
       "A 2-digit number plus or minus ones, without renaming",
       "Number line jumps as a picture of adding and taking away"
     ],
-    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose; it is not MOE-aligned and must not be called that on child or parent pages. In this lesson Start here stays inside P1 mental calculation of a 2-digit number plus or minus tens or ones without renaming (syllabus 2.7), explored first with bundles, bars and number lines. Think harder (34 + 25, 68 - 24) and Go further (two jump sizes, a chain of jumps) go beyond P1 by splitting a 2-digit step into a jump and a hop. The owner or a tutor should check the placement against the syllabus before the first live class."
+    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose; it is not MOE-aligned and must not be called that on child or parent pages. In this lesson Start here stays inside P1 mental calculation of a 2-digit number plus or minus tens or ones without renaming (syllabus 2.7), explored first with bundles, bars and number lines. Think harder (a two-digit step split into a jump and a hop) and Go further (two jump sizes, a chain of jumps) go beyond P1 by splitting a 2-digit step into a jump and a hop. The owner or a tutor should check the placement against the syllabus before the first live class."
   },
   "contest_moves": [
     "split the second number into tens and ones (jump, then hop)",
@@ -45,14 +45,14 @@
   },
   "materials": {
     "child": [
-      "The tens bars and ones squares from the kit page (workbook page 6), cut out by a grown-up. They are the same kit as Lesson 1, so keep them in an envelope.",
-      "About 30 small things such as pasta, buttons or paper clips (only for the home practice; optional in the lesson)",
+      "The tens bars and ones squares from the kit page (workbook page 6), cut out by a grown-up before the lesson and kept in an envelope. They are the kit from the first lesson of the term; a child who joined later needs them too.",
+      "A coin (for the number path game in the Try at home ideas)",
       "The printed workbook (pages 1 to 5) and the kit page",
       "A pencil, a rubber and spare paper"
     ],
     "tutor": [
       "A slide deck and the kit bars and squares to show on camera if you wish",
-      "A visible clock or a timer slide"
+      "A visible clock or a timer on your own device (the deck has no timer slide)"
     ],
     "kit_pages": [
       "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; the same cut-outs as Lesson 1"
@@ -68,7 +68,7 @@
       {
         "type": "base_ten",
         "title": "Kit page: tens bars and ones squares",
-        "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. These are the same as Lesson 1, so keep them in an envelope."
+        "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. These are the kit from the first lesson of the term, so keep them in an envelope."
       }
     ],
     "hint_p1": "Use your kit or a drawing. A bundle of 10 is a bar in your kit. Say your answer out loud, then write it.",
@@ -145,11 +145,18 @@
     ],
     "optional_slide": "s-opt",
     "include_rules": false,
-    "notes": "A 2-minute opening (the routine is known from Lesson 1), so Explore has 16 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
+    "notes": "A 2-minute opening (the routine is known from Lesson 1), so Explore has 16 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+    "skip_order": [
+      "In a slow class the workbook runs about 3 minutes over: take it from the 5-minute flex buffer and shorten choice time, not the exit ticket",
+      "optional items and extra quick questions first",
+      "then the second explore round",
+      "then any quick-fire in the mini-lesson",
+      "then the optional slide"
+    ]
   },
   "sneak_peek": {
     "q1": "Mei has the sticks in the picture. Then she gets another bundle of 10 sticks. How many sticks does Mei have now? You may draw.",
-    "q2": "Ravi says 43 + 20 = 45. Is Ravi right? Circle Yes or No. Then write how you know.",
+    "q2": "Ravi says 43 + 20 = 45. Is Ravi right? Write Yes or No. Then write how you know.",
     "a1": "36",
     "a2": "No. 43 + 20 = 63. 20 is 2 tens, so the tens digit changes, not the ones.",
     "val1": 36
@@ -215,7 +222,15 @@
           },
           {
             "k": "SAY",
-            "text": "Good morning, inquirers! Cameras on, pencil ready, and your kit of bars and squares on the table. This lesson is recorded so a friend who is away can catch up. We record me and the screen only, and you may switch your camera off whenever you like."
+            "text": "Hello, inquirers! Pencil ready, and your kit of bars and squares on the table. Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SAY",
@@ -223,12 +238,12 @@
           },
           {
             "k": "DO",
-            "text": "Greet each child by first name and check their camera shows the page and hands.",
-            "s": 15
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+            "s": 8
           },
           {
             "k": "NOTE",
-            "text": "You know the routine from Lesson 1, so keep this to two minutes. Tell any new child that recordings show only you and the screen. The frog is only a story to hook the idea: the jumps and hops are done with the kit."
+            "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The frog is only a story to hook the idea: the jumps and hops are done with the kit."
           }
         ]
       },
@@ -249,7 +264,7 @@
           },
           {
             "k": "WORK",
-            "text": "Count in tens together, clapping, to 100.",
+            "text": "Tutor counts in tens and claps on every number; children count quietly along with microphones off and clap on screen.",
             "s": 35
           },
           {
@@ -258,7 +273,7 @@
           },
           {
             "k": "WORK",
-            "text": "Count on from 3 in tens together: 3, 13, 23 ... 93. Point at each tile as it is said.",
+            "text": "Tutor counts on from 3 in tens (3, 13, 23 ... 93) and points at each tile; children say it quietly along.",
             "s": 40
           },
           {
@@ -318,7 +333,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Answers: the ones digit stays 3; then 5 tens 2 ones, 7 tens 0 ones, 8 tens 3 ones; then 34, 57, 82. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and the picture."
+            "text": "Answers: the ones digit stays 3; then 5 tens 2 ones, 7 tens 0 ones, 8 tens 3 ones; then 34, 57, 82. Children answer with fingers, thumbs or a whispered number. Nobody writes. A child new to bars and squares sees them in the picture first, then says the number."
           }
         ]
       },
@@ -348,7 +363,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Ravi says forty-three plus twenty is forty-five. Is Ravi right? Circle Yes or No. Then write how you know."
+            "text": "Puzzle two. Ravi says forty-three plus twenty is forty-five. Is Ravi right? Write Yes or No. Then write how you know."
           },
           {
             "k": "WORK",
@@ -356,13 +371,8 @@
             "s": 50
           },
           {
-            "k": "HOLD",
-            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-            "s": 25
-          },
-          {
             "k": "SAY",
-            "text": "Thank you. We will come back to puzzle two in a few minutes."
+            "text": "Thank you. Keep your paper and your own answer: nobody shows it. We will come back to puzzle two in a few minutes, and you can check your own thinking then."
           },
           {
             "k": "NOTE",
@@ -387,13 +397,8 @@
           },
           {
             "k": "WORK",
-            "text": "Children build 34 with bars and squares. Tutor scans the cameras.",
-            "s": 35
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds up their build to the camera on a count of three.",
-            "s": 15
+            "text": "Children build 34 with bars and squares and show a thumbs up when ready. Tutor waits for most thumbs.",
+            "s": 40
           },
           {
             "k": "SAY",
@@ -411,7 +416,7 @@
           {
             "k": "ASK",
             "text": "And now?",
-            "resp": 10
+            "resp": 12
           },
           {
             "k": "SAY",
@@ -420,7 +425,7 @@
           {
             "k": "ASK",
             "text": "What number now?",
-            "resp": 10
+            "resp": 12
           },
           {
             "k": "SAY",
@@ -429,7 +434,7 @@
           {
             "k": "ASK",
             "text": "And now?",
-            "resp": 10
+            "resp": 12
           },
           {
             "k": "ASK",
@@ -445,6 +450,11 @@
             "text": "Now the small hops. Start with twenty-four: two bars and four squares. A hop is one square. Hop forward three times: add three squares."
           },
           {
+            "k": "WORK",
+            "text": "Children build 24 (or take their kit back to 24) and show a thumbs up when ready.",
+            "s": 20
+          },
+          {
             "k": "ASK",
             "text": "What number now?",
             "resp": 12
@@ -456,7 +466,7 @@
           {
             "k": "ASK",
             "text": "And now?",
-            "resp": 10
+            "resp": 12
           },
           {
             "k": "ASK",
@@ -473,11 +483,11 @@
           },
           {
             "k": "SAY",
-            "text": "Now jump and hop together. Build thirty-four again. We add twenty-five. Jump twice, then hop five times. Hold up your kit when I count to three."
+            "text": "Now jump and hop together. Build thirty-four again. We add twenty-five. Jump twice, then hop five times. Show a thumbs up when you have built it."
           },
           {
             "k": "WORK",
-            "text": "Children add 2 bars then 5 squares. Hold up on a count of three. Answer 59.",
+            "text": "Children add 2 bars then 5 squares and show a thumbs up. Answer 59.",
             "s": 50
           },
           {
@@ -508,7 +518,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children draw the dot, the arc and the landing number 54 on paper. Tutor draws on camera at the same time and shows the paper.",
+            "text": "Children draw the dot, the arc and the landing number 54 on paper. Tutor draws the same line step by step on a shared whiteboard or a blank slide.",
             "s": 60
           },
           {
@@ -517,7 +527,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children finish the line: 34, +20, 54, +5, 59. Check cameras. Then redo it for 68 take away 24 with back arcs: 68, -20, 48, -4, 44.",
+            "text": "Children finish the line: 34, +20, 54, +5, 59. Wait for thumbs up. Then redo it for 68 take away 24 with back arcs: 68, -20, 48, -4, 44.",
             "s": 75
           },
           {
@@ -548,7 +558,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Main room only: no breakout rooms, so you can see every camera. Keep the picture of jump and hop as ten and one. Never say that you carry or rename; if a child asks what happens when the ones pass nine, say: good question, we use make-a-ten for that (Lesson 5)."
+            "text": "Main room only: no breakout rooms. Keep the picture of jump and hop as ten and one. Never say that you carry or rename; if a child asks what happens when the ones pass nine, say: good question, we will learn that very soon."
           }
         ]
       },
@@ -634,8 +644,8 @@
           },
           {
             "k": "WORK",
-            "text": "Children write four answers.",
-            "s": 65
+            "text": "Children write four answers. Wait until most have stopped writing.",
+            "s": 90
           },
           {
             "k": "SLIDE",
@@ -670,7 +680,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Key words to use every time: jump (ten), hop (one), tens digit, ones digit. Do not teach carrying or renaming. Every example stays inside a ten: 34 + 25 uses 4 + 5 = 9 ones. Draw the number line on a paper or whiteboard as you talk so a child watching the recording sees the arcs."
+            "text": "Key words to use every time: jump (ten), hop (one), tens digit, ones digit. Do not teach carrying or renaming. Every example stays inside a ten: 34 + 25 uses 4 + 5 = 9 ones. Draw the number line on a shared whiteboard or a blank slide as you talk (not on paper under the webcam), so the recording shows the arcs."
           },
           {
             "k": "STUCK",
@@ -695,8 +705,8 @@
           },
           {
             "k": "WORK",
-            "text": "Call the moves one at a time and wait for everyone: jump twice (44, 54), hop three times (55, 56, 57), jump back once (47), hop back four times (46, 45, 44, 43). Count the numbers aloud together.",
-            "s": 170
+            "text": "Call the moves one at a time and wait for everyone: jump twice (44, 54), hop three times (55, 56, 57), jump back once (47), hop back four times (46, 45, 44, 43). Say each number clearly; children count quietly along.",
+            "s": 160
           }
         ]
       },
@@ -717,7 +727,7 @@
           },
           {
             "k": "WORK",
-            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "text": "Page 1, questions 1 to 3. Tutor looks around the gallery, asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
             "s": 540
           },
           {
@@ -726,7 +736,7 @@
           },
           {
             "k": "READ",
-            "text": "Thirty-six. Fifty-four. Thirty-three, sixty-three, eighty-one, sixty-seven. Mark your own page in another colour."
+            "text": "Answers for page 1. If you are still working, carry on and check later. Thirty-six. Fifty-four. Thirty-three, sixty-three, eighty-one, sixty-seven. Check your own page in another colour."
           },
           {
             "k": "SAY",
@@ -742,7 +752,7 @@
           },
           {
             "k": "WORK",
-            "text": "Page 2, questions 4 to 7.",
+            "text": "Page 2, questions 4 to 7. Move to the answer slide only when most children have stopped writing.",
             "s": 540
           },
           {
@@ -751,7 +761,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 4: twenty-four, thirty-eight, fifty-five, sixty-nine. Question 5: thirty-eight. Question 6: no, sixty-five. Question 7: fifty-six."
+            "text": "Answers for page 2. If you are still working, carry on and check later. Question 4: twenty-four, thirty-eight, fifty-five, sixty-nine. Question 5: thirty-eight. Question 6: no, sixty-five. Question 7: fifty-six."
           },
           {
             "k": "SLIDE",
@@ -764,7 +774,7 @@
           {
             "k": "WORK",
             "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-            "s": 270
+            "s": 245
           },
           {
             "k": "STUCK",
@@ -772,7 +782,7 @@
           },
           {
             "k": "STUCK",
-            "text": "A child who is still stuck ticks I am still stuck on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+            "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class. Open the next lesson with one short catch-up question for the whole group. Never a private message to a child, never a private room."
           },
           {
             "k": "NOTE",
@@ -842,17 +852,16 @@
           },
           {
             "k": "SAY",
-            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5. I will read them to you twice."
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: forty-six plus thirty. Question 2: part a, seventy-four take away thirty. Part b, seventy-four take away three. Question 3: Mei is on fifty-two. She jumps forward 2 tens, then hops forward 3. After the jump she is on what? After the hop she is on what?"
           },
           {
             "k": "WORK",
             "text": "Children answer E1 to E3 on their own. Remind them they may draw the jumps.",
             "s": 170
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-            "s": 25
           },
           {
             "k": "SLIDE",
@@ -864,11 +873,16 @@
           },
           {
             "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
+            "text": "Tick the ones you got right, in a different colour. Well done. Show your ticket to a grown-up."
+          },
+          {
+            "k": "ASK",
+            "text": "Show me with your fingers how many you got right: three, two, one, or none yet. A pass is fine.",
+            "resp": 15
           },
           {
             "k": "NOTE",
-            "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 7, in the open session, no names. Do not read out any child's result."
+            "text": "Look at the room as a whole, not at any one tile. If many children show one or two fingers, spend two minutes at the start of Lesson 7 on jump and hop, in the open session, no names. Do not write a child's name next to an answer and do not read out anyone's result."
           }
         ]
       },
@@ -885,7 +899,7 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. If you still need help, tick I am still stuck and show your grown-up. You can pass. Nobody reads it out."
           },
           {
             "k": "WORK",
@@ -902,8 +916,12 @@
             "slide": "s-end"
           },
           {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
             "k": "SAY",
-            "text": "Well done, inquirers. Next lesson is Take Away, Count Up. You need your kit, a pencil and paper. Goodbye, and thank you to the grown-ups."
+            "text": "Well done, inquirers. Next lesson is Take Away, Count Up. You need your kit, a pencil, a pencil of another colour, paper and an envelope. Goodbye, and thank you to the grown-ups."
           },
           {
             "k": "SLIDE",
@@ -954,7 +972,7 @@
           ]
         }
       ],
-      "note": "Lesson 6 of Term 1, 90 minutes. Objective: add and take away tens and ones in your head, jumping the tens first and then hopping the ones. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off.",
+      "note": "Lesson 6 of Term 1, 90 minutes. Objective: add and take away tens and ones in your head, jumping the tens first and then hopping the ones. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off.",
       "subtitle": "Adding and taking away tens and ones",
       "mascot": {
         "size": "l",
@@ -1107,14 +1125,14 @@
                 "head": "PUZZLE 2: think",
                 "items": [
                   "Ravi says 43 + 20 = 45.",
-                  "Is Ravi right? Write yes or no, and why."
+                  "Is Ravi right? Write Yes or No. Then write how you know."
                 ]
               }
             ]
           ]
         }
       ],
-      "note": "Puzzle 1 (26 sticks and one more bundle) is an access question: any child can try it by counting or drawing. Puzzle 2 is a thinking question on the lesson's key idea: 20 is 2 tens. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: 36; no, 63. Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+      "note": "Puzzle 1 (26 sticks and one more bundle) is an access question: any child can try it by counting or drawing. Puzzle 2 is a thinking question on the lesson's key idea: 20 is 2 tens. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper up to the camera: children keep their own answer and check it at Talk time. No private chat and no board in front of the group. Answers: 36; no, 63. Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
     },
     {
       "id": "s-explore1",
@@ -1150,7 +1168,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 5 minutes. Objects first, no writing. A bar is a big jump of ten. Children build 34, jump forward twice (44, 54), then back (44, 34, then 24). Hold the build to the camera on a count of three. Ask which digit changed and which stayed the same. A child with too few bars can use the full kit page: 9 bars and 20 squares are enough for this lesson."
+      "note": "Round 1, about 4 minutes. Objects first, no writing. A bar is a big jump of ten. Children build 34, jump forward twice (44, 54), then back (44, 34, then 24). Ask for a thumbs up when the build is ready. Ask which digit changed and which stayed the same. A child with too few bars can use the full kit page: 9 bars and 20 squares are enough for this lesson."
     },
     {
       "id": "s-explore2",
@@ -1196,7 +1214,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Build the first number. Jump the tens. Then hop the ones. Hold up your kit when I count to three."
+          "text": "Build the first number. Jump the tens. Then hop the ones. Show a thumbs up when you have built it."
         },
         {
           "t": "numrow",
@@ -1207,7 +1225,7 @@
           ]
         }
       ],
-      "note": "Round 3, about 5 minutes. 34 + 25: 2 bars then 5 squares gives 59. 41 + 38: 3 bars then 8 squares gives 79. 68 - 24: take away 2 bars then 4 squares gives 44. Check each build as the children hold it to the camera. Say each answer aloud for the recording. A child who adds the 2 as ones is mixing up jump and hop: ask how many squares one bar is worth."
+      "note": "Round 3, about 5 minutes. 34 + 25: 2 bars then 5 squares gives 59. 41 + 38: 3 bars then 8 squares gives 79. 68 - 24: take away 2 bars then 4 squares gives 44. Wait for the thumbs up on each build. Say each answer aloud for the recording. A child who adds the 2 as ones is mixing up jump and hop: ask how many squares one bar is worth."
     },
     {
       "id": "s-explore4",
@@ -1244,14 +1262,16 @@
             ]
           ],
           "marks": [
-            34,
+            34
+          ],
+          "label_every": 5,
+          "hide": [
             54,
             59
-          ],
-          "label_every": 5
+          ]
         }
       ],
-      "note": "Round 4, about 5 minutes. Draw on paper as the children draw: dot, arc, landing number. A big arc is a jump of tens, a small arc is a hop of ones. Draw 34 to 59 first, then 68 back to 44 with arcs going back. The paper line is the picture children use in question 7 and in Think harder. "
+      "note": "Round 4, about 4 minutes. Draw on a shared whiteboard or blank slide as the children draw on paper: dot, arc, landing number. A big arc is a jump of tens, a small arc is a hop of ones. Draw 34 to 59 first, then 68 back to 44 with arcs going back. The paper line is the picture children use in question 7 and in Think harder.  The landing numbers are hidden on this slide: children find them. They appear on the next slide."
     },
     {
       "id": "s-explore5",
@@ -1310,7 +1330,7 @@
           "text": "34 + 20 = 54"
         }
       ],
-      "note": "Draw the number line on paper as you talk. The arcs are the jumps. Two jumps of ten add 20. Ask: which digit changed? Answer: the tens digit, 3 to 5. The 4 ones stay."
+      "note": "Point along the number line on the slide as you talk (or redraw it on a shared whiteboard). The arcs are the jumps. Two jumps of ten add 20. Ask: which digit changed? Answer: the tens digit, 3 to 5. The 4 ones stay."
     },
     {
       "id": "s-m2",
@@ -1511,7 +1531,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Write on your paper. Timer: 1 minute"
+          "text": "Write on your paper. About 2 minutes"
         },
         {
           "t": "numrow",
@@ -1523,7 +1543,7 @@
           ]
         }
       ],
-      "note": "Each child writes on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Children may draw the jump or use the kit. Answers are on the next slide."
+      "note": "Each child writes on their own paper. Wait until most children have stopped writing. Do not ask children to hold boards up in front of the group. Children may draw the jump or use the kit. Answers are on the next slide."
     },
     {
       "id": "s-m5a",
@@ -1600,7 +1620,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 1 to 3. Timer: 9 minutes"
+          "text": "Questions 1 to 3. About 9 minutes"
         },
         {
           "t": "qs",
@@ -1612,7 +1632,7 @@
           "short": false
         }
       ],
-      "note": "Read questions 1 to 3 aloud, including the sums in question 3. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
+      "note": "Read questions 1 to 3 aloud, including the sums in question 3. Children work on their own; the tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
     },
     {
       "id": "s-ws1ans",
@@ -1639,7 +1659,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 4 to 7. Timer: 9 minutes"
+          "text": "Questions 4 to 7. About 9 minutes"
         },
         {
           "t": "qs",
@@ -1652,7 +1672,7 @@
           "short": false
         }
       ],
-      "note": "Read all four questions aloud with their numbers. Question 6 is a spot-the-mistake: Ben hopped when she should have jumped. Question 7 asks children to draw jumps on a number line in the box: show them on paper how to draw a dot, an arc and +10. Children may use the kit."
+      "note": "Read all four questions aloud with their numbers. Question 6 is a spot-the-mistake: Ben hopped when he should have jumped. Question 7 asks children to draw jumps on a number line in the box: show them on paper how to draw a dot, an arc and +10. Children may use the kit."
     },
     {
       "id": "s-ws2ans",
@@ -1764,7 +1784,7 @@
           "text": "No. 43 + 20 = 63. Twenty is 2 tens, so we jump."
         }
       ],
-      "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Ravi hopped 2 ones (45) instead of jumping 2 tens (63). Do not read out anyone's earlier answer."
+      "note": "Reveal puzzle 2 now. Say: some of you may have found a good reason. Ravi hopped 2 ones (45) instead of jumping 2 tens (63). Do not read out anyone's earlier answer."
     },
     {
       "id": "s-exit",
@@ -1774,7 +1794,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "On your own. No looking back. Timer: 3 minutes"
+          "text": "On your own. No looking back. About 3 minutes"
         },
         {
           "t": "qs",
@@ -1786,7 +1806,7 @@
           "short": false
         }
       ],
-      "note": "Children answer on page 5. After the timer everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
+      "note": "Children answer on page 5. Read the three questions aloud twice. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and show fingers for how many they got right."
     },
     {
       "id": "s-exitans",
@@ -1815,7 +1835,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional.",
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message. The Next time I will try row is optional.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1835,11 +1855,11 @@
           "t": "card",
           "head": "NEXT LESSON",
           "items": [
-            "Take Away, Count Up. Bring your kit and a pencil."
+            "Take Away, Count Up. Bring your kit, a pencil, a pencil of another colour, paper and an envelope."
           ]
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
       "mascot": {
         "size": "l",
         "say": "Great thinking today!"
@@ -2194,43 +2214,43 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Add 34 + 25. Fill in the blanks.",
+        "text": "Add 23 + 45. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "Jump: 34 + ___ = ___",
-            "ans": "20, 54",
+            "text": "Jump: 23 + ___ = ___",
+            "ans": "40, 63",
             "val": [
-              20,
-              54
+              40,
+              63
             ]
           },
           {
             "l": "b",
             "text": "Hop: ___ + ___ = ___",
-            "ans": "54, 5, 59",
+            "ans": "63, 5, 68",
             "val": [
-              54,
+              63,
               5,
-              59
+              68
             ]
           },
           {
             "l": "c",
-            "text": "So 34 + 25 = ___",
-            "ans": "59",
-            "val": 59
+            "text": "So 23 + 45 = ___",
+            "ans": "68",
+            "val": 68
           }
         ],
-        "answer": "59 (jump 20 to 54, then hop 5 to 59)",
+        "answer": "68 (jump 40 to 63, then hop 5 to 68)",
         "val": [
-          59
+          68
         ],
-        "hint": "First jump 2 tens from 34. Where are you? Then hop 5 ones.",
-        "solution": "25 is 2 tens and 5 ones. 34 + 20 = 54. Then 54 + 5 = 59. Check: 3 tens and 2 tens are 5 tens; 4 ones and 5 ones are 9 ones.",
+        "hint": "First jump 4 tens from 23. Where are you? Then hop 5 ones.",
+        "solution": "45 is 4 tens and 5 ones. 23 + 40 = 63. Then 63 + 5 = 68. Check: 2 tens and 4 tens are 6 tens; 3 ones and 5 ones are 8 ones.",
         "mistakes": [
-          "Adding only the tens and stopping at 54.",
-          "Adding 2 + 5 as 7 tens (74)."
+          "Adding only the tens and stopping at 63.",
+          "Adding 4 + 5 as 9 tens (93)."
         ],
         "mins": 4,
         "lines": 0
@@ -2239,42 +2259,42 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Subtract 68 - 24. Fill in the blanks.",
+        "text": "Subtract 79 - 35. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "Jump back: 68 - ___ = ___",
-            "ans": "20, 48",
+            "text": "Jump back: 79 - ___ = ___",
+            "ans": "30, 49",
             "val": [
-              20,
-              48
+              30,
+              49
             ]
           },
           {
             "l": "b",
             "text": "Hop back: ___ - ___ = ___",
-            "ans": "48, 4, 44",
+            "ans": "49, 5, 44",
             "val": [
-              48,
-              4,
+              49,
+              5,
               44
             ]
           },
           {
             "l": "c",
-            "text": "So 68 - 24 = ___",
+            "text": "So 79 - 35 = ___",
             "ans": "44",
             "val": 44
           }
         ],
-        "answer": "44 (jump back 20 to 48, then hop back 4 to 44)",
+        "answer": "44 (jump back 30 to 49, then hop back 5 to 44)",
         "val": [
           44
         ],
-        "hint": "Jump back 2 tens from 68. Then hop back 4.",
-        "solution": "24 is 2 tens and 4 ones. 68 - 20 = 48. Then 48 - 4 = 44.",
+        "hint": "Jump back 3 tens from 79. Then hop back 5.",
+        "solution": "35 is 3 tens and 5 ones. 79 - 30 = 49. Then 49 - 5 = 44.",
         "mistakes": [
-          "Taking 24 away from the ones only.",
+          "Taking 35 away from the ones only.",
           "Hopping forward instead of back."
         ],
         "mins": 3,
@@ -2623,8 +2643,8 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "(a) Draw a number line from 0 to 100. Put a coin on 7 and jump it in tens. Write each number. (b) What stays the same?",
-      "answer": "7, 17, 27 ... 97 and 3, 13, 23 ... 93. The ones digit stays the same.",
+      "text": "(a) On spare paper, draw a number line from 0 to 100. Put a coin on 7 and jump it in tens. Write each number. (b) What stays the same?",
+      "answer": "7, 17, 27 ... 97. The ones digit stays the same.",
       "val": "open",
       "solution": "A grown-up checks that each number is 10 more than the one before. The ones digit never changes when you jump in tens."
     }
@@ -2681,7 +2701,6 @@
               9
             ],
             "m": [
-              1,
               2,
               3
             ]
@@ -2748,7 +2767,6 @@
               9
             ],
             "m": [
-              1,
               2,
               3
             ]
@@ -2805,7 +2823,6 @@
               4
             ],
             "p": [
-              1,
               2,
               3,
               4,
@@ -2865,7 +2882,6 @@
               9
             ],
             "p": [
-              1,
               2,
               3,
               4
@@ -2952,7 +2968,6 @@
               9
             ],
             "m": [
-              1,
               2,
               3
             ]
@@ -2994,7 +3009,7 @@
             "a": [
               74
             ],
-            "say": "74 adds 2 + 5 tens. 25 is 2 tens and 5 ones."
+            "say": "74 is 7 tens and 4 ones: you added 2 + 5 as tens. 25 is 2 tens and 5 ones."
           }
         ],
         "tpl": {
@@ -3189,7 +3204,6 @@
               9
             ],
             "m": [
-              1,
               2,
               3,
               4
@@ -3367,7 +3381,6 @@
               4
             ],
             "b": [
-              1,
               2
             ],
             "c": [
@@ -3410,7 +3423,7 @@
       "ones digit: the right digit, it counts the ones"
     ],
     "try_home": [
-      "Jump and hop: pick a number up to 60, such as a door or page number. Ask: what is 10 more? 20 more? 3 more? Let your child build it with bars and squares if they want.",
+      "Jump and hop: pick a number up to 60 whose ones digit is 1 to 6, such as a door or page number. Ask: what is 10 more? 20 more? 3 more? Let your child build it with bars and squares if they want.",
       "Number path: draw a line on paper with a mark every 10. Put a coin on a number and jump it in tens. Ask which digit changes and which stays the same.",
       "Silly mistake: say 34 + 20 = 36 on purpose and let your child find what went wrong."
     ],
@@ -3419,30 +3432,36 @@
       "Which digit changes?",
       "What do you land on after the jump?"
     ],
-    "when_stuck": "Please let your child use the bars and squares or draw the jumps, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer.",
-    "next": "Lesson 7: Take Away, Count Up. Your child needs the kit, a pencil and paper.",
+    "when_stuck": "Let your child use the bars and squares or draw the jumps, and wait 10 seconds before helping. Please do not teach the column method yet, and do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
+    "next": "Lesson 7: Take Away, Count Up. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to add and take away tens and ones in their head and to say why. This week: jumping in tens and hopping in ones.",
-    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "next_materials": [
+      "Your tens bars and ones squares, cut out (workbook page 6) and kept in an envelope",
+      "A pencil, a pencil of another colour, a rubber and spare paper",
+      "The printed Lesson 7 workbook"
+    ]
   },
   "safeguarding": [
     "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. The kit is paper, so there is nothing to swallow.",
-    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "Sneak-peek and exit answers are shown on the child's own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
+    "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
     "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may march on the spot or stay seated.",
-    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded.",
-    "A child who ticks I am still stuck gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
+    "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room.",
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
-    "Solve every workbook question yourself first. Keep a paper number line ready to draw on camera as you talk.",
+    "Solve every workbook question yourself first. Draw number lines on a shared whiteboard or a blank slide, not on paper under the webcam, which the recording cannot show.",
     "Tell parents a week before: print workbook pages 1 to 6, find the kit bars and squares from Lesson 1 (or cut out page 6 again), and a pencil and spare paper.",
-    "Have the slides open. The slides show number lines with jump arcs; draw the arcs by hand on paper as well.",
-    "Check the recording settings exclude children's video."
+    "Have the slides open. The slides show number lines with jump arcs; draw the arcs on the shared whiteboard as well.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
     "rules": [
-      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
       "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
       "Never teach anything the next lesson needs. If the class is ahead, slow down: ask How do you know? and let children explain, rather than rushing on."
     ],
@@ -3453,7 +3472,7 @@
         "minutes": 4,
         "tutor": "Mei says: when you add a ten, only the tens digit changes. Try 34, 67 and 90 with your kit. What do you notice?",
         "rec": "Recording: pause. Try adding ten to 34, 67 and 90. What do you notice?",
-        "answer": "For 34 and 67 only the tens digit changes: 44 and 77. For 90 + 10 the answer is 100, a new number with a hundreds digit (a later lesson)."
+        "answer": "For 34 and 67 only the tens digit changes: 44 and 77. For 90 + 10 the answer is 100: ten tens, a number we meet properly later."
       },
       {
         "id": "M2",

@@ -42,3 +42,7 @@ Independent audit (`audit/WORKBOOK_AUDIT_L06.md`) scored the printed workbook 14
 - The two small number lines on the "Hop: ones" slide are small (two columns).
 - Investigation writing space on page 5 is now 4 lines (template commit 2379b77).
 - Never trialled with children; times and difficulty are modelled.
+
+## Second fix pass, 22 Oct 2026
+
+Fixes for the guide, deck, home, parent and online practice audits are listed in `audit/FIXES2_L06.md`. Re-checked after the pass: validator 0 FAIL; 357 answer checks; 1496 variants; slow-class script 89:46 (the workbook runs about 3 minutes over its slot in a slow class, covered by the flex buffer, stated in the guide); workbook fill 93, 84, 87, 84, 96%; parent page one page. No paper is held up to the camera anywhere; recording and still-stuck wording follow the owner's Term 2 defaults. Limits unchanged: no child has used the lesson; timings are modelled.
