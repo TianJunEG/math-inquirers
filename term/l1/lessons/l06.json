@@ -146,8 +146,8 @@
     "notes": "A 2-minute opening (the routine is known from Lesson 1), so Explore has 16 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
   },
   "sneak_peek": {
-    "q1": "Mei has the sticks in the picture. She gets 1 more bundle of ten. How many sticks does she have now? You may draw.",
-    "q2": "Ravi says 43 + 20 = 45. Is Ravi right? Write yes or no, and why.",
+    "q1": "Mei has the sticks in the picture. Then she gets another bundle of 10 sticks. How many sticks does Mei have now? You may draw.",
+    "q2": "Ravi says 43 + 20 = 45. Is Ravi right? Circle Yes or No. Then write how you know.",
     "a1": "36",
     "a2": "No. 43 + 20 = 63. 20 is 2 tens, so the tens digit changes, not the ones.",
     "val1": 36
@@ -337,7 +337,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle one. Mei has the sticks in the picture. She gets 1 more bundle of ten. How many sticks does she have now? You may draw."
+            "text": "Puzzle one. Mei has the sticks in the picture. Then she gets another bundle of 10 sticks. How many sticks does Mei have now? You may draw."
           },
           {
             "k": "WORK",
@@ -346,7 +346,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Ravi says forty-three plus twenty is forty-five. Is Ravi right? Write yes or no, and why."
+            "text": "Puzzle two. Ravi says forty-three plus twenty is forty-five. Is Ravi right? Circle Yes or No. Then write how you know."
           },
           {
             "k": "WORK",
@@ -736,7 +736,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: jump back, or hop. Thirty-four take away ten. Fifty-eight take away twenty. Fifty-eight take away three. Sixty-two plus seven. Question 5: Ali has 68 pencils and gives away 3 boxes of ten. Question 6: Siti says forty-five plus twenty is forty-seven. Is she right? Question 7: start at 36 and draw two jumps of ten."
+            "text": "Page 2. Question 4: jump or hop. Thirty-four take away ten. Fifty-eight take away twenty. Fifty-eight take away three. Sixty-two plus seven. Question 5: Ali has 68 pencils and gives away 3 boxes of ten. Question 6: Siti says forty-five plus twenty is forty-seven. Is she right or wrong? Circle one. Then fill in the blanks. Question 7: start at 36 and draw two jumps of ten."
           },
           {
             "k": "WORK",
@@ -791,7 +791,7 @@
           },
           {
             "k": "READ",
-            "text": "Mei says: when you jump forward 2 tens, the ones digit changes. Do you agree? Use your kit to explain."
+            "text": "Mei says: when you jump forward 2 tens, the ones digit changes. Is Mei right? Use your kit to show why."
           },
           {
             "k": "WORK",
@@ -1087,8 +1087,8 @@
                 "head": "PUZZLE 1: anyone can try",
                 "items": [
                   "Mei has these sticks.",
-                  "She gets 1 more bundle of ten.",
-                  "How many sticks now?"
+                  "Then she gets another bundle of 10 sticks.",
+                  "How many sticks does Mei have now?"
                 ]
               },
               {
@@ -1724,7 +1724,7 @@
         },
         {
           "t": "p",
-          "text": "Do you agree? Use your kit to explain."
+          "text": "Is Mei right? Use your kit to show why."
         },
         {
           "t": "chip",
@@ -1851,7 +1851,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Start at 5. Jump in tens. What is the last number you reach before 100?"
+          "text": "Start at 5. Jump in tens. What is the last number you land on before 100?"
         },
         {
           "t": "p",
@@ -1901,7 +1901,7 @@
             ],
             [
               "Is it always true?",
-              "Add a ten. Does only the tens digit change?"
+              "Add a ten to 34, 67 and 90. What changes?"
             ],
             [
               "Make a puzzle",
@@ -1928,23 +1928,23 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "Mei has these sticks. She gets 1 more bundle of ten.",
+        "text": "These are Mei’s sticks. She gets another bundle of 10 sticks. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "___ bundles of ten now",
+            "text": "Now Mei has ___ bundles of ten.",
             "ans": "3",
             "val": 3
           },
           {
             "l": "b",
-            "text": "___ single sticks now",
+            "text": "She also has ___ single sticks.",
             "ans": "6",
             "val": 6
           },
           {
             "l": "c",
-            "text": "___ sticks altogether",
+            "text": "Mei has ___ sticks altogether.",
             "ans": "36",
             "val": 36
           }
@@ -1973,11 +1973,11 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Draw 3 bundles of ten and 4 single sticks in the box. Then draw 2 more bundles of ten. Write the number.",
+        "text": "In the box, draw 3 bundles of ten and 4 single sticks. Next, draw 2 more bundles of ten. How many sticks are there altogether?",
         "parts": [
           {
             "l": "",
-            "text": "The number is ___",
+            "text": "There are ___ sticks altogether.",
             "ans": "54",
             "val": 54
           }
@@ -2000,7 +2000,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Jump forward. Write the number.",
+        "text": "Jump forward. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -2047,7 +2047,7 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Jump back, or hop. Write the number.",
+        "text": "Jump or hop. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -2094,11 +2094,11 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 68 pencils. He gives away 3 boxes of ten pencils. How many pencils are left?",
+        "text": "Ali has 68 pencils. He gives 3 boxes of 10 pencils to his friend. How many pencils does Ali have left?",
         "parts": [
           {
             "l": "",
-            "text": "___ pencils left",
+            "text": "There are ___ pencils left.",
             "ans": "38",
             "val": 38
           }
@@ -2120,16 +2120,28 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Siti says 45 + 20 = 47. Is Siti right? Write the right answer. Say what she mixed up.",
+        "text": "Siti says 45 + 20 = 47. Fill in a to c.",
         "parts": [
           {
-            "l": "",
-            "text": "The right answer is ___",
+            "l": "a",
+            "text": "Siti’s answer: right or wrong? Circle Right or Wrong.",
+            "ans": "Wrong",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "The right answer is ___.",
             "ans": "65",
             "val": 65
+          },
+          {
+            "l": "c",
+            "text": "Siti added 2 ones. She should add 2 ___.",
+            "ans": "tens",
+            "val": "tens"
           }
         ],
-        "answer": "No. 65. She hopped 2 ones instead of jumping 2 tens.",
+        "answer": "Wrong. The right answer is 65. She added 2 ones instead of 2 tens.",
         "val": [
           65
         ],
@@ -2140,17 +2152,17 @@
           "Not saying what she mixed up (any clear sentence about tens and ones is fine)."
         ],
         "mins": 2.5,
-        "lines": 2
+        "lines": 0
       },
       {
         "id": "S7",
         "page": 2,
         "tier": "start",
-        "text": "Start at 36. Draw 2 jumps of ten on a number line in the box. Write where you land.",
+        "text": "Start at 36. On a number line in the box, draw 2 jumps of ten. Where do you land?",
         "parts": [
           {
             "l": "",
-            "text": "I land on ___",
+            "text": "I land on ___.",
             "ans": "56",
             "val": 56
           }
@@ -2175,7 +2187,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Work out 34 + 25. Jump the tens first, then hop the ones. Show your jumps and hops.",
+        "text": "Add 34 + 25. Show your jumps and hops on the lines.",
         "parts": [
           {
             "l": "",
@@ -2201,7 +2213,7 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Work out 68 - 24. Jump back the tens first, then hop back the ones.",
+        "text": "Subtract 68 - 24. Show your jumps and hops on the lines.",
         "parts": [
           {
             "l": "",
@@ -2227,8 +2239,27 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4 first, then jumps 3 tens. Do they land on the same number? How do you know?",
-        "parts": [],
+        "text": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4, then jumps 3 tens. Fill in a to c.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Frog A lands on ___.",
+            "ans": "46",
+            "val": 46
+          },
+          {
+            "l": "b",
+            "text": "Frog B lands on ___.",
+            "ans": "46",
+            "val": 46
+          },
+          {
+            "l": "c",
+            "text": "Is the landing number the same for both frogs? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "yes"
+          }
+        ],
         "answer": "Yes, both land on 46 (30 and 4 are added in either order)",
         "val": [
           "same",
@@ -2241,17 +2272,17 @@
           "Adding 3 + 4 and landing on 19."
         ],
         "mins": 5,
-        "lines": 3
+        "lines": 1
       },
       {
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Ali starts on a number. He jumps forward 3 tens and lands on 78. Where did he start?",
+        "text": "Ali starts on a number. He jumps forward 3 tens and ends on 78. Where did Ali start?",
         "parts": [
           {
             "l": "",
-            "text": "He started on ___",
+            "text": "Ali started on ___.",
             "ans": "48",
             "val": 48
           }
@@ -2275,8 +2306,21 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Mei is on 7. She makes jumps of ten until she gets to 97. How many jumps does she make? Write each number she lands on.",
-        "parts": [],
+        "text": "Mei is on 7. She jumps in tens until she gets to 97. Fill in a and b.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Write each number Mei lands on.",
+            "ans": "17, 27, 37, 47, 57, 67, 77, 87, 97",
+            "val": "list"
+          },
+          {
+            "l": "b",
+            "text": "Mei makes ___ jumps.",
+            "ans": "9",
+            "val": 9
+          }
+        ],
         "answer": "9 jumps: 17, 27, 37, 47, 57, 67, 77, 87, 97",
         "val": [
           9
@@ -2288,14 +2332,27 @@
           "Stopping at 87."
         ],
         "mins": 5,
-        "lines": 4
+        "lines": 3
       },
       {
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "Mei goes from 7 to 97 again. This time she may use jumps of 20 as well as jumps of 10. What is the fewest jumps she can make? Write her jumps.",
-        "parts": [],
+        "text": "Mei goes from 7 to 97 again. This time she can jump 10 or jump 20. Fill in a and b.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Write the jumps Mei makes.",
+            "ans": "four jumps of 20 and one jump of 10",
+            "val": "list"
+          },
+          {
+            "l": "b",
+            "text": "The fewest number of jumps is ___.",
+            "ans": "5",
+            "val": 5
+          }
+        ],
         "answer": "5 jumps: four jumps of 20 and one jump of 10 (any order)",
         "val": [
           5
@@ -2307,14 +2364,27 @@
           "Saying 9 (only using jumps of 10)."
         ],
         "mins": 6,
-        "lines": 4
+        "lines": 3
       },
       {
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Start at 25. Jump forward 3 tens. Jump back 1 ten. Jump forward 2 tens. Then hop forward 4. Where do you land? Write each landing number.",
-        "parts": [],
+        "text": "Start at 25. Jump forward 3 tens. Then jump back 1 ten. Then jump forward 2 tens. Then hop forward 4. Fill in a and b.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Write each number you land on.",
+            "ans": "55, 45, 65, 69",
+            "val": "list"
+          },
+          {
+            "l": "b",
+            "text": "You finish on ___.",
+            "ans": "69",
+            "val": 69
+          }
+        ],
         "answer": "69 (25, 55, 45, 65, 69)",
         "val": [
           69
@@ -2326,7 +2396,7 @@
           "Forgetting the hop of 4 (65)."
         ],
         "mins": 5,
-        "lines": 5
+        "lines": 3
       }
     ],
     "investigation": {
@@ -2335,7 +2405,7 @@
       "tier": "investigation",
       "title": "Jump road",
       "first": "Start at 6. Jump in tens 5 times. Write every number you land on.",
-      "text": "Start at 6 and keep jumping in tens. Will you ever land on 50? Try other start numbers. What do you notice? Which start numbers can land on 50?",
+      "text": "Start at 6 and keep jumping in tens. Will you land on 50? Circle Yes or No. Then try other start numbers. Which start numbers can land on 50? Write what you notice.",
       "lines": 4,
       "answer": "From 6 you land on 16, 26, 36, 46, 56 and so on: every number ends in 6, so you never land on 50. Jumps of ten never change the ones digit. Only a start number that ends in 0 (0, 10, 20, 30 or 40) can land on 50.",
       "val": [
@@ -2351,7 +2421,7 @@
     }
   },
   "talk": {
-    "question": "Mei says: when you jump forward 2 tens, the ones digit changes. Do you agree? Use your kit to explain.",
+    "question": "Mei says: when you jump forward 2 tens, the ones digit changes. Is Mei right? Use your kit to show why.",
     "starter": "I think ... because ...",
     "answer": "No. 34 + 20 = 54, and the 4 ones are still there. Two tens are 2 bars, so only the tens digit changes, from 3 to 5.",
     "look_for": "A reason that uses bars or tens (not just \"because I added\")."
@@ -2359,7 +2429,7 @@
   "exit": [
     {
       "id": "E1",
-      "text": "Jump forward. Write the number.",
+      "text": "Add.",
       "parts": [
         {
           "l": "",
@@ -2380,7 +2450,7 @@
     },
     {
       "id": "E2",
-      "text": "Jump back, or hop. Write the numbers.",
+      "text": "Subtract.",
       "parts": [
         {
           "l": "a",
@@ -2408,7 +2478,7 @@
     },
     {
       "id": "E3",
-      "text": "Jump the tens, then hop the ones. Write the number.",
+      "text": "Add.",
       "parts": [
         {
           "l": "",
@@ -2454,7 +2524,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "A box has 4 bundles of ten pencils and 5 loose pencils. 3 more bundles are added. How many pencils now?",
+      "text": "A box has 4 bundles of 10 pencils and 5 single pencils. Ali puts in 3 more bundles of 10. How many pencils are in the box now?",
       "answer": "75",
       "val": 75,
       "solution": "4 tens and 3 tens make 7 tens. The 5 loose pencils stay: 75."
@@ -2462,7 +2532,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "Write the numbers: 86 - 40 = ___ and 86 - 4 = ___",
+      "text": "Subtract. (a) 86 - 40 = ___   (b) 86 - 4 = ___",
       "answer": "46 and 82",
       "val": [
         46,
@@ -2473,7 +2543,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Ravi has 53 stickers and gives 3 away. Mei has 53 stickers and gives 30 away. How many does each child have left?",
+      "text": "Ravi and Mei each have 53 stickers. Ravi gives away 3. Mei gives away 30. (a) Ravi has ___ stickers left. (b) Mei has ___ stickers left.",
       "answer": "Ravi 50, Mei 23",
       "val": [
         50,
@@ -2484,7 +2554,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Work out 36 + 23 twice: jump first, then hop; and hop first, then jump. Is the answer the same?",
+      "text": "Add 36 + 23 in two ways: (a) jump first, then hop; (b) hop first, then jump. Is the answer the same? Circle Yes or No.",
       "answer": "59 both ways. Yes, the same.",
       "val": 59,
       "solution": "Jump first: 36 + 20 = 56, then + 3 = 59. Hop first: 36 + 3 = 39, then + 20 = 59."
@@ -2492,7 +2562,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "Draw a number line on paper from 0 to 100, a mark every 10. Put a coin on 7 and jump it in tens. Write each number. What stays the same?",
+      "text": "(a) Draw a number line from 0 to 100. Put a coin on 7 and jump it in tens. Write each number. (b) What stays the same?",
       "answer": "7, 17, 27 ... 97 and 3, 13, 23 ... 93. The ones digit stays the same.",
       "val": "open",
       "solution": "A grown-up checks that each number is 10 more than the one before. The ones digit never changes when you jump in tens."
@@ -2784,7 +2854,7 @@
         "id": "c6",
         "tier": "core",
         "type": "number",
-        "q": "Mei has 34 stickers. She gets 2 packs of ten stickers. How many stickers now?",
+        "q": "Mei has 34 stickers. She gets 2 packs of 10 stickers. How many stickers does Mei have now?",
         "answer": 54,
         "hint": "2 packs of ten is 20 stickers. Jump forward 2 tens.",
         "steps": [
@@ -2830,7 +2900,7 @@
             "n": "t*10+o",
             "k": "m*10"
           },
-          "q": "Mei has {n} stickers. She gets {m} packs of ten stickers. How many stickers now?",
+          "q": "Mei has {n} stickers. She gets {m} packs of 10 stickers. How many stickers does Mei have now?",
           "answer": "n+k",
           "hint": "{m} packs of ten is {k} stickers. Jump forward {m} tens.",
           "steps": [
@@ -2844,7 +2914,7 @@
         "id": "t1",
         "tier": "stretch",
         "type": "number",
-        "q": "What is 34 + 25? Jump the tens, then hop the ones.",
+        "q": "What is 34 + 25?",
         "answer": 59,
         "hint": "Split 25 into 20 and 5. Jump 20 first.",
         "steps": [
@@ -2899,7 +2969,7 @@
             "k": "m*10",
             "w": "n+k"
           },
-          "q": "What is {n} + {a}? Jump the tens, then hop the ones.",
+          "q": "What is {n} + {a}?",
           "answer": "n+a",
           "hint": "Split {a} into {k} and {p}. Jump {k} first.",
           "steps": [
@@ -2914,7 +2984,7 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "What is 68 - 24? Jump back the tens, then hop back the ones.",
+        "q": "What is 68 - 24?",
         "answer": 44,
         "hint": "Split 24 into 20 and 4. Jump back 20 first.",
         "steps": [
@@ -2972,7 +3042,7 @@
             "k": "m*10",
             "w": "n-k"
           },
-          "q": "What is {n} - {a}? Jump back the tens, then hop back the ones.",
+          "q": "What is {n} - {a}?",
           "answer": "n-a",
           "hint": "Split {a} into {k} and {p}. Jump back {k} first.",
           "steps": [
@@ -2987,7 +3057,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "choice",
-        "q": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4, then jumps 3 tens. Where do they land?",
+        "q": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4, then jumps 3 tens. Which sentence is true?",
         "options": [
           "They land on the same number",
           "Frog A lands higher",
@@ -3014,7 +3084,7 @@
         "id": "t4",
         "tier": "stretch",
         "type": "number",
-        "q": "Ali jumps forward 3 tens and lands on 78. Where did he start?",
+        "q": "Ali jumps forward 3 tens and ends on 78. Where did he start?",
         "answer": 48,
         "hint": "Go backwards: jump back 3 tens from 78.",
         "steps": [
@@ -3068,7 +3138,7 @@
             "n": "t*10+o",
             "k": "m*10"
           },
-          "q": "Ali jumps forward {m} tens and lands on {n}. Where did he start?",
+          "q": "Ali jumps forward {m} tens and ends on {n}. Where did he start?",
           "answer": "n-k",
           "hint": "Go backwards: jump back {m} tens from {n}.",
           "steps": [
@@ -3083,7 +3153,7 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "Mei is on 7. She makes jumps of ten until she gets to 97. How many jumps?",
+        "q": "Mei is on 7. She jumps in tens until she gets to 97. How many jumps does she make?",
         "answer": 9,
         "hint": "Jump from 7 in tens: 17, 27, ... and count.",
         "steps": [
@@ -3127,7 +3197,7 @@
           "derive": {
             "b": "a+t*10"
           },
-          "q": "Mei is on {a}. She makes jumps of ten until she gets to {b}. How many jumps?",
+          "q": "Mei is on {a}. She jumps in tens until she gets to {b}. How many jumps does she make?",
           "answer": "t",
           "hint": "Jump from {a} in tens and count the jumps.",
           "steps": [
@@ -3142,7 +3212,7 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "Mei goes from 7 to 97 using only jumps of 10 and jumps of 20. What is the fewest jumps she can make?",
+        "q": "Mei goes from 7 to 97 using only jumps of 10 and jumps of 20. What is the fewest number of jumps she can make?",
         "answer": 5,
         "hint": "90 is 9 tens. A jump of 20 is 2 tens. How many fit?",
         "steps": [
@@ -3185,7 +3255,7 @@
             "b": "a+t*10",
             "u": "t+1"
           },
-          "q": "Mei goes from {a} to {b} using only jumps of 10 and jumps of 20. What is the fewest jumps she can make?",
+          "q": "Mei goes from {a} to {b} using only jumps of 10 and jumps of 20. What is the fewest number of jumps she can make?",
           "answer": "u//2",
           "hint": "{t} tens to travel. A jump of 20 is 2 tens.",
           "steps": [
@@ -3320,9 +3390,9 @@
         "id": "M1",
         "title": "Is it always true?",
         "minutes": 4,
-        "tutor": "Mei says: if you add a ten, only the tens digit changes. Is that always true? Try 34, 67 and 90 with your kit.",
-        "rec": "Recording: pause. Try adding ten to 34, 67 and 90. Does only the tens digit change?",
-        "answer": "Almost always. 34 + 10 = 44 and 67 + 10 = 77: only the tens digit changes. 90 + 10 is ten tens, which has a new name, a hundred (next lessons)."
+        "tutor": "Mei says: when you add a ten, only the tens digit changes. Try 34, 67 and 90 with your kit. What do you notice?",
+        "rec": "Recording: pause. Try adding ten to 34, 67 and 90. What do you notice?",
+        "answer": "For 34 and 67 only the tens digit changes: 44 and 77. For 90 + 10 the answer is 100, a new number with a hundreds digit (a later lesson)."
       },
       {
         "id": "M2",
