@@ -1,0 +1,3216 @@
+{
+  "schema_version": 1,
+  "id": "l1-t1-06",
+  "level": 1,
+  "term": 1,
+  "lesson": 6,
+  "lesson_in_term": 6,
+  "title": "Tens Jump, Ones Hop",
+  "big_idea": "Add and take away tens without carrying",
+  "child_idea": "A jump of ten changes only the tens digit. A hop of one changes only the ones digit. For a bigger step, jump the tens first, then hop the ones.",
+  "skill": "Chunking",
+  "ages": "6-8",
+  "moe": {
+    "strand": "Addition and Subtraction",
+    "topics": [
+      "Mental calculation: a 2-digit number plus or minus tens, without renaming (syllabus 2.7)",
+      "A 2-digit number plus or minus ones, without renaming",
+      "Number line jumps as a picture of adding and taking away"
+    ],
+    "note": "Strand label for the tutor only. New-topic lesson: the plan places it as P1 mental calculation without renaming (2.7); the owner or a tutor should check this against the syllabus before the first live class. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned."
+  },
+  "contest_moves": [
+    "split the second number into tens and ones (jump, then hop)",
+    "the order of the steps does not change where you land",
+    "fewest jumps with two jump sizes"
+  ],
+  "objectives": [
+    "Add and take away a multiple of ten from a 2-digit number in your head, knowing that only the tens digit changes (34 + 20 = 54, 54 - 20 = 34).",
+    "Add and take away a few ones without passing a ten (34 + 3 = 37, 58 - 3 = 55), knowing that only the ones digit changes.",
+    "Split a step such as 34 + 25 into a jump of tens and a hop of ones, and say where you land after each part.",
+    "Draw a number line with jumps and hops, and use it to explain an answer."
+  ],
+  "joining_cold": {
+    "remember": [
+      "Count in tens from any number (3, 13, 23 ...)",
+      "Read a 2-digit number as tens and ones (46 is 4 tens and 6 ones)",
+      "Count on a few ones from a tens number (40 and 5 more is 45)"
+    ],
+    "assumes": "Only counting to 20 and showing a number with fingers or a picture. Nothing from an earlier Term 1 lesson is needed except what the warm-up re-teaches with bars and squares. A child who did the holiday course will know counting in tens.",
+    "holiday_topics_revisited": [
+      "Skip counting in 10s (Count with the Frog)"
+    ],
+    "safe_to_miss": false,
+    "note": "Lessons 5 to 7 are among the hardest to miss in Term 1 (plan, section 2). A child who misses Lesson 6 watches the recording and does workbook pages 1 and 2 before Lesson 7, which uses jumps to find a gap."
+  },
+  "materials": {
+    "child": [
+      "The tens bars and ones squares from the kit page (workbook page 6), cut out by a grown-up. They are the same kit as Lesson 1, so keep them in an envelope.",
+      "About 30 small things such as pasta, buttons or paper clips (only for the home practice; optional in the lesson)",
+      "The printed workbook (pages 1 to 5) and the kit page",
+      "A pencil, a rubber and spare paper"
+    ],
+    "tutor": [
+      "A slide deck and the kit bars and squares to show on camera if you wish",
+      "A visible clock or a timer slide"
+    ],
+    "kit_pages": [
+      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; the same cut-outs as Lesson 1"
+    ],
+    "ruler": false,
+    "notes": "No ruler is needed in the lesson; a child who has one at home may use it to draw straight number lines. Nothing needs to be bought. No matches, toothpicks or anything sharp. Children need a little clear floor space for the movement break; small things never go near the mouth or ears."
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 8,
+        "end": 12
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 12,
+        "end": 28
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 28,
+        "end": 38
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 38,
+        "end": 42
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 42,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "A 2-minute opening (the routine is known from Lesson 1), so Explore has 16 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
+  },
+  "sneak_peek": {
+    "q1": "Mei has the sticks in the picture. She gets 1 more bundle of ten. How many sticks does she have now? You may draw.",
+    "q2": "Ravi says 43 + 20 = 45. Is Ravi right? Write yes or no, and why.",
+    "a1": "36",
+    "a2": "No. 43 + 20 = 63. 20 is 2 tens, so the tens digit changes, not the ones.",
+    "val1": 36
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your kit of bars and squares. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper and kit. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Say the numbers out loud. Pause if you need longer.",
+      "action": "Play along. Say each number before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause each time I ask. Build the number with your bars and squares, then press play to check.",
+      "action": "Pause. Build each number with your kit. Write what you notice."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the jumps and hops onto your paper. Rewind if you miss a step.",
+      "action": "Watch and copy the jumps and hops. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Big jumps for tens, small hops for ones.",
+      "action": "Stand up and jump the tens and hop the ones."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+      "action": "Pause. Explain your answer to someone at home, with a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out."
+    }
+  },
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Good morning, inquirers! Cameras on, pencil ready, and your kit of bars and squares on the table. This lesson is recorded so a friend who is away can catch up. We record me and the screen only, and you may switch your camera off whenever you like."
+          },
+          {
+            "k": "SAY",
+            "text": "Picture a frog on a path of numbers. It can take a big jump of ten, or a small hop of one. Today we plan the frog's journey, and we find out which digit it changes."
+          },
+          {
+            "k": "DO",
+            "text": "Greet each child by first name and check their camera shows the page and hands.",
+            "s": 15
+          },
+          {
+            "k": "NOTE",
+            "text": "You know the routine from Lesson 1, so keep this to two minutes. Tell any new child that recordings show only you and the screen. The frog is only a story to hook the idea: the jumps and hops are done with the kit."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up if you can. We clap on every number. Count in tens with me: ten, twenty, thirty, all the way to one hundred."
+          },
+          {
+            "k": "WORK",
+            "text": "Count in tens together, clapping, to 100.",
+            "s": 35
+          },
+          {
+            "k": "SAY",
+            "text": "Now a new start. We begin at three and add ten each time: three, thirteen, twenty-three. Point to the tiles as we say them."
+          },
+          {
+            "k": "WORK",
+            "text": "Count on from 3 in tens together: 3, 13, 23 ... 93. Point at each tile as it is said.",
+            "s": 40
+          },
+          {
+            "k": "ASK",
+            "text": "Look at the numbers. What stays the same every time? Tell your screen.",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "Tens and ones. A bar is a ten. A square is a one. Four bars and six squares is forty-six."
+          },
+          {
+            "k": "ASK",
+            "text": "Fifty-two. How many tens? How many ones?",
+            "resp": 15
+          },
+          {
+            "k": "ASK",
+            "text": "Seventy. How many tens? How many ones?",
+            "resp": 15
+          },
+          {
+            "k": "ASK",
+            "text": "Eighty-three. How many tens? How many ones?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Ten and some more. Forty and five more is forty-five. We say the tens, then count on the ones."
+          },
+          {
+            "k": "ASK",
+            "text": "Thirty and four more?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Fifty and seven more?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Eighty and two more?",
+            "resp": 12
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates, say the tens word slowly (thirty... four) and point to the bars and then the squares in the picture. Do not move on until most children have answered: counting on from a tens number is what the lesson uses."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: the ones digit stays 3; then 5 tens 2 ones, 7 tens 0 ones, 8 tens 3 ones; then 34, 57, 82. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and the picture."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Mei has the sticks in the picture. She gets 1 more bundle of ten. How many sticks does she have now? You may draw."
+          },
+          {
+            "k": "WORK",
+            "text": "Children count and write the number on their own paper.",
+            "s": 50
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Ravi says forty-three plus twenty is forty-five. Is Ravi right? Write yes or no, and why."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 50
+          },
+          {
+            "k": "HOLD",
+            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
+            "s": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. We will come back to puzzle two in a few minutes."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 36 sticks (26 and one more bundle). Puzzle 2 answer: no, 43 + 20 = 63; Ravi added 2 to the ones digit. Look for good ideas to praise later (a child who drew bundles, or who said 20 is 2 tens). Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today the kit is a number path in your hands. A bar is a big jump of ten. A square is a small hop of one. Build thirty-four: three bars and four squares."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 34 with bars and squares. Tutor scans the cameras.",
+            "s": 35
+          },
+          {
+            "k": "HOLD",
+            "text": "Everyone holds up their build to the camera on a count of three.",
+            "s": 15
+          },
+          {
+            "k": "SAY",
+            "text": "Take a big jump forward: add one bar."
+          },
+          {
+            "k": "ASK",
+            "text": "What number do you have now?",
+            "resp": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Jump again."
+          },
+          {
+            "k": "ASK",
+            "text": "And now?",
+            "resp": 10
+          },
+          {
+            "k": "SAY",
+            "text": "Now jump back: take one bar away."
+          },
+          {
+            "k": "ASK",
+            "text": "What number now?",
+            "resp": 10
+          },
+          {
+            "k": "SAY",
+            "text": "Jump back two more times."
+          },
+          {
+            "k": "ASK",
+            "text": "And now?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Which digit changed each time? Which digit stayed the same?",
+            "resp": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "Now the small hops. Start with twenty-four: two bars and four squares. A hop is one square. Hop forward three times: add three squares."
+          },
+          {
+            "k": "ASK",
+            "text": "What number now?",
+            "resp": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Hop back two: take two squares away."
+          },
+          {
+            "k": "ASK",
+            "text": "And now?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Which digit changed this time, the tens or the ones?",
+            "resp": 20
+          },
+          {
+            "k": "SAY",
+            "text": "A jump changes the tens digit. A hop changes the ones digit."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now jump and hop together. Build thirty-four again. We add twenty-five. Jump twice, then hop five times. Hold up your kit when I count to three."
+          },
+          {
+            "k": "WORK",
+            "text": "Children add 2 bars then 5 squares. Hold up on a count of three. Answer 59.",
+            "s": 50
+          },
+          {
+            "k": "SAY",
+            "text": "Next: forty-one plus thirty-eight. Jump three times, hop eight times."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 41, add 3 bars and 8 squares. Answer 79.",
+            "s": 42
+          },
+          {
+            "k": "SAY",
+            "text": "Now take away. Build sixty-eight. Take away twenty-four: jump back twice, hop back four times."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 68, take away 2 bars and 4 squares. Answer 44.",
+            "s": 42
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore4"
+          },
+          {
+            "k": "SAY",
+            "text": "Now we put the same journey on paper. This is a number line. Draw a dot and write thirty-four. Draw a big arc for the jump of twenty, and write plus twenty. Write where you land."
+          },
+          {
+            "k": "WORK",
+            "text": "Children draw the dot, the arc and the landing number 54 on paper. Tutor draws on camera at the same time and shows the paper.",
+            "s": 60
+          },
+          {
+            "k": "SAY",
+            "text": "Now a small arc for the hop of five. Write plus five, and write where you land."
+          },
+          {
+            "k": "WORK",
+            "text": "Children finish the line: 34, +20, 54, +5, 59. Check cameras. Then redo it for 68 take away 24 with back arcs: 68, -20, 48, -4, 44.",
+            "s": 75
+          },
+          {
+            "k": "ASK",
+            "text": "Look at your line. Which arc is big and which is small? Why?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore5"
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? Which one changes the tens, a jump or a hop? Does it matter if you hop first or jump first?",
+            "resp": 30
+          },
+          {
+            "k": "SAY",
+            "text": "A jump of ten changes the tens digit. A hop of one changes the ones digit. Today we always stay inside a ten: we never go past nine ones."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who adds the 2 of 25 to the ones: ask how many squares one bar is worth, then rebuild with 2 bars (the two jumps) and 5 squares (the five hops)."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child with too few bars: they may use 9 bars and 20 squares from the kit page; no more than that is needed in this lesson."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only: no breakout rooms, so you can see every camera. Keep the picture of jump and hop as ten and one. Never say that you carry or rename; if a child asks what happens when the ones pass nine, say: good question, we use make-a-ten for that (Lesson 5)."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Here is the number path. We start on thirty-four and take a big jump of ten: we land on forty-four. Another jump lands on fifty-four. Two jumps of ten is twenty, so thirty-four plus twenty is fifty-four."
+          },
+          {
+            "k": "ASK",
+            "text": "Which digit changed? Which digit stayed the same?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "Jumping back takes tens away. From fifty-four, jump back ten: forty-four. Jump back again: thirty-four. Fifty-four take away twenty is thirty-four."
+          },
+          {
+            "k": "ASK",
+            "text": "Now you try. Seventy-eight take away thirty. Which way is the jump?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now the small hops. A hop is one. Thirty-four plus three: hop three times to thirty-seven. The tens digit does not change. Thirty-seven take away two: hop back two to thirty-five."
+          },
+          {
+            "k": "ASK",
+            "text": "Is five a jump or a hop?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "SAY",
+            "text": "Jump, then hop. Thirty-four plus twenty-five. Twenty-five is two tens and five ones. First jump two tens: thirty-four to fifty-four. Then hop five: fifty-nine."
+          },
+          {
+            "k": "ASK",
+            "text": "How many tens are in thirty-six? How many ones?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4b"
+          },
+          {
+            "k": "SAY",
+            "text": "Take away works the same way. Fifty-nine take away twenty-five. Jump back two tens: thirty-nine. Hop back five: thirty-four."
+          },
+          {
+            "k": "ASK",
+            "text": "What is eighty-seven take away thirty-two? Say the jump first, then the hop.",
+            "resp": 25
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Write the answers on your paper. Forty-five plus thirty. Seventy-eight take away twenty. Sixty-four take away three. Fifty-two plus thirty-six."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write four answers.",
+            "s": 65
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5a"
+          },
+          {
+            "k": "READ",
+            "text": "Seventy-five. Fifty-eight. Sixty-one. Eighty-eight."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m6"
+          },
+          {
+            "k": "SAY",
+            "text": "Quick-fire. Is it a jump or a hop? Thirty."
+          },
+          {
+            "k": "ASK",
+            "text": "Six?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Fifty?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Two?",
+            "resp": 10
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: jump (ten), hop (one), tens digit, ones digit. Do not teach carrying or renaming. Every example stays inside a ten: 34 + 25 uses 4 + 5 = 9 ones. Draw the number line on a paper or whiteboard as you talk so a child watching the recording sees the arcs."
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child writes 35 for 45 + 30 or similar: ask how many bars 30 is, and whether a hop or a jump is needed. Build it with the kit and say the tens first."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. Find a little space. We start on thirty-four. A big jump for every ten, a small hop for every one. Say the number each time."
+          },
+          {
+            "k": "WORK",
+            "text": "Call the moves one at a time and wait for everyone: jump twice (44, 54), hop three times (55, 56, 57), jump back once (47), hop back four times (46, 45, 44, 43). Count the numbers aloud together.",
+            "s": 170
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: Mei gets one more bundle of ten. Fill in the bundles, the singles and the number. Question 2: draw 3 bundles and 4 singles, then 2 more bundles. Question 3: jump forward. Twenty-three plus ten. Twenty-three plus forty. Fifty-one plus thirty. Seven plus sixty."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 540
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Thirty-six. Fifty-four. Thirty-three, sixty-three, eighty-one, sixty-seven. Mark your own page in another colour."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: jump back, or hop. Thirty-four take away ten. Fifty-eight take away twenty. Fifty-eight take away three. Sixty-two plus seven. Question 5: Ali has 68 pencils and gives away 3 boxes of ten. Question 6: Siti says forty-five plus twenty is forty-seven. Is she right? Question 7: start at 36 and draw two jumps of ten."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 7.",
+            "s": 540
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 4: twenty-four, thirty-eight, fifty-five, sixty-nine. Question 5: thirty-eight. Question 6: no, sixty-five. Question 7: fifty-six."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+            "s": 270
+          },
+          {
+            "k": "STUCK",
+            "text": "Q2 (drawing): draw a bundle as ten short lines with a ring round them. Q3 and Q4: ask is it a jump or a hop, then say the tens first. Q6: build 45 with the kit and add 2 bars. Q7: draw a dot for 36, then an arc and write +10."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks I am still stuck on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for ideas taught today in a new setting (jump and hop together). Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Mei says: when you jump forward 2 tens, the ones digit changes. Do you agree? Use your kit to explain."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 34 and jump forward 2 tens with the kit. Which digit changed?",
+            "s": 50
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 60
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 90
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? Ravi said forty-three plus twenty is forty-five. Twenty is two tens, so we jump, we do not hop. Forty-three plus twenty is sixty-three."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 20
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: no. 34 + 20 = 54: the 4 ones are still there. Two tens are two bars, so only the tens digit changes (3 to 5). Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own. Remind them they may draw the jumps.",
+            "s": 170
+          },
+          {
+            "k": "HOLD",
+            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
+            "s": 25
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Seventy-six. Forty-four and seventy-one. Fifty-nine."
+          },
+          {
+            "k": "SAY",
+            "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
+          },
+          {
+            "k": "NOTE",
+            "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 7, in the open session, no names. Do not read out any child's result."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5.",
+            "s": 100
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson is Take Away, Count Up. You need your kit, a pencil and paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: start at 5 and jump in tens. What is the last number you can reach before one hundred? How many jumps is that?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 95, after 9 jumps (5, 15, 25 ... 95); one more jump would pass one hundred. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Tens Jump, Ones Hop",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Jump in tens, hop in ones, and say which digit changes."
+          ]
+        }
+      ],
+      "note": "Lesson 6 of Term 1, 90 minutes. Objective: add and take away tens and ones in your head, jumping the tens first and then hopping the ones. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off.",
+      "subtitle": "Adding and taking away tens and ones",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: count in tens",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Clap on every number"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Now start at 3 and add ten each time."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            3,
+            13,
+            23,
+            33,
+            43,
+            53,
+            63,
+            73,
+            83,
+            93
+          ]
+        }
+      ],
+      "note": "Count in tens to 100 with a clap on each number. Then start at 3 and count on in tens. Ask what stays the same (the ones digit, 3). This is a spiral review of skip counting in tens (holiday topic) and lets a new child join: they hear it before they say it.",
+      "mascot": {
+        "size": "s",
+        "say": "Let's count along!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "Tens and ones",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 4,
+          "ones": 6,
+          "style": "kit",
+          "label": "4 tens and 6 ones"
+        },
+        {
+          "t": "p",
+          "text": "A bar is a ten. A square is a one. How many tens? How many ones?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            52,
+            70,
+            83
+          ]
+        }
+      ],
+      "note": "Say each number; children say how many tens and how many ones, with fingers or a whispered answer. Answers: 52 is 5 tens and 2 ones, 70 is 7 tens and 0 ones, 83 is 8 tens and 3 ones. Point to the bars and then the squares in the picture. No writing, no marks."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Ten and some more",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 4,
+          "ones": 0,
+          "style": "kit",
+          "label": "4 tens"
+        },
+        {
+          "t": "p",
+          "text": "40 and 5 more is 45. Count on from the tens."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "30 + 4",
+            "50 + 7",
+            "80 + 2"
+          ]
+        }
+      ],
+      "note": "Answers: 34, 57, 82. Say the tens word slowly, then count on the ones: forty... forty-one, forty-two. This is the bridge to jumping and hopping. Show the bars as a number path if a child is unsure."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Mei has these sticks.",
+                  "She gets 1 more bundle of ten.",
+                  "How many sticks now?"
+                ]
+              },
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 2,
+                "ones": 6,
+                "size": "s"
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "Ravi says 43 + 20 = 45.",
+                  "Is Ravi right? Write yes or no, and why."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 (26 sticks and one more bundle) is an access question: any child can try it by counting or drawing. Puzzle 2 is a thinking question on the lesson's key idea: 20 is 2 tens. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: 36; no, 63. Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: jump with bars",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Build 34: 3 bars and 4 squares.",
+                  "A big jump is a bar. Add one bar. Say the number.",
+                  "Jump again. Say the number.",
+                  "Jump back: take a bar away. Say the number."
+                ]
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 3,
+                "ones": 4,
+                "style": "kit",
+                "label": "34"
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Round 1, about 5 minutes. Objects first, no writing. A bar is a big jump of ten. Children build 34, jump forward twice (44, 54), then back (44, 34, then 24). Hold the build to the camera on a count of three. Ask which digit changed and which stayed the same. A child with too few bars can use the full kit page: 9 bars and 20 squares are enough for this lesson."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: hop with squares",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Build 24: 2 bars and 4 squares.",
+                  "A small hop is a square. Hop forward 3 times.",
+                  "Hop back 2.",
+                  "Which digit changed?"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 2,
+                "ones": 4,
+                "style": "kit",
+                "label": "24"
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Round 2, about 3 minutes. Hop three squares forward: 27. Hop two back: 25. The ones digit changes and the tens digit stays. Say it in the children's words: a jump changes the tens, a hop changes the ones."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: jump and hop",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Build the first number. Jump the tens. Then hop the ones. Hold up your kit when I count to three."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "34 + 25",
+            "41 + 38",
+            "68 - 24"
+          ]
+        }
+      ],
+      "note": "Round 3, about 5 minutes. 34 + 25: 2 bars then 5 squares gives 59. 41 + 38: 3 bars then 8 squares gives 79. 68 - 24: take away 2 bars then 4 squares gives 44. Check each build as the children hold it to the camera. Say each answer aloud for the recording. A child who adds the 2 as ones is mixing up jump and hop: ask how many squares one bar is worth."
+    },
+    {
+      "id": "s-explore4",
+      "part": "explore",
+      "kind": "light",
+      "title": "Draw the jumps and hops",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Draw a dot. Write the start number.",
+            "Draw a big arc for the jump. Write +20.",
+            "Write where you land.",
+            "Draw a small arc for the hop. Write +5. Write where you land."
+          ]
+        },
+        {
+          "t": "numrow",
+          "items": [
+            34,
+            "+20",
+            54,
+            "+5",
+            59
+          ]
+        }
+      ],
+      "note": "Round 4, about 5 minutes. Draw on paper as the children draw: dot, arc, landing number. A big arc is a jump of tens, a small arc is a hop of ones. Draw 34 to 59 first, then 68 back to 44 with arcs going back. The paper line is the picture children use in question 7 and in Think harder. Yellow tiles are the numbers, white tiles are the jumps."
+    },
+    {
+      "id": "s-explore5",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "items": [
+            "Which one changes the tens digit, a jump or a hop?",
+            "Which one changes the ones digit?",
+            "Does it matter if you hop first or jump first?",
+            "How many ones can we hop before we reach ten?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key ideas: a jump of ten changes the tens digit; a hop of one changes the ones digit; jumping first or hopping first lands in the same place (do not push the proof, the Think harder page tests it); we stay inside a ten today. Repeat a child's answer in your own words so the recording picks it up."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Jump forward: add tens",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            34,
+            "+10",
+            44,
+            "+10",
+            54
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Each jump adds 1 ten. The ones digit stays the same."
+        },
+        {
+          "t": "say",
+          "text": "34 + 20 = 54"
+        }
+      ],
+      "note": "Draw the number line on paper as you talk. Yellow tiles are the numbers where we land, white tiles are the jumps. Two jumps of ten add 20. Ask: which digit changed? Answer: the tens digit, 3 to 5. The 4 ones stay."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Jump back: take away tens",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            54,
+            "-10",
+            44,
+            "-10",
+            34
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Each jump back takes away 1 ten. The ones digit stays the same."
+        },
+        {
+          "t": "say",
+          "text": "54 - 20 = 34"
+        }
+      ],
+      "note": "The same picture backwards. Arcs go back, so the numbers get smaller. Say: 54 take away 10 is 44, take away 10 again is 34. Link to the kit: take two bars away."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Hop: ones",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "numrow",
+                "items": [
+                  34,
+                  "+3",
+                  37
+                ]
+              },
+              {
+                "t": "p",
+                "text": "34 + 3 = 37"
+              }
+            ],
+            [
+              {
+                "t": "numrow",
+                "items": [
+                  37,
+                  "-2",
+                  35
+                ]
+              },
+              {
+                "t": "p",
+                "text": "37 - 2 = 35"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "A hop changes the ones digit. The tens digit stays."
+        }
+      ],
+      "note": "Small hops of one. Show a hop as a small arc and a jump as a big arc. Ask: is five a jump or a hop? Answer: a hop, it is ones. Keep every example inside a ten: no hop may pass nine ones today."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Jump, then hop: add",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            34,
+            "+20",
+            54,
+            "+5",
+            59
+          ]
+        },
+        {
+          "t": "p",
+          "text": "25 is 2 tens and 5 ones. Jump the tens first. Then hop the ones."
+        },
+        {
+          "t": "say",
+          "text": "34 + 25 = 59"
+        }
+      ],
+      "note": "Worked example. Split 25 into 20 and 5. Jump 20 from 34 to 54, then hop 5 to 59. Ask: how many tens and how many ones in 36? (3 tens, 6 ones) to check children can split a number. The example stays inside a ten (4 + 5 = 9). Do not mention carrying or renaming."
+    },
+    {
+      "id": "s-m4b",
+      "part": "mini",
+      "kind": "light",
+      "title": "Jump, then hop: take away",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            59,
+            "-20",
+            39,
+            "-5",
+            34
+          ]
+        },
+        {
+          "t": "p",
+          "text": "25 is 2 tens and 5 ones. Jump back the tens first. Then hop back the ones."
+        },
+        {
+          "t": "say",
+          "text": "59 - 25 = 34"
+        }
+      ],
+      "note": "Worked example. 59 - 25: jump back 20 to 39, then hop back 5 to 34. The arcs go backwards, so the numbers get smaller. Ask: what is 87 - 32? Answer: jump back 3 tens to 57, hop back 2 to 55. Stay inside a ten (9 - 5 = 4, 7 - 2 = 5)."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn: write the answer",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write on your paper. Timer: 1 minute"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "45 + 30",
+            "78 - 20",
+            "64 - 3",
+            "52 + 36"
+          ]
+        }
+      ],
+      "note": "Each child writes on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Children may draw the jump or use the kit. Answers are on the next slide."
+    },
+    {
+      "id": "s-m5a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: write the answer",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            "45 + 30 = 75",
+            "78 - 20 = 58",
+            "64 - 3 = 61",
+            "52 + 36 = 88"
+          ]
+        }
+      ],
+      "note": "Answers: 75, 58, 61, 88. Read each answer aloud so a child watching the recording can mark their own work. Ask which were jumps, which were hops and which needed both (the third is a hop, the fourth is a jump then a hop)."
+    },
+    {
+      "id": "s-m6",
+      "part": "mini",
+      "kind": "light",
+      "title": "Jump or hop?",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            30,
+            6,
+            50,
+            2
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Tens are a jump. Ones are a hop."
+        }
+      ],
+      "note": "Quick-fire. Say a number and ask: jump or hop? Answers: 30 jump, 6 hop, 50 jump, 2 hop. A multiple of ten is a jump because it is whole bars. Keep it quick: this is the decision children make on the workbook pages."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Jump the tens, hop the ones",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "A big jump for every ten. A small hop for every one."
+        },
+        {
+          "t": "card",
+          "head": "START ON 34",
+          "items": [
+            "Jump forward 2 times.",
+            "Hop forward 3 times.",
+            "Jump back 1 time.",
+            "Hop back 4 times."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Say the number each time. Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera with a little clear space; no stairs and no running. Start on 34: jump forward twice (44, 54), hop forward three times (55, 56, 57), jump back once (47), hop back four times (46, 45, 44, 43). Count the numbers aloud together. Keep it gentle for small spaces. No equipment."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Timer: 9 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud, including the sums in question 3. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 7. Timer: 9 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Read all four questions aloud with their numbers. Question 6 is a spot-the-mistake: Siti hopped when she should have jumped. Question 7 asks children to draw jumps on a number line in the box: show them on paper how to draw a dot, an arc and +10. Children may use the kit."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 65, because 20 is 2 tens, not 2 ones. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Jump and hop in a new setting"
+            ],
+            [
+              "Go further (page 4)",
+              "Bigger journeys on the number line"
+            ],
+            [
+              "Investigation (page 5)",
+              "Always, sometimes or never?"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. You can swap at any time."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "MEI SAYS",
+          "items": [
+            "When you jump forward 2 tens, the ones digit changes."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Do you agree? Use your kit to explain."
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 34 + 20 = 54, and the 4 ones are still there. Two tens are two bars, so only the tens digit changes. Repeat each child's answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            43,
+            "+20",
+            63
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "No. 43 + 20 = 63. Twenty is 2 tens, so we jump."
+        }
+      ],
+      "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Ravi hopped 2 ones (45) instead of jumping 2 tens (63). Do not read out anyone's earlier answer."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back. Timer: 3 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. After the timer everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up one thing you found out today."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Take Away, Count Up. Bring your kit and a pencil."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: what if?",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Start at 5. Jump in tens. What is the last number you reach before 100?"
+        },
+        {
+          "t": "p",
+          "text": "How many jumps is that?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            5,
+            "+10",
+            15,
+            "+10",
+            25
+          ]
+        }
+      ],
+      "note": "Optional, only if you are on time. Answer: 95, after 9 jumps (5, 15, 25 ... 95). One more jump would pass one hundred, which we meet in the next lessons. Take two answers and move on.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Add a ten. Does only the tens digit change?"
+            ],
+            [
+              "Make a puzzle",
+              "Write a jump and hop story for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Show how to work out 52 + 31 with a jump and a hop"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Mei has these sticks. She gets 1 more bundle of ten.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "___ bundles of ten now",
+            "ans": "3",
+            "val": 3
+          },
+          {
+            "l": "b",
+            "text": "___ single sticks now",
+            "ans": "6",
+            "val": 6
+          },
+          {
+            "l": "c",
+            "text": "___ sticks altogether",
+            "ans": "36",
+            "val": 36
+          }
+        ],
+        "answer": "3 bundles, 6 singles, 36 sticks",
+        "val": [
+          3,
+          6,
+          36
+        ],
+        "hint": "Count the bundles in tens: 10, 20, 30. Then count on the 6 singles.",
+        "solution": "The picture shows 2 bundles and 6 singles, which is 26. One more bundle makes 3 bundles, and the 6 singles stay. 30 and 6 is 36.",
+        "mistakes": [
+          "Adding the bundle to the singles (27).",
+          "Forgetting the old bundles (16)."
+        ],
+        "mins": 2,
+        "lines": 0,
+        "visual": {
+          "type": "bundles",
+          "tens": 2,
+          "ones": 6
+        }
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Draw 3 bundles of ten and 4 single sticks in the box. Then draw 2 more bundles of ten. Write the number.",
+        "parts": [
+          {
+            "l": "",
+            "text": "The number is ___",
+            "ans": "54",
+            "val": 54
+          }
+        ],
+        "answer": "54 (5 bundles drawn and 4 singles)",
+        "val": [
+          54
+        ],
+        "hint": "Draw a bundle as ten short lines with a ring round them. Draw 3, then 4 short lines on their own, then 2 more rings.",
+        "solution": "3 bundles and 4 singles is 34. Two more bundles add 20, so there are 5 bundles and 4 singles: 54.",
+        "mistakes": [
+          "Adding the 2 to the singles (36).",
+          "Drawing 2 sticks instead of 2 bundles of ten."
+        ],
+        "mins": 3,
+        "lines": 0,
+        "draw": true
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Jump forward. Write the number.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "23 + 10 = ___",
+            "ans": "33",
+            "val": 33
+          },
+          {
+            "l": "b",
+            "text": "23 + 40 = ___",
+            "ans": "63",
+            "val": 63
+          },
+          {
+            "l": "c",
+            "text": "51 + 30 = ___",
+            "ans": "81",
+            "val": 81
+          },
+          {
+            "l": "d",
+            "text": "7 + 60 = ___",
+            "ans": "67",
+            "val": 67
+          }
+        ],
+        "answer": "33, 63, 81, 67",
+        "val": [
+          33,
+          63,
+          81,
+          67
+        ],
+        "hint": "Think of the tens as bars. 23 + 10 is one more bar. The ones digit stays the same.",
+        "solution": "(a) 2 tens and 1 ten make 3 tens: 33. (b) 2 tens and 4 tens make 6 tens: 63. (c) 5 tens and 3 tens make 8 tens: 81. (d) 7 is 7 ones; add 6 tens to get 67.",
+        "mistakes": [
+          "Changing the ones digit (23 + 40 = 27).",
+          "(d) writing 13 (7 + 6)."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Jump back, or hop. Write the number.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "34 - 10 = ___",
+            "ans": "24",
+            "val": 24
+          },
+          {
+            "l": "b",
+            "text": "58 - 20 = ___",
+            "ans": "38",
+            "val": 38
+          },
+          {
+            "l": "c",
+            "text": "58 - 3 = ___",
+            "ans": "55",
+            "val": 55
+          },
+          {
+            "l": "d",
+            "text": "62 + 7 = ___",
+            "ans": "69",
+            "val": 69
+          }
+        ],
+        "answer": "24, 38, 55, 69",
+        "val": [
+          24,
+          38,
+          55,
+          69
+        ],
+        "hint": "A tens number is a jump. A ones number is a hop. Say which one it is before you work it out.",
+        "solution": "(a) 3 tens take away 1 ten is 2 tens: 24. (b) 5 tens take away 2 tens is 3 tens: 38. (c) 3 is a hop: 8 ones take away 3 is 5 ones: 55. (d) 7 is a hop forward: 2 and 7 make 9 ones: 69.",
+        "mistakes": [
+          "Taking the 3 from the tens digit (58 - 3 = 28).",
+          "Hopping the wrong way in (d)."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Ali has 68 pencils. He gives away 3 boxes of ten pencils. How many pencils are left?",
+        "parts": [
+          {
+            "l": "",
+            "text": "___ pencils left",
+            "ans": "38",
+            "val": 38
+          }
+        ],
+        "answer": "38 pencils",
+        "val": [
+          38
+        ],
+        "hint": "3 boxes of ten is 30 pencils. Jump back 3 tens from 68.",
+        "solution": "3 boxes of ten is 30 pencils. 68 - 30 = 38: jump back 3 tens (58, 48, 38). The 8 ones stay.",
+        "mistakes": [
+          "Taking away 3 (65).",
+          "Adding instead of taking away (98)."
+        ],
+        "mins": 2.5,
+        "lines": 1
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Siti says 45 + 20 = 47. Is Siti right? Write the right answer. Say what she mixed up.",
+        "parts": [
+          {
+            "l": "",
+            "text": "The right answer is ___",
+            "ans": "65",
+            "val": 65
+          }
+        ],
+        "answer": "No. 65. She hopped 2 ones instead of jumping 2 tens.",
+        "val": [
+          65
+        ],
+        "hint": "Build 45 with the kit. Is 20 two bars or two squares?",
+        "solution": "20 is 2 tens, so Siti should jump two tens: 45, 55, 65. She added 2 ones and got 47. A jump changes the tens digit.",
+        "mistakes": [
+          "Saying she is right because 20 has a 2 in it.",
+          "Not saying what she mixed up (any clear sentence about tens and ones is fine)."
+        ],
+        "mins": 2.5,
+        "lines": 2
+      },
+      {
+        "id": "S7",
+        "page": 2,
+        "tier": "start",
+        "text": "Start at 36. Draw 2 jumps of ten on a number line in the box. Write where you land.",
+        "parts": [
+          {
+            "l": "",
+            "text": "I land on ___",
+            "ans": "56",
+            "val": 56
+          }
+        ],
+        "answer": "56 (two jumps of ten from 36: 46, then 56)",
+        "val": [
+          56
+        ],
+        "hint": "Draw a dot for 36. Draw an arc to the right and write +10. Do it once more.",
+        "solution": "36 + 10 = 46, then 46 + 10 = 56. Two jumps of ten land on 56. The 6 ones never change.",
+        "mistakes": [
+          "Drawing 2 small hops (38).",
+          "Changing the ones digit."
+        ],
+        "mins": 3,
+        "lines": 0,
+        "draw": true
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Work out 34 + 25. Jump the tens first, then hop the ones. Show your jumps and hops.",
+        "parts": [
+          {
+            "l": "",
+            "text": "34 + 25 = ___",
+            "ans": "59",
+            "val": 59
+          }
+        ],
+        "answer": "59 (jump 20 to 54, then hop 5 to 59)",
+        "val": [
+          59
+        ],
+        "hint": "First jump 2 tens from 34. Where are you? Then hop 5 ones.",
+        "solution": "25 is 2 tens and 5 ones. 34 + 20 = 54. Then 54 + 5 = 59. Check: 3 tens and 2 tens are 5 tens; 4 ones and 5 ones are 9 ones.",
+        "mistakes": [
+          "Adding only the tens and stopping at 54.",
+          "Adding 2 + 5 as 7 tens (74)."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Work out 68 - 24. Jump back the tens first, then hop back the ones.",
+        "parts": [
+          {
+            "l": "",
+            "text": "68 - 24 = ___",
+            "ans": "44",
+            "val": 44
+          }
+        ],
+        "answer": "44 (jump back 20 to 48, then hop back 4 to 44)",
+        "val": [
+          44
+        ],
+        "hint": "Jump back 2 tens from 68. Then hop back 4.",
+        "solution": "24 is 2 tens and 4 ones. 68 - 20 = 48. Then 48 - 4 = 44.",
+        "mistakes": [
+          "Taking 24 away from the ones only.",
+          "Hopping forward instead of back."
+        ],
+        "mins": 3,
+        "lines": 2
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4 first, then jumps 3 tens. Do they land on the same number? How do you know?",
+        "parts": [],
+        "answer": "Yes, both land on 46 (30 and 4 are added in either order)",
+        "val": [
+          "same",
+          46
+        ],
+        "hint": "Work out where Frog A lands. Then Frog B. Compare.",
+        "solution": "Frog A: 12 + 30 = 42, then 42 + 4 = 46. Frog B: 12 + 4 = 16, then 16 + 30 = 46. They land on the same number: adding the same jumps and hops in a different order gives the same total.",
+        "mistakes": [
+          "Saying Frog B lands on 16 because the hops came first.",
+          "Adding 3 + 4 and landing on 19."
+        ],
+        "mins": 5,
+        "lines": 3
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Ali starts on a number. He jumps forward 3 tens and lands on 78. Where did he start?",
+        "parts": [
+          {
+            "l": "",
+            "text": "He started on ___",
+            "ans": "48",
+            "val": 48
+          }
+        ],
+        "answer": "48 (jump back 3 tens from 78)",
+        "val": [
+          48
+        ],
+        "hint": "Go backwards. Undo the jumps: jump back 3 tens from 78.",
+        "solution": "Undo the 3 jumps of ten: 78, 68, 58, 48. Check: 48 + 30 = 78.",
+        "mistakes": [
+          "Adding 30 to 78 (108).",
+          "Taking away only 3 (75)."
+        ],
+        "mins": 3,
+        "lines": 1
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Mei is on 7. She makes jumps of ten until she gets to 97. How many jumps does she make? Write each number she lands on.",
+        "parts": [],
+        "answer": "9 jumps: 17, 27, 37, 47, 57, 67, 77, 87, 97",
+        "val": [
+          9
+        ],
+        "hint": "A jump of ten from 7 lands on 17. Keep going. What stays the same each time?",
+        "solution": "7 + 10 = 17, then 27, 37, 47, 57, 67, 77, 87, 97. That is 9 jumps. The ones digit stays 7. Check: 97 is 9 tens more than 7.",
+        "mistakes": [
+          "Saying 10 jumps (counting the start).",
+          "Stopping at 87."
+        ],
+        "mins": 5,
+        "lines": 4
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Mei goes from 7 to 97 again. This time she may use jumps of 20 as well as jumps of 10. What is the fewest jumps she can make? Write her jumps.",
+        "parts": [],
+        "answer": "5 jumps: four jumps of 20 and one jump of 10 (any order)",
+        "val": [
+          5
+        ],
+        "hint": "90 is 9 tens. A jump of 20 is 2 tens. How many jumps of 20 fit?",
+        "solution": "She must travel 9 tens. Four jumps of 20 make 8 tens. One jump of 10 makes the last ten. That is 5 jumps. Four jumps can travel at most 80, which only reaches 87, so 5 is the fewest.",
+        "mistakes": [
+          "Saying 4 (80 only reaches 87).",
+          "Saying 9 (only using jumps of 10)."
+        ],
+        "mins": 6,
+        "lines": 4
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Start at 25. Jump forward 3 tens. Jump back 1 ten. Jump forward 2 tens. Then hop forward 4. Where do you land? Write each landing number.",
+        "parts": [],
+        "answer": "69 (25, 55, 45, 65, 69)",
+        "val": [
+          69
+        ],
+        "hint": "Do one move at a time and write where you land each time.",
+        "solution": "25 + 30 = 55. 55 - 10 = 45. 45 + 20 = 65. 65 + 4 = 69. Short way: 3 - 1 + 2 = 4 tens forward, so 25 + 40 = 65, then 4 more.",
+        "mistakes": [
+          "Jumping forward on the jump back.",
+          "Forgetting the hop of 4 (65)."
+        ],
+        "mins": 5,
+        "lines": 5
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Jump road",
+      "first": "Start at 6. Jump in tens 5 times. Write every number you land on.",
+      "text": "Start at 6 and keep jumping in tens. Will you ever land on 50? Try other start numbers. What do you notice? Which start numbers can land on 50?",
+      "lines": 4,
+      "answer": "From 6 you land on 16, 26, 36, 46, 56 and so on: every number ends in 6, so you never land on 50. Jumps of ten never change the ones digit. Only a start number that ends in 0 (0, 10, 20, 30 or 40) can land on 50.",
+      "val": [
+        "same ones digit",
+        "only starts ending in 0 reach 50"
+      ],
+      "look_for": "A child who tests more than one start number, says the ones digit stays the same, and gives a reason using tens and ones (a jump is whole bars). A child who says start 20 can land on 50 because 20 + 30 = 50.",
+      "mistakes": [
+        "Saying you can land on any number.",
+        "Counting hops instead of jumps."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Mei says: when you jump forward 2 tens, the ones digit changes. Do you agree? Use your kit to explain.",
+    "starter": "I think ... because ...",
+    "answer": "No. 34 + 20 = 54, and the 4 ones are still there. Two tens are 2 bars, so only the tens digit changes, from 3 to 5.",
+    "look_for": "A reason that uses bars or tens (not just \"because I added\")."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Jump forward. Write the number.",
+      "parts": [
+        {
+          "l": "",
+          "text": "46 + 30 = ___",
+          "ans": "76",
+          "val": 76
+        }
+      ],
+      "answer": "76",
+      "val": [
+        76
+      ],
+      "solution": "4 tens and 3 tens make 7 tens. The 6 ones stay: 76.",
+      "mistakes": [
+        "Writing 49 (adding 3 to the ones).",
+        "Writing 16."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Jump back, or hop. Write the numbers.",
+      "parts": [
+        {
+          "l": "a",
+          "text": "74 - 30 = ___",
+          "ans": "44",
+          "val": 44
+        },
+        {
+          "l": "b",
+          "text": "74 - 3 = ___",
+          "ans": "71",
+          "val": 71
+        }
+      ],
+      "answer": "44 and 71",
+      "val": [
+        44,
+        71
+      ],
+      "solution": "(a) 30 is 3 tens: jump back to 44. (b) 3 is a hop: hop back to 71.",
+      "mistakes": [
+        "Doing the same for both parts.",
+        "(b) writing 44."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "Jump the tens, then hop the ones. Write the number.",
+      "parts": [
+        {
+          "l": "",
+          "text": "31 + 28 = ___",
+          "ans": "59",
+          "val": 59
+        }
+      ],
+      "answer": "59",
+      "val": [
+        59
+      ],
+      "solution": "28 is 2 tens and 8 ones. 31 + 20 = 51, then 51 + 8 = 59.",
+      "mistakes": [
+        "Stopping at 51.",
+        "Writing 39."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "knowing if it is a jump or a hop",
+      "taking away tens",
+      "jump, then hop",
+      "the number line",
+      "something else"
+    ],
+    "helped": [
+      "the bars and squares",
+      "drawing the jumps",
+      "trying again",
+      "I asked for help",
+      "I was not stuck"
+    ],
+    "next": [
+      "drawing it",
+      "using objects",
+      "checking my answer",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "A box has 4 bundles of ten pencils and 5 loose pencils. Then 3 more bundles of ten are put in. How many pencils are there now?",
+      "answer": "75",
+      "val": 75,
+      "solution": "4 tens and 3 tens make 7 tens. The 5 loose pencils stay: 75."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Write the numbers: 86 - 40 = ___ and 86 - 4 = ___",
+      "answer": "46 and 82",
+      "val": [
+        46,
+        82
+      ],
+      "solution": "40 is 4 tens, a jump back: 46. 4 is a hop back: 82."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "Ravi has 53 stickers and gives 3 away. Mei has 53 stickers and gives 30 away. How many does each child have left?",
+      "answer": "Ravi 50, Mei 23",
+      "val": [
+        50,
+        23
+      ],
+      "solution": "Ravi hops back 3: 50. Mei jumps back 3 tens: 23."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Work out 36 + 23 two ways. First way: jump the tens, then hop the ones. Second way: hop the ones, then jump the tens. Do you get the same answer?",
+      "answer": "59 both ways. Yes, the same.",
+      "val": 59,
+      "solution": "Jump first: 36 + 20 = 56, then + 3 = 59. Hop first: 36 + 3 = 39, then + 20 = 59."
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "At home: draw a number line on paper, 0 to 100, with a mark every 10 (a ruler helps). Put a coin on 7 and jump it in tens. Write each number. What stays the same? Then start at 3.",
+      "answer": "7, 17, 27 ... 97 and 3, 13, 23 ... 93. The ones digit stays the same.",
+      "val": "open",
+      "solution": "A grown-up checks that each number is 10 more than the one before. The ones digit never changes when you jump in tens."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l06",
+    "title": "Tens Jump, Ones Hop",
+    "topic": "Add and take away tens",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 34 + 20?",
+        "answer": 54,
+        "hint": "20 is 2 tens. Jump forward 2 tens.",
+        "steps": [
+          "20 is 2 tens.",
+          "34 + 10 = 44 and 44 + 10 = 54.",
+          "So 34 + 20 = 54."
+        ],
+        "slips": [
+          {
+            "a": [
+              36
+            ],
+            "say": "36 is 34 + 2. 20 is 2 tens, not 2 ones. Jump, do not hop."
+          },
+          {
+            "a": [
+              74
+            ],
+            "say": "74 is 34 + 40. Two tens is 20, so jump 2 times."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "m": [
+              1,
+              2,
+              3
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "k": "m*10"
+          },
+          "q": "What is {n} + {k}?",
+          "answer": "n+k",
+          "hint": "{k} is {m} tens. Jump forward {m} tens. The ones digit stays {o}.",
+          "steps": [
+            "{k} is {m} tens.",
+            "Jump forward {m} tens from {n}.",
+            "So the answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 58 - 20?",
+        "answer": 38,
+        "hint": "20 is 2 tens. Jump back 2 tens.",
+        "steps": [
+          "20 is 2 tens.",
+          "58 - 10 = 48 and 48 - 10 = 38.",
+          "So 58 - 20 = 38."
+        ],
+        "slips": [
+          {
+            "a": [
+              56
+            ],
+            "say": "56 is 58 - 2. 20 is 2 tens, so jump back 2 tens."
+          },
+          {
+            "a": [
+              78
+            ],
+            "say": "78 is 58 + 20. Take away, jump back."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "m": [
+              1,
+              2,
+              3
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "k": "m*10"
+          },
+          "q": "What is {n} - {k}?",
+          "answer": "n-k",
+          "hint": "{k} is {m} tens. Jump back {m} tens. The ones digit stays {o}.",
+          "steps": [
+            "{k} is {m} tens.",
+            "Jump back {m} tens from {n}.",
+            "So the answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 34 + 3?",
+        "answer": 37,
+        "hint": "3 is a hop. Hop forward 3 ones.",
+        "steps": [
+          "3 is a hop of ones.",
+          "34, 35, 36, 37.",
+          "So 34 + 3 = 37."
+        ],
+        "slips": [
+          {
+            "a": [
+              64
+            ],
+            "say": "64 is 34 + 30. A hop of 3 adds 3 ones, not 3 tens."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "p": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "n": "t*10+o"
+          },
+          "q": "What is {n} + {p}?",
+          "answer": "n+p",
+          "hint": "{p} is a hop. Hop forward {p} ones. The tens digit stays {t}.",
+          "steps": [
+            "{p} is a hop of ones.",
+            "Hop forward {p} from {n}.",
+            "So the answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 47 - 3?",
+        "answer": 44,
+        "hint": "3 is a hop. Hop back 3 ones.",
+        "steps": [
+          "3 is a hop of ones.",
+          "47, 46, 45, 44.",
+          "So 47 - 3 = 44."
+        ],
+        "slips": [
+          {
+            "a": [
+              17
+            ],
+            "say": "17 is 47 - 30. A hop of 3 takes away 3 ones, not 3 tens."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "o": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "p": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {
+            "n": "t*10+o"
+          },
+          "q": "What is {n} - {p}?",
+          "answer": "n-p",
+          "hint": "{p} is a hop. Hop back {p} ones. The tens digit stays {t}.",
+          "steps": [
+            "{p} is a hop of ones.",
+            "Hop back {p} from {n}.",
+            "So the answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which one is a jump of ten, not a hop?",
+        "options": [
+          "45 + 30",
+          "45 + 3",
+          "45 + 8",
+          "45 + 2"
+        ],
+        "answer": "45 + 30",
+        "hint": "A jump is a number of tens, like 10, 20 or 30.",
+        "steps": [
+          "30 is 3 tens, so it is a jump.",
+          "3, 8 and 2 are ones, so they are hops.",
+          "The jump is 45 + 30."
+        ],
+        "slips": [
+          {
+            "a": [
+              "45 + 3"
+            ],
+            "say": "3 is 3 ones: a hop. Look for a tens number."
+          }
+        ]
+      },
+      {
+        "id": "c6",
+        "tier": "core",
+        "type": "number",
+        "q": "Mei has 34 stickers. She gets 2 packs of ten stickers. How many stickers now?",
+        "answer": 54,
+        "hint": "2 packs of ten is 20 stickers. Jump forward 2 tens.",
+        "steps": [
+          "2 packs of ten is 20.",
+          "34 + 20 = 54.",
+          "Mei has 54 stickers."
+        ],
+        "slips": [
+          {
+            "a": [
+              36
+            ],
+            "say": "36 is 34 + 2. A pack of ten is worth 10, so jump."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "m": [
+              1,
+              2,
+              3
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "k": "m*10"
+          },
+          "q": "Mei has {n} stickers. She gets {m} packs of ten stickers. How many stickers now?",
+          "answer": "n+k",
+          "hint": "{m} packs of ten is {k} stickers. Jump forward {m} tens.",
+          "steps": [
+            "{m} packs of ten is {k}.",
+            "{n} + {k} = {ans}.",
+            "Mei has {ans} stickers."
+          ]
+        }
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "What is 34 + 25? Jump the tens, then hop the ones.",
+        "answer": 59,
+        "hint": "Split 25 into 20 and 5. Jump 20 first.",
+        "steps": [
+          "25 is 20 and 5.",
+          "Jump: 34 + 20 = 54.",
+          "Hop: 54 + 5 = 59."
+        ],
+        "slips": [
+          {
+            "a": [
+              54
+            ],
+            "say": "54 is only the jump. Do not forget the hop of 5."
+          },
+          {
+            "a": [
+              74
+            ],
+            "say": "74 adds 2 + 5 tens. 25 is 2 tens and 5 ones."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "m": [
+              1,
+              2,
+              3
+            ],
+            "p": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "a": "m*10+p",
+            "k": "m*10",
+            "w": "n+k"
+          },
+          "q": "What is {n} + {a}? Jump the tens, then hop the ones.",
+          "answer": "n+a",
+          "hint": "Split {a} into {k} and {p}. Jump {k} first.",
+          "steps": [
+            "{a} is {k} and {p}.",
+            "Jump: {n} + {k} = {w}.",
+            "Hop: {w} + {p} = {ans}."
+          ]
+        },
+        "easier": "c1"
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "What is 68 - 24? Jump back the tens, then hop back the ones.",
+        "answer": 44,
+        "hint": "Split 24 into 20 and 4. Jump back 20 first.",
+        "steps": [
+          "24 is 20 and 4.",
+          "Jump back: 68 - 20 = 48.",
+          "Hop back: 48 - 4 = 44."
+        ],
+        "slips": [
+          {
+            "a": [
+              48
+            ],
+            "say": "48 is only the jump back. Do not forget the hop of 4."
+          },
+          {
+            "a": [
+              92
+            ],
+            "say": "92 is 68 + 24. Take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "o": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "m": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "p": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "a": "m*10+p",
+            "k": "m*10",
+            "w": "n-k"
+          },
+          "q": "What is {n} - {a}? Jump back the tens, then hop back the ones.",
+          "answer": "n-a",
+          "hint": "Split {a} into {k} and {p}. Jump back {k} first.",
+          "steps": [
+            "{a} is {k} and {p}.",
+            "Jump back: {n} - {k} = {w}.",
+            "Hop back: {w} - {p} = {ans}."
+          ]
+        },
+        "easier": "c2"
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "Frog A starts on 12. It jumps 3 tens, then hops 4. Frog B starts on 12. It hops 4, then jumps 3 tens. Where do they land?",
+        "options": [
+          "They land on the same number",
+          "Frog A lands higher",
+          "Frog B lands higher"
+        ],
+        "answer": "They land on the same number",
+        "easier": "c3",
+        "hint": "Work out where each frog lands.",
+        "steps": [
+          "Frog A: 12 + 30 = 42, then 42 + 4 = 46.",
+          "Frog B: 12 + 4 = 16, then 16 + 30 = 46.",
+          "Both land on 46: the order does not matter."
+        ],
+        "slips": [
+          {
+            "a": [
+              "Frog B lands higher"
+            ],
+            "say": "Check both frogs. B hops first (16), then jumps 30 to 46, just like A."
+          }
+        ]
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ali jumps forward 3 tens and lands on 78. Where did he start?",
+        "answer": 48,
+        "hint": "Go backwards: jump back 3 tens from 78.",
+        "steps": [
+          "Undo the jumps.",
+          "78 - 30 = 48.",
+          "Ali started on 48."
+        ],
+        "slips": [
+          {
+            "a": [
+              108
+            ],
+            "say": "108 is 78 + 30. Undo means go back."
+          },
+          {
+            "a": [
+              75
+            ],
+            "say": "75 is 78 - 3. 3 tens is 30."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "o": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "m": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "k": "m*10"
+          },
+          "q": "Ali jumps forward {m} tens and lands on {n}. Where did he start?",
+          "answer": "n-k",
+          "hint": "Go backwards: jump back {m} tens from {n}.",
+          "steps": [
+            "Undo the jumps.",
+            "{n} - {k} = {ans}.",
+            "Ali started on {ans}."
+          ]
+        },
+        "easier": "c2"
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Mei is on 7. She makes jumps of ten until she gets to 97. How many jumps?",
+        "answer": 9,
+        "hint": "Jump from 7 in tens: 17, 27, ... and count.",
+        "steps": [
+          "7, 17, 27, 37, 47, 57, 67, 77, 87, 97.",
+          "Count the jumps, not the numbers.",
+          "There are 9 jumps."
+        ],
+        "slips": [
+          {
+            "a": [
+              10
+            ],
+            "say": "10 counts the start number too. Count the jumps between the numbers."
+          },
+          {
+            "a": [
+              90
+            ],
+            "say": "90 is how far she travels, not how many jumps."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "t": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "b": "a+t*10"
+          },
+          "q": "Mei is on {a}. She makes jumps of ten until she gets to {b}. How many jumps?",
+          "answer": "t",
+          "hint": "Jump from {a} in tens and count the jumps.",
+          "steps": [
+            "{a} to {b} is {t} tens.",
+            "Each jump is 1 ten.",
+            "There are {ans} jumps."
+          ]
+        },
+        "easier": "t1"
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Mei goes from 7 to 97 using only jumps of 10 and jumps of 20. What is the fewest jumps she can make?",
+        "answer": 5,
+        "hint": "90 is 9 tens. A jump of 20 is 2 tens. How many fit?",
+        "steps": [
+          "She must travel 9 tens.",
+          "Four jumps of 20 make 8 tens, plus one jump of 10.",
+          "The fewest is 5 jumps."
+        ],
+        "slips": [
+          {
+            "a": [
+              4
+            ],
+            "say": "Four jumps of 20 only reach 87. She needs one more."
+          },
+          {
+            "a": [
+              9
+            ],
+            "say": "9 uses only jumps of 10. Use the bigger jumps."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              2,
+              5,
+              7
+            ],
+            "t": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "b": "a+t*10",
+            "u": "t+1"
+          },
+          "q": "Mei goes from {a} to {b} using only jumps of 10 and jumps of 20. What is the fewest jumps she can make?",
+          "answer": "u//2",
+          "hint": "{t} tens to travel. A jump of 20 is 2 tens.",
+          "steps": [
+            "She must travel {t} tens.",
+            "Use as many jumps of 20 as she can, and a jump of 10 if one ten is left.",
+            "The fewest is {ans} jumps."
+          ]
+        },
+        "easier": "t1"
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Start at 25. Jump forward 3 tens, jump back 1 ten, then hop forward 4. Where do you land?",
+        "answer": 49,
+        "hint": "Do one move at a time and write where you land.",
+        "steps": [
+          "25 + 30 = 55.",
+          "55 - 10 = 45.",
+          "45 + 4 = 49."
+        ],
+        "slips": [
+          {
+            "a": [
+              45
+            ],
+            "say": "45 is before the hop of 4. Do the last move too."
+          },
+          {
+            "a": [
+              29
+            ],
+            "say": "29 is 25 + 4. Do the jumps as well."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              21,
+              24,
+              25,
+              32,
+              35
+            ],
+            "a": [
+              3,
+              4
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "c": [
+              2,
+              3,
+              4
+            ]
+          },
+          "q": "Start at {s}. Jump forward {a} tens, jump back {b} tens, then hop forward {c}. Where do you land?",
+          "answer": "s+a*10-b*10+c",
+          "hint": "Do one move at a time and write where you land.",
+          "steps": [
+            "Jump forward {a} tens.",
+            "Jump back {b} tens.",
+            "Hop forward {c}. You land on {ans}."
+          ]
+        },
+        "easier": "t1"
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Make up your own jump and hop puzzle with a start number, a jump and a hop. Work out where you land, then ask a grown-up to check.",
+        "hint": "Pick a start number first. Choose a jump of tens and a hop of ones that does not pass a ten.",
+        "steps": [
+          "Write the start number, the jump and the hop.",
+          "Work out where you land with your kit or a number line.",
+          "Swap with a grown-up. Do you land on the same number? Example: start at 23, jump 3 tens, hop 4 ones: 23 + 30 = 53, then 57."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We added and took away tens and ones in our heads. A jump of ten changes only the tens digit. A hop of one changes only the ones digit. For 34 + 25, jump the tens, then hop the ones.",
+    "words": [
+      "jump: add or take away tens (10, 20, 30 ...)",
+      "hop: add or take away ones (1, 2, 3 ...)",
+      "tens digit: the left digit, it counts the tens",
+      "ones digit: the right digit, it counts the ones"
+    ],
+    "try_home": [
+      "Jump and hop: pick a number up to 60, such as a door or page number. Ask: what is 10 more? 20 more? 3 more? Let your child build it with bars and squares if they want.",
+      "Number path: draw a line on paper with a mark every 10. Put a coin on a number and jump it in tens. Ask which digit changes and which stays the same.",
+      "Silly mistake: say 34 + 20 = 36 on purpose and let your child find what went wrong."
+    ],
+    "ask": [
+      "Is that a jump or a hop?",
+      "Which digit changes?",
+      "What do you land on after the jump?"
+    ],
+    "when_stuck": "Please let your child use the bars and squares or draw the jumps, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer.",
+    "next": "Lesson 7: Take Away, Count Up. Your child needs the kit, a pencil and paper.",
+    "report_line": "Your child is learning to add and take away tens and ones in their head and to say why. This week: jumping in tens and hopping in ones.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
+  },
+  "safeguarding": [
+    "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. The kit is paper, so there is nothing to swallow.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Sneak-peek and exit answers are shown on the child's own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
+    "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may march on the spot or stay seated.",
+    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded.",
+    "A child who ticks I am still stuck gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question yourself first. Keep a paper number line ready to draw on camera as you talk.",
+    "Tell parents a week before: print workbook pages 1 to 6, find the kit bars and squares from Lesson 1 (or cut out page 6 again), and a pencil and spare paper.",
+    "Have the slides open. The jump strips show numbers on yellow tiles and jumps on white tiles; draw the arcs by hand on paper as well.",
+    "Check the recording settings exclude children's video."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask How do you know? and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Mei says: if you add a ten, only the tens digit changes. Is that always true? Try 34, 67 and 90 with your kit.",
+        "rec": "Recording: pause. Try adding ten to 34, 67 and 90. Does only the tens digit change?",
+        "answer": "Almost always. 34 + 10 = 44 and 67 + 10 = 77: only the tens digit changes. 90 + 10 is ten tens, which has a new name, a hundred (next lessons)."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Pick a start number. Write one jump and one hop, like start at 23, jump 3 tens, hop 4. Give it to your grown-up to solve.",
+        "rec": "Recording: pause. Write a jump and hop puzzle for a grown-up to solve.",
+        "answer": "No single answer. Check that the puzzle has a start number, a jump of tens and a hop of ones that stays inside a ten. Example: 23 + 30 + 4 = 57."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend your grown-up or a toy has never seen jumps and hops. Teach them how to work out 52 + 31.",
+        "rec": "Recording: pause. Teach a grown-up how to work out 52 + 31 with a jump and a hop.",
+        "answer": "31 is 3 tens and 1 one. Jump 3 tens: 52 to 82. Hop 1: 83."
+      }
+    ]
+  }
+}
