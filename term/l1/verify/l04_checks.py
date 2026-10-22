@@ -141,7 +141,7 @@ def run(d):
     eq(move(26, down=1), 36, 'm2 arrow 26 to 36')
     m4 = _find_visual(S['s-m4']['blocks'])
     eq(sorted(m4[0]['shade']), skip(10, 10, 100), 'm4 picture tens'); eq(sorted(m4[1]['shade']), skip(5, 5, 100), 'm4 picture fives'); eq(sorted(m4[2]['shade']), skip(2, 2, 100), 'm4 picture twos')
-    eq(36 + 10, 46, 'm3 1'); eq(58 - 10, 48, 'm3 2'); eq(29 + 1, 30, 'm3 3')
+    eq(36 + 10, 46, 'm3 1'); eq(58 - 10, 48, 'm3 2'); eq(40 + 1, 41, 'm3 3 (end of a row, then the next row starts)')
     eq(move(58, down=-1), 48, 'm3 2 on the square'); eq(move(36, down=1), 46, 'm3 1 on the square')
     ex = grow_seq(1, 6)
     eq(ex, [1, 2, 4, 7, 11, 16], 'm5 worked example'); eq(gaps(ex), [1, 2, 3, 4, 5], 'm5 gaps'); eq(gaps(ex)[-1] + 1, 6, 'm5 next gap')
@@ -149,7 +149,7 @@ def run(d):
     eq(m5['items'], ex, 'm5 picture'); eq(m5['gaps'], ['+' + str(g) for g in gaps(ex)], 'm5 picture gaps')
     eq([move(23, down=1), move(47, down=1), move(65, down=1), 90 + 10], [33, 57, 75, 100], 'm6 quick-fire')
     eq(100, GRID[9][9], 'm6: 90 down one row is the last square')
-    eq(move(33, 0, 1), 34, 'm1 arrow'); eq(move(38, 0, -1), 37, 'm1 arrow back')
+    eq(move(33, 0, 1), 34, 'm1 arrow'); eq(move(37, 0, -1), 36, 'm1 arrow back')
 
     # Start here
     s1 = skip(10, 10, 100)

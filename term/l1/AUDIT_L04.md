@@ -57,3 +57,7 @@ Total: 17 / 24 on the printed workbook alone (independent auditor 17; my own cou
 Re-scored after the fixes (independent rubric items I can judge from the built PDFs): page count 6 as designed, every page 84% or more full (98, 91, 96, 90, 91, kit 84); validator 17 checks 0 WARN 0 FAIL; leak check clean; 789 answer checks. Tier compliance, strict: S6 and E3 no longer ask for a written reason (rule 25), G1 is no longer told its rule, so the three partial items of the audit are closed (13 of 16 became 16 of 16 by my reading). Opened: tutor-guide strand note and parent summary now state plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose; no MOE-aligned claim anywhere.
 
 Still open (all template or tool, not edited here): answer-part labels print "a" and "b" without brackets (rule 18 wants (a), (b)); blanks are about 14 mm and cannot be widened per lesson; the Look-back box on page 5 uses small type and wraps its tick options unevenly; the key prints "Watch for" mistakes joined as "...;" with a stray full stop; S1 and S2 100-square cells stay at 46 px because page 1 is 98% full. Never trialled with children.
+
+## Update (second fix pass, 22 Oct 2026)
+
+Machine state: validate 04 = 18 pass, 1 WARN (page 5 estimate 105%; the real PDF is 6 pages, fills 98, 91, 96, 90, 91, 84%), 0 FAIL; 789 answer checks, 88 practice variants; leak check clean. Script 74:03, slow class 87:46. Home 2 pages, parent 1. All pages, key, home, parent and changed slides viewed. Details in `audit/FIXES2_L04.md`.

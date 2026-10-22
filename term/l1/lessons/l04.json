@@ -54,7 +54,7 @@
     ],
     "tutor": [
       "A slide deck and the 100 square on screen",
-      "A timer slide or a visible clock"
+      "A visible clock"
     ],
     "kit_pages": [
       "A numbered 100 square, printed on page 6 of the workbook. No cutting. Counters go on top; the Investigation colours it lightly."
@@ -206,7 +206,11 @@
           },
           {
             "k": "SAY",
-            "text": "Good morning, inquirers! Cameras on, pencil ready. This lesson is recorded so that a friend who is away can catch up. We record me and the screen only. You may switch your camera off whenever you like."
+            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
           },
           {
             "k": "SLIDE",
@@ -218,13 +222,13 @@
           },
           {
             "k": "WORK",
-            "text": "Children find their things. Tutor checks that every camera shows the 100 square and the counters.",
+            "text": "Children find their things. They do not need to show them on camera; if it is easy, a child may tilt the screen so the 100 square can be seen.",
             "s": 60
           },
           {
             "k": "DO",
-            "text": "Greet each child by first name. If a child has no counters, suggest buttons, coins, dried beans or small pieces of paper.",
-            "s": 40
+            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. If a child has no counters, suggest buttons, coins, dried beans or small pieces of paper.",
+            "s": 30
           },
           {
             "k": "SAY",
@@ -232,11 +236,15 @@
           },
           {
             "k": "SAY",
-            "text": "A warm-up first, then two puzzles, then we explore with counters. Then I teach you some tricks, we move, and you work in your workbook."
+            "text": "A warm-up, two puzzles, then we explore with counters, learn some tricks, move, and work in the workbook."
           },
           {
             "k": "NOTE",
-            "text": "Later lessons of the term skip the routine and rules slides: this lesson only needs a materials check. Tell the group that recordings show only you and the screen. Mention that the 100 square is on the last page of the workbook and that no cutting is needed."
+            "text": "Later lessons of the term skip the routine and rules slides: this lesson only needs a materials check. Say the recording notice in your own words: the recording has the tutor, the shared screen and any unmuted voice. Mention that the 100 square is on the last page of the workbook and that no cutting is needed."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
           }
         ]
       },
@@ -257,7 +265,7 @@
           },
           {
             "k": "WORK",
-            "text": "Count in tens together to 100, both hands up each time. Then back from 100 to 0, whispering, shouting on 50.",
+            "text": "Count in tens together to 100, both hands up each time. Then back from 100 to 0, whispering, with big hands on 50.",
             "s": 50
           },
           {
@@ -359,9 +367,8 @@
             "s": 55
           },
           {
-            "k": "HOLD",
-            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-            "s": 25
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
           },
           {
             "k": "SAY",
@@ -544,7 +551,7 @@
           },
           {
             "k": "ASK",
-            "text": "What is 1 more than 39? Where does it sit?",
+            "text": "What is 1 more than 40? Where does it sit?",
             "resp": 15
           },
           {
@@ -566,7 +573,7 @@
           },
           {
             "k": "READ",
-            "text": "Your turn. Write on your paper: 10 more than 36. 10 less than 58. 1 more than 29."
+            "text": "Your turn. Write on your paper: 10 more than 36. 10 less than 58. 1 more than 40."
           },
           {
             "k": "WORK",
@@ -579,7 +586,7 @@
           },
           {
             "k": "READ",
-            "text": "Forty-six, forty-eight, thirty."
+            "text": "Forty-six, forty-eight, forty-one."
           },
           {
             "k": "SLIDE",
@@ -721,11 +728,16 @@
           },
           {
             "k": "SAY",
-            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+          },
+          {
+            "k": "MOVE",
+            "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+            "s": 30
           },
           {
             "k": "WORK",
-            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5, colouring your kit square), or finish and check your own work. Tutor never says who is on which page.",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5, colouring your kit square), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
             "s": 300
           },
           {
@@ -734,11 +746,11 @@
           },
           {
             "k": "STUCK",
-            "text": "A child who is still stuck ticks I am still stuck on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
           },
           {
             "k": "NOTE",
-            "text": "Think harder is for the idea taught today in a new setting. Go further is for mastery and extension. The Investigation uses the 100 square on the kit page: colour lightly. Do not announce who is on which page. Pairs are never split unless both children agree."
+            "text": "Think harder is for the idea taught today in a new setting. Go further is for mastery and extension. The Investigation uses the 100 square on the kit page: colour lightly. Do not announce who is on which page. Slow class: the workbook part needs about 31:20 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
           }
         ]
       },
@@ -755,7 +767,7 @@
           },
           {
             "k": "READ",
-            "text": "Ali says: counting in fives makes one column on the square, just like counting in tens. Is Ali right? Use your 100 square to show why."
+            "text": "Counting in tens makes one column on the square. Does counting in fives make one column too? Circle Yes or No. Use your 100 square to show why."
           },
           {
             "k": "WORK",
@@ -807,14 +819,14 @@
             "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
           },
           {
+            "k": "READ",
+            "text": "E1. Count in fives: thirty-five, forty, forty-five, then two blanks. What are the next two numbers? E2. A counter is on twenty-six. It moves down one row, then right one square. What number is it on after each move? E3. Mei counts in twos: 2, 4, 6, 8 and so on. Will she say twenty-five? Circle Yes or No.",
+            "s": 32
+          },
+          {
             "k": "WORK",
             "text": "Children answer E1 to E3 on their own.",
             "s": 150
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-            "s": 25
           },
           {
             "k": "SLIDE",
@@ -826,11 +838,11 @@
           },
           {
             "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
           },
           {
             "k": "NOTE",
-            "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 5, in the open session, no names. Do not read out any child result."
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
           }
         ]
       },
@@ -847,7 +859,7 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
           },
           {
             "k": "WORK",
@@ -865,7 +877,7 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers. Next lesson we add numbers by making tens. You need only a pencil and paper. Goodbye, and thank you to the grown-ups."
+            "text": "Well done, inquirers. Next lesson we add numbers by making tens. Please have about 20 small things of two kinds, the kit page cut out, and a pencil and paper. Goodbye, and thank you to the grown-ups."
           },
           {
             "k": "SLIDE",
@@ -916,7 +928,7 @@
           ]
         }
       ],
-      "note": "Lesson 4 of Term 1, 90 minutes. Objective: read the 100 square, notice what counting in 10s, 5s and 2s looks like on it, and use moves across and down. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off.",
+      "note": "Lesson 4 of Term 1, 90 minutes. Objective: read the 100 square, notice what counting in 10s, 5s and 2s looks like on it, and use moves across and down. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
       "subtitle": "Whole numbers: patterns in rows and columns",
       "mascot": {
         "size": "l",
@@ -1051,7 +1063,7 @@
           "text": "Say the next number. Show it on your fingers if you like."
         }
       ],
-      "note": "Answers: 40, 20, 8, 30, 40. The last two questions show that after a 9 the next ten begins (29 then 30): this is the move from the end of one row of the 100 square to the start of the next. Say the tens word slowly. If a child hesitates, count up from 20 together. Hands up on camera is fine; no marks."
+      "note": "Answers: 40, 20, 8, 30, 40. The last two questions show that after a 9 the next ten begins (29 then 30): a new ten, in the same row of the 100 square. Say the tens word slowly. If a child hesitates, count up from 20 together. Hands up on camera is fine; no marks."
     },
     {
       "id": "s-sneak",
@@ -1124,7 +1136,7 @@
           ]
         }
       ],
-      "note": "Puzzle 1 (5, 10, 15, 20, then 25 and 30) is an access question: any child who can count on can try it, with fingers if they like. Puzzle 2 is a thinking question on the lesson key idea: down one row is 10 more. The row under 31 to 40 is hidden on purpose. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: 25 and 30; 46 (down one row is 10 more). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+      "note": "Puzzle 1 (5, 10, 15, 20, then 25 and 30) is an access question: any child who can count on can try it, with fingers if they like. Puzzle 2 is a thinking question on the lesson key idea: down one row is 10 more. The row under 31 to 40 is hidden on purpose. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 25 and 30; 46 (down one row is 10 more). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
     },
     {
       "id": "s-explore1",
@@ -1269,12 +1281,12 @@
                 "type": "hundred",
                 "rows": [
                   2,
-                  5
+                  6
                 ],
                 "mark": [
                   34
                 ],
-                "cellpx": 90
+                "cellpx": 80
               }
             ],
             [
@@ -1329,8 +1341,8 @@
                     "+1"
                   ],
                   [
-                    38,
                     37,
+                    36,
                     "-1"
                   ]
                 ],
@@ -1344,13 +1356,13 @@
               },
               {
                 "t": "p",
-                "text": "At the end of a row, the next number starts the next row: 39, 40, 41."
+                "text": "40 is the last number in its row. The next number, 41, starts the next row."
               }
             ]
           ]
         }
       ],
-      "note": "Show rows three to five of the square (21 to 50). Moving right adds 1 and moving left takes 1. At the end of a row the count carries on at the start of the next row: 40 then 41. Ask: what is 1 more than 39? Answer: 40 (still just 1 more, even though it is on the next row start). Keep it to about a minute."
+      "note": "Show rows three to five of the square (21 to 50). Moving right adds 1 and moving left takes 1. 40 is the last number of its row; the count carries on at the start of the next row: 41. Ask: what is 1 more than 40? Answer: 41 (still just 1 more, even though it starts the next row). Keep it to about a minute."
     },
     {
       "id": "s-m2",
@@ -1442,7 +1454,7 @@
                 "t": "card",
                 "head": "3",
                 "items": [
-                  "1 more than 29"
+                  "1 more than 40"
                 ]
               }
             ],
@@ -1456,7 +1468,7 @@
           ]
         }
       ],
-      "note": "Each child writes three numbers on their own paper, using the square if they want. Walk the cameras. Do not ask children to hold boards up in front of the group. Question 3 is the row-end case: 29 then 30."
+      "note": "Each child writes three numbers on their own paper, using the square if they want. Walk the cameras. Do not ask children to hold boards up in front of the group. Question 3 is the row-end case: 40 is the last number of its row and 41 starts the next."
     },
     {
       "id": "s-m3a",
@@ -1498,12 +1510,12 @@
                 "t": "card",
                 "head": "3",
                 "items": [
-                  "1 more than 29"
+                  "1 more than 40"
                 ]
               },
               {
                 "t": "answer",
-                "text": "30"
+                "text": "41"
               }
             ],
             [
@@ -1514,19 +1526,19 @@
                 "mark": [
                   36,
                   58,
-                  29
+                  40
                 ],
                 "shade": [
                   46,
                   48,
-                  30
+                  41
                 ]
               }
             ]
           ]
         }
       ],
-      "note": "Answers: 46, 48, 30. Read each answer aloud so a child watching the recording can mark their own work. For question 3, say that 29 is the end of its row and 30 is the first number of the next row."
+      "note": "Answers: 46, 48, 41. Read each answer aloud so a child watching the recording can mark their own work. For question 3, say that 40 is the end of its row and 41 is the first number of the next row."
     },
     {
       "id": "s-m4",
@@ -1806,7 +1818,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 3 to 6. Timer: 10 minutes"
+          "text": "Questions 3 to 6. Timer: 9 minutes"
         },
         {
           "t": "qs",
@@ -1873,7 +1885,7 @@
         },
         {
           "t": "chip",
-          "text": "Everyone may choose. You can swap at any time."
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
         }
       ],
       "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes. The Investigation uses the 100 square on the kit page (page 6), coloured lightly."
@@ -1886,14 +1898,14 @@
       "blocks": [
         {
           "t": "card",
-          "head": "ALI SAYS",
+          "head": "TALK ABOUT IT",
           "items": [
-            "Counting in 5s makes one column on the square, just like counting in 10s."
+            "Does counting in 5s make one column, like counting in 10s?"
           ]
         },
         {
           "t": "p",
-          "text": "Is Ali right? Use the 100 square to show why."
+          "text": "Use the 100 square to show why."
         },
         {
           "t": "chip",
@@ -1967,10 +1979,10 @@
             "E2",
             "E3"
           ],
-          "short": true
+          "short": false
         }
       ],
-      "note": "Children answer on page 5. After the timer everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
     },
     {
       "id": "s-exitans",
@@ -1999,7 +2011,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional.",
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -2020,11 +2032,11 @@
           "head": "NEXT LESSON",
           "items": [
             "Adding by making tens",
-            "You need a pencil and paper."
+            "Have ready: 20 small things, kit page cut out."
           ]
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
       "mascot": {
         "size": "l",
         "say": "Great thinking today!"
@@ -2190,7 +2202,7 @@
           0,
           2
         ],
-        "hint": "Count in fives with one hand each time: 5, 10, 15. Put a counter on each number first.",
+        "hint": "Count in fives with one hand each time: 5, 10, 15. Put a counter on each number first, or colour as you count.",
         "solution": "The numbers are 5, 10, 15, 20, and on to 100. They end in 5 or 0. The 5s sit in the fifth column and the 10s in the last column, so there are two lines going down.",
         "mistakes": [
           "Skipping a number, such as 35 or 45.",
@@ -2699,7 +2711,7 @@
     }
   },
   "talk": {
-    "question": "Ali says: counting in 5s makes one column on the square, just like counting in 10s. Is Ali right? Use the 100 square to show why.",
+    "question": "Counting in tens makes one column on the square. Does counting in fives make one column too? Circle Yes or No. Use your 100 square to show why.",
     "starter": "I think ... because ...",
     "answer": "No. Counting in 5s makes two columns, the 5 column and the 10 column. A row has ten squares, so two jumps of five fill one row and the next jump starts the next row in the 5 column.",
     "look_for": "A reason that uses the row of ten (not just because I saw it on my square)."
@@ -2836,7 +2848,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Find the gaps, then the next number: 6, 8, 11, 15, 20, ___.",
+      "text": "What is the next number? 6, 8, 11, 15, 20, ___.",
       "answer": "26 (the gaps are 2, 3, 4, 5, then 6)",
       "val": 26,
       "solution": "The gaps are 2, 3, 4, 5. Each gap is 1 bigger, so the next gap is 6 and 20 + 6 = 26."
@@ -2844,7 +2856,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "Find a calendar. Pick 3 dates that are not in the last row. (a) How much more is the date straight below each one? (b) Is it always the same? Write why.",
+      "text": "Find a calendar. Pick 3 dates that have another date straight below them. (a) How much more is the date straight below each one? (b) Is it always the same? Write why.",
       "answer": "7 more each time. A row on a calendar is one week of 7 days, like a row of ten on the 100 square.",
       "val": 7,
       "solution": "A calendar row has 7 days, so the date straight below is 7 more. On the 100 square a row has 10 numbers, so the number below is 10 more."
@@ -2861,7 +2873,7 @@
         "type": "number",
         "q": "Count in 5s: 20, 25, 30. What number comes next?",
         "answer": 35,
-        "hint": "Count on 5 more with one hand: 31, 32, 33, 34, 35.",
+        "hint": "Count on 5 more from 30 with one hand.",
         "steps": [
           "Each step is 5 more.",
           "5 more than 30 is 35.",
@@ -3477,23 +3489,28 @@
       "row: a line of 10 numbers going across",
       "column: a line of numbers going down",
       "ten more: one row down on the 100 square",
-      "last digit: the ones digit, which tells us the list a number is in"
+      "last digit: the ones digit, which tells us which counting pattern a number belongs to"
     ],
     "try_home": [
-      "Counters on the square: say 5, 10, 15 and let your child cover each number. Swap and make a mistake on purpose for them to find.",
+      "Counters on the square: say 5, 10, 15 and let your child cover each number. Swap and make a mistake on purpose for them to find. Keep small things away from mouths and little ones.",
       "Move it: put a counter on any number. Call moves such as down 2 rows, right 3. Ask what number it is on now, and how they know.",
-      "Look for rows: a calendar has rows of 7. Ask what the date straight below adds, and why."
+      "Look for rows: a calendar has rows of 7. Ask what the date straight below adds (it adds 7), and why."
     ],
     "ask": [
       "How do you know?",
       "What pattern do you see?",
       "What would the next number be, and why?"
     ],
-    "when_stuck": "Please let your child use the printed square and counters, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer.",
-    "next": "Lesson 5 is about adding numbers by making tens. Your child needs a pencil and paper only.",
+    "when_stuck": "Please let your child use the printed square and counters, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
+    "next": "Lesson 5: Make-a-Ten Adding. Online practice: your tutor will share the practice link.",
     "report_line": "Your child is learning to notice patterns in numbers and to say why. This week: counting in 10s, 5s and 2s on the 100 square, and moving by rows and squares.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-    "quote": "Going across a row adds 1. Going down a row adds 10."
+    "quote": "Going across a row adds 1. Going down a row adds 10.",
+    "next_materials": [
+      "About 20 small things of two kinds (buttons, pasta, clips)",
+      "The kit page cut out (tens bars and ones squares)",
+      "Pencil, rubber and paper"
+    ]
   },
   "workbook": {
     "header": "Whole Numbers: patterns",
@@ -3508,21 +3525,21 @@
       }
     ],
     "choice_after": 2,
-    "home_hint": "Use your 100 square or draw it."
+    "home_hint": "Use your 100 square or draw it. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters."
   },
   "safeguarding": [
-    "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp.",
+    "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
     "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "Sneak-peek and exit answers are shown on the child own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
-    "Never read out a child name with a right or wrong answer. Never show a child page in the recording; record the tutor and the screen only, with children video excluded.",
-    "A child who ticks I am still stuck gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
     "Solve every workbook question yourself first, including the colouring.",
-    "Tell parents a week before: print workbook pages 1 to 6 (page 6 is the 100 square, no cutting needed), find about 12 counters and two or three colours.",
-    "Have the slides open and check the timer slide and the 100 square on screen share.",
-    "Check the recording settings exclude children video."
+    "Tell parents a week before: print workbook pages 1 to 6 (page 6 is the 100 square, no cutting needed), find about 12 counters and two or three colours. Counters stay away from mouths and younger children.",
+    "Have the slides open and check the 100 square on screen share. Keep a visible clock: the deck has no timer slide.",
+    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
@@ -3538,7 +3555,7 @@
         "minutes": 4,
         "tutor": "Ali says: when you add 10 to a number, only the tens digit changes. Is that always true? Try 23, 47 and 89 on your square.",
         "rec": "Recording: pause. Add 10 to 23, 47 and 89. Does only the tens digit change?",
-        "answer": "Yes for numbers on the square: 33, 57 and 99. The ones digit stays and the tens digit goes up by 1. Adding 10 to 95 would run off the square (105)."
+        "answer": "Yes for 23, 47 and 89: 33, 57 and 99. The ones digit stays and the tens digit goes up by 1. But 90 plus 10 is 100, where more than one digit changes, and 95 plus 10 would run off the square (105)."
       },
       {
         "id": "M2",
