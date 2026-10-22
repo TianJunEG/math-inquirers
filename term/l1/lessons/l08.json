@@ -2897,6 +2897,8 @@
   ]
  },
  "workbook": {
+  "choice_after": 3,
+  "home_hint": "Use two plates and small things, or draw both sides.",
   "header": "Addition and subtraction: balance",
   "hint_p1": "Use your plates or a drawing. Say it out loud, then write it.",
   "hint_p3": "Use your plates, draw a picture, or look at how the numbers moved. Then write how you know. Choose any question, in any order.",
