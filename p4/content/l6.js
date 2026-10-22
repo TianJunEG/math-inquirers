@@ -89,8 +89,8 @@ module.exports = {
     n: 6, week: 3, session: 'B', title: 'Angle Turns', topic: 'Angles',
     objective: 'Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each number) and turns of the minute hand (6° a minute), turn on the 8-point compass (45° steps) and work backwards from a turn, and find unknown angles in squares and rectangles.',
     skills: 'Estimating with 90° and 180°, measuring, systematic counting, adding and subtracting angles, working backwards, explaining with turns',
-    materials: 'A protractor and a ruler for each child, a paper clock with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
-    online: 'Children use their own protractor and a paper clock at home. The 8-point compass is shown on the slides; children stand and turn on camera, with the screen as North.',
+    materials: 'A protractor and a ruler for each child (bring from home: the kit page lists them), the paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
+    online: 'Children use their own protractor and ruler and the paper clock cut out from the kit page. Self-view on screen may be mirrored: say turn towards your own right hand, not the screen’s left. The 8-point compass is shown on the slides; children stand and turn on camera, with the screen as North.',
     warmup: 'Robot turns: everyone stands facing the front (North). The tutor calls turns (quarter turn clockwise, half turn, 45° anticlockwise) and children turn, then name the direction they face.',
     explore: 'Pairs set a paper clock to every o’clock time and look at the angle between the hands. Which times make a right angle (check with a paper corner)? Which make a straight line? What is the angle at 1 o’clock?',
     mini: 'Measure: centre on the vertex, baseline on one arm, count up from the 0 on that arm; estimate first so you choose the right scale. A full turn is 360°: 12 clock spaces of 30°, 8 compass steps of 45°. Angles side by side add up; a 90° corner minus the parts you know gives the missing part.',
@@ -172,7 +172,7 @@ module.exports = {
   },
 
   workbook: H => [
-    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first.', { before: 40, keepNext: true }),
+    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
       H.row(['Angle', 'a', 'b', 'c', 'd'].map((s, i) => H.cell(s, i ? 1875 : 2400, { bold: true, fill: 'EDEDED' }))),
@@ -188,7 +188,7 @@ module.exports = {
     H.sub('c', 'Which angle is a right angle?   ________'),
 
     H.q(3, 'Clock angles. A clock face has 12 equal spaces in 360°. Find the smaller angle.', { pb: true, before: 0, keepNext: true }),
-    H.sub('a', 'At 4 o’clock:  ________          (b)  At 7 o’clock:  ________'),
+    H.sub('a', ['At 4 o’clock:  ________          <b style="color:#1F7A6F">b</b>  At 7 o’clock:  ________']),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
     H.fig(compass()),

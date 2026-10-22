@@ -48,7 +48,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome, Factor Hunters! Every number hides its factors inside it, and today we hunt them all down, without missing a single one.', 'We will also find out when two buses meet again, and why some numbers have an odd number of factors. Notice it. Test it. Explain why.'],
-    warmIntro: ['We count round the group, one number each. If your number is in the 3 times table, say "Fizz". In the 4 times table, say "Buzz". In both, say "Fizz-Buzz"!', 'Before we start: which will be the first Fizz-Buzz number? Write your guess on your whiteboard.'],
+    warmIntro: ['We count round the group, one number each. If your number is in the 3 times table, say "Fizz". In the 4 times table, say "Buzz". In both, say "Fizz-Buzz"!', 'If you slip, no problem: say "My go again" and pick someone to start the next round.', 'Before we start: which will be the first Fizz-Buzz number? Write your guess on your whiteboard.'],
     predict: ['You have 24 square tiles. You must use all of them to make one rectangle. How many different rectangles do you think you can make? Write your guess.'],
     exploreHints: ['Stuck: start with one long row. How many tiles in the row? Now try 2 rows.', 'Not sure if 4 by 6 and 6 by 4 are different: turn your rectangle round. Is it the same shape?', 'Finished early: do it again with 36 tiles. Something special happens. What is it?'],
     think: [

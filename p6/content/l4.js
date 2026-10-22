@@ -86,9 +86,9 @@ const rulesFig = () => {
 const twoMachines = () => {
   const box = (x, y, t, f) => `<rect x="${x}" y="${y}" width="74" height="34" rx="8" fill="${f}" stroke="${NAVY}" stroke-width="2"/><text x="${x + 37}" y="${y + 23}" font-size="16" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${esc(t)}</text>`;
   const arrow = (x, y) => `<line x1="${x}" y1="${y}" x2="${x + 22}" y2="${y}" stroke="${NAVY}" stroke-width="2.5"/><polygon points="${x + 30},${y} ${x + 20},${y - 6} ${x + 20},${y + 6}" fill="${NAVY}"/>`;
-  let s = `<svg aria-label="Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT." viewBox="0 0 600 92" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">`;
+  let s = `<svg aria-label="Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT." viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">`;
   [['P', '+ 3', '× 4'], ['Q', '× 4', '+ 3']].forEach(([m, a, b], k) => {
-    const y = 6 + k * 46;
+    const y = 3 + k * 40;
     s += `<text x="10" y="${y + 24}" font-size="17" font-weight="700" fill="${TEAL}" font-family="Arial">Machine ${m}</text>`;
     s += box(120, y, 'n', YEL) + arrow(198, y + 17) + box(234, y, a, WHITE) + arrow(312, y + 17) + box(348, y, b, WHITE) + arrow(426, y + 17) + box(462, y, 'OUT', SKY);
   });

@@ -55,7 +55,7 @@ module.exports = {
     ],
     extension: 'Write 1 as the sum of three different unit fractions. Is there more than one way? (Only one: 1/2 + 1/3 + 1/6.)',
     key: [
-      ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)  (d) 1/8 (try this one if you like)'],
+      ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)'],
       ['Q2', '(a) 1/2 + 1/5  (b) 1/4 + 1/5  (c) 1/3 + 1/24 and 1/4 + 1/8. (1/5 leaves 7/40, not a unit fraction; after that the first part is less than half of 3/8, so stop.)'],
       ['Q3', '(a) 120  (b) 60  (c) 1/4. Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.'],
       ['Q4', '(a) 1/30, 1/42. The bottom numbers are 1 × 2, 2 × 3, 3 × 4, 4 × 5, …  (b) 2/3, 3/4, 4/5  (c) 9/10. 1/90 is the 9th term (9 × 10), and each sum is 1 take away the next unit fraction.'],
@@ -139,8 +139,6 @@ module.exports = {
     W.push(H.sub('c', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 20 }));
     W.push(H.p(['<b style="color:' + TEAL + '">Hint:</b> how much of a whole pizza is each child short of? Compare the two shortfalls.'], { after: 10 }));
     W.push(H.fig(shareBars()));
-    W.push(...H.lines(1));
-    W.push(H.sub('d', ['(try this one if you like) 3/4 of a cake is shared by 6 children. Each gets  ______  of the cake.'.replace('3/4', fr(3, 4))]));
     // Q2 unit fractions
     W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away 1/2, then 1/3 … is what is left a unit fraction?', { keepNext: true }));
     W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + '. Write ' + fr(1, 2) + ' as tenths: ' + fr(1, 2) + ' = ' + fr('____', 10) + '. So ' + fr(7, 10) + ' − ' + fr(1, 2) + ' = ' + fr('____', 10) + ' = ' + fr(1, '____') + '.'], { after: 20 }));

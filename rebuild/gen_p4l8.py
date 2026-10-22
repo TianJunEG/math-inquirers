@@ -282,29 +282,15 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:4
 put('p4l8-exit',sec('p4l8-exit','85–88 MIN',body,'Minutes 85 to 88. Answer: 4. The 3, 2, 1 and ? squares make a staircase: the 3 and the ? are the two ends of the step, so they are opposite, and 3 + 4 = 7. Children who write 6 or 5 chose a square next to it. Extension: fill in the other two squares. The square right of the ? is opposite the 1, so 6; the bottom-right square is opposite the 2, so 5.'))
 
 # ---------- write ----------
-# ---------- close-the-gaps slides: warm-up check (pre-check / fast track) and 'What was hard?' reflection ----------
-import subprocess as _sp
+# ---------- fix pass (rebuild/p4_fix.py): sneak-peek puzzles, looking back, neutral names, go further, minute labels ----------
+import subprocess as _sp, p4_fix
 _G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify(require('"+os.path.join(H,'..','p4','content','l8.js')+"').gaps))"]))
 _ID='p4l8'
-_body=h2('Warm-up check')+p('Write your answer AND one sentence that says why. Show your tutor.',34,600,MUTED)
-for _i,_c in enumerate(_G['check']):
-    _t=290+_i*300
-    _body+=pin(128,_t,1664,p(f"{_i+1}.  "+_c['q'],36,700),None,WHITE,20,'18px 30px')
-    _body+=pin(128,_t+150,1664,p(_c['a'],32,700),'pop',YEL,20,'14px 30px')
-S[f'{_ID}-check']=sec(f'{_ID}-check','1–4 MIN',_body,
- 'Minutes 1 to 4 (3 minutes). WARM-UP CHECK: two quick questions on today\'s key idea in a new setting. Not a test. Read question 1, give about 90 seconds, children write the answer AND a one-sentence reason on a whiteboard and show you (or send it in private chat). Same for question 2. Do not say who is right yet. Then click to show each answer and let one or two children say their reason aloud. '
- 'ANSWERS: 1) '+_G['check'][0]['a']+' 2) '+_G['check'][1]['a']+' '
- 'A GOOD REASON: '+_G['why']+' '
- 'FAST TRACK: a child who gets BOTH right and can say why starts on the Think Harder pages and the Open investigation page at minute 34, while the group works on pages 1 and 2. Tell them by private chat or a quiet word ("start on the Think Harder page today"); say nothing to the group and label nobody. Everyone still joins the explore, the mini-lesson, the page checks, talk time, the exit ticket and the reflection. A fast-track child who is stuck for 5 minutes can go back to page 1 with no fuss. It changes lesson by lesson. Groups are up to 8 and the workbook is printed, so each child only needs a different page number.')
-_body=h2('What was hard?')+p('One minute. Finish these three lines on the last page of today\'s lesson. There are no wrong answers and nobody marks it.',34,600,MUTED)
-for _i,_s in enumerate(['The hardest part was …','I got unstuck by …','Next time I will try …']):
-    _body+=pin(128,360+_i*160,1664,p(f"{_i+1}.  "+_s,44,700),'rise',WHITE,20,'26px 36px')
-_body+=pin(128,840,1664,p('Ideas for line 2: drawing it, a list or table, a smaller number, asking my partner, reading it again.',30,600,MUTED),None)
-S[f'{_ID}-reflect']=sec(f'{_ID}-reflect','88–90 MIN',_body,
- 'Minutes 88 to 90 (1 minute). REFLECTION. Children fill in the three lines in the What was hard? box at the bottom of the last workbook page for this lesson (hardest part; how I got unstuck; next time). Model one yourself first: "'+_G['reflect']+'" Then one child shares one line (not always the fastest child). Never grade it, never correct it, never collect it for marks. Praise the strategy ("you drew it", "you tried a smaller number"), not the speed or the score. Use it to see which strategies each child reaches for.')
+_PIC=globals().get('PIC')
 
 order=['p4l8-title','p4l8-warm1','p4l8-warm2','p4l8-explore1','p4l8-explore2','p4l8-teach1','p4l8-we1','p4l8-try1','p4l8-we2','p4l8-try2','p4l8-key','p4l8-break','p4l8-ws1','p4l8-ws1ans','p4l8-teachsym','p4l8-teachlines','p4l8-teachshade','p4l8-try3','p4l8-ws2','p4l8-ws2ans','p4l8-stretch','p4l8-challenge','p4l8-chdiag','p4l8-chwalk','p4l8-talk','p4l8-exit']
-order.insert(order.index(f'{_ID}-warm1'),f'{_ID}-check'); order.append(f'{_ID}-reflect')
+p4_fix.finish(S,8,_G,pic=_PIC)
+order=p4_fix.order(order,8)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

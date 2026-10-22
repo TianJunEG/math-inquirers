@@ -60,8 +60,8 @@ module.exports = {
     n: 7, week: 4, session: 'A', title: 'Area Architects II', topic: 'Area and Perimeter',
     objective: 'Find the area of a composite figure by splitting it into rectangles or by taking away a missing piece, find its perimeter by pushing the steps out to a rectangle, find every rectangle with a given area and compare their perimeters, and explain what changes when a shape is cut and rearranged.',
     skills: 'Splitting and taking away, making a list in order, looking for a pattern, explaining why (area stays the same, perimeter can change)',
-    materials: '1 cm square tiles or 24 paper squares per child, 1 cm grid paper, scissors, a 30 cm ruler, mini whiteboards, a paper strip 8 squares by 2 squares for cutting.',
-    online: 'Children cut out paper squares and 1 cm grid strips before the lesson and build on camera; the tutor draws on the grid figures on the slides.',
+    materials: '1 cm square tiles or 24 paper squares per child (cut the Square grid page into squares), 1 cm grid paper, scissors, a 30 cm ruler, mini whiteboards, a paper strip 8 squares by 2 squares for cutting.',
+    online: 'Children cut 24 paper squares and some 1 cm grid strips from the Square grid page before the lesson and build on camera; the tutor draws on the grid figures on the slides.',
     warmup: 'Area or Perimeter? The tutor reads a job (a fence round a field, carpet for a room, lace round a tablecloth). Children hold up A for area or P for perimeter and say why: area covers the inside, perimeter goes round the edge.',
     explore: 'Pairs use 12 square tiles to make every rectangle with an area of 12 square centimetres. For each one they record the length, the breadth and the perimeter, then find the longest and the shortest perimeter and say what they notice.',
     mini: 'Composite figures: find the missing lengths from the opposite sides, then find the area by splitting into two rectangles or by taking the missing piece away from a big rectangle (5 × 6 + 3 × 4 = 42 and 8 × 6 − 3 × 2 = 42). Perimeter: when a figure has only square corners and its steps go one way, push the steps out to make a rectangle, so the perimeter is the same as the big rectangle (28 cm). Fixed area: list the factor pairs in order (20 = 1 × 20, 2 × 10, 4 × 5); long and thin gives the biggest perimeter, close to a square gives the smallest. Before page 2: staircases, cutting and rearranging (the area stays the same, the perimeter can change), and borders (big rectangle take away the inside).',
@@ -75,8 +75,8 @@ module.exports = {
     extension: 'Ravi has 24 m of fencing for a rectangular pen with whole-metre sides. One side is a wall and needs no fence. What is the largest area he can fence? (72 m²: 6 m, 12 m, 6 m.)',
     key: [
       ['Q1', '(a) The step across is 5 cm (9 − 4) and the step down is 3 cm (7 − 4).  (b) Split: 4 × 7 + 5 × 4 = 28 + 20 = 48 cm². Take away: 9 × 7 − 5 × 3 = 63 − 15 = 48 cm².  (c) 4 + 3 + 5 + 4 + 9 + 7 = 32 cm, the same as a 9 cm by 7 cm rectangle.'],
-      ['Q2', 'Table: 1 by 24, perimeter 50 cm;  2 by 12, 28 cm;  3 by 8, 22 cm;  4 by 6, 20 cm (4 rectangles; 6 by 4 is the same as 4 by 6).  (a) Largest: 1 cm by 24 cm (50 cm). Smallest: 4 cm by 6 cm (20 cm).  (b) 6 cm by 6 cm, a square (perimeter 24 cm).'],
-      ['Q3', '(a) 6 cm²  (b) Smallest: a 2 by 3 rectangle (the only shape with the smallest perimeter). Largest: for example a row of 6 squares, or any shape with no 2 by 2 block of squares in it.  (c) Smallest 10 cm, largest 14 cm.'],
+      ['Q2', 'Table: 1 by 24, perimeter 50 cm;  2 by 12, 28 cm;  3 by 8, 22 cm;  4 by 6, 20 cm (4 rectangles; 6 by 4 is the same as 4 by 6).  (a) Largest: 1 cm by 24 cm (50 cm). Smallest: 4 cm by 6 cm (20 cm).  (The 36 cm² question, answer: 6 cm by 6 cm, a square with perimeter 24 cm, is in the question bank.)'],
+      ['Q3', '(a) 6 cm²  (b) Smallest: a 2 by 3 rectangle (the only shape with the smallest perimeter): 10 cm. Largest: for example a row of 6 squares, or any shape with no 2 by 2 block of squares in it: 14 cm.'],
       ['Q4', '(a) 34 cm. Push the steps out: they make an 11 cm by 6 cm rectangle, and 11 + 6 + 11 + 6 = 34.  (b) 3 × 2 + 7 × 2 + 11 × 2 = 6 + 14 + 22 = 42 cm².'],
       ['Q5', '(a) A 4 cm by 4 cm square (the two 4 by 2 pieces stacked).  (b) Rectangle: area 16 cm², perimeter 20 cm. Square: area 16 cm², perimeter 16 cm.  (c) No. The area stayed the same, but the perimeter changed from 20 cm to 16 cm.'],
       ['Q6', '(a) 10 cm by 8 cm  (b) 10 × 8 − 8 × 6 = 80 − 48 = 32 cm²  (c) Her 4 strips (8 + 8 + 6 + 6 = 28 cm²) leave out the 4 corner squares of the frame: 28 + 4 = 32 cm².']
@@ -133,7 +133,8 @@ module.exports = {
       { q: 'A path 2 m wide goes all round a lawn 10 m long and 6 m wide. Find the area of the path.', a: '80 m². The whole thing is 14 m by 10 m = 140 m²; take away the lawn 60 m².' },
       { q: 'Ali joins 8 square tiles, each 1 cm by 1 cm, edge to edge. What is the smallest perimeter his shape can have? The largest?', a: 'Smallest 12 cm (a 2 by 4 rectangle, or a 3 by 3 square with one corner missing). Largest 18 cm (for example a row of 8).' },
       { q: 'A 6 cm by 4 cm rectangle is cut into two 6 cm by 2 cm rectangles, which are put end to end to make a 12 cm by 2 cm rectangle. How much longer is the new perimeter?', a: '8 cm longer: 28 cm instead of 20 cm. The area stays 24 cm².' },
-      { q: 'A rectangle has whole-cm sides, an area of 40 cm² and a perimeter of 26 cm. Find its length and breadth.', a: '8 cm by 5 cm. (List the pairs for 40: 1 by 40, 2 by 20, 4 by 10, 5 by 8; only 5 by 8 has perimeter 26 cm.)' }
+      { q: 'A rectangle has whole-cm sides, an area of 40 cm² and a perimeter of 26 cm. Find its length and breadth.', a: '8 cm by 5 cm. (List the pairs for 40: 1 by 40, 2 by 20, 4 by 10, 5 by 8; only 5 by 8 has perimeter 26 cm.)' },
+      { q: 'Which rectangle with whole-cm sides and an area of 36 cm² has the smallest perimeter? What is its perimeter?', a: '6 cm by 6 cm, a square, with perimeter 24 cm (the others: 1 by 36 is 74 cm, 2 by 18 is 40 cm, 3 by 12 is 30 cm, 4 by 9 is 26 cm).' }
     ],
     challenge: [
       { q: 'A square is cut into two identical rectangles. Each rectangle has a perimeter of 24 cm. Find the area of the square.', a: '64 cm². Each rectangle is one whole side and one half side all round, which is 3 sides of the square. 24 ÷ 3 = 8 cm, and 8 × 8 = 64.' },
@@ -161,20 +162,17 @@ module.exports = {
     W.push(H.tbl([2400, 1500, 1500, 1500, 1500, 1500], [
       ...['Length (cm)', 'Breadth (cm)', 'Perimeter (cm)'].map(r => H.row([H.cell(r, 2400, { bold: true, fill: 'EDEDED', h: 44 }), ...[0, 1, 2, 3, 4].map(() => H.cell('\u00a0', 1500, { h: 44 }))]))
     ]));
-    W.push(H.sub('a', 'Largest perimeter:  ___ by ___ cm     Smallest perimeter:  ___ by ___ cm', { after: 40 }));
-    W.push(H.sub('b', 'Which rectangle with an area of 36 cm² has the smallest perimeter?  ___ by ___ cm'));
+    W.push(H.sub('a', 'Largest perimeter:  ___ by ___ cm     Smallest perimeter:  ___ by ___ cm'));
     W.push(H.q(3, 'Mei joins 6 square tiles, each 1 cm by 1 cm, edge to edge (whole sides touching).', { keepNext: true }));
     W.push(H.fig(blankGrid(24, 3, 22, 'An empty 1 cm grid for drawing shapes')));
     W.push(H.sub('a', 'What is the area of any shape she makes?  ________', { after: 40 }));
-    W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and one with the LARGEST.', { after: 40 }));
-    W.push(H.sub('c', 'Smallest perimeter:  ________        Largest perimeter:  ________'));
+    W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and one with the LARGEST.   Smallest:  ______   Largest:  ______'));
 
     W.push(H.q(4, 'Ravi says, "I cannot find the perimeter of this staircase, because the steps are not labelled."', { pb: true, before: 0, keepNext: true }));
     W.push(side(q4Svg(), 300, [
-      H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step.'),
-      ...H.lines(1),
-      H.ans('Perimeter:'),
-      H.sub('b', 'The layers are 3 cm, 7 cm and 11 cm long, and each is 2 cm high. Area:  ________')].join('')));
+      H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step. Push the steps out: the shape then fits in a ___ cm by ___ cm rectangle.'),
+      H.sub('', '___ + ___ + ___ + ___ = ___ cm.   Perimeter:  ________', { after: 40 }),
+      H.sub('b', 'Think of the staircase as 3 rows. The rows are 3 cm, 7 cm and 11 cm long, and each row is 2 cm high. Area:  ________')].join('')));
     W.push(H.q(5, 'An 8 cm by 2 cm rectangle is cut along the dashed line. The two pieces are put together to make a square.', { keepNext: true }));
     W.push(H.fig(q5Svg()));
     W.push(H.sub('a', 'Draw the square on the grid.', { after: 40 }));

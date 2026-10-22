@@ -51,7 +51,7 @@ module.exports = {
     warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
     explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',
     mini: 'How to start a puzzle: draw it (a queue: 4th from the front and 6th from the back means 4 + 6 − 1 = 9 people), make a table (a logic grid: a tick in a box means crosses in the rest of its row and column), read the scale of a bar graph (what does one space stand for? halfway between two lines). Then list it in order before page 2.',
-    share: 'Pick one puzzle and teach it to the group: how did you START it, and how do you know your answer is right?',
+    share: 'Choose one puzzle. How did you START it, and how do you know your answer is right? (Share, share with a partner, or pass.)',
     exit: { q: 'Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? Which start did you use?', a: '7 people (3 in front, Ali, 3 behind: 4 + 4 − 1 = 7). Draw it.' },
     mistakes: [
       'Queues: adding the two positions and counting the person twice (3rd from front and 5th from back is 7, not 8).',

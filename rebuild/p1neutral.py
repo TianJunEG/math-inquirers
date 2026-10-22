@@ -49,7 +49,7 @@ WHATIF = {
     7: 'What if you cut the paper square straight across the middle instead? What shapes do you get? Can you make a new shape from the pieces?',
     8: 'What if you make a new rule and sort again? Which things go in the middle now?',
     9: 'What if you measure the same book with a paper clip instead of cubes? Guess first: a bigger or a smaller number?',
-    10: 'What if you change ONE thing on your card (a number or a rule)? What changes in the answer? Why?',
+    10: 'What if you change ONE thing on your card? What changes in the answer?',
 }
 WHATIF_NOTE = ' Go further (what-if) is on this slide from the start: any pair may choose it at any time, so nobody waits. The tutor does not choose who and does not announce it. Answers: '
 WHATIF_ANS = {
@@ -254,7 +254,7 @@ def fix_l9(D):
 
 def fix_l10(D):
     body = h2('Warm-up: Challenge Day') + chip('Whiteboard round: everybody writes at the same time. No passing round.', TEAL, CREAM, 28)
-    body += card(p('Quick questions from our nine lessons.', 44, 700) + p('Write your answer on your whiteboard or paper. Not sure? Write a guess or draw it. That is fine.', 36, 600, MUTED), WHITE, CARD_X)
+    body += card(p('Quick questions from our nine lessons.', 44, 700) + p('Write your answer on a whiteboard or paper. Not sure? Guess or draw it.', 36, 600, MUTED), WHITE, CARD_X)
     qs = [('Count in 5s: 5, 10, 15, __', '20'), ('10 = 4 + __', '6'), ('Pay 15¢ with two coins', '10¢ + 5¢'), ('What shape has 3 sides?', 'Triangle'), ('I think of a number, add 2 and get 9. My number?', '7')]
     inner = ''.join(f'<div style="display:flex;gap:20px;align-items:center"><p style="font-size:36px;font-weight:600;flex:1">{E(a)}</p><div data-build-in="pop" style="background:{YEL};border-radius:16px;padding:8px 22px"><p style="font-size:34px;font-weight:800">{E(b)}</p></div></div>' for a, b in qs)
     body += card(inner, WHITE, CARD_X)

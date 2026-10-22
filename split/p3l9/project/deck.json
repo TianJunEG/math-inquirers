@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:11:19Z"
+  "at": "2026-10-22T00:22:39Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 9 – Measure and Money Masters",
@@ -16,16 +16,14 @@
   "p3l9-teach1",
   "p3l9-we1",
   "p3l9-try1",
-  "p3l9-teach2",
-  "p3l9-we2",
-  "p3l9-try2",
   "p3l9-key",
   "p3l9-break",
   "p3l9-teachbudget",
   "p3l9-ws1",
   "p3l9-ws1ans",
+  "p3l9-teach2",
+  "p3l9-we2",
   "p3l9-teach24",
-  "p3l9-teachlist",
   "p3l9-ws2",
   "p3l9-ws2ans",
   "p3l9-stretch",
@@ -43,7 +41,7 @@
    "start": "p3l9-title"
   },
   "s2": {
-   "description": "Teach: change to one unit, and draw a time line",
+   "description": "Teach: change to one unit",
    "start": "p3l9-teach1"
   },
   "s3": {
