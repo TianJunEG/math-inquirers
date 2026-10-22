@@ -1,5 +1,6 @@
 // Cut-out kit for the P2 program: place-value cards, digit cards, fraction strips, a paper clock, coins and notes, cube strips.
 const P = require('../hp/kit.js').parts;
+const X = require('./kit_extra.js');
 const { svg, H, lab, note, lab2 } = P;
 const NAVY = '#1B2A49', YEL = '#FFC93C', TEAL = '#1F7A6F', SKY = '#DDEBF7', RED = '#D64545';
 const dash = 'stroke-dasharray="6 4"';
@@ -92,6 +93,9 @@ const kit = () => [
   lab2('Place-value cards (Lessons 1, 2 and 10)'), placeValue(),
   '<div class="brk"></div>', H('Digit cards', 'Two sets of 0 to 9 (Lessons 1 and 10).'), digits(),
   lab2('Fraction strips (Lesson 7)'), fractions(),
+  '<div class="brk"></div>', H('Number chart 1 to 100', 'For Lesson 1 (patterns on a chart; the 1000 chart pieces work the same way). Print at 100%, or on card so you can use it again.'), X.hundredChart(),
+  '<div class="brk"></div>', H('Missing numbers chart', 'For Lesson 1. Fill in the empty squares, then check with the full 1 to 100 chart.'), X.missingChart(),
+  '<div class="brk"></div>', H('My own chart', 'For Lesson 1. Pick a starting number such as 381 and fill in the chart, 10 numbers in every row, to build a piece of a 1000 chart.'), X.startChart(),
   '<div class="brk"></div>', H('Paper clock', 'For Lesson 9 (time).'), clock(),
   lab2('Paper strips of numbered squares (Lesson 9: ribbons and lengths)'), P.cubes(),
   '<div class="brk"></div>', H('Cube nets', 'For Lesson 8 (Shape Builders). Cut out each net and try folding it. Which ones make a cube?'), nets(),

@@ -37,16 +37,28 @@ const fan = () => {
   return s + `<circle cx="${O[0]}" cy="${O[1]}" r="4" fill="${NAVY}"/>` + T(O[0] - 4, O[1] + 26, 'O', 22) + '</svg>';
 };
 
-// Q4: 8-point compass
-const compass = () => {
-  const c = [100, 100];
-  let s = `<svg aria-label="An 8-point compass: N, NE, E, SE, S, SW, W, NW" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:104px;max-width:100%">`;
-  ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'].forEach((n, i) => {
+// Q4: 8-point compass rose (also reused on the Think Harder page). px = printed width; hi = directions to highlight (yellow badge);
+// the arc with an arrowhead shows the clockwise way (the way clock hands go); the small arc between N and NE is one 45 degree step.
+const compass = (px = 190, hi = []) => {
+  const c = [120, 120], dirs = ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'];
+  let s = `<svg aria-label="An 8-point compass rose: N at the top, then NE, E, SE, S, SW, W, NW going clockwise. One step from a direction to the next is 45 degrees. An arrow shows the clockwise way."${hi.length ? ` data-hi="${hi.join(' ')}"` : ''} viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg" style="width:${px}px;max-width:100%">`;
+  s += `<circle cx="120" cy="120" r="84" fill="${WHITE}" stroke="${NAVY}" stroke-width="2.5"/><circle cx="120" cy="120" r="84" fill="${SKY}" opacity="0.45"/>`;
+  dirs.forEach((n, i) => {
     const d = i * 45, main = i % 2 === 0;
-    s += L(c, pt(c[0], c[1], main ? 62 : 46, d), main ? 4 : 3);
-    const q = pt(c[0], c[1], main ? 80 : 74, d); s += T(q[0], q[1] + 8, n, main ? 26 : 22, main ? NAVY : TEAL);
+    s += L(c, pt(c[0], c[1], 84, d), main ? 3.5 : 2, main ? NAVY : '#6F7FA3');
+    const q = pt(c[0], c[1], main ? 104 : 102, d);
+    if (hi.includes(n)) s += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${main ? 19 : 22}" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/>`;
+    s += T(q[0], q[1] + 8, n, main ? 26 : 22, main ? NAVY : TEAL);
   });
-  return s + `<circle cx="100" cy="100" r="7" fill="${YEL}" stroke="${NAVY}" stroke-width="2.5"/></svg>`;
+  // one 45 degree step, N to NE, and the clockwise arrow (E to S side, inside the ring)
+  s += arc(c[0], c[1], 40, 45, 90, RED, 3) + (() => { const q = pt(c[0], c[1], 58, 67.5); return T(q[0], q[1] + 6, '45°', 17, RED); })();
+  const a0 = pt(c[0], c[1], 66, -10), a1 = pt(c[0], c[1], 66, -50);
+  s += `<path d="M${a0[0].toFixed(1)} ${a0[1].toFixed(1)} A66 66 0 0 1 ${a1[0].toFixed(1)} ${a1[1].toFixed(1)}" fill="none" stroke="${TEAL}" stroke-width="3.5"/>`;
+  const tip2 = pt(c[0], c[1], 66, -58), b1 = pt(c[0], c[1], 74, -44), b2 = pt(c[0], c[1], 58, -44);
+  s += `<polygon points="${tip2[0].toFixed(1)},${tip2[1].toFixed(1)} ${b1[0].toFixed(1)},${b1[1].toFixed(1)} ${b2[0].toFixed(1)},${b2[1].toFixed(1)}" fill="${TEAL}"/>`;
+  s += `<circle cx="120" cy="120" r="6" fill="${YEL}" stroke="${NAVY}" stroke-width="2.5"/>`;
+  s += T(120, 246, 'clockwise: like clock hands', 15, TEAL);
+  return s + '</svg>';
 };
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles
@@ -90,7 +102,7 @@ module.exports = {
     n: 6, week: 3, session: 'B', title: 'Angle Turns', topic: 'Angles',
     objective: 'Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each number) and turns of the minute hand (6° a minute), turn on the 8-point compass (45° steps) and work backwards from a turn, and find unknown angles in squares and rectangles.',
     skills: 'Estimating with 90° and 180°, measuring, systematic counting, adding and subtracting angles, working backwards, explaining with turns',
-    materials: 'A clear 180° protractor and a 30 cm ruler for each child (not printed in the kit: bring from home, listed on the kit page; the tutor keeps 2 or 3 spare protractors). The paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
+    materials: 'A clear 180° protractor and a 30 cm ruler for each child (bring from home; first choice is a real clear plastic protractor from school, like the ruler; the kit has a fallback printable to print on a transparency (OHP) sheet only; the tutor keeps 2 or 3 spare protractors). The paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
     online: 'Before the lesson, children find a clear 180° protractor and a 30 cm ruler (listed on the kit page; tell the tutor if you have none). They also use the paper clock cut out from the kit page. Self-view on screen may be mirrored: say turn towards your own right hand, not the screen’s left. The 8-point compass is shown on the slides; children stand and turn on camera, with the screen as North.',
     warmup: 'Robot turns: everyone stands facing the front (North). The tutor calls turns (quarter turn clockwise, half turn, 45° anticlockwise) and children turn, then name the direction they face.',
     explore: 'Pairs set a paper clock to every o’clock time and look at the angle between the hands. Which times make a right angle (check with a paper corner)? Which make a straight line? What is the angle at 1 o’clock?',
@@ -152,7 +164,7 @@ module.exports = {
       { q: 'The corner of a rectangle is 90°. A line from the corner cuts it into two angles. One angle is 64°. What is the other?', a: '26° (90° − 64°)' }
     ],
     stretch: [
-      { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)' },
+      { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)', fig: compass(125, ['SE']) },
       { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.' },
       { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)' },
       { q: 'A robot starts facing N. Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.', a: 'Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.' },
@@ -176,7 +188,7 @@ module.exports = {
   },
 
   workbook: H => [
-    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
+    H.q(1, 'Estimate each angle first. Then measure it with your protractor (a clear plastic one, like your ruler). The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
     tip('hold the corner of a sheet of paper on each angle. Is the angle smaller or bigger than the corner (a right angle, 90°)? Use that for your estimate.'),
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
@@ -196,7 +208,7 @@ module.exports = {
     H.sub('a', ['At 4 o’clock:  ________          <b style="color:#1F7A6F">b</b>  At 7 o’clock:  ________']),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
-    H.fig(compass()),
+    H.fig(compass(140)),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
     H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),

@@ -43,7 +43,7 @@ const extra = (n) => {
   out.push(lab());
   out.push(banner('Think harder'));
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Choose these any time, or take them home.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : 3)); });
   // page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(lab());
