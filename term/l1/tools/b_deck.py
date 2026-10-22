@@ -209,7 +209,8 @@ def slide_html(d, s):
             h = f'<h2 style="border-left:14px solid {TEAL};padding-left:28px;font-family:{HF};font-size:68px;font-weight:600;line-height:1.1">{E(s["title"])}</h2>'
         inner = render_blocks(d, s['blocks'])
         body = h + inner
-        style = f'{bg};font-family:{BF};padding:72px 128px 100px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden'
+        rpad = 760 if (s.get('mascot') or {}).get('size') == 'l' else 128      # keep text clear of a large Mi and her bubble
+        style = f'{bg};font-family:{BF};padding:72px {rpad}px 100px 128px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden'
     mi = s.get('mascot')
     if mi:
         w = 420 if mi['size'] == 'l' else 170
