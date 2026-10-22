@@ -1,5 +1,41 @@
 # Level 6 term-time year plan (ages 11-13, maths + coding bridge)
 
+## Revision after SASMO review
+
+Revised 2026-10-22 against `docs/sasmo/g6_analysis.md` (five Grade 6 papers, 2015 and 2019 to 2022, 125 problems; type counts below are from its section 3) and the MOE checks in `docs/moe/verification_report.md` and `docs/moe/syllabus_by_level.md`. Rules kept: still 36 lessons, 9 per term; every verified MOE placement unchanged; no lesson moved between terms, so MOE order is not broken; contest work sits in Think harder or Go further only, and Start here stays core and approachable. No contest problem is copied. Items from `docs/sasmo/g6_original_problems_draft.md` are named only as **candidate practice** (draft, untried with children, tutor-private until reviewed). The Python and Scratch coding strand (section 3 and the code ideas in each row) is untouched, and each change below keeps or adds a small program.
+
+### Lessons changed (old -> new, why, evidence)
+
+Evidence counts are problems in the five papers (of 125). "Plan lesson" numbering is 1-36 as in this plan.
+
+| Lesson | Old -> new | Why | Evidence |
+|---|---|---|---|
+| 2 | Prime Hunters -> Prime Hunters and Digit Tests. Added digit-sum tests for 3 and 9, "45 means 5 and 9", and a filter-with-mod program (T and G) | Divisibility tests were a real gap; primes and factors were already covered. Tests are enrichment (not in primary) | 5 test items in 4 papers (15-7, 19-8, 20-8, 21-9, 21-25); candidate practice: draft section 1 |
+| 11 | G tier widened: telescoping sums, unfolding a continued fraction, biggest value from digit boxes (was product only) | The telescoping product did not transfer to the sum and nested forms | 6 nested-fraction items (15-10, 19-17, 20-18, 21-8, 21-13, 22-14) |
+| 13 | Rate and Speed Stories -> Rates, Work and Trains. Added combined rate (pipe and leak, two workers), trains with length, opposite and same direction. **Speed kept as owner-approved enrichment preview**, labelled secondary-school | Rate, speed or work appears in all five papers, including 2021 and 2022 after speed left primary | 9 items (15-15, 15-18, 19-10, 19-22, 20-7, 20-21, 21-10, 21-12, 22-20) |
+| 15 | Volume and Nets -> Volume, Nets and Views. Added a "seeing in 3D" step: top and side views of a block stack, dice faces that touch, edges of a solid (T and G) | Spatial items had no home; all five are Section A | 5 items (19-3, 20-9, 21-3, 21-5, 22-2); candidate practice: draft section 4 |
+| 16 | Angle Chasing: added clock-hand angles as a warm-up and S/T item (6 degrees and 0.5 degrees per minute) | Clock hands recur and need only angle sense | 2 items (19-12, 20-15) |
+| 18 | Scale Model Studio -> Scale Models and Same-Height Triangles. Added triangles with the same base and height, and sliding sides (T and G) | Area dissection items had no home; triangle area is P5 so the idea is approachable | 3 area-dissection items (19-23, 21-24, 22-22) plus 15-20, 20-13, 22-3 as supporting |
+| 19 | Letters and Brackets: added the difference-of-squares shortcut and "factor out the common number" as a recurring 5-minute opener (T and G) | Computation items reward structure; fits expand with area models | 2 explicit (20-1, 21-1), 7 computation items in all |
+| 24 | Powers and Roots: last digit of powers **moved up from Go further to Think harder**, last two digits added to G | Cycle idea is already taught in lesson 8, so Think harder is the right tier | 6 last-digit and zeros items (15-4, 15-17, 15-25, 20-12, 20-16, 21-16); zeros ones are carried by lesson 25 |
+| 25 | Factors, HCF and LCM: added trailing zeros of a product or factorial (count 2s and 5s), LCM of lap times, and a link back to the lesson 2 tests | Closes the zeros and lap-time forms with the lesson that already owns LCM | 15-17, 20-12, 19-22 |
+| 28 | Statistics That Mislead: added a bar chart with no scale numbers (read the gridline unit) in S and T | Cheap fit with misleading scales | 3 items (20-6, 22-17, 21-24) |
+| 31 | Counting with Constraints: added counting figures by size (triangles, rectangles) and rearrangements with nobody in their own place | Holiday course has squares and a strip of rectangles only | 7 items (15-8, 19-4, 19-16, 20-17, 22-15, 22-16, 22-24) |
+| 33 | Logic and Proof -> Logic, Proof and Digit Puzzles. Added cryptarithms (leading digit first, then carries, brute-force check in code) in T and G | Cryptarithm is the largest unaddressed type; all 4-mark Section B items | 5 items, one in every paper since 2019 (19-24, 20-24, 21-22, 21-23, 22-21); candidate practice: draft section 3 |
+| 34 | Olympiad-Style Workshop: added worst-case counting ("rest of the votes"), unattainable totals with two pack sizes, and a repeated-move cycle alongside pigeonhole and invariants | Plan named only pigeonhole and invariants | 5 items in 2019 to 2022 (19-21, 20-3, 20-22, 21-19, 22-18); candidate practice: draft section 5 |
+
+Lessons with no change: 1, 3-10, 12, 14, 17, 20-23, 26, 27, 29, 30, 32, 35, 36. The analysis found sequences, algebra, counting basics, remainders, ratio, percent and circles already matched.
+
+### Gaps left unaddressed, and why
+
+- **Packing and tiling bounds** (15-14, 20-5; 2 items): too thin to build a lesson on; draft section 6 can live as a stretch handout later.
+- **Grid and picture-rule puzzles** (19-15, 22-6; 2 items): low priority; one warm-up routine at most.
+- **Similar triangles** (20-23), **rounding intervals** (15-9), **consecutive sums** (22-13), **calculator-press puzzles** (21-6), **number-reading puzzles** (21-22 aside from cryptarithm): single occurrences.
+- **Exam technique** (option elimination, negative marking, four-digit answer grid): not maths, and ruled out for post-PSLE children by the Level 6 SPEC.
+- **Overlapping-square dissections** (19-23): only partly helped by lesson 18.
+- **The contest is Grade 6 only.** Level 6 spans ages 11-13, so the weights may differ for Grade 7; no Grade 7 file exists.
+- **Limit of the change:** each gap-type now has a home but only as a tier item inside a lesson, so the plan prepares the contest types, it does not train them. Whether 1 lesson each is enough is the owner's call.
+
 ## Verified against MOE syllabus (Oct 2025)
 
 Every MOE statement below was first marked [to verify]. They have now been checked against the official PDF (`docs/moe/syllabus_by_level.md`; PDF page numbers). All [to verify] flags on MOE placement are resolved; the only unconfirmed items are Secondary 1 and 2 years, which are not in the primary syllabus. Corrections:
@@ -27,7 +63,7 @@ Every MOE statement below was first marked [to verify]. They have now been check
 
 Syllabus outcomes the plan misses or only touches: P6 fraction division with a whole number or proper fraction as a skill (lesson 11 is one lesson); the inverse volume problems (15 touches); percentage of "find the whole" (12 touches); algebra notation "a ÷ 3 or a/3" and simplifying simple expressions (4, 19). Things we teach that are not in the syllabus at any primary year: sequences with nth term, primes, negative numbers, counting rules, probability, modular arithmetic, ciphers, scale factors, inequalities, coordinates, linear graphs, binary, scatter plots, logic and proof, surface area, transformations.
 
-Draft for the owner, 2026-10-22. This is a plan, not lessons. Nothing here has been tested with children. MOE year placements are taken from `docs/audit/moe_alignment_p4_p6.md`, which has now been verified against the official syllabus PDF (see the verified block above). No SASMO file exists for this level yet (only `docs/sasmo/g1_analysis.md`), so the olympiad-type list in section 4 comes from general knowledge of contest habits, not from a contest analysis.
+Draft for the owner, 2026-10-22. This is a plan, not lessons. Nothing here has been tested with children. MOE year placements are taken from `docs/audit/moe_alignment_p4_p6.md`, which has now been verified against the official syllabus PDF (see the verified block above). The olympiad-type list in section 4 now comes from the Grade 6 SASMO analysis (`docs/sasmo/g6_analysis.md`); a Grade 7 analysis does not exist.
 
 Format: 4 terms x 9 lessons x 90 minutes, live online, groups of up to 8, one lesson a week. A term of about 10 weeks leaves one buffer week (make-up lesson, end-of-term check, public-holiday slip). Do not hardcode dates; check each year's MOE calendar, because Term 4 is often shorter.
 
@@ -49,7 +85,7 @@ Tier lines: S = Start here, T = Think harder, G = Go further. MOE strand names f
 | No | Title and big idea | Topics (strand; other countries) | Tiers (one line each) | Thinking skill |
 |---|---|---|---|---|
 | 1 | Code the Pattern: a rule lets you jump to the 100th term | Number patterns, nth term (Number and Algebra; letter rule is secondary; 3a-style notation is P6); Scratch loop and variable | S: continue a growing pattern and fill a table. T: write the rule, test "is 50 in the list?". G: two sequences that meet; rule from two far terms | Generalising |
-| 2 | Prime Hunters: every number is built from primes | Factors, primes, prime factorisation (Number; primes are not in the primary syllabus); if, mod, counter | S: factor pairs of a number, sort by number of factors. T: factor tree, test a number by small divisors. G: numbers with exactly 3 factors; Goldbach, "always true?" | Classifying |
+| 2 | Prime Hunters and Digit Tests: every number is built from primes, and digits can tell you its factors | Factors, primes, prime factorisation (Number; primes are not in the primary syllabus); digit-sum tests for 3 and 9 (enrichment; only tests for a 1-digit factor within 100 are P4); if, mod, counter, digit-sum filter | S: factor pairs of a number, sort by number of factors. T: factor tree, test a number by small divisors; digit-sum test for 3 and 9, and why it works. G: numbers with exactly 3 factors; "45 means 5 and 9" digit-box puzzles; Goldbach, "always true?" | Classifying |
 | 3 | Below Zero: numbers go on past zero | Negative numbers (secondary topic; Hong Kong primary has none); sprite on a number line | S: read temperatures on a vertical line. T: several lift and sea-level moves. G: find all pairs with a - b = 7; spot a wrong sign rule | Representing on a model |
 | 4 | Algebra Machines: write the rule with a letter | Algebra: letter as unknown, simple equations (P6, p. 43); brackets are excluded at P6 and both-sides is not stated, so those are secondary-style | S: guess my rule from IN/OUT. T: write OUT = 3n + 2, run it backwards. G: two machines, same OUT; form the equation | Working backwards |
 | 5 | Every Possible Way: count each case once | Counting (not an MOE primary topic; compound events US G7); nested loops | S: list outfits in order. T: multiplication rule, handshakes. G: digit numbers with 0, no double count | Systematic listing |
@@ -65,14 +101,14 @@ All new. This is where Level 6 touches P6 strands, as reasoning lessons, not dri
 | No | Title and big idea | Topics (strand; other countries) | Tiers | Thinking skill |
 |---|---|---|---|---|
 | 10 | Ratio Recipes: parts, not amounts | Ratio, equivalent ratios, a:b:c, sharing in a ratio (Number P6); bar models; Sec 1 ratio | S: share with counters in 1:3. T: same amount added to both parts (what stays the same). G: three-way ratio, one given difference; make up a ratio puzzle with one answer | Modelling with bars |
-| 11 | Fractions of Fractions: area models | Fraction x fraction (P5); division by a whole number or proper fraction (P6); Singapore model drawing | S: fold paper for 1/2 of 1/3. T: divide a fraction by a whole, then by a fraction, by picture. G: telescoping product 1/2 x 2/3 x ... ; why does dividing by 1/2 double? | Visualising |
+| 11 | Fractions of Fractions: area models, then nested and telescoping | Fraction x fraction (P5); division by a whole number or proper fraction (P6); Singapore model drawing | S: fold paper for 1/2 of 1/3. T: divide a fraction by a whole, then by a fraction, by picture. G: telescoping product 1/2 x 2/3 x ... and telescoping sums of 1/(n(n+1)); unfold a continued fraction from the bottom; biggest value from digit boxes; why does dividing by 1/2 double? | Visualising |
 | 12 | Percent Change Detective: up 20 then down 20 | Percentage: discount, GST, interest (P5); increase and decrease, find the whole (P6); repeated change is beyond primary; compound loop in code | S: 10% and 25% of a price with a grid. T: find the original after a discount. G: +20% then -20%, is it back to start? Interest over 10 years | Spotting hidden wholes |
-| 13 | Rate and Speed Stories | Rate (P5, revisited); speed, average speed, distance-time graphs. Speed is not in the primary syllabus (MOE Oct 2025); the owner allows it as enrichment, labelled a secondary-school preview | S: read a distance-time picture. T: meet-in-the-middle journeys. G: average speed there and back; steeper line means? | Comparing change |
+| 13 | Rates, Work and Trains | Rate (P5, revisited); combined rate (pipe and leak, two workers), trains with length, opposite and same direction; speed, average speed, distance-time graphs. Speed is not in the primary syllabus (MOE Oct 2025); **kept as owner-approved enrichment, labelled a secondary-school preview** because rate or speed appears in all 5 SASMO papers | S: rate as amount per unit (P5); read a distance-time picture. T: meet-in-the-middle journeys; two diggers or a tap and a leak, add the rates; a train through a tunnel. G: average speed there and back; trains passing each other; steeper line means? | Comparing change |
 | 14 | Circles and Pi: measure it, then estimate it | Circumference and area of circles (P6; Hong Kong P6 pi); estimate pi with random dots in code | S: measure round objects at home, find the ratio. T: composite shapes with semicircles. G: why is area ~ 3.14 r x r? dart-throwing estimate (spiral of lesson 6) | Estimating |
-| 15 | Volume and Nets: cubes in boxes | Volume of cube and cuboid (P5; inverse problems P6), nets (P4), surface area (not in primary); painted-cube counts | S: build a cuboid from 24 cubes, list all. T: water level rises; pour between tanks. G: painted-cube counts for n x n x n; same volume, least surface | Seeing in 3D |
-| 16 | Angle Chasing | Angles in geometric figures: lines, triangles, parallel lines (P5 for lines, points and triangles; P6 for composite figures; parallel-line angles not in primary); turtle spiral | S: angles on a line and at a point. T: isosceles and exterior angle puzzles. G: a chase needing two steps and a proof sentence; use the polygon turn from lesson 7 | Chaining deductions |
+| 15 | Volume, Nets and Views: cubes in boxes | Volume of cube and cuboid (P5; inverse problems P6), nets (P4), surface area (not in primary); painted-cube counts; top and side views, dice faces, edges of a solid (views not named in primary) | S: build a cuboid from 24 cubes, list all. T: water level rises; pour between tanks; draw the top view of a block stack; dice with opposite faces summing to 7. G: painted-cube counts for n x n x n and for a flat block; dice that touch; same volume, least surface | Seeing in 3D |
+| 16 | Angle Chasing (and clock hands) | Angles in geometric figures: lines, triangles, parallel lines (P5 for lines, points and triangles; P6 for composite figures; parallel-line angles not in primary); clock-hand angles (enrichment); turtle spiral | S: angles on a line and at a point; the angle between clock hands on the hour. T: isosceles and exterior angle puzzles; hands move 6 and 0.5 degrees a minute, so the angle at 3:20. G: a chase needing two steps and a proof sentence; use the polygon turn from lesson 7; when do the hands first overlap after 6 o'clock? | Chaining deductions |
 | 17 | Symmetry and Transformations | Symmetry, reflect, rotate, translate, tessellate (Hong Kong P6 rotational symmetry; secondary); My Block with an input | S: fold and mirror shapes. T: rotation of order n. G: which regular shapes tessellate, and why (angle sum) | Visualising change |
-| 18 | Scale Model Studio: lengths, areas, volumes | Scale factor: perimeter x k, area x k x k, volume x k x k x k (ratio, area, volume); program that scales a drawing; mixed round | S: enlarge a shape on grid paper by 2. T: cost of paint when the model doubles. G: predict then check area and volume factors; find a surprising case | Synthesising |
+| 18 | Scale Models and Same-Height Triangles: lengths, areas, volumes | Scale factor: perimeter x k, area x k x k, volume x k x k x k (ratio, area, volume); triangles on the same base with the same height (triangle area P5); perimeter by sliding sides; program that scales a drawing; mixed round | S: enlarge a shape on grid paper by 2. T: cost of paint when the model doubles; shade a triangle in a rectangle and slide its apex along a line (area stays); slide sides to find a perimeter. G: predict then check area and volume factors; cut a shape into same-height triangles to find a shaded fraction; find a surprising case | Synthesising |
 
 ### Term 3: Say it for every case (algebra, graphs, powers, factors, binary; Python bridge)
 
@@ -80,13 +116,13 @@ All new. Python starts here, always next to the Scratch version.
 
 | No | Title and big idea | Topics (strand; other countries) | Tiers | Thinking skill |
 |---|---|---|---|---|
-| 19 | Letters and Brackets: area models | Simplify, substitute, expand a(b + c) with rectangles (Algebra P6; expand is Sec 1); Python intro: print, variable, input | S: area of a split rectangle, numbers only. T: write and expand 3(n + 2). G: are two expressions always equal? test, then prove with area | Generalising |
+| 19 | Letters and Brackets: area models and shortcuts | Simplify, substitute, expand a(b + c) with rectangles (Algebra P6; expand is Sec 1); shortcut openers: factor out a common number, square minus its neighbours' product; Python intro: print, variable, input | S: area of a split rectangle, numbers only. T: write and expand 3(n + 2); factor out the common number to speed a sum. G: are two expressions always equal? test, then prove with area; why n x n minus (n - 1)(n + 1) is always 1 | Generalising |
 | 20 | Equations on a Balance | Solve linear equations, unknown on both sides (P6 simple; both sides Sec 1-2); `for` and `if` to check by brute force | S: balance picture with weights. T: two-step and both-sides. G: build an equation with a given answer; why brute force needs a limit | Keeping it balanced |
 | 21 | At Least, At Most | Inequalities, number-line solution sets, integer solutions (Sec 1); list solutions with a loop | S: "at least 5" on a line. T: solve 2n + 1 < 15, count whole solutions. G: smallest n so that plan A beats plan B | Describing a set |
 | 22 | Maps with Numbers | Coordinates, four quadrants (Sec 1; Hong Kong, Australia earlier); distance, shapes, reflection; turtle `goto` | S: plot and name points. T: find the fourth corner of a shape. G: reflect across a line, find the rule for (x, y) | Linking algebra and geometry |
 | 23 | Straight-Line Stories | Linear graphs from tables, gradient as rate, intersection (Sec 1-2); links to nth term (L1) and rate (L13) | S: plot a table of a taxi fare. T: read the gradient and starting value. G: when do two plans cost the same? what if the lines are parallel? | Reading a graph |
-| 24 | Powers and Roots | Squares, cubes, powers, square roots of perfect squares (Sec 1); doubling vs adding growth | S: square numbers from dot patterns. T: 2 to the 10th by doubling; compare growth. G: last digit of powers (spiral of mod); number of ancestors | Seeing growth |
-| 25 | Factors, HCF and LCM | HCF and LCM by prime factorisation (common factors and multiples are P4; the HCF/LCM names and prime factorisation are not in primary); gears and meeting problems; Euclid's method in code | S: common factors of 12 and 18 by lists. T: LCM for two buses. G: HCF with Euclid; why does the method stop? | Using structure |
+| 24 | Powers and Roots | Squares, cubes, powers, square roots of perfect squares (Sec 1); doubling vs adding growth | S: square numbers from dot patterns. T: 2 to the 10th by doubling; compare growth; last digit of powers by finding the cycle (spiral of mod from lesson 8). G: last two digits of a product or power; number of ancestors | Seeing growth |
+| 25 | Factors, HCF, LCM and Trailing Zeros | HCF and LCM by prime factorisation (common factors and multiples are P4; the HCF/LCM names and prime factorisation are not in primary); gears, lap times and meeting problems; zeros at the end of a product (count 2s and 5s); Euclid's method in code | S: common factors of 12 and 18 by lists. T: LCM for two buses or two runners on a lap; zeros at the end of a product, by pairing 2s and 5s. G: zeros at the end of a factorial; HCF with Euclid; why does the method stop? | Using structure |
 | 26 | Binary and Twenty Questions | Binary numbers, place value in base 2 (not MOE; school computing); binary search | S: count to 15 with 4 switches. T: convert both ways. G: guess 1 to 100 in 7 questions, why 7? | Representing |
 | 27 | Term 3 Studio: build a puzzle maker | Mixed round of 19-26; a short Python or Scratch puzzle program, with a check by hand | S: change a working template. T: extend with a loop and a test. G: add a rule that makes the answer unique; explain | Choosing a move |
 
@@ -96,13 +132,13 @@ All new, except deliberate spirals (flagged). Children who finish PSLE before th
 
 | No | Title and big idea | Topics (strand; other countries) | Tiers | Thinking skill |
 |---|---|---|---|---|
-| 28 | Statistics That Mislead | Average, pie charts, line graphs, misleading scales (average P6; pie charts and line graphs P4); mean, median, outlier is a **deliberate spiral** of the cut holiday lesson 9, in new data; list program | S: read a pie chart and a bar chart. T: how one extreme value moves mean and median. G: redraw a graph so it misleads; spot the trick | Critical reading |
+| 28 | Statistics That Mislead | Average, pie charts, line graphs, misleading scales (average P6; pie charts and line graphs P4); mean, median, outlier is a **deliberate spiral** of the cut holiday lesson 9, in new data; list program | S: read a pie chart and a bar chart, including one with no numbers on the scale (find the unit from a given bar). T: how one extreme value moves mean and median; percent from a bar chart by gridline units. G: redraw a graph so it misleads; spot the trick | Critical reading |
 | 29 | Scatter and Spreadsheets | Scatter plots, correlation vs cause (Sec 2-3; US G8); class data collected in a spreadsheet | S: plot pairs of data. T: describe a trend, predict. G: two things move together, give a third cause | Questioning data |
 | 30 | Two-Stage Chance | Tree diagrams, independent events, expected value (Sec 2; spiral of lesson 6); Monty Hall simulation | S: two coins on a tree. T: the chance of both, one or neither. G: Monty Hall, simulate then explain | Predict then simulate |
-| 31 | Counting with Constraints | Arrangements, selections, Pascal's triangle (not in primary curricula; spiral of lesson 5); nested loops | S: arrange 3 books. T: with repeats; teams from a class. G: Pascal row sums, route counts | Systematic counting |
+| 31 | Counting with Constraints | Arrangements, selections, counting figures by size (triangles, rectangles), rearrangements, Pascal's triangle (not in primary curricula; spiral of lesson 5); nested loops | S: arrange 3 books. T: with repeats; teams from a class; count rectangles in a small grid by size. G: triangles in a figure by size; five gifts, nobody gets their own; Pascal row sums, route counts | Systematic counting |
 | 32 | Patterns That Grow | Triangular numbers, Fibonacci, recursion (spiral of lesson 1; not MOE); recursive count in code | S: stack squares and balls. T: find the rule from the previous term. G: closed form for triangular numbers; why 2 numbers apart | Recursion |
-| 33 | Logic and Proof | Venn diagrams, logic grids, true/false, counterexample, parity (not MOE primary; Hong Kong enrichment) | S: logic grid with 3 children. T: Venn with overlap. G: prove "odd + odd = even"; find a counterexample | Proving |
-| 34 | Olympiad-Style Workshop | Heuristics: work backwards, supposition, invariants, pigeonhole (PSLE heuristics P1-6; contest style) with original problems | S: heads and legs by table. T: supposition and before-after. G: pigeonhole and invariant problems; write a clear solution | Choosing a strategy |
+| 33 | Logic, Proof and Digit Puzzles | Venn diagrams, logic grids, true/false, counterexample, parity, cryptarithms (not MOE primary; Hong Kong enrichment) | S: logic grid with 3 children. T: Venn with overlap; a one-line addition with letters: leading digit first, then carries. G: prove "odd + odd = even"; find a counterexample; a letter multiplication with every answer, checked by a nested-loop program | Proving |
+| 34 | Olympiad-Style Workshop | Heuristics: work backwards, supposition, invariants, pigeonhole, worst case, unattainable totals, cycles in a repeated move (PSLE heuristics P1-6; contest style) with original problems | S: heads and legs by table. T: supposition and before-after; worst case with socks in a dark drawer (2 colours). G: pigeonhole and invariant problems; the largest total you cannot make with two stamp sizes; a repeated move that cycles; write a clear solution | Choosing a strategy |
 | 35 | Capstone 1: Plan and Prototype | Mixed (all strands); child picks a question (a game, a simulator, a visual), maths by hand first, prototype in Scratch or Python | S: pick a template and change it. T: add a rule and test. G: pose an open question; plan a test | Planning |
 | 36 | Capstone 2: Test, Explain, Present | Mixed spiral round; 3-minute showcase with a "why it works" slide | S: show and explain one test. T: show a bug found and fixed. G: show a limit or extension; answer a peer's question | Explaining |
 
@@ -125,24 +161,24 @@ MOE strand names and year placement are now verified (see the top block). Legend
 
 | MOE Primary 6 strand | T1 | T2 | T3 | T4 | Comment |
 |---|---|---|---|---|---|
-| Whole numbers (the four operations, factors, multiples) | t | | M (25) | | Contexts only; no drill |
+| Whole numbers (the four operations, factors, multiples) | M (2) | | M (25) | t (33) | Contexts only; no drill; digit tests (2), trailing zeros (25), cryptarithms (33) added |
 | Fractions (x and / by fractions) | | M (11) | | | One lesson; school does far more |
 | Decimals | | t (12, 14) | | | Not a P6 Standard strand (decimals are P4 and P5), so not a P6 gap |
 | Percentage | | M (12) | | t (28) | School practice outpaces us (multi-step, GST, discount chains) |
 | Ratio | | M (10) | t (23) | | Same |
-| Rate and speed | | M (13) | M (23) | | Rate is P5; speed is not in primary (enrichment, owner-approved preview) |
+| Rate and speed | | M (13) | M (23) | | Rate is P5; speed is not in primary (enrichment, owner-approved preview); lesson 13 now also carries combined rate, work and trains |
 | Algebra (letter, expressions, simple equations) | M (4) | | M (19-21) | | Strongest strand |
 | Average (total = average x number) | | | | M (28) | Moved from holiday L9 |
-| Pie charts and data | | | | M (28-29) | |
+| Pie charts and data | | | | M (28-29) | Bar chart without scale numbers added (28) |
 | Angles in geometric figures | M (7) | M (16) | | | |
 | Area, perimeter, circles | | M (14, 18) | | | |
-| Volume of cube and cuboid, nets | | M (15) | | | |
+| Volume of cube and cuboid, nets | | M (15) | | | Views and dice added as enrichment (15) |
 | Symmetry and transformations | | M (17) | M (22) | | |
 | PSLE multi-step word problems and heuristics | t | t | t | M (34) | **School practice clearly outpaces us**; not a goal of this program |
 
 Beyond primary (enrichment): negatives, primes, counting, probability, modular arithmetic, powers, binary, coordinates and straight-line graphs, logic and proof. Honest flags: no timed practice, no past-paper drill, only one lesson on each big P6 topic. Say "after the PSLE" or "alongside school", never "P6 maths" or "aligned to MOE" (audit wording rule).
 
-Olympiad-type problem moves worked in (original problems only, no contest items copied; no Level 6 file exists, so verify against a SASMO Grade 5-8 file once one is added): try small cases (L1, L31); systematic listing with no double count (L5, L31); work backwards (L4, L34); supposition and heads-and-legs (L34); before-and-after bar model (L10, L12); parity and invariants (L33, L34); remainder cycles for "which day / last digit" (L8, L24); pigeonhole (L34); unit method (L10, L13); choose a variable and form an equation (L19-20); counterexample and "find all" (all Go further items). Contest-style Go further items are written fresh and kept tutor-private until released as practice.
+Olympiad-type problem moves worked in (original problems only; none copied from a contest; checked against `docs/sasmo/g6_analysis.md`, Grade 6 only): try small cases (L1, L31); systematic listing with no double count (L5, L31); counting figures by size and rearrangements (L31); work backwards (L4, L34); supposition and heads-and-legs (L34); before-and-after bar model (L10, L12); parity and invariants (L33, L34); worst case, unattainable totals and repeated-move cycles (L34); digit-sum tests and cryptarithms (L2, L33); remainder cycles and last digits (L8, L24); trailing zeros and lap-time LCM (L25); combined rate, trains and work (L13); nested and telescoping fractions (L11); pigeonhole (L34); unit method (L10, L13); choose a variable and form an equation (L19-20); counterexample and "find all" (all Go further items). Contest-style Go further items are written fresh and kept tutor-private until released as practice. Still not covered: see "Gaps left unaddressed" at the top.
 
 ## 5. Assessment and progress
 
@@ -152,7 +188,7 @@ Olympiad-type problem moves worked in (original problems only, no contest items 
 - Q9 Go further: one "find all" or "is it always true?" item.
 - Q10 Explain: "write one sentence on why" or "trace this code and say what it prints".
 
-Topics per term: T1 sequence rule, factors, signed moves, machine backwards, counting, fair game, turn angle, clock sum, code trace; T2 ratio share, fraction of fraction, percent change, speed, circle, volume, angle chase, scale; T3 expand, solve, inequality, coordinates, graph, power, HCF/LCM, binary; T4 mean and outlier, scatter, tree, arrangement, recursion, logic, strategy. Mark each strand "secure / growing / not yet" and use it to plan support for the next term (and to decide the catch-up pack for late joiners).
+Topics per term: T1 sequence rule, factors and a digit test, signed moves, machine backwards, counting, fair game, turn angle, clock sum, code trace; T2 ratio share, fraction of fraction, percent change, rate or combined rate, circle, volume, angle chase or clock hands, scale; T3 expand, solve, inequality, coordinates, graph, power or last digit, HCF/LCM or trailing zeros, binary; T4 mean and outlier, scatter, tree, arrangement or count by size, recursion, logic or cryptarithm, strategy. Mark each strand "secure / growing / not yet" and use it to plan support for the next term (and to decide the catch-up pack for late joiners).
 
 **Parent report line per term (neutral, evidence based; no scores or predictions):**
 - T1: "This term [Name] tested number patterns, primes, negatives, chance, angles and codes, in Scratch. [Name] showed [one observed example]. Next term we move to ratio, percent and shapes."
@@ -166,13 +202,13 @@ Per new lesson: tutor guide section, about 25 slides, 2 workbook pages plus Thin
 
 | Term | Work | Rough effort |
 |---|---|---|
-| T1 | Re-time 8 lessons for one weekly slot; trim L10 into lesson 9; fix "average" wording and secondary-style tags from the audit; write term handout and Scratch warm-up | about 7-8 person-days |
-| T2 | 9 new lessons, 4-5 new Scratch starters, scale-model synthesis | about 20 person-days |
-| T3 | 9 new lessons, 6-7 Scratch starters plus Python versions, environment choice | about 22 person-days |
-| T4 | 9 new lessons, 5 starters (reuse Mean Machine), capstone templates and rubric | about 20 person-days |
+| T1 | Re-time 8 lessons for one weekly slot; trim L10 into lesson 9; fix "average" wording and secondary-style tags from the audit; write term handout and Scratch warm-up; add the digit-test step and a digit-sum filter program to lesson 2 | about 8-9 person-days |
+| T2 | 9 new lessons, 4-5 new Scratch starters, scale-model synthesis; extra tier items for lessons 11, 13, 15, 16, 18 (rate and train drawings, block-view drawings, clock-hand picture) | about 23 person-days |
+| T3 | 9 new lessons, 6-7 Scratch starters plus Python versions, environment choice; extra tier items for lessons 19, 24, 25 | about 23-24 person-days |
+| T4 | 9 new lessons, 5 starters (reuse Mean Machine), capstone templates and rubric; extra items for 28, 31, 33 (cryptarithm brute-force starter), 34 | about 22-23 person-days |
 | All | Four end-of-term checks and answer keys, four parent reports, tier-map and syllabus-map entries, parent-facing term outline, tutor training | about 8-10 person-days |
 
-Total about 75-80 person-days from a human-only baseline. These are guesses from the size of the holiday set (ten lessons, about 280 slides); a drafting tool can cut writing time, but checking answers, Scratch/Python testing in a real editor (not yet done for the existing `.sb3` files) and tutor review will not shrink much. Suggested order: T1 first (reuse), then T2 before the next intake, T3 and T4 on a rolling basis a term ahead.
+Total about 82-88 person-days (was 75-80; the SASMO additions add roughly 7-8, mostly drawings and brute-force checks of the new Go further items) from a human-only baseline. These are guesses from the size of the holiday set (ten lessons, about 280 slides); a drafting tool can cut writing time, but checking answers, Scratch/Python testing in a real editor (not yet done for the existing `.sb3` files) and tutor review will not shrink much. Suggested order: T1 first (reuse), then T2 before the next intake, T3 and T4 on a rolling basis a term ahead.
 
 ## 7. Open questions for the owner
 
@@ -181,7 +217,9 @@ Total about 75-80 person-days from a human-only baseline. These are guesses from
 3. Python: which environment (offline editor, or a browser tool with no account) fits our no-accounts, nothing-uploaded rule?
 4. How closely should Term 2 follow the MOE P6 syllabus (ratio, percent)? The PDF has been checked: ratio is P6 (p. 43). May we name PSLE on the page, and with what wording?
 5. Is Term 1 L9 (data) moved to Term 4 acceptable, or keep the mean in Term 1 for continuity with the holiday course?
-6. Which SASMO grade levels does ages 11-13 map to? A Grade 5-8 file is needed for section 4.
+6. Level 6 spans ages 11-13, which may sit across SASMO Grades 6 and 7. Only a Grade 6 analysis exists. Is a Grade 7 file wanted before the contest weights are trusted?
 7. Homework and take-home work: expected weekly, or none?
 8. Do parents get a placement diagnostic per term, or only the existing level diagnostic?
 9. Word limits for the year: is 4 x 9 lessons with a buffer week fixed, or can Term 4 be 8 lessons if the term is short?
+10. Owner decision (new): is it right for lessons 2, 13, 15, 33 and 34 to carry the contest additions as Think harder and Go further items, or should any gap type (digit tools, worst case, rate) get a full lesson at the cost of an existing one? The plan holds at 36 lessons either way.
+11. Owner decision (new): the draft practice problems in `docs/sasmo/g6_original_problems_draft.md` are untried with children. Who reviews them before they are used as candidate practice?
