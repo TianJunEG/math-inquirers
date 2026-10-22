@@ -2,7 +2,7 @@
 """Assemble the deployable static site into website/dist/ .
 
     python3 lp_build.py && python3 level_pages.py && (cd hub && python3 build.py)   # regenerate the page sources first
-    python3 build_site.py [--base https://example.com]
+    python3 build_site.py [--base https://example.com] [--with-portal]   # --with-portal also copies ../portal/public to dist/portal/
 
 Takes the four page fragments (sign-up, parent questions hub, Weekly Dose online, referral is left out)
 and wraps each in a full HTML document, self-hosts the Fredoka and Nunito Sans fonts (no request to Google),
@@ -15,6 +15,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DIST = os.path.join(HERE, 'dist')
 FONTS = os.path.join(ROOT, 'fonts', 'node_modules', '@fontsource')
+WITH_PORTAL = '--with-portal' in sys.argv or os.environ.get('MI_PORTAL') == '1'   # opt-in: copies ../portal/public to dist/portal
+PORTAL_SRC = os.path.join(ROOT, 'portal', 'public')
 BASE = (sys.argv[sys.argv.index('--base') + 1] if '--base' in sys.argv else '').rstrip('/')
 
 PAGES = [  # (source, output path, title, description)
@@ -99,11 +101,38 @@ def main():
         open(os.path.join(DIST, 'sitemap.xml'), 'w').write(
             '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     # _headers / _redirects work on Cloudflare Pages and Netlify
-    open(os.path.join(DIST, '_headers'), 'w').write(
-        '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n'
-        "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n"
-        "  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n"
-        '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n')
+    sec = ('  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n'
+           "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n")
+    site_csp = ("  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n")
+    if not WITH_PORTAL:
+        hdr = '/*\n' + sec + site_csp + '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
+    else:
+        # Cloudflare joins the same header from every matching rule, so two CSPs would BOTH apply. The portal therefore must not
+        # match the site-wide CSP rule: security headers stay on /*, the site CSP is listed per non-portal path.
+        hdr = '/*\n' + sec
+        tops = sorted({o.split('/')[0] for _, o, _, _ in PAGES if o != 'index.html'} | {'syllabus'})
+        for pth in ['/', '/index.html', '/404.html'] + [p for t in tops for p in ('/%s' % t, '/%s/*' % t)]:
+            hdr += pth + '\n' + site_csp
+        origin = os.environ.get('SUPABASE_URL', '').rstrip('/')
+        origin = origin if re.fullmatch(r'https://[a-z0-9-]+\.supabase\.co', origin) else 'https://*.supabase.co'
+        # HitPay needs no entry: the browser only navigates to its hosted checkout (top-level navigation is not governed by connect-src);
+        # card/PayNow details never touch our pages. Payment calls go to our own /api/*, i.e. 'self'.
+        hdr += ('/portal/*\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; '
+                'connect-src \'self\' %s; form-action \'self\'; base-uri \'self\'; frame-ancestors \'none\'\n  Cache-Control: no-store\n' % origin)
+        hdr += '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
+    open(os.path.join(DIST, '_headers'), 'w').write(hdr)
+    if WITH_PORTAL:
+        shutil.copytree(PORTAL_SRC, os.path.join(DIST, 'portal'))
+        url, key = os.environ.get('SUPABASE_URL', ''), os.environ.get('SUPABASE_ANON_KEY', '')
+        cfg = os.path.join(DIST, 'portal', 'config.js')
+        if url and key:   # both values are public by design; the service_role key must never be set for this build
+            c = open(cfg, encoding='utf-8').read().replace("'SUPABASE_URL'", repr(url)).replace("'ANON_KEY'", repr(key))
+            for env_name, ph in (('PORTAL_PAYMENT_MODE', "PAYMENT_MODE: 'paynow_manual'"), ('PORTAL_PAYNOW_TO', "PAYNOW_TO: 'PayNow number or UEN (to confirm)'")):
+                if os.environ.get(env_name):
+                    c = c.replace(ph, ph.split(':')[0] + ': ' + repr(os.environ[env_name]))
+            open(cfg, 'w', encoding='utf-8').write(c)
+        else:
+            todo.append(('portal/config.js', 'SUPABASE_URL / ANON_KEY still placeholders (set env SUPABASE_URL and SUPABASE_ANON_KEY for the build)'))
     open(os.path.join(DIST, '_redirects'), 'w').write('/syllabus /syllabus/ 301\n/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n'
                                                   + ''.join('/%s /%s/ 301\n' % (L['slug'], L['slug']) for L in LEVELS))
     print('built', DIST)
