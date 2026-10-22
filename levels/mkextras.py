@@ -46,8 +46,8 @@ def load(n):
 def names(n):
     v = LV[n]
     if n == 6:
-        return dict(short=f'P6 {v["age"]}', full=f'Ages 11-13 (finishing P6), maths + coding bridge', head='Ages 11-13 (finishing P6)', tag='Maths + coding bridge')
-    return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (finishing P{n})', head=f'{v["age"]} (finishing P{n})', tag='')
+        return dict(short=f'P6 {v["age"]}', full=f'Ages 11-13, for children after the PSLE, maths + coding bridge', head='Ages 11-13 (after the PSLE)', tag='Maths + coding bridge')
+    return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (covers P{n} topics)', head=f'{v["age"]} (covers P{n} topics)', tag='')
 
 
 def css():
@@ -96,21 +96,21 @@ def pages_of(path):
 
 
 # ============================================================ (a) QUESTION BANK
-TIERS = [('core', 'C', 'CORE', 'Core'), ('stretch', 'T', 'THINK HARDER', 'Think Harder'), ('challenge', 'X', 'CHALLENGE (non-routine: justify, find every way)', 'Challenge')]
+TIERS = [('core', 'C', 'START HERE', 'Start here'), ('stretch', 'T', 'THINK HARDER', 'Think harder'), ('challenge', 'X', 'GO FURTHER (non-routine: justify, find every way)', 'Go further')]
 
 
 def build_qbank(n, d, tmp):
     nm = names(n); Q = d['qbank']; Ls = d['lessons']
-    b = [cover('Question Bank', 'Core, Think Harder and Challenge questions for every lesson, with answers')]
+    b = [cover('Question Bank', 'Start here, Think harder and Go further questions for every lesson, with answers')]
     b.append('<h2>%s</h2><p class="sub2">Math Inquirers %s%s. Notice it. Test it. Explain why.</p>' % ('Question Bank  •  ' + E(nm['head']), E(nm['short']), ' • ' + nm['tag'] if nm['tag'] else ''))
     b.append('<div class="bn">How to use this bank</div>')
     foundation = ('CORE questions can be started by a child who has not yet learnt the topic. They can use objects, drawing, counting or guess and check. Use them for warm-ups and to build confidence.' if n != 6 else
                   'CORE questions can be started by a child who has not yet learnt the topic, including reading and tracing short programs. Use them for warm-ups and to build confidence.')
     items = [
-        'Each lesson has three levels. Every child starts with Core, then moves up when they are ready. Challenge questions are the ones to talk about together.',
+        'Each lesson has three levels. Every child starts with Start here, then moves up when they are ready. Go further questions are the ones to talk about together.',
         foundation,
         'THINK HARDER uses the idea taught in the lesson in a new setting: two-step problems, patterns with a hidden rule, unknowns and larger numbers.',
-        'CHALLENGE questions are for children who have completed the topic. They need the topic plus an extension: find every way, work backwards, test a case, justify an answer, change the problem or make up your own. This program is inspired by research-based approaches used in gifted education; it is not an official GEP standard and is not affiliated with MOE.',
+        'GO FURTHER questions are for children who have completed the topic. They need the topic plus an extension: find every way, work backwards, test a case, justify an answer, change the problem or make up your own. This program is inspired by research-based approaches used in gifted education; it is not an official GEP standard and is not affiliated with MOE.',
         'Ask for the reason every time: "How do you know?" A correct answer with no reason is only half done.',
     ]
     if n == 6: items.append('Some questions ask you to predict, trace or plan a short program. Children can test their answer in Scratch (or Python) after they have written their prediction on paper.')
@@ -200,7 +200,7 @@ def build_email(n, d, tmp):
         for l in (la, lb):
             u = ('https://claude.ai/artifact/' + ids[l['n']]) if l['n'] in ids else '[deck link to add: not yet published]'
             b.append('<li>Lesson %d deck: %s</li>' % (l['n'], E(u)))
-        b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Challenge questions yourself.</li>')
+        b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Go further questions yourself.</li>')
         b.append('<li>Check your materials are ready. Lesson %d: %s Lesson %d: %s</li>' % (la['n'], E(la['materials']), lb['n'], E(lb['materials'])))
         b.append('<li>After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.</li></ol>')
         b.append('<p>Please do not forward the answer pages to parents.</p><p>Thank you,<br>[Your name]</p></div></div>')
@@ -312,7 +312,7 @@ def build_wlg(n, d, tmp):
         for s in set(x.strip() for x in re.split(r',\s*(?![^()]*\))', l['skills'])): skills[s] += 1
     common = [s for s, c in skills.most_common() if c >= 2][:6]
     kitnames = ', '.join(x.lower() if i else x for i, x in enumerate(k for k, _ in kit))
-    rows = [('Student workbook', f'{wbpages} printable pages: 10 lessons with Core, Think Harder and Challenge questions', 'Weekly pages by email; full book at the start'),
+    rows = [('Student workbook', f'{wbpages} printable pages: 10 lessons with Start here, Think harder and Go further questions', 'Weekly pages by email; full book at the start'),
             ('Inquirer Kit (cut-outs)', kitnames + '. Nothing needs to be bought.', 'Week 1 pages'),
             ('Inquiry Journal', 'A stamp page at the front of the workbook. The tutor stamps a box after each lesson.', 'Every lesson'),
             ('Exit ticket', 'One short question at the end of each lesson to show what they understood', 'Every lesson'),
@@ -336,8 +336,8 @@ def build_wlg(n, d, tmp):
 {('<p class="hw">' + E(hw) + '</p>') if hw else ''}</div>
 <div><h2>Progress and feedback</h2><ul>
 <li><b>Progress marks</b> after every exit ticket: secure, developing, or needs help.</li>
-<li><b>Readiness tracker:</b> four signs of readiness for harder work, noted after each lesson.</li>
-<li><b>A path to go further:</b> a short Challenge Screening Set and Challenge Group for children who show the signs.</li>
+<li><b>Progress notes:</b> a short note after each lesson on what your child enjoyed and tried.</li>
+<li><b>A path to go further:</b> open Investigations in every lesson, and a short taster and chat if your child would like a harder level.</li>
 <li><b>Parent feedback:</b> a short, honest note about how your child thinks, not just a score.</li></ul></div></div>
 <h2>Ten topics</h2><div class="chips">{topics}</div>
 <h2>What the child takes home</h2><table class="tb"><tr><td class="hd">Item</td><td class="hd">What it is</td><td class="hd">When</td></tr>

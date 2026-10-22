@@ -21,7 +21,7 @@ G.push(p(t(SLOGAN, { italics: true, size: 30, color: '1F3864' }), { after: 120 }
 G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.'));
 G.push(h2('The program at a glance'));
 G.push(tbl([2300, 7600], [
-  ['Level', 'Children finishing Primary 3 (ages 9 to 10), going into P4, who are ready for more thinking than standard practice'],
+  ['Level', 'Children whose school year covers Primary 3 topics (ages 9 to 10), going into P4, who are ready for more thinking than standard practice'],
   ['Length', '10 lessons of 90 minutes, two a week over the 5 weeks of the holidays'],
   ['Group size', 'Up to 8 children per tutor, live online. Pilot with 6. Add a second tutor or helper above 8.'],
   ['Focus', 'Thinking skills: making a list in order, guess and check, drawing a model, working backwards, finding patterns, reasoning and explaining. Not speed drills.'],
@@ -196,7 +196,7 @@ G.push(h2('After the lesson'));
 /* ---------- Parent summary ---------- */
 G.push(p(t(PROG, { bold: true, size: 44 }), { pb: true, after: 40 }));
 G.push(p(t(SLOGAN, { italics: true, size: 28, color: '1F3864' }), { after: 100 }));
-G.push(p(t('A 10-lesson holiday maths program for children finishing Primary 3', { bold: true, size: 26 }), { after: 100 }));
+G.push(p(t('A 10-lesson holiday maths program for children whose school year covers Primary 3 topics', { bold: true, size: 26 }), { after: 100 }));
 G.push(tx('Your child will spend the holidays as a young mathematician: noticing patterns, testing ideas with real objects and explaining their thinking. Lessons are live online in small groups, hands-on, and built around thinking, not speed.'));
 G.push(h2('What your child will do'));
 L.lessons.forEach(l => G.push(bu('Lesson ' + l.n + ', ' + l.title + ': ' + l.topic.toLowerCase())));
