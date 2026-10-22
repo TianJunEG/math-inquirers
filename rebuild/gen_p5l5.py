@@ -18,7 +18,7 @@ put('title',title_slide(sid('title'),'LESSON 5  •  WEEK 3','Volume Vault','Vol
 
 # ---------- 2. warm-up: Missing Edge Race ----------
 cards=[(60,5,4,3),(72,6,3,4),(90,6,5,3),(84,7,3,4),(150,10,5,3),(96,8,2,6)]
-body=h2('Warm-up: Missing Edge Race')+p('Each cuboid card shows the volume and two edges. Find the third edge. Say the division you used.',34,600,MUTED)
+body=h2('Warm-up: Missing Edge Match')+p('Each cuboid card shows the volume and two edges. Find the third edge. Write the division you used. We show answers together, nobody shouts.',34,600,MUTED)
 CW=533
 for i,(v,a,b,c) in enumerate(cards):
     L=128+(i%3)*(CW+32); T=300+(i//3)*290
@@ -26,7 +26,7 @@ for i,(v,a,b,c) in enumerate(cards):
     body+=pin(L,T,CW,inner,None,WHITE,24,'18px 26px',f'box-sizing:border-box;height:270px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+20,T+196,CW-40,f'<p style="font-size:32px;font-weight:800">{v} ÷ ({a} × {b}) = {c} cm</p>','pop',YEL,16,'8px 16px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('warm1',sec(sid('warm1'),'0–4 MIN',body,
- 'Minutes 0 to 4. Missing Edge Race. Read one card at a time; teams write the third edge on whiteboards and show them together. Click to reveal the check (the card pops). Answers: 3, 4, 3, 4, 3, 6. Ask each time: "Which operation did you use?" (volume divided by the area of the base: one layer times the missing edge gives the volume). Watch for children who divide by only one edge. Extension: "A cuboid has volume 60 cm3. Its base is 5 cm by 4 cm. How many cm3 in one layer?" (20 cm3). If a child says 5 + 4 + 3, point out that a volume is multiplied, never added.'))
+ 'Minutes 0 to 4. Missing Edge Match (not a race: nobody shouts, speed does not matter). Read one card at a time; teams write the third edge and the division on whiteboards, then show them together on three, two, one. Click to reveal the check (the card pops). Answers: 3, 4, 3, 4, 3, 6. Ask each time: "Which operation did you use?" (volume divided by the area of the base: one layer times the missing edge gives the volume). Watch for children who divide by only one edge. Extension: "A cuboid has volume 60 cm3. Its base is 5 cm by 4 cm. How many cm3 in one layer?" (20 cm3). If a child says 5 + 4 + 3, point out that a volume is multiplied, never added.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','A cuboid is 7 cm by 5 cm by 2 cm. Volume?','70 cm³'),('2.','1 ℓ = ? cm³','1000 cm³'),('3.','3.2 ℓ = ? ml','3200 ml'),('4.','A cube has a volume of 125 cm³. Each edge?','5 cm'),('5.','4500 cm³ of water = ? ℓ','4.5 ℓ')]

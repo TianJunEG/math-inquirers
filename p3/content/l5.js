@@ -16,7 +16,7 @@ module.exports = {
     topic: 'Division',
     objective: 'Divide with remainders, check that the remainder is smaller than the number we divide by, decide what the leftover means in a story, work backwards from groups and leftovers, and solve "what number am I?" riddles by making a list.',
     skills: 'Division with remainders, interpreting the remainder (one more group or leave it out), working backwards (groups × size + leftover), making a systematic list and testing each clue, making a table',
-    materials: '25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers.',
+    materials: '25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls. Share the screen for the slides; children hold whiteboards up to the camera. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Leftover Lucky Dip: the tutor calls a number of sweets and a group size (23 in 4s). Children show the number of groups on one hand and the leftover on the other, then explain with a times-table fact.',
     explore: 'Pairs put 25 counters into groups of 2, 3, 4, 5 and 6 and record the groups and the leftover in a table. They notice that 25 leaves 1 over for 2, 3, 4 and 6, and nothing for 5, and explain why (24 is in the 2, 3, 4 and 6 tables).',

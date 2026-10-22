@@ -29,7 +29,7 @@ module.exports = {
     n: 3, week: 2, session: 'A', title: 'Times Table Treasure', topic: 'Tables of 6, 7, 8 and 9',
     objective: 'Find and explain patterns in the 6, 7, 8 and 9 times tables, use last-digit patterns, split an array into facts we know, and solve grid and list puzzles in a careful order.',
     skills: 'Look for a pattern, make a systematic list, use known facts, explain why',
-    materials: 'Multiplication square (1 to 10), dot paper, coloured pencils, a ruler, mini whiteboards.',
+    materials: 'Multiplication square (1 to 10), dot paper, coloured pencils, a ruler, mini whiteboards. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Tutor draws on a shared digit-circle slide. Each child draws 10 dots round a circle (like a clock) labelled 0 to 9, and has dot paper and coloured pencils.',
     warmup: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. On a number in the 7 times table, hold up an open palm (Buzz) instead of saying it. A missed Buzz is just "a tricky one, let us check on the strip". Only the 7s are played.',
     explore: 'Last-digit circles. Pairs draw 10 dots round a circle labelled 0 to 9. For the 6 times table they join the last digits in order (6, 2, 8, 4, 0, back to 6). Then they try the 4s and the 8s. Which tables make the same shape? Why does the 6s shape never touch an odd digit?',

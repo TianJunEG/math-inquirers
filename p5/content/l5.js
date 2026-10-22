@@ -82,7 +82,7 @@ module.exports = {
     skills: 'Make a list in order, draw a diagram to scale, work backwards (height = volume ÷ base area), look for a pattern (painted cubes), check with a second method',
     materials: 'About 30 one-centimetre cubes (or dice, Lego bricks, sugar cubes), a ruler, squared paper, mini whiteboards. Tutor: a clear plastic box with a ruler taped to its side, water and a stone for the demonstration.',
     online: 'The tutor shows the water rise live on camera: a clear box, a ruler taped to the side, a stone dropped in. Children use dice or Lego for the Explore; with no cubes they draw layers on squared paper. Whiteboards are held up to the camera.',
-    warmup: 'Missing Edge Race: six cuboid cards show the volume and two edges. Teams race to find the third edge and say the division they used. Then five quick questions on cm³, ml and ℓ.',
+    warmup: 'Missing Edge Match: six cuboid cards show the volume and two edges. Teams find the third edge and write the division they used, then show their answers together on three, two, one (nobody shouts, and speed does not matter). Then five quick questions on cm³, ml and ℓ.',
     explore: 'The 24-cube challenge: pairs build or draw every cuboid that uses exactly 24 one-centimetre cubes, record its length, breadth and height, and decide how they know they have found them all.',
     mini: 'Volume = cubes in one layer × number of layers = length × breadth × height. Water in a tank is a cuboid too: base area × water height, and 1000 cm³ = 1 ℓ. When water is added or an object sinks, the rise in level = extra volume ÷ base area. Worked examples: water added to a tank; a stone that makes the water rise.',
     share: 'Ali says: “A 1000 cm³ stone always makes the water rise 1 cm.” Is he right? Explain.',
@@ -101,7 +101,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome to the Volume Vault, inquirers! Today everything is made of tiny 1-centimetre cubes: boxes, tanks, even water. If we can count cubes cleverly, we can work out how much a tank holds, how high the water goes and what happens when a stone sinks in.', 'Watch this clear box. I am going to drop a stone in. Before I do: what will happen to the water level, and could we work out the stone’s volume from it?'],
-    warmIntro: ['Missing Edge Race! Each card shows a cuboid’s volume and two of its edges. Find the third edge. Shout it out with your team name, and tell me the division you did.', 'First card: 60 cm³, 5 cm and 4 cm. What is the third edge? How do you know?'],
+    warmIntro: ['Missing Edge Match! Each card shows a cuboid’s volume and two of its edges. Find the third edge and write the division you did. We show our answers together on three, two, one. Nobody shouts, and there is no prize for being first.', 'First card: 60 cm³, 5 cm and 4 cm. What is the third edge? How do you know?'],
     predict: ['You have 24 one-centimetre cubes. You must use all of them to build one cuboid. How many different cuboids do you think you can build? Write a guess: 2? 5? 10?'],
     exploreHints: ['Stuck: start with a flat cuboid, 1 cube high. Then try 2 cubes high: how many cubes are in each layer then?', 'Not sure if two are different: “Turn it round. If it is the same three edges, it is the same cuboid.”', 'Finished early: which of your cuboids is most like a cube? Can any of them be a cube? Why not?'],
     think: ['“A cuboid 5 cm by 3 cm by 4 cm. One layer on the bottom is 5 rows of 3: 15 cubes. There are 4 layers, so 15 × 4 = 60 cubes. That is 60 cm³. Length × breadth is the layer, and × height counts the layers.”', '“The water in the tank is a cuboid too: 40 by 25 by 12. That is 12 000 cm³. 1000 cm³ is 1 litre, so 12 litres. Now I pour in 8 litres: that is 8000 cm³. The base is 40 × 25 = 1000 cm², so each centimetre of height holds 1000 cm³. 8000 ÷ 1000 = 8 cm higher.”', '“A stone goes in and the water goes up 3 cm. The water did not change: the stone is pushing it up. The new slice of height is 30 by 20 by 3 = 1800 cm³. That slice is exactly the stone’s volume.”'],
@@ -114,7 +114,7 @@ module.exports = {
 
   deck: {
     today: 'Count cubes in layers, find every cuboid from 24 cubes, and solve tank puzzles: litres, water levels and stones that make the water rise.',
-    warmGame: 'Missing Edge Race. Six cuboid cards each show the volume and two edges. Teams race to find the third edge and say the division they used (60 ÷ (5 × 4) = 3).',
+    warmGame: 'Missing Edge Match. Six cuboid cards each show the volume and two edges. Teams find the third edge and write the division they used (60 ÷ (5 × 4) = 3). Show answers together on three, two, one.',
     warmQs: [['A cuboid is 7 cm by 5 cm by 2 cm. What is its volume?', '70 cm³'], ['1 ℓ = ? cm³', '1000 cm³'], ['3.2 ℓ = ? ml', '3200 ml'], ['A cube has a volume of 125 cm³. How long is each edge?', '5 cm'], ['4500 cm³ of water = ? ℓ', '4.5 ℓ']],
     expSetup: ['Take 24 one-centimetre cubes (or draw them on squared paper).', 'Build a cuboid that uses all 24 cubes. Write its length, breadth and height.', 'Build as many different cuboids as you can. Turning one round does not make a new one.', 'How do you know you have found them all? Which one is most like a cube?'],
     expPic: 'a pile of 24 small cubes next to two cuboids built from them: a flat 6 by 4 by 1 slab and a 2 by 3 by 4 block, with “24 cubes: how many cuboids?” written beside them.',
@@ -168,9 +168,10 @@ module.exports = {
     const pw = [2700, 2400, 2400, 2400];
     const paintTbl = H.tbl(pw, [
       H.row(['Painted faces', '3 faces', '2 faces', '1 face'].map((s, i) => H.cell(s, pw[i], { bold: true, fill: 'D9D9D9', h: 50 }))),
-      H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 70 }), H.cell('', pw[1]), H.cell('', pw[2]), H.cell('', pw[3])])
+      H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 70 }), H.cell('8 corners', pw[1]), H.cell('12 edges × ____ = ____', pw[2]), H.cell('6 faces × ____ = ____', pw[3])])
     ]);
     return [
+      H.p(['<b style="color:#1F7A6F">Words and signs.</b> cm³ means cubic centimetres (1 cm³ is one small cube). ℓ means litres: 1 ℓ = 1000 cm³. The three edges of a cuboid are the length, the breadth (how wide) and the height.'], { after: 20 }),
       H.q(1, 'This solid cuboid is built from 1-cm cubes.', { before: 20, keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figQ1() + '</div>', 3600, { h: 20 }),
         H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes to the solid, without taking any away, until the whole solid is a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
@@ -180,7 +181,7 @@ module.exports = {
       ...H.lines(2),
       H.sub('b', 'Which of them can fit inside a box 5 cm long, 5 cm wide and 5 cm high?   ________________'),
       H.q(3, 'A glass tank is 50 cm long, 30 cm wide and 40 cm high. The water in it is 18 cm deep.', { keepNext: true }),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> the water is 18 layers of cubes; the bottom layer is 50 by 30. 1000 cm³ = 1 ℓ.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> the water is 18 layers of cubes. One layer is 50 × 30 = ______ cubes. 18 layers hold ______ cm³. Then 1000 cm³ = 1 ℓ.'], { after: 20 }),
       H.tbl([4400, 5500], [H.row([H.cell('<div>' + figQ3() + '</div>', 4400, { h: 20 }),
         H.cell(t(L('(a)') + 'How many litres of water are in the tank?<br>' + blank(110) + ' ℓ<br>' + L('(b)') + 'How many more litres are needed to fill it to the top?<br>' + blank(110) + ' ℓ<br>' + L('(c)') + 'Instead, 9 ℓ of water is let out. How deep is the water now?<br>' + blank(110) + ' cm'), 5500, { h: 40 })])]),
 
@@ -190,7 +191,7 @@ module.exports = {
       H.sub('d', 'Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
       H.q(5, 'A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.', { keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + figQ5() + '</div>', 3000, { h: 20 }),
-        H.cell('<div>' + t('How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
+        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge there are 4 cubes: 2 corners and ____ cubes between them. On one face, the cubes that are not on an edge make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
       H.q(6, 'Container A is full of water. Tank B is empty.', { keepNext: true }),
       H.fig(figQ6()),
       H.sub('a', 'How many litres of water are in container A?   __________ ℓ'),

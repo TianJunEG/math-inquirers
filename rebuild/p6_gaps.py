@@ -15,7 +15,7 @@ def short(a,limit=215):
 
 def sneak_slide(L,g):
     body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. Show your answer only to your tutor: own paper held up to them, or a private chat message.</p>'
-    top=270
+    top=330
     for i,(q,a) in enumerate(g['sneak']):
         lab='Puzzle 1: try it with objects, a drawing or counting' if i==0 else 'Puzzle 2: have a think'
         qh=math.ceil(len(q)/84)*44+30+30

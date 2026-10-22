@@ -46,7 +46,7 @@ module.exports = {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed puzzles: bar graphs and logic',
     objective: 'Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking.',
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
-    materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps.',
+    materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
     warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
     explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',

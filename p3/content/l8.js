@@ -84,7 +84,7 @@ module.exports = {
     n: 8, week: 4, session: 'B', title: 'Angle and Line Detectives', topic: 'Angles, Perpendicular and Parallel Lines',
     objective: 'Compare angles with a right angle using a folded-paper checker, count the angles at a point and the right angles in shapes and figures in an organised way, find a pattern in the counts, and find and draw perpendicular and parallel lines.',
     skills: 'Organised counting, pattern spotting, checking with a tool, explaining',
-    materials: 'Scrap paper to fold a right-angle checker, a ruler, mini whiteboards, square grid paper.',
+    materials: 'Scrap paper to fold a right-angle checker, a ruler, mini whiteboards, square grid paper. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Each child folds a right-angle checker on camera and goes on a 2-minute right-angle hunt at home; the tutor shares the grid slides to draw on. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Clock angles: is the angle between the hands at 3, 1, 5, 9, 10 and 4 o’clock a right angle, smaller or bigger? Show it with your arms. Then quick questions.',
     explore: 'Fold any scrap of paper twice to make a right-angle checker. Hunt for 3 right angles, 1 angle smaller and 1 angle bigger than a right angle. Why is the folded corner always a right angle?',

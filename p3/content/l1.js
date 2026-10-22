@@ -21,7 +21,7 @@ module.exports = {
     topic: 'Numbers to 10 000',
     objective: 'Read and build 4-digit numbers by place value; make the greatest, smallest, odd, even and closest numbers from digit cards; list every number in order; solve clue puzzles and continue number patterns.',
     skills: 'Place value to 10 000, renaming (15 hundreds = 1 thousand 5 hundreds), making a list in order, looking for a pattern, using clues one at a time, explaining "I have them all"',
-    materials: 'Digit cards 0–9 (two sets per child), a place value mat (Th H T O), mini whiteboards, a 10-sided die or a bag of digit cards 0–9 for the warm-up game.',
+    materials: 'Digit cards 0–9 (two sets per child), a place value mat (Th H T O), mini whiteboards, a 10-sided die or a bag of digit cards 0–9 for the warm-up game. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Children cut out the digit cards at the back of the workbook (or write 0–9 on small paper squares) and draw a Th H T O mat on paper. The tutor draws the digits on camera.',
     warmup: 'Biggest number wins: the tutor draws four digits one at a time; children write each one in Th, H, T or O straight away and cannot move it. The biggest number scores a point. Then play for the smallest.',
     explore: 'Pairs use the cards 2, 4, 6 and 8 to make every 4-digit number between 4000 and 6000, then find the one closest to 5000.',

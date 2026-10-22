@@ -48,7 +48,7 @@ module.exports = {
     n: 4, week: 2, session: 'B', title: 'Model Makers', topic: 'Word Problems: Bar Models',
     objective: 'Draw bar models for part-whole, comparison, times-as-many and before-and-after word problems, and use them to solve two-step problems and check the answers.',
     skills: 'Draw a model, before and after, look for what stays the same, check the answer',
-    materials: 'Multilink cubes (about 30 per pair), strips of squared paper, scissors, mini whiteboards and markers.',
+    materials: 'Multilink cubes (about 30 per pair), strips of squared paper, scissors, mini whiteboards and markers. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Tutor builds the bars on a shared slide. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
     warmup: 'Arm bars. The tutor reads a sentence such as "Ali has 5 more than Ben". Children show the two bars with their hands, then draw them on whiteboards in 10 seconds.',
     explore: 'Cube towers. Pairs build two towers with 20 cubes altogether where one tower has 4 more cubes than the other. Then two towers with 20 cubes where one is 3 times as tall as the other. Then they draw each pair of towers as bars.',

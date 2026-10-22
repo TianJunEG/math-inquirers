@@ -57,7 +57,7 @@ module.exports = {
     topic: 'Addition and Subtraction',
     objective: 'Find missing digits in 4-digit addition and subtraction by working column by column from the ones, check subtraction by adding, work backwards in magic squares and number pyramids, and use guess, check and improve for digit-card and letter puzzles.',
     skills: 'Column addition and subtraction with regrouping, using the opposite operation (work backwards), guess and check then improve, reasoning about carrying, explaining "this is the only answer"',
-    materials: 'Digit cards 0–9 (one set per child), mini whiteboards, a printed 3 × 3 grid, counters or small paper squares to move around.',
+    materials: 'Digit cards 0–9 (one set per child), mini whiteboards, a printed 3 × 3 grid, counters or small paper squares to move around. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Children use the cut-out digit cards at the back of the workbook (or paper squares numbered 0–9) and draw the grids on paper. Share the screen for the column sums and write on them.',
     warmup: 'Make 1000: the tutor shows a number (350, 720, 105, 999, 460, 75); children write the number that makes 1000 with it.',
     explore: 'Pairs use the digit cards 1 to 9, each once, to make a sum: 3-digit number + 3-digit number = 3-digit number. They find as many as they can and look for what is always true.',

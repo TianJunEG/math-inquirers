@@ -67,13 +67,13 @@ module.exports = {
     n: 7, week: 4, session: 'A', title: 'Area Architects', topic: 'Area and Perimeter',
     objective: 'Find the area and perimeter of figures made of squares and rectangles, find every rectangle with a given perimeter by listing in order, and use “change the shape” (push the steps out; cut up or fill in) to find perimeters and areas quickly.',
     skills: 'Systematic listing, changing the shape, spatial reasoning, explaining',
-    materials: '12 square tiles (or 12 squares cut from 1 cm grid paper) per child, 1 cm grid paper, mini whiteboards, a ruler.',
+    materials: '12 square tiles (or 12 squares cut from 1 cm grid paper) per child, 1 cm grid paper, mini whiteboards, a ruler. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Children cut 12 squares from squared paper (or draw on squared paper) and hold up their rectangles to the camera; the tutor shares a grid slide to draw on.',
     warmup: 'Area or perimeter? The tutor reads a job (fence a garden, tile a floor). Children trace a finger round the edge for perimeter or wipe a flat palm for area. Then quick questions on squares and rectangles.',
     explore: 'Use exactly 12 squares to make every different rectangle. Record the length, breadth and perimeter of each. Which has the longest perimeter? The shortest?',
     mini: 'List rectangles with a perimeter of 20 cm in order (length + breadth = 10). Push the steps of a staircase out to see it has the same perimeter as a rectangle; watch out for dents. Find the area of an L-shape two ways: cut it into rectangles, or fill in the corner and take it away. Before page 1: a square with the same perimeter as a rectangle. Before page 2: what happens to the perimeter when one square is added.',
     share: 'Two gardens have the same perimeter. Must they have the same area? Give an example.',
-    exit: { q: 'A rectangle has a perimeter of 16 cm. Its length is 5 cm. What is its area?', a: '15 cm² (breadth 3 cm because 5 + 3 = 8, half of 16)' },
+    exit: { q: 'A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?', a: '8 cm² (breadth 2 cm because 4 + 2 = 6, half of 12)' },
     mistakes: ['Mixing up area and perimeter, or writing cm for an area (it is cm²).', 'Counting the squares along the edge instead of the edges (for perimeter, count the sides of the squares, not the squares).', 'Pushing out the sides of a shape with a dent: the two walls of a dent must be added on.'],
     extension: 'Find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (11 by 1, 10 by 2, 9 by 3, 8 by 4, 7 by 5, 6 by 6; the 6 by 6 square, 36 cm²)',
     key: [
@@ -173,6 +173,7 @@ module.exports = {
       H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. Hint: first walk round the rectangle. What is the area of the square?   ____________ cm²', { after: 60 }),
 
       H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure. Hint: you can cut the figure into two rectangles.', { pb: true, before: 0, keepNext: true }),
+      H.p('How to find the missing sides: the top part is 6 cm but the bottom is 10 cm, so the step across is 10 − 6. The left side is 7 cm but the right side is 4 cm, so the step down is 7 − 4.', { after: 20 }),
       side(q3Fig(), H.sub('', 'Missing sides:  ____ and ____') + H.sub('a', 'Area = __________ cm²') + H.sub('b', 'Perimeter = __________ cm')),
       H.q(5, 'Look at this staircase.', { keepNext: true }),
       side(q4Fig(), H.sub('a', 'What is its area?   ________ cm²') + H.sub('b', 'What is its perimeter?   ________ cm')),

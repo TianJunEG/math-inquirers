@@ -4,7 +4,7 @@ module.exports = {
     n: 9, week: 5, session: 'A', title: 'Measure and Money Masters', topic: 'Length, mass, volume, money and time',
     objective: 'Change compound units (m and cm, kg and g, ℓ and ml, $ and ¢) to one unit to compare, add and subtract; plan a budget; find durations and start and end times by drawing a time line, in 12-hour and 24-hour time.',
     skills: 'Converting units, comparing, budgeting, drawing a time line, working backwards, explaining',
-    materials: 'Party menu cards (one per pair), play money, a measuring tape or metre ruler, a kitchen scale and a measuring jug if available, a clock with movable hands, mini whiteboards.',
+    materials: 'Party menu cards (one per pair), play money, a measuring tape or metre ruler, a kitchen scale and a measuring jug if available, a clock with movable hands, mini whiteboards. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
     online: 'Show the menu card on screen; children use paper and pencil (play money optional). Pairs work in breakout rooms and type their best party plan in the chat.',
     warmup: 'Name that unit: the tutor names an object and a number (a bus is 12 __ long); children write the best unit (m, cm, km, g, kg, ml or ℓ) on whiteboards. Then 5 quick questions: unit changes and a 24-hour time.',
     explore: 'Party planner. Pairs have $20 to plan a party for 8 friends from a menu card (pizza $8.90, chicken wings $6.50, curry puffs $4.20, fruit punch 2 ℓ $3.15, cupcakes $5.75, balloons $2.40). Each friend drinks 250 ml of punch. Buy at least 2 ℓ of punch (any number of bottles) and at least one food. You may buy more than one of an item. Spend as close to $20 as you can. Can you spend exactly $20?',
