@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const ST = require('./stories.json');
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -72,6 +73,10 @@ const doo = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'DO     ' :
 const ask = (rows, h1c, h2c) => { G.push(tbl([4600, 5300], [row([hd(h1c || 'Ask', 4600), hd(h2c || 'Expect', 5300)]), ...rows.map(r => row([c2(r[0], 4600), c2(r[1], 5300)]))])); G.push(gap(40)); };
 const stuck = (lines) => lines.map(x => String(x).replace(/^Stuck( on [^:]{0,40})?:\s*/i, '')).forEach((s, i) => G.push(p([t(i === 0 ? 'IF STUCK   ' : '                ', { bold: true, size: 19, color: 'A61C00' }), t(s, { size: S })], { after: 40, indent: { left: 1300, hanging: 1300 }, line: 280 })));
 
+G.push(h1('Level 4 stories: the mathematicians', true));
+G.push(tx('Each lesson has an optional 2-minute Story break at the brain break (after the mini-lesson, before the worksheet): one slide with a short true story and a Try it question, a Story corner box on the workbook page that every child reaches (the Investigation and Looking back page), and a line in the script. Skip it whenever time is short. Stories marked \u201caccounts say\u201d or with uncertain dates are labelled as such on purpose. Dates for people from long ago are estimates.'));
+G.push(tbl([700, 2100, 2600, 1700, 2800], [row([hd('Lesson', 700), hd('Person', 2100), hd('Country', 2600), hd('Years', 1700), hd('Link to the lesson', 2800)]), ...ST.map(s => row([c2(String(s.n), 700, { align: AlignmentType.CENTER, bold: true }), c2(s.name, 2100, { bold: true }), c2(s.country, 2600), c2(s.years, 1700), c2(s.link, 2800)]))]));
+G.push(tx('Safeguarding and tone: offer the story and the Try it question to the whole group, never to one child by name. Children may pass. No scores or tallies. Keep the Start here / Think harder / Go further names.', { before: 60, size: 19 }));
 G.push(h1('How to use the scripts', true));
 G.push(tx('Every lesson below is a minute-by-minute script. The slides match it: one slide or two for each part. You do not have to say the words exactly, but keep the questions, because the questions are what makes children think.'));
 G.push(tbl([1500, 8400], [
@@ -137,7 +142,8 @@ L.lessons.forEach(l => {
   l.mistakes.forEach(m => G.push(bu(m)));
 
   G.push(seg('30–34 min', 'Brain break'));
-  doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
+  doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes (or two minutes of movement and then the optional story below).']);
+  { const st = ST[l.n - 1]; doo(['Story break (optional, 2 minutes): today\u2019s mathematician is ' + st.name + ' (' + st.country + ', ' + st.years + '). ' + st.link + ' Show the Story break slide (it follows the Brain break slide), read the story aloud or ask a volunteer, then offer the Try it question to the whole group. Nobody is marked or ranked.' + (st.label ? ' The story says \u201caccounts say\u201d on purpose: do not turn it into a certain fact.' : ''), 'To skip: say \u201cWe will keep this story for another day\u201d and go straight to the worksheet. Nothing later depends on the story. Try it answer: ' + st.a]); }
 
   G.push(seg('34–80 min', 'Worksheet (pairs, then alone)'));
   doo(['Minute 34: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 34 to 50: pairs work together on the first page (online, allow about 2 minutes to move into and out of breakout rooms, or run page 1 as a whole-group screen-share). Minutes 50 to 53: check page 1 together. Minutes 53 to 58: the short teaching before page 2. Minutes 58 to 76: each child works alone on the second page. Minutes 76 to 80: check page 2 together.']);
@@ -169,6 +175,7 @@ L.lessons.forEach(l => {
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
   G.push(p([t('Investigation  ', { bold: true, size: 20 }), t(l.gaps.invest.head + ' (' + l.gaps.invest.kind.trim() + ') Easy first step: ' + (l.gaps.invest.easy || '') + '  Model answer: ' + l.gaps.invest.key, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
   G.push(p([t('Go further  ', { bold: true, size: 20 }), t(l.gaps.go2.q + ' ' + l.gaps.go2.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(p([t('Story corner try-it  ', { bold: true, size: 20 }), t(ST[l.n - 1].name + ': ' + ST[l.n - 1].q + ' Answer: ' + ST[l.n - 1].a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
   G.push(p([t('Sneak-peek puzzles  ', { bold: true, size: 20 }), t(l.gaps.check.map((x, i) => '(' + (i + 1) + ') ' + x.a).join('  '), { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 

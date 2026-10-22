@@ -154,7 +154,7 @@ def story_slide(n):
     st = _story(n); ID = f'p4l{n}'
     body = (h2('Story break: ' + st['name'], 60)
             + f'<p style="font-size:30px;font-weight:700;color:{TEAL}">{E(st["country"])}  •  {E(st["years"])}</p>'
-            + card(p(st['story'], 37, 600), WHITE, 'padding:26px 36px')
+            + card(p(st['story'], 36, 600), WHITE, 'padding:26px 36px')
             + f'<div style="background:{SOFT};border:3px solid {YEL};border-radius:24px;padding:18px 36px;display:flex;flex-direction:column;gap:6px">'
               f'<p style="font-size:28px;font-weight:800;color:{TEAL};letter-spacing:2px">TRY IT (OPTIONAL)</p>{p(st["q"], 34, 700)}</div>')
     legend = ''

@@ -21,21 +21,22 @@ def _story(n):
 def story_slide_html(n,st):
     """Story break slide (optional, 2 minutes, skippable) placed right after the brain break slide, before the worksheet."""
     sub=f"{st['yshort']}   •   {st['cshort']}"+(f"   •   also spelled {st['also'].replace('also spelled ','')}" if st['also'] else '')
-    body=h2('Story break: '+st['short'])+p(sub+'   •   '+st['who'],30,600,MUTED)
-    left=(f'<div style="box-sizing:border-box;width:1110px;flex:none;background:{WHITE};border-radius:24px;padding:30px 40px;display:flex;flex-direction:column;gap:14px">'
-          f'<p style="font-size:33px;font-weight:600;line-height:1.36">{E(st["story"])}</p>'
-          +(f'<p style="font-size:26px;font-weight:700;line-height:1.3;color:{TEAL}">Good to know: {E(st["legend"])}</p>' if st['legend'] else '')+'</div>')
-    right=(f'<div style="box-sizing:border-box;width:522px;flex:none;background:{SOFT};border-radius:24px;padding:28px 34px;display:flex;flex-direction:column;gap:12px">'
+    body=h2('Story break: '+st['short'],60)+p(sub,28,700,MUTED)
+    left=(f'<div style="box-sizing:border-box;width:1110px;flex:none;background:{WHITE};border-radius:24px;padding:26px 38px">'
+          f'<p style="font-size:33px;font-weight:600;line-height:1.36">{E(st["story"])}</p></div>')
+    right=(f'<div style="box-sizing:border-box;width:522px;flex:none;display:flex;flex-direction:column;gap:16px">'
+           f'<div style="background:{SOFT};border-radius:24px;padding:24px 32px;display:flex;flex-direction:column;gap:10px">'
            f'<p style="font-size:26px;font-weight:800;letter-spacing:2px;color:{TEAL}">TRY IT  (OPTIONAL)</p>'
-           f'<p style="font-size:30px;font-weight:600;line-height:1.3">{E(st["q"])}</p>'
-           f'<p style="font-size:26px;font-weight:700;color:{MUTED}">Have a go, or just listen. Pass is always fine.</p></div>')
+           f'<p style="font-size:28px;font-weight:600;line-height:1.3">{E(st["q"])}</p></div>'
+           +(f'<div style="background:{WHITE};border:3px solid {TEAL};border-radius:24px;padding:16px 26px"><p style="font-size:26px;font-weight:700;line-height:1.3;color:{TEAL}">Good to know: {E(st["legendKid"])}</p></div>' if st['legendKid'] else '')
+           +'</div>')
     body+=f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
     notes=('STORY BREAK, optional and skippable, about 2 minutes, inside the brain break (minutes 33 to 37). Do the stretch and drink first. '
       'SKIP IT if you are short of time or the group needs the full break: say "we will skip the story today" and click on to the worksheet at minute 37; nothing else depends on it. '
       f'1) Say: "Meet a mathematician: {st["short"]}." Read the story aloud slowly (about one minute), or let a volunteer read it. Do not add dialogue, feelings or scenes that are not in the story. '
-      +(f'LABEL (keep it in your voice): {st["legend"]} ' if st['legend'] else '')
+      +(f'LABEL (keep it in your voice; the slide shows the child version): {st["legend"]} ' if st['legend'] else '')
       +f'2) Link to today: {st["link"]} '
-      '3) The Try it is an OPTIONAL question: "Have a go in your head or on paper, or just listen. Pass is always fine." Give about 30 seconds. Volunteers only; no cold-calling, nobody is marked, no tally. '
+      f'Who: {st["who"]} 3) The Try it is an OPTIONAL question: "Have a go in your head or on paper, or just listen. Pass is always fine." Give about 30 seconds. Volunteers only; no cold-calling, nobody is marked, no tally. '
       f'ANSWER (for you; show it only after children have had a go): {st["a"]} '
       f'Confidence in the facts: {st["confidence"]}. Researched sources are listed in docs/stories/final_p5.json. Then: "Back to our seats, workbook out." (The same story is a small box on the Investigation page of the workbook, with no answer.)')
     return sec(f'p5l{n}-story','33–37 MIN  •  OPTION',body,notes)

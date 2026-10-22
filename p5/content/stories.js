@@ -27,6 +27,8 @@ const SHORT = { 7: 'Adam Ries' };
 // Short place and date labels for the slide and the workbook box (the guide table uses the full text from the JSON)
 const CSHORT = { 2: 'England and the United States', 3: "England and Charlemagne's court", 8: 'Iran and the United States', 9: 'Baghdad (today Iraq)', 10: 'Hungary, Switzerland and the United States' };
 const YSHORT = { 4: '3rd century CE', 5: 'about 287 to about 212 BC' };
+// Child-facing version of the legend note when the research note has a tutor-only part
+const LEGEND_KID = { 7: 'Sources give his birth year as 1492 or 1493.' };
 const ALSO = { 7: 'also spelled Adam Riese' };
 // Corner-box blurbs for the workbook (2 to 3 sentences, every fact taken from the researched story)
 const BLURB = {
@@ -52,7 +54,7 @@ RAW.forEach(r => {
     story: fmt(o.story ? o.story(r.story) : r.story),
     link: fmt(o.link || r.link_to_lesson),
     q: fmt(o.q || r.try_it.q), a: fmt(o.a || r.try_it.a),
-    legend: r.legend_note || '', confidence: r.confidence,
+    legend: r.legend_note || '', legendKid: LEGEND_KID[r.lesson] || r.legend_note || '', confidence: r.confidence,
     blurb: BLURB[r.lesson]
   };
 });

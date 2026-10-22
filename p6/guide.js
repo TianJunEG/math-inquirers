@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const STORIES = require('./content/stories.json');
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -135,6 +136,8 @@ L.lessons.forEach(l => {
 
   G.push(seg('35–40 min', 'Brain break'));
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
+  { const st = STORIES[String(l.n)];
+    doo(['Story break (optional, 2 minutes): during the break, show the “Story break: ' + st.name + '” slide (' + st.country + ', ' + st.years + '). Read the story aloud, or ask a volunteer to read it. Link to today: ' + st.link + ' Then offer the Try it as an optional thought, with no pressure and no marks: ' + st.tryit + ' Answer for you (do not show it unless the group asks): ' + st.answer + (st.legend ? ' ' + st.legend : '') + ' To skip: if the lesson is running late or the group needs a rest, click straight on past the slide. Nothing later depends on it. Never pick a child to answer; “pass” is always fine.']); }
 
   G.push(seg('40–75 min', 'Worksheet (pairs, then alone, then your choice)'));
   doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Follow the minute labels on the slides: short teaching slides come before page 1 and before page 2, pairs work together on page 1 (about 40 to 55), each child works alone on page 2 (about 55 to 72), and minutes 72 to 75 are the check together. Any child who has finished can choose Think harder, Go further or the Investigation (all printed in the workbook). The Finish page is for everyone.']);
@@ -166,7 +169,18 @@ L.lessons.forEach(l => {
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
   G.push(p([t('Investigation  ', { bold: true, size: 20 }), t(gp.inv.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(p([t('Story corner try-it  ', { bold: true, size: 20 }), t(STORIES[String(l.n)].name + ': ' + STORIES[String(l.n)].answer, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
+
+/* ---------- Level 6 stories ---------- */
+G.push(h1('Level 6 stories', true));
+G.push(tx('One optional two-minute Story break per lesson, shown during the brain break and echoed in the Story corner on the Finish page of the workbook. Try it questions are optional and unmarked.'));
+{ const ws = [700, 1700, 1700, 1400, 4400];
+  G.push(tbl(ws, [row([hd('Lesson', ws[0]), hd('Person', ws[1]), hd('Country', ws[2]), hd('Years', ws[3]), hd('Link to the lesson', ws[4])]),
+    ...Object.keys(STORIES).map(k => { const st = STORIES[k]; return row([c2(k, ws[0], { align: AlignmentType.CENTER }), c2(st.name, ws[1], { bold: true }), c2(st.country, ws[2]), c2(st.years, ws[3]), c2(st.link, ws[4])]); })])); }
+G.push(gap(60));
+G.push(h2('Telling the stories well'));
+['Tell them as stories, not as a quiz. Praise the idea or the checking, never “gifted” or “clever” compared with other children.', 'Keep the true and the legendary apart. Two stories need care. Lesson 1: the moth in the logbook is often told as “Hopper found the first computer bug”. In fact her colleagues found it, the log page was probably not written by her, and engineers used the word bug before 1947. Lesson 10: “the first computer program” is a popular label for Ada Lovelace’s notes, and historians debate that name and how much of the planning was hers.', 'Lessons 2 and 4 are drawn from medieval sources, so some details are still discussed by historians. The slides say only what the sources support. If a child asks something you do not know, say so and look it up together.', 'The answers to the Try it questions are in the speaker notes of each Story break slide, in the lesson script and in each lesson’s answer key.'].forEach(x => G.push(bu(x)));
 
 /* ---------- Tracker ---------- */
 G.push(h1('Progress tracker', true));

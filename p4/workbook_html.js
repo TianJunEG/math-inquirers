@@ -28,6 +28,9 @@ const investBlock = (g) => {
   out.push(...H.lines(iv.lines));
   return out;
 };
+const STORIES = require('./stories.json');
+// Story corner: small box on the Investigation + Looking back page (a page every child reaches), after Looking back. No answer on the child page (the answer is in the tutor guide answer key).
+const storyBox = (n) => { const st = STORIES[n - 1]; return `<div class="p" style="margin:12px 4px 0 4px;padding:6px 12px 8px;border:2.5px solid #1B2A49;border-radius:10px;background:#FFF9E5;break-inside:avoid"><div style="font-weight:700;color:#1F7A6F;font-size:15px">Story corner: ${esc(st.name)} <span style="font-weight:400;font-size:12.5px;color:#3B4A6B">${esc(st.country)}, ${esc(st.years)}</span></div><div style="font-size:14px;line-height:1.35;margin:3px 0 4px">${esc(st.blurb)}</div><div style="font-size:14px;line-height:1.35"><b>Try it (optional):</b> ${esc(st.q)}</div></div>`; };
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const lab = () => p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 });
@@ -38,12 +41,14 @@ const extra = (n) => {
   out.push(banner('Investigation  and  Looking back'));
   out.push(...investBlock(L.content[n - 1].gaps));
   out.push(reflectBox());
+  if (n !== 8) out.push(storyBox(n)); // Lesson 8's Investigation page is full: its Story corner sits at the foot of its Think harder page
   // page 4: Think harder
   out.push(p('', { pb: true, after: 0 }));
   out.push(lab());
   out.push(banner('Think harder'));
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Choose these any time, or take them home.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  if (n === 8) out.push(storyBox(n));
   // page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(lab());
