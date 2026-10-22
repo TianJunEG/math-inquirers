@@ -74,7 +74,7 @@ C=json.loads(subprocess.run(['node','-e','process.stdout.write(JSON.stringify(re
 L=C['lesson']; DK=C['deck']; QB=C['qbank']; SC=C['script']
 
 # ---------------- 1. title ----------------
-put('p6l9-title',title_slide('p6l9-title',9,5,'Data Detectives','Averages and data  •  lists, adding up, the mean',DK['today'],
+put('p6l9-title',title_slide('p6l9-title',9,5,'Data Detectives','Averages and data  •  lists, adding up, the average (mean)',DK['today'],
  f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan: warm-up 0 to 10 (quick-eye mean, then quick questions), explore at the computer 10 to 25 (class data in a Scratch list), teaching 25 to 35 (click to reveal each step and answer; the mean program with a trace table), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. Before the lesson: make the starter project (one sprite, an empty list called data) and share its link, or let children build it from the code slide."))
 
 # ---------------- 2. warm-up game ----------------

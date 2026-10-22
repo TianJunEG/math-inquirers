@@ -106,7 +106,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome back, data detectives! Newspapers, games and sports scores all come with averages. Today we find out what the mean really is, how one number can trick it, and how a computer adds up a whole list in a blink.', 'Our rule today: work it out by hand first, then let the code test it. Notice it. Test it. Explain why.'],
+    hook: ['Welcome back, data detectives! Newspapers, games and sports scores all come with averages. Today we find out what the average (mean) really is, how one number can trick it, and how a computer adds up a whole list in a blink.', 'Our rule today: work it out by hand first, then let the code test it. Notice it. Test it. Explain why.'],
     warmIntro: ['Quick-eye mean! I will show five numbers for five seconds only. No working out: just write your best guess of the mean. This is a guess, so any estimate is welcome. There are no points.', 'How did you guess so fast? Who looked for a number in the middle and checked that the big ones and small ones balance?'],
     predict: ['Before we add anything up: the mean number of letters in our names. Will it be bigger or smaller than the number of letters in YOUR name? Write a prediction.', 'If our tutor joins with a 30-letter name, will the mean go up a little or a lot? Thumbs up for a lot, sideways for a little.'],
     exploreHints: ['Stuck on the hand calculation: add the values two at a time and write each running total, just like the variable total in the code.', 'Code says something strange: check that every value is in the list once, and that you divide by the length of the list, not by a number you typed.', 'Finished early: find a new value you could add that keeps the mean exactly the same. Test it in the program.'],
@@ -127,8 +127,8 @@ module.exports = {
     expAsk: [['Was your estimate close? How did you estimate?', 'Pick a value in the middle, then check that the values above it and below it roughly balance.'], ['What happened to the mean when 30 was added?', 'It went up, a lot, because 30 is far above every other value. One big value pulls the mean towards it.'], ['Did the program and your hand calculation agree?', 'They should. If not, look for a value typed twice or missed, or dividing by the wrong number.']],
     mini1: { head: 'Find the mean, then balance-check', body: ['Goals in 5 matches: 3, 0, 4, 1, 2.', 'Total: 3 + 0 + 4 + 1 + 2 = 10. There are 5 values (the 0 counts).', 'Mean = 10 ÷ 5. Check: above the mean and below the mean should balance.'], ans: '2. Above: +1 and +2. Below: −2 and −1. They balance.' },
     mini2: { head: 'Missing value: use the total', body: ['The mean of 4 test scores is 15. Three of them are 12, 18 and 14.', 'Total of all 4: 4 × 15 = 60.', 'Known: 12 + 18 + 14 = 44. Missing score = 60 − 44.'], ans: '16. A 5th score of 15 would keep the mean at 15.' },
-    keyHead: 'Key idea: mean = total ÷ how many',
-    keyBig: 'Mean = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
+    keyHead: 'Key idea: average (mean) = total ÷ how many',
+    keyBig: 'The average (mean) = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
     keySmall: 'One extreme value can pull the mean a long way. Then the median (middle value) or mode (most common) may describe a typical value better.',
     brk: 'Dice jumps. Roll two dice on screen: everyone does that many star jumps. Three rounds. What was the mean number of jumps per round?',
     ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes, Q4 a misleading mean (median and mode).',
@@ -175,7 +175,7 @@ module.exports = {
     const w4 = [1500, 1000, 1700, 1700];
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     return [
-      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 0, keepNext: true }),
+      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9.   The average (mean) is the total shared equally.', { before: 0, keepNext: true }),
       H.sub('a', 'What is the total?   ________          (b)  What is the mean?   ________'),
       H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }),
       H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____'),

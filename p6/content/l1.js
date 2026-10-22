@@ -160,7 +160,7 @@ module.exports = {
       { q: 'Matchstick triangles in a row. Pattern 1 is 1 triangle (3 sticks). Pattern 2 is 2 triangles side by side (5 sticks). Pattern 3 is 3 triangles (7 sticks). Use matchsticks or draw them. How many sticks does pattern 4 need?', a: '9 sticks (3, 5, 7, 9). Each new triangle adds 2 sticks, because it shares one side with the triangle before it.' },
       { q: 'Write out the terms one by one to find the 10th term of 7, 10, 13, 16, …', a: '34 (7, 10, 13, 16, 19, 22, 25, 28, 31, 34; the rule 3n + 4 gives 3 × 10 + 4 = 34 too)' },
       { q: 'Write the next two terms: 40, 36, 32, 28, …', a: '24, 20 (take away 4)' },
-      { q: 'What does this code say?  set n to 10, then repeat 3 [change n by 4], then say n.', a: '22 (10 + 4 + 4 + 4)' },
+      { q: 'This small program keeps a number called n. “set n to 10” means n starts as 10. “repeat 3 [change n by 4]” means add 4 to n, three times. “say n” shows what n is now. Write n after each repeat. What does it say at the end?', a: '22 (10 + 4 + 4 + 4)' },
       { q: 'A straight fence is 12 m long with a post every 4 m, including a post at each end. Draw it and count the posts. Then work out how many posts a 60 m fence needs.', a: '4 posts for the 12 m fence (3 gaps). The 60 m fence needs 16 posts: 60 ÷ 4 = 15 gaps, and there is one more post than gaps.' }
     ],
     stretch: [
@@ -174,7 +174,7 @@ module.exports = {
       { q: 'How many terms of 3, 7, 11, 15, … are less than 500?', a: '125. The rule is 4n − 1. The 125th term is 499 and the 126th is 503.' }
     ],
     challenge: [
-      { q: 'Pattern 1 is 1 tile, pattern 2 is a 2 by 2 square of tiles, pattern 3 is a 3 by 3 square. How many tiles are in pattern 10? How many more tiles does pattern 11 need than pattern 10?', a: '100 tiles. Pattern 11 has 121 tiles, so 21 more. The differences are 3, 5, 7, 9, …, so this is NOT a constant-difference sequence.' },
+      { q: 'The rule for a sequence is 5n + 2. Ali circles every 4th term (the 4th, 8th, 12th, … terms). Write the first three circled terms. Is the circled list a constant-difference sequence? Find the rule for the mth circled term and use it to find the 50th circled term.', a: '22, 42, 62 (the 4th, 8th and 12th terms). Yes: the difference is 20 (4 jumps of 5). The rule for the mth circled term is 20m + 2, so the 50th circled term is 1002 (check: it is the 200th term, 5 × 200 + 2 = 1002).' },
       { q: 'Ben counts 6, 11, 16, 21, … and Mei counts 83, 81, 79, 77, … They say their terms at the same time. When do they say the same number, and what is it?', a: 'At the 12th term they both say 61. The gap starts at 77 and closes by 7 each time (Ben +5, Mei −2): 77 ÷ 7 = 11 jumps after the 1st term. Check: 5 × 12 + 1 = 61 and 85 − 2 × 12 = 61.' },
       { q: 'The rule for a sequence is 6n − 4. Ben says every term is even. Is he right? Explain.', a: 'Yes. 6 × n is always even, and an even number take away 4 is even (2, 8, 14, 20, …).' },
       { q: 'Find the first term of 5, 8, 11, 14, … that is bigger than 1000. Which term is it? Then find the first term bigger than 1000 that ends in 0.', a: '1001, the 333rd term (3n + 2: the 332nd term is 998). The first one bigger than 1000 that ends in 0 is 1010, the 336th term (1001, 1004, 1007, 1010).' },

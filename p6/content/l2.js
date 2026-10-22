@@ -166,7 +166,7 @@ module.exports = {
       { q: 'A number between 20 and 40 leaves remainder 1 when divided by 2, by 3 and by 4. Find both possible numbers.', a: '25 and 37. Each is 1 more than a multiple of 12.' }
     ],
     challenge: [
-      { q: 'What is the largest prime number below 200?', a: '199. Test 2, 3, 5, 7, 11 and 13 (14 × 14 = 196, 15 × 15 = 225): none of them divides 199.' },
+      { q: 'Find the smallest number with exactly 8 factors, and then the smallest ODD number with exactly 8 factors. Why is the odd one so much bigger?', a: '24 (1, 2, 3, 4, 6, 8, 12, 24) and 105 (1, 3, 5, 7, 15, 21, 35, 105). 8 factors need either three different primes multiplied (like 3 × 5 × 7) or a prime cubed times another prime (like 2 × 2 × 2 × 3). With only odd primes the smallest choices are 3 × 5 × 7 = 105 (3 × 3 × 3 × 5 = 135 is bigger), but one factor of 2 makes the number much smaller.' },
       { q: 'Ali multiplies two different primes and gets 91. Mei multiplies three different primes and gets 105. Which primes did each of them use?', a: 'Ali: 7 × 13. Mei: 3 × 5 × 7.' },
       { q: 'Find the smallest number that can be divided exactly by 2, 3, 4, 5 and 6.', a: '60. It needs 2 × 2 (for 4), a 3 and a 5: 2 × 2 × 3 × 5 = 60.' },
       { q: '1001 = 7 × 11 × 13. Use this to write 3003 and 5005 as products of primes.', a: '3003 = 3 × 7 × 11 × 13 and 5005 = 5 × 7 × 11 × 13.' },

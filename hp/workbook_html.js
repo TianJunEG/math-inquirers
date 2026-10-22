@@ -26,6 +26,7 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
     + row('Something I did well:', ln)
     + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
+    + row('Next time I will try:', ['drawing it', 'using objects', 'checking my answer', 'asking a question'].map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('', opt('I am still stuck (my tutor will come and help)') + opt('I would like to pass'))
     + `</div>`]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };

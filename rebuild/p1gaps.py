@@ -54,13 +54,14 @@ def build(D, n):
     rows = [('Something I did well', f'<span style="color:{MUTED}">write or draw one thing</span>'),
             ('The hardest part was ...', optrow(g['hard'] + ['something else'])),
             ('What helped me', optrow(['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'])),
+            ('Next time I will try ...', optrow(['drawing it', 'using objects', 'checking my answer', 'asking a question', 'something else'])),
             ('If you want', optrow(['I am still stuck (my tutor will come and help)', 'I would like to pass']))]
     body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Nobody reads it out.', TEAL, CREAM, 28)
     inner = ''.join(f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:34px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:28px;font-weight:600;line-height:1.5">{b_}</p></div>' for k, (a_, b_) in enumerate(rows))
     body += card(inner)
     notes = ('Minutes 88 to 90 (2 minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
              'It is never marked, never collected in front of the group and never read out; the tutor may look at it afterwards. If a child ticks "I am still stuck", check in during the open session next lesson (a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a direct message). '
-             'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. You can pass."')
+             'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. The "Next time I will try" row is optional and is never marked; at the start of the next lesson the tutor may say, to the whole group, "Today you could try drawing it, using objects or checking your answer" without naming anyone. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. Then tick one thing you might try next time, if you like. You can pass."')
     _w(D, p_ + 'reflect', sec(p_ + 'reflect', '88–90 MIN', body, notes))
 
 
