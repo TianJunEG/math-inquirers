@@ -85,7 +85,7 @@ def time_table():
     out = {}
     for n in range(1, 11):
         dj = json.load(open(f'{R}/split/p4l{n}/project/deck.json')); order = dj['order']
-        tot = {}; opt = 0; optmin = 0
+        tot = {}; opt = 0; optmin = 0; ideas = {}
         for i, sid in enumerate(order):
             h = open(f'{R}/split/p4l{n}/project/slides/{sid}.html').read()
             t = clean(re.sub(r'<aside[\s\S]*?</aside>', '', h))
@@ -94,7 +94,8 @@ def time_table():
             d = int(m.group(2)) - int(m.group(1)); c = cat_of(sid, order, i)
             tot[c] = tot.get(c, 0) + d
             if m.group(3): opt += 1; optmin += d
-        out[n] = (tot, opt, optmin)
+            elif c in ('mini-lesson', 'teach before page 1', 'teach before page 2'): ideas[c] = ideas.get(c, 0) + 1
+        out[n] = (tot, opt, optmin, ideas)
     return out
 
 def time():
@@ -103,12 +104,16 @@ def time():
             'teach before page 2', 'page 2 (solo)', 'check page 2', 'talk time', 'exit ticket', 'reflection']
     print('L |', ' | '.join(cols), '| sum | optional slides / min')
     for n in range(1, 11):
-        tot, opt, om = T[n]
+        tot, opt, om, ideas = T[n]
         print(n, '|', ' | '.join(str(tot.get(c, 0)) for c in cols), '|', sum(tot.get(c, 0) for c in cols), '|', opt, '/', om)
-    # listening/waiting for a fast-tracked HIGH child: mini-lesson + teach-before + both page checks + key idea
-    print('\nL | minutes tutor-led whole-group teaching or answer-checking (mini-lesson + key + teach-before pages + page checks) | solo/pair working minutes (page1+page2) | minutes of page work per worksheet sub-item')
+    print('\nL | whole-group minutes on core-level content (quick Qs + mini-lesson + key + teach-before + both page checks + warm game) | page work minutes | non-optional teaching slides in mini-lesson / before page 1 / before page 2 | minutes per teach-before-page-2 idea')
+    for n in range(1, 11):
+        tot, opt, om, ideas = T[n]
+        wg = sum(tot.get(c, 0) for c in ['warm game', 'quick questions', 'mini-lesson', 'key idea', 'teach before page 1', 'teach before page 2', 'check page 1', 'check page 2'])
+        pw = tot.get('page 1 (pairs)', 0) + tot.get('page 2 (solo)', 0)
+        k = ideas.get('teach before page 2', 0)
+        print(n, '|', wg, '|', pw, '|', ideas.get('mini-lesson', 0), '/', ideas.get('teach before page 1', 0), '/', k, '|', round(tot.get('teach before page 2', 0) / k, 1) if k else '-')
     return T
-
 
 # ---------------------------------------------------------------- DIAG
 from fractions import Fraction

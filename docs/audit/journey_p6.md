@@ -4,7 +4,7 @@ Date 2026-10-22. Read-only review. Files written: this report and `docs/audit/jo
 
 ## 0. Method, scale and limits (read first)
 
-- **What I read:** `docs/gifted_research.md`, `docs/levels_and_placement.md`, `p6/SPEC.md`, all ten `p6/content/lN.js` (lesson, script, deck, qbank, workbook, plus `gaps.json`: warm-up check, open investigation, reflection line), `p6/workbook_html.js`, `diag/content/p6.json`, `diag/build_diag.py`, and the printed P6 placement PDF. I also read the text and speaker notes of every one of the 285 P6 slides (`split/p6l1..10`), with minute labels, and rendered workbook pages 3, 5, 6 and 7 (L1, L2) to see what a child actually sees. The earlier `audit_p6.md` covered correctness; I did not repeat it, but my own checks of the diagnostic answers all passed (Part 2).
+- **What I read:** `docs/gifted_research.md`, `docs/levels_and_placement.md`, `p6/SPEC.md`, all ten `p6/content/lN.js` (lesson, script, deck, qbank, workbook, plus `gaps.json`: warm-up check, open investigation, reflection line), `p6/workbook_html.js`, `diag/content/p6.json`, `diag/build_diag.py`, and the printed P6 placement PDF. I parsed all 281 P6 slides (`split/p6l1..10`) for minute labels and word counts, read the full text and speaker notes of the check, warm-up, explore, set-up, teaching, worksheet, stretch, challenge, talk, exit, reflect and showcase slides for L1, L3, L5, L6, L7, L8 and L10 (and the check and reflect slides of the rest), and rendered workbook pages 3, 5, 6 and 7 (L1, L2) to see what a child actually sees. The earlier `audit_p6.md` covered correctness; I did not repeat it, but my own checks of the diagnostic answers all passed (Part 2).
 - **These are simulations, not observations.** No child used the material. Every score is my judgement from the text. The diagnostic probabilities in Part 2 rest on per-question success rates that I estimated (stated in the script); treat them as scenarios, not data.
 - **Scale deviation:** the brief says "5 best" and also "3 = just right" for difficulty fit. A mean of six scores needs one direction, so **I score fit 5 = just right** and write **H (too hard)** or **E (too easy)** in the note.
 - **Score order everywhere:** P = can participate, D = difficulty fit, F = fun and interest, C = confidence and self-esteem, M = motivation, S = social/online experience.
@@ -56,7 +56,7 @@ Moments: low child at min 2 (check) feels stupid; at min 56-59 (`teachtrace`, `t
 |---|---|---|
 | LOW | 4 3 4 3 3 3 | Best-pitched lesson: `warm1` five cities ("Nine is bigger than seven, so which is colder?") invites a wrong-then-right argument; ws1 is paper-only; Q1 reading A, B, C off the line is a first-3-minute win; Q6 "find Siti's bug" normalises error. Lost: check Q1 (freezer -18 to fridge 4) is public; Scratch minus key trap (slides use U+2212, a pasted minus is rejected, `lesson.online`); Q4(e)(f) double negatives. (slightly H) |
 | MID | 5 4 4 4 4 4 | Number line + "split the jump at 0" + "a - b is the jump from b to a" are clear; every question has a context (Harbin, lift, diver). |
-| HIGH | 5 3 4 4 4 3 | Core is E; Q4(e)(f) and Think Harder 7-9 fit. Challenge 9 ("no level 0, do not use a number line with 0") contradicts wb Q6 on the page before ("0 = ground floor"): a justified argument in a lesson about not being confused. |
+| HIGH | 5 3 4 4 4 3 | Core is E; Q4(e)(f) and Think Harder 1-4 fit. The printed Challenge 7 (qbank item 9: "no level 0, do not use a number line with 0") contradicts wb Q6 two pages earlier ("0 = ground floor"): a justified argument in a lesson about not being confused. |
 
 #### Lesson 4: Algebra Machines
 | | P D F C M S | Evidence |
@@ -70,7 +70,7 @@ Moments: low child at min 2 (check) feels stupid; at min 56-59 (`teachtrace`, `t
 |---|---|---|
 | LOW | 3 2 4 3 3 3 | Win: bubble tea list on paper (`explore1`); Q5 grid "left + below" addition is mechanical and doable. Lost: `warm1` "pages 15 to 40" race; the starter "Every Order" `.sb3` must be loaded from chat and a second repeat dragged inside the first; Q1(c) "fewest extra shorts for at least 40 outfits"; ws2 Q4-Q6 about 25 answers in 11 min (`ws2` 61-72). (H) |
 | MID | 4 3 5 4 4 4 | Handshakes "is 5 x 5 right?" is the high point; fix-first-choice listing makes the multiplication rule obvious; the nested-loop trace (Q3) is the one hard moment. |
-| HIGH | 5 3 5 4 4 4 | Handshake program with `a < b`, grid routes (discovers the add-up pattern), Think Harder 5 (hexagon diagonals). Core is E. |
+| HIGH | 5 3 5 4 4 4 | Handshake program with `a < b`, grid routes (discovers the add-up pattern), Think Harder 2-3 (3-digit numbers, a six-team league). Core is E. |
 
 #### Lesson 6: Fair or Unfair?
 | | P D F C M S | Evidence |
@@ -82,16 +82,16 @@ Moments: low child at min 2 (check) feels stupid; at min 56-59 (`teachtrace`, `t
 #### Lesson 7: Turtle Geometry
 | | P D F C M S | Evidence |
 |---|---|---|
-| LOW | 2 1 3 2 3 2 | Lost early: `setup` (10-11 min, 125 words: Pen extension, 4 set-up blocks, x:-50 y:100, move sizes, the clockwise arrow); "Turtle says" standing on camera; wb page 1 opens with a paragraph of set-up plus a 5-row table with new words (turn, inside angle, total turning); ws2 Q3-Q5 is a 9-row trace, a 10-cell table and "360 x times round / points" (about 45 answers in 17 min). Typing 60 for the triangle is a designed safe surprise. (very H) |
+| LOW | 2 1 3 2 3 2 | Lost early: `setup` (10-11 min, 125 words: Pen extension, 4 set-up blocks, x:-50 y:100, move sizes, the clockwise arrow); "Turtle says" standing on camera; wb page 1 opens with a paragraph of set-up plus a 6-row table with new words (turn, inside angle, total turning); ws2 Q3-Q5 is a 9-row trace, a 10-cell table and "360 x times round / points" (about 45 answers in 17 min). Typing 60 for the triangle is a designed safe surprise. (very H) |
 | MID | 3 3 4 3 4 4 | Drawing is satisfying; "predict then run" for pentagon and hexagon; heavy vocabulary but `teachstar`, `we3` help; ws2 is tight. |
-| HIGH | 4 4 5 4 5 4 | Stars and the rosette are the program's most visual maths; "only 1 twelve-point star" (Challenge) is excellent. |
+| HIGH | 4 4 5 4 5 4 | Stars and the rosette are the program's most visual maths; the printed Challenge 5 ("design your own star, p and k share no common factor") is excellent. |
 
 #### Lesson 8: Secret Codes
 | | P D F C M S | Evidence |
 |---|---|---|
 | LOW | 4 2 4 2 3 3 | Win: `warm1` clock jumps (everyone answers on boards); code-strip explore is mechanical spy-fun; wb opens with a printed A-Z number strip. Lost: Q1(b)(c)(f) need 41 mod 12, 4 - 9 + 12 and 100 mod 26 mentally; Q2(b) decode with wrap; Q4 crack = decode 25 letters; the Scratch cipher needs the `.sb3` "alphabet" starter; longest wb text of the level (452 words, incl. a 10-line Python corner). (H) |
 | MID | 4 3 5 4 5 4 | "What happens at X, Y, Z?" discovery; Q4 "which 3-letter word appears twice -> THE" is a true detective moment; "shift 26 does nothing" talk. |
-| HIGH | 5 4 5 4 5 4 | Best fit of any cell: Q4 crack, Think Harder "shift 20", Challenge "Mei's x2 code cannot always be decoded", the investigation "two shifts that sum to 26", ROT13. |
+| HIGH | 5 4 5 4 5 4 | Best fit of any cell: Q4 crack, Think Harder 4 ("decode BYFFI, shift 20"), printed Challenge 5 ("write a message and explain how a friend could crack it") and 7 (jumps of 5 vs 4 on a clock), the investigation "two shifts that sum to 26", ROT13. |
 
 #### Lesson 9: Data Detectives
 | | P D F C M S | Evidence |
@@ -140,7 +140,7 @@ Moments: low child at min 2 (check) feels stupid; at min 56-59 (`teachtrace`, `t
 | 7 | L2 exit (a) "Is 133 prime?" | LOW | lost: 133 ÷ 7 in the head | use 111 (3 x 37) |
 | 8 | L2 ws2 (35 answers, 11 min), L5 ws2 (25), L6 ws2 (Q4 21 cells), L7 ws1/ws2 (45) | LOW | rushed | cut core by about a third, move the rest to Think Harder |
 | 9 | L3 `lesson.online` minus sign | LOW | lost: a pasted minus is rejected, the child thinks they are wrong | tutor says it out loud at min 10, and on the slide: "Type the minus key. Do not copy-paste." |
-| 10 | L3 Challenge 9 vs wb Q6 | HIGH | confusion: level 0 or not | label Challenge 9 "In some buildings there is no level 0" (and say Q6 uses 0) |
+| 10 | L3 printed Challenge 7 (qbank item 9) vs wb Q6 | HIGH | confusion: level 0 or not | prefix the challenge: "In some Singapore buildings there is no level 0. (Q6 on page 2 uses 0 for the ground floor.)" |
 | 11 | L4 `explore1` nested operator blocks | LOW | lost: drag-drop of reporter blocks | send a pre-built "Machine" project, child edits two numbers |
 | 12 | L5, L8, L9, L10 `.sb3` starters loaded "File, Load from your computer" | LOW | lost, left out: file must reach each child (chat file share), none exist in repo | ship files + 1 page "How to load" |
 | 13 | L7 `setup` slide, 125 words | LOW | lost: reading load, unexplained notation | split; see weak cell 1 |
@@ -164,7 +164,7 @@ Ties: L2-LOW and L4-LOW are both 2.50; ordered by severity.
 - `p6l7-setup` slide: replace the 125-word slide with: "Step 1. Click the blue Add Extension button (bottom left) and pick Pen. Step 2. Build these 4 blocks and keep them at the top of EVERY drawing." Move the stage-size explanation and the "sizes that fit" list to the notes; show the size on each slide where it is used.
 - Tutor sends a `Turtle start.sb3` that already contains the 4 set-up blocks (children load it).
 - wb page 1: add a 3-line box at the top: "**turn** = how far the turtle swings at a corner. **inside angle** = the angle inside the shape at that corner. **total turning** = all the turns added up."
-- wb Q3: pre-fill the first 3 rows of the 9-row trace ("The first 3 rows are done for you"). wb Q4: keep the 5-point star row filled and keep 9 and 20 points but make the 20-point row Think Harder.
+- wb Q3: pre-fill the first 3 rows of the 9-row trace ("The first 3 rows are done for you"). wb Q4: keep the 5-point row filled, the 9-point row as core, and move the 20-point row to Think Harder.
 - `warm1` "Turtle says": "Stand up, or sit and use your arm as the turtle's nose."
 
 **2. L10 LOW (2.33).** Cold calls, public scoring, a showcase with no exit ramp.
@@ -210,7 +210,7 @@ Common to all: the child predicts first, then something happens on screen that c
 - **Wait time for HIGH.** About 13 to 17 min of teach slides on ideas he often has, 5 min check-together, 7 min talk; fast track fixes some of it but moves the problem to 30 unsupported minutes with no feedback slot and an investigation nobody discusses. L9 is worst (core is PSLE revision).
 - **Guaranteed win in the first 10 minutes of the worksheet (LOW)?** Yes in L1 (Q1 table), L3 (Q1 read the line), L5 (Q1a 12), L6 (Q1a 3/8), L8 (Q1a 8 + 7), L9 (Q1 total and mean). Partly in L2 (Q1 31 and 1 are easy, 28 and 51 are not, and 1 is a trap). **No** in L4 (Q1 needs the rule from a table), L7 (page opens with set-up plus a 5-row table in new words), L10 (challenge round Q1 is a hexagon rule). So 6 of 10 yes, 1 partly, 3 no.
 - **Competition and public answers.** Race or points wording in `warm1` of L1, L2, L5, L9 and L10's team tally; "hold up together" every lesson; `warmIntro` timer in L6. For a child who is anxious about being wrong, the set of public moments is dense in the first 10 minutes.
-- **Scratch dependency.** The SPEC says a 10-minute Scratch warm-up video or handout is sent before lesson 1. I found none in `p6/`, `outputs/` or the Program Guide. Six starters (`Every Order`, the `alphabet` list project, the `data` list project, A-D starters) exist only as slide drawings (earlier audit item 7 says the tutor must build them). A child with little Scratch cannot take part in the min 10-25 explore in L1, L4, L5, L7. Participation (P) for LOW averages 3.3, the best of LOW's six scores, because maths entries are low-floor, but "can use the tool" is the unmeasured hidden prerequisite.
+- **Scratch dependency.** The SPEC says a 10-minute Scratch warm-up video or handout is sent before lesson 1. I found none in `p6/`, `outputs/` or the Program Guide. The starters for L5 (`Every Order`), L8 (`alphabet` list), L9 (`data` list) and L10 (A to D) exist only as slide drawings (earlier audit item 7 says the tutor must build them). A child with little Scratch cannot take part in the min 10-25 explore in L1, L4, L5, L7. Participation (P) for LOW averages 3.3, among LOW's better scores, because the maths entries are low-floor, but "can use the tool" is the unmeasured hidden prerequisite.
 - **Strategy feedback.** Mostly good: "praise the strategy, not the speed"; named characters (Ali, Ben, Mei) who are wrong in a way worth examining; "find the bug" items; sentence starters in Talk time. This is the best feature for confidence and is why LOW confidence is 2.4, not 1.5.
 
 ## 2. Part 2: the diagnostic check
