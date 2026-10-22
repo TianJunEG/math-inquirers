@@ -51,3 +51,6 @@ From the Term 2 pre-flight questions (docs/terms/l1_term2_preflight.md section 5
 
 ## 22 Oct 2026 (late): end-of-term check becomes "Mi's Challenge Quest"
 Owner chose option 2. The last lesson of each term keeps a 20-minute challenge slot, but it is a game, not a test: no scores or marks shown to the child, no ranking, no visible timer, no word "test" or "exam" on any child or parent page. Done in pairs or as a group quest with Mi (private paper still used for working); the tutor keeps private notes only, used for the parent report line and next-term group advice. Applies to Lesson 10, Lesson 20 and the same slot in later terms. Placement in the 90 minutes (after the break vs at the end) was left to the assistant: after the break unless the owner says otherwise.
+
+## 22 Oct 2026 (late): printed workbooks come with payment
+Owner: all workbooks are printed and given to the student upon payment; extension workbooks are not given (meaning of "extension workbooks" to be confirmed by the owner). Consequence for production: the combined term books (5 lessons each) are the standard issue for each paid term; printing and delivery are triggered by payment.
