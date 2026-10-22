@@ -46,8 +46,8 @@ def load(n):
 def names(n):
     v = LV[n]
     if n == 6:
-        return dict(short=f'P6 {v["age"]}', full=f'Ages 11-13 (finishing P6), maths + coding bridge', head='Ages 11-13 (finishing P6)', tag='Maths + coding bridge')
-    return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (finishing P{n})', head=f'{v["age"]} (finishing P{n})', tag='')
+        return dict(short=f'P6 {v["age"]}', full='Ages 11-13 (maths + coding bridge, after PSLE)', head='Ages 11-13 (maths + coding bridge, after PSLE)', tag='Maths + coding bridge')
+    return dict(short=f'P{n} {v["age"]}', full=f'{v["age"]} (builds on {v["long"]} maths)', head=f'{v["age"]} (builds on {v["long"]} maths)', tag='')
 
 
 def css():
@@ -96,27 +96,28 @@ def pages_of(path):
 
 
 # ============================================================ (a) QUESTION BANK
-TIERS = [('core', 'C', 'CORE', 'Core'), ('stretch', 'T', 'THINK HARDER', 'Think Harder'), ('challenge', 'X', 'CHALLENGE (non-routine: justify, find every way)', 'Challenge')]
+# Neutral tier labels (same as the workbook and the P1 bank). Nobody is placed in a tier; any child may try any tier.
+TIERS = [('core', 'S', 'START HERE (open with objects, drawing or counting)', 'Start here'), ('stretch', 'T', 'THINK HARDER (the lesson idea in a new setting)', 'Think harder'), ('challenge', 'G', 'GO FURTHER (after the topic: extend, justify, make up your own)', 'Go further')]
 
 
 def build_qbank(n, d, tmp):
     nm = names(n); Q = d['qbank']; Ls = d['lessons']
-    b = [cover('Question Bank', 'Core, Think Harder and Challenge questions for every lesson, with answers')]
+    b = [cover('Question Bank', 'Three tiers of questions for every lesson, with answers')]
     b.append('<h2>%s</h2><p class="sub2">Math Inquirers %s%s. Notice it. Test it. Explain why.</p>' % ('Question Bank  •  ' + E(nm['head']), E(nm['short']), ' • ' + nm['tag'] if nm['tag'] else ''))
     b.append('<div class="bn">How to use this bank</div>')
-    foundation = ('CORE questions can be started by a child who has not yet learnt the topic. They can use objects, drawing, counting or guess and check. Use them for warm-ups and to build confidence.' if n != 6 else
-                  'CORE questions can be started by a child who has not yet learnt the topic, including reading and tracing short programs. Use them for warm-ups and to build confidence.')
+    foundation = ('START HERE questions are approachable for a child who has not yet been taught the topic. They can start with objects, a drawing, counting, guess and check or skills from earlier years, and they use no unexplained words. Use them for warm-ups and to build confidence.' if n != 6 else
+                  'START HERE questions are approachable for a child who has not yet been taught the topic. They can start with objects, a drawing, counting, guess and check or reading and tracing a short program, and they use no unexplained words. Use them for warm-ups and to build confidence.')
     items = [
-        'Each lesson has three levels. Every child starts with Core, then moves up when they are ready. Challenge questions are the ones to talk about together.',
+        'Each lesson has three tiers: Start here, Think harder and Go further. They are open to everyone. Nobody is placed in a tier: every child can start with Start here, and any child may try Think harder or Go further at any time. Go further questions are good ones to talk about together.',
         foundation,
-        'THINK HARDER uses the idea taught in the lesson in a new setting: two-step problems, patterns with a hidden rule, unknowns and larger numbers.',
-        'CHALLENGE questions are for children who have completed the topic. They need the topic plus an extension: find every way, work backwards, test a case, justify an answer, change the problem or make up your own. This program is inspired by research-based approaches used in gifted education; it is not an official GEP standard and is not affiliated with MOE.',
+        'THINK HARDER questions need the idea taught in the lesson, used in a new setting: two-step problems, patterns with a hidden rule, unknowns and larger numbers.',
+        'GO FURTHER questions need the topic well understood, plus an extension: find every way, work backwards, test a case, justify an answer, change the problem or make up your own. This program is inspired by research-based approaches used in gifted education; it is not an official GEP standard and is not affiliated with MOE.',
         'Ask for the reason every time: "How do you know?" A correct answer with no reason is only half done.',
     ]
     if n == 6: items.append('Some questions ask you to predict, trace or plan a short program. Children can test their answer in Scratch (or Python) after they have written their prediction on paper.')
     items.append('Answers are at the back. Do not hand the answer pages to children.')
     b.append('<ul>' + ''.join('<li>%s</li>' % E(x) for x in items) + '</ul>')
-    b.append('<div class="bn">What each lesson practises</div><table class="tb"><colgroup><col style="width:14%"><col style="width:56%"><col style="width:30%"></colgroup>')
+    b.append('<div class="bn">What each lesson practises</div><table class="tb" style="font-size:12px;line-height:1.1"><colgroup><col style="width:14%"><col style="width:56%"><col style="width:30%"></colgroup>')
     for l in Ls:
         q = Q[str(l['n'])]
         b.append('<tr><td class="hd">Lesson %d</td><td>%s (%s)</td><td>%d + %d + %d questions</td></tr>' % (l['n'], E(l['title']), E(l['topic']), len(q['core']), len(q['stretch']), len(q['challenge'])))
@@ -200,14 +201,14 @@ def build_email(n, d, tmp):
         for l in (la, lb):
             u = ('https://claude.ai/artifact/' + ids[l['n']]) if l['n'] in ids else '[deck link to add: not yet published]'
             b.append('<li>Lesson %d deck: %s</li>' % (l['n'], E(u)))
-        b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Challenge questions yourself.</li>')
+        b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Go further questions yourself.</li>')
         b.append('<li>Check your materials are ready. Lesson %d: %s Lesson %d: %s</li>' % (la['n'], E(la['materials']), lb['n'], E(lb['materials'])))
         b.append('<li>After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.</li></ol>')
         b.append('<p>Please do not forward the answer pages to parents.</p><p>Thank you,<br>[Your name]</p></div></div>')
     b.append('<div class="lessonpage"><h2>Week 5 closing email to parents</h2><div class="mail"><p class="subj">Subject: Math Inquirers %s: thank you, and your child\'s certificate</p><p>Dear parents,</p>' % E(nm['short']))
     for para in ['Thank you for joining us for the Math Inquirers Holiday Program (%s). Your child\'s Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child\'s name.' % nm['head'],
                  'We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?',
-                 'If your child showed a love for puzzles, we may invite them to a short challenge session in the next holiday. We will contact you if so.']:
+                 'If your child enjoyed the puzzles, tell us. Think harder and Go further questions are open to every child, and we will share more puzzles to try in the next holiday.']:
         b.append('<p>%s</p>' % E(para))
     b.append('<p>Warm regards,<br>[Your name]</p></div></div>')
     body = ''.join(b)
@@ -280,8 +281,8 @@ def build_taster(n, d, tmp):
     t.append('<h3>Talk time</h3><p>%s</p><p><b>Answer:</b> %s</p>' % (E(l1['share']), E(s1['talkAns'])))
     t.append('<h3>Exit ticket (about 3 minutes)</h3><p>%s</p><p><b>Answer:</b> %s</p>' % (E(l1['exit']['q']), E(l1['exit']['a'])))
     t.append('<h3>Watch for these mistakes</h3><ul>' + ''.join('<li>%s</li>' % E(x) for x in l1['mistakes']) + '</ul>')
-    t.append('<h3>Extension for fast finishers</h3><p>%s</p>' % E(l1['extension']))
-    t.append('<h3>After the taster</h3><p>Tell the parent one thing their child noticed and one thing they explained well. Then share the next steps: [dates, fee and sign-up link]. The free diagnostic for the matching level helps choose between %s and the level either side (see the placement note).</p>' % E(nm['head']))
+    t.append('<h3>Go further (open to every child)</h3><p>%s</p>' % E(l1['extension']))
+    t.append('<h3>After the taster</h3><p>Tell the parent one thing their child noticed and one thing they explained well. Then share the next steps: [dates, fee and sign-up link]. The free Placement Check for %s confirms the level: 70%% or more, enrol at that level; 40-69%%, enrol with a support note or choose one level down; under 40%%, one level down; 90%%+ may also try the check one level up. The parent has the final say.</p>' % E(nm['head']))
     notes = page(''.join(t), tmp, 'notes.html'); notes_pdf = os.path.join(tmp, 'notes.pdf')
     pdf(notes, notes_pdf, 'x')
     # merge + stamp footers with page numbers
@@ -312,7 +313,7 @@ def build_wlg(n, d, tmp):
         for s in set(x.strip() for x in re.split(r',\s*(?![^()]*\))', l['skills'])): skills[s] += 1
     common = [s for s, c in skills.most_common() if c >= 2][:6]
     kitnames = ', '.join(x.lower() if i else x for i, x in enumerate(k for k, _ in kit))
-    rows = [('Student workbook', f'{wbpages} printable pages: 10 lessons with Core, Think Harder and Challenge questions', 'Weekly pages by email; full book at the start'),
+    rows = [('Student workbook', f'{wbpages} printable pages: 10 lessons with Start here, Think harder and Go further questions', 'Weekly pages by email; full book at the start'),
             ('Inquirer Kit (cut-outs)', kitnames + '. Nothing needs to be bought.', 'Week 1 pages'),
             ('Inquiry Journal', 'A stamp page at the front of the workbook. The tutor stamps a box after each lesson.', 'Every lesson'),
             ('Exit ticket', 'One short question at the end of each lesson to show what they understood', 'Every lesson'),
@@ -332,18 +333,18 @@ def build_wlg(n, d, tmp):
 <li><b>A clear routine.</b> Every lesson: {routine}.</li>
 <li><b>Small group.</b> Up to 8, so the tutor can ask each child "How do you know?"</li>
 <li><b>A way of thinking.</b> The four Inquirer rules: {rule1}</li>
-<li><b>Three levels of questions.</b> Start here for everyone, Think harder, and Go further with an open Investigation for when your child wants more.</li></ul>
+<li><b>Three tiers of questions.</b> Start here, Think harder and Go further, plus an open Investigation. All are open to every child; nobody is placed in a tier.</li></ul>
 {('<p class="hw">' + E(hw) + '</p>') if hw else ''}</div>
 <div><h2>Progress and feedback</h2><ul>
 <li><b>Progress marks</b> after every exit ticket: secure, developing, or needs help.</li>
 <li><b>Readiness tracker:</b> four signs of readiness for harder work, noted after each lesson.</li>
-<li><b>A path to go further:</b> a short Challenge Screening Set and Challenge Group for children who show the signs.</li>
+<li><b>Room to go further:</b> Think harder and Go further questions and an open Investigation are there for any child who wants more.</li>
 <li><b>Parent feedback:</b> a short, honest note about how your child thinks, not just a score.</li></ul></div></div>
 <h2>Ten topics</h2><div class="chips">{topics}</div>
 <h2>What the child takes home</h2><table class="tb"><tr><td class="hd">Item</td><td class="hd">What it is</td><td class="hd">When</td></tr>
 {''.join('<tr><td><b>%s</b></td><td>%s</td><td>%s</td></tr>' % (E(a), E(b_), E(c)) for a, b_, c in rows)}</table>
 <div class="cols"><div><h2>Skills your child builds</h2><ul>{''.join('<li>%s</li>' % E(s[0].upper() + s[1:]) for s in common)}<li>Explaining thinking out loud, in words and drawings</li></ul></div>
-<div><h2>What is not included</h2><ul><li>It is enrichment. It does not replace school maths or follow a school syllabus, and it is not linked to MOE or the Gifted Education Programme.</li><li>No exam or ranking. Readiness signs guide extra challenge and are not shared between families.</li></ul>
+<div><h2>What is not included</h2><ul><li>It is enrichment. It does not replace school maths or follow a school syllabus, and it is not linked to MOE or the Gifted Education Programme.</li><li>No exam or ranking. Readiness notes are private to your family.</li></ul>
 <h2>Planned price (to confirm)</h2><p>S$650 per child for the 15-hour programme (S$65 a lesson), with the printed workbook, cut-out kit and all materials included. Introductory price for the first intake: S$500 (S$50 a lesson). Same price at every level.</p></div></div></div>'''
     extra = '''
 @page{size:A4;margin:0}

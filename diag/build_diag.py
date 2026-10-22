@@ -1,5 +1,8 @@
 """Placement diagnostic PDF. Usage: python3 diag/build_diag.py p3  (reads diag/content/p3.json; writes outputs/diagnostics/Math_Inquirers_P3_Placement_Check.pdf)
-Child sheet (3 pages: warm-up, main+stretch, parent result) plus a separate tutor key PDF."""
+Child sheet (3 pages: warm-up, main+stretch, parent result) plus a separate tutor key PDF.
+Placement rule printed here = docs/levels_and_placement.md: score = warm-up + main questions, out of 10 (Brain stretchers are a bonus, not counted).
+70% or more (7-10) enrol; 40-69% (4-6) enrol with a support note or one level down; under 40% (0-3) one level down; 90%+ (9-10) may try the check one level up.
+Level 1 (no level below): the under-40% advice is the free taster and a tutor chat. Content json holds only level, ageName, minutes, foundation, core, stretch, topics (and optional childNote)."""
 import json,sys,os,html
 from playwright.sync_api import sync_playwright
 E=html.escape
@@ -54,25 +57,32 @@ def visual(it):
     return ''
 def qhtml(L): return ''.join(f'<div class="q"><span class="n">{it["_n"]}</span><div><div class="qt">{E(it["q"])}</div>{visual(it)}<div class="box"></div></div><span class="nt"><i></i>not learnt yet</span></div>' for it in L)
 P=[]
-P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Check</div><h1>{AGE}</h1><p class="sub">{SCH}. Open to a year either side  •  About {d["minutes"]} minutes  •  No calculator</p>
+P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Check</div><h1>{AGE}</h1><p class="sub">{SCH}. Free placement check for this level  •  About {d["minutes"]} minutes  •  No calculator</p>
 <div class="name"><span>Name or username:</span><span>Age:</span><span>Date:</span></div>
-<div class="card"><b>How it works.</b> This is a friendly check, not a test. Your child answers on their own. Read a question aloud if they ask, but do not help with the maths. If they are stuck, say "Try your best, or skip it". Working on scrap paper is fine.<br><b>Not learnt it yet?</b> Some questions may use ideas your child has not met at school. That is fine and useful to know. Tick "not learnt yet" and move on.</div>
+<div class="card"><b>How it works.</b> This is a friendly check, not a test. Your child answers on their own. {E(d.get("childNote") or "Read a question aloud if they ask, but do not help with the maths.")} If they are stuck, say "Try your best, or skip it". Working on scrap paper is fine.<br><b>Not learnt it yet?</b> Some questions may use ideas your child has not met at school. That is fine and useful to know. Tick "not learnt yet" and move on.</div>
 <span class="sec">Warm-up</span>{qhtml(d["foundation"])}{FOOT("Page 1")}</div>''')
 P.append(f'''<div class="pg">{BAR}<span class="sec" style="margin-top:2mm">Main questions</span>{qhtml(d["core"])}<span class="sec">Brain stretchers</span><p class="tip" style="margin:0 0 3mm">Optional. These are meant to be tricky, and most children will not finish them. Have a go at any that look fun.</p>{qhtml(d["stretch"])}{FOOT("Page 2")}</div>''')
 def rows(L): return ''.join(f'<tr><td>{it["_n"]}</td><td>{E(it["q"])}</td><td><b>{E(it["a"])}</b></td><td>{E(it["work"])}</td></tr>' for it in L)
 T=lambda t,L:f'<span class="sec">{t}</span><table><tr><th>#</th><th>Question</th><th>Answer</th><th>Watch for</th></tr>{rows(L)}</table>'
-KEY=f'''<div class="pg" style="height:auto;min-height:297mm">{BAR}<div class="kick">For the tutor or parent</div><h1 style="margin-top:2mm">Answer key: {AGE}</h1><p class="sub">Accept equivalent forms (for example 2.05 and $2.05). One mark per question. Keep this key away from the child until they have finished.</p>
-{T("Warm-up (4 marks)",d["foundation"])}{T("Main questions (6 marks)",d["core"])}{T("Brain stretchers (2 marks, optional)",d["stretch"])}
+KEY=f'''<div class="pg" style="height:auto;min-height:297mm">{BAR}<div class="kick">For the tutor or parent</div><h1 style="margin-top:2mm">Answer key: {AGE}</h1><p class="sub">Accept equivalent forms (for example 70 cents and 70c, or 3/4 and three quarters). One mark per question. Add the warm-up and main marks to get a score out of 10; the Brain stretchers are a bonus and are not counted. Keep this key away from the child until they have finished.</p>
+{T("Warm-up (4 marks)",d["foundation"])}{T("Main questions (6 marks)",d["core"])}{T("Brain stretchers (bonus, not counted)",d["stretch"])}
 <p class="tip">Questions the child ticked "not learnt yet" score 0 but tell you what to teach first. They do not count against the child.</p></div>'''
-down=f'{DOWN[1]} ({DOWN[0]})' if DOWN else 'a chat with a tutor and the free taster'
+down=f'{DOWN[1]} ({DOWN[0]})' if DOWN else None
 up=f'{UP[1]} ({UP[0]})' if UP else None
-P.append(f'''<div class="pg">{BAR}<div class="kick">Your child's result</div><h1>Which level fits?</h1><p class="sub">Mark the answers with the key (ask us for it, or use the tutor key). Add up the marks, then find your row. This is a guide. You make the final choice, and you can change level free of charge before lesson 1.</p>
-<div class="card"><b>Warm-up:</b> ____ / 4 &nbsp;&nbsp; <b>Main questions:</b> ____ / 6 &nbsp;&nbsp; <b>Brain stretchers (optional):</b> ____ / 2 &nbsp;&nbsp; <b>Ticked "not learnt yet":</b> ____</div>
-<table><tr><th>Main questions</th><th>What it suggests</th></tr>
-<tr><td><b>4 to 6</b></td><td>Join <b>{AGE} (Level {NUM})</b>. Your child has the foundations and will enjoy the thinking.{(" If the stretchers also went well (1 or more), you could try the "+up+" check as well.") if up else ""}</td></tr>
-<tr><td><b>2 or 3</b></td><td>A short chat with a tutor and the free taster lesson will show which level feels best. {AGE} (Level {NUM}) with a little support suits many children here.{(" If the warm-up score is 2 or less, "+down+" may be the more comfortable start.") if DOWN else ""}</td></tr>
-<tr><td><b>0 or 1</b></td><td>We suggest <b>{down}</b>. Ideas build step by step, and a confident start matters more than a fast one. If many questions were ticked "not learnt yet", that simply means the topics have not been taught yet.</td></tr></table>
-<div class="rec"><div style="background:#E6F4F1"><b>Finding it easy?</b><br>Choose the level that fits the score, not the school year. Every level has open investigations for children who want more.</div><div style="background:#FFF0C2"><b>Found it hard?</b><br>That is useful to know, and it says nothing about how clever your child is. A level that feels comfortable builds confidence, and your child can always move up.</div></div>
+mid=(f'Join <b>{AGE} (Level {NUM})</b> and we will note that your child may need some support, or choose <b>{down}</b>.' if down else
+     f'Join <b>{AGE} (Level {NUM})</b> and we will note that your child may need some support. A short tutor chat and the free taster lesson will show what helps.')
+low=(f'We suggest <b>{down}</b>. Ideas build step by step, and a confident start matters more than a fast one.' if down else
+     'We suggest the <b>free taster and a chat with a tutor</b> first. Ideas build step by step, and a confident start matters more than a fast one.')
+top=f'Join <b>{AGE} (Level {NUM})</b>. Your child has the foundations and will enjoy the thinking.'
+easy=(f'<tr><td><b>Also, 9 or 10</b> (90% or more)</td><td>That was easy. Your child may also try the <b>{up}</b> check, as well as joining {AGE}.</td></tr>' if up else
+      '<tr><td><b>Also, 9 or 10</b> (90% or more)</td><td>That was easy. Every level has open investigations and Go further questions for children who want more.</td></tr>')
+P.append(f'''<div class="pg">{BAR}<div class="kick">Your child's result</div><h1>Which level fits?</h1><p class="sub">Mark the answers with the key (ask us for it, or use the tutor key). Add the warm-up and main marks to get a score out of 10. The Brain stretchers are a bonus and are not counted. This is a guide. You make the final choice, and you can change level free of charge before lesson 1.</p>
+<div class="card"><b>Warm-up:</b> ____ / 4 &nbsp;&nbsp; <b>Main questions:</b> ____ / 6 &nbsp;&nbsp; <b>Score (warm-up + main):</b> ____ / 10 &nbsp;&nbsp; <b>Brain stretchers (bonus):</b> ____ / 2 &nbsp;&nbsp; <b>Ticked "not learnt yet":</b> ____</div>
+<table><tr><th>Score out of 10</th><th>What it suggests</th></tr>
+<tr><td><b>7 to 10</b> (70% or more)</td><td>{top}</td></tr>
+<tr><td><b>4 to 6</b> (40-69%)</td><td>{mid}</td></tr>
+<tr><td><b>0 to 3</b> (under 40%)</td><td>{low} If many questions were ticked "not learnt yet", that simply means the topics have not been taught yet.</td></tr>{easy}</table>
+<div class="rec"><div style="background:#E6F4F1"><b>Finding it easy?</b><br>{("Try the "+up+" check as well if the score is 9 or 10. ") if up else ""}Every level has open investigations for children who want more.</div><div style="background:#FFF0C2"><b>Found it hard?</b><br>That is useful to know, and it says nothing about how clever your child is. A level that feels comfortable builds confidence, and you can change level free of charge before lesson 1.</div></div>
 <span class="sec">Skills covered</span><p class="tip">{E("; ".join(d["topics"]))}</p>
 <div class="card"><b>Next step.</b> Send us the scores and your preferred level when you enrol. Prices are the same at every level, and a tutor can talk it through first. Small groups of up to 8, live online.</div>
 {FOOT("Page 3")}</div>''')

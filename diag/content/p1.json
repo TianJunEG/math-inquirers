@@ -1,145 +1,122 @@
 {
-  "level": "P1",
-  "ageName": "Ages 6-8",
-  "minutes": 30,
-  "foundation": [
-    {
-      "q": "What number comes just after 14?",
-      "a": "15",
-      "work": "Watch whether the child counts on from 14 or restarts from 1.",
-      "skill": "Counting to 20"
-    },
-    {
-      "q": "Which is bigger, 17 or 12?",
-      "a": "17",
-      "work": "Ask how they know. Common error: choosing the number said first.",
-      "skill": "Comparing numbers"
-    },
-    {
-      "q": "Count in 2s: 2, 4, 6, __, __.",
-      "a": "8, 10",
-      "work": "Listen for: a steady count of 2 more each time. Common error: 7, 8 (counting in 1s) or 8, 9. Both blanks are needed for the mark.",
-      "skill": "Counting in 2s"
-    },
-    {
-      "q": "What shape has 3 sides?",
-      "a": "triangle",
-      "work": "Accept 'triangle'. Note if the child confuses it with a square or says 'pyramid'.",
-      "skill": "Shapes"
-    }
-  ],
-  "core": [
-    {
-      "q": "What number goes with 7 to make 10?",
-      "a": "3",
-      "work": "Does the child know the bond, or count up from 7 on fingers?",
-      "skill": "Number bonds to 10"
-    },
-    {
-      "q": "Here is a pattern: 5, 10, 15, then what comes next?",
-      "a": "20",
-      "work": "Look for counting in 5s. Common error: 16 (adding 1) or 25.",
-      "skill": "Number patterns"
-    },
-    {
-      "q": "A pencil costs 40 cents. An eraser costs 30 cents. How much for both?",
-      "a": "70 cents",
-      "work": "Watch tens-and-ones thinking (4 tens + 3 tens). Common error: 7 cents or 10 cents.",
-      "skill": "Money"
-    },
-    {
-      "q": "Look at the dot graph. Apples have 5 dots, Bananas have 3 dots and Grapes have 2 dots. How many more dots does Apples have than Grapes?",
-      "a": "3",
-      "work": "Listen for: matching or counting the extra dots. Common error: 7 (adding the dots) or 5 (the Apples count). Accept '3' or '3 more'.",
-      "skill": "Reading a dot graph / comparing",
-      "visual": {
-        "type": "dotgraph",
-        "rows": [
-          [
-            "Apples",
-            5
-          ],
-          [
-            "Bananas",
-            3
-          ],
-          [
-            "Grapes",
-            2
-          ]
-        ]
-      }
-    },
-    {
-      "q": "A pen is 8 cubes long. A ruler is 12 cubes long. How many cubes longer is the ruler?",
-      "a": "4",
-      "work": "Does the child compare (12 - 8) or add? Ask them to show with fingers or cubes.",
-      "skill": "Length"
-    },
-    {
-      "q": "Ali is taller than Ben. Ben is taller than Cai. Who is the shortest?",
-      "a": "Cai",
-      "work": "Ask the child to line them up. Common error: answering Ben or Ali.",
-      "skill": "Logic"
-    }
-  ],
-  "stretch": [
-    {
-      "q": "Look at the ruler. The pencil starts at 2 and ends at 7. How long is the pencil?",
-      "a": "5 (cm)",
-      "work": "Listen for: counting the steps from 2 to 7, not reading the end number. Common error: 7 (reads where the pencil ends) or 9. Accept '5' or '5 cm'.",
-      "skill": "Reading a ruler (start not at 0)",
-      "visual": {
-        "type": "ruler",
-        "from": 0,
-        "to": 10,
-        "pencilStart": 2,
-        "pencilEnd": 7,
-        "unit": "cm"
-      }
-    },
-    {
-      "q": "I have 5 coins. Some are 10-cent coins and some are 5-cent coins. Together they make 40 cents. How many of each?",
-      "a": "3 ten-cent coins and 2 five-cent coins",
-      "work": "Look for guess-and-check. Common error: 4 and 1, which has the right count but makes 45 cents.",
-      "skill": "Money reasoning"
-    }
-  ],
-  "topics": [
-    "counting to 20",
-    "comparing numbers",
-    "counting in 2s",
-    "basic shapes",
-    "number bonds to 10",
-    "number patterns",
-    "money (cents)",
-    "reading a dot graph",
-    "length comparison",
-    "logic ordering",
-    "reading a ruler (brain stretcher)"
-  ],
-  "childNote": "Read every question aloud to your child. Reading is not what we are testing. Say \"Try your best, or skip it\" if they are stuck. Brain stretchers are hard on purpose: it is fine to skip them.",
-  "scoring": {
-    "placementOn": "the 6 main questions (numbers 5 to 10)",
-    "join": "4 to 6",
-    "support": "2 to 3",
-    "down": "0 to 1",
-    "stretchIsAFlag": "Brain stretchers (Q11 and Q12) are not part of the placement score. If a child solves one or both and scored 5 or 6 on the main questions, tell your tutor: the child may also try the Ages 7-9 (P2) check and will enjoy the Go further pages.",
-    "scoreLine": "Warm-up: ____ / 4     Main questions: ____ / 6     Brain stretchers (a bonus, not scored for placement): ____ / 2"
+ "level": "P1",
+ "ageName": "Ages 6-8",
+ "minutes": 30,
+ "foundation": [
+  {
+   "q": "What number comes just after 14?",
+   "a": "15",
+   "work": "Watch whether the child counts on from 14 or restarts from 1.",
+   "skill": "Counting to 20"
   },
-  "parent": {
-    "join": "<b>4, 5 or 6 of the 6 main questions:</b> Join <b>Ages 6-8 (P1)</b>. Most children who meet school expectations score here. In class every child gets time to think and help when stuck. In lessons your child will meet money to $50, reading a ruler and logic puzzles. We start slowly and help every child.",
-    "support": "<b>2 or 3 of 6:</b> Join <b>Ages 6-8 (P1)</b> after a 10-minute chat with a tutor and the free taster lesson, so we can see how your child likes to work.",
-    "down": "<b>0 or 1 of 6:</b> We suggest the free taster and a chat first. Many children are simply not ready yet, and we would like to help you choose a good starting point.",
-    "stretchRow": "<b>Brain stretchers (Q11 and Q12)</b> do not change the level. If your child gets one or both right and scored 5 or 6 on the main questions, you can also try the Ages 7-9 (P2) check.",
-    "strongBox": "<b>Strong?</b><br>Choose the level that fits the score, not the school year. A child who finds this easy will enjoy the Go further pages in class.",
-    "gentleBox": "<b>Not yet?</b><br>Every child starts somewhere. A short chat and a free taster lesson let us find the right start. Your child can join at any time."
+  {
+   "q": "Which is bigger, 17 or 12?",
+   "a": "17",
+   "work": "Ask how they know. Common error: choosing the number said first.",
+   "skill": "Comparing numbers"
   },
-  "tutorKey": {
-    "header": "Print pages 1 and 2 for your child. Keep this answer key and the result page for yourself (a separate 'For the tutor' PDF).",
-    "columnName": "Listen for",
-    "accept": "Accept equivalent forms (for example 3 or 3 more, 5 or 5 cm). One mark per question.",
-    "rushing": "If your child answers very quickly, ask them to check one answer by drawing it. Rushing cannot be seen on paper.",
-    "prereq": "Main questions 7 (money), 8 (dot graph) and the ruler brain stretcher are the same ideas as Lessons 6, 3 and 9. A score of 6 of 6 does not mean every lesson will feel easy; Lessons 5, 6 and 8 are taught slowly."
+  {
+   "q": "Count in 2s: 2, 4, 6, __, __.",
+   "a": "8, 10",
+   "work": "Listen for: a steady count of 2 more each time. Common error: 7, 8 (counting in 1s) or 8, 9. Both blanks are needed for the mark.",
+   "skill": "Counting in 2s"
+  },
+  {
+   "q": "What shape has 3 sides?",
+   "a": "triangle",
+   "work": "Accept 'triangle'. Note if the child confuses it with a square or says 'pyramid'.",
+   "skill": "Shapes"
   }
+ ],
+ "core": [
+  {
+   "q": "What number goes with 7 to make 10?",
+   "a": "3",
+   "work": "Does the child know the bond, or count up from 7 on fingers?",
+   "skill": "Number bonds to 10"
+  },
+  {
+   "q": "Here is a pattern: 5, 10, 15, then what comes next?",
+   "a": "20",
+   "work": "Look for counting in 5s. Common error: 16 (adding 1) or 25.",
+   "skill": "Number patterns"
+  },
+  {
+   "q": "A pencil costs 40 cents. An eraser costs 30 cents. How much for both?",
+   "a": "70 cents",
+   "work": "Watch tens-and-ones thinking (4 tens + 3 tens). Common error: 7 cents or 10 cents.",
+   "skill": "Money"
+  },
+  {
+   "q": "Look at the dot graph. Apples have 5 dots, Bananas have 3 dots and Grapes have 2 dots. How many more dots does Apples have than Grapes?",
+   "a": "3",
+   "work": "Listen for: matching or counting the extra dots. Common error: 7 (adding the dots) or 5 (the Apples count). Accept '3' or '3 more'.",
+   "skill": "Reading a dot graph / comparing",
+   "visual": {
+    "type": "dotgraph",
+    "rows": [
+     [
+      "Apples",
+      5
+     ],
+     [
+      "Bananas",
+      3
+     ],
+     [
+      "Grapes",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "q": "A pen is 8 cubes long. A ruler is 12 cubes long. How many cubes longer is the ruler?",
+   "a": "4",
+   "work": "Does the child compare (12 - 8) or add? Ask them to show with fingers or cubes.",
+   "skill": "Length"
+  },
+  {
+   "q": "Ali is taller than Ben. Ben is taller than Cai. Who is the shortest?",
+   "a": "Cai",
+   "work": "Ask the child to line them up. Common error: answering Ben or Ali.",
+   "skill": "Logic"
+  }
+ ],
+ "stretch": [
+  {
+   "q": "Look at the ruler. The pencil starts at 2 and ends at 7. How long is the pencil?",
+   "a": "5 (cm)",
+   "work": "Listen for: counting the steps from 2 to 7, not reading the end number. Common error: 7 (reads where the pencil ends) or 9. Accept '5' or '5 cm'.",
+   "skill": "Reading a ruler (start not at 0)",
+   "visual": {
+    "type": "ruler",
+    "from": 0,
+    "to": 10,
+    "pencilStart": 2,
+    "pencilEnd": 7,
+    "unit": "cm"
+   }
+  },
+  {
+   "q": "I have 5 coins. Some are 10-cent coins and some are 5-cent coins. Together they make 40 cents. How many of each?",
+   "a": "3 ten-cent coins and 2 five-cent coins",
+   "work": "Look for guess-and-check. Common error: 4 and 1, which has the right count but makes 45 cents.",
+   "skill": "Money reasoning"
+  }
+ ],
+ "topics": [
+  "counting to 20",
+  "comparing numbers",
+  "counting in 2s",
+  "basic shapes",
+  "number bonds to 10",
+  "number patterns",
+  "money (cents)",
+  "reading a dot graph",
+  "length comparison",
+  "logic ordering",
+  "reading a ruler (brain stretcher)"
+ ],
+ "childNote": "Read every question aloud to your child. Reading is not what we are testing. Say \"Try your best, or skip it\" if they are stuck. Brain stretchers are hard on purpose: it is fine to skip them."
 }
