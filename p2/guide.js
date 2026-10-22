@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const bx = t => String(t).replace(/\{box\}/g, '[ ]');
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -39,17 +40,17 @@ G.push(tx('Suggested pairing: two lessons a week, for example Tuesday and Thursd
 G.push(h1('The 90-minute lesson routine', true));
 G.push(tx('Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.'));
 const R = [
-  ['0–8', 'Warm-up', 'Welcome, a 3-minute Warm-up check (two questions in a new setting, minutes 1 to 4), then a quick game. Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers by thumbs, hands or chat.'],
+  ['0–8', 'Warm-up', 'Welcome (0–1). Sneak-peek puzzles (1–4): two puzzles on ideas not learnt yet, answers private, nobody marked. A 2-minute game (4–6). Quick questions (6–8). Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers on own paper held to the tutor, by private chat, or by thumbs. No whiteboards raised together.'],
   ['8–20', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['20–32', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['32–36', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
   ['36–72', 'Worksheet', 'Page 1 in pairs (36–50), check together (50–52), short teaching (52–57), page 2 alone (57–69), check together (69–72). Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
-  ['72–80', 'Talk time', 'Share one answer and explain it. Compare methods.', 'Each child shares in turn.', 'Each child unmutes in turn.'],
-  ['80–90', 'Exit ticket and stamp', 'One question on a slip of paper. Stamp the inquiry journal.', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the camera. Tutor stamps the next time or posts it.']
+  ['72–80', 'Talk time', 'Volunteers share one answer and explain it. Compare methods. Any child may pass. No cold-calling by name, no public tallies or rankings.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited. Quiet children can be invited by private chat beforehand.'],
+  ['80–90', 'Exit ticket, Looking back and stamp', 'Exit ticket (80–87, one question on a slip of paper). Looking back (87–89, a small box on the last core page, a pass is always allowed). Closing and stamps (89–90).', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the tutor only. Tutor stamps the next time or posts it.']
 ];
 G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1450), hd('What happens', 2700), hd('Face to face', 2300), hd('Online', 2550)]), ...R.map(r => row([c2(r[0], 900, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2700), c2(r[3], 2300), c2(r[4], 2550)]))]));
 G.push(h2('Teaching habits that matter'));
-['Ask “How do you know?” after every answer, right or wrong.', 'Wait 10 seconds before helping. Let children struggle a little.', 'Praise the thinking (“You checked it two ways”), not just the answer.', 'Let children disagree with each other and settle it with objects or a drawing.', 'If a child finishes early, use the Challenge or Extension question, not extra drill.'].forEach(s => G.push(bu(s)));
+['Ask “How do you know?” after answers, right or wrong, but invite rather than single out: “Would anyone like to say how they started?” “I am not sure yet” is always a fine answer.', 'Wait 10 seconds before helping. Let children struggle a little.', 'Praise the thinking (“You checked it two ways”), not just the answer.', 'Let children disagree with each other and settle it with objects or a drawing.', 'If a child would like more, offer Think harder, Go further or the Investigation as a choice. Never name who is on which page, and never use extra drill.'].forEach(s => G.push(bu(s)));
 
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: place-value cards (Lessons 1, 2, 10), digit cards (Lessons 1 and 10), play coins and notes (Lesson 6), fraction strips (Lesson 7), cube nets and paper cube strips (Lesson 8), paper clock (Lesson 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
@@ -79,7 +80,7 @@ G.push(tbl([1500, 8400], [
   ['IF STUCK', 'A ladder of help. Give hint 1, wait ten seconds, then give hint 2. Do not give the answer.']
 ].map(r => row([cell(r[0], 1500, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 70 }), c2(r[1], 8400)]))));
 G.push(h2('Five habits that run through every script'));
-['Predict first. Before children test anything, ask for a guess and write it down. A wrong guess is useful because we can test it.', 'Wait ten seconds after every question. Count silently. Most children answer in the last four.', 'Ask “How do you know?” after right answers too, so that children do not read your face for the answer.', 'Praise the thinking, not the answer: “You checked it two ways” beats “Well done”.', 'When an answer is wrong, say “Let us test that,” and use objects, not “No”.'].forEach(s => G.push(bu(s)));
+['Predict first. Before children test anything, ask for a guess and write it down. A wrong guess is useful because we can test it.', 'Wait ten seconds after every question. Count silently. Most children answer in the last four.', 'Ask “How do you know?” after right answers too (to volunteers), so that children do not read your face for the answer.', 'Praise the thinking, not the answer: “You checked it two ways” beats “Well done”.', 'When an answer is wrong, say “Let us test that,” and use objects, not “No”.'].forEach(s => G.push(bu(s)));
 G.push(h2('Answering a wrong answer'));
 ask([
   ['A child gives a wrong answer', '“Thank you. Let us test it with the counters.” Then build it together.'],
@@ -103,16 +104,16 @@ L.lessons.forEach(l => {
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
 
   const gp = L.gaps[String(l.n)], GC = L.gaps.common;
-  G.push(seg('1–4 min', 'Warm-up check (3 minutes) and fast track'));
+  G.push(seg('1–4 min', 'Sneak-peek puzzles (3 minutes)'));
   say([GC.preSay]);
   doo(GC.preDo);
-  ask(gp.pre.map((x, i) => ['Check question ' + (i + 1) + ': ' + x.q, x.a + '  Listen for: ' + x.w]), 'Warm-up check question', 'Answer and what to listen for');
-  doo(['The fast-track note is printed at the top of the first worksheet page, next to the lesson title.']);
+  ask(gp.pre.map((x, i) => [(i === 0 ? 'Question 1 (access: objects, drawing or counting): ' : 'Question 2 (thinking): ') + bx(x.q), bx(x.a) + '  Listen for: ' + x.w]), 'Sneak-peek puzzle', 'Answer and what to listen for');
+  doo(['The neutral line “' + GC.neutral + '” is printed on page 1 of the workbook, next to the lesson title. Nobody is labelled and nothing is announced.']);
 
   G.push(seg('4–8 min', 'Warm-up'));
   doo([d.warmGame]);
   say(s.warmIntro);
-  doo(['Keep the game to two minutes today. After the game, ask the quick questions on the warm-up slides (if you are short of time, use questions 1, 3 and 5). Use thumbs or a whisper to partners before taking answers.']);
+  doo(['Keep the game to two minutes (4 to 6). Then the quick questions (6 to 8): ask questions 1, 3 and 5; questions 2 and 4 are spare. Children answer by thumbs, a whisper to a partner or private chat. Do not name a child.']);
   ask(d.warmQs.map(x => [x[0], x[1]]));
 
   G.push(seg('8–20 min', 'Explore (in pairs, with objects)'));
@@ -121,6 +122,7 @@ L.lessons.forEach(l => {
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
   stuck(s.exploreHints);
   if (d.stationCards) { doo(['Station cards (each is also one slide in the deck). One card per breakout pair, about 3 minutes, then swap:']); ask(d.stationCards.map(x => [x[0] + '. ' + x[1], x[2]]), 'Station card', 'Answer'); }
+  doo(['Go further (a second what-if, so nobody waits): show the Explore: go further slide or post it in the chat when pairs go to their rooms. Any child may try it any time, as a choice. Never name who does. Question: ' + L.gaps[String(l.n)].whatif.q.replace(/^Go further: /, '') + '  Answer: ' + L.gaps[String(l.n)].whatif.a]);
   doo(['At about minute 14, say “Pencils down” and bring the group back together. Take the three questions below, one at a time (about 6 minutes).']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 
@@ -137,36 +139,37 @@ L.lessons.forEach(l => {
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
 
   G.push(seg('36–72 min', 'Worksheet (pairs, then alone, then stretch)'));
-  doo(['Minute 36: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 36 to 50: pairs work together on the first page (in Lessons 5, 6 and 10 a short teach slide comes first, 36 to 38). Minutes 50 to 52: check page 1 together. Minutes 52 to 57: short teaching for page 2. Minutes 57 to 69: each child works alone on the second page. Minutes 69 to 72: check page 2 together. Stretch and challenge are for early finishers at any time after the first page.']);
+  doo(['Minute 36: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 36 to 50: pairs work together on the first page (in Lessons 5, 6 and 10 a short teach slide comes first, 36 to 38). Minutes 50 to 52: check page 1 together. Minutes 52 to 57: short teaching for page 2. Minutes 57 to 69: each child works alone on the second page. Minutes 69 to 72: check page 2 together. Think harder, Go further and the Investigation are open to any child at any time after question 3.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Early finishers: give the stretch question first, then the challenge.']);
-  doo(['Fast-track children (see the Warm-up check) start on the THINK HARDER pages and the Open investigation (Workbook Q8). Visit them at about minute 40. They rejoin the group for the check-together slides and talk time.']);
-  G.push(h2('Stretch and challenge questions'));
-  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think Harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Challenge ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
-  G.push(tx('These are the questions on the two Think Harder pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
-  ask([['Workbook Open investigation (Q8): ' + gp.invest.title + '. ' + gp.invest.text, gp.invest.model]], 'Open investigation (several answers are right)', 'Model answer and what to look for');
+  doo(['A choice, not a track: after question 3 any child may carry on or try Think harder (the neutral line is printed on page 1). You may quietly invite a child by PRIVATE chat message. Never announce who is on which page, never name a child in front of the group, and do not split a pair unless both children agree. Children may move either way at any time. The Investigation is printed on the last core page, so every child sees it.']);
+  G.push(h2('Think harder and Go further questions'));
+  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
+  G.push(tx('These are the questions on the two Think harder pages in the workbook (Think harder, then Go further). More are in the separate Question Bank.', { size: 19, color: '666666' }));
+  ask([['Workbook Investigation (last core page): ' + gp.invest.title + '. ' + gp.invest.text + ' ' + gp.invest.first + (gp.invest.need ? ' ' + gp.invest.need : ''), gp.invest.model]], 'Investigation (several answers are right)', 'Model answer and what to look for');
 
   G.push(seg('72–80 min', 'Talk time'));
-  doo(['Bring the group back to a circle (or camera on, mics on). Ask two or three children to share, not only the fastest.']);
+  doo(['Bring the group back to a circle (or camera on, mics on). ' + GC.talkDo]);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
 
-  G.push(seg('80–88 min', 'Exit ticket'));
+  const X = l.n === 10;
+  G.push(seg(X ? '80–85 min' : '80–87 min', 'Exit ticket'));
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
-  ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
-  G.push(seg('88–90 min', 'What was hard? (1 minute) and closing'));
+  ask([[bx(l.exit.q), bx(l.exit.a)]], 'Exit ticket', 'Answer');
+  G.push(seg(X ? '85–87 min' : '87–89 min', 'Looking back (2 minutes)'));
   say([GC.refSay]);
   doo([GC.refDo]);
+  G.push(seg(X ? '87–90 min' : '89–90 min', X ? 'Certificates and closing' : 'Closing and stamps'));
   say(s.close);
-  doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
+  doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (this is for you only, never shared with the children). If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   G.push(h2('Extension for children who are ready'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
-  G.push(p([t('Q8  ', { bold: true, size: 20 }), t('Open investigation (' + gp.invest.title + '). ' + gp.invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(p([t('Investigation  ', { bold: true, size: 20 }), t('(' + gp.invest.title + '). ' + gp.invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */
@@ -182,7 +185,7 @@ G.push(h1('Tutor checklist', true));
 G.push(h2('Before each lesson'));
 ['Read the lesson plan and solve the worksheet yourself without looking at the key.', 'Check materials are ready, or the online set-up has been sent.', 'Test the platform, screen share and annotation tools 10 minutes early (online).', 'Print or open the slide deck for the lesson.'].forEach(s => G.push(bu(s)));
 G.push(h2('During the lesson'));
-['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. No private messages to children.', 'Do not take photos or recordings unless the Company has approved it and parents have consented.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
+['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. Private chat messages to a child are allowed only inside the approved platform and only about the lesson (quietly inviting a child to try Think harder, checking in on a child who ticked “I am still stuck”). Never use personal accounts and never message a child about anything else.', 'Do not take photos or recordings unless the Company has approved it and parents have consented.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
 G.push(h2('After the lesson'));
 ['Stamp inquiry journals and fill in the tracker.', 'Collect worksheets and answer keys (face to face) and keep them secure.', 'Note any child who needs help, and plan a short catch-up at the start of the next lesson.'].forEach(s => G.push(bu(s)));
 
@@ -197,7 +200,7 @@ G.push(h2('How you can help'));
 ['Ask “How do you know?” when your child tells you an answer.', 'Let your child try first. Please sit nearby, but let them find the answer.', 'Print the workbook and cut-outs, and keep counters, scissors and a pencil ready.'].forEach(s => G.push(bu(s)));
 G.push(h2('Practical details'));
 G.push(tbl([2500, 7400], [['Dates', '[start date] to [end date], two lessons a week'], ['Time', '[day] and [day], [start time] to [end time]'], ['Where', 'Live online video class (link sent after registration)'], ['Group size', '[number] children'], ['Fee', 'S$500 introductory (regular S$650), workbook included, payable in 3 instalments'], ['Contact', '[name, phone or email]']].map(r => row([cell(r[0], 2500, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 80 }), c2(r[1], 7400, { h: 80 })]))));
-G.push(p(t('Math Inquirers Holiday Program is an independent enrichment program. It is inspired by gifted-education-style thinking skills but is not affiliated with, run by or endorsed by the Ministry of Education or any school.', { size: 18, italics: true, color: '666666' }), { before: 200, after: 0 }));
+G.push(p(t('Math Inquirers Holiday Program is an independent enrichment program. It is inspired by enrichment-style thinking skills but is not affiliated with, run by or endorsed by the Ministry of Education or any school.', { size: 18, italics: true, color: '666666' }), { before: 200, after: 0 }));
 
 const doc = new D.Document({ styles: { default: { document: { run: { font: 'Arial', size: S } } } }, sections: [{ properties: { page }, footers: { default: footer(PROG + ' P2 • Program guide') }, children: G }] });
 D.Packer.toBuffer(doc).then(b => { fs.writeFileSync('P2_Holiday_Program_Guide.docx', b); console.log('guide built'); });

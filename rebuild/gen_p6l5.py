@@ -81,14 +81,14 @@ put(f'{PRE}-title', f'<section id="{PRE}-title" data-transition="fade" style="ba
 # ---------- 2 warm-up game ----------
 wc = [('Pages 15 to 40 of a book. How many pages?', '26  (40 − 15 + 1)'), ('How many 2-digit numbers are there?', '90  (10 to 99)'), ('Multiples of 5 from 5 to 100?', '20  (100 ÷ 5)'),
       ('Lamp posts every 10 m on a 100 m road, one at each end?', '11  (10 gaps, 11 posts)'), ('Numbers from 1 to 100 with a 7 in them?', '19  (77 counted once)'), ('Even numbers from 2 to 50?', '25  (50 ÷ 2)')]
-body = h2('Warm-up: count it, don’t list it') + p('Teams race. Say HOW you counted.', 34, 600, MUTED)
+body = h2('Warm-up: count it, don’t list it') + p('Work in pairs. Say HOW you counted. No race.', 34, 600, MUTED)
 CWD = 533
 for i, (q, a) in enumerate(wc):
     Lx = 128 + (i % 3) * (CWD + 32); T = 290 + (i // 3) * 300
     body += pin(Lx, T, CWD, f'<p style="font-family:{HF};font-size:36px;font-weight:600;line-height:1.2">{E(q)}</p>', None, WHITE, 24, '22px 26px', f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body += pin(Lx + 20, T + 176, CWD - 40, f'<p style="font-size:34px;font-weight:800;line-height:1.2">{E(a)}</p>', 'pop', SOFT, 16, '12px 18px', f'box-sizing:border-box;border:3px solid {NAVY}')
 put(f'{PRE}-warm1', sec(f'{PRE}-warm1', '0–5 MIN', body,
-    'Minutes 0 to 5. ' + DK['warmGame'] + ' Click once per card to show its answer (cards go left to right, top row first). '
+    'Minutes 5 to 8. ' + DK['warmGame'] + ' Click once per card to show its answer (cards go left to right, top row first). '
     'Answers: 26 pages (40 − 15 = 25 counts the gaps, so add 1); 90 two-digit numbers (99 − 10 + 1); 20 multiples of 5; 11 lamp posts (100 ÷ 10 = 10 gaps, plus 1); '
     '19 numbers with a 7 (7, 17, …, 97 is 10; 70 to 79 is 10; 77 is in both lists, so 10 + 10 − 1); 25 even numbers. '
     'Ask after each: "How did you count without listing?" Praise the "+ 1" fix (fence posts) and the "counted twice" fix (77): both come back today.'))
@@ -204,11 +204,11 @@ body += pin(600, 760, 1192, p('10, 12, 20, 21  ✓', 40, 800), 'pop', YEL, 20, '
 put(f'{PRE}-teachcards', sec(f'{PRE}-teachcards', '40–42 MIN', body, 'Teach before worksheet page 1 (Q2, digit cards). Click through. Think-aloud: "Hundreds: any of 3 cards. Tens: one card is used, so 2 left. Ones: 1 left. 3 × 2 × 1 = 6. I list them in order to check: 247, 274, 427, 472, 724, 742." Then the 0 trap: "02 is not a 2-digit number, so the tens has only 2 choices, but the ones can be 0." Ask: "How many 3-digit numbers from 0, 1, 2?" (2 × 2 × 1 = 4: 102, 120, 201, 210).'))
 
 # ---------- 14-15 worksheet page 1 ----------
-put(f'{PRE}-ws1', ws_preview(f'{PRE}-ws1', '42–55 MIN', 'Worksheet page 1: with your partner', [('Q1', 'Outfits: multiply the choices. Then work backwards to 40 outfits.'), ('Q2', 'Digit cards 0, 3, 5, 8. List in order. No 0 at the front.'), ('Q3', 'Trace the code on paper first. Then build it in Scratch to check.')],
+put(f'{PRE}-ws1', ws_preview(f'{PRE}-ws1', '42–55 MIN', 'Worksheet page 1: with your partner', [('Q1', 'Outfits: multiply the choices.'), ('Q2', 'Digit cards 0, 3, 5, 8. List in order. No 0 at the front.'), ('Q3', 'Trace the code on paper first. Then build it in Scratch to check.')],
     'Stuck? Draw a tree or fix the first choice.', 'Minutes 42 to 55. Walk around (or visit breakout rooms). Ask "How do you know you have them all?" before helping. Q3: insist the trace table is filled BEFORE they run the code.'))
 k = dict(L['key'])
-put(f'{PRE}-ws1ans', checkrows(f'{PRE}-ws1ans', '55–57 MIN', 'Page 1: check together', [('Q1', 'a) 12   b) 24   c) 2 more pairs: 4 × 5 × 2 = 40 (4 pairs give only 32)'), ('Q2', 'a) 9: 30, 35, 38, 50, 53, 58, 80, 83, 85   b) 18 (3 × 3 × 2)'), ('Q3', 'a) 11, 12, 13, 14, 21, 22   b) 12   c) 34   d) 20')],
-    'Click each answer after a pair explains. Q1c: work backwards: 40 ÷ (4 × 2) = 5 pairs of shorts, she has 3, so 2 more. Q2a: tens 3 choices (not 0), ones 3 choices (the other three cards). Q2b: 3 × 3 × 2 = 18. Q3: a counts the turns of the outer loop, b the inner loop; b goes back to 1 every time a changes. Full key: ' + k['Q1'] + ' | ' + k['Q2'] + ' | ' + k['Q3']))
+put(f'{PRE}-ws1ans', checkrows(f'{PRE}-ws1ans', '55–57 MIN', 'Page 1: check together', [('Q1', 'a) 12   b) 24'), ('Q2', 'a) 9: 30, 35, 38, 50, 53, 58, 80, 83, 85   b) 18 (3 × 3 × 2)'), ('Q3', 'a) 11, 12, 13, 14, 21, 22   b) 12   c) 34   d) 20')],
+    'Click each answer after a pair explains. Q2a: tens 3 choices (not 0), ones 3 choices (the other three cards). Q2b: 3 × 3 × 2 = 18. Q3: a counts the turns of the outer loop, b the inner loop; b goes back to 1 every time a changes. Full key: ' + k['Q1'] + ' | ' + k['Q2'] + ' | ' + k['Q3']))
 
 # ---------- 16 teach handshakes ----------
 def penta_svg():
@@ -264,8 +264,8 @@ put(f'{PRE}-teachroute', sec(f'{PRE}-teachroute', '60–61 MIN', body, 'Teach be
 # ---------- 19-20 worksheet page 2 ----------
 put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '61–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'Seven friends shake hands. Then find Ali’s mistake.'), ('Q5', 'Routes: add as you go. Then put 0 at the puddle.'), ('Q6', 'Plan the handshake program for 7 friends, then build it to test Q4.')],
     'Finished early? Stretch and Challenge come next.', 'Children work alone. Note who needs a short catch-up next lesson. Children who finish Q6 build it in Scratch (or Python) and check that it agrees with Q4.'))
-put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21   c) 10 people'), ('Q5', 'a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
-    'Click after a child explains. Q4c: 9 + 8 + 7 + … + 1 = 45, so 10 people; or try n × (n − 1) ÷ 2 = 45. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
+put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21'), ('Q5', 'a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
+    'Click after a child explains. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
 
 # ---------- 21 stretch (not printed in the workbook) ----------
 st = QB['stretch'][4:7]

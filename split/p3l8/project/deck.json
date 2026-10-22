@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-21T23:45:49Z"
+  "at": "2026-10-22T00:11:19Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 8 – Angle and Line Detectives",
@@ -50,7 +50,7 @@
    "start": "p3l8-break"
   },
   "s4": {
-   "description": "Stretch, challenge, talk and exit",
+   "description": "Think harder, go further, talk and exit",
    "start": "p3l8-stretch"
   }
  },

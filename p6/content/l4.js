@@ -71,13 +71,13 @@ const qtext = (x, y, t, bold) => `<text x="${x}" y="${y}" font-size="15" ${bold 
 
 // Q1: three IN/OUT tables with a rule line beside each
 const rulesFig = () => {
-  const T = [['a', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['b', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['c', ['1', '2', '3', '4', '20'], ['1', '5', '9', '13', '']]];
-  let s = `<svg aria-label="Three tables of IN and OUT numbers with gaps, and a line to write each rule" viewBox="0 0 600 214" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
+  const T = [['a', ['1', '2', '3', '4', '10'], ['4', '5', '6', '7', '']], ['b', ['1', '2', '3', '4', '10'], ['6', '9', '12', '15', '']], ['c', ['1', '2', '3', '4', ''], ['3', '8', '13', '18', '48']], ['d', ['1', '2', '3', '4', '20'], ['1', '5', '9', '13', '']]];
+  let s = `<svg aria-label="Four tables of IN and OUT numbers with gaps, and a line to write each rule" viewBox="0 0 600 284" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
   T.forEach(([l, ins, outs], k) => {
     const y = 6 + k * 70;
     s += `<text x="2" y="${y + 36}" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">(${l})</text>`;
     s += traceTable(28, y, ['IN', ...ins], [['OUT', ...outs]], 52, 28);
-    s += qline(354, y + 36, 'Rule: OUT =');
+    s += qline(354, y + 36, k === 0 ? 'Rule: OUT = n + ____' : 'Rule: OUT =');
   });
   return s + '</svg>';
 };
@@ -118,7 +118,7 @@ module.exports = {
     skills: 'Rule finding from a table, writing expressions with a letter, order of operations and brackets, inverse operations, solving simple equations, tracing loops, explaining a number trick with algebra',
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu, free), mini whiteboard and marker, workbook, pencil.',
     online: 'Pairs work in breakout rooms for the explore: one partner shares their screen with the machine running and types in the numbers the other partner calls out. Page 1 of the worksheet is done on paper with laptops turned away. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour.',
-    warmup: 'Guess my rule: the tutor is a machine. Children call out IN numbers, the tutor says the OUT, and children guess the rule (n + 5, 5n, 2n − 1, 3n + 2), then check it on every pair.',
+    warmup: 'Guess my rule: the tutor is a machine. Children call out IN numbers (any number is fine), the tutor says the OUT, and children guess the rule (n + 5, 5n, 2n − 1, 3n + 2), then check it on every pair.',
     explore: 'At the computer: build a machine in Scratch (ask IN? and wait, set out to (answer * 3) + 2, say out). Each child changes it to a secret two-step rule, shares their screen, and the partner calls IN numbers and tries to write the rule with n using as few IN numbers as possible.',
     mini: 'From a table: how much OUT goes up for each 1 that IN goes up gives the × part; then fix the + or − part and check on every pair. Order matters: (n + 2) × 5 is not 5n + 2. To find IN from OUT, run the machine backwards: undo the last step first, then check forwards.',
     share: 'To solve 4n + 7 = 43, Ravi tries n = 1, 2, 3 … like the computer. Mei runs the machine backwards. Which way is better, and when?',
@@ -126,7 +126,7 @@ module.exports = {
     mistakes: ['Finding a rule from the first pair only (1 → 6 “add 5”) without checking it on the other pairs.', 'Undoing the steps in the wrong order, or doing the same step again instead of its opposite.', 'Ignoring brackets or the order of operations: reading 4n + 1 as “add 1, then times 4”.'],
     extension: 'Build the search program in Scratch for 8n − 5 = 91. Then change it to look for n × n + n = 90, which has no easy backwards step. What does it say? (9)',
     key: [
-      ['Q1', '(a) OUT for 10 is 33; rule OUT = 3n + 3  (b) IN is 10; rule OUT = 5n − 2  (c) OUT for 20 is 77; rule OUT = 4n − 3'],
+      ['Q1', '(a) OUT = n + 3; OUT for 10 is 13  (b) OUT for 10 is 33; rule OUT = 3n + 3  (c) IN is 10; rule OUT = 5n − 2  (d) OUT for 20 is 77; rule OUT = 4n − 3'],
       ['Q2', '(a) P gives 32, Q gives 23  (b) P: OUT = (n + 3) × 4;  Q: OUT = 4n + 3  (c) No: (n + 3) × 4 = 4n + 12, so P is always 9 more than Q.'],
       ['Q3', '(a) n = 8 (43 + 5 = 48, 48 ÷ 6 = 8)  (b) n = 10 (74 − 4 = 70, 70 ÷ 7)  (c) n = 12 (45 ÷ 5 = 9, 9 + 3)  (d) n = 24 (15 − 9 = 6, 6 × 4)'],
       ['Q4', '(a) 13  (b) −1  (c) 16 (25 + 7 = 32, 32 ÷ 2 = 16)'],
@@ -162,7 +162,7 @@ module.exports = {
     keyBig: 'OUT = 3n + 2 means × 3, then + 2. To find IN from OUT, run the machine backwards: undo the last step first.',
     keySmall: 'Check every answer by running the machine forwards.',
     brk: 'Jumping machine. Rule: double it, then take away 1. The tutor calls IN 2, 3, 4, 5; everyone does that many OUT star jumps (3, 5, 7, 9). Last round: “I did 11 jumps. What was my IN?” (6).',
-    ws1: 'Page 1, in pairs (paper only): Q1 guess my rule tables, Q2 two machines in a different order, Q3 run machines backwards.',
+    ws1: 'Page 1, in pairs (paper only): Q1 guess my rule tables (the first is a one-step warm-up), Q2 two machines in a different order, Q3 run machines backwards.',
     ws2: 'Page 2, on your own: Q4 predict the machine code, Q5 trace a loop, Q6 plan a search, Q7 explain a number trick with n.'
   },
 
@@ -221,7 +221,7 @@ module.exports = {
     H.fig(codeQ([[0, 'var', 'set n to [    ]'], [0, 'control', 'repeat until [(n * 8) − 5 = ___]'], [1, 'var', 'change n by [    ]'], [0, 'looks', 'say [n]']], ['(a) Fill in the three blanks.', '(b) What will it say?', '(c) Check by running the machine', 'backwards:'], [1, 3], 'Search plan with blanks: set n to blank, repeat until n times 8 minus 5 equals blank, change n by blank, say n. Questions beside it.')),
     H.q(7, 'The number trick. Think of a number. Add 5. Double it. Take away 4. Halve it. Take away the number you first thought of.', { keepNext: true }),
     H.sub('a', 'Try it with 7: you get ______.     Try it with 10: you get ______.'),
-    H.sub('b', 'Use n:  n → n + 5 → _______ → _______ → _______ → _______'),
+    H.sub('b', 'Use n:  n → n + 5 → 2n + 10 → _______ → _______ → _______   (the first steps are done for you)'),
     H.sub('c', 'Explain why you always get the same answer.'),
     ...H.lines(1)
   ]; }

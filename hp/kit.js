@@ -40,10 +40,13 @@ function frames(){
   return svg(590,b);
 }
 function strips(){
-  let b=lab(20,30,'Number strips 0 to 20 (cut out; use as a number line)');
-  [50,125,200].forEach(y=>{for(let i=0;i<=20;i++){const x=20+i*32;
+  let b=lab(20,30,'Number strip 0 to 50 (Lesson 1: cut out both rows and tape them end to end)');
+  [[0,25,50],[26,50,125]].forEach(([a,z,y])=>{for(let i=a;i<=z;i++){const x=12+(i-a)*26.5;
+    b+=`<rect x="${x}" y="${y}" width="26.5" height="44" fill="#fff" stroke="${NAVY}" stroke-width="1.6"/><text x="${x+13.25}" y="${y+28}" font-size="12.5" font-weight="800" text-anchor="middle" fill="${i%10==0?RED:NAVY}">${i}</text>`;}});
+  b+=lab(20,222,'Number strips 0 to 20 (cut out; use as a number line)');
+  [240,310].forEach(y=>{for(let i=0;i<=20;i++){const x=20+i*32;
     b+=`<rect x="${x}" y="${y}" width="32" height="44" fill="#fff" stroke="${NAVY}" stroke-width="1.6"/><text x="${x+16}" y="${y+28}" font-size="14" font-weight="800" text-anchor="middle" fill="${i==0||i==10||i==20?RED:NAVY}">${i}</text>`;}});
-  return svg(270,b);
+  return svg(370,b);
 }
 function tiles(){
   let b=lab(20,30,'Shape and sorting tiles (cut out all 24: 4 shapes, 3 colours, 2 sizes)');

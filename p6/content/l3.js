@@ -186,7 +186,7 @@ module.exports = {
       { q: 'Lift A starts at the surface of a mine (0 m) and goes down 35 m every minute. Lift B starts at −300 m and goes up 25 m every minute. When are they at the same height, and at what height?', a: 'After 5 minutes, at −175 m (the gap of 300 m closes by 60 m each minute).' },
       { q: 'Make up your own temperature story with at least three changes (rises and falls) that starts below zero and ends at exactly −7 °C. Write the story, the working and a number-line sketch. Swap with a partner and check each other’s.', a: 'Open. Example: starts at −2 °C, falls 6 degrees (−8), rises 3 degrees (−5), falls 2 degrees (−7). Check that the story really ends at −7 and that each change is shown on a number line.' },
       { q: 'Two numbers add up to −2. Their difference is 10. What are the two numbers?', a: '4 and −6 (4 + (−6) = −2 and 4 − (−6) = 10)' },
-      { q: 'In many Singapore buildings there is no level 0: level 1 is the ground floor and B1 is the level below it. A lift goes from level 4 down to B3. How many floors does it go down? (Count the levels one by one; do not use a number line with 0.)', a: '6 floors (4, 3, 2, 1, B1, B2, B3: six moves down). A number line with 0 would give 7, because it counts a level 0 that these buildings do not have.' }
+      { q: 'In some Singapore buildings there is no level 0. (Q6 on page 2 uses 0 for the ground floor; here, level 1 is the ground floor and B1 is the level below it.) A lift goes from level 4 down to B3. How many floors does it go down? (Count the levels one by one; do not use a number line with 0.)', a: '6 floors (4, 3, 2, 1, B1, B2, B3: six moves down). A number line with 0 would give 7, because it counts a level 0 that these buildings do not have.' }
     ]
   },
 

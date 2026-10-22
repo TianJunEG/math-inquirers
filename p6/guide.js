@@ -137,14 +137,15 @@ L.lessons.forEach(l => {
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
 
   G.push(seg('40–75 min', 'Worksheet (pairs, then alone, then your choice)'));
-  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 40 to 55: pairs work together on the first page (with the short teaching slides). Minutes 55 to 72: each child works alone on the second page. Minutes 72 to 75: check together. Any child who has finished can choose Think harder, Go further or the Investigation (all printed in the workbook). The Finish page is for everyone.']);
+  doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Follow the minute labels on the slides: short teaching slides come before page 1 and before page 2, pairs work together on page 1 (about 40 to 55), each child works alone on page 2 (about 55 to 72), and minutes 72 to 75 are the check together. Any child who has finished can choose Think harder, Go further or the Investigation (all printed in the workbook). The Finish page is for everyone.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
   doo(['Think harder, Go further and the Investigation are open to every child, with no label. The Investigation is printed on the Finish page that every child gets. After question 3 (see the line printed on page 1) any child may choose to carry on or try Think harder. Never announce who is on which page. Do not split a pair unless both children agree.']);
   G.push(h2('Stretch and challenge questions'));
-  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 5) + ': ' + x.q, x.a]), ['Workbook Investigation, Finish page (' + gp.inv.kind + '): ' + gp.inv.q + ' ' + gp.inv.first, gp.inv.a]], 'Question', 'Answer');
+  const TH = l.th;
+  ask([...TH.map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + TH.length + 1) + ': ' + x.q, x.a]), ['Workbook Investigation, Finish page (' + gp.inv.kind + '): ' + gp.inv.q + ' ' + gp.inv.first, gp.inv.a]], 'Question', 'Answer');
   G.push(tx('These are the questions on the Think harder, Go further and Finish pages in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
   G.push(seg('75–82 min', 'Talk time'));

@@ -74,7 +74,7 @@ module.exports = {
     objective: 'Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with a.m. and p.m. and find start times, end times and how long, also across the hour.',
     skills: 'Reasoning with equal amounts (swapping), working step by step, keeping a table, counting on in time, checking',
     materials: 'A coat hanger, two paper cups, string, a glue stick, a spoon and about 20 20¢ coins (a home-made balance; backup: a ruler balanced on a pencil); for the jug puzzles two cups or bottles of different size (about 3 and 5 units), a jug of dry rice or sand (or water), and tape marking 3 and 5 units; a cardboard clock with hands; mini whiteboards.',
-    online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
+    online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. No coat-hanger balance at home? The tutor balances a ruler on a pencil on camera and pairs share one view. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
     warmup: 'Which unit? The tutor shows six things (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing your teeth). Children show m, cm, kg, g, ℓ or minutes on whiteboards, then explain.',
     explore: 'Balance lab with a coat-hanger balance: how many 20¢ coins balance a glue stick? A spoon? Guess first, then test. Which is heavier, and how do you know without putting them on the balance together?',
     mini: 'A level balance means both sides are equally heavy, so we can swap one thing for whatever balances it (watermelon = 3 pineapples; pineapple = 2 kg; so watermelon = 6 kg; watermelon = pineapple + 4 bags, so the 4 bags are 4 kg). Jug puzzles: fill, pour or empty, and write every pour in a table (4 ℓ and 9 ℓ jugs: fill 9, pour into 4 twice, emptying in between, leaves 1 ℓ).',
@@ -85,9 +85,9 @@ module.exports = {
     key: [
       ['Q1', '(a) 200 g  (b) 400 g  (c) 50 g (the melon is 400 g, the apple is 200 g, so 4 lemons are 200 g)  (d) 8 lemons'],
       ['Q2', '(a) Fill the 5 ℓ jug. Pour it into the 3 ℓ jug until the 3 ℓ jug is full. 2 ℓ is left in the 5 ℓ jug.  (b) Fill the 3 ℓ jug and pour it into the 5 ℓ jug. Fill the 3 ℓ jug again and pour until the 5 ℓ jug is full (2 ℓ goes in). 1 ℓ is left in the 3 ℓ jug.'],
-      ['Q3', '(3 ℓ jug, 5 ℓ jug) Start 1, 5. 1: empty the 5 ℓ jug: 1, 0. 2: pour the 1 ℓ into the 5 ℓ jug: 0, 1. 3: fill the 3 ℓ jug: 3, 1. 4: pour it into the 5 ℓ jug: 0, 4. 4 ℓ ✓ (A longer way, 6 steps, also works: empty 3: 0, 5; pour into 3: 3, 2; empty 3: 0, 2; pour: 2, 0; fill 5: 2, 5; pour into 3 until full: 3, 4.)'],
-      ['Q4', '(a) 46 cm  (b) 105 cm (64 + 46 = 110, take away the 5 cm overlap)  (c) 5 m each, 3 cuts'],
-      ['Q5', '(a) A 7:25 a.m.  B 4:50 p.m.  (b) 5:25 p.m.  (c) 1 hour 25 minutes']
+      ['Q3', '(3 ℓ jug, 5 ℓ jug) Start 0, 0. 1: fill the 5 ℓ jug: 0, 5. 2: pour into the 3 ℓ jug until it is full: 3, 2. 3: empty the 3 ℓ jug: 0, 2. 4: pour the 2 ℓ into the 3 ℓ jug: 2, 0. 5: fill the 5 ℓ jug: 2, 5. 6: pour into the 3 ℓ jug until it is full (1 ℓ fits): 3, 4. 4 ℓ ✓ (6 steps is the shortest way; checked by search.)'],
+      ['Q4', '(a) 46 cm  (b) 105 cm (64 + 46 = 110, take away the 5 cm overlap)'],
+      ['Q5', '(a) A 7:25 a.m.  B 4:50 p.m.  (b) 5:25 p.m.  (c) 45 minutes (10:45 to 11:00 is 15 minutes, 30 more)']
     ]
   },
 
@@ -129,6 +129,8 @@ module.exports = {
       { q: 'The minute hand points to 7. How many minutes past the hour is it?', a: '35 minutes (count in 5s: 5, 10, 15, 20, 25, 30, 35)' }
     ],
     stretch: [
+      { q: 'Ben cuts a 20 m rope into 4 equal pieces. How long is each piece? How many cuts does he make?', a: '5 m each (5 + 5 + 5 + 5 = 20). 3 cuts: the last piece needs no cut.' },
+      { q: 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 12:10 p.m. How long is the trip?', a: '1 hour 25 minutes (10:45 to 11:00 is 15 minutes, 11:00 to 12:00 is 1 hour, 12:00 to 12:10 is 10 minutes).' },
       { q: '3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?', a: 'Apple 100 g, pomelo 300 g (5 apples balance 500 g).' },
       { q: 'You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.', a: 'Fill 7, pour into 2, empty 2, pour again: 3 ℓ is left in the 7 ℓ jug.' },
       { q: 'Mei’s piano lesson ends at 4:15 p.m. It lasted 45 minutes. What time did it start?', a: '3:30 p.m. (count back 15 minutes to 4:00, then 30 more minutes to 3:30)' },
@@ -166,21 +168,21 @@ module.exports = {
     ...H.lines(1),
     H.sub('b', 'How can you get exactly 1 ℓ? Write the steps.'),
     ...H.lines(2),
-    H.q(3, 'Next puzzle. Start where Q2 (b) ended: 1 ℓ in the 3 ℓ jug and 5 ℓ in the 5 ℓ jug. Now get exactly 4 ℓ in the 5 ℓ jug. Write each pour in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, 'Next puzzle. Start with both jugs empty. The first two rows are filled in for you. Now get exactly 4 ℓ in the 5 ℓ jug. Write each step in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
     H.tbl([1300, 4600, 2000, 2000], [
       H.row(['Step', 'What I do', '3 ℓ jug', '5 ℓ jug'].map((s, i) => H.cell(s, [1300, 4600, 2000, 2000][i], { bold: true, fill: 'EDEDED', h: 15 }))),
-      H.row([H.cell('Start', 1300, { bold: true, h: 15 }), H.cell('(where Q2 b ended)', 4600, { h: 15 }), H.cell('1 ℓ', 2000, { h: 15 }), H.cell('5 ℓ', 2000, { h: 15 })]),
-      ...[1, 2, 3, 4].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
+      H.row([H.cell('Start', 1300, { bold: true, h: 15 }), H.cell('both jugs empty', 4600, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 })]),
+      H.row([H.cell('1', 1300, { bold: true, h: 15 }), H.cell('Fill the 5 ℓ jug', 4600, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 }), H.cell('5 ℓ', 2000, { h: 15 })]),
+      ...[2, 3, 4, 5, 6].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
     ]),
     H.q(4, 'Siti has a red ribbon 64 cm long. Her blue ribbon is 18 cm shorter than the red ribbon.', { keepNext: true }),
     H.sub('a', 'How long is the blue ribbon?   ________ cm'),
     H.sub('b', 'She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.', { keepNext: true }),
     H.fig(ribbonFig),
-    H.sub('c', 'Ben cuts a 20 m rope into 4 equal pieces.  Each piece: _____ m   Cuts: _____'),
     H.q(5, 'Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
     H.sub('a', 'Write each time with a.m. or p.m.   A: ____________   B: ____________', { after: 50 }),
     H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________', { after: 50 }),
-    H.sub('c', 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 12:10 p.m. How long is the trip?   ______________')
+    H.sub('c', 'Mei’s family leaves home at 10:45 a.m. They reach Grandma’s flat at 11:30 a.m. How long is the trip?   ______________')
   ]
 };

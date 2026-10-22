@@ -15,6 +15,15 @@ const barQ4 = () => {
   return s + '</svg>';
 };
 
+// Q3 picture: before-and-after bars, drawn to scale (6 units per number), with the two unknown bars shown as "?"
+const barQ3 = () => {
+  const bar = (y, w, label, fill, txt, dash) => `<rect x="150" y="${y}" width="${w}" height="40" fill="${fill}" stroke="${NAVY}" stroke-width="3"${dash ? ' stroke-dasharray="8 6"' : ''}/><text x="140" y="${y + 26}" font-size="16" font-weight="700" text-anchor="end" fill="${NAVY}" font-family="Arial">${label}</text><text x="${150 + w / 2}" y="${y + 28}" font-size="20" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${txt}</text>`;
+  let s = `<svg aria-label="Three bars drawn to scale: Siti at first (unknown), after giving 24 stickers (unknown), and now (50 stickers)." viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:430px;max-width:100%">`;
+  s += bar(10, 354, 'At first', WHITE, '?', true) + bar(70, 210, 'Gave 24', WHITE, '?', true) + bar(130, 300, 'Now', YEL, '50', false);
+  s += `<text x="520" y="64" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">− 24</text><text x="470" y="124" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">+ 15</text>`;
+  return s + '</svg>';
+};
+
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A', title: 'Mystery Number Machines', topic: 'Working Backwards',
@@ -31,7 +40,7 @@ module.exports = {
     extension: 'Make a three-step machine with a × card, a ÷ card and a + card. Give a partner only the OUT. Can they find the IN? Which OUT numbers make your machine impossible to undo?',
     key: [
       ['Q1', '(a) 10  (b) 16  (c) 24  (d) 9  (undo the last step first: e.g. (a) 27 − 7 = 20, 20 ÷ 2 = 10)'],
-      ['Q2', '(a) IN 4 → OUT 14; IN 10 → OUT 32; OUT 17 ← IN 5; OUT 29 ← IN 9.  (b) Rule: × 3, then + 5. IN 10 gives OUT 35. OUT 26 comes from IN 7.'],
+      ['Q2', '(a) IN 4 → OUT 14; IN 10 → OUT 32; OUT 17 ← IN 5; OUT 29 ← IN 9.  (b) IN 3, 5, 10, 20 give OUT 7, 11, 21, 41.'],
       ['Q3', '59 stickers (50 − 15 = 35, 35 + 24 = 59; check 59 − 24 = 35, 35 + 15 = 50)'],
       ['Q4', '30 sweets (one bag: 6 + 4 = 10; 3 bags: 10 × 3 = 30)'],
       ['Q5', '(a) Mei 18  (b) Ali 14  (c) No: the order of the steps matters  (d) 7 (18 − 4 = 14, 14 ÷ 2 = 7)']
@@ -78,13 +87,14 @@ module.exports = {
       { q: 'Mei had some stickers. She gave away 14 and has 27 left. How many did she have at first?', a: '41 (27 + 14)' }
     ],
     stretch: [
-      { q: 'A machine does × 4, then + 13. The OUT is 45. What went IN?', a: '8 (45 − 13 = 32, 32 ÷ 4 = 8)' },
+      { q: 'A machine multiplies by a number, then adds a number. IN 2 gives OUT 11 and IN 5 gives OUT 20. Find what the machine does (try × 2, × 3, × 4 … with IN 2, then test IN 5). Then: what OUT does IN 10 give? Which IN gives OUT 26?', a: '× 3, then + 5. IN 10 gives OUT 35. OUT 26 comes from IN 7 (26 − 5 = 21, 21 ÷ 3 = 7).' },
       { q: 'Ben had some money. He spent $15 on a book. Then his dad gave him $10. Now he has $42. How much money did Ben have at first?', a: '$47 (42 − 10 = 32, 32 + 15 = 47)' },
       { q: 'Siti had some beads. She gave half of them to Mei. Then she bought 12 more. Now she has 30 beads. How many beads did Siti have at first?', a: '36 (30 − 12 = 18 is half, 18 + 18 = 36)' },
       { q: 'Ali, Ben and Siti have 40 marbles altogether. Ben has 5 more marbles than Ali. Siti has 8 more marbles than Ali. How many marbles does each child have? Draw a bar for each child.', a: 'Ali 9, Ben 14, Siti 17 (40 − 5 − 8 = 27, 27 ÷ 3 = 9; check 9 + 14 + 17 = 40)' },
       { q: 'A machine does × 2, then − 3. What goes IN to give OUT 17? What goes IN to give OUT 1?', a: '10, and 2 (17 + 3 = 20, 20 ÷ 2 = 10; 1 + 3 = 4, 4 ÷ 2 = 2)' },
       { q: 'I think of a number. I divide it by 3, then multiply by 10. I get 50. What is my number?', a: '15 (50 ÷ 10 = 5, 5 × 3 = 15)' },
       { q: 'A bus had some people on it. At the first stop, 12 got off and 5 got on. At the second stop, 8 got off. Now there are 20 people on the bus. How many were on the bus at first?', a: '35 (20 + 8 = 28, 28 − 5 = 23, 23 + 12 = 35)' },
+      { q: 'A machine does × 4, then + 13. The OUT is 45. What went IN?', a: '8 (45 − 13 = 32, 32 ÷ 4 = 8)' },
       { q: 'A machine multiplies by a number, then adds a number. IN 1 gives OUT 9. IN 3 gives OUT 19. What does the machine do?', a: '× 5, then + 4 (1 × 5 + 4 = 9 and 3 × 5 + 4 = 19; × 2, × 3, × 4 and × 10 do not fit both)' }
     ],
     challenge: [
@@ -106,6 +116,7 @@ module.exports = {
     const ws = [1900, 2000, 2000, 2000, 2000];
     const io = (ins, outs) => H.tbl(ws, [H.row([H.cell('IN', ws[0], { bold: true, fill: 'EDEDED' }), ...ins.map((s, i) => H.cell(s, ws[i + 1], { h: 90, size: 24 }))]), H.row([H.cell('OUT', ws[0], { bold: true, fill: 'EDEDED' }), ...outs.map((s, i) => H.cell(s, ws[i + 1], { h: 90, size: 24 }))])]);
     return [
+      H.p('IN = what goes in.   OUT = what comes out.   Undo = do the opposite.', { after: 50 }),
       H.q(1, 'Mystery machines. Find the number that went IN and write it in the yellow box. Undo the LAST step first, then check forwards.', { before: 40, keepNext: true }),
       H.sub('a', 'I multiply by 2, then add 7. I get 27.', { after: 30, keepNext: true }), m2('× 2', '+ 7', '27'), H.gap(16),
       H.sub('b', 'I take away 8, then multiply by 5. I get 40.', { after: 30, keepNext: true }), m2('− 8', '× 5', '40'), H.gap(16),
@@ -114,12 +125,11 @@ module.exports = {
       H.q(2, 'Two-step number machines.', { keepNext: true }),
       H.sub('a', 'This machine does × 3, then + 2. Fill in the table.', { keepNext: true }),
       io(['4', '10', '', ''], ['', '', '17', '29']), H.gap(30),
-      H.sub('b', 'This machine multiplies by a number, then adds a number. Find what it does. (Try × 2, × 3, × 4 … with IN 2, then test IN 5.)', { keepNext: true }),
-      io(['2', '5', '10', ''], ['11', '20', '', '26']),
-      H.sub('c', 'It does  ×  ____ , then  +  ____ .    IN 10 gives OUT ____ .    OUT 26 comes from IN ____ .'),
+      H.sub('b', 'This machine does × 2, then + 1. Fill in the table for IN 3, 5, 10 and 20.', { keepNext: true }),
+      io(['3', '5', '10', '20'], ['', '', '', '']),
 
-      H.q(3, 'Siti had some stickers. She gave 24 stickers to her brother. Then her mother gave her 15 more. Now she has 50 stickers. How many stickers did Siti have at first? Draw before-and-after bars.', { pb: true, before: 0 }),
-      ...H.lines(3), H.ans(),
+      H.q(3, 'Siti had some stickers. She gave 24 stickers to her brother. Then her mother gave her 15 more. Now she has 50 stickers. How many stickers did Siti have at first? Fill in the two ? bars first (start from what Siti has now).', { pb: true, before: 0, keepNext: true }),
+      H.fig(barQ3()), H.ans(),
       H.q(4, 'Ravi put all his sweets into 3 bags, with the same number in each bag. He took 4 sweets out of bag 3. Now bag 3 has 6 sweets. How many sweets did Ravi have altogether?', { keepNext: true }),
       H.fig(barQ4()),
       H.ans(),

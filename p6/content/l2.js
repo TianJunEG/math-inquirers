@@ -86,11 +86,11 @@ module.exports = {
     skills: 'Systematic listing (factor pairs), testing and ruling out, reasoning about when to stop, tracing code, generalising (squares of primes)',
     materials: 'Laptop or desktop with Scratch 3 open, a printed 1 to 100 grid (or squared paper), two coloured pencils, mini whiteboard, workbook. Optional: a Python editor for children who already know Python.',
     online: 'Share the 1 to 100 grid on screen and annotate it while children work on their own printed or hand-drawn grid. Build the prime checker together in your shared Scratch window; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Children hold their grid up to the camera at minute 22.',
-    warmup: 'Factor pair race: six number cards (12, 16, 20, 24, 29, 30). Pairs race to say every factor pair. One card has only one pair: which one, and why?',
+    warmup: 'Factor pair hunt: six number cards (12, 16, 20, 24, 29, 30). With a partner, find every factor pair for each card and explain one pair you found. One card has only one pair: which one, and why? No racing and no points.',
     explore: 'The sieve of Eratosthenes by hand on a 1 to 100 grid: cross out 1, circle 2 and cross out its other multiples, then do the same for 3, 5 and 7. Count the primes and decide why we can stop after 7.',
     mini: 'Factors come in pairs; stop when the pairs meet (36 has 9 factors because 6 × 6 counts once). A prime has exactly 2 factors; 1 is not prime. Test 91: 2, 3 and 5 fail, 7 works (7 × 13), so it is not prime; stop testing once d × d is bigger than the number. Factor trees: 60 = 2 × 2 × 3 × 5 whichever way you split it. Code: n mod d is the remainder; if it is 0, d is a factor; a counter counts the factors; count = 2 means prime. Before page 2: trace a loop with mod, Goldbach pairs (20 = 3 + 17 = 7 + 13), and counting the factors of square numbers.',
     share: 'Why does a square number like 36 have an odd number of factors, when most numbers have an even number?',
-    exit: { q: '(a) Is 133 prime? Show your test. (b) Write 66 as a product of primes.', a: '(a) No. Not even, digits add to 7, does not end in 0 or 5, but 133 ÷ 7 = 19, so 133 = 7 × 19.  (b) 66 = 2 × 3 × 11' },
+    exit: { q: '(a) Is 111 prime? Show your test. (b) Write 66 as a product of primes. (c) Optional: is 133 prime?', a: '(a) No. 1 + 1 + 1 = 3, so 3 divides it: 111 = 3 × 37.  (b) 66 = 2 × 3 × 11  (c) No. 133 = 7 × 19.' },
     mistakes: [
       'Saying 1 is prime, or that 2 is not prime because it is even.',
       'Missing factors by not working in pairs, or counting the middle factor of a square number twice (6 in 36).',
@@ -101,15 +101,15 @@ module.exports = {
       ['Q1', '28: 1, 2, 4, 7, 14, 28 (6 factors, not prime).  31: 1, 31 (2, prime).  49: 1, 7, 49 (3, not prime).  51: 1, 3, 17, 51 (4, not prime: 51 = 3 × 17).  1: 1 (1 factor, not prime).  (a) 67, 83 and 97 are prime (57 = 3 × 19, 77 = 7 × 11, 99 = 9 × 11).  (b) No. 8 + 7 = 15, a multiple of 3, so 87 = 3 × 29.'],
       ['Q2', '(a) 72 = 2 × 2 × 2 × 3 × 3  (b) 150 = 2 × 3 × 5 × 5  (c) 126 (2 × 3 × 3 × 7)'],
       ['Q3', 'd = 1 to 6.  6 mod d: 0, 0, 0, 2, 1, 0.  count after each loop: 1, 2, 3, 3, 3, 4.  (a) 4 (the factors 1, 2, 3, 6)  (b) It says 2, so 13 is prime: its only factors are 1 and 13.'],
-      ['Q4', '(a) 24 = 5 + 19 = 7 + 17 = 11 + 13 (3 ways)  (b) 36 = 5 + 31 = 7 + 29 = 13 + 23 = 17 + 19 (4 ways)  (c) An odd total needs one even and one odd number. The only even prime is 2, and 27 − 2 = 25 is not prime.'],
-      ['Q5', '(a) 4, 9, 25, 49  (b) They are squares of primes (2 × 2, 3 × 3, 5 × 5, 7 × 7). Their factors are 1, the prime and the square.  (c) 121 (11 × 11)'],
+      ['Q4', '(a) 24 = 5 + 19 = 7 + 17 = 11 + 13 (3 ways)  (b) An odd total needs one even and one odd number. The only even prime is 2, and 27 − 2 = 25 is not prime.'],
+      ['Q5', '(a) 4, 9, 25 (three numbers up to 30)  (b) They are squares of primes (2 × 2, 3 × 3, 5 × 5). Their factors are 1, the prime and the square.  (The 36 and the 50 versions are Think harder 4 and 5.)'],
       ['Q6', 'E, C, B. Inside B: F (with A inside F), then D. It says 1, 2, 4, 5, 8, 10, 20, 40 (8 numbers, one per second).']
     ]
   },
 
   script: {
     hook: ['Welcome back, inquirers! Today we hunt primes, the building blocks of every whole number.', 'People have hunted primes for over 2000 years, and today computers hunt them to keep the internet safe. We hunt by hand first, then teach a computer to do it.'],
-    warmIntro: ['Factor pair race. I show a number. With your partner, find every pair of whole numbers that multiply to make it. First pair to say them all wins the card.', 'One card is special. See if you can spot which one.'],
+    warmIntro: ['Factor pair hunt. I show a number. With your partner, find every factor pair: every pair of whole numbers that multiply to make it. Take your time. Be ready to explain one pair you found. There is no race and there are no points.', 'One card is special. See if you can spot which one.'],
     predict: ['How many prime numbers do you think there are from 1 to 100? Write a guess. Then we find out with a 2000-year-old method called the sieve.'],
     exploreHints: ['Stuck: circle 2, then cross out 4, 6, 8, … every 2nd number. Then circle 3 and cross out every 3rd number.', 'Crossing out the same number twice: “That is fine. 6 is a multiple of 2 AND of 3.”', 'Finished early: circle 11 and look for a multiple of 11 below 100 that is not crossed out yet. Is there one? Why not?'],
     think: [
@@ -127,7 +127,7 @@ module.exports = {
 
   deck: {
     today: 'Find factors in pairs, test whether a number is prime, split numbers into primes, and teach a computer to count factors with mod.',
-    warmGame: 'Factor pair race. Six number cards. Pairs race to say every factor pair. One card has only one pair: which one?',
+    warmGame: 'Factor pair hunt. Six number cards. With a partner, find every factor pair and explain one. One card has only one pair: which one?',
     warmQs: [['17 ÷ 5 = 3 remainder __', '2'], ['30 ÷ 6 = 5 remainder __', '0'], ['23 ÷ 4 = 5 remainder __', '3'], ['100 ÷ 7: what is the remainder?', '2 (7 × 14 = 98)'], ['A remainder of 0 means …?', 'It divides exactly: it is a factor.']],
     expSetup: ['On the 1 to 100 grid, cross out 1. It is not prime.', 'Circle 2. Cross out every other multiple of 2.', 'Circle the next number not crossed out (3) and cross out its multiples. Do the same for 5 and 7.', 'Circle every number left. Count the primes.'],
     expPic: 'the first three rows of a 1 to 100 grid with 2 and 3 circled and the multiples of 2 crossed out.',
@@ -141,6 +141,10 @@ module.exports = {
     ws1: 'Page 1, in pairs: Q1 factors, primes and prime tests, Q2 factor trees.',
     ws2: 'Page 2, on your own: Q3 trace the factor counter, Q4 Goldbach pairs, Q5 exactly 3 factors, Q6 plan your code.'
   },
+
+  moved: [
+    { q: 'Write 36 as the sum of two primes in every way. Then find ALL the numbers from 1 to 50 with exactly 3 factors. What is the next one after 50?', a: '36 = 5 + 31 = 7 + 29 = 13 + 23 = 17 + 19 (4 ways). Exactly 3 factors: 4, 9, 25, 49 (squares of primes). Next after 50: 121 (11 × 11).' }
+  ],
 
   qbank: {
     core: [
@@ -204,12 +208,11 @@ module.exports = {
     // Q4 Goldbach
     W.push(H.q(4, 'Goldbach’s guess: every even number above 2 is a sum of two primes.', { keepNext: true }));
     W.push(H.sub('a', '24 in every way:  ________________________________'));
-    W.push(H.sub('b', '36 in every way:  ________________________________'));
-    W.push(H.sub('c', 'Explain why 27 cannot be the sum of two primes.'));
+    W.push(H.sub('b', 'Explain why 27 cannot be the sum of two primes.'));
     // Q5 exactly 3 factors
     W.push(H.q(5, 'Exactly 3 factors.', { keepNext: true }));
-    W.push(H.sub('a', 'All the numbers from 1 to 50 with exactly 3 factors:  ______________'));
-    W.push(H.sub('b', 'What do you notice?  ________________     (c)  Next one after 50?  ______'));
+    W.push(H.sub('a', 'All the numbers from 1 to 30 with exactly 3 factors (there are 3):  ______________'));
+    W.push(H.sub('b', 'What do you notice?  ______________________________'));
     // Q6 plan
     W.push(H.q(6, 'Plan your code. Put the blocks in order so the sprite says every factor of 40.', { keepNext: true }));
     { const lb = (t, p) => `<div style="display:flex;align-items:center;gap:6px"><b style="width:18px">${t}</b>${blocks(p, 'Block ' + t, 14).replace('max-width:100%', 'flex:none')}</div>`;

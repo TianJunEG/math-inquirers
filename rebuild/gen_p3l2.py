@@ -238,7 +238,7 @@ for f in os.listdir(os.path.join(D,'slides')):
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
  'title':f'Math Inquirers P3: Lesson {LN} – {TITLE}','order':ORDER,'cover':ORDER[0],
- 'sections':{'s1':{'description':'Warm-up and explore','start':PRE+'title'},'s2':{'description':'Teach: missing digits, check by adding, guess and check','start':PRE+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':PRE+'break'},'s4':{'description':'Stretch, challenge, talk and exit','start':PRE+'stretch'}},
+ 'sections':{'s1':{'description':'Warm-up and explore','start':PRE+'title'},'s2':{'description':'Teach: missing digits, check by adding, guess and check','start':PRE+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':PRE+'break'},'s4':{'description':'Think harder, go further, talk and exit','start':PRE+'stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

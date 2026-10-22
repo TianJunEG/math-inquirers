@@ -3,7 +3,7 @@ const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
 const GAPS = require('./content/gaps.json');
-C.forEach((c, i) => { const g = GAPS[String(i + 1)]; c.gaps = g; });
+C.forEach((c, i) => { const g = GAPS[String(i + 1)]; c.gaps = g; c.lesson.moved = c.moved || []; const mv = c.moved || []; c.lesson.th = c.qbank.stretch.slice(0, 4 - Math.max(0, mv.length - 1)).concat(mv); });
 module.exports = {
   gaps: GAPS,
   program: 'Math Inquirers Holiday Program',

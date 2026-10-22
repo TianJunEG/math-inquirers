@@ -1,303 +1,346 @@
 {
+ "common": {
+  "neutral": "After question 3 you may choose: carry on, or try Think harder.",
+  "preSay": "These are sneak-peek puzzles. They are ideas we have not learnt yet, so guessing is welcome and so is saying \"I do not know\". Nobody is marked and nothing is read out. Start with question 1: use objects, a drawing or counting. Then try question 2. Show your answer on your own paper to your tutor only, or send it in private chat.",
+  "preDo": [
+   "Show the Sneak-peek puzzles slide at minute 1 (3 minutes: about 1 minute for question 1, then 2 minutes for question 2). Say out loud: these are ideas we have not learnt yet; guessing and \"I do not know\" are welcome; nobody is marked.",
+   "Answers stay private. Each child holds their own paper to the camera for you only (look, do not read out), or sends a private chat message. Never raise whiteboards together and never show a board in front of the group. Never ask a named child \"how do you know?\" Ask for volunteers: \"Would anyone like to tell us how they started?\"",
+   "Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone has a first win. Question 2 is the thinking question. Do not mark either one. Click to show the answers at the end as \"one way to think about it\", without saying who had what.",
+   "Use what you see only to plan. You may quietly invite a child to try Think harder by PRIVATE chat message. Never announce who is on which page and never name a child in front of the group. Children choose, and may move either way at any time. Pairs are not split unless both children agree. Everybody joins the explore, the mini-lesson, the check-together slides and talk time."
+  ],
+  "talkDo": "You choose volunteers first: \"Who would like to share?\" If nobody offers, ask the pairs to share what their partner said. Never cold-call a child by name. Any child may say \"pass\" at any time and that is always fine. Do not keep public tallies, scores or rankings (no counting who got most right, no \"first to finish\"). Invite quiet children by private chat message beforehand if they would like a turn.",
+  "refSay": "Looking back takes 2 minutes. Find the small box called Looking back on your page. Finish one line, two lines or all three, and tick what helped you. You may pass on any line. If you tick \"I am still stuck\", your tutor will check in with you privately.",
+  "refDo": "Nothing is collected in front of the group and nobody has to read theirs out. The tutor may read a box privately (while stamping journals) or answer it by private chat, for example \"I saw you drew it when you got stuck\". A child may volunteer one sentence, never by name unless they choose to. If a child ticks \"I am still stuck\", send a private message before the next lesson. Praise the strategy, not the speed.",
+  "close": "Closing and stamps take the last minute (89 to 90)."
+ },
  "1": {
   "pre": [
+   {
+    "q": "Mei has 3 hundreds, 2 tens and 5 ones. Draw them if you like. What number is that?",
+    "a": "325.",
+    "short": "325",
+    "w": "Hundreds first, then tens, then ones. A drawing of 3 flats, 2 rods and 5 units is welcome. This is a first win for everyone."
+   },
    {
     "q": "Mei has digit cards 4, 0 and 7. She uses each card once to make a 3-digit number. How many different numbers can she make? Write them.",
     "a": "4 numbers: 407, 470, 704, 740.",
     "short": "4 numbers",
-    "w": "0 cannot be the hundreds digit (047 is not a 3-digit number). Listing in order: 4 starts 2 numbers, 7 starts 2 numbers, 0 starts none. A child who says 6 is using the 3 x 2 x 1 idea without the zero rule."
-   },
-   {
-    "q": "Ali writes “5 hundreds and 13 tens” as 513. Is he right? What number should he write?",
-    "a": "No. 13 tens is 130, so the number is 500 + 130 = 630.",
-    "short": "630",
-    "w": "13 tens is 1 hundred and 3 tens; a box holds only one digit, so ten tens swap for a hundred. Listen for “regroup” or “130”."
+    "w": "0 cannot be the hundreds digit, so only 4 and 7 can start. Listing in order: 4 starts 2 numbers, 7 starts 2 numbers. A child who says 6 is using 3 x 2 x 1 without the zero rule: a good idea, not a mistake to correct yet."
    }
   ],
   "invest": {
    "title": "Mirror numbers",
-   "text": "A mirror number reads the same forwards and backwards, like 252 or 909. (a) Write 5 mirror numbers of your own. (b) Find ALL the mirror numbers from 200 to 299. How many are there? How do you know you have found them all? (c) Ali says every mirror number is odd. Is he right?",
+   "need": "",
+   "first": "Easy first step: write 252, 909 and 131, then write three more mirror numbers.",
+   "text": "A mirror number reads the same forwards and backwards, like 252 or 909. (a) Write 5 mirror numbers of your own. (b) Find ALL the mirror numbers from 200 to 299. How do you know you have found them all? (c) Ali says every mirror number is odd. Is he right?",
    "model": "(a) Any number whose first and last digits match, such as 101, 454, 777. (b) 10 numbers: 202, 212, 222, 232, 242, 252, 262, 272, 282, 292. The first and last digits must both be 2, and the middle digit can be 0 to 9: 10 choices. A child who lists them by the middle digit in order has not missed any. (c) No: 202 is even. A mirror number is even when its first (and last) digit is even. Extension: there are 90 mirror numbers from 100 to 999 (9 choices for the end digits x 10 for the middle). Look for: the child sees that the end digits match, lists in order, and can say why the list is complete.",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: add a fourth card, 2. Use any THREE of the cards 2, 3, 5 and 8. How many different 3-digit numbers can you make?",
+   "a": "24: 4 choices of which card to leave out, and each set of 3 cards makes 6 numbers (4 x 6 = 24)."
   },
   "unstuck": [
    "made a list in order",
-   "used digit cards or counters",
-   "tried a smaller number first",
-   "asked my partner"
+   "used digit cards or counters"
   ],
   "fig": null
  },
  "2": {
   "pre": [
    {
-    "q": "4A6 + 237 = 683. Which digit is A? How do you know?",
-    "a": "A = 4 (446 + 237 = 683).",
-    "short": "A = 4",
-    "w": "Starts at the ones: 6 + 7 = 13, carry 1; tens: A + 3 + 1 = 8, so A = 4. Accept try-and-check if the child then checks by adding."
+    "q": "3{box}2 + 416 = 788. Which digit is hidden in the box? (Use counters or draw the columns if it helps.)",
+    "a": "7 (372 + 416 = 788).",
+    "short": "7",
+    "w": "No carry in this one: look at the tens column, 1 and what makes 8. This is a first win for everyone."
    },
    {
-    "q": "300 + 150 = 290 + B. What is B? Explain without adding.",
-    "a": "B = 160. 290 is 10 less than 300, so B must be 10 more than 150.",
-    "short": "B = 160",
-    "w": "Reads “=” as “is the same as”. A child who adds 450 and subtracts 290 is correct; ask whether there is a quicker way."
+    "q": "4{box}6 + 237 = 683. Which digit is hidden in the box? How do you know?",
+    "a": "4 (446 + 237 = 683).",
+    "short": "4",
+    "w": "Ones: 6 + 7 = 13, so 1 ten is carried. Tens: the box + 3 + 1 must end in 8, so the box is 4. Listen for: \"carry\", or a guess that was tested and checked."
    }
   ],
   "invest": {
    "title": "Odd or even?",
-   "text": "Ali says: “When I add two odd numbers, I always get an even number.” (a) Test Ali’s idea with 5 pairs of odd 3-digit numbers (for example 345 + 271). (b) Now test odd + even, and even + even. What do you notice? (c) Does the same happen when you take away? Explain WHY, using pairs of counters or a drawing.",
-   "model": "(a) Ali is right: odd + odd is always even (brute-forced for every pair of 3-digit numbers). (b) Odd + even is always odd; even + even is always even. (c) Taking away behaves the same way: odd − odd is even, odd − even is odd. Why: an odd number is some pairs plus 1 left over, an even number is only pairs. Two odd numbers have two left-overs, and they make one more pair, so no one is left over. Look for: several tests before a claim, then a reason that uses pairs, counters or ones digits, not only “it worked every time”. A ones-digit reason (odd ends in 1, 3, 5, 7, 9) is also fine.",
-   "lines": 5
+   "need": "",
+   "first": "Easy first step: use counters to try 3 + 5, 7 + 9 and 11 + 13. Are the answers odd or even?",
+   "text": "Ali says: \"When I add two odd numbers, I always get an even number.\" (a) Test Ali's idea with 5 pairs of odd 3-digit numbers (for example 345 + 271). (b) Now test odd + even, and even + even. What do you notice? (c) Explain WHY, using pairs of counters or a drawing.",
+   "model": "(a) Ali is right: odd + odd is always even (brute-forced for every pair of 3-digit numbers). (b) Odd + even is always odd; even + even is always even. (c) (Extension, not printed: taking away behaves the same way: odd − odd is even, odd − even is odd.) Why: an odd number is some pairs plus 1 left over, an even number is only pairs. Two odd numbers have two left-overs, and they make one more pair, so no one is left over. Look for: several tests before a claim, then a reason that uses pairs, counters or ones digits, not only “it worked every time”. A ones-digit reason (odd ends in 1, 3, 5, 7, 9) is also fine.",
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: now make 1000. What is the partner of 358 that makes 1000 (358 + ? = 1000)? What do you notice about the columns?",
+   "a": "642. Ones: 8 + 2 = 10. Tens: 5 + 4 + 1 = 10. Hundreds: 3 + 6 + 1 = 10. Every column carries."
   },
   "unstuck": [
    "tried a digit and checked it",
-   "worked from the ones column",
-   "drew it",
-   "asked my partner"
+   "drew it"
   ],
   "fig": null
  },
  "3": {
   "pre": [
    {
-    "q": "A toy shop has cars (4 wheels) and scooters (2 wheels). 6 toys have 16 wheels altogether. How many cars and how many scooters? How do you know?",
-    "a": "2 cars and 4 scooters (8 + 8 = 16 wheels).",
-    "short": "2 cars, 4 scooters",
-    "w": "Start with all scooters (12 wheels) and swap one at a time (+2 wheels each swap), or guess and check in a table. Ask “what did you try first?”"
+    "q": "A tray has 3 rows of counters with 5 counters in each row. Draw it if you like. How many counters are there?",
+    "a": "15 counters (3 rows of 5: 5, 10, 15).",
+    "short": "15",
+    "w": "Counting in 5s, or drawing and counting. This is a first win for everyone."
    },
    {
-    "q": "An array of counters has 4 rows with 5 in each row. A cloth covers 2 whole rows. How many counters can you see? Write a multiplication sentence.",
-    "a": "10 counters: 2 × 5 = 10.",
-    "short": "10 counters",
-    "w": "Sees that 2 rows are left. They may also say the whole array is 4 × 5 = 20. Listen for “rows” and “in each row”."
+    "q": "A toy shop has cars (4 wheels) and scooters (2 wheels). 6 toys have 16 wheels altogether. How many cars and how many scooters? How do you know?",
+    "a": "2 cars and 4 scooters (8 + 8 = 16).",
+    "short": "2 cars, 4 scooters",
+    "w": "Starting with all scooters (12 wheels) and swapping one at a time is the idea of today. A child who draws 6 vehicles and counts wheels is thinking well. Guess and check is welcome."
    }
   ],
   "invest": {
    "title": "Where tables meet",
-   "text": "(a) List the numbers up to 50 that are in BOTH the 2 times table and the 5 times table. What do you notice about them? (b) Now find the numbers up to 50 that are in both the 3 and 5 tables, and in both the 4 and 5 tables. (c) Is every number in the 10 times table in both the 2 and 5 tables? Is every number in both the 2 and 5 tables in the 10 table? Explain.",
-   "model": "(a) 10, 20, 30, 40, 50: they jump by 10 and are the 10 times table. (b) 3 and 5: 15, 30, 45 (jump by 15). 4 and 5: 20, 40 (jump by 20). (c) Yes to both, brute-forced up to 100: a number in the 10 table is 10 x something = 2 x (5 x something) = 5 x (2 x something). Child-level reason: a number in the 2 table is even and a number in the 5 table ends in 0 or 5, so a number in both ends in 0, which is the 10 table; and every number in the 10 table ends in 0, so it is even and in the 5 table. Look for: organised lists (writing both tables out and circling), the noticing that the jumps are 10, 15, 20, and a test of “always”.",
-   "lines": 5
+   "need": "",
+   "first": "Easy first step: write the 5 times table up to 50, then circle the even numbers.",
+   "text": "(a) List the numbers up to 50 that are in BOTH the 2 times table and the 5 times table. What do you notice about them? (b) Now find the numbers up to 50 that are in both the 3 and 5 tables. (c) Is every number in both the 2 and 5 tables also in the 10 table? Explain.",
+   "model": "(a) 10, 20, 30, 40, 50: they jump by 10 and are the 10 times table. (b) 3 and 5: 15, 30, 45 (jump by 15). (Extension: 4 and 5 give 20, 40, jump by 20.) (c) Yes to both, brute-forced up to 100: a number in the 10 table is 10 x something = 2 x (5 x something) = 5 x (2 x something). Child-level reason: a number in the 2 table is even and a number in the 5 table ends in 0 or 5, so a number in both ends in 0, which is the 10 table; and every number in the 10 table ends in 0, so it is even and in the 5 table. Look for: organised lists (writing both tables out and circling), the noticing that the jumps are 10, 15, 20, and a test of “always”.",
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: what if the farmer counts 20 legs? How many different mixes of hens and goats are there now?",
+   "a": "6 mixes: 10 hens; 8 hens and 1 goat; 6 hens and 2 goats; 4 hens and 3 goats; 2 hens and 4 goats; 5 goats."
   },
   "unstuck": [
    "made a table",
-   "used counters",
-   "drew arrays",
-   "asked my partner"
+   "drew arrays or used counters"
   ],
   "fig": null
  },
  "4": {
   "pre": [
    {
-    "q": "A pattern repeats: star, moon, moon, sun, star, moon, moon, sun … What is the 22nd shape? How do you know?",
-    "a": "A moon. 20 ends a group (5 groups of 4), so 21 is a star and 22 is a moon.",
-    "short": "a moon",
-    "w": "Finds the group size 4, then counts in 4s to the end of a group (20) and counts on 2. A child who draws all 22 shapes is correct; ask for a quicker way."
+    "q": "Draw this pattern up to the 9th shape: circle, circle, square, circle, circle, square ... What is the 9th shape?",
+    "a": "A square (the squares are the 3rd, 6th and 9th shapes).",
+    "short": "square",
+    "w": "Drawing it out is a fine method. Listen for \"every 3rd one is a square\"."
    },
    {
-    "q": "Row 1 has 3 cubes, row 2 has 7 cubes, row 3 has 11 cubes. The rows keep growing the same way. How many cubes are in row 6?",
-    "a": "23 cubes (add 4 each time: 15, 19, 23).",
-    "short": "23 cubes",
-    "w": "Finds the rule “add 4” and continues a table. Do not accept 18 (6 x 3) without a reason."
+    "q": "A pattern repeats: star, moon, moon, sun, star, moon, moon, sun ... What is the 22nd shape? How do you know?",
+    "a": "A moon.",
+    "short": "a moon",
+    "w": "Groups of 4: 20 is the end of a group (5 groups of 4), so the 21st is a star and the 22nd is a moon. Drawing 22 shapes is also fine."
    }
   ],
   "invest": {
    "title": "Three counting patterns",
-   "text": "Pattern A: 1, 4, 7, 10 … (add 3 each time).  Pattern B: 2, 5, 8, 11 …  Pattern C: 3, 6, 9, 12 … (a) Write each pattern up to 30. (b) Pick any number from 1 to 30. Which pattern is it in? Can a number be in two patterns? Can a number be in none? (c) Why does this happen? (d) What if the patterns added 4 each time: how many patterns would you need to catch every number?",
-   "model": "(a) A: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28. B: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. C: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. (b) Every number is in exactly ONE pattern (brute-forced for 1 to 99). (c) Counting in 3s, a number is either on the 3s (pattern C), 1 more than a number on the 3s (A), or 2 more (B); there is no other choice. (d) 4 patterns, starting at 1, 2, 3 and 4. Look for: a complete listing, the claim “exactly one” tested on more than one number, and a reason that uses the 3 times table.",
-   "lines": 5
+   "need": "",
+   "first": "Easy first step: write pattern A, 1, 4, 7, 10 ..., up to 30.",
+   "text": "Pattern A: 1, 4, 7, 10 ... (add 3 each time). Pattern B: 2, 5, 8, 11 ... Pattern C: 3, 6, 9, 12 ... (a) Write each pattern up to 30. (b) Pick any number from 1 to 30. Which pattern is it in? Can a number be in two patterns? Can a number be in none? (c) Why does this happen?",
+   "model": "(a) A: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28. B: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. C: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. (b) Every number is in exactly ONE pattern (brute-forced for 1 to 99). (c) Counting in 3s, a number is either on the 3s (pattern C), 1 more than a number on the 3s (A), or 2 more (B); there is no other choice. (Extension: if each pattern added 4 you would need) 4 patterns, starting at 1, 2, 3 and 4. Look for: a complete listing, the claim “exactly one” tested on more than one number, and a reason that uses the 3 times table.",
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: what if the cube train is red, red, blue, green, red, red, blue, green ...? What colour is cube 20? What colour is cube 30?",
+   "a": "Cube 20 is green (the green cubes are 4, 8, 12, 16, 20). Cube 30 is red (28 is green, 29 and 30 are red)."
   },
   "unstuck": [
    "counted in groups",
-   "wrote the pattern out",
-   "made a table",
-   "asked my partner"
+   "wrote the pattern out"
   ],
   "fig": null
  },
  "5": {
   "pre": [
    {
-    "q": "A machine does ÷ 2, then + 7. The OUT is 12. What was the IN? How do you know?",
-    "a": "10 (12 − 7 = 5, 5 × 2 = 10. Check: 10 ÷ 2 = 5, 5 + 7 = 12).",
-    "short": "IN is 10",
-    "w": "Undoes the LAST step first: − 7, then × 2. A child who divides 12 by 2 first has not yet seen the idea."
+    "q": "A machine adds 7. The OUT is 12. What was the IN? (Count back with counters if you like.)",
+    "a": "5 (5 + 7 = 12).",
+    "short": "5",
+    "w": "IN is what goes in and OUT is what comes out. Undo = do the opposite: 12 - 7. This is a first win for everyone."
    },
    {
-    "q": "Mei thinks of a number. She adds 8, then halves it. She gets 9. What was her number?",
-    "a": "10 (9 × 2 = 18, 18 − 8 = 10).",
-    "short": "10",
-    "w": "Undoes “halve” with × 2 first, then undoes “add 8” with − 8. A bar or machine drawing is welcome."
+    "q": "A machine doubles, then adds 7. The OUT is 17. What was the IN? How do you know?",
+    "a": "5 (5 doubled is 10, and 10 + 7 = 17).",
+    "short": "5",
+    "w": "Undo the last step first: 17 - 7 = 10, then half of 10 is 5. A guess that was tested (5 x 2 + 7 = 17) is just as good."
    }
   ],
   "invest": {
    "title": "A magic trick",
+   "need": "",
+   "first": "Easy first step: do the trick with 3, then with 10, and write down each step.",
    "text": "Think of a number. Add 5. Double it. Take away 10. Halve it. (a) Try 5 different starting numbers. What do you notice about your final answer? (b) Is it ALWAYS true? Try a big number and a small number, then say why. (c) Make your own trick that always gives you back the number you started with. Test it on 3 numbers.",
    "model": "(a) The final answer is always the number you started with (brute-forced for 1 to 999). (b) Adding 5 then doubling adds 10 and doubles the start; taking away 10 and halving undoes both: (n + 5) x 2 − 10 = n x 2, and half of that is n. A child reason: “double and halve undo each other, and add 5 doubled is 10, which I take away”. (c) Any valid trick, for example: add 3, double, take away 6, halve; or times 4, add 8, divide by 4, take away 2. Check by testing three numbers. Look for: testing small and big numbers, a reason in words, and a trick that really works.",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: what if the machine adds 7 FIRST and then doubles? Put IN 5 into it. Is the OUT the same as before (17)?",
+   "a": "No: 5 + 7 = 12, doubled is 24. The order of the steps matters."
   },
   "unstuck": [
    "drew the machine",
-   "worked backwards",
-   "tried a number and checked it",
-   "asked my partner"
+   "worked backwards"
   ],
   "fig": null
  },
  "6": {
   "pre": [
    {
-    "q": "Ben pays for an 85¢ snack with a $1 coin. Which coins can the cashier give back as change, using the fewest coins?",
-    "a": "15¢ change: a 10¢ coin and a 5¢ coin (2 coins).",
-    "short": "10¢ + 5¢",
-    "w": "Counts on from 85¢ or takes 85¢ from 100¢. Listen for “15¢”, then the fewest coins."
+    "q": "Mei has one 50¢ coin, one 20¢ coin and one 10¢ coin. How much money is that? Use play coins or draw them.",
+    "a": "80¢ (50 + 20 + 10).",
+    "short": "80¢",
+    "w": "Counting on from the biggest coin. This is a first win for everyone."
    },
    {
     "q": "Mei has $5. Three drinks cost $1.60 each. Does she have enough? How much money is left?",
-    "a": "Yes. The 3 drinks cost $4.80, so she has 20¢ left.",
+    "a": "Yes. 3 drinks cost $4.80, so 20¢ is left.",
     "short": "yes, 20¢ left",
-    "w": "Adds $1.60 three times (1.60, 3.20, 4.80). Some children estimate with $2 each (too high): ask if that proves anything."
+    "w": "Listen for adding $1.60 three times, or $1 + $1 + $1 and then 60¢ three times (180¢ = $1.80). Counting up from $4.80 to $5 is a good method."
    }
   ],
   "invest": {
    "title": "Most coins",
-   "text": "Use only 5¢, 10¢, 20¢ and 50¢ coins. (a) Pay 35¢ using the fewest coins. How many coins is that? (b) Try the other amounts from 5¢ to 95¢ (in steps of 5¢). Make a table of how many coins each needs. (c) Which amount needs the MOST coins, even when you use the fewest possible? Is there more than one? Why do they need so many?",
+   "need": "Needs: play coins (5¢, 10¢, 20¢, 50¢), or paper and a pencil.",
+   "first": "Easy first step: pay 35¢ with the fewest coins from the 5¢, 10¢, 20¢ and 50¢ coins.",
+   "text": "Use only 5¢, 10¢, 20¢ and 50¢ coins. (a) Pay 35¢ using the fewest coins. How many coins is that? (b) Try the other amounts from 5¢ to 95¢ (in steps of 5¢) and make a table of how many coins each needs. (c) Which amount needs the MOST coins, even when you use the fewest possible?",
    "model": "Fewest coins (5¢ to 95¢): 5:1, 10:1, 15:2, 20:1, 25:2, 30:2, 35:3, 40:2, 45:3, 50:1, 55:2, 60:2, 65:3, 70:2, 75:3, 80:3, 85:4, 90:3, 95:4 (brute-forced). (a) 35¢ = 20¢ + 10¢ + 5¢, 3 coins. (c) 85¢ and 95¢ need 4 coins each: 85¢ = 50¢ + 20¢ + 10¢ + 5¢ and 95¢ = 50¢ + 20¢ + 20¢ + 5¢. An amount ending in 5 needs a 5¢ coin, and the rest then needs 3 more coins. Look for: a systematic table, trying biggest coin first, and checking that no smaller number of coins works.",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: what if the toy stall also sells a robot for $5? Now how many different baskets cost exactly $10? (At most one of each toy.)",
+   "a": "5 baskets: kite + ball; kite + yo-yo + sticker; ball + sticker + robot; yo-yo + bubbles + robot; ball + yo-yo + bubbles + sticker."
   },
   "unstuck": [
-   "made a list in order",
    "used play coins",
-   "made a table",
-   "asked my partner"
+   "made a list in order"
   ],
   "fig": null
  },
  "7": {
   "pre": [
    {
-    "q": "Ali has 1/5 of a roti prata. Mei has 1/8 of the same prata. Who has more? How do you know?",
-    "a": "Ali has more. The same prata cut into fewer parts gives bigger parts.",
-    "short": "Ali (1/5)",
-    "w": "Bigger bottom number means smaller parts when the whole is the same. A drawing of two bars is a good reason. A child who says 1/8 because 8 is bigger is not there yet."
+    "q": "Fold a paper strip (or draw a bar) into 2 equal parts. Colour 1 part. What fraction is coloured?",
+    "a": "1/2 (one half).",
+    "short": "1/2",
+    "w": "Equal parts matter. Folding on camera is welcome. This is a first win for everyone."
    },
    {
-    "q": "Mei ate 3/8 of a pizza and Ali ate 2/8 of it. What fraction of the pizza is left?",
-    "a": "3/8 (3 + 2 = 5 eighths eaten, 8 − 5 = 3 eighths left).",
-    "short": "3/8",
-    "w": "Counts eighths: the bottom number stays 8. A child who writes 5/16 has added the bottom numbers."
+    "q": "Ali has 1/5 of a roti prata. Mei has 1/8 of the same prata. Who has more? How do you know?",
+    "a": "Ali (1/5). The same prata cut into fewer parts gives bigger parts.",
+    "short": "Ali (1/5)",
+    "w": "Many children say 1/8 because 8 is bigger. Draw two strips, one cut in 5 and one cut in 8, and compare. A drawing is a good answer."
    }
   ],
   "invest": {
    "title": "Fraction strips",
-   "text": "Use your fraction strips (halves, thirds, quarters, sixths and eighths). (a) Cover a HALF strip exactly with pieces of ONE kind only. Which kinds work? How many pieces of each? (b) Do the same for a THIRD strip and a QUARTER strip. (c) Can thirds ever cover a half exactly? Why not?",
+   "need": "Needs: the fraction strips from the cut-out page (halves, thirds, quarters, sixths, eighths).",
+   "first": "Easy first step: lay the two quarter strips on top of the half strip. Do they fit exactly?",
+   "text": "(a) Cover a HALF strip exactly with pieces of ONE kind only. Which kinds work? How many pieces of each? (b) Do the same for a THIRD strip and a QUARTER strip. (c) Can thirds ever cover a half exactly? Why not?",
    "model": "(a) Half: 2 quarters, 3 sixths or 4 eighths (not thirds). (b) Third: 2 sixths only. Quarter: 2 eighths only (checked with exact fractions). (c) No: one third is shorter than a half but two thirds is longer, so no number of thirds fits exactly. Look for: children lay the strips side by side and say “fits exactly”. Keep to the strips and drawings: do not teach “equivalent fractions” as a rule (that is P3).",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: fold a strip into 6 equal parts. How many sixths make a half? How many sixths make a third?",
+   "a": "3 sixths make a half and 2 sixths make a third."
   },
   "unstuck": [
-   "folded paper strips",
-   "used the fraction strips",
-   "drew bars",
-   "asked my partner"
+   "folded or drew strips",
+   "drew bars"
   ],
   "fig": null
  },
  "8": {
   "pre": [
    {
-    "q": "A stack has a bottom layer 5 cubes long and 2 cubes deep. On top sits a row of 3 cubes. How many cubes are in the stack?",
-    "a": "13 cubes (5 x 2 = 10, and 3 more on top).",
-    "short": "13 cubes",
-    "w": "Counts layer by layer. A child who counts only the cubes they can see is missing hidden cubes."
+    "q": "A stack has 2 layers. Each layer has 2 rows of 3 cubes. How many cubes are in the stack? (Build it with cubes or draw it.)",
+    "a": "12 cubes (6 in each layer, 2 layers).",
+    "short": "12",
+    "w": "Counting one layer first, then doubling, is a good method. This is a first win for everyone."
    },
    {
     "q": "A shape is made of 2 semicircles and 1 quarter circle. If you cut every piece into quarter circles, how many quarter circles do you get?",
-    "a": "5 quarter circles (2 + 2 + 1).",
+    "a": "5 (each semicircle is 2 quarters: 2 + 2 + 1).",
     "short": "5",
-    "w": "Each semicircle is 2 quarter circles. Listen for “a semicircle is 2 quarters”."
+    "w": "Listen for \"a semicircle is half a circle, which is 2 quarters\". Drawing the pieces and cutting them is fine."
    }
   ],
   "invest": {
    "title": "Squares joined edge to edge",
-   "text": "Use square tiles (or coloured squares of paper) and the grid below. Squares must touch along a whole side. A shape that is turned round or flipped over counts as the SAME shape. (a) Find ALL the different shapes you can make with 3 squares. (b) Now find ALL the different shapes you can make with 4 squares. Draw each one on the grid. (c) How do you know you have found them all?",
+   "need": "Needs: square tiles or small squares of paper, and the grid on this page.",
+   "first": "Easy first step: join 2 squares edge to edge. How many different shapes can you make? Then add a third square.",
+   "text": "Squares must touch along a whole side. A shape that is turned round or flipped over counts as the SAME shape. (a) Find ALL the different shapes you can make with 3 squares. (b) Now find ALL the different shapes you can make with 4 squares. Draw each one on the grid. (c) How do you know you have found them all?",
    "model": "(a) 2 shapes: a straight line and an L. (b) 5 shapes: a straight line of 4, a 2 x 2 square, an L, a T and a zigzag (S shape). Brute-forced: 1, 1, 2, 5 shapes for 1, 2, 3, 4 squares (turns and flips count as the same). If a child counts flips as different, they find 7 (L and its mirror, S and its mirror): praise this and explain the rule. (c) Look for a system: start with the straight line, then move one square, and check each new shape against the others by turning the tile.",
    "lines": 0
   },
+  "whatif": {
+   "q": "Go further: you have 2 semicircles and 3 quarter circles. How many whole circles can you make? What is left over?",
+   "a": "7 quarter circles in all: 1 whole circle (4 quarters) and 3 quarters left over."
+  },
   "unstuck": [
-   "used square tiles",
-   "drew it on the grid",
-   "made a list",
-   "asked my partner"
+   "used cubes or tiles",
+   "drew it"
   ],
   "fig": "grid"
  },
  "9": {
   "pre": [
    {
-    "q": "A melon balances 2 apples. One apple balances 3 plums. How many plums balance the melon? How do you know?",
-    "a": "6 plums (2 apples, and each apple is 3 plums).",
-    "short": "6 plums",
-    "w": "Swaps each apple for 3 plums. A drawing of the scale is a good reason."
+    "q": "You have a 3 l jug and a 5 l jug. You fill the 5 l jug and pour from it into the 3 l jug until the 3 l jug is full. How much water is left in the 5 l jug? (Try it with two cups and rice, or draw it.)",
+    "a": "2 l (5 - 3 = 2).",
+    "short": "2 l",
+    "w": "One pour is enough. This is a first win for everyone and previews the pour table."
    },
    {
-    "q": "You have a 5 ℓ jug and a 2 ℓ jug and a tap. How can you get exactly 1 ℓ?",
-    "a": "Fill the 5 ℓ jug. Pour 2 ℓ into the small jug (3 ℓ left). Empty the small jug and pour 2 ℓ again. 1 ℓ is left in the big jug.",
-    "short": "fill 5, pour 2 out twice",
-    "w": "Checked by a search of all pours: 1 ℓ is possible. Any correct list of pours is fine. A table of pours is a good habit."
+    "q": "A melon balances 2 apples. One apple balances 3 plums. How many plums balance the melon? How do you know?",
+    "a": "6 plums (3 + 3).",
+    "short": "6 plums",
+    "w": "Listen for swapping: the melon can be swapped for 2 apples, and each apple for 3 plums. Drawing the scale is a good method."
    }
   ],
   "invest": {
    "title": "Weights puzzle",
+   "need": "Needs: paper and a pencil (cubes or coins can stand for the weights).",
+   "first": "Easy first step: with weights of 1 g, 2 g and 4 g, can you make 3 g? Can you make 5 g?",
    "text": "You have three different weights. Each weight is 1 g, 2 g, 3 g, 4 g or 5 g. You put some of them on one pan to make a mass. (a) With weights of 1 g, 2 g and 4 g, which masses from 1 g to 7 g can you make? (b) Find ALL the sets of three different weights from 1 g to 5 g that can make every mass from 1 g to 6 g. (c) What do all the good sets have in common?",
    "model": "(a) All of them: 1, 2, 1+2 = 3, 4, 1+4 = 5, 2+4 = 6, 1+2+4 = 7. (b) Exactly 2 sets work: 1, 2, 3 (makes 1 to 6) and 1, 2, 4 (makes 1 to 7); brute-forced over all 10 sets. (c) Both contain 1 g and 2 g: only a 1 g weight can make 1 g, and with different weights only a 2 g weight can make 2 g. Look for: a systematic list of the possible sets, checking each mass in order, and the noticing that 1 g is needed.",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: one glue stick balances 8 coins. A pencil case balances 3 glue sticks. How many coins balance the pencil case? If an eraser balances 4 coins, how many erasers balance the pencil case?",
+   "a": "24 coins (3 x 8). 6 erasers (24 / 4)."
   },
   "unstuck": [
    "made a table",
-   "used cubes or coins as weights",
-   "listed in order",
-   "asked my partner"
+   "used cups or objects"
   ],
   "fig": null
  },
  "10": {
   "pre": [
    {
-    "q": "A box has 9 shapes: triangles (3 sides) and squares (4 sides). There are 31 sides altogether. How many squares? Say how you started: draw it, list it or make a table.",
-    "a": "4 squares and 5 triangles (15 + 16 = 31 sides).",
-    "short": "4 squares",
-    "w": "Any of the three starts is fine. Ask which one they chose and why."
+    "q": "A box has 3 triangles and 2 squares. A triangle has 3 sides and a square has 4 sides. Draw the shapes. How many sides are there altogether?",
+    "a": "17 sides (9 + 8).",
+    "short": "17",
+    "w": "Drawing the shapes and counting the sides is a good start. This is a first win for everyone."
    },
    {
-    "q": "A snail is at the bottom of a 7 m well. Each day it climbs 3 m. Each night it slides back 1 m. On which day does it get out?",
-    "a": "Day 3. Day 1: up to 3 m, back to 2 m. Day 2: up to 5 m, back to 4 m. Day 3: up to 7 m, and it is out.",
-    "short": "day 3",
-    "w": "The trap is 7 ÷ 2 = 3.5 or 7 ÷ 3. A drawing or a table by days shows that the snail is out before it can slide back."
+    "q": "A box has 9 shapes: triangles (3 sides) and squares (4 sides). There are 31 sides altogether. How many squares? Say how you started: draw it, list it or make a table.",
+    "a": "4 squares and 5 triangles (16 + 15 = 31 sides).",
+    "short": "4 squares",
+    "w": "Any start is welcome: drawing 9 shapes, listing \"1 square, 2 squares ...\" or a table. A guess that is checked counts."
    }
   ],
   "invest": {
    "title": "Staircase",
+   "need": "Needs: paper and a pencil.",
+   "first": "Easy first step: draw 3 steps and show the 3 ways: 1+1+1, 1+2 and 2+1.",
    "text": "Mei climbs a staircase. She can take 1 step or 2 steps at a time. For 3 steps there are 3 ways: 1+1+1, 1+2 and 2+1. (a) Find ALL the ways for 4 steps. (b) Find ALL the ways for 5 steps. (c) Fill in a table for 1, 2, 3, 4 and 5 steps. What pattern do you see? Can you guess the number of ways for 6 steps?",
    "model": "Number of ways: 1 step: 1, 2 steps: 2, 3 steps: 3, 4 steps: 5, 5 steps: 8 (brute-forced; 6 steps: 13). 4 steps: 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2. Pattern: each number is the sum of the two before it (3 + 5 = 8, 5 + 8 = 13). Look for: a list in order (all 1s first, then swap in a 2), a table, and the pattern spotted from the table. Do not name Fibonacci numbers unless a child asks.",
-   "lines": 5
+   "lines": 2
+  },
+  "whatif": {
+   "q": "Go further: what if the coin puzzle is 70¢ with exactly 5 coins (using 5¢, 10¢, 20¢ and 50¢ coins)? Can it be done? How?",
+   "a": "Yes: 50¢ + 5¢ + 5¢ + 5¢ + 5¢; 20¢ + 20¢ + 20¢ + 5¢ + 5¢; 20¢ + 20¢ + 10¢ + 10¢ + 10¢."
   },
   "unstuck": [
    "listed in order",
-   "made a table",
-   "drew it",
-   "asked my partner"
+   "drew it"
   ],
   "fig": null
- },
- "common": {
-  "fast": "FAST TRACK. Both Warm-up check answers right AND can say why? Go to THINK HARDER + Open investigation. Rejoin for check-together and talk time.",
-  "preSay": "Two quick questions. Write your answer on your whiteboard and be ready to say HOW you know. This is not a test: it helps me plan today.",
-  "preDo": [
-   "Show the Warm-up check slide. Give about one minute for each question. Whiteboards up together, then ask one child per question: “How do you know?” Click to show each answer. Total time: 3 minutes.",
-   "Decide quietly. A child who gets BOTH right and can say why is on the fast track: when the worksheet starts (minute 36) they work on the THINK HARDER pages and the Open investigation instead of the core pages, in their own breakout room (or on the main screen with you checking in). A right answer with no reason stays with the group. If you are unsure, keep the child in the group: nothing is lost.",
-   "Nobody is labelled. Say “Some of you will start on a different page today; everyone gets a turn at both over the program.” Use private chat to name the page. Children can move at any time: stuck on Think Harder, go back to the core page; core page finished early, go on to Think Harder. Everybody joins the explore, the mini-lesson, the check-together slides and talk time."
-  ],
-  "refSay": "One minute, no talking. Tick a face and finish the three sentences on your page: the hardest part, how you got unstuck, and what you will try next time. There are no marks for this and no wrong answers.",
-  "refDo": "Ask one or two children to share ONE sentence (not always the fastest). Never grade or correct it. Praise the strategy, not the speed: say “You drew it when you got stuck, that is what mathematicians do”, not “you were so quick”. Glance at the pages as you stamp journals and use them to plan the next lesson."
  }
 }

@@ -252,7 +252,7 @@ assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
       'title':'Math Inquirers P3: Lesson 9 – Measure and Money Masters','order':order,'cover':'p3l9-title',
-      'sections':{'s1':{'description':'Warm-up and explore','start':'p3l9-title'},'s2':{'description':'Teach: change to one unit, and draw a time line','start':'p3l9-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l9-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p3l9-stretch'}},
+      'sections':{'s1':{'description':'Warm-up and explore','start':'p3l9-title'},'s2':{'description':'Teach: change to one unit, and draw a time line','start':'p3l9-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l9-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p3l9-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

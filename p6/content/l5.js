@@ -85,7 +85,7 @@ module.exports = {
     skills: 'Systematic listing, the multiplication rule, avoiding double counting, adding as you go (grid routes), tracing and planning nested loops',
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu) open, the starter project “Every Order” (one loop that says each tea), mini whiteboards, digit cards 0 to 9, squared paper.',
     online: 'Children share their screen when they test code. The tutor shares the starter project as an .sb3 file in the chat (children use File, Load from your computer; no account needed), and the three starter blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Digit cards can be cut from paper. Breakout rooms in pairs for the Explore.',
-    warmup: 'Count it, don’t list it: six quick counting puzzles (pages 15 to 40, lamp posts, numbers with a 7 in them …). Teams race to answer each one and must say how they counted.',
+    warmup: 'Count it, don’t list it: six quick counting puzzles (pages 15 to 40, lamp posts, numbers with a 7 in them …). Pairs work out each one at their own speed and say how they counted. No racing and no points.',
     explore: 'The bubble tea shop: 3 teas and 2 toppings. Pairs list every order on paper, then predict how many there are when sizes M and L are added. At the computer, they add a second loop inside the starter project so the sprite says every order.',
     mini: 'Fix the first choice and run through every second choice: a tree shows why 3 shirts and 2 shorts make 3 × 2 = 6 outfits. A nested loop does the same thing: the inner loop runs all the way round for each turn of the outer loop. When order does not matter (handshakes), each pair is counted twice, so halve, or let the code keep only a < b.',
     share: 'Why does the multiplication rule work for outfits, but 5 × 5 gives the wrong answer for handshakes between 5 friends?',
@@ -93,10 +93,10 @@ module.exports = {
     mistakes: ['Adding the choices instead of multiplying them (4 T-shirts and 3 shorts gives 7 outfits).', 'Counting each handshake twice (7 × 6 = 42) or letting a person shake their own hand.', 'Digit cards: putting 0 at the front of a number, or using the same card twice.'],
     extension: 'Write a program that counts every 3-digit number whose digits add up to 5 (three loops, one inside another). Then change 5 to other totals: which total gives the most numbers?',
     key: [
-      ['Q1', '(a) 12 (4 × 3)  (b) 24 (4 × 3 × 2)  (c) 2 extra pairs: with 5 pairs, 4 × 5 × 2 = 40; with 4 pairs only 4 × 4 × 2 = 32.'],
+      ['Q1', '(a) 12 (4 × 3)  (b) 24 (4 × 3 × 2)  (the “at least 40 outfits” part is now in Think harder 5)'],
       ['Q2', '(a) 9 (3 choices for the tens, as 0 cannot go first, then 3 for the ones: 3 × 3): 30, 35, 38, 50, 53, 58, 80, 83, 85  (b) 18 (3 × 3 × 2)'],
       ['Q3', '(a) a 1, b 1: 11;  1, 2: 12;  1, 3: 13;  1, 4: 14;  2, 1: 21;  2, 2: 22  (b) 12 (3 × 4)  (c) 34  (d) 20 (5 × 4)'],
-      ['Q4', '(a) 21 (6 + 5 + 4 + 3 + 2 + 1)  (b) Every handshake has been counted twice, once for each person: 42 ÷ 2 = 21.  (c) 10 people (9 + 8 + … + 1 = 45, or 10 × 9 ÷ 2 = 45)'],
+      ['Q4', '(a) 21 (6 + 5 + 4 + 3 + 2 + 1)  (b) Every handshake has been counted twice, once for each person: 42 ÷ 2 = 21.  (the “45 handshakes” part is now in Think harder 5)'],
       ['Q5', '(a) 20 (corner numbers, bottom row up: 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20)  (b) 8 (put 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8). 12 routes go through P.'],
       ['Q6', 'Gaps: repeat 7, repeat 7, if a < b (a > b also works: either keeps each pair once).  (a) 21, the same as Q4(a); the “if” is checked 7 × 7 = 49 times.  (b) It says 7: it counts each person with themselves (a = b), which is not a handshake.']
     ]
@@ -104,7 +104,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome back, inquirers! Today’s question sounds easy: how many ways? But counting every possible way, with none missing and none counted twice, is a skill that mathematicians and programmers use every day.', 'By the end of today you will make the computer list every case for you, and you will know when its answer is right.'],
-    warmIntro: ['Six puzzles. Do not list them all: find a quick way to count, and be ready to say how you counted.', 'First one: a book, pages 15 to 40. How many pages? Careful, it is not 25!'],
+    warmIntro: ['Six puzzles. Do not list them all: find a quick way to count, and be ready to say how you counted. Take your time: there is no race.', 'First one: a book, pages 15 to 40. How many pages? Careful, it is not 25!'],
     predict: ['The bubble tea shop has 3 teas and 2 toppings. Before you list them, write your guess: how many different orders? Now the shop adds sizes M and L. Will the number of orders go up by 2, or double, or something else? Write a prediction.'],
     exploreHints: ['Stuck listing: write the first tea, then every topping with it. Then the next tea.', 'Code stuck: drag a second repeat block INSIDE the first one. Which loop should say the topping?', 'Finished early: add sugar levels 0%, 50% and 100%. Predict the number of orders first, then add a third loop to test it.'],
     think: ['“3 shirts and 2 pairs of shorts. I fix the red shirt and try every pair of shorts: red with black, red with grey. That is 2. Every shirt gets the same 2, so 3 shirts give 3 groups of 2: 3 × 2 = 6. Add 2 caps: each of the 6 outfits splits into 2, so 12.”', '“In code, the outer loop picks the shirt and the inner loop picks the shorts. The inner loop goes all the way round for EACH shirt, so the say block runs 3 × 2 = 6 times.”', '“5 friends shaking hands. Friend A shakes 4 hands. B has already shaken A’s, so 3 new ones. C: 2 new. D: 1 new. E: none left. 4 + 3 + 2 + 1 = 10. Or: 5 people times 4 hands is 20, but each handshake has two people in it, so I counted every one twice: 20 ÷ 2 = 10.”'],
@@ -117,7 +117,7 @@ module.exports = {
 
   deck: {
     today: 'Count every possible way without missing one or counting one twice, use the multiplication rule, and make nested loops list every case for us.',
-    warmGame: 'Count it, don’t list it. Six quick counting puzzles (pages 15 to 40, two-digit numbers, multiples of 5, lamp posts, numbers with a 7, even numbers). Teams race and must say how they counted.',
+    warmGame: 'Count it, don’t list it. Six quick counting puzzles (pages 15 to 40, two-digit numbers, multiples of 5, lamp posts, numbers with a 7, even numbers). Pairs say how they counted. No racing and no points.',
     warmQs: [['3 × 4 × 2 = ?', '24'], ['1 + 2 + 3 + … + 10 = ?', '55'], ['How many whole numbers from 100 to 999?', '900'], ['6 × 5 ÷ 2 = ?', '15'], ['repeat 5 { repeat 2 { say hi } }: how many his?', '10']],
     expSetup: ['A bubble tea shop has 3 teas (milk, green, taro) and 2 toppings (pearls, jelly).', 'On paper, list every order of 1 tea and 1 topping. How do you know you have them all?', 'The shop adds sizes M and L. Predict how many orders now, then check.', 'At the computer: open “Every Order” and put a second loop inside the first so the sprite says every order. (Teas are numbered 1 = milk, 2 = green, 3 = taro; toppings 1 = pearls, 2 = jelly. The sprite says join tea topping, so 21 means green with pearls.)'],
     expPic: 'the menu board: three tea cups (milk, green, taro), two toppings (pearls, jelly) and sizes M and L, next to the starter code (repeat 3: say tea, change tea by 1).',
@@ -131,6 +131,10 @@ module.exports = {
     ws1: 'Page 1, in pairs: Q1 outfits, Q2 digit cards, Q3 trace the nested loop.',
     ws2: 'Page 2, on your own: Q4 handshakes, Q5 routes on a grid, Q6 plan the handshake program.'
   },
+
+  moved: [
+    { q: '(a) Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps. She wants at least 40 outfits with a cap. What is the fewest number of extra pairs of shorts she must buy? (b) A party has 45 handshakes. How many people are there?', a: '(a) 2 extra pairs: with 5 pairs, 4 × 5 × 2 = 40; with 4 pairs only 4 × 4 × 2 = 32.  (b) 10 people (9 + 8 + … + 1 = 45, or 10 × 9 ÷ 2 = 45).' }
+  ],
 
   qbank: {
     core: [
@@ -181,8 +185,6 @@ module.exports = {
     return [
       H.q(1, 'Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps for camp.', { before: 20, keepNext: true }),
       H.sub('a', 'Outfits of 1 T-shirt and 1 pair of shorts: how many?  _____    (b)  With a cap too?  _____'),
-      H.sub('c', 'Mei wants at least 40 outfits with a cap. What is the fewest number of extra pairs of shorts she must buy? Show how you know.', { keepNext: true }),
-      ...H.lines(1),
       H.q(2, 'Digit cards. Use each card at most once in a number. A number cannot start with 0.', { keepNext: true }),
       H.tbl([3300, 6600], [H.row([H.cell('<div>' + cards([0, 3, 5, 8]) + '</div>', 3300, { h: 20 }), H.cell(tx(L('(a)') + 'How many 2-digit numbers can you make? ' + blank(50) + '<br>List them from smallest to largest:<br>' + blank(420) + '<br>' + L('(b)') + 'How many 3-digit numbers? Write the multiplication. ' + blank(110)), 6600, { h: 30 })])]),
       H.q(3, 'Trace the code. (a) Fill in a, b and what the sprite says, for the first 6 things it says.', { keepNext: true }),
@@ -192,7 +194,6 @@ module.exports = {
       ...H.lines(1),
       H.sub('b', 'Ali says, “7 × 6 = 42 handshakes.” What is wrong? Fix it.', { keepNext: true }),
       ...H.lines(1),
-      H.sub('c', 'Another party has 45 handshakes. How many people are there?   ______'),
       H.q(5, 'Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
       routes,
       H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4.', { keepNext: true }),

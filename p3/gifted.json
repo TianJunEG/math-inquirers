@@ -31,14 +31,128 @@
    "renaming (15 hundreds)",
    "working out the clues"
   ],
-  "go": "What if the cards are 2, 4, 5 and 8? How many 4-digit numbers are between 4000 and 6000 now? Which is closest to 5000?",
+  "go": "Cards 2, 4, 5, 8 now: how many numbers between 4000 and 6000? Which is closest to 5000?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "12 numbers: 6 start with 4 and 6 start with 5 (2, 4, 5, 8 each once). Closest to 5000: 4852 (148 away); the nearest above is 5248."
+  "goans": "12 numbers: 6 start with 4 and 6 start with 5 (2, 4, 5, 8 each once). Closest to 5000: 4852 (148 away); the nearest above is 5248.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "we1": [
+    27,
+    29
+   ],
+   "we2": [
+    29,
+    30
+   ],
+   "try1": [
+    30,
+    31
+   ],
+   "teach2": [
+    31,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "teachpat": [
+    40,
+    42
+   ],
+   "ws1": [
+    42,
+    52
+   ],
+   "teachrename": [
+    54,
+    55
+   ],
+   "teachclues": [
+    55,
+    56
+   ],
+   "tryclues": [
+    56,
+    57
+   ],
+   "teachsum": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "2": {
   "check": [
@@ -72,14 +186,124 @@
    "finding missing digits",
    "magic squares and pyramids"
   ],
-  "go": "With the cards 1 to 9 (each once), what is the smallest answer you can make? The biggest?",
+  "go": "With the cards 1 to 9, what is the smallest answer you can make? The biggest?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "Smallest 459 (for example 173 + 286); biggest 981 (for example 235 + 746). Every answer has digits adding to 18."
+  "goans": "Smallest 459 (for example 173 + 286); biggest 981 (for example 235 + 746). Every answer has digits adding to 18.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "try1": [
+    27,
+    28
+   ],
+   "teach2": [
+    28,
+    30
+   ],
+   "teach3": [
+    30,
+    33
+   ],
+   "try2": [
+    33,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "ws1": [
+    40,
+    52
+   ],
+   "teachmagic": [
+    54,
+    55
+   ],
+   "teachpyr": [
+    55,
+    56
+   ],
+   "teach999": [
+    56,
+    57
+   ],
+   "teachshape": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "3": {
   "check": [
@@ -113,14 +337,124 @@
    "spotting the pattern",
    "explaining why"
   ],
-  "go": "Try the 5s and the 9s on your circle. How many dots does each table touch? Why?",
+  "go": "Try the 5s and the 9s. How many dots does each table touch? Why?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "The 5s touch only 2 dots (5 and 0). The 9s touch all 10 dots, going round the other way, like the 1s, because each 9 times answer is 1 less in the ones place than the one before."
+  "goans": "The 5s touch only 2 dots (5 and 0). The 9s touch all 10 dots, going round the other way, like the 1s, because each 9 times answer is 1 less in the ones place than the one before.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "we1": [
+    27,
+    28
+   ],
+   "try1": [
+    28,
+    29
+   ],
+   "teach2": [
+    29,
+    31
+   ],
+   "we2": [
+    31,
+    32
+   ],
+   "try2": [
+    32,
+    33
+   ],
+   "key": [
+    33,
+    35
+   ],
+   "ws1": [
+    40,
+    52
+   ],
+   "teachgrid": [
+    54,
+    56
+   ],
+   "teachlist": [
+    56,
+    57
+   ],
+   "teachboth": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "4": {
   "check": [
@@ -171,14 +505,124 @@
    "before and after stories",
    "finding what stays the same"
   ],
-  "go": "Make 3 towers with 30 cubes in all, each tower 2 cubes taller than the one before. How tall is each tower? Then try 3 taller each time.",
+  "go": "Make 3 towers from 30 cubes, each 2 cubes taller than the last. How tall is each? (Then 3 taller.)",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "30 cubes: 8, 10, 12 (3 towers, take away 2 + 4 = 6, share 24 into 3). With 3 taller each time: 7, 10, 13 (30 - 9 = 21, 21 / 3 = 7)."
+  "goans": "30 cubes: 8, 10, 12 (3 towers, take away 2 + 4 = 6, share 24 into 3). With 3 taller each time: 7, 10, 13 (30 - 9 = 21, 21 / 3 = 7).",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "we1": [
+    25,
+    27
+   ],
+   "try1": [
+    27,
+    28
+   ],
+   "we2": [
+    28,
+    31
+   ],
+   "try2": [
+    31,
+    33
+   ],
+   "key": [
+    33,
+    35
+   ],
+   "teachunits": [
+    40,
+    41
+   ],
+   "tryunits": [
+    41,
+    42
+   ],
+   "ws1": [
+    42,
+    52
+   ],
+   "teachtd": [
+    54,
+    56
+   ],
+   "teachgive": [
+    56,
+    57
+   ],
+   "teachsame": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "5": {
   "check": [
@@ -212,14 +656,124 @@
    "reading the remainder",
    "riddles with two clues"
   ],
-  "go": "What if there are 49 counters? Which group sizes from 2 to 8 leave 1 over? Why?",
+  "go": "49 counters: which group sizes from 2 to 8 leave 1 over? Why?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "49 = 48 + 1. Sizes 2, 3, 4, 6 and 8 leave 1 over (48 is in all those tables). Size 5 leaves 4 and size 7 leaves 0 (49 = 7 x 7)."
+  "goans": "49 = 48 + 1. Sizes 2, 3, 4, 6 and 8 leave 1 over (48 is in all those tables). Size 5 leaves 4 and size 7 leaves 0 (49 = 7 x 7).",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "we1": [
+    27,
+    29
+   ],
+   "try1": [
+    29,
+    30
+   ],
+   "we2": [
+    30,
+    32
+   ],
+   "try2": [
+    32,
+    33
+   ],
+   "key": [
+    33,
+    35
+   ],
+   "teachback": [
+    40,
+    42
+   ],
+   "ws1": [
+    42,
+    52
+   ],
+   "teachlist": [
+    54,
+    56
+   ],
+   "teachbig": [
+    56,
+    57
+   ],
+   "teachtable": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "6": {
   "check": [
@@ -253,14 +807,124 @@
    "comparing fractions",
    "adding and taking away fractions"
   ],
-  "go": "Find three DIFFERENT pieces from your wall that together make exactly [[1/2]]. Can you find another way?",
+  "go": "Find 3 DIFFERENT pieces that make exactly [[1/2]]. Is there another way?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "Only one way with three different pieces: 1/4 + 1/6 + 1/12 (3/12 + 2/12 + 1/12 = 6/12). Other ways repeat a piece, e.g. 1/4 + 1/8 + 1/8."
+  "goans": "Only one way with three different pieces: 1/4 + 1/6 + 1/12 (3/12 + 2/12 + 1/12 = 6/12). Other ways repeat a piece, e.g. 1/4 + 1/8 + 1/8.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    26
+   ],
+   "we1": [
+    26,
+    28
+   ],
+   "try1": [
+    28,
+    29
+   ],
+   "we2": [
+    29,
+    31
+   ],
+   "try2": [
+    31,
+    33
+   ],
+   "key": [
+    33,
+    35
+   ],
+   "ws1": [
+    40,
+    52
+   ],
+   "teachadd": [
+    54,
+    55
+   ],
+   "tryadd": [
+    55,
+    56
+   ],
+   "teachpairs": [
+    56,
+    57
+   ],
+   "teachbetween": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  },
  "7": {
   "check": [
@@ -310,14 +974,120 @@
    "listing all the rectangles",
    "telling area from perimeter"
   ],
-  "go": "What if you have 16 squares? Make every rectangle. Which has the longest perimeter? The shortest? What is special about the shortest?",
+  "go": "16 squares: make every rectangle. Which has the longest perimeter? The shortest?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "16 squares: 1 by 16 (perimeter 34 cm), 2 by 8 (20 cm), 4 by 4 (16 cm). Longest 1 by 16, shortest 4 by 4: the square, the most compact shape."
+  "goans": "16 squares: 1 by 16 (perimeter 34 cm), 2 by 8 (20 cm), 4 by 4 (16 cm). Longest 1 by 16, shortest 4 by 4: the square, the most compact shape.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "try1": [
+    27,
+    28
+   ],
+   "teach2": [
+    28,
+    30
+   ],
+   "we2": [
+    30,
+    31
+   ],
+   "try2": [
+    31,
+    32
+   ],
+   "teach3": [
+    32,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "teachsq": [
+    40,
+    41
+   ],
+   "ws1": [
+    41,
+    52
+   ],
+   "teachadd": [
+    54,
+    56
+   ],
+   "ws2": [
+    56,
+    65
+   ]
+  }
  },
  "8": {
   "check": [
@@ -325,7 +1095,8 @@
     "q": "Look at the letters L, H and O. Which letters have a square corner? Which letter has two lines that never meet, however far they go?",
     "a": "L and H have square corners; H has two lines that never meet",
     "why": "L and H have square corners; O has none. The two upright lines of H stay the same distance apart.",
-    "kind": "access"
+    "kind": "access",
+    "pic": "L   H   O"
    },
    {
     "q": "Draw a rectangle. Draw a straight line from one corner to the opposite corner. You get two triangles. How many right angles does each triangle have? How do you know?",
@@ -367,14 +1138,120 @@
    "parallel or perpendicular",
    "using the right-angle checker"
   ],
-  "go": "Fold your checker corner in half again. Is this angle smaller or bigger than a right angle? How many of these make one right angle? Hunt for two.",
+  "go": "Fold your corner in half again. Smaller or bigger than a right angle? Find two.",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "Smaller than a right angle: it is half of a right angle, so two of them make one right angle. It appears at the corner of a set square, or when a square is cut along its diagonal."
+  "goans": "Smaller than a right angle: it is half of a right angle, so two of them make one right angle. It appears at the corner of a set square, or when a square is cut along its diagonal.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "we1": [
+    27,
+    29
+   ],
+   "try1": [
+    29,
+    30
+   ],
+   "teach2": [
+    30,
+    31
+   ],
+   "we2": [
+    31,
+    32
+   ],
+   "try2": [
+    32,
+    33
+   ],
+   "teach3": [
+    33,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "ws1": [
+    40,
+    52
+   ],
+   "teachgrid": [
+    54,
+    57
+   ],
+   "ws2": [
+    57,
+    65
+   ]
+  }
  },
  "9": {
   "check": [
@@ -431,14 +1308,124 @@
    "working with money",
    "the 24-hour clock"
   ],
-  "go": "What if there are 12 friends and you have $30? How many bottles of punch do you need? Can you spend exactly $30?",
+  "go": "12 friends and $30: how many bottles of punch? Can you spend exactly $30?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "12 x 250 ml = 3000 ml = 3 l, so 2 bottles (2 l each) at least. Yes, there are many ways, e.g. 2 punch + 3 cupcakes + 3 balloons ($6 + $16.50 + $7.50), or 2 curry puffs + 2 punch + 2 cupcakes + 2 balloons."
+  "goans": "12 x 250 ml = 3000 ml = 3 l, so 2 bottles (2 l each) at least. Yes, there are many ways, e.g. 2 punch + 3 cupcakes + 3 balloons ($6 + $16.50 + $7.50), or 2 curry puffs + 2 punch + 2 cupcakes + 2 balloons.",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    27
+   ],
+   "we1": [
+    27,
+    29
+   ],
+   "try1": [
+    29,
+    30
+   ],
+   "teach2": [
+    30,
+    32
+   ],
+   "we2": [
+    32,
+    33
+   ],
+   "try2": [
+    33,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "teachbudget": [
+    40,
+    42
+   ],
+   "ws1": [
+    42,
+    52
+   ],
+   "teach24": [
+    54,
+    56
+   ],
+   "teachlist": [
+    56,
+    57
+   ],
+   "ws2": [
+    57,
+    65
+   ]
+  }
  },
  "10": {
   "check": [
@@ -487,13 +1474,123 @@
    "the logic grid",
    "reading the bar graph"
   ],
-  "go": "Make a puzzle: a 120 cm ribbon is cut into 4 pieces, each 10 cm longer than the one before. How long is each piece?",
+  "go": "A 120 cm ribbon is cut into 4 pieces, each 10 cm longer than the last. How long is each?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "15 cm, 25 cm, 35 cm and 45 cm (take away 10 + 20 + 30 = 60, 60 cm left, 60 / 4 = 15)."
+  "goans": "15 cm, 25 cm, 35 cm and 45 cm (take away 10 + 20 + 30 = 60, 60 cm left, 60 / 4 = 15).",
+  "plan": {
+   "warmcheck": [
+    2,
+    5
+   ],
+   "warm1": [
+    5,
+    8
+   ],
+   "warm2": [
+    8,
+    10
+   ],
+   "explore1": [
+    10,
+    15
+   ],
+   "explore2": [
+    15,
+    25
+   ],
+   "break": [
+    35,
+    40
+   ],
+   "ws1ans": [
+    52,
+    54
+   ],
+   "ws2ans": [
+    65,
+    67
+   ],
+   "stretch": [
+    67,
+    70
+   ],
+   "challenge": [
+    67,
+    70
+   ],
+   "chdiag": [
+    67,
+    70
+   ],
+   "chwalk": [
+    67,
+    70
+   ],
+   "talk": [
+    70,
+    80
+   ],
+   "exit": [
+    80,
+    86
+   ],
+   "reflect": [
+    86,
+    88
+   ],
+   "teach1": [
+    25,
+    26
+   ],
+   "we1": [
+    26,
+    28
+   ],
+   "try1": [
+    28,
+    29
+   ],
+   "we2": [
+    29,
+    31
+   ],
+   "try2": [
+    31,
+    32
+   ],
+   "we3": [
+    32,
+    34
+   ],
+   "key": [
+    34,
+    35
+   ],
+   "ws1": [
+    40,
+    52
+   ],
+   "teachlist": [
+    54,
+    56
+   ],
+   "teachtable": [
+    56,
+    57
+   ],
+   "teachbetween": [
+    57,
+    58
+   ],
+   "ws2": [
+    58,
+    65
+   ]
+  }
  }
 }

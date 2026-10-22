@@ -26,6 +26,7 @@ CH={
 10:[pk('Ali, Ben and Mei stand in a line. Use three name cards (or write A, B, M). How many different orders can you find?','6 orders','ABM, AMB, BAM, BMA, MAB, MBA. Listing by who is first helps to find them all.','access'),
     pk('Now Ben must stand somewhere in front of Mei (not always right in front). Which of your orders are still allowed?','3 orders: ABM, BAM, BMA','Cross out every order where Mei comes before Ben.','think')],
 }
+CH[8][0]['pic']='L   H   O'
 EASY={
 1:'Easy first step: with the cards 0, 1, 2, 3, write only the numbers that start with 1. Use the cards to help you.',
 2:'Easy first step: try 842 − 248 = 594 for yourself. Then try 953 and 351 (reverse it, then subtract).',
@@ -39,16 +40,16 @@ EASY={
 10:'Easy first step: draw 3 dots and join every pair. Count the lines. Then try 4 dots.',
 }
 GO={
-1:'What if the cards are 2, 4, 5 and 8? How many 4-digit numbers are between 4000 and 6000 now? Which is closest to 5000?',
-2:'With the cards 1 to 9 (each once), what is the smallest answer you can make? The biggest?',
-3:'Try the 5s and the 9s on your circle. How many dots does each table touch? Why?',
-4:'Make 3 towers with 30 cubes in all, each tower 2 cubes taller than the one before. How tall is each tower? Then try 3 taller each time.',
-5:'What if there are 49 counters? Which group sizes from 2 to 8 leave 1 over? Why?',
-6:'Find three DIFFERENT pieces from your wall that together make exactly [[1/2]]. Can you find another way?',
-7:'What if you have 16 squares? Make every rectangle. Which has the longest perimeter? The shortest? What is special about the shortest?',
-8:'Fold your checker corner in half again. Is this angle smaller or bigger than a right angle? How many of these make one right angle? Hunt for two.',
-9:'What if there are 12 friends and you have $30? How many bottles of punch do you need? Can you spend exactly $30?',
-10:'Make a puzzle: a 120 cm ribbon is cut into 4 pieces, each 10 cm longer than the one before. How long is each piece?',
+1:'Cards 2, 4, 5, 8 now: how many numbers between 4000 and 6000? Which is closest to 5000?',
+2:'With the cards 1 to 9, what is the smallest answer you can make? The biggest?',
+3:'Try the 5s and the 9s. How many dots does each table touch? Why?',
+4:'Make 3 towers from 30 cubes, each 2 cubes taller than the last. How tall is each? (Then 3 taller.)',
+5:'49 counters: which group sizes from 2 to 8 leave 1 over? Why?',
+6:'Find 3 DIFFERENT pieces that make exactly [[1/2]]. Is there another way?',
+7:'16 squares: make every rectangle. Which has the longest perimeter? The shortest?',
+8:'Fold your corner in half again. Smaller or bigger than a right angle? Find two.',
+9:'12 friends and $30: how many bottles of punch? Can you spend exactly $30?',
+10:'A 120 cm ribbon is cut into 4 pieces, each 10 cm longer than the last. How long is each?',
 }
 GOANS={
 1:'12 numbers: 6 start with 4 and 6 start with 5 (2, 4, 5, 8 each once). Closest to 5000: 4852 (148 away); the nearest above is 5248.',
@@ -62,10 +63,26 @@ GOANS={
 9:'12 x 250 ml = 3000 ml = 3 l, so 2 bottles (2 l each) at least. Yes, there are many ways, e.g. 2 punch + 3 cupcakes + 3 balloons ($6 + $16.50 + $7.50), or 2 curry puffs + 2 punch + 2 cupcakes + 2 balloons.',
 10:'15 cm, 25 cm, 35 cm and 45 cm (take away 10 + 20 + 30 = 60, 60 cm left, 60 / 4 = 15).',
 }
+COMMON={'warmcheck':(2,5),'warm1':(5,8),'warm2':(8,10),'explore1':(10,15),'explore2':(15,25),'break':(35,40),'ws1ans':(52,54),'ws2ans':(65,67),
+        'stretch':(67,70),'challenge':(67,70),'chdiag':(67,70),'chwalk':(67,70),'talk':(70,80),'exit':(80,86),'reflect':(86,88)}
+PL={
+1:dict(teach1=(25,27),we1=(27,29),we2=(29,30),try1=(30,31),teach2=(31,34),key=(34,35),teachpat=(40,42),ws1=(42,52),teachrename=(54,55),teachclues=(55,56),tryclues=(56,57),teachsum=(57,58),ws2=(58,65)),
+2:dict(teach1=(25,27),try1=(27,28),teach2=(28,30),teach3=(30,33),try2=(33,34),key=(34,35),ws1=(40,52),teachmagic=(54,55),teachpyr=(55,56),teach999=(56,57),teachshape=(57,58),ws2=(58,65)),
+3:dict(teach1=(25,27),we1=(27,28),try1=(28,29),teach2=(29,31),we2=(31,32),try2=(32,33),key=(33,35),ws1=(40,52),teachgrid=(54,56),teachlist=(56,57),teachboth=(57,58),ws2=(58,65)),
+4:dict(we1=(25,27),try1=(27,28),we2=(28,31),try2=(31,33),key=(33,35),teachunits=(40,41),tryunits=(41,42),ws1=(42,52),teachtd=(54,56),teachgive=(56,57),teachsame=(57,58),ws2=(58,65)),
+5:dict(teach1=(25,27),we1=(27,29),try1=(29,30),we2=(30,32),try2=(32,33),key=(33,35),teachback=(40,42),ws1=(42,52),teachlist=(54,56),teachbig=(56,57),teachtable=(57,58),ws2=(58,65)),
+6:dict(teach1=(25,26),we1=(26,28),try1=(28,29),we2=(29,31),try2=(31,33),key=(33,35),ws1=(40,52),teachadd=(54,55),tryadd=(55,56),teachpairs=(56,57),teachbetween=(57,58),ws2=(58,65)),
+7:dict(teach1=(25,27),try1=(27,28),teach2=(28,30),we2=(30,31),try2=(31,32),teach3=(32,34),key=(34,35),teachsq=(40,41),ws1=(41,52),teachadd=(54,56),ws2=(56,65)),
+8:dict(teach1=(25,27),we1=(27,29),try1=(29,30),teach2=(30,31),we2=(31,32),try2=(32,33),teach3=(33,34),key=(34,35),ws1=(40,52),teachgrid=(54,57),ws2=(57,65)),
+9:dict(teach1=(25,27),we1=(27,29),try1=(29,30),teach2=(30,32),we2=(32,33),try2=(33,34),key=(34,35),teachbudget=(40,42),ws1=(42,52),teach24=(54,56),teachlist=(56,57),ws2=(57,65)),
+10:dict(teach1=(25,26),we1=(26,28),try1=(28,29),we2=(29,31),try2=(31,32),we3=(32,34),key=(34,35),ws1=(40,52),teachlist=(54,56),teachtable=(56,57),teachbetween=(57,58),ws2=(58,65)),
+}
 REFLECT_DO=['I kept trying','I asked a question','I checked my answer','I tried a new idea']
 for k in g:
     n=int(k); g[k]['check']=CH[n]; g[k]['inv']['easy']=EASY[n]; g[k]['go']=GO[n]; g[k]['goans']=GOANS[n]
     g[k]['didwell']=REFLECT_DO
+    pl={**COMMON,**PL[n]}
+    g[k]['plan']={a:list(b) for a,b in pl.items()}
 g['9']['inv']['table']['rows']=['']*14
 json.dump(g,open(fn,'w',encoding='utf8'),ensure_ascii=False,indent=1)
 print('gifted.json updated')

@@ -68,7 +68,7 @@ module.exports = {
     explore: 'Pairs pick any 3-digit number and find its partner that makes 999, then check by adding. They do it for several numbers and look at the digits in each column.',
     mini: 'Missing digits: start at the ones column and ask "was there a carry?" (4A7 + 28B = 723 gives 437 + 286). For subtraction, turn it into an addition and work backwards (6C2 − 24D = 385 becomes 385 + 24D = 6C2). Balance: 245 + 130 = 200 + E; 245 is 45 more than 200, so E is 45 more than 130 (175). Before page 2: magic squares (find a full line for the total, then total minus the two you know), magic triangles (small side totals need small corners), and two numbers from their total and difference (take away the extra, halve, give it back).',
     share: 'Why do we start at the ones column when we look for missing digits?',
-    exit: { q: '4A6 + 37B = 801. Find the digits A and B.', a: '426 + 375 = 801 (ones: 6 + 5 = 11; tens: 2 + 7 + 1 = 10).' },
+    exit: { q: '3A4 + 257 = 601. Which digit is A?', a: 'A = 4 (344 + 257 = 601: ones 4 + 7 = 11; tens 4 + 5 + 1 = 10). Bonus for anyone who would like it: 4A6 + 37B = 801 gives A = 2 and B = 5 (426 + 375 = 801).' },
     mistakes: [
       'Forgetting the carried 1: in Q1c writing 6 in the tens box (8 + 6 = 14) instead of 5 (8 + 5 + 1 = 14).',
       'Reading "=" as "the answer comes next": 350 + 140 = 300 + A answered 490.',
@@ -80,7 +80,7 @@ module.exports = {
       ['Q2', '(a) 778 − 325 = 453  (b) 543 − 267 = 276'],
       ['Q3', '(a) 190  (b) 525  (c) 280  (d) Yes. 398 is 2 less than 400 and 205 is 2 more than 203, so both sides are the same (603).'],
       ['Q4', '(a) 150 (diagonal 80 + 50 + 20)  (b) Top: 10. Middle: 30 and 70. Bottom: 90.  (c) Yes, still magic. New total 450: every line has 3 numbers and each is 100 more, so 150 + 300.'],
-      ['Q5', '(a) Corners 110, 120, 130. Between 110 and 120: 160. Between 120 and 130: 140. Between 130 and 110: 150.  (b) Corners 140, 150, 160. Between 140 and 150: 130. Between 150 and 160: 110. Between 160 and 140: 120.'],
+      ['Q5', '(a) Corners 110, 120, 130. Between 110 and 120: 160. Between 120 and 130: 140. Between 130 and 110: 150. (Think harder 1 is the same triangle with sides of 420: corners 140, 150, 160; between 140 and 150: 130; between 150 and 160: 110; between 160 and 140: 120.)'],
       ['Q6', '250 and 450 (700 − 200 = 500, half of 500 is 250, 250 + 200 = 450).']
     ]
   },
@@ -128,6 +128,7 @@ module.exports = {
       { q: 'True or false? 299 + 101 = 300 + 100. Explain.', a: 'True. 299 is 1 less than 300 and 101 is 1 more than 100, so both sides are 400.' }
     ],
     stretch: [
+      { q: 'A magic triangle has 3 corner circles and 3 circles in the middle of the sides. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so that every side adds up to 420. Draw the triangle. Which numbers are in the corners?', a: 'Corners 140, 150, 160. Between 140 and 150: 130. Between 150 and 160: 110. Between 160 and 140: 120 (each side: 140 + 130 + 150 = 420, 150 + 110 + 160 = 420, 160 + 120 + 140 = 420).' },
       { q: 'Find the missing digits:  5A7 + B48 = 905', a: '557 + 348 = 905 (ones 7 + 8 = 15; tens 5 + 4 + 1 = 10; hundreds 5 + 3 + 1 = 9).' },
       { q: 'Find the missing digits:  7A1 − B58 = 263', a: '721 − 458 = 263. Check: 263 + 458 = 721.' },
       { q: 'What number makes this true?  538 + 199 = 540 + A', a: '197. 538 is 2 less than 540, so A is 2 less than 199. Both sides are 737.' },
@@ -152,11 +153,11 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    W.push(H.p('Each yellow box hides one digit. Start at the ones column. Ask: was there a carry?', { after: 60 }));
+    W.push(H.p('Each yellow box hides one digit (on the slides a hidden digit is a letter such as A or B). Start at the ones column. Ask: was there a carry?', { after: 60 }));
     W.push(H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 60, keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '2?4', '35?', '579', '+'], ['(b)', '46?', '?75', '837', '+'], ['(c)', '?86', '2?9', '645', '+']], 'Three additions with missing digits')));
     W.push(H.p('Check one of your answers by adding the full numbers:  ______ + ______ = ______', { after: 100 }));
-    W.push(H.q(2, 'Find the missing digits. Try a digit and check it: the answer plus the number you take away must give the number you started with. Tip for (b): 3 − 7 cannot be done, so think 13 − 7.', { keepNext: true }));
+    W.push(H.q(2, 'Find the missing digits. Try a digit and check it. Check: answer + the number you took away = the number you started with. Tip for (b): 3 − 7 cannot be done, so think 13 − 7.', { keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '7?8', '32?', '453', '−'], ['(b)', '5?3', '?67', '276', '−']], 'Two subtractions with missing digits')));
     W.push(H.q(3, 'The = sign means “is the same as”. Fill in the boxes.', { keepNext: true }));
     W.push(H.sub('a', '350 + 140  =  300 + ______'));
@@ -172,11 +173,10 @@ module.exports = {
     W.push(H.sub('b', 'Fill in the empty squares.'));
     W.push(H.sub('c', 'Add 100 to every number. Is it still a magic square? What is the new total? Explain.'));
     W.push(...H.lines(2));
-    W.push(H.q(5, 'Magic triangles. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total. Do it for (a) and then (b).', { keepNext: true }));
+    W.push(H.q(5, 'Magic triangle. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total.', { keepNext: true }));
     W.push(H.fig(triSvg()));
     W.push(H.sub('a', 'Each side adds up to 390. Write the numbers in the circles. Which numbers are in the corners?  __________  (Start: try 110 and 120 as two corners. What goes between them?)'));
-    W.push(H.sub('b', 'Each side adds up to 420. Write the numbers in the circles. Which numbers are in the corners?  __________'));
-    W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model.', { keepNext: true }));
+    W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model: two bars, and the long bar is 200 longer.', { keepNext: true }));
     W.push(...H.lines(4));
     W.push(H.p([H.t('Answer:   ____________   and   ____________', { bold: true })], { indent: { left: 560 }, before: 60 }));
     return W;

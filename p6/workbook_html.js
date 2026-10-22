@@ -31,11 +31,12 @@ const extra = (n) => {
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 50, align: AlignmentType.CENTER }));
   out.push('<div class="p" style="border:2.5px solid #1F7A6F;background:#E8F4F1;border-radius:6px;padding:6px 12px;margin:0 0 4px;font-size:13.5px;line-height:1.35"><b style="color:#1F7A6F">Choose any question.</b> You can start here after question ' + LASTQ1[n] + ', or when you finish the Start here pages. You can go back to Start here at any time. Everyone joins Talk time and the exit slip.</div>');
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 100, after: 30, keepNext: true })); out.push(...lines(2)); });
+  const TH = ls.th;
+  TH.forEach((x, i) => { out.push(q(i + 1, x.q, { before: i < 4 ? 100 : 60, after: 20, keepNext: true })); out.push(...lines(i < 4 ? 2 : 1)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 40 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 120, after: 30, keepNext: true })); out.push(...lines(i === 2 ? 3 : 2)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + TH.length + 1, x.q, { before: 120, after: 30, keepNext: true })); out.push(...lines(i === 2 ? 3 : 2)); });
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');

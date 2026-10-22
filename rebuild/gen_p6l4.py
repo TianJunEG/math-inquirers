@@ -134,7 +134,7 @@ body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c)
 put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards, then click. Answers: 1) 24 (4n means 4 × n).  2) 15.  3) 13 (multiply first: 18 − 5).  4) 9.  5) 20 (brackets first: 10 × 2). Watch for 4n read as "46" in question 1, and 3n − 5 worked as 3 × 1 = 3 or as 3 × (6 − 5) = 3 in question 3.'))
 
 # ---------- 4 explore1 ----------
-steps=['Build the machine on the right. (* means ×. Find "ask" in Sensing and the green blocks in Operators.)','Change the rule to your OWN secret two-step rule.','Share your screen. Your partner calls IN numbers; you type them in.','Your partner writes your rule with n. Fewest IN numbers wins. Then swap.']
+steps=['Open the Machine starter your tutor sent (or build the machine on the right). Change the 3 and the 2 to numbers of your own. (* means ×.)','Then make it your OWN secret two-step rule.','Share your screen. Your partner calls IN numbers; you type them in.','Your partner writes your rule with n. Fewest IN numbers wins. Then swap.']
 left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:31px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',extra='flex:1;min-width:0')
 mpic=machine([('IN','q'),('× 3','op'),('+ 2','op'),('OUT','res')],w=700).replace('width:700px;height:130px','width:700px;height:130px;flex:none')
 right=card(mpic+blocks_svg(MACH,28,'Machine program: when green flag clicked, ask IN? and wait, set out to answer times 3 plus 2, say out'),extra='flex:none;width:780px;padding:24px 28px;gap:24px')
@@ -142,7 +142,7 @@ body=h2('Explore: build a secret machine')+f'<div style="display:flex;gap:32px;a
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (light blue), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
  'Then pairs go to breakout rooms. Each child changes the rule to a secret two-step rule (one × and one + or −), shares their screen, and types in the IN numbers the partner calls out. The partner tries to write the rule with n using as few IN numbers as possible. '
- 'Early finishers: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. '
+ 'If a pair wants more: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. Tutor: build the Machine starter beforehand from the picture and share it through the approved channel (no .sb3 file exists in this repository). The child only has to change the 3 and the 2 to numbers of their own. '
  +PY_NOTE))
 
 # ---------- 5 explore2 ----------
@@ -201,11 +201,11 @@ put(f'{L}-key',sec(f'{L}-key','34–35 MIN',body,'Say the key idea together. Com
 put(f'{L}-break',break_slide(f'{L}-break','Brain break','Jumping machine. Rule: double it, then take away 1. I call an IN number; you do that many OUT star jumps, counting aloud. IN 2, 3, 4, 5.','Then: a drink of water and back to the computer.','Five minutes. OUT jumps: 3, 5, 7, 9. Last round: "I did 11 jumps. What was my IN?" (6). Online: children stay in view of the camera and jump in place.'))
 
 # ---------- 14 ws1 ----------
-put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Guess my rule: three tables. Write each rule with n.'),('Q2','Two machines, same steps, different order.'),('Q3','Run machines backwards to find n. Check forwards.')],'Stuck? Look at how much OUT goes up each time IN goes up by 1.','Minutes 40 to 52. Paper only (laptops turned away). Walk around (online: visit breakout rooms). Ask "Did you check your rule on every pair?" and "Which step did you undo first?" before giving help.'))
+put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Guess my rule: four tables, the first is one step. Write each rule with n.'),('Q2','Two machines, same steps, different order.'),('Q3','Run machines backwards to find n. Check forwards.')],'Stuck? Look at how much OUT goes up each time IN goes up by 1.','Minutes 40 to 52. Paper only (laptops turned away). Walk around (online: visit breakout rooms). Ask "Did you check your rule on every pair?" and "Which step did you undo first?" before giving help.'))
 
 # ---------- 15 ws1ans ----------
-rows=[('Q1','a) 3n + 3, OUT 33    b) 5n − 2, IN 10    c) 4n − 3, OUT 77'),('Q2','a) P 32, Q 23   b) P = (n + 3) × 4,  Q = 4n + 3   c) No'),('Q3','a) 8    b) 10    c) 12    d) 24')]
-put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains. Q1c: IN goes up 1, OUT goes up 4, so × 4; 4 × 1 = 4, OUT 1, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
+rows=[('Q1','a) n + 3, OUT 13   b) 3n + 3, OUT 33   c) 5n − 2, IN 10   d) 4n − 3, OUT 77'),('Q2','a) P 32, Q 23   b) P = (n + 3) × 4,  Q = 4n + 3   c) No'),('Q3','a) 8    b) 10    c) 12    d) 24')]
+put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains. Q1a: OUT is always 3 more, so n + 3 (a one-step rule). Q1d: IN goes up 1, OUT goes up 4, so × 4; 4 × 1 = 4, OUT 1, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
 
 # ---------- 16 teach code ----------
 body=h2('Predict what the code says')
@@ -262,7 +262,7 @@ body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: make a table',38,800,T
 for i,t in enumerate(['IN 1 → OUT −1.   IN 2 → OUT 2 ✓   IN 3 → OUT 5.','OUT grows by 3 each time, IN by 1, so they meet only once.','With n: 3n − 4 = n. Take n from both sides: 2n − 4 = 0, so n = 2.']): body+=pin(128,330+i*165,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: go backwards twice',38,800,TEAL))
 for i,t in enumerate(['Second machine backwards: 63 − 1 = 62, 62 ÷ 2 = 31.','First machine backwards: 31 − 1 = 30, 30 ÷ 2 = 15.','Check forwards: 15 → 31 → 63 ✓']): body+=pin(992,330+i*165,800,p(t,32),'rise',WHITE)
-put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the table is the computer-style search done by hand; the algebra line is for strong pupils only. Q2: the middle box is 31. Extra for fast pairs: the two joined machines are the same as one machine "× 4, then + 3" (5 → 23: 4 × 5 + 3 = 23; 15 → 63: 4 × 15 + 3 = 63). Why? (2n + 1) × 2 + 1 = 4n + 3.'))
+put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the table is the computer-style search done by hand; the algebra line is optional for any pair that wants it. Q2: the middle box is 31. Extra for any pair that wants more: the two joined machines are the same as one machine "× 4, then + 3" (5 → 23: 4 × 5 + 3 = 23; 15 → 63: 4 × 15 + 3 = 63). Why? (2n + 1) × 2 + 1 = 4n + 3.'))
 
 # ---------- 25 talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('To solve 4n + 7 = 43, Ravi tries n = 1, 2, 3 … like the computer. Mei runs the machine backwards. Which way is better, and when?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))

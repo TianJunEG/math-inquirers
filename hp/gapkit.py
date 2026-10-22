@@ -25,7 +25,25 @@ def dots(n, hexc, size=40):
         d.ellipse((x * 2, 2, (x + size) * 2, size * 2 + 2), fill=col); x += size + gapx
         if (i + 1) % 5 == 0: x += grp
     p = os.path.join(H, f'dots_{n}_{hexc}.png'); im.save(p); return p
+def ruler(path=None):
+    # Lesson 9 Q6: a ruler 0 to 12 cm with a pencil (0 to 12) and a crayon (3 to 8) drawn above it
+    from PIL import ImageFont
+    W, Hh = 1200, 260; im = Image.new('RGBA', (W, Hh), (255, 255, 255, 0)); d = ImageDraw.Draw(im)
+    x0, step = 50, 91
+    try: f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 26); fs = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 22)
+    except Exception: f = fs = ImageFont.load_default()
+    # pencil bar
+    d.rectangle((x0, 20, x0 + 12 * step, 60), fill=(255, 201, 60), outline=NAVY, width=4); d.polygon([(x0 + 12 * step, 20), (x0 + 12 * step + 0, 60), (x0 + 12 * step, 40)], fill=NAVY)
+    d.text((x0 + 14, 26), 'pencil', fill=NAVY, font=fs)
+    d.rectangle((x0 + 3 * step, 80, x0 + 8 * step, 120), fill=(245, 170, 150), outline=NAVY, width=4); d.text((x0 + 3 * step + 14, 86), 'crayon', fill=NAVY, font=fs)
+    # ruler
+    d.rectangle((x0 - 20, 150, x0 + 12 * step + 20, 250), fill=(255, 244, 209), outline=NAVY, width=4)
+    for i in range(13):
+        x = x0 + i * step; d.line((x, 150, x, 185), fill=NAVY, width=4); t = str(i); w = d.textlength(t, font=f); d.text((x - w / 2, 195), t, fill=NAVY, font=f)
+    d.line((x0 + 3 * step, 120, x0 + 3 * step, 150), fill=NAVY, width=2); d.line((x0 + 8 * step, 120, x0 + 8 * step, 150), fill=NAVY, width=2)
+    im.save(path or os.path.join(H, 'ruler_q6.png'))
 if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] == 'ruler': ruler(); sys.exit()
     if len(sys.argv) > 1 and sys.argv[1] == 'dots': print(dots(int(sys.argv[2]), sys.argv[3], int(sys.argv[4]) if len(sys.argv) > 4 else 40))
     else:
         box(); [face(k) for k in (1, 2, 3)]

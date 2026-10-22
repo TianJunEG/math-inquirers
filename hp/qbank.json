@@ -48,8 +48,8 @@
     "a": "No. The pattern goes 28, 32, so it skips 30."
    },
    {
-    "q": "Start at 50 and take away 7 each time. What is the first number below 20?",
-    "a": "15 (50, 43, 36, 29, 22, 15)."
+    "q": "Ali counts in 2s from 2 up to 50. Mei counts in 5s from 5 up to 50. Which numbers do both of them say? What do you notice?",
+    "a": "10, 20, 30, 40 and 50. They all end in 0."
    },
    {
     "q": "Ali counts from 3 in 4s: 3, 7, 11, … Will he say 39? Will he say 40?",
@@ -588,8 +588,8 @@
     "a": "3 coins (20¢ + 20¢ + 5¢)"
    },
    {
-    "q": "How many ways can you make 25¢ using 20¢, 10¢ and 5¢ coins?",
-    "a": "4 ways. (20+5; 10+10+5; 10+5+5+5; 5+5+5+5+5)"
+    "q": "Find ALL the ways to make 30¢ using 20¢, 10¢ and 5¢ coins. How do you know you have found them all?",
+    "a": "6 ways: 20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢. Start with the biggest coin and work down."
    },
    {
     "q": "How many ways can you make 40¢ with 20¢, 10¢ and 5¢ coins?",
