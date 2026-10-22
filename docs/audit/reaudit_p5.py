@@ -80,3 +80,43 @@ w=[(a,b,c) for a in range(2,10) for b in range(a+1,50) for c in range(b+1,500) i
 w=[(a,b,c) for a in range(2,20) for b in range(a+1,200) for c in range(b+1,2000) if F(1,a)+F(1,b)+F(1,c)==F(3,4)]; print('L2 C6 3/4 three unit',w)
 # L2 Go further Q7 tank
 print('L2 tank',16/(F(2,3)**3))
+
+# ------------------------------------------------------------------
+# DIAGNOSTIC: re-run six pretend profiles on the CURRENT rule (diag/build_diag.py, level 5)
+#   Main (6 marks): 4-6 join L5 (stretch>=1 -> may try L6 check); 2-3 chat+taster, L5 with support, warm<=2 -> L4 may be more comfortable;
+#   0-1 suggest L4.   Warm-up (4 marks) is only used inside the 2-3 row.  Probabilities below are MY assumptions (desk simulation).
+import itertools, random
+def dist(ps):
+    d={0:1.0}
+    for p in ps:
+        n={}
+        for k,v in d.items():
+            n[k]=n.get(k,0)+v*(1-p); n[k+1]=n.get(k+1,0)+v*p
+        d=n
+    return d
+def outcome_probs(W,M,S):
+    dm=dist(M); dw=dist(W); ds=dist(S)
+    join=sum(v for k,v in dm.items() if k>=4); mid=sum(v for k,v in dm.items() if 2<=k<=3); down=sum(v for k,v in dm.items() if k<=1)
+    midlow=mid*sum(v for k,v in dw.items() if k<=2)
+    up=join*sum(v for k,v in ds.items() if k>=1)
+    return dict(join=join,mid=mid,down=down,mid_warm_le2=midlow,join_and_try_up=up,mean_main=sum(k*v for k,v in dm.items()),mean_warm=sum(k*v for k,v in dw.items()))
+profiles={
+ 'strong-for-age (P5)':   ([.95,.9,.95,.9],[.9,.85,.9,.8,.9,.9],[.6,.5]),
+ 'typical-for-age (P5)':  ([.85,.7,.9,.75],[.85,.5,.65,.4,.7,.7],[.15,.1]),
+ 'weak-for-age (P5)':     ([.6,.3,.6,.35],[.55,.1,.25,.05,.25,.3],[.02,.01]),
+ 'younger strong (age 9, P4, topics not yet taught)':([.95,.9,.95,.9],[.8,.55,.35,.3,.15,.6],[.45,.3]),
+ 'older weak (age 12, P6)':([.5,.3,.55,.3],[.6,.2,.35,.1,.3,.35],[.05,.02]),
+ 'rusher / guesser':      ([.55,.4,.7,.5],[.5,.3,.5,.3,.4,.5],[.1,.05]),
+}
+print('\nDIAGNOSTIC PROFILES (current rule)')
+for k,(W,M,S) in profiles.items():
+    r=outcome_probs(W,M,S); print(f"{k:55s} meanMain={r['mean_main']:.2f} meanWarm={r['mean_warm']:.2f} join={r['join']:.2f} mid(2-3)={r['mid']:.2f} [warm<=2 within mid={r['mid_warm_le2']:.2f}] down(0-1)={r['down']:.2f} tryUp={r['join_and_try_up']:.2f}")
+# noise of the cut at 4/6: a child whose true per-question success is p
+print('\nP(main score >=4) for a child with true success p on every main question (6 Qs):')
+for p in (.5,.6,.7,.8,.9): d=dist([p]*6); print(p, round(sum(v for k,v in d.items() if k>=4),3), 'P(0-1)=',round(sum(v for k,v in d.items() if k<=1),3))
+# Old-style rule from the brief (8 questions: warm4+main6? '6-8 of 8 join; 4-5 support; 0-3 down')
+print('\nBrief-described older rule on 8 marks (warm+main), same profiles:')
+for k,(W,M,S) in profiles.items():
+    d=dist(W+M); print(f"{k:55s} join(6-8)={sum(v for a,v in d.items() if a>=6):.2f} support(4-5)={sum(v for a,v in d.items() if 4<=a<=5):.2f} down(0-3)={sum(v for a,v in d.items() if a<=3):.2f}")
+# 'not learnt yet' note: a younger-strong child scoring 0-1 main is sent to L4 even with 4/4 warm-up (rule ignores warm-up and stretch there)
+d=dist(profiles['younger strong (age 9, P4, topics not yet taught)'][1]); print('\nyounger strong P(main<=1)=',round(d[0]+d[1],3))
