@@ -99,6 +99,7 @@ def add_go_further(h, txt):
     h = h.replace('font-size:34px;font-weight:600;padding-left:52px', 'font-size:31px;font-weight:600;padding-left:52px')
     h = h.replace('font-size:32px;font-weight:600;padding-left:52px', 'font-size:31px;font-weight:600;padding-left:52px')
     h = h.replace('padding:20px 32px', 'padding:8px 32px')
+    h = h.replace('padding:128px 128px 160px;display:flex;flex-direction:column;gap:28px', 'padding:112px 128px 160px;display:flex;flex-direction:column;gap:12px', 1)
     i = h.index(FOOTSTART)
     return h[:i] + '\n' + go_strip(txt) + h[i:]
 

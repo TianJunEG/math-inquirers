@@ -129,7 +129,7 @@ G.push(q(3, 'Ben has 3 coins. They are worth 35¢ altogether. Which coins does h
 G.push(ans());
 G.push(sub('a', 'Can Ben make 35¢ using only 2 coins? Explain your answer.'));
 G.push(...lines(2));
-G.push(banner('Stretch  (for strong thinkers)'));
+G.push(banner('Think harder'));
 G.push(q(4, 'Ali pays 55¢ with exactly 5 coins. He uses at least one 5¢, one 10¢ and one 20¢ coin. Which coins does he use?', { before: 140 }));
 G.push(...lines(3)); G.push(ans());
 G.push(p([t('One thing I noticed today: ______________________________________', { size: 24 })], { before: 200, after: 60 }));

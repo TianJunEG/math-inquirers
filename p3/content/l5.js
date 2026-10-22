@@ -130,17 +130,15 @@ module.exports = {
     W.push(H.sub('a', 'How many stickers does each friend get?   ____      How many are left over?   ____'));
     W.push(H.sub('b', 'What is the smallest number of extra stickers Siti needs so that none are left over?   ____'));
     W.push(H.sub('c', 'Ben works out 60 ÷ 7. He writes:  60 ÷ 7 = 7 remainder 11.  What is wrong? Write the correct answer.', { keepNext: true }));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     W.push(H.q(2, 'Divide. Then decide what to do with the leftover.', { keepNext: true }));
     W.push(H.sub('a', '75 pupils. 1 minibus holds 9 pupils. How many minibuses?   ____'));
     W.push(H.sub('b', '$60. 1 book costs $7. How many books can Mei buy?   ____'));
     W.push(H.sub('c', '87 eggs. 1 box holds 6 eggs. How many boxes are FULL?   ____', { keepNext: true }));
-    W.push(H.sub('d', 'How many boxes hold ALL the eggs?   ____', { keepNext: true }));
-    W.push(...H.lines(1));
+    W.push(H.sub('d', 'How many boxes hold ALL the eggs?   ____'));
     W.push(H.q(3, 'Ravi packs marbles into bags of 8. He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
     W.push(H.p('Hint: draw 12 bags of 8, then 5 more.', { after: 20 }));
     W.push(H.sub('a', 'How many marbles does Ravi have?   ____'));
-    W.push(...H.lines(1));
     W.push(H.sub('b', '(if time) He tips them all out and packs them again into bags of 9. How many full bags does he get? How many marbles are left over?', { keepNext: true }));
     W.push(H.ans('Full bags: ______     Left over:'));
 

@@ -84,3 +84,30 @@ chk('L10 Q2 35c with exactly 3 coins unique 20+10+5', w == [(5, 10, 20)])
 tot = {j: sum(5 + j * i for i in range(3)) for j in (1, 2, 3, 4, 5)}
 chk('L10 invest totals 18,21,24,27,30', list(tot.values()) == [18, 21, 24, 27, 30])
 print('ALL PASS' if ok else 'SOME FAILED')
+
+# ---- diagnostic (diag/content/p1.json) ----
+import json, itertools
+D = json.load(open('/home/claude/math-inquirers/diag/content/p1.json'))
+def chk(name, ok):
+    print(('PASS ' if ok else 'FAIL ') + name); assert ok, name
+f, c, s = D['foundation'], D['core'], D['stretch']
+assert len(f) == 4 and len(c) == 6 and len(s) == 2
+chk('W1 after 14 is 15', f[0]['a'] == '15' and 14 + 1 == 15)
+chk('W2 17 > 12', f[1]['a'] == '17' and max(17, 12) == 17)
+seq = [2 * k for k in range(1, 6)]
+chk('W3 count in 2s -> 8, 10', seq[3:] == [8, 10] and f[2]['a'] == '8, 10')
+chk('M1 7 + 3 = 10', 10 - 7 == int(c[0]['a']))
+chk('M2 5,10,15 -> 20', 15 + 5 == int(c[1]['a']))
+chk('M3 40 + 30 = 70', 40 + 30 == 70 and c[2]['a'].startswith('70'))
+rows = dict(c[3]['visual']['rows'])
+chk('M4 dot graph apples-grapes = 3', rows['Apples'] - rows['Grapes'] == 3 and c[3]['a'] == '3' and 'Apples have 5' in c[3]['q'] and 'Grapes have 2' in c[3]['q'])
+chk('M5 12 - 8 = 4', 12 - 8 == 4 and c[4]['a'] == '4')
+orders = [o for o in itertools.permutations('ABC') if o.index('A') < o.index('B') < o.index('C')]
+chk('M6 unique order, Cai shortest', len(orders) == 1 and c[5]['a'] == 'Cai')
+v = s[0]['visual']
+chk('S1 pencil 2 to 7 = 5 cm', v['pencilEnd'] - v['pencilStart'] == 5 and s[0]['a'].startswith('5'))
+sols = [(a, b) for a in range(6) for b in range(6) if a + b == 5 and 10 * a + 5 * b == 40]
+chk('S2 unique 3 tens + 2 fives', sols == [(3, 2)] and s[1]['a'].startswith('3 ten'))
+chk('no banned wording', not any(w in json.dumps(D).lower() for w in ('failure', 'one level down', '2.05', 'gifted')))
+chk('cut bands cover 0-6 once', (D['scoring']['join'], D['scoring']['support'], D['scoring']['down']) == ('4 to 6', '2 to 3', '0 to 1'))
+print('DIAG PASS')

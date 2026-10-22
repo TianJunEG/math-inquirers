@@ -173,7 +173,7 @@ module.exports = {
       H.q(3, 'A square has the same perimeter as a rectangle 7 cm long and 3 cm wide. Hint: first walk round the rectangle. What is the area of the square?   ____________ cm²', { after: 60 }),
 
       H.q(4, 'Find the two missing sides first. Then find the area and the perimeter of this figure. Hint: you can cut the figure into two rectangles.', { pb: true, before: 0, keepNext: true }),
-      H.p('How to find the missing sides: the top part is 6 cm but the bottom is 10 cm, so the step across is 10 − 6. The left side is 7 cm but the right side is 4 cm, so the step down is 7 − 4.', { after: 20 }),
+      H.p('Missing sides: across = 10 − 6, down = 7 − 4.', { after: 20 }),
       side(q3Fig(), H.sub('', 'Missing sides:  ____ and ____') + H.sub('a', 'Area = __________ cm²') + H.sub('b', 'Perimeter = __________ cm')),
       H.q(5, 'Look at this staircase.', { keepNext: true }),
       side(q4Fig(), H.sub('a', 'What is its area?   ________ cm²') + H.sub('b', 'What is its perimeter?   ________ cm')),
@@ -183,8 +183,7 @@ module.exports = {
       H.fig(q5Fig()),
       H.sub('a', 'In grid (a), add a square so that the perimeter becomes 12 cm.'),
       H.sub('b', 'In grid (b), add a square so that the perimeter stays 10 cm.'),
-      H.sub('c', 'Can you add one square so that the perimeter becomes 8 cm? Explain.'),
-      ...H.lines(1)
+      H.sub('c', 'Can you add one square so that the perimeter becomes 8 cm? Explain.   ________________')
     ];
   }
 };

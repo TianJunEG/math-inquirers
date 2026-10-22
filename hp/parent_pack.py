@@ -7,7 +7,7 @@ Q = json.load(open('qbank.json'))
 info = json.loads(subprocess.run(['node', '-e', "const L=require('./lessons.js');console.log(JSON.stringify(L.lessons.map(l=>({n:l.n,title:l.title,topic:l.topic}))))"],
                                  capture_output=True, text=True, check=True).stdout)
 PICK = {'core': 4, 'stretch': 3, 'challenge': 2}
-LEVEL = {'core': 'Core', 'stretch': 'Think Harder', 'challenge': 'Challenge'}
+LEVEL = {'core': 'Start here', 'stretch': 'Think harder', 'challenge': 'Go further'}
 # per lesson: what your child learns, a tip for the parent, a question to ask
 SIDE = {
  1: ('Counting in 2s, 3s and 5s, and finding the rule of a pattern that goes up or down.',
@@ -67,8 +67,8 @@ B.append('''<div class="pb"><div class="kick">Before you start</div><div class="
 <li><div><b>Answers are at the back.</b> Look only after your child has tried.</div></li>
 </ol>
 <div class="quote">Hard question? Great. Getting stuck is where the thinking happens.</div>
-<div class="panel"><h3>One dose a week</h3><p style="margin:0">Each week has two lessons and about 18 questions. Do two or three a day, Monday to Friday, and keep the weekend for the Challenge questions if your child enjoys them.</p></div>
-<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Core</b> is for everyone. <b>Think Harder</b> stretches the idea. <b>Challenge</b> is for strong thinkers, and it is fine to leave it for another day.</p></div>
+<div class="panel"><h3>One dose a week</h3><p style="margin:0">Each week has two lessons and about 18 questions. Do two or three a day, Monday to Friday, and keep the weekend for the Go further questions if your child enjoys them.</p></div>
+<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Start here</b> is for everyone. <b>Think harder</b> and <b>Go further</b> stretch the idea, and every child may choose them. The <b>Investigation</b> is an open task anyone can try. It is fine to leave any of them for another day.</p></div>
 <div class="panel"><h3>What your child is doing in class</h3><p style="margin:0">Ten 90-minute lessons over five weeks. Each lesson starts with a hands-on puzzle, then a short teaching part, then the workbook. These pages practise the same ideas at home.</p></div></div>''')
 for L in info:
     n = L['n']; b = Q[str(n)]; learn, tip, ask = SIDE[n]

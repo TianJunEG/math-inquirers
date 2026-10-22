@@ -246,7 +246,7 @@ q2+=f'<line x1="10" y1="{base-106}" x2="640" y2="{base-106}" stroke="{RED}" stro
 q2+=T(370,base+40,'9 games: mean 30',28)+T(370,base+85,'After game 10: mean 32',28,RED)+T(370,60,'How many points in game 10?',30,TEAL)
 cardsvg=lambda t,s,a: f'<div style="background:{WHITE};border-radius:24px;padding:20px 24px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0"><p style="font-size:30px;font-weight:700;color:{TEAL}">{E(t)}</p>'+svg(760,base+180,s,a,'100%','auto').replace('height:auto;flex:none','height:auto;display:block')+'</div>'
 body=h2('Challenge: see it')+f'<div style="display:flex;gap:32px;align-items:flex-start">'+cardsvg('Q1: one number removed',q1,'Five bars levelled at 8, then four bars levelled at 7, and a dashed box for the removed number')+cardsvg('Q2: the 10th game',q2,'Nine bars at a mean of 30, a dashed tenth bar with a question mark, and a higher line for the new mean 32')+'</div>'
-put('p6l9-chdiag',sec('p6l9-chdiag','62–75 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Ask: What do you notice? What do we know? What do we not know yet? Which totals can you find? Answers are in the Challenge slide notes.'))
+put('p6l9-chdiag',sec('p6l9-chdiag','62–75 MIN',body,'Show after pairs have tried the Challenge, or if they are stuck. The diagrams show the problem, not the answer. Ask: What do you notice? What do we know? What do we not know yet? Which totals can you find? Answers are in the Go further slide notes.'))
 
 # ---------------- 24. challenge walk-through ----------------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1(a): compare the totals',38,800,TEAL))

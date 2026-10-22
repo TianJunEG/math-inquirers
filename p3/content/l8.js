@@ -36,14 +36,14 @@ const q1Fig = () => {
 };
 // Q3 worked example: 3 lines from one point make 3 angles
 const exFig = () => {
-  const ox = 40, oy = 100, L = 110; let b = '';
+  const ox = 30, oy = 100, L = 100; let b = '';
   [20, 60, 100].forEach(d => { b += ln(ox, oy, ox + L * Math.cos(rad(d)), oy - L * Math.sin(rad(d))); });
   b += dot(ox, oy, 5);
-  b += txt(300, 40, 'Example: 3 lines make 3 angles.', { size: 20, anchor: 'start', fill: G });
-  b += txt(300, 72, 'two small angles (1 and 1)', { size: 18, anchor: 'start' });
-  b += txt(300, 98, 'and one made of both (2).', { size: 18, anchor: 'start' });
-  b += txt(300, 124, 'Total: 1 + 1 + 1 = 3', { size: 18, anchor: 'start' });
-  return svg(560, 130, b, 'Three lines from one point make three angles: two small ones and one made of both', 420);
+  b += txt(180, 40, 'Example: 3 lines make 3 angles.', { size: 20, anchor: 'start', fill: G });
+  b += txt(180, 72, 'two small angles (1 and 1)', { size: 18, anchor: 'start' });
+  b += txt(180, 98, 'and one made of both (2).', { size: 18, anchor: 'start' });
+  b += txt(180, 124, 'Total: 1 + 1 + 1 = 3', { size: 18, anchor: 'start' });
+  return svg(520, 130, b, 'Three lines from one point make three angles: two small ones and one made of both', 340);
 };
 // Q2: four shapes (unit u, y up inside each shape)
 const shapeAt = (pts, x0, y0, u, H) => pts.map(([a, b]) => [x0 + a * u, y0 + (H - b) * u]);
@@ -184,7 +184,7 @@ module.exports = {
       H.fig(q1Fig()),
       H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
       H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker.', { keepNext: true }),
-      H.p('Hint: put your checker in every corner. A corner that dents INTO the shape is bigger than a right angle, so do not count it. Shape A is done for you.', { after: 20 }),
+      H.p('Hint: a corner that dents INTO the shape is bigger than a right angle. Do not count it. A is done for you.', { after: 20 }),
       H.fig(q2Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
         H.row(['Shape', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),

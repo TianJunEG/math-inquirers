@@ -112,7 +112,7 @@ W.push(sub('c', '3 + 8 = ____ + 5            (d)  6 + 6 = 10 + ____'));
 W.push(sub('e', 'Mei says “4 + 4 = 8 + 1 is true.” Is she right? Explain.'));
 W.push(...lines(2));
 W.push(q(5, 'Magic triangle. Put the numbers 1, 2, 3, 4, 5 and 6 in the circles so that each side of the triangle adds up to 9.', { keepNext: true }));
-W.push(p([t('Hint: every corner counts in two sides. Try 1, 2 and 3 in the corners first.', { italics: true })], { indent: { left: 560 }, after: 60 }));
+W.push(p([t('Hint: every corner counts in two sides. For a small total, use small numbers in the corners.', { italics: true })], { indent: { left: 560 }, after: 60 }));
 W.push(img('magic.png', 300, 267));
 W.push(sub('a', 'Which numbers did you put in the corners?   ______________'));
 W.push(sub('b', 'If you have time: now make each side add up to 10. Which numbers are in the corners this time?   ______________'));

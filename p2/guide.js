@@ -165,7 +165,7 @@ L.lessons.forEach(l => {
   G.push(seg(X ? '87–90 min' : '89–90 min', X ? 'Certificates and closing' : 'Closing and stamps'));
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (this is for you only, never shared with the children). If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
-  G.push(h2('Extension for children who are ready'));
+  G.push(h2('Think harder and Go further'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
