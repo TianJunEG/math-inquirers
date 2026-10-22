@@ -1,0 +1,220 @@
+[
+ {
+  "lesson": 1,
+  "name": "Dorothy Vaughan",
+  "years": "1910-2008",
+  "country_or_region": "United States",
+  "who": "A maths teacher who led a team of human computers at NASA's early research centre.",
+  "story": "Dorothy Vaughan was born in 1910 and studied mathematics at Wilberforce University in Ohio, finishing her degree in 1929. She taught maths at a high school in Virginia. In 1943 she began work at the Langley laboratory of NACA, the agency that later became NASA. She joined West Area Computing, a group of African American women known as computers because they did long calculations by hand, using slide rules and simple calculating machines. Later she became the head of this group. When electronic computers arrived, she taught herself the FORTRAN programming language and taught it to her staff too. She worked at Langley until 1971, nearly thirty years.",
+  "link_to_lesson": "Today you add, subtract, multiply and divide numbers up to ten million, the same four operations that human computers did carefully and checked by hand.",
+  "try_it": {
+   "q": "A human computer checks two big numbers: 2,450,000 and 1,375,000. Work out their sum and their difference. Then work out 1,250 x 400.",
+   "a": "2,450,000 + 1,375,000 = 3,825,000. 2,450,000 - 1,375,000 = 1,075,000. 1,250 x 400 = 500,000."
+  },
+  "source_urls": [
+   "https://www.ebsco.com/research-starters/biography/dorothy-johnson-vaughan",
+   "https://www.newworldencyclopedia.org/entry/Dorothy_Vaughan"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A slide rule beside a small stack of number cards."
+ },
+ {
+  "lesson": 2,
+  "name": "Eugenia Cheng",
+  "years": "born 1976",
+  "country_or_region": "England (now works in the United States)",
+  "who": "A mathematician who explains big ideas with cake and baking.",
+  "story": "Eugenia Cheng is a mathematician who was born in England in 1976 and studied maths at Cambridge University. Her research is in an area called category theory. She is well known for explaining maths with food. Her book How to Bake Pi came out in 2015, and each chapter opens with a dessert recipe. One example in the book is about three brothers and sisters trying to share a cake. Today she teaches maths to art students in Chicago. Cooking and baking use fractions all the time, such as half a cup of milk, a quarter of a cake or a third of the dough. Cheng shows that maths is not only for tests: it is also in the kitchen.",
+  "link_to_lesson": "Today you add, subtract and share with fractions, just like sharing a cake or following a recipe.",
+  "try_it": {
+   "q": "Three children share a cake. Ana eats 1/3 of it and Ben eats 1/4 of it. What fraction of the cake is left for the third child?",
+   "a": "1/3 + 1/4 = 4/12 + 3/12 = 7/12 eaten. 1 - 7/12 = 5/12 is left."
+  },
+  "source_urls": [
+   "https://shop.hachettebookgroup.com/products/how-to-bake-pi",
+   "https://en.wikipedia.org/wiki/Eugenia_Cheng",
+   "https://stemettes.org/zine/articles/meet-eugenia-cheng/",
+   "https://www.ted.com/speakers/eugenia_cheng"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon_idea": "A round cake cut into slices with a recipe card beside it."
+ },
+ {
+  "lesson": 3,
+  "name": "Alcuin of York",
+  "years": "about 735-804",
+  "country_or_region": "England (Northumbria), later at the court of Charlemagne in Europe",
+  "who": "A teacher and monk linked with one of the oldest collections of number puzzles.",
+  "story": "Alcuin of York was a monk and teacher born in Northumbria, in England, about 1,300 years ago. The emperor Charlemagne invited him to help run schools in his lands. Around the year 800, a Latin book of about fifty number puzzles called Problems to Sharpen the Young was linked with Alcuin. Historians think he collected the puzzles, so he may not have invented them all. The book has river-crossing puzzles and puzzles with fractions and sharing. One is about two walkers who counted storks. Each puzzle comes with an answer and a short explanation. Puzzles like these were a way to practise thinking, and they are still fun today.",
+  "link_to_lesson": "Today you solve fraction word problems by drawing before-and-after models, and Alcuin's stork puzzle can be solved with a model like that.",
+  "try_it": {
+   "q": "A puzzle in the style of Alcuin's stork puzzle (our own wording): 3 times the number of storks, plus half the number of storks, plus 2 makes 100. How many storks are there? Hint: draw 3 and a half units.",
+   "a": "3 units + 1/2 unit = 3 1/2 units = 100 - 2 = 98. 1 unit = 98 / 3 1/2 = 28 storks. Check: 3 x 28 = 84, half of 28 = 14, and 84 + 14 + 2 = 100."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/HistTopics/Alcuin_book/",
+   "https://www.medievalists.net/2025/10/can-you-solve-these-ten-medieval-mathematical-riddles/",
+   "https://thijsporck.com/2016/06/05/alcuinundrums/"
+  ],
+  "confidence": "medium",
+  "legend_note": "Historians are almost, but not completely, certain that Alcuin collected the puzzle book; the stork puzzle in the try-it is our own modern wording.",
+  "icon_idea": "A quill pen and a small scroll with a stork drawn on it."
+ },
+ {
+  "lesson": 4,
+  "name": "Liu Hui",
+  "years": "3rd century CE (dates uncertain, roughly 220s to 290s)",
+  "country_or_region": "China (kingdom of Wei)",
+  "who": "A Chinese mathematician who explained why old area rules work.",
+  "story": "Liu Hui lived in China in the 3rd century, in the kingdom of Wei. Very little is known about his life, but we know his work. In the year 263 he wrote a commentary on The Nine Chapters on the Mathematical Art, an older book of problems and rules. Its first chapter has rules for finding the areas of fields of different shapes, including triangles. The old book gave the rules without showing why they work, so Liu Hui explained them. He often cut shapes into pieces and moved the pieces around. In one famous example he cut a right-angled triangle into coloured pieces and fitted four copies into a rectangle. His original pictures are lost, so historians have redrawn them.",
+  "link_to_lesson": "Today you find triangle areas, and Liu Hui shows that it helps to ask why a rule works, not just how to use it.",
+  "try_it": {
+   "q": "A right-angled triangle has two short sides of 6 cm and 8 cm. Two copies fit together to make a 6 cm by 8 cm rectangle. What is the area of one triangle?",
+   "a": "Rectangle area = 6 x 8 = 48 square cm. One triangle is half of that: 24 square cm."
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Liu_Hui",
+   "https://www.britannica.com/biography/Liu-Hui",
+   "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/liu-hui",
+   "https://en.wikipedia.org/wiki/The_Nine_Chapters_on_the_Mathematical_Art",
+   "https://hkumath.hku.hk/~mks/ProofAndPedagogyInAncientChina.pdf",
+   "https://www.mathsmagiques.fr/pages/truc_mat/textes/douglas/PictThis.pdf",
+   "https://legacy-www.math.harvard.edu/archive/archimedes09/pdf/Binder4.pdf"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon_idea": "A coloured paper triangle cut into pieces beside a rectangle, with a brush and an ancient scroll."
+ },
+ {
+  "lesson": 5,
+  "name": "Archimedes",
+  "years": "about 287-about 212 BC",
+  "country_or_region": "Syracuse, Sicily (ancient Greek world)",
+  "who": "An ancient Greek thinker who studied floating objects and volumes.",
+  "story": "Archimedes lived in Syracuse, a Greek city on the island of Sicily, about 2,300 years ago. A story often told about him comes from a Roman writer called Vitruvius, who wrote about two hundred years later. In the story, the king wondered whether his gold wreath had been mixed with cheaper silver. Archimedes noticed the water level rise as he stepped into a bath, and this gave him an idea for testing the wreath by comparing how much water it pushed aside. Historians doubt the details of this tale. What we do know is that Archimedes wrote a real book called On Floating Bodies, and he studied the volumes of solid shapes.",
+  "link_to_lesson": "Today you work out volumes of cuboids and water levels, and the bath story is about using the water a solid pushes aside to measure volume.",
+  "try_it": {
+   "q": "A tank has a base 20 cm by 10 cm. A stone is dropped in and the water level rises by 2 cm. What is the volume of the stone?",
+   "a": "The water rises as a cuboid 20 cm x 10 cm x 2 cm = 400 cubic cm. So the stone has volume 400 cubic cm (400 ml)."
+  },
+  "source_urls": [
+   "https://www.math.nyu.edu/~crorres/Archimedes/Crown/CrownIntro.html",
+   "https://kids.britannica.com/comptons/article-9272938/Archimedes",
+   "https://en.wikipedia.org/wiki/Archimedes",
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Archimedes/"
+  ],
+  "confidence": "high",
+  "legend_note": "A story often told about Archimedes (the bath and the wreath) is from a writer about two hundred years later; historians doubt the details.",
+  "icon_idea": "A bath tub with water ripples and a golden wreath beside it."
+ },
+ {
+  "lesson": 6,
+  "name": "Mary Jackson",
+  "years": "1921-2005",
+  "country_or_region": "United States",
+  "who": "A mathematician who became NASA's first Black female engineer and studied air moving at great speed.",
+  "story": "Mary Jackson was born in 1921 in Hampton, Virginia. She studied mathematics and physical science at Hampton Institute and finished in 1942. In 1951 she joined the NACA laboratory at Langley, where she worked as a human computer in West Area Computing, led by Dorothy Vaughan. Later she worked with engineer Kazimierz Czarnecki in the Supersonic Pressure Tunnel, a wind tunnel that blew air at almost twice the speed of sound over model aircraft. He encouraged her to train as an engineer. After finishing graduate-level courses, she became an aerospace engineer in 1958. In 1979 she moved to a role helping women build careers at Langley, and she retired in 1985.",
+  "link_to_lesson": "A wind tunnel is all about speed, which is a rate: how far something moves in each hour or each second, just like the rates you compare today.",
+  "try_it": {
+   "q": "A model plane flies 840 km in 3 hours at a steady speed. What is its speed in km per hour? At that rate, how far would it fly in 5 hours?",
+   "a": "840 / 3 = 280 km per hour. In 5 hours: 280 x 5 = 1,400 km."
+  },
+  "source_urls": [
+   "https://www.nasa.gov/people/mary-w-jackson-biography/",
+   "https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A small wind tunnel tube with a paper plane inside and speed lines."
+ },
+ {
+  "lesson": 7,
+  "name": "Adam Ries (also spelled Adam Riese)",
+  "years": "1492-1559",
+  "country_or_region": "Germany",
+  "who": "A calculation teacher who wrote maths books in German so ordinary people could learn.",
+  "story": "Adam Ries was born in Staffelstein, in what is now Germany, around 1492. He ran a calculation school in Erfurt and wrote arithmetic books in German, not in Latin, so apprentices in trades and crafts could read them. His second book, printed in 1522, taught sums on a counting board and with pen and paper, and it was reprinted more than 100 times. His books used everyday examples: prices, wages, profit and loss, and interest. Later, in the town of Annaberg, he made tables to help people see what a fair loaf of bread should weigh when grain prices changed. In Germany, people still say a sum is right 'nach Adam Riese', meaning 'according to Adam Ries'.",
+  "link_to_lesson": "Today you work out discounts, GST and price changes with percentages, the kind of everyday money sums that Ries taught ordinary people to do.",
+  "try_it": {
+   "q": "A bag costs $200. A shop takes off 20% as a discount. What is the sale price? Then 9% GST is added to the sale price. What is the final price?",
+   "a": "20% of $200 = $40, so the sale price is $200 - $40 = $160. 9% of $160 = $14.40, so the final price is $160 + $14.40 = $174.40."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Ries.html",
+   "https://bad-staffelstein.de/en/tourismus/bad-staffelstein/history/adam-riese.php",
+   "https://www.deutsche-biographie.de/sfz76562.html",
+   "https://www.spektrum.de/wissen/adam-riese-1492-1559/977292"
+  ],
+  "confidence": "medium",
+  "legend_note": "Sources give his birth year as 1492 or 1493. The sources I opened do not name 'percentages' specifically; they list prices, interest, and profit and loss.",
+  "icon_idea": "A counting board with coins and a loaf of bread."
+ },
+ {
+  "lesson": 8,
+  "name": "Maryam Mirzakhani",
+  "years": "1977-2017",
+  "country_or_region": "Iran (later worked in the United States)",
+  "who": "A mathematician who drew pictures to think about geometry.",
+  "story": "Maryam Mirzakhani grew up in Tehran, Iran. At school she took part in maths competitions and won gold medals at the International Mathematical Olympiad in 1994 and 1995. Later she became a professor at Stanford University in California. She often worked by drawing, sketching on large sheets of paper with formulas written around the pictures. Her young daughter called it painting. One question she studied is about a ball bouncing around a billiard table with straight sides: what paths can the ball follow? In 2014 she became the first woman to win the Fields Medal, one of the highest prizes in maths.",
+  "link_to_lesson": "A bouncing ball's path is made of straight lines and angles, and today you find unknown angles on a straight line.",
+  "try_it": {
+   "q": "A ball hits a straight wall. Its path makes a 35 degree angle with the wall on the way in, and the same 35 degrees on the way out. What is the angle between the path going in and the path going out?",
+   "a": "Angles on a straight line add up to 180 degrees. 180 - 35 - 35 = 110 degrees."
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Maryam_Mirzakhani",
+   "https://www.simonsfoundation.org/?p=10839",
+   "https://mathshistory.st-andrews.ac.uk/Obituaries/Mirzakhani_NY_Times/",
+   "https://celebratio.org/media/essaypdf/507_Orig.pdf"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A rectangular billiard table seen from above with a zigzag path of a ball and a pencil."
+ },
+ {
+  "lesson": 9,
+  "name": "Al-Karaji",
+  "years": "about 953-1029",
+  "country_or_region": "Baghdad (today Iraq); some sources say he was born in Karaj, Iran",
+  "who": "A mathematician who wrote about number patterns in a famous algebra book.",
+  "story": "Al-Karaji lived about a thousand years ago and spent most of his life in Baghdad. His name is also written al-Karkhi, and historians are not sure whether it comes from the city of Karaj or from a district of Baghdad called Karkh. He wrote a major algebra book called Al-Fakhri, where he explained rules for working with unknown numbers. He also wrote about a number pattern: if you add the cubes of the numbers 1, 2, 3 and so on up to some number, you get the square of the sum of those numbers. He showed this for the numbers up to 10 and explained how the same idea would carry on. Later in life he also worked on engineering, such as finding water underground.",
+  "link_to_lesson": "Today you look for patterns, say the rule in words and test it with more terms, which is exactly what Al-Karaji did with his cube pattern.",
+  "try_it": {
+   "q": "Test Al-Karaji's pattern. Work out 1 x 1 x 1 + 2 x 2 x 2 + 3 x 3 x 3 + 4 x 4 x 4. Then add 1 + 2 + 3 + 4 and multiply the answer by itself. What do you notice? Predict the answer for up to 5.",
+   "a": "1 + 8 + 27 + 64 = 100. 1 + 2 + 3 + 4 = 10 and 10 x 10 = 100. They match. For up to 5: 1 + 2 + 3 + 4 + 5 = 15, so the answer is 15 x 15 = 225 (check: 100 + 125 = 225)."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Karaji/",
+   "https://en.wikipedia.org/wiki/Al-Karaji"
+  ],
+  "confidence": "high",
+  "legend_note": "His birthplace and the origin of his name are debated by historians. Some of his work survives only through later writers.",
+  "icon_idea": "A stack of cubes growing into a larger square."
+ },
+ {
+  "lesson": 10,
+  "name": "George Polya",
+  "years": "1887-1985",
+  "country_or_region": "Hungary (later Switzerland and the United States)",
+  "who": "A teacher who wrote a book about how to solve problems.",
+  "story": "George Polya was born in Budapest, Hungary, in 1887. He later taught in Zurich, Switzerland, and then at Stanford University in the United States. In 1945 he published a book called How to Solve It, which has sold over a million copies. In it he gave four steps for any problem: understand the problem, make a plan, carry out the plan, and look back at your work. Looking back means checking your answer. He also described helpful ideas, called heuristics, such as drawing a picture or working backwards from the answer. Teachers around the world still use his ideas.",
+  "link_to_lesson": "Today is Challenge Day, and Polya's ideas such as drawing a picture, working backwards and checking are the tools you choose from.",
+  "try_it": {
+   "q": "Work backwards. I think of a number, double it and add 6. I get 20. What was my number?",
+   "a": "Undo the steps: 20 - 6 = 14, then 14 divided by 2 = 7. Check: 7 x 2 = 14, 14 + 6 = 20. The number was 7."
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/How_to_Solve_It",
+   "https://plus.maths.org/content/how-solve-it",
+   "https://en.wikipedia.org/wiki/George_P%C3%B3lya",
+   "https://mathshistory.st-andrews.ac.uk/Strick/polya.pdf",
+   "https://purl.stanford.edu/yy107nn3487",
+   "https://math.libretexts.org/Courses/Coalinga_College/Math_for_Educators_(MATH_010A_and_010B_CID120)/05:_Problem_Solving/5.02:_George_Polya's_Strategy"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A signpost with four arrows (understand, plan, do, look back) and a magnifying glass."
+ }
+]

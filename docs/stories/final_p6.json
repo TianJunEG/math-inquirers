@@ -1,0 +1,212 @@
+[
+ {
+  "lesson": 1,
+  "name": "Grace Hopper",
+  "years": "1906 to 1992",
+  "country_or_region": "United States",
+  "who": "A maths teacher who helped make computer programs easier to write",
+  "story": "Grace Hopper was born in New York City in 1906. She earned a maths PhD at Yale and taught maths at Vassar College. Later she joined the US Navy and worked on an early giant computer at Harvard. In 1952 she finished an early compiler, a program that turns instructions into code a computer can run, and she argued that programs should use English-like words so more people could write them. She is also linked to the word debugging. In 1947 her Harvard colleagues taped a real moth, found stuck in a computer, into the logbook with the note \"First actual case of bug being found\". Engineers had used the word bug for faults long before that. Hopper liked to teach with a 30 cm piece of wire, which is how far light travels in one billionth of a second.",
+  "link_to_lesson": "Hopper wrote programs that follow exact steps and fixed bugs by checking them, just like writing a loop for a pattern and testing the nth term.",
+  "try_it": "A loop starts at 3 and adds 4 each time, giving 3, 7, 11, 15. Write the nth term, then use it to predict the 10th term without running the loop.",
+  "try_it_answer": "The nth term is 4n - 1. The 10th term is 4 x 10 - 1 = 39.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Grace_Hopper",
+   "https://www.britannica.com:443/biography/Grace-Hopper",
+   "https://president.yale.edu/biography-grace-murray-hopper",
+   "https://www.si.edu/object/log-book-computer-bug:nmah_334663"
+  ],
+  "confidence": "high",
+  "legend_note": "The moth is often told as 'Hopper found the first computer bug'. In fact her colleagues found it, the log page was probably not written by her, and the word bug was used by engineers before 1947 (Smithsonian, Wikipedia). Some children's sources say she invented the word; that is not accurate. The story says only what the sources support.",
+  "icon_idea": "A moth taped beside a small loop arrow and a 30 cm wire.",
+  "story_words": 140
+ },
+ {
+  "lesson": 2,
+  "name": "Kamal al-Din al-Farisi",
+  "years": "about 1260 to about 1320",
+  "country_or_region": "Persia (Tabriz, now in Iran)",
+  "who": "A scholar who studied rainbows and checked that numbers were prime",
+  "story": "Kamal al-Din al-Farisi lived about 700 years ago in Persia, near Tabriz in what is now Iran. His teacher told him to study a famous book on light by Ibn al-Haytham. He studied it so well that his teacher asked him to write a revised version, and he wrote that some of the old ideas were wrong. To study rainbows he tested light in a clear sphere filled with water, inside a dark room. He also worked with amicable numbers, two numbers where the proper factors of each add up to the other, such as 220 and 284. He gave a new proof of a rule by Thabit ibn Qurra for finding them, and he used prime factors and the sieve of Eratosthenes to check that 1151 is prime. Historians still discuss how complete his proof was.",
+  "link_to_lesson": "Al-Farisi's method relied on breaking numbers into prime factors, today's topic, and on checking whether a large number such as 1151 is prime.",
+  "try_it": "Write 284 as a product of primes. Then list its factors smaller than 284 and add them. What number do you get?",
+  "try_it_answer": "284 = 2 x 2 x 71. Its smaller factors are 1, 2, 4, 71 and 142, which add up to 220, so 220 and 284 are an amicable pair.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Farisi.html",
+   "https://mathshistory.st-andrews.ac.uk/DSB/Al-Farisi.pdf",
+   "https://en.wikipedia.org/wiki/Amicable_numbers"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon_idea": "A glass ball with a small rainbow beside the pair of numbers 220 and 284 joined by a double arrow.",
+  "story_words": 137
+ },
+ {
+  "lesson": 3,
+  "name": "Brahmagupta",
+  "years": "598 to about 670",
+  "country_or_region": "India",
+  "who": "An Indian mathematician who wrote rules for zero and negative numbers",
+  "story": "Brahmagupta was a mathematician and astronomer in India. He was born in 598, and in 628 he finished a long book called the Brahmasphutasiddhanta. In it he wrote down rules for using zero and negative numbers. He called positive numbers fortunes and negative numbers debts. He explained zero as the result of taking a number away from itself, and he gave rules such as: a debt multiplied by a debt is a fortune. This is how we say today that a negative number times a negative number is positive. Not every rule he wrote was right. His idea that zero divided by zero is zero does not work, and today we say that dividing by zero is not allowed. Even great mathematicians make mistakes, and checking each other's ideas is part of how maths grows.",
+  "link_to_lesson": "Brahmagupta's debts and fortunes are a way to think about negative numbers and how they add, subtract and multiply.",
+  "try_it": "Think of debts and fortunes. Work out (-6) x (-4). Then work out (-8) - (-3): you owe 8 dollars and 3 dollars of that debt is taken away.",
+  "try_it_answer": "(-6) x (-4) = 24, a fortune. (-8) - (-3) = -5, a debt of 5 dollars.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Brahmagupta/",
+   "https://www.britannica.com/print/article/77073",
+   "https://www.open.ac.uk/blogs/MathEd/index.php/2022/08/25/the-men-who-invented-zero",
+   "https://www.encyclopedia.com/people/science-and-technology/astronomy-biographies/brahmagupta"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A coin purse and an IOU note placed on a number line either side of zero.",
+  "word_count": 135
+ },
+ {
+  "lesson": 4,
+  "name": "Al-Khwarizmi",
+  "years": "about 780 to about 850",
+  "country_or_region": "Khwarazm (now Uzbekistan) and Baghdad (now Iraq)",
+  "who": "A scholar in Baghdad whose book gave algebra its name",
+  "story": "Al-Khwarizmi lived about 1,200 years ago. He is thought to have come from Khwarazm, in what is now Uzbekistan, and he worked as a scholar in Baghdad at the House of Wisdom, where books from many lands were studied and translated. He wrote a famous book on solving equations. Its Arabic title includes the word al-jabr, which means something like restoring or completing, and al-muqabala, which means balancing. The idea is that you can move a term across an equation and keep both sides equal by doing the same to each side. His book had no letters such as x. He wrote everything in words. The word algebra comes from al-jabr, and the word algorithm comes from the Latin form of his name, Algoritmi.",
+  "link_to_lesson": "Solving an equation by doing the same thing to both sides, and undoing a machine step by step, is the balancing idea from his book.",
+  "try_it": "An algebra machine multiplies the input by 3 and then adds 2. The output is 20. Balance the equation 3x + 2 = 20 to find the input x.",
+  "try_it_answer": "Take 2 from both sides: 3x = 18. Divide both sides by 3: x = 6. Check: 3 x 6 + 2 = 20.",
+  "source_urls": [
+   "https://www.newworldencyclopedia.org/entry/Al-Khwarizmi",
+   "https://findanexpert.unimelb.edu.au/news/81898-why-are-algorithms-called-algorithms",
+   "https://en.wikipedia.org/wiki/Al-Jabr",
+   "https://www.intmath.com/basic-algebra/al-khwarizmi-father-algebra.php",
+   "https://www.downtoearth.org.in/science-technology/why-are-algorithms-called-algorithms-a-brief-history-of-the-persian-polymath-you-ve-likely-never-heard-of-96053"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon_idea": "A balance scale with a block marked x on one side and number blocks on the other.",
+  "word_count": 124
+ },
+ {
+  "lesson": 5,
+  "name": "Yang Hui",
+  "years": "about 1238 to about 1298",
+  "country_or_region": "China",
+  "who": "A Chinese maths writer who shared and explained a famous number triangle",
+  "story": "Yang Hui lived in China more than 750 years ago, in the city of Qiantang, which is now Hangzhou. We know little about his life, but several of his books survive. In 1261 he wrote a book explaining methods from the Nine Chapters, an old Chinese maths text. In it he showed a triangle of numbers up to the sixth row. Each row starts and ends with 1, and every number inside is the sum of the two numbers above it. Yang Hui said he had learned the triangle from an earlier mathematician, Jia Xian, whose own book is lost. Because Yang Hui wrote it down and gave credit, we still know about it. In Europe it is called Pascal's triangle, but Pascal wrote about it nearly 400 years later. Yang Hui also wrote about magic squares.",
+  "link_to_lesson": "The numbers in this triangle count the ways of choosing items, which is exactly the kind of counting we do today.",
+  "try_it": "Write the row that comes after 1, 4, 6, 4, 1. The third number in a row tells you how many ways there are to pick 2 things from the row's number of things. How many ways are there to pick 2 students from 5?",
+  "try_it_answer": "The next row is 1, 5, 10, 10, 5, 1. There are 10 ways to pick 2 students from 5 (check by listing the pairs of A, B, C, D, E).",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Yang_Hui/",
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Jia_Xian/",
+   "https://en.wikipedia.org/wiki/Yang_Hui"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A triangle of small dots or counters arranged in rows 1, 2, 3, 4, 5, with a brush and a scroll.",
+  "word_count": 137
+ },
+ {
+  "lesson": 6,
+  "name": "Blaise Pascal",
+  "years": "1623 to 1662",
+  "country_or_region": "France",
+  "who": "A young French mathematician who helped start the maths of chance",
+  "story": "Blaise Pascal was born in France in 1623. He showed his talent early. When he was about 16 he wrote a short book on shapes called conic sections, and a few years later he built a mechanical calculator to help his father, who worked with taxes. In 1654 a man called the Chevalier de Mere put a puzzle about a game of chance to Pascal and to Pierre de Fermat, who lived in another city. If a game between two players stops early, how should the prize be shared fairly? Pascal and Fermat wrote letters to each other about it. Fermat's way was to list all the equally likely ways the game could finish. They used different methods and compared their answers. Their letters are seen as laying the foundations of probability.",
+  "link_to_lesson": "Listing all the equally likely outcomes to find a fair share is the same method we use today to work out probability.",
+  "try_it": "Two players each win a round with probability 1/2. The first to win 3 rounds takes the prize. The game stops when A has 2 wins and B has 1. List the next two rounds (AA, AB, BA, BB). What fraction of the prize should A get?",
+  "try_it_answer": "A wins in AA, AB and BA. Only BB gives B the win. So A should get 3/4 of the prize and B 1/4.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Pascal.html",
+   "https://en.wikipedia.org/wiki/Blaise_Pascal",
+   "https://york.ac.uk/depts/maths/histstat/pascal.htm",
+   "https://en.wikipedia.org/wiki/Problem_of_points"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "Two dice beside an envelope with a quill pen.",
+  "word_count": 132
+ },
+ {
+  "lesson": 7,
+  "name": "Cynthia Solomon",
+  "years": "born 1938",
+  "country_or_region": "United States",
+  "who": "A computer scientist who helped create Logo, a programming language for children",
+  "story": "Cynthia Solomon was born in 1938 and studied history at Radcliffe College. Later she studied computer science and then education, and she earned a PhD at Harvard. In 1967 she worked with Wally Feurzeig and Seymour Papert at a company called BBN to design Logo, which is described as the first programming language made for children. Logo is best known for turtle graphics. The turtle moves relative to its own position, so a command such as LEFT 90 makes it turn a quarter turn. Children in Lexington, Massachusetts were among the first to use Logo in school, and Solomon taught programming at a junior high school there in 1968 and 1969. Later she helped create Apple Logo. Ideas from Logo live on in Scratch.",
+  "link_to_lesson": "Today's turtle draws polygons by moving forward and turning, and Logo is where that way of drawing began.",
+  "try_it": "A turtle draws a regular octagon by repeating FORWARD and RIGHT 8 times. How many degrees does it turn each time, and what is one inside angle of the octagon?",
+  "try_it_answer": "It turns 360 / 8 = 45 degrees each time. One inside angle is 180 - 45 = 135 degrees.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Cynthia_Solomon",
+   "https://ncwit.org/blog/2016-pioneer-in-tech-award-recipient-cynthia-solomon/",
+   "https://edsurge.com/news/2016-06-07-as-the-maker-movement-turns-45-gary-stager-pays-tribute-to-m-i-t-computing-pioneer-cynthia-solomon",
+   "https://en.wikipedia.org/wiki/Logo_(programming_language)"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A small turtle shape tracing an eight-sided path with a turn arrow at one corner.",
+  "story_words": 124
+ },
+ {
+  "lesson": 8,
+  "name": "Al-Kindi",
+  "years": "about 801 to about 873",
+  "country_or_region": "Iraq (born in Kufa, worked in Baghdad)",
+  "who": "A scholar in Baghdad who explained how to break secret codes",
+  "story": "Al-Kindi was born in Kufa, in what is now Iraq, about 1,200 years ago, and he worked in Baghdad in the time of the House of Wisdom, where scholars studied and translated books. He wrote on many subjects, including maths and the Hindu-Arabic numbers. Around the year 850 he wrote A Manuscript on Deciphering Cryptographic Messages. It is the earliest explanation we know of for breaking a code by counting letters. In any language some letters are used more often than others. So count the letters in the coded message, then match the most common coded symbol to the most common letter in the language. The manuscript was lost for a long time before a modern scholar found it in an archive in Istanbul.",
+  "link_to_lesson": "A shift code uses mod 26, and Al-Kindi's letter counting is the way to break one.",
+  "try_it": "A message is in English and every letter was shifted by the same amount. The commonest letter in the code is L. If it stands for E, what was the shift? (A = 0, B = 1, ... Z = 25, and use mod 26.)",
+  "try_it_answer": "E = 4 and L = 11, so the shift is 11 - 4 = 7. Check: (4 + 7) mod 26 = 11, which is L.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Al-Kindi",
+   "https://en.wikipedia.org/wiki/Frequency_analysis",
+   "https://simonsingh.net/media/articles/maths-and-science/arab-code-breakers",
+   "https://www.newworldencyclopedia.org/entry/Al-Kindi"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A page of coded letters with the most frequent letter circled and a tally of marks beside it.",
+  "story_words": 124
+ },
+ {
+  "lesson": 9,
+  "name": "Adolphe Quetelet",
+  "years": "1796 to 1874",
+  "country_or_region": "Belgium",
+  "who": "A mathematician and astronomer who used averages to study people",
+  "story": "Adolphe Quetelet was born in 1796 in Ghent, now in Belgium. He began teaching maths at seventeen and earned a doctorate in maths when he was twenty-three. Later he went to Paris to learn astronomy and probability, and in 1832 he became director of the new observatory in Brussels. He also collected statistics about people. In 1835 he wrote about the average man, a middle value found from the measurements of a trait, with most people close to it. The average man was an idea made from many measurements, not a real person. Quetelet also helped organise the first International Statistical Congress in 1853, where people from many countries shared how they counted and compared data.",
+  "link_to_lesson": "Quetelet used the mean, the value you get by adding all the data and dividing by how many there are, which is the topic today.",
+  "try_it": "Five children measure 138, 142, 145, 150 and 155 cm. Find the mean height. A sixth child of 164 cm joins. What is the new mean?",
+  "try_it_answer": "Total 730 / 5 = 146 cm. With 164 cm added the total is 894, and 894 / 6 = 149 cm.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Quetelet/",
+   "https://en.wikipedia.org/wiki/Adolphe_Quetelet",
+   "https://britannica.com/print/article/487148"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A row of children of different heights with a dotted line at the middle height.",
+  "story_words": 116
+ },
+ {
+  "lesson": 10,
+  "name": "Ada Lovelace",
+  "years": "1815 to 1852",
+  "country_or_region": "United Kingdom (England)",
+  "who": "A mathematician who planned, checked and explained a program for a machine that was never built",
+  "story": "Ada Lovelace was born in London in 1815. She studied maths with private tutors, including Augustus De Morgan, and kept learning on her own. In 1843 she translated a French article about Charles Babbage's design for a machine called the Analytical Engine, which was never finished. She added her own notes, and they make up most of the published paper. In one note she showed, step by step, how the machine could work out a list of numbers called Bernoulli numbers. This table is often called the first computer program, but historians still debate that name and how much of the planning was hers. She also checked working carefully, found mistakes and asked for them to be corrected. And she imagined the machine working with symbols such as musical notes, not just numbers.",
+  "link_to_lesson": "Planning steps, testing for mistakes and explaining your work to others is what you do in the Showcase.",
+  "try_it": "Trace this program like a computer. Start with n = 2. Repeat 3 times: change n to n x 2 + 1. What is n at the end?",
+  "try_it_answer": "Start 2. Round 1: 5. Round 2: 11. Round 3: 23. So n = 23.",
+  "source_urls": [
+   "https://britannica.com/biography/Ada-Lovelace",
+   "https://mathshistory.st-andrews.ac.uk/DNB/Lovelace.html",
+   "https://www.sciencefocus.com/future-technology/how-ada-lovelaces-notes-on-the-analytical-engine-created-the-first-computer-program",
+   "https://plus.maths.org/analysing-ada-continued",
+   "https://fermatslibrary.com/s/lovelace-and-babbage-and-the-creation-of-the-1843-notes",
+   "https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/"
+  ],
+  "confidence": "medium",
+  "legend_note": "Often called 'the first computer program'; historians debate this label and how much was her own work (stated in the story).",
+  "icon_idea": "A loom thread turning into music notes and number cards.",
+  "word_count": 133
+ }
+]

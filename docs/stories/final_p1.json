@@ -1,0 +1,248 @@
+[
+ {
+  "lesson": 1,
+  "title": "Count with the Frog",
+  "topic": "Number Patterns",
+  "name": "Julia Robinson",
+  "years": "1919-1985",
+  "country_or_region": "USA (born in St Louis, Missouri)",
+  "who": "Mathematician who loved the counting numbers, and as a small child liked arranging pebbles",
+  "story": "Julia Robinson was born in 1919 in the United States. She wrote that one of her earliest memories was arranging pebbles in the shadow of a giant cactus called a saguaro. She also said she had always liked the counting numbers. When she grew up she became a mathematician who worked on hard number puzzles, and in 1975 she became the first woman mathematician elected to the US National Academy of Sciences. Today we look for patterns in numbers, just as Julia once looked at her rows of pebbles.",
+  "link_to_lesson": "Julia loved counting numbers and arranging objects, and today the children hop along the number strip and find the rule that makes a counting pattern.",
+  "try_it": {
+   "q": "Julia puts pebbles in rows. Row 1 has 3 pebbles, row 2 has 6, row 3 has 9. How many pebbles are in row 5? What is the rule?",
+   "a": "15 pebbles. The rule is add 3 each time (row 4 has 12, row 5 has 15)."
+  },
+  "source_urls": [
+   "https://www.nasonline.org/wp-content/uploads/2024/06/robinson-julia.pdf",
+   "https://celebratio.org/Robinson_JB/article/792/",
+   "https://en.wikipedia.org/wiki/Julia_Robinson",
+   "https://chalkdustmagazine.com/biographies/julia-robinson/"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon": "Rows of round pebbles under a tall cactus, with a small number tag on each row.",
+  "story_word_count": 89
+ },
+ {
+  "lesson": 2,
+  "title": "Number Bond Inquiry",
+  "topic": "Number Bonds",
+  "name": "Robert Recorde",
+  "years": "about 1510-1558",
+  "country_or_region": "Wales (born in Tenby), worked in England",
+  "who": "Welsh doctor and maths teacher who first printed the equals sign",
+  "story": "Robert Recorde was a doctor from Tenby, in Wales. He also wrote maths books in English, as talks between a teacher and a pupil. In 1557 he used the sign = in a book. He was tired of writing the words \"is equal to\" again and again. He chose two straight lines of the same length, because, he said, no two things can be more equal. Today we use his sign all the time. It tells us that the two sides have the same amount.",
+  "link_to_lesson": "Recorde's equals sign says both sides are worth the same, which is exactly what children check when they balance number bonds like 4 + 4 = 5 + 3.",
+  "try_it": {
+   "q": "Use Recorde's sign. Fill in the missing number so that both sides are equal: 4 + 4 = 5 + __",
+   "a": "3 (4 + 4 = 8 and 5 + 3 = 8)."
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Robert_Recorde",
+   "https://mathshistory.st-andrews.ac.uk/DNB/Recorde.html",
+   "https://www.caltech.edu/about/news/question-week-who-invented-equal-sign-and-why-171"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon": "A balance scale with two number tiles on each pan and a big pair of equal lines in the middle.",
+  "story_word_count": 85
+ },
+ {
+  "lesson": 3,
+  "title": "Let's Plan the Fruit Party",
+  "topic": "Picture Graphs",
+  "name": "Marie Neurath",
+  "years": "1898-1986",
+  "country_or_region": "Germany (born in Braunschweig); worked in Austria, the Netherlands and England",
+  "who": "Designer who helped turn numbers into picture charts anyone can read",
+  "story": "Marie Neurath helped to make a way of showing numbers with pictures. It was called Isotype. In Isotype, if there is more of something, you draw more little pictures of the same size, not one bigger picture. That makes the pictures easy to count and compare. Marie was the \"transformer\" on the team. Her job was to turn facts and numbers into a clear picture plan. Later she also made science books for young readers.",
+  "link_to_lesson": "A picture graph uses one small picture for each thing, the same idea Marie used, so we can count the pictures and compare quickly.",
+  "try_it": {
+   "q": "Marie draws one small apple picture for each child who chose apples. 6 children chose apples and 4 chose pears. How many apple pictures does she draw? How many more apple pictures than pear pictures?",
+   "a": "6 apple pictures. 6 - 4 = 2 more apple pictures."
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Marie_Neurath",
+   "https://isotyperevisited.org/2012/08/introduction.php",
+   "https://en.wikipedia.org/wiki/Isotype_(picture_language)",
+   "https://isotype.univie.ac.at/en/abstract"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon": "A column of five same-sized little fruit pictures next to a column of three.",
+  "story_word_count": 75
+ },
+ {
+  "lesson": 4,
+  "title": "Pattern Inquiry",
+  "topic": "Repeating and Growing Patterns",
+  "name": "Ingrid Daubechies",
+  "years": "born 1954",
+  "country_or_region": "Belgium (born in Houthalen); now works in the USA",
+  "who": "Maths professor who loved weaving and, as a girl, doubling numbers in her head",
+  "story": "Ingrid Daubechies grew up in Belgium. As a girl she liked weaving, which makes patterns from threads, and she liked finding out how things work. When she could not sleep, she worked out the powers of 2 in her head: 2, 4, 8, 16 and on. She was amazed at how fast they grow. Today she is a maths professor, and her ideas help computers keep pictures in small files.",
+  "link_to_lesson": "Doubling is a growing pattern with a rule, and weaving is a repeating pattern, so Ingrid's childhood games are the same kind of pattern the children build today.",
+  "try_it": {
+   "q": "Try Ingrid's doubling game: 1, 2, 4, 8, __, __. What is the rule? What are the next two numbers?",
+   "a": "The rule is double each time (multiply by 2). The next two numbers are 16 and 32."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Daubechies/",
+   "https://www.infinite-women.com/women/ingrid-daubechies/",
+   "https://www.frontiersofknowledgeawards-fbbva.es/galardonados/ingrid-daubechies/"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon": "A loom with a woven strip of repeating coloured stripes, and tiles 1, 2, 4, 8 growing beside it.",
+  "story_word_count": 70
+ },
+ {
+  "lesson": 5,
+  "title": "Mystery Number",
+  "topic": "Working Backwards",
+  "name": "René Descartes",
+  "years": "1596-1650",
+  "country_or_region": "France (born in La Haye en Touraine)",
+  "who": "French thinker whose 1637 book used x, y and z for unknown numbers",
+  "story": "René Descartes was born in France in 1596. He first met maths and science at school. In 1637 he published a book called La Géométrie. In it he used letters from the end of the alphabet, x, y and z, for numbers we do not know yet, and letters from the start, a, b and c, for numbers we do know. People still do this today. When you have a mystery number, you can call it x.",
+  "link_to_lesson": "A mystery number is an unknown number, and Descartes' habit of writing it as x is how we write these problems, then work backwards to find it.",
+  "try_it": {
+   "q": "Call the mystery number x. x + 8 = 14. Work backwards: what is x?",
+   "a": "6 (14 - 8 = 6)."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Miller/mathsym/variables/",
+   "https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie",
+   "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes",
+   "https://www.britannica.com/print/article/158787"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon": "A cup with a big letter x on it, hiding some counters, and an arrow pointing back from the total.",
+  "story_word_count": 77
+ },
+ {
+  "lesson": 6,
+  "title": "Coin Combos",
+  "topic": "Money",
+  "name": "Isaac Newton",
+  "years": "1640s-1727 (worked at the Royal Mint 1696-1727)",
+  "country_or_region": "England",
+  "who": "Famous scientist who also had a job looking after the country's coins",
+  "story": "Isaac Newton is famous for his big ideas in science. But for many years he also had a job at the Royal Mint, which is where English coins were made. He started there in 1696, when old silver coins were being worn out and replaced with new ones. The people at the Mint cared about every coin having the right weight and the right amount of metal. Newton worked there until 1727.",
+  "link_to_lesson": "Coins only work as money when each one is made to the right size and weight, so people can count and trade fairly.",
+  "try_it": {
+   "q": "You have one 10-cent coin and some 5-cent coins. You want 20 cents. How many 5-cent coins do you need?",
+   "a": "2 (10 + 5 + 5 = 20)."
+  },
+  "source_urls": [
+   "https://royalmintmuseum.org.uk/journal/people/isaac-newton/",
+   "https://lifestyle.royalmint.com/stories/commemorate/sir-isaac-newton-and-the-royal-mint/",
+   "https://newtonandthemint.history.ox.ac.uk/",
+   "https://en.wikipedia.org/wiki/Later_life_of_Isaac_Newton"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon": "A stack of plain round coins next to a small weighing scale.",
+  "story_word_count": 72
+ },
+ {
+  "lesson": 7,
+  "title": "Shape Safari",
+  "topic": "2D Shapes",
+  "name": "Johannes Kepler",
+  "years": "1571-1630",
+  "country_or_region": "Germany (born in Weil der Stadt)",
+  "who": "Astronomer who asked why snowflakes have six corners",
+  "story": "Johannes Kepler was a German astronomer. In 1611 he wrote a small booklet as a New Year's gift for a friend, and it was all about snowflakes. He noticed that snowflakes have six corners. He asked why. He thought about the six-sided cells of honeycomb and how things pack together. He could not give a final answer, so he wrote down his ideas and left the rest for others to find out. Asking \"why?\" is how a shape safari begins.",
+  "link_to_lesson": "A snowflake with six corners is shaped like a hexagon, and the children count the sides and corners of shapes today.",
+  "try_it": {
+   "q": "Kepler's snowflake has six corners. What shape has 6 straight sides and 6 corners? How many sides do two of these shapes have altogether?",
+   "a": "A hexagon. 6 + 6 = 12 sides altogether."
+  },
+  "source_urls": [
+   "https://www.seh.ox.ac.uk/blog/johannes-kepler-on-snowflakes",
+   "https://doinghistoryinpublic.org/2023/12/23/23-perhaps-the-most-famous-new-years-gift-in-science/",
+   "https://makingsciencepublic.com/2017/02/17/something-nothing/?nb=1",
+   "https://en.wikipedia.org/wiki/Johannes_Kepler"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon": "A six-armed snowflake drawn inside a hexagon outline, with a small honeycomb beside it.",
+  "story_word_count": 80
+ },
+ {
+  "lesson": 8,
+  "title": "Logic Lab",
+  "topic": "Logic and Sorting",
+  "name": "Leonhard Euler",
+  "years": "1707-1783",
+  "country_or_region": "Switzerland",
+  "who": "Swiss mathematician who drew circles to show groups",
+  "story": "Leonhard Euler came from Switzerland. Starting in 1760 he wrote letters to a princess in Germany to explain science and ideas to her. In some letters he drew circles to show groups. A small circle inside a big circle shows a smaller group inside a bigger one. Many years later, people called these Euler's circles. Drawing groups as circles still helps us sort things and think clearly.",
+  "link_to_lesson": "Euler used circles to show how things sort into groups, which is what the children do in Logic and Sorting.",
+  "try_it": {
+   "q": "Draw a big circle for animals and a small circle inside it for cats. Is every cat an animal? Is every animal a cat?",
+   "a": "Yes, every cat is an animal. No, not every animal is a cat (a dog is an animal but not a cat)."
+  },
+  "source_urls": [
+   "https://thatsmaths.com/2022/01/20/letters-to-a-german-princess-eulers-blockbuster-lives-on",
+   "https://en.wikipedia.org/wiki/Euler_diagram"
+  ],
+  "confidence": "medium",
+  "legend_note": "Cats-and-animals is our own example, not from Euler's letters.",
+  "icon": "Two overlapping circles, a small one tucked inside a big one, with a few dots sorted inside.",
+  "story_word_count": 67
+ },
+ {
+  "lesson": 9,
+  "title": "Measure It!",
+  "topic": "Length",
+  "name": "Al-Biruni",
+  "years": "973-1048",
+  "country_or_region": "Khwarazm, Central Asia (in the region of today's Uzbekistan); later worked in Afghanistan and India",
+  "who": "Scholar who loved to measure, from small distances to the whole Earth",
+  "story": "Al-Biruni lived about a thousand years ago. He was born in Khwarazm, in Central Asia, and he loved to measure things. He wanted to know how big the Earth is. Instead of travelling far, he measured a hill. He measured the distance between two spots and the angles up to the top, and that told him how tall the hill was. Then he climbed it and looked at the horizon. With a little maths he found a size for the Earth that is close to today's value.",
+  "link_to_lesson": "Al-Biruni shows that careful measuring of one length can help us find a much bigger one, and the children measure lengths with equal units and a ruler today.",
+  "try_it": {
+   "q": "Al-Biruni needed careful measuring. A rod is 10 cm long. A table is 6 rods long. How long is the table in cm?",
+   "a": "60 cm (6 x 10 = 60, or 10 + 10 + 10 + 10 + 10 + 10)."
+  },
+  "source_urls": [
+   "https://dictionary.obspm.fr/terms/birunis-method/",
+   "https://www.lrb.co.uk/the-paper/v46/n19/helen-pfeifer/flying-man",
+   "https://iris.polito.it/retrieve/handle/11583/2524094/61657/V220131220-al-Biruni.pdf"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon": "A small hill with a measuring rod laid along the ground and two sighting lines up to the top.",
+  "story_word_count": 87
+ },
+ {
+  "lesson": 10,
+  "title": "Challenge Day",
+  "topic": "Mixed Puzzles",
+  "name": "Srinivasa Ramanujan",
+  "years": "1887-1920",
+  "country_or_region": "India (Tamil Nadu)",
+  "who": "Indian mathematician who found surprising patterns in numbers",
+  "story": "Srinivasa Ramanujan was born in Erode, in India. He loved numbers and worked on maths from a young age. He wrote down his ideas and sent them in letters to mathematicians in England. One of them was G. H. Hardy. Later Ramanujan went to Cambridge to work with him. A story that Hardy told himself: he rode in taxi number 1729 and called it a dull number. Ramanujan said it was very interesting. Even a plain number can hide a surprise.",
+  "link_to_lesson": "Ramanujan treated numbers like puzzles to explore, which is what the children do on challenge day.",
+  "try_it": {
+   "q": "Puzzle: find two numbers that add up to 12 and have a difference of 2.",
+   "a": "7 and 5 (7 + 5 = 12 and 7 - 5 = 2)."
+  },
+  "source_urls": [
+   "https://www.newworldencyclopedia.org/entry/Srinivasa_Ramanujan",
+   "https://arxiv.org/pdf/math/0003184",
+   "https://www.britannica.com/print/article/490500",
+   "https://futilitycloset.com/2005/09/27/the-1729-anecdote",
+   "https://www.sciencenews.org/article/taxicab-numbers"
+  ],
+  "confidence": "medium",
+  "legend_note": "Taxi story labelled as 'a story that Hardy told himself'; it is Hardy's own account of the conversation.",
+  "icon": "A taxi-shaped number plate showing 1729 with a small lightbulb.",
+  "story_word_count": 81
+ }
+]
