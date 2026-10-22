@@ -2990,6 +2990,8 @@
   "quote": "The difference is a gap. Take away to see what is left. Count up to see the gap."
  },
  "workbook": {
+  "choice_after": 3,
+  "home_hint": "Use bars and squares, or draw them.",
   "header": "Addition and Subtraction",
   "hint_p1": "Use your kit, a drawing or your fingers. Say your answer out loud, then write it.",
   "hint_p3": "Use your kit, draw a picture or count up. Then write how you know. Choose any question, in any order.",
