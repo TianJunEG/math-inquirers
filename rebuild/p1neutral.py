@@ -109,8 +109,8 @@ def set_order(D, order_fix):
 def add_whatif(D, n):
     sid = 'l%d-explore1' % n; s = _r(D, sid)
     if s is None or 'Go further: your choice' in s: return
-    inner = chip('Go further: your choice, any time', YEL, NAVY, 24) + p(WHATIF[n], 34, 600)
-    cardh = card(inner, WHITE, CARD_X + 'margin-top:8px')
+    inner = chip('Go further: your choice, any time', YEL, NAVY, 22) + p(WHATIF[n], 30, 600)
+    cardh = card(inner, WHITE, CARD_X + 'margin-top:4px;padding:16px 30px;gap:8px')
     mark = '<p style="position:absolute;left:128px;bottom:64px'
     s = s.replace(mark, cardh + '\n' + mark, 1)
     s = s.replace('</aside>', WHATIF_NOTE + WHATIF_ANS[n] + '</aside>', 1)

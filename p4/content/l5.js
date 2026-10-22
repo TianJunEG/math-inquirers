@@ -43,13 +43,34 @@ const scales = () => {
     scale(160, '2.85 kg', 6) + scale(440, '0.45 kg', 0) + T(160, 40, 'box with 6 cans', 16, TEAL) + T(440, 40, 'empty box', 16, TEAL) + '</svg>';
 };
 
+// Q3 scaffold: number line from 7.30 to 7.50 in hundredths (labels only at 7.3, 7.4, 7.5)
+const roundLine = () => {
+  const x0 = 40, W = 520, y = 60;
+  let sv = `<svg aria-label="A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4" viewBox="0 0 600 110" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  sv += `<line x1="${x0 - 10}" y1="${y}" x2="${x0 + W + 10}" y2="${y}" stroke="${NAVY}" stroke-width="3"/>`;
+  for (let i = 0; i <= 20; i++) {
+    const x = x0 + i * W / 20, big = i % 10 === 0;
+    sv += `<line x1="${x}" y1="${y - (big ? 14 : 8)}" x2="${x}" y2="${y + (big ? 14 : 8)}" stroke="${NAVY}" stroke-width="${big ? 4 : 2}"/>`;
+    if (big) sv += T(x, y + 40, '7.' + (3 + i / 10), 20);
+  }
+  sv += `<circle cx="${x0 + W / 2}" cy="${y}" r="9" fill="${YEL}" stroke="${NAVY}" stroke-width="3"/>`;
+  return sv + '</svg>';
+};
+// Q6 scaffold: a bar of 6 equal parts for the cans
+const canBar = () => {
+  let sv = `<svg aria-label="A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans." viewBox="0 0 600 100" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  sv += `<path d="M60 44 Q60 30 74 30 L290 30 Q300 30 300 20 Q300 30 310 30 L526 30 Q540 30 540 44" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + T(300, 16, 'all 6 cans together', 16, TEAL);
+  for (let i = 0; i < 6; i++) sv += `<rect x="${60 + i * 80}" y="50" width="80" height="40" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/>` + T(100 + i * 80, 76, 'can', 15, '#8A94AD');
+  return sv + '</svg>';
+};
+
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A', title: 'Decimal Detectives', topic: 'Decimals',
     objective: 'Read decimals to 3 places on number lines, compare and order them by place value, round to the nearest whole number, 1 or 2 decimal places and work backwards from a rounded number (smallest and largest), and solve money and mass puzzles with bar models.',
     skills: 'Place value to thousandths, zooming in on a number line, ordering, rounding and rounding backwards, systematic listing, bar models, checking every clue',
-    materials: 'Digit cards 0 to 9 and a decimal point card for each child, a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money.',
-    online: 'Children cut out paper digit cards and a paper decimal point before the lesson and move them on camera. The tutor marks the zoom-in number lines on the slides.',
+    materials: 'Digit cards 0 to 9 and a decimal point card for each child (cut from the Digit, point, sign and bracket cards page), a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money.',
+    online: 'Children cut out the digit cards and a decimal point from the kit page before the lesson and move them on camera. The tutor marks the zoom-in number lines on the slides.',
     warmup: 'Target 5: draw three empty boxes on a whiteboard with a decimal point after the first box. The tutor turns over digit cards one at a time; children write each digit in a box straight away (no moving it later). The number closest to 5 wins.',
     explore: 'Pairs use the digit cards 2, 5, 8 and a decimal point card to make as many different decimals as they can (the point goes between two digits), list them in order and find the one closest to 5.',
     mini: 'Zoom in on a number line: each step is 0.1, then 0.01, then 0.001. Line up the decimal points and fill empty places with 0 to compare. Round by finding the two neighbours and the halfway mark; to round backwards, find the smallest and largest numbers that round to the answer.',
@@ -60,8 +81,8 @@ module.exports = {
     key: [
       ['Q1', 'A 6.3,  B 6.85,  C 4.53,  D 4.58,  E 0.247.  (f) B (6.85 rounds to 7; 6.3 rounds to 6; the others are near 4.5 or 0.2).'],
       ['Q2', '(a) 3.045, 3.054, 3.405, 3.45, 3.5  (b) No. Line up the points: 3.405 and 3.450 have the same tenths, but 0 hundredths is less than 5 hundredths, so 3.405 is smaller. '],
-      ['Q3', '(a) Smallest 7.35, largest 7.44  (b) 10 numbers (7.35, 7.36 … 7.44)  (c) 7.38 (7.47 has digits adding to 18 too, but it rounds to 7.5).'],
-      ['Q4', '(a) 12 numbers: 3.69, 3.96, 6.39, 6.93, 9.36, 9.63, 36.9, 39.6, 63.9, 69.3, 93.6, 96.3  (b) 9.63  (c) 6.93 (only 0.07 away)  (d) 39.6'],
+      ['Q3', '(a) Smallest 7.35, largest 7.44 (7.45 rounds up to 7.5). (Moved to the question bank: how many numbers (10) and the digit-sum clue (7.38).)'],
+      ['Q4', '(a) 3.69, 3.96, 6.39, 6.93, 9.36, 9.63  (b) 9.63  (c) 6.93 (only 0.07 away)  (d) 3.69 and 3.96'],
       ['Q5', 'Siti $4.10, Mei $5.30 ($9.40 − $1.20 = $8.20, $8.20 ÷ 2 = $4.10, $4.10 + $1.20 = $5.30; check $4.10 + $5.30 = $9.40).'],
       ['Q6', '(a) 0.4 kg (2.85 − 0.45 = 2.40 kg for 6 cans, 2.40 ÷ 6 = 0.4)  (b) 2.05 kg (2.85 − 0.8)']
     ]
@@ -115,7 +136,9 @@ module.exports = {
       { q: 'Write these in order, smallest first: 0.6, 0.066, 0.606, 0.66, 0.06', a: '0.06, 0.066, 0.6, 0.606, 0.66 (as 0.060, 0.066, 0.600, 0.606, 0.660)' },
       { q: 'Mei is 1.38 m tall. Ben is 0.15 m taller than Mei. Ali is 0.09 m shorter than Ben. How tall is Ali?', a: '1.44 m (Ben 1.53 m)' },
       { q: 'Use the digit cards 2, 4, 7 and a decimal point once each (the point goes between two digits). Which number is closest to 50?', a: '47.2 (2.8 away; the next closest is 42.7)' },
-      { q: 'A ribbon 4.8 m long is cut into 6 equal pieces. How long is each piece? Ravi uses 4 of the pieces. How much ribbon does he use?', a: '0.8 m each; 3.2 m' }
+      { q: 'A ribbon 4.8 m long is cut into 6 equal pieces. How long is each piece? Ravi uses 4 of the pieces. How much ribbon does he use?', a: '0.8 m each; 3.2 m' },
+      { q: 'A number has 2 decimal places. Rounded to 1 decimal place it is 7.4. How many different numbers could it be? Its digits add up to 18. What is the number?', a: '10 numbers (7.35, 7.36 … 7.44). The number is 7.38 (7.47 also has digits adding to 18, but it rounds to 7.5).' },
+      { q: 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point can go between any two digits (like 3.69 or 36.9). How many different numbers can you make? Which is closest to 7? Which rounds to 40 to the nearest whole number?', a: '12 numbers: 3.69, 3.96, 6.39, 6.93, 9.36, 9.63, 36.9, 39.6, 63.9, 69.3, 93.6, 96.3. Closest to 7: 6.93. Rounds to 40: 39.6.' }
     ],
     challenge: [
       { q: 'A number with 3 decimal places rounds to 2.46 when rounded to 2 decimal places. Its digits add up to 20. What is the number?', a: '2.459 (it is from 2.455 to 2.464; 2.45_ needs 9 to make 20; 2.46_ would need 8, but 2.468 rounds to 2.47)' },
@@ -140,22 +163,23 @@ module.exports = {
     H.sub('', '_________,  _________,  _________,  _________,  _________'),
     H.sub('b', 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right? Explain.'),
     ...H.lines(1),
-    H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4.', { keepNext: true }),
+    H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4. Use the number line: it is marked in hundredths.', { keepNext: true }),
+    H.fig(roundLine()),
     H.sub('a', 'What is the smallest it can be?  ________     The largest?  ________'),
-    H.sub('b', 'How many different numbers could it be?   ________'),
-    H.sub('c', 'Its digits add up to 18. What is the number?   ________'),
 
-    H.q(4, 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point must go between two digits, like 3.69 or 36.9.', { pb: true, before: 0, keepNext: true }),
-    H.sub('a', 'How many different numbers can you make? List them in order.'),
-    ...H.lines(2),
-    H.sub('b', 'Which is the largest number with 2 decimal places?   ________'),
+    H.q(4, 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point goes after the FIRST digit, like 3.69.', { pb: true, before: 0, keepNext: true }),
+    H.sub('a', 'Make all 6 numbers and list them in order, smallest first.'),
+    ...H.lines(1),
+    H.sub('b', 'Which is the largest number?   ________'),
     H.sub('c', 'Which of your numbers is closest to 7?   ________'),
-    H.sub('d', 'Which of your numbers rounds to 40 (to the nearest whole number)?   ________'),
+    H.sub('d', 'Two of your numbers round to 4 (to the nearest whole number). Which two?   ________   ________'),
     H.q(5, 'Mei and Siti have $9.40 altogether. Mei has $1.20 more than Siti. How much money does each girl have? Draw a bar model.', { keepNext: true }),
     ...H.lines(3),
     H.sub('', 'Mei  $________          Siti  $________'),
     H.q(6, 'A box holds 6 cans that all have the same mass.', { keepNext: true }),
     H.fig(scales()),
+    H.sub('', 'Step 1: the 6 cans alone.   2.85 − 0.45 = ________ kg.      Step 2: share it between the 6 cans.', { keepNext: true }),
+    H.fig(canBar()),
     H.sub('a', 'What is the mass of one can?   ________ kg'),
     H.sub('b', 'Ali takes 2 cans out of the box. What is the mass of the box and cans now?   ________ kg')
   ]

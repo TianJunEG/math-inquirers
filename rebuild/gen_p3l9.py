@@ -41,10 +41,10 @@ def exit_slide(sid,time,q,notes,extra=''):
 # ---------- 1. title ----------
 put('p3l9-title',title_slide('p3l9-title',9,5,'Measure and Money Masters','Length, mass, volume, money and time',
  'Change to one unit, plan a budget, and draw a time line for durations and the 24-hour clock.',
- 'Objective: Change compound units (m and cm, kg and g, ℓ and ml, $ and ¢) to one unit to compare, add and subtract; plan a budget; find durations, start and end times by drawing a time line, in 12-hour and 24-hour time. Heuristics taught: (1) change to one unit; (2) draw a time line and jump to the next o’clock. '
+ 'Objective: Change compound units (m and cm, kg and g, ℓ and ml, $ and ¢) to one unit to compare, add and subtract; plan a budget; find durations, start and end times by drawing a time line, in 12-hour and 24-hour time. Heuristics taught: (1) change to one unit; (2) draw a time line and jump to the next o’clock (taught in a short lesson after page 1). '
  'Materials: Party menu cards (one per pair), play money, a metre ruler or measuring tape, a kitchen scale and a measuring jug if available, a clock with movable hands, mini whiteboards. '
  'Online: Show the menu card on screen; children use paper and pencil. Pairs work in breakout rooms and type their best party plan in the chat. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (change to one unit, then the time line; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (change to one unit; the time line is taught after page 1, minutes 54 to 57; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up game: name that unit ----------
 cards=[('A bus is 12 __ long.','m'),('A pencil is 15 __ long.','cm'),('An MRT ride of about 15 __','km'),('A bag of rice: 5 __','kg'),

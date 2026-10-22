@@ -56,8 +56,8 @@ def build(D, n):
             ('What helped me', optrow(['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'])),
             ('If you want', optrow(['I am still stuck (my tutor will check in privately)', 'I would like to pass']))]
     body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Only your tutor may read it, privately.', TEAL, CREAM, 28)
-    for a_, b_ in rows:
-        body += card(f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:30px;font-weight:600;line-height:1.5">{b_}</p>')
+    inner = ''.join(f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:34px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:28px;font-weight:600;line-height:1.5">{b_}</p></div>' for k, (a_, b_) in enumerate(rows))
+    body += card(inner)
     notes = ('Minutes 88 to 90 (2 minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
              'It is never marked, never collected in front of the group and never read out; the tutor may read it privately afterwards. If a child ticks "I am still stuck", check in privately next lesson (private chat or a quiet word). '
              'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. You can pass."')
