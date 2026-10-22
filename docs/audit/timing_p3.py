@@ -73,7 +73,15 @@ ITEMS = {
 # pair-task minutes for the Explore block (hands-on, MID pair, includes setting up the cards/paper)
 EXPLORE_X = {1: 6, 2: 8, 3: 9, 4: 7, 5: 7, 6: 10, 7: 7, 8: 7, 9: 9, 10: 15}  # L10 = two 7-minute stations + 1 switch
 EXPLORE_X_FIX = {1: 6, 2: 7, 3: 6.5, 4: 7, 5: 7, 6: 7.5, 7: 7, 8: 7, 9: 7, 10: 9}  # after the explore fixes in the report
-DEMOTE = {8: 5}     # lesson -> index in ITEMS (0-based) of the page-2 item that becomes 'if time' / take-home
+# FIX: lesson-specific extras (indices are 0-based positions in ITEMS: 0 = Q1 ... 5 = Q6)
+FIX_EXTRA = {
+    2: dict(item_scale={1: 2.5}, explore_x=6.5, mini_drop=['try1']),                                   # Q2(c) to take-home
+    4: dict(demote=[5], item_scale={4: 3.0}, drop_mid=['teachsame'], talk_add=90, explore_x=6.5),     # Q6 + teachsame move to talk time
+    6: dict(item_scale={0: 2.5}, demote=[5], drop_mid=['teachbetween', 'teachpairs'], explore_x=6.5), # Q1(c), Q6 to take-home
+    7: dict(explore_x=6, mini_drop=['try2']),
+    8: dict(demote=[5], item_scale={3: 2.5, 2: 3.5}, explore_x=6),                                     # Q4 four letters, Q3(b) to take-home
+    10: dict(drop_mid=['teachtable', 'teachbetween'], exit_work=2.0),                                  # review lesson: one combined recap slide
+}
 # FIX: teaching slides cut (they only serve an 'if time' item, or are a second try-it that the worksheet itself repeats)
 DROP_SLIDES = {1: ['teachsum', 'tryclues'], 2: ['teachshape'], 3: ['teachboth'], 4: ['tryunits'], 5: ['teachtable'],
                6: ['tryadd'], 7: ['teachadd'], 8: ['try1'], 9: ['teach24'], 10: []}
@@ -133,6 +141,7 @@ def lesson(n, C, P, fix=False):
     sl, mv, mat, act, tmove = P['slide'], P['move'], P['mat'], P['act'], P['tmove']
     if fix: mv = mv / 2; tmove = tmove / 2        # FIX: pre-assigned rooms, auto-move and auto-close
     REC = 10
+    X = FIX_EXTRA.get(n, {}) if fix else {}
     parts = {}
     def add(name, speak, wait, actv, trans, words, **extra):
         parts[name] = dict(speak=speak, wait=wait, act=actv, trans=trans, rec=REC, words=words, **extra)
@@ -152,10 +161,11 @@ def lesson(n, C, P, fix=False):
     ea = sum(nw(x[0]) for x in dk['expAsk'])
     add('Explore', say(nw(sc['predict'])) + read(nw(dk['expSetup'])) + say(nw(WORK_SAY)) + read(ea),
         30 + 30 + len(dk['expAsk']) * 30,            # prediction hold-up, tutor check-in, three group questions
-        (EXPLORE_X_FIX[n] if fix else EXPLORE_X[n]) * 60 * act,
+        (X.get('explore_x', EXPLORE_X_FIX[n]) if fix else EXPLORE_X[n]) * 60 * act,
         mat + (0 if fix else MAT_EXTRA.get(n, 0)) + 2 * mv + 2 * sl, nw(sc['predict']) + nw(dk['expSetup']) + ea)
     # 4 Mini-lesson = slides starting at minutes 25..34
     mini = [s for s in S if s['a'] is not None and 25 <= s['a'] < 35]
+    mini = [x for x in mini if x['id'] not in X.get('mini_drop', [])]
     if fix and len(mini) >= 7:                      # FIX: merge the shortest 'we' into the next try-it slide
         drop = min((x for x in mini if x['id'].startswith('we')), key=lambda x: x['vis'], default=None)
         mini = [x for x in mini if x is not drop]
@@ -187,10 +197,11 @@ def lesson(n, C, P, fix=False):
             for k in z: z[k] += d[k]
         return z
     it = [list(i) for i in ITEMS[n]]
-    if fix and n in DEMOTE: it[DEMOTE[n]][2] = 1
+    for i, v in X.get('item_scale', {}).items(): it[i][1] = v
+    for i in X.get('demote', []): it[i][2] = 1
     p1, p2 = it[:3], it[3:]
     if fix:
-        pre = [x for x in pre if x['id'] not in DROP_SLIDES[n]]; mid = [x for x in mid if x['id'] not in DROP_SLIDES[n]]
+        pre = [x for x in pre if x['id'] not in DROP_SLIDES[n]]; mid = [x for x in mid if x['id'] not in DROP_SLIDES[n] + X.get('drop_mid', [])]
     p1_min = sum(i[1] for i in p1) * act
     p2_min = sum(i[1] for i in p2 if not i[2]) * act
     sw = nw(START_SAY) + nw(PAIRS_SAY)
@@ -212,11 +223,11 @@ def lesson(n, C, P, fix=False):
     sh = nw(c['lesson']['share']); tw = nw(sc['talk']); ans = nw(sc['talkAns'])
     add('Talk time', say(tw) + read(sh) + say(ans) + read(q2),
         3 * 30 + 30 + 30,                            # three volunteer questions, puzzle-2 revisit, follow-up
-        120,                                         # partner talk, 2 min (notes: "Pairs talk for 2 minutes, then share")
+        120 + X.get('talk_add', 0),                  # partner talk, 2 min (+ FIX: slides moved here) (notes: "Pairs talk for 2 minutes, then share")
         sl + tmove, tw + sh + ans + q2)
     # 8 Exit ticket + look-back + close
     ex = nw(c['lesson']['exit']['q'])
-    ac = EXIT_WORK[n] * 60 * act + 120               # exit work + a full 2 minutes of look-back
+    ac = X.get('exit_work', EXIT_WORK[n]) * 60 * act + 120               # exit work + a full 2 minutes of look-back
     if n == 10:
         ac += GROUP * (20 if fix else 30) + (30 if fix else 60)   # 8 certificates with one specific praise each (FIX: 20 s), volunteers
     add('Exit ticket + look-back + close',
