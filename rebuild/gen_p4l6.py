@@ -141,11 +141,11 @@ q=pt(cx,cy,R-104,65); g+=f'<circle cx="{q[0]:.1f}" cy="{q[1]-1:.1f}" r="26" fill
 body=h2('Measure with a protractor')
 body+=pin(128,215,1000,svgwrap(1000,460,'A protractor on an angle of 65 degrees. One arm lies along the baseline at 0 on the inside scale; the other arm passes 65 on the inside scale and 115 on the outside scale.',g),None)
 body+=pin(1170,240,622,p('Estimate first: smaller than a right angle, so less than 90°.',34,700),None,SOFT,20,'18px 26px')
-body+=step(1,'Centre on the vertex.',left=1170,top=390,width=562,size=32)
-body+=step(2,'Baseline along one arm.',left=1170,top=480,width=562,size=32)
-body+=step(3,'Count up from the 0 on that arm.',left=1170,top=570,width=562,size=32)
-body+=answer(128,700,1664,'65°.  Not 115°: our estimate says less than 90°.')
-body+=pin(128,800,1664,p('Arms too short? Draw them longer with a ruler. The angle does not change.',32,700),'fade',WHITE,20,'14px 28px')
+body+=step(1,'Centre on the vertex.',left=1170,top=385,width=562,size=32)
+body+=step(2,'Baseline along one arm.',left=1170,top=468,width=562,size=32)
+body+=step(3,'Count up from the 0 on that arm.',left=1170,top=551,width=562,size=32)
+body+=answer(128,712,1664,'65°.  Not 115°: our estimate says less than 90°.')
+body+=pin(128,815,1664,p('Arms too short? Draw them longer with a ruler. The angle does not change.',32,700),'fade',WHITE,20,'14px 28px')
 put('teach1',sec(f'{P}-teach1','23–25.5 MIN',body,'Teach. Hold up a real protractor. Ask first: "Is this angle bigger or smaller than a right angle?" (smaller: estimate about 60°). Click through the steps. Think-aloud: "The bottom arm points to 0 on the INSIDE scale, so I count up the inside scale: 10, 20 … 60, 65. The outside scale says 115 at the same place, but 115 is more than a right angle and my estimate says less. So the angle is 65°." Online: children measure the angle on their screen with a real protractor if the screen is large enough, or on the worksheet later. Point out: the length of the arms does not change the angle.'))
 
 # ---------- 7. try: estimate ----------
@@ -260,9 +260,9 @@ body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Where is
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Five rays, 4 equal angles</p>'+svgwrap(760,450,'Five rays from one point make 4 equal angles; the whole angle is 120 degrees',g2,'width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('chdiag',sec(f'{P}-chdiag','Optional, if you finish early',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: Q1, is the hour hand pointing exactly at 3? Why not? How far has it moved since 3 o’clock? Q2, how big is each small angle? How can you count the angles without missing one? Answers are in the Challenge slide notes.'))
 body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: the hour hand moves too',38,800,TEAL))
-for i,t in enumerate(['Minute hand: pointing at 6.','Half an hour has passed, so the hour hand is halfway from 3 to 4.','Hour hand to 4: half a space = 15°.   4 to 6: 2 spaces = 60°.','15° + 60° = 75°']): body+=pin(128,330+i*125,800,p(t,31),'rise',WHITE)
+for i,t in enumerate(['Minute hand: pointing at 6.','Half an hour has passed, so the hour hand is halfway from 3 to 4.','Hour hand to 4: half a space = 15°.   4 to 6: 2 spaces = 60°.','15° + 60° = 75°']): body+=pin(128,330+i*135,800,p(t,31),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: count in order',38,800,TEAL))
-for i,t in enumerate(['Each small angle: 120° ÷ 4 = 30°.','1 part: 4 angles.  2 parts: 3.  3 parts: 2.  4 parts: 1.','4 + 3 + 2 + 1 = 10 angles.','3 parts = 90°: 2 right angles ✓']): body+=pin(992,330+i*125,800,p(t,31),'rise',WHITE)
+for i,t in enumerate(['Each small angle: 120° ÷ 4 = 30°.','1 part: 4 angles.  2 parts: 3.  3 parts: 2.  4 parts: 1.','4 + 3 + 2 + 1 = 10 angles.','3 parts = 90°: 2 right angles ✓']): body+=pin(992,330+i*135,800,p(t,31),'rise',WHITE)
 put('chwalk',sec(f'{P}-chwalk','Optional, if you finish early',body,'Use after pairs have tried. Q1: many children say 90°, as if the hour hand still pointed at 3. Use a real clock: move the minute hand from 12 to 6 and watch the hour hand creep half way to 4. Q2: the list in order (by number of parts) is the same idea as the fan on page 1; 4 + 3 + 2 + 1 is a pattern worth noticing: with 6 rays it would be 5 + 4 + 3 + 2 + 1 = 15.'))
 
 # ---------- talk / exit ----------

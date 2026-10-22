@@ -100,12 +100,12 @@ def reflect_slide(n, G):
     body += pin(128, 340, 820, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px', 'box-sizing:border-box;')
     body += pin(972, 340, 820, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px', 'box-sizing:border-box;')
     opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help', 'other: ______']
-    inner = p('What helped me:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'{_box(w=22)}{E(o)}' for o in opts) + '</p>'
+    inner = p('What helped me:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'<span style="white-space:nowrap">{_box(w=22)}{E(o)}</span>' for o in opts) + '</p>'
     body += pin(128, 480, 820, inner, None, WHITE, 20, '20px 28px', 'box-sizing:border-box;')
     opts2 = ['drawing it', 'a list or table', 'a smaller number', 'a partner', 'another question like this', 'other: ______']
-    inner = p('One thing I could try next:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'{_box(w=22)}{E(o)}' for o in opts2) + '</p>'
+    inner = p('One thing I could try next:', 36, 700) + '<p style="font-size:28px;font-weight:600;line-height:1.6">' + ''.join(f'<span style="white-space:nowrap">{_box(w=22)}{E(o)}</span>' for o in opts2) + '</p>'
     body += pin(972, 480, 820, inner, None, WHITE, 20, '20px 28px', 'box-sizing:border-box;')
-    inner = f'<p style="font-size:28px;font-weight:600;line-height:1.5">{_box(w=22)}<b>I am still stuck</b> (my tutor will check in with me){_box(w=22)}<b style="color:{TEAL}">I pass on this one, or today.</b> That is always fine.</p>'
+    inner = f'<p style="font-size:28px;font-weight:600;line-height:1.5"><span style="white-space:nowrap">{_box(w=22)}<b>I am still stuck</b> (my tutor will check in with me)</span><span style="white-space:nowrap">{_box(w=22)}<b style="color:{TEAL}">I pass on this one, or today.</b> That is always fine.</span></p>'
     body += pin(128, 760, 1664, inner, None, WHITE, 20, '16px 28px', 'box-sizing:border-box;')
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me; one thing I could try next). '
              'Say one sentence: "Turn to page 3, the Looking back box. Write, tick or pass. Two minutes, no talking." The printed box says the rest. Model one yourself first: "' + G['reflect'] + '" Say: "Ticking I am still stuck is a good thing to do: it tells me where to help." '
