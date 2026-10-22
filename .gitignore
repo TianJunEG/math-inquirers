@@ -7,3 +7,6 @@ hp/workbook_body.html
 hp/workbook_full.html
 hp/designed/*.html
 *.bak
+
+# private copyrighted contest reference notes (never commit)
+docs/sasmo/private_*
