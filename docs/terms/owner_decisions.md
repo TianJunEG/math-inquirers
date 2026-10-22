@@ -32,3 +32,6 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 ## End-of-term check (22 Oct 2026)
 - **The check takes 20 minutes** (not 29). Lesson 10's exit part shrinks; explore, mini-lesson and workbook time can grow back. The check keeps one question per lesson; cut to fit 20 minutes (a few questions can be shorter, or two questions can share a page) and keep the optional Think harder stretch item.
 - **Photos of the check are returned by the parent to the business WhatsApp (+65 9880 5962)** unless the owner changes it. Tutors never use personal phones for this. Default stays until changed.
+
+## Proceed to the other terms (22 Oct 2026, owner going to sleep)
+- After Level 1 Term 1 is finished (audits and fix passes done), proceed with Level 1 Terms 2, 3 and 4 (lessons 11-40, same template, same process: write, wording review against the school-paper guide, independent audit, fix pass), then the other levels. Do not wait for the owner for routine steps; keep every decision made so far (stronger arithmetic with scaffolding, 20-minute check, Think harder for contest-style items, WhatsApp-only photo return, no printed ruler, Mi as mascot).
