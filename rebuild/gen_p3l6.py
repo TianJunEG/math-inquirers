@@ -131,7 +131,7 @@ body=h2('Explore: what to do')+card(chip('EXPLORE')+steps_html,extra='padding:22
 put('p3l6-explore1',sec('p3l6-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Pairs fold halves, quarters and eighths (fold in half again and again). For thirds, sixths and twelfths, mark every 8 cm, 4 cm and 2 cm on a 24 cm strip (or roll the strip into an S until the three parts match). '
  'Children label every part (1/2, 1/4 …) and stack the strips. Stress: the parts in a row must be equal, or they are not halves, thirds … '
- 'Hints: "Which pieces line up with the dashed line at one half?" Finished early: "Find three different pieces that together cover exactly one half." (e.g. 1/4 + 1/8 + 1/8, or 1/3 + 1/6, or 1/4 + 1/6 + 1/12). '
+ 'Hints: "Which pieces line up with the dashed line at one half?" Ready for more: "Find three different pieces that together cover exactly one half." (e.g. 1/4 + 1/8 + 1/8, or 1/3 + 1/6, or 1/4 + 1/6 + 1/12). '
  'Online: children hold their wall up to the camera.'))
 
 # ---------- 5. explore: talk ----------
@@ -246,7 +246,7 @@ SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
  [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('Q7','If time: ALL the twelfths between one half and three quarters.')],
- 'Finished early? Stretch and Challenge come next.',
+ 'Ready for more? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
  [('Q3','(a) A, B, D   (b) C: '+F(2,6)+' = '+F(1,3)+',  E: '+F(3,8)),

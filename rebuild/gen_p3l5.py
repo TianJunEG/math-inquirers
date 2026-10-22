@@ -81,7 +81,7 @@ body=h2('Explore: what to do')+card(chip('EXPLORE')+steps_html,extra='padding:22
 put('p3l5-explore1',sec('p3l5-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Predict first: "Which group size will leave nothing over?" Pairs make the groups with real counters (cups help) and fill in the table on a whiteboard. '
  'Results: 2s: 12 groups, 1 left. 3s: 8 groups, 1 left. 4s: 6 groups, 1 left. 5s: 5 groups, 0 left. 6s: 4 groups, 1 left. '
- 'Hints: "Use a times-table fact: 6 × 4 = 24." Finished early: "Try 49 counters. Which group sizes leave 1 over? Why?" (2, 3, 4, 6 and 8 all leave 1, because 48 is in all those tables; 7s leave 0.) '
+ 'Hints: "Use a times-table fact: 6 × 4 = 24." Ready for more: "Try 49 counters. Which group sizes leave 1 over? Why?" (2, 3, 4, 6 and 8 all leave 1, because 48 is in all those tables; 7s leave 0.) '
  'Online: children use beans or buttons and hold the whiteboard to the camera.'))
 
 # ---------- 5. explore: talk ----------
@@ -205,7 +205,7 @@ put('p3l5-teachtable',sec('p3l5-teachtable','57–58 MIN',body,
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l5-ws2',ws_preview('p3l5-ws2','58–66 MIN','Worksheet page 2: on your own',
  [('Q4','What number am I? List, then test. Part b: find ALL the numbers.'),('Q5','Dividing by 8: every remainder, and the biggest one.'),('Q6','If time: the party tables. Fill in the table until the rows match.')],
- 'Finished early? Stretch and Challenge come next.',
+ 'Ready for more? Stretch and Challenge come next.',
  'Children work alone. Note who needs a short catch-up next lesson. Check that every child writes a list for Q4 and fills the table for Q6.'))
 put('p3l5-ws2ans',check_slide('p3l5-ws2ans','66–70 MIN','Page 2: check together',
  [('Q4','(a) 53   (b) 11, 23, 35, 47 (they go up in 12s)'),('Q5','(a) 0, 1, 2, 3, 4, 5, 6, 7   (b) 63'),('Q6','(a) 5 tables, 35 children   (b) 5 empty seats')],

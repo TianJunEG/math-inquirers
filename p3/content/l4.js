@@ -78,7 +78,7 @@ module.exports = {
     exploreHints: [
       'Stuck: build two towers the same height first. Then move cubes until one is 4 taller.',
       'Confused: "Take the extra 4 cubes away first. Share what is left fairly. Then put the 4 back."',
-      'Finished early: try 30 cubes where one tower is 4 times as tall as the other.'
+      'Ready for more: try 30 cubes where one tower is 4 times as tall as the other.'
     ],
     think: [
       '"A hall has 1500 seats: 645 red, 480 blue and the rest green. It is one whole cut into parts, so I draw ONE bar for 1500 and cut it into 645, 480 and a question mark. Whole take away the parts: 1500 − 645 = 855, 855 − 480 = 375. Check: 645 + 480 + 375 = 1500."',

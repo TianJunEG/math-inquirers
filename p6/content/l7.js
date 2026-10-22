@@ -79,7 +79,7 @@ const codeAndFrame = (prog, label, frameText, trace) => {
     const c1 = 130, c2 = 130, x0 = W - c1 - c2 - 6;
     s += `<rect x="${x0}" y="2" width="${c1 + c2}" height="22" fill="${YEL}" stroke="${NAVY}" stroke-width="2"/><text x="${x0 + c1 / 2}" y="18" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">after repeat</text><text x="${x0 + c1 + c2 / 2}" y="18" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${esc(trace.head)}</text>`;
     let d = '';
-    for (let i = 1; i <= trace.rows; i++) { const y = 2 + 22 * i; d += `<text x="${x0 + c1 / 2}" y="${y + 16}" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${i}</text>`; }
+    for (let i = 1; i <= trace.rows; i++) { const y = 2 + 22 * i; if (trace.prefill && trace.prefill[i - 1]) d += `<text x="${x0 + c1 + c2 / 2}" y="${y + 16}" font-size="14" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">${trace.prefill[i - 1]}</text>`; d += `<text x="${x0 + c1 / 2}" y="${y + 16}" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${i}</text>`; }
     s += `<rect x="${x0}" y="24" width="${c1 + c2}" height="${22 * trace.rows}" fill="${WHITE}" stroke="${NAVY}" stroke-width="2"/>` + d;
     s += `<path d="M${x0 + c1} 2 V${24 + 22 * trace.rows}${Array.from({ length: trace.rows - 1 }, (_, i) => ` M${x0} ${46 + 22 * i} H${x0 + c1 + c2}`).join('')}" stroke="${NAVY}" stroke-width="1" fill="none"/>`;
   }
@@ -111,8 +111,8 @@ module.exports = {
     objective: 'Use the idea that a turtle going once round a closed shape turns 360° altogether to find the turn angle (360° ÷ sides) and inside angle (180° − turn) of regular polygons, work backwards from an angle to the number of sides, extend to star polygons (turn = 360° × times round ÷ points), and test every prediction with a pen program in Scratch (or Python turtle).',
     skills: 'Turn (exterior) and inside (interior) angles, angles on a straight line, angle sum of a polygon, star polygons, predicting and tracing code, repeat loops and variables',
     materials: 'A laptop or desktop with Scratch 3 open (scratch.mit.edu) and the Pen extension added, mini whiteboards, a protractor, plain or squared paper.',
-    online: 'Pairs work in breakout rooms: one child drives Scratch and shares the screen, the other predicts, then they swap. Children hold drawings up to the camera. A tablet works for Scratch but is slower. Every drawing starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so shapes stay on the stage; turn blocks in Scratch show an arrow (turn ↻ is clockwise, our “turn right”). Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left (Motion, Pen, Control), not by colour.',
-    warmup: 'Turtle says: everyone stands and faces the screen (call it north). The tutor calls turns (right 90, right 180, left 270, right 45, right 360) and children turn their bodies, then say which way they face. Finish with: one full turn made of 3 equal turns. How big is each turn?',
+    online: 'The tutor builds a “Turtle start” Scratch file beforehand (Pen extension added and the 4 set-up blocks already in place; no .sb3 file exists in this repository) and shares it through the approved channel, so children only open it. Pairs work in breakout rooms: one child drives Scratch and shares the screen, the other predicts, then they swap. Children hold drawings up to the camera. A tablet works for Scratch but is slower. Every drawing starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so shapes stay on the stage; turn blocks in Scratch show an arrow (turn ↻ is clockwise, our “turn right”). Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left (Motion, Pen, Control), not by colour.',
+    warmup: 'Turtle says: everyone stands (or sits and uses an arm as the turtle’s nose) and faces the screen (call it north). The tutor calls turns (right 90, right 180, left 270, right 45, right 360) and children turn their bodies, then say which way they face. Finish with: one full turn made of 3 equal turns. How big is each turn?',
     explore: 'At the computer in pairs: build the square program (the 4 set-up blocks, then repeat 4: move 100, turn ↻ 90; the clockwise arrow block is “turn right”). The 4 set-up blocks are erase all, go to x: -50 y: 100, point in direction 90, pen down: they start every run in the same place so big shapes stay on the 480 by 360 stage. Change it to draw an equilateral triangle, then a regular pentagon and a regular hexagon, predicting each turn before running it. Record the sides, the turn and whether the shape closes. What do sides × turn always make?',
     mini: 'The turtle turns the outside angle: turn + inside angle = 180°. Going round once, the turns add up to 360°, so a regular polygon with n sides turns 360° ÷ n (octagon: turn 45°, inside 135°). Work backwards from an inside angle (174° → turn 6° → 60 sides; 115° is impossible because 360 ÷ 65 is not whole). A star goes round more than once: the 5-point star turns 720° ÷ 5 = 144°. Before page 2: trace a running total in a table, plan an 8-point star that goes round 3 times, and add up the inside angles of an octagon (1080°).',
     share: 'Ali says the turtle turns by the inside angle of the shape. Mei says it turns by the outside angle. Who is right? Use a triangle to explain.',
@@ -123,14 +123,14 @@ module.exports = {
       ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
       ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
       ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
-      ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  20 points, 3 times round: total 1080°, turn 54°, point 126°.  Sharper points: the 9-point star (20°).'],
+      ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  (The 20-point star, total 1080°, turn 54°, point 126°, is now Think harder 5.)'],
       ['Q5', 'Each inside angle: 60°, 90°, 108°, 120°, 144°.  Added: 180°, 360°, 540°, 720°, 1440°.  (a) 180°  (b) (n − 2) × 180°, or n × 180° − 360°']
     ]
   },
 
   script: {
     hook: ['Today you are turtle pilots. A turtle with a pen can draw any shape, but only if you tell it exactly how far to turn at every corner.', 'Our rule today: work the turn out with maths first, then test it in code. Notice it. Test it. Explain why.'],
-    warmIntro: ['Stand up and face your screen. Call that north. I am the programmer and you are the turtle. Turn right 90. Which way are you facing now?', 'Now: how can you make one full turn using 3 equal turns? How big is each turn?'],
+    warmIntro: ['Stand up, or sit and use your arm as the turtle’s nose, and face your screen. Call that north. I am the programmer and you are the turtle. Turn right 90. Which way are you facing now?', 'Now: how can you make one full turn using 3 equal turns? How big is each turn?'],
     predict: ['Here is the square program: repeat 4, move 100, turn right 90. I want an equilateral triangle. What turn should I type? Write your prediction on your whiteboard before anyone runs it.'],
     exploreHints: ['Stuck: walk the shape yourself. Walk one side, then turn at the corner. How far did your body turn?', 'Typed turn 60 for the triangle? Run it and look. Does the turtle come home? How far has it turned altogether?', 'Finished early: predict the turn for a regular shape with 10 sides, then test it.'],
     think: ['“An octagon has 8 equal turns. To come home facing the same way the turtle turns 360° altogether, so each turn is 360 ÷ 8 = 45°. The turn and the inside angle sit on one straight line, so the inside angle is 180 − 45 = 135°.”', '“Working backwards: the inside angle is 174°, so the turn is 180 − 174 = 6°. The turns make 360°, so there are 360 ÷ 6 = 60 sides.”', '“For the star the turtle goes round twice: 720° altogether. 5 equal turns: 720 ÷ 5 = 144°. The angle at each point is 180 − 144 = 36°.”'],
@@ -143,7 +143,7 @@ module.exports = {
 
   deck: {
     today: 'Program a turtle to draw regular polygons and stars, and use the 360° turn to predict every angle before we test it in code.',
-    warmGame: 'Turtle says. Stand and face the screen (north). The tutor calls turns; you turn your body and say which way you face. Last one: one full turn in 3 equal turns. How big is each?',
+    warmGame: 'Turtle says. Stand (or sit and use your arm as the turtle’s nose) and face the screen (north). The tutor calls turns; you turn your body and say which way you face. Last one: one full turn in 3 equal turns. How big is each?',
     warmQs: [['Angles on a straight line add up to …?', '180°'], ['How many degrees in a full turn?', '360°'], ['Two angles of a triangle are 50° and 75°. What is the third?', '55°'], ['What is 360 ÷ 8?', '45'], ['Face north. Turn right 90°, then right 180°. Which way do you face?', 'West']],
     expSetup: ['Add the Pen extension. Build the 4 set-up blocks, then repeat 4 [move 100, turn ↻ 90].', 'Change it to draw an equilateral triangle. Predict the turn first, then run it.', 'Now a regular pentagon (5 sides) and a regular hexagon (6 sides). Predict, then test.', 'Record sides, turn and “did it close?”. What do sides × turn always make?'],
     expPic: 'the square program as coloured blocks (pen down; repeat 4: move 100 steps, turn ↻ 90 degrees) next to the square it draws, with a small turtle arrow at the start.',
@@ -157,6 +157,10 @@ module.exports = {
     ws1: 'Page 1, in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
     ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars, Q5 add up the inside angles and find a rule.'
   },
+
+  moved: [
+    { q: 'Plan a 20-point star that goes round 3 times (move 100). Find the total turning, the turn angle and the point angle. Which has sharper points, this star or the 9-point star in Q4?', a: 'Total 3 × 360° = 1080°, turn 1080 ÷ 20 = 54°, point angle 180° − 54° = 126°. The 9-point star (point angle 20°) has sharper points.' }
+  ],
 
   qbank: {
     core: [
@@ -199,13 +203,13 @@ module.exports = {
     const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn ↻ {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
     const w4 = [1700, 2000, 2200, 2000, 2000];
     const t4 = H.tbl(w4, [H.row(['Points', 'Times round', 'Total turning', 'Turn angle', 'Point angle'].map((s, i) => H.cell(s, w4[i], { bold: true, fill: 'D9D9D9', size: 21, h: 45 }))),
-      ...[['5', '2', '720°', '144°', '36°'], ['9', '4', '', '', ''], ['20', '3', '', '', '']].map((r, j) => H.row(r.map((s, i) => H.cell(s, w4[i], { h: 45, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: i < 2 }))))]);
+      ...[['5', '2', '720°', '144°', '36°'], ['9', '4', '', '', '']].map((r, j) => H.row(r.map((s, i) => H.cell(s, w4[i], { h: 45, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: i < 2 }))))]);
     const w5 = [2900, 1400, 1400, 1400, 1400, 1400];
     const t5 = H.tbl(w5, [H.row(['Sides', '3', '4', '5', '6', '10'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 22, h: 45 }))),
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('The turtle turns by the OUTSIDE angle, from “straight on”: turn + inside angle = 180°. Start every drawing with erase all, go to x: -50 y: 100, point in direction 90, pen down. Turn with ↻.', 7300, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:left;line-height:1.45"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner. (turn + inside angle = 180°)<br><b>total turning</b> = all the turns added up.<br>Start every drawing with the 4 set-up blocks from your Turtle start file.</div>', 7300, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,
@@ -218,11 +222,11 @@ module.exports = {
       H.sub('a', 'What does the turtle draw? Explain.', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Total turning  ________ °        (c)  Fix it: change  ________  to  ________'),
 
-      H.q(3, 'Trace the code. The program keeps a running total of how far the turtle has turned. Fill in the table.', { pb: true, before: 0, keepNext: true }),
-      H.fig(codeAndFrame(q3prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn ↻ 80 degrees, change total by 80; then say total. A trace table for total after repeats 1 to 9.', null, { rows: 9, head: 'total' })),
+      H.q(3, 'Trace the code. The program keeps a running total of how far the turtle has turned. Fill in the table. (The first 3 rows are done for you.)', { pb: true, before: 0, keepNext: true }),
+      H.fig(codeAndFrame(q3prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn ↻ 80 degrees, change total by 80; then say total. A trace table for total after repeats 1 to 9.', null, { rows: 9, head: 'total', prefill: ['80', '160', '240'] })),
       H.sub('a', 'The sprite says  ________      (b)  Times the turtle goes round  ________', { after: 60 }),
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
-      H.q(4, 'Plan two stars, then test them (move 120 for the 9-point star, move 100 for the 20-point). Which has sharper points?   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
+      H.q(4, 'Plan a star, then test it (move 120 for the 9-point star). Fill in the 9-point row.   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
       H.q(5, 'Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
       t5,

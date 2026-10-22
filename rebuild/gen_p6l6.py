@@ -81,7 +81,7 @@ put(f'{PRE}-title', f'<section id="{PRE}-title" data-transition="fade" style="ba
 # ---------- 2 warm-up: where on the line ----------
 ev = [('A', 'Roll a 7 on a normal dice', 0, '0'), ('B', 'Flip a coin: heads', 1 / 2, '1/2'), ('C', 'Roll a number less than 5', 2 / 3, '4/6 = 2/3'),
       ('D', 'Pick a vowel from the letters S I N G A P O R E', 4 / 9, '4/9'), ('E', 'Roll a number from 1 to 6', 1, '1'), ('F', 'Pick the 1 red card from 10 cards', 1 / 10, '1/10')]
-body = h2('Warm-up: where on the line?') + p('Teams place each card on the line and give its fraction.', 32, 600, MUTED)
+body = h2('Warm-up: where on the line?') + p('Pairs place each card on the line and give its fraction. Take your time.', 32, 600, MUTED)
 CWD = 533
 for i, (l, t, v, f) in enumerate(ev):
     Lx = 128 + (i % 3) * (CWD + 32); T = 280 + (i // 3) * 150
@@ -98,7 +98,7 @@ for i, (l, t, v, f) in enumerate(ev):
           f'<text x="80" y="49" font-size="36" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{l}</text><text x="80" y="{150 if below else 106}" font-size="30" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">{E(f)}</text></svg>')
     body += f'<div data-build-in="pop" style="position:absolute;left:{x - 80:.0f}px;top:{670 - 36 + 0:.0f}px;width:160px">{mk}</div>'
 put(f'{PRE}-warm1', sec(f'{PRE}-warm1', '0–5 MIN', body,
-    'Minutes 0 to 5. ' + DK['warmGame'] + ' Teams agree on a spot and a fraction for each card, then click to drop the marker (markers appear A to F). '
+    'Minutes 0 to 5. ' + DK['warmGame'] + ' Pairs agree on a spot and a fraction for each card (no timer), then click to drop the marker (markers appear A to F). '
     'Answers: A 0 (impossible). B 1/2. C 4/6 = 2/3 (1, 2, 3, 4 out of 6). D 4/9 (I, A, O, E are 4 of the 9 letters). E 1 (certain). F 1/10. '
     'Ask: "Is D more or less than an even chance?" (4/9 is a little less than 1/2, because 4.5/9 would be 1/2.) "Can a probability be 6/5?" (No: never more than 1, never less than 0.) '
     'Key words for today: equally likely outcomes, fair, expect.'))
@@ -250,10 +250,10 @@ body += box(700, 640, 1092, 'Start again. Add blue until P(red) = 1/4: 2 must be
 put(f'{PRE}-teachbag', sec(f'{PRE}-teachbag', '40–42 MIN', body, 'Teach before worksheet page 1 (Q3 changes a bag of 4 red and 6 blue: do not do those numbers here). Use real counters in a bag if you can. Think-aloud: "For P(red) = 1/4, the red counters are 1 part out of 4 parts. 2 red is one part, so 4 parts is 8 counters. I have 6, so I add 2 blue." Check by writing the new fraction and simplifying. Counters with a thick outline are the new ones.'))
 
 # ---------- 16-17 worksheet page 1 ----------
-put(f'{PRE}-ws1', ws_preview(f'{PRE}-ws1', '42–54 MIN', 'Worksheet page 1: with your partner', [('Q1', 'Ben’s spinner: fractions, expected reds, and is his program wrong?'), ('Q2', 'Predict the coin program. Then run it 3 times in Scratch.'), ('Q3', 'Change the bag to change the chance.')],
+put(f'{PRE}-ws1', ws_preview(f'{PRE}-ws1', '42–54 MIN', 'Worksheet page 1: with your partner', [('Q1', 'Ben’s spinner: fractions, expected reds, and is his program wrong?'), ('Q2', 'Predict the coin program. Then run it 3 times in Scratch.'), ('Q3', 'Change the bag to change the chance (red to make 1/2).')],
     'Stuck? Count the equally likely outcomes first.', 'Minutes 42 to 54. Walk around. Ask "What are the equally likely outcomes? How many?" Children who finish Q2 build the coin program and compare their 3 runs with their partner\'s.'))
 k = dict(L['key'])
-put(f'{PRE}-ws1ans', checkrows(f'{PRE}-ws1ans', '54–56 MIN', 'Page 1: check together', [('Q1', 'a) 3/8   b) 6/8 = 3/4   c) about 375   d) No: random results wobble; 362 is close to 375'), ('Q2', 'a) about 500   b) No: each run is random, so it lands near 500, rarely on it   c) about 200'), ('Q3', 'a) 4/10 = 2/5   b) add 2 red (6/12)   c) add 10 blue (4/20)')],
+put(f'{PRE}-ws1ans', checkrows(f'{PRE}-ws1ans', '54–56 MIN', 'Page 1: check together', [('Q1', 'a) 3/8   b) 6/8 = 3/4   c) about 375   d) No: random results wobble; 362 is close to 375'), ('Q2', 'a) about 500   b) No: each run is random, so it lands near 500, rarely on it   c) about 200'), ('Q3', 'a) 4/10 = 2/5   b) add 2 red (6/12)')],
     'Click after a pair explains. Q1d: with a fair 3/8 spinner, about 19 runs in 20 land between 345 and 405 reds, and about 1 run in 5 gives 362 or fewer. Q2b: exactly 500 heads happens only about 1 run in 40. Q3c: 4 red must be 1/5 of the total, so the total is 20: add 10 blue. Full key: ' + k['Q1'] + ' | ' + k['Q2'] + ' | ' + k['Q3']))
 
 # ---------- 18 teach fair: two coins ----------
@@ -284,9 +284,9 @@ body += pin(1000, 640, 792, p('Plan on paper first: what goes in each box, and w
 put(f'{PRE}-teachplan', sec(f'{PRE}-teachplan', '58–59 MIN', body, 'Teach before worksheet page 2 (Q5 plans a program for two DICE: let them work out the numbers themselves). Point out each coin needs its own random number: one "pick random" for both coins would make them always the same. If time, run it: answers near 500 (e.g. 489, 512) confirm the game is fair.'))
 
 # ---------- 20-21 worksheet page 2 ----------
-put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '59–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'The Difference Game: fill the 36 outcomes, find each player’s chance, make it fair.'), ('Q5', 'Plan the doubles program. What should it say, and why not exactly?')],
+put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '59–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'The Difference Game: fill the table (two rows are done for you), find each player’s chance, is it fair?'), ('Q5', 'Plan the doubles program. What should it say, and why not exactly?')],
     'Finished early? Run the Python corner, or try Stretch and Challenge.', 'Children work alone. Note who needs a short catch-up next lesson. Children who finish change the Explore program (or the Python corner) to play the Difference Game 1000 times and check their answer to Q4.'))
-put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'Difference 0: 6 ways, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2.  Ali 24/36 = 2/3, Ben 12/36 = 1/3: not fair. Fair: e.g. Ali on 1, 3, 5 and Ben on 0, 2, 4 (18 each)'), ('Q5', 'Gaps 6, 6, a = b.  About 167: P(double) = 6/36 = 1/6 and 1/6 × 1000 = 166 2/3. A count is a whole number, and each run is random.')],
+put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'Difference 0: 6 ways, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2.  Ali 24/36 = 2/3, Ben 12/36 = 1/3: not fair.'), ('Q5', 'Gaps 6, 6, a = b.  About 167: P(double) = 6/36 = 1/6 and 1/6 × 1000 = 166 2/3. A count is a whole number, and each run is random.')],
     'Click after a child explains. Q4: other fair rules: Ali on 1 and 2 (10 + 8 = 18); or Ali on 0, 1 and 5 (6 + 10 + 2 = 18). Ask: "Each player had 3 differences. Why was it still unfair?" Q5: about 19 runs in 20 land between 145 and 190 doubles. Full key: ' + k['Q4'] + ' | ' + k['Q5'], 32))
 
 # ---------- 22 stretch ----------

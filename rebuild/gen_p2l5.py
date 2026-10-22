@@ -73,7 +73,7 @@ put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each on
 # 4 explore1
 pic=machine([('?','q'),('× 2','op'),('+ 6','op'),('20','res')],back='go back to find the start',w=1300)
 put(f'{P}-explore1',explore1(f'{P}-explore1',['Pick one × card and one + or − card. Put them in a row: that is your machine.','Secretly choose a start number. Run it through both cards. Say only the OUT.','Your partner works backwards to find your start number. Check it together.','Swap the order of the two cards. Same start number. Is the OUT the same?'],pic,
- 'Minutes 8 to 14. Pairs build a two-step machine from the cards (one × card from × 2, × 3, × 4, × 5, × 10, and one + or − card). Partner A chooses a start number (keep it from 1 to 10) and says only the OUT. Partner B works backwards, then they check by going forwards. Then they swap the order of the cards and run the SAME start number. '
+ 'Minutes 8 to 14. Pairs build a two-step machine from the cards (one × card from × 2, × 3, × 4, × 5, × 10, and one + or − card). Partner A chooses a start number (keep it from 1 to 10) and says only the OUT. Partner B works backwards, then they check by going forwards. Partners swap roles every round, so each child both chooses the secret number and works backwards (never one child always being the solver). Then they swap the order of the cards and run the SAME start number. '
  'Online: the tutor runs the machine on the slide and children work back on whiteboards; then pairs in breakout rooms make their own. Prediction first: "× 2 then + 6, start 4. Then + 6 then × 2, start 4. Same OUT?" Thumbs up or down.'))
 
 # 5 explore2
@@ -125,16 +125,16 @@ body+=trow(128,390,['Guess','Make IN 1 give 7','Test IN 4: is it 13?'],W3,None,T
 gs=[['× 2, then + 5','1 × 2 + 5 = 7','4 × 2 + 5 = 13  yes'],['× 3, then + 4','1 × 3 + 4 = 7','4 × 3 + 4 = 16  not this one'],['× 4, then + 3','1 × 4 + 3 = 7','4 × 4 + 3 = 19  not this one']]
 for i,r in enumerate(gs): body+=trow(128,475+i*85,r,W3,'rise',size=32)
 body+=pin(128,750,1664,p('Only  × 2, then + 5  works for BOTH pairs. Always test a second pair!',36,700),'fade',SOFT,20,'18px 28px')
-put(f'{P}-teachrule',sec(f'{P}-teachrule','36–38 MIN',body,'Teach before worksheet page 1 (Q2b asks for a rule like this). Think-aloud: "I guess the × part first. If it is × 2, then IN 1 makes 2, and I need + 5 to reach 7. Now I test it on the other pair: 4 × 2 = 8, 8 + 5 = 13. Yes!" Then show that × 3 and × 4 also give 7 for IN 1 but fail the test. '
+put(f'{P}-teachrule',sec(f'{P}-teachrule','36–38 MIN',body,'Teach before worksheet page 1 (Think harder 1 asks for a rule like this). Think-aloud: "I guess the × part first. If it is × 2, then IN 1 makes 2, and I need + 5 to reach 7. Now I test it on the other pair: 4 × 2 = 8, 8 + 5 = 13. Yes!" Then show that × 3 and × 4 also give 7 for IN 1 but fail the test. '
  'Point out: with IN 1 every guess works, so the second pair is what tells them apart. Do not tell them the worksheet rule.'))
 
 # 14 ws1
-put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Mystery machines. Undo the last step first. Write the IN in the yellow box.'),('Q2','Two-step machine tables. Then find a rule: guess the × part, then test.')],'Check every answer by going forwards through the machine.','Minutes 38 to 50. Walk around. Ask "What was the last step? What is its opposite?" before giving any help. For Q2a the last two columns need going backwards. For Q2b suggest a table of guesses like the one on the last slide.'))
+put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Mystery machines. Undo the last step first. Write the IN in the yellow box.'),('Q2','Two-step machine tables: fill in the OUT or the IN.')],'Check every answer by going forwards through the machine.','Minutes 38 to 50. Walk around. Ask "What was the last step? What is its opposite?" before giving any help. For Q2a the last two columns need going backwards. For Q2b suggest a table of guesses like the one on the last slide.'))
 
 # 15 ws1ans
-put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 10    b) 16    c) 24    d) 9'),('Q2a','IN 4 → OUT 14.  IN 10 → OUT 32.  OUT 17 ← IN 5.  OUT 29 ← IN 9.'),('Q2b','× 3, then + 5.   IN 10 → OUT 35.   OUT 26 ← IN 7.')],
+put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 10    b) 16    c) 24    d) 9'),('Q2a','IN 4 → OUT 14.  IN 10 → OUT 32.  OUT 17 ← IN 5.  OUT 29 ← IN 9.'),('Q2b','× 2, then + 1:  IN 3, 5, 10, 20 → OUT 7, 11, 21, 41')],
  'Click after a pair explains. Q1: a) 27 − 7 = 20, 20 ÷ 2 = 10. b) 40 ÷ 5 = 8, 8 + 8 = 16. c) 20 − 12 = 8, 8 × 3 = 24. d) 21 + 15 = 36, 36 ÷ 4 = 9. Q2a: 4 × 3 + 2 = 14, 10 × 3 + 2 = 32; 17 − 2 = 15, 15 ÷ 3 = 5; 29 − 2 = 27, 27 ÷ 3 = 9. '
- 'Q2b: × 2 then + 7 works for IN 2 (11) but gives 17 for IN 5; × 3 then + 5 gives 11 and 20. So IN 10 gives 35, and OUT 26: 26 − 5 = 21, 21 ÷ 3 = 7.',lw=220))
+ 'Q2b: 3 × 2 + 1 = 7, 5 × 2 + 1 = 11, 10 × 2 + 1 = 21, 20 × 2 + 1 = 41. (Finding a hidden rule from a table is Think harder 1.)',lw=220))
 
 # 16 teachparts (halves)
 half=500; u5=round(half*5/14)
@@ -169,7 +169,7 @@ body+=step(3,'Mei  6 + 3 = 9,   Ravi  6 + 4 = 10.   Check:  6 + 9 + 10 = 25 ✓'
 put(f'{P}-teachthree',sec(f'{P}-teachthree','For early finishers',body,'Teach for Think Harder 4 (three children and 40 marbles), after page 2 is checked. Draw Tom’s bar first: the other two are "Tom’s bar and a bit more". Cover the yellow extras with your hand: "If nobody had the extras, there would be 25 − 3 − 4 = 18, in three equal bars." Then give the extras back. Common mistake: 25 ÷ 3 straight away (it does not even work).'))
 
 # 19 ws2
-put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Stickers: before-and-after bars. Start from what Siti has now.'),('Q4','Sweets in 3 equal bags. Use the bar: one bag first.'),('Q5','Mei’s and Ali’s machines. Does the order matter?'),('Think Harder','Finished early? Try Think Harder 4: three children and 40 marbles. Take away the extras first.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and Q4. Q6 (three children, 40 marbles) is now Think Harder 4 for early finishers; the slide before the Stretch slide teaches the method.'))
+put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Stickers: fill in the two ? bars. Start from what Siti has now.'),('Q4','Sweets in 3 equal bags. Use the bar: one bag first.'),('Q5','Mei’s and Ali’s machines. Does the order matter?'),('Think Harder','Finished early? Try Think Harder 4: three children and 40 marbles. Take away the extras first.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and Q4. Q6 (three children, 40 marbles) is now Think Harder 4 for early finishers; the slide before the Stretch slide teaches the method.'))
 
 # 20 ws2ans
 put(f'{P}-ws2ans',check_slide(f'{P}-ws2ans','69–72 MIN','Page 2: check together',[('Q3','59 stickers  (50 − 15 = 35,  35 + 24 = 59)'),('Q4','30 sweets  (one bag 6 + 4 = 10,  3 bags 30)'),('Q5','a) 18   b) 14   c) No, the order matters   d) 7')],

@@ -37,7 +37,7 @@ module.exports = {
     exploreHints: [
       'Stuck: make the groups with counters and push the leftovers to one side.',
       'Use a times-table fact: 6 × 4 = 24, so 25 in groups of 4 is 6 groups and 1 left over.',
-      'Finished early: try 49 counters. Which group sizes leave 1 over? Why?'
+      'Ready for more: try 49 counters. Which group sizes leave 1 over? Why?'
     ],
     think: [
       '“38 sweets for 5 children. I count in 5s: 5 × 7 = 35, 5 × 8 = 40, too many. So each child gets 7.”',

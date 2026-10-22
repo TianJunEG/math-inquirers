@@ -83,7 +83,7 @@ module.exports = {
     skills: 'Listing equally likely outcomes, fractions in simplest form, expected number = fraction × number of tries, judging fairness, simulating with random numbers',
     materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), two dice per pair (or the tutor’s dice program), a coin, coloured counters and a paper bag, mini whiteboards, tally sheet.',
     online: 'Children roll real dice at home; anyone without dice builds the dice program live in the shared Scratch window (pick random 1 to 6, twice) and uses that. This lesson is enrichment: probability is new to most children, so keep it playful. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Pairs play the Explore game in breakout rooms and type their tallies into the chat so the group total can be added up.',
-    warmup: 'Where on the line? Six events (roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10). Teams place each on a 0 to 1 probability line and give the fraction.',
+    warmup: 'Where on the line? Six events (roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10). Pairs place each on a 0 to 1 probability line and give the fraction. No timer.',
     explore: 'The Dice Race: roll two dice and add. Player A wins on 2, 3, 4, 10, 11 or 12; player B wins on 5, 6, 7, 8 or 9. Pairs predict, play 20 rounds, tally the wins, then add up the whole group’s results.',
     mini: 'Probability = number of ways it can happen ÷ number of equally likely outcomes, written as a fraction. Two dice give 6 × 6 = 36 equally likely outcomes (a nested loop!). A game is fair when every player has the same probability of winning. Expected number = probability × number of tries; a simulation lands close to this, but not exactly, because each run is random.',
     share: 'Mei flipped a coin 10 times and got 7 heads. She says the coin is unfair. Do you agree? How could you test it?',
@@ -93,15 +93,15 @@ module.exports = {
     key: [
       ['Q1', '(a) 3/8  (b) 6/8 = 3/4  (c) about 375 (3/8 × 1000)  (d) No. Each spin is random, so the count wobbles around 375; 362 is close. About 19 runs in 20 land between 345 and 405.'],
       ['Q2', '(a) about 500 (1/2 × 1000)  (b) No. The flips are random, so each run gives a slightly different count near 500. Exactly 500 happens only about 1 run in 40.  (c) about 200 (1/5 × 1000)'],
-      ['Q3', '(a) 4/10 = 2/5  (b) 2 red (6 red, 6 blue: 6/12 = 1/2)  (c) 10 blue (4 red out of 20: 4/20 = 1/5)'],
-      ['Q4', '(a) Differences: 0 appears 6 times, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2 (36 in all).  (b) Ali 24/36 = 2/3, Ben 12/36 = 1/3  (c) Not fair: Ali is twice as likely to win, even though each has 3 differences.  (d) Any split with 18 outcomes each, e.g. Ali on 1, 3, 5 (odd) and Ben on 0, 2, 4 (even); or Ali on 1, 2 and Ben on 0, 3, 4, 5; or Ali on 0, 1, 5 and Ben on 2, 3, 4.'],
+      ['Q3', '(a) 4/10 = 2/5  (b) 2 red (6 red, 6 blue: 6/12 = 1/2)  (the “add blue to make 1/5” part is now in Think harder 5)'],
+      ['Q4', '(a) Differences: 0 appears 6 times, 1: 10, 2: 8, 3: 6, 4: 4, 5: 2 (36 in all).  (b) Ali 24/36 = 2/3, Ben 12/36 = 1/3  (c) Not fair: Ali is twice as likely to win, even though each has 3 differences.  (Making it fair is now in Think harder 5.)'],
       ['Q5', 'Gaps: 6, 6, a = b.  (a) About 167: P(double) = 6/36 = 1/6, and 1/6 × 1000 = 166 2/3.  (b) A count must be a whole number, and each run is random, so it lands near 167 (about 19 runs in 20 between 145 and 190), not exactly on it.']
     ]
   },
 
   script: {
     hook: ['Welcome, inquirers! Today we play games and then ask the big question: is this game fair? Our feelings are not enough. We will count outcomes with fractions, and then make the computer play a game a thousand times to test our maths.'],
-    warmIntro: ['Here is a line from 0 to 1. 0 means impossible, 1 means certain, 1/2 means an even chance.', 'For each card, decide where it goes on the line and give its fraction. Teams, you have 20 seconds per card.'],
+    warmIntro: ['Here is a line from 0 to 1. 0 means impossible, 1 means certain, 1/2 means an even chance.', 'For each card, decide where it goes on the line and give its fraction. Take as long as you need, and point to the line first. There is no timer.'],
     predict: ['In the Dice Race, player A wins on six totals: 2, 3, 4, 10, 11, 12. Player B wins on only five: 5, 6, 7, 8, 9. Who do you think will win more often? Write A, B or “same”, and a reason.'],
     exploreHints: ['Keep a tally: one column for A, one for B. Write the total each time.', 'Surprised by your results? Write down which totals came up most.', 'Finished early: in how many ways can two dice make a total of 7? Of 2? Use a red die and a blue die so 1 + 6 and 6 + 1 are different.'],
     think: ['“Roll one dice. More than 4 means 5 or 6: that is 2 ways out of 6 equally likely outcomes. So the probability is 2/6, which is 1/3.”', '“Two dice. The red die has 6 outcomes and for each one the blue die has 6, so 6 × 6 = 36, just like last lesson’s nested loop. A total of 7 happens 6 times: 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1. So P(7) = 6/36 = 1/6. A total of 2 happens once: 1/36.”', '“In 1000 games I expect B to win about 2/3 × 1000, which is 666 2/3. A count cannot be 666 2/3, and every run is random, so the program will say something close, like 670 or 649, but almost never exactly 667.”'],
@@ -114,7 +114,7 @@ module.exports = {
 
   deck: {
     today: 'Measure chance with fractions, decide if a game is fair, and test it by running the game 1000 times in code.',
-    warmGame: 'Where on the line? Teams place six events on a 0 to 1 probability line and give each one’s fraction: roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10.',
+    warmGame: 'Where on the line? Pairs place six events on a 0 to 1 probability line and give each one’s fraction: roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10.',
     warmQs: [['Simplify 6/36', '1/6'], ['1/6 of 600', '100'], ['2/5 of 1000', '400'], ['Which is bigger: 5/12 or 4/9?', '4/9 (16/36 is more than 15/36)'], ['1 − 3/10', '7/10']],
     expSetup: ['Roll two dice and add. A wins on 2, 3, 4, 10, 11 or 12. B wins on 5, 6, 7, 8 or 9.', 'Predict: who will win more often? A has 6 totals, B has only 5.', 'Play 20 rounds with your partner. Tally the wins.', 'Add up the whole group’s results. What do you notice?'],
     expPic: 'two dice showing 3 and 5, an A box with the totals 2, 3, 4, 10, 11, 12 and a B box with the totals 5, 6, 7, 8, 9, next to a tally chart.',
@@ -128,6 +128,10 @@ module.exports = {
     ws1: 'Page 1, in pairs: Q1 the spinner, Q2 predict the coin program, Q3 change the bag.',
     ws2: 'Page 2, on your own: Q4 the Difference Game (and the Python corner), Q5 plan the doubles program.'
   },
+
+  moved: [
+    { q: '(a) A bag has 4 red and 6 blue counters. How many blue counters must be added so that P(red) = 1/5? (b) In the Difference Game (Ali wins on 0, 1, 2; Ben on 3, 4, 5), change who wins on which differences so that the game is fair.', a: '(a) 10 blue (4 red out of 20: 4/20 = 1/5).  (b) Any split with 18 outcomes each, e.g. Ali on 1, 3, 5 (odd) and Ben on 0, 2, 4 (even); or Ali on 1, 2 and Ben on 0, 3, 4, 5; or Ali on 0, 1, 5 and Ben on 2, 3, 4.' }
+  ],
 
   qbank: {
     core: [
@@ -167,23 +171,21 @@ module.exports = {
     const blank = w => '<span style="display:inline-block;width:' + w + 'px;border-bottom:2px dotted #8A94AD"></span>';
     const dw = [1500, 1400, 1400, 1400, 1400, 1400, 1400];
     const diff = H.tbl(dw, [H.row(['Difference', '1', '2', '3', '4', '5', '6'].map((s, i) => H.cell(s, dw[i], { bold: true, fill: 'D9D9D9', h: 34 }))),
-      ...[1, 2, 3, 4, 5, 6].map(r => H.row([H.cell(String(r), dw[0], { bold: true, fill: 'D9D9D9', h: 34 }), ...[1, 2, 3, 4, 5, 6].map(c => H.cell(r === 1 || r === c ? String(Math.abs(r - c)) : '', dw[c], { h: 34 }))]))]);
+      ...[1, 2, 3, 4, 5, 6].map(r => H.row([H.cell(String(r), dw[0], { bold: true, fill: 'D9D9D9', h: 34 }), ...[1, 2, 3, 4, 5, 6].map(c => H.cell(r <= 2 || r === c ? String(Math.abs(r - c)) : '', dw[c], { h: 34 }))]))]);
     const py = pyBox(['import random', 'a_wins = 0', 'b_wins = 0', 'for game in range(1000):', '    d1 = random.randint(1, 6)', '    d2 = random.randint(1, 6)', '    if 5 <= d1 + d2 <= 9:', '        b_wins = b_wins + 1', '    else:', '        a_wins = a_wins + 1', 'print(a_wins, b_wins)'], 'Python corner (optional): the Explore|game. Change it to test Q4.', 320);
     return [
       H.q(1, 'Ben’s spinner has 8 equal parts: 3 red (R), 2 blue (B), 2 yellow (Y) and 1 green (G). Write each probability as a fraction in its simplest form.', { before: 20, keepNext: true }),
-      H.tbl([3000, 6900], [H.row([H.cell('<div>' + spinner() + '</div>', 3000, { h: 20 }), H.cell(tx(L('(a)') + 'P(red) = ' + blank(70) + '      ' + L('(b)') + 'P(not yellow) = ' + blank(70) + '<br>' + L('(c)') + 'Ben makes the spinner in code and spins it 1000 times. About how many reds do you expect? ' + blank(70) + '<br>' + L('(d)') + 'His program says 362 reds. Ben says, “My program is wrong!” Do you agree? Explain.<br>' + blank(430) + '<br>' + blank(430)), 6900, { h: 30 })])]),
+      H.tbl([3000, 6900], [H.row([H.cell('<div>' + spinner() + '</div>', 3000, { h: 20 }), H.cell(tx(L('(a)') + 'P(red) = ' + blank(70) + '      ' + L('(b)') + 'P(not yellow) = ' + blank(70) + '<br>' + L('(c)') + 'Ben makes the spinner in code and spins it 1000 times. About how many reds do you expect? ' + blank(70) + '<br>' + L('(d)') + 'His program says 362 reds. Ben says, “My program is wrong!” Do you agree? Explain. (Hint: a random result is close to the expected number, not exactly on it.)<br>' + blank(430) + '<br>' + blank(430)), 6900, { h: 30 })])]),
       H.q(2, 'Predict what this code does. “pick random 1 to 2” gives 1 or 2, each with probability 1/2.', { keepNext: true }),
       H.tbl([4900, 5000], [H.row([H.cell('<div style="text-align:left">' + blocks(coinCode, 'Code: set heads to 0, repeat 1000 times: if pick random 1 to 2 equals 1 then change heads by 1; then say heads', 14) + '</div>', 4900, { h: 40 }), H.cell(tx(L('(a)') + 'About what number will it say? ' + blank(70) + '<br>' + L('(b)') + 'Mei runs it 3 times and gets 513, 489 and 502. Is her code broken? Explain.<br>' + blank(330) + '<br>' + L('(c)') + 'If “pick random 1 to 2” is changed to “pick random 1 to 5”, about what will it say? ' + blank(70)), 5000, { h: 30 })])]),
       H.q(3, 'A bag has 4 red and 6 blue counters. You pick one without looking.', { keepNext: true }),
       H.sub('a', 'What is the probability of picking red?   ________'),
       H.sub('b', 'How many red counters must be added so that P(red) = 1/2?   ________'),
-      H.sub('c', 'Start again with 4 red and 6 blue. How many blue counters must be added so that P(red) = 1/5?   ________'),
 
       H.q(4, 'The Difference Game. Roll two dice. The difference is the bigger number minus the smaller (0 if they are the same). Ali wins on 0, 1 or 2. Ben wins on 3, 4 or 5.', { pb: true, before: 0, keepNext: true }),
       H.tbl([5200, 4700], [H.row([H.cell('<div>' + diff + '</div>', 5200, { h: 20 }), H.cell('<div>' + py + '</div>', 4700, { h: 20 })])]),
       H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
       H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
-      H.sub('d', 'Change who wins on which differences so that the game is fair.', { keepNext: true }), ...H.lines(1),
       H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
       H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
         H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])

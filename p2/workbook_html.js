@@ -30,7 +30,7 @@ const extra = (n) => {
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 90, after: 30, keepNext: true })); out.push(...lines(3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 90, after: 30, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));

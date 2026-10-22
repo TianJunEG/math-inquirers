@@ -59,7 +59,7 @@ module.exports = {
     exploreHints: [
       'Stuck: write the table down the side of your page first, then circle the last digit of each answer.',
       'Confused: "Look only at the ones digit. 6 × 3 = 18, so we join to the 8."',
-      'Finished early: try the 7s. How many dots does it touch? Try the 3s and compare.'
+      'Ready for more: try the 7s. How many dots does it touch? Try the 3s and compare.'
     ],
     think: [
       '"Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then 8, 6, 4, 2, 0 again. So the pattern repeats every 5."',

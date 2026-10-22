@@ -150,7 +150,7 @@ put('p2l8-title',title_slide('p2l8-title','P2  •  LESSON 8  •  WEEK 4','Shap
  'Build shapes from semicircles and quarter circles, count every hidden square, triangle and cube, and find which nets fold into a cube.',
  'Objective: Name and describe semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube and find opposite faces. '
  'Materials: paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook, cut out before the lesson), mini whiteboards. '
- 'Online: children cut paper circles and build stacks on camera; the tutor shows the stacks and nets on the slides; a cereal box cut open shows a net. '
+ 'Online: children cut paper circles and build stacks on camera; the tutor shows the stacks and nets on the slides; a cereal box cut open shows a net. No linking cubes at home? Use sugar cubes, dice or small boxes, or draw each stack layer by layer. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90.'))
 
 # 2. warm1: name the solid
@@ -362,7 +362,7 @@ body+=stepx(2,'Keep folding. The square at the top end folds over to be the lid.
 body+=ansx(600,560,1192,'6 different faces, nothing left open: it folds into a cube ✓',size=34)
 body+=pin(128,690,1664,f'<div style="display:flex;align-items:center;gap:36px">{ub}<p style="font-size:32px;font-weight:700;line-height:1.3">Not a cube net: the 2 bottom squares both fold onto the same face, and there is no lid.</p></div>','fade',SOFT,20,'14px 28px')
 put('p2l8-teachnet',sec('p2l8-teachnet','55–56 MIN',body,
- 'Teach before worksheet page 2 (Q4 asks which nets fold into a cube; the children cut out and fold nets A to F). Have a printed copy of this net cut out, or open up a small box. Click 1 and 2: fold it in front of the children. Think-aloud: "I choose a bottom. The squares touching it fold up as walls. The row of 4 wraps round: bottom, wall, top, wall. The two loose squares close the ends. Every square lands on a different face, so it is a cube." '
+ 'Teach before worksheet page 2 (Q4 asks which nets fold into a cube; the children cut out and fold nets A to D with the tutor on camera for net A; nets E and F are Think harder 3). Have a printed copy of this net cut out, or open up a small box. Click 1 and 2: fold it in front of the children. Think-aloud: "I choose a bottom. The squares touching it fold up as walls. The row of 4 wraps round: bottom, wall, top, wall. The two loose squares close the ends. Every square lands on a different face, so it is a cube." '
  'Click 4: the shape with two squares under the ends: "When I fold, both of these land on the same face. One face gets two squares, and one face gets none. Not a cube." '
  'Tip for the worksheet: squares that land on the same place, or a row of 5 or more squares, or a 2 by 2 block of squares mean it is not a cube net.'))
 
@@ -382,12 +382,12 @@ put('p2l8-trynet',sec('p2l8-trynet','56–57 MIN',body,
  'c) E: C, D and E are in a straight line, so when D is the bottom, C and E are the two walls facing each other. Also A is opposite D, and B is opposite F. This is the same idea that solves the dice challenge on the Think Harder page.'))
 
 # 20-21. worksheet page 2
-put('p2l8-ws2',preview_x('p2l8-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Count the cubes, layer by layer. Remember the hidden ones.'),('Q4','Cut out nets A to F and try folding them. Circle the ones that make a cube. Then add one square to make a net.')],'Finished early? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. Q4 uses the cut-out nets A to F from the kit page at the back of the workbook: children should have them cut out before the lesson (if not, give 2 minutes to cut). They decide first, then fold to check.'))
-put('p2l8-ws2ans',check_x('p2l8-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) A 5   B 8   C 14 (9 + 4 + 1)    b) 13 more (27 − 14)'),('Q4','a) A, C and E    b) under any one of the 4 squares in the row')],
+put('p2l8-ws2',preview_x('p2l8-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Count the cubes, layer by layer. Remember the hidden ones.'),('Q4','Cut out nets A to D (fold A with your tutor first). Circle the ones that make a cube. Then add one square to make a net.')],'Finished early? Stretch and Challenge come next.',
+ 'Children work alone. Note who needs a short catch-up next lesson. Q4 uses the cut-out nets A to D from the kit page (E and F are Think harder 3) at the back of the workbook: children should have them cut out before the lesson (if not, give 2 minutes to cut). They decide first, then fold to check.'))
+put('p2l8-ws2ans',check_x('p2l8-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) A 5   B 8   C 14 (9 + 4 + 1)    b) 13 more (27 − 14)'),('Q4','a) A and C    b) under any one of the 4 squares in the row')],
  'Click each answer after a child explains. Q3 B: one cube is completely hidden at the back, bottom, left. C: count layers: 9 + 4 + 1 = 14. b) a 3 by 3 by 3 cube has 3 layers of 9: 27; 27 − 14 = 13. '
- 'Q4a: B (2 by 3) has a 2 by 2 block; D has two squares that land on the same face; F has a row of 5, which wraps round onto itself. Q4b: the extra square must go under the row (any of the 4 places), so the two loose squares become the top and the bottom. Above the row, or at the ends, it does not work. '
- 'The dice net (opposite faces add up to 7) is on the Think Harder page for strong thinkers: in a straight row, the 1st and 3rd squares are opposite, and so are the 2nd and 4th.',lw=180,gap=170,size=34))
+ 'Q4a: B (2 by 3) has a 2 by 2 block; D has two squares that land on the same face. (Think harder 3: E folds into a cube; F has a row of 5, which wraps round onto itself.) Q4b: the extra square must go under the row (any of the 4 places), so the two loose squares become the top and the bottom. Above the row, or at the ends, it does not work. '
+ 'The dice net (opposite faces add up to 7) is on the Go further page: in a straight row, the 1st and 3rd squares are opposite, and so are the 2nd and 4th.',lw=180,gap=170,size=34))
 
 # 22. stretch
 st=[('1.','How many rectangles can you find in a row of 4 squares joined side by side? (A square is a rectangle too. Count all sizes.)'),('2.','A stack is 3 cubes long, 3 cubes wide and 2 cubes high. How many cubes?'),('3.','How many triangles are in a triangle with 3 lines from the top corner to the bottom?')]

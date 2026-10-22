@@ -30,7 +30,7 @@ module.exports = {
     hook: ['A tailor, a baker, a pharmacist and a bus captain all measure things every day: metres and centimetres, kilograms and grams, litres and millilitres, dollars and cents, hours and minutes. Today we become Measure and Money Masters. Our two tricks: change to one unit, and draw a time line.'],
     warmIntro: ['I will name an object and a number. You write the best unit on your whiteboard: m, cm, km, g, kg, ml or ℓ. Ready? A bus is 12 what long? Hold up! Now tell your partner why it is not 12 cm or 12 km.'],
     predict: ['Look at the menu card. Before you add anything: do you think you can buy pizza, wings and cupcakes with $20? Show thumbs up or down, then we will check.'],
-    exploreHints: ['Stuck on the punch: “How many millilitres do 8 friends drink? How many ml is 2 ℓ?”', 'Adding prices: “Change each price to cents, or add the dollars first and then the cents.”', 'Over $20: “Which item could you swap for a cheaper one?”', 'Finished early: “Can you spend EXACTLY $20? Look at the cents: which prices end in 5?”'],
+    exploreHints: ['Stuck on the punch: “How many millilitres do 8 friends drink? How many ml is 2 ℓ?”', 'Adding prices: “Change each price to cents, or add the dollars first and then the cents.”', 'Over $20: “Which item could you swap for a cheaper one?”', 'Ready for more: “Can you spend EXACTLY $20? Look at the cents: which prices end in 5?”'],
     think: [
       '“2 m 35 cm. 1 m is 100 cm, so 2 m is 200 cm. 200 and 35 more is 235 cm. Careful with 2 m 5 cm: that is 200 and 5, so 205 cm, not 25.”',
       '“The flour bag has 2 kg 100 g. I change it to grams: 2100 g. Mum uses 850 g. 2100 − 850 = 1250 g. Now I change back: 1000 g is 1 kg, so 1 kg 250 g. I check: 1250 + 850 = 2100.”',

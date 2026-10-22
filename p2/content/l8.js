@@ -71,13 +71,13 @@ const q4svg = () => {
 };
 // Q4: six nets; Q4b: a shape of 5 squares on a dotted grid
 const NETS = [['A', ['.#..', '####', '.#..']], ['B', ['###', '###']], ['C', ['#...', '####', '...#']], ['D', ['.##.', '####']], ['E', ['##..', '.##.', '..##']], ['F', ['#....', '#####']]];
-const q5svg = () => {
+const q5svg = (from = 0, to = 4) => {
   const c = 26; let s = '';
-  NETS.forEach(([l, rows], i) => {
-    const x = 30 + (i % 3) * 196, y = 12 + Math.floor(i / 3) * 104;
+  NETS.slice(from, to).forEach(([l, rows], i) => {
+    const x = 10 + i * (to - from === 4 ? 148 : 196), y = 12;
     s += text(x, y + 22, l, 20, N, 'start') + net(rows, x + 24, y + 6, c);
   });
-  return svg(600, 206, s, 'Six shapes made of 6 squares, labelled A to F', 470);
+  return svg(600, 110, s, (to - from) + ' shapes made of 6 squares, labelled ' + NETS[from][0] + ' to ' + NETS[to - 1][0], 470);
 };
 const q5bsvg = () => {
   const c = 30, x0 = 195, y0 = 6; let s = '';
@@ -93,7 +93,7 @@ module.exports = {
     objective: 'Name semicircles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube.',
     skills: 'Spatial reasoning, systematic counting, folding in your head, explaining',
     materials: 'Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook), mini whiteboards.',
-    online: 'Children cut circles and build stacks on camera; the six nets A to F are on a cut-out page near the back of the workbook (print and cut them before the lesson), or cut a net from an empty box.',
+    online: 'Children cut circles and build stacks on camera; the six nets A to F are on a cut-out page near the back of the workbook (print and cut them before the lesson), or cut a net from an empty box. No linking cubes at home? Use sugar cubes, dice or small boxes, or draw each stack layer by layer.',
     warmup: 'Name the solid: a dice, a tissue box, a tin can, a party hat, a drum and a traffic cone. Children make the solid with their hands, then name it (cube, cuboid, cylinder, cone).',
     explore: 'Cut one paper circle into 2 semicircles and another into 4 quarter circles. Make new shapes with the pieces and find different ways to make a whole circle.',
     mini: 'A semicircle has 1 straight side and 1 curved side; a quarter circle has 2 straight sides meeting at a square corner and 1 curved side. Count the pieces in a picture one kind at a time; count every square by size (slide a window); count triangles by the line they sit on. Before page 2: count cubes layer by layer (cubes do not float, so hidden cubes hold up the top ones); cut out nets A to F and fold them (each square must land on a new face; squares in a line with one square between them are opposite). Nets are not in the P1 to P3 syllabus, so they are taught with real paper nets.',
@@ -109,7 +109,7 @@ module.exports = {
       ['Q1', 'Square 2, triangle 3, semicircle 4, quarter circle 2. (a) semicircles (b) 11 pieces (c) 3 circles: 3 semicircles are 6 quarter circles, 6 + 6 = 12 quarter circles, and 4 quarter circles make a circle.'],
       ['Q2', '(a) 1 by 1: 16, 2 by 2: 9, 3 by 3: 4, 4 by 4: 1; 30 squares  (b) 6 on the bottom line + 6 on the line across = 12 triangles'],
       ['Q3', '(a) A 5, B 8, C 14 (9 + 4 + 1)  (b) 13 more cubes (27 − 14)'],
-      ['Q4', '(a) A, C and E fold into a cube (children cut out and fold to check)  (b) the new square goes under any one of the 4 squares in the row (4 possible places)']
+      ['Q4', '(a) A and C fold into a cube; B and D do not (children cut out and fold to check). Nets E and F are Think harder 3: E folds, F does not  (b) the new square goes under any one of the 4 squares in the row (4 possible places)']
     ]
   },
 
@@ -159,7 +159,7 @@ module.exports = {
     stretch: [
       { q: 'A stack of cubes has a bottom layer 4 cubes long and 3 cubes deep, a middle layer 3 cubes long and 2 cubes deep, and 1 cube on top. How many cubes are in the stack? Draw the layers.', a: '19 (12 + 6 + 1)' },
       { q: 'How many squares are in a grid 3 squares long and 2 squares high?', a: '8 (6 small + 2 made of 4 small ones)' },
-      { q: 'A stack has 2 layers. Each layer is 3 cubes long and 2 cubes wide. How many cubes?', a: '12' },
+      { q: 'Cut out nets E and F from the cut-out page and try folding them. Which one folds up into a cube? How do you know?', a: 'E folds into a cube (it is a staircase of squares, one of the 11 cube nets). F does not: the row of 5 squares wraps round and the 1st and 5th squares land on the same face.', fig: q5svg(4, 6) },
       { q: 'Six squares are joined in a straight line. Can they fold into a cube? Explain.', a: 'No. When you fold the line round, the 5th square lands on the same face as the 1st and the 6th on the 2nd, and the two ends are left open.' },
       { q: 'A shape is made of a square with a semicircle on each of its 4 sides, curved sides outward. How many straight sides does its outside edge have? How many curved sides?', a: 'No straight sides and 4 curved sides.' },
       { q: 'How many rectangles can you find in a row of 3 squares joined side by side? (A square is a rectangle too. Count all sizes.)', a: '6 (3 of length 1, 2 of length 2, 1 of length 3)' },
@@ -188,17 +188,17 @@ module.exports = {
     out.push(H.sub('a', 'Which kind is there the most of?  __________' + sp(4) + 'b' + sp(2) + 'Pieces altogether?  _____'));
     out.push(H.sub('c', 'Mei has 3 semicircles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.', { after: 20 }));
     out.push(...H.lines(1));
-    out.push(H.q(2, 'Count every shape. Work in order.', { keepNext: true }));
+    out.push(H.q(2, 'Count every shape. Work in order. In (a), colour each 2 by 2 square you find a different colour.', { keepNext: true }));
     out.push(H.fig(q3svg()));
-    const ws = [1700, 1700, 1700, 1700, 3100];
-    out.push(H.tbl(ws, [H.row(['a   1 by 1', '2 by 2', '3 by 3', '4 by 4', 'Squares altogether'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED' }))), H.row(ws.map(w => H.cell('', w, { h: 120 })))]));
+    const ws = [6200, 3700];
+    out.push(H.tbl(ws, [H.row(['a   How many squares?', 'Number'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED', h: 15 }))), ...['1 by 1 squares', '2 by 2 squares', '3 by 3 squares', '4 by 4 squares', 'Squares altogether'].map(t => H.row([H.cell(t, ws[0], { h: 15, bold: t.startsWith('Squares') }), H.cell('', ws[1], { h: 15 })]))]));
     out.push(H.sub('b', 'Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____'));
 
-    out.push(H.q(3, 'Count the cubes. Every cube is on the table or sits on top of another cube. Stack A is only 1 cube deep.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(3, 'Count the cubes. Build stack A with your cubes first, then count. Every cube is on the table or sits on top of another cube. Stack A is only 1 cube deep.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.sub('a', 'A:  ______ cubes' + sp(12) + 'B:  ______ cubes' + sp(12) + 'C:  ______ cubes'));
     out.push(H.sub('b', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
-    out.push(H.q(4, 'Cut out nets A to F from the cut-out page and try folding each one. Then circle the letters of the nets that fold up into a cube.', { keepNext: true }));
+    out.push(H.q(4, 'Cut out nets A to D from the cut-out page. Fold net A with your tutor on camera first, then fold B, C and D. Circle the letters of the nets that fold up into a cube.', { keepNext: true }));
     out.push(H.fig(q5svg()));
     out.push(H.sub('b', 'Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.', { keepNext: true }));
     out.push(H.fig(q5bsvg()));

@@ -200,7 +200,7 @@ body+=step(2,'Both get the same, so the difference stays the same: $18.',top=805
 put('p3l4-teachsame',sec('p3l4-teachsame','58–60 MIN',body,'Teach the second heuristic: BEFORE AND AFTER, look for what stays the same. Before worksheet Q6. Ask: "When both girls get $5, what happens to the gap between them?" Show with two cube towers, add 2 cubes to each: the gap does not change. Then click the model. Check aloud: Siti $12 + $5 = $17, Mei $30 + $5 = $35, and $35 − $17 = $18, the same gap as before. Compare with Q5: when one gives to the other, the TOTAL stays the same; when both get the same, the DIFFERENCE stays the same.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','Give to make equal. Is Ravi right?'),('Q6','Grandma gives both boys $10. What stays the same?')],'Finished early? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes. Note who needs a short catch-up next lesson.'))
+put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','Give to make equal. Is Ravi right?'),('Q6','Grandma gives both boys $10. What stays the same?')],'Ready for more? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes. Note who needs a short catch-up next lesson.'))
 put('p3l4-ws2ans',check_rows('p3l4-ws2ans','67–69 MIN','Page 2: check together',[
  ('Q4','Ben 63, Ali 87   (150 − 24 = 126, 126 ÷ 2 = 63)'),
  ('Q5a','19 stickers: both then have 66'),

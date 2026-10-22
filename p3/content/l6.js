@@ -109,7 +109,7 @@ module.exports = {
     exploreHints: [
       'Stuck: fold the strip in half, then in half again, then again. How many parts now?',
       'For thirds: roll the strip into an S shape until the three parts are the same, or mark every 8 cm.',
-      'Finished early: find three different pieces that together cover exactly one half.'
+      'Ready for more: find three different pieces that together cover exactly one half.'
     ],
     think: [
       '“1/3 on the wall lines up with 2 sixths and with 4 twelfths. Same amount, different pieces: 1/3 = 2/6 = 4/12.”',

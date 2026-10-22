@@ -72,7 +72,7 @@ module.exports = {
     hook: ['Welcome to Challenge Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
     warmIntro: ['Relay chain: I ask the first question. The answer is the start of the next question, so listen carefully and pass it on. If someone is stuck, the group can help with a hint, not the answer.'],
     predict: ['Look at the two stations. Which one do you think will be harder? Write your guess, and we will see at the end.'],
-    exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'List station: “Start with the smallest digit in the hundreds place. How many numbers does each digit give?”', 'Measure station: “Draw the three pieces. What if all three were the same? What is extra?”', 'Finished early: make a puzzle card for the next pair.'],
+    exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'List station: “Start with the smallest digit in the hundreds place. How many numbers does each digit give?”', 'Measure station: “Draw the three pieces. What if all three were the same? What is extra?”', 'Ready for more: make a puzzle card for the next pair.'],
     think: [
       '“Siti is 4th from the front and 6th from the back. I draw the queue: 3 people in front of Siti, Siti, then 5 people behind her. 3 + 1 + 5 = 9. If I add 4 + 6 I count Siti twice, so I take 1 away: 10 − 1 = 9.”',
       '“A logic grid: Ben does not like curry puff or popiah, so I put two crosses in Ben’s row. Only kaya toast is left, so a tick. A tick means crosses in the rest of that column, so nobody else has kaya toast.”',

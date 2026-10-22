@@ -87,7 +87,7 @@ module.exports = {
     exploreHints: [
       'Stuck: “Put small digits in the hundreds of the two numbers you add. Try 1 and 2.”',
       'Close but a digit repeats: “Swap two cards in the ones column and add again.”',
-      'Finished early: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
+      'Ready for more: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
     ],
     think: [
       '“4A68 + 17B5 = C043. I start at the ones: 8 + 5 = 13. I write 3 and carry 1.”',

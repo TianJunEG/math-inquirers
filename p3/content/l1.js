@@ -35,9 +35,9 @@ module.exports = {
     ],
     extension: 'With the cards 1, 2, 3, 4, how many 4-digit numbers can you make? How many of them are odd? (24 numbers; 12 are odd, because 6 end in 1 and 6 end in 3.)',
     key: [
-      ['Q1', '(a) 7530  (b) 3057  (c) 7503  (d) 5037  (e) 5037 is only 37 more than 5000. The closest number below 5000 is 3750, which is 1250 less.'],
+      ['Q1', '(a) 7530  (b) 3057  (c) 7503  (d) 5037  (e) It is only 37 away from 5000. The closest number below 5000 is 3750, which is 1250 away.'],
       ['Q2', 'Starting with 2: 2055, 2505, 2550. Starting with 5: 5025, 5052, 5205, 5250, 5502, 5520.  (a) 9 numbers  (b) 4 (5205, 5250, 5502, 5520)'],
-      ['Q3', '(a) 9550, 9450 (take away 100)  (b) 4567, 5678 (add 1111)  (c) 1015, 1021 (add 1, 2, 3, 4, then 5, then 6)  (d) 5250'],
+      ['Q3', '(a) 9550, 9450 (take away 100)  (b) 4567, 5678 (add 1111)  (c) 1015, 1021 (add 1, 2, 3, 4, then 5, then 6)  (d) Yes, 5000 is in the pattern (3000 + 8 jumps of 250). The number right after it is 5250'],
       ['Q4', '(a) 5527  (b) 13 hundreds  (c) No. 23 tens is 230, so the number is 6000 + 230 = 6230.'],
       ['Q5', '(a) 6903 (thousands 6, ones 3, hundreds 6 + 0 + 3 = 9, so the tens digit must be 0)  (b) Greatest 3201, smallest 1023. The only four different digits that add up to 6 are 0, 1, 2, 3, and an odd number ends in 1 or 3.'],
       ['Q6', '10 numbers. Starting with 3: 3000. Starting with 2: 2100, 2010, 2001. Starting with 1: 1200, 1110, 1101, 1020, 1011, 1002.  (b) 1, 3 and 6 numbers: the counts go up by 2, then by 3.']
@@ -51,7 +51,7 @@ module.exports = {
     exploreHints: [
       'Stuck: “Which card must go in the thousands place if the number is between 4000 and 6000?”',
       'Missing some: “Keep the 4 in front. Now change the hundreds digit in order: 2, then 6, then 8.”',
-      'Finished early: “How many numbers can you make altogether with the four cards?” (24: six start with each card.)'
+      'Ready for more: the Go further what-if on the slide (cards 2, 4, 5, 8: 12 numbers between 4000 and 6000). Or: “How many numbers can you make altogether with the four cards?” (24: six start with each card.)'
     ],
     think: [
       '“Greatest number from 4, 0, 8, 1. The thousands place is worth the most, so the biggest digit goes there: 8. Then 4, then 1, then 0: 8410.”',
@@ -127,7 +127,7 @@ module.exports = {
     H.sub('b', 'The smallest number:   ______________'),
     H.sub('c', 'The greatest ODD number:   ______________'),
     H.sub('d', 'The number closest to 5000:   ______________'),
-    H.sub('e', 'Why is (d) the closest?   ______________________________'),
+    H.sub('e', 'Why is (d) the closest?   It is only ________ away from 5000.'),
     H.q(2, 'Make a list in order. Write ALL the 4-digit numbers you can make with the cards  2,  0,  5,  5.  Start with the smallest.', { keepNext: true }),
     H.tbl([2400, 7500], [
       H.row([H.cell('Starting with 2', 2400, { bold: true, fill: 'EDEDED', h: 110 }), H.cell('', 7500)]),
@@ -140,7 +140,7 @@ module.exports = {
     H.sub('a', '9850,   9750,   9650,   ________,   ________'),
     H.sub('b', '1234,   2345,   3456,   ________,   ________'),
     H.sub('c', '1000,   1001,   1003,   1006,   1010,   ________,   ________'),
-    H.sub('d', '3000,  3250,  3500,  3750,  …   The first number greater than 5000 is   ________'),
+    H.sub('d', '3000,  3250,  3500,  3750,  …   Keep going. Will 5000 be in the pattern?  ________   Which number comes right after 5000?  ________'),
 
     H.q(4, 'Place value puzzles.', { pb: true, before: 0, keepNext: true }),
     H.p('Hint: 10 hundreds make 1 thousand. You can draw a box for each thousand, hundred, ten and one.', { after: 40 }),
