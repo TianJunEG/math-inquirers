@@ -411,6 +411,8 @@ All numbers in this section come from the same model re-run with the fixes switc
 
 **F11 Standing cushion.** Hold 2-3 minutes inside the page-2 solo block (WS-d) as an unallocated buffer. If earlier parts overrun, the tutor spends the buffer first, then the choice questions at the end of page 2, and never the checks, exit ticket or Looking back. In lessons where the cushion is above 4 minutes the extra is the printed choice question (L4 Q6, L5 Q6, L8 Q6, L9 Q5) or, in L6, the first Think Harder item.
 
+**F12 REC cue lines.** The recording cues are 7 to 17 s each (2.0 min per lesson). Tighten the four longest (opening 15.6 s, sneak-peek 13.3 s, explore 15.1 s, worksheet 17.3 s) to about 8 s each and keep the recording notice to one sentence: saves about 0.5 min per lesson. Not counted in the budgets above.
+
 ### Per-lesson fixes and budgets
 
 
@@ -723,11 +725,12 @@ worksheet window 41.5 min (was 46), page-2 spare after priority items 2.4 min
 
 
 
-Read the cushion line: "page-2 spare after priority items" is the budgeted WS-d window minus the priority-item time for a typical tutor; it is the standing buffer plus the choice question time, and it is positive in every lesson (2.3 to 13.4 min). The "cushion" under each table is 90 minus the typical need of all parts, i.e. how much slack remains if everything else runs to the typical figure (3.3 to 13.8 min); keep 2-3 of it as the buffer.
+Read the cushion line: "page-2 spare after priority items" is the budgeted WS-d window minus the priority-item time for a typical tutor; it is the standing buffer plus the choice question time, and it is positive in every lesson (2.4 to 13.4 min). The "cushion" under each table is 90 minus the typical need of all parts, i.e. how much slack remains if everything else runs to the typical figure (3.4 to 13.8 min); keep 2-3 of it as the buffer.
+
 
 ## 7. Standing buffer: yes
 
-Recommendation: a 2-3 minute standing buffer inside the page-2 solo block, shown on the tutor's timeline as "buffer" and nowhere else. Reasons: the model's range for the same lesson is 20 to 27 minutes (e.g. the unfixed plan: L3 spans 82.8 to 110.1), most of that difference is tutor style rather than content, and the worksheet's printed "choice questions" are already the natural place to take it from. A second guard rail: a clock check at the end of the brain break (minute 36 on the new clock); more than 1.5 min behind means skip the next optional item (second 'your turn' slide, the second ASK in WS-c), not the check or the exit ticket.
+Recommendation: a 2-3 minute standing buffer inside the page-2 solo block, shown on the tutor's timeline as "buffer" and nowhere else. Reasons: the model's range for the same lesson is 20 to 27 minutes (e.g. the unfixed plan: L3 spans 82.8 to 110.1), most of that difference is tutor style rather than content, and the worksheet's printed "choice questions" are already the natural place to take it from. A second guard rail: a clock check at the end of the brain break (minute 32 to 36 on the new clocks); more than 1.5 min behind means skip the next optional item (second 'your turn' slide, the second ASK in WS-c), not the check or the exit ticket.
 
 ## 8. Limits of this audit
 

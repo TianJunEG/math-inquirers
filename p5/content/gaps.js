@@ -72,7 +72,7 @@ const L = {
     pic: 'hund',
     whatIf: ['A $200 price goes up 50% and then down 50%. What is the price now? Then try up 20% and down 20%. What do you notice about the final price each time?', 'Up 50% then down 50%: $200 → $300 → $150. Up 20% then down 20%: $200 → $240 → $192. The final price is always LESS than $200, because the "down" percentage is taken from the bigger new price.'],
     pose: 'Make up a price that goes up by a percentage and then down by the same percentage. Predict the final price, then test it.',
-    solo: 'Q4 (a) to (c) and Q5', praise: 'Using 10% as a stepping stone got you unstuck.'
+    solo: 'Q4 (a) to (c)', praise: 'Using 10% as a stepping stone got you unstuck.'
   },
   8: {
     sneak: [

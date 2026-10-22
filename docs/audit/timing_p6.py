@@ -400,7 +400,7 @@ FX = {
     5: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, mini_drop=['try2'], ws_merge=['teachhandcode', 'teachroute'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
     6: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, mini_merge=['teachwhy'], ws_merge=['teachplan'], ws_noread=1, check_q=35, exit_lean=1),
     7: dict(sneak_lean=1, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, exp_slide_merge=1, ws_merge=['teachsum'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
-    8: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, mini_merge=['teachloop'], demo=120, ws_merge=['teachcomb'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    8: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, mini_drop=['try1'], mini_merge=['teachloop'], demo=120, ws_merge=['teachcomb'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1),
     9: dict(sneak_lean=1, warm_cut_s=50, warm_q=3, go_drop=1, exp_q=2, exp_act=6.0, demo=150, mini_merge=['change'], ws_merge=['teachif'], ws_noread=1, check_q=35, ws_move=[5], exit_lean=1, talk_lean=1),
     10: dict(sneak_lean=1, no_relay=1, show_s=135, ch_move=[1], drop_explore2=1, ws_noread=1, check_q=35, mini_drop=['try1'], starters_live=2, water=30, plan_lean=1,
              stars_chat=1, no_talk=1, exit_lean=1, cert_pdf=1),

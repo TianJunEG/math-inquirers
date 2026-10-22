@@ -33,7 +33,7 @@ const barFig = () => {
 module.exports = {
   lesson: {
     n: 7, week: 4, session: 'A', title: 'Percentage Puzzles', topic: 'Percentage',
-    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; and spot the classic percentage traps. (A preview of P6, on the Think Harder page: find a percentage increase or decrease by comparing the change with the original amount.)',
+    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; and spot the classic percentage traps. (A puzzle that goes further, on the Think harder page: find a percentage increase or decrease by comparing the change with the original amount.)',
     skills: 'Asking "percentage of what?", building from 10% and 1%, bar models, making a table, comparing deals, explaining a trap',
     materials: 'Mini whiteboard and marker, workbook, pencil, a hundred-square page (or squared paper), a calculator for checking only at the end of each page.',
     online: 'Children keep the workbook and a whiteboard in front of the camera. The tutor screen-shares the slides and draws bar models with the annotation tool. Calculators stay closed until the check-together slides.',
@@ -50,8 +50,8 @@ module.exports = {
       ['Q3', '(a) $100 (25% of $80 = $20)  (b) $80 (20% of $100 = $20)  (c) No. The 20% is taken from $100, not from $80. 20% of $100 is $20, the same $20 that was added, so the price is back to $80, not $84.'],
       ['Q4', '(a) $24 (20% of $120)  (b) $24 (25% of the $96 left)  (c) $72  (d) 60%. The 25% is of the $96 left, not of $120, so she spent $48 of $120 = 40% and 60% is left ($72 out of $120).'],
       ['Q5', 'Girls 24, boys 16. Glasses: girls 6 (25% of 24), boys 8 (50% of 16), whole class 14.  (a) 35% (14 out of 40)'],
-      ['Think Harder Q1 (a P6 preview: percentage change)', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
-      ['Think Harder Q2', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
+      ['Think harder A1 (a puzzle that goes further: percentage change)', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
+      ['Think harder A2', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
     ]
   },
 
@@ -82,7 +82,7 @@ module.exports = {
     keySmall: 'Take the discount off first, then work out GST on the sale price. After a change, the new amount is the new whole.',
     brk: 'Percent stretch. The tutor calls out a percentage: 100% is standing tall with arms up, 50% is hands on your head, 25% is hands on your knees, 0% is sitting down. Then 75%? (hands on shoulders).',
     ws1: 'Page 1, in pairs: Q1 build percentages of $240, Q2 two shops and GST, Q3 up 25% then down 20%.',
-    ws2: 'Page 2, on your own: Q4 percentage of a remainder, Q5 glasses in a class. Think Harder: Q1 percentage increase and decrease (a P6 preview), Q2 the better deal.'
+    ws2: 'Page 2, on your own: Q4 percentage of a remainder, Q5 glasses in a class. Think harder: A1 percentage increase and decrease (a puzzle that goes further), A2 the better deal.'
   },
 
   qbank: {
@@ -144,6 +144,7 @@ module.exports = {
     H.sub('d', 'Ben says, "She spent 20% + 25% = 45%, so 55% of her money is left." What percentage of her money is really left? Explain.', { after: 40 }),
     ...H.lines(1),
     H.q(5, 'There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.', { keepNext: true }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> 10% of 40 pupils is ______, so 60% (the girls) is ______ pupils. The rest are boys.'], { after: 20 }),
     H.tbl([3300, 2200, 2200, 2200], [
       H.row([' ', 'Girls', 'Boys', 'Whole class'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: true, fill: 'D9D9D9', h: 40 }))),
       H.row(['Number of pupils', ' ', ' ', '40'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: !i, h: 60 }))),
