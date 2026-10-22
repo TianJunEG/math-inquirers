@@ -157,3 +157,4 @@ import p1fix; p1fix.finish(D,3,{'l3-ws2':'58–68 MIN'})
 import p1neutral; p1neutral.apply(D,3)
 
 import p1round2; p1round2.apply(D,3)
+import p1stories; p1stories.apply(D,3)

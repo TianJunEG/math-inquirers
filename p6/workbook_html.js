@@ -2,6 +2,7 @@
 const C = require('../hp/common_html.js');
 const { fs, t, p, q, lines, banner, AlignmentType } = C;
 const L = require('./data.js');
+const STORIES = require('./content/stories.json');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
@@ -16,6 +17,10 @@ const hdr = (n, topic, title, pb = true, fast = false) => [
 const LN = n => Array.from({ length: n }, () => '<div class="ln"></div>').join('');
 const boxStyle = 'border:2.5px solid #1B2A49;box-shadow:4px 4px 0 #1B2A49;background:#fff;border-radius:4px;padding:12px 12px 6px;margin:16px 4px 12px;';
 const row = s => '<div style="display:flex;align-items:flex-end;gap:6px;margin:3px 0"><span style="font-weight:700;white-space:nowrap;font-size:15px">' + s + '</span><span style="flex:1;border-bottom:2px dotted #8A94AD;height:22px"></span></div>';
+const storyBox = n => {
+  const s = STORIES[String(n)];
+  return '<div class="p" style="border:2px solid #1B2A49;border-left:10px solid #FFC93C;background:#FFFBEA;border-radius:4px;padding:6px 12px 5px;margin:10px 4px 0;font-size:12.5px;line-height:1.32;break-inside:avoid"><span style="display:inline-block;background:#1B2A49;color:#FFC93C;padding:0 8px;font-weight:800;font-size:11.5px;margin-right:6px;letter-spacing:.3px">STORY CORNER</span><b>' + esc(s.name) + '</b> <span style="color:#3B4A6B">(' + esc(s.country.split(' (')[0]) + ', ' + esc(s.years) + ')</span><div style="margin:2px 0 3px">' + esc(s.blurb) + '</div><div style="font-weight:700;color:#1F7A6F">Try it (optional): <span style="color:#1B2A49">' + esc(s.wbtry) + '</span></div></div>';
+};
 const finish = (n) => {
   const ls = L.lessons[n - 1], g = L.gaps[String(n)];
   const out = [...hdr(n, ls.topic, 'FINISH PAGE')];
@@ -24,6 +29,7 @@ const finish = (n) => {
   out.push('<div class="p" style="' + boxStyle + 'font-size:15px;line-height:1.35"><span style="display:inline-block;background:#DDEBF7;border:2px solid #1B2A49;padding:1px 10px;font-weight:800;font-size:13px;margin-right:8px">Exit slip</span><b>' + esc(ls.exit.q) + '</b><div style="margin-top:4px">' + LN(3) + '</div></div>');
   const tick = s => '<span style="display:inline-block;margin-right:14px;white-space:nowrap;font-size:13.5px">[&nbsp;&nbsp;]&nbsp;' + s + '</span>';
   out.push('<div class="p" style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:8px 12px 6px;margin:8px 4px 0"><div style="font-weight:800;color:#1F7A6F;font-size:15px;margin-bottom:2px">Looking back  <span style="font-weight:600;color:#3B4A6B;font-size:12.5px">About 2 minutes. Nobody marks this. You can write &ldquo;pass&rdquo; for any line.</span></div>' + row('Something I did well') + row('The hardest part was') + '<div style="margin:4px 0 2px"><b style="font-size:15px">What helped me:</b> ' + tick('I drew or built it') + tick('I tried a smaller example') + tick('I checked my answer') + tick('I asked for help') + '<br>' + tick('I am still stuck (my tutor will check in during the lesson)') + tick('pass') + '</div></div>');
+  out.push(storyBox(n));
   return out;
 };
 const extra = (n) => {

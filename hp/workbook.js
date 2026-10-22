@@ -26,7 +26,10 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
   const row3 = p([...gopt('I am still stuck (my tutor will look at this after class)'), ...gopt('I would like to pass')], { after: 0, line: 260 });
   return [gap(30), tbl([CW], [row([cell([p([t('Look-back  ', { bold: true, size: 26, color: '1F7A6F' }), t('Two minutes. There are no right answers. You can pass. Nobody reads it out.', { size: 19 })], { after: 30 }), row0, row1, row2, row3], CW, { fill: 'FFFDF5', align: AlignmentType.LEFT, h: 50 })])])]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [gap(60), banner('Investigation: ' + v.title), p(t('Choose this any time you like. You do not have to finish it.', { italics: true, size: 22 }), { before: 40, after: 40 }), p([t('Easy first step: ', { bold: true }), t(v.first)], { after: 40 }), p([t('Then: ', { bold: true }), t(v.q)], { after: 40 }), ...lines((v.lines || 4) + 2)]; };
-const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];
+const SBX = require('./stories_p1.json');
+const storyBox = (n) => { const s = SBX[String(n)];
+  return [gap(60), tbl([CW], [row([cell([p([t('Story corner: ' + s.name + '  ', { bold: true, size: 22, color: '1F7A6F' }), t('Just for fun. You can pass.', { size: 18 })], { after: 30 }), p(t(s.blurb, { size: 20 }), { after: 30, line: 260 }), p([t('Try it: ', { bold: true, size: 20 }), t(s.q, { size: 20 })], { after: 30, line: 260 }), p([t('My answer: ', { bold: true, size: 20 }), t('______________________________', { size: 20 })], { after: 0 })], CW, { fill: 'FFF6D6', align: AlignmentType.LEFT, h: 50 })])])]; };
+const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n), ...storyBox(n)];
 const txp = (n) => (GAPS[String(n)].tx || []).flatMap(x => [q(x.label, x.q, { before: 60, after: 40, keepNext: true }), ...(x.subs || []).map(s => sub(s[0], s[1])), ...lines(1)]);
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];

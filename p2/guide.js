@@ -43,7 +43,7 @@ const R = [
   ['0–8', 'Warm-up', 'Welcome (0–1). Sneak-peek puzzles (1–4): two puzzles on ideas not learnt yet, answers shown only to the tutor, nobody marked. A 2-minute game (4–6). Quick questions (6–8). Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers on own paper shown to the tutor on camera, by thumbs, or kept to share if the child wants. Nothing is sent by private message. No whiteboards raised together.'],
   ['8–20', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['20–32', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
-  ['32–36', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
+  ['32–36', 'Brain break', 'Stand, stretch, drink water (32–34). Optional Story break (34–36): a 2-minute story about a mathematician, with a try-it question. Skip it whenever time is short.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
   ['36–72', 'Worksheet', 'Page 1 in pairs (36–50), check together (50–52), short teaching (52–57), page 2 alone (57–69), check together (69–72). Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
   ['72–77', 'Talk time', 'Volunteers share one answer and explain it. Compare methods. Any child may pass. No cold-calling by name, no public tallies or rankings.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited. The whole group is invited to share (a child may pass); quiet children are welcome in the open session with a parent nearby, and are never singled out.'],
   ['77–80', 'Investigation share', 'Three minutes on the Investigation from the last core page (its own slide). The tutor asks the whole group for one way someone tried it; several answers are right. Pass is always fine. If nobody has started, pairs try the first step for one minute and the rest is take-home.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited.'],
@@ -71,6 +71,16 @@ const say = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'SAY   ' : 
 const doo = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'DO     ' : '          ', { bold: true, size: 19, color: '7F6000' }), t(s, { size: S })], { after: 40, indent: { left: 900, hanging: 900 }, line: 280 })));
 const ask = (rows, h1c, h2c) => { G.push(tbl([4600, 5300], [row([hd(h1c || 'Ask', 4600), hd(h2c || 'Expect', 5300)]), ...rows.map(r => row([c2(r[0], 4600), c2(r[1], 5300)]))])); G.push(gap(40)); };
 const stuck = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'IF STUCK   ' : '                ', { bold: true, size: 19, color: 'A61C00' }), t(s, { size: S })], { after: 40, indent: { left: 1300, hanging: 1300 }, line: 280 })));
+
+/* ---------- Level 2 stories ---------- */
+G.push(h1('Level 2 stories: mathematicians', true));
+G.push(tx('Each lesson has an optional 2-minute Story break at the brain break (minutes 34 to 36): one slide titled “Story break: <name>”, a small Story corner box on the “Before you go” page of the workbook, and a try-it question. The answers to the try-it questions are in each lesson’s answer key below, never on the child page. Where a story is a legend or told long after the event, the slide says so: say it out loud too.'));
+G.push(tbl([700, 2000, 1900, 1700, 3600], [
+  row([hd('Lesson', 700), hd('Person', 2000), hd('Country', 1900), hd('Years', 1700), hd('Link to the lesson', 3600)]),
+  ...L.lessons.map(l => { const s = L.stories[String(l.n)]; return row([c2(String(l.n), 700, { align: AlignmentType.CENTER, bold: true }), c2(s.name, 2000, { bold: true }), c2(s.country, 1900), c2(s.years, 1700), c2(s.link, 3600)]); })
+]));
+G.push(h2('Rules for the Story break'));
+['It is always optional. Skip it, without comment, if you are behind time, the group is tired or the break needs all four minutes. Nothing later depends on it.', 'Read the story aloud (about 30 seconds), then show the try-it question. Ask “Would anyone like to try this one?” Take volunteers only, never name a child, nobody is marked, and passing is always fine.', 'Children may show an answer on their own paper to you only, or tell a partner. No public tallies or rankings. The same safeguarding rules apply as in the rest of the lesson.', 'Keep the stories true: say “a story often told” or “historians are not sure” where the slide says so (Gauss, Mary Somerville, Thales; dates for Aryabhata, Pacioli and Ahmes differ between sources).', 'The try-it questions use only Primary 2 ideas. The stories mention some big numbers (for example 5050 or a 13-digit number) as history, not as questions for the children.'].forEach(s => G.push(bu(s)));
 
 G.push(h1('How to use the scripts', true));
 G.push(tx('Every lesson below is a minute-by-minute script. The slides match it: one slide or two for each part. You do not have to say the words exactly, but keep the questions, because the questions are what makes children think.'));
@@ -138,6 +148,9 @@ L.lessons.forEach(l => {
 
   G.push(seg('32–36 min', 'Brain break'));
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
+  { const st = L.stories[String(l.n)];
+    doo(['Story break (optional, 2 minutes): do the movement game for 2 minutes (32 to 34), then show the “Story break: ' + st.name + '” slide (34 to 36). Read the story aloud (about 30 seconds): “' + st.story + '”' + (st.legend ? ' Say clearly: ' + st.legend : '')]);
+    doo(['Then ask: “Would anyone like to try this one?” Try it: ' + st.try_it + ' Volunteers only, never name a child, nobody is marked, passing is fine. SKIP the story break, without comment, if you are behind time or the group needs the full four minutes.']); }
 
   G.push(seg('36–72 min', 'Worksheet (pairs, then alone, then stretch)'));
   doo(['Minute 36: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 36 to 50: pairs work together on the first page (online, visit every shared breakout room by minute 47 so no pair works unseen for long; in Lessons 5, 6 and 10 a short teach slide comes first, 36 to 38). Minutes 50 to 52: check page 1 together. Minutes 52 to 57: short teaching for page 2. Minutes 57 to 69: each child works alone on the second page. Minutes 69 to 72: check page 2 together. Think harder, Go further and the Investigation are open to any child at any time after question 3.']);
@@ -174,6 +187,7 @@ L.lessons.forEach(l => {
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Story try-it  ', { bold: true, size: 20 }), t('(' + L.stories[String(l.n)].name + '). ' + L.stories[String(l.n)].try_it_answer, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
   G.push(p([t('Investigation  ', { bold: true, size: 20 }), t('(' + gp.invest.title + '). ' + gp.invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 

@@ -3,6 +3,7 @@ const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
 const GAPS = require(path.join(__dirname, 'content', 'gaps.js'));
+const STORIES = require(path.join(__dirname, 'content', 'stories.js'));
 
 // ---- the one timeline used by decks, scripts, guide and workbook (minutes) ----
 const TIMELINE = [
@@ -10,7 +11,7 @@ const TIMELINE = [
   ['3–9', 'Warm-up', 'A quick game, then the quick questions.'],
   ['9–21', 'Explore', 'Hands-on in pairs. Objects first. A second what-if question is on the slide for anyone who wants more.'],
   ['21–33', 'Mini-lesson', 'Worked examples with click-to-reveal steps, and your-turn questions.'],
-  ['33–37', 'Brain break', 'Stand, stretch, drink water.'],
+  ['33–37', 'Brain break', 'Stand, stretch, drink water. Optional Story break (2 minutes, skippable): a short true story about a mathematician linked to the lesson, with one optional try-it question.'],
   ['37–49', 'Workbook page 1 (pairs)', 'Start here. After the choice question (question 3; question 2 in Lesson 1) you may choose: carry on, or try Think harder.'],
   ['49–53', 'Check page 1 together', 'Four minutes, so every part can be explained.'],
   ['53–58', 'Short teaching before page 2', 'One or two worked examples for the page 2 question types.'],
@@ -44,12 +45,15 @@ const scriptReflect = n => [
 const scriptTalk = [
   'Talk-time rules: say "You may say pass." Ask for VOLUNTEERS first, then invite others only if they want to. No cold-calling by name, no public tallies or rankings, and no "who got it right?" hands.'
 ];
+// "Story break" line for the tutor script (brain break, 33 to 37). Optional and skippable; no marking, no cold-calling.
+const storyLine = st => 'Story break (optional, 2 minutes): after the stretch and a drink, say "Meet a mathematician: ' + st.short + (st.also ? ' (' + st.also + ')' : '') + ', ' + st.yshort + ', ' + st.cshort + '." Read the story on the slide aloud, slowly (about one minute), or let a volunteer read it. Link to today: ' + st.link + ' Then offer the Try it as an OPTIONAL question: "Have a go in your head or on paper, or just listen. Pass is always fine." Volunteers only, nobody is marked. ANSWER (for you; show it only after children have had a go): ' + st.a + (st.legend ? ' Keep the label: ' + st.legend : '') + ' SKIP IT if you are short of time or the group needs the full break: say "we will skip the story today" and go straight to the workbook at minute 37; nothing else depends on it.';
 C.forEach(c => { const n = c.lesson.n, g = GAPS[n];
+  c.story = STORIES[n]; c.script.story = storyLine(STORIES[n]);
   c.deck.check = g.sneak; c.deck.whatIf = g.whatIf; c.deck.checkPic = g.pic || null;
   c.script.check = scriptCheck(n); c.script.reflect = scriptReflect(n); c.script.talkRules = scriptTalk;
   c.lesson.solo = g.solo; c.investigation = g.inv; });
 module.exports = {
-  choiceAfter, stuckTick, stuckPlan,
+  choiceAfter, stuckTick, stuckPlan, stories: STORIES,
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 5',
   slogan: 'Notice it. Test it. Explain why.',

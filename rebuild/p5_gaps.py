@@ -14,6 +14,32 @@ slidekit.FOOT='Math Inquirers P5 Holiday Program  •  Notice it. Test it. Expla
 ROOT=os.path.join(H,'..')
 RED='#D64545'
 
+def _story(n):
+    js=f"const L=require('./p5/data.js');console.log(JSON.stringify(L.content[{n}-1].story))"
+    return json.loads(subprocess.check_output(['node','-e',js],cwd=ROOT))
+
+def story_slide_html(n,st):
+    """Story break slide (optional, 2 minutes, skippable) placed right after the brain break slide, before the worksheet."""
+    sub=f"{st['yshort']}   •   {st['cshort']}"+(f"   •   also spelled {st['also'].replace('also spelled ','')}" if st['also'] else '')
+    body=h2('Story break: '+st['short'])+p(sub+'   •   '+st['who'],30,600,MUTED)
+    left=(f'<div style="width:1130px;flex:none;background:{WHITE};border-radius:24px;padding:30px 40px;display:flex;flex-direction:column;gap:14px">'
+          f'<p style="font-size:33px;font-weight:600;line-height:1.36">{E(st["story"])}</p>'
+          +(f'<p style="font-size:26px;font-weight:700;line-height:1.3;color:{TEAL}">Good to know: {E(st["legend"])}</p>' if st['legend'] else '')+'</div>')
+    right=(f'<div style="width:502px;flex:none;background:{SOFT};border-radius:24px;padding:28px 34px;display:flex;flex-direction:column;gap:12px">'
+           f'<p style="font-size:26px;font-weight:800;letter-spacing:2px;color:{TEAL}">TRY IT  (OPTIONAL)</p>'
+           f'<p style="font-size:30px;font-weight:600;line-height:1.3">{E(st["q"])}</p>'
+           f'<p style="font-size:26px;font-weight:700;color:{MUTED}">Have a go, or just listen. Pass is always fine.</p></div>')
+    body+=f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
+    notes=('STORY BREAK, optional and skippable, about 2 minutes, inside the brain break (minutes 33 to 37). Do the stretch and drink first. '
+      'SKIP IT if you are short of time or the group needs the full break: say "we will skip the story today" and click on to the worksheet at minute 37; nothing else depends on it. '
+      f'1) Say: "Meet a mathematician: {st["short"]}." Read the story aloud slowly (about one minute), or let a volunteer read it. Do not add dialogue, feelings or scenes that are not in the story. '
+      +(f'LABEL (keep it in your voice): {st["legend"]} ' if st['legend'] else '')
+      +f'2) Link to today: {st["link"]} '
+      '3) The Try it is an OPTIONAL question: "Have a go in your head or on paper, or just listen. Pass is always fine." Give about 30 seconds. Volunteers only; no cold-calling, nobody is marked, no tally. '
+      f'ANSWER (for you; show it only after children have had a go): {st["a"]} '
+      f'Confidence in the facts: {st["confidence"]}. Researched sources are listed in docs/stories/final_p5.json. Then: "Back to our seats, workbook out." (The same story is a small box on the Investigation page of the workbook, with no answer.)')
+    return sec(f'p5l{n}-story','33–37 MIN  •  OPTION',body,notes)
+
 def _data(n):
     js=(f"const L=require('./p5/data.js');const c=L.content[{n}-1];console.log(JSON.stringify({{check:c.deck.check,whatIf:c.deck.whatIf,pic:c.deck.checkPic,sc:c.script.check,sr:c.script.reflect,tr:c.script.talkRules,solo:c.lesson.solo,stuck:L.stuckTick({n}),ca:L.choiceAfter({n})}}))")
     return json.loads(subprocess.check_output(['node','-e',js],cwd=ROOT))
@@ -92,7 +118,7 @@ def rng(label):
 
 def plan(n,ca):
     return ('Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), '
-      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question %d you may choose: carry on, or try Think harder), '
+      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37 (with an optional 2-minute Story break about a mathematician; skip it if you are short of time), workbook page 1 37 to 49 (after question %d you may choose: carry on, or try Think harder), '
       'check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish; minutes 62 to 72 are protected open think time, 10 quiet minutes for Think harder, Go further or the Investigation, with no hints unless a child asks), '
       'check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, '
       'reflection 86 to 88 (pass is always OK; includes "Next time I will try"), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, '
@@ -202,6 +228,16 @@ def apply(n):
         s=append_card(s,card(p('You may say "pass". Volunteers first. Then everyone tries the first step of the Investigation with a partner.',32,700,TEAL)))
         return add_notes(s,' '.join(g['tr'])+' Minutes 76 to 82: 2 minutes pairs talk, 2 minutes volunteers share, 2 minutes everyone tries the Easy first step of the Investigation (the page after workbook page 2). Pass is always allowed.')
     edit(P+'talk',talk)
+    # ---- Story break (optional, skippable) right after the brain break, before the worksheet ----
+    st=_story(n)
+    wr(os.path.join(sd,P+'story.html'),story_slide_html(n,st))
+    d=json.load(open(dj)); o=[x for x in d['order'] if x!=P+'story']
+    o.insert(o.index(P+'break')+1,P+'story'); d['order']=o
+    json.dump(d,open(dj,'w'),indent=1,ensure_ascii=False)
+    def brk(s):
+        if 'STORY BREAK FOLLOWS' in s: return s
+        return add_notes(s,'STORY BREAK FOLLOWS (optional, 2 minutes, skippable): after the stretch and a drink, the next slide is a short true story about a mathematician with one optional question. Skip it if you are short of time.')
+    edit(P+'break',brk)
     print('p5_gaps: lesson',n,len(o),'slides')
 
 if __name__=='__main__':

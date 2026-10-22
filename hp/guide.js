@@ -67,6 +67,7 @@ const DD = require('../deck/data.js');
 const WG = { 3: 'Quick vote. Each child chooses ONE fruit. Face to face: a sticky dot. Online: when the tutor points to a fruit, give a thumbs up (no typing needed).', 6: 'Coin shop. Three price tags in cents only: eraser 65¢, pencil 80¢, sticker 30¢. Pay exactly with play coins. Any way that pays exactly is a good way. Then look for a way with fewer coins.', 8: 'Guess my number. The tutor thinks of a number from 1 to 20. Ask yes or no questions. How few can we use together?', 10: 'Whiteboard round. The tutor asks a quick question from each lesson. Everybody writes the answer on a whiteboard or paper at the same time. No passing round and nobody on the spot.' };
 const SC = require('./scripts.js');
 const QB = require('./qbank.json');
+const ST = require('./stories_p1.json');
 const tag = (s, fill) => cell(s, 1000, { bold: true, fill, size: 18, h: 50, align: AlignmentType.CENTER });
 const seg = (time, title) => p([t(time + '   ', { bold: true, size: 22, color: 'FFFFFF' }), t(title, { bold: true, size: 22, color: 'FFFFFF' })], { before: 160, after: 60, keepNext: true, shading: { type: 'clear', fill: '1F3864', color: 'auto' } });
 const say = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'SAY   ' : '          ', { bold: true, size: 19, color: '1F6F5C' }), t('“' + s.replace(/^[“"]|[”"]$/g, '') + '”', { size: S, italics: true })], { after: 50, indent: { left: 900, hanging: 900 }, line: 280 })));
@@ -136,6 +137,7 @@ L.lessons.forEach(l => {
 
   G.push(seg('35–40 min', 'Brain break'));
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
+  doo([s.story]);
 
   G.push(seg('40–72 min', 'Worksheet (pairs, then alone, then check together)'));
   doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud and read questions 1 and 2 aloud. Say “Pairs first. Talk before you write. When you finish this page you may choose: carry on, or try Think harder.”', 'About minutes 40 to 54: pairs work together on the first page, with a short teaching slide before it and a check-together slide after it. After that, a short teaching slide, then about 10 minutes (58 to 68) when each child works alone on the second page; the exact times are on each slide. Minutes 68 to 72: everyone stands up and stretches for a minute, then check the second page together. Think harder (T), Go further (C) and the Investigation are not a timed part of the lesson: every child has them in the workbook and may choose them at any time, or at home.']);
@@ -168,7 +170,15 @@ L.lessons.forEach(l => {
   G.push(p([t('Think harder slide  ', { bold: true, size: 20 }), t(q.stretch.slice(4, 7).map((x, i) => (i + 1) + ') ' + x.a).join('  '), { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
   GAPS[String(l.n)].check.forEach((c, i) => G.push(p([t('Sneak-peek ' + (i + 1) + '  ', { bold: true, size: 20 }), t(c.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
   G.push(p([t('Investigation (' + GAPS[String(l.n)].invest.title + ')  ', { bold: true, size: 20 }), t(GAPS[String(l.n)].invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(p([t('Story break try-it (' + ST[String(l.n)].name + ')  ', { bold: true, size: 20 }), t(ST[String(l.n)].a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
+
+/* ---------- Mathematician stories ---------- */
+G.push(h1('Mathematician stories', true));
+G.push(tx('Each lesson has an optional 2-minute story break after the movement in the brain break (minutes 37 to 39). It is a short, true story about one person who did maths, with one optional try-it question. Children may pass. If time is short, skip it: nothing later depends on it. The answer to each try-it question is in the lesson answer key. Stories where the evidence is thinner are labelled on the slide (Euler: our own cats example; Ramanujan: the taxi story is a story Hardy told himself).'));
+{ const ws = [800, 1900, 1750, 1450, 4000]; const head = [hd('Lesson', ws[0]), hd('Person', ws[1]), hd('Country', ws[2]), hd('Years', ws[3]), hd('Link to the lesson', ws[4])];
+  G.push(tbl(ws, [row(head), ...L.lessons.map(l => { const s = ST[String(l.n)]; return row([c2(String(l.n), ws[0]), c2(s.name, ws[1]), c2(s.country, ws[2]), c2(s.years, ws[3]), c2(s.link, ws[4])]); })])); }
+G.push(gap(40));
 
 /* ---------- Tracker ---------- */
 G.push(h1('Progress tracker', true));

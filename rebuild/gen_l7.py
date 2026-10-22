@@ -238,3 +238,4 @@ p1fix.finish(D,7,{'l7-teach1':'25–28 MIN','l7-we1':'28–31 MIN','l7-try1':'31
 import p1neutral; p1neutral.apply(D,7)
 
 import p1round2; p1round2.apply(D,7)
+import p1stories; p1stories.apply(D,7)

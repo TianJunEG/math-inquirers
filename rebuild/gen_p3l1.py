@@ -193,6 +193,7 @@ put(PRE+'exit',sec(PRE+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: smal
 ORDER=['title','warm1','warm2','explore1','explore2','teach1','we1','we2','try1','teach2','key','break','teachpat','ws1','ws1ans','teachrename','teachclues','tryclues','teachsum','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 ORDER=[PRE+x for x in ORDER]
 import p3_gifted; ORDER[:]=p3_gifted.add(S,ORDER,1)  # close-the-gaps: warm-up check + look-back slides
+import p3_stories; ORDER[:]=p3_stories.add(S,ORDER,1)  # mathematician story break (optional)
 assert set(ORDER)==set(S), set(ORDER)^set(S)
 os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 for f in os.listdir(os.path.join(D,'slides')):

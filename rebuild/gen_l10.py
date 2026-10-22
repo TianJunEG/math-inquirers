@@ -188,3 +188,4 @@ p1fix.finish(D,10,{'l10-explore1':'10–11 MIN','l10-explore2':'21–25 MIN','l1
 import p1neutral; p1neutral.apply(D,10)
 
 import p1round2; p1round2.apply(D,10)
+import p1stories; p1stories.apply(D,10)

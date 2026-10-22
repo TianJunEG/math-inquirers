@@ -7,6 +7,7 @@ import json,os,re
 import slidekit
 from slidekit import *
 G=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','p2','gaps.json')))
+ST=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','p2','stories.json')))   # one mathematician per lesson (docs/stories/final_p2.json, shortened child page text)
 BOX=f'<span style="display:inline-block;width:46px;height:46px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle;margin:0 4px -8px"></span>'
 def _txt(s): return E(s).replace('{box}','[ ]')
 def _raw(s): return E(s).replace('{box}',BOX)
@@ -32,6 +33,21 @@ def precheck(K,idx=0):
           f'Q2 answer: {_txt(g[1]["a"])} Listen for: {_txt(g[1]["w"])} At the end click to show the answer as "one way to think about it", without saying who had what. Ask only for volunteers: "Would anyone like to tell us how they started?" Then move on to the warm-up game.')
         return sec(f'p2l{K}-precheck2','2–4 MIN',body,notes)
     return sec(f'p2l{K}-precheck','1–2 MIN',body,notes)
+def story(K):
+    """Optional 2-minute 'Story break: <name>' slide, right after the brain-break slide (minutes 34 to 36 of the 32-36 break). The try-it answer is in the notes only."""
+    s=ST[str(K)]
+    meta=f'<div style="display:flex;align-items:center;gap:24px">{chip("Optional  •  about 2 minutes  •  skip any time",YEL,NAVY,26)}<p style="font-size:30px;font-weight:700;color:{MUTED}">{E(s["country"])}  •  {E(s["years"])}</p></div>'
+    inner=p(s['story'],38,600)
+    if s['legend']: inner+=p(s['legend'],30,800,TEAL)
+    body=h2('Story break: '+s['name'],64)+meta+card(inner,extra='padding:26px 40px;gap:10px')
+    body+=f'<div data-build-in="rise" style="background:{SOFT};border-radius:24px;padding:20px 40px;display:flex;flex-direction:column;gap:8px">{chip("Try it (optional)",TEAL,CREAM,26)}<p style="font-size:34px;font-weight:700;line-height:1.3">{E(s["try_it"])}</p></div>'
+    notes=('Story break, about 2 minutes, OPTIONAL (minutes 34 to 36: do a 2-minute movement game first, then this). SKIP IT, without comment, if you are behind time, the group is tired or the break needs all four minutes; nothing later in the lesson depends on it. '
+      f'Say: "Time for a short story about a mathematician. Just listen." Read the story aloud (about 30 seconds). '
+      + (f'Say clearly that this is a story or a memory told long after the event: {s["legend_note"]} ' if s['legend_note'] else '')
+      + f'Why it is here: {s["link"]} Then click for the Try it question. It is a choice, never a test: ask "Would anyone like to try this one?", take volunteers only, never name a child, nobody is marked, passing is always fine. Children can show the answer on their own paper to the tutor only, or say it to a partner. '
+      f'TRY-IT ANSWER (tutor only): {s["try_it_answer"]} '
+      'Keep it to 2 minutes, then say "Thank you. Water, then back to our seats." Source and checking notes: docs/stories/final_p2.json.')
+    return sec(f'p2l{K}-story','34–36 MIN (OPTIONAL)',body,notes)
 def goexp(K):
     w=G[str(K)]['whatif']
     body=h2('Explore: go further')+p('Finished early or curious? Try this. It is your choice.',32,600,MUTED)
@@ -82,7 +98,7 @@ def splitcards(S,P):
     S[k]=a; S[k+'2']=b
 def add(S,K):
     P=f'p2l{K}'; ex=K==10
-    S[f'{P}-invest']=investigation(K); S[f'{P}-precheck']=precheck(K); S[f'{P}-precheck2']=precheck(K,1); S[f'{P}-reflect']=reflect(K); S[f'{P}-goexp']=goexp(K)
+    S[f'{P}-story']=story(K); S[f'{P}-invest']=investigation(K); S[f'{P}-precheck']=precheck(K); S[f'{P}-precheck2']=precheck(K,1); S[f'{P}-reflect']=reflect(K); S[f'{P}-goexp']=goexp(K)
     r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
     r(f'{P}-warm1','0–5 MIN','4–6 MIN'); r(f'{P}-warm1','Minutes 0 to 5.','Minutes 4 to 6 (a 2-minute game: one or two rounds).')
     r(f'{P}-warm2','5–8 MIN','6–8 MIN'); r(f'{P}-warm2','Minutes 5 to 8.','Minutes 6 to 8 (2 minutes: ask questions 1, 3 and 5; 2 and 4 are spare). Children answer by thumbs, hands, not by naming a child.')
@@ -91,7 +107,9 @@ def add(S,K):
     s=re.sub(r'warm-up 0 to 8','Sneak-peek puzzles 1 to 4, warm-up game 4 to 6, quick questions 6 to 8',s)
     s=s.replace('exit ticket 80 to 90.','exit ticket 80 to 87, Looking back 87 to 89, closing and stamps 89 to 90.')
     s=s.replace('exit ticket 80 to 88, certificates 88 to 90','exit ticket 80 to 85, Looking back 85 to 87, certificates 87 to 90')
+    s=s.replace('brain break 32 to 36','brain break 32 to 36 (with an optional 2-minute Story break at 34 to 36)')
     S[f'{P}-title']=s
+    S[f'{P}-break']=S[f'{P}-break'].replace('</aside>',' Story break (optional, 2 minutes): if you run it, keep the movement game to 2 minutes (32 to 34), then click on to the Story break slide (34 to 36). If you are short of time, skip it and use all four minutes for the break.</aside>')
     e=S[f'{P}-exit']
     if ex: e=e.replace('80–88 MIN','80–85 MIN').replace('Minutes 80 to 88.','Minutes 80 to 85.')
     else: e=e.replace('80–90 MIN','80–87 MIN').replace('Minutes 80 to 90.','Minutes 80 to 87.')
@@ -115,6 +133,7 @@ def order(o,K):
     P=f'p2l{K}'; out=[]
     for i in o:
         out.append(i)
+        if i==f'{P}-break': out.append(f'{P}-story')
         if i==f'{P}-title': out.append(f'{P}-precheck'); out.append(f'{P}-precheck2')
         if i==f'{P}-explore1': out.append(f'{P}-goexp')
         if i==f'{P}-talk': out.append(f'{P}-invest')

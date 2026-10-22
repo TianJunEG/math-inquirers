@@ -249,6 +249,7 @@ put('p3l9-exit',exit_slide('p3l9-exit','80–90 MIN','A film starts at 3:30 p.m.
 for _x in ('p3l9-try2','p3l9-teachlist'): S.pop(_x,None)
 order=['p3l9-title','p3l9-warm1','p3l9-warm2','p3l9-explore1','p3l9-explore2','p3l9-teach1','p3l9-we1','p3l9-try1','p3l9-key','p3l9-break','p3l9-teachbudget','p3l9-ws1','p3l9-ws1ans','p3l9-teach2','p3l9-we2','p3l9-teach24','p3l9-ws2','p3l9-ws2ans','p3l9-stretch','p3l9-challenge','p3l9-chdiag','p3l9-chwalk','p3l9-talk','p3l9-exit']
 import p3_gifted; order[:]=p3_gifted.add(S,order,9)  # close-the-gaps: warm-up check + look-back slides
+import p3_stories; order[:]=p3_stories.add(S,order,9)  # mathematician story break (optional)
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',

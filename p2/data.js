@@ -5,8 +5,11 @@ for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l'
 // Close-the-gaps content (warm-up check, open investigation, reflection): p2/gaps.json, shared with the slide generators.
 const GAPS = require('./gaps.json');
 C.forEach(c => { const g = GAPS[String(c.lesson.n)]; c.gaps = g; });
+// Mathematician stories (one per lesson; docs/stories/final_p2.json, shortened for the child pages): p2/stories.json
+const STORIES = require('./stories.json');
 module.exports = {
   gaps: GAPS,
+  stories: STORIES,
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 2',
   slogan: 'Notice it. Test it. Explain why.',

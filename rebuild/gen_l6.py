@@ -131,3 +131,4 @@ p1fix.finish(D,6,{'l6-ws1':'40–52 MIN','l6-ws1ans':'52–54 MIN','l6-teachfew'
 import p1neutral; p1neutral.apply(D,6)
 
 import p1round2; p1round2.apply(D,6)
+import p1stories; p1stories.apply(D,6)

@@ -264,6 +264,7 @@ put('p3l3-exit',exit_slide('p3l3-exit','What is the last digit of 6 × 47? Expla
 # ---------- write ----------
 order=['p3l3-title','p3l3-warm1','p3l3-warm2','p3l3-explore1','p3l3-explore2','p3l3-teach1','p3l3-we1','p3l3-try1','p3l3-teach2','p3l3-we2','p3l3-try2','p3l3-key','p3l3-break','p3l3-ws1','p3l3-ws1ans','p3l3-teachlist','p3l3-teachgrid','p3l3-teachboth','p3l3-ws2','p3l3-ws2ans','p3l3-stretch','p3l3-challenge','p3l3-chdiag','p3l3-chwalk','p3l3-talk','p3l3-exit']
 import p3_gifted; order[:]=p3_gifted.add(S,order,3)  # close-the-gaps: warm-up check + look-back slides
+import p3_stories; order[:]=p3_stories.add(S,order,3)  # mathematician story break (optional)
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))

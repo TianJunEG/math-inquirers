@@ -29,7 +29,10 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
     + row('', opt('I am still stuck (my tutor will look at this after class)') + opt('I would like to pass'))
     + `</div>`]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };
-const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];
+const SBX = require('./stories_p1.json');
+const storyBox = (n) => { const s = SBX[String(n)];
+  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFF6D6;padding:7px 14px 9px;margin-top:14px;break-inside:avoid"><div style="font-weight:700;color:#1F7A6F;font-size:17px">Story corner: ${esc2(s.name)} <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Just for fun. You can pass.</span></div><div style="font-size:15px;line-height:1.35;margin-top:2px">${esc2(s.blurb)}</div><div style="font-size:15px;line-height:1.35;margin-top:4px"><b>Try it:</b> ${esc2(s.q)}</div><div style="display:flex;align-items:flex-end;gap:6px;margin-top:6px;font-size:15px"><b>My answer:</b><span style="flex:1;border-bottom:2px dotted #8A94AD;height:18px"></span></div></div>`]; };
+const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n), ...storyBox(n)];
 const txp = (n) => (GAPS[String(n)].tx || []).flatMap(x => [q(x.label, x.q, { before: 60, after: 40, keepNext: true }), ...(x.subs || []).map(s => sub(s[0], s[1])), ...lines(1)]);
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];

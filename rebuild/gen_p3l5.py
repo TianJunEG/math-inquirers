@@ -276,6 +276,7 @@ put('p3l5-exit',sec('p3l5-exit','80–90 MIN',body,
 
 # ---------- write ----------
 import p3_gifted; ORDER[:]=p3_gifted.add(S,ORDER,5)  # close-the-gaps: warm-up check + look-back slides
+import p3_stories; ORDER[:]=p3_stories.add(S,ORDER,5)  # mathematician story break (optional)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

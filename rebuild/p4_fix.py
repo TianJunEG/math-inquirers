@@ -19,7 +19,7 @@ FOOTSTART = '\n<p style="position:absolute;left:128px;bottom:64px'
 
 TIME_PLAN = ('Time plan: opening 0 to 1, sneak-peek puzzles 1 to 4 (two ideas we have not learnt yet; answers shown to the tutor only, on camera, nobody marked), '
              'warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18 (a Go further what-if is on the slide from minute 8), '
-             'teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, '
+             'teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34 (an optional 2-minute Story break about a mathematician, minutes 32 to 34, skippable), '
              'worksheet page 1 (Start here, in pairs) {P1}, short teaching before page 2 53 to 58, worksheet page 2 (on your own) 58 to 76 and check together 76 to 80, '
              'talk time 80 to 85, exit ticket {EX}, looking back (reflection) {RF}.{L10} '
              'After question {CQ} every child may choose: carry on, or try the Think harder page. Think harder, Go further and the Investigation have no fixed time slot: any child may choose them at any time, or take them home. '
@@ -146,6 +146,34 @@ def _label(h, text):
     m = re.match(r'<section[^>]*>', h)
     return h[:m.end()] + '\n' + tag + h[m.end():]
 
+# ---------- Story break (mathematician stories, p4/stories.json, built by rebuild/p4_stories_build.py) ----------
+def _story(n):
+    return json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'p4', 'stories.json')))[n - 1]
+
+def story_slide(n):
+    st = _story(n); ID = f'p4l{n}'
+    body = (h2('Story break: ' + st['name'], 60)
+            + f'<p style="font-size:30px;font-weight:700;color:{TEAL}">{E(st["country"])}  •  {E(st["years"])}</p>'
+            + card(p(st['story'], 37, 600), WHITE, 'padding:26px 36px')
+            + f'<div style="background:{SOFT};border:3px solid {YEL};border-radius:24px;padding:18px 36px;display:flex;flex-direction:column;gap:6px">'
+              f'<p style="font-size:28px;font-weight:800;color:{TEAL};letter-spacing:2px">TRY IT (OPTIONAL)</p>{p(st["q"], 34, 700)}</div>')
+    legend = ''
+    if st['label']:
+        legend = ' LEGEND LABEL: the slide says "accounts say" on purpose. ' + st['legend_note']
+    notes = ('STORY BREAK, optional, about 2 minutes (minutes 32 to 34, after the movement part of the brain break). SKIP IT if you are short of time or the group is restless: '
+             'say "We will keep this story for another day" and go straight to the worksheet; nothing later depends on it. '
+             'To run it: read the story aloud, slowly, or ask one volunteer to read it (nobody has to; pass is fine). Then read the Try it question; children may answer in the chat or hold up a thumb, nobody is marked, and you never name or rank a child. '
+             f'Link to today: {st["link"]} '
+             f'TRY IT ANSWER (tutor only, do not show): {st["a"]}'
+             f'{legend} Everything in the story is true as far as historians know. Confidence: {st["confidence"]}. Dates for people from long ago are estimates.')
+    return sec(f'{ID}-story', '32–34 MIN • OPTIONAL', body, notes)
+
+def story_tutor_line(n):
+    st = _story(n)
+    return (f'Story break (optional, 2 minutes): today\'s mathematician is {st["name"]} ({st["country"]}, {st["years"]}). {st["link"]} '
+            'Show the Story break slide, read the story aloud (or ask a volunteer), then offer the Try it question to the whole group. '
+            'To skip: say "We will keep this story for another day" and go straight to the worksheet.')
+
 def finish(S, n, G, pic=None, go2=None, tp=None):
     ID = f'p4l{n}'
     S[f'{ID}-check'] = check_slide(n, G, pic)
@@ -157,6 +185,9 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     if any('ON DEMAND' in h for k, h in S.items() if k != f'{ID}-title'):
         t = t.replace('</aside>', E(' A slide marked ON DEMAND is not part of the teaching before page 2: show it only while children work on page 2, when a child chooses that choice question, and make the offer to the whole group. The page itself carries the same hint.') + '</aside>', 1)
     S[f'{ID}-title'] = t
+    # story break slide (after the brain break) and its note on the break slide
+    S[f'{ID}-story'] = story_slide(n)
+    S[f'{ID}-break'] = S[f'{ID}-break'].replace('</aside>', E(' STORY BREAK (optional): if you run the Story break on the next slide, keep the movement to 2 minutes (30 to 32) and the story to 2 minutes (32 to 34). If you skip the story, take the full four minutes for the movement.') + '</aside>', 1)
     # go further strip on the explore slide
     S[f'{ID}-explore1'] = add_go_further(S[f'{ID}-explore1'], G['go2']['q'])
     # notes of explore1: add the go-further answer
@@ -189,8 +220,9 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
 
 def order(order_list, n):
     ID = f'p4l{n}'
-    o = [x for x in order_list if x not in (f'{ID}-check', f'{ID}-reflect')]
+    o = [x for x in order_list if x not in (f'{ID}-check', f'{ID}-reflect', f'{ID}-story')]
     o.insert(o.index(f'{ID}-warm1'), f'{ID}-check')
+    o.insert(o.index(f'{ID}-break') + 1, f'{ID}-story')
     # reflection is the last slide (L10: before the end slide)
     if f'{ID}-end' in o:
         o.insert(o.index(f'{ID}-end'), f'{ID}-reflect')

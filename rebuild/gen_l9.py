@@ -223,3 +223,4 @@ p1fix.finish(D,9,{'l9-ws1':'40–50 MIN','l9-ws1ans':'50–52 MIN','l9-teachunit
 import p1neutral; p1neutral.apply(D,9)
 
 import p1round2; p1round2.apply(D,9)
+import p1stories; p1stories.apply(D,9)

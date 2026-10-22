@@ -24,8 +24,12 @@ const reflect = g => `<div class="p" style="border:2.5px solid #1B2A49;border-ra
   + `<div style="margin-bottom:2px">What helped me:${g.unstuck.map(u => tick + esc0(u)).join('')}${tick}I asked for help${tick}I am still stuck (my tutor will read this at the next lesson)</div></div>`;
 const invest = (g, n) => `<div class="p" style="border:2.5px dashed #1F7A6F;border-radius:6px;background:#F4FAF8;padding:6px 14px 8px;margin:10px 4px 0;font-size:14px;line-height:1.45;break-inside:avoid"><b style="font-size:17px;color:#1F7A6F">Investigation</b> <span style="font-size:12.5px">(a puzzle with more than one good answer. Try it any time you like, or at home.)</span><div style="margin-top:3px"><b>${esc0(g.invest.title)}.</b> ${esc0(g.invest.text)}${g.invest.need ? ' <i>' + esc0(g.invest.need) + '</i>' : ''}</div><div style="color:#1F7A6F;margin:3px 0 4px"><b>${esc0(g.invest.first)}</b></div>`
   + (g.fig === 'grid' ? gridSvg() + '<br>' + line(96) : [1, 2, 3, 4, 5, 6].map(() => line(96)).join('<br>')) + '</div>';
+// Story corner: a small box on the last core page (2-3 sentence blurb + an optional try-it; the answer is in the tutor guide answer key only)
+const storyBox = n => { const s = L.stories[String(n)];
+  return `<div class="p" style="border:2.5px solid #1B2A49;border-radius:6px;background:#EAF3FB;padding:4px 12px 5px;margin:8px 4px 0;font-size:12.5px;line-height:1.4;break-inside:avoid;max-width:78%"><b style="font-size:14.5px;color:#1F7A6F">Story corner: ${esc0(s.name)}</b> <span style="font-size:11px;color:#3B4A6B">${esc0(s.country)}, ${esc0(s.years)}</span>`
+    + `<div style="margin-top:2px">${esc0(s.blurb)}</div><div style="margin-top:3px"><b style="color:#1F7A6F">Try it (if you like):</b> ${esc0(s.try_it)}</div><div style="margin-top:3px">My answer: ${line(70)}</div></div>`; };
 const coreEnd = n => { const g = L.gaps[String(n)]; const ls = L.lessons[n - 1];
-  return [`<div class="p lh pb"><span class="lbadge">Lesson ${n}</span><span class="ltopic">Before you go: Investigation and Looking back</span></div>`, invest(g, n), reflect(g)]; };
+  return [`<div class="p lh pb"><span class="lbadge">Lesson ${n}</span><span class="ltopic">Before you go: Investigation and Looking back</span></div>`, invest(g, n), reflect(g), storyBox(n)]; };
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];

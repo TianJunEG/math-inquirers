@@ -288,6 +288,7 @@ order=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','w
 order=[PFX+o for o in order]
 os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 import p3_gifted; order[:]=p3_gifted.add(S,order,7)  # close-the-gaps: warm-up check + look-back slides
+import p3_stories; order[:]=p3_stories.add(S,order,7)  # mathematician story break (optional)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.startswith(PFX) and f[:-5] not in order: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

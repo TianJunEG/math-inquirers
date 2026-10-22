@@ -19,6 +19,12 @@ const reflect = n => `<div class="p" style="border:3px solid #1F7A6F;border-radi
 <div style="margin:5px 0">What helped me:${bx}a picture or model${bx}a list or table${bx}a simpler number${bx}my partner${bx}I asked for help${bx}checking my estimate</div>
 <div style="margin:5px 0">Next time I will try ______________________________________________________________</div>
 <div style="margin:5px 0">${bx}${L.stuckTick(n)}${bx}Pass</div></div>`;
+// Story corner box (Investigation page, under the reflection): a true 2-3 sentence blurb and an optional try-it. No answer on the child page (the answer is in the tutor guide).
+const storyBox = n => { const st = L.stories[n];
+  return `<div class="p" style="border:3px solid #D9662B;border-radius:14px;padding:6px 14px;margin-top:10px;background:#FFF9EC;page-break-inside:avoid"><div style="font-weight:800;font-size:17px;color:#D9662B;margin-bottom:2px">Meet a mathematician: ${st.short}  <span style="font-weight:400;font-size:13px;color:#444">(${st.yshort}, ${st.cshort}. Optional.)</span></div>
+<div style="font-size:14px;line-height:1.3;margin:2px 0">${st.blurb}</div>
+<div style="font-size:14px;line-height:1.3;margin:3px 0"><b style="color:#D9662B">Try it (optional):</b> ${st.q}</div>
+<div style="font-size:14px;margin:4px 0 1px">My answer ________________________________________________________________</div></div>`; };
 // Neutral choice line at the top of page 1 (one short line; Lesson 1 says "question 2").
 const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:5px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceAfter(n)}:</b> carry on, or try Think harder. Swap any time.</div>`;
 const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2.</b> Start with ${txt}, then choose. You do not have to finish. Last 10 minutes: Think harder, Go further or the Investigation.</div>`;
@@ -36,6 +42,7 @@ const extra = (n) => {
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);
   out.push(...lines(6));
   out.push(reflect(n));
+  out.push(storyBox(n));
   // Page 4: Think harder
   out.push(...hdr(n, ls.topic, 'THINK HARDER'));
   const DIAG = [4, 5, 8].includes(n) ? ' Draw a big, neat diagram first and label every length or angle you know.' : '';

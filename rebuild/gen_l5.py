@@ -118,3 +118,4 @@ p1fix.finish(D,5,{'l5-ws1':'42–52 MIN','l5-ws1ans':'52–54 MIN','l5-teachbar'
 import p1neutral; p1neutral.apply(D,5)
 
 import p1round2; p1round2.apply(D,5)
+import p1stories; p1stories.apply(D,5)

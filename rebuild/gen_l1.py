@@ -132,3 +132,4 @@ p1fix.patch(D,'routine',[('<td>40–70</td><td><b>Worksheet</b></td><td>Pairs, t
 import p1neutral; p1neutral.apply(D,1)
 
 import p1round2; p1round2.apply(D,1)
+import p1stories; p1stories.apply(D,1)

@@ -369,3 +369,5 @@ json.dump(deck, open(os.path.join(D, 'deck.json'), 'w'), indent=1, ensure_ascii=
 print(len(order), 'slides written to', os.path.normpath(D))
 
 import p6_gaps; p6_gaps.apply(8)
+
+import p6_stories; p6_stories.apply(8)

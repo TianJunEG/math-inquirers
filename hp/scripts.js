@@ -122,3 +122,10 @@ module.exports = {
     close: ['“You are real inquirers now. Here is your certificate and your completed inquiry journal.”', 'Give each child a certificate. Tell them one specific thing they did well.']
   }
 };
+
+// Mathematician story break (optional, 2 minutes) for each lesson. Data: stories_p1.json.
+const _STORIES = require('./stories_p1.json');
+Object.keys(module.exports).forEach(k => {
+  const s = _STORIES[k]; if (!s) return;
+  module.exports[k].story = 'Story break (optional, 2 minutes): after the movement, show the Story break slide and read it aloud, slowly. In short: ' + s.blurb + ' Link to our lesson: ' + s.link + ' Then offer the try-it question, only if you like: “' + s.q + '” (the answer is in the answer key). ' + (s.legend ? 'Say plainly: ' + (k === '8' ? 'the cats and animals picture is our own example, not Euler’s.' : 'the taxi 1729 part is a story Hardy told himself.') + ' ' : '') + 'SKIP: if time is short or the group is tired, say “We will keep this story for another day” and go straight to the worksheet. Nothing later depends on it.';
+});

@@ -85,6 +85,15 @@ ask([
   ['Two children disagree', '“Both of you, convince the group using objects.” Let the objects decide.']
 ], 'If…', 'Then…');
 
+/* ---------- Level 5 stories page ---------- */
+G.push(h1('Level 5 mathematician stories', true));
+G.push(tx('Every lesson has an optional 2-minute Story break inside the brain break (minutes 33 to 37): a short true story about one mathematician, shown on its own slide, with one optional try-it question. It is skippable: if you are short of time or the group needs the full break, say "we will skip the story today" and go on to the workbook at minute 37. Nobody is marked, children are invited as a whole group (volunteers only, pass is always fine), and the try-it answer is in the speaker notes and in the answer key for that lesson. Each story also appears as a small corner box on the Investigation page of the workbook (no answer there). The researched sources are in docs/stories/final_p5.json.'));
+{ const ST = L.stories, W = [900, 2000, 2400, 1700, 2900];
+  G.push(tbl(W, [row([hd('Lesson', W[0]), hd('Person', W[1]), hd('Country', W[2]), hd('Years', W[3]), hd('Link to the lesson', W[4])]),
+    ...L.lessons.map(l => { const st = ST[l.n]; return row([c2(String(l.n), W[0], { align: AlignmentType.CENTER, bold: true }), c2(st.name, W[1], { bold: true }), c2(st.country, W[2]), c2(st.years, W[3]), c2(st.link, W[4])]); })])); }
+G.push(h2('Telling the stories honestly'));
+['Say the label when there is one. Famous tales are told as tales: "a story often told about…", "historians are not sure".', ...L.lessons.filter(l => L.stories[l.n].legend).map(l => 'Lesson ' + l.n + ' (' + L.stories[l.n].short + '): ' + L.stories[l.n].legend), 'Do not add dialogue, feelings or childhood scenes that are not in the story. If a child asks something you do not know, say "good question, let us find out", not a guess.', 'Lesson 6: the try-it uses rate (distance in each hour) only, because the program does not teach speed.'].forEach(s => G.push(bu(s)));
+
 L.lessons.forEach(l => {
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
@@ -128,6 +137,7 @@ L.lessons.forEach(l => {
 
   G.push(seg('33–37 min', 'Brain break'));
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
+  doo([s.story]);
 
   G.push(seg('37–72 min', 'Workbook (page 1 in pairs, check, teaching, page 2 alone)'));
   doo(['Minute 37: give out the workbook. Say “Pairs first. Talk before you write.”', 'Minutes 37 to 49: pairs work on page 1. Minutes 49 to 53: check page 1 together (four minutes, so every part can be explained). Minutes 53 to 58: the short teaching slides for the page 2 question types. Minutes 58 to 72: each child works alone on page 2; it is a menu, not a wall, so nobody has to finish, and minutes 62 to 72 are protected open think time for Think harder, Go further or the Investigation. Minutes 72 to 76: check page 2 together.']);
@@ -156,6 +166,7 @@ L.lessons.forEach(l => {
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
   l.key.forEach(k => G.push(p([t(k[0] + '  ', { bold: true, size: 20 }), t(k[1], { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
+  G.push(p([t('Story try-it  ', { bold: true, size: 20 }), t('(optional, ' + L.stories[l.n].short + ')  ' + L.stories[l.n].a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
 });
 
 /* ---------- Tracker ---------- */
