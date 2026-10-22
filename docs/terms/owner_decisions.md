@@ -24,3 +24,7 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 ## Resolved after follow-up (22 Oct 2026)
 - **Term 1 is written as new lessons.** The holiday course stays a standalone foundation course; all four terms are new content (40 new lessons per level). Holiday lessons are not reused; spiral review of holiday topics is allowed in warm-ups only.
 - **Full-term discount: 5%.**
+
+## Level 1 Term 1 content level (22 Oct 2026, after the independent workbook audits)
+- **Keep the stronger arithmetic.** Term 1 stays above the school Primary 1 quiz range (e.g. two-digit minus two-digit, crossing a ten, sums above 40). Do not pull Start here back to the school ceiling.
+- Consequences for the fix pass: keep the content, but (a) make every such Start here item approachable with scaffolding (tens bars, number line, bundles, worked partner step) so it is still explored in class, (b) say plainly in the tutor guide and parent summary that Term 1 goes beyond the school P1 syllabus on purpose (no overclaiming of 'MOE-aligned'), (c) keep tier labels honest: if an item is not approachable after class exploration, move it to Think harder.
