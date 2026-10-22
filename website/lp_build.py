@@ -52,7 +52,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 
 <section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>A taste of Lesson 1</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
 
-<section class="sec" id="classes"><div class="shead"><span class="eyebrow">Class times</span><h2>Choose a group</h2><p class="muted">Each group meets twice a week for 5 weeks. Times are to confirm.</p></div><div class="sessions" id="sess"></div></section>
+<section class="sec" id="classes"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Choose a group</h2><p class="muted">Lessons start <b>Mon 23 Nov</b>. Each group meets twice a week for 5 weeks, 90 minutes a lesson, live online, up to 8 children. If a group fills, we open another.</p><div class="draft">Beta fee: S$<span id="betaPer"></span> a lesson, S$<span id="betaTot"></span> for all 10 lessons (to confirm).</div></div><div class="sessions" id="sess"></div><p class="small muted" style="margin-top:12px">Fri 25 Dec is Christmas Day, so the last lesson of a Friday group may move (to confirm). Each group has the same two weekly times for all 5 weeks.</p></section>
 
 <section class="sec" id="price"><div class="shead"><span class="eyebrow">Price</span><h2>Everything included</h2></div><div class="pricebox"><div class="pcard hot"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:var(--card)">Introductory price</span><div class="amt" id="pE"></div><p id="pEnote"></p></div><div class="pcard"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px">Regular price</span><div class="amt" id="pR"></div><p>S$65 a lesson for new families from Term 2 2027 (22 Mar). Founding families keep S$50 for all of 2027 if they enrol every term.</p></div></div><p class="small muted">For 15 hours of teaching, the printed workbook, cut-out kit, Inquiry Journal and certificate. No payment now: we confirm your place first and then send payment details.</p></section>
 
@@ -92,10 +92,8 @@ var CONFIG={
   whatsappShow:"+65 9000 0000 (to confirm)",
   email:"hello@mathinquirers.example (to confirm)",
   price:650, intro:500,
-  classes:[
-    {id:"A",name:"Group A",mode:"Online",days:"Mon & Thu",time:"9:30–11:00am",start:"Mon 23 Nov",venue:"Live video class"},
-    {id:"B",name:"Group B",mode:"Online",days:"Tue & Fri",time:"2:30–4:00pm",start:"Tue 24 Nov",venue:"Live video class"},
-    {id:"C",name:"Group C",mode:"Online",days:"Wed & Sat",time:"10:00–11:30am",start:"Wed 25 Nov",venue:"Live video class"}]
+  beta:__BETA__,
+  classes:__CLASSES__
 };
 var LESSONS=[["Count with the Frog","Number patterns and skip counting"],["Number Bond Inquiry","Parts and wholes to 20"],["Let's Plan the Fruit Party","Picture graphs and tallies"],["Pattern Inquiry","Shape and number patterns"],["Mystery Number","Working backwards"],["Coin Combos","Money and finding every way"],["Shape Safari","2D shapes, sides and corners"],["Logic Lab","Clues, sorting and Venn diagrams"],["Measure It!","Length with non-standard units"],["Challenge Day","Mixed puzzles and the certificate"]];
 function $(id){return document.getElementById(id)}
@@ -108,23 +106,31 @@ $("ebLeft").textContent="first intake · workbook included";
 $("pE").textContent="S$"+CONFIG.intro;$("pR").textContent="S$"+CONFIG.price;
 $("pEnote").textContent="Introductory S$50 a lesson until Term 1 2027 ends (12 Mar 2027), workbook included. Save S$"+(CONFIG.price-CONFIG.intro)+".";
 $("lessons").innerHTML=LESSONS.map(function(l,i){return '<div class="lesson"><div class="n">'+(i+1)+'</div><div class="t">'+l[0]+'</div><div class="s">'+l[1]+'</div></div>'}).join("");
-$("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill '+(c.mode==="Online"?"p-ok":"p-wait")+'">'+esc(c.mode)+'</span><span class="small muted">Up to 8 children</span></div><h3>'+esc(c.name)+'</h3><p><b>'+esc(c.days)+'</b>, '+esc(c.time)+'<br><span class="muted small">Starts '+esc(c.start)+' · '+esc(c.venue)+'</span></p><a class="btn sm" href="#register" data-pick="'+c.id+'" style="justify-self:start">Choose '+esc(c.name)+'</a></div>'}).join("");
-$("r5").innerHTML=CONFIG.classes.map(function(c){return '<option value="'+c.id+'">'+esc(c.name+" · "+c.mode+" · "+c.days+", "+c.time+" · from "+c.start)+'</option>'}).join("")+'<option value="any">Any group is fine</option>';
+$("betaPer").textContent=CONFIG.beta.per;$("betaTot").textContent=CONFIG.beta.total;
+function t12(t){var p=t.split(":"),h=+p[0],m=p[1],a=h>=12?"pm":"am";h=h%12||12;return h+":"+m+a}
+function slotText(c){return c.sessions.map(function(x){return x.day+" "+t12(x.start)+"–"+t12(x.end)}).join(" & ")}
+$("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill p-ok">Open</span><span class="small muted">Up to '+c.seats+' children</span></div><h3>Level '+c.level+' <span class="muted small">ages '+esc(c.ages)+'</span></h3><p>'+c.sessions.map(function(x){return '<b>'+esc(x.day)+'</b> '+esc(t12(x.start))+'–'+esc(t12(x.end))}).join('<br>')+'<br><span class="muted small">First lesson '+esc(c.first)+' · last '+esc(c.last)+'<br>Live video class</span></p><a class="btn sm" href="#register" data-pick="'+c.id+'" data-level="'+c.level+'" style="justify-self:start">Choose Level '+c.level+'</a></div>'}).join("");
+function fillGroups(){var lv=$("r4").selectedIndex+1;var g=CONFIG.classes.filter(function(c){return c.level===lv});$("r5").innerHTML=g.map(function(c){return '<option value="'+c.id+'">'+esc("Level "+c.level+" · "+slotText(c)+" · from "+c.first)+'</option>'}).join("")+'<option value="any">Any group for this level</option>'}
+fillGroups();$("r4").addEventListener("change",fillGroups);
 ["waShow","waFoot"].forEach(function(i){$(i).textContent=CONFIG.whatsappShow});["emShow","emFoot"].forEach(function(i){$(i).textContent=CONFIG.email});
-document.addEventListener("click",function(e){var p=e.target.closest("[data-pick]");if(p)$("r5").value=p.dataset.pick});
+document.addEventListener("click",function(e){var p=e.target.closest("[data-pick]");if(p){$("r4").selectedIndex=+p.dataset.level-1;fillGroups();$("r5").value=p.dataset.pick}});
 $("pzCheck").addEventListener("click",function(){var v=($("pzA").value||"").replace(/\\D/g,"");$("pzMsg").innerHTML=v==="21"?'<div class="msg ok">Correct! Now ask: how do you know? 7 hops of 3 is 21.</div>':'<div class="msg no">Not yet. Try counting along a number line in 3s.</div>'});
 $("reg").addEventListener("submit",function(e){
   e.preventDefault();
   var f={p:$("r1").value.trim(),m:$("r2").value.trim(),c:$("r3").value.trim(),l:$("r4").value,g:$("r5").options[$("r5").selectedIndex].text,n:$("r6").value.trim()};
   if(!f.p||!f.m||!f.c){$("regMsg").innerHTML='<div class="msg no">Fill in your name, mobile and your child\\'s name.</div>';return}
   if(!$("r7").checked){$("regMsg").innerHTML='<div class="msg no">Tick the consent box so we can contact you.</div>';return}
-  var price="introductory S$"+CONFIG.intro;
-  var msg="Hi! I'd like to register for the Math Inquirers December Holiday Program.\\n\\nParent: "+f.p+"\\nMobile: "+f.m+"\\nChild: "+f.c+" ("+f.l+")\\nGroup: "+f.g+"\\nPrice: "+price+(f.n?"\\nNote: "+f.n:"");
+  var price="beta S$"+CONFIG.beta.per+" a lesson, S$"+CONFIG.beta.total+" for all 10 lessons (to confirm)";
+  var msg="Hi! I'd like to register for the Math Inquirers November Beta.\\n\\nParent: "+f.p+"\\nMobile: "+f.m+"\\nChild: "+f.c+" ("+f.l+")\\nGroup: "+f.g+"\\nPrice: "+price+(f.n?"\\nNote: "+f.n:"");
   var url="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(msg);
   $("regMsg").innerHTML='<div class="waout"><div class="msg ok">Almost done. Tap the button to send this on WhatsApp.</div><pre>'+esc(msg)+'</pre><div class="row"><a class="btn teal" href="'+url+'" target="_blank" rel="noopener">Open WhatsApp</a><button class="btn alt sm" type="button" id="cp">Copy message</button></div><p class="small muted">If WhatsApp does not open, copy the message and send it to '+esc(CONFIG.whatsappShow)+' or '+esc(CONFIG.email)+'.</p></div>';
   $("cp").addEventListener("click",function(){var b=this;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(msg).then(function(){b.textContent="Copied"},function(){b.textContent="Select the text above to copy"});else b.textContent="Select the text above to copy"});
 });
 })();
 </script>'''
+import json
+sch=json.load(open('data/beta_schedule.json'))
+cls=[dict(id=g['id'],level=g['level'],ages=g['ages'],seats=g['seats'],sessions=g['sessions'],first=g['first'],last=g['last']) for g in sch['groups']]
+html=html.replace('__CLASSES__',json.dumps(cls)).replace('__BETA__',json.dumps(dict(per=sch['price']['per_lesson'],total=sch['price']['total'])))
 open('mi_signup.html','w').write(html)
 print(len(html))

@@ -1,0 +1,82 @@
+{
+ "note": "Reserved cohorts: held in the calendar, not published. Release one for a level when its group is full (8 children).",
+ "reserved": [
+  {
+   "id": "R1",
+   "pair": [
+    [
+     "Wed",
+     "09:00",
+     "10:30"
+    ],
+    [
+     "Thu",
+     "09:00",
+     "10:30"
+    ]
+   ],
+   "for_levels": [
+    1,
+    2
+   ]
+  },
+  {
+   "id": "R2",
+   "pair": [
+    [
+     "Wed",
+     "10:30",
+     "12:00"
+    ],
+    [
+     "Thu",
+     "10:30",
+     "12:00"
+    ]
+   ],
+   "for_levels": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "id": "R3",
+   "pair": [
+    [
+     "Wed",
+     "12:00",
+     "13:30"
+    ],
+    [
+     "Thu",
+     "12:00",
+     "13:30"
+    ]
+   ],
+   "for_levels": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "R4",
+   "pair": [
+    [
+     "Sat",
+     "19:15",
+     "20:45"
+    ],
+    [
+     "Sun",
+     "16:15",
+     "17:45"
+    ]
+   ],
+   "for_levels": [
+    5,
+    6
+   ]
+  }
+ ]
+}
