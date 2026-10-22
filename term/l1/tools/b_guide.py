@@ -84,6 +84,9 @@ bx = lambda s: blank_tokens(E(s), 'guide')
 
 def q_html(q, tier_label=None):
     vis = f'<div class="vis">{svg.render_visual(q["visual"])}</div>' if q.get('visual') else ''
+    for v in q.get('visuals') or []:
+        vis += f'<div class="vis">{svg.render_visual(v)}</div>'
+    if q.get('tf'): vis += '<div class="small">True/False statements: ' + '; '.join(E(str(x.get('s', x)) if isinstance(x, dict) else str(x)) for x in q['tf']) + '</div>'
     parts = ''.join(f'<div class="small">{E("(" + p["l"] + ")  " if p["l"] else "")}{bx(p["text"])}</div>' for p in q.get('parts', []))
     h = f'<div class="h"><span class="id">{q["id"]}</span><b>{bx(q["text"])}</b></div>'
     inner = f'{vis}{h}{parts}<div class="a">Answer: {E(q["answer"])}</div>'
@@ -107,7 +110,7 @@ def build_html(d):
             ('Child materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['child']) + '</ul>'),
             ('Tutor materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['tutor']) + '</ul><div class="small">' + E(d['materials']['notes']) + '</div>'),
             ('Tiers', 'Start here (' + str(len(d['tiers']['start'])) + ' questions, pages 1 and 2), Think harder (' + str(len(d['tiers']['think'])) + ', page 3), Go further (' + str(len(d['tiers']['go'])) + ', page 4), Investigation and look-back (page 5)' + (f', kit page{"s" if len(kits(d)) > 1 else ""} (page{"s" if len(kits(d)) > 1 else ""} 6' + (f'-{5 + len(kits(d))}' if len(kits(d)) > 1 else '') + ')' if kits(d) else '') + '. Labels are neutral; nobody is told which page they are on.'),
-            ('Contest-style move', 'Used at Think harder only: ' + '; '.join(E(x) for x in d['contest_moves']) + '. Never advertised to children or parents.')]
+            ('Contest-style move', 'Used at ' + E(d.get('contest_where') or 'Think harder only') + ': ' + '; '.join(E(x) for x in d['contest_moves']) + '. Never advertised to children or parents.')]
     for a, b in rows: H.append(f'<tr><th style="width:110px">{a}</th><td>{b}</td></tr>')
     H.append('</table>')
     H.append('<div class="box t"><b>Before the lesson</b><ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['tutor_prep']) + '</ul></div>')
@@ -148,10 +151,10 @@ def build_html(d):
     H.append(f'<h3>Investigation (page 5): {E(inv["title"])}</h3><div class="q"><b>Easy first step:</b> {E(inv["first"])}<br><b>Then:</b> {E(inv["text"])}<div class="a">Model answer: {E(inv["answer"])}</div><div class="m"><b>Look for:</b> {E(inv["look_for"])}</div><div class="m"><b>Common mistakes:</b> {"; ".join(E(m) for m in inv["mistakes"])}</div></div>')
     tk = d['talk']
     H.append(f'<h3>Talk and explain ({rng("talk")})</h3><div class="q"><b>{E(tk["question"])}</b> <span class="small">Sentence starter: {E(tk["starter"])}</span><div class="a">Model answer: {E(tk["answer"])}</div><div class="m"><b>Look for:</b> {E(tk["look_for"])} Volunteers first, a pass is always fine, never call a child by name to answer, no tallies.</div></div>')
-    H.append(f'<h3>Exit ticket ({rng("exit")}): 3 questions</h3>')
+    H.append(f'<h3>Exit ticket ({rng("exit")}): {len(d["exit"])} question{"s" if len(d["exit"]) != 1 else ""}</h3>')
     for q in d['exit']: H.append(q_html(dict(q, hint='', mins=None)))
     lb = d['look_back']
-    H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (I will ask in the class chat or show my tutor on camera)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
+    H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (my grown-up will photograph this page for my tutor)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
     H.append('<h2>5. Home practice and online practice</h2><table><tr><th>#</th><th>Tier</th><th>Question</th><th>Answer</th></tr>')
     for h in d['home_practice']: H.append(f'<tr><td>{h["id"]}</td><td>{TIER_NAME[h["tier"]]}</td><td>{E(h["text"])}</td><td>{E(h["answer"])}</td></tr>')
     H.append('</table>')

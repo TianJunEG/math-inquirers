@@ -11,7 +11,7 @@ NAVY = '#1B2A49'; TEAL = '#1F7A6F'; YEL = '#FFC93C'; CREAM = '#FFF9EC'; MUTED = 
 FOOT_PARENT = 'Math Inquirers  •  Notice it. Test it. Explain why.'   # legacy; use foot_text(d)
 
 
-STUCK_TEXT = 'I am still stuck (I will ask in the class chat or show my tutor on camera)'
+STUCK_TEXT = 'I am still stuck (my grown-up will photograph this page for my tutor)'
 
 
 def foot_text(d):

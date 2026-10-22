@@ -22,21 +22,27 @@ def _prepare_items(items):
     for it in out:
         fig = it.pop('fig', None); base = it.pop('fig_base', None)
         if not fig: continue
+        tp0 = it.get('tpl')
+        if '{' in _j.dumps(fig) and not (tp0 and tp0.get('vars')):      # no variants: draw the figure as written (or its base)
+            it['svg'] = svg.render_visual(base or fig)
+            continue
         if '{' not in _j.dumps(fig):
             it['svg'] = svg.render_visual(fig)
             if it.get('tpl'): warns.append(f"{it['id']}: the picture is shown only for the authored numbers (variants have no picture); use fig with {{vars}} and fig_base")
         else:
-            it['svg'] = svg.render_visual(base)
             tp = it['tpl']; names = list(tp['vars'])
             combos = list(itertools.product(*[tp['vars'][n] for n in names]))
             if len(combos) > 80: warns.append(f"{it['id']}: {len(combos)} variants, pictures drawn for the first 80 only"); combos = combos[:80]
             svgs = {}
+            first = None
             for combo in combos:
                 env = dict(zip(names, combo))
                 full = dict(env)
                 for k, ex in tp.get('derive', {}).items():
                     full[k] = eval(re.sub(r'\b(%s)\b' % '|'.join(map(re.escape, full)), lambda m: str(full[m.group(1)]), ex).replace('//', '//'))
                 svgs[_j.dumps(env, separators=(',', ':'))] = svg.render_visual(_subst(fig, full))
+                if first is None: first = svgs[_j.dumps(env, separators=(',', ':'))]
+            it['svg'] = svg.render_visual(base) if base else first
             tp['svgs'] = svgs
         if len(it['svg']) > 60000: warns.append(f"{it['id']}: picture is {len(it['svg']) // 1000} KB")
     return out, warns

@@ -201,7 +201,7 @@ def groups(container='plate', n=3, each=3, icon_name='apple', counts=None, empty
     H = 20 + rows * (ch + 56 + gap) - gap + (62 if total else 0)
     if total is not None:
         body.append(f'<text x="14" y="{H - 14:.0f}" font-size="30" font-weight="800" fill="{NAVY}" font-family="{FONT}">Total: </text>')
-        body.append(token_svg(total, 150, H - 24, 80, 44, 30))
+        body.append(token_svg(total, 150, H - 24, 80, 50, 38))
     return _svg(W, H, ''.join(body), f'{n} {container}s')
 
 
@@ -261,7 +261,7 @@ def line_up(n=8, names=None, front='left', marker='door', labels='ordinal', high
     else:
         d = 1 if front == 'left' else -1
         body.append(f'<polygon points="{mx - d * 14:.1f},70 {mx + d * 18:.1f},94 {mx - d * 14:.1f},118" {_o(TEAL)}/>')
-    body.append(f'<text x="{mx:.1f}" y="30" font-size="24" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">FRONT</text>')
+    body.append(f'<text x="{mx:.1f}" y="30" font-size="30" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">FRONT</text>')
     for k in order:
         cx = pos(k)
         ic = (icons or {}).get(str(k)) or f'child{(k - 1) % 6 + 1}'
@@ -273,9 +273,9 @@ def line_up(n=8, names=None, front='left', marker='door', labels='ordinal', high
         elif labels == 'number': lab = str(k)
         elif labels == 'box': lab = '[]'
         if lab:
-            body.append(token_svg(lab, cx, 170, cell, 44, 26))
+            body.append(token_svg(lab, cx, 170, cell, 48, 34))
         if k in names:
-            body.append(f'<text x="{cx:.1f}" y="{20:.0f}" font-size="22" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(names[k])}</text>')
+            body.append(f'<text x="{cx:.1f}" y="{26:.0f}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(names[k])}</text>')
     if between:
         a, b = sorted(between)
         xa, xb = pos(a), pos(b)
@@ -299,13 +299,13 @@ def round_table(seats=6, names=None, hide=(), cell=70):
         a = -math.pi / 2 + (k - 1) * 2 * math.pi / seats
         x = cx + R * math.cos(a); y = cy + R * math.sin(a)
         if k in hide:
-            body.append(token_svg('[]', x, y, cell, cell, 26))
+            body.append(token_svg('[]', x, y, cell, cell, 32))
         else:
             body.append(icon(f'child{(k - 1) % 6 + 1}', x, y, cell * 0.9))
         lab = names.get(k, '')
         if lab:
             lx = cx + (R + 52) * math.cos(a); ly = cy + (R + 52) * math.sin(a)
-            body.append(f'<text x="{lx:.1f}" y="{ly + 8:.1f}" font-size="24" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lab)}</text>')
+            body.append(f'<text x="{lx:.1f}" y="{ly + 10:.1f}" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lab)}</text>')
     return _svg(W, H, ''.join(body), f'{seats} seats round a table')
 
 
@@ -319,7 +319,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
     brace={'text':'[]','over':'all'|index}: a bracket over the bars with a label; gap={'between':[0,1],'text':'?'}: dashed guide and
     bracket for the difference; units={'n':4,'text':'5'}: one bar of n equal cells; arrow={'from':0,'to':1,'v':6}: a transfer arrow."""
     bars = bars or []
-    name_w = max(name_w, max([len(str(b.get('name', ''))) for b in bars] + [0]) * 17 + 30)
+    name_w = max(name_w, max([len(str(b.get('name', ''))) for b in bars] + [0]) * 22 + 30)
     mx = max([b['len'] for b in bars] + [1])
     ux = unit_px or (860.0 / mx)
     oy = 70 if brace else 24
@@ -327,7 +327,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
     ys = []
     for i, b in enumerate(bars):
         y = oy + i * (bar_h + vgap); ys.append(y)
-        body.append(f'<text x="{name_w - 14}" y="{y + bar_h / 2 + 9:.1f}" font-size="30" font-weight="800" text-anchor="end" fill="{NAVY}" font-family="{FONT}">{_esc(b.get("name", ""))}</text>')
+        body.append(f'<text x="{name_w - 14}" y="{y + bar_h / 2 + 12:.1f}" font-size="38" font-weight="800" text-anchor="end" fill="{NAVY}" font-family="{FONT}">{_esc(b.get("name", ""))}</text>')
         segs = b.get('segments') or [{'v': b['len'], 'text': b.get('text', '')}]
         x = name_w
         for s in segs:
@@ -335,7 +335,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
             col = BAR_COL.get(s.get('colour') or b.get('colour', 'yellow'), YEL)
             body.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{bar_h}" fill="{col}" stroke="{NAVY}" stroke-width="3.2"/>')
             if s.get('text') not in (None, ''):
-                body.append(token_svg(s['text'], x + w / 2, y + bar_h / 2, w, bar_h, 32))
+                body.append(token_svg(s['text'], x + w / 2, y + bar_h / 2, w, bar_h, 40))
             x += w
         if units:
             pass
@@ -344,7 +344,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         for k in range(1, n):
             body.append(f'<line x1="{name_w + k * w:.1f}" y1="{y}" x2="{name_w + k * w:.1f}" y2="{y + bar_h}" stroke="{NAVY}" stroke-width="3.2"/>')
         if units.get('text') not in (None, ''):
-            for k in range(n): body.append(token_svg(units['text'], name_w + k * w + w / 2, y + bar_h / 2, w, bar_h, 30))
+            for k in range(n): body.append(token_svg(units['text'], name_w + k * w + w / 2, y + bar_h / 2, w, bar_h, 38))
     if gap:
         a, c = gap['between']
         xa = name_w + bars[a]['len'] * ux; xc = name_w + bars[c]['len'] * ux
@@ -353,14 +353,14 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         ytop, ybot = (ya, yc) if ys[a] < ys[c] else (ys[c] + bar_h, ys[a])
         body.append(f'<line x1="{xa:.1f}" y1="{ys[a] + bar_h}" x2="{xa:.1f}" y2="{ys[c]}" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="8 6"/>' if ys[a] < ys[c] else f'<line x1="{xc:.1f}" y1="{ys[c] + bar_h}" x2="{xc:.1f}" y2="{ys[a]}" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="8 6"/>')
         body.append(f'<path d="M{lo:.1f} {ys[max(a, c)] + bar_h + 12} V{ys[max(a, c)] + bar_h + 22} H{hi:.1f} V{ys[max(a, c)] + bar_h + 12}" fill="none" stroke="{RED}" stroke-width="4"/>')
-        body.append(token_svg(gap.get('text', '?'), (lo + hi) / 2, ys[max(a, c)] + bar_h + 52, max(hi - lo, 60), 44, 32))
+        body.append(token_svg(gap.get('text', '?'), (lo + hi) / 2, ys[max(a, c)] + bar_h + 52, max(hi - lo, 60), 50, 40))
     if brace:
         over = brace.get('over', 'all')
         idxs = range(len(bars)) if over == 'all' else [over]
         wmax = max(bars[i]['len'] for i in idxs) * ux
         y0 = ys[min(idxs)] - 14
         body.append(f'<path d="M{name_w} {y0 + 10} V{y0} H{name_w + wmax:.1f} V{y0 + 10}" fill="none" stroke="{TEAL}" stroke-width="4"/>')
-        body.append(token_svg(brace.get('text', '?'), name_w + wmax / 2, y0 - 22, wmax, 44, 32))
+        body.append(token_svg(brace.get('text', '?'), name_w + wmax / 2, y0 - 22, wmax, 50, 40))
     if arrow:
         a, c = arrow['from'], arrow['to']
         xs = name_w + bars[a]['len'] * ux - 12; ys0 = ys[a] + bar_h + 4
@@ -369,7 +369,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         body.append(f'<path d="M{xs:.1f} {ys0:.1f} C{xs:.1f} {mid:.1f} {xe:.1f} {mid:.1f} {xe:.1f} {ye - 14:.1f}" fill="none" stroke="{RED}" stroke-width="4.5" stroke-linecap="round"/>')
         body.append(f'<polygon points="{xe:.1f},{ye + 2:.1f} {xe - 11:.1f},{ye - 16:.1f} {xe + 11:.1f},{ye - 16:.1f}" fill="{RED}"/>')
         if arrow.get('v') is not None:
-            body.append(token_svg(str(arrow['v']), (xs + xe) / 2 + 52, mid + 4, 80, 44, 30))
+            body.append(token_svg(str(arrow['v']), (xs + xe) / 2 + 52, mid + 4, 80, 50, 38))
     W = name_w + mx * ux + 40
     H = oy + len(bars) * (bar_h + vgap) + (50 if gap else 0)
     return _svg(W, H, ''.join(body), 'bar model: ' + ', '.join(f'{b.get("name", "")} {b["len"]}' for b in bars))
@@ -415,7 +415,7 @@ def _sym(kind, x, y, s=44):
     if kind == 'circle':
         return f'<circle cx="{x}" cy="{y}" r="{a}" fill="#F6C9D0" stroke="{NAVY}" stroke-width="3"/><circle cx="{x}" cy="{y}" r="{a * 0.4}" fill="{NAVY}"/>'
     if kind == 'square':
-        return f'<rect x="{x - a}" y="{y - a}" width="{s}" height="{s}" fill="#BFE3DC" stroke="{NAVY}" stroke-width="3"/><path d="M{x - a} {y - a} L{x + a} {y + a} M{x + a} {y - a} L{x - a} {y + a}" stroke="{NAVY}" stroke-width="2.4"/>'
+        return f'<rect x="{x - a}" y="{y - a}" width="{s}" height="{s}" fill="#BFE3DC" stroke="{NAVY}" stroke-width="3"/><rect x="{x - a * 0.45}" y="{y - a * 0.45}" width="{a * 0.9}" height="{a * 0.9}" fill="{NAVY}"/>'
     if kind == 'triangle':
         return f'<polygon points="{x},{y - a} {x + a * 1.1},{y + a * 0.85} {x - a * 1.1},{y + a * 0.85}" fill="#FFE59A" stroke="{NAVY}" stroke-width="3"/><line x1="{x - a * 0.6}" y1="{y + a * 0.3}" x2="{x + a * 0.6}" y2="{y + a * 0.3}" stroke="{NAVY}" stroke-width="2.4"/>'
     if kind == 'star':
@@ -428,29 +428,39 @@ def _sym(kind, x, y, s=44):
     raise ValueError('unknown symbol ' + kind)
 
 
-def picture_equation(rows=None, values=None):
-    """rows=[{"items":[{"sym":"circle","n":2},{"sym":"triangle","n":1}],"op":"+","total":"17"}], values={"circle":"[]"} draws a legend with answer boxes."""
+def picture_equation(rows=None, values=None, sym=60):
+    """rows=[{"items":[{"sym":"circle","n":2},{"num":"5"},{"sym":"triangle"}],"op":"+","total":"17"}]; an item {"num": 5} (or "[]") puts a number or answer box in the line.
+    values={"circle":"[]"} draws a legend with answer boxes. sym = symbol size (default 60, large enough for A4 print)."""
     rows = rows or []
-    body = []; y = 40
+    body = []; y = sym * 0.75; maxw = 0
+    gap = 26
     for r in rows:
-        x = 20
+        x = 16
         op = r.get('op', '+')
         first = True
         for it in r['items']:
-            for _ in range(it.get('n', 1)):
+            reps = it.get('n', 1) if 'sym' in it else 1
+            for _ in range(reps):
                 if not first:
-                    body.append(f'<text x="{x + 12}" y="{y + 12}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{op}</text>'); x += 38
-                body.append(_sym(it['sym'], x + 24, y)); x += 52; first = False
-        body.append(f'<text x="{x + 16}" y="{y + 13}" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">=</text>')
-        body.append(token_svg(r.get('total', '[]'), x + 90, y, 90, 56, 36))
-        y += 76
+                    body.append(f'<text x="{x + 22}" y="{y + 17}" font-size="54" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{it.get("op", op)}</text>'); x += 44 + 8
+                if 'sym' in it:
+                    body.append(_sym(it['sym'], x + sym / 2, y, sym)); x += sym + gap * 0.4
+                else:
+                    t = str(it.get('num', it.get('text', '[]')))
+                    w = max(sym, 34 * len(t) + 28) if t != '[]' else sym * 1.2
+                    body.append(token_svg(t, x + w / 2, y, w, sym, 48)); x += w + gap * 0.4
+                first = False
+        body.append(f'<text x="{x + 24}" y="{y + 18}" font-size="56" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">=</text>')
+        t = str(r.get('total', '[]')); tw = max(sym * 1.4, 34 * len(t) + 30) if t != '[]' else sym * 1.6
+        body.append(token_svg(t, x + 64 + tw / 2, y, tw, sym, 50)); x += 64 + tw
+        maxw = max(maxw, x); y += sym + 36
     if values:
-        x = 20
+        x = 16; y += 10
         for k, v in values.items():
-            body.append(_sym(k, x + 24, y + 20)); body.append(f'<text x="{x + 62}" y="{y + 32}" font-size="34" font-weight="800" fill="{NAVY}" font-family="{FONT}">=</text>')
-            body.append(token_svg(v, x + 130, y + 20, 80, 52, 34)); x += 220
-        y += 70
-    return _svg(560, y + 6, ''.join(body), 'picture equation')
+            body.append(_sym(k, x + sym / 2, y, sym)); body.append(f'<text x="{x + sym + 30}" y="{y + 18}" font-size="52" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">=</text>')
+            body.append(token_svg(v, x + sym + 100, y, 90, sym, 48)); x += sym + 200
+        maxw = max(maxw, x); y += sym + 20
+    return _svg(max(maxw + 16, 560), y + 4, ''.join(body), 'picture equation')
 
 
 # ------------------------------------------------------------------ ten-frame in two colours, dominoes
@@ -554,7 +564,7 @@ def render(v):
     if t == 'table':
         return table(v.get('head'), v.get('rows'), v.get('col_w'), v.get('first_col'))
     if t == 'picture_equation':
-        return picture_equation(v.get('rows'), v.get('values'))
+        return picture_equation(v.get('rows'), v.get('values'), v.get('sym', 60))
     if t == 'domino':
         return domino(v.get('left', 0), v.get('right', 0))
     return None

@@ -118,13 +118,20 @@ def qs_block(d, ids, short):
         parts = ''
         for p in q.get('parts', []):
             if short: continue
-            parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E("(" + p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
+            parts += f'<p style="font-size:{30 if compact else 34}px;font-weight:600;color:{MUTED}">{E("(" + p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
         if q.get('visual') and q['visual'].get('type') != 'hundred':   # a 100 square does not fit in a question row
             vis = f'<div style="width:{240 if compact else 340}px;flex:none">{svg.render_visual(q["visual"])}</div>'
-        rows.append(f'<div style="{CARD}padding:{8 if compact else 16}px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
+        wide_vis = ''
+        for vv in q.get('visuals') or []:
+            if vv.get('type') == 'hundred': continue
+            wide = vv.get('type') in ('table', 'bar_model', 'line_up', 'seq', 'number_line', 'picture_equation')
+            w = (440 if compact else 560) if wide else (200 if compact else 280)
+            vis += f'<div style="width:{w}px;flex:none">{svg.render_visual(vv)}</div>'
+        if wide_vis: parts += wide_vis
+        rows.append(f'<div style="{CARD}padding:{5 if compact else 16}px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
                     f'<div style="flex:1;display:flex;flex-direction:column;gap:4px"><p style="font-size:{32 if compact else 36}px;font-weight:700;line-height:1.2">{E(text)}</p>{parts}</div>{vis}</div>')
-    return f'<div style="display:flex;flex-direction:column;gap:16px">{"".join(rows)}</div>'
+    return f'<div style="display:flex;flex-direction:column;gap:{10 if compact else 16}px">{"".join(rows)}</div>'
 
 
 def blanks_dash(t):
@@ -149,7 +156,7 @@ def lookback(d):
             ('The hardest part was ...', opts(lb['hardest'])),
             ('What helped me', opts(lb['helped'])),
             ('Next time I will try', opts(lb['next'])),
-            ('', opts(['I am still stuck (I will ask in the class chat or show my tutor on camera)', 'I would like to pass']))]
+            ('', opts([STUCK_TEXT, 'I would like to pass']))]
     inner = ''
     for k, (a, b) in enumerate(rows):
         inner += (f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:32px;font-weight:800;color:{TEAL}">{E(a)}</p>'
@@ -181,6 +188,11 @@ def render_blocks(d, blocks, cols=1):
     return ''.join(out)
 
 
+def title_px(t):
+    n = len(t)
+    return 128 if n <= 20 else 104 if n <= 32 else 88 if n <= 44 else 76 if n <= 60 else 64
+
+
 def slide_html(d, s):
     kind = s['kind']
     time = slide_time(d, s) if not s.get('optional') else 'OPTIONAL'
@@ -198,7 +210,7 @@ def slide_html(d, s):
         foot = f'<p style="position:absolute;left:128px;bottom:44px;width:1400px;font-size:28px;color:#5B6785">{E(foot_text(d))}</p>'
     if kind == 'title':
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
-                f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(s["title"])}</h1>'
+                f'<h1 style="font-family:{HF};font-size:{title_px(s["title"])}px;font-weight:600;line-height:1.08;max-width:1300px;text-wrap:balance">{E(s["title"])}</h1>'
                 f'<p style="font-size:44px;color:#C9D4EC">{E(s.get("subtitle", ""))}</p>'
                 + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
         style = f'{bg};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px;position:relative;overflow:hidden'

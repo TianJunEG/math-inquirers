@@ -175,8 +175,10 @@ def check_slides_links(d):
     # page references in script/notes must match
     pages = {q['page'] for t in ('start', 'think', 'go') for q in d['tiers'][t]} | {d['tiers']['investigation']['page']}
     txt = ' '.join(ln.get('text', '') for seg in d['script']['segments'] for ln in seg['lines']) + ' ' + ' '.join(s['note'] for s in d['slides'])
-    for m in re.finditer(r'page (\d)', txt, re.I):
-        if int(m.group(1)) not in pages | {6}: fail(f'link: text mentions page {m.group(1)} which does not exist (pages {sorted(pages)} and kit page 6)')
+    nk = max(1, len(kits(d)))
+    kp = set(range(6, 6 + nk)) | set(range(max(pages) + 1, max(pages) + 1 + nk))
+    for m in re.finditer(r'\bpages? (\d+)', txt, re.I):
+        if int(m.group(1)) not in pages | kp: fail(f'link: text mentions page {m.group(1)} which does not exist (pages {sorted(pages)} and kit pages {sorted(kp)})')
 
 
 def check_tiers(d):
@@ -293,6 +295,16 @@ def check_spare(d):
 
 
 def check_pages(d):
+    wbp = os.path.join(OUT, f"l{d['_num']}", f"L{d['_num']}_Workbook.pdf")
+    if os.path.exists(wbp):      # the built PDF is the truth; the layout model can over-report (the builder tightens pages to fit)
+        import pdfcheck
+        allf = pdfcheck.pdf_fill(wbp, 14, 16)
+        fills = allf[:len(allf) - len(kits(d))] if kits(d) else allf
+        d['_fills'] = fills
+        for i, f in enumerate(fills, 1):
+            if f < 0.80: warn(f'pages: workbook page {i} content ends at {f:.0%} of the page (target at least 85%): add a question or bigger writing space')
+        ok('pages: workbook page fill (measured on the built PDF) ' + ', '.join(f'{f:.0%}' for f in fills) + ' (kit pages excluded)')
+        return
     try:
         import b_print
         from playwright.sync_api import sync_playwright
@@ -592,6 +604,7 @@ def check_figures(d):
             for y in x: walk(y)
     for s in d['slides']: walk(s['blocks'])
     for q in all_questions(d) + d['exit']: walk(q)
+    walk(d['tiers']['investigation'])
     for it in d['online_practice']['items']:
         if it.get('fig') and not any('{' in json.dumps(it['fig']) for _ in [0]): specs.append(it['fig'])
     n = 0
@@ -620,8 +633,14 @@ def check_glyphs(d):
         p = os.path.join(od, f"L{d['_num']}_{name}.pdf")
         if not os.path.exists(p): continue
         tx = subprocess.run(['pdftotext', p, '-'], capture_output=True, text=True).stdout
+        src = {'Workbook': {'t': d['tiers'], 'e': d['exit']}, 'Home_Practice': d['home_practice']}.get(name) or {k: v for k, v in d.items() if not k.startswith('_')}
+        def strip(x):
+            if isinstance(x, dict): return {k: strip(v) for k, v in x.items() if k not in ('answer', 'answers', 'hint', 'solution', 'look_for', 'mistakes', 'note', 'explain', 'why')}
+            if isinstance(x, list): return [strip(v) for v in x]
+            return x
+        stext = json.dumps(strip(src) if name != 'Tutor_Guide' else src, ensure_ascii=False, default=str)
         for g in used:
-            if g not in tx and g in json.dumps(({"t": d["tiers"], "h": d["home_practice"]} if name != "Tutor_Guide" else {k: v for k, v in d.items() if not k.startswith("_")}), ensure_ascii=False, default=str): bad.append(f'{name}: {g!r} missing from the PDF text')
+            if g not in tx and g in stext: bad.append(f'{name}: {g!r} missing from the PDF text')
     if bad: fail('glyphs: ' + '; '.join(bad))
     else: ok('glyphs: x and division signs present in the built PDFs')
 
@@ -640,6 +659,7 @@ def check_foreign(d):
                 o = json.load(open(f))
                 if o.get('term') == d['term']: others[n] = o['title']      # only lessons of the same term are compared
             except Exception: pass
+    own = json.dumps({k: v for k, v in d.items() if not k.startswith('_')}, ensure_ascii=False, default=str).lower()
     texts = []
     for f in glob.glob(os.path.join(od, '*.html')) + glob.glob(os.path.join(od, 'html', '*.html')):
         texts.append((f, re.sub(r'<style.*?</style>|<[^>]+>', ' ', open(f, encoding='utf-8').read(), flags=re.S)))
@@ -651,7 +671,7 @@ def check_foreign(d):
         t1 = re.sub(r'\s+', ' ', t)
         for n, title in others.items():
             for m in re.finditer(re.escape(title.lower()), t1.lower()):
-                if title.lower() == d['title'].lower(): continue
+                if title.lower() == d['title'].lower() or title.lower() in own: continue    # a phrase this lesson uses itself (e.g. 'equal groups') is not a leak
                 before = t1[max(0, m.start() - 45):m.start()].lower()
                 if re.search(r'next lesson|lesson \d+:?\s*$|lessons? \d+', before): continue   # a pointer to the next lesson is allowed
                 bad.append(f"{os.path.basename(f)} mentions lesson {n} title '{title}'"); break

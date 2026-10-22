@@ -26,6 +26,11 @@ def minus(s):
     return s
 
 
+def keyclean(s):
+    """Answer-key text: no raw sheet tokens."""
+    return s.replace('[yesno]', '(Yes / No)').replace('[box]', '[ ]').replace('[wide]', '....')
+
+
 def numberline_svg(v):
     lo, hi, arrow, labels = v['lo'], v['hi'], v['arrow'], v['labels']
     x0, x1 = 40, 660
@@ -100,19 +105,24 @@ def blanks2(text):
 
 
 def visual_html(q):
-    v = q.get('visual')
-    if not v:
-        return ''
-    t = v['type']
-    if t == 'bundles':
-        return f'<div class="vis2" style="width:330px">{svg.bundles(v["tens"], v["ones"])}</div>'
-    if t == 'numberline':
-        return f'<div class="vis2" style="width:600px">{numberline_svg(v)}</div>'
-    if t == 'digitcards':
-        return f'<div class="vis2" style="width:230px">{cards_svg(v["digits"])}</div>'
-    if t == 'tenframes':
-        return f'<div class="vis2" style="width:430px">{svg.ten_frame(v["a"], v["b"])}</div>'
-    return ''
+    vs = ([q['visual']] if q.get('visual') else []) + list(q.get('visuals') or [])
+    out = ''
+    for v in vs:
+        t = v['type']
+        if t == 'bundles':
+            out += f'<div class="vis2" style="width:330px">{svg.bundles(v["tens"], v["ones"])}</div>'
+        elif t == 'numberline':
+            out += f'<div class="vis2" style="width:600px">{numberline_svg(v)}</div>'
+        elif t == 'digitcards':
+            out += f'<div class="vis2" style="width:230px">{cards_svg(v["digits"])}</div>'
+        elif t == 'tenframes':
+            out += f'<div class="vis2" style="width:430px">{svg.ten_frame(v["a"], v["b"])}</div>'
+        else:                                   # any other registered figure (Term 2 figures, number_line, seq, ruler ...)
+            w = {'table': 620, 'bar_model': 640, 'line_up': 640, 'seq': 600, 'number_line': 640, 'picture_equation': 460, 'round_table': 250, 'domino': 230, 'array': 300, 'groups': 420, 'objects': 400, 'ten_frame': 430, 'ten_frame2': 430}.get(t, 420)
+            try: fig = svg.render_visual(v)
+            except ValueError: continue          # a task type drawn elsewhere (e.g. ruler_task) has no picture here
+            out += f'<div class="vis2" style="width:{w}px">{fig}</div>'
+    return out
 
 
 def qbox2(q, num, d, extra_after=None):
@@ -122,7 +132,7 @@ def qbox2(q, num, d, extra_after=None):
         post = dotbox_svg(True) if ((q.get('dotbox') or q['id'] == 'C9') and p['l'] == 'a') else ''
         lab = f'<span class="sl">{E(p["l"])}</span>' if p['l'] else ''
         parts += f'{pre}<div class="sub2">{lab}<span>{blanks2(p["text"])}</span></div>{post}'
-    return f'<div class="qbox chk"><div class="q"><span class="qn">{num}</span><span class="qt">{E(minus(q["text"]))}</span></div>{visual_html(q)}{'<div class="pins" style="margin-top:6px">Draw if you like.</div><div class="draw"></div>' if q['id'] == 'C10' else ''}{parts}</div>'
+    return f'<div class="qbox chk"><div class="q"><span class="qn">{num}</span><span class="qt">{blanks2(q["text"])}</span></div>{visual_html(q)}{'<div class="pins" style="margin-top:6px">Draw if you like.</div><div class="draw"></div>' if q['id'] == 'C10' else ''}{parts}</div>'
 
 
 def sheet_header(d, page, total):
@@ -238,9 +248,9 @@ def key_html(d):
              'Mark on the tutor record sheet only, never on the child\'s paper. A child may write steps in any clear layout. Do not mark neatness or spelling.</p>')
     for q in qs + [dict(o, id='Optional', text=o['text'].replace('Think harder (optional). ', ''))]:
         lab = 'Optional Think harder item' if q['id'] == 'Optional' else 'Q' + q['id'][1:]
-        parts = '; '.join(f'({p["l"]}) {minus(p["text"].replace("___", "__").replace("[box]", "[ ]").replace("[wide]", "...."))} = {p["ans"]}' if p['l'] else f'{minus(p["text"].replace("___", "__"))} = {p["ans"]}' for p in q['parts'])
+        parts = '; '.join(f'({p["l"]}) {keyclean(minus(p["text"].replace("___", "__")))} = {p["ans"]}' if p['l'] else f'{keyclean(minus(p["text"].replace("___", "__")))} = {p["ans"]}' for p in q['parts'])
         right = q.get('right', 'The answer is right.'); partly = q.get('partly', '-')
-        H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(minus(q["text"]))}<div class="ans">Answer: {E(minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
+        H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(keyclean(minus(q["text"])))}<div class="ans">Answer: {E(minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
                  f'<div class="small"><b>R:</b> {E(right)} <b>P:</b> {E(partly)}</div><div class="small"><b>Worked:</b> {E(minus(q["solution"]))}</div>'
                  f'<div class="small"><b>Watch for:</b> {E("; ".join(q["mistakes"]))}</div></div>')
     dq = [i for i, q in enumerate(qs, 1) if q.get('dotbox') or q['id'] == 'C9']

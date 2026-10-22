@@ -56,7 +56,7 @@ def hdr(d, tag, title=None, mi=False):
 
 
 CHOICE_PATTERNS = [(r'circle (yes or no|yes/no)', ('Yes', 'No')), (r'circle (right or wrong|right/wrong)', ('Right', 'Wrong')),
-                   (r'(circle|tick)( \(.\))? (true or false|true/false)', ('True', 'False'))]
+                   (r'(circle) (true or false|true/false)', ('True', 'False'))]
 
 
 def choice_words(text, explicit=None):
@@ -77,6 +77,13 @@ def _vis_html(v):
     wide = v.get('type') in ('table', 'bar_model', 'line_up')
     nar = v.get('type') in ('round_table', 'domino', 'array')
     return f'<div class="vis{" wide" if wide else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+
+
+def inv_vis(inv):
+    vs = ([inv['visual']] if inv.get('visual') else []) + list(inv.get('visuals') or [])
+    if not vs: return ''
+    if len(vs) == 1: return _vis_html(vs[0])
+    return f'<div class="visrow" style="--n:{len(vs)}">' + ''.join(_vis_html(v) for v in vs) + '</div>'
 
 
 def qbox(q, label=None, draw=False):
@@ -129,9 +136,9 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>The hardest part was ...</b>{bx(lb["hardest"])}</div>'
             f'<div class="r"><b>What helped me:</b>{bx(lb["helped"])}</div>'
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
-            '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (I will ask in the class chat or show my tutor on camera)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
+            '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my grown-up will photograph this page for my tutor)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
     P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
-             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
+             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p>{inv_vis(inv)}<p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
     body = ''.join(P)

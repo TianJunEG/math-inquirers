@@ -104,6 +104,10 @@
       },
       "description": "tutor-only; these sit at Think harder, never Start here"
     },
+    "contest_where": {
+      "type": "string",
+      "description": "optional; where the contest-style moves sit, printed in the guide ('Used at ...'); default 'Think harder only'. Example: 'Think harder and Go further'"
+    },
     "objectives": {
       "type": "array",
       "minItems": 2,

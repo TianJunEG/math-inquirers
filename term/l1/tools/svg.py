@@ -3,7 +3,7 @@
 Every function returns an <svg> string that scales to its container (width:100%).
 Palette is the project palette (hp/wb_style.css, rebuild/slidekit.py).
 """
-import random
+import random, math, re
 
 NAVY = '#1B2A49'; TEAL = '#1F7A6F'; YEL = '#FFC93C'; SKY = '#DDEBF7'; SOFT = '#FFF0C2'; RED = '#D64545'; GREY = '#8A94AD'
 FONT = "Fredoka, 'Nunito Sans', Arial, sans-serif"
@@ -389,7 +389,22 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
             f'style="{size}display:block">{"".join(p)}</svg>')
 
 
+SIZE_TYPES = {'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation'}
+SIZE_PCT = {'s': 55, 'm': 78, 'l': 100}
+
+
 def render_visual(v):
+    """Render a figure. For SIZE_TYPES an optional size ('s' 55%, 'm' 78%, 'l' 100% or a number 20-100 = percent of the column) shrinks it."""
+    s = _render_visual(v)
+    sz = v.get('size')
+    if v.get('type') in SIZE_TYPES and sz is not None and s:
+        pct = SIZE_PCT.get(sz) if isinstance(sz, str) else sz
+        if pct and pct < 100:
+            s = s.replace('style="width:100%;height:auto;display:block"', f'style="width:{pct}%;height:auto;display:block;margin:0 auto"', 1)
+    return s
+
+
+def _render_visual(v):
     t = v['type']
     import figs2
     r = figs2.render(v)
