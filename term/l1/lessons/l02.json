@@ -135,8 +135,8 @@
     "notes": "Opening is 2 minutes (the routine and rules were taught in Lesson 1; say the three rule words in one line). The 2 saved minutes go to Explore, where children build and label their own number line. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
   },
   "sneak_peek": {
-    "q1": "Write the missing numbers on the number line: 18, 19, __, 21, 22, __.",
-    "q2": "A frog sits on 38. Is it nearer to 30 or to 40? Write 30 or 40, and say why.",
+    "q1": "Fill in the missing numbers on this line: 18, 19, __, 21, 22, __.",
+    "q2": "A frog sits on 38. Is it nearer to 30 or to 40? Circle 30 or 40. I know because ___.",
     "a1": "20 and 23",
     "a2": "40. From 38 to 40 is 2 hops. From 38 to 30 is 8 hops.",
     "val1": 20
@@ -386,7 +386,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle one. Write the missing numbers on the number line."
+            "text": "Puzzle one. Fill in the missing numbers in the boxes."
           },
           {
             "k": "WORK",
@@ -395,7 +395,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. A frog sits on 38. Is it nearer to 30 or to 40? Write 30 or 40, and say why."
+            "text": "Puzzle two. A frog sits on 38. Is it nearer to 30 or to 40? Circle 30 or 40. I know because ___."
           },
           {
             "k": "WORK",
@@ -430,7 +430,7 @@
           },
           {
             "k": "SAY",
-            "text": "Now you build a number line. Find your ones cards, the round-cornered ones: 0 to 10. They are mixed up. Put them in a row, from left to right, in order. Say each number as you place it."
+            "text": "Now you build a number line. Find your ones cards, the square ones: 0 to 10. They are mixed up. Put them in a row, from left to right, in order. Say each number as you place it."
           },
           {
             "k": "WORK",
@@ -619,7 +619,7 @@
           },
           {
             "k": "ASK",
-            "text": "Which is bigger, thirteen or thirty? How do you know?",
+            "text": "Which is greater, thirteen or thirty? How do you know?",
             "resp": 20
           },
           {
@@ -783,7 +783,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: read the number word and write the number. Question 5: copy the number word. Question 6: write the missing tens. Question 7: which two tens is each number between? Question 8: Siti made a mistake. Find it."
+            "text": "Page 2. Question 4: write each number in digits. Question 5: write the number in words. Question 6: write the missing tens. Question 7: which two tens is each number between? Question 8: Is Siti correct? Then write the number after 59."
           },
           {
             "k": "WORK",
@@ -796,7 +796,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 4: 15, 50, 24. Question 5: twenty, forty. Question 6: thirty, fifty and eighty. Question 7: twenty and thirty, sixty and seventy. Question 8: Siti should write sixty."
+            "text": "Question 4: 15, 50, 24. Question 5: twenty, forty. Question 6: thirty, fifty and eighty. Question 7: twenty and thirty, sixty and seventy. Question 8: No. Sixty."
           },
           {
             "k": "SLIDE",
@@ -838,7 +838,7 @@
           },
           {
             "k": "READ",
-            "text": "Ravi says fourteen and forty are the same number, because they sound nearly the same. Do you agree? Use your number line to explain."
+            "text": "Are fourteen and forty the same number? Circle Yes or No. I know because ___."
           },
           {
             "k": "WORK",
@@ -870,7 +870,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Model answer: No. 14 is ten and 4 more, just after 10 on the line. 40 is 4 tens, much further along. 40 is bigger. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+            "text": "Model answer: No. 14 is ten and 4 more, just after 10 on the line. 40 is 4 tens, much further along. 40 is greater. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
       },
@@ -1126,7 +1126,7 @@
                 "t": "card",
                 "head": "PUZZLE 1: anyone can try",
                 "items": [
-                  "Write the missing numbers on the number line."
+                  "Fill in the missing numbers in the boxes."
                 ]
               },
               {
@@ -1150,7 +1150,7 @@
                 "items": [
                   "A frog sits on 38.",
                   "Is it nearer to 30 or to 40?",
-                  "Write 30 or 40, and say why."
+                  "Circle 30 or 40. I know because ___."
                 ]
               }
             ]
@@ -1182,7 +1182,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 5 minutes. Objects first, little writing. Children put the 11 ones cards (round-cornered, from the kit page) in order left to right and hop a small toy (the frog) where you say: hop to 7, hop on 3 more (10), hop back 4 (6). Show your own row on camera. The what-if card previews round 2 and no child is named for trying it. A child without cards writes 0 to 10 on 11 small pieces of paper. Ask: 11 cards, how many hops? 10: the hops are the gaps."
+      "note": "Round 1, about 5 minutes. Objects first, little writing. Children put the 11 ones cards (square, from the kit page) in order left to right and hop a small toy (the frog) where you say: hop to 7, hop on 3 more (10), hop back 4 (6). Show your own row on camera. The what-if card previews round 2 and no child is named for trying it. A child without cards writes 0 to 10 on 11 small pieces of paper. Ask: 11 cards, how many hops? 10: the hops are the gaps."
     },
     {
       "id": "s-explore2",
@@ -1297,7 +1297,7 @@
           ]
         }
       ],
-      "note": "Teen numbers say the ones first (fourteen is four and ten). Ty numbers say the tens (forty is four tens). Two-part names say the tens first then the ones (twenty-four). Ask: which is bigger, thirteen or thirty? Answer: thirty, it is 3 tens. Spelling: forty has no u; fifteen is not fifty. Children read the words; they do not need to spell them from memory."
+      "note": "Teen numbers say the ones first (fourteen is four and ten). Ty numbers say the tens (forty is four tens). Two-part names say the tens first then the ones (twenty-four). Ask: which is greater, thirteen or thirty? Answer: thirty, it is 3 tens. Spelling: forty has no u; fifteen is not fifty. Children read the words; they do not need to spell them from memory."
     },
     {
       "id": "s-m2",
@@ -1729,7 +1729,7 @@
             ],
             [
               "Investigation (page 5)",
-              "Always, sometimes or never?"
+              "A pattern to find"
             ],
             [
               "Check",
@@ -1752,7 +1752,7 @@
       "blocks": [
         {
           "t": "card",
-          "head": "RAVI SAYS",
+          "head": "TALK ABOUT IT",
           "items": [
             "Fourteen and forty are the same number, because they sound nearly the same."
           ]
@@ -1955,7 +1955,7 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "Write the missing numbers on the number line.",
+        "text": "Fill in the missing numbers in the boxes.",
         "parts": [],
         "answer": "10 and 12",
         "val": [
@@ -1987,7 +1987,7 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Write the missing numbers.",
+        "text": "Fill in the missing numbers.",
         "parts": [
           {
             "l": "a",
@@ -2031,7 +2031,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Write the number one before and the number one after.",
+        "text": "Fill in the number just before and the number just after.",
         "parts": [
           {
             "l": "a",
@@ -2083,7 +2083,7 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Read the number word. Write the number.",
+        "text": "Write the numbers in digits.",
         "parts": [
           {
             "l": "a",
@@ -2123,7 +2123,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Copy the number word. Word bank: twenty, forty, sixty.",
+        "text": "Write each number in words. Word bank: twenty, forty, sixty.",
         "parts": [
           {
             "l": "a",
@@ -2156,7 +2156,7 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "This number line counts in tens. Write the missing numbers.",
+        "text": "Fill in the missing numbers. The numbers go up by 10 each time.",
         "parts": [
           {
             "l": "",
@@ -2188,7 +2188,7 @@
         "id": "S7",
         "page": 2,
         "tier": "start",
-        "text": "Which two tens is each number between?",
+        "text": "Fill in the missing numbers.",
         "parts": [
           {
             "l": "a",
@@ -2229,10 +2229,16 @@
         "id": "S8",
         "page": 2,
         "tier": "start",
-        "text": "Siti wrote 57, 58, 59, 510, 511. What should come after 59? Say what she mixed up.",
+        "text": "Siti counts: 57, 58, 59, 510, 511.",
         "parts": [
           {
-            "l": "",
+            "l": "a",
+            "text": "Is Siti's counting correct? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          },
+          {
+            "l": "b",
             "text": "After 59 comes []",
             "ans": "60",
             "val": 60
@@ -2257,7 +2263,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Which ten is nearer? Count the hops on the number line to check.",
+        "text": "Which ten is nearer? Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -2290,11 +2296,11 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "How many numbers are between 28 and 35? Do not count 28 or 35.",
+        "text": "How many numbers are there between 28 and 35? (Do not count 28 and 35.)",
         "parts": [
           {
             "l": "",
-            "text": "There are [] numbers between",
+            "text": "There are [] numbers between them.",
             "ans": "6",
             "val": 6
           }
@@ -2316,11 +2322,11 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Mystery number. Clue 1: I am between 50 and 60. Clue 2: I am nearer to 60 than to 50. Clue 3: One before me is halfway between 50 and 60. What number am I?",
+        "text": "My number is between 50 and 60. It is nearer to 60 than to 50. The number before it is halfway between 50 and 60. What number is it?",
         "parts": [
           {
             "l": "",
-            "text": "I am []",
+            "text": "The number is []",
             "ans": "56",
             "val": 56
           }
@@ -2342,19 +2348,24 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "The frog is on 96. It hops on one number at a time to 100. Write each number it lands on, and how many hops.",
+        "text": "Mei's frog is on 96. It hops 1 number at a time to 100.",
         "parts": [
           {
-            "l": "",
-            "text": "It lands on [], [], [], []. Hops: []",
-            "ans": "97, 98, 99, 100 and 4 hops",
+            "l": "a",
+            "text": "It lands on [], [], [], [].",
+            "ans": "97, 98, 99, 100",
             "val": [
               97,
               98,
               99,
-              100,
-              4
+              100
             ]
+          },
+          {
+            "l": "b",
+            "text": "It makes [] hops.",
+            "ans": "4",
+            "val": 4
           }
         ],
         "answer": "97, 98, 99, 100 (4 hops)",
@@ -2391,11 +2402,11 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "The boxes on each line are equal jumps. Fill in the boxes and write how big each jump is.",
+        "text": "Complete each line. The jumps are equal.",
         "parts": [
           {
             "l": "a",
-            "text": "0, [], [], 30    jump []",
+            "text": "0, [], [], 30. Each jump is []",
             "ans": "10 and 20; jump 10",
             "val": [
               10,
@@ -2405,7 +2416,7 @@
           },
           {
             "l": "b",
-            "text": "10, [], [], [], 30    jump []",
+            "text": "10, [], [], [], 30. Each jump is []",
             "ans": "15, 20, 25; jump 5",
             "val": [
               15,
@@ -2416,7 +2427,7 @@
           },
           {
             "l": "c",
-            "text": "50, [], [], [], 62    jump []",
+            "text": "50, [], [], [], 62. Each jump is []",
             "ans": "53, 56, 59; jump 3",
             "val": [
               53,
@@ -2453,7 +2464,7 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other, one number at a time, at the same speed. On which number do they meet?",
+        "text": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other, 1 number at a time, at the same time. On which number do they meet?",
         "parts": [
           {
             "l": "",
@@ -2479,7 +2490,7 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Make your own. Draw a number line with 5 boxes in a row. Fill in two boxes that are not next to each other, so that only one number fits each empty box. Give it to a grown-up to solve.",
+        "text": "Make a puzzle. Draw 5 boxes in a row. The jumps are equal. Write numbers in 2 boxes that are not next to each other. Leave 3 boxes empty. Give it to a grown-up.",
         "parts": [],
         "answer": "Any correct line, for example 15, [], [], [], 35 (jump 5: 20, 25, 30).",
         "val": "open",
@@ -2517,19 +2528,19 @@
     }
   },
   "talk": {
-    "question": "Ravi says fourteen and forty are the same number, because they sound nearly the same. Do you agree? Use your number line to explain.",
+    "question": "Are fourteen and forty the same number? Circle Yes or No. I know because ___.",
     "starter": "I think ... because ...",
-    "answer": "No. Fourteen is 14: ten and 4 more, just after 10 on the line. Forty is 40: 4 tens, far along the line. 40 is much bigger.",
+    "answer": "No. Fourteen is 14: ten and 4 more, just after 10 on the line. Forty is 40: 4 tens, far along the line. 40 is much greater.",
     "look_for": "A reason that uses the line or tens and ones (14 is one ten and 4; 40 is 4 tens), not only that the digits are different."
   },
   "exit": [
     {
       "id": "E1",
-      "text": "Read the number word. Write the number.",
+      "text": "Write the number in digits.",
       "parts": [
         {
           "l": "",
-          "text": "seventy-three = ___",
+          "text": "seventy-three = []",
           "ans": "73",
           "val": 73
         }
@@ -2546,11 +2557,11 @@
     },
     {
       "id": "E2",
-      "text": "Which two tens is 76 between?",
+      "text": "Fill in the missing numbers.",
       "parts": [
         {
           "l": "",
-          "text": "76 is between ___ and ___",
+          "text": "76 is between [] and []",
           "ans": "70 and 80",
           "val": [
             70,
@@ -2571,11 +2582,11 @@
     },
     {
       "id": "E3",
-      "text": "The frog is on 99. It hops one number forward. Write where it lands.",
+      "text": "The frog is on 99. It hops 1 number forward. Where does it land?",
       "parts": [
         {
           "l": "",
-          "text": "It lands on ___",
+          "text": "It lands on []",
           "ans": "100",
           "val": 100
         }
@@ -2617,7 +2628,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "Write the missing numbers: 46 | 47 | ___ | 49 | ___",
+      "text": "Fill in the missing numbers: 46 | 47 | ___ | 49 | ___",
       "answer": "48 and 50",
       "val": [
         48,
@@ -2628,7 +2639,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "Write the numbers: thirteen, thirty, nineteen, ninety.",
+      "text": "Write the numbers in digits: thirteen, thirty, nineteen, ninety.",
       "answer": "13, 30, 19, 90",
       "val": [
         13,
@@ -2641,7 +2652,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Which two tens is 83 between? ___ and ___",
+      "text": "Fill in the blanks: 83 is between ___ and ___.",
       "answer": "80 and 90",
       "val": [
         80,
@@ -2652,7 +2663,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Which ten is 56 nearer to, 50 or 60? Count the hops to show how you know.",
+      "text": "Is 56 nearer to 50 or to 60? Circle your answer. Show how you know.",
       "answer": "60 (4 hops to 60, 6 hops to 50)",
       "val": 60,
       "solution": "56 to 60 is 4 hops. 56 to 50 is 6 hops. 4 is fewer, so 60 is nearer."
@@ -2660,7 +2671,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: lay out a line of papers or draw one. Make a puzzle with 5 boxes and 2 numbers showing, equal jumps, for a grown-up to solve. Write the answer on the back.",
+      "text": "At home: draw 5 boxes in a row. The jumps are equal. Write numbers in 2 boxes and leave 3 empty. Ask a grown-up to solve it. Write the answer on the back.",
       "answer": "Any correct puzzle, for example 20 | ___ | ___ | ___ | 40 (jump 5: 25, 30, 35).",
       "val": "open",
       "solution": "A grown-up checks that the jump is the same between every two boxes and that only one number fits each empty box."
@@ -2851,13 +2862,13 @@
         "id": "c5",
         "tier": "core",
         "type": "number",
-        "q": "47 is between two tens. What is the bigger ten?",
+        "q": "47 is between two tens. What is the greater ten?",
         "answer": 50,
-        "hint": "The tens digit tells you the ten before. The bigger ten is one ten more.",
+        "hint": "The tens digit tells you the ten before. The greater ten is one ten more.",
         "steps": [
           "47 is 4 tens and 7 ones.",
           "It is past 40 and not yet 50.",
-          "The bigger ten is 50."
+          "The greater ten is 50."
         ],
         "slips": [
           {
@@ -2886,13 +2897,13 @@
               95
             ]
           },
-          "q": "{n} is between two tens. What is the bigger ten?",
+          "q": "{n} is between two tens. What is the greater ten?",
           "answer": "(w+1)*10",
           "hint": "The tens digit of {n} tells you the smaller ten.",
           "steps": [
             "{n} is made of tens and ones.",
             "It is past {w} tens and not yet one more ten.",
-            "The bigger ten is {ans}."
+            "The greater ten is {ans}."
           ],
           "derive": {
             "w": "n//10"
@@ -2903,7 +2914,7 @@
         "id": "c6",
         "tier": "core",
         "type": "choice",
-        "q": "Which is bigger, thirteen or thirty?",
+        "q": "Which is greater, thirteen or thirty?",
         "options": [
           "thirteen",
           "thirty",
@@ -2914,7 +2925,7 @@
         "steps": [
           "Thirteen is ten and 3 more: 13.",
           "Thirty is 3 tens: 30.",
-          "Thirty is further along the line, so it is bigger."
+          "Thirty is further along the line, so it is greater."
         ],
         "slips": [
           {
@@ -3037,7 +3048,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "How many numbers are between 28 and 35? Do not count 28 or 35.",
+        "q": "How many numbers are there between 28 and 35? Do not count 28 or 35.",
         "answer": 6,
         "easier": "c4",
         "hint": "Write the numbers in order: 29, 30, ... Stop before 35.",
@@ -3078,7 +3089,7 @@
               8
             ]
           },
-          "q": "How many numbers are between {a} and {b}? Do not count {a} or {b}.",
+          "q": "How many numbers are there between {a} and {b}? Do not count {a} or {b}.",
           "answer": "g-1",
           "hint": "Write the numbers in order after {a}. Stop before {b}.",
           "steps": [
@@ -3095,7 +3106,7 @@
         "id": "t4",
         "tier": "stretch",
         "type": "number",
-        "q": "Mystery number. I am between 50 and 60. I am nearer to 60 than to 50. One before me is halfway between 50 and 60. What number am I?",
+        "q": "My number is between 50 and 60. It is nearer to 60 than to 50. The number before it is halfway between 50 and 60. What number is it?",
         "answer": 56,
         "easier": "c5",
         "hint": "Halfway between 50 and 60 is 55. Which number is one after 55?",
@@ -3173,7 +3184,7 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other at the same speed. Where do they meet?",
+        "q": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other, 1 number at a time, at the same time. Where do they meet?",
         "answer": 40,
         "easier": "t3",
         "hint": "The frogs share the hops equally. How many hops apart are they?",
@@ -3211,7 +3222,7 @@
               15
             ]
           },
-          "q": "Mei's frog is on {a}. Ali's frog is on {b}. They hop towards each other at the same speed. Where do they meet?",
+          "q": "Mei's frog is on {a}. Ali's frog is on {b}. They hop towards each other, 1 number at a time, at the same time. Where do they meet?",
           "answer": "a+d",
           "hint": "The frogs share the hops equally. How many hops apart are they?",
           "steps": [
@@ -3276,11 +3287,11 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make up your own number line puzzle with 5 boxes and 2 numbers showing. Check that only ONE number fits each empty box.",
+        "q": "Make your own number line puzzle with 5 boxes and equal jumps. Show 2 numbers. Check that only 1 number fits each empty box.",
         "hint": "Pick a jump first. Write the whole line. Then rub out the middle boxes.",
         "steps": [
           "Check that the jump is the same between every two boxes.",
-          "Check that the two numbers showing are not next to each other, and still make one jump.",
+          "Check that the two numbers showing are not next to each other.",
           "For example: 15, __, __, __, 35. The jump is 5, so the boxes are 20, 25 and 30."
         ]
       }
