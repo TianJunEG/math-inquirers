@@ -2,15 +2,15 @@
 """Lesson 10 extras: the Term 1 end-of-term check outputs.
 
 Reads the block `end_of_term_check` of term/l1/lessons/l10.json and writes, into term/l1/out/l10/:
-  L10_Check_Student.pdf      the 4-page private check sheet for the child (print at 100%)
+  L10_Check_Student.pdf      the 3-page private check sheet for the child (print at 100%)
   L10_Check_Tutor_Key.pdf    procedure to give and return it privately, answer key and marking, record sheet, progress words, parent report line templates
   L10_Check_Parent_Note.pdf  one page for grown-ups (print, take, photo, return)
   html/check_*.html          the same pages as HTML
 
 Run AFTER the normal build:   bash term/l1/build.sh 10 && python3 term/l1/assets/l10_extras.py
 It does not change any shared tool. The shared builder does not know about the check, so it is built here (lesson-specific).
-Real-PDF checks done here: page count (4, 2+, 1), page fill, and the printed lengths on the sheet (the 10 cm bar and the 9 cm line)
-are measured on the rendered PDF at 254 dpi and must be within 0.6 mm.
+Real-PDF checks done here: page count (3, 2+, 1), page fill, and the printed length of the 10 cm bar on the last page of the sheet
+is measured on the rendered PDF at 254 dpi and must be within 0.6 mm.
 """
 import glob, html, json, math, os, subprocess, sys, tempfile
 
@@ -34,8 +34,8 @@ def load():
 # ------------------------------------------------------------------ small pictures for the sheet
 
 def minus(s):
-    """Show a hyphen between spaces as a proper minus sign."""
-    return s.replace(' - ', ' − ')
+    """One minus sign everywhere (the same hyphen as the workbook)."""
+    return s
 
 
 def numberline_svg(v):
@@ -101,7 +101,7 @@ SHEET_CSS = """
 .chk{page-break-inside:avoid}
 .foot{font-size:12px;color:#3B4A6B;margin-top:6px}
 .vis2{margin:8px 0 4px 6px}
-.csheet .p4 .sub2{margin-top:26px}.csheet .p4 .wl2{height:34px}.csheet .p4 .al{height:30px}.csheet .qbox{margin:24px 4px 8px 4px!important;padding:22px 16px 8px!important}.csheet .p3 .sub2{margin-top:7px}.csheet .p3 .vis2{margin:4px}
+.csheet .p4 .sub2{margin-top:26px}.csheet .p4 .wl2{height:34px}.csheet .p4 .al{height:30px}.csheet .qbox{margin:24px 4px 8px 4px!important;padding:22px 16px 8px!important}.csheet .p3 .sub2{margin-top:15px}.csheet .p3 .qbox{margin:32px 4px 10px 4px!important}.csheet .p3 .vis2{margin:4px}
 """
 
 
@@ -131,10 +131,10 @@ def qbox2(q, num, d, extra_after=None):
     parts = ''
     for p in q['parts']:
         pre = ''
-        post = dotbox_svg(True) if (q['id'] == 'C9' and p['l'] == 'a') else (dotbox_svg(False) if (q['id'] == 'C9' and p['l'] == 'b') else '')
+        post = dotbox_svg(True) if (q['id'] == 'C9' and p['l'] == 'a') else ''
         lab = f'<span class="sl">{E(p["l"])}</span>' if p['l'] else ''
         parts += f'{pre}<div class="sub2">{lab}<span>{blanks2(p["text"])}</span></div>{post}'
-    return f'<div class="qbox chk"><div class="q"><span class="qn">{num}</span><span class="qt">{E(minus(q["text"]))}</span></div>{visual_html(q)}{'<div class="draw"></div>' if q['id'] == 'C10' else ''}{parts}</div>'
+    return f'<div class="qbox chk"><div class="q"><span class="qn">{num}</span><span class="qt">{E(minus(q["text"]))}</span></div>{visual_html(q)}{'<div class="pins" style="margin-top:6px">Draw if you like.</div><div class="draw"></div>' if q['id'] == 'C10' else ''}{parts}</div>'
 
 
 def sheet_header(d, page, total):
@@ -156,7 +156,7 @@ def sheet_html(d):
     for pg in range(1, total + 1):
         body = sheet_header(d, pg, total)
         if pg == 1:
-            body += (f'<div style="position:relative"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:4px;top:-6px;width:24mm;height:auto">'
+            body += (f'<div style="position:relative">'
                      f'<div class="ltitle">TERM 1 CHECK</div><div class="namer" style="width:74%"><b>Name</b><span></span><b>Date</b><span style="max-width:110px"></span></div></div>{rules}')
         else:
             body += '<div class="namer"><b>Name</b><span></span></div>'
@@ -167,8 +167,9 @@ def sheet_html(d):
         if pg == total:
             o = c['optional']
             body += (f'<div class="opt"><span class="tagx">Think harder (optional)</span><div class="q" style="margin-top:6px"><span class="qt">{E(o["text"].replace("Think harder (optional). ", ""))}</span></div>'
+                     + '<div class="pins" style="margin-top:4px">Draw if you like.</div><div class="draw"></div>'
                      + ''.join(f'<div class="sub2"><span>{blanks2(p["text"])}</span></div>' for p in o['parts'])
-                     + '<div class="draw"></div><div class="foot">You may skip this one. It is not marked.</div></div>')
+                     + '<div class="foot">You may skip this one. It is not marked.</div></div>')
             body += '<div style="text-align:center;font-family:Fredoka;font-size:22px;color:#1F7A6F;margin:18px 0 4px">Well done for trying your best!</div>'
         if pg == total:
             body += (f'<div class="foot" style="margin-top:14px"><b>Print check (for the grown-up):</b> this bar must measure exactly 10 cm. If it does not, print again at 100% (actual size).</div>'
@@ -230,7 +231,7 @@ def key_html(d):
     H = []
     H.append(f'<div class="cover"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:18px;top:12px;width:90px">'
              f'<div class="k">TUTOR KEY • LEVEL 1 • TERM 1 • END-OF-TERM CHECK</div><h1>{E(c["title"])}</h1>'
-             f'<p>10 questions, one from each lesson of the term, all at Start here level, plus one optional Think harder item. About 30 minutes on private paper. '
+             f'<p>10 questions, one from each lesson of the term, all at Start here level, plus one optional Think harder item. 20 minutes on private paper. '
              f'No ranking, no score shown to the group, progress words only. For the tutor: do not hand this key to families.</p></div>')
     H.append(f'<div class="box t"><b>Where it sits.</b> {E(c["where"])}. <span class="small">{E(c["plan_note"])}</span></div>')
     H.append('<h2>1. The ten questions at a glance</h2><table><tr><th>Q</th><th>Lesson</th><th>Strand (tutor label)</th><th>What it checks (Start here level)</th><th>Answer</th></tr>')
@@ -239,7 +240,7 @@ def key_html(d):
         H.append(f'<tr><td><b>{q["id"][1:]}</b></td><td>L{q["lesson"]}</td><td>{E(smap[q["strand"]]["moe_label"])}</td><td>{E(q["skill"])}</td><td class="ans">{E(q["answer"])}</td></tr>')
     o = c['optional']
     H.append(f'<tr><td><b>Think harder</b></td><td>L{o["lesson"]}</td><td>{E(smap[o["strand"]]["moe_label"])}</td><td>{E(o["skill"])} (optional, never scored)</td><td class="ans">{E(o["answer"])}</td></tr></table>')
-    H.append('<p class="small">The strand labels are for the tutor only and must not appear on any child or parent page. Each question is a fresh example of the Start here idea of its lesson (different numbers from the lesson pages), so a child who understood the lesson can answer it. '
+    H.append('<p class="small">The strand labels are for the tutor only and must not appear on any child or parent page. Each question is a fresh example of the Start here idea of its lesson (numbers chosen so that they do not repeat a lesson page), so a child who understood the lesson can answer it. '
              'Before first use, a tutor should read each question against what the lesson actually taught.</p>')
     H.append('<h2>2. Giving it: before and during</h2><ol>' + ''.join(f'<li>{E(x)}</li>' for x in c['give']) + '</ol>')
     H.append('<h2>3. Returning it privately: after the lesson</h2><ol>' + ''.join(f'<li>{E(x)}</li>' for x in c['after']) + '</ol>')
@@ -254,8 +255,8 @@ def key_html(d):
         H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(minus(q["text"]))}<div class="ans">Answer: {E(minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
                  f'<div class="small"><b>R:</b> {E(right)} <b>P:</b> {E(partly)}</div><div class="small"><b>Worked:</b> {E(minus(q["solution"]))}</div>'
                  f'<div class="small"><b>Watch for:</b> {E("; ".join(q["mistakes"]))}</div></div>')
-    H.append('<div class="note"><b>Question 9, parts (a) and (b):</b> in the photo the page is flat, so measure each drawn line against the 10 cm print-check bar on the same page (the first line should be 57% to 63% of the bar, the second 87% to 93%). '
-             'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the lines as right if the child\'s answer to part (c) is right. Never ask a child to show the line to the camera.</div>')
+    H.append('<div class="note"><b>Question 9, part (a):</b> in the photo the page is flat, so measure the drawn line against the 10 cm print-check bar on the same page (the line should be 57% to 63% of the bar). '
+             'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the line as right if the child\'s answer to part (b) is right. Never ask a child to show the line to the camera.</div>')
     H.append('<h2 class="pb">5. Tutor record sheet (tutor only; one per child; delete after the note is sent)</h2>')
     H.append('<p>Child (first name only): <span style="display:inline-block;width:260px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span> &nbsp; Date taken: <span style="display:inline-block;width:120px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span></p>')
     H.append('<table class="rec"><tr>' + ''.join(f'<th>Q{q["id"][1:]}<br><span class="small">L{q["lesson"]}</span></th>' for q in qs) + '<th>Think<br>harder</th></tr><tr>' + '<td></td>' * 11 + '</tr></table>')
@@ -267,8 +268,8 @@ def key_html(d):
     H.append('<table><tr><th>Questions counted in the strand</th><th>' + E(W['showing']) + '</th><th>' + E(W['getting']) + '</th><th>' + E(W['beginning']) + '</th></tr>' + ''.join(
         f'<tr><td>{b["n"]}</td><td>{b["showing"]}</td><td>{b["getting"]}</td><td>{b["beginning"]}</td></tr>' for b in sorted(c['bands']['table'], key=lambda b: -b['n'])) + '</table>')
     H.append('<p class="small">If no question in a strand was taught to the child, write no line for that strand. Strand lines say what the child did and what helps next, never a grade. '
-             'The optional Think harder question is never scored; add the optional line only if the child answered it correctly.</p>')
-    H.append('<h2 class="pb">6. Parent report line templates (copy into the note to the parent contact)</h2>')
+             'The optional Think harder question is never scored; add the optional line if the child tried it (right or not), and leave it out if the child skipped it.</p>')
+    H.append('<h2 class="pb">6. Parent report line templates (copy into the note to the parent)</h2>')
     rt = c['report_template']
     H.append(f'<div class="box t"><b>{E(rt["intro"])}</b><br>{E(rt["term_line"])}</div>')
     H.append('<table><tr><th>Area (parent wording)</th><th>' + E(W['showing']) + '</th><th>' + E(W['getting']) + '</th><th>' + E(W['beginning']) + '</th></tr>' + ''.join(
@@ -279,7 +280,7 @@ def key_html(d):
         f'<b>{E(s["parent_name"])}: {E(W[ex[s["id"]]])}.</b> {E(s[ex[s["id"]]].replace("[Name]", "Mei"))}<br>' for s in c['strands']) +
         'One thing Mei did well this term: she explained why 62 is greater than 26 using bundles of ten.<br>One next step: act out two-step stories with counters at home.<br>' + E(rt['closing'].replace('[Name]', 'Mei')) + '</div>')
     H.append('<p class="small">Words to avoid in the note: score, mark, out of, rank, top, below average, behind, ahead of, pass, fail, predicted, ready for. No claim about exams, GEP or any contest. '
-             'No mention of other children. The note goes to the parent contact only.</p>')
+             'No mention of other children. The note goes to the parent only.</p>')
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Check key</title><style>{font_css()}{KEY_CSS}</style></head><body>{"".join(H)}</body></html>'
 
 
@@ -357,9 +358,9 @@ def longest_dark_run_mm(pdf, page, dpi=254, y_range=None):
 
 
 def measure_sheet(pdf, c):
-    """Measure the printed 10 cm bar (page 4) on the rendered PDF. Returns (bar_mm, line_mm)."""
+    """Measure the printed 10 cm bar (last page) on the rendered PDF. Returns (bar_mm, line_mm)."""
     bar_target = c['sheet_check_bar_mm']
-    runs4 = longest_dark_run_mm(pdf, 4)
+    runs4 = longest_dark_run_mm(pdf, c['sheet_pages'])
     bar = min((r for r, _ in runs4 if abs(r - bar_target) < 3), key=lambda r: abs(r - bar_target), default=None)
     return bar, bar
 
@@ -394,7 +395,7 @@ def main():
     if nn != 1:
         print('FAIL parent note must be one page'); ok = False
     bar, line = measure_sheet(sheet, c)
-    print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm', '| (question 9 now has two drawn lines and no printed line)')
+    print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm', '| (question 9 has one drawn line and no printed line)')
     for name, got, want in (('bar', bar, c['sheet_check_bar_mm']),):
         if got is None or abs(got - want) > 0.6:
             print(f'FAIL printed {name} is {got} mm, should be {want} mm'); ok = False

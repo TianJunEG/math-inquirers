@@ -160,15 +160,25 @@ def run(d):
     for p in T['S4']['parts']:
         verb = [w for w in words if w in p['text']][0]
         eq(p['val'], words[verb], 'S4 ' + p['l'])
-        # the sign really matches the effect on a pile of 10
-        k = int(re.search(r'\d+', p['text']).group())
-        eq(len(add(pile(10), k)) > 10 if p['val'] == '+' else len(take(pile(10), k)) < 10, True, 'S4 effect ' + p['l'])
+        # the printed sentence "a [] b = c" is true with exactly this sign, and the sign matches the effect on the pile
+        a_, b_, c_ = [int(x) for x in re.search(r'(\d+) \[\] (\d+) = (\d+)', p['text']).groups()]
+        sim = len(add(pile(a_), b_)) if p['val'] == '+' else len(take(pile(a_), b_))
+        eq(sim, c_, 'S4 sentence true with the keyed sign ' + p['l'])
+        other = len(take(pile(a_), b_)) if p['val'] == '+' else len(add(pile(a_), b_))
+        eq(other == c_, False, 'S4 the other sign does not fit ' + p['l'])
     eq(T['S4']['val'], ['+', '-', '-', '+'], 'S4')
     ben5 = len(add(pile(23), 10))
     eq(T['S5']['val'], [ben5, 23 + ben5], 'S5'); eq(23 + ben5, 56, 'S5 value')
     s6 = story(30, [('-', 10), ('+', 4)])
     eq(T['S6']['val'], s6, 'S6'); eq(s6, [20, 24], 'S6 steps')
-    eq(30 + 10 + 4, 44, 'S6 Siti total'); eq(44 == s6[-1], False, 'S6 Siti is wrong')
+    eq(30 + 10, 40, 'S6 Siti writes 40 for Step 1'); eq(40 == s6[0], False, 'S6 Siti Step 1 is wrong: the children leave the bus')
+    eq(T['S6']['parts'][0]['val'], 'no', 'S6 part a answer is No')
+    # S2, G1, G3: each labelled step sentence is true and chains from the step before
+    for qid, steps in (('S2', story(42, [('+', 7), ('-', 10)])), ('G1', story(60, [('-', 24), ('-', 15), ('+', 30)])), ('G3', [len(add(pile(25), 10)), 25 + len(add(pile(25), 10)), 10])):
+        sent = [pp for pp in T[qid]['parts'] if pp['text'].startswith('Step')]
+        eq([pp['val'] for pp in sent], steps, qid + ' step values')
+        for pp in sent:
+            eq(eval_chain(pp['ans'].split(' = ')[0]), int(pp['ans'].split(' = ')[1]), qid + ' ' + pp['ans'])
 
     # ---- Think harder
     mei = [m for m in range(0, 100) if m + 3 == 15][0]
@@ -231,6 +241,8 @@ def run(d):
     eq(story(40, [('-', 20), ('+', 7)]), [20, 27], 'mini: Siti beads')
     eq(len(add(pile(14), 5)), 19, 'mini: more than'); eq(len(take(pile(14), 5)), 9, 'mini: fewer than')
     eq(len(queue(5, 2)), 8, 'mini: line of children with Ravi'); eq(5 + 2, 7, 'mini: leaving Ravi out gives 7')
+    ben_c = 9; mei_c = len(add(pile(ben_c), 4)); eq((mei_c, ben_c + mei_c), (13, 22), 'explore: story C Mei and altogether')
+    eq(len(take(pile(38), 6)), 32, 'mini: Siti has 6 fewer than Mei (38)'); eq(38 % 10 >= 6, True, 'mini: 38 - 6 needs no renaming')
     eq(story(8, [('+', 5), ('-', 6)]), [13, 7], 'explore: story A'); eq(story(12, [('-', 5), ('+', 3)]), [7, 10], 'explore: story B')
     eq(len(add(pile(6), 4)), 10, 'rem4 first'); eq(len(take(pile(9), 3)), 6, 'rem4 second'); eq(len(add(pile(12), 5)), 17, 'rem4 third')
     eq([ [x for x in range(0, 100) if x + 3 == 8][0], [x for x in range(0, 100) if x - 2 == 6][0], [x for x in range(0, 100) if x + 10 == 35][0]], [5, 8, 25], 'I think of a number')
@@ -290,17 +302,18 @@ def check_block(d, eq):
     Q = {q['id']: q for q in qs}
 
     # C1: tens and ones, and the picture really has 47 sticks
-    sticks = svg.bundles(4, 7).count('fill="#FFC93C"')
-    eq(sticks, 47, 'C1 picture draws 47 sticks'); eq(divmod(sticks, 10), (4, 7), 'C1 tens and ones')
-    eq(Q['C1']['val'], [4, 7, 47], 'C1'); eq((Q['C1']['visual']['tens'], Q['C1']['visual']['ones']), (4, 7), 'C1 picture spec')
+    sticks = svg.bundles(3, 9).count('fill="#FFC93C"')
+    eq(sticks, 39, 'C1 picture draws 39 sticks'); eq(divmod(sticks, 10), (3, 9), 'C1 tens and ones')
+    eq(Q['C1']['val'], [3, 9, 39], 'C1'); eq((Q['C1']['visual']['tens'], Q['C1']['visual']['ones']), (3, 9), 'C1 picture spec')
     # C2: the arrow sits exactly on 67, just before 80 is 79, fifty-three is 53
     nl = ex.numberline_svg(Q['C2']['visual'])
     tick_x = {int(m.group(2)): float(m.group(1)) for m in re.finditer(r'x1="([\d.]+)" y1="[\d.]+" x2="[\d.]+" y2="[\d.]+" stroke="#1B2A49" stroke-width="[\d.]+" data-tick="(\d+)"', nl)}
     arrow = re.search(r'data-arrow="(\d+)" data-tip-x="([\d.]+)"', nl)
     eq(sorted(tick_x), list(range(60, 71)), 'C2 ticks 60 to 70')
+    eq(sorted(int(x) for x in re.findall(r'font-weight="700" text-anchor="middle" fill="#1B2A49" font-family="Fredoka, Arial, sans-serif">(\d+)</text>', nl)), [n for n in range(60, 71) if n != 67], 'C2 every number is labelled except the one the arrow shows')
     eq(abs(float(arrow.group(2)) - tick_x[int(arrow.group(1))]) < 0.2, True, 'C2 arrow tip on its tick')
-    eq(int(arrow.group(1)), 67, 'C2 arrow value'); eq(67 - 65, 2, 'C2 two ticks after 65')
-    eq(Q['C2']['val'], [67, 80 - 1, w2n('fifty-three')], 'C2'); eq(w2n('fifty-three'), 53, 'C2 word')
+    eq(int(arrow.group(1)), 67, 'C2 arrow value'); eq((66 + 68) // 2, 67, 'C2 between its two labelled neighbours')
+    eq(Q['C2']['val'], [67, w2n('fifty-three')], 'C2'); eq(w2n('fifty-three'), 53, 'C2 word')
     # C3: the numbers that can be made from the cards using both cards
     cards = re.findall(r'data-card="(\d)"', ex.cards_svg(Q['C3']['visual']['digits']))
     eq(cards, ['3', '8'], 'C3 cards drawn')
@@ -309,9 +322,8 @@ def check_block(d, eq):
     eq(max(made), 83, 'C3 bigger')
     # C4: counting patterns
     def count_on(a_, step, k): return [a_ + step * i for i in range(1, k + 1)]
-    eq(count_on(25, 5, 2), [30, 35], 'C4 a'); eq(count_on(26, 2, 2), [28, 30], 'C4 b')
-    eq(count_on(31, 10, 2), [41, 51], 'C4 c: counting on in tens from 31')
-    eq(Q['C4']['val'], [30, 35, 28, 30, 41, 51], 'C4')
+    eq(count_on(50, 5, 2), [55, 60], 'C4 a'); eq(count_on(34, 10, 2), [44, 54], 'C4 b: counting on in tens from 34')
+    eq(Q['C4']['val'], [55, 60, 44, 54], 'C4')
     # C5: ten-frame picture 7 and 5, make a ten
     tf = svg.ten_frame(7, 5)
     cx = [float(m) for m in re.findall(r'<circle cx="([\d.]+)"', tf)]
@@ -322,19 +334,18 @@ def check_block(d, eq):
     eq(make_ten(7, 5), 7 + 5, 'C5 a by making a ten'); eq(make_ten(37, 5), 37 + 5, 'C5 b by making a ten')
     eq(Q['C5']['val'], [12, 42], 'C5'); eq(len(add(pile(37), 5)), 42, 'C5 simulated')
     # C6, C7: tens jumps and take away without renaming
-    eq(Q['C6']['val'], [len(add(pile(52), 10)), len(add(pile(52), 30)), len(take(pile(52), 20))], 'C6'); eq(Q['C6']['val'], [62, 82, 32], 'C6 values')
-    claim = len(take(pile(47), 20))
-    eq(Q['C7']['val'], [len(take(pile(68), 23)), 'No' if claim != 25 else 'Yes'], 'C7'); eq(Q['C7']['val'], [45, 'No'], 'C7 values'); eq(claim, 27, 'C7 Ali is wrong: 47 - 20 = 27')
-    eq((68 % 10 >= 23 % 10, 47 % 10 >= 20 % 10), (True, True), 'C7 no renaming')
+    eq(Q['C6']['val'], [len(add(pile(52), 30)), len(take(pile(52), 20))], 'C6'); eq(Q['C6']['val'], [82, 32], 'C6 values')
+    eq(Q['C7']['val'], [len(take(pile(74), 31))], 'C7'); eq(Q['C7']['val'], [43], 'C7 values')
+    eq(74 % 10 >= 31 % 10, True, 'C7 no renaming')
     # C8: box numbers by search
-    box_a = [b_ for b_ in range(0, 100) if 26 + 10 == b_ + 9][0]; box_b = [b_ for b_ in range(0, 100) if 8 + 7 == 7 + b_][0]
-    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [27, 8], 'C8 values')
+    box_a = [b_ for b_ in range(0, 100) if 8 + 4 == 6 + b_][0]; box_b = [b_ for b_ in range(0, 100) if 60 + 10 == 50 + b_][0]
+    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [6, 20], 'C8 values')
     # C9: the printed line and the draw length
     v9 = Q['C9']['visual']
-    eq(Q['C9']['val'], [v9['draw_cm'], v9['draw_cm'] + v9['extra_cm'], v9['draw_cm'] + v9['extra_cm']], 'C9 two lines and the length written'); eq(v9['draw_cm'] + v9['extra_cm'], 9, 'C9 second line is 9 cm')
-    eq(10 * (v9['draw_cm'] + v9['extra_cm']) < 182 - 20, True, 'C9 the drawing box is wide enough for a 9 cm line')
+    eq(Q['C9']['val'], [v9['draw_cm'], v9['draw_cm'] + v9['extra_cm']], 'C9 one line drawn and the longer length written'); eq(v9['draw_cm'] + v9['extra_cm'], 10, 'C9 a line 4 cm longer is 10 cm')
+    eq(10 * v9['draw_cm'] < 182 - 20, True, 'C9 the drawing box is wide enough for a 6 cm line')
     eq(re.search(r'width="(\d+)mm"', ex.check_bar_svg(c['sheet_check_bar_mm'])).group(1), '100', 'print check bar svg width in mm')
-    eq((ex.dotbox_svg(True).count('data-dot'), ex.dotbox_svg(False).count('data-dot')), (1, 0), 'C9 one starting dot in the first box only')
+    eq(ex.dotbox_svg(True).count('data-dot'), 1, 'C9 one starting dot in the drawing box')
     # C10: the story
     s10 = story(35, [('+', 10), ('-', 3)])
     eq(Q['C10']['val'], [s10[0], s10[1], s10[1]], 'C10'); eq(s10, [45, 42], 'C10 values')
@@ -368,9 +379,17 @@ def check_block(d, eq):
     tick = sum(sec for (_, sec, ln) in seg['lines'][:start_i]); chk = sum(sec for (_, sec, ln) in seg['lines'][start_i:])
     pm = {p['id']: p for p in d['timing']['parts']}
     exit_min = pm['exit']['end'] - pm['exit']['start']
+    eq(c['minutes'], 20, 'the check takes 20 minutes (owner decision of 22 Oct 2026)')
     eq(c['minutes'] + 4, exit_min, 'check minutes plus the 4-minute exit ticket equal the exit part')
     eq(tick <= 4 * 60 and chk <= c['minutes'] * 60, True, 'exit ticket fits 4 minutes and the check script fits its minutes')
-    eq(pm['exit']['start'] + 4, 54, 'the check starts at minute 54 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
+    eq(pm['exit']['start'] + 4, 63, 'the check starts at minute 63 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
+    eq(sum(p_['end'] - p_['start'] for p_ in d['timing']['parts']), 90, 'parts still sum to 90')
+    eq(sum(len(p_['parts']) for p_ in qs), 20, 'the check has 20 answer parts in all (cut to fit 20 minutes)')
+    # photo return: the business WhatsApp number only, no personal-phone address text anywhere in the check or the lesson
+    blob = json.dumps(c) + json.dumps(d['safeguarding']) + json.dumps(d['tutor_prep']) + json.dumps(d['parent']) + json.dumps([s_['note'] for s_ in d['slides']]) + json.dumps(d['script'])
+    assert '+65 9880 5962' in blob
+    eq('parent contact' in blob or 'address you gave' in blob or 'personal devices' in blob or 'address given at enrolment' in blob, False, 'no leftover text about a parent contact address or personal devices')
+    eq('3-page' in blob or '29-minute' in blob or 'minutes 54' in blob or 'about 30 minutes' in blob or 'minute 54' in blob, False, 'no leftover 29-minute or 30-minute text')
     # strands partition the ten questions and cover every lesson
     st = c['strands']
     eq(sorted(x for s in st for x in s['questions']), sorted(q['id'] for q in qs), 'strands partition C1 to C10')
