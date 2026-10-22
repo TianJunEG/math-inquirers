@@ -159,7 +159,7 @@ By dimension (all lessons): LOW P 3.65, D 2.45, F 3.75, C 3.10, M 3.05, S 3.20. 
 - In L1 only, drop the check gating: "Finished Q1-Q3 and checked? Start the Mirror numbers (Q8) now."
 - Print Q8 at the TOP of the Think Harder page, not last (this helps every lesson).
 - Mini-lesson 20-32: invite a child who already knows it to explain "zero can never go first" in two sentences; give the HIGH child a job, not just a seat.
-- Warm-up slide: add a Bonus bubble: "How many 3-digit numbers have a 7 in the tens place and digits that add to 10?" (answers: 2 7 1 -> 271? list 172? working: hundreds+ones = 3: 3 0... children list: 370? ... ) Tutor should verify before use; the simplest safe bonus is "Write the biggest and smallest 3-digit numbers with digits that add to 9" (900 and 108).
+- Warm-up slide: add a Bonus bubble: "Write the biggest and the smallest 3-digit number whose digits add up to 9." (900 and 108.)
 
 **5. L8 / LOW (3.17).** Spatial tasks stacked, no ramp.
 - PRE1 replace "A stack has a bottom layer 5 cubes long and 2 cubes deep. On top sits a row of 3 cubes..." with "A stack has 2 layers. Each layer has 2 rows of 3 cubes. How many cubes are in the stack?" (12).
