@@ -103,7 +103,7 @@ put('p5l8-title',title_slide('p5l8-title','LESSON 8  •  WEEK 4B','Angle Chaser
  'Thinking strategies taught today: WRITE DOWN WHAT YOU KNOW, FIND ONE ANGLE AND SAY WHY, and TRY EVERY CASE. Drawings are not to scale: never measure. '
  'Materials: paper, ruler, pencil, scissors, protractor (only for the explore activity), red and blue pencils, mini whiteboards, workbook. '
  'Online: children tear or cut the corners of a paper triangle and quadrilateral on camera. The tutor screen-shares the slides and draws on the figures with the annotation tool. '
- 'Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 3 you may choose: carry on, or try Think harder), check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."'))
+ 'Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 2 you may choose: carry on, or try Think harder), check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."'))
 
 # ---------- 2. warm-up: guess the angle ----------
 V=(190,250); cards=''
@@ -328,11 +328,10 @@ put('p5l8-ws2ans',checks('p5l8-ws2ans','72–76 MIN','Page 2: check together',[(
  'Q4: ADC = ABC = 56° (opposite angles). DA = DE: DEA = (180° − 56°) ÷ 2 = 62°. AEC = 180° − 62° = 118° (straight line). Angle DAB = 180° − 56° = 124°; DAE = 62°, so EAB = 124° − 62° = 62°. Q5a: 50° as a base angle gives 50°, 50°, 80°; 50° as the top angle gives 65°, 65°. Q5b: 100° cannot be a base angle (two of them make 200°), so only 100°, 40°, 40°.',gapy=170,size=32))
 
 # ---------- stretch / challenge ----------
-st=[('1.','Rhombus ABCD has angle ADC = 130°. The diagonal AC is drawn. Find angle DAC.'),('2.','In a parallelogram one angle is 30° less than the angle next to it. Find all four angles.'),('3.','Two angles of a triangle add up to 110°. What is the third angle? The triangle is isosceles: list every possible set of three angles.')]
-put('p5l8-stretch',sec('p5l8-stretch','37–72 MIN  •  OPTION',h2('Think harder')+numcards(st),'Answers: 1) 25°. DA = DC (rhombus), so triangle ADC is isosceles with top angle 130° and base angles (180° − 130°) ÷ 2 = 25°. 2) 75°, 105°, 75°, 105°. Neighbouring angles add up to 180°. 180° − 30° = 150°, 150° ÷ 2 = 75°, so the smaller angle is 75° and the bigger is 105°. '
- '3) The third angle is 180° − 110° = 70°. Isosceles: either the two angles that add up to 110° are equal (55°, 55°, 70°), or one of them equals the third angle, 70°, which makes the other 110° − 70° = 40° (70°, 70°, 40°). Two sets: 55°, 55°, 70° and 40°, 70°, 70°.'))
-ch=[('1.','ABC is an isosceles triangle with AB = AC and angle BAC = 40°. D is a point on AC with BD = BC. Find angle ABD.'),('2.','ABCD is a square. E is a point inside it so that ABE is an equilateral triangle. Find angle DEC.')]
-put('p5l8-challenge',sec('p5l8-challenge','37–72 MIN  •  OPTION',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6 (Q7, "one angle is 30° bigger than another", is only in the workbook: answer 50°, 50°, 80° or 40°, 70°, 70°). Answers: 1) 30°. 2) 150°.'))
+import p5_printed as _PP
+for _k,_v in _PP.slides(8,'A').items(): S[f'p5l8-{_k}']=_v
+ch=[]
+for _k,_v in _PP.slides(8,'B').items(): S[f'p5l8-{_k}']=_v
 # chdiag
 Bc=(100,330); Cc=(320,330); Ac=(210,330-110/math.tan(rad(20)))
 chk(Ac,Bc,Cc,40,'A'); chk(Bc,Ac,Cc,70,'B')
@@ -345,14 +344,14 @@ chk(Eq,Dq,Cq,150,'DEC'); chkeq(Aq,Bq,Aq,Eq,'AB AE'); chkeq(Aq,Bq,Bq,Eq,'AB BE')
 g2=poly([Aq,Bq,Cq,Dq],WHITE,5)+line(Aq,Eq,TEAL,5)+line(Bq,Eq,TEAL,5)+line(Dq,Eq,NAVY,4)+line(Cq,Eq,NAVY,4)+tick(Aq,Eq)+tick(Bq,Eq)+tick(Aq,Bq)+sq(Aq,Bq,Dq)+sq(Bq,Cq,Aq)+sq(Cq,Dq,Bq)+sq(Dq,Aq,Cq)
 g2+=arc(Eq,Dq,Cq,30,'?',RED,14,34)+pl(Aq,'A',-22,30)+pl(Bq,'B',24,30)+pl(Cq,'C',24,-8)+pl(Dq,'D',-24,-8)+pl(Eq,'E',0,44)
 body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Equal sides everywhere</p>'+svgwrap(440,370,'Isosceles triangle ABC with AB equal to AC and angle A 40 degrees, and D on AC with BD equal to BC',g1,1.12),extra='flex:1;min-width:0;padding:20px 24px;align-items:center')
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: A square and an equilateral triangle</p>'+svgwrap(400,370,'Square ABCD with an equilateral triangle ABE inside it. The lines ED and EC are drawn.',g2,1.12),extra='flex:1;min-width:0;padding:20px 24px;align-items:center')+'</div>'
-put('p5l8-chdiag',sec('p5l8-chdiag','37–72 MIN  •  OPTION',body,'Show after pairs have tried Go further, or if they are stuck. The pictures show the problem, not the answer. The tick marks show equal sides. Ask: What do you notice? Which triangles are isosceles? Which angles must be equal? In Q2, how long is AE compared with AD? Answers are in the Go further slide notes.'))
-body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: spot the isosceles triangles',34,800,TEAL))
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">B1: Equal sides everywhere</p>'+svgwrap(440,370,'Isosceles triangle ABC with AB equal to AC and angle A 40 degrees, and D on AC with BD equal to BC',g1,1.12),extra='flex:1;min-width:0;padding:20px 24px;align-items:center')
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">B2: A square and an equilateral triangle</p>'+svgwrap(400,370,'Square ABCD with an equilateral triangle ABE inside it. The lines ED and EC are drawn.',g2,1.12),extra='flex:1;min-width:0;padding:20px 24px;align-items:center')+'</div>'
+put('p5l8-chdiag',sec('p5l8-chdiag','37–72 MIN  •  OPTION',body,'Show after pairs have tried Go further, or if they are stuck. The pictures show the problem, not the answer. The tick marks show equal sides. Ask: What do you notice? Which triangles are isosceles? Which angles must be equal? In B2, how long is AE compared with AD? Answers are in the Go further slide notes.'))
+body=h2('Go further: walk-through')+pin(128,250,800,p('B1: spot the isosceles triangles',34,800,TEAL))
 for i,t in enumerate(['AB = AC: angles B and C = (180° − 40°) ÷ 2 = 70°','BD = BC: angle BDC = angle C = 70°','Angle CBD = 180° − 70° − 70° = 40°','Angle ABD = 70° − 40° = 30°']): body+=pin(128,330+i*110,800,p(t,30),'rise',WHITE)
-body+=pin(992,250,800,p('Q2: AE = AB = AD, so ADE is isosceles',34,800,TEAL))
+body+=pin(992,250,800,p('B2: AE = AB = AD, so ADE is isosceles',34,800,TEAL))
 for i,t in enumerate(['Angle DAE = 90° − 60° = 30°','Angle AED = (180° − 30°) ÷ 2 = 75°; same for BEC = 75°','Angle AEB = 60° (equilateral)','Round E: 360° − 75° − 75° − 60° = 150°']): body+=pin(992,330+i*110,800,p(t,30),'rise',WHITE)
-put('p5l8-chwalk',sec('p5l8-chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. Q1: the tick marks tell us which triangles are isosceles. Triangle ABC: AB = AC with top angle 40°, so B = C = 70°. Triangle BCD: BD = BC, so the angles opposite them are equal: angle BDC = angle BCD = 70°. Then angle CBD = 180° − 140° = 40°. Angle ABD = angle ABC − CBD = 70° − 40° = 30°. '
+put('p5l8-chwalk',sec('p5l8-chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. B1: the tick marks tell us which triangles are isosceles. Triangle ABC: AB = AC with top angle 40°, so B = C = 70°. Triangle BCD: BD = BC, so the angles opposite them are equal: angle BDC = angle BCD = 70°. Then angle CBD = 180° − 140° = 40°. Angle ABD = angle ABC − CBD = 70° − 40° = 30°. '
  'Q2: AB = AE (equilateral) and AB = AD (square), so AE = AD and triangle ADE is isosceles. Angle DAE = angle DAB − angle EAB = 90° − 60° = 30°, so each base angle is 75°. The same happens on the right: BEC = 75°. The four angles round E add up to 360°: DEA 75° + AEB 60° + BEC 75° + the angle DEC: 360° − 210° = 150°.'))
 
 # ---------- talk / exit ----------
@@ -364,6 +363,7 @@ put('p5l8-exit',sec('p5l8-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: 68
 
 # ---------- write ----------
 order=['p5l8-title','p5l8-warm1','p5l8-warm2','p5l8-explore1','p5l8-explore2','p5l8-teach1','p5l8-we1','p5l8-try1','p5l8-teachshapes','p5l8-we2','p5l8-try2','p5l8-key','p5l8-break','p5l8-ws1','p5l8-ws1ans','p5l8-teachchain','p5l8-teachcombo','p5l8-teachcases','p5l8-ws2','p5l8-ws2ans','p5l8-stretch','p5l8-challenge','p5l8-chdiag','p5l8-chwalk','p5l8-talk','p5l8-exit']
+order=_PP.fix_order(order,8,S)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

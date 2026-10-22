@@ -51,7 +51,7 @@ const lookBack = (n) => {
   const box = (label, items, extra) => `<div style="text-align:left;font-size:14px;line-height:2.0"><b>${label}</b> ${items.map(o => tick + esc2(o)).join('')}${extra || ''}</div>`;
   const r1 = box('Something I did well:', g.didwell, tick + 'something else: ______________');
   const r2 = box('The hardest part was:', g.reflect, tick + 'something else: ______________');
-  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (I can show a grown-up at home)']);
+  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (I can ask a grown-up)']);
   const r4 = `<div style="text-align:left;font-size:12.5px;line-height:1.5;color:#444"><i>Two minutes. Tick or write. You may pass on any line. This page is yours: your tutor does not read it out or collect it.</i></div>`;
   out.push(banner('Look back'));
   out.push(C.tbl([9900], [C.row([C.cell([r1, r2, r3, r4], 9900, { align: 'left', fill: 'EDEDED', h: 50 })])]));

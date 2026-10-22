@@ -88,7 +88,7 @@ module.exports = {
     ],
     stretch: [
       { q: 'A machine multiplies by a number, then adds a number. IN 2 gives OUT 11 and IN 5 gives OUT 20. Find what the machine does (try × 2, × 3, × 4 … with IN 2, then test IN 5). Then: what OUT does IN 10 give? Which IN gives OUT 26?', a: '× 3, then + 5. IN 10 gives OUT 35. OUT 26 comes from IN 7 (26 − 5 = 21, 21 ÷ 3 = 7).' },
-      { q: 'Ben had some money. He spent $15 on a book. Then his dad gave him $10. Now he has $42. How much money did Ben have at first?', a: '$47 (42 − 10 = 32, 32 + 15 = 47)' },
+      { q: 'Ben had some money. He spent $15 on a book. Then his dad gave him as much as he had left. Now he has $42. How much did Ben have at first? Draw bars.', a: '$36. Undo the last step: dad gave him as much as he had left, so $42 is two equal bars of $21. So Ben had $21 after the book, and $21 + $15 = $36 at first. Check: 36 − 15 = 21, 21 + 21 = 42.' },
       { q: 'Siti had some beads. She gave half of them to Mei. Then she bought 12 more. Now she has 30 beads. How many beads did Siti have at first?', a: '36 (30 − 12 = 18 is half, 18 + 18 = 36)' },
       { q: 'Ali, Ben and Siti have 40 marbles altogether. Ben has 5 more marbles than Ali. Siti has 8 more marbles than Ali. How many marbles does each child have? Draw a bar for each child.', a: 'Ali 9, Ben 14, Siti 17 (40 − 5 − 8 = 27, 27 ÷ 3 = 9; check 9 + 14 + 17 = 40)' },
       { q: 'A machine does × 2, then − 3. What goes IN to give OUT 17? What goes IN to give OUT 1?', a: '10, and 2 (17 + 3 = 20, 20 ÷ 2 = 10; 1 + 3 = 4, 4 ÷ 2 = 2)' },

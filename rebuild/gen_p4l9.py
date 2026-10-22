@@ -216,10 +216,12 @@ put('p4l9-ws2ans',checks('p4l9-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q3: Ali goes up $10 a week, Mei $5; the gap of $20 in week 1 closes by $5 each week, so they meet in week 5 ($50) and Ali is ahead from week 6. Week 8: Ali 80, Mei 65. Q4: Day 2 to Day 5 is 3 jumps, 26 − 14 = 12, 12 ÷ 3 = 4; total 10 + 14 + 18 + 22 + 26 = 90. Q5: A goes 20 to 80, B goes 44 to 56. The lines look the same because each graph was stretched to fit its own scale.',gapy=190))
 
 # ---------- stretch / challenge ----------
-st=[('1.','Week 1: 48, Week 2: 56, Week 3: 51, Week 4: 66. Between which two weeks was the biggest change?'),('2.','Each line on a scale is worth 5. A point is 7 lines above 0. Another point is 4 lines higher. What do they show?'),('3.','Sales for 4 days add up to 200. Each day is 6 more than the day before. What were the sales on Day 1?')]
-put('p4l9-stretch',sec('p4l9-stretch','Early finishers / take-home',h2('Stretch')+numcards(st,36),'Answers: 1) Week 3 to Week 4: up 15 (the other changes are up 8 and down 5). 2) 35 and 55. 3) 41 (41, 47, 53, 59: take away the extras 6 + 12 + 18 = 36, then 164 ÷ 4 = 41).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(9)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l9-stretch',sec('p4l9-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,28),th_notes(9)))
 ch=[('1.','Four teams scored 100 points. Team A scored twice as many as Team B. Team C scored 10 more than Team B. Team D scored 22. Find each team’s points.'),('2.','Tank A has 80 litres and loses 6 litres each hour. Tank B has 20 litres and gains 9 litres each hour. After how many hours do they hold the same amount?')]
-put('p4l9-challenge',sec('p4l9-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) A 34, B 17, C 27, D 22. 2) After 4 hours: 56 litres each.'))
+put('p4l9-challenge',sec('p4l9-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) A 34, B 17, C 27, D 22. 2) After 4 hours: 56 litres each.'))
 gq=''
 for i,(lab,units,extra) in enumerate([('A',2,None),('B',1,None),('C',1,'10'),('D',0,'22')]):
     y=30+i*84; gq+=txt(60,y+46,lab,32,NAVY)
@@ -235,11 +237,11 @@ for r,(lab,first) in enumerate([('Hour',None),('Tank A','80'),('Tank B','20')]):
         val=(cols[c] if r==0 else (lab if c==0 else (first if c==1 else '')))
         gt+=f'<rect x="{x}" y="{30+r*80}" width="{w}" height="70" fill="{YEL if r==0 else WHITE}" stroke="{NAVY}" stroke-width="3"/>'+(txt(x+w/2,30+r*80+46,val,28) if val else '')
 gt+=txt(390,320,'Tank A: 6 litres less each hour',28,RED)+txt(390,370,'Tank B: 9 litres more each hour',28,TEAL)+txt(390,440,'When are they the same?',32,NAVY)
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Draw the teams as bars</p>'+svgwrap(760,470,'Bars: team A two units, team B one unit, team C one unit and 10, team D 22; all four make 100',gq).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Make a table, hour by hour</p>'+svgwrap(760,470,'A table of hours 0 to 5 with tank A starting at 80 litres and tank B at 20 litres, the rest empty',gt).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l9-chdiag',sec('p4l9-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: In Q1, how many equal bars can you see if you take away the 10 and the 22? In Q2, what happens to the GAP between the tanks every hour? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: bars, take away the extras',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: bars, take away the extras',38,800,TEAL))
 for i,t in enumerate(['A + B + C = 100 − 22 = 78','Take away C’s extra 10: 68 = 4 equal bars','One bar: 68 ÷ 4 = 17','B 17, A 34, C 27, D 22.  Check: 100 ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: watch the gap',38,800,TEAL))
 for i,t in enumerate(['Hour 0: gap 80 − 20 = 60 litres','Each hour the gap closes by 6 + 9 = 15','60 ÷ 15 = 4 hours','A: 80, 74, 68, 62, 56.  B: 20, 29, 38, 47, 56 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)

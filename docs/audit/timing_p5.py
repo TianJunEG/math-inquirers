@@ -2,6 +2,8 @@
 """Lesson timing audit helper, Math Inquirers Level N=5 (P5).  ANALYSIS ONLY: reads the repo, writes nothing.
 
 Usage:  python3 docs/audit/timing_p5.py            (prints the per-lesson tables as markdown)
+        python3 docs/audit/timing_p5.py --plan     (recommended new budgets per lesson, summing to 90)
+        python3 docs/audit/timing_p5.py --plan-md  (the same as one markdown table)
         python3 docs/audit/timing_p5.py --json     (prints raw numbers)
 
 What it does: loads p5/data.js (script, deck, lesson, qbank) through node, reads the slide decks in
@@ -132,14 +134,18 @@ def qa_words(slides_by_id, ids):
 # ---------------- model of one lesson ----------------
 def model(n, D, S, fx=None):
     fx = fx or {}
-    L = dict(LES[n]); d = D[str(n)] if str(n) in D else D[n]
+    L = dict(LES[n]);
+    for k_ in ('p1', 'p2', 'start2'):
+        if k_ in fx: L[k_] = fx[k_]
+    d = D[str(n)] if str(n) in D else D[n]
     sc, dk = d['script'], d['deck']
     ids = [s['id'] for s in S]; by = {s['id']: s for s in S}
     # slide groups by position in the deck
     i_exp2 = ids.index('explore2'); i_key = ids.index('key'); i_brk = ids.index('break')
     i_ws1 = ids.index('ws1'); i_ws1a = ids.index('ws1ans'); i_ws2 = ids.index('ws2'); i_ws2a = ids.index('ws2ans')
-    mini_ids = ids[i_exp2 + 1:i_key + 1]
-    teach_ids = [i for i in ids[i_ws1a + 1:i_ws2] if not by[i]['opt']]
+    drop = set(fx.get('drop', []))
+    mini_ids = [i for i in ids[i_exp2 + 1:i_key + 1] if i not in drop]
+    teach_ids = [i for i in ids[i_ws1a + 1:i_ws2] if not by[i]['opt'] and i not in drop]
     res = {}
     bo_e, bo_p = L['bo']
     # --- opening (before the clock) ---
@@ -159,7 +165,7 @@ def model(n, D, S, fx=None):
     wq = [q[0] for q in dk['warmQs']]
     if fx: wq = wq[:4]
     res['warm'] = part(speak=REC + say_s(W(sc['warmIntro'])) + read_s(sum(W(q) for q in wq)),
-                       wait=len(wq) * (WAIT_Q + TAKE), act=(min(L['game'], 150) if fx else L['game']), trans=2 * SLIDE)
+                       wait=len(wq) * (WAIT_Q + TAKE), act=(min(L['game'], fx.get('game_cap', 150)) if fx else L['game']), trans=2 * SLIDE)
     # --- explore ---
     ea = dk['expAsk']
     out_, back_ = (BO_OUT, BO_BACK) if bo_e else (MAIN_OUT, MAIN_BACK)
@@ -179,7 +185,7 @@ def model(n, D, S, fx=None):
         else:
             sp += say_s(W(s['text']) * FACT); wt += WAIT_Q + TAKE
     sp = max(sp, say_s(W(sc['think'])))
-    res['mini'] = part(speak=REC + sp, wait=wt, act=ac + L.get('mini_extra', 0), trans=len(mini_ids) * SLIDE)
+    res['mini'] = part(speak=REC + sp, wait=wt, act=ac + (L.get('mini_extra', 0) if 'teachlist' not in drop else 0), trans=len(mini_ids) * SLIDE)
     # --- brain break ---
     res['brk'] = part(speak=REC + read_s(W(dk['brk'])) + 20, wait=60 + 20, act=(90 if fx else L['brk']), trans=SLIDE)
     # --- workbook ---
@@ -208,7 +214,7 @@ def model(n, D, S, fx=None):
     ans2 = by['ws2ans']['text']
     wb['chk2'] = part(speak=read_s(W(ans2)), wait=nq2 * (45 if fx else 60) + (0 if fx else 30) * heavy(L['p2']), trans=SLIDE + 20)
     res['wb'] = {k: v for k, v in wb.items()}
-    res['wbmeta'] = dict(p1_mid=p1m, p2_mid=p2m, start2_mid=s2, nslides_teach=len(teach_ids),
+    res['wbmeta'] = dict(p2_all=p2m, p1_mid=p1m, p2_mid=p2m, start2_mid=s2, nslides_teach=len(teach_ids),
                          p1_items=sum(len(x) for _, x in L['p1']), p2_items=sum(len(x) for _, x in L['p2']))
     # --- talk ---
     tq = W(by['talk']['text'].split('Sentence starters')[0])
@@ -224,7 +230,7 @@ def model(n, D, S, fx=None):
     e = part(speak=REC + say_s(W(sc['close']) + 20) + read_s(W(exq)), wait=30 + 8 * 5, act=L['exit'], trans=SLIDE)
     r = part(speak=say_s(30 + 20), act=(75 if fx else 90), trans=SLIDE + 20)
     if L.get('cert'):
-        c = part(speak=say_s(45), act=8 * 20 + 8 * 8, trans=SLIDE)
+        c = part(speak=say_s(45), act=(8 * 12 if fx else 8 * 20 + 8 * 8), trans=SLIDE)
     else:
         c = part(speak=say_s(35), act=(15 if fx else 8 * 8), trans=0)
     res['exit'] = {k: e[k] + r[k] + c[k] for k in e}
@@ -313,9 +319,64 @@ def md(n, o):
     t.append('| **Total if middle pairs finish page 1** | 90 | | | | | **%.1f** | %+.1f | |' % (o['t_full'], o['t_full'] - 90))
     return '\n'.join(t)
 
+
+# ---------------- recommended plan (the fix scenario) ----------------
+# For every lesson: what stays in class (page 1, page 2, page-2 teaching slides), what moves to take-home, and the
+# mini-lesson slides that move out.  Minutes per answer part are the same MIDDLE-child estimates as above.
+FIX = {
+ 1: dict(drop_mini=[], keep_teach=['teachest', 'teachbrackets'], p1=[(2, [1, 2]), (3, [7])], p2=[(4, [1.25, 1.5, 1, 1.25]), (5, [1.5])], game_cap=120),
+ 2: dict(drop_mini=[], keep_teach=['teachback'], p1=[(1, [1, 1, 2.5]), (2, [1.5, 1.5]), (3, [3])], p2=[(5, [4, 1]), (4, [1.5])]),
+ 3: dict(drop_mini=[], keep_teach=['teachdiff'], p1=[(1, [1.5, 3.5, 1.5]), (2, [0.5, 4])], p2=[(4, [1.5, 1.5, 3.5])]),
+ 4: dict(drop_mini=[], keep_teach=['teachtake', 'teachsame'], p1=[(1, [1, 1.5, 1.5, 1]), (2, [1, 1, 2])], p2=[(5, [1, 2, 1.5]), (4, [0.5, 1.5, 1.5, 1.5, 1])]),
+ 5: dict(drop_mini=['teachlist'], keep_teach=[], p1=[(2, [4.5, 1.5]), (3, [1.5, 2, 1.5])], p2=[(4, [1, 2.5, 1, 2])]),
+ 6: dict(drop_mini=[], keep_teach=['teachplans'], p1=[(1, [3, 2]), (2, [1, 3, 0.5]), (3, [1])], p2=[(4, [2, 3.5]), (6, [2])]),
+ 7: dict(drop_mini=[], keep_teach=['teachrem'], p1=[(1, [3, 1, 1.5]), (3, [1, 1, 2.5])], p2=[(2, [1, 1.5, 2, 1]), (4, [1, 1, 1.5, 1])]),
+ 8: dict(drop_mini=[], keep_teach=['teachchain', 'teachcombo'], p1=[(1, [0.75, 0.75, 0.75, 1.5]), (2, [2.5, 3])], p2=[(3, [1.5, 2]), (4, [1, 2])]),
+ 9: dict(drop_mini=['try3'], keep_teach=['teachgs', 'teachsup'], p1=[(1, [3, 1.5]), (2, [2, 2.5])], p2=[(3, [4.5]), (4, [3])], game_cap=120, expl_cap=330),
+ 10: dict(drop_mini=['try2'], keep_teach=['teachsq'], p1=[(1, [5]), (2, [4.5])], p2=[(3, [4.5]), (4, [1.5])]),
+}
+BUFFER = 2.0
+
+def plan(n, D):
+    S = load_slides(n); L = LES[n]; F = FIX[n]
+    up = lambda x: -(-x * 2 // 1) / 2
+    ids = [s['id'] for s in S]; i_ws1a = ids.index('ws1ans'); i_ws2 = ids.index('ws2')
+    all_teach = [i for i in ids[i_ws1a + 1:i_ws2] if not [s for s in S if s['id'] == i][0]['opt']]
+    drop = list(F['drop_mini']) + [i for i in all_teach if i not in F['keep_teach']]
+    fx = dict(try_f=0.7, drop=drop, p1=F['p1'], p2=F['p2'], start2=[(q, None) for q, _ in F['p2']])
+    fx['game_cap'] = F.get('game_cap', 150)
+    if n in (1, 2, 6, 9, 10): fx['expl_cap'] = F.get('expl_cap', 360)
+    R = model(n, D, S, fx); wb = R['wb']
+    g = lambda k: up(tot(R[k]) / 60)
+    b = dict(open=max(2.0, g('open')), sneak=g('sneak'), warm=g('warm'), explore=g('explore'), mini=g('mini'), brk=g('brk'),
+             chk1=up(tot(wb['chk1']) / 60), teach=up(tot(wb['teach']) / 60), chk2=up(tot(wb['chk2']) / 60), talk=g('talk'), exit=g('exit'))
+    b['p1'] = up(tot(wb['p1']) / 60); b['p2'] = up(tot(wb['p2']) / 60)
+    used = sum(b.values())
+    b['buffer'] = round(90 - used, 1)      # whatever is left is the standing buffer (target 2 min)
+    return dict(budgets=b, p1_work=sum(sum(x) for _, x in F['p1']), p2_work=sum(sum(x) for _, x in F['p2']), drop=drop, fx=fx,
+                p1_q=[q for q, _ in F['p1']], p2_q=[q for q, _ in F['p2']])
+
+PLAN_NAMES = [('open', 'Opening (inside the 90)'), ('sneak', 'Sneak-peek'), ('warm', 'Warm-up'), ('explore', 'Explore'), ('mini', 'Mini-lesson'),
+              ('brk', 'Brain break'), ('p1', 'WB page 1 pairs'), ('chk1', 'WB check p1'), ('teach', 'WB teaching'), ('p2', 'WB page 2 alone'),
+              ('chk2', 'WB check p2'), ('talk', 'Talk time'), ('exit', 'Exit/reflect/close'), ('buffer', 'Buffer')]
+
 if __name__ == '__main__':
     D = load_data(); out = {}
     for n in range(1, 11): report(n, D, out)
+    if '--plan-md' in sys.argv:
+        P = {n: plan(n, D) for n in range(1, 11)}
+        print('| Part | Old | ' + ' | '.join('L%d' % n for n in range(1, 11)) + ' |'); print('|---|---|' + '---|' * 10)
+        old = dict(open=0, sneak=3, warm=6, explore=12, mini=12, brk=4, p1=12, chk1=4, teach=5, p2=14, chk2=4, talk=6, exit=8, buffer=0)
+        for k, lab in PLAN_NAMES:
+            print('| %s | %s | ' % (lab, old[k]) + ' | '.join('%.1f' % P[n]['budgets'][k] for n in range(1, 11)) + ' |')
+        print('| **Total** | **90** | ' + ' | '.join('**%.0f**' % sum(P[n]['budgets'].values()) for n in range(1, 11)) + ' |')
+        sys.exit()
+    if '--plan' in sys.argv:
+        for n in range(1, 11):
+            pl = plan(n, D); b = pl['budgets']
+            print('L%d' % n, ' | '.join('%s %.1f' % (lab, b[k]) for k, lab in PLAN_NAMES), '| SUM %.1f' % sum(b.values()))
+            print('    p1 Qs', pl['p1_q'], 'MID work %.1f' % pl['p1_work'], '| p2 Qs', pl['p2_q'], 'MID work %.1f' % pl['p2_work'], '| dropped slides', pl['drop'])
+        sys.exit()
     if '--json' in sys.argv:
         print(json.dumps(out, indent=1, default=str))
     else:

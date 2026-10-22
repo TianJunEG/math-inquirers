@@ -43,7 +43,7 @@ module.exports = {
         ['Q2', '(a) 2+8, 3+7, 4+6, 5+5  (b) The second number goes down by 1  (c) 6 different bonds'],
         ['Q3', '(a) 20 and 20  (b) 20 and 20  (c) 8, 11, 5'],
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
-        ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
+        ['Q5', '(a) The corners 1, 2, 3 are given. Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5. Each side adds to 9.  (b) If you have time, sides of 10: the corners are 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
         ['Q6', '4 and 6.  If you have time: 4 and 8.'],
         ['Think harder slide', '1) 10 and 16  2) 8  3) 6 pairs']
       ]
@@ -106,7 +106,7 @@ module.exports = {
       extension: 'Make a three-step mystery number story for a partner.',
       key: [
         ['Q1', '(a) 7  (b) 12  (c) 8 (undo in reverse order: 10 + 2 = 12, then 12 \u2212 4 = 8)'],
-        ['Q2', '(a) 15 and 8  (b) Add 4. IN 15 gives OUT 19. OUT 30 comes from IN 26.'],
+        ['Q2', '(a) 15 and 8  (b) Add 4. IN 15 gives OUT 19. If you have time: OUT 30 comes from IN 26.'],
         ['Q3', '(a) Mei 13  (b) Ben 7  (c) Mei has 6 more than Ben  (d) 28 altogether'],
         ['Q4', '(a) 13 children (20 − 7)  (b) 5 children (3 + 3 − 1, Ali is counted twice). Talk time: 8th from both ends is 15.'],
         ['Q5', 'Open: check that the story has a clear answer.'],
@@ -197,7 +197,7 @@ module.exports = {
       extension: 'Measure the same object with two different units and find the rule linking the two counts.',
       key: [
         ['Q1', '(a) C  (b) B  (c) 2 more  (d) 12 units  (e) Same as A (9 − 2 = 7)'],
-        ['Q2', 'Open. Check guesses are close. The Difference column is how far off the guess was. Equal units are needed so the measures can be compared fairly.'],
+        ['Q2', 'Open. Check guesses are close. The last column is how far off the guess was. Equal units are needed so the measures can be compared fairly.'],
         ['Q3', 'Ali. Fewer spans means each span was longer, so Ali’s hand is bigger.'],
         ['Q4', '(a) 10 erasers  (b) 6 clips'],
         ['Q5', 'Ali 11 cubes, Ben 6 cubes. All three together: 25 cubes.'],
@@ -223,7 +223,7 @@ module.exports = {
       share: 'Pick one puzzle and teach it to the group in two sentences.',
       exit: { q: 'My favourite lesson was ____ because ____.', a: 'Open. Use it to plan next steps.' },
       mistakes: ['Rushing: not checking an answer.', 'Not showing how they know.'],
-      extension: 'Write a challenge puzzle for next year’s group.',
+      extension: 'Write a puzzle for next year’s group.',
       key: [
         ['Q1', '23, 28. Add 5.'],
         ['Q2', '5 and 7 (5 + 7 = 12 and 7 − 5 = 2)'],

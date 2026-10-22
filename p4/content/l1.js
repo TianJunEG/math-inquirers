@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 1: Factor Hunters (Factors and multiples)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -142,7 +143,7 @@ module.exports = {
     W.push(H.sub('b', 'How many times do they leave together from 6:00 am to 8:00 am? Count 6:00 and 8:00 too.'));
     W.push(H.ans('Number of times:'));
     W.push(H.q(5, 'Count the factors.', { keepNext: true }));
-    W.push(H.sub('', 'Start here: use 6 counters. Make equal rows: 1 row of 6, 2 rows of 3, 3 rows of 2, 6 rows of 1. Each different number of rows is a factor. Then try 9 counters.', { keepNext: true }));
+    W.push(tip('use 6 counters. Make equal rows: 1 row of 6, 2 rows of 3, 3 rows of 2, 6 rows of 1. Each different number of rows is a factor. Then try 9 counters.'));
     W.push(H.sub('a', 'Fill in the table.', { keepNext: true }));
     W.push(H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
       H.row([H.cell('Number', 2400, { bold: true, fill: 'EDEDED' }), ...['6', '9', '10', '15', '16', '25'].map(s => H.cell(s, 1250, { bold: true, fill: 'EDEDED' }))]),
@@ -159,7 +160,7 @@ module.exports = {
     W.push(H.sub('', 'Step 2: cross out any multiple of 8. Left: ______ and ______.   Step 3: use the last clue.', { keepNext: true }));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.', { keepNext: true }));
-    W.push(H.sub('', 'Start here: write the first six multiples of 3 on one line and of 6 on another. Is every number in the 6 line also in the 3 line? Is every number in the 3 line also in the 6 line?', { keepNext: true }));
+    W.push(tip('write the first six multiples of 3 on one line and of 6 on another. Is every number in the 6 line also in the 3 line? Is every number in the 3 line also in the 6 line?'));
     W.push(...H.lines(2));
     return W;
   }

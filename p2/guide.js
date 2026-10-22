@@ -46,7 +46,7 @@ const R = [
   ['32–36', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
   ['36–72', 'Worksheet', 'Page 1 in pairs (36–50), check together (50–52), short teaching (52–57), page 2 alone (57–69), check together (69–72). Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
   ['72–80', 'Talk time', 'Volunteers share one answer and explain it. Compare methods. Any child may pass. No cold-calling by name, no public tallies or rankings.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited. Quiet children can be invited, with a parent nearby, by a quick word in the open session; never by private chat or message.'],
-  ['80–90', 'Exit ticket, Looking back and stamp', 'Exit ticket (80–87, one question on a slip of paper). Looking back (87–89, a small box on the last core page, a pass is always allowed). Closing and stamps (89–90).', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the tutor only. Tutor stamps the next time or posts it.']
+  ['80–90', 'Exit ticket, Looking back and stamp', 'Exit ticket (80–87, one question on a slip of paper). Looking back (87–89, in the box on the “Before you go” page after page 2, a pass is always allowed). Closing and stamps (89–90).', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the tutor only. Tutor stamps the next time or posts it.']
 ];
 G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1450), hd('What happens', 2700), hd('Face to face', 2300), hd('Online', 2550)]), ...R.map(r => row([c2(r[0], 900, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2700), c2(r[3], 2300), c2(r[4], 2550)]))]));
 G.push(h2('Teaching habits that matter'));
@@ -163,7 +163,7 @@ L.lessons.forEach(l => {
   G.push(h2('Think harder and Go further questions'));
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the two Think harder pages in the workbook (Think harder, then Go further). More are in the separate Question Bank.', { size: 19, color: '666666' }));
-  ask([['Workbook Investigation (last core page): ' + gp.invest.title + '. ' + gp.invest.text + ' ' + gp.invest.first + (gp.invest.need ? ' ' + gp.invest.need : ''), gp.invest.model]], 'Investigation (several answers are right)', 'Model answer and what to look for');
+  ask([['Workbook Investigation (on the “Before you go” page): ' + gp.invest.title + '. ' + gp.invest.text + ' ' + gp.invest.first + (gp.invest.need ? ' ' + gp.invest.need : ''), gp.invest.model]], 'Investigation (several answers are right)', 'Model answer and what to look for');
 
   pushSeg('72–80 min', 'Talk time');
   doo(['Bring the group back to a circle (or camera on, mics on). ' + GC.talkDo]);

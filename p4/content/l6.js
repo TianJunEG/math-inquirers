@@ -3,6 +3,7 @@
 // Every angle in the drawings is drawn to size: coordinates are computed with cos and sin, so a protractor reads true.
 // Every answer below was worked out and checked (compass turns, clock angles and the "find all" items with a short Python script).
 
+const tip = require('../tip.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF', RED = '#D64545';
 const T = (x, y, s, size = 16, fill = NAVY, anchor = 'middle', weight = 700) => `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="Arial">${s}</text>`;
 const rad = d => d * Math.PI / 180;
@@ -172,7 +173,8 @@ module.exports = {
   },
 
   workbook: H => [
-    H.q(1, 'Start here: hold the corner of a sheet of paper on each angle. Is the angle smaller or bigger than the corner (a right angle, 90°)? Use that to write your estimate. Then measure it with your protractor. The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
+    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
+    tip('hold the corner of a sheet of paper on each angle. Is the angle smaller or bigger than the corner (a right angle, 90°)? Use that for your estimate.'),
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
       H.row(['Angle', 'a', 'b', 'c', 'd'].map((s, i) => H.cell(s, i ? 1875 : 2400, { bold: true, fill: 'EDEDED' }))),

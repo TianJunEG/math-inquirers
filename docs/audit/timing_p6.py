@@ -25,6 +25,10 @@ import json, re, html, subprocess, sys, os
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SAY_WPM, READ_WPM = 140.0, 130.0
 GROUP = 8
+GREET = 30            # greet the children by name
+REC_NOTICE = 15       # say that the lesson is recorded (levels/reccues.js RULES.privacy)
+FACT = 0.8            # share of a worked-example slide's printed words that is actually spoken
+CHECK_Q = 60          # check-together: per numbered question (volunteer, answer shown, children mark in a different colour)
 FOOTER = 'Math Inquirers P6 • Notice it. Test it. Explain why.'
 
 SCEN = {  # slide change, breakout/materials move, activity multiplier
@@ -41,6 +45,8 @@ PARTNER_SAY = 'Talk to your partner while you work. I will come round and ask yo
 PAIRS_SAY = ('Pairs first. Read each question aloud and talk about it before you write. '
              'I am not looking for speed. I am looking for good thinking.')
 WS_OPEN = 'Minute 40: give out the workbook. Read the title of the lesson aloud. Say Pairs first. Talk before you write.'
+LB_SAY_SHORT = ('Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. '
+                'You can write pass. If you are still stuck, tick that box and I will check in with you in the open session.')
 LB_SAY = ('Two minutes, just for you, in the Looking back box on the Finish page. Finish: something I did well, the hardest part was, '
           'and tick what helped you. You can write pass. If you are still stuck, tick that box and I will check in with you in the open '
           'session, in the shared room, with your parent nearby. Nobody marks this and nobody has to show it.')
@@ -141,167 +147,214 @@ class Part:
         if d >= 2: return 'OVER'
         if d >= 1: return 'TIGHT'
         if d <= -3: return 'LOOSE'
-        return 'OK'
+        return 'OK' if d < -0.5 else 'OK (no slack)'
 
 
-def model_lesson(n, C, sc):
+def model_lesson(n, C, sc, fx=None):
+    """fx = None gives the lesson as written. fx = dict of proposed fixes (see FX below) gives the lesson after the fixes."""
+    fx = fx or {}
     c = C[n - 1]; sl = load_slides(n); S = {s['id']: s for s in sl}
     slide, bo, am = sc['slide'], sc['bo'], sc['act']
     L, SC, DK, GP = c['lesson'], c['script'], c['deck'], c['gaps']
     I = INP.get(n)
     if n == 10:
-        return model_l10(C, sc, sl)
+        return model_l10(C, sc, sl, fx)
     P = []
     REC = 10
 
     # Opening
     p = Part('Opening', 2); P.append(p)
-    p.speak = sec(sum(wc(x) for x in SC['hook']), SAY_WPM) + sec(wc(DK['today']), READ_WPM) + REC
-    p.wait = GROUP * 3 + 10
+    p.speak = sec(sum(wc(x) for x in SC['hook']), SAY_WPM) + sec(wc(DK['today']), READ_WPM) + REC + REC_NOTICE
+    p.wait = GREET + 10
     p.trans = slide
     # Sneak
     p = Part('Sneak-peek puzzles', 3); P.append(p)
-    ans = sum(min(25, wc(x[1])) for x in GP['sneak'])
+    cap = 15 if fx.get('sneak_lean') else 25
+    ans = sum(min(cap, wc(x[1])) for x in GP['sneak'])
     p.speak = REC + sec(wc(SNEAK_SAY), SAY_WPM) + sec(sum(wc(x[0]) for x in GP['sneak']), READ_WPM) + sec(ans + wc(SNEAK_CLOSE), SAY_WPM)
-    p.wait = 30
+    # as written: a hold-up-your-paper moment for each puzzle + one volunteer round
+    p.wait = 30 if fx.get('sneak_lean') else 2 * 30 + 10 + 20
     p.act = (I['sneak'][0] + I['sneak'][1]) * am
     p.trans = slide
     # Warm-up
     p = Part('Warm-up', 5); P.append(p)
-    nq = len(DK['warmQs'])
-    p.speak = REC + sec(wc(DK['warmGame']) + sum(wc(x) for x in SC['warmIntro']), SAY_WPM) + sec(sum(wc(q[0]) for q in DK['warmQs']), READ_WPM)
+    nq = fx.get('warm_q', len(DK['warmQs']))
+    qs = DK['warmQs'][:nq]
+    p.speak = REC + sec(wc(DK['warmGame']) + sum(wc(x) for x in SC['warmIntro']), SAY_WPM) + sec(sum(wc(q[0]) for q in qs), READ_WPM)
     p.wait = nq * 30 + 20
-    p.act = I['warm_game'] * am
+    p.act = (I['warm_game'] - fx.get('warm_cut_s', 0)) * am
     p.trans = 2 * slide
     # Explore
     p = Part('Explore', 15); P.append(p)
+    nask = fx.get('exp_q', 3)
+    asks = DK['expAsk'][:nask]
     exp_sp = sec(sum(wc(x) for x in SC['predict']) + wc(PARTNER_SAY), SAY_WPM) + sec(sum(wc(x) for x in DK['expSetup']), READ_WPM)
-    go_read = sec(min(40, wc(GP['go'][0])), READ_WPM)
-    ask = sec(sum(wc(q[0]) for q in DK['expAsk']), READ_WPM) + sec(sum(min(25, wc(q[1])) for q in DK['expAsk']), SAY_WPM)
+    go_read = 0 if fx.get('go_drop') else sec(min(40, wc(GP['go'][0])), READ_WPM)
+    ask = sec(sum(wc(q[0]) for q in asks), READ_WPM) + sec(sum(min(25, wc(q[1])) for q in asks), SAY_WPM)
     p.speak = REC + exp_sp + go_read + ask
-    p.wait = 3 * 30 + 30  # three discussion questions + the written prediction
-    p.act = I['exp_act'] * 60 * am
-    nsl = 3 + (1 if 'setup' in S else 0)
-    p.trans = nsl * slide + 3 * bo   # materials / Scratch window, out to rooms, back from rooms
+    p.wait = nask * 30 + 30  # the discussion questions + the written prediction
+    p.act = fx.get('exp_act', I['exp_act']) * 60 * am
+    nsl = 3 + (1 if 'setup' in S else 0) - (1 if fx.get('go_drop') else 0) - fx.get('exp_slide_merge', 0)
+    p.trans = nsl * slide + bo + bo + int(bo * 2 / 3)   # find materials / Scratch window, out to rooms, back from rooms
     # Mini-lesson
     p = Part('Mini-lesson', 10); P.append(p)
     ids = [s['id'] for s in sl]
     a = ids.index('teach1'); b = ids.index('key')
-    mini = sl[a:b + 1]
+    mini_all = sl[a:b + 1]
+    drop = set(fx.get('mini_drop', [])); merge = set(fx.get('mini_merge', []))
+    mini = [s for s in mini_all if s['id'] not in drop]
     narr = sum(max(0, s['words'] - 3) for s in mini if not s['id'].startswith('try') and s['id'] != 'key')
     say_total = sum(wc(x) for x in SC['think'])
     key_say = wc(DK['keyHead']) + wc(DK['keyBig']) + 6
     tryread = sum(max(0, s['words'] - 3) for s in mini if s['id'].startswith('try'))
-    p.speak = REC + sec(max(narr, say_total), SAY_WPM) + sec(key_say, SAY_WPM) + sec(tryread, READ_WPM)
+    p.speak = REC + sec(max(FACT * narr, say_total), SAY_WPM) + sec(key_say, SAY_WPM) + sec(0.6 * tryread, READ_WPM)
     ntry = sum(1 for s in mini if s['id'].startswith('try'))
     npred = sum(1 for s in mini if s['id'].startswith('we') or s['id'] in ('code1', 'change'))
     p.wait = npred * 30 + ntry * (75 + 30) + 15
-    p.act = I['demo'] * am
-    p.trans = len(mini) * slide
-    p.notes.append('%d slides (%d your-turn, %d live-code seconds)' % (len(mini), ntry, I['demo']))
+    demo = fx.get('demo', I['demo'])
+    p.act = demo * am
+    p.trans = (len(mini) - len(merge & {x['id'] for x in mini})) * slide
+    p.notes.append('%d slides (%d your-turn, %d live-code seconds)' % (len(mini), ntry, demo))
     # Brain break
     p = Part('Brain break', 5); P.append(p)
     p.speak = REC + sec(wc(DK['brk']), SAY_WPM)
-    p.act = (I['brk'] * am) + 120 + 30   # the game + water/toilet + settle back
+    p.act = (I['brk'] * am) + fx.get('water', 120) + 30   # the game + water/toilet + settle back
     p.trans = slide
     # Worksheet
     p = Part('Worksheet', 35); P.append(p)
     ib = ids.index('break')
     ws = []
-    for s in sl[ib + 1:]:
-        if s['id'] in ('stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit', 'reflect'): break
-        ws.append(s)
-    teach = [s for s in ws if (s['id'].startswith('teach') or s['id'].startswith('try'))]
-    tasks = [s for s in ws if s['id'] in ('ws1', 'ws2')]
-    checks = [s for s in ws if s['id'] in ('ws1ans', 'ws2ans')]
+    for s_ in sl[ib + 1:]:
+        if s_['id'] in ('stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit', 'reflect'): break
+        ws.append(s_)
+    wmerge = set(fx.get('ws_merge', []))
+    teach = [s_ for s_ in ws if (s_['id'].startswith('teach') or s_['id'].startswith('try'))]
+    tasks = [s_ for s_ in ws if s_['id'] in ('ws1', 'ws2')]
+    checks = [s_ for s_ in ws if s_['id'] in ('ws1ans', 'ws2ans')]
     sp = REC + sec(wc(PAIRS_SAY) + wc(WS_OPEN), SAY_WPM)
     wt = 0.0
-    for s in teach:
-        if s['id'].startswith('try'):
-            sp += sec(max(0, s['words'] - 3), READ_WPM); wt += 75 + 30
+    for s_ in teach:
+        if s_['id'].startswith('try'):
+            sp += sec(0.6 * max(0, s_['words'] - 3), READ_WPM); wt += 75 + 30
         else:
-            sp += sec(max(0, s['words'] - 3), SAY_WPM); wt += 30
-    for s in tasks:
-        sp += sec(max(0, s['words'] - 3), READ_WPM)
+            sp += sec(FACT * max(0, s_['words'] - 3), SAY_WPM); wt += 30
+    if not fx.get('ws_noread'):
+        for s_ in tasks:
+            sp += sec(max(0, s_['words'] - 3), READ_WPM)
     q1, q2 = PAGE_Q[n]
-    for s, qn in zip(checks, (q1, q2)):
-        sp += sec(max(0, s['words'] - 3), READ_WPM); wt += qn * 45
+    moved = fx.get('ws_move', [])            # item indexes moved to take-home
+    items_all = I['items']
+    items = [it for k, it in enumerate(items_all) if k not in moved]
+    qn_moved = [0, 0]
+    for k in moved:
+        if items_all[k][0].startswith('Q'): qn_moved[items_all[k][1] - 1] += 1
+    chq = fx.get('check_q', CHECK_Q)
+    for s_, qn, mv in zip(checks, (q1, q2), qn_moved):
+        w_ = max(0, s_['words'] - 3)
+        sp += sec(w_ * (1 - mv / max(1, qn)), READ_WPM) * (0.5 if fx.get('check_q') else 1.0)
+        wt += (qn - mv) * chq
     p.speak = sp
     p.wait = wt
-    items = I['items']; mid = sum(i[2] for i in items)
+    mid = sum(i[2] for i in items)
     p.act = mid * 60 * am + 120      # independent work (middle child) + 2 min to get started
-    p.trans = len(ws) * slide + bo   # every group slide change + coming back from pair work
+    p.trans = (len(ws) - len(wmerge)) * slide + 60   # every group slide change + pairs stay in the main room (30 s to pair up, 30 s back)
     p.notes.append('worksheet mid-child work %.1f min on %d Qs' % (mid * am, len(items)))
     # Talk time
     p = Part('Talk time', 7); P.append(p)
-    tq = SC['talk']
+    tq = SC['talk'][:1] if fx.get('talk_lean') else SC['talk']
     p.speak = REC + sec(sum(wc(x) for x in tq), READ_WPM) + sec(min(60, wc(SC['talkAns'])), SAY_WPM)
-    p.wait = 20 + 120 + 3 * 35 + 30     # 2 questions, pairs talk, three volunteers, bring group back
+    p.wait = (10 if fx.get('talk_lean') else 20) + 30
+    p.act = ((90 if fx.get('talk_lean') else 120) + 3 * 35) * am
     p.trans = slide
     # Exit
     p = Part('Exit slip, looking back, close', 8); P.append(p)
-    p.speak = 3 * REC + sec(wc(L['exit']['q']), READ_WPM) + sec(sum(wc(x) for x in SC['close']) + wc(LB_SAY), SAY_WPM) + sec(10, SAY_WPM)
-    p.wait = GROUP * 10 + 30                  # each child shows the slip on camera, goodbye
+    lb = LB_SAY if not fx.get('exit_lean') else LB_SAY_SHORT
+    p.speak = 3 * REC + sec(wc(L['exit']['q']), READ_WPM) + sec(sum(wc(x) for x in SC['close']) + wc(lb), SAY_WPM) + sec(10, SAY_WPM)
+    p.wait = (30 + 30) if fx.get('exit_lean') else (GROUP * 10 + 30)   # lean: everyone holds the slip up at once, then goodbye
     p.act = I['exit_write'] * 60 * am + 120   # exit slip + looking back (2 min)
     p.trans = 2 * slide
     return P, dict(slides=len(sl), mini=mini, ws=ws, items=items, window=WIN[n])
 
 
-def model_l10(C, sc, sl):
+def model_l10(C, sc, sl, fx=None):
+    """Lesson 10 follows its own plan (p6/guide.js 'Lesson 10 timing' line, same as the deck):
+    0-2 opening, 2-5 sneak, 5-8 warm, 8-23 challenge round, 23-30 starters, 30-32 break, 32-62 plan and build,
+    62-85 showcase, 85-86 talk, 86-88 exit slip, 88-90 looking back + certificates."""
+    fx = fx or {}
     c = C[9]; SC, DK, GP, L = c['script'], c['deck'], c['gaps'], c['lesson']
     slide, bo, am = sc['slide'], sc['bo'], sc['act']
     REC = 10
     S = {s['id']: s for s in sl}
+    nar = lambda k: max(0, S[k]['words'] - 3)
     P = []
-    # Parts follow the guide's own plan: 0-2, 2-5, 5-8, 8-22, 22-29, 29-32, 32-62, 62-87, 87-90
     p = Part('Opening', 2); P.append(p)
-    p.speak = REC + sec(sum(wc(x) for x in SC['hook']), SAY_WPM) + sec(wc(DK['today']), READ_WPM)
-    p.wait = GROUP * 3 + 10; p.trans = slide
+    p.speak = REC + REC_NOTICE + sec(sum(wc(x) for x in SC['hook']), SAY_WPM) + sec(wc(DK['today']), READ_WPM)
+    p.wait = GREET + 10; p.trans = slide
     p = Part('Sneak-peek puzzles', 3); P.append(p)
-    ans = sum(min(25, wc(x[1])) for x in GP['sneak'])
+    cap = 15 if fx.get('sneak_lean') else 25
+    ans = sum(min(cap, wc(x[1])) for x in GP['sneak'])
     p.speak = REC + sec(wc(SNEAK_SAY), SAY_WPM) + sec(sum(wc(x[0]) for x in GP['sneak']), READ_WPM) + sec(ans + wc(SNEAK_CLOSE), SAY_WPM)
-    p.wait = 30; p.act = (40 + 90) * am; p.trans = slide
+    p.wait = 30 if fx.get('sneak_lean') else 2 * 30 + 10 + 20
+    p.act = (40 + 90) * am; p.trans = slide
     p = Part('Warm-up (lightning relay)', 3); P.append(p)
     p.speak = REC + sec(wc(DK['warmGame']) + sum(wc(x) for x in SC['warmIntro']), SAY_WPM)
-    p.act = (GROUP * 20) * am; p.wait = 30; p.trans = slide
-    p = Part('Challenge round (teams of 2) + check', 14); P.append(p)
-    rules = S['explore1']['words'] - 3
-    chk = S['ws1ans']['words'] - 3
-    p.speak = REC + sec(rules, READ_WPM) + sec(S['ws1']['words'] - 3, READ_WPM) + sec(chk, READ_WPM) + sec(wc(SC['predict'][0]), SAY_WPM)
-    p.wait = 30 + 3 * 45 + 60   # predict guesses, three check-together questions, how we started
-    items = [('Q1 hexagon chain a-d (rule, 101, code)', 1, 5.0), ('Q2 prime hunters a-c (49, 84, all pairs for 40)', 1, 7.0), ('Q3 quick-fire a-d', 1, 4.5)]
-    p.act = sum(i[2] for i in items) * 60 * am
-    p.trans = 3 * slide + 2 * bo   # explore1, ws1, ws1ans + rooms out and back
+    p.act = (fx.get('relay_n', GROUP) * 20) * am; p.wait = 30; p.trans = slide
+    p = Part('Challenge round (teams of 2) + check', 15); P.append(p)
+    items = [('Q1 hexagon chain a-d (rule, 101 sticks, code)', 1, 4.5), ('Q2 prime hunters a-c (49, 84, all pairs for 40)', 1, 6.0), ('Q3 quick-fire a-d', 1, 4.0)]
+    keep = [it for k, it in enumerate(items) if k not in fx.get('ch_move', [])]
+    nkeep = len(keep)
+    ex2 = 0 if fx.get('drop_explore2') else nar('explore2')
+    p.speak = REC + sec(nar('explore1') + nar('ws1') * (0 if fx.get('ws_noread') else 1) + nar('ws1ans') * nkeep / 3.0 + ex2, READ_WPM) + sec(wc(SC['predict'][0]), SAY_WPM)
+    p.wait = 30 + nkeep * fx.get('check_q', CHECK_Q) + (0 if fx.get('drop_explore2') else 60)
+    p.act = sum(i[2] for i in keep) * 0.8 * 60 * am   # teams of 2 share the work (x0.8)
+    p.trans = (4 - (1 if fx.get('drop_explore2') else 0)) * slide + bo + int(bo * 2 / 3)
     p = Part('Starter projects (A-D)', 7); P.append(p)
-    mini = [S[k] for k in ('explore2', 'teach1', 'we1', 'try1', 'we2', 'we3', 'key') if k in S]
-    narr = sum(max(0, s['words'] - 3) for s in mini if not s['id'].startswith('try'))
-    p.speak = REC + sec(narr, SAY_WPM) + sec(sum(wc(x) for x in SC['think']) * 0.3, SAY_WPM)
-    p.wait = 3 * 30 + 105 + 15 + 3 * 15
-    p.act = 4 * 45 * am      # run three starters + clock jumper on screen, show each result
+    drop = set(fx.get('mini_drop', []))
+    mini = [S[k] for k in ('teach1', 'we1', 'try1', 'we2', 'we3', 'key') if k in S and k not in drop]
+    narr = sum(max(0, s_['words'] - 3) for s_ in mini if not s_['id'].startswith('try'))
+    ntry = sum(1 for s_ in mini if s_['id'].startswith('try'))
+    p.speak = REC + sec(FACT * narr, SAY_WPM) + sec(0.6 * sum(max(0, s_['words'] - 3) for s_ in mini if s_['id'].startswith('try')), READ_WPM)
+    nlive = fx.get('starters_live', 4)
+    p.wait = nlive * 30 + ntry * 105 + 15 + 3 * 15
+    p.act = nlive * 45 * am      # run a starter on screen and show its result
     p.trans = len(mini) * slide
-    p = Part('Brain break', 3); P.append(p)
-    p.speak = REC + sec(wc(DK['brk']), SAY_WPM); p.act = 90 * am + 90 + 30; p.trans = slide
+    p = Part('Brain break', 2); P.append(p)
+    p.speak = REC + sec(wc(DK['brk']), SAY_WPM); p.act = 90 * am + fx.get('water', 120) + 30; p.trans = slide
     p = Part('Plan and build', 30); P.append(p)
-    tl = [S['teachplan'], S['teachtest'], S['ws2']]
-    p.speak = REC + sec(S['teachplan']['words'] - 3 + S['teachtest']['words'] - 3, SAY_WPM) + sec(S['ws2']['words'] - 3, READ_WPM)
+    p.speak = REC + sec(FACT * (nar('teachplan') + nar('teachtest')), SAY_WPM) + sec(nar('ws2') * (0 if fx.get('ws_noread') else 1), READ_WPM)
     p.wait = 60 + 30
     plan = [('Q4 maths first (3 parts)', 5.0), ('Q5 planning table (4 cells)', 4.0), ('Q6 blocks + 3 tests written before running', 4.0),
             ('load a starter (.sb3 from the shared file) and open Scratch', 1.5), ('build the one change', 8.0), ('run the tests, compare, fix one bug', 6.0)]
+    if fx.get('plan_lean'):
+        plan = [('Q4 maths first, for the chosen starter only (a or b or c)', 2.0), ('Q5 planning table: idea, answer, twist (3 cells)', 3.0),
+                ('Q6 three test rows written before running', 2.5), plan[3], ('build the one change', 8.0), ('run the tests, compare, fix one bug', 5.0)]
     p.act = sum(x[1] for x in plan) * 60 * am + 120   # + 2 min to get started
-    p.trans = 3 * slide + bo
+    p.trans = 3 * slide + 30
     p.notes.append('plan+build mid-child %.1f min' % (sum(x[1] for x in plan) * am))
-    p = Part('Showcase (8 x 3 min + switch)', 25); P.append(p)
-    # guide: 3 minutes each plus 20 s switch; add stars + one question answered (30 s). deck says 2:30 each.
-    p.speak = REC + sec(S['showcase']['words'] - 3, READ_WPM) * 1.0
-    p.act = GROUP * (180) * am
-    p.wait = GROUP * (20 + 30)         # switch + stars/question
+    p = Part('Showcase (8 children)', 23); P.append(p)
+    # deck/guide: 2 min 30 s each + 20 s switch, the audience question is answered during the switch; quick spoken stars add 15 s
+    p.speak = REC + sec(nar('showcase'), READ_WPM)
+    p.act = GROUP * 150 * am
+    p.wait = GROUP * (20 + (0 if fx.get('stars_chat') else 15))
     p.trans = slide
-    p.notes.append('deck variant 2:30 each -> %.1f min' % ((GROUP * (150 * am + 50) + 60) / 60.0 + 0.2))
-    p = Part('Exit slip, looking back, certificates', 3); P.append(p)
-    p.speak = 3 * REC + sec(wc(L['exit']['q']), READ_WPM) + sec(wc(LB_SAY) + sum(wc(x) for x in SC['close']) + wc(S['end']['notes']) * 0.35, SAY_WPM)
-    p.wait = GROUP * 10 + GROUP * 15       # show slip, hand each certificate with one specific praise
-    p.act = (2.0 + 2.0) * 60 * am          # exit slip + looking back
-    p.trans = 3 * slide
+    p.notes.append('with 6 children: %.1f min' % ((6 * (150 * am + 35) + 60) / 60.0))
+    p = Part('Talk time', 1); P.append(p)
+    if not fx.get('no_talk'):
+        p.speak = REC + sec(nar('talk'), READ_WPM)
+        p.wait = 20 + 2 * 30; p.trans = slide
+    p = Part('Exit slip', 2); P.append(p)
+    p.speak = REC + sec(wc(L['exit']['q']), READ_WPM)
+    p.act = 2.0 * 60 * am; p.wait = 30 if fx.get('exit_lean') else GROUP * 10; p.trans = slide
+    p = Part('Looking back + certificates', 2); P.append(p)
+    lb = LB_SAY_SHORT if fx.get('exit_lean') else LB_SAY
+    if fx.get('cert_pdf'):
+        p.speak = 2 * REC + sec(wc(lb) + sum(wc(x) for x in SC['close']) + 25, SAY_WPM)
+        p.wait = 0
+    else:
+        p.speak = 2 * REC + sec(wc(lb) + sum(wc(x) for x in SC['close']) + wc(S['end']['notes']) * 0.35, SAY_WPM)
+        p.wait = GROUP * 25            # hand over each certificate with one specific thing they did well
+    p.act = 2.0 * 60 * am
+    p.trans = 2 * slide
     return P, dict(slides=len(sl), mini=mini, ws=[], items=items + [(x[0], 2, x[1]) for x in plan], window=(10, 25))
 
 
@@ -324,6 +377,39 @@ def finishers(n, info, p_ws, am=1.0):
     out['window_min'] = round(window, 1)
     out['n_items'] = len(items)
     return out
+
+
+# ---- proposed fixes (applied by model_lesson(..., fx=FX[n])) -----------------------------------------------
+# sneak_lean   one hold-up moment for both puzzles, no volunteer round, answers said in 15 words each
+# warm_cut_s / warm_q   seconds cut from the game / number of quick questions kept (the first N in the deck order)
+# go_drop      the Go further what-if leaves the group flow (it stays in the chat and on the workbook); exp_q = discussion questions kept
+# exp_act      minutes of child task time in Explore after the cut; exp_slide_merge = explore slides merged away
+# mini_drop / mini_merge   mini-lesson slides removed / folded into the previous slide;  demo = seconds of live code
+# ws_merge     worksheet teaching slides folded into the previous teaching slide; ws_noread = preview slides ws1 / ws2 are shown, not read
+# check_q      seconds per question in check-together (children self-mark from the slide; tutor explains the key question only)
+# ws_move      worksheet items (index into INP[n]['items']) moved to take-home / the Finish page
+# talk_lean    one talk question, pairs talk 90 s;  exit_lean = everyone holds the exit slip up at once + shorter looking-back line
+FX = {
+    1: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, demo=240, ws_merge=['teachplan', 'teachbug'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1),
+    2: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, demo=150, ws_merge=['teachsq', 'teachplan'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    3: dict(sneak_lean=1, warm_cut_s=30, warm_q=3, go_drop=1, exp_q=2, ws_merge=['teachbug'], ws_noread=1, check_q=35, exit_lean=1),
+    4: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.5, ws_merge=['teachsearch', 'teachtrick'], ws_noread=1, check_q=35, ws_move=[6], exit_lean=1, talk_lean=1),
+    5: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, exp_act=5.0, ws_merge=['teachhandcode', 'teachroute'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    6: dict(sneak_lean=1, warm_cut_s=70, warm_q=3, go_drop=1, exp_q=2, mini_merge=['teachwhy'], ws_merge=['teachplan'], ws_noread=1, check_q=35, exit_lean=1),
+    7: dict(sneak_lean=1, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, exp_slide_merge=1, mini_drop=['try1'], ws_merge=['teachsum'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    8: dict(sneak_lean=1, warm_cut_s=60, warm_q=3, go_drop=1, exp_q=2, exp_act=7.0, mini_drop=['try1'], mini_merge=['teachloop'], demo=120, ws_merge=['teachcomb'], ws_noread=1, check_q=35, ws_move=[4], exit_lean=1, talk_lean=1),
+    9: dict(sneak_lean=1, warm_cut_s=50, warm_q=3, go_drop=1, exp_q=2, exp_act=6.0, demo=150, mini_merge=['change'], ws_merge=['teachif'], ws_noread=1, check_q=35, ws_move=[5], exit_lean=1, talk_lean=1),
+    10: dict(sneak_lean=1, relay_n=6, ch_move=[1], drop_explore2=1, ws_noread=1, check_q=35, mini_drop=['try1'], starters_live=2, water=30, plan_lean=1,
+             stars_chat=1, no_talk=1, exit_lean=1, cert_pdf=1),
+}
+# new budgets per part (minutes) in the order the model prints them; the last number is the flex (buffer) row.
+BUD = {}
+
+
+def budgets(P):
+    import math
+    b = [math.ceil(p.need * 2 - 1e-9) / 2.0 for p in P]
+    return b, 90 - sum(b)
 
 
 def table(n, P, sc_name='central'):
@@ -350,6 +436,23 @@ def main():
             P, info = model_lesson(n, C, sc)
             r[name] = (P, info)
         res[n] = r
+    if '--fixed' in sys.argv:
+        for n in range(1, 11):
+            if only and n != only: continue
+            P0, _ = model_lesson(n, C, SCEN['central'])
+            P, info = model_lesson(n, C, SCEN['central'], FX[n])
+            lo = sum(p.need for p in model_lesson(n, C, SCEN['fast'], FX[n])[0]); hi = sum(p.need for p in model_lesson(n, C, SCEN['slow'], FX[n])[0])
+            b, flex = budgets(P)
+            print('\n### Lesson %d after fixes (central)\n' % n)
+            print('| Part | Was scripted | Need before | Need after | New budget |'); print('|---|---:|---:|---:|---:|')
+            for p0, p, bb in zip(P0, P, b):
+                print('| %s | %d | %.1f | %.1f | %.1f |' % (p.name, p.scripted, p0.need, p.need, bb))
+            print('| Flex buffer | 0 | | | %.1f |' % flex)
+            print('| **Total** | 90 | **%.1f** | **%.1f** (fast %.1f / slow %.1f) | **%.1f** |' % (sum(p.need for p in P0), sum(p.need for p in P), lo, hi, sum(b) + flex))
+            if n < 10:
+                wsp = [p for p in P if p.name == 'Worksheet'][0]
+                print('Worksheet finishers after fixes:', finishers(n, info, wsp))
+        return
     if '--json' in sys.argv:
         out = {}
         for n, r in res.items():

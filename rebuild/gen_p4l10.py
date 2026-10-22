@@ -225,10 +225,12 @@ put('p4l10-ws2ans',checks('p4l10-ws2ans','76–80 MIN','Page 2: check together',
  'Click after a child explains. Q4: clue 1 gives Ali and Siti the two rice dishes; clue 2 means Ali has nasi lemak, so Siti has chicken rice; Ben and Mei have laksa and prata, and clue 3 gives Ben laksa, Mei prata. Q5a: 6 in front + Mei + 11 behind = 18. Q5b: 14 people behind Ben, so he is 15th from the back (20 − 6 + 1). Q6: in 5 years the total is 50 + 10 = 60; father 3 bars, Ben 1 bar: 4 bars = 60, 1 bar = 15; Ben will be 15, so he is 10 now. Check: 10 + 40 = 50; 15 and 45, and 45 = 3 × 15 ✓.',gapy=170))
 
 # ---------- stretch / challenge ----------
-st=[('1.','A farm has ducks and goats: 16 heads and 44 legs. How many goats?'),('2.','I think of a number, multiply it by 4 and add 6. I get 50. What is my number?'),('3.','Two next-door numbers multiply to make 380. What are they?')]
-put('p4l10-stretch',sec('p4l10-stretch','Any time • take-home',h2('Stretch')+numcards(st,38),'Answers: 1) 6 goats (and 10 ducks): all ducks 32 legs, 12 short, each goat adds 2. Check 20 + 24 = 44. 2) 11 (50 − 6 = 44, 44 ÷ 4 = 11). 3) 19 and 20 (20 × 20 = 400 is a bit too big; 19 × 20 = 380 ✓).'))
-ch=[('1.','A hawker centre has 15 tables. Some seat 4 people and some seat 6. There are 76 seats altogether. How many tables seat 6?'),('2.','Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 left. How many did she have at first?')]
-put('p4l10-challenge',sec('p4l10-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 8 tables seat 6 (and 7 seat 4). 2) 32 stickers.'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(10)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l10-stretch',sec('p4l10-stretch','Any time • take-home',h2('Think harder')+numgrid(st,30),th_notes(10)))
+ch=[('1.','A hawker centre has 15 tables. Some seat 4 people and some seat 6. There are 76 seats altogether. (a) How many tables seat 6? (b) What is the fewest and the most seats 15 tables could have? (c) Could the centre have 77 seats? Explain.'),('2.','Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 left. How many did she have at first?')]
+put('p4l10-challenge',sec('p4l10-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) (a) 8 tables seat 6 (and 7 seat 4). (b) Fewest 60 (all seat 4), most 90 (all seat 6). (c) No: every table seats an even number of people, so the total is even and 77 is odd. The diagrams that follow show part (a). 2) 32 stickers.'))
 g1=''
 for i in range(15):
     r,c=i//5,i%5; x,y=40+c*140,20+r*110
@@ -242,11 +244,11 @@ for i,(lab,fill) in enumerate([('?',WHITE),('?',WHITE),('5',YEL)]):
         g2+=f'<line x1="380" y1="{y+96}" x2="380" y2="{y+150}" stroke="{TEAL}" stroke-width="6"/><polygon points="380,{y+164} 366,{y+142} 394,{y+142}" fill="{TEAL}"/>'
         g2+=txt(410,y+134,['gives Ali half and 2 more','gives Ben half and 2 more'][i],26,TEAL,'start')
 g2+=txt(140,65,'at first',28,MUTED,weight=600)+txt(140,405,'left',28,MUTED,weight=600)
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: 15 tables</p>'+svgwrap(760,470,'15 tables each marked 4 or 6 seats, 76 seats altogether',g1).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Mei’s stickers</p>'+svgwrap(760,470,'Mei starts with an unknown number, gives Ali half and 2 more, then gives Ben half and 2 more, and has 5 left',g2).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l10-chdiag',sec('p4l10-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: In Q1, what if every table seated 4? In Q2, where do we know the number for sure? Which way in fits each puzzle? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: suppose all seat 4',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: suppose all seat 4',38,800,TEAL))
 for i,t in enumerate(['All 15 seat 4: 15 × 4 = 60 seats','76 − 60 = 16 seats short','A 6-seat table adds 2: 16 ÷ 2 = 8','8 seat 6, 7 seat 4.  Check: 48 + 28 = 76 ✓']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: work backwards',38,800,TEAL))
 for i,t in enumerate(['Left after Ben: 5. Add the 2 back: 7 = half','Before Ben: 7 × 2 = 14','Before Ali: (14 + 2) × 2 = 32','Check: 32 → gives 18 → 14 → gives 9 → 5 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)

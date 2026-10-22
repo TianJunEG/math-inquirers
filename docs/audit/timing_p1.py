@@ -175,6 +175,9 @@ def group_qs(vis):
 
 
 # ------------------------------------------------------------------ model
+FIX = False   # when True, apply the universal fixes (REC cues <= 10 s, 3 quick questions, one camera moment in sneak-peek)
+
+
 def model(n, D):
     L = D['L'][n - 1]; SC = D['SC'][str(n)]; DDn = D['DD'][str(n)]; G = D['G'][str(n)]
     slides = assign_parts(load_slides(n))
@@ -183,6 +186,7 @@ def model(n, D):
         byp.setdefault(s['part'], []).append(s)
     rec = [words(x) for x in D['rec']]
     recs = [secs_speak(w) if REC_S is None else REC_S for w in rec]   # seconds, 10 cues
+    if FIX: recs = [min(r, 10) for r in recs]
     say = lambda lines: sum(words(re.sub(r'^[“"]|[”"]$', '', x)) for x in lines)
     parts = []   # (name, scripted, comps dict minutes)
 
@@ -204,7 +208,7 @@ def model(n, D):
     # 2 WARM-UP ---------------------------------------------------------------
     c = {}
     c['REC cue'] = recs[1] / 60
-    wq = DDn['warmQs']
+    wq = DDn['warmQs'][:3] if FIX else DDn['warmQs']
     game_words = say(SC['warmIntro']) + words(DDn['warmGame'])
     qread = sum(words(q[0]) for q in wq)
     c['speaking'] = (secs_speak(game_words) + secs_read(qread) + len(wq) * 3) / 60   # +3 s per answer reveal read
@@ -225,8 +229,9 @@ def model(n, D):
     qs = G['check']
     qread = sum(words(x['q']) for x in qs)
     ans_w = sum(words(x['short']) + 2 for x in qs) + 12   # read answer + "lots of us had a different idea"
+    if FIX: fixed_say = ['Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked.']
     c['speaking'] = (secs_speak(say(fixed_say) + ans_w) + secs_read(qread)) / 60
-    c['waiting'] = (2 * HOLDUP) / 60
+    c['waiting'] = ((1 if FIX else 2) * HOLDUP) / 60
     c['activity'] = 2.0       # scripted: "about a minute for each question"; Q2 (think) judged fair for MID if only a guess is expected
     c['transitions'] = len(byp['sneak']) * SLIDE / 60
     parts.append(('Sneak-peek puzzles', 3, c, len(byp['sneak'])))
@@ -290,6 +295,8 @@ def model(n, D):
     c = {}
     c['REC cue'] = recs[6] / 60
     ws = byp['work']
+    if FIX and n == 10:
+        ws = [x for x in ws if kind(x['id']) not in ('teachgraph', 'teachtri', 'teachlen')]
     items = ITEMS[n]
     qtxt = WBQ[str(n)]['S']
     q12 = sum(words(q[1]) for q in qtxt[:2])
@@ -426,6 +433,77 @@ def child_completion(n):
     return out
 
 
+
+# ------------------------------------------------------------------ proposed fixes (lesson-specific deltas on top of FIX=True)
+PART_NAMES = ['Opening', 'Warm-up', 'Sneak-peek', 'Explore', 'Mini-lesson', 'Brain break', 'Worksheet', 'Talk time', 'Exit ticket', 'Look-back']
+# (part index, component, delta minutes, what the fix is)
+LESSON_DELTAS = {
+ 1: [(0, 'speaking', -0.9, 'show the routine slide for 30 s and name the four phases instead of reading the table'),
+     (0, 'transitions', -0.4, 'skip the cover slide (title slide says the same)'),
+     (3, 'activity', -2.5, 'parents cut and tape the 0-50 number strip BEFORE the lesson (add to the materials mail)')],
+ 2: [(4, 'transitions', -0.4, 'drop slide l2-try3 (its three items repeat workbook Q4)'),
+     (4, 'waiting', -1.1, 'drop slide l2-try3: no whiteboard round'),
+     (4, 'speaking', -0.3, 'drop slide l2-try3: no reading')],
+ 3: [(4, 'transitions', -0.4, 'merge l3-try3 into l3-teach3 as one "your turn" item'),
+     (4, 'waiting', -0.7, 'l3-try3 (b), (c) become Think harder / take-home; keep (a)'),
+     (4, 'speaking', -0.3, 'trim the third think-aloud quote')],
+ 4: [(6, 'activity', +6.0, 'add four Core items from the Question Bank (core 1, 3, 4, 5: repeating-pattern positions) to Start here: 1.5 + 1.0 + 2.0 + 1.5 min')],
+ 5: [(6, 'activity', -2.5, 'Q5 (make your own story) marked "if you have time" like Q3d')],
+ 6: [(4, 'transitions', +0.8, 'add two "your turn" slides (Question Bank core 4 + 1/2; core 5/6)'),
+     (4, 'waiting', +2.2, 'two added try slides'),
+     (4, 'speaking', +0.4, 'two added try slides'),
+     (6, 'activity', +2.0, 'add Question Bank core 5 and 6 (count the money: 35c, 45c) to Start here page 2')],
+ 8: [(6, 'speaking', -1.0, 'show l8-teachriddle and l8-teachodd with all steps revealed, 30 s each (they only serve optional Q5, Q6)'),
+     (6, 'transitions', -0.4, 'two fewer slide clicks')],
+ 9: [(6, 'activity', -4.0, 'Q2: copy the pencil / book / shoe numbers from Explore into the table instead of measuring again'),
+     (3, 'activity', -2.0, 'parents cut the cube strip BEFORE the lesson'),
+     (5, 'activity', -0.5, 'giant steps in place, not across the room'),
+     (6, 'speaking', -0.3, 'drop slide l9-tryconv (serves only optional Q4)'),
+     (6, 'transitions', -0.4, 'drop slide l9-tryconv'),
+     (6, 'waiting', -1.1, 'drop slide l9-tryconv')],
+ 10: [(3, 'speaking', -0.7, 'pairs read their own card; tutor does not read all four aloud'),
+      (3, 'waiting', -2.4, 'debrief with ONE question (Q3); pair reports 20 s each'),
+      (4, 'transitions', -0.4, 'drop slide l10-try2'),
+      (4, 'waiting', -1.1, 'drop slide l10-try2'),
+      (4, 'speaking', -0.3, 'drop slide l10-try2'),
+      (8, 'speaking', -1.2, 'certificates: 10 s per child, one specific praise line each'),
+      (1, 'waiting', -1.5, 'drop slide l10-warm2: the 5-question whiteboard round already revisits the nine lessons'),
+      (1, 'speaking', -0.4, 'drop slide l10-warm2'),
+      (1, 'transitions', -0.4, 'drop slide l10-warm2'),
+      (4, 'transitions', -0.4, 'also drop l10-try1 (draw it): Explore cards are the practice'),
+      (4, 'waiting', -1.1, 'also drop l10-try1'),
+      (4, 'speaking', -0.3, 'also drop l10-try1'),
+      (6, 'activity', +3.5, 'Q9 (make a puzzle for a friend) back on worksheet page 2, using the time freed by dropping 3 re-teach slides'),
+      (7, 'activity', -3.5, 'talk time = swap, solve, share only')],
+}
+# proposed budgets: 10 parts + standing buffer (sum 90)
+NEW_BUDGET = {
+ 1: ([4, 6, 4, 14, 10, 4, 30, 7, 6, 3], 2),
+ 2: ([2, 6, 4, 14, 10, 4, 32, 7, 6, 3], 2),
+ 3: ([2, 6, 4, 14, 11, 4, 31, 7, 6, 3], 2),
+ 4: ([2, 6, 4, 14, 11, 4, 31, 7, 6, 3], 2),
+ 5: ([2, 6, 4, 14, 10, 4, 32, 7, 6, 3], 2),
+ 6: ([2, 6, 4, 14, 10, 4, 32, 7, 6, 3], 2),
+ 7: ([2, 6, 4, 16, 8, 4, 32, 7, 6, 3], 2),
+ 8: ([2, 6, 4, 14, 10, 4, 32, 7, 6, 3], 2),
+ 9: ([2, 6, 4, 15, 10, 4, 31, 7, 6, 3], 2),
+ 10: ([2, 4, 4, 18, 9, 4, 30, 8, 8, 3], 0),
+}
+
+
+def fixed_parts(n, D):
+    global FIX
+    FIX = True
+    try:
+        parts, info = model(n, D)
+    finally:
+        FIX = False
+    parts = [(a, b, dict(c), d) for a, b, c, d in parts]
+    for idx, comp, delta, _txt in LESSON_DELTAS.get(n, []):
+        parts[idx][2][comp] += delta
+    return parts
+
+
 SCENARIOS = {
     # name: (SPEAK_WPM, READ_WPM, WAIT_Q, HOLDUP, SLIDE, BREAKOUT, WS_START, ACT_MULT)
     'fast':  (135, 125, 24, 20, 20, 60, 90, 0.85),
@@ -439,8 +517,8 @@ def set_scenario(name):
     SPEAK_WPM, READ_WPM, WAIT_Q, HOLDUP, SLIDE, BREAKOUT, WS_START, ACT_MULT = SCENARIOS[name]
 
 
-def lesson_total(n, D):
-    parts, _ = model(n, D)
+def lesson_total(n, D, fixed=False):
+    parts = fixed_parts(n, D) if fixed else model(n, D)[0]
     return sum(sum(c.values()) for _, _, c, _ in parts)
 
 
@@ -479,9 +557,42 @@ def main():
               f'Spare work minutes: MID {fmt(mid["spare"])}, HIGH {fmt(cc["HIGH"]["spare"])} (about {cc["HIGH"]["T"]} Think harder item(s) for a HIGH child).')
         print(f'\nSAY words (hook, warm-up intro, predict, think-aloud, talk, close): {say_words}; all lines in scripts.js: {all_words}; slides: {nslides} ({ntimed} on the timed path, {nslides-ntimed} untimed choice/Think harder/Go further slides).')
         allout.append(dict(n=n, need=tot_need, rows=rows, say=say_words, slides=nslides, timed=ntimed))
+    print('\n#### Children and the Start-here worksheet\n')
+    print('| Lesson | Required items (Start here) | Page 1 need / have | Page 2 need / have | LOW finishes | MIDDLE finishes | HIGH finishes | HIGH spare min (about Think harder items) |')
+    print('|---|---:|---|---|---|---|---|---|')
+    for n in range(1, 11):
+        cc = child_completion(n); m = cc['MID']
+        p1 = sum(x for _, x, o, pg in ITEMS[n] if pg == 1 and not o); p2 = sum(x for _, x, o, pg in ITEMS[n] if pg == 2 and not o)
+        print(f'| {n} | {m["tot"]} | {fmt(p1)} / {m["W1"]} | {fmt(p2)} / {m["W2"]} | {cc["LOW"]["done"]} of {m["tot"]} | {m["done"]} of {m["tot"]} | {cc["HIGH"]["done"]} of {m["tot"]} | {fmt(cc["HIGH"]["spare"])} ({cc["HIGH"]["T"]}) |')
+    print('\n#### Running clock (as scripted today): estimated minute at which each scripted mark is actually reached\n')
+    print('| Lesson | min 10 | min 25 | min 40 | min 72 | min 80 | min 88 | end |')
+    print('|---|---:|---:|---:|---:|---:|---:|---:|')
+    for o in allout:
+        cum = []; t = 0
+        for r in o['rows']:
+            t += r[2]; cum.append(t)
+        print(f'| {o["n"]} | ' + ' | '.join(fmt(cum[i]) for i in (2, 3, 5, 6, 7, 8)) + f' | {fmt(cum[9])} |')
+    print('\n#### After fixes\n')
+    fixsum = []
+    for n in range(1, 11):
+        before, _ = model(n, D)
+        after = fixed_parts(n, D)
+        bud, buf = NEW_BUDGET[n]
+        assert sum(bud) + buf == 90, (n, sum(bud) + buf)
+        print(f'\n##### Lesson {n} after fixes\n')
+        print('| Part | Old budget | Old need | New need | New budget | New scripted - need | Flag | New clock (start-end) |')
+        print('|---|---:|---:|---:|---:|---:|---|---|')
+        t0 = 0; tot_new = 0; tot_old = 0
+        for i, ((nm, sc, c0, _), (_n2, _s2, c1, _x), nb) in enumerate(zip(before, after, bud)):
+            o = sum(c0.values()); nw = sum(c1.values()); tot_new += nw; tot_old += o
+            print(f'| {PART_NAMES[i]} | {sc} | {fmt(o)} | {fmt(nw)} | {nb} | {fmt(nb-nw)} | {flag(nb, nw)} | {t0}-{t0+nb} |')
+            t0 += nb
+        print(f'| Standing buffer | 0 | | | {buf} | | | {t0}-{t0+buf} |')
+        print(f'| **Total** | 90 | **{fmt(tot_old)}** | **{fmt(tot_new)}** | **{sum(bud)+buf}** | **{fmt(sum(bud)-tot_new)}** (buffer {buf} not counted) | | |')
+        fixsum.append((n, tot_old, tot_new))
     print('\n#### Summary (base)\n')
-    print('| Lesson | Slides (timed) | SAY words | Need (min) | vs 90 | Range fast-slow | Parts OVER | Parts LOOSE |')
-    print('|---|---:|---:|---:|---:|---|---|---|')
+    print('| Lesson | Slides (timed) | SAY words | Need (min) | vs 90 | Range fast-slow | Parts OVER | Parts LOOSE | Need after fixes (base; fast-slow) |')
+    print('|---|---:|---:|---:|---:|---|---|---|---|')
     for o in allout:
         n = o['n']
         set_scenario('fast'); f = lesson_total(n, D)
@@ -489,7 +600,10 @@ def main():
         set_scenario('base')
         ov = ', '.join(r[0].split(' (')[0].split(' +')[0] for r in o['rows'] if r[3] == 'OVER')
         lo = ', '.join(r[0].split(' (')[0].split(' +')[0] for r in o['rows'] if r[3] == 'LOOSE')
-        print(f'| {n} | {o["slides"]} ({o["timed"]}) | {o["say"]} | {fmt(o["need"])} | {o["need"]-90:+.1f} | {fmt(f)} - {fmt(sl)} | {ov or "-"} | {lo or "-"} |')
+        set_scenario('fast'); ff = lesson_total(n, D, True)
+        set_scenario('slow'); fs = lesson_total(n, D, True)
+        set_scenario('base'); fb = lesson_total(n, D, True)
+        print(f'| {n} | {o["slides"]} ({o["timed"]}) | {o["say"]} | {fmt(o["need"])} | {o["need"]-90:+.1f} | {fmt(f)} - {fmt(sl)} | {ov or "-"} | {lo or "-"} | {fmt(fb)} ({fmt(ff)} - {fmt(fs)}) |')
 
 
 if __name__ == '__main__':

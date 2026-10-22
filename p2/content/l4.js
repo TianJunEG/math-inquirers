@@ -134,7 +134,7 @@ const qbank = {
   ],
   stretch: [
     { q: 'Look at the shape pattern in the Start here page again (places 1 to 10). How many circles are there in the first 30 shapes? How do you know?', a: '12 circles (30 shapes is 6 groups of 5, with 2 circles in each group).', fig: shapeFig() },
-    { q: 'A pattern goes A, B, B, C, A, B, B, C … What is the 25th letter?', a: 'A. 24 ends a group of 4 (4 × 6 = 24), so 25 starts again with A.' },
+    { q: 'Beads go red, red, blue, green, red, red, blue, green … Mei says the 30th bead is blue. Is she right? Which places up to 30 have a green bead?', a: 'Mei is not right. The pattern repeats every 4 beads and 28 ends a group (4 × 7 = 28), so the 29th bead is red and the 30th bead is red. Green beads are the 4th bead of each group: places 4, 8, 12, 16, 20, 24 and 28.' },
     { q: 'Beads go red, yellow, yellow, red, yellow, yellow … How many yellow beads are in the first 18 beads?', a: '12 yellow beads (18 beads is 6 groups of 3, with 2 yellow in each).' },
     { q: 'Houses are made of sticks in a row. 1 house uses 5 sticks, 2 houses use 9 sticks, 3 houses use 13 sticks. How many sticks are needed for 6 houses?', a: '25 sticks. The rule is add 4: 5, 9, 13, 17, 21, 25.' },
     { q: 'Ali counts in 4s from 4. Mei counts in 10s from 10. Which numbers up to 50 do they both say?', a: '20 and 40.' },

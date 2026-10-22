@@ -2,6 +2,7 @@
 // rounding and rounding backwards, digit-card decimals, money and mass puzzles with bar models)
 // Every answer below was worked out and checked (the "find all" and riddle items with a short Python script).
 
+const tip = require('../tip.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF', RED = '#D64545';
 const T = (x, y, s, size = 16, fill = NAVY, anchor = 'middle', weight = 700) => `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="Arial">${s}</text>`;
 
@@ -159,14 +160,14 @@ module.exports = {
     H.sub('', 'A = _______    B = _______    C = _______    D = _______    E = _______'),
     H.sub('f', 'Which arrow, A to E, shows a number that rounds to 7?  _____'),
     H.q(2, 'Order and compare.', { keepNext: true }),
-    H.sub('', 'Start here: write each number with 3 decimal places (3.5 is 3.500). Compare the tenths first, then the hundredths.', { keepNext: true }),
+    tip('write each number with 3 decimal places (3.5 is 3.500). Compare the tenths first, then the hundredths.'),
     H.sub('a', 'Write in order, smallest first:   3.405,   3.45,   3.054,   3.5,   3.045'),
     H.sub('', '_________,  _________,  _________,  _________,  _________'),
     H.sub('b', 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right? Explain.'),
     ...H.lines(1),
     H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4. Use the number line: it is marked in hundredths.', { keepNext: true }),
     H.fig(roundLine()),
-    H.sub('', 'Start here: 7.45 is halfway between 7.4 and 7.5, and it rounds up. Put a finger on 7.40. Which marks round to 7.4?', { keepNext: true }),
+    tip('7.45 is halfway between 7.4 and 7.5, and it rounds up. Put a finger on 7.40. Which marks round to 7.4?'),
     H.sub('a', 'What is the smallest it can be?  ________     The largest?  ________'),
 
     H.q(4, 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point goes after the FIRST digit, like 3.69.', { pb: true, before: 0, keepNext: true }),

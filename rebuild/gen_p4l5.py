@@ -217,10 +217,12 @@ put('ws2ans',checks(f'{P}-ws2ans','76–80 MIN','Page 2: check together',[('Q4',
  'Click after a child explains. Q4a: the decimal point goes after the first digit, so there are 6 numbers: 3.69, 3.96, 6.39, 6.93, 9.36, 9.63. Q4c: below 7 the best is 6.93 (0.07 away); above 7 it is 9.36 (2.36 away). Q4d: 3.69 and 3.96 both round to 4 (3.5 to 4.5). Q5: $9.40 − $1.20 = $8.20, $8.20 ÷ 2 = $4.10 for Siti, $4.10 + $1.20 = $5.30 for Mei. Q6: 2.85 − 0.45 = 2.40 kg for 6 cans, 2.40 ÷ 6 = 0.4 kg; 2 cans are 0.8 kg, 2.85 − 0.8 = 2.05 kg. (The mystery decimal 4.687 is Think Harder Q4: it rounds to 4.7, so 4.650 to 4.749; tenths 6 gives hundredths 8, tenths 7 gives hundredths 9, which is too big; 4 + 6 + 8 = 18, so the thousandths digit is 7.)',gapy=150))
 
 # ---------- stretch / challenge ----------
-st=[('1.','Siti buys 4 notebooks that cost the same. She pays with a $10 note and gets $2.60 change. How much is one notebook?'),('2.','Find ALL the digits that the letter A can be:  3.A5 < 3.42'),('3.','Mei is 1.38 m tall. Ben is 0.15 m taller than Mei. Ali is 0.09 m shorter than Ben. How tall is Ali?')]
-put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Stretch')+numcards(st,36),'Answers: 1) $1.85 ($10 − $2.60 = $7.40, $7.40 ÷ 4 = $1.85). 2) 0, 1, 2 and 3 (3.35 < 3.42 but 3.45 > 3.42). 3) 1.44 m (Ben 1.38 + 0.15 = 1.53 m, Ali 1.53 − 0.09 = 1.44 m).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(5)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('stretch',sec(f'{P}-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(5)))
 ch=[('1.','A number with 3 decimal places rounds to 2.46 (to 2 decimal places). Its digits add up to 20. What is the number?'),('2.','3 apples and 1 pear weigh 0.95 kg. 1 apple and 1 pear weigh 0.45 kg. All the apples weigh the same. What is the mass of the pear?')]
-put('challenge',sec(f'{P}-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 2.459 (it is from 2.455 to 2.464; 2 + 4 + 5 + 9 = 20; 2.46_ would need an 8, but 2.468 rounds to 2.47). 2) 0.2 kg (the extra 2 apples weigh 0.95 − 0.45 = 0.5 kg, so 1 apple is 0.25 kg and the pear is 0.45 − 0.25 = 0.2 kg). More are in the question bank and on the Think Harder pages.'))
+put('challenge',sec(f'{P}-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 2.459 (it is from 2.455 to 2.464; 2 + 4 + 5 + 9 = 20; 2.46_ would need an 8, but 2.468 rounds to 2.47). 2) 0.2 kg (the extra 2 apples weigh 0.95 − 0.45 = 0.5 kg, so 1 apple is 0.25 kg and the pear is 0.45 − 0.25 = 0.2 kg). More are in the question bank and on the Think Harder pages.'))
 g1=nline(60,700,190,20,{0:'2.45',10:'2.46',20:'2.47'},big=(5,15),band=(5,14.6),lab=28,ticksize=14)
 g1+=f'<rect x="60" y="300" width="640" height="80" rx="14" fill="{SOFT}" stroke="{NAVY}" stroke-width="3"/>'+txt(380,352,'digits add up to 20',34)
 g1+=txt(380,60,'2 . ? ? ?',52)
@@ -230,11 +232,11 @@ for i in range(3): g2+=bar(30+i*uw,125,uw,72,'#F2A7A7','apple',28)
 g2+=bar(30+3*uw,125,110,72,'#BFE3DC','pear',28)+brace(30,30+3*uw+110,125,'0.95 kg',32)
 g2+=txt(30,262,'1 apple + 1 pear',32,NAVY,'start')+bar(30,280,uw,72,'#F2A7A7','apple',28)+bar(30+uw,280,110,72,'#BFE3DC','pear',28)
 g2+=brace(30,30+uw+110,352,'0.45 kg',32,up=False)
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Which numbers round to 2.46?</p>'+svgwrap(760,420,'A number line from 2.45 to 2.47 in thousandths with a shaded band around 2.46, and the clue digits add up to 20',g1,'width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Compare the two bars</p>'+svgwrap(760,420,'Bar model: 3 apples and 1 pear make 0.95 kg; 1 apple and 1 pear make 0.45 kg',g2,'width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('chdiag',sec(f'{P}-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: Q1, where do the numbers that round to 2.46 start and stop? Which tenths and hundredths digits can they have? Q2, what is the same in both bars? What is different? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: list the cases',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: list the cases',38,800,TEAL))
 for i,t in enumerate(['Rounds to 2.46: from 2.455 to 2.464','2.45_:  2 + 4 + 5 + ? = 20, so ? = 9 → 2.459 ✓','2.46_:  2 + 4 + 6 + ? = 20, so ? = 8 → 2.468 rounds to 2.47: not this one','Answer: 2.459']): body+=pin(128,330+i*125,800,p(t,31),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: compare the bars',38,800,TEAL))
 for i,t in enumerate(['The difference is 2 apples: 0.95 − 0.45 = 0.5 kg','1 apple: 0.5 ÷ 2 = 0.25 kg','Pear: 0.45 − 0.25 = 0.2 kg','Check: 0.25 × 3 + 0.2 = 0.95 ✓']): body+=pin(992,330+i*125,800,p(t,31),'rise',WHITE)

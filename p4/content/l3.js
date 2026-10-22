@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 3: Operation Detectives (Four operations)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF', G = '#EDEDED';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
@@ -147,16 +148,17 @@ module.exports = {
   workbook: H => {
     const W = [];
     W.push(H.p('Brackets first. Then × and ÷, working from left to right. Then + and −, working from left to right.', { after: 80 }));
-    W.push(H.q(1, 'Work out. A story helps: 36 + 14 × 5 means 36 stickers and then 5 more packs of 14 stickers. Underline the part you do first. Start here: draw the 5 packs of 14 stickers (or count in 14s), then add the 36.', { before: 40, keepNext: true }));
-    W.push(H.sub('a', '36 + 14 × 5  =  ____________'));
-    W.push(H.sub('b', '(36 + 14) × 5  =  ____________'));
-    W.push(H.sub('c', '72 ÷ 8 × 3  =  ____________'));
-    W.push(H.sub('d', '100 − 45 ÷ 5 + 7  =  ____________'));
-    W.push(H.sub('e', '6 × (25 − 17) ÷ 4  =  ____________'));
+    W.push(H.q(1, 'Work out. A story helps: 36 + 14 × 5 means 36 stickers and then 5 more packs of 14 stickers. Underline the part you do first.', { before: 40, keepNext: true }));
+    W.push(tip('draw the 5 packs of 14 stickers (or count in 14s), then add the 36.'));
+    W.push(H.sub('a', '36 + 14 × 5  =  ____________', { after: 40 }));
+    W.push(H.sub('b', '(36 + 14) × 5  =  ____________', { after: 40 }));
+    W.push(H.sub('c', '72 ÷ 8 × 3  =  ____________', { after: 40 }));
+    W.push(H.sub('d', '100 − 45 ÷ 5 + 7  =  ____________', { after: 40 }));
+    W.push(H.sub('e', '6 × (25 − 17) ÷ 4  =  ____________', { after: 40 }));
     W.push(H.q(2, 'Missing signs. Write +, −, × or ÷ in each circle to make the number sentence true. You may use a sign more than once.', { keepNext: true }));
     W.push(H.fig(signsSvg()));
     W.push(H.q(3, 'Brackets change the answer. Look at  4 + 8 × 5 − 3', { keepNext: true }));
-    W.push(H.sub('', 'Start here: do (a) first. Then try brackets round a different pair each time: round 4 + 8, round 5 − 3, round 8 × 5 − 3. Write each answer.', { keepNext: true }));
+    W.push(tip('try brackets round 4 + 8, then round 5 − 3, then round 8 × 5 − 3. Write each answer.'));
     W.push(H.sub('a', 'With no brackets:   4 + 8 × 5 − 3  =  ________'));
     W.push(H.sub('b', 'Put in ONE pair of brackets to make 57:     4  +  8  ×  5  −  3  =  57'));
     W.push(H.sub('c', 'Put in ONE pair of brackets to make 20:     4  +  8  ×  5  −  3  =  20'));

@@ -72,8 +72,8 @@ for i,(tag,q,a) in enumerate(relay):
 put('p2l10-warm1',sec('p2l10-warm1','0–5 MIN',body,'Minutes 0 to 5. Relay review: one card from each of our earlier topics. Read a card and ask for a volunteer; that child answers, then chooses a friend who has not had a turn yet. Any child may say “pass”. Never name a child to put them on the spot. Click to reveal each answer in order. A different answer gets “let us test that”, never a groan. '
  'Answers: 740 (biggest digit first; 0 last). 6 (5 + 4 = 9 ones, 2 + 1 = 3 hundreds; the tens must make 7: A + 1 = 7, so 6; check 365 + 214 = 579). 20 (4, 8, 12, 16, 20). 23 (add 5). 35¢ ($1 = 100¢; 65 + 35 = 100). 3/4 (4 quarters make the whole; 1 eaten, 3 left). Ask after each: "Which lesson does this remind you of?"'))
 
-qs=[('1.','Share 40 stickers equally among 5 children. How many each?','8'),('2.','It is 10:55 am. What time is it 10 minutes later?','11:05 am'),('3.','Which is bigger: 1/3 or 1/5 of the same cake?','1/3'),('4.','Half of a circle is called a …','semicircle'),('5.','I think of a number and add 30. I get 100. What is my number?','70')]
-put('p2l10-warm2',quick('p2l10-warm2','5–8 MIN',qs,'Minutes 5 to 8. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 8 (5 × 8 = 40, count in 5s to 40: 8 jumps). 2) 11:05 am (5 minutes to 11:00, 5 more). 3) 1/3: the cake is cut into fewer pieces, so each piece is bigger. 4) A semicircle. 5) 70 (work backwards: 100 − 30). Ask "How do you know?" for 3: draw two same bars, one cut in 3 and one cut in 5.',size=34))
+qs=[('1.','Share 40 stickers equally among 5 children. How many each?','8'),('2.','It is 10:55 am. What time is it 10 minutes later?','11:05 am'),('3.','Which is bigger: 1/3 or 1/5 of the same cake?','1/3'),('4.','Half of a circle is called a …','half circle'),('5.','I think of a number and add 30. I get 100. What is my number?','70')]
+put('p2l10-warm2',quick('p2l10-warm2','5–8 MIN',qs,'Minutes 5 to 8. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 8 (5 × 8 = 40, count in 5s to 40: 8 jumps). 2) 11:05 am (5 minutes to 11:00, 5 more). 3) 1/3: the cake is cut into fewer pieces, so each piece is bigger. 4) A half circle. 5) 70 (work backwards: 100 − 30). Ask "How do you know?" for 3: draw two same bars, one cut in 3 and one cut in 5.',size=34))
 
 # ---------- 4. explore ----------
 st=''
@@ -173,7 +173,7 @@ put('p2l10-we3',sec('p2l10-we3','28–31 MIN',body,'Worked example: make a table
 
 body=h2('Key idea: how to start a puzzle')+card(p('Stuck? Draw it, list it in order, or make a table.',46,700))+card(p('Then check your answer against every clue and explain why.',38,600,MUTED))
 put('p2l10-key',sec('p2l10-key','31–32 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Q1: counting the pictures instead of using the key (writing 6 instead of 30). (2) Q2: putting 0 first, or missing a number because the list is not in order. (3) Q3: guessing without a table, or not checking that there are exactly 6 coins. (4) Q4: putting a tick without crossing out the rest of that row and column. (5) Q5: forgetting that Mei eats 2 MORE pieces than Ali (not 2 pieces).'))
-put('p2l10-break',break_slide('p2l10-break','Freeze with maths! Dance until the music stops.','Then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.','Four minutes. Online: children stay in view of the camera and move in place. Finish with a drink of water.'))
+put('p2l10-break',break_slide('p2l10-break','Freeze with maths! Dance until the music stops.','Then make the shape the tutor calls with your arms: a half circle, a quarter circle, a cone, a cuboid.','Four minutes. Online: children stay in view of the camera and move in place. Finish with a drink of water.'))
 
 # ---------- teach before page 1: picture graph ----------
 rows=[('Ali',4),('Mei',2),('Ravi',None)]

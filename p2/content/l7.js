@@ -158,8 +158,8 @@ module.exports = {
     ],
     stretch: [
       { q: 'Write these in order, smallest first: 1/3, 1/12, 1/2, 1/5.', a: '1/12, 1/5, 1/3, 1/2' },
-      { q: 'A ribbon is cut into 9 equal pieces. Mei uses 4 pieces and Siti uses 3 pieces. What fraction of the ribbon is left?', a: '2/9 (4 + 3 = 7 pieces used, 9 − 7 = 2 left)' },
-      { q: '2/7 + ? = 1 whole', a: '5/7' },
+      { q: 'Mei says: “3/8 of a pizza is more than 3/5 of the same pizza, because 8 is bigger than 5.” Is she right? Draw two bars of the same length to show.', a: 'No. Eighths are smaller than fifths (the more equal parts, the smaller each part). So 3 eighths is less than 3 fifths: 3/5 is bigger than 3/8.' },
+      { q: 'Siti says: “3/8 + 2/8 = 5/16, because 8 + 8 = 16.” Is she right? Draw a bar to show. What is the right answer, and why does the bottom number not change?', a: 'No. 3 eighths and 2 eighths make 5 eighths: 5/8. The parts are still eighths, like 3 apples and 2 apples make 5 apples. Adding the bottom numbers would change the size of the parts.' },
       { q: 'Ali says: “Half of my pizza is bigger than half of your pizza.” Can he be right? Explain.', a: 'Yes, if his pizza is bigger. Halves of different-size wholes are different sizes.' },
       { q: 'Draw 3 squares. Cut each one into 4 EQUAL parts in a different way.', a: 'Any 3 of: 4 strips across, 4 strips down, a 2 by 2 grid, both lines from corner to corner (4 same triangles). Every part must be the same size.' },
       { q: 'Ravi eats 3/8 of a pizza. Ben eats 2/8 of the same pizza. How much more does Ravi eat? How much of the pizza is left?', a: '1/8 more; 3/8 is left (5 eighths eaten).' },
@@ -167,15 +167,15 @@ module.exports = {
       { q: 'Siti shades 4/12 of a shape. Then she shades 5/12 more. How much of the shape is NOT shaded?', a: '3/12 (9 twelfths shaded, 12 − 9 = 3)' }
     ],
     challenge: [
-      { q: 'Three children share a cake cut into 10 equal pieces. Each child gets a DIFFERENT number of pieces (at least 1), and the whole cake is shared out. Find ALL the ways to share it. Write each child’s share as a fraction.', a: '4 ways (tenths): 1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5.' },
-      { q: 'I am a fraction with 1 on top. I am smaller than 1/4 but bigger than 1/7. What could I be? Find all the answers.', a: '1/5 and 1/6' },
+      { q: 'A paper strip is folded in half, then in half again, then in half again. When you open it, how many equal parts are there? What fraction is each part?', a: '8 equal parts; each is 1/8 (1 fold: 2 parts, 2 folds: 4, 3 folds: 8).' },
+      { q: 'Siti eats 1/2 of a pizza. Then Ravi eats 1/2 of what is left. What fraction of the whole pizza is left now?', a: '1/4. After Siti, half is left; Ravi eats half of that half, which is a quarter of the pizza, so a quarter is left.' },
       { q: 'Two fractions with bottom number 9 add up to 1 whole. One of them is 3/9 more than the other. What are they?', a: '6/9 and 3/9 (take away the extra 3 ninths: 6 left; share: 3 and 3; give the 3 back: 6 and 3)' },
       { q: 'How many different ways can you add two fractions with bottom number 6 to make 1 whole? Each fraction must be at least 1/6, and 1/6 + 5/6 and 5/6 + 1/6 count as the same way.', a: '3 ways: 1/6 + 5/6, 2/6 + 4/6, 3/6 + 3/6' },
       { q: 'Make up your own fair-sharing story: a cake is cut into 10 equal pieces. Three people eat different amounts and 2/10 is left. Write each person’s share as a fraction, draw the bar, and check that the shares and what is left make 1 whole. Swap with a partner.', a: 'Open. Example: Ali eats 4/10, Mei eats 3/10, Ben eats 1/10 and 2/10 is left: 4 + 3 + 1 + 2 = 10 tenths = 1 whole. Only two sets of three different numbers of pieces add up to 8: 1, 3 and 4, or 1, 2 and 5.' },
       { q: 'Ali says: “The bigger the bottom number, the bigger the fraction.” Is he right? Use bars of the same length to show that he is wrong. Then say how you pick the bigger fraction when two fractions have the same bottom number.', a: 'No. 1/8 has a bigger bottom number than 1/4 but is smaller: the bar cut into 8 equal parts has shorter parts than the bar cut into 4 equal parts. When the bottom numbers are the same, the parts are the same size, so the fraction with more parts (the bigger top number) is bigger, e.g. 5/9 is bigger than 3/9.' },
       { q: 'A cake is cut into 12 equal pieces. Mei gets 4/12. Ali and Ben share the rest, but Ali gets 2/12 more than Ben. What fraction does Ben get?', a: '3/12 (and Ali gets 5/12): 8 pieces are shared; take away Ali\'s extra 2, share 6 as 3 and 3.' },
-      { q: 'A paper strip is folded in half, then in half again, then in half again. When you open it, how many equal parts are there? What fraction is each part?', a: '8 equal parts; each is 1/8 (1 fold: 2 parts, 2 folds: 4, 3 folds: 8).' },
-      { q: 'Siti eats 1/2 of a pizza. Then Ravi eats 1/2 of what is left. What fraction of the whole pizza is left now?', a: '1/4. After Siti, half is left; Ravi eats half of that half, which is a quarter of the pizza, so a quarter is left.' }
+      { q: 'Three children share a cake cut into 10 equal pieces. Each child gets a DIFFERENT number of pieces (at least 1), and the whole cake is shared out. Find ALL the ways to share it. Write each child’s share as a fraction.', a: '4 ways (tenths): 1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5.' },
+      { q: 'I am a fraction with 1 on top. I am smaller than 1/4 but bigger than 1/7. What could I be? Find all the answers.', a: '1/5 and 1/6' }
     ]
   },
 

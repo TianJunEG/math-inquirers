@@ -75,15 +75,15 @@ EXPLORE_X = {1: 6, 2: 8, 3: 9, 4: 7, 5: 7, 6: 10, 7: 7, 8: 7, 9: 9, 10: 15}  # L
 EXPLORE_X_FIX = {1: 6, 2: 7, 3: 6.5, 4: 7, 5: 7, 6: 7.5, 7: 7, 8: 7, 9: 7, 10: 9}  # after the explore fixes in the report
 # FIX: lesson-specific extras (indices are 0-based positions in ITEMS: 0 = Q1 ... 5 = Q6)
 FIX_EXTRA = {
-    2: dict(item_scale={1: 2.5}, explore_x=6.5, mini_drop=['try1']),                                   # Q2(c) to take-home
+    2: dict(item_scale={1: 2.5}, explore_x=6.5, mini_drop=['try2']),                                   # Q2(c) to take-home
     4: dict(demote=[5], item_scale={4: 3.0}, drop_mid=['teachsame'], talk_add=90, explore_x=6.5),     # Q6 + teachsame move to talk time
     6: dict(item_scale={0: 2.5}, demote=[5], drop_mid=['teachbetween', 'teachpairs'], explore_x=6.5), # Q1(c), Q6 to take-home
-    7: dict(explore_x=6, mini_drop=['try2']),
+    7: dict(explore_x=6),
     8: dict(demote=[5], item_scale={3: 2.5, 2: 3.5}, explore_x=6),                                     # Q4 four letters, Q3(b) to take-home
     10: dict(drop_mid=['teachtable', 'teachbetween'], exit_work=2.0),                                  # review lesson: one combined recap slide
 }
 # FIX: teaching slides cut (they only serve an 'if time' item, or are a second try-it that the worksheet itself repeats)
-DROP_SLIDES = {1: ['teachsum', 'tryclues'], 2: ['teachshape'], 3: ['teachboth'], 4: ['tryunits'], 5: ['teachtable'],
+DROP_SLIDES = {1: ['teachsum', 'tryclues'], 2: ['teachshape'], 3: [], 4: ['tryunits'], 5: ['teachtable'],
                6: ['tryadd'], 7: ['teachadd'], 8: ['try1'], 9: ['teach24'], 10: []}
 MAT_EXTRA = {6: 45}  # L6: extra seconds to find/mark the 7 strips on top of the standard materials time
 EXIT_WORK = {1: 3.0, 2: 3.0, 3: 3.0, 4: 3.5, 5: 3.0, 6: 3.0, 7: 3.0, 8: 3.0, 9: 3.5, 10: 3.5}

@@ -199,11 +199,11 @@ put('p5l7-ws2ans',checks('p5l7-ws2ans','72–76 MIN','Page 2: check together',[(
  'Click after a child explains. Q4: 20% of $120 = $24; $96 left; 25% of $96 = $24; $72 left; $72 out of $120 = 60 out of 100. Ben forgot that 25% was of the remainder, not of $120. Q5: girls 60% of 40 = 24, boys 16; glasses 25% of 24 = 6, 50% of 16 = 8; 14 out of 40 = 35 out of 100. Think harder Q1 (P6 preview): $1 out of the starting $4 is 25%; $1 out of the starting $5 is 20%. Think harder Q2: X: pay for 3 boxes = $45. Y: 4 boxes = $60, 30% off = $18 off, $42. (b) one free box out of 4 = 25% off.',gapy=135,size=32))
 
 # ---------- stretch / challenge ----------
-st=[('1.','A $90 jacket is 10% off. Then the sale price is a further 10% off. What do you pay? Is it the same as 20% off?'),('2.','A jar has 60 sweets. 25% are red. 40% of the REST are green. How many are green?'),('3.','A $80 bag goes up by 50%, then down by 50%. What is the final price?')]
-put('p5l7-stretch',sec('p5l7-stretch','37–72 MIN  •  OPTION',h2('Think harder')+numcards(st),'Answers: 1) $72.90. 10% of $90 = $9 off, so $81; then 10% of $81 = $8.10 off, so $72.90. It is NOT the same as 20% off ($72), because the second 10% is of $81, not of $90. '
- '2) 18 green. Red: 25% of 60 = 15. Rest: 45. 40% of 45 = 18. 3) $60. Up 50%: $80 + $40 = $120. Down 50% of $120 = $60 off, so $60.'))
-ch=[('1.','A price tag says $109, GST included. Ali says the GST is 9% of $109, which is $9.81. Is he right? How much GST is in the price?'),('2.','Mrs Tan spent 40% of her money on groceries and 25% of the remaining money on a gift. She had $54 left. How much money did she have at first?')]
-put('p5l7-challenge',sec('p5l7-challenge','37–72 MIN  •  OPTION',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q7 (Q6, the two lamp shops, is only in the workbook). Answers: 1) No. $109 is 109% of the price before GST, so 1% = $1 and the price before GST was $100. The GST is $9, not $9.81. 2) $120. Work backwards: $54 is 75% of the money left after groceries, so that was $72; $72 is 60% of her money, so 10% is $12 and 100% is $120.'))
+import p5_printed as _PP
+for _k,_v in _PP.slides(7,'A').items(): S[f'p5l7-{_k}']=_v
+ch=[('E1.', 'A price tag says $109, GST included. Ali says the GST is 9% of $109, which is $9.81. Is he right? How much GST is in the price?')]
+for _k,_v in _PP.slides(7,'B').items(): S[f'p5l7-{_k}']=_v
+put('p5l7-challenge',sec('p5l7-challenge','37–72 MIN  •  OPTION',h2('More Go further puzzles (extra, not in your workbook)')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q7 (Q6, the two lamp shops, is only in the workbook). Answers: 1) No. $109 is 109% of the price before GST, so 1% = $1 and the price before GST was $100. The GST is $9, not $9.81. 2) $120. Work backwards: $54 is 75% of the money left after groceries, so that was $72; $72 is 60% of her money, so 10% is $12 and 100% is $120.'))
 # chdiag
 g1=rect(20,70,640,80,SKY,NAVY,4)+txt(340,122,'price before GST = 100%',30)+rect(660,70,58,80,YEL,NAVY,4)+txt(630,185,'GST = 9%',28,TEAL)
 g1+=f'<path d="M20 58 V46 H718 V58" fill="none" stroke="{NAVY}" stroke-width="3"+/>'.replace('+/>','/>')+txt(369,34,'$109 = 109%',34,NAVY)
@@ -218,14 +218,14 @@ g2+=txt(x0+wrem/8,241,'gift',26)+txt(x0+wrem*5/8,241,'$54 left',26)
 g2+=txt(x0+wrem/2,184,'cut the money left into 4 equal parts',24,TEAL,'middle',700,'Nunito Sans, Arial')
 g2+=txt(20+360,310,'whole = ?   Work backwards.',30,TEAL,'middle',700,'Nunito Sans, Arial')
 body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: What is the whole?</p>'+svgwrap(740,250,'A bar showing 109 percent made of 100 percent price before GST and 9 percent GST',g1).replace('width:740px;height:250px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Money left, then a gift</p>'+svgwrap(740,330,'A bar of 10 equal parts, 4 for groceries, and the remaining 6 parts cut into 4 equal parts: one for a gift and three that are 54 dollars',g2).replace('width:740px;height:330px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
-put('p5l7-chdiag',sec('p5l7-chdiag','37–72 MIN  •  OPTION',body,'Show after pairs have tried Go further, or if they are stuck. The pictures show the problem, not the answer. Ask: What is the whole in Q1, and what is it 100% of? In Q2, which amount is the new whole after the groceries? How many equal parts is $54? Answers are in the Go further slide notes.'))
-body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: the whole is the price BEFORE GST',34,800,TEAL))
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">E1: What is the whole?</p>'+svgwrap(740,250,'A bar showing 109 percent made of 100 percent price before GST and 9 percent GST',g1).replace('width:740px;height:250px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">B3: Money left, then a gift</p>'+svgwrap(740,330,'A bar of 10 equal parts, 4 for groceries, and the remaining 6 parts cut into 4 equal parts: one for a gift and three that are 54 dollars',g2).replace('width:740px;height:330px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+put('p5l7-chdiag',sec('p5l7-chdiag','37–72 MIN  •  OPTION',body,'Show after pairs have tried Go further, or if they are stuck. The pictures show the problem, not the answer. Ask: What is the whole in E1, and what is it 100% of? In B3, which amount is the new whole after the groceries? How many equal parts is $54? Answers are in the Go further slide notes.'))
+body=h2('Go further: walk-through')+pin(128,250,800,p('E1: the whole is the price BEFORE GST',34,800,TEAL))
 for i,t in enumerate(['$109 = 100% + 9% = 109%','1% = $109 ÷ 109 = $1','GST = 9% of $100 = $9','Ali used 9% of $109: wrong whole!']): body+=pin(128,330+i*110,800,p(t,32),'rise',WHITE)
-body+=pin(992,250,800,p('Q2: work backwards from $54',34,800,TEAL))
+body+=pin(992,250,800,p('B3: work backwards from $54',34,800,TEAL))
 for i,t in enumerate(['$54 = 75% of the money left (3 of 4 parts)','1 part = $18, so money left = $72','$72 = 60% of all → 10% = $12','100% = $120.   Check: $48, then $18 ✓']): body+=pin(992,330+i*110,800,p(t,32),'rise',WHITE)
-put('p5l7-chwalk',sec('p5l7-chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. Q1: the price tag already includes the GST, so $109 is 109% of the unknown price before GST. 109 ÷ 109 = 1: each 1% is $1, and the price before GST is $100, so the GST is $9. Ali took 9% of the wrong whole. Q2: work backwards, undoing each step. After the gift, $54 is 75% of the money left, so a quarter of it is $18 and the money left was $72. After the groceries, 60% of her money is $72, so 10% is $12 and all of it is $120. Check forwards: 40% of $120 = $48 on groceries; $72 left; 25% of $72 = $18 gift; $54 left.'))
+put('p5l7-chwalk',sec('p5l7-chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. E1: the price tag already includes the GST, so $109 is 109% of the unknown price before GST. 109 ÷ 109 = 1: each 1% is $1, and the price before GST is $100, so the GST is $9. Ali took 9% of the wrong whole. B3: work backwards, undoing each step. After the gift, $54 is 75% of the money left, so a quarter of it is $18 and the money left was $72. After the groceries, 60% of her money is $72, so 10% is $12 and all of it is $120. Check forwards: 40% of $120 = $48 on groceries; $72 left; 25% of $72 = $18 gift; $54 left.'))
 
 # ---------- talk / exit ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Which is better for the shopper: add 9% GST first and then take 20% off, or take 20% off first and then add 9% GST?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
@@ -236,6 +236,7 @@ put('p5l7-exit',sec('p5l7-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: $2
 
 # ---------- write ----------
 order=['p5l7-title','p5l7-warm1','p5l7-warm2','p5l7-explore1','p5l7-explore2','p5l7-teach1','p5l7-we1','p5l7-try1','p5l7-we2','p5l7-try2','p5l7-key','p5l7-break','p5l7-ws1','p5l7-ws1ans','p5l7-teachrem','p5l7-teachtable','p5l7-ws2','p5l7-ws2ans','p5l7-teachchange','p5l7-teachdeal','p5l7-stretch','p5l7-challenge','p5l7-chdiag','p5l7-chwalk','p5l7-talk','p5l7-exit']
+order=_PP.fix_order(order,7,S)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')
 for f in os.listdir(sd):

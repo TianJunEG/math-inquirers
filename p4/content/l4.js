@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 4: Fraction Frontier (Fractions)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
@@ -177,7 +178,7 @@ module.exports = {
     W.push(H.sub('a', ['How many wear glasses? ______      <b style="color:#1F7A6F">b</b>  How many do NOT wear glasses? ______']));
 
     W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. In (c), write how you know.', { pb: true, before: 0, keepNext: true }));
-    W.push(H.sub('', 'Start here: fold or draw two strips of the same length. For (a): fold a strip into quarters, then fold each quarter in half. 3 quarters = ____ eighths.', { keepNext: true }));
+    W.push(tip('fold a strip into quarters, then fold each quarter in half. 3 quarters = ____ eighths.'));
     W.push(H.sub('a', [fr(3, 4), box, fr(5, 8)]));
     W.push(H.sub('b', [fr(2, 3), box, fr(7, 12)]));
     W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     The two bars below are the same length. Write how you know:  ______________________']));
@@ -185,15 +186,15 @@ module.exports = {
     W.push(H.sub('d', [fr(3, 5), box, fr(3, 7)]));
     W.push(H.sub('e', ['Put in order, smallest first:   ', fr(2, 3), ',  ', fr(5, 6), ',  ', fr(7, 12), '        ________,  ________,  ________']));
     W.push(H.q(5, ['', fr(3, 5), ' of the sweets in a jar are red. There are 27 red sweets.'], { keepNext: true }));
-    W.push(H.sub('', 'Start here: take 27 counters for the red sweets. Put them into 3 equal groups. How many counters are in each group?  ______', { keepNext: true }));
+    W.push(tip('put 27 counters into 3 equal groups. How many in each group?  ______'));
     W.push(H.sub('a', 'Draw a bar model. How many sweets are in the jar?'));
     W.push(H.gap(700));
     W.push(H.ans());
     W.push(H.sub('b', 'How many sweets are NOT red?'));
     W.push(H.ans());
-    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Start here: on the strip, shade ', fr(1, 3), ' of the boxes, then ', fr(3, 4), '. The boxes in between are your answers.'], { keepNext: true }));
+    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Start here: on the strip, shade ', fr(1, 3), ' of the boxes, then ', fr(3, 4), '.'], { keepNext: true }));
     W.push(H.fig(stripSvg()));
-    W.push(...H.lines(2));
+    W.push(...H.lines(1));
     W.push(H.ans('How many?'));
     return W;
   }

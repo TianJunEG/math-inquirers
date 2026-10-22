@@ -213,10 +213,12 @@ put('p4l1-ws2ans',checks('p4l1-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q4: Bus 33 at :00, :10, :20, :30; Bus 51 at :00, :15, :30. They meet every 30 minutes. Q5c: 49 = 7 × 7, so its factors are 1, 7 and 49: exactly 3. A number with exactly 3 factors is a number times itself where that number has only 2 factors: 2 × 2, 3 × 3, 5 × 5, 7 × 7. 16 = 4 × 4 has 5 factors, and 36 has 9. Finding ALL such numbers from 1 to 60 (4, 9, 25, 49) is Think Harder Q4. Q6a: multiples of 12 between 30 and 70 are 36, 48, 60; 48 is a multiple of 8; in 60 the ones digit is smaller than the tens digit.',gapy=180,size=32))
 
 # ---------- stretch / challenge ----------
-st=[('1.','How many factors does 64 have?'),('2.','Find all the numbers below 100 that are multiples of both 3 and 7.'),('3.','Siti puts 45 marbles into equal groups, with none left over. Each group has more than 1 marble, and there is more than 1 group. How many groups could there be? Find all.')]
-put('p4l1-stretch',sec('p4l1-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 7 factors: 1, 2, 4, 8, 16, 32, 64 (8 × 8 makes it odd). 2) 21, 42, 63, 84 (count in 21s). 3) 3, 5, 9 or 15 groups (the factors of 45 apart from 1 and 45).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(1)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l1-stretch',sec('p4l1-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(1)))
 ch=[('1.','There are 20 closed lockers, numbered 1 to 20. Child 1 opens every locker. Child 2 changes every 2nd locker (opens it if closed, closes it if open). Child 3 changes every 3rd locker, and so on, up to child 20. Which lockers are open at the end?'),('2.','I am a number less than 100. When I am divided by 2, 3, 4, 5 or 6, there is always 1 left over. I am bigger than 1. Who am I?')]
-put('p4l1-challenge',sec('p4l1-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,34),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q7 and Q6. Answers: 1) Lockers 1, 4, 9 and 16: each locker is changed once for every factor of its number, and only numbers with an odd number of factors end up open. 2) 61: one less than the number is a common multiple of 2, 3, 4, 5 and 6, which is 60.'))
+put('p4l1-challenge',sec('p4l1-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,34),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q7 and Q6. Answers: 1) Lockers 1, 4, 9 and 16: each locker is changed once for every factor of its number, and only numbers with an odd number of factors end up open. 2) 61: one less than the number is a common multiple of 2, 3, 4, 5 and 6, which is 60.'))
 g1=''
 for i in range(10):
     x=20+i*74
@@ -230,11 +232,11 @@ for i,(k) in enumerate([2,3,4,5,6]):
     g2+=f'<rect x="{x}" y="30" width="126" height="90" rx="12" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+txt(x+63,88,f'÷ {k}',34)+txt(x+63,160,'1 left',26,RED,font='Nunito Sans, Arial')
 g2+=f'<rect x="120" y="220" width="520" height="100" rx="16" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+txt(380,284,'my number − 1  =  ?',36)
 g2+=txt(380,380,'Take away the 1 left over …',28,MUTED,weight=600,font='Nunito Sans, Arial')+txt(380,425,'what is left fits 2s, 3s, 4s, 5s, 6s',28,TEAL,font='Nunito Sans, Arial')
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Who touches each locker?</p>'+svgwrap(780,470,'20 lockers in two rows, and a note that locker 6 is changed by children 1, 2, 3 and 6',g1).replace('width:780px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Always 1 left over</p>'+svgwrap(780,470,'Dividing by 2, 3, 4, 5 and 6 leaves 1 each time; take away the 1',g2).replace('width:780px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l1-chdiag',sec('p4l1-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: For Q1, which children touch locker 6? Locker 9? What do those numbers have to do with factors? For Q2, if you take away the 1 that is left over, what kind of number is left? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: count the changes',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: count the changes',38,800,TEAL))
 for i,t in enumerate(['Locker 6: children 1, 2, 3, 6 → 4 changes: closed','Locker 9: children 1, 3, 9 → 3 changes: open','Changes = number of factors. Odd → open','Open: 1, 4, 9, 16 (a number times itself)']): body+=pin(128,330+i*110,800,p(t,30),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: take away the 1',38,800,TEAL))
 for i,t in enumerate(['Number − 1 is a multiple of 2, 3, 4, 5 and 6','Multiples of 4, 5, 6 in common: 60, 120 …','60 is in the 2s and 3s too ✓','60 + 1 = 61   (121 is too big)']): body+=pin(992,330+i*110,800,p(t,30),'rise',WHITE)

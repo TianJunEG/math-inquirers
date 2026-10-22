@@ -18,7 +18,8 @@ const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-rad
 <div style="margin:5px 0">What helped me:${bx}a picture or model${bx}a list or table${bx}a simpler number${bx}my partner${bx}I asked for help${bx}checking my estimate</div>
 <div style="margin:5px 0">${bx}I am still stuck (my tutor will check in with me)${bx}Pass</div></div>`;
 // Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
-const choose = () => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question 3</b> you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
+// The number is the last question printed on page 1 of that lesson (2 or 3), computed in data.js from the real page break.
+const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
 const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2 plan.</b> Start with ${txt}. Then choose what to try next. You do not have to finish the page. The Investigation is on the next page.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {
@@ -37,13 +38,16 @@ const extra = (n) => {
   // Page 4: Think harder
   out.push(...hdr(n, ls.topic, 'THINK HARDER'));
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Draw a big, neat diagram first and label every length or angle you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
-  out.push(banner(n === 7 ? 'Think harder  (Q1: preview of P6, percentage change)' : 'Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(n === 7 && i < 2 ? 1 : 3)); });
+  out.push(banner(n === 7 ? 'Think harder  (A1 is a puzzle that goes further: percentage change)' : 'Think harder'));
+  // Think harder questions are numbered A1 to A4 and Go further questions B1 to B3, so no printed number repeats Start here Q1 to Q6.
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('A' + (i + 1), x.q, { before: 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : (n === 7 && i < 2 ? 1 : 3))); });
   // Page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
-  out.push(banner(n === 7 ? 'Go further  (a puzzle to chew on: P6 preview)' : 'Go further  (a puzzle to chew on)'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  out.push(banner('Go further  (a puzzle that goes further)'));
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q('B' + (i + 1), x.q, { before: 200, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : 4)); });
+  // One problem-posing prompt per lesson (think for 30 seconds first). Open-ended, so there is no answer line.
+  if (ls.pose) out.push(`<div class="p" style="border:2.5px dashed #D9662B;border-radius:12px;padding:8px 14px;margin:10px 0 0;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">Make up your own.</b> ${ls.pose} <i>(Think for 30 seconds before anyone speaks.)</i></div>`);
   return out;
 };
 // Page 2 gets a small "Start here" banner and a neutral plan line after its page break.
@@ -61,7 +65,7 @@ L.content.forEach(c => {
   const l = c.lesson;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
   W.push(banner('Start here'));
-  W.push(choose());
+  W.push(choose(l.n));
   W.push(...page2(c.workbook(H), l.n));
   W.push(...extra(l.n));
 });

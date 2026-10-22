@@ -215,10 +215,12 @@ put('p4l2-ws2ans',checks('p4l2-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q4a: 47 500 to 48 499 with hundreds digit 6 means 47 6..; ones digit 1 and tens digit double that (2) gives 47 621. Q4b: ten thousands digit 1 leaves 1 more in 4 places (4 numbers), ten thousands digit 2 leaves 0 (20 000). Q5c: 99 990 + 10 = 100 000. Q6b: odd means 3 or 5 last; smallest is 3 first and 5 last: 30 685. Q6c: 58 630 is 1370 away; 60 358 is 358 away.',gapy=180,size=32))
 
 # ---------- stretch / challenge ----------
-st=[('1.','What is the largest whole number that rounds to 30 000 to the nearest ten thousand?'),('2.','Find the rule and write the next two numbers: 100 000, 97 500, 95 000, ___, ___'),('3.','Use the digit cards 1, 3, 5, 7 and 9 once each. Make the number closest to 60 000.')]
-put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 34 999 (35 000 is halfway and rounds up to 40 000). 2) Take away 2500: 92 500, 90 000. 3) 59 731 (269 away; the best above 60 000 is 61 357, which is 1357 away).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(2)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(2)))
 ch=[('1.','How many 5-digit numbers have digits that add up to 3?'),('2.','The distance counter on Mr Tan\'s car shows 39 993 km. It reads the same forwards and backwards. What is the next number like this the counter will show? How many more kilometres is that?')]
-put('p4l2-challenge',sec('p4l2-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q7. Answers: 1) 15 (10 starting with 1, 4 starting with 2, and 30 000). 2) 40 004, which is 11 km more.'))
+put('p4l2-challenge',sec('p4l2-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q7. Answers: 1) 15 (10 starting with 1, 4 starting with 2, and 30 000). 2) 40 004, which is 11 km more.'))
 g1=''
 for i,lab in enumerate(['TTh','Th','H','T','O']):
     x=40+i*145
@@ -229,11 +231,11 @@ g2=f'<rect x="60" y="40" width="660" height="150" rx="20" fill="{NAVY}"/>'
 for i,d in enumerate('39993'): g2+=f'<rect x="{90+i*124}" y="60" width="104" height="110" rx="10" fill="{WHITE}"/>'+txt(142+i*124,140,d,72)
 g2+=txt(390,240,'km',30,MUTED,font='Nunito Sans, Arial')
 g2+=f'<rect x="60" y="300" width="660" height="140" rx="16" fill="{SOFT}" stroke="{NAVY}" stroke-width="3"/>'+txt(390,355,'Next palindrome:  ? ? ? ? ?',34)+txt(390,410,'It must be bigger than 39 993.',28,TEAL,font='Nunito Sans, Arial')
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Five places, digits add up to 3</p>'+svgwrap(780,470,'Five empty place-value boxes; the digits must add up to 3',g1).replace('width:780px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: The distance counter</p>'+svgwrap(780,470,'A distance counter showing 39 993 km',g2).replace('width:780px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l2-chdiag',sec('p4l2-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: For Q1, what can the ten thousands digit be? For each choice, how much is left to share among the other four places? For Q2, if the number starts with 39, how must it end? Is there a palindrome 39 _ 93 bigger than 39 993? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: list by the first digit',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: list by the first digit',38,800,TEAL))
 for i,t in enumerate(['Starts 1: share 2 in 4 places. A 2: 4 ways. Two 1s: 6 ways → 10','Starts 2: one 1 in 4 places → 4','Starts 3: 30 000 → 1','10 + 4 + 1 = 15']): body+=pin(128,330+i*120,800,p(t,30),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: change the first digit',38,800,TEAL))
 for i,t in enumerate(['39 ? 93: the middle digit can only go up to 9. 39 993 is the last one.','So the next one starts and ends with 4: 4 _ _ _ 4','Smallest: 40 004','40 004 − 39 993 = 11 km']): body+=pin(992,330+i*120,800,p(t,30),'rise',WHITE)

@@ -26,6 +26,19 @@ const invest = (g, n) => `<div class="p" style="border:2.5px dashed #1F7A6F;bord
   + (g.fig === 'grid' ? gridSvg() + '<br>' + line(96) : [1, 2, 3, 4, 5, 6].map(() => line(96)).join('<br>')) + '</div>';
 const coreEnd = n => { const g = L.gaps[String(n)]; const ls = L.lessons[n - 1];
   return [`<div class="p lh pb"><span class="lbadge">Lesson ${n}</span><span class="ltopic">Before you go: Investigation and Looking back</span></div>`, invest(g, n), reflect(g)]; };
+// One short 'make up your own' (problem posing) prompt per lesson, printed at the foot of the Go further page.
+const POSE = {
+  1: 'a 3-digit number riddle with 2 or 3 clues, so that only ONE number fits. Swap with a partner.',
+  2: 'a missing-digit sum with two boxes that has only ONE answer. Swap with a partner.',
+  3: 'a \u201chow many of each\u201d puzzle with two kinds of things, so that there is only ONE answer.',
+  4: 'a pattern of 4 shapes. Write a question about the 30th shape for a partner.',
+  5: 'a before-and-after story that ends with 40. Can a partner work out the start?',
+  6: 'a coin puzzle about paying exactly $1. Solve it, then swap with a partner.',
+  7: 'a fair-sharing story about a cake cut into 8 equal pieces and shared by 3 children. Write each share as a fraction.',
+  8: 'a stack of cubes with exactly 20 cubes. Draw its layers.',
+  9: 'a jug puzzle with two jugs and a goal. Check it by writing every pour in a table.',
+  10: 'a puzzle for next year\u2019s group. Write the answer on the back.'
+};
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -36,6 +49,8 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 90, after: 30, keepNext: true })); out.push(...lines([4, 5, 8, 10].includes(n) ? 2 : 3)); });
+  out.push(p([t('Make up your own: ', { bold: true, size: 24, color: '1F7A6F' }), t(POSE[n], { size: 24 })], { before: 120, after: 30, keepNext: true }));
+  out.push(...lines(2));
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');

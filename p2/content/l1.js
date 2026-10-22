@@ -101,9 +101,9 @@ module.exports = {
       { q: 'Put these numbers in order, smallest first: 409, 490, 94, 940.', a: '94, 409, 490, 940' }
     ],
     stretch: [
-      { q: 'Use the digit cards 1, 5 and 8 once each. How many different 3-digit numbers can you make? List them in order.', a: '6 numbers: 158, 185, 518, 581, 815, 851.' },
+      { q: 'Use the digit cards 2, 6 and 9 once each. Make a list in order of every 3-digit number you can make that is bigger than 500. How do you know you have found them all?', a: '4 numbers: 629, 692, 926, 962. The hundreds digit must be 6 or 9 (a number that starts with 2 is smaller than 500). With 6 in the hundreds, the other two cards make 629 and 692; with 9 in the hundreds, they make 926 and 962.' },
       { q: 'Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?', a: '3 numbers: 447, 474, 744. The two 4s look the same, so swapping them does not make a new number.' },
-      { q: 'What number is 3 hundreds, 14 tens and 6 ones?', a: '446 (14 tens = 1 hundred and 4 tens).' },
+      { q: 'Ali has 46 ten-blocks. Siti has 3 hundred-blocks and 15 ten-blocks. Who has the bigger number? How much bigger?', a: 'Ali: 46 tens is 460. Siti: 3 hundreds and 15 tens is 300 + 150 = 450. Ali has the bigger number, by 10.' },
       { q: 'Mei says: “If I swap the tens digit and the ones digit of a 3-digit number, the new number is always smaller.” Is she right? Show what happens with some examples. When does the number stay the same?', a: 'No. 452 becomes 425, which is smaller, but 425 becomes 452, which is bigger. It gets smaller when the tens digit is bigger than the ones digit, bigger when it is smaller, and stays the same when the two digits are the same (733).' },
       { q: 'I am a 3-digit number. My digits add up to 4. Find all the numbers I could be.', a: '10 numbers: 103, 112, 121, 130, 202, 211, 220, 301, 310, 400.' },
       { q: 'Use the digit cards 2, 5 and 9 once each. Which number you can make is closest to 600?', a: '592 (only 8 away).' },

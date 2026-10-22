@@ -166,7 +166,7 @@ module.exports = {
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));
     out.push(...H.lines(1));
     // ---------- page 2 ----------
-    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. The first row number (7) is given. Find the other missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the missing row and column numbers (the first row number, 7, is given), then fill in the grid.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
       const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 120, size: 26 });
       const v = s => C(s, 2475, { bold: true, h: 120, size: 26 });

@@ -192,10 +192,12 @@ put('p4l3-ws2ans',checks('p4l3-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q4 check: 23 × 6 = 138, − 18 = 120, ÷ 4 = 30. Q5: with 3: 15, 50, 10, 7. Part b is now a fill-in: number, 7, 7 (the open "explain why" is the Think Harder stretch). Bar model: five bars of your number plus 35; shared into 5 groups, each group is one bar and 7; take away the bar and 7 is left. Q6: chicken rice 3 units, laksa 1 unit; 124 ÷ 4 = 31; 3 × 31 = 93; the difference is 2 units = 62. (The old 1 236 version, 309 / 927 / 618, is in the question bank.) Q7b: try 7 for the 2nd number: 4, 7, 11, 18.',gapy=150,size=32))
 
 # ---------- stretch / challenge ----------
-st=[('1.','Work out 7 × (40 − 4 × 8).'),('2.','20 __ 4 __ 3 = 8. Write +, −, × or ÷ in the gaps. There are TWO ways. Find both.'),('3.','I think of a number. I divide it by 3, then add 14. The answer is 50. What was my number?')]
-put('p4l3-stretch',sec('p4l3-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 56 (inside the brackets, × first: 4 × 8 = 32, 40 − 32 = 8; then 7 × 8 = 56). 2) 20 − 4 × 3 = 20 − 12 = 8, and 20 ÷ 4 + 3 = 5 + 3 = 8. 3) 108 (work backwards: 50 − 14 = 36, 36 × 3 = 108).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(3)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l3-stretch',sec('p4l3-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(3)))
 ch=[('1.','Put + or − in each gap so that the answer is 7:  1 __ 2 __ 3 __ 4 __ 5 __ 6 = 7. Find ALL the ways.'),('2.','Mei spent half of her money on a book. Then she spent $6 on lunch. Then she spent half of what was left on a gift. She had $9 left. How much money did she have at first?')]
-put('p4l3-challenge',sec('p4l3-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. 2) $48 (work backwards: 9 × 2 = 18, 18 + 6 = 24, 24 × 2 = 48).'))
+put('p4l3-challenge',sec('p4l3-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) 2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. 2) $48 (work backwards: 9 × 2 = 18, 18 + 6 = 24, 24 × 2 = 48).'))
 g1=''
 for i in range(6):
     x=10+i*104
@@ -212,11 +214,11 @@ g2+=f'<rect x="600" y="80" width="130" height="90" fill="{YEL}" stroke="{NAVY}" 
 g2+=txt(425,210,'lunch',28,MUTED,weight=600,font='Nunito Sans, Arial')+txt(600,210,'half and half',28,MUTED,weight=600,font='Nunito Sans, Arial')
 g2+=f'<rect x="30" y="270" width="700" height="80" rx="14" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+txt(380,322,'Start at the END: $9 is half of …?',34,TEAL)
 g2+=f'<rect x="30" y="370" width="700" height="80" rx="14" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+txt(380,422,'Then undo the $6. Then undo the half.',32)
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: plus or minus?</p>'+svgwrap(760,470,'Cards 1 to 6 with empty circles between them, equals 7',g1).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Mei\'s money as a bar</p>'+svgwrap(760,470,'A bar for Mei\'s money: half for a book, $6 for lunch, then the rest split into a gift and $9 left',g2).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l3-chdiag',sec('p4l3-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: In Q1, what is the total if every sign is +? If you change one + to a −, how much smaller does the total get? In Q2, where does the bar END? Which part do you know? Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: start with all +',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: start with all +',38,800,TEAL))
 for i,t in enumerate(['All +: 1 + 2 + 3 + 4 + 5 + 6 = 21. That is 14 too many.','A − instead of + takes the number away TWICE: from +2 to −2 is 4 less.','So the numbers we flip must add up to 7: 2 + 5 or 3 + 4.','1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7 ✓']): body+=pin(128,330+i*130,800,p(t,30),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: work backwards',38,800,TEAL))
 for i,t in enumerate(['$9 is the half she kept, so before the gift: $9 × 2 = $18','Undo lunch: $18 + $6 = $24','$24 is the half left after the book: $24 × 2 = $48','Check: 48 → 24 → 18 → 9 ✓   She had $48.']): body+=pin(992,330+i*130,800,p(t,30),'rise',WHITE)

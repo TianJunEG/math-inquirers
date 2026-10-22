@@ -3,7 +3,7 @@ Content comes from p2/gaps.json (shared with the workbook and the tutor guide; b
     import p2gaps; p2gaps.add(S, K)            # before the slides are written; adds slides, re-times warm-up / exit, applies neutral labels
     order = p2gaps.order(order, K)             # after the order list exists
 """
-import json,os,re
+import json,os,re,subprocess
 import slidekit
 from slidekit import *
 G=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','p2','gaps.json')))
@@ -12,6 +12,39 @@ def _txt(s): return E(s).replace('{box}','[ ]')
 def _raw(s): return E(s).replace('{box}',BOX)
 def _row(left,top,width,label,text,size):
     return pin(left,top,width,f'<p style="font-size:{size}px;font-weight:600;line-height:1.3"><span style="color:{TEAL};font-weight:800">{E(label)}</span>  {_raw(text)}</p>',None,WHITE,20,'18px 28px')
+
+_QB=None
+def qbank():
+    """Question bank of the level, read from p2/data.js (the same source as the printed workbook and the Question Bank PDF)."""
+    global _QB
+    if _QB is None:
+        r=subprocess.run(['node','-e',"console.log(JSON.stringify(require('./p2/data.js').qbank))"],capture_output=True,text=True,check=True,cwd=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
+        _QB=json.loads(r.stdout)
+    return _QB
+def _frac(a,b,size):
+    fs=max(24,round(size*0.8))
+    return (f'<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1;margin:0 5px;font-size:{fs}px">'
+            f'<span style="padding:0 5px 3px;border-bottom:3px solid currentColor">{a}</span><span style="padding:3px 5px 0">{b}</span></span>')
+def _rich(K,s,size):
+    """Escape text; in Lesson 7 show a/b as stacked fractions (same look as the rest of that deck); [ ] as a yellow box."""
+    out=''; last=0
+    pat=re.compile(r'(\d+)/(\d+)') if K==7 else re.compile(r'(?!)')
+    for m in pat.finditer(s):
+        out+=E(s[last:m.start()])+_frac(m.group(1),m.group(2),size); last=m.end()
+    out+=E(s[last:])
+    return out.replace('[ ]',BOX)
+def think(K):
+    """Think harder slide = the SAME questions as the printed Think harder page (questions 1 to 3 on the slide, question 4 on the page)."""
+    items=qbank()[str(K)]['stretch'][:4]
+    tot=sum(len(x['q']) for x in items[:3]); size=36 if tot<330 else 32 if tot<470 else 29
+    body=h2('Think harder')
+    for i,x in enumerate(items[:3]):
+        body+=card(p(f'<span style="color:{TEAL}">{i+1}.</span>  {_rich(K,x["q"],size)}',size,600,raw=True))
+    body+=p('Question 4 is on your Think harder page.',28,600,MUTED)
+    ans='  '.join(f'{i+1}) '+(f'(Question: {x["q"]}) ' if i==3 else '')+x['a'] for i,x in enumerate(items))
+    notes=('Open to any child who chooses it (the choice after question 3 on the worksheet). These are the SAME four questions as the printed Think harder page: the slide shows 1 to 3 and question 4 is on the page only. '
+           'Never announce who is working on which page. Answers: '+ans)
+    return sec(f'p2l{K}-stretch','Think harder',body,notes)
 def precheck(K):
     g=G[str(K)]['pre']; C=G['common']
     body=h2('Sneak-peek puzzles')+p('Ideas we have not learnt yet. Guess, draw, count or say "I do not know". Show your paper to your tutor only.',32,600,MUTED)
@@ -41,15 +74,16 @@ def reflect(K):
     body=h2('Looking back')+p('Two minutes. Finish one line, two lines or all three. You may pass on any line.',32,600,MUTED)
     body+=qrow(128,290,1664,'1.','Something I did well …',40)+qrow(128,410,1664,'2.','The hardest part was …',40)
     body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">3. What helped me (tick any):</p>'+''.join(f'<p style="font-size:34px;font-weight:600;line-height:1.3"><span style="display:inline-block;width:30px;height:30px;border:4px solid {NAVY};border-radius:6px;background:#fff;vertical-align:middle;margin:0 14px -4px 0"></span>{E(t)}</p>' for t in ticks),None,WHITE,20,'18px 28px')
-    notes=('Minutes 87 to 89 (Lesson 10: 85 to 87). Looking back: about 2 minutes, on the small box on the last core page of the workbook (every child reaches it). Children finish one line, two lines or all three, and tick what helped. A pass is always allowed. No marks and no wrong answers. '
+    notes=('Minutes 87 to 89 (Lesson 10: 85 to 87). Looking back: about 2 minutes, in the box on the page called "Before you go: Investigation and Looking back" (the page after worksheet page 2; every child reaches it). Children finish one line, two lines or all three, and tick what helped. A pass is always allowed. No marks and no wrong answers. '
       'Tutor script: SAY: '+C['refSay']+' DO: '+C['refDo']+' '+C['close'])
-    return sec(f'p2l{K}-reflect','87–89 MIN',body,notes)
+    return sec(f'p2l{K}-reflect','85–87 MIN' if K==10 else '87–89 MIN',body,notes)
 LABELS=[('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),('Early finishers','Any child who would like more'),('early finishers','any child who would like more'),('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further come next.'),('For early finishers','Think harder'),('>Stretch<','>Think harder<'),('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),
         ('For children who finish early. ','Open to any child who chooses it. '),('For children who finish early','Open to any child who chooses it'),('children who finish early','any child who chooses to'),
         ('for strong thinkers','for any thinker'),('for early finishers','for any child who chooses it')]
 def add(S,K):
     P=f'p2l{K}'; ex=K==10
     S[f'{P}-precheck']=precheck(K); S[f'{P}-reflect']=reflect(K); S[f'{P}-goexp']=goexp(K)
+    S[f'{P}-stretch']=think(K)
     r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
     r(f'{P}-warm1','0–5 MIN','4–6 MIN'); r(f'{P}-warm1','Minutes 0 to 5.','Minutes 4 to 6 (a 2-minute game: one or two rounds).')
     r(f'{P}-warm2','5–8 MIN','6–8 MIN'); r(f'{P}-warm2','Minutes 5 to 8.','Minutes 6 to 8 (2 minutes: ask questions 1, 3 and 5; 2 and 4 are spare). Children answer by thumbs, hands, not by naming a child.')

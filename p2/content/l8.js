@@ -158,7 +158,7 @@ module.exports = {
     ],
     stretch: [
       { q: 'A stack of cubes has a bottom layer 4 cubes long and 3 cubes deep, a middle layer 3 cubes long and 2 cubes deep, and 1 cube on top. How many cubes are in the stack? Draw the layers.', a: '19 (12 + 6 + 1)' },
-      { q: 'How many squares are in a grid 3 squares long and 2 squares high?', a: '8 (6 small + 2 made of 4 small ones)' },
+      { q: 'How many rectangles can you find in a grid 2 squares long and 2 squares high? Remember that a square is a rectangle too. Count them by size.', a: '9: four small squares (1 by 1), two long ones (1 high and 2 long), two tall ones (2 high and 1 long), and the whole grid (2 by 2). 4 + 2 + 2 + 1 = 9.' },
       { q: 'Cut out nets E and F from the cut-out page and try folding them. Which one folds up into a cube? How do you know?', a: 'E folds into a cube (it is a staircase of squares, one of the 11 cube nets). F does not: the row of 5 squares wraps round and the 1st and 5th squares land on the same face.', fig: q5svg(4, 6) },
       { q: 'Six squares are joined in a straight line. Can they fold into a cube? Explain.', a: 'No. When you fold the line round, the 5th square lands on the same face as the 1st and the 6th on the 2nd, and the two ends are left open.' },
       { q: 'A shape is made of a square with a half circle on each of its 4 sides, curved sides outward. How many straight sides does its outside edge have? How many curved sides?', a: 'No straight sides and 4 curved sides.' },
@@ -175,7 +175,7 @@ module.exports = {
       { q: 'How many triangles are in a triangle with 3 lines from the top corner to the bottom and 1 line across the middle?', a: '20 (10 sit on the bottom line + 10 sit on the line across)' },
       { q: 'A pyramid of cubes has a top layer of 1 cube, then a layer 2 by 2, then a layer 3 by 3, then a bottom layer 4 by 4. How many cubes are there?', a: '30 (1 + 4 + 9 + 16)' },
       { q: 'How many squares can you find in a grid 5 squares long and 5 squares high?', a: '55 (25 + 16 + 9 + 4 + 1)' },
-      { q: 'On a dice, opposite faces add up to 7. You can see 3 faces showing 1, 2 and 3. What numbers are on the 3 faces you cannot see? What do they add up to?', a: '6, 5 and 4; they add up to 15.' }
+      { q: 'A 3 by 3 by 3 cube is built from 27 small cubes and the whole outside is painted. Sort the small cubes: how many have paint on 3 faces, on 2 faces, on 1 face and on no faces? Check that your four numbers make 27. What if the big cube is 4 by 4 by 4: how many small cubes have no paint?', a: 'Paint on 3 faces: 8 (the corners). On 2 faces: 12 (one in the middle of each edge). On 1 face: 6 (the middle of each face). No paint: 1 (the centre). 8 + 12 + 6 + 1 = 27. For a 4 by 4 by 4 cube the unpainted cubes make a 2 by 2 by 2 block inside: 8 cubes.' }
     ]
   },
 

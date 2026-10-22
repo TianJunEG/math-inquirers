@@ -15,7 +15,7 @@ ROOT=os.path.join(H,'..')
 RED='#D64545'
 
 def _data(n):
-    js=(f"const L=require('./p5/data.js');const c=L.content[{n}-1];console.log(JSON.stringify({{check:c.deck.check,whatIf:c.deck.whatIf,pic:c.deck.checkPic,sc:c.script.check,sr:c.script.reflect,tr:c.script.talkRules,solo:c.lesson.solo}}))")
+    js=(f"const L=require('./p5/data.js');const c=L.content[{n}-1];console.log(JSON.stringify({{check:c.deck.check,whatIf:c.deck.whatIf,pic:c.deck.checkPic,sc:c.script.check,sr:c.script.reflect,tr:c.script.talkRules,solo:c.lesson.solo,cq:L.choiceQ({n})}}))")
     return json.loads(subprocess.check_output(['node','-e',js],cwd=ROOT))
 
 # ---------- small drawn pictures for the sneak-peek slide (drawn shapes, no unicode glyphs) ----------
@@ -91,7 +91,7 @@ def rng(label):
     return (int(m.group(1)),int(m.group(2))) if m else None
 
 PLAN=('Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), '
-      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 3 you may choose: carry on, or try Think harder), '
+      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (at the end of page 1 you may choose: carry on, or try Think harder), '
       'check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), '
       'check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, '
       'reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, '
@@ -162,7 +162,7 @@ def apply(n):
             s=s.replace(f'minutes {r0[0]} to {r0[1]}',f'minutes {a} to {b}')
         wr(fp,s)
     # optional slides (think harder / go further / investigation extras) get a label too
-    for sfx in ('stretch','challenge','chdiag','chwalk'):
+    for sfx in ('stretch','stretch2','stretch3','gofurther','gofurther2','gofurther3','challenge','chdiag','chwalk'):
         edit(P+sfx,lambda s:set_label(s,'37–72 MIN  •  OPTION'))
     for sfx in ('teachchange','teachdeal'):
         edit(P+sfx,lambda s:set_label(s,'72–76 MIN  •  OPTION'))
@@ -170,9 +170,10 @@ def apply(n):
 
     # ---- page 1: the neutral choice line + private-invitation guidance ----
     def ws1(s):
-        if 'After question 3 you may choose' in s: return s
-        s=append_card(s,card(p('After question 3 you may choose: carry on, or try Think harder. You can swap at any time.',34,700,TEAL)))
-        return add_notes(s,'Everyone sees the same neutral line: "After question 3 you may choose: carry on, or try Think harder." Never announce who is on which page and never name a child in front of the group. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.')
+        if 'you may choose: carry on' in s: return s
+        cq=g['cq']
+        s=append_card(s,card(p(f'After question {cq} you may choose: carry on, or try Think harder. You can swap at any time.',34,700,TEAL)))
+        return add_notes(s,f'Everyone sees the same neutral line: "After question {cq} you may choose: carry on, or try Think harder." (Question {cq} is the last question on page 1 of this lesson.) Never announce who is on which page and never name a child in front of the group. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.')
     edit(P+'ws1',ws1)
     def ws2(s):
         s=s.replace('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further are at the back of your workbook.')
@@ -184,7 +185,7 @@ def apply(n):
     # ---- explore: the Go further what-if ----
     wi_q,wi_a=g['whatIf']
     def ex1(s):
-        return add_notes(s,'GO FURTHER (say it at minute 9): any pair that finishes step 4 early may try the what-if question on the next slide. It is open to every pair, not a reward. Answer: '+wi_a)
+        return add_notes(s,'PROTECTED THINK TIME: before the pairs touch anything, say "Think for 30 seconds before anyone speaks" and show the clock; then pairs talk and start. GO FURTHER (say it at minute 9): any pair that finishes step 4 early may try the what-if question on the next slide. It is open to every pair, not a reward. Answer: '+wi_a)
     edit(P+'explore1',ex1)
     def ex2(s):
         if 'A SECOND WHAT-IF' in s: return s

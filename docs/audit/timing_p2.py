@@ -18,7 +18,7 @@ MODEL (identical for every level):
              LOW = x1.7, HIGH = x0.65
   flags      diff = needed - scripted; OVER >= +2.0; TIGHT +0.5..+2.0; OK -3.0..+0.5; LOOSE <= -3.0
 """
-import json, re, html, subprocess, sys, os
+import json, re, html, subprocess, sys, os, math
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 WPM_SAY, WPM_Q = 125, 115
@@ -97,7 +97,7 @@ def say_words(s):
     return wc(' '.join(s))
 
 COMMON_FIX = dict(sneak_say_words=28, sneak_work=(45, 90), warm_q=2, ex_breakout_scale=0.667, deb_disc=15, ex_slides_cut=1,
-                  brk_act=120, chk_part=5, chk_q=10, talk_act=100 + 90 + 30, exit_check=80, exit_reveal=20, open_greet=0)
+                  brk_act=120, chk_part=5, chk_q=10, talk_act=90 + 70 + 20, exit_check=80, exit_reveal=20, open_greet=0)
 
 def lesson_model(n, D, sc, fix=None):
     """Return rows for one lesson. fix=None gives the plan as scripted; fix=dict gives the re-budgeted plan."""
@@ -185,7 +185,7 @@ def lesson_model(n, D, sc, fix=None):
         act=g('talk_act', 120 + 135 + 45) * S['act'], trans=S['slide'])
     # 9 Exit ticket
     add('exit', 'Exit ticket %s' % ('80-85' if n10 else '80-87'), 5 if n10 else 7, speak=qsec(wc(les['exit']['q'])) + saysec(25),
-        act=hp['exit_s'] * S['act'] + 8 * 0 + g('exit_check', 120) + g('exit_reveal', 30), trans=S['slide'] + 30)
+        act=g('exit_s', hp['exit_s']) * S['act'] + g('exit_check', 120) + g('exit_reveal', 30), trans=S['slide'] + 30)
     # 10 Looking back
     add('lb', 'Looking back %s' % ('85-87' if n10 else '87-89'), 2, speak=saysec(wc(gc['refSay'])), act=75 * S['act'], trans=S['slide'])
     # 11 Close
@@ -200,6 +200,62 @@ def lesson_model(n, D, sc, fix=None):
         rows.append(dict(key='buffer', part='Standing buffer', sched=fx['buffer'], speak=0, wait=0, act=0, trans=0, rec=0, note='', need=0.0, diff=-fx['buffer']))
     return rows
 
+# Lesson-specific parts of the re-budgeted plan (applied on top of COMMON_FIX). Every Core item moved out of class
+# becomes a "home star" (take-home) item; no answers, tiers or pass rules change.
+FIX = {
+ 1: dict(warm_game=100, ex_mat=30, mini_try={'try1': (2, 35), 'try2': (3, 40)}, ws_p2=[3.5, 6], parts=(7, 4),
+         wsteach={'teachchart': 0, 'teachriddle': 20}),
+ 2: dict(warm_game=100, ex_mat=20, mini_drop=['try3'], mini_merge=['we2'], mini_try={'try1': (2, 60), 'try2': (1, 60)},
+         ws_p1=[3.3, 4, 2.5], parts=(8, 4), expl=(1, 1), ws_p2=[5.5, 4], wsteach={'teachsq': 20, 'teachtwo': 20}),
+ 3: dict(warm_game=105, ex_work=5, ex_mat=30, exit_s=120, mini_drop=['try1'], mini_try={'try2': (2, 60)},
+         wsteach={'teachshare': 0, 'teachround': 0, 'teachall': 20}),
+ 4: dict(warm_game=90, ex_mat=30, mini_add=['teachtimes', 'teachgrow'], mini_try={'try1': (3, 30)},
+         ws_p1=[4.5, 2.5, 2.8], ws_p2=[3.2, 4, 4], parts=(6, 9), expl=(1, 1), wsteach={'teachboth': 20}),
+ 5: dict(warm_game=120, ex_work=5.5, ex_mat=30, deb_q=2, mini_try={'try1': (1, 50), 'try2': (2, 50)},
+         ws_p1=[4.1, 3.5], parts=(5, 6)),
+ 6: dict(warm_game=120, ex_work=5.5, ex_mat=45, mini_try={'try1': (1, 50), 'try2': (2, 50)},
+         ws_p1=[3.75, 4], ws_p2=[2, 2, 2, 5], parts=(6, 5), wsteach={'teachchange': 0, 'teachenough': 0, 'teachlist2': 0}),
+ 7: dict(warm_game=100, ex_work=5.5, ex_mat=60, deb_q=2, mini_merge=['we3'], mini_try={'try1': (2, 35), 'try2': (2, 40)},
+         ws_p1=[2.3, 2, 5.5], ws_p2=[3.6, 3.5, 4], parts=(7, 7), wsteach={'teachadd': 0, 'teachstory': 0, 'teachsame': 0}),
+ 8: dict(warm_game=100, ex_work=5.5, ex_mat=30, mini_drop=['we3'], mini_try={'try1': (2, 35), 'try2': (2, 50)},
+         ws_p1=[3.8, 5], ws_p2=[6, 4], parts=(4, 3), wsteach={'teachcube': 0, 'teachnet': 0}),
+ 9: dict(warm_game=105, ex_work=5.5, ex_mat=45, mini_try={'try1': (2, 50), 'try2': (1, 70)},
+         ws_p1=[5, 3], ws_p2=[4, 1.5, 3.8], parts=(5, 4), wsteach={'teachclock': 30, 'teachdur': 0}),
+ 10: dict(warm_game=120, ex_work=4.5, ex_mat=30, ex_slides_cut=4, exit_s=120, mini_drop=['teach1', 'try1'], mini_try={'try2': (2, 50)},
+          ws_p1=[4.5, 3.5], parts=(5, 6), wsteach={'teachlogic': 0, 'teachgrow': 0}),
+}
+
+STD = dict(open=1.5, sneak=4.5, warm=4.5, explore=13, mini=12, brk=3, wst=2.5, p1=14, c1=2.5, wt=4.5, p2=11.5, c2=2.5,
+           talk=5, exit=5, lb=2, close=1.5)
+STD_L10 = dict(STD, close=3)
+DEV = {4: dict(wt=2.5), 10: dict(mini=10, p1=12, wt=3.5)}
+
+def final_budget(n):
+    b = dict(STD_L10 if n == 10 else STD)
+    if HP[n].get('pre_teach'): b['p1'] = 11.5
+    else: b.pop('wst')
+    b.update(DEV.get(n, {}))
+    return b
+
+def auto_budget(n, D):
+    """Standard budget, raised (to the next half minute) only where the re-planned lesson needs more than the standard."""
+    base = dict(STD_L10 if n == 10 else STD)
+    rows = fixed_rows(n, D)
+    b = {}
+    for r in rows:
+        k = r['key']
+        if k not in base: continue
+        std = base[k]
+        if k == 'p1' and HP[n].get('pre_teach'): std = 11.5
+        b[k] = std if r['need'] <= std + 0.25 else math.ceil(r['need'] * 2 - 1e-9) / 2
+    return b
+
+def fixed_rows(n, D, sc='central', with_budget=False):
+    fx = dict(COMMON_FIX); fx.update(FIX[n])
+    if with_budget:
+        b = final_budget(n); fx['budget'] = b; fx['buffer'] = round(90 - sum(b.values()), 2)
+    return lesson_model(n, D, sc, fx)
+
 def flag(diff):
     if diff >= 2.0: return 'OVER'
     if diff >= 0.5: return 'TIGHT'
@@ -207,19 +263,17 @@ def flag(diff):
     return 'OK'
 
 def totals(rows):
+    """(scripted, time-boxed need, content-complete need). Time-boxed: the tutor stops the two pair/alone work windows on the clock."""
     sched = sum(r['sched'] for r in rows)
-    full = sum(r['need'] for r in rows)  # waits for the MIDDLE child to finish the Core pages
-    boxed = 0
-    for r in rows:
-        if r['part'].startswith('WS page'):  # time-boxed: tutor stops the work window on the clock
-            boxed += min(r['need'], r['sched'])
-        else:
-            boxed += r['need']
+    full = sum(r['need'] for r in rows)
+    boxed = sum(min(r['need'], r['sched']) if r['key'] in ('p1', 'p2') else r['need'] for r in rows)
     return sched, boxed, full
 
-def tier_items(n):
+def tier_items(n, fixed=False):
     hp = HP[n]; out = {}
     p1, p2 = hp['ws']
+    if fixed:
+        p1 = FIX[n].get('ws_p1', p1); p2 = FIX[n].get('ws_p2', p2)
     p1_win = 10 if hp.get('pre_teach') else 12
     for t, m in TIER.items():
         def count(qs, win, f):
@@ -232,8 +286,11 @@ def tier_items(n):
         out[t] = (count(p1, p1_win, PAIR), count(p2, 12, 1.0))
     return out
 
-def spare_for_extension(n):
-    hp = HP[n]; p1, p2 = hp['ws']; p1_win = 10 if hp.get('pre_teach') else 12
+def spare_for_extension(n, fixed=False):
+    hp = HP[n]; p1, p2 = hp['ws']
+    if fixed:
+        p1 = FIX[n].get('ws_p1', p1); p2 = FIX[n].get('ws_p2', p2)
+    p1_win = 10 if hp.get('pre_teach') else 12
     res = {}
     for t, m in TIER.items():
         res[t] = (max(0, p1_win - sum(p1) * m * PAIR), max(0, 12 - sum(p2) * m))
@@ -260,6 +317,19 @@ def lesson_stats(n, D):
     shown = [s for s in sl if s[0] not in ('stretch', 'challenge', 'chdiag', 'chwalk')]
     return dict(slides=len(sl), shown=len(shown), say_words=say, slide_words=sum(s[1] for s in shown), note_words=sum(s[2] for s in sl))
 
+def sinks(D):
+    """Mean over lessons of (needed - scripted) per part, time-boxed, plus the level-wide split of the extra time."""
+    import collections
+    ex = collections.defaultdict(float); cat = collections.defaultdict(float)
+    for n in range(1, 11):
+        rows = lesson_model(n, D, 'central')
+        for r in rows:
+            need = min(r['need'], r['sched']) if r['key'] in ('p1', 'p2') else r['need']
+            ex[r['key']] += (need - r['sched']) / 10
+            for c in ('speak', 'wait', 'act', 'trans', 'rec'):
+                cat[c] += r[c] / 10
+    return dict(ex), dict(cat)
+
 if __name__ == '__main__':
     D = load()
     mode = sys.argv[1] if len(sys.argv) > 1 else '--summary'
@@ -267,16 +337,41 @@ if __name__ == '__main__':
         for n in range(1, 11):
             print('\n### Lesson %d: %s\n' % (n, D['lessons'][n - 1]['title']))
             print(md_table(n, D))
+    elif mode == '--fixed':
+        for n in range(1, 11):
+            rows = fixed_rows(n, D, 'central', True)
+            buf = [r for r in rows if r['key'] == 'buffer'][0]
+            order = [r for r in rows if r['key'] != 'buffer']
+            i = [r['key'] for r in order].index('c2') + 1
+            order.insert(i, buf)  # the flex block sits after the second check, before Talk time
+            print('\n#### Lesson %d: %s (re-budgeted)\n' % (n, D['lessons'][n - 1]['title']))
+            print('| New minutes | Part | Old budget | New budget | Needed (central) | Slack | Needed (fast / slow tutor) |')
+            print('|---|---|--:|--:|--:|--:|--:|')
+            lo = {r['key']: r for r in fixed_rows(n, D, 'low', True)}; hi = {r['key']: r for r in fixed_rows(n, D, 'high', True)}
+            old = {r['key']: r['sched'] for r in lesson_model(n, D, 'central')}
+            t = 0.0
+            for r in order:
+                k = r['key']
+                print('| %g-%g | %s | %s | %.1f | %.1f | %+.1f | %.1f / %.1f |' % (t, t + r['sched'], r['part'],
+                      ('%.0f' % old[k]) if k in old else '-', r['sched'], r['need'], r['sched'] - r['need'], lo[k]['need'], hi[k]['need']))
+                t += r['sched']
+            print('| 0-90 | **Total** | 90 | %.1f | %.1f | %+.1f | %.1f / %.1f |' % (sum(r['sched'] for r in rows), sum(r['need'] for r in rows), sum(r['sched'] - r['need'] for r in rows),
+                                                                        sum(r['need'] for r in lo.values()), sum(r['need'] for r in hi.values())))
     elif mode == '--json':
         out = {}
         for n in range(1, 11):
             out[n] = {sc: [dict(r, flag=flag(r['diff'])) for r in lesson_model(n, D, sc)] for sc in SCEN}
         print(json.dumps(out, indent=1))
     else:
-        print('lesson  sched  low  central(boxed/full)  high   | slides  SAYwords')
+        print('lesson | scripted | as-scripted total: fast / central / slow (time-boxed) | content-complete central | slides(shown) | SAY words | items done in class LOW/MIDDLE/HIGH (page1,page2) of Core')
         for n in range(1, 11):
             res = {sc: totals(lesson_model(n, D, sc)) for sc in SCEN}
             st = lesson_stats(n, D)
-            print('%2d  %4.0f  %5.1f  %5.1f/%5.1f  %5.1f   | %2d(%2d)  %4d  tiers=%s' % (
-                n, res['central'][0], res['low'][2], res['central'][1], res['central'][2], res['high'][2],
-                st['slides'], st['shown'], st['say_words'], tier_items(n)))
+            ti = tier_items(n)
+            ncore = len(HP[n]['ws'][0]) + len(HP[n]['ws'][1])
+            print('%2d | %.0f | %5.1f / %5.1f / %5.1f | %5.1f | %2d(%2d) | %4d | %s of %d' % (
+                n, res['central'][0], res['low'][1], res['central'][1], res['high'][1], res['central'][2], st['slides'], st['shown'],
+                st['say_words'], '/'.join('%d+%d=%d' % (ti[t][0], ti[t][1], sum(ti[t])) for t in ('LOW', 'MIDDLE', 'HIGH')), ncore))
+        ex, cat = sinks(D)
+        print('mean excess over scripted by part (min, time-boxed):', {k: round(v, 1) for k, v in sorted(ex.items(), key=lambda kv: -kv[1])})
+        print('mean minutes by category:', {k: round(v, 1) for k, v in cat.items()})

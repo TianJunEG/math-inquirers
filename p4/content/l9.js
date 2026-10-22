@@ -1,6 +1,7 @@
 // Math Inquirers P4 Holiday Program — Lesson 9: Data Detectives (Tables and line graphs)
 // Every answer below was worked out and checked with a script (changes between days, row and column totals,
 // where two lines meet, missing points from totals).
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Arial, sans-serif';
 const tx = (x, y, s, size = 15, o = {}) => `<text x="${x}" y="${y}" font-size="${size}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.c || N}" font-family="${F}"${o.rot ? ` transform="rotate(-90 ${x} ${y})"` : ''}>${s}</text>`;
@@ -171,7 +172,7 @@ module.exports = {
 
     W.push(H.q(3, 'The graph shows how much money Ali and Mei had in their money boxes at the end of each week.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(moneySvg()));
-    W.push(H.sub('', 'Start here: read each dot and write the money in the table. Then (a), (b) and (c) can use your table.', { keepNext: true }));
+    W.push(tip('read each dot and write the money in the table. Then (a), (b) and (c) can use your table.'));
     { const wm = [1650, 1650, 1650, 1650, 1650, 1650, 1650];
       W.push(H.tbl(wm, [H.row(['Week', '1', '2', '3', '4', '5', '6'].map((c, i) => H.cell(c, wm[i], { bold: true, fill: 'EDEDED', h: 30 }))),
         H.row(['Ali', '', '', '', '', '', ''].map((c, i) => H.cell(c, wm[i], i === 0 ? { bold: true, fill: 'EDEDED', h: 36 } : { h: 36 }))),
@@ -188,7 +189,7 @@ module.exports = {
     W.push(H.sub('a', 'How many more each day?  ______     Pages in the 5 days?  ______'));
     W.push(H.q(5, 'Two shops drew line graphs of the phone cases they sold. Ravi says, “Both shops’ sales went up by the same amount, because the lines look the same.”', { keepNext: true }));
     W.push(H.fig(shopsSvg()));
-    W.push(H.sub('', 'Start here: read the scale of each graph.  Shop A starts at ____ and each line is worth ____.   Shop B starts at ____ and each line is worth ____.', { keepNext: true }));
+    W.push(tip('read the scale of each graph.  Shop A starts at ____ and each line is worth ____.   Shop B starts at ____ and each line is worth ____.'));
     W.push(H.sub('a', 'January to April: Shop A went up by ______.  Shop B went up by ______.'));
     W.push(H.sub('b', 'Is Ravi right? Explain why the two graphs look the same.'));
     W.push(...H.lines(1));

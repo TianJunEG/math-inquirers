@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 7: Area Architects II (Area and perimeter, rectangles and squares)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 
@@ -170,7 +171,7 @@ module.exports = {
 
     W.push(H.q(4, 'Ravi says, "I cannot find the perimeter of this staircase, because the steps are not labelled."', { pb: true, before: 0, keepNext: true }));
     W.push(side(q4Svg(), 300, [
-      H.sub('', 'Start here: put a finger on the top-left corner and walk along the edge of the staircase. How far did you go across? How far down?', { after: 40 }),
+      tip('put a finger on the top-left corner and walk along the edge of the staircase. How far did you go across? How far down?'),
       H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step. Push the steps out: the shape then fits in a ___ cm by ___ cm rectangle.'),
       H.sub('', '___ + ___ + ___ + ___ = ___ cm.   Perimeter:  ________', { after: 40 }),
       H.sub('b', 'Think of the staircase as 3 rows. The rows are 3 cm, 7 cm and 11 cm long, and each row is 2 cm high. Area:  ________')].join('')));
@@ -182,7 +183,7 @@ module.exports = {
     W.push(...H.lines(1));
     W.push(H.q(6, 'A photo 8 cm long and 6 cm wide is put in a frame. The frame is 1 cm wide all round.', { keepNext: true }));
     W.push(side(q6Svg(), 210, [
-      H.sub('', 'Start here: on squared paper, draw the photo 8 by 6, then the frame 1 cm wide round it. Count the frame squares.', { after: 40 }),
+      tip('on squared paper, draw the photo 8 by 6, then the frame 1 cm wide round it. Count the frame squares.'),
       H.sub('a', 'How long and how wide is the whole thing (photo and frame)?  ____ cm by ____ cm'),
       H.sub('b', 'Find the area of the frame only.   Area of frame:  ________'),
       H.sub('c', 'Mei found the frame like this: 8 + 8 + 6 + 6 = 28 cm². What did she forget?  ________________')].join('')));

@@ -241,10 +241,12 @@ put('p4l4-ws2ans',checks('p4l4-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q4a: 3/4 = 6/8. b) 2/3 = 8/12. c) 4/9 is less than a half, 5/8 is more. d) Fifths are bigger pieces than sevenths. e) In twelfths: 7/12, 8/12, 10/12. Q6: 1/3 = 4/12 and 3/4 = 9/12; the ends do not count. (Who am I? is now Think Harder stretch 4: 17/6, because 13/6, 15/6, 17/6 are odd, and only 17/6 is closer to 3.)',gapy=150))
 
 # ---------- stretch / challenge ----------
-st=[('1.','How many halves are there in 6 1/2?'),('2.','Which is closer to 1: 7/8 or 9/10? Explain.'),('3.','Ben has 48 marbles. 5/8 of them are green. How many marbles are NOT green?')]
-put('p4l4-stretch',sec('p4l4-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 13 (6 wholes = 12 halves, plus 1). 2) 9/10: it is only 1/10 short of 1, and 7/8 is 1/8 short; a tenth is a smaller piece than an eighth. 3) 18 (1 unit = 48 ÷ 8 = 6; green 5 units = 30; not green 3 units = 18).'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(4)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l4-stretch',sec('p4l4-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(4)))
 ch=[('1.','Half of a number is 3 more than a third of the number. What is the number?'),('2.','Siti read 2/5 of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?')]
-put('p4l4-challenge',sec('p4l4-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q6 and Q7. Answers: 1) 18 (half = 3 sixths, a third = 2 sixths, so 1 sixth = 3). 2) 150 pages (Monday 4 tenths, Tuesday 3 tenths, 3 tenths left = 45).'))
+put('p4l4-challenge',sec('p4l4-challenge','Early finishers / take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q6 and Q7. Answers: 1) 18 (half = 3 sixths, a third = 2 sixths, so 1 sixth = 3). 2) 150 pages (Monday 4 tenths, Tuesday 3 tenths, 3 tenths left = 45).'))
 g1=f'<rect x="40" y="70" width="680" height="80" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/><rect x="40" y="70" width="340" height="80" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+txt(210,122,'a half',34)
 g1+=f'<rect x="40" y="200" width="680" height="80" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/>'+''.join(f'<line x1="{40+680*k/3:.1f}" y1="200" x2="{40+680*k/3:.1f}" y2="280" stroke="{NAVY}" stroke-width="4"/>' for k in (1,2))+f'<rect x="40" y="200" width="226.7" height="80" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>'+txt(153,252,'a third',34)
 g1+=brace(40,720,66,True,28)+txt(380,28,'the number = ?',30,TEAL)
@@ -257,11 +259,11 @@ g2+=txt(176,200,'Monday',30,TEAL)+f'<line x1="516" y1="70" x2="516" y2="160" str
 g2+=brace(312,720,170,False,34)+txt(516,240,'the rest',30,NAVY)
 g2+=brace(312,516,280,False,30)+txt(414,345,'Tuesday: half',28,TEAL)+brace(516,720,280,False,30)+txt(618,345,'45 pages left',28,RED)
 g2+=txt(380,440,'Cut every fifth in half. What do you get?',28,MUTED,weight=600,font='Nunito Sans, Arial')
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: a half and a third</p>'+svgwrap(760,470,'Two bars of the same length: one with a half shaded, one with a third shaded; the gap between them is 3',g1).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Siti\'s book</p>'+svgwrap(760,470,'A bar in fifths: 2 fifths read on Monday; the rest is split in half: Tuesday and 45 pages left',g2).replace('width:760px;height:470px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l4-chdiag',sec('p4l4-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: In Q1, how could you cut both bars into the same size pieces? (sixths). In Q2, the rest is 3 fifths; how can we cut 3 fifths in half? (make tenths). Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: cut both bars into sixths',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: cut both bars into sixths',38,800,TEAL))
 for i,t in enumerate([f'A half = {fr(3,6,26)}.  A third = {fr(2,6,26)}.',f'The difference is {fr(1,6,26)}, and that is 3.',f'The number is {fr(6,6,26)}: 6 × 3 = 18.','Check: half of 18 is 9, a third is 6. 9 is 3 more ✓']): body+=pin(128,330+i*130,800,p(t,30,raw=True),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: cut each fifth in half',38,800,TEAL))
 for i,t in enumerate([f'Monday {fr(2,5,26)} = {fr(4,10,26)}. The rest is {fr(6,10,26)}.',f'Tuesday: half of the rest = {fr(3,10,26)}.',f'Left: {fr(3,10,26)} = 45 pages, so {fr(1,10,26)} = 15.','The book is 10 × 15 = 150 pages ✓']): body+=pin(992,330+i*130,800,p(t,30,raw=True),'rise',WHITE)

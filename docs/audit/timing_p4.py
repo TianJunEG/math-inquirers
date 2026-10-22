@@ -31,6 +31,7 @@ SCEN = {
     #            second talk question, 'any other way?' ask in sneak, pair-talk move total (s)
     'BEST':    dict(slide=20, move=60,  opt=False, asks=False, greet=1.5, talk2=False, other=False, pairmove=0),
     'TYPICAL': dict(slide=25, move=90,  opt=True,  asks=True,  greet=2.5, talk2=True,  other=True,  pairmove=60),
+    'LEAN':    dict(slide=25, move=90,  opt=False, asks=False, greet=2.5, talk2=True,  other=True,  pairmove=60),   # TYPICAL but skipping optional slides + note ASKs
     'SLOW':    dict(slide=30, move=120, opt=True,  asks=True,  greet=4.0, talk2=True,  other=True,  pairmove=120),
 }
 START_WS = 120                  # get started on the worksheet
@@ -173,6 +174,8 @@ def lesson_model(x, sl, sc, fix=False, over=None):
     n = x['lesson']['n']
     dk, sp, gp, rec = x['deck'], x['script'], x['gaps'], x['rec']
     B = bucket(sl)
+    if F and F.get('drop'):
+        for k in B: B[k] = [z for z in B[k] if z['id'] not in F['drop']]
     slide = S['slide']
     rows = []
     cue = lambda i: spk(nw(rec[i]))
@@ -267,7 +270,9 @@ def lesson_model(x, sl, sc, fix=False, over=None):
     rows.append(row('WS-d  Page 2 solo (priority items)', 18, d_))
     chk2 = B['chk2'][0]
     nq2 = len(re.findall(r'\bQ\d', chk2['t']))
-    e_ = dict(speak=spk(0.9 * chk2['words']), wait=nq2 * ASK + asks_sec(B['chk2'], 0 if F else None), act=0, trans=slide, rec=0)
+    n1_orig = len([i for i in ITEMS[n] if i[2] == 1]); moved = max(0, n1_orig - len(p1))     # page-1 items checked late
+    e_ = dict(speak=spk(0.9 * (chk2['words'] + moved * chk1['words'] / max(1, len(re.findall(r'\bQ\d', chk1['t']))))),
+              wait=(nq2 + moved) * ASK + asks_sec(B['chk2'], 0 if F else None), act=0, trans=slide * (1 + (1 if moved else 0)), rec=0)
     rows.append(row('WS-e  Check page 2', 4, e_))
 
     # 7 Talk
@@ -301,10 +306,26 @@ def lesson_model(x, sl, sc, fix=False, over=None):
     return rows, info
 
 
-FIX_OVER = {}      # per-lesson overrides of FIXPAR (see the report, section 6)
+P_, C_ = True, False
+def _mv(n, labels, new=None):
+    """items for lesson n with the given page-1 labels moved to the solo block (schedule change only)"""
+    out = []
+    for lab, m, pg, pr in ITEMS[n]:
+        if lab in labels: pg, pr = 2, True
+        if new and lab in new: m = new[lab]
+        out.append((lab, m, pg, pr))
+    return out
+FIX_OVER = {   # per-lesson overrides of FIXPAR (what each fix assumes; see the report, section 6)
+ 1: dict(mini_asks=2, teach_asks=2),
+ 2: dict(items=_mv(2, ['Q3']), mini_tries=0, mini_asks=2),
+ 3: dict(items=_mv(3, ['Q3']), drop=['teachchain'], mini_tries=0, mini_asks=2, teach_asks=2),
+ 6: dict(items=_mv(6, [], {'Q1': 4.5})),
+ 7: dict(items=_mv(7, ['Q3'], {'Q1': 4.0}), mini_tries=0),
+ 10: dict(items=[i for i in _mv(10, ['Q3']) if i[0] != 'Q1'] + [('Q1a', 3.0, 1, True)], explore_hands=6.0, cert_whole_group=True),
+}
 
 def ceil_half(v):
-    return math.ceil(v * 2 - 1e-9) / 2.0
+    return math.ceil(v * 2 - 0.3) / 2.0       # next half minute (a 0.15 min overshoot is tolerated)
 
 def fix_budget(x, sl, n):
     rows, info = lesson_model(x, sl, 'TYPICAL', fix=True, over=FIX_OVER.get(n))
@@ -394,11 +415,11 @@ def main():
         r = allres[n]; t = r['sc']['TYPICAL']['tot']
         print('| %d | %s | %d | %s | %s | %s | %s | %s | %s | %s |' % (n, r['title'], r['slides'], f1(r['sc']['BEST']['tot']['A']), f1(t['A']), f1(r['sc']['SLOW']['tot']['A']),
               f1(t['B']), f1(r['sc']['SLOW']['tot']['B']), f1(t['left']), 'does not fit' if t['spare'] < 0 else ('fits only by cutting worksheet to %s min' % f1(t['left']) if t['left'] < 40 else 'fits')))
-    print('\n### Workbook items finished (LOW/MID/HIGH child) with windows as scripted and squeezed by the typical overrun\n')
+    print('\n### Workbook items finished (LOW/MID/HIGH child) with windows as scripted, and squeezed by what the other parts really need (tutor skips the optional slides)\n')
     print('| L | Page-1 items | Page-1 window | LOW p1 | MID p1 | HIGH p1 | Page-2 window (scripted / squeezed) | LOW p2 prio+choice | MID | HIGH |')
     print('|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|')
     for n in sorted(allres):
-        r = allres[n]; info = r['info']; t = r['sc']['TYPICAL']['tot']
+        r = allres[n]; info = r['info']; t = r['sc']['LEAN']['tot']
         w1 = 16 - 2 - 3 - (0 if n != 6 else 2)
         w2s = 18 - 1.5
         w2q = max(0, w2s - max(0, 46 - t['left']))
@@ -410,6 +431,18 @@ def main():
             n, n1, info['p1_min'], w1, fmt('LOW', a), fmt('MID', a), fmt('HIGH', a), w2s, w2q,
             fm2('LOW', a), fm2('LOW', b), fm2('MID', a), fm2('MID', b), fm2('HIGH', a), fm2('HIGH', b)))
 
+    print('\n### Where the time goes (TYPICAL tutor, whole lesson, minutes) and effect of skipping optional items\n')
+    print('| L | Speak | Wait | Activity | Transition | REC | Total (worksheet at priority) | Lean script (skip optional + note ASKs) | Slide changes (n x 25 s) | Breakout moves (4 x 90 s + pair talk) |')
+    print('|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|')
+    tot = {k: 0 for k in ('speak', 'wait', 'act', 'trans', 'rec')}
+    for n in sorted(allres):
+        rows = allres[n]['sc']['TYPICAL']['rows']
+        c = {k: sum(r['c'][k] for r in rows) for k in tot}
+        for k in tot: tot[k] += c[k]
+        t = allres[n]['sc']['TYPICAL']['tot']; lean = allres[n]['sc']['LEAN']['tot']
+        print('| %d | %s | %s | %s | %s | %s | %s | %s | %d (%.1f min) | 7.0-7.5 |' % (n, f1(c['speak']), f1(c['wait']), f1(c['act']), f1(c['trans']), f1(c['rec']), f1(t['A']), f1(lean['A']), allres[n]['slides'] - 4, (allres[n]['slides'] - 4) * 25 / 60.0))
+    print('| mean | %s | %s | %s | %s | %s | | | | |' % tuple(f1(tot[k] / 10) for k in ('speak', 'wait', 'act', 'trans', 'rec')))
+
     print('\n### Proposed budgets after the fixes (TYPICAL tutor)\n')
     for n in sorted(allres):
         x = [z for z in data if z['lesson']['n'] == n][0]
@@ -417,12 +450,14 @@ def main():
         rows, rb, rs, nb, wb, ws_left, spare_d, info = fix_budget(x, sl, n)
         old = {r['part']: r['scripted'] for r in rows}
         print('\n**Lesson %d** worksheet window %.1f min (was 46), page-2 spare after priority items %.1f min' % (n, ws_left, spare_d))
-        print('| Part | Old | New budget | Need after fixes (best-typical-slow) |')
-        print('|---|--:|--:|--:|')
+        print('| Part | Old | New budget | New clock (min) | Need after fixes (best / typical / slow) |')
+        print('|---|--:|--:|--:|--:|')
+        clk = 0.0
         for i, r in enumerate(rows):
             bud = nb.get(r['part'], wb.get(r['part']))
-            print('| %s | %.1f | %.1f | %.1f - %.1f - %.1f |' % (r['part'], r['scripted'], bud, rb[i]['need'], r['need'], rs[i]['need']))
-        print('| Sum | 90.0 | %.1f | typical sum %.1f |' % (sum(nb.values()) + sum(wb.values()), sum(r['need'] for r in rows)))
+            print('| %s | %.1f | %.1f | %.1f-%.1f | %.1f / %.1f / %.1f |' % (r['part'], r['scripted'], bud, clk, clk + bud, rb[i]['need'], r['need'], rs[i]['need']))
+            clk += bud
+        print('| Sum | 90.0 | %.1f | | typical need %.1f; cushion %.1f |' % (sum(nb.values()) + sum(wb.values()), sum(r['need'] for r in rows), 90 - sum(r['need'] for r in rows)))
 
 if __name__ == '__main__':
     main()

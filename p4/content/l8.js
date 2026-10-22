@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 8: Symmetry and Nets
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 
@@ -205,7 +206,7 @@ module.exports = {
     W.push(H.sub('', '(a) ________      (b) ________      (c) ________      (d) ________'));
     W.push(H.q(6, 'Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each.', { keepNext: true }));
     W.push(H.fig(q6Svg()));
-    W.push(H.sub('', 'Start here: for each shaded square, find its mirror partner on the other side of the dashed line (fold the page or use a small mirror). Is the partner shaded? If not, shade it.', { keepNext: true }));
+    W.push(tip('for each shaded square, find its mirror partner on the other side of the dashed line (fold the page or use a small mirror). Is the partner shaded? If not, shade it.'));
     W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________'));
     W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?'));
     W.push(...H.lines(1));

@@ -230,20 +230,22 @@ put('p4l7-ws2ans',checks('p4l7-ws2ans','76–80 MIN','Page 2: check together',[(
  'Click after a child explains. Q4a: the across sides add up to the bottom (11 cm) and the down sides add up to the left (6 cm). Counting: 3 + 2 + 4 + 2 + 4 + 2 + 11 + 6 = 34. Q5: stack the two 4 by 2 halves. Q6c: Mei counted only the strips beside the photo.',gapy=170))
 
 # ---------- stretch / challenge ----------
-st=[('1.','A path 2 m wide goes all round a lawn 10 m by 6 m. Find the area of the path.'),('2.','Ali joins 8 square tiles (1 cm by 1 cm) edge to edge. What is the smallest perimeter? The largest?'),('3.','A rectangle has whole-cm sides, an area of 40 cm² and a perimeter of 26 cm. Find its length and breadth.')]
-put('p4l7-stretch',sec('p4l7-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 80 m²: the whole thing is 14 m by 10 m = 140 m², take away the lawn 60 m² (watch for 12 m by 8 m: the path is on both sides). 2) Smallest 12 cm (a 2 by 4 rectangle, or a 3 by 3 square with one corner missing); largest 18 cm (any shape without a 2 by 2 block, such as a row of 8). 3) 8 cm by 5 cm: list the pairs for 40 (1 by 40, 2 by 20, 4 by 10, 5 by 8); only 5 by 8 has perimeter 26.'))
+from p4bank import th_items, th_notes, gf_numbers  # slide Think harder = the printed page (docs/audit/reaudit_fixes_p4.md)
+st=th_items(7)
+def numgrid(items,size=30): return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch">'+''.join(card(p(f'<span style="color:{TEAL}">{a}</span>  {E(b)}',size,600,raw=True),extra='padding:24px 32px') for a,b in items)+'</div>'
+put('p4l7-stretch',sec('p4l7-stretch','Early finishers / take-home',h2('Think harder')+numgrid(st,30),th_notes(7)))
 ch=[('1.','A garden is 10 m long and 8 m wide. Two paths 1 m wide cross it: one along its length and one across its width. What area of the garden is NOT path?'),('2.','A rectangle 9 cm long and 4 cm wide is cut into 2 pieces. The pieces fit together exactly to make a square. How long is a side of the square? Did the perimeter go up or down?')]
-put('p4l7-challenge',sec('p4l7-challenge','Any time • take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q6 and Q7. Answers: 1) 63 m² (slide the paths to the edges: the grass is 9 m by 7 m). 2) 6 cm (the area is 36 cm² and 6 × 6 = 36); the perimeter went down from 26 cm to 24 cm.'))
+put('p4l7-challenge',sec('p4l7-challenge','Any time • take-home',h2('Go further')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q6 and Q7. Answers: 1) 63 m² (slide the paths to the edges: the grass is 9 m by 7 m). 2) 6 cm (the area is 36 cm² and 6 × 6 = 36); the perimeter went down from 26 cm to 24 cm.'))
 c=40
 X=2*c
 gq=grid(0,0,14,10,c)+RC(X,c,c,0,0,10,8,'#7CC08A')+RC(X,c,c,0,4,10,1,'#E8D9B5',NAVY,3)+RC(X,c,c,5,0,1,8,'#E8D9B5',NAVY,3)+T(X+5*c,c+8*c+34,'10 m',30)+T(X-8,c+2*c+10,'8 m',30,NAVY,'end')+T(X+7.5*c,c+4.5*c+11,'path 1 m',26)
 g2=grid(0,0,18,10,c)+RC(X,c,c,0,0,9,4)+f'<path d="M{X+3*c} {c} V{c+2*c} H{X+6*c} V{c+4*c}" stroke="{RED}" stroke-width="6" stroke-dasharray="12 8" fill="none"/>'+T(X+4.5*c,c+4*c+36,'9 cm',30)+T(X-8,c+2*c+10,'4 cm',30,NAVY,'end')
 g2+=RC(X,c,c,9.6,2.6,6,6,'none',TEAL,5,'14 10')+T(X+12.6*c,c+5.6*c+12,'square: ? cm',30,TEAL)
-body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
+body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Two paths cross the garden</p>'+SV(14*c,10*c,gq,'A 10 m by 8 m garden with a path 1 m wide along its length and another across its width').replace(f'style="width:{14*c}px;height:{10*c}px;flex:none"','style="width:100%;height:auto;display:block"'),extra='flex:1;min-width:0;padding:20px 24px')
 body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Two pieces make a square</p>'+SV(18*c,10*c,g2,'A 9 cm by 4 cm rectangle with a staircase cut line, and a dashed square of unknown side').replace(f'style="width:{18*c}px;height:{10*c}px;flex:none"','style="width:100%;height:auto;display:block"'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put('p4l7-chdiag',sec('p4l7-chdiag','Early finishers / take-home',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: Q1 "Would the grass area change if the paths were moved?" Q2 "What stays the same when we cut and move pieces? So what is the area of the square?" Answers are in the Challenge slide notes.'))
-body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: slide the paths to the edges',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: slide the paths to the edges',38,800,TEAL))
 for i,t in enumerate(['Moving the paths does not change the grass.','Grass: 10 − 1 = 9 m by 8 − 1 = 7 m','9 × 7 = 63 m²','Check: 80 − 10 − 8 + 1 = 63 ✓ (the crossing was counted twice)']): body+=pin(128,330+i*120,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: the area stays the same',38,800,TEAL))
 for i,t in enumerate(['Rectangle: 9 × 4 = 36 cm²','The square also has 36 cm². 6 × 6 = 36, so a side is 6 cm.','Perimeter: 9 + 4 + 9 + 4 = 26 cm, then 6 × 4 = 24 cm','It went DOWN by 2 cm: a square is the most squashed-up shape.']): body+=pin(992,330+i*120,800,p(t,32),'rise',WHITE)

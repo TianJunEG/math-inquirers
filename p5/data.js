@@ -3,6 +3,15 @@ const path = require('path');
 const C = [];
 for (let n = 1; n <= 10; n++) C.push(require(path.join(__dirname, 'content', 'l' + n + '.js')));
 const GAPS = require(path.join(__dirname, 'content', 'gaps.js'));
+// ---- where the page break really falls: the number of the last question printed on workbook page 1 (2 or 3) ----
+const HC = require(path.join(__dirname, '..', 'hp', 'common_html.js'));
+const HH = Object.assign({}, HC, { fig: x => '<div class="p img">' + x + '</div>' });
+const PAGE_ONE = C.map(c => { let k = 0, broke = false;
+  for (const el of c.workbook(HH)) { if (typeof el !== 'string') continue;
+    if (el.startsWith('<div class="brk">')) broke = true;
+    if (!broke && /class="p q( kn)?"/.test(el)) k++; }
+  return k; });
+const choiceQ = n => PAGE_ONE[n - 1];
 
 // ---- the one timeline used by decks, scripts, guide and workbook (minutes) ----
 const TIMELINE = [
@@ -11,7 +20,7 @@ const TIMELINE = [
   ['9–21', 'Explore', 'Hands-on in pairs. Objects first. A second what-if question is on the slide for anyone who wants more.'],
   ['21–33', 'Mini-lesson', 'Worked examples with click-to-reveal steps, and your-turn questions.'],
   ['33–37', 'Brain break', 'Stand, stretch, drink water.'],
-  ['37–49', 'Workbook page 1 (pairs)', 'Start here. After question 3 you may choose: carry on, or try Think harder.'],
+  ['37–49', 'Workbook page 1 (pairs)', 'Start here. At the end of page 1 you may choose: carry on, or try Think harder.'],
   ['49–53', 'Check page 1 together', 'Four minutes, so every part can be explained.'],
   ['53–58', 'Short teaching before page 2', 'One or two worked examples for the page 2 question types.'],
   ['58–72', 'Workbook page 2 (alone)', 'A menu, not a wall: start with the questions named at the top, then choose. Nobody has to finish.'],
@@ -26,24 +35,27 @@ const praise = n => GAPS[n].praise;
 const scriptCheck = n => [
   'Minutes 0 to 3. SNEAK-PEEK PUZZLES. Show the two puzzles one at a time. Say: "These are ideas we have not learnt yet. Guessing is welcome and so is \'I do not know\'. Nobody is marked." Puzzle 1 is one that any child can try with objects, drawing or counting, so everybody can start well. Puzzle 2 is a thinking puzzle.',
   'Answers are shown PRIVATELY, never on boards in front of the group. Face to face: children write on their own paper and show it only to you as you walk round. Online: everyone holds their paper up to the camera at the same moment, or shows it to you only, on camera. Do not read answers out with names, do not keep a tally, do not rank. Then ask for VOLUNTEERS to say how they thought (put a hand up or use a reaction); never choose a child because you saw a wrong answer. Never record scores.',
-  'Choosing a start: every child has the same neutral line on workbook page 1: "After question 3 you may choose: carry on, or try Think harder." Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Never single out a child by name and never announce who is on which page. Pairs are not split unless BOTH children agree. Any child may swap at any time.'
+  'Choosing a start: every child has the same neutral line on workbook page 1: "After question ' + choiceQ(n) + ' you may choose: carry on, or try Think harder." (The number is the last question on page 1 of this lesson.) Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Never single out a child by name and never announce who is on which page. Pairs are not split unless BOTH children agree. Any child may swap at any time.'
 ];
 const scriptReflect = n => [
   'Minutes 86 to 88. REFLECTION, 2 minutes, never skipped. Show the exit slip and reflection slide. Children fill in the small box at the bottom of the Investigation and reflection page: "Something I did well", "The hardest part was...", and "What helped me" with tick boxes that include "I asked for help" and "I am still stuck (my tutor will check in with me)". Say: "Pass is always OK. You can write one word, tick a box, or write pass."',
   'It is never collected or shown in public. You may read it privately afterwards to plan the next lesson and to check in with any child who ticked "I am still stuck", in the open session (a quick visit to the shared breakout room or a hand signal, with a parent nearby, never a private message). Never read a child\'s reflection aloud; only a child who volunteers may share. Praise strategy, not speed: "' + praise(n) + '"' + (n === 10 ? ' This is the last lesson, so a volunteer may say what they would tell a friend starting the program.' : '')
 ];
 const scriptTalk = [
+  'Protected think time: before anyone speaks, everyone thinks silently for 30 seconds (show the clock). Then pairs talk. This applies to the explore, to the Investigation first step and to any make-up-your-own prompt.',
   'Talk-time rules: say "You may say pass." Ask for VOLUNTEERS first, then invite others only if they want to. No cold-calling by name, no public tallies or rankings, and no "who got it right?" hands.'
 ];
 C.forEach(c => { const n = c.lesson.n, g = GAPS[n];
   c.deck.check = g.sneak; c.deck.whatIf = g.whatIf; c.deck.checkPic = g.pic || null;
-  c.script.check = scriptCheck(n); c.script.reflect = scriptReflect(n); c.script.talkRules = scriptTalk;
-  c.lesson.solo = g.solo; c.investigation = g.inv; });
+  c.script.check = scriptCheck(n);
+  c.script.predict = (c.script.predict || []).concat(['Think for 30 seconds before anyone speaks, and before you touch the objects. Silent thinking. I will show the clock. Then talk with your partner.']); c.script.reflect = scriptReflect(n); c.script.talkRules = scriptTalk;
+  c.lesson.solo = g.solo; c.lesson.pose = g.pose; c.investigation = g.inv; });
 module.exports = {
   program: 'Math Inquirers Holiday Program',
   level: 'Primary 5',
   slogan: 'Notice it. Test it. Explain why.',
   timeline: TIMELINE,
+  pageOne: PAGE_ONE, choiceQ,
   content: C,
   lessons: C.map(c => c.lesson),                                      // like hp/lessons.js .lessons
   scripts: Object.fromEntries(C.map(c => [c.lesson.n, c.script])),     // like hp/scripts.js

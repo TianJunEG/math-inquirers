@@ -184,7 +184,7 @@ module.exports = {
     H.sub('c', 'Use your pattern:   10 000 − 4127  =  ________'),
     H.q(6, '(if time) Letter puzzle:  AB + AB + AB = CAB.  Each letter stands for a digit. Different letters are different digits.', { before: 80, keepNext: true }),
     H.sub('a', 'A = ______   B = ______   C = ______'),
-    H.sub('b', 'Each letter is a digit (same letter, same digit). This is a code puzzle. Try AB = 40: 40 + 40 + 40 = 120. Does 120 end in 40? No. Try other 2-digit numbers (10, 20, 30 …) until the answer ends in the number you started with. How do you know you are right?'),
+    H.sub('b', 'Same letter, same digit: a code puzzle. Try AB = 40: 40 + 40 + 40 = 120, which does not end in 40. Try 10, 20, 30 … until the answer ends in the number you started with.'),
     ...H.lines(1)
   ]
 };

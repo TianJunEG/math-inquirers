@@ -129,7 +129,7 @@ module.exports = {
       { q: 'The minute hand points to 7. How many minutes past the hour is it?', a: '35 minutes (count in 5s: 5, 10, 15, 20, 25, 30, 35)' }
     ],
     stretch: [
-      { q: 'Ben cuts a 20 m rope into 4 equal pieces. How long is each piece? How many cuts does he make?', a: '5 m each (5 + 5 + 5 + 5 = 20). 3 cuts: the last piece needs no cut.' },
+      { q: '2 apples and 1 lemon balance 1 pomelo. 1 pomelo balances 5 lemons. How many lemons balance 1 apple? How many lemons balance 1 pomelo and 1 apple together?', a: '1 apple balances 2 lemons. Swap the pomelo for 5 lemons: 2 apples and 1 lemon balance 5 lemons. Take 1 lemon off both sides: 2 apples balance 4 lemons, so 1 apple balances 2 lemons. A pomelo and an apple balance 5 + 2 = 7 lemons.' },
       { q: 'Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 12:10 pm. How long is the trip?', a: '1 hour 25 minutes (10:45 to 11:00 is 15 minutes, 11:00 to 12:00 is 1 hour, 12:00 to 12:10 is 10 minutes).' },
       { q: '3 apples balance 1 pomelo. The pomelo and 2 apples together balance a 500 g weight. How heavy is one apple? How heavy is the pomelo?', a: 'Apple 100 g, pomelo 300 g (5 apples balance 500 g).' },
       { q: 'You have a 2 ℓ jug and a 7 ℓ jug with no marks. How can you get exactly 3 ℓ? List each pour.', a: 'Fill 7, pour into 2, empty 2, pour again: 3 ℓ is left in the 7 ℓ jug.' },

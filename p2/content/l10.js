@@ -74,7 +74,7 @@ module.exports = {
   deck: {
     today: 'Learn three ways to start a puzzle, then use them on mixed challenges.',
     warmGame: 'Relay review. Six cards, one from each earlier topic: digit cards, missing digits, legs, patterns, change and fractions. A volunteer answers, then chooses a friend who has not had a turn (pass is always fine).',
-    warmQs: [['Share 40 stickers equally among 5 children. How many each?', '8'], ['It is 10:55 am. What time is it 10 minutes later?', '11:05 am'], ['Which is bigger: 1/3 or 1/5 of the same cake?', '1/3'], ['Half of a circle is called a …', 'Semicircle'], ['I think of a number and add 30. I get 100. What is my number?', '70']],
+    warmQs: [['Share 40 stickers equally among 5 children. How many each?', '8'], ['It is 10:55 am. What time is it 10 minutes later?', '11:05 am'], ['Which is bigger: 1/3 or 1/5 of the same cake?', '1/3'], ['Half of a circle is called a …', 'Half circle'], ['I think of a number and add 30. I get 100. What is my number?', '70']],
     expSetup: ['Your pair gets one station card: a picture graph, a logic grid, a coin puzzle or a fraction strip.', 'Read the card aloud. Before you solve it, write how you will start: draw, list or table.', 'Solve it and check it (3 minutes). Then swap cards with another pair.', 'Be ready to explain how you started and how you know.'],
     expPic: 'four puzzle cards on a table: a picture graph with a key, a 3 by 3 logic grid, play coins and a paper strip folded into equal parts.',
     stationCards: [["Card 1: picture graph", "Each picture stands for 5 books. Monday has 3 pictures, Tuesday 5 pictures, Wednesday 2 pictures. How many books were read on these 3 days?", "50 books (10 pictures × 5)"], ["Card 2: logic grid", "Ali, Ben and Cai each have one pet: a cat, a dog or a fish. Ben has the fish. Ali does not have the dog. Who has the cat?", "Ali has the cat (Ben has the fish, so Ali and Cai share the cat and the dog; Ali does not have the dog, so Ali has the cat and Cai has the dog)"], ["Card 3: coin puzzle", "Make 70¢ with exactly 4 coins. You can use 5¢, 10¢, 20¢ and 50¢ coins. Find all the ways.", "2 ways: 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢"], ["Card 4: fraction strip", "A strip is cut into 8 equal parts. 3 parts are red and 2 parts are blue. What fraction is NOT coloured?", "3/8"]],
@@ -82,7 +82,7 @@ module.exports = {
     mini1: { head: 'Draw it: a before-and-after story', body: ['Mei had some stickers. She gave half of them to Ben.', 'Then she gave 6 to Siti. Now she has 4 left.', 'How many stickers did she have at first?'], ans: '20. The half she kept is 6 + 4 = 10, so she had 10 + 10 = 20. Check: 20 → 10 → 4.' },
     mini2: { head: 'Make a table: heads and legs', body: ['A farm has chickens and goats.', 'There are 7 heads and 20 legs.', 'How many goats are there?'], ans: '3 goats and 4 chickens. Table: 0 goats 14 legs, 1 goat 16, 2 goats 18, 3 goats 20 ✓. Check: 12 + 8 = 20.' },
     keyHead: 'Key idea: how to start a puzzle', keyBig: 'Stuck? Draw it, list it in order, or make a table.', keySmall: 'Then check your answer against every clue and explain why.',
-    brk: 'Freeze with maths. Dance until the music stops, then make the shape the tutor calls with your arms: a semicircle, a quarter circle, a cone, a cuboid.',
+    brk: 'Freeze with maths. Dance until the music stops, then make the shape the tutor calls with your arms: a half circle, a quarter circle, a cone, a cuboid.',
     ws1: 'Page 1, in pairs: Q1 picture graph, Q2 digit cards, Q3 coins in a table.',
     ws2: 'Page 2, on your own: Q4 logic grid, Q5 cake fractions, Q6 towers of cubes.'
   },
@@ -98,9 +98,9 @@ module.exports = {
     ],
     stretch: [
       { q: '30 children chose a fruit. In the picture graph each picture stands for 5 children. Apple has 2 pictures and banana has 3 pictures. The mango row is missing. How many pictures should the mango row have?', a: '1 picture (30 − 10 − 15 = 5 children)' },
-      { q: 'How many 3-digit numbers have digits that add up to 3? List them all.', a: '6: 102, 111, 120, 201, 210, 300' },
+      { q: 'Mei saves $3 on day 1, $6 on day 2, $9 on day 3, and so on ($3 more each day). Ali saves $10 every day. Make a table of how much each child has saved altogether after each day. On which day does Mei FIRST have more than Ali?', a: 'Day 6. Mei’s totals: $3, $9, $18, $30, $45, $63. Ali’s totals: $10, $20, $30, $40, $50, $60. On day 6 Mei has $63 and Ali has $60. (On day 5 Mei still has less: $45 and $50.)' },
       { q: 'A bus had some people on it. At the first stop half of the people got off. At the second stop 6 people got on. Now there are 14 people on the bus. How many people were on the bus at the start? Draw a bar to start.', a: '16 (14 − 6 = 8 is half, 8 + 8 = 16).' },
-      { q: '5, 9, 13, 17, … What is the 10th number in this pattern?', a: '41 (add 4: 21, 25, 29, 33, 37, 41)' },
+      { q: '5, 9, 13, 17, … Will 49 be in this pattern? Will 50? How do you know?', a: '49 will be in the pattern and 50 will not. The pattern adds 4 each time, so every number in it is 1 more than a number in the 4 times table: 5 = 4 + 1, 9 = 8 + 1, 13 = 12 + 1. 49 = 48 + 1, but 50 is 2 more than 48.' },
       { q: 'A farm has chickens and cows. There are 8 heads and 22 legs. How many cows are there?', a: '3 cows and 5 chickens (12 + 10 = 22)' },
       { q: 'Mei spent half of her money on a book. Then she spent $4 on a pen. She has $6 left. How much money did she have at first?', a: '$20 (the half she kept is $4 + $6 = $10)' },
       { q: 'Ali, Ben and Siti each chose a different colour: red, blue or green. Ali did not choose red. Siti chose blue. Who chose green?', a: 'Ali (Siti has blue, Ali is not red, so Ali is green and Ben is red)' },

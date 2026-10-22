@@ -52,11 +52,11 @@ module.exports = {
     extension: 'Use the digit cards 0 to 9, each at most once, to make the 7-digit number closest to 5 000 000. (5 012 346 is 12 346 away and 4 987 653 is 12 347 away, so 5 012 346 wins by 1.)',
     key: [
       ['Q1', '(a) 5 308 040  (b) 400 000; 8  (c) 3250'],
-      ['Q2', '(a) 9 865 320  (b) 2 035 698  (c) Just below: 5 986 320 (13 680 away). Just above: 6 023 589 (23 589 away). Closest: 5 986 320.'],
-      ['Q3', '7 253 609. Rounding gives 7 2 with ten thousands digit 5 or more, or 7 3 with ten thousands digit 4 or less. "3 more" only works for 7 25: 2 + 3 = 5. Then thousands 5 − 2 = 3, hundreds 6, tens 0, and 7 + 2 + 5 + 3 + 6 + 0 = 23, so the ones digit is 32 − 23 = 9.'],
+      ['Q2', '(a) 9 865 320  (b) 2 035 698'],
+      ['Q3', '(a) 7 2 5 … and 7 3 6 …  (b) 7 3 is wrong: Clue 4 gives 6 − 3 = 3, so the digit 3 would be used twice  (c) 7 253 609. Rounding gives 7 2 with ten thousands digit 5 or more, or 7 3 with ten thousands digit 4 or less. "3 more" only works for 7 25: 2 + 3 = 5. Then thousands 5 − 2 = 3, hundreds 6, tens 0, and 7 + 2 + 5 + 3 + 6 + 0 = 23, so the ones digit is 32 − 23 = 9.'],
       ['Q4', '(a) about 100 000: could be right  (b) about 60 000: must be wrong  (c) about 6 300 000: must be wrong  (d) about 320 000: could be right'],
       ['Q5', '(a) (6 + 4) × 5 − 2 = 48  (b) 6 + 4 × (5 − 2) = 18  (c) 1 000 000 ÷ (200 + 300) × 2 = 4000  (d) 5 × (3 × 9 − 7) = 100'],
-      ['Q6', '(a) 2 499 500 and 2 500 499  (b) 2 500 002, 2 500 011, 2 500 020, 2 500 101, 2 500 110, 2 500 200: 6 numbers. None below 2 500 000: 2 499 5__ already has digits adding to at least 29.']
+      ['Q6', '(a) Circle 2 499 500, 2 500 000 and 2 500 499 (2 499 499 rounds to 2 499 000 and 2 500 500 rounds to 2 501 000)  (b) 2 499 500 and 2 500 499']
     ]
   },
 
@@ -106,12 +106,13 @@ module.exports = {
     stretch: [
       { q: 'How many 7-digit numbers have digits that add up to 2? List them all.', a: '7 numbers: 1 000 001, 1 000 010, 1 000 100, 1 001 000, 1 010 000, 1 100 000 and 2 000 000.' },
       { q: 'Put ONE pair of brackets into 2 + 3 × 4 + 5 to make 25. Then put one pair in a different place to make 29.', a: '(2 + 3) × 4 + 5 = 25 and 2 + 3 × (4 + 5) = 29. (29 is the biggest you can make with one pair.)' },
+      { q: 'A 7-digit number rounded to the nearest thousand is 2 500 000. Its digits add up to 9. Write the range first (the smallest and the greatest number that round to 2 500 000). Then find ALL the numbers that fit. How do you know you have them all?', a: 'Range: 2 499 500 to 2 500 499. Six numbers: 2 500 002, 2 500 011, 2 500 020, 2 500 101, 2 500 110, 2 500 200. None below 2 500 000: 2 499 5__ already has digits adding to at least 29.' },
+      { q: 'Use the seven digit cards 1, 2, 5, 6, 7, 8, 9 once each to make the 7-digit number closest to 7 000 000. Test both sides of the target.', a: '6 987 521 (12 479 below 7 000 000). The best number above is 7 125 689, which is 125 689 away.' },
       { q: 'A whole number rounded to the nearest thousand is 640 000. What is the greatest it could be? The smallest?', a: 'Greatest 640 499, smallest 639 500.' },
       { q: 'Use each of the digits 1, 2, 3, 4, 5, 6 and 7 once. What is the difference between the greatest and the smallest 7-digit number you can make?', a: '6 419 754 (7 654 321 − 1 234 567).' },
       { q: 'Which is the best estimate of 4108 × 29: 12 000, 120 000 or 1 200 000? Explain.', a: '120 000, because 4000 × 30 = 120 000. (Exactly 119 132.)' },
       { q: 'Use 2, 3, 5 and 7 once each, with +, −, ×, ÷ and brackets, to make 29, then 31, then 100.', a: '29 = 5 × 7 − 2 × 3;  31 = 2 × 5 + 3 × 7;  100 = 2 × 5 × (3 + 7). Other ways are possible.' },
-      { q: 'Use four 4s with +, −, ×, ÷ and brackets to make 3, then 5, then 7.', a: '(4 + 4 + 4) ÷ 4 = 3;  (4 × 4 + 4) ÷ 4 = 5;  4 + 4 − 4 ÷ 4 = 7. Other ways are possible.' },
-      { q: 'Use the seven digit cards 1, 2, 5, 6, 7, 8, 9 once each to make the 7-digit number closest to 7 000 000. Test both sides of the target.', a: '6 987 521 (12 479 below 7 000 000). The best number above is 7 125 689, which is 125 689 away.' }
+      { q: 'Use four 4s with +, −, ×, ÷ and brackets to make 3, then 5, then 7.', a: '(4 + 4 + 4) ÷ 4 = 3;  (4 × 4 + 4) ÷ 4 = 5;  4 + 4 − 4 ÷ 4 = 7. Other ways are possible.' }
     ],
     challenge: [
       { q: 'Make up your own digit riddle for a 7-digit number. Use at least 5 clues (for example: all digits different, a rounding clue, a clue that compares two digits, a digit sum). Only ONE number may fit. Swap with a partner: do you get the same answer? How can you be sure your riddle has only one answer?', a: 'Open-ended. Check the riddle by listing every number that fits the rounding clue first. Sample riddle with exactly one answer (checked on a computer over all 7-digit numbers): all digits different; rounds to 5 400 000 to the nearest hundred thousand; the ten thousands digit is 1 less than the hundred thousands digit; the thousands digit is the sum of those two digits; the tens digit is 0 and the hundreds digit is even; the digits add up to 30. Answer: 5 437 209.' },
@@ -138,9 +139,6 @@ module.exports = {
     W.push(H.q(2, 'Use ALL seven digit cards, each once, to make a 7-digit number (it cannot start with 0).', { keepNext: true }));
     W.push(H.fig(cardsSvg([0, 2, 3, 5, 6, 8, 9], 'Digit cards 0, 2, 3, 5, 6, 8 and 9')));
     W.push(H.sub('a', 'Greatest:  ____________      (b)  Smallest EVEN:  ____________'));
-    W.push(H.sub('c', 'Closest to 6 000 000:  ______________   Test both sides of the target!', { keepNext: true }));
-    W.push(H.sub(' ', 'Best just below:  ______________   It is  __________  away.'));
-    W.push(H.sub(' ', 'Best just above:  ______________   It is  __________  away.'));
     // Q3 riddle
     W.push(H.q(3, 'Digit riddle. Use the clues one at a time. Then check every clue.', { keepNext: true }));
     { const clues = ['I am a 7-digit number. My digits are all different.',
@@ -148,13 +146,14 @@ module.exports = {
       'My ten thousands digit is 3 more than my hundred thousands digit.',
       'My thousands digit = my ten thousands digit − my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
-      'My digits add up to 32.',
-      'START HERE: Clue 2 means I start 7 2 … or 7 3 …  Try both with Clue 3. Which start fits?'];
-      W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => i < 6 ? `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}` : `<b style="color:${TEAL}">${esc(c)}</b>`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
+      'My digits add up to 32.'];
+      W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
         H.row(ws.map(w => H.cell('', w, { h: 80 })))])); }
-    W.push(H.sub(' ', 'I am  ______________________'));
+    W.push(H.sub('a', 'Clue 2: I start 7 2 … or 7 3 … Clue 3 gives the next digit.  Try both:  7 2 ____ …   and   7 3 ____ …'));
+    W.push(H.sub('b', 'Clue 4 gives the next digit after that. Now check Clue 1 (all different). Which start breaks it?   7 ___ is wrong.'));
+    W.push(H.sub('c', 'Use Clues 5 and 6 to finish.   I am  ______________________'));
 
     // ---- page 2 ----
     W.push(H.q(4, 'Ravi used a calculator. Estimate each answer by rounding. Which answers must be wrong?', { pb: true, before: 0, keepNext: true }));
@@ -167,15 +166,13 @@ module.exports = {
     W.push(H.sub('a', '6  +  4  ×  5  −  2  =  48'));
     W.push(H.sub('b', '6  +  4  ×  5  −  2  =  18'));
     W.push(H.sub('c', '1 000 000  ÷  200  +  300  ×  2  =  4000'));
-    W.push(H.sub('d', 'Target 100! Use 3, 5, 7 and 9 once each, with any of +, −, ×, ÷ and brackets, to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
+    W.push(H.sub('d', '(try this one if you like) Target 100! Use 3, 5, 7 and 9 once each, with any of +, −, ×, ÷ and brackets, to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
     W.push(...H.lines(1));
     // Q6 find all
-    W.push(H.q(6, 'A 7-digit number rounded to the nearest thousand is 2 500 000. Its digits add up to 9.', { keepNext: true }));
+    W.push(H.q(6, 'A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?', { keepNext: true }));
     W.push(H.fig(roundLine()));
-    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b> numbers from 2 500 000 up begin 2 5 0 …  Those three digits add to 7, so the last four digits must add to ____. Try 2 500 002 first.'], { after: 20 }));
-    W.push(H.sub('a', 'Write the range first. The smallest number that rounds to 2 500 000 is ____________ and the greatest is ____________.'));
-    W.push(H.sub('b', 'Find ALL the numbers. Make a list in order. How do you know you have them all?', { after: 40 }));
-    W.push(...H.lines(3));
+    W.push(H.sub('a', 'Circle each one that rounds to 2 500 000:      2 499 499      2 499 500      2 500 000      2 500 499      2 500 500'));
+    W.push(H.sub('b', 'The smallest number that rounds to 2 500 000 is ____________ and the greatest is ____________.', { after: 40 }));
     return W;
   }
 };

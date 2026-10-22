@@ -234,10 +234,11 @@ put(P+'ws2ans',checks(P+'ws2ans','72–76 MIN','Page 2: check together',[('Q4','
  'Click after a child explains. Q4: size 1: 3 rows × 4 = 12; size 2: 2 rows × 3 positions = 6; size 3: 1 row × 2 positions = 2; total 20; no size 4 because the grid is only 3 rows tall. Q5: Ali did it: Ali lies (Ben did not), Ben lies (it was not Mei), Mei is true: 2 liars. Mei did it: Ali lies, Ben is true, Mei lies: 2 liars. Ben did it: Ali true, Ben lies, Mei true: 1 liar. So Ben. Q6: table: after 7 years Mum 48 and Mei 16. Or gap 32: Mei would be 16 (2 × 16 = 32), that is 7 years from now.',gapy=190))
 
 # stretch
-st=[('1.','Ben has 14 coins, all 50¢ and 20¢ coins, worth $4.90. How many of each?'),('2.','What is the smallest whole number bigger than 1 that leaves a remainder of 1 when divided by 2, by 3, by 4, by 5 and by 6?'),('3.','1/2 of a number is 5 more than 1/3 of the same number. What is the number?')]
-put(P+'stretch',sec(P+'stretch','37–72 MIN  •  OPTION',h2('Think harder')+numcards(st,36),'Answers: 1) 7 fifty-cent coins and 7 twenty-cent coins (suppose all 14 are 20¢: $2.80; $2.10 short; each swap adds 30¢; 210 ÷ 30 = 7; check 350 + 140 = 490). 2) 61 (1 more than the smallest number that 2, 3, 4, 5 and 6 all divide into: 60). 3) 30 (a half minus a third is 1/6 of the number, and that is 5; check 15 and 10).'))
-ch=[('1.','A monkey eats half of the rambutans in a pile and 1 more, every day for 3 days. After the third day there are none left. How many were in the pile at the start?'),('2.','Ali, Ben, Mei and Siti sit in a row of 4 chairs. Mei is not on either end. Ben does not sit next to Mei. Siti sits somewhere to the left of Ali. Ben is not on the left end. In what order do they sit, from left to right?')]
-put(P+'challenge',sec(P+'challenge','37–72 MIN  •  OPTION',h2('Go further')+numcards(ch,32),'Pairs try first, then the "see it" slide, then the walk-through. The chairs puzzle (2) is Go further Q7; the rambutan puzzle (1) is in the question bank only. Answers: 1) 14 rambutans. 2) Siti, Mei, Ali, Ben.'))
+import p5_printed as _PP
+for _k,_v in _PP.slides(10,'A').items(): S[f'p5l10-{_k}']=_v
+ch=[('E1.', 'A monkey eats half of the rambutans in a pile and 1 more, every day for 3 days. After the third day there are none left. How many were in the pile at the start?')]
+for _k,_v in _PP.slides(10,'B').items(): S[f'p5l10-{_k}']=_v
+put(P+'challenge',sec(P+'challenge','37–72 MIN  •  OPTION',h2('More Go further puzzles (extra, not in your workbook)')+numcards(ch,32),'Pairs try first, then the "see it" slide, then the walk-through. The chairs puzzle (2) is Go further Q7; the rambutan puzzle (1) is in the question bank only. Answers: 1) 14 rambutans. 2) Siti, Mei, Ali, Ben.'))
 # chdiag
 g1=''
 for i,lab in enumerate(['Start','After day 1','After day 2','After day 3']):
@@ -251,14 +252,14 @@ g2+=txt(310,40,'4 chairs, left to right',26,TEAL,font='Nunito Sans, Arial')
 for i,t in enumerate(['Mei: not on either end','Ben: not next to Mei','Siti: somewhere left of Ali','Ben: not on the left end']):
     g2+=txt(20,215+i*34,t,26,NAVY,'start',700,'Nunito Sans, Arial')
 body=h2('Go further: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q1: Three days of eating</p>'+svgwrap(760,260,'Four boxes: the pile at the start, after day 1, after day 2 and after day 3, which is zero',g1).replace('width:760px;height:260px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
-body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">Q2: Four chairs and four clues</p>'+svgwrap(760,370,'Four numbered chairs and the four clues about where Ali, Ben, Mei and Siti sit',g2).replace('width:760px;height:370px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">E1: Three days of eating</p>'+svgwrap(760,260,'Four boxes: the pile at the start, after day 1, after day 2 and after day 3, which is zero',g1).replace('width:760px;height:260px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')
+body+=card(f'<p style="font-size:30px;font-weight:700;color:{TEAL}">B3: Four chairs and four clues</p>'+svgwrap(760,370,'Four numbered chairs and the four clues about where Ali, Ben, Mei and Siti sit',g2).replace('width:760px;height:370px;flex:none','width:100%;height:auto;display:block'),extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
 put(P+'chdiag',sec(P+'chdiag','37–72 MIN  •  OPTION',body,'Show after pairs have tried Go further, or if they are stuck. The pictures show the problem, not the answers. Ask: What do you know for sure about the pile at the end? Which chair can Mei be in? Answers are in the Go further slide notes.'))
-body=h2('Go further: walk-through')+pin(128,250,800,p('Q1: work backwards from 0',38,800,TEAL))
+body=h2('Go further: walk-through')+pin(128,250,800,p('E1: work backwards from 0',38,800,TEAL))
 for i,t in enumerate(['After day 3: 0. Eating half and 1 more leaves half minus 1: so half of the pile was 1, the pile was 2.','Before day 2: half minus 1 = 2, so half = 3 and the pile was 6.','Before day 1: half minus 1 = 6, so half = 7 and the pile was 14.','Check forwards: 14 → 6 → 2 → 0 ✓']): body+=pin(128,330+i*135,800,p(t,28),'rise',WHITE)
-body+=pin(992,250,800,p('Q2: where can Mei sit?',38,800,TEAL))
+body+=pin(992,250,800,p('B3: where can Mei sit?',38,800,TEAL))
 for i,t in enumerate(['Mei is in chair 2 or chair 3.','If Mei is in chair 3, only chair 1 is not next to her: Ben, but he is not on the left end. So not this one.','So Mei is in chair 2, and Ben must be in chair 4.','Siti is left of Ali: Siti 1, Ali 3. Order: Siti, Mei, Ali, Ben ✓']): body+=pin(992,330+i*135,800,p(t,28),'rise',WHITE)
-put(P+'chwalk',sec(P+'chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. Q1: eating half and 1 more means the pile after the day is half the pile minus 1. After day 3 it is 0, so the pile before was 2 (half is 1, 1 more is 2 eaten). Then 6, then 14. Check: 14: eats 7 + 1 = 8, 6 left; eats 3 + 1 = 4, 2 left; eats 1 + 1 = 2, 0 left. Q2: Mei is in chair 2 or 3 (not an end). Chair 3 leaves only chair 1 free from her side, so Ben would be at the left end, which the last clue forbids. So Mei is in chair 2 and Ben in chair 4. Siti and Ali take chairs 1 and 3, with Siti on the left.'))
+put(P+'chwalk',sec(P+'chwalk','37–72 MIN  •  OPTION',body,'Use after pairs have tried. E1: eating half and 1 more means the pile after the day is half the pile minus 1. After day 3 it is 0, so the pile before was 2 (half is 1, 1 more is 2 eaten). Then 6, then 14. Check: 14: eats 7 + 1 = 8, 6 left; eats 3 + 1 = 4, 2 left; eats 1 + 1 = 2, 0 left. B3: Mei is in chair 2 or 3 (not an end). Chair 3 leaves only chair 1 free from her side, so Ben would be at the left end, which the last clue forbids. So Mei is in chair 2 and Ben in chair 4. Siti and Ali take chairs 1 and 3, with Siti on the left.'))
 
 # talk / exit / end
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Pick one puzzle and teach it to the group in two sentences: how did you start, and how do you know you are right?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
@@ -271,6 +272,7 @@ put('end',(f'<section id="end" data-transition="fade" style="background:{NAVY};c
  f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','we3','key','break','ws1','ws1ans','teachsq','teachliar','teachage','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
+order=_PP.fix_order(order,10,S)
 write_deck(10,'Math Inquirers P5: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: how to choose a start','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':P+'stretch'}},D)
 
 import p5_gaps; p5_gaps.apply(10)

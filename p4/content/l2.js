@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 2: Big Number Puzzles (Numbers to 100 000)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -132,10 +133,10 @@ module.exports = {
     W.push(H.q(2, 'Work backwards.', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
-    W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________', { keepNext: true }));
+    W.push(tip('63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________'));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
     W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.', { keepNext: true }));
-    W.push(H.sub('', 'Start here: 5345 is halfway between 5340 and 5350. Does 5345 round up or down? What about 5344?  ____________', { keepNext: true }));
+    W.push(tip('5345 is halfway between 5340 and 5350. Does 5345 round up or down? What about 5344?  ____________'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));
     W.push(H.sub('a', 'Round 4982 to the nearest thousand and estimate the total.   Estimate:  ____________'));
@@ -148,7 +149,7 @@ module.exports = {
     W.push(H.sub('', 'Hint: the numbers that round to 48 000 are from 47 500 to 48 499. Which of them have 6 in the hundreds place?', { keepNext: true }));
     W.push(H.ans('I am:'));
     W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.', { keepNext: true }));
-    W.push(H.sub('', 'Start here: the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.', { keepNext: true }));
+    W.push(tip('the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.'));
     W.push(...H.lines(2));
     W.push(H.ans('How many numbers?'));
     W.push(H.q(5, 'Find the rule. Write the next numbers.', { keepNext: true }));

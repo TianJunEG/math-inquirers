@@ -1,6 +1,7 @@
 // Math Inquirers P4 Holiday Program — Lesson 10: Challenge Day (mixed heuristics)
 // Every answer below was worked out and checked with a script; each logic puzzle was checked by trying every
 // arrangement, and has exactly one answer. "Find all" questions list every case.
+const tip = require('../tip.js');
 module.exports = {
   lesson: {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed heuristics',
@@ -134,7 +135,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('b', '20 people are in a queue. Ben is 6th from the front. What is his place from the back?   ________'));
     W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? Draw bars.', { keepNext: true }));
-    W.push(H.sub('', 'Start here: try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.', { keepNext: true }));
+    W.push(tip('try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.'));
     W.push(...H.lines(3));
     W.push(H.ans());
     return W;

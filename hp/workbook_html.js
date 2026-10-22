@@ -20,13 +20,13 @@ const esc2 = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const choice = () => `<div class="p" style="border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15.5px;line-height:1.3;margin:2px 0 8px">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div>`;
 const fast = choice;
 const refl = (n) => { const h = GAPS[String(n)].hard;
-  const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:210px">${lab}</b>${inner}</div>`;
+  const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:170px">${lab}</b><span style="flex:1;display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px">${inner}</span></div>`;
   const ln = `<span style="flex:1;border-bottom:2px dotted #8A94AD;height:18px;min-width:60px"></span>`;
   return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Two minutes. There are no right answers. You can pass. Nobody reads it out.</span></div>`
     + row('Something I did well:', ln)
     + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
-    + row('Next time I will try:', ['drawing it', 'using objects', 'checking my answer', 'asking a question'].map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
+    + row('Next time I will try:', ['drawing it', 'using objects', 'checking my answer', 'asking a question'].map(opt).join(''))
     + row('', opt('I am still stuck (my tutor will come and help)') + opt('I would like to pass'))
     + `</div>`]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };
@@ -187,10 +187,10 @@ W.push(gap(40));
 W.push(sub('c', 'I add 4. Then I take away 2. I get 10.', { after: 40, keepNext: true }));
 W.push(mach([{ text: '?', w: 1300, fill: 'FFF2CC', bold: true }, { text: '→', w: 600 }, { text: '+ 4', w: 1300, fill: 'EDEDED' }, { text: '→', w: 600 }, { text: '− 2', w: 1300, fill: 'EDEDED' }, { text: '→', w: 600 }, { text: '10', w: 1300, fill: 'DDEBF7', bold: true }]));
 W.push(q(2, 'A number machine adds the same number every time.', { keepNext: true }));
-W.push(sub('a', 'The machine adds 6. Fill in the table.', { keepNext: true }));
+W.push(sub('a', 'It adds 6. Fill in the table.', { keepNext: true }));
 W.push(tbl([1800, 1500, 1500, 1500, 1500], [row([cell('IN', 1800, { bold: true, fill: 'EDEDED' }), cell('2', 1500), cell('5', 1500), cell('9', 1500), cell('', 1500, { h: 140 })]), row([cell('OUT', 1800, { bold: true, fill: 'EDEDED' }), cell('8', 1500), cell('11', 1500), cell('', 1500, { h: 140 }), cell('14', 1500)])]));
 W.push(gap(100));
-W.push(sub('b', 'A different machine. What does it do to every number?', { keepNext: true }));
+W.push(sub('b', 'A different machine. What does it do?', { keepNext: true }));
 W.push(tbl([1800, 1500, 1500, 1500, 1500], [row([cell('IN', 1800, { bold: true, fill: 'EDEDED' }), cell('3', 1500), cell('6', 1500), cell('10', 1500), cell('15', 1500)]), row([cell('OUT', 1800, { bold: true, fill: 'EDEDED' }), cell('7', 1500), cell('10', 1500), cell('14', 1500), cell('', 1500, { h: 140 })])]));
 W.push(p([t('Rule: ______________     If you have time: OUT 30 means IN ______', { size: 26 })], { indent: { left: 1000 }, before: 100, after: 100 }));
 W.push(q(3, 'Ali has 8 marbles. Mei has 5 more marbles than Ali.', { pb: true, before: 0 }));
@@ -286,9 +286,9 @@ W.push(p([t('Tick where it fits, cross where it cannot. Clue 1 is crossed for yo
 W.push(tbl([2400, 2300, 2300, 2300], [row(['', 'Cat', 'Dog', 'Fish'].map((s, i) => cell(s, i ? 2300 : 2400, { bold: true, fill: 'EDEDED' }))), ...['Ali', 'Mei', 'Ben'].map(n => row([cell(n, 2400, { bold: true, h: 150 }), cell(n === 'Ali' ? 'X' : '', 2300, { bold: true }), cell(n === 'Ali' ? 'X' : '', 2300, { bold: true }), cell('', 2300)]))]));
 W.push(p([t('Ali has the ______.   Mei has the ______.   Ben has the ______.', { bold: true })], { indent: { left: 560 }, before: 120, after: 100 }));
 W.push(q(4, 'Four children stand in a line: Ali, Ben, Mei and Sam.', { keepNext: true }));
-W.push(p('Mei is first. Ali is in front of Ben. Ben is in front of Sam. Where does each child stand?', { indent: { left: 560 }, after: 80 }));
+W.push(p('Mei is first. Ali is in front of Ben. Ben is in front of Sam. Who stands where?', { indent: { left: 560 }, after: 80 }));
 W.push(tbl([2475, 2475, 2475, 2475], [row(['1st', '2nd', '3rd', '4th'].map(s => cell(s, 2475, { bold: true, fill: 'EDEDED' }))), row(['', '', '', ''].map(s => cell(s, 2475, { h: 150 })))]));
-W.push(q(5, 'If you have time: number riddle. Who am I?', { before: 200, keepNext: true }));
+W.push(q(5, 'If you have time: number riddle.', { before: 200, keepNext: true }));
 W.push(sub('a', 'I am between 10 and 20. I am odd. You say me counting in 5s.   ____'));
 W.push(q(6, 'If you have time: which one does NOT belong?   3,   6,   9,   11', { keepNext: true }));
 W.push(p('Explain why. Find a second reason.', { indent: { left: 560 }, after: 40 }));
@@ -308,23 +308,23 @@ W.push(q(2, 'Measure with cubes. Use the paper cube strip from the back of the w
 W.push(tbl([2900, 1900, 1900, 3200], [row(['Object', 'My guess', 'Measured', 'How far off my guess was'].map((s, i) => cell(s, [2900, 1900, 1900, 3200][i], { bold: true, fill: 'EDEDED' }))), ...['A pencil', 'A book', 'A shoe', 'My choice: ____________'].map(n => row([cell(n, 2900, { h: 110, align: AlignmentType.LEFT }), cell('', 1900), cell('', 1900), cell('', 3200)]))]));
 W.push(sub('a', 'Why must every cube be the same size?'));
 W.push(...lines(1));
-W.push(q(3, 'Ali’s desk is 6 hand spans long. Mei measures the same desk: 8 hand spans.', { pb: true, before: 0 }));
+W.push(q(3, 'Ali’s desk is 6 spans long. Mei measures the same desk: 8 spans.', { pb: true, before: 0 }));
 W.push(img('desk_spans.png', 440, 110));
-W.push(sub('a', 'Whose hand span is longer?   ____________'));
+W.push(sub('a', 'Whose span is longer?   ____________'));
 W.push(sub('b', 'How do you know?'));
 W.push(...lines(2));
 W.push(q(4, 'If you have time: 1 clip = 2 erasers.'));
-W.push(sub('a', 'A desk is 5 clips long. How many erasers? (Draw it or count in 2s.)   ____'));
+W.push(sub('a', 'A desk is 5 clips. How many erasers? (Draw it or count in 2s.)   ____'));
 W.push(sub('b', 'A pencil is 12 erasers long. How many clips?   ____'));
 W.push(q(5, 'Mei’s pencil is 8 cubes. Ali’s is 3 cubes longer. Ben’s is 2 cubes shorter.', { keepNext: true }));
 W.push(sub('a', 'How long is Ali’s pencil?   ____ cubes'));
 W.push(sub('b', 'How long is Ben’s pencil?   ____ cubes'));
-W.push(sub('c', 'All three end to end: ____ cubes long?'));
-W.push(q(6, 'Use the ruler picture.', { keepNext: true }));
+W.push(sub('c', 'All three end to end: ____ cubes?'));
+W.push(q(6, 'Read the ruler.', { keepNext: true }));
 W.push(img('ruler_q6.png', 600, 130));
 W.push(sub('a', 'The pencil goes from 0 to 12 cm. How long?   ____ cm'));
 W.push(sub('b', 'The crayon goes from 3 to 8 cm. How long? (Hop from 3 to 8.)   ____ cm'));
-W.push(sub('c', 'Measure your pencil: ____ cm. Longer or shorter than 10 cm?   ________'));
+W.push(sub('c', 'My pencil: ____ cm. Longer or shorter than 10 cm?   ________'));
 
 /* ---------- LESSON 10 ---------- */
 W.push(...coreEnd(9));
