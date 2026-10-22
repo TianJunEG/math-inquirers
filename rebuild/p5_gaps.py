@@ -15,7 +15,7 @@ ROOT=os.path.join(H,'..')
 RED='#D64545'
 
 def _data(n):
-    js=(f"const L=require('./p5/data.js');const c=L.content[{n}-1];console.log(JSON.stringify({{check:c.deck.check,whatIf:c.deck.whatIf,pic:c.deck.checkPic,sc:c.script.check,sr:c.script.reflect,tr:c.script.talkRules,solo:c.lesson.solo}}))")
+    js=(f"const L=require('./p5/data.js');const c=L.content[{n}-1];console.log(JSON.stringify({{check:c.deck.check,whatIf:c.deck.whatIf,pic:c.deck.checkPic,sc:c.script.check,sr:c.script.reflect,tr:c.script.talkRules,solo:c.lesson.solo,stuck:L.stuckTick({n}),ca:L.choiceAfter({n})}}))")
     return json.loads(subprocess.check_output(['node','-e',js],cwd=ROOT))
 
 # ---------- small drawn pictures for the sneak-peek slide (drawn shapes, no unicode glyphs) ----------
@@ -61,15 +61,15 @@ def check_slide_html(n,rows,pic,notes):
     return sec(f'p5l{n}-check','0–3 MIN',body,notes)
 
 def bx(): return '<span style="display:inline-block;width:28px;height:28px;border:4px solid #1B2A49;border-radius:7px;vertical-align:-5px;margin:0 10px 0 20px;background:#FFFFFF"></span>'
-def reflect_slide_html(n,notes):
+def reflect_slide_html(n,notes,stuck):
     t3=('<span style="font-size:28px;font-weight:600;line-height:1.6">'+bx()+'a picture or model'+bx()+'a list or table'+bx()+'a simpler number'+bx()+'my partner'
-        +'<br>'+bx()+'I asked for help'+bx()+'checking my estimate'+bx()+'I am still stuck (my tutor will check in with me)</span>')
-    items=[('1.','Something I did well ...',''),('2.','The hardest part was ...',''),('3.','What helped me ...',t3)]
+        +'<br>'+bx()+'I asked for help'+bx()+'checking my estimate'+bx()+E(stuck)+'</span>')
+    items=[('1.','Something I did well ...',''),('2.','The hardest part was ...',''),('3.','What helped me ...',t3),('4.','Next time I will try ...','')]
     body=h2('Exit slip and reflection')+p('2 minutes. Use the box at the bottom of the Investigation page. Pass is always OK: write pass or tick a box.',30,600,MUTED)
-    tops=[330,460,590]
+    tops=[300,410,520,740]
     for (a,b,extra),t in zip(items,tops):
         body+=pin(128,t,1664,f'<p style="font-size:38px;font-weight:700"><span style="color:{TEAL};font-weight:800">{a}</span>  {E(b)}</p>'+extra,None,WHITE,20,'16px 28px')
-    body+=pin(128,860,1664,p('Your tutor may read this privately to plan the next lesson. It is never marked or shown to the group.',28,700,MUTED),None,SOFT,20,'12px 26px')
+    body+=pin(128,880,1664,p('Your tutor may read this to plan the next lesson. It is never marked or shown to the group.',28,700,MUTED),None,SOFT,20,'12px 26px')
     return sec(f'p5l{n}-reflect','86–88 MIN',body,notes)
 
 # ---------- helpers on existing slide files ----------
@@ -90,12 +90,13 @@ def rng(label):
     m=re.match(r'(\d+)–(\d+) MIN',label or '')
     return (int(m.group(1)),int(m.group(2))) if m else None
 
-PLAN=('Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), '
-      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 3 you may choose: carry on, or try Think harder), '
-      'check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), '
+def plan(n,ca):
+    return ('Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), '
+      'teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question %d you may choose: carry on, or try Think harder), '
+      'check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish; minutes 62 to 72 are protected open think time, 10 quiet minutes for Think harder, Go further or the Investigation, with no hints unless a child asks), '
       'check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, '
-      'reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, '
-      'and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."')
+      'reflection 86 to 88 (pass is always OK; includes "Next time I will try"), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, '
+      'and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."') % ca
 
 def apply(n):
     D=os.path.join(ROOT,'split',f'p5l{n}','project'); dj=os.path.join(D,'deck.json')
@@ -108,13 +109,16 @@ def apply(n):
         'Answers are shown PRIVATELY (own paper shown only to you as you walk round; online, everyone holds paper to the camera at the same moment, or shows it to you only, on camera). Never boards in front of the group, never read out answers with names, no tally, no ranking. Never record scores. '
         f'Answers and what to listen for. {ans} '
         +' '.join(g['sc']))
-    rn=('Minutes 86 to 88. EXIT SLIP AND REFLECTION, 2 minutes. Children use the small box at the bottom of the Investigation and reflection page: Something I did well; The hardest part was; What helped me (tick boxes include "I asked for help" and "I am still stuck (my tutor will check in with me)"). '
-        'Pass is always OK. Never collected in public; you may read it privately later to plan the next lesson and check in with any child who ticked still stuck in the open session (a quick visit to the shared breakout room or a hand signal, parent nearby, never a private message). Never read a child\'s reflection aloud. '
+    rn=('Minutes 86 to 88. EXIT SLIP AND REFLECTION, 2 minutes. Children use the small box at the bottom of the Investigation and reflection page: Something I did well; The hardest part was; What helped me (tick boxes include "I asked for help" and "'+g['stuck']+'"); Next time I will try. '
+        'Pass is always OK. Never collected in public. '
         +' '.join(g['sr'][1:])+' At 88 stamp the inquiry journals and say goodbye.')
     wr(os.path.join(sd,P+'check.html'),check_slide_html(n,g['check'],g['pic'],cn))
-    wr(os.path.join(sd,P+'reflect.html'),reflect_slide_html(n,rn))
+    wr(os.path.join(sd,P+'reflect.html'),reflect_slide_html(n,rn,g['stuck']))
     o=[x for x in d['order'] if x not in (P+'check',P+'reflect')]
-    o.insert(1,P+'check'); o.append(P+'reflect'); d['order']=o
+    o.insert(1,P+'check')
+    if 'end' in o: o.insert(o.index('end'),P+'reflect')   # reflection (86-88) comes BEFORE the goodbye / certificates slide (88-90)
+    else: o.append(P+'reflect')
+    d['order']=o
     json.dump(d,open(dj,'w'),indent=1,ensure_ascii=False)
 
     # ---- warm-up slides sit at 3-6 and 6-9 (the sneak-peek puzzles take 0-3) ----
@@ -125,7 +129,7 @@ def apply(n):
         if s2!=s: wr(fp,s2)
     edit(P+'warm1',lambda s:s.replace('>0–4 MIN<','>3–6 MIN<').replace('Minutes 0 to 4.','Minutes 3 to 6 (play only 1 or 2 rounds).').replace(' (play only 1 or 2 rounds to make room for the warm-up check)',' (play only 1 or 2 rounds)'))
     edit(P+'warm2',lambda s:s.replace('>4–9 MIN<','>6–9 MIN<').replace('Minutes 4 to 9.','Minutes 6 to 9.'))
-    edit(P+'title',lambda s:re.sub(r'Time plan:.*?(?:or for home\.|Investigation\.(?:"|&quot;|&#34;|&#x22;)?)',lambda m:E(PLAN+(' In this last lesson the 88 to 90 slot is certificates.' if n==10 else '')),s,count=1,flags=re.S))
+    edit(P+'title',lambda s:re.sub(r'Time plan:.*?(?:or for home\.|Investigation\.(?:"|&quot;|&#34;|&#x22;)?)',lambda m:E(plan(n,g['ca'])+(' In this last lesson the 88 to 90 slot is certificates.' if n==10 else '')),s,count=1,flags=re.S))
 
     # ---- re-time every slide after the break ----
     order=d['order']
@@ -168,17 +172,17 @@ def apply(n):
         edit(P+sfx,lambda s:set_label(s,'72–76 MIN  •  OPTION'))
     edit(P+'exit',lambda s:s.replace('Minutes 82 to 90.','Minutes 82 to 86.').replace('82 to 90','82 to 86'))
 
-    # ---- page 1: the neutral choice line + private-invitation guidance ----
+    # ---- page 1: the neutral choice line + whole-group invitation guidance ----
     def ws1(s):
-        if 'After question 3 you may choose' in s: return s
-        s=append_card(s,card(p('After question 3 you may choose: carry on, or try Think harder. You can swap at any time.',34,700,TEAL)))
-        return add_notes(s,'Everyone sees the same neutral line: "After question 3 you may choose: carry on, or try Think harder." Never announce who is on which page and never name a child in front of the group. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.')
+        if 'you may choose: carry on' in s: return s
+        s=append_card(s,card(p('After question %d you may choose: carry on, or try Think harder. You can swap at any time.'%g['ca'],34,700,TEAL)))
+        return add_notes(s,'Everyone sees the same neutral line: "After question %d you may choose: carry on, or try Think harder." Never announce who is on which page and never name a child in front of the group. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.'%g['ca'])
     edit(P+'ws1',ws1)
     def ws2(s):
         s=s.replace('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further are at the back of your workbook.')
-        if 'Page 2 plan' in s: return s
-        s=append_card(s,card(p('Page 2 plan: start with '+g['solo']+'. Then choose what to try next. You do not have to finish the page.',32,700,TEAL)))
-        return add_notes(s,'Page 2 is a menu, not a wall. Everyone sees the same line: start with '+g['solo']+', then choose. Nobody has to finish; stop at minute 72 whatever has been done, because the check-together slide gives every answer with its explanation. Walk round, ask "what could you try first?", and give the first hint before any answer.')
+        if 'quiet think time' in s: return s
+        s=append_card(s,card(p('Page 2: start with '+g['solo']+', then choose. You do not have to finish. Minutes 62 to 72 are quiet think time for Think harder, Go further or the Investigation.',32,700,TEAL)))
+        return add_notes(s,'Page 2 is a menu, not a wall. Everyone sees the same line: start with '+g['solo']+', then choose. Nobody has to finish. OPEN THINK TIME, minutes 62 to 72 (10 minutes, protected): from minute 62 the room is quiet and any child who wants a longer problem works on Think harder, Go further or the Investigation without interruption. Give no hints unless a child asks, and do not call on anyone. Children who are still on Start here simply carry on. It is open to every child. Stop at minute 72 whatever has been done, because the check-together slide gives every answer with its explanation. Before minute 62, walk round, ask "what could you try first?", and give the first hint before any answer.')
     edit(P+'ws2',ws2)
 
     # ---- explore: the Go further what-if ----
