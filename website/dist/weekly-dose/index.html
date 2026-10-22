@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Weekly Dose of Thinking Math online</title><meta name="description" content="Sixty puzzles for children to try on screen, with hints and answers."><meta property="og:title" content="Weekly Dose of Thinking Math online"><meta property="og:description" content="Sixty puzzles for children to try on screen, with hints and answers."><meta property="og:type" content="website"><meta name="theme-color" content="#1B2A49"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%231B2A49%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23FFD23F%27 font-family=%27sans-serif%27 font-weight=%27700%27%3E?%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="/fonts.css"></head><body>
+<style>
+/* Layout: parent-edition magazine page. Week tabs on top, then two lesson spreads, each a column of puzzles beside a teal "for you" panel. */
+:root{
+  --bg:#FFFFFF; --fg:#1B2A49; --muted:#56637F; --rule:#1B2A49; --line:#C9D3E3;
+  --panel:#F2F6FA; --teal:#1F7A6F; --red:#C93D3D; --yellow:#FFC93C; --ok:#1F7A6F; --okbg:#E3F3EF; --nobg:#FBEAEA;
+  --field:#FFFFFF;
+  --head:'Fredoka',ui-rounded,'Arial Rounded MT Bold',Arial,sans-serif;
+  --body:'Nunito Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
+  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
+  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
+.kick{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.top{display:grid;gap:10px;border-bottom:3px solid var(--rule);padding-bottom:18px}
+.top h1{font-size:clamp(34px,6vw,52px);line-height:1}
+.top h1 span{color:var(--teal)}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.weeks{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.wk{font:600 16px var(--head);background:transparent;color:var(--fg);border:2px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:baseline}
+.wk small{font:700 12px var(--body);color:var(--muted)}
+.wk[aria-selected="true"]{border-color:var(--teal);background:var(--teal);color:var(--bg)}
+.wk[aria-selected="true"] small{color:var(--bg)}
+.wk:focus-visible,.btn:focus-visible,.ch:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.how{font-size:14px;color:var(--muted);margin:0 0 6px}
+.lesson{margin-top:30px}
+.hd{display:flex;align-items:flex-end;gap:14px;border-bottom:3px solid var(--rule);padding-bottom:10px;margin-bottom:16px}
+.big{font:600 64px/0.8 var(--head);color:var(--teal);font-variant-numeric:tabular-nums}
+.tp{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hd h2{font-size:28px;line-height:1.1}
+.score{margin-left:auto;font:700 13px var(--body);color:var(--muted);white-space:nowrap}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:start}
+@media (max-width:720px){.cols{grid-template-columns:1fr}.big{font-size:52px}}
+.lv{font:600 17px var(--head);display:flex;align-items:center;gap:8px;margin:4px 0 8px}
+.lv:after{content:"";flex:1;border-top:1.5px dashed var(--line)}
+.q{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;margin-bottom:22px}
+.q .n{font:600 26px/1 var(--head);color:var(--red)}
+.q.done .n{color:var(--ok)}
+.qt{font-weight:600;margin:0 0 10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+input.ans{font:700 18px var(--body);width:120px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);font-variant-numeric:tabular-nums}
+.ch{font:700 15px var(--body);padding:8px 14px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);cursor:pointer}
+.ch[aria-pressed="true"]{border-color:var(--teal);background:var(--okbg);color:var(--fg)}
+.btn{font:700 14px var(--body);padding:9px 14px;border-radius:10px;border:2px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.msg{font-size:14.5px;font-weight:700;margin-top:8px;padding:8px 12px;border-radius:10px}
+.msg.ok{background:var(--okbg);color:var(--ok)}
+.msg.no{background:var(--nobg);color:var(--red)}
+.note{font-size:14.5px;margin-top:8px;padding:10px 12px;border-left:4px solid var(--yellow);background:var(--panel)}
+.note b{color:var(--teal)}
+.side{background:var(--panel);border-top:5px solid var(--teal);padding:14px 15px;font-size:14.5px}
+.side h3{font-size:17px;color:var(--teal);margin-bottom:4px}
+.side p{margin:0 0 12px}
+.side p:last-child{margin:0}
+.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+@media (prefers-reduced-motion:no-preference){.msg,.note{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}to{opacity:1;transform:none}}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="kick">Weekly Dose of Thinking Math  •  Online</div>
+    <h1>Weekly Dose <span>Online</span></h1>
+    <p class="lede">Three puzzles for every Math Inquirers lesson, to do together at home. Your child answers, the page checks, and the hint and the "why" are there when you need them.</p>
+  </header>
+
+  <nav class="weeks" role="tablist" aria-label="Weeks" id="weeks"></nav>
+  <p class="how">Try first, then tap <b>Check</b>. Stuck? Tap <b>Hint</b>. After a correct answer, or two tries, the <b>Why</b> appears: read it together.</p>
+
+  <main id="lessons"></main>
+
+  <footer class="foot">
+    <span>Math Inquirers Holiday Program  •  Parent edition. Answers are checked on this page; nothing is sent anywhere.</span>
+    <button class="reset" type="button" id="reset">Clear my ticks on this device</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+var L=[
+ {n:1,title:"Count with the Frog",topic:"Number patterns",ask:'"What is the rule? Does it work for every pair?"',tip:"Draw a number line on paper and hop a coin along it.",
+  q:[
+   {lv:"Core",t:"Fill the gap: 6, 10, 14, __, 22",a:"18",h:"What is added each time? Check 6 to 10, then 10 to 14.",w:"The rule is add 4. 14 + 4 = 18, and 18 + 4 = 22 checks the next number."},
+   {lv:"Think Harder",t:"A frog starts at 2 and jumps 5 each time: 2, 7, 12, … Will it land on 27?",c:["Yes","No"],a:"Yes",h:"Keep the pattern going: 12, 17, …",w:"2, 7, 12, 17, 22, 27. The frog lands on 27 on its 5th jump."},
+   {lv:"Challenge",t:"Pattern A: 3, 6, 9, 12, … Pattern B: 5, 10, 15, 20, … What is the smallest number in both patterns?",a:"15",h:"Write more of each pattern and look for a number in both lists.",w:"A: 3, 6, 9, 12, 15. B: 5, 10, 15. The first number in both is 15."}]},
+ {n:2,title:"Number Bond Inquiry",topic:"Number bonds",ask:'"How do you know both sides are the same?"',tip:"Use buttons: make each side with real objects and compare.",
+  q:[
+   {lv:"Core",t:"8 + __ = 5 + 7",a:"4",h:"Work out the side you know first: 5 + 7.",w:"5 + 7 = 12. So 8 + __ must also make 12, and 8 + 4 = 12."},
+   {lv:"Think Harder",t:"Two numbers make 10. One is 4 more than the other. What is the bigger number?",a:"7",h:"List pairs that make 10: 1 and 9, 2 and 8, … Which pair is 4 apart?",w:"3 and 7 make 10, and 7 is 4 more than 3. The bigger number is 7."},
+   {lv:"Challenge",t:"□ + □ + 3 = 15. Both boxes are the same number. What is it?",a:"6",h:"Take away the 3 first. What do the two boxes make together?",w:"15 − 3 = 12, so the two boxes make 12. Two equal numbers that make 12 are 6 and 6."}]},
+ {n:3,title:"Let's Plan the Fruit Party",topic:"Picture graphs",ask:'"What does one picture stand for?"',tip:"Draw a quick graph of a family vote, one picture for each vote.",
+  q:[
+   {lv:"Core",t:"Key: 1 picture = 2 children. Apples has 4 pictures. How many children chose apples?",a:"8",h:"Count in 2s for each picture.",w:"Each picture is 2 children: 2, 4, 6, 8. So 8 children chose apples."},
+   {lv:"Think Harder",t:"Key: 1 picture = 2 children. Bananas has 6 pictures and pears has 2. How many more children chose bananas than pears?",a:"8",h:"Bananas has 4 more pictures. How many children is that?",w:"6 − 2 = 4 more pictures. Each is 2 children: 2, 4, 6, 8. So 8 more children."},
+   {lv:"Challenge",t:"20 children voted for mango, kiwi or papaya. Mango got 7 votes. Kiwi got 2 more than mango. How many chose papaya?",a:"4",h:"Find kiwi first, then add mango and kiwi.",w:"Kiwi: 7 + 2 = 9. Mango and kiwi: 7 + 9 = 16. Papaya: 20 − 16 = 4."}]},
+ {n:4,title:"Pattern Inquiry",topic:"Repeating and growing patterns",ask:'"Which part repeats? How many things are in it?"',tip:"Build the pattern with spoons, forks and cups before answering.",
+  q:[
+   {lv:"Core",t:"red, blue, green, red, blue, green, … What colour is the 10th?",c:["Red","Blue","Green"],a:"Red",h:"The part that repeats has 3 colours. Count in 3s: 3, 6, 9.",w:"The 9th ends a set of 3 (green), so the 10th starts again: red."},
+   {lv:"Think Harder",t:"Squares in a row: 1 square uses 4 sticks, 2 squares use 7 sticks, 3 squares use 10 sticks. How many sticks for 5 squares?",a:"16",h:"How many sticks are added for each new square?",w:"Each new square adds 3 sticks: 4, 7, 10, 13, 16. So 5 squares use 16 sticks."},
+   {lv:"Challenge",t:"A, B, B, A, B, B, … How many Bs are in the first 12 letters?",a:"8",h:"The part that repeats is A, B, B. How many times does it fit in 12 letters?",w:"A, B, B has 3 letters. Count in 3s to 12: 3, 6, 9, 12, so it repeats 4 times, with 2 Bs each time: 2, 4, 6, 8."}]},
+ {n:5,title:"Mystery Number",topic:"Working backwards",ask:'"How can you check by going forwards?"',tip:"Act it out: hide counters under a cup, then undo each step.",
+  q:[
+   {lv:"Core",t:"I think of a number. I add 7. I get 15. What is my number?",a:"8",h:"Undo the adding: take away 7 from 15.",w:"15 − 7 = 8. Check: 8 + 7 = 15."},
+   {lv:"Think Harder",t:"I think of a number. I take away 4, then add 6. I get 13. What is my number?",a:"11",h:"Start at 13 and undo the last step first.",w:"Undo add 6: 13 − 6 = 7. Undo take away 4: 7 + 4 = 11. Check: 11 − 4 = 7, 7 + 6 = 13."},
+   {lv:"Challenge",t:"Mei had some sweets. She gave 5 to Ali, then got 3 from Ben. Now she has 10. How many did she have at first?",a:"12",h:"Go backwards: before Ben gave her 3, how many did she have?",w:"Before Ben's 3: 10 − 3 = 7. Before she gave Ali 5: 7 + 5 = 12."}]},
+ {n:6,title:"Coin Combos",topic:"Money",ask:'"Can you do it with fewer?"',tip:"Use real coins and notes on the table, biggest first.",
+  q:[
+   {lv:"Core",t:"What is the fewest number of coins to pay exactly 75¢? The coins are 5¢, 10¢, 20¢ and 50¢.",a:"3",h:"Start with the biggest coin that is not too big.",w:"50¢ + 20¢ + 5¢ = 75¢. That is 3 coins; no 2 coins make 75¢."},
+   {lv:"Think Harder",t:"A toy costs $18. What is the fewest number of notes and coins to pay exactly? You have $1 coins and $2, $5 and $10 notes.",a:"4",h:"Biggest first: how much is left after a $10 note?",w:"$10 + $5 + $2 + $1 = $18. That is 4 pieces of money."},
+   {lv:"Challenge",t:"How many different ways can you make 25¢ using only 5¢ and 10¢ coins?",a:"3",h:"Make a list in order: start with as many 10¢ coins as you can.",w:"Two 10¢ + one 5¢. One 10¢ + three 5¢. Five 5¢. That is 3 ways."}]},
+ {n:7,title:"Shape Safari",topic:"2D shapes",ask:'"Did you count the bigger shapes too?"',tip:"Draw the shapes and mark each corner with a dot as you count.",
+  q:[
+   {lv:"Core",t:"I have 3 sides and 3 corners. What am I?",c:["Triangle","Square","Circle","Rectangle"],a:"Triangle",h:"Which shape has the fewest straight sides?",w:"A triangle has 3 straight sides and 3 corners."},
+   {lv:"Think Harder",t:"How many sides do 3 squares and 2 triangles have altogether?",a:"18",h:"Count the squares' sides first, then add the triangles'.",w:"Squares: 4 + 4 + 4 = 12. Triangles: 3 + 3 = 6. Altogether 12 + 6 = 18."},
+   {lv:"Challenge",t:"A big triangle has 3 lines drawn from its top corner down to the bottom side. How many triangles can you find?",a:"10",h:"The lines make 4 small triangles. Count the ones made of 1 part, then 2 parts, then 3, then 4.",w:"1 part: 4. 2 parts: 3. 3 parts: 2. All 4 parts: 1. 4 + 3 + 2 + 1 = 10."}]},
+ {n:8,title:"Logic Lab",topic:"Logic and sorting",ask:'"Which clue tells you something for sure?"',tip:"Draw a small grid and put a cross where a clue says no.",
+  q:[
+   {lv:"Core",t:"Ali is taller than Ben. Ben is taller than Cai. Who is the shortest?",c:["Ali","Ben","Cai"],a:"Cai",h:"Draw a line from tallest to shortest.",w:"Order from tallest: Ali, Ben, Cai. Cai is the shortest."},
+   {lv:"Think Harder",t:"Numbers 1 to 20: how many are even AND bigger than 12?",a:"4",h:"List the even numbers above 12.",w:"14, 16, 18, 20. That is 4 numbers."},
+   {lv:"Challenge",t:"Dan, Eve and Fay each have a different pet: a cat, a dog or a fish. Dan does not have the cat or the dog. Eve does not have the cat. Who has the cat?",c:["Dan","Eve","Fay"],a:"Fay",h:"Dan's clue tells you his pet for sure. Start there.",w:"Dan has neither the cat nor the dog, so Dan has the fish. Eve does not have the cat, so Eve has the dog. Fay has the cat."}]},
+ {n:9,title:"Measure It!",topic:"Length",ask:'"Why does a bigger unit give a smaller number?"',tip:"Measure a spoon with paper clips, then with erasers, and compare.",
+  q:[
+   {lv:"Core",t:"A crayon lies from the 4 cm mark to the 12 cm mark on a ruler. How long is it, in cm?",a:"8",h:"Count the spaces from 4 to 12, not the marks.",w:"From 4 to 12 is 8 spaces: 12 − 4 = 8 cm."},
+   {lv:"Think Harder",t:"1 clip is as long as 2 cubes. A pen is 6 clips long. How many cubes long is the pen?",a:"12",h:"Each clip is 2 cubes. Count in 2s for 6 clips.",w:"2, 4, 6, 8, 10, 12. The pen is 12 cubes long."},
+   {lv:"Challenge",t:"A red ribbon is 9 cubes long. A blue ribbon is 4 cubes shorter than the red one. A green ribbon is 3 cubes longer than the blue one. How long are all three together?",a:"22",h:"Find blue first, then green.",w:"Blue: 9 − 4 = 5. Green: 5 + 3 = 8. Together: 9 + 5 + 8 = 22 cubes."}]},
+ {n:10,title:"Challenge Day",topic:"Mixed puzzles",ask:'"How did you start? What would you try next time?"',tip:"Before any hint, ask: can you draw it, list it or make a table?",
+  q:[
+   {lv:"Core",t:"Count in 5s: 15, 20, 25, __",a:"30",h:"Add 5 to the last number.",w:"25 + 5 = 30."},
+   {lv:"Think Harder",t:"Two numbers add up to 15. The bigger one is 3 more than the smaller one. What is the bigger number?",a:"9",h:"Try pairs that make 15: 10 and 5, 9 and 6, … Which pair is 3 apart?",w:"9 + 6 = 15, and 9 is 3 more than 6. The bigger number is 9."},
+   {lv:"Challenge",t:"Exactly 4 coins make 50¢. The coins can be 5¢, 10¢ or 20¢. How many different sets of 4 coins can you find?",a:"2",h:"Make a list in order: try two 20¢ coins, then one 20¢, then none.",w:"Two 20¢: 20 + 20 + 5 + 5. One 20¢: 20 + 10 + 10 + 10. No 20¢: four coins make at most 40¢. So there are 2 sets."}]}
+];
+var X={
+1:[{lv:"Core",t:"Fill the gap: 20, 18, 16, __, 12",a:"14",h:"What is taken away each time? Check 20 to 18.",w:"The rule is take away 2. 16 − 2 = 14, and 14 − 2 = 12 checks the next number."},
+ {lv:"Think Harder",t:"A pattern goes 5, 10, 15, 20, … What is the 8th number?",a:"40",h:"Keep counting in 5s and count how many numbers you have said.",w:"5, 10, 15, 20, 25, 30, 35, 40. The 8th number is 40."},
+ {lv:"Challenge",t:"The rule is add 3 and the pattern starts at 4. Which of these is in the pattern?",c:["13","14","15"],a:"13",h:"Write the pattern: 4, 7, …",w:"4, 7, 10, 13, 16. Only 13 is in the pattern."}],
+2:[{lv:"Core",t:"7 + __ = 10",a:"3",h:"How many more to get from 7 up to 10?",w:"7 + 3 = 10, so the missing number is 3."},
+ {lv:"Think Harder",t:"9 + 6 = 10 + __",a:"5",h:"Work out 9 + 6 first.",w:"9 + 6 = 15, and 10 + 5 = 15. So the missing number is 5."},
+ {lv:"Challenge",t:"2, 5 and a mystery number make 12 altogether. What is the mystery number?",a:"5",h:"Add 2 and 5 first.",w:"2 + 5 = 7. 12 − 7 = 5, so the mystery number is 5."}],
+3:[{lv:"Core",t:"Key: 1 picture = 5 children. Pears has 3 pictures. How many children chose pears?",a:"15",h:"Count in 5s for each picture.",w:"5, 10, 15. Three pictures stand for 15 children."},
+ {lv:"Think Harder",t:"Key: 1 picture = 2 children. 12 children chose grapes. How many pictures does grapes need?",a:"6",h:"How many 2s make 12? Count in 2s.",w:"2, 4, 6, 8, 10, 12. That is 6 pictures."},
+ {lv:"Challenge",t:"Key: 1 picture = 2 children. Apples has 5 pictures and oranges has 3. How many children are there altogether?",a:"16",h:"Count all the pictures first.",w:"5 + 3 = 8 pictures. 8 pictures of 2 children: 2, 4, 6, 8, 10, 12, 14, 16. So 16 children."}],
+4:[{lv:"Core",t:"circle, square, circle, square, … What is the 7th shape?",c:["Circle","Square"],a:"Circle",h:"Which shapes come in the odd places: 1st, 3rd, 5th?",w:"Circles are 1st, 3rd, 5th, 7th. The 7th shape is a circle."},
+ {lv:"Think Harder",t:"1 triangle uses 3 sticks, 2 triangles in a row use 5 sticks, 3 triangles use 7 sticks. How many sticks for 4 triangles?",a:"9",h:"How many sticks are added for each new triangle?",w:"Each new triangle adds 2 sticks: 3, 5, 7, 9. So 4 triangles use 9 sticks."},
+ {lv:"Challenge",t:"A, B, C, A, B, C, … How many As are in the first 10 letters?",a:"4",h:"A is the 1st letter of each set of 3. Where does each A land?",w:"A is the 1st, 4th, 7th and 10th letter. That is 4 As."}],
+5:[{lv:"Core",t:"I think of a number and add 4. The answer is 11. What was my number?",a:"7",h:"Do the opposite of adding 4.",w:"11 − 4 = 7. Check: 7 + 4 = 11."},
+ {lv:"Think Harder",t:"I think of a number and double it. Then I add 3. I end with 11. What was my number?",a:"4",h:"Undo the last step first: take away 3.",w:"11 − 3 = 8. Undo the doubling: half of 8 is 4. Check: 4 + 4 = 8, 8 + 3 = 11."},
+ {lv:"Challenge",t:"I think of a number, add 5, then take away 2. I end with 10. What was my number?",a:"7",h:"Work backwards, last step first.",w:"Undo take away 2: 10 + 2 = 12. Undo add 5: 12 − 5 = 7. Check: 7 + 5 = 12, 12 − 2 = 10."}],
+6:[{lv:"Core",t:"You have a 50¢ coin and a 20¢ coin. How many cents do you have altogether?",a:"70",h:"Start with 50 and count on 20.",w:"50 + 20 = 70 cents."},
+ {lv:"Think Harder",t:"A sticker costs 60¢. You pay with a $1 coin, which is 100¢. How many cents change do you get?",a:"40",h:"How many cents from 60 up to 100?",w:"100 − 60 = 40. You get 40¢ change."},
+ {lv:"Challenge",t:"How many different ways can you make 30¢ using only 10¢ and 5¢ coins?",a:"4",h:"Make a list in order: start with three 10¢ coins, then two, then one, then none.",w:"Three 10¢. Two 10¢ and two 5¢. One 10¢ and four 5¢. No 10¢ and six 5¢. That is 4 ways."}],
+7:[{lv:"Core",t:"How many corners does a triangle have?",a:"3",h:"Draw a triangle and count where two sides meet.",w:"A triangle has 3 sides and 3 corners."},
+ {lv:"Think Harder",t:"A shape has 4 sides that are all the same length and 4 square corners. What is it?",c:["Square","Triangle","Circle"],a:"Square",h:"Which shape has 4 equal sides?",w:"A shape with 4 equal sides and 4 square corners is a square."},
+ {lv:"Challenge",t:"How many sides do 2 squares and 1 triangle have altogether?",a:"11",h:"A square has 4 sides and a triangle has 3.",w:"4 + 4 + 3 = 11 sides."}],
+8:[{lv:"Core",t:"Sam's cap is red, blue or green. It is not red and not blue. What colour is it?",c:["Red","Blue","Green"],a:"Green",h:"Cross out the colours it cannot be.",w:"It is not red and not blue, so it must be green."},
+ {lv:"Think Harder",t:"Ann is taller than Ben. Ben is taller than Cal. Who is the shortest?",c:["Ann","Ben","Cal"],a:"Cal",h:"Draw three lines of different heights to match the clues.",w:"Ann is tallest, then Ben, then Cal. Cal is the shortest."},
+ {lv:"Challenge",t:"Ali, Bo and Cy stand in a line. Cy is first. Bo is not last. Who is in the middle?",c:["Ali","Bo"],a:"Bo",h:"Cy takes the first place. Who can be last?",w:"Cy is first. Bo is not last, so Ali is last. That leaves Bo in the middle."}],
+9:[{lv:"Core",t:"A pencil is 8 cubes long. A crayon is 5 cubes long. How many cubes longer is the pencil?",a:"3",h:"Line them up and find the difference.",w:"8 − 5 = 3. The pencil is 3 cubes longer."},
+ {lv:"Think Harder",t:"Two ribbons are each 6 clips long. They are laid end to end. How many clips long are they altogether?",a:"12",h:"Add the two lengths.",w:"6 + 6 = 12 clips."},
+ {lv:"Challenge",t:"A red stick is 9 cubes long. The blue stick is 4 cubes shorter than red. The green stick is 2 cubes longer than blue. How long is the green stick?",a:"7",h:"Find the blue stick first.",w:"Blue: 9 − 4 = 5. Green: 5 + 2 = 7 cubes."}],
+10:[{lv:"Core",t:"What comes next? 2, 4, 6, 8, __",a:"10",h:"What is added each time?",w:"The rule is add 2. 8 + 2 = 10."},
+ {lv:"Think Harder",t:"Mia has 15 stickers. She gives 6 to a friend and then gets 3 more. How many stickers does she have now?",a:"12",h:"Do it one step at a time.",w:"15 − 6 = 9, and 9 + 3 = 12 stickers."},
+ {lv:"Challenge",t:"A box has 12 balls. 3 are red and 4 are blue. The rest are green. How many are green?",a:"5",h:"Add the red and blue first.",w:"3 + 4 = 7 are red or blue. 12 − 7 = 5 are green."}]
+};
+var ORD={"Core":0,"Think Harder":1,"Challenge":2};
+L.forEach(function(l){l.q=l.q.concat(X[l.n]).map(function(q,i){return{q:q,i:i}}).sort(function(a,b){return ORD[a.q.lv]-ORD[b.q.lv]||a.i-b.i}).map(function(o){return o.q})});
+var KEY="mi-weekly-dose-online-v2",done={};
+try{done=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){done={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var week=1,tries={};
+var m=/^#w([1-5])$/.exec(location.hash||"");if(m)week=+m[1];
+function weeksNav(){
+  document.getElementById("weeks").innerHTML=[1,2,3,4,5].map(function(w){
+    var ls=L.filter(function(l){return Math.ceil(l.n/2)===w}),got=0;
+    ls.forEach(function(l){l.q.forEach(function(_,i){if(done[l.n+"-"+i])got++})});
+    return '<button class="wk" role="tab" type="button" id="tab-w'+w+'" aria-selected="'+(w===week)+'" data-w="'+w+'">Week '+w+' <small>'+got+' of 12</small></button>';
+  }).join("");
+}
+function lessonHtml(l){
+  var got=l.q.filter(function(_,i){return done[l.n+"-"+i]}).length,h='',last='';
+  l.q.forEach(function(q,i){
+    var id=l.n+"-"+i,ok=!!done[id];
+    if(q.lv!==last){h+='<div class="lv">'+q.lv+'</div>';last=q.lv}
+    var input=q.c?'<div class="row" role="group" aria-label="Choices">'+q.c.map(function(c){return '<button type="button" class="ch" data-pick="'+id+'" data-v="'+esc(c)+'" aria-pressed="false">'+esc(c)+'</button>'}).join("")+'</div>'
+      :'<label class="row"><span class="sr" style="position:absolute;left:-9999px">Answer</span><input class="ans" id="a-'+id+'" inputmode="numeric" autocomplete="off" placeholder="Answer"></label>';
+    h+='<div class="q'+(ok?' done':'')+'" id="q-'+id+'"><span class="n">'+(i+1)+'</span><div><p class="qt">'+esc(q.t)+'</p><div class="row">'+input+'<button class="btn" type="button" data-check="'+id+'">Check</button><button class="btn ghost" type="button" data-hint="'+id+'">Hint</button></div><div id="f-'+id+'">'+(ok?'<div class="msg ok">Solved. Ask: how do you know?</div><div class="note"><b>Why: </b>'+esc(q.w)+'</div>':'')+'</div></div></div>';
+  });
+  return '<section class="lesson" aria-labelledby="h-'+l.n+'"><div class="hd"><div class="big">'+(l.n<10?"0":"")+l.n+'</div><div><div class="tp">Lesson '+l.n+'  •  '+esc(l.topic)+'</div><h2 id="h-'+l.n+'">'+esc(l.title)+'</h2></div><div class="score">'+got+' of '+l.q.length+' solved</div></div>'+
+   '<div class="cols"><div>'+h+'</div><aside class="side"><h3>Ask</h3><p>'+esc(l.ask)+'</p><h3>Tip for you</h3><p>'+esc(l.tip)+'</p><h3>In class</h3><p>These puzzles practise the same ideas as Lesson '+l.n+', with new numbers.</p></aside></div></section>';
+}
+function render(){
+  weeksNav();
+  document.getElementById("lessons").innerHTML=L.filter(function(l){return Math.ceil(l.n/2)===week}).map(lessonHtml).join("");
+}
+function find(id){var p=id.split("-");var l=L.filter(function(x){return x.n===+p[0]})[0];return l.q[+p[1]]}
+function norm(v){return String(v).trim().toLowerCase().replace(/[^a-z0-9]/g,"")}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("button");if(!t)return;
+  if(t.dataset.w){week=+t.dataset.w;try{history.replaceState(null,"","#w"+week)}catch(err){}render();return}
+  if(t.dataset.pick){var g=t.parentNode.querySelectorAll(".ch");g.forEach(function(b){b.setAttribute("aria-pressed","false")});t.setAttribute("aria-pressed","true");return}
+  var id=t.dataset.check||t.dataset.hint;if(!id)return;
+  var q=find(id),f=document.getElementById("f-"+id);
+  if(t.dataset.hint){f.innerHTML='<div class="note"><b>Hint: </b>'+esc(q.h)+'</div>';return}
+  var v;
+  if(q.c){var s=document.querySelector('#q-'+id+' .ch[aria-pressed="true"]');v=s?s.dataset.v:""}
+  else{var inp=document.getElementById("a-"+id);v=inp?inp.value:""}
+  if(!norm(v)){f.innerHTML='<div class="msg no">'+(q.c?'Choose an answer first.':'Type an answer first.')+'</div>';return}
+  if(norm(v)===norm(q.a)){
+    done[id]=1;save();
+    f.innerHTML='<div class="msg ok">Correct! Now ask: how do you know?</div><div class="note"><b>Why: </b>'+esc(q.w)+'</div>';
+    document.getElementById("q-"+id).classList.add("done");
+    var sc=document.getElementById("q-"+id).closest(".lesson").querySelector(".score");
+    var n=+id.split("-")[0],l=L.filter(function(x){return x.n===n})[0];
+    sc.textContent=l.q.filter(function(_,i){return done[n+"-"+i]}).length+" of "+l.q.length+" solved";weeksNav();
+  }else{
+    tries[id]=(tries[id]||0)+1;
+    f.innerHTML='<div class="msg no">Not yet. '+(tries[id]>=2?'Here is the thinking:':'Try the hint, then check again.')+'</div>'+(tries[id]>=2?'<div class="note"><b>Why: </b>'+esc(q.w)+'</div>':'');
+  }
+});
+document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.classList&&e.target.classList.contains("ans")){var b=e.target.closest(".q").querySelector("[data-check]");if(b)b.click()}});
+document.getElementById("reset").addEventListener("click",function(){done={};tries={};save();render()});
+render();
+})();
+</script>
+
+</body></html>
