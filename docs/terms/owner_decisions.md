@@ -35,3 +35,16 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 
 ## Proceed to the other terms (22 Oct 2026, owner going to sleep)
 - After Level 1 Term 1 is finished (audits and fix passes done), proceed with Level 1 Terms 2, 3 and 4 (lessons 11-40, same template, same process: write, wording review against the school-paper guide, independent audit, fix pass), then the other levels. Do not wait for the owner for routine steps; keep every decision made so far (stronger arithmetic with scaffolding, 20-minute check, Think harder for contest-style items, WhatsApp-only photo return, no printed ruler, Mi as mascot).
+
+## Defaults chosen by the assistant while the owner slept (22-23 Oct 2026). CHANGE ANY IF WRONG.
+From the Term 2 pre-flight questions (docs/terms/l1_term2_preflight.md section 5). Each is a safe default; none is irreversible.
+1. **Multiplication reading order:** 'groups of' reads 'number of groups x number in each group' ('3 groups of 4' is 3 x 4), the Singapore school convention. Either order is accepted as correct in answers; frames use groups x each.
+2. **Division sign:** Term 2 uses words ('shared by', 'put into groups of'); the sign is shown only as a small 'grown-up sign' label, never required.
+3. **Odd/even (L14) and the 3 and 4 tables (L16):** keep as planned, with the plain beyond-P1 statement (the stronger-arithmetic decision).
+4. **'Bar model':** children hear 'strips'; the tutor guide uses 'bar model (strip)'; the parent summary says 'strips (called bar models at school)'.
+5. **Check design:** each end-of-term check must fit its 20 minutes by real timing: about 8 short questions plus one optional Think harder item (not 10 + 1), WhatsApp photo return by the parent. The Term 1 check (Lesson 10) is cut to match (audit finding).
+6. **Mi's calculator:** keep Mi as supplied for now (the artwork cannot be edited cleanly); Mi never uses or mentions the calculator in lessons; the owner may replace the image later.
+7. **Practice runner:** may be extended (pictures, ordered boxes, list answers), versioned and backward compatible so other levels keep working.
+8. **Lesson 20 money:** whole dollars only, no notes or coins until Term 3.
+9. **Papers and cameras:** no paper hold-ups to the camera at all (a gallery view shows everyone). Use: tick your own work against the answer slide, choral answers ('on three, say it'), fingers for choices, and the private route 'I am still stuck' = a mark on the child's own look-back page that the parent photographs for the tutor after class via the business WhatsApp (+65 9880 5962). The recording statement says 'the tutor, the shared screen and anyone's voice that is unmuted are recorded; children may mute and keep cameras off'. The WhatsApp number is NOT shown on recorded slides, only in the parent note.
+10. **Lesson 20 check slot:** 20 minutes inside the lesson (see 5).
