@@ -95,22 +95,21 @@
  },
  {
   "lesson": 6,
-  "name": "Maria Montessori",
-  "years": "1870 to 1952",
-  "country_or_region": "Italy",
-  "who": "An Italian doctor and teacher who made hands-on fraction circles for children.",
-  "story": "Maria Montessori was born in Italy and became a doctor in 1896. Later she turned to teaching. In 1907 she opened a Children's House in Rome. She believed children learn well by using their hands, so she designed learning materials. Her fraction circles are a set of round pieces that show a whole cut into equal parts, from two up to ten. Children can see and feel that the parts must be the same size. She was a teacher and doctor, not a researcher of fractions.",
-  "link_to_lesson": "Today we build fraction walls where every part is the same size, and Montessori's fraction circles teach exactly that idea.",
-  "try_it": "A fraction circle is cut into 8 equal pieces. How many pieces make a half of the circle? How many make a quarter?",
-  "try_it_answer": "4 pieces make a half (4 out of 8 is 1/2) and 2 pieces make a quarter (2 out of 8 is 1/4).",
+  "name": "Abu Bakr al-Hassar",
+  "years": "lived in the 12th century (exact dates unknown)",
+  "country_or_region": "Morocco",
+  "who": "A Moroccan mathematician who is credited with writing fractions with a bar.",
+  "story": "Abu Bakr al-Hassar was a mathematician from Morocco who lived in the 12th century, about 900 years ago. We do not know the years of his birth or death, and one of his two books is lost. He is known for writing a fraction with a horizontal bar between the top number and the bottom number, just as we do today. The same way of writing fractions appeared soon after in a book by Fibonacci. The bar helps us see how many equal parts there are.",
+  "link_to_lesson": "Today we build fraction walls and write fractions like 3/4 with a bar, the way al-Hassar did.",
+  "try_it": "In a fraction wall, a row is cut into 8 equal parts and 6 parts are shaded. Write the shaded part as a fraction with a bar. Then find the equal fraction in the row cut into 4 equal parts.",
+  "try_it_answer": "6/8 is shaded (6 on top, 8 on the bottom, with a bar between). In the row of quarters, the same length is 3/4, because 6/8 = 3/4.",
   "source_urls": [
-   "https://amshq.org/about-us/history-of-ams/about-dr-maria-montessori/",
-   "https://en.wikipedia.org/wiki/Maria_Montessori",
-   "https://www.montessorialbum.com/montessori/index.php/Introduction_to_the_Fraction_Insets"
+   "https://en.wikipedia.org/wiki/Al-Hassar",
+   "https://muslimheritage.com/people/scholars/abu-bakr-al-hassar/"
   ],
-  "confidence": "high",
-  "legend_note": "Sources differ on whether she was the first or only one of the first women doctors in Italy, so the story does not say first.",
-  "icon_idea": "A round circle cut into equal slices, one slice lifted out."
+  "confidence": "medium",
+  "legend_note": "Sources give no birth or death dates (one site lists 1100 for both, which is a placeholder). Some sources say he 'developed' and others that he 'introduced' the bar notation, so the story says he is known for it, not that he was first. Where he taught is not stated reliably, so it is left out.",
+  "icon_idea": "A fraction written on a scroll with a clear horizontal bar between two numbers."
  },
  {
   "lesson": 7,
