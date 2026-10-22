@@ -22,6 +22,30 @@ Changes in `lessons/l01.json` (maths and answers unchanged). Format: old -> new,
 | 16 | Online item 13 (selfcheck) | "...(between which two numbers, the ones digit, and odd or even tens)" | "...3 clues: between which two numbers, the ones digit, and whether the tens digit is odd or even." | Brackets, "tens" meant "tens digit" |
 | 17 | Tutor line, opening | "we stretch" | "we move" | Clashes with the real break activity |
 
+## Second pass (school-paper rules 11-24)
+
+| # | Where | Old (after pass 1) | New | Reason |
+|---|---|---|---|---|
+| 18 | S2 | "Draw 3 bundles of ten and 5 single sticks in the box. Then write the number." | "Draw 5 single sticks and 3 bundles of ten in the box." + "Write the number: ___" | One job in the stem |
+| 19 | S3 | "Write the number." blanks `___` | "Fill in the missing numbers." with boxes `[]` | Fixed command; box for one missing number |
+| 20 | S4, E2 | "Fill in the tens and ones." | "Fill in the blanks." | Fixed command phrase |
+| 21 | S5 | "...bundles of ten." | "He ties the straws into bundles of 10. Fill in the blanks." | Numeral, command |
+| 22 | S6 | "Is Siti right? ... say what she mixed up" | (a) "Is 43 the right number? Circle Yes or No." (b) "The correct number is ___" | Yes/No circle, one question per part |
+| 23 | T2 and online item 7 | "Open one bundle. Now 41 is 3 tens..." | "41 = 4 tens and 1 one = 3 tens and ___ ones." | No method in the stem |
+| 24 | T3 and online item 8 | "Mystery number. Clue 1..." | "My tens digit is even. My ones digit is 6. I am between 30 and 50. What number am I?" | Riddle as one paragraph |
+| 25 | T4 | "Who has more, or are they the same?" | "Circle one: Mei has more. Ali has more. They have the same. Show how you know." | Choice by circling |
+| 26 | G1 | "Who has more sticks? How many more?" | stem + (a) "___ has more sticks." (b) "That child has ___ more sticks." | Two questions split |
+| 27 | G2 | one question | (a) "How many pencils does she have now? ___" (b) "She needs ___ more pencils." | Answer frames end with the noun |
+| 28 | G3 | "if you may open bundles" | "Write 30 in different ways, like 3 tens and 0 ones. Find all the ways. How many ways are there?" | No method in the stem |
+| 29 | E1 | "___ sticks" | "There are ___ sticks." | Full sentence frame |
+| 30 | Sneak-peek 2, talk | "Write yes or no, and why." / "Mei says 26 and 62 are the same... Do you agree?" | "Circle Yes or No. I know because ___." / "Are 26 and 62 the same number? Circle Yes or No..." | Do not state a child's wrong reasoning in the stem |
+| 31 | Investigation, opt slide, script | bigger / biggest | greater / greatest | Rule 13 |
+| 32 | Choice slide | "Always, sometimes or never?" | "A pattern to find" | Phrase no longer matches the investigation |
+| 33 | Workbook | Q lines (S5, S6, G1, G2) | fewer answer lines | Keep 5 pages, fill 91-96% |
+
 ## Not fixed / for the owner
+- Validator copy check blocks reusing wording quoted in docs/books/school_paper_wording_patterns.md, so a few frames differ slightly from the examples there.
+- Rule 25: nothing in L01 goes beyond about 99. Numbers above 40 are above a P1 quiz range (exit tickets use 48, 37, 70).
+- "full bundles" kept in S5 (an unfinished bundle is not a bundle).
 - "even" and "odd" (T3, spare-time menu) may not yet be taught in Primary 1 in Singapore; left as the plan uses them. Check with a P1 teacher.
 - Reading-load WARN is the tutor-only spare-time answer text, not child-facing.

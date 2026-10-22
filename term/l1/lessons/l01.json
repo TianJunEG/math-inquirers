@@ -135,7 +135,7 @@
   },
   "sneak_peek": {
     "q1": "Count the stars. Write how many. You may draw rings round groups to help.",
-    "q2": "Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number of sticks? Write yes or no, and why.",
+    "q2": "Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number of sticks? Circle Yes or No. I know because ___.",
     "a1": "24",
     "a2": "Yes. 3 bundles of ten is 30, and 4 more is 34.",
     "val1": 24
@@ -209,7 +209,7 @@
           },
           {
             "k": "SAY",
-            "text": "Here is our plan. A warm-up, two puzzles, then we explore with real things. Then I teach you a trick, we stretch, and you work in your workbook."
+            "text": "Here is our plan. A warm-up, two puzzles, then we explore with real things. Then I teach you a trick, we move, and you work in your workbook."
           },
           {
             "k": "SLIDE",
@@ -360,7 +360,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number? Write yes or no, and why."
+            "text": "Puzzle two. Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number? Circle Yes or No. I know because ___."
           },
           {
             "k": "WORK",
@@ -736,7 +736,7 @@
           },
           {
             "k": "READ",
-            "text": "Mei says 26 and 62 are the same, because they use the same digits. Do you agree? Use bundles to explain."
+            "text": "Are 26 and 62 the same number? Circle Yes or No. Use bundles to explain: I know because ___."
           },
           {
             "k": "WORK",
@@ -855,7 +855,7 @@
           },
           {
             "k": "SAY",
-            "text": "Optional, only if you are on time: what is the biggest number you can make with 9 bundles and 9 singles? And what happens if you add one more single?",
+            "text": "Optional, only if you are on time: what is the greatest number you can make with 9 bundles and 9 singles? And what happens if you add one more single?",
             "optional": true
           },
           {
@@ -1109,7 +1109,7 @@
                 "items": [
                   "Mei has 3 bundles of ten sticks and 4 single sticks.",
                   "Ben has 34 sticks.",
-                  "Could they have the same number? Write yes or no, and why."
+                  "Could they have the same number? Circle Yes or No. I know because ___."
                 ]
               }
             ]
@@ -1591,7 +1591,7 @@
             ],
             [
               "Investigation (page 5)",
-              "Always, sometimes or never?"
+              "A pattern to find"
             ],
             [
               "Check",
@@ -1614,7 +1614,7 @@
       "blocks": [
         {
           "t": "card",
-          "head": "MEI SAYS",
+          "head": "TALK ABOUT IT",
           "items": [
             "26 and 62 are the same, because they use the same digits."
           ]
@@ -1740,7 +1740,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "What is the biggest number you can make with 9 bundles and 9 singles?"
+          "text": "What is the greatest number you can make with 9 bundles and 9 singles?"
         },
         {
           "t": "p",
@@ -1844,12 +1844,12 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Draw 3 bundles of ten and 5 single sticks in the box. Then write the number.",
+        "text": "Draw 5 single sticks and 3 bundles of ten in the box.",
         "draw": true,
         "parts": [
           {
             "l": "",
-            "text": "The number is ___",
+            "text": "Write the number: ___",
             "ans": "35",
             "val": 35
           }
@@ -1871,29 +1871,29 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Write the number.",
+        "text": "Fill in the missing numbers.",
         "parts": [
           {
             "l": "a",
-            "text": "4 tens and 2 ones = ___",
+            "text": "4 tens and 2 ones = []",
             "ans": "42",
             "val": 42
           },
           {
             "l": "b",
-            "text": "7 tens and 0 ones = ___",
+            "text": "7 tens and 0 ones = []",
             "ans": "70",
             "val": 70
           },
           {
             "l": "c",
-            "text": "1 ten and 9 ones = ___",
+            "text": "1 ten and 9 ones = []",
             "ans": "19",
             "val": 19
           },
           {
             "l": "d",
-            "text": "5 ones and 8 tens = ___",
+            "text": "5 ones and 8 tens = []",
             "ans": "85",
             "val": 85
           }
@@ -1918,7 +1918,7 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Fill in the tens and ones.",
+        "text": "Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -1970,7 +1970,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 47 straws. He ties them into bundles of ten. Fill in the blanks.",
+        "text": "Ali has 47 straws. He ties the straws into bundles of 10. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -1997,17 +1997,23 @@
           "Saying 3 bundles and 17 left over: 17 singles can still make another bundle."
         ],
         "mins": 2.5,
-        "lines": 1
+        "lines": 0
       },
       {
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Siti has 3 bundles of ten and 4 single sticks. She writes 43. That is not right. Write the correct number.",
+        "text": "Siti has 3 bundles of ten and 4 single sticks. She writes 43.",
         "parts": [
           {
-            "l": "",
-            "text": "She should write ___",
+            "l": "a",
+            "text": "Is 43 the right number? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "The correct number is ___",
             "ans": "34",
             "val": 34
           }
@@ -2023,7 +2029,7 @@
           "Not saying what she mixed up (any clear sentence about the digits is fine)."
         ],
         "mins": 2,
-        "lines": 2
+        "lines": 0
       },
       {
         "id": "S7",
@@ -2065,7 +2071,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks does she have? Can she tie another bundle?",
+        "text": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks does she have?",
         "parts": [
           {
             "l": "",
@@ -2091,11 +2097,11 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "41 is 4 tens and 1 one. Open one of the 4 bundles.",
+        "text": "Fill in the blank.",
         "parts": [
           {
             "l": "",
-            "text": "Now 41 is 3 tens and ___ ones.",
+            "text": "41 = 4 tens and 1 one = 3 tens and ___ ones.",
             "ans": "11",
             "val": 11
           }
@@ -2117,7 +2123,7 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Mystery number. Clue 1: I am between 30 and 50. Clue 2: my ones digit is 6. Clue 3: my tens digit is even. What number am I?",
+        "text": "My tens digit is even. My ones digit is 6. I am between 30 and 50. What number am I?",
         "parts": [
           {
             "l": "",
@@ -2143,7 +2149,7 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Who has more, or are they the same? Show how you know.",
+        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Circle one: Mei has more. Ali has more. They have the same. Show how you know.",
         "parts": [],
         "answer": "The same: 72 each (6 tens 12 ones is 7 tens 2 ones)",
         "val": [
@@ -2153,7 +2159,7 @@
         "hint": "Take 10 of Ali's 12 loose ones and tie them into a bundle. How many bundles and ones does Ali have now?",
         "solution": "Ali's 12 ones make 1 more bundle and 2 ones. So Ali has 7 tens and 2 ones, the same as Mei. Both have 72.",
         "mistakes": [
-          "Saying Ali has more because 12 is bigger than 2.",
+          "Saying Ali has more because 12 is greater than 2.",
           "Adding 6 + 12 = 18 and comparing 18 with 9."
         ],
         "mins": 5,
@@ -2165,8 +2171,21 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Ben has 6 bundles of ten and 14 loose sticks. Siti has 85 loose sticks. Who has more sticks? How many more?",
-        "parts": [],
+        "text": "Ben has 6 bundles of ten and 14 loose sticks. Siti has 85 loose sticks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "___ has more sticks.",
+            "ans": "Siti",
+            "val": "Siti"
+          },
+          {
+            "l": "b",
+            "text": "That child has ___ more sticks.",
+            "ans": "11",
+            "val": 11
+          }
+        ],
         "answer": "Siti. Ben has 74, Siti has 85, so Siti has 11 more.",
         "val": [
           "Siti",
@@ -2181,14 +2200,27 @@
           "Not opening 14 ones into a bundle before comparing."
         ],
         "mins": 5,
-        "lines": 4
+        "lines": 3
       },
       {
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "A shop sells pencils in boxes of ten. Mei needs 60 pencils. She has 4 full boxes and 18 loose pencils. How many more pencils does she need?",
-        "parts": [],
+        "text": "Pencils come in boxes of 10. Mei needs 60 pencils. She has 4 full boxes and 18 loose pencils.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "How many pencils does she have now? ___",
+            "ans": "58",
+            "val": 58
+          },
+          {
+            "l": "b",
+            "text": "She needs ___ more pencils.",
+            "ans": "2",
+            "val": 2
+          }
+        ],
         "answer": "2 more pencils (4 boxes and 18 pencils is 58)",
         "val": [
           58,
@@ -2201,13 +2233,13 @@
           "Forgetting the 4 full boxes hold 40 pencils."
         ],
         "mins": 5,
-        "lines": 4
+        "lines": 3
       },
       {
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Show 30 as tens and ones. You may open bundles. How many different ways can you find? Write each way like this: 3 tens and 0 ones.",
+        "text": "Write 30 in different ways, like 3 tens and 0 ones. Find all the ways. How many ways are there?",
         "parts": [],
         "answer": "4 ways: 3 tens 0 ones; 2 tens 10 ones; 1 ten 20 ones; 0 tens 30 ones",
         "val": [
@@ -2229,7 +2261,7 @@
       "tier": "investigation",
       "title": "Swap the digits",
       "first": "Write 14 and 41. Which number has more sticks? Then try 26 and 62, 52 and 25, and 77.",
-      "text": "Pick a two-digit number. Swap its two digits. Is the new number bigger, smaller or the same? Try 6 numbers. Write what you notice.",
+      "text": "Pick a two-digit number. Swap its two digits. Is the new number greater, smaller or the same? Try 6 numbers. Write what you notice.",
       "lines": 4,
       "answer": "Three things can happen. If the tens digit is smaller than the ones digit (14, 26), swapping makes a bigger number (41, 62). If the tens digit is bigger (52, 91), swapping makes a smaller number (25, 19). If the two digits are the same (77), the number stays the same.",
       "val": [
@@ -2246,7 +2278,7 @@
     }
   },
   "talk": {
-    "question": "Mei says 26 and 62 are the same, because they use the same digits. Do you agree? Use bundles to explain.",
+    "question": "Are 26 and 62 the same number? Circle Yes or No. Use bundles to explain: I know because ___.",
     "starter": "I think ... because ...",
     "answer": "No. 26 is 2 bundles of ten and 6 singles. 62 is 6 bundles of ten and 2 singles. 62 has more sticks, because the tens digit counts bundles of ten.",
     "look_for": "A reason that uses tens and ones (not just 'because 6 is bigger')."
@@ -2263,7 +2295,7 @@
       "parts": [
         {
           "l": "",
-          "text": "___ sticks",
+          "text": "There are ___ sticks.",
           "ans": "48",
           "val": 48
         }
@@ -2280,7 +2312,7 @@
     },
     {
       "id": "E2",
-      "text": "Fill in the tens and ones.",
+      "text": "Fill in the blanks.",
       "parts": [
         {
           "l": "",
@@ -2742,7 +2774,7 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "41 is 4 tens and 1 one. Open one bundle. Now 41 is 3 tens and how many ones?",
+        "q": "41 = 4 tens and 1 one. 41 = 3 tens and how many ones?",
         "answer": 11,
         "easier": "c2",
         "hint": "Opening a bundle gives you 10 more singles. You still have the 1 you started with.",
@@ -2787,7 +2819,7 @@
             "n": "t*10+o",
             "u": "t-1"
           },
-          "q": "{n} is {t} tens and {o} ones. Open one bundle. Now {n} is {u} tens and how many ones?",
+          "q": "{n} = {t} tens and {o} ones. {n} = {u} tens and how many ones?",
           "answer": "o+10",
           "hint": "Opening a bundle gives you 10 more singles. You still have the {o} you started with.",
           "steps": [
@@ -2801,7 +2833,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "Mystery number. I am between 30 and 50. My ones digit is 6. My tens digit is even. What number am I?",
+        "q": "My tens digit is even. My ones digit is 6. I am between 30 and 50. What number am I?",
         "answer": 46,
         "easier": "c3",
         "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens.",
@@ -2957,7 +2989,7 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "How many different ways can you show 30 with bundles of ten and loose sticks, if you may open bundles? (3 tens and 0 ones is one way.)",
+        "q": "How many different ways are there to write 30 as tens and ones? (3 tens and 0 ones is one way.)",
         "answer": 4,
         "easier": "t2",
         "hint": "Start with 3 tens and open one bundle at a time.",
