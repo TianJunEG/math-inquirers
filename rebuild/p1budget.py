@@ -225,7 +225,7 @@ def time_plan(n, old=''):
     mnote = (mnote.group(1) or '') if mnote else ''
     wnote = re.search(r'worksheet \d+ to \d+( with [^(]*?)? \(', old)
     wnote = (wnote.group(1) or '') if wnote else ' with short teaching before each page and a check-together slide after it'
-    chk = {2: 6, 3: 5, 10: 4}.get(n, 4)
+    chk = {2: 6, 3: 5, 4: 5}.get(n, 4)
     s = 'Time plan: opening 0 to %d, warm-up %d to %d (game %d to %d, quick questions %d to %d; ask questions 1 to 3, and 4 and 5 only if you are on time), sneak-peek puzzles %d to %d, ' % (
         b['op'], b['op'], b['wu'], b['op'], b['op'] + 4, b['op'] + 4, b['wu'], b['wu'], b['sn']) if n != 10 else \
         'Time plan: opening 0 to 2, warm-up game and whiteboard round 2 to 6 (five questions), sneak-peek puzzles 6 to 10, '
@@ -311,6 +311,7 @@ def lesson_1(D):
                              ('<td>72–80</td>', '<td>72–79</td>'),
                              ('<tr style="background:#FFFFFF"><td>80–90</td>', '<tr style="background:#FFFFFF"><td>79–90</td>'),
                              ('then a two-minute look-back (you can pass)', 'then a three-minute look-back (you can pass), then a goodbye')])
+    sub_slide(D, 'l1-title', [('each child uses a paper strip and a pencil.', 'each child uses a paper strip and a pencil. Parents cut out and tape the number strip before the lesson.')])
     # Explore: parents cut and tape the strip before the lesson
     sub_slide(D, 'l1-explore1', [('Take your number strip (0 to 50). It is in your Inquirer Kit.', 'Take your number strip (0 to 50), already cut out and taped end to end.')])
     sub_slide(D, 'l1-explore1', [(' Go further (what-if) is on this slide', ' The number strip is cut out and taped before the lesson (parents are asked in the materials message), so no cutting is needed in class. Go further (what-if) is on this slide')])
@@ -375,7 +376,38 @@ def lesson_9(D):
 
 
 def lesson_10(D):
-    pass
+    # Explore: card for 6 minutes, swap, round 2 for 4 minutes, ONE debrief question, 20-second pair reports
+    sub_deck(D, [('ONE card for 10 minutes. Then you may swap with another pair for 4 minutes.', 'ONE card for 6 minutes. Then you may swap with another pair for 4 minutes.'),
+                 ('ONE card for 10 minutes. Then swap cards with another pair for 4 minutes.', 'ONE card for 6 minutes. Then swap cards with another pair for 4 minutes.')])
+    sub_slide(D, 'l10-explore1', [(r'<aside>.*?</aside>', '<aside>Minutes 10 to 11. Explain the plan, then move to the next slide with the four puzzle cards. Each pair works on ONE card for 6 minutes (11 to 17), you give 1 minute to swap (17 to 18), then a 4-minute second round (18 to 22), then ONE debrief question and 20-second pair reports (22 to 28). Pairs read their own card: do not read all four aloud. A pair that is still stuck keeps its card for round 2. Materials: the four puzzle cards (workbook Puzzle cards page), play coins, cubes, mini whiteboards. Online: each pair chooses a card from the workbook page. Reporting back is optional: say one thing you tried, not the answer.</aside>', True)])
+    sub_slide(D, 'l10-cards', [(r'<aside>.*?Answers: ', '<aside>Minutes 11 to 17. Each pair works on ONE puzzle card for 6 minutes (the printed cards are on the Puzzle cards page of the workbook; online, each pair chooses a card). Pairs read their own card; do not read all four aloud. A middle child solves any card in 2.5 to 4 minutes; the Coins card can take longer, so a pair still stuck keeps its card for round 2. At minute 17 pairs swap with another pair for a 4-minute second round (see the next slide). Reporting back is optional: one thing you tried, not the answer. Answers: ', True)])
+    sub_slide(D, 'l10-explore2', [(r'<aside>.*?Answers: ', '<aside>Minutes 17 to 28. 17 to 18: pairs swap cards. 18 to 22: second round (4 minutes). Then ask ONE debrief question: "What helped you when you were stuck?" Take 20-second pair reports from volunteers, one thing they tried, not the answer. Questions 1 and 2 are not asked. Answers: ', True),
+                                  (r'<p style="font-size:40px;font-weight:600"><span style="color:#1F7A6F">3\.</span>  ', '<p style="font-size:40px;font-weight:600">', True),
+                                  (r'<div style="background:#FFFFFF;[^"]*"><p style="font-size:40px;font-weight:600"><span style="color:#1F7A6F">[12]\.</span>[^<]*</p></div>\n', '', True)])
+    sub_slide(D, 'l10-explore2', [('Explore: talk about it', 'Explore: one question')])
+    # Mini-lesson: the Explore cards are the practice (the two "your turn" slides are gone)
+    sub_slide(D, 'l10-we3', [('Count the places aloud with the children', 'Count the places aloud with the children')])
+    # Worksheet page 2 carries Q9 again (about 3.6 minutes); the three re-teach slides are optional reminders
+    s = _read(D, 'l10-ws2')
+    if s is not None and 'Q9</span>' not in s:
+        row = '<p style="font-size:38px;font-weight:600;line-height:1.3"><span style="color:#1F7A6F;font-weight:800">Q9</span>  Make a puzzle for a friend. Write the puzzle and its answer. We swap puzzles in talk time.</p>'
+        m = re.search(r'(<p style="[^"]*"><span style="color:#1F7A6F;font-weight:800">Q8</span>[^<]*</p>)', s)
+        if m: s = s.replace(m.group(1), m.group(1) + row.replace('font-size:38px', 'font-size:%s' % re.search(r'font-size:(\d+px)', m.group(1)).group(1)), 1)
+        open(_path(D, 'l10-ws2'), 'w').write(s)
+    sub_slide(D, 'l10-ws2', [('Q9: check that the puzzle has exactly one answer and that the child can say how to start it.', 'Q9 (make a puzzle for a friend) is written on this page, about 3 to 4 minutes at the end: check that the puzzle has exactly one answer and that the child can say how to start it. The three re-teach slides (picture graph, triangles, length) are optional reminders: show one only if a child asks.')])
+    sub_slide(D, 'l10-talk', [('Make a puzzle for a friend (workbook Q9) with its answer. Swap it with a partner and solve it. Then pick one puzzle and teach it to the group in two sentences.',
+                               'Swap the puzzle you wrote (workbook Q9) with a partner and solve it. Then pick one puzzle and teach it to the group in two sentences.'),
+                              ('Q9 (make a puzzle for a friend) is done here, not on worksheet page 2: pairs write a puzzle with its answer, swap, and solve each other\'s.',
+                               'Plan: swap puzzles and solve (about 2.5 minutes), 2-minute pair talk, then volunteers. Q9 was written on worksheet page 2.')])
+    # Exit + certificates (79 to 87): say the certificate line once, then 10 seconds per child
+    sub_slide(D, 'l10-exit', [('Minutes 79 to 84. Answer: Open.', 'Minutes 79 to 84. Answer: Open.')])
+    sub_slide(D, 'end', [('Hand out certificates. Ask each child to name one puzzle they enjoyed. Give parents the one-page summary from the tutor guide.',
+                          'Minutes 84 to 87. Hand out certificates. Say the certificate line ONCE to the whole group, then spend about 10 seconds on each child with one specific thing they did well. Ask “which puzzle did you enjoy?” as a thumbs-up question, or only of volunteers: do not go round every child. Give parents the one-page summary from the tutor guide. The look-back follows at minute 87 and is never shortened.')])
+    # the certificates belong to the exit block: the end slide comes before the look-back
+    def fx(o):
+        if 'end' in o: o.remove('end')
+        o.insert(o.index('l10-reflect'), 'end')
+    order_edit(D, fx)
 
 
 # ------------------------------------------------------------------------------------------------ budget files

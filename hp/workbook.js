@@ -25,7 +25,7 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
   const row2 = p([t('What helped me:   ', { bold: true, size: 20 }), ...['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].flatMap(gopt)], { after: 20, line: 260 });
   const row2b = p([t('Next time I will try:   ', { bold: true, size: 20 }), ...['drawing it', 'using objects', 'checking my answer', 'asking a question'].flatMap(gopt)], { after: 20, line: 260 });
   const row3 = p([...gopt('I am still stuck (my tutor will come and help)'), ...gopt('I would like to pass')], { after: 0, line: 260 });
-  return [gap(30), tbl([CW], [row([cell([p([t('Look-back  ', { bold: true, size: 26, color: '1F7A6F' }), t('Two minutes. There are no right answers. You can pass. Nobody reads it out.', { size: 19 })], { after: 30 }), row0, row1, row2, row2b, row3], CW, { fill: 'FFFDF5', align: AlignmentType.LEFT, h: 50 })])])]; };
+  return [gap(30), tbl([CW], [row([cell([p([t('Look-back  ', { bold: true, size: 26, color: '1F7A6F' }), t('Three minutes. There are no right answers. You can pass. Nobody reads it out.', { size: 19 })], { after: 30 }), row0, row1, row2, row2b, row3], CW, { fill: 'FFFDF5', align: AlignmentType.LEFT, h: 50 })])])]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [gap(60), banner('Investigation: ' + v.title), p(t('Choose this any time you like. You do not have to finish it.', { italics: true, size: 22 }), { before: 40, after: 40 }), p([t('Easy first step: ', { bold: true }), t(v.first)], { after: 40 }), p([t('Then: ', { bold: true }), t(v.q)], { after: 40 }), ...lines((v.lines || 4) + 2)]; };
 const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];
 const txp = (n) => (GAPS[String(n)].tx || []).flatMap(x => [q(x.label, x.q, { before: 60, after: 40, keepNext: true }), ...(x.subs || []).map(s => sub(s[0], s[1])), ...lines(1)]);
@@ -365,7 +365,7 @@ W.push(q(7, 'If you have time: I think of a number. I add 9, then take away 4. I
 W.push(q(8, 'A pencil is 6 cubes long. A pen is 4 cubes longer than the pencil.', { keepNext: true }));
 W.push(sub('a', 'How long is the pen?   ____ cubes'));
 W.push(sub('b', 'Put the pen and the pencil end to end. How long are they together?   ____ cubes'));
-W.push(q(9, 'Make a puzzle for a friend. Write the puzzle and the answer. (We do this in talk time.)', { keepNext: true }));
+W.push(q(9, 'Make a puzzle for a friend. Write the puzzle and the answer here. (We swap puzzles in talk time.)', { keepNext: true }));
 W.push(...lines(4));
 W.push(p([t('The puzzle I liked best today was ______________________ because ______________________', { size: 24 })], { before: 240, after: 100 }));
 

@@ -74,13 +74,14 @@ module.exports = {
     objective: 'Solve balance-scale puzzles in g and kg by swapping things that balance; solve pouring puzzles with litre jugs by keeping a table of every pour; join and cut lengths in m and cm (overlaps, pieces and cuts); tell the time to 5 minutes with am and pm and find start times, end times and how long, also across the hour.',
     skills: 'Reasoning with equal amounts (swapping), working step by step, keeping a table, counting on in time, checking',
     materials: 'A coat hanger, two paper cups, string, a glue stick, a spoon and about 20 20¢ coins (a home-made balance; backup: a ruler balanced on a pencil); for the jug puzzles two cups or bottles of different size (about 3 and 5 units), a jug of dry rice or sand (or water), and tape marking 3 and 5 units; a cardboard clock with hands; mini whiteboards.',
-    online: 'Children build the coat-hanger balance before the lesson and hold it up to the camera. No coat-hanger balance at home? The tutor balances a ruler on a pencil on camera and pairs share one view. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
-    warmup: 'Which unit? The tutor shows six things (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing your teeth). Children show m, cm, kg, g, ℓ or minutes on whiteboards, then explain.',
-    explore: 'Balance lab with a coat-hanger balance: how many 20¢ coins balance a glue stick? A spoon? Guess first, then test. Which is heavier, and how do you know without putting them on the balance together?',
+    online: 'Children build the coat-hanger balance, hang it and test that it is level BEFORE the lesson (kit message, then a 30-second check at minute 0) and hold it up to the camera. No coat-hanger balance at home? The tutor balances a ruler on a pencil on camera and pairs share one view. The tutor shares the slide balances, jugs and clocks and annotates on screen. Each child needs a cardboard or paper-plate clock. For the pouring puzzles use dry rice or sand rather than water when online, and let children act out each pour with the two containers.',
+    warmup: 'Which unit? The tutor shows three things (a door, a bag of rice, brushing your teeth). Children show m, cm, kg, g, ℓ or minutes on whiteboards, then explain.',
+    explore: 'Balance lab with a coat-hanger balance (hung and tested level before the lesson): how many 20¢ coins balance a glue stick? Guess first, then test. The spoon is a take-home: which is heavier, the glue stick or the spoon, and how do you know without putting them on the balance together?',
     mini: 'A level balance means both sides are equally heavy, so we can swap one thing for whatever balances it (watermelon = 3 pineapples; pineapple = 2 kg; so watermelon = 6 kg; watermelon = pineapple + 4 bags, so the 4 bags are 4 kg). Jug puzzles: fill, pour or empty, and write every pour in a table (4 ℓ and 9 ℓ jugs: fill 9, pour into 4 twice, emptying in between, leaves 1 ℓ).',
     share: 'A melon balances 2 apples. Can you swap the melon on a scale for 2 apples and keep it level? Why?',
     exit: { q: 'A lesson starts at 4:50 pm and lasts 25 minutes. What time does it end?', a: '5:15 pm (4:50 to 5:00 is 10 minutes, 15 more minutes is 5:15)' },
     mistakes: ['Balance puzzles: adding the masses on the two sides instead of using "both sides are the same".', 'Jug puzzles: writing "pour" without saying how much is in each jug after the pour, so the steps cannot be checked.', 'Time: counting on past the hour as if there were 100 minutes in an hour (4:50 + 25 minutes written as 4:75 or 5:75).'],
+    takehome: 'Page 1: Q2(b) (get exactly 1 ℓ). Page 2: Q4(b) (the ribbon with a 5 cm overlap) and Q5(c) (how long is the trip). Also at home: try the spoon on the balance. The ribbon teaching slide and the time try-it slide are not shown in class.',
     extension: 'Make your own jug puzzle with two jug sizes and a target amount. Check that it can be done, and list every pour.',
     key: [
       ['Q1', '(a) 200 g  (b) 400 g  (c) 50 g (the melon is 400 g, the apple is 200 g, so 4 lemons are 200 g)  (d) 8 lemons'],
@@ -99,18 +100,18 @@ module.exports = {
     think: ['“A watermelon balances 3 pineapples. One pineapple balances a 2 kg weight. The scale is level, so both sides are equally heavy. I can swap each pineapple for 2 kg: 2, 4, 6. The watermelon is 6 kg.”', '“Now the watermelon balances one pineapple and 4 bags of sugar. The watermelon is 6 kg and the pineapple is 2 kg, so the bags must be the rest: 6 − 2 = 4 kg. 4 bags make 4 kg, so each bag is 1 kg. I check: 2 + 1 + 1 + 1 + 1 = 6 ✓.”', '“A jug puzzle: a 4 ℓ jug and a 9 ℓ jug, and I want exactly 1 ℓ. I fill the 9 ℓ jug. I pour into the 4 ℓ jug until it is full: 9 − 4 = 5 left. I empty the 4 ℓ jug and pour again: 5 − 4 = 1. I write every pour in a table so I can check it.”'],
     circulate: ['Ask: “The scale is level. What does that tell you?”', 'Ask: “What can you swap the melon for?”', 'Ask: “How much is in each jug now? Show me in your table.”'],
     hints: ['Hint 1: “Find the thing you know first. Which scale has a number on it?”', 'Hint 2: “Swap: put what balances it on the scale instead.”', 'Hint 3: “For jugs, write the two amounts after every pour.”'],
-    talk: ['“How did swapping help you with the balance puzzles?”', '“Why is a table useful for jug puzzles?”', '“How do you count on past the hour?”'],
-    talkAns: 'A level balance means the two sides weigh the same, so the melon can be swapped for 2 apples (or 400 g) and the scale stays level. A table shows how much is in each jug after every pour, so we can check every step and find our way back. Past the hour: count on to the o’clock first (4:50 to 5:00 is 10 minutes), then count the rest.',
+    talk: ['“How did swapping help you with the balance puzzles?”'],
+    talkAns: 'A level balance means the two sides weigh the same, so the melon can be swapped for 2 apples (or 400 g) and the scale stays level. (If a pair finishes early: a table shows how much is in each jug after every pour, so we can check every step and find our way back.)',
     close: ['“You were real Measure Masters today. You swapped things on a balance, you found exact amounts with no marks on the jugs, and you counted time across the hour.”', 'Next lesson is Challenge Day: bring your best thinking!']
   },
 
   deck: {
     today: 'Solve balance, jug and ribbon puzzles, and work out times and how long things take.',
-    warmGame: 'Which unit? Show six things one at a time (a door, a pencil, a bag of rice, a strawberry, a bucket of water, brushing teeth). Children write m, cm, kg, g, ℓ or minutes on whiteboards and explain.',
+    warmGame: 'Which unit? Show three things one at a time (a door, a bag of rice, brushing teeth; spare: a pencil, a strawberry, a bucket of water). Children write m, cm, kg, g, ℓ or minutes on whiteboards and explain.',
     warmQs: [['35 cm + 40 cm = ?', '75 cm'], ['The minute hand points to 6. How many minutes past the hour?', '30 minutes'], ['A 5 ℓ bucket has 2 ℓ of water. How much more fills it?', '3 ℓ'], ['Lunch at 12:30. am or pm?', 'pm'], ['One bag of rice is 5 kg. How heavy are 2 bags?', '10 kg']],
-    expSetup: ['Hang two paper cups from a coat hanger. Check it is level when the cups are empty.', 'Put a glue stick in one cup. Guess: how many 20¢ coins will balance it?', 'Add coins one at a time until the hanger is level. Then try a spoon.', 'Which is heavier, the glue stick or the spoon? How do you know?'],
+    expSetup: ['Your two cups are already hanging from the coat hanger (done before the lesson). Check it is level when the cups are empty.', 'Put a glue stick in one cup. Guess: how many 20¢ coins will balance it?', 'Add coins one at a time until the hanger is level.', 'Write your number. How do you know it is level?'],
     expPic: 'a coat hanger with a paper cup hanging from each end: a glue stick in one cup and a pile of 20¢ coins in the other, and the hanger level.',
-    expAsk: [['How many coins balanced your glue stick? Your spoon?', 'Open answers. The count depends on the coins and the objects.'], ['The glue stick balances 8 coins and the spoon balances 5 coins. Which is heavier?', 'The glue stick: it needs more of the same coin.'], ['Your partner used erasers and got a different number. Why?', 'Erasers and coins are different units. To compare, use the same unit.']],
+    expAsk: [['How many coins balanced your glue stick?', 'Open answers. The count depends on the coins and the objects.'], ['The glue stick balances 8 coins and the spoon balances 5 coins. Which is heavier?', 'The glue stick: it needs more of the same coin.'], ['Your partner used erasers and got a different number. Why?', 'Erasers and coins are different units. To compare, use the same unit.']],
     mini1: { head: 'Balance puzzle: swap it', body: ['A watermelon balances 3 pineapples.', 'One pineapple balances a 2 kg weight.', 'The watermelon also balances 1 pineapple and 4 bags of sugar.', 'How heavy is the watermelon? One bag of sugar?'], ans: 'Watermelon 6 kg (2 + 2 + 2). The 4 bags are 6 − 2 = 4 kg, so each bag is 1 kg. Check: 2 + 1 + 1 + 1 + 1 = 6.' },
     mini2: { head: 'Jug puzzle: keep a table', body: ['You have a 4 ℓ jug and a 9 ℓ jug with no marks.', 'You can fill a jug, empty it, or pour from one into the other.', 'How can you get exactly 1 ℓ?'], ans: 'Fill the 9 ℓ jug (0, 9). Pour into the 4 ℓ jug (4, 5). Empty the 4 ℓ jug (0, 5). Pour again (4, 1). 1 ℓ is left in the 9 ℓ jug.' },
     keyHead: 'Key idea: same on both sides', keyBig: 'A level balance means both sides are equally heavy, so you can swap. For jugs, write every pour in a table.', keySmall: 'For time, count on to the o’clock first, then count the rest.',
@@ -166,7 +167,7 @@ module.exports = {
     H.fig(jugsFig),
     H.sub('a', 'How can you get exactly 2 ℓ? Write the steps.'),
     ...H.lines(1),
-    H.sub('b', 'How can you get exactly 1 ℓ? Write the steps.'),
+    H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('How can you get exactly 1 ℓ? Write the steps.')]),
     ...H.lines(2),
     H.q(3, 'Next puzzle. Get exactly 4 ℓ in the 5 ℓ jug. Start with both jugs empty. The first three steps are done for you: you now have 2 ℓ in the 5 ℓ jug. Tip: act it out with two cups of different sizes, or draw the jugs. Where can that 2 ℓ go? Write each step in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
     H.tbl([1300, 4600, 2000, 2000], [
@@ -179,12 +180,12 @@ module.exports = {
     ]),
     H.q(4, 'Siti has a red ribbon 64 cm long. Her blue ribbon is 18 cm shorter than the red ribbon.', { keepNext: true }),
     H.sub('a', 'How long is the blue ribbon?   ________ cm'),
-    H.sub('b', 'She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.', { keepNext: true }),
+    H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.')], { keepNext: true }),
     H.fig(ribbonFig),
     H.q(5, 'Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
     H.sub('a', 'Write each time with am or pm.   A: ____________   B: ____________', { after: 50 }),
     H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________', { after: 50 }),
-    H.sub('c', 'Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?   ______________')
+    H.sub('c', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?   ______________')])
   ]
 };

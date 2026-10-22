@@ -70,7 +70,7 @@ module.exports = {
     warmup: 'Which graph tells the story? Four small line graphs (up then down, flat, steadily up, steadily down) and four stories (a bath filling, a hawker centre from 10 am to 3 pm, a candle burning, a piggy bank nobody touches). Children match each story to a graph and say why.',
     explore: 'Pairs plot a line graph from a table: the number of people in the queue at a chicken rice stall every half hour from 11:00 to 2:00 (4, 9, 18, 22, 15, 7, 3). They choose a scale, plot and join the points, then write three things the graph tells them (longest queue, fastest growth, best time to buy).',
     mini: 'Read a line graph: title, axes, scale (each line is worth 10; halfway between 20 and 30 is 25). The biggest change is the steepest line: list the change between neighbours and say up or down. Missing values in a table: use the row and column totals, then check that both ways give the same grand total. Before page 2: two lines on one graph (where they cross the values are the same, the gap is the difference, the steeper line grows faster); values that go up by the same amount each time; check where the scale starts before comparing two graphs.',
-    share: 'Two graphs show the same numbers, but one line looks much steeper. How can that be? How would you draw a fair graph?',
+    share: 'Two graphs show the same numbers, but one line looks much steeper. How can that be?',
     exit: { q: 'Visitors: Mon 35, Tue 50, Wed 20, Thu 45. Between which two days was the biggest change? Was it an increase or a decrease?', a: 'Tuesday to Wednesday: a decrease of 30.' },
     mistakes: [
       'Reading the scale as 1 for each line when each line is worth 10 (or 5), so 75 is read as 7 and a half.',
@@ -101,7 +101,8 @@ module.exports = {
     hints: ['Hint 1: “Find what one line on the scale is worth before you read anything.”', 'Hint 2: “Write the change between each pair of neighbours, with up or down.”', 'Hint 3: “Add the numbers you know, then take them away from the total.”'],
     talk: ["“Two graphs show the same numbers, but one line looks much steeper. How can that be?”"],
     talkWeekly: ["“How would you draw a fair graph if you wanted to compare two shops?”"],
-    talkAns: 'The scales are different. If a scale starts at a big number, or each line is worth very little, a small change looks huge. To compare fairly, use the same scale for both graphs, starting at 0.',
+    talkAns: "The scales are different. If a scale starts at a big number, or each line is worth very little, a small change looks huge.",
+    talkWeeklyAns: "To compare fairly, use the same scale for both graphs, starting at 0.",
     close: ['“Today you read graphs like detectives: scale first, then the changes, and you caught a graph that was trying to trick you.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -230,5 +231,7 @@ module.exports.gaps = {
   "q": "Draw the same graph again with a different scale. Does the story look different? Why?",
   "a": "Yes. A scale with small steps, or one that starts above 0, makes the line look steeper; big steps make it look flatter. The numbers are the same: only the picture changed."
  },
- "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 is a choice for the last few minutes.",
+ "p1": "This page ends at question 2. After question 2 you may choose: carry on, or try Think harder.",
+ "plan": ["Page 1 ends at Q2, so the choice is offered after question 2. Aim for Q3 and Q4 on page 2; Q5 (two shops, about 4 minutes) is a real choice question that fits after the buffer."]
 };

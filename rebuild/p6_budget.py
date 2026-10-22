@@ -14,19 +14,6 @@ FLEX='Flex (catch-up or Think harder; lose first)'
 def fmt(x):
     return ('%g'%x)
 
-def build(n,cuts,flex,slides,exit_slip=None):
-    """cuts: list of (title,minutes) for Opening..Worksheet.. in order incl. 'Worksheet'; flex minutes; slides: list of (part_title,[(id,minutes)...])"""
-    parts=[];t=0.0;sl={}
-    for title,dur,*rest in cuts:
-        parts.append((title,t,t+dur))
-        if title in slides:
-            s=t
-            for sid,d in slides[title]:
-                sl[sid]=(s,s+d);s+=d
-            assert abs(s-(t+dur))<1e-9,(n,title,s,t+dur)
-        t+=dur
-    return parts,sl,t
-
 def lesson(n,bud,flex,talk,exit_slip,slides):
     """bud: dict of Opening..Worksheet minutes (ordered list of (title,minutes)); returns the record"""
     parts=[];t=0.0;sl={}
@@ -92,9 +79,9 @@ def l10():
     parts=[('Opening',0,2),('Sneak-peek puzzles',2,6),('Challenge round (teams of 2) and check',6,19.5),('Starter projects (A-D)',19.5,26.5),
            ('Brain break',26.5,30),('Plan and build',30,58),(FLEX,58,60.5),('Showcase (8 children)',60.5,82.5),('Exit slip and talk question',82.5,86),
            ('Looking back',86,88),('Certificates and close',88,90)]
-    sl={'check':(2,6),'warm1':(6,8),'explore1':(8,10),'ws1':(10,16.5),'ws1ans':(16.5,19.5),
-        'teach1':(19.5,21),'we1':(21,23),'we2':(23,24.5),'we3':(24.5,26),'key':(26,26.5),
-        'break':(26.5,30),'teachplan':(30,32),'teachtest':(32,33),'ws2':(33,58),'ws2ans':(58,58),   # placeholders replaced below
+    sl={'check':(2,6),'explore1':(6,8.5),'ws1':(8.5,16.5),'ws1ans':(16.5,19.5),
+        'teach1':(19.5,21),'we1':(21,23.5),'we2':(23.5,24.5),'we3':(24.5,25.5),'key':(25.5,26.5),
+        'break':(26.5,30),'teachplan':(30,32.5),'teachtest':(32.5,33.5),'ws2':(33.5,56),'ws2ans':(56,58),
         'showcase':(60.5,82.5),'exit':(82.5,86),'reflect':(86,88),'end':(88,90)}
     return dict(parts=parts,slides=sl,optional=OPT)
 BUD[10]=l10()

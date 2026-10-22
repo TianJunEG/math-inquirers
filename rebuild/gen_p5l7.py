@@ -78,9 +78,9 @@ put('p5l7-warm1',sec('p5l7-warm1','0–4 MIN',body,
  'Listen for: children counting every small square. Praise rows of 10: each row is 10%.'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','50% of $90','$45'),('2.','10% of 350','35'),('3.','25% of 48','12'),('4.','1% of $700','$7'),('5.','3 out of 20 as a percentage','15%')]
+qs=[('1.','50% of $90','$45'),('2.','10% of 350','35'),('3.','25% of 48','12'),('4.','1% of $700','$7')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p5l7-warm2',sec('p5l7-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. Ask "How did you do it?" each time. 1) 50% is half: $45. 2) 10% is one tenth: 350 ÷ 10 = 35. 3) 25% is a quarter: 48 ÷ 4 = 12. 4) 1% is one hundredth: $700 ÷ 100 = $7. 5) 3 out of 20: multiply top and bottom by 5 to get 15 out of 100, so 15%. Answers: $45, 35, 12, $7, 15%.'))
+put('p5l7-warm2',sec('p5l7-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. Ask "How did you do it?" each time. 1) 50% is half: $45. 2) 10% is one tenth: 350 ÷ 10 = 35. 3) 25% is a quarter: 48 ÷ 4 = 12. 4) 1% is one hundredth: $700 ÷ 100 = $7. Answers: $45, 35, 12, $7. If you are short of time, skip question 4.'))
 
 # ---------- 4. explore: what to do ----------
 def tag(x,y,txt_,fill=YEL):
@@ -92,11 +92,11 @@ g=tag(20,20,'$200')+arrow(280,600,80,'up 10%')+tag(640,20,'?',SKY)+arrow(900,122
 steps=''.join(f'<li>{E(s)}</li>' for s in ['A bicycle costs $200. Predict: if the price goes UP 10% and then DOWN 10%, is it back to $200?','Work it out. Up 10% first. Then take 10% of the NEW price off.','Try the other way round: down 10% first, then up 10%.','Compare both answers with your prediction. What do you notice?'])
 body=h2('Explore: up 10%, down 10%')+card(chip('EXPLORE')+f'<ol style="font-size:36px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:8px">{steps}</ol>')
 body+=card(svgwrap(1540,160,'A 200 dollar price tag, an arrow up 10 percent to a tag with a question mark, then an arrow down 10 percent to another tag with a question mark',g),extra='padding:20px 32px')
-put('p5l7-explore1',sec('p5l7-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs predict first (thumbs: back to $200, less, or more?) and write the prediction. Then they work it out on whiteboards. Most children predict $200. Let them find out for themselves. Anyone who wants more (open to every pair): try up 50% then down 50% on $80. Is the gap bigger or smaller than with 10%?'))
+put('p5l7-explore1',sec('p5l7-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs predict first (thumbs: back to $200, less, or more?) and write the prediction. Then they work it out on whiteboards. Most children predict $200. Let them find out for themselves. Pair work is at most 6 minutes. Anyone who wants more (open to every pair): try up 50% then down 50% on $80. Is the gap bigger or smaller than with 10%?'))
 
 # ---------- 5. explore: talk ----------
-body=h2('Explore: talk about it')+numcards([('1.','Is the price back to $200? What is it?'),('2.','Does it matter which change comes first?'),('3.','Why is the answer not $200? Which amount did you take 10% of, each time?')],40)
-put('p5l7-explore2',sec('p5l7-explore2','14–21 MIN',body,'Minutes 14 to 21. Let pairs share, then draw both routes on the board. Answers: 1) No. $200, up 10% is $220 (10% of $200 = $20). Down 10% of $220 is $22 off, so $198. 2) No: down first gives $200 − $20 = $180, then up 10% is $18 more = $198. Same answer. 3) The two 10%s are of different amounts: $20 added, but $22 taken off, because the second 10% is of the NEW price. That is why it is $2 less. '
+body=h2('Explore: talk about it')+numcards([('1.','Is the price back to $200? What is it?'),('2.','Why is the answer not $200? Which amount did you take 10% of, each time?')],40)
+put('p5l7-explore2',sec('p5l7-explore2','14–21 MIN',body,'Minutes 14 to 21. Pencils down: gather the pairs, then draw both routes on the board. Answers: 1) No. $200, up 10% is $220 (10% of $200 = $20). Down 10% of $220 is $22 off, so $198. (Not asked together: does the order matter? No: down first gives $200 − $20 = $180, then up 10% is $18 more = $198. Same answer.) 2) The two 10%s are of different amounts: $20 added, but $22 taken off, because the second 10% is of the NEW price. That is why it is $2 less. '
  'Write on the board: "Percentage of WHAT?" This question is the heart of the lesson. After a change, the new price is the new whole. Do NOT teach the method for the worksheet yet: the next slides do that.'))
 
 # ---------- 6. teach: 10, 5, 1 ----------
@@ -124,8 +124,8 @@ body+=step(4,'98% = $60 − $1.20 = $58.80.',top=700,size=34)
 body+=answer(128,810,1664,'45% of $60 = $27.     98% of $60 = $58.80.')
 put('p5l7-we1',sec('p5l7-we1','23–26 MIN',body,'Click to reveal each step and let children say the step first. Think-aloud: "10% is one tenth: $6. 5% is half of 10%: $3. 45% is four 10%s and one 5%: four sixes are 24, add 3: $27." Then: "For 98% I could add lots of pieces, but 98% is only 2% away from the whole. I take the 2% off: 1% is 60 cents, so 2% is $1.20. $60 take away $1.20 is $58.80." '
  'Check: 45% + 55% should make $60: 55% of $60 is $33, and $27 + $33 = $60. Ask: "When is take-away the clever way?" (when the percentage is close to 100%).'))
-put('p5l7-try1',try_slide('p5l7-try1','26–27 MIN','Your turn: build it','Use 10%, 5% and 1%. Whiteboards up, then click.',[('a','20% of $70','$14'),('b','35% of $200','$70'),('c','99% of $300','$297')],
- 'Whiteboards. a) 10% = $7, so 20% = $14. b) 10% = $20, 5% = $10: 30% + 5% = $60 + $10 = $70. c) 99% = 100% − 1% = $300 − $3 = $297. Ask: "Which one used take-away? Why was it a good idea?"'))
+put('p5l7-try1',try_slide('p5l7-try1','26–27 MIN','Your turn: build it','Use 10%, 5% and 1%. Whiteboards up, then click.',[('a','20% of $70','$14'),('b','35% of $200','$70'),],
+ 'Whiteboards. a) 10% = $7, so 20% = $14. b) 10% = $20, 5% = $10: 30% + 5% = $60 + $10 = $70. (Two items only.)'))
 
 # ---------- 9. worked example: discount then GST ----------
 body=h2('Discount first, then GST')+card(p('A fan costs $120 before GST. It is sold at 15% off. Then 9% GST is added to the SALE price. What do you pay?',36,700),extra='padding:24px 40px')
@@ -137,8 +137,8 @@ body+=answer(128,810,1664,'GST = $9.18.     You pay $111.18.')
 put('p5l7-we2',sec('p5l7-we2','27–30 MIN',body,'Click to reveal each step. Ask first: "What do we take the 9% of: $120 or $102?" (the price after the discount: that is what the shop charges for the fan). Step 1: 10% of $120 is $12, 5% is $6, so 15% is $18; $102 is the sale price. Step 2: 10% of $102 is $10.20; 1% is $1.02; 9% is 10% take away 1%: $9.18. Step 3: add. '
  'Think-aloud: "GST in Singapore is 9%. It is added to what you actually pay for the thing, so I work it out on the sale price." Check by estimating: 9% is a bit less than 10% of $102 = $10.20. $9.18 is a bit less. Sensible. '
  'The machine picture shows the chain: price, discount, sale price, GST, final price.'))
-put('p5l7-try2',try_slide('p5l7-try2','30–32 MIN','Your turn: discounts and GST','Use 10%, 5% and 1%. Click to check.',[('a','An $80 shirt is 25% off. Sale price?','$60'),('b','How much is the 9% GST on a $200 bill?','$18'),('c','$50 shoes: 10% off, then 9% GST. You pay?','$49.05')],
- 'Whiteboards. a) 25% is a quarter: $20 off, $60. b) 10% of $200 = $20, 1% = $2, so 9% = $18. c) 10% of $50 = $5 off, sale price $45. GST: 10% of $45 = $4.50, 1% = $0.45, so 9% = $4.05. Pay $45 + $4.05 = $49.05. Watch for children who work out GST on $50 instead of $45.',size=36))
+put('p5l7-try2',try_slide('p5l7-try2','30–32 MIN','Your turn: discounts and GST','Use 10%, 5% and 1%. Click to check.',[('a','An $80 shirt is 25% off. Sale price?','$60'),('b','How much is the 9% GST on a $200 bill?','$18'),],
+ 'Whiteboards. a) 25% is a quarter: $20 off, $60. b) 10% of $200 = $20, 1% = $2, so 9% = $18. Watch for children who work out GST on the old price instead of the sale price. (Two items only.)',size=36))
 
 # ---------- 11. key ----------
 body=h2('Key idea: percentage of WHAT?')+card(p('Build any percentage from 10%, 5% and 1%. Before every step, ask: percentage of what?',44,700))+card(p('Take the discount off first, then work out GST on the sale price. After a change, the new amount is the new whole.',38,600,MUTED))
@@ -146,9 +146,9 @@ put('p5l7-key',sec('p5l7-key','32–33 MIN',body,'Say the key idea together. Com
 put('p5l7-break',break_slide('p5l7-break','33–37 MIN','Percent stretch. The tutor calls a percentage: 100% is standing tall with arms up, 50% is hands on your head, 25% is hands on your knees, 0% is sitting down. What does 75% look like?','Five minutes. Online: children show the position on camera. Let children call the next percentage. Ask: "What percentage is half way between 50% and 100%?" (75%: hands on shoulders). Then a drink of water.'))
 
 # ---------- worksheet page 1 ----------
-put('p5l7-ws1',ws_preview('p5l7-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Build percentages of $240 from 10%, 5% and 1%. Fill in the table.'),('Q2','Two shops, one rice cooker: 20% off and 9% GST, or a plain price. Which is cheaper?'),('Q3','Up 25%, then down 20%. Is it the same as up 5%?')],'Stuck? Write the whole at the start of each step, and ask: percentage of what?','Minutes 37 to 49. Walk around. Ask "Percentage of what?" before giving any help. Q1: check the boxes you already have before working out 35%. Q2 is the longest: shop A needs discount, then GST on the SALE price. Q3c: do not accept "yes" without working out the final price.'))
-put('p5l7-ws1ans',checks('p5l7-ws1ans','49–51 MIN','Page 1: check together',[('Q1','10% $24,  5% $12,  1% $2.40,  15% $36,  35% $84,  99% $237.60'),('Q2','a) $128   b) $11.52   c) $139.52   d) Shop A, by 48¢'),('Q3','a) $100   b) $80   c) No: it is $80, not $84. The 20% is of $100, not of $80.')],
- 'Click after a pair explains theirs. Q1: 35% = 3 × $24 + $12 = $84. 99% = $240 − $2.40 = $237.60. Q2a: 20% of $160 = $32, sale $128. Q2b: 10% of $128 = $12.80, 1% = $1.28, 9% = $11.52. Q2c: $128 + $11.52 = $139.52. Shop B is $140, so Shop A is 48¢ cheaper. Q3: $80 + $20 = $100 after the 25% rise; 20% of $100 is $20, so back to $80. The second percentage is of the new whole.',gapy=170))
+put('p5l7-ws1',ws_preview('p5l7-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Build percentages of $240 from 10%, 5% and 1%. Fill in the table.'),('Q3','Up 25%, then down 20%. Is it the same as up 5%?'),('Q2','Do this one in the page 2 time: two shops, one rice cooker.')],'Stuck? Write the whole at the start of each step, and ask: percentage of what?','Minutes 37 to 49. Walk around. Ask "Percentage of what?" before giving any help. Q1: check the boxes you already have before working out 35%. Q2 (the rice cooker, the longest) is done in the page 2 time, so leave it for now. Q3c: do not accept "yes" without working out the final price.'))
+put('p5l7-ws1ans',checks('p5l7-ws1ans','49–51 MIN','Page 1: check together',[('Q1','10% $24,  5% $12,  1% $2.40,  15% $36,  35% $84,  99% $237.60'),('Q3','a) $100   b) $80   c) No: it is $80, not $84. The 20% is of $100, not of $80.')],
+ 'One pair explains Q3 (page 1 in class is Q1 and Q3; Q2 is checked on the page 2 check slide). Click after a pair explains theirs. Q1: 35% = 3 × $24 + $12 = $84. 99% = $240 − $2.40 = $237.60. Q3: $80 + $20 = $100 after the 25% rise; 20% of $100 is $20, so back to $80. The second percentage is of the new whole.',gapy=170))
 
 # ---------- teach: percentage of a remainder ----------
 g=bar(10,10,1640,90,4,{0:YEL},{0:'spent',1:'$20',2:'$20',3:'$20'},4,36)
@@ -181,22 +181,13 @@ body+=trow(128,552,['Have a bicycle','6','3','9'],W,'rise',False,34)
 body+=step(1,'Boys: 40% of 50 = 20.   Girls: 50 − 20 = 30.',top=640,size=32)
 body+=step(2,'Bicycles: 30% of 20 = 6,   10% of 30 = 3,   6 + 3 = 9.',top=730,size=32)
 body+=answer(128,820,1664,'9 out of 50 = 18 out of 100 = 18%')
-put('p5l7-teachtable',sec('p5l7-teachtable','54–57 MIN',body,'Teach before worksheet page 2 (Q5 has a table for a class). Fill the table row by row, click by click. Boys: 40% of 50: 10% is 5, so 40% is 20. Girls: the rest, 30. Bicycles: boys 30% of 20 = 6 (10% is 2, so 30% is 6); girls 10% of 30 = 3. Whole class: 6 + 3 = 9. Tip for the table: fill in the easy parts first. Last step: 9 out of 50. To turn it into a percentage: multiply top and bottom by 2 to get 18 out of 100. Ask: "Why can we not just add 30% and 10%?" (they are percentages of different groups: 20 boys and 30 girls).'))
-
-# ---------- teach: compare deals ----------
-body=h2('Which deal is better? Work out the real price')+card(p('Pens cost $10 each. Deal A: buy 2, get 1 free. Deal B: 30% off every pen. You want 3 pens.',34,700),extra='padding:22px 40px')
-body+=pin(128,350,810,p('Deal A: buy 2, get 1 free',40,800,TEAL)+p('Pay for 2 pens:  2 × $10 = $20',36,600),None,WHITE,20,'20px 28px')
-body+=pin(982,350,810,p('Deal B: 30% off',40,800,TEAL)+p('3 pens = $30.  30% of $30 = $9 off.  Pay $21',36,600),'rise',WHITE,20,'20px 28px')
-body+=step(1,'Compare the two prices: $20 and $21. Deal A is cheaper, by $1.',top=560,size=34)
-body+=step(2,'Deal A is really how many percent off?  $10 free out of $30 = about 33% off.',top=670,size=34)
-body+=soft(128,790,1664,'Work out the real price for each deal, then compare. Do not just compare the numbers on the signs!',32,'fade')
 put('p5l7-teachdeal',sec('p5l7-teachdeal','Think harder',body,'Use this after worksheet page 2, for children who go on to the Think harder page (A2 compares two deals for 4 boxes). Ask first: "Which sounds better, a free pen or 30% off?" Let children vote, then work out both. Deal A: pay for 2 pens, $20. Deal B: $30 less 30% ($9) is $21. So the free pen wins here, by $1. Step 2: a free pen is $10 off $30, which is one third: about 33% off. '
  'On the worksheet the numbers are different and the answer is different: do not assume "buy and get free" always wins.'))
 
 # ---------- worksheet page 2 ----------
-put('p5l7-ws2',ws_preview('p5l7-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Siti spends 20%, then 25% of the money left. Is 55% left?'),('Q5','A class, a table, and glasses. Start with 10% of 40.')],'Want more? Try the Think harder page. A1 and A2 have a teaching slide first.','Children work alone. Note who needs a short catch-up next lesson, especially children who add 20% and 25% in Q4. Page 2 has only two questions so that there is time to think. The percentage-change and deal questions are on the Think harder page (A1 and A2).'))
-put('p5l7-ws2ans',checks('p5l7-ws2ans','72–76 MIN','Page 2: check together',[('Q4','a) $24   b) $24   c) $72   d) 60% left: she spent $48 of $120 = 40%'),('Q5','Girls 24, boys 16.  Glasses: girls 6, boys 8, class 14.  a) 35%')],
- 'Click after a child explains. Q4: 20% of $120 = $24; $96 left; 25% of $96 = $24; $72 left; $72 out of $120 = 60 out of 100. Ben forgot that 25% was of the remainder, not of $120. Q5: 10% of 40 = 4, so girls 60% = 24, boys 16; glasses 25% of 24 = 6, 50% of 16 = 8; 14 out of 40 = 35 out of 100. Think harder A1 (a puzzle that goes further): $1 out of the starting $4 is 25%; $1 out of the starting $5 is 20%. Think harder A2: X: pay for 3 boxes = $45. Y: 4 boxes = $60, 30% off = $18 off, $42. (b) one free box out of 4 = 25% off.',gapy=135,size=32))
+put('p5l7-ws2',ws_preview('p5l7-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q2','From page 1: two shops, one rice cooker. 20% off, then 9% GST on the SALE price.'),('Q4','Siti spends 20%, then 25% of the money left. Parts (a) to (c); part (d) is take-home ★.'),('Q5','★ Take-home: a class, a table, and glasses. Start with 10% of 40.')],'Want more? Try the Think harder page. A1 and A2 have a teaching slide first.','Children work alone on Q2 (printed on page 1) and Q4 (a) to (c); Q4 (d) and Q5 are take-home (starred). Note who needs a short catch-up next lesson, especially children who add 20% and 25% in Q4. Page 2 has only two questions so that there is time to think. The percentage-change and deal questions are on the Think harder page (A1 and A2).'))
+put('p5l7-ws2ans',checks('p5l7-ws2ans','72–76 MIN','Page 2: check together',[('Q2','a) $128   b) $11.52   c) $139.52   d) Shop A, by 48¢'),('Q4','a) $24   b) $24   c) $72   d) 60% left: she spent $48 of $120 = 40%'),('Q5','Girls 24, boys 16.  Glasses: girls 6, boys 8, class 14.  a) 35%')],
+ 'One child explains Q2, the heaviest; click through the rest (Q4 (d) and Q5 are take-home, their answers are here for you). Click after a child explains. Q2a: 20% of $160 = $32, sale $128. Q2b: 10% of $128 = $12.80, 1% = $1.28, 9% = $11.52. Q2c: $128 + $11.52 = $139.52. Shop B is $140, so Shop A is 48¢ cheaper. Q4: 20% of $120 = $24; $96 left; 25% of $96 = $24; $72 left; $72 out of $120 = 60 out of 100. Ben forgot that 25% was of the remainder, not of $120. Q5: 10% of 40 = 4, so girls 60% = 24, boys 16; glasses 25% of 24 = 6, 50% of 16 = 8; 14 out of 40 = 35 out of 100. Think harder A1 (a puzzle that goes further): $1 out of the starting $4 is 25%; $1 out of the starting $5 is 20%. Think harder A2: X: pay for 3 boxes = $45. Y: 4 boxes = $60, 30% off = $18 off, $42. (b) one free box out of 4 = 25% off.',gapy=135,size=32))
 
 # ---------- stretch / challenge ----------
 import p5_printed as _PP
@@ -235,7 +226,7 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A $30 toy is sold at 20% off.
 put('p5l7-exit',sec('p5l7-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: $26.16. 20% of $30 = $6, sale price $24. 9% of $24: 10% = $2.40, 1% = $0.24, so 9% = $2.16. $24 + $2.16 = $26.16. Extension: a shop raises every price by 25%, then has a "20% off everything" sale. Is the sale price more than, less than or the same as the old price? Try $40, $100 and $64. (The same: up 25% then down 20% always gives back the old price. $40 to $50 to $40; $100 to $125 to $100; $64 to $80 to $64. Siti on the worksheet fell for the opposite trap: it is NOT the same as up 5%.)'))
 
 # ---------- write ----------
-order=['p5l7-title','p5l7-warm1','p5l7-warm2','p5l7-explore1','p5l7-explore2','p5l7-teach1','p5l7-we1','p5l7-try1','p5l7-we2','p5l7-try2','p5l7-key','p5l7-break','p5l7-ws1','p5l7-ws1ans','p5l7-teachrem','p5l7-teachtable','p5l7-ws2','p5l7-ws2ans','p5l7-teachchange','p5l7-teachdeal','p5l7-stretch','p5l7-challenge','p5l7-chdiag','p5l7-chwalk','p5l7-talk','p5l7-exit']
+order=['p5l7-title','p5l7-warm1','p5l7-warm2','p5l7-explore1','p5l7-explore2','p5l7-teach1','p5l7-we1','p5l7-try1','p5l7-we2','p5l7-try2','p5l7-key','p5l7-break','p5l7-ws1','p5l7-ws1ans','p5l7-teachrem','p5l7-ws2','p5l7-ws2ans','p5l7-teachchange','p5l7-teachdeal','p5l7-stretch','p5l7-challenge','p5l7-chdiag','p5l7-chwalk','p5l7-talk','p5l7-exit']
 order=_PP.fix_order(order,7,S)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')

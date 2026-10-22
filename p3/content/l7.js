@@ -102,8 +102,9 @@ module.exports = {
   deck: {
     today: 'Find every rectangle with the same perimeter, push steps out to find perimeters fast, and cut up or fill in shapes to find their area.',
     warmGame: 'Area or perimeter? Trace a finger round the edge for perimeter, wipe a flat palm for area: fence a garden, tile a floor, ribbon round a card, paint a wall, frame a photo, cover a book.',
-    warmQs: [['8 × 7 = ?', '56'], ['A square has sides of 6 cm. What is its perimeter?', '24 cm'], ['A rectangle is 8 cm by 3 cm. What is its area?', '24 cm²'], ['A square has an area of 49 cm². How long is each side?', '7 cm']],
-    expSetup: ['Take 12 squares.', 'Make a rectangle using ALL 12 squares.', 'Record its length, width and perimeter in a table.', 'Make every different rectangle. Which has the longest perimeter?'],
+    warmQs: [['8 × 7 = ?', '56'], ['A square has sides of 6 cm. What is its perimeter?', '24 cm'], ['A rectangle is 8 cm by 3 cm. What is its area?', '24 cm²']],
+    takeHome: [['A square has an area of 49 cm². How long is each side?', '7 cm']],
+    expSetup: ['Take 12 squares.', 'Make a rectangle using ALL 12 squares.', 'Record its length, width and perimeter in a table.', 'Make every different rectangle (there are three). Which has the longest perimeter?'],
     expPic: '12 loose squares and an empty table with columns Length, Width, Perimeter.',
     expAsk: [['How many different rectangles did you make?', '3: 12 by 1, 6 by 2 and 4 by 3 (turning one round does not make a new one).'], ['Do they all have the same perimeter?', 'No: 26 cm, 16 cm and 14 cm. Same area, different perimeters.'], ['Which has the longest perimeter? Why?', 'The long thin one (12 by 1): fewer squares touch, so more edges are on the outside.']],
     mini1: { head: 'Same fence, different gardens', table: [['Length', '9', '8', '7', '6', '5'], ['Width', '1', '2', '3', '4', '5'], ['Area (m²)', '9', '16', '21', '24', '25']], body: ['Ravi has 20 m of fence for a rectangular garden with whole-metre sides.', 'Length + width = 20 ÷ 2 = 10. List in order, width 1 first.', 'Which garden has the biggest area?'], ans: '5 gardens. 5 m by 5 m has the biggest area: 25 m².' },

@@ -182,6 +182,7 @@ def budget_json():
             'parts': [{'title': t, 'start': num(a), 'end': num(b)} for t, a, b in parts(n)],
             'optional_slides': opt,
             'worksheet_blocks': [{'title': t, 'start': num(a), 'end': num(b)} for t, a, b in ws_blocks(n)],
+            'slide_windows': {sfx: [num(a), num(b)] for sfx, a, b in SLIDES[n]},
             'buffer': {'title': 'Buffer', 'start': num(bw[0]), 'end': num(bw[1]), 'within': 'Worksheet'},
         }
     return out

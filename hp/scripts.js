@@ -30,7 +30,7 @@ module.exports = {
     warmIntro: ['Everyone chooses ONE fruit. Put your sticky dot on it. (Online: when I point to a fruit, give a thumbs up for yours. No typing needed.)', 'Look at the wall. Which fruit do you think won? Why do you think so?'],
     predict: ['Predict: which fruit will have the most votes and which will have the fewest? Write your guesses down.'],
     exploreHints: ['Stuck: draw one row for each fruit first, then add the counters.', 'Confused about the key: “One counter stands for one child. Write it on your graph.”', 'For pairs who want more: ask “How many more votes did the winner get than the fruit in last place?”'],
-    think: ['“How many more chose green than blue? I do not add. I compare. Line up the two rows. Green has 7 and blue has 3. The difference is 7 − 3 = 4.”', '“How many children voted altogether? I add all the rows: 5 + 3 + 7 = 15.”', '“A quick way to count: count in 5s. 5, 10, 15, then three more: 18.”'],
+    think: ['“How many more chose green than blue? I do not add. I compare. Line up the two rows. Green has 7 and blue has 3. The difference is 7 − 3 = 4.”', '“How many children voted altogether? I add all the rows: 5 + 3 + 7 = 15.”'],
     circulate: ['Ask: “What does one picture stand for? Where does it say so?”', 'Ask: “Is the question asking how many altogether, or how many more? How can you tell?”', 'Ask: “Which row is longest? Which fruit is it? Are two fruits tied?”'],
     hints: ['Hint 1: “Read the key first.”', 'Hint 2: “Point to each picture as you count it.”', 'Hint 3: “Draw two bars side by side and find the difference.”'],
     talk: ['“Would the Primary 6 pupils choose the same fruit as us?”', '“What else should the teacher think about before she buys the fruit?”'],
@@ -111,14 +111,14 @@ module.exports = {
   },
   10: {
     hook: ['Welcome to challenge day! There are four puzzle cards: coins, patterns, logic and measuring. With every card we use the four inquirer rules: notice, test, check, explain.'],
-    warmIntro: ['Whiteboard round: I ask a quick question from one of our lessons. Everybody writes the answer on a whiteboard at the same time and keeps it low: nobody holds a board up in front of the group. There is no passing round and nobody is put on the spot. If your answer is different from your neighbour’s, that is a good thing to talk about.', 'It is fine to say “I am not sure”. A try-again is always welcome.'],
-    predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair chooses ONE card for 10 minutes, then you swap with another pair. It is fine to report back one thing you tried, not the answer.'],
+    warmIntro: ['Whiteboard round: I ask a quick question from one of our lessons. Everybody writes the answer at the same time and keeps the board low. Nobody is put on the spot. “I am not sure” is fine.'],
+    predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair chooses ONE card for 6 minutes, then you swap. Reporting back is optional.'],
     exploreHints: ['Stuck: say the inquirer rule that might help.', 'Rushing: “Check your answer a different way before you move on.”', 'For pairs who want more: make a puzzle for the other pair, then swap.'],
-    think: ['“Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. I try 20 + 20 + 5 = 45. ✓ Three coins.”', '“Pattern: 5, 8, 11, 14 … The rule is add 3. I make a table of places 1 to 10 and keep adding 3: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. The 10th number is 32.”', '“Logic: Mei is taller than Ben. Ben is taller than Sam. Ali is shorter than Sam. Order from tallest: Mei, Ben, Sam, Ali. Ali is shortest.”', '“Measure: a pencil is 6 cubes long. A pen is 4 cubes longer, so the pen is 6 + 4 = 10 cubes. End to end they are 6 + 10 = 16 cubes. (Not 6 + 4: the 4 is only the extra bit.)”'],
+    think: ['“Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢. I try 20 + 20 + 5 = 45. ✓ Three coins.”', '“Pattern: 5, 8, 11, 14 … The rule is add 3. I make a table of places 1 to 10 and keep adding 3: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. The 10th number is 32.”'],
     circulate: ['Ask: “Which inquirer rule helps you here?”', 'Ask: “How do you know your answer is right? Show me.”', 'Ask: “What would you do differently next time?”'],
     hints: ['Hint 1: “Which lesson does this remind you of?”', 'Hint 2: “Test it with objects.”', 'Hint 3: “Explain it to your partner out loud.”'],
-    talk: ['“Write a puzzle for a friend (workbook Q9) with its answer. Swap with a partner and solve it.”', '“Which puzzle was hardest? Why? What helped you when you were stuck?”'],
+    talk: ['“Swap the puzzle you wrote (workbook Q9) with a partner and solve it.”', '“Which puzzle was hardest? What helped you when you were stuck?”'],
     talkAns: 'Open answers. Listen for the inquirer rules: noticing a pattern, testing with objects, checking and explaining.',
-    close: ['“You are real inquirers now. Here is your certificate and your completed inquiry journal.”', 'Give each child a certificate. Tell them one specific thing they did well.']
+    close: ['“You are real inquirers now. Here are your certificates.”', 'Say it once to the group, then give each child a certificate and one specific thing they did well (about 10 seconds each).']
   }
 };

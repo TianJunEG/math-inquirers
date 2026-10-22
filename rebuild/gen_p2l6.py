@@ -101,6 +101,7 @@ put(f'{P}-title',title_slide(f'{P}-title',3,'Market Day','Money',
 # 2 warm1: Market Day shop
 shop=[('eraser','Eraser','85¢','50¢ + 20¢ + 10¢ + 5¢  (4)'),('pencil','Pencil','$1.35','$1 + 20¢ + 10¢ + 5¢  (4)'),('sticker','Sticker book','$3.45','$2 + $1 + 20¢ + 20¢ + 5¢  (5)'),
       ('bottle','Water bottle','$6.50','$5 + $1 + 50¢  (3)'),('car','Toy car','$12.70','$10 + $2 + 50¢ + 20¢  (4)'),('scooter','Scooter','$57.20','$50 + $5 + $2 + 20¢  (4)')]
+shop=[shop[0],shop[5]]   # two price tags only (85¢ and $57.20), about 2.5 minutes
 body=h2('Warm-up: Market Day shop')+p('Pay exactly with notes and coins. Who can pay with the fewest pieces?',36,600,MUTED)
 CW=533; cards=''; ans=''
 for i,(k,name,price,a) in enumerate(shop):
@@ -110,14 +111,14 @@ for i,(k,name,price,a) in enumerate(shop):
     cards+=pin(L,T,CW,inner,None,WHITE,24,'16px 20px',f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     ans+=pin(L+16,T+186,CW-32,f'<p style="font-size:28px;font-weight:800;line-height:1.2">{E(a)}</p>','pop',SOFT,16,'12px 16px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put(f'{P}-warm1',sec(f'{P}-warm1','0–5 MIN',body+cards+ans,
- 'Minutes 0 to 5. The Market Day shop. Hand out play money. Point to one item at a time: "The sticker book costs $3.45: 3 dollars and 45 cents. Pay exactly. Can you use fewer pieces than your partner?" Children lay out their money; click to show the fewest way (clicks go Eraser, Pencil, Sticker book, Water bottle, Toy car, Scooter). '
- 'Fewest: 85¢ = 50¢ + 20¢ + 10¢ + 5¢ (4). $1.35 = $1 + 20¢ + 10¢ + 5¢ (4). $3.45 = $2 + $1 + 20¢ + 20¢ + 5¢ (5). $6.50 = $5 + $1 + 50¢ (3). $12.70 = $10 + $2 + 50¢ + 20¢ (4). $57.20 = $50 + $5 + $2 + 20¢ (4). '
- 'Strategy to draw out: pay the dollars first with the biggest note that is not too much, then the cents with the biggest coin that fits. Ask: "Someone paid $6.50 with three $2 notes and five 10¢ coins. Is it exact? Is it the fewest?" (Exact, yes. Fewest, no: 8 pieces instead of 3.) Watch for 50¢ and $50 mixed up.'))
+ 'Minutes 0 to 5. The Market Day shop, two price tags only: the eraser (85¢) and the scooter ($57.20). The play money is already cut out and on the desk (kit at minute 0). Point to one item at a time: "The eraser costs 85 cents. Pay exactly. Can you use fewer pieces than your partner?" Children lay out their money; click to show the fewest way (clicks go Eraser, Scooter). '
+ 'Fewest: 85¢ = 50¢ + 20¢ + 10¢ + 5¢ (4). $57.20 = $50 + $5 + $2 + 20¢ (4). (Spare tags, not shown: $1.35 = $1 + 20¢ + 10¢ + 5¢ (4); $3.45 = $2 + $1 + 20¢ + 20¢ + 5¢ (5); $6.50 = $5 + $1 + 50¢ (3); $12.70 = $10 + $2 + 50¢ + 20¢ (4).) '
+ 'Strategy to draw out: pay the dollars first with the biggest note that is not too much, then the cents with the biggest coin that fits. Ask: "Someone paid 85¢ with eight 10¢ coins and a 5¢ coin. Is it exact? Is it the fewest?" (Exact, yes. Fewest, no: 9 pieces instead of 4.) Watch for 50¢ and $50 mixed up.'))
 
 # 3 warm2
-qs=[('1.','Write 345¢ in dollars and cents.','$3.45'),('2.','How many cents is $2.05?','205¢'),('3.','Which is more: $1.50 or 105¢?','$1.50'),('4.','Pay 75¢ with the fewest coins.','50¢+20¢+5¢'),('5.','You have 60¢. A sticker costs 85¢. How much more do you need?','25¢')]
+qs=[('1.','Write 345¢ in dollars and cents.','$3.45'),('2.','Which is more: $1.50 or 105¢?','$1.50')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards, then click. 1) 345¢ is 300¢ and 45¢: $3 and 45¢. 2) $2 is 200¢, so $2.05 is 205¢ (watch for 25¢ or 250¢). 3) $1.50 is 150¢, which is more than 105¢. 4) 50¢ + 20¢ + 5¢, 3 coins. 5) Count on: 60¢ → 80¢ is 20¢, then 5¢ more to 85¢: 25¢ (cents only, no mixed dollars and cents). Ask: "Why does $2.05 need a 0?"'))
+put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards, then click. 1) 345¢ is 300¢ and 45¢: $3 and 45¢. 2) $1.50 is 150¢, which is more than 105¢. Spare questions in the guide table: $2.05 is 205¢ (watch for 25¢ or 250¢); 75¢ is 50¢ + 20¢ + 5¢, 3 coins; 60¢ to 85¢ is 25¢ more (count on).'))
 
 # 4 explore1: toy stall
 toys=[('kite','Kite','$6'),('ball','Ball','$4'),('yoyo','Yo-yo','$3'),('bubbles','Bubbles','$2'),('sticker','Sticker','$1')]
@@ -135,8 +136,8 @@ for i,(k,name,price) in enumerate(toys):
     g+=f'<g transform="translate({x+60},0)">{toy(k)}</g>'
     g+=f'<polygon points="{x+20},180 {x+44},144 {x+220},144 {x+220},216 {x+44},216" fill="{YEL}" stroke="{NAVY}" stroke-width="4" stroke-linejoin="round"/><text x="{x+132}" y="194" font-size="44" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{price}</text>'
 pic=f'<svg aria-label="Toy stall: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1" viewBox="0 0 1480 222" xmlns="http://www.w3.org/2000/svg" style="width:1480px;height:222px">{g}</svg>'
-put(f'{P}-explore1',explore1(f'{P}-explore1',['You have $10. Look at the toy stall.','Choose some toys (at most one of each). What do they cost? What change do you get?','Find every basket that costs EXACTLY $10.','Make a list in order so you do not miss one or count one twice.'],pic,
- 'Minutes 8 to 14. Each pair gets a $10 note and the price list: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1 (whole dollars, so children add in dollars only). First they choose any basket and find the change, then they hunt for every basket that costs exactly $10. Prediction first: "How many $10 baskets do you think there are?" '
+put(f'{P}-explore1',explore1(f'{P}-explore1',['You have $10. Look at the toy stall.','Find every basket that costs EXACTLY $10 (at most one of each toy).','Make a list in order so you do not miss one or count one twice.','Say how you know there are no more.'],pic,
+ 'Minutes 8 to 14. Each pair gets a $10 note and the price list: kite $6, ball $4, yo-yo $3, bubbles $2, sticker $1 (whole dollars, so children add in dollars only). They go straight to hunting for every basket that costs exactly $10 (the change idea comes in the debrief). Pair work is 5.5 minutes. Prediction first: "How many $10 baskets do you think there are?" '
  'Online: the stall is on the slide; children record baskets on whiteboards. Hint for stuck pairs: "Put the kite in first. How much is left to spend?"'))
 
 # 5 explore2
@@ -165,8 +166,8 @@ body+=pin(1180,740,612,p('The $2 column went 3, 2, 1, 0: finished. 5 ways.',34,7
 put(f'{P}-we1',sec(f'{P}-we1','22–25 MIN',body,'Click to build each row and the side notes. Ask before each row: "What comes next if I use one fewer $2?" Think-aloud: "One $5 and one $1. Now no $5: three $2 makes $6. Two $2 makes $4, so two $1. One $2 and four $1. Six $1 coins. The $2 column counts down to 0, so I know I have them all: 5 ways." Point out $5 + $1 and $1 + $5 are the same way.'))
 
 # 8 try1
-put(f'{P}-try1',try_slide(f'{P}-try1','25–27 MIN','Your turn: in order','Make a table. Most of the biggest first.',[('a','How many ways to pay 40¢ with 20¢ and 10¢ coins?','3 ways'),('b','How many ways to pay $10 with only $5 and $2 notes?','2 ways'),('c','Pay 95¢ with the fewest coins.','50+20+20+5')],
- 'Whiteboards. a) 20 + 20; 20 + 10 + 10; four 10¢. b) Two $5; or five $2. One $5 leaves $5, which $2 notes cannot make (2, 4, 6 …), so that row is "not this one". c) 50¢ + 20¢ + 20¢ + 5¢, 4 coins.',size=36))
+put(f'{P}-try1',try_slide(f'{P}-try1','25–27 MIN','Your turn: in order','Make a table. Most of the biggest first.',[('a','How many ways to pay 40¢ with 20¢ and 10¢ coins?','3 ways')],
+ 'Whiteboards. One item: 20 + 20; 20 + 10 + 10; four 10¢. Ask: "How do you know there are no more?" (the 20¢ coins go 2, 1, 0.) Items b and c are dropped: worksheet Q1 and Q2 have the same types.',size=36))
 
 # 9 we2 work backwards with money
 bsvg=bars([('Mei',[('drink 80¢',80,GREEN),('bun 65¢',65,YEL),('left 55¢',55,SKY)],'')],unit=6,x0=140,aria='A bar for all of Mei’s money: drink 80¢, bun 65¢, left 55¢')
@@ -179,8 +180,8 @@ body+=answer(128,820,1664,'200¢ = $2.  Check: 200 − 80 = 120,  120 − 65 = 5
 put(f'{P}-we2',sec(f'{P}-we2','27–30 MIN',body,'Click through. The bar shows all her money cut into what she spent and what is left, so "at first" is the whole bar. Think-aloud: "The last thing she did was buy the bun, so I put the bun money back first." Ask: "How do we write 200¢ in dollars?" ($2, or $2.00).'))
 
 # 10 try2
-put(f'{P}-try2',try_slide(f'{P}-try2','30–31 MIN','Your turn: work backwards','Start from the end. Put back what was spent.',[('a','Ali paid with a $10 note and got $4 change. What did the toy cost?','$6'),('b','Mei spent 35¢. Now she has 40¢. How much did she have at first?','75¢'),('c','Ravi spent half his money on a book, then $5 on a game. He has $3 left. How much at first?','$16')],
- 'Whiteboards. a) $10 − $4 = $6 (check: $6 + $4 = $10). b) 40¢ + 35¢ = 75¢. c) $3 + $5 = $8 is the half he kept after the book; the other half is also $8, so $16 (check: half of $16 is $8, $8 − $5 = $3).',size=34))
+put(f'{P}-try2',try_slide(f'{P}-try2','30–31 MIN','Your turn: work backwards','Start from the end. Put back what was spent.',[('a','Ali paid with a $10 note and got $4 change. What did the toy cost?','$6'),('b','Mei spent 35¢. Now she has 40¢. How much did she have at first?','75¢')],
+ 'Whiteboards. a) $10 − $4 = $6 (check: $6 + $4 = $10). b) 40¢ + 35¢ = 75¢. (The old item c, Ravi and the half, is dropped: it is Think harder.)',size=34))
 
 # 11 key
 body=h2('Key idea: in order, and backwards')+card(p('Find every way: make a list in order, the most of the biggest note first, then one fewer each time.',42,700))+card(p('Find what someone had at first: start at the end and put back what was spent.',42,700))+card(p('100¢ = $1.  There is no $20 note.',36,600,MUTED))
@@ -198,28 +199,24 @@ body+=pin(128,720,1664,p('Count on to check: $10, $20, $25, $27, then $27.50, $2
 put(f'{P}-teachfew',sec(f'{P}-teachfew','36–38 MIN',body,'Teach before worksheet page 1 (Q1 has four prices to pay with the fewest pieces). Model with play money. Stress: $20 is two $10 notes. Ask: "Could $27 use fewer than 4 notes?" (No: no single note or pair of notes makes $27 without a $20 note.) Do not do the worksheet prices.'))
 
 # 14 ws1, 15 ws1ans
-put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Pay exactly with the FEWEST notes and coins. Dollars first, then cents.'),('Q2','Every way to pay $8 with $5, $2 and $1. Fill the table in order.')],'Use play money first, then write it down.','Minutes 38 to 50. Walk around. Ask "How do you know you have them all?" Check that pairs start Q2 with one $5 note and then count the $2 notes down.'))
-put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('$1.65','$1 + 50¢ + 10¢ + 5¢   (4)'),('$4.30','$2 + $2 + 20¢ + 10¢   (4)'),('$18.75','$10 + $5 + $2 + $1 + 50¢ + 20¢ + 5¢   (7)'),('$76','$50 + $10 + $10 + $5 + $1   (5)'),('Q2','7 ways.   4 pieces: $5 + $1 + $1 + $1,  and  $2 + $2 + $2 + $2')],
- 'Click after pairs explain. Q2 table ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H stays empty. With one $5 there is $3 left: one $2 + one $1, or three $1. With no $5 the $2 column goes 4, 3, 2, 1, 0. Pieces: 3, 4, 4, 5, 6, 7, 8.',lw=230))
+put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Pay exactly with the FEWEST notes and coins. Dollars first, then cents.'),('Q2','Every way to pay $8 with $5, $2 and $1. Fill the table in order. (Part b is a ★ take-home star.)')],'Use play money first, then write it down.','Minutes 38 to 50. Walk around. Ask "How do you know you have them all?" Check that pairs start Q2 with one $5 note and then count the $2 notes down. The last row of Q1 (the bicycle, $76) and Q2(b) are marked ★ take-home on the page: children do them at home.'))
+put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('$1.65','$1 + 50¢ + 10¢ + 5¢   (4)'),('$4.30','$2 + $2 + 20¢ + 10¢   (4)'),('$18.75','$10 + $5 + $2 + $1 + 50¢ + 20¢ + 5¢   (7)'),('$76 ★','take-home:  $50 + $10 + $10 + $5 + $1   (5)'),('Q2','7 ways.   ★ take-home (b):  4 pieces: $5 + $1 + $1 + $1,  and  $2 + $2 + $2 + $2')],
+ 'Click after pairs explain (answer lines only). The $76 row and Q2(b) are take-home stars: the answers stay here so children can mark them at home. Q2 table ($5, $2, $1): 1,1,1 / 1,0,3 / 0,4,0 / 0,3,2 / 0,2,4 / 0,1,6 / 0,0,8. Row H stays empty. With one $5 there is $3 left: one $2 + one $1, or three $1. With no $5 the $2 column goes 4, 3, 2, 1, 0. Pieces: 3, 4, 4, 5, 6, 7, 8.',lw=230))
 
 # 16 teachchange
 body=h2('Change: count on like a shopkeeper')+card(p('A book costs $33. Ali pays with a $50 note. How much change?',40,700))
 body+=step(1,'Count on from $33:  $33 → $35 is $2.',top=380,size=34)
 body+=step(2,'$35 → $40 is $5.   $40 → $50 is $10.',top=480,size=34)
-body+=step(3,'Change: $2 + $5 + $10 = $17. Fewest notes: $10 + $5 + $2.',top=580,size=34)
+body+=step(3,'Change: $2 + $5 + $10 = $17.',top=580,size=34)
 body+=pin(128,700,1664,p('Cents too: 45¢ from a $1 coin.  45¢ → 50¢ is 5¢,  50¢ → $1 is 50¢.  Change 55¢.',34,700),'fade',SOFT,20,'18px 28px')
-put(f'{P}-teachchange',sec(f'{P}-teachchange','52–54 MIN',body,'Teach before worksheet page 2 (Q3). Act it out: one child is the shopkeeper and counts the change into Ali’s hand: "33 … 35, 40, 50." The notes given ARE the fewest notes. Check with take-away: $50 − $33 = $17. Watch for children who give $27 (counting the wrong way).'))
+put(f'{P}-teachchange',sec(f'{P}-teachchange','52–54 MIN',body,'Teach before worksheet page 2 (Q3). Act it out: one child is the shopkeeper and counts the change into Ali’s hand: "33 … 35, 40, 50." Check with take-away: $50 − $33 = $17. Watch for children who give $27 (counting the wrong way).'))
 
 # 17 teachenough
 items=[('Kite','$7'),('Ball','$5'),('Puzzle','$12'),('Book','$6')]
-body=h2('Is there enough? List the pairs')+pin(128,230,1664,tags_svg(items,1100,130,'Price tags: kite $7, ball $5, puzzle $12, book $6'))+pin(1260,240,532,p('Ravi has $15.',44,800),None,SOFT,20,'22px 28px')
+body=h2('Is there enough? Add, then compare')+pin(128,230,1664,tags_svg(items,1100,130,'Price tags: kite $7, ball $5, puzzle $12, book $6'))+pin(1260,240,532,p('Ravi has $15.',44,800),None,SOFT,20,'22px 28px')
 body+=step(1,'Kite and puzzle? $7 + $12 = $19. More than $15: $4 short.',left=128,top=400,width=760,size=32)
-body+=step(2,'Which pair gives exactly $2 change? $15 − $2 = $13. Find pairs that cost $13.',left=128,top=540,width=760,size=32)
-body+=step(3,'List every pair in order. Only kite and book cost $13.',left=128,top=720,width=760,size=32)
-WP=[340,200,140]
-body+=trow(940,400,['Pair','Cost','$13?'],WP,None,True,30)
-for i,r in enumerate([['kite + ball','$12',''],['kite + puzzle','$19',''],['kite + book','$13','yes'],['ball + puzzle','$17',''],['ball + book','$11',''],['puzzle + book','$18','']]): body+=trow(940,474+i*68,r,WP,'rise',size=30)
-put(f'{P}-teachenough',sec(f'{P}-teachenough','54–56 MIN',body,'Teach before worksheet page 2 (Q4). "Is there enough?" means: add the prices, then compare with the money. To find ALL the pairs, list them in order: kite with each of the others, then ball with the ones after it, then puzzle with book. 4 things make 6 pairs. Do not do the worksheet prices.'))
+body+=step(2,'Kite and ball?  $7 + $5 = $12. Less than $15: there is enough, and $15 − $12 = $3 is left.',left=128,top=540,width=1664,size=34)
+put(f'{P}-teachenough',sec(f'{P}-teachenough','54–56 MIN',body,'Teach before worksheet page 2 (Q4). "Is there enough?" means: add the prices, then compare with the money. (Listing ALL the pairs for an exact change is worksheet Q4(b), a take-home star: not taught here.) Do not do the worksheet prices.'))
 
 # 18 teachlist2
 W5=[330,260,400,380]
@@ -230,9 +227,9 @@ body+=pin(128,800,1664,p('Most erasers first, then one fewer each time. 2 ways: 
 put(f'{P}-teachlist2',sec(f'{P}-teachlist2','56–57 MIN',body,'Teach before worksheet page 2 (Q6 uses stickers and erasers at different prices). Ask for each row: "Can 20¢ pencils make exactly the amount left?" Count in 20s: 20, 40, 60, 80, 100. 10¢ and 70¢ are not in the count, so those rows do not work. Four erasers would cost $1.20, too much, so we start at 3.'))
 
 # 19 ws2, 20 ws2ans
-put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Change. Count on like a shopkeeper.'),('Q4','Is there enough? Then find ALL the pairs.'),('Q5','Work backwards: put back what was spent (Ben’s half-money puzzle is Think harder 1).'),('Q6','Stickers and erasers for exactly $2. Make a list in order.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Check that Q6 is a list in order, not guesses.'))
-put(f'{P}-ws2ans',check_slide(f'{P}-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) 35¢     b) $24:  $10 + $10 + $2 + $2'),('Q4','a) No: $14 + $8 = $22, $2 short    b) book + cap,  bag + pen'),('Q5','100¢ = $1.00'),('Q6','4 erasers;   2 erasers + 5 stickers;   10 stickers')],
- 'Click after a child explains. Q3b: count on $26 → $30 → $40 → $50, or $50 − $26 = $24; no $20 note, so two $10 and two $2. Q4b: she spends $20 − $3 = $17: book + cap = $17, bag + pen = $17; the other four pairs cost $12, $23, $11 and $22. Q5a: 25 + 30 + 45 = 100¢. Q5b (Think harder 1): $6 + $4 = $10 is half, so $20. Q6: 1 or 3 erasers leave 150¢ or 50¢, not in the 20¢ count.'))
+put(f'{P}-ws2',ws_preview(f'{P}-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Change. Count on like a shopkeeper. (Part b is a ★ take-home star.)'),('Q4','Is there enough? (Part b, find ALL the pairs, is a ★ take-home star.)'),('Q5','Work backwards: put back what was spent (Ben’s half-money puzzle is Think harder 1).'),('Q6','Stickers and erasers for exactly $2. Make a list in order.')],'Finished early? Stretch and Challenge come next.','Children work alone. Q3(b) (change from $50) and Q4(b) (pairs with $3 change) are marked ★ take-home on the page: children do them at home. Note who needs a short catch-up next lesson. Check that Q6 is a list in order, not guesses.'))
+put(f'{P}-ws2ans',check_slide(f'{P}-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) 35¢     ★ take-home:  b) $24:  $10 + $10 + $2 + $2'),('Q4','a) No: $14 + $8 = $22, $2 short    ★ take-home:  b) book + cap,  bag + pen'),('Q5','100¢ = $1.00'),('Q6','4 erasers;   2 erasers + 5 stickers;   10 stickers')],
+ 'Click after a child explains (answer lines only). Q3(b) and Q4(b) are take-home stars: the answers stay here so children can mark them at home. Q3b: count on $26 → $30 → $40 → $50, or $50 − $26 = $24; no $20 note, so two $10 and two $2. Q4b: she spends $20 − $3 = $17: book + cap = $17, bag + pen = $17; the other four pairs cost $12, $23, $11 and $22. Q5a: 25 + 30 + 45 = 100¢. Q5b (Think harder 1): $6 + $4 = $10 is half, so $20. Q6: 1 or 3 erasers leave 150¢ or 50¢, not in the 20¢ count.'))
 
 # 21 stretch (new, not on the worksheet)
 st=[('1.','Find all the ways to pay exactly $9 using only $5 and $2 notes.'),('2.','Ali has 3 coins worth 75¢ altogether. Which coins are they? Is there another way?'),('3.','Ben’s mum gave him $5. Then he spent $12 on a game. Now he has $3. How much did he have at first?')]
@@ -265,7 +262,7 @@ for i,t in enumerate(['15¢ + 20¢ = 35¢','+ 25¢ = 60¢,  + 30¢ = 90¢','Chip
 put(f'{P}-chwalk',sec(f'{P}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the swap idea is a list in order (10 and 0, 9 and 1, 8 and 2 …) with the total going up by 10¢ each row. Q2: to get the MOST things, buy the cheapest things first. Ask: "Could she swap the biscuit for the chips?" (15 + 20 + 25 + 45 = 105¢, too much.)'))
 
 # 25 talk, 26 exit
-put(f'{P}-talk',talk_slide(f'{P}-talk','Mei says: “To pay $40 with the fewest notes, I use two $20 notes.” What would you tell her?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: there is no $20 note in Singapore. $50 is too much, so we use four $10 notes. Follow-up: "What about $45?" ($10 + $10 + $10 + $10 + $5, 5 notes.) Praise the reasons, not only the answers.'))
+put(f'{P}-talk',talk_slide(f'{P}-talk','Mei says: “To pay $40 with the fewest notes, I use two $20 notes.” What would you tell her?','Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: there is no $20 note in Singapore. $50 is too much, so we use four $10 notes. Praise the reasons, not only the answers.'))
 put(f'{P}-exit',exit_slide(f'{P}-exit','A pen costs $3.65. Pay exactly with the fewest notes and coins.','Minutes 80 to 90. Answer: $2 + $1 + 50¢ + 10¢ + 5¢ (5 pieces). Extension: find every way to pay exactly $10 using $5 notes, $2 notes and $1 coins (there are 10).'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','key','break','teachfew','ws1','ws1ans','teachchange','teachenough','teachlist2','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']

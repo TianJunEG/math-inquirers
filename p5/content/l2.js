@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 2: Fraction Feats (four operations of fractions, fraction and division)
+const { TKQ, TKP } = require('./take.js');
 // Heuristics: draw a model (bar or pizza); test in order (unit fractions: try 1/2, 1/3, 1/4 … and stop when the first part is too small);
 // find the remainder first, then take the fraction of the remainder; look for a pattern in the sums; test both ways.
 // Every answer below was worked out and checked with Python (fractions module, exact search over all cases).
@@ -76,7 +77,7 @@ module.exports = {
     ],
     circulate: ['Ask: “Is that a fraction of the whole or of the remainder?”', 'Ask: “How do you know you have found all the ways? When can you stop?”', 'Ask: “Show me your model. Are all the small units the same size?”'],
     hints: ['Hint 1: “Draw a bar. Cut it into the parts the first fraction tells you.”', 'Hint 2: “Cut the remainder again so every unit in the bar is the same size.”', 'Hint 3: “Take away the unit fraction and simplify. Is the top number 1?”'],
-    talk: ['“Ben says 1/2 + 1/3 = 2/5 because you add the tops and add the bottoms. Is he right? Use a pizza to show why.”', '“In Q4, why is each sum 1 take away a unit fraction?”'],
+    talk: ['“Ben says 1/2 + 1/3 = 2/5 because you add the tops and add the bottoms. Is he right? Use a pizza to show why.”', '“In Q2, how do you know when to stop testing unit fractions?”'],
     talkAns: 'He is wrong. 1/2 of a pizza is already more than 2/5, so adding 1/3 more cannot give 2/5. Cut into sixths: 1/2 = 3/6 and 1/3 = 2/6, so the total is 5/6. We can only add the tops when the pieces are the same size.',
     close: ['“Today you shared pizzas, found unit fractions by testing in order, took fractions of a remainder with a model and found a pattern in fraction sums. Great inquiring!”', '“Do the exit ticket on your own, then show me.”']
   },
@@ -84,18 +85,18 @@ module.exports = {
   deck: {
     today: 'Share pizzas fairly, write fractions as unit fractions, take a fraction of a remainder with a model and find patterns in fraction sums.',
     warmGame: 'Fraction Face-off. Two fractions appear. Hold up 1 finger if the first is bigger, 2 if the second is. Whisper a reason to your partner (same top? close to 1? more than a whole?); volunteers share. 3/5 or 3/7, 5/6 or 6/7, 4/9 or 1/2, 7/8 or 8/7.',
-    warmQs: [['3 ÷ 4 as a fraction', '3/4'], ['2/3 + 1/6', '5/6'], ['3/4 of 20', '15'], ['2/5 × 3/4', '3/10'], ['4/5 ÷ 2', '2/5']],
-    expSetup: ['Take 3 paper pizzas. Share them equally among 4 friends.', 'How much does each friend get? Write it as a fraction.', 'Can you cut so that each friend gets only 2 pieces?', 'Now share 5 pizzas among 6 friends, with only 2 pieces each.'],
+    warmQs: [['3 ÷ 4 as a fraction', '3/4'], ['2/3 + 1/6', '5/6'], ['3/4 of 20', '15'], ['2/5 × 3/4', '3/10']],
+    expSetup: ['Take 3 paper pizzas. Share them equally among 4 friends.', 'How much does each friend get? Write it as a fraction.', 'Can you cut so that each friend gets only 2 pieces?'],
     expPic: 'three pizzas (circles) and four smiley faces waiting for their share, with a question mark.',
-    expAsk: [['How much pizza does each of the 4 friends get?', '3/4 of a pizza (3 ÷ 4 = 3/4).'], ['How can each friend get only 2 pieces?', 'Cut 2 pizzas into halves and 1 pizza into quarters: each friend gets 1/2 + 1/4 = 3/4.'], ['5 pizzas among 6 friends, 2 pieces each?', 'Cut 3 pizzas into halves and 2 pizzas into thirds: each gets 1/2 + 1/3 = 5/6.']],
+    expAsk: [['How much pizza does each of the 4 friends get?', '3/4 of a pizza (3 ÷ 4 = 3/4).'], ['How can each friend get only 2 pieces?', 'Cut 2 pizzas into halves and 1 pizza into quarters: each friend gets 1/2 + 1/4 = 3/4.']],
     mini1: { head: 'Write 7/12 as the sum of two different unit fractions', body: ['Try 1/2: 7/12 − 6/12 = 1/12. Yes.', 'Try 1/3: 7/12 − 4/12 = 3/12 = 1/4. Yes.', 'Try 1/4: we get 1/3, the same pair. Stop: the first part is now less than half of 7/12.'], ans: 'Two ways: 1/2 + 1/12 and 1/3 + 1/4.' },
     mini2: { head: 'Mei had 180 beads. She used 1/3 of them for a bracelet and 3/4 of the remainder for a necklace. How many beads were left?', body: ['Bar in 3 parts: bracelet 1 part, remainder 2 parts.', 'Cut the remainder into 4 small units: the whole bar is 6 units.', 'Bracelet 2 units, necklace 3 units, left 1 unit. 6 units = 180.'], ans: '1 unit = 30. 30 beads were left.' },
     keyHead: 'Key idea: the fraction of WHAT?',
     keyBig: 'Find the remainder first, then take the fraction of the remainder. Draw a model with equal small units.',
     keySmall: 'a ÷ b = a/b. Unit fractions: test 1/2, 1/3, 1/4 … in order and stop when the first part is too small.',
     brk: 'Fraction freeze: walk on the spot. When the tutor calls a fraction, freeze in a pose: arms up for more than 1/2, arms out for exactly 1/2, crouch for less than 1/2.',
-    ws1: 'Page 1, in pairs: Q1 sharing and fraction and division, Q2 unit fraction puzzles, Q3 fraction of a remainder.',
-    ws2: 'Page 2, on your own: Q4 a fraction pattern, Q5 work backwards with a model, Q6 digit-card fractions.'
+    ws1: 'Page 1, in pairs: Q1 sharing and fraction and division, Q2 unit fraction puzzles, Q3 fraction of a remainder (Q3 is take-home).',
+    ws2: 'Page 2, on your own: Q5 work backwards with a model, Q4 (a) a fraction pattern ((b) (c) and Q6 digit-card fractions are take-home).'
   },
 
   qbank: {
@@ -144,7 +145,7 @@ module.exports = {
     W.push(H.p(['<b style="color:' + TEAL + '">Worked example:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + ': write ' + fr(1, 2) + ' as tenths, ' + fr(5, 10) + '. So ' + fr(7, 10) + ' − ' + fr(5, 10) + ' = ' + fr(2, 10) + ' = ' + fr(1, 5) + ', and ' + fr(7, 10) + ' = ' + fr(1, 2) + ' + ' + fr(1, 5) + '. (The fraction wall at the back of the book shows ' + fr(1, 2) + ' = ' + fr(5, 10) + '.)'], { after: 20 }));
     W.push(H.sub('a', [fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp; (try 1/3, 1/4, 1/5 … in turn)&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(2, 3) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
     // Q3 remainder
-    W.push(H.q(3, ['Siti had 240 stickers. She gave ' + fr(1, 4) + ' of them to Ben and ' + fr(2, 3) + ' of the REMAINDER to Ali.'], { keepNext: true }));
+    W.push(H.q(3, [TKQ, 'Siti had 240 stickers. She gave ' + fr(1, 4) + ' of them to Ben and ' + fr(2, 3) + ' of the REMAINDER to Ali.'], { keepNext: true }));
     W.push(H.fig(stickerBar()));
     W.push(H.sub('a', 'How many stickers did Ali get?   __________'));
     W.push(H.sub('b', 'How many stickers did Siti have left?   __________'));
@@ -154,7 +155,7 @@ module.exports = {
     W.push(H.q(4, ['Look for a pattern:&nbsp;&nbsp; ' + [[1, 2], [1, 6], [1, 12], [1, 20]].map(([a, b]) => fr(a, b)).join(' ,&nbsp; ') + ' ,&nbsp; …'], { pb: true, before: 0, keepNext: true }));
     W.push(H.sub('a', 'Write the next two fractions:   ________ ,  ________    What do you notice about the bottom numbers?', { after: 40 }));
     W.push(...H.lines(1));
-    W.push(H.sub('b', 'Work out each sum. Give each answer in its simplest form.', { keepNext: true }));
+    W.push(H.sub('b', [TKP, 'Work out each sum. Give each answer in its simplest form.'], { keepNext: true }));
     { const ws = [6600, 3300];
       const sums = [[[1, 2], [1, 6]], [[1, 2], [1, 6], [1, 12]], [[1, 2], [1, 6], [1, 12], [1, 20]]];
       W.push(H.tbl(ws, sums.map(sm => H.row([H.cell(['<div style="text-align:left;padding-left:12px">' + sm.map(([a, b]) => fr(a, b)).join(' + ') + ' &nbsp;=</div>'], ws[0], { h: 36 }), H.cell('', ws[1], { h: 36 })])))); }
@@ -167,7 +168,7 @@ module.exports = {
     W.push(H.sub('a', 'How much money did Ravi have at first?   __________'));
     W.push(H.sub('b', 'How much did the book cost?   __________'));
     // Q6 digit cards
-    W.push(H.q(6, ['Use the digit cards ' + [1, 2, 3, 4].map(card).join('') + ' once each in the boxes (fractions need not be proper).'], { keepNext: true }));
+    W.push(H.q(6, [TKQ, 'Use the digit cards ' + [1, 2, 3, 4].map(card).join('') + ' once each in the boxes (fractions need not be proper).'], { keepNext: true }));
     W.push(H.fig('<div style="text-align:center;font-size:24px;font-weight:700">' + boxfr() + ' &nbsp;+&nbsp; ' + boxfr() + '</div>'));
     W.push(H.sub('a', 'The largest sum:   ______________________'));
     W.push(H.sub('b', 'The smallest sum:   ______________________   Did you test both ways?'));

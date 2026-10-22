@@ -168,6 +168,7 @@ def retime(n):
             if k=='explore1':
                 es,ee=BUDG.part(n,'Explore'); pre=f'Minutes {fm(es)} to {fm(ee)} (the whole explore; this slide {fm(a)} to {fm(b)})'
             pre+='. '
+            if k=='break': s=re.sub(r'(?:Five|Four|Four and a half|\d[\d.]*) minutes','%s minutes'%fm(b-a),s,1)
         elif k in B['optional']:
             s=PILLRE.sub(lambda x:x.group(1)+BUDG.OPT_PILL+x.group(3),s,1); pre=OPTNOTE
         else:

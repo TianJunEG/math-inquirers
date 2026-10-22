@@ -7,8 +7,8 @@ module.exports = {
     n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed heuristics',
     objective: 'Choose a way into a non-routine problem (guess and check with a table, suppose they are all the same, work backwards, a logic grid, draw it) and use it on competition-style puzzles, checking every answer against every fact.',
     skills: 'Choosing a strategy, guess and check, supposition, working backwards, logical deduction, checking and explaining',
-    materials: 'Four puzzle cards (A to D) for the explore stations (pairs choose three), mini whiteboards, counters or cubes, certificates, stamps.',
-    online: 'Pairs go to breakout rooms with the puzzle cards (each pair chooses three of the four) and volunteers report back; the tutor ticks and crosses the logic grid on the slide as children call out.',
+    materials: 'Four puzzle cards (A to D) for the explore stations (cards A and B live; C and D take-home), mini whiteboards, counters or cubes, certificates, stamps.',
+    online: 'Pairs go to breakout rooms with the puzzle cards (cards A and B live, one room for the whole explore; C and D are take-home) and volunteers report back; the tutor ticks and crosses the logic grid on the slide as children call out.',
     warmup: 'Who am I? A 1 to 100 grid and four clues revealed one at a time (2-digit, in the 7 times table, digits add up to 10, odd). Children cross out numbers after each clue until one is left (91).',
     explore: 'Four puzzle stations, one for each way in: A guess and check (two next-door numbers multiply to 210), B heads and legs (10 spiders and beetles, 68 legs), C work backwards (double a number, add 7, get 43), D logic (who has the fish?). Pairs solve as many as they can and write how they started.',
     mini: 'Four ways in. Guess and check with a table: next-door numbers multiplying to 342 (try 20 × 21, too big; 17 × 18, too small; 18 × 19 ✓). Suppose they are all the same: 15 bicycles and tricycles with 38 wheels (all bicycles gives 30 wheels, 8 short, each swap adds 1, so 8 tricycles). Work backwards: half, then − $4, leaves $11 (11 + 4 = 15, 15 × 2 = 30). Before page 2: a logic grid with ticks and crosses; draw a queue (5th from the front and 8th from the back is 4 + 1 + 7 = 12); ages (everyone gets older by the same amount, so the total grows by 2 × the years).',
@@ -44,7 +44,8 @@ module.exports = {
     hints: ['Hint 1: “Make a table and try a number. Was it too big or too small?”', 'Hint 2: “What if they were all the same? How far off are you?”', 'Hint 3: “Start at the end and undo, last step first.”'],
     talk: ['“Which way in did you use most today?”', '“If you would like to, pick one puzzle and tell us your way in, in two sentences. Volunteers first. You can pass.”'],
     talkAns: 'Open answers. Listen for the name of the strategy (guess and check, suppose, work backwards, logic grid, draw it) and a check against every fact.',
-    close: ['“You are real inquirers now: you can start a problem you have never seen before.”', 'Give each child a certificate and their stamped inquiry journal. Tell each one a specific thing they did well this holiday.']
+    farewell: ['“Well done, inquirers. Three volunteers, please: tell us one puzzle you enjoyed and one way in you will use again. About twenty seconds each.”', '“This group tried hard puzzles, said what they were thinking and checked every answer. Notice it. Test it. Explain why. Goodbye, and see you in Primary 5!”'],
+    close: ['“You are real inquirers now: you can start a problem you have never seen before.”', 'Certificates and stamped journals go out after the lesson, each with a personal sentence you wrote before it (never read out in class).']
   },
 
   deck: {
@@ -60,7 +61,7 @@ module.exports = {
     keyBig: 'Guess and check with a table, suppose they are all the same, or work backwards from the end.',
     keySmall: 'Then check your answer against every fact in the question.',
     brk: 'Heads and legs! The tutor calls "3 chickens and 2 goats": stamp that many legs (14). Then "5 animals, 16 legs": who can say the animals?',
-    ws1: 'Page 1, in pairs: Q1 guess and check, Q2 heads and legs, Q3 work backwards.',
+    ws1: 'Page 1, in pairs: Q1a guess and check (Q1b is take-home), Q2 heads and legs. Q3 work backwards is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 the logic grid, Q5 queues, Q6 ages.'
   },
 
@@ -102,7 +103,7 @@ module.exports = {
     W.push(H.sub('a', 'Two consecutive numbers (next-door numbers, like 7 and 8) multiply to make 552. What are they?'));
     W.push(...H.lines(1));
     W.push(H.ans('Answer:'));
-    W.push(H.sub('b', 'Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
+    W.push(H.sub('b', '★ Take-home. Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
     const w = [2200, 1100, 1100, 1100, 1100, 1100, 1100, 1100];
     const cl = (c, i, head) => H.cell(c, w[i], i === 0 || head ? { bold: true, fill: 'EDEDED', h: 40 } : { h: 60 });
     W.push(H.tbl(w, [H.row(['Notebooks', '1', '2', '3', '4', '5', '6', '7'].map((c, i) => cl(c, i, true))),
@@ -178,5 +179,7 @@ module.exports.gaps = {
   "q": "What if 10 bugs have 65 legs? Could that happen? Why or why not?",
   "a": "No. Spiders have 8 legs and beetles 6: both are even numbers, so the total number of legs is always even, and 65 is odd."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4 and Q5. Q6 is a choice for the last few minutes.",
+ "p1": "Pairs: question 1a and question 2 (1b is ★ take-home). Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Pairs do Q1a and Q2 (about 9 minutes of work). Q1b (all the ways to buy pens and notebooks, a 24-cell table) is a ★ take-home question. Q3, working backwards, is the first question each child does on their own; its answer is checked with page 2."]
 };

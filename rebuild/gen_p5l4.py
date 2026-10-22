@@ -30,7 +30,7 @@ for k,t in enumerate(['Half: it is cut by a diagonal','Half: same base, same hei
 put('warm1',sec(f'{L}-warm1','0–4 MIN',body,'Minutes 0 to 4. Half or not? Children vote with thumbs for each rectangle before you click. Answers: Rectangle 1 is half (a diagonal cuts a rectangle into two equal triangles). Rectangle 2 is half too: the top corner is on the top side, so the triangle has the whole bottom side as its base and the whole height of the rectangle as its height. Many children say no because the picture looks "pointy"; do not explain yet, collect reasons. Rectangle 3 is NOT half: the corner of the triangle is in the middle of the right side, so the triangle is 1/4 of the rectangle (base 12 cm, height 4 cm; 1/2 × 12 × 4 = 24 cm² out of 96 cm²). Say: "Hold on to your reasons. We will explain why."'))
 qs=DK['warmQs']
 body=h2('Quick questions')+''.join(qrow(128,240+i*125,1250,f'{i+1}.',a,36) for i,(a,b) in enumerate(qs))+''.join(answer(1420,240+i*125,372,b) for i,(a,b) in enumerate(qs))
-put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, then click. Answers: 1) 42 cm² (7 × 6).  2) 21 cm² (half of 42).  3) 18 (9 × 4 = 36, half is 18).  4) 7 cm (7 × 7 = 49).  5) 60 (15 × 8 = 120, half is 60). Ask after 3: "What are we really doing when we halve? A triangle is half of a rectangle: which rectangle?" Listen for "the base times the height".'))
+put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, then click. Answers: 1) 42 cm² (7 × 6).  2) 21 cm² (half of 42).  3) 18 (9 × 4 = 36, half is 18).  4) 7 cm (7 × 7 = 49).  Ask after 3: "What are we really doing when we halve? A triangle is half of a rectangle: which rectangle?" Listen for "the base times the height".'))
 
 # ---- explore ----
 s=30; P=Mp(110,215,s); g=''
@@ -42,9 +42,9 @@ g+=lab(450,80,'Join the point to the two',28,TEAL,'start')+lab(450,116,'bottom c
 steps=''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:32px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:4px">{steps}</ol>')
 body+=card(svgwrap(980,262,'A rectangle 8 cm by 6 cm on a grid with a point on the top side joined to the two bottom corners; the middle triangle is yellow and the two corner pieces are blue',g),extra='padding:12px 32px')
-put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs draw the rectangle on grid paper (cut-out page at the back of the workbook) and cut out the three pieces (online: camera up as usual; hold the cut pieces up to the camera). Predict first: what fraction of the rectangle is the triangle? Does it matter where the point is? Anyone who wants more (open to every pair): put the point at the end of the top side. What kind of triangle is it now? Is it still half? (Yes: a right-angled triangle, half of the rectangle.)'))
-body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0]),('3.',DK['expAsk'][2][0])],40)
-put('explore2',sec(f'{L}-explore2','14–21 MIN',body,'Minutes 14 to 21. Gather the pairs. Hold up the pieces on camera: the two blue pieces fit exactly on the yellow triangle. Answers: 1) Yes. Each blue piece is half of a smaller rectangle (cut it along the dashed line from the point down), so together the blue pieces equal the triangle. 2) 24 cm²: the rectangle is 8 × 6 = 48 cm² and the triangle is half. 3) No: the base is always 8 cm and the height is always 6 cm, wherever the point is. Do NOT name the formula yet if nobody finds it; the next slide does.'))
+put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Ask parents the day before to draw the 8 cm by 6 cm rectangle on the grid paper (it is on the materials list), so pairs only mark the point and cut out the three pieces (online: camera up as usual; hold the cut pieces up to the camera). Pair work is at most 6.5 minutes. Predict first: what fraction of the rectangle is the triangle? Does it matter where the point is? Anyone who wants more (open to every pair): put the point at the end of the top side. What kind of triangle is it now? Is it still half? (Yes: a right-angled triangle, half of the rectangle.)'))
+body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0])],40)
+put('explore2',sec(f'{L}-explore2','14–21 MIN',body,'Minutes 14 to 21. Gather the pairs. Hold up the pieces on camera: the two blue pieces fit exactly on the yellow triangle. Answers: 1) Yes. Each blue piece is half of a smaller rectangle (cut it along the dashed line from the point down), so together the blue pieces equal the triangle. 2) 24 cm²: the rectangle is 8 × 6 = 48 cm² and the triangle is half. (Not asked together, but say it if nobody does) Does it matter where the point is? No: the base is always 8 cm and the height is always 6 cm, wherever the point is. Do NOT name the formula yet if nobody finds it; the next slide does.'))
 
 # ---- teach 1: right-angled triangle ----
 s=30; P=Mp(190,225,s)
@@ -63,8 +63,8 @@ put('teach1',sec(f'{L}-teach1','21–24 MIN',body,'Teach. Ask first: "Which leng
 put('try1',try_slide(f'{L}-try1','24–25 MIN','Your turn: whiteboards','Write the area. Remember the 1/2.',[
  ('a','A triangle has a base of 10 cm and a height of 7 cm.','35 cm²'),
  ('b','A triangle has a base of 9 cm and a height of 12 cm. Its slanting sides are 15 cm and 20 cm.','54 cm²'),
- ('c','A triangle has an area of 40 cm² and a base of 8 cm. What is its height?','10 cm')],
- 'Whiteboards. a) 1/2 × 10 × 7 = 35. b) 1/2 × 9 × 12 = 54; 15 and 20 are the slanting sides. c) 1/2 × 8 × height = 40, so 4 × height = 40, height = 10 (work backwards: double 40 is 80, and 80 ÷ 8 = 10).',size=34))
+ ],
+ 'Whiteboards. a) 1/2 × 10 × 7 = 35. b) 1/2 × 9 × 12 = 54; 15 and 20 are the slanting sides. (Two items only.)',size=34))
 
 # ---- teach 2: height outside ----
 s=22; P=Mp(60,292,s)
@@ -96,8 +96,8 @@ put('teach3',sec(f'{L}-teach3','28–31 MIN',body,'Teach. Ask first: "Do the thr
 put('try2',try_slide(f'{L}-try2','31–32 MIN','Your turn: same area?','Work out base × height first.',[
  ('a','Triangle P: base 6 cm, height 10 cm. Triangle Q: base 12 cm, height 5 cm. Same area?','Yes: 30 and 30'),
  ('b','A rectangle is 8 cm by 5 cm. A triangle uses the 8 cm side as its base and its top corner on the opposite side. Area?','20 cm²'),
- ('c','Triangle R has base 10 cm and area 40 cm². What is its height?','8 cm')],
- 'Whiteboards. a) 1/2 × 6 × 10 = 30 and 1/2 × 12 × 5 = 30: the same area, although the shapes are very different. b) Half of 8 × 5 = 40, so 20 cm². c) 1/2 × 10 × height = 40, so 5 × height = 40 and the height is 8 cm.',size=34))
+ ],
+ 'Whiteboards. a) 1/2 × 6 × 10 = 30 and 1/2 × 12 × 5 = 30: the same area, although the shapes are very different. b) Half of 8 × 5 = 40, so 20 cm². (Two items only.)',size=34))
 body=h2('Key idea: 1/2 × base × height')+card(p('Area of a triangle = 1/2 × base × height. The height meets the base at a right angle, even when it is outside the triangle.',42,700))+card(p('Same base and same height: same area, whatever the shape. Slanting sides are not needed.',38,600,MUTED))
 put('key',sec(f'{L}-key','32–33 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) '+LS['mistakes'][0]+' (2) '+LS['mistakes'][1]+' (3) '+LS['mistakes'][2]))
 put('break',break_slide(f'{L}-break','33–37 MIN',DK['brk'],'Five minutes. Online: children stand in view of the camera. Make a triangle with both arms above the head. Make a right angle with one arm. Then lean the triangle left and right: the height does not change. Then a drink of water.'))
@@ -119,17 +119,6 @@ body+=pin(128,390,700,svgwrap(620,400,'Four-sided figure ABCD with diagonal AC o
 body+=step(1,'The diagonal AC is the base of BOTH triangles: ABC and ACD.',left=900,top=390,width=892,size=32)
 body+=step(2,'ABC = 1/2 × 10 × 4 = 20 cm².   ACD = 1/2 × 10 × 6 = 30 cm².',left=900,top=520,width=892,size=32)
 body+=step(3,'Add the two parts: 20 + 30 = 50 cm².',left=900,top=650,width=892,size=32)
-put('teachsplit',sec(f'{L}-teachsplit','51–53 MIN',body,'Teach before worksheet page 2 (Q3). Ask: "How can we cut this figure into triangles we know?" Click: the diagonal is already there. Think-aloud: "AC is shared. Above it, triangle ABC has height 4 cm; below it, triangle ACD has height 6 cm. I find each area and add. I could also say: the two heights together make 10 cm, so the area is 1/2 × 10 × (4 + 6) = 50." Mention the second way only if children find it; check that it gives the same answer.'))
-# ---- teach: take away ----
-s=38; P=Mp(70,300,s)
-g=poly([P(0,0),P(10,0),P(10,6),P(0,6)],WHITE,3)+poly([P(0,0),P(6,6),P(10,4)],YEL)
-g+=lab(P(0,6)[0]-14,P(0,6)[1]-8,'A',30,NAVY,'end')+lab(P(10,6)[0]+14,P(10,6)[1]-8,'B',30,NAVY,'start')+lab(P(10,0)[0]+14,P(10,0)[1]+30,'C',30,NAVY,'start')+lab(P(0,0)[0]-14,P(0,0)[1]+30,'D',30,NAVY,'end')+lab(P(6,6)[0],P(6,6)[1]-14,'E',30)+lab(P(10,4)[0]+14,P(10,4)[1]+10,'F',30,NAVY,'start')
-g+=lab(P(3,6)[0],P(3,6)[1]-48,'AE = 6 cm',26,TEAL)+lab(P(8,6)[0],P(8,6)[1]-48,'EB = 4 cm',26,TEAL)+lab(P(10,4.6)[0]+48,P(10,4.6)[1]+10,'BF = 2 cm',26,TEAL,'start')
-body=h2('Take away the white triangles',62)+card(p('ABCD is a rectangle 10 cm by 6 cm. E is on AB with AE = 6 cm. F is on BC with BF = 2 cm. What is the area of the shaded triangle DEF?',34,700))
-body+=pin(128,390,700,svgwrap(700,350,'Rectangle ABCD, 10 cm by 6 cm. E is on AB with AE 6 cm and EB 4 cm. F is on BC with BF 2 cm and FC 4 cm. Triangle DEF is shaded.',g.replace('V','V')),None,WHITE,24,'12px 20px')
-body+=step(1,'Rectangle: 10 × 6 = 60 cm².',left=900,top=390,width=892,size=32)
-body+=step(2,'White: ADE = 1/2 × 6 × 6 = 18,  EBF = 1/2 × 4 × 2 = 4,  FCD = 1/2 × 4 × 10 = 20.',left=900,top=490,width=892,size=32)
-body+=step(3,'Shaded = 60 − 18 − 4 − 20 = 18 cm².',left=900,top=640,width=892,size=32)
 put('teachtake',sec(f'{L}-teachtake','53–55 MIN',body,'Teach before worksheet page 2 (Q4). Ask: "The shaded triangle has no square corner and no side along the rectangle. Can we find its base and height directly?" (Hard.) "What do we know? The three white triangles each have a square corner." Click through. Think-aloud: "I find the whole rectangle, then take away the three white triangles, each with a right angle at a corner of the rectangle." Check: 18 + 18 + 4 + 20 = 60. Common error: forgetting one of the three white triangles.'))
 # ---- teach: same area different triangles ----
 s=17; g=''
@@ -142,9 +131,9 @@ body+=step(2,'List pairs that multiply to 60: base 10, height 6;  base 12, heigh
 body+=pin(128,590,1664,svgwrap(800,190,'Three triangles with base and height 10 by 6, 12 by 5 and 15 by 4. Each has an area of 30 square centimetres.',g),'fade',WHITE,24,'12px 30px')
 body+=pin(128,810,1664,p('Check: 1/2 × 10 × 6 = 30,  1/2 × 12 × 5 = 30,  1/2 × 15 × 4 = 30 ✓',34,800),'fade',SOFT,20,'16px 30px')
 put('teachsame',sec(f'{L}-teachsame','55–57 MIN',body,'Teach before worksheet page 2 (Q5, a triangle of 24 cm² with a base of 12 cm). Think-aloud: "The area is half of base times height, so base times height is DOUBLE the area: 60. Now I need two numbers that multiply to 60, and I can list them in order: 1 and 60, 2 and 30, 3 and 20, 4 and 15, 5 and 12, 6 and 10." On the worksheet they use the same idea with a different area. All the triangles lean in different ways but share the same area: link to same base and same height.'))
-put('ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q3','Split the figure along the diagonal AC.'),('Q4','Rectangle with a shaded triangle: take away three white triangles.'),('Q5','Same area, different triangles.')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone. Note who needs a short catch-up next lesson, especially children who give the area of a rectangle by forgetting the 1/2.'))
+put('ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q5','Same area, different triangles.'),('Q4','Rectangle with a shaded triangle: take away three white triangles.'),('Q3','★ Take-home: split the figure along the diagonal AC.')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone on Q5 and Q4; Q3 is take-home (starred). Note who needs a short catch-up next lesson, especially children who give the area of a rectangle by forgetting the 1/2.'))
 put('ws2ans',checks(f'{L}-ws2ans','72–76 MIN','Page 2: check together',[('Q3','56 cm²   (35 + 21)'),('Q4','a) 96   b) 16, 16, 24   c) 40 cm²'),('Q5','a) 24 cm²   b) 4 cm   c) base × height = 48, e.g. 16 and 3')],
- 'Click after a child explains. Q3: ABC = 1/2 × 14 × 5 = 35 and ACD = 1/2 × 14 × 3 = 21; 35 + 21 = 56. Q4: rectangle 12 × 8 = 96; ADE = 1/2 × 4 × 8 = 16; EBF = 1/2 × 8 × 4 = 16; FCD = 1/2 × 4 × 12 = 24; 96 − 16 − 16 − 24 = 40. Q5: 1/2 × 8 × 6 = 24; 1/2 × 12 × height = 24 gives height 4 (check: 1/2 × 12 × 4 = 24); any pair with base × height = 48, such as 6 and 8, 16 and 3, 24 and 2.',gapy=170))
+ 'One child explains Q4; click through the rest (Q3 is take-home, its answer is here for you). Click after a child explains. Q3: ABC = 1/2 × 14 × 5 = 35 and ACD = 1/2 × 14 × 3 = 21; 35 + 21 = 56. Q4: rectangle 12 × 8 = 96; ADE = 1/2 × 4 × 8 = 16; EBF = 1/2 × 8 × 4 = 16; FCD = 1/2 × 4 × 12 = 24; 96 − 16 − 16 − 24 = 40. Q5: 1/2 × 8 × 6 = 24; 1/2 × 12 × height = 24 gives height 4 (check: 1/2 × 12 × 4 = 24); any pair with base × height = 48, such as 6 and 8, 16 and 3, 24 and 2.',gapy=170))
 
 # ---- stretch / challenge ----
 import p5_printed as _PP
@@ -175,7 +164,7 @@ put('talk',sec(f'{L}-talk','76–82 MIN',body,'Minutes 76 to 82. Pairs talk for 
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(LS['exit']['q'],46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
 put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['exit']['a']+' Extension: '+LS['extension']))
 
-order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','teach3','try2','key','break','ws1','ws1ans','teachsplit','teachtake','teachsame','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','teach3','try2','key','break','ws1','ws1ans','teachtake','teachsame','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 order=_PP.fix_order(order,4,S)
 sections={'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: base and height, same base same height','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Think harder, Go further, talk and exit','start':f'{L}-stretch'}}
 write_deck(L,order,sections,S,'Math Inquirers P5: Lesson 4 – Triangle Areas')

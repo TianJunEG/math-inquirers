@@ -136,7 +136,8 @@ module.exports = {
     hints: ['Hint 1: “Shade the base. Fold the walls up one at a time with your finger.”', 'Hint 2: “Look for a straight line of 3 squares. The ends are opposite.”', 'Hint 3: “Count the squares from the dashed line to each corner. Put a dot the same number of squares on the other side.”'],
     talk: ["“Mei says every shape made of 6 squares folds into a cube. Ben says a shape with 4 squares in a row always does. Who is right?”"],
     talkWeekly: ["“How can you tell two faces are opposite without folding?”"],
-    talkAns: 'Neither is right. A 2 by 3 rectangle has 6 squares but does not fold into a cube (Mei is wrong). A row of 4 with both extra squares on the same side does not fold either, because both close the same end (Ben is wrong). In a straight line of 3 squares, the two ends are opposite.',
+    talkAns: "Neither is right. A 2 by 3 rectangle has 6 squares but does not fold into a cube (Mei is wrong). A row of 4 with both extra squares on the same side does not fold either, because both close the same end (Ben is wrong).",
+    talkWeeklyAns: "In a straight line of 3 squares, the two ends are opposite.",
     close: ['“You folded cubes in your head today, and you found the hidden partners in symmetric shapes.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -252,5 +253,7 @@ module.exports.gaps = {
   "q": "What if the longest row has only 3 squares? Can the shape still fold into a cube? Find one.",
   "a": "Yes. 4 of the 11 cube nets have a longest row of 3 squares. One example: two rows of 3 squares, where the second row starts under the last square of the first row. (One net, the staircase, has no row longer than 2.)"
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Q1 (six nets) is the hardest page-1 item for a slower child; Q2 and Q3 are the carry-on questions. Aim for Q4 and Q5 on page 2; Q6 is the choice."]
 };

@@ -92,9 +92,9 @@ module.exports = {
     n: 8, week: 4, session: 'B', title: 'Shape Builders', topic: '2D and 3D Shapes',
     objective: 'Name half circles and quarter circles and use them to make and break up shapes; count every square and triangle in a figure by working in order; count the cubes in a stack, including hidden ones, layer by layer; decide which nets fold into a cube.',
     skills: 'Spatial reasoning, systematic counting, folding in your head, explaining',
-    materials: 'Paper circles (2 per child), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook), mini whiteboards.',
-    online: 'Children cut circles and build stacks on camera; the six nets A to F are on a cut-out page near the back of the workbook (print and cut them before the lesson), or cut a net from an empty box. No linking cubes at home? Use sugar cubes, dice or small boxes, or draw each stack layer by layer.',
-    warmup: 'Name the solid: a dice, a tissue box, a tin can, a party hat, a drum and a traffic cone. Children make the solid with their hands, then name it (cube, cuboid, cylinder, cone).',
+    materials: 'Paper circles (2 per child, cut out before the lesson), scissors, about 12 linking cubes per child (or sugar cubes), the cube-net cut-out page (nets A to F, near the back of the workbook), mini whiteboards.',
+    online: 'Parents cut out the 2 paper circles and the nets A to D before the lesson (kit in hand at minute 0). Children fold and cut the circles and build stacks on camera; the six nets A to F are on a cut-out page near the back of the workbook (print and cut them before the lesson), or cut a net from an empty box. No linking cubes at home? Use sugar cubes, dice or small boxes, or draw each stack layer by layer.',
+    warmup: 'Name the solid: four of the six solids (a dice, a tissue box, a tin can, a party hat). Children make the solid with their hands, then name it (cube, cuboid, cylinder, cone).',
     explore: 'Cut one paper circle into 2 half circles and another into 4 quarter circles. Make new shapes with the pieces and find different ways to make a whole circle.',
     mini: 'A half circle has 1 straight side and 1 curved side; a quarter circle has 2 straight sides meeting at a square corner and 1 curved side. Count the pieces in a picture one kind at a time; count every square by size (slide a window); count triangles by the line they sit on. Before page 2: count cubes layer by layer (cubes do not float, so hidden cubes hold up the top ones); cut out nets A to F and fold them (each square must land on a new face; squares in a line with one square between them are opposite). Nets are not in the P1 to P3 syllabus, so they are taught with real paper nets.',
     share: 'How can you be sure you counted every cube in a stack, even the ones you cannot see?',
@@ -104,6 +104,7 @@ module.exports = {
       'Counting only the cubes you can see in Q3 and forgetting the hidden cubes underneath and behind.',
       'Thinking any 6 joined squares fold into a cube (Q4): B, D and F do not (cutting out and folding shows why).'
     ],
+    takehome: 'Page 1: Q1(c) (Mei\'s half and quarter circles) and Q2(b) (count the triangles). Page 2: Q4(b) (add one square to make a cube net). The triangle-counting teaching slide goes home with Q2(b); it is not shown in class.',
     extension: 'How many squares are in a grid 5 squares long and 5 squares high? (25 + 16 + 9 + 4 + 1 = 55)',
     key: [
       ['Q1', 'Square 2, triangle 3, half circle 4, quarter circle 2. (a) half circles (b) 11 pieces (c) 3 circles: 3 half circles are 6 quarter circles, 6 + 6 = 12 quarter circles, and 4 quarter circles make a circle.'],
@@ -125,16 +126,16 @@ module.exports = {
     ],
     circulate: ['Ask: “How many straight sides does it have? So what is it called?”', 'Ask: “Where else can your window fit? Have you tried every place?”', 'Ask: “What is holding up that top cube?”'],
     hints: ['Hint 1: “Count one kind or one size at a time, and tick each one.”', 'Hint 2: “Build it with cubes, or cut out the net and fold it.”', 'Hint 3: “For a net, pick a bottom square and fold the others up one at a time.”'],
-    talk: ['“How can you be sure you counted every cube in a stack, even the ones you cannot see?”', '“Why can 6 squares in a 2 by 3 rectangle not fold into a cube?”'],
-    talkAns: 'Count layer by layer; every cube on top sits on a cube below, so the hidden ones must be there. In a 2 by 3 rectangle, 4 squares meet at a corner, but only 3 faces of a cube meet at a corner, so two squares end up on the same face.',
+    talk: ['“How can you be sure you counted every cube in a stack, even the ones you cannot see?”'],
+    talkAns: 'Count layer by layer; every cube on top sits on a cube below, so the hidden ones must be there.',
     close: ['“You named pieces by their sides, counted in order and folded nets in your head. That is real shape building.”']
   },
 
   deck: {
     today: 'Build shapes from half circles and quarter circles, count every hidden square, triangle and cube, and find which nets fold into a cube.',
-    warmGame: 'Name the solid: a dice, a tissue box, a tin can, a party hat, a drum and a traffic cone. Make the shape with your hands, then name it.',
+    warmGame: 'Name the solid: a dice, a tissue box, a tin can, a party hat (spare: a drum, a traffic cone). Make the shape with your hands, then name it.',
     warmQs: [['How many faces does a cube have?', '6'], ['How many flat faces does a cylinder have?', '2'], ['Cut a circle into 2 equal parts. What is each part called?', 'A half circle'], ['How many quarter circles make 1 whole circle?', '4'], ['Which solid has a tip and can roll?', 'A cone']],
-    expSetup: ['Take 2 paper circles that are the same size.', 'Fold one in half and cut along the fold.', 'Fold the other in half, then in half again. Open it and cut along both folds.', 'Use your pieces to make new shapes. Name them.'],
+    expSetup: ['Take your 2 paper circles (cut out before the lesson, the same size).', 'Fold one in half and cut along the fold.', 'Fold the other in half, then in half again. Open it and cut along both folds.', 'Use your pieces to make new shapes. Name them.'],
     expPic: 'one paper circle cut into 2 half circles, and another cut into 4 quarter circles, with arrows from each circle to its pieces.',
     expAsk: [['How many quarter circles cover a half circle exactly?', '2'], ['Find 3 different ways to make a whole circle from your pieces.', '2 half circles; 4 quarter circles; 1 half circle and 2 quarter circles.'], ['How many straight sides has a quarter circle? Are they the same length?', '2, and yes: they meet at a square corner.']],
     mini1: { head: 'Find the pieces', body: ['A mushroom is made of a half circle cap, a square stem and 2 quarter circles of grass.', 'Count one kind at a time: 1 straight and 1 curved side, then 2 straight sides and 1 curved side, then 4 straight sides.', 'How many pieces of each kind?'], ans: 'Half circle 1, quarter circles 2, square 1: 4 pieces.' },
@@ -186,13 +187,13 @@ module.exports = {
     out.push(H.q(1, 'The robot is made of pieces. Count each kind of piece and write how many in the boxes. Tick each piece as you count it.', { before: 40, keepNext: true }));
     out.push(H.fig(q2svg()));
     out.push(H.sub('a', 'Which kind is there the most of?  __________' + sp(4) + 'b' + sp(2) + 'Pieces altogether?  _____'));
-    out.push(H.sub('c', 'Mei has 3 half circles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.', { after: 20 }));
+    out.push(H.sub('c', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Mei has 3 half circles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.')], { after: 20 }));
     out.push(...H.lines(1));
     out.push(H.q(2, 'Count every shape. Work in order. In (a), colour each 2 by 2 square you find a different colour.', { keepNext: true }));
     out.push(H.fig(q3svg()));
     const ws = [6200, 3700];
     out.push(H.tbl(ws, [H.row(['a   How many squares?', 'Number'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED', h: 15 }))), ...['1 by 1 squares', '2 by 2 squares', '3 by 3 squares', '4 by 4 squares', 'Squares altogether'].map(t => H.row([H.cell(t, ws[0], { h: 15, bold: t.startsWith('Squares') }), H.cell('', ws[1], { h: 15 })]))]));
-    out.push(H.sub('b', 'Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____'));
+    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____')]));
 
     out.push(H.q(3, 'Count the cubes. Build stack A with your cubes first, then count. Every cube is on the table or sits on top of another cube. Stack A is only 1 cube deep.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
@@ -200,7 +201,7 @@ module.exports = {
     out.push(H.sub('b', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
     out.push(H.q(4, 'Cut out nets A to D from the cut-out page. Fold net A with your tutor on camera first, then fold B, C and D. Circle the letters of the nets that fold up into a cube.', { keepNext: true }));
     out.push(H.fig(q5svg()));
-    out.push(H.sub('b', 'Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.', { keepNext: true }));
+    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.')], { keepNext: true }));
     out.push(H.fig(q5bsvg()));
     return out;
   }

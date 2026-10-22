@@ -110,7 +110,8 @@ module.exports = {
     hints: ['Hint 1: "The denominator tells you how many pieces make one whole."', 'Hint 2: "For a fraction of a set, divide by the bottom number first, then multiply by the top number."', 'Hint 3: "To compare, change one fraction so both have the same denominator, or compare each with a half."'],
     talk: ["\"Which is more: 2 1/3 pizzas or 9/4 pizzas? Mei says 9/4 because 9 is a big number.\""],
     talkWeekly: ["\"Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?\""],
-    talkAns: '2 1/3 is more. 9/4 = 2 1/4, and both have 2 wholes. A third is bigger than a quarter (sharing one pizza among 3 gives bigger slices than sharing among 4), so 2 1/3 is bigger. Mei looked at the 9 alone, but quarters are small pieces. For Ravi: 3/5 is bigger, because fifths are bigger pieces than sevenths.',
+    talkAns: "2 1/3 is more. 9/4 = 2 1/4, and both have 2 wholes. A third is bigger than a quarter (sharing one pizza among 3 gives bigger slices than sharing among 4), so 2 1/3 is bigger. Mei looked at the 9 alone, but quarters are small pieces.",
+    talkWeeklyAns: "For Ravi: 3/5 is bigger, because fifths are bigger pieces than sevenths.",
     close: ['"You were real fraction explorers today: you built fractions, lined them up and compared them with good reasons."', '"Hand me your exit ticket and I will stamp your inquiry journal."']
   },
 
@@ -238,5 +239,7 @@ module.exports.gaps = {
   "q": "What if each pizza had 8 slices and they ate 19? How many pizzas is that?",
   "a": "2 pizzas and 3 slices: 19/8 = 2 3/8."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Aim for Q4 and Q5 on page 2. Q6 (fractions with denominator 12 between 1/3 and 3/4, about 4 minutes) is a real choice question that now fits after the buffer."]
 };

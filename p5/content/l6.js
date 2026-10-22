@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 6: Rate Racers (rate per unit, better buys, taps and printers, charges, comparing plans)
+const { TKQ, TKP } = require('./take.js');
 // Every answer below was worked out with exact fractions; the "fewest cost" answers were checked against every possible mix of packs.
 
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF', CREAM = '#FFF9EC';
@@ -83,18 +84,18 @@ module.exports = {
   deck: {
     today: 'Find the rate for 1, compare better buys, add rates when taps and printers work together, and work out charges and price plans.',
     warmGame: 'Better Buy Showdown. First pair: pens, 4 for $2.00 or 10 for $4.00 (50¢ and 40¢ each). Point to the better buy, then prove it with the price of 1. Tutor extension if the group is ready: juice (1.5 ℓ for $3.00 or 2 ℓ for $3.80) and eggs (10 for $3.20 or 12 for $3.96).',
-    warmQs: [['4 kg of rice cost $10. How much is 1 kg?', '$2.50'], ['A printer prints 30 pages a minute. How many pages in 6 minutes?', '180 pages'], ['A tap lets out 450 ml in 3 minutes. How many ml a minute?', '150 ml'], ['Cheese costs $1.20 for 100 g. How much is 1 kg?', '$12'], ['Ali types 40 words a minute. How long for 200 words?', '5 minutes']],
-    expSetup: ['Printer A prints 72 pages in 4 minutes. Printer B prints 50 pages in 2 minutes.', 'Make a rate table for each printer: 1, 2, 4 and 10 minutes.', 'Which printer is faster? Show how you know.', 'Predict, then work out: how long do both printers together take to print 430 pages?'],
+    warmQs: [['4 kg of rice cost $10. How much is 1 kg?', '$2.50'], ['A printer prints 30 pages a minute. How many pages in 6 minutes?', '180 pages'], ['A tap lets out 450 ml in 3 minutes. How many ml a minute?', '150 ml'], ['Cheese costs $1.20 for 100 g. How much is 1 kg?', '$12']],
+    expSetup: ['Printer A prints 72 pages in 4 minutes. Printer B prints 50 pages in 2 minutes.', 'Make a rate table for each printer: 1, 2, 4 and 10 minutes.', 'Which printer is faster? Show how you know.'],
     expPic: 'two printers side by side, A with “72 pages in 4 min” and B with “50 pages in 2 min”, above two empty rate tables with rows for minutes and pages.',
-    expAsk: [['Which printer is faster? How do you know?', 'B: 25 pages a minute; A: 18 pages a minute. (Or compare 4 minutes: A 72, B 100.)'], ['How long do both together take for 430 pages?', '10 minutes: together 18 + 25 = 43 pages a minute, and 430 ÷ 43 = 10.'], ['Why is the rate for 1 minute so useful?', 'We can compare the printers fairly, multiply to scale up and divide to find a time.']],
+    expAsk: [['Which printer is faster? How do you know?', 'B: 25 pages a minute; A: 18 pages a minute. (Or compare 4 minutes: A 72, B 100.)'], ['Why is the rate for 1 minute so useful?', 'We can compare the printers fairly, multiply to scale up and divide to find a time.']],
     mini1: { head: 'Better buy: pens at 3 for $1.95 or 5 for $3.10', table: [['Pack', '3 pens', '5 pens'], ['Price', '$1.95', '$3.10'], ['1 pen', '65¢', '62¢']], body: ['Find the price of 1 pen at each shop.', 'Check another way: 15 pens cost $9.75 or $9.30.'], ans: 'The 5-pack is the better buy (62¢ a pen). But if Mei needs only 3 pens, the 3-pack costs less.' },
     mini2: { head: 'Taps together: a 180 ℓ tank, taps of 9 ℓ and 6 ℓ a minute', body: ['Together: 9 + 6 = 15 ℓ a minute, so 180 ÷ 15 = 12 minutes.', 'A leak lets out 3 ℓ a minute: 15 − 3 = 12 ℓ stay in each minute.', '180 ÷ 12 = 15 minutes.'], ans: '12 minutes; with the leak, 15 minutes. Add the rates, never the times.' },
     keyHead: 'Key idea: find the rate for 1',
     keyBig: 'Find how much for 1 unit (1 minute, 1 kg, 1 can). Multiply to scale up; divide to find how many or how long.',
     keySmall: 'Working together, the rates add. A leak or drain takes its rate away. Compare buys by the price of 1, counting every item you get.',
-    brk: 'Rate race! How many star jumps can you do in 10 seconds? Predict your 1-minute total (× 6). Then test for 30 seconds: does your rate stay the same?',
-    ws1: 'Page 1, in pairs: Q1 the bottling machine, Q2 the best buy, Q3 the taps and the crack.',
-    ws2: 'Page 2, on your own: Q4 the printers, Q5 the car park, Q6 the two gyms.'
+    brk: 'Rate race! Do star jumps for 60 seconds and count them once. That number is your rate: star jumps a minute.',
+    ws1: 'Page 1, in pairs: Q1 the bottling machine, Q2 the best buy, Q3 (a) tap A alone ((b) (c), the taps and the crack, are take-home).',
+    ws2: 'Page 2, on your own: Q4 (a) (b) the printers, Q6 (a) the gym table (Q5, the car park, and Q6 (b) (c) are take-home).'
   },
 
   qbank: {
@@ -156,13 +157,13 @@ module.exports = {
       H.sub('b', 'Which shop is the best buy?   ________'),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________<br>' + L('(d)') + '(try this one if you like) The tank is full. Both taps are off but the crack still leaks. How long until it is half full?   ________'), 6300, { h: 40 })])]),
+        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + TKP + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + TKP + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________<br>' + L('(d)') + '(try this one if you like) The tank is full. Both taps are off but the crack still leaks. How long until it is half full?   ________'), 6300, { h: 40 })])]),
 
       H.q(4, 'Printer P prints 30 pages a minute. Printer Q prints 20 pages a minute. A job has 900 pages.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),
       H.sub('b', 'Instead, P starts alone. After 5 minutes, Q joins in. How long does the whole job take from the start?', { keepNext: true }),
       ...H.lines(1),
-      H.q(5, 'Look at the car park sign.', { keepNext: true }),
+      H.q(5, [TKQ, 'Look at the car park sign.'], { keepNext: true }),
       H.fig(figPark()),
       H.p(['<b style="color:#1F7A6F">Start here:</b> the time line shows the first hour, then half hours. Circle every half hour that Ali’s car is in the car park (a part of a half hour counts). Count them.'], { after: 10 }),
       H.fig(figTimeline()),
@@ -172,8 +173,8 @@ module.exports = {
       H.q(6, 'Gym A charges $30 to join and then $4 for each visit. Gym B has no joining fee and charges $7 for each visit.', { keepNext: true }),
       H.sub('a', 'Complete the table.', { keepNext: true, after: 60 }),
       gymTbl,
-      H.sub('b', 'For how many visits do the two gyms cost the same?   ________'),
-      H.sub('c', 'Siti plans to go 14 times. Which gym is cheaper for her, and by how much?   ________________________')
+      H.sub('b', [TKP, 'For how many visits do the two gyms cost the same?   ________']),
+      H.sub('c', [TKP, 'Siti plans to go 14 times. Which gym is cheaper for her, and by how much?   ________________________'])
     ];
   }
 };

@@ -71,7 +71,8 @@ module.exports = {
   deck: {
     today: 'Divide with leftovers, decide what the leftover means in a story, work backwards, and crack “what number am I?” riddles with a list.',
     warmGame: 'Leftover Lucky Dip. The tutor calls a number of sweets and a group size (23 in 4s, 17 in 3s, 26 in 8s, 41 in 6s). Children show the groups on one hand and the leftover on the other.',
-    warmQs: [['17 ÷ 5', '3 r 2'], ['30 ÷ 7', '4 r 2'], ['45 ÷ 6', '7 r 3'], ['50 ÷ 8', '6 r 2'], ['63 ÷ 9', '7 r 0 (nothing left over)']],
+    warmQs: [['17 ÷ 5', '3 r 2'], ['30 ÷ 7', '4 r 2'], ['45 ÷ 6', '7 r 3']],
+    takeHome: [['50 ÷ 8', '6 r 2'], ['63 ÷ 9', '7 r 0 (nothing left over)']],
     expSetup: ['Take 25 counters.', 'Put them in groups of 2, then 3, 4, 5 and 6.', 'Record the groups and the leftover in a table.', 'Ask: what do you notice about the leftovers?'],
     expPic: '25 counters in six groups of 4 with 1 left over, next to a table with columns Group size, Groups and Left over.',
     expAsk: [

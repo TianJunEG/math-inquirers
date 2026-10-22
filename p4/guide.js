@@ -2,6 +2,12 @@ const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan;
+const BUD = require('./budget.json').lessons;          // the clock of every lesson (rebuild/p4_budget.py writes it)
+const fm = x => String(Math.round(x * 10) / 10);
+const bp = (n, title) => BUD[n].parts.find(p => p.title === title);
+const rg = (a, b) => fm(a) + '–' + fm(b) + ' min';
+const to = (a, b) => fm(a) + ' to ' + fm(b);
+const dr = (title) => { const d = L.lessons.map(l => { const p = bp(l.n, title); return p.end - p.start; }); const lo = Math.min(...d), hi = Math.max(...d); return lo === hi ? fm(lo) : fm(lo) + ' to ' + fm(hi); };
 const G = [];
 const S = 21; // body size (10.5pt)
 const tx = (s, o = {}) => p(t(s, { size: S, ...o }), { after: o.after === undefined ? 80 : o.after, line: 280 });

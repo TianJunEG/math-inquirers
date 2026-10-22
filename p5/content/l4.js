@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 4: Triangle Areas (area of a triangle; base and height, heights outside the triangle,
+const { TKQ, TKP } = require('./take.js');
 // same base and same height, triangles in composite figures, shaded-area puzzles).
 // Every figure is drawn to scale from cm coordinates, and every area was checked with exact arithmetic (shoelace formula in Python).
 
@@ -73,7 +74,7 @@ module.exports = {
     n: 4, week: 2, session: 'B', title: 'Triangle Areas', topic: 'Area of Triangle',
     objective: 'Find the area of a triangle as 1/2 × base × height, choosing a base and the height that meets it at a right angle (also when the height is outside the triangle); use “same base, same height” to explain equal areas; find areas of composite figures and shaded parts by splitting into triangles or by taking away.',
     skills: 'Spotting the height, ignoring lengths that are not needed, reasoning with same base and same height, splitting a figure, taking away from a rectangle, explaining why an area does not change',
-    materials: 'Square grid paper (cut-out page at the back of the workbook), scissors, ruler, set square or the corner of a card, mini whiteboard and marker, workbook, pencil.',
+    materials: 'Square grid paper (cut-out page at the back of the workbook) with an 8 cm by 6 cm rectangle already drawn on it the day before, scissors, ruler, set square or the corner of a card, mini whiteboard and marker, workbook, pencil.',
     online: 'The tutor shares the slides and clicks to draw heights and reveal each step. For the explore, children draw and cut their rectangle with the camera up as usual, and hold the cut pieces up to the camera to show they fit (or use the interactive version on the slide). Whiteboards are held up together for the quick questions.',
     warmup: 'Half or not? Three rectangles each have one shaded triangle. Children vote: is the shaded triangle exactly half of the rectangle? (Diagonal: yes. Top corner on the opposite side: yes. Corner to the middle of a side: no, it is 1/4.)',
     explore: 'Cut a rectangle. Pairs draw a rectangle 8 cm by 6 cm on grid paper, mark any point on the top side and join it to the two bottom corners. They cut out the triangle and the two leftover pieces. Do the two pieces cover the triangle exactly? Try a different point. What is the area of the triangle?',
@@ -107,10 +108,10 @@ module.exports = {
   deck: {
     today: 'Find the base and the height of any triangle, explain why triangles with the same base and height have the same area, and solve shaded-area puzzles.',
     warmGame: 'Half or not? Three rectangles each have one shaded triangle: one cut along a diagonal, one with its top corner on the top side, one from a corner to the middle of a side. Vote: is the shaded part exactly half?',
-    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Half of 42 cm²?', '21 cm²'], ['1/2 × 9 × 4 = ?', '18'], ['A square has an area of 49 cm². How long is each side?', '7 cm'], ['1/2 × 15 × 8 = ?', '60']],
+    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Half of 42 cm²?', '21 cm²'], ['1/2 × 9 × 4 = ?', '18'], ['A square has an area of 49 cm². How long is each side?', '7 cm']],
     expSetup: ['Draw a rectangle 8 cm by 6 cm on grid paper.', 'Mark any point on the top side. Join it to the two bottom corners.', 'Cut out the triangle and the two leftover pieces.', 'Do the two pieces cover the triangle exactly? Try again with a different point.'],
     expPic: 'a rectangle 8 cm by 6 cm on a 1 cm grid with a point on the top side joined to the two bottom corners; the middle triangle is yellow and the two leftover corner pieces are blue.',
-    expAsk: [['Do the two leftover pieces cover the triangle exactly?', 'Yes, so the triangle is half of the rectangle.'], ['What is the area of the triangle?', '24 cm² (half of 8 × 6 = 48)'], ['Does it matter where the point on the top side is?', 'No: the base is always 8 cm and the height is always 6 cm.']],
+    expAsk: [['Do the two leftover pieces cover the triangle exactly?', 'Yes, so the triangle is half of the rectangle.'], ['What is the area of the triangle?', '24 cm² (half of 8 × 6 = 48)']],
     mini1: { head: 'Height outside the triangle', body: ['A triangle has a base of 11 cm. Its top corner is past the end of the base. The height to the base extended is 12 cm, and its sides are 13 cm and 20 cm.', 'What is its area?'], ans: '66 cm² (1/2 × 11 × 12; the 13 cm and 20 cm sides are not needed).' },
     mini2: { head: 'Same base, same height', body: ['A rectangle is 14 cm by 9 cm. Three triangles each use the bottom side as the base, with the top corner at different points on the top side.', 'What is the area of each triangle?'], ans: '63 cm² each (1/2 × 14 × 9), half of the rectangle.' },
     keyHead: 'Key idea: 1/2 × base × height',
@@ -118,7 +119,7 @@ module.exports = {
     keySmall: 'Same base and same height: same area, whatever the shape.',
     brk: 'Triangle stretch. Make a triangle with your arms above your head. Now make a right angle with one arm. Lean your triangle to the left and to the right: did its height change?',
     ws1: 'Page 1, in pairs: Q1 base and height in three triangles, Q2 triangles in a rectangle.',
-    ws2: 'Page 2, on your own: Q3 split into triangles, Q4 take away the white triangles, Q5 same area, different triangles.'
+    ws2: 'Page 2, on your own: Q5 same area, different triangles, Q4 take away the white triangles (Q3, split into triangles, is take-home).'
   },
 
   qbank: {
@@ -165,7 +166,7 @@ module.exports = {
     H.sub('a', 'Area of triangle PDC = ____________ cm²          (b)  Area of triangle QDC = ____________ cm²'),
     H.sub('c', 'Explain why the two triangles have the same area.'), ...H.lines(1),
 
-    H.q(3, 'Find the area of the figure ABCD. Split it into two triangles along AC.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, [TKQ, 'Find the area of the figure ABCD. Split it into two triangles along AC.'], { pb: true, before: 0, keepNext: true }),
     H.fig(splitFig()),
     H.p(['<b style="color:#1F7A6F">Start here:</b> AC = 14 cm is the base of BOTH triangles. Read the two heights from the picture.'], { after: 20 }),
     H.sub('a', 'Height of triangle ABC = ______ cm.   Area of ABC = ______ cm²'),

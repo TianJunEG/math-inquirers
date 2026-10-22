@@ -99,7 +99,8 @@ module.exports = {
     hints: ['Hint 1: “Write each number in the place-value chart. Fill empty places with 0.”', 'Hint 2: “Count the steps between the two labelled marks. Divide the gap by the number of steps.”', 'Hint 3: “For bars: take away the extra part first, then share the rest equally.”'],
     talk: ["“Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?”"],
     talkWeekly: ["“Why does adding a zero to the end of 3.45 not change it, but putting a zero after the point (3.045) does?”"],
-    talkAns: 'Ben is wrong. Line up the points: 3.405 and 3.450. The ones and tenths are the same; 0 hundredths is less than 5 hundredths, so 3.405 < 3.45. 3.45 = 3.450 because 0 thousandths adds nothing, but 3.045 moves the 4 into the hundredths place, so it is a different, smaller number.',
+    talkAns: "Ben is wrong. Line up the points: 3.405 and 3.450. The ones and tenths are the same; 0 hundredths is less than 5 hundredths, so 3.405 < 3.45.",
+    talkWeeklyAns: "3.45 = 3.450 because 0 thousandths adds nothing, but 3.045 moves the 4 into the hundredths place, so it is a different, smaller number.",
     close: ['“Today you zoomed in on number lines, lined up the points, and worked rounding backwards. Detectives check every clue, and you did. Well done, inquirers!”']
   },
 
@@ -226,5 +227,7 @@ module.exports.gaps = {
   "q": "What if the target is 50 instead of 5? Which number with these cards is closest to 50?",
   "a": "52.8 (2.8 away). The next closest, 58.2, is 8.2 away."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Aim for Q4 and Q5 on page 2. Q6 is the choice question for the end of the block."]
 };

@@ -39,7 +39,7 @@ module.exports = {
     warmup: 'Place It Right (5 digits): the tutor draws digit cards one at a time. After each card, children must write it in the ten thousands, thousands, hundreds, tens or ones box straight away. Round 1: biggest number wins. Round 2: closest to 50 000 wins.',
     explore: 'Pairs use the digit cards 2, 4, 5, 7 and 9 once each to make 5-digit numbers. Which of their numbers round to 50 000 when rounded to the nearest thousand? They try to find them all and decide which one is closest to 50 000.',
     mini: 'Round with a number line: 36 482 lies between 36 000 and 37 000; the halfway mark is 36 500, so it rounds to 36 000 (to the nearest hundred, 36 500). Work backwards: a number that rounds to 25 000 (nearest thousand) is from 24 500 to 25 499. Estimate 7 × 3 089 as 7 × 3 000 = 21 000; the exact answer (21 623) is more, because 3 089 was rounded down. Before page 2: a riddle that starts with a rounding clue (20 003); number patterns (find the rule, then continue); digit-card puzzles: the ones digit decides odd or even, and 0 cannot go first.',
-    share: 'Siti says 49 999 rounds to 50 000 to the nearest 10, the nearest 100 and the nearest 1000. Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Who is right?',
+    share: 'Siti says 49 999 rounds to 50 000 to the nearest 10, the nearest 100 and the nearest 1000. Is she right?',
     exit: { q: 'Round 74 652 to the nearest thousand. Then write the smallest whole number that rounds to 74 000 to the nearest thousand.', a: '75 000. The smallest is 73 500.' },
     mistakes: [
       'Rounding by looking at the wrong digit, or forgetting to carry when the digit to change is a 9 (63 950 to the nearest hundred written as 63 900 or 63 000 instead of 64 000).',
@@ -71,7 +71,8 @@ module.exports = {
     hints: ['Hint 1: “Draw a number line. Mark the two round numbers and halfway.”', 'Hint 2: “Look only at the digit to the right of the place you round to.”', 'Hint 3: “For odd or even, choose the ones digit FIRST.”'],
     talk: ["“Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Is she right?”"],
     talkWeekly: ["“Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Is he right?”"],
-    talkAns: 'Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 every time. Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, so it rounds to 50 000.',
+    talkAns: "Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 every time.",
+    talkWeeklyAns: "Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, so it rounds to 50 000.",
     close: ['“Today you used number lines to round, and you worked backwards to find what a rounded number could really be.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -87,7 +88,7 @@ module.exports = {
     mini2: { head: 'Work backwards: what rounds to 25 000?', body: ['Rounded to the nearest thousand, a number is 25 000.', 'The halfway marks are 24 500 and 25 500.', 'What are the smallest and largest whole numbers it can be?'], ans: 'Smallest 24 500, largest 25 499 (25 500 rounds up to 26 000).' },
     keyHead: 'Key idea: find the halfway mark', keyBig: 'To round, find the two round numbers and the halfway mark. Halfway or more rounds up.', keySmall: 'Working backwards: the smallest number IS the halfway mark below; the largest is 1 less than the halfway mark above.',
     brk: 'Human number line. Five children hold 10 000, 20 000, 30 000, 40 000, 50 000. The tutor calls a number: everyone points to the nearest ten thousand.',
-    ws1: 'Page 1, in pairs: Q1 rounding table, Q2 working backwards, Q3 estimating.',
+    ws1: 'Page 1, in pairs: Q1 rounding table, Q2 working backwards. Q3 estimating is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 number riddles, Q5 patterns, Q6 digit cards.'
   },
 
@@ -204,5 +205,7 @@ module.exports.gaps = {
   "q": "Which number you can make is closest to 70 000? Why can you not make 70 000?",
   "a": "72 459 (2 459 away). 70 000 needs a 0 card and there is none; with the cards 2, 4, 5, 7 and 9 the closest below is 59 742 (10 258 away)."
  },
- "cap": "Page 2 is on your own. Aim for Q4a, Q5 and Q6a first. The other parts are a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4a, Q5 and Q6a. The other parts are a choice for the last few minutes.",
+ "p1": "Pairs: questions 1 and 2. Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Pairs do Q1 and Q2 (about 10 minutes of work; Q2a and Q2b stay). Q3, the bakery question, is the first question each child does on their own at the start of page 2 time. Its answer is checked together with page 2, which takes about 30 seconds longer."]
 };

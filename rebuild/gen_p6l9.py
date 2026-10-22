@@ -77,8 +77,17 @@ L=C['lesson']; DK=C['deck']; QB=C['qbank']; SC=C['script']
 put('p6l9-title',title_slide('p6l9-title',9,5,'Data Detectives','Averages and data  •  lists, adding up, the average (mean)',DK['today'],
  f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan: warm-up 0 to 10 (quick-eye mean, then quick questions), explore at the computer 10 to 25 (class data in a Scratch list), teaching 25 to 35 (click to reveal each step and answer; the mean program with a trace table), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. Before the lesson: make the starter project (one sprite, an empty list called data) and share its link, or let children build it from the code slide."))
 
+def check_slide(sid,time,title,rows,notes,lw=200):
+    """all answers visible at once (no click builds): check-together takes about 35 s a question"""
+    body=h2(title)
+    for i,(a,b) in enumerate(rows):
+        top=250+i*130
+        body+=pin(128,top,lw-20,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'18px 24px')
+        body+=answer(128+lw,top,1664-lw,b,None)
+    return sec(sid,time,body,notes)
+
 # ---------------- 2. warm-up game ----------------
-rounds=[('Round 1','8   12   10   9   11','Mean 10'),('Round 2','20   25   30   35   40','Mean 30'),('Round 3','3   4   5   6   37','Mean 11')]
+rounds=[('Round 1','8   12   10   9   11','Mean 10'),('Round 2','3   4   5   6   37','Mean 11')]
 body=h2('Warm-up: quick-eye mean')+p('Five numbers, five seconds. No working: write your best guess of the mean.',34,600,MUTED)
 for i,(r,nums,a) in enumerate(rounds):
     top=330+i*170
@@ -86,15 +95,15 @@ for i,(r,nums,a) in enumerate(rounds):
     body+=answer(1420,top+12,372,a)
 put('p6l9-warm1',sec('p6l9-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Quick-eye mean. Hide the slide (or cover the numbers), show one round for 5 seconds, then hide it again. Children write a guess on paper (no points, no ranking). Click to show the mean and ask how they guessed. '
- 'Round 1: 8 + 12 + 10 + 9 + 11 = 50, 50 ÷ 5 = 10. Round 2: 150 ÷ 5 = 30 (the middle number, because the numbers are evenly spaced). Round 3: 3 + 4 + 5 + 6 + 37 = 55, 55 ÷ 5 = 11. '
- 'Ask after round 3: "Most of you guessed about 5. Why is the mean 11?" (The 37 pulls the mean up: we come back to this today.) Ask: "How did you guess so fast?" Listen for: pick a middle number, then check the big ones and small ones balance.'))
+ 'Two rounds only. Round 1: 8 + 12 + 10 + 9 + 11 = 50, 50 ÷ 5 = 10. Round 2: 3 + 4 + 5 + 6 + 37 = 55, 55 ÷ 5 = 11. '
+ 'Ask after round 2: "Most of you guessed about 5. Why is the mean 11?" (The 37 pulls the mean up: we come back to this today.) Ask: "How did you guess so fast?" Listen for: pick a middle number, then check the big ones and small ones balance.'))
 
 # ---------------- 3. quick questions ----------------
 qs=[(f'{i+1}.',q,a) for i,(q,a) in enumerate(DK['warmQs'])]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
 put('p6l9-warm2',sec('p6l9-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 6 (18 ÷ 3). 2) 25 (100 ÷ 4; not one of the values!). 3) 60 (5 × 12: we can turn the mean back into a total). 4) 22.4 (112 ÷ 5): four of the five values are 3, yet the mean is over 20. 5) 3 (6 ÷ 2): means can be decimals, and decimals can have a whole-number mean. '
- 'Ask on 3: "How did you get a total from a mean?" This is the key move for today’s missing-value puzzles.'))
+ 'Three questions only. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 6 (18 ÷ 3). 2) 60 (5 × 12: we can turn the mean back into a total). 3) 22.4 (112 ÷ 5): four of the five values are 3, yet the mean is over 20. '
+ 'Ask on 2: "How did you get a total from a mean?" This is the key move for today’s missing-value puzzles.'))
 
 # ---------------- 4. explore 1 ----------------
 steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
@@ -106,16 +115,15 @@ pic=svg(1300,232,lm+f'<g transform="translate(300,10)">{bs}</g>'+f'<path d="M210
         +f'<rect x="{410+bw}" y="66" width="300" height="100" rx="18" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(560+bw,132,'mean = ?',44),
         'A list called data holding 12, 9, 15, 11, an arrow to code blocks that add up the list and divide by its length, and a yellow box: mean = ?',1300,232)
 body=(h2('Explore: our class data')+card(chip('EXPLORE')+f'<ol style="font-size:30px;font-weight:600;padding-left:48px;margin:0;display:flex;flex-direction:column;gap:4px;line-height:1.25">{steps}</ol>')
-      +card(pic,WHITE,'padding:16px 32px'))
+      )
 put('p6l9-explore1',sec('p6l9-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. Everyone types the number of letters in their full name (no spaces) in the chat; copy the list onto the slide or a shared board. Each child estimates the mean, then works it out by hand (total ÷ how many), then opens the starter project (or builds the 5 blocks shown; full program on the code slide later) and types each value into the list called data with the + button under the list. Run it. '
- 'Then the prediction: "Our tutor joins with a 30-letter name. Will the mean go up a little or a lot?" Add 30 to the list and run again. The picture uses example data (12, 9, 15, 11: mean 47 ÷ 4 = 11.75); your class data will differ. '
- 'Online: children share their screen when their program runs. If Scratch is slow, pairs can share one screen. Watch for children who divide by the wrong count or who type a value twice.'))
+ 'Minutes 10 to 15. Everyone types the number of letters in their full name (no spaces) in the chat; copy the list onto the slide or a shared board. Each child estimates the mean, then works it out by hand (total ÷ how many). Scratch is NOT opened in this part: the list-and-loop program is built once, live, in the mean program slide of the mini-lesson, so nothing is built twice. '
+ 'Then the prediction: "Our tutor joins with a 30-letter name. Will the mean go up a little or a lot?" Add 30 to the list and work out the new mean by hand. Watch for children who divide by the wrong count or who add a value twice.'))
 
 # ---------------- 5. explore 2 ----------------
 body=h2('Explore: talk about it')+numcards([(f'{i+1}.',q) for i,(q,a) in enumerate(DK['expAsk'])],40)
 put('p6l9-explore2',sec('p6l9-explore2','15–25 MIN',body,
- 'Minutes 15 to 25. Let pairs keep testing (add other values: which new value keeps the mean exactly the same?), then gather to answer. Answers: 1) '+DK['expAsk'][0][1]+' 2) '+DK['expAsk'][1][1]+' 3) '+DK['expAsk'][2][1]+' Finisher answer: adding a value equal to the mean keeps the mean the same (it is already "level").'))
+ 'Two questions only. Let pairs keep testing (add other values: which new value keeps the mean exactly the same?), then gather to answer. Answers: 1) '+DK['expAsk'][0][1]+' 2) '+DK['expAsk'][1][1]+' Finisher answer: adding a value equal to the mean keeps the mean the same (it is already "level").'))
 
 # ---------------- 6. teach 1: level it out ----------------
 body=h2('The mean: level it out')+p('Four towers: 3, 7, 5 and 9 cubes. Move cubes until every tower is the same height.',34,600,MUTED)
@@ -145,7 +153,7 @@ body+=trow(L0,310,['loop','i','item i','total'],W,None,True,32)
 for k,(it,tot) in enumerate([(3,3),(0,3),(4,7),(1,8),(2,10)]): body+=trow(L0,385+k*72,[str(k+1),str(k+1),str(it),str(tot)],W,'rise',32)
 body+=answer(L0,770,792,'It says 10 ÷ 5 = 2 ✓')
 put('p6l9-code1',sec('p6l9-code1','29–31 MIN',body,
- 'Build it live in Scratch while children copy (Variables: make total and i; make a list called data). Then trace it on the slide: click to add each row. Think-aloud: "i starts at 1, so item 1 of data is 3: total becomes 3. Change i by 1. Item 2 is 0: total stays 3. Item 3 is 4: total 7. Item 4 is 1: total 8. Item 5 is 2: total 10. The loop ran length of data = 5 times. 10 ÷ 5 = 2." '
+ 'This is the ONLY place the mean program is built. Pre-build the project with the list data already holding 3, 0, 4, 1, 2 so the live demo takes about 150 seconds: show the blocks, run it, children copy the blocks (Variables: total and i; the list data). Then trace it on the slide: click to add each row. Think-aloud: "i starts at 1, so item 1 of data is 3: total becomes 3. Change i by 1. Item 2 is 0: total stays 3. Item 3 is 4: total 7. Item 4 is 1: total 8. Item 5 is 2: total 10. The loop ran length of data = 5 times. 10 ÷ 5 = 2." '
  'Why "length of data" and not 5? Then the program still works when the list grows (teaching slide before page 2). '
  'Python version (optional, for children who know Python):\n'
  'data = [3, 0, 4, 1, 2]        # goals in 5 matches\ntotal = 0\nfor value in data:\n    total = total + value\nmean = total / len(data)\nprint("Total:", total)\nprint("Mean:", mean)\nabove = 0\nfor value in data:\n    if value > mean:\n        above = above + 1\nprint("Above the mean:", above)\n'
@@ -165,14 +173,10 @@ body+=pin(128,770,1664,p('What 5th score would keep the mean at 15?   15 itself:
 put('p6l9-we2',sec('p6l9-we2','32–33 MIN',body,
  'Click each step. Think-aloud: '+SC['think'][1]+' The last box: a new value equal to the mean changes nothing (5 × 15 = 75 = 60 + 15). Common mistake: 15 − 12 − 18 … (subtracting from the mean). Ask: "What number do we take the known values away FROM?" (the total).'))
 
-# ---------------- 11. what changes the mean ----------------
-put('p6l9-change',try_slide('p6l9-change','33–34 MIN','What changes the mean?','Data: 2, 4, 6. Mean 4. Predict first: up, down or the same? Then the new mean.',
- [('a','Add a new value: 4','same: 4'),('b','Add 1 to every value','up: 5'),('c','Remove the 6','down: 3'),('d','Change the 6 to 18','up: 8')],
- 'Predict with thumbs (up, down, sideways) before each click. a) 16 ÷ 4 = 4: a value equal to the mean keeps it the same. b) 3, 5, 7: 15 ÷ 3 = 5; every value up by 1, so the mean goes up by 1. c) 2, 4: 6 ÷ 2 = 3; removing a value above the mean pulls it down. d) 2 + 4 + 18 = 24, 24 ÷ 3 = 8: the total went up by 12, shared by 3 values, so the mean went up by 4. Worksheet Q3 is like this with different data.',38))
-
 # ---------------- 12. key idea ----------------
 body=h2(DK['keyHead'])+card(p(DK['keyBig'],44,700))+card(p(DK['keySmall'],36,600,MUTED))
-put('p6l9-key',sec('p6l9-key','34–35 MIN',body,'Say the key idea together: "Mean = total ÷ how many. Total = mean × how many." Common mistakes to watch for during the worksheet: (1) '+L['mistakes'][0]+' (2) '+L['mistakes'][1]+' (3) '+L['mistakes'][2]))
+body+=pin(128,790,1664,p('What changes the mean? A new value equal to the mean: nothing. Add 1 to every value: up 1. Remove a value above the mean: down.',30,700),'fade',SOFT,20,'14px 28px')
+put('p6l9-key',sec('p6l9-key','34–35 MIN',body,'What changes the mean (folded in from the old change slide; use data 2, 4, 6, mean 4, and predict with thumbs): a value of 4 keeps it the same (16 ÷ 4 = 4); add 1 to every value: 3, 5, 7 gives 5; remove the 6: 2, 4 gives 3; change the 6 to 18: 24 ÷ 3 = 8. Worksheet Q3 is like this. Say the key idea together: "Mean = total ÷ how many. Total = mean × how many." Common mistakes to watch for during the worksheet: (1) '+L['mistakes'][0]+' (2) '+L['mistakes'][1]+' (3) '+L['mistakes'][2]))
 
 # ---------------- 13. break ----------------
 put('p6l9-break',color_slide('p6l9-break',TEAL,'35–40 MIN','Brain break','Dice jumps! Roll two dice on screen. Everyone does that many star jumps. Three rounds.','Then: what was the mean number of jumps per round? A drink of water and back to the screen.',
@@ -193,7 +197,7 @@ put('p6l9-teachmed',sec('p6l9-teachmed','40–42 MIN',body,
 put('p6l9-ws1',ws_preview('p6l9-ws1','42–53 MIN','Worksheet page 1: with your partner',[('Q1','Books read. Total, mean, then the balance check.'),('Q2','Siti’s game scores. Turn the mean into a total first.'),('Q3','Predict, then work out: what does each change do to the mean?'),('Q4','Pocket money. Mean, median, mode: which is fair?')],'Total = mean × how many. Then subtract what you know.',
  'Minutes 42 to 53. Walk around (or visit breakout rooms). Ask "What is the total? How many values?" and "Predict before you calculate." In Q3 insist on a prediction in words before the number.'))
 put('p6l9-ws1ans',check_slide('p6l9-ws1ans','53–55 MIN','Page 1: check together',[('Q1','30;  mean 6;  −2, +1, −4, +2, +3 add up to 0'),('Q2','a) 68   b) 19   c) 22'),('Q3','a) same, 10   b) up, 13   c) down, 9   d) up, 16'),('Q4','$22;  $15;  $12;  6 pupils.  Not fair: the median $15 is more typical')],
- 'Click after pairs explain. Q2: 17 × 4 = 68; 68 − 15 − 20 − 14 = 19; for a mean of 18 over 5 games the total must be 90, so 90 − 68 = 22. Q3: a) 60 ÷ 6 = 10; b) every value up 3; c) 36 ÷ 4 = 9; d) the total goes up by 30, shared by 5: up 6, so 16. Q4: 154 ÷ 7 = 22; in order the 4th value is $15; $12 appears twice; only the $69 pupil gets more than $22.'))
+ 'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q2 (the missing value from the total), about 35 seconds a question. Q2: 17 × 4 = 68; 68 − 15 − 20 − 14 = 19; for a mean of 18 over 5 games the total must be 90, so 90 − 68 = 22. Q3: a) 60 ÷ 6 = 10; b) every value up 3; c) 36 ÷ 4 = 9; d) the total goes up by 30, shared by 5: up 6, so 16. Q4: 154 ÷ 7 = 22; in order the 4th value is $15; $12 appears twice; only the $69 pupil gets more than $22.'))
 
 # ---------------- 17. teach before page 2: any length ----------------
 fixed=['set total to 0','set i to 1',{'c':'repeat 5','body':['change total by (item i of data)','change i by 1']},'say (total / 5)']
@@ -205,21 +209,11 @@ body+=step(3,'Fix: use (length of data) in BOTH places. Now it says 18 ÷ 6 = 3 
 put('p6l9-teachany',sec('p6l9-teachany','55–57 MIN',body,
  'Teach before worksheet page 2 (Q5 asks which blocks must change). Think-aloud: "A number typed into the code is fixed. When the list grows, the program does not know. length of data is always the right count, so the loop visits every item and we divide by the right number." Try it live: add 8 to the list and run both versions.'))
 
-# ---------------- 18. teach before page 2: count with if ----------------
-cnt=['set zeros to 0','set i to 1',{'c':'repeat (length of data)','body':[{'c':'if (item i of data) = 0 then','body':['change zeros by 1']},'change i by 1']},'say zeros']
-body=h2('Count with an if')+p('How many matches had 0 goals? data: 3, 0, 4, 1, 2',34,600,MUTED)
-body+=pin(128,320,800,code_svg(cnt,'Code blocks: set zeros to 0, set i to 1, repeat length of data (if item i of data equals 0 then change zeros by 1; change i by 1), say zeros',28))
-body+=step(1,'Start the counter at 0, outside the loop.',left=1010,top=330,width=782,size=32)
-body+=step(2,'Inside the loop: IF the item fits the rule, change the counter by 1.',left=1010,top=440,width=782,size=32)
-body+=step(3,'Only item 2 is 0, so it says 1.',left=1010,top=600,width=782,size=32)
-put('p6l9-teachif',sec('p6l9-teachif','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q6 plans a counting program with a different rule). Ask: "What would go wrong if set zeros to 0 were inside the loop?" (It would be reset every time, so the answer could only be 0 or 1.) "How would you count the matches with MORE than 2 goals?" (change the rule to item i of data > 2: it says 2, for the 3 and the 4.)'))
-
 # ---------------- 19/20. worksheet page 2 ----------------
-put('p6l9-ws2',ws_preview('p6l9-ws2','58–72 MIN','Worksheet page 2: on your own',[('Q5','Trace the mean program, one row per loop. Then make it work for any length.'),('Q6','Singapore temperatures: the mean, then plan the code that counts the hot days.')],'Finished early? Build Q6 in Scratch and test it. Then Stretch and Challenge.',
- 'Children work alone. Early finishers build Q6 in Scratch with the temperatures in a list called temps and check that it says what they predicted; Python fans use the box on the page. Note who needs a short catch-up.'))
-put('p6l9-ws2ans',check_slide('p6l9-ws2ans','72–75 MIN','Page 2: check together',[('Q5','total: 5, 14, 20, 32.  Says 8.  Use (length of scores) in repeat and in say: now 9'),('Q6','31 °C;  3 days;  blanks: mean and count;  it says 3')],
- 'Click after a child explains. Q5: i goes 1, 2, 3, 4 and item i is 5, 9, 6, 12; 32 ÷ 4 = 8; with 13 added the total is 45 and the length is 5, so 9. Q6: 29 + 31 + 33 + 30 + 32 + 34 + 28 = 217, 217 ÷ 7 = 31; hotter than 31: 33, 32 and 34. The if compares item i of temps with mean, and change count by 1 counts it.'))
+put('p6l9-ws2',ws_preview('p6l9-ws2','58–72 MIN','Worksheet page 2: on your own',[('Q5','Trace the mean program, one row per loop. Then make it work for any length.'),('Q6','★ Take-home: Singapore temperatures, the mean, then plan the code that counts the hot days.')],'Finished early? Build Q6 in Scratch and test it. Then Stretch and Challenge.',
+ 'Children work alone on Q5; Q6 (temperatures, plan the code) is the take-home question, marked with a star in the workbook, and children who finish Q5 may build it in Scratch with the temperatures in a list called temps. Show this preview, do not read it aloud. Python fans use the box on the page. Note who needs a short catch-up.'))
+put('p6l9-ws2ans',check_slide('p6l9-ws2ans','72–75 MIN','Page 2: check together',[('Q5','total: 5, 14, 20, 32.  Says 8.  Use (length of scores) in repeat and in say: now 9'),('Q6 ★','Take-home. 31 °C;  3 days;  blanks: mean and count;  it says 3')],
+ 'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q5 (why the code must use length of scores). Q6 is the take-home question: its answer is here so children can mark it at home, and you take it up at the start of the next lesson (the if compares item i of temps with mean; if the counter is set inside the loop it resets every time). Q5: i goes 1, 2, 3, 4 and item i is 5, 9, 6, 12; 32 ÷ 4 = 8; with 13 added the total is 45 and the length is 5, so 9. Q6: 29 + 31 + 33 + 30 + 32 + 34 + 28 = 217, 217 ÷ 7 = 31; hotter than 31: 33, 32 and 34. The if compares item i of temps with mean, and change count by 1 counts it.'))
 
 # ---------------- 21. stretch (new items) ----------------
 st=[('1.','The mean of 6 numbers is 7. Five of them are 3, 5, 8, 9 and 10. What is the sixth?'),('2.','Find ALL the sets of 3 different counting numbers with a mean of 5 and a median of 3.'),('3.','A class of 30 has a mean score of 70. The 10 boys have a mean of 64. What is the mean of the 20 girls?')]
@@ -257,10 +251,10 @@ put('p6l9-chwalk',sec('p6l9-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------------- 25. talk ----------------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(L['share'],42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
-put('p6l9-talk',sec('p6l9-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Ask them to test ideas in the mean program. Answer: '+SC['talkAns']+' Praise the reasons, not only the answers.'))
+put('p6l9-talk',sec('p6l9-talk','75–82 MIN',body,'One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): '+SC['talkNext']+' Answer: '+SC['talkAns']+' Praise the reasons, not only the answers.'))
 
 # ---------------- 26. exit ----------------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],44))+card(p('Write your answer on a slip of paper or in the chat. Show your working. Then collect your stamp.',34))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],44))+card(p('Write your answer on a slip of paper or in the chat. Show your working. When your tutor says show, hold it to the camera. Then collect your stamp.',34))
 put('p6l9-exit',sec('p6l9-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+L['exit']['a']+' '+SC['close'][0]+' '+SC['close'][1]+' Extension: '+L['extension']))
 
 # ---------------- write ----------------

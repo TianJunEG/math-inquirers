@@ -80,20 +80,7 @@ PY_D='hours = int(input("How many hours from 9 o\'clock? "))\nt = (9 + hours) % 
 
 # ---------------- 1. title ----------------
 put('p6l10-title',title_slide('p6l10-title',10,5,'Showcase Challenge','Mixed: maths and code  •  challenge round, then your own puzzle program',DK['today'],
- f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan (this lesson changes the usual routine): sneak-peek puzzles 2 to 5, lightning relay 5 to 8 (the quick questions are spare), challenge round 8 to 23 (workbook page 1 in teams of 2, check together, talk about how we started), from puzzle to program 23 to 30 (starter projects; click to reveal), brain break 30 to 32, plan and build 32 to 62 (teaching for the planning sheet, then workbook page 2 and Scratch; Think harder and Go further are open to everyone), showcase 62 to 85 (two rounds of 4, 2 minutes 30 seconds each plus a 20-second switch, rubric in the showcase notes), talk 85 to 86, exit slip 86 to 88, looking back and certificates 88 to 90. Build target: a working copy of one starter with ONE change is full marks; an own idea is optional. Children chose their starter and their twist at the end of Lesson 9. Before the lesson: build the starter projects once (A Mystery Machine, B Prime or Not?, C Lucky Seven and D Clock Jumper) and share them as .sb3 files (children use File, Load from your computer; no account needed) with shared project links as a backup. Print or fill in certificates, and decide a random showcase order. Showcase switching: ask the next child to have their screen ready while the one before answers questions; a child may paste a screenshot of the program into the chat and the tutor runs their file, which removes the switching time."))
-
-# ---------------- 2. warm-up relay ----------------
-relay=[('L1 Patterns','10th term of 3, 7, 11, 15, …?','39'),('L2 Primes','45 as a product of primes?','3 × 3 × 5'),('L3 Below zero','−7 + 10 = ?','3'),
-       ('L4 Machines','× 2, then + 5 gives 21. IN?','8'),('L5 Every way','Handshakes among 5 people?','10'),('L6 Fair or unfair?','Probability of a 6 on a dice?','1/6'),
-       ('L7 Turtle','Turn at each corner of a regular octagon?','45°'),('L8 Secret codes','3 o’clock + 20 hours = ?','11 o’clock'),('L9 Data','Mean of 2, 4 and 9?','5')]
-body=h2('Warm-up: lightning relay')
-for i,(lab,q,a) in enumerate(relay):
-    L0=128+(i%3)*565; T0=240+(i//3)*215
-    body+=pin(L0,T0,533,p(lab,26,800,TEAL)+p(q,30,700),None,WHITE,20,'14px 22px',f'box-sizing:border-box;height:195px;border:3px solid {NAVY}')
-    body+=pin(L0+250,T0+125,263,p(a,28,800),'pop',YEL,14,'8px 16px','box-sizing:border-box')
-put('p6l10-warm1',sec('p6l10-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Lightning relay: one question from each lesson. Read card L1 and ask for a volunteer; the child who answers reads the next card and invites someone who has not had a turn. “Pass” is always fine, and the next person helps. No timer, no points. Click to show each answer (clicks go L1 to L9). '
- 'Answers: L1 39 (3 + 9 × 4; nth term 4n − 1). L2 3 × 3 × 5. L3 3. L4 8 (21 − 5 = 16, 16 ÷ 2 = 8). L5 10 (4 + 3 + 2 + 1). L6 1/6. L7 45° (360 ÷ 8). L8 11 o’clock (3 + 20 = 23 = 12 + 11). L9 5 (15 ÷ 3). Ask: "Which lesson felt longest ago? Which trick do you still remember?" Spare quick questions if the relay ends early: 1) 3n + 1. 2) No: 91 = 7 × 13. 3) −3. 4) 60°. 5) 10.'))
+ f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} Time plan (this lesson changes the usual routine; no relay and no separate talk time): opening 0 to 2, sneak-peek puzzles 2 to 6, challenge round 6 to 19.5 (workbook page 1 in teams of 2, Q1 and Q3; check together; ask how we started as the first line of the check), starter projects 19.5 to 26.5 (only Starter A is run live; click to reveal), brain break 26.5 to 30, plan and build 30 to 58 (teaching for the planning sheet, then workbook page 2 and Scratch; Think harder and Go further are open to everyone), flex 58 to 60.5 (unscripted, lost first), showcase 60.5 to 82.5 (two rounds of 4, 2 minutes 15 seconds each plus a 20-second switch, stars typed in the chat, rubric in the showcase notes), exit slip with the talk question 82.5 to 86, looking back 86 to 88, certificates (sent as PDFs) and the last stamp 88 to 90. Build target: a working copy of one starter with ONE change is full marks; an own idea is optional. Children chose their starter and their twist at the end of Lesson 9. Before the lesson: build the starter projects once (A Mystery Machine, B Prime or Not?, C Lucky Seven and D Clock Jumper) and share them as .sb3 files (children use File, Load from your computer; no account needed) with shared project links as a backup. Print or fill in certificates, and decide a random showcase order. Showcase switching: ask the next child to have their screen ready while the one before answers questions; a child may paste a screenshot of the program into the chat and the tutor runs their file, which removes the switching time."))
 
 # ---------------- 4. explore 1: challenge round rules ----------------
 steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
@@ -115,11 +102,6 @@ put('p6l10-ws1ans',check_slide('p6l10-ws1ans','19–21 MIN','Challenge round: ch
  'Q2: a 2-digit number with exactly 3 factors is the square of a prime: 25 or 49; digits add to 13: 49. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7. For 40 test every prime up to 20: 3 + 37, 11 + 29, 17 + 23 work; 2, 5, 7, 13, 19 do not (38, 35, 33, 27, 21 are not prime). '
  'Q3: a) −4 + 9 = 5, 5 − 12 = −7. b) 3n − 10 = n, so 2n = 10, n = 5 (or trial: 5 × 3 − 10 = 5). c) 360 ÷ 24 = 15. d) 100 hours = 8 × 12 + 4, so 4 hours on from 9: 1 o’clock. (Digit cards and probability are now in Think harder 4.)',lw=200))
 
-# ---------------- 7. explore 2: talk ----------------
-body=h2('Challenge round: talk about it')+numcards([(f'{i+1}.',q) for i,(q,a) in enumerate(DK['expAsk'])],38)
-put('p6l10-explore2',sec('p6l10-explore2','21–22 MIN',body,
- 'Minutes 21 to 22. Quick round: volunteers answer. Answers: 1) '+DK['expAsk'][0][1]+' 2) '+DK['expAsk'][1][1]+' 3) '+DK['expAsk'][2][1]+' Do not announce a winner. Then say: "Now you stop solving puzzles and start MAKING them."'))
-
 # ---------------- 8. teach: from puzzle to program ----------------
 cards4=[('1','Maths first','Pick a puzzle. Work out its answer by hand.'),('2','Blocks','Input → rule → check → output. Under 15 blocks.'),('3','Test it','Use a value you already know the answer to.'),('4','Twist','Change the rule, add a score, or a level 2.')]
 body=h2('From puzzle to program')+p('Every program you build today follows the same four steps.',34,600,MUTED)
@@ -138,9 +120,6 @@ body+=pin(1010,690,782,p('Twist ideas',30,800,TEAL)+p('A different rule each tim
 put('p6l10-we1',sec('p6l10-we1','23–24 MIN',body,
  'Starter A (Lesson 4 idea). Run it on screen. Think-aloud: '+SC['think'][1]+' Note: Scratch uses * for ×. "answer" is what the player typed. The worksheet (Q4a) asks for a different test, n = 9, so do not reveal it. 7 blocks. '
  'Python version (optional):\n'+PY_A+'With n = 5 it prints "Out came 19"; typing 5 gives "You cracked it!", typing 7 gives "No, it was 5".'))
-
-put('p6l10-try1',try_slide('p6l10-try1','24–25 MIN','Your turn: beat the machine','× 3, then + 4. What went IN?',[('a','OUT: 25','7'),('b','OUT: 64','20'),('c','OUT: 3','impossible')],
- 'Whiteboards. a) 25 − 4 = 21, 21 ÷ 3 = 7. b) 64 − 4 = 60, 60 ÷ 3 = 20. c) 3 − 4 = −1, and −1 ÷ 3 is not a whole number; also the smallest OUT for n from 1 to 20 is 3 × 1 + 4 = 7, so the program can never show 3. Good discussion: knowing what a program can NEVER say is also a test.',44))
 
 # ---------------- 10. starter B ----------------
 progB=['when green flag clicked','ask "Give me a whole number" and wait','set factors to 0','set d to 1',{'c':'repeat (answer)','body':[{'c':'if ((answer mod d) = 0) then','body':['change factors by 1']},'change d by 1']},{'c':'if (factors = 2) then','body':['say "Prime!"'],'els':['say "Not prime"']}]
@@ -262,10 +241,6 @@ put('p6l10-showcase',sec('p6l10-showcase','62–87 MIN',body,
  'Explaining: 1 = reads the blocks aloud; 2 = says what the program does; 3 = explains the maths and answers a question from the group. '
  'Questions to ask each presenter: "Which test did you do first?" "What would happen with 0 or 1?" "Where is the maths in your blocks?" Write one specific sentence of praise for each child for the certificate moment.'))
 
-# ---------------- 23. talk ----------------
-body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(SC['talk'][0].strip('“”'),40)+p(SC['talk'][1].strip('“”'),40))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
-put('p6l10-talk',sec('p6l10-talk','87–88 MIN',body,'Minutes 85 to 86. One question only. Volunteers share one sentence each; pass is fine; no cold-calling by name. If time is short, skip it. '+SC['talkAns']))
-
 # ---------------- 24. exit ----------------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],42))+card(p('Write it on your exit slip (Finish page). Show only your tutor. Then collect your last stamp.',34))
 put('p6l10-exit',sec('p6l10-exit','88–90 MIN',body,'Minutes 86 to 88 (exit slip); looking back is 88 to 90 and certificates are handed out at the end of it. '+L['exit']['a']+' Extension to take home: '+L['extension']))
@@ -273,14 +248,6 @@ put('p6l10-exit',sec('p6l10-exit','88–90 MIN',body,'Minutes 86 to 88 (exit sli
 # ---------------- 25. end (certificates) ----------------
 put('p6l10-end',color_slide('p6l10-end',NAVY,'WELL DONE, INQUIRERS','Ten lessons of maths and code','Notice it. Test it. Explain why.','Certificates and a last stamp for every inquirer.',
  'Hand out certificates. '+SC['close'][0]+' '+SC['close'][1]+' Ask each child to name one puzzle or program they enjoyed. Give parents the one-page summary from the tutor guide, with links to Scratch and to the starter projects so children can keep building.',fg=CREAM,sc='#C9D4EC',kc=YEL,tsize=120))
-
-# ---------------- re-time (sneak-peek puzzles take minutes 2 to 5) ----------------
-RET={'warm1':('0–5','5–8'),'explore1':('5–7','8–10'),'ws1':('7–19','10–20'),'ws1ans':('19–21','20–22'),'explore2':('21–22','22–23'),'teach1':('22–23','23–24'),'we1':('23–24','24–25'),'try1':('24–25','25–26'),
-     'we2':('25–26','26–27'),'we3':('26–28','27–29'),'key':('28–29','29–30'),'break':('29–32','30–32'),'showcase':('62–87','62–85'),'talk':('87–88','85–86'),'exit':('88–90','86–88')}
-for k,(a,b) in RET.items():
-    sid='p6l10-'+k; h=S[sid]; assert a+' MIN' in h,(sid,a)
-    h=h.replace(a+' MIN',b+' MIN'); h=h.replace('Minutes '+a.replace('–',' to '),'Minutes '+b.replace('–',' to ')); S[sid]=h
-S['p6l10-break']=S['p6l10-break'].replace('Three minutes.','Two minutes.')
 
 # ---------------- write ----------------
 for f in os.listdir(SL):

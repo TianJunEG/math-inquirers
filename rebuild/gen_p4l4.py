@@ -104,17 +104,17 @@ for i,(n,d,a) in enumerate(cards):
     body+=pin(L,T,CW,f'<p style="font-family:{HF};font-weight:600;text-align:center">{fr(n,d,66)}</p>',None,WHITE,24,'14px 22px',f'box-sizing:border-box;height:270px;align-items:center;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+20,T+196,CW-40,p(a,32,800),'pop',SOFT,16,'10px 18px',f'box-sizing:border-box;align-items:center;border:3px solid {NAVY}')
 put('p4l4-warm1',sec('p4l4-warm1','6.5–8.5 MIN',body,
- 'Minutes 6.5 to 8.5 (one short round, about 2 minutes: the Warm-up check came first). More or less than a half? Point to one card at a time. Children show thumbs up (more than a half), thumbs down (less) or a flat hand (exactly a half), then you click to reveal (clicks go 3/8, 5/9, 6/12, 7/10, 2/5, 4/7). '
- 'Ask each time: "How do you know?" The quick test: find half of the denominator and compare it with the numerator. 3/8: half of 8 is 4, and 3 is less than 4. 5/9: half of 9 is 4 and a half, and 5 is more. 6/12: half of 12 is 6, exactly a half. '
- 'Listen for children who say "5/9 is less because 9 is big". That idea comes back when we compare fractions later.'))
+ 'Minutes 6.5 to 8.5 (one short round, about 90 seconds: the Sneak-peek puzzles came first). More or less than a half? Point to one card at a time. Children show thumbs up (more than a half), thumbs down (less) or a flat hand (exactly a half), then you click to reveal (clicks go 3/8, 5/9, 6/12, 7/10, 2/5, 4/7). '
+ 'The quick test: find half of the denominator and compare it with the numerator. 3/8: half of 8 is 4, and 3 is less than 4. 5/9: half of 9 is 4 and a half, and 5 is more. 6/12: half of 12 is 6, exactly a half. '
+ 'Listen for children who say "5/9 is less because 9 is big" (no follow-up question now): that idea comes back when we compare fractions later.'))
 
 # ---------- 3. quick questions ----------
 S30=34
-qs=[('1.',f'{fr(1,2,S30)} of 18 = ?','9'),('2.',f'{fr(1,4,S30)} of 20 = ?','5'),('3.',f'{fr(2,3,S30)} = {fr("?",12,S30)}','8'),('4.',f'{fr(3,4,S30)} + {fr(1,8,S30)} = ?',fr(7,8,S30)),('5.',f'1 − {fr(3,10,S30)} = ?',fr(7,10,S30))]
+qs=[('1.',f'{fr(1,2,S30)} of 18 = ?','9'),('2.',f'{fr(1,4,S30)} of 20 = ?','5'),('3.',f'{fr(2,3,S30)} = {fr("?",12,S30)}','8')]
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     t=240+i*132; body+=rq(128,t,1250,a,b,40)+ra(1420,t,372,c,'pop',40)
-put('p4l4-warm2',sec('p4l4-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Read each aloud, whiteboards up together, then click. Ask for the method: 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. 4) 3/4 = 6/8, and 6/8 + 1/8 = 7/8. 5) 1 whole = 10/10, take away 3/10: 7/10. Answers: 9, 5, 8, 7/8, 7/10.'))
+put('p4l4-warm2',sec('p4l4-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: read each aloud, whiteboards up together, then click. No follow-up questions. 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. Answers: 9, 5, 8. The other two warm-up questions (3/4 + 1/8; 1 − 3/10) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore: pizza party ----------
 def pizza(cx,cy,r,filled):
@@ -131,8 +131,8 @@ steps=''.join(f'<li>{E(s)}</li>' for s in ['Cut paper circles into 4 equal slice
 body=h2('Explore: pizza party')+card(chip('EXPLORE')+f'<ol style="font-size:36px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:8px">{steps}</ol>')
 body+=card(svgwrap(1600,215,'Three pizzas cut into quarters: two whole pizzas and 3 slices of a third pizza',g),extra='padding:16px 32px')
 put('p4l4-explore1',sec('p4l4-explore1','11.5–21 MIN',body,'Minutes 11.5 to 21. Pairs use paper quarter-slices (online: cut paper circles on camera). Ask them to predict first: more than 2 pizzas or less? More than 3? Let them write the amount any way they like; listen for "eleven quarters" and "two and three quarters". Early finishers: what if every pizza had 6 slices and they ate 11 slices?'))
-body=h2('Explore: talk about it')+numcards([('1.','How many pizzas did they eat? Write it in two ways.'),('2.','How many slices make exactly 3 pizzas?'),('3.','What if each pizza had 6 slices and they ate 11?')],40)
-put('p4l4-explore2',sec('p4l4-explore2','21–24 MIN',body,'Minutes 21 to 24. Gather the ideas. Write 11/4 and 2 3/4 side by side and tell children the names: 11/4 is an IMPROPER fraction (the top is bigger than the bottom, so it is more than 1); 2 3/4 is a MIXED number (a whole number and a fraction). They are the same amount. Answers: 1) 11/4 = 2 3/4. 2) 12 slices (12/4 = 3). 3) 11/6 = 1 5/6: one whole pizza and 5 sixths.'))
+body=h2('Explore: talk about it')+numcards([('1.','How many pizzas did they eat? Write it in two ways.'),('2.','How many slices make exactly 3 pizzas?')],40)
+put('p4l4-explore2',sec('p4l4-explore2','21–24 MIN',body,'Minutes 21 to 24. Pencils down (or when the 60-second timer closes the rooms), then gather the ideas. Two debrief questions only. Write 11/4 and 2 3/4 side by side and tell children the names: 11/4 is an IMPROPER fraction (the top is bigger than the bottom, so it is more than 1); 2 3/4 is a MIXED number (a whole number and a fraction). They are the same amount. Answers: 1) 11/4 = 2 3/4. 2) 12 slices (12/4 = 3). The third question (what if each pizza had 6 slices and they ate 11? 11/6 = 1 5/6) is not asked; it is the Go further what-if on the explore slide.'))
 
 # ---------- 6. teach: improper -> mixed ----------
 B=lambda sh: svgwrap(1100,120,f'Three bars cut into thirds with {sh} thirds shaded',bars(3,3,sh,4,8,340,100,36))
@@ -154,7 +154,7 @@ body+=pin(128,400,1400,svgwrap(1370,110,'Four whole bars of thirds and 2 thirds 
 body+=step(1,'Each whole is 3 thirds. 4 wholes = 4 × 3 = 12 thirds.',top=550,size=34)
 body+=step(2,'Add the 2 thirds: 12 + 2 = 14 thirds.',top=660,size=34)
 body+=pin(128,770,1664,p(f'{mx(4,2,3,40)} = {fr(14,3,40)}      Check: 14 ÷ 3 = 4 remainder 2 ✓',40,800,raw=True),'pop',YEL,20,'14px 26px')
-put('p4l4-we1',sec('p4l4-we1','25.5–27 MIN',body,'Worked example. Ask: "How many thirds are in ONE whole? In 4 wholes?" Children count the shaded thirds on the bars: 3, 6, 9, 12, then 13, 14. Think-aloud: "4 wholes, each cut into 3, is 12 thirds. 2 more thirds make 14 thirds." Watch for the common mistake 4 × 2 = 8 (multiplying the whole number by the numerator): ask them to point to 8 thirds on the bars.'))
+put('p4l4-we1',sec('p4l4-we1','25.5–27 MIN',body,'Worked example. Children count the shaded thirds on the bars: 3, 6, 9, 12, then 13, 14. Think-aloud: "4 wholes, each cut into 3, is 12 thirds. 2 more thirds make 14 thirds." Watch for the common mistake 4 × 2 = 8 (multiplying the whole number by the numerator): have them point to 8 thirds on the bars.'))
 
 # ---------- 9. teach: number line ----------
 x0=60; u=470; y=150
@@ -182,9 +182,9 @@ body+=step(1,'The denominator is 5: cut the bar into 5 equal units.',top=690,siz
 body+=step(2,'5 units = 30, so 1 unit = 30 ÷ 5 = 6.',top=790,size=34,width=1080)
 body+=step(3,'3 units = 3 × 6 = 18.',left=1310,top=790,width=482,size=34)
 body+=answer(1420,500,372,'18 stars')
-put('p4l4-we2',sec('p4l4-we2','28.5–30 MIN',body,'Strategy: DRAW A BAR MODEL. The whole bar is ALL the stickers. The denominator tells how many equal units to cut it into; the numerator tells how many units we want. Think-aloud: "30 stickers in 5 equal units: each unit is 6. Stars are 3 units: 18." Ask: "How many stickers are NOT stars?" (2 units = 12). Watch for children who divide by 3 (the numerator).'))
+put('p4l4-we2',sec('p4l4-we2','28.5–30 MIN',body,'Strategy: DRAW A BAR MODEL. The whole bar is ALL the stickers. The denominator tells how many equal units to cut it into; the numerator tells how many units we want. Think-aloud: "30 stickers in 5 equal units: each unit is 6. Stars are 3 units: 18." Point out that the stickers that are NOT stars are 2 units = 12. Watch for children who divide by 3 (the numerator).'))
 put('p4l4-try2',rtry('p4l4-try2','30–31 MIN • OPTIONAL','Your turn: fraction of a set','Draw the bar. Find 1 unit first.',[('a',f'{fr(3,4,32)} of 28 = ?','21'),('b',f'{fr(5,6,32)} of 42 = ?','35'),('c',f'Siti has 36 stamps. She gives away {fr(1,4,32)} of them. How many are left?','27')],
- 'Whiteboards. a) 28 ÷ 4 = 7, 3 × 7 = 21. b) 42 ÷ 6 = 7, 5 × 7 = 35. c) 1 unit = 36 ÷ 4 = 9; she gives away 9 and keeps 3 units = 27. Ask: "Could you do c in one step?" (she keeps 3/4 of 36 = 27).',top=320,gapy=165,qw=1250,size=36))
+ 'Whiteboards. a) 28 ÷ 4 = 7, 3 × 7 = 21. b) 42 ÷ 6 = 7, 5 × 7 = 35. c) 1 unit = 36 ÷ 4 = 9; she gives away 9 and keeps 3 units = 27. In c she keeps 3/4 of 36 = 27 in one step.',top=320,gapy=165,qw=1250,size=36))
 
 # ---------- key / break ----------
 body=h2('Key idea: fractions can be more than 1')+card(p(f'The denominator tells how many pieces make 1 whole:  {fr(7,3,40)} = {mx(2,1,3,40)}',44,700,raw=True))+card(p('Fraction of a set: the denominator gives the number of units. Find 1 unit, then take the units you need.',38,600,MUTED))
@@ -192,7 +192,7 @@ put('p4l4-key',sec('p4l4-key','31–32 MIN',body,'Say the key idea together. Com
 put('p4l4-break',break_slide('p4l4-break','32–35.5 MIN','Fraction stand-up. Stand up if the fraction is more than 1, sit down if it is less than 1, hands on your head if it is exactly 1.','Four minutes. Call out: 5/4 (stand), 3/8 (sit), 6/6 (hands on head), 9/5 (stand), 7/12 (sit), 12/12 (hands on head). Then let a child call the fractions. Online: children stand and sit on camera.'))
 
 # ---------- worksheet page 1 ----------
-put('p4l4-ws1',ws_preview('p4l4-ws1','35.5–53 MIN','Worksheet page 1: with your partner',[('Q1','Fraction bars. Count the pieces, then fill whole bars.'),('Q2','Number line in quarters. Count the small jumps.'),('Q3','Fraction of a set. Use the bar model.')],'Stuck? Fold a paper strip, or draw the bars.','Minutes 35.5 to 53. Walk around. Ask "How many pieces make one whole?" before giving any help. Q2 C is 10 quarters: children may write 2 2/4 or 2 1/2; both are right.'))
+put('p4l4-ws1',ws_preview('p4l4-ws1','35.5–53 MIN','Worksheet page 1: with your partner',[('Q1','Fraction bars. Count the pieces, then fill whole bars.'),('Q2','Number line in quarters. Count the small jumps.'),('Q3','Fraction of a set. Use the bar model.')],'Stuck? Fold a paper strip, or draw the bars.','Minutes 35.5 to 53. Pairs do Q1 to Q3 (about 10 minutes of work). Walk around. Ask "How many pieces make one whole?" before giving any help. Q2 C is 10 quarters: children may write 2 2/4 or 2 1/2; both are right.'))
 put('p4l4-ws1ans',checks('p4l4-ws1ans','53–55.5 MIN','Page 1: check together',[('Q1','a) 13 fifths: 13/5 = 2 3/5    b) 4 3/4    c) 17/5    d) 40'),('Q2','A = 3/4,  B = 1 3/4,  C = 2 2/4 = 2 1/2.   9/4 = 2 1/4: one small mark after 2'),('Q3','8 units = 24, 1 unit = 3.   a) 9 children   b) 15 children')],
  'Click each answer after a pair explains theirs. Q1c: 3 wholes = 15 fifths, plus 2 = 17 fifths. Q1d: 8 eighths in each whole, 5 × 8 = 40. Q3: glasses 3 units = 9; no glasses 5 units = 15 (or 24 − 9).',gapy=170))
 

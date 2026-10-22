@@ -54,16 +54,16 @@ for i,(c,a) in enumerate(calls):
     body+=pin(L,500,CW,f'<p style="font-family:{HF};font-size:60px;font-weight:600;text-align:center">{E(c)}</p>',None,WHITE,24,'34px 20px',f'box-sizing:border-box;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L,680,CW,f'<p style="font-size:34px;font-weight:800;text-align:center">{E(a)}</p>','pop',YEL,20,'16px 18px','box-sizing:border-box')
 put('p3l5-warm1',sec('p3l5-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Leftover Lucky Dip. Call each card in turn: "23 sweets, groups of 4." Children show the number of groups on one hand and the leftover on the other (fists for zero). Then click to reveal. '
+ 'Minutes 0 to 5. Leftover Lucky Dip. Play two rounds only (the first two cards, then the last two). Call each card in turn: "23 sweets, groups of 4." Children show the number of groups on one hand and the leftover on the other (fists for zero). Then click to reveal. '
  'Always ask for the times-table fact: "4 × 5 = 20, and 3 more makes 23." Answers: 23 in 4s = 5 groups, 3 left; 17 in 3s = 5 groups, 2 left; 26 in 8s = 3 groups, 2 left; 41 in 6s = 6 groups, 5 left. '
  'Extra calls if time: 30 in 7s (4 groups, 2 left), 50 in 9s (5 groups, 5 left). Watch for children who say "41 in 6s is 5 groups and 11 left": ask "Can 11 make another group of 6?"'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','17 ÷ 5','3 r 2'),('2.','30 ÷ 7','4 r 2'),('3.','45 ÷ 6','7 r 3'),('4.','50 ÷ 8','6 r 2'),('5.','63 ÷ 9','7 r 0')]
+qs=[('1.','17 ÷ 5','3 r 2'),('2.','30 ÷ 7','4 r 2'),('3.','45 ÷ 6','7 r 3')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,40) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
 put('p3l5-warm2',sec('p3l5-warm2','5–10 MIN',body,
  'Minutes 5 to 10. Write "r" for remainder. Whiteboards up together, then click. After each one ask: "How can we check?" (answer × divisor + remainder: 7 × 6 + 3 = 45). '
- 'Answers: 1) 3 r 2  2) 4 r 2  3) 7 r 3  4) 6 r 2  5) 7 r 0, nothing left over because 63 is in the 9 table.'))
+ 'Answers: 1) 3 r 2  2) 4 r 2  3) 7 r 3. Three quick questions only; 50 ÷ 8 (6 r 2) and 63 ÷ 9 (7 r 0, nothing left over because 63 is in the 9 table) are on the take-home box of the Go further page in the workbook.'))
 
 # ---------- 4. explore: what to do ----------
 pic=''
@@ -193,20 +193,12 @@ put('p3l5-teachbig',sec('p3l5-teachbig','56–57 MIN',body,
  'Teach before worksheet page 2 (Q5). Ask first: "Dividing by 6, could the remainder be 6? Could it be 7?" (No: another group would fit.) The biggest remainder is always one less than the number we divide by. Then click through.'))
 
 # ---------- 18. teach: make a table ----------
-W4=[170,440,240,170]
-body=h2('Make a table: the benches')+card(p('If 3 children sit on each bench, 4 children must stand. If 4 sit on each bench, every seat is filled. How many benches? How many children?',38,700))
-body+=trow(128,440,['Benches','3 on each + 4 standing','4 on each','Same?'],W4,None,True,32)
-for i,r in enumerate([['1','7','4','no'],['2','10','8','no'],['3','13','12','no'],['4','16','16','yes ✓']]): body+=trow(128,522+i*82,r,W4,'rise',False,32)
-body+=pin(1400,440,392,p('The gap shrinks by 1 on each row. 4 standing, so 4 rows: 4 benches, 16 children.',30,700),'fade',SOFT,20,'20px 22px')
-put('p3l5-teachtable',sec('p3l5-teachtable','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q6, the party tables). Click to build each row while children say the numbers. Think-aloud: "1 bench: 3 + 4 = 7 children, but 4 on a bench holds only 4. Not the same. 2 benches: 6 + 4 = 10 and 8. Closer." '
- 'Point out the pattern: each extra bench takes one more of the standing children, so the gap shrinks by 1 each row. 4 standing children means 4 benches. Check: 4 × 3 + 4 = 16 and 4 × 4 = 16.'))
 
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l5-ws2',ws_preview('p3l5-ws2','58–66 MIN','Worksheet page 2: on your own',
  [('Q4','What number am I? List, then test. Part b: find ALL the numbers.'),('Q5','Dividing by 8: every remainder, and the biggest one.'),('Q6','If time: the party tables. Fill in the table until the rows match.')],
  'Ready for more? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. Check that every child writes a list for Q4 and fills the table for Q6.'))
+ 'Children work alone. Note who needs a short catch-up next lesson. Check that every child writes a list for Q4. Q6 (the party tables, if time) has no teaching slide: children who reach it fill the table until the rows match (4 standing, so the gap shrinks by 1 for each extra table). Keep Q3(b) and Q4(b) as (if time) exactly as printed.'))
 put('p3l5-ws2ans',check_slide('p3l5-ws2ans','66–70 MIN','Page 2: check together',
  [('Q4','(a) 53   (b) 11, 23, 35, 47 (they go up in 12s)'),('Q5','(a) 0, 1, 2, 3, 4, 5, 6, 7   (b) 63'),('Q6','(a) 5 tables, 35 children   (b) 5 empty seats')],
  'Click after a child explains. Q4a: 43, 48, 53, 58; divided by 4 they leave 3, 0, 1, 2, so 53. Q4b (if time): remainder 5 when ÷ 6: 11, 17, 23, 29, 35, 41, 47; test ÷ 4: 11, 23, 35, 47 leave 3. Ask: "Why do they go up in 12s?" (12 is in both the 4 and 6 tables). '

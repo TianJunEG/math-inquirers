@@ -215,9 +215,9 @@ module.exports = {
       objective: 'Use patterns, bonds, graphs, money, shapes, logic, working backwards and measuring in new puzzles, and explain the thinking.',
       skills: 'Applying and connecting ideas, perseverance, explaining',
       materials: 'Four puzzle cards (coins, patterns, logic, measuring; printed in the workbook and shown on the Lesson 10 slide), play coins, cubes, certificates, stamps, mini whiteboards.',
-      online: 'The four cards are printed in the workbook and shown on the slide. Each pair chooses one card. Pairs swap at minute 20. Reporting back is optional: say one thing you tried, not the answer.',
+      online: 'The four cards are printed in the workbook and shown on the slide. Each pair chooses one card. Pairs swap at minute 17. Reporting back is optional: say one thing you tried, not the answer.',
       warmup: 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.',
-      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Each pair chooses ONE card for 10 minutes, then swaps with another pair for a second 4-minute round. Reporting back is optional: one thing you tried, not the answer.',
+      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Each pair chooses ONE card for 6 minutes, then swaps with another pair for a second 4-minute round (then one debrief question). Reporting back is optional: one thing you tried, not the answer.',
       cards: [
         { title: 'Coins', text: 'Make 45¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', answer: '20¢ + 20¢ + 5¢ (the only way).' },
         { title: 'Patterns', text: '5, 8, 11, 14 … What is the 10th number? Show how you know.', answer: '32. Add 3 each time: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32.' },
@@ -238,7 +238,7 @@ module.exports = {
         ['Q6', 'Mei is youngest, Ali is oldest.'],
         ['Q7', '5 (5 + 9 = 14, 14 − 4 = 10)'],
         ['Q8', 'Pen 10 cubes. End to end 16 cubes.'],
-        ['Q9', 'Open. Done at talk time: swap puzzles with a partner and solve each other\u2019s.'],
+        ['Q9', 'Open. Written on page 2; at talk time swap puzzles with a partner and solve each other\u2019s.'],
         ['Puzzle cards', 'Coins: 20¢ + 20¢ + 5¢.  Patterns: 32.  Logic: Mei, Ben, Sam, Ali.  Measuring: 16 cubes.'],
         ['Think harder slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
       ]

@@ -22,7 +22,7 @@ const fast = choice;
 const refl = (n) => { const h = GAPS[String(n)].hard;
   const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:170px">${lab}</b><span style="flex:1;display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px">${inner}</span></div>`;
   const ln = `<span style="flex:1;border-bottom:2px dotted #8A94AD;height:18px;min-width:60px"></span>`;
-  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Two minutes. There are no right answers. You can pass. Nobody reads it out.</span></div>`
+  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Three minutes. There are no right answers. You can pass. Nobody reads it out.</span></div>`
     + row('Something I did well:', ln)
     + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
@@ -364,7 +364,7 @@ W.push(q(7, 'If you have time: I think of a number. I add 9, then take away 4. I
 W.push(q(8, 'A pencil is 6 cubes long. A pen is 4 cubes longer than the pencil.', { keepNext: true }));
 W.push(sub('a', 'How long is the pen?   ____ cubes'));
 W.push(sub('b', 'Put the pen and the pencil end to end. How long are they together?   ____ cubes'));
-W.push(q(9, 'Make a puzzle for a friend. Write the puzzle and the answer. (We do this in talk time.)', { keepNext: true }));
+W.push(q(9, 'Make a puzzle for a friend. Write the puzzle and the answer here. (We swap puzzles in talk time.)', { keepNext: true }));
 W.push(...lines(4));
 W.push(p([t('The puzzle I liked best today was ______________________ because ______________________', { size: 24 })], { before: 240, after: 100 }));
 

@@ -235,8 +235,8 @@
    "lines": 2
   },
   "whatif": {
-   "q": "Go further: fold a strip into 6 equal parts. How many sixths make a half? How many sixths make a third?",
-   "a": "3 sixths make a half and 2 sixths make a third."
+   "q": "Go further: fold a strip into 3 equal parts. How do you know the parts are equal? Then fold one into 6 equal parts: how many sixths make a half? A third?",
+   "a": "Thirds: fold and adjust until the 3 parts match, then check one part on top of another. 3 sixths make a half and 2 sixths make a third."
   },
   "unstuck": [
    "folded or drew strips",

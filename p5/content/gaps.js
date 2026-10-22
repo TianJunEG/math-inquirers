@@ -44,7 +44,7 @@ const L = {
   },
   4: {
     sneak: [
-      ['Draw a rectangle 6 squares wide and 4 squares tall on squared paper. Count all the squares in it. Draw a line from one corner to the opposite corner and cut along it. Do the two pieces match exactly? What fraction of the rectangle is one piece?', '24 squares. The two triangles match exactly (turn one round and it fits on the other), so each is 1/2 of the rectangle: 12 squares.'],
+      ['Draw a rectangle 6 squares wide and 4 squares tall on squared paper. Count all the squares in it. Draw a line from one corner to the opposite corner (drawing only, no cutting). Do the two pieces look exactly the same? Why? What fraction of the rectangle is one piece?', '24 squares. The two triangles match exactly (turn one round and it fits on the other), so each is 1/2 of the rectangle: 12 squares.'],
       ['ABCD is a rectangle 12 cm long and 5 cm tall. P is a point on the top side AB. Join P to C and to D. Does the area of triangle PCD change if P slides along AB? What is the area?', 'No, 30 cm². The base DC = 12 cm and the height from P down to DC is always 5 cm, so the area is 1/2 × 12 × 5 = 30 cm² wherever P is. A guess of "it changes" is fine: we test it in the explore.']
     ],
     pic: 'grid64',
@@ -70,7 +70,7 @@ const L = {
       ['Ali reads 12 pages in 4 minutes. Mei reads 20 pages in 5 minutes. Who reads faster? How can you be sure?', 'Mei. Ali reads 3 pages a minute (12 ÷ 4) and Mei reads 4 pages a minute (20 ÷ 5). Comparing the amount for 1 minute makes it fair.']
     ],
     pic: 'bar12',
-    whatIf: ['Printer A prints 18 pages a minute and printer B prints 25 pages a minute. Together they print 430 pages in 10 minutes. How many pages should each printer be given so that both finish at exactly the same time?', 'Printer A gets 180 pages (18 × 10) and printer B gets 250 pages (25 × 10); 180 + 250 = 430. If both work for the whole 10 minutes they finish together.'],
+    whatIf: ['Printer A prints 18 pages a minute and printer B prints 25 pages a minute. How long do they take together to print 430 pages? Then: how many pages should each printer be given so that both finish at exactly the same time?', '10 minutes (18 + 25 = 43 pages a minute; 430 ÷ 43 = 10). Printer A gets 180 pages (18 × 10) and printer B gets 250 pages (25 × 10); 180 + 250 = 430. If both work for the whole 10 minutes they finish together.'],
     pose: 'Make up a better-buy puzzle with three packs of the same thing. Which pack is the best buy? Swap and check.',
     p1: 'Q1 (a) (b), Q2 (the Start-here line, (a) (b)) and Q3 (a)', take: 'Q3 (b) (c) (page 1); Q5 and Q6 (b) (c) (page 2)',
     solo: 'Q4 (a) (b) and Q6 (a)', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
@@ -94,8 +94,8 @@ const L = {
     pic: 'rt30',
     whatIf: ['Draw any five-sided shape and tear off its five corners. Fit them together. Do they fit on a straight line, or round a point, or neither? Predict first: how many degrees do the five corners make altogether?', '540°, which is one and a half turns (360° + 180°). A five-sided shape can be cut into 3 triangles from one corner, and 3 × 180° = 540°. A four-sided shape gives 2 triangles, 360°.'],
     pose: 'Draw a triangle and a parallelogram that share a side. Give two or three angles and ask for one more. Swap and solve.',
-    p1: 'Q1 (a) to (d) and Q2 (a) (b)', take: 'Q2 (c) (page 1); Q3 (c) (d), and Q5 (page 2)',
-    solo: 'Q3 (a) (b) and Q4 (a) (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
+    p1: 'Q1 (a) to (d) and Q2 (a) (b)', take: 'Q2 (c) (page 1); Q3 (c) (d) and Q5 (page 2)',
+    solo: 'Q3 (b) and Q4 (a) (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
   },
   9: {
     sneak: [

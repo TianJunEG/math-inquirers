@@ -31,8 +31,8 @@
   "l10-chwalk",
   "l10-talk",
   "l10-exit",
-  "l10-reflect",
-  "end"
+  "end",
+  "l10-reflect"
  ],
  "cover": "l10-title",
  "sections": {

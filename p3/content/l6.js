@@ -134,8 +134,9 @@ module.exports = {
   deck: {
     today: 'Build a fraction wall, find equal fractions, compare fractions by making the parts the same size, and add related fractions.',
     warmGame: 'Fraction Flash. Four shapes cut into equal parts appear on screen (eighths of a circle, sixths of a rectangle, sixths of a hexagon, tenths of a bar). Children write the fraction shaded, then click to check.',
-    warmQs: [['How many quarters make one whole?', '4'], ['Which is bigger: 1/3 or 1/5?', '1/3'], ['1/2 = ?/10', '5'], ['2/9 + 4/9', '6/9'], ['1 − 2/5', '3/5']],
-    expSetup: ['Take 7 paper strips, all the same length.', 'Keep one whole. Use the printed strips (or fold or mark paper strips) for 2, 4, 8, 3, 6 and 12 equal parts.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
+    warmQs: [['How many quarters make one whole?', '4'], ['Which is bigger: 1/3 or 1/5?', '1/3'], ['1/2 = ?/10', '5']],
+    takeHome: [['2/9 + 4/9', '6/9'], ['1 − 2/5', '3/5']],
+    expSetup: ['Take the 7 strips you cut out before the lesson.', 'Keep one whole. Mark halves, quarters and eighths; the thirds, sixths and twelfths are printed.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
     expPic: 'A small fraction wall: one whole, halves, quarters and eighths, all with equal parts and a dashed line at one half.',
     expAsk: [
       ['How many 1/8 pieces fit exactly on 1/2?', '4 (1/2 = 4/8).'],
@@ -191,7 +192,7 @@ module.exports = {
     W.push(H.q(1, 'Use the fraction wall.', { before: 80, keepNext: true, after: 40 }));
     W.push(H.fig(wall()));
     W.push(H.sub('a', [fr(1, 2), ' = ', fr(BOX, 4), ' = ', fr(BOX, 6), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
-    W.push(H.sub('b', [fr(2, 3), ' = ', fr(BOX, 6), ' = ', fr(BOX, 12), '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)&nbsp;&nbsp;', fr(3, 4), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
+    W.push(H.sub('b', [fr(2, 3), ' = ', fr(BOX, 6), ' = ', fr(BOX, 12), '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c) ★ take-home:&nbsp;&nbsp;', fr(3, 4), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
     W.push(H.sub('d', 'Look at your answers to (a). What do you notice about the top and bottom numbers?', { keepNext: true, after: 0 }));
     W.push(...H.lines(1));
     W.push(H.q(2, ['Write ', '&gt;', ', ', '&lt;', ' or = in each circle.'], { keepNext: true }));
@@ -217,7 +218,7 @@ module.exports = {
     W.push(H.q(5, ['Ravi paints ', fr(1, 6), ' of a fence in the morning and ', fr(2, 3), ' of it in the afternoon. Draw a bar.'], { keepNext: true }));
     W.push(H.sub('a', 'What fraction has he painted?   ________        (b)  What fraction is not painted?   ________'));
     W.push(H.sub('c', 'How much more did he paint in the afternoon than in the morning?   ________'));
-    W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true, after: 40 }));
+    W.push(H.q(6, '★ Take-home (not for the lesson). Partners that make ONE WHOLE.', { keepNext: true, after: 40 }));
     W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
     W.push(...H.lines(1));

@@ -173,23 +173,24 @@ names=['Dice','Tissue box','Tin can','Party hat','Drum','Traffic cone']
 labs=['Cube: 6 square faces','Cuboid: 6 rectangle faces','Cylinder: 2 flat circles','Cone: 1 flat circle and a tip','Cylinder: 2 flat circles','Cone: 1 flat circle and a tip']
 body=h2('Warm-up: name the solid')+stitle('Cube, cuboid, cylinder or cone? Show me with your hands, then say it.')
 CW=533
-for i in range(6):
-    Lf=128+(i%3)*(CW+32); Tp=290+(i//3)*300
+SEL=[0,1,2,3]   # four of the six solids (dice, tissue box, tin can, party hat), about 2.5 minutes
+for j,i in enumerate(SEL):
+    Lf=128+(j%3)*(CW+32); Tp=290+(j//3)*300
     inner=f'<div style="display:flex;align-items:center;gap:20px">{solid(i)}<p style="font-family:{HF};font-size:40px;font-weight:600">{E(names[i])}</p></div>'
     body+=pin(Lf,Tp,CW,inner,None,WHITE,24,'16px 22px',f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
-for i in range(6):
-    Lf=128+(i%3)*(CW+32); Tp=290+(i//3)*300
+for j,i in enumerate(SEL):
+    Lf=128+(j%3)*(CW+32); Tp=290+(j//3)*300
     body+=pin(Lf+20,Tp+190,CW-40,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(labs[i])}</p>','pop',SOFT,16,'12px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p2l8-warm1',sec('p2l8-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Point to one object at a time: "What solid is it the same shape as?" Children make the shape with their hands (fists together for a cube, a long box shape for a cuboid, a tube for a cylinder, hands meeting in a point for a cone), then say the name. Click to show (clicks go dice, tissue box, tin can, party hat, drum, traffic cone). '
+ 'Minutes 0 to 5. Point to one object at a time: "What solid is it the same shape as?" Children make the shape with their hands (fists together for a cube, a long box shape for a cuboid, a tube for a cylinder, hands meeting in a point for a cone), then say the name. Click to show (clicks go dice, tissue box, tin can, party hat: four solids only; the drum and the traffic cone are spare). '
  'Ask: "How do you know it is a cube and not a cuboid?" (all 6 faces are the same square). "Which ones can roll?" (cylinder and cone). "Which can you stack?" (cube, cuboid, cylinder standing up). '
  'Watch for children who call the cube a square: a square is flat, a cube is a solid with 6 square faces.'))
 
 # 3. warm2
-qs=[('1.','How many faces does a cube have?','6'),('2.','How many flat faces does a cylinder have?','2'),('3.','Cut a circle into 2 equal parts. What is each part called?','a half circle'),('4.','How many quarter circles make 1 whole circle?','4'),('5.','Which solid has a tip and can roll?','a cone')]
+qs=[('1.','How many faces does a cube have?','6'),('2.','Cut a circle into 2 equal parts. What is each part called?','a half circle')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrowx(128,250+i*128,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(ansx(1420,250+i*128,372,c,size=34) for i,(a,b,c) in enumerate(qs))
 put('p2l8-warm2',sec('p2l8-warm2','5–8 MIN',body,
- 'Minutes 5 to 8. Read each question aloud, give thinking time, take answers, then click. Answers: 1) 6  2) 2 (the top and the bottom; the side is curved)  3) a half circle (half circle)  4) 4  5) a cone. '
+ 'Minutes 5 to 8. Read each question aloud, give thinking time, take answers, then click. Answers: 1) 6  2) a half circle. Spare questions in the guide table: a cylinder has 2 flat faces; 4 quarter circles make 1 whole circle; a cone has a tip and can roll. '
  'For 1, hold up a cube and count the faces with the children, putting a finger on each: front, back, left, right, top, bottom. Ask: "How do you know you did not count a face twice?" (go in pairs: front and back, left and right, top and bottom).'))
 
 # 4. explore1
@@ -200,10 +201,10 @@ g+=CI(870,130,105,SKY)+f'<path d="M1010 130 L1100 130" stroke="{NAVY}" stroke-wi
 g+=quarter(1270,120,100,0,MINT)+quarter(1270,140,100,90,MINT)+quarter(1250,140,100,180,MINT)+quarter(1250,120,100,270,MINT)
 g+=T(1480,110,'Then make',32,MUTED)+T(1480,150,'new shapes!',32,MUTED)
 pic=SV(1620,270,g,'One paper circle cut into 2 half circles, and one paper circle cut into 4 quarter circles')
-body=h2('Explore: circle pieces')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take 2 paper circles that are the same size.</li><li>Fold one in half and cut along the fold.</li><li>Fold the other in half, then in half again. Open it and cut along both folds.</li><li>Use your pieces to make new shapes. Name them!</li></ol>',extra='padding:24px 40px')
+body=h2('Explore: circle pieces')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take your 2 paper circles (cut out before the lesson, the same size).</li><li>Fold one in half and cut along the fold.</li><li>Fold the other in half, then in half again. Open it and cut along both folds.</li><li>Use your pieces to make new shapes. Name them!</li></ol>',extra='padding:24px 40px')
 body+=pin(128,580,1664,pic,None,WHITE,24,'8px 22px')
 put('p2l8-explore1',sec('p2l8-explore1','8–14 MIN',body,
- 'Minutes 8 to 14. Each child cuts their own circles (draw round a cup if there are no ready-made circles). One circle gives 2 half circles; the other gives 4 quarter circles. Children then put pieces together: whole straight sides must touch. '
+ 'Minutes 8 to 14. The two paper circles are cut out BEFORE the lesson (parents cut them; kit at minute 0). Pair work is 5.5 minutes. One circle gives 2 half circles; the other gives 4 quarter circles. Children then put pieces together: whole straight sides must touch. '
  'Things to make: a whole circle in different ways, a half circle from 2 quarter circles, a "fan", a "wave" (two half circles side by side, one turned over). Online: the same on camera.'))
 
 # 5. explore2
@@ -244,8 +245,8 @@ put('p2l8-we1',sec('p2l8-we1','22–25 MIN',body,
 
 # 8. try1
 put('p2l8-try1',try_x('p2l8-try1','25–26 MIN','Your turn: circle pieces','Use your paper pieces to check.',
- [('a','How many quarter circles make a half circle?','2'),('b','Ben has 2 half circles and 4 quarter circles. How many whole circles can he make?','2 circles'),('c','What fraction of a whole circle is 1 quarter circle?','{1/4}')],
- 'Whiteboards, then click. a) 2. b) 2 half circles make 1 circle and 4 quarter circles make another: 2 circles. Push: "What if he had 1 half circle and 2 quarter circles?" (1 circle). c) 1/4: the circle is cut into 4 equal parts.',size=36,gap=160))
+ [('a','How many quarter circles make a half circle?','2'),('b','Ben has 2 half circles and 4 quarter circles. How many whole circles can he make?','2 circles')],
+ 'Whiteboards, then click. a) 2. b) 2 half circles make 1 circle and 4 quarter circles make another: 2 circles. Push: "What if he had 1 half circle and 2 quarter circles?" (1 circle). (Item c, what fraction is a quarter circle, is dropped: it is in the explore debrief.)',size=36,gap=160))
 
 # 9. we2: squares in a 3 by 3 grid
 c=100; base=SV(320,320,gridb(10,10,3,3,c),'A 3 by 3 grid of squares')
@@ -270,37 +271,11 @@ put('p2l8-we2',sec('p2l8-we2','26–28 MIN',body,
 # 10. try2
 g22=SV(140,140,gridb(10,10,2,2,60),'a 2 by 2 grid'); g32=SV(200,140,gridb(10,10,3,2,60),'a grid 3 long and 2 high'); g42=SV(260,140,gridb(10,10,4,2,60),'a grid 4 long and 2 high')
 body=h2('Your turn: count every square')+stitle('Whiteboards. Small squares first, then bigger ones.')
-for k,(pic,q,a) in enumerate([(g22,'A 2 by 2 grid. How many squares?','5'),(g32,'3 long and 2 high. How many squares?','8'),(g42,'4 long and 2 high. How many squares?','11')]):
+for k,(pic,q,a) in enumerate([(g22,'A 2 by 2 grid. How many squares?','5'),(g32,'3 long and 2 high. How many squares?','8')]):
     top=300+k*190
     body+=pin(128,top,280,pic,None,WHITE,20,'10px 10px')+qrowx(470,top+30,900,'abc'[k],q,36)+ansx(1420,top+30,372,a,size=36)
 put('p2l8-try2',sec('p2l8-try2','28–30 MIN',body,
- 'Whiteboards up together, then click. a) 4 + 1 = 5. b) 6 small + 2 squares made of 4 (the 2 by 2 window fits in 2 places) = 8. There is no 3 by 3 square: the grid is only 2 high. c) 8 small + 3 of size 2 by 2 = 11. Ask a child to show the window sliding along c.'))
-
-# 11. we3: triangles by the line they sit on
-Ax,Ay=230,20; Bx,By=20,380; Cx,Cy=440,380
-def trifig(x0,y0,sc,sw=4):
-    A=(x0+Ax*sc,y0+Ay*sc); B=(x0+Bx*sc,y0+By*sc); C=(x0+Cx*sc,y0+Cy*sc); M=((B[0]+C[0])/2,B[1]); P=((A[0]+B[0])/2,(A[1]+B[1])/2); Q=((A[0]+C[0])/2,(A[1]+C[1])/2)
-    return A,B,C,M,P,Q,PG([A,B,C],WHITE,NAVY,sw)+L(A[0],A[1],M[0],M[1],sw)+L(P[0],P[1],Q[0],Q[1],sw)
-A,Bp,Cp,M,Pp,Qp,fig=trifig(0,0,1)
-base=SV(460,400,fig,'A triangle with 1 line from the top corner to the middle of the bottom, and 1 line across the middle')
-def tri_th(which):
-    def f(x,i):
-        sc=0.3; a,b,c_,m,pp,qq,fg=trifig(x+4,4,sc,3)
-        k=((pp[0]+qq[0])/2,pp[1])
-        shape=which[i]
-        pts={'L':[a,b,m],'Rr':[a,m,c_],'W':[a,b,c_],'tl':[a,pp,k],'tr':[a,k,qq],'tw':[a,pp,qq]}[shape]
-        return fg+PG(pts,YEL,TEAL,4)
-    return f
-body=h2('Count triangles: sort them by their bottom line')+stitle('How many triangles are in this picture?')
-body+=pin(128,300,460,base)
-for k,(t,sh) in enumerate([('Triangles that sit on the bottom line: 3',['L','Rr','W']),('Triangles that sit on the line across: 3',['tl','tr','tw'])]):
-    tt=thumbs(3,146,128,tri_th(sh),18,t)
-    body+=pin(660,300+k*200,1132,f'<div style="display:flex;align-items:center;gap:24px"><p style="width:500px;flex:none;font-size:34px;font-weight:600;line-height:1.3"><span style="color:{TEAL};font-weight:800">Step {k+1}.</span>  {E(t)}</p>{tt}</div>','fade',WHITE,20,'14px 28px')
-body+=ansx(660,720,1132,'3 + 3 = 6 triangles',size=40)
-body+=soft(128,820,1664,'No other line can be the bottom of a triangle here, so we have them all.',30)
-put('p2l8-we3',sec('p2l8-we3','30–31 MIN',body,
- 'Click through. Think-aloud: "Every triangle has a bottom side. In this picture a bottom side must lie on the bottom line or on the line across. On the bottom line: the left part, the right part, and the whole big triangle: 3. On the line across: the small left one, the small right one and the small triangle at the top made of both: 3. 3 + 3 = 6." '
- 'Ask: "Is the shape under the line across a triangle?" No: it has 4 sides. The worksheet picture has 2 lines from the top: count the same way.'))
+ 'Whiteboards up together, then click. a) 4 + 1 = 5. b) 6 small + 2 squares made of 4 (the 2 by 2 window fits in 2 places) = 8. There is no 3 by 3 square: the grid is only 2 high. Ask a child to show the window sliding along b. (Item c is dropped: worksheet Q2 has the same type.)'))
 
 # 12. key
 body=h2('Key idea: count in order')+card(p('Sort what you count: by size, by the line it sits on, or by layer. Then you never miss one or count one twice.',44,700))+card(p('Name a piece by its sides: a half circle has 1 straight side, a quarter circle has 2.',38,600,MUTED))
@@ -315,10 +290,10 @@ put('p2l8-break',break_slide('p2l8-break','32–36 MIN','Be a shape! When the tu
  'Four minutes. Call the shapes faster and faster. Add "quarter circle" (one arm up, one arm out to the side, then sweep the hand round). Online: children stay in view of the camera.'))
 
 # 14-15. worksheet page 1
-put('p2l8-ws1',preview_x('p2l8-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The robot. Count one kind of piece at a time and tick it. Then make whole circles from pieces.'),('Q2','Count every square (by size) and every triangle (by the line it sits on).')],'Stuck? Use your paper pieces, or colour each shape you count.',
- 'Minutes 36 to 50. Pairs work together. Ask "How do you know you have them all?" before giving any help. For Q2a, give pairs a paper window to slide (cut a 2 by 2 and a 3 by 3 hole in card).'))
-put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','Square 2, triangle 3, half circle 4, quarter circle 2'),('Q1 a–c','a) half circles    b) 11 pieces    c) 3 circles'),('Q2','a) 16 + 9 + 4 + 1 = 30 squares     b) 6 + 6 = 12 triangles')],
- 'Click each answer after a pair explains theirs. Q1c: think in quarter circles: 3 half circles are 6 quarter circles, plus 6 more is 12 quarter circles, and 4 make a circle: 3 circles. Or: 2 half circles make 1 circle, 4 quarter circles make 1 circle, and the last half circle with the last 2 quarter circles make 1 more. '
+put('p2l8-ws1',preview_x('p2l8-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The robot. Count one kind of piece at a time and tick it. Then make whole circles from pieces. (Part c is a ★ take-home star.)'),('Q2','Count every square (by size). (The triangles, part b, are a ★ take-home star.)')],'Stuck? Use your paper pieces, or colour each shape you count.',
+ 'Minutes 36 to 50. Pairs work together. Ask "How do you know you have them all?" before giving any help. For Q2a, give pairs a paper window to slide (cut a 2 by 2 and a 3 by 3 hole in card). Q1(c) and Q2(b) (triangles) are marked ★ take-home on the page: children do them at home.'))
+put('p2l8-ws1ans',check_x('p2l8-ws1ans','50–52 MIN','Page 1: check together',[('Q1','Square 2, triangle 3, half circle 4, quarter circle 2'),('Q1 a–c','a) half circles    b) 11 pieces    ★ take-home:  c) 3 circles'),('Q2','a) 16 + 9 + 4 + 1 = 30 squares     ★ take-home:  b) 6 + 6 = 12 triangles')],
+ 'Click each answer after a pair explains theirs (answer lines only). Q1(c) and Q2(b) are take-home stars: the answers stay here so children can mark them at home. Q1c: think in quarter circles: 3 half circles are 6 quarter circles, plus 6 more is 12 quarter circles, and 4 make a circle: 3 circles. Or: 2 half circles make 1 circle, 4 quarter circles make 1 circle, and the last half circle with the last 2 quarter circles make 1 more. '
  'Q1: the ears and the feet are half circles; the shoulders are quarter circles; the hat and the hands are triangles. Q2a: the 2 by 2 window fits 3 across and 3 down (9 places), the 3 by 3 window fits in 4 places. Q2b: on the bottom line: 3 single parts, 2 made of 2 parts, 1 whole = 6; on the line across: the same, 6.',lw=180,gap=170,size=34))
 
 # 16. teach cubes
@@ -348,9 +323,6 @@ for k,(cl,lab,a) in enumerate([(ta,'3 cubes in a row and 1 cube on top of the en
     x=128+k*560
     body+=pin(x,300,520,f'<div style="height:270px;display:flex;align-items:flex-end;justify-content:center">{sv}</div><p style="font-size:36px;font-weight:800;color:{TEAL};text-align:center">{"abc"[k]}</p>',None,WHITE,20,'14px 20px',f'box-sizing:border-box')
     body+=ansx(x+80,700,300,a+' cubes',size=40)
-put('p2l8-trycube',sec('p2l8-trycube','54–55 MIN',body,
- 'Whiteboards, then click. a) 3 + 1 = 4. b) bottom 2 + 2 = 4, top 2: 6 (2 cubes are hidden under the top ones). c) bottom 3 + 3 = 6, top 2: 8. Ask: "In c, how many cubes can you not see at all?" (2: the back bottom cubes under the top ones; you can see a little of the third back cube on the right). Let children build c to check.'))
-
 # 18. teach nets
 ncells=['#...','####','..#.']
 nb=net_svg(ncells,92,'A net of 6 squares: a row of 4, one square above the first and one below the third',shade=[(1,1)])
@@ -377,15 +349,11 @@ for k,(sv,q,a) in enumerate([(na,'Does it fold into a cube?','Yes'),(nbb,'Does i
     body+=pin(x,290,520,f'<div style="height:220px;display:flex;align-items:center;justify-content:center">{sv}</div><p style="font-size:34px;font-weight:700;text-align:center"><span style="color:{TEAL};font-weight:800">{"abc"[k]}</span>  {E(q)}</p>',None,WHITE,20,'14px 20px','box-sizing:border-box')
     body+=ansx(x,640,456,a,size=34)
 body+=soft(128,800,1664,'Two squares in a straight line with one square between them end up opposite each other.',30)
-put('p2l8-trynet',sec('p2l8-trynet','56–57 MIN',body,
- 'Whiteboards (or thumbs up and down), then click. a) Yes: this is one of the 11 cube nets. b) No: the 1st and the 3rd square of the row are opposite each other, so the two squares on top of them both fold onto the same face (the lid), and the bottom is open. '
- 'c) E: C, D and E are in a straight line, so when D is the bottom, C and E are the two walls facing each other. Also A is opposite D, and B is opposite F. This is the same idea that solves the dice challenge on the Think Harder page.'))
-
 # 20-21. worksheet page 2
-put('p2l8-ws2',preview_x('p2l8-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Count the cubes, layer by layer. Remember the hidden ones.'),('Q4','Cut out nets A to D (fold A with your tutor first). Circle the ones that make a cube. Then add one square to make a net.')],'Finished early? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. Q4 uses the cut-out nets A to D from the kit page (E and F are Think harder 3) at the back of the workbook: children should have them cut out before the lesson (if not, give 2 minutes to cut). They decide first, then fold to check.'))
-put('p2l8-ws2ans',check_x('p2l8-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) A 5   B 8   C 14 (9 + 4 + 1)    b) 13 more (27 − 14)'),('Q4','a) A and C    b) under any one of the 4 squares in the row')],
- 'Click each answer after a child explains. Q3 B: one cube is completely hidden at the back, bottom, left. C: count layers: 9 + 4 + 1 = 14. b) a 3 by 3 by 3 cube has 3 layers of 9: 27; 27 − 14 = 13. '
+put('p2l8-ws2',preview_x('p2l8-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q3','Count the cubes, layer by layer. Remember the hidden ones.'),('Q4','Cut out nets A to D (fold A with your tutor first). Circle the ones that make a cube. (Adding one square to make a net, part b, is a ★ take-home star.)')],'Finished early? Stretch and Challenge come next.',
+ 'Children work alone. Q4(b) (add one square to make a cube net) is marked ★ take-home on the page: children do it at home. Note who needs a short catch-up next lesson. Q4 uses the cut-out nets A to D from the kit page (E and F are Think harder 3) at the back of the workbook: parents cut them out BEFORE the lesson (kit at minute 0; if not, give 2 minutes to cut). They decide first, then fold to check.'))
+put('p2l8-ws2ans',check_x('p2l8-ws2ans','69–72 MIN','Page 2: check together',[('Q3','a) A 5   B 8   C 14 (9 + 4 + 1)    b) 13 more (27 − 14)'),('Q4','a) A and C    ★ take-home:  b) under any one of the 4 squares in the row')],
+ 'Click each answer after a child explains (answer lines only). Q4(b) is a take-home star: the answer stays here so children can mark it at home. Q3 B: one cube is completely hidden at the back, bottom, left. C: count layers: 9 + 4 + 1 = 14. b) a 3 by 3 by 3 cube has 3 layers of 9: 27; 27 − 14 = 13. '
  'Q4a: B (2 by 3) has a 2 by 2 block; D has two squares that land on the same face. (Think harder 3: E folds into a cube; F has a row of 5, which wraps round onto itself.) Q4b: the extra square must go under the row (any of the 4 places), so the two loose squares become the top and the bottom. Above the row, or at the ends, it does not work. '
  'The dice net (opposite faces add up to 7) is on the Go further page: in a straight row, the 1st and 3rd squares are opposite, and so are the 2nd and 4th.',lw=180,gap=170,size=34))
 
@@ -418,7 +386,7 @@ put('p2l8-chwalk',sec('p2l8-chwalk','Challenge',body,
 
 # 26. talk
 put('p2l8-talk',talk_slide('p2l8-talk','72–80 MIN','How can you be sure you counted every cube in a stack, even the ones you cannot see?',
- 'Minutes 72 to 80. Pairs talk for 2 minutes, then share. Listen for: count layer by layer; every cube on top must sit on a cube below (cubes do not float); a layer is a rectangle, so count its rows; build it to check. Praise the reasons, not only the answers.'))
+ 'Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Listen for: count layer by layer; every cube on top must sit on a cube below (cubes do not float); a layer is a rectangle, so count its rows; build it to check. Praise the reasons, not only the answers.'))
 
 # 27. exit
 ex=stack_svg(hmap([[1,1,1],[1,1,2]]),70,'A stack: a bottom layer 3 cubes long and 2 cubes deep, with 1 cube on top at the back right')
@@ -430,7 +398,7 @@ p2gaps.add(S,8)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
-order=['p2l8-title','p2l8-warm1','p2l8-warm2','p2l8-explore1','p2l8-explore2','p2l8-teach1','p2l8-we1','p2l8-try1','p2l8-we2','p2l8-try2','p2l8-we3','p2l8-key','p2l8-break','p2l8-ws1','p2l8-ws1ans','p2l8-teachcube','p2l8-trycube','p2l8-teachnet','p2l8-trynet','p2l8-ws2','p2l8-ws2ans','p2l8-stretch','p2l8-challenge','p2l8-chdiag','p2l8-chwalk','p2l8-talk','p2l8-exit']
+order=['p2l8-title','p2l8-warm1','p2l8-warm2','p2l8-explore1','p2l8-explore2','p2l8-teach1','p2l8-we1','p2l8-try1','p2l8-we2','p2l8-try2','p2l8-key','p2l8-break','p2l8-ws1','p2l8-ws1ans','p2l8-teachcube','p2l8-teachnet','p2l8-ws2','p2l8-ws2ans','p2l8-stretch','p2l8-challenge','p2l8-chdiag','p2l8-chwalk','p2l8-talk','p2l8-exit']
 order=p2gaps.order(order,8)
 deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P2: Lesson 8 – Shape Builders','order':order,'cover':'p2l8-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p2l8-title'},'s2':{'description':'Teach: circle pieces, and counting squares and triangles in order','start':'p2l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l8-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l8-stretch'}},

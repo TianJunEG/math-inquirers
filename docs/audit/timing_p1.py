@@ -62,6 +62,29 @@ ITEMS = {
  9: [('Q1', 3.0, 0, 1), ('Q2', 7.0, 0, 1), ('Q3', 2.5, 0, 2), ('Q5', 3.0, 0, 2), ('Q6', 3.5, 0, 2), ('Q4 (if time)', 3.0, 1, 2)],
  10: [('Q1', 1.0, 0, 1), ('Q2', 2.0, 0, 1), ('Q3', 2.5, 0, 1), ('Q4', 3.0, 0, 1), ('Q5', 2.5, 0, 2), ('Q6', .8, 0, 2), ('Q7', 1.5, 0, 2), ('Q8', 1.5, 0, 2)],
 }
+# ---- re-budget pass (docs/audit/rebudget_p1.md): the repository now contains the audit fixes; these overrides describe them
+RB_ITEMS = {
+ 4: [('Q1', 1.0, 0, 1), ('Q2 core', 1.5, 0, 1), ('Q3 core', 1.0, 0, 1), ('Q4', 5.0, 0, 1), ('Q5 core', 1.5, 0, 2), ('Q6 core', 2.0, 0, 2), ('Q7', 5.0, 0, 2), ('Q8 (if time)', 4.0, 1, 2)],
+ 5: [('Q1', 2.6, 0, 1), ('Q2', 2.5, 0, 1), ('Q3', 4.0, 0, 2), ('Q4', 4.0, 0, 2), ('Q5 (take-home)', 2.5, 1, 2)],
+ 6: [('Q1', 5.0, 0, 1), ('Q2', 4.0, 0, 1), ('Q3a', 3.0, 0, 2), ('Q4', 2.5, 0, 2), ('Q5 core', 1.0, 0, 2), ('Q6 core', 1.0, 0, 2), ('Q3b (if time)', 2.0, 1, 2)],
+ 9: [('Q1', 3.0, 0, 1), ('Q2 (numbers from Explore + one new row)', 3.0, 0, 1), ('Q3', 2.5, 0, 2), ('Q5', 3.0, 0, 2), ('Q6', 3.5, 0, 2), ('Q4 (if time)', 3.0, 1, 2)],
+ 10: [('Q1', 1.0, 0, 1), ('Q2', 2.0, 0, 1), ('Q3', 2.5, 0, 1), ('Q4', 3.0, 0, 1), ('Q5', 2.5, 0, 2), ('Q6', .8, 0, 2), ('Q7 (if time)', 1.5, 1, 2), ('Q8', 1.5, 0, 2), ('Q9', 3.5, 0, 2)],
+}
+RB_EXPLORE = {1: (7, 4.0, 3.0), 9: (9, 6.0, 4.5)}      # L1 strip cut before the lesson (-2.5), L9 cube strip cut before the lesson (-2)
+RB_BREAK = {9: 1.5}                                       # giant steps in place
+RB = False        # True: read the repository as it is now (budget.json, slide clocks), apply the universal fixes the repo contains
+BUDJ = None
+
+
+def rb_load():
+    global BUDJ
+    if BUDJ is None:
+        BUDJ = json.load(open(f'{ROOT}/hp/budget.json'))['lessons']
+        for k, v in RB_ITEMS.items(): ITEMS[k] = v
+        for k, v in RB_EXPLORE.items(): EXPLORE_ACT[k] = (v[0], v[1], v[2], EXPLORE_ACT[k][3])
+        for k, v in RB_BREAK.items(): BREAK_MOVE[k] = v
+    return BUDJ
+
 T_ITEM_MID = 5.0     # Think Harder item, middle child (4-6 min); HIGH ~3.5
 
 # Quick-question game (warm-up 2-5): minutes of play incl. instructions given by SAY (judged from the game text)
@@ -120,7 +143,7 @@ def load_slides(n):
     return out
 
 
-def assign_parts(slides):
+def assign_parts(slides, n=None):
     """Assign each slide in deck order to a lesson part. Untimed slides inside the worksheet run
     (before the page-2 check slide) belong to the worksheet; untimed slides after it are 'choice' slides."""
     ws2ans = max(i for i, s in enumerate(slides) if s['id'].endswith('ws2ans'))
@@ -143,6 +166,11 @@ def assign_parts(slides):
             p = 'look'
         elif sid == 'end':
             p = 'end'
+        elif RB and sid in BUDJ[str(n)]['optional_slides']:
+            p = 'choice'
+        elif RB and a is not None:
+            pr = {x['title']: x for x in BUDJ[str(n)]['parts']}
+            p = 'explore' if pr['Explore']['start'] <= a and b <= pr['Explore']['end'] else 'mini' if pr['Mini-lesson']['start'] <= a and b <= pr['Mini-lesson']['end'] else 'work' if pr['Worksheet']['start'] <= a and b <= pr['Worksheet']['end'] else 'choice'
         elif a is not None and a >= 10 and b <= 25:
             p = 'explore'
         elif a is not None and a >= 25 and b <= 35:
@@ -180,13 +208,13 @@ FIX = False   # when True, apply the universal fixes (REC cues <= 10 s, 3 quick 
 
 def model(n, D):
     L = D['L'][n - 1]; SC = D['SC'][str(n)]; DDn = D['DD'][str(n)]; G = D['G'][str(n)]
-    slides = assign_parts(load_slides(n))
+    slides = assign_parts(load_slides(n), n)
     byp = {}
     for s in slides:
         byp.setdefault(s['part'], []).append(s)
     rec = [words(x) for x in D['rec']]
     recs = [secs_speak(w) if REC_S is None else REC_S for w in rec]   # seconds, 10 cues
-    if FIX: recs = [min(r, 10) for r in recs]
+    if FIX and not RB: recs = [min(r, 10) for r in recs]
     say = lambda lines: sum(words(re.sub(r'^[“"]|[”"]$', '', x)) for x in lines)
     parts = []   # (name, scripted, comps dict minutes)
 
@@ -400,12 +428,13 @@ def fmt(x): return f'{x:.1f}'
 def child_completion(n):
     """Required Start-here items finished by a LOW / MID / HIGH child in the scripted independent-work time."""
     L = {}
-    slides = assign_parts(load_slides(n))
+    slides = assign_parts(load_slides(n), n)
     ws = {kind(s['id']): s for s in slides if s['part'] == 'work'}
     w1 = ws['ws1']; w2 = ws['ws2']
-    teach_before = w1['s'] - 40
+    ws0 = BUDJ[str(n)]['parts'][6]['start'] if RB else 40
+    teach_before = w1['s'] - ws0
     # page-1 independent work minutes: slide length minus 3 (start-up + reading Q1/Q2) when the slide starts at 40
-    W1 = (w1['e'] - w1['s']) - (3 if w1['s'] == 40 else 1)
+    W1 = (w1['e'] - w1['s']) - (3 if w1['s'] == ws0 else 1)
     W2 = (w2['e'] - w2['s']) - 1     # 1 min to settle and re-read instructions
     out = {}
     for lab, x in (('LOW', LOW_X), ('MID', 1.0), ('HIGH', HIGH_X)):
@@ -491,6 +520,16 @@ NEW_BUDGET = {
 }
 
 
+# deltas that are NOT visible in the slide list or the item tables (the rest is read from the repository in RB mode)
+RB_DELTAS = {
+ 1: [(0, 'speaking', -0.9, 'routine slide shown 30 s, four phases named, table not read')],
+ 10: [(3, 'speaking', -0.7, 'pairs read their own card'),
+      (3, 'waiting', -2.4, 'debrief with ONE question; pair reports 20 s'),
+      (8, 'speaking', -1.2, 'certificates: 10 s per child'),
+      (7, 'activity', -3.5, 'talk time = swap, solve, share only (the puzzle is written on page 2)')],
+}
+
+
 def fixed_parts(n, D):
     global FIX
     FIX = True
@@ -499,7 +538,7 @@ def fixed_parts(n, D):
     finally:
         FIX = False
     parts = [(a, b, dict(c), d) for a, b, c, d in parts]
-    for idx, comp, delta, _txt in LESSON_DELTAS.get(n, []):
+    for idx, comp, delta, _txt in (RB_DELTAS.get(n, []) if RB else LESSON_DELTAS.get(n, [])):
         parts[idx][2][comp] += delta
     return parts
 
@@ -606,5 +645,56 @@ def main():
         print(f'| {n} | {o["slides"]} ({o["timed"]}) | {o["say"]} | {fmt(o["need"])} | {o["need"]-90:+.1f} | {fmt(f)} - {fmt(sl)} | {ov or "-"} | {lo or "-"} | {fmt(fb)} ({fmt(ff)} - {fmt(fs)}) |')
 
 
+AUDIT_PRED = {1: 82.9, 2: 86.6, 3: 85.7, 4: 83.3, 5: 84.2, 6: 85.5, 7: 84.2, 8: 85.6, 9: 86.4, 10: 86.6}
+
+
+def main_rebudget():
+    global WBQ, RB
+    RB = True; rb_load()
+    WBQ = wb_questions()
+    D = load_js()
+    print('<!-- generated by docs/audit/timing_p1.py --rebudget: the repository as re-budgeted (hp/budget.json) -->')
+    summ = []
+    for n in range(1, 11):
+        set_scenario('base')
+        parts = fixed_parts(n, D)
+        bud = BUDJ[str(n)]['parts']
+        print(f'\n#### Lesson {n}: {D["L"][n-1]["title"]}\n')
+        print('| Part | Budget (start-end) | Need | Budget - need | Flag | Slides | Est. clock at end of part |')
+        print('|---|---|---:|---:|---|---:|---:|')
+        tot = 0; clk = []
+        for i, (nm, _sc, c, ns) in enumerate(parts):
+            b = bud[i]; need = sum(c.values()); tot += need
+            print(f'| {PART_NAMES[i]} | {b["start"]}-{b["end"]} ({b["end"]-b["start"]}) | {fmt(need)} | {fmt(b["end"]-b["start"]-need)} | {flag(b["end"]-b["start"], need)} | {ns} | {fmt(tot)} (plan {b["end"]}) |')
+            clk.append(tot)
+        fl = [x for x in bud if x['title'] == 'Flex time']
+        if fl: print(f'| Flex time (buffer) | {fl[0]["start"]}-{fl[0]["end"]} (2) | 0.0 | 2.0 | | | |')
+        res = {}
+        for sc in ('fast', 'base', 'slow'):
+            set_scenario(sc); ps = fixed_parts(n, D); res[sc] = sum(sum(c.values()) for _, _, c, _ in ps)
+        set_scenario('base')
+        print(f'\nEstimated need (base): **{fmt(res["base"])}** of 90 (fast {fmt(res["fast"])}, slow {fmt(res["slow"])}); audit predicted {AUDIT_PRED[n]}.')
+        summ.append((n, res, clk))
+    print('\n#### Summary\n')
+    print('| Lesson | New total need (base) | Fast - slow | Audit predicted | Difference | Minutes of slack to 90 (incl. buffer) |')
+    print('|---|---:|---|---:|---:|---:|')
+    for n, r, clk in summ:
+        print(f'| {n} | {fmt(r["base"])} | {fmt(r["fast"])} - {fmt(r["slow"])} | {AUDIT_PRED[n]} | {r["base"]-AUDIT_PRED[n]:+.1f} | {90-r["base"]:.1f} |')
+    print('\n#### Running clock (estimated minute at which each plan mark is reached)\n')
+    print('| Lesson | end of sneak-peek (plan) | end of explore | start of worksheet | end of worksheet | end of talk | end of exit | end |')
+    print('|---|---|---|---|---|---|---|---|')
+    for n, r, clk in summ:
+        b = BUDJ[str(n)]['parts']
+        print(f'| {n} | ' + ' | '.join(f'{fmt(clk[i])} ({b[i]["end"]})' for i in (2, 3, 5, 6, 7, 8)) + f' | {fmt(clk[9])} (90) |')
+    print('\n#### Children and the Start-here worksheet\n')
+    print('| Lesson | Required items | Page 1 need / have | Page 2 need / have | LOW finishes | MIDDLE finishes | HIGH finishes |')
+    print('|---|---:|---|---|---|---|---|')
+    for n in range(1, 11):
+        cc = child_completion(n); m = cc['MID']
+        p1 = sum(x for _, x, o, pg in ITEMS[n] if pg == 1 and not o); p2 = sum(x for _, x, o, pg in ITEMS[n] if pg == 2 and not o)
+        print(f'| {n} | {m["tot"]} | {fmt(p1)} / {m["W1"]} | {fmt(p2)} / {m["W2"]} | {cc["LOW"]["done"]} of {m["tot"]} | {m["done"]} of {m["tot"]} | {cc["HIGH"]["done"]} of {m["tot"]} |')
+
+
 if __name__ == '__main__':
-    main()
+    if '--rebudget' in sys.argv: main_rebudget()
+    else: main()

@@ -45,8 +45,9 @@ module.exports = {
   deck: {
     today: 'Change to one unit to compare and calculate. Plan a budget. Draw a time line for durations and the 24-hour clock.',
     warmGame: 'Name that unit. The tutor names an object and a number; write the best unit: m, cm, km, g, kg, ml or ℓ.',
-    warmQs: [['1 m 40 cm = __ cm', '140 cm'], ['3 kg = __ g', '3000 g'], ['2 ℓ 50 ml = __ ml', '2050 ml'], ['1 hour 20 minutes = __ minutes', '80 minutes'], ['2:00 pm in 24-hour time is __', '14:00']],
-    expSetup: ['You have $20 to plan a party for 8 friends.', 'Each friend drinks 250 ml of punch. Buy at least 2 ℓ of punch (any number of bottles).', 'Buy at least one food. You may buy more than one of an item. Spend as close to $20 as you can.', 'Go further: can you spend exactly $20?'],
+    warmQs: [['1 m 40 cm = __ cm', '140 cm'], ['3 kg = __ g', '3000 g'], ['2 ℓ 50 ml = __ ml', '2050 ml']],
+    takeHome: [['1 hour 20 minutes = __ minutes', '80 minutes'], ['2:00 pm in 24-hour time is __', '14:00']],
+    expSetup: ['You have $20 to plan a party for 8 friends.', 'Each friend drinks 250 ml of punch. Buy at least 2 ℓ of punch (any number of bottles).', 'Buy at least one food. You may buy more than one of an item. Spend as close to $20 as you can.', 'Extension, only if you finish: can you spend exactly $20?'],
     expPic: 'a party menu card: pizza $8.50, chicken wings $6, curry puffs $4, fruit punch 2 ℓ $3, cupcakes $5.50, balloons $2.50.',
     expAsk: [['How much punch do 8 friends need? How many bottles?', '8 × 250 ml = 2000 ml = 2 ℓ, so at least 1 bottle. You may buy more.'], ['Who got closest to $20? How did you add the prices?', 'Open. Changing to cents, or adding dollars then cents, both work.'], ['Can you spend exactly $20?', 'Yes, 15 ways with up to 4 of each item, for example pizza + 2 punch + cupcake; 2 pizzas + punch; 3 punch + 2 cupcakes; wings + 2 curry puffs + 2 punch.']],
     mini1: { head: 'Change to one unit', body: ['A bag has 2 kg 100 g of flour. Mum uses 850 g.', 'How much flour is left?'], ans: '2 kg 100 g = 2100 g. 2100 − 850 = 1250 g = 1 kg 250 g.' },

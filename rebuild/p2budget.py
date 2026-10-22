@@ -45,6 +45,7 @@ def parts(K):
 # ---- slide pills: SLIDES[K] = {short id: (start, end) | OPT}.  Filled below, lesson by lesson. ----
 SLIDES = {}
 OPTIONAL_COMMON = ['stretch', 'challenge', 'chdiag', 'chwalk']
+NOPILL = {'end'}   # the closing slide of Lesson 10 has no time pill (its notes still carry the minutes)
 
 def _tl(K, **kw):
     """Standard slide windows. Returns dict; kw overrides/extends."""
@@ -85,7 +86,7 @@ def apply(S, K):
             lab = label(se)
             if PILL.search(h): h = PILL.sub(lambda m: m.group(1) + lab + m.group(3), h, count=1)
             elif OLDMIN.search(h): h = OLDMIN.sub('>' + lab + '<', h, count=1)
-            else: raise SystemExit('no pill in ' + i)
+            elif short not in NOPILL: raise SystemExit('no pill in ' + i)
             txt = f'Minutes {fmt(se[0])} to {fmt(se[1])}'
             if NOTE.search(h): h = NOTE.sub(lambda m: m.group(1) + txt, h, count=1)
             else: h = h.replace('<aside>', f'<aside>{txt}. ', 1)
@@ -125,10 +126,15 @@ build(1, mini=[('teach1', 2), ('try1', 1.5), ('we1', 3), ('try2', 1.5), ('teachz
 
 build(2, mini=[('teach1', 4), ('try1', 2), ('try2', 1.5), ('teach3', 3.5), ('key', 1)], teach=[('teachsq', 2.5), ('teachtwo', 2)])
 
-build(2, mini=[('teach1', 4), ('try1', 2), ('try2', 1.5), ('teach3', 3.5), ('key', 1)], teach=[('teachsq', 2.5), ('teachtwo', 2)])
 build(3, mini=[('teach1', 2.5), ('we1', 3), ('teach2', 3.5), ('try2', 2), ('key', 1)], teach=[('teachshare', 2), ('teachround', 1.5), ('teachall', 1)])
 build(4, mini=[('teach1', 2), ('we1', 2.5), ('teachcount', 1.5), ('teachtimes', 1.5), ('teachgrow', 1.5), ('try1', 2), ('key', 1)], teach=[('teachboth', 2.5)])
 build(5, mini=[('teach1', 2), ('we1', 3.5), ('try1', 1), ('we2', 3.5), ('try2', 1), ('key', 1)], teach=[('teachparts', 2.5), ('teachorder', 2)], pre='teachrule', extra={'teachthree': OPT})
+build(6, mini=[('teach1', 2), ('we1', 3), ('try1', 1), ('we2', 3), ('try2', 2), ('key', 1)], teach=[('teachchange', 2), ('teachenough', 1.5), ('teachlist2', 1)], pre='teachfew')
+build(7, mini=[('teach1', 2), ('we1', 3), ('try1', 1.5), ('we2', 3), ('try2', 1.5), ('key', 1)], teach=[('teachadd', 2), ('teachstory', 1.5), ('teachsame', 1)])
+build(8, mini=[('teach1', 2), ('we1', 3), ('try1', 1.5), ('we2', 3), ('try2', 1.5), ('key', 1)], teach=[('teachcube', 2.5), ('teachnet', 2)])
+build(9, mini=[('teach1', 2), ('we1', 3.5), ('try1', 1.5), ('we2', 2.5), ('key', 1)], teach=[('teachclock', 2.5), ('teachdur', 2)])
+build(10, mini=[('we1', 3), ('we2', 2.5), ('try2', 1.5), ('we3', 2), ('key', 1)], teach=[('teachlogic', 2), ('teachgrow', 1.5)], pre='teachgraph', explore=(8.0, 5.0),
+      extra={'explore1': (10.5, 12), 'cards': (12, 18.5), 'end': (87, 90)})
 
 if __name__ == '__main__':
     R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'p2', 'budget.json')

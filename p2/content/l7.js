@@ -78,6 +78,7 @@ const q4svg = () => {
       else if (pp === '1 whole') { s += text(x + 18, y + 27, '1 whole', 18, N, 'middle'); x += 60; }
       else { s += text(x - 2, y + 28, pp, 20); x += 32; }
     });
+    if (l === 'd' || l === 'e') s += text(4, y + 9, '★', 14, '#B45F06', 'start');
     if (l !== 'd') s += `<rect x="${x - 16}" y="${y - 2}" width="40" height="46" rx="5" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="4 3"/>`;
   });
   return svg(600, 296, s, 'Five bars to colour: 5, 8, 12, 6 and 10 equal parts, each next to a sum with a box for the answer');
@@ -90,10 +91,10 @@ module.exports = {
     n: 7, week: 4, session: 'A', title: 'Fair Shares', topic: 'Fractions',
     objective: 'Recognise equal parts and name fractions with bottom numbers up to 12; compare unit fractions and like fractions; add and take away like fractions within one whole; solve fair-sharing stories with a bar.',
     skills: 'Checking for equal parts, comparing with the same whole, drawing bars, explaining',
-    materials: 'Paper strips of the same length (4 per child), paper squares, scissors, crayons, mini whiteboards.',
-    online: 'Each child folds paper strips on camera; the tutor shows fraction bars on the slides and children colour their own bars.',
-    warmup: 'Fair or not fair? Six snacks are cut into parts. Thumbs up if all the parts are the same size, thumbs down if not, and say why.',
-    explore: 'Fold paper strips into halves, quarters and eighths, write the fraction on each part, line the strips up and compare. Then try to fold a strip into 3 equal parts.',
+    materials: 'Paper strips of the same length (4 per child, cut out before the lesson), paper squares, scissors, crayons, mini whiteboards.',
+    online: 'Parents cut the 4 strips for each child before the lesson (kit in hand at minute 0). Each child folds paper strips on camera; the tutor shows fraction bars on the slides and children colour their own bars.',
+    warmup: 'Fair or not fair? Four snacks (pizza, prata, cake, pancake) are cut into parts. Thumbs up if all the parts are the same size, thumbs down if not, and say why.',
+    explore: 'Fold paper strips into halves, quarters and eighths, write the fraction on each part, line the strips up and compare. Folding a strip into 3 equal parts is the Go further card and a take-home. Pair work is 5.5 minutes.',
     mini: 'Equal parts come before fraction names; name the shaded and the not-shaded fraction (bottom number: how many equal parts, top number: how many we take); compare unit fractions with bars of the same length (more parts, smaller parts) and like fractions (count the parts). Before page 2: add like fractions on a bar, fair-sharing stories with a bar, line up halves and eighths of the same whole. Equivalent fractions (1/4 = 2/8) are a P3 topic: they are shown only with lined-up bars, never written as a rule.',
     share: 'Is 1/2 always bigger than 1/4? When could it not be?',
     exit: { q: 'Which is bigger, 1/7 or 1/9? Then work out 2/9 + 5/9.', a: '1/7 (the same whole cut into fewer parts gives bigger parts). 2/9 + 5/9 = 7/9.' },
@@ -102,6 +103,7 @@ module.exports = {
       'Thinking 1/6 is bigger than 1/4 because 6 is bigger than 4 (Q3).',
       'Adding the bottom numbers too: 2/5 + 1/5 written as 3/10 instead of 3/5 (Q4).'
     ],
+    takehome: 'Page 1: the explanation in Q1(a) (why is one shape not cut into quarters). Page 2: Q4(d) and Q4(e). Also at home: fold a strip into 3 equal parts (the Go further card).',
     extension: 'Find all the ways to add two fractions with bottom number 8 to make 1 whole (1/8 + 7/8, 2/8 + 6/8, 3/8 + 5/8, 4/8 + 4/8: 4 ways).',
     key: [
       ['Q1', 'A, C, E and F are cut into quarters. (a) B or D: their 4 parts are not the same size, so a part is not a quarter. F is the hardest: all four small triangles are the same size, even though the middle one is upside down.'],
@@ -125,18 +127,18 @@ module.exports = {
     ],
     circulate: ['Ask: “Are all the parts the same size? How do you know?”', 'Ask: “What does the bottom number tell us? What does the top number tell us?”', 'Ask: “Did you draw both wholes the same length?”'],
     hints: ['Hint 1: “Count all the equal parts first. That number goes at the bottom.”', 'Hint 2: “Fold or draw a strip to check which part is bigger.”', 'Hint 3: “Colour the parts on a bar, then count them.”'],
-    talk: ['“Is 1/2 always bigger than 1/4? Can you think of a time when it is not?”', '“Why does the bottom number stay the same when we add 2/9 and 4/9?”'],
-    talkAns: 'Only when the wholes are the same size: half a small cupcake is less than a quarter of a big cake. When we add ninths, the parts are still ninths, so only the number of parts changes.',
+    talk: ['“Is 1/2 always bigger than 1/4? Can you think of a time when it is not?”'],
+    talkAns: 'Only when the wholes are the same size: half a small cupcake is less than a quarter of a big cake.',
     close: ['“You checked for equal parts, compared fractions with bars and explained why. That is fair and careful maths.”']
   },
 
   deck: {
     today: 'Cut wholes into equal parts, name and compare fractions, and add fractions to share things fairly.',
-    warmGame: 'Fair or not fair? Six snacks are cut into parts: thumbs up if all the parts are the same size, thumbs down if not.',
+    warmGame: 'Fair or not fair? Four of the six snacks (pizza, prata, cake, pancake; spare: kaya toast, chocolate bar) are cut into parts: thumbs up if all the parts are the same size, thumbs down if not.',
     warmQs: [['A pizza is cut into 4 equal slices. What is 1 slice called?', 'One quarter, 1/4'], ['How many halves make 1 whole?', '2'], ['How many thirds make 1 whole?', '3'], ['A cake is cut into 5 equal pieces. What is 1 piece called?', 'One fifth, 1/5'], ['2 of 7 equal parts are shaded. What fraction is shaded?', '2/7']],
-    expSetup: ['Take 4 paper strips that are the same length.', 'Keep one whole. Fold one in half, one into quarters and one into eighths.', 'Open them out. Write the fraction on every part.', 'Line them up. Then try to fold a strip into 3 equal parts.'],
+    expSetup: ['Take 4 paper strips that are the same length.', 'Keep one whole. Fold one in half, one into quarters and one into eighths.', 'Open them out. Write the fraction on ONE part of each strip.', 'Line them up under the whole.'],
     expPic: 'four paper strips the same length: one whole, one folded into halves, one into quarters and one into eighths, with 1/2, 1/4 or 1/8 written on every part.',
-    expAsk: [['Which part is bigger, 1/4 or 1/8? How do you know?', '1/4: the same strip cut into fewer parts, so each part is longer.'], ['How many eighths fit on one quarter? How many quarters make 1 whole?', '2 eighths; 4 quarters.'], ['How did you fold 3 equal parts? How do you know they are equal?', 'Fold and adjust until the parts match; check by laying one part on another.']],
+    expAsk: [['Which part is bigger, 1/4 or 1/8? How do you know?', '1/4: the same strip cut into fewer parts, so each part is longer.'], ['How many eighths fit on one quarter? How many quarters make 1 whole?', '2 eighths; 4 quarters.']],
     mini1: { head: 'Name the fraction', body: ['A bar has 5 equal parts and 3 are shaded.', 'Check the parts are equal, count all the parts (bottom number), then count the shaded parts (top number).', 'What fraction is shaded? What fraction is not?'], ans: '3/5 shaded, 2/5 not shaded; together 5/5, 1 whole.' },
     mini2: { head: 'Compare with bars', body: ['Bars of the same length cut into halves, thirds and sixths, one part shaded in each.', 'Which is bigger: 1/2, 1/3 or 1/6?', 'Then: which is bigger, 2/7 or 5/7?'], ans: '1/6 < 1/3 < 1/2 (more equal parts, smaller parts). 5/7 > 2/7 (same-size parts, more of them).' },
     keyHead: 'Key idea: equal parts',
@@ -184,7 +186,7 @@ module.exports = {
     const out = [];
     out.push(H.q(1, R('Fair shares? Each shape has 4 parts and 1 part is shaded. Circle the shapes that are cut into quarters (4 EQUAL parts).'), { before: 40, keepNext: true }));
     out.push(H.fig(q1svg()));
-    out.push(H.sub('a', 'Choose one shape that is NOT cut into quarters. Explain how you know.', { after: 20 }));
+    out.push(H.sub('a', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Choose one shape that is NOT cut into quarters. Explain how you know.')], { after: 20 }));
     out.push(...H.lines(1));
     out.push(H.q(2, 'What fraction is shaded? What fraction is NOT shaded? Write them in the boxes.', { keepNext: true }));
     out.push(H.fig(q2svg()));
@@ -195,7 +197,7 @@ module.exports = {
     out.push(H.sub('c', R('Mei says: “{1/6} is bigger than {1/4}, because 6 is bigger than 4.” Is she right? Explain.'), { after: 20 }));
     out.push(...H.lines(1));
 
-    out.push(H.q(4, 'Add or take away. Colour the bars to help you. Write each answer in the box.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, [H.t('Add or take away. Colour the bars to help you. Write each answer in the box.  '), H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Parts d and e are done at home.')], { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.q(5, 'Mum cuts a cake into 8 equal slices. Ali eats 2 slices. Mei eats 3 slices.', { keepNext: true }));
     out.push(H.fig(q5svg()));

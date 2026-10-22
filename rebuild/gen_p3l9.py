@@ -44,7 +44,7 @@ put('p3l9-title',title_slide('p3l9-title',9,5,'Measure and Money Masters','Lengt
  'Objective: Change compound units (m and cm, kg and g, ℓ and ml, $ and ¢) to one unit to compare, add and subtract; plan a budget; find durations, start and end times by drawing a time line, in 12-hour and 24-hour time. Heuristics taught: (1) change to one unit; (2) draw a time line and jump to the next o’clock (taught in a short lesson after page 1). '
  'Materials: Party menu cards (one per pair), play money, a metre ruler or measuring tape, a kitchen scale and a measuring jug if available, a clock with movable hands, mini whiteboards. '
  'Online: Show the menu card on screen; children use paper and pencil. Pairs work in breakout rooms and type their best party plan in the chat. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (change to one unit; the time line is taught after page 1, minutes 54 to 57; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (change to one unit; the time line is taught after page 1; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up game: name that unit ----------
 cards=[('A bus is 12 __ long.','m'),('A pencil is 15 __ long.','cm'),('An MRT ride of about 15 __','km'),('A bag of rice: 5 __','kg'),
@@ -56,14 +56,14 @@ for i,(t,a) in enumerate(cards):
     body+=pin(L,Tp,CWd,p(t,34,700),None,WHITE,24,'22px 24px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,Tp+150,120,f'<p style="font-family:{HF};font-size:48px;font-weight:600;text-align:center">{E(a)}</p>','pop',YEL,16,'4px 10px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p3l9-warm1',sec('p3l9-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Name that unit. Read each card aloud; children write the unit on whiteboards and hold them up together, then click to show (the cards reveal in order). '
+ 'Minutes 0 to 5. Play TWO rounds of four cards (the top row, then the bottom row). Name that unit. Read each card aloud; children write the unit on whiteboards and hold them up together, then click to show (the cards reveal in order). '
  'Ask each time: "Why not the other units?" A bus is 12 m (12 cm is a finger, 12 km is a long trip). A pencil is 15 cm. An MRT ride of about 15 km. Rice 5 kg. An eraser about 20 g. Medicine 5 ml. A fish tank about 40 ℓ. A watermelon about 3 kg. '
  'Quick finisher: "Put these in order: 1 m, 90 cm, 1 km." (90 cm, 1 m, 1 km). Watch for children who mix up mass and volume units (kg for a drink).'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','1 m 40 cm = __ cm','140 cm'),('2.','3 kg = __ g','3000 g'),('3.','2 ℓ 50 ml = __ ml','2050 ml'),('4.','1 hour 20 minutes = __ minutes','80 min'),('5.','2:00 pm in 24-hour time','14:00')]
+qs=[('1.','1 m 40 cm = __ cm','140 cm'),('2.','3 kg = __ g','3000 g'),('3.','2 ℓ 50 ml = __ ml','2050 ml')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p3l9-warm2',sec('p3l9-warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 140 cm (100 + 40). 2) 3000 g. 3) 2050 ml: watch for 250 ml, the most common mistake; 2 ℓ is 2000 ml and 50 more. 4) 80 minutes (60 + 20), not 120. 5) 14:00 (2 + 12). Ask after 3: "Why is it not 250?"'))
+put('p3l9-warm2',sec('p3l9-warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 140 cm (100 + 40). 2) 3000 g. 3) 2050 ml: watch for 250 ml, the most common mistake; 2 ℓ is 2000 ml and 50 more. 4) 80 minutes (60 + 20), not 120. 5) 14:00 (2 + 12). Ask after 3: "Why is it not 250?" Three quick questions only; 4) 1 hour 20 minutes = 80 minutes (60 + 20, not 120) and 5) 2:00 pm = 14:00 are on the take-home box of the Go further page in the workbook.'))
 
 # ---------- 4-5. explore ----------
 menu=[('Pizza','$8.50',YEL),('Chicken wings','$6',"#F7B26B"),('Curry puffs','$4','#F3D9B1'),('Fruit punch 2 ℓ','$3',PINK),('Cupcakes','$5.50',SKY),('Balloons','$2.50',GREEN)]
@@ -72,12 +72,12 @@ for i,(n,pr,c) in enumerate(menu):
     x=10+i*270
     g+=f'<rect x="{x}" y="10" width="250" height="200" rx="18" fill="{c}" stroke="{NAVY}" stroke-width="4"/>'+T(x+125,70,n,28)+f'<rect x="{x+45}" y="110" width="160" height="70" rx="12" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/>'+T(x+125,158,pr,40)
 pic=svg(1630,220,g,'Party menu: pizza $8.50, chicken wings $6, curry puffs $4, fruit punch 2 litres $3, cupcakes $5.50, balloons $2.50')
-put('p3l9-explore1',explore1('p3l9-explore1','10–15 MIN',['You have $20 to plan a party for 8 friends.','Each friend drinks 250 ml of punch. Buy at least 2 ℓ of punch (any number of bottles).','Buy at least one food. You may buy more than one of an item. Spend as close to $20 as you can.','Go further: can you spend exactly $20?'],pic,
- 'Minutes 10 to 15. Party planner. Pairs use the menu card and play money (or paper). You may buy more than one of an item. Punch: 8 × 250 ml = 2000 ml = 2 ℓ, so 1 bottle is the least; the rule is "at least 2 ℓ of punch (any number of bottles) and at least one food". '
+put('p3l9-explore1',explore1('p3l9-explore1','10–15 MIN',['You have $20 to plan a party for 8 friends.','Each friend drinks 250 ml of punch. Buy at least 2 ℓ of punch (any number of bottles).','Buy at least one food. You may buy more than one of an item. Spend as close to $20 as you can.','Extension, only if you finish: can you spend exactly $20?'],pic,
+ 'Minutes 10 to 15. Party planner. Two constraints only (at least 2 ℓ of punch, at least one food) and "spend as close to $20 as you can": that is about 7 minutes of pair work. Exactly $20 is the extension (it stays on the slide), not part of the task. Pairs use the menu card and play money (or paper). You may buy more than one of an item. Punch: 8 × 250 ml = 2000 ml = 2 ℓ, so 1 bottle is the least; the rule is "at least 2 ℓ of punch (any number of bottles) and at least one food". '
  'Let pairs try first; prompt with "How did you add the prices?" The prices are whole and half dollars, so every child can add them. There are 15 ways to spend exactly $20 with up to 4 of each item (tutor reference), e.g. pizza + 2 punch + cupcake ($8.50 + $6 + $5.50); wings + 2 curry puffs + 2 punch ($6 + $8 + $6); 2 pizzas + 1 punch ($17 + $3); 2 curry puffs + 4 punch ($8 + $12); 3 punch + 2 cupcakes ($9 + $11). '
  'Hint for exact $20: half dollars come from the pizza, cupcakes and balloons, so those must come in pairs of halves (an even number altogether). Online: share the menu on screen; pairs type their plan in the chat.'))
 put('p3l9-explore2',talk_qs('p3l9-explore2','15–25 MIN','Explore: talk about it',['How much punch do 8 friends need? How many bottles?','Who got closest to $20? How did you add the prices?','Can you spend exactly $20? How many ways?'],
- 'Minutes 15 to 25. Let pairs keep working, then gather to answer. Answers: 1) 8 × 250 ml = 2000 ml = 2 ℓ: at least 1 bottle, more is allowed. 2) Open: changing to cents (890 + 315 = 1205¢) or adding dollars then cents both work. 3) Yes, there are 15 ways with up to 4 of each item (examples on the previous slide notes). Ask: "How do you know a plan is exactly $20?" Volunteers show their adding. Any group can look at the half dollars.'))
+ 'Minutes 15 to 25. Gather the pairs to answer. Answers: 1) 8 × 250 ml = 2000 ml = 2 ℓ: at least 1 bottle, more is allowed. 2) Open: changing to cents (890 + 315 = 1205¢) or adding dollars then cents both work. 3) Yes, there are 15 ways with up to 4 of each item (examples on the previous slide notes). Ask: "How do you know a plan is exactly $20?" Volunteers show their adding. Any group can look at the half dollars.'))
 
 # ---------- 6. teach: change to one unit ----------
 U=5.2
@@ -173,22 +173,6 @@ put('p3l9-ws1ans',check_slide('p3l9-ws1ans','53–55 MIN','Page 1: check togethe
  'Click each answer after a pair explains. Q1f: 4 × 65 = 260 cm; 300 − 260 = 40 cm. Q2: in grams 1000, 1003, 1030, 1300. Q3a: 785 + 690 + 550 = 2025¢. Q3b: book + puzzle = $14.75 leaves $5.25: the dearest thing that fits is the pen set ($4.60), total $19.35. Without that pair, the best is $17.95, so $19.35 is the most.'))
 
 # ---------- teach before page 2: 24-hour clock ----------
-w=1664; sx=lambda h: 40+h*(w-80)/24
-g=f'<rect x="{sx(0)}" y="30" width="{sx(12)-sx(0)}" height="70" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/><rect x="{sx(12)}" y="30" width="{sx(24)-sx(12)}" height="70" fill="{SOFT}" stroke="{NAVY}" stroke-width="4"/>'
-g+=T(sx(6),76,'am (midnight to noon)',30)+T(sx(18),76,'pm (noon to midnight)',30)
-for h_ in range(0,25,3):
-    g+=f'<line x1="{sx(h_)}" y1="100" x2="{sx(h_)}" y2="120" stroke="{NAVY}" stroke-width="4"/>'+T(sx(h_),152,f'{h_:02d}:00',26)
-    lab={0:'12 am',12:'12 noon',24:'12 am'}.get(h_,f'{h_%12} {"am" if h_<12 else "pm"}')
-    g+=T(sx(h_),190,lab,26,TEAL,weight=700)
-strip=svg(w,200,g,'24-hour strip from 00:00 to 24:00 with the matching 12-hour times')
-body=h2('The 24-hour clock')+pin(128,250,1664,strip)
-body+=step(1,'am: same numbers, 2 digits for the hour.  6:05 am → 06:05',top=480,size=34)
-body+=step(2,'pm: add 12 to the hour.  4:20 pm → 16:20',top=580,size=34)
-body+=step(3,'Back again: take away 12.  19:30 → 7:30 pm',top=680,size=34)
-body+=pin(128,790,1664,p('Careful: 12:45 pm stays 12:45 (it is already after 12 noon). Midnight is 00:00.',32,700),'fade',SOFT,20,'16px 28px')
-put('p3l9-teach24',sec('p3l9-teach24','55–57 MIN',body,
- 'Teach before worksheet page 2 (Q4). "The 24-hour clock does not start again at 12 noon: it keeps counting, 13, 14, 15 … up to 23, then midnight is 00:00." Point along the strip. Click each step. '
- 'Think-aloud: "4:20 pm is in the afternoon, so I add 12: 4 + 12 = 16, so 16:20. Going back: 19 − 12 = 7, so 7:30 pm" Click the careful box: the hour from 12 noon to 1 pm is already 12, so we do not add 12. Quick check: "What is 15:00?" (3 pm) "What is 9:10 pm?" (21:10). Q4 is "if time"; children start page 2 at Q5. For Q6 (if time): every 25 minutes means keep adding 25 and list the times in order until you pass 08:15; for a start time, go backwards on the time line, back to the o’clock first.'))
 
 # ---------- teach: list the times / go backwards ----------
 body=h2('Timetables and going backwards')
@@ -203,7 +187,7 @@ body+=pin(992,710,800,p('Go backwards on the time line: back to the o’clock fi
 put('p3l9-teachlist',sec('p3l9-teachlist','57–58 MIN',body,
  'Teach before worksheet page 2 (Q5c and Q6). Left: "Every 15 minutes means I keep adding 15. I list the times in order until I pass 10:27." Click the times. "The first train after 10:27 is 10:35. From 10:27: 3 minutes to 10:30, 5 more to 10:35: 8 minutes." '
  'Right: "To find a start time I go backwards. 25 minutes back from 20:10 passes the o’clock, so I split 25 into 10 and 15." Check forwards: 18:45 + 15 min = 19:00, + 1 h = 20:00, + 10 min = 20:10.'))
-put('p3l9-ws2',ws_preview('p3l9-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','(if time) The 24-hour clock. After 12 noon, add 12.'),('Q5','Time lines: how long, when it ends, when it started. Start here.'),('Q6','If time: the bus timetable. List the times, every 25 minutes.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6 (if time): check children list ALL the bus times (adding 25 each time across the hour: 07:05 + 25 min = 07:30).'))
+put('p3l9-ws2',ws_preview('p3l9-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','(if time) The 24-hour clock. After 12 noon, add 12.'),('Q5','Time lines: how long, when it ends, when it started. Start here.'),('Q6','If time: the bus timetable. List the times, every 25 minutes.')],'Ready for more? Stretch and Challenge come next.','Children work alone (page 2 is a little shorter than the 7.5-minute window in other lessons: Q5 is the main item; Q4 and Q6 are if time). Note who needs a short catch-up. Q6 (if time): check children list ALL the bus times (adding 25 each time across the hour: 07:05 + 25 min = 07:30).'))
 put('p3l9-ws2ans',check_slide('p3l9-ws2ans','67–70 MIN','Page 2: check together',[('Q4','(if time) 07:15,  15:40,  8:05 pm,  12:30.   17:00 is 5 pm'),('Q5','a) 1 h 25 min   b) 5:25 pm   c) 7:25 pm'),('Q6','(if time) a) 08:20, waits 5 min   b) 08:55')],
  'Click after a child explains. Q5a: 15 min to 4:00, 1 h to 5:00, 10 min to 5:10. Q5b: 25 min to 5:00, 25 min more: 5:25 pm. Q5c: back 1 h from 9:15 to 8:15, back 50 min more: 8:15 to 8:00 is 15 min, then 35 min: 7:25 pm. Q6 (if time): 06:40, 07:05, 07:30, 07:55, 08:20. b) 08:20 + 35 min = 08:55. The "latest bus to arrive by 08:30" question is a Think Harder item: 07:55 + 35 min = 08:30 exactly; the 08:20 bus is too late.'))
 
@@ -213,7 +197,7 @@ put('p3l9-stretch',sec('p3l9-stretch','For early finishers',h2('Stretch')+''.joi
  'For children who finish early. Answers: 1) 2 h 35 min: 20 min to 23:00, 1 h to 00:00 (midnight), 1 h to 01:00, 15 min to 01:15. 2) 5 km: one day is 1250 + 1250 = 2500 m; two days 5000 m = 5 km. 3) Two 1 ℓ cartons: $7.20 (one 1 ℓ and four small cartons cost $3.60 + $4.40 = $8.00; eight small cartons cost $8.80).'))
 ch=[('1.','A bottle full of water weighs 1 kg 200 g. After half of the water is poured out, it weighs 750 g. How heavy is the empty bottle?'),('2.','Mei buys 3 pens and 2 files for $9.20. Each file costs 60¢ more than each pen. How much does one pen cost?')]
 put('p3l9-challenge',sec('p3l9-challenge','Challenge',h2('Challenge')+''.join(num_card(a,b) for a,b in ch),
- 'Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) 300 g (half the water weighs 1200 − 750 = 450 g, so all the water is 900 g; the bottle is 1200 − 900 = 300 g). 2) $1.60 (take away the extra 60¢ on each file: $9.20 − $1.20 = $8.00 for 5 pens; 800¢ ÷ 5 = 160¢. A file costs $2.20. Check: $4.80 + $4.40 = $9.20).'))
+ 'SUPPORT FOR Q4 (if time; this replaces the old 24-hour-clock teaching slide), only for a child who chooses it: the 24-hour clock keeps counting after 12 noon: 13, 14 … 23, then midnight is 00:00. am: same numbers with 2 digits (6:05 am is 06:05). pm: add 12 to the hour (4:20 pm is 16:20); going back, take away 12 (19:30 is 7:30 pm). Careful: 12:45 pm stays 12:45. Quick check: 15:00 is 3 pm; 9:10 pm is 21:10. Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) 300 g (half the water weighs 1200 − 750 = 450 g, so all the water is 900 g; the bottle is 1200 − 900 = 300 g). 2) $1.60 (take away the extra 60¢ on each file: $9.20 − $1.20 = $8.00 for 5 pens; 800¢ ÷ 5 = 160¢. A file costs $2.20. Check: $4.80 + $4.40 = $9.20).'))
 # see it
 def bottle(x,level,lab,sub):
     b=f'<rect x="{x+40}" y="40" width="40" height="30" rx="6" fill="{TEAL}" stroke="{NAVY}" stroke-width="4"/><path d="M{x+30} 70 L{x+90} 70 L{x+110} 110 L{x+110} 380 Q{x+110} 400 {x+90} 400 L{x+30} 400 Q{x+10} 400 {x+10} 380 L{x+10} 110 Z" fill="{WHITE}" stroke="{NAVY}" stroke-width="5"/>'
@@ -247,7 +231,7 @@ put('p3l9-exit',exit_slide('p3l9-exit','80–90 MIN','A film starts at 3:30 pm a
 
 # ---------- write ----------
 for _x in ('p3l9-try2','p3l9-teachlist'): S.pop(_x,None)
-order=['p3l9-title','p3l9-warm1','p3l9-warm2','p3l9-explore1','p3l9-explore2','p3l9-teach1','p3l9-we1','p3l9-try1','p3l9-key','p3l9-break','p3l9-teachbudget','p3l9-ws1','p3l9-ws1ans','p3l9-teach2','p3l9-we2','p3l9-teach24','p3l9-ws2','p3l9-ws2ans','p3l9-stretch','p3l9-challenge','p3l9-chdiag','p3l9-chwalk','p3l9-talk','p3l9-exit']
+order=['p3l9-title','p3l9-warm1','p3l9-warm2','p3l9-explore1','p3l9-explore2','p3l9-teach1','p3l9-we1','p3l9-try1','p3l9-key','p3l9-break','p3l9-teachbudget','p3l9-ws1','p3l9-ws1ans','p3l9-teach2','p3l9-we2','p3l9-ws2','p3l9-ws2ans','p3l9-stretch','p3l9-challenge','p3l9-chdiag','p3l9-chwalk','p3l9-talk','p3l9-exit']
 import p3_gifted; order[:]=p3_gifted.add(S,order,9)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

@@ -130,7 +130,7 @@ module.exports = {
  today: 'Use everything we have learned in new puzzles and explain our thinking.',
  warmGame: 'Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.',
  warmQs: [['Count in 3s: 3, 6, 9, __', '12'], ['10 = 4 + __', '6'], ['Red 4, blue 6: how many more are blue?', '2'], ['I think of a number, add 4, get 9. What is it?', '5'], ['Which coins make 15¢ with two coins?', '10¢ + 5¢']],
- expSetup: ['Four puzzle cards: coins, patterns, logic, measuring. Pairs get ONE card for 10 minutes.', 'Read the card aloud and test your idea with objects.', 'Then swap cards with another pair for a second 4-minute round.', 'Write your answer and why you know. Online: one card per breakout room; each pair reports in 30 seconds.'],
+ expSetup: ['Four puzzle cards: coins, patterns, logic, measuring. Pairs get ONE card for 6 minutes.', 'Read the card aloud and test your idea with objects.', 'Then swap cards with another pair for a second 4-minute round.', 'Write your answer and why you know. Online: one card per breakout room; each pair reports in 30 seconds.'],
  expPic: 'four puzzle cards (coins, patterns, logic, measuring) with materials: play coins, a pattern strip, a clue card and linking cubes.',
  expAsk: [['What did you do first with each card?', 'Open answers.'], ['Which puzzle was hardest? Why?', 'Open answers.'], ['What helped you when you were stuck?', 'An inquirer rule: notice, test, check, explain.']],
  mini1: { head: 'Cards 1 and 2: coins and patterns', body: ['Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', 'Pattern: 5, 8, 11, 14 … What is the 10th number?'], ans: 'Coins: 20¢ + 20¢ + 5¢. Pattern: add 3. Count on: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, so the 10th is 32.' },

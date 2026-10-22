@@ -99,8 +99,8 @@ module.exports = {
   deck: {
     today: 'Use the order of operations, find missing signs and brackets to hit a target, and work backwards through number chains.',
     warmGame: 'Target Numbers. Use the cards 2, 4, 5 and 9 (each once at most) with +, −, × and ÷ to hit 13, 22, 36 and 81.',
-    warmQs: [["25 × 4 = ?", "100"], ["4 800 ÷ 6 = ?", "800"], ["99 × 6 = ?", "594"]],
-    warmWeekly: [["1 000 − 368 = ?", "632"], ["45 × 20 = ?", "900"]],
+    warmQs: [["25 × 4 = ?", "100"], ["48 ÷ 6 = ?", "8"], ["9 × 6 = ?", "54"]],
+    warmWeekly: [["1 000 − 368 = ?", "632"], ["4 × 20 = ?", "80"]],
     expSetup: ['Write 6 + 4 × 3 − 2 on your whiteboard and work it out.', 'Put ONE pair of brackets somewhere. Work it out again.', 'Move the brackets to other places. Write every answer.', 'How many different answers? Which is the biggest? The smallest?'],
     expPic: 'number and sign cards 6 + 4 × 3 − 2 in a row, with a pair of bracket cards waiting above them.',
     expAsk: [["How many different answers did you find?", "3 answers: 16, 28 and 10."], ["Where do the brackets go for the biggest answer?", "(6 + 4) × 3 − 2 = 28."]],
@@ -108,7 +108,7 @@ module.exports = {
     mini2: { head: 'Missing signs', body: ['8 ? 5 ? 3 = 37 (each ? is a sign)', '37 is big, so try ×: 8 × 5 = 40.', '40 and 3 make 37 how?'], ans: '8 × 5 − 3 = 37' },
     keyHead: 'Key idea: order matters', keyBig: 'Brackets first. Then × and ÷, then + and −, each from left to right.', keySmall: 'To hit a target: estimate, test, adjust. Working backwards: undo each step with the opposite operation.',
     brk: 'Odd or even stand-up. I read a number sentence: stand up if the answer is even, crouch if it is odd. 3 + 4 × 2, then (3 + 4) × 2, then 20 ÷ 4 + 1, then 20 ÷ (4 + 1).',
-    ws1: 'Page 1, in pairs: Q1 order of operations, Q2 missing signs, Q3 brackets.',
+    ws1: 'Page 1, in pairs: Q1 order of operations, Q2 missing signs. Q3 brackets is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 machine chain, Q5 number trick, Q6 bar model, Q7 number chains.'
   },
 
@@ -181,7 +181,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('c', 'How many more plates of chicken rice than laksa did it sell?'));
     W.push(H.ans());
-    W.push(H.q(7, 'Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
+    W.push(H.q(7, '★ Take-home choice. Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
     W.push(H.fig(chainSvg()));
     W.push(H.sub('a', ['Chain (a): work backwards from 13 and 21.     <b style="color:#1F7A6F">b</b>  Chain (b): guess the 2nd number, then check.']));
     return W;
@@ -224,5 +224,7 @@ module.exports.gaps = {
   "q": "What if you may use TWO pairs of brackets? Can you get an answer that one pair could not?",
   "a": "No. Two pairs still give only 16, 28 and 10 (every placement checked by computer). Brackets only change what is done first, and here there are only three different orders that matter: the × first (16), (6 + 4) first (28) or (3 − 2) first (10)."
  },
- "cap": "Page 2 is on your own. Aim for Q4, Q5 and Q6 first. Q7 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4, Q5 and Q6. Q7 is a ★ choice, for take-home.",
+ "p1": "Pairs: questions 1 and 2. Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Pairs do Q1 and Q2 (about 9 minutes of work). Q3, brackets in 4 + 8 × 5 − 3, is the first question each child does on their own; its answer is checked with page 2. Q2(d), the sentence with three blanks, stays as a pass-allowed item.", "Q7 (number chains) is a choice question with no live teaching slide: the chain slide is in the take-home pack, marked ★ take-home in the workbook."]
 };

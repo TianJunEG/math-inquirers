@@ -61,7 +61,8 @@ module.exports = {
     hints: ['Hint 1: “Try 1, 2, 3, 4 … in order. Does it go in exactly?”', 'Hint 2: “Draw the rectangles, or make them with tiles.”', 'Hint 3: “Write the first few multiples of each number in two rows. Circle the numbers in both rows.”'],
     talk: ["“Ali says: bigger numbers always have more factors. Who agrees? Can you find an example that proves him wrong?”"],
     talkWeekly: ["“Why did the 36-tile rectangles give an odd number of factors?”"],
-    talkAns: 'Ali is wrong. 24 has 8 factors but 29, which is bigger, has only 2 (1 and 29). 36 has an odd number of factors because one of its pairs is 6 × 6, and 6 is only counted once.',
+    talkAns: "Ali is wrong. 24 has 8 factors but 29, which is bigger, has only 2 (1 and 29).",
+    talkWeeklyAns: "36 has an odd number of factors because one of its pairs is 6 × 6, and 6 is only counted once.",
     close: ['“Today you hunted factors in order, so none could hide. You found common factors for sharing and common multiples for timetables.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -174,7 +175,7 @@ module.exports.gaps = {
  "check": [
   {
    "q": "Ali has 12 sweets. He puts them into bags so that every bag has the same number of sweets, with none left over. Use counters or draw dots. Write ONE way he can do it, like 2 bags of 6.",
-   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win: you may ask the whole group, can anyone find another?",
+   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win.",
    "s": "2 bags of 6, 3 bags of 4, 4 bags of 3 ... any way that uses all 12 is right.",
    "kind": "access"
   },
@@ -204,5 +205,7 @@ module.exports.gaps = {
   "q": "What if we use 36 tiles? What is special about one of the rectangles?",
   "a": "5 rectangles: 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6. The 6 × 6 is a square: 6 is its own partner, so 36 has an odd number (9) of factors."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Page 1 (Start here) is Q1 to Q3 in pairs. On page 2 aim for Q4 and Q5; Q6 (about 6 minutes) is a choice that most children will take home."]
 };

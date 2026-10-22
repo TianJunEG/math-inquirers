@@ -130,7 +130,8 @@ module.exports = {
   deck: {
     today: 'Compare angles with a right angle, count angles and right angles without missing any, and find perpendicular and parallel lines.',
     warmGame: 'Clock angles. Make the clock hands with your arms: is the angle at 3, 1, 5, 9, 10 and 4 o’clock a right angle, smaller or bigger?',
-    warmQs: [['How many right angles does a rectangle have?', '4'], ['How many sides does a hexagon have?', '6'], ['Name a capital letter made of 2 lines that meet at a right angle.', 'L (or T)'], ['Do the two long edges of a ruler ever meet?', 'No: they are parallel']],
+    warmQs: [['How many right angles does a rectangle have?', '4'], ['How many sides does a hexagon have?', '6'], ['Name a capital letter made of 2 lines that meet at a right angle.', 'L (or T)']],
+    takeHome: [['Do the two long edges of a ruler ever meet?', 'No: they are parallel']],
     expSetup: ['Take any scrap of paper.', 'Fold it in half to make a straight fold.', 'Fold again so the fold lies exactly on itself.', 'Use the corner to hunt for right angles, smaller angles and bigger angles.'],
     expPic: 'a scrap of paper folded twice; the corner of the folds is a right angle, used as a checker.',
     expAsk: [['Why is the folded corner always a right angle?', 'The first fold makes a straight line. Folding it onto itself cuts the straight line into 2 equal angles: each is a right angle.'], ['Is an angle bigger if its arms are longer?', 'No. The size is how far the arms open, not how long they are.'], ['Where did you find angles bigger than a right angle?', 'For example an open laptop, a door opened wide, a clock at 5 o’clock.']],
@@ -180,7 +181,7 @@ module.exports = {
     const side = (fig, right) => `<div class="p img" style="display:flex;align-items:center;gap:22px;text-align:left"><div style="flex:none">${fig}</div><div style="flex:1">${right}</div></div>`;
     const W6 = [2100, 1300, 1300, 1300, 1300, 1300, 1300];
     return [
-      H.q(1, 'Fold a right-angle checker. Use it to sort the angles a to f.', { before: 20, keepNext: true }),
+      H.q(1, 'Use the right-angle checker you folded in Explore (fold a new one if you lost it). Use it to sort the angles a to f.', { before: 20, keepNext: true }),
       H.fig(q1Fig()),
       H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
       H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker. A corner that dents INTO the shape is bigger than a right angle: do not count it. A is done for you.', { keepNext: true }),
@@ -191,12 +192,12 @@ module.exports = {
       ]),
       H.q(3, 'These 6 lines all start at point O. (Example: 3 lines make 3 angles: 1 + 1 + 1.)', { keepNext: true }),
       side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
-      H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
+      H.sub('b', '★ Take-home. Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
 
-      H.q(4, 'Look at the lines in these letters. Parallel lines never meet and stay the same distance apart, like train tracks. Perpendicular lines meet at a right angle (a square corner). Write Yes or No in the table.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Look at the lines in these letters. Parallel lines never meet and stay the same distance apart, like train tracks. Perpendicular lines meet at a right angle (a square corner). Write Yes or No in the table. Do E, H, T and L in the lesson. Z and N (starred) are take-home.', { pb: true, before: 0, keepNext: true }),
       H.fig(q4Fig()),
       H.tbl(W6, [
-        H.row(['Letter', 'E', 'H', 'T', 'L', 'Z', 'N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),
+        H.row(['Letter', 'E', 'H', 'T', 'L', '★ Z', '★ N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),
         H.row([H.cell('Parallel lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))]),
         H.row([H.cell('Perpendicular lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))])
       ]),
@@ -205,7 +206,7 @@ module.exports = {
       H.fig(q5Fig()),
       H.sub('a', 'Through C, draw a line parallel to AB.     (b)  Through D, draw a line perpendicular to AB.'),
       H.sub('c', 'Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker. Hint: try 1 right and 2 down.'),
-      H.q(6, 'How many right angles can you find in this window?', { keepNext: true }),
+      H.q(6, '(if time) How many right angles can you find in this window?', { keepNext: true }),
       side(q6Fig(), H.sub('', 'Visit every point where lines meet. Write how many right angles are at each point, then add.') + H.sub('', 'Right angles altogether:  ________'))
     ];
   }

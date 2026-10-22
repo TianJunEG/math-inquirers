@@ -23,11 +23,11 @@ put('warm1',sec(f'{L}-warm1','0–4 MIN',body,
  'The bar shows the first card: 120 is cut into 12 units of 10, and 1/4 is 3 units. Listen for children who draw the remainder as a new bar. Answers: 90, 60. This is the idea of the whole lesson: after each step the amount we start from changes.'))
 
 # ---- 3. quick questions ----
-qs=[('1.','What is 2/5 of 45?','18'),('2.','3/4 of a number is 27. What is the number?','36'),('3.','What is 1/3 of 3/4?','1/4'),('4.','Ali has 12 more stickers than Ben. They each get 5 more. How many more does Ali have now?','Still 12'),('5.','Ali has 30 cards and Ben has 20. Ali gives Ben 5. How many cards do they have altogether now?','Still 50')]
+qs=[('1.','What is 2/5 of 45?','18'),('2.','3/4 of a number is 27. What is the number?','36'),('3.','What is 1/3 of 3/4?','1/4'),('4.','Ali has 12 more stickers than Ben. They each get 5 more. How many more does Ali have now?','Still 12')]
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     body+=qrow(128,240+i*130,1370,a,b,34)+answer(1530,240+i*130,262,c)
-put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 36 (3 units = 27, 1 unit = 9, 4 units = 36).  3) 1/4 (1/3 of 3 quarters is 1 quarter).  4) Still 12: both get the same, so the gap does not change.  5) Still 50: the cards only moved from one child to the other. Questions 4 and 5 are the two big ideas of today; do not explain yet, just ask "why?" and collect ideas.',
+put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 36 (3 units = 27, 1 unit = 9, 4 units = 36).  3) 1/4 (1/3 of 3 quarters is 1 quarter).  4) Still 12: both get the same, so the gap does not change.  Question 4 is one of the two big ideas of today (the other is that the total stays the same when cards move between two children); do not explain yet, just ask "why?" and collect ideas. If you are short of time, skip question 4.',
  ))
 
 # ---- 4. explore: what to do ----
@@ -39,8 +39,8 @@ steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
 body+=card(svgwrap(1500,140,'Ali has a row of 18 counters and Mei a row of 6 counters; Ali gives Mei counters one at a time',g),extra='padding:14px 32px')
 put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs use 24 counters or paper squares (online: paper squares on the desk, camera up as usual; hold the table up to the camera). Predict first: when Ali gives counters away, does the total change? Does the difference change? Let pairs record in two tables: Ali, Mei, total, difference. Second table: start again at 18 and 6 and give BOTH children 2 more each time. Anyone who wants more (open to every pair): find when Mei has 1/3 as many as Ali (right at the start: 18 and 6), and 3/5 as many (after Ali gives 3: 15 and 9).'))
-body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0]),('3.',DK['expAsk'][2][0])],40)
-put('explore2',sec(f'{L}-explore2','14–21 MIN',body,'Minutes 14 to 21. Let pairs keep working, then gather them. Build one table on the board and ask for each row. Answers: 1) The total: 24 every time Ali gives Mei counters (16 and 8, 15 and 9 …). 2) The difference: 12 every time both get 2 more (20 and 8, 22 and 10 …). 3) After Ali gives 2 (16 and 8), and after both get 6 more (24 and 12). Ask: "Why does the total stay the same when Ali gives and the difference stay the same when both get?" Do NOT tell: the next slides name these two ideas.'))
+body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0])],40)
+put('explore2',sec(f'{L}-explore2','14–21 MIN',body,'Minutes 14 to 21. Pencils down: gather the pairs. Build one table on the board and ask for each row. Answers: 1) The total: 24 every time Ali gives Mei counters (16 and 8, 15 and 9 …). 2) The difference: 12 every time both get 2 more (20 and 8, 22 and 10 …). (Not asked together: when did Mei have 1/2 as many as Ali? After Ali gives 2 (16 and 8), and after both get 6 more (24 and 12).) Ask: "Why does the total stay the same when Ali gives and the difference stay the same when both get?" Do NOT tell: the next slides name these two ideas.'))
 
 # ---- 5. teach 1: fraction of a remainder ----
 A=svgwrap(1130,100,'A bar for Mei\'s money cut into 5 equal parts; 2 parts are the bag',pbar(170,12,190,[(2,YEL,'bag',2),(3,WHITE,'3 parts left',3)],lab='Money',seg=30)+'')
@@ -56,8 +56,8 @@ put('teach1',sec(f'{L}-teach1','21–24 MIN',body,'Teach. Read the problem twice
 put('try1',try_slide(f'{L}-try1','24–26 MIN','Your turn: fraction of the remainder','Draw a bar. Cut the parts into equal units.',[
  ('a','Ben spent 1/2 of his money on a game and 1/4 of the remainder on lunch. He had $18 left. How much at first?','$48'),
  ('b','Mei read 3/10 of a book on Saturday and 2/7 of the remaining pages on Sunday. 25 pages were left. How many pages in the book?','50 pages'),
- ('c','In (a), what fraction of Ben\'s money was left?','3/8')],
- 'Whiteboards. a) Game 1/2 (4 of 8 units); remainder 4 units; lunch 1/4 of 4 units = 1 unit; left 3 units = $18, 1 unit = $6, 8 units = $48. Check: game $24, remainder $24, lunch $6, left $18. b) 10 units: Saturday 3; remainder 7; Sunday 2/7 of 7 = 2; left 5 units = 25 pages; 1 unit = 5; book 50 pages. Check: 15 read, 35 left, 10 read Sunday, 25 left. c) 3 units out of 8 = 3/8.',size=33))
+ ],
+ 'Whiteboards. a) Game 1/2 (4 of 8 units); remainder 4 units; lunch 1/4 of 4 units = 1 unit; left 3 units = $18, 1 unit = $6, 8 units = $48. Check: game $24, remainder $24, lunch $6, left $18. b) 10 units: Saturday 3; remainder 7; Sunday 2/7 of 7 = 2; left 5 units = 25 pages; 1 unit = 5; book 50 pages. Check: 15 read, 35 left, 10 read Sunday, 25 left. (Two items only.)',size=33))
 
 # ---- 6. teach 2: the total stays the same ----
 sc=11
@@ -77,8 +77,8 @@ put('teach2',sec(f'{L}-teach2','26–30 MIN',body,'Teach. Ask first: "Did the to
 put('try2',try_slide(f'{L}-try2','30–32 MIN','Your turn: the total stays the same','Draw the After model first.',[
  ('a','Ali has 45 stickers and Mei has 15. How many must Ali give Mei so that they have the same number?','15'),
  ('b','Ben and Ali have 72 marbles. Ben gives Ali 6, and then Ben has 1/2 as many as Ali. How many did Ben have at first?','30'),
- ('c','Ali has 40 stickers and Mei has 24. Ali gives Mei 8. How many does each have now?','32 each')],
- 'Whiteboards. a) The total is 60, so 30 each; Ali gives 45 − 30 = 15 (check: 30 and 30). b) After: Ben 1 unit, Ali 2 units, 3 units = 72, 1 unit = 24, so Ben has 24 after and had 24 + 6 = 30 at first. c) Total 64, Ali 32 and Mei 32 after giving 8. Ask: "What do you notice?" (Ali gave exactly half the gap: the gap was 16, and 8 is half of 16.)',size=33))
+ ],
+ 'Whiteboards. a) The total is 60, so 30 each; Ali gives 45 − 30 = 15 (check: 30 and 30). b) After: Ben 1 unit, Ali 2 units, 3 units = 72, 1 unit = 24, so Ben has 24 after and had 24 + 6 = 30 at first. (Two items only.)',size=33))
 
 # ---- key idea ----
 body=h2('Key idea: find what stays the same')+card(p('Ask: what stays the same? The total (one gives to the other), the difference (both get or spend the same), or one amount (only the other changes).',40,700))+card(p('Draw that part the same in the Before and After models. Fraction of a remainder: cut the parts that are left into equal units.',36,600,MUTED))
@@ -86,8 +86,8 @@ put('key',sec(f'{L}-key','32–33 MIN',body,'Say the key idea together. Common m
 put('break',break_slide(f'{L}-break','33–37 MIN',DK['brk'],'Five minutes. Online: children stand in view of the camera. Ask for 1/2 of the whole with arms (one arm up), 1/4, then 3/4. Ask: "What is 1/2 of 1/2?" and have them show it with their arms (1/4). Then a drink of water.'))
 
 # ---- worksheet 1 ----
-put('ws1',ws_preview(f'{L}-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Fraction of a remainder. Cut the parts into equal units.'),('Q2','Siti and Mei: giving stickers. What stays the same? Tip: try 3 and 4, 6 and 8, 9 and 12 …'),('Q3','Ali and Ben\'s marbles: is Ben right? (3/5 is a try-this.)')],'Stuck? Draw the bar first and label every part before you use a number.','Minutes 37 to 49. Walk around. Ask "What stays the same in this story?" before giving any help. Q1 uses the remainder idea from the worked example, Q2 the "total stays the same" idea. Q3a is a quick check: giving 20 does not make them equal; the gap is 20, so only half of it (10) needs to move.'))
-put('ws1ans',checks(f'{L}-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 1/6   b) $72   c) $12 more (book $24, pen $12)'),('Q2','a) 84   b) Siti 48, Mei 36'),('Q3','a) No: 10 each way, 40 and 40.   b) (try this) 20 marbles: Ali 30, Ben 50')],
+put('ws1',ws_preview(f'{L}-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Fraction of a remainder. Cut the parts into equal units.'),('Q2','Siti and Mei: giving stickers. What stays the same? Tip: try 3 and 4, 6 and 8, 9 and 12 …'),],'Stuck? Draw the bar first and label every part before you use a number.','Minutes 37 to 49. Walk around. Ask "What stays the same in this story?" before giving any help. Q1 uses the remainder idea from the worked example, Q2 the "total stays the same" idea. Page 1 has only Q1 and Q2 (Q3, the marbles, is on page 2 and is take-home).'))
+put('ws1ans',checks(f'{L}-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 1/6   b) $72   c) $12 more (book $24, pen $12)'),('Q2','a) 84   b) Siti 48, Mei 36')],
  'Click each answer after a pair explains theirs. Q1: pen = 1/4 of 2/3 = 1/6; 6 units, 3 units left = $36, 1 unit = $12; total $72; book 2 units = $24, pen 1 unit = $12. Q2b: after, Siti 3 units and Mei 4 units = 84, 1 unit = 12; Siti 36 after, so 36 + 12 = 48 at first; Mei 84 − 48 = 36. Q3a: Ali has 20 more; if he gives 10, Ali 40 and Ben 40; if he gave 20, Ali 30 and Ben 50, the gap flips. Q3b: total 80, 8 units, 1 unit = 10, Ali 30 and Ben 50 after giving 20.',gapy=170))
 
 # ---- teach: difference stays the same ----
@@ -101,11 +101,6 @@ body+=pin(128,380,1664,B,'fade',WHITE,24,'16px 30px')
 body+=step(2,'Later: Mei 1 unit, Mum 3 units. The difference is 2 units = 28, so 1 unit = 14.',top=715,size=33)
 body+=step(3,'Mei will be 14, so 14 − 8 = 6 years later.   Check: 14 and 42, and 14 is 1/3 of 42 ✓',top=810,size=33)
 put('teachdiff',sec(f'{L}-teachdiff','51–54 MIN',body,'Teach before worksheet page 2 (Q4: both get the same amount of money). Ask first: "Everyone gets one year older every year. Does the gap between Mei and her mother change?" No. Click: step 1, then the later model, then steps 2 and 3. Think-aloud: "The gap is 28 now and it will be 28 later. Later, Mei is 1 unit and Mum is 3 units, so the gap is 2 units. 2 units are 28, so 1 unit is 14. Mei is 14 later; she is 8 now; 6 years." Link to the worksheet: "Giving each person the same money is just like each person getting one year older: the difference stays the same." Do the same story with money: both get $5 more, the gap is unchanged.'))
-put('trydiff',try_slide(f'{L}-trydiff','54–55 MIN','Your turn: the difference stays the same','Find the difference first. It does not change.',[
- ('a','Ravi has $30 and Ali has $10. Their aunt gives each of them the same amount. Then Ali has 1/2 as much as Ravi. How much did she give each?','$10'),
- ('b','Ben has $52 and Siti has $20. Each of them spends the same amount. Then Siti has 1/3 as much as Ben. How much did each spend?','$4')],
- 'Whiteboards. a) The difference is $20 and stays $20. After: Ali 1 unit, Ravi 2 units, so the difference is 1 unit = $20; Ali has $20 after, so she gave 20 − 10 = $10 each (check: $40 and $20). b) The difference is $32. After: Siti 1 unit, Ben 3 units, so 2 units = $32 and 1 unit = $16; Siti has $16 after, so she spent 20 − 16 = $4 (check: Ben 52 − 4 = 48 = 3 × 16).',size=33))
-
 # ---- teach: one amount stays the same ----
 A=svgwrap(1250,190,'Before: girls are 2 units and boys are 3 units.',txt(120,56,'Girls',34,NAVY,'end',700,'Nunito Sans, Arial')+pbar(140,14,150,[(2,YEL,'girls',2)])+txt(120,150,'Boys',34,NAVY,'end',700,'Nunito Sans, Arial')+pbar(140,108,150,[(3,SKY,'boys',3)]))
 B=svgwrap(1250,190,'After: 4 more girls join and the girls bar is as long as the boys bar. The 4 new girls are 1 unit.',txt(120,56,'Girls',34,NAVY,'end',700,'Nunito Sans, Arial')+pbar(140,14,150,[(2,YEL,'girls',2),(1,ORG,'+4',1)])+txt(120,150,'Boys',34,NAVY,'end',700,'Nunito Sans, Arial')+pbar(140,108,150,[(3,SKY,'boys: no change',3)]))
@@ -115,12 +110,10 @@ body+=step(1,'The boys did not change: 3 units before and 3 units after.',top=64
 body+=pin(128,400,1664,B,'fade',WHITE,24,'16px 30px')
 body+=step(2,'After, half are girls, so girls = boys = 3 units. The girls grew by 1 unit: that is the 4 new girls.',top=730,size=33)
 body+=step(3,'1 unit = 4, so at first 5 units = 20 pupils.   Check: 8 girls, 12 boys; 12 and 12 later ✓',top=820,size=33)
-put('teachone',sec(f'{L}-teachone','55–57 MIN',body,'Teach before worksheet page 2 (Q5 is the first step with a jar of beads; the full bead-box problem is Think harder A2). Ask first: "Which group did NOT change?" The boys. So the boys get the same number of units in the Before and the After model. Click order: step 1, the After model, then steps 2 and 3. Think-aloud: "Before, 2/5 girls means girls 2 units and boys 3 units. After, half are girls, so girls and boys are equal: 3 units each. The girls went from 2 units to 3 units, so the 4 new girls are 1 unit. The class was 5 units: 20." Common mistake: making the total the same in both models. Here the total changes (20 to 24); only the boys stay the same.'))
-
 # ---- worksheet 2 ----
-put('ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Ravi and Ali. Both are given the same amount. The difference stays the same.'),('Q5','A jar of 12 red and 8 blue beads, then 10 more red. Which colour does not change?')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone. Note who needs a short catch-up next lesson, especially children who keep the total the same when the stay-the-same amount is the difference.'))
-put('ws2ans',checks(f'{L}-ws2ans','72–76 MIN','Page 2: check together',[('Q4','a) The difference: $24   b) $22 each'),('Q5','a) Blue   b) 2/5 blue at first (8 of 20); now 30 beads and 4/15 are blue   c) the blue beads are still 8, but the jar has more beads')],
- 'Click each answer after a child explains. Q4: the difference $50 − $26 = $24 stays $24; after, Ali 2 units and Ravi 3 units, so 1 unit = $24, Ali has $48 after, so the mother gave $48 − $26 = $22 (check: $72 and $48; 48 is 2/3 of 72). Q5: 12 red and 8 blue, 20 beads. 10 red are added, so the jar has 30 beads. Blue is 8 of 20 = 2/5 at first and 8 of 30 = 4/15 now. Only red was added, so blue is the part that does not change; the blue fraction gets smaller because the whole gets bigger. The full problem (3/7 red, then 30 red added, 3/5 red) is Think harder A2: blue 4 units at first and 2 parts of 5 after, so the whole box is 10 units; red 3 units then 6 units, so 30 = 3 units, 1 unit = 10, 70 beads at first and 100 now.',gapy=170))
+put('ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Ravi and Ali. Both are given the same amount. The difference stays the same.'),('Q3','★ Take-home: Ali and Ben\'s marbles. Is Ben right?'),('Q5','★ Take-home: a jar of 12 red and 8 blue beads, then 10 more red.')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone on Q4 only; Q3 and Q5 are take-home (starred). Note who needs a short catch-up next lesson, especially children who keep the total the same when the stay-the-same amount is the difference.'))
+put('ws2ans',checks(f'{L}-ws2ans','72–76 MIN','Page 2: check together',[('Q4','a) The difference: $24   b) $22 each'),('Q3','a) No: 10 each way, 40 and 40.   b) (try this) 20 marbles: Ali 30, Ben 50'),('Q5','a) Blue   b) 2/5 blue at first (8 of 20); now 30 beads and 4/15 are blue   c) the blue beads are still 8, but the jar has more beads')],
+ 'One child explains Q4; click through the rest (Q3 and Q5 are take-home, their answers are here for you). Click each answer after a child explains. Q4: the difference $50 − $26 = $24 stays $24; after, Ali 2 units and Ravi 3 units, so 1 unit = $24, Ali has $48 after, so the mother gave $48 − $26 = $22 (check: $72 and $48; 48 is 2/3 of 72). Q5: 12 red and 8 blue, 20 beads. 10 red are added, so the jar has 30 beads. Blue is 8 of 20 = 2/5 at first and 8 of 30 = 4/15 now. Only red was added, so blue is the part that does not change; the blue fraction gets smaller because the whole gets bigger. The full problem (3/7 red, then 30 red added, 3/5 red) is Think harder A2: blue 4 units at first and 2 parts of 5 after, so the whole box is 10 units; red 3 units then 6 units, so 30 = 3 units, 1 unit = 10, 70 beads at first and 100 now.',gapy=170))
 
 # ---- stretch, challenge ----
 import p5_printed as _PP
@@ -152,7 +145,7 @@ put('talk',sec(f'{L}-talk','76–82 MIN',body,'Minutes 76 to 82. Pairs talk for 
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(LS['exit']['q'],44,600))+card(p('Draw a model on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
 put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['exit']['a']+' Extension: '+LS['extension']))
 
-order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','key','break','ws1','ws1ans','teachdiff','trydiff','teachone','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','key','break','ws1','ws1ans','teachdiff','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 order=_PP.fix_order(order,3,S)
 sections={'s1':{'description':'Warm-up and explore','start':f'{L}-title'},'s2':{'description':'Teach: fraction of a remainder and the total that stays the same','start':f'{L}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{L}-break'},'s4':{'description':'Think harder, Go further, talk and exit','start':f'{L}-stretch'}}
 write_deck(L,order,sections,S,'Math Inquirers P5: Lesson 3 – Before and After')
