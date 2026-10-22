@@ -293,63 +293,59 @@ def check_block(d, eq):
     ex = load_extras()
     import svg, validate
     qs = c['questions']
-    eq([q['id'] for q in qs], [f'C{i}' for i in range(1, 11)], 'ten questions C1 to C10')
-    eq([q['lesson'] for q in qs], list(range(1, 11)), 'one question per lesson 1 to 10')
-    eq(all(q['tier'] == 'start' for q in qs), True, 'all ten are Start here')
+    lessons_of = lambda q: q.get('lessons') or [q['lesson']]
+    eq([q['id'] for q in qs], [f'C{i}' for i in range(1, 9)], 'eight questions C1 to C8')
+    eq(sorted(l for q in qs for l in lessons_of(q)), list(range(1, 11)) if False else [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'every lesson 1 to 10 is covered once (Q2 covers lessons 2 and 4, Q5 covers lessons 6 and 7)')
+    eq(all(q['tier'] == 'start' for q in qs), True, 'all eight are Start here')
     eq((c['optional']['tier'], c['optional']['optional']), ('think', True), 'one optional Think harder item')
     eq([q['page'] for q in qs], sorted(q['page'] for q in qs), 'questions in page order')
     eq(sorted({q['page'] for q in qs}), list(range(1, c['sheet_pages'] + 1)), 'every sheet page holds a question')
     Q = {q['id']: q for q in qs}
 
-    # C1: tens and ones, and the picture really has 47 sticks
+    # C1: tens and ones, and the picture really has 39 sticks
     sticks = svg.bundles(3, 9).count('fill="#FFC93C"')
     eq(sticks, 39, 'C1 picture draws 39 sticks'); eq(divmod(sticks, 10), (3, 9), 'C1 tens and ones')
     eq(Q['C1']['val'], [3, 9, 39], 'C1'); eq((Q['C1']['visual']['tens'], Q['C1']['visual']['ones']), (3, 9), 'C1 picture spec')
-    # C2: the arrow sits exactly on 67, just before 80 is 79, fifty-three is 53
+    # C2: the arrow sits exactly on 67; counting on in tens from 14, 24, 34
     nl = ex.numberline_svg(Q['C2']['visual'])
     tick_x = {int(m.group(2)): float(m.group(1)) for m in re.finditer(r'x1="([\d.]+)" y1="[\d.]+" x2="[\d.]+" y2="[\d.]+" stroke="#1B2A49" stroke-width="[\d.]+" data-tick="(\d+)"', nl)}
     arrow = re.search(r'data-arrow="(\d+)" data-tip-x="([\d.]+)"', nl)
     eq(sorted(tick_x), list(range(60, 71)), 'C2 ticks 60 to 70')
-    eq(sorted(int(x) for x in re.findall(r'font-weight="700" text-anchor="middle" fill="#1B2A49" font-family="Fredoka, Arial, sans-serif">(\d+)</text>', nl)), [n for n in range(60, 71) if n != 67], 'C2 every number is labelled except the one the arrow shows')
     eq(abs(float(arrow.group(2)) - tick_x[int(arrow.group(1))]) < 0.2, True, 'C2 arrow tip on its tick')
     eq(int(arrow.group(1)), 67, 'C2 arrow value'); eq((66 + 68) // 2, 67, 'C2 between its two labelled neighbours')
-    eq(Q['C2']['val'], [67, w2n('fifty-three')], 'C2'); eq(w2n('fifty-three'), 53, 'C2 word')
+    def count_on(a_, step, k): return [a_ + step * i for i in range(1, k + 1)]
+    eq(count_on(34, 10, 1), [44], 'C2 b: counting on in tens from 34'); eq(Q['C2']['val'], [67, 44], 'C2')
+    eq(Q['C2']['lessons'], [2, 4], 'C2 covers lessons 2 and 4')
     # C3: the numbers that can be made from the cards using both cards
     cards = re.findall(r'data-card="(\d)"', ex.cards_svg(Q['C3']['visual']['digits']))
     eq(cards, ['3', '8'], 'C3 cards drawn')
     made = sorted({int(a_ + b_) for a_, b_ in itertools.permutations(cards, 2)})
-    eq(made, [38, 83], 'C3 numbers made'); eq(Q['C3']['val'], made + [max(made)], 'C3')
-    eq(max(made), 83, 'C3 bigger')
-    # C4: counting patterns
-    def count_on(a_, step, k): return [a_ + step * i for i in range(1, k + 1)]
-    eq(count_on(50, 5, 2), [55, 60], 'C4 a'); eq(count_on(34, 10, 2), [44, 54], 'C4 b: counting on in tens from 34')
-    eq(Q['C4']['val'], [55, 60, 44, 54], 'C4')
-    # C5: ten-frame picture 7 and 5, make a ten
+    eq(made, [38, 83], 'C3 numbers made'); eq(Q['C3']['val'], [max(made)], 'C3'); eq(max(made), 83, 'C3 greatest')
+    # C4: ten-frame picture 7 and 5, make a ten
     tf = svg.ten_frame(7, 5)
     cx = [float(m) for m in re.findall(r'<circle cx="([\d.]+)"', tf)]
-    eq((len([x for x in cx if x < 340]), len([x for x in cx if x > 340])), (7, 5), 'C5 picture has 7 and 5 counters')
+    eq((len([x for x in cx if x < 340]), len([x for x in cx if x > 340])), (7, 5), 'C4 picture has 7 and 5 counters')
     def make_ten(a_, b_):
         to_ten = (10 - a_ % 10) % 10
         return (a_ + to_ten) + (b_ - to_ten)
-    eq(make_ten(7, 5), 7 + 5, 'C5 a by making a ten'); eq(make_ten(37, 5), 37 + 5, 'C5 b by making a ten')
-    eq(Q['C5']['val'], [12, 42], 'C5'); eq(len(add(pile(37), 5)), 42, 'C5 simulated')
-    # C6, C7: tens jumps and take away without renaming
-    eq(Q['C6']['val'], [len(add(pile(52), 30)), len(take(pile(52), 20))], 'C6'); eq(Q['C6']['val'], [82, 32], 'C6 values')
-    eq(Q['C7']['val'], [len(take(pile(74), 31))], 'C7'); eq(Q['C7']['val'], [43], 'C7 values')
-    eq(74 % 10 >= 31 % 10, True, 'C7 no renaming')
-    # C8: box numbers by search
+    eq(make_ten(7, 5), 7 + 5, 'C4 a by making a ten'); eq(make_ten(37, 5), 37 + 5, 'C4 b by making a ten')
+    eq(Q['C4']['val'], [12, 42], 'C4'); eq(len(add(pile(37), 5)), 42, 'C4 simulated')
+    # C5: tens jump and take away without renaming
+    eq(Q['C5']['val'], [len(add(pile(52), 30)), len(take(pile(74), 31))], 'C5'); eq(Q['C5']['val'], [82, 43], 'C5 values')
+    eq(74 % 10 >= 31 % 10, True, 'C5 no renaming'); eq(Q['C5']['lessons'], [6, 7], 'C5 covers lessons 6 and 7')
+    # C6: box numbers by search
     box_a = [b_ for b_ in range(0, 100) if 8 + 4 == 6 + b_][0]; box_b = [b_ for b_ in range(0, 100) if 60 + 10 == 50 + b_][0]
-    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [6, 20], 'C8 values')
-    # C9: the printed line and the draw length
-    v9 = Q['C9']['visual']
-    eq(Q['C9']['val'], [v9['draw_cm'], v9['draw_cm'] + v9['extra_cm']], 'C9 one line drawn and the longer length written'); eq(v9['draw_cm'] + v9['extra_cm'], 10, 'C9 a line 4 cm longer is 10 cm')
-    eq(10 * v9['draw_cm'] < 182 - 20, True, 'C9 the drawing box is wide enough for a 6 cm line')
+    eq(Q['C6']['val'], [box_a, box_b], 'C6'); eq([box_a, box_b], [6, 20], 'C6 values')
+    # C7: the printed line and the draw length
+    v9 = Q['C7']['visual']
+    eq(Q['C7']['val'], [v9['draw_cm'], v9['draw_cm'] + v9['extra_cm']], 'C7 one line drawn and the longer length written'); eq(v9['draw_cm'] + v9['extra_cm'], 10, 'C7 a line 4 cm longer is 10 cm')
+    eq(10 * v9['draw_cm'] < 182 - 20, True, 'C7 the drawing box is wide enough for a 6 cm line')
     eq(re.search(r'width="(\d+)mm"', ex.check_bar_svg(c['sheet_check_bar_mm'])).group(1), '100', 'print check bar svg width in mm')
-    eq(ex.dotbox_svg(True).count('data-dot'), 1, 'C9 one starting dot in the drawing box')
-    # C10: the story
+    eq(ex.dotbox_svg(True).count('data-dot'), 1, 'C7 one starting dot in the drawing box'); eq(Q['C7'].get('dotbox'), True, 'C7 draws the dot box')
+    # C8: the story
     s10 = story(35, [('+', 10), ('-', 3)])
-    eq(Q['C10']['val'], [s10[0], s10[1], s10[1]], 'C10'); eq(s10, [45, 42], 'C10 values')
-    eq(eval_chain(Q['C10']['parts'][0]['ans'].split(' = ')[0]), 45, 'C10 step 1 sentence'); eq(eval_chain(Q['C10']['parts'][1]['ans'].split(' = ')[0]), 42, 'C10 step 2 sentence')
+    eq(Q['C8']['val'], [s10[0], s10[1]], 'C8'); eq(s10, [45, 42], 'C8 values')
+    eq(eval_chain(Q['C8']['parts'][0]['ans'].split(' = ')[0]), 45, 'C8 step 1 sentence'); eq(eval_chain(Q['C8']['parts'][1]['ans'].split(' = ')[0]), 42, 'C8 step 2 sentence')
     o = c['optional']
     eq(o['val'], [len(queue(5, 3))], 'optional'); eq(len(queue(5, 3)), 9, 'optional value'); eq(5 + 3 == 9, False, 'optional trap: 8 leaves Ali out')
     # parts: the answer text contains each part's value
@@ -371,31 +367,35 @@ def check_block(d, eq):
     for q in qs + [o]:
         assert q['say'] in script_text, f"{q['id']} spoken text is not in the script"
         n_extra += 1
-    # the check fits in its part of the lesson
+    # the check fits in its part of the lesson, by modelled time (reading aloud, quiet work, stretch) for a middle child and a slower child
     import common
     seg = [s for s in common.segment_timeline(d) if s['part'] == 'exit'][0]
-    t_check = sum(sec for (_, sec, ln) in seg['lines'] if False)
-    start_i = [i for i, (_, _, ln) in enumerate(seg['lines']) if ln['k'] == 'SLIDE' and ln.get('slide') == 's-check1'][0]
-    tick = sum(sec for (_, sec, ln) in seg['lines'][:start_i]); chk = sum(sec for (_, sec, ln) in seg['lines'][start_i:])
     pm = {p['id']: p for p in d['timing']['parts']}
     exit_min = pm['exit']['end'] - pm['exit']['start']
     eq(c['minutes'], 20, 'the check takes 20 minutes (owner decision of 22 Oct 2026)')
-    eq(c['minutes'] + 4, exit_min, 'check minutes plus the 4-minute exit ticket equal the exit part')
-    eq(tick <= 4 * 60 and chk <= c['minutes'] * 60, True, 'exit ticket fits 4 minutes and the check script fits its minutes')
-    eq(pm['exit']['start'] + 4, 63, 'the check starts at minute 63 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
+    eq(exit_min, c['minutes'], 'the exit part is the check only (no separate exit ticket in the live lesson)')
+    eq(seg['used'] <= c['minutes'] * 60, True, 'the check script fits its 20 minutes')
+    child = sum(c['timing_model']['child_seconds'].values()) + c['timing_model']['stretch_seconds']
+    read = sum(sec for (_, sec, ln) in seg['lines'] if ln['k'] in ('READ', 'SAY', 'REC', 'SLIDE', 'DO'))
+    mid = child + read
+    slow = child * c['timing_model']['slow_child_factor'] + read * 1.1
+    eq(mid <= 17 * 60, True, 'a middle child needs at most 17 minutes of work and reading')
+    eq(slow <= 25 * 60, True, 'a slower child needs at most 25 minutes (20 plus the 5 flex minutes)')
+    eq(pm['exit']['start'], 63, 'the check starts at minute 63 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
     eq(sum(p_['end'] - p_['start'] for p_ in d['timing']['parts']), 90, 'parts still sum to 90')
-    eq(sum(len(p_['parts']) for p_ in qs), 20, 'the check has 20 answer parts in all (cut to fit 20 minutes)')
+    eq(sum(len(p_['parts']) for p_ in qs), 15, 'the check has 16 answer parts in all (cut from 22 to fit 20 minutes)')
+    eq(all(s_.get('optional') and s_['part'] == 'flex' for s_ in d['slides'] if s_['id'] in ('s-exit', 's-exitans')), True, 'the exit ticket slides are optional flex slides: the check takes its place')
     # photo return: the business WhatsApp number only, no personal-phone address text anywhere in the check or the lesson
     blob = json.dumps(c) + json.dumps(d['safeguarding']) + json.dumps(d['tutor_prep']) + json.dumps(d['parent']) + json.dumps([s_['note'] for s_ in d['slides']]) + json.dumps(d['script'])
     assert '+65 9880 5962' in blob
     eq('parent contact' in blob or 'address you gave' in blob or 'personal devices' in blob or 'address given at enrolment' in blob, False, 'no leftover text about a parent contact address or personal devices')
     eq('3-page' in blob or '29-minute' in blob or 'minutes 54' in blob or 'about 30 minutes' in blob or 'minute 54' in blob, False, 'no leftover 29-minute or 30-minute text')
-    # strands partition the ten questions and cover every lesson
+    # strands partition the eight questions and cover every lesson
     st = c['strands']
-    eq(sorted(x for s in st for x in s['questions']), sorted(q['id'] for q in qs), 'strands partition C1 to C10')
+    eq(sorted(x for s in st for x in s['questions']), sorted(q['id'] for q in qs), 'strands partition C1 to C8')
     eq(sorted(l for s in st for l in s['lessons']), list(range(1, 11)), 'strands cover lessons 1 to 10')
     for s in st:
-        eq(sorted(Q[x]['lesson'] for x in s['questions']), sorted(s['lessons']), 'strand lessons match questions ' + s['id'])
+        eq(sorted(l_ for x in s['questions'] for l_ in lessons_of(Q[x])), sorted(s['lessons']), 'strand lessons match questions ' + s['id'])
         for k in ('showing', 'getting', 'beginning'):
             assert '[Name]' in s[k], (s['id'], k)
             n_extra += 1

@@ -77,16 +77,16 @@
    "start": "s-talk"
   },
   "s9": {
-   "description": "Exit ticket and end-of-term check",
+   "description": "Flex time and goodbye",
    "start": "s-exit"
   },
   "s10": {
-   "description": "Look-back",
-   "start": "s-look"
+   "description": "End-of-term check",
+   "start": "s-check1"
   },
   "s11": {
-   "description": "Flex time and goodbye",
-   "start": "s-end"
+   "description": "Look-back",
+   "start": "s-look"
   }
  },
  "faces": {

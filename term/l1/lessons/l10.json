@@ -29,7 +29,7 @@
     "Read a short story twice: first to say what it is about, then to pick out the numbers and the question.",
     "Write one number sentence for each step of a two-step story (add or take away within 100) and answer in a sentence.",
     "Choose add or take away from the words of the story (gets, gives away, more than, fewer than), not from the order of the numbers.",
-    "Take the Term 1 end-of-term check on private paper: 10 questions, one from each lesson of the term."
+    "Take the Term 1 end-of-term check on private paper: 8 short questions that cover the lessons of the term."
   ],
   "joining_cold": {
     "remember": [
@@ -42,7 +42,7 @@
       "'I think of a number'"
     ],
     "safe_to_miss": false,
-    "note": "Lesson 10 is the last lesson of the term and holds the end-of-term check, so it is hard to miss: the lesson is recorded, the check is taken at the make-up slot (same private procedure, see the check key). A child who joins late is not lost: the warm-up gives what the stories need, the check is optional for the child, and the report line covers only the lessons attended."
+    "note": "Lesson 10 is the last lesson of the term and holds the end-of-term check, so it is hard to miss: the lesson is recorded, the check is taken at the make-up slot (same private procedure, see the check key). A child who joins late is not lost: the warm-up gives what the stories need, the check is optional for the child, and the report line covers only the lessons attended. Lessons 6 and 7 (jumps of ten, take away) help most for the Start here sums."
   },
   "materials": {
     "child": [
@@ -53,13 +53,13 @@
     "tutor": [
       "A slide deck, and a few counters to act out a story on camera if you wish",
       "The check key and the private return plan (L10_Check_Tutor_Key.pdf), and a blank record sheet for each child",
-      "A visible clock or a timer slide kept off the screen during the check"
+      "A clock or timer on your own device, not on the shared screen during the check"
     ],
     "kit_pages": [
       "Page 6 of the workbook (tens bars and ones squares): the squares make good counters; cut out before the lesson"
     ],
     "ruler": true,
-    "notes": "A ruler with centimetres is needed for question 9 of the check only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the check sheet at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
+    "notes": "A ruler with centimetres is needed for question 7 of the check only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the check sheet at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
   },
   "timing": {
     "parts": [
@@ -103,18 +103,18 @@
         "id": "work",
         "title": "Workbook",
         "start": 35,
-        "end": 55
+        "end": 59
       },
       {
         "id": "talk",
         "title": "Talk time",
-        "start": 55,
-        "end": 59
+        "start": 59,
+        "end": 63
       },
       {
         "id": "exit",
-        "title": "Exit ticket and end-of-term check",
-        "start": 59,
+        "title": "End-of-term check",
+        "start": 63,
         "end": 83
       },
       {
@@ -133,13 +133,13 @@
     "optional_slide": "s-opt",
     "include_rules": false,
     "skip_order": [
+      "In a slow class the workbook runs over: take it from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
       "the optional slide",
       "the second explore story",
       "the quick-fire in the mini-lesson",
-      "the choice time in the workbook (pages 3 to 5 can go home)",
       "never shorten the end-of-term check"
     ],
-    "notes": "Lesson 10 is the last lesson of the term, so it holds the end-of-term check: the part named Exit ticket and end-of-term check (minutes 59 to 83) is a 4-minute exit ticket followed by a 20-minute check (the check is taken on private paper; see the tutor key). The check keeps one question per lesson and is cut to fit 20 minutes. Explore (10 minutes), the Mini-lesson (10) and the Workbook (20) get the freed minutes: Start here is pages 1 and 2, and the rest of the workbook time is for Think harder, Go further or the Investigation, which can also go home. The last 5 minutes are the standing buffer; a child who needs more time for the check may use it, and nothing new is started in it."
+    "notes": "Lesson 10 is the last lesson of the term, so it holds the end-of-term check: the part End-of-term check (minutes 63 to 83) is the check only. The exit ticket (E1 to E3) is not done live: the check ends with the same kind of two-step story, so the 4 minutes go to the workbook (24 minutes, so Start here is finished in class). The check has 8 short questions and one optional Think harder item; a middle child needs about 16 minutes of reading aloud and quiet work, a slower child may use the 5 flex minutes at the end. The last 5 minutes are the standing buffer; nothing new is started in it."
   },
   "sneak_peek": {
     "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them.",
@@ -179,8 +179,8 @@
       "action": "Pause. Explain your answer to someone at home, with a reason."
     },
     "exit": {
-      "say": "Recording: pause and do the exit ticket alone. The private check is for the live lesson; ask your grown-up how to take it.",
-      "action": "Pause. Do the exit ticket alone. Ask a grown-up and your tutor how to take the private check."
+      "say": "Recording: the private check is taken live or at the make-up slot. Ask your grown-up how to take it.",
+      "action": "Pause. Ask a grown-up and your tutor how to take the private check."
     },
     "look": {
       "say": "Recording: pause and fill in your look-back box. You can pass.",
@@ -210,16 +210,24 @@
           },
           {
             "k": "SAY",
-            "text": "Good morning, inquirers! This is our last lesson of the term. Pencil, paper, your workbook and some counters on the table, please. Today we read stories twice. At the end we do our end-of-term check on your own paper. This lesson is recorded: me and the screen only. You may switch your camera off whenever you like."
+            "text": "Hello, inquirers! Last lesson of the term. Pencil, paper, counters and your workbook on the table, please. Today we read stories twice, and at the end we do our end-of-term check."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "DO",
-            "text": "Greet each child by first name. Check each camera shows the child and the table, and that the closed check sheet, a ruler and a pencil are ready.",
-            "s": 30
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+            "s": 8
           },
           {
             "k": "NOTE",
-            "text": "Lesson 10 only: say once that the check is private and not a race. Routine slides and the four inquirer rules are not repeated; they were introduced in Lesson 1."
+            "text": "Lesson 10 only: say once that the check is private and not a race. The routine and the four inquirer rules were taught in Lesson 1; for a new child one sentence is enough: notice it, test it, explain why, mistakes help us. Say the recording statement and the microphone routine in the same words every lesson."
           }
         ]
       },
@@ -333,7 +341,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Answers: 5, 8, 25; take away, add, take away, add; 60, 47, 36, 29; then 6 + 4 = 10, 9 - 3 = 6, 12 + 5 = 17. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20."
+            "text": "Answers: 5, 8, 25; take away, add, take away, add; 60, 47, 36, 29; then 6 + 4 = 10, 9 - 3 = 6, 12 + 5 = 17. Children answer with fingers, thumbs or a whispered number. Nobody writes. A child new to tens and ones sees the bundles on the slide first."
           }
         ]
       },
@@ -371,13 +379,8 @@
             "s": 55
           },
           {
-            "k": "HOLD",
-            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-            "s": 25
-          },
-          {
             "k": "SAY",
-            "text": "Thank you. We will come back to puzzle two later."
+            "text": "Thank you. Keep your paper and your own answer: nobody shows it. We will come back to puzzle two later, and you can check your own thinking then."
           },
           {
             "k": "NOTE",
@@ -410,7 +413,7 @@
           },
           {
             "k": "WORK",
-            "text": "Round 1: children act out story A with counters or the kit squares. Tutor scans the cameras and asks a few children to show their counters.",
+            "text": "Round 1: children act out story A with counters or the kit squares and show a thumbs up when done.",
             "s": 70
           },
           {
@@ -485,7 +488,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Answers: story A 7 (8 + 5 = 13, then 13 - 6 = 7); story B 10 (12 - 5 = 7, then 7 + 3 = 10); story C: Mei 13, together 22 (9 + 4 = 13, then 9 + 13 = 22). Main room only: no breakout rooms, so you can see every camera. Building with counters is for every child."
+            "text": "Answers: story A 7 (8 + 5 = 13, then 13 - 6 = 7); story B 10 (12 - 5 = 7, then 7 + 3 = 10); story C: Mei 13, together 22 (9 + 4 = 13, then 9 + 13 = 22). Main room only: no breakout rooms. Building with counters is for every child."
           }
         ]
       },
@@ -532,7 +535,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children write two number sentences on their own paper.",
+            "text": "Children write two number sentences on their own paper. Wait until most have stopped writing.",
             "s": 55
           },
           {
@@ -566,7 +569,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children write one number sentence on their own paper.",
+            "text": "Children write one number sentence on their own paper. Wait until most have stopped writing.",
             "s": 60
           },
           {
@@ -592,7 +595,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children line up counters on the table: 5 in front, one for Ravi, 2 behind. They count every counter.",
+            "text": "Children line up counters on the table: 5 in front, one for Ravi, 2 behind. They count every counter and show a thumbs up.",
             "s": 40
           },
           {
@@ -602,7 +605,7 @@
           },
           {
             "k": "STUCK",
-            "text": "If a child reads fewer than as add: ask who has more, and who has the greater number. If a child leaves Ravi out: put counters in a line on camera and touch each one."
+            "text": "If a child reads fewer than as add: ask who has more, and who has the greater number. If a child leaves Ravi out: put counters in a line on the shared slide or whiteboard and touch each one."
           },
           {
             "k": "NOTE",
@@ -623,12 +626,12 @@
           },
           {
             "k": "SAY",
-            "text": "Stand up and sip some water. Small steps forward to add, small steps back to take away. Add 3, take away 2, add 4, take away 5. Where do you end up?"
+            "text": "Stand up and sip some water. Lean forward to add, lean back to take away, in the space you have. Add 3, take away 2, add 4, take away 5. Where do you end up?"
           },
           {
             "k": "WORK",
-            "text": "Call the four moves. Children step or lean forward and back, in the space they have. Count aloud together. Everyone ends back at the chair.",
-            "s": 110
+            "text": "Call the four moves. Children lean forward and back in their chair or standing, in the space they have. Say each count clearly; children count quietly along. Everyone ends back upright: 3, 1, 5, 0.",
+            "s": 100
           }
         ]
       },
@@ -645,12 +648,12 @@
           },
           {
             "k": "READ",
-            "text": "Page 1, Start here. Question 1: Ben has 30 cards. He gives 20 cards away. After that, he gets 6 more cards. Fill in the steps. Question 2: Mei has 42 stickers. She gets 7 more stickers. Then she gives 10 stickers to Ali. Write one number sentence for each step. Then write how many stickers Mei has now. Question 3: Ravi has 25 pencils. He buys 10 more pencils. Then he loses 3 pencils. Circle the two number sentences that fit the story."
+            "text": "Page 1, Start here. Question 1: Ben has 30 cards. He gives 20 cards away. After that, he gets 6 more cards. Fill in the steps. Question 2: Mei has 42 stickers. She gets 7 more stickers. Then she gives 10 stickers to Ali. Write one number sentence for each step. Then write how many stickers Mei has now. Question 3: Ravi has 25 pencils. He buys 10 more pencils. Then he loses 3 pencils. Circle the two number sentences that fit the story. The four sentences are: 25 plus 10 equals 35; 25 take away 10 equals 15; 35 take away 3 equals 32; 35 plus 3 equals 38."
           },
           {
             "k": "WORK",
-            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-            "s": 330
+            "text": "Page 1, questions 1 to 3. Tutor looks around the gallery, asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
+            "s": 420
           },
           {
             "k": "SLIDE",
@@ -658,7 +661,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 1: ten, then sixteen. Question 2: forty-nine, then thirty-nine. Question 3: circle 25 plus 10 and 35 take away 3. Ravi has thirty-two. Mark your own page in another colour."
+            "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: ten, then sixteen. Question 2: forty-nine, then thirty-nine. Question 3: circle 25 plus 10 and 35 take away 3. Ravi has thirty-two. Check your own page in another colour."
           },
           {
             "k": "SLIDE",
@@ -666,12 +669,12 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: write plus or minus in each box. Question 5: Ali has 23 marbles. Ben has 10 more than Ali. How many marbles altogether? Question 6: A bus has 30 children. 10 children get off. Then 4 children get on. Siti writes 30 plus 10 equals 40 for Step 1. Is Siti correct? Circle Yes or No. Then find how many children are on the bus now."
+            "text": "Page 2. Question 4: write plus or minus in each box. Ali has 8 shells and finds 5 more. Siti has 9 sweets and eats 3. Mei has 10 stickers and gives away 4. There are 12 children in a line and 6 more join. Question 5: Ali has 23 marbles. Ben has 10 more than Ali. How many marbles altogether? Question 6: A bus has 30 children. 10 children get off. Then 4 children get on. Siti writes 30 plus 10 equals 40 for Step 1. Is Siti correct? Circle Yes or No. Then find how many children are on the bus now."
           },
           {
             "k": "WORK",
-            "text": "Page 2, questions 4 to 6.",
-            "s": 270
+            "text": "Page 2, questions 4 to 6. Move to the answer slide only when most children have stopped writing.",
+            "s": 420
           },
           {
             "k": "SLIDE",
@@ -679,7 +682,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 4: plus, minus, minus, plus. Question 5: Ben has thirty-three. They have fifty-six. Question 6: no. Children who get off leave the bus, so take away. Thirty take away ten is twenty. Twenty plus four is twenty-four."
+            "text": "Answers for page 2. If you are still working, carry on and check later. Question 4: plus, minus, minus, plus. Question 5: Ben has thirty-three. They have fifty-six. Question 6: no. Children who get off leave the bus, so take away. Thirty take away ten is twenty. Twenty plus four is twenty-four."
           },
           {
             "k": "SLIDE",
@@ -692,7 +695,7 @@
           {
             "k": "WORK",
             "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-            "s": 150
+            "s": 170
           },
           {
             "k": "STUCK",
@@ -704,7 +707,7 @@
           },
           {
             "k": "STUCK",
-            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. You check in during the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+            "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class. Open the next term with one short catch-up question for the whole group. Never a private message to a child, never a private room."
           },
           {
             "k": "NOTE",
@@ -725,7 +728,7 @@
           },
           {
             "k": "READ",
-            "text": "Siti has 20 stickers. Ali has 5 fewer stickers than Siti. Ravi says Ali has 25 stickers. Do you agree? Use counters to explain."
+            "text": "Siti has 20 stickers. Ali has 5 fewer stickers than Siti. A child says Ali has 25 stickers. Do you agree? Use counters to explain."
           },
           {
             "k": "WORK",
@@ -766,7 +769,7 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-exit"
+            "slide": "s-check1"
           },
           {
             "k": "REC",
@@ -774,51 +777,21 @@
           },
           {
             "k": "SAY",
-            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
-          },
-          {
-            "k": "WORK",
-            "text": "Children answer E1 to E3 on their own.",
-            "s": 100
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-            "s": 25
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-exitans"
-          },
-          {
-            "k": "READ",
-            "text": "Eighteen. Eleven. Thirteen."
-          },
-          {
-            "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. Now we put the workbook away for the check."
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-check1"
-          },
-          {
-            "k": "SAY",
-            "text": "The end-of-term check. Ten questions, one from each lesson, and one optional Think harder question. It takes about twenty minutes, on your own paper. It is not a race. You may skip any question. I will not say any answers, and I will not show anyone's paper."
+            "text": "Now the end-of-term check. Eight questions and one optional Think harder question. It takes about twenty minutes, on your own paper. It is not a race. You may skip any question. I will not say any answers, and I will not show anyone's paper."
           },
           {
             "k": "DO",
-            "text": "Children take out the closed check sheet, a pencil and a ruler. Grown-ups sit nearby and do not give answers. Paper flat on the table, not held up. Name on page 1.",
+            "text": "Children take out the closed check sheet, a pencil and a ruler. Grown-ups sit nearby and do not give answers. Paper flat on the table, never held up. Name on page 1.",
             "s": 30
           },
           {
             "k": "READ",
-            "text": "Page 1. Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: write fifty-three in digits."
+            "text": "Page 1. Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 1 (questions 1 and 2). Walk the cameras; say nothing about right or wrong. If asked, re-read a question to the whole group.",
-            "s": 130
+            "text": "Children work quietly on page 1 (questions 1 and 2). Look around the gallery; say nothing about right or wrong. If asked, re-read a question to the whole group.",
+            "s": 100
           },
           {
             "k": "SAY",
@@ -826,12 +799,12 @@
           },
           {
             "k": "READ",
-            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number. Question 4. Fill in the missing numbers. Part a: count on in fives and write the next two numbers. Part b: count on in tens and write the next two numbers. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5."
+            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it. Question 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. Question 5. Part a: write 52 plus 30. Part b: write 74 take away 31."
           },
           {
             "k": "WORK",
             "text": "Children work quietly on page 2 (questions 3 to 5).",
-            "s": 180
+            "s": 150
           },
           {
             "k": "MOVE",
@@ -840,16 +813,16 @@
           },
           {
             "k": "SAY",
-            "text": "Turn to page 3. You need your ruler for question 9."
+            "text": "Turn to page 3. You need your ruler for question 7."
           },
           {
             "k": "READ",
-            "text": "Question 6. Part a: write 52 plus 30. Part b: write 52 take away 20. Question 7. Write 74 take away 31. Question 8. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
+            "text": "Question 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Question 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 3 (questions 6 to 9).",
-            "s": 230
+            "text": "Children work quietly on page 3 (questions 6 and 7).",
+            "s": 170
           },
           {
             "k": "SAY",
@@ -857,12 +830,12 @@
           },
           {
             "k": "READ",
-            "text": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. Then write how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
+            "text": "Question 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 4: question 10, then the optional Think harder question if they wish.",
-            "s": 160
+            "text": "Children work quietly on page 4: question 8, then the optional Think harder question if they wish.",
+            "s": 170
           },
           {
             "k": "SLIDE",
@@ -870,7 +843,7 @@
           },
           {
             "k": "SAY",
-            "text": "Pencils down. Check that your name is on page 1 and close your sheet. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. I will send a short note about your learning, never a mark."
+            "text": "Pencils down. Check that your name is on page 1 and close your sheet. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. We will send a short note about your learning, never a mark."
           },
           {
             "k": "DO",
@@ -883,11 +856,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Check key, private return plan, record sheet and the parent note templates are in L10_Check_Tutor_Key.pdf. Do not collect, look at or mark any paper during the lesson. Photos arrive only on the program's business WhatsApp (+65 9880 5962) and the note goes to the parent only; never a message to a child, and never a personal phone."
-          },
-          {
-            "k": "NOTE",
-            "text": "Exit ticket tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs another go (two or three wrong). Never read out a child's result. This is not the end-of-term check."
+            "text": "Check key, private return plan, record sheet and the parent note templates are in L10_Check_Tutor_Key.pdf. Do not collect, look at or mark any paper during the lesson. Photos arrive only on the program's business WhatsApp and the note goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the check takes its place in class."
           }
         ]
       },
@@ -904,7 +873,7 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you still need help, tick I am still stuck and show your grown-up. You can pass. Nobody reads it out."
           },
           {
             "k": "WORK",
@@ -921,8 +890,12 @@
             "slide": "s-end"
           },
           {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
             "k": "SAY",
-            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? You need only a pencil, paper and counters. Goodbye, and thank you to the grown-ups."
+            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? You need about ten counters, a pencil and paper. Your tutor will tell you the start date."
           },
           {
             "k": "SLIDE",
@@ -946,13 +919,43 @@
             "optional": true
           },
           {
+            "k": "SLIDE",
+            "slide": "s-exit",
+            "optional": true
+          },
+          {
+            "k": "READ",
+            "text": "Optional exit ticket. Question 1: a bus has 25 children. 10 children get off. Then 3 children get on. How many children are on the bus now? Question 2: Ben has 6 stickers. Mei has 5 more stickers than Ben. How many stickers does Mei have? Question 3: Siti has 20 beads. Ali has 7 fewer beads than Siti. How many beads does Ali have?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on page 5 on their own.",
+            "s": 100,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans",
+            "optional": true
+          },
+          {
+            "k": "READ",
+            "text": "Eighteen. Eleven. Thirteen. Check your own ticket in a different colour.",
+            "optional": true
+          },
+          {
             "k": "SAY",
             "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
             "optional": true
           },
           {
             "k": "NOTE",
-            "text": "This is the standing buffer. A child who needs more time for the check may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 22 either way; same answer, order does not matter when both orders can be done."
+            "text": "This is the standing buffer. A child who needs more time for the check may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 22 either way; same answer, order does not matter when both orders can be done. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          },
+          {
+            "k": "SAY",
+            "text": "Goodbye, and thank you to the grown-ups."
           }
         ]
       }
@@ -974,7 +977,7 @@
           ]
         }
       ],
-      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, workbook 35 to 55, talk 55 to 59, exit ticket and end-of-term check 59 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off. Say that the check at the end is on private paper and is not a race.",
+      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, workbook 35 to 59, talk 59 to 63, end-of-term check 63 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off. Say that the check at the end is on private paper and is not a race.",
       "subtitle": "Read it twice: addition and subtraction in stories",
       "mascot": {
         "size": "l",
@@ -1178,7 +1181,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask a few children to show their counters to the camera. Answer for the tutor: 7."
+      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask for a thumbs up when each child has finished. Answer for the tutor: 7."
     },
     {
       "id": "s-explore2",
@@ -1364,7 +1367,7 @@
           ]
         }
       ],
-      "note": "Read the story twice. Each child writes on their own paper; walk the cameras. Do not ask children to hold boards up in front of the group. Answer for the tutor: 40 - 20 = 20, then 20 + 7 = 27."
+      "note": "Read the story twice. Each child writes on their own paper; wait until most children have stopped writing. Do not ask children to hold boards up in front of the group. Answer for the tutor: 40 - 20 = 20, then 20 + 7 = 27."
     },
     {
       "id": "s-m3a",
@@ -1452,7 +1455,7 @@
           ]
         }
       ],
-      "note": "Read the story twice. Each child writes on their own paper; walk the cameras. Do not ask children to hold boards up in front of the group. Answer for the tutor: 38 - 6 = 32."
+      "note": "Read the story twice. Each child writes on their own paper; wait until most children have stopped writing. Do not ask children to hold boards up in front of the group. Answer for the tutor: 38 - 6 = 32."
     },
     {
       "id": "s-m4b",
@@ -1499,7 +1502,7 @@
           "text": "5 + 2 + 1 = 8"
         }
       ],
-      "note": "A reading trap. Draw the line on camera or with counters: 5 children, then Ravi, then 2 children. 5 + 2 = 7 leaves Ravi out, so add 1 more: 8 children. Ask: who is in the group? Always check you counted everyone, including the person in the story. This is the taught idea for the Think harder page."
+      "note": "A reading trap. Show the line on a shared whiteboard, a blank slide or with counters: 5 children, then Ravi, then 2 children. 5 + 2 = 7 leaves Ravi out, so add 1 more: 8 children. Ask: who is in the group? Always check you counted everyone, including the person in the story. This is the taught idea for the Think harder page."
     },
     {
       "id": "s-break",
@@ -1509,7 +1512,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "A step forward for add. A step back for take away."
+          "text": "Lean forward for add. Lean back for take away."
         },
         {
           "t": "numrow",
@@ -1525,7 +1528,7 @@
           "text": "Where do you end up? Sip some water."
         }
       ],
-      "note": "Three minutes. Stand up on camera. Call each move; children take small steps forward and back, or lean forward and back, in the space they have: add 3, take away 2, add 4, take away 5. Count aloud together. After the four moves, everyone is back at the chair: 3, 1, 5, 0. No equipment; keep it gentle for small spaces."
+      "note": "Three minutes. Stand up on camera. Call each move; children lean forward and back in the space they have (no stepping backwards): add 3, take away 2, add 4, take away 5. Say each count clearly; children count quietly along. After the four moves, everyone is back at the chair: 3, 1, 5, 0. No equipment; keep it gentle for small spaces."
     },
     {
       "id": "s-ws1",
@@ -1535,7 +1538,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 1 to 3. Timer: 5 minutes"
+          "text": "Questions 1 to 3. About 7 minutes"
         },
         {
           "t": "qs",
@@ -1547,7 +1550,7 @@
           "short": true
         }
       ],
-      "note": "Read questions 1 to 3 aloud, twice. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may carry on or try Think harder. Question 1 shows the steps; question 2 asks for the two sentences; question 3 asks which sentences to circle."
+      "note": "Read questions 1 to 3 aloud, twice. Children work on their own; the tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. After question 3 any child may carry on or try Think harder. Question 1 shows the steps; question 2 asks for the two sentences; question 3 asks which sentences to circle."
     },
     {
       "id": "s-ws1ans",
@@ -1574,7 +1577,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 4 to 6. Timer: 5 minutes"
+          "text": "Questions 4 to 6. About 7 minutes"
         },
         {
           "t": "qs",
@@ -1583,7 +1586,7 @@
             "S5",
             "S6"
           ],
-          "short": true
+          "short": false
         }
       ],
       "note": "Read question 4 aloud: write + or - for each story. Read question 5 aloud, twice: Ben has more than Ali, so find Ben first. Read question 6 aloud: it is a spot-the-mistake. Children may draw counters to decide. Children who finish page 2 may choose Think harder, Go further or the Investigation, or finish at home."
@@ -1652,11 +1655,11 @@
       "blocks": [
         {
           "t": "card",
-          "head": "RAVI SAYS",
+          "head": "A CHILD SAYS",
           "items": [
             "Siti has 20 stickers.",
             "Ali has 5 fewer stickers than Siti.",
-            "Ravi says Ali has 25 stickers."
+            "A child says Ali has 25 stickers."
           ]
         },
         {
@@ -1699,17 +1702,17 @@
           "text": "11 marbles altogether."
         }
       ],
-      "note": "Reveal puzzle 2 now. Say: many of you wrote a good first step. Do not read out anyone's earlier answer. The first step is finding Ben's marbles, 4 + 3 = 7; the second is putting them together, 4 + 7 = 11."
+      "note": "Reveal puzzle 2 now. Say: some of you may have found a good first step. Do not read out anyone's earlier answer. The first step is finding Ben's marbles, 4 + 3 = 7; the second is putting them together, 4 + 7 = 11."
     },
     {
       "id": "s-exit",
-      "part": "exit",
+      "part": "flex",
       "kind": "light",
       "title": "Exit ticket",
       "blocks": [
         {
           "t": "chip",
-          "text": "On your own. No looking back. Timer: 2 minutes"
+          "text": "Optional. On your own. No looking back. About 3 minutes"
         },
         {
           "t": "qs",
@@ -1718,14 +1721,15 @@
             "E2",
             "E3"
           ],
-          "short": true
+          "short": false
         }
       ],
-      "note": "Children answer on page 5 of the workbook. After the timer everyone holds the ticket to the camera at the same moment, once, so only the tutor sees it (no private chat). Read each question aloud twice. This is a short story-steps ticket, not part of the end-of-term check."
+      "note": "OPTIONAL, only if the whole class has finished the check and you are on time. A short exit ticket: read each question aloud twice, children write on page 5, then check their own ticket on the next slide. Nobody holds the ticket up to the camera. Skip it if you are behind: the check ends with a two-step story, so nothing is lost.",
+      "optional": true
     },
     {
       "id": "s-exitans",
-      "part": "exit",
+      "part": "flex",
       "kind": "light",
       "title": "Check the exit ticket",
       "blocks": [
@@ -1738,7 +1742,8 @@
           ]
         }
       ],
-      "note": "Read each answer aloud. Children check their own ticket in a different colour. Tell the tutor tracker (tutor only) S, D or H as before: S secure on all three, D developing, H needs another go; the exit ticket is never the end-of-term check and never shown to the group."
+      "note": "Read each answer aloud. Children check their own ticket in a different colour and may show fingers for how many they got right. The exit ticket is never the end-of-term check and never shown to the group.",
+      "optional": true
     },
     {
       "id": "s-check1",
@@ -1770,7 +1775,7 @@
           ]
         }
       ],
-      "note": "Introduce the check for about a minute: 10 questions, one from each lesson (about 20 minutes), on your own private paper; not a race; you may skip any question; no answers are said aloud; nothing is shown to the group. Children take out the closed sheet only now. Cameras show the child and the table, with the paper flat and out of view. Grown-ups sit nearby but do not help with answers. Follow the check key (L10_Check_Tutor_Key.pdf)."
+      "note": "Introduce the check for about a minute: 8 questions and one optional Think harder question (about 20 minutes), on your own private paper; not a race; you may skip any question; no answers are said aloud; nothing is shown to the group. Children take out the closed sheet only now. The paper lies flat on the table. Grown-ups sit nearby but do not help with answers. Follow the check key (L10_Check_Tutor_Key.pdf)."
     },
     {
       "id": "s-check2",
@@ -1796,7 +1801,7 @@
           ]
         }
       ],
-      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, +65 9880 5962, and to no other number, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use the flex time at the end."
+      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use the flex time at the end. The number is in the grown-up note, never on a slide."
     },
     {
       "id": "s-look",
@@ -1808,7 +1813,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby); never a direct message.",
+      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next term with one catch-up question for the whole group; never a direct message.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1829,7 +1834,7 @@
           "head": "NEXT TERM",
           "items": [
             "Term 2, Lesson 11: Who Is Where?",
-            "You need a pencil, paper and counters."
+            "Bring counters, a pencil and paper."
           ]
         }
       ],
@@ -2468,7 +2473,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "Ali has 28 marbles. He wins 10 more marbles. Then he gives 5 marbles away. How many marbles does he have now?",
+      "text": "Ali has 28 marbles. He wins 10 more marbles. Then he gives 5 marbles away. Write one number sentence for each step. Step 1: _______ Step 2: _______ Ali has ___ marbles now.",
       "answer": "33",
       "val": 33,
       "solution": "Step 1: 28 + 10 = 38. Step 2: 38 - 5 = 33."
@@ -2484,7 +2489,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "A box has 40 pencils. 10 pencils are red and 20 pencils are blue. The rest are green. How many pencils are green?",
+      "text": "A box has 40 pencils. 10 pencils are red and 20 pencils are blue. The rest are green. Write one number sentence for each step. Step 1: _______ Step 2: _______ There are ___ green pencils.",
       "answer": "10",
       "val": 10,
       "solution": "Take away the red and the blue: 40 - 10 = 30, then 30 - 20 = 10."
@@ -3177,7 +3182,7 @@
     ]
   },
   "parent": {
-    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Then your child took the end-of-term check on private paper. Term 1 goes beyond the school Primary 1 syllabus on purpose, always with counters and small steps, so some questions may be new to your child.",
+    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. The end-of-term check is private and optional. Term 1 goes beyond the school Primary 1 syllabus on purpose, always with counters and small steps, so some questions may be new to your child.",
     "words": [
       "step: one thing that happens",
       "read it twice: story, then numbers",
@@ -3186,7 +3191,7 @@
     ],
     "try_home": [
       "Act it out: tell a story with two steps (I have 12, I win 5, then I give 3 away). Your child does each step with buttons.",
-      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?'",
+      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?' Try: 6 children in front of Mei and 4 behind. How many in the line?",
       "Make it up: your child makes up a two-step story for you. Solve it together, one step at a time."
     ],
     "ask": [
@@ -3194,32 +3199,38 @@
       "Do we add or take away? How do you know?",
       "Did we count everyone?"
     ],
-    "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine.",
-    "next": "Term 2, Lesson 11: Who Is Where? Your child needs a pencil, paper and counters. Please send the check photos to the business WhatsApp, +65 9880 5962, as in the grown-up note; your tutor sends back progress words, never a mark.",
+    "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962.",
+    "next": "Term 2 starts with Lesson 11: Who Is Where? If your child took the check, send one photo of each page to the business WhatsApp the same day, as in the grown-up note. We keep photos for 90 days after the program ends, then delete them. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and the end-of-term check.",
-    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-    "quote": "One step at a time. Read it twice, then write one number sentence for each step."
+    "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
+    "quote": "One step at a time. Read it twice, then write one number sentence for each step.",
+    "next_materials": [
+      "About 10 counters (buttons, coins or pasta), a pencil and paper",
+      "Your tutor will tell you the Term 2 start date"
+    ]
   },
   "safeguarding": [
     "Counters stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. The ruler is for drawing lines only.",
-    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "The sneak-peek and exit-ticket answers are shown on the child's own paper to the camera at the same moment, once. The end-of-term check is different: papers stay flat on the table, are never held up or read out, and no answer is said aloud.",
-    "The check comes back to the program privately: the parent takes one photo of each page and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number; tutors never use a personal phone for it and never receive it in a chat with the child. The tutor sends the parent a note of progress words only. No score is shown to the group, no ranking, no comparison between children, no private message to a child.",
-    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded. A child may keep the camera off.",
-    "A child who ticks 'I am still stuck' gets a check-in in the open session at the start of Term 2 (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. The end-of-term check is the same: papers stay flat on the table, are never held up or read out, and no answer is said aloud.",
+    "The check comes back to the program privately: the parent takes one photo of each page and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number; tutors never use a personal phone for it and never receive it in a chat with the child. The photos are kept for 90 days after the program ends, then deleted (as the privacy notice says). The tutor sends the parent a note of progress words only. No score is shown to the group, no ranking, no comparison between children, no private message to a child.",
+    "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
+    "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next term starts with one short catch-up question for the whole group. No private messages to children and no private room.",
+    "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Lean, do not step backwards. A child may stay seated and move only their arms.",
     "The look-back is never collected in front of the group or read out. A pass is always allowed, and so is skipping any check question."
   ],
   "tutor_prep": [
     "Solve every workbook question and every check question yourself first. Read the check key (L10_Check_Tutor_Key.pdf) and the private return plan.",
-    "A week before: send the grown-up note (L10_Check_Parent_Note.pdf). Families print the workbook pages 1 to 6 and the 4-page check sheet at 100%, cut out the kit page, find counters, a pencil and a ruler. The check sheet stays closed (in an envelope or folded) until the tutor says.",
-    "Have the slides open and check that the timer slide is not on screen during the check. Test the recording settings: children's video excluded.",
-    "Print or open one record sheet for each child (tutor only). Check photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone, and delete them once the note is sent.",
-    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose (two-digit stories, crossing tens, sums above 40). Every such Start here item is built to be reached with counters, tens bars or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
+    "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) and the check sheet. Families print the sheet at 100%, cut out the kit page, find counters, a pencil and a ruler. A family with no printer tells you; arrange another way. The sheet stays closed until you say.",
+    "Have the slides open and your own clock or timer where you can see it (the deck has no timer slide); do not show a clock on the shared screen during the check.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
+    "Check photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone. After marking, save them to the program's private file store and delete them from the chat. The program keeps them for 90 days after the program ends, then deletes them. Delete the record sheet once the note is sent.",
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide. In this lesson the buffer may first be needed by children finishing the check.",
     "rules": [
-      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 59, use one menu activity then.",
       "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
       "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
     ],
@@ -3266,14 +3277,14 @@
   "end_of_term_check": {
     "title": "Term 1 end-of-term check",
     "minutes": 20,
-    "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83 inside the part Exit ticket and end-of-term check; or at the make-up slot",
-    "plan_note": "Plan, section 5, and the owner decision of 22 Oct 2026: the check takes 20 minutes, 10 questions, one per lesson, privately returned, no ranking, no score shown to the group, a parent report line per term. Owner brief for this build: Lessons 1 to 9 fairly (one question each) plus one story question, all at Start here level, with one clearly marked optional Think harder item (the plan's mix of 4 Start here, 4 Think harder and 2 Go further is replaced by this, as the owner asked). To fit 20 minutes most questions have one or two short parts.",
+    "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83, the part End-of-term check; or at the make-up slot",
+    "plan_note": "Plan, section 5, and the owner decisions of 22 Oct 2026: the check takes 20 minutes, is privately returned, shows no ranking and no score to the group, and gives a parent report line per term. It is cut to 8 short questions and one optional Think harder item so that it fits 20 minutes by real timing: Lessons 2 and 4 share question 2 and Lessons 6 and 7 share question 5, so every lesson of the term is still checked. All items are Start here level. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
     "sheet_pages": 4,
     "child_rules": [
       "This is a check for you and your tutor.",
       "It is not a race. Nobody else sees your answers.",
       "Do your best. You may skip any question.",
-      "Question 9 needs your ruler.",
+      "Question 7 needs your ruler.",
       "The last question is a Think harder question. It is optional."
     ],
     "child_footer": "Math Inquirers Term 1 end-of-term check. Print at 100% (actual size).",
@@ -3329,7 +3340,7 @@
         "strand": "numbers",
         "page": 1,
         "tier": "start",
-        "skill": "Number line to 100 (the number the arrow shows) and a number word in digits",
+        "skill": "Number line (the number the arrow shows) and counting on in tens (Lessons 2 and 4)",
         "text": "Fill in the blanks.",
         "visual": {
           "type": "numberline",
@@ -3358,23 +3369,27 @@
           },
           {
             "l": "b",
-            "text": "Write in digits: fifty-three = ___",
-            "ans": "53",
-            "val": 53
+            "text": "Counting in 10s: 14, 24, 34, ___",
+            "ans": "44",
+            "val": 44
           }
         ],
-        "say": "Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: write fifty-three in digits.",
-        "answer": "67; 53",
+        "say": "Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34.",
+        "answer": "67; 44",
         "val": [
           67,
-          53
+          44
         ],
-        "solution": "The arrow is just after 66 and just before 68, so it points to 67. Fifty-three is 5 tens and 3 ones: 53.",
+        "solution": "The arrow is just after 66 and just before 68, so it points to 67. In 10s: 14, 24, 34, 44 (the tens digit goes up by 1 and the ones digit stays 4).",
         "right": "Both correct.",
         "partly": "One of the two correct.",
         "mistakes": [
-          "(a) 66 or 68 from miscounting ticks.",
-          "(b) 35 (digits swapped) or 503."
+          "(a) 66 or 68 (the neighbour).",
+          "(b) 35 (counting in ones) or 54 (jumping twice)."
+        ],
+        "lessons": [
+          2,
+          4
         ]
       },
       {
@@ -3383,8 +3398,8 @@
         "strand": "numbers",
         "page": 2,
         "tier": "start",
-        "skill": "Make two numbers from two cards and say which is greater",
-        "text": "Look at the two cards. Use both cards to make 2 different numbers.",
+        "skill": "Make the greatest number from two cards",
+        "text": "Look at the two cards. Use both cards to make the greatest number you can.",
         "visual": {
           "type": "digitcards",
           "digits": [
@@ -3394,83 +3409,27 @@
         },
         "parts": [
           {
-            "l": "a",
-            "text": "The two numbers are ___ and ___",
-            "ans": "38 and 83 (either order)",
-            "val": [
-              38,
-              83
-            ]
-          },
-          {
-            "l": "b",
-            "text": "The greater number is ___.",
+            "l": "",
+            "text": "The greatest number is ___.",
             "ans": "83",
             "val": 83
           }
         ],
-        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number.",
-        "answer": "38 and 83; the greater is 83",
+        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it.",
+        "answer": "83",
         "val": [
-          38,
-          83,
           83
         ],
-        "solution": "Put 3 first and 8 second to make 38. Put 8 first and 3 second to make 83. 83 has 8 tens and 38 has 3 tens, so 83 is greater.",
-        "right": "38 and 83 (either order) and 83 as the greater.",
-        "partly": "Both numbers made but the greater one wrong, or only one number made and the greater one right.",
+        "solution": "Two numbers can be made: 38 and 83. 83 has 8 tens and 38 has 3 tens, so 83 is the greatest.",
+        "right": "83.",
+        "partly": "38 written (the other number made from the cards).",
         "mistakes": [
-          "Writing 3 and 8 (single cards).",
-          "Writing 38 twice.",
-          "Saying 38 is greater because 8 is the greater digit."
+          "38 (the smaller number).",
+          "11 (adding the cards)."
         ]
       },
       {
         "id": "C4",
-        "lesson": 4,
-        "strand": "numbers",
-        "page": 2,
-        "tier": "start",
-        "skill": "Counting patterns in 5s and 10s",
-        "text": "Fill in the missing numbers.",
-        "parts": [
-          {
-            "l": "a",
-            "text": "Counting in 5s: 40, 45, 50, ___, ___",
-            "ans": "55, 60",
-            "val": [
-              55,
-              60
-            ]
-          },
-          {
-            "l": "b",
-            "text": "Counting in 10s: 14, 24, 34, ___, ___",
-            "ans": "44, 54",
-            "val": [
-              44,
-              54
-            ]
-          }
-        ],
-        "say": "Question 4. Fill in the missing numbers. Part a: count on in fives and write the next two numbers. Part b: count on in tens and write the next two numbers.",
-        "answer": "55, 60; 44, 54",
-        "val": [
-          55,
-          60,
-          44,
-          54
-        ],
-        "solution": "In 5s: 50, 55, 60. In 10s: 34, 44, 54 (the tens digit goes up by 1 and the ones digit stays 4).",
-        "right": "All four gaps correct.",
-        "partly": "Two or three of the four gaps correct.",
-        "mistakes": [
-          "(a) 51, 52 (counting in ones) or 55, 56.",
-          "(b) 35, 36 (counting in ones) or 44, 45."
-        ]
-      },
-      {
-        "id": "C5",
         "lesson": 5,
         "strand": "addsub",
         "page": 2,
@@ -3496,7 +3455,7 @@
             "val": 42
           }
         ],
-        "say": "Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5.",
+        "say": "Question 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5.",
         "answer": "12; 42",
         "val": [
           12,
@@ -3511,12 +3470,12 @@
         ]
       },
       {
-        "id": "C6",
+        "id": "C5",
         "lesson": 6,
         "strand": "addsub",
-        "page": 3,
+        "page": 2,
         "tier": "start",
-        "skill": "Add and take away tens (jumps of ten)",
+        "skill": "Jump in tens (52 + 30) and take away tens and ones (74 - 31) (Lessons 6 and 7)",
         "text": "Add or subtract.",
         "parts": [
           {
@@ -3527,56 +3486,31 @@
           },
           {
             "l": "b",
-            "text": "52 - 20 = ___",
-            "ans": "32",
-            "val": 32
-          }
-        ],
-        "say": "Question 6. Part a: write 52 plus 30. Part b: write 52 take away 20.",
-        "answer": "82; 32",
-        "val": [
-          82,
-          32
-        ],
-        "solution": "3 tens more than 52 is 82. 2 tens fewer is 32. The ones digit stays 2.",
-        "right": "Both correct.",
-        "partly": "One correct.",
-        "mistakes": [
-          "(a) 55 (adding 3 to the ones) or 522.",
-          "(b) 72 (adding instead of taking away) or 50."
-        ]
-      },
-      {
-        "id": "C7",
-        "lesson": 7,
-        "strand": "addsub",
-        "page": 3,
-        "tier": "start",
-        "skill": "Take away tens and ones without renaming",
-        "text": "Subtract.",
-        "parts": [
-          {
-            "l": "",
             "text": "74 - 31 = ___",
             "ans": "43",
             "val": 43
           }
         ],
-        "say": "Question 7. Write 74 take away 31.",
-        "answer": "43",
+        "say": "Question 5. Part a: write 52 plus 30. Part b: write 74 take away 31.",
+        "answer": "82; 43",
         "val": [
+          82,
           43
         ],
-        "solution": "74 - 30 = 44, then 44 - 1 = 43. Or 7 tens and 4 ones take away 3 tens and 1 one leaves 4 tens and 3 ones.",
-        "right": "43.",
-        "partly": "The tens digit right or the ones digit right, but not both (for example 44 or 33).",
+        "solution": "(a) 3 tens more than 52 is 82. (b) 74 - 30 = 44, then 44 - 1 = 43.",
+        "right": "Both correct.",
+        "partly": "One correct.",
         "mistakes": [
-          "33 (taking away 41).",
-          "45 or 105 (adding), or 44 (taking only the tens)."
+          "(a) 55 (adding 3 to the ones) or 522.",
+          "(b) 33 (taking away 41) or 44 (taking only the tens)."
+        ],
+        "lessons": [
+          6,
+          7
         ]
       },
       {
-        "id": "C8",
+        "id": "C6",
         "lesson": 8,
         "strand": "addsub",
         "page": 3,
@@ -3597,7 +3531,7 @@
             "val": 20
           }
         ],
-        "say": "Question 8. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box.",
+        "say": "Question 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box.",
         "answer": "6; 20",
         "val": [
           6,
@@ -3612,9 +3546,9 @@
         ]
       },
       {
-        "id": "C9",
+        "id": "C7",
         "lesson": 9,
-        "strand": "length",
+        "strand": "lengthstories",
         "page": 3,
         "tier": "start",
         "skill": "Draw a line of a given length, then find a length 4 cm longer",
@@ -3638,28 +3572,29 @@
             "val": 10
           }
         ],
-        "say": "Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is.",
+        "say": "Question 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is.",
         "answer": "a line 6 cm long; 10 cm",
         "val": [
           6,
           10
         ],
         "solution": "Put the 0 mark of the ruler on the dot and draw to the 6 mark. A line 4 cm longer is 6 + 4 = 10 cm.",
-        "right": "The line is about right (5.7 to 6.3 cm) and 10 is written.",
+        "right": "The line is about 6 cm (5.7 to 6.3 cm; accept 5.5 to 6.5 cm if the photo is not clear) and 10 is written.",
         "partly": "Only the line about right, or only the 10 written (a line within 0.5 cm of 6 cm counts if the photo is not clear).",
         "mistakes": [
           "Starting the line at 1 on the ruler (a 5 cm line).",
           "(b) 4 (the extra only) or 6."
-        ]
+        ],
+        "dotbox": true
       },
       {
-        "id": "C10",
+        "id": "C8",
         "lesson": 10,
-        "strand": "stories",
+        "strand": "lengthstories",
         "page": 4,
         "tier": "start",
         "skill": "A two-step story, one operation per step",
-        "text": "Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write one number sentence for each step.",
+        "text": "Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write one number sentence for each step. The last number you write is how many stickers Mei has now.",
         "parts": [
           {
             "l": "a",
@@ -3672,24 +3607,17 @@
             "text": "Step 2: [wide]",
             "ans": "45 - 3 = 42",
             "val": 42
-          },
-          {
-            "l": "c",
-            "text": "Mei has ___ stickers now.",
-            "ans": "42",
-            "val": 42
           }
         ],
-        "say": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. Then write how many stickers Mei has now.",
-        "answer": "35 + 10 = 45; 45 - 3 = 42; Mei has 42 stickers",
+        "say": "Question 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now.",
+        "answer": "35 + 10 = 45; 45 - 3 = 42 (Mei has 42 stickers)",
         "val": [
           45,
-          42,
           42
         ],
         "solution": "Step 1: she gets 10 more, so add: 35 + 10 = 45. Step 2: she gives 3 away, so take away: 45 - 3 = 42.",
-        "right": "Both step sentences have the right operation and numbers (any clear layout) and the answer is 42.",
-        "partly": "The answer 42 without steps, or one correct step sentence, or both sentences right with one slip in the arithmetic.",
+        "right": "Both step sentences have the right operation and numbers (any clear layout) and the second ends with 42.",
+        "partly": "One correct step sentence, or both sentences right with one slip in the arithmetic, or only the answer 42 without steps.",
         "mistakes": [
           "32 (taking the 10 away from 35 and adding 3 or similar).",
           "48 (adding both numbers).",
@@ -3702,7 +3630,7 @@
       "tier": "think",
       "optional": true,
       "lesson": 10,
-      "strand": "stories",
+      "strand": "lengthstories",
       "skill": "Reading trap: who is in the group",
       "text": "Think harder (optional). Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?",
       "parts": [
@@ -3738,13 +3666,12 @@
         "questions": [
           "C1",
           "C2",
-          "C3",
-          "C4"
+          "C3"
         ],
-        "looked_at": "reading and writing numbers to 100 as tens and ones, number lines, comparing numbers and counting patterns",
-        "showing": "[Name] is showing this often: reading and writing numbers to 100 as tens and ones, finding numbers on a number line, comparing numbers made from two cards and spotting counting patterns.",
-        "getting": "[Name] is getting there with reading and writing numbers as tens and ones, number lines, comparing numbers and counting patterns. A few more rounds with real things will help.",
-        "beginning": "[Name] is just beginning with seeing numbers as tens and ones. Bundling real things in tens, and counting in tens and fives together, are good next steps."
+        "looked_at": "reading and writing numbers to 100 as tens and ones, number lines, comparing numbers and counting in tens",
+        "showing": "[Name] is showing this often: reading numbers as tens and ones, finding numbers on a number line, making the greatest number from two cards and counting on in tens.",
+        "getting": "[Name] is getting there with numbers as tens and ones, number lines, comparing numbers and counting on in tens. A few more rounds with real things will help.",
+        "beginning": "[Name] is just beginning with seeing numbers as tens and ones. Bundling real things in tens, and counting in tens together, are good next steps."
       },
       {
         "id": "addsub",
@@ -3757,10 +3684,9 @@
           8
         ],
         "questions": [
+          "C4",
           "C5",
-          "C6",
-          "C7",
-          "C8"
+          "C6"
         ],
         "looked_at": "adding by making a ten, jumping in tens, taking away tens and ones, and using = as a balance",
         "showing": "[Name] is showing this often: adding by making a ten, jumping in tens, taking away tens and ones, and using the equals sign as a balance.",
@@ -3768,34 +3694,21 @@
         "beginning": "[Name] is just beginning with adding and taking away within 100. Counters, a number line and small steps (add 10, take away 10) are good next steps."
       },
       {
-        "id": "length",
-        "parent_name": "Measuring length",
-        "moe_label": "Length",
+        "id": "lengthstories",
+        "parent_name": "Measuring length and solving stories",
+        "moe_label": "Length; Addition and Subtraction in context",
         "lessons": [
-          9
-        ],
-        "questions": [
-          "C9"
-        ],
-        "looked_at": "drawing a line of a given length and reading a length in centimetres with a ruler",
-        "showing": "[Name] is showing this often: drawing a line of a given length and reading a length in centimetres with a ruler.",
-        "getting": "[Name] is getting there with using a ruler: starting at the 0 mark and reading the length in centimetres.",
-        "beginning": "[Name] is just beginning with using a ruler. Measuring things at home in centimetres, always starting at the 0 mark, is a good next step."
-      },
-      {
-        "id": "stories",
-        "parent_name": "Reading and solving stories",
-        "moe_label": "Addition and Subtraction in context",
-        "lessons": [
+          9,
           10
         ],
         "questions": [
-          "C10"
+          "C7",
+          "C8"
         ],
-        "looked_at": "reading a story twice and writing one step at a time",
-        "showing": "[Name] is showing this often: reading a story twice and writing one step at a time.",
-        "getting": "[Name] is getting there with story steps: one add or one take away at a time, and starting the next step from the last answer.",
-        "beginning": "[Name] is just beginning with story steps. Acting a story out with counters, one step at a time, is a good next step."
+        "looked_at": "drawing and reading lengths in centimetres with a ruler, and reading a story twice and writing one step at a time",
+        "showing": "[Name] is showing this often: using a ruler from the 0 mark, and reading a story twice and writing one number sentence for each step.",
+        "getting": "[Name] is getting there with using a ruler from the 0 mark and with writing one step at a time in a story. Measuring things at home and acting stories out with counters will help.",
+        "beginning": "[Name] is just beginning with using a ruler and with story steps. Measuring things at home from the 0 mark, and acting out two-step stories with counters, are good next steps."
       }
     ],
     "words": {
@@ -3835,49 +3748,50 @@
       ]
     },
     "give": [
-      "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) with the lesson materials. Families print the 4-page check sheet at 100%, fold it or put it in an envelope, and keep it closed.",
+      "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) and the check sheet with the lesson materials. Families print the sheet at 100%, fold it or put it in an envelope, and keep it closed. A family with no printer tells you: arrange another way (for example the make-up slot).",
       "Tell the group in the opening and at s-check1: the check is on your own paper, takes about 20 minutes, is not a race, may be skipped in part, and nothing is shown to the group.",
-      "Start at minute 63, after the exit ticket, and finish by minute 83. Children open the sheet only when you say. Cameras show the child and the table; the paper lies flat and is not held up. A grown-up sits nearby and may read a question again, but gives no help with answers.",
-      "Read each page aloud, one question at a time, twice if a child asks (ask the whole group: say the question number you want again). Then leave quiet work time: about 3 minutes for page 1, 4 for page 2, 5 for page 3 and 4 for page 4. Say nothing about right or wrong, and read no answers.",
-      "Allowed: fingers, counters, the kit squares and the ruler for question 9. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the sheet over and draws quietly.",
+      "Start at minute 63 and finish by minute 83. Children open the sheet only when you say. The paper lies flat on the table and is never held up. A grown-up sits nearby and may read a question again, but gives no help with answers. Cameras may be on or off.",
+      "Read each page aloud, one question at a time. Then leave quiet work time: about 2 minutes for page 1, 3 for page 2, 4 for page 3 and 3.5 for page 4. Say nothing about right or wrong, and read no answers. A middle child needs about 16 minutes in all; a slower child may use the 5 flex minutes.",
+      "Allowed: fingers, counters, the kit squares and the ruler for question 7. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the sheet over and draws quietly.",
       "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, say Pencils down (slide s-check2). Do not collect or look at any sheet. A child still writing may use the flex minutes at the end; nothing new is started there."
     ],
     "after": [
       "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view including the 10 cm bar on page 4, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
-      "Within 3 days: the tutor marks from the photos with the key below, opening them only on the program's business WhatsApp (never on a personal phone), and records the result on the tutor record sheet (tutor only). Nothing is written on the child's paper and no mark or score goes back to the child or the group.",
-      "The tutor chooses a progress word for each strand from the bands below and writes the parent note from the templates: the term line, four strand lines, one named strength and one next step. Sent only to the parent. No marks, no x out of 10, no ranking, no comparison with other children, no prediction.",
-      "Once the note is sent, delete the photos from the business WhatsApp chat and delete the record sheet (keep only the note in the family file). Never forward the photos or save them to a personal phone or any other device.",
+      "Within 3 days: the tutor marks from the photos with the key below, opening them only on the program's business WhatsApp (never on a personal phone), and records the result on the tutor record sheet (tutor only). For question 7, the ruler question (the grey note under the answer key says question 9 and 57% to 63%: it means this question), measure the drawn line against the 10 cm bar on page 4 and accept 5.5 to 6.5 cm; if the photo is not clear, count it right when the answer to part (b) is right. Nothing is written on the child's paper and no mark or score goes back to the child or the group.",
+      "The tutor chooses a progress word for each of the three areas from the bands below and writes the parent note from the templates: the term line, three area lines, one named strength and one next step. Sent only to the parent. No marks, no x out of 10, no ranking, no comparison with other children, no prediction.",
+      "Once the note is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete the record sheet when the note is sent (keep only the note in the family file). Never forward the photos or save them to a personal phone or any other device.",
       "At the start of Term 2 say to the whole group: thank you for taking the check; there is nothing to share and nothing to fear. Never name a child or an answer."
     ],
     "late": [
       "A child who was away or whose family prefers another time: take the check at the make-up slot (a small group, a parent beside the child on camera). The tutor never sits alone with one child on a private call.",
       "A child who joined late: the family may choose to leave out questions for lessons the child did not attend. Mark those questions not taught; they are left out of the strand score, and a strand with no question taught gets no line.",
       "A family that does not want the check: no problem. The child does the Lesson 10 work as usual and the report line uses the tutor's own notes only.",
-      "A child who is upset or stuck: remind the group (open session) that every question can be skipped. Do not single the child out. The grown-up may stop the check at any time."
+      "A child who is upset or stuck: remind the group (open session) that every question can be skipped. Do not single the child out. The grown-up may stop the check at any time.",
+      "A family with no printer: tell the family to say so a week before and arrange another way (for example the make-up slot with the sheet sent to the family another way). Never ask a child about it in front of the group."
     ],
     "parent_note": {
       "title": "The Term 1 end-of-term check: a note for grown-ups",
-      "what": "In the last lesson of the term your child does a short check on paper: 10 questions, one from each lesson of the term, and one optional Think harder question. It takes about 20 minutes. It helps us see what each child has learned and what to practise next. It is not a pass or fail test. No mark is shared, there is no league table and nobody is compared with anyone else.",
+      "what": "In the last lesson of the term your child does a short check on paper: 8 questions and one optional Think harder question. It takes about 20 minutes. It helps us see what each child has learned and what to practise next. It is not a pass or fail test. No mark is shared, there is no league table and nobody is compared with anyone else. Term 1 goes beyond the school Primary 1 syllabus on purpose, so a few questions may be new.",
       "before": [
-        "Print the 4-page check sheet at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler.",
+        "We send you this note and the check sheet a week before. Print the sheet at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler. No printer? Tell us a week before and we will find another way.",
         "Keep the sheet folded or in an envelope until the tutor says to open it.",
         "Have a pencil, a rubber, a ruler with centimetres and a quiet table. Counters and fingers are fine."
       ],
       "during": [
         "Sit nearby. You may ask the tutor to read a question again, but please do not give answers or hints.",
         "Skipping a question is fine. If your child is upset, you may stop at any time.",
-        "The camera shows your child and the table; the paper stays flat on the table."
+        "The paper stays flat on the table. Cameras may be on or off."
       ],
       "after": [
         "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Check your child's name is on each page.",
         "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
-        "We delete the photos from the business WhatsApp after the progress note is sent."
+        "We use the photos only to write your child's note. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
       ],
-      "back": "Within a few days we send you a short note: the term line, a progress word for each of four areas (Showing this often, Getting there, Just beginning), one thing your child did well and one next step. It is never a mark or a comparison. If you would rather not do the check, tell us: that is fine.",
+      "back": "Within a few days we send you a short note: the term line, a progress word for each of three areas (Showing this often, Getting there, Just beginning), one thing your child did well and one next step. It is never a mark or a comparison. If you would rather not do the check, tell us: that is fine.",
       "make_up": "Missed the lesson or need another time? Every lesson is recorded and the check can be taken at the make-up slot."
     },
     "report_template": {
-      "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+      "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
       "intro": "Term 1 progress note for [Name]",
       "strength": "One thing [Name] did well this term: [the tutor adds one named strength from their own notes, for example: explained why 62 is greater than 26 using bundles of ten].",
       "next_step": "One next step: [the tutor adds one next step, for example: act out two-step stories with counters at home].",
@@ -3886,25 +3800,38 @@
       "example_words": {
         "numbers": "showing",
         "addsub": "getting",
-        "length": "showing",
-        "stories": "getting"
+        "lengthstories": "getting"
       }
     },
     "privacy_checklist": [
       "Sheets are never held up to the camera and never read out.",
       "No answer is said aloud during or after the check.",
       "The tutor never marks in front of the group and never says who finished first or last.",
-      "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; the note goes to the parent only; no private message to any child.",
+      "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the note goes to the parent only; no private message to any child.",
       "No score, no x out of 10, no ranking, no tally, no comparison between children.",
-      "The recording shows the tutor and the screen only; pause it during silent work if the platform allows."
+      "The recording captures the tutor, the shared screen and any voice that is not muted; pause it during silent work if the platform allows. The WhatsApp number is never on a slide."
     ],
     "sheet_check_bar_mm": 100,
     "page_instructions": [
       "Fill in the correct answers in the spaces provided.",
       "Fill in the correct answers in the spaces provided.",
-      "Fill in the correct answers in the spaces provided. Use your ruler for Question 9.",
+      "Fill in the correct answers in the spaces provided. Use your ruler for Question 7.",
       "Show your working clearly. Write your answers in the spaces provided."
     ],
-    "line_mm": 100
+    "line_mm": 100,
+    "timing_model": {
+      "child_seconds": {
+        "C1": 45,
+        "C2": 50,
+        "C3": 30,
+        "C4": 50,
+        "C5": 50,
+        "C6": 60,
+        "C7": 110,
+        "C8": 130
+      },
+      "stretch_seconds": 40,
+      "slow_child_factor": 1.7
+    }
   }
 }

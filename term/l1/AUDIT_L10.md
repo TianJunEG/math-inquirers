@@ -56,3 +56,7 @@ Total: 20 / 24 (the independent audit gave 18; items 4, 5, 8 and 11 stay at 1 an
 - Printing: the check sheet must be printed at 100%; the page-4 bar is the check. The shared build does not build the check; `l10_extras.py` runs inside `build.sh`.
 - Template problems not fixed here (shared files): the validator reads `end_of_term_check.line_mm` (a leftover from the 9 cm line; set equal to the 10 cm bar as a workaround); the investigation page has ruled lines but no table (finding W2 asked for a table); the sheet builder has no per-page instruction field of its own (done here in l10_extras.py).
 - Owner to confirm: Mi holds a calculator in the mascot image; Mi was removed from the check sheet (no calculator is allowed in the check); it still appears on the workbook corner, key and note.
+
+## Second fix pass, 22 Oct 2026
+
+See `audit/FIXES2_L10.md`. The end-of-term check is now 8 questions, 15 answer parts and one optional Think harder item, modelled at about 16 minutes for a middle child (18.5 for a slower child, who may use the flex minutes); the exit ticket is optional and the workbook has 24 minutes. Photo return: business WhatsApp only, 90 days after the program ends, matching privacy.html. Validator 0 FAIL; no child has used the lesson; times are modelled.
