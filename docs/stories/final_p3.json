@@ -1,0 +1,189 @@
+[
+ {
+  "lesson": 1,
+  "name": "Gerbert of Aurillac",
+  "years": "about 946 to 1003",
+  "country_or_region": "France (studied in Spain)",
+  "who": "A French teacher who taught people to count with place-value columns.",
+  "story": "Gerbert grew up in France. As a young man he went to study in Catalonia, in Spain, where he learned about the Hindu-Arabic digits 1 to 9. Later he taught at a school in Reims. He used a counting board with columns. A counter's value depended on its column: a 4 in the thousands column means 4000. Historians think he did not use a zero digit. An empty column showed that nothing belonged there.",
+  "link_to_lesson": "Today we read and build numbers up to 10 000, and Gerbert's board shows that a digit's place tells its value.",
+  "try_it": "On Gerbert's board there is a 4 counter in the thousands column, a 2 in the hundreds, nothing in the tens, and a 7 in the ones. What number is it? Now swap the 4 and the 2. What is the new number?",
+  "try_it_answer": "4207. After swapping the 4 and the 2 it is 2407, which is 1800 less. The digits are the same, but each one is in a new place, so it has a new value.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Gerbert/",
+   "https://en.wikipedia.org/wiki/Pope_Sylvester_II",
+   "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/gerbert"
+  ],
+  "confidence": "medium",
+  "legend_note": "Historians are unsure whether Gerbert used a zero digit; they think not. Stories of magic and a talking head about him were told long after his life and are not reliable (not used).",
+  "icon_idea": "A wooden counting board with columns and round counters marked with digits."
+ },
+ {
+  "lesson": 2,
+  "name": "Wilhelm Schickard",
+  "years": "1592 to 1635",
+  "country_or_region": "Germany",
+  "who": "A German professor who designed a calculating clock that could add and subtract.",
+  "story": "Wilhelm Schickard taught Hebrew, astronomy and maths at a university in Germany. In 1623 he wrote to his friend, the astronomer Johannes Kepler, about a machine he had designed. It was a calculating clock with turning wheels. It could add and subtract numbers of up to six digits, and a bell rang if the answer was too big. A fire destroyed his machine before it was finished, but his letters and drawings survived.",
+  "link_to_lesson": "Today we add and subtract and check one with the other, and Schickard built a machine to do both.",
+  "try_it": "Use the calculating clock idea. Add 3485 and 2758. Then check by subtracting 2758 from your answer, like turning the wheels back. What do you get?",
+  "try_it_answer": "3485 + 2758 = 6243. Then 6243 - 2758 = 3485, which is where we started, so the answer is checked.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Wilhelm_Schickard",
+   "https://www.computinghistory.org.uk/det/5921/Wilhelm-Schickard-invents-a-calculating-machine/",
+   "https://museo.inf.upv.es/en/relojcalculante/"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A little clock-like box with rows of number wheels and a small bell on top."
+ },
+ {
+  "lesson": 3,
+  "name": "John Napier",
+  "years": "1550 to 1617",
+  "country_or_region": "Scotland",
+  "who": "A Scottish inventor of number rods for multiplying.",
+  "story": "John Napier lived in Scotland, near Edinburgh. He looked after his family's farms, and maths was his hobby. He invented a set of rods with multiplication tables written on them. People call them Napier's bones. To multiply a big number, you place the rods side by side, read the rows, and add. His book about the rods came out in 1617. With the rods, you only need to add.",
+  "link_to_lesson": "Napier's rods are made of times tables, so they turn multiplication into reading a table and adding, just like the tables of 6, 7, 8 and 9 we explore today.",
+  "try_it": "Make a rod for 9. Write 9 x 1 up to 9 x 9. What pattern do you see in the tens digits and in the ones digits?",
+  "try_it_answer": "09, 18, 27, 36, 45, 54, 63, 72, 81. The tens digits go up by 1 each time (0 to 8) and the ones digits go down by 1 (9 to 1). Each pair of digits adds to 9.",
+  "icon_idea": "A set of tall thin rods, each with a small times-table grid and diagonal lines.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Napier/",
+   "https://mathshistory.st-andrews.ac.uk/Extras/Napier_rods/",
+   "https://library.si.edu/digital-library/book/rabdologiaseunu00napi"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 4,
+  "name": "Bhaskara II",
+  "years": "1114 to 1185",
+  "country_or_region": "India",
+  "who": "An Indian maths teacher who wrote word problems in verse.",
+  "story": "Bhaskara lived in India about 900 years ago. He wrote a maths book called the Lilavati. It has many word problems, with kings, elephants and pearl necklaces in them. A story often told says the book was named after his daughter. Historians have no proof that this story is true, so it is a legend. What we do know is that Bhaskara thought maths problems could be told as little tales, and that is a good way to learn.",
+  "link_to_lesson": "Today we solve word problems by drawing a bar model, and Bhaskara's book is full of stories that ask us to find an unknown number.",
+  "try_it": "In the style of Bhaskara: a necklace has some pearls. Half of them fall on the floor, a quarter fall on the bed and 5 stay on the string. How many pearls were there? Draw a bar model.",
+  "try_it_answer": "20 pearls. Half and a quarter make three quarters, so the 5 left is one quarter. One quarter is 5, so the whole is 4 x 5 = 20. Check: 10 + 5 + 5 = 20.",
+  "icon_idea": "A string of pearls with one pearl rolling away, and a small speech bubble.",
+  "source_urls": [
+   "https://britannica.com/print/article/64067",
+   "https://en.wikipedia.org/wiki/L%C4%ABl%C4%81vat%C4%AB",
+   "https://old.maa.org/node/116870"
+  ],
+  "confidence": "medium",
+  "legend_note": "A story often told says the Lilavati was named after Bhaskara's daughter (historians have no proof; it is a legend). The necklace problem in try_it is our own, written in the style of the book, not a copy of his."
+ },
+ {
+  "lesson": 5,
+  "name": "Sun Zi",
+  "years": "lived more than 1,500 years ago (exact dates unknown)",
+  "country_or_region": "China",
+  "who": "The author of an old Chinese maths book with a famous remainder riddle.",
+  "story": "Almost nothing is known about the life of Sun Zi. We know the name of a Chinese maths book, the Sunzi Suanjing. Historians are not sure exactly when it was written, but it is more than 1,500 years old. It has a riddle about remainders: find a number that leaves 2 when we share it into groups of 3, leaves 3 in groups of 5, and leaves 2 in groups of 7. The answer is 23. The book also shows a method for riddles like this.",
+  "link_to_lesson": "Today's \"what number am I?\" riddles use division with remainders, just like Sun Zi's riddle.",
+  "try_it": "Check the answer 23 for Sun Zi's riddle by dividing. Then find a number between 10 and 20 that leaves 1 when divided by 4 and leaves 2 when divided by 3.",
+  "try_it_answer": "23 / 3 = 7 r 2, 23 / 5 = 4 r 3, 23 / 7 = 3 r 2, so 23 works. The second riddle: 17 (17 / 4 = 4 r 1 and 17 / 3 = 5 r 2). Of 13 and 17, only 17 fits.",
+  "icon_idea": "A bundle of counting sticks tied in groups, with a few sticks left over.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Sun_Zi/",
+   "https://en.wikipedia.org/wiki/Chinese_remainder_theorem"
+  ],
+  "confidence": "medium",
+  "legend_note": "Dates and author of the Sunzi Suanjing are uncertain; the story says so."
+ },
+ {
+  "lesson": 6,
+  "name": "Maria Montessori",
+  "years": "1870 to 1952",
+  "country_or_region": "Italy",
+  "who": "An Italian doctor and teacher who made hands-on fraction circles for children.",
+  "story": "Maria Montessori was born in Italy and became a doctor in 1896. Later she turned to teaching. In 1907 she opened a Children's House in Rome. She believed children learn well by using their hands, so she designed learning materials. Her fraction circles are a set of round pieces that show a whole cut into equal parts, from two up to ten. Children can see and feel that the parts must be the same size. She was a teacher and doctor, not a researcher of fractions.",
+  "link_to_lesson": "Today we build fraction walls where every part is the same size, and Montessori's fraction circles teach exactly that idea.",
+  "try_it": "A fraction circle is cut into 8 equal pieces. How many pieces make a half of the circle? How many make a quarter?",
+  "try_it_answer": "4 pieces make a half (4 out of 8 is 1/2) and 2 pieces make a quarter (2 out of 8 is 1/4).",
+  "source_urls": [
+   "https://amshq.org/about-us/history-of-ams/about-dr-maria-montessori/",
+   "https://en.wikipedia.org/wiki/Maria_Montessori",
+   "https://www.montessorialbum.com/montessori/index.php/Introduction_to_the_Fraction_Insets"
+  ],
+  "confidence": "high",
+  "legend_note": "Sources differ on whether she was the first or only one of the first women doctors in Italy, so the story does not say first.",
+  "icon_idea": "A round circle cut into equal slices, one slice lifted out."
+ },
+ {
+  "lesson": 7,
+  "name": "Karen Uhlenbeck",
+  "years": "born 1942",
+  "country_or_region": "United States",
+  "who": "An American mathematician who studies the shapes of soap films.",
+  "story": "Karen Uhlenbeck is a mathematician from the United States. A soap film stretched across a wire settles into the shape with the least area it can have. Mathematicians call such shapes minimal surfaces, and she helped to study them. She did this work together with another mathematician, Jonathan Sacks. In 2019 she became the first woman to win the Abel Prize, a top maths prize. As a child she liked reading science books more than thinking about maths.",
+  "link_to_lesson": "Today we work out area and perimeter, and Uhlenbeck's soap films are shapes that make the area as small as possible.",
+  "try_it": "You have 20 m of fence to make a rectangle with whole-number sides. Try 9 by 1, 8 by 2, 7 by 3, 6 by 4 and 5 by 5. Which has the biggest area?",
+  "try_it_answer": "Areas: 9, 16, 21, 24 and 25 square metres. The 5 m by 5 m square has the biggest area (25 square metres). The perimeter is 20 m each time.",
+  "source_urls": [
+   "https://www.smithsonianmag.com/smart-news/karen-uhlenbeck-first-woman-win-maths-top-prize-180971758/",
+   "https://plus.maths.org/content/abel-prize-2019",
+   "https://en.wikipedia.org/wiki/Karen_Uhlenbeck"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A wire loop with a shiny soap film and a bubble floating off it."
+ },
+ {
+  "lesson": 8,
+  "name": "Ibn al-Haytham",
+  "years": "about 965 to about 1040",
+  "country_or_region": "Iraq and Egypt",
+  "who": "A scientist who tested how light bounces off mirrors.",
+  "story": "Ibn al-Haytham was born in Basra, in today's Iraq, and later lived in Cairo, in Egypt. He wrote the seven-book Book of Optics about light and sight. He did experiments with mirrors and lenses and showed that light travels in straight lines. He studied how light bounces off a flat mirror, using angles. He said we should test ideas and not simply believe what older books say. Other accounts of his life disagree on some details.",
+  "link_to_lesson": "Today we measure angles and find perpendicular lines, and the angles at a mirror use both ideas.",
+  "try_it": "A ray of light hits a flat mirror. Draw the perpendicular line to the mirror at that spot. The ray makes an angle of 35 degrees with that perpendicular line. The reflected ray makes the same angle on the other side. What is the angle between the two rays?",
+  "try_it_answer": "35 + 35 = 70 degrees. The incoming and reflected rays make an angle of 70 degrees with each other.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+   "https://en.wikipedia.org/wiki/Alhazen"
+  ],
+  "confidence": "medium",
+  "legend_note": "A tale says he pretended to be mad to escape the caliph and stayed at home for years. Sources disagree, so it is not told here. The equal-angle rule for mirrors was also known to earlier scholars; he studied it carefully with experiments.",
+  "icon_idea": "A flat mirror with a light ray bouncing off it and a small dashed perpendicular line."
+ },
+ {
+  "lesson": 9,
+  "name": "Zu Chongzhi",
+  "years": "429 to about 500",
+  "country_or_region": "China",
+  "who": "A Chinese maths and astronomy expert who measured the length of the year very closely.",
+  "story": "Zu Chongzhi lived in China about 1500 years ago. He studied the sky and worked out the length of a year as 365.2428 days. That is less than a minute away from the true length. He also made a calendar plan. Using careful calculations, he found that the number 3.1415926 is just below pi and 3.1415927 is just above it. He and his son also worked on the volume of a sphere.",
+  "link_to_lesson": "Today we measure time, length and more, and Zu Chongzhi measured the year and the circle with great care.",
+  "try_it": "Zu found a year is about 365 and a quarter days. A normal year has 365 days. How many days are in 4 years if one leap day is added?",
+  "try_it_answer": "4 x 365 = 1460, and adding 1 leap day gives 1461 days.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Zu_Chongzhi/",
+   "https://en.wikipedia.org/wiki/Zu_Chongzhi"
+  ],
+  "confidence": "medium",
+  "legend_note": "Sources disagree on his death year (500 or 501) and on when his calendar was proposed, so the story gives rough dates only.",
+  "icon_idea": "A round sun above a ring of calendar boxes and a small circle with a ruler across it."
+ },
+ {
+  "lesson": 10,
+  "name": "Mary Eleanor Spear",
+  "years": "1897 to 1986",
+  "country_or_region": "United States",
+  "who": "An American chart maker who taught people how to draw clear graphs.",
+  "story": "Mary Eleanor Spear lived in the United States. For many years she worked for government offices, turning lists of numbers into charts and graphs. She also taught a class about charts and wrote two books, in 1952 and 1969, on how to make them. She wrote that a good chart needs a person to study the numbers, a person to draw it, and a person to explain it. Today some chart experts say she drew an early box plot in her 1952 book.",
+  "link_to_lesson": "Today we read and draw bar graphs, and Spear taught that a graph must be clear and honest.",
+  "try_it": "A bar graph shows cups sold: Milo 45, Teh 30, Kopi 55, Bandung 20. Which bar is tallest? How many more cups of Kopi than Teh were sold? How many cups in all?",
+  "try_it_answer": "Kopi has the tallest bar (55). Kopi sold 55 - 30 = 25 more than Teh. In all: 45 + 30 + 55 + 20 = 150 cups.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Mary_Eleanor_Spear",
+   "https://rss.org.uk/news-publication/news-publications/2021/section-group-reports/mary-eleanor-spear-dataviz-competition-for-childre/",
+   "https://fisherdigitus.library.utoronto.ca/exhibits/show/emerging-patterns--data-visual/iv--bars--lines--boxes/----innovations-in-lines-and-b"
+  ],
+  "confidence": "medium",
+  "legend_note": "Credit for the first box plot is a recent claim by chart experts (it used to go to John Tukey), stated as 'some experts say'.",
+  "icon_idea": "A simple bar graph with four bars of different heights and a pencil."
+ }
+]
