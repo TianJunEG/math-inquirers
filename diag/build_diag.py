@@ -11,15 +11,15 @@ UP={1:('Level 2','Ages 7-9'),2:('Level 3','Ages 8-10'),3:('Level 4','Ages 9-11')
 css=open(f'{R}/fonts/fonts.css').read()+'''
 @page{size:A4;margin:0}
 *{box-sizing:border-box}body{margin:0;font-family:'Nunito Sans',Arial,sans-serif;color:#1B2A49}
-.pg{width:210mm;height:297mm;padding:16mm 16mm 14mm;page-break-after:always;position:relative;overflow:hidden}
+.pg{width:210mm;height:297mm;padding:12mm 16mm 14mm;page-break-after:always;position:relative;overflow:hidden}
 .bar{position:absolute;left:0;top:0;width:100%;height:6mm;display:flex}.bar i{display:block;height:100%}
 h1{font-family:Fredoka,Arial,sans-serif;font-size:26pt;margin:6mm 0 1mm;line-height:1.1}
 .kick{font-size:9.5pt;font-weight:800;letter-spacing:.14em;color:#1F7A6F;text-transform:uppercase;margin-top:8mm}
 .sub{font-size:11pt;color:#3B4A6B;margin:0 0 4mm}
 .name{display:flex;gap:8mm;margin:2mm 0 5mm;font-size:11pt}.name span{flex:1;border-bottom:1.5px solid #1B2A49;padding-bottom:1mm}
-.sec{font-family:Fredoka,Arial,sans-serif;font-size:13pt;background:#1B2A49;color:#FFF9EC;border-radius:6px;padding:1.5mm 4mm;margin:4mm 0 3mm;display:inline-block}
-.q{display:flex;gap:4mm;margin-bottom:5mm;break-inside:avoid}.n{font-family:Fredoka,Arial,sans-serif;font-size:15pt;color:#D64545;min-width:8mm}
-.qt{font-size:12pt;line-height:1.35}.box{margin-top:2mm;border:1.6px solid #1B2A49;border-radius:6px;height:12mm;width:78mm;background:#FBFCFE}
+.sec{font-family:Fredoka,Arial,sans-serif;font-size:13pt;background:#1B2A49;color:#FFF9EC;border-radius:6px;padding:1.5mm 4mm;margin:3mm 0 2.5mm;display:inline-block}
+.q{display:flex;gap:4mm;margin-bottom:3mm;break-inside:avoid}.n{font-family:Fredoka,Arial,sans-serif;font-size:15pt;color:#D64545;min-width:8mm}
+.qt{font-size:12pt;line-height:1.35}.box{margin-top:2mm;border:1.6px solid #1B2A49;border-radius:6px;height:9.5mm;width:78mm;background:#FBFCFE}
 .foot{position:absolute;left:16mm;right:16mm;bottom:7mm;font-size:8pt;color:#5B6785;display:flex;justify-content:space-between}
 table{border-collapse:collapse;width:100%;font-size:8.6pt}td,th{border:1px solid #C9D3E6;padding:1mm 2mm;vertical-align:top;text-align:left}th{background:#FFF0C2}
 .card{border:2px solid #DCE4F0;border-radius:8px;padding:3.5mm 5mm;margin:3mm 0;background:#F6F8FC}
@@ -38,15 +38,15 @@ def visual(it):
     v=it.get('visual')
     if not v: return ''
     if v['type']=='dotgraph':
-        rows=v['rows'];h=14+len(rows)*10
-        o=f'<svg width="260" height="{h*4}" viewBox="0 0 65 {h}" style="margin:2mm 0">'
+        rows=v['rows'];h=len(rows)*8+2
+        o=f'<svg width="210" height="{int(210*h/65)}" viewBox="0 0 65 {h}" style="margin:2mm 0">'
         for i,(n,c) in enumerate(rows):
-            y=8+i*10;o+=f'<text x="1" y="{y+1.5}" font-size="3.6" fill="#1B2A49">{E(n)}</text>'
+            y=5+i*8;o+=f'<text x="1" y="{y+1.5}" font-size="3.6" fill="#1B2A49">{E(n)}</text>'
             for j in range(c): o+=f'<circle cx="{24+j*6}" cy="{y}" r="2.3" fill="#D64545"/>'
         return o+'</svg>'
     if v['type']=='ruler':
         a,b=v['from'],v['to'];W=10*(b-a)+20
-        o=f'<svg width="330" height="90" viewBox="0 0 {W} 30" style="margin:2mm 0"><rect x="5" y="12" width="{W-10}" height="14" fill="#FFF0C2" stroke="#1B2A49" stroke-width=".5"/>'
+        o=f'<svg width="240" height="62" viewBox="0 0 {W} 30" style="margin:2mm 0"><rect x="5" y="12" width="{W-10}" height="14" fill="#FFF0C2" stroke="#1B2A49" stroke-width=".5"/>'
         for k in range(a,b+1):
             x=10+(k-a)*10;o+=f'<line x1="{x}" y1="12" x2="{x}" y2="19" stroke="#1B2A49" stroke-width=".5"/><text x="{x}" y="25" font-size="4" text-anchor="middle">{k}</text>'
         x1=10+(v['pencilStart']-a)*10;x2=10+(v['pencilEnd']-a)*10
@@ -58,7 +58,7 @@ P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Che
 <div class="name"><span>Name or username:</span><span>Age:</span><span>Date:</span></div>
 <div class="card"><b>How it works.</b> This is a friendly check, not a test. Your child answers on their own. Read a question aloud if they ask, but do not help with the maths. If they are stuck, say "Try your best, or skip it". Working on scrap paper is fine.<br><b>Not learnt it yet?</b> Some questions may use ideas your child has not met at school. That is fine and useful to know. Tick "not learnt yet" and move on.</div>
 <span class="sec">Warm-up</span>{qhtml(d["foundation"])}{FOOT("Page 1")}</div>''')
-P.append(f'''<div class="pg">{BAR}<span class="sec" style="margin-top:8mm">Main questions</span>{qhtml(d["core"])}<span class="sec">Brain stretchers</span><p class="tip" style="margin:0 0 3mm">Optional. These are meant to be tricky, and most children will not finish them. Have a go at any that look fun.</p>{qhtml(d["stretch"])}{FOOT("Page 2")}</div>''')
+P.append(f'''<div class="pg">{BAR}<span class="sec" style="margin-top:2mm">Main questions</span>{qhtml(d["core"])}<span class="sec">Brain stretchers</span><p class="tip" style="margin:0 0 3mm">Optional. These are meant to be tricky, and most children will not finish them. Have a go at any that look fun.</p>{qhtml(d["stretch"])}{FOOT("Page 2")}</div>''')
 def rows(L): return ''.join(f'<tr><td>{it["_n"]}</td><td>{E(it["q"])}</td><td><b>{E(it["a"])}</b></td><td>{E(it["work"])}</td></tr>' for it in L)
 T=lambda t,L:f'<span class="sec">{t}</span><table><tr><th>#</th><th>Question</th><th>Answer</th><th>Watch for</th></tr>{rows(L)}</table>'
 KEY=f'''<div class="pg" style="height:auto;min-height:297mm">{BAR}<div class="kick">For the tutor or parent</div><h1 style="margin-top:2mm">Answer key: {AGE}</h1><p class="sub">Accept equivalent forms (for example 2.05 and $2.05). One mark per question. Keep this key away from the child until they have finished.</p>
