@@ -9,7 +9,7 @@ const pt = (n, title) => { const x = BUD[n].parts.find(y => y.title === title); 
 const has = (n, title) => BUD[n].parts.some(y => y.title === title);
 const rng = (a, b) => num(a) + '–' + num(b);
 // time = 'a–b min' shown in the guide; rec = whole-minute range for the REC cue (levels/reccues.js reads only whole numbers)
-const part = (n, ...titles) => { const a = pt(n, titles[0]).start, b = pt(n, titles[titles.length - 1]).end; return { a, b, d: b - a, time: rng(a, b) + ' min', rec: '0–' + Math.max(1, Math.round(b - a)) + ' min' }; };
+const part = (n, ...titles) => { const a = pt(n, titles[0]).start, b = pt(n, titles[titles.length - 1]).end; return { a, b, d: b - a, time: rng(a, b) + ' min', rec: '0–' + (b - a) + ' min' }; };
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)

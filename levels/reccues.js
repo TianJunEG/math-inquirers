@@ -1,14 +1,20 @@
 // Cues for children who watch the recording of a live lesson. Shared by hp/guide.js and pN/guide.js.
-//   cue(title, time, lesson) -> { say, action }
+//   cue(title, time, lesson) -> { say, action }   (time is a range like "12.5–14 min"; half minutes are kept)
 //     say    = one short line the tutor says to the camera at the start of that part ("recording voice")
 //     action = what the child watching later does in that part (used in the chapter table)
 // Durations come from the segment's time range, so the "about N minutes" always matches the script.
 
+// Length of the segment in minutes, to the nearest half minute, from a range such as "4–10 min" or "12.5–14 min".
 const mins = (time) => {
-  const m = /(\d+)\s*[–-]\s*(\d+)/.exec(time);
-  return m ? Math.max(1, +m[2] - +m[1]) : null;
+  const m = /(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?)/.exec(time);
+  return m ? Math.max(1, Math.round((+m[2] - +m[1]) * 2) / 2) : null;
 };
-const about = (n) => (n ? 'about ' + n + (n === 1 ? ' minute' : ' minutes') : 'a few minutes');
+const WORD = { 1: 'a minute', 1.5: 'a minute and a half', 0.5: 'half a minute' };
+const about = (n) => {
+  if (!n) return 'a few minutes';
+  if (WORD[n]) return 'about ' + WORD[n];
+  return 'about ' + (n % 1 ? Math.floor(n) + ' and a half minutes' : n + ' minutes');
+};
 
 const kind = (title) => {
   const s = title.toLowerCase();
@@ -26,53 +32,54 @@ const kind = (title) => {
   return 'other';
 };
 
+// Each "say" line is about 20 words (under ten seconds), friendly, one idea.
 const CUES = {
   opening: (n) => ({
-    say: 'If you are watching the recording: hello! Before you press play, get a pencil, some paper, your workbook and your materials (the slide shows what to bring). You can pause or rewind whenever you like.',
+    say: 'Hello! Before you press play, get a pencil, paper, your workbook and the materials on the slide. Pause or rewind any time.',
     action: 'Gather your workbook, pencil, paper and the materials on the slide. Press play when ready.'
   }),
   sneak: (n) => ({
-    say: 'Recording: pause the video now. Try the two puzzles on your own paper for ' + about(n) + '. Guessing is fine and nobody marks them. Press play to hear the answers.',
-    action: 'Pause. Try both puzzles on your own paper (' + about(n) + '). Guessing is fine. Press play for the answers.'
+    say: 'Pause now and try the puzzles on your own paper for ' + about(n) + '. Guessing is fine. Press play for the answers.',
+    action: 'Pause. Try the puzzles on your own paper (' + about(n) + '). Guessing is fine. Press play for the answers.'
   }),
   warm: (n) => ({
-    say: 'Recording: join in! Say your answers out loud or write them down. If you need longer, pause the video.',
+    say: 'Join in! Say or write each answer before I do. Pause the video if you need longer.',
     action: 'Play along. Say or write each answer before the video does. Pause if you need longer.'
   }),
   explore: (n) => ({
-    say: 'Recording: pause now. Get your objects and try this with a grown-up or a friend for ' + about(n) + '. Write down what you find. Press play when you have a guess and an answer.',
+    say: 'Pause now. Try this with your objects, and a grown-up if you can, for ' + about(n) + '. Press play when you have an answer.',
     action: 'Pause. Try the explore task with your objects, with someone at home if you can (' + about(n) + '). Write down what you notice.'
   }),
   mini: (n) => ({
-    say: 'Recording: keep watching and copy the examples onto your paper. If you miss a step, rewind. You will try some yourself soon.',
+    say: 'Keep watching and copy the examples onto your paper. Missed a step? Rewind. You will try some yourself soon.',
     action: 'Keep watching. Copy the worked examples. Rewind any step you missed.'
   }),
   break: (n) => ({
-    say: 'Recording: this is a movement break. Stand up and join in! The video keeps going.',
+    say: 'Movement break! Stand up and join in. The video keeps going.',
     action: 'Stand up and join the brain break.'
   }),
   work: (n) => ({
-    say: 'Recording: pause the video now and do your workbook. Start on Start here, page 1. This takes ' + about(n) + '. When you finish a page, press play for the checking part and mark your work in a different colour.',
+    say: 'Pause and do your workbook, starting at Start here on page 1, for ' + about(n) + '. Press play to check your work.',
     action: 'Pause. Do the workbook, starting with Start here on page 1 (' + about(n) + '). Press play for each checking part and mark in a different colour.'
   }),
   talk: (n) => ({
-    say: 'Recording: pause. Tell a grown-up or a friend your answer to the talk question, and say why you think so. Then press play to hear what we found.',
+    say: 'Pause. Tell a grown-up your answer to the talk question, and why you think so. Then press play.',
     action: 'Pause. Explain your answer to someone at home, with a reason. Then play.'
   }),
   exit: (n) => ({
-    say: 'Recording: pause and do the exit ticket on your own, without looking back. Then press play to check it.',
+    say: 'Pause and do the exit ticket on your own, without looking back. Then press play to check it.',
     action: 'Pause. Do the exit ticket on your own, then play to check it.'
   }),
   look: (n) => ({
-    say: 'Recording: pause for ' + about(n) + ' and fill in your looking-back page: what was hardest, how did you start, and what will you try next time?',
+    say: 'Pause for ' + about(n) + ' and fill in your looking-back page: what was hardest, and what will you try next time?',
     action: 'Pause. Fill in the looking-back page.'
   }),
   close: (n) => ({
-    say: 'Recording: well done for finishing the lesson! Show your journal and workbook to a grown-up and tell them one thing you found out.',
+    say: 'Well done! Show your journal and workbook to a grown-up and tell them one thing you found out.',
     action: 'Show your journal and workbook to a grown-up. Tell them one thing you found out.'
   }),
   other: (n) => ({
-    say: 'Recording: pause or rewind whenever you need to.',
+    say: 'Pause or rewind whenever you need to.',
     action: 'Pause or rewind whenever you need to.'
   })
 };

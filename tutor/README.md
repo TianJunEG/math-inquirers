@@ -10,7 +10,7 @@ The laptop owns the clock and the slide. The phone only sends commands, so if th
 ## Run it
 
     cd tutor && npm install
-    python3 build_data.py 4        # builds data/ for Level 4 from the decks and scripts
+    python3 build_data.py          # builds data/ for Levels 1 to 6 (or: build_data.py 4) from the decks, scripts and budget.json
     node server.js                 # http://localhost:8787
 
 ## Privacy rules built in
@@ -26,4 +26,4 @@ Static files plus a WebSocket room relay (`server.js` is the reference for the p
 
 ## Status
 
-Prototype. Part budgets in `build_data.py` are the current guide tables; they change when the re-budget pass lands. Only Level 4 is built; other levels need their part tables added. The SAY / DO lines come from the lesson scripts; the guide's full per-part wording will replace them once the guide generator exports it.
+Prototype. Part budgets are read from `hp/budget.json` (Level 1) and `pN/budget.json` (Levels 2 to 6), the same files the tutor guides use, so half-minute parts (7.5 min) work. All six levels are built (60 lessons). The SAY / DO lines come from the lesson scripts; the guide's full per-part wording will replace them once the guide generator exports it.

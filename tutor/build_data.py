@@ -1,23 +1,34 @@
-#!/usr/bin/env python3
-"""Build the tutor console data for a level from the generated slide decks and the lesson scripts.
+"""Build the tutor console data for a level from the generated slide decks, the lesson scripts and the level's budget.json.
 
-    python3 build_data.py 4            # writes data/p4l1..p4l10 .public.json / .notes.json and data/index.json
+    python3 build_data.py 4            # one level
+    python3 build_data.py all          # Levels 1 to 6 (default)
 
 public.json  (the lesson screen may load this): slide order, titles, optional flags, part timeline
 notes.json   (the tutor's phone only):          speaker notes per slide, SAY / DO / IF STUCK lines per part
 
-Part budgets (PARTS) are the current guide tables. When the re-budget pass lands, change PARTS only.
+Part budgets come from <level>/budget.json (hp/budget.json for Level 1), the same file the tutor guide reads, so the
+console clock, the guide and the scheme of work agree. Times may be half minutes (7.5).
 """
 import json, os, re, subprocess, sys, html
 
 ROOT = os.path.dirname(os.path.abspath(__file__)) + '/..'
 OUT = os.path.dirname(os.path.abspath(__file__)) + '/data'
+NUM = r'(\d+(?:\.\d+)?)'          # whole or half-minute number, e.g. 7 or 7.5
 
-# (start, end, title, script key) per level; mirrors pN/guide.js seg() calls (lesson 10 varies slightly)
-PARTS = {
- 4: [(0,1,'Opening','hook'),(1,4,'Sneak-peek puzzles',None),(4,8,'Warm-up','warmIntro'),(8,18,'Explore (in pairs)','predict'),
-     (18,30,'Mini-lesson','think'),(30,34,'Brain break',None),(34,80,'Worksheet','circulate'),(80,85,'Talk time','talk'),(85,88,'Exit ticket','close'),(88,90,'Looking back',None)],
-}
+def budget(level):
+    d = 'hp' if level == 1 else 'p%d' % level
+    return json.load(open('%s/%s/budget.json' % (ROOT, d)))['lessons']
+
+def script_key(title):
+    t = title.lower()
+    if t.startswith('opening'): return 'hook'
+    if 'warm' in t or 'game' in t: return 'warmIntro'
+    if t.startswith('explore'): return 'predict'
+    if t.startswith('mini'): return 'think'
+    if ('worksheet' in t or 'workbook' in t) and 'teach' not in t: return 'circulate'
+    if t.startswith('talk'): return 'talk'
+    if t.startswith('exit'): return 'close'
+    return None
 
 def strip(t): return html.unescape(re.sub(r'<[^>]+>', ' ', t)).replace(' ', ' ').strip()
 
@@ -25,13 +36,19 @@ def node(js):
     return json.loads(subprocess.run(['node', '-e', js], capture_output=True, text=True, cwd=ROOT).stdout or 'null')
 
 def build(level):
-    parts = PARTS[level]
-    scripts = node("const d=require('./p%d/data.js');console.log(JSON.stringify(d.scripts))" % level) or {}
-    lessons = node("const d=require('./p%d/data.js');console.log(JSON.stringify(d.lessons.map(l=>({n:l.n,title:l.title,topic:l.topic}))))" % level) or []
+    bud = budget(level)
+    if level == 1:
+        scripts = node("console.log(JSON.stringify(require('./hp/scripts.js')))") or {}
+        lessons = node("console.log(JSON.stringify(require('./hp/lessons.js').lessons.map(l=>({n:l.n,title:l.title,topic:l.topic}))))") or []
+    else:
+        scripts = node("const d=require('./p%d/data.js');console.log(JSON.stringify(d.scripts))" % level) or {}
+        lessons = node("const d=require('./p%d/data.js');console.log(JSON.stringify(d.lessons.map(l=>({n:l.n,title:l.title,topic:l.topic}))))" % level) or []
     index = []
     os.makedirs(OUT, exist_ok=True)
     for L in lessons:
-        n = L['n']; deck = 'p%dl%d' % (level, n); base = '%s/split/%s/project' % (ROOT, deck)
+        n = L['n']; cid = 'p%dl%d' % (level, n); deck = 'l%d' % n if level == 1 else cid
+        base = '%s/split/%s/project' % (ROOT, deck)
+        parts = [(p['start'], p['end'], p['title'], script_key(p['title'])) for p in bud[str(n)]['parts']]
         order = json.load(open(base + '/deck.json'))['order']
         slides, notes_slides, prev_part = [], {}, 0
         for sid in order:
@@ -39,12 +56,13 @@ def build(level):
             m = re.search(r'border-radius:999px[^>]*>([^<]*)</p>', h); pill = html.unescape(m.group(1)) if m else ''
             t = re.search(r'<h[12][^>]*>(.*?)</h[12]>', h, re.S); title = strip(t.group(1)) if t else sid
             opt = bool(re.search(r'OPTIONAL|take-home|only if time', pill, re.I))
-            st = re.match(r'\s*(\d+)', pill); part = None
+            st = re.match(r'\s*' + NUM, pill); part = None
             if st and not re.match(r'\s*Any', pill):
-                mn = int(st.group(1))
+                mn = float(st.group(1)) + 1e-6
                 part = next((i for i, p in enumerate(parts) if p[0] <= mn < p[1]), None)
             if sid.endswith('-title'): part = 0
-            if sid.endswith('-break'): part = next(i for i, p in enumerate(parts) if p[2] == 'Brain break')
+            if sid.endswith('-break'):
+                part = next((i for i, p in enumerate(parts) if p[2].lower().startswith('brain break')), part)
             if part is None: part = prev_part
             prev_part = part
             a = re.search(r'<aside[^>]*>(.*?)</aside>', h, re.S)
@@ -55,21 +73,23 @@ def build(level):
         for i, (a_, b_, ptitle, key) in enumerate(parts):
             say = list(s.get(key, [])) if key and isinstance(s.get(key), list) else []
             do, stuck = [], []
-            if ptitle.startswith('Explore'): stuck = list(s.get('exploreHints', []))
-            if ptitle == 'Worksheet': do = list(s.get('circulate', [])); say = []; stuck = list(s.get('hints', []))
-            if ptitle == 'Mini-lesson': say = list(s.get('think', []))
+            if key == 'predict': stuck = list(s.get('exploreHints', []))
+            if key == 'circulate': do = list(s.get('circulate', [])); say = []; stuck = list(s.get('hints', []))
+            if key == 'think': say = list(s.get('think', []))
             ask = []
-            if ptitle == 'Talk time' and s.get('talkAns'): ask = [[q, s['talkAns']] for q in s.get('talk', [])[:1]]
+            if key == 'talk' and s.get('talkAns'): ask = [[q, s['talkAns']] for q in s.get('talk', [])[:1]]
             np[str(i)] = {'say': say, 'do': do, 'stuck': stuck, 'ask': ask}
-        pub = {'id': deck, 'deck': deck, 'title': 'Level %d lesson %d: %s' % (level, n, L['title']), 'level': level, 'lesson': n,
-               'parts': [{'title': p[2], 'min': p[1] - p[0]} for p in parts], 'slides': slides}
-        json.dump(pub, open('%s/%s.public.json' % (OUT, deck), 'w'), ensure_ascii=False)
-        json.dump({'parts': np, 'slides': notes_slides}, open('%s/%s.notes.json' % (OUT, deck), 'w'), ensure_ascii=False)
-        index.append({'id': deck, 'label': 'L%d.%d %s' % (level, n, L['title'])})
+        pub = {'id': cid, 'deck': deck, 'title': 'Level %d lesson %d: %s' % (level, n, L['title']), 'level': level, 'lesson': n,
+               'parts': [{'title': p[2], 'min': round(p[1] - p[0], 2)} for p in parts], 'slides': slides}
+        json.dump(pub, open('%s/%s.public.json' % (OUT, cid), 'w'), ensure_ascii=False)
+        json.dump({'parts': np, 'slides': notes_slides}, open('%s/%s.notes.json' % (OUT, cid), 'w'), ensure_ascii=False)
+        index.append({'id': cid, 'label': 'L%d.%d %s' % (level, n, L['title'])})
     prev = json.load(open(OUT + '/index.json'))['lessons'] if os.path.exists(OUT + '/index.json') else []
     keep = [x for x in prev if not x['id'].startswith('p%dl' % level)]
-    json.dump({'lessons': keep + index}, open(OUT + '/index.json', 'w'), ensure_ascii=False)
+    allx = sorted(keep + index, key=lambda x: tuple(int(v) for v in re.findall(r'\d+', x['id'])))
+    json.dump({'lessons': allx}, open(OUT + '/index.json', 'w'), ensure_ascii=False)
     print('built', len(index), 'lessons for level', level)
 
 if __name__ == '__main__':
-    build(int(sys.argv[1]) if len(sys.argv) > 1 else 4)
+    arg = sys.argv[1] if len(sys.argv) > 1 else 'all'
+    for lv in (range(1, 7) if arg == 'all' else [int(arg)]): build(lv)

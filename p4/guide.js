@@ -85,7 +85,7 @@ const doo = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'DO     ' :
 const REC = require('../levels/reccues.js'); let CURL = null; const SEGS = [];
 const rec = (text) => G.push(p([t('REC   ', { bold: true, size: 19, color: '6B3FA0' }), t(text, { size: S, italics: true })], { after: 40, indent: { left: 900, hanging: 900 }, line: 280 }));
 // the REC cue reads whole minutes from '0–N': pass cueMin when the minutes a child needs differ from the part length
-const pushSeg = (a, b, title, cueMin) => { const time = rg(a, b); G.push(seg(time, title)); const c = REC.cue(title, '0–' + (cueMin || Math.max(1, Math.round(b - a))), CURL); SEGS.push({ time, title, action: c.action }); rec(c.say); };
+const pushSeg = (a, b, title, cueMin) => { const time = rg(a, b); G.push(seg(time, title)); const c = REC.cue(title, '0–' + (cueMin || (b - a)), CURL); SEGS.push({ time, title, action: c.action }); rec(c.say); };
 const ask = (rows, h1c, h2c) => { G.push(tbl([4600, 5300], [row([hd(h1c || 'Ask', 4600), hd(h2c || 'Expect', 5300)]), ...rows.map(r => row([c2(r[0], 4600), c2(r[1], 5300)]))])); G.push(gap(40)); };
 const stuck = (lines) => lines.map(x => String(x).replace(/^Stuck( on [^:]{0,40})?:\s*/i, '')).forEach((s, i) => G.push(p([t(i === 0 ? 'IF STUCK   ' : '                ', { bold: true, size: 19, color: 'A61C00' }), t(s, { size: S })], { after: 40, indent: { left: 1300, hanging: 1300 }, line: 280 })));
 
