@@ -114,6 +114,7 @@ REPL = [
     ('early finishers', 'children who choose to go further'),
     ('Stretch and Challenge come next', 'Think harder and Go further come next'),
     ('Stretch and challenge', 'Think harder and Go further'),
+    ('Warm-up check', 'Sneak-peek puzzles'),
     ('Think Harder', 'Think harder'),
     ('Open investigation', 'Investigation'),
     ('the Challenge slides', 'the Go further slides'),
