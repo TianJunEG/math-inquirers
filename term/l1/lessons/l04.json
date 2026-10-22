@@ -2760,7 +2760,7 @@
       "parts": [
         {
           "l": "",
-          "text": "Circle:  Yes    No      I know because ___.",
+          "text": "Circle Yes or No. I know because ___.",
           "ans": "No",
           "val": "no"
         }

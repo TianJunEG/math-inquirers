@@ -133,8 +133,8 @@
   "notes": "Opening is 2 minutes (the routine and rules were taught in Lesson 1; say the recording notice in one line). The 2 minutes saved go to Explore (16 minutes). The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
  },
  "sneak_peek": {
-  "q1": "Count all the counters. Write how many. You may draw rings round groups to help.",
-  "q2": "Ben has 9 red counters and 5 blue counters. He moves 1 blue counter over to the red ones. Now he has 10 red and 4 blue. Is the total the same as before? Write yes or no, and why.",
+  "q1": "Count the counters. How many are there altogether? You may draw rings round groups.",
+  "q2": "Ben has 9 red counters and 5 blue counters. He moves 1 blue counter to the red counters. Now he has 10 red counters and 4 blue counters. Is the total still the same? Circle Yes or No. Then write how you know.",
   "a1": "12",
   "a2": "Yes. Nothing was added or taken away. 9 + 5 = 14 and 10 + 4 = 14.",
   "val1": 12
@@ -331,7 +331,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle one. Count all the counters. Write how many. You may draw rings round groups to help."
+      "text": "Puzzle one. Count the counters. How many are there altogether? You may draw rings round groups."
      },
      {
       "k": "WORK",
@@ -340,7 +340,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle two. Ben has 9 red counters and 5 blue counters. He moves 1 blue counter over to the red ones. Now he has 10 red and 4 blue. Is the total the same as before? Write yes or no, and why."
+      "text": "Puzzle two. Ben has 9 red counters and 5 blue counters. He moves 1 blue counter to the red counters. Now he has 10 red counters and 4 blue counters. Is the total still the same? Circle Yes or No. Then write how you know."
      },
      {
       "k": "WORK",
@@ -590,7 +590,7 @@
      },
      {
       "k": "READ",
-      "text": "Your turn. Add. Make a ten first if it helps. Nine and four. Seven and six. Eighteen and five. Forty-five and seven."
+      "text": "Your turn. Add. Nine and four. Seven and six. Eighteen and five. Forty-five and seven."
      },
      {
       "k": "WORK",
@@ -692,7 +692,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: add 6 to 28. Question 5: add 7 to 35. Question 6: four sums. Question 7: Siti adds 8 and 6. Is she right?"
+      "text": "Page 2. Question 4: add 6 to 28. Question 5: add 7 to 35. Question 6: four sums. Question 7: Siti adds 8 and 6. Is she right or wrong? Circle one. Then find her mistake in the second step."
      },
      {
       "k": "WORK",
@@ -747,7 +747,7 @@
      },
      {
       "k": "READ",
-      "text": "Mei and Ali both add eight and six. Mei moves two from the six to the eight to make a ten. Ali moves four from the eight to the six to make a ten. Who is right? Use counters to show."
+      "text": "Mei and Ali both add eight and six. Mei moves two counters from the six to the eight. Ali moves four counters from the eight to the six. Is Mei right? Is Ali right? Use counters to show."
      },
      {
       "k": "WORK",
@@ -933,7 +933,7 @@
     },
     {
      "t": "p",
-     "text": "7 counters. How many more fill the frame to make 10?"
+     "text": "There are 7 counters in the frame. How many more make 10?"
     },
     {
      "t": "numrow",
@@ -1028,8 +1028,8 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "Count all the counters.",
-         "Write how many.",
+         "Count the counters.",
+         "How many are there altogether?",
          "You may draw rings round groups."
         ]
        },
@@ -1046,9 +1046,9 @@
         "head": "PUZZLE 2: think",
         "items": [
          "Ben has 9 red counters and 5 blue counters.",
-         "He moves 1 blue counter over to the red ones.",
-         "Now he has 10 red and 4 blue.",
-         "Is the total the same as before? Write yes or no, and why."
+         "He moves 1 blue counter to the red counters.",
+         "Now he has 10 red counters and 4 blue counters.",
+         "Is the total still the same? Circle Yes or No. Then write how you know."
         ]
        }
       ]
@@ -1077,7 +1077,7 @@
      "t": "card",
      "head": "WHAT IF?",
      "items": [
-      "What if you fill the frame a different way? Try it."
+      "Fill the frame a different way. What do you notice?"
      ]
     }
    ],
@@ -1491,13 +1491,13 @@
      "t": "card",
      "head": "MEI AND ALI ADD 8 + 6",
      "items": [
-      "Mei moves 2 from the 6 to the 8.",
-      "Ali moves 4 from the 8 to the 6."
+      "Mei moves 2 counters from the 6 to the 8.",
+      "Ali moves 4 counters from the 8 to the 6."
      ]
     },
     {
      "t": "p",
-     "text": "Who is right? Use counters to show."
+     "text": "Is Mei right? Is Ali right? Use counters to show."
     },
     {
      "t": "chip",
@@ -1635,7 +1635,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "What if both numbers are 9? Add 9 + 9. How many do you move to make a ten?"
+     "text": "Look at 9 + 9. How many do you move to make a ten?"
     },
     {
      "t": "visual",
@@ -1667,7 +1667,7 @@
       ],
       [
        "Make a puzzle",
-       "Write a sum with four numbers for your grown-up, with two pairs that make ten"
+       "Write a sum with four numbers for your grown-up, with a pair that makes ten"
       ],
       [
        "Teach it back",
@@ -1690,17 +1690,17 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Fill the first ten-frame by moving counters from the second one. Then add.",
+    "text": "Look at the ten-frames. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "9 needs ___ more to make 10",
+      "text": "The first frame needs ___ more counters to make 10.",
       "ans": "1",
       "val": 1
      },
      {
       "l": "b",
-      "text": "Take 1 from the 4. Now it is 10 and ___",
+      "text": "Move them. Now there are 10 and ___ counters.",
       "ans": "3",
       "val": 3
      },
@@ -1735,7 +1735,7 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Draw 7 dots and 6 dots in the box. Ring ten dots to make a ten. Then write the sums.",
+    "text": "Draw 7 dots and 6 dots in the box. Ring 10 dots. Then fill in the blanks.",
     "draw": true,
     "parts": [
      {
@@ -1769,7 +1769,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "How many more make the next ten?",
+    "text": "Fill in the missing numbers to make the next ten.",
     "parts": [
      {
       "l": "a",
@@ -1816,7 +1816,7 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Add 6 to 28. Make a ten first.",
+    "text": "Add 28 + 6. Fill in the blanks.",
     "visual": {
      "type": "bundles",
      "tens": 2,
@@ -1826,13 +1826,13 @@
     "parts": [
      {
       "l": "a",
-      "text": "28 needs ___ more to make 30",
+      "text": "28 needs ___ more to make 30.",
       "ans": "2",
       "val": 2
      },
      {
       "l": "b",
-      "text": "6 = 2 and ___",
+      "text": "6 is 2 and ___.",
       "ans": "4",
       "val": 4
      },
@@ -1862,11 +1862,11 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Add 7 to 35. Make a ten first.",
+    "text": "Add 35 + 7. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "35 needs ___ more to make 40",
+      "text": "35 needs ___ more to make 40.",
       "ans": "5",
       "val": 5
      },
@@ -1895,7 +1895,7 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Add. Make a ten first if it helps.",
+    "text": "Add.",
     "parts": [
      {
       "l": "a",
@@ -1929,7 +1929,7 @@
      53,
      64
     ],
-    "hint": "How many more make the next ten? Take that many from the second number. Then add what is left.",
+    "hint": "Fill in the missing numbers to make the next ten. Take that many from the second number. Then add what is left.",
     "solution": "(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 47 + 3 = 50, 50 + 3 = 53. (d) 56 + 4 = 60, 60 + 4 = 64.",
     "mistakes": [
      "Moving the right amount to make the ten but then adding the whole second number.",
@@ -1942,16 +1942,28 @@
     "id": "S7",
     "page": 2,
     "tier": "start",
-    "text": "Siti adds 8 + 6. She writes: 8 + 2 = 10, then 10 + 6 = 16. Is Siti right? Write the right answer. Say what she forgot.",
+    "text": "Siti adds 8 + 6. Here is her working: 8 + 2 = 10, then 10 + 6 = 16. Fill in a to c.",
     "parts": [
      {
-      "l": "",
-      "text": "The right answer is ___",
+      "l": "a",
+      "text": "Siti’s answer: right or wrong? Circle Right or Wrong.",
+      "ans": "No",
+      "val": "no"
+     },
+     {
+      "l": "b",
+      "text": "The right answer is ___.",
       "ans": "14",
       "val": 14
+     },
+     {
+      "l": "c",
+      "text": "In her second step, 10 + 6 should be 10 + ___.",
+      "ans": "4",
+      "val": 4
      }
     ],
-    "answer": "No. 14. She moved 2 from the 6 to make the ten, so only 4 are left: 10 + 4 = 14.",
+    "answer": "No. The right answer is 14. 10 + 6 should be 10 + 4: she moved 2 from the 6, so only 4 are left.",
     "val": [
      14
     ],
@@ -1962,7 +1974,7 @@
      "Writing 14 without saying what she forgot (a spoken reason is fine)."
     ],
     "mins": 2.5,
-    "lines": 2
+    "lines": 0
    }
   ],
   "think": [
@@ -1970,11 +1982,11 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Mei adds 4 + 9 + 6. She finds two numbers that make 10 first. Which two? What is the total?",
+    "text": "Mei adds 4 + 9 + 6. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "The two numbers are ___ and ___",
+      "text": "Two numbers that make 10 are ___ and ___.",
       "ans": "4 and 6",
       "val": [
        4,
@@ -1983,7 +1995,7 @@
      },
      {
       "l": "b",
-      "text": "The total is ___",
+      "text": "The total is ___.",
       "ans": "19",
       "val": 19
      }
@@ -2007,11 +2019,11 @@
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Add 8 + 5 + 2 + 7. Find the pairs that make a ten. Write your pairs.",
+    "text": "Add 8 + 5 + 2 + 7. Show your working on the lines.",
     "parts": [
      {
       "l": "",
-      "text": "The total is ___",
+      "text": "The total is ___.",
       "ans": "22",
       "val": 22
      }
@@ -2033,8 +2045,15 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Three sums make 30. One does not. Which one? 17 + 13, 18 + 12, 19 + 12, 16 + 14. Say how you know without adding every one.",
-    "parts": [],
+    "text": "Three of these sums make 30: 17 + 13, 18 + 12, 19 + 12, 16 + 14. Circle the sum that does not.",
+    "parts": [
+     {
+      "l": "",
+      "text": "I know because ___.",
+      "ans": "9 and 2 make 11, not 10",
+      "val": "because"
+     }
+    ],
     "answer": "19 + 12 (it makes 31). The ones 9 and 2 make 11, not 10.",
     "val": [
      "19 + 12",
@@ -2047,17 +2066,17 @@
      "Choosing 18 + 12 because 18 looks big."
     ],
     "mins": 3,
-    "lines": 3
+    "lines": 2
    },
    {
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles has he in all? Show your pair.",
+    "text": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether? Show your working on the lines.",
     "parts": [
      {
       "l": "",
-      "text": "Ben has ___ marbles",
+      "text": "Ben has ___ marbles altogether.",
       "ans": "64",
       "val": 64
      }
@@ -2081,8 +2100,15 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Look for pairs that make a ten or a tens number. Show your pairs.",
-    "parts": [],
+    "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Show your working on the lines.",
+    "parts": [
+     {
+      "l": "",
+      "text": "The total is ___.",
+      "ans": "80",
+      "val": 80
+     }
+    ],
     "answer": "80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40)",
     "val": [
      80
@@ -2094,23 +2120,23 @@
      "Using a number twice or leaving one out."
     ],
     "mins": 5,
-    "lines": 4
+    "lines": 3
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Add the numbers 1 to 9: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9. Look for pairs that make 10. Then find 1 to 10.",
+    "text": "Look at this sum: 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1. Fill in a and b.",
     "parts": [
      {
       "l": "a",
-      "text": "1 to 9 = ___",
+      "text": "The total of 1 to 9 is ___.",
       "ans": "45",
       "val": 45
      },
      {
       "l": "b",
-      "text": "1 to 10 = ___",
+      "text": "The total of 1 to 10 is ___.",
       "ans": "55",
       "val": 55
      }
@@ -2133,7 +2159,7 @@
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Write a sum of 6 numbers that makes 100. Use pairs that make a ten or a tens number. Show your pairs.",
+    "text": "Write a sum of 6 numbers that makes 100. Many answers are right. Show your working on the lines.",
     "parts": [],
     "answer": "Any six numbers that total 100. For example 45 + 5 + 20 + 17 + 3 + 10 = 100 (45 + 5 = 50, 17 + 3 = 20, 20 + 10 = 30).",
     "val": "open",
@@ -2152,8 +2178,8 @@
    "page": 5,
    "tier": "investigation",
    "title": "Move the fewest",
-   "first": "Draw 9 dots and 6 dots. How many dots do you move to make a ten with the 9? Now try 8 + 7.",
-   "text": "Pick two numbers from 5 to 9. You can fill the first frame, or the second. Which way moves fewer dots? Is it always the same rule? How do you know?",
+   "first": "Draw 9 dots and 6 dots. To make a ten with the 9, how many dots do you move? Now try 8 + 7.",
+   "text": "Pick two numbers from 5 to 9. You can fill the first frame or the second. Which way moves fewer dots? Does the same way always move fewer? Write how you know.",
    "lines": 4,
    "answer": "Fill up the bigger number: it has the fewest empty spaces, so you move the fewest dots. The number moved is 10 minus the bigger number. 9 + 6: move 1, not 4. 8 + 7: move 2, not 3. If the two numbers are the same (7 + 7), either way moves 3.",
    "val": [
@@ -2170,7 +2196,7 @@
   }
  },
  "talk": {
-  "question": "Mei and Ali both add 8 + 6. Mei moves 2 from the 6 to the 8 to make a ten. Ali moves 4 from the 8 to the 6 to make a ten. Who is right? Use counters to show.",
+  "question": "Mei and Ali both add 8 + 6. Mei moves 2 counters from the 6 to the 8. Ali moves 4 counters from the 8 to the 6. Is Mei right? Is Ali right? Use counters to show.",
   "starter": "I think ... because ...",
   "answer": "Both are right. Mei gets 10 and 4. Ali gets 4 and 10. Both are 14, because moving counters does not change how many there are. Mei moved fewer counters (2), so her way is quicker.",
   "look_for": "A reason about moving: nothing is added or lost, so the total stays 14. Not just both are 14."
@@ -2178,7 +2204,7 @@
  "exit": [
   {
    "id": "E1",
-   "text": "Add by making a ten.",
+   "text": "Add.",
    "parts": [
     {
      "l": "",
@@ -2199,7 +2225,7 @@
   },
   {
    "id": "E2",
-   "text": "Add by making a ten.",
+   "text": "Add.",
    "parts": [
     {
      "l": "",
@@ -2220,17 +2246,17 @@
   },
   {
    "id": "E3",
-   "text": "Add 6 + 9 + 4. Which two numbers did you add first?",
+   "text": "Add 6 + 9 + 4. Fill in the blanks.",
    "parts": [
     {
      "l": "",
-     "text": "The total is ___",
+     "text": "The total is ___.",
      "ans": "19",
      "val": 19
     },
     {
      "l": "",
-     "text": "I added ___ and ___ first",
+     "text": "I added ___ and ___ first.",
      "ans": "6 and 4",
      "val": [
       6,
@@ -2277,7 +2303,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Use counters or a ten-frame. 9 + 5 = 10 + ___. So 9 + 5 = ___.",
+   "text": "Fill in the blanks. 9 + 5 = 10 + ___. So 9 + 5 = ___.",
    "answer": "4, so 9 + 5 = 14",
    "val": [
     4,
@@ -2288,7 +2314,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Add by making a ten first: 37 + 6 = ___.",
+   "text": "Add. 37 + 6 = ___.",
    "answer": "43",
    "val": 43,
    "solution": "37 needs 3 more to make 40. 6 is 3 and 3. 40 + 3 = 43."
@@ -2296,7 +2322,7 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "How many more make the next ten? (a) 8 + ___ = 10   (b) 45 + ___ = 50   (c) 67 + ___ = 70",
+   "text": "Fill in the missing numbers to make the next ten. (a) 8 + ___ = 10   (b) 45 + ___ = 50   (c) 67 + ___ = 70",
    "answer": "2, 5, 3",
    "val": [
     2,
@@ -2308,7 +2334,7 @@
   {
    "id": "H4",
    "tier": "think",
-   "text": "Add 5 + 7 + 5 + 3. Find the pairs that make a ten first. What is the total?",
+   "text": "Add 5 + 7 + 5 + 3. Show your working. The total is ___.",
    "answer": "20 (5 + 5 = 10, 7 + 3 = 10)",
    "val": 20,
    "solution": "5 + 5 = 10 and 7 + 3 = 10. 10 + 10 = 20."
@@ -2316,7 +2342,7 @@
   {
    "id": "H5",
    "tier": "go",
-   "text": "At home: write three sums that need a make-a-ten, like 8 + 5. Ask a grown-up to solve them. Then your grown-up writes three for you. Say which number you filled up each time.",
+   "text": "(a) Write 3 sums like 8 + 5 for a grown-up to solve. (b) Solve 3 sums that your grown-up writes for you. Many answers are right.",
    "answer": "Any: for example 8 + 5 = 13 (fill the 8 with 2 from the 5: 10 and 3). A grown-up can check with counters.",
    "val": "open",
    "solution": "The number that is nearest to ten is the one to fill. Move the missing amount from the other number, then add what is left."
@@ -2331,7 +2357,7 @@
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "Add 8 + 6. Make a ten first. What is the total?",
+    "q": "Add 8 + 6. What is the total?",
     "answer": 14,
     "hint": "8 needs 2 more to make 10. Take 2 from the 6.",
     "steps": [
@@ -2373,7 +2399,7 @@
       "g": "10-a",
       "r": "b-(10-a)"
      },
-     "q": "Add {a} + {b}. Make a ten first. What is the total?",
+     "q": "Add {a} + {b}. What is the total?",
      "answer": "a+b",
      "hint": "{a} needs {g} more to make 10. Take {g} from the {b}.",
      "steps": [
@@ -2387,7 +2413,7 @@
     "id": "c2",
     "tier": "core",
     "type": "number",
-    "q": "How many more make the next ten? 28 + ___ = 30",
+    "q": "Fill in the missing numbers to make the next ten. 28 + ___ = 30",
     "answer": 2,
     "hint": "Look at the ones digit. How many more ones make a full ten?",
     "steps": [
@@ -2427,7 +2453,7 @@
      "derive": {
       "nx": "n-n%10+10"
      },
-     "q": "How many more make the next ten? {n} + ___ = {nx}",
+     "q": "Fill in the missing numbers to make the next ten. {n} + ___ = {nx}",
      "answer": "10-n%10",
      "hint": "Look at the ones digit of {n}. How many more ones make a full ten?",
      "steps": [
@@ -2441,7 +2467,7 @@
     "id": "c3",
     "tier": "core",
     "type": "number",
-    "q": "Add 28 + 6. Make a ten first. What is the total?",
+    "q": "Add 28 + 6. What is the total?",
     "answer": 34,
     "hint": "28 needs 2 more to make 30. Take 2 from the 6, then add what is left.",
     "steps": [
@@ -2495,7 +2521,7 @@
       "nx": "t*10+10",
       "r": "b-(10-o)"
      },
-     "q": "Add {n} + {b}. Make a ten first. What is the total?",
+     "q": "Add {n} + {b}. What is the total?",
      "answer": "t*10+o+b",
      "hint": "{n} needs {g} more to make {nx}. Take {g} from the {b}, then add what is left.",
      "steps": [
@@ -2595,7 +2621,7 @@
     "id": "c6",
     "tier": "core",
     "type": "choice",
-    "q": "Ben adds 9 + 5. He moves 1 from the 5 to the 9. What should he write?",
+    "q": "Ben adds 9 + 5. He moves 1 counter from the 5 to the 9. Which sum should he write next?",
     "options": [
      "10 + 4 = 14",
      "10 + 5 = 15",
@@ -2622,7 +2648,7 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "Add 4 + 9 + 6. Look for two numbers that make 10.",
+    "q": "Add 4 + 9 + 6. What is the total?",
     "answer": 19,
     "easier": "c1",
     "hint": "Which two numbers make 10? They do not have to be next to each other.",
@@ -2660,7 +2686,7 @@
      "derive": {
       "c": "10-a"
      },
-     "q": "Add {a} + {b} + {c}. Look for two numbers that make 10.",
+     "q": "Add {a} + {b} + {c}. What is the total?",
      "answer": "10+b",
      "hint": "Which two numbers make 10? They do not have to be next to each other.",
      "steps": [
@@ -2674,7 +2700,7 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "Add 8 + 5 + 2 + 7. Find a pair that makes 10 first.",
+    "q": "Add 8 + 5 + 2 + 7. What is the total?",
     "answer": 22,
     "easier": "c3",
     "hint": "Find two numbers that make 10. Then add the other two.",
@@ -2725,7 +2751,7 @@
       "c": "10-a",
       "s": "x+y"
      },
-     "q": "Add {a} + {x} + {c} + {y}. Find a pair that makes 10 first.",
+     "q": "Add {a} + {x} + {c} + {y}. What is the total?",
      "answer": "10+x+y",
      "hint": "Find two numbers that make 10. Then add the other two.",
      "steps": [
@@ -2739,7 +2765,7 @@
     "id": "t3",
     "tier": "stretch",
     "type": "choice",
-    "q": "Three of these sums make 30. Which one does not?",
+    "q": "Three of these sums make 30. Which sum does not?",
     "options": [
      "17 + 13",
      "18 + 12",
@@ -2767,7 +2793,7 @@
     "id": "t4",
     "tier": "stretch",
     "type": "number",
-    "q": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles has he in all?",
+    "q": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether?",
     "answer": 64,
     "easier": "c5",
     "hint": "Which two numbers make a tens number? Add those first.",
@@ -2802,7 +2828,7 @@
      "derive": {
       "c": "30-a"
      },
-     "q": "Ben has {a} red marbles, {b} blue marbles and {c} green marbles. How many marbles has he in all?",
+     "q": "Ben has {a} red marbles, {b} blue marbles and {c} green marbles. How many marbles does Ben have altogether?",
      "answer": "30+b",
      "hint": "Which two numbers make a tens number? Add those first.",
      "steps": [
@@ -2816,7 +2842,7 @@
     "id": "g1",
     "tier": "challenge",
     "type": "number",
-    "q": "Add 18 + 7 + 12 + 23 + 3 + 17. Look for pairs that make a ten or a tens number.",
+    "q": "Add 18 + 7 + 12 + 23 + 3 + 17. What is the total?",
     "answer": 80,
     "easier": "t2",
     "hint": "Which numbers have ones that make 10? Try 8 and 2, then 7 and 3.",
@@ -2863,7 +2889,7 @@
       "d": "10-b",
       "y": "S-x"
      },
-     "q": "Add {a} + {b} + {c} + {x} + {d} + {y}. Look for pairs that make a ten or a tens number.",
+     "q": "Add {a} + {b} + {c} + {x} + {d} + {y}. What is the total?",
      "answer": "40+S",
      "hint": "Which numbers have ones that make 10? Find three pairs.",
      "steps": [
@@ -2877,7 +2903,7 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "Add the numbers 1 to 9: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9. Look for pairs that make 10.",
+    "q": "What is 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1?",
     "answer": 45,
     "easier": "t1",
     "hint": "Pair 1 with 9, then 2 with 8. Which number has no partner?",
@@ -2905,7 +2931,7 @@
     "id": "g3",
     "tier": "challenge",
     "type": "number",
-    "q": "What is the fewest counters you must move to make a ten when you add 7 + 8?",
+    "q": "You add 7 + 8 by filling a ten-frame. What is the fewest number of counters you can move?",
     "answer": 2,
     "easier": "c1",
     "hint": "You can fill the 7 frame or the 8 frame. Which has fewer empty spaces?",
@@ -2941,7 +2967,7 @@
        9
       ]
      },
-     "q": "What is the fewest counters you must move to make a ten when you add {a} + {b}?",
+     "q": "You add {a} + {b} by filling a ten-frame. What is the fewest number of counters you can move?",
      "answer": "10-b",
      "hint": "You can fill the {a} frame or the {b} frame. Which has fewer empty spaces?",
      "steps": [
@@ -2955,7 +2981,7 @@
     "id": "g4",
     "tier": "challenge",
     "type": "selfcheck",
-    "q": "Write a sum of 6 numbers that makes 100. Show the pairs that make a ten or a tens number. Check your total.",
+    "q": "Write a sum of 6 numbers that makes 100. Many answers are right. Check your total.",
     "hint": "Start with a pair that makes 50. Then choose pairs that make 20 and 30.",
     "steps": [
      "Choose three pairs: 50 + 20 + 30 = 100.",
@@ -3015,9 +3041,9 @@
     "id": "M1",
     "title": "Is it always true?",
     "minutes": 4,
-    "tutor": "Mei says: if the ones of two numbers make 10, the total is always a tens number. Try 24 + 16, 38 + 52 and 45 + 25 with your kit. Then try 26 + 36. Is Mei always right?",
-    "rec": "Recording: pause. Try 24 + 16, 38 + 52 and 45 + 25 with your kit. Is the total a tens number?",
-    "answer": "Yes when the ones make exactly 10: 24 + 16 = 40, 38 + 52 = 90, 45 + 25 = 70, because the ones fill one more bar and none are left. 26 + 36 = 62 is not a tens number: 6 and 6 make 12, not 10."
+    "tutor": "Mei says: if the ones of two numbers make 10, the total is a tens number. Try 24 + 16, 38 + 52 and 45 + 25. Then try 26 + 36. What is different?",
+    "rec": "Recording: pause. Try 24 + 16, 38 + 52 and 45 + 25. Is the total a tens number?",
+    "answer": "Yes when the ones make exactly 10: 24 + 16 = 40, 38 + 52 = 90, 45 + 25 = 70, because the ones fill one more bar and none are left. 26 + 36 = 62 is different: the ones are 6 and 6, which make 12, not 10, so the total is not a tens number."
    },
    {
     "id": "M2",
