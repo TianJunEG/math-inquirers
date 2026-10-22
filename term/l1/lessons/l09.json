@@ -61,11 +61,19 @@
   },
   "workbook": {
     "kits": [],
+    "choice_after": 3,
+    "home_hint": "Use your ruler and spare paper.",
     "header": "Length: draw and measure",
     "hint_p1": "Use your ruler and a pencil. Say your answer out loud, then write it.",
     "hint_p3": "Use your ruler and a drawing. Then write how you know. Choose any question, in any order."
   },
   "timing": {
+    "skip_order": [
+      "the quick questions in Remember",
+      "the 12 cm line in Explore round two",
+      "the quick questions in the mini-lesson",
+      "the optional slide"
+    ],
     "parts": [
       {
         "id": "opening",
@@ -1677,7 +1685,7 @@
             "val": "open"
           }
         ],
-        "answer": "Any sensible measure; a new pencil is about 17 to 19 cm. Check: the 0 mark at one end, read the mark at the other end",
+        "answer": "OPEN ANSWER, accept any sensible measure (guess and measure within about 3 cm of each other); a new pencil is about 17 to 19 cm. Check: the 0 mark at one end, read the mark at the other end",
         "val": "open",
         "hint": "Put one end of the pencil at the 0 mark. Keep the ruler straight. Read the mark at the other end. If it is between two marks, choose the closer one.",
         "solution": "Put one end of the pencil on the 0 mark and keep the ruler straight. Read the mark at the other end. A new pencil is usually between 17 and 19 cm. If the tip is between two marks, write the closer one.",
@@ -2002,7 +2010,7 @@
             "val": "open"
           }
         ],
-        "answer": "Any 3 different whole numbers that add up to 20, for example 5, 7 and 8 (5 + 7 + 8 = 20)",
+        "answer": "OPEN ANSWER, accept any 3 different whole numbers that add up to 20, for example 5, 7 and 8 (5 + 7 + 8 = 20)",
         "val": "open",
         "hint": "Pick 3 different numbers and add them. Too small? Make one longer. Too big? Make one shorter. Then draw each piece.",
         "solution": "One answer is 5, 7 and 8: 5 + 7 is 12 and 12 + 8 is 20. Other answers are 3, 8 and 9, or 4, 7 and 9. If the total is not 20, change one piece until it is.",
@@ -2156,7 +2164,7 @@
       "id": "H3",
       "tier": "start",
       "text": "Measure a spoon, a toy and a book to the nearest cm. Write the lengths from shortest to longest.",
-      "answer": "Any three lengths, written from smallest to largest. A grown-up can check one by measuring again",
+      "answer": "OPEN ANSWER, accept any three lengths, written from smallest to largest. A grown-up can check one by measuring again",
       "val": "open",
       "solution": "Put one end at the 0 mark and read the mark at the other end. If the end is between two marks, write the closer one. Then put the numbers in order."
     },
@@ -2172,7 +2180,7 @@
       "id": "H5",
       "tier": "go",
       "text": "At home: draw a path with 3 different straight pieces that is 25 cm long in all. Write each length. A grown-up checks with a ruler.",
-      "answer": "Any 3 different whole numbers that add up to 25, for example 6, 8 and 11 (6 + 8 + 11 = 25)",
+      "answer": "OPEN ANSWER, accept any 3 different whole numbers that add up to 25, for example 6, 8 and 11 (6 + 8 + 11 = 25)",
       "val": "open",
       "solution": "Choose three different numbers that add to 25, draw each piece with the 0 mark at the start, then measure and add to check."
     }
