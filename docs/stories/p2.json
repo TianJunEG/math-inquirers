@@ -1,0 +1,196 @@
+[
+  {
+    "lesson": 1,
+    "name": "Srinivasa Ramanujan",
+    "years": "1887-1920",
+    "country_or_region": "India",
+    "who": "An Indian mathematician who taught himself maths and wrote to a famous professor.",
+    "story": "Srinivasa Ramanujan grew up in India. He had not been to university, but he loved maths and worked on it in his spare time. In 1913 he wrote to the mathematician G. H. Hardy in England to share his ideas. In 1914 he sailed to Cambridge to work with Hardy. Hardy later told a story about a taxi numbered 1729. He said it seemed a dull number. Ramanujan told him it was a very interesting one! (This is Hardy's own telling, so the exact words may differ.)",
+    "link_to_lesson": "Ramanujan loved looking closely at numbers, just as the Digit Detectives look closely at the digits in 3-digit numbers.",
+    "try_it": "Ramanujan's taxi number was 1729. Choose any three of its digits 1, 7, 2 and 9 as digit cards. What is the biggest 3-digit number you can make? What is the smallest?",
+    "try_it_answer": "Biggest: 972 (digits 9, 7, 2). Smallest: 127 (digits 1, 2, 7).",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan",
+      "https://mathshistory.st-andrews.ac.uk/RS/ramanujan_rs.pdf",
+      "https://www.trin.cam.ac.uk/?p=29709",
+      "https://www.britannica.com/print/article/490500",
+      "https://blogs.ams.org/mathgradblog/2013/08/15/ramanujans-taxicab-number/",
+      "https://en.wikipedia.org/wiki/1729_(number)"
+    ],
+    "confidence": "medium",
+    "legend_note": "Taxi story labelled as Hardy's own telling, so exact words may differ.",
+    "icon_idea": "A yellow taxi with the digit cards 1, 7, 2, 9 on its door."
+  },
+  {
+    "lesson": 2,
+    "name": "Carl Friedrich Gauss",
+    "years": "1777-1855",
+    "country_or_region": "Germany",
+    "who": "A German mathematician famous for clever shortcuts with numbers.",
+    "story": "A story often told about young Gauss goes like this. At school in Brunswick, his teacher asked the class to add up the numbers from 1 to 100. Gauss found the answer, 5050, very quickly. He paired 1 with 100, 2 with 99, and so on. Every pair makes 101, and there are 50 pairs. Historians are not sure it happened exactly like this. The oldest written version came after he died and does not give the numbers. But pairing numbers to add faster is real, clever maths!",
+    "link_to_lesson": "Gauss's pairing trick shows that adding can be quick when you spot numbers that make a friendly total, which helps when you add and balance number sentences today.",
+    "try_it": "Use Gauss's pairing trick to add 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10. Which pairs do you make?",
+    "try_it_answer": "Pairs 1+10, 2+9, 3+8, 4+7, 5+6 each make 11. There are 5 pairs, so 5 x 11 = 55.",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Gauss/",
+      "https://www.americanscientist.org/node/870",
+      "https://www.sciencenews.org/article/young-gauss"
+    ],
+    "confidence": "medium",
+    "legend_note": "A story often told about young Gauss ... (historians are not sure it happened exactly like this).",
+    "icon_idea": "A slate with the pairs 1+100 and 2+99 joined by arcs, each labelled 101."
+  },
+  {
+    "lesson": 3,
+    "name": "Eratosthenes of Cyrene",
+    "years": "about 276 BC - about 194 BC (sources differ)",
+    "country_or_region": "Cyrene (now Libya) and Alexandria (Egypt)",
+    "who": "An ancient scholar who ran a great library and gave his name to a number-sorting sieve.",
+    "story": "Eratosthenes lived more than 2,200 years ago. He was born in Cyrene, which is now in Libya. Later he looked after the great library in Alexandria, in Egypt. A way of sorting numbers is named after him, the Sieve of Eratosthenes. You write the numbers in a list. Then you cross out the multiples of 2, then of 3, then of 5, and so on. The numbers left over are called prime numbers. He also used shadows to work out an estimate of how big the Earth is.",
+    "link_to_lesson": "Crossing out multiples in the sieve is skip counting in equal groups, the same idea as rows in an array and the times tables.",
+    "try_it": "Write the numbers 1 to 30. Cross out the multiples of 3 (but not 3 itself), as in the sieve. How many numbers do you cross out? Which are they?",
+    "try_it_answer": "9 numbers: 6, 9, 12, 15, 18, 21, 24, 27, 30.",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Eratosthenes/",
+      "https://encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/eratosthenes-cyrene"
+    ],
+    "confidence": "medium",
+    "legend_note": "",
+    "icon_idea": "A 1 to 30 number grid with the multiples of 2 and 3 crossed out and a few circled numbers left."
+  },
+  {
+    "lesson": 4,
+    "name": "Ada Lovelace",
+    "years": "1815-1852",
+    "country_or_region": "Britain",
+    "who": "A British mathematician who wrote about how a calculating machine could follow steps and weave patterns.",
+    "story": "Ada Lovelace lived in Britain about 200 years ago. Charles Babbage planned a huge calculating machine called the Analytical Engine. It was to follow instructions on cards with holes in them, like the cards used to weave patterns in cloth. In 1843 Ada translated a French article about the machine and added many pages of her own notes. In them she showed, step by step, how the machine could work out a list of special numbers. She wrote that it could weave patterns the way a loom weaves flowers and leaves.",
+    "link_to_lesson": "A loom follows instructions to repeat a pattern, and today you find far places in a repeating pattern by counting in groups.",
+    "try_it": "A loom weaves red, blue, blue, red, blue, blue and keeps repeating. What colour is thread number 12?",
+    "try_it_answer": "Blue. The pattern repeats in groups of 3 and 12 = 4 x 3, so thread 12 is the last in its group, which is blue.",
+    "source_urls": [
+      "https://www.computerhistory.org/babbage/adalovelace/",
+      "https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/26/ada-lovelace-and-the-analytical-engine/",
+      "https://www.sciencefocus.com/future-technology/how-ada-lovelaces-notes-on-the-analytical-engine-created-the-first-computer-program"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A loom with a repeating red, blue, blue thread pattern and a strip of punched cards beside it."
+  },
+  {
+    "lesson": 5,
+    "name": "Muhammad ibn Musa al-Khwarizmi",
+    "years": "about 780 - about 850",
+    "country_or_region": "Worked in Baghdad (now Iraq); probably from Khwarizm (now Uzbekistan)",
+    "who": "A scholar in Baghdad whose book gave algebra its name.",
+    "story": "Al-Khwarizmi lived about 1,200 years ago. He worked in Baghdad, at the House of Wisdom, where scholars studied and translated books. Nobody is sure exactly where he was born. He wrote a famous maths book about finding an unknown number by balancing and moving parts of a problem to the other side. The word algebra comes from the title of that book. The word algorithm, which means a set of steps to follow, comes from his name!",
+    "link_to_lesson": "Mystery number puzzles are the same kind of problem as in his book: find the unknown number with a few careful steps.",
+    "try_it": "I think of a number, double it, then add 3. My answer is 11. Work backwards to find my number.",
+    "try_it_answer": "4. Undo +3: 11 - 3 = 8. Undo doubling: 8 / 2 = 4. Check: 4 x 2 = 8, 8 + 3 = 11.",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/DSB/Al-Khwarizmi.pdf",
+      "https://www.newworldencyclopedia.org/entry/Al-Khwarizmi",
+      "https://www.mscf.uky.edu/~carl/ma330/project2/al-khwa21.html",
+      "https://www.britannica.com/biography/al-Khwarizmi"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A mystery-machine box with a question mark, steps arrows going forwards and an undo arrow going back."
+  },
+  {
+    "lesson": 6,
+    "name": "Leonardo of Pisa (Fibonacci)",
+    "years": "about 1170 - about 1250 (sources differ)",
+    "country_or_region": "Italy (also lived in North Africa, now Algeria)",
+    "who": "An Italian mathematician who taught merchants how to work out prices and change money.",
+    "story": "Fibonacci lived in Italy about 800 years ago. His real name was Leonardo of Pisa. His father worked for merchants at a port in North Africa, in what is now Algeria. Leonardo was taught there and learned the number signs we use today. In 1202 he wrote a book that showed merchants how to work out prices, profit and how to change money from one country to another. People gave him the nickname Fibonacci long after he died. He never used it himself.",
+    "link_to_lesson": "Fibonacci wrote about prices, profit and changing money, just like the buying, paying and change you do on Market Day.",
+    "try_it": "A pen costs $3 and a notebook costs $4. You buy one of each and pay with a $10 note. How much change do you get?",
+    "try_it_answer": "$3. The cost is $3 + $4 = $7, and $10 - $7 = $3.",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/",
+      "https://r-knott.surrey.ac.uk/fibonacci/fibBio.html"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A merchant's market stall with price tags and a small set of coins and a sailing ship behind."
+  },
+  {
+    "lesson": 7,
+    "name": "Ahmes the scribe",
+    "years": "about 1550 BC (date on the papyrus copy; sources differ)",
+    "country_or_region": "Egypt",
+    "who": "An Egyptian scribe who wrote out a famous maths roll about 3,500 years ago.",
+    "story": "Ahmes was a scribe in ancient Egypt, more than 3,500 years ago. He wrote out a long maths roll on papyrus. It has 84 problems and tables for dividing numbers and handling fractions. Egyptian maths often wrote fractions with a 1 on top, like 1/3 and 1/4. Ahmes did not say the ideas were his own. He said he was copying an older work. The roll is now kept in the British Museum in London, and is called the Rhind Papyrus.",
+    "link_to_lesson": "Ahmes's roll shows how people long ago wrote and used fractions, the same fractions you share and compare today.",
+    "try_it": "Share 1 loaf of bread equally among 4 children. What fraction of the loaf does each child get? What fraction do 3 of the children get together?",
+    "try_it_answer": "Each child gets 1/4 of the loaf. Three children get 3/4 together.",
+    "source_urls": [
+      "https://mathshistory.st-andrews.ac.uk/Biographies/Ahmes/",
+      "https://www.britishmuseum.org/collection/object/Y_EA10057",
+      "https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus"
+    ],
+    "confidence": "medium",
+    "legend_note": "",
+    "icon_idea": "A papyrus scroll with a bread loaf cut in 4 equal parts and a reed pen."
+  },
+  {
+    "lesson": 8,
+    "name": "Archimedes of Syracuse",
+    "years": "about 287 BC - 212 BC",
+    "country_or_region": "Syracuse, Sicily (Greek city, now Italy)",
+    "who": "An ancient Greek mathematician who studied shapes such as the ball and the can.",
+    "story": "Archimedes lived in Syracuse, on the island of Sicily, about 2,300 years ago. He studied solid shapes. He wrote about the sphere, which is a ball, and the cylinder, which is a can. He showed that a ball that fits snugly inside a can takes up exactly two thirds of the can. He was so proud of this that he asked for a ball inside a can to be carved on his tomb. Years later, the Roman writer Cicero found the tomb covered in bushes.",
+    "link_to_lesson": "Archimedes loved building and comparing shapes, like the squares, triangles, cubes and nets you work with in Shape Builders today.",
+    "try_it": "A cylinder (a can) has flat faces and one curved face. How many flat faces does it have? How many flat faces does a sphere (a ball) have?",
+    "try_it_answer": "A cylinder has 2 flat faces (top and bottom). A sphere has 0 flat faces.",
+    "source_urls": [
+      "https://math.nyu.edu/Archimedes/Tomb/Cicero.OLD.html",
+      "https://faculty.etsu.edu/gardnerr/3040/Notes-Eves6/Eves6-6-2.pdf",
+      "https://wehd.com/bios/Archimedes.html"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A ball inside a can drawn as a cylinder with a sphere that just touches the sides."
+  },
+  {
+    "lesson": 9,
+    "name": "Katherine Johnson",
+    "years": "1918-2020",
+    "country_or_region": "United States",
+    "who": "An American mathematician who worked out and checked flight paths for NASA.",
+    "story": "Katherine Johnson was born in West Virginia, in the United States, in 1918. She did so well at school that she started high school early. Later she worked for NASA as a human computer, which means a person who does calculations by hand. She worked out flight paths for spacecraft. In 1962, before astronaut John Glenn flew around the Earth, he asked her to check the numbers from the electronic computer. She did, and he said he trusted them if she said they were right. In 2015 she received the Presidential Medal of Freedom.",
+    "link_to_lesson": "Katherine's work depended on getting numbers exactly right and checking them, which is what careful measuring in Measure Masters needs too.",
+    "try_it": "Check like Katherine: one ribbon is 45 cm and another is 38 cm. How long are they joined end to end? Then check your answer with a subtraction.",
+    "try_it_answer": "83 cm. Check: 83 - 38 = 45 cm and 83 - 45 = 38 cm.",
+    "source_urls": [
+      "https://computerhistory.org/profile/katherine-johnson/",
+      "https://www.britannica.com:443/print/article/2089469",
+      "https://www.nasa.gov/?p=431442"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A rocket with a dotted flight path curving round a planet, and a pencil and ruler."
+  },
+  {
+    "lesson": 10,
+    "name": "Maryam Mirzakhani",
+    "years": "1977-2017",
+    "country_or_region": "Iran (also worked in the United States)",
+    "who": "An Iranian mathematician who thought about hard problems by drawing.",
+    "story": "Maryam Mirzakhani grew up in Tehran, in Iran. As a teenager she loved reading and thought she might become a writer. Then she grew to love solving maths problems. She won gold medals at the International Mathematical Olympiad in 1994 and 1995. When she worked on a hard problem, she drew pictures. She filled big sheets of paper with doodles and wrote formulas around them. Her daughter called it painting! In 2014 she became the first woman to win the Fields Medal, a top maths prize.",
+    "link_to_lesson": "Mirzakhani often started a hard problem by drawing it, which is one of the ways to start a puzzle on Challenge Day.",
+    "try_it": "A farm has 5 animals, all hens and cows, and they have 14 legs altogether. Draw the animals to find out how many hens and how many cows.",
+    "try_it_answer": "3 hens and 2 cows. Check: 3 x 2 = 6 legs and 2 x 4 = 8 legs, and 6 + 8 = 14 legs; 3 + 2 = 5 animals.",
+    "source_urls": [
+      "https://stanfordmag.org/contents/virtuoso-professor-saw-the-beauty-of-math",
+      "https://ems.press/content/serial-article-files/9669?nt=1",
+      "https://www.pbs.org/newshour/world/maryam-mirzakhani-groundbreaking-mathematician-fields-medal-winner-dies-40",
+      "https://news.stanford.edu/stories/2017/07/maryam-mirzakhani-stanford-mathematician-and-fields-medal-winner-dies",
+      "https://news.artnet.com/in-brief/maryam-mirzakhani-fields-winner-doodler-79848"
+    ],
+    "confidence": "high",
+    "legend_note": "",
+    "icon_idea": "A large sheet of paper covered in doodles and a pencil."
+  }
+]

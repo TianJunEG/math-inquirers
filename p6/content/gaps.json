@@ -1,192 +1,242 @@
 {
  "1": {
-  "check": [
-   [
-    "A taxi charges $3 to start plus $2 for every km. The fares are $5 for 1 km, $7 for 2 km and $9 for 3 km. What is the fare for 20 km?",
-    "$43. Each km adds $2, so the fare is 2 × 20 + 3 = 43. (Not 2 × 20 = 40: the $3 start charge is there from the beginning.)"
-   ],
-   [
-    "Is 50 a term of 7, 12, 17, 22, …? How do you know?",
-    "No. The rule is 5n + 2. 50 − 2 = 48 is not a multiple of 5. (Every term ends in 2 or 7, and 50 ends in 0.)"
-   ]
-  ],
   "inv": {
    "kind": "What if we change ...? What stays the same?",
    "title": "Open investigation: What if we change the shape?",
    "q": "Triangles in a row use 3, 5, 7, … sticks (the rule is 2n + 1). What if we join squares in a row, or pentagons, or hexagons, sharing one side each time? Pick a shape. Draw patterns 1, 2 and 3, make a table and find the rule. What changed? What stayed the same?",
-   "a": "Regular shapes with k sides joined along one side each time use (k − 1) × n + 1 sticks: triangles 2n + 1, squares 3n + 1, pentagons 4n + 1, hexagons 5n + 1. What changes: the number added each time, which is always one less than the number of sides because a side is shared. What stays the same: the rule has the form (something) × n + 1, and pattern 1 is the single shape (k sticks). Look for: a table, the difference named, a check of the rule on pattern 1 and one more pattern, and a reason for the sharing. Any shape chosen is valid. Stretch: a child may write the rule for any k, or test it in code (set s to k, repeat n − 1 [change s by k − 1])."
+   "a": "Regular shapes with k sides joined along one side each time use (k − 1) × n + 1 sticks: triangles 2n + 1, squares 3n + 1, pentagons 4n + 1, hexagons 5n + 1. What changes: the number added each time, which is always one less than the number of sides because a side is shared. What stays the same: the rule has the form (something) × n + 1, and pattern 1 is the single shape (k sticks). Look for: a table, the difference named, a check of the rule on pattern 1 and one more pattern, and a reason for the sharing. Any shape chosen is valid. Stretch: a child may write the rule for any k, or test it in code (set s to k, repeat n − 1 [change s by k − 1]).",
+   "first": "First step: draw 3 squares in a row and count the sticks."
   },
-  "reflectEx": "you counted the jumps"
- },
- "2": {
-  "check": [
+  "reflectEx": "you counted the jumps",
+  "sneak": [
    [
-    "A tutor wants to split 31 children into equal teams, with more than 1 child in each team and more than 1 team. Is that possible? Why?",
-    "No. 31 is prime: its only factors are 1 and 31, so the only equal groups are 1 team of 31 or 31 teams of 1."
+    "Matchsticks make triangles in a row: 1 triangle uses 3 sticks, 2 triangles use 5 sticks, 3 triangles use 7 sticks. Draw or build 4 triangles in a row. How many sticks?",
+    "9 sticks. Each new triangle adds 2 more sticks (3, 5, 7, 9). Any child can draw it and count."
    ],
    [
-    "Which has more factors, 36 or 37? How do you know?",
-    "36 has 9 factors (1, 2, 3, 4, 6, 9, 12, 18, 36). 37 is prime and has only 2 (1 and 37). A bigger number does not mean more factors."
+    "A taxi charges $3 to start plus $2 for every km. What is the fare for 20 km?",
+    "$43. Each km adds $2, so 2 × 20 + 3 = 43. (Not 2 × 20 = 40: the $3 start charge is there from the beginning.) A guess or “I do not know” is fine; we will learn how today."
    ]
   ],
+  "go": [
+   "What if each shape in the row were a SQUARE, sharing one side with the next? Predict how many sticks 10 squares in a row need. Then test pattern 3 by drawing.",
+   "31 sticks. The first square uses 4 sticks and each new square adds 3: 4 + 3 × 9 = 31, or 3 × 10 + 1."
+  ]
+ },
+ "2": {
   "inv": {
    "kind": "Is it always true? Test and explain",
    "title": "Open investigation: Is it always true?",
    "q": "Ali says: “If you add two different primes, the answer is never a prime.” Test him. List every pair of different primes below 20 and add them. Is Ali right? What do you notice about the pairs that do make a prime? Explain why.",
-   "a": "Ali is wrong. The primes below 20 are 2, 3, 5, 7, 11, 13, 17, 19, giving 28 pairs. Exactly four sums are prime: 2 + 3 = 5, 2 + 5 = 7, 2 + 11 = 13, 2 + 17 = 19. Every one of them uses the prime 2. Why: two odd primes add to an even number bigger than 2, which has 2 as a factor, so it is not prime. 2 is the only even prime, so only a pair with 2 can give an odd sum, and then the sum is prime only if the other prime plus 2 is also prime (3, 5, 11, 17 work; 7, 13, 19 do not). Look for: a systematic list of all 28 pairs, the spot of the number 2, a reason using odd and even. One counter-example is enough to show “never” is false."
+   "a": "Ali is wrong. The primes below 20 are 2, 3, 5, 7, 11, 13, 17, 19, giving 28 pairs. Exactly four sums are prime: 2 + 3 = 5, 2 + 5 = 7, 2 + 11 = 13, 2 + 17 = 19. Every one of them uses the prime 2. Why: two odd primes add to an even number bigger than 2, which has 2 as a factor, so it is not prime. 2 is the only even prime, so only a pair with 2 can give an odd sum, and then the sum is prime only if the other prime plus 2 is also prime (3, 5, 11, 17 work; 7, 13, 19 do not). Look for: a systematic list of all 28 pairs, the spot of the number 2, a reason using odd and even. One counter-example is enough to show “never” is false.",
+   "first": "First step: write down all the prime numbers below 20."
   },
-  "reflectEx": "you listed the factors in pairs"
- },
- "3": {
-  "check": [
+  "reflectEx": "you listed the factors in pairs",
+  "sneak": [
    [
-    "A freezer is at −18 °C and a fridge is at 4 °C. How many degrees warmer is the fridge than the freezer?",
-    "22 degrees. From −18 up to 0 is 18, then 4 more: 18 + 4 = 22. A number line drawing shows it."
+    "Take 12 counters (or draw 12 dots). Make equal rows, for example 3 rows of 4. Find every way to make equal rows with all 12 counters.",
+    "1 row of 12, 2 rows of 6, 3 rows of 4 (and the same turned round: 4 rows of 3, 6 rows of 2, 12 rows of 1). Counting and drawing is enough."
    ],
    [
-    "A sprite is at x = −40. It runs “change x by 25”, then “change x by −60”. Where does it end up?",
-    "x = −75. −40 + 25 = −15, then −15 − 60 = −75. The sprite is left of zero, and further left than where it started."
+    "Could you make equal rows (more than 1 row and more than 1 counter in each row) with exactly 31 counters? What do you think? Why?",
+    "No. 31 only makes 1 row of 31 or 31 rows of 1, because 31 is prime (its only factors are 1 and 31). Children may guess; accept any reason and say we will find out how to be sure."
    ]
   ],
+  "go": [
+   "What if the grid went up to 120? Predict which new numbers after 100 will be prime. Which multiples do you need to cross out now: do you need the multiples of 11?",
+   "101, 103, 107, 109 and 113. You still only need the multiples of 2, 3, 5 and 7, because 11 × 11 = 121 is bigger than 120."
+  ]
+ },
+ "3": {
   "inv": {
    "kind": "Find all the ways",
    "title": "Open investigation: Find all the pairs",
    "q": "Here are some numbers: −5, −3, −1, 0, 2, 4, 6. Find ALL the pairs (a, b) from the list with a − b = 7. Mark each pair on a number line. What do you notice? Then try again with a − b = 3.",
-   "a": "a − b = 7: (2, −5), (4, −3) and (6, −1): exactly three pairs (checked by trying every pair in the list). On the number line each pair is the same distance, 7, apart: the same jump slid along the line. a − b = 3: (0, −3) and (2, −1): two pairs. What stays the same: the gap between a and b. Look for: a systematic search (take each b and ask what a would be, then check a is on the list), a jump drawn on a number line, and the idea that “difference” means distance. Children who say (7, 0) have gone outside the list: ask “is 7 on the list?”."
+   "a": "a − b = 7: (2, −5), (4, −3) and (6, −1): exactly three pairs (checked by trying every pair in the list). On the number line each pair is the same distance, 7, apart: the same jump slid along the line. a − b = 3: (0, −3) and (2, −1): two pairs. What stays the same: the gap between a and b. Look for: a systematic search (take each b and ask what a would be, then check a is on the list), a jump drawn on a number line, and the idea that “difference” means distance. Children who say (7, 0) have gone outside the list: ask “is 7 on the list?”.",
+   "first": "First step: draw a number line from −5 to 6. Pick a = 2 and ask: what number b makes 2 − b = 7?"
   },
-  "reflectEx": "you drew a number line"
- },
- "4": {
-  "check": [
+  "reflectEx": "you drew a number line",
+  "sneak": [
    [
-    "A phone plan costs $10 a month plus $3 for every GB of data. Write the cost for n GB, then find the cost for 7 GB.",
-    "Cost = 3n + 10. For 7 GB: 3 × 7 + 10 = $31."
+    "It is 3 °C outside. The temperature falls by 5 degrees. Draw a thermometer or a number line. What is the temperature now?",
+    "−2 °C (3 down to 0 is 3 degrees, then 2 more below zero). A drawn thermometer or number line shows it."
    ],
    [
-    "One month the same plan cost $52. How many GB were used?",
-    "14 GB. Undo the + 10 first: 52 − 10 = 42. Then undo the × 3: 42 ÷ 3 = 14. Check: 3 × 14 + 10 = 52."
+    "A freezer is at −18 °C and a fridge is at 4 °C. How many degrees warmer is the fridge than the freezer?",
+    "22 degrees. From −18 up to 0 is 18, then 4 more: 18 + 4 = 22. A number line drawing shows it. Guessing is fine."
    ]
   ],
+  "go": [
+   "What if the thermometer program starts at 5 and repeats 20 times (change temp by −3 each time)? Predict the last number. Which repeat number first gives a number below −30?",
+   "−55 (5 − 3 × 20). Below −30 first happens at repeat 12: 5 − 36 = −31 (repeat 11 gives −28)."
+  ]
+ },
+ "4": {
   "inv": {
    "kind": "Find all the ways",
    "title": "Open investigation: Find all the machines",
    "q": "A machine does “× a number, then + a number”. Use whole numbers: the × number is from 1 to 9 and the + number is from 0 to 9. Find ALL the machines that turn IN 4 into OUT 17. What pattern do you spot in your answers? Then try IN 4 and OUT 21.",
-   "a": "IN 4, OUT 17: × 2 then + 9, × 3 then + 5, × 4 then + 1. (× 1 would need + 13, too big; × 5 would need −3, not allowed.) That is exactly three machines. Pattern: when the × number goes up by 1, the + number goes down by 4, because IN is 4 and the total must stay 17. IN 4, OUT 21: × 3 then + 9, × 4 then + 5, × 5 then + 1: again three machines, again down by 4. Look for: a table of × number and + number, a systematic order (try × 1, × 2, × 3, …), and the explanation of the “down by 4”. Stretch: a different IN gives a different step (IN 5 steps by 5)."
+   "a": "IN 4, OUT 17: × 2 then + 9, × 3 then + 5, × 4 then + 1. (× 1 would need + 13, too big; × 5 would need −3, not allowed.) That is exactly three machines. Pattern: when the × number goes up by 1, the + number goes down by 4, because IN is 4 and the total must stay 17. IN 4, OUT 21: × 3 then + 9, × 4 then + 5, × 5 then + 1: again three machines, again down by 4. Look for: a table of × number and + number, a systematic order (try × 1, × 2, × 3, …), and the explanation of the “down by 4”. Stretch: a different IN gives a different step (IN 5 steps by 5).",
+   "first": "First step: try × 2. Then 4 × 2 = 8. What must be added to 8 to make 17?"
   },
-  "reflectEx": "you tried a number and checked"
- },
- "5": {
-  "check": [
+  "reflectEx": "you tried a number and checked",
+  "sneak": [
    [
-    "A café meal is 1 bread (3 kinds), 1 filling (4 kinds) and 1 drink (2 kinds). How many different meals are there?",
-    "24 meals: 3 × 4 × 2. Choices made one after another multiply. Tree or list: fix the bread, then the filling, then the drink."
+    "A number machine adds 3 to every number you put in. Put in 4, then 7, then 10. What comes out each time? (Count on with objects or your fingers if you like.)",
+    "7, 10 and 13. Every OUT is 3 more than IN."
    ],
    [
-    "5 chess clubs each play every other club once. How many games? Why is the answer not 5 × 4?",
-    "10 games. 5 × 4 = 20 counts every game twice (A against B is the same game as B against A), so halve it: 20 ÷ 2 = 10."
+    "Another machine multiplies by 3, then adds 10. The OUT is 52. What was the IN?",
+    "14. Undo the + 10 first: 52 − 10 = 42. Then undo the × 3: 42 ÷ 3 = 14. Check: 3 × 14 + 10 = 52. Guessing and checking is fine."
    ]
   ],
+  "go": [
+   "What if a machine gives OUT 11 when IN is 3, and OUT 19 when IN is 5? Predict its rule, then try your rule on both pairs. Then find the OUT for IN 10.",
+   "4n − 1. IN goes up by 2 and OUT goes up by 8, so the × part is 4; 4 × 3 = 12 is 1 too big, so − 1. OUT for IN 10 is 39."
+  ]
+ },
+ "5": {
   "inv": {
    "kind": "Find all the ways",
    "title": "Open investigation: Find all the ways",
    "q": "Pay exactly 50 cents using only 5-cent, 10-cent and 20-cent coins (as many of each as you like). Find ALL the ways. Show how you made sure you did not miss one or count one twice. What if there is also a 50-cent coin?",
-   "a": "There are 12 ways. Sort by the number of 20-cent coins. Two 20c: the other 10c is 10c or 5c + 5c: 2 ways. One 20c: the other 30c with 10c and 5c coins: 3×10, 2×10 + 2×5, 1×10 + 4×5, 6×5: 4 ways. No 20c: 50c with 10c and 5c coins: 5×10, 4×10 + 2×5, 3×10 + 4×5, 2×10 + 6×5, 1×10 + 8×5, 10×5: 6 ways. Total 2 + 4 + 6 = 12 (checked by brute force). With a 50c coin there is one more way, 13. Look for: an organised list (fix the biggest coin first), a table, no repeats, and a check. Do not accept a list that is only “some ways”."
+   "a": "There are 12 ways. Sort by the number of 20-cent coins. Two 20c: the other 10c is 10c or 5c + 5c: 2 ways. One 20c: the other 30c with 10c and 5c coins: 3×10, 2×10 + 2×5, 1×10 + 4×5, 6×5: 4 ways. No 20c: 50c with 10c and 5c coins: 5×10, 4×10 + 2×5, 3×10 + 4×5, 2×10 + 6×5, 1×10 + 8×5, 10×5: 6 ways. Total 2 + 4 + 6 = 12 (checked by brute force). With a 50c coin there is one more way, 13. Look for: an organised list (fix the biggest coin first), a table, no repeats, and a check. Do not accept a list that is only “some ways”.",
+   "first": "First step: list every way to pay 50 cents that uses two 20-cent coins."
   },
-  "reflectEx": "you listed them in order"
- },
- "6": {
-  "check": [
+  "reflectEx": "you listed them in order",
+  "sneak": [
    [
-    "A spinner has 8 equal sections: 3 red and 5 blue. What is the chance of blue? Would “red wins / blue wins” be a fair game?",
-    "5/8. Not fair: red has 3/8, blue has 5/8, so blue wins more often. A fair game needs the same chance for both players."
+    "You have 2 tops (red, blue) and 3 pairs of shorts (black, white, grey). Draw or list every different outfit (1 top and 1 pair of shorts). How many outfits?",
+    "6 outfits: red-black, red-white, red-grey, blue-black, blue-white, blue-grey. A drawing or an organised list works."
    ],
    [
-    "Flip two coins. Ali wins if both coins match; Mei wins if they differ. Is that fair? List the outcomes.",
-    "Fair. The four outcomes are HH, HT, TH, TT. Match: HH and TT (2 out of 4). Differ: HT and TH (2 out of 4). Both 1/2."
+    "5 chess clubs each play every other club once. How many games is that? Is it 5 × 4?",
+    "10 games. 5 × 4 = 20 counts every game twice (A against B is the same game as B against A), so halve it. Guessing is fine."
    ]
   ],
+  "go": [
+   "What if the shop had 3 teas, 3 sizes (S, M, L) and 3 toppings? Predict how many different orders. Then write how you would check with a list or a loop.",
+   "27 orders (3 × 3 × 3). Fix the tea, then the size, then the topping: three loops inside each other, or a tree with three layers."
+  ]
+ },
+ "6": {
   "inv": {
    "kind": "Is it always true? Test and explain",
    "title": "Open investigation: Is it always true?",
    "q": "Ali says: “A game with only two outcomes is always fair.” Test him on three games. (1) Flip a coin: heads or tails. (2) Roll a dice: six or not six. (3) Roll two dice: total 7 or not 7. Which games are fair? Is Ali right? Change one unfair game to make it fair.",
-   "a": "Ali is wrong. (1) Coin: 1/2 and 1/2, fair. (2) Dice: six has 1/6, not six has 5/6, unfair. (3) Two dice: a total of 7 has 6 out of 36 = 1/6, not 7 has 30 out of 36 = 5/6, unfair. Two outcomes is not the same as two EQUAL chances. Fair means every player has the same probability. Fixes: dice, 1 to 3 against 4 to 6; two dice, even total against odd total (18 out of 36 each, checked by listing all 36). Look for: a list or table of outcomes for game 3, probabilities as fractions, and the idea that one counter-example (game 2) is enough."
+   "a": "Ali is wrong. (1) Coin: 1/2 and 1/2, fair. (2) Dice: six has 1/6, not six has 5/6, unfair. (3) Two dice: a total of 7 has 6 out of 36 = 1/6, not 7 has 30 out of 36 = 5/6, unfair. Two outcomes is not the same as two EQUAL chances. Fair means every player has the same probability. Fixes: dice, 1 to 3 against 4 to 6; two dice, even total against odd total (18 out of 36 each, checked by listing all 36). Look for: a list or table of outcomes for game 3, probabilities as fractions, and the idea that one counter-example (game 2) is enough.",
+   "first": "First step: flip a coin 10 times and tally heads and tails. Is a coin fair? Say why."
   },
-  "reflectEx": "you listed every outcome"
- },
- "7": {
-  "check": [
+  "reflectEx": "you listed every outcome",
+  "sneak": [
    [
-    "A turtle goes once round a closed shape with equal turns of 40° and ends up facing the way it started. How many corners does the shape have?",
-    "9 corners. The turtle turns 360° altogether and each turn is 40°, so 360 ÷ 40 = 9."
+    "A bag has 3 red counters and 5 blue counters. Draw the bag. Without looking, you pick one counter. Which colour is more likely? Why?",
+    "Blue, because there are more blue counters (5 out of 8) than red (3 out of 8). Drawing the counters is enough."
    ],
    [
-    "A turtle goes round a closed shape with 4 corners. The first three turns are 90°, 120° and 60°. What is the fourth turn?",
-    "90°. Going once round, the turns add up to 360°. 90 + 120 + 60 = 270, and 360 − 270 = 90."
+    "Flip two coins. Ali wins if both coins match (two heads or two tails). Mei wins if they are different. Do you think the game is fair? List every way the two coins can land.",
+    "Fair. The four outcomes are HH, HT, TH, TT. Match: HH and TT (2 out of 4). Different: HT and TH (2 out of 4). A guess is welcome; the list decides."
    ]
   ],
+  "go": [
+   "What if A wins on totals 2 to 6 and B wins on totals 7 to 12? Predict who wins more often. Play 10 rounds, then explain using the 36 outcomes.",
+   "B is more likely: totals 7 to 12 can be made in 21 of the 36 ways, totals 2 to 6 in only 15 (so 21/36 = 7/12 against 15/36 = 5/12). The game is not fair."
+  ]
+ },
+ "7": {
   "inv": {
    "kind": "What if we change ...? What stays the same?",
    "title": "Open investigation: What if the turn changes?",
    "q": "A turtle repeats [move 100, turn ↻ t] until it first faces the way it started. Make a table for t = 40, 72, 90, 100, 120, 144 and 150: how many repeats, and how many times does it go round? Add up the turns to check. What changes when t changes? What stays the same?",
-   "a": "Repeats and times round: 40: 9 and 1; 72: 5 and 1; 90: 4 and 1; 100: 18 and 5; 120: 3 and 1; 144: 5 and 2; 150: 12 and 5 (every row checked by brute force). Changes: the number of repeats and the shape (polygon or star). Stays the same: the turns always add up to a whole number of full turns, repeats × t = 360 × times round. When t divides 360 the turtle goes round once and draws a polygon; otherwise it goes round more than once and draws a star. Look for: adding the turns until the total is a multiple of 360, a table, and the link repeats = 360 × rounds ÷ t. Children do not need to test every row in Scratch: a few are enough."
+   "a": "Repeats and times round: 40: 9 and 1; 72: 5 and 1; 90: 4 and 1; 100: 18 and 5; 120: 3 and 1; 144: 5 and 2; 150: 12 and 5 (every row checked by brute force). Changes: the number of repeats and the shape (polygon or star). Stays the same: the turns always add up to a whole number of full turns, repeats × t = 360 × times round. When t divides 360 the turtle goes round once and draws a polygon; otherwise it goes round more than once and draws a star. Look for: adding the turns until the total is a multiple of 360, a table, and the link repeats = 360 × rounds ÷ t. Children do not need to test every row in Scratch: a few are enough.",
+   "first": "First step: a turtle repeats [move 100, turn 90]. How many repeats until it faces the way it started?"
   },
-  "reflectEx": "you added up the turns"
- },
- "8": {
-  "check": [
+  "reflectEx": "you added up the turns",
+  "sneak": [
    [
-    "It is 8 o’clock. What time will it be 30 hours later, on a 12-hour clock? How do you know?",
-    "2 o’clock. 8 + 30 = 38, and 38 mod 12 = 2 (38 = 3 × 12 + 2). Or: 24 hours later is 8 again, then 6 more hours is 2."
+    "Stand up. Face the door. Turn a quarter turn to your right (clockwise). Do that 4 times in a row. Which way are you facing at the end? What did your body do in total?",
+    "Facing the door again. Four quarter turns make one full turn (4 × 90° = 360°). Children who cannot stand can use an arm or a drawing of an arrow."
    ],
    [
-    "Today is Wednesday. What day of the week will it be in 100 days?",
-    "Friday. 100 mod 7 = 2 (98 is 14 full weeks), so move 2 days on from Wednesday: Thursday, Friday."
+    "A turtle goes once round a closed shape and turns 40° at every corner (all the turns equal). How many corners does the shape have?",
+    "9 corners. The turtle turns 360° altogether and each turn is 40°, so 360 ÷ 40 = 9. A guess is welcome."
    ]
   ],
+  "go": [
+   "What if you want a regular shape with 8 sides (an octagon)? Predict the turn. Then test it in Scratch with repeat 8. What about 10 sides?",
+   "45° for 8 sides (360 ÷ 8) and 36° for 10 sides (360 ÷ 10)."
+  ]
+ },
+ "8": {
   "inv": {
    "kind": "Is it always true? Test and explain",
    "title": "Open investigation: Is it always true?",
    "q": "Code the word CAT with a shift of 8. Then code your answer with a shift of 18. What do you get? Try two other shifts that add up to 26. (a) Is it always true that two such shifts undo each other? Explain. (b) Is there a shift that is its own decoder, so that coding twice gives back the original? Find ALL of them.",
-   "a": "CAT with shift 8 is KIB (C 2 → 10, A 0 → 8, T 19 → 27 mod 26 = 1). KIB with shift 18 is CAT again. (a) Yes: shifting by a and then by 26 − a moves every letter 26 places in total, a full circle round the alphabet, so each letter lands where it started. (b) Only shift 13: 13 + 13 = 26. No other shift from 1 to 25 works because 2 × shift would have to be a multiple of 26 (checked by brute force). Look for: the two worked examples, the “26 is a full circle” idea, and a systematic check for (b). Note 13 is the code known as ROT13."
+   "a": "CAT with shift 8 is KIB (C 2 → 10, A 0 → 8, T 19 → 27 mod 26 = 1). KIB with shift 18 is CAT again. (a) Yes: shifting by a and then by 26 − a moves every letter 26 places in total, a full circle round the alphabet, so each letter lands where it started. (b) Only shift 13: 13 + 13 = 26. No other shift from 1 to 25 works because 2 × shift would have to be a multiple of 26 (checked by brute force). Look for: the two worked examples, the “26 is a full circle” idea, and a systematic check for (b). Note 13 is the code known as ROT13.",
+   "first": "First step: code the letter C with shift 8. Then shift your answer by 18. Where do you land?"
   },
-  "reflectEx": "you wrote out the alphabet"
- },
- "9": {
-  "check": [
+  "reflectEx": "you wrote out the alphabet",
+  "sneak": [
    [
-    "The mean of 4 numbers is 10. Three of them are 6, 9 and 15. What is the fourth number?",
-    "10. The total must be 4 × 10 = 40. 6 + 9 + 15 = 30, and 40 − 30 = 10."
+    "A clock shows 8 o’clock. What time is it 5 hours later? Use a clock drawing or count on with your fingers.",
+    "1 o’clock (8, 9, 10, 11, 12, 1). Counting on round the clock face works."
    ],
    [
-    "Five friends have pocket money $2, $3, $3, $4 and $38. The mean is $10. Is $10 a good description of what a friend typically has? Which average is better?",
-    "No: only one friend has more than $4. The median ($3) or the mode ($3) describes a typical friend better. One extreme value pulls the mean up."
+    "Today is Wednesday. What day of the week will it be in 100 days? What do you think? How could you find out?",
+    "Friday. 100 ÷ 7 leaves remainder 2 (98 is 14 full weeks), so move 2 days on from Wednesday: Thursday, Friday. Guessing and “I do not know” are fine."
    ]
   ],
+  "go": [
+   "What if the shift is 13? Code the word HELLO with shift 13. Then code your answer with shift 13 again. What do you notice? Predict first.",
+   "HELLO becomes URYYB, and coding URYYB with shift 13 gives HELLO again. Two shifts of 13 make 26, a full circle of the alphabet."
+  ]
+ },
+ "9": {
   "inv": {
    "kind": "What if we change ...? What stays the same?",
    "title": "Open investigation: What if one number changes?",
    "q": "Data: 4, 6, 7, 9, 14. Find the mean, the median and the mode (is there one?). Now change the 14 to 24, then change it to 4, then to 7. Make a table of the mean, median and mode each time. What changes? What stays the same? Can you change TWO numbers and keep the mean the same?",
-   "a": "Original: mean 8, median 7, no mode. 14 to 24: mean 10, median 7, no mode. 14 to 4: mean 6, median 6, mode 4. 14 to 7: mean 6.6, median 7, mode 7 (all by computation). The mean changes every time because it uses every value. The median stayed 7 for 24 and 7 but fell to 6 for 4, because the order changed and a different number became the middle one. The median only cares about the middle; the mode appeared only when a value repeated. Two numbers: change one up by k and another down by k, for example 4 to 6 and 14 to 12; the total stays 40 and the mean stays 8. Look for: totals used, the middle found after re-ordering, and a reason for each change."
+   "a": "Original: mean 8, median 7, no mode. 14 to 24: mean 10, median 7, no mode. 14 to 4: mean 6, median 6, mode 4. 14 to 7: mean 6.6, median 7, mode 7 (all by computation). The mean changes every time because it uses every value. The median stayed 7 for 24 and 7 but fell to 6 for 4, because the order changed and a different number became the middle one. The median only cares about the middle; the mode appeared only when a value repeated. Two numbers: change one up by k and another down by k, for example 4 to 6 and 14 to 12; the total stays 40 and the mean stays 8. Look for: totals used, the middle found after re-ordering, and a reason for each change.",
+   "first": "First step: find the mean of 4, 6, 7, 9 and 14 (add them up, then share equally)."
   },
-  "reflectEx": "you re-ordered the numbers"
- },
- "10": {
-  "check": [
+  "reflectEx": "you re-ordered the numbers",
+  "sneak": [
    [
-    "The sequence 4, 9, 14, 19, … goes on. Is 2026 a term? How do you know?",
-    "No. The rule is 5n − 1, so 2026 + 1 = 2027 would have to be a multiple of 5, and it is not. (Every term ends in 4 or 9.)"
+    "Four friends have 2, 4, 4 and 6 stickers. Use counters to share the stickers out so that every friend has the same number. How many does each friend get?",
+    "4 each. Total 16 stickers, shared between 4 friends. (This is the “fair share” idea behind the mean.)"
    ],
    [
-    "Make 2-letter codes from A, B, C and D using different letters, where AB and BA count as different codes. How many codes are there?",
-    "12. 4 choices for the first letter and 3 for the second: 4 × 3 = 12. List: AB, AC, AD, BA, BC, BD, CA, CB, CD, DA, DB, DC."
+    "Five friends have $2, $3, $3, $4 and $38. If they shared it all equally, each would get $10. Is $10 a good description of what a typical friend has? Why or why not?",
+    "No: four of the five friends have $4 or less. One very large amount pulls the equal share up. The middle value ($3) says more about a typical friend. Guesses are welcome."
    ]
   ],
+  "go": [
+   "What if you add a very small value, 1, to the list instead of 30? Predict: does the mean go up or down? Does the median change? Test it and explain.",
+   "The mean goes down (1 is below the other values, which are name lengths of about 8 or more). The median moves only to the next value along, so it changes by much less than the mean. One extreme value pulls the mean more than the median."
+  ]
+ },
+ "10": {
   "inv": {
    "kind": "Find all the ways",
    "title": "Open investigation: Primes in a sequence",
    "q": "The sequence 4, 11, 18, 25, … has the rule 7n − 3. Find ALL the prime numbers in this sequence up to 100. Show your list of terms and how you tested each one. Then explain why no term of the sequence is a multiple of 7.",
-   "a": "The terms up to 100 are 4, 11, 18, 25, 32, 39, 46, 53, 60, 67, 74, 81, 88, 95 (14 terms). The primes are 11, 53 and 67 (checked by brute force); the others are even or have a factor 3, 5 or 13 (25 = 5 × 5, 39 = 3 × 13, 81 = 9 × 9, 95 = 5 × 19). No term is a multiple of 7 because 7n is a multiple of 7, and 7n − 3 is 3 less, so dividing by 7 always leaves remainder 4. Look for: the full list, a test for every term using small primes, and the remainder reasoning. Stretch: change the rule to 7n + 1 and repeat."
+   "a": "The terms up to 100 are 4, 11, 18, 25, 32, 39, 46, 53, 60, 67, 74, 81, 88, 95 (14 terms). The primes are 11, 53 and 67 (checked by brute force); the others are even or have a factor 3, 5 or 13 (25 = 5 × 5, 39 = 3 × 13, 81 = 9 × 9, 95 = 5 × 19). No term is a multiple of 7 because 7n is a multiple of 7, and 7n − 3 is 3 less, so dividing by 7 always leaves remainder 4. Look for: the full list, a test for every term using small primes, and the remainder reasoning. Stretch: change the rule to 7n + 1 and repeat.",
+   "first": "First step: write the first 5 terms of the sequence 7n − 3 (4, 11, 18, ...)."
   },
-  "reflectEx": "you broke the problem into smaller parts"
+  "reflectEx": "you broke the problem into smaller parts",
+  "sneak": [
+   [
+    "Count on in 5s from 4: 4, 9, 14, 19, … Write the next three numbers.",
+    "24, 29 and 34. Any child can count on."
+   ],
+   [
+    "The list 4, 9, 14, 19, … carries on forever. Is 2026 in the list? What do you think? How could you tell?",
+    "No. Every number in the list ends in 4 or 9 (it is 1 less than a multiple of 5), and 2026 ends in 6. A guess is welcome; today’s challenge round uses ideas like this."
+   ]
+  ],
+  "go": [
+   "What if the hexagon puzzle used PENTAGONS joined along one side? Find the rule for the sticks and say how many pentagons use 101 sticks.",
+   "4n + 1 sticks (a pentagon needs 5 sticks and each new one adds 4). 101 sticks: 4n + 1 = 101, so n = 25 pentagons."
+  ]
  }
 }
