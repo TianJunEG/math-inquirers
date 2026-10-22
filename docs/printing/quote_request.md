@@ -31,3 +31,24 @@ Hello, we are a small maths enrichment program in Singapore and would like a quo
 5. Sample: can we order one sample of Level 1 (and one of Level 4) to check quality before we commit?
 
 Thank you.
+
+---
+
+## Term books (Level 1 and later levels): the standard paid-term issue
+
+Printing is triggered by payment. Each paid term, the child receives that term's combined workbook books (printed, no extension workbooks). Answer keys are for tutors only and are never part of the child set. Files are made by `python3 print/make_term_books.py` from `term/l<L>/out/` and written to `outputs/print/term/` (same rules as the level workbooks: A4, colour, double-sided, flip on the long edge, bound on the LEFT with a mirrored 12 mm gutter, even page count, blank pages are intentional).
+
+**Quantities per paid child per term:** Level 1 Term 1 = 1 x Book 1 + 1 x Book 2; Level 1 Term 2 = 1 x Book 3 + 1 x Book 4 (2 books per child per term, 4 per child for a full year). Tutor answer keys: 1 set per tutor, not per child. The home-practice pack is optional (it is a separate stapled pack of loose sheets; the same sheets can be issued digitally).
+
+**Spec (all books):** A4, 100 to 120 gsm (please quote both), full colour both sides, spiral or wire-o on the left long edge, quote (a) first page as cover and (b) clear front cover and card back. Kit (cut-out) pages have a blank back and a dashed tear line in the left margin; please keep blank pages. Optional: perforation along the dashed tear line on kit pages (please quote).
+
+| File (outputs/print/term/) | Pages | Sheets | Issued to |
+|---|---|---|---|
+| L1_T1_Book1_Lessons01-05_Workbook | 46 | 23 | child, Term 1 |
+| L1_T1_Book2_Lessons06-10_Workbook | 40 | 20 | child, Term 1 |
+| L1_T2_Book3_Lessons11-15_Workbook | 44 | 22 | child, Term 2 |
+| L1_T2_Book4_Lessons16-20_Workbook | 42 | 21 | child, Term 2 |
+| Book1-4 AnswerKey_TUTOR | 18 / 18 / 18 / 16 | 9 / 9 / 9 / 8 | tutor only |
+| Book1-4 HomePack (optional) | 12 each | 6 each | loose, stapled |
+
+Page counts follow the current lesson builds; re-run the script (and re-check `term_books_spec.json`) after any rebuild before sending a quote.
