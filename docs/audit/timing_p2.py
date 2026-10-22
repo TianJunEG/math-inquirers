@@ -140,7 +140,7 @@ def lesson_model(n, D, sc, fix=None):
     ex_trans = n_ex_sl * S['slide'] + 2 * S['breakout'] * g('ex_breakout_scale', 1.0) + g('ex_mat', hp['ex_mat']) * S['matx']
     add('explore', 'Explore 8-20', 12, speak=ex_speak, wait=ex_wait, act=ex_act, trans=ex_trans)
     # 5 Mini-lesson: slides from teach1 to key, with optional drops/merges/additions
-    i0 = ids.index('teach1'); i1 = ids.index('key')
+    i0 = ids.index('teach1') if 'teach1' in ids else ids.index('explore2') + 1; i1 = ids.index('key')   # L10: teach1 was dropped in the re-budget
     mini = [s for s in sl[i0:i1 + 1] if s[0] not in g('mini_drop', [])] + [byid[k] for k in g('mini_add', [])]
     merged = set(g('mini_merge', []))
     teach_w = sum(s[1] for s in mini if s[0].startswith(('teach', 'we')))
@@ -357,6 +357,23 @@ if __name__ == '__main__':
                 t += r['sched']
             print('| 0-90 | **Total** | 90 | %.1f | %.1f | %+.1f | %.1f / %.1f |' % (sum(r['sched'] for r in rows), sum(r['need'] for r in rows), sum(r['sched'] - r['need'] for r in rows),
                                                                         sum(r['need'] for r in lo.values()), sum(r['need'] for r in hi.values())))
+    elif mode == '--rebudget':
+        # Re-run of the model on the RE-BUDGETED decks (after rebuild/p2budget.py): the slides dropped, merged or moved by the re-budget are
+        # already gone/moved in split/p2l*, so the FIX entries that dropped/merged/added them are cleared; everything else is as in --fixed.
+        bj = json.load(open(os.path.join(ROOT, 'p2', 'budget.json')))['lessons']
+        for n in range(1, 11):
+            for k in ('mini_drop', 'mini_merge', 'mini_add', 'ex_slides_cut'): FIX[n].pop(k, None)
+        print('lesson | budget sum | needed fast / central / slow | slack (central) | parts OVER (need > budget + 0.25) | budget.json matches final_budget')
+        for n in range(1, 11):
+            res = {}
+            for sc in SCEN:
+                rows = fixed_rows(n, D, sc, True); res[sc] = rows
+            rows = res['central']
+            tot = lambda rs: sum(r['need'] for r in rs)
+            fb = final_budget(n); bparts = {p['title']: round(p['end'] - p['start'], 2) for p in bj[str(n)]['parts']}
+            ok = abs(sum(bparts.values()) - 90) < 1e-9 and abs(bparts['Flex (spare time)'] - (90 - sum(fb.values()))) < 1e-9 and all(abs(bparts[t] - fb[k]) < 1e-9 for k, t in (('open', 'Opening'), ('sneak', 'Sneak-peek puzzles'), ('warm', 'Warm-up'), ('explore', 'Explore'), ('mini', 'Mini-lesson'), ('brk', 'Brain break'), ('p1', 'Worksheet page 1 (pairs)'), ('c1', 'Check together, page 1'), ('wt', 'Short teaching'), ('p2', 'Worksheet page 2 (alone)'), ('c2', 'Check together, page 2'), ('talk', 'Talk time'), ('exit', 'Exit ticket'), ('lb', 'Looking back'), ('close', 'Certificates and closing' if n == 10 else 'Closing and stamps')))
+            over = [r['key'] for r in rows if r['key'] != 'buffer' and r['need'] > r['sched'] + 0.25]
+            print('%2d | %.1f | %.1f / %.1f / %.1f | %+.1f | %s | %s' % (n, sum(r['sched'] for r in rows), tot(res['low']), tot(rows), tot(res['high']), 90 - tot(rows), ','.join(over) or '-', 'yes' if ok else 'NO'))
     elif mode == '--json':
         out = {}
         for n in range(1, 11):

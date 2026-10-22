@@ -245,7 +245,7 @@ module.exports.gaps = {
   "q": "What if the clock shows half past three (3:30)? Is the angle still 90°? Why not?",
   "a": "No. It is 75°: at 3:30 the hour hand has moved halfway from 3 to 4, which is 15° past the 3. The minute hand points at 6 (180°) and the hour hand at 105°."
  },
- "cap": "Page 2 is on your own. Aim for Q3, Q4, Q5 and Q6. Then choose a Think harder question.",
+ "cap": "Page 2 is on your own. Aim for Q3 to Q6. Then choose a Think harder question.",
  "p1": "This page ends at question 2. After question 2 you may choose: carry on, or try Think harder.",
  "plan": ["Page 1 holds Q1 and Q2 only, so the choice is offered after question 2. Q1 is a real pair task: each child estimates and measures two of the four angles, then checks the partner's two (about 4.5 minutes, not 8).", "Page 2 has spare time: Q3 and Q4, then Q5 and Q6 (now part of \"aim for\"), then a 4-minute Think harder slot (Think harder 1 or 2) before the check, and keep a 3-minute buffer."]
 };

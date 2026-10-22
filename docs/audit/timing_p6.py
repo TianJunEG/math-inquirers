@@ -126,7 +126,7 @@ def load_slides(n):
         body = re.sub(r'<svg.*?</svg>', ' ', body, flags=re.S)
         body = re.sub(r'<[^>]+>', ' ', body)
         vis = re.sub(r'\s+', ' ', html.unescape(body)).strip().replace(FOOTER, '').strip()
-        vis = re.sub(r'^\d+–\d+ MIN\s*', '', vis)
+        vis = re.sub(r'^(?:[\d.]+–[\d.]+ MIN|Optional, if you finish early)\s*', '', vis)
         builds = len(re.findall(r'data-build|data-fragment|class="build', s))
         res.append(dict(id=sid.split('-', 1)[1], vis=vis, notes=notes, words=wc(vis), builds=builds))
     return res

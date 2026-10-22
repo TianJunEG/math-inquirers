@@ -141,10 +141,8 @@ body+=pin(1150,400,642,p('Clue 1: cross out 2 boxes for Ben. Only kaya toast is 
 body+=pin(1150,530,642,p('A ✓ means crosses in the rest of its column: nobody else has kaya toast.',30,700),'rise',WHITE,20,'16px 22px')
 body+=pin(1150,680,642,p('Clue 2: Ravi is not curry puff, so popiah ✓. Siti: curry puff ✓.',30,700),'rise',WHITE,20,'16px 22px')
 put('p3l10-we2',sec('p3l10-we2','29–31 MIN',body,
- 'Worked example: make a table. Click order: Ben’s two crosses, Ben’s tick, the crosses in the kaya toast column, the last marks; the three side notes rise in between as you talk. '
+ 'Worked example: make a table. (The old logic-grid try-it slide was cut; worksheet Q2 is the practice. If there is a moment, ask orally: Ali, Mei and Ben choose red, blue, green; Mei does not choose red or blue, so green; Ali does not choose red, so blue; Ben has red.) Click order: Ben’s two crosses, Ben’s tick, the crosses in the kaya toast column, the last marks; the three side notes rise in between as you talk. '
  'Think-aloud: "A table keeps every clue in one place. Clue 1 tells me 2 things Ben does NOT like: 2 crosses. Only one box is left in his row, so a tick. A tick means nobody else can have kaya toast, so I cross out the rest of that column. Clue 2: Ravi is not curry puff, and kaya toast is gone, so Ravi likes popiah. Siti gets the last one: curry puff." Check each clue against the answer.'))
-put('p3l10-try2',try_slide('p3l10-try2','31–32 MIN','Your turn: a small logic grid','Ali, Mei and Ben each choose a different colour: red, blue, green.',[('a','Mei does not choose red or blue. Ali does not choose red.','Mei: green'),('b','So what does Ali choose?','Ali: blue'),('c','And Ben?','Ben: red')],
- 'Whiteboards: draw a 3 by 3 grid. Mei has 2 crosses, so green is the only one left: tick, then cross green for Ali and Ben. Ali is not red, and green is gone, so blue. Ben gets red. Check: Mei green (not red or blue ✓), Ali blue (not red ✓).',36))
 
 # ---------- we3: bar graph ----------
 bg=bar_graph([('Mon',12),('Tue',7),('Wed',15),('Thu',10)],16,2,24,bw=100,slot=180,aria='Bar graph of books borrowed: Monday 12, Tuesday 7, Wednesday 15, Thursday 10',ylab='Books',xlab='Day')
@@ -221,7 +219,7 @@ put('p3l10-exit',sec('p3l10-exit','80–85 MIN',body,'Minutes 80 to 85. Answer: 
 put('end',dark_slide('end','WELL DONE, INQUIRERS · 85–90 MIN','Keep asking why',f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>','Certificates and a last stamp for every inquirer.','Minutes 85 to 90. Hand out certificates and stamp the journal: say each certificate in one 20-second sentence (one specific thing the child did well), about 2.7 minutes for 8 children. Ask for volunteers on "a puzzle I enjoyed" ONCE (pass is fine). Post the parent summary from the tutor guide after the lesson; do not read it out.'))
 
 # ---------- write ----------
-order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-try1','p3l10-we2','p3l10-try2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
+order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-try1','p3l10-we2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
 import p3_gifted; order[:]=p3_gifted.add(S,order,10)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

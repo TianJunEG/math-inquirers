@@ -205,7 +205,7 @@ module.exports.gaps = {
   "q": "Which number you can make is closest to 70 000? Why can you not make 70 000?",
   "a": "72 459 (2 459 away). 70 000 needs a 0 card and there is none; with the cards 2, 4, 5, 7 and 9 the closest below is 59 742 (10 258 away)."
  },
- "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4a, Q5 and Q6a. The other parts are a choice for the last few minutes.",
- "p1": "Pairs: questions 1 and 2. Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4a, Q5 and Q6a. The rest is a choice for the end.",
+ "p1": "Pairs: Q1 and Q2. Then Q3 alone. After question 3 you may choose: carry on, or try Think harder.",
  "plan": ["Pairs do Q1 and Q2 (about 10 minutes of work; Q2a and Q2b stay). Q3, the bakery question, is the first question each child does on their own at the start of page 2 time. Its answer is checked together with page 2, which takes about 30 seconds longer."]
 };

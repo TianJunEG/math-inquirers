@@ -229,7 +229,7 @@ module.exports.gaps = {
   "q": "What if you use 24 tiles? Make every rectangle. Which has the smallest perimeter?",
   "a": "4 rectangles: 1 × 24 (perimeter 50 cm), 2 × 12 (28 cm), 3 × 8 (22 cm) and 4 × 6 (20 cm). The 4 by 6 has the smallest perimeter: it is the closest to a square."
  },
- "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4 and Q5. Q6 is a choice for the last few minutes.",
- "p1": "Pairs: questions 1 and 2. Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4 and Q5. Q6 is a choice for the end.",
+ "p1": "Pairs: Q1 and Q2. Then Q3 alone. After question 3 you may choose: carry on, or try Think harder.",
  "plan": ["Split Q1 between the partners: partner A splits the L-shape into two rectangles, partner B uses the big rectangle minus the missing piece, then they compare (about 4 minutes, not 6). Pairs also do Q2. Q3, six tiles, is the first question each child does on their own; its answer is checked with page 2."]
 };

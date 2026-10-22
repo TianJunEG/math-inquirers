@@ -103,7 +103,7 @@ module.exports = {
     W.push(H.sub('a', 'Two consecutive numbers (next-door numbers, like 7 and 8) multiply to make 552. What are they?'));
     W.push(...H.lines(1));
     W.push(H.ans('Answer:'));
-    W.push(H.sub('b', '★ Take-home. Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
+    W.push(H.sub('b', '★ take-home: Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
     const w = [2200, 1100, 1100, 1100, 1100, 1100, 1100, 1100];
     const cl = (c, i, head) => H.cell(c, w[i], i === 0 || head ? { bold: true, fill: 'EDEDED', h: 40 } : { h: 60 });
     W.push(H.tbl(w, [H.row(['Notebooks', '1', '2', '3', '4', '5', '6', '7'].map((c, i) => cl(c, i, true))),
@@ -179,7 +179,7 @@ module.exports.gaps = {
   "q": "What if 10 bugs have 65 legs? Could that happen? Why or why not?",
   "a": "No. Spiders have 8 legs and beetles 6: both are even numbers, so the total number of legs is always even, and 65 is odd."
  },
- "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4 and Q5. Q6 is a choice for the last few minutes.",
- "p1": "Pairs: question 1a and question 2 (1b is ★ take-home). Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4 and Q5. Q6 is a choice for the end.",
+ "p1": "Pairs: Q1a, Q2. Then Q3 alone. After Q3 choose: carry on, or try Think harder.",
  "plan": ["Pairs do Q1a and Q2 (about 9 minutes of work). Q1b (all the ways to buy pens and notebooks, a 24-cell table) is a ★ take-home question. Q3, working backwards, is the first question each child does on their own; its answer is checked with page 2."]
 };

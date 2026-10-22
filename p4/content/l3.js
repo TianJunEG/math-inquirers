@@ -224,7 +224,7 @@ module.exports.gaps = {
   "q": "What if you may use TWO pairs of brackets? Can you get an answer that one pair could not?",
   "a": "No. Two pairs still give only 16, 28 and 10 (every placement checked by computer). Brackets only change what is done first, and here there are only three different orders that matter: the × first (16), (6 + 4) first (28) or (3 − 2) first (10)."
  },
- "cap": "Page 2 is on your own. Start with question 3 on page 1. Then aim for Q4, Q5 and Q6. Q7 is a ★ choice, for take-home.",
- "p1": "Pairs: questions 1 and 2. Then question 3 on your own. After question 3 you may choose: carry on, or try Think harder.",
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4, Q5 and Q6. Q7 (★) is a choice, for take-home.",
+ "p1": "Pairs: Q1 and Q2. Then Q3 alone. After question 3 you may choose: carry on, or try Think harder.",
  "plan": ["Pairs do Q1 and Q2 (about 9 minutes of work). Q3, brackets in 4 + 8 × 5 − 3, is the first question each child does on their own; its answer is checked with page 2. Q2(d), the sentence with three blanks, stays as a pass-allowed item.", "Q7 (number chains) is a choice question with no live teaching slide: the chain slide is in the take-home pack, marked ★ take-home in the workbook."]
 };
