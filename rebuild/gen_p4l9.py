@@ -219,7 +219,7 @@ put('p4l9-ws2ans',checks('p4l9-ws2ans','76–80 MIN','Page 2: check together',[(
 st=[('1.','Week 1: 48, Week 2: 56, Week 3: 51, Week 4: 66. Between which two weeks was the biggest change?'),('2.','Each line on a scale is worth 5. A point is 7 lines above 0. Another point is 4 lines higher. What do they show?'),('3.','Sales for 4 days add up to 200. Each day is 6 more than the day before. What were the sales on Day 1?')]
 put('p4l9-stretch',sec('p4l9-stretch','Early finishers / take-home',h2('Stretch')+numcards(st,36),'Answers: 1) Week 3 to Week 4: up 15 (the other changes are up 8 and down 5). 2) 35 and 55. 3) 41 (41, 47, 53, 59: take away the extras 6 + 12 + 18 = 36, then 164 ÷ 4 = 41).'))
 ch=[('1.','Four teams scored 100 points. Team A scored twice as many as Team B. Team C scored 10 more than Team B. Team D scored 22. Find each team’s points.'),('2.','Tank A has 80 litres and loses 6 litres each hour. Tank B has 20 litres and gains 9 litres each hour. After how many hours do they hold the same amount?')]
-put('p4l9-challenge',sec('p4l9-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) A 34, B 17, C 27, D 22. 2) After 4 hours: 56 litres each.'))
+put('p4l9-challenge',sec('p4l9-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) A 34, B 17, C 27, D 22. 2) After 4 hours: 56 litres each.'))
 gq=''
 for i,(lab,units,extra) in enumerate([('A',2,None),('B',1,None),('C',1,'10'),('D',0,'22')]):
     y=30+i*84; gq+=txt(60,y+46,lab,32,NAVY)

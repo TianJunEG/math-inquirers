@@ -146,7 +146,7 @@ module.exports = {
     ],
     stretch: [
       { q: 'The mean height of 4 children is 150 cm. A fifth child joins the group and the mean height becomes 152 cm. How tall is the fifth child?', a: '160 cm (5 × 152 = 760, 4 × 150 = 600, 760 − 600 = 160)' },
-      { q: 'Mei’s mean score for 3 tests is 84. What must she score in the 4th test to raise her mean to 86?', a: '92 (4 × 86 = 344, 3 × 84 = 252, 344 − 252 = 92)' },
+      { q: 'Five whole numbers have a mean of 8, a median of 10 and a mode of 12 (12 appears more often than any other number). Find them. Is there more than one answer?', a: 'Three answers: 0, 6, 10, 12, 12 or 1, 5, 10, 12, 12 or 2, 4, 10, 12, 12. Median 10 is the middle (3rd) number; the mode 12 must appear twice, so the 4th and 5th numbers are 12; the total is 5 × 8 = 40, so the first two add up to 40 − 10 − 24 = 6. (Using 3 and 3 would make 3 a second mode.)' },
       { q: 'Write 5 whole numbers with a mean of 6 and a mode of 4.', a: 'Open, e.g. 4, 4, 5, 8, 9 (total 30, and 4 appears most often). Check the total is 30.' },
       { q: 'A Scratch list holds 8 numbers with a mean of 12. Then the number 21 is added to the list. What will the mean program say now?', a: '13 (8 × 12 = 96, 96 + 21 = 117, 117 ÷ 9 = 13)' },
       { q: 'The mean of 7, 11, x and 14 is 10. What is x?', a: '8 (4 × 10 = 40, 40 − 7 − 11 − 14 = 8)' },

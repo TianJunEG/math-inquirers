@@ -142,14 +142,14 @@ module.exports = {
     W.push(H.sub(' ', 'Best just below:  ______________   It is  __________  away.'));
     W.push(H.sub(' ', 'Best just above:  ______________   It is  __________  away.'));
     // Q3 riddle
-    W.push(H.q(3, 'Digit riddle. Use the clues one at a time. Then check every clue.', { keepNext: true }));
+    W.push(H.q(3, 'Digit riddle  (try this one if you like). Use the clues one at a time, then check them all.', { keepNext: true }));
     { const clues = ['I am a 7-digit number. My digits are all different.',
       'Rounded to the nearest hundred thousand, I am 7 300 000.',
       'My ten thousands digit is 3 more than my hundred thousands digit.',
       'My thousands digit = my ten thousands digit − my hundred thousands digit.',
       'My hundreds digit is twice my thousands digit. My tens digit is 0.',
       'My digits add up to 32.',
-      'START HERE: Clue 2 means I start 7 2 … or 7 3 …  Try both with Clue 3. Which start fits?'];
+      'START HERE: I start 7 2 … or 7 3 …  Which start fits Clue 3?'];
       W.push(H.tbl([9900], [H.row([H.cell(['<div style="text-align:left;padding:2px 10px;line-height:1.5">' + clues.map((c, i) => i < 6 ? `<b style="color:${TEAL}">Clue ${i + 1}.</b>&nbsp; ${esc(c)}` : `<b style="color:${TEAL}">${esc(c)}</b>`).join('<br>') + '</div>'], 9900, { h: 60 })])])); }
     { const ws = Array(7).fill(1414); ws[6] = 1416;
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),

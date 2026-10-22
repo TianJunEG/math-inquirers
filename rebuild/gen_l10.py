@@ -186,3 +186,5 @@ import p1gifted; p1gifted.apply(D,10)
 import p1gaps; p1gaps.apply(D,10)
 p1fix.finish(D,10,{'l10-explore1':'10–11 MIN','l10-explore2':'21–25 MIN','l10-ws2':'58–68 MIN'})
 import p1neutral; p1neutral.apply(D,10)
+
+import p1round2; p1round2.apply(D,10)

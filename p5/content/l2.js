@@ -32,26 +32,26 @@ const shareBars = () => {
     g += txt(x0 - 10, y + 27, lab, 16, N, 'end');
     for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${i < shaded ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
   });
-  g += txt(x0 + w + 12, 40, 'one child\u2019s share is shaded', 15, TEAL, 'start', 600);
-  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:56%">${g}</svg>`;
+  g += txt(x0 + w + 12, 40, 'shaded = a share', 15, TEAL, 'start', 600);
+  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 650 120" width="650" xmlns="http://www.w3.org/2000/svg" style="max-width:60%">${g}</svg>`;
 };
 
 module.exports = {
   lesson: {
     n: 2, week: 1, session: 'B', title: 'Fraction Feats', topic: 'Fractions: Four Operations',
-    objective: 'Link fractions and division (3 ÷ 4 = 3/4) and (as a preview of P6) divide a proper fraction by a whole number; write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums.',
-    skills: 'Fraction and division, drawing a model (bar, pizza), testing in order and knowing when to stop, fraction of a remainder, working backwards, looking for a pattern, testing both ways',
+    objective: 'Link fractions and division (3 ÷ 4 = 3/4); write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums.',
+    skills: 'Fraction and division (whole number ÷ whole number), drawing a model (bar, pizza), testing in order and knowing when to stop, fraction of a remainder, working backwards, looking for a pattern, testing both ways',
     materials: 'Paper circles (6 per child) to cut as pizzas, scissors, a strip of paper for bar models, digit cards 1 to 4, mini whiteboard, workbook.',
     online: 'Children cut out six paper circles before the lesson and fold or cut them on camera. The tutor shares the slides and draws the bar models live. Pairs work in breakout rooms for the explore and page 1.',
     warmup: 'Fraction Face-off: two fractions appear; children hold up 1 finger if the first is bigger and 2 if the second is. Nobody has to explain their finger: pairs whisper a reason to a partner (same top? close to 1? more than a whole?) and only volunteers share it. Then five quick questions on whiteboards.',
     explore: 'Pizza sharing: pairs share 3 pizzas equally among 4 friends, then 5 pizzas among 6 friends, with paper circles. How much does each friend get? Can you cut so that each friend gets only 2 pieces?',
-    mini: 'a ÷ b = a/b: 3 pizzas among 4 friends gives 3/4 each; a proper fraction ÷ a whole number cuts each part again (3/5 ÷ 2 = 3/10). Unit fractions: try 1/2, 1/3, 1/4 … in order, take it away and check whether what is left is a unit fraction; stop once the first part is less than half of the fraction. Fraction of a remainder: find the remainder first, then take the fraction of the remainder, with a bar model cut into equal small units. Before page 2: a pattern in fraction sums (1 take away the last piece), working backwards with a model, and testing both ways with digit cards.',
+    mini: 'a ÷ b = a/b: 3 pizzas among 4 friends gives 3/4 each, and 7 pizzas among 3 friends gives 7/3 = 2 1/3 each. Unit fractions: try 1/2, 1/3, 1/4 … in order, take it away and check whether what is left is a unit fraction; stop once the first part is less than half of the fraction. Fraction of a remainder: find the remainder first, then take the fraction of the remainder, with a bar model cut into equal small units. Before page 2: a pattern in fraction sums (1 take away the last piece), working backwards with a model, and testing both ways with digit cards.',
     share: 'Ben says 1/2 + 1/3 = 2/5 because you add the tops and add the bottoms. Use a pizza picture to show why he is wrong.',
     exit: { q: '(a) 4 pizzas are shared equally among 5 children. How much does each child get?  (b) Ali had 60 marbles. He gave 1/3 of them to Mei and 1/2 of the remainder to Ben. How many marbles did Ali have left?', a: '(a) 4/5 of a pizza  (b) 20 marbles (60 − 20 = 40 left, then half of 40 is given away)' },
     mistakes: [
       'Taking the second fraction of the whole amount instead of the remainder (2/3 of 240 instead of 2/3 of 180).',
       'Adding tops and bottoms: 1/2 + 1/3 = 2/5, or using the same unit fraction twice when the question asks for different ones.',
-      'Writing 3 ÷ 4 as 4/3, or multiplying instead of dividing when a fraction is shared (3/4 ÷ 6 written as 18/4 instead of 1/8).'
+      'Writing 3 ÷ 4 as 4/3, or writing 7 ÷ 3 as 3/7.'
     ],
     extension: 'Write 1 as the sum of three different unit fractions. Is there more than one way? (Only one: 1/2 + 1/3 + 1/6.)',
     key: [
@@ -84,7 +84,7 @@ module.exports = {
   deck: {
     today: 'Share pizzas fairly, write fractions as unit fractions, take a fraction of a remainder with a model and find patterns in fraction sums.',
     warmGame: 'Fraction Face-off. Two fractions appear. Hold up 1 finger if the first is bigger, 2 if the second is. Whisper a reason to your partner (same top? close to 1? more than a whole?); volunteers share. 3/5 or 3/7, 5/6 or 6/7, 4/9 or 1/2, 7/8 or 8/7.',
-    warmQs: [['3 ÷ 4 as a fraction', '3/4'], ['2/3 + 1/6', '5/6'], ['3/4 of 20', '15'], ['2/5 × 3/4', '3/10'], ['4/5 ÷ 2', '2/5']],
+    warmQs: [['3 ÷ 4 as a fraction', '3/4'], ['2/3 + 1/6', '5/6'], ['3/4 of 20', '15'], ['Which is bigger, 1/2 or 3/5?', '3/5'], ['1/4 of 12', '3']],
     expSetup: ['Take 3 paper pizzas. Share them equally among 4 friends.', 'How much does each friend get? Write it as a fraction.', 'Can you cut so that each friend gets only 2 pieces?', 'Now share 5 pizzas among 6 friends, with only 2 pieces each.'],
     expPic: 'three pizzas (circles) and four smiley faces waiting for their share, with a question mark.',
     expAsk: [['How much pizza does each of the 4 friends get?', '3/4 of a pizza (3 ÷ 4 = 3/4).'], ['How can each friend get only 2 pieces?', 'Cut 2 pizzas into halves and 1 pizza into quarters: each friend gets 1/2 + 1/4 = 3/4.'], ['5 pizzas among 6 friends, 2 pieces each?', 'Cut 3 pizzas into halves and 2 pizzas into thirds: each gets 1/2 + 1/3 = 5/6.']],
@@ -108,10 +108,10 @@ module.exports = {
       { q: 'Mei has 3/4 of a pizza and Ali has 2/3 of a pizza (the pizzas are the same size). Who has more? Draw two bars to show how you know.', a: 'Mei. Cut both bars into 12 equal parts: 3/4 = 9 parts and 2/3 = 8 parts. (Or: Mei is 1/4 short of a whole pizza and Ali is 1/3 short, and 1/4 is less than 1/3.)' }
     ],
     stretch: [
-      { q: 'Write 2/3 as the sum of two different unit fractions.', a: '1/2 + 1/6 (the only way).' },
+      { q: 'Can 4/5 be written as the sum of two DIFFERENT unit fractions? Test in order and explain how you know when to stop.', a: 'No. The bigger unit fraction must be more than half of 4/5 (more than 2/5) and less than 4/5, so only 1/2 can be tried: 4/5 − 1/2 = 3/10, which is not a unit fraction. 1/3 is already less than 2/5, so we stop.' },
       { q: 'Ben ate 1/3 of a pizza. Ali ate 1/4 of what was left. What fraction of the pizza is left?', a: '1/2. 2/3 was left after Ben; Ali ate 1/4 of it, so 3/4 of 2/3 = 1/2 is left.' },
-      { q: '1/2 − 1/3 = 1/6 and 1/3 − 1/4 = 1/12. Use the pattern to work out 1/4 − 1/5 and 1/9 − 1/10.', a: '1/20 and 1/90 (the bottom numbers multiply: 4 × 5 and 9 × 10).' },
-      { q: '4 litres of juice are poured equally into 6 bottles. How much juice is in each bottle?', a: '4/6 = 2/3 of a litre.' },
+      { q: 'Siti shares 3 cakes equally among 8 children. Ben shares 2 cakes equally among 5 children. Whose child gets more cake, and how much more?', a: 'Ben\'s children get more, by 1/40 of a cake. Siti: 3/8 = 15/40 of a cake each. Ben: 2/5 = 16/40 of a cake each. 16/40 − 15/40 = 1/40.' },
+      { q: 'Mei walked 3/5 of a path in the morning and 1/4 of the WHOLE path in the afternoon. She still had 600 m to walk. How long is the path?', a: '4000 m. 3/5 + 1/4 = 17/20 of the path is done, so 3/20 is left. 3/20 is 600 m, so 1/20 is 200 m and the whole path is 20 × 200 = 4000 m.' },
       { q: 'Which is bigger, 5/6 or 6/7? Explain without finding common denominators.', a: '6/7. 5/6 is 1/6 short of 1 and 6/7 is only 1/7 short of 1, and 1/7 is smaller than 1/6.' },
       { q: '(Preview of P6) A rope 3/4 m long is cut into 3 equal pieces. How long is each piece? Draw a bar to help.', a: '1/4 m (3/4 ÷ 3: 3 quarters shared by 3 pieces is 1 quarter each).' },
       { q: 'Find a fraction between 2/5 and 1/2 with 20 as the bottom number.', a: '9/20 (2/5 = 8/20 and 1/2 = 10/20).' },
@@ -141,7 +141,7 @@ module.exports = {
     W.push(H.fig(shareBars()));
     // Q2 unit fractions
     W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away 1/2, then 1/3 … is what is left a unit fraction?', { keepNext: true }));
-    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + '. Write ' + fr(1, 2) + ' as tenths: ' + fr(1, 2) + ' = ' + fr('____', 10) + '. So ' + fr(7, 10) + ' − ' + fr(1, 2) + ' = ' + fr('____', 10) + ' = ' + fr(1, '____') + '.'], { after: 20 }));
+    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + '. Write ' + fr(1, 2) + ' as tenths: ' + fr(1, 2) + ' = ' + fr('____', 10) + '. So ' + fr(7, 10) + ' − ' + fr(1, 2) + ' = ' + fr('____', 10) + ' = ' + fr(1, '____') + '.&nbsp; (b) Write ' + fr(1, 4) + ' as twentieths: ' + fr('____', 20) + '.'], { after: 20 }));
     W.push(H.sub('a', [fr(7, 10) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
     W.push(H.sub('c', ['Find TWO ways for ' + fr(3, 8) + ':&nbsp;&nbsp; ' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr() + '&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr()]));
     W.push(H.sub(' ', 'Test 1/3, 1/4, 1/5 … in order. How do you know when to stop?', { after: 40 }));

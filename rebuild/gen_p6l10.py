@@ -108,10 +108,10 @@ put('p6l10-explore1',sec('p6l10-explore1','5–7 MIN',body,
  'Predict first: '+SC['predict'][0]))
 
 # ---------------- 5/6. worksheet page 1 (the round) ----------------
-put('p6l10-ws1',ws_preview('p6l10-ws1','7–19 MIN','Challenge round: workbook page 1',[('Q1','Hexagon chains. Find the rule, then predict what the code says.'),('Q2','Prime hunters. Factors, prime factors and prime pairs.'),('Q3','Quick-fire: below zero, machines, turtle turns, clock.')],'Stuck? Which lesson does it remind you of? Make a table, list it in order, or draw it.',
- 'Minutes 7 to 19. Visit each team. Ask "How did you start?" and "What is your check?" before giving any help. Hints: '+' '.join(SC['exploreHints'])+' Teams who finish early can test Q1 in Scratch (the four blocks are on the page) or list the Q3e numbers with two nested loops.'))
-put('p6l10-ws1ans',check_slide('p6l10-ws1ans','19–21 MIN','Challenge round: check together',[('Q1','a) 51   b) 5n + 1   c) 20   d) 76: a chain of 15 hexagons'),('Q2','a) 49   b) 2 × 2 × 3 × 7   c) 3 + 37,  11 + 29,  17 + 23'),('Q3','a) −7 °C  b) 5  c) 15  d) 1 o’clock')],
- 'Click after a team explains. Q1: each new hexagon adds 5 sticks (it shares one side), so 5n + 1; 5 × 10 + 1 = 51; 5n + 1 = 101 gives n = 20; the code starts at 6 and adds 5 fourteen times: 6 + 70 = 76, which is 5 × 15 + 1, the chain of 15. '
+put('p6l10-ws1',ws_preview('p6l10-ws1','7–19 MIN','Challenge round: workbook page 1',[('Q1','Hexagon chains. Start with (a): count on from the picture. Then find the rule and predict what the code says.'),('Q2','Prime hunters. Factors, prime factors and prime pairs.'),('Q3','Quick-fire: below zero, machines, turtle turns, clock.')],'Stuck? Which lesson does it remind you of? Make a table, list it in order, or draw it.',
+ 'Minutes 7 to 19. Visit each team. Ask "How did you start?" and "What is your check?" before giving any help. Hints: '+' '.join(SC['exploreHints'])+' Teams who finish early can test Q1 in Scratch (the four blocks are on the page) or list the digit-card numbers (Think harder 4) with two nested loops.'))
+put('p6l10-ws1ans',check_slide('p6l10-ws1ans','19–21 MIN','Challenge round: check together',[('Q1','a) 21 and 51   b) 5n + 1   c) 20   d) 76: a chain of 15 hexagons'),('Q2','a) 49   b) 2 × 2 × 3 × 7   c) 3 + 37,  11 + 29,  17 + 23'),('Q3','a) −7 °C  b) 5  c) 15  d) 1 o’clock')],
+ 'Click after a team explains. Q1: part (a) is the guaranteed first win: the picture shows 6, 11 and 16 sticks, so 4 hexagons need 16 + 5 = 21; each new hexagon adds 5 sticks (it shares one side), so 5n + 1; 5 × 10 + 1 = 51; 5n + 1 = 101 gives n = 20; the code starts at 6 and adds 5 fourteen times: 6 + 70 = 76, which is 5 × 15 + 1, the chain of 15. '
  'Q2: a 2-digit number with exactly 3 factors is the square of a prime: 25 or 49; digits add to 13: 49. 84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7. For 40 test every prime up to 20: 3 + 37, 11 + 29, 17 + 23 work; 2, 5, 7, 13, 19 do not (38, 35, 33, 27, 21 are not prime). '
  'Q3: a) −4 + 9 = 5, 5 − 12 = −7. b) 3n − 10 = n, so 2n = 10, n = 5 (or trial: 5 × 3 − 10 = 5). c) 360 ÷ 24 = 15. d) 100 hours = 8 × 12 + 4, so 4 hours on from 9: 1 o’clock. (Digit cards and probability are now in Think harder 4.)',lw=200))
 
@@ -211,9 +211,10 @@ put('p6l10-ws2ans',check_slide('p6l10-ws2ans','60–62 MIN','Page 2: check Q4, t
  'Click after a child explains. a) 9 × 3 + 4 = 31; (58 − 4) ÷ 3 = 18. b) 91 = 7 × 13, so it has 4 factors. c) 2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2: 5 of the 36 results; 1000 × 5 ÷ 36 is about 139 (138.9), and a real run will be near this, not exactly. Minutes 60 to 62: finish and save. Everyone gets their project open and ready to share.',lw=220))
 
 # ---------------- 18. stretch ----------------
-st=[('1.','What is the 50th term of 7, 11, 15, 19, …?'),('2.','How many of the numbers 1 to 50 have exactly 3 factors?'),('3.','Two dice are rolled and added. What is the probability that the total is a prime number?')]
-put('p6l10-stretch',sec('p6l10-stretch','For early finishers',h2('Stretch')+numcards(st,36),
- 'For children who finish building early. Answers: 1) 203 (nth term 4n + 3: 4 × 50 + 3). 2) 4: 4, 9, 25 and 49 (the squares of the primes 2, 3, 5, 7; their only factors are 1, the prime and the square). 3) 15/36 = 5/12 (prime totals: 2 in 1 way, 3 in 2, 5 in 4, 7 in 6, 11 in 2; 1 + 2 + 4 + 6 + 2 = 15). Each one can be tested in code: a loop for 1, a factor counter for 2, a dice simulation for 3.'))
+import p6_th
+st=p6_th.pairs(10)
+put('p6l10-stretch',sec('p6l10-stretch','For early finishers',h2('Stretch')+numcards(st,30),
+ p6_th.answers(10)))
 
 # ---------------- 19. challenge ----------------
 ch=QB['challenge'][:2]

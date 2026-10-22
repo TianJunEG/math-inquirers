@@ -56,7 +56,7 @@ put(f'{P}-title',title_slide(f'{P}-title',3,'Mystery Number Machines','Working B
  'Find mystery numbers in two-step machines with + − × ÷ by working backwards, and draw before-and-after bars for stories.',
  'Objective: Find a mystery number in two-step puzzles with +, −, × and ÷ by working backwards (undo the LAST step first with the opposite operation), check by going forwards, and use before-and-after bar models for stories where an amount changes. '
  'Materials: mini whiteboards, counters, paper cups, number machine cards (× 2, × 3, × 4, × 5, × 10, and + or − cards from 1 to 20), paper strips for bars. '
- 'Online: machine cards are shown on the slides; children write on whiteboards and hold them up; for bars they draw on paper or fold a paper strip into equal parts. '
+ 'Online: machine cards are shown on the slides; children write on whiteboards or paper and show their tutor on camera or keep it to share if they want; for bars they draw on paper or fold a paper strip into equal parts. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, short teaching 36 to 38, worksheet page 1 38 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. '
  'Level: × and ÷ only with the 2, 3, 4, 5 and 10 tables; all numbers within 1000.'))
 

@@ -105,7 +105,7 @@ put(PRE+'title',title_slide(PRE+'title','Crack missing digits one column at a ti
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 # ---------- warm-up 1: make 1000 ----------
 pairs=[('350','650'),('720','280'),('105','895'),('999','1'),('460','540'),('75','925')]
-body=h2('Warm-up: Make 1000')+p('What goes with each number to make 1000? Write it, then hold it up.',36,600,MUTED)
+body=h2('Warm-up: Make 1000')+p('What goes with each number to make 1000? Write it. Show your tutor on camera or keep it to share if you want.',36,600,MUTED)
 CW=533
 for i,(a,b) in enumerate(pairs):
     L=128+(i%3)*(CW+32); T=290+(i//3)*300
@@ -113,12 +113,12 @@ for i,(a,b) in enumerate(pairs):
     body+=pin(L,T,CW,inner,None,WHITE,24,'28px 32px',f'box-sizing:border-box;height:270px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,T+160,CW-48,f'<p style="font-size:40px;font-weight:800;line-height:1.2">{E(b)}</p>','pop',SOFT,16,'12px 20px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put(PRE+'warm1',sec(PRE+'warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Make 1000. Point to one card at a time; children write the missing number on their whiteboards and hold them up together; click to reveal (order: 350, 720, 105, 999, 460, 75). Answers: 650, 280, 895, 1, 540, 925. '
+ 'Minutes 0 to 5. Make 1000. Point to one card at a time; children write the missing number on their whiteboards (show your tutor on camera or keep it to share if you want); click to reveal (order: 350, 720, 105, 999, 460, 75). Answers: 650, 280, 895, 1, 540, 925. '
  'Ask: "How did you work out 720?" Good ways: count on to the next hundred (720 → 800 is 80) then to 1000 (200 more), so 280; or use bonds of 10 for each place. For 105 watch for 995 (it is 895: 105 + 895 = 1000). '
  'Quick finisher: "Make 10 000 with 3500." (6500)'))
 qs=[('1.','3456 + 1000 = ?','4456'),('2.','5000 − 1 = ?','4999'),('3.','2700 + 300 = ?','3000'),('4.','8000 − 2500 = ?','5500'),('5.','4999 + 2 = ?','5001')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Mental maths, no written working. Whiteboards up together, then click. Ask for 2: "Which digits changed when we took away 1? Why did so many change?" (every 0 had to be exchanged). For 5: 4999 + 1 = 5000, then 1 more.'))
+put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Mental maths, no written working. Whiteboards (show your tutor on camera or keep it to share if you want), then click. Ask for 2: "Which digits changed when we took away 1? Why did so many change?" (every 0 had to be exchanged). For 5: 4999 + 1 = 5000, then 1 more.'))
 # ---------- explore ----------
 def explore_pic():
     cards=digit_cards(list('123456789'),cw=70,ch=86,gap=14)
@@ -157,11 +157,11 @@ put(PRE+'try2',try_slide(PRE+'try2','33–34 MIN','Your turn: guess, check, impr
 body=h2('Key idea: one column at a time')+card(p('Start at the ones and carry to the left. Check subtraction by adding. Stuck? Guess, check, then improve.',44,700))+card(p('A puzzle is cracked when you can say why it is the ONLY answer.',38,600,MUTED))
 put(PRE+'key',sec(PRE+'key','34–35 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Forgetting the carried 1 when working out the missing digit in the next column. (2) In subtraction, looking for a digit that can be taken from 3 to leave 8 (there is none) instead of regrouping: 13 − 5 = 8. (3) Magic squares: guessing numbers instead of finding a full line first to get the total.'))
 put(PRE+'break',break_slide(PRE+'break','Code-breaker moves. I say a digit: odd means hop on one foot that many times, even means clap that many times, 0 means freeze!','Five minutes. Try 3, 8, 0, 5, 2. Online: children stay in view of the camera and move in place.'))
-put(PRE+'ws1',ws_preview(PRE+'ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Missing digits. Start at the ones. For (b), turn it round and add.'),('Q2','Digit cards 1 to 6: greatest sum, smallest sum, smallest difference.')],'Use digit cards for Q2: move them, then write your tries.','Minutes 40 to 52. Walk around. Ask "Which column did you start with?" and "Is there a carry coming in?" For Q2c ask: "Which hundreds digits should you try? Why?" Expect several tries; praise improving a guess.'))
+put(PRE+'ws1',ws_preview(PRE+'ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Missing digits. Start at the ones. For (a), turn it round and add.'),('Q2','Digit cards 1 to 6: greatest sum, smallest sum, smallest difference.')],'Use digit cards for Q2: move them, then write your tries.','Minutes 40 to 52. Walk around. Ask "Which column did you start with?" and "Is there a carry coming in?" For Q2c ask: "Which hundreds digits should you try? Why?" Expect several tries; praise improving a guess.'))
 put(PRE+'ws1ans',check2(PRE+'ws1ans','52–54 MIN','Page 1: check together',[
- ('Q1','a) 3447 + 2578 = 6025     b) 532 − 216 = 316     c) 316 + 216 = 532'),
+ ('Q1','a) 532 − 216 = 316     b) 3447 + 2578 = 6025     c) 316 + 216 = 532'),
  ('Q2','a) 1173, e.g. 642 + 531     b) 381, e.g. 135 + 246     c) 47:  412 − 365')],
- 'Click each answer after a pair explains. Q1a: ones 7 + 8 = 15, carry 1; tens 4 + the missing digit + 1 ends in 2, so 7 (12), carry 1; hundreds the missing digit + 5 + 1 ends in 0, so 4, carry 1; thousands 3 + 2 + 1 = 6. Q1b: turn it round, 316 + 216 = 532: ones 6 + 6 = 12, carry 1; tens 1 + 1 + 1 = 3, so the missing digit is 3; hundreds 3 + 2 = 5. Q2a: big digits in the hundreds (6, 5), then tens (4, 3), then ones (2, 1). Q2c: hundreds 4 and 3 (next to each other); 4 gets the smallest ones left (1, 2), 3 gets the biggest (6, 5): 412 − 365 = 47. It is the only way to get 47.',gap=170,size=36))
+ 'Click each answer after a pair explains. Q1a (the easy first win): turn it round, 316 + 216 = 532: ones 6 + 6 = 12, carry 1; tens 1 + 1 + 1 = 3, so the missing digit is 3; hundreds 3 + 2 = 5. Q1b (two carries, three blanks): ones 7 + 8 = 15, carry 1; tens 4 + the missing digit + 1 ends in 2, so 7 (12), carry 1; hundreds the missing digit + 5 + 1 ends in 0, so 4, carry 1; thousands 3 + 2 + 1 = 6. Q2a: big digits in the hundreds (6, 5), then tens (4, 3), then ones (2, 1). Q2c: hundreds 4 and 3 (next to each other); 4 gets the smallest ones left (1, 2), 3 gets the biggest (6, 5): 412 − 365 = 47. It is the only way to get 47.',gap=170,size=36))
 # ---------- before page 2 ----------
 g0=['80','10','60','','50','','','','']; g1=['80','10','60','','50','','40','','20']; g2=['80','10','60','30','50','70','40','90','20']
 body=h2('Magic squares: find a full line first')+pin(128,240,470,grid_svg(g0,label='Magic square: top row 80, 10, 60, centre 50'),None,CREAM,0,'0px')

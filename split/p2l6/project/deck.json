@@ -9,6 +9,7 @@
  "order": [
   "p2l6-title",
   "p2l6-precheck",
+  "p2l6-precheck2",
   "p2l6-warm1",
   "p2l6-warm2",
   "p2l6-explore1",
@@ -31,9 +32,11 @@
   "p2l6-ws2ans",
   "p2l6-stretch",
   "p2l6-challenge",
+  "p2l6-challenge2",
   "p2l6-chdiag",
   "p2l6-chwalk",
   "p2l6-talk",
+  "p2l6-invest",
   "p2l6-exit",
   "p2l6-reflect"
  ],

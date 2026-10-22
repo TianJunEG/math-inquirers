@@ -314,7 +314,7 @@
     "a": "Apple wins in Class A, orange wins in Class B. Together apple 6 + 8 = 14 and orange 4 + 12 = 16, so orange wins by 2. Class A alone would have told us the wrong fruit for the group: a small sample can mislead."
    },
    {
-    "q": "24 children voted. Apple got 6 votes. Orange got 6 more votes than banana. How many votes did banana and orange get?",
+    "q": "24 children voted for three fruits: apple, banana and orange. Apple got 6 votes. Orange got 6 more votes than banana. How many votes did banana and orange get?",
     "a": "Banana 6 and orange 12. (24 − 6 = 18 for banana and orange; take away the extra 6: 12, share: 6 each; give orange the 6 back.)"
    },
    {
@@ -684,16 +684,16 @@
     "a": "8 (6 small squares + 2 squares made of 4 small ones)"
    },
    {
-    "q": "A square has both diagonals drawn (lines joining opposite corners). How many triangles can you find? Count the small ones first.",
-    "a": "8 (4 small + 4 made of two small ones)"
+    "q": "Three squares are joined in a row to make a long rectangle. How many rectangles can you find altogether? (A square counts as a rectangle.)",
+    "a": "6 (3 single squares, 2 pairs and 1 whole row)."
    },
    {
     "q": "Draw a shape with 4 straight sides that is NOT a square. Is it a rectangle? How do you know?",
     "a": "Open. A long rectangle has 4 square corners, so it is a rectangle. A slanted shape with 4 sides does not have square corners, so it is not a rectangle."
    },
    {
-    "q": "Three squares are joined in a row to make a long rectangle. How many rectangles can you find altogether? (A square counts as a rectangle.)",
-    "a": "6 (3 single squares, 2 pairs and 1 whole row)."
+    "q": "A square has both diagonals drawn (lines joining opposite corners). How many triangles can you find? Count the small ones first.",
+    "a": "8 (4 small + 4 made of two small ones)"
    },
    {
     "q": "How many rectangles are in a grid 2 squares long and 2 squares high? (Squares count too.)",
@@ -954,8 +954,8 @@
     "a": "10¢ + 5¢"
    },
    {
-    "q": "How many sides does a hexagon have? (Draw one if you like.)",
-    "a": "6"
+    "q": "How many sides and how many corners does a rectangle have? (Draw one if you like.)",
+    "a": "4 sides and 4 corners"
    }
   ],
   "stretch": [

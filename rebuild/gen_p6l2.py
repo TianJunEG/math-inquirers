@@ -227,8 +227,9 @@ put(f'{L}-ws2ans',check(f'{L}-ws2ans','72–75 MIN','Page 2: check together',[('
  'Click after a child explains. Q3: 6 mod d: 0, 0, 0, 2, 1, 0 (d = 1 to 6). Q4: the only even prime is 2, so an odd total needs 2 + an odd prime; 27 − 2 = 25 = 5 × 5. Q5: 16 has five factors and 36 has nine, so not every square works: only a prime times itself (factors 1, p, p × p). Q6: set d to 1 comes before the loop; the if is inside the loop, say inside the if, and change d by 1 inside the loop but after the if.',size=32,gap=155,top=240))
 
 # ---------- stretch, challenge ----------
-st=[('1.','Twin primes differ by 2, like 11 and 13. Find all the twin prime pairs below 50.'),('2.','Which number below 30 has the most factors? How many?'),('3.','A number between 20 and 40 leaves remainder 1 when divided by 2, by 3 and by 4. Find both possible numbers.')]
-put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(talkcard(a,b,36) for a,b in st),'Answers: 1) 6 pairs: 3 and 5, 5 and 7, 11 and 13, 17 and 19, 29 and 31, 41 and 43. 2) 24, with 8 factors (1, 2, 3, 4, 6, 8, 12, 24); 20 and 28 have 6. 3) 25 and 37: each is 1 more than a multiple of 12 (24 + 1 and 36 + 1).'))
+import p6_th
+st=p6_th.pairs(2)
+put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(talkcard(a,b,30) for a,b in st),p6_th.answers(2)))
 ch=[('1.','Find the smallest number that can be divided exactly by 2, 3, 4, 5 and 6.'),('2.','1001 = 7 × 11 × 13. Use this to write 3003 and 5005 as products of primes.')]
 put(f'{L}-challenge',sec(f'{L}-challenge','Challenge',h2('Challenge')+''.join(talkcard(a,b,38) for a,b in ch),'Pairs try first, then the "see it" slide, then the walk-through. Answers: 1) 60 (2 × 2 × 3 × 5). 2) 3003 = 3 × 7 × 11 × 13 and 5005 = 5 × 7 × 11 × 13.'))
 def box(x,y,w,t,col=WHITE,fs=34):

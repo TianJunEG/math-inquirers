@@ -2,13 +2,14 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:24Z"
+  "at": "2026-10-22T04:47:58Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 3 – Legs, Wheels and Arrays",
  "order": [
   "p2l3-title",
   "p2l3-precheck",
+  "p2l3-precheck2",
   "p2l3-warm1",
   "p2l3-warm2",
   "p2l3-explore1",
@@ -31,9 +32,11 @@
   "p2l3-ws2ans",
   "p2l3-stretch",
   "p2l3-challenge",
+  "p2l3-challenge2",
   "p2l3-chdiag",
   "p2l3-chwalk",
   "p2l3-talk",
+  "p2l3-invest",
   "p2l3-exit",
   "p2l3-reflect"
  ],

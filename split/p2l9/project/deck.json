@@ -2,13 +2,14 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:25Z"
+  "at": "2026-10-22T04:47:59Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 9 – Measure Masters",
  "order": [
   "p2l9-title",
   "p2l9-precheck",
+  "p2l9-precheck2",
   "p2l9-warm1",
   "p2l9-warm2",
   "p2l9-explore1",
@@ -31,9 +32,11 @@
   "p2l9-ws2ans",
   "p2l9-stretch",
   "p2l9-challenge",
+  "p2l9-challenge2",
   "p2l9-chdiag",
   "p2l9-chwalk",
   "p2l9-talk",
+  "p2l9-invest",
   "p2l9-exit",
   "p2l9-reflect"
  ],

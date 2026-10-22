@@ -106,7 +106,7 @@ module.exports = {
     mistakes: ['Coding before working out the maths, so there is no way to tell whether the output is right.', 'Testing only once, or only with the value the program happened to show, instead of a value worked out by hand (and an edge case such as 1 or 0).', 'Showcase: reading the code block by block instead of explaining the maths puzzle and why the program works.'],
     extension: 'Level up your program: ask 5 questions and keep a score, let the player choose the rule, or count every dice total in a list. Write a Python version and check it gives the same results.',
     key: [
-      ['Q1', '(a) 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
+      ['Q1', '(a) 21 (6, 11, 16, then add 5) and 51  (b) 5n + 1  (c) 20 hexagons (5n + 1 = 101)  (d) 76: it checks a chain of 15 hexagons (6 + 14 × 5)'],
       ['Q2', '(a) 49 (factors 1, 7, 49; the only other 2-digit number with exactly 3 factors is 25)  (b) 2 × 2 × 3 × 7  (c) 3 + 37, 11 + 29, 17 + 23 (3 ways)'],
       ['Q3', '(a) −7 °C (−4 + 9 = 5, 5 − 12 = −7)  (b) 5 (5 × 3 − 10 = 5)  (c) 15 sides (360 ÷ 24)  (d) 1 o’clock (9 + 100 = 109 = 9 × 12 + 1)  (parts e and f are now in Think harder 4)'],
       ['Q4', '(a) 31; 18 ((58 − 4) ÷ 3)  (b) 4 factors (1, 7, 13, 91): not prime  (c) about 139: 5 of the 36 equally likely results make 8 (2 + 6, 3 + 5, 4 + 4, 5 + 3, 6 + 2), and 1000 × 5 ÷ 36 ≈ 139; the program gives a number near this, not exactly'],
@@ -187,11 +187,12 @@ module.exports = {
     const wt = [2600, 3300, 2700, 1300];
     const wp = [3600, 6300];
     return [
-      H.q(1, 'Chains of hexagons are made from sticks.', { before: 0, keepNext: true }),
+      H.q(1, 'Chains of hexagons are made from sticks. Start with (a): the picture shows 1, 2 and 3 hexagons.', { before: 0, keepNext: true }),
       side(hexChains(), codeSvg(hexProg, 'Code blocks: set sticks to 6, repeat 14 (change sticks by 5), say sticks', 14)),
-      H.sub('a', 'Sticks for 10 hexagons?  ____      (b)  Rule for n hexagons:  sticks = __________'),
+      H.sub('a', 'Sticks for 4 hexagons? ____ (count on from the picture)    10 hexagons? ____'),
+      H.sub('b', 'Rule for n hexagons:  sticks = __________'),
       H.sub('c', 'How many hexagons can be made with exactly 101 sticks?  ____'),
-      H.sub('d', 'Predict what the code says.  ____       Which chain does it check?  ____ hexagons'),
+      H.sub('d', 'The code says  ____ .  It checks a chain of  ____  hexagons.'),
       H.q(2, 'Prime hunters.', { before: 20, keepNext: true }),
       H.sub('a', 'I have 2 digits and exactly 3 factors. My digits add up to 13. What am I?  ____'),
       H.sub('b', 'Write 84 as a product of prime numbers.  ________________'),

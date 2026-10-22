@@ -240,5 +240,6 @@ module.exports.gaps = {
   "q": "What if the clock shows half past three (3:30)? Is the angle still 90°? Why not?",
   "a": "No. It is 75°: at 3:30 the hour hand has moved halfway from 3 to 4, which is 15° past the 3. The minute hand points at 6 (180°) and the hour hand at 105°."
  },
+ "chooseAfter": 2,
  "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 and Q6 are choices for the last few minutes."
 };

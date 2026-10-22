@@ -145,18 +145,16 @@ module.exports = {
     W.push(H.sub('a', 'Fill in the table.', { keepNext: true }));
     W.push(H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
       H.row([H.cell('Number', 2400, { bold: true, fill: 'EDEDED' }), ...['6', '9', '10', '15', '16', '25'].map(s => H.cell(s, 1250, { bold: true, fill: 'EDEDED' }))]),
-      H.row([H.cell('How many factors?', 2400, { bold: true }), ...Array(6).fill('').map(s => H.cell(s, 1250, { h: 130 }))])
+      H.row([H.cell('How many factors?', 2400, { bold: true }), ...Array(6).fill('').map(s => H.cell(s, 1250, { h: 60 }))])
     ]));
-    W.push(H.gap(60));
+    W.push(H.gap(20));
     W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
     W.push(...H.lines(1));
     W.push(H.sub('c', 'Is 49 a number with exactly 3 factors? List its factors to check. How could your answer to (b) have told you?'));
     W.push(H.ans('Factors of 49:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
     W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?', { keepNext: true }));
-    W.push(H.sub('', 'Step 1: the numbers between 30 and 70 that are multiples of 3 AND 4 (count in 12s): ______, ______, ______', { keepNext: true }));
-    W.push(H.sub('', 'Step 2: cross out any multiple of 8. Left: ______ and ______.   Step 3: use the last clue.', { keepNext: true }));
-    W.push(H.ans('I am:'));
+    W.push(H.sub('', 'Step 1: multiples of 3 AND 4 between 30 and 70 (count in 12s): ______, ______, ______.  Step 2: cross out any multiple of 8. Left: ______ and ______.  Step 3: use the last clue.   <b>I am:</b> ________', { keepNext: true }));
     W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
     W.push(...H.lines(2));
     return W;

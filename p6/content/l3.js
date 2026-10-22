@@ -168,10 +168,10 @@ module.exports = {
       { q: 'In Scratch the stage is a number line. A sprite is at x = 30. It runs “change x by −50” (move 50 steps to the left). Where is it now?', a: 'x = −20' }
     ],
     stretch: [
-      { q: 'Work out −7 + 12 and 5 − 13.', a: '5 and −8' },
+      { q: 'A sprite starts at x = a. It runs “change x by −8” and then “change x by 5”. It ends at x = −1. What was a? Work backwards from the end, and check by running it forwards.', a: '2 (work backwards: −1 − 5 = −6, then −6 + 8 = 2; check: 2 − 8 = −6, −6 + 5 = −1)' },
       { q: 'A diver is at −14 m. A seagull is flying at 9 m. How far apart are they?', a: '23 m (14 up to sea level, then 9 more)' },
-      { q: 'Work out 4 − (−6). Hint: how far is it from −6 to 4?', a: '10' },
-      { q: 'Find the missing number: −3 + ____ = −10.', a: '−7 (adding −7 moves 7 to the left)' },
+      { q: 'Use the numbers −2, 3 and 5 once each to fill the gaps in  ____ − ____ − ____. What is the biggest answer you can make? What is the smallest?', a: 'Biggest 4 (5 − 3 − (−2) or 5 − (−2) − 3); smallest −10 (−2 − 3 − 5). Try all 6 orders: the answers are 4, 4, 0, 0, −10, −10.' },
+      { q: 'City A is 5 degrees colder than city B. City B is 3 degrees warmer than city C. City C is at −4 °C. Find the temperature of B and of A.', a: 'B is −1 °C (−4 + 3) and A is −6 °C (−1 − 5).' },
       { q: 'At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise from 6 a.m. to 2 p.m.? What was the temperature at 10 p.m.?', a: 'It rose 11 degrees; at 10 p.m. it was −2 °C (7 − 9).' },
       { q: 'set n to 10, then repeat 5 times: change n by −4. Then say n. What does it say?', a: '−10 (10 − 20)' },
       { q: 'What number is exactly halfway between −9 and 3?', a: '−3 (the gap is 12; −9 + 6 = −3 and 3 − 6 = −3)' },

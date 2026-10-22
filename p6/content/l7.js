@@ -120,7 +120,7 @@ module.exports = {
     mistakes: ['Using the inside angle as the turn: turn 60° for a triangle draws half a hexagon, and turn 108° for a pentagon does not close.', 'Dividing 180 by the number of sides instead of 360, or forgetting that turn + inside angle = 180°.', 'Stars: thinking the turns always add up to 360°. A star goes round more than once, so its turns add up to 720°, 1080° and so on.'],
     extension: 'Draw a rosette: repeat 12 [draw a square, then turn ↻ 30]. Start this one with go to x: 0 y: 0 instead of x: -50 y: 100, so the rosette stays on the stage. How far does the turtle turn altogether? (12 × (360 + 30) = 4680° = 13 full turns.) Design your own rosette and predict its total turning before you run it.',
     key: [
-      ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
+      ['Q1', '3 sides (example): 120°, 60°, 360°.  6 sides (the hexagon from the explore task): turn 60°, inside 120°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
       ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
       ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
       ['Q4', '9 points, 4 times round: total 1440°, turn 160°, point 20°.  (The 20-point star, total 1080°, turn 54°, point 126°, is now Think harder 4.)'],
@@ -196,7 +196,7 @@ module.exports = {
 
   workbook: H => {
     const w1 = [2475, 2475, 2475, 2475];
-    const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
+    const rows1 = [['3', '120°', '60°', '360°'], ['6', '', '', ''], ['9', '', '', ''], ['10', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
     const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 42 }))),
       ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 36, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
     const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn ↻ {120} degrees']]]];
@@ -209,11 +209,11 @@ module.exports = {
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
     const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('<div style="text-align:left;line-height:1.35;font-size:14.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:left;line-height:1.35;font-size:14.5px"><b>turn</b> = the swing at a corner.<br><b>inside angle</b> = the angle inside the shape (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,
-      H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
+      H.q(1, 'Regular polygons: fill in the table (row 2 is your hexagon from the explore task). Test two rows in Scratch: move 80 up to 10 sides, 50 for 12 to 15, 30 for 24.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Mei says a regular polygon can have inside angles of 130°. Is she right? Explain.', { after: 20 }), ...H.lines(1),
@@ -222,7 +222,7 @@ module.exports = {
       H.sub('a', 'What does the turtle draw? Explain.', { after: 20 }), ...H.lines(1),
       H.sub('b', 'Total turning  ________ °        (c)  Fix it: change  ________  to  ________'),
 
-      H.q(3, 'Trace the code. The program keeps a running total of how far the turtle has turned. Fill in the table. (The first 3 rows are done for you.)', { pb: true, before: 0, keepNext: true }),
+      H.q(3, 'Trace the code. The total is how far the turtle has turned so far. (3 rows are done for you.)', { pb: true, before: 0, keepNext: true }),
       H.fig(codeAndFrame(q3prog, 'Program: when green flag clicked, set total to 0, pen down, repeat 9: move 150 steps, turn ↻ 80 degrees, change total by 80; then say total. A trace table for total after repeats 1 to 9.', null, { rows: 9, head: 'total', prefill: ['80', '160', '240'] })),
       H.sub('a', 'The sprite says  ________      (b)  Times the turtle goes round  ________', { after: 60 }),
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),

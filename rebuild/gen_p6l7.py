@@ -255,11 +255,11 @@ put('p6l7-break', dark('p6l7-break', TEAL,
 
 # ================= 14–15. worksheet page 1 =================
 put('p6l7-ws1', ws_preview('p6l7-ws1', '40–50 MIN', 'Worksheet page 1: with your partner',
-    [('Q1', 'The polygon table: some rows forwards, some backwards. Test two rows. New words are in the box at the top.'), ('Q2', 'Ben’s nonagon program. Predict what it draws first, then run it.')],
+    [('Q1', 'The polygon table: row 2 is the hexagon you already drew, then some rows forwards, some backwards. Test two rows. New words are in the box at the top.'), ('Q2', 'Ben’s nonagon program. Predict what it draws first, then run it.')],
     'Predict on paper first, then run it. If the screen surprises you, ask why.',
     'Minutes 40 to 50, at the computer in pairs. Walk around. Ask "How do you know?" before giving any help. For Q2 insist on a written prediction before anyone runs the program.'))
 put('p6l7-ws1ans', check2('p6l7-ws1ans', '50–52 MIN', 'Page 1: check together', [
-    ('Q1', '9: 40°, 140°    10: 36°, 144°    36: 10°, 170°    turn 24°: 15 sides, 156°    inside 165°: turn 15°, 24 sides', 2),
+    ('Q1', '6: 60°, 120°    9: 40°, 140°    10: 36°, 144°    turn 24°: 15 sides, 156°    inside 165°: turn 15°, 24 sides', 2),
     ('Q1a, b', 'Sides × turn is always 360°: one full turn.    b) No: turn 50°, 360 ÷ 50 = 7.2', 2),
     ('Q2', 'A triangle drawn 3 times over.  9 × 120° = 1080° (3 full turns).  Fix: change 120 to 40.', 2)],
     'Click each answer after a pair explains. Q1: the backwards rows: 360 ÷ 24 = 15 sides, 180 − 24 = 156°; 180 − 165 = 15°, 360 ÷ 15 = 24 sides. Q2: 120 is the turn of a triangle, so after 3 moves the turtle is home, and the other 6 moves go round the same triangle twice more. Run it slowly in Scratch (add "wait 0.5 seconds" inside the loop) so children see it.'))
@@ -312,9 +312,10 @@ put('p6l7-ws2ans', check2('p6l7-ws2ans', '72–75 MIN', 'Page 2: check together'
     'Click each answer after a child explains. Q4: the 9-point star has the sharper points (20°). Q5: each inside angle 60, 90, 108, 120, 144; the rule can also be written n × 180 − 360 (the turtle way). Ask: "Why does one more side add 180°?" (one more corner adds one more straight line of 180°, and the turns still make 360°).'))
 
 # ================= 21. stretch (3 new) =================
-st = QB['stretch'][4:7]
-body = h2('Stretch') + ''.join(card(p(num(f'{i+1}.', x['q']), 34, 600, raw=True), extra='padding:26px 40px') for i, x in enumerate(st))
-put('p6l7-stretch', sec('p6l7-stretch', 'For early finishers', body, 'For children who finish early (not on the worksheet). Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))))
+import p6_th
+st = p6_th.get(7)
+body = h2('Stretch') + ''.join(card(p(num(f'{i+1}.', x['q']), 28, 600, raw=True), extra='padding:14px 34px') for i, x in enumerate(st))
+put('p6l7-stretch', sec('p6l7-stretch', 'For early finishers', body, 'The same four questions as the printed Think harder page, for anyone who wants them. Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))))
 
 # ================= 22. challenge =================
 ch = [QB['challenge'][0], QB['challenge'][3]]

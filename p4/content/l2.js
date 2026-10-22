@@ -125,15 +125,14 @@ module.exports = {
     W.push(H.q(1, 'Round each number. Draw a number line if it helps.', { before: 40, keepNext: true }));
     W.push(H.tbl([2475, 2475, 2475, 2475], [
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
-      ...['47 285', '63 950'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
+      ...['47 285', '63 950'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 40 }), H.cell('', 2475, { h: 40 }), H.cell('', 2475, { h: 40 }), H.cell('', 2475, { h: 40 })]))
     ]));
     W.push(H.gap(40));
-    W.push(H.sub('', 'Try next, if you have time:   9049  →  ________  ________  ________        80 503  →  ________  ________  ________'));
+    W.push(H.sub('', 'Try next, if you have time:   9049 → ______  ______  ______      80 503 → ______  ______  ______'));
     W.push(H.q(2, 'Work backwards.', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
-    W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________', { keepNext: true }));
-    W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
+    W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ________    Smallest:  ________    Largest:  ________', { keepNext: true }));
     W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));

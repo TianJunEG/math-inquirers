@@ -30,7 +30,7 @@ module.exports = {
     objective: 'Find a mystery number in two-step puzzles with +, −, × and ÷ by working backwards (undo the last step first with the opposite operation), check by going forwards, and use before-and-after bar models for stories where an amount changes.',
     skills: 'Inverse operations, working backwards, guess and check, before-and-after bar models, checking forwards',
     materials: 'Mini whiteboards, counters, paper cups, number machine cards (× 2, × 3, × 4, × 5, × 10 and + or − cards from 1 to 20), paper strips for bars.',
-    online: 'Machine cards shown on the slide; children write on whiteboards and hold them up. For bars, children draw on paper or fold paper strips into equal parts.',
+    online: 'Machine cards shown on the slide; children write on whiteboards or paper and show their tutor on camera or keep it to share if they want. For bars, children draw on paper or fold paper strips into equal parts.',
     warmup: 'Guess my machine: the tutor is a one-step machine (for example × 3 or + 15). Children call out IN numbers, the tutor says the OUT, and children guess the rule. Then the tutor says only an OUT and children say what went IN.',
     explore: 'Pairs build a two-step machine from two cards (one × card and one + or − card). One partner secretly picks a start number, runs it through and says only the OUT. The other works backwards to find the start. Then they swap the order of the cards: does the same start give the same OUT?',
     mini: 'Opposites undo: + and −, × and ÷. Draw the machine, go backwards, undo the LAST step first, then check forwards. For stories that change an amount, draw a before-and-after bar and undo each change from the end.',

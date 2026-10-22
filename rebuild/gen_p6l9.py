@@ -222,9 +222,10 @@ put('p6l9-ws2ans',check_slide('p6l9-ws2ans','72–75 MIN','Page 2: check togethe
  'Click after a child explains. Q5: i goes 1, 2, 3, 4 and item i is 5, 9, 6, 12; 32 ÷ 4 = 8; with 13 added the total is 45 and the length is 5, so 9. Q6: 29 + 31 + 33 + 30 + 32 + 34 + 28 = 217, 217 ÷ 7 = 31; hotter than 31: 33, 32 and 34. The if compares item i of temps with mean, and change count by 1 counts it.'))
 
 # ---------------- 21. stretch (new items) ----------------
-st=[('1.','The mean of 6 numbers is 7. Five of them are 3, 5, 8, 9 and 10. What is the sixth?'),('2.','Find ALL the sets of 3 different counting numbers with a mean of 5 and a median of 3.'),('3.','A class of 30 has a mean score of 70. The 10 boys have a mean of 64. What is the mean of the 20 girls?')]
-put('p6l9-stretch',sec('p6l9-stretch','For early finishers',h2('Stretch')+numcards(st,36),
- 'Answers: 1) 7 (6 × 7 = 42; 3 + 5 + 8 + 9 + 10 = 35; 42 − 35 = 7). 2) Two sets: 1, 3, 11 and 2, 3, 10 (total 15; the middle is 3; the smallest is 1 or 2, so the largest is 15 − 3 − 1 = 11 or 15 − 3 − 2 = 10). 3) 73 (30 × 70 = 2100; 10 × 64 = 640; 2100 − 640 = 1460; 1460 ÷ 20 = 73). Test any of them in code: put the numbers in a list and run the mean program.'))
+import p6_th
+st=p6_th.pairs(9)
+put('p6l9-stretch',sec('p6l9-stretch','For early finishers',h2('Stretch')+numcards(st,30),
+ p6_th.answers(9)))
 
 # ---------------- 22. challenge ----------------
 ch=QB['challenge'][:2]

@@ -302,9 +302,10 @@ put('p6l8-ws2ans', check2('p6l8-ws2ans', '72–75 MIN', 'Page 2: check together'
     'Click each answer after a child explains. Q4: the repeated word BPM; "the" is the most common 3-letter word; T = 19, B = 1: 19 + 8 = 27, 27 mod 26 = 1. Decode every letter by 8 back (or forward 18): BPM SMG QA CVLMZ BPM UIB is THE KEY IS UNDER THE MAT. Q5: a) 6 + 9 = 15. b) 19 + 12 = 31, 31 mod 26 = 5. c) 9 + 17 = 26, a full turn. d) Shift 13 used twice is 26: ROT13 is a real code, and coding twice decodes it.'))
 
 # ================= 21. stretch (3 new) =================
-st = QB['stretch'][4:7]
-body = h2('Stretch') + ''.join(card(p(num(f'{i+1}.', x['q']), 34, 600, raw=True), extra='padding:26px 40px') for i, x in enumerate(st))
-put('p6l8-stretch', sec('p6l8-stretch', 'For early finishers', body, 'For children who finish early (not on the worksheet). Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))))
+import p6_th
+st = p6_th.get(8)
+body = h2('Stretch') + ''.join(card(p(num(f'{i+1}.', x['q']), 28, 600, raw=True), extra='padding:14px 34px') for i, x in enumerate(st))
+put('p6l8-stretch', sec('p6l8-stretch', 'For early finishers', body, 'The same four questions as the printed Think harder page, for anyone who wants them. Answers: ' + '  '.join(f'{i+1}) {x["a"]}' for i, x in enumerate(st))))
 
 # ================= 22. challenge =================
 ch = [QB['challenge'][0], QB['challenge'][1]]

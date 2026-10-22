@@ -132,7 +132,7 @@ for i,(k,t,a) in enumerate(things):
     L=128+(i%3)*(CW+32); Tp=280+(i//3)*310
     body+=pin(L,Tp,CW,f'<div style="display:flex;align-items:center;gap:18px">{icon(k)}<p style="font-size:34px;font-weight:700;line-height:1.2">{E(t)}</p></div>',None,WHITE,24,'14px 20px',f'box-sizing:border-box;height:280px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+300,Tp+196,CW-330,f'<p style="font-size:40px;font-weight:800;text-align:center">{E(a)}</p>','pop',YEL,16,'8px 14px',f'box-sizing:border-box;border:3px solid {NAVY}')
-put('p2l9-warm1',sec('p2l9-warm1','0–5 MIN',body,'Minutes 0 to 5. Which unit? Point to one card at a time. Children write the unit on whiteboards and hold them up on three. Then click to show the unit (clicks reveal door, pencil, rice, strawberry, bucket, brushing teeth in order). '
+put('p2l9-warm1',sec('p2l9-warm1','0–5 MIN',body,'Minutes 0 to 5. Which unit? Point to one card at a time. Children write the unit on whiteboards or paper and show their tutor on camera or keep it to share if they want. Then click to show the unit (clicks reveal door, pencil, rice, strawberry, bucket, brushing teeth in order). '
  'Answers: door m (about 2 m), pencil cm, bag of rice kg, strawberry g, bucket of water ℓ, brushing teeth minutes (about 2 minutes). Ask "Why not grams for the rice?" (the number would be very big; kilograms are the bigger unit) and "Why not metres for the pencil?" (a pencil is much shorter than 1 m). '
  'Quick finisher: "Name something you would measure in litres at home." (a bottle of water, a pot of soup, a fish tank). Watch for children who mix up length and mass: "Is a heavy thing always long?"'))
 

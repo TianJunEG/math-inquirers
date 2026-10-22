@@ -70,7 +70,7 @@ module.exports = {
   deck: {
     today: 'Draw before-and-after models, find what stays the same, and solve fraction stories with units.',
     warmGame: 'What’s left? A jar has 120 marbles. Turn over one card at a time: give away 1/4 of the jar; give away 1/3 of what is left. Children draw what is left as a new bar and write how many are left after each card. (Tutor extension: a third card, 5/6 of what is left.)',
-    warmQs: [['What is 2/5 of 45?', '18'], ['3/4 of a number is 27. What is the number?', '36'], ['What is 1/3 of 3/4?', '1/4'], ['Ali has 12 more stickers than Ben. Each gets 5 more. What is the difference now?', 'Still 12'], ['Ali has 30 cards and Ben has 20. Ali gives Ben 5. What is the total now?', 'Still 50']],
+    warmQs: [['What is 2/5 of 45?', '18'], ['What is 1/4 of 36?', '9'], ['What is half of 1/2?', '1/4'], ['Ali has 12 more stickers than Ben. Each gets 5 more. What is the difference now?', 'Still 12'], ['Ali has 30 cards and Ben has 20. Ali gives Ben 5. What is the total now?', 'Still 50']],
     expSetup: ['Ali takes 18 counters. Mei takes 6 counters.', 'Ali gives Mei 1 counter at a time. After each move write Ali, Mei, the total and the difference in a table.', 'Start again from 18 and 6. This time give BOTH children 2 more counters each time. Fill in a new table.', 'What never changes in each table? When does Mei have 1/2 as many counters as Ali?'],
     expPic: 'two rows of counters: Ali’s row of 18 yellow counters and Mei’s row of 6 blue counters, with an arrow from Ali’s row to Mei’s row.',
     expAsk: [['What stayed the same when Ali gave counters to Mei?', 'The total: 24 every time.'], ['What stayed the same when both children got 2 more?', 'The difference: 12 every time.'], ['When did Mei have 1/2 as many as Ali?', 'After Ali gave 2 (16 and 8), and after both got 6 more (24 and 12).']],
@@ -126,11 +126,11 @@ module.exports = {
     H.sub('d', '(try this one if you like) What fraction of his money did he spend on the pen?   ____________'),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
     H.fig(afterModel()),
-    H.sub('a', 'How many stickers did they have altogether after the swap?   ____________'),
+    H.sub('a', 'How many stickers altogether after the swap? ________   The 7 boxes hold this many, so one box = ________ stickers.'),
     H.sub('b', 'How many stickers did Siti have at first? How many did Mei have at first?'), H.ans('Siti: __________     Mei:'),
     H.q(3, 'Ali has 50 marbles and Ben has 30 marbles. Ali gives some of his marbles to Ben (Ali has fewer afterwards and Ben has more).', { pb: true, before: 0, keepNext: true }),
-    H.sub('a', 'Ben says, “If Ali gives me 20 marbles, we will have the same number, because Ali has 20 more than me.” Test it: after Ali gives 20, Ali has ______ and Ben has ______. Is Ben right? Explain.'), ...H.lines(1),
-    H.sub('b', 'How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
+    H.sub('a', 'Ben says Ali should give 20 marbles so they have the same number. Test it: after Ali gives 20, Ali has ______ and Ben has ______. Is Ben right? Explain.'), ...H.lines(1),
+    H.sub('b', 'The total stays ______. After: Ali 3 parts, Ben 5 parts, so one part = ______. How many marbles must Ali give Ben so that Ali has 3/5 as many as Ben?'), H.ans(),
 
     H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
     H.p(['<b style="color:' + TEAL + '">Start here:</b> try a gift of $10 each. How much does each boy have now? Is Ali’s money 2/3 of Ravi’s? Is the gift too big or too small?'], { after: 20 }),
@@ -138,7 +138,7 @@ module.exports = {
     H.sub('b', 'How much money did their mother give each boy?'), ...H.lines(2), H.ans(),
     H.q(5, 'A box had red beads and blue beads. 3/7 of the beads were red. Then 30 red beads were added. Now 3/5 of the beads are red.', { keepNext: true }),
     H.sub('a', 'Which colour of beads did not change?'), H.ans(),
-    H.sub('b', 'Before: red 3 units, blue ______ units. After: the box has 5 equal parts. 3 parts are red and 2 parts are blue. Draw the 5 parts below. Blue is still ______ units, so 2 parts = ______ units and the whole box is ______ units.'),
+    H.sub('b', 'Before: red 3 units, blue ______ units. After: 5 equal parts, 3 red and 2 blue (draw them below). Blue is still ______ units, so 2 parts = ______ units and the whole box = ______ units.'),
     H.fig(fiveBar()),
     H.sub('c', 'How many beads were in the box at first?'), ...H.lines(2), H.ans(),
     H.sub('d', 'How many beads are in the box now?'), H.ans()

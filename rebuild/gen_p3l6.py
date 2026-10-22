@@ -113,7 +113,7 @@ for i,(sv,a) in enumerate(shapes):
     body+=pin(L,320,CW,f'<div style="display:flex;justify-content:center">{sv}</div>',None,WHITE,24,'20px 20px',f'box-sizing:border-box;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L,640,CW,f'<p style="font-size:44px;font-weight:800;text-align:center">{a}</p>','pop',YEL,20,'12px 18px','box-sizing:border-box')
 put('p3l6-warm1',sec('p3l6-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction, hold it up, then click to reveal (clicks go left to right). '
+ 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction (show your tutor on camera or keep it to share if you want), then click to reveal (clicks go left to right). '
  'Answers: circle 3/8; rectangle 4/6, which is the same as 2/3 (the 4 shaded parts fill two of the three columns); hexagon 5/6; bar 7/10. '
  'Ask every time: "How do you know the parts are equal?" (same size triangles, same size squares). Ask: "What fraction is NOT shaded?" (5/8, 2/6, 1/6, 3/10).'))
 
@@ -160,7 +160,7 @@ put('p3l6-we1',sec('p3l6-we1','26–28 MIN',body,
 # ---------- 8. try: equal fractions ----------
 put('p3l6-try1',try_raw('p3l6-try1','28–29 MIN','Your turn: equal fractions','What goes in the box? Use the wall or multiply.',
  [('a',F(1,3)+' = '+F(BOX,9),'3'),('b',F(3,5)+' = '+F(6,BOX),'10'),('c',F(5,6)+' = '+F(BOX,12),'10')],
- 'Whiteboards up together, then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
+ 'Whiteboards (show your tutor on camera or keep it to share if you want), then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
 
 # ---------- 9. worked example: compare ----------
 bars2=(T(150,46,'5/6',34,TEAL)+bar(300,10,1340,56,12,[TEAL]*10,3,False)+T(150,126,'3/4',34,TEAL)+bar(300,90,1340,56,12,[YEL]*9,3,False))

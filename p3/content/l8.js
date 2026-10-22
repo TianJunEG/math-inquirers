@@ -204,7 +204,7 @@ module.exports = {
       H.q(5, 'Use a ruler. Draw on the grid.', { keepNext: true }),
       H.fig(q5Fig()),
       H.sub('a', 'Through C, draw a line parallel to AB.     (b)  Through D, draw a line perpendicular to AB.'),
-      H.sub('c', 'Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker. Hint: try 1 right and 2 down.'),
+      H.sub('c', 'Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker. Hint: put your checker on EF first, then slide it to G.'),
       H.q(6, 'How many right angles can you find in this window?', { keepNext: true }),
       side(q6Fig(), H.sub('', 'Visit every point where lines meet. Write how many right angles are at each point, then add.') + H.sub('', 'Right angles altogether:  ________'))
     ];

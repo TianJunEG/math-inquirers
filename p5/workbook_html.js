@@ -2,6 +2,7 @@
 const C = require('../hp/common_html.js');
 const { fs, t, p, q, lines, banner, AlignmentType } = C;
 const L = require('./data.js');
+const FIGS = require('./content/figs.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
@@ -12,14 +13,15 @@ const hdr = (n, topic, title, pb = true) => [
 ];
 const bx = '<span style="display:inline-block;width:20px;height:20px;border:2.5px solid #1B2A49;border-radius:5px;vertical-align:-4px;margin:0 6px 0 12px"></span>';
 // Reflection: short and safe. A small box on the page every child gets (the Investigation page), never under the Go further page.
-const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-radius:14px;padding:8px 16px;margin-top:14px;background:#F3FAF8;page-break-inside:avoid"><div style="font-weight:800;font-size:20px;color:#1F7A6F;margin-bottom:2px">My reflection  <span style="font-weight:400;font-size:15px;color:#444">(2 minutes. Your tutor may read this privately to plan the next lesson. It is never marked or shown to others. &ldquo;Pass&rdquo; is always OK.)</span></div>
+const reflect = n => `<div class="p" style="border:3px solid #1F7A6F;border-radius:14px;padding:8px 16px;margin-top:14px;background:#F3FAF8;page-break-inside:avoid"><div style="font-weight:800;font-size:20px;color:#1F7A6F;margin-bottom:2px">My reflection  <span style="font-weight:400;font-size:15px;color:#444">(2 minutes. Your tutor may read this to plan the next lesson. It is never marked or shown to others. &ldquo;Pass&rdquo; is always OK.)</span></div>
 <div style="margin:5px 0">Something I did well ____________________________________________________________</div>
 <div style="margin:5px 0">The hardest part was ______________________________________________________________</div>
 <div style="margin:5px 0">What helped me:${bx}a picture or model${bx}a list or table${bx}a simpler number${bx}my partner${bx}I asked for help${bx}checking my estimate</div>
-<div style="margin:5px 0">${bx}I am still stuck (my tutor will check in with me)${bx}Pass</div></div>`;
-// Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
-const choose = () => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question 3</b> you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
-const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2 plan.</b> Start with ${txt}. Then choose what to try next. You do not have to finish the page. The Investigation is on the next page.</div>`;
+<div style="margin:5px 0">Next time I will try ______________________________________________________________</div>
+<div style="margin:5px 0">${bx}${L.stuckTick(n)}${bx}Pass</div></div>`;
+// Neutral choice line at the top of page 1 (one short line; Lesson 1 says "question 2").
+const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:5px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceAfter(n)}:</b> carry on, or try Think harder. You can swap at any time.</div>`;
+const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2.</b> Start with ${txt}, then choose. You do not have to finish. Keep the last 10 minutes for Think harder, Go further or the Investigation.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
@@ -33,17 +35,26 @@ const extra = (n) => {
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(b)</b> ${inv.parts[1]}</div>`);
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);
   out.push(...lines(6));
-  out.push(reflect());
+  out.push(reflect(n));
   // Page 4: Think harder
   out.push(...hdr(n, ls.topic, 'THINK HARDER'));
-  out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Draw a big, neat diagram first and label every length or angle you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
+  const DIAG = [4, 5, 8].includes(n) ? ' Draw a big, neat diagram first and label every length or angle you know.' : '';
+  out.push(p(t('Draw a model, make a list or make a table. Then write how you know.' + DIAG, { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner(n === 7 ? 'Think harder  (Q1: preview of P6, percentage change)' : 'Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(n === 7 && i < 2 ? 1 : 3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => {
+    out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true }));
+    if (FIGS[n] && FIGS[n]['TH' + (i + 1)]) out.push(H.fig(FIGS[n]['TH' + (i + 1)]));
+    out.push(...lines(FIGS[n] && FIGS[n]['TH' + (i + 1)] ? 2 : (n === 7 && i < 2 ? 1 : 3)));
+  });
   // Page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner(n === 7 ? 'Go further  (a puzzle to chew on: P6 preview)' : 'Go further  (a puzzle to chew on)'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  b.challenge.slice(-3).forEach((x, i) => {
+    out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true }));
+    if (FIGS[n] && FIGS[n]['GF' + (i + 5)]) out.push(H.fig(FIGS[n]['GF' + (i + 5)]));
+    out.push(...lines(FIGS[n] && FIGS[n]['GF' + (i + 5)] ? 3 : 4));
+  });
   return out;
 };
 // Page 2 gets a small "Start here" banner and a neutral plan line after its page break.
@@ -61,7 +72,7 @@ L.content.forEach(c => {
   const l = c.lesson;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
   W.push(banner('Start here'));
-  W.push(choose());
+  W.push(choose(l.n));
   W.push(...page2(c.workbook(H), l.n));
   W.push(...extra(l.n));
 });

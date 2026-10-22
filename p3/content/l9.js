@@ -18,12 +18,11 @@ module.exports = {
     ],
     extension: 'Plan a real outing (a trip to the zoo or a hawker lunch): find the times on a timetable, the total cost for your family and the change from a $50 note.',
     key: [
-      ['Q1', '(a) 200 cm  (b) 3000 g  (c) 306 cm  (d) 2450 g  (e) 4 ℓ 80 ml  (f) 4 × 65 cm = 260 cm; 300 cm − 260 cm = 40 cm'],
+      ['Q1', '(a) 200 cm and 3000 g  (b) 306 cm and 2450 g  (c) 4 ℓ 80 ml  (d) 4 × 65 cm = 260 cm; 300 cm − 260 cm = 40 cm'],
       ['Q2', '(a) 1 kg, 1 kg 3 g, 1030 g, 1 kg 300 g  (b) 1 kg is 1000 g, so 1 kg 30 g = 1030 g, not 130 g.'],
-      ['Q3', '(a) No: $7.85 + $6.90 + $5.50 = $20.25, which is 25¢ more than $20.  (b, if time) Book, pen set and puzzle: $19.35. Change: 65¢.'],
-      ['Q4', '(if time) (a) 07:15, 15:40, 8:05 p.m., 12:30  (b) 17 − 12 = 5, so 17:00 is 5 p.m., not 7 p.m.'],
-      ['Q5', '(a) 1 h 25 min (15 min + 1 h + 10 min)  (b) 5:25 p.m. (4:35 + 25 min = 5:00, + 25 min = 5:25)  (c) 7:25 p.m. (9:15 back 1 h = 8:15, back 50 min = 7:25)'],
-      ['Q6', '(if time) (a) Buses: 06:40, 07:05, 07:30, 07:55, 08:20. Next bus 08:20; he waits 5 minutes.  (b) 08:55']
+      ['Q3', 'No: $7.85 + $6.90 + $5.50 = $20.25, which is 25¢ more than $20.'],
+      ['Q4', '(a) 07:15, 15:40, 8:05 p.m., 12:30  (b) 17 − 12 = 5, so 17:00 is 5 p.m., not 7 p.m.'],
+      ['Q5', '(a) 1 h 25 min (15 min + 1 h + 10 min)  (b) 5:25 p.m. (4:35 + 25 min = 5:00, + 25 min = 5:25)  (c) 7:25 p.m. (9:15 back 1 h = 8:15, back 50 min = 7:25)']
     ]
   },
   script: {
@@ -55,8 +54,8 @@ module.exports = {
     keyBig: 'Change to one unit before you compare, add or subtract. For time, draw a time line and jump to the next o’clock.',
     keySmall: '1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml, $1 = 100¢, 1 h = 60 min. After 12 noon, add 12 for the 24-hour clock.',
     brk: 'Human clock. Stretch one arm as the hour hand and one as the minute hand. Show 3 o’clock, 6 o’clock, quarter past 9 … and 15:00!',
-    ws1: 'Page 1, in pairs: Q1 change the units (including the ribbon), Q2 order masses and fix a mistake, Q3 Siti’s $20 budget (Q3b if time).',
-    ws2: 'Page 2, on your own: Q4 the 24-hour clock, Q5 durations, end and start times; then Q6 the bus timetable if you have time.'
+    ws1: 'Page 1, in pairs: Q1 change the units (including the ribbon), Q2 order masses and fix a mistake, Q3 Siti’s $20 budget (7 parts on this page; 12 parts in the lesson, no “if time” marks).',
+    ws2: 'Page 2, on your own: Q4 the 24-hour clock, Q5 durations, end and start times.'
   },
   qbank: {
     core: [
@@ -76,6 +75,7 @@ module.exports = {
       { q: 'A night train leaves at 22:40 and arrives at 01:15 the next morning. How long is the trip?', a: '2 h 35 min (20 min to 23:00, 1 h to 00:00, 1 h to 01:00, 15 min to 01:15)' },
       { q: 'Siti’s home is 1 km 250 m from school. She walks there and back every day. How far does she walk in 2 days?', a: '5 km (1250 m × 4 = 5000 m)' },
       { q: 'Ali needs 2 ℓ of milk. A 250 ml carton costs $1.10 and a 1 ℓ carton costs $3.60. What is the cheapest way to buy 2 ℓ?', a: 'Two 1 ℓ cartons: $7.20 (one 1 ℓ and four small: $8.00; eight small: $8.80)' },
+      { q: 'Siti has $20. The book costs $7.85, the pen set $4.60, the puzzle $6.90, the stickers $2.35 and the water bottle $5.50. Which 3 things should she buy to spend as much of her $20 as she can? How much change does she get?', a: 'Book, pen set and puzzle: $19.35, change 65¢ (the book and puzzle cost $14.75, which leaves $5.25, and the dearest thing that fits is the pen set at $4.60).' },
       { q: 'Mei goes to sleep at 21:45 and wakes up at 06:30. How long does she sleep?', a: '8 h 45 min (15 min to 22:00, 8 h to 06:00, 30 min to 06:30)' }
     ],
     challenge: [
@@ -95,11 +95,11 @@ module.exports = {
     const W = [];
     // ---------- page 1 ----------
     W.push(q(1, 'Trick 1: change to ONE unit.   1 m = 100 cm    1 kg = 1000 g    1 ℓ = 1000 ml    $1 = 100¢', { before: 40, keepNext: true }));
-    W.push(sub('a', '2 m  =  ________ cm              (b)  3 kg  =  ________ g'));
-    W.push(sub('c', '3 m 6 cm  =  ________ cm              (d)  2 kg 450 g  =  ________ g'));
-    W.push(p('Hint for (c): write 3 m as 300 cm first.', { after: 40 }));
-    W.push(sub('e', '4080 ml  =  ____ ℓ  ____ ml'));
-    W.push(sub('f', 'Mei cuts 4 pieces, each 65 cm long, from a ribbon 3 m long. How much ribbon is left?   ________ cm'));
+    W.push(sub('a', '2 m  =  ________ cm              and  3 kg  =  ________ g'));
+    W.push(sub('b', '3 m 6 cm  =  ________ cm              and  2 kg 450 g  =  ________ g'));
+    W.push(p('Hint for (b): write 3 m as 300 cm first.', { after: 40 }));
+    W.push(sub('c', '4080 ml  =  ____ ℓ  ____ ml'));
+    W.push(sub('d', 'Mei cuts 4 pieces, each 65 cm long, from a ribbon 3 m long. How much ribbon is left?   ________ cm'));
     W.push(q(2, 'Four bags of rice are weighed:     1 kg 300 g      1030 g      1 kg      1 kg 3 g', { keepNext: true }));
     W.push(sub('a', 'Order them, lightest first:  ________,  ________,  ________,  ________'));
     W.push(sub('b', 'Ben says, “1 kg 30 g is the same as 130 g.” Explain his mistake.'));
@@ -109,10 +109,9 @@ module.exports = {
       W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
         row(['$7.85', '$4.60', '$6.90', '$2.35', '$5.50'].map((s, i) => cell(s, ws[i], { h: 40, size: 26 })))])); }
     W.push(sub('a', 'Can she buy the book, the puzzle and the water bottle? Show how you know.  ______________________'));
-    W.push(sub('b', '(if time) Which 3 things should she buy to spend as much of her $20 as she can? How much change will she get?'));
     W.push(...lines(1));
     // ---------- page 2 ----------
-    W.push(q(4, '(if time) The 24-hour clock. After 12 noon, add 12 to the hour.', { pb: true, before: 0, keepNext: true }));
+    W.push(q(4, 'The 24-hour clock. After 12 noon, add 12 to the hour.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
       W.push(tbl(ws, [row(['7:15 a.m.', '3:40 p.m.', '________', '12:30 p.m.'].map((s, i) => cell(s, ws[i], { h: 90, size: 24 }))),
         row(['________', '________', '20:05', '________'].map((s, i) => cell(s, ws[i], { h: 90, size: 24, bold: true, fill: 'EDEDED' })))])); }
@@ -126,13 +125,6 @@ module.exports = {
     W.push(...lines(1));
     W.push(sub('c', 'A film lasts 1 h 50 min. It ends at 9:15 p.m. When did it start?   ________'));
     W.push(...lines(1));
-    W.push(q(6, '(if time) Buses leave the interchange every 25 minutes. The first bus leaves at 06:40.', { keepNext: true }));
-    { const ws = [1650, 1650, 1650, 1650, 1650, 1650];
-      W.push(tbl(ws, [row(['1st bus', '2nd bus', '3rd bus', '4th bus', '5th bus', '6th bus'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 60 }))),
-        row(['06:40', '', '', '', '', ''].map((s, i) => cell(s, ws[i], { h: 100, size: 24 })))])); }
-    W.push(sub('a', 'Ravi reaches the interchange at 08:15. When is the next bus? How long does he wait?'));
-    W.push(ans());
-    W.push(sub('b', 'The bus ride to school takes 35 minutes. When does Ravi reach school?   ________'));
     return W;
   }
 };

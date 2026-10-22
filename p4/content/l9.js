@@ -225,5 +225,6 @@ module.exports.gaps = {
   "q": "Draw the same graph again with a different scale. Does the story look different? Why?",
   "a": "Yes. A scale with small steps, or one that starts above 0, makes the line look steeper; big steps make it look flatter. The numbers are the same: only the picture changed."
  },
+ "chooseAfter": 2,
  "cap": "Page 2 is on your own. Aim for Q3 and Q4 first. Q5 is a choice for the last few minutes."
 };

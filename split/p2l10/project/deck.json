@@ -2,13 +2,14 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:25Z"
+  "at": "2026-10-22T04:47:59Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 10 – Challenge Day",
  "order": [
   "p2l10-title",
   "p2l10-precheck",
+  "p2l10-precheck2",
   "p2l10-warm1",
   "p2l10-warm2",
   "p2l10-explore1",
@@ -35,9 +36,11 @@
   "p2l10-ws2ans",
   "p2l10-stretch",
   "p2l10-challenge",
+  "p2l10-challenge2",
   "p2l10-chdiag",
   "p2l10-chwalk",
   "p2l10-talk",
+  "p2l10-invest",
   "p2l10-exit",
   "p2l10-reflect",
   "p2l10-end"

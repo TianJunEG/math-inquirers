@@ -55,7 +55,7 @@ const lesson = {
   objective: 'Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it to go forwards and backwards; find the numbers that two counting patterns share.',
   skills: 'Look for a pattern, make a table, make a list, explain a rule',
   materials: 'Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters.',
-  online: 'Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children hold up their tables.',
+  online: 'Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children show their tutor their tables on camera or keep them to share if they want.',
   warmup: 'Pattern rhythm: clap, clap, stomp, clap, clap, stomp … The group keeps the rhythm going; the tutor stops and asks what comes on beat 9, beat 10 and beat 20.',
   explore: 'Cube train: build red, red, blue, red, red, blue … with 9 cubes. Without building more, predict the colour of cube 20, then build to check. Which cubes are blue?',
   mini: 'Repeating patterns: find the group size; groups end at the times-table numbers (3, 6, 9 …); then count on from the end of a group. Count how many of one shape by counting the groups.',

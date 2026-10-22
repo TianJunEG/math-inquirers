@@ -40,12 +40,13 @@ G.push(tx('Suggested pairing: two lessons a week, for example Tuesday and Thursd
 G.push(h1('The 90-minute lesson routine', true));
 G.push(tx('Every lesson uses the same routine so children know what to expect and tutors can prepare quickly.'));
 const R = [
-  ['0–8', 'Warm-up', 'Welcome (0–1). Sneak-peek puzzles (1–4): two puzzles on ideas not learnt yet, answers shown only to the tutor, nobody marked. A 2-minute game (4–6). Quick questions (6–8). Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers on own paper held to the tutor, by private chat, or by thumbs. No whiteboards raised together.'],
+  ['0–8', 'Warm-up', 'Welcome (0–1). Sneak-peek puzzles (1–4): two puzzles on ideas not learnt yet, answers shown only to the tutor, nobody marked. A 2-minute game (4–6). Quick questions (6–8). Everyone joins in.', 'Sit in a circle or horseshoe.', 'Cameras on. Answers on own paper shown to the tutor on camera, by thumbs, or kept to share if the child wants. Nothing is sent by private message. No whiteboards raised together.'],
   ['8–20', 'Explore', 'Hands-on in pairs. Objects first, no writing yet.', 'Materials box on each table.', 'Each child has their own materials at home. Pairs go to breakout rooms.'],
   ['20–32', 'Mini-lesson', 'Tutor builds the table on the board, names the rule and asks what stays the same and what changes.', 'Whiteboard.', 'Shared slide and annotation tool.'],
   ['32–36', 'Brain break', 'Stand, stretch, drink water.', 'A short movement game.', 'Stand up on camera. Count the stretches together.'],
   ['36–72', 'Worksheet', 'Page 1 in pairs (36–50), check together (50–52), short teaching (52–57), page 2 alone (57–69), check together (69–72). Tutor asks “how do you know?” rather than giving answers.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child holds the page up to the camera. Tutor checks one or two answers each.'],
-  ['72–80', 'Talk time', 'Volunteers share one answer and explain it. Compare methods. Any child may pass. No cold-calling by name, no public tallies or rankings.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited. Quiet children can be invited by private chat beforehand.'],
+  ['72–77', 'Talk time', 'Volunteers share one answer and explain it. Compare methods. Any child may pass. No cold-calling by name, no public tallies or rankings.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited. The whole group is invited to share (a child may pass); quiet children are welcome in the open session with a parent nearby, and are never singled out.'],
+  ['77–80', 'Investigation share', 'Three minutes on the Investigation from the last core page (its own slide). The tutor asks the whole group for one way someone tried it; several answers are right. Pass is always fine. If nobody has started, pairs try the first step for one minute and the rest is take-home.', 'The tutor invites volunteers first.', 'The tutor invites volunteers; a child unmutes when invited.'],
   ['80–90', 'Exit ticket, Looking back and stamp', 'Exit ticket (80–87, one question on a slip of paper). Looking back (87–89, a small box on the last core page, a pass is always allowed). Closing and stamps (89–90).', 'Paper slip, tutor stamps.', 'Child writes the answer and shows the tutor only. Tutor stamps the next time or posts it.']
 ];
 G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1450), hd('What happens', 2700), hd('Face to face', 2300), hd('Online', 2550)]), ...R.map(r => row([c2(r[0], 900, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2700), c2(r[3], 2300), c2(r[4], 2550)]))]));
@@ -55,7 +56,7 @@ G.push(h2('Teaching habits that matter'));
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: place-value cards (Lessons 1, 2, 10), digit cards (Lessons 1 and 10), play coins and notes (Lesson 6), fraction strips (Lesson 7), cube nets and paper cube strips (Lesson 8), paper clock (Lesson 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
-['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, 20 counters or small objects, scissors, a split pin or short pencil for the clock, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
+['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, 20 counters or small objects, scissors, a split pin or short pencil for the clock, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'At the end of each lesson a child may show their page to the tutor on camera, or keep it to share if they want. No photos of children’s work are sent to or from the tutor.', 'Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
 G.push(h1('Materials master list', true));
 G.push(tbl([900, 2600, 3200, 3200], [row([hd('Lesson', 900), hd('Title', 2600), hd('Face to face', 3200), hd('Online set-up', 3200)]), ...L.lessons.map(l => row([c2(String(l.n), 900, { align: AlignmentType.CENTER, bold: true }), c2(l.title, 2600), c2(l.materials, 3200), c2(l.online, 3200)]))]));
@@ -139,7 +140,7 @@ L.lessons.forEach(l => {
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to four minutes.']);
 
   G.push(seg('36–72 min', 'Worksheet (pairs, then alone, then stretch)'));
-  doo(['Minute 36: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 36 to 50: pairs work together on the first page (in Lessons 5, 6 and 10 a short teach slide comes first, 36 to 38). Minutes 50 to 52: check page 1 together. Minutes 52 to 57: short teaching for page 2. Minutes 57 to 69: each child works alone on the second page. Minutes 69 to 72: check page 2 together. Think harder, Go further and the Investigation are open to any child at any time after question 3.']);
+  doo(['Minute 36: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 36 to 50: pairs work together on the first page (online, visit every shared breakout room by minute 47 so no pair works unseen for long; in Lessons 5, 6 and 10 a short teach slide comes first, 36 to 38). Minutes 50 to 52: check page 1 together. Minutes 52 to 57: short teaching for page 2. Minutes 57 to 69: each child works alone on the second page. Minutes 69 to 72: check page 2 together. Think harder, Go further and the Investigation are open to any child at any time after question 3.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
@@ -150,10 +151,14 @@ L.lessons.forEach(l => {
   G.push(tx('These are the questions on the two Think harder pages in the workbook (Think harder, then Go further). More are in the separate Question Bank.', { size: 19, color: '666666' }));
   ask([['Workbook Investigation (last core page): ' + gp.invest.title + '. ' + gp.invest.text + ' ' + gp.invest.first + (gp.invest.need ? ' ' + gp.invest.need : ''), gp.invest.model]], 'Investigation (several answers are right)', 'Model answer and what to look for');
 
-  G.push(seg('72–80 min', 'Talk time'));
+  G.push(seg('72–77 min', 'Talk time'));
   doo(['Bring the group back to a circle (or camera on, mics on). ' + GC.talkDo]);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+
+  G.push(seg('77–80 min', 'Investigation share (3 minutes)'));
+  doo(['Show the Investigation slide. The Investigation is on the last core page of the workbook and is open to every child from question 3 on. Ask the whole group: “Who would like to share one way they tried it? Passing is fine.” Volunteers only, no names, no public tallies. Several answers are right: praise the method, not the speed. If nobody has started, give pairs one minute for the easy first step and set the rest as take-home.']);
+  ask([['Investigation: ' + gp.invest.title, gp.invest.model]], 'Investigation', 'Model answer and what to look for');
 
   const X = l.n === 10;
   G.push(seg(X ? '80–85 min' : '80–87 min', 'Exit ticket'));
@@ -185,7 +190,7 @@ G.push(h1('Tutor checklist', true));
 G.push(h2('Before each lesson'));
 ['Read the lesson plan and solve the worksheet yourself without looking at the key.', 'Check materials are ready, or the online set-up has been sent.', 'Test the platform, screen share and annotation tools 10 minutes early (online).', 'Print or open the slide deck for the lesson.'].forEach(s => G.push(bu(s)));
 G.push(h2('During the lesson'));
-['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. No private messages to children. Invite the whole group, never one child. If a child ticks “I am still stuck”, check in during the open session (a quick visit to the shared breakout room or a hand signal, with a parent nearby). Never use personal accounts.', 'Do not take photos or recordings unless the Company has approved it and parents have consented.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
+['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. No private messages to children. Invite the whole group, never one child. If a child ticks “I am still stuck” on the paper Looking back box, read it at the next lesson and offer a whole-group follow-up in the open session, with a parent nearby. Never use personal accounts.', 'Do not take photos or recordings unless the Company has approved it and parents have consented.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
 G.push(h2('After the lesson'));
 ['Stamp inquiry journals and fill in the tracker.', 'Collect worksheets and answer keys (face to face) and keep them secure.', 'Note any child who needs help, and plan a short catch-up at the start of the next lesson.'].forEach(s => G.push(bu(s)));
 

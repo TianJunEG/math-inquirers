@@ -62,7 +62,7 @@ put('p3l5-warm1',sec('p3l5-warm1','0–5 MIN',body,
 qs=[('1.','17 ÷ 5','3 r 2'),('2.','30 ÷ 7','4 r 2'),('3.','45 ÷ 6','7 r 3'),('4.','50 ÷ 8','6 r 2'),('5.','63 ÷ 9','7 r 0')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,40) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
 put('p3l5-warm2',sec('p3l5-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Write "r" for remainder. Whiteboards up together, then click. After each one ask: "How can we check?" (answer × divisor + remainder: 7 × 6 + 3 = 45). '
+ 'Minutes 5 to 10. Write "r" for remainder. Whiteboards (show your tutor on camera or keep it to share if you want), then click. After each one ask: "How can we check?" (answer × divisor + remainder: 7 × 6 + 3 = 45). '
  'Answers: 1) 3 r 2  2) 4 r 2  3) 7 r 3  4) 6 r 2  5) 7 r 0, nothing left over because 63 is in the 9 table.'))
 
 # ---------- 4. explore: what to do ----------
@@ -122,7 +122,7 @@ put('p3l5-we1',sec('p3l5-we1','27–29 MIN',body,
 # ---------- 8. try 1 ----------
 put('p3l5-try1',try_slide('p3l5-try1','29–30 MIN','Your turn: whiteboards','Write the answer and the remainder. Check that the remainder is small enough.',
  [('a','29 ÷ 4','7 r 1'),('b','52 ÷ 9','5 r 7'),('c','Tom says 40 ÷ 6 = 5 r 10. Fix it.','6 r 4')],
- 'Whiteboards up together, then click. a) 4 × 7 = 28, 1 left. b) 9 × 5 = 45, 7 left (7 is smaller than 9, so it is fine). c) 10 is bigger than 6, so another group fits: 6 × 6 = 36, 4 left. Ask: "How could Tom have noticed his mistake?"'))
+ 'Whiteboards (show your tutor on camera or keep it to share if you want), then click. a) 4 × 7 = 28, 1 left. b) 9 × 5 = 45, 7 left (7 is smaller than 9, so it is fine). c) 10 is bigger than 6, so another group fits: 6 × 6 = 36, 4 left. Ask: "How could Tom have noticed his mistake?"'))
 
 # ---------- 9. worked example 2: what does the leftover mean ----------
 body=h2('Worked example: what does the leftover mean?')+card(p('A van holds 8 people. 50 people go on a trip. How many vans are needed?',40,700))

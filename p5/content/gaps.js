@@ -45,7 +45,7 @@ const L = {
   5: {
     sneak: [
       ['A box is 4 cubes long, 3 cubes wide and 2 cubes tall. Build it with cubes, or draw one layer and then the next layer. How many cubes fill the box?', '24 cubes: one layer is 4 × 3 = 12 cubes and there are 2 layers.'],
-      ['A tank has a base 20 cm by 10 cm with water 6 cm deep. A 10-cm cube is dropped in and sinks. How far does the water rise? Draw the tank and shade the water first.', '5 cm. The cube is 1000 cm³ and the base is 200 cm², so the rise is 1000 ÷ 200 = 5 cm. The new depth is 11 cm, taller than the 10-cm cube, so the cube is completely covered.']
+      ['A box has a base 5 cubes long and 4 cubes wide. Draw the base and count the cubes in ONE layer. How many layers are needed to hold 60 cubes altogether?', '3 layers. One layer is 5 × 4 = 20 cubes, and 60 ÷ 20 = 3. (Counting layers of 20 on a drawing also works.)']
     ],
     whatIf: ['Try other numbers of cubes: 12, 16, 18, 20, 24 and 30. Which number gives the MOST different cuboids? Which numbers up to 30 give only ONE?', '24 gives the most, 6 cuboids (12, 16, 18 and 20 give 4 each; 30 gives 5). Only the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29 (and 1) give just one cuboid, a single row: 1 × 1 × n. Checked by listing every case.'],
     solo: 'Q4 (a) to (c) and Q5', praise: 'Thinking of the water as layers of cubes got you unstuck.'
@@ -99,7 +99,7 @@ const SHORT = {
   2: ['1/2 of a pizza each', '2/3 of her money'],
   3: ['(a) 36   (b) 24 older, then 24 older', '10 cards. The total stays 60.'],
   4: ['Yes, they match: 1/2 each, 12 squares', 'No. 30 cm² every time.'],
-  5: ['24 cubes (12 in a layer, 2 layers)', '5 cm'],
+  5: ['24 cubes (12 in a layer, 2 layers)', '3 layers (20 in a layer)'],
   6: ['3 litres a minute; 18 litres', 'Mei: 4 pages a minute, Ali 3'],
   7: ['65 squares, so 65%', 'No. $81, not $80.'],
   8: ['60°', '142°'],

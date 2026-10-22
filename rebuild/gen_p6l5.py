@@ -268,8 +268,9 @@ put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check to
     'Click after a child explains. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
 
 # ---------- 21 stretch (not printed in the workbook) ----------
-st = QB['stretch'][4:7]
-put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'Extra questions for any pair that wants them (these are not on the Think harder page). Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 36))
+import p6_th
+st = p6_th.get(5)
+put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'The same four questions as the printed Think harder page, for anyone who wants them. Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 27))
 
 # ---------- 22 challenge ----------
 ch = QB['challenge'][-2:]

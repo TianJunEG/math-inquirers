@@ -36,7 +36,7 @@ const lesson = {
   objective: 'Read an array as rows of equal groups and write two multiplication and two division sentences for it; solve "how many of each" legs and wheels puzzles with a table; share with leftovers and decide what the leftover means; find all the arrays for a number.',
   skills: 'Draw it (arrays), make a table, guess and check, working in order to find all the ways',
   materials: 'About 30 counters per pair, mini whiteboards, squared paper. Optional: picture cards of hens and goats, bicycles and tricycles.',
-  online: 'Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children hold their arrays and tables up to the camera.',
+  online: 'Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children show their tutor on camera or keep it to share if you want (arrays and tables).',
   warmup: 'Legs and wheels count: six picture cards (4 cars, 5 bicycles, 3 tricycles, 5 dogs, 6 hens, 2 cars and 1 bicycle). Count the wheels or legs in 2s, 3s, 4s or 5s, then click to check.',
   explore: 'Farm legs: a pen has only hens (2 legs) and goats (4 legs). The farmer counts 16 legs. Pairs use counters or drawings to find every possible mix of hens and goats, and record each one.',
   mini: 'Arrays: rows × number in each row; two multiplication and two division facts from one array; count the hidden part of an array. Then "how many of each": start with all of one kind in a table and swap one at a time. Sharing with leftovers (Q4, Q5) is division with a remainder, a P3 topic: say "3 left over" in words and do not write remainders as "r 3".',

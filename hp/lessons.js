@@ -22,7 +22,7 @@ module.exports = {
         ['Q3', 'Frog 1 lands on 4, 8, 12, 16, 20. Frog 2 lands on 5, 10, 15, 20. Both: 20.'],
         ['Q4', '(a) 10, 20, 30  (b) They all end in 0. We say them when we count in 10s. (Up to 50 the answer is 10, 20, 30, 40, 50: see Think harder T4.)'],
         ['Q5', 'Stickers: 2, 5, 8, 11, 14, 17, 20, 23, 26, 29. (a) Box 10 has 29. (b) Even, odd, even, odd: they alternate.'],
-        ['Think harder slide', '1) Yes to 39, no to 40  2) 6  3) Add 4; the 1st number is 3']
+        ['Think harder T1 to T4', 'T1: 13 and 23. Add 5.  T2: 34 and 22. Take away 6 (use the two neighbours 16 and 10).  T3: No. The pattern goes 28, 32, so it skips 30.  T4: 10, 20, 30, 40 and 50. They all end in 0.']
       ]
     },
     {
@@ -45,7 +45,7 @@ module.exports = {
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
         ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
         ['Q6', '4 and 6.  Challenge: 4 and 8.'],
-        ['Think harder slide', '1) 10 and 16  2) 8  3) 6 pairs']
+        ['Think harder T1 to T4', 'T1: 3  T2: 5  T3: 20 and 30  T4: 6 pairs: 1 + 11, 2 + 10, 3 + 9, 4 + 8, 5 + 7, 6 + 6. Going down one number at a time shows none are missed.']
       ]
     },
     {
@@ -67,7 +67,7 @@ module.exports = {
         ['Q6', '(a) No.  (b) Only our class voted. Other classes may like different fruits.'],
         ['Q7', 'Accept sensible ideas: cost, how many are needed, easy to share, keeps fresh, messy to eat, any child who cannot eat it.'],
         ['Part B', 'Depends on the class vote. Q9: different children like different things, and a small group may not match a whole school.'],
-        ['Think harder slide', '1) 6 more  2) Orange 7, apple wins with 8  3) 9']
+        ['Think harder T1 to T4', 'T1: 10  T2: 24 (12 pictures, each worth 2: count in 2s)  T3: 3  T4: 7']
       ]
     },
     {
@@ -88,7 +88,7 @@ module.exports = {
         ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
         ['Q3', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
         ['Q4', '7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.'],
-        ['Think harder slide', '1) circle  2) 9 Bs  3) Yes: count in 5s, 25 ends a core, like the 5th']
+        ['Think harder T1 to T4', 'T1: triangle  T2: 10. The core circle, triangle, triangle, square has 2 triangles. Count the cores in 4s: 4, 8, 12, 16, 20, so there are 5 cores. Count the triangles in 2s: 2, 4, 6, 8, 10.  T3: blue  T4: 6 squares and 1 stick left over. The table goes 4, 7, 10, 13, 16, 19; 7 squares would need 22, which is too many; 20 − 19 = 1.']
       ]
     },
     {
@@ -110,7 +110,7 @@ module.exports = {
         ['Q3', '(a) Mei 13  (b) Ben 7  (c) Mei has 6 more than Ben  (d) 28 altogether'],
         ['Q4', '(a) 13 children (20 − 7)  (b) 5 children (3 + 3 − 1, Ali is counted twice). Talk time: 8th from both ends is 15.'],
         ['Q5', 'Open: check that the story has a clear answer.'],
-        ['Think harder slide', '1) 10 children  2) 7 sweets  3) 11']
+        ['Think harder T1 to T4', 'T1: 14 (12 − 3 + 5)  T2: 15 (work backwards: 10 + 3 = 13, 13 − 4 = 9, 9 + 6 = 15; check 15 − 6 + 4 − 3 = 10)  T3: Add 5. OUT is 17 when IN is 12. IN is 15 when OUT is 20.  T4: 11']
       ]
     },
     {
@@ -133,7 +133,6 @@ module.exports = {
         ['Q4', 'No. Two coins can total 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.'],
         ['Q5', 'Dollars are now Think harder T5: (a) $10 + $5 + $2 (3 pieces).  (b) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
         ['Think harder T1 to T5', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 6 ways to make 30¢ (20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢).  T5: see Q5 above.'],
-        ['Think harder slide', '1) 9 ways  2) $10 + $1 + $1 and $5 + $5 + $2  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
       ]
     },
     {
@@ -146,17 +145,17 @@ module.exports = {
       explore: 'Fold a paper square along a diagonal and cut: what two shapes do you get? Put them together a different way. What new shapes can you make?',
       mini: 'Count squares in grids by size, smallest first (a 2 by 2 grid, then a 3 by 3 grid). Rectangles in strips and shapes made from 3 squares are optional extras. Before the worksheet: count shapes in a picture one kind at a time, mark a starting dot when counting sides, cross out shapes for riddles, count triangles small first.',
       share: 'How many triangles are in a square with both diagonals drawn (lines joining opposite corners)? How do you make sure you do not miss any?',
-      exit: { q: 'A shape has 6 sides. How many corners does it have? What is the shape called?', a: '6 corners. It is a hexagon.' },
+      exit: { q: 'A shape has 4 sides. Two sides are long and two are short, and all 4 corners are square. What is the shape called? How many corners does it have?', a: 'A rectangle. It has 4 corners.' },
       mistakes: ['Counting only the small triangles in the talk-time picture (4 instead of 8): look for bigger triangles made of 2 small ones.', 'Counting a square window in both the Square and the Rectangle columns in Q1.', 'Thinking a turned or flipped shape is a new one.', 'Thinking a square is not a rectangle, or the opposite, without a reason.', 'Saying a circle has a straight side (it has 0 straight sides).'],
       extension: 'How many squares in a grid 4 long and 2 high? (8 + 3 = 11) Then 4 long and 3 high? (12 + 6 + 2 = 20)',
       key: [
         ['Q1', 'Circle 1, triangle 2, square 3, rectangle 2. (a) Squares. (b) 8 shapes.'],
         ['Q2', 'Straight sides and corners: circle 0 and 0, triangle 3 and 3, square 4 and 4, pentagon 5 and 5, hexagon 6 and 6, octagon 8 and 8. The number of straight sides equals the number of corners. 7 sides means 7 corners.'],
-        ['Q3', '(a) square  (b) circle  (c) hexagon'],
+        ['Q3', '(a) square  (b) circle  (c) triangle'],
         ['Q4', 'A: 3  B: 2. (The square with both diagonals, 8 triangles, is the talk-time question: 4 small + 4 made of two small ones.)'],
         ['Q5', 'Accept any correct shape with its name: rectangle, square, bigger triangle or parallelogram.'],
         ['Q6', '5 squares (4 small + 1 big)'],
-        ['Think harder slide', '1) 6  2) 9  3) Yes to both: the square again, and one big triangle with a long side twice as long']
+        ['Think harder T1 to T4', 'T1: Yes. Join them along a short side (the two equal short sides touching) to make one bigger triangle. Joining along the long side makes a square instead.  T2: 8 (6 small squares + 2 squares made of 4 small ones)  T3: 6 (3 single squares, 2 pairs and 1 whole row).  T4: Open. A long rectangle has 4 square corners, so it is a rectangle. A slanted shape with 4 sides does not have square corners, so it is not a rectangle.']
       ]
     },
     {
@@ -179,7 +178,7 @@ module.exports = {
         ['Q4', '1st Mei, 2nd Ali, 3rd Ben, 4th Sam'],
         ['Q5', '(a) 15.  Think harder T5: (a) 30  (b) 14'],
         ['Q6', 'Accept any reasoned answer: 11, because we do not say it when counting in 3s (it is also the only 2-digit number); or 6, the only even number.'],
-        ['Think harder slide', '1) Ben cat, Cara fish, Dan dog, Ali rabbit  2) Eve, Ben, Ali, Dan, Cara  3) 10, 20 and 30']
+        ['Think harder T1 to T4', 'T1: Tia (order: Mei, Sam, Tia, Raj).  T2: Cy: ball. Bo: yo-yo. Ana: kite.  T3: Counting in 2s: 2, 4, 6, 8, 10, 12. Counting in 3s: 3, 6, 9, 12. Both: 6 and 12.  T4: 1, 5, 7 and 11']
       ]
     },
     {
@@ -199,10 +198,10 @@ module.exports = {
         ['Q1', '(a) C  (b) B  (c) 2 more  (d) 12 units  (e) Same as A (9 − 2 = 7)'],
         ['Q2', 'Open. Check guesses are close. The Difference column is how far off the guess was. Equal units are needed so the measures can be compared fairly.'],
         ['Q3', 'Ali. Fewer spans means each span was longer, so Ali’s hand is bigger.'],
-        ['Q4', '(a) 10 erasers  (b) 6 clips'],
+        ['Q4', '(a) 18 erasers  (b) 5 clips'],
         ['Q5', 'Ali 11 cubes, Ben 6 cubes. All three together: 25 cubes.'],
         ['Q6', '(a) 12 cm  (b) 5 cm (8 − 3)  (c) Open: check the child started at the 0 mark and compared with 10 cm.'],
-        ['Think harder slide', '1) 5 cubes each and 2 cuts  2) Ben: six clips of 2 cubes is 12 cubes  3) The 11 cm mark']
+        ['Think harder T1 to T4', 'T1: 8 cm (count the spaces from 3 to 11, or 11 − 3)  T2: Red is longer: red 7 cm, blue 6 cm, so red is 1 cm longer.  T3: 4 clips. 15 cubes.  T4: 24 erasers (a ruler is 3 + 3 = 6 erasers; a desk is 6 + 6 + 6 + 6 = 24)']
       ]
     },
     {
@@ -235,7 +234,7 @@ module.exports = {
         ['Q8', 'Pen 10 cubes. End to end 16 cubes.'],
         ['Q9', 'Open. Done at talk time: swap puzzles with a partner and solve each other\u2019s.'],
         ['Puzzle cards', 'Coins: 20¢ + 20¢ + 5¢.  Patterns: 32.  Logic: Mei, Ben, Sam, Ali.  Measuring: 16 cubes.'],
-        ['Think harder slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
+        ['Think harder T1 to T4', 'T1: 46 (4, 10, 16, 22, 28, 34, 40, 46). No: the pattern goes 46, 52, so it skips 50.  T2: 6 bigger. Work backwards: Mei 19 + 2 = 21, 21 − 7 = 14; Ben 25 + 2 = 27, 27 − 7 = 20; 20 − 14 = 6. (Shortcut: both did the same steps, so the answers differ by the same amount: 25 − 19 = 6.)  T3: Two sets: 20 + 10 + 10 + 10 + 10, and 20 + 20 + 10 + 5 + 5. Make a table by number of 20¢ coins: one 20¢ needs 40¢ from 4 coins (four 10¢); two 20¢ need 20¢ from 3 coins (10 + 5 + 5); three 20¢ need 0¢ from 2 coins (impossible); no 20¢: 5 coins make at most 50¢.  T4: Apple wins with 11, which is 2 more than banana (9).']
       ]
     }
   ]

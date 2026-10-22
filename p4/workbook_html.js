@@ -14,13 +14,13 @@ const hdr = (n, topic, title, pb = true) => [
 // ---- fix pass: neutral labels, the Investigation + Looking back page every child reaches, solo-page note ----
 const px = n => (n / 15).toFixed(1) + 'px';
 const esc = x => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const neutralLine = () => `<div class="p" style="margin:0 4px 6px 4px;font-size:14.5px;line-height:1.4;color:#3B4A6B;break-inside:avoid"><b style="color:#1F7A6F">Start here.</b> <i>After question 3 you may choose: carry on, or try Think harder.</i></div>`;
+const neutralLine = (cq) => `<div class="p" style="margin:0 4px 6px 4px;font-size:14.5px;line-height:1.4;color:#3B4A6B;break-inside:avoid"><b style="color:#1F7A6F">Page 1: Start here.</b> <i>After question ${cq} you may choose: carry on, or try Think harder.</i></div>`;
 const capLine = (txt) => `<div class="p" style="margin:0 4px 0 4px;font-size:13.5px;line-height:1.25;color:#3B4A6B;break-inside:avoid"><i>${esc(txt)}</i></div>`;
 const tickBox = '<span style="display:inline-block;width:12px;height:12px;border:2px solid #1B2A49;border-radius:3px;margin:0 4px -2px 12px;background:#fff"></span>';
 const reflectBox = () => `<div class="p" style="margin:14px 4px 4px 4px;padding:6px 12px 8px;border:2.5px dashed #1F7A6F;border-radius:10px;background:#F3FBF9;break-inside:avoid"><div style="font-weight:700;color:#1F7A6F;font-size:16px">Looking back <span style="font-weight:400;font-size:12.5px;color:#3B4A6B">2 minutes at the end. You can write, tick or pass. Nobody marks this. It is not shown to the group. Your tutor may look at it on camera if you hold it up.</span></div><div class="p ans" style="margin:6px 0 2px"><b>Something I did well</b><span class="al" style="max-width:520px"></span></div><div class="p ans" style="margin:6px 0 2px"><b>The hardest part was</b><span class="al" style="max-width:520px"></span></div><div style="margin:8px 0 2px;font-size:14px;line-height:1.9"><b>What helped me</b>${tickBox}drawing it${tickBox}a list or table${tickBox}a smaller number${tickBox}my partner${tickBox}reading it again${tickBox}I asked for help${tickBox}other: ________<br>${tickBox}<b>I am still stuck</b> (my tutor will check in with me)${tickBox}<b>I pass today</b> (that is fine)</div></div>`;
 const investBlock = (g) => {
   const iv = g.invest, out = [];
-  let top = q('Investigation', [t(iv.head + '.  ', { bold: true }), t(iv.kind + '  ', { italics: true, color: '1F7A6F' }), t(iv.intro)], { before: 100, after: 60, keepNext: true }).replace('class="p q', 'class="p q open');
+  let top = q('Investigation', [t(iv.head + (/[?!.]$/.test(iv.head) ? '  ' : '.  '), { bold: true }), t(iv.kind + '  ', { italics: true, color: '1F7A6F' }), t(iv.intro)], { before: 100, after: 60, keepNext: true }).replace('class="p q', 'class="p q open');
   out.push(top);
   if (iv.fig) out.push(H.fig(iv.fig));
   out.push(`<div class="p easy" style="margin:2px 4px 8px 4px;padding:5px 12px;border-left:6px solid #FFC93C;background:#FFF9E5;font-size:14.5px;line-height:1.4;break-inside:avoid"><b>Easy first step.</b> ${esc(iv.easy)} <span style="color:#3B4A6B">Then carry on with the parts below, as far as you like.</span></div>`);
@@ -54,7 +54,7 @@ const extra = (n) => {
 // page 1 gets the neutral choice line; page 2 gets the "on your own" note (placed after the page break)
 const corePages = (n, c) => {
   const arr = c.workbook(H), BR = '<div class="brk"></div>', cap = c.gaps.cap;
-  const out = [neutralLine()];
+  const out = [neutralLine(c.gaps.chooseAfter || 3)];
   let done = false;
   arr.forEach(e => {
     if (!done && typeof e === 'string' && e.startsWith(BR + '<div class="p q')) { done = true; out.push(BR + capLine(cap) + '\n' + e.slice(BR.length)); }

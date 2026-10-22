@@ -22,15 +22,19 @@ TIME_PLAN = ('Time plan: opening 0 to 1, sneak-peek puzzles 1 to 4 (two ideas we
              'teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, '
              'worksheet page 1 (Start here, in pairs) {P1}, short teaching before page 2 53 to 58, worksheet page 2 (on your own) 58 to 76 and check together 76 to 80, '
              'talk time 80 to 85, exit ticket {EX}, looking back (reflection) {RF}.{L10} '
-             'After question 3 every child may choose: carry on, or try the Think harder page. Think harder, Go further and the Investigation have no fixed time slot: any child may choose them at any time, or take them home. '
+             'After question {CQ} every child may choose: carry on, or try the Think harder page. Think harder, Go further and the Investigation have no fixed time slot: any child may choose them at any time, or take them home. '
              'The tutor never announces who is on which page, and pairs are not split unless both children agree. '
              'Online: page 1 is pair work, so allow about 2 minutes to move into and out of breakout rooms (or run page 1 as a whole-group screen-share if there are only 8 children).')
 
-def _time_plan(n):
+def _cq(G):
+    # the question after which a child may choose (page 1 holds Q1-Q3 in most lessons, Q1-Q2 in L6 and L9)
+    return int((G or {}).get('chooseAfter', 3))
+
+def _time_plan(n, cq=3):
     P1 = '34 to 50 and check together 50 to 53' if n != 6 else '36 to 50 (after the 2-minute protractor demo at 34 to 36) and check together 50 to 53'
     if n == 10:
-        return TIME_PLAN.format(P1=P1, EX='85 to 87', RF='87 to 89', L10=' Certificates and stamps 89 to 90.')
-    return TIME_PLAN.format(P1=P1, EX='85 to 88', RF='88 to 90 (2 minutes)', L10='')
+        return TIME_PLAN.format(P1=P1, EX='85 to 87', RF='87 to 89', L10=' Certificates and stamps 89 to 90.', CQ=cq)
+    return TIME_PLAN.format(P1=P1, EX='85 to 88', RF='88 to 90 (2 minutes)', L10='', CQ=cq)
 
 def _short(a):
     return a.split('. ')[0].rstrip('.') + '.'
@@ -58,12 +62,12 @@ def check_slide(n, G, pic=None):
     notes = (
         'Minutes 1 to 4 (3 minutes). SNEAK-PEEK PUZZLES. Say: "These are ideas we have not learnt yet. Guessing is welcome, drawing is welcome and so is saying I do not know. Nobody is marked, and nobody\'s answer is shown to the group." '
         'Puzzle 1 is a TRY IT puzzle: any child can start it with objects, a drawing or counting, so everyone has a first win. Puzzle 2 needs a little thinking. About 90 seconds each. '
-        'Children show their answers PRIVATELY: written on their own paper and held to the camera at the same moment for everyone (or shown only to you on camera). Never use private chat or DMs. Never ask for boards up in front of the group, never read out whose answer is whose, and never say who got it right. '
+        'Children show their answers PRIVATELY: written on their own paper and held to the camera at the same moment for everyone (or shown only to you on camera). Keep every part of this in the shared session. Never ask for boards up in front of the group, never read out whose answer is whose, and never say who got it right. '
         'Then click to show each answer and talk it through for everyone ("some of you tried ..."), naming no child. Ask for volunteers first if you want a reason said aloud; nobody is called on by name, and passing is always fine. '
         'ANSWERS: 1) ' + ck[0]['a'] + ' 2) ' + ck[1]['a'] + ' '
         'A GOOD REASON: ' + G['why'] + ' '
         'Use what you see only to plan your help. It does not decide who is on which page and it is not recorded as a mark. '
-        'After question 3 on page 1 every child may choose: carry on, or try the Think harder page. Make the invitation to the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"), so nobody is singled out. Never message a child privately, never name a child, and never announce who is on which page. '
+        'After question ' + str(_cq(G)) + ' on page 1 every child may choose: carry on, or try the Think harder page. Make the invitation to the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"), so nobody is singled out. Never name a child, and never announce who is on which page. '
         'Everyone stays in the same room and every child turns to the page they choose. If a pair would be split, ask both children first; never leave a child alone on page 1 (join them to another pair or to yourself).')
     return sec(f'{ID}-check', '1–4 MIN', body, notes)
 
@@ -85,8 +89,8 @@ def reflect_slide(n, G):
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me). '
              'Say: "You can write, tick or pass. Ticking I am still stuck is a good thing to do: it tells me where to help." Model one yourself first: "' + G['reflect'] + '" '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
-             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos or private messages. '
-             'If I am still stuck is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a DM. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
+             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos of a child's work. '
+             'If I am still stuck is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
     return sec(f'{ID}-reflect', t0, body, notes)
 
 def go_strip(txt):
@@ -149,7 +153,7 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     # title slide: label, time plan
     t = S[f'{ID}-title']
     t = re.sub(r'(LESSON \d+  •  WEEK \d+)', r'\1  •  0–1 MIN', t, count=1)
-    t = re.sub(r'Time plan:.*?(</aside>)', lambda m: E(tp or _time_plan(n)) + m.group(1), t, count=1, flags=re.S)
+    t = re.sub(r'Time plan:.*?(</aside>)', lambda m: E(tp or _time_plan(n, _cq(G))) + m.group(1), t, count=1, flags=re.S)
     S[f'{ID}-title'] = t
     # go further strip on the explore slide
     S[f'{ID}-explore1'] = add_go_further(S[f'{ID}-explore1'], G['go2']['q'])
@@ -160,9 +164,9 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     S[w1] = S[w1].replace('Worksheet page 1: with your partner', 'Page 1 (Start here): with your partner')
     S[w2] = S[w2].replace('Worksheet page 2: on your own', 'Page 2: on your own')
     tipre = re.compile(r'(<p style="font-size:34px;font-weight:600;color:#3B4A6B;line-height:1\.3">)(.*?)(</p>)', re.S)
-    S[w1] = tipre.sub(lambda m: m.group(1) + m.group(2) + E(' After question 3 you may choose: carry on, or try Think harder.') + m.group(3), S[w1], count=1)
+    S[w1] = tipre.sub(lambda m: m.group(1) + m.group(2) + E(' After question ' + str(_cq(G)) + ' you may choose: carry on, or try Think harder.') + m.group(3), S[w1], count=1)
     S[w2] = tipre.sub(lambda m: m.group(1) + E(G['cap'] + ' When you finish, choose: Think harder, Go further or the Investigation.') + m.group(3), S[w2], count=1)
-    S[w1] = S[w1].replace('</aside>', E(' CHOOSING: after question 3 every child may carry on or try the Think harder page. Invite the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"); never message a child privately, never name a child, never announce who is on which page. If one child of a pair wants to move on, do not split the pair unless both agree; if a pair does lose a member, join the other child to another pair or to yourself straight away. Children on Think harder keep working through the page check; reading along is optional.') + '</aside>')
+    S[w1] = S[w1].replace('</aside>', E(' CHOOSING: after question ' + str(_cq(G)) + ' every child may carry on or try the Think harder page. Invite the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"); never name a child, never announce who is on which page. If one child of a pair wants to move on, do not split the pair unless both agree; if a pair does lose a member, join the other child to another pair or to yourself straight away. Children on Think harder keep working through the page check; reading along is optional.') + '</aside>')
     S[w2] = S[w2].replace('</aside>', E(' SOLO PAGE CAP: ' + G['cap'] + ' Children who finish choose Think harder, Go further or the Investigation; nobody is told which.') + '</aside>')
     # talk slide
     tk = S[f'{ID}-talk']
@@ -172,6 +176,12 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     # all slides: neutral names
     for k in list(S):
         S[k] = _renames(S[k], n)
+    # explore slide: the older Go further sentence in the notes is replaced by the new GO FURTHER sentence (one question only)
+    k = f'{ID}-explore1'
+    S[k] = re.sub(r' ?Go further \(on the slide\), for any child who wants it: .*?(?= GO FURTHER \(on the slide from minute 8)', '', S[k], flags=re.S)
+    assert S[k].count('GO FURTHER') == 1 and 'for any child who wants it' not in S[k], k
+    # worksheet slides: the footer counts pages of the whole workbook, so say which page we mean
+    S[w1] = S[w1].replace('</aside>', E(' PAGE NUMBERS: the footer number counts the whole workbook, so do not say "turn to page 9". Say "the page with the lesson title on it" for page 1, and "the page that says Page 2 is on your own" for page 2.') + '</aside>', 1)
     # minute labels on every slide that lacks one
     return S
 

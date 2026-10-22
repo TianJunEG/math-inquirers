@@ -213,30 +213,30 @@ st=[('1.','A bag of rice and a bag of flour weigh 9 kg altogether. The rice is 3
 put('p3l4-stretch',sec('p3l4-stretch','For early finishers',h2('Stretch')+numbered(st,36),'For children who finish early. Answers: 1) Flour 3 kg, rice 6 kg (9 − 3 = 6, 6 ÷ 2 = 3). 2) 60: the difference is 2 units and Ben gave half of it, so 1 unit = 20; Ravi had 20, Ben 60 (then 40 and 40). 3) 300 g: take away the two extras, 1700 − 800 = 900 for 3 equal units, 900 ÷ 3 = 300 (flour 700 g each).'))
 
 # ---------- 22 challenge ----------
-ch=[('1.','Ali and Ben have 120 stickers altogether. Ali has 3 times as many as Ben. Ali gives some stickers to Ben, and then Ali has only twice as many as Ben. How many stickers does Ali give to Ben?'),('2.','A pencil box and 3 pens cost $25 altogether. A pencil box and 5 pens cost $35 altogether. How much does one pen cost? How much does the pencil box cost?')]
-put('p3l4-challenge',sec('p3l4-challenge','Challenge',h2('Challenge')+numbered(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) 10. At first Ben 1 unit, Ali 3 units; 4 units = 120, so Ben 30 and Ali 90. The total is still 120, but now Ali has 2 parts and Ben 1 part, so 3 equal parts = 120 and each part is 40: Ben 40 and Ali 80. Ben went from 30 to 40, so Ali gave 10. 2) Pen $5, box $10. The second bill is $10 more because it has 2 more pens, so 2 pens cost $10 and 1 pen costs $5. Then 3 pens cost $15 and the box costs $10.'))
+ch=[('1.','Ali and Ben have 120 stickers altogether. Ali has 3 times as many as Ben. (a) How many stickers does each boy have? (b) Ali gives 20 stickers to Ben. How many does each boy have now?'),('2.','A pencil box and 3 pens cost $25 altogether. A pencil box and 5 pens cost $35 altogether. How much does one pen cost? How much does the pencil box cost?')]
+put('p3l4-challenge',sec('p3l4-challenge','Challenge',h2('Challenge')+numbered(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. Answers: 1) (a) Ben 1 unit, Ali 3 units; 4 units = 120, so 1 unit = 30: Ben 30, Ali 90. (b) Ali 90 − 20 = 70, Ben 30 + 20 = 50. The total is still 120. 2) Pen $5, box $10. The second bill is $10 more because it has 2 more pens, so 2 pens cost $10 and 1 pen costs $5. Then 3 pens cost $15 and the box costs $10.'))
 
 # ---------- 23 chdiag ----------
 g=(T(345,34,'At first',28,TEAL,w=800)+NM(100,'Ben',28)+R(100,62,560/4,56,SKY,'?',size=28)
    +NM(176,'Ali',28)+''.join(R(100+140*m,138,140,56,SKY,'?' if m==0 else '',size=28) for m in range(3))+BV(62,194,540,'120',28)
-   +T(345,250,'After Ali gives some to Ben',28,TEAL,w=800)
-   +NM(306,'Ben',28)+R(100,268,187,56,SKY,'?',size=28)
-   +NM(382,'Ali',28)+R(100,344,374,56,SKY,'?',size=28)+BV(268,400,540,'120',28))
-q1=svgwrap('Before bars: Ben 1 unit, Ali 3 units, 120 altogether. After bars: Ben 1 part and Ali 2 parts, still 120 altogether',690,470,g,'width:100%;height:auto')
+   +T(345,250,'Ali gives 20 stickers to Ben',28,TEAL,w=800)
+   +NM(306,'Ben',28)+R(100,268,140,56,SKY,'?',size=28)+R(240,268,70,56,YEL,'+20',size=24)
+   +NM(382,'Ali',28)+R(100,344,350,56,SKY,'?',size=28)+R(450,344,70,56,GREY,'-20',size=24)+BV(268,400,540,'120',28))
+q1=svgwrap('Before bars: Ben 1 unit, Ali 3 units, 120 altogether. After bars: Ali gives 20 stickers to Ben, so Ben gets 20 more and Ali has 20 fewer',690,470,g,'width:100%;height:auto')
 pw=70
 g=(T(345,34,'Bill 1: $25',28,TEAL,w=800)+R(90,50,110,60,YEL,'Box',size=26)+''.join(R(200+pw*i,50,pw,60,SKY,'Pen',size=22) for i in range(3))+BV(50,110,430,'$25',28)
    +T(345,190,'Bill 2: $35',28,TEAL,w=800)+R(90,206,110,60,YEL,'Box',size=26)+''.join(R(200+pw*i,206,pw,60,SKY,'Pen',size=22) for i in range(5))+BV(206,266,570,'$35',28)
    +T(345,340,'What is different about the two bills?',28,TEAL,w=800)+T(345,390,'One pen = ?',30,NAVY,w=800))
 q2=svgwrap('Bill 1 is a box bar and three pen bars, 25 dollars. Bill 2 is a box bar and five pen bars, 35 dollars',690,470,g,'width:100%;height:auto')
 body=h2('Challenge: see it',60)+'<div style="display:flex;gap:32px;align-items:flex-start">'+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q1: Before and after</p>'+q1,extra='flex:1;min-width:0;padding:20px 24px')+card('<p style="font-size:30px;font-weight:700;color:#1F7A6F">Q2: Two bills</p>'+q2,extra='flex:1;min-width:0;padding:20px 24px')+'</div>'
-put('p3l4-chdiag',sec('p3l4-chdiag','Challenge',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: What stays the same? What do we know? For Q1: how many equal parts are there AFTER? For Q2: what is different about the two bills? Answers are in the Challenge slide notes.'))
+put('p3l4-chdiag',sec('p3l4-chdiag','Challenge',body,'Show after pairs have tried the Challenge, or if they are stuck. The pictures show the problem, not the answer. Ask: What stays the same? What do we know? For Q1: what happens to the total when Ali gives 20 to Ben? For Q2: what is different about the two bills? Answers are in the Challenge slide notes.'))
 
 # ---------- 24 chwalk ----------
 body=h2('Challenge: walk-through')+pin(128,250,800,p('Q1: draw the bars BEFORE and AFTER',38,800,TEAL))
-for i,t in enumerate(['Before: Ben 1 unit, Ali 3 units, so 4 units = 120. Ben 30, Ali 90.','After: Ali has 2 parts, Ben 1 part. The total is still 120, so 3 equal parts: 120 ÷ 3 = 40.','Now Ben has 40 and Ali has 80.','Ben went from 30 to 40, so Ali gave 10. Check: 80 + 40 = 120 ✓']): body+=pin(128,330+i*130,800,p(t,32),'rise',WHITE)
+for i,t in enumerate(['(a) Ben 1 unit, Ali 3 units, so 4 units = 120. 120 ÷ 4 = 30.','Ben has 30 and Ali has 90.','(b) Ali gives 20: Ali 90 − 20 = 70. Ben 30 + 20 = 50.','Check: 70 + 50 = 120 ✓ The total does not change.']): body+=pin(128,330+i*130,800,p(t,32),'rise',WHITE)
 body+=pin(992,250,800,p('Q2: compare the two bills',38,800,TEAL))
 for i,t in enumerate(['Bill 2 has 2 more pens than Bill 1.','It costs $35 − $25 = $10 more. So 2 pens cost $10.','1 pen = $10 ÷ 2 = $5.','3 pens cost $15, so the box is $25 − $15 = $10. Check: $10 + 5 × $5 = $35 ✓']): body+=pin(992,330+i*130,800,p(t,32),'rise',WHITE)
-put('p3l4-chwalk',sec('p3l4-chwalk','Challenge',body,'Use after pairs have tried. Q1 is a before-and-after problem where the RATIO changes: the total stays the same (120), so find the new unit first (3 equal parts), then compare Ben before and after. Q2: when two bills differ in only one thing, the difference in price tells you the price of that one thing.'))
+put('p3l4-chwalk',sec('p3l4-chwalk','Challenge',body,'Use after pairs have tried. Q1 is a before-and-after problem: find each boy’s share first (4 units = 120), then the giver goes down and the receiver goes up by the same amount, so the total stays 120. Q2: when two bills differ in only one thing, the difference in price tells you the price of that one thing.'))
 
 # ---------- 25-26 talk, exit ----------
 put('p3l4-talk',talk_slide('p3l4-talk','Mei and Siti are each given $5. Why does the difference between them stay the same?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. Expected: both bars grow by the same piece, so the gap between their ends does not change. Follow-up: "When Mei GIVES Siti $5, what stays the same?" (the total). "How can a model help you check your answer?" (put the answers back: the parts must make the whole and the difference must match).'))

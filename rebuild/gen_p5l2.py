@@ -113,7 +113,7 @@ def face(cx,cy,r=34):
 # ---------- 1. title ----------
 put('p5l2-title',title_slide('p5l2-title','LESSON 2  •  WEEK 1','Fraction Feats','Four operations of fractions, fraction and division',
  'Share pizzas fairly, write fractions as unit fractions, take a fraction of a remainder with a model and find patterns in fraction sums.',
- 'Objective: Link fractions and division (3 ÷ 4 = 3/4) and divide a proper fraction by a whole number; write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums. '
+ 'Objective: Link fractions and division (3 ÷ 4 = 3/4); write fractions as the sum of two different unit fractions by testing in order; solve fraction-of-a-remainder problems forwards and backwards with a bar model; and spot and explain patterns in fraction sums. '
  'Thinking strategies taught today: DRAW A MODEL (bar or pizza), TEST IN ORDER and know when to stop, find the REMAINDER first, LOOK FOR A PATTERN, and test both ways. '
  'Materials: paper circles (about 6 per child) and scissors, a paper strip for bar models, digit cards 1 to 5, mini whiteboards, workbook. '
  'Online: children cut out their paper circles before the lesson and fold or cut them on camera; the tutor shares the slides and draws the bar models live; pairs use breakout rooms for the explore and page 1. '
@@ -133,9 +133,9 @@ put('p5l2-warm1',sec('p5l2-warm1','0–4 MIN',body,
  'Listen for the reasons that volunteers give. Praise "compare to a half" and "how far from 1" as strategies; these come back in the lesson.'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','Write 3 ÷ 4 as a fraction','3/4'),('2.','2/3 + 1/6 = ?','5/6'),('3.','3/4 of 20 = ?','15'),('4.','2/5 × 3/4 = ?','3/10'),('5.','4/5 ÷ 2 = ?','2/5')]
+qs=[('1.','Write 3 ÷ 4 as a fraction','3/4'),('2.','2/3 + 1/6 = ?','5/6'),('3.','3/4 of 20 = ?','15'),('4.','Which is bigger, 1/2 or 3/5?','3/5'),('5.','1/4 of 12 = ?','3')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*128,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*128,372,c) for i,(a,b,c) in enumerate(qs))
-put('p5l2-warm2',sec('p5l2-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. 1) The top is what is shared, the bottom is how many share. 2) 4/6 + 1/6 = 5/6. 3) 20 ÷ 4 = 5, × 3 = 15. 4) 6/20 = 3/10. 5) Cut each of the 4 parts in half: 4/10 = 2/5, or 4 ÷ 2 = 2 on top. Ask: "Who added the bottoms in question 2?" Answers: 3/4, 5/6, 15, 3/10, 2/5.'))
+put('p5l2-warm2',sec('p5l2-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. 1) The top is what is shared, the bottom is how many share. 2) 4/6 + 1/6 = 5/6. 3) 20 ÷ 4 = 5, × 3 = 15. 4) 3/5: it is more than a half because 3 is more than half of 5 (half of 5 is 2 and a half), while 1/2 is exactly half. 5) 12 ÷ 4 = 3. Ask: "Who added the bottoms in question 2?" Answers: 3/4, 5/6, 15, 3/5, 3.'))
 
 # ---------- 4. explore ----------
 g=''.join(pizza(110+i*210,90,70,1,1) for i in range(3))
@@ -159,14 +159,14 @@ for i in range(5): pass
 g=pizza(110,130,90,5,0)+pizza(330,130,90,5,0)+T(220,260,'2 pizzas, each cut into 5',28,TEAL)
 g+=f'<path d="M410 130 H500" stroke="{TEAL}" stroke-width="7"/><polygon points="520,130 494,114 494,146" fill="{TEAL}"/>'
 g+=pizza(640,130,90,5,1,TEAL)+pizza(860,130,90,5,1,TEAL)+T(750,260,'one friend: 1 slice from each',28,TEAL)
-body=h2('Fraction and division')+card(rp(f'2 pizzas shared among 5 friends:  2 ÷ 5 = {F(2,5)}.   And {F(3,5)} ÷ 2 = ?',40,700))
+body=h2('Fraction and division')+card(rp(f'2 pizzas shared among 5 friends:  2 ÷ 5 = {F(2,5)}.   And 7 ÷ 3 = ?',40,700))
 body+=pin(128,370,1000,svgwrap(980,290,'Two pizzas cut into fifths; one friend gets one fifth from each pizza',g),None)
 body+=pin(1160,380,632,rp(f'Each friend gets {F(1,5)} + {F(1,5)} = {F(2,5)}.',38,700),'rise',SOFT,20,'20px 26px')
 body+=sstep(1,f'The top number is what is <b>shared</b>. The bottom number is <b>how many share</b>.',690,size=32)
-body+=sstep(2,f'{F(3,5)} ÷ 2: cut each fifth in half. 3 fifths become 6 tenths, shared in 2 groups: 3 tenths. So {F(3,5)} ÷ 2 = {F(3,10)}.',790,size=32)
-put('p5l2-teach1',sec('p5l2-teach1','21–24 MIN',body,'Teach. Draw the two pizzas cut in fifths. "Each friend takes one slice from each pizza: 1/5 + 1/5 = 2/5. So 2 ÷ 5 = 2/5." Then the second idea: a fraction divided by a whole number. Draw a bar of 5 parts with 3 shaded; cut every part in half so there are 10 small parts and 6 shaded; two friends share the 6 shaded parts: 3 each, 3/10. Say: "Dividing by 2 makes each piece twice as small, so the bottom number doubles: 3/5 ÷ 2 = 3/10." '
- 'Check: 3/10 × 2 = 6/10 = 3/5. Ask: "What is 3/4 ÷ 3?" (1/4: shortcut, the top 3 can be shared in 3 groups of 1.) This is a P6 skill: children who have not met it may need the picture twice.'))
-put('p5l2-try1',try_raw('p5l2-try1','24–25 MIN','Your turn: whiteboards','Draw a quick picture if you need one.',[('a',f'4 ÷ 7 as a fraction',F(4,7)),('b',f'{F(4,5)} ÷ 3',F(4,15)),('c',f'{F(6,7)} ÷ 3',F(2,7))],'Whiteboards up together, then click. a) 4 pizzas among 7: 4/7. b) 4/5 ÷ 3: cut each fifth into 3 pieces, so 4 fifths = 12 fifteenths; shared by 3 gives 4 fifteenths: 4/15. c) 6 sevenths shared by 3 is 2 sevenths: 2/7 (the top divides exactly).'))
+body+=sstep(2,f'7 pizzas among 3 friends: each friend gets 2 whole pizzas, and the 7th pizza is cut in 3. So 7 ÷ 3 = 2 {F(1,3)} = {F(7,3)}.',790,size=32)
+put('p5l2-teach1',sec('p5l2-teach1','21–24 MIN',body,'Teach. Draw the two pizzas cut in fifths. "Each friend takes one slice from each pizza: 1/5 + 1/5 = 2/5. So 2 ÷ 5 = 2/5." Then the second idea: more pizzas than friends. 7 pizzas among 3 friends: give each friend 2 whole pizzas (6 pizzas), and the 7th pizza is cut in 3 so each friend gets 1/3 more: 2 1/3, or 7/3 as an improper fraction. Say: "The top number is what is shared, the bottom number is how many share it. 7 ÷ 3 = 7/3 = 2 1/3." '
+ 'Check: 3 × 7/3 = 7. (Dividing a fraction by a whole number, such as 3/5 ÷ 2, is a Primary 6 skill. It is NOT taught in this lesson; it is only a labelled preview in the question bank.)'))
+put('p5l2-try1',try_raw('p5l2-try1','24–25 MIN','Your turn: whiteboards','Draw a quick picture if you need one.',[('a',f'4 ÷ 7 as a fraction',F(4,7)),('b',f'5 ÷ 6 as a fraction',F(5,6)),('c',f'9 ÷ 4 as a mixed number',f'2 {F(1,4)}')],'Whiteboards up together, then click. a) 4 pizzas among 7: 4/7. b) 5 pizzas among 6: 5/6. c) 9 pizzas among 4: 2 whole pizzas each (8 pizzas) and the last pizza cut in 4: 2 1/4, which is 9/4.'))
 
 # ---------- 8. worked example: unit fractions ----------
 body=h2('Worked example: two different unit fractions')+card(rp(f'Write {F(7,12)} as the sum of two <b>different</b> unit fractions (1 on top).',38,700))
@@ -202,8 +202,8 @@ put('p5l2-break',break_slide('p5l2-break','33–37 MIN','Fraction freeze: walk o
 
 # ---------- worksheet page 1 ----------
 put('p5l2-ws1',ws_preview('p5l2-ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Sharing, and fraction and division.'),('Q2','Unit fraction puzzles: test in order, then say when to stop.'),('Q3','Fraction of a remainder: finish the model.')],'Stuck? Draw a bar and cut it into equal units.','Minutes 37 to 49. Walk around. Ask "Is that a fraction of the whole or of the remainder?" before giving any help on Q3. Q2c: ask "How do you know you have found both ways?"'))
-put('p5l2-ws1ans',check_raw('p5l2-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 5/8   b) 9/4 = 2 1/4 m   c) Group A: 2/3 is more than 3/5   d) (try this one) 1/8'),('Q2','a) 1/2 + 1/5   b) 1/4 + 1/5   c) 1/3 + 1/24 and 1/4 + 1/8'),('Q3','a) 120   b) 60   c) 1/4')],
- 'Click each answer after a pair explains. Q1c: 2/3 = 10/15, 3/5 = 9/15; or each child in A is 1/3 short of a pizza, in B 2/5 short. Q1d (try this one, a P6 preview): 3/4 ÷ 6 = 1/8 (3 quarters shared by 6 children is half a quarter each, and half of 1/4 is 1/8). Q2: 7/10 − 1/2 = 2/10 = 1/5, so 1/2 + 1/5. 9/20 − 1/4 = 9/20 − 5/20 = 4/20 = 1/5, so 1/4 + 1/5. 3/8: 1/3 leaves 1/24; 1/4 leaves 1/8; 1/5 leaves 7/40 (not a unit fraction); after that the first part is less than half of 3/8, so stop. Q3: Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.',gap=170))
+put('p5l2-ws1ans',check_raw('p5l2-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 5/8   b) 9/4 = 2 1/4 m   c) Group A: 2/3 is more than 3/5'),('Q2','a) 1/2 + 1/5   b) 1/4 + 1/5   c) 1/3 + 1/24 and 1/4 + 1/8'),('Q3','a) 120   b) 60   c) 1/4')],
+ 'Click each answer after a pair explains. Q1c: 2/3 = 10/15, 3/5 = 9/15; or each child in A is 1/3 short of a pizza, in B 2/5 short. Q2: 7/10 − 1/2 = 2/10 = 1/5, so 1/2 + 1/5. 9/20 − 1/4 = 9/20 − 5/20 = 4/20 = 1/5, so 1/4 + 1/5. 3/8: 1/3 leaves 1/24; 1/4 leaves 1/8; 1/5 leaves 7/40 (not a unit fraction); after that the first part is less than half of 3/8, so stop. Q3: Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.',gap=170))
 
 # ---------- teach: pattern ----------
 body=h2('Look for a pattern')+card(rp(f'{F(1,7)} − {F(1,8)} = {F(1,56)} and {F(1,8)} − {F(1,9)} = {F(1,72)}.   What is {F(1,10)} − {F(1,11)}?',34,700))

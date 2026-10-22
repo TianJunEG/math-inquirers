@@ -238,8 +238,9 @@ rows=[('Q4','a) 3   b) −7   c) −8   d) −8   e) 8   f) 6'),('Q5','10, −20
 put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click each answer after a child explains. Q4e: from −3 to 5 is 8 steps right. Q4f: from −7 to −1 is 6 steps right. Q5b: −80 to −200 is 120 more, and 120 ÷ 30 = 4. Q6a: 5 + 8 = 13 (the lift goes UP to floor 13). Q6c: 5 − 8 = −3, the third basement. Q7: 7 × 4 = 28, so 7 repeats reach −28; to come back up in one block, change depth by 28.'))
 
 # ---------- 20 stretch (new) ----------
-st=[('1.','At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise by 2 p.m.? What was it at 10 p.m.?'),('2.','set n to 10, then repeat 5 times: change n by −4. Then say n. What does it say?'),('3.','What number is exactly halfway between −9 and 3?')]
-put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(card_q(a,b,36) for a,b in st),'Answers: 1) It rose 11 degrees (4 up to 0, then 7). At 10 p.m.: 7 − 9 = −2 °C.  2) −10 (10 − 4 × 5 = 10 − 20 = −10).  3) −3: the gap is 12, half is 6, and −9 + 6 = −3 (check: 3 − 6 = −3).'))
+import p6_th
+st=p6_th.pairs(3)
+put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(card_q(a,b,30) for a,b in st),p6_th.answers(3)))
 
 # ---------- 21 challenge ----------
 ch=[('1.','Put −4, −3, −2, −1, 0, 1, 2, 3, 4 in a 3 by 3 grid so that every row, every column and both diagonals add up to 0.'),('2.','At midnight it was −6 °C. It rose 2 degrees every hour until 7 a.m., then 3 degrees every hour. What was the temperature at 10 a.m.?')]

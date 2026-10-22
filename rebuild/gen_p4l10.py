@@ -228,7 +228,7 @@ put('p4l10-ws2ans',checks('p4l10-ws2ans','76–80 MIN','Page 2: check together',
 st=[('1.','A farm has ducks and goats: 16 heads and 44 legs. How many goats?'),('2.','I think of a number, multiply it by 4 and add 6. I get 50. What is my number?'),('3.','Two next-door numbers multiply to make 380. What are they?')]
 put('p4l10-stretch',sec('p4l10-stretch','Any time • take-home',h2('Stretch')+numcards(st,38),'Answers: 1) 6 goats (and 10 ducks): all ducks 32 legs, 12 short, each goat adds 2. Check 20 + 24 = 44. 2) 11 (50 − 6 = 44, 44 ÷ 4 = 11). 3) 19 and 20 (20 × 20 = 400 is a bit too big; 19 × 20 = 380 ✓).'))
 ch=[('1.','A hawker centre has 15 tables. Some seat 4 people and some seat 6. There are 76 seats altogether. How many tables seat 6?'),('2.','Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 left. How many did she have at first?')]
-put('p4l10-challenge',sec('p4l10-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 8 tables seat 6 (and 7 seat 4). 2) 32 stickers.'))
+put('p4l10-challenge',sec('p4l10-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) 8 tables seat 6 (and 7 seat 4). 2) 32 stickers.'))
 g1=''
 for i in range(15):
     r,c=i//5,i%5; x,y=40+c*140,20+r*110

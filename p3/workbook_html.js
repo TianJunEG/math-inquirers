@@ -18,7 +18,7 @@ const esc2 = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace
 const fr = (n, d) => `<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.1;margin:0 3px;font-weight:600"><span style="padding:0 3px">${n}</span><span style="border-top:2px solid ${NAVY};padding:0 3px">${d}</span></span>`;
 const rich = s => esc2(s).replace(/\[\[(\d+)\/(\d+)\]\]/g, (m, n, d) => fr(n, d));
 const tick = `<span style="display:inline-block;width:13px;height:13px;border:2px solid ${NAVY};border-radius:3px;background:#fff;vertical-align:-2px;margin:0 5px 0 14px"></span>`;
-const startHere = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:12.5px;line-height:1.4"><b>Start here.</b> After question 3 you may choose: carry on, or try Think harder.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 25 })])]);
+const startHere = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:12.5px;line-height:1.4"><b>Start here.</b> Do page 1, then Q4 and Q5 on page 2. After that you may choose: Think harder, Go further or the Investigation.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 25 })])]);
 const stairsSvg = () => {
   const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px">`;
   [[1, 20], [2, 130], [3, 270]].forEach(([k, x0]) => {
@@ -51,8 +51,8 @@ const lookBack = (n) => {
   const box = (label, items, extra) => `<div style="text-align:left;font-size:14px;line-height:2.0"><b>${label}</b> ${items.map(o => tick + esc2(o)).join('')}${extra || ''}</div>`;
   const r1 = box('Something I did well:', g.didwell, tick + 'something else: ______________');
   const r2 = box('The hardest part was:', g.reflect, tick + 'something else: ______________');
-  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (my tutor will check in with me)']);
-  const r4 = `<div style="text-align:left;font-size:12.5px;line-height:1.5;color:#444"><i>Two minutes. Tick or write. You may pass on any line. This page is yours: your tutor does not read it out or collect it.</i></div>`;
+  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (I can ask for a check-in in the open class, with my parent nearby)']);
+  const r4 = `<div style="text-align:left;font-size:12.5px;line-height:1.5;color:#444"><i>Two minutes. Tick or write. You may pass on any line. This page is yours: your tutor does not read it, read it out or collect it. Still stuck? Say “check-in please” in the open class, or ask your grown-up to tell your tutor.</i></div>`;
   out.push(banner('Look back'));
   out.push(C.tbl([9900], [C.row([C.cell([r1, r2, r3, r4], 9900, { align: 'left', fill: 'EDEDED', h: 50 })])]));
   return out;

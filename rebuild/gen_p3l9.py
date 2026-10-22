@@ -56,7 +56,7 @@ for i,(t,a) in enumerate(cards):
     body+=pin(L,Tp,CWd,p(t,34,700),None,WHITE,24,'22px 24px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,Tp+150,120,f'<p style="font-family:{HF};font-size:48px;font-weight:600;text-align:center">{E(a)}</p>','pop',YEL,16,'4px 10px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p3l9-warm1',sec('p3l9-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Name that unit. Read each card aloud; children write the unit on whiteboards and hold them up together, then click to show (the cards reveal in order). '
+ 'Minutes 0 to 5. Name that unit. Read each card aloud; children write the unit on whiteboards (show your tutor on camera or keep it to share if you want), then click to show (the cards reveal in order). '
  'Ask each time: "Why not the other units?" A bus is 12 m (12 cm is a finger, 12 km is a long trip). A pencil is 15 cm. An MRT ride of about 15 km. Rice 5 kg. An eraser about 20 g. Medicine 5 ml. A fish tank about 40 ℓ. A watermelon about 3 kg. '
  'Quick finisher: "Put these in order: 1 m, 90 cm, 1 km." (90 cm, 1 m, 1 km). Watch for children who mix up mass and volume units (kg for a drink).'))
 
@@ -113,7 +113,7 @@ put('p3l9-we1',sec('p3l9-we1','27–29 MIN',body,
  'Worked example. Ask first: "Can we take 850 away from 100 g?" (Not without breaking the kilograms.) Click each step. Think-aloud: "I change the bag to grams: 2 kg is 2000 g, plus 100 is 2100 g. Now it is a normal take-away: 2100 − 850 = 1250 g. I change back: 1000 g of it is 1 kg, so 1 kg 250 g. I check by adding back: 1250 + 850 = 2100." '
  'Some children prefer to work in kg and g separately (renaming 1 kg as 1000 g): accept it, but show why one unit is less likely to go wrong.'))
 put('p3l9-try1',try_slide('p3l9-try1','29–30 MIN','Your turn: one unit','Whiteboards. Change to the smaller unit first.',[('a','4 m 9 cm = __ cm','409 cm'),('b','2750 ml = __ ℓ __ ml','2 ℓ 750 ml'),('c','Which is longer: 3 m 5 cm or 350 cm?','350 cm')],
- 'Whiteboards up together, then click. a) 400 + 9 = 409 (not 49). b) 2000 ml is 2 ℓ, 750 ml left. c) 3 m 5 cm = 305 cm, so 350 cm is longer by 45 cm. Ask a child to explain c: the "5" in 3 m 5 cm is only 5 cm.',38))
+ 'Whiteboards (show your tutor on camera or keep it to share if you want), then click. a) 400 + 9 = 409 (not 49). b) 2000 ml is 2 ℓ, 750 ml left. c) 3 m 5 cm = 305 cm, so 350 cm is longer by 45 cm. Ask a child to explain c: the "5" in 3 m 5 cm is only 5 cm.',38))
 
 # ---------- 9. teach: time line ----------
 def tline(ticks,arcs=(),w=1664,h=230,only_arcs=False,aria='Time line'):
@@ -167,10 +167,10 @@ body+=pin(128,730,1664,p('Spend the most with 2 things? Try the dearest first: k
 put('p3l9-teachbudget',sec('p3l9-teachbudget','40–42 MIN',body,
  'Teach before worksheet page 1 (Q3). Click each step. Think-aloud: "An estimate tells me if it is close. $15.50 is too close to be sure, so I work it out exactly in cents: 685 + 450 = 1135, and 395 more is 1530 cents, $15.30. That is more than $15: 30 cents short." '
  'Last click: "To spend as much as I can, I start with the dearest things and check every pair in order." Do not do the worksheet question for them: it uses 3 things from 5.'))
-put('p3l9-ws1',ws_preview('p3l9-ws1','42–53 MIN','Worksheet page 1: with your partner',[('Q1','Change the units. Q1a and b are easy starters. Watch out for the zeros. Q1f is the ribbon.'),('Q2','Order four masses, then fix Ben’s mistake.'),('Q3','Siti’s $20 budget. Change to cents. Q3b only if time.')],'Stuck? Change everything to cm, g, ml or ¢.',
- 'Minutes 42 to 53. Walk around. Ask "What unit did you change to?" and "How do you know?" before helping. Q3b (if time): check pairs are listing sets in an order, starting with the dearest items, not guessing.'))
-put('p3l9-ws1ans',check_slide('p3l9-ws1ans','53–55 MIN','Page 1: check together',[('Q1','a) 200 cm  b) 3000 g  c) 306 cm  d) 2450 g  e) 4 ℓ 80 ml  f) 40 cm left'),('Q2','1 kg, 1 kg 3 g, 1030 g, 1 kg 300 g.   1 kg 30 g = 1030 g'),('Q3','a) No: $20.25, 25¢ short   b) Book, pen set, puzzle: $19.35, 65¢ change')],
- 'Click each answer after a pair explains. Q1f: 4 × 65 = 260 cm; 300 − 260 = 40 cm. Q2: in grams 1000, 1003, 1030, 1300. Q3a: 785 + 690 + 550 = 2025¢. Q3b: book + puzzle = $14.75 leaves $5.25: the dearest thing that fits is the pen set ($4.60), total $19.35. Without that pair, the best is $17.95, so $19.35 is the most.'))
+put('p3l9-ws1',ws_preview('p3l9-ws1','42–53 MIN','Worksheet page 1: with your partner',[('Q1','Change the units. Q1a and b are easy starters. Watch out for the zeros. Q1d is the ribbon.'),('Q2','Order four masses, then fix Ben’s mistake.'),('Q3','Siti’s $20 budget. Change to cents.')],'Stuck? Change everything to cm, g, ml or ¢.',
+ 'Minutes 42 to 53. Walk around. Ask "What unit did you change to?" and "How do you know?" before helping. Q3: check pairs add exactly (in cents) and show how they know, not guess.'))
+put('p3l9-ws1ans',check_slide('p3l9-ws1ans','53–55 MIN','Page 1: check together',[('Q1','a) 200 cm, 3000 g  b) 306 cm, 2450 g  c) 4 ℓ 80 ml  d) 40 cm left'),('Q2','1 kg, 1 kg 3 g, 1030 g, 1 kg 300 g.   1 kg 30 g = 1030 g'),('Q3','No: $20.25, 25¢ short')],
+ 'Click each answer after a pair explains. Q1d: 4 × 65 = 260 cm; 300 − 260 = 40 cm. Q2: in grams 1000, 1003, 1030, 1300. Q3: 785 + 690 + 550 = 2025¢ = $20.25, which is 25¢ more than $20. (Spending as much as possible with 3 things is a Think harder item: book, pen set and puzzle, $19.35.)'))
 
 # ---------- teach before page 2: 24-hour clock ----------
 w=1664; sx=lambda h: 40+h*(w-80)/24
@@ -188,7 +188,7 @@ body+=step(3,'Back again: take away 12.  19:30 → 7:30 p.m.',top=680,size=34)
 body+=pin(128,790,1664,p('Careful: 12:45 p.m. stays 12:45 (it is already after 12 noon). Midnight is 00:00.',32,700),'fade',SOFT,20,'16px 28px')
 put('p3l9-teach24',sec('p3l9-teach24','55–57 MIN',body,
  'Teach before worksheet page 2 (Q4). "The 24-hour clock does not start again at 12 noon: it keeps counting, 13, 14, 15 … up to 23, then midnight is 00:00." Point along the strip. Click each step. '
- 'Think-aloud: "4:20 p.m. is in the afternoon, so I add 12: 4 + 12 = 16, so 16:20. Going back: 19 − 12 = 7, so 7:30 p.m." Click the careful box: the hour from 12 noon to 1 p.m. is already 12, so we do not add 12. Quick check: "What is 15:00?" (3 p.m.) "What is 9:10 p.m.?" (21:10). Q4 is "if time"; children start page 2 at Q5. For Q6 (if time): every 25 minutes means keep adding 25 and list the times in order until you pass 08:15; for a start time, go backwards on the time line, back to the o’clock first.'))
+ 'Think-aloud: "4:20 p.m. is in the afternoon, so I add 12: 4 + 12 = 16, so 16:20. Going back: 19 − 12 = 7, so 7:30 p.m." Click the careful box: the hour from 12 noon to 1 p.m. is already 12, so we do not add 12. Quick check: "What is 15:00?" (3 p.m.) "What is 9:10 p.m.?" (21:10). Q4 is the first question on page 2. For Q5c (a start time), go backwards on the time line, back to the o’clock first.'))
 
 # ---------- teach: list the times / go backwards ----------
 body=h2('Timetables and going backwards')
@@ -201,11 +201,11 @@ for i,t in enumerate(['20:10 back 10 min → 20:00','20:00 back 1 h → 19:00','
     body+=pin(992,400+i*100,800,p(t,32,700),'rise',WHITE,16,'14px 24px')
 body+=pin(992,710,800,p('Go backwards on the time line: back to the o’clock first.',30,700,TEAL),'fade')
 put('p3l9-teachlist',sec('p3l9-teachlist','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q5c and Q6). Left: "Every 15 minutes means I keep adding 15. I list the times in order until I pass 10:27." Click the times. "The first train after 10:27 is 10:35. From 10:27: 3 minutes to 10:30, 5 more to 10:35: 8 minutes." '
+ 'Teach before worksheet page 2 (Q5c; the left half, listing times, is also the idea for the Think harder bus question). Left: "Every 15 minutes means I keep adding 15. I list the times in order until I pass 10:27." Click the times. "The first train after 10:27 is 10:35. From 10:27: 3 minutes to 10:30, 5 more to 10:35: 8 minutes." '
  'Right: "To find a start time I go backwards. 25 minutes back from 20:10 passes the o’clock, so I split 25 into 10 and 15." Check forwards: 18:45 + 15 min = 19:00, + 1 h = 20:00, + 10 min = 20:10.'))
-put('p3l9-ws2',ws_preview('p3l9-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','(if time) The 24-hour clock. After 12 noon, add 12.'),('Q5','Time lines: how long, when it ends, when it started. Start here.'),('Q6','If time: the bus timetable. List the times, every 25 minutes.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6 (if time): check children list ALL the bus times (adding 25 each time across the hour: 07:05 + 25 min = 07:30).'))
-put('p3l9-ws2ans',check_slide('p3l9-ws2ans','67–70 MIN','Page 2: check together',[('Q4','(if time) 07:15,  15:40,  8:05 p.m.,  12:30.   17:00 is 5 p.m.'),('Q5','a) 1 h 25 min   b) 5:25 p.m.   c) 7:25 p.m.'),('Q6','(if time) a) 08:20, waits 5 min   b) 08:55')],
- 'Click after a child explains. Q5a: 15 min to 4:00, 1 h to 5:00, 10 min to 5:10. Q5b: 25 min to 5:00, 25 min more: 5:25 p.m. Q5c: back 1 h from 9:15 to 8:15, back 50 min more: 8:15 to 8:00 is 15 min, then 35 min: 7:25 p.m. Q6 (if time): 06:40, 07:05, 07:30, 07:55, 08:20. b) 08:20 + 35 min = 08:55. The "latest bus to arrive by 08:30" question is a Think Harder item: 07:55 + 35 min = 08:30 exactly; the 08:20 bus is too late.'))
+put('p3l9-ws2',ws_preview('p3l9-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','The 24-hour clock. After 12 noon, add 12.'),('Q5','Time lines: how long, when it ends, when it started.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Check children jump to the next o’clock on their time lines in Q5.'))
+put('p3l9-ws2ans',check_slide('p3l9-ws2ans','67–70 MIN','Page 2: check together',[('Q4','07:15,  15:40,  8:05 p.m.,  12:30.   17:00 is 5 p.m.'),('Q5','a) 1 h 25 min   b) 5:25 p.m.   c) 7:25 p.m.')],
+ 'Click after a child explains. Q5a: 15 min to 4:00, 1 h to 5:00, 10 min to 5:10. Q5b: 25 min to 5:00, 25 min more: 5:25 p.m. Q5c: back 1 h from 9:15 to 8:15, back 50 min more: 8:15 to 8:00 is 15 min, then 35 min: 7:25 p.m. The "latest bus to arrive by 08:30" question is a Think harder item: buses 06:40, 07:05, 07:30, 07:55, 08:20; 07:55 + 35 min = 08:30 exactly; the 08:20 bus is too late.'))
 
 # ---------- stretch, challenge ----------
 st=[('1.','A night train leaves at 22:40 and arrives at 01:15 the next morning. How long is the trip?'),('2.','Siti’s home is 1 km 250 m from school. She walks there and back every day. How far does she walk in 2 days?'),('3.','Ali needs 2 ℓ of milk. A 250 ml carton costs $1.10 and a 1 ℓ carton costs $3.60. What is the cheapest way?')]

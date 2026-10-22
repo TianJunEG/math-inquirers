@@ -131,7 +131,7 @@ module.exports = {
       { q: 'On grid paper draw a rectangle 8 squares long and 3 squares tall. Shade a triangle that has the long side as its base and its top corner anywhere on the opposite side. Compare with your partner: do your shaded areas match? What is the area?', a: '12 cm² for everybody (half of 24), wherever the top corner is.' }
     ],
     stretch: [
-      { q: 'A triangle has an area of 45 cm². Its base is 10 cm. What is its height?', a: '9 cm' },
+      { q: 'The area of a right-angled triangle is 24 cm². Its two short sides (the ones that make the right angle) differ by 2 cm. How long are the two short sides?', a: '6 cm and 8 cm. Base × height = 48, so find two numbers that multiply to 48 and differ by 2: 6 × 8 = 48. Check: 1/2 × 6 × 8 = 24.' },
       { q: 'A right-angled triangle has sides of 12 cm, 16 cm and 20 cm. What is its area?', a: '96 cm² (1/2 × 12 × 16)' },
       { q: 'A triangle and a square have the same area. The square has sides of 6 cm. The triangle has a base of 9 cm. What is the height of the triangle?', a: '8 cm (the square is 36 cm², and 1/2 × 9 × 8 = 36).' },
       { q: 'A triangle and a rectangle have the same base, 12 cm, and the same height, 7 cm. What is the difference between their areas?', a: '42 cm² (84 − 42)' },

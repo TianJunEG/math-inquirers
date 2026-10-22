@@ -9,6 +9,7 @@
  "order": [
   "p2l5-title",
   "p2l5-precheck",
+  "p2l5-precheck2",
   "p2l5-warm1",
   "p2l5-warm2",
   "p2l5-explore1",
@@ -31,9 +32,11 @@
   "p2l5-teachthree",
   "p2l5-stretch",
   "p2l5-challenge",
+  "p2l5-challenge2",
   "p2l5-chdiag",
   "p2l5-chwalk",
   "p2l5-talk",
+  "p2l5-invest",
   "p2l5-exit",
   "p2l5-reflect"
  ],

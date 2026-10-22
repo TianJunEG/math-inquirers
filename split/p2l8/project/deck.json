@@ -9,6 +9,7 @@
  "order": [
   "p2l8-title",
   "p2l8-precheck",
+  "p2l8-precheck2",
   "p2l8-warm1",
   "p2l8-warm2",
   "p2l8-explore1",
@@ -32,9 +33,11 @@
   "p2l8-ws2ans",
   "p2l8-stretch",
   "p2l8-challenge",
+  "p2l8-challenge2",
   "p2l8-chdiag",
   "p2l8-chwalk",
   "p2l8-talk",
+  "p2l8-invest",
   "p2l8-exit",
   "p2l8-reflect"
  ],

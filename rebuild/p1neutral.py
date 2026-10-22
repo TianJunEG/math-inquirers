@@ -27,7 +27,7 @@ SUBS = [
     ('Online: type your fruit in the chat.', 'Online: when the tutor points to a fruit, give a thumbs up. No typing needed.'),
     ('(online: type it in chat)', '(online: a thumbs up when the tutor points to a fruit)'),
     ('Use as few as you can.', 'How few can we use together?'),
-    ('as few questions as they can', 'as few questions as they can together'),
+    ('as few questions as they can.', 'as few questions as they can together.'),
     ('Your pair gets ONE card for 10 minutes. Then swap cards with another pair for 4 minutes.', 'Your pair chooses ONE card for 10 minutes. Then you may swap with another pair for 4 minutes.'),
     ('Your pair gets ONE card for 10 minutes. Then swap with another pair for 4 minutes.', 'Your pair chooses ONE card for 10 minutes. Then you may swap with another pair for 4 minutes.'),
     ('Online: one card per breakout room; each pair reports back in 30 seconds.', 'Online: each pair chooses a card from the workbook page. Reporting back is optional: say one thing you tried, not the answer.'),
@@ -120,7 +120,7 @@ def add_whatif(D, n):
 def ws_note(D, n):
     sid = 'l%d-ws1' % n; s = _r(D, sid)
     if s is None or 'read questions 1 and 2 aloud' in s: return
-    add = (' At minute 40 read questions 1 and 2 aloud, then pairs read the rest. The workbook says: "After question 3 you may choose: carry on, or try Think harder." '
+    add = (' At minute 40 read questions 1 and 2 aloud, then pairs read the rest. The workbook says: "When you finish this page you may choose: carry on, or try Think harder." '
            'Never announce who is on which page and never name a child in front of the group; invite the WHOLE group at once, for example: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Do not split a pair unless both children agree.')
     s = s.replace('</aside>', add + '</aside>', 1); _w(D, sid, s)
 
@@ -224,9 +224,9 @@ def fix_l6(D):
 
 def fix_l7(D):
     body = h2('Exit ticket')
-    inner = chip('EXIT TICKET', TEAL, CREAM, 28) + p('A shape has 6 sides. How many corners does it have? What is the shape called?', 46, 600)
+    inner = chip('EXIT TICKET', TEAL, CREAM, 28) + p('A shape has 4 sides. Two sides are long and two are short, and all 4 corners are square. What is the shape called? How many corners does it have?', 46, 600)
     body += card(inner, WHITE, CARD_X) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 500), WHITE, CARD_X)
-    notes = ('Minutes 80 to 88. Answer: 6 corners; it is a hexagon (the same number of corners as sides). This replaces the 14-squares grid, which is a hard ending for the lesson. '
+    notes = ('Minutes 80 to 88. Answer: a rectangle, with 4 corners (the same number of corners as sides). This replaces the 14-squares grid, which is a hard ending for the lesson. '
              'Extension: how many squares are in a 3 by 3 grid? (14: 9 + 4 + 1).')
     _w(D, 'l7-exit', sec('l7-exit', '80–88 MIN', body, notes))
 

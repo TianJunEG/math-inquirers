@@ -58,7 +58,7 @@ put('p2l2-title',title_slide('p2l2-title','LESSON 2  •  WEEK 1','Missing Digit
  'Objective: Find missing digits in 3-digit addition and subtraction by starting at the ones and checking for a carry, use "=" as "is the same as" to balance number sentences, and complete magic squares and triangles with bigger numbers. '
  'Thinking strategies taught today: WORK BACKWARDS (turn a subtraction into an addition) and GUESS AND CHECK (try a digit, test it, improve). Also: draw a model for two numbers with a known total and difference. '
  'Materials: Digit cards 0 to 9, base-ten blocks or place-value counters, mini whiteboards, a paper magic triangle with 6 circles and number tiles 110 to 160. '
- 'Online: children write column sums on whiteboards and hold them up; number tiles are cut from paper before the lesson; the tutor writes on the slide sums. '
+ 'Online: children write column sums on whiteboards or paper and show your tutor on camera or keep it to share if you want; number tiles are cut from paper before the lesson; the tutor writes on the slide sums. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------

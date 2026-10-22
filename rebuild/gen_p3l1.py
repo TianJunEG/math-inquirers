@@ -66,7 +66,7 @@ put(PRE+'warm1',sec(PRE+'warm1','0–5 MIN',body,
 # ---------- warm-up 2 ----------
 qs=[('1.','What is the value of the 7 in 4719?','700'),('2.','3000 + 40 + 5 = ?','3045'),('3.','What is 1 more than 4999?','5000'),('4.','What is 100 less than 6050?','5950'),('5.','Which is greater: 7089 or 7098?','7098')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, whiteboards up together, then click to show. Answers: 700; 3045 (watch for 345: there are no hundreds, so we write 0 in the hundreds place); 5000; 5950 (100 less: the hundreds digit goes down, and 0 hundreds becomes 9 hundreds); 7098 (same thousands and hundreds, compare the tens: 9 tens is more than 8 tens).'))
+put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, whiteboards (show your tutor on camera or keep it to share if you want), then click to show. Answers: 700; 3045 (watch for 345: there are no hundreds, so we write 0 in the hundreds place); 5000; 5950 (100 less: the hundreds digit goes down, and 0 hundreds becomes 9 hundreds); 7098 (same thousands and hundreds, compare the tens: 9 tens is more than 8 tens).'))
 # ---------- explore ----------
 def explore_pic():
     s='<svg aria-label="Digit cards 2, 4, 6, 8 above a number line from 4000 to 6000" viewBox="0 0 1600 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:230px;display:block">'
@@ -125,7 +125,7 @@ put(PRE+'ws1ans',check2(PRE+'ws1ans','52–54 MIN','Page 1: check together',[
  ('Q1','a) 7530   b) 3057   c) 7503   d) 5037: only 37 away; below 5000 the best is 3750, 1250 away'),
  ('Q2','2055, 2505, 2550, 5025, 5052, 5205, 5250, 5502, 5520.   a) 9   b) 4'),
  ('Q3','a) 9550, 9450   b) 4567, 5678   c) 1015, 1021   d) yes, 5000 is in it; right after it comes 5250')],
- 'Click each answer after a pair explains theirs. Q1c: the odd cards are 3, 5 and 7; ending in 3 gives 7503, ending in 5 gives 7305, ending in 7 gives 5307. Q2: 3 numbers start with 2 and 6 start with 5 (the two 5s are the same, so 5 numbers are not doubled). Q3a take away 100; b add 1111; c the jumps are 1, 2, 3, 4, so next 5 and 6; d keep adding 250: 4000, 4250, 4500, 4750, 5000 (yes, it is in the pattern), then 5250 right after it.',gap=190))
+ 'Click each answer after a pair explains theirs. Q1c: the odd cards are 3, 5 and 7; ending in 3 gives 7503, ending in 5 gives 7305, ending in 7 gives 5307. Q2: 3 numbers start with 2 and 6 start with 5, so 9 altogether (no number starts with 0). The two 5s are the same card, so swapping them does not make a new number. Q3a take away 100; b add 1111; c the jumps are 1, 2, 3, 4, so next 5 and 6; d keep adding 250: 4000, 4250, 4500, 4750, 5000 (yes, it is in the pattern), then 5250 right after it.',gap=190))
 # ---------- before page 2 ----------
 body=h2('Renaming: 12 hundreds is 1 thousand 2 hundreds')+card(p('What number is 3 thousands, 12 hundreds, 5 tens and 14 ones?',40,700))
 body+=step(1,'3 thousands = 3000.   12 hundreds = 1200.',top=420,size=36)

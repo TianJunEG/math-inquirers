@@ -195,7 +195,7 @@ put('p4l3-ws2ans',checks('p4l3-ws2ans','76–80 MIN','Page 2: check together',[(
 st=[('1.','Work out 7 × (40 − 4 × 8).'),('2.','20 __ 4 __ 3 = 8. Write +, −, × or ÷ in the gaps. There are TWO ways. Find both.'),('3.','I think of a number. I divide it by 3, then add 14. The answer is 50. What was my number?')]
 put('p4l3-stretch',sec('p4l3-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 56 (inside the brackets, × first: 4 × 8 = 32, 40 − 32 = 8; then 7 × 8 = 56). 2) 20 − 4 × 3 = 20 − 12 = 8, and 20 ÷ 4 + 3 = 5 + 3 = 8. 3) 108 (work backwards: 50 − 14 = 36, 36 × 3 = 108).'))
 ch=[('1.','Put + or − in each gap so that the answer is 7:  1 __ 2 __ 3 __ 4 __ 5 __ 6 = 7. Find ALL the ways.'),('2.','Mei spent half of her money on a book. Then she spent $6 on lunch. Then she spent half of what was left on a gift. She had $9 left. How much money did she have at first?')]
-put('p4l3-challenge',sec('p4l3-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Think Harder Q5 and Q6. Answers: 1) 2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. 2) $48 (work backwards: 9 × 2 = 18, 18 + 6 = 24, 24 × 2 = 48).'))
+put('p4l3-challenge',sec('p4l3-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q6. Answers: 1) 2 ways: 1 − 2 + 3 + 4 − 5 + 6 = 7 and 1 + 2 − 3 − 4 + 5 + 6 = 7. 2) $48 (work backwards: 9 × 2 = 18, 18 + 6 = 24, 24 × 2 = 48).'))
 g1=''
 for i in range(6):
     x=10+i*104

@@ -138,7 +138,7 @@ put('p3l3-we1',sec('p3l3-we1','27–28 MIN',body,'Click to reveal each step. Bef
 # ---------- 8 try1 ----------
 put('p3l3-try1',try_slide('p3l3-try1','28–29 MIN','Your turn: last digits','Only the ones digit matters. Then check by working it out.',
  [('a','Last digit of 6 × 14?','4'),('b','Last digit of 8 × 17?','6'),('c','Last digit of 9 × 12?','8')],
- 'Whiteboards, hold up together, then click. a) 6 × 4 = 24, so 4 (6 × 14 = 84). b) 8 × 7 = 56, so 6 (8 × 17 = 136). c) 9 × 2 = 18, so 8 (9 × 12 = 108). Ask a child to explain c out loud using the words "only the ones digit".'))
+ 'Whiteboards (show your tutor on camera or keep it to share if you want), then click. a) 6 × 4 = 24, so 4 (6 × 14 = 84). b) 8 × 7 = 56, so 6 (8 × 17 = 136). c) 9 × 2 = 18, so 8 (9 × 12 = 108). Ask a child to explain c out loud using the words "only the ones digit".'))
 
 # ---------- 9 teach2: split an array ----------
 arr=svgwrap('An array of 6 rows of 8 dots split into 5 rows and 1 row',760,400,dot_array(6,8,5,40,34,56,18,'5 × 8','1 × 8'))
@@ -192,7 +192,7 @@ body+=step(1,'63 can only be 7 × 9. 72 can only be 8 × 9. They share the first
 body+=step(2,'Then the rows are 8 (8 × 9 = 72) and 7 (7 × 9 = 63).',left=800,top=420,width=932,size=34)
 body+=step(3,'42 = 7 × 6, so the second column is 6.',left=800,top=530,width=932,size=34)
 body+=step(4,'Fill the gap: 8 × 6 = 48. Check every number ✓',left=800,top=640,width=932,size=34)
-put('p3l3-teachgrid',sec('p3l3-teachgrid','54–56 MIN',body,'Teach before worksheet page 2 (Q4 is a 3 by 3 grid puzzle). Ask first: "Which number can be made in only ONE way with numbers from 1 to 10?" Children list factor pairs: 72 = 8 × 9 only; 63 = 7 × 9 only; 42 = 6 × 7 only. Click order: steps 1 to 3, then the finished grid fades in, then step 4. On the worksheet the hint gives the starting facts (81 = 9 × 9 and 56 = 7 × 8), and Q4 is marked (if time).'))
+put('p3l3-teachgrid',sec('p3l3-teachgrid','54–56 MIN',body,'Teach before worksheet page 2 (Q4 is a 3 by 3 grid puzzle). Ask first: "Which number can be made in only ONE way with numbers from 1 to 10?" Children list factor pairs: 72 = 8 × 9 only; 63 = 7 × 9 only; 42 = 6 × 7 only. Click order: steps 1 to 3, then the finished grid fades in, then step 4. On the worksheet the hint gives the starting facts (81 = 9 × 9 and 56 = 7 × 8), and Q4 is a core question (only Q6 is marked if time).'))
 
 # ---------- 17 teach list ----------
 LW=[170,280,190]
@@ -213,7 +213,7 @@ body+=step(3,'Add the digits: 2 + 1 = 3 ✓   (42 → 6,  63 → 9,  84 → 12) 
 put('p3l3-teachboth',sec('p3l3-teachboth','57–58 MIN',body,'Teach before worksheet Q6. Strategy: list the numbers for ONE clue in order, then test the other clues one at a time. Ask: "Why list the 7s, not the 3s?" (There are fewer of them, so the list is shorter.) Children may notice 21, 42, 63, 84 go up in 21s. Do not do Q6 (6 and 8) here.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','(if time) Grid puzzle. The hint gives the two starting facts: 81 = 9 × 9 and 56 = 7 × 8.'),('Q5','Every way to put 36 chairs in equal rows. Go in order. Only write the ways that work.'),('Q6','If time: number riddle. List one clue, then test the others.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
+put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','Grid puzzle. The hint gives the two starting facts: 81 = 9 × 9 and 56 = 7 × 8.'),('Q5','Every way to put 36 chairs in equal rows. Go in order. Only write the ways that work.'),('Q6','If time: number riddle. List one clue, then test the others.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
 put('p3l3-ws2ans',check_rows('p3l3-ws2ans','66–68 MIN','Page 2: check together',[
  ('Q4','Rows 7, 9, 6.   Columns 8, 6, 9.'),
  ('Q4','56, 42, 63  /  72, 54, 81  /  48, 36, 54'),

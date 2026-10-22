@@ -74,22 +74,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -151,6 +151,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -229,22 +233,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -302,6 +306,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -380,22 +388,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -453,6 +461,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -465,9 +477,9 @@
     "kind": "access"
    },
    {
-    "q": "A pen and a book cost $9 together. The book costs $5 more than the pen. How much is the pen?",
-    "a": "$2",
-    "why": "Take away the extra $5: 9 − 5 = 4. Two equal bars share 4, so the pen is $2 (the book is $7).",
+    "q": "Ali has $12. Ben has $5 less than Ali. Mei has twice as much as Ben. How much money does Mei have? Draw bars to help.",
+    "a": "$14",
+    "why": "Ben has 12 − 5 = $7. Mei has two bars the same as Ben's: 7 + 7 = $14.",
     "kind": "think"
    }
   ],
@@ -548,22 +560,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -621,6 +633,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -699,22 +715,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -772,6 +788,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -850,22 +870,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -923,21 +943,25 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
  "7": {
   "check": [
    {
-    "q": "Draw a rectangle 3 cm long and 2 cm wide on squared paper (or use 6 tiles). What is its area? What is its perimeter?",
-    "a": "Area 6 cm², perimeter 10 cm",
+    "q": "Draw a rectangle 3 cm long and 2 cm wide on squared paper (or use 6 tiles). How many squares does it cover? How far is it all the way round the edge?",
+    "a": "6 squares; 10 cm round the edge",
     "why": "6 squares cover it. Walk round the edge: 3 + 2 + 3 + 2 = 10.",
     "kind": "access"
    },
    {
-    "q": "Two different rectangles both have an area of 12 cm². Can they have different perimeters? Show two examples.",
+    "q": "Two different rectangles both cover 12 squares. Can the distance all the way round the edge be different? Show two examples.",
     "a": "Yes, e.g. 26 cm and 16 cm",
-    "why": "1 by 12 has perimeter 26 cm; 2 by 6 has 16 cm; 3 by 4 has 14 cm.",
+    "why": "1 by 12 is 26 cm round; 2 by 6 is 16 cm round; 3 by 4 is 14 cm round.",
     "kind": "think"
    }
   ],
@@ -974,14 +998,14 @@
    "listing all the rectangles",
    "telling area from perimeter"
   ],
-  "go": "16 squares: make every rectangle. Which has the longest perimeter? The shortest?",
+  "go": "16 squares: make every rectangle. Which has the longest way round the edge? The shortest?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "16 squares: 1 by 16 (perimeter 34 cm), 2 by 8 (20 cm), 4 by 4 (16 cm). Longest 1 by 16, shortest 4 by 4: the square, the most compact shape.",
+  "goans": "16 squares: 1 by 16 (34 cm round), 2 by 8 (20 cm), 4 by 4 (16 cm). Longest 1 by 16, shortest 4 by 4: the square, the most compact shape.",
   "plan": {
    "warmcheck": [
     2,
@@ -1017,22 +1041,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -1086,6 +1110,10 @@
    "ws2": [
     56,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -1181,22 +1209,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -1250,6 +1278,10 @@
    "ws2": [
     57,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -1351,22 +1383,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -1416,6 +1448,10 @@
    "ws2": [
     57,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  },
@@ -1509,22 +1545,22 @@
    ],
    "stretch": [
     67,
-    70
+    72
    ],
    "challenge": [
     67,
-    70
+    72
    ],
    "chdiag": [
     67,
-    70
+    72
    ],
    "chwalk": [
     67,
-    70
+    72
    ],
    "talk": [
-    70,
+    72,
     80
    ],
    "exit": [
@@ -1582,6 +1618,10 @@
    "ws2": [
     58,
     65
+   ],
+   "invest": [
+    67,
+    72
    ]
   }
  }

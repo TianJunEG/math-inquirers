@@ -46,7 +46,7 @@ module.exports = {
       ['Q1', 'Table: 9, 18, 27, 36, 45, 54, 63, 72, 81, 90  (a) The tens digit goes up by 1 and the ones digit goes down by 1; the two digits add up to 9; the tens digit is 1 less than the number of nines.  (b) In 9 × 8 the tens digit is 1 less than 8, so it is 7, and 7 + 2 = 9, so 9 × 8 = 72. 81 is 9 × 9.'],
       ['Q2', 'Answer row (given): 7, 14, 21, 28, 35, 42, 49, 56, 63, 70. Last digits: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0: all ten digits, each once  (a) 3 and 9 (the 3s: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0; the 9s: 9, 8, 7 … 0). The 6s give only even last digits (and the 2s, 4s and 8s do too); the 5s give only 5 and 0.  (b) 2, because 7 × 6 = 42 (7 × 46 = 322).'],
       ['Q3', '(a) 5 × 8 = 40, 2 × 8 = 16, so 7 × 8 = 56  (b) For example 5 × 6 + 4 × 6 = 30 + 24 = 54, or 10 × 6 − 6 = 54.'],
-      ['Q4', '(if time) Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
+      ['Q4', 'Rows 7, 9, 6. Columns 8, 6, 9. Row 7: 56, 42, 63. Row 9: 72, 54, 81. Row 6: 48, 36, 54. (Start with 81 = 9 × 9.)'],
       ['Q5', '(a) 2 rows of 18, 3 of 12, 4 of 9, 6 of 6, 9 of 4, 12 of 3, 18 of 2  (b) 7 ways  (c) 6 rows of 6: turned round it is the same, so it has no partner. That is why the number of ways is odd.'],
       ['Q6', '(a) 24, 48, 72, 96  (b) 48 (digit sums: 24 → 6, 48 → 12, 72 → 9, 96 → 15)']
     ]
@@ -166,7 +166,7 @@ module.exports = {
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));
     out.push(...H.lines(1));
     // ---------- page 2 ----------
-    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, 'Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
       const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 120, size: 26 });
       const v = s => C(s, 2475, { bold: true, h: 120, size: 26 });

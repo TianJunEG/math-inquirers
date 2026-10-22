@@ -225,8 +225,9 @@ put(f'{L}-ws2ans',check(f'{L}-ws2ans','72–75 MIN','Page 2: check together',[('
  'Click after a child explains. Q5: say must come before change. The last number said is the 20th term, 6 × 20 − 2 = 118 (n ends at 124 but it is never said). Q6: 3 + 50 × 4 = 203 is the 51st term.',size=36,gap=150))
 
 # ---------- stretch, challenge ----------
-st=[('1.','The 5th term is 23 and the 6th term is 27. The difference is always the same. What is the 1st term? What is the rule?'),('2.','The 1st term is 4 and the 10th term is 40. What is the difference?'),('3.','Write a sequence whose 1st term is 10 and whose 100th term is 1000.')]
-put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(talkcard(a,b,36) for a,b in st),'Answers: 1) 7: go back 4 jumps of 4 from 23 (23 − 16 = 7); rule 4n + 3. 2) 4: from the 1st to the 10th term is 9 jumps, and 36 ÷ 9 = 4 (rule 4n). 3) 10, 20, 30, 40, … (rule 10n): 99 jumps must add 990, so each jump is 10.'))
+import p6_th
+st=p6_th.pairs(1)
+put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(talkcard(a,b,30) for a,b in st),p6_th.answers(1)))
 ch=[('1.','Which numbers below 60 are in BOTH sequences 2, 5, 8, 11, … and 4, 9, 14, 19, …? Find them all.'),('2.','What does this code say?  set t to 0, set k to 0, then repeat 5 [change k by 1, change t by k], then say t. What would it say with repeat 100?')]
 put(f'{L}-challenge',sec(f'{L}-challenge','Challenge',h2('Challenge')+''.join(talkcard(a,b,36) for a,b in ch),'Pairs try first, then the "see it" slide, then the walk-through. Answers: 1) 14, 29, 44 and 59. 2) 15 (1 + 2 + 3 + 4 + 5); with repeat 100 it says 5050.'))
 def lines2_svg():

@@ -17,7 +17,7 @@ const BOX = b64('gap_box.png'), FACE = [1, 2, 3].map(k => b64(`gap_face_${k}.png
 const ib = (src, px) => `<img src="${src}" style="width:${px}px;height:${px}px;vertical-align:middle;margin:0 3px 0 6px">`;
 const opt = (txt) => `<span style="white-space:nowrap">${ib(BOX, 19)}${esc2(txt)}</span>`;
 const esc2 = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const choice = () => `<div class="p" style="border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15.5px;line-height:1.3;margin:2px 0 8px">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div>`;
+const choice = () => `<div class="p" style="border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15.5px;line-height:1.3;margin:2px 0 8px">When you finish this page you may choose: carry on, or try <b>Think harder</b>.</div>`;
 const fast = choice;
 const refl = (n) => { const h = GAPS[String(n)].hard;
   const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:210px">${lab}</b>${inner}</div>`;
@@ -26,7 +26,7 @@ const refl = (n) => { const h = GAPS[String(n)].hard;
     + row('Something I did well:', ln)
     + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
-    + row('', opt('I am still stuck (my tutor will come and help)') + opt('I would like to pass'))
+    + row('', opt('I am still stuck (my tutor will look at this after class)') + opt('I would like to pass'))
     + `</div>`]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };
 const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];
@@ -251,7 +251,7 @@ W.push(sub('b', 'A shape has 7 sides. How many corners does it have?   ____'));
 W.push(q(3, 'Who am I?', { pb: true, before: 0 }));
 W.push(sub('a', 'I have 4 sides, all the same length, and 4 square corners.   ____________'));
 W.push(sub('b', 'I have no corners and no straight sides.   ____________'));
-W.push(sub('c', 'I have 6 sides.   ____________'));
+W.push(sub('c', 'I have 3 sides and 3 corners.   ____________'));
 W.push(q(4, 'How many triangles can you find in each picture? Count the small ones first, then the bigger ones.', { keepNext: true }));
 W.push(img('trifigs_ab.png', 380, 133));
 W.push(p([t('A: ____          B: ____', { bold: true })], { indent: { left: 1000 }, after: 100 }));
@@ -310,9 +310,9 @@ W.push(q(3, 'Ali measures a desk with his hand span. It is 6 spans long. Mei mea
 W.push(sub('a', 'Whose hand span is longer?   ____________'));
 W.push(sub('b', 'How do you know? (Hint: measure one line with paper clips, then with cubes. Which unit gives the bigger number?)'));
 W.push(...lines(2));
-W.push(q(4, 'If you have time: one paper clip is as long as 2 erasers.'));
-W.push(sub('a', 'A desk is 5 paper clips long. How many erasers long is it?   ____'));
-W.push(sub('b', 'A pencil is 12 erasers long. How many paper clips long is it?   ____'));
+W.push(q(4, 'If you have time: one paper clip is as long as 3 erasers.'));
+W.push(sub('a', 'A desk is 6 paper clips long. How many erasers long is it?   ____'));
+W.push(sub('b', 'A pencil is 15 erasers long. How many paper clips long is it?   ____'));
 W.push(q(5, 'Mei’s pencil is 8 cubes long. Ali’s pencil is 3 cubes longer than Mei’s. Ben’s pencil is 2 cubes shorter than Mei’s.', { keepNext: true }));
 W.push(sub('a', 'How long is Ali’s pencil?   ____ cubes'));
 W.push(sub('b', 'How long is Ben’s pencil?   ____ cubes'));

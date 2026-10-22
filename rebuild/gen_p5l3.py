@@ -23,11 +23,11 @@ put('warm1',sec(f'{L}-warm1','0–4 MIN',body,
  'The bar shows the first card: 120 is cut into 12 units of 10, and 1/4 is 3 units. Listen for children who draw the remainder as a new bar. Answers: 90, 60. This is the idea of the whole lesson: after each step the amount we start from changes.'))
 
 # ---- 3. quick questions ----
-qs=[('1.','What is 2/5 of 45?','18'),('2.','3/4 of a number is 27. What is the number?','36'),('3.','What is 1/3 of 3/4?','1/4'),('4.','Ali has 12 more stickers than Ben. They each get 5 more. How many more does Ali have now?','Still 12'),('5.','Ali has 30 cards and Ben has 20. Ali gives Ben 5. How many cards do they have altogether now?','Still 50')]
+qs=[('1.','What is 2/5 of 45?','18'),('2.','What is 1/4 of 36?','9'),('3.','What is half of 1/2?','1/4'),('4.','Ali has 12 more stickers than Ben. They each get 5 more. How many more does Ali have now?','Still 12'),('5.','Ali has 30 cards and Ben has 20. Ali gives Ben 5. How many cards do they have altogether now?','Still 50')]
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     body+=qrow(128,240+i*130,1370,a,b,34)+answer(1530,240+i*130,262,c)
-put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 36 (3 units = 27, 1 unit = 9, 4 units = 36).  3) 1/4 (1/3 of 3 quarters is 1 quarter).  4) Still 12: both get the same, so the gap does not change.  5) Still 50: the cards only moved from one child to the other. Questions 4 and 5 are the two big ideas of today; do not explain yet, just ask "why?" and collect ideas.',
+put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 9 (36 ÷ 4).  3) 1/4 (half of a half).  4) Still 12: both get the same, so the gap does not change.  5) Still 50: the cards only moved from one child to the other. Questions 4 and 5 are the two big ideas of today; do not explain yet, just ask "why?" and collect ideas.',
  ))
 
 # ---- 4. explore: what to do ----

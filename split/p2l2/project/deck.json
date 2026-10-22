@@ -2,13 +2,14 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:23Z"
+  "at": "2026-10-22T04:47:58Z"
  },
  "lists": "css",
  "title": "Math Inquirers P2: Lesson 2 – Missing Digit Mysteries",
  "order": [
   "p2l2-title",
   "p2l2-precheck",
+  "p2l2-precheck2",
   "p2l2-warm1",
   "p2l2-warm2",
   "p2l2-explore1",
@@ -31,9 +32,11 @@
   "p2l2-ws2ans",
   "p2l2-stretch",
   "p2l2-challenge",
+  "p2l2-challenge2",
   "p2l2-chdiag",
   "p2l2-chwalk",
   "p2l2-talk",
+  "p2l2-invest",
   "p2l2-exit",
   "p2l2-reflect"
  ],

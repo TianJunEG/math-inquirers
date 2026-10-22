@@ -290,8 +290,9 @@ put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check to
     'Click after a child explains. Q4: other fair rules: Ali on 1 and 2 (10 + 8 = 18); or Ali on 0, 1 and 5 (6 + 10 + 2 = 18). Ask: "Each player had 3 differences. Why was it still unfair?" Q5: about 19 runs in 20 land between 145 and 190 doubles. Full key: ' + k['Q4'] + ' | ' + k['Q5'], 32))
 
 # ---------- 22 stretch ----------
-st = QB['stretch'][4:7]
-put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'Extra questions for any pair that wants them (these are not on the Think harder page). Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 38))
+import p6_th
+st = p6_th.get(6)
+put(f'{PRE}-stretch', numcards(f'{PRE}-stretch', 'For early finishers', 'Stretch', [(f'{i + 1}.', x['q']) for i, x in enumerate(st)], 'The same four questions as the printed Think harder page, for anyone who wants them. Answers: ' + ' '.join(f'{i + 1}) {x["a"]}' for i, x in enumerate(st)), 27))
 
 # ---------- 23 challenge ----------
 ch = QB['challenge'][-2:]

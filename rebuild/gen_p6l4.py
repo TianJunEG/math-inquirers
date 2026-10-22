@@ -237,8 +237,9 @@ rows=[('Q4','a) 13    b) −1    c) 16'),('Q5','says 5, 9, 13, 17.   b) 4n + 1  
 put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click after a child explains. Q4: OUT = 2n − 7; 2 × 3 − 7 = −1; backwards: 25 + 7 = 32, ÷ 2 = 16. Q5: n goes 1, 2, 3, 4 and then becomes 5 after the last repeat; with repeat 10 the last n is 10: 4 × 10 + 1 = 41. Q6: backwards 91 + 5 = 96, 96 ÷ 8 = 12. Q7: with 7: 12, 24, 20, 10, 3; with 10: 15, 30, 26, 13, 3. Halving 2n + 6 gives n + 3; taking away n leaves 3.'))
 
 # ---------- 21 stretch (new) ----------
-st=[('1.','IN 3 gives OUT 11. IN 7 gives OUT 23. The rule is "× a number, then + a number". Find it.'),('2.','set n to 2, then repeat 3 times: set n to (n × 2) + 1. Then say n. What does it say?'),('3.','Solve (n + 6) × 4 = 60.')]
-put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(card_q(a,b,38) for a,b in st),'Answers: 1) OUT = 3n + 2 (IN up 4, OUT up 12, so × 3; 3 × 3 = 9, + 2 = 11; check 3 × 7 + 2 = 23).  2) 23 (2 → 5 → 11 → 23).  3) n = 9 (60 ÷ 4 = 15, 15 − 6 = 9; check 15 × 4 = 60).'))
+import p6_th
+st=p6_th.pairs(4)
+put(f'{L}-stretch',sec(f'{L}-stretch','For early finishers',h2('Stretch')+''.join(card_q(a,b,30) for a,b in st),p6_th.answers(4)))
 
 # ---------- 22 challenge ----------
 ch=[('1.','A machine does × 3, then − 4. Which IN number comes out as the SAME number?'),('2.','Two machines are joined: the OUT of the first goes into the second. Each one does × 2, then + 1. IN 5 gives OUT 23. Which IN gives OUT 63?')]

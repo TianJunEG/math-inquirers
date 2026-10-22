@@ -54,8 +54,8 @@ def add(S,order,ln):
     m=re.search(r'Time plan:.*?(?=If the class is behind)',t,re.S); assert m,ln
     par=re.search(r'teaching 25 to 35( \([^)]*\))?',m.group(0)); par=par.group(1) if par and par.group(1) else ''
     new=('Time plan: opening 0 to 2, sneak-peek puzzles 2 to 5 (own paper, nobody marked), warm-up game 5 to 8 and quick questions 8 to 10, explore 10 to 25 (a Go further what-if is on the explore slide from minute 10), '
-         f'teaching 25 to 35{par if par else " (click to reveal each step and answer)"}, brain break 35 to 40, worksheet 40 to 70 (page 1 in pairs, short teaching, page 2 on their own, a check-together slide after each page; after question 3 of page 1 any child may choose Think harder or the Investigation; from minute 67 everyone chooses), '
-         'talk time 70 to 80 (volunteers first, pass is fine), exit ticket 80 to 86, look back 86 to 88, stamp and close 88 to 90. Think harder, Go further and the Investigation are open to every child; the tutor never announces who is on which page and invites the whole group, never one child. ')
+         f'teaching 25 to 35{par if par else " (click to reveal each step and answer)"}, brain break 35 to 40, worksheet 40 to 72 (page 1 in pairs with a tutor visit to every breakout room by minute 47, short teaching, page 2 on their own, a check-together slide after each page; once page 1 and Q4 and Q5 of page 2 are done, any child may choose Think harder or the Investigation; from minute 67 everyone chooses and the Investigation has its own slot, 67 to 72), '
+         'talk time 72 to 80 (the first 3 minutes are the Investigation debrief, volunteers first, pass is fine), exit ticket 80 to 86, look back 86 to 88, stamp and close 88 to 90. Think harder, Go further and the Investigation are open to every child; the tutor never announces who is on which page and invites the whole group, never one child. ')
     t=t[:m.start()]+new+t[m.end():]
     assert len(t)<3950,(ln,len(t))
     S[pre+'title']=t
@@ -69,10 +69,10 @@ def add(S,order,ln):
         body+=pin(128,top,1664,p(f'<span style="color:{TEAL};font-weight:800">Puzzle {i+1}.</span>  {rich(c["q"])}',36,600,raw=True)+picx+p(hint,26,700,TEAL),None,WHITE,20,'20px 30px','box-sizing:border-box;min-height:215px')
     notes=('Minutes 2 to 5. Sneak-peek puzzles: two small puzzles on ideas we have not learnt yet. SAY: "These are ideas we have not learnt yet. Guessing is welcome and so is I do not know. Nobody is marked." '
       'Puzzle 1 is an ACCESS puzzle: any child can try it with objects, a drawing or counting, so everyone has a first win. Puzzle 2 is a thinking puzzle. '
-      'Children write answers on their own paper and show them only to the tutor on camera (or everybody holds paper to the camera at the same moment). No private messages. Never answers read out, never "who got it?". Do not show the answers on the slide now. '
-      + ' '.join(f'Puzzle {i+1} answer (tutor only): {plain(c["a"])}. Listen for: {plain(c["why"])}' for i,c in enumerate(g['check']))
+      'Children write answers on their own paper and show them to the tutor on camera in the open group call, or keep them to share if they want (or everybody holds paper to the camera at the same moment, so nobody is singled out). The call is not private: no private messages, no photos.  Never answers read out, never "who got it?". Do not show the answers on the slide now. '
+      + ' '.join(f'Puzzle {i+1} answer (tutor only): {plain(c["a"]).rstrip(".")}. Listen for: {plain(c["why"])}' for i,c in enumerate(g['check']))
       + ' Come back to puzzle 2 at talk time: "Now we know the idea, how could it help?" (volunteers only). '
-      'Invite the WHOLE group once, never one child; this is an invitation, not a ranking, and any child may choose Think harder or the Investigation after question 3 of page 1. Never announce who is on which page, and never split pairs unless both children agree.')
+      'Invite the WHOLE group once, never one child; this is an invitation, not a ranking, and any child may choose Think harder or the Investigation once page 1 and Q4 and Q5 of page 2 are done. Never announce who is on which page, and never split pairs unless both children agree.')
     S[pre+'warmcheck']=sec(pre+'warmcheck',f'{pl["warmcheck"][0]}–{pl["warmcheck"][1]} MIN',body,notes)
     # ---- Go further what-if on the explore slide ----
     e=S[pre+'explore1']
@@ -84,27 +84,41 @@ def add(S,order,ln):
     # ---- talk time rules ----
     tk=S[pre+'talk']
     tk=tk.replace('Ask each child','Ask volunteers').replace('each child','volunteers')
+    tk=aside_add(tk,'INVESTIGATION DEBRIEF (first 3 minutes, 72 to 75): volunteers share what they noticed, then use the model answer in the notes of the Investigation slide. Not finished? It can be shared at the start of next lesson. Then the talk question below. ')
     tk=aside_add(tk,'TALK TIME RULES: ask for volunteers first; a pass is always fine and so is sharing with a partner. No cold-calling by name, no public tallies or rankings, and nobody is told they were wrong in front of the group. Nobody is called on by name.')
     k='<p style="position:absolute;left:128px;bottom:64px'; assert k in tk,ln
     tk=tk.replace(k,'<p style="font-size:28px;font-weight:700;color:#1F7A6F">You can share, share with a partner, or pass.</p>\n'+k,1)
     S[pre+'talk']=tk
+    # ---- tutor visit while pairs work unsupervised (minutes 40 to 52) ----
+    ws=S[pre+'ws1']
+    ws=aside_add(ws,'TUTOR CHECK-IN: pairs work in breakout rooms from minute 40. Visit EVERY breakout room by minute 47 (about a minute each, camera on, a parent nearby): ask "how do you know?", not "is it done?". Then check in again at about minute 52. No pair is left unseen until minute 52.')
+    S[pre+'ws1']=ws
+    # ---- the Investigation gets its own slot (67 to 72) and a debrief in talk time (72 to 75) ----
+    inv=g['inv']
+    parts=''.join(p(f'<span style="color:{TEAL};font-weight:800">{i+1}.</span>  {rich(x)}',32,600,raw=True) for i,x in enumerate(inv['parts']))
+    tb=' A table for your answers is on the Investigation page of the workbook.' if inv.get('table') else ''
+    body=h2('Investigation: '+inv['title'],60)+card(p(rich(inv['intro']),32,600,raw=True),WHITE,'padding:24px 36px')+card(parts+p(rich(inv['easy'])+tb,26,700,TEAL,raw=True),WHITE,'padding:24px 36px')
+    nt=('Minutes 67 to 72: the Investigation has its OWN slot. Show this slide to the whole group and invite everybody: "You can choose Think harder, Go further or the Investigation now. Nobody has to." Do not say who is on which one. Not finished at 72? Take it home and bring one thing to share at the start of next lesson (volunteers only). '
+        'DEBRIEF in talk time, minutes 72 to 75: ask for volunteers to share one thing they noticed (a pass is fine). Then show the model answer and ask "What stayed the same? What changed? Why?" Model answer and what to look for: '+plain(inv['model']))
+    S[pre+'invest']=sec(pre+'invest',f'{pl["invest"][0]}–{pl["invest"][1]} MIN',body,nt)
     # ---- exit ticket: private ----
     ex=S[pre+'exit']
-    ex=aside_add(ex,'Answers are shown only to the tutor on camera (own paper). Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide, 2 minutes.')
+    ex=aside_add(ex,'Children show the answer to the tutor on camera in the open group call, or keep it to share if they want (own paper). No photos and no private messages. Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide, 2 minutes.')
     S[pre+'exit']=ex
     # ---- look-back slide ----
     ex2=', '.join(g['reflect'])
     dw=', '.join(g['didwell'])
     c1=card(p('Something I did well:',40,800)+p('Tick one: '+dw+', or something else.',28,500,MUTED))
     c2=card(p('The hardest part was ...',40,800)+p('For example: '+ex2+', or something else.',28,500,MUTED))
-    c3=card(p('What helped me:',40,800)+p('Tick one: drawing a picture, making a list, trying a number and checking, I asked for help, or I am still stuck (my tutor will check in with me).',28,500,MUTED))
+    c3=card(p('What helped me:',40,800)+p('Tick one: drawing a picture, making a list, trying a number and checking, I asked for help, or I am still stuck (I can ask for a check-in in the open class, with my parent nearby).',28,500,MUTED))
     body=h2('Look back')+p('Two minutes. Open the last page of today’s lesson. Tick or write. You may pass on any line.',32,600,MUTED)+c1+c2+c3
     notes=('Minutes 86 to 88. Look back: short and safe. SAY: "Turn to the last page of today and find Look back. Tick or write one thing for each line. There are no right answers, and you may pass on any line." Give a full 2 minutes. '
-      'The page is never collected, marked or read out in front of the group. Children keep their page. A child who ticked "I am still stuck" gets a check-in in the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never a private message. '
+      'The page is never collected, marked or read out in front of the group. Children keep their page. You cannot see the paper, so say to the WHOLE group: "If you ticked still stuck, say check-in please in the open class, or ask your grown-up to tell me. I will talk it through with you in the open class, with your parent nearby." No hand signals that single a child out, no private messages. Open the next lesson with the whole group: "What is still tricky from last time?" '
       'Invite volunteers only (one or two) to share something they did well, or what helped. Praise the strategy ("you drew it and that got you unstuck"), not the speed or the answer. Then stamp the journal and close (minutes 88 to 90).')
     S[pre+'reflect']=sec(pre+'reflect',f'{pl["reflect"][0]}–{pl["reflect"][1]} MIN',body,notes)
     new=list(order)
     if pre+'warmcheck' not in new: new.insert(new.index(pre+'title')+1,pre+'warmcheck')
+    if pre+'invest' not in new: new.insert(new.index(pre+'chwalk')+1,pre+'invest')
     if pre+'reflect' not in new:
         new.insert(new.index(pre+'exit')+1,pre+'reflect')
     return new
