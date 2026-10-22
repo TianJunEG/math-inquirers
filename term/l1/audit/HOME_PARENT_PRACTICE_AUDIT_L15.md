@@ -6,7 +6,7 @@ Role HOME_PARENT_PRACTICE. Files audited: `out/l15/L15_Home_Practice.pdf` (2 pag
 
 One High defect in the online runner, reproduced in the browser: after a child presses "Try a similar one" on a templated fill-in-the-boxes item (c1 and c6 here), the page shows the finished sentence ("3 groups of 5 = 15") with no boxes, and "Check" answers "Type a number in every box" for ever. The question is unanswerable and the answer is on screen. The runner file is the same in every lesson L10 to L20 (identical md5), so the defect is shared, but it hits two of the six Start here items of this lesson. The printed home sheet and parent summary are correct and honest; they need a numbering fix and layout care. Everything else in the online practice (typed answers, choices, set answers, pictures) works.
 
-Counts: lesson-specific 1 High, 4 Medium, 7 Low. Shared runner and print items: as L13 and L14 (unchanged).
+Counts: lesson-specific 1 High, 4 Medium, 8 Low. Shared runner and print items: as L13 and L14 (unchanged).
 
 ## Method
 
@@ -44,6 +44,7 @@ Counts: lesson-specific 1 High, 4 Medium, 7 Low. Shared runner and print items: 
 | L15-10 | Low | Online | Nine of the 14 items are text only (c4, c5, t2, t3, t4, g1 to g4): the "pictures render" check passes for the five that have one (c1, c2, c3, c6, t1), and all five render correctly in the base item; the child has no picture for "5 groups of 2" or "6 bikes". | Add a picture to c4 and t3 (plates). |
 | L15-11 | Low | Parent summary | No "please do not teach..." line. Parents may hear "multiply" and teach "times tables" or the "multiply by" language that the guide forbids (36:01). | "Please say 'groups of' for the x sign for now; tables come later." |
 | L15-12 | Low | Parent summary, hand-off | "Have ready for next lesson: the Lesson 16 workbook with its 100 square page" does not say how or when that workbook reaches the family. | "Your tutor will send it before class" or the actual route. |
+| L15-13 | Low | Online c3 (answer_index) | The template answer `((x-y)*(x-y))%3` gives index 1 ("no") only for a difference of 1 or 2; a difference of 3 or more would give index 0 ("yes"). The variant list (x and y from 2 to 4) never reaches it, so no child sees a wrong answer today, but the check would pass a future edit silently. | Use `(x==y)?0:1` style (or `min(1,(x-y)*(x-y))`). |
 
 ## C. Online runner checks (Playwright results)
 
