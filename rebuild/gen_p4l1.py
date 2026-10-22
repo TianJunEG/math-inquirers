@@ -68,7 +68,7 @@ body+=pin(128,420,W2,svgwrap(W2,H2,'Multiples of 4 underlined in red',buzz),'fad
 body+=pin(128,420,W2,svgwrap(W2,H2,'12 and 24 filled yellow',both),'pop')
 body+=pin(128,740,1664,p('Fizz-Buzz numbers: 12 and 24. They are common multiples of 3 and 4. What comes next? (36)',36,700),'fade',SOFT,20,'20px 30px')
 put('p4l1-warm1',sec('p4l1-warm1','4–6 MIN',body,
- 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Fizz-Buzz. Count round the group (online: in the order of the video tiles), one number each. A multiple of 3 is "Fizz", a multiple of 4 is "Buzz", a multiple of both is "Fizz-Buzz". A child who slips starts the next round. Go to 40 if it is going well. '
+ 'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Fizz-Buzz. Count round the group (online: in the order of the video tiles), one number each. A multiple of 3 is "Fizz", a multiple of 4 is "Buzz", a multiple of both is "Fizz-Buzz". A child who slips just says "my go again" and carries on: no one is out and nobody is counted. Go to 40 if it is going well. '
  'Before you start, ask for a prediction: "Which number will be the first Fizz-Buzz?" Then click: the teal boxes are the multiples of 3, the red lines the multiples of 4, and yellow shows the numbers in both: 12 and 24. Ask: "What is the next Fizz-Buzz? How do you know without counting?" (36: they go up in 12s). '
  'Introduce the words: 12 is a MULTIPLE of 3 and of 4, so it is a COMMON MULTIPLE. That idea comes back with the buses later.'))
 
