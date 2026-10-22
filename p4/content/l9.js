@@ -172,7 +172,7 @@ module.exports = {
 
     W.push(H.q(3, 'The graph shows how much money Ali and Mei had in their money boxes at the end of each week.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(moneySvg()));
-    W.push(tip('read each dot. Ali, weeks 1 to 6: $____ $____ $____ $____ $____ $____    Mei: $____ $____ $____ $____ $____ $____'));
+    W.push(tip('read each dot. Ali, weeks 1 to 6: $___ $___ $___ $___ $___ $___    Mei: $___ $___ $___ $___ $___ $___'));
     W.push(H.sub('a', 'Mei’s money in Week 3?  $______     Ali saves each week?  $______'));
     W.push(H.sub('b', 'Same amount in Week ____     Ali first has more in Week ____'));
     W.push(H.sub('c', 'They keep saving the same way. In Week 8, Ali has $______ more than Mei.'));
