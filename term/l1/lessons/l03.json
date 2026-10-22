@@ -45,7 +45,7 @@
   },
   "materials": {
     "child": [
-      "Digit cards: cut out the two sets of 0 to 9 from the kit page, or write the digits 0 to 9 on ten small pieces of scrap paper",
+      "Digit cards: cut out the two sets of 0 to 9 from the kit page, or write 0 to 9 twice on 20 small scraps of paper (a grown-up helps, before the lesson)",
       "The printed workbook (pages 1 to 5) and the two kit pages (tens bars and ones squares, and digit cards), already cut out by a grown-up",
       "A pencil, a rubber and spare paper"
     ],
@@ -102,7 +102,7 @@
         "intro": "A grown-up cuts these out before the lesson. There are two sets of 0 to 9. Keep them in an envelope."
       }
     ],
-    "home_hint": "Use your digit cards or draw bars and squares."
+    "home_hint": "Use your digit cards or draw bars and squares. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters."
   },
   "timing": {
     "parts": [
@@ -110,24 +110,24 @@
         "id": "opening",
         "title": "Opening",
         "start": 0,
-        "end": 2
+        "end": 3
       },
       {
         "id": "remember",
         "title": "Remember warm-up",
-        "start": 2,
-        "end": 8
+        "start": 3,
+        "end": 9
       },
       {
         "id": "sneak",
         "title": "Sneak-peek puzzles",
-        "start": 8,
-        "end": 12
+        "start": 9,
+        "end": 13
       },
       {
         "id": "explore",
         "title": "Explore",
-        "start": 12,
+        "start": 13,
         "end": 28
       },
       {
@@ -175,7 +175,7 @@
     ],
     "optional_slide": "s-opt",
     "include_rules": false,
-    "notes": "A 2-minute opening (the routine and the four inquirer rules were introduced in Lesson 1) gives 2 extra minutes to Explore. The last 5 minutes are the standing buffer; the optional Go further slide and the Spare-time menu are used only if the lesson is on time."
+    "notes": "Opening is 3 minutes (the routine and the four inquirer rules were introduced in Lesson 1; say the three rule words, and the recording, muting and camera notice). Explore has 15 minutes. The last 5 minutes are the standing buffer; the optional Go further slide and the Spare-time menu are used only if the lesson is on time."
   },
   "sneak_peek": {
     "q1": "Count the stars in box A and box B. Which box has more stars? Write how many stars are in that box.",
@@ -245,7 +245,11 @@
           },
           {
             "k": "SAY",
-            "text": "Good morning, inquirers! Cameras on, pencil ready, and your digit cards out. We record me and the screen only, and you may switch your camera off whenever you like."
+            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Your digit cards are out."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
           },
           {
             "k": "SLIDE",
@@ -257,12 +261,16 @@
           },
           {
             "k": "DO",
-            "text": "Greet each child by first name. A child whose digit cards are not cut out writes 0 to 9 on ten scraps of paper now, while the others get ready.",
-            "s": 20
+            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. A child whose digit cards are not cut out can still join the warm-up, which needs no cards; a grown-up helps them write 0 to 9 twice on 20 scraps.",
+            "s": 25
           },
           {
             "k": "NOTE",
-            "text": "The routine and the four inquirer rules were taught in Lesson 1. Name them only if someone has joined who missed it: notice it, test it, explain why, mistakes help us. Tell the group that recordings show only you and the screen."
+            "text": "The routine and the four inquirer rules were taught in Lesson 1. Name them only if someone has joined who missed it: notice it, test it, explain why, mistakes help us. Say the recording notice in your own words: the recording has the tutor, the shared screen and any unmuted voice."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
           }
         ]
       },
@@ -389,9 +397,8 @@
             "s": 50
           },
           {
-            "k": "HOLD",
-            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-            "s": 25
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
           },
           {
             "k": "NOTE",
@@ -420,7 +427,7 @@
           },
           {
             "k": "WORK",
-            "text": "Round 1: each child makes and swaps three pairs of cards and says the numbers aloud. Tutor scans the cameras and asks a few children to show a pair.",
+            "text": "Round 1: each child makes and swaps three pairs of cards and says the numbers aloud. Tutor scans the cameras; a child who wants to may show a pair to the camera. Nobody has to.",
             "s": 150
           },
           {
@@ -434,11 +441,11 @@
           },
           {
             "k": "SAY",
-            "text": "Now check with your bars and squares. Take one of your pairs and build both numbers. Bars in a row for the tens, squares for the ones."
+            "text": "Now check with your bars and squares. Pick two cards that add up to 9 or less, like 3 and 5, so you have enough bars. Build both numbers. Bars in a row for the tens, squares for the ones."
           },
           {
             "k": "WORK",
-            "text": "Children build both numbers with the kit. Tutor asks a few children to show their two piles.",
+            "text": "Children build both numbers with the kit; a child may build one number, read it, then build the other. Tutor scans the cameras; showing is for volunteers.",
             "s": 110
           },
           {
@@ -456,7 +463,7 @@
           },
           {
             "k": "SAY",
-            "text": "Show me! I say two cards. You make the greatest number you can. Hold it up to the camera on a count of three."
+            "text": "Show me! I say two cards. You make the greatest number you can. Give a thumbs-up when it is made, then check your own against my line."
           },
           {
             "k": "SAY",
@@ -464,8 +471,13 @@
           },
           {
             "k": "WORK",
-            "text": "Children make 72 and hold it up on three.",
+            "text": "Children make 72 and give a thumbs-up.",
             "s": 30
+          },
+          {
+            "k": "READ",
+            "text": "Check your own: seven on the left, two on the right. Seventy-two.",
+            "s": 8
           },
           {
             "k": "SAY",
@@ -475,6 +487,11 @@
             "k": "WORK",
             "text": "Make 93.",
             "s": 30
+          },
+          {
+            "k": "READ",
+            "text": "Check your own: nine on the left, three on the right. Ninety-three.",
+            "s": 8
           },
           {
             "k": "SAY",
@@ -495,13 +512,9 @@
             "s": 30
           },
           {
-            "k": "SAY",
-            "text": "Cards eight and five."
-          },
-          {
-            "k": "WORK",
-            "text": "Make 58.",
-            "s": 30
+            "k": "READ",
+            "text": "Check your own: one on the left, six on the right. Sixteen.",
+            "s": 8
           },
           {
             "k": "SLIDE",
@@ -527,7 +540,7 @@
           },
           {
             "k": "STUCK",
-            "text": "A child with no cards: write the digits on scraps of paper while the others do round 1."
+            "text": "A child with no cards: use the digits from the kit, or write them on scraps of paper while the others do round 1."
           },
           {
             "k": "NOTE",
@@ -740,11 +753,11 @@
           },
           {
             "k": "SAY",
-            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
           },
           {
             "k": "WORK",
-            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
             "s": 300
           },
           {
@@ -753,11 +766,11 @@
           },
           {
             "k": "STUCK",
-            "text": "A child who is still stuck ticks I am still stuck on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
           },
           {
             "k": "NOTE",
-            "text": "Think harder (page 3) is for the same idea in a new setting: three cards, the 0 card, clue puzzles and listing every number. Go further (page 4) has a four-card puzzle, counting every number and a three-clue puzzle. Do not announce who is on which page. Pairs are never split unless both children agree."
+            "text": "Think harder (page 3) is for the same idea in a new setting: three cards, the 0 card, clue puzzles and listing every number. Go further (page 4) has a four-card puzzle, counting every number and a three-clue puzzle. Do not announce who is on which page. Pairs are never split unless both children agree. Slow class: the workbook part needs about 32:00 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
           }
         ]
       },
@@ -774,7 +787,7 @@
           },
           {
             "k": "READ",
-            "text": "Is this always right? Put the smallest card on the left to make the smallest number. Try the cards 3 and 8. Then try 0 and 5. Circle Yes or No. I know because ___."
+            "text": "Put the smallest card on the left to make the smallest number. Is this always right? Part a: try the cards 3 and 8. Does it work? Part b: try the cards 0 and 5. Does it work? Circle Yes or No for each. I know because ___."
           },
           {
             "k": "WORK",
@@ -806,7 +819,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Model answer: Mei is right for the cards 3 and 8, because 38 is smaller than 83. For the cards 0 and 5 she is not quite right: 0 can not go on the left, because 05 is just 5. So 50 is the only two-digit number. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+            "text": "Model answer: (a) yes, 38 is smaller than 83. (b) no: 0 can not go on the left because 05 is just 5, so 50 is the only two-digit number. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
       },
@@ -826,14 +839,14 @@
             "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
           },
           {
+            "k": "READ",
+            "text": "E1. Write the greater number: thirty-nine or forty-one. E2. Make two numbers with the cards 7 and 3. Write the greater and the smaller. E3. Arrange in order, smallest first: sixty-three, thirty-six, sixty.",
+            "s": 26
+          },
+          {
             "k": "WORK",
             "text": "Children answer E1 to E3 on their own.",
             "s": 150
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-            "s": 25
           },
           {
             "k": "SLIDE",
@@ -845,11 +858,11 @@
           },
           {
             "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
           },
           {
             "k": "NOTE",
-            "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 4, in the open session, no names. Do not read out any child's result."
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
           }
         ]
       },
@@ -866,7 +879,7 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
           },
           {
             "k": "WORK",
@@ -884,7 +897,7 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers. Next lesson is The 100 Square Explorer. You need a pencil, paper and two or three colouring pencils. Goodbye, and thank you to the grown-ups."
+            "text": "Well done, inquirers. Next lesson is The 100 Square Explorer. Please have the printed 100 square page, about 12 small counters, two or three colours, and a pencil and paper. Goodbye, and thank you to the grown-ups."
           },
           {
             "k": "SLIDE",
@@ -935,7 +948,7 @@
           ]
         }
       ],
-      "note": "Lesson 3 of Term 1, 90 minutes. Objective: make two-digit numbers from digit cards and compare them, tens first. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the lesson is recorded (you and the screen only) and a child may keep the camera off.",
+      "note": "Lesson 3 of Term 1, 90 minutes. Objective: make two-digit numbers from digit cards and compare them, tens first. Time plan: opening 0 to 3, warm-up 3 to 9, sneak-peek 9 to 13, explore 13 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the lesson is recorded (the tutor, the shared screen and any unmuted voice) and a child may keep the camera off.",
       "subtitle": "Whole numbers: compare and order",
       "mascot": {
         "size": "l",
@@ -1168,7 +1181,7 @@
           ]
         }
       ],
-      "note": "Puzzle 2 is a thinking question on the key idea. Children write or draw on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answer: Mei, because 84 is 8 tens and 48 is only 4 tens. Do not reveal puzzle 2 until Talk time. Do not read anyone's answer aloud."
+      "note": "Puzzle 2 is a thinking question on the key idea. Children write or draw on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answer: Mei, because 84 is 8 tens and 48 is only 4 tens. Do not reveal puzzle 2 until Talk time. Do not read anyone's answer aloud."
     },
     {
       "id": "s-explore1",
@@ -1194,7 +1207,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 4 minutes. Objects first, no writing. Children make three pairs, swap, and say both numbers aloud, tens first. Ask a few children to show a pair to the camera. The what-if card is open from the start so nobody waits; it previews the zero rule and nobody is named for choosing it. Expect some children to read 47 as seven-four: ask them to say the tens first."
+      "note": "Round 1, about 4 minutes. Objects first, no writing. Children make three pairs, swap, and say both numbers aloud, tens first. A child who wants to may show a pair to the camera. The what-if card is open from the start so nobody waits; it previews the zero rule and nobody is named for choosing it. Expect some children to read 47 as seven-four: ask them to say the tens first."
     },
     {
       "id": "s-explore2",
@@ -1204,7 +1217,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Build both of your numbers with bars and squares. Which pile has more?"
+          "text": "Pick two cards that add up to 9 or less. Build both of your numbers with bars and squares. Which pile has more?"
         },
         {
           "t": "cols",
@@ -1232,7 +1245,7 @@
           ]
         }
       ],
-      "note": "Round 2, about 4 minutes, main room. Children take one of their pairs and build both numbers with the kit bars (tens) and squares (ones). The picture shows 53 and 35 as an example. They see that the pile with more bars is greater, so the tens decide. Ask: which pile is greater, and how do you know?"
+      "note": "Round 2, about 4 minutes, main room. Children pick two cards whose digits add up to 9 or less (the kit has 9 bars), then build both numbers with the kit bars (tens) and squares (ones); a child may build one, read it, then build the other. The picture shows 53 and 35 as an example. They see that the pile with more bars is greater, so the tens decide. Ask: which pile is greater, and how do you know?"
     },
     {
       "id": "s-explore3",
@@ -1242,7 +1255,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Hold it up to the camera when I count to three."
+          "text": "Make it, give a thumbs-up, then check your own."
         },
         {
           "t": "table",
@@ -1267,15 +1280,11 @@
             [
               "6 and 1",
               "smallest number"
-            ],
-            [
-              "8 and 5",
-              "smallest number"
             ]
           ]
         }
       ],
-      "note": "Round 3, about 4 minutes. Say each pair aloud, show it on the slide, and children make the number and hold it up on three. Answers: 7 and 2 make 72; 3 and 9 make 93; 0 and 5 make 50 (05 is just 5, settled on the next slide); 6 and 1 make 16; 8 and 5 make 58. Leave the zero case open and let the children argue it."
+      "note": "Round 3, about 4 minutes. Say each pair aloud and keep this table on screen. Children make the number and give a thumbs-up, then check their own against your line; nobody holds anything up to the camera. Answers: 7 and 2 make 72; 3 and 9 make 93; 0 and 5 make 50 (05 is just 5, settled on the next slide); 6 and 1 make 16. Leave the zero case open and let the children argue it."
     },
     {
       "id": "s-explore4",
@@ -1689,7 +1698,7 @@
         },
         {
           "t": "chip",
-          "text": "Everyone may choose. You can swap at any time."
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
         }
       ],
       "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
@@ -1709,14 +1718,14 @@
         },
         {
           "t": "p",
-          "text": "Is this always right? Try the cards 3 and 8. Then try the cards 0 and 5."
+          "text": "Is this always right? (a) Try the cards 3 and 8. (b) Try the cards 0 and 5."
         },
         {
           "t": "chip",
           "text": "I think ... because ..."
         }
       ],
-      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: for 3 and 8 she is right, 38 is the smallest. For 0 and 5 she is not quite right: 0 can not go on the left because 05 is just 5, so the only two-digit number is 50. Repeat each child's answer in your own words for the recording."
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: for 3 and 8 it works: 38 is the smallest. For 0 and 5 it does not: 0 can not go on the left because 05 is just 5, so the only two-digit number is 50. Repeat each child's answer in your own words for the recording."
     },
     {
       "id": "s-sneakans",
@@ -1773,10 +1782,10 @@
             "E2",
             "E3"
           ],
-          "short": true
+          "short": false
         }
       ],
-      "note": "Children answer on page 5. After the timer everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
     },
     {
       "id": "s-exitans",
@@ -1805,7 +1814,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional.",
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1827,10 +1836,10 @@
         },
         {
           "t": "p",
-          "text": "You need a pencil, paper and colouring pencils."
+          "text": "Have ready: 100 square, 12 counters, colours."
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
       "mascot": {
         "size": "l",
         "say": "Great thinking today!"
@@ -2434,9 +2443,9 @@
     }
   },
   "talk": {
-    "question": "Is this always right? Put the smallest card on the left to make the smallest number. Try the cards 3 and 8. Then try 0 and 5. Circle Yes or No. I know because ___.",
+    "question": "Put the smallest card on the left to make the smallest number. Is this always right? (a) Try the cards 3 and 8. Circle Yes or No. (b) Try the cards 0 and 5. Circle Yes or No. I know because ___.",
     "starter": "I think ... because ...",
-    "answer": "For 3 and 8 she is right: 38 is smaller than 83. For 0 and 5 she is not quite right: the 0 can not go on the left, because 05 is just 5. The only two-digit number is 50. So the smallest card goes on the left, unless it is 0.",
+    "answer": "(a) Yes: 38 is smaller than 83. (b) No: the 0 can not go on the left, because 05 is just 5. The only two-digit number is 50. So the smallest card goes on the left, unless it is 0.",
     "look_for": "A reason that uses tens and ones (the card on the left counts the tens), and a child who notices that 0 can not lead."
   },
   "exit": [
@@ -2574,7 +2583,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "You have the cards 0, 6 and 9. Use two cards each time. Write the smallest and the greatest two-digit numbers.",
+      "text": "You have the cards 0, 6 and 9. Use two cards each time. The smallest two-digit number is ___. The greatest is ___.",
       "answer": "60 and 96",
       "val": [
         60,
@@ -2625,7 +2634,6 @@
               8
             ],
             "o1": [
-              1,
               2,
               3
             ],
@@ -2639,13 +2647,19 @@
               7,
               8,
               9
+            ],
+            "w": [
+              0,
+              1
             ]
           },
           "derive": {
             "a": "t1*10+o1",
-            "b": "t2*10+o2"
+            "b": "t2*10+o2",
+            "p": "a*(1-w)+b*w",
+            "r": "b*(1-w)+a*w"
           },
-          "q": "Which number is greater, {a} or {b}? Write the greater number.",
+          "q": "Which number is greater, {p} or {r}? Write the greater number.",
           "answer": "a",
           "hint": "Look at the tens first. {t1} tens or {t2} tens?",
           "steps": [
@@ -2684,7 +2698,6 @@
               8
             ],
             "o1": [
-              1,
               2,
               3
             ],
@@ -2698,13 +2711,19 @@
               7,
               8,
               9
+            ],
+            "w": [
+              0,
+              1
             ]
           },
           "derive": {
             "a": "t1*10+o1",
-            "b": "t2*10+o2"
+            "b": "t2*10+o2",
+            "p": "a*(1-w)+b*w",
+            "r": "b*(1-w)+a*w"
           },
-          "q": "Which number is smaller, {a} or {b}? Write the smaller number.",
+          "q": "Which number is smaller, {p} or {r}? Write the smaller number.",
           "answer": "b",
           "hint": "Look at the tens first. Which number has fewer tens?",
           "steps": [
@@ -2754,16 +2773,24 @@
               2,
               3,
               4
+            ],
+            "w": [
+              0,
+              1
             ]
           },
-          "q": "You have the digit cards {x} and {y}. What is the greatest number you can make?",
+          "q": "You have the digit cards {p} and {r}. What is the greatest number you can make?",
           "answer": "x*10+y",
           "hint": "Put the greater card on the left.",
           "steps": [
             "The left card counts the tens, so we want the greater card there.",
             "Put {x} on the left and {y} on the right.",
             "The greatest number is {ans}."
-          ]
+          ],
+          "derive": {
+            "p": "x*(1-w)+y*w",
+            "r": "y*(1-w)+x*w"
+          }
         }
       },
       {
@@ -2800,16 +2827,24 @@
               2,
               3,
               4
+            ],
+            "w": [
+              0,
+              1
             ]
           },
-          "q": "You have the digit cards {x} and {y}. What is the smallest number you can make?",
+          "q": "You have the digit cards {p} and {r}. What is the smallest number you can make?",
           "answer": "y*10+x",
           "hint": "Put the smaller card on the left.",
           "steps": [
             "The left card counts the tens, so we want the smaller card there.",
             "Put {y} on the left and {x} on the right.",
             "The smallest number is {ans}."
-          ]
+          ],
+          "derive": {
+            "p": "x*(1-w)+y*w",
+            "r": "y*(1-w)+x*w"
+          }
         }
       },
       {
@@ -2959,16 +2994,24 @@
               7,
               8,
               9
+            ],
+            "w": [
+              0,
+              1
             ]
           },
-          "q": "You have the digit cards {x}, {y} and {z}. Use any two cards. What is the greatest number you can make?",
+          "q": "You have the digit cards {p}, {y} and {r}. Use any two cards. What is the greatest number you can make?",
           "answer": "z*10+y",
           "hint": "Which card is the greatest? Put it on the left. Then pick the greatest card that is left.",
           "steps": [
             "The greatest card is {z}. Put it on the left.",
             "The greatest card left is {y}. Put it on the right.",
             "The greatest number is {ans}."
-          ]
+          ],
+          "derive": {
+            "p": "x*(1-w)+z*w",
+            "r": "z*(1-w)+x*w"
+          }
         }
       },
       {
@@ -2995,7 +3038,7 @@
             "a": [
               49
             ],
-            "say": "49 is a two-digit number, but 40 is smaller. Use the 0 on the right."
+            "say": "49 works, but is there a smaller number? Think about the 0."
           }
         ],
         "tpl": {
@@ -3012,16 +3055,24 @@
               7,
               8,
               9
+            ],
+            "w": [
+              0,
+              1
             ]
           },
-          "q": "You have the digit cards 0, {y} and {z}. Use any two cards. What is the smallest two-digit number you can make?",
+          "q": "You have the digit cards {p}, 0 and {r}. Use any two cards. What is the smallest two-digit number you can make?",
           "answer": "y*10",
           "hint": "The 0 can not go on the left. What is the smallest card that can go on the left?",
           "steps": [
             "0 can not go on the left. The smallest card for the left is {y}.",
             "The smallest card for the right is 0.",
             "The smallest two-digit number is {ans}."
-          ]
+          ],
+          "derive": {
+            "p": "y*(1-w)+z*w",
+            "r": "z*(1-w)+y*w"
+          }
         }
       },
       {
@@ -3157,7 +3208,7 @@
     ]
   },
   "parent": {
-    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card. Our Term 1 goes beyond the school Primary 1 syllabus on purpose, so the Go further puzzles are optional extras.",
+    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card. Comparing two-digit numbers is Primary 1 work. Using three cards, and listing every number, goes further and is in Think harder and Go further.",
     "words": [
       "digit: one of the symbols 0 to 9",
       "tens digit: the left digit, it counts the tens",
@@ -3165,7 +3216,7 @@
       "compare: say which number is greater or smaller, or if they are the same"
     ],
     "try_home": [
-      "Card game: write digit cards 0 to 9 on scrap paper. Each of you picks two cards and makes the greatest number you can. Who made the greater number? Say why.",
+      "Card game: write digit cards 0 to 9 on scrap paper. Each of you picks two cards and makes the greatest number you can. Who made the greater number? Say why. Keep small things away from mouths and little ones.",
       "Swap it: pick two cards, read the number, swap the cards and read again. Ask: which is greater, and how do you know?",
       "Spot it: look at house numbers or lift floors. Ask: which has more tens? Which digit tells you?"
     ],
@@ -3174,25 +3225,30 @@
       "Which digit do we look at first?",
       "Can the 0 go on the left? Why not?"
     ],
-    "when_stuck": "Please let your child build both numbers with the tens bars and ones squares, or draw them, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer.",
-    "next": "Lesson 4: The 100 Square Explorer. Your child needs a pencil, paper and two or three colouring pencils.",
+    "when_stuck": "Please let your child build both numbers with the tens bars and ones squares, or draw them, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
+    "next": "Lesson 4: The 100 Square Explorer. Online practice: your tutor will share the practice link.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: making two-digit numbers from digit cards and comparing them, tens first.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-    "quote": "The order of the digits changes the number. The left digit counts the tens, so we look at it first."
+    "quote": "The order of the digits changes the number. The left digit counts the tens, so we look at it first.",
+    "next_materials": [
+      "The printed 100 square (workbook page 6, no cutting)",
+      "About 12 small counters (buttons or coins) and 2 or 3 colours",
+      "Pencil, rubber and paper"
+    ]
   },
   "safeguarding": [
-    "Cards are paper: nothing sharp, and no scissors in the lesson (a grown-up cuts the kit pages beforehand). Small pieces stay on the table and out of mouths and ears.",
+    "Cards are paper: nothing sharp, and no scissors in the lesson (a grown-up cuts the kit pages beforehand). Small pieces stay on the table and out of mouths and ears. Keep small things away from younger brothers and sisters.",
     "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "Sneak-peek and exit answers are shown on the child's own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
-    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded.",
-    "A child who ticks 'I am still stuck' gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
     "Solve every workbook question yourself first, including the lists in Think harder and Go further.",
-    "Tell parents a week before: print the whole workbook (the five lesson pages and the two kit pages), and cut out both kit pages (digit cards, and tens bars and ones squares). If a family cannot print, ten scraps of paper with 0 to 9 written on them work as digit cards.",
+    "Tell parents a week before: print the whole workbook (the five lesson pages and the two kit pages), and cut out both kit pages (digit cards, and tens bars and ones squares). If a family cannot print, 20 scraps of paper (0 to 9 written twice, by a grown-up before the lesson) work as digit cards.",
     "Make your own set of digit cards 0 to 9 to show on camera. Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording settings exclude children's video.",
+    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
     "Tell families plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is approachable with the kit and is explored in class; Go further is optional and not a claim about school exams."
   ],
   "spare_time": {

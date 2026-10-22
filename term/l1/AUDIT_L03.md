@@ -58,3 +58,7 @@ Total: 19 / 24 (self-scored; the independent auditor gave 16/24 before the fix p
 ## Known limits
 
 - Never trialled with children; times and difficulty are modelled. The 8-question Start here is long for a slow reader; page 2 is full; digit cards are cut by a grown-up.
+
+## Update (second fix pass, 22 Oct 2026)
+
+Machine state: validate 03 = 18 pass, 2 WARN (exit 4:07 of 6:00 loose; page 5 estimate 105%, real PDF fills 91, 94, 85, 91, 96, 89, 84%), 0 FAIL; 301 answer checks, 563 practice variants; leak check clean. Script 75:39, slow class 89:35 (still the tightest slow total). Home 2 pages, parent 1. All pages, key, home, parent and changed slides viewed. Details in `audit/FIXES2_L03.md`.
