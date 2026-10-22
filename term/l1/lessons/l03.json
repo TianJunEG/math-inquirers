@@ -17,7 +17,7 @@
       "Compare two sets of objects",
       "Tens and ones (place value) used to compare"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Comparing and ordering numbers to 100 and comparing sets of objects are Primary 1 topics. Three-digit numbers are beyond Primary 1 and appear only at Go further as an extension (hundreds are explained in the question)."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Comparing and ordering numbers to 100 and comparing sets of objects are Primary 1 topics. Term 1 goes beyond the school Primary 1 syllabus on purpose: the Go further puzzles use four cards and several clues. This lesson stays within two-digit numbers; three-digit numbers are not used in the workbook."
   },
   "contest_moves": [
     "digit-card clue puzzle (find every number that fits two clues)",
@@ -651,7 +651,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Key words to use every time: digit, tens digit, ones digit, greater, smaller. Do not teach the greater-than and less-than symbols. Do not teach three-digit numbers here (Go further only). Keep the zero rule short: 0 can not go on the left."
+            "text": "Key words to use every time: digit, tens digit, ones digit, greater, smaller. Do not teach the greater-than and less-than symbols. Do not teach three-digit numbers; this lesson stays within two-digit numbers. Keep the zero rule short: 0 can not go on the left."
           },
           {
             "k": "STUCK",
@@ -719,7 +719,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: cards 6 and 2, the greatest and smallest. Question 5: arrange four numbers in order. Question 6: Ravi says that 19 is greater than 21. Is Ravi right? Question 7: the cards 2 and 8. Question 8: Siti and Ravi have stickers, so draw bars and squares."
+            "text": "Page 2. Question 4: make two numbers with the cards 6 and 2. Question 5: arrange four numbers in order. Question 6: Kumar says that 19 is greater than 21. Is Kumar right? Question 7: the cards 2 and 8. Question 8: Siti and Ravi have stickers, so draw bars and squares."
           },
           {
             "k": "WORK",
@@ -732,7 +732,7 @@
           },
           {
             "k": "READ",
-            "text": "Sixty-two and twenty-six. Fourteen, twenty-five, forty-one, fifty-two. Ravi is not right: twenty-one is greater. Eighty-two and twenty-eight. Ravi has more stickers."
+            "text": "Sixty-two is greater and twenty-six is smaller. Fourteen, twenty-five, forty-one, fifty-two. Kumar is not right: twenty-one is greater. Eighty-two and twenty-eight. Ravi has more stickers."
           },
           {
             "k": "SLIDE",
@@ -757,7 +757,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Think harder (page 3) is for the same idea in a new setting: three cards, the 0 card, clue puzzles and listing every number. Go further (page 4) has a three-digit extension. Do not announce who is on which page. Pairs are never split unless both children agree."
+            "text": "Think harder (page 3) is for the same idea in a new setting: three cards, the 0 card, clue puzzles and listing every number. Go further (page 4) has a four-card puzzle, counting every number and a three-clue puzzle. Do not announce who is on which page. Pairs are never split unless both children agree."
           }
         ]
       },
@@ -1991,7 +1991,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Look at the picture for Mei. Ben has 4 bars and 1 square.",
+        "text": "Count the bars and squares in Mei's picture. Ben has 4 bars and 1 square.",
         "parts": [
           {
             "l": "a",
@@ -2037,17 +2037,17 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Use the cards 6 and 2.",
+        "text": "Make two numbers with both cards 6 and 2.",
         "parts": [
           {
             "l": "a",
-            "text": "The greatest number is ___",
+            "text": "The greater number is ___",
             "ans": "62",
             "val": 62
           },
           {
             "l": "b",
-            "text": "The smallest number is ___",
+            "text": "The smaller number is ___",
             "ans": "26",
             "val": 26
           }
@@ -2058,7 +2058,7 @@
           26
         ],
         "hint": "Put the cards down both ways and read them. The greater card on the left makes the greater number.",
-        "solution": "The greatest card goes on the left for the greatest number: 62. The smallest card goes on the left for the smallest number: 26.",
+        "solution": "The greater card on the left makes the greater number: 62. The smaller card on the left makes the smaller number: 26.",
         "mistakes": [
           "Writing 62 for both.",
           "Writing 8 (6 + 2)."
@@ -2104,11 +2104,11 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Ravi says that 19 is greater than 21.",
+        "text": "Kumar says that 19 is greater than 21.",
         "parts": [
           {
             "l": "a",
-            "text": "Is Ravi right? Circle Yes or No.",
+            "text": "Is Kumar right? Circle Yes or No.",
             "ans": "No",
             "val": "no"
           },
@@ -2124,9 +2124,9 @@
           21
         ],
         "hint": "Build both with your kit. Count the bars first.",
-        "solution": "19 is 1 ten and 9 ones. 21 is 2 tens and 1 one. 2 tens is more than 1 ten, so 21 is greater. Ravi looked at the ones digits first. Look at the tens first.",
+        "solution": "19 is 1 ten and 9 ones. 21 is 2 tens and 1 one. 2 tens is more than 1 ten, so 21 is greater. Kumar looked at the ones digits first. Look at the tens first.",
         "mistakes": [
-          "Saying Ravi is right because 9 is more than 2.",
+          "Saying Kumar is right because 9 is more than 2.",
           "Not giving a reason (any clear sentence about the tens is fine)."
         ],
         "mins": 2.5,
@@ -2190,7 +2190,8 @@
         ],
         "mins": 2.5,
         "lines": 0,
-        "draw": true
+        "draw": true,
+        "draw_strokes": 14
       }
     ],
     "think": [
@@ -2198,7 +2199,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "You have the cards 3, 5 and 8. Use two cards to make the greatest number. Then make the smallest number.",
+        "text": "You have the cards 3, 5 and 8. Use two different cards to make the greatest number. Then make the smallest number.",
         "parts": [
           {
             "l": "a",
@@ -2225,7 +2226,7 @@
           "Writing 88 (using the 8 twice)."
         ],
         "mins": 4,
-        "lines": 1
+        "lines": 2
       },
       {
         "id": "T2",
@@ -2258,7 +2259,7 @@
           "Writing 37 for the smallest."
         ],
         "mins": 4,
-        "lines": 1
+        "lines": 2
       },
       {
         "id": "T3",
@@ -2321,31 +2322,31 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "You have the cards 4, 0 and 9. Use all three cards to make 3-digit numbers. Make the greatest number. Then make the smallest number.",
+        "text": "You have the cards 2, 5, 6 and 9. Use two different cards to make a two-digit number.",
         "parts": [
           {
             "l": "a",
-            "text": "The greatest number is ___",
-            "ans": "940",
-            "val": 940
+            "text": "The greatest number less than 60 is ___",
+            "ans": "59",
+            "val": 59
           },
           {
             "l": "b",
-            "text": "The smallest number is ___",
-            "ans": "409",
-            "val": 409
+            "text": "The smallest number greater than 50 is ___",
+            "ans": "52",
+            "val": 52
           }
         ],
-        "answer": "940 and 409",
+        "answer": "59 and 52",
         "val": [
-          940,
-          409
+          59,
+          52
         ],
-        "hint": "List every way to put the three cards in a row. Cross out the ones that start with 0.",
-        "solution": "The ways are 409, 490, 904, 940 (049 and 094 start with 0, so they are not 3-digit numbers). The greatest is 940. The smallest is 409.",
+        "hint": "List every two-digit number you can make. Then cross out the numbers that are too big or too small.",
+        "solution": "The numbers are 25, 26, 29, 52, 56, 59, 62, 65, 69, 92, 95, 96. Less than 60: 25, 26, 29, 52, 56, 59, so the greatest is 59. Greater than 50: 52, 56, 59, 62, 65, 69, 92, 95, 96, so the smallest is 52.",
         "mistakes": [
-          "Writing 049 as the smallest.",
-          "Writing 904 as the greatest (the 9 is on the left, but 4 should come next)."
+          "Writing 96 or 69 for part a (they are greater than 60).",
+          "Writing 25 for part b (it is not greater than 50)."
         ],
         "mins": 5,
         "lines": 1
@@ -2387,24 +2388,24 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "I make a 3-digit number with the cards 2, 5 and 8. Each card is used once. My number is greater than 500 and less than 600. My ones digit is greater than my tens digit. What number am I?",
+        "text": "I make a two-digit number with two different cards from 1, 3, 4 and 7. My number is between 35 and 45. My ones digit is greater than my tens digit. What number am I?",
         "parts": [
           {
             "l": "",
             "text": "I am ___",
-            "ans": "528",
-            "val": 528
+            "ans": "37",
+            "val": 37
           }
         ],
-        "answer": "528",
+        "answer": "37",
         "val": [
-          528
+          37
         ],
-        "hint": "List all the 3-digit numbers you can make with the cards. Cross out the numbers that break each clue in turn.",
-        "solution": "The numbers are 258, 285, 528, 582, 825, 852. More than 500: 528, 582, 825, 852. Less than 600: 528, 582. Ones digit greater than tens digit: 528 (8 is greater than 2). 582 has 2 and 8 the wrong way round.",
+        "hint": "List all the two-digit numbers you can make with the cards. Cross out the numbers that break each clue in turn.",
+        "solution": "The numbers are 13, 14, 17, 31, 34, 37, 41, 43, 47, 71, 73, 74. Between 35 and 45: 37, 41, 43. Ones digit greater than tens digit: 37 (7 is greater than 3). 41 and 43 have a ones digit that is smaller.",
         "mistakes": [
-          "Stopping at 582 and not checking clue 2.",
-          "Listing only some of the 6 numbers."
+          "Stopping at 41 or 43 and not checking the ones digit.",
+          "Writing 34 or 47 (they are not between 35 and 45)."
         ],
         "mins": 6,
         "lines": 3
@@ -2461,17 +2462,17 @@
     },
     {
       "id": "E2",
-      "text": "Use the cards 7 and 3.",
+      "text": "Make two numbers with both cards 7 and 3.",
       "parts": [
         {
           "l": "a",
-          "text": "The greatest number is ___",
+          "text": "The greater number is ___",
           "ans": "73",
           "val": 73
         },
         {
           "l": "b",
-          "text": "The smallest number is ___",
+          "text": "The smaller number is ___",
           "ans": "37",
           "val": 37
         }
@@ -2481,7 +2482,7 @@
         73,
         37
       ],
-      "solution": "The greatest card on the left makes the greatest number: 73. The smallest card on the left makes the smallest number: 37.",
+      "solution": "The greater card on the left makes the greater number: 73. The smaller card on the left makes the smaller number: 37.",
       "mistakes": [
         "Writing 73 for both.",
         "Writing 10 (7 + 3)."
@@ -3049,50 +3050,29 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "You have the digit cards 3, 5 and 7. Use all three cards to make a 3-digit number. What is the greatest number you can make?",
-        "answer": 753,
+        "q": "You have the digit cards 2, 5, 6 and 9. Use two different cards. What is the greatest number you can make that is less than 60?",
+        "answer": 59,
         "easier": "t2",
-        "hint": "The left card counts the hundreds. Put the greatest card on the left, then the next greatest.",
+        "hint": "The number must be less than 60, so the left card is 5 or less. Which card is greatest on the right?",
         "steps": [
-          "The greatest card is 7: put it on the left.",
-          "The next greatest is 5, then 3.",
-          "The greatest number is 753."
+          "Less than 60 means the tens card is 2 or 5.",
+          "Use 5 on the left to get the greatest number.",
+          "The greatest card left for the right is 9. The number is 59."
         ],
         "slips": [
           {
             "a": [
-              357
+              96
             ],
-            "say": "357 is the smallest number. For the greatest, put the greatest card on the left."
-          }
-        ],
-        "tpl": {
-          "vars": {
-            "x": [
-              1,
-              2,
-              3
-            ],
-            "y": [
-              4,
-              5,
-              6
-            ],
-            "z": [
-              7,
-              8,
-              9
-            ]
+            "say": "96 is greater than 60. The number must be less than 60."
           },
-          "q": "You have the digit cards {x}, {y} and {z}. Use all three cards to make a 3-digit number. What is the greatest number you can make?",
-          "answer": "z*100+y*10+x",
-          "hint": "The left card counts the hundreds. Put the greatest card on the left, then the next greatest.",
-          "steps": [
-            "The greatest card is {z}: put it on the left.",
-            "The next greatest is {y}, then {x}.",
-            "The greatest number is {ans}."
-          ]
-        }
+          {
+            "a": [
+              56
+            ],
+            "say": "56 is less than 60, but there is a greater card for the ones digit."
+          }
+        ]
       },
       {
         "id": "g2",
@@ -3143,21 +3123,22 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "You make a 3-digit number with the cards 2, 5 and 8, each used once. It is more than 500 and less than 600. The ones digit is greater than the tens digit. What number am I?",
-        "answer": 528,
+        "q": "I make a two-digit number with two different cards from 1, 3, 4 and 7. My number is between 35 and 45. My ones digit is greater than my tens digit. What number am I?",
+        "answer": 37,
         "easier": "t4",
         "hint": "List all the numbers you can make. Cross out the ones that break a clue.",
         "steps": [
-          "The numbers are 258, 285, 528, 582, 825, 852.",
-          "More than 500 and less than 600: 528 and 582.",
-          "Ones digit greater than tens digit: 528."
+          "The numbers are 13, 14, 17, 31, 34, 37, 41, 43, 47, 71, 73, 74.",
+          "Between 35 and 45: 37, 41, 43.",
+          "Ones digit greater than tens digit: 37."
         ],
         "slips": [
           {
             "a": [
-              582
+              41,
+              43
             ],
-            "say": "582 has a 2 in the ones place and an 8 in the tens place. Check the third clue."
+            "say": "41 and 43 have a ones digit that is smaller than the tens digit. Check the last clue."
           }
         ]
       },
@@ -3176,7 +3157,7 @@
     ]
   },
   "parent": {
-    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card.",
+    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card. Our Term 1 goes beyond the school Primary 1 syllabus on purpose, so the Go further puzzles are optional extras.",
     "words": [
       "digit: one of the symbols 0 to 9",
       "tens digit: the left digit, it counts the tens",
@@ -3211,7 +3192,8 @@
     "Solve every workbook question yourself first, including the lists in Think harder and Go further.",
     "Tell parents a week before: print the whole workbook (the five lesson pages and the two kit pages), and cut out both kit pages (digit cards, and tens bars and ones squares). If a family cannot print, ten scraps of paper with 0 to 9 written on them work as digit cards.",
     "Make your own set of digit cards 0 to 9 to show on camera. Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording settings exclude children's video."
+    "Check the recording settings exclude children's video.",
+    "Tell families plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is approachable with the kit and is explored in class; Go further is optional and not a claim about school exams."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",

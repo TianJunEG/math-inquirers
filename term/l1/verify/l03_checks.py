@@ -58,7 +58,6 @@ ORACLES = {
     't1': lambda e: (lambda ns: ns[0] if len(ns) == 1 else None)(numbers_from([0, e['x']], 2)),
     't2': lambda e: max(numbers_from([e['x'], e['y'], e['z']], 2)),
     't3': lambda e: min(numbers_from([0, e['y'], e['z']], 2)),
-    'g1': lambda e: max(numbers_from([e['x'], e['y'], e['z']], 3)),
     'g2': lambda e: len(numbers_from(list(range(1, e['n'] + 1)), 2)),
 }
 BASE_ENV = {
@@ -69,7 +68,6 @@ BASE_ENV = {
     't1': dict(x=6),
     't2': dict(x=2, y=5, z=8),
     't3': dict(y=4, z=9),
-    'g1': dict(x=3, y=5, z=7),
     'g2': dict(n=4),
 }
 
@@ -153,6 +151,7 @@ def run(d):
     eq((vis['tens'], vis['ones']), (3, 8), 'S3 picture is Mei 38')
     eq(T['S3']['val'], [mei, ben, 'Ben' if bigger(mei, ben) == ben else 'Mei'], 'S3')
     s4 = numbers_from([6, 2], 2)
+    eq(s4, [26, 62], 'S4 only two numbers with both cards')
     eq(T['S4']['val'], [s4[-1], s4[0]], 'S4')
     eq(T['S5']['val'], sorted([52, 25, 41, 14], key=tens_ones), 'S5')
     eq(T['S6']['val'], [bigger(19, 21)], 'S6: 21 is bigger, Ravi is wrong')
@@ -182,23 +181,27 @@ def run(d):
     eq(len(t4), 6, 'T4 count')
 
     # ---- Go further
-    g1 = numbers_from([4, 0, 9], 3)
-    eq(g1, [409, 490, 904, 940], 'G1 3-digit numbers (none start with 0)')
-    eq(T['G1']['val'], [g1[-1], g1[0]], 'G1')
+    g1 = numbers_from([2, 5, 6, 9], 2)
+    eq(g1, [25, 26, 29, 52, 56, 59, 62, 65, 69, 92, 95, 96], 'G1 all twelve numbers')
+    g1a = [x for x in g1 if x < 60]
+    g1b = [x for x in g1 if x > 50]
+    eq(T['G1']['val'], [g1a[-1], g1b[0]], 'G1')
+    eq(T['G1']['val'], [59, 52], 'G1 values')
+    eq(g1a[-1] != g1[-1] and g1b[0] != g1[0], True, 'G1 differs from plain greatest/smallest')
     eq(len(numbers_from([1, 2, 3, 4], 2)), 12, 'G2 each card once')
     eq(len(numbers_with_repeats([1, 2, 3, 4], 2)), 16, 'G2 a card may repeat')
     eq(sorted(set(numbers_with_repeats([1, 2, 3, 4], 2)) - set(numbers_from([1, 2, 3, 4], 2))), [11, 22, 33, 44], 'G2 the extra four')
     eq(T['G2']['val'], [12, 16], 'G2')
-    g3 = [x for x in numbers_from([2, 5, 8], 3) if 500 < x < 600
-          and (x // 10) % 10 < x % 10]
-    eq(numbers_from([2, 5, 8], 3), [258, 285, 528, 582, 825, 852], 'G3 all six numbers')
-    eq(g3, [528], 'G3 unique number')
+    allg = numbers_from([1, 3, 4, 7], 2)
+    eq(allg, [13, 14, 17, 31, 34, 37, 41, 43, 47, 71, 73, 74], 'G3 all twelve numbers')
+    def ones_gt(x): return x % 10 > (x // 10)
+    g3 = [x for x in allg if 35 < x < 45 and ones_gt(x)]
+    eq(g3, [37], 'G3 unique number')
     eq(T['G3']['val'], g3, 'G3')
     # every G3 clue is needed (drop one clue at a time: more than one number fits)
-    allg = numbers_from([2, 5, 8], 3)
-    eq(len([x for x in allg if x < 600 and (x // 10) % 10 < x % 10]) > 1, True, 'G3 clue 1 is needed')
-    eq(len([x for x in allg if x > 500 and (x // 10) % 10 < x % 10]) > 1, True, 'G3 clue 3 is needed')
-    eq(len([x for x in allg if 500 < x < 600]) > 1, True, 'G3 clue 2 is needed')
+    eq(len([x for x in allg if x < 45 and ones_gt(x)]) > 1, True, 'G3 clue 1 is needed')
+    eq(len([x for x in allg if x > 35 and ones_gt(x)]) > 1, True, 'G3 clue 2 is needed')
+    eq(len([x for x in allg if 35 < x < 45]) > 1, True, 'G3 clue 3 is needed')
 
     # ---- Investigation: for any two different non-zero cards the bigger card on the left gives the bigger number
     for a in range(1, 10):
@@ -268,7 +271,8 @@ def run(d):
     eq(O['t1']['answer'], ORACLES['t1'](BASE_ENV['t1']), 't1'); eq(O['t2']['answer'], ORACLES['t2'](BASE_ENV['t2']), 't2')
     eq(O['t3']['answer'], ORACLES['t3'](BASE_ENV['t3']), 't3')
     eq(O['t4']['answer'], len(fits), 't4')
-    eq(O['g1']['answer'], ORACLES['g1'](BASE_ENV['g1']), 'g1'); eq(O['g2']['answer'], ORACLES['g2'](BASE_ENV['g2']), 'g2')
+    og1 = [x for x in numbers_from([2, 5, 6, 9], 2) if x < 60]
+    eq(O['g1']['answer'], og1[-1], 'g1 greatest number less than 60'); eq(O['g2']['answer'], ORACLES['g2'](BASE_ENV['g2']), 'g2')
     eq(O['g3']['answer'], g3[0], 'g3')
     # g4 example: cards 2, 4, 6, 8, more than 50, left digit bigger than right
     ex4 = [x for x in numbers_from([2, 4, 6, 8], 2) if x > 50 and tens_ones(x)[0] > tens_ones(x)[1]]
