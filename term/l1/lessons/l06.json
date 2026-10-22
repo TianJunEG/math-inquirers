@@ -60,6 +60,16 @@
     "ruler": false,
     "notes": "No ruler is needed in the lesson; a child who has one at home may use it to draw straight number lines. Nothing needs to be bought. No matches, toothpicks or anything sharp. Children need a little clear floor space for the movement break; small things never go near the mouth or ears."
   },
+  "workbook": {
+    "header": "Addition and Subtraction: tens jump, ones hop",
+    "kits": [
+      {
+        "type": "base_ten",
+        "title": "Kit page: tens bars and ones squares",
+        "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. These are the same as Lesson 1, so keep them in an envelope."
+      }
+    ]
+  },
   "timing": {
     "parts": [
       {
@@ -1212,17 +1222,32 @@
           ]
         },
         {
-          "t": "numrow",
-          "items": [
+          "t": "visual",
+          "type": "number_line",
+          "start": 34,
+          "end": 59,
+          "step": 1,
+          "jumps": [
+            [
+              34,
+              54,
+              "+20"
+            ],
+            [
+              54,
+              59,
+              "+5"
+            ]
+          ],
+          "marks": [
             34,
-            "+20",
             54,
-            "+5",
             59
-          ]
+          ],
+          "label_every": 5
         }
       ],
-      "note": "Round 4, about 5 minutes. Draw on paper as the children draw: dot, arc, landing number. A big arc is a jump of tens, a small arc is a hop of ones. Draw 34 to 59 first, then 68 back to 44 with arcs going back. The paper line is the picture children use in question 7 and in Think harder. Yellow tiles are the numbers, white tiles are the jumps."
+      "note": "Round 4, about 5 minutes. Draw on paper as the children draw: dot, arc, landing number. A big arc is a jump of tens, a small arc is a hop of ones. Draw 34 to 59 first, then 68 back to 44 with arcs going back. The paper line is the picture children use in question 7 and in Think harder. "
     },
     {
       "id": "s-explore5",
@@ -1249,12 +1274,26 @@
       "title": "Jump forward: add tens",
       "blocks": [
         {
-          "t": "numrow",
-          "items": [
+          "t": "visual",
+          "type": "number_line",
+          "start": 34,
+          "end": 54,
+          "step": 10,
+          "jumps": [
+            [
+              34,
+              44,
+              "+10"
+            ],
+            [
+              44,
+              54,
+              "+10"
+            ]
+          ],
+          "marks": [
             34,
-            "+10",
             44,
-            "+10",
             54
           ]
         },
@@ -1267,7 +1306,7 @@
           "text": "34 + 20 = 54"
         }
       ],
-      "note": "Draw the number line on paper as you talk. Yellow tiles are the numbers where we land, white tiles are the jumps. Two jumps of ten add 20. Ask: which digit changed? Answer: the tens digit, 3 to 5. The 4 ones stay."
+      "note": "Draw the number line on paper as you talk. The arcs are the jumps. Two jumps of ten add 20. Ask: which digit changed? Answer: the tens digit, 3 to 5. The 4 ones stay."
     },
     {
       "id": "s-m2",
@@ -1276,13 +1315,27 @@
       "title": "Jump back: take away tens",
       "blocks": [
         {
-          "t": "numrow",
-          "items": [
-            54,
-            "-10",
+          "t": "visual",
+          "type": "number_line",
+          "start": 34,
+          "end": 54,
+          "step": 10,
+          "jumps": [
+            [
+              54,
+              44,
+              "-10"
+            ],
+            [
+              44,
+              34,
+              "-10"
+            ]
+          ],
+          "marks": [
+            34,
             44,
-            "-10",
-            34
+            54
           ]
         },
         {
@@ -1307,10 +1360,20 @@
           "cols": [
             [
               {
-                "t": "numrow",
-                "items": [
+                "t": "visual",
+                "type": "number_line",
+                "start": 34,
+                "end": 37,
+                "step": 1,
+                "jumps": [
+                  [
+                    34,
+                    37,
+                    "+3"
+                  ]
+                ],
+                "marks": [
                   34,
-                  "+3",
                   37
                 ]
               },
@@ -1321,11 +1384,21 @@
             ],
             [
               {
-                "t": "numrow",
-                "items": [
-                  37,
-                  "-2",
-                  35
+                "t": "visual",
+                "type": "number_line",
+                "start": 35,
+                "end": 37,
+                "step": 1,
+                "jumps": [
+                  [
+                    37,
+                    35,
+                    "-2"
+                  ]
+                ],
+                "marks": [
+                  35,
+                  37
                 ]
               },
               {
@@ -1349,14 +1422,29 @@
       "title": "Jump, then hop: add",
       "blocks": [
         {
-          "t": "numrow",
-          "items": [
+          "t": "visual",
+          "type": "number_line",
+          "start": 34,
+          "end": 59,
+          "step": 1,
+          "jumps": [
+            [
+              34,
+              54,
+              "+20"
+            ],
+            [
+              54,
+              59,
+              "+5"
+            ]
+          ],
+          "marks": [
             34,
-            "+20",
             54,
-            "+5",
             59
-          ]
+          ],
+          "label_every": 5
         },
         {
           "t": "p",
@@ -1376,14 +1464,29 @@
       "title": "Jump, then hop: take away",
       "blocks": [
         {
-          "t": "numrow",
-          "items": [
-            59,
-            "-20",
+          "t": "visual",
+          "type": "number_line",
+          "start": 34,
+          "end": 59,
+          "step": 1,
+          "jumps": [
+            [
+              59,
+              39,
+              "-20"
+            ],
+            [
+              39,
+              34,
+              "-5"
+            ]
+          ],
+          "marks": [
+            34,
             39,
-            "-5",
-            34
-          ]
+            59
+          ],
+          "label_every": 5
         },
         {
           "t": "p",
@@ -1635,10 +1738,20 @@
       "title": "Back to the sneak-peek",
       "blocks": [
         {
-          "t": "numrow",
-          "items": [
+          "t": "visual",
+          "type": "number_line",
+          "start": 43,
+          "end": 63,
+          "step": 10,
+          "jumps": [
+            [
+              43,
+              63,
+              "+20"
+            ]
+          ],
+          "marks": [
             43,
-            "+20",
             63
           ]
         },
@@ -1743,12 +1856,26 @@
           "text": "How many jumps is that?"
         },
         {
-          "t": "numrow",
-          "items": [
+          "t": "visual",
+          "type": "number_line",
+          "start": 5,
+          "end": 25,
+          "step": 10,
+          "jumps": [
+            [
+              5,
+              15,
+              "+10"
+            ],
+            [
+              15,
+              25,
+              "+10"
+            ]
+          ],
+          "marks": [
             5,
-            "+10",
             15,
-            "+10",
             25
           ]
         }
@@ -2325,7 +2452,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "A box has 4 bundles of ten pencils and 5 loose pencils. Then 3 more bundles of ten are put in. How many pencils are there now?",
+      "text": "A box has 4 bundles of ten pencils and 5 loose pencils. 3 more bundles are added. How many pencils now?",
       "answer": "75",
       "val": 75,
       "solution": "4 tens and 3 tens make 7 tens. The 5 loose pencils stay: 75."
@@ -2355,7 +2482,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Work out 36 + 23 two ways. First way: jump the tens, then hop the ones. Second way: hop the ones, then jump the tens. Do you get the same answer?",
+      "text": "Work out 36 + 23 twice: jump first, then hop; and hop first, then jump. Is the answer the same?",
       "answer": "59 both ways. Yes, the same.",
       "val": 59,
       "solution": "Jump first: 36 + 20 = 56, then + 3 = 59. Hop first: 36 + 3 = 39, then + 20 = 59."
@@ -2363,7 +2490,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: draw a number line on paper, 0 to 100, with a mark every 10 (a ruler helps). Put a coin on 7 and jump it in tens. Write each number. What stays the same? Then start at 3.",
+      "text": "Draw a number line on paper from 0 to 100, a mark every 10. Put a coin on 7 and jump it in tens. Write each number. What stays the same?",
       "answer": "7, 17, 27 ... 97 and 3, 13, 23 ... 93. The ones digit stays the same.",
       "val": "open",
       "solution": "A grown-up checks that each number is 10 more than the one before. The ones digit never changes when you jump in tens."
@@ -3176,7 +3303,7 @@
   "tutor_prep": [
     "Solve every workbook question yourself first. Keep a paper number line ready to draw on camera as you talk.",
     "Tell parents a week before: print workbook pages 1 to 6, find the kit bars and squares from Lesson 1 (or cut out page 6 again), and a pencil and spare paper.",
-    "Have the slides open. The jump strips show numbers on yellow tiles and jumps on white tiles; draw the arcs by hand on paper as well.",
+    "Have the slides open. The slides show number lines with jump arcs; draw the arcs by hand on paper as well.",
     "Check the recording settings exclude children's video."
   ],
   "spare_time": {

@@ -27,11 +27,10 @@ Desk audit by the author (a model); no child has used this lesson. Machine check
 
 1 low floor high ceiling 2; 2 depth over speed 2; 3 generalise 2 (jumps never change the ones digit; Investigation Jump road); 4 justify 2 (S6, T3, talk); 5 multiple paths 2 (kit, number line, jump first or hop first); 6 challenge ladder 2; 7 student-led inquiry 1; 8 complexity/context 1; 9 problem posing 1 (spare-time M2 and online g4 only); 10 metacognition 2; 11 pacing/compacting 1; 12 extension not acceleration 2. **Total 20/24.**
 
-## Known limits and template issues (not failures)
+## Known limits
 
-- **New-topic lesson**: the syllabus placement (mental 2-digit plus or minus tens or ones without renaming, 2.7) must be checked by the owner or a tutor.
-- **No number-line picture type** in `tools/svg.py`. Worked around with "jump strips" in the slide data (a numrow whose yellow tiles are landing numbers and white tiles are the jumps), kit pictures, and children drawing their own number lines in the draw boxes. A real `number_line` visual (arcs between marks) would be much clearer for this lesson.
-- Template text hard-coded to Lesson 1 in `tools/b_print.py`: home sheet title "Bundles and Singles: practice at home" and "draw bundles"; parent page "Lesson 1" and big "1", and the quote suffix "Ten singles tie into one bundle."; workbook header strand "Whole numbers: tens and ones"; page 3 hint "open a bundle". Guide text "Clock checks: minute 14" assumes a 4-minute opening (this lesson's sneak-peek ends at minute 12).
+- **New-topic lesson**: the syllabus placement (mental 2-digit plus or minus tens or ones, no renaming, 2.7) must be checked by the owner or a tutor.
+- Rebuilt on template commit 8bce095: jump pictures now use `svg.number_line` (mini-lesson, explore, sneak-peek answer, optional slide); `workbook.kits` is the base-ten page (same as Lesson 1); template leak check passes; the home sheet was shortened back to 2 pages. Checks now 346, validator 0 FAIL, 0 WARN. Workbook fill 97, 100, 100, 91, 93%, kit 91%.
+- The two small number lines on the "Hop: ones" slide are small (two columns).
 - Investigation writing space on page 5 is one line (template); children may use spare paper.
-- Slides use less than half the 1920x1080 canvas on several mini-lesson slides (same as Lesson 1).
 - Never trialled with children; times and difficulty are modelled.

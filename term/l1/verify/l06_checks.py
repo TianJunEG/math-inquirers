@@ -94,6 +94,10 @@ def strips_ok(blocks, eq):
                     if m and m.group(5):
                         a, op, c, r = int(m.group(1)), m.group(2), int(m.group(3)), int(m.group(5))
                         eq(a + c if op == '+' else a - c, r, 'sum tile ' + str(x))
+        if b['t'] == 'visual' and b['type'] == 'number_line':
+            for a, z, lab in b['jumps']:
+                eq(a + int(lab), z, 'number line arc ' + lab)
+                eq(b['start'] <= min(a, z) and max(a, z) <= b['end'], True, 'arc on the line')
         if b['t'] == 'cols':
             for c in b['cols']:
                 strips_ok(c, eq)
