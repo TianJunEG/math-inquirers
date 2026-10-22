@@ -39,6 +39,7 @@ No lessons on Fri 25 Dec. The five Friday sessions of week 5 move into free wind
 | Level 3 | Thu 24 Dec 12:00-1:30pm (last lesson) |
 | Level 4 | Wed 23 Dec 12:45-2:15pm (last lesson) |
 | Level 5 | Wed 23 Dec 9:00-10:30am (lesson 9; lesson 10 stays Sun 27 Dec) |
+Confirmed by Jasmine: Thu 24 Dec for Levels 1-3. Levels 4 and 5 stay on Wed 23 Dec unless changed: only three 90-minute sessions fit Thursday 9:00am-2:45pm (a fourth would end after 3:00pm, too close to an existing event), and the Thursday evening window is Level 6's slot.
 Level 6 is unaffected (Thu 24 and Sat 26 Dec). Reserved Wed/Thu groups released later share Wed 23 and Thu 24 Dec with these sessions in week 5, so a released reserve needs its own week-5 times.
 
 ## Open points
