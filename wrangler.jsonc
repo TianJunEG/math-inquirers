@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets deploy for the Math Inquirers website.
+  // The built site (website/dist) already contains _headers, _redirects and 404.html.
+  "name": "math-inquirers",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./website/dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
