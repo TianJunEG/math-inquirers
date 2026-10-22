@@ -41,7 +41,7 @@ B.append(f'''<div class="pb"><div class="kick">Before you start</div><div class=
 </ol>
 <div class="quote">Hard question? Great. Getting stuck is where the thinking happens.</div>
 <div class="panel"><h3>One dose a week</h3><p style="margin:0">Each week has two lessons and about 18 questions. Do two or three a day, Monday to Friday, and keep the weekend for the Challenge questions if your child enjoys them.</p></div>
-<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Core</b> is for everyone. <b>Think Harder</b> stretches the idea. <b>Challenge</b> is for strong thinkers, and it is fine to leave it for another day.</p></div>
+<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Start here</b> is for everyone. <b>Think harder</b> stretches the idea. <b>Go further</b> and the <b>Investigation</b> are for when your child wants more, and it is fine to leave them for another day.</p></div>
 <div class="panel"><h3>What your child is doing in class</h3><p style="margin:0">Ten 90-minute live online lessons over five weeks, in small groups. Each lesson starts with a hands-on puzzle, then a short teaching part, then the workbook. These pages practise the same ideas at home.</p></div></div>''')
 for L in info:
     n = L['n']; b = Q[str(n)]; learn, tip, ask = SIDE[n]
