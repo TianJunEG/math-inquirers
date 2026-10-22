@@ -19,6 +19,7 @@ def main():
         b = pw.chromium.launch()
         probs = b_deck.build_deck(d, b)
         b_guide.build_guide(d, b)
+        for pr in b_guide.cover_overlap(b, os.path.join(OUT, f'l{d["_num"]}', f'L{d["_num"]}_Tutor_Guide.html')): probs.append('guide cover: ' + pr)
         b_print.build_print(d, b)
         b.close()
     b_practice.build_practice(d)
@@ -28,6 +29,13 @@ def main():
     if validate.FAILS: sys.exit(1)
     for p in probs: print('LAYOUT', p)
     print('built', os.path.join(OUT, f'l{d["_num"]}'))
+    if 'end_of_term_check' in d:     # Lesson 10: the end-of-term check files (student sheet, tutor key, grown-up note)
+        import subprocess
+        r = subprocess.run([sys.executable, os.path.join(L1, 'assets', 'l10_extras.py')])
+        if r.returncode: sys.exit('end-of-term check build FAILED (see above)')
+        validate.FAILS.clear(); validate.check_term_check(d)
+        for f in validate.FAILS: print('FAIL ', f)
+        if validate.FAILS: sys.exit(1)
     if audit.missing(d['_num']):
         audit.write_draft(d, validate.PASSES, validate.WARNS, validate.FAILS)
         print(f'AUDIT term/l1/AUDIT_L{d["_num"]}.md did not exist: a draft was generated.')

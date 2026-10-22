@@ -417,6 +417,41 @@ def check_answers(d):
         warn('practice: could not run node cross-check: ' + str(e))
 
 
+def check_term_check(d):
+    """Lesson 10 end-of-term check: page counts and the printed 10 cm bar and 9 cm line measured on the rendered PDF."""
+    c = d.get('end_of_term_check')
+    if not c: return
+    import pdfcheck, importlib.util
+    od = os.path.join(OUT, f"l{d['_num']}")
+    sheet = os.path.join(od, f"L{d['_num']}_Check_Student.pdf"); key = os.path.join(od, f"L{d['_num']}_Check_Tutor_Key.pdf"); note = os.path.join(od, f"L{d['_num']}_Check_Parent_Note.pdf")
+    if not all(os.path.exists(p) for p in (sheet, key, note)):
+        fail('term check: Check_Student / Check_Tutor_Key / Check_Parent_Note PDFs not built (run build.sh)'); return
+    spec = importlib.util.spec_from_file_location('l10_extras', os.path.join(L1, 'assets', 'l10_extras.py'))
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    n = pdfcheck.pdf_pages(sheet)
+    if n != c['sheet_pages']: fail(f"term check: student sheet has {n} pages, designed {c['sheet_pages']}")
+    if pdfcheck.pdf_pages(note) != 1: fail('term check: grown-up note must be one page')
+    fills = pdfcheck.pdf_fill(sheet, 12.0, 15.0)
+    for i, f in enumerate(fills, 1):
+        if f < 0.40: fail(f'term check: student sheet page {i} only {f:.0%} full')
+    bar, line = m.measure_sheet(sheet, c)
+    for name, got, want in (('10 cm bar', bar, c['sheet_check_bar_mm']), ('9 cm line', line, c['line_mm'])):
+        if got is None or abs(got - want) > 0.6: fail(f'term check: printed {name} measures {got} mm, must be {want} mm (within 0.6 mm)')
+    if bar is not None and line is not None and not [f for f in FAILS if f.startswith('term check')]:
+        ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), line {line:.2f} mm (want {c['line_mm']}), measured on the PDF")
+
+
+def check_cover(d):
+    import b_guide
+    from playwright.sync_api import sync_playwright
+    hp = os.path.join(OUT, f"l{d['_num']}", f"L{d['_num']}_Tutor_Guide.html")
+    if not os.path.exists(hp): return
+    with sync_playwright() as pw:
+        b = pw.chromium.launch(); pr = b_guide.cover_overlap(b, hp); b.close()
+    if pr: fail('guide cover: ' + '; '.join(pr))
+    else: ok('guide cover: Mi does not overlap the title or text')
+
+
 def check_foreign(d):
     """Built outputs of lesson NN must not contain another lesson's title or 'Lesson 1' text (template leaks)."""
     import glob, subprocess
@@ -462,7 +497,7 @@ def check_all(num, built=True):
         except Exception as e:
             fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     if built:
-        for fn in (check_outputs, check_foreign):
+        for fn in (check_outputs, check_cover, check_term_check, check_foreign):
             try: fn(d)
             except Exception as e: fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     return d

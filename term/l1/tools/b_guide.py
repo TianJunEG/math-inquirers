@@ -15,7 +15,7 @@ h3{font-size:15px;margin:12px 0 4px;break-after:avoid}
 .pb{break-before:page}
 .cover{background:#1B2A49;color:#FFF9EC;border-radius:18px;padding:26px 28px;margin-bottom:14px}
 .cover .k{color:#FFC93C;font-weight:800;letter-spacing:.14em;font-size:11px}
-.cover h1{color:#fff;font-size:44px;margin:6px 0}
+.cover h1{color:#fff;font-size:44px;margin:6px 150px 6px 0;line-height:1.05}.cover{min-height:150px}
 .cover p{margin:4px 130px 4px 0;font-size:14px}
 table{border-collapse:collapse;width:100%;margin:6px 0;font-size:11.8px}
 th{background:#FFC93C;text-align:left;padding:4px 7px;border:1px solid #1B2A49}
@@ -96,7 +96,7 @@ def build_html(d):
     rng = lambda pid: f'minutes {pm[pid]["start"]} to {pm[pid]["end"]}'
     used = sum(s['used'] for s in segs); slow = sum(slow_used(s) for s in segs)
     H = []
-    H.append(f'<div class="cover" style="position:relative"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:22px;top:14px;width:110px"><div class="k">TUTOR GUIDE • LEVEL {d["level"]} • TERM {d["term"]} • LESSON {d["lesson_in_term"]} OF 10</div><h1>{E(d["title"])}</h1><p><b>Big idea:</b> {E(d["big_idea"])}. {E(d["child_idea"])}</p><p>90 minutes • live online or face to face • up to 8 children • ages {d["ages"]} • Notice it. Test it. Explain why.</p></div>')
+    H.append(f'<div class="cover" style="position:relative"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:22px;top:14px;width:110px"><div class="k">TUTOR GUIDE • LEVEL {d["level"]} • TERM {d["term"]} • LESSON {d["lesson_in_term"]} OF 10</div><h1 style="font-size:{44 if len(d['title']) <= 22 else (36 if len(d['title']) <= 34 else 30)}px">{E(d["title"])}</h1><p><b>Big idea:</b> {E(d["big_idea"])}. {E(d["child_idea"])}</p><p>90 minutes • live online or face to face • up to 8 children • ages {d["ages"]} • Notice it. Test it. Explain why.</p></div>')
     H.append('<h2>1. At a glance</h2><table>')
     rows = [('Strand', E(d['moe']['strand']) + ' (' + '; '.join(E(x) for x in d['moe']['topics']) + ')<div class="small">' + E(d['moe']['note']) + '</div>'),
             ('Objectives', '<ul>' + ''.join(f'<li>{E(o)}</li>' for o in d['objectives']) + '</ul>'),
@@ -188,3 +188,18 @@ def build_guide(d, pw=None):
         foot = f'<div style="width:100%;font-size:8.5px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers Term 1 • Level 1 • Lesson {d["lesson_in_term"]}: {d["title"]} • Tutor guide</span><span>Page <span class="pageNumber"></span></span></div>'
         pg.pdf(path=os.path.join(od, f'L{d["_num"]}_Tutor_Guide.pdf'), format='A4', print_background=True, display_header_footer=True, header_template='<div></div>', footer_template=foot, margin={'top': '15mm', 'bottom': '17mm', 'left': '14mm', 'right': '14mm'})
         pg.close()
+
+
+def cover_overlap(pw, html_path):
+    """Problems if Mi on the guide cover overlaps any cover text (rendered check)."""
+    pg = pw.new_page(viewport={'width': 794, 'height': 1123})
+    pg.goto('file://' + html_path, wait_until='networkidle'); pg.wait_for_timeout(300)
+    res = pg.evaluate("""() => { const c = document.querySelector('.cover'); if (!c) return ['no cover']; const img = c.querySelector('img'); if (!img) return [];
+      const r = img.getBoundingClientRect(), out = [], cr = c.getBoundingClientRect();
+      if (r.bottom > cr.bottom + 1 || r.right > cr.right + 1) out.push('Mi is clipped by the cover');
+      const w = document.createTreeWalker(c, NodeFilter.SHOW_TEXT);
+      while (w.nextNode()) { const n = w.currentNode; if (!n.textContent.trim()) continue; const g = document.createRange(); g.selectNodeContents(n);
+        Array.from(g.getClientRects()).forEach(t => { if (t.width > 2 && t.left < r.right && t.right > r.left && t.top < r.bottom && t.bottom > r.top) out.push('Mi overlaps cover text "' + n.textContent.trim().slice(0, 30) + '"'); }); }
+      return out; }""")
+    pg.close()
+    return res
