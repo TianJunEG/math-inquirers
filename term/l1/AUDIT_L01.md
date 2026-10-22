@@ -1,6 +1,6 @@
 # Self-audit: Level 1 Term 1 Lesson 1 (Bundles and Singles)
 
-Desk audit by the author (a model); no child has used this lesson. Rubric: the project's holiday-lesson audits (`docs/audit/audit_p1.md`, `reaudit_p1.md` instruments A and tier compliance, `timing_p1.md`, `fixpass_brief_template.txt`). Machine checks: `python3 term/l1/tools/validate.py 01` (13 pass, 0 FAIL; 1 warning explained below).
+Desk audit by the author (a model); no child has used this lesson. Rubric: the project's holiday-lesson audits (`docs/audit/audit_p1.md`, `reaudit_p1.md` instruments A and tier compliance, `timing_p1.md`, `fixpass_brief_template.txt`). Machine checks: `python3 term/l1/tools/validate.py 01` (15 pass, 0 FAIL; 1 warning explained below).
 
 ## Pass/fail checklist
 
@@ -36,3 +36,8 @@ Desk audit by the author (a model); no child has used this lesson. Rubric: the p
 - Workbook is lesson-specific pages; there is no term cover or journal page yet (belongs to a term pack).
 - Slide text is 34 to 44 px on a 1920 canvas: readable, with spare space; decks could use larger pictures.
 - MOE strand sub-clauses are not cited by number (plan note: label only).
+
+## Update (workbook fill and spare-time menu)
+
+- Workbook: larger writing space (lines 8 mm, drawing boxes 105 px, 18.5 px text); Start here page 2 gained S7 (Ali 6 tens, Mei 6 ones; guide, slides, script timing, key and answer checks updated). Page fill now 99%, 100%, 96%, 92%, 94% (kit page excluded), PDF still 6 pages. Investigation writing space on page 5 is small (one line); children may use spare paper.
+- Spare-time menu added (3 activities, 11 optional minutes, not in the 90 sum), optional menu slide, guide section 3b. Script now needs 74:22, slow class 88:19.

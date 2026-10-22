@@ -106,7 +106,7 @@ def qs_block(d, ids, short):
         text = q['text']
         parts = ''
         for p in q.get('parts', []):
-            if short and len(q['parts']) > 3: continue
+            if short: continue
             parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E(p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
         if q.get('visual'):

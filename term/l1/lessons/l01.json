@@ -681,12 +681,12 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 straws. Question 6: Siti wrote 43. Is she right?"
+            "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 straws. Question 6: Siti wrote 43. Is she right? Question 7: draw Ali's 6 bundles and Mei's 6 singles, and write each number."
           },
           {
             "k": "WORK",
-            "text": "Page 2, questions 4 to 6.",
-            "s": 480
+            "text": "Page 2, questions 4 to 7.",
+            "s": 540
           },
           {
             "k": "SLIDE",
@@ -694,7 +694,7 @@
           },
           {
             "k": "READ",
-            "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Siti should write thirty-four."
+            "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Siti should write thirty-four. Question 7: Ali has sixty, Mei has six."
           },
           {
             "k": "SLIDE",
@@ -711,7 +711,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q2 (drawing): draw a bundle as ten short lines with a ring round them. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first."
+            "text": "Q2 (drawing): draw a bundle as ten short lines with a ring round them. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first. Q7: ask how much one bundle is worth."
           },
           {
             "k": "STUCK",
@@ -865,8 +865,18 @@
             "optional": true
           },
           {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
             "k": "NOTE",
-            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 99; one more is ten bundles, which is called a hundred (next lessons)."
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 99; one more is ten bundles, which is called a hundred (next lessons). If the whole class is ahead, use the Spare-time menu (guide section 3) instead of rushing on."
           }
         ]
       }
@@ -1516,19 +1526,20 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 4 to 6. Timer: 7 minutes"
+          "text": "Questions 4 to 7. Timer: 9 minutes"
         },
         {
           "t": "qs",
           "ids": [
             "S4",
             "S5",
-            "S6"
+            "S6",
+            "S7"
           ],
           "short": true
         }
       ],
-      "note": "Read question 6 aloud: it is a spot-the-mistake. Children may draw bundles to decide."
+      "note": "Read question 6 aloud: it is a spot-the-mistake. Read question 7 aloud as well: draw Ali's and Mei's sticks. Children may draw bundles to decide."
     },
     {
       "id": "s-ws2ans",
@@ -1541,11 +1552,12 @@
           "ids": [
             "S4",
             "S5",
-            "S6"
+            "S6",
+            "S7"
           ]
         }
       ],
-      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Siti should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group."
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Siti should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group. Question 7 answer: Ali has 60 and Mei has 6, because 6 tens is much more than 6 ones."
     },
     {
       "id": "s-choice",
@@ -1701,7 +1713,7 @@
           ]
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new."
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide."
     },
     {
       "id": "s-opt",
@@ -1727,6 +1739,42 @@
         }
       ],
       "note": "Optional, only if you are on time. Answer: 99. One more single makes 10 singles, which tie into a tenth bundle: ten bundles. Ten tens have a name: a hundred (Lesson 2 onwards). Take two answers and move on."
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "optional": true,
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Add one more single. Does the ones digit always go up by one?"
+            ],
+            [
+              "Make a puzzle",
+              "Write a mystery number puzzle for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Show how to read 52 with bundles and singles"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum."
     }
   ],
   "tiers": {
@@ -1960,6 +2008,40 @@
         ],
         "mins": 2,
         "lines": 2
+      },
+      {
+        "id": "S7",
+        "page": 2,
+        "tier": "start",
+        "text": "Ali has 6 bundles of ten and no single sticks. Mei has 6 single sticks and no bundles. Draw what each child has in the box. Then write each number.",
+        "draw": true,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ali has ___ sticks",
+            "ans": "60",
+            "val": 60
+          },
+          {
+            "l": "b",
+            "text": "Mei has ___ sticks",
+            "ans": "6",
+            "val": 6
+          }
+        ],
+        "answer": "Ali 60, Mei 6. Ali has more (6 tens is 60; 6 singles is 6)",
+        "val": [
+          60,
+          6
+        ],
+        "hint": "A bundle is worth ten. Count Ali's bundles in tens. Mei has no bundles, only ones.",
+        "solution": "Ali: 6 bundles of ten is 60, with no singles, so 60. Mei: 6 single sticks is 6. The same digit 6 means very different amounts because of its place: 6 tens or 6 ones.",
+        "mistakes": [
+          "Writing 6 for both children.",
+          "Drawing 6 sticks for Ali instead of 6 bundles of ten."
+        ],
+        "mins": 3,
+        "lines": 0
       }
     ],
     "think": [
@@ -2083,7 +2165,7 @@
           "Not opening 14 ones into a bundle before comparing."
         ],
         "mins": 5,
-        "lines": 3
+        "lines": 4
       },
       {
         "id": "G2",
@@ -2103,7 +2185,7 @@
           "Forgetting the 4 full boxes hold 40 pencils."
         ],
         "mins": 5,
-        "lines": 3
+        "lines": 4
       },
       {
         "id": "G3",
@@ -2122,7 +2204,7 @@
           "Counting 2 tens 10 ones twice."
         ],
         "mins": 6,
-        "lines": 4
+        "lines": 5
       }
     ],
     "investigation": {
@@ -2955,5 +3037,39 @@
     "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups.",
     "Have the slides open and check the timer slide and the kit page are visible on screen share.",
     "Check the recording settings exclude children's video."
-  ]
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Mei says: if you add one more single stick, the ones digit goes up by one. Is that always true? Try 23, 47 and 39 with your sticks or kit.",
+        "rec": "Recording: pause. Try 23, 47 and 39 with one more single each. Is Mei always right?",
+        "answer": "Not always. 23 and 47 become 24 and 48. 39 plus one single makes ten singles, which tie into a new bundle: 40. It is true unless the ones digit is 9."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Pick a secret number. Write two clues about its tens and its ones, like: it has 4 bundles and the ones digit is 7. Give it to your grown-up to solve.",
+        "rec": "Recording: pause. Write a mystery number puzzle with two clues for a grown-up to solve.",
+        "answer": "No single answer. Check that the clues fit the secret number and fit only one number."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend your grown-up or a toy has never seen bundles. Teach them how to read 52 using bundles and singles.",
+        "rec": "Recording: pause. Teach a grown-up how to read 52 with bundles and singles.",
+        "answer": "52 is 5 bundles of ten and 2 singles. The left digit counts the bundles, the right digit counts the singles."
+      }
+    ]
+  }
 }

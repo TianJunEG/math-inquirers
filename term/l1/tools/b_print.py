@@ -7,12 +7,14 @@ import svg
 WB_CSS = open(os.path.join(ROOT, 'hp', 'wb_style.css'), encoding='utf-8').read()
 PARENT_CSS = open(os.path.join(ROOT, 'hp', 'parent_style.css'), encoding='utf-8').read()
 EXTRA = """
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{min-width:70px!important;height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+
 .pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
-.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:92px;background:#fff;margin:6px 0 6px 4px}
-.vis{width:290px;margin:4px 0 4px 4px}
+.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
+.vis{width:310px;margin:6px 0 6px 4px}
 .al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.page{break-after:page}.page:last-child{break-after:auto}
+.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
 .lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
@@ -42,7 +44,7 @@ def qbox(q, label=None, draw=False):
 
 
 def kit_page(d):
-    return f'<div class="page">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">Kit page: tens bars and ones squares</div><p style="font-size:13.5px;margin:2px 0 6px">A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope.</p><div style="width:84%">{svg.kit_page_svg()}</div></div>'
+    return f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">Kit page: tens bars and ones squares</div><p style="font-size:13.5px;margin:2px 0 6px">A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope.</p><div style="width:84%">{svg.kit_page_svg()}</div></div>'
 
 
 def workbook_html(d, key=False):
@@ -61,8 +63,8 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>What helped me:</b>{bx(lb["helped"])}</div>'
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
             '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my tutor will come and help)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
-    P.append(f'<div class="page">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">Choose this any time you like. You do not have to finish it.</p>'
-             f'<p style="margin:3px 0"><b>Easy first step:</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>Then:</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * 2 +
+    P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">Choose this any time you like. You do not have to finish it.</p>'
+             f'<p style="margin:3px 0"><b>Easy first step:</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>Then:</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * 1 +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P.append(kit_page(d))
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{"".join(P)}</body></html>'
@@ -129,3 +131,17 @@ def build_print(d, pw):
     render('workbook_key', key_html(d), f + ' • Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
     render('home', home_html(d), f + ' • Home practice', f'L{n}_Home_Practice.pdf')
     render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')
+
+
+def page_fill(pw, d):
+    """Fraction of the printable A4 height (267 mm) used by each workbook page except the kit page."""
+    hp = os.path.join(outdir(d, 'html'), 'workbook_fill.html')
+    open(hp, 'w', encoding='utf-8').write(workbook_html(d))
+    pg = pw.new_page(viewport={'width': 794, 'height': 1123})
+    pg.goto('file://' + hp, wait_until='networkidle'); pg.wait_for_timeout(300)
+    res = pg.evaluate("""() => Array.from(document.querySelectorAll('.page:not(.kit)')).map(p => {
+        const top = p.getBoundingClientRect().top; let m = 0;
+        Array.from(p.children).forEach(c => { m = Math.max(m, c.getBoundingClientRect().bottom - top); });
+        return m / (267 / 25.4 * 96); })""")
+    pg.close()
+    return res

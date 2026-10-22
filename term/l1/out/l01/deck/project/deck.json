@@ -37,7 +37,8 @@
   "s-exitans",
   "s-look",
   "s-end",
-  "s-opt"
+  "s-opt",
+  "s-menu"
  ],
  "cover": "s-title",
  "sections": {

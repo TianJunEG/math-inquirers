@@ -8,7 +8,7 @@ You write ONE lesson as ONE data file, `term/l1/lessons/lNN.json`, copy the shap
 2. Copy `l01.json` to `lNN.json`; change `id, lesson, lesson_in_term, title, big_idea, child_idea, skill, moe, contest_moves, objectives, joining_cold`.
 3. Write the Remember warm-up (6 minutes, see the joining-cold rule below).
 4. Design the lesson on paper: one big idea; Explore (hands-on, objects first), Mini-lesson (about 5 slides, one new idea), tiers.
-5. Fill `slides`, then `script` (every slide shown exactly once, in its part; the first lines of each part after Opening are a SLIDE then `{"k":"REC","text":"@rec"}`), `tiers`, `talk`, `exit`, `look_back`, `home_practice`, `online_practice`, `parent`, `safeguarding`, `tutor_prep`.
+5. Fill `slides` (including an optional `s-menu` slide in the flex part), then `script` (every slide shown exactly once, in its part; the first lines of each part after Opening are a SLIDE then `{"k":"REC","text":"@rec"}`), `tiers`, `talk`, `exit`, `look_back`, `home_practice`, `online_practice`, `parent`, `safeguarding`, `tutor_prep`, `spare_time`.
 6. Write `verify/lNN_checks.py`: recompute EVERY answer from first principles (enumerate, count, simulate; do not reuse the lesson's own formulas). Provide `ORACLES` (one brute-force function per templated practice item, keyed by item id) and `BASE_ENV`. `run(d)` returns the number of checks.
 7. Run `python3 term/l1/tools/validate.py NN` until it prints 0 FAIL, then `bash term/l1/build.sh NN`.
 8. Look at the rendered deck (`LNN_Deck.pdf`), guide, workbook and parent page at readable size; fix overflow, clipped text, unreadable pictures. The deck builder reports slides that overflow.
@@ -41,6 +41,8 @@ You write ONE lesson as ONE data file, `term/l1/lessons/lNN.json`, copy the shap
 
 **Safeguarding and privacy.** No private chat or private messages to children, ever (the validator rejects it). Sneak-peek and exit answers: each child holds their own paper to the camera at the same moment, once; no boards held up in front of the group; never read a name with a right or wrong answer. Check-ins for "I am still stuck" happen in the open session. Breakout rooms only when the task needs partner talk (they cost about 3 minutes round trip; Lesson 1 used none), and the tutor visits every room. Recording: tutor and screen only. Look-back is never collected or read out; a pass is always allowed. Talk time: volunteers first, no cold-calling, no tallies or rankings. The tutor never says who is on which page; invitations go to the whole group.
 
+**If the class is ahead (spare-time menu).** (a) Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide; pick one or two activities; depth not speed ("Is it always true?", "Make a puzzle for your grown-up", "Teach it back"). (b) A few children ahead: they may choose Go further or the Investigation, which are open to everyone; never a finisher label, never named. Never teach content the next lesson needs. The tutor slows down with "How do you know?" instead of rushing on. The menu minutes are optional and are never added to the 90 sum.
+
 **Claims.** No "MOE-aligned", "syllabus-aligned", "GEP", "SASMO preparation", exam results, ranks or predictions on any child or parent page. The MOE strand is a tutor-only label. Contest moves are tutor-only labels too.
 
 **Materials.** Findable at home; no purchases; never matches, toothpicks or sharp things; a printed ruler or a real ruler only if the child has one (`materials.ruler`), and then say so on the parent page; cut-outs are on a kit page that a grown-up cuts beforehand.
@@ -68,7 +70,9 @@ Mark each PASS/FAIL in `AUDIT_LNN.md`; every FAIL is fixed or explained.
 11. No overclaims; no copied text (validator).
 12. Printed pages: workbook pages not overflowing (check page count and view every page); answers only in the separate key; home sheet 5 questions with answers on page 2; parent page one page.
 13. Gifted-style rubric (12 criteria, `docs/audit/reaudit_p1.md` instrument A) at least 18/24; tier compliance 100% (strict).
-14. Reading load: no child-facing string over 40 words without a reason (validator warns).
+14. Workbook pages at least about 85% full (the validator warns below 80% and above 100%), with writing space sized for ages 6-8: answer lines about 31 px (8 mm) tall, drawing boxes about 105 px, 18.5 px question text, a generous gap between questions. If a page is under 85%, first enlarge writing space, then add a sensible question (keep tier meaning; update slides, script, timing, key, answers script and practice).
+15. Spare-time menu present (`spare_time`: 2 or 3 whole-class activities of 3 to 5 minutes each with a tutor line, a recording cue of at most 26 words and an answer where one exists; an optional menu slide; shown in the guide; never added to the 90-minute sum) and the three rules below kept.
+16. Reading load: no child-facing string over 40 words without a reason (validator warns).
 
 ## The 9 remaining lessons (plan rows; S = Start here, T = Think harder, G = Go further)
 

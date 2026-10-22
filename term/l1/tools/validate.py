@@ -21,7 +21,7 @@ def warn(msg): WARNS.append(msg)
 
 REQ_TOP = ['schema_version', 'id', 'level', 'term', 'lesson', 'title', 'big_idea', 'child_idea', 'moe', 'objectives', 'joining_cold',
            'materials', 'timing', 'sneak_peek', 'rec', 'script', 'slides', 'tiers', 'talk', 'exit', 'look_back', 'home_practice',
-           'online_practice', 'parent', 'safeguarding', 'tutor_prep']
+           'online_practice', 'parent', 'safeguarding', 'tutor_prep', 'spare_time']
 Q_KEYS = ['id', 'tier', 'text', 'answer', 'val', 'hint', 'solution', 'mistakes', 'mins']
 LINE_KINDS = {'SAY', 'READ', 'ASK', 'DO', 'SLIDE', 'WORK', 'HOLD', 'MOVE', 'REC', 'STUCK', 'NOTE'}
 BLOCKS = {'chip', 'p', 'list', 'card', 'visual', 'qs', 'answers', 'say', 'cols', 'table', 'numrow', 'answer', 'lookback'}
@@ -239,6 +239,39 @@ def check_words(d):
     if long_: warn(f'reading load: {len(long_)} child-facing strings over 40 words (e.g. {long_[0][:60]}...)')
 
 
+def check_spare(d):
+    sp = d.get('spare_time')
+    if not sp: fail('spare: missing spare_time'); return
+    if not 2 <= len(sp['menu']) <= 3: fail('spare: menu needs 2 or 3 activities')
+    for m in sp['menu']:
+        if not 3 <= m['minutes'] <= 5: fail(f"spare: {m['id']} must be 3 to 5 minutes")
+        if words(m['rec']) > MAX_REC_WORDS: fail(f"spare: {m['id']} cue over {MAX_REC_WORDS} words")
+        for k in ('tutor', 'answer', 'title'):
+            if not m.get(k): fail(f"spare: {m['id']} missing {k}")
+    txt = ' '.join(sp['rules']).lower()
+    for must in ('whole class', 'few children', 'how do you know', 'next lesson'):
+        if must not in txt: fail(f"spare: rules must mention '{must}'")
+    alltxt = json.dumps(sp)
+    if re.search(r'early finisher|fast finisher|fast[- ]track|gifted|strong thinker', alltxt, re.I): fail('spare: banned label in spare_time')
+    if not any(s.get('optional') and 'menu' in s['id'] for s in d['slides']): fail('spare: needs an optional menu slide (id contains menu)')
+    ok(f"spare: {len(sp['menu'])} spare-time activities, {sum(m['minutes'] for m in sp['menu'])} optional minutes (not in the 90 sum), rules present")
+
+
+def check_pages(d):
+    try:
+        import b_print
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as pw:
+            b = pw.chromium.launch(); fills = b_print.page_fill(pw if False else b, d); b.close()
+    except Exception as e:
+        warn('pages: could not measure workbook page fill: ' + str(e)); return
+    d['_fills'] = fills
+    for i, f in enumerate(fills, 1):
+        if f < 0.80: warn(f'pages: workbook page {i} content ends at {f:.0%} of the page (target at least 85%): add a question or bigger writing space')
+        if f > 1.01: warn(f'pages: workbook page {i} overflows ({f:.0%}): it will spill onto an extra page')
+    ok('pages: workbook page fill ' + ', '.join(f'{f:.0%}' for f in fills) + ' (kit page excluded)')
+
+
 def check_rec(d):
     for k, r in d['rec'].items():
         n = words(r['say'])
@@ -354,7 +387,7 @@ def check_answers(d):
 
 def check_all(num):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_rec, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:

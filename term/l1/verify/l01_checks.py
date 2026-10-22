@@ -74,6 +74,8 @@ def run(d):
     eq(T['S6']['val'], [stick_count(3, 4)], 'S6')
     eq(43 == stick_count(3, 4), False, 'S6: Siti is wrong')
     eq(sorted(digits(43)), [3, 4], 'S6: she swapped the digits')
+    eq(T['S7']['val'], [stick_count(6, 0), stick_count(0, 6)], 'S7')
+    eq(stick_count(6, 0) > stick_count(0, 6), True, 'S7 Ali has more')
     # Think harder
     eq(T['T1']['val'], [stick_count(5, 14)], 'T1 5 tens 14 ones')
     eq(digits(64), (6, 4), 'T1 as tens and ones')
@@ -117,6 +119,10 @@ def run(d):
     eq(H['H4']['val'], stick_count(4, 12), 'H4'); eq(stick_count(4, 12) == 52, True, 'H4 is 52 not 412')
     # Optional slide
     eq(stick_count(9, 9), 99, 'optional: 9 bundles + 9 singles'); eq(stick_count(9, 9) + 1, 100, 'one more is 100')
+    # Spare-time menu M1: ones digit goes up by one exactly when the ones digit is not 9
+    for n_ in range(10, 99):
+        eq(((n_ + 1) % 10 == n_ % 10 + 1), n_ % 10 != 9, 'M1 ' + str(n_))
+    eq(stick_count(3, 9) + 1, 40, 'M1 39 + 1 = 40'); eq(digits(52), (5, 2), 'M3 52')
     # Online practice authored answers
     O = {i['id']: i for i in d['online_practice']['items']}
     eq(O['c1']['answer'], ORACLES['c1'](BASE_ENV['c1']), 'c1')

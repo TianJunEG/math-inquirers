@@ -123,6 +123,11 @@ def build_html(d):
         H.append(f'<div class="seg"><span class="tm">{p["start"]}:00 – {p["end"]}:00</span><span class="nm">{E(p["title"])}</span><span class="fit">script {mmss(s["used"])} of {mmss(s["alloc"])}</span></div>')
         for (t0, sec, ln) in s['lines']:
             H.append(line_html(d, s['part'], t0, sec, ln, sm))
+    sp = d['spare_time']
+    H.append('<h2>3b. Spare-time menu: if the class is ahead</h2><div class="box t"><ul>' + ''.join(f'<li>{E(r)}</li>' for r in sp['rules']) + f'</ul><div class="small">{E(sp["note"])}</div></div><table><tr><th>Activity</th><th>Minutes</th><th>You say</th><th>Recording cue</th><th>Answer</th></tr>')
+    for m in sp['menu']:
+        H.append(f'<tr><td><b>{E(m["title"])}</b></td><td>{m["minutes"]} (optional)</td><td>{E(m["tutor"])}</td><td><i>{E(m["rec"])}</i></td><td>{E(m["answer"])}</td></tr>')
+    H.append('</table>')
     # questions
     H.append('<h2 class="pb">4. Questions, answers, hints and common mistakes</h2>')
     sp = d['sneak_peek']
