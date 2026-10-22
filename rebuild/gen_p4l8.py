@@ -142,8 +142,8 @@ body=h2('A shape that does not fold')+stitle('A row of 4 with a square above eac
 body+=pin(128,300,W_,base)+pin(128,300,W_,o2,'fade')+pin(128,300,W_,o3,'fade')
 for k,t in enumerate(['Base: the second square. The squares next to it become the left and right walls.','The square on the end of the row is the lid. The square above the left wall swings to the BACK.','The square above the lid also swings to the BACK. Two squares in the same place, and nothing at the FRONT.']):
     body+=ostep(128,300,k+1,t,None,0,0,dx=500,dy=0,tw=1164,size=32).replace('top:300px',f'top:{300+k*130}px')
-body+=answer(628,740,1164,'Not a net: two squares overlap and the front is missing.')
-body+=soft(628,860,1164,'Test every case: if any face is covered twice, it fails.',32)
+body+=answer(628,700,1164,'Not a net: two squares overlap and the front is missing.')
+body+=soft(628,800,1164,'Test every case: if any face is covered twice, it fails.',32)
 put('p4l8-we1',sec('p4l8-we1','21–23 MIN',body,'Click 1: base and the two walls beside it. Click 2: "The end square is the lid. The square above the left wall: when that wall stands up, the square swings round to the back." Click 3: "Now the square above the end square. The lid has folded over the top, so this square swings to the back too." Ask: "How many squares are at the back? How many at the front?" (2 and 0.) Think-aloud: "A net needs one of each face. Here the back is covered twice and the front is empty. It fails." Say: Having 4 squares in a row does NOT guarantee a net: where the other two squares go matters. (They must be on different sides, or both on the inside of the row.)'))
 
 # ---------- 8. your turn: nets ----------
@@ -170,7 +170,7 @@ body+=pin(128,300,W_,base)+pin(128,300,W_,o1,'fade')+pin(128,300,W_,o2,'fade')+p
 for k,t in enumerate(['B, C, D is a line of 3: B and D are opposite.','A, B, F is a line of 3 going down: A and F are opposite.','C, D, E is a line of 3: C and E are opposite.']):
     body+=ostep(128,300,k+1,t,None,0,0,dx=500,dy=0,tw=1164,size=34).replace('top:300px',f'top:{300+k*120}px')
 body+=answer(628,700,1164,'Opposite pairs: B and D,  A and F,  C and E.')
-body+=soft(628,810,1164,'Check: each letter is used once, and a pair never touches along an edge once folded.',30)
+body+=soft(628,780,1164,'Check: each letter is used once, and a pair never touches along an edge once folded.',30)
 put('p4l8-we2',sec('p4l8-we2','25–27 MIN',body,'Teach before the worksheet (Q2 has a different net). Use the paper model: lay it flat, fold it, and point to the faces. Click 1: "Look along the row: B, C, D. When I fold, C is the bottom and B and D stand up on opposite sides. So B and D face each other." Click 2: the same going down: A, B, F. Click 3: C, D, E. Do NOT say "squares next to each other are opposite": opposite faces have exactly ONE square between them in a line. Ask: "Which net squares are NOT in a line of 3? Can you still find their partner?" (The last pair is what is left over.)'))
 # dice try
 c=70; W_,H_=3*c+20+c,4*c+20-c

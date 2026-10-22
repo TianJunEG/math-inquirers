@@ -191,13 +191,13 @@ put('p4l9-teachtwo',sec('p4l9-teachtwo','53–55 MIN',body,'Teach before workshe
 
 # ---------- teach: same step each time ----------
 DY=['Day 1','Day 2','Day 3','Day 4','Day 5']; full=[8,12,16,20,24]
-g=G(860,600,DY,0,28,2,4,'Laps swum',title='Laps Ben swims each day')
+g=G(860,540,DY,0,28,2,4,'Laps swum',title='Laps Ben swims each day')
 body=h2('Same jump each time: fill the gaps')+card(p('Ben swims the same number of laps more each day. Day 1: 8 laps. Day 4: 20 laps.',36,700))
 body+=pin(128,370,860,g.svg(g.line([8,None,None,20,None],NAVY),'Two points: day 1 at 8 laps and day 4 at 20 laps, with days 2, 3 and 5 empty'))
 body+=step(1,'Day 1 to Day 4 is 3 jumps, not 4.',left=1030,top=380,width=762,size=32)
 body+=step(2,'20 − 8 = 12.  12 ÷ 3 = 4 laps each jump.',left=1030,top=500,width=762,size=32)
 body+=step(3,'Day 2: 12,  Day 3: 16,  Day 5: 24.',left=1030,top=620,width=762,size=32)
-body+=pin(128,370,860,svgwrap(860,600,'The full line: 8, 12, 16, 20, 24',g.line(full,TEAL)),'fade')
+body+=pin(128,370,860,svgwrap(860,540,'The full line: 8, 12, 16, 20, 24',g.line(full,TEAL)),'fade')
 body+=pin(1030,750,420,p('Laps in the 5 days?',30,700),None,WHITE,20,'16px 22px')+answer(1510,750,282,'80')
 put('p4l9-teachsteps',sec('p4l9-teachsteps','55–56 MIN',body,'Teach before worksheet page 2 (Q4, Siti\'s pages). Ask first: "How many jumps from Day 1 to Day 4?" Many children say 4. Count the gaps on the graph: 1 to 2, 2 to 3, 3 to 4: 3 jumps. Click the steps, then the full line appears. Check: 8, 12, 16, 20, 24 all go up by 4. Total: 8 + 12 + 16 + 20 + 24 = 80 (or 5 days × the middle day, 16).'))
 

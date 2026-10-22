@@ -14,7 +14,7 @@ def short(a,limit=215):
     return out
 
 def sneak_slide(L,g):
-    body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. Show your answer only to your tutor: own paper held up to them, or a private chat message.</p>'
+    body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. When your tutor says show, everyone holds their paper to the camera at the same moment.</p>'
     top=330
     for i,(q,a) in enumerate(g['sneak']):
         lab='Puzzle 1: try it with objects, a drawing or counting' if i==0 else 'Puzzle 2: have a think'
@@ -26,9 +26,9 @@ def sneak_slide(L,g):
         top+=qh+6+ah+14
     assert top-14<=925,(L,top)
     notes=("Minutes 2 to 5 (3 minutes). These are ideas we have not learnt yet: say so, and say that guessing and \"I do not know\" are welcome and nobody is marked. Read the two puzzles aloud. Puzzle 1 is an access puzzle: any child can try it with objects, a drawing or counting, so everyone can get a first win. Puzzle 2 is a thinking puzzle on today's idea. "
-      "Answers are shown PRIVATELY: own paper held up to you only, or a private chat message. Never boards held up for the group, never read wrong answers aloud. Click to reveal each answer at minute 5, then say: \"Both of these are what we learn today.\" "
+      "Answers are shown with everyone holding their paper to the camera at the same moment, or to you only on camera. Never private chat. Never compare answers across children, never read wrong answers aloud. Click to reveal each answer at minute 5, then say: \"Both of these are what we learn today.\" "
       "Answers: "+' '.join(f'Puzzle {i+1}: {a}' for i,(q,a) in enumerate(g['sneak']))+" "
-      "Quietly, and only by private chat message (never by name in front of the group), you may invite a child to try Think harder after the point printed on page 1. Any child can choose it and any child can go back. Never announce who is on which page and never say advanced or top group. Do not record this as a mark. Do not split a pair unless both children agree.")
+      "Invite the WHOLE group, never one child: say \"When you have finished Start here, you can choose Think harder, Go further or the Investigation.\" Nobody is singled out. Any child can choose it and any child can go back. Never announce who is on which page and never say advanced or top group. Do not record this as a mark. Do not split a pair unless both children agree.")
     return sec(f'{L}-check','2–5 MIN',body,notes)
 
 def go_slide(L,g):
@@ -43,11 +43,11 @@ def reflect_slide(L,g):
     body=h2('Looking back')+f'<p style="font-size:32px;font-weight:700;color:{MUTED}">About 2 minutes, just for you. Nobody marks this. You can write “pass”.</p>'
     for i,a in enumerate(['Something I did well ...','The hardest part was ...']):
         body+=pin(128,280+i*120,1664,f'<p style="font-size:48px;font-weight:800;line-height:1.2;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'20px 34px','box-sizing:border-box')
-    body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">What helped me (tick):</p><p style="font-size:34px;font-weight:600;line-height:1.35">I drew or built it   •   I tried a smaller example   •   I checked my answer   •   I asked for help</p><p style="font-size:34px;font-weight:600;line-height:1.35">I am still stuck (my tutor will check in privately)   •   pass</p>',None,WHITE,20,'20px 34px','box-sizing:border-box')
+    body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">What helped me (tick):</p><p style="font-size:34px;font-weight:600;line-height:1.35">I drew or built it   •   I tried a smaller example   •   I checked my answer   •   I asked for help</p><p style="font-size:34px;font-weight:600;line-height:1.35">I am still stuck (my tutor will check in during the lesson)   •   pass</p>',None,WHITE,20,'20px 34px','box-sizing:border-box')
     body+=pin(128,820,1664,f'<p style="font-size:28px;font-weight:600;line-height:1.3;color:{MUTED}">Write it in the “Looking back” box on your Finish page. Nobody has to share it.</p>',None)
-    notes=(("Minutes 88 to 90 (2 minutes), after the exit slip; hand out the certificates at the end of it. " if L=='p6l10' else '')+"Minutes 86 to 88 (2 minutes), after the exit slip. Everyone has the box: it is on the Finish page, a page every child reaches. Say: \"Two minutes, just for you. Finish: something I did well, the hardest part was, and tick what helped. You can write pass. If you are still stuck, tick that box and I will check in with you privately.\" "
-      "Never collect it in front of the group and never read an answer out. You may read a child's box privately afterwards and reply by private chat message. Praise the strategy, not the speed: say \"you "+g['reflectEx']+", and that is what got you unstuck\", never \"you were quick\". "
-      "If a child ticks I am still stuck, check in privately that day. If a child writes \"everything\" or \"I am bad at maths\", say privately: \"Thank you for telling me. Let's find one small thing that worked today,\" and point to a specific item they got right. If a child writes that nothing was hard, ask what would make it harder.")
+    notes=(("Minutes 88 to 90 (2 minutes), after the exit slip; hand out the certificates at the end of it. " if L=='p6l10' else '')+"Minutes 86 to 88 (2 minutes), after the exit slip. Everyone has the box: it is on the Finish page, a page every child reaches. Say: \"Two minutes, just for you. Finish: something I did well, the hardest part was, and tick what helped. You can write pass. If you are still stuck, tick that box and I will check in with you in the open session, in the shared room, with your parent nearby.\" "
+      "Never collect it in front of the group and never read an answer out. You may look at a child's box on camera in the open session if the child offers it. Praise the strategy, not the speed: say \"you "+g['reflectEx']+", and that is what got you unstuck\", never \"you were quick\". "
+      "If a child ticks I am still stuck, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby. Never by private message. If a child writes \"everything\" or \"I am bad at maths\", say quietly in the open session: \"Thank you for telling me. Let's find one small thing that worked today,\" and point to a specific item they got right. If a child writes that nothing was hard, ask what would make it harder.")
     if L=='p6l10': notes=notes.replace('Minutes 86 to 88 (2 minutes), after the exit slip.','').replace('Minutes 88 to 90 (2 minutes), after the exit slip; hand out','Minutes 88 to 90 (2 minutes), after the exit slip; hand out')
     return sec(f'{L}-reflect','88–90 MIN' if L=='p6l10' else '86–88 MIN',body,notes)
 

@@ -22,11 +22,11 @@ const fast = choice;
 const refl = (n) => { const h = GAPS[String(n)].hard;
   const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:210px">${lab}</b>${inner}</div>`;
   const ln = `<span style="flex:1;border-bottom:2px dotted #8A94AD;height:18px;min-width:60px"></span>`;
-  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Two minutes. There are no right answers. You can pass. Only your tutor may read this, privately.</span></div>`
+  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Two minutes. There are no right answers. You can pass. Nobody reads it out.</span></div>`
     + row('Something I did well:', ln)
     + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
     + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
-    + row('', opt('I am still stuck (my tutor will check in privately)') + opt('I would like to pass'))
+    + row('', opt('I am still stuck (my tutor will come and help)') + opt('I would like to pass'))
     + `</div>`]; };
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };
 const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];

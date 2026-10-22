@@ -43,10 +43,10 @@ def build(D, n):
         body += f'<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;background:{WHITE};border-radius:24px;padding:20px 34px;display:flex;flex-direction:column;gap:10px">{q}</div>{ans}</div>'
     notes = ('Minutes 7 to 10 (3 minutes). SAY: "These two are sneak-peek puzzles. They are ideas we have not learnt yet, so a guess is a great start, and I do not know is welcome. Nobody is marked." '
              'Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone starts with a win. Question 2 makes you think. '
-             'Answers are shown privately: face to face, each child holds their own paper low so only the tutor sees it; online, children send the answer to the tutor in a private chat message (a parent may type for a child who cannot type yet). '
+             'Answers are not shown on boards in front of the group: face to face, each child holds their own paper low so only the tutor sees it; online, each child shows their own paper to the tutor on camera, or everyone holds paper to the camera at the same moment. There are no private chat messages. '
              'Never use boards held up in front of the group, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
              'Click to show each answer to the whole group only after everyone has had a try, and say "Lots of us had a different idea, and that is fine." '
-             'Quietly note who found question 2 easy; you may invite a child to the Think harder page by a PRIVATE message at minute 40, never by name in front of the group. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
+             'Quietly note who found question 2 easy; at minute 40 invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
     _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '7–10 MIN', body, notes))
     # ---- Look-back (2 minutes, short and safe) ----
     def optrow(items):
@@ -54,12 +54,12 @@ def build(D, n):
     rows = [('Something I did well', f'<span style="color:{MUTED}">write or draw one thing</span>'),
             ('The hardest part was ...', optrow(g['hard'] + ['something else'])),
             ('What helped me', optrow(['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'])),
-            ('If you want', optrow(['I am still stuck (my tutor will check in privately)', 'I would like to pass']))]
-    body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Only your tutor may read it, privately.', TEAL, CREAM, 28)
+            ('If you want', optrow(['I am still stuck (my tutor will come and help)', 'I would like to pass']))]
+    body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Nobody reads it out.', TEAL, CREAM, 28)
     inner = ''.join(f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:34px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:28px;font-weight:600;line-height:1.5">{b_}</p></div>' for k, (a_, b_) in enumerate(rows))
     body += card(inner)
     notes = ('Minutes 88 to 90 (2 minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
-             'It is never marked, never collected in front of the group and never read out; the tutor may read it privately afterwards. If a child ticks "I am still stuck", check in privately next lesson (private chat or a quiet word). '
+             'It is never marked, never collected in front of the group and never read out; the tutor may look at it afterwards. If a child ticks "I am still stuck", check in during the open session next lesson (a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a direct message). '
              'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. You can pass."')
     _w(D, p_ + 'reflect', sec(p_ + 'reflect', '88–90 MIN', body, notes))
 

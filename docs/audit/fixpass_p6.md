@@ -3,10 +3,10 @@
 Date 2026-10-22. Nothing committed. Shared files (`levels/*`, `rebuild/slidekit.py`, `diag/build_diag.py`, `website/*`, `hp/*`) untouched. Diagnostic change is in `diag/content/p6.json` only.
 
 ## All lessons
-- Neutral names: Start here, Think harder, Go further, Investigation. No printed fast-track box; page 1 says "After question N you may choose: carry on, or try Think harder." Tutor invites privately only, never announces pages, never splits a pair unless both agree.
-- Sneak-peek puzzles (2-5 min) replace the warm-up check: one access puzzle, one thinking puzzle, answers private, "ideas we have not learnt yet, guessing welcome, nobody is marked". Data in `p6/content/gaps.json`, slides from `rebuild/p6_gaps.py`.
+- Neutral names: Start here, Think harder, Go further, Investigation. No printed fast-track box; page 1 says "After question N you may choose: carry on, or try Think harder." Invitations go to the whole group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"); the tutor never singles out a child or announces pages, never splits a pair unless both agree.
+- Sneak-peek puzzles (2-5 min) replace the warm-up check: one access puzzle, one thinking puzzle, answers shown by everyone holding paper to the camera at the same moment (or to the tutor only on camera), never by private chat, "ideas we have not learnt yet, guessing welcome, nobody is marked". Data in `p6/content/gaps.json`, slides from `rebuild/p6_gaps.py`.
 - Timeline made consistent in deck, script, guide and workbook: 0-2 opening, 2-5 sneak-peek, 5-8 warm-up game, 8-10 quick questions, 10-25 explore (Go further what-if on a slide from minute 12), 25-35 teach, 35-40 break, 40-75 worksheet, 75-82 talk, 82-86 exit slip, 86-88 Looking back, 88-90 close. Lesson 10 keeps its own plan (showcase 62-85).
-- New Finish page in every workbook (all children reach it): Investigation with an easy first step, exit slip, "Looking back" (did well / hardest part / what helped, tick options incl. "I asked for help" and "I am still stuck (my tutor will check in privately)", pass always allowed). 2 minutes. Never collected publicly; tutor may read privately.
+- New Finish page in every workbook (all children reach it): Investigation with an easy first step, exit slip, "Looking back" (did well / hardest part / what helped, tick options incl. "I asked for help" and "I am still stuck (my tutor will check in during the lesson)"; a stuck child is checked in the open session (shared breakout room or hand signal, parent nearby), never by private message, pass always allowed). 2 minutes. Never collected publicly; tutor may read privately.
 - Talk time: pass allowed, volunteers first, no cold-calling, no tallies.
 - Sentences like "you you" fixed. Low-child scaffolds (drawn tables, prefilled rows) and cap on the solo page; core questions moved to Think harder where the review said so.
 
@@ -51,4 +51,4 @@ Warm-up now: factors of 24 (8 factors), 6/36 = 1/6, triangle 65, loop code n = 1
 ## Notes for the owner
 - Review asked for "(c) steps IN by 2" in L4 Q1; no table steps IN by 2, so it was skipped.
 - No .sb3 starter files exist in the repo; lesson notes tell the tutor to build them.
-- Guide checklist "No private messages to children" now allows short in-platform private chat for lesson messages. Please confirm this safeguarding wording.
+- Safeguarding (owner decision): the guide rule "No private messages to children" is kept. No P6 guide, script, slide note or workbook text uses private chat to invite or check in with a child.

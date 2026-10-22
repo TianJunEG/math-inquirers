@@ -169,7 +169,7 @@ module.exports.gaps = {
  "check": [
   {
    "q": "Ali has 12 sweets. He puts them into bags so that every bag has the same number of sweets, with none left over. Use counters or draw dots. Write ONE way he can do it, like 2 bags of 6.",
-   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win: you may ask privately, can you find another?",
+   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win: you may ask the whole group, can anyone find another?",
    "s": "2 bags of 6, 3 bags of 4, 4 bags of 3 ... any way that uses all 12 is right.",
    "kind": "access"
   },

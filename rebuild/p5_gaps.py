@@ -57,15 +57,15 @@ def check_slide_html(n,rows,pic,notes):
         body+=pin(128,top,1150,inner,None,WHITE,20,'16px 28px')
         body+=pin(1310,top,482,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(short)}</p>','pop',YEL,20,'16px 22px')
         top+=hq+30
-    body+=pin(128,max(top,780),1664,p('Show your answer to your tutor only: on your own paper, or in a private chat message. Then a volunteer can tell us how they thought.',28,700,MUTED),None,SOFT,20,'14px 26px')
+    body+=pin(128,max(top,780),1664,p('Show your answer only to your tutor: on your own paper, or all hold paper to the camera together. Then a volunteer can tell us how they thought.',28,700,MUTED),None,SOFT,20,'14px 26px')
     return sec(f'p5l{n}-check','0–3 MIN',body,notes)
 
 def bx(): return '<span style="display:inline-block;width:28px;height:28px;border:4px solid #1B2A49;border-radius:7px;vertical-align:-5px;margin:0 10px 0 20px;background:#FFFFFF"></span>'
 def reflect_slide_html(n,notes):
     t3=('<span style="font-size:28px;font-weight:600;line-height:1.6">'+bx()+'a picture or model'+bx()+'a list or table'+bx()+'a simpler number'+bx()+'my partner'
-        +'<br>'+bx()+'I asked for help'+bx()+'checking my estimate'+bx()+'I am still stuck (my tutor will check in privately)</span>')
+        +'<br>'+bx()+'I asked for help'+bx()+'checking my estimate'+bx()+'I am still stuck (my tutor will check in with me)</span>')
     items=[('1.','Something I did well ...',''),('2.','The hardest part was ...',''),('3.','What helped me ...',t3)]
-    body=h2('Exit slip and reflection')+p('2 minutes. Use the box at the bottom of the Investigation page. Pass is always OK: write pass, tick a box, or type one word in the private chat.',30,600,MUTED)
+    body=h2('Exit slip and reflection')+p('2 minutes. Use the box at the bottom of the Investigation page. Pass is always OK: write pass or tick a box.',30,600,MUTED)
     tops=[330,460,590]
     for (a,b,extra),t in zip(items,tops):
         body+=pin(128,t,1664,f'<p style="font-size:38px;font-weight:700"><span style="color:{TEAL};font-weight:800">{a}</span>  {E(b)}</p>'+extra,None,WHITE,20,'16px 28px')
@@ -95,7 +95,7 @@ PLAN=('Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked),
       'check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), '
       'check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, '
       'reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, '
-      'and never splits a pair unless both children agree. Private invitations only by private chat message.')
+      'and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."')
 
 def apply(n):
     D=os.path.join(ROOT,'split',f'p5l{n}','project'); dj=os.path.join(D,'deck.json')
@@ -105,11 +105,11 @@ def apply(n):
     cn=('Minutes 0 to 3. SNEAK-PEEK PUZZLES. Show puzzle 1, give about a minute, click to show the short answer, then puzzle 2. '
         'Say it out loud: these are ideas we have not learnt yet; guessing is welcome; "I do not know" is welcome; nobody is marked. '
         'Puzzle 1 is an access puzzle: any child can try it with objects, drawing or counting, so everyone can start well. Puzzle 2 is a thinking puzzle. '
-        'Answers are shown PRIVATELY (own paper shown only to you as you walk round; online, a private chat message to you). Never boards in front of the group, never read out answers with names, no tally, no ranking. Never record scores. '
+        'Answers are shown PRIVATELY (own paper shown only to you as you walk round; online, everyone holds paper to the camera at the same moment, or shows it to you only, on camera). Never boards in front of the group, never read out answers with names, no tally, no ranking. Never record scores. '
         f'Answers and what to listen for. {ans} '
         +' '.join(g['sc']))
-    rn=('Minutes 86 to 88. EXIT SLIP AND REFLECTION, 2 minutes. Children use the small box at the bottom of the Investigation and reflection page: Something I did well; The hardest part was; What helped me (tick boxes include "I asked for help" and "I am still stuck (my tutor will check in privately)"). '
-        'Pass is always OK. Never collected in public; you may read it privately later to plan the next lesson and check in privately with any child who ticked still stuck. Never read a child\'s reflection aloud. '
+    rn=('Minutes 86 to 88. EXIT SLIP AND REFLECTION, 2 minutes. Children use the small box at the bottom of the Investigation and reflection page: Something I did well; The hardest part was; What helped me (tick boxes include "I asked for help" and "I am still stuck (my tutor will check in with me)"). '
+        'Pass is always OK. Never collected in public; you may read it privately later to plan the next lesson and check in with any child who ticked still stuck in the open session (a quick visit to the shared breakout room or a hand signal, parent nearby, never a private message). Never read a child\'s reflection aloud. '
         +' '.join(g['sr'][1:])+' At 88 stamp the inquiry journals and say goodbye.')
     wr(os.path.join(sd,P+'check.html'),check_slide_html(n,g['check'],g['pic'],cn))
     wr(os.path.join(sd,P+'reflect.html'),reflect_slide_html(n,rn))
@@ -172,7 +172,7 @@ def apply(n):
     def ws1(s):
         if 'After question 3 you may choose' in s: return s
         s=append_card(s,card(p('After question 3 you may choose: carry on, or try Think harder. You can swap at any time.',34,700,TEAL)))
-        return add_notes(s,'Everyone sees the same neutral line: "After question 3 you may choose: carry on, or try Think harder." Never announce who is on which page and never name a child in front of the group. You may quietly invite a child by PRIVATE chat message. Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.')
+        return add_notes(s,'Everyone sees the same neutral line: "After question 3 you may choose: carry on, or try Think harder." Never announce who is on which page and never name a child in front of the group. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." Do not split a pair unless BOTH children agree. Think harder is the next pages after the Investigation page in the workbook.')
     edit(P+'ws1',ws1)
     def ws2(s):
         s=s.replace('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further are at the back of your workbook.')

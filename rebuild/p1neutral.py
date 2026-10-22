@@ -121,7 +121,7 @@ def ws_note(D, n):
     sid = 'l%d-ws1' % n; s = _r(D, sid)
     if s is None or 'read questions 1 and 2 aloud' in s: return
     add = (' At minute 40 read questions 1 and 2 aloud, then pairs read the rest. The workbook says: "After question 3 you may choose: carry on, or try Think harder." '
-           'Never announce who is on which page and never name a child in front of the group; you may invite a child by a PRIVATE chat message. Do not split a pair unless both children agree.')
+           'Never announce who is on which page and never name a child in front of the group; invite the WHOLE group at once, for example: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Do not split a pair unless both children agree.')
     s = s.replace('</aside>', add + '</aside>', 1); _w(D, sid, s)
 
 
