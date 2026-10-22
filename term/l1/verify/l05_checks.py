@@ -193,7 +193,7 @@ def run(d):
     # ---- Talk and exit
     eq(8 + 6, 14, 'talk total'); eq((8 - 4) + (6 + 4), 14, 'talk: Ali moves 4 from the 8 to the 6: 4 and 10'); eq((8 + 2) + (6 - 2), 14, 'talk: Mei 10 and 4')
     eq(sorted([2, 4])[0], 2, 'talk: Mei moves fewer')
-    eq(X['E1']['val'], [count_all(7, 6)], 'E1'); eq(X['E2']['val'], [kit_add(3, 8, 5)], 'E2')
+    eq(X['E1']['val'], [count_all(8, 7)], 'E1'); eq(X['E2']['val'], [kit_add(3, 8, 5)], 'E2')
     eq(X['E3']['val'], [sum([6, 9, 4]), 6, 4], 'E3'); eq(6 + 4, 10, 'E3 pair')
 
     # ---- Home practice

@@ -1,3094 +1,3129 @@
 {
- "schema_version": 1,
- "id": "l1-t1-05",
- "level": 1,
- "term": 1,
- "lesson": 5,
- "lesson_in_term": 5,
- "title": "Make-a-Ten Adding",
- "big_idea": "Make tens first",
- "child_idea": "To add, fill up a ten first. Move some from the other number to make a full ten, then add what is left.",
- "skill": "Strategy choice",
- "ages": "6-8",
- "moe": {
-  "strand": "Addition and Subtraction",
-  "topics": [
-   "Adding more than two 1-digit numbers",
-   "Addition within 100 by making a ten (mental method first)",
-   "Written algorithms are not taught in this lesson"
-  ],
-  "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026): crossing a ten (28 + 6, 47 + 6), totals above 40 and, in Go further, sums to 100. Do not describe it to families as matching or aligned to the school syllabus. Every Start here item above the school range is scaffolded (frames, tens bars, blanks that name the next ten) so it can be explored in class; if a child cannot do it after exploring, point them to Think harder honestly rather than relabel it. The P1 outline names adding more than two 1-digit numbers, addition within 100 and mental addition of a 2-digit number and ones without renaming."
- },
- "contest_moves": [
-  "add by making tens (pair the numbers that make 10)",
-  "reorder an addition to find pairs that make a ten or a tens number"
- ],
- "objectives": [
-  "Say how many more make 10 from any number to 9, and how many more make the next ten from a two-digit number.",
-  "Add two numbers that cross a ten (8 + 6, 28 + 6) by filling up a ten first and adding what is left, and explain why the total does not change.",
-  "Add three or more numbers by finding pairs that make 10 or a tens number, in any order.",
-  "Choose which number to fill up and see that moving objects between groups keeps the total the same."
- ],
- "joining_cold": {
-  "remember": [
-   "How many more make 10 (bonds to 10) with a ten-frame and fingers",
-   "How many more make the next ten (bonds to 20: 14 + 6, and 18 + 2, 26 + 4)",
-   "Tens and ones put together (30 and 6 is 36)"
-  ],
-  "assumes": "Only counting to 20, showing a number with fingers and knowing that ten ones make a ten. Nothing from the earlier Term 1 lessons is needed: the warm-up builds tens and ones with a ten-frame and the kit.",
-  "holiday_topics_revisited": [
-   "Number bonds to 10 and 20 (Number Bond Inquiry)"
-  ],
-  "safe_to_miss": false,
-  "note": "Lesson 5 is one of the hardest to miss in Term 1 (plan, section 2): Lesson 6 builds on it. A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 6."
- },
- "materials": {
-  "child": [
-   "About 20 small things of two kinds (buttons, pasta, clips)",
-   "Paper (a grown-up can rule two rows of five boxes as a ten-frame beforehand) or the tens bar from the kit page",
-   "The printed workbook and the kit page, cut out by a grown-up",
-   "A pencil, a rubber and spare paper"
-  ],
-  "tutor": [
-   "A slide deck and a paper ten-frame with two kinds of counters to show on camera if you wish",
-   "A visible clock"
-  ],
-  "kit_pages": [
-   "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; cut out before the lesson. This lesson uses up to 5 bars and 14 squares at a time"
-  ],
-  "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
- },
- "timing": {
-  "parts": [
-   {
-    "id": "opening",
-    "title": "Opening",
-    "start": 0,
-    "end": 2
-   },
-   {
-    "id": "remember",
-    "title": "Remember warm-up",
-    "start": 2,
-    "end": 8
-   },
-   {
-    "id": "sneak",
-    "title": "Sneak-peek puzzles",
-    "start": 8,
-    "end": 12
-   },
-   {
-    "id": "explore",
-    "title": "Explore",
-    "start": 12,
-    "end": 28
-   },
-   {
-    "id": "mini",
-    "title": "Mini-lesson",
-    "start": 28,
-    "end": 38
-   },
-   {
-    "id": "break",
-    "title": "Brain break",
-    "start": 38,
-    "end": 42
-   },
-   {
-    "id": "work",
-    "title": "Workbook",
-    "start": 42,
-    "end": 70
-   },
-   {
-    "id": "talk",
-    "title": "Talk time",
-    "start": 70,
-    "end": 76
-   },
-   {
-    "id": "exit",
-    "title": "Exit ticket",
-    "start": 76,
-    "end": 82
-   },
-   {
-    "id": "look",
-    "title": "Look-back",
-    "start": 82,
-    "end": 85
-   },
-   {
-    "id": "flex",
-    "title": "Flex time and goodbye",
-    "start": 85,
-    "end": 90
-   }
-  ],
-  "optional_slide": "s-opt",
-  "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught in Lesson 1; say the recording notice in one line). The 2 minutes saved go to Explore (16 minutes). The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
- },
- "sneak_peek": {
-  "q1": "Count the counters. How many are there altogether? You may draw rings round groups.",
-  "q2": "Ben has 9 red counters and 5 blue counters. He moves 1 blue counter to the red counters. Now he has 10 red counters and 4 blue counters. Is the total still the same? Circle Yes or No. Then write how you know.",
-  "a1": "12",
-  "a2": "Yes. Nothing was added or taken away. 9 + 5 = 14 and 10 + 4 = 14.",
-  "val1": 12
- },
- "rec": {
-  "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your kit pieces and a few small things. Pause or rewind any time.",
-   "action": "Gather your workbook, pencil, paper, kit pieces and small things. Press play when ready."
+  "schema_version": 1,
+  "id": "l1-t1-05",
+  "level": 1,
+  "term": 1,
+  "lesson": 5,
+  "lesson_in_term": 5,
+  "title": "Make-a-Ten Adding",
+  "big_idea": "Make tens first",
+  "child_idea": "To add, fill up a ten first. Move some from the other number to make a full ten, then add what is left.",
+  "skill": "Strategy choice",
+  "ages": "6-8",
+  "moe": {
+    "strand": "Addition and Subtraction",
+    "topics": [
+      "Adding more than two 1-digit numbers",
+      "Addition within 100 by making a ten (mental method first)",
+      "Written algorithms are not taught in this lesson"
+    ],
+    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026): crossing a ten (28 + 6, 47 + 6), totals above 40 and, in Go further, sums to 100. Do not describe it to families as matching or aligned to the school syllabus. Every Start here item above the school range is scaffolded (frames, tens bars, blanks that name the next ten) so it can be explored in class; if a child cannot do it after exploring, point them to Think harder honestly rather than relabel it. The P1 outline names adding more than two 1-digit numbers, addition within 100 and mental addition of a 2-digit number and ones without renaming."
   },
-  "remember": {
-   "say": "Recording: join in! Show your answers on your fingers before I say them. Pause if you need longer.",
-   "action": "Play along. Show each answer on your fingers before the video does."
+  "contest_moves": [
+    "add by making tens (pair the numbers that make 10)",
+    "reorder an addition to find pairs that make a ten or a tens number"
+  ],
+  "objectives": [
+    "Say how many more make 10 from any number to 9, and how many more make the next ten from a two-digit number.",
+    "Add two numbers that cross a ten (8 + 6, 28 + 6) by filling up a ten first and adding what is left, and explain why the total does not change.",
+    "Add three or more numbers by finding pairs that make 10 or a tens number, in any order.",
+    "Choose which number to fill up and see that moving objects between groups keeps the total the same."
+  ],
+  "joining_cold": {
+    "remember": [
+      "How many more make 10 (bonds to 10) with a ten-frame and fingers",
+      "How many more make the next ten (bonds to 20: 14 + 6, and 18 + 2, 26 + 4)",
+      "Tens and ones put together (30 and 6 is 36)"
+    ],
+    "assumes": "Only counting to 20, showing a number with fingers and knowing that ten ones make a ten. Nothing from the earlier Term 1 lessons is needed: the warm-up builds tens and ones with a ten-frame and the kit.",
+    "holiday_topics_revisited": [
+      "Number bonds to 10 and 20 (Number Bond Inquiry)"
+    ],
+    "safe_to_miss": false,
+    "note": "Lesson 5 is one of the hardest to miss in Term 1 (plan, section 2): Lesson 6 builds on it. A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 6."
   },
-  "sneak": {
-   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
-   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  "materials": {
+    "child": [
+      "About 20 small things of two kinds (buttons, pasta, clips)",
+      "Paper (a grown-up can rule two rows of five boxes as a ten-frame beforehand) or the tens bar from the kit page",
+      "The printed workbook and the kit page, cut out by a grown-up",
+      "A pencil, a rubber and spare paper"
+    ],
+    "tutor": [
+      "A slide deck and a paper ten-frame with two kinds of counters to show on camera if you wish",
+      "A visible clock"
+    ],
+    "kit_pages": [
+      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; cut out before the lesson. This lesson uses up to 5 bars and 14 squares at a time"
+    ],
+    "ruler": false,
+    "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
   },
-  "explore": {
-   "say": "Recording: pause now. Draw a ten-frame, move your things to make a ten, then say what is left. Press play when you have tried.",
-   "action": "Pause. Draw a ten-frame and make a ten with your things each time I call a sum. Write what you find."
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 3,
+        "end": 9
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 13,
+        "end": 28
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 28,
+        "end": 38
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 38,
+        "end": 42
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 42,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "Opening is 3 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 15 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
   },
-  "mini": {
-   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
-   "action": "Watch and copy the examples. Rewind any step you missed."
+  "sneak_peek": {
+    "q1": "Count the counters. How many are there altogether? You may draw rings round groups.",
+    "q2": "Ben has 9 counters in one frame and 5 counters in another frame. He moves 1 counter from the second frame to the first. Now the first frame has 10 and the second has 4. Is the total still the same? Circle Yes or No. Then write how you know.",
+    "a1": "12",
+    "a2": "Yes. Nothing was added or taken away. 9 + 5 = 14 and 10 + 4 = 14.",
+    "val1": 12
   },
-  "break": {
-   "say": "Recording: stand up and join in! Stomp the number that makes ten.",
-   "action": "Stand up and stomp how many more make ten."
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your kit pieces and a few small things. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper, kit pieces and small things. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Show your answers on your fingers before I say them. Pause if you need longer.",
+      "action": "Play along. Show each answer on your fingers before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Draw a ten-frame, move your things to make a ten, then say what is left. Press play when you have tried.",
+      "action": "Pause. Draw a ten-frame and make a ten with your things each time I call a sum. Write what you find."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Stomp the number that makes ten.",
+      "action": "Stand up and stomp how many more make ten."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up who is right, and show them with counters.",
+      "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out."
+    }
   },
-  "work": {
-   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
-   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, a few small things and your kit pieces on the table."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Today we learn a trick for adding without counting one by one: make a ten first."
+          },
+          {
+            "k": "DO",
+            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+            "s": 25
+          },
+          {
+            "k": "NOTE",
+            "text": "Say the recording notice in the SAY line above in your own words: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Fingers and a ten-frame. A ten-frame has ten spaces. When it is full, that is a ten. I say how many counters are in the frame. You show me, on your fingers, how many more fill it up."
+          },
+          {
+            "k": "ASK",
+            "text": "Seven counters. How many more to make ten?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Four counters. How many more to make ten?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Nine counters. How many more?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Five counters. How many more?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Two counters. How many more?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "Now bigger numbers. Eighteen is one ten and eight ones. How many more ones make the next ten?"
+          },
+          {
+            "k": "ASK",
+            "text": "Eighteen. How many more to make twenty?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Fourteen, to make twenty?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Twenty-six, to make thirty?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Thirty-nine, to make forty?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Last one. Tens and ones put together. Say the tens first, then the ones."
+          },
+          {
+            "k": "ASK",
+            "text": "Thirty and six more makes?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Forty and two more?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Fifty and nine more?",
+            "resp": 10
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates on how many more make ten, count the empty spaces in the ten-frame slowly with them. For 26 to 30, show 26 as 2 bars and 6 squares on the kit and count the squares needed to fill the next bar. Do not move on until most children have answered; this idea is the lesson."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: 3, 6, 1, 5, 8 then 2, 6, 4, 1 then 36, 42, 59. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and ten ones making a ten; the pictures do the rest."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Count the counters. How many are there altogether? You may draw rings round groups."
+          },
+          {
+            "k": "WORK",
+            "text": "Children count the counters and write the number on their own paper.",
+            "s": 45
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Ben has 9 counters in one frame and 5 counters in another frame. He moves 1 counter from the second frame to the first. Now the first frame has 10 and the second has 4. Is the total still the same? Circle Yes or No. Then write how you know."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 55
+          },
+          {
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. We will come back to puzzle two later."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 12 counters. Puzzle 2 answer: yes, nothing was added or taken away; 9 + 5 and 10 + 4 are both 14. Look for good ideas to praise later (a child who said we only moved one counter). Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today your hands are the teachers. Lay a tens bar from your kit in front of you: a tens bar has ten spaces. Or draw a ten-frame on your paper: a box with two rows of five spaces."
+          },
+          {
+            "k": "SAY",
+            "text": "Put 8 small things on your frame. Put 6 of another kind beside it."
+          },
+          {
+            "k": "ASK",
+            "text": "How many empty spaces are left in the frame?",
+            "resp": 15
+          },
+          {
+            "k": "SAY",
+            "text": "Now fill the frame. Move some things across from the six. Count what is left outside."
+          },
+          {
+            "k": "WORK",
+            "text": "Children move 2 things into the frame and count 4 left outside.",
+            "s": 45
+          },
+          {
+            "k": "ASK",
+            "text": "Tell me: how many did you move, and how many are left outside?",
+            "resp": 30
+          },
+          {
+            "k": "SAY",
+            "text": "So eight and six is the same as ten and four. Say it with me: eight and six is ten and four. Ten and four is fourteen."
+          },
+          {
+            "k": "SAY",
+            "text": "If you finish, try the what-if card: fill the frame a different way. What do you notice?"
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "Round two. I call a sum. You build it on your frame and make a ten. Tell me how many you moved, and ten and what."
+          },
+          {
+            "k": "SAY",
+            "text": "Nine and four."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 9 + 4 and fill the frame: move 1, ten and 3.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Seven and five."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 7 + 5: move 3, ten and 2.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Six and eight."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 6 + 8: fill the 8, move 2, ten and 4.",
+            "s": 45
+          },
+          {
+            "k": "SAY",
+            "text": "Nine and seven."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 9 + 7: move 1, ten and 6.",
+            "s": 40
+          },
+          {
+            "k": "ASK",
+            "text": "Which number did you fill up each time? Why that one?",
+            "resp": 40
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "SAY",
+            "text": "Round three. Bigger numbers. Build twenty-eight with your kit: 2 tens bars and 8 ones squares. Put 6 more squares beside it."
+          },
+          {
+            "k": "ASK",
+            "text": "How many more squares fill the 8 up to another ten?",
+            "resp": 20
+          },
+          {
+            "k": "WORK",
+            "text": "Children move 2 squares to make a third bar: 3 bars and 4 squares.",
+            "s": 45
+          },
+          {
+            "k": "ASK",
+            "text": "What number is that?",
+            "resp": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Now thirty-seven and five."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 37 + 5: move 3 squares, 4 bars and 2 squares.",
+            "s": 50
+          },
+          {
+            "k": "SAY",
+            "text": "One more. Forty-six and seven."
+          },
+          {
+            "k": "WORK",
+            "text": "Build 46 + 7: move 4 squares, 5 bars and 3 squares.",
+            "s": 50
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore4"
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? Which number did we fill up? How many did we move? Why do we want a ten?",
+            "resp": 50
+          },
+          {
+            "k": "SAY",
+            "text": "A ten is easy to count. When we make a ten first, what is left is small. That is the whole trick."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who adds all of the second number after the ten (8 + 6 = 10 + 6): ask how many were in the 6 before, and how many did you move out. Count the counters left outside the frame."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who has too few things: use kit squares for both groups, or draw dots in a ten-frame."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only: no breakout rooms in this lesson, so you can see every camera. Children say their moves aloud; you cannot see builds on small tiles. Building with the ten-frame and kit is for every child; the what-if card is for any child who wants it, and nobody is named. Answers: 13, 12, 14, 16, then 34, 42, 53."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look. Eight and six. We want a ten. The eight is nearly full."
+          },
+          {
+            "k": "ASK",
+            "text": "How many more does eight need to make ten?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "So we split the six into two and four. Eight and two make ten. Then ten and four is fourteen. We moved two counters, and none were lost."
+          },
+          {
+            "k": "ASK",
+            "text": "Why is the total still the same?",
+            "resp": 25
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now twenty-eight and six. Twenty-eight needs two more to make thirty. Split the six into two and four. Twenty-eight and two is thirty. Thirty and four is thirty-four."
+          },
+          {
+            "k": "ASK",
+            "text": "Which number did we fill up, and why?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3b"
+          },
+          {
+            "k": "SAY",
+            "text": "Six and eight. We could fill the frame with the six, or with the eight. Look at both pictures."
+          },
+          {
+            "k": "ASK",
+            "text": "Which way moves fewer counters?",
+            "resp": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Let us listen to some ideas. Either way, the total is fourteen."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Add. Nine and four. Seven and six. Eighteen and five. Forty-five and seven."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write four answers.",
+            "s": 80
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4a"
+          },
+          {
+            "k": "READ",
+            "text": "Thirteen, thirteen, twenty-three, fifty-two. Mark your own in another colour."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "SAY",
+            "text": "Last idea. Three, eight and seven. Look for two numbers that make ten. They do not have to be next to each other."
+          },
+          {
+            "k": "ASK",
+            "text": "Which two make ten?",
+            "resp": 20
+          },
+          {
+            "k": "SAY",
+            "text": "Three and seven make ten. Ten and eight is eighteen. The order does not change the total."
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: ten-frame, make a ten, split, move. Do not teach the column (written) method today: the program teaches the mental method first. Do not teach carrying."
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child fills the wrong number or moves too many, ask: which number is nearly full? How many empty spaces does it have? Then count the empty spaces together."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. We stomp the number that makes ten. I say seven, you stomp three times."
+          },
+          {
+            "k": "WORK",
+            "text": "Call 7, 4, 9, 2, 6, 8. Children stomp (or tiptoe or tap) the number that makes ten and say it aloud together.",
+            "s": 150
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: fill the first ten-frame and add 9 and 4. Question 2: draw 7 dots and 6 dots, ring ten, and write the sums. Question 3: how many more make the next ten?"
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 480
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: one, three, thirteen. Question 2: three, thirteen. Question 3: three, two, four, one. Mark your own page in another colour."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: add 6 to 28. Question 5: add 7 to 35. Question 6: four sums. Question 7: Siti adds 8 and 6. Is she right or wrong? Circle one. Then find her mistake in the second step."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 7.",
+            "s": 540
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Two, four, thirty-four. Five, forty-two. Fifteen, twenty-three, thirty-two, three more, fifty-three. Question 7: Siti is wrong. She should write fourteen, because she forgot that two of the six were already used."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+          },
+          {
+            "k": "MOVE",
+            "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+            "s": 30
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+            "s": 300
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1: count the empty spaces in the first frame. Q2: draw the 7 dots in a row, then 6 more, and ring the 7 and 3 more. Q4 to Q6: ask how many more make the next ten, then how many are left of the second number. Q7: ask how many were in the 6 before and how many Siti moved."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for the make-a-ten idea in a new setting (three or four numbers). Go further is for mastery and extension. Do not announce who is on which page. Slow class: the workbook part needs about 30:50 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Mei and Ali both add eight and six. Mei moves two counters from the six to the eight. Ali moves four counters from the eight to the six. Is Mei right? Is Ali right? Use counters to show."
+          },
+          {
+            "k": "WORK",
+            "text": "Build it on your ten-frame both ways. How many does each way move?",
+            "s": 50
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 50
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 90
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? Ben moved one counter from the second frame to the first. Is the total the same? Yes. Moving counters does not change how many there are."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 20
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: both are right. Mei gets 10 and 4, Ali gets 4 and 10, and both are 14 because nothing is added or lost. Mei moved fewer, so her way is quicker. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "READ",
+            "text": "E1. Add: eight plus seven. E2. Add: thirty-eight plus five. E3. Add six plus nine plus four. Which two numbers make ten?",
+            "s": 24
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 150
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Fifteen. Forty-three. Nineteen, and six and four make ten."
+          },
+          {
+            "k": "SAY",
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+          },
+          {
+            "k": "NOTE",
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5.",
+            "s": 100
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson is Tens Jump, Ones Hop. Please have your tens bars and ones squares cut out, a coin, and a pencil and paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: what if both numbers are nine? Add nine and nine. How many do you move to make a ten?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 18 (move 1, ten and 8). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Make-a-Ten Adding",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Make a ten first, then add what is left."
+          ]
+        }
+      ],
+      "note": "Lesson 5 of Term 1, 90 minutes. Objective: add by making a ten first (8 + 6, 28 + 6), and find pairs that make ten in longer sums. Time plan: opening 0 to 3, warm-up 3 to 9, sneak-peek 9 to 13, explore 13 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+      "subtitle": "Addition: make tens first",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: fill the ten-frame",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Show it on your fingers"
+        },
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 0,
+          "extra": 0
+        },
+        {
+          "t": "p",
+          "text": "A ten-frame has 10 spaces. How many more counters make 10?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            7,
+            4,
+            9,
+            5,
+            2
+          ]
+        }
+      ],
+      "note": "A ten-frame has ten spaces. Count the empty spaces to see how many more make ten. Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 5 needs 5, 2 needs 8. Hands up on camera is fine. No writing, no marks. A child who is new can count the empty spaces in the picture.",
+      "mascot": {
+        "size": "s",
+        "say": "Fingers ready? Let's go!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "How far to the next ten?",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 1,
+          "ones": 8,
+          "style": "kit",
+          "label": "18 is one ten and 8 ones"
+        },
+        {
+          "t": "p",
+          "text": "18 needs ___ more to make 20."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            18,
+            14,
+            26,
+            39
+          ]
+        }
+      ],
+      "note": "A bar is a ten and each square is a one. 18 is one ten and 8 ones, so 2 more ones make another ten: 20. Then ask 14 (6 more to make 20), 26 (4 more to make 30) and 39 (1 more to make 40). Answers: 2, 6, 4, 1. These are number bonds to 20 and to the next ten. Show the kit squares filling the next bar if a child is unsure."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Tens and ones together",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 3,
+          "ones": 6,
+          "label": "30 and 6 more",
+          "style": "kit"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "30 + 6",
+            "40 + 2",
+            "50 + 9"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Say the tens first, then the ones."
+        }
+      ],
+      "note": "Answers: 36, 42, 59. Say the tens word slowly, then the ones: thirty... six. This is the bridge to adding to a tens number: after we make a ten we say, for example, thirty and four. A child who has not met tens and ones only needs to hear and say the number words. Show 30 as three tens bars if a child is unsure."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Count the counters.",
+                  "How many are there altogether?",
+                  "You may draw rings round groups."
+                ]
+              },
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 7,
+                "extra": 5
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "Ben has 9 counters in one frame and 5 in another.",
+                  "He moves 1 counter from the second frame to the first.",
+                  "Now the first frame has 10 and the second has 4.",
+                  "Is the total still the same? Circle Yes or No. Then write how you know."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 (12 counters, 7 and 5 in two ten-frames) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea: moving does not change the total. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 12; yes (9 + 5 and 10 + 4 are both 14). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: fill the ten-frame",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Draw a ten-frame on paper: two rows of five boxes. Or lay a tens bar from your kit.",
+            "Put 8 small things on it.",
+            "Put 6 other things beside it.",
+            "Move some across to fill the frame. How many did you move?"
+          ]
+        },
+        {
+          "t": "card",
+          "head": "WHAT IF?",
+          "items": [
+            "Fill the frame a different way. What do you notice?"
+          ]
+        }
+      ],
+      "note": "Round 1, about 3 minutes. Objects first, no writing yet. Children put 8 things on the frame, 6 of another kind beside it, then move 2 across to fill the frame. They count the 4 left outside and say: eight and six is ten and four. A tens bar from the kit page is a ten-frame in a line: ten spaces. A child with few things can use kit squares of two colours (pencil dots on half of them). The what-if card previews the Investigation (filling the other frame) and is open to everyone; no child is named for choosing it."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Your turn: make a ten",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Use your ten-frame. For each sum, say how many you move, then ten and ___."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "9 + 4",
+            "7 + 5",
+            "6 + 8",
+            "9 + 7"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "I move ..., so it is ten and ..."
+        },
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 0,
+          "extra": 0
+        }
+      ],
+      "note": "Round 2, about 4 minutes, main room. Call each sum aloud and show it on the slide. Children build it on their frame and say how many they moved. Answers: 9 + 4: move 1, ten and 3 (13). 7 + 5: move 3, ten and 2 (12). 6 + 8: fill the 8, move 2, ten and 4 (14). 9 + 7: move 1, ten and 6 (16). On 6 + 8 some children fill the 6 (move 4): that is fine and works too; it is just more moves. Do not name children."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "Build 28 + 6 with the kit",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 2,
+          "ones": 8,
+          "style": "kit",
+          "label": "28 is 2 bars and 8 squares"
+        },
+        {
+          "t": "p",
+          "text": "Put 6 more squares beside it. Move squares to fill the 8 up to a ten."
+        }
+      ],
+      "note": "Round 3, about 4 minutes. Children build 28 with 2 tens bars and 8 ones squares, and put 6 squares beside it. Two squares fill the 8 up to a ten: that makes a third bar. Now there are 3 bars and 4 squares: 34. Then 37 + 5 (move 3: 4 bars and 2 squares, 42) and 46 + 7 (move 4: 5 bars and 3 squares, 53). Each child has 20 ones squares, enough for all of these"
+    },
+    {
+      "id": "s-explore4",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "Which number did we fill up? Why?",
+            "How many did we move each time?",
+            "What do we say after the ten: ten and ...?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key ideas: we fill up the number that is nearly full; the number we move is the number of empty spaces; after the ten we say ten and whatever is left; moving does not change the total. Repeat a child's answer in your own words so the recording picks it up."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Fill the ten first",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 8,
+          "extra": 6
+        },
+        {
+          "t": "say",
+          "text": "How many more does 8 need to make 10?"
+        }
+      ],
+      "note": "8 + 6. The first frame has 2 empty spaces, so 8 needs 2 more. Ask: how many more does 8 need to make 10? Answer (say it after the children): 2."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Split the 6",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 10,
+          "extra": 4
+        },
+        {
+          "t": "say",
+          "text": "8 + 6 = 8 + 2 + 4 = 10 + 4 = 14"
+        }
+      ],
+      "note": "Split 6 into 2 and 4. 8 + 2 = 10. Then 10 + 4 = 14. Ask: why is the total still the same? We only moved counters from one frame to the other; none were added and none were lost."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Add to a tens number: 28 + 6",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 2,
+          "ones": 8,
+          "style": "kit",
+          "label": "28"
+        },
+        {
+          "t": "p",
+          "text": "28 needs 2 more to make 30. Split 6 into 2 and 4."
+        },
+        {
+          "t": "say",
+          "text": "28 + 6 = 28 + 2 + 4 = 30 + 4 = 34"
+        }
+      ],
+      "note": "Think aloud: 28 is 2 tens and 8 ones. 8 and 2 make a ten, so 28 and 2 make 30. 6 is 2 and 4. 30 and 4 more is 34. Say the tens first. Ask: which number did we fill up? Why? Answer: 28, because it is nearly at the next ten."
+    },
+    {
+      "id": "s-m3b",
+      "part": "mini",
+      "kind": "light",
+      "title": "Which number do we fill?",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 8,
+                "extra": 6
+              },
+              {
+                "t": "p",
+                "text": "Fill the 8"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 6,
+                "extra": 8
+              },
+              {
+                "t": "p",
+                "text": "Fill the 6"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "say",
+          "text": "Which way moves fewer counters?"
+        }
+      ],
+      "note": "6 + 8 can be made into a ten two ways. Fill the frame with the 8 (2 empty spaces, move 2: ten and 4) or with the 6 (4 empty spaces, move 4: ten and 4 again). Both give 14. Ask and listen: do not state the rule on this slide. This is the seed of the Investigation, so ask and listen."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn: add",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write on your paper. Make a ten first."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "9 + 4",
+            "7 + 6",
+            "18 + 5",
+            "45 + 7"
+          ]
+        }
+      ],
+      "note": "Each child writes four answers on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Some children may find the answer by counting on: that is fine, ask them to try a ten as well."
+    },
+    {
+      "id": "s-m4a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: add",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Sum",
+              "How we made a ten"
+            ],
+            [
+              "9 + 4",
+              "9 + 1 = 10, 10 + 3 = 13"
+            ],
+            [
+              "7 + 6",
+              "7 + 3 = 10, 10 + 3 = 13"
+            ],
+            [
+              "18 + 5",
+              "18 + 2 = 20, 20 + 3 = 23"
+            ],
+            [
+              "45 + 7",
+              "45 + 5 = 50, 50 + 2 = 52"
+            ]
+          ]
+        }
+      ],
+      "note": "Answers: 13, 13, 23, 52. Read each answer and the way to make a ten aloud so a child watching the recording can mark their own work."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Spot the pair: 3 + 8 + 7",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            3,
+            8,
+            7
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Which two numbers make 10? They do not have to be next to each other."
+        },
+        {
+          "t": "say",
+          "text": "3 + 7 = 10, then 10 + 8 = 18"
+        }
+      ],
+      "note": "A worked example for Think harder. In a sum with three numbers, look for two that make ten, even if they are not side by side. 3 + 7 = 10 and 10 + 8 = 18. Check: 3 + 8 = 11 and 11 + 7 = 18, the same. The order does not change the total. Keep it to about a minute and do not teach written column addition."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Stomp to ten",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "I say a number. You stomp how many more make ten."
+        },
+        {
+          "t": "p",
+          "text": "Try it with 7, then 4, then 9, then 2."
+        },
+        {
+          "t": "p",
+          "text": "Stand up. Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera. Call 7, 4, 9, 2, 6, 8 (answers 3, 6, 1, 8, 4, 2). Children stomp softly, or tiptoe or tap their fingers in a small space, and say the number aloud. No equipment."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 2: draw dots and ring ten of them."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 7. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 4 to 7 aloud; question 7 is a spot-the-mistake. Children may use their kit or ten-frame to decide. Question 6 has four sums: children make a ten for each."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 7 answer: no, Siti forgot that 2 of the 6 were already used, so it is 10 + 4 = 14. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Pairs that make ten in longer sums"
+            ],
+            [
+              "Go further (page 4)",
+              "Bigger sums and a puzzle to write"
+            ],
+            [
+              "Investigation (page 5)",
+              "Move the fewest"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "MEI AND ALI ADD 8 + 6",
+          "items": [
+            "Mei moves 2 counters from the 6 to the 8.",
+            "Ali moves 4 counters from the 8 to the 6."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Is Mei right? Is Ali right? Use counters to show."
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: both are right. Mei makes 10 and 4. Ali makes 4 and 10. Both are 14 because moving counters does not change how many there are. Mei moved 2 and Ali moved 4, so Mei's way is quicker. Repeat each child's answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 9,
+                "extra": 5
+              },
+              {
+                "t": "p",
+                "text": "9 + 5"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "ten_frame",
+                "filled": 10,
+                "extra": 4
+              },
+              {
+                "t": "p",
+                "text": "10 + 4"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "Yes! Moving a counter does not change the total. Both are 14."
+        }
+      ],
+      "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. Both pictures show 14 counters: Ben moved 1 counter from the second frame to the first, nothing was added or taken away."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up one thing you found out today."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Tens Jump, Ones Hop",
+            "Have ready: kit bars and squares, a coin, pencil."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: what if?",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Look at 9 + 9. How many do you move to make a ten?"
+        },
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 9,
+          "extra": 9
+        }
+      ],
+      "note": "Optional, only if you are on time. Answer: 18. Move 1 counter from one frame to the other: 10 and 8. Take two answers and move on. Optional extension: is 9 + 9 the biggest total from two single digits?",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "If the ones of two numbers make 10, is the total always a tens number?"
+            ],
+            [
+              "Make a puzzle",
+              "Write a sum with four numbers for your grown-up, with a pair that makes ten"
+            ],
+            [
+              "Teach it back",
+              "Show how to add 8 + 5 with a ten-frame"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Look at the ten-frames. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The first frame needs ___ more counters to make 10.",
+            "ans": "1",
+            "val": 1
+          },
+          {
+            "l": "b",
+            "text": "Move them. Now there are 10 and ___ counters.",
+            "ans": "3",
+            "val": 3
+          },
+          {
+            "l": "c",
+            "text": "9 + 4 = ___",
+            "ans": "13",
+            "val": 13
+          }
+        ],
+        "visual": {
+          "type": "ten_frame",
+          "filled": 9,
+          "extra": 4
+        },
+        "answer": "1 more; 10 and 3; 9 + 4 = 13",
+        "val": [
+          1,
+          3,
+          13
+        ],
+        "hint": "Count the empty space in the first frame. Move that many counters across.",
+        "solution": "The first frame has 1 empty space, so 9 needs 1 more. Move 1 counter from the 4. The first frame is full (10) and 3 are left. 10 + 3 = 13.",
+        "mistakes": [
+          "Writing 10 and 4: forgetting to take the moved counter away from the 4.",
+          "Counting all the counters again and slipping (12 or 14)."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Draw 7 dots and 6 dots in the box. Ring 10 dots. Then fill in the blanks.",
+        "draw": true,
+        "parts": [
+          {
+            "l": "",
+            "text": "7 + 6 = 10 + ___",
+            "ans": "3",
+            "val": 3
+          },
+          {
+            "l": "",
+            "text": "7 + 6 = ___",
+            "ans": "13",
+            "val": 13
+          }
+        ],
+        "answer": "7 + 6 = 10 + 3 = 13 (ten dots ringed, 3 left over)",
+        "val": [
+          3,
+          13
+        ],
+        "hint": "Draw 7 dots, then 6 dots. Ring the 7 and 3 of the other dots. How many dots are not ringed?",
+        "solution": "Ring the 7 dots and 3 of the 6 dots to make ten. The other 3 dots are outside the ring. So 7 + 6 = 10 + 3 = 13.",
+        "mistakes": [
+          "Ringing ten dots but forgetting the dots left outside.",
+          "Miscounting when counting every dot one by one."
+        ],
+        "mins": 3,
+        "lines": 0,
+        "draw_strokes": 14
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Fill in the missing numbers to make the next ten.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "7 + ___ = 10",
+            "ans": "3",
+            "val": 3
+          },
+          {
+            "l": "b",
+            "text": "18 + ___ = 20",
+            "ans": "2",
+            "val": 2
+          },
+          {
+            "l": "c",
+            "text": "26 + ___ = 30",
+            "ans": "4",
+            "val": 4
+          },
+          {
+            "l": "d",
+            "text": "39 + ___ = 40",
+            "ans": "1",
+            "val": 1
+          }
+        ],
+        "answer": "3, 2, 4, 1",
+        "val": [
+          3,
+          2,
+          4,
+          1
+        ],
+        "hint": "Look at the ones digit. How many more ones make a full ten?",
+        "solution": "(a) 7 and 3 make 10. (b) 18 is 1 ten and 8 ones, and 8 and 2 make 10, so 18 + 2 = 20. (c) 6 and 4 make 10, so 26 + 4 = 30. (d) 9 and 1 make 10, so 39 + 1 = 40.",
+        "mistakes": [
+          "Writing the next ten itself (20 for part b).",
+          "Counting from the tens digit instead of the ones digit."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Add 28 + 6. Fill in the blanks.",
+        "visual": {
+          "type": "bundles",
+          "tens": 2,
+          "ones": 8,
+          "style": "kit"
+        },
+        "parts": [
+          {
+            "l": "a",
+            "text": "28 needs ___ more to make 30.",
+            "ans": "2",
+            "val": 2
+          },
+          {
+            "l": "b",
+            "text": "6 is 2 and ___.",
+            "ans": "4",
+            "val": 4
+          },
+          {
+            "l": "c",
+            "text": "28 + 6 = ___",
+            "ans": "34",
+            "val": 34
+          }
+        ],
+        "answer": "2 more; 6 = 2 and 4; 28 + 6 = 34",
+        "val": [
+          2,
+          4,
+          34
+        ],
+        "hint": "Take 2 from the 6 to fill up 28 to 30. How many are left of the 6?",
+        "solution": "28 needs 2 more to make 30. Split 6 into 2 and 4. 28 + 2 = 30, and 30 + 4 = 34.",
+        "mistakes": [
+          "Writing 36: adding all 6 after reaching 30, when 2 of the 6 were already used.",
+          "Splitting 6 into 2 and 3 or another wrong pair."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Add 35 + 7. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "35 needs ___ more to make 40.",
+            "ans": "5",
+            "val": 5
+          },
+          {
+            "l": "b",
+            "text": "35 + 7 = ___",
+            "ans": "42",
+            "val": 42
+          }
+        ],
+        "answer": "5 more; 35 + 7 = 42",
+        "val": [
+          5,
+          42
+        ],
+        "hint": "How many more make the next ten after 35? Take that many from the 7.",
+        "solution": "35 needs 5 more to make 40. 7 is 5 and 2. 35 + 5 = 40, and 40 + 2 = 42.",
+        "mistakes": [
+          "Writing 47 (adding 7 to the 4 tens).",
+          "Forgetting the 2 left over after the ten."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Add.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "9 + 6 = ___",
+            "ans": "15",
+            "val": 15
+          },
+          {
+            "l": "b",
+            "text": "18 + 5 = ___",
+            "ans": "23",
+            "val": 23
+          },
+          {
+            "l": "c",
+            "text": "27 + 5 = ___",
+            "ans": "32",
+            "val": 32
+          },
+          {
+            "l": "d",
+            "text": "47 needs ___ more to make 50. 47 + 6 = ___",
+            "ans": "3 and 53",
+            "val": [
+              3,
+              53
+            ]
+          }
+        ],
+        "answer": "15, 23, 32, 3 more, 53",
+        "val": [
+          15,
+          23,
+          32,
+          3,
+          53
+        ],
+        "hint": "Fill in the missing numbers to make the next ten. Take that many from the second number. Then add what is left.",
+        "solution": "(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 27 + 3 = 30, 30 + 2 = 32. (d) 47 needs 3 more to make 50, 6 is 3 and 3, so 47 + 3 = 50 and 50 + 3 = 53.",
+        "mistakes": [
+          "Moving the right amount to make the ten but then adding the whole second number.",
+          "Making a ten with the wrong number (for example 9 + 6 = 9 + 4 + 2)."
+        ],
+        "mins": 3.5,
+        "lines": 0
+      },
+      {
+        "id": "S7",
+        "page": 2,
+        "tier": "start",
+        "text": "Siti adds 8 + 6. Here is her working: 8 + 2 = 10, then 10 + 6 = 16. Answer (a), (b) and (c).",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is Siti right? Circle Right or Wrong.",
+            "ans": "Wrong",
+            "val": "wrong"
+          },
+          {
+            "l": "b",
+            "text": "The right answer is ___.",
+            "ans": "14",
+            "val": 14
+          },
+          {
+            "l": "c",
+            "text": "In her second step, 10 + 6 should be 10 + ___.",
+            "ans": "4",
+            "val": 4
+          }
+        ],
+        "answer": "Wrong. The right answer is 14. 10 + 6 should be 10 + 4: she moved 2 from the 6, so only 4 are left.",
+        "val": [
+          14
+        ],
+        "hint": "Siti moved 2 from the 6 to the 8. How many are left in the 6?",
+        "solution": "8 + 2 = 10 uses 2 of the 6. Only 4 are left, so the sum is 10 + 4 = 14. Siti added all 6 again.",
+        "mistakes": [
+          "Saying she is right because 10 + 6 looks like a good sum.",
+          "Writing 14 without saying what she forgot (a spoken reason is fine)."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei adds 4 + 9 + 6. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Two numbers that make 10 are ___ and ___.",
+            "ans": "4 and 6",
+            "val": [
+              4,
+              6
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The total is ___.",
+            "ans": "19",
+            "val": 19
+          }
+        ],
+        "answer": "4 and 6 make 10. The total is 19.",
+        "val": [
+          4,
+          6,
+          19
+        ],
+        "hint": "Look for two numbers that join to make 10. They do not have to be next to each other.",
+        "solution": "4 and 6 make 10. 10 + 9 = 19. Check the long way: 4 + 9 = 13, and 13 + 6 = 19.",
+        "mistakes": [
+          "Adding the first two numbers (4 + 9) and stopping or slipping.",
+          "Thinking the pair must sit side by side."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Add 8 + 5 + 2 + 7. Show your working on the lines.",
+        "parts": [
+          {
+            "l": "",
+            "text": "The total is ___.",
+            "ans": "22",
+            "val": 22
+          }
+        ],
+        "answer": "22 (8 + 2 = 10, 5 + 7 = 12, 10 + 12 = 22)",
+        "val": [
+          22
+        ],
+        "hint": "Find two numbers that make 10 first. Then add the other two.",
+        "solution": "8 + 2 = 10. 5 + 7 = 12 (5 + 5 + 2). 10 + 12 = 22.",
+        "mistakes": [
+          "Adding from left to right and losing track.",
+          "Using a number twice or leaving one out."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Circle the sum that does not make 30. Then write how you know.",
+        "parts": [],
+        "answer": "19 + 12 (it makes 31). The ones 9 and 2 make 11, not 10.",
+        "val": [
+          "19 + 12",
+          31
+        ],
+        "hint": "Look at the ones digits only. Which pair of ones does not make 10?",
+        "solution": "7 + 3 = 10, 8 + 2 = 10 and 6 + 4 = 10, so those make 30. 9 + 2 = 11, so 19 + 12 is 31.",
+        "mistakes": [
+          "Adding every sum one by one and slipping.",
+          "Choosing 18 + 12 because 18 looks big."
+        ],
+        "mins": 3,
+        "lines": 3,
+        "choices": [
+          "17 + 13",
+          "18 + 12",
+          "19 + 12",
+          "16 + 14"
+        ]
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether? Show your working on the lines.",
+        "parts": [
+          {
+            "l": "",
+            "text": "Ben has ___ marbles altogether.",
+            "ans": "64",
+            "val": 64
+          }
+        ],
+        "answer": "64 (18 + 12 = 30, 30 + 34 = 64)",
+        "val": [
+          64
+        ],
+        "hint": "Which two numbers make a tens number? Add those first.",
+        "solution": "18 + 12 = 30. 30 + 34 = 64. The order does not change the total.",
+        "mistakes": [
+          "Leaving out one group of marbles.",
+          "Adding 18 + 34 first and slipping on the ten."
+        ],
+        "mins": 4,
+        "lines": 2
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Then change one number. Show your working on the lines.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The total is ___.",
+            "ans": "80",
+            "val": 80
+          },
+          {
+            "l": "b",
+            "text": "Change the 3 so the total is 90. The new number is ___.",
+            "ans": "13",
+            "val": 13
+          }
+        ],
+        "answer": "(a) 80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40). (b) 13: 80 + 10 = 90, so the 3 changes to 13.",
+        "val": [
+          80,
+          13
+        ],
+        "hint": "Which numbers have ones that make 10? Try 8 and 2, 7 and 3. For (b), how much must the total go up?",
+        "solution": "(a) 18 + 12 = 30. 7 + 3 = 10. 23 + 17 = 40. 30 + 10 + 40 = 80. Another way: 7 + 23 = 30, 18 + 12 = 30, 3 + 17 = 20, total 80. (b) The total must go up from 80 to 90, which is 10 more. The 3 must become 3 + 10 = 13.",
+        "mistakes": [
+          "Adding left to right and losing the running total.",
+          "Using a number twice or leaving one out.",
+          "Changing the 3 to 10 (the total goes up by 7, not 10)."
+        ],
+        "mins": 6,
+        "lines": 3
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Look at this sum: 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1. Fill in a and b.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The total of 1 to 9 is ___.",
+            "ans": "45",
+            "val": 45
+          },
+          {
+            "l": "b",
+            "text": "The total of 1 to 10 is ___.",
+            "ans": "55",
+            "val": 55
+          }
+        ],
+        "answer": "45 and 55 (four pairs of 10, and the 5 is left)",
+        "val": [
+          45,
+          55
+        ],
+        "hint": "Pair 1 with 9, then 2 with 8. How many pairs can you make? Which number has no partner?",
+        "solution": "1 + 9, 2 + 8, 3 + 7 and 4 + 6 make four tens: 40. The 5 has no partner. 40 + 5 = 45. Adding 10 makes 55.",
+        "mistakes": [
+          "Forgetting the 5 in the middle has no partner.",
+          "Making only three pairs."
+        ],
+        "mins": 6,
+        "lines": 3
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Write a sum of 6 numbers that makes 100. Many answers are right. Show your working on the lines.",
+        "parts": [],
+        "answer": "Any six numbers that total 100. For example 45 + 5 + 20 + 17 + 3 + 10 = 100 (45 + 5 = 50, 17 + 3 = 20, 20 + 10 = 30).",
+        "val": "open",
+        "hint": "Start with a pair that makes 50, such as 45 and 5. Then choose pairs that make 20 and 30.",
+        "solution": "Choose pairs first: 50 + 20 + 30 = 100. Then split each into two numbers, for example 45 + 5, 17 + 3, 20 + 10. Add them to check.",
+        "mistakes": [
+          "Choosing numbers that total 90 or 110: add every number to check.",
+          "Using fewer than 6 numbers."
+        ],
+        "mins": 6,
+        "lines": 4
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Move the fewest",
+      "first": "Draw 9 dots and 6 dots. To make a ten with the 9, how many dots do you move? Now try 8 + 7.",
+      "text": "Pick two numbers from 5 to 9. Draw their dots. Try making a ten with the first number, then with the second. Which way moves fewer dots? Does the same way always move fewer? Write how you know.",
+      "lines": 4,
+      "answer": "Fill up the bigger number: it has the fewest empty spaces, so you move the fewest dots. The number moved is 10 minus the bigger number. 9 + 6: move 1, not 4. 8 + 7: move 2, not 3. If the two numbers are the same (7 + 7), either way moves 3.",
+      "val": [
+        "fill the bigger number",
+        "moves = 10 - bigger number",
+        "equal numbers: either way"
+      ],
+      "look_for": "A child who tries several pairs, records how many dots moved each way, and notices the bigger number is closer to ten. Credit any clear reason, such as the bigger number has fewer empty spaces.",
+      "mistakes": [
+        "Thinking you must always fill the number written first.",
+        "Not testing a pair with two equal numbers (7 + 7)."
+      ],
+      "mins": 8
+    }
   },
   "talk": {
-   "say": "Recording: pause. Tell a grown-up who is right, and show them with counters.",
-   "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+    "question": "Mei and Ali both add 8 + 6. Mei moves 2 counters from the 6 to the 8. Ali moves 4 counters from the 8 to the 6. Is Mei right? Is Ali right? Use counters to show.",
+    "starter": "I think ... because ...",
+    "answer": "Both are right. Mei gets 10 and 4. Ali gets 4 and 10. Both are 14, because moving counters does not change how many there are. Mei moved fewer counters (2), so her way is quicker.",
+    "look_for": "A reason about moving: nothing is added or lost, so the total stays 14. Not just both are 14."
   },
-  "exit": {
-   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
-   "action": "Pause. Do the exit ticket alone, then play to check it."
-  },
-  "look": {
-   "say": "Recording: pause and fill in your look-back box. You can pass.",
-   "action": "Pause. Fill in the look-back box, or pass."
-  },
-  "flex": {
-   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
-   "action": "Show a grown-up your workbook and tell them one thing you found out."
-  }
- },
- "script": {
-  "segments": [
-   {
-    "part": "opening",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-title"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Good morning, inquirers! Cameras on if you like, pencil ready, a few small things and your kit pieces on the table. Today we learn a trick for adding without counting one by one: make a ten first."
-     },
-     {
-      "k": "DO",
-      "text": "Greet each child by first name and check their camera shows their page and hands.",
-      "s": 30
-     },
-     {
-      "k": "NOTE",
-      "text": "Remind the group once, in one line, that the lesson is recorded (you and the screen only) and that a child may keep the camera off. The routine and the four inquirer rules were introduced in Lesson 1: do not re-teach them."
-     }
-    ]
-   },
-   {
-    "part": "remember",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-rem1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Fingers and a ten-frame. A ten-frame has ten spaces. When it is full, that is a ten. I say how many counters are in the frame. You show me, on your fingers, how many more fill it up."
-     },
-     {
-      "k": "ASK",
-      "text": "Seven counters. How many more to make ten?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Four?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Nine?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Five?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Two?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem2"
-     },
-     {
-      "k": "SAY",
-      "text": "Now bigger numbers. Eighteen is one ten and eight ones. How many more ones make the next ten?"
-     },
-     {
-      "k": "ASK",
-      "text": "Eighteen. How many more to make twenty?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Fourteen, to make twenty?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Twenty-six, to make thirty?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Thirty-nine, to make forty?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem3"
-     },
-     {
-      "k": "SAY",
-      "text": "Last one. Tens and ones put together. Say the tens first, then the ones."
-     },
-     {
-      "k": "ASK",
-      "text": "Thirty and six more makes?",
-      "resp": 10
-     },
-     {
-      "k": "ASK",
-      "text": "Forty and two more?",
-      "resp": 10
-     },
-     {
-      "k": "ASK",
-      "text": "Fifty and nine more?",
-      "resp": 10
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child hesitates on how many more make ten, count the empty spaces in the ten-frame slowly with them. For 26 to 30, show 26 as 2 bars and 6 squares on the kit and count the squares needed to fill the next bar. Do not move on until most children have answered; this idea is the lesson."
-     },
-     {
-      "k": "NOTE",
-      "text": "Answers: 3, 6, 1, 5, 8 then 2, 6, 4, 1 then 36, 42, 59. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and ten ones making a ten; the pictures do the rest."
-     }
-    ]
-   },
-   {
-    "part": "sneak",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-sneak"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle one. Count the counters. How many are there altogether? You may draw rings round groups."
-     },
-     {
-      "k": "WORK",
-      "text": "Children count the counters and write the number on their own paper.",
-      "s": 45
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle two. Ben has 9 red counters and 5 blue counters. He moves 1 blue counter to the red counters. Now he has 10 red counters and 4 blue counters. Is the total still the same? Circle Yes or No. Then write how you know."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write or draw their answer.",
-      "s": 55
-     },
-     {
-      "k": "HOLD",
-      "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-      "s": 25
-     },
-     {
-      "k": "SAY",
-      "text": "Thank you. We will come back to puzzle two later."
-     },
-     {
-      "k": "NOTE",
-      "text": "Puzzle 1 answer: 12 counters. Puzzle 2 answer: yes, nothing was added or taken away; 9 + 5 and 10 + 4 are both 14. Look for good ideas to praise later (a child who said we only moved one counter). Do not write scores or keep a list."
-     }
-    ]
-   },
-   {
-    "part": "explore",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-explore1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Today your hands are the teachers. Draw a ten-frame on your paper: a box with two rows of five spaces. Or lay a tens bar from your kit in front of you. A tens bar has ten spaces too."
-     },
-     {
-      "k": "SAY",
-      "text": "Put 8 small things on your frame. Put 6 of another kind beside it."
-     },
-     {
-      "k": "ASK",
-      "text": "How many empty spaces are left in the frame?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "Now fill the frame. Move some things across from the six. Count what is left outside."
-     },
-     {
-      "k": "WORK",
-      "text": "Children move 2 things into the frame and count 4 left outside.",
-      "s": 45
-     },
-     {
-      "k": "ASK",
-      "text": "Tell me: how many did you move, and how many are left outside?",
-      "resp": 30
-     },
-     {
-      "k": "SAY",
-      "text": "So eight and six is the same as ten and four. Say it with me: eight and six is ten and four. Ten and four is fourteen."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore2"
-     },
-     {
-      "k": "SAY",
-      "text": "Round two. I call a sum. You build it on your frame and make a ten. Tell me how many you moved, and ten and what."
-     },
-     {
-      "k": "SAY",
-      "text": "Nine and four."
-     },
-     {
-      "k": "WORK",
-      "text": "Children build 9 + 4 and fill the frame: move 1, ten and 3.",
-      "s": 40
-     },
-     {
-      "k": "SAY",
-      "text": "Seven and five."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 7 + 5: move 3, ten and 2.",
-      "s": 40
-     },
-     {
-      "k": "SAY",
-      "text": "Six and eight."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 6 + 8: fill the 8, move 2, ten and 4.",
-      "s": 45
-     },
-     {
-      "k": "SAY",
-      "text": "Nine and seven."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 9 + 7: move 1, ten and 6.",
-      "s": 40
-     },
-     {
-      "k": "ASK",
-      "text": "Which number did you fill up each time? Why that one?",
-      "resp": 40
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore3"
-     },
-     {
-      "k": "SAY",
-      "text": "Round three. Bigger numbers. Build twenty-eight with your kit: 2 tens bars and 8 ones squares. Put 6 more squares beside it."
-     },
-     {
-      "k": "ASK",
-      "text": "How many more squares fill the 8 up to another ten?",
-      "resp": 20
-     },
-     {
-      "k": "WORK",
-      "text": "Children move 2 squares to make a third bar: 3 bars and 4 squares.",
-      "s": 45
-     },
-     {
-      "k": "ASK",
-      "text": "What number is that?",
-      "resp": 12
-     },
-     {
-      "k": "SAY",
-      "text": "Now thirty-seven and five."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 37 + 5: move 3 squares, 4 bars and 2 squares.",
-      "s": 50
-     },
-     {
-      "k": "SAY",
-      "text": "One more. Forty-six and seven."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 46 + 7: move 4 squares, 5 bars and 3 squares.",
-      "s": 50
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore4"
-     },
-     {
-      "k": "ASK",
-      "text": "What did you notice? Which number did we fill up? How many did we move? Why do we want a ten?",
-      "resp": 50
-     },
-     {
-      "k": "SAY",
-      "text": "A ten is easy to count. When we make a ten first, what is left is small. That is the whole trick."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who adds all of the second number after the ten (8 + 6 = 10 + 6): ask how many were in the 6 before, and how many did you move out. Count the counters left outside the frame."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who has too few things: use kit squares for both groups, or draw dots in a ten-frame."
-     },
-     {
-      "k": "NOTE",
-      "text": "Main room only: no breakout rooms in this lesson, so you can see every camera. Pairs are optional: a grown-up may check the building. Building with the ten-frame and kit is for every child; the what-if card is for any child who wants it, and nobody is named. Answers: 13, 12, 14, 16, then 34, 42, 53."
-     }
-    ]
-   },
-   {
-    "part": "mini",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-m1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look. Eight and six. We want a ten. The eight is nearly full."
-     },
-     {
-      "k": "ASK",
-      "text": "How many more does eight need to make ten?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m2"
-     },
-     {
-      "k": "SAY",
-      "text": "So we split the six into two and four. Eight and two make ten. Then ten and four is fourteen. We moved two counters, and none were lost."
-     },
-     {
-      "k": "ASK",
-      "text": "Why is the total still the same?",
-      "resp": 25
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3"
-     },
-     {
-      "k": "SAY",
-      "text": "Now twenty-eight and six. Twenty-eight needs two more to make thirty. Split the six into two and four. Twenty-eight and two is thirty. Thirty and four is thirty-four."
-     },
-     {
-      "k": "ASK",
-      "text": "Which number did we fill up, and why?",
-      "resp": 20
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3b"
-     },
-     {
-      "k": "SAY",
-      "text": "Six and eight. We could fill the frame with the six, or with the eight. Look at both pictures."
-     },
-     {
-      "k": "ASK",
-      "text": "Which way moves fewer counters?",
-      "resp": 25
-     },
-     {
-      "k": "SAY",
-      "text": "Fill the number that is nearly full. The eight only needs two. Either way, the total is fourteen."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m4"
-     },
-     {
-      "k": "READ",
-      "text": "Your turn. Add. Nine and four. Seven and six. Eighteen and five. Forty-five and seven."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write four answers.",
-      "s": 80
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m4a"
-     },
-     {
-      "k": "READ",
-      "text": "Thirteen, thirteen, twenty-three, fifty-two. Mark your own in another colour."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5"
-     },
-     {
-      "k": "SAY",
-      "text": "Last idea. Three, eight and seven. Look for two numbers that make ten. They do not have to be next to each other."
-     },
-     {
-      "k": "ASK",
-      "text": "Which two make ten?",
-      "resp": 20
-     },
-     {
-      "k": "SAY",
-      "text": "Three and seven make ten. Ten and eight is eighteen. The order does not change the total."
-     },
-     {
-      "k": "NOTE",
-      "text": "Key words to use every time: ten-frame, make a ten, split, move. Do not teach the column (written) method today: the program teaches the mental method first. Do not teach carrying."
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child fills the wrong number or moves too many, ask: which number is nearly full? How many empty spaces does it have? Then count the empty spaces together."
-     }
-    ]
-   },
-   {
-    "part": "break",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-break"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Stand up and get a sip of water. We stomp the number that makes ten. I say seven, you stomp three times."
-     },
-     {
-      "k": "WORK",
-      "text": "Call 7, 4, 9, 2, 6, 8. Children stomp (or tiptoe or tap) the number that makes ten and say it aloud together.",
-      "s": 150
-     }
-    ]
-   },
-   {
-    "part": "work",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Page 1, Start here. Question 1: fill the first ten-frame and add 9 and 4. Question 2: draw 7 dots and 6 dots, ring ten, and write the sums. Question 3: how many more make the next ten?"
-     },
-     {
-      "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 480
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1ans"
-     },
-     {
-      "k": "READ",
-      "text": "Question 1: one, three, thirteen. Question 2: three, thirteen. Question 3: three, two, four, one. Mark your own page in another colour."
-     },
-     {
-      "k": "SAY",
-      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2"
-     },
-     {
-      "k": "READ",
-      "text": "Page 2. Question 4: add 6 to 28. Question 5: add 7 to 35. Question 6: four sums. Question 7: Siti adds 8 and 6. Is she right or wrong? Circle one. Then find her mistake in the second step."
-     },
-     {
-      "k": "WORK",
-      "text": "Page 2, questions 4 to 7.",
-      "s": 540
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2ans"
-     },
-     {
-      "k": "READ",
-      "text": "Two, four, thirty-four. Five, forty-two. Fifteen, twenty-three, thirty-two, three more, fifty-three. Question 7: Siti is wrong. She should write fourteen, because she forgot that two of the six were already used."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-choice"
-     },
-     {
-      "k": "SAY",
-      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
-     },
-     {
-      "k": "WORK",
-      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-      "s": 300
-     },
-     {
-      "k": "STUCK",
-      "text": "Q1: count the empty spaces in the first frame. Q2: draw the 7 dots in a row, then 6 more, and ring the 7 and 3 more. Q4 to Q6: ask how many more make the next ten, then how many are left of the second number. Q7: ask how many were in the 6 before and how many Siti moved."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
-     },
-     {
-      "k": "NOTE",
-      "text": "Think harder is for the make-a-ten idea in a new setting (three or four numbers). Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree."
-     }
-    ]
-   },
-   {
-    "part": "talk",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-talk"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Mei and Ali both add eight and six. Mei moves two counters from the six to the eight. Ali moves four counters from the eight to the six. Is Mei right? Is Ali right? Use counters to show."
-     },
-     {
-      "k": "WORK",
-      "text": "Build it on your ten-frame both ways. How many does each way move?",
-      "s": 50
-     },
-     {
-      "k": "WORK",
-      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 50
-     },
-     {
-      "k": "ASK",
-      "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 90
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-sneakans"
-     },
-     {
-      "k": "SAY",
-      "text": "Remember puzzle two? Ben moved one counter from the blue to the red. Is the total the same? Yes. Moving counters does not change how many there are."
-     },
-     {
-      "k": "ASK",
-      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
-      "resp": 20
-     },
-     {
-      "k": "NOTE",
-      "text": "Model answer: both are right. Mei gets 10 and 4, Ali gets 4 and 10, and both are 14 because nothing is added or lost. Mei moved fewer, so her way is quicker. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
-     }
-    ]
-   },
-   {
-    "part": "exit",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-exit"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
-     },
-     {
-      "k": "WORK",
-      "text": "Children answer E1 to E3 on their own.",
-      "s": 150
-     },
-     {
-      "k": "HOLD",
-      "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-      "s": 25
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-exitans"
-     },
-     {
-      "k": "READ",
-      "text": "Thirteen. Forty-three. Nineteen, and six and four make ten."
-     },
-     {
-      "k": "SAY",
-      "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
-     },
-     {
-      "k": "NOTE",
-      "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 6, in the open session, no names. Do not read out any child's result."
-     }
-    ]
-   },
-   {
-    "part": "look",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-look"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
-     },
-     {
-      "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 100
-     }
-    ]
-   },
-   {
-    "part": "flex",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-end"
-     },
-     {
-      "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Tens Jump, Ones Hop. You need a pencil and paper. Goodbye, and thank you to the grown-ups."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-opt",
-      "optional": true
-     },
-     {
-      "k": "SAY",
-      "text": "Optional, only if you are on time: what if both numbers are nine? Add nine and nine. How many do you move to make a ten?",
-      "optional": true
-     },
-     {
-      "k": "WORK",
-      "text": "Short think time, then take two answers.",
-      "s": 90,
-      "optional": true
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-menu",
-      "optional": true
-     },
-     {
-      "k": "SAY",
-      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
-      "optional": true
-     },
-     {
-      "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 18 (move 1, ten and 8). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
-     }
-    ]
-   }
-  ]
- },
- "slides": [
-  {
-   "id": "s-title",
-   "part": "opening",
-   "kind": "title",
-   "title": "Make-a-Ten Adding",
-   "blocks": [
+  "exit": [
     {
-     "t": "card",
-     "head": "TODAY WE WILL",
-     "items": [
-      "Make a ten first, then add what is left."
-     ]
-    }
-   ],
-   "note": "Lesson 5 of Term 1, 90 minutes. Objective: add by making a ten first (8 + 6, 28 + 6), and find pairs that make ten in longer sums. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
-   "subtitle": "Addition: make tens first",
-   "mascot": {
-    "size": "l",
-    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
-   }
-  },
-  {
-   "id": "s-rem1",
-   "part": "remember",
-   "kind": "light",
-   "title": "Warm-up: fill the ten-frame",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Show it on your fingers"
-    },
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": 7,
-     "extra": 0
-    },
-    {
-     "t": "p",
-     "text": "There are 7 counters in the frame. How many more make 10?"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      7,
-      4,
-      9,
-      5,
-      2
-     ]
-    }
-   ],
-   "note": "A ten-frame has ten spaces. Count the empty spaces to see how many more make ten. Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 5 needs 5, 2 needs 8. Hands up on camera is fine. No writing, no marks. A child who is new can count the empty spaces in the picture.",
-   "mascot": {
-    "size": "s",
-    "say": "Fingers ready? Let's go!"
-   }
-  },
-  {
-   "id": "s-rem2",
-   "part": "remember",
-   "kind": "light",
-   "title": "How far to the next ten?",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 1,
-     "ones": 8,
-     "style": "kit",
-     "label": "18 is one ten and 8 ones"
-    },
-    {
-     "t": "p",
-     "text": "18 needs ___ more to make 20."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      18,
-      14,
-      26,
-      39
-     ]
-    }
-   ],
-   "note": "A bar is a ten and each square is a one. 18 is one ten and 8 ones, so 2 more ones make another ten: 20. Then ask 14 (6 more to make 20), 26 (4 more to make 30) and 39 (1 more to make 40). Answers: 2, 6, 4, 1. These are number bonds to 20 and to the next ten. Show the kit squares filling the next bar if a child is unsure."
-  },
-  {
-   "id": "s-rem3",
-   "part": "remember",
-   "kind": "light",
-   "title": "Tens and ones together",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 3,
-     "ones": 6,
-     "label": "30 and 6 more is 36"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "30 + 6",
-      "40 + 2",
-      "50 + 9"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Say the tens first, then the ones."
-    }
-   ],
-   "note": "Answers: 36, 42, 59. Say the tens word slowly, then the ones: thirty... six. This is the bridge to adding to a tens number: after we make a ten we say, for example, thirty and four. A child who has not met tens and ones only needs to hear and say the number words. Show 30 as three bundles of ten sticks if a child is unsure."
-  },
-  {
-   "id": "s-sneak",
-   "part": "sneak",
-   "kind": "light",
-   "title": "Sneak-peek puzzles",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
-    },
-    {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "card",
-        "head": "PUZZLE 1: anyone can try",
-        "items": [
-         "Count the counters.",
-         "How many are there altogether?",
-         "You may draw rings round groups."
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": 7,
-        "extra": 5
-       }
+      "id": "E1",
+      "text": "Add.",
+      "parts": [
+        {
+          "l": "",
+          "text": "8 + 7 = ___",
+          "ans": "15",
+          "val": 15
+        }
       ],
-      [
-       {
-        "t": "card",
-        "head": "PUZZLE 2: think",
-        "items": [
-         "Ben has 9 red counters and 5 blue counters.",
-         "He moves 1 blue counter to the red counters.",
-         "Now he has 10 red counters and 4 blue counters.",
-         "Is the total still the same? Circle Yes or No. Then write how you know."
-        ]
-       }
-      ]
-     ]
-    }
-   ],
-   "note": "Puzzle 1 (12 counters, 7 and 5 in two ten-frames) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea: moving does not change the total. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: 12; yes (9 + 5 and 10 + 4 are both 14). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
-  },
-  {
-   "id": "s-explore1",
-   "part": "explore",
-   "kind": "light",
-   "title": "Explore: fill the ten-frame",
-   "blocks": [
-    {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "Draw a ten-frame on paper: two rows of five boxes. Or lay a tens bar from your kit.",
-      "Put 8 small things on it.",
-      "Put 6 other things beside it.",
-      "Move some across to fill the frame. How many did you move?"
-     ]
-    },
-    {
-     "t": "card",
-     "head": "WHAT IF?",
-     "items": [
-      "Fill the frame a different way. What do you notice?"
-     ]
-    }
-   ],
-   "note": "Round 1, about 5 minutes. Objects first, no writing yet. Children put 8 things on the frame, 6 of another kind beside it, then move 2 across to fill the frame. They count the 4 left outside and say: eight and six is ten and four. A tens bar from the kit page is a ten-frame in a line: ten spaces. A child with few things can use kit squares of two colours (pencil dots on half of them). The what-if card previews the Investigation (filling the other frame) and is open to everyone; no child is named for choosing it."
-  },
-  {
-   "id": "s-explore2",
-   "part": "explore",
-   "kind": "light",
-   "title": "Your turn: make a ten",
-   "blocks": [
-    {
-     "t": "p",
-     "text": "Use your ten-frame. For each sum, say how many you move, then ten and ___."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "9 + 4",
-      "7 + 5",
-      "6 + 8",
-      "9 + 7"
-     ]
-    },
-    {
-     "t": "chip",
-     "text": "I move ..., so it is ten and ..."
-    },
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": 0,
-     "extra": 0
-    }
-   ],
-   "note": "Round 2, about 5 minutes, main room. Call each sum aloud and show it on the slide. Children build it on their frame and say how many they moved. Answers: 9 + 4: move 1, ten and 3 (13). 7 + 5: move 3, ten and 2 (12). 6 + 8: fill the 8, move 2, ten and 4 (14). 9 + 7: move 1, ten and 6 (16). On 6 + 8 some children fill the 6 (move 4): that is fine and works too; it is just more moves. Do not name children."
-  },
-  {
-   "id": "s-explore3",
-   "part": "explore",
-   "kind": "light",
-   "title": "Build 28 + 6 with the kit",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 2,
-     "ones": 8,
-     "style": "kit",
-     "label": "28 is 2 bars and 8 squares"
-    },
-    {
-     "t": "p",
-     "text": "Put 6 more squares beside it. Move squares to fill the 8 up to a ten."
-    }
-   ],
-   "note": "Round 3, about 5 minutes. Children build 28 with 2 tens bars and 8 ones squares, and put 6 squares beside it. Two squares fill the 8 up to a ten: that makes a third bar. Now there are 3 bars and 4 squares: 34. Then 37 + 5 (move 3: 4 bars and 2 squares, 42) and 46 + 7 (move 4: 5 bars and 3 squares, 53). Each child has 20 ones squares, enough for all of these. Everyone holds their build to the camera on a count of three, if you wish."
-  },
-  {
-   "id": "s-explore4",
-   "part": "explore",
-   "kind": "light",
-   "title": "What did we notice?",
-   "blocks": [
-    {
-     "t": "list",
-     "ordered": false,
-     "items": [
-      "Which number did we fill up? Why?",
-      "How many did we move each time?",
-      "What do we say after the ten: ten and ...?"
-     ]
-    }
-   ],
-   "note": "Take one or two answers from volunteers. Key ideas: we fill up the number that is nearly full; the number we move is the number of empty spaces; after the ten we say ten and whatever is left; moving does not change the total. Repeat a child's answer in your own words so the recording picks it up."
-  },
-  {
-   "id": "s-m1",
-   "part": "mini",
-   "kind": "light",
-   "title": "Fill the ten first",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": 8,
-     "extra": 6
-    },
-    {
-     "t": "say",
-     "text": "8 needs 2 more to make 10"
-    }
-   ],
-   "note": "8 + 6. The first frame has 2 empty spaces, so 8 needs 2 more. Ask: how many more does 8 need to make 10? Answer: 2."
-  },
-  {
-   "id": "s-m2",
-   "part": "mini",
-   "kind": "light",
-   "title": "Split the 6",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": 10,
-     "extra": 4
-    },
-    {
-     "t": "say",
-     "text": "8 + 6 = 8 + 2 + 4 = 10 + 4 = 14"
-    }
-   ],
-   "note": "Split 6 into 2 and 4. 8 + 2 = 10. Then 10 + 4 = 14. Ask: why is the total still the same? We only moved counters from one frame to the other; none were added and none were lost."
-  },
-  {
-   "id": "s-m3",
-   "part": "mini",
-   "kind": "light",
-   "title": "Add to a tens number: 28 + 6",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 2,
-     "ones": 8,
-     "style": "kit",
-     "label": "28"
-    },
-    {
-     "t": "p",
-     "text": "28 needs 2 more to make 30. Split 6 into 2 and 4."
-    },
-    {
-     "t": "say",
-     "text": "28 + 6 = 28 + 2 + 4 = 30 + 4 = 34"
-    }
-   ],
-   "note": "Think aloud: 28 is 2 tens and 8 ones. 8 and 2 make a ten, so 28 and 2 make 30. 6 is 2 and 4. 30 and 4 more is 34. Say the tens first. Ask: which number did we fill up? Why? Answer: 28, because it is nearly at the next ten."
-  },
-  {
-   "id": "s-m3b",
-   "part": "mini",
-   "kind": "light",
-   "title": "Which number do we fill?",
-   "blocks": [
-    {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": 8,
-        "extra": 6
-       },
-       {
-        "t": "p",
-        "text": "Fill the 8: move 2"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": 6,
-        "extra": 8
-       },
-       {
-        "t": "p",
-        "text": "Fill the 6: move 4"
-       }
-      ]
-     ]
-    },
-    {
-     "t": "say",
-     "text": "Fill the number that is nearly full"
-    }
-   ],
-   "note": "6 + 8 can be made into a ten two ways. Fill the frame with the 8 (it has 2 empty spaces, so move 2: ten and 4) or fill the frame with the 6 (it has 4 empty spaces, so move 4: ten and 4 again). Both give 14. The quicker way moves fewer counters: fill the number that is nearly full. This is the seed of the Investigation, so do not push the rule: ask and listen."
-  },
-  {
-   "id": "s-m4",
-   "part": "mini",
-   "kind": "light",
-   "title": "Your turn: add",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Write on your paper. Make a ten first."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "9 + 4",
-      "7 + 6",
-      "18 + 5",
-      "45 + 7"
-     ]
-    }
-   ],
-   "note": "Each child writes four answers on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Some children may find the answer by counting on: that is fine, ask them to try a ten as well."
-  },
-  {
-   "id": "s-m4a",
-   "part": "mini",
-   "kind": "light",
-   "title": "Check: add",
-   "blocks": [
-    {
-     "t": "table",
-     "header": true,
-     "rows": [
-      [
-       "Sum",
-       "How we made a ten"
-      ],
-      [
-       "9 + 4",
-       "9 + 1 = 10, 10 + 3 = 13"
-      ],
-      [
-       "7 + 6",
-       "7 + 3 = 10, 10 + 3 = 13"
-      ],
-      [
-       "18 + 5",
-       "18 + 2 = 20, 20 + 3 = 23"
-      ],
-      [
-       "45 + 7",
-       "45 + 5 = 50, 50 + 2 = 52"
-      ]
-     ]
-    }
-   ],
-   "note": "Answers: 13, 13, 23, 52. Read each answer and the way to make a ten aloud so a child watching the recording can mark their own work."
-  },
-  {
-   "id": "s-m5",
-   "part": "mini",
-   "kind": "light",
-   "title": "Spot the pair: 3 + 8 + 7",
-   "blocks": [
-    {
-     "t": "numrow",
-     "items": [
-      3,
-      8,
-      7
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Which two numbers make 10? They do not have to be next to each other."
-    },
-    {
-     "t": "say",
-     "text": "3 + 7 = 10, then 10 + 8 = 18"
-    }
-   ],
-   "note": "A worked example for Think harder. In a sum with three numbers, look for two that make ten, even if they are not side by side. 3 + 7 = 10 and 10 + 8 = 18. Check: 3 + 8 = 11 and 11 + 7 = 18, the same. The order does not change the total. Keep it to about a minute and do not teach written column addition."
-  },
-  {
-   "id": "s-break",
-   "part": "break",
-   "kind": "dark",
-   "title": "Stomp to ten",
-   "blocks": [
-    {
-     "t": "p",
-     "text": "I say a number. You stomp how many more make ten."
-    },
-    {
-     "t": "p",
-     "text": "Try it with 7, then 4, then 9, then 2."
-    },
-    {
-     "t": "p",
-     "text": "Stand up. Sip some water."
-    }
-   ],
-   "note": "Four minutes. Stand up on camera. Call 7, 4, 9, 2, 6, 8 (answers 3, 6, 1, 8, 4, 2). Children stomp softly, or tiptoe or tap their fingers in a small space, and say the number aloud. No equipment."
-  },
-  {
-   "id": "s-ws1",
-   "part": "work",
-   "kind": "light",
-   "title": "Workbook page 1: Start here",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Questions 1 to 3. Take your time."
-    },
-    {
-     "t": "qs",
-     "ids": [
-      "S1",
-      "S2",
-      "S3"
-     ],
-     "short": true
-    }
-   ],
-   "note": "Read questions 1 and 2 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 2: draw dots and ring ten of them."
-  },
-  {
-   "id": "s-ws1ans",
-   "part": "work",
-   "kind": "light",
-   "title": "Check page 1",
-   "blocks": [
-    {
-     "t": "answers",
-     "ids": [
-      "S1",
-      "S2",
-      "S3"
-     ]
-    }
-   ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
-  },
-  {
-   "id": "s-ws2",
-   "part": "work",
-   "kind": "light",
-   "title": "Workbook page 2: Start here",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Questions 4 to 7. Take your time."
-    },
-    {
-     "t": "qs",
-     "ids": [
-      "S4",
-      "S5",
-      "S6",
-      "S7"
-     ],
-     "short": true
-    }
-   ],
-   "note": "Read question 7 aloud: it is a spot-the-mistake. Children may use their kit or ten-frame to decide. Question 6 has four sums: children make a ten for each."
-  },
-  {
-   "id": "s-ws2ans",
-   "part": "work",
-   "kind": "light",
-   "title": "Check page 2",
-   "blocks": [
-    {
-     "t": "answers",
-     "ids": [
-      "S4",
-      "S5",
-      "S6",
-      "S7"
-     ]
-    }
-   ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 7 answer: no, Siti forgot that 2 of the 6 were already used, so it is 10 + 4 = 14. Never ask a child to show a wrong answer to the group."
-  },
-  {
-   "id": "s-choice",
-   "part": "work",
-   "kind": "light",
-   "title": "Choose your next page",
-   "blocks": [
-    {
-     "t": "table",
-     "header": true,
-     "rows": [
-      [
-       "Page",
-       "What it is"
-      ],
-      [
-       "Think harder (page 3)",
-       "Pairs that make ten in longer sums"
-      ],
-      [
-       "Go further (page 4)",
-       "Bigger sums and a puzzle to write"
-      ],
-      [
-       "Investigation (page 5)",
-       "Move the fewest"
-      ],
-      [
-       "Check",
-       "Finish and check your own work"
-      ]
-     ]
-    },
-    {
-     "t": "chip",
-     "text": "Everyone may choose. You can swap at any time."
-    }
-   ],
-   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
-  },
-  {
-   "id": "s-talk",
-   "part": "talk",
-   "kind": "light",
-   "title": "Talk and explain",
-   "blocks": [
-    {
-     "t": "card",
-     "head": "MEI AND ALI ADD 8 + 6",
-     "items": [
-      "Mei moves 2 counters from the 6 to the 8.",
-      "Ali moves 4 counters from the 8 to the 6."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Is Mei right? Is Ali right? Use counters to show."
-    },
-    {
-     "t": "chip",
-     "text": "I think ... because ..."
-    }
-   ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: both are right. Mei makes 10 and 4. Ali makes 4 and 10. Both are 14 because moving counters does not change how many there are. Mei moved 2 and Ali moved 4, so Mei's way is quicker. Repeat each child's answer in your own words for the recording."
-  },
-  {
-   "id": "s-sneakans",
-   "part": "talk",
-   "kind": "light",
-   "title": "Back to the sneak-peek",
-   "blocks": [
-    {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": 9,
-        "extra": 5
-       },
-       {
-        "t": "p",
-        "text": "9 + 5"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": 10,
-        "extra": 4
-       },
-       {
-        "t": "p",
-        "text": "10 + 4"
-       }
-      ]
-     ]
-    },
-    {
-     "t": "answer",
-     "text": "Yes! Moving a counter does not change the total. Both are 14."
-    }
-   ],
-   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. Both pictures show 14 counters: Ben moved 1 counter from the blue group to the red group, nothing was added or taken away."
-  },
-  {
-   "id": "s-exit",
-   "part": "exit",
-   "kind": "light",
-   "title": "Exit ticket",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "On your own. No looking back."
-    },
-    {
-     "t": "qs",
-     "ids": [
-      "E1",
-      "E2",
-      "E3"
-     ],
-     "short": true
-    }
-   ],
-   "note": "Children answer on page 5. After the time, everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
-  },
-  {
-   "id": "s-exitans",
-   "part": "exit",
-   "kind": "light",
-   "title": "Check the exit ticket",
-   "blocks": [
-    {
-     "t": "answers",
-     "ids": [
-      "E1",
-      "E2",
-      "E3"
-     ]
-    }
-   ],
-   "note": "Read each answer aloud. Children check their own ticket in a different colour."
-  },
-  {
-   "id": "s-look",
-   "part": "look",
-   "kind": "lookback",
-   "title": "Look-back",
-   "blocks": [
-    {
-     "t": "lookback"
-    }
-   ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
-   "mascot": {
-    "size": "s",
-    "say": "Take your time. You can pass."
-   }
-  },
-  {
-   "id": "s-end",
-   "part": "flex",
-   "kind": "dark",
-   "title": "Well done, inquirers!",
-   "blocks": [
-    {
-     "t": "p",
-     "text": "Show a grown-up one thing you found out today."
-    },
-    {
-     "t": "card",
-     "head": "NEXT LESSON",
-     "items": [
-      "Tens Jump, Ones Hop"
-     ]
-    }
-   ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
-   "mascot": {
-    "size": "l",
-    "say": "Great thinking today!"
-   }
-  },
-  {
-   "id": "s-opt",
-   "part": "flex",
-   "kind": "light",
-   "title": "Go further: what if?",
-   "blocks": [
-    {
-     "t": "p",
-     "text": "Look at 9 + 9. How many do you move to make a ten?"
-    },
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": 9,
-     "extra": 9
-    }
-   ],
-   "note": "Optional, only if you are on time. Answer: 18. Move 1 counter from one frame to the other: 10 and 8. Take two answers and move on. Optional extension: is 9 + 9 the biggest total from two single digits?",
-   "optional": true
-  },
-  {
-   "id": "s-menu",
-   "part": "flex",
-   "kind": "light",
-   "title": "If we have time: pick one",
-   "blocks": [
-    {
-     "t": "table",
-     "header": true,
-     "rows": [
-      [
-       "Activity",
-       "What we do"
-      ],
-      [
-       "Is it always true?",
-       "If the ones of two numbers make 10, is the total always a tens number?"
-      ],
-      [
-       "Make a puzzle",
-       "Write a sum with four numbers for your grown-up, with a pair that makes ten"
-      ],
-      [
-       "Teach it back",
-       "Show how to add 8 + 5 with a ten-frame"
-      ]
-     ]
-    },
-    {
-     "t": "chip",
-     "text": "Optional. Everyone may join."
-    }
-   ],
-   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
-   "optional": true
-  }
- ],
- "tiers": {
-  "start": [
-   {
-    "id": "S1",
-    "page": 1,
-    "tier": "start",
-    "text": "Look at the ten-frames. Fill in the blanks.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "The first frame needs ___ more counters to make 10.",
-      "ans": "1",
-      "val": 1
-     },
-     {
-      "l": "b",
-      "text": "Move them. Now there are 10 and ___ counters.",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "c",
-      "text": "9 + 4 = ___",
-      "ans": "13",
-      "val": 13
-     }
-    ],
-    "visual": {
-     "type": "ten_frame",
-     "filled": 9,
-     "extra": 4
-    },
-    "answer": "1 more; 10 and 3; 9 + 4 = 13",
-    "val": [
-     1,
-     3,
-     13
-    ],
-    "hint": "Count the empty space in the first frame. Move that many counters across.",
-    "solution": "The first frame has 1 empty space, so 9 needs 1 more. Move 1 counter from the 4. The first frame is full (10) and 3 are left. 10 + 3 = 13.",
-    "mistakes": [
-     "Writing 10 and 4: forgetting to take the moved counter away from the 4.",
-     "Counting all the counters again and slipping (12 or 14)."
-    ],
-    "mins": 2,
-    "lines": 0
-   },
-   {
-    "id": "S2",
-    "page": 1,
-    "tier": "start",
-    "text": "Draw 7 dots and 6 dots in the box. Ring 10 dots. Then fill in the blanks.",
-    "draw": true,
-    "parts": [
-     {
-      "l": "",
-      "text": "7 + 6 = 10 + ___",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "",
-      "text": "7 + 6 = ___",
-      "ans": "13",
-      "val": 13
-     }
-    ],
-    "answer": "7 + 6 = 10 + 3 = 13 (ten dots ringed, 3 left over)",
-    "val": [
-     3,
-     13
-    ],
-    "hint": "Draw 7 dots, then 6 dots. Ring the 7 and 3 of the other dots. How many dots are not ringed?",
-    "solution": "Ring the 7 dots and 3 of the 6 dots to make ten. The other 3 dots are outside the ring. So 7 + 6 = 10 + 3 = 13.",
-    "mistakes": [
-     "Ringing ten dots but forgetting the dots left outside.",
-     "Miscounting when counting every dot one by one."
-    ],
-    "mins": 3,
-    "lines": 0,
-    "draw_strokes": 14
-   },
-   {
-    "id": "S3",
-    "page": 1,
-    "tier": "start",
-    "text": "Fill in the missing numbers to make the next ten.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "7 + ___ = 10",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "b",
-      "text": "18 + ___ = 20",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "c",
-      "text": "26 + ___ = 30",
-      "ans": "4",
-      "val": 4
-     },
-     {
-      "l": "d",
-      "text": "39 + ___ = 40",
-      "ans": "1",
-      "val": 1
-     }
-    ],
-    "answer": "3, 2, 4, 1",
-    "val": [
-     3,
-     2,
-     4,
-     1
-    ],
-    "hint": "Look at the ones digit. How many more ones make a full ten?",
-    "solution": "(a) 7 and 3 make 10. (b) 18 is 1 ten and 8 ones, and 8 and 2 make 10, so 18 + 2 = 20. (c) 6 and 4 make 10, so 26 + 4 = 30. (d) 9 and 1 make 10, so 39 + 1 = 40.",
-    "mistakes": [
-     "Writing the next ten itself (20 for part b).",
-     "Counting from the tens digit instead of the ones digit."
-    ],
-    "mins": 2.5,
-    "lines": 0
-   },
-   {
-    "id": "S4",
-    "page": 2,
-    "tier": "start",
-    "text": "Add 28 + 6. Fill in the blanks.",
-    "visual": {
-     "type": "bundles",
-     "tens": 2,
-     "ones": 8,
-     "style": "kit"
-    },
-    "parts": [
-     {
-      "l": "a",
-      "text": "28 needs ___ more to make 30.",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "b",
-      "text": "6 is 2 and ___.",
-      "ans": "4",
-      "val": 4
-     },
-     {
-      "l": "c",
-      "text": "28 + 6 = ___",
-      "ans": "34",
-      "val": 34
-     }
-    ],
-    "answer": "2 more; 6 = 2 and 4; 28 + 6 = 34",
-    "val": [
-     2,
-     4,
-     34
-    ],
-    "hint": "Take 2 from the 6 to fill up 28 to 30. How many are left of the 6?",
-    "solution": "28 needs 2 more to make 30. Split 6 into 2 and 4. 28 + 2 = 30, and 30 + 4 = 34.",
-    "mistakes": [
-     "Writing 36: adding all 6 after reaching 30, when 2 of the 6 were already used.",
-     "Splitting 6 into 2 and 3 or another wrong pair."
-    ],
-    "mins": 2.5,
-    "lines": 0
-   },
-   {
-    "id": "S5",
-    "page": 2,
-    "tier": "start",
-    "text": "Add 35 + 7. Fill in the blanks.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "35 needs ___ more to make 40.",
-      "ans": "5",
-      "val": 5
-     },
-     {
-      "l": "b",
-      "text": "35 + 7 = ___",
-      "ans": "42",
-      "val": 42
-     }
-    ],
-    "answer": "5 more; 35 + 7 = 42",
-    "val": [
-     5,
-     42
-    ],
-    "hint": "How many more make the next ten after 35? Take that many from the 7.",
-    "solution": "35 needs 5 more to make 40. 7 is 5 and 2. 35 + 5 = 40, and 40 + 2 = 42.",
-    "mistakes": [
-     "Writing 47 (adding 7 to the 4 tens).",
-     "Forgetting the 2 left over after the ten."
-    ],
-    "mins": 2,
-    "lines": 0
-   },
-   {
-    "id": "S6",
-    "page": 2,
-    "tier": "start",
-    "text": "Add.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "9 + 6 = ___",
-      "ans": "15",
-      "val": 15
-     },
-     {
-      "l": "b",
-      "text": "18 + 5 = ___",
-      "ans": "23",
-      "val": 23
-     },
-     {
-      "l": "c",
-      "text": "27 + 5 = ___",
-      "ans": "32",
-      "val": 32
-     },
-     {
-      "l": "d",
-      "text": "47 needs ___ more to make 50. 47 + 6 = ___",
-      "ans": "3 and 53",
+      "answer": "15",
       "val": [
-       3,
-       53
+        15
+      ],
+      "solution": "8 + 2 = 10. 7 is 2 and 5, so 10 + 5 = 15.",
+      "mistakes": [
+        "Writing 18 (10 + 8).",
+        "Writing 14 or 16 after counting on fingers."
       ]
-     }
-    ],
-    "answer": "15, 23, 32, 3 more, 53",
-    "val": [
-     15,
-     23,
-     32,
-     3,
-     53
-    ],
-    "hint": "Fill in the missing numbers to make the next ten. Take that many from the second number. Then add what is left.",
-    "solution": "(a) 9 + 1 = 10, 10 + 5 = 15. (b) 18 + 2 = 20, 20 + 3 = 23. (c) 27 + 3 = 30, 30 + 2 = 32. (d) 47 needs 3 more to make 50, 6 is 3 and 3, so 47 + 3 = 50 and 50 + 3 = 53.",
-    "mistakes": [
-     "Moving the right amount to make the ten but then adding the whole second number.",
-     "Making a ten with the wrong number (for example 9 + 6 = 9 + 4 + 2)."
-    ],
-    "mins": 3.5,
-    "lines": 0
-   },
-   {
-    "id": "S7",
-    "page": 2,
-    "tier": "start",
-    "text": "Siti adds 8 + 6. Here is her working: 8 + 2 = 10, then 10 + 6 = 16. Answer (a), (b) and (c).",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Is Siti right? Circle Right or Wrong.",
-      "ans": "Wrong",
-      "val": "wrong"
-     },
-     {
-      "l": "b",
-      "text": "The right answer is ___.",
-      "ans": "14",
-      "val": 14
-     },
-     {
-      "l": "c",
-      "text": "In her second step, 10 + 6 should be 10 + ___.",
-      "ans": "4",
-      "val": 4
-     }
-    ],
-    "answer": "Wrong. The right answer is 14. 10 + 6 should be 10 + 4: she moved 2 from the 6, so only 4 are left.",
-    "val": [
-     14
-    ],
-    "hint": "Siti moved 2 from the 6 to the 8. How many are left in the 6?",
-    "solution": "8 + 2 = 10 uses 2 of the 6. Only 4 are left, so the sum is 10 + 4 = 14. Siti added all 6 again.",
-    "mistakes": [
-     "Saying she is right because 10 + 6 looks like a good sum.",
-     "Writing 14 without saying what she forgot (a spoken reason is fine)."
-    ],
-    "mins": 2.5,
-    "lines": 0
-   }
-  ],
-  "think": [
-   {
-    "id": "T1",
-    "page": 3,
-    "tier": "think",
-    "text": "Mei adds 4 + 9 + 6. Fill in the blanks.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Two numbers that make 10 are ___ and ___.",
-      "ans": "4 and 6",
-      "val": [
-       4,
-       6
-      ]
-     },
-     {
-      "l": "b",
-      "text": "The total is ___.",
-      "ans": "19",
-      "val": 19
-     }
-    ],
-    "answer": "4 and 6 make 10. The total is 19.",
-    "val": [
-     4,
-     6,
-     19
-    ],
-    "hint": "Look for two numbers that join to make 10. They do not have to be next to each other.",
-    "solution": "4 and 6 make 10. 10 + 9 = 19. Check the long way: 4 + 9 = 13, and 13 + 6 = 19.",
-    "mistakes": [
-     "Adding the first two numbers (4 + 9) and stopping or slipping.",
-     "Thinking the pair must sit side by side."
-    ],
-    "mins": 3,
-    "lines": 0
-   },
-   {
-    "id": "T2",
-    "page": 3,
-    "tier": "think",
-    "text": "Add 8 + 5 + 2 + 7. Show your working on the lines.",
-    "parts": [
-     {
-      "l": "",
-      "text": "The total is ___.",
-      "ans": "22",
-      "val": 22
-     }
-    ],
-    "answer": "22 (8 + 2 = 10, 5 + 7 = 12, 10 + 12 = 22)",
-    "val": [
-     22
-    ],
-    "hint": "Find two numbers that make 10 first. Then add the other two.",
-    "solution": "8 + 2 = 10. 5 + 7 = 12 (5 + 5 + 2). 10 + 12 = 22.",
-    "mistakes": [
-     "Adding from left to right and losing track.",
-     "Using a number twice or leaving one out."
-    ],
-    "mins": 4,
-    "lines": 2
-   },
-   {
-    "id": "T3",
-    "page": 3,
-    "tier": "think",
-    "text": "Circle the sum that does not make 30. Then write how you know.",
-    "parts": [],
-    "answer": "19 + 12 (it makes 31). The ones 9 and 2 make 11, not 10.",
-    "val": [
-     "19 + 12",
-     31
-    ],
-    "hint": "Look at the ones digits only. Which pair of ones does not make 10?",
-    "solution": "7 + 3 = 10, 8 + 2 = 10 and 6 + 4 = 10, so those make 30. 9 + 2 = 11, so 19 + 12 is 31.",
-    "mistakes": [
-     "Adding every sum one by one and slipping.",
-     "Choosing 18 + 12 because 18 looks big."
-    ],
-    "mins": 3,
-    "lines": 3,
-    "choices": [
-     "17 + 13",
-     "18 + 12",
-     "19 + 12",
-     "16 + 14"
-    ]
-   },
-   {
-    "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether? Show your working on the lines.",
-    "parts": [
-     {
-      "l": "",
-      "text": "Ben has ___ marbles altogether.",
-      "ans": "64",
-      "val": 64
-     }
-    ],
-    "answer": "64 (18 + 12 = 30, 30 + 34 = 64)",
-    "val": [
-     64
-    ],
-    "hint": "Which two numbers make a tens number? Add those first.",
-    "solution": "18 + 12 = 30. 30 + 34 = 64. The order does not change the total.",
-    "mistakes": [
-     "Leaving out one group of marbles.",
-     "Adding 18 + 34 first and slipping on the ten."
-    ],
-    "mins": 4,
-    "lines": 2
-   }
-  ],
-  "go": [
-   {
-    "id": "G1",
-    "page": 4,
-    "tier": "go",
-    "text": "Add 18 + 7 + 12 + 23 + 3 + 17. Then change one number. Show your working on the lines.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "The total is ___.",
-      "ans": "80",
-      "val": 80
-     },
-     {
-      "l": "b",
-      "text": "Change the 3 so the total is 90. The new number is ___.",
-      "ans": "13",
-      "val": 13
-     }
-    ],
-    "answer": "(a) 80 (18 + 12 = 30, 7 + 3 = 10, 23 + 17 = 40). (b) 13: 80 + 10 = 90, so the 3 changes to 13.",
-    "val": [
-     80,
-     13
-    ],
-    "hint": "Which numbers have ones that make 10? Try 8 and 2, 7 and 3. For (b), how much must the total go up?",
-    "solution": "(a) 18 + 12 = 30. 7 + 3 = 10. 23 + 17 = 40. 30 + 10 + 40 = 80. Another way: 7 + 23 = 30, 18 + 12 = 30, 3 + 17 = 20, total 80. (b) The total must go up from 80 to 90, which is 10 more. The 3 must become 3 + 10 = 13.",
-    "mistakes": [
-     "Adding left to right and losing the running total.",
-     "Using a number twice or leaving one out.",
-     "Changing the 3 to 10 (the total goes up by 7, not 10)."
-    ],
-    "mins": 6,
-    "lines": 3
-   },
-   {
-    "id": "G2",
-    "page": 4,
-    "tier": "go",
-    "text": "Look at this sum: 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1. Fill in a and b.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "The total of 1 to 9 is ___.",
-      "ans": "45",
-      "val": 45
-     },
-     {
-      "l": "b",
-      "text": "The total of 1 to 10 is ___.",
-      "ans": "55",
-      "val": 55
-     }
-    ],
-    "answer": "45 and 55 (four pairs of 10, and the 5 is left)",
-    "val": [
-     45,
-     55
-    ],
-    "hint": "Pair 1 with 9, then 2 with 8. How many pairs can you make? Which number has no partner?",
-    "solution": "1 + 9, 2 + 8, 3 + 7 and 4 + 6 make four tens: 40. The 5 has no partner. 40 + 5 = 45. Adding 10 makes 55.",
-    "mistakes": [
-     "Forgetting the 5 in the middle has no partner.",
-     "Making only three pairs."
-    ],
-    "mins": 6,
-    "lines": 3
-   },
-   {
-    "id": "G3",
-    "page": 4,
-    "tier": "go",
-    "text": "Write a sum of 6 numbers that makes 100. Many answers are right. Show your working on the lines.",
-    "parts": [],
-    "answer": "Any six numbers that total 100. For example 45 + 5 + 20 + 17 + 3 + 10 = 100 (45 + 5 = 50, 17 + 3 = 20, 20 + 10 = 30).",
-    "val": "open",
-    "hint": "Start with a pair that makes 50, such as 45 and 5. Then choose pairs that make 20 and 30.",
-    "solution": "Choose pairs first: 50 + 20 + 30 = 100. Then split each into two numbers, for example 45 + 5, 17 + 3, 20 + 10. Add them to check.",
-    "mistakes": [
-     "Choosing numbers that total 90 or 110: add every number to check.",
-     "Using fewer than 6 numbers."
-    ],
-    "mins": 6,
-    "lines": 4
-   }
-  ],
-  "investigation": {
-   "id": "I1",
-   "page": 5,
-   "tier": "investigation",
-   "title": "Move the fewest",
-   "first": "Draw 9 dots and 6 dots. To make a ten with the 9, how many dots do you move? Now try 8 + 7.",
-   "text": "Pick two numbers from 5 to 9. Draw their dots. Try making a ten with the first number, then with the second. Which way moves fewer dots? Does the same way always move fewer? Write how you know.",
-   "lines": 4,
-   "answer": "Fill up the bigger number: it has the fewest empty spaces, so you move the fewest dots. The number moved is 10 minus the bigger number. 9 + 6: move 1, not 4. 8 + 7: move 2, not 3. If the two numbers are the same (7 + 7), either way moves 3.",
-   "val": [
-    "fill the bigger number",
-    "moves = 10 - bigger number",
-    "equal numbers: either way"
-   ],
-   "look_for": "A child who tries several pairs, records how many dots moved each way, and notices the bigger number is closer to ten. Credit any clear reason, such as the bigger number has fewer empty spaces.",
-   "mistakes": [
-    "Thinking you must always fill the number written first.",
-    "Not testing a pair with two equal numbers (7 + 7)."
-   ],
-   "mins": 8
-  }
- },
- "talk": {
-  "question": "Mei and Ali both add 8 + 6. Mei moves 2 counters from the 6 to the 8. Ali moves 4 counters from the 8 to the 6. Is Mei right? Is Ali right? Use counters to show.",
-  "starter": "I think ... because ...",
-  "answer": "Both are right. Mei gets 10 and 4. Ali gets 4 and 10. Both are 14, because moving counters does not change how many there are. Mei moved fewer counters (2), so her way is quicker.",
-  "look_for": "A reason about moving: nothing is added or lost, so the total stays 14. Not just both are 14."
- },
- "exit": [
-  {
-   "id": "E1",
-   "text": "Add.",
-   "parts": [
-    {
-     "l": "",
-     "text": "7 + 6 = ___",
-     "ans": "13",
-     "val": 13
-    }
-   ],
-   "answer": "13",
-   "val": [
-    13
-   ],
-   "solution": "7 + 3 = 10. 6 is 3 and 3, so 10 + 3 = 13.",
-   "mistakes": [
-    "Writing 16 (10 + 6).",
-    "Writing 12 or 14 after counting on fingers."
-   ]
-  },
-  {
-   "id": "E2",
-   "text": "Add.",
-   "parts": [
-    {
-     "l": "",
-     "text": "38 + 5 = ___",
-     "ans": "43",
-     "val": 43
-    }
-   ],
-   "answer": "43",
-   "val": [
-    43
-   ],
-   "solution": "38 + 2 = 40. 5 is 2 and 3, so 40 + 3 = 43.",
-   "mistakes": [
-    "Writing 45 (40 + 5).",
-    "Writing 33 or 83."
-   ]
-  },
-  {
-   "id": "E3",
-   "text": "Add 6 + 9 + 4. Fill in the blanks.",
-   "parts": [
-    {
-     "l": "",
-     "text": "The total is ___.",
-     "ans": "19",
-     "val": 19
     },
     {
-     "l": "",
-     "text": "Which two numbers make 10? ___ and ___.",
-     "ans": "6 and 4",
-     "val": [
-      6,
-      4
-     ]
+      "id": "E2",
+      "text": "Add.",
+      "parts": [
+        {
+          "l": "",
+          "text": "38 + 5 = ___",
+          "ans": "43",
+          "val": 43
+        }
+      ],
+      "answer": "43",
+      "val": [
+        43
+      ],
+      "solution": "38 + 2 = 40. 5 is 2 and 3, so 40 + 3 = 43.",
+      "mistakes": [
+        "Writing 45 (40 + 5).",
+        "Writing 33 or 83."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "Add 6 + 9 + 4. Fill in the blanks.",
+      "parts": [
+        {
+          "l": "",
+          "text": "The total is ___.",
+          "ans": "19",
+          "val": 19
+        },
+        {
+          "l": "",
+          "text": "Which two numbers make 10? ___ and ___.",
+          "ans": "6 and 4",
+          "val": [
+            6,
+            4
+          ]
+        }
+      ],
+      "answer": "19. 6 and 4 make 10, then 10 + 9 = 19.",
+      "val": [
+        19,
+        6,
+        4
+      ],
+      "solution": "6 + 4 = 10. 10 + 9 = 19.",
+      "mistakes": [
+        "Writing 6 and 9 as the pair that makes 10 (6 + 9 is 15).",
+        "Not noticing that 6 and 4 make a ten."
+      ]
     }
-   ],
-   "answer": "19. 6 and 4 make 10, then 10 + 9 = 19.",
-   "val": [
-    19,
-    6,
-    4
-   ],
-   "solution": "6 + 4 = 10. 10 + 9 = 19.",
-   "mistakes": [
-    "Writing 6 and 9 as the pair that makes 10 (6 + 9 is 15).",
-    "Not noticing that 6 and 4 make a ten."
-   ]
+  ],
+  "look_back": {
+    "hardest": [
+      "knowing how many to move",
+      "splitting a number",
+      "adding to a tens number like 30 + 4",
+      "adding three or four numbers (Think harder)",
+      "something else"
+    ],
+    "helped": [
+      "ten-frames or counters",
+      "drawing it",
+      "trying again",
+      "I asked for help",
+      "I was not stuck"
+    ],
+    "next": [
+      "drawing it",
+      "using objects",
+      "checking my answer",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "Fill in the blanks. 9 + 5 = 10 + ___. So 9 + 5 = ___.",
+      "answer": "4, so 9 + 5 = 14",
+      "val": [
+        4,
+        14
+      ],
+      "solution": "Move 1 counter from the 5 to the 9. That makes 10, and 4 are left. 10 + 4 = 14."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Add. 37 + 6 = ___.",
+      "answer": "43",
+      "val": 43,
+      "solution": "37 needs 3 more to make 40. 6 is 3 and 3. 40 + 3 = 43."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "Fill in the missing numbers to make the next ten. (a) 8 + ___ = 10   (b) 45 + ___ = 50   (c) 67 + ___ = 70",
+      "answer": "2, 5, 3",
+      "val": [
+        2,
+        5,
+        3
+      ],
+      "solution": "Look at the ones digit. 8 needs 2, 5 needs 5, 7 needs 3."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Add 5 + 7 + 5 + 3. Show your working. The total is ___.",
+      "answer": "20 (5 + 5 = 10, 7 + 3 = 10)",
+      "val": 20,
+      "solution": "5 + 5 = 10 and 7 + 3 = 10. 10 + 10 = 20."
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "(a) Write 3 sums like 8 + 5 for a grown-up to solve. Use numbers up to 9, like 9 + 6 or 7 + 4. (b) Solve 3 sums that your grown-up writes for you. Many answers are right.",
+      "answer": "Any: for example 8 + 5 = 13 (fill the 8 with 2 from the 5: 10 and 3). A grown-up can check with counters.",
+      "val": "open",
+      "solution": "The number that is nearest to ten is the one to fill. Move the missing amount from the other number, then add what is left."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l05",
+    "title": "Make-a-Ten Adding",
+    "topic": "Make a ten first",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "Add 8 + 6. What is the total?",
+        "answer": 14,
+        "hint": "8 needs 2 more to make 10. Take 2 from the 6.",
+        "steps": [
+          "8 needs 2 more to make 10.",
+          "Take 2 from 6. That leaves 4.",
+          "10 + 4 = 14."
+        ],
+        "slips": [
+          {
+            "a": [
+              16
+            ],
+            "say": "16 is 10 + 6. Two of the 6 were used to make the ten, so only 4 are left."
+          },
+          {
+            "a": [
+              10
+            ],
+            "say": "10 is the full frame. Now add the 4 that are left."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "b": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "g": "10-a",
+            "r": "b-(10-a)"
+          },
+          "q": "Add {a} + {b}. What is the total?",
+          "answer": "a+b",
+          "hint": "{a} needs {g} more to make 10. Take {g} from the {b}.",
+          "steps": [
+            "{a} needs {g} more to make 10.",
+            "Take {g} from {b}. That leaves {r}.",
+            "10 + {r} = {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "Fill in the missing number to make the next ten. 28 + ___ = 30",
+        "answer": 2,
+        "hint": "Look at the ones digit. How many more ones make a full ten?",
+        "steps": [
+          "28 has 8 ones.",
+          "8 and 2 make 10.",
+          "So 28 + 2 = 30."
+        ],
+        "slips": [
+          {
+            "a": [
+              30
+            ],
+            "say": "30 is the next ten itself. How many more do you add to 28 to get there?"
+          },
+          {
+            "a": [
+              8
+            ],
+            "say": "8 is the ones digit. How many more make 10 from 8?"
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              8,
+              17,
+              26,
+              38,
+              45,
+              53,
+              67,
+              79,
+              84,
+              92
+            ]
+          },
+          "derive": {
+            "nx": "n-n%10+10"
+          },
+          "q": "Fill in the missing number to make the next ten. {n} + ___ = {nx}",
+          "answer": "10-n%10",
+          "hint": "Look at the ones digit of {n}. How many more ones make a full ten?",
+          "steps": [
+            "Look at the ones digit of {n}.",
+            "How many more ones make a full ten?",
+            "{ans} more: {n} + {ans} = {nx}."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "Add 28 + 6. What is the total?",
+        "answer": 34,
+        "hint": "28 needs 2 more to make 30. Take 2 from the 6, then add what is left.",
+        "steps": [
+          "28 needs 2 more to make 30.",
+          "Take 2 from 6. That leaves 4.",
+          "30 + 4 = 34."
+        ],
+        "slips": [
+          {
+            "a": [
+              36
+            ],
+            "say": "36 is 30 + 6. Two of the 6 were used to make 30, so only 4 are left."
+          },
+          {
+            "a": [
+              30
+            ],
+            "say": "30 is the ten you made. Now add what is left of the 6."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "o": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "b": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "n": "t*10+o",
+            "g": "10-o",
+            "nx": "t*10+10",
+            "r": "b-(10-o)"
+          },
+          "q": "Add {n} + {b}. What is the total?",
+          "answer": "t*10+o+b",
+          "hint": "{n} needs {g} more to make {nx}. Take {g} from the {b}, then add what is left.",
+          "steps": [
+            "{n} needs {g} more to make {nx}.",
+            "Take {g} from {b}. That leaves {r}.",
+            "{nx} + {r} = {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which two numbers make 10?",
+        "options": [
+          "6 and 4",
+          "6 and 5",
+          "7 and 4",
+          "8 and 3"
+        ],
+        "answer": "6 and 4",
+        "hint": "Count on from the first number to 10. How many steps?",
+        "steps": [
+          "From 6, count on: 7, 8, 9, 10. That is 4 steps.",
+          "So 6 and 4 make 10.",
+          "The other pairs make 11."
+        ],
+        "slips": [
+          {
+            "a": [
+              "6 and 5"
+            ],
+            "say": "6 + 5 = 11. Count on from 6 to 10: 7, 8, 9, 10. That is 4 more."
+          }
+        ]
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "number",
+        "q": "Mei has 27 stickers. Her aunt gives her 5 more. How many stickers does Mei have now?",
+        "answer": 32,
+        "hint": "27 needs 3 more to make 30. Take 3 from the 5.",
+        "steps": [
+          "27 needs 3 more to make 30.",
+          "Take 3 from 5. That leaves 2.",
+          "30 + 2 = 32."
+        ],
+        "slips": [
+          {
+            "a": [
+              35
+            ],
+            "say": "35 is 30 + 5. Three of the 5 were used to make 30, so only 2 are left."
+          },
+          {
+            "a": [
+              22
+            ],
+            "say": "22 is 27 - 5. Her aunt gives her more, so we add."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              27,
+              38,
+              46,
+              57,
+              69,
+              78,
+              89
+            ],
+            "b": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "derive": {
+            "g": "10-n%10",
+            "nx": "n-n%10+10",
+            "r": "b-(10-n%10)"
+          },
+          "q": "Mei has {n} stickers. Her aunt gives her {b} more. How many stickers does Mei have now?",
+          "answer": "n+b",
+          "hint": "{n} needs {g} more to make {nx}. Take {g} from the {b}.",
+          "steps": [
+            "{n} needs {g} more to make {nx}.",
+            "Take {g} from {b}. That leaves {r}.",
+            "{nx} + {r} = {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c6",
+        "tier": "core",
+        "type": "choice",
+        "q": "Ben adds 9 + 5. He moves 1 counter from the 5 to the 9. Which sum should he write next?",
+        "options": [
+          "10 + 4 = 14",
+          "10 + 5 = 15",
+          "10 + 6 = 16",
+          "9 + 1 = 10"
+        ],
+        "answer": "10 + 4 = 14",
+        "hint": "He moved 1 out of the 5. How many are left in that group?",
+        "steps": [
+          "9 and 1 make 10.",
+          "The 5 gave 1 away, so 4 are left.",
+          "10 + 4 = 14."
+        ],
+        "slips": [
+          {
+            "a": [
+              "10 + 5 = 15"
+            ],
+            "say": "The 5 gave 1 away, so only 4 are left, not 5."
+          }
+        ]
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Add 4 + 9 + 6. What is the total?",
+        "answer": 19,
+        "easier": "c1",
+        "hint": "Which two numbers make 10? They do not have to be next to each other.",
+        "steps": [
+          "4 and 6 make 10.",
+          "10 + 9 = 19.",
+          "The total is 19."
+        ],
+        "slips": [
+          {
+            "a": [
+              13
+            ],
+            "say": "13 is 4 + 9. Do not forget the 6."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              2,
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "b": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "c": "10-a"
+          },
+          "q": "Add {a} + {b} + {c}. What is the total?",
+          "answer": "10+b",
+          "hint": "Which two numbers make 10? They do not have to be next to each other.",
+          "steps": [
+            "{a} and {c} make 10.",
+            "10 + {b} = {ans}.",
+            "The total is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Add 8 + 5 + 2 + 7. What is the total?",
+        "answer": 22,
+        "easier": "c3",
+        "hint": "Find two numbers that make 10. Then add the other two.",
+        "steps": [
+          "8 and 2 make 10.",
+          "5 + 7 = 12.",
+          "10 + 12 = 22."
+        ],
+        "slips": [
+          {
+            "a": [
+              20
+            ],
+            "say": "20 is 10 + 10. 5 and 7 make 12, not 10."
+          },
+          {
+            "a": [
+              23
+            ],
+            "say": "Check 5 + 7 again: make a ten with 5 + 5, then add 2."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              3,
+              4,
+              6,
+              7,
+              8
+            ],
+            "x": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "y": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "derive": {
+            "c": "10-a",
+            "s": "x+y"
+          },
+          "q": "Add {a} + {x} + {c} + {y}. What is the total?",
+          "answer": "10+x+y",
+          "hint": "Find two numbers that make 10. Then add the other two.",
+          "steps": [
+            "{a} and {c} make 10.",
+            "{x} + {y} = {s}.",
+            "10 + {s} = {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "Which sum does not make 30?",
+        "options": [
+          "17 + 13",
+          "18 + 12",
+          "19 + 12",
+          "16 + 14"
+        ],
+        "answer": "19 + 12",
+        "easier": "c4",
+        "hint": "Look at the ones digits. Which pair of ones does not make 10?",
+        "steps": [
+          "7 + 3 = 10, 8 + 2 = 10 and 6 + 4 = 10.",
+          "9 + 2 = 11, not 10.",
+          "So 19 + 12 is 31, not 30."
+        ],
+        "slips": [
+          {
+            "a": [
+              "17 + 13"
+            ],
+            "say": "7 and 3 make 10, so 17 + 13 = 30. Check the others."
+          }
+        ]
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether?",
+        "answer": 64,
+        "easier": "c5",
+        "hint": "Which two numbers make a tens number? Add those first.",
+        "steps": [
+          "18 + 12 = 30.",
+          "30 + 34 = 64.",
+          "Ben has 64 marbles."
+        ],
+        "slips": [
+          {
+            "a": [
+              52
+            ],
+            "say": "52 is 18 + 34. Do not forget the 12 green marbles."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              16,
+              17,
+              18,
+              19
+            ],
+            "b": [
+              23,
+              26,
+              34,
+              45
+            ]
+          },
+          "derive": {
+            "c": "30-a"
+          },
+          "q": "Ben has {a} red marbles, {b} blue marbles and {c} green marbles. How many marbles does Ben have altogether?",
+          "answer": "30+b",
+          "hint": "Which two numbers make a tens number? Add those first.",
+          "steps": [
+            "{a} + {c} = 30.",
+            "30 + {b} = {ans}.",
+            "Ben has {ans} marbles."
+          ]
+        }
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Add 18 + 7 + 12 + 23 + 3 + 17. What is the total?",
+        "answer": 80,
+        "easier": "t2",
+        "hint": "Which numbers have ones that make 10? Try 8 and 2, then 7 and 3.",
+        "steps": [
+          "18 + 12 = 30 and 7 + 3 = 10.",
+          "23 + 17 = 40.",
+          "30 + 10 + 40 = 80."
+        ],
+        "slips": [
+          {
+            "a": [
+              70
+            ],
+            "say": "70 is close. Check that you used every number once: 18, 7, 12, 23, 3, 17."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              16,
+              17,
+              18,
+              19
+            ],
+            "b": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "x": [
+              14,
+              23,
+              26,
+              35
+            ],
+            "S": [
+              40,
+              50
+            ]
+          },
+          "derive": {
+            "c": "30-a",
+            "d": "10-b",
+            "y": "S-x"
+          },
+          "q": "Add {a} + {b} + {c} + {x} + {d} + {y}. What is the total?",
+          "answer": "40+S",
+          "hint": "Which numbers have ones that make 10? Find three pairs.",
+          "steps": [
+            "{a} + {c} = 30 and {b} + {d} = 10.",
+            "{x} + {y} = {S}.",
+            "30 + 10 + {S} = {ans}."
+          ]
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "What is 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1?",
+        "answer": 45,
+        "easier": "t1",
+        "hint": "Pair 1 with 9, then 2 with 8. Which number has no partner?",
+        "steps": [
+          "1 + 9, 2 + 8, 3 + 7 and 4 + 6 make four tens: 40.",
+          "The 5 has no partner.",
+          "40 + 5 = 45."
+        ],
+        "slips": [
+          {
+            "a": [
+              40
+            ],
+            "say": "40 is the four pairs. The 5 in the middle is still to add."
+          },
+          {
+            "a": [
+              50
+            ],
+            "say": "There are only four pairs of 10, plus the 5."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "You add 7 + 8 by filling a ten-frame. What is the fewest number of counters you can move?",
+        "answer": 2,
+        "easier": "c1",
+        "hint": "You can fill the 7 frame or the 8 frame. Which has fewer empty spaces?",
+        "steps": [
+          "Fill the 7 frame: move 3.",
+          "Fill the 8 frame: move 2.",
+          "The fewest is 2: fill the bigger number."
+        ],
+        "slips": [
+          {
+            "a": [
+              3
+            ],
+            "say": "3 fills the 7 frame. Fill the 8 frame instead: how many does it need?"
+          },
+          {
+            "a": [
+              1
+            ],
+            "say": "1 is too few. How many empty spaces does the 8 frame have?"
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "b": [
+              8,
+              9
+            ],
+            "w": [
+              0,
+              1
+            ]
+          },
+          "q": "You add {p} + {r} by filling a ten-frame. What is the fewest number of counters you can move?",
+          "answer": "10-b",
+          "hint": "You can fill the {a} frame or the {b} frame. Which has fewer empty spaces?",
+          "steps": [
+            "Fill the {b} frame: move {ans}.",
+            "Fill the {a} frame: move more.",
+            "The fewest is {ans}: fill the bigger number."
+          ],
+          "derive": {
+            "p": "a*(1-w)+b*w",
+            "r": "b*(1-w)+a*w"
+          }
+        }
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Write a sum of 6 numbers that makes 100. Many answers are right. Check your total.",
+        "hint": "Start with a pair that makes 50. Then choose pairs that make 20 and 30.",
+        "steps": [
+          "Choose three pairs: 50 + 20 + 30 = 100.",
+          "Split each into two numbers: 45 + 5, 17 + 3, 20 + 10.",
+          "Add all six numbers to check. 45 + 5 + 17 + 3 + 20 + 10 = 100."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10. Making a ten to add (8 + 6, 28 + 6) is school work. Adding four or six numbers by finding pairs that make ten goes beyond, in Think harder and Go further.",
+    "words": [
+      "ten-frame: a box of ten spaces, two rows of five",
+      "make a ten: move some counters so that one group is full",
+      "split: break a number into two smaller numbers (6 is 2 and 4)",
+      "total: the answer when we add"
+    ],
+    "try_home": [
+      "Ten-frame: draw a box of two rows of five. Put 8 buttons in it and 6 clips beside it. Move clips across to fill the box, then say: ten and ... Keep small things away from mouths and little ones.",
+      "Stomp to ten: say a number from 1 to 9. Your child stomps how many more make ten. Then try 12, 18 and 25: how many more to the next ten?",
+      "Spot the pair: write 6, 3, 4 and 7. Ask your child to find the two that make ten, then add all four. Swap, and make a mistake on purpose for them to find."
+    ],
+    "ask": [
+      "Which number is nearly full?",
+      "How many did you move?",
+      "How do you know the total did not change?"
+    ],
+    "when_stuck": "Please let your child use counters or draw a ten-frame, and wait 10 seconds before helping. Asking 'how many empty spaces are there?' works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
+    "next": "Lesson 6: Tens Jump, Ones Hop. Online practice: your tutor will share the practice link.",
+    "quote": "Make tens first: fill up a ten, then add what is left.",
+    "report_line": "Your child is learning to add by making a ten first and to say why. This week: adding within 100 by filling up a ten, using ten-frames and kit pieces.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "next_materials": [
+      "The tens bars and ones squares from the kit page, cut out (earlier pieces can be reused)",
+      "A coin",
+      "Pencil, rubber and paper"
+    ]
+  },
+  "safeguarding": [
+    "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question yourself first, making a ten each time.",
+    "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 20 small things of two kinds and a sheet of paper for a ten-frame. Small things stay away from mouths and younger children.",
+    "Have the slides open and check the kit page is visible on screen share. Have a paper ten-frame and two kinds of counters to show on camera if you wish.",
+    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+    "Be plain with families: Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten, totals above 40). Do not call it MOE-aligned. Start here items above the school range are scaffolded; the tier labels stay honest."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Mei says: if the ones of two numbers make 10, the total is a tens number. Try 24 + 16, 38 + 52 and 45 + 25. Then try 26 + 36. What is different?",
+        "rec": "Recording: pause. Try 24 + 16, 38 + 52 and 45 + 25. Is the total a tens number?",
+        "answer": "Yes when the ones make exactly 10: 24 + 16 = 40, 38 + 52 = 90, 45 + 25 = 70, because the ones fill one more bar and none are left. 26 + 36 = 62 is different: the ones are 6 and 6, which make 12, not 10, so the total is not a tens number."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Write a sum with four numbers. Make two of them a pair that makes ten. Give it to your grown-up to solve. Can they find your pair?",
+        "rec": "Recording: pause. Write a sum of four numbers with a pair that makes ten for a grown-up to solve.",
+        "answer": "No single answer. Check that two numbers make 10 and that the total is right, for example 6 + 7 + 4 + 5 = 22."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend your grown-up or a toy has never seen a ten-frame. Teach them how to add 8 + 5 by making a ten.",
+        "rec": "Recording: pause. Teach a grown-up how to add 8 + 5 with a ten-frame.",
+        "answer": "8 needs 2 more to make 10. Move 2 from the 5, so 3 are left. 10 + 3 = 13."
+      }
+    ]
+  },
+  "workbook": {
+    "header": "Addition: make tens first",
+    "hint_p1": "Use counters, your kit or a drawing. Say your answer out loud, then write it.",
+    "hint_p3": "Use counters, a tens bar or a drawing. Then write how you know. Choose any question, in any order.",
+    "choice_after": 3,
+    "home_hint": "Use counters or draw a ten-frame. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters.",
+    "hint_p4": "Choose any question. You do not have to finish them all.",
+    "kits": [
+      {
+        "type": "base_ten",
+        "title": "Kit page: tens bars and ones squares",
+        "intro": "A grown-up cuts these out before the lesson. A bar is a ten (like a ten-frame in a line). A square is a one. Keep them in an envelope."
+      }
+    ]
   }
- ],
- "look_back": {
-  "hardest": [
-   "knowing how many to move",
-   "splitting a number",
-   "adding to a tens number like 30 + 4",
-   "adding three or four numbers (Think harder)",
-   "something else"
-  ],
-  "helped": [
-   "ten-frames or counters",
-   "drawing it",
-   "trying again",
-   "I asked for help",
-   "I was not stuck"
-  ],
-  "next": [
-   "drawing it",
-   "using objects",
-   "checking my answer",
-   "asking a question"
-  ]
- },
- "home_practice": [
-  {
-   "id": "H1",
-   "tier": "start",
-   "text": "Fill in the blanks. 9 + 5 = 10 + ___. So 9 + 5 = ___.",
-   "answer": "4, so 9 + 5 = 14",
-   "val": [
-    4,
-    14
-   ],
-   "solution": "Move 1 counter from the 5 to the 9. That makes 10, and 4 are left. 10 + 4 = 14."
-  },
-  {
-   "id": "H2",
-   "tier": "start",
-   "text": "Add. 37 + 6 = ___.",
-   "answer": "43",
-   "val": 43,
-   "solution": "37 needs 3 more to make 40. 6 is 3 and 3. 40 + 3 = 43."
-  },
-  {
-   "id": "H3",
-   "tier": "start",
-   "text": "Fill in the missing numbers to make the next ten. (a) 8 + ___ = 10   (b) 45 + ___ = 50   (c) 67 + ___ = 70",
-   "answer": "2, 5, 3",
-   "val": [
-    2,
-    5,
-    3
-   ],
-   "solution": "Look at the ones digit. 8 needs 2, 5 needs 5, 7 needs 3."
-  },
-  {
-   "id": "H4",
-   "tier": "think",
-   "text": "Add 5 + 7 + 5 + 3. Show your working. The total is ___.",
-   "answer": "20 (5 + 5 = 10, 7 + 3 = 10)",
-   "val": 20,
-   "solution": "5 + 5 = 10 and 7 + 3 = 10. 10 + 10 = 20."
-  },
-  {
-   "id": "H5",
-   "tier": "go",
-   "text": "(a) Write 3 sums like 8 + 5 for a grown-up to solve. (b) Solve 3 sums that your grown-up writes for you. Many answers are right.",
-   "answer": "Any: for example 8 + 5 = 13 (fill the 8 with 2 from the 5: 10 and 3). A grown-up can check with counters.",
-   "val": "open",
-   "solution": "The number that is nearest to ten is the one to fill. Move the missing amount from the other number, then add what is left."
-  }
- ],
- "online_practice": {
-  "key": "t1l05",
-  "title": "Make-a-Ten Adding",
-  "topic": "Make a ten first",
-  "items": [
-   {
-    "id": "c1",
-    "tier": "core",
-    "type": "number",
-    "q": "Add 8 + 6. What is the total?",
-    "answer": 14,
-    "hint": "8 needs 2 more to make 10. Take 2 from the 6.",
-    "steps": [
-     "8 needs 2 more to make 10.",
-     "Take 2 from 6. That leaves 4.",
-     "10 + 4 = 14."
-    ],
-    "slips": [
-     {
-      "a": [
-       16
-      ],
-      "say": "16 is 10 + 6. Two of the 6 were used to make the ten, so only 4 are left."
-     },
-     {
-      "a": [
-       10
-      ],
-      "say": "10 is the full frame. Now add the 4 that are left."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       6,
-       7,
-       8,
-       9
-      ],
-      "b": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "derive": {
-      "g": "10-a",
-      "r": "b-(10-a)"
-     },
-     "q": "Add {a} + {b}. What is the total?",
-     "answer": "a+b",
-     "hint": "{a} needs {g} more to make 10. Take {g} from the {b}.",
-     "steps": [
-      "{a} needs {g} more to make 10.",
-      "Take {g} from {b}. That leaves {r}.",
-      "10 + {r} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c2",
-    "tier": "core",
-    "type": "number",
-    "q": "Fill in the missing numbers to make the next ten. 28 + ___ = 30",
-    "answer": 2,
-    "hint": "Look at the ones digit. How many more ones make a full ten?",
-    "steps": [
-     "28 has 8 ones.",
-     "8 and 2 make 10.",
-     "So 28 + 2 = 30."
-    ],
-    "slips": [
-     {
-      "a": [
-       30
-      ],
-      "say": "30 is the next ten itself. How many more do you add to 28 to get there?"
-     },
-     {
-      "a": [
-       8
-      ],
-      "say": "8 is the ones digit. How many more make 10 from 8?"
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "n": [
-       8,
-       17,
-       26,
-       38,
-       45,
-       53,
-       67,
-       79,
-       84,
-       92
-      ]
-     },
-     "derive": {
-      "nx": "n-n%10+10"
-     },
-     "q": "Fill in the missing numbers to make the next ten. {n} + ___ = {nx}",
-     "answer": "10-n%10",
-     "hint": "Look at the ones digit of {n}. How many more ones make a full ten?",
-     "steps": [
-      "Look at the ones digit of {n}.",
-      "How many more ones make a full ten?",
-      "{ans} more: {n} + {ans} = {nx}."
-     ]
-    }
-   },
-   {
-    "id": "c3",
-    "tier": "core",
-    "type": "number",
-    "q": "Add 28 + 6. What is the total?",
-    "answer": 34,
-    "hint": "28 needs 2 more to make 30. Take 2 from the 6, then add what is left.",
-    "steps": [
-     "28 needs 2 more to make 30.",
-     "Take 2 from 6. That leaves 4.",
-     "30 + 4 = 34."
-    ],
-    "slips": [
-     {
-      "a": [
-       36
-      ],
-      "say": "36 is 30 + 6. Two of the 6 were used to make 30, so only 4 are left."
-     },
-     {
-      "a": [
-       30
-      ],
-      "say": "30 is the ten you made. Now add what is left of the 6."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "t": [
-       1,
-       2,
-       3,
-       4,
-       5,
-       6,
-       7,
-       8
-      ],
-      "o": [
-       6,
-       7,
-       8,
-       9
-      ],
-      "b": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "derive": {
-      "n": "t*10+o",
-      "g": "10-o",
-      "nx": "t*10+10",
-      "r": "b-(10-o)"
-     },
-     "q": "Add {n} + {b}. What is the total?",
-     "answer": "t*10+o+b",
-     "hint": "{n} needs {g} more to make {nx}. Take {g} from the {b}, then add what is left.",
-     "steps": [
-      "{n} needs {g} more to make {nx}.",
-      "Take {g} from {b}. That leaves {r}.",
-      "{nx} + {r} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c4",
-    "tier": "core",
-    "type": "choice",
-    "q": "Which two numbers make 10?",
-    "options": [
-     "6 and 4",
-     "6 and 5",
-     "7 and 4",
-     "8 and 3"
-    ],
-    "answer": "6 and 4",
-    "hint": "Count on from the first number to 10. How many steps?",
-    "steps": [
-     "From 6, count on: 7, 8, 9, 10. That is 4 steps.",
-     "So 6 and 4 make 10.",
-     "The other pairs make 11."
-    ],
-    "slips": [
-     {
-      "a": [
-       "6 and 5"
-      ],
-      "say": "6 + 5 = 11. Count on from 6 to 10: 7, 8, 9, 10. That is 4 more."
-     }
-    ]
-   },
-   {
-    "id": "c5",
-    "tier": "core",
-    "type": "number",
-    "q": "Mei has 27 stickers. Her aunt gives her 5 more. How many stickers does Mei have now?",
-    "answer": 32,
-    "hint": "27 needs 3 more to make 30. Take 3 from the 5.",
-    "steps": [
-     "27 needs 3 more to make 30.",
-     "Take 3 from 5. That leaves 2.",
-     "30 + 2 = 32."
-    ],
-    "slips": [
-     {
-      "a": [
-       35
-      ],
-      "say": "35 is 30 + 5. Three of the 5 were used to make 30, so only 2 are left."
-     },
-     {
-      "a": [
-       22
-      ],
-      "say": "22 is 27 - 5. Her aunt gives her more, so we add."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "n": [
-       27,
-       38,
-       46,
-       57,
-       69,
-       78,
-       89
-      ],
-      "b": [
-       5,
-       6,
-       7,
-       8
-      ]
-     },
-     "derive": {
-      "g": "10-n%10",
-      "nx": "n-n%10+10",
-      "r": "b-(10-n%10)"
-     },
-     "q": "Mei has {n} stickers. Her aunt gives her {b} more. How many stickers does Mei have now?",
-     "answer": "n+b",
-     "hint": "{n} needs {g} more to make {nx}. Take {g} from the {b}.",
-     "steps": [
-      "{n} needs {g} more to make {nx}.",
-      "Take {g} from {b}. That leaves {r}.",
-      "{nx} + {r} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c6",
-    "tier": "core",
-    "type": "choice",
-    "q": "Ben adds 9 + 5. He moves 1 counter from the 5 to the 9. Which sum should he write next?",
-    "options": [
-     "10 + 4 = 14",
-     "10 + 5 = 15",
-     "10 + 6 = 16",
-     "9 + 1 = 10"
-    ],
-    "answer": "10 + 4 = 14",
-    "hint": "He moved 1 out of the 5. How many are left in that group?",
-    "steps": [
-     "9 and 1 make 10.",
-     "The 5 gave 1 away, so 4 are left.",
-     "10 + 4 = 14."
-    ],
-    "slips": [
-     {
-      "a": [
-       "10 + 5 = 15"
-      ],
-      "say": "The 5 gave 1 away, so only 4 are left, not 5."
-     }
-    ]
-   },
-   {
-    "id": "t1",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Add 4 + 9 + 6. What is the total?",
-    "answer": 19,
-    "easier": "c1",
-    "hint": "Which two numbers make 10? They do not have to be next to each other.",
-    "steps": [
-     "4 and 6 make 10.",
-     "10 + 9 = 19.",
-     "The total is 19."
-    ],
-    "slips": [
-     {
-      "a": [
-       13
-      ],
-      "say": "13 is 4 + 9. Do not forget the 6."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       2,
-       3,
-       4,
-       6,
-       7,
-       8
-      ],
-      "b": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "derive": {
-      "c": "10-a"
-     },
-     "q": "Add {a} + {b} + {c}. What is the total?",
-     "answer": "10+b",
-     "hint": "Which two numbers make 10? They do not have to be next to each other.",
-     "steps": [
-      "{a} and {c} make 10.",
-      "10 + {b} = {ans}.",
-      "The total is {ans}."
-     ]
-    }
-   },
-   {
-    "id": "t2",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Add 8 + 5 + 2 + 7. What is the total?",
-    "answer": 22,
-    "easier": "c3",
-    "hint": "Find two numbers that make 10. Then add the other two.",
-    "steps": [
-     "8 and 2 make 10.",
-     "5 + 7 = 12.",
-     "10 + 12 = 22."
-    ],
-    "slips": [
-     {
-      "a": [
-       20
-      ],
-      "say": "20 is 10 + 10. 5 and 7 make 12, not 10."
-     },
-     {
-      "a": [
-       23
-      ],
-      "say": "Check 5 + 7 again: make a ten with 5 + 5, then add 2."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       3,
-       4,
-       6,
-       7,
-       8
-      ],
-      "x": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ],
-      "y": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "derive": {
-      "c": "10-a",
-      "s": "x+y"
-     },
-     "q": "Add {a} + {x} + {c} + {y}. What is the total?",
-     "answer": "10+x+y",
-     "hint": "Find two numbers that make 10. Then add the other two.",
-     "steps": [
-      "{a} and {c} make 10.",
-      "{x} + {y} = {s}.",
-      "10 + {s} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "t3",
-    "tier": "stretch",
-    "type": "choice",
-    "q": "Which sum does not make 30?",
-    "options": [
-     "17 + 13",
-     "18 + 12",
-     "19 + 12",
-     "16 + 14"
-    ],
-    "answer": "19 + 12",
-    "easier": "c4",
-    "hint": "Look at the ones digits. Which pair of ones does not make 10?",
-    "steps": [
-     "7 + 3 = 10, 8 + 2 = 10 and 6 + 4 = 10.",
-     "9 + 2 = 11, not 10.",
-     "So 19 + 12 is 31, not 30."
-    ],
-    "slips": [
-     {
-      "a": [
-       "17 + 13"
-      ],
-      "say": "7 and 3 make 10, so 17 + 13 = 30. Check the others."
-     }
-    ]
-   },
-   {
-    "id": "t4",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Ben has 18 red marbles, 34 blue marbles and 12 green marbles. How many marbles does Ben have altogether?",
-    "answer": 64,
-    "easier": "c5",
-    "hint": "Which two numbers make a tens number? Add those first.",
-    "steps": [
-     "18 + 12 = 30.",
-     "30 + 34 = 64.",
-     "Ben has 64 marbles."
-    ],
-    "slips": [
-     {
-      "a": [
-       52
-      ],
-      "say": "52 is 18 + 34. Do not forget the 12 green marbles."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       16,
-       17,
-       18,
-       19
-      ],
-      "b": [
-       23,
-       26,
-       34,
-       45
-      ]
-     },
-     "derive": {
-      "c": "30-a"
-     },
-     "q": "Ben has {a} red marbles, {b} blue marbles and {c} green marbles. How many marbles does Ben have altogether?",
-     "answer": "30+b",
-     "hint": "Which two numbers make a tens number? Add those first.",
-     "steps": [
-      "{a} + {c} = 30.",
-      "30 + {b} = {ans}.",
-      "Ben has {ans} marbles."
-     ]
-    }
-   },
-   {
-    "id": "g1",
-    "tier": "challenge",
-    "type": "number",
-    "q": "Add 18 + 7 + 12 + 23 + 3 + 17. What is the total?",
-    "answer": 80,
-    "easier": "t2",
-    "hint": "Which numbers have ones that make 10? Try 8 and 2, then 7 and 3.",
-    "steps": [
-     "18 + 12 = 30 and 7 + 3 = 10.",
-     "23 + 17 = 40.",
-     "30 + 10 + 40 = 80."
-    ],
-    "slips": [
-     {
-      "a": [
-       70
-      ],
-      "say": "70 is close. Check that you used every number once: 18, 7, 12, 23, 3, 17."
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       16,
-       17,
-       18,
-       19
-      ],
-      "b": [
-       6,
-       7,
-       8,
-       9
-      ],
-      "x": [
-       14,
-       23,
-       26,
-       35
-      ],
-      "S": [
-       40,
-       50
-      ]
-     },
-     "derive": {
-      "c": "30-a",
-      "d": "10-b",
-      "y": "S-x"
-     },
-     "q": "Add {a} + {b} + {c} + {x} + {d} + {y}. What is the total?",
-     "answer": "40+S",
-     "hint": "Which numbers have ones that make 10? Find three pairs.",
-     "steps": [
-      "{a} + {c} = 30 and {b} + {d} = 10.",
-      "{x} + {y} = {S}.",
-      "30 + 10 + {S} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "g2",
-    "tier": "challenge",
-    "type": "number",
-    "q": "What is 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1?",
-    "answer": 45,
-    "easier": "t1",
-    "hint": "Pair 1 with 9, then 2 with 8. Which number has no partner?",
-    "steps": [
-     "1 + 9, 2 + 8, 3 + 7 and 4 + 6 make four tens: 40.",
-     "The 5 has no partner.",
-     "40 + 5 = 45."
-    ],
-    "slips": [
-     {
-      "a": [
-       40
-      ],
-      "say": "40 is the four pairs. The 5 in the middle is still to add."
-     },
-     {
-      "a": [
-       50
-      ],
-      "say": "There are only four pairs of 10, plus the 5."
-     }
-    ]
-   },
-   {
-    "id": "g3",
-    "tier": "challenge",
-    "type": "number",
-    "q": "You add 7 + 8 by filling a ten-frame. What is the fewest number of counters you can move?",
-    "answer": 2,
-    "easier": "c1",
-    "hint": "You can fill the 7 frame or the 8 frame. Which has fewer empty spaces?",
-    "steps": [
-     "Fill the 7 frame: move 3.",
-     "Fill the 8 frame: move 2.",
-     "The fewest is 2: fill the bigger number."
-    ],
-    "slips": [
-     {
-      "a": [
-       3
-      ],
-      "say": "3 fills the 7 frame. Fill the 8 frame instead: how many does it need?"
-     },
-     {
-      "a": [
-       1
-      ],
-      "say": "1 is too few. How many empty spaces does the 8 frame have?"
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       5,
-       6,
-       7,
-       8
-      ],
-      "b": [
-       8,
-       9
-      ]
-     },
-     "q": "You add {a} + {b} by filling a ten-frame. What is the fewest number of counters you can move?",
-     "answer": "10-b",
-     "hint": "You can fill the {a} frame or the {b} frame. Which has fewer empty spaces?",
-     "steps": [
-      "Fill the {b} frame: move {ans}.",
-      "Fill the {a} frame: move more.",
-      "The fewest is {ans}: fill the bigger number."
-     ]
-    }
-   },
-   {
-    "id": "g4",
-    "tier": "challenge",
-    "type": "selfcheck",
-    "q": "Write a sum of 6 numbers that makes 100. Many answers are right. Check your total.",
-    "hint": "Start with a pair that makes 50. Then choose pairs that make 20 and 30.",
-    "steps": [
-     "Choose three pairs: 50 + 20 + 30 = 100.",
-     "Split each into two numbers: 45 + 5, 17 + 3, 20 + 10.",
-     "Add all six numbers to check. 45 + 5 + 17 + 3 + 20 + 10 = 100."
-    ]
-   }
-  ]
- },
- "parent": {
-  "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10. Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten), with frames and blanks to help.",
-  "words": [
-   "ten-frame: a box of ten spaces, two rows of five",
-   "make a ten: move some counters so that one group is full",
-   "split: break a number into two smaller numbers (6 is 2 and 4)",
-   "total: the answer when we add"
-  ],
-  "try_home": [
-   "Ten-frame: draw a box of two rows of five. Put 8 buttons in it and 6 clips beside it. Move clips across to fill the box, then say: ten and ...",
-   "Stomp to ten: say a number from 1 to 9. Your child stomps how many more make ten. Then try 12, 18 and 25: how many more to the next ten?",
-   "Spot the pair: write 6, 3, 4 and 7. Ask your child to find the two that make ten, then add all four. Swap, and make a mistake on purpose for them to find."
-  ],
-  "ask": [
-   "Which number is nearly full?",
-   "How many did you move?",
-   "How do you know the total did not change?"
-  ],
-  "when_stuck": "Please let your child use counters or draw a ten-frame, and wait 10 seconds before helping. Asking 'how many empty spaces are there?' works better than giving the answer.",
-  "next": "Lesson 6: Tens Jump, Ones Hop. Your child needs a pencil and paper only.",
-  "quote": "Make tens first: fill up a ten, then add what is left.",
-  "report_line": "Your child is learning to add by making a ten first and to say why. This week: adding within 100 by filling up a ten, using ten-frames and kit pieces.",
-  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
- },
- "safeguarding": [
-  "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp.",
-  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-  "Sneak-peek and exit answers are shown on the child's own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
-  "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded.",
-  "A child who ticks 'I am still stuck' gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
-  "The look-back is never collected in front of the group or read out. A pass is always allowed."
- ],
- "tutor_prep": [
-  "Solve every workbook question yourself first, making a ten each time.",
-  "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 20 small things of two kinds and a sheet of paper for a ten-frame.",
-  "Have the slides open and check the kit page is visible on screen share. Have a paper ten-frame and two kinds of counters to show on camera if you wish.",
-  "Check the recording settings exclude children's video.",
-  "Be plain with families: Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten, totals above 40). Do not call it MOE-aligned. Start here items above the school range are scaffolded; the tier labels stay honest."
- ],
- "spare_time": {
-  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
-  "rules": [
-   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
-   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
-   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
-  ],
-  "menu": [
-   {
-    "id": "M1",
-    "title": "Is it always true?",
-    "minutes": 4,
-    "tutor": "Mei says: if the ones of two numbers make 10, the total is a tens number. Try 24 + 16, 38 + 52 and 45 + 25. Then try 26 + 36. What is different?",
-    "rec": "Recording: pause. Try 24 + 16, 38 + 52 and 45 + 25. Is the total a tens number?",
-    "answer": "Yes when the ones make exactly 10: 24 + 16 = 40, 38 + 52 = 90, 45 + 25 = 70, because the ones fill one more bar and none are left. 26 + 36 = 62 is different: the ones are 6 and 6, which make 12, not 10, so the total is not a tens number."
-   },
-   {
-    "id": "M2",
-    "title": "Make a puzzle for your grown-up",
-    "minutes": 4,
-    "tutor": "Write a sum with four numbers. Make two of them a pair that makes ten. Give it to your grown-up to solve. Can they find your pair?",
-    "rec": "Recording: pause. Write a sum of four numbers with a pair that makes ten for a grown-up to solve.",
-    "answer": "No single answer. Check that two numbers make 10 and that the total is right, for example 6 + 7 + 4 + 5 = 22."
-   },
-   {
-    "id": "M3",
-    "title": "Teach it back",
-    "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never seen a ten-frame. Teach them how to add 8 + 5 by making a ten.",
-    "rec": "Recording: pause. Teach a grown-up how to add 8 + 5 with a ten-frame.",
-    "answer": "8 needs 2 more to make 10. Move 2 from the 5, so 3 are left. 10 + 3 = 13."
-   }
-  ]
- },
- "workbook": {
-  "header": "Addition: make tens first",
-  "hint_p1": "Use counters, your kit or a drawing. Say your answer out loud, then write it.",
-  "hint_p3": "Use counters, a tens bar or a drawing. Then write how you know. Choose any question, in any order.",
-  "choice_after": 3,
-  "home_hint": "Use counters or draw a ten-frame.",
-  "hint_p4": "Choose any question. You do not have to finish them all.",
-  "kits": [
-   {
-    "type": "base_ten",
-    "title": "Kit page: tens bars and ones squares",
-    "intro": "A grown-up cuts these out before the lesson. A bar is a ten (like a ten-frame in a line). A square is a one. Keep them in an envelope."
-   }
-  ]
- }
 }
