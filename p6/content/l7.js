@@ -101,7 +101,7 @@ const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.r
 const pyBox = H => {
   const ls = PY.split('\n'), code = part => `<div style="text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12.5px;line-height:1.3">${pyHTML(part.join('\n'))}</div>`;
   return H.tbl([3100, 3400, 3400], [H.row([
-    H.cell('<div style="text-align:left;font-weight:700">Python version (optional)<div style="font-weight:400;margin-top:2px">Prints the turn and the total (144.0 720.0). Needs Python turtle, e.g. Trinket.</div></div>', 3100, { fill: 'DDEBF7', h: 40 }),
+    H.cell('<div style="text-align:left;font-weight:700">Optional, for children who already code: Python version<div style="font-weight:400;margin-top:2px">Prints the turn and the total (144.0 720.0). Needs Python turtle, e.g. Trinket.</div></div>', 3100, { fill: 'EFEFEF', h: 40 }),
     H.cell(code(ls.slice(0, 4)), 3400, { h: 40 }), H.cell(code(ls.slice(4)), 3400, { h: 40 })])]);
 };
 

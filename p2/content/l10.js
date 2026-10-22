@@ -41,7 +41,7 @@ module.exports = {
     skills: 'Choosing a strategy, drawing models, listing in order, making tables, logical elimination, checking, explaining',
     materials: 'Four station cards (one slide each in the deck, and printed in the tutor guide), play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.',
     online: 'Each breakout pair gets one station card (the tutor pastes its text into the breakout room chat), works for 3 minutes, then swaps with another pair for a second card, and everyone reports back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard.',
-    warmup: 'Relay review: six quick cards, one from each earlier topic (digits, missing digits, legs, patterns, change, fractions). The answer is passed round the group.',
+    warmup: 'Relay review: six quick cards, one from each earlier topic (digits, missing digits, legs, patterns, change, fractions). A volunteer answers, then chooses a friend who has not had a turn; any child may pass.',
     explore: 'Four station cards, one per breakout pair, about 3 minutes each, then pairs swap cards (a tutor cannot visit four physical stations online): Card 1 a picture graph with a key of 5, Card 2 a logic grid about pets, Card 3 a coin puzzle (70¢ with exactly 4 coins), Card 4 a fraction strip cut into 8 parts. Pairs write how they started each one: draw, list or table.',
     mini: 'How to start a puzzle. Draw it: bars for before-and-after stories (Mei gave half her stickers away, then 6 more, and has 4 left: the half she kept is 4 + 6 = 10, so she had 20). List it in order: digit cards 2, 0, 5 make 205, 250, 502, 520 (0 cannot go first). Make a table: 7 heads and 20 legs, chickens and goats; try 0, 1, 2, 3 goats until the legs are 20 (3 goats, 4 chickens). Then check and explain.',
     share: 'Pick one puzzle and teach it to the group in two sentences: how you started it, and how you know your answer is right.',
@@ -60,7 +60,7 @@ module.exports = {
 
   script: {
     hook: ['Welcome to Challenge Day, inquirers! Today’s puzzles mix everything from our ten lessons.', 'Clever inquirers do not know every answer straight away. They know how to START: draw it, list it, or make a table.'],
-    warmIntro: ['Relay time! I show a card and say a name. That person answers, then picks the next person. A wrong answer gets a friendly “try again”, never a groan.'],
+    warmIntro: ['Relay time! I show a card and ask for a volunteer. That person answers, then chooses a friend who has not had a turn. You can always say pass. A different answer gets “let us test that”, never a groan.'],
     predict: ['Look at the four station cards. Which one will be hardest? Which way will you start it: draw, list or table? Write your guess.'],
     exploreHints: ['Stuck: “Can you draw it? Can you list the ways in order?”', 'Graph card: “Look at the key first. What is one picture worth?”', 'Finished early: “Is there another answer? How do you know there is not?”'],
     think: ['“Mei had some stickers. She gave half to Ben. Then she gave 6 to Siti and had 4 left. I cannot hold that in my head, so I draw a bar cut into two halves. One half went to Ben. The other half is the 6 for Siti and the 4 left: 6 + 4 = 10. Both halves are the same, so Mei had 10 + 10 = 20 stickers. Check: half of 20 is 10, 10 − 6 = 4 ✓.”', '“Digit cards 2, 0 and 5. How many 3-digit numbers? I list them in order, smallest hundreds digit first. 0 cannot go first. 2: 205, 250. 5: 502, 520. Four numbers, and I know I have them all because I went in order.”', '“Chickens and goats: 7 heads and 20 legs. I make a table. 0 goats: 14 legs. 1 goat: 16. 2 goats: 18. 3 goats: 20 ✓. So 3 goats and 4 chickens. Each goat I swap in adds 2 legs.”'],
@@ -73,7 +73,7 @@ module.exports = {
 
   deck: {
     today: 'Learn three ways to start a puzzle, then use them on mixed challenges.',
-    warmGame: 'Relay review. Six cards, one from each earlier topic: digit cards, missing digits, legs, patterns, change and fractions. Answer, then pass to the next person.',
+    warmGame: 'Relay review. Six cards, one from each earlier topic: digit cards, missing digits, legs, patterns, change and fractions. A volunteer answers, then chooses a friend who has not had a turn (pass is always fine).',
     warmQs: [['Share 40 stickers equally among 5 children. How many each?', '8'], ['It is 10:55 a.m. What time is it 10 minutes later?', '11:05 a.m.'], ['Which is bigger: 1/3 or 1/5 of the same cake?', '1/3'], ['Half of a circle is called a …', 'Semicircle'], ['I think of a number and add 30. I get 100. What is my number?', '70']],
     expSetup: ['Your pair gets one station card: a picture graph, a logic grid, a coin puzzle or a fraction strip.', 'Read the card aloud. Before you solve it, write how you will start: draw, list or table.', 'Solve it and check it (3 minutes). Then swap cards with another pair.', 'Be ready to explain how you started and how you know.'],
     expPic: 'four puzzle cards on a table: a picture graph with a key, a 3 by 3 logic grid, play coins and a paper strip folded into equal parts.',

@@ -63,7 +63,7 @@ module.exports = {
     explore: 'Pairs use the digit cards 1 to 9, each once, to make a sum: 3-digit number + 3-digit number = 3-digit number. They find as many as they can and look for what is always true.',
     mini: 'Missing digits: start at the ones column, write the carry, then move left. Subtraction: turn it into an addition to check. Digit-card puzzles: guess, check, then improve the guess.',
     share: 'Why do we always start a missing-digit puzzle at the ones column?',
-    exit: { q: 'Find the missing digits A and B:  3A82 + 14B9 = 5141', a: '3682 + 1459 = 5141. A = 6 and B = 5.' },
+    exit: { q: 'Find the missing digit A:  5A3 + 126 = 689', a: '563 + 126 = 689. A = 6 (ones 3 + 6 = 9; tens A + 2 = 8, so A = 6).' },
     mistakes: [
       'Forgetting the carried 1 when working out the missing digit in the next column.',
       'In subtraction, looking for a digit that can be taken from 3 to leave 8 (there is none) instead of regrouping: 13 − 5 = 8.',
@@ -71,7 +71,7 @@ module.exports = {
     ],
     extension: 'Find three different sums that add two 3-digit numbers to make a 3-digit answer, using the digits 1 to 9 once each. Add the digits of each answer. What do you notice? (They always add up to 18, e.g. 173 + 286 = 459 and 218 + 349 = 567.)',
     key: [
-      ['Q1', '(a) 3447 + 2578 = 6025  (b) 7003 − 4465 = 2538'],
+      ['Q1', '(a) 3447 + 2578 = 6025  (b) 532 − 216 = 316 (the missing digit is 3)  (c) 316 + 216 = 532'],
       ['Q2', '(a) 1173, e.g. 642 + 531  (b) 381, e.g. 135 + 246  (c) 47: 412 − 365 (the only way)'],
       ['Q3', '(a) Magic total 4500. Middle row 1900, 1500, 1100. Bottom row 1400, 1300, 1800.  (b) Numbers opposite each other across the centre add up to 3000 (e.g. 1200 + 1800, 1700 + 1300).'],
       ['Q4', '(a) Middle row 2375, 3600. Bottom row 1250, 1125, 2475.  (b) Both corner bricks are 1500 (middle row 3500, 3500).'],
@@ -85,9 +85,9 @@ module.exports = {
     warmIntro: ['I show you a number. You write the number that makes 1000 with it. Ready? 350.', 'How did you work it out? Did anyone go to 400 first, then to 1000?'],
     predict: ['Can you use the digits 1 to 9, each once, to make a sum of two 3-digit numbers with a 3-digit answer? Do you think there are many ways, a few, or none?'],
     exploreHints: [
-      'Stuck: “Put small digits in the hundreds of the two numbers you add. Try 1 and 2.”',
+      'Stuck: “Put small digits in the hundreds of the two numbers you add. Try 1 and 2 in the hundreds.” (This is also printed on the explore slide.)',
       'Close but a digit repeats: “Swap two cards in the ones column and add again.”',
-      'Ready for more: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
+      'Ready for more: the Go further what-if on the slide (smallest and biggest answer). Or: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
     ],
     think: [
       '“4A68 + 17B5 = C043. I start at the ones: 8 + 5 = 13. I write 3 and carry 1.”',
@@ -133,6 +133,7 @@ module.exports = {
       { q: 'A shop had 5000 stickers. It sold 1275 on Monday and 1480 on Tuesday. Draw a bar for the 5000 stickers and cut it into the two sold parts and the part left. How many stickers are left?', a: '2245 (1275 + 1480 = 2755; 5000 − 2755 = 2245)' }
     ],
     stretch: [
+      { q: 'Find the missing digits (turn it round and add):  7A03 − B46C = 2538', a: 'A = 0, B = 4, C = 5:  7003 − 4465 = 2538 (check: 2538 + 4465 = 7003)' },
       { q: 'Find the missing digits:  2A7B + C6D9 = 6000', a: 'A = 3, B = 1, C = 3, D = 2:  2371 + 3629 = 6000 (the only way)' },
       { q: 'In a number pyramid, each brick is the sum of the two bricks under it. The bottom row is 1200, A, B. The middle row is 2650, C. The top brick is 6000. Find the missing bricks A, B and C.', a: 'Bottom row 1200, 1450, 1900. Middle row 2650, 3350.' },
       { q: 'Ali meant to add 1099 to a number, but he added 1999 by mistake and got 6543. What is the correct answer?', a: '5643 (he added 900 too much: 6543 − 900)' },
@@ -157,10 +158,10 @@ module.exports = {
 
   workbook: H => [
     H.p('Work one column at a time, starting with the ones. Remember the carried 1!', { after: 80 }),
-    H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 40, keepNext: true }),
+    H.q(1, 'Find the missing digits. Write them in the boxes. Example:  3 __ 2 + 115 = 467.  Ones: 2 + 5 = 7.  Tens: __ + 1 = 6, so the missing digit is 5.', { before: 40, keepNext: true }),
     H.fig(svg('Two column sums with missing digits', 200,
-      colsum(['3?47', '25?8', '?025'], '+', 110, 20, 40, 50, '(a)') + colsum(['7?03', '?46?', '2538'], '−', 410, 20, 40, 50, '(b)'), 520)),
-    H.sub('c', 'Hint for (b): turn it round and add. The second number plus 2538 makes the first number. Check (b) by adding: 2538  +  ________  =  ________'),
+      colsum(['3?47', '25?8', '?025'], '+', 110, 20, 40, 50, '(a)') + colsum(['5?2', '216', '316'], '−', 410, 20, 40, 50, '(b)'), 520)),
+    H.sub('c', 'Hint for (b): turn it round and add. The answer plus the number taken away makes the first number. Check (b) by adding: 316  +  216  =  ________'),
     H.q(2, 'Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', { keepNext: true }),
     H.fig(cardsSvg(['1', '2', '3', '4', '5', '6'])),
     H.sub('a', 'Make the sum as GREAT as possible.          ________  +  ________  =  ________'),

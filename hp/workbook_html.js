@@ -136,9 +136,9 @@ W.push(gap(60));
 W.push(banner('Part B: Now it’s your turn!'));
 W.push(p('Ask your own group to vote. Each child votes for ONE fruit. Make a tally mark for each vote.', { before: 140, after: 100 }));
 W.push(tbl([2400, 5700, 1800], [row([cell('Fruit', 2400, { bold: true, fill: 'D9D9D9' }), cell('Tally', 5700, { bold: true, fill: 'D9D9D9' }), cell('Total', 1800, { bold: true, fill: 'D9D9D9' })]), ...['Apple', 'Banana', 'Orange', 'Grape', 'Watermelon'].map(f => row([cell(f, 2400, { bold: true }), cell('', 5700, { h: 60 }), cell('', 1800, { h: 60 })]))]));
-W.push(q(8, 'Which fruit did YOUR group like best?  ____________________    Is it the same as the graph above?  Yes / No', { before: 200 }));
+W.push(q(8, 'Which fruit did YOUR group like best?  ____________________    Is it the same as the graph above?  Yes / No', { before: 100 }));
 W.push(q(9, 'Why might two groups choose different fruits?'));
-W.push(...lines(2));
+W.push(...lines(1));
 
 /* ---------- LESSON 4 ---------- */
 W.push(...coreEnd(3));

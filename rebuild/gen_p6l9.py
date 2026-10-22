@@ -85,7 +85,7 @@ for i,(r,nums,a) in enumerate(rounds):
     body+=pin(128,top,1250,f'<div style="display:flex;align-items:center;gap:36px"><p style="font-size:32px;font-weight:800;color:{TEAL}">{E(r)}</p><p style="font-family:{HF};font-size:60px;font-weight:600;letter-spacing:2px">{E(nums)}</p></div>',None,WHITE,20,'18px 30px')
     body+=answer(1420,top+12,372,a)
 put('p6l9-warm1',sec('p6l9-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Quick-eye mean. Hide the slide (or cover the numbers), show one round for 5 seconds, then hide it again. Children write a guess on their whiteboards and hold it up. Click to show the mean; the closest guess wins a point. '
+ 'Minutes 0 to 5. Quick-eye mean. Hide the slide (or cover the numbers), show one round for 5 seconds, then hide it again. Children write a guess on paper (no points, no ranking). Click to show the mean and ask how they guessed. '
  'Round 1: 8 + 12 + 10 + 9 + 11 = 50, 50 ÷ 5 = 10. Round 2: 150 ÷ 5 = 30 (the middle number, because the numbers are evenly spaced). Round 3: 3 + 4 + 5 + 6 + 37 = 55, 55 ÷ 5 = 11. '
  'Ask after round 3: "Most of you guessed about 5. Why is the mean 11?" (The 37 pulls the mean up: we come back to this today.) Ask: "How did you guess so fast?" Listen for: pick a middle number, then check the big ones and small ones balance.'))
 

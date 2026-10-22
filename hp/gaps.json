@@ -177,14 +177,10 @@
      ],
      [
       "b",
-      "Show 3 different ways to pay exactly $20."
-     ],
-     [
-      "c",
       "Mei has one $50 note and two $10 notes. A bicycle costs $65 and a helmet costs $8. Does she have enough money for both? Explain."
      ]
     ],
-    "a": "(a) $10 + $5 + $2 (3 pieces).  (b) Any 3 ways, e.g. $10 + $10; $10 + $5 + $5; $5 + $5 + $5 + $5; $10 + $5 + $2 + $2 + $1. There is no $20 note.  (c) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short."
+    "a": "(a) $10 + $5 + $2 (3 pieces).  (b) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short."
    }
   ]
  },

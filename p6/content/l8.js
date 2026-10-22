@@ -89,7 +89,7 @@ const pyHTML = s => esc(s).split('\n').map(l => l.replace(/^ +/, m => '&nbsp;'.r
 const pyBox = H => {
   const ls = PY.split('\n'), code = part => `<div style="flex:1;text-align:left;font-family:'Liberation Mono',Consolas,monospace;font-size:12px;line-height:1.3;white-space:nowrap">${pyHTML(part.join('\n'))}</div>`;
   return H.tbl([9900], [H.row([H.cell(
-    `<div style="text-align:left;font-weight:700;margin-bottom:3px">Python version (optional): % is mod. Change the message and shift to test Q2; a negative shift decodes.</div>${code(ls)}`, 9900, { fill: 'DDEBF7', h: 40 })])]);
+    `<div style="text-align:left;font-weight:700;margin-bottom:3px">Optional, for children who already code: Python version. % is mod. Change the message and shift to test Q2; a negative shift decodes.</div>${code(ls)}`, 9900, { fill: 'EFEFEF', h: 40 })])]);
 };
 
 module.exports = {
@@ -97,7 +97,7 @@ module.exports = {
     n: 8, week: 4, session: 'B', title: 'Secret Codes', topic: 'Clock (Modular) Arithmetic',
     objective: 'Do clock arithmetic (counting past the end wraps round to the start), use n mod m as the remainder when n is divided by m, solve clock and calendar puzzles with mod 12 and mod 7, code and decode Caesar ciphers with letter numbers (A = 0 … Z = 25, code = (letter + shift) mod 26), crack a code, and test it all with a Scratch program that uses a list of letters and mod.',
     skills: 'Remainders and mod, clock and calendar arithmetic, negative numbers on a clock, Caesar ciphers, cracking codes by reasoning, lists and letters in code, tracing code in a table',
-    materials: 'A laptop or desktop with Scratch 3 open (the tutor shares a starter project with a list called alphabet holding A to Z), mini whiteboards, paper for code strips, scissors.',
+    materials: 'A laptop or desktop with Scratch 3 open (the tutor builds and shares a starter project with a list called alphabet holding A to Z; no .sb3 file exists in this repository, so build it beforehand), mini whiteboards, paper for code strips, scissors.',
     online: 'Children make their code strips on paper and hold them to the camera. Children hold up their coded name on paper to the camera, or the tutor reads out the coded names; partners decode on paper. Pairs use breakout rooms for the coding part; the driver shares the screen. Starter project: the tutor shares an .sb3 file (not a link only) containing the list alphabet with A to Z already filled in, and the loop already built; children add the three cipher blocks. Block colours on our slides are simplified; in Scratch, list blocks are red-orange (Variables palette) and you find blocks by the category name on the left, not by colour.',
     warmup: 'Clock jumps: the tutor shows a clock and asks “It is 9 o’clock. What time is it 4 hours later?” Children answer on whiteboards. Then times past 12, times going backwards, 24 hours later, and a day-of-the-week jump.',
     explore: 'Pairs make a shift-3 code strip (the alphabet, with the alphabet again underneath starting at D). They code their first names, swap and decode, then decode the tutor’s message PDWK LV IXQ. What happens to X, Y and Z? How do you decode?',
@@ -107,10 +107,10 @@ module.exports = {
     mistakes: ['Off by one: counting A as 1 in the maths (we use A = 0, Z = 25), or forgetting that Scratch’s list starts at item 1.', 'Not wrapping round: writing a number bigger than 25 (or below 0 when decoding) instead of taking away or adding 26.', 'Calendars: counting today as day 1 (Saturday + 2 days is Monday, not Sunday), or giving the quotient instead of the remainder for mod.'],
     extension: 'The starter already keeps spaces (if the letter is in the alphabet list, code it, else join the letter itself). Add a “crack” button that says the message decoded with every shift from 1 to 25.',
     key: [
-      ['Q1', '(a) 3 o’clock (15 − 12)  (b) 5 o’clock (30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5)  (c) 7 o’clock (4 − 9 = −5, −5 + 12 = 7)  (d) Monday (100 mod 7 = 2, Saturday + 2)  (e) Thursday (30 mod 7 = 2, Saturday back 2)  (f) 29 mod 12 = 5, 50 mod 7 = 1, 100 mod 26 = 22'],
+      ['Q1', '(a) 3 o’clock (15 − 12)  (b) 5 o’clock (30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5)  (c) 7 o’clock (4 − 9 = −5, −5 + 12 = 7)  (d) Monday (100 mod 7 = 2, Saturday + 2)  (e) Thursday (30 mod 7 = 2, Saturday back 2)  (the three “mod” sums are now in Think harder 5)'],
       ['Q2', '(a) WPGGH  (b) CODE IS FUN  (c) 16 (10 + 16 = 26)'],
       ['Q3', 'W: 22, 27, 1, B.  A: 0, 5, 5, F.  Y: 24, 29, 3, D.  The program says BFD.'],
-      ['Q4', '(a) BPM, probably THE  (b) 8 (T = 19, 19 + 8 = 27, 27 mod 26 = 1 = B)  (c) THE KEY IS UNDER THE MAT'],
+      ['Q4', '(a) BPM, probably THE  (b) 8 (T = 19, 19 + 8 = 27, 27 mod 26 = 1 = B)  (c) THE (the first word). The whole message, THE KEY IS UNDER THE MAT, is now in Think harder 5.'],
       ['Q5', '(a) 15  (b) 5 (31 mod 26)  (c) He gets the original message back: 9 + 17 = 26, a full turn  (d) 13 (13 + 13 = 26)']
     ]
   },
@@ -144,6 +144,10 @@ module.exports = {
     ws1: 'Page 1, in pairs: Q1 clock and calendar puzzles with mod, Q2 code and decode with a Caesar shift (test it in Scratch).',
     ws2: 'Page 2, on your own: Q3 trace the code machine in a table, Q4 crack a secret message, Q5 combine two shifts.'
   },
+
+  moved: [
+    { q: '(a) Work out 29 mod 12, 50 mod 7 and 100 mod 26. (b) Decode the whole message from Q4 (BPM SMG QA CVLMZ BPM UIB) with the shift you found.', a: '(a) 29 mod 12 = 5, 50 mod 7 = 1, 100 mod 26 = 22.  (b) THE KEY IS UNDER THE MAT.' }
+  ],
 
   qbank: {
     core: [
@@ -186,10 +190,9 @@ module.exports = {
       H.p('Letter numbers (we start at A = 0). Use them for every code question in this lesson.', { after: 10 }),
       H.fig(strip()),
       H.q(1, 'Clock and calendar puzzles. A clock wraps round after 12; a week wraps round after 7 days.', { before: 40, keepNext: true }),
-      H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later:  ______ o’clock.', { after: 60 }),
+      H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later (count 12 hours at a time):  ______ o’clock.', { after: 60 }),
       H.sub('c', 'It is 4 o’clock. 9 hours ago it was  ______ o’clock.      (d)  Today is Saturday. In 100 days:  __________ .', { after: 60 }),
       H.sub('e', 'Today is Saturday. 30 days ago it was  __________ .', { after: 60 }),
-      H.sub('f', '29 mod 12 = ____       50 mod 7 = ____       100 mod 26 = ____'),
       H.q(2, 'Caesar codes. Code number = (letter number + shift) mod 26. Test your answers in Scratch (type the message in capital letters; the starter keeps the spaces).', { keepNext: true }),
       H.sub('a', 'Code the word PIZZA with a shift of 7.      ______________________', { after: 60 }),
       H.sub('b', 'Decode this message. It was made with a shift of 10:   MYNO SC PEX      ______________________', { after: 60 }),
@@ -204,7 +207,7 @@ module.exports = {
       H.p('BPM  SMG  QA  CVLMZ  BPM  UIB', { after: 30, align: 'center', size: 30, bold: true }),
       H.sub('a', 'Which 3-letter word appears twice?  ________   What English word could it be?  ________', { after: 60 }),
       H.sub('b', 'If you are right, what shift turns T into B?  ______', { after: 60 }),
-      H.sub('c', 'Decode the whole message:   ________________________________________________'),
+      H.sub('c', 'Decode the first word of the message with that shift:   ____________'),
       H.q(5, 'Two shifts in a row. Shifts add up like jumps on a 26-hour clock.', { keepNext: true }),
       H.sub('a', 'Shift 6, then shift 9 is the same as one shift of  ______ .      (b)  Shift 19, then shift 12:  one shift of  ______ .', { after: 60 }),
       H.sub('c', 'Ben codes a message with shift 9, then codes the result with shift 17. What does he get? Why?', { after: 20 }), ...H.lines(1),

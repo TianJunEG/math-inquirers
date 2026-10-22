@@ -78,6 +78,7 @@ def clean(L,D):
             s=re.sub(r'(letter-spacing:2px;[^>]*>)\s*Challenge\s*(</p>)',r'\g<1>40–72 MIN\2',s) if '40–72' not in s else s
         for a,b in SUBS:
             s=re.sub(a,b,s) if a.startswith(('>','Finished','Early','early','Stretch','Think','Write')) else s.replace(a,b)
+        if sid.endswith(('-challenge','-chdiag','-chwalk')): s=s.replace('62–75 MIN','40–72 MIN')
         if sid.endswith('-warm1') and not L.endswith('l10'):
             s=s.replace('0–5 MIN','5–8 MIN').replace('Minutes 0 to 5','Minutes 5 to 8')
         if sid.endswith('-warm2') and not L.endswith('l10'):

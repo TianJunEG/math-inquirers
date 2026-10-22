@@ -433,7 +433,7 @@ for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 order=['p2l8-title','p2l8-warm1','p2l8-warm2','p2l8-explore1','p2l8-explore2','p2l8-teach1','p2l8-we1','p2l8-try1','p2l8-we2','p2l8-try2','p2l8-we3','p2l8-key','p2l8-break','p2l8-ws1','p2l8-ws1ans','p2l8-teachcube','p2l8-trycube','p2l8-teachnet','p2l8-trynet','p2l8-ws2','p2l8-ws2ans','p2l8-stretch','p2l8-challenge','p2l8-chdiag','p2l8-chwalk','p2l8-talk','p2l8-exit']
 order=p2gaps.order(order,8)
 deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T12:00:00Z'},'lists':'css','title':'Math Inquirers P2: Lesson 8 – Shape Builders','order':order,'cover':'p2l8-title',
- 'sections':{'s1':{'description':'Warm-up and explore','start':'p2l8-title'},'s2':{'description':'Teach: circle pieces, and counting squares and triangles in order','start':'p2l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l8-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p2l8-stretch'}},
+ 'sections':{'s1':{'description':'Warm-up and explore','start':'p2l8-title'},'s2':{'description':'Teach: circle pieces, and counting squares and triangles in order','start':'p2l8-teach1'},'s3':{'description':'Worksheet with teaching before page 2','start':'p2l8-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l8-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 missing=[i for i in order if i not in S]

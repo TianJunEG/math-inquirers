@@ -68,11 +68,11 @@ for i,d in enumerate([3,9,1]): g+=f'<rect x="{1120+i*130}" y="92" width="96" hei
 g+=txt(1310,262,'cards still to come …',30,MUTED,weight=600,font='Nunito Sans, Arial')
 body=h2('Warm-up: Place It Right')+card(p('I turn over one digit card at a time. Write it in the H, T or O box straight away. No moving it later! Biggest number wins.',38,700))
 body+=pin(128,420,1664,svgwrap(1600,290,'Three empty place-value boxes H, T, O and a digit card 7 waiting to be placed',g),None,WHITE,24,'16px 32px')
-body+=pin(128,770,1664,p('Where would you put a 9? A 0? What about a 5: keep it, or wait for a bigger card?',36,700),'fade',SOFT,20,'20px 30px')
+body+=pin(128,770,1664,p('Where would you put a 9? A 0? What about a 5: keep it, or wait for a bigger card?',36,700)+p('Bonus, if you like: write the biggest and the smallest 3-digit number whose digits add up to 9.',32,700,TEAL),'fade',SOFT,20,'16px 30px')
 put('p2l1-warm1',sec('p2l1-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Place It Right. Children draw three boxes on a whiteboard: H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, read the numbers aloud: biggest wins. '
  'Play 3 rounds: two for the biggest, one for the smallest. Click to show the thinking question. Talk: "A 9 goes in the hundreds: it is worth 900 there. A 0 goes in the ones. A 5 is tricky: are there more big cards or small cards left?" '
- 'Listen for children who say "the hundreds digit matters most". That idea comes back in talk time (401 or 399).'))
+ 'Listen for children who say "the hundreds digit matters most". That idea comes back in talk time (401 or 399). Bonus bubble (a choice for anyone who would like more): biggest 900, smallest 108 (the hundreds digit cannot be 0).'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','4 hundreds, 6 tens, 2 ones = ?','462'),('2.','What is the 8 worth in 384?','80'),('3.','10 more than 296?','306'),('4.','100 less than 405?','305'),('5.','The biggest 3-digit number?','999')]
@@ -132,7 +132,7 @@ body+=pin(760,250,1032,p('Make every 3-digit number with 0, 3 and 6.',40,700),No
 body+=step(1,'3 first: 306, 360.     6 first: 603, 630.',top=480,size=38)
 body+=step(2,'0 first: 036 is just 36. It has only 2 digits: not this one!',top=590,size=38)
 body+=pin(128,710,1664,p('So only 4 numbers. Zero can never be the hundreds digit. Smallest: 306.',38,800),'fade',SOFT,20,'20px 30px')
-put('p2l1-teachzero',sec('p2l1-teachzero','28–31 MIN',body,'Teach before the worksheet (Q3 has a zero card). Ask first: "Will 0, 3, 6 make 6 numbers like before?" Let children argue. Show 036 on a calculator or say it aloud: "thirty-six". Click through. Smallest is 306, not 036. Biggest is 630.'))
+put('p2l1-teachzero',sec('p2l1-teachzero','28–31 MIN',body,'Teach before the worksheet (Q3 has a zero card). Ask first: "Will 0, 3, 6 make 6 numbers like before?" Let children argue. Show 036 on a calculator or say it aloud: "thirty-six". Click through. Smallest is 306, not 036. Biggest is 630. Ask a volunteer who already knows why to explain "zero can never go first" in two sentences (a job for anyone who would like it, never a named child).'))
 
 # ---------- 11. key ----------
 body=h2('Key idea: list in order')+card(p('Fix the hundreds digit, then swap the others. Each card starts the same number of numbers, so you know when you have them all.',44,700))+card(p('Zero can never be the hundreds digit. Biggest digit first makes the biggest number.',38,600,MUTED))
@@ -221,7 +221,7 @@ for f in os.listdir(sd):
 for i,h in S.items(): open(os.path.join(sd,i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
  'title':'Math Inquirers P2: Lesson 1 – Digit Detectives','order':order,'cover':'p2l1-title',
- 'sections':{'s1':{'description':'Warm-up and explore','start':'p2l1-title'},'s2':{'description':'Teach: place value and listing in order','start':'p2l1-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l1-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':'p2l1-stretch'}},
+ 'sections':{'s1':{'description':'Warm-up and explore','start':'p2l1-title'},'s2':{'description':'Teach: place value and listing in order','start':'p2l1-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l1-break'},'s4':{'description':'Think harder, go further, talk and exit','start':'p2l1-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)

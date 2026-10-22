@@ -253,7 +253,7 @@ put('p6l8-ws1', ws_preview('p6l8-ws1', '40–50 MIN', 'Worksheet page 1: with yo
     'Use the letter strip at the top of the page. A = 0.',
     'Minutes 40 to 50, in pairs. Walk around. Ask "How do you know?" before giving any help. For Q2 check pairs write the letter numbers first and wrap round with 26.'))
 put('p6l8-ws1ans', check2('p6l8-ws1ans', '50–52 MIN', 'Page 1: check together', [
-    ('Q1', 'a) 3 o’clock   b) 5 o’clock   c) 7 o’clock   d) Monday   e) Thursday   f) 5, 1, 22', 2),
+    ('Q1', 'a) 3 o’clock   b) 5 o’clock   c) 7 o’clock   d) Monday   e) Thursday', 2),
     ('Q2a, b', 'PIZZA with shift 7 is WPGGH.   MYNO SC PEX is CODE IS FUN.', 1),
     ('Q2c', 'Shift 16: decoding by 10 is the same as coding by 26 − 10 = 16.', 1)],
     'Click each answer after a pair explains. Q1: a) 8 + 7 = 15, 15 − 12 = 3. b) 30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5. c) 4 − 9 = −5, + 12 = 7. d) 100 mod 7 = 2 (98 = 14 weeks), Saturday + 2 = Monday. e) 30 mod 7 = 2, Saturday back 2 = Thursday. f) 29 mod 12 = 5, 50 mod 7 = 1 (49 = 7 × 7), 100 mod 26 = 22 (78 = 3 × 26). Q2a: P 15 → 22 = W, I 8 → 15 = P, Z 25 → 32 mod 26 = 6 = G, A 0 → 7 = H. Q2b: M 12 − 10 = 2 = C, Y 24 − 10 = 14 = O, N 13 − 10 = 3 = D, O 14 − 10 = 4 = E.'))
@@ -292,12 +292,12 @@ put('p6l8-teachcomb', sec('p6l8-teachcomb', '55–56 MIN', body,
 
 # ================= 19–20. ws2 =================
 put('p6l8-ws2', ws_preview('p6l8-ws2', '56–72 MIN', 'Worksheet page 2: on your own',
-    [('Q3', 'Trace the code machine in a table: WAY with shift 5.'), ('Q4', 'Crack Mei’s secret message.'), ('Q5', 'Two shifts in a row.')],
+    [('Q3', 'Trace the code machine in a table: WAY with shift 5.'), ('Q4', 'Crack Mei’s secret message: find the word, find the shift, decode the first word.'), ('Q5', 'Two shifts in a row.')],
     'Finished early? Stretch and Challenge come next.',
     'Children work alone (they may test in Scratch). Note who needs a short catch-up next lesson.'))
 put('p6l8-ws2ans', check2('p6l8-ws2ans', '72–75 MIN', 'Page 2: check together', [
     ('Q3', 'W 22, 27, 1, B   A 0, 5, 5, F   Y 24, 29, 3, D   It says BFD.', 1),
-    ('Q4', 'BPM is THE.  T to B is shift 8.  THE KEY IS UNDER THE MAT', 2),
+    ('Q4', 'BPM is THE.  T to B is shift 8.  Decode the first word: THE', 2),
     ('Q5', 'a) 15   b) 5   c) The original message: 9 + 17 = 26   d) 13', 1)],
     'Click each answer after a child explains. Q4: the repeated word BPM; "the" is the most common 3-letter word; T = 19, B = 1: 19 + 8 = 27, 27 mod 26 = 1. Decode every letter by 8 back (or forward 18): BPM SMG QA CVLMZ BPM UIB is THE KEY IS UNDER THE MAT. Q5: a) 6 + 9 = 15. b) 19 + 12 = 31, 31 mod 26 = 5. c) 9 + 17 = 26, a full turn. d) Shift 13 used twice is 26: ROT13 is a real code, and coding twice decodes it.'))
 

@@ -67,7 +67,7 @@ module.exports = {
     think: [
       '“5 hundreds, 12 tens and 4 ones. 12 tens is 120, so the number is 500 + 120 + 4 = 624. I can also see it as 6 hundreds, 2 tens, 4 ones, because 10 of the tens make another hundred.”',
       '“Cards 1, 6 and 9. I keep the hundreds digit the same and swap the other two. 1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961. Each card starts 2 numbers, and 3 cards make 6 numbers. That is how I know I have them all.”',
-      '“The biggest number has the biggest digit in the hundreds place: 961. The smallest has the smallest digit in the hundreds place: 169. But zero can never go first: 036 is just 36.”'
+      '“The biggest number has the biggest digit in the hundreds place: 961. The smallest has the smallest digit in the hundreds place: 169. But zero can never go first: 036 would be just 36 (thirty-six), which has only 2 digits, so it is not a 3-digit number.”'
     ],
     circulate: ['Ask: “How many of your numbers start with this card? Is that all of them?”', 'Ask: “What is this digit worth? How many tens is that?”', 'Ask: “Point to the number one square below this one on the chart. How much bigger is it?”'],
     hints: ['Hint 1: “Fix the hundreds digit first.”', 'Hint 2: “Build it with blocks: hundreds, tens and ones. Can 10 tens become a hundred?”', 'Hint 3: “Say the numbers out loud as you count on in 10s. What happens after 590?”'],

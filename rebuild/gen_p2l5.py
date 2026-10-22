@@ -219,7 +219,7 @@ for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':'2026-10-21T08:00:00Z'},'lists':'css','title':f'Math Inquirers P2: Lesson {N} – Mystery Number Machines','order':order,'cover':order[0],
- 'sections':{'s1':{'description':'Warm-up and explore','start':f'{P}-title'},'s2':{'description':'Teach: undo it backwards, and before-and-after bars','start':f'{P}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{P}-break'},'s4':{'description':'Stretch, challenge, talk and exit','start':f'{P}-stretch'}},
+ 'sections':{'s1':{'description':'Warm-up and explore','start':f'{P}-title'},'s2':{'description':'Teach: undo it backwards, and before-and-after bars','start':f'{P}-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':f'{P}-break'},'s4':{'description':'Think harder, go further, talk and exit','start':f'{P}-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},'designSystems':[]}
 json.dump(deck,open(os.path.join(D,'deck.json'),'w'),indent=1,ensure_ascii=False)
 print(len(order),'slides')
