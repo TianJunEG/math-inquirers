@@ -386,18 +386,29 @@ Other findings about the plan:
 
 ## 6. Fixes, with exact new budgets (total 90 in every lesson)
 
-All numbers in this section come from the same model re-run with the fixes switched on (`--fix` tables in the helper; typical tutor). "Need after fixes" shows the best / typical / slow figure for each part so a reader can see the margin.
+All numbers in this section come from the same model re-run with the fixes switched on (the "Proposed budgets" tables printed by the helper; typical tutor). "Need after fixes" shows the best / typical / slow figure for each part so a reader can see the margin.
 
-**F1 Re-budget the clock.** The scripted splits (1 / 3 / 4 / 10 / 12 / 4 / 46 / 5 / 3 / 2) assume zero overhead. With the model's constants the lead-in parts need roughly 1.5 / 5-5.5 / 5 / 11.5-14.5, the closing parts 3.5 / 2.5-4.5 / 3.5. The worksheet gives back 3-5 minutes and takes whatever is left, with a cushion inside page 2 (F11).
+
+**F1 Re-budget the clock.** The scripted splits (1 / 3 / 4 / 10 / 12 / 4 / 46 / 5 / 3 / 2) assume zero overhead. With the model's constants the lead-in parts need roughly 1.5 / 5-5.5 / 5 / 11.5-14.5, the closing parts 3.5 / 2.5-4.5 / 3.5. The worksheet window becomes 41.5 to 48 minutes (was 46): it takes whatever is left, with a cushion inside page 2 (F11).
+
 **F2 Sneak-peek puzzles.** Budget 5-5.5 min (minutes 1.5-7). Give 60 s for puzzle 1 (the objects/drawing one) and 90 s for puzzle 2, then ONE hold-up moment for both papers, not one per puzzle; delete the optional "can anyone find another way?" question. All privacy rules stay (own paper, camera to the tutor only, no names).
+
 **F3 Warm-up.** Keep the game at 90 s and the quick questions at three (Q1 to Q3, the ones that revisit last lesson's idea); move Q4 and Q5 to the Weekly Dose of Thinking Math. Delete the ASK follow-ups in the warm-up speaker notes. Budget 5 min.
+
 **F4 Explore.** Ask two debrief questions, not three: the third ("What do the side lengths tell us about 24?" and its equivalents) is the first slide of the mini-lesson. Online, name the explore as the only breakout of the first half, with a 60 s auto-close timer; budget 11.5-14.5 min (see table).
+
 **F5 Mini-lesson.** Keep the worked examples and the key-idea slide; keep one "your turn" slide (the last one) or none (L2, L3, L7); keep at most three of the speaker-note ASKs. Budget 5-8.5 min. In the typical model the 12 scripted minutes are about 1.5 min of speech, 2.9 min of slide changes and 6-7 min of "your turn" slides (2.4 min each: change, read, 60 s write, 30 s hold-up, reveal) and speaker-note ASKs (30 s each); the typical need is 8.7 to 13.4 min.
+
 **F6 Brain break.** 3.5 min (water and toilet before the game, not after).
-**F7 Worksheet.** Keep Start here / check / short teaching / solo page, but re-set the windows to the tables below (page 1 and the opening need 16.5-19 min once the 2 min start and 2 breakout moves are counted). Skip every "your turn"/"Optional" slide in the teaching block and limit speaker-note ASKs to three.
+
+**F7 Worksheet.** Keep Start here / check / short teaching / solo page, but re-set the windows to the tables below (page 1 needs 16-19 min once the 2 min start and 2 breakout moves are counted). Skip every "your turn"/"Optional" slide in the teaching block and limit speaker-note ASKs to three.
+
 **F8 Talk time.** Pair talk 60 s (no breakout: online, "tell the grown-up beside you, or write one sentence"); volunteers first; the second discussion question moves to the Weekly Dose. Budget 3.5-4 min.
+
 **F9 Looking back.** Keep the child's 2 minutes untouched. Shorten the first SAY paragraph to one sentence ("Turn to page 3, the Looking back box. Write, tick or pass. Two minutes, no talking.") because the printed box already says the rest; keep the model line and the "still stuck" line. Budget 3.5 min (2 child + 1.5 routine).
+
 **F10 Do not change** the answers, the tier split (Core approachable / Think Harder / Challenge), the pass option or the "no marking, no names" rules: every fix above removes optional material, repeats or waiting, or moves minutes between parts.
+
 **F11 Standing cushion.** Hold 2-3 minutes inside the page-2 solo block (WS-d) as an unallocated buffer. If earlier parts overrun, the tutor spends the buffer first, then the choice questions at the end of page 2, and never the checks, exit ticket or Looking back. In lessons where the cushion is above 4 minutes the extra is the printed choice question (L4 Q6, L5 Q6, L8 Q6, L9 Q5) or, in L6, the first Think Harder item.
 
 ### Per-lesson fixes and budgets
