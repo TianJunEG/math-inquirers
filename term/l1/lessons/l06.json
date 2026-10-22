@@ -61,6 +61,8 @@
     "notes": "No ruler is needed in the lesson; a child who has one at home may use it to draw straight number lines. Nothing needs to be bought. No matches, toothpicks or anything sharp. Children need a little clear floor space for the movement break; small things never go near the mouth or ears."
   },
   "workbook": {
+    "choice_after": 3,
+    "home_hint": "Use your bars and squares, or draw the jumps.",
     "header": "Addition and Subtraction: tens jump, ones hop",
     "kits": [
       {
