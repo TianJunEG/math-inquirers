@@ -59,3 +59,7 @@ Total: 17 / 24 (independent auditor, before fixes) -> 18 / 24 (author re-score; 
 - Open: the kit page is still tens bars and ones squares; its intro now says it helps S5 and S7 and that the plates are real plates. A plates kit would need a template change.
 - Open: the Mi mascot on page 1 appears to hold a calculator (shared asset, finding 12).
 - Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026): said plainly in the tutor guide strand note and the parent summary; no MOE-aligned claim anywhere.
+
+## Second fix pass, 22 Oct 2026
+
+Changes are listed in `audit/FIXES2_L08.md`. Re-checked: validator 0 FAIL; 2612 answer checks; 324 practice variants; ordered marking on online item g1 tested in a browser (right order accepted, swapped order refused with a clear message); slow-class script 87:50 (workbook overrun covered by the flex buffer and stated in the guide); workbook fill 92, 90, 84, 86, 94%; parent page one page. Start here S5 now stays with whole tens; compensation is only at Think harder. No paper is held up to the camera. No child has used the lesson; times are modelled.
