@@ -198,11 +198,11 @@ def placement_block(L):
     s = ('<p class="muted">Levels are named by age, and each spans three ages and overlaps the next, so children can join the level that suits how they are learning now. '
          'This level is for ages %s and builds on %s.</p>'
          "<p>Take the free 30-minute diagnostic for the level that matches your child's school year (the Math Inquirers Placement Check for that level). Then:</p>"
-         '<ul><li>70%% or more: enrol at this level.</li>'
-         '<li>40-69%%: enrol at this level; the tutor will note that support may help. Or choose %s.</li>'
-         '<li>Under 40%%: we recommend %s.</li>' % (L['ages'], esc(L['builds']), down, down))
+         '<ul><li>The check is scored out of 10. 7 to 10: enrol at this level.</li>'
+         '<li>4 to 6: enrol at this level (the tutor will note that support may help), or choose %s.</li>'
+         '<li>0 to 3: we recommend %s.</li>' % (L['ages'], esc(L['builds']), down, down))
     if nxt:
-        s += '<li>If it was too easy (90%% or more), your child may also try the diagnostic one level up (<a href="%s">Ages %s</a>).</li>' % (nxt['path'], nxt['ages'])
+        s += '<li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up (<a href="%s">Ages %s</a>).</li>' % (nxt['path'], nxt['ages'])
     s += '</ul><p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level.'
     if not prev:
         s += ' Ages 6-8 is the lowest level: if your child is a weaker learner there, they start with the free taster and a tutor chat.'
