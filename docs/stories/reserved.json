@@ -357,6 +357,26 @@
    "level": 1,
    "lesson": 2,
    "name": "Thabit ibn Qurra"
+  },
+  {
+   "level": 3,
+   "lesson": 2,
+   "name": "Joan Clarke"
+  },
+  {
+   "level": 3,
+   "lesson": 10,
+   "name": "Raymond Smullyan"
+  },
+  {
+   "level": 3,
+   "lesson": 1,
+   "name": "Rozsa Peter"
+  },
+  {
+   "level": 3,
+   "lesson": 6,
+   "name": "Abu Bakr al-Hassar"
   }
  ]
 }

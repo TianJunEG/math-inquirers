@@ -1,0 +1,200 @@
+[
+ {
+  "lesson": 1,
+  "name": "Rozsa Peter",
+  "years": "1905 to 1977",
+  "country_or_region": "Hungary (Budapest)",
+  "who": "A Hungarian mathematician who helped start the study of recursion, rules that build each number from the one before.",
+  "story": "Rózsa Péter was born in Budapest, in Hungary, in 1905. At university she began with chemistry, but she changed to mathematics. She became one of the people who started the study of recursion. In simple words, a recursive rule builds each new number from the number before it, so a pattern can keep going as far as you like. Later she taught at a university in Budapest. She also wrote a book for ordinary readers, called Playing with Infinity, and she said she loved maths mainly because it is beautiful. In 1973 she became the first woman elected to the Hungarian Academy of Sciences.",
+  "link_to_lesson": "Today you continue number patterns, and a rule that makes each number from the one before is the idea of recursion that she studied.",
+  "try_it": "Start at 5. The rule is: double the number, then add 1. Write the next four numbers. Can you predict the one after that?",
+  "try_it_answer": "11, 23, 47, 95 (5 x 2 + 1 = 11, 11 x 2 + 1 = 23, 23 x 2 + 1 = 47, 47 x 2 + 1 = 95). The next one is 95 x 2 + 1 = 191.",
+  "icon_idea": "A staircase of growing number tiles, each step made from the one below; not a portrait.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Peter.html",
+   "https://www.encyclopedia.com/computing/news-wires-white-papers-and-books/peter-rozsa",
+   "https://richardzach.org/?p=2783"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "story_words": 104
+ },
+ {
+  "lesson": 2,
+  "name": "Joan Clarke",
+  "years": "1917 to 1996",
+  "country_or_region": "England (London, Cambridge, Bletchley Park)",
+  "who": "A Cambridge mathematician who worked as a codebreaker in Hut 8 at Bletchley Park.",
+  "story": "Joan Clarke was born in London in 1917. She won a scholarship to Newnham College, Cambridge, to study mathematics, and she earned a double first, the top marks. At that time Cambridge did not give women full degrees, so hers was not officially awarded until 1948. In 1940 she joined the codebreakers at Bletchley Park. She worked in Hut 8, on secret messages sent by the German navy. She became skilled at a method that used careful counting and chance to cut down how many possibilities had to be tested. She was the only woman in the team that used it, and later became deputy head of Hut 8. After the war she studied old Scottish coins and won a medal for it.",
+  "link_to_lesson": "Today you crack letter puzzles by trying possibilities and working out what must be true, and codebreakers also cut down possibilities to find the secret.",
+  "try_it": "Each letter is a different digit. A + A + A = BA, and B is not 0. Which digits are A and B? Check by adding.",
+  "try_it_answer": "A = 5 and B = 1, because 5 + 5 + 5 = 15 and 15 reads B A (1 then 5). No other pair of different digits works.",
+  "icon_idea": "A hut-shaped door with a keyhole and a few coded letters; not a portrait.",
+  "source_urls": [
+   "https://www.gchq.gov.uk/information/joan-clarke",
+   "https://www.english-heritage.org.uk/visit/blue-plaques/joan-clarke/",
+   "https://en.wikipedia.org/wiki/Joan_Clarke",
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Clarke_Joan/"
+  ],
+  "confidence": "high",
+  "legend_note": "Sources differ slightly on the year she became deputy head and on her honours, so the story gives no years for those. Letter puzzles are our link; the sources do not say she did school-style puzzles.",
+  "story_words": 123
+ },
+ {
+  "lesson": 3,
+  "name": "John Napier",
+  "years": "1550 to 1617",
+  "country_or_region": "Scotland",
+  "who": "A Scottish inventor of number rods for multiplying.",
+  "story": "John Napier lived in Scotland, near Edinburgh. He looked after his family's farms, and maths was his hobby. He invented a set of rods with multiplication tables written on them. People call them Napier's bones. To multiply a big number, you place the rods side by side, read the rows, and add. His book about the rods came out in 1617. With the rods, you only need to add.",
+  "link_to_lesson": "Napier's rods are made of times tables, so they turn multiplication into reading a table and adding, just like the tables of 6, 7, 8 and 9 we explore today.",
+  "try_it": "Make a rod for 9. Write 9 x 1 up to 9 x 9. What pattern do you see in the tens digits and in the ones digits?",
+  "try_it_answer": "09, 18, 27, 36, 45, 54, 63, 72, 81. The tens digits go up by 1 each time (0 to 8) and the ones digits go down by 1 (9 to 1). Each pair of digits adds to 9.",
+  "icon_idea": "A set of tall thin rods, each with a small times-table grid and diagonal lines.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Napier/",
+   "https://mathshistory.st-andrews.ac.uk/Extras/Napier_rods/",
+   "https://library.si.edu/digital-library/book/rabdologiaseunu00napi"
+  ],
+  "confidence": "high",
+  "legend_note": ""
+ },
+ {
+  "lesson": 4,
+  "name": "Bhaskara II",
+  "years": "1114 to 1185",
+  "country_or_region": "India",
+  "who": "An Indian maths teacher who wrote word problems in verse.",
+  "story": "Bhaskara lived in India about 900 years ago. He wrote a maths book called the Lilavati. It has many word problems, with kings, elephants and pearl necklaces in them. A story often told says the book was named after his daughter. Historians have no proof that this story is true, so it is a legend. What we do know is that Bhaskara thought maths problems could be told as little tales, and that is a good way to learn.",
+  "link_to_lesson": "Today we solve word problems by drawing a bar model, and Bhaskara's book is full of stories that ask us to find an unknown number.",
+  "try_it": "In the style of Bhaskara: a necklace has some pearls. Half of them fall on the floor, a quarter fall on the bed and 5 stay on the string. How many pearls were there? Draw a bar model.",
+  "try_it_answer": "20 pearls. Half and a quarter make three quarters, so the 5 left is one quarter. One quarter is 5, so the whole is 4 x 5 = 20. Check: 10 + 5 + 5 = 20.",
+  "icon_idea": "A string of pearls with one pearl rolling away, and a small speech bubble.",
+  "source_urls": [
+   "https://britannica.com/print/article/64067",
+   "https://en.wikipedia.org/wiki/L%C4%ABl%C4%81vat%C4%AB",
+   "https://old.maa.org/node/116870"
+  ],
+  "confidence": "medium",
+  "legend_note": "A story often told says the Lilavati was named after Bhaskara's daughter (historians have no proof; it is a legend). The necklace problem in try_it is our own, written in the style of the book, not a copy of his."
+ },
+ {
+  "lesson": 5,
+  "name": "Sun Zi",
+  "years": "lived more than 1,500 years ago (exact dates unknown)",
+  "country_or_region": "China",
+  "who": "The author of an old Chinese maths book with a famous remainder riddle.",
+  "story": "Almost nothing is known about the life of Sun Zi. We know the name of a Chinese maths book, the Sunzi Suanjing. Historians are not sure exactly when it was written, but it is more than 1,500 years old. It has a riddle about remainders: find a number that leaves 2 when we share it into groups of 3, leaves 3 in groups of 5, and leaves 2 in groups of 7. The answer is 23. The book also shows a method for riddles like this.",
+  "link_to_lesson": "Today's \"what number am I?\" riddles use division with remainders, just like Sun Zi's riddle.",
+  "try_it": "Check the answer 23 for Sun Zi's riddle by dividing. Then find a number between 10 and 20 that leaves 1 when divided by 4 and leaves 2 when divided by 3.",
+  "try_it_answer": "23 / 3 = 7 r 2, 23 / 5 = 4 r 3, 23 / 7 = 3 r 2, so 23 works. The second riddle: 17 (17 / 4 = 4 r 1 and 17 / 3 = 5 r 2). Of 13 and 17, only 17 fits.",
+  "icon_idea": "A bundle of counting sticks tied in groups, with a few sticks left over.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Sun_Zi/",
+   "https://en.wikipedia.org/wiki/Chinese_remainder_theorem"
+  ],
+  "confidence": "medium",
+  "legend_note": "Dates and author of the Sunzi Suanjing are uncertain; the story says so."
+ },
+ {
+  "lesson": 6,
+  "name": "Abu Bakr al-Hassar",
+  "years": "12th century (exact dates unknown)",
+  "country_or_region": "Morocco / the Islamic West (sources differ between the Maghreb and Spain)",
+  "who": "A mathematician whose book on fractions is the earliest known use of the fraction bar.",
+  "story": "Al-Hassar lived about 900 years ago, in the 12th century. Very little is known about his life, and his exact dates are not certain. Most sources say he came from Morocco. He wrote maths books about calculating. One is lost, and only part of another survives. In his chapter on fractions, he told readers to write the bottom number under a straight line and the top number above it. This is described as the first known use of the fraction bar. A little later, in 1202, Fibonacci used the same bar in his famous book.",
+  "link_to_lesson": "Today you read and compare fractions, and the bar between the top and bottom numbers is the one al-Hassar described.",
+  "try_it": "Write two thirds and three quarters with a fraction bar. Use a fraction wall, or twelfths, to decide which one is bigger.",
+  "try_it_answer": "2/3 = 8/12 and 3/4 = 9/12, so 3/4 is bigger.",
+  "icon_idea": "A palm-leaf style page with one neat fraction bar and a wall of equal bricks; not a portrait.",
+  "source_urls": [
+   "https://www.maa.org/book/export/html/117587",
+   "https://muslimheritage.com/people/scholars/abu-bakr-al-hassar/",
+   "https://en.wikipedia.org/wiki/Abu_Bakr_al-Hassar"
+  ],
+  "confidence": "medium",
+  "legend_note": "His dates and place are uncertain, and the story says so. The claim that Fibonacci's use of the bar came after al-Hassar is stated by MAA and Muslim Heritage. The sources do not say whether Fibonacci learned the bar from al-Hassar.",
+  "story_words": 95
+ },
+ {
+  "lesson": 7,
+  "name": "Karen Uhlenbeck",
+  "years": "born 1942",
+  "country_or_region": "USA (born in Cleveland, Ohio)",
+  "who": "An American mathematician who studies shapes like soap films, and the first woman to win the Abel Prize.",
+  "story": "Karen Uhlenbeck was born in Cleveland, in the USA, in 1942. As a child she read a great deal, especially about science. At university she began with physics but changed to mathematics. Think of a wire loop dipped in soapy water. The soap film pulls itself into the shape with the smallest area that fits the wire. Mathematicians call such shapes minimal surfaces. Uhlenbeck worked on them with another mathematician, Jonathan Sacks, and found new ways to study when and how they exist. In 2019 she became the first woman to win the Abel Prize, one of the top prizes in maths.",
+  "link_to_lesson": "Today you find area and perimeter, and she studied shapes that use the smallest area for the edge that holds them.",
+  "try_it": "Two wire frames have the same perimeter, 20 cm: a rectangle 6 cm by 4 cm, and a square 5 cm by 5 cm. Which soap film has the larger area?",
+  "try_it_answer": "Rectangle: 6 x 4 = 24 square cm. Square: 5 x 5 = 25 square cm. Both have perimeter 20 cm, and the square has the larger area, by 1 square cm.",
+  "icon_idea": "A wire loop holding a rainbow soap film; not a portrait.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Uhlenbeck_Karen.html",
+   "https://abelprize.no/sites/default/files/2021-04/I%27m%20Forever%20Blowing%20Bubbles.pdf",
+   "https://plus.maths.org/abel-prize-2019",
+   "https://en.wikipedia.org/wiki/Karen_Uhlenbeck"
+  ],
+  "confidence": "high",
+  "legend_note": "The story uses the soap film only as a picture of 'least area'; the sources say a soap film settles into a minimal surface.",
+  "story_words": 102
+ },
+ {
+  "lesson": 8,
+  "name": "Ibn al-Haytham",
+  "years": "about 965 to about 1040",
+  "country_or_region": "Born probably in Basra (now Iraq); worked mostly in Cairo, Egypt",
+  "who": "A scholar who studied light and mirrors by experiment and geometry.",
+  "story": "Ibn al-Haytham was born about 1,000 years ago, probably in Basra, in what is now Iraq. He spent much of his working life in Cairo, in Egypt. He wrote the Book of Optics, in seven volumes, about light and sight. He argued that we see when light from an object enters our eyes. He did not only argue, he also tested his ideas with experiments. He studied how light bounces off flat and curved mirrors, and used geometry to work out where the light goes. A story says he pretended to be mad to stay safe from a powerful ruler and was kept at home for years. Historians are not sure that is true.",
+  "link_to_lesson": "Today you look for angles and perpendicular lines, and light bouncing off a mirror makes equal angles on either side of the perpendicular.",
+  "try_it": "A ray of light hits a flat mirror and makes an angle of 30 degrees with the mirror. The perpendicular to the mirror makes 90 degrees with it. What angle does the ray make with the perpendicular? The reflected ray leaves at the same angle on the other side of the perpendicular. How big is the angle between the two rays?",
+  "try_it_answer": "90 - 30 = 60 degrees with the perpendicular. The reflected ray also makes 60 degrees, so the angle between the two rays is 60 + 60 = 120 degrees.",
+  "icon_idea": "A hand mirror with a beam of light bouncing off it and a small right-angle mark; not a portrait.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
+   "https://en.wikipedia.org/wiki/Ibn_al-Haytham",
+   "https://www.encyclopedia.com/doc/1G2-2830905785.html",
+   "https://sciencenotes.org/law-of-reflection/"
+  ],
+  "confidence": "medium",
+  "legend_note": "The house-arrest story is a legend (MacTutor says it 'appears' true; Wikipedia calls it a legend). Birth place and death place are uncertain, and sources give 1039 or 1040. The equal-angles rule is the modern law of reflection and is not claimed as his own words.",
+  "story_words": 114
+ },
+ {
+  "lesson": 9,
+  "name": "Zu Chongzhi",
+  "years": "429 to about 500 (sources differ)",
+  "country_or_region": "China (born in Jiankang, now Nanjing)",
+  "who": "A Chinese mathematician and astronomer who measured the length of the year very closely.",
+  "story": "Zu Chongzhi lived in China about 1,500 years ago. His family were court astronomers who kept the calendar, and his father taught him mathematics and astronomy. Zu made a new calendar in the 460s. He measured the year as 365.24281 days. That is within about a minute of the length astronomers find today. He also showed that pi lies between 3.1415926 and 3.1415927, and he wrote a maths book with his son. Sadly that book is lost, so we do not know how he did his sums. Historians still are not sure of his exact dates.",
+  "link_to_lesson": "Today you work with units of time, and Zu measured the year in days, hours and parts of a day.",
+  "try_it": "Zu's year was about 365 and a quarter days. How many hours is a quarter of a day? How many days are there in 4 years of that length?",
+  "try_it_answer": "A quarter of a day is 24 / 4 = 6 hours. In 4 years: 4 x 365 = 1460 days, plus 4 quarters = 1 day, so 1461 days.",
+  "icon_idea": "A round sun-and-moon calendar wheel with a small ruler; not a portrait.",
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Zu_Chongzhi/",
+   "https://en.wikipedia.org/wiki/Zu_Chongzhi"
+  ],
+  "confidence": "medium",
+  "legend_note": "Wikipedia and MacTutor disagree on his dates and on the polygon he used, so the story gives neither polygon nor an exact death year. The 'within about a minute' comparison is our own check: 365.24281481 - 365.24219878 days is about 53 seconds, and MacTutor says about 50 seconds. Only MacTutor says the calendar was never put into use, so the story leaves it out.",
+  "story_words": 96
+ },
+ {
+  "lesson": 10,
+  "name": "Raymond Smullyan",
+  "years": "1919 to 2017",
+  "country_or_region": "USA (born in Far Rockaway, New York)",
+  "who": "A logician, magician and pianist who wrote many books of logic puzzles.",
+  "story": "Raymond Smullyan was born in New York in 1919. He was a mathematician, a logician, a magician and a pianist. He studied mathematics and logic on his own, and in 1959 he earned a doctorate at Princeton. He loved puzzles, and wrote many puzzle books, such as What Is the Name of This Book?, in 1978. In his famous puzzles, a knight always tells the truth and a knave always lies. You must use the clues to work out who is who. He also used puzzles to introduce big ideas in logic to readers of all ages.",
+  "link_to_lesson": "Today you solve logic puzzles with ticks and crosses, just like working out who is a knight and who is a knave.",
+  "try_it": "Ana says: 'Ben is a knave.' Ben says: 'We are both knights.' A knight always tells the truth and a knave always lies. Who is the knight and who is the knave?",
+  "try_it_answer": "Ana is a knight and Ben is a knave. If Ben were a knight, both would be knights, but then Ana's words 'Ben is a knave' would be a lie, which a knight never tells. So Ben is a knave, his words are false, and Ana's words are true, so she is a knight.",
+  "icon_idea": "Two doors, one with a tick and one with a cross, and a small top hat; not a portrait.",
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Raymond_Smullyan",
+   "https://mathshistory.st-andrews.ac.uk/Obituaries/Smullyan_NYTimes/",
+   "https://blog.computationalcomplexity.org/2017/02/raymond-smullyan-was-born-on-may-25.html"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "story_words": 97
+ }
+]
