@@ -51,3 +51,11 @@ Independent rubric (A) re-score: the auditor's 17/24 stands. I do not raise it w
 Changed: S2 and S7 now use a quick draw (long line = bundle of ten, short line = single stick; about 8 and 12 strokes) taught in the page 1 hint, the hint and the tutor stuck line; T3 "even" replaced by "more than 3" (answer 46 still unique; online t3 and the make-your-own puzzle updated, example now 73); T4 prints its three choices; G1 rebuilt so both children need an opened bundle (74 against 79, 5 more); G3 split into (a) and (b); S5 says sticks; S6's mistaken child is now Kumar; the page 3 hint no longer promises "write how you know" on every item; parent summary, tutor guide strand note and tutor prep say plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose (no MOE-aligned claim).
 
 Still open (template or tool, not editable here): key page 1 ends with the orphan heading "Think harder (page 3)"; kit page intro touches the wavy underline and the right quarter is empty; Investigation has 4 ruled lines but no table; no printed "Circle Yes or No" style difference between lessons. No child trial yet. Online g1 still uses the older 74 against 85 numbers (separate practice item).
+
+## Update (second fix pass, 22 Oct 2026)
+
+Machine state: `python3 term/l1/tools/validate.py 01` = 18 pass, 1 WARN (the page 5 fill estimate of 104%; the real PDF is 6 pages and measures 93, 91, 97, 85, 92, 89%), 0 FAIL; 155 answer checks and 202 practice variants pass; leak check clean. Script needs 73:56, slow class 87:40. Home sheet 2 pages, parent page 1 page. Every workbook page, the key, the home sheet, the parent page and the changed slides were viewed.
+
+What changed (details in `audit/FIXES2_L01.md`): no paper or boards held to the camera (own ticks, thumbs, "check your own" lines); one fixed recording and audio statement; the "still stuck" route is now a tick that a grown-up photographs and sends to the business WhatsApp; journal, stamps and tracker removed; exit questions read aloud and printed in full; new Talk prompt (is 40 the same as 4); Explore round two cut to three builds; rubber bands removed; safety line on parent and home text; next-lesson materials and the practice-link line corrected; online practice wording (no "1 ones").
+
+Still open (template or owner): see the list in `audit/FIXES2_L01.md`. No child trial yet; scores unchanged.

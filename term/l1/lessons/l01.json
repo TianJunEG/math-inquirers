@@ -46,12 +46,12 @@
   "materials": {
     "child": [
       "About 50 small things of one kind: paper clips, dried pasta, buttons, lolly sticks or straws cut short",
-      "6 hair ties, rubber bands, small cups or pieces of string (to hold a bundle), or draw rings on paper",
+      "6 hair ties, small cups, paper rings or pieces of string (to hold a bundle), or draw rings on paper",
       "The printed workbook (pages 1 to 5) and the kit page (tens bars and ones squares), already cut out by a grown-up",
       "A pencil, a rubber and spare paper"
     ],
     "tutor": [
-      "A slide deck and a tray of 30 lolly sticks or straws with three rubber bands to show on camera if you wish",
+      "A slide deck and a tray of 30 lolly sticks or straws with three hair ties to show on camera if you wish",
       "A timer slide or a visible clock"
     ],
     "kit_pages": [
@@ -202,7 +202,11 @@
           },
           {
             "k": "SAY",
-            "text": "Good morning, inquirers! Cameras on, pencil ready, your things to bundle on the table. This lesson is recorded so that a friend who is away can catch up. We record me and the screen only. You may switch your camera off whenever you like."
+            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, and your things to bundle on the table."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
           },
           {
             "k": "SLIDE",
@@ -229,7 +233,7 @@
           {
             "k": "ASK",
             "text": "What could the shopkeeper do to count faster? Tell your screen or your grown-up.",
-            "resp": 25
+            "resp": 20
           },
           {
             "k": "SAY",
@@ -237,12 +241,12 @@
           },
           {
             "k": "DO",
-            "text": "Greet each child by first name and check their camera shows the page and hands.",
-            "s": 32
+            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+            "s": 25
           },
           {
             "k": "NOTE",
-            "text": "Lesson 1 only: show the routine slide for 20 seconds and name the phases; do not read the table. Tell the group that recordings show only you and the screen."
+            "text": "Lesson 1 only: show the routine slide for 20 seconds and name the phases; do not read the table. Say the recording notice in your own words: the recording has the tutor, the shared screen and any voice that is unmuted; children may mute and keep their camera off. Standing routine for every lesson: children are muted unless invited; for a group answer they say it quietly to their own room on a count of three."
           }
         ]
       },
@@ -264,7 +268,7 @@
           },
           {
             "k": "WORK",
-            "text": "Count in tens together, clapping, to 100. Then back from 100 to 0, whispering, shouting on 50.",
+            "text": "Count in tens together, clapping, to 100. Then back from 100 to 0, whispering, with big hands on 50.",
             "s": 45
           },
           {
@@ -375,9 +379,8 @@
             "s": 55
           },
           {
-            "k": "HOLD",
-            "text": "Everyone holds their paper to the camera at the same moment, once, after puzzle two. Do not read answers aloud. No private chat.",
-            "s": 25
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
           },
           {
             "k": "SAY",
@@ -411,7 +414,7 @@
           },
           {
             "k": "WORK",
-            "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras and asks a few children to show their bundles.",
+            "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras; a child who wants to may show their bundles to the camera. Nobody has to.",
             "s": 200
           },
           {
@@ -426,7 +429,7 @@
           },
           {
             "k": "SAY",
-            "text": "Round two: show me! Use your tens bars and ones squares from the kit page. I call a number. You build it, then hold it up to the camera."
+            "text": "Round two: show me! Use your tens bars and ones squares from the kit page. I call a number. You build it. I will tell you what it should look like, so you can check your own build."
           },
           {
             "k": "SAY",
@@ -434,8 +437,13 @@
           },
           {
             "k": "WORK",
-            "text": "Children build 17. Hold up to the camera on a count of three.",
+            "text": "Children build 17, then give a thumbs-up when ready.",
             "s": 40
+          },
+          {
+            "k": "READ",
+            "text": "Check your own: one bar and seven squares.",
+            "s": 8
           },
           {
             "k": "SAY",
@@ -447,13 +455,9 @@
             "s": 35
           },
           {
-            "k": "SAY",
-            "text": "Forty-two."
-          },
-          {
-            "k": "WORK",
-            "text": "Build 42.",
-            "s": 40
+            "k": "READ",
+            "text": "Check your own: three bars and no squares.",
+            "s": 8
           },
           {
             "k": "SAY",
@@ -463,6 +467,11 @@
             "k": "WORK",
             "text": "Build 58.",
             "s": 45
+          },
+          {
+            "k": "READ",
+            "text": "Check your own: five bars and eight squares.",
+            "s": 8
           },
           {
             "k": "SAY",
@@ -579,7 +588,7 @@
           },
           {
             "k": "ASK",
-            "text": "Two six and six two use the same digits. Which has more sticks, 26 or 62? How do you know?",
+            "text": "Twenty-six and sixty-two use the same digits. Which has more sticks, 26 or 62? How do you know?",
             "resp": 30
           },
           {
@@ -726,11 +735,11 @@
           },
           {
             "k": "SAY",
-            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
           },
           {
             "k": "WORK",
-            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
             "s": 300
           },
           {
@@ -739,11 +748,11 @@
           },
           {
             "k": "STUCK",
-            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. You check in during the open session in the next lesson (a quick visit to the shared room or a hand signal, parent nearby). Never a private message."
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
           },
           {
             "k": "NOTE",
-            "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree."
+            "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Slow class: the workbook part needs about 31:50 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
           }
         ]
       },
@@ -761,11 +770,11 @@
           },
           {
             "k": "READ",
-            "text": "Are 26 and 62 the same number? Circle Yes or No. Use bundles to explain: I know because ___."
+            "text": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___."
           },
           {
             "k": "WORK",
-            "text": "Build 26 and 62 with your kit bars and squares. Which one has more?",
+            "text": "Build 40 and 4 with your kit bars and squares. Which one has more?",
             "s": 50
           },
           {
@@ -794,7 +803,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Model answer: No. 26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles. 62 has more sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+            "text": "Model answer: No. 40 is 4 bundles of ten and no singles. 4 is only 4 singles. 40 has more sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
       },
@@ -815,14 +824,14 @@
             "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
           },
           {
+            "k": "READ",
+            "text": "E1. Look at the bundles and singles. How many sticks are there? E2. Thirty-seven equals how many tens and how many ones? E3. Write the number: seven tens and no ones.",
+            "s": 22
+          },
+          {
             "k": "WORK",
             "text": "Children answer E1 to E3 on their own.",
             "s": 150
-          },
-          {
-            "k": "HOLD",
-            "text": "Everyone holds their ticket to the camera at the same moment so only you see it. No private chat.",
-            "s": 25
           },
           {
             "k": "SLIDE",
@@ -835,11 +844,11 @@
           },
           {
             "k": "SAY",
-            "text": "Check your own ticket in a different colour. Well done. I will stamp your inquiry journal."
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
           },
           {
             "k": "NOTE",
-            "text": "Mark S, D or H in the tutor tracker (tutor only): S = secure on all three, D = developing (one wrong), H = needs help (two or three wrong). If D or H, plan two minutes of catch-up at the start of Lesson 2, in the open session, no names. Do not read out any child's result."
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
           }
         ]
       },
@@ -857,12 +866,12 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
           },
           {
             "k": "WORK",
             "text": "Children fill in the look-back box on page 5.",
-            "s": 100
+            "s": 90
           }
         ]
       },
@@ -876,7 +885,7 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers. Next lesson is Number Words and the Number Line. You need only a pencil and paper. Goodbye, and thank you to the grown-ups."
+            "text": "Well done, inquirers. Next lesson is Number Words and the Number Line. Please have the number cards cut out from the kit pages, a small toy or a coin, and a pencil and paper. Goodbye, and thank you to the grown-ups."
           },
           {
             "k": "SLIDE",
@@ -930,7 +939,7 @@
           ]
         }
       ],
-      "note": "Lesson 1 of Term 1, 90 minutes. Objective: read and write two-digit numbers as bundles of ten and single ones. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (you and the screen only) and that a child may keep the camera off.",
+      "note": "Lesson 1 of Term 1, 90 minutes. Objective: read and write two-digit numbers as bundles of ten and single ones. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
       "mascot": {
         "size": "l",
         "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -1007,11 +1016,11 @@
           "t": "card",
           "head": "RECORDING",
           "items": [
-            "We record the tutor and the screen only. You may keep your camera off."
+            "We record the tutor, the screen and any voice that is unmuted. You may mute and keep your camera off."
           ]
         }
       ],
-      "note": "Read the four rules together. Say the recording notice in your own words: the platform records the tutor and the shared screen; children's video is excluded; names are kept off the screen. A parent or child who does not wish to be in the recording can keep the camera off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
+      "note": "Read the four rules together. Say the recording notice in your own words: the platform records the tutor, the shared screen and any voice that is unmuted; children's video is excluded; names are kept off the screen. A child or parent who does not wish to be heard can stay muted, and a camera can stay off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
     },
     {
       "id": "s-rem1",
@@ -1040,7 +1049,7 @@
         },
         {
           "t": "p",
-          "text": "Now count back from 100. Whisper, and shout on 50!"
+          "text": "Now count back from 100. Whisper, and big hands on 50!"
         }
       ],
       "note": "Count in tens to 100 with a clap on each number, then back to 0. This is a spiral review of skip counting in tens (holiday topic) and lets a new child join: they hear it before they say it.",
@@ -1148,7 +1157,7 @@
           ]
         }
       ],
-      "note": "Puzzle 1 (24 stars) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: 24; yes (3 tens and 4 ones is 34). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+      "note": "Puzzle 1 (24 stars) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 24; yes (3 tens and 4 ones is 34). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
     },
     {
       "id": "s-explore1",
@@ -1161,7 +1170,7 @@
           "ordered": true,
           "items": [
             "Grab a handful of small things. Not the whole pile.",
-            "Make bundles of ten: a band, a cup, or a ring on paper.",
+            "Make bundles of ten: a hair tie, a cup, or a ring on paper.",
             "Count the bundles. Count the singles left over.",
             "Say: I have ___ tens and ___ ones."
           ]
@@ -1174,7 +1183,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. Ask a few children to show their bundles to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
+      "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. A child who wants to may show their bundles to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
     },
     {
       "id": "s-explore2",
@@ -1184,14 +1193,14 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Build each number with your tens bars and ones squares. Hold it up to the camera when I count to three."
+          "text": "Build each number with your tens bars and ones squares. Show a thumbs-up when it is built. Then check your own build."
         },
         {
           "t": "visual",
           "type": "bundles",
           "tens": 2,
           "ones": 3,
-          "label": "a bar is a ten, a square is a one",
+          "label": "example: 23 is 2 bars and 3 squares",
           "style": "kit"
         },
         {
@@ -1199,12 +1208,11 @@
           "items": [
             17,
             30,
-            42,
             58
           ]
         }
       ],
-      "note": "Round 2, about 4 minutes, main room. Call each number aloud and show it on the slide. Children build with the kit bars (tens) and squares (ones). On a count of three, everyone holds their build to the camera. Check the zero case (30) and the larger ones (42, 58). Answers: 17 is 1 bar and 7 squares; 30 is 3 bars; 42 is 4 bars and 2 squares; 58 is 5 bars and 8 squares."
+      "note": "Round 2, about 3 minutes, main room. Call each number aloud and show it on the slide. Children build with the kit bars (tens) and squares (ones) and give a thumbs-up. Read the check line aloud so every child can check their own build; nobody holds anything up to the camera. Keep the builds to three: 17, 30 (the zero case) and 58. Answers: 17 is 1 bar and 7 squares; 30 is 3 bars; 58 is 5 bars and 8 squares. The picture of 23 is only an example. Camera tip: a child may tilt the screen so the table can be seen, but this is not required."
     },
     {
       "id": "s-explore3",
@@ -1428,7 +1436,7 @@
           "text": "Which has more sticks? How do you know?"
         }
       ],
-      "note": "26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles. 62 has more because the tens digit is worth more. The order of the digits matters. This sets up the Talk time question."
+      "note": "26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles. 62 has more because the tens digit is worth more. The order of the digits matters. The Talk time question uses the zero case instead, so this idea is not repeated."
     },
     {
       "id": "s-m5b",
@@ -1527,7 +1535,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Questions 1 to 3. Timer: 8 minutes"
+          "text": "Questions 1 to 3. Timer: 9 minutes"
         },
         {
           "t": "qs",
@@ -1633,7 +1641,7 @@
         },
         {
           "t": "chip",
-          "text": "Everyone may choose. You can swap at any time."
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
         }
       ],
       "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
@@ -1648,19 +1656,19 @@
           "t": "card",
           "head": "TALK ABOUT IT",
           "items": [
-            "26 and 62 are the same, because they use the same digits."
+            "Is 40 the same as 4?"
           ]
         },
         {
           "t": "p",
-          "text": "Do you agree? Use bundles to explain."
+          "text": "Use bundles to explain."
         },
         {
           "t": "chip",
           "text": "I think ... because ..."
         }
       ],
-      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles, so 62 has more. Repeat each child's answer in your own words for the recording."
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 40 is 4 bundles and no singles, and 4 is only 4 singles, so 40 has more. Repeat each child's answer in your own words for the recording."
     },
     {
       "id": "s-sneakans",
@@ -1700,10 +1708,10 @@
             "E2",
             "E3"
           ],
-          "short": true
+          "short": false
         }
       ],
-      "note": "Children answer on page 5. After the timer everyone holds the ticket to the camera at the same moment, so only the tutor sees it (no private chat). Stamp the inquiry journal."
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
     },
     {
       "id": "s-exitans",
@@ -1732,7 +1740,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, check in during the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby); never a direct message. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
+      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1753,11 +1761,11 @@
           "head": "NEXT LESSON",
           "items": [
             "Number Words and the Number Line",
-            "You need a pencil and paper."
+            "Have ready: number cards, a small toy, pencil and paper."
           ]
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (stamps, the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
       "mascot": {
         "size": "l",
         "say": "Great thinking today!"
@@ -2058,8 +2066,8 @@
         "hint": "Build 3 bundles and 4 singles with your kit. Say the tens first.",
         "solution": "3 bundles is 30 and 4 singles makes 34. Kumar wrote 43, which is 4 tens and 3 ones. The tens digit goes on the left.",
         "mistakes": [
-          "Saying she is right because the digits 3 and 4 are there.",
-          "Not saying what she mixed up (any clear sentence about the digits is fine)."
+          "Saying he is right because the digits 3 and 4 are there.",
+          "Not saying what he mixed up (any clear sentence about the digits is fine)."
         ],
         "mins": 2,
         "lines": 0
@@ -2325,7 +2333,7 @@
         "smaller when tens > ones",
         "same when equal"
       ],
-      "look_for": "A child who tests several numbers, says what they notice and gives a reason using tens and ones. A number that ends in 0 (30) becomes 03, which is just 3, so it is smaller: this fits 'tens digit bigger'.",
+      "look_for": "A child who tests several numbers, says what they notice and gives a reason using tens and ones. A number that ends in 0 (30) swaps to 03. A zero on the left does not count, so 03 is just 3 and is smaller: this fits 'tens digit bigger'.",
       "mistakes": [
         "Saying swapping always makes the number bigger (testing only 14 and 26).",
         "Not testing a number with equal digits."
@@ -2334,15 +2342,15 @@
     }
   },
   "talk": {
-    "question": "Are 26 and 62 the same number? Circle Yes or No. Use bundles to explain: I know because ___.",
+    "question": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___.",
     "starter": "I think ... because ...",
-    "answer": "No. 26 is 2 bundles of ten and 6 singles. 62 is 6 bundles of ten and 2 singles. 62 has more sticks, because the tens digit counts bundles of ten.",
-    "look_for": "A reason that uses tens and ones (not just 'because 6 is bigger')."
+    "answer": "No. 40 is 4 bundles of ten and 0 singles. 4 is only 4 singles. 40 has more sticks, because the 4 in 40 counts bundles of ten.",
+    "look_for": "A reason that uses tens and ones (not just 'because 40 is bigger'). A child may say the zero holds the place."
   },
   "exit": [
     {
       "id": "E1",
-      "text": "How many sticks?",
+      "text": "How many sticks are there?",
       "visual": {
         "type": "bundles",
         "tens": 4,
@@ -2368,7 +2376,7 @@
     },
     {
       "id": "E2",
-      "text": "Fill in the blanks.",
+      "text": "Fill in the blanks for 37.",
       "parts": [
         {
           "l": "",
@@ -2465,15 +2473,19 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Ben has 4 tens and 12 ones. Circle his number: 52 or 412. Then show how you know.",
+      "text": "Ben has 4 tens and 12 ones. Which is his number? Circle one. Then show how you know.",
       "answer": "52 (12 ones make 1 ten and 2 ones, so 5 tens and 2 ones)",
       "val": 52,
-      "solution": "Tie 10 of the 12 ones into a bundle: 5 bundles and 2 ones, which is 52."
+      "solution": "Tie 10 of the 12 ones into a bundle: 5 bundles and 2 ones, which is 52.",
+      "choices": [
+        "52",
+        "412"
+      ]
     },
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: find 30 to 50 small things (pasta, clips, buttons). Tie bundles of ten with bands or put them in cups. Write: ___ tens and ___ ones = ___. Now open one bundle. Write the tens and ones again.",
+      "text": "Find 30 to 50 small things. Tie bundles of ten with hair ties or put them in cups. Write: ___ tens and ___ ones = ___. Now open one bundle. Write the tens and ones again.",
       "answer": "Any: for example 3 tens and 7 ones = 37, and also 2 tens and 17 ones = 37. Check: tens x 10 + ones = how many things.",
       "val": "open",
       "solution": "A grown-up counts the things one by one to check the number. Opening a bundle gives one fewer ten and ten more ones."
@@ -2523,7 +2535,6 @@
               9
             ],
             "o": [
-              1,
               2,
               3,
               4,
@@ -2672,7 +2683,6 @@
               8
             ],
             "o": [
-              1,
               3,
               4,
               6,
@@ -2716,7 +2726,7 @@
             "a": [
               700
             ],
-            "say": "700 is far too big. 7 tens is 70."
+            "say": "Check the tens: how many bundles of ten is that? Then think about the ones."
           }
         ],
         "tpl": {
@@ -2804,7 +2814,6 @@
               6
             ],
             "o": [
-              11,
               12,
               13,
               14,
@@ -2816,7 +2825,7 @@
             "u": "t+1",
             "r": "o-10"
           },
-          "q": "Mei has {t} bundles of ten and {o} loose sticks. How many sticks has she?",
+          "q": "Mei has {t} bundles of ten and {o} loose sticks. How many sticks does she have?",
           "answer": "t*10+o",
           "hint": "Tie 10 of the loose sticks into another bundle.",
           "steps": [
@@ -2862,7 +2871,6 @@
               6
             ],
             "o": [
-              1,
               2,
               3,
               4,
@@ -3045,7 +3053,7 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "How many different ways are there to write 30 as tens and ones? (3 tens and 0 ones is one way.)",
+        "q": "How many different ways are there to write 30 as tens and ones? You may open every bundle. (3 tens and 0 ones is one way.)",
         "answer": 4,
         "easier": "t2",
         "hint": "Start with 3 tens and open one bundle at a time.",
@@ -3106,7 +3114,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Term 1 goes beyond the school Primary 1 syllabus on purpose; the first questions are explored with real things, and the harder ones are extra challenges to try.",
+    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Tens and ones is familiar school work. Opening a bundle (5 tens and 14 ones is 6 tens and 4 ones) goes further, and is in Think harder and Go further.",
     "words": [
       "bundle or ten: ten single things tied together",
       "single or one: a thing on its own",
@@ -3114,7 +3122,7 @@
       "ones digit: the right digit, it counts the singles"
     ],
     "try_home": [
-      "Bundle it: grab a handful of pasta, clips or buttons. Tie bundles of ten with bands or cups. Ask: how many tens and how many ones? Write the number together.",
+      "Bundle it: grab a handful of pasta, clips or buttons. Tie bundles of ten with hair ties or cups. Ask: how many tens and how many ones? Write the number together. Small things stay on the table, away from mouths and little brothers and sisters.",
       "Show me: say a number up to 60 and let your child build it with bundles and singles. Swap roles and make a mistake on purpose for them to find.",
       "Spot it: look at page numbers, lift buttons or door numbers. Ask: how many tens is that? Which digit tells you?"
     ],
@@ -3123,25 +3131,30 @@
       "Which digit tells how many bundles?",
       "What if you opened a bundle?"
     ],
-    "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer.",
-    "next": "Lesson 2: Number Words and the Number Line. Your child needs a pencil and paper only.",
+    "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Please do not hurry or say it is easy. If the look-back page says 'I am still stuck', please photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept up to 90 days.",
+    "next": "Lesson 2: Number Words and the Number Line. Online practice: your tutor will share the practice link.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: reading and writing two-digit numbers from bundles of ten and single ones.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-    "quote": "A number is tens and ones. Ten singles tie into one bundle."
+    "quote": "A number is tens and ones. Ten singles tie into one bundle.",
+    "next_materials": [
+      "Number cards cut out from the two kit pages of the Lesson 2 workbook (or 11 small paper squares)",
+      "A small toy or a coin, to be the frog",
+      "Pencil, rubber and spare paper"
+    ]
   },
   "safeguarding": [
-    "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Use hair ties, cups or paper rings, not stretched rubber bands that can flick.",
+    "Small things stay on the table: nothing goes in the mouth or ears, and nothing is left where a younger brother or sister can reach it. No matches, toothpicks or anything sharp. Use hair ties, cups or paper rings. No rubber bands: they can flick.",
     "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-    "Sneak-peek and exit answers are shown on the child's own paper to the camera at the same moment, once. There is no private chat and no board held up in front of the group.",
-    "Never read out a child's name with a right or wrong answer. Never show a child's page in the recording; record the tutor and the screen only, with children's video excluded.",
-    "A child who ticks 'I am still stuck' gets a check-in in the open session next lesson (a quick visit to the shared room or a hand signal, parent nearby). No private messages to children.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
     "Solve every workbook question yourself first.",
-    "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups.",
+    "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups. Small things stay away from mouths and from younger children.",
     "Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording settings exclude children's video.",
+    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
     "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
   ],
   "spare_time": {
@@ -3188,6 +3201,7 @@
         "title": "Kit page: tens bars and ones squares",
         "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope."
       }
-    ]
+    ],
+    "home_hint": "Use real things or draw it. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters."
   }
 }
