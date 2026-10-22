@@ -10,7 +10,7 @@ Score on the 10-criterion, 0 to 2 scale used for the Term 1 pages (no project in
 |---|---|---|---|
 | 1 | Home maths correct and worded to the guide | 1 | All five answers right; H1 packs three instructions in one sentence |
 | 2 | A parent can help without teaching a different method | 2 | "Touch each toy, say the places"; the page tells parents to wait 10 seconds |
-| 3 | Parent summary plain, short, in the word limit | 2 | Summary paragraph about 76 words (limit 90); whole page about 500 words in a clear layout |
+| 3 | Parent summary plain, short, in the word limit | 2 | Summary paragraph 89 words (limit 90, so at the limit); whole page about 500 words in a clear layout |
 | 4 | No overclaim; beyond-P1 statement honest | 2 | "Start here is school Primary 1 work; Think harder goes beyond it on purpose"; no MOE, SASMO or GEP claim |
 | 5 | Privacy and recording statements consistent with `privacy.html` | 1 | One contradiction about who can see the recording (finding 4) |
 | 6 | Print layout (A4, double-sided, left binding, separate answer page) | 1 | Margins fine; answers print on the back of the questions (finding 3); footer 5.8 mm from the edge |
