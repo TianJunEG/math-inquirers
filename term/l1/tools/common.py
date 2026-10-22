@@ -161,8 +161,23 @@ def p_html(s):
 
 
 def blanks(text):
-    """Turn ___ in a question into a printed answer line."""
-    return E(text).replace('___', '<span class="al"></span>')
+    """Turn ___ in a question into a printed answer line and [] into an empty answer box (a clear square for ages 6-8)."""
+    return E(text).replace('___', '<span class="al"></span>').replace('[]', '<span class="boxb"></span>')
+
+
+def kits(d):
+    """Kit pages a lesson declares: workbook.kits = [] (none) or [{type, title, intro, ...}]. Absent = the legacy tens-bars page."""
+    wb = d.get('workbook', {})
+    if 'kits' in wb: return wb['kits']
+    return [{'type': 'base_ten', 'title': 'Kit page: tens bars and ones squares', 'intro': 'A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope.'}]
+
+
+def wb(d, key, default=''):
+    return d.get('workbook', {}).get(key, default)
+
+
+def header_topic(d):
+    return wb(d, 'header') or d['moe']['strand'] + ': ' + d['big_idea'].lower()
 
 
 def slide_time(d, s):

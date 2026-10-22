@@ -232,6 +232,10 @@
         },
         "notes": {
           "type": "string"
+        },
+        "skip_order": {
+          "type": "array",
+          "description": "optional: what to skip first if the tutor is more than 2 minutes behind at the start of the workbook"
         }
       }
     },
@@ -423,7 +427,8 @@
         "next",
         "report_line",
         "term_line"
-      ]
+      ],
+      "description": "also optional: quote (the one-line big idea shown on the parent page; default big_idea)"
     },
     "spare_time": {
       "type": "object",
@@ -462,6 +467,14 @@
     },
     "tutor_prep": {
       "type": "array"
+    },
+    "workbook": {
+      "type": "object",
+      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed."
+    },
+    "limits": {
+      "type": "object",
+      "description": "optional reading-load limits for the validator warning: max_child_words (default 40), max_parent_words (default 90)"
     }
   },
   "$defs": {
@@ -581,6 +594,9 @@
           "type": "integer"
         }
       }
+    },
+    "visual": {
+      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight}"
     }
   }
 }

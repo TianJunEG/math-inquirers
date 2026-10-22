@@ -93,6 +93,7 @@ def q_html(q, tier_label=None):
 
 def build_html(d):
     sm = slide_map(d); pm = part_map(d); segs = segment_timeline(d)
+    rng = lambda pid: f'minutes {pm[pid]["start"]} to {pm[pid]["end"]}'
     used = sum(s['used'] for s in segs); slow = sum(slow_used(s) for s in segs)
     H = []
     H.append(f'<div class="cover" style="position:relative"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:22px;top:14px;width:110px"><div class="k">TUTOR GUIDE • LEVEL {d["level"]} • TERM {d["term"]} • LESSON {d["lesson_in_term"]} OF 10</div><h1>{E(d["title"])}</h1><p><b>Big idea:</b> {E(d["big_idea"])}. {E(d["child_idea"])}</p><p>90 minutes • live online or face to face • up to 8 children • ages {d["ages"]} • Notice it. Test it. Explain why.</p></div>')
@@ -102,7 +103,7 @@ def build_html(d):
             ('Joining cold', '<b>Remember warm-up covers:</b> ' + '; '.join(E(x) for x in d['joining_cold']['remember']) + '.<br>' + E(d['joining_cold']['assumes']) + '<br><span class="small">' + E(d['joining_cold']['note']) + '</span>'),
             ('Child materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['child']) + '</ul>'),
             ('Tutor materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['tutor']) + '</ul><div class="small">' + E(d['materials']['notes']) + '</div>'),
-            ('Tiers', 'Start here (' + str(len(d['tiers']['start'])) + ' questions, pages 1 and 2), Think harder (' + str(len(d['tiers']['think'])) + ', page 3), Go further (' + str(len(d['tiers']['go'])) + ', page 4), Investigation and look-back (page 5), kit page (page 6). Labels are neutral; nobody is told which page they are on.'),
+            ('Tiers', 'Start here (' + str(len(d['tiers']['start'])) + ' questions, pages 1 and 2), Think harder (' + str(len(d['tiers']['think'])) + ', page 3), Go further (' + str(len(d['tiers']['go'])) + ', page 4), Investigation and look-back (page 5)' + (f', kit page{"s" if len(kits(d)) > 1 else ""} (page{"s" if len(kits(d)) > 1 else ""} 6' + (f'-{5 + len(kits(d))}' if len(kits(d)) > 1 else '') + ')' if kits(d) else '') + '. Labels are neutral; nobody is told which page they are on.'),
             ('Contest-style move', 'Used at Think harder only: ' + '; '.join(E(x) for x in d['contest_moves']) + '. Never advertised to children or parents.')]
     for a, b in rows: H.append(f'<tr><th style="width:110px">{a}</th><td>{b}</td></tr>')
     H.append('</table>')
@@ -115,7 +116,8 @@ def build_html(d):
         sl = [s['title'] for s in d['slides'] if s['part'] == p['id'] and not s.get('optional')]
         H.append(f'<tr><td>{p["start"]}–{p["end"]}</td><td><b>{E(p["title"])}</b></td><td>{p["end"] - p["start"]}</td><td class="small">{len(sl)}: {E(", ".join(sl))}</td><td>{mmss(seg_by[p["id"]]["used"])}</td></tr>')
     H.append(f'<tr><td></td><td><b>Total</b></td><td><b>{sum(p["end"] - p["start"] for p in d["timing"]["parts"])}</b></td><td></td><td><b>{mmss(used)}</b></td></tr></table>')
-    H.append(f'<p class="small">The script needs {mmss(used)} of the 90:00 when children are quick. A slow class (speech 10% slower, children and slide changes 20% slower) needs {mmss(slow)}. The last 5 minutes are a standing buffer: if you are behind, use them; do not start anything new. Clock checks: minute 14 (end of sneak-peek), minute 42 (start of workbook), minute 70 (talk time). If more than 2 minutes behind at minute 42, skip in this order: quick questions in Remember, the last explore number, the quick-fire in the mini-lesson, the optional slide. Never skip the look-back or the camera and privacy moments.</p>')
+    skip = d['timing'].get('skip_order') or 'optional items and extra quick questions first, then the second explore round, then any quick-fire in the mini-lesson, then the optional slide'
+    H.append(f'<p class="small">The script needs {mmss(used)} of the 90:00 when children are quick. A slow class (speech 10% slower, children and slide changes 20% slower) needs {mmss(slow)}. The last 5 minutes are a standing buffer: if you are behind, use them; do not start anything new. Clock checks: minute {pm["sneak"]["end"]} (end of sneak-peek), minute {pm["work"]["start"]} (start of workbook), minute {pm["talk"]["start"]} (talk time). If more than 2 minutes behind at minute {pm["work"]["start"]}, skip in this order: {E(skip)}. Never skip the look-back or the camera and privacy moments.</p>')
     # scripts
     H.append('<h2 class="pb">3. Lesson script</h2><p class="small">Times show when each line should start, counted from the start of the lesson, if you keep to the script. SAY lines are spoken in your own words. REC lines are the short recording-voice cues for children who watch later. Children answer aloud, with fingers or hands; no private chat; no boards held up in front of the group.</p>')
     for s in segs:
@@ -131,7 +133,7 @@ def build_html(d):
     # questions
     H.append('<h2 class="pb">4. Questions, answers, hints and common mistakes</h2>')
     sp = d['sneak_peek']
-    H.append(f'<h3>Sneak-peek puzzles (minutes 10 to 14)</h3><div class="q"><b>Puzzle 1 (access):</b> {E(sp["q1"])}<div class="a">Answer: {E(sp["a1"])}</div><b>Puzzle 2 (think):</b> {E(sp["q2"])}<div class="a">Answer: {E(sp["a2"])}</div><div class="m">Unmarked. Papers are shown to the camera once, together. Reveal puzzle 2 in Talk time.</div></div>')
+    H.append(f'<h3>Sneak-peek puzzles ({rng("sneak")})</h3><div class="q"><b>Puzzle 1 (access):</b> {E(sp["q1"])}<div class="a">Answer: {E(sp["a1"])}</div><b>Puzzle 2 (think):</b> {E(sp["q2"])}<div class="a">Answer: {E(sp["a2"])}</div><div class="m">Unmarked. Papers are shown to the camera once, together. Reveal the answers where your script says (usually Talk time).</div></div>')
     H.append('<h3>Start here (workbook pages 1 and 2)</h3>')
     for q in d['tiers']['start']: H.append(q_html(q))
     H.append('<h3>Think harder (page 3): the taught idea in a new setting</h3>')
@@ -141,11 +143,11 @@ def build_html(d):
     inv = d['tiers']['investigation']
     H.append(f'<h3>Investigation (page 5): {E(inv["title"])}</h3><div class="q"><b>Easy first step:</b> {E(inv["first"])}<br><b>Then:</b> {E(inv["text"])}<div class="a">Model answer: {E(inv["answer"])}</div><div class="m"><b>Look for:</b> {E(inv["look_for"])}</div><div class="m"><b>Common mistakes:</b> {"; ".join(E(m) for m in inv["mistakes"])}</div></div>')
     tk = d['talk']
-    H.append(f'<h3>Talk and explain (minutes 70 to 76)</h3><div class="q"><b>{E(tk["question"])}</b> <span class="small">Sentence starter: {E(tk["starter"])}</span><div class="a">Model answer: {E(tk["answer"])}</div><div class="m"><b>Look for:</b> {E(tk["look_for"])} Volunteers first, a pass is always fine, never call a child by name to answer, no tallies.</div></div>')
-    H.append('<h3>Exit ticket (minutes 76 to 82): 3 questions</h3>')
+    H.append(f'<h3>Talk and explain ({rng("talk")})</h3><div class="q"><b>{E(tk["question"])}</b> <span class="small">Sentence starter: {E(tk["starter"])}</span><div class="a">Model answer: {E(tk["answer"])}</div><div class="m"><b>Look for:</b> {E(tk["look_for"])} Volunteers first, a pass is always fine, never call a child by name to answer, no tallies.</div></div>')
+    H.append(f'<h3>Exit ticket ({rng("exit")}): 3 questions</h3>')
     for q in d['exit']: H.append(q_html(dict(q, hint='', mins=None)))
     lb = d['look_back']
-    H.append('<h3>Look-back (minutes 82 to 85)</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (my tutor will come and help)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
+    H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (my tutor will come and help)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
     H.append('<h2>5. Home practice and online practice</h2><table><tr><th>#</th><th>Tier</th><th>Question</th><th>Answer</th></tr>')
     for h in d['home_practice']: H.append(f'<tr><td>{h["id"]}</td><td>{TIER_NAME[h["tier"]]}</td><td>{E(h["text"])}</td><td>{E(h["answer"])}</td></tr>')
     H.append('</table>')

@@ -19,13 +19,14 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
 .wl{border-bottom:2px dotted #8A94AD;height:24px}
+.boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
 
 
 def hdr(d, tag, title=None, mi=False):
-    head = (f'<div class="lh"><span class="lbadge">Term {d["term"]} • Lesson {d["lesson_in_term"]}</span><span class="ltopic">Whole Numbers: tens and ones</span>'
+    head = (f'<div class="lh"><span class="lbadge">Term {d["term"]} • Lesson {d["lesson_in_term"]}</span><span class="ltopic">{E(header_topic(d))}</span>'
             f'<span style="margin-left:auto;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">{tag}</span></div>'
             + (f'<div class="ltitle">{E(title)}</div>' if title else '')
             + '<div class="namer"><b>Name</b><span></span><b>Date</b><span style="max-width:120px"></span></div>')
@@ -48,17 +49,20 @@ def qbox(q, label=None, draw=False):
     return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{E(q["text"])}</span></div>{vis}{parts}{ln}</div>'
 
 
-def kit_page(d):
-    return f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">Kit page: tens bars and ones squares</div><p style="font-size:13.5px;margin:2px 0 6px">A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope.</p><div style="width:84%">{svg.kit_page_svg()}</div></div>'
+def kit_pages(d):
+    out = []
+    for k in kits(d):
+        out.append(f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">{E(k.get("title", "Kit page"))}</div><p style="font-size:13.5px;margin:2px 0 6px">{E(k.get("intro", "A grown-up cuts these out before the lesson."))}</p><div style="width:{k.get("width", 84)}%">{svg.kit_figure(k)}</div></div>')
+    return out
 
 
 def workbook_html(d, key=False):
     t = d['tiers']; inv = t['investigation']
     P = []
-    P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">Use your bundles, your kit or a drawing. Say your answer out loud, then write it.</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
+    P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p1", "Use objects, your kit or a drawing. Say your answer out loud, then write it."))}</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Start here")}' + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
-    P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">Use objects, draw a picture, or open a bundle. Then write how you know. Choose any question, in any order.</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
-    P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">Choose any question. You do not have to finish them all.</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
+    P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p3", "Use objects, draw a picture or make a table. Then write how you know. Choose any question, in any order."))}</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
+    P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p4", "Choose any question. You do not have to finish them all."))}</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
     ex = ''.join(qbox(q, 'E' + q['id'][1:] if False else q['id']) for q in d['exit'])
     lb = d['look_back']
     bx = lambda items: ''.join(f'<span><i class="bx"></i>{E(x)}</span>' for x in items)
@@ -71,7 +75,7 @@ def workbook_html(d, key=False):
     P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">Choose this any time you like. You do not have to finish it.</p>'
              f'<p style="margin:3px 0"><b>Easy first step:</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>Then:</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * 1 +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
-    P.append(kit_page(d))
+    P += kit_pages(d)
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{"".join(P)}</body></html>'
 
 
@@ -98,7 +102,7 @@ def home_html(d):
         qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{E(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
-            f'<div class="page hm">{hdr(d, "Home practice", "Bundles and Singles: practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use real things or draw bundles. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
+            f'<div class="page hm">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use real things or draw bundles. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
             f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing the bundles.</p>{ans}'
             f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link, key <b>{d["online_practice"]["key"]}</b>.</p></div></body></html>')
 
@@ -108,9 +112,9 @@ def parent_html(d):
     li = lambda xs, cls='': ''.join(f'<li>{E(x)}</li>' for x in xs)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{PARENT_CSS}'
             '@page{size:A4;margin:12mm 15mm}body{font-size:13.2px;line-height:1.38}.side h3{font-size:15px}.panel{padding:10px 14px;margin-bottom:10px}.panel h3{font-size:16px}.tips li{margin-bottom:6px}.hd{margin:0 0 10px}.big{font-size:60px}'
-            f'</style></head><body><div class="hd"><img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto"><div class="big">1</div><div><div class="tp">Level 1 • Term 1 • Lesson 1 • For parents</div><h1>{E(d["title"])}</h1></div></div>'
+            f'</style></head><body><div class="hd"><img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto"><div class="big">{d["lesson_in_term"]}</div><div><div class="tp">Level {d["level"]} • Term {d["term"]} • Lesson {d["lesson_in_term"]} • For parents</div><h1>{E(d["title"])}</h1></div></div>'
             f'<div class="cols"><div><div class="kick">What we did</div><p style="margin:3px 0 8px">{E(p["summary"])}</p>'
-            f'<div class="quote">{E(d["big_idea"])}. Ten singles tie into one bundle.</div>'
+            f'<div class="quote">{E(p.get("quote") or d["big_idea"] + ".")}</div>'
             f'<div class="kick">Try at home (5 minutes)</div><ol class="tips">{li(p["try_home"])}</ol>'
             f'<div class="panel"><h3>When your child is stuck</h3><p style="margin:0">{E(p["when_stuck"])}</p></div></div>'
             f'<div><div class="side"><h3>Words we used</h3><ul style="margin:0;padding-left:16px">{li(p["words"])}</ul></div>'

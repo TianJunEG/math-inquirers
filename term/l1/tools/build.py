@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 
 def main():
     num = sys.argv[1] if len(sys.argv) > 1 else '01'
-    d = validate.check_all(num)
+    d = validate.check_all(num, built=False)
     for f in validate.WARNS: print('WARN ', f)
     if validate.FAILS:
         for f in validate.FAILS: print('FAIL ', f)
@@ -22,7 +22,7 @@ def main():
         b_print.build_print(d, b)
         b.close()
     b_practice.build_practice(d)
-    validate.FAILS.clear(); validate.check_outputs(d)
+    validate.FAILS.clear(); validate.check_outputs(d); validate.check_foreign(d)
     for f in validate.FAILS: print('FAIL ', f)
     for p in validate.PASSES[-3:]: print('PASS ', p)
     if validate.FAILS: sys.exit(1)

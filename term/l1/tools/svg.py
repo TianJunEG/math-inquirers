@@ -119,6 +119,104 @@ def ten_to_bundle():
     return f'<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ten single sticks tied into one bundle" style="width:100%;height:auto;display:block">{"".join(parts)}</svg>'
 
 
+def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jumps=None, highlight=None, width=1000, big=True):
+    """Clean number line for ages 6-8.  start/end inclusive; a tick every `step`; a number under every `label_every`-th tick
+    (default: about 11 labels); `marks` = numbers always labelled; `hide` = numbers shown as an empty box (for 'fill the gap');
+    `jumps` = [(from, to, '+10'), ...] curved arrows above the line (labels in teal); `highlight` = numbers shown as yellow tiles."""
+    n = (end - start) // step
+    if label_every is None:
+        label_every = step * max(1, -(-n // 10))
+    pad = 40
+    x = lambda v: pad + (v - start) / (end - start) * (width - 2 * pad)
+    jh = 130 if jumps else 30
+    base = jh + 40
+    h = base + 110
+    fs = 34 if big else 26
+    p = [f'<line x1="{pad - 14}" y1="{base}" x2="{width - pad + 14}" y2="{base}" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>']
+    hide = set(hide or []); marks = set(marks or []); hl = set(highlight or [])
+    v = start
+    while v <= end:
+        major = (v - start) % label_every == 0 or v in marks or v in hl
+        p.append(f'<line x1="{x(v):.1f}" y1="{base - (18 if major else 10)}" x2="{x(v):.1f}" y2="{base + (18 if major else 10)}" stroke="{NAVY}" stroke-width="{4 if major else 2.5}"/>')
+        if v in hide:
+            p.append(f'<rect x="{x(v) - 26:.1f}" y="{base + 30}" width="52" height="52" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3.5"/>')
+        elif major:
+            if v in hl:
+                p.append(f'<rect x="{x(v) - 30:.1f}" y="{base + 28}" width="60" height="52" rx="12" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>')
+            p.append(f'<text x="{x(v):.1f}" y="{base + 68}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>')
+        v += step
+    for (a, b, lab) in (jumps or []):
+        xa, xb = x(a), x(b); mid = (xa + xb) / 2; hg = min(80, 24 + abs(xb - xa) * 0.25)
+        p.append(f'<path d="M{xa:.1f} {base - 20} Q{mid:.1f} {base - 20 - 2 * hg:.1f} {xb:.1f} {base - 44}" fill="none" stroke="{TEAL}" stroke-width="5" stroke-linecap="round"/>')
+        p.append(f'<polygon points="{xb:.1f},{base - 18} {xb - 13:.1f},{base - 44} {xb + 13:.1f},{base - 44}" fill="{TEAL}"/>')
+        p.append(f'<text x="{mid:.1f}" y="{base - 20 - hg - 12:.1f}" font-size="{fs - 4}" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">{lab}</text>')
+    return f'<svg viewBox="0 0 {width} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line from {start} to {end}" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def hundred_square(blank=False, cell=58):
+    p = []
+    for r in range(10):
+        for c in range(10):
+            n = r * 10 + c + 1
+            p.append(f'<rect x="{c * cell + 2}" y="{r * cell + 2}" width="{cell}" height="{cell}" fill="{SOFT if n % 10 == 0 else "#fff"}" stroke="{NAVY}" stroke-width="2"/>')
+            if not blank:
+                p.append(f'<text x="{c * cell + 2 + cell / 2}" y="{r * cell + 2 + cell * 0.66}" font-size="{cell * 0.42:.0f}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{n}</text>')
+    return f'<svg viewBox="0 0 {10 * cell + 4} {10 * cell + 4}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="100 square" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def number_strip_kit(start=0, end=50, per_row=26):
+    """Cut-out strips of numbered cells (tape end to end)."""
+    cw = 28; vals = list(range(start, end + 1)); rows = [vals[i:i + per_row] for i in range(0, len(vals), per_row)]
+    p = []; y = 10
+    for row in rows:
+        for k, v in enumerate(row):
+            p.append(f'<rect x="{4 + k * cw}" y="{y}" width="{cw}" height="52" fill="#fff" stroke="{NAVY}" stroke-width="1.8"/><text x="{4 + k * cw + cw / 2}" y="{y + 33}" font-size="14" font-weight="800" text-anchor="middle" fill="{RED if v % 10 == 0 else NAVY}" font-family="Nunito Sans, Arial">{v}</text>')
+        p.append(f'<rect x="2" y="{y - 3}" width="{len(row) * cw + 4}" height="58" fill="none" stroke="#777" stroke-width="1.4" stroke-dasharray="7 5"/>')
+        y += 90
+    return f'<svg viewBox="0 0 {per_row * cw + 8} {y}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def cards_kit(labels, cols=5, w=130, h=90, round_=False):
+    """Cut-out cards (digit cards, number cards, words). labels: list of strings."""
+    p = []
+    for i, t in enumerate(labels):
+        cx, cy = 6 + (i % cols) * (w + 10), 6 + (i // cols) * (h + 10)
+        if round_:
+            p.append(f'<circle cx="{cx + w / 2}" cy="{cy + h / 2}" r="{min(w, h) / 2}" fill="#fff" stroke="#777" stroke-width="2" stroke-dasharray="7 5"/>')
+        else:
+            p.append(f'<rect x="{cx}" y="{cy}" width="{w}" height="{h}" rx="10" fill="#fff" stroke="#777" stroke-width="2" stroke-dasharray="7 5"/>')
+        p.append(f'<text x="{cx + w / 2}" y="{cy + h / 2 + h * 0.18}" font-size="{h * 0.5:.0f}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{t}</text>')
+    rows = (len(labels) + cols - 1) // cols
+    return f'<svg viewBox="0 0 {cols * (w + 10) + 6} {rows * (h + 10) + 6}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def shapes_kit(shapes, size=70):
+    """shapes: [{'kind': 'circle|square|triangle|rect', 'color': '#hex', 'n': count}] drawn as cut-outs."""
+    p = []; i = 0; cols = 8
+    for sh in shapes:
+        for _ in range(sh.get('n', 1)):
+            cx, cy = 50 + (i % cols) * (size + 24), 50 + (i // cols) * (size + 24); i += 1
+            c = sh.get('color', YEL); k = sh['kind']; a = size / 2
+            st = f'fill="{c}" stroke="#555" stroke-width="2" stroke-dasharray="6 4"'
+            if k == 'circle': p.append(f'<circle cx="{cx}" cy="{cy}" r="{a}" {st}/>')
+            elif k == 'square': p.append(f'<rect x="{cx - a}" y="{cy - a}" width="{size}" height="{size}" {st}/>')
+            elif k == 'rect': p.append(f'<rect x="{cx - a * 1.3}" y="{cy - a * 0.7}" width="{size * 1.3}" height="{size * 0.7}" {st}/>')
+            else: p.append(f'<polygon points="{cx},{cy - a} {cx + a * 1.1},{cy + a * 0.8} {cx - a * 1.1},{cy + a * 0.8}" {st}/>')
+    rows = (i + cols - 1) // cols
+    return f'<svg viewBox="0 0 {cols * (size + 24) + 30} {rows * (size + 24) + 40}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def kit_figure(spec):
+    t = spec['type']
+    if t == 'base_ten': return kit_page_svg()
+    if t == 'hundred_square': return hundred_square(spec.get('blank', False))
+    if t == 'number_strip': return number_strip_kit(spec.get('start', 0), spec.get('end', 50))
+    if t == 'cards': return cards_kit([str(x) for x in spec['labels']], spec.get('cols', 5), spec.get('w', 130), spec.get('h', 90), spec.get('round', False))
+    if t == 'shapes': return shapes_kit(spec['shapes'], spec.get('size', 70))
+    if t == 'number_line': return number_line(**{k: v for k, v in spec.items() if k not in ('type', 'title', 'intro')})
+    raise ValueError('unknown kit type ' + t)
+
+
 def render_visual(v):
     t = v['type']
     if t == 'bundles':
@@ -127,6 +225,10 @@ def render_visual(v):
         return scatter(v['n'], v.get('seed', 1))
     if t == 'ten_frame':
         return ten_frame(v['filled'], v.get('extra', 0))
+    if t == 'number_line':
+        return number_line(**{k: (([tuple(j) for j in x]) if k == 'jumps' else x) for k, x in v.items() if k in ('start', 'end', 'step', 'label_every', 'marks', 'hide', 'jumps', 'highlight', 'width', 'big')})
+    if t == 'hundred_square':
+        return hundred_square(v.get('blank', False))
     if t == 'ten_to_bundle':
         return ten_to_bundle()
     raise ValueError('unknown visual ' + t)

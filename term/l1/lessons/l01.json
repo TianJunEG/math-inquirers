@@ -3038,7 +3038,8 @@
     "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer.",
     "next": "Lesson 2: Number Words and the Number Line. Your child needs a pencil and paper only.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: reading and writing two-digit numbers from bundles of ten and single ones.",
-    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "quote": "A number is tens and ones. Ten singles tie into one bundle."
   },
   "safeguarding": [
     "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Use hair ties, cups or paper rings, not stretched rubber bands that can flick.",
@@ -3085,6 +3086,18 @@
         "tutor": "Pretend your grown-up or a toy has never seen bundles. Teach them how to read 52 using bundles and singles.",
         "rec": "Recording: pause. Teach a grown-up how to read 52 with bundles and singles.",
         "answer": "52 is 5 bundles of ten and 2 singles. The left digit counts the bundles, the right digit counts the singles."
+      }
+    ]
+  },
+  "workbook": {
+    "header": "Whole Numbers: tens and ones",
+    "hint_p1": "Use your bundles, your kit or a drawing. Say your answer out loud, then write it.",
+    "hint_p3": "Use objects, draw a picture, or open a bundle. Then write how you know. Choose any question, in any order.",
+    "kits": [
+      {
+        "type": "base_ten",
+        "title": "Kit page: tens bars and ones squares",
+        "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope."
       }
     ]
   }

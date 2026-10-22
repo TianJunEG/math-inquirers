@@ -235,8 +235,12 @@ def check_words(d):
     if 'ruler' in json.dumps(m['child']).lower() and not m.get('ruler'): fail('materials: a ruler is listed but materials.ruler is false')
     if re.search(r'\b(buy|purchase|order online)\b', json.dumps(m), re.I): fail('materials: items must be findable at home (no buying)')
     # reading load: sentences in child text
-    long_ = [s for s in child_strings(d) if len(s.split()) > 40]
-    if long_: warn(f'reading load: {len(long_)} child-facing strings over 40 words (e.g. {long_[0][:60]}...)')
+    lim = d.get('limits', {})
+    pr = d['parent']; pstr = {pr['summary'], pr['when_stuck'], pr['next'], pr['report_line'], pr['term_line']} | set(pr['try_home'])
+    cl = [s for s in child_strings(d) if s not in pstr and len(s.split()) > lim.get('max_child_words', 40)]
+    if cl: warn(f"reading load: {len(cl)} child-facing strings over {lim.get('max_child_words', 40)} words (e.g. {cl[0][:60]}...)")
+    pl = [s for s in pstr if len(s.split()) > lim.get('max_parent_words', 90)]
+    if pl: warn(f"parent text: {len(pl)} parent strings over {lim.get('max_parent_words', 90)} words (set limits.max_parent_words to change)")
 
 
 def check_spare(d):
@@ -413,19 +417,60 @@ def check_answers(d):
         warn('practice: could not run node cross-check: ' + str(e))
 
 
-def check_all(num):
+def check_foreign(d):
+    """Built outputs of lesson NN must not contain another lesson's title or 'Lesson 1' text (template leaks)."""
+    import glob, subprocess
+    num = d['_num']
+    od = os.path.join(OUT, f'l{num}')
+    if not os.path.isdir(od): return
+    others = {}
+    for f in glob.glob(os.path.join(L1, 'lessons', 'l*.json')):
+        n = os.path.basename(f)[1:3]
+        if n != num:
+            try: others[n] = json.load(open(f))['title']
+            except Exception: pass
+    texts = []
+    for f in glob.glob(os.path.join(od, '*.html')) + glob.glob(os.path.join(od, 'html', '*.html')):
+        texts.append((f, re.sub(r'<style.*?</style>|<[^>]+>', ' ', open(f, encoding='utf-8').read(), flags=re.S)))
+    for f in glob.glob(os.path.join(od, '*.pdf')):
+        try: texts.append((f, subprocess.run(['pdftotext', f, '-'], capture_output=True, text=True).stdout))
+        except Exception: pass
+    bad = []
+    for f, t in texts:
+        t1 = re.sub(r'\s+', ' ', t)
+        for n, title in others.items():
+            for m in re.finditer(re.escape(title.lower()), t1.lower()):
+                if title.lower() == d['title'].lower(): continue
+                before = t1[max(0, m.start() - 45):m.start()].lower()
+                if re.search(r'next lesson|lesson \d+:?\s*$|lessons? \d+', before): continue   # a pointer to the next lesson is allowed
+                bad.append(f"{os.path.basename(f)} mentions lesson {n} title '{title}'"); break
+        if num != '01' and re.search(r'\bLesson 1\b(?!\d)', t1) and not re.search(r'Lesson 1 (of|onwards)', t1[:0]):
+            hits = [m.start() for m in re.finditer(r'\bLesson 1\b(?!\d)', t1)]
+            for h in hits:
+                ctx = t1[max(0, h - 40):h + 30]
+                if not re.search(r'previous|earlier|Lesson 1 to|Lessons? 1,|from Lesson 1|in Lesson 1', ctx, re.I): bad.append(f"{os.path.basename(f)} contains 'Lesson 1' ({ctx.strip()})")
+        if re.search(r'bundles and singles', t1, re.I) and 'bundle' not in d['title'].lower() and num != '01': bad.append(f"{os.path.basename(f)} mentions Bundles and Singles")
+    if bad: fail('template leak: ' + '; '.join(sorted(set(bad))[:6]))
+    else: ok('template leak: no other lesson title or stray Lesson 1 text in the built files')
+
+
+def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_outputs, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:
             fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
+    if built:
+        for fn in (check_outputs, check_foreign):
+            try: fn(d)
+            except Exception as e: fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     return d
 
 
 def main():
     num = sys.argv[1] if len(sys.argv) > 1 else '01'
-    d = check_all(num)
+    d = check_all(num, built='--no-built' not in sys.argv)
     print(f"== validate lesson {num}: {d['title']}")
     for p in PASSES: print('PASS  ' + p)
     for w in WARNS: print('WARN  ' + w)

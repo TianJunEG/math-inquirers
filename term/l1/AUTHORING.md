@@ -93,3 +93,12 @@ Strand names follow the plan. "New topic" lessons need a syllabus check by the o
 Term 1 report line (plan, section 5): "Your child is learning to see numbers as tens and ones, to notice patterns and to say why." Each lesson file has its own `parent.report_line` too.
 
 Safest to skip or make up: Lesson 4. Hardest to miss: Lessons 1 and 5 to 7.
+
+
+## Template fields added for lessons 2 to 10 (all optional, backward compatible)
+
+- `workbook.header` strand line printed on every page (default "<strand>: <big idea>"); `workbook.hint_p1`, `hint_p3`, `hint_p4` intro lines (generic defaults); `parent.quote` (default `big_idea`); `timing.skip_order` (list); `limits.max_child_words` (default 40) and `limits.max_parent_words` (default 90) for the reading-load warning. Nothing in the builders is specific to Lesson 1: titles, lesson numbers, minute marks and page lists come from the lesson file. The validator fails if a built file of lesson NN contains another lesson's title (except as a pointer after "Next lesson" or "Lesson N:") or stray "Lesson 1" text.
+- **Kit pages.** `workbook.kits` is a list of cut-out pages (each is one printed page after page 5): `{"type":"base_ten"}` (tens bars and ones squares), `hundred_square`, `number_strip` (`start`,`end`), `cards` (`labels`, `cols`), `shapes` (`shapes:[{kind,color,n}]`), `number_line`. Use `"kits": []` for none. If the field is absent the old tens-bars page is printed (lessons written before this change keep working) and `materials.kit_pages` should say so.
+- **Figure types** (in `slides[].blocks` of type `visual`, and in a question's `visual`): `bundles`, `scatter`, `ten_frame`, `ten_to_bundle`, `hundred_square` (`blank`), and **`number_line`**: `{"t":"visual","type":"number_line","start":0,"end":50,"step":10,"label_every":10,"marks":[34],"hide":[20],"jumps":[[30,40,"+10"],[40,44,"+4"]],"highlight":[30]}`. Big labels (34 px), tall ticks at labelled numbers, curved teal jump arrows with labels, yellow highlighted tiles, `hide` draws an empty answer box under a tick. In Python: `svg.number_line(start, end, step, label_every, marks, hide, jumps, highlight)`.
+- **Answer boxes.** In question and part text, `___` prints a dashed answer line and `[]` prints a clear empty square box (36 px, rounded) for ages 6-8; use the box for single digits and the line for words or longer answers.
+- **Dark slides** (`kind: "dark"`) no longer carry the cloud decoration (only the title slide does); the deck check fails if Mi, a speech bubble or a decoration overlaps text.

@@ -58,6 +58,8 @@ def visual(b, ctx_cols=1):
     w = 560 if small else (900 if b['type'] in ('bundles', 'scatter') else 1000)
     if b['type'] == 'ten_frame': w = 640 if not b.get('extra') else 1000
     if b['type'] == 'scatter': w = 760
+    if b['type'] == 'number_line': w = 1500 if ctx_cols == 1 else 760
+    if b['type'] == 'hundred_square': w = 640
     s = svg.render_visual(b)
     inner = f'<div style="width:{w}px;max-width:100%">{s}</div>'
     if b.get('table'):
@@ -73,7 +75,7 @@ def visual(b, ctx_cols=1):
 
 def numrow(items):
     size = 54 if all(len(str(i)) <= 3 for i in items) else 46
-    tiles = ''.join(f'<span style="min-width:96px;padding:10px 24px;border-radius:18px;border:3px solid {NAVY};background:{YEL if k % 2 == 0 else "#FFFFFF"};font-family:{HF};font-size:{size}px;font-weight:700;text-align:center">{E(str(i))}</span>' for k, i in enumerate(items))
+    tiles = ''.join(f'<span style="min-width:96px;padding:10px 24px;border-radius:18px;border:3px solid {NAVY};color:{NAVY};background:{YEL if k % 2 == 0 else "#FFFFFF"};font-family:{HF};font-size:{size}px;font-weight:700;text-align:center">{E(str(i))}</span>' for k, i in enumerate(items))
     return f'<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">{tiles}</div>'
 
 
@@ -117,7 +119,7 @@ def qs_block(d, ids, short):
 
 
 def blanks_dash(t):
-    return E(t).replace('___', '______')
+    return E(t).replace('___', '______').replace('[]', f'<span style="display:inline-block;width:44px;height:44px;border:3px solid {NAVY};border-radius:10px;background:#fff;vertical-align:middle;margin:0 6px"></span>')
 
 
 def answers_block(d, ids):
@@ -176,7 +178,7 @@ def slide_html(d, s):
     dark = kind in ('title', 'dark')
     if dark:
         bg = f'background:linear-gradient(135deg,{NAVY} 0%,#101B33 100%);color:{CREAM}'
-        deco = bubbles()
+        deco = bubbles() if kind == 'title' else bar()
         pill = f'<p style="position:absolute;right:128px;top:64px;font-size:28px;font-weight:700;letter-spacing:2px;color:{YEL}">{time}</p>'
         foot = f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>'
     else:
@@ -267,8 +269,8 @@ def build_deck(d, pw=None):
             if r['bottom'] > 1035 or r['right'] > 1800: problems.append(f"slide {r['id']} overflows (bottom {r['bottom']}, right {r['right']})")
         hits = pg.evaluate("""() => { const out = [];
           document.querySelectorAll('section').forEach(sec => { const sr = sec.getBoundingClientRect();
-            const bub = sec.querySelector('[data-mi-bubble]'), img = sec.querySelector('img[data-mi]'); if (!img) return;
-            const boxes = []; if (bub) boxes.push(['bubble', bub.getBoundingClientRect()]); boxes.push(['Mi', img.getBoundingClientRect()]);
+            const bub = sec.querySelector('[data-mi-bubble]'), img = sec.querySelector('img[data-mi]'); if (!img && !sec.querySelector('[data-deco] path')) return;
+            const boxes = []; sec.querySelectorAll('[data-deco] path').forEach(pp => boxes.push(['decoration', pp.getBoundingClientRect()])); if (bub) boxes.push(['bubble', bub.getBoundingClientRect()]); if (img) boxes.push(['Mi', img.getBoundingClientRect()]);
             boxes.forEach(([nm, r]) => { if (r.left < sr.left || r.right > sr.right || r.top < sr.top || r.bottom > sr.bottom) out.push(sec.id + ': ' + nm + ' is clipped by the slide edge'); });
             const w = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT);
             while (w.nextNode()) { const n = w.currentNode; if (!n.textContent.trim()) continue; const p = n.parentElement;
