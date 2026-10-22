@@ -134,14 +134,17 @@ def run(d):
     eq(place_front(line, ben), 5, 'sneak: Ben is right behind the 4th child'); eq(in_front(line, ben), 4, 'sneak 2'); eq(d['sneak_peek']['val2'], 4, 'sneak val')
     eq(place_front(line, line[1]), 2, 'sneak 1: the 2nd dot'); eq(d['sneak_peek']['val1'], 2, 'sneak val1')
     # warm-up
-    eq([6 - 1, 6 + 1, 9 + 1], [5, 7, 10], 'warm-up before/after')
-    row = ['Aisha', 'Kumar', 'Wei', 'Jenny']
-    eq((row[0], row[-1], row[row.index('Kumar') + 1], row[row.index('Kumar') + 1:row.index('Jenny')]), ('Aisha', 'Jenny', 'Wei', ['Wei']), 'warm-up front/back/behind/between')
+    eq([6 - 1, 6 + 1], [5, 7], 'warm-up before/after')
+    row = ['Ali', 'Kumar', 'Wei', 'Jenny']
+    eq((row[0], row[-1], row[row.index('Kumar') + 1], row[row.index('Kumar') + 1:row.index('Jenny')]), ('Ali', 'Jenny', 'Wei', ['Wei']), 'warm-up front/back/behind/between')
     # Explore: six things, door moved to the other end
     six = make_line(6)
     eq(place_front(six, six[-1]), 6, 'explore: last of six is 6th'); eq(len(six), 6, 'explore: six things')
-    eq(len(six[:3]), 3, 'explore: three things left'); eq(place_front(six[:3], six[2]), 3, 'explore: last of three is 3rd')
+    eq((ordinal(place_front(six, six[3])), len(six)), ('4th', 6), 'explore round 2: the 4th card is on the 4th thing, the number card says 6')
     eq(place_front(list(reversed(six)), six[0]), 6, 'explore: first thing is 6th after the turn'); eq(place_front(list(reversed(six)), six[1]), 5, 'explore: 2nd is 5th after the turn')
+    # the picture of round 3 draws the door on the right and rings the 5th child from the door, the 2nd child from the left
+    e3 = [s for s in d['slides'] if s['id'] == 's-explore3'][0]['blocks'][0]
+    eq(list(reversed(six)).index(six[1]) + 1, 5, 'explore 3: the old 2nd thing is 5th from the new front'); eq((e3['highlight'], e3['front']), ([5], 'right'), 'explore 3 picture')
     eq(place_back(six, six[1]), 5, 'mini: ringed child is 5th from the back')
     # mini: how many in front of Ben (5th and 6th), clue puzzle, your turn
     seven = make_line(7)
@@ -151,10 +154,11 @@ def run(d):
     eq(line_lengths_with_both_places(3, 3), [5], 'mini: Aisha 3rd from both ends means 5 children')
     eq(between(seven, seven[1], seven[5]), 3, 'mini: between the 2nd and the 6th are 3 children')
     # Start here
-    names = ['Aisha', 'Kumar', 'Wei', 'Jenny', 'Lily']
-    eq([names.index('Wei') + 1 == 3, names.index('Jenny') + 1 == 5, names.index('Lily') > names.index('Jenny')], [True, False, True], 'S1')
+    names = ['Ali', 'Kumar', 'Wei', 'Jenny', 'Lily']
+    eq([names.index('Wei') + 1 == 3, names.index('Jenny') + 1 == 5, names.index('Lily') == len(names) - 1], [True, False, True], 'S1')
+    eq([T['S1']['visuals'][0]['names'][str(i + 1)] for i in range(5)], names, 'S1 picture names')
     eq(T['S1']['val'], ['True', 'False', 'True'], 'S1 val')
-    eq([ordinal(i) for i in range(1, 9)], T['S2']['val'], 'S2'); eq(T['S2']['visuals'][0]['n'], 8, 'S2 picture has 8 children')
+    eq([ordinal(i) for i in range(1, 8)], T['S2']['val'], 'S2'); eq(T['S2']['visuals'][0]['n'], 7, 'S2 picture has 7 children')
     ten = make_line(10)
     eq(len(ten), 10, 'S3a'); eq(ordinal(place_front(ten, ten[-1])), '10th', 'S3b'); eq(T['S3']['val'], [10, '10th'], 'S3 val'); eq(T['S3']['visuals'][0]['n'], 10, 'S3 picture')
     eq(ordinal(place_front(five, five[1 + 1])), '3rd', 'S4'); eq(T['S4']['val'], ['3rd'], 'S4 val')
@@ -172,7 +176,7 @@ def run(d):
     eq(place_front(ln8, lily), 6, 'T4: Lily is 6th from the front'); eq(between(ln8, wei, lily), 3, 'T4'); eq(T['T4']['val'], [3], 'T4 val')
     # Go further
     sols = solve_table()
-    eq(len(sols), 1, 'G1 exactly one seating fits all the clues'); eq([sols[0]['Siti'], sols[0]['Ravi'], sols[0]['Kumar']], [2, 4, 6], 'G1'); eq(T['G1']['val'], [2, 4, 6], 'G1 val')
+    eq(len(sols), 1, 'G1 exactly one seating fits all the clues'); eq([sols[0]['Siti'], sols[0]['Ravi'], sols[0]['Kumar']], [2, 4, 6], 'G1'); eq(T['G1']['val'], [2, 4, 6], 'G1 val'); eq(['between' in p['text'] for p in T['G1']['parts']], [False, False, False], 'G1 wording has no ambiguous between'); eq([p['text'].count('next to') for p in T['G1']['parts']], [2, 0, 2], 'G1 next to')
     ln13 = make_line(13); mei = ln13[3]; ben = list(reversed(ln13))[2]
     eq(place_front(ln13, ben), 11, 'G2: Ben is 11th from the front'); eq(between(ln13, mei, ben), 6, 'G2a')
     mid = [c for c in ln13 if in_front(ln13, c) == behind(ln13, c)]

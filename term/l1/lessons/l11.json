@@ -125,12 +125,12 @@
     "id": "explore",
     "title": "Explore",
     "start": 14,
-    "end": 28
+    "end": 27
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 28,
+    "start": 27,
     "end": 38
    },
    {
@@ -178,7 +178,7 @@
    "the third Explore round (turning the line around) can move into the mini-lesson",
    "never shorten the exit ticket reading or the look-back"
   ],
-  "notes": "Lesson 1 of Term 2 has a 4-minute opening because it adds a one-minute routine card for children who are new this term (the four things to know). Start here is about 18 minutes for a middle child, so most children reach Think harder in class; Go further and the Investigation are for home or next time. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the mini-lesson runs 10:11 of 10:00, the workbook 28:18 of 28:00 and talk time 6:03 of 6:00, and the whole lesson needs 83:58 of 90:00. The buffer absorbs this, so do not plan to use the menu in a slow class."
+  "notes": "Lesson 1 of Term 2 has a 4-minute opening and a 13-minute Explore (the mini-lesson has 11 minutes because the answers are shown on a second slide) because it adds a one-minute routine card for children who are new this term (the four things to know). Start here (pages 1 and 2) takes about 17 minutes for a middle child, so in class a middle child may only just reach Think harder after the choice slide: Think harder, Go further and the Investigation are for children who finish early, for home and for next time, and the page says so. Answers are asked, then shown (the answer slides for Explore round 2, the two previews and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class. The project rubric allows 30 seconds a child question; this script allows 8 to 15 seconds, so a class that answers slowly will use the buffer: if so, say the answer of each Think harder preview and move on."
  },
  "sneak_peek": {
   "q1": "Draw 5 dots in a line. The door is on the left. Colour the 2nd dot.",
@@ -202,8 +202,8 @@
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
   "explore": {
-   "say": "Recording: pause now. Line up six things, put the place cards under them, then turn the line around. Press play when you have tried.",
-   "action": "Pause. Make your line of six things, add the place cards, then turn the line around."
+   "say": "Recording: pause now. Line up six things, put the place cards under them, then move FRONT to the other end. Press play when you have tried.",
+   "action": "Pause. Make your line of six things, add the place cards, then move FRONT to the other end."
   },
   "mini": {
    "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
@@ -257,7 +257,7 @@
      },
      {
       "k": "SAY",
-      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
      },
      {
       "k": "DO",
@@ -270,7 +270,7 @@
      },
      {
       "k": "SAY",
-      "text": "Four things to know. Listen first, then try: a guess is a good start. Answer on three, with fingers, or with a thumbs up. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
+      "text": "Four things to know. Listen first, then try: a guess is a good start. Answer on three: say it quietly to your room, show fingers, or give a thumbs up. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
      },
      {
       "k": "SAY",
@@ -287,7 +287,7 @@
      },
      {
       "k": "NOTE",
-      "text": "New this term? The routine slide takes about one minute and covers what a child who missed the first term needs. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
+      "text": "New this term? The routine slide takes about one minute and covers what a child who missed the first term needs. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The gallery shows faces and fingers, not tables: ask for a finger answer when you need to see something, and never look at the gallery for more than 10 seconds at a time. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
      }
     ]
    },
@@ -339,11 +339,6 @@
       "resp": 8
      },
      {
-      "k": "ASK",
-      "text": "What number comes just after 9?",
-      "resp": 8
-     },
-     {
       "k": "SLIDE",
       "slide": "s-rem3"
      },
@@ -381,7 +376,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Answers: 7; 5, 7, 10; Aisha at the front, Jenny at the back; Wei is behind Kumar; Wei is between Kumar and Jenny. Children answer with fingers, thumbs or a whispered word. Nobody writes. A child who has never used these words sees them once on a picture and once with their own things."
+      "text": "Answers: 7; 5 and 7; Ali at the front, Jenny at the back; Wei is behind Kumar; Wei is between Kumar and Jenny. Children answer with fingers, thumbs or a whispered word. Nobody writes. A child who has never used these words sees them once on a picture and once with their own things."
      }
     ]
    },
@@ -459,16 +454,16 @@
      },
      {
       "k": "SAY",
-      "text": "We can write the places short: 1st, 2nd, 3rd, 4th, 5th, 6th. Put your coin on the thing I call, then take it off."
+      "text": "We can write the places short: 1st, 2nd, 3rd, 4th, 5th, 6th. I call a place. Put your coin on that thing, then show me the place with your fingers."
      },
      {
       "k": "WORK",
-      "text": "Call 4th, 2nd, 5th, 1st, 6th. After each call the children place a coin; the tutor looks around the gallery.",
-      "s": 70
+      "text": "Call 4th, then 2nd, then 5th. After each call children put the coin on that thing and show the place with fingers. Look at the fingers, not at the tables.",
+      "s": 45
      },
      {
       "k": "ASK",
-      "text": "Which place is the last thing in your row? Say it on three.",
+      "text": "Which place is the last thing in your row? Say it quietly on three.",
       "resp": 10
      },
      {
@@ -477,12 +472,21 @@
      },
      {
       "k": "SAY",
-      "text": "Take your place cards from the kit page. Put 1st under the first thing, 2nd under the second thing, and so on up to 6th."
+      "text": "Take your place cards from the kit page, the top two rows. Put 1st under the first thing, 2nd under the second thing, and so on up to 6th."
      },
      {
       "k": "WORK",
       "text": "Children put the place cards 1st to 6th under their six things.",
       "s": 70
+     },
+     {
+      "k": "SAY",
+      "text": "Now take the number card 6 from the bottom two rows. Put it at the end of your row, away from the things."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put the number card 6 at the end of their row.",
+      "s": 15
      },
      {
       "k": "ASK",
@@ -491,26 +495,17 @@
      },
      {
       "k": "ASK",
-      "text": "What place is the last thing? Say it.",
+      "text": "What place is the last thing? Say it quietly on three.",
       "resp": 10
      },
      {
-      "k": "SAY",
-      "text": "The number 6 says how many. The word 6th says which one. Now take away the last three things, and the cards that go with them."
-     },
-     {
-      "k": "WORK",
-      "text": "Children take away three things and the cards 4th, 5th and 6th.",
-      "s": 25
-     },
-     {
       "k": "ASK",
-      "text": "How many things are left? What place is the last thing now?",
+      "text": "Touch the thing with the 4th card. What place is it? And how many things are in the whole row?",
       "resp": 15
      },
      {
       "k": "SAY",
-      "text": "Three things, and the last one is 3rd. A number says how many. A place says which one."
+      "text": "The number 6 says how many. The word 4th says which one. A number says how many. A place says which one."
      },
      {
       "k": "SLIDE",
@@ -518,12 +513,12 @@
      },
      {
       "k": "SAY",
-      "text": "Now put the three things back, so the row has six again. Move the FRONT paper to the other end of the row. The things have not moved, but the front is on the other side."
+      "text": "Now move the FRONT paper to the other end of the row. The things have not moved, but the front is on the other side."
      },
      {
       "k": "WORK",
-      "text": "Children put back three things and move the FRONT paper to the other end.",
-      "s": 40
+      "text": "Children move the FRONT paper to the other end.",
+      "s": 25
      },
      {
       "k": "ASK",
@@ -541,7 +536,7 @@
      },
      {
       "k": "ASK",
-      "text": "What did you notice? Volunteers first.",
+      "text": "What did you notice? Volunteers first. To share, switch your microphone on, then off again.",
       "resp": 45
      },
      {
@@ -550,7 +545,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only: no breakout rooms. The three rounds are objects first, then cards, then the other end. Answers: 6; 6th; 3 and 3rd; the old last thing is first now; the old 2nd thing is 5th now. Praise a reason, not speed. Repeat a child's answer in your own words so the recording picks it up."
+      "text": "Main room only: no breakout rooms. The three rounds are objects first, then cards, then the other end. Answers: 6; 6th; 4th and 6; the old last thing is first now; the old 2nd thing is 5th now. Praise a reason, not speed. Repeat a child's answer in your own words so the recording picks it up. The gallery cannot show a table: check with fingers and the answers you hear, not by looking for coins."
      }
     ]
    },
@@ -580,12 +575,17 @@
      },
      {
       "k": "SAY",
-      "text": "Here is a line with the door on the left. The red numbers on the bottom say the place from the front. The words on top say the place from the back."
+      "text": "Here is a line with the door on the left. One child is in the ring."
      },
      {
       "k": "ASK",
-      "text": "Look at the child in the ring. What place is the child from the front? What place from the back?",
+      "text": "What place is the child in the ring from the front? What place from the back? Show me on your fingers.",
       "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2a",
+      "s": 10
      },
      {
       "k": "SAY",
@@ -597,7 +597,16 @@
      },
      {
       "k": "SAY",
-      "text": "Ben is 5th. How many children are in front of Ben? Count the ones in the ring: 1st, 2nd, 3rd, 4th. Four children. The place is 5th, but only 4 are in front."
+      "text": "Ben is 5th. Touch each child in front of Ben."
+     },
+     {
+      "k": "ASK",
+      "text": "How many children are in front of Ben? Show me on your fingers.",
+      "resp": 10
+     },
+     {
+      "k": "SAY",
+      "text": "Four children. The place is 5th, but only 4 are in front."
      },
      {
       "k": "ASK",
@@ -675,11 +684,20 @@
      },
      {
       "k": "SAY",
-      "text": "And now the children between two places. The bracket is under the 2nd and the 6th. Between them are the 3rd, the 4th and the 5th. That is three children."
+      "text": "And now the children between two places. Look at the 2nd and the 6th child in the rings."
+     },
+     {
+      "k": "ASK",
+      "text": "How many children are between the 2nd and the 6th? Show me on your fingers.",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "The 3rd, the 4th and the 5th are between them. That is three children. The 2nd and the 6th are not between themselves."
      },
      {
       "k": "NOTE",
-      "text": "Key words every time: front, back, behind, in front of, between, right behind, the place. The one new idea is that a place has a name and depends on the end you count from. The rule 'one less than the place' is said in words with the picture. The both-ends idea and 'between' are Think harder previews; Start here never needs them. Do not teach teens (11th, 12th) today."
+      "text": "Key words every time: front, back, behind, in front of, between, right behind, the place. The one new idea is that a place has a name and depends on the end you count from. The rule 'one less than the place' is said in words with the picture. The both-ends idea and 'between' are Think harder previews; Start here never needs them. If you are running late, say the answer of each preview and move on. Do not teach teens (11th, 12th) today."
      },
      {
       "k": "STUCK",
@@ -709,7 +727,7 @@
      },
      {
       "k": "SAY",
-      "text": "Last move: the last one is the move you did last. Which move is that? Sit down gently."
+      "text": "The last move was the fifth. What was it? Jump once. Then sit down gently."
      }
     ]
    },
@@ -730,7 +748,7 @@
      },
      {
       "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
+      "text": "Page 1, questions 1 to 3. The tutor invites any child to say how they know (no cold-calling). Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
       "s": 420
      },
      {
@@ -739,7 +757,7 @@
      },
      {
       "k": "READ",
-      "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: True, False, True. Question 2: 1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th. Question 3: 10 children, and the last child is 10th. Check your own page in another colour."
+      "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: True, False, True. Question 2: 1st, 2nd, 3rd, 4th, 5th, 6th, 7th. Question 3: 10 children, and the last child is 10th. Check your own page in another colour."
      },
      {
       "k": "SAY",
@@ -789,7 +807,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Q1 is True or False so a child can tick without writing a place name."
+      "text": "Think harder is for ideas taught today in a new setting, for children who finish Start here and for home. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Q1 is True or False so a child can tick without writing a place name. The still-stuck photo is of the whole of page 5 (Investigation, exit ticket and look-back)."
      }
     ]
    },
@@ -820,7 +838,7 @@
      },
      {
       "k": "ASK",
-      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "text": "Who would like to share? Volunteers first. To share, switch your microphone on, then off again. A pass is always fine.",
       "resp": 90
      },
      {
@@ -879,13 +897,8 @@
       "text": "Tick the ones you got right, in a different colour. Well done. Show your ticket to a grown-up."
      },
      {
-      "k": "ASK",
-      "text": "Show me with your fingers how many you got right: three, two, one, or none yet. A pass is fine.",
-      "resp": 15
-     },
-     {
       "k": "NOTE",
-      "text": "Look at the room as a whole, not at any one tile. If many children show one or two fingers, spend two minutes at the start of Lesson 12 on counting from the other end and on how many are in front, in the open session, no names. Do not write a child's name next to an answer and do not read out anyone's result."
+      "text": "Nobody shows or counts scores: children tick their own ticket and show it to their grown-up. Use what you heard in Talk time and the answers children said on three for your own planning. Do not write a child's name next to an answer and do not read out anyone's result."
      }
     ]
    },
@@ -954,7 +967,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Bar Strips. You need a sheet with strips to cut, two colouring pencils, about 20 counters such as buttons or coins, a pencil and paper. Your grown-up will see the list in the note."
+      "text": "Well done, inquirers. Next lesson is Bar Strips. Ask your grown-up to cut out the strips page from the printed workbook before we start. You also need two colouring pencils, about 20 counters such as buttons or coins, a pencil and paper. Your grown-up will see the list in the note."
      },
      {
       "k": "SAY",
@@ -981,7 +994,7 @@
      ]
     }
    ],
-   "note": "Lesson 1 of Term 2, 90 minutes. Objective: name places 1st to 10th, count a place from the front and from the back, and find who is where from clues. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "note": "Lesson 1 of Term 2, 90 minutes. Objective: name places 1st to 10th, count a place from the front and from the back, and find who is where from clues. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -998,13 +1011,13 @@
      "ordered": true,
      "items": [
       "Listen first, then try. A guess is a good start.",
-      "Answer on three, with fingers, or with a thumbs up.",
+      "Answer on three: say it quietly, show fingers or a thumbs up.",
       "Tick your own work on the answer slide.",
       "Still stuck? Tick the box on your look-back page and show your grown-up."
      ]
     }
    ],
-   "note": "New-here card, about one minute. Read the four lines slowly. It replaces the longer routine and rules slides of Term 1 for children who joined this term, and it is the same card in every opening of the term. Nobody holds paper to the camera: answers are said together on three, shown with fingers or a thumbs up, or ticked on the child's own page. The still-stuck tick is private: a grown-up may photograph the look-back page after class."
+   "note": "New-here card, about one minute. Read the four lines slowly. It replaces the longer routine and rules slides of Term 1 for children who joined this term, and it is the same card in every opening of the term. Nobody holds paper to the camera: answers are said quietly on three (microphones stay off), shown with fingers or a thumbs up, or ticked on the child's own page. The still-stuck tick is private: a grown-up may photograph the look-back page after class."
   },
   {
    "id": "s-rem1",
@@ -1061,7 +1074,7 @@
      "text": "Which numbers go in the empty boxes?"
     }
    ],
-   "note": "The 6 is marked. The two boxes beside it are the number just before and the number just after. Answers: 5 and 7, then 10 for just after 9. Children answer with fingers or a whispered number on three. Nobody writes. This reminds children that a place in a line is next to the places on both sides."
+   "note": "The 6 is marked. The two boxes beside it are the number just before and the number just after. Answers: 5 and 7. Children answer with fingers or a whispered number on three. Nobody writes. This reminds children that a place in a line is next to the places on both sides."
   },
   {
    "id": "s-rem3",
@@ -1075,7 +1088,7 @@
      "n": 4,
      "labels": "none",
      "names": {
-      "1": "Aisha",
+      "1": "Ali",
       "2": "Kumar",
       "3": "Wei",
       "4": "Jenny"
@@ -1086,7 +1099,7 @@
      "text": "The door is on the left. The front is next to the door."
     }
    ],
-   "note": "Point to the door on the picture. The child nearest the door (Aisha) is at the front. The child farthest from the door (Jenny) is at the back. Wei is behind Kumar. Wei is between Kumar and Jenny. Then each child lines up four small things the same way on the table. The four words front, back, behind and between are taught here once with a picture and once with real things."
+   "note": "Point to the door on the picture. The child nearest the door (Ali) is at the front. The child farthest from the door (Jenny) is at the back. Wei is behind Kumar. Wei is between Kumar and Jenny. Then each child lines up four small things the same way on the table. The four words front, back, behind and between are taught here once with a picture and once with real things."
   },
   {
    "id": "s-sneak",
@@ -1150,7 +1163,7 @@
      "labels": "ordinal"
     }
    ],
-   "note": "Round 1, about 5 minutes. Objects first, no writing. Children set up six things and a FRONT paper, then say first, second, third, fourth, fifth, sixth together twice while they touch each thing. Call 4th, 2nd, 5th, 1st and 6th and have children place a coin; look around the gallery. The picture shows the written short forms 1st to 6th. Say the word and show the short form together. Answer: the last thing in a row of six is 6th."
+   "note": "Round 1, about 5 minutes. Objects first, no writing. Children set up six things and a FRONT paper, then say first, second, third, fourth, fifth, sixth together twice while they touch each thing. Call 4th, 2nd and 5th: after each call children put the coin on that thing and show the place with their fingers (fingers are visible in a gallery; a table is not). The picture shows the written short forms 1st to 6th. Say the word and show the short form together. Answer: the last thing in a row of six is 6th."
   },
   {
    "id": "s-explore2",
@@ -1162,13 +1175,18 @@
      "t": "visual",
      "type": "line_up",
      "n": 6,
-     "labels": "ordinal",
+     "labels": "none",
      "highlight": [
       6
      ]
     },
     {
+     "t": "chip",
+     "text": "Look at your row. How many things? Which place is the last one?"
+    },
+    {
      "t": "cols",
+     "reveal": true,
      "cols": [
       [
        {
@@ -1193,7 +1211,7 @@
      ]
     }
    ],
-   "note": "Round 2, about 4 minutes. Children put the place cards 1st to 6th under their six things. Ask: how many things? 6. What place is the last thing? 6th. The number says how many; the place says which one. Then take away the last three things and the cards 4th, 5th and 6th: 3 things are left and the last one is 3rd. In a row, the place of the last thing is the same as the number of things, but the two words do different jobs."
+   "note": "Round 2, about 5 minutes. Children put the place cards 1st to 6th under their six things (the top two rows of the kit page) and the number card 6 at the end of the row (the bottom two rows). Ask: how many things? 6. What place is the last thing? 6th. Then: touch the thing with the 4th card. What place is it, and how many things are in the whole row? 4th, and 6. The number says how many; the place says which one. The cards on the answer slide stay hidden until the children have answered. In a row the place of the last thing is the same as the number of things, but the two words do different jobs."
   },
   {
    "id": "s-explore3",
@@ -1205,25 +1223,18 @@
      "t": "visual",
      "type": "line_up",
      "n": 6,
-     "labels": "ordinal",
-     "names": {
-      "1": "6th",
-      "2": "5th",
-      "3": "4th",
-      "4": "3rd",
-      "5": "2nd",
-      "6": "1st"
-     },
+     "labels": "none",
+     "front": "right",
      "highlight": [
-      2
+      5
      ]
     },
     {
-     "t": "p",
-     "text": "Top words: the place counted from the other end. Bottom words: the place counted from the front."
+     "t": "chip",
+     "text": "Same line. The door is on the right now. The ring is on the thing that was 2nd."
     }
    ],
-   "note": "Round 3, about 4 minutes. Children move the FRONT paper to the other end of their row. The things stay where they are. The picture shows both counts at once: the bottom words are the places from the front (the door is on the left), the top words are the places from the other end. The ringed child is 2nd from the front and 5th from the other end. Ask: which thing is first now? What did you notice? Say the words from the front and from the back. Do not use numbers on a board."
+   "note": "Round 3, about 4 minutes. Children move the FRONT paper to the other end of their row. The things stay where they are. The picture shows the same line with the door on the other side: the ringed child was 2nd from the old front. Ask: which thing is first now? What place is the ringed thing now? Count from the new front: 5th. Then ask what they noticed, and say the words from the front and from the back. The places are not printed on the slide, so nobody can read the answer off it."
   },
   {
    "id": "s-m1",
@@ -1272,6 +1283,28 @@
      "t": "visual",
      "type": "line_up",
      "n": 6,
+     "labels": "none",
+     "highlight": [
+      2
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The door is on the left. What place is the child in the ring? From the front? From the back?"
+    }
+   ],
+   "note": "Look at the line with the door on the left. Ask: what place is the child in the ring from the front, and from the back? Take answers on fingers or quietly on three. Then show the next slide, where the places are written. The child did not move: we only counted from the other end. Common slip: a child counts from the wrong end. Slide a finger from the door, then from the other end."
+  },
+  {
+   "id": "s-m2a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: from the front, from the back",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
      "labels": "ordinal",
      "names": {
       "1": "6th",
@@ -1294,7 +1327,7 @@
      ]
     }
    ],
-   "note": "The picture is the line from Explore. Bottom words count from the front (the door). Top words count from the back. Ask the group to read both places for the ringed child: 2nd from the front, 5th from the back. The child did not move. We only counted from the other end. Common slip: a child counts from the wrong end. Slide a finger from the door, then from the other end."
+   "note": "The same line. Bottom words count from the front (the door). Top words count from the back. The ringed child is 2nd from the front and 5th from the back. The child did not move. We only counted from the other end."
   },
   {
    "id": "s-m3",
@@ -1309,23 +1342,17 @@
      "labels": "ordinal",
      "names": {
       "5": "Ben"
-     },
-     "highlight": [
-      1,
-      2,
-      3,
-      4
-     ]
+     }
     },
     {
      "t": "card",
      "head": "BEN IS 5TH",
      "items": [
-      "The 4 children in the rings are in front of Ben."
+      "How many children are in front of Ben?"
      ]
     }
    ],
-   "note": "Ben is 5th. The four children in the rings are in front of him: 1st, 2nd, 3rd, 4th. The place is 5th but the number in front is 4. Ask: if Ben is 6th, how many are in front? 5. Say the rule in words: the number in front is one less than the place. This is the idea behind sneak-peek puzzle 2."
+   "note": "Ben is 5th. Ask how many children are in front of him and let children touch and count them. The answer is 4 (1st, 2nd, 3rd, 4th): the place is 5th but the number in front is 4. The answer is said, not printed. Ask: if Ben is 6th, how many are in front? 5. Say the rule in words: the number in front is one less than the place. This is the idea behind sneak-peek puzzle 2."
   },
   {
    "id": "s-m4",
@@ -1443,7 +1470,12 @@
    "title": "Extra: counting both ends",
    "blocks": [
     {
+     "t": "chip",
+     "text": "Aisha is 3rd from the front and 3rd from the back. How many children are in the line?"
+    },
+    {
      "t": "visual",
+     "reveal": true,
      "type": "line_up",
      "n": 5,
      "labels": "ordinal",
@@ -1456,13 +1488,14 @@
     },
     {
      "t": "card",
+     "reveal": true,
      "head": "AISHA IS 3RD FROM THE FRONT AND 3RD FROM THE BACK",
      "items": [
       "2 in front + Aisha + 2 behind = 5 children."
      ]
     }
    ],
-   "note": "THINK HARDER PREVIEW: Start here never needs this idea. Aisha is 3rd from the front and 3rd from the back. Two children are in front, two are behind, and Aisha is counted once, so the line has 5 children. 3 + 3 = 6 counts Aisha twice. Ask: why is it 5 and not 6? Take one answer and move on."
+   "note": "THINK HARDER PREVIEW: Start here never needs this idea. Aisha is 3rd from the front and 3rd from the back. Two children are in front, two are behind, and Aisha is counted once, so the line has 5 children. 3 + 3 = 6 counts Aisha twice. Ask: why is it 5 and not 6? Take one answer, then show the picture and move on."
   },
   {
    "id": "s-m7",
@@ -1475,20 +1508,25 @@
      "type": "line_up",
      "n": 7,
      "labels": "ordinal",
-     "between": [
+     "highlight": [
       2,
       6
      ]
     },
     {
+     "t": "chip",
+     "text": "How many children are between the 2nd and the 6th?"
+    },
+    {
      "t": "card",
+     "reveal": true,
      "head": "BETWEEN THE 2ND AND THE 6TH",
      "items": [
       "The 3rd, 4th and 5th: 3 children."
      ]
     }
    ],
-   "note": "THINK HARDER PREVIEW: Start here never needs this idea. The red bracket marks the children between the 2nd and the 6th. They are the 3rd, the 4th and the 5th: 3 children. The two end children are not between. Ask: is the 2nd child between? No. Take one answer and move on."
+   "note": "THINK HARDER PREVIEW: Start here never needs this idea. The ringed children are the 2nd and the 6th. The children between them are the 3rd, the 4th and the 5th: 3 children. The two ringed children are not between. Ask: is the 2nd child between? No. Take one answer, then show the answer and move on."
   },
   {
    "id": "s-break",
@@ -1543,7 +1581,7 @@
      "short": false
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. Question 1 is a True or False tick table, so no place names need writing. After question 3 any child may choose to carry on or try Think harder. The pictures on this slide are small; the printed page has the full picture."
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor invites any child to say how they know. Wait 10 seconds before helping. Question 1 is a True or False tick table, so no place names need writing. After question 3 any child may choose to carry on or try Think harder. The pictures on this slide are small; the printed page has the full picture."
   },
   {
    "id": "s-ws1ans",
@@ -1560,7 +1598,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Question 1: True, False, True. Question 2: 1st to 8th. Question 3: 10 children and the last is 10th."
+   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Question 1: True, False, True. Question 2: 1st to 7th. Question 3: 10 children and the last is 10th."
   },
   {
    "id": "s-ws2",
@@ -1716,7 +1754,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and show fingers for how many they got right."
+   "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera and nobody shows how many they got right: children check their own ticket on the next slide and show it to their grown-up."
   },
   {
    "id": "s-exitans",
@@ -1819,7 +1857,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Bar Strips. Bring a sheet with strips to cut, 2 colouring pencils and about 20 counters."
+      "Bar Strips. Bring the strips page already cut out by a grown-up, 2 colouring pencils and about 20 counters."
      ]
     }
    ],
@@ -1844,7 +1882,7 @@
      "True"
     ],
     "hint": "Start at the door. Touch each child in order and say the places.",
-    "solution": "Aisha is 1st, Kumar is 2nd, Wei is 3rd, Jenny is 4th and Lily is 5th. So 'Wei is 3rd' is true. 'Jenny is 5th' is false, because Jenny is 4th. Lily is the last child, so she is behind Jenny: true.",
+    "solution": "Ali is 1st, Kumar is 2nd, Wei is 3rd, Jenny is 4th and Lily is 5th. So 'Wei is 3rd' is true. 'Jenny is 5th' is false, because Jenny is 4th. Lily is the last child, at the back of the line: true.",
     "mistakes": [
      "Counting from the wrong end.",
      "Saying Jenny is 5th because Lily was missed."
@@ -1860,7 +1898,7 @@
       "s": "Jenny is 5th."
      },
      {
-      "s": "Lily is behind Jenny."
+      "s": "Lily is at the back."
      }
     ],
     "visuals": [
@@ -1869,12 +1907,13 @@
       "n": 5,
       "labels": "none",
       "names": {
-       "1": "Aisha",
+       "1": "Ali",
        "2": "Kumar",
        "3": "Wei",
        "4": "Jenny",
        "5": "Lily"
-      }
+      },
+      "size": 90
      }
     ]
    },
@@ -1883,7 +1922,7 @@
     "page": 1,
     "tier": "start",
     "text": "Fill in the places of the children. The door is on the left.",
-    "answer": "1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th",
+    "answer": "1st, 2nd, 3rd, 4th, 5th, 6th, 7th",
     "val": [
      "1st",
      "2nd",
@@ -1891,11 +1930,10 @@
      "4th",
      "5th",
      "6th",
-     "7th",
-     "8th"
+     "7th"
     ],
     "hint": "Start at the door. The child next to the door is 1st. Say each place as you write it.",
-    "solution": "The child next to the door is 1st. Then 2nd, 3rd, 4th, 5th, 6th, 7th and 8th for the last child.",
+    "solution": "The child next to the door is 1st. Then 2nd, 3rd, 4th, 5th, 6th and 7th for the last child.",
     "mistakes": [
      "Writing 2th or 3th.",
      "Counting from the wrong end.",
@@ -1907,7 +1945,7 @@
     "visuals": [
      {
       "type": "line_up",
-      "n": 8,
+      "n": 7,
       "labels": "box"
      }
     ]
@@ -1932,7 +1970,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "There are [2] children in the line.",
+      "text": "There are ___ children in the line.",
       "ans": "10",
       "val": 10
      },
@@ -1998,7 +2036,7 @@
      "5th"
     ],
     "hint": "Put 6 things in a row. Count from the far end to Jenny's thing.",
-    "solution": "Count from the back: Lily's place is 1st, then 2nd, 3rd, 4th, and Jenny is 5th from the back. Check: the places from the front and the back are 2 and 5 and they make 7, one more than 6.",
+    "solution": "Count from the back: the last child is 1st, then 2nd, 3rd, 4th, and Jenny is 5th from the back. Check: the places from the front and the back are 2 and 5 and they make 7, one more than 6.",
     "mistakes": [
      "Writing 2nd again.",
      "Writing 4th by counting only the children behind Jenny."
@@ -2143,7 +2181,7 @@
     "val": [
      5
     ],
-    "hint": "The children between are the ones after the 3rd and before the 9th. Say their places.",
+    "hint": "The children between are the ones after the 3rd and before the 9th. Count along the picture and say their places.",
     "solution": "The children between Ali and Mei are 4th, 5th, 6th, 7th and 8th. That is 5 children. Ali and Mei are not between themselves.",
     "mistakes": [
      "Writing 6 by doing 9 - 3.",
@@ -2163,7 +2201,7 @@
      {
       "type": "line_up",
       "n": 10,
-      "labels": "ordinal",
+      "labels": "none",
       "names": {
        "3": "Ali",
        "9": "Mei"
@@ -2249,17 +2287,17 @@
      4,
      6
     ],
-    "hint": "Find the seat next to both children. For opposite, count three seats round the table.",
+    "hint": "Find the seat that is next to both children. For opposite, count three seats round the table.",
     "solution": "(a) Seat 2 is next to seat 1 and seat 3, so Siti sits in seat 2. (b) Opposite seat 1 is seat 4, three seats round. (c) Seat 6 is next to seat 5 and seat 1, so Kumar sits in seat 6.",
     "mistakes": [
-     "Putting Siti in seat 4.",
+     "Putting Siti in seat 4 or seat 6, which is next to only one of them.",
      "Choosing seat 3 as opposite seat 1."
     ],
     "mins": 6,
     "parts": [
      {
       "l": "a",
-      "text": "Siti sits between Ali and Mei. Siti is in seat ___.",
+      "text": "Siti sits next to Ali and next to Mei. Siti is in seat ___.",
       "ans": "2",
       "val": 2
      },
@@ -2271,7 +2309,7 @@
      },
      {
       "l": "c",
-      "text": "Kumar sits between Ben and Ali. Kumar is in seat ___.",
+      "text": "Kumar sits next to Ben and next to Ali. Kumar is in seat ___.",
       "ans": "6",
       "val": 6
      }
@@ -2282,11 +2320,11 @@
       "type": "round_table",
       "seats": 6,
       "names": {
-       "1": "1 Ali",
+       "1": "1",
        "2": "2",
-       "3": "3 Mei",
+       "3": "3",
        "4": "4",
-       "5": "5 Ben",
+       "5": "5",
        "6": "6"
       }
      }
@@ -2323,7 +2361,9 @@
       "val": "7th"
      }
     ],
-    "lines": 0
+    "lines": 0,
+    "draw": true,
+    "draw_strokes": 13
    },
    {
     "id": "G3",
@@ -2356,7 +2396,8 @@
       "val": "4th"
      }
     ],
-    "lines": 1
+    "lines": 0,
+    "draw": true
    }
   ],
   "investigation": {
@@ -2365,7 +2406,7 @@
    "tier": "investigation",
    "title": "Two places for one child",
    "first": "Draw 5 dots in a line. Write 1st to 5th above the dots. Below the dots, write the places counting from the back.",
-   "text": "Do the same for a line of 8 dots. Pick 3 children. For each, add the place from the front and the place from the back. Line 4: I notice ...",
+   "text": "Do the same for a line of 8 dots. Pick 3 children. For each, add the place from the front and the place from the back. I notice ...",
    "lines": 4,
    "answer": "For a line of 5, every child's two places add to 6: 1 and 5, 2 and 4, 3 and 3, 4 and 2, 5 and 1. For a line of 8 they add to 9. The two places always add to one more than the number of children, because the child is counted once from each end.",
    "val": [
@@ -2377,7 +2418,8 @@
     "Counting from the same end twice.",
     "Trying only one child."
    ],
-   "mins": 8
+   "mins": 8,
+   "draw": true
   }
  },
  "talk": {
@@ -2477,7 +2519,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Put 6 toys in a row. Put a coin on the 4th toy from the front. Then write: the coin is on the toy that is ___ from the back.",
+   "text": "Put 6 toys in a row. Put a coin on the 4th toy from the front. The coin is on the toy that is ___ from the back.",
    "answer": "3rd",
    "val": "3rd",
    "solution": "From the front the coin is on the 4th toy. Count from the back: the last toy is 1st, then 2nd, then the coin toy is 3rd."
@@ -2485,7 +2527,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Kumar is 7th in the line. How many children are in front of Kumar?",
+   "text": "Kumar is 7th in the line. There are ___ children in front of Kumar.",
    "answer": "6 children",
    "val": 6,
    "solution": "The children in front are the 1st to the 6th. That is 6 children. Kumar himself is the 7th."
@@ -2524,7 +2566,7 @@
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "The door is on the left. What place is the child in the ring? Type just the number: for 3rd, type 3.",
+    "q": "The door is on the left. What place is the child in the ring? Type the place, like 3rd.",
     "answer": 3,
     "hint": "Start at the door and count along to the child in the ring.",
     "steps": [
@@ -2555,7 +2597,7 @@
        5
       ]
      },
-     "q": "The door is on the left. What place is the child in the ring? Type just the number: for 3rd, type 3.",
+     "q": "The door is on the left. What place is the child in the ring? Type the place, like 3rd.",
      "answer": "k",
      "hint": "Start at the door and count along to the child in the ring.",
      "steps": [
@@ -2678,7 +2720,7 @@
     "id": "c4",
     "tier": "core",
     "type": "number",
-    "q": "There are 8 children in a line. Aisha is 3rd from the front. What place is Aisha from the back? Type just the number.",
+    "q": "There are 8 children in a line. Aisha is 3rd from the front. What place is Aisha from the back? Type the place, like 3rd.",
     "answer": 6,
     "hint": "Count from the back end: 1st, 2nd, and so on, up to Aisha.",
     "steps": [
@@ -2709,13 +2751,32 @@
        4
       ]
      },
-     "q": "There are {n} children in a line. Aisha is {f|ord} from the front. What place is Aisha from the back? Type just the number.",
+     "q": "There are {n} children in a line. Aisha is {f|ord} from the front. What place is Aisha from the back? Type the place, like 3rd.",
      "answer": "n-f+1",
      "hint": "Count from the back end: 1st, 2nd, and so on, up to Aisha.",
      "steps": [
       "The places from the front and the back add to one more than the number of children.",
-      "{n} + 1 take away {f} is {ans}.",
+      "{s} take away {f} is {ans}.",
       "Aisha is {ans|ord} from the back."
+     ],
+     "derive": {
+      "s": "n+1"
+     }
+    },
+    "fig": {
+     "type": "line_up",
+     "n": "{n}",
+     "labels": "none",
+     "highlight": [
+      "{f}"
+     ]
+    },
+    "fig_base": {
+     "type": "line_up",
+     "n": 8,
+     "labels": "none",
+     "highlight": [
+      3
      ]
     }
    },
@@ -2754,10 +2815,13 @@
      "answer": "2*k-1",
      "hint": "Draw the line. Count the children in front of Mei, Mei herself and the children behind.",
      "steps": [
-      "{k} take away 1 children are in front of Mei, and the same number are behind.",
-      "Count Mei once: that is 2 times {k} take away 1.",
+      "{j} children are in front of Mei and {j} children are behind.",
+      "{j} + 1 + {j} = {ans}. Mei is counted once.",
       "There are {ans} children in the line."
-     ]
+     ],
+     "derive": {
+      "j": "k-1"
+     }
     },
     "easier": "c2"
    },
@@ -2797,19 +2861,40 @@
      "answer": "b-a-1",
      "hint": "Say the places between: after the {a|ord} and before the {b|ord}.",
      "steps": [
-      "Take {a} from {b}, then take 1 more, because neither Ali nor Mei is between.",
-      "{b} take away {a} take away 1 is {ans}.",
+      "{b} take away {a} is {c}.",
+      "Neither Ali nor Mei is between, so take away 1 more: {ans}.",
       "{ans} children are between them."
+     ],
+     "derive": {
+      "c": "b-a"
+     }
+    },
+    "easier": "c3",
+    "fig": {
+     "type": "line_up",
+     "n": 10,
+     "labels": "none",
+     "highlight": [
+      "{a}",
+      "{b}"
      ]
     },
-    "easier": "c3"
+    "fig_base": {
+     "type": "line_up",
+     "n": 10,
+     "labels": "none",
+     "highlight": [
+      3,
+      9
+     ]
+    }
    },
    {
     "id": "t3",
     "tier": "stretch",
     "type": "set",
     "ordered": true,
-    "q": "Ali is 3rd and Mei is 7th. List the places of the children between them. Type the numbers with a comma between.",
+    "q": "Ali is 3rd and Mei is 7th. List the places of the children between them, smallest first. Type the numbers with a comma between.",
     "answer": [
      4,
      5,
@@ -2869,10 +2954,14 @@
      "answer": "(n+1)/2",
      "hint": "The middle child has the same number of children in front and behind.",
      "steps": [
-      "Take the middle child away. The other children make two equal groups.",
-      "Half of {n} take away 1 are in front of the middle child.",
+      "Take the middle child away. {p} children are left.",
+      "Half of {p} is {h}, so {h} children are in front of the middle child.",
       "The middle child is {ans|ord}."
-     ]
+     ],
+     "derive": {
+      "p": "n-1",
+      "h": "(n-1)/2"
+     }
     },
     "easier": "t1"
    },
@@ -2910,10 +2999,13 @@
      "answer": "n-7",
      "hint": "Find Ben's place from the front first. Then say the places between.",
      "steps": [
-      "Ben is {n} take away 3, add 1, from the front.",
-      "Between Mei (4th) and Ben are the places after the 4th and before Ben.",
+      "Ben is {f|ord} from the front, because {n} take away 3, add 1, is {f}.",
+      "Between the 4th and the {f|ord} are the places after the 4th and before Ben.",
       "That is {ans} children."
-     ]
+     ],
+     "derive": {
+      "f": "n-2"
+     }
     },
     "easier": "t2"
    },
@@ -2952,11 +3044,11 @@
    "How many are in front of you?"
   ],
   "when_stuck": "Let your child touch each toy in order and say the places aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
-  "next": "Lesson 12: Bar Strips: More and Fewer. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "next": "Lesson 12: Bar Strips: More and Fewer. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to the families in your child's group: please do not share it. Online practice for this lesson (no timers, no scores): your tutor sends the link on the day of the lesson.",
   "report_line": "Your child is learning to name places in a line, to count them from either end and to find who is where from clues. This week: the places 1st to 10th, and counting from the front and from the back.",
-  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "term_line": "Over this term your child will learn to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 12 workbook, with the strips kit page cut out by a grown-up",
+   "The printed Lesson 12 workbook, with the strips page (page 6) already cut out by a grown-up",
    "Two colouring pencils in two different colours",
    "About 20 counters (buttons, coins or pasta)",
    "A pencil and spare paper"
@@ -2969,14 +3061,16 @@
   "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
   "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
-  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  "The look-back is never collected in front of the group or read out. A pass is always allowed.",
+  "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers 'on three' are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back), so a parent shares all three."
  ],
  "tutor_prep": [
   "Solve every workbook question yourself with a row of real things first. Check the numbers in Go further question 1 against the table picture: seat 1 is at the top and the seats go round clockwise.",
   "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the place cards and number cards) printed and cut out by a grown-up, ten small things for a row, a coin or button, a small paper to write FRONT on, a pencil and spare paper.",
   "Have ten small things in a row on your table and a paper marked FRONT, and the slides open. Draw nothing under the webcam: the recording cannot show it.",
   "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
-  "Say plainly if a parent asks: Start here is school Primary 1 work (places up to 10th). Think harder and Go further go beyond it on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with a picture or a row of real things."
+  "Say plainly if a parent asks: Start here is school Primary 1 work (places up to 10th). Think harder and Go further go beyond it on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with a picture or a row of real things.",
+  "This lesson is paced for one tutor with eight tiles and no co-host: do not read the gallery for more than 10 seconds at a time, and use fingers for the checks (a gallery cannot show a table). Print the workbook kit page (page 6): ten place cards and ten number cards, cut out by a grown-up; the top two rows are place cards, the bottom two rows are number cards."
  ],
  "spare_time": {
   "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",

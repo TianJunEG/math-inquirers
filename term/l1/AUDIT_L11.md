@@ -7,20 +7,20 @@ Rubric: `docs/audit/reaudit_p1.md` instruments A and tier compliance, `AUTHORING
 | Criterion | Result | Evidence |
 |---|---|---|
 | Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, identity term 2 / lesson 11 / lesson_in_term 1 / key t2l11 |
-| Every answer verified independently | PASS | 82 checks in `verify/l11_checks.py` (lines modelled as lists; the seating puzzle and the race solved by trying every arrangement, exactly one fits) |
+| Every answer verified independently | PASS | 86 checks in `verify/l11_checks.py` (lines modelled as lists; the seating puzzle and the race solved by trying every arrangement, exactly one fits) |
 | Online practice variants verified | PASS | 62 template variants verified three ways (expression, brute-force oracle, runner JavaScript calc) |
-| Timing: parts sum to 90, buffer | PASS | 11 parts, sum 90; script 71:07 of 90:00; slow-class 83:58 |
-| Slides and script linked | PASS | 31 slides each shown once, in its part; goodbye slide is last |
+| Timing: parts sum to 90, buffer | PASS | 11 parts, sum 90; script 72:08 of 90:00; slow-class 85:10 (Explore 13 min, Mini 11 min) |
+| Slides and script linked | PASS | 35 slides each shown once (4 reveal/check slides added: Explore round 2, from-the-back check, two previews), in its part; goodbye slide is last |
 | Tier counts and completeness | PASS | Start here 7, Think harder 4, Go further 3, exit 3, home 5 |
 | Neutral labels, no overclaims, no private chat | PASS | no banned labels; no MOE/GEP/SASMO claim |
 | Recording cues | PASS | 11 cues of at most 26 words, each with an action |
 | Spare-time menu | PASS | 3 activities, 11 optional minutes, rules present |
 | No copied contest text | PASS | no 7-word overlap (one overlap, "the child in the middle of the", was reworded) |
 | Mascot | PASS | Mi on 4 slides (title, Remember, Look-back, end) |
-| Workbook page fill | PASS | measured on the PDF: 100, 99, 98, 89, 91 percent, kit page 49 percent; 6 pages as designed; home 2 pages, parent 1 page |
+| Workbook page fill | PASS | measured on the PDF: 99, 99, 98, 93, 98 percent, kit page 49 percent; 6 pages as designed; home 2 pages, parent 1 page |
 | Template leak | PASS | no other title, no stray "Lesson 1" text, footer says Term 2 |
 
-Validator: 0 FAIL, 4 WARN (the model estimate for page 1 says 105 percent but the PDF measures 100 percent; slow-class mini 10:11 of 10:00, workbook 28:18 of 28:00, talk 6:03 of 6:00, all absorbed by the 5-minute buffer and stated in `timing.notes` and `skip_order`).
+Validator: 0 FAIL, 3 WARN (slow-class mini 12:02 of 11:00, workbook 28:17 of 28:00, talk 6:08 of 6:00; the buffer absorbs them). Earlier: 4 WARN (the model estimate for page 1 says 105 percent but the PDF measures 100 percent; slow-class mini 10:11 of 10:00, workbook 28:18 of 28:00, talk 6:03 of 6:00, all absorbed by the 5-minute buffer and stated in `timing.notes` and `skip_order`).
 
 ## Judgement lines
 
@@ -57,3 +57,6 @@ Total: 20 / 24
 - The look-back block on the printed page and on the slide (`common.STUCK_TEXT`, `b_print`, `b_deck.lookback`) still says "I am still stuck (I will ask in the class chat or show my tutor on camera)". Owner default 9 for Term 2 is the look-back tick photographed by the grown-up to the business WhatsApp. The wording should change in the shared tools.
 - The deck question rows (`qs` blocks) draw only `visual`, not `visuals`, so workbook slides show no pictures for questions that use `visuals`. The printed page needs `visuals` (a `visual` line is too tall at 520 px).
 - Workbook pages 1 and 2 are full: no room for a longer Start here.
+
+## Fix pass (Term 2 round 2, 22 Oct 2026)
+See `audit/FIXES_L11.md`. Applied: answers no longer on question slides (reveal slides), fingers instead of gallery look-around, one microphone routine, no public exit finger count, G1 "next to", S1/S2/T2/G2/G3/I1 layout fixes, number cards now used, hand-off and parent page wording, online steps rewritten. Template needs are listed in FIXES_L11.md.
