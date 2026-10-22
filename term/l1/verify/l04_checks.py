@@ -249,6 +249,8 @@ def run(d):
         eq((k + 10) % 10 == k % 10 and (k + 10) // 10 == k // 10 + 1, True, f'M1 add 10 to {k}')
     eq([23 + 10, 47 + 10, 89 + 10], [33, 57, 99], 'M1 examples'); eq(95 + 10 > 100, True, 'M1: 95 runs off the square')
     eq([x for x in range(21, 31) if x in skip(5, 5, 100)], [25, 30], 'M2 in the 5s in the third row')
+    eq([x for x in range(21, 31) if x in skip(5, 5, 100) and x % 10 != 0], [25], 'M2 with not in the 10s only 25 is left')
+    eq([x for x in range(1, 101) if x in skip(5, 5, 100) and 40 < x < 50], [45], 'g4 example: counting in 5s, more than 40, less than 50 leaves only 45')
     for k in range(1, 91):
         eq(pos(k + 10), (pos(k)[0] + 1, pos(k)[1]), f'M3 ten more is straight below {k}')
     # Printed squares really show what the questions say

@@ -136,8 +136,8 @@
     "notes": "Opening is 4 minutes as in Lesson 1, used for the materials check (the printed 100 square, counters, colours). The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
   },
   "sneak_peek": {
-    "q1": "Count in 5s. Write the next two numbers: 5, 10, 15, 20, __, __.",
-    "q2": "This is a piece of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? How do you know?",
+    "q1": "Count in 5s. What are the next two numbers? 5, 10, 15, 20, __, __.",
+    "q2": "This is part of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? Write how you know.",
     "a1": "25 and 30",
     "a2": "46. Down one row is 10 more, because a row has ten squares.",
     "val1": [
@@ -342,7 +342,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle one. Count in fives. Write the next two numbers: five, ten, fifteen, twenty, then two blanks."
+            "text": "Puzzle one. Count in fives. What are the next two numbers? five, ten, fifteen, twenty, then two blanks."
           },
           {
             "k": "WORK",
@@ -351,7 +351,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Here is a piece of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? Write the number, and how you know."
+            "text": "Puzzle two. Here is part of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? Write the number. Then write how you know."
           },
           {
             "k": "WORK",
@@ -700,7 +700,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 3: write the next numbers in each pattern. Question 4: count in twos and colour 2, 4, 6 up to 30, then write the last digits you see. Question 5: fill in the empty squares a, b and c. Question 6: Siti counts in fives. Which number is wrong?"
+            "text": "Page 2. Question 3: write the next numbers in each pattern. Question 4: count in twos and colour 2, 4, 6 and so on to 30. Look at the last digits. Write the 5 different last digits. Question 5: fill in the empty squares a, b and c. Question 6: Siti counts in fives. Which number is wrong? Circle it. Then write what she should have said, and how you know."
           },
           {
             "k": "WORK",
@@ -755,7 +755,7 @@
           },
           {
             "k": "READ",
-            "text": "Ali says: counting in fives makes one column on the square, just like counting in tens. Do you agree? Use your 100 square to explain."
+            "text": "Ali says: counting in fives makes one column on the square, just like counting in tens. Is Ali right? Use your 100 square to show why."
           },
           {
             "k": "WORK",
@@ -1071,7 +1071,7 @@
                 "t": "card",
                 "head": "PUZZLE 1: anyone can try",
                 "items": [
-                  "Count in 5s. Write the next two numbers."
+                  "Count in 5s. What are the next two numbers?"
                 ]
               },
               {
@@ -1091,9 +1091,9 @@
                 "t": "card",
                 "head": "PUZZLE 2: think",
                 "items": [
-                  "This is a piece of the 100 square. A counter is on 36.",
+                  "This is part of the 100 square. A counter is on 36.",
                   "Ravi moves it down one square.",
-                  "Which number is it on now? How do you know?"
+                  "Which number is it on now? Write how you know."
                 ]
               },
               {
@@ -1196,7 +1196,7 @@
                 "t": "card",
                 "head": "SAY IT",
                 "items": [
-                  "The counters make a ___."
+                  "The counters make a line that goes ___ (across or down)."
                 ]
               }
             ]
@@ -1242,7 +1242,7 @@
               },
               {
                 "t": "chip",
-                "text": "Will 37 get a counter? Will 60?"
+                "text": "Counting in 2s: will 37 get a counter? Will 60?"
               }
             ]
           ]
@@ -1653,9 +1653,9 @@
           "t": "card",
           "head": "THE LAST DIGIT",
           "items": [
-            "10s end in 0.",
-            "5s end in 0 or 5.",
-            "2s end in 0, 2, 4, 6 or 8."
+            "Counting in 10s: every number ends in 0.",
+            "Counting in 5s: every number ends in 0 or 5.",
+            "Counting in 2s: every number ends in 0, 2, 4, 6 or 8."
           ]
         }
       ],
@@ -1721,7 +1721,7 @@
               },
               {
                 "t": "chip",
-                "text": "Say 10 more. Think: one row down."
+                "text": "Say the number that is 10 more. Think: one row down."
               }
             ],
             [
@@ -1893,7 +1893,7 @@
         },
         {
           "t": "p",
-          "text": "Do you agree? Use the 100 square to explain."
+          "text": "Is Ali right? Use the 100 square to show why."
         },
         {
           "t": "chip",
@@ -2065,11 +2065,11 @@
             [
               {
                 "t": "p",
-                "text": "What if each row had only 5 numbers?"
+                "text": "Here is a square with only 5 numbers in each row."
               },
               {
                 "t": "p",
-                "text": "A counter is on 8. It moves down one row. Which number is it on?"
+                "text": "A counter is on 8. It moves down 1 row. Which number is it on?"
               },
               {
                 "t": "p",
@@ -2125,17 +2125,17 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "Count in 10s. Colour 10, 20, 30, and keep going to 100. Then fill in the blanks.",
+        "text": "Colour 10, 20, 30 and so on to 100 as you count in 10s. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "Every number I coloured ends in ___",
+            "text": "Every number I coloured ends in the digit ___.",
             "ans": "0",
             "val": 0
           },
           {
             "l": "b",
-            "text": "They make a line going ___ (across or down)",
+            "text": "The colours make a line that goes ___ (across or down).",
             "ans": "down",
             "val": "down"
           }
@@ -2162,11 +2162,11 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Count in 5s. Colour 5, 10, 15, and keep going to 100. Then fill in the blanks.",
+        "text": "Count in 5s. Colour 5, 10, 15 and keep going to 100. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "Every number I coloured ends in ___ or ___",
+            "text": "Every number I coloured ends in the digit ___ or ___.",
             "ans": "5 or 0, in any order",
             "val": [
               5,
@@ -2175,7 +2175,7 @@
           },
           {
             "l": "b",
-            "text": "They make ___ lines going down",
+            "text": "The colours make ___ lines going down.",
             "ans": "2",
             "val": 2
           }
@@ -2203,7 +2203,7 @@
         "id": "S3",
         "page": 2,
         "tier": "start",
-        "text": "Write the next two numbers in each pattern.",
+        "text": "What are the next two numbers in each of these patterns?",
         "parts": [
           {
             "l": "a",
@@ -2266,11 +2266,11 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Count in 2s. Colour 2, 4, 6, and keep going to 30. Write the last digits you see.",
+        "text": "Count in 2s. Colour 2, 4, 6 and so on to 30. Look at the last digits.",
         "parts": [
           {
             "l": "",
-            "text": "The last digits are ___, ___, ___, ___, ___",
+            "text": "The 5 different last digits are ___, ___, ___, ___, ___.",
             "ans": "2, 4, 6, 8, 0 in any order",
             "val": [
               2,
@@ -2310,23 +2310,23 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "This is a piece of the 100 square. Write the number in each empty square.",
+        "text": "Fill in the missing number in each empty square.",
         "parts": [
           {
             "l": "a",
-            "text": "a is ___",
+            "text": "Square a is ___",
             "ans": "34",
             "val": 34
           },
           {
             "l": "b",
-            "text": "b is ___",
+            "text": "Square b is ___",
             "ans": "43",
             "val": 43
           },
           {
             "l": "c",
-            "text": "c is ___",
+            "text": "Square c is ___",
             "ans": "55",
             "val": 55
           }
@@ -2372,13 +2372,19 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Siti counts in 5s: 5, 10, 15, 20, 26, 30, 35. One number is wrong. Circle it. Write the number she should have said. How do you know?",
+        "text": "Siti counts in 5s: 5, 10, 15, 20, 26, 30, 35. One number is wrong. Circle it.",
         "parts": [
           {
-            "l": "",
-            "text": "She should have said ___",
+            "l": "a",
+            "text": "She should have said ___.",
             "ans": "25",
             "val": 25
+          },
+          {
+            "l": "b",
+            "text": "I know because ___.",
+            "ans": "counting in 5s ends in 0 or 5",
+            "val": "because"
           }
         ],
         "answer": "26 is wrong. She should have said 25. Counting in 5s ends in 0 or 5.",
@@ -2401,11 +2407,11 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Start on 27 on your 100 square. Go down 3 rows. Which number do you land on? How do you know?",
+        "text": "Put a counter on 27 on your 100 square. Move the counter down 3 rows. Which number does it land on? Write how you know on the lines.",
         "parts": [
           {
             "l": "",
-            "text": "I land on ___",
+            "text": "It lands on ___.",
             "ans": "57",
             "val": 57
           }
@@ -2427,11 +2433,11 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "A counter starts on 14. It goes down 2 rows, then right 3 squares. Which number does it stop on? Show each step.",
+        "text": "A counter is on 14. It moves down 2 rows. Then it moves right 3 squares. Which number does it land on? Write each step on the lines.",
         "parts": [
           {
             "l": "",
-            "text": "It stops on ___",
+            "text": "It lands on ___.",
             "ans": "37",
             "val": 37
           }
@@ -2498,7 +2504,7 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Mei counts in 2s up to 30: 2, 4, 6 and on. Ali counts in 5s up to 30: 5, 10, 15 and on. Which numbers do they both say?",
+        "text": "Mei counts in 2s up to 30: 2, 4, 6, 8 and so on. Ali counts in 5s up to 30: 5, 10, 15, 20 and so on. Write the numbers they both say.",
         "parts": [
           {
             "l": "",
@@ -2532,19 +2538,25 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "In this chain, each number is the two numbers before it added together: 2, 6, __, 14, 22, __. Fill in both blanks. What is the rule in your own words?",
+        "text": "Here is a number chain: 2, 6, ___, 14, 22, ___. After 2 and 6, each number is the last two numbers added together.",
         "parts": [
           {
-            "l": "",
-            "text": "The blanks are ___ and ___",
+            "l": "a",
+            "text": "The two blanks are ___ and ___.",
             "ans": "8 and 36",
             "val": [
               8,
               36
             ]
+          },
+          {
+            "l": "b",
+            "text": "I found the first blank by ___.",
+            "ans": "2 + 6 = 8",
+            "val": "working"
           }
         ],
-        "answer": "8 and 36 (add the two numbers before)",
+        "answer": "8 and 36 (2 + 6 = 8, and 14 + 22 = 36)",
         "val": [
           8,
           36
@@ -2556,13 +2568,13 @@
           "Filling the first blank but not the last."
         ],
         "mins": 5,
-        "lines": 2
+        "lines": 1
       },
       {
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "Two rules are mixed in one list: 5, 50, 10, 45, 15, 40, __, __. Write the next two numbers. Then say what the 10th number is.",
+        "text": "Two patterns are mixed in one list: 5, 50, 10, 45, 15, 40, ___, ___. Write the next two numbers. Then write the 10th number in the list.",
         "parts": [
           {
             "l": "a",
@@ -2599,8 +2611,33 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Look at four squares in a block: 34 and 35 on top, 44 and 45 below. Add 34 + 45. Then add 35 + 44. What do you notice? Try two more blocks. Does it always work? Say why.",
-        "parts": [],
+        "text": "Look at this block of 4 squares.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Yellow: 34 + 45 = ___",
+            "ans": "79",
+            "val": 79
+          },
+          {
+            "l": "b",
+            "text": "Other two: 35 + 44 = ___",
+            "ans": "79",
+            "val": 79
+          },
+          {
+            "l": "c",
+            "text": "What do you notice?",
+            "ans": "Both add up to 79",
+            "val": "same"
+          },
+          {
+            "l": "d",
+            "text": "Try two more blocks. Does it work every time? Write why.",
+            "ans": "Yes: 1 and 10 are added in both pairs",
+            "val": "yes"
+          }
+        ],
         "visual": {
           "type": "hundred",
           "rows": [
@@ -2633,7 +2670,7 @@
           "Adding the numbers across the rows instead of along the slants."
         ],
         "mins": 7,
-        "lines": 4
+        "lines": 3
       }
     ],
     "investigation": {
@@ -2641,10 +2678,10 @@
       "page": 5,
       "tier": "investigation",
       "title": "Counting in 3s",
-      "first": "Use the 100 square on your kit page. Colour 3, 6, 9, 12 and 15. Where does each one sit?",
-      "text": "Keep going to 30. Do the colours make a column like the 10s? What shape do you see? Look at 33, 36 and 39: what do you notice?",
+      "first": "Use the 100 square on your kit page. Colour 3, 6, 9, 12 and 15. Look at where the colours are.",
+      "text": "Keep going to 60, in 3s. Do the colours make a column like the 10s? Write what shape you see. Then look at 33, 36 and 39. What do you notice?",
       "lines": 2,
-      "answer": "Counting in 3s makes slanting lines going down and to the left, not a straight column, because a row has 10 squares and 10 is not a number we count in 3s. The picture repeats every 3 rows: 33, 36 and 39 sit under 3, 6 and 9.",
+      "answer": "Counting in 3s makes slanting lines going down and to the left, not a straight column, because a row has 10 squares and 10 is not said when we count in 3s. The picture repeats every 3 rows: 33, 36 and 39 sit under 3, 6 and 9.",
       "val": [
         "slanting lines",
         "repeats every 3 rows"
@@ -2658,7 +2695,7 @@
     }
   },
   "talk": {
-    "question": "Ali says: counting in 5s makes one column on the square, just like counting in 10s. Do you agree? Use the 100 square to explain.",
+    "question": "Ali says: counting in 5s makes one column on the square, just like counting in 10s. Is Ali right? Use the 100 square to show why.",
     "starter": "I think ... because ...",
     "answer": "No. Counting in 5s makes two columns, the 5 column and the 10 column. A row has ten squares, so two jumps of five fill one row and the next jump starts the next row in the 5 column.",
     "look_for": "A reason that uses the row of ten (not just because I saw it on my square)."
@@ -2666,7 +2703,7 @@
   "exit": [
     {
       "id": "E1",
-      "text": "Count in 5s. Write the next two numbers.",
+      "text": "Count in 5s. What are the next two numbers?",
       "parts": [
         {
           "l": "",
@@ -2691,17 +2728,17 @@
     },
     {
       "id": "E2",
-      "text": "A counter is on 26. It moves down 1, then right 1.",
+      "text": "A counter is on 26. First it moves down 1 square. Then it moves right 1 square.",
       "parts": [
         {
           "l": "a",
-          "text": "Down 1: ___",
+          "text": "After going down it is on ___",
           "ans": "36",
           "val": 36
         },
         {
           "l": "b",
-          "text": "Then right 1: ___",
+          "text": "After going right it is on ___",
           "ans": "37",
           "val": 37
         }
@@ -2719,12 +2756,12 @@
     },
     {
       "id": "E3",
-      "text": "Mei counts in 2s. She says 25. Is Mei right? Say why.",
+      "text": "Mei counts in 2s: 2, 4, 6, 8 and so on. Will she say 25?",
       "parts": [
         {
           "l": "",
-          "text": "Mei is ___ (right or not right) because ___",
-          "ans": "not right",
+          "text": "Circle:  Yes    No      I know because ___.",
+          "ans": "No",
           "val": "no"
         }
       ],
@@ -2785,7 +2822,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Count in 2s: 2, 4, 6, 8, ___. Will you say 17? Write yes or no, and why.",
+      "text": "(a) Count in 2s: 2, 4, 6, 8, ___ (b) If you keep going, will you say 17? Circle Yes or No.",
       "answer": "10. No: 17 ends in 7, and counting in 2s ends in 0, 2, 4, 6 or 8.",
       "val": [
         10,
@@ -2804,7 +2841,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "Find a calendar. Pick three dates. For each date, look at the date straight below it. How much more is it? Is it the same every time? Why do you think so?",
+      "text": "Find a calendar. Pick 3 dates that are not in the last row. (a) How much more is the date straight below each one? (b) Is it always the same? Write why.",
       "answer": "7 more each time. A row on a calendar is one week of 7 days, like a row of ten on the 100 square.",
       "val": 7,
       "solution": "A calendar row has 7 days, so the date straight below is 7 more. On the 100 square a row has 10 numbers, so the number below is 10 more."
@@ -2824,7 +2861,7 @@
         "hint": "Count on 5 more with one hand: 31, 32, 33, 34, 35.",
         "steps": [
           "Each step is 5 more.",
-          "30 and 5 more is 35.",
+          "5 more than 30 is 35.",
           "The next number is 35."
         ],
         "slips": [
@@ -2863,7 +2900,7 @@
           "hint": "Count on 5 more from {b}.",
           "steps": [
             "Each step is 5 more.",
-            "{b} and 5 more is {ans}.",
+            "5 more than {b} is {ans}.",
             "The next number is {ans}."
           ]
         }
@@ -2877,7 +2914,7 @@
         "hint": "Ten more is one row down on the 100 square.",
         "steps": [
           "Each step is 10 more.",
-          "33 and 10 more is 43.",
+          "10 more than 33 is 43.",
           "The next number is 43."
         ],
         "slips": [
@@ -2916,7 +2953,7 @@
           "hint": "Ten more is one row down on the 100 square.",
           "steps": [
             "Each step is 10 more.",
-            "{b} and 10 more is {ans}.",
+            "10 more than {b} is {ans}.",
             "The next number is {ans}."
           ]
         }
@@ -2925,13 +2962,13 @@
         "id": "c3",
         "tier": "core",
         "type": "number",
-        "q": "A counter is on 34 on the 100 square. It moves down 1 square. Which number is it on?",
+        "q": "A counter is on 34 on the 100 square. The counter moves down 1 square. Which number is it on?",
         "answer": 44,
         "hint": "Down one row is 10 more.",
         "steps": [
           "One step down is one row.",
           "A row has ten squares, so down is 10 more.",
-          "34 and 10 more is 44."
+          "10 more than 34 is 44."
         ],
         "slips": [
           {
@@ -2960,13 +2997,13 @@
               87
             ]
           },
-          "q": "A counter is on {n} on the 100 square. It moves down 1 square. Which number is it on?",
+          "q": "A counter is on {n} on the 100 square. The counter moves down 1 square. Which number is it on?",
           "answer": "n+10",
           "hint": "Down one row is 10 more.",
           "steps": [
             "One step down is one row.",
             "A row has ten squares, so down is 10 more.",
-            "{n} and 10 more is {ans}."
+            "10 more than {n} is {ans}."
           ]
         }
       },
@@ -2974,12 +3011,12 @@
         "id": "c4",
         "tier": "core",
         "type": "number",
-        "q": "A counter is on 52 on the 100 square. It moves right 1 square. Which number is it on?",
+        "q": "A counter is on 52 on the 100 square. The counter moves right 1 square. Which number is it on?",
         "answer": 53,
         "hint": "Right is 1 more.",
         "steps": [
           "One step right is 1 more.",
-          "52 and 1 more is 53.",
+          "1 more than 52 is 53.",
           "The counter is on 53."
         ],
         "slips": [
@@ -3009,12 +3046,12 @@
               87
             ]
           },
-          "q": "A counter is on {n} on the 100 square. It moves right 1 square. Which number is it on?",
+          "q": "A counter is on {n} on the 100 square. The counter moves right 1 square. Which number is it on?",
           "answer": "n+1",
           "hint": "Right is 1 more.",
           "steps": [
             "One step right is 1 more.",
-            "{n} and 1 more is {ans}.",
+            "1 more than {n} is {ans}.",
             "The counter is on {ans}."
           ]
         }
@@ -3028,7 +3065,7 @@
         "hint": "Each step is 2 more.",
         "steps": [
           "Each step is 2 more.",
-          "10 and 2 more is 12.",
+          "2 more than 10 is 12.",
           "The next number is 12."
         ],
         "slips": [
@@ -3061,7 +3098,7 @@
           "hint": "Each step is 2 more.",
           "steps": [
             "Each step is 2 more.",
-            "{b} and 2 more is {ans}.",
+            "2 more than {b} is {ans}.",
             "The next number is {ans}."
           ]
         }
@@ -3097,14 +3134,14 @@
         "id": "t1",
         "tier": "stretch",
         "type": "number",
-        "q": "A counter is on 8. It moves down 3 rows. Which number is it on?",
+        "q": "On the 100 square, a counter is on 8. The counter moves down 3 rows. What number is it on at the end?",
         "answer": 38,
         "easier": "c3",
         "hint": "One row down is 10 more. Three rows are 30 more.",
         "steps": [
           "Each row down is 10 more.",
           "3 rows down is 30 more.",
-          "8 and 30 more is 38."
+          "30 more than 8 is 38."
         ],
         "slips": [
           {
@@ -3138,13 +3175,13 @@
           "derive": {
             "m": "r*10"
           },
-          "q": "A counter is on {n}. It moves down {r} rows. Which number is it on?",
+          "q": "On the 100 square, a counter is on {n}. The counter moves down {r} rows. What number is it on at the end?",
           "answer": "n+r*10",
           "hint": "One row down is 10 more. {r} rows are {m} more.",
           "steps": [
             "Each row down is 10 more.",
             "{r} rows down is {m} more.",
-            "{n} and {m} more is {ans}."
+            "{m} more than {n} is {ans}."
           ]
         }
       },
@@ -3152,14 +3189,14 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "Look at the pattern: 3, 4, 6, 9, __. The gaps grow by 1. What number comes next?",
+        "q": "Look at the pattern: 3, 4, 6, 9, __. The gaps grow by 1 each time. What number comes next?",
         "answer": 13,
         "easier": "c1",
         "hint": "The gaps are 1, 2, 3. What is the next gap?",
         "steps": [
           "The gaps are 1, 2, 3.",
           "The next gap is 4.",
-          "9 and 4 more is 13."
+          "4 more than 9 is 13."
         ],
         "slips": [
           {
@@ -3193,13 +3230,13 @@
             "c": "s+3",
             "d": "s+6"
           },
-          "q": "Look at the pattern: {s}, {b}, {c}, {d}, __. The gaps grow by 1. What number comes next?",
+          "q": "Look at the pattern: {s}, {b}, {c}, {d}, __. The gaps grow by 1 each time. What number comes next?",
           "answer": "s+10",
           "hint": "The gaps are 1, 2, 3. What is the next gap?",
           "steps": [
             "The gaps are 1, 2, 3.",
             "The next gap is 4.",
-            "{d} and 4 more is {ans}."
+            "4 more than {d} is {ans}."
           ]
         }
       },
@@ -3207,7 +3244,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "Mei counts in 2s up to 30. Ali counts in 5s up to 30. How many numbers do they both say?",
+        "q": "Mei counts in 2s from 2 up to 30. Ali counts in 5s from 5 up to 30. How many numbers do they both say?",
         "answer": 3,
         "easier": "c5",
         "hint": "List both. Which numbers are in both lists?",
@@ -3240,7 +3277,7 @@
               60
             ]
           },
-          "q": "Mei counts in 2s up to {N}. Ali counts in 5s up to {N}. How many numbers do they both say?",
+          "q": "Mei counts in 2s from 2 up to {N}. Ali counts in 5s from 5 up to {N}. How many numbers do they both say?",
           "answer": "N//10",
           "hint": "List both. Which numbers are in both lists?",
           "steps": [
@@ -3282,7 +3319,7 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "Each number is the two before it added together: 1, 4, 5, 9, 14, __. What comes next?",
+        "q": "Look at this chain: 1, 4, 5, 9, 14, __. After 1 and 4, each number is the last two numbers added together. What comes next?",
         "answer": 23,
         "easier": "t2",
         "hint": "Add the last two numbers: 9 and 14.",
@@ -3324,7 +3361,7 @@
             "d": "a+2*b",
             "e": "2*a+3*b"
           },
-          "q": "Each number is the two before it added together: {a}, {b}, {c}, {d}, {e}, __. What comes next?",
+          "q": "Look at this chain: {a}, {b}, {c}, {d}, {e}, __. After {a} and {b}, each number is the last two numbers added together. What comes next?",
           "answer": "3*a+5*b",
           "hint": "Add the last two numbers: {d} and {e}.",
           "steps": [
@@ -3338,7 +3375,7 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "Two rules are mixed: 5, 50, 10, 45, 15, 40, __. What number comes next?",
+        "q": "Two patterns are mixed in one list: 5, 50, 10, 45, 15, 40, __. What number comes next?",
         "answer": 20,
         "easier": "t2",
         "hint": "Look at every second number. Which rule comes next?",
@@ -3366,7 +3403,7 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "A block of 4 on the 100 square: 34 and 35 on top, 44 and 45 below. Add 34 and 45. What is the total?",
+        "q": "Look at a block of 4 squares on the 100 square. 34 and 35 are on top. 44 and 45 are below. Add 34 and 45. What is the total?",
         "answer": 79,
         "easier": "t1",
         "hint": "Add the top left number and the bottom right number.",
@@ -3407,7 +3444,7 @@
             "c": "a+10",
             "d": "a+11"
           },
-          "q": "A block of 4 on the 100 square: {a} and {b} on top, {c} and {d} below. Add {a} and {d}. What is the total?",
+          "q": "Look at a block of 4 squares on the 100 square. {a} and {b} are on top. {c} and {d} are below. Add {a} and {d}. What is the total?",
           "answer": "a+d",
           "hint": "Add the top left number and the bottom right number.",
           "steps": [
@@ -3421,12 +3458,12 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Hide a number on the 100 square and write 3 clues for your grown-up (for example: it is in the 5s, it is between 40 and 60, it is not in the 10s). Check that only ONE number fits.",
+        "q": "Hide a number on the 100 square. Write 3 clues for your grown-up. For example: you say it when you count in 5s; it is more than 40; it is less than 50. Check that only ONE number fits.",
         "hint": "Pick a secret number first. Then write clues that are true for it.",
         "steps": [
           "Check your secret number fits every clue.",
-          "List the numbers that fit the first two clues. Cross out any that break clue 3.",
-          "Exactly one number should be left. For example: in the 5s, between 40 and 60, not in the 10s: 45 and 55 fit the first two clues, so you need one more clue, such as the tens digit is 5."
+          "List the numbers that fit the first clue. Cross out any that break clue 2 or clue 3.",
+          "Exactly one number should be left. For example: counting in 5s, more than 40 and less than 50 leaves only 45."
         ]
       }
     ]
@@ -3504,9 +3541,9 @@
         "id": "M2",
         "title": "Make a puzzle for your grown-up",
         "minutes": 4,
-        "tutor": "Hide a number on the 100 square. Write two clues, like: it is in the 5s, and it is in the third row. Give it to your grown-up to find.",
-        "rec": "Recording: pause. Hide a number on the square and write two clues for a grown-up to find.",
-        "answer": "No single answer. Check that the clues fit the hidden number and fit only one number (in the 5s and third row gives 25 and 30; a third clue is needed)."
+        "tutor": "Hide a number on the 100 square. Write 3 clues, like: you say it when you count in 5s; it is in the third row; it is not in the 10s. Give them to your grown-up to find the number.",
+        "rec": "Recording: pause. Hide a number on the square and write 3 clues for a grown-up to find.",
+        "answer": "Many answers are right. Check that the clues fit the hidden number and fit only one number. The example clues (counting in 5s, third row, not in the 10s) give 25 only."
       },
       {
         "id": "M3",
