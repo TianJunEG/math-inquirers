@@ -20,6 +20,13 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
 .wl{border-bottom:2px dotted #8A94AD;height:24px}
 .boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
+.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 292px;column-gap:8px;align-items:start}
+.qbox:has(svg.h100)>.q{grid-column:1 / span 2}
+.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:292px!important;margin:0!important}
+.qbox:has(svg.h100)>.sub,.qbox:has(svg.h100)>.ln,.qbox:has(svg.h100)>.draw{grid-column:1}
+.qbox:has(svg.h100.wide){display:block}
+.qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
+.p1 .qbox:has(svg.h100)>.vis{width:292px!important}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
@@ -59,7 +66,7 @@ def kit_pages(d):
 def workbook_html(d, key=False):
     t = d['tiers']; inv = t['investigation']
     P = []
-    P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p1", "Use objects, your kit or a drawing. Say your answer out loud, then write it."))}</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
+    P.append(f'<div class="page p1">{hdr(d, "Start here", d["title"].upper() + "!", mi=True)}<div class="choice">After question {wb(d, "choice_after", 3)} you may choose: carry on, or try <b>Think harder</b>.</div><p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p1", "Use objects, your kit or a drawing. Say your answer out loud, then write it."))}</p>' + ''.join(qbox(q) for q in t['start'] if q['page'] == 1) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Start here")}' + ''.join(qbox(q) for q in t['start'] if q['page'] == 2) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Think harder")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p3", "Use objects, draw a picture or make a table. Then write how you know. Choose any question, in any order."))}</p>' + ''.join(qbox(q) for q in t['think']) + '</div>')
     P.append(f'<div class="page">{hdr(d, "Go further")}<p style="font-style:italic;margin:2px 0 6px">{E(wb(d, "hint_p4", "Choose any question. You do not have to finish them all."))}</p>' + ''.join(qbox(q) for q in t['go']) + '</div>')
@@ -102,8 +109,8 @@ def home_html(d):
         qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{E(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
-            f'<div class="page hm">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use real things or draw bundles. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
-            f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing the bundles.</p>{ans}'
+            f'<div class="page hm">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
+            f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
             f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link, key <b>{d["online_practice"]["key"]}</b>.</p></div></body></html>')
 
 

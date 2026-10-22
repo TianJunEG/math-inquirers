@@ -3466,7 +3466,9 @@
         "width": 100,
         "intro": "A grown-up prints this page and keeps it flat. No cutting is needed. Put counters on top of the numbers. For the Investigation, colour it lightly so you can still read the numbers."
       }
-    ]
+    ],
+    "choice_after": 2,
+    "home_hint": "Use your 100 square or draw it."
   },
   "safeguarding": [
     "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp.",

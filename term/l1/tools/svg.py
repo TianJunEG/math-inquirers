@@ -100,7 +100,7 @@ def ten_frame(filled, extra=0):
     w = 5 * cell + 12
     if extra:
         frame(6 + 5 * cell + 40, extra)
-        parts.append(f'<text x="{5 * cell + 26}" y="{6 + cell + 12}" font-size="46" font-weight="700" fill="{NAVY}" font-family="{FONT}">+</text>')
+        parts.append(f'<text x="{5 * cell + 26 + 0}" y="{6 + cell + 14}" font-size="46" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">+</text>')
         w = 10 * cell + 52
     return f'<svg viewBox="0 0 {w} {2 * cell + 12}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ten frame with {filled} counters" style="width:100%;height:auto;display:block">{"".join(parts)}</svg>'
 
@@ -209,12 +209,98 @@ def shapes_kit(shapes, size=70):
 def kit_figure(spec):
     t = spec['type']
     if t == 'base_ten': return kit_page_svg()
+    if t == 'hundred': return hundred(cell=spec.get('cell', 64))
     if t == 'hundred_square': return hundred_square(spec.get('blank', False))
     if t == 'number_strip': return number_strip_kit(spec.get('start', 0), spec.get('end', 50))
     if t == 'cards': return cards_kit([str(x) for x in spec['labels']], spec.get('cols', 5), spec.get('w', 130), spec.get('h', 90), spec.get('round', False))
     if t == 'shapes': return shapes_kit(spec['shapes'], spec.get('size', 70))
     if t == 'number_line': return number_line(**{k: v for k, v in spec.items() if k not in ('type', 'title', 'intro')})
     raise ValueError('unknown kit type ' + t)
+
+
+MINT = '#BFE3DC'
+
+
+def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(1, 10), cols=(1, 10), per=10, cell=46, qmarks=False, tags=None):
+    """A numbered number square.  Cell (row r, column c) holds (r-1)*per + c.  rows and cols pick a window of the square.
+    shade = yellow cells, shade2 = mint cells, hide = cells left empty (for the child to fill, or '?' when qmarks),
+    mark = a red counter sits on the cell, outline = thick teal border, arrows = [[from, to, label], ...]."""
+    shade, shade2, hide, mark, outline = set(shade), set(shade2), set(hide), set(mark), set(outline)
+    r0, r1 = rows; c0, c1 = cols
+    pad = 8
+    vert = any(abs(b - a) >= per for (a, b, _) in arrows)
+    W = pad * 2 + (c1 - c0 + 1) * cell + (cell * 0.9 if vert else 0)
+    H = pad * 2 + (r1 - r0 + 1) * cell + (cell * 0.45 if arrows else 0)
+    P = []
+    centre = {}
+    for r in range(r0, r1 + 1):
+        for c in range(c0, c1 + 1):
+            n = (r - 1) * per + c
+            x = pad + (c - c0) * cell; y = pad + (r - r0) * cell
+            centre[n] = (x + cell / 2, y + cell / 2)
+            fill = '#FFFFFF'
+            if n in shade: fill = YEL
+            elif n in shade2: fill = MINT
+            if n in hide: fill = '#F3F6FB'
+            P.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" fill="{fill}" stroke="{NAVY}" stroke-width="1.8"/>')
+            fs = cell * (0.30 if n >= 100 else 0.43)
+            if n in hide:
+                if tags and n in tags:
+                    P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + cell * 0.15}" font-size="{cell * 0.42}" font-weight="700" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">{tags[n]}</text>')
+                elif qmarks:
+                    P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + cell * 0.15}" font-size="{cell * 0.42}" font-weight="700" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">?</text>')
+            elif n in mark:
+                P.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="{cell * 0.38}" fill="{RED}" stroke="{NAVY}" stroke-width="2.2"/>')
+                P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + fs * 0.35}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="#fff" font-family="{FONT}">{n}</text>')
+            else:
+                P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + fs * 0.35}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{n}</text>')
+    for n in outline:
+        if n in centre:
+            cx, cy = centre[n]
+            P.append(f'<rect x="{cx - cell / 2 + 2}" y="{cy - cell / 2 + 2}" width="{cell - 4}" height="{cell - 4}" fill="none" stroke="{TEAL}" stroke-width="5"/>')
+    for (a, b, lab) in arrows:
+        if a in centre and b in centre:
+            (x1, y1), (x2, y2) = centre[a], centre[b]
+            sw = cell * 0.09; hd = cell * 0.22
+            if abs(x2 - x1) >= abs(y2 - y1):         # across: arrow along the lower part of the cells, label under the border
+                sgn = 1 if x2 > x1 else -1
+                ly = y1 + cell * 0.34
+                sx, ex = x1 + sgn * cell * 0.10, x2 - sgn * cell * 0.12
+                P.append(f'<line x1="{sx:.1f}" y1="{ly:.1f}" x2="{ex - sgn * hd * 0.6:.1f}" y2="{ly:.1f}" stroke="{RED}" stroke-width="{sw:.1f}" stroke-linecap="round"/>')
+                P.append(f'<polygon points="{ex:.1f},{ly:.1f} {ex - sgn * hd:.1f},{ly - hd * 0.55:.1f} {ex - sgn * hd:.1f},{ly + hd * 0.55:.1f}" fill="{RED}"/>')
+                P.append(f'<text x="{(x1 + x2) / 2:.1f}" y="{y1 + cell * 0.80:.1f}" font-size="{cell * 0.36:.1f}" font-weight="800" text-anchor="middle" fill="{RED}" stroke="#fff" stroke-width="{cell * 0.09:.1f}" paint-order="stroke" font-family="{FONT}">{lab}</text>')
+            else:                                      # down or up: arrow along the right side of the cells, label beside it on the border line
+                sgn = 1 if y2 > y1 else -1
+                lx = x1 + cell * 0.36
+                sy, ey = y1 + sgn * cell * 0.12, y2 - sgn * cell * 0.12
+                P.append(f'<line x1="{lx:.1f}" y1="{sy:.1f}" x2="{lx:.1f}" y2="{ey - sgn * hd * 0.6:.1f}" stroke="{RED}" stroke-width="{sw:.1f}" stroke-linecap="round"/>')
+                P.append(f'<polygon points="{lx:.1f},{ey:.1f} {lx - hd * 0.55:.1f},{ey - sgn * hd:.1f} {lx + hd * 0.55:.1f},{ey - sgn * hd:.1f}" fill="{RED}"/>')
+                P.append(f'<text x="{lx + cell * 0.14:.1f}" y="{(y1 + y2) / 2 + cell * 0.13:.1f}" font-size="{cell * 0.36:.1f}" font-weight="800" text-anchor="start" fill="{RED}" stroke="#fff" stroke-width="{cell * 0.09:.1f}" paint-order="stroke" font-family="{FONT}">{lab}</text>')
+    cnt = (r1 - r0 + 1) * (c1 - c0 + 1)
+    return (f'<svg class="h100" viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number square, {cnt} squares" '
+            f'style="width:100%;height:auto;display:block">{"".join(P)}</svg>')
+
+
+def seq(items, gaps=None, hl=()):
+    """Number tiles in a row; None draws an empty tile; gaps = labels on the arcs between tiles (e.g. '+1')."""
+    tw, sp, th = 118, 78, 92
+    n = len(items)
+    W = 16 + n * tw + (n - 1) * sp
+    H = 178
+    P = []
+    y0 = 80
+    for i, v in enumerate(items):
+        x = 8 + i * (tw + sp)
+        fill = YEL if i in hl else '#FFFFFF'
+        dash = ' stroke-dasharray="9 6"' if v is None else ''
+        P.append(f'<rect x="{x}" y="{y0}" width="{tw}" height="{th}" rx="16" fill="{fill}" stroke="{NAVY}" stroke-width="3.4"{dash}/>')
+        P.append(f'<text x="{x + tw / 2}" y="{y0 + th / 2 + 17}" font-size="52" font-weight="700" text-anchor="middle" fill="{NAVY if v is not None else "#8A94AD"}" font-family="{FONT}">{"?" if v is None else v}</text>')
+        if gaps and i < n - 1 and gaps[i] is not None:
+            xa, xb = x + tw / 2, x + tw + sp + tw / 2
+            P.append(f'<path d="M{xa + 18},{y0} Q{(xa + xb) / 2},{y0 - 62} {xb - 18},{y0 - 2}" fill="none" stroke="{TEAL}" stroke-width="4.2" stroke-linecap="round"/>')
+            P.append(f'<polygon points="{xb - 18},{y0 - 1} {xb - 34},{y0 - 6} {xb - 24},{y0 - 20}" fill="{TEAL}"/>')
+            P.append(f'<text x="{(xa + xb) / 2}" y="{y0 - 38}" font-size="34" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">{gaps[i]}</text>')
+    return f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number pattern" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
 
 
 def render_visual(v):
@@ -229,6 +315,16 @@ def render_visual(v):
         return number_line(**{k: (([tuple(j) for j in x]) if k == 'jumps' else x) for k, x in v.items() if k in ('start', 'end', 'step', 'label_every', 'marks', 'hide', 'jumps', 'highlight', 'width', 'big')})
     if t == 'hundred_square':
         return hundred_square(v.get('blank', False))
+    if t == 'hundred':
+        kw = {k: v[k] for k in ('shade', 'shade2', 'hide', 'mark', 'outline', 'arrows', 'rows', 'cols', 'per', 'cell', 'qmarks', 'tags') if k in v}
+        if 'tags' in kw: kw['tags'] = {int(a): b for a, b in kw['tags'].items()}
+        if 'arrows' in kw: kw['arrows'] = [tuple(a) for a in kw['arrows']]
+        if 'rows' in kw: kw['rows'] = tuple(kw['rows'])
+        if 'cols' in kw: kw['cols'] = tuple(kw['cols'])
+        out = hundred(**kw)
+        return out.replace('class="h100"', 'class="h100 wide"') if v.get('wide') else out
+    if t == 'seq':
+        return seq(v['items'], v.get('gaps'), v.get('hl', ()))
     if t == 'ten_to_bundle':
         return ten_to_bundle()
     raise ValueError('unknown visual ' + t)

@@ -53,6 +53,14 @@ def listing(items, ordered, size=42):
 
 
 def visual(b, ctx_cols=1):
+    if b['type'] in ('hundred', 'seq'):
+        if b['type'] == 'seq':
+            w = b.get('w', 1500 if ctx_cols == 1 else 760)
+        else:
+            nc = b.get('cols', [1, 10])[1] - b.get('cols', [1, 10])[0] + 1
+            w = b.get('w', (b.get('cellpx', 70) if ctx_cols == 1 else b.get('cellpx', 50)) * nc + 20)
+        cap = f'<p style="font-size:38px;font-weight:700;color:{NAVY};text-align:center">{E(b["label"])}</p>' if b.get('label') else ''
+        return f'<div style="{CARD}padding:18px 30px;display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:{w}px;max-width:100%">{svg.render_visual(b)}</div>{cap}</div>'
     v = {k: b[k] for k in b if k not in ('t',)}
     small = b.get('size') == 's' or ctx_cols > 1
     w = 560 if small else (900 if b['type'] in ('bundles', 'scatter') else 1000)
@@ -111,7 +119,7 @@ def qs_block(d, ids, short):
             if short: continue
             parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E(p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
-        if q.get('visual'):
+        if q.get('visual') and q['visual'].get('type') != 'hundred':   # a 100 square does not fit in a question row
             vis = f'<div style="width:340px;flex:none">{svg.render_visual(q["visual"])}</div>'
         rows.append(f'<div style="{CARD}padding:16px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
                     f'<div style="flex:1;display:flex;flex-direction:column;gap:4px"><p style="font-size:36px;font-weight:700;line-height:1.25">{E(text)}</p>{parts}</div>{vis}</div>')
@@ -166,7 +174,8 @@ def render_blocks(d, blocks, cols=1):
         elif t == 'lookback': out.append(lookback(d))
         elif t == 'cols':
             n = len(b['cols'])
-            inner = ''.join(f'<div style="flex:1;display:flex;flex-direction:column;gap:16px;align-items:stretch;min-width:0">{render_blocks(d, c, n)}</div>' for c in b['cols'])
+            ws = b.get('weights') or [1] * n
+            inner = ''.join(f'<div style="flex:{w};display:flex;flex-direction:column;gap:16px;align-items:stretch;min-width:0">{render_blocks(d, c, n)}</div>' for c, w in zip(b['cols'], ws))
             out.append(f'<div style="display:flex;gap:32px;align-items:flex-start">{inner}</div>')
     return ''.join(out)
 

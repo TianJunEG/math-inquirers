@@ -4,7 +4,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import validate
 from common import *  # noqa
-import b_deck, b_guide, b_print, b_practice
+import b_deck, b_guide, b_print, b_practice, audit
 from playwright.sync_api import sync_playwright
 
 def main():
@@ -28,6 +28,12 @@ def main():
     if validate.FAILS: sys.exit(1)
     for p in probs: print('LAYOUT', p)
     print('built', os.path.join(OUT, f'l{d["_num"]}'))
+    if audit.missing(d['_num']):
+        audit.write_draft(d, validate.PASSES, validate.WARNS, validate.FAILS)
+        print(f'AUDIT term/l1/AUDIT_L{d["_num"]}.md did not exist: a draft was generated.')
+    if audit.is_draft(d['_num']):
+        print(f'FAIL  term/l1/AUDIT_L{d["_num"]}.md still has TODO(author) lines: fill every judgement line, then rebuild (outputs are built, the lesson is not finished).')
+        sys.exit(1)
     sys.exit(1 if probs else 0)
 
 if __name__ == '__main__':
