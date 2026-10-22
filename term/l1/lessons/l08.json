@@ -17,7 +17,7 @@
    "Adding within 100",
    "A missing number in a number sentence (blanks only, no letters)"
   ],
-  "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. The equals sign as balance is Primary 1. Compensation (giving and taking between two addends, as in 49 + 26 = 50 + 25) is beyond Primary 1 and sits at Think harder only. Letters for unknowns are Primary 6, so the lesson uses blanks only. The owner or a tutor should confirm that compensation placement."
+  "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Term 1 goes beyond the school Primary 1 syllabus on purpose: this lesson uses two-digit sums, tens and give-and-take, which the class explores with plates, tens bars and a worked partner step before anyone writes. The equals sign as balance is Primary 1. Compensation (giving and taking between two addends, as in 49 + 26 = 50 + 25) is beyond Primary 1 and sits at Think harder only. Letters for unknowns are Primary 6, so the lesson uses blanks only. The owner or a tutor should confirm that compensation placement."
  },
  "contest_moves": [
   "balance both sides of the equals sign",
@@ -656,7 +656,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: fill in the blank so that both sides are the same. Question 2: Mei puts 6 buttons and 2 buttons on the left plate. Draw the right plate. Question 3: Siti wrote 9. Is she right?"
+      "text": "Page 1, Start here. Question 1: fill in the blank so that both sides are the same. Question 2: Mei puts 6 buttons and 2 buttons on the left plate. Draw the right plate. Question 3: Siti writes 6 plus 3 equals 5 plus 9. Is it balanced? Then fill in the missing number."
      },
      {
       "k": "WORK",
@@ -669,7 +669,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: four, five, three, two. Question 2: one more button. Question 3: no, the blank is four."
+      "text": "Question 1: four, five, three, two. Question 2: one more button. Question 3: no, it is not balanced. The missing number is four."
      },
      {
       "k": "SAY",
@@ -711,7 +711,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q2 (drawing): draw each pile as dots and make the right plate match the left. Q3: build both sides on the plates. Q5 and Q7: ask did the first number go up or down, and by how much? Q6: how many pens does Mei have all together?"
+      "text": "Q2 (drawing): draw each pile as dots and make the right plate match the left. Q3: build 6 and 3 on one plate, then 5 and some more on the other. Q5 and Q7: ask did the first number go up or down, and by how much? Q6: how many pens does Mei have all together?"
      },
      {
       "k": "STUCK",
@@ -1462,7 +1462,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: Mei has 9 + 6 = 15 pens, and Ben has 10, so he has 5 blue pens. Question 7: 45, because 35 + 12 = 47 and 45 + 2 = 47. Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: Mei has 9 + 6 = 15 pens, and Ben has 10, so he has 5 blue pens. Question 7: 45, because 35 + 12 = 47 and 45 + 2 = 47. A child may find 47 first, or move a tens bar from the 12 to the 35. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-choice",
@@ -1763,25 +1763,19 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Siti says 6 + 3 = 5 + 9. Check the right side.",
+    "text": "Siti writes 6 + 3 = 5 + 9.",
     "parts": [
      {
       "l": "a",
-      "text": "Is Siti right? Circle Yes or No.",
+      "text": "Is it balanced? Circle Yes or No.",
       "ans": "No",
       "val": "no"
      },
      {
       "l": "b",
-      "text": "The missing number is [].",
+      "text": "Fill in the missing number: 6 + 3 = 5 + []",
       "ans": "4",
       "val": 4
-     },
-     {
-      "l": "c",
-      "text": "I know because ___.",
-      "ans": "",
-      "val": "open"
      }
     ],
     "answer": "No. The blank should be 4 (6 + 3 = 9 and 5 + 4 = 9). Siti wrote the total of the left side, as if = meant the answer comes next.",
@@ -1791,33 +1785,33 @@
     "hint": "Build 6 and 3 on your left plate. Then build 5 on the right plate. How many more make the plates match?",
     "solution": "6 + 3 is 9. The right side must also be 9. 5 and 4 more make 9, so the blank is 4. Siti wrote 9, the total of the left side, but the blank is only one of the two numbers on the right.",
     "mistakes": [
-     "Saying she is right because 9 is the answer to 6 + 3.",
-     "Not saying what she mixed up (any clear sentence about the equals sign or the right side is fine)."
+     "Saying yes because 9 is the answer to 6 + 3.",
+     "Writing 9 in the box again (copying Siti)."
     ],
-    "mins": 2.5,
+    "mins": 2,
     "lines": 0
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "7 + 5 = 12. Give 1 across from the 7 to the 5. Fill in the missing numbers.",
+    "text": "7 + 5 = 12. Fill in the missing numbers.",
     "parts": [
      {
       "l": "a",
-      "text": "Give 1: 6 + [] = 12",
+      "text": "6 + [] = 12",
       "ans": "6",
       "val": 6
      },
      {
       "l": "b",
-      "text": "Give 1 more: 5 + [] = 12",
+      "text": "5 + [] = 12",
       "ans": "7",
       "val": 7
      },
      {
       "l": "c",
-      "text": "Give 1 more: 4 + [] = 12",
+      "text": "4 + [] = 12",
       "ans": "8",
       "val": 8
      }
@@ -1918,7 +1912,7 @@
     "parts": [
      {
       "l": "",
-      "text": "35 + 12 = ___ + 2",
+      "text": "35 + 12 = [] + 2",
       "ans": "45",
       "val": 45
      }
@@ -1927,14 +1921,14 @@
     "val": [
      45
     ],
-    "hint": "A ten moved from the 12 to the 35. What is 35 and one more ten? You can use a tens bar from the kit.",
+    "hint": "Add 35 + 12 first. Then think: what number and 2 make that total? Or move a tens bar from the 12 to the 35.",
     "solution": "The 12 went down by 10 to become 2, so the 35 goes up by 10 to become 45. Check: 35 + 12 = 47 and 45 + 2 = 47.",
     "mistakes": [
      "Writing 47 (the total).",
      "Writing 25 (taking a ten from the 35)."
     ],
     "mins": 2.5,
-    "lines": 1
+    "lines": 0
    }
   ],
   "think": [
@@ -2019,13 +2013,13 @@
     "parts": [
      {
       "l": "a",
-      "text": "49 + 26 = 50 + ___",
+      "text": "49 + 26 = 50 + []",
       "ans": "25",
       "val": 25
      },
      {
       "l": "b",
-      "text": "The total is ___.",
+      "text": "The total is [].",
       "ans": "75",
       "val": 75
      }
@@ -2058,7 +2052,7 @@
      },
      {
       "l": "b",
-      "text": "Change the 19 to ___.",
+      "text": "Change the 19 to [].",
       "ans": "15",
       "val": 15
      }
@@ -2087,7 +2081,7 @@
     "parts": [
      {
       "l": "",
-      "text": "19 + 28 = 20 + ___ = ___ + 30",
+      "text": "19 + 28 = 20 + [] = [] + 30",
       "ans": "27 and 17",
       "val": [
        27,
@@ -2101,7 +2095,7 @@
      17
     ],
     "hint": "Find the first blank by giving and taking: 19 went up by 1. Then 20 + 27 = 47 is the total. What goes with 30?",
-    "solution": "19 up 1 to 20, so 28 down 1 to 27. The total is 20 + 27 = 47 (check: 19 + 28 = 47). Then ___ + 30 = 47, so the second blank is 47 - 30 = 17.",
+    "solution": "19 up 1 to 20, so 28 down 1 to 27. The total is 20 + 27 = 47 (check: 19 + 28 = 47). Then [] + 30 = 47, so the second blank is 47 - 30 = 17.",
     "mistakes": [
      "Writing 27 in both blanks.",
      "Writing 30 or 28 as the second blank."
@@ -2117,7 +2111,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "___ + 5 = 9 + ___",
+      "text": "[] + 5 = 9 + []",
       "ans": "e.g. 5 and 1",
       "val": [
        5,
@@ -2126,6 +2120,24 @@
      },
      {
       "l": "b",
+      "text": "[] + 5 = 9 + []",
+      "ans": "e.g. 6 and 2",
+      "val": [
+       6,
+       2
+      ]
+     },
+     {
+      "l": "c",
+      "text": "[] + 5 = 9 + []",
+      "ans": "e.g. 7 and 3",
+      "val": [
+       7,
+       3
+      ]
+     },
+     {
+      "l": "d",
       "text": "I notice ___.",
       "ans": "",
       "val": "open"
@@ -2148,34 +2160,42 @@
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Mei has 28 stickers on a page and 17 in her pocket. Ali and Ben have the same total as Mei. Fill in the blanks.",
+    "text": "Mei has 28 stickers on a page and 17 in her pocket. Ali, Ben and Kumar have the same total as Mei. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Ali has 30 stickers on his page. His pocket has ___ stickers.",
+      "text": "Ali has 30 stickers on his page. His pocket has [] stickers.",
       "ans": "15",
       "val": 15
      },
      {
       "l": "b",
-      "text": "Ben has 25 stickers on his page. His pocket has ___ stickers.",
+      "text": "Ben has 25 stickers on his page. His pocket has [] stickers.",
       "ans": "20",
       "val": 20
+     },
+     {
+      "l": "c",
+      "text": "Kumar has 12 stickers in his pocket. His page has [] stickers.",
+      "ans": "33",
+      "val": 33
      }
     ],
-    "answer": "15 and 20 (Mei has 45 stickers; 30 + 15 = 45 and 25 + 20 = 45)",
+    "answer": "15, 20 and 33 (Mei has 45 stickers; 30 + 15 = 45, 25 + 20 = 45 and 33 + 12 = 45)",
     "val": [
      15,
-     20
+     20,
+     33
     ],
-    "hint": "Ali's page has 2 more than Mei's page. So his pocket has 2 fewer. Ben's page has 3 fewer than Mei's page.",
-    "solution": "Mei has 28 + 17 = 45. Ali: 30 is 2 more than 28, so his pocket has 2 fewer than 17: 15. Ben: 25 is 3 fewer than 28, so his pocket has 3 more than 17: 20. Check: 30 + 15 = 45 and 25 + 20 = 45.",
+    "hint": "Ali's page has 2 more than Mei's page. So his pocket has 2 fewer. Ben's page has 3 fewer than Mei's page. For Kumar, his pocket has 5 fewer than Mei's, so his page has 5 more.",
+    "solution": "Mei has 28 + 17 = 45. Ali: 30 is 2 more than 28, so his pocket has 2 fewer than 17: 15. Ben: 25 is 3 fewer than 28, so his pocket has 3 more than 17: 20. Kumar: his pocket 12 is 5 fewer than 17, so his page has 5 more than 28: 33. Check: 30 + 15 = 45, 25 + 20 = 45 and 33 + 12 = 45.",
     "mistakes": [
      "Writing 17 for Ali's pocket.",
-     "Making Ben's pocket 14 (moving the wrong way)."
+     "Making Ben's pocket 14 (moving the wrong way).",
+     "Writing 17 or 45 for Kumar's page."
     ],
-    "mins": 6,
-    "lines": 3
+    "mins": 7,
+    "lines": 2
    }
   ],
   "investigation": {
@@ -2183,11 +2203,12 @@
    "page": 5,
    "tier": "investigation",
    "title": "Keep it the same",
-   "first": "Add: 6 + 4, then 7 + 3, then 7 + 5. Which total is not 10? Write what you did to the numbers.",
+   "first": "Add 6 + 4, then 7 + 3, then 7 + 5. Which total is not 10? Then look at 6 + 4 and 7 + 3: the 6 goes up 1. What does the 4 do?",
    "text": "Pick two numbers. Add 3 to one and take 3 from the other. Then add 3 to both. Then take 2 from both. Which keep the total the same? By how much do the others change it?",
    "lines": 4,
-   "answer": "Add some to one number and take the same from the other: the total stays the same (give and take). Add 3 to both: the total goes up by 6. Take 2 from both: the total goes down by 4. When both numbers change the same way, the total changes by double.",
+   "answer": "First step: 7 + 5 is not 10 (the totals are 10, 10 and 12). From 6 + 4 to 7 + 3 the 4 goes down 1. Next: add some to one number and take the same from the other and the total stays the same (give and take). Add 3 to both: the total goes up by 6. Take 2 from both: the total goes down by 4. When both numbers change the same way, the total changes by double.",
    "val": [
+    "first step: 7 + 5 is not 10; the 4 goes down 1",
     "same when one up and one down by the same",
     "up 6 when both up 3",
     "down 4 when both down 2"
@@ -2297,7 +2318,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Fill in the missing number: 6 + 3 = 5 + ___",
+   "text": "Fill in the missing number: 6 + 3 = 5 + []",
    "answer": "4",
    "val": 4,
    "solution": "6 + 3 is 9, and 5 + 4 is 9. The 6 became 5 (1 less), so the 3 becomes 4 (1 more)."
@@ -2305,7 +2326,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Fill in the missing number: 10 + 4 = 9 + ___",
+   "text": "Fill in the missing number: 10 + 4 = 9 + []",
    "answer": "5",
    "val": 5,
    "solution": "10 went down by 1 to 9, so 4 goes up by 1 to 5. Both sides make 14."
@@ -2313,7 +2334,7 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "Fill in the missing number: 20 + 30 = 40 + ___",
+   "text": "Fill in the missing number: 20 + 30 = 40 + []",
    "answer": "10",
    "val": 10,
    "solution": "20 went up by 20 to 40, so 30 goes down by 20 to 10. Both sides make 50."
@@ -2856,7 +2877,7 @@
   ]
  },
  "parent": {
-  "summary": "We learned that the equals sign means 'the same amount as', like a balanced see-saw. Your child balanced two plates of small things and found missing numbers like 6 + 3 = 5 + ___. Give and take: when one number goes up, the other goes down by the same amount.",
+  "summary": "We learned that the equals sign means 'the same amount as', like a balanced see-saw. Your child balanced two plates of small things and found missing numbers like 6 + 3 = 5 + ___. Give and take: when one number goes up, the other goes down by the same amount. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some sums have tens; we explore them with objects first.",
   "words": [
    "equals (=): the two sides are the same amount",
    "balance: both sides hold the same",
@@ -2932,12 +2953,12 @@
   "home_hint": "Use two plates and small things, or draw both sides.",
   "header": "Addition and subtraction: balance",
   "hint_p1": "Use your plates or a drawing. Say it out loud, then write it.",
-  "hint_p3": "Use your plates, draw a picture, or look at how the numbers moved. Then write how you know. Choose any question, in any order.",
+  "hint_p3": "Use your plates or draw a picture. Then write how you know. Choose any question, in any order.",
   "kits": [
    {
     "type": "base_ten",
     "title": "Kit page: tens bars and ones squares",
-    "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. They help with the two-digit sums. Keep them in an envelope."
+    "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. They help with questions S5 and S7 (the tens). For the two plates, use real plates. Keep the pieces in an envelope."
    }
   ]
  }

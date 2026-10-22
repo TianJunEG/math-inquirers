@@ -94,6 +94,7 @@ def run(d):
     eq(T['S1']['val'], [4, 5, 3, 2], 'S1 values')
     eq(pile(6, 2), 8, 'S2 left plate'); eq(T['S2']['val'], [blank((6, 2), (7,))], 'S2'); eq(T['S2']['val'], [1], 'S2 value')
     eq(blank((6, 3), (5,)), 4, 'S3'); eq(T['S3']['val'], [4], 'S3 val'); eq(pile(6, 3) == pile(5, 9), False, 'S3: 9 is wrong')
+    eq([p['val'] for p in T['S3']['parts']], ['no', 4], 'S3 parts')
     eq(T['S4']['val'], [blank((12,), (6,)), blank((12,), (5,)), blank((12,), (4,))], 'S4')
     eq(T['S4']['val'], [6, 7, 8], 'S4 values'); eq(pile(7, 5), 12, 'S4 start')
     eq(T['S5']['val'], [blank((20, 30), (40,)), blank((50, 20), (60,)), blank((34, 5), (35,)), blank((61, 8), (60,))], 'S5')
@@ -122,8 +123,13 @@ def run(d):
     eq(all(x - y == 4 for (x, y) in ps), True, 'G2 the first blank is always 4 more')
     eq(len(ps) > 3, True, 'G2 at least three pairs'); eq((5, 1) in ps and (6, 2) in ps and (7, 3) in ps and (4, 0) in ps, True, 'G2 examples')
     eq(T['G2']['val'], [4], 'G2')
+    for part in T['G2']['parts'][:3]:
+        x, y = part['val']
+        eq(pile(x, 5), pile(9, y), 'G2 part pair balances')
+    eq(len({tuple(p['val']) for p in T['G2']['parts'][:3]}), 3, 'G2 three different pairs')
     eq(pile(28, 17), 45, 'G3 Mei')
-    eq(T['G3']['val'], [blank((28, 17), (30,)), blank((28, 17), (25,))], 'G3'); eq(T['G3']['val'], [15, 20], 'G3 values')
+    eq(T['G3']['val'], [blank((28, 17), (30,)), blank((28, 17), (25,)), first_blank(12, (28, 17))], 'G3'); eq(T['G3']['val'], [15, 20, 33], 'G3 values')
+    eq(pile(33, 12), 45, 'G3 Kumar'); eq([p['val'] for p in T['G3']['parts']], [15, 20, 33], 'G3 parts')
 
     # Investigation, over every pair of numbers from 0 to 20
     for a in range(0, 21):
@@ -135,6 +141,7 @@ def run(d):
             if a >= 2 and b >= 2:
                 eq(pile(a - 2, b - 2), base - 4, 'inv both down 2')
     eq(pile(6, 4), 10, 'inv first step'); eq((pile(7, 3), pile(7, 5)), (10, 12), 'inv first step 2')
+    eq(blank((6, 4), (7,)), 3, 'inv first step: the 4 goes down 1 to 3')
 
     # Talk
     eq((pile(6, 4), pile(7, 5), pile(7, 3)), (10, 12, 10), 'talk')
