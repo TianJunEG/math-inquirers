@@ -21,7 +21,7 @@ Instrument B: LOW 3.7: S1 to S3 are concrete and fine, but S4's three-row table,
 
 ## A. Maths (independent solutions; all agree with the key)
 
-S1 4 dots on each plate. S2 12 cookies, rings of 3, 4 bags. S3 15 / 3 = 5. S4 8/2 = 4, 12/4 = 3, 20/5 = 4. S5 5, 10, 15, 20: 4 pots. S6 4 x 3 = 12, Yes (3 x 4 is equally right, see finding 4). S7 Share, Group. T1 14 in 4s: 3 groups, 2 left over (picture shows 14 counters, 7 + 7). T2 Ben and 3 cousins = 4 people, so Aisha is wrong (No); 20 / 4 = 5 each. T3 (a) Group (b) 5 (c) Share (d) 5. T4 17 in 5s: 3 bags, 2 left, 3 more to fill a fourth bag. G1 12, 6, 4, 3, 2, 1; 5 friends: No, 2 left over. G2 5, 8, 32. G3 18, 6. Investigation: 8 gives 0, 9 gives 1, then 13 to 20 give 1, 2, 3, 0, 1, 2, 3, 0 (key correct). E1 5. E2 option (2). E3 6 piles, 6 x 3 = 18. Sneak-peek 3; Mei (4 in a bag against 3). All correct; pictures count correctly (S2 12 cookies, S3 15 sweets, T1 14 counters).
+S1 4 dots on each plate. S2 12 cookies, rings of 3, 4 bags. S3 15 / 3 = 5. S4 8/2 = 4, 12/4 = 3, 20/5 = 4. S5 5, 10, 15, 20: 4 pots. S6 4 x 3 = 12, Yes (3 x 4 is equally right, see finding 3). S7 Share, Group. T1 14 in 4s: 3 groups, 2 left over (picture shows 14 counters, 7 + 7). T2 Ben and 3 cousins = 4 people, so Aisha is wrong (No); 20 / 4 = 5 each. T3 (a) Group (b) 5 (c) Share (d) 5. T4 17 in 5s: 3 bags, 2 left, 3 more to fill a fourth bag. G1 12, 6, 4, 3, 2, 1; 5 friends: No, 2 left over. G2 5, 8, 32. G3 18, 6. Investigation: 8 gives 0, 9 gives 1, then 13 to 20 give 1, 2, 3, 0, 1, 2, 3, 0 (key correct). E1 5. E2 option (2). E3 6 piles, 6 x 3 = 18. Sneak-peek 3; Mei (4 in a bag against 3). All correct; pictures count correctly (S2 12 cookies, S3 15 sweets, T1 14 counters).
 
 ## B. Syllabus fit
 
