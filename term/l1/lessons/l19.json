@@ -36,21 +36,21 @@
   "remember": [
    "A box in a number sentence hides a number: 6 + box = 10 (Term 1, taught again with a ten-frame)",
    "The same number twice: box + box = 12 (taught again with two equal plates)",
-   "4 groups of 5 as 4 × 5 (Lesson 15, taught again with a picture)"
+   "4 groups of 5 as 4 × 5 (Term 2 Lesson 5, taught again with a picture)"
   ],
   "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up shows the ten-frame, two equal plates and four bags with a picture, and the × sign is said again as groups of. The word shape stands for a number is taught in Explore.",
   "holiday_topics_revisited": [
    "Number bonds to 10 (Number Bond Inquiry)"
   ],
   "safe_to_miss": true,
-  "note": "Fairly safe to miss: no later lesson needs picture equations. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here without Lessons 15 and 16 can follow, because the warm-up shows groups of and the times sign again, and the times lines are in Think harder and Go further only."
+  "note": "Fairly safe to miss, with one exception: the Term 2 Lesson 10 check has one picture-equation question (a heart + heart total and a friend's number to check). A child who misses this lesson watches the recording and does workbook pages 1 and 2 before the check. A child who joins here without Term 2 Lessons 5 and 6 can follow, because the warm-up shows groups of and the times sign again, and the times lines are in Think harder and Go further only."
  },
  "materials": {
   "child": [
    "The printed workbook with the ten-frames and counters kit page (page 6): a grown-up cuts out the 20 counters beforehand",
    "About 30 small things of one kind (counters, buttons, dry beans or pasta) in case more counters are needed",
    "2 small cups, mugs or bowls",
-   "4 small pieces of paper (shape cards): a grown-up draws a circle, a square, a triangle and a heart, one on each piece",
+   "4 small pieces of paper (shape cards): a grown-up draws a circle, a square, a triangle and a heart, one on each piece (the star in some questions needs no card)",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
@@ -88,24 +88,24 @@
     "id": "explore",
     "title": "Explore",
     "start": 12,
-    "end": 26
+    "end": 24
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 26,
-    "end": 38
+    "start": 24,
+    "end": 36
    },
    {
     "id": "break",
     "title": "Brain break",
-    "start": 38,
-    "end": 42
+    "start": 36,
+    "end": 40
    },
    {
     "id": "work",
     "title": "Workbook",
-    "start": 42,
+    "start": 40,
     "end": 70
    },
    {
@@ -135,7 +135,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 14 minutes: a shape and a pile of counters, the same shape twice, then two lines about the same shapes. The mini-lesson has 12 because it states the three rules, finds a shape, takes one line from another, checks in both lines and shows one times line. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: a shape and a pile of counters, the same shape twice, then two lines about the same shapes. The mini-lesson has 12 because it states the three rules, finds a shape, takes one line from another, checks in both lines and shows one times line. The workbook has 30 minutes because Start here takes a middle child about 18 minutes: pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
   "skip_order": [
    "Start with: cut the times line slide (s-m4) in the Mini-lesson to one question",
    "Then: shorten Explore round 3 to the circle only",
@@ -171,8 +171,8 @@
    "action": "Watch and copy the examples. Rewind any step you missed."
   },
   "break": {
-   "say": "Recording: stand up and join in! Clap the shape numbers and whisper the rest.",
-   "action": "Stand up. Clap for each hidden number and whisper the numbers in between."
+   "say": "Recording: stand up and join in! Count to 20, clap on 5, 10, 15 and 20, and whisper the rest.",
+   "action": "Stand up. Clap on 5, 10, 15 and 20 and whisper the numbers in between."
   },
   "work": {
    "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
@@ -210,7 +210,7 @@
      ]
     }
    ],
-   "note": "Lesson 9 of Term 2, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 26, mini-lesson 26 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "note": "Lesson 9 of Term 2, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
    "subtitle": "A shape hides a number",
    "mascot": {
     "size": "l",
@@ -355,7 +355,7 @@
      "text": "4 × 5 means 4 groups of 5."
     }
    ],
-   "note": "Four bags with five counters in each bag. We add one bag at a time: 5, 10, 15, 20. Ask: how many counters in 4 bags of 5 (20); 3 groups of 4 (12); 2 groups of 10 (20). This is Lesson 15 taught again: the × sign says groups of. A child who is unsure counts the counters one bag at a time, saying the total each time."
+   "note": "Four bags with five counters in each bag. We add one bag at a time: 5, 10, 15, 20. Ask: how many counters in 4 bags of 5 (20); 3 groups of 4 (12); 2 groups of 10 (20). This is Term 2 Lesson 5 taught again: the × sign says groups of. A child who is unsure counts the counters one bag at a time, saying the total each time."
   },
   {
    "id": "s-sneak",
@@ -523,7 +523,7 @@
         }
        ],
        "op": "+",
-       "total": "14"
+       "total": "6"
       },
       {
        "items": [
@@ -537,7 +537,7 @@
         }
        ],
        "op": "+",
-       "total": "10"
+       "total": "9"
       }
      ],
      "values": {
@@ -551,10 +551,11 @@
      "items": [
       "Line 1 tells you the circle.",
       "The circle is the same number in line 2."
-     ]
+     ],
+     "reveal": true
     }
    ],
-   "note": "Round 3, about 4 minutes. Two lines: circle + circle = 14 and circle + triangle = 10. Children use the first line to find the circle (7), then the same circle in the second line to find the triangle (3). They may use counters: 14 on two circle cards, then 10 on one circle card and one triangle card. Ask: what number is the circle (7), the triangle (3). Say: the circle is 7 in both lines. Answers: circle 7, triangle 3. A child who gets a different circle in line 2 is asked: is it the same shape?"
+   "note": "Round 3, about 4 minutes. Two lines: circle + circle = 6 and circle + triangle = 9. Children use the first line to find the circle (3), then the same circle in the second line to find the triangle (6). They may use counters: 6 on two circle cards, then 9 on one circle card and one triangle card. Ask: what number is the circle (3), the triangle (6). Say: the circle is 3 in both lines. The two lines on the slide are shown first; the two sentences about the circle appear after the children have tried (the next slide). Answers: circle 3, triangle 6. A child who gets a different circle in line 2 is asked: is it the same shape? The numbers are not the sneak-peek numbers: do not tell the sneak-peek answers here."
   },
   {
    "id": "s-m1",
@@ -568,11 +569,11 @@
      "items": [
       "Each shape is a number.",
       "The same shape is the same number every time.",
-      "Different shapes are different numbers."
+      "In our puzzles, different shapes are different numbers."
      ]
     }
    ],
-   "note": "Say the three rules once, slowly. Rule 3 is only for our puzzles, so that each puzzle has one answer. Ask: can a circle be 6 in one line and 4 in another line of the same puzzle (no, rule 2). Children answer with a thumb. Never use letters; the shapes are the unknown numbers."
+   "note": "Say the three rules once, slowly. Rule 3 is a rule of our puzzles only (in other maths two shapes can be the same number), so that each puzzle has one answer. Ask: can a circle be 6 in one line and 4 in another line of the same puzzle (no, rule 2). Children answer with a thumb. Never use letters; the shapes are the unknown numbers."
   },
   {
    "id": "s-m2",
@@ -610,10 +611,11 @@
       "Take the square away from the total.",
       "Share what is left between the 2 equal circles.",
       "Check: put the number back into the line."
-     ]
+     ],
+     "reveal": true
     }
    ],
-   "note": "Circle + circle + square = 16 and the square is 4. Take the square away: 16 - 4 = 12 for the two circles. The two circles are equal, so each is 6. Check by putting 6 back into the line: 6 + 6 + 4 = 16. Reveal one step at a time and let children say each number first. Ask: what is left for the two circles (12); what is one circle (6). Always end with the check."
+   "note": "Circle + circle + square = 16 and the square is 4. Take the square away: 16 - 4 = 12 for the two circles. The two circles are equal, so each is 6. Check by putting 6 back into the line: 6 + 6 + 4 = 16. The steps card appears after the questions (next slide); children say each number first. Ask: what is left for the two circles (12); what is one circle (6). Always end with the check."
   },
   {
    "id": "s-m3",
@@ -662,10 +664,11 @@
       "Line 1 has one more star than line 2.",
       "The totals show how much that extra star is.",
       "Then put the star into line 2 to find the triangle."
-     ]
+     ],
+     "reveal": true
     }
    ],
-   "note": "Two lines about the same shapes: star + star + triangle = 17 and star + triangle = 12. Line 1 has one more star than line 2, and 17 is 5 more than 12, so one star is 5. Then star + triangle = 12, so 5 + triangle = 12 and the triangle is 7. Ask: how much more is 17 than 12 (5); what is the triangle (7). This is the new idea of the lesson and goes beyond Primary 1: say it was found by taking one line from the other."
+   "note": "Two lines about the same shapes: star + star + triangle = 17 and star + triangle = 12. Line 1 has one more star than line 2, and 17 is 5 more than 12, so one star is 5. Then star + triangle = 12, so 5 + triangle = 12 and the triangle is 7. Ask: how much more is 17 than 12 (5); what is the triangle (7). The steps appear on the next slide, after the children have answered. This is the new idea of the lesson and goes beyond Primary 1: say it was found by taking one line from the other."
   },
   {
    "id": "s-m3b",
@@ -821,7 +824,7 @@
      ]
     }
    ],
-   "note": "Answers: star 5, heart 6. Read each answer aloud so a child watching the recording can mark their own work. Children mark their own in another colour. Never ask a child to show a wrong answer to the group."
+   "note": "Answers: star 5, heart 6. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-break",
@@ -831,7 +834,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "I say a shape number. Clap for it."
+     "text": "Count to 20 with me. Clap on 5, 10, 15 and 20."
     },
     {
      "t": "p",
@@ -842,7 +845,7 @@
      "text": "Stand up. Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera. Count from 1 to 20 together: children whisper every number and clap loudly on 5, 10, 15 and 20. Then count back from 20 in tens and twos if there is time. No equipment, no running, a little clear space. A child may stay seated. Do not give prizes or compare children."
+   "note": "Four minutes. Stand up on camera. Count from 1 to 20 together: children whisper every number and clap loudly on 5, 10, 15 and 20. Then count back from 20 in fives if there is time. No equipment, no running, a little clear space. A child may stay seated. Do not give prizes or compare children."
   },
   {
    "id": "s-ws1",
@@ -865,7 +868,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 4 aloud. Children work on their own with counters and shape cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: a cup hides counters; 11 in all and 3 are loose. Question 2: circle + square = 10 and the square is 4. Question 3: heart + heart = 14. Question 4: three stars make 15."
+   "note": "Read questions 1 to 4 aloud. Children work on their own with counters and shape cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: a cup hides counters; 11 in all and 3 are loose. Question 2: circle + square = 10 and the square is 4. Question 3: heart + heart = 16. Question 4: three stars make 15."
   },
   {
    "id": "s-ws1ans",
@@ -883,7 +886,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Answers: Q1 8; Q2 6; Q3 7; Q4 5."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 8; Q2 6; Q3 8; Q4 5."
   },
   {
    "id": "s-ws2",
@@ -922,7 +925,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 10 and 5; Q6 No, the circle is 6; Q7 10 and 5."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 10 and 5; Q6 No, the circle is 6; Q7 10 and 5."
   },
   {
    "id": "s-choice",
@@ -1071,7 +1074,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with their totals, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
   },
   {
    "id": "s-exitans",
@@ -1088,7 +1091,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children check their own ticket in a different colour. Answers: triangle 8; option 3, the heart is 7; each circle is 7."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: triangle 9; option 4, the heart is 8; each circle is 7."
   },
   {
    "id": "s-look",
@@ -1121,7 +1124,7 @@
      "head": "NEXT LESSON",
      "items": [
       "Find One First, and the end-of-term check",
-      "Have ready: the Lesson 20 workbook with its tokens page cut out, 3 to 6 small things, the check sheet in an envelope, a pencil and paper."
+      "Have ready: the Term 2 Lesson 10 workbook with its tokens page cut out, 3 to 6 small things, the check sheet in its envelope (keep it closed), a pencil and paper."
      ]
     }
    ],
@@ -1204,8 +1207,8 @@
        "What we do"
       ],
       [
-       "Is it always true?",
-       "Does the order of two shapes change the total?"
+       "Can a shape change?",
+       "Ali says the heart is 5 in one line and 6 in another."
       ],
       [
        "Make a puzzle",
@@ -1241,8 +1244,13 @@
       "text": "@rec"
      },
      {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "s": 12
+     },
+     {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see your page and hands; cameras off is fine too. Pencil ready, and your shape cards, counters and two cups on the table."
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your shape cards, counters and two cups on the table."
      },
      {
       "k": "SAY",
@@ -1253,13 +1261,8 @@
       "text": "Today a shape is a hidden number. The same shape is always the same number. We find it, then we check it."
      },
      {
-      "k": "DO",
-      "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
-      "s": 12
-     },
-     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1418,7 +1421,7 @@
      {
       "k": "WORK",
       "text": "Children count out 10 counters, put 4 on the square card and the rest on the circle card.",
-      "s": 130
+      "s": 100
      },
      {
       "k": "ASK",
@@ -1440,7 +1443,7 @@
      {
       "k": "WORK",
       "text": "Children count out 12 counters and deal them one at a time onto two heart cards until the piles match.",
-      "s": 150
+      "s": 100
      },
      {
       "k": "ASK",
@@ -1462,12 +1465,12 @@
      },
      {
       "k": "SAY",
-      "text": "Round three. Two lines. Circle plus circle equals fourteen. Circle plus triangle equals ten. Use line one to find the circle."
+      "text": "Round three. Two lines. Circle plus circle equals six. Circle plus triangle equals nine. Use line one to find the circle."
      },
      {
       "k": "WORK",
       "text": "Children find the circle from line one, then use the same circle in line two to find the triangle. Counters are fine.",
-      "s": 180
+      "s": 130
      },
      {
       "k": "ASK",
@@ -1481,7 +1484,7 @@
      },
      {
       "k": "SAY",
-      "text": "The circle was seven in both lines. That is our idea for today."
+      "text": "The circle was three in both lines. That is our idea for today."
      },
      {
       "k": "STUCK",
@@ -1489,7 +1492,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say their answers aloud and show fingers; you cannot see counters on small tiles. Answers: circle 6; heart 6 and 12 together; circle 7, triangle 3. Accept any child who finds the numbers by counters or by adding. Do not say equation for every line, say line."
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see counters on small tiles. Answers: circle 6; heart 6 and 12 together; circle 3, triangle 6. Accept any child who finds the numbers by counters or by adding. Do not say equation for every line, say line."
      }
     ]
    },
@@ -1506,7 +1509,7 @@
      },
      {
       "k": "SAY",
-      "text": "Three rules for picture equations. One: each shape is a number. Two: the same shape is the same number every time. Three: different shapes are different numbers."
+      "text": "Three rules for picture equations. One: each shape is a number. Two: the same shape is the same number every time. Three: in our puzzles, different shapes are different numbers."
      },
      {
       "k": "ASK",
@@ -1601,7 +1604,7 @@
      },
      {
       "k": "READ",
-      "text": "The star is five. The heart is six. Mark your own in another colour."
+      "text": "The star is five. The heart is six. Tick your own work with a tick."
      },
      {
       "k": "NOTE",
@@ -1648,12 +1651,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: a cup hides some counters. There are 11 counters in all. How many counters are in the cup? Question 2: each shape is a number. Find the number for the circle. The square is 4. Question 3: find the number for the heart. Question 4: find the number for the star."
+      "text": "Page 1, Start here. Question 1: a cup hides some counters. 3 counters are outside the cup. There are 11 counters in all. How many counters are in the cup? Question 2: each shape is a number. Circle plus square equals 10. The square is 4. Find the number for the circle. Question 3: heart plus heart equals 16. Find the number for the heart. Question 4: star plus star plus star equals 15. Find the number for the star."
      },
      {
       "k": "WORK",
       "text": "Page 1, questions 1 to 4. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 420
+      "s": 530
      },
      {
       "k": "SLIDE",
@@ -1661,7 +1664,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 8. Question 2: 6. Question 3: 7. Question 4: 5. Mark your own page in another colour."
+      "text": "Question 1: 8. Question 2: 6. Question 3: 8. Question 4: 5. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1673,12 +1676,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 5: two triangles and a square make 14. The square is 4. Fill in the blanks. Question 6: Ben says the circle is 7. Is Ben correct? Question 7: each bag has the same number of sweets. There are 13 sweets in all."
+      "text": "Page 2. Question 5: two triangles and a square make 14. The square is 4. Fill in the blanks. Question 6: circle plus circle equals 12. Ben says the circle is 7. Is Ben correct? Circle Yes or No, then fill in the circle. Question 7: each bag has the same number of sweets. 3 sweets are outside the bags. There are 13 sweets in all."
      },
      {
       "k": "WORK",
-      "text": "Page 2, questions 4 to 6.",
-      "s": 420
+      "text": "Page 2, questions 5 to 7.",
+      "s": 530
      },
      {
       "k": "SLIDE",
@@ -1704,7 +1707,7 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 290
+      "s": 150
      },
      {
       "k": "STUCK",
@@ -1716,7 +1719,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder uses two lines and a times line (beyond Primary 1 on purpose). Go further has three shapes and a sum and a product. Do not announce who is on which page. Slow class: the workbook part needs about 30 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+      "text": "Think harder uses two lines and a times line (beyond Primary 1 on purpose). Go further has three shapes and a sum and a product. Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -1786,8 +1789,8 @@
      },
      {
       "k": "READ",
-      "text": "E1. Each shape is a number. The triangle plus the triangle equals 16. Find the number for the triangle. E2. The heart plus the square equals 12. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket. E3. Each shape is a number. The star is 5. Find the number for each circle.",
-      "s": 40
+      "text": "E1. Each shape is a number. The triangle plus the triangle equals 18. Find the number for the triangle. E2. The heart plus the square equals 13. The square is 5. Find the number for the heart. Choose the correct answer. Option 1: 5. Option 2: 6. Option 3: 7. Option 4: 8. Write its number in the bracket. E3. Each shape is a number. Circle plus circle plus star equals 19. The star is 5. Find the number for each circle.",
+      "s": 55
      },
      {
       "k": "WORK",
@@ -1800,11 +1803,11 @@
      },
      {
       "k": "READ",
-      "text": "E1: 8. E2: option 3, the heart is 7. E3: each circle is 7."
+      "text": "E1: 9. E2: option 4, the heart is 8. E3: each circle is 7."
      },
      {
       "k": "SAY",
-      "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+      "text": "Tick your own ticket with a tick. Well done."
      },
      {
       "k": "NOTE",
@@ -1843,7 +1846,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Find One First, and it holds our end-of-term check. Please have your Lesson 20 workbook with its tokens page cut out, three to six small things for a shop, your check sheet in an envelope, a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Find One First, and it holds our end-of-term check. Please have your Term 2 Lesson 10 workbook with its tokens page cut out, three to six small things for a shop, your check sheet in its envelope (keep it closed), a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1913,7 +1916,7 @@
        "n": 1
       },
       {
-       "icon": "counter_red",
+       "icon": "counter_yellow",
        "n": 3
       }
      ],
@@ -1958,7 +1961,8 @@
      "values": {
       "square": "4",
       "circle": "[]"
-     }
+     },
+     "sym": 80
     }
    },
    {
@@ -1967,15 +1971,15 @@
     "tier": "start",
     "text": "Each shape is a number. Find the number for the heart.",
     "parts": [],
-    "answer": "7",
+    "answer": "8",
     "val": [
-     7
+     8
     ],
-    "hint": "Two hearts are the same number. Share 14 between the two hearts.",
-    "solution": "7 + 7 = 14, so each heart is 7.",
+    "hint": "Two hearts are the same number. Share 16 between the two hearts.",
+    "solution": "8 + 8 = 16, so each heart is 8.",
     "mistakes": [
-     "Writing 14 (the total).",
-     "Writing 28 (adding the total twice)."
+     "Writing 16 (the total).",
+     "Writing 32 (adding the total twice)."
     ],
     "mins": 2,
     "visual": {
@@ -1989,12 +1993,13 @@
         }
        ],
        "op": "+",
-       "total": "14"
+       "total": "16"
       }
      ],
      "values": {
       "heart": "[]"
-     }
+     },
+     "sym": 80
     }
    },
    {
@@ -2030,7 +2035,8 @@
      ],
      "values": {
       "star": "[]"
-     }
+     },
+     "sym": 80
     }
    },
    {
@@ -2081,7 +2087,8 @@
        "op": "+",
        "total": "14"
       }
-     ]
+     ],
+     "sym": 80
     }
    },
    {
@@ -2132,7 +2139,8 @@
        "op": "+",
        "total": "12"
       }
-     ]
+     ],
+     "sym": 80
     }
    },
    {
@@ -2236,26 +2244,27 @@
      "values": {
       "square": "[]",
       "heart": "[]"
-     }
+     },
+     "sym": 80
     },
-    "lines": 1
+    "lines": 2
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Kumar says the heart is 8 and the star is 4. Look at the picture. Decide if each statement is True or False.",
+    "text": "Kumar says the heart is 8 and the star is 7. Look at the picture. Decide if each statement is True or False.",
     "parts": [],
     "answer": "True; False",
     "val": [
      "T",
      "F"
     ],
-    "hint": "Put 8 and 4 into each line and add.",
-    "solution": "Line 1: 8 + 4 = 12, which matches. Line 2: 8 + 8 + 4 = 20, but the line says 17. Kumar's numbers work in line 1 only.",
+    "hint": "Put 8 and 7 into each line and add.",
+    "solution": "Line 1: 8 + 7 = 15, which matches. Line 2: 8 + 8 + 7 = 23, but the line says 21. Kumar's numbers work in line 1 only.",
     "mistakes": [
      "Checking only line 1.",
-     "Saying line 2 is true because 20 is close to 17."
+     "Saying line 2 is true because 23 is close to 21."
     ],
     "mins": 3,
     "visual": {
@@ -2273,7 +2282,7 @@
         }
        ],
        "op": "+",
-       "total": "12"
+       "total": "15"
       },
       {
        "items": [
@@ -2287,9 +2296,10 @@
         }
        ],
        "op": "+",
-       "total": "17"
+       "total": "21"
       }
-     ]
+     ],
+     "sym": 80
     },
     "tf": [
      {
@@ -2306,16 +2316,16 @@
     "tier": "think",
     "text": "Each shape is a number. Find the number for each shape.",
     "parts": [],
-    "answer": "heart 4; circle 3",
+    "answer": "heart 3; circle 5",
     "val": [
-     4,
-     3
+     3,
+     5
     ],
     "hint": "Line 1 gives the heart. Then use the heart in line 2.",
-    "solution": "The 2 hearts make 8, so the heart is 4. Then 4 × circle = 12 means 4 groups of 3 make 12, so the circle is 3. Check: 4 × 3 = 12.",
+    "solution": "The 2 hearts make 6, so the heart is 3. Then 3 × circle = 15 means 3 groups of 5 make 15, so the circle is 5. Check: 3 × 5 = 15.",
     "mistakes": [
-     "Writing 8 for the heart.",
-     "Writing 12 for the circle."
+     "Writing 6 for the heart.",
+     "Writing 15 for the circle."
     ],
     "mins": 4,
     "visual": {
@@ -2329,7 +2339,7 @@
         }
        ],
        "op": "+",
-       "total": "8"
+       "total": "6"
       },
       {
        "items": [
@@ -2343,13 +2353,14 @@
         }
        ],
        "op": "×",
-       "total": "12"
+       "total": "15"
       }
      ],
      "values": {
       "heart": "[]",
       "circle": "[]"
-     }
+     },
+     "sym": 80
     }
    }
   ],
@@ -2433,7 +2444,8 @@
        "op": "-",
        "total": "4"
       }
-     ]
+     ],
+     "sym": 80
     }
    },
    {
@@ -2505,7 +2517,8 @@
        "op": "+",
        "total": "20"
       }
-     ]
+     ],
+     "sym": 80
     }
    },
    {
@@ -2517,26 +2530,26 @@
      {
       "l": "a",
       "text": "The heart is [].",
-      "ans": "4",
-      "val": 4
+      "ans": "5",
+      "val": 5
      },
      {
       "l": "b",
       "text": "The triangle is [].",
-      "ans": "3",
-      "val": 3
+      "ans": "4",
+      "val": 4
      }
     ],
-    "answer": "heart 4; triangle 3",
+    "answer": "heart 5; triangle 4",
     "val": [
-     4,
-     3
+     5,
+     4
     ],
-    "hint": "Which two numbers add to 7? Try pairs and multiply each pair.",
-    "solution": "The pairs that add to 7 are 1 and 6, 2 and 5, 3 and 4. Only 3 and 4 multiply to 12. The heart is greater, so the heart is 4 and the triangle is 3.",
+    "hint": "Which two numbers add to 9? Try pairs and multiply each pair.",
+    "solution": "The pairs that add to 9 are 1 and 8, 2 and 7, 3 and 6, 4 and 5. Only 4 and 5 multiply to 20. The heart is greater, so the heart is 5 and the triangle is 4.",
     "mistakes": [
-     "Writing 3 for the heart.",
-     "Using 2 and 6 (they multiply to 12 but add to 8)."
+     "Writing 4 for the heart.",
+     "Using 3 and 6 (they add to 9 but multiply to 18)."
     ],
     "mins": 5,
     "visual": {
@@ -2554,7 +2567,7 @@
         }
        ],
        "op": "+",
-       "total": "7"
+       "total": "9"
       },
       {
        "items": [
@@ -2568,9 +2581,10 @@
         }
        ],
        "op": "×",
-       "total": "12"
+       "total": "20"
       }
-     ]
+     ],
+     "sym": 80
     }
    }
   ],
@@ -2580,17 +2594,16 @@
    "tier": "investigation",
    "title": "One line or two?",
    "first": "The circle + the triangle = 10. One pair: circle 2, triangle 8. Write 2 more.",
-   "text": "Also: the circle + the circle + the triangle = 14. Which pairs fit both lines? Why?",
-   "lines": 4,
-   "answer": "Only circle 4 and triangle 6 fit both lines. One line has many pairs that fit (1 and 9, 2 and 8, 3 and 7, 4 and 6 and more). The second line is the same as the first with one more circle, and 14 is 4 more than 10, so the circle is 4.",
+   "text": "The circle + the circle + the triangle = 14. Do any pairs fit both lines? Why?",
+   "answer": "Only circle 4 and triangle 6 fit both lines. One line alone has many pairs that fit (1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5 and more; accept 5 and 5 for line 1). 5 and 5 fails line 2 (5 + 5 + 5 = 15, not 14). The second line is the same as the first with one more circle, and 14 is 4 more than 10, so the circle is 4.",
    "val": [
     "4",
     "6"
    ],
    "look_for": "A child who tries pairs for both lines, finds that only one pair works, or says one line is not enough to find two numbers. Credit any clear reason. Do not mark a child down for stopping at one pair.",
    "mistakes": [
-    "Choosing a pair that fits line 1 only.",
-    "Writing 5 and 5 (the shapes must be different numbers)."
+    "Choosing a pair that fits line 1 only, such as 5 and 5 (it makes 15 in line 2).",
+    "Stopping after line 1."
    ],
    "mins": 8
   }
@@ -2598,37 +2611,37 @@
  "exit": [
   {
    "id": "E1",
-   "text": "Each shape is a number. The triangle + the triangle = 16. Find the number for the triangle.",
+   "text": "Each shape is a number. The triangle + the triangle = 18. Find the number for the triangle.",
    "parts": [
     {
      "l": "",
      "text": "The triangle is [].",
-     "ans": "8",
-     "val": 8
+     "ans": "9",
+     "val": 9
     }
    ],
-   "answer": "8",
+   "answer": "9",
    "val": [
-    8
+    9
    ],
-   "solution": "8 + 8 = 16, so each triangle is 8.",
+   "solution": "9 + 9 = 18, so each triangle is 9.",
    "mistakes": [
-    "Writing 16 (the total).",
-    "Writing 4."
+    "Writing 18 (the total).",
+    "Writing 2 (counting the triangles)."
    ]
   },
   {
    "id": "E2",
-   "text": "The heart + the square = 12. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket.",
+   "text": "The heart + the square = 13. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket.",
    "parts": [],
-   "answer": "(3) 7",
+   "answer": "(4) 8",
    "val": [
-    3
+    4
    ],
-   "solution": "12 - 5 = 7, so the heart is 7. Check: 7 + 5 = 12.",
+   "solution": "13 - 5 = 8, so the heart is 8. Check: 8 + 5 = 13.",
    "mistakes": [
     "Choosing (1) 5, the number of the square.",
-    "Choosing (2) 6 or (4) 8 after a counting slip."
+    "Choosing (2) 6 or (3) 7 after a counting slip."
    ],
    "mcq": {
     "options": [
@@ -2711,10 +2724,10 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Each shape is a number. The star + the star = 16. Find the number for the star. ___",
-   "answer": "8",
-   "val": 8,
-   "solution": "8 + 8 = 16, so the star is 8."
+   "text": "Each shape is a number. The star + the star = 8. Find the number for the star. ___",
+   "answer": "4",
+   "val": 4,
+   "solution": "4 + 4 = 8, so the star is 4."
   },
   {
    "id": "H2",
@@ -2727,26 +2740,26 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "The heart is 6. What is the heart + the heart + the heart? ___",
-   "answer": "18",
-   "val": 18,
-   "solution": "6 + 6 + 6 = 18."
+   "text": "The heart is 4. What is the heart + the heart + the heart? ___",
+   "answer": "12",
+   "val": 12,
+   "solution": "4 + 4 + 4 = 12."
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "The circle + the circle + the triangle = 17. The circle + the triangle = 11. Find the number for the triangle. ___",
-   "answer": "5",
-   "val": 5,
-   "solution": "Line 1 has one more circle than line 2, and 17 - 11 = 6, so the circle is 6. Then 6 + triangle = 11, so the triangle is 5."
+   "text": "Line 1: the circle + the circle + the triangle = 15. Line 2: the circle + the triangle = 9. Find the number for the triangle. ___",
+   "answer": "3",
+   "val": 3,
+   "solution": "Line 1 has one more circle than line 2, and 15 - 9 = 6, so the circle is 6. Then 6 + triangle = 9, so the triangle is 3."
   },
   {
    "id": "H5",
    "tier": "go",
-   "text": "The circle × the circle = 16. The heart + the circle = 9. Find the number for the heart. ___",
+   "text": "Line 1: the circle × the circle = 16. Line 2: the heart + the circle = 9. (× means groups of.) Find the number for the heart. ___",
    "answer": "5",
    "val": 5,
-   "solution": "4 × 4 = 16, so the circle is 4. Then heart + 4 = 9, so the heart is 5."
+   "solution": "Line 1: 4 × 4 = 16 (4 groups of 4), so the circle is 4. Line 2: heart + 4 = 9, so the heart is 5."
   }
  ],
  "online_practice": {
@@ -3018,7 +3031,7 @@
       "a": [
        "yes"
       ],
-      "say": "Put 6 into both squares and add. Do you get 14?"
+      "say": "Put Ben's number into both squares and add. Is it the total on the line?"
      }
     ],
     "fig": {
@@ -3032,7 +3045,7 @@
         }
        ],
        "op": "+",
-       "total": "14"
+       "total": "{t}"
       }
      ]
     },
@@ -3053,24 +3066,33 @@
     },
     "tpl": {
      "vars": {
-      "n": [
+      "a": [
+       4,
        5,
        6,
        7,
-       8,
-       9
+       8
+      ],
+      "k": [
+       0,
+       1
       ]
+     },
+     "derive": {
+      "n": "a+k",
+      "t": "a+a",
+      "m": "n+n"
      },
      "q": "Ben says the square is {n}. Is Ben correct?",
      "options": [
       "yes",
       "no"
      ],
-     "answer_index": "((n-7)*(n-7))%3",
+     "answer_index": "k",
      "hint": "Put Ben's number into the line and add.",
      "steps": [
-      "{n} + {n} is the total of the 2 squares.",
-      "The line says 14.",
+      "{n} + {n} = {m}.",
+      "The line says {t}.",
       "The answer is {ans}."
      ]
     }
@@ -3082,8 +3104,8 @@
     "q": "Each shape is a number. The square is 3. Fill in the boxes.",
     "hint": "Take the square away first.",
     "steps": [
-     "Take the square away from the total.",
-     "Share what is left between the 2 circles."
+     "17 - 3 = 14, so the 2 circles make 14.",
+     "7 + 7 = 14, so each circle is 7."
     ],
     "slips": [],
     "frame": "The 2 circles make {s}. Each circle is {b}.",
@@ -3259,8 +3281,8 @@
     "easier": "c5",
     "hint": "Line 1 has one more circle than line 2.",
     "steps": [
-     "The difference between the lines is one circle.",
-     "Then use the circle in line 2."
+     "17 - 12 = 5, so the circle is 5.",
+     "5 + triangle = 12, so the triangle is 7."
     ],
     "slips": [],
     "frame": "The circle is {a}. The triangle is {b}.",
@@ -3477,8 +3499,8 @@
     "answer": "yes",
     "hint": "Put the numbers into line 1, then into line 2.",
     "steps": [
-     "Line 1: 5 + 6 = 11.",
-     "Line 2: 5 + 5 + 6 = 16.",
+     "Line 1: 5 + 6 = 11. The line says 11. It matches.",
+     "Line 2: 5 + 5 + 6 = 16. The line says 16. It matches.",
      "Both lines work."
     ],
     "slips": [
@@ -3504,7 +3526,7 @@
         }
        ],
        "op": "+",
-       "total": "11"
+       "total": "{s1}"
       },
       {
        "items": [
@@ -3518,7 +3540,7 @@
         }
        ],
        "op": "+",
-       "total": "16"
+       "total": "{s2}"
       }
      ]
     },
@@ -3557,27 +3579,38 @@
     },
     "tpl": {
      "vars": {
-      "p": [
+      "a": [
+       3,
        4,
-       5,
-       6
+       5
       ],
-      "q": [
-       5,
-       6,
-       7
+      "b": [
+       8,
+       9,
+       10
+      ],
+      "k": [
+       0,
+       1
       ]
+     },
+     "derive": {
+      "s1": "a+b",
+      "s2": "a+a+b",
+      "p": "a+k",
+      "q": "b-k",
+      "u": "p+p+q"
      },
      "q": "Kumar says the circle is {p} and the triangle is {q}. Do both lines work?",
      "options": [
       "yes",
       "no"
      ],
-     "answer_index": "(((p-5)*(p-5)+(q-6)*(q-6))*((p-5)*(p-5)+(q-6)*(q-6)))%3",
+     "answer_index": "k",
      "hint": "Put the numbers into line 1, then into line 2.",
      "steps": [
-      "Add {p} and {q} for line 1.",
-      "Add {p}, {p} and {q} for line 2.",
+      "Line 1: {p} + {q} = {s1}. The line says {s1}. It matches.",
+      "Line 2: {p} + {p} + {q} = {u}. The line says {s2}.",
       "The answer is {ans}."
      ]
     }
@@ -3590,9 +3623,9 @@
     "easier": "t1",
     "hint": "Start with the line that has only one kind of shape.",
     "steps": [
-     "Circle × circle means groups of the same number.",
-     "Then the heart.",
-     "Then the star."
+     "Circle × circle = 25, so the circle is 5.",
+     "Heart + 5 = 12, so the heart is 7.",
+     "Star - 7 = 4, so the star is 11."
     ],
     "slips": [],
     "frame": "The circle is {a}. The heart is {b}. The star is {c}.",
@@ -3856,7 +3889,7 @@
     "q": "Make your own picture equation. Choose a number for the circle and a different number for the triangle. Write two lines for a grown-up to solve. Many answers are right.",
     "hint": "Start with the numbers, then write the totals.",
     "steps": [
-     "Choose the circle and the triangle.",
+     "Choose the circle and a different number for the triangle.",
      "Write circle + triangle = a total.",
      "Write circle + circle + triangle = another total.",
      "Ask a grown-up to find your numbers."
@@ -3876,11 +3909,11 @@
   "menu": [
    {
     "id": "M1",
-    "title": "Is it always true?",
+    "title": "Can a shape change?",
     "minutes": 4,
-    "tutor": "Ali says: circle + square = 10, so square + circle = 10 too. Is it always true? Test it with counters on two cards, then try other numbers.",
-    "rec": "Recording: pause. Ali says circle + square equals the same as square + circle. Test it with counters. Is it always true?",
-    "answer": "Yes. Adding in any order gives the same total: 6 + 4 and 4 + 6 are both 10. The two cards hold the same counters."
+    "tutor": "Ali says: the heart is 5 in line 1 and 6 in line 2, and both lines are fine. Is that allowed? Test it with counters: put the same heart card into both lines.",
+    "rec": "Recording: pause. Ali says the heart is 5 in one line and 6 in another. Is that allowed? Test it with counters.",
+    "answer": "No. The same shape is the same number in every line. If the heart is 5 in line 1 it must be 5 in line 2 too. If the numbers do not fit, one of them is wrong, so check again."
    },
    {
     "id": "M2",
@@ -3901,31 +3934,32 @@
   ]
  },
  "parent": {
-  "summary": "We met picture equations: a shape is a hidden number, and the same shape is always the same number. We found hidden numbers with counters, checked them in the line, and took one line from another to find two shapes. One hidden number in a line, like 4 + box = 10, is Primary 1 work. Using one shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. We use shapes and boxes, never letters.",
+  "summary": "We met picture equations: a shape is a hidden number, and the same shape is always the same number. We found hidden numbers with counters, checked them, and took one line from another to find two shapes. One hidden number in a line, like 4 + box = 10, is Primary 1 work; using one shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. We use shapes, never letters.",
   "words": [
-   "shape: a picture that stands for a hidden number",
-   "line: one picture equation, such as circle + square = 10",
+   "shape: a hidden number",
+   "line: one picture equation",
    "check: put the number back into the line",
-   "take one line from another: find what the extra shape is"
+   "take one line from another: find the extra shape",
+   "×: groups of (4 × 4 is 4 groups of 4)"
   ],
   "try_home": [
-   "Hidden cup: put 5 counters in a cup, add 4 loose ones, and tell your child the total is 9. How many are in the cup?",
-   "Two cups: put the same number of counters in two cups. Say the total is 12. How many in each cup? Check by counting.",
+   "Hidden cup: put 5 counters in a cup, add 4 loose ones, and say the total is 9. How many are in the cup?",
+   "Two cups: put the same number of counters in two cups and say the total is 12. How many in each cup?",
    "Your turn to hide: your child hides counters in a cup and tells you the total. Can you find the number?"
   ],
   "ask": [
    "What does the shape hide?",
    "How can you check your number in the line?"
   ],
-  "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Lesson 20: Find One First, with the end-of-term check. Online practice: your tutor will share the practice link.",
+  "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. Please do not teach a rule or letters: counters and a cup are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 10: Find One First, with the end-of-term check. It has one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first. Online practice: your tutor will share the link.",
   "quote": "A shape is a hidden number, and the same shape is always the same number.",
   "report_line": "Your child is learning that a shape can stand for a hidden number and that the same shape is always the same number. This week: finding one shape, then two shapes from two lines.",
   "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 20 workbook, with its $1 tokens page (a grown-up cuts out 20 tokens)",
-   "3 to 6 small things for a shop, such as pencils or cups",
-   "The end-of-term check sheet (3 pages), printed at 100% and closed in an envelope",
+   "The Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 20 tokens)",
+   "3 to 6 small things for a shop",
+   "The check sheet (3 pages, printed at 100%), kept closed in its envelope",
    "Pencil, rubber and paper"
   ]
  },
@@ -3939,18 +3973,19 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 5 and 7; T3: 4 and 3; G1: 5, 7 and 11; G2: 8 and 6; G3: 4 and 3) so you can answer a child who asks.",
-  "Tell parents a week before: print the workbook pages and the kit page (a grown-up cuts out the 20 counters), draw four shape cards (a circle, a square, a triangle and a heart on four small pieces of paper), and find about 30 counters or buttons and two cups. Small things stay away from mouths and younger children. Next lesson holds the end-of-term check: send the check sheet and the grown-up note with this lesson materials.",
+  "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 6 and 9; T3: 3 and 5; G1: 5, 7 and 11; G2: 8 and 6; G3: 5 and 4) so you can answer a child who asks.",
+  "Tell parents a week before: print the workbook pages and the kit page (a grown-up cuts out the 20 counters), draw four shape cards (a circle, a square, a triangle and a heart on four small pieces of paper), and find about 30 counters or buttons and two cups. Small things stay away from mouths and younger children. Next lesson holds the end-of-term check: with this lesson's materials, send the check sheet (in a closed envelope) and the grown-up note.",
   "Have the slides open. Have your own shape cards, a cup and counters to show on camera if you wish.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
-  "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite."
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite.",
+  "Slides s-explore3, s-m2 and s-m3 keep the method off the screen while you ask: the steps appear on the slide after. Read every question with its totals and the four options of E2 aloud: the figures on the slides are small."
  ],
  "workbook": {
   "header": "Reasoning about equality: picture equations",
   "hint_p1": "Each shape is a number. Use counters. Check your answer in the line.",
-  "hint_p2": "The same shape is always the same number. Different shapes are different numbers.",
-  "hint_p3": "Use counters or draw. Check your answer in every line. Choose any question.",
-  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "hint_p2": "The same shape is always the same number. In our puzzles, different shapes are different numbers.",
+  "hint_p3": "Use counters or draw. Check your answer in every line. × means groups of. Choose any question.",
+  "hint_p4": "× means groups of. Choose any question. You do not have to finish them all.",
   "choice_after": 4,
   "inv_intro": "",
   "inv_first_label": "First:",
@@ -3964,5 +3999,6 @@
     "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Red counters can hide in a cup; yellow counters can be the loose ones. The ten-frames stay on the page."
    }
   ]
- }
+ },
+ "contest_where": "Think harder, Go further and the Investigation"
 }
