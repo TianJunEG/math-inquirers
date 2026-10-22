@@ -1362,7 +1362,7 @@
   {
    "id": "s-break",
    "part": "break",
-   "kind": "light",
+   "kind": "dark",
    "title": "See-saw stand-up",
    "blocks": [
     {
@@ -1693,25 +1693,25 @@
     "parts": [
      {
       "l": "a",
-      "text": "5 + 3 = 4 + ___",
+      "text": "5 + 3 = 4 + []",
       "ans": "4",
       "val": 4
      },
      {
       "l": "b",
-      "text": "6 + 4 = 5 + ___",
+      "text": "6 + 4 = 5 + []",
       "ans": "5",
       "val": 5
      },
      {
       "l": "c",
-      "text": "7 + 3 = ___ + 7",
+      "text": "7 + 3 = [] + 7",
       "ans": "3",
       "val": 3
      },
      {
       "l": "d",
-      "text": "2 + 8 = 8 + ___",
+      "text": "2 + 8 = 8 + []",
       "ans": "2",
       "val": 2
      }
@@ -1740,7 +1740,7 @@
     "parts": [
      {
       "l": "",
-      "text": "She adds ___ more buttons",
+      "text": "She adds [] more buttons",
       "ans": "1",
       "val": 1
      }
@@ -1767,13 +1767,13 @@
     "parts": [
      {
       "l": "",
-      "text": "6 + 3 = 5 + ___ (Siti wrote 9)",
+      "text": "6 + 3 = 5 + [] (Siti wrote 9)",
       "ans": "9",
       "val": 9
      },
      {
       "l": "",
-      "text": "The blank should be ___",
+      "text": "The blank should be []",
       "ans": "4",
       "val": 4
      }
@@ -1789,7 +1789,7 @@
      "Not saying what she mixed up (any clear sentence about the equals sign or the right side is fine)."
     ],
     "mins": 2.5,
-    "lines": 2
+    "lines": 1
    },
    {
     "id": "S4",
@@ -1799,19 +1799,19 @@
     "parts": [
      {
       "l": "a",
-      "text": "6 + ___ = 12",
+      "text": "6 + [] = 12",
       "ans": "6",
       "val": 6
      },
      {
       "l": "b",
-      "text": "5 + ___ = 12",
+      "text": "5 + [] = 12",
       "ans": "7",
       "val": 7
      },
      {
       "l": "c",
-      "text": "4 + ___ = 12",
+      "text": "4 + [] = 12",
       "ans": "8",
       "val": 8
      }
@@ -1851,13 +1851,13 @@
      },
      {
       "l": "c",
-      "text": "34 + 5 = 35 + ___",
+      "text": "34 + 5 = 35 + []",
       "ans": "4",
       "val": 4
      },
      {
       "l": "d",
-      "text": "61 + 8 = 60 + ___",
+      "text": "61 + 8 = 60 + []",
       "ans": "9",
       "val": 9
      }
@@ -1886,7 +1886,7 @@
     "parts": [
      {
       "l": "",
-      "text": "Ben needs ___ blue pens",
+      "text": "Ben needs [] blue pens",
       "ans": "5",
       "val": 5
      }
@@ -2182,7 +2182,7 @@
    "parts": [
     {
      "l": "",
-     "text": "9 + 5 = 10 + ___",
+     "text": "9 + 5 = 10 + []",
      "ans": "4",
      "val": 4
     }
@@ -2223,7 +2223,7 @@
    "parts": [
     {
      "l": "",
-     "text": "30 + 12 = 40 + ___",
+     "text": "30 + 12 = 40 + []",
      "ans": "2",
      "val": 2
     }
@@ -2845,7 +2845,8 @@
   "when_stuck": "Please let your child use two plates and small things or draw the two sides, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer.",
   "next": "Lesson 9: Draw and Measure. Your child needs a pencil, paper and a ruler marked in centimetres (the kind in a pencil case). Please have one ready.",
   "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: the equals sign as balance, and finding a missing number by giving and taking.",
-  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."
+  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+  "quote": "Adjust one side, adjust the other. When one number goes up, the other goes down by the same amount."
  },
  "safeguarding": [
   "Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp.",
@@ -2892,6 +2893,18 @@
     "tutor": "Pretend your grown-up or a toy has never seen a blank. Teach them how to find the blank in 25 + 18 = 27 + ___ without adding first.",
     "rec": "Recording: pause. Teach a grown-up how to find the blank in 25 + 18 = 27 + ___ without adding first.",
     "answer": "27 is 2 more than 25, so the blank is 2 less than 18. The blank is 16."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Addition and subtraction: balance",
+  "hint_p1": "Use your plates or a drawing. Say it out loud, then write it.",
+  "hint_p3": "Use your plates, draw a picture, or look at how the numbers moved. Then write how you know. Choose any question, in any order.",
+  "kits": [
+   {
+    "type": "base_ten",
+    "title": "Kit page: tens bars and ones squares",
+    "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. They help with the two-digit sums. Keep them in an envelope."
    }
   ]
  }
