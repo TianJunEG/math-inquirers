@@ -1,94 +1,123 @@
 # Level 1 term-time year plan (Primary 1, ages 6-8)
 
+## Revision for 10-week terms and new Term 1 (22 Oct 2026)
+
+Reworked to match `docs/terms/owner_decisions.md`. What changed:
+
+- **40 lessons, not 36.** 4 terms x 10 lessons (a term is about 10 weeks). Lesson numbers are now 1-40 (T1 = 1-10, T2 = 11-20, T3 = 21-30, T4 = 31-40); the old 1-36 numbers are gone, and every lesson reference below uses the new numbers. Exactly one lesson was added per term (the 10th lesson, marked "added" in the tables).
+- **Term 1 is all new content.** Holiday graduates start Term 1, so Term 1 no longer adapts the holiday course (it used 9 of 10 holiday lessons). The holiday course (`hp/lessons.js`) stays a standalone foundation course. Nothing is reused; holiday topics come back only as the first 6-minute warm-up (section 3). All 40 lessons are new; none is a holiday lesson.
+- **Order.** Number and arithmetic strands first (place value, adding and subtracting within 100, ordinals, length), because a child coming from the holiday course has patterns, bonds, money coins, shapes, length in cubes and graphs but no place value, no 2-digit arithmetic, no multiplication, no time. Old Term 2 lessons moved up into Term 1 (Bundles and Singles, Digit Cards, 100 Square, Make-a-Ten, Take Away, Balance and Swap), old Draw and Measure (was 32) moved to Lesson 9, and the old Term 2 to 4 lessons shifted to fit; nine new-topic lessons (2, 6, 13, 22, 25, 27, 28, 29, 37) replace the nine holiday slots.
+- **Contest-style items now at Think harder, not only Go further.** Moved: digit-card clue puzzles (3), changing-step sequences (4), queue counting "8th from the front and back" (11), numbers in two tables (16), make-equal transfers (12), "twice as many" with a transfer (18), routes on a grid (33), spending exactly $20 (26), fold and punch (34), day-of-week cycles (24, 30), Latin squares (27). None is Start here.
+- **Mid-year joiners.** Each term has a "can a new child join cold?" line and a safest-to-skip lesson (section 2). No lesson assumes the previous term except through the warm-up.
+- **Added 10th lessons (the best remaining gaps):** Lesson 10 Story Steps (multi-step stories, reading traps: books gaps 1 and 2); Lesson 20 Find One First (price or size of one: books gap 3); Lesson 30 Calendar Detective (SASMO time and calendar gap); Lesson 35 Spot It (SASMO visual perception gap).
+- **Not changed:** KIV items belong to other levels (Level 5 lessons 28/29 merge, lesson 32 too full, secondary speed preview in lesson 15; Level 3 lessons 22/23 figures); none applies here. No speed work in this primary level.
+- Section 3, 4, 5, 6 and 7 were rewritten for these changes (reuse section, coverage matrix, 10-question checks, effort, open questions).
+
 ## Verified against MOE syllabus (Oct 2025)
 
-Checked against the official PDF (`docs/moe/syllabus_by_level.md`; page numbers are PDF pages). No [check] or [UNVERIFIED] flags were open in this plan, and every P1 strand and beyond-P1 label below was confirmed. Changes made: (1) lesson 20, "contest tables 6 to 8 are beyond P1" now says tables of 6 to 9 are P3 (p. 35) while P1 multiplication is within 40 (p. 31); (2) lesson 1, common multiples are P4 (p. 37); (3) lesson 2, letters for unknowns are P6 (p. 43); (4) page references added to the odd/even (P2, p. 33), shape-pattern (P2, p. 34), 3-D shape (P2, p. 34) and fraction (P2, p. 33) labels. Syllabus items the plan touches only lightly: comparing the number of objects in two sets (P1 Whole Numbers 1.4, p. 31; lesson 11) and mental calculation of a 2-digit number plus ones or tens without renaming (2.7; lessons 13, 14). Nothing in the plan is wrong. Source of the verified outcomes: `docs/audit/moe_alignment_p1_p3.md`, section "Verified against MOE syllabus".
+Lesson numbers below are the new 1-40 numbers (the old 1-36 numbering is retired). Checked against the official PDF (`docs/moe/syllabus_by_level.md`; page numbers are PDF pages). No [check] or [UNVERIFIED] flags were open in this plan, and every P1 strand and beyond-P1 label below was confirmed. Changes made: (1) lesson 16 (was 20), "contest tables 6 to 8 are beyond P1" now says tables of 6 to 9 are P3 (p. 35) while P1 multiplication is within 40 (p. 31); (2) lesson 16 (was 1), common multiples are P4 (p. 37); (3) lessons 8 and 19 (were 2 and 27), letters for unknowns are P6 (p. 43); (4) page references added to the odd/even (P2, p. 33; lesson 14), shape-pattern (P2, p. 34; lesson 28), 3-D shape (P2, p. 34; lesson 34) and fraction (P2, p. 33; lesson 31) labels. Syllabus items the plan touches only lightly: comparing the number of objects in two sets (P1 Whole Numbers 1.4, p. 31; lesson 3) and mental calculation of a 2-digit number plus ones or tens without renaming (2.7; lessons 5 to 7). Nothing in the plan was wrong; the rework below changes lesson numbers and content but no verified placement (new lessons are labelled for review; see the flags in the tables). Source of the verified outcomes: `docs/audit/moe_alignment_p1_p3.md`, section "Verified against MOE syllabus".
 
-Status: plan only, no lessons written. 4 terms x 9 lessons x 90 minutes = 36 lessons, live online, groups of 8 or fewer. A school term is about 10 weeks, so 9 lessons leave one buffer week (make-up, catch-up, the end-of-term check). No dates are fixed here.
+Status: plan only, no lessons written. 4 terms x 10 lessons x 90 minutes = 40 lessons, live online, groups of 8 or fewer. A school term is about 10 weeks, so each week has a lesson; the 20-minute end-of-term check is taken inside Lesson 10 of the term (the last 20 minutes, or the make-up slot), not in an extra week. No dates are fixed here.
 
-Sources used: README.md; hp/lessons.js (the 10 holiday lessons; the brief's p1/ folder holds only build scripts); hp/budget.json; docs/levels_and_placement.md; docs/audit/audit_p1.md; docs/audit/moe_alignment_p1_p3.md (the P1 syllabus outcomes and our gaps, read from the 2021 MOE syllabus there); docs/audit/intl_mapping_*.md; docs/gifted_research.md; docs/sasmo/g1_analysis.md. No p1/SPEC.md, p1/data.js or p1/content/ exists, so the lesson content was read from hp/lessons.js.
+Sources used: README.md; hp/lessons.js (the 10 holiday lessons; the brief's p1/ folder holds only build scripts); hp/budget.json; docs/levels_and_placement.md; docs/audit/audit_p1.md; docs/audit/moe_alignment_p1_p3.md (the P1 syllabus outcomes and our gaps, read from the 2021 MOE syllabus there); docs/audit/intl_mapping_*.md; docs/gifted_research.md; docs/sasmo/g1_analysis.md; docs/books/word_problems_g1_g2_analysis.md; docs/terms/owner_decisions.md. No p1/SPEC.md, p1/data.js or p1/content/ exists, so the holiday content was read from hp/lessons.js.
 
 Tier labels used throughout: **S** = Start here (core, approachable, not yet taught at school), **T** = Think harder (an idea already taught, in a new setting), **G** = Go further (mastery plus extension). Labels stay neutral; nothing here is a result, a rank or a prediction for any child.
 
 ## 1. Design principles
 
-- **The year arcs Notice it, Test it, Explain why, then Choose and create.** Term 1 builds the habits (notice, pattern, list, draw). Term 2 builds number structure and starts testing claims. Term 3 asks for reasons and generalising (always, sometimes, never). Term 4 asks the child to pick a tool and to write problems for others.
-- **Three threads spiral through all four terms, each time in a bigger setting:** (a) rules and patterns (skip-count frog, then 100 square, then times tables, then grid paths); (b) balance and "=" (bonds, then make-a-ten and swap, then picture equations, then the toolbox); (c) listing every case (coin ways, digit cards, sharing and grouping, counting routes). Each revisit is labelled "spiral" in the table and is a new context, not a repeat worksheet.
-- **A child can join at Term 1 with nothing assumed.** Term 2 to 4 lessons open with a 6-minute "remember" warm-up from the thread, so a Term 1 child gets a refresher and a new Term 2 child (if the owner allows mid-year entry) is not lost. Terms are not strictly lockstep with school; each lesson stands on its own plus the thread.
-- **Problem solving is taught as a few named moves, one new move a term:** Term 1 draw it and list it; Term 2 bar strips, guess-and-check, work backwards; Term 3 make a table, use cases, check with a different method; Term 4 choose the move and create a problem. Moves are named in children's words and recorded on a growing "Inquirer's toolbox" page.
-- **Syllabus first for Start here, thinking for Think harder, contest-type moves only in Go further.** Primary 1 strands that the holiday course never touched (tens and ones, adding within 100, times and sharing, telling time, half and quarter) are taught here as core. Items that go past Primary 1 or come from SASMO-type papers are marked in the table and never put in Start here.
+- **The year arcs Notice it, Test it, Explain why, then Choose and create.** Term 1 notices how numbers work (tens and ones, patterns in the 100 square, adding and taking away within 100, measuring and drawing). Term 2 turns stories and groups into bar strips, multiplication and sharing and starts testing claims. Term 3 asks for reasons and generalising (always, sometimes, never). Term 4 asks the child to pick a tool and to write problems for others.
+- **Three threads spiral through all four terms, each time in a bigger setting:** (a) rules and patterns (100 square, then times tables, then a table for a growing pattern, then grid paths); (b) balance and "=" (balance and swap, then picture equations, then spot the mistake, then the toolbox); (c) listing every case (digit cards, sharing and grouping, spending exactly an amount, counting routes). Each revisit is labelled "spiral" in the table and is a new context, not a repeat worksheet.
+- **Any term can be a first term.** Places open every term (prorated fee). Lessons 2 to 40 open with a 6-minute "remember" warm-up that carries what the lesson needs, so a child who joins cold is not lost and no lesson assumes the previous term except through that warm-up. Term 1 assumes only the holiday course or counting to 20; holiday topics appear only in warm-ups (section 3). Terms are not lockstep with school.
+- **Problem solving is taught as a few named moves, one new move a term:** Term 1 draw it, list it, one operation per step; Term 2 bar strips, find one first, work backwards; Term 3 make a table, use cases, spot the mistake; Term 4 choose the move and create a problem. Moves are named in children's words and recorded on a growing "Inquirer's toolbox" page.
+- **Syllabus first for Start here, contest-type moves at Think harder, a harder follow-up at Go further.** Primary 1 strands that the holiday course never touched (tens and ones, adding within 100, times and sharing, telling time, half and quarter) are taught here as core. Contest-style items (digit-card puzzles, gaps and posts in queues, changing-step sequences, handshakes and pairing, routes, Latin squares, day-of-week cycles) are marked in the table, are never Start here, and are not only Go further (owner decision 6).
 - **Every lesson has a talk-and-explain minute and a private paper.** Children explain a reason aloud each lesson. Any paper or end-of-term check is returned privately; no child's score is shown to the group, no ranking, and parents hear progress words, not marks versus other children.
 
 ## 2. Term-by-term lessons
 
-Skill column is the key thinking skill. "MOE" names the Primary 1 strand (Whole Numbers, Addition and Subtraction, Multiplication and Division, Money, Length, Time, 2D Shapes, Picture Graphs). "Beyond" marks content past Primary 1; "SASMO-type" marks contest-style moves.
+Skill column is the key thinking skill. "MOE" names the Primary 1 strand (Whole Numbers, Addition and Subtraction, Multiplication and Division, Money, Length, Time, 2D Shapes, Picture Graphs). "Beyond" marks content past Primary 1; "SASMO-type" marks contest-style moves (these sit at Think harder). Lessons marked **(added)** are the 10th lesson of the term. Lessons marked **(new topic)** replace a holiday lesson slot and are drafted here for tutor review; the syllabus label is the plan's best reading and is flagged where unsure.
 
-### Term 1: Notice it (adapted from the holiday course, 9 of 10 lessons)
+Per term, two notes the owner asked for: **Can a new child join cold?** and **Safest lesson to skip or make up** (every lesson is recorded; a make-up can be a holiday class if there is a seat).
 
-| # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
-|---|---|---|---|---|---|
-| 1 | Count with the Frog | Counting in steps has a rule | MOE Whole Numbers (patterns in number sequences, counting to 100); groundwork for Multiplication. Go further reaches into common multiples (P4, p. 37) | S: skip count in 2s, 5s, 10s and say the rule. T: 3s and 4s, find the next two and the rule. G: numbers two frogs both land on; invent a rule | Pattern and rule finding |
-| 2 | Number Bond Inquiry | Equal means "the same as" | MOE Addition and Subtraction (+ - =, bonds, mental within 20). Add a 5-minute "10 and some more" place-value opener. Go further letters for unknowns (P6, p. 43) | S: all pairs for 10, link to 20. T: balance both sides, 4 + 4 = 8 + 1? G: magic triangle, sides all equal | Systematic listing |
-| 3 | Pattern Inquiry | Find the core, then jump | MOE Whole Numbers (patterns); repeating shape patterns are beyond P1 (P2 Geometry 1.1, p. 34); growing stick patterns are not named in any year. Ordinals above 10th used here, flagged | S: extend a repeating pattern to the 10th place. T: 20th and 30th place by the core. G: growing stick rule, work back from a total | Prediction from a rule |
-| 4 | Mystery Number | Undo to find the start | MOE Addition and Subtraction (relationship). Bar-model strips are not named in the syllabus; SASMO-type "working backwards" | S: one-step "I think of a number". T: two steps in the right order. G: number machine, queue "8th from both ends" | Working backwards |
-| 5 | Logic Lab | Clues can sort the world | Not in the MOE P1 syllabus; HK lists sorting only as an optional enrichment topic. Venn and grids are enrichment | S: order three from clues. T: sort by two rules in a Venn. G: 3 by 3 logic grid | Deduction |
-| 6 | Shape Safari | Shapes hide in shapes | MOE 2D Shapes (rectangle, square, triangle, circle, forming and identifying figures). Cut pentagon and hexagon naming from the core | S: name by sides and corners. T: count triangles in a figure. G: squares in a 4 by 2 grid | Systematic counting |
-| 7 | Measure It! | Equal units make fair measuring | MOE Length (cm, compare, order, measure to nearest cm). Add the missing ruler practice flagged by the audit | S: measure in cubes and with a ruler. T: object not starting at 0. G: change units both ways | Measuring and comparing |
-| 8 | Let's Plan the Fruit Party | A graph answers some questions, not all | MOE Picture Graphs (1 picture = 1). Scales of 2 and 3 are P2 content, left to Term 4 | S: read most, fewest, how many more. T: totals and a tie. G: what a class vote can't tell us | Reading data critically |
-| 9 | Coin Combos | List every way, then prove no more | MOE Money (cents to $1). Trimmed: dollar notes move to Term 3. Audit fix: fewer questions per page | S: make 20 to 25 cents. T: fewest coins; why 35 cents is not two coins. G: all ways to make 50 cents | Listing all cases |
+### Term 1: Notice it (numbers to 100 and how they work; all new)
 
-### Term 2: Test it (numbers to 100 and how arithmetic works; all new)
+**Can a new child join cold?** Yes. The 6-minute warm-up counts in 2s, 5s and 10s to 100 and revisits number bonds for 10 and 20 (holiday topics, spiral only); nothing else is assumed beyond counting to 20. **Safest to skip or make up:** Lesson 4 (The 100 Square Explorer), a pattern lesson that no later lesson depends on; Lessons 1 and 5 to 7 are the hardest to miss.
 
 | # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
 |---|---|---|---|---|---|
-| 10 | Bundles and Singles | A number is tens and ones | MOE Whole Numbers (place value, read and write numerals and words). SASMO-type: split into tens and ones | S: build 2-digit numbers with bundles of 10. T: 5 tens 14 ones = ? G: who has most, 6 tens 14 ones or 85 ones? | Structure of numbers |
-| 11 | Digit Cards | Order of digits changes the number | MOE Whole Numbers (compare and order, comparing sets). SASMO-type digit-card puzzles; 3-digit numbers are beyond P1 and only in Go further | S: make and order 2-digit numbers. T: smallest and largest from three cards. G: find every number fitting two clues | Systematic cases |
-| 12 | The 100 Square Explorer | Patterns live in rows and columns | MOE Whole Numbers (patterns, counting to 100). SASMO-type changing-step sequences (+1, +2, +3) | S: colour 10s, 2s, 5s and say what you see. T: down one row adds 10. G: sequence where the gap grows | Pattern generalising (spiral: rules) |
-| 13 | Make-a-Ten Adding | Make tens first | MOE Addition and Subtraction (more than two 1-digit numbers; within 100; algorithm introduced after the mental method). SASMO-type: add by making tens | S: 8 + 6, then 28 + 6 by making ten. T: add four numbers by finding tens. G: 18 + 7 + 12 + 23 + 3 + 17 | Strategy choice |
-| 14 | Take Away, Count Up | Difference is a gap | MOE Addition and Subtraction (subtraction within 100, relation to addition) | S: take away 10s and 1s. T: count up to find the difference. G: which is quicker, and why? | Choosing a method |
-| 15 | Balance and Swap | Adjust one side, adjust the other | MOE Addition and Subtraction ("=" as balance). Beyond P1: compensation (38 + 25 = 36 + 27); SASMO-type | S: box numbers, 27 + 16 = box + 9. T: spot equal sums without adding. G: a shape stands for a number | Reasoning about equality (spiral: balance) |
-| 16 | Who Is Where? | First, second, third... in a line | MOE Whole Numbers (ordinals 1st to 10th, symbols). Position words; extends L5 queue ideas | S: ordinals and ordering by clue. T: 8th from front and back. G: seats around a table, clues | Deduction (spiral: Logic Lab) |
-| 17 | Bar Strips: More and Fewer | A strip shows the story | MOE Addition and Subtraction (in context). Bar models are not named in the 2021 syllabus; school practice uses them. SASMO-type: transfer and compare | S: two groups, how many more. T: total and difference given. G: after giving 3, they are equal | Representing |
-| 18 | Odd + Odd: Always, Sometimes, Never? | One test is not a proof | MOE Whole Numbers (odd/even is P2 content, Whole Numbers 1.6, p. 33; flagged). Inquiry lesson, sets up Term 3 reasons | S: pair counters to sort odd/even. T: what is odd + even? G: explain why odd + odd is always even | Conjecture and test |
+| 1 | Bundles and Singles | A number is tens and ones | MOE Whole Numbers (place value, read and write numerals). Holiday course has no place value. SASMO-type: split into tens and ones | S: build 2-digit numbers with bundles of 10. T: 5 tens 14 ones = ? G: who has most, 6 tens 14 ones or 85 ones? | Structure of numbers |
+| 2 | Number Words and the Number Line (new topic) | Every number has a place and a name | MOE Whole Numbers (number words, counting to 100, before/between/after, nearest ten is placed here as a flag: check against the syllabus before building). Spelling load kept small | S: say, read and write numbers to 100 on a line; one before, one after. T: which ten is nearer; numbers between two marks. G: a line with the marks missing | Representing on a scale |
+| 3 | Digit Cards | Order of digits changes the number | MOE Whole Numbers (compare and order, comparing sets of objects, 1.4). SASMO-type digit-card puzzles at T; 3-digit numbers are beyond P1 and only at G | S: make and order 2-digit numbers; compare two sets of objects. T: smallest and largest from three cards; find every number fitting two clues. G: three-card clues and a number that fits all | Systematic cases |
+| 4 | The 100 Square Explorer | Patterns live in rows and columns | MOE Whole Numbers (patterns, counting to 100). SASMO-type changing-step sequences at T. Revisits the holiday "frog" only as warm-up | S: colour 10s, 2s, 5s and say what you see. T: down one row adds 10; a sequence where the gap grows (+1, +2, +3). G: sum of the two numbers before; two rules interleaved | Pattern generalising |
+| 5 | Make-a-Ten Adding | Make tens first | MOE Addition and Subtraction (more than two 1-digit numbers; within 100; algorithm only after the mental method). SASMO-type: add by making tens | S: 8 + 6, then 28 + 6 by making ten. T: add four numbers by finding tens. G: 18 + 7 + 12 + 23 + 3 + 17 | Strategy choice |
+| 6 | Tens Jump, Ones Hop (new topic) | Add and take away tens without carrying | MOE Addition and Subtraction (mental 2-digit plus or minus ones or tens without renaming, 2.7). Number line jumps | S: 34 + 10, 34 + 20, 34 - 10. T: 34 + 25 by a tens jump then ones hops. G: how many jumps from 7 to 97, and the shortest way | Chunking |
+| 7 | Take Away, Count Up | Difference is a gap | MOE Addition and Subtraction (subtraction within 100, relation to addition) | S: take away 10s and 1s. T: count up to find the difference. G: which is quicker, and why? | Choosing a method |
+| 8 | Balance and Swap | Adjust one side, adjust the other | MOE Addition and Subtraction ("=" as balance). Beyond P1: compensation (38 + 25 = 36 + 27); SASMO-type at T. Letters for unknowns are P6 (p. 43), so boxes only. Warm-up revisits holiday bonds | S: box numbers, 27 + 16 = box + 9. T: spot equal sums without adding; compensation. G: a chain of equal sums with two boxes | Reasoning about equality |
+| 9 | Draw and Measure | Be exact to the nearest centimetre | MOE Length (draw a line, measure to nearest cm, compare). Deeper than the holiday cubes-and-ruler measuring, which is warm-up only | S: draw 7 cm; compare two drawn lines. T: lines on a bent path; a line that starts at 2 on the ruler. G: three pieces of a 30 cm ribbon | Precision |
+| 10 | Story Steps: Read It Twice (added) | One operation per step | MOE Addition and Subtraction (in context, within 100). Gap from `docs/books/word_problems_g1_g2_analysis.md`: multi-step stories (31 of 101) and reading traps (who is in the group, "fewer than"). Bar strips come in Lesson 12 | S: two-step story, write one operation per step. T: reversed wording ("3 fewer than"); a story with a trap (who is in the group). G: three-step story, write it for a partner | Reading and planning |
 
-### Term 3: Explain why (groups, time, money in real life; all new)
+### Term 2: Test it (stories, groups and claims; all new)
 
-| # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
-|---|---|---|---|---|---|
-| 19 | Equal Groups | Same-size groups, count fast | MOE Multiplication and Division (concept, x sign, within 40). Not taught in the holiday course | S: 4 groups of 3, repeated addition. T: array, 3 x 4 = 4 x 3? G: legs and wheels | Representing multiplication |
-| 20 | Skip-Count Tables | Tables are skip counts | MOE Multiplication and Division (2, 5, 10, then 3, 4). Spiral: the Term 1 frog. Tables of 6 to 9 are P3 (p. 35); P1 stops at multiplying within 40 (p. 31) | S: build the 2, 5, 10 tables. T: use 2s to find 4s. G: which numbers appear in two tables? | Patterns to facts (spiral: rules) |
-| 21 | Sharing and Grouping | Two kinds of division | MOE Multiplication and Division (within 20, sharing and grouping). Remainder language is P3; use "left over" | S: share 12 among 3. T: how many groups of 4 in 14? G: all ways to share 12 equally | Two models of one operation |
-| 22 | Times Stories | Draw the story, then solve | MOE Multiplication and Division (word problems). Bar-model "times as many" is SASMO-type, beyond P1 | S: story with 3 groups of 5. T: two-step with a total. G: "twice as many as" with a transfer | Representing (bar strips) |
-| 23 | What Time Is It? | The clock counts in 5s | MOE Time (to 5 minutes, am/pm, h/min). Never touched in the holiday course | S: o'clock and half past. T: quarter past/to and 5-minute marks. G: a mirror clock | Reading a scale |
-| 24 | Time Passes | Time can be added | MOE Time (durations of 1 hour or half hour). SASMO-type: day-of-week cycles, calendars | S: one-hour and half-hour durations. T: finish times. G: "two days after the day before yesterday" | Chunking |
-| 25 | Dollars and Change | Notes and coins make a dollar | MOE Money (dollars to $100, change). Spiral: Coin Combos | S: count notes and coins to $20. T: pay for two items. G: fewest notes for $73 | Listing (spiral: all cases) |
-| 26 | The School Shop | A plan within a budget | MOE Money applied. Inquiry: spend exactly $20 | S: choose two items for $10. T: three items, change. G: all ways to spend exactly $20 | Planning with constraints |
-| 27 | Picture Equations | A shape is a hidden number | Beyond P1 (letters/algebra is P6, p. 43); SASMO-type substitution; uses times and add facts | S: shape + shape = 10. T: two different shapes. G: take one equation from another | Reasoning about equality (spiral: balance) |
-
-### Term 4: Choose and create (space, shape, measure, putting it together; all new)
+**Can a new child join cold?** Yes. The 6-minute warm-up draws 3 tens and 4 ones, adds by making a ten, and skip-counts 2s, 5s, 10s to build a group picture. Lessons 11 to 20 use only that. **Safest to skip or make up:** Lesson 14 (Odd + Odd), a standalone inquiry; avoid skipping Lessons 15 to 18, which build on one another.
 
 | # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
 |---|---|---|---|---|---|
-| 28 | Half and Quarter | Equal parts | MOE 2D Shapes (half circle, quarter circle). Not in the holiday course. Fractions proper are P2, so only the shapes, not the notation 1/2 | S: fold a circle into halves and quarters. T: halves of a square, several ways. G: is every half the same shape? | Equal parts |
-| 29 | Build the Figure | Make big shapes from small | MOE 2D Shapes (forming figures, identifying shapes in a figure). Spiral: Shape Safari | S: build a house from 4 shapes. T: count every triangle. G: same figure, fewest pieces | Decomposing (spiral: counting) |
-| 30 | Copy on the Grid | Grids help us describe | MOE 2D Shapes (copy figures on dot or square grid). Position words; routes are SASMO-type counting ways | S: copy a figure. T: directions: 2 right, 1 up. G: how many routes from corner to corner? | Spatial description |
-| 31 | Cubes and Views | The same thing, seen differently | Not in MOE P1 (3-D shapes are P2). HK lists 3-D shapes at P1. SASMO-type: cube stacks, mirror, fold and punch | S: build from a picture. T: view from the top. G: fold twice, punch one hole | Visualising |
-| 32 | Draw and Measure | Be exact to the nearest centimetre | MOE Length (draw a line, measure to nearest cm, compare). Spiral: Measure It | S: draw 7 cm. T: lines on a bent path. G: three pieces of a 30 cm ribbon | Precision |
-| 33 | Count Everything | Count with a system | Cross-strand: counting figures, ways and routes (SASMO-type) | S: count squares in 2 by 2. T: handshakes in a group of 4. G: two-stage routes | Systematic listing (spiral: all cases) |
-| 34 | Graph Detectives | Scales save space | MOE Picture Graphs; scales of 2 and 3 are beyond P1 (P2). Spiral: Fruit Party | S: read a 1-to-1 graph. T: 1 picture = 2. G: design a survey, say what it can't show | Critical reading |
-| 35 | The Problem-Solving Toolbox | Pick the tool | Mixed: draw, list, work backwards, bar strip, table. Uses the Term 1 to 3 moves | S: the tool is named. T: the tool is not named. G: two ways to solve one problem | Strategy choice |
-| 36 | Inquirers' Showcase | Teach what you found | Year look-back; children write a puzzle for a new Level 1 child | S: present a favourite. T: write a puzzle. G: write a puzzle with a rule and a proof | Communicating |
+| 11 | Who Is Where? | First, second, third... in a line | MOE Whole Numbers (ordinals 1st to 10th, symbols). Position words. SASMO-type queue counting ("8th from the front and the back", a gaps-and-posts idea) at T | S: ordinals and ordering by clue. T: 8th from front and back; how many in the line. G: seats around a table, clues | Deduction |
+| 12 | Bar Strips: More and Fewer | A strip shows the story | MOE Addition and Subtraction (in context). Bar models are not named in the 2021 syllabus; school practice uses them. SASMO-type: transfer and compare, now at T (books treat make-equal as ordinary) | S: two groups, how many more. T: total and difference given; make equal by a transfer. G: transfers with a total | Representing |
+| 13 | Doubles and Near Doubles (new topic) | Double, then adjust | MOE Addition and Subtraction (doubles, within 20 and 100, a mental strategy). Links to pairing and to the 2 table | S: doubles to 10 + 10; double a tens number. T: near doubles (7 + 8); doubles to find 6 + 6 + 1. G: a sum of five numbers that are almost the same | Strategy choice |
+| 14 | Odd + Odd: Always, Sometimes, Never? | One test is not a proof | MOE Whole Numbers (odd/even is P2 content, Whole Numbers 1.6, p. 33; flagged). Inquiry lesson, sets up Term 3 reasons | S: pair counters to sort odd/even. T: what is odd + even? G: explain why odd + odd is always even | Conjecture and test |
+| 15 | Equal Groups | Same-size groups, count fast | MOE Multiplication and Division (concept, x sign, within 40). Holiday course has none | S: 4 groups of 3, repeated addition. T: array, 3 x 4 = 4 x 3? G: legs and wheels | Representing multiplication |
+| 16 | Skip-Count Tables | Tables are skip counts | MOE Multiplication and Division (2, 5, 10, then 3, 4). Tables of 6 to 9 are P3 (p. 35); P1 stops at within 40 (p. 31). Common multiples are P4 (p. 37) and sit at T as SASMO-type | S: build the 2, 5, 10 tables. T: use 2s to find 4s; which numbers appear in two tables? G: numbers in three tables | Patterns to facts |
+| 17 | Sharing and Grouping | Two kinds of division | MOE Multiplication and Division (within 20, sharing and grouping). Remainder language is P3; use "left over" | S: share 12 among 3. T: how many groups of 4 in 14? G: all ways to share 12 equally | Two models of one operation |
+| 18 | Times Stories | Draw the story, then solve | MOE Multiplication and Division (word problems). Bar-model "times as many" is SASMO-type, beyond P1, now at T | S: story with 3 groups of 5. T: two-step with a total; "twice as many as" with a transfer. G: three groups with different sizes and a hidden start | Representing (bar strips) |
+| 19 | Picture Equations | A shape is a hidden number | Beyond P1 (letters/algebra is P6, p. 43); SASMO-type substitution; uses times and add facts | S: one shape and a box, 4 + shape = 10. T: two different shapes; take one equation from another. G: three symbols with a times sign | Reasoning about equality |
+| 20 | Find One First (added) | Find one, then find many | MOE Multiplication and Division (word problems) and Money. Gap from the books analysis: price or size of one from a group (6 of 101); also vocabulary "a dozen", "each", "such" | S: 4 pens cost 20 dollars, one costs? T: price of 7 from the price of 3. G: two-step, price of one then change | Unit method |
+
+### Term 3: Explain why (time, money, tables and reasons; all new)
+
+**Can a new child join cold?** Yes. The 6-minute warm-up skip-counts in 5s (clock face), lists the coins 5, 10, 20, 50 cents and $1 (holiday coin topic, spiral only) and draws a bar strip for "8 and 3". Lessons 21 to 30 need only that. **Safest to skip or make up:** Lesson 27 (Fill the Grid), a standalone puzzle lesson; Lessons 21 to 23 and 24 to 26 are two chained blocks.
+
+| # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
+|---|---|---|---|---|---|
+| 21 | What Time Is It? | The clock counts in 5s | MOE Time (o'clock, half past, quarter past/to). Never touched in the holiday course | S: o'clock and half past. T: quarter past/to. G: a mirror clock | Reading a scale |
+| 22 | Five Minutes at a Time (new topic) | Minutes live between the hours | MOE Time (to 5 minutes, am/pm, h/min). Split from the old What Time lesson so time gets two full lessons | S: 5-minute marks on the clock. T: am or pm for daily events; hours and minutes. G: how many minutes from 3:10 to 4:05, by chunks | Reading a scale |
+| 23 | Time Passes | Time can be added | MOE Time (durations of 1 hour or half hour) | S: one-hour and half-hour durations. T: finish times. G: a duration that crosses noon | Chunking |
+| 24 | Dollars and Change | Notes and coins make a dollar | MOE Money (dollars to $100, change). Warm-up revisits coin combos only | S: count notes and coins to $20. T: pay for two items. G: fewest notes for $73 | Money sense |
+| 25 | Price Tags: Compare and Choose (new topic) | Which costs more, and by how much | MOE Money (compare prices, add and subtract money to $100; money stories are 23 of 101 book problems) | S: which is cheaper, by how much. T: three prices, a total and a difference. G: buy two things, change left over | Comparing |
+| 26 | The School Shop | A plan within a budget | MOE Money applied. Inquiry: spend exactly $20. Listing all the ways is SASMO-type, now T | S: choose two items for $10. T: three items, change; list all ways to spend exactly $20. G: all ways with three prices | Planning with constraints |
+| 27 | Fill the Grid (new topic) | Each row and column has one of each | SASMO-type constraint grids (3 of 100). Not in MOE P1. Label for review | S: complete a grid with one missing cell per row. T: 3 by 3 Latin square with clues. G: 4 by 4 with digit clues | Elimination |
+| 28 | Make a Table (new topic) | A table finds the 20th | Growing patterns (not named in any year; shape patterns are P2, p. 34). Move: make a table. Revisits holiday growing sticks only in the warm-up | S: fill a table for a growing stick pattern. T: the 10th and 20th term from the table. G: work back from a total | Prediction from a rule |
+| 29 | Spot the Mistake (new topic) | Check with a different method | Cross-strand reasoning: error analysis on adding, taking away, time and money. Not an MOE content item | S: find the mistake in a worked sum. T: say which step is wrong and why. G: write a wrong answer for a partner to catch | Checking and explaining |
+| 30 | Calendar Detective (added) | Days and weeks go round | Time (days of the week, weeks; calendar vocabulary "a week", "a fortnight"). Gap: SASMO time and calendar (7 of 100). Day-of-week cycles are SASMO-type, at T | S: days of the week in order; what day is 3 days after? T: "two days after the day before yesterday"; the 10th day from Monday. G: which dates fall on the same weekday | Cycles (mod 7) |
+
+### Term 4: Choose and create (space, shape, data, putting it together; all new)
+
+**Can a new child join cold?** Yes. The 6-minute warm-up names rectangle, square, triangle and circle (holiday shapes, spiral only), reads a 1-to-1 picture graph and measures to the nearest cm. Lessons 31 to 40 need only that. **Safest to skip or make up:** Lesson 35 (Spot It), a standalone perception lesson; Lessons 39 and 40 draw on the whole year and should not be missed.
+
+| # | Title | Big idea | Topics and strands | Start here / Think harder / Go further | Skill |
+|---|---|---|---|---|---|
+| 31 | Half and Quarter | Equal parts | MOE 2D Shapes (half circle, quarter circle). Fractions proper are P2 (p. 33), so only shapes, not 1/2 | S: fold a circle into halves and quarters. T: halves of a square, several ways. G: is every half the same shape? | Equal parts |
+| 32 | Build the Figure | Make big shapes from small | MOE 2D Shapes (forming figures, identifying shapes in a figure). Deeper than the holiday shape naming (warm-up only) | S: build a house from 4 shapes. T: count every triangle. G: same figure, fewest pieces | Decomposing |
+| 33 | Copy on the Grid | Grids help us describe | MOE 2D Shapes (copy figures on dot or square grid). Position words; counting routes is SASMO-type, now T | S: copy a figure. T: directions: 2 right, 1 up; count the routes in a small grid. G: routes on a larger grid | Spatial description |
+| 34 | Cubes and Views | The same thing, seen differently | Not in MOE P1 (3-D shapes are P2, p. 34). SASMO-type: cube stacks, mirror, fold and punch (fold once is T) | S: build from a picture. T: view from the top; fold once and punch. G: fold twice, punch one hole | Visualising |
+| 35 | Spot It: Same, Different, Missing (added) | Compare one feature at a time | SASMO visual perception (8 of 100, Section A). Not an MOE item. Thin evidence and partly a practice effect (analysis says so); no promise of contest results | S: spot the differences between two pictures. T: odd one out, missing piece, shadows. G: build your own odd one out | Perception |
+| 36 | Count Everything | Count with a system | Cross-strand: counting figures, ways and routes (SASMO-type) | S: count squares in 2 by 2. T: handshakes in a group of 4 (pairing); count ways. G: two-stage routes | Systematic listing |
+| 37 | Make Your Own Graph (new topic) | Ask, sort, then picture it | MOE Picture Graphs (collect, sort and draw with 1 picture = 1; revisits the holiday graph only as warm-up). Tally marks not named: flagged | S: sort and draw a picture graph from a survey. T: choose the question. G: draw with 1 picture = 2 | Data collection |
+| 38 | Graph Detectives | Scales save space | MOE Picture Graphs; scales of 2 and 3 are beyond P1 (P2). Critical reading | S: read a 1-to-1 graph. T: 1 picture = 2. G: design a survey, say what it can't show | Critical reading |
+| 39 | The Problem-Solving Toolbox | Pick the tool | Mixed: draw, list, work backwards, bar strip, table, find one first. Uses the moves from Terms 1 to 3 | S: the tool is named. T: the tool is not named. G: two ways to solve one problem | Strategy choice |
+| 40 | Inquirers' Showcase | Teach what you found | Year look-back; children write a puzzle for a new Level 1 child. The end-of-term check is taken in the last 20 minutes or the make-up slot | S: present a favourite. T: write a puzzle. G: write a puzzle with a rule and a proof | Communicating |
 
 ## 3. Reuse of the holiday lessons
 
-Term 1 keeps nine of the ten. Adaptations follow the audit (docs/audit/audit_p1.md), not a straight copy.
+**No reuse.** The holiday course (`hp/lessons.js`: Count with the Frog, Number Bond Inquiry, Let's Plan the Fruit Party, Pattern Inquiry, Mystery Number, Coin Combos, Shape Safari, Logic Lab, Measure It!, Challenge Day) is a standalone foundation course. A holiday graduate starts Term 1 (December course) or Term 3 (June) or Term 2 (March) and must never repeat a holiday lesson. No Term 1 lesson, and no lesson in Terms 2 to 4, is adapted from a holiday lesson. Where a Level 1 lesson sits in a strand the holiday course touched (length, shapes, graphs, money, patterns), it is a different topic or a clearly deeper treatment (Draw and Measure, Build the Figure, Make Your Own Graph, Dollars and Change, Make a Table).
 
-- **Cut: L10 Challenge Day.** It is a mixed review with a 32-minute station plan in a 15-minute slot and puzzle cards that do not exist as files. Its role is covered by the end-of-term check, Lesson 35 and Lesson 36.
-- **Kept, in a new order** (patterns and rules first, so that new children get the habits early): L1, L2, L4, L5, L8, L7, L9, L3, L6 become Lessons 1 to 9.
-- **Trimmed:** L6 Coin Combos (the audit said 7 minutes for 5 hard questions) loses dollar-note work, moved to Lesson 25. L7 Shape Safari loses the pentagon and hexagon naming and the squares-in-a-grid mini-lesson that was never practised, and Go further keeps the grid. L3 loses scales (to Lesson 34).
-- **Added in place:** a 5-minute tens-and-ones opener in Lesson 2; the missing cm-ruler practice in Lesson 7. Nothing merged.
-- **Best of the course** (keep close to original): L1 frog, L2 bonds, L4 patterns, L5 mystery number, L8 logic lab.
-- **Terms 2 to 4 are new.** Deliberate spirals only: Lesson 25 (coins), 29 (shapes), 32 (length), 34 (graphs), 33 (listing), each with a new setting.
+Spiral review of holiday topics is allowed only as the first 6-minute warm-up. Holiday topics each term's warm-ups revisit:
+
+- **Term 1:** skip counting in 2s, 5s, 10s (Frog) in Lesson 4; number bonds to 10 and 20 in Lessons 5 and 8; cube/ruler measuring in Lesson 9; "I think of a number" in Lesson 10.
+- **Term 2:** skip counting (Frog) in Lesson 16; Logic Lab ordering in Lesson 11; Mystery Number "undo" in Lesson 12.
+- **Term 3:** coin values (Coin Combos) in Lessons 24 to 26; growing stick patterns (Pattern Inquiry) in Lesson 28; Logic Lab grid in Lesson 27.
+- **Term 4:** shape names (Shape Safari) in Lessons 31, 32, 36; picture graphs (Fruit Party) in Lessons 37, 38; cube/cm measuring in Lesson 35.
+
+Audit fixes in `docs/audit/audit_p1.md` apply to the holiday course itself, not to this plan. Old Challenge Day is not reused; its role is taken by Lesson 39 and 40 and the end-of-term check.
 
 ## 4. Coverage check
 
@@ -96,58 +125,76 @@ Strand by term (X = taught as core; p = partial; s = spiral/revisit only). Stran
 
 | MOE Primary 1 strand | T1 | T2 | T3 | T4 | Note |
 |---|---|---|---|---|---|
-| Whole numbers: counting to 100, patterns | X | X | s | s | |
-| Whole numbers: place value, words, compare/order | p | X | s | | The holiday gap (place value, words, ordering) is closed in T2 |
-| Whole numbers: ordinals 1st to 10th | p | X | | | |
-| Addition and subtraction within 20 | X | s | | | |
-| Addition and subtraction within 100, algorithms | | X | s | | Gap flag: school will practise the written layout and speed more than we do |
-| Multiplication and division | s | | X | s | Gap in the holiday course, closed in T3 |
-| Money | X | | X | | Dollars to $100 in T3 |
-| Length (cm) | X | | | X | Drawing to the nearest cm in T4 |
-| Time | | | X | | The holiday course never covered it; two lessons here |
-| 2D shapes: rectangle, square, triangle, circle | X | | | X | |
-| 2D shapes: half circle, quarter circle, copying on a grid | | | | X | |
-| Picture graphs | X | | | X | |
+| Whole numbers: counting to 100, place value, words | X | s | | | Lessons 1, 2; the holiday gap (place value, words) is closed first |
+| Whole numbers: compare/order, patterns | X | s | p | | Lessons 3, 4; patterns again in 16, 28 |
+| Whole numbers: ordinals 1st to 10th | | X | | | Lesson 11 |
+| Addition and subtraction within 20 and 100, algorithms | X | s | s | | Lessons 5 to 8; gap flag: school will practise the written layout and speed more than we do |
+| Addition and subtraction in context (word problems) | p | X | s | s | Lessons 10, 12, 20 |
+| Multiplication and division | | X | s | | Lessons 15 to 18, 20; gap in the holiday course, closed in T2 |
+| Money | | | X | | Dollars to $100 in T3 (24 to 26); coins are holiday warm-up only |
+| Length (cm) | X | | | s | Drawing to the nearest cm in Lesson 9; warm-up in T4 |
+| Time | | | X | | Four lessons (21, 22, 23, 30); the holiday course never covered it |
+| 2D shapes: rectangle, square, triangle, circle | s | | | X | Lessons 31, 32; Term 1 does not teach shapes |
+| 2D shapes: half circle, quarter circle, copying on a grid | | | | X | Lessons 31, 33 |
+| Picture graphs | | | | X | Lessons 37, 38; a child who joins in Term 4 needs only the warm-up |
 
-Where school practice outpaces us: speed and accuracy in mental calculation within 100, written algorithms with regrouping, worded problems read independently (reading load), writing number words, assessment practice. We teach the ideas and some practice but do not drill; parents should be told. Primary 1 strands are covered across the year; whether each child is secure is not claimed.
+Where school practice outpaces us: speed and accuracy in mental calculation within 100, written algorithms with regrouping, worded problems read independently (reading load), writing number words, assessment practice. We teach the ideas and some practice but do not drill; parents should be told. Primary 1 strands are covered across the year; whether each child is secure is not claimed. A child who joins in Term 3 or Term 4 misses the earlier strand lessons (prorated fee covers only the lessons remaining); recorded lessons are the catch-up.
 
-SASMO-type problem moves worked in (from docs/sasmo/g1_analysis.md; no contest problem copied): digit-card puzzles and place value (Lessons 10, 11); making tens and compensation (13, 15); changing-step and sum-of-previous-two sequences (12); day-of-week and clock chunks (24); symbol equations and substitution (27); bar-model "times as many" and transfer (17, 22); counting ways and routes (30, 33); spatial moves (31); working backwards (4, 35). The analysis notes real gaps in place value, 2-digit mental arithmetic, changing sequences, visual perception, time and symbol equations; this plan addresses each in Go further or core. Four papers is a small sample, so no claim of contest readiness.
+SASMO-type problem moves worked in (from docs/sasmo/g1_analysis.md; no contest problem copied), each at Think harder and never Start here: digit-card puzzles and place value (Lessons 1, 3); making tens and compensation (5, 8); changing-step and sum-of-previous-two sequences (4); day-of-week cycles and clock chunks (23, 30); symbol equations and substitution (19); bar-model "times as many" and transfer (12, 18); counting ways, handshakes and routes (26, 33, 36); spatial moves and perception (34, 35); constraint grids (27); working backwards (10, 39). The analysis notes real gaps in place value, 2-digit mental arithmetic, changing sequences, visual perception, time and symbol equations; this plan addresses each as a core lesson or a Think harder item. Four papers is a small sample, so no claim of contest readiness; do not market Level 1 as SASMO preparation.
+
+## Revision after SASMO review
+
+Level 1 was written after the SASMO Grade 1 analysis and uses it inline; this block records where each gap now lives in the 1-40 numbering (the old 1-36 numbering is retired).
+
+| SASMO gap (g1_analysis.md section 4) | Home now | Tier |
+|---|---|---|
+| 1 Place value and digit puzzles (14 of 100) | Lessons 1, 3 | S core, puzzles at T |
+| 2 Two-digit mental arithmetic and multi-term sums (13) | Lessons 5, 6, 7, 8, 13 | S core, long sums at G |
+| 3 Changing-step sequences (10) | Lesson 4 | T and G |
+| 4 Visual perception and 3-D (14) | Lessons 34, 35 | T; S for easy spot-the-difference only |
+| 5 Time and calendar (7) | Lessons 21, 22, 23, 30 | S/T |
+| 6 Symbol equations and multiplication facts (about 11) | Lessons 15, 16, 19 | S/T |
+
+Books-analysis gaps (docs/books/word_problems_g1_g2_analysis.md): multi-step stories and reading traps in Lesson 10; price or size of one in Lesson 20; vocabulary (week, dozen, such) in Lessons 20 and 30; speed and accuracy of 2-digit regrouping is left to school. Gap left: reading-load for worded problems read independently; no lesson trains silent reading speed.
 
 ## 5. Assessment and progress
 
-**End-of-term check (about 20 minutes in the buffer week, 10 questions, privately returned):** 4 Start here, 4 Think harder, 2 Go further, one of each thread. Question types per term:
+**End-of-term check (about 20 minutes, in the last 20 minutes of Lesson 10 of the term or in the make-up slot, 10 questions, one per lesson, privately returned):** 4 Start here, 4 Think harder, 2 Go further, one of each thread. Question types per term (question n follows lesson n of the term):
 
 | Term | The 10 questions |
 |---|---|
-| 1 | Skip-count rule; a missing term; bond pair for 10 and 20; "=" balance; core of a repeating pattern, 10th place; one mystery-number step; a Venn or order clue; a cm measurement; reading a picture graph; coin ways (list) |
-| 2 | Tens and ones; compare two numbers; smallest from three cards; 100-square pattern; add by making ten; subtract by counting up; box number sentence; ordinal clue; a bar-strip story; odd/even claim and why |
-| 3 | Equal groups; a table fact; share 12; group 14; time on a clock; a duration; dollars and change; a picture equation; a times story; explain why with one example |
-| 4 | Half/quarter; shapes in a figure; copy on a grid; a view; draw 6 cm; count every way; a 1-to-2 graph; choose a tool; write a puzzle; explain a mistake |
+| 1 | Tens and ones; a number word or a number on a line; smallest from three cards; 100-square pattern or a growing-gap sequence; add by making ten; add or take away tens by jumps; subtract by counting up; a box number sentence or compensation; draw and measure to the nearest cm; a two-step story with one operation per step |
+| 2 | An ordinal clue (8th from the front); a bar-strip story or a transfer; a double or near double; an odd/even claim and why; equal groups; a table fact; share 12 and group 14; a times story; a picture equation; price of one from a group |
+| 3 | Time to the quarter hour; time to 5 minutes and am/pm; a duration; dollars and change; compare two prices; spend exactly $20; a small Latin square; a growing pattern table and the 20th term; find the mistake; a day-of-the-week clue |
+| 4 | Half/quarter; shapes in a figure; copy on a grid or count routes; a view or fold and punch; spot the odd one out; count every way; make a picture graph; read a 1-to-2 graph; choose a tool; write a puzzle or explain a mistake |
 
-**Parent report line per term** (what we saw, not a rank): T1 "Your child is learning to notice a pattern, test it and say why." T2 "Your child is learning to see numbers as tens and ones and to test a claim with an example." T3 "Your child is learning to give a reason, and to read time and money in real life." T4 "Your child is learning to choose a method and write a problem for others." Add one named strength and one next step from the tutor. No claim of exam outcomes, GEP or SASMO results.
+**Parent report line per term** (what we saw, not a rank): T1 "Your child is learning to see numbers as tens and ones, to notice patterns and to say why." T2 "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example." T3 "Your child is learning to give a reason, and to read time and money in real life." T4 "Your child is learning to choose a method and write a problem for others." Add one named strength and one next step from the tutor. A mid-year joiner gets a report line only for the lessons attended. No claim of exam outcomes, GEP or SASMO results.
 
 ## 6. Work needed to turn the plan into the full set
 
-Per lesson: tutor guide page, slide deck, workbook pages (A + D style) with key, question bank / Weekly Dose practice pages, and the end-of-term check. Existing build tools in hp/, deck/ and split/ are reused.
+Per lesson: tutor guide page, slide deck, workbook pages (A + D style) with key, question bank / Weekly Dose practice pages, and the end-of-term check. Existing build tools in hp/, deck/ and split/ are reused as tools; no holiday content is reused.
 
 | Item | Scope | Rough effort (a guess, not measured) |
 |---|---|---|
-| Term 1 | Adapt 9 existing lessons, apply audit fixes, rewrite 2 (L6, L7), add ruler practice | 15 to 20 hours |
-| Terms 2 to 4 | 27 new lessons: guide, deck, workbook, practice | 3 to 4 hours each, 80 to 110 hours |
-| Diagrams and kit (ten frames, hundred square, clocks, play money, grids) | New | 10 to 15 hours |
-| End-of-term checks and report lines (4) | New | 6 to 8 hours |
-| Tutor review and a trial lesson per term | Required | 8 to 12 hours |
-| **Year total** | | about 120 to 165 hours, about 4 to 5 working weeks of one full-time person; shorter only if lessons are drafted in parallel |
+| Terms 1 to 4 | 40 new lessons, none adapted: guide, deck, workbook, practice | 3 to 4 hours each, 120 to 160 hours |
+| Diagrams and kit (ten frames, hundred square, number lines, clocks, play money, grids, tens bundles) | New | 15 to 20 hours |
+| End-of-term checks and report lines (4) | New, 10 questions each | 8 to 10 hours |
+| Tutor review and a trial lesson per term, with extra review for the 9 "new topic" lessons and the flagged syllabus labels | Required | 12 to 16 hours |
+| **Year total** | | about 155 to 205 hours, about 4 to 5 working weeks at best and 5 to 7 more comfortably for one full-time person; shorter only if drafted in parallel |
+
+Build order: Term 1 first (it is the first lesson every holiday graduate meets), then the Term 3 time lessons and Term 2 multiplication (largest gaps), then Term 4.
 
 ## 7. Open questions for the owner
 
-1. Which term first, and when does Term 1 start relative to the school year? School terms do not run in the same order as ours.
-2. Can a child join at Term 2 or later, and is there a placement check?
-3. Is the group a closed cohort for the year or do places open each term?
-4. May lessons 13 and 14 show the written vertical algorithm, or only mental and place-value methods?
-5. Do we say "SASMO" to parents, or only "contest-style"? The analysis says do not market Level 1 as SASMO preparation.
-6. Is the second-level age band (ages 7-8, who are in Primary 2) catered for, or is this plan aimed at Primary 1 only?
-7. Price and length: is a 9-lesson term the right unit for fees?
-8. Do holiday-course children get a bridge into Term 2, and which Term 1 lessons count as already done?
-9. Homework: keep Weekly Dose practice or write a new term practice pack?
-10. Who checks the lessons: a tutor trial per term, or the owner?
+Answered and dropped (owner decisions of 22 Oct 2026): which term first and how holiday graduates enter (they follow the term calendar), mid-year entry (places open every term, prorated fee), closed cohort or open places, bridge from the holiday course (none: Term 1 is all new), a 5% discount for paying a term in full. KIV items for other levels (Level 5 lessons 28/29 merge, lesson 32 too full, secondary speed preview in lesson 15; Level 3 lessons 22/23 hand-drawn figures) do not touch this plan and stay open there.
+
+1. What is the term price? (The website still says S$65 a lesson, S$650 for 10; 10 lessons per term now.)
+2. Is there a placement check for a mid-year joiner, or just the warm-up and a tutor check in the first lesson?
+3. May lessons 5 to 7 show the written vertical algorithm, or only mental and place-value methods?
+4. Do we say "SASMO" to parents, or only "contest-style"? The analysis says do not market Level 1 as SASMO preparation.
+5. Is the second-level age band (ages 7-8, who are in Primary 2) catered for, or is this plan aimed at Primary 1 only?
+6. Homework: keep Weekly Dose practice or write a new term practice pack?
+7. Who checks the lessons: a tutor trial per term, or the owner? The nine "new topic" lessons (2, 6, 13, 22, 25, 27, 28, 29, 37) and the four added lessons need a syllabus check first.
+8. Is the order (numbers and arithmetic in Term 1, shapes and graphs not until Term 4) acceptable for a child whose school teaches shapes and graphs early? A child who joins in Term 4 relies on the warm-up.
+9. Make-up slots: how many holiday-class seats can be offered in exam periods, and is the end-of-term check taken inside the 10th lesson or at a separate time?
+10. Are the thin-evidence lessons 27 (Latin squares) and 35 (Spot It) worth a full lesson, or should they be an optional enrichment lesson that a tutor may swap for a synthesis lesson?
