@@ -52,7 +52,7 @@ put('p4l1-title',title_slide('p4l1-title','LESSON 1  •  WEEK 1','Factor Hunter
  'Thinking strategies taught today: MAKE A LIST IN ORDER, LOOK FOR A PATTERN and USE THE CLUES ONE AT A TIME. '
  'Materials: 36 square tiles or squared paper per pair, mini whiteboards, coloured pencils, a 1 to 50 number strip. '
  'Online: children cut 24 paper squares (or use squared paper) before the lesson and build rectangles on camera; the tutor marks the bus time line and the factor rainbow on the slides. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game: Fizz-Buzz ----------
 BW,BH,GX,GY=120,100,8,130

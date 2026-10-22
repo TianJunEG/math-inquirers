@@ -103,7 +103,7 @@ const L = {
       ['Using the same pattern, how many sticks do 10 triangles need? How many triangles can you make with exactly 41 sticks? Say how you know.', '21 sticks for 10 triangles (3 + 9 × 2, or 2 × 10 + 1). 41 sticks make 20 triangles (take away the 1 extra stick, then 40 ÷ 2). Continuing the list also works.']
     ],
     pic: 'tri',
-    whatIf: ['If 12 children each high-five every other child exactly once, how many high fives is that? Find a rule you could use for ANY number of children.', '66. With n children each high-fives (n − 1) others, but every high five is counted twice, so the number is n × (n − 1) ÷ 2. For 12 children: 12 × 11 ÷ 2 = 66. The table 1, 3, 6, 10, 15, 21 … also works.'],
+    whatIf: ['Find a quick rule for the number of high fives for ANY number of children. Use it for our group of 8, for a class of 30 and for 12 children.', '8 children: 28. 30 children: 435. 12 children: 66. With n children each high-fives (n − 1) others, but every high five is counted twice, so the number is n × (n − 1) ÷ 2. For 12 children: 12 × 11 ÷ 2 = 66. The table 1, 3, 6, 10, 15, 21 … also works.'],
     pose: 'Make up a growing pattern with dots or matchsticks. Draw figures 1, 2 and 3, and ask a partner for figure 10.',
     p1: 'Q1 (a) (b) and Q2 (a) (b)', take: 'Q1 (c) (d) and Q2 (c) (page 1); Q4 (b) and Q5 (page 2)',
     solo: 'Q3 and Q4 (a)', praise: 'Making a table of the first five figures got you unstuck.'

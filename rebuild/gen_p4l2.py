@@ -75,7 +75,7 @@ put('p4l2-title',title_slide('p4l2-title','LESSON 2  •  WEEK 1','Big Number Pu
  'Thinking strategies taught today: DRAW A NUMBER LINE, WORK BACKWARDS, MAKE A LIST IN ORDER and USE THE CLUES ONE AT A TIME. '
  'Materials: Digit cards 0 to 9 (one set per child), mini whiteboards, a place-value chart (ten thousands to ones), a blank number line strip. '
  'Online: children cut out paper digit cards before the lesson and move them on camera; the tutor marks the number lines on the slides. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: Place It Right (5 digits) ----------
 def dcards(digits,x0=0,y=6,w=96,h=124,gap=26,fill=YEL):

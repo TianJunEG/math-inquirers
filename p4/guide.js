@@ -172,30 +172,36 @@ L.lessons.forEach(l => {
   ps('Brain break', 'Brain break');
   doo([d.brk, 'Water and a toilet stop come FIRST (about one minute), then the game (about two minutes). Keep the whole break to ' + fm(P('Brain break').end - P('Brain break').start) + ' minutes. CLOCK CHECK at minute ' + fm(P('Brain break').end) + ': if you are more than 1.5 minutes behind, skip the next optional item (the “your turn” slide, or a second speaker-note question), never a check, the exit ticket or Looking back.']);
 
-  pushSeg('34–80 min', 'Worksheet (pairs, then alone)');
-  doo(['Minute 34: give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes 34 to 50: pairs work together on the first page (online, allow about 2 minutes to move into and out of breakout rooms, or run page 1 as a whole-group screen-share). Minutes 50 to 53: check page 1 together. Minutes 53 to 58: the short teaching before page 2. Minutes 58 to 76: each child works alone on the second page. Minutes 76 to 80: check page 2 together.']);
+  ps('Worksheet', 'Worksheet (pairs, then alone)');
+  doo(['Minute ' + fm(P('Worksheet').start) + ': give out the workbook. Read the title of Lesson ' + l.n + ' aloud. Say “Pairs first. Talk before you write.”', 'Minutes ' + to(WB[0].start, WB[0].end) + ': pairs work together on the first page (online, allow about 2 minutes to move into and out of breakout rooms, or run page 1 as a whole-group screen-share). Minutes ' + to(WB[1].start, WB[1].end) + ': check page 1 together. Minutes ' + to(WB[2].start, WB[2].end) + ': the short teaching before page 2. Minutes ' + to(WB[3].start, WB[3].end) + ': each child works alone on the second page. Minutes ' + to(WB[4].start, WB[4].end) + ': check page 2 together.', 'STANDING BUFFER: the last ' + fm(BUF.end - BUF.start) + ' minutes of the page-2 block (minutes ' + to(BUF.start, BUF.end) + ') are not given to any question. If earlier parts ran long, page 2 starts late and the buffer is spent first, then the choice questions at the end of the page. Never shorten the checks, the exit ticket or Looking back. Do not mention the buffer to the children.'].concat(l.gaps.plan));
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Choosing: after question 3 on page 1 every child may carry on or try Think harder. Make the offer to the whole group, never to one child by name, and never by private message. The Think harder page, the Go further page and the Investigation have no fixed time slot: any child may choose them when they have finished Start here, and they are good for take-home. Page 2 is on your own and has a printed note about which questions to do first, so nobody has to rush. Every lesson has an Investigation on page 3, with an easy first step and a model answer in the answer key below: it has several valid answers, so ask “How did you decide?” and “Is there another way?” rather than marking it right or wrong.']);
+  doo(['Choosing (printed on page 1: “' + l.gaps.p1 + '”): every child may carry on or try Think harder. Make the offer to the whole group, never to one child by name, and never by private message. The Think harder page, the Go further page and the Investigation have no fixed time slot: any child may choose them when they have finished Start here, and they are good for take-home. Page 2 is on your own and has a printed note about which questions to do first, so nobody has to rush. Every lesson has an Investigation on page 3, with an easy first step and a model answer in the answer key below: it has several valid answers, so ask “How did you decide?” and “Is there another way?” rather than marking it right or wrong.']);
   G.push(h2('Think harder and Go further questions'));
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the Think harder page and the Go further page in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
-  pushSeg('80–85 min', 'Talk time');
-  doo(['Bring the group back to a circle (or camera on, mics on). Ask for volunteers first. No cold-calling, nobody has to speak, and passing is always fine. Never keep a tally or scoreboard in front of the group. Praise the reasons, not the speed.']);
+  ps('Talk time', 'Talk time');
+  doo(['Bring the group back to a circle (or camera on, mics on). Pair talk is one minute and needs no breakout room: children tell the grown-up beside them, or write one sentence. Then ask for volunteers first. No cold-calling, nobody has to speak, and passing is always fine. Never keep a tally or scoreboard in front of the group. Praise the reasons, not the speed.']);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+  if (s.talkWeekly) doo(['Moved to the Weekly Dose of Thinking Math (not asked in class): ' + s.talkWeekly.join(' ') + ' ' + (s.talkWeeklyAns || '')]);
 
-  pushSeg(l.n === 10 ? '85–87 min' : '85–88 min', 'Exit ticket and closing');
+  ps('Exit ticket', 'Exit ticket and closing');
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
-  pushSeg(l.n === 10 ? '87–89 min' : '88–90 min', 'Looking back (2 minutes)');
-  say(['Turn to page 3, to the small box called Looking back. You can write, tick or pass: you choose. Finish what you like: Something I did well, The hardest part was, What helped me, One thing I could try next (tick a choice, write your own, or pass). Two minutes, no talking.', 'Model one yourself first: “' + l.gaps.reflect + '” Ticking “I am still stuck” is a good thing to do: it tells me where to help.']);
+  ps('Looking back', 'Looking back (2 minutes of writing)', 2);
+  say(['Turn to page 3, the Looking back box. Write, tick or pass. Two minutes, no talking.', 'Model one yourself first: “' + l.gaps.reflect + '” Ticking “I am still stuck” is a good thing to do: it tells me where to help.']);
   doo(['Run it in two minutes. It is never collected, never graded, never corrected and never shown to the group. You may look at a child’s box only if the child holds it to your camera. Do not ask anyone to read theirs aloud; if a child wants to share, take one volunteer and thank them for the strategy. If “I am still stuck” is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a direct message. Praise the strategy (“you drew it”, “you asked for help”), not the speed or the score.']);
+  if (l.n === 10) {
+    ps('Certificates and goodbye', 'Certificates and goodbye');
+    say(s.farewell);
+    doo(['Whole group, no per-child comments. Before the lesson, write one personal sentence for each child: certificates and stamped journals are posted or sent with it after the lesson, and the sentence is never read out. Show the last slide. Three volunteers each name one puzzle and one way in (about 20 seconds each). Say one sentence about the group, then goodbye. Give parents the one-page summary from this guide.']);
+  }
   G.push(h2('Extension: for any child who wants more'));
   G.push(tx(l.extension));
   G.push(h2('Answer key (workbook)'));
@@ -214,7 +220,7 @@ G.push(tx('After each exit ticket, write S (secure: correct and can explain), D 
 { const ws = [2000, ...Array(10).fill(580), 2100]; const head = [hd('Student', ws[0]), ...Array.from({ length: 10 }, (_, i) => hd('L' + (i + 1), 580)), hd('Notes', ws[11])];
   G.push(tbl(ws, [row(head), ...Array.from({ length: 10 }, () => row(ws.map((w, i) => cell('', w, { h: 150 }))))])); }
 G.push(h2('Ending the program'));
-['In Lesson 10, give each child a certificate and their completed inquiry journal.', 'Send parents a short message through the approved channel: one thing their child did well, and one thing to keep practising.', 'Delete or hand over all Student Data within 7 days after the last lesson (this is in the tutor agreement).'].forEach(s => G.push(bu(s)));
+['In Lesson 10, send or post each child a certificate and their completed inquiry journal with a personal sentence you wrote before the lesson (the live close is whole-group, 2.5 minutes).', 'Send parents a short message through the approved channel: one thing their child did well, and one thing to keep practising.', 'Delete or hand over all Student Data within 7 days after the last lesson (this is in the tutor agreement).'].forEach(s => G.push(bu(s)));
 
 /* ---------- Tutor checklist ---------- */
 G.push(h1('Tutor checklist', true));

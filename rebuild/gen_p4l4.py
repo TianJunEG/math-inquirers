@@ -93,7 +93,7 @@ put('p4l4-title',title_slide('p4l4-title','LESSON 4  •  WEEK 2','Fraction Fron
  'Thinking strategies taught today: DRAW A MODEL (fraction bars, number lines, bar models), MAKE A LIST IN ORDER and COMPARE WITH A BENCHMARK (one half). '
  'Materials: paper strips (one per child, to fold into halves, quarters and eighths), paper circles to cut into quarters, 30 counters, mini whiteboards and markers. '
  'Online: before the lesson children cut out 3 paper circles and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: more or less than a half ----------
 cards=[(3,8,'Less: half of 8 is 4'),(5,9,'More: half of 9 is 4½'),(6,12,'Exactly a half'),(7,10,'More: half of 10 is 5'),(2,5,'Less: half of 5 is 2½'),(4,7,'More: half of 7 is 3½')]

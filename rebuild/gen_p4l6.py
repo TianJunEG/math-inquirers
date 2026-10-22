@@ -95,7 +95,7 @@ put('title',title_slide(f'{P}-title','LESSON 6  •  WEEK 3','Angle Turns','Angl
  'Thinking strategies today: ESTIMATE FIRST (compare with 90° and 180°), COUNT THE TURN (12 clock spaces, 8 compass steps), WORK IN ORDER (every angle in a fan), WORK BACKWARDS (undo a turn). '
  'Materials: A clear 180° protractor and a 30 cm ruler for each child (not printed in the kit: families bring one from home; keep two or three spares), a paper clock with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall. '
  'Online: children use their own protractor and a paper clock at home; the screen is North for the turning games, and children stand and turn on camera. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game ----------
 g=compass(260,260,190,hi=('N',))

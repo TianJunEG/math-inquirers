@@ -82,7 +82,7 @@ put('p4l8-title',title_slide('p4l8-title','LESSON 8  •  WEEK 4','Symmetry and 
  'Thinking strategies taught today: FOLD IT IN YOUR HEAD (base, walls, lid), TEST EVERY CASE, and COUNT THE SQUARES FROM THE LINE. '
  'Materials: squared paper (2 cm squares), scissors, sticky tape, 6 paper squares per child, a dice, a small mirror (optional), mini whiteboards, coloured pencils. '
  'Online: children cut out 6 paper squares before the lesson and fold on camera; the tutor clicks to reveal each fold on the slides and shades the grids. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up ----------
 LET={'H':['#.#','#.#','###','#.#','#.#'],'T':['###','.#.','.#.','.#.','.#.'],'E':['###','#..','###','#..','###'],

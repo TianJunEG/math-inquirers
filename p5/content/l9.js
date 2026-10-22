@@ -97,19 +97,19 @@ module.exports = {
 
   deck: {
     today: 'See how a pattern grows, say the rule for any figure in words, work backwards from a total, and solve problems by supposing.',
-    warmGame: 'Guess My Rule. Call out a number; the tutor puts it through a secret two-step machine and says what comes out. Test your idea on the next number before you say the rule in words. 3 rounds.',
-    warmQs: [['7, 11, 15, 19, __, __', '23, 27'], ['1, 4, 9, 16, 25, __', '36'], ['2, 6, 18, 54, __', '162'], ['The 20th even number', '40'], ['4 × 25 + 3', '103']],
-    expSetup: ['Guess first: if all 8 of us high-five everyone else once, how many high fives is that?', 'Start small: 2 children, then 3, then 4. Draw each child as a dot and each high five as a line.', 'Make a table: number of children and number of high fives.', 'Look for a pattern. Use it to find the number for 8 children.'],
+    warmGame: 'Guess My Rule. Call out a number; the tutor puts it through a secret two-step machine and says what comes out. Test your idea on the next number before you say the rule in words. Play 1 round.',
+    warmQs: [['7, 11, 15, 19, __, __', '23, 27'], ['1, 4, 9, 16, 25, __', '36'], ['2, 6, 18, 54, __', '162'], ['The 20th even number', '40']],
+    expSetup: ['Guess first: if all 8 of us high-five everyone else once, how many high fives is that?', 'Start small: 2 children, then 3, then 4. Draw each child as a dot and each high five as a line.', 'Make a table: number of children and number of high fives. Stop at 6 children.', 'Look for a pattern in the table. What does each new child add?'],
     expPic: 'dots for 2, 3 and 4 children joined by lines, one line for each high five (1, 3 and 6 lines).',
-    expAsk: [['How many high fives for 5 children?', '10. The table goes 1, 3, 6, 10: each new child high-fives everyone already there (add 2, then 3, then 4).'], ['How many for our group of 8?', '28 (10 + 5 = 15, + 6 = 21, + 7 = 28).'], ['How many for a class of 30? Is there a quick way?', '435. Each of the 30 children high-fives 29 others: 30 × 29 = 870, but that counts every high five twice, so 870 ÷ 2 = 435.']],
+    expAsk: [['How many high fives for 5 children?', '10. The table goes 1, 3, 6, 10: each new child high-fives everyone already there (add 2, then 3, then 4).'], ['How many for 6 children?', '15 (10 + 5).']],
     mini1: { head: 'Matchstick squares in a row: 4, 7, 10 sticks. Figure 25? Which figure uses 61 sticks?', body: ['Each new square shares a side, so it adds 3 sticks.', 'Rule in words: sticks = 3 × figure number + 1. Figure 25: 3 × 25 + 1 = 76.', 'Backwards: 61 − 1 = 60, 60 ÷ 3 = 20.'], ans: 'Figure 25 has 76 sticks; 61 sticks is figure 20. Check: 3 × 20 + 1 = 61.' },
     mini2: { head: 'A row of yellow tiles with a grey border: figure 1 has 8 grey tiles, figure 2 has 10, figure 3 has 12. How many grey tiles in figure 12?', body: ['Way 1: a top row and a bottom row of (figure + 2) tiles, and 1 tile at each end: 2 × figure number + 6.', 'Way 2: the whole rectangle is 3 rows of (figure + 2) tiles; take away the yellow tiles: 3 × 14 − 12.', 'Both ways: 30.'], ans: 'Figure 12 has 30 grey tiles. Two ways of seeing, one answer.' },
     keyHead: 'Key idea: find the rule, say it in words',
     keyBig: 'See what stays the same and what grows. Say the rule in words: sticks = 3 × figure number + 1.',
     keySmall: 'Check the rule on every figure. To go backwards, undo the steps in reverse: take away, then divide.',
     brk: 'Pattern moves: clap, clap, stamp, clap, clap, stamp … Do 12 moves together. Then: what is the 20th move? The 30th?',
-    ws1: 'Page 1, in pairs: Q1 tables and chairs, Q2 matchstick houses.',
-    ws2: 'Page 2, on your own: Q3 guess and check with a table, Q4 coins by supposition, Q5 the quiz with marks taken away.'
+    ws1: 'Page 1, in pairs: Q1 (a) (b) tables and chairs, Q2 (a) (b) matchstick houses (Q1 (c) (d) and Q2 (c) are take-home).',
+    ws2: 'Page 2, on your own: Q3 guess and check with a table, Q4 (a) coins by supposition (Q4 (b) and Q5, the quiz with marks taken away, are take-home).'
   },
 
   qbank: {
@@ -174,7 +174,7 @@ module.exports = {
     W.push(H.sub('b', [TKP, 'How many 50¢ coins does Siti have? Show your working and check.'], { after: 20 }));
     W.push(...H.lines(2));
     // Q6 marks taken away
-    W.push(H.q(5, [TKQ, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
+    W.push(H.q(5, [TKQ, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.'], { keepNext: true }));
     W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
     W.push(...H.lines(2));
     W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong? Start here: all correct scores 100. Each wrong answer takes off 7. Write the scores for 0, 1, 2, 3 wrong: 100, ____, ____, ____. Is 80 in your list?', { after: 20 }));

@@ -76,7 +76,7 @@ put('p4l7-title',title_slide('p4l7-title','LESSON 7  •  WEEK 4','Area Architec
  'Thinking strategies taught today: SPLIT IT or TAKE AWAY, PUSH THE STEPS OUT, and MAKE A LIST IN ORDER. '
  'Materials: 1 cm square tiles or 24 paper squares per child, 1 cm grid paper, scissors, a 30 cm ruler, mini whiteboards, a paper strip 8 squares by 2 squares for cutting. '
  'Online: children cut out paper squares and 1 cm grid strips before the lesson and build on camera; the tutor draws on the grid figures on the slides. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game ----------
 jobs=[('A fence round a school field','P','goes round the edge'),('Carpet for a bedroom floor','A','covers the inside'),('Lace round a tablecloth','P','goes round the edge'),

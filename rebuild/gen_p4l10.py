@@ -48,7 +48,7 @@ put('p4l10-title',title_slide('p4l10-title','LESSON 10  •  WEEK 5','Challenge 
  'Thinking strategies today: GUESS AND CHECK WITH A TABLE, SUPPOSE (heads and legs), WORK BACKWARDS, LOGIC GRID, DRAW IT. '
  'Materials: Four puzzle cards (A to D) for the explore stations, mini whiteboards, counters or cubes, certificates, stamps. '
  'Online: pairs go to breakout rooms with one puzzle card each and report back; the tutor ticks and crosses the logic grid on the slide as children call out. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: who am I? ----------
 CW,CH=56,46

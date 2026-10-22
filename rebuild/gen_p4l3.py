@@ -70,7 +70,7 @@ put('p4l3-title',title_slide('p4l3-title','LESSON 3  •  WEEK 2','Operation Det
  'Thinking strategies taught today: ESTIMATE, TEST AND ADJUST (guess and check), WORK BACKWARDS and DRAW A BAR MODEL. '
  'Materials: mini whiteboards and markers; paper number cards 0 to 9; sign cards +, −, ×, ÷ and two pairs of bracket cards per child; scrap paper for bar models. '
  'Online: children write on whiteboards and hold them up to the camera; before the lesson they cut out the sign and bracket cards so they can move them on camera in the explore task. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game: target numbers ----------
 g=tiles([('2','n'),('4','n'),('5','n'),('9','n')],0,10,110,130,30,70)+tiles([('+','s'),('−','s'),('×','s'),('÷','s')],620,30,90,90,24,56)

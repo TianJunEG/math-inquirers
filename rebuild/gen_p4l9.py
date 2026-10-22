@@ -83,7 +83,7 @@ put('p4l9-title',title_slide('p4l9-title','LESSON 9  •  WEEK 5','Data Detectiv
  'Thinking strategies today: READ THE SCALE FIRST, LIST THE CHANGES, and WORK FROM THE TOTAL. '
  'Materials: Mini whiteboards, a ruler and two coloured pencils per child, printed blank graph grids (or squared paper), the queue table for the explore task. '
  'Online: children use a printed blank grid or squared paper and hold it up to the camera; the tutor plots on the slide graphs while children call out where each point goes. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: which graph tells the story ----------
 def mini(kind):

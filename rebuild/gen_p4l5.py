@@ -73,7 +73,7 @@ put('title',title_slide(f'{P}-title','LESSON 5  •  WEEK 3','Decimal Detectives
  'Thinking strategies today: ZOOM IN (what is one step worth?), LINE UP THE POINTS, MAKE A LIST IN ORDER, DRAW A BAR MODEL. '
  'Materials: Digit cards 0 to 9 and a decimal point card for each child, a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money. '
  'Online: children cut out paper digit cards and a paper decimal point before the lesson and move them on camera; the tutor marks the zoom-in number lines on the slides. '
- 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).')
+ 'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game ----------
 g=''
