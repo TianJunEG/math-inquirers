@@ -175,8 +175,8 @@ module.exports = {
     const w4 = [1500, 1000, 1700, 1700];
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     return [
-      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9.   The average (mean) is the total shared equally.', { before: 0, keepNext: true }),
-      H.sub('a', 'What is the total?   ________          (b)  What is the mean?   ________'),
+      H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 0, keepNext: true }),
+      H.sub('a', 'What is the total?   ________          (b)  The average (mean)?   ________'),
       H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }),
       H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____'),
       H.q(2, 'Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14.', { keepNext: true }),

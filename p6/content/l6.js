@@ -186,7 +186,7 @@ module.exports = {
       H.tbl([5200, 4700], [H.row([H.cell('<div>' + diff + '</div>', 5200, { h: 20 }), H.cell('<div>' + py + '</div>', 4700, { h: 20 })])]),
       H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
       H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
-      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
+      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice. (A die shows 1 to 6. A double is when both dice show the same number.)', { keepNext: true }),
       H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
         H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])
     ];

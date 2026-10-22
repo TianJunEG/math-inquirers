@@ -110,7 +110,7 @@ module.exports = {
     ],
     challenge: [
       { q: 'I am a 2-digit number. When I am divided by 3, by 4 or by 5, the remainder is always 2. What number am I?', a: '62 (60 is in the 3, 4 and 5 tables; 60 + 2 = 62; the next one, 122, has 3 digits)' },
-      { q: 'A box has more than 30 but fewer than 50 chocolates. They can be shared equally among 2, 3, 4 or 6 children with none left over. Find all the numbers of chocolates there could be.', a: '36 and 48 (numbers in the 12 times table)' },
+      { q: 'A box has more than 30 but fewer than 100 chocolates. They can be shared equally among 2, 3, 4 or 6 children with none left over. When they are shared among 5 children, 2 are left over. How many chocolates are there?', a: '72 (the numbers in the 12 times table between 30 and 100 are 36, 48, 60, 72, 84, 96; only 72 leaves remainder 2 when divided by 5: 72 = 14 × 5 + 2)' },
       { q: 'A number is divided by 6. The answer and the remainder are the same number, and it is not 0. Find all the numbers it could be.', a: '7, 14, 21, 28 and 35 (1 r 1, 2 r 2, 3 r 3, 4 r 4, 5 r 5; the remainder cannot be 6 or more)' },
       { q: 'Ben counts his marbles in 5s and has 3 left over. He counts them in 7s and has 3 left over. He has more than 50 and fewer than 100 marbles. How many does he have?', a: '73 (35 is in both tables; 35 + 3 = 38 is too small; 70 + 3 = 73)' },
       { q: 'When 100 is divided by a 1-digit number, the remainder is 1. Find all the numbers it could be.', a: '3 and 9 (100 ÷ 3 = 33 r 1, 100 ÷ 9 = 11 r 1; 99 is only in the 1, 3 and 9 tables, and dividing by 1 leaves no remainder)' },
@@ -156,6 +156,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('b', 'A number between 60 and 70 is divided by 8. The remainder is as big as it can be. What is the number?   ____'));
     W.push(H.q(6, '(if time) At a class party, children sit at tables. If 6 children sit at each table, 5 children have no seat. If 7 children sit at each table, every seat is filled and nobody is left over.', { keepNext: true }));
+    W.push(H.p('Hint: fill in the table. Each new table adds 6 children in the first row and 7 in the second. Look for the column where both rows show the same number.', { after: 40, keepNext: true }));
     const tw = [3300, 1100, 1100, 1100, 1100, 1100, 1100];
     W.push(H.tbl(tw, [
       H.row([H.cell('Number of tables', tw[0], { bold: true, fill: 'D9D9D9', size: 22 }), ...[1, 2, 3, 4, 5, 6].map(i => H.cell(String(i), tw[i], { bold: true, fill: 'D9D9D9' }))]),

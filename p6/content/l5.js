@@ -196,7 +196,7 @@ module.exports = {
       ...H.lines(1),
       H.q(5, 'Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
       routes,
-      H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4.', { keepNext: true }),
+      H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4. (Hint: a handshake between friend 2 and friend 5 is the same as one between 5 and 2, so count each pair once, when a is smaller than b.)', { keepNext: true }),
       planAndPy
     ];
   }

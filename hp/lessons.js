@@ -44,7 +44,7 @@ module.exports = {
         ['Q3', '(a) 20 and 20  (b) 20 and 20  (c) 8, 11, 5'],
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
         ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
-        ['Q6', '4 and 6.  Challenge: 4 and 8.'],
+        ['Q6', '4 and 6.  If you have time: 4 and 8.'],
         ['Think harder slide', '1) 10 and 16  2) 8  3) 6 pairs']
       ]
     },

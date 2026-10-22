@@ -106,12 +106,12 @@ for i in range(12):
     ex+=f'<g transform="rotate({r} {x+28} {y+28})">'+R(x,y,56,56,SKY,NAVY,3)+'</g>'
 ex+=ARW(470,120,600,120,TEAL,8,26)
 tx=640; cw_=190
-for j,hd in enumerate(['Length','Breadth','Perimeter']):
+for j,hd in enumerate(['Length','Width','Perimeter']):
     ex+=R(tx+j*cw_,20,cw_,54,YEL,NAVY,3)+T(tx+j*cw_+cw_/2,57,hd,28)
     for k in range(3): ex+=R(tx+j*cw_,74+k*50,cw_,50,WHITE,NAVY,3)
 ex+=R(1250,40,320,150,SOFT,NAVY,3,14)+T(1410,100,'Use ALL 12.',32)+T(1410,150,'Every rectangle?',30,TEAL)
-exsvg=SV(1600,236,ex,'Twelve loose squares, an arrow, and an empty table with columns Length, Breadth and Perimeter')
-steps='<ol style="font-size:34px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:4px;margin:0"><li>Take 12 squares.</li><li>Make a rectangle using ALL 12 squares.</li><li>Record its length, breadth and perimeter in a table.</li><li>Make every different rectangle. Which has the longest perimeter?</li></ol>'
+exsvg=SV(1600,236,ex,'Twelve loose squares, an arrow, and an empty table with columns Length, Width and Perimeter')
+steps='<ol style="font-size:34px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:4px;margin:0"><li>Take 12 squares.</li><li>Make a rectangle using ALL 12 squares.</li><li>Record its length, width and perimeter in a table.</li><li>Make every different rectangle. Which has the longest perimeter?</li></ol>'
 body=h2('Explore: what to do')+card(chip('EXPLORE')+steps,extra='padding:22px 40px')+card(exsvg,extra='padding:14px 32px')
 put(PFX+'explore1',S_(PFX+'explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs (or each child online) build rectangles with exactly 12 squares and fill in the table on a whiteboard or squared paper. Predict first: "Will every rectangle have the same perimeter?" Remind: a rectangle turned round is the same rectangle. Hints: "Put 2 squares in each row. How many rows?" "Run your finger round the edge and count every side you pass." Ready for more: "Can you make a 12-square rectangle with a perimeter of 20 cm?" (No.) Online: cut squares from squared paper, or just draw the rectangles on squared paper.'))
 
@@ -121,19 +121,19 @@ put(PFX+'explore2',cards_slide(PFX+'explore2','15–25 MIN','Explore: talk about
 
 # ================= 6. teach 1: list in order =================
 body=h2('Same fence, different gardens')+stitle('Ravi has 20 m of fence for a rectangular garden. Each side is a whole number of metres. Which gardens can he make?')
-body+=step(1,'Half the fence goes on one length and one breadth: 20 ÷ 2 = 10 m. So length + breadth = 10.',top=330,size=34)
+body+=step(1,'Half the fence goes on one length and one width: 20 ÷ 2 = 10 m. So length + width = 10.',top=330,size=34)
 W3=[220,220,300]
-body+=trow(128,460,['Breadth','Length','Area'],W3,None,True,32)
+body+=trow(128,460,['Width','Length','Area'],W3,None,True,32)
 for k,(b_,l_) in enumerate([(1,9),(2,8),(3,7),(4,6),(5,5)]):
     body+=trow(128,532+k*72,[f'{b_} m',f'{l_} m',f'{b_*l_} m²'],W3,'rise',False,32)
-body+=soft(1010,460,782,'Step 2. List in order: breadth 1, 2, 3 … Stop at 5 and 5. After that the gardens are the same ones turned round.',32)
+body+=soft(1010,460,782,'Step 2. List in order: width 1, 2, 3 … Stop at 5 and 5. After that the gardens are the same ones turned round.',32)
 body+=answer(1010,720,782,'5 gardens. Same fence, different areas. Biggest: 5 m by 5 m = 25 m²')
-put(PFX+'teach1',S_(PFX+'teach1','25–27 MIN',body,'Teach heuristic 1: make a list in order. Click 1: half the fence. Ask: "Why half?" (The fence goes length, breadth, length, breadth: one length and one breadth is half of it.) Clicks 2 to 6: build the table row by row; children call out each row. Click 7: the stop rule. Click 8: the answer. '
- 'Think-aloud: "If I guess gardens at random I might miss one or write one twice. So I start with breadth 1 and go up by 1 each time. When breadth and length are both 5 I stop, because 6 and 4 is just 4 and 6 turned round." Point at the Area column: "Same fence, but the areas go 9, 16, 21, 24, 25. The closer to a square, the bigger the area." This is a parallel example: the worksheet uses 18 m.'))
+put(PFX+'teach1',S_(PFX+'teach1','25–27 MIN',body,'Teach heuristic 1: make a list in order. Click 1: half the fence. Ask: "Why half?" (The fence goes length, width, length, width: one length and one width is half of it.) Clicks 2 to 6: build the table row by row; children call out each row. Click 7: the stop rule. Click 8: the answer. '
+ 'Think-aloud: "If I guess gardens at random I might miss one or write one twice. So I start with width 1 and go up by 1 each time. When width and length are both 5 I stop, because 6 and 4 is just 4 and 6 turned round." Point at the Area column: "Same fence, but the areas go 9, 16, 21, 24, 25. The closer to a square, the bigger the area." This is a parallel example: the worksheet uses 18 m.'))
 
 # ================= 7. try 1 =================
 put(PFX+'try1',foot(try_slide(PFX+'try1','27–28 MIN','Your turn: list in order','Whiteboards. Halve the perimeter first.',[('a','Perimeter 12 cm, whole-cm sides. How many rectangles?','3'),('b','Which of those rectangles has the biggest area?','3 by 3: 9 cm²'),('c','A rectangle has perimeter 14 cm and area 12 cm². Its sides?','4 cm and 3 cm')],
- 'Whiteboards together, then click. a) Length + breadth = 6: 5 and 1, 4 and 2, 3 and 3. That is 3 rectangles. b) Areas 5, 8, 9 cm²: the 3 by 3 square is biggest. c) Length + breadth = 7: list 6 and 1 (area 6), 5 and 2 (10), 4 and 3 (12). So 4 cm and 3 cm. Ask a child to explain how the list helped in c.',size=36)))
+ 'Whiteboards together, then click. a) Length + width = 6: 5 and 1, 4 and 2, 3 and 3. That is 3 rectangles. b) Areas 5, 8, 9 cm²: the 3 by 3 square is biggest. c) Length + width = 7: list 6 and 1 (area 6), 5 and 2 (10), 4 and 3 (12). So 4 cm and 3 cm. Ask a child to explain how the list helped in c.',size=36)))
 
 # ================= 8. teach 2: push the steps out (grid) =================
 c=100; o=40
@@ -224,9 +224,9 @@ body+=soft(128,760,1664,'The rectangle\'s area is only 9 × 3 = 27 cm². Same pe
 put(PFX+'teachsq',S_(PFX+'teachsq','40–41 MIN',body,'Teach before worksheet page 1 (Q3 asks the same kind of question with different numbers). Click through the steps. Ask before step 2: "What do we know about the sides of a square?" (all 4 the same). Think-aloud: "Same perimeter means the same fence. I find the fence of the rectangle, then share it equally among the 4 sides of the square." Point out the link to teach 1: the square has the bigger area.'))
 
 # ================= 15/16. page 1 =================
-put(PFX+'ws1',preview(PFX+'ws1','41–52 MIN','Worksheet page 1: with your partner',[('Q1','Area and perimeter on a grid. Then compare the four figures.'),('Q2','Every garden with an 18 m fence. Halve it, then list in order.'),('Q3','A square with the same perimeter as a rectangle.')],'Stuck? Count the edges with your pencil tip, and write cm² for area.','Minutes 41 to 52. Walk around. Ask "How do you know?" before giving any help. Q1: check children count edges, not squares, for the perimeter, and push out where they can (B is a staircase). Q2: "What do length and breadth add up to?" (9).'))
+put(PFX+'ws1',preview(PFX+'ws1','41–52 MIN','Worksheet page 1: with your partner',[('Q1','Area and perimeter on a grid. Then compare the four figures.'),('Q2','Every garden with an 18 m fence. Halve it, then list in order.'),('Q3','A square with the same perimeter as a rectangle.')],'Stuck? Count the edges with your pencil tip, and write cm² for area.','Minutes 41 to 52. Walk around. Ask "How do you know?" before giving any help. Q1: check children count edges, not squares, for the perimeter, and push out where they can (B is a staircase). Q2: "What do length and width add up to?" (9).'))
 put(PFX+'ws1ans',checkrows(PFX+'ws1ans','52–54 MIN','Page 1: check together',[('Q1','A: 8 cm², 12 cm.  B: 8 cm², 14 cm.  C: 9 cm², 12 cm.  D: 5 cm², 12 cm.'),('Q1 a, b','a) A and B: same area 8 cm².   b) A, C and D: all 12 cm.'),('Q2','8 by 1: 8 m²,  7 by 2: 14 m²,  6 by 3: 18 m²,  5 by 4: 20 m².  Biggest: 5 m by 4 m.'),('Q3','20 cm round the rectangle, so the square has 5 cm sides: 5 × 5 = 25 cm².')],
- 'Click each answer after a pair explains theirs. Q1: B pushes out to a 5 by 2 rectangle: 5 + 2 + 5 + 2 = 14. D has a dent: pushing out gives a 3 by 2 rectangle (10 cm), plus the 2 walls of the dent: 12 cm. Q1b is surprising: three very different figures, one perimeter. Q2: length + breadth = 9. Q3: 7 + 3 + 7 + 3 = 20, 20 ÷ 4 = 5.',lw=230,size=32,gap=140))
+ 'Click each answer after a pair explains theirs. Q1: B pushes out to a 5 by 2 rectangle: 5 + 2 + 5 + 2 = 14. D has a dent: pushing out gives a 3 by 2 rectangle (10 cm), plus the 2 walls of the dent: 12 cm. Q1b is surprising: three very different figures, one perimeter. Q2: length + width = 9. Q3: 7 + 3 + 7 + 3 = 20, 20 ÷ 4 = 5.',lw=230,size=32,gap=140))
 
 # ================= 17. teach before page 2: add one square =================
 c=70
@@ -281,7 +281,7 @@ put(PFX+'talk',S_(PFX+'talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk fo
 
 # ================= 25. exit =================
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 8 cm². Length + breadth = 12 ÷ 2 = 6, so the breadth is 2 cm; 4 × 2 = 8. Children who write 48 multiplied 12 × 4; children who write 8 cm found the breadth as 12 − 4. Extension: find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (6 rectangles; 6 by 6, 36 cm²)'))
+put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 8 cm². Length + width = 12 ÷ 2 = 6, so the width is 2 cm; 4 × 2 = 8. Children who write 48 multiplied 12 × 4; children who write 8 cm found the width as 12 − 4. Extension: find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (6 rectangles; 6 by 6, 36 cm²)'))
 
 # ---------- write ----------
 order=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','we2','try2','teach3','key','break','teachsq','ws1','ws1ans','teachadd','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']

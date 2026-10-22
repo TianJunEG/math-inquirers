@@ -61,7 +61,7 @@ put('p3l9-warm1',sec('p3l9-warm1','0–5 MIN',body,
  'Quick finisher: "Put these in order: 1 m, 90 cm, 1 km." (90 cm, 1 m, 1 km). Watch for children who mix up mass and volume units (kg for a drink).'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','1 m 40 cm = __ cm','140 cm'),('2.','3 kg = __ g','3000 g'),('3.','2 ℓ 50 ml = __ ml','2050 ml'),('4.','1 hour 20 minutes = __ minutes','80 min'),('5.','2:00 p.m. in 24-hour time','14:00')]
+qs=[('1.','1 m 40 cm = __ cm','140 cm'),('2.','3 kg = __ g','3000 g'),('3.','2 ℓ 50 ml = __ ml','2050 ml'),('4.','1 hour 20 minutes = __ minutes','80 min'),('5.','2:00 pm in 24-hour time','14:00')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
 put('p3l9-warm2',sec('p3l9-warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, take answers, then click to show. Answers: 1) 140 cm (100 + 40). 2) 3000 g. 3) 2050 ml: watch for 250 ml, the most common mistake; 2 ℓ is 2000 ml and 50 more. 4) 80 minutes (60 + 20), not 120. 5) 14:00 (2 + 12). Ask after 3: "Why is it not 250?"'))
 
@@ -128,7 +128,7 @@ def tline(ticks,arcs=(),w=1664,h=230,only_arcs=False,aria='Time line'):
     return svg(w,h,b,aria)
 X=[110,420,1250,1554]
 ticks=list(zip(X,['9:45','10:00','11:00','11:20']))
-body=h2('Draw a time line: jump to the next o’clock')+card(p('How long is it from 9:45 a.m. to 11:20 a.m.?',40,700))
+body=h2('Draw a time line: jump to the next o’clock')+card(p('How long is it from 9:45 am to 11:20 am?',40,700))
 body+=pin(128,360,1664,tline(ticks,aria='Time line from 9:45 to 11:20'))
 for i,(a,b_,lab) in enumerate([(X[0],X[1],'15 min'),(X[1],X[2],'1 h'),(X[2],X[3],'20 min')]):
     body+=pin(128,360,1664,tline(ticks,[(a,b_,lab)],only_arcs=True,aria=f'Jump of {lab}'),'fade')
@@ -142,20 +142,20 @@ put('p3l9-teach2',sec('p3l9-teach2','30–32 MIN',body,
 # ---------- 10. worked example: end time ----------
 X=[110,560,1100,1554]
 ticks=list(zip(X,['2:50','3:00','4:00','4:35']))
-body=h2('Worked example: when does it end?')+card(p('A movie starts at 2:50 p.m. and lasts 1 h 45 min. When does it end?',40,700))
+body=h2('Worked example: when does it end?')+card(p('A movie starts at 2:50 pm and lasts 1 h 45 min. When does it end?',40,700))
 body+=step(1,'Split the 45 minutes: 10 minutes takes us to 3:00, and 35 minutes are left.',top=360,size=34)
 body+=pin(128,470,1664,tline(ticks[:1]+[(X[1],'3:00')],aria='Time line starting at 2:50'),'fade')
 for a,b_,lab in [(X[0],X[1],'10 min'),(X[1],X[2],'1 h'),(X[2],X[3],'35 min')]:
     body+=pin(128,470,1664,tline(ticks,[(a,b_,lab)],aria=f'Jump of {lab}') if lab=='35 min' else tline(ticks,[(a,b_,lab)],only_arcs=True,aria=f'Jump of {lab}'),'fade')
-body+=answer(128,730,1664,'2:50 + 10 min = 3:00,  + 1 h = 4:00,  + 35 min = 4:35 p.m.')
+body+=answer(128,730,1664,'2:50 + 10 min = 3:00,  + 1 h = 4:00,  + 35 min = 4:35 pm')
 put('p3l9-we2',sec('p3l9-we2','32–33 MIN',body,
  'Worked example. Click step 1: "45 minutes is too big a jump from 2:50, it goes past the o’clock. So I split it: 10 minutes to reach 3:00, and 45 − 10 = 35 minutes left." Then click the jumps: 10 min, 1 h, 35 min (the last click also shows all the times). Then the answer. '
  'Check: "From 2:50 to 4:35 is 10 + 60 + 35 = 105 minutes, and 1 h 45 min is 60 + 45 = 105 minutes." In 24-hour time this is 16:35 (we learn that after the break).'))
-put('p3l9-try2',try_slide('p3l9-try2','33–34 MIN','Your turn: time lines','Draw a time line. Jump to the o’clock first.',[('a','How long from 10:40 a.m. to 1:15 p.m.?','2 h 35 min'),('b','Start 8:35 a.m. Lasts 1 h 40 min. Ends?','10:15 a.m.'),('c','Ends 6:10 p.m. Lasted 45 min. Started?','5:25 p.m.')],
- 'Whiteboards. a) 20 min to 11:00, 2 h to 1:00, 15 min to 1:15: 2 h 35 min. b) 25 min to 9:00, 1 h to 10:00, 15 min left: 10:15 a.m. c) Go backwards: 10 min back to 6:00, 35 min back to 5:25 p.m. Check c forwards: 5:25 + 35 min = 6:00, + 10 min = 6:10.',36))
+put('p3l9-try2',try_slide('p3l9-try2','33–34 MIN','Your turn: time lines','Draw a time line. Jump to the o’clock first.',[('a','How long from 10:40 am to 1:15 pm?','2 h 35 min'),('b','Start 8:35 am. Lasts 1 h 40 min. Ends?','10:15 am'),('c','Ends 6:10 pm. Lasted 45 min. Started?','5:25 pm')],
+ 'Whiteboards. a) 20 min to 11:00, 2 h to 1:00, 15 min to 1:15: 2 h 35 min. b) 25 min to 9:00, 1 h to 10:00, 15 min left: 10:15 am c) Go backwards: 10 min back to 6:00, 35 min back to 5:25 pm. Check c forwards: 5:25 + 35 min = 6:00, + 10 min = 6:10.',36))
 
 body=h2('Key idea: one unit, and a time line')+card(p('Change to one unit before you compare, add or take away.',48,700))+card(p('1 m = 100 cm  •  1 kg = 1000 g  •  1 ℓ = 1000 ml  •  $1 = 100¢  •  1 h = 60 min',36,600,MUTED)+card(p('After the break and page 1: we learn to draw a time line for time problems.',32,500,MUTED)))
-put('p3l9-key',sec('p3l9-key','34–35 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) 2 m 5 cm written as 25 cm, or 3 kg 40 g as 340 g. (2) Subtracting times like normal numbers (11.20 − 9.45), or counting 100 minutes in an hour. (3) 24-hour clock: adding 12 to a.m. times or to 12:30 p.m.; reading 17:00 as 7 p.m. (4) Budgets: adding the dollars and forgetting to carry the cents (85¢ + 90¢ = $1.75).'))
+put('p3l9-key',sec('p3l9-key','34–35 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) 2 m 5 cm written as 25 cm, or 3 kg 40 g as 340 g. (2) Subtracting times like normal numbers (11.20 − 9.45), or counting 100 minutes in an hour. (3) 24-hour clock: adding 12 to am times or to 12:30 pm; reading 17:00 as 7 pm (4) Budgets: adding the dollars and forgetting to carry the cents (85¢ + 90¢ = $1.75).'))
 put('p3l9-break',break_slide('p3l9-break','35–40 MIN','Brain break','Human clock! Use your arms as the clock hands. Show 3 o’clock, 6 o’clock, quarter past 9 … and 15:00!','Then: a drink of water and back to our seats.','Five minutes. Call out times; children make the hands with their arms. Mix in 24-hour times: 15:00 (3 o’clock), 18:00 (6 o’clock), 21:15 (quarter past 9). Online: children stay in view of the camera.'))
 
 # ---------- teach before page 1: budgets ----------
@@ -175,20 +175,20 @@ put('p3l9-ws1ans',check_slide('p3l9-ws1ans','53–55 MIN','Page 1: check togethe
 # ---------- teach before page 2: 24-hour clock ----------
 w=1664; sx=lambda h: 40+h*(w-80)/24
 g=f'<rect x="{sx(0)}" y="30" width="{sx(12)-sx(0)}" height="70" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/><rect x="{sx(12)}" y="30" width="{sx(24)-sx(12)}" height="70" fill="{SOFT}" stroke="{NAVY}" stroke-width="4"/>'
-g+=T(sx(6),76,'a.m. (midnight to noon)',30)+T(sx(18),76,'p.m. (noon to midnight)',30)
+g+=T(sx(6),76,'am (midnight to noon)',30)+T(sx(18),76,'pm (noon to midnight)',30)
 for h_ in range(0,25,3):
     g+=f'<line x1="{sx(h_)}" y1="100" x2="{sx(h_)}" y2="120" stroke="{NAVY}" stroke-width="4"/>'+T(sx(h_),152,f'{h_:02d}:00',26)
-    lab={0:'12 a.m.',12:'12 noon',24:'12 a.m.'}.get(h_,f'{h_%12} {"a.m." if h_<12 else "p.m."}')
+    lab={0:'12 am',12:'12 noon',24:'12 am'}.get(h_,f'{h_%12} {"am" if h_<12 else "pm"}')
     g+=T(sx(h_),190,lab,26,TEAL,weight=700)
 strip=svg(w,200,g,'24-hour strip from 00:00 to 24:00 with the matching 12-hour times')
 body=h2('The 24-hour clock')+pin(128,250,1664,strip)
-body+=step(1,'a.m.: same numbers, 2 digits for the hour.  6:05 a.m. → 06:05',top=480,size=34)
-body+=step(2,'p.m.: add 12 to the hour.  4:20 p.m. → 16:20',top=580,size=34)
-body+=step(3,'Back again: take away 12.  19:30 → 7:30 p.m.',top=680,size=34)
-body+=pin(128,790,1664,p('Careful: 12:45 p.m. stays 12:45 (it is already after 12 noon). Midnight is 00:00.',32,700),'fade',SOFT,20,'16px 28px')
+body+=step(1,'am: same numbers, 2 digits for the hour.  6:05 am → 06:05',top=480,size=34)
+body+=step(2,'pm: add 12 to the hour.  4:20 pm → 16:20',top=580,size=34)
+body+=step(3,'Back again: take away 12.  19:30 → 7:30 pm',top=680,size=34)
+body+=pin(128,790,1664,p('Careful: 12:45 pm stays 12:45 (it is already after 12 noon). Midnight is 00:00.',32,700),'fade',SOFT,20,'16px 28px')
 put('p3l9-teach24',sec('p3l9-teach24','55–57 MIN',body,
  'Teach before worksheet page 2 (Q4). "The 24-hour clock does not start again at 12 noon: it keeps counting, 13, 14, 15 … up to 23, then midnight is 00:00." Point along the strip. Click each step. '
- 'Think-aloud: "4:20 p.m. is in the afternoon, so I add 12: 4 + 12 = 16, so 16:20. Going back: 19 − 12 = 7, so 7:30 p.m." Click the careful box: the hour from 12 noon to 1 p.m. is already 12, so we do not add 12. Quick check: "What is 15:00?" (3 p.m.) "What is 9:10 p.m.?" (21:10). Q4 is "if time"; children start page 2 at Q5. For Q6 (if time): every 25 minutes means keep adding 25 and list the times in order until you pass 08:15; for a start time, go backwards on the time line, back to the o’clock first.'))
+ 'Think-aloud: "4:20 pm is in the afternoon, so I add 12: 4 + 12 = 16, so 16:20. Going back: 19 − 12 = 7, so 7:30 pm" Click the careful box: the hour from 12 noon to 1 pm is already 12, so we do not add 12. Quick check: "What is 15:00?" (3 pm) "What is 9:10 pm?" (21:10). Q4 is "if time"; children start page 2 at Q5. For Q6 (if time): every 25 minutes means keep adding 25 and list the times in order until you pass 08:15; for a start time, go backwards on the time line, back to the o’clock first.'))
 
 # ---------- teach: list the times / go backwards ----------
 body=h2('Timetables and going backwards')
@@ -204,8 +204,8 @@ put('p3l9-teachlist',sec('p3l9-teachlist','57–58 MIN',body,
  'Teach before worksheet page 2 (Q5c and Q6). Left: "Every 15 minutes means I keep adding 15. I list the times in order until I pass 10:27." Click the times. "The first train after 10:27 is 10:35. From 10:27: 3 minutes to 10:30, 5 more to 10:35: 8 minutes." '
  'Right: "To find a start time I go backwards. 25 minutes back from 20:10 passes the o’clock, so I split 25 into 10 and 15." Check forwards: 18:45 + 15 min = 19:00, + 1 h = 20:00, + 10 min = 20:10.'))
 put('p3l9-ws2',ws_preview('p3l9-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q4','(if time) The 24-hour clock. After 12 noon, add 12.'),('Q5','Time lines: how long, when it ends, when it started. Start here.'),('Q6','If time: the bus timetable. List the times, every 25 minutes.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6 (if time): check children list ALL the bus times (adding 25 each time across the hour: 07:05 + 25 min = 07:30).'))
-put('p3l9-ws2ans',check_slide('p3l9-ws2ans','67–70 MIN','Page 2: check together',[('Q4','(if time) 07:15,  15:40,  8:05 p.m.,  12:30.   17:00 is 5 p.m.'),('Q5','a) 1 h 25 min   b) 5:25 p.m.   c) 7:25 p.m.'),('Q6','(if time) a) 08:20, waits 5 min   b) 08:55')],
- 'Click after a child explains. Q5a: 15 min to 4:00, 1 h to 5:00, 10 min to 5:10. Q5b: 25 min to 5:00, 25 min more: 5:25 p.m. Q5c: back 1 h from 9:15 to 8:15, back 50 min more: 8:15 to 8:00 is 15 min, then 35 min: 7:25 p.m. Q6 (if time): 06:40, 07:05, 07:30, 07:55, 08:20. b) 08:20 + 35 min = 08:55. The "latest bus to arrive by 08:30" question is a Think Harder item: 07:55 + 35 min = 08:30 exactly; the 08:20 bus is too late.'))
+put('p3l9-ws2ans',check_slide('p3l9-ws2ans','67–70 MIN','Page 2: check together',[('Q4','(if time) 07:15,  15:40,  8:05 pm,  12:30.   17:00 is 5 pm'),('Q5','a) 1 h 25 min   b) 5:25 pm   c) 7:25 pm'),('Q6','(if time) a) 08:20, waits 5 min   b) 08:55')],
+ 'Click after a child explains. Q5a: 15 min to 4:00, 1 h to 5:00, 10 min to 5:10. Q5b: 25 min to 5:00, 25 min more: 5:25 pm. Q5c: back 1 h from 9:15 to 8:15, back 50 min more: 8:15 to 8:00 is 15 min, then 35 min: 7:25 pm. Q6 (if time): 06:40, 07:05, 07:30, 07:55, 08:20. b) 08:20 + 35 min = 08:55. The "latest bus to arrive by 08:30" question is a Think Harder item: 07:55 + 35 min = 08:30 exactly; the 08:20 bus is too late.'))
 
 # ---------- stretch, challenge ----------
 st=[('1.','A night train leaves at 22:40 and arrives at 01:15 the next morning. How long is the trip?'),('2.','Siti’s home is 1 km 250 m from school. She walks there and back every day. How far does she walk in 2 days?'),('3.','Ali needs 2 ℓ of milk. A 250 ml carton costs $1.10 and a 1 ℓ carton costs $3.60. What is the cheapest way?')]
@@ -242,8 +242,8 @@ for i,t in enumerate(['Each file = a pen + 60¢. Two files have 2 × 60¢ = $1.2
 put('p3l9-chwalk',sec('p3l9-chwalk','Challenge',body,'Use after pairs have tried, with the "see it" slide. Q1: compare the two bottles: the bottle is the same, only the water changed, so the difference is half the water. Q2: the same idea as Lesson 4 (Model Makers): remove the extra parts so all the bars are equal. Change $8.00 to 800¢ before dividing.'))
 put('p3l9-talk',talk_slide('p3l9-talk','70–80 MIN','Which is longer: 3 m 5 cm or 350 cm? Why can we not just do 11.20 − 9.45 to find a time?',
  'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answers: 350 cm is longer, because 3 m 5 cm = 305 cm. An hour has 60 minutes, not 100, so we count on with a time line: 9:45 to 11:20 is 15 min + 1 h + 20 min = 1 h 35 min. Praise the reasons, not only the answers.'))
-put('p3l9-exit',exit_slide('p3l9-exit','80–90 MIN','A film starts at 3:30 p.m. and lasts 1 h 20 min. When does it end?',
- 'Minutes 80 to 86. Answer: 4:50 p.m. (3:30 + 30 min = 4:00, + 50 min = 4:50; or 1 h gives 4:30, + 20 min gives 4:50). A child who writes 4:90 is adding like normal numbers: revisit the time line next lesson. Extension: plan a real outing with a timetable and a $50 budget.'))
+put('p3l9-exit',exit_slide('p3l9-exit','80–90 MIN','A film starts at 3:30 pm and lasts 1 h 20 min. When does it end?',
+ 'Minutes 80 to 86. Answer: 4:50 pm (3:30 + 30 min = 4:00, + 50 min = 4:50; or 1 h gives 4:30, + 20 min gives 4:50). A child who writes 4:90 is adding like normal numbers: revisit the time line next lesson. Extension: plan a real outing with a timetable and a $50 budget.'))
 
 # ---------- write ----------
 for _x in ('p3l9-try2','p3l9-teachlist'): S.pop(_x,None)

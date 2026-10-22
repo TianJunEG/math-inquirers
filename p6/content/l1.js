@@ -200,13 +200,13 @@ module.exports = {
     W.push(H.sub('b', 'Complete the rule:   sticks  =  ______ × n  +  ______'));
     W.push(H.sub('c', 'Pattern 100 has ______ sticks.    (d)  Which pattern has 61 sticks? ____'));
     // Q2 rules
-    W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term. (Two more are on the Think harder page.)', { keepNext: true }));
+    W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term. (Two more are on the Think harder page.) Hint: the 100th term is 99 jumps after the 1st term.', { keepNext: true }));
     { const ws = [3300, 1900, 2500, 2200];
       W.push(H.tbl(ws, [H.row(['Sequence', 'Difference', 'nth term', '100th term'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         ...[['a', '6,  10,  14,  18,  …'], ['b', '1,  6,  11,  16,  …']].map(([l, s]) =>
           H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 50, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
     // Q3 in the sequence?
-    W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …', { keepNext: true }));
+    W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …   (each term is 4 more than the one before)', { keepNext: true }));
     W.push(H.sub('a', 'nth term:  __________     (b)  Is 101 a term? Which one?  __________'));
     W.push(H.sub('c', 'Is 150 in the sequence? Explain.  ____________________________'));
     W.push(pyBox(H, 'Python corner (optional): a term tester', 'term = 5\nfor pos in range(1, 101):\n    print(pos, term)\n    term = term + 3',

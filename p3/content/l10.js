@@ -165,6 +165,7 @@ module.exports = {
     W.push(sub('a', 'How many sticks are needed for 8 squares?   ____'));
     W.push(sub('b', 'Ben uses 31 sticks. How many squares does he make?   ____'));
     W.push(q(6, '(if time) I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
+    W.push(p('Hint: three digits, none 0, that add up to 6, are 1, 1, 4 or 1, 2, 3 or 2, 2, 2. Try to arrange each set so that the number is odd and the hundreds digit is bigger than the tens digit.', { after: 40, keepNext: true }));
     W.push(...lines(2));
     return W;
   }

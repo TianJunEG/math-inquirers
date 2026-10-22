@@ -120,6 +120,7 @@ module.exports = {
     mistakes: ['Using the inside angle as the turn: turn 60° for a triangle draws half a hexagon, and turn 108° for a pentagon does not close.', 'Dividing 180 by the number of sides instead of 360, or forgetting that turn + inside angle = 180°.', 'Stars: thinking the turns always add up to 360°. A star goes round more than once, so its turns add up to 720°, 1080° and so on.'],
     extension: 'Draw a rosette: repeat 12 [draw a square, then turn ↻ 30]. Start this one with go to x: 0 y: 0 instead of x: -50 y: 100, so the rosette stays on the stage. How far does the turtle turn altogether? (12 × (360 + 30) = 4680° = 13 full turns.) Design your own rosette and predict its total turning before you run it.',
     key: [
+      ['Try it first', '4 quarter turns; 4 × 90° = 360°, one full turn. The turtle ends up facing the way it started. (This is the idea behind every row of Q1: sides × turn = 360°.)'],
       ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
       ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
       ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
@@ -154,7 +155,7 @@ module.exports = {
     keyBig: 'Going once round a closed shape, the turtle turns 360° altogether. A regular polygon with n sides turns 360° ÷ n at each corner, and its inside angle is 180° − turn.',
     keySmall: 'A star goes round more than once: turn = 360° × times round ÷ points.',
     brk: 'Turtle dance. Walk a square on the spot: step, quarter turn, four times. Then a triangle: step, turn a third of a turn, three times. Then a hexagon.',
-    ws1: 'Page 1, in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
+    ws1: 'Page 1: first the “Try it first” walk-a-square box (no tools needed), then in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
     ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars, Q5 add up the inside angles and find a rule.'
   },
 
@@ -165,9 +166,9 @@ module.exports = {
   qbank: {
     core: [
       { q: 'Walk a square: walk forward, turn on the spot by 90° to the right, and repeat, until you are back at the start facing the way you began. You turn 90° at each of the 4 corners. How many degrees did you turn altogether? (A full turn on the spot is 360°.)', a: '360° (4 × 90°): one full turn' },
-      { q: 'A turtle runs: repeat 6 [move 100, turn ↻ 60]. It draws a hexagon. How many degrees does it turn altogether? What do you notice?', a: '360° (6 × 60°). The same total as the square: one full turn.' },
+      { q: 'A turtle runs: repeat 6 [move 100, turn ↻ 60]. (“move 100” walks forward 100 steps; “turn ↻ 60” turns right, clockwise, by 60 degrees.) It draws a hexagon. How many degrees does it turn altogether? What do you notice?', a: '360° (6 × 60°). The same total as the square: one full turn.' },
       { q: 'A turtle draws an equilateral triangle: repeat 3 [move 100, turn ↻ ___ ]. It turns the same amount each time and ends up facing the way it started (a full turn is 360°). Guess and check, or draw it with a ruler. What number goes in the gap?', a: '120 (3 × 120 = 360)' },
-      { q: 'A turtle repeats [move 100, turn ↻ 72] again and again. How many repeats until it first faces the way it started? Add up the turns, 72, 144, … until you reach a full turn (360). What shape does it draw?', a: '5 repeats (5 × 72 = 360). It draws a regular pentagon.' },
+      { q: 'A turtle repeats [move 100, turn ↻ 72] again and again. (“turn ↻ 72” turns right, clockwise, by 72 degrees.) How many repeats until it first faces the way it started? Add up the turns, 72, 144, … until you reach a full turn (360). What shape does it draw?', a: '5 repeats (5 × 72 = 360). It draws a regular pentagon.' },
       { q: 'Angles on a straight line add up to 180°. At one corner the turtle turns 50° to go along the next side. What is the inside angle at that corner?', a: '130° (180° − 50°)' },
       { q: 'Each turn of a regular hexagon is 60°. A turn and the inside angle at a corner make a straight line (180°). What is each inside angle of a regular hexagon?', a: '120° (180° − 60°)' }
     ],
@@ -198,7 +199,7 @@ module.exports = {
     const w1 = [2475, 2475, 2475, 2475];
     const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
     const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 42 }))),
-      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 36, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
+      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 26, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
     const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn ↻ {120} degrees']]]];
     const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn ↻ {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
     const w4 = [1700, 2000, 2200, 2000, 2000];
@@ -213,6 +214,7 @@ module.exports = {
       H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
     return [
       intro,
+      H.p(['<div style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:3px 10px;margin:2px 0 0;text-align:left;font-size:13.5px;line-height:1.3"><b style="color:#1F7A6F">Try it first.</b> Stand up and walk a square: step, turn right a quarter turn (90°), and repeat until you are home facing the way you began. Quarter turns made: ____ Degrees turned altogether: ____ <span style="color:#3B4A6B">(Or draw it on paper.)</span></div>'], { after: 0 }),
       H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),

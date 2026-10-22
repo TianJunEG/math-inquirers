@@ -174,7 +174,7 @@ module.exports = {
       { q: 'I think of a number and multiply it by 3. I get 54. What was my number? (Guess and check, or share 54 into 3 equal groups.)', a: '18' },
       { q: 'A machine multiplies by 6, then takes away 4. OUT is 38. What was IN? Try some numbers, or undo the steps.', a: '7 (38 + 4 = 42, 42 ÷ 6 = 7)' },
       { q: 'Ali has some stickers. Mei has 5 more than Ali. Fill in the table: if Ali has 3 stickers, Mei has __ and they have __ altogether. If Ali has 7, they have __ altogether. If Ali has 10, they have __. What do you notice about how the total changes?', a: 'Ali 3: Mei 8, total 11. Ali 7: Mei 12, total 19. Ali 10: Mei 15, total 25. Each extra sticker Ali has adds 2 to the total (one for Ali and one for Mei).' },
-      { q: 'A Scratch machine runs: ask for IN, then set out to (answer * 3) + 4, then say out. (* means ×.) You type 7. What does it say?', a: '25' }
+      { q: 'A Scratch machine runs three blocks. “ask for IN” waits for you to type a number, and Scratch calls what you typed “answer”. “set out to (answer * 3) + 4” makes out equal to answer times 3, plus 4 (* means ×). “say out” shows out. You type 7. What does it say?', a: '25' }
     ],
     stretch: [
       { q: 'IN 1, 2, 3, 4 gives OUT 1, 7, 13, 19. Find the rule. What is OUT when IN is 20?', a: 'OUT = 6n − 5; IN 20 gives 115.' },

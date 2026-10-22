@@ -156,8 +156,9 @@ module.exports = {
     H.ans('Greatest:'),
     H.ans('Smallest:'),
     H.q(6, '(if time) How many 4-digit numbers have digits that add up to 3? Make a list in order. Start with the biggest thousands digit.', { keepNext: true }),
+    H.p('Hint: take 3 counters and put them in the 4 places (thousands, hundreds, tens, ones). The thousands place needs at least 1. With 3 in the thousands place, all the other places are 0, so the first number is already written for you.', { after: 40 }),
     H.tbl([2400, 7500], [
-      H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),
+      H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('3000', 7500)]),
       H.row([H.cell('Thousands digit 2', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),
       H.row([H.cell('Thousands digit 1', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)])
     ]),

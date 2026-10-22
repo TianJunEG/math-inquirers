@@ -209,6 +209,7 @@ module.exports = {
     W.push(H.sub('a', ['Which shapes have exactly ', fr(1, 4), ' shaded?   ________']));
     W.push(H.sub('b', 'Write the fraction shaded in each of the other shapes.   ________________'));
     W.push(H.q(4, 'Add or subtract. Make the parts the same size first.', { keepNext: true }));
+    W.push(H.p(['Use your fraction wall. Example: ', fr(1, 2), ' + ', fr(1, 4), '. On the wall ', fr(1, 2), ' is the same size as ', fr(2, 4), ', so ', fr(2, 4), ' + ', fr(1, 4), ' = ', fr(3, 4), '. Look for strips that line up.'], { after: 40, keepNext: true }));
     const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;______`, 'font-size:20px;white-space:nowrap')], 3300, { h: 150 });
     W.push(H.tbl(cw, [
       H.row([sum('a', [2, 7], '+', [3, 7]), sum('b', [1, 4], '+', [3, 8]), sum('c', [1, 3], '+', [5, 12])]),
