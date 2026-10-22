@@ -17,7 +17,7 @@
       "Tens and ones (place value)",
       "Reading and writing numerals"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Term 1 goes beyond the school Primary 1 syllabus on purpose. This lesson starts with tens and ones to 100 (familiar school ground) and stretches it in Think harder and Go further (opening a bundle: 5 tens and 14 ones is 6 tens and 4 ones)."
   },
   "contest_moves": [
     "split a number into tens and ones",
@@ -193,7 +193,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-title"
+            "slide": "s-title",
+            "text": ""
           },
           {
             "k": "REC",
@@ -205,7 +206,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-routine"
+            "slide": "s-routine",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -213,7 +215,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-rules"
+            "slide": "s-rules",
+            "text": ""
           },
           {
             "k": "READ",
@@ -248,7 +251,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-rem1"
+            "slide": "s-rem1",
+            "text": ""
           },
           {
             "k": "REC",
@@ -265,7 +269,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-rem2"
+            "slide": "s-rem2",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -298,7 +303,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-rem3"
+            "slide": "s-rem3",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -339,7 +345,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-sneak"
+            "slide": "s-sneak",
+            "text": ""
           },
           {
             "k": "REC",
@@ -387,7 +394,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-explore1"
+            "slide": "s-explore1",
+            "text": ""
           },
           {
             "k": "REC",
@@ -413,7 +421,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-explore2"
+            "slide": "s-explore2",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -466,7 +475,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-explore3"
+            "slide": "s-explore3",
+            "text": ""
           },
           {
             "k": "ASK",
@@ -496,7 +506,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-m1"
+            "slide": "s-m1",
+            "text": ""
           },
           {
             "k": "REC",
@@ -513,7 +524,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m2"
+            "slide": "s-m2",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -530,7 +542,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m3"
+            "slide": "s-m3",
+            "text": ""
           },
           {
             "k": "READ",
@@ -543,7 +556,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m3a"
+            "slide": "s-m3a",
+            "text": ""
           },
           {
             "k": "READ",
@@ -551,7 +565,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m4"
+            "slide": "s-m4",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -559,7 +574,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m5"
+            "slide": "s-m5",
+            "text": ""
           },
           {
             "k": "ASK",
@@ -572,7 +588,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m5b"
+            "slide": "s-m5b",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -585,7 +602,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-m6"
+            "slide": "s-m6",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -626,7 +644,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-break"
+            "slide": "s-break",
+            "text": ""
           },
           {
             "k": "REC",
@@ -648,7 +667,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-ws1"
+            "slide": "s-ws1",
+            "text": ""
           },
           {
             "k": "REC",
@@ -665,7 +685,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-ws1ans"
+            "slide": "s-ws1ans",
+            "text": ""
           },
           {
             "k": "READ",
@@ -677,11 +698,12 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-ws2"
+            "slide": "s-ws2",
+            "text": ""
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 straws. Question 6: Siti wrote 43. Is she right? Question 7: draw Ali's 6 bundles and Mei's 6 singles, and write each number."
+            "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 sticks. Question 6: Kumar wrote 43. Is he right? Question 7: draw Ali's 6 bundles and Mei's 6 singles, and write each number."
           },
           {
             "k": "WORK",
@@ -690,15 +712,17 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-ws2ans"
+            "slide": "s-ws2ans",
+            "text": ""
           },
           {
             "k": "READ",
-            "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Siti should write thirty-four. Question 7: Ali has sixty, Mei has six."
+            "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Kumar should write thirty-four. Question 7: Ali has sixty, Mei has six."
           },
           {
             "k": "SLIDE",
-            "slide": "s-choice"
+            "slide": "s-choice",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -711,7 +735,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q2 (drawing): draw a bundle as ten short lines with a ring round them. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first. Q7: ask how much one bundle is worth."
+            "text": "Q2 (drawing): draw a bundle of ten as one long line and a single stick as a short line. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first. Q7: ask how much one bundle is worth."
           },
           {
             "k": "STUCK",
@@ -728,7 +752,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-talk"
+            "slide": "s-talk",
+            "text": ""
           },
           {
             "k": "REC",
@@ -755,7 +780,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-sneakans"
+            "slide": "s-sneakans",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -777,7 +803,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-exit"
+            "slide": "s-exit",
+            "text": ""
           },
           {
             "k": "REC",
@@ -799,7 +826,8 @@
           },
           {
             "k": "SLIDE",
-            "slide": "s-exitans"
+            "slide": "s-exitans",
+            "text": ""
           },
           {
             "k": "READ",
@@ -820,7 +848,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-look"
+            "slide": "s-look",
+            "text": ""
           },
           {
             "k": "REC",
@@ -842,7 +871,8 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-end"
+            "slide": "s-end",
+            "text": ""
           },
           {
             "k": "SAY",
@@ -851,7 +881,8 @@
           {
             "k": "SLIDE",
             "slide": "s-opt",
-            "optional": true
+            "optional": true,
+            "text": ""
           },
           {
             "k": "SAY",
@@ -867,7 +898,8 @@
           {
             "k": "SLIDE",
             "slide": "s-menu",
-            "optional": true
+            "optional": true,
+            "text": ""
           },
           {
             "k": "SAY",
@@ -1565,7 +1597,7 @@
           ]
         }
       ],
-      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Siti should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group. Question 7 answer: Ali has 60 and Mei has 6, because 6 tens is much more than 6 ones."
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Kumar should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group. Question 7 answer: Ali has 60 and Mei has 6, because 6 tens is much more than 6 ones."
     },
     {
       "id": "s-choice",
@@ -1854,18 +1886,19 @@
             "val": 35
           }
         ],
-        "answer": "35 (3 bundles drawn, each with ten sticks, and 5 singles)",
+        "answer": "35 (3 long lines for the bundles and 5 short lines for the singles)",
         "val": [
           35
         ],
-        "hint": "Draw a bundle as ten short lines with a ring round them. Draw 3 of those, then 5 more short lines on their own.",
-        "solution": "Draw 3 rings each holding ten short lines (that is 30), then 5 single lines. Count: 10, 20, 30, 31, 32, 33, 34, 35.",
+        "hint": "Draw each bundle of ten as one long line. Draw each single stick as one short line. Draw 3 long lines, then 5 short lines.",
+        "solution": "3 long lines are 3 bundles of ten (that is 30), and 5 short lines are 5 singles. Count: 10, 20, 30, 31, 32, 33, 34, 35.",
         "mistakes": [
           "Drawing 3 sticks and 5 sticks instead of 3 bundles of ten.",
           "Writing 53."
         ],
         "mins": 3,
-        "lines": 0
+        "lines": 0,
+        "draw_strokes": 8
       },
       {
         "id": "S3",
@@ -1970,7 +2003,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 47 straws. He ties the straws into bundles of 10. Fill in the blanks.",
+        "text": "Ali has 47 sticks. He ties the sticks into bundles of 10. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
@@ -1980,7 +2013,7 @@
           },
           {
             "l": "b",
-            "text": "___ straws are left over.",
+            "text": "___ sticks are left over.",
             "ans": "7",
             "val": 7
           }
@@ -1991,7 +2024,7 @@
           7
         ],
         "hint": "47 is 4 tens and 7 ones. Draw it if you like.",
-        "solution": "47 is 4 tens and 7 ones, so Ali makes 4 full bundles and has 7 straws left over (4 bundles hold 40 straws).",
+        "solution": "47 is 4 tens and 7 ones, so Ali makes 4 full bundles and has 7 sticks left over (4 bundles hold 40 sticks).",
         "mistakes": [
           "Answering 47 for the bundles.",
           "Saying 3 bundles and 17 left over: 17 singles can still make another bundle."
@@ -2003,7 +2036,7 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Siti has 3 bundles of ten and 4 single sticks. She writes 43.",
+        "text": "Kumar has 3 bundles of ten and 4 single sticks. He writes 43.",
         "parts": [
           {
             "l": "a",
@@ -2018,12 +2051,12 @@
             "val": 34
           }
         ],
-        "answer": "No. 34. She wrote the tens and ones digits the wrong way round (43 is 4 tens and 3 ones).",
+        "answer": "No. 34. He wrote the tens and ones digits the wrong way round (43 is 4 tens and 3 ones).",
         "val": [
           34
         ],
         "hint": "Build 3 bundles and 4 singles with your kit. Say the tens first.",
-        "solution": "3 bundles is 30 and 4 singles makes 34. Siti wrote 43, which is 4 tens and 3 ones. The tens digit goes on the left.",
+        "solution": "3 bundles is 30 and 4 singles makes 34. Kumar wrote 43, which is 4 tens and 3 ones. The tens digit goes on the left.",
         "mistakes": [
           "Saying she is right because the digits 3 and 4 are there.",
           "Not saying what she mixed up (any clear sentence about the digits is fine)."
@@ -2035,7 +2068,7 @@
         "id": "S7",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 6 bundles of ten and 0 single sticks. Mei has 0 bundles and 6 single sticks. Draw Ali's sticks and Mei's sticks in the box. Then write each number.",
+        "text": "Ali has 6 bundles of ten and 0 single sticks. Mei has 0 bundles and 6 single sticks. Draw Ali's sticks, then Mei's sticks, in the box. Then write each number.",
         "draw": true,
         "parts": [
           {
@@ -2056,14 +2089,15 @@
           60,
           6
         ],
-        "hint": "A bundle is worth ten. Count Ali's bundles in tens. Mei has no bundles, only ones.",
+        "hint": "Draw each bundle of ten as one long line and each single stick as one short line. Count Ali's bundles in tens. Mei has no bundles, only ones.",
         "solution": "Ali: 6 bundles of ten is 60, with no singles, so 60. Mei: 6 single sticks is 6. The same digit 6 means very different amounts because of its place: 6 tens or 6 ones.",
         "mistakes": [
           "Writing 6 for both children.",
-          "Drawing 6 sticks for Ali instead of 6 bundles of ten."
+          "Drawing 6 short lines for Ali instead of 6 long lines (6 bundles of ten)."
         ],
         "mins": 3,
-        "lines": 0
+        "lines": 0,
+        "draw_strokes": 12
       }
     ],
     "think": [
@@ -2123,7 +2157,7 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "My tens digit is even. My ones digit is 6. I am between 30 and 50. What number am I?",
+        "text": "My tens digit is more than 3. My ones digit is 6. I am between 30 and 50. What number am I?",
         "parts": [
           {
             "l": "",
@@ -2136,8 +2170,8 @@
         "val": [
           46
         ],
-        "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens.",
-        "solution": "Between 30 and 50 and ending in 6: 36 and 46. 36 has 3 tens (odd). 46 has 4 tens (even). So the number is 46.",
+        "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens digit of each.",
+        "solution": "Between 30 and 50 and ending in 6: 36 and 46. 36 has 3 tens, which is not more than 3. 46 has 4 tens, which is more than 3. So the number is 46.",
         "mistakes": [
           "Stopping at 36 and not checking clue 3.",
           "Listing numbers that start with 6."
@@ -2149,7 +2183,7 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Circle one: Mei has more. Ali has more. They have the same. Show how you know.",
+        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Circle one. Then show how you know.",
         "parts": [],
         "answer": "The same: 72 each (6 tens 12 ones is 7 tens 2 ones)",
         "val": [
@@ -2163,7 +2197,12 @@
           "Adding 6 + 12 = 18 and comparing 18 with 9."
         ],
         "mins": 5,
-        "lines": 3
+        "lines": 3,
+        "choices": [
+          "Mei has more.",
+          "Ali has more.",
+          "They have the same."
+        ]
       }
     ],
     "go": [
@@ -2171,33 +2210,37 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Ben has 6 bundles of ten and 14 loose sticks. Siti has 85 loose sticks.",
+        "text": "Ben has 6 bundles of ten and 14 loose sticks. Siti has 5 bundles of ten and 29 loose sticks.",
         "parts": [
           {
             "l": "a",
-            "text": "___ has more sticks.",
+            "text": "Circle the child who has more sticks.",
             "ans": "Siti",
-            "val": "Siti"
+            "val": "Siti",
+            "choices": [
+              "Ben",
+              "Siti"
+            ]
           },
           {
             "l": "b",
             "text": "That child has ___ more sticks.",
-            "ans": "11",
-            "val": 11
+            "ans": "5",
+            "val": 5
           }
         ],
-        "answer": "Siti. Ben has 74, Siti has 85, so Siti has 11 more.",
+        "answer": "Siti. Ben has 74, Siti has 79, so Siti has 5 more.",
         "val": [
           "Siti",
           74,
-          85,
-          11
+          79,
+          5
         ],
-        "hint": "Work out Ben's number first. Remember 14 loose sticks make a bundle and 4 more.",
-        "solution": "Ben: 6 tens and 14 ones is 7 tens and 4 ones, so 74. Siti: 85. 85 is 8 tens 5 ones and 74 is 7 tens 4 ones: 1 ten and 1 one more, which is 11 more.",
+        "hint": "Work out each child's number first. Open a bundle when there are 10 or more loose sticks.",
+        "solution": "Ben: 6 tens and 14 ones is 7 tens and 4 ones, so 74. Siti: 5 tens and 29 ones is 7 tens and 9 ones, so 79. 79 is 5 more than 74.",
         "mistakes": [
-          "Comparing only 6 and 85 without working out Ben's whole number.",
-          "Not opening 14 ones into a bundle before comparing."
+          "Comparing only the bundles (6 and 5) and saying Ben has more.",
+          "Not opening the loose sticks into bundles before comparing."
         ],
         "mins": 5,
         "lines": 3
@@ -2239,8 +2282,21 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Write 30 in different ways, like 3 tens and 0 ones. Find all the ways. How many ways are there?",
-        "parts": [],
+        "text": "Write 30 in different ways, like 3 tens and 0 ones.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Write all the ways on the lines.",
+            "ans": "3 tens 0 ones; 2 tens 10 ones; 1 ten 20 ones; 0 tens 30 ones",
+            "val": 4
+          },
+          {
+            "l": "b",
+            "text": "There are ___ ways.",
+            "ans": "4",
+            "val": 4
+          }
+        ],
         "answer": "4 ways: 3 tens 0 ones; 2 tens 10 ones; 1 ten 20 ones; 0 tens 30 ones",
         "val": [
           4
@@ -2833,13 +2889,13 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "My tens digit is even. My ones digit is 6. I am between 30 and 50. What number am I?",
+        "q": "My tens digit is more than 3. My ones digit is 6. I am between 30 and 50. What number am I?",
         "answer": 46,
         "easier": "c3",
-        "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens.",
+        "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens digit of each.",
         "steps": [
           "Between 30 and 50 and ending in 6: 36 and 46.",
-          "36 has 3 tens (odd). 46 has 4 tens (even).",
+          "36 has 3 tens, which is not more than 3. 46 has 4 tens, which is more than 3.",
           "I am 46."
         ],
         "slips": [
@@ -2847,7 +2903,7 @@
             "a": [
               36
             ],
-            "say": "36 has 3 tens, and 3 is odd. Check clue 3."
+            "say": "36 has 3 tens, and 3 is not more than 3. Check clue 3."
           }
         ]
       },
@@ -3039,18 +3095,18 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make your own mystery number puzzle with 3 clues: between which two numbers, the ones digit, and whether the tens digit is odd or even. Check that only 1 number fits.",
+        "q": "Make your own mystery number puzzle with 3 clues: between which two numbers, the ones digit, and a clue about the tens digit, like more than 6. Check that only 1 number fits.",
         "hint": "Pick a secret number first. Then write clues that are true for it.",
         "steps": [
           "Check your secret number fits every clue.",
           "List the numbers that fit the first two clues. Cross out any that break clue 3.",
-          "Exactly one number should be left. For example: between 60 and 80, ones digit 3, an even number of tens. The numbers ending in 3 are 63 and 73. 63 has 6 tens (even) and 73 has 7 tens (odd), so only 63 fits."
+          "Only one number should be left. For example: between 60 and 80, ones digit 3, tens digit more than 6. That leaves 63 and 73. Only 73 has more than 6 tens, so 73 fits."
         ]
       }
     ]
   },
   "parent": {
-    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones).",
+    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Term 1 goes beyond the school Primary 1 syllabus on purpose; the first questions are explored with real things, and the harder ones are extra challenges to try.",
     "words": [
       "bundle or ten: ten single things tied together",
       "single or one: a thing on its own",
@@ -3085,7 +3141,8 @@
     "Solve every workbook question yourself first.",
     "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups.",
     "Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording settings exclude children's video."
+    "Check the recording settings exclude children's video.",
+    "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
@@ -3123,8 +3180,8 @@
   },
   "workbook": {
     "header": "Whole Numbers: tens and ones",
-    "hint_p1": "Use your bundles, your kit or a drawing. Say your answer out loud, then write it.",
-    "hint_p3": "Use objects, draw a picture, or open a bundle. Then write how you know. Choose any question, in any order.",
+    "hint_p1": "Use your bundles, your kit or a drawing. Draw a bundle of ten as one long line and a single stick as a short line. Say your answer out loud, then write it.",
+    "hint_p3": "Use objects, draw a picture, or open a bundle. Choose any question, in any order. T4 asks you to show how you know.",
     "kits": [
       {
         "type": "base_ten",

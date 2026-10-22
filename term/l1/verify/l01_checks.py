@@ -80,16 +80,18 @@ def run(d):
     eq(T['T1']['val'], [stick_count(5, 14)], 'T1 5 tens 14 ones')
     eq(digits(64), (6, 4), 'T1 as tens and ones')
     eq(T['T2']['val'], [dict(ways_to_show(41))[3]], 'T2 41 as 3 tens __ ones')
-    cands = [n_ for n_ in range(10, 100) if 30 < n_ < 50 and n_ % 10 == 6 and (n_ // 10) % 2 == 0]
+    cands = [n_ for n_ in range(10, 100) if 30 < n_ < 50 and n_ % 10 == 6 and (n_ // 10) > 3]
     eq(cands, [46], 'T3 unique number')
     eq(T['T3']['val'], cands, 'T3')
     eq(stick_count(7, 2) == stick_count(6, 12), True, 'T4 same number')
     eq(stick_count(7, 2), 72, 'T4 value')
     eq(T['T4']['val'], ['same', 72], 'T4')
     # Go further
-    ben, siti = stick_count(6, 14), 85
+    ben = stick_count(6, 14)
+    siti = stick_count(5, 29)
     eq(T['G1']['val'], ['Siti', ben, siti, siti - ben], 'G1')
-    eq(ben, 74, 'G1 Ben'); eq(siti - ben, 11, 'G1 difference')
+    eq(ben, 74, 'G1 Ben'); eq(siti, 79, 'G1 Siti'); eq(siti - ben, 5, 'G1 difference')
+    eq(max([('Ben', ben), ('Siti', siti)], key=lambda x: x[1])[0], 'Siti', 'G1 who has more')
     have = stick_count(4, 18)
     eq(T['G2']['val'], [have, 60 - have], 'G2')
     eq(60 - have, 2, 'G2 needs 2 more')
@@ -132,7 +134,7 @@ def run(d):
     eq(O['t1']['answer'], 64, 't1'); eq(O['t2']['answer'], 11, 't2'); eq(O['t3']['answer'], 46, 't3')
     eq(O['t4']['answer'], 'They have the same', 't4')
     eq(O['g1']['answer'], 11, 'g1'); eq(O['g2']['answer'], 2, 'g2'); eq(O['g3']['answer'], 4, 'g3')
-    # g4 example puzzle: unique answer 63
-    eq([n_ for n_ in range(60, 81) if n_ % 10 == 3 and (n_ // 10) % 2 == 0], [63], 'g4 example unique')
+    # g4 example puzzle: unique answer 73
+    eq([n_ for n_ in range(60, 81) if n_ % 10 == 3 and (n_ // 10) > 6], [73], 'g4 example unique')
     # every template variant of g2 and g1 is positive (guards a negative "how many more")
     return n
