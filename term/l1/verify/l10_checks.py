@@ -310,9 +310,8 @@ def check_block(d, eq):
     # C4: counting patterns
     def count_on(a_, step, k): return [a_ + step * i for i in range(1, k + 1)]
     eq(count_on(25, 5, 2), [30, 35], 'C4 a'); eq(count_on(26, 2, 2), [28, 30], 'C4 b')
-    five = [5 * i for i in range(1, 21)]
-    eq(sorted({x % 10 for x in five}), [0, 5], 'C4 c: last digits in the 5s are 5 and 0')
-    eq(Q['C4']['val'], [30, 35, 28, 30, 0], 'C4')
+    eq(count_on(31, 10, 2), [41, 51], 'C4 c: counting on in tens from 31')
+    eq(Q['C4']['val'], [30, 35, 28, 30, 41, 51], 'C4')
     # C5: ten-frame picture 7 and 5, make a ten
     tf = svg.ten_frame(7, 5)
     cx = [float(m) for m in re.findall(r'<circle cx="([\d.]+)"', tf)]
@@ -324,16 +323,18 @@ def check_block(d, eq):
     eq(Q['C5']['val'], [12, 42], 'C5'); eq(len(add(pile(37), 5)), 42, 'C5 simulated')
     # C6, C7: tens jumps and take away without renaming
     eq(Q['C6']['val'], [len(add(pile(52), 10)), len(add(pile(52), 30)), len(take(pile(52), 20))], 'C6'); eq(Q['C6']['val'], [62, 82, 32], 'C6 values')
-    eq(Q['C7']['val'], [len(take(pile(68), 23)), len(take(pile(76), 14))], 'C7'); eq(Q['C7']['val'], [45, 62], 'C7 values')
-    eq((68 % 10 >= 23 % 10, 76 % 10 >= 14 % 10), (True, True), 'C7 no renaming')
+    claim = len(take(pile(47), 20))
+    eq(Q['C7']['val'], [len(take(pile(68), 23)), 'No' if claim != 25 else 'Yes'], 'C7'); eq(Q['C7']['val'], [45, 'No'], 'C7 values'); eq(claim, 27, 'C7 Ali is wrong: 47 - 20 = 27')
+    eq((68 % 10 >= 23 % 10, 47 % 10 >= 20 % 10), (True, True), 'C7 no renaming')
     # C8: box numbers by search
-    box_a = [b_ for b_ in range(0, 100) if 26 + 13 == b_ + 10][0]; box_b = [b_ for b_ in range(0, 100) if 8 + 7 == 7 + b_][0]
-    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [29, 8], 'C8 values')
+    box_a = [b_ for b_ in range(0, 100) if 26 + 10 == b_ + 9][0]; box_b = [b_ for b_ in range(0, 100) if 8 + 7 == 7 + b_][0]
+    eq(Q['C8']['val'], [box_a, box_b], 'C8'); eq([box_a, box_b], [27, 8], 'C8 values')
     # C9: the printed line and the draw length
-    eq(c['line_mm'], 10 * Q['C9']['visual']['line_cm'], 'C9 printed line is 90 mm in the file'); eq(Q['C9']['val'], [Q['C9']['visual']['draw_cm'], Q['C9']['visual']['line_cm']], 'C9')
-    eq(re.search(r'width="(\d+)mm"', ex.line_mm_svg(c['line_mm'])).group(1), '90', 'C9 svg width in mm')
+    v9 = Q['C9']['visual']
+    eq(Q['C9']['val'], [v9['draw_cm'], v9['draw_cm'] + v9['extra_cm'], v9['draw_cm'] + v9['extra_cm']], 'C9 two lines and the length written'); eq(v9['draw_cm'] + v9['extra_cm'], 9, 'C9 second line is 9 cm')
+    eq(10 * (v9['draw_cm'] + v9['extra_cm']) < 182 - 20, True, 'C9 the drawing box is wide enough for a 9 cm line')
     eq(re.search(r'width="(\d+)mm"', ex.check_bar_svg(c['sheet_check_bar_mm'])).group(1), '100', 'print check bar svg width in mm')
-    eq(sum(1 for _ in re.finditer('data-dot', ex.dotbox_svg())), 1, 'C9 one starting dot')
+    eq((ex.dotbox_svg(True).count('data-dot'), ex.dotbox_svg(False).count('data-dot')), (1, 0), 'C9 one starting dot in the first box only')
     # C10: the story
     s10 = story(35, [('+', 10), ('-', 3)])
     eq(Q['C10']['val'], [s10[0], s10[1], s10[1]], 'C10'); eq(s10, [45, 42], 'C10 values')

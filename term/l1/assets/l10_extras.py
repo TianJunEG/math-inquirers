@@ -78,15 +78,18 @@ def check_bar_svg(mm):
             f'<line x1="0.4" y1="0.8" x2="0.4" y2="6.2" stroke="#555" stroke-width="0.8"/><line x1="{mm - 0.4}" y1="0.8" x2="{mm - 0.4}" y2="6.2" stroke="#555" stroke-width="0.8"/></svg>')
 
 
-def dotbox_svg():
-    return (f'<svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="space to draw a line, with a dot at the start" style="width:100%;height:auto;display:block;margin:4px 0">'
-            f'<rect x="3" y="3" width="694" height="84" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="3" stroke-dasharray="12 8"/>'
-            f'<circle cx="46" cy="45" r="8" fill="{NAVY}" data-dot="1"/></svg>')
+def dotbox_svg(dot=True):
+    dotc = f'<circle cx="46" cy="40" r="8" fill="{NAVY}" data-dot="1"/>' if dot else ''
+    return (f'<svg viewBox="0 0 700 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="space to draw a line, with a dot at the start" style="width:100%;height:auto;display:block;margin:4px 0">'
+            f'<rect x="3" y="3" width="694" height="74" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="3" stroke-dasharray="12 8"/>'
+            f'{dotc}</svg>')
 
 
 # ------------------------------------------------------------------ the student sheet
 
 SHEET_CSS = """
+.yn{display:inline-block;border:2.5px solid #1B2A49;border-radius:999px;padding:1px 18px;margin:0 8px;font-weight:700;background:#fff}
+.pins{font-style:italic;font-weight:700;margin:2px 0 4px;font-size:15.5px;color:#1B2A49}
 .cbx{display:inline-block;width:38px;height:38px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 6px}
 .wl2{display:inline-block;width:64%;border-bottom:2px dashed #1B2A49;height:24px;vertical-align:baseline}
 .crl{background:#fff;border:2.5px solid #1F7A6F;border-radius:14px;padding:6px 16px 8px;margin:6px 0 4px;font-size:16.5px;position:relative}
@@ -98,13 +101,13 @@ SHEET_CSS = """
 .chk{page-break-inside:avoid}
 .foot{font-size:12px;color:#3B4A6B;margin-top:6px}
 .vis2{margin:8px 0 4px 6px}
-.csheet .p4 .sub2{margin-top:26px}.csheet .p4 .wl2{height:34px}.csheet .p4 .al{height:30px}.csheet .qbox{margin:28px 4px 14px 4px!important;padding:24px 16px 12px!important}
+.csheet .p4 .sub2{margin-top:26px}.csheet .p4 .wl2{height:34px}.csheet .p4 .al{height:30px}.csheet .qbox{margin:24px 4px 8px 4px!important;padding:22px 16px 8px!important}.csheet .p3 .sub2{margin-top:7px}.csheet .p3 .vis2{margin:4px}
 """
 
 
 def blanks2(text):
     t = E(minus(text))
-    t = t.replace('___', '<span class="al"></span>').replace('[box]', '<span class="cbx"></span>').replace('[wide]', '<span class="wl2"></span>')
+    t = t.replace('[yesno]', '<span class="yn">Yes</span><span class="yn">No</span>').replace('___', '<span class="al"></span>').replace('[box]', '<span class="cbx"></span>').replace('[wide]', '<span class="wl2"></span>')
     return t
 
 
@@ -128,9 +131,7 @@ def qbox2(q, num, d, extra_after=None):
     parts = ''
     for p in q['parts']:
         pre = ''
-        if q['id'] == 'C9' and p['l'] == 'b':
-            pre = f'<div class="vis2" style="margin:12px 0 4px 34px">{line_mm_svg(d["end_of_term_check"]["line_mm"])}</div>'
-        post = dotbox_svg() if (q['id'] == 'C9' and p['l'] == 'a') else ''
+        post = dotbox_svg(True) if (q['id'] == 'C9' and p['l'] == 'a') else (dotbox_svg(False) if (q['id'] == 'C9' and p['l'] == 'b') else '')
         lab = f'<span class="sl">{E(p["l"])}</span>' if p['l'] else ''
         parts += f'{pre}<div class="sub2">{lab}<span>{blanks2(p["text"])}</span></div>{post}'
     return f'<div class="qbox chk"><div class="q"><span class="qn">{num}</span><span class="qt">{E(minus(q["text"]))}</span></div>{visual_html(q)}{'<div class="draw"></div>' if q['id'] == 'C10' else ''}{parts}</div>'
@@ -159,6 +160,7 @@ def sheet_html(d):
                      f'<div class="ltitle">TERM 1 CHECK</div><div class="namer" style="width:74%"><b>Name</b><span></span><b>Date</b><span style="max-width:110px"></span></div></div>{rules}')
         else:
             body += '<div class="namer"><b>Name</b><span></span></div>'
+        body += f'<div class="pins">{E(c["page_instructions"][pg - 1])}</div>'
         for q in by_page.get(pg, []):
             num += 1
             body += qbox2(q, num, d)
@@ -245,15 +247,15 @@ def key_html(d):
     H.append('<h3>Absent, late joiners, families who prefer not to, upset children</h3><ul>' + ''.join(f'<li>{E(x)}</li>' for x in c['late']) + '</ul>')
     H.append('<h2 class="pb">4. Answer key and marking</h2><p class="small">Mark each question R (right), P (partly right), N (not yet) or T (not taught: the child did not attend that lesson). '
              'Mark on the tutor record sheet only, never on the child\'s paper. A child may write steps in any clear layout. Do not mark neatness or spelling.</p>')
-    for q in qs + [dict(o, id='Think harder')]:
-        lab = q['id'] if q['id'] == 'Think harder' else 'Q' + q['id'][1:]
+    for q in qs + [dict(o, id='Optional', text=o['text'].replace('Think harder (optional). ', ''))]:
+        lab = 'Optional Think harder item' if q['id'] == 'Optional' else 'Q' + q['id'][1:]
         parts = '; '.join(f'({p["l"]}) {minus(p["text"].replace("___", "__").replace("[box]", "[ ]").replace("[wide]", "...."))} = {p["ans"]}' if p['l'] else f'{minus(p["text"].replace("___", "__"))} = {p["ans"]}' for p in q['parts'])
         right = q.get('right', 'The answer is right.'); partly = q.get('partly', '-')
         H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(minus(q["text"]))}<div class="ans">Answer: {E(minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
                  f'<div class="small"><b>R:</b> {E(right)} <b>P:</b> {E(partly)}</div><div class="small"><b>Worked:</b> {E(minus(q["solution"]))}</div>'
                  f'<div class="small"><b>Watch for:</b> {E("; ".join(q["mistakes"]))}</div></div>')
-    H.append('<div class="note"><b>Question 9, part (a):</b> in the photo the page is flat, so measure the drawn line against the 10 cm print-check bar on the same page (the drawn line should be 57% to 63% of the bar). '
-             'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the line as right if the child\'s answer to part (b) is right. Never ask a child to show the line to the camera.</div>')
+    H.append('<div class="note"><b>Question 9, parts (a) and (b):</b> in the photo the page is flat, so measure each drawn line against the 10 cm print-check bar on the same page (the first line should be 57% to 63% of the bar, the second 87% to 93%). '
+             'If the photo is not clear enough to tell, ask the grown-up (not the child) for a clearer photo, or count the lines as right if the child\'s answer to part (c) is right. Never ask a child to show the line to the camera.</div>')
     H.append('<h2 class="pb">5. Tutor record sheet (tutor only; one per child; delete after the note is sent)</h2>')
     H.append('<p>Child (first name only): <span style="display:inline-block;width:260px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span> &nbsp; Date taken: <span style="display:inline-block;width:120px;border-bottom:1.5px dotted #8A94AD">&nbsp;</span></p>')
     H.append('<table class="rec"><tr>' + ''.join(f'<th>Q{q["id"][1:]}<br><span class="small">L{q["lesson"]}</span></th>' for q in qs) + '<th>Think<br>harder</th></tr><tr>' + '<td></td>' * 11 + '</tr></table>')
@@ -270,12 +272,12 @@ def key_html(d):
     rt = c['report_template']
     H.append(f'<div class="box t"><b>{E(rt["intro"])}</b><br>{E(rt["term_line"])}</div>')
     H.append('<table><tr><th>Area (parent wording)</th><th>' + E(W['showing']) + '</th><th>' + E(W['getting']) + '</th><th>' + E(W['beginning']) + '</th></tr>' + ''.join(
-        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">Lessons {s["lessons"][0]}' + (f' to {s["lessons"][-1]}' if len(s["lessons"]) > 1 else '') + f'. We looked at {E(s["looked_at"])}.</div></td><td>{E(s["showing"])}</td><td>{E(s["getting"])}</td><td>{E(s["beginning"])}</td></tr>' for s in c['strands']) + '</table>')
+        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{"Lessons" if len(s["lessons"]) > 1 else "Lesson"} {s["lessons"][0]}' + (f' to {s["lessons"][-1]}' if len(s["lessons"]) > 1 else '') + f'. We looked at {E(s["looked_at"])}.</div></td><td>{E(s["showing"])}</td><td>{E(s["getting"])}</td><td>{E(s["beginning"])}</td></tr>' for s in c['strands']) + '</table>')
     H.append(f'<div class="box"><b>Then add (from your own notes):</b><br>{E(rt["strength"])}<br>{E(rt["next_step"])}<br><i>{E(rt["optional"])}</i><br>{E(rt["closing"])}</div>')
     ex = rt['example_words']
     H.append('<h3>A filled example (fictional child, Mei)</h3><div class="note">' + f'<b>Term 1 progress note for Mei</b><br>{E(rt["term_line"])}<br>' + ''.join(
         f'<b>{E(s["parent_name"])}: {E(W[ex[s["id"]]])}.</b> {E(s[ex[s["id"]]].replace("[Name]", "Mei"))}<br>' for s in c['strands']) +
-        'One thing Mei did well this term: she explained why 62 is bigger than 26 using bundles of ten.<br>One next step: act out two-step stories with counters at home.<br>' + E(rt['closing'].replace('[Name]', 'Mei')) + '</div>')
+        'One thing Mei did well this term: she explained why 62 is greater than 26 using bundles of ten.<br>One next step: act out two-step stories with counters at home.<br>' + E(rt['closing'].replace('[Name]', 'Mei')) + '</div>')
     H.append('<p class="small">Words to avoid in the note: score, mark, out of, rank, top, below average, behind, ahead of, pass, fail, predicted, ready for. No claim about exams, GEP or any contest. '
              'No mention of other children. The note goes to the parent contact only.</p>')
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Check key</title><style>{font_css()}{KEY_CSS}</style></head><body>{"".join(H)}</body></html>'
@@ -355,12 +357,11 @@ def longest_dark_run_mm(pdf, page, dpi=254, y_range=None):
 
 
 def measure_sheet(pdf, c):
-    """Measure the printed 10 cm bar (page 4) and the 9 cm line (page 3) on the rendered PDF. Returns (bar_mm, line_mm)."""
-    bar_target, line_target = c['sheet_check_bar_mm'], c['line_mm']
-    runs4 = longest_dark_run_mm(pdf, 4); runs3 = longest_dark_run_mm(pdf, 3)
+    """Measure the printed 10 cm bar (page 4) on the rendered PDF. Returns (bar_mm, line_mm)."""
+    bar_target = c['sheet_check_bar_mm']
+    runs4 = longest_dark_run_mm(pdf, 4)
     bar = min((r for r, _ in runs4 if abs(r - bar_target) < 3), key=lambda r: abs(r - bar_target), default=None)
-    line = min((r for r, _ in runs3 if abs(r - line_target) < 3), key=lambda r: abs(r - line_target), default=None)
-    return bar, line
+    return bar, bar
 
 
 def main():
@@ -393,8 +394,8 @@ def main():
     if nn != 1:
         print('FAIL parent note must be one page'); ok = False
     bar, line = measure_sheet(sheet, c)
-    print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm', '| printed 9 cm line measures', None if line is None else f'{line:.2f} mm')
-    for name, got, want in (('bar', bar, c['sheet_check_bar_mm']), ('line', line, c['line_mm'])):
+    print('printed 10 cm bar measures', None if bar is None else f'{bar:.2f} mm', '| (question 9 now has two drawn lines and no printed line)')
+    for name, got, want in (('bar', bar, c['sheet_check_bar_mm']),):
         if got is None or abs(got - want) > 0.6:
             print(f'FAIL printed {name} is {got} mm, should be {want} mm'); ok = False
     print('built', od)

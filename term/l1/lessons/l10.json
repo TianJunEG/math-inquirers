@@ -765,7 +765,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number. Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5."
+            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number. Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos. Then count on in tens. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5."
           },
           {
             "k": "WORK",
@@ -783,7 +783,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20. Question 7. Write 68 take away 23. Write 76 take away 14. Question 8. Fill in the missing number in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?"
+            "text": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20. Question 7. Part a: write 68 take away 23. Part b: Ali says 47 take away 20 equals 25. Is he right? Circle Yes or No. Question 8. Fill in the missing number in each box. Part a: 26 plus 10 equals box plus 9. Part b: 8 plus 7 equals 7 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: under it, draw a line 3 centimetres longer. Part c: write how long the second line is."
           },
           {
             "k": "WORK",
@@ -3088,7 +3088,7 @@
     "child_rules": [
       "This is a check for you and your tutor.",
       "It is not a race. Nobody else sees your answers.",
-      "Read each question carefully. Write your answers in the spaces provided. You may skip any question.",
+      "Do your best. You may skip any question.",
       "Question 9 needs your ruler.",
       "The last question is a Think harder question. It is optional."
     ],
@@ -3154,7 +3154,15 @@
           "arrow": 67,
           "labels": [
             60,
+            61,
+            62,
+            63,
+            64,
             65,
+            66,
+            67,
+            68,
+            69,
             70
           ]
         },
@@ -3248,7 +3256,7 @@
         "strand": "numbers",
         "page": 2,
         "tier": "start",
-        "skill": "Counting patterns in 5s and 2s, and what we see in the last digit",
+        "skill": "Counting patterns in 5s, 2s and 10s",
         "text": "Fill in the missing numbers.",
         "parts": [
           {
@@ -3271,27 +3279,31 @@
           },
           {
             "l": "c",
-            "text": "Numbers in the 5s pattern end in 5 or ___.",
-            "ans": "0",
-            "val": 0
+            "text": "Counting in 10s: 11, 21, 31, ___, ___",
+            "ans": "41, 51",
+            "val": [
+              41,
+              51
+            ]
           }
         ],
-        "say": "Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives.",
-        "answer": "30, 35; 28, 30; 0",
+        "say": "Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos. Then count on in tens.",
+        "answer": "30, 35; 28, 30; 41, 51",
         "val": [
           30,
           35,
           28,
           30,
-          0
+          41,
+          51
         ],
-        "solution": "In 5s: 25, 30, 35. In 2s: 26, 28, 30. Numbers in the 5s end in 5 or 0.",
-        "right": "All five gaps and the last digit correct.",
+        "solution": "In 5s: 25, 30, 35. In 2s: 26, 28, 30. In 10s: 31, 41, 51 (the tens digit goes up by 1).",
+        "right": "All six gaps correct.",
         "partly": "At least one part correct.",
         "mistakes": [
           "(a) 26, 27 (counting in ones).",
           "(b) 27, 28 (counting in ones).",
-          "(c) a digit other than 0."
+          "(c) 32, 33 (counting in ones) or 41, 42."
         ]
       },
       {
@@ -3384,7 +3396,7 @@
         "strand": "addsub",
         "page": 3,
         "tier": "start",
-        "skill": "Take away tens and ones without renaming",
+        "skill": "Take away tens and ones without renaming, and check a claim",
         "text": "Subtract.",
         "parts": [
           {
@@ -3395,23 +3407,23 @@
           },
           {
             "l": "b",
-            "text": "76 - 14 = ___",
-            "ans": "62",
-            "val": 62
+            "text": "Ali says 47 - 20 = 25. Is he right? [yesno]",
+            "ans": "No (47 - 20 = 27)",
+            "val": "No"
           }
         ],
-        "say": "Question 7. Write 68 take away 23. Write 76 take away 14.",
-        "answer": "45; 62",
+        "say": "Question 7. Part a: write 68 take away 23. Part b: Ali says 47 take away 20 equals 25. Is he right? Circle Yes or No.",
+        "answer": "45; No",
         "val": [
           45,
-          62
+          "No"
         ],
-        "solution": "68 - 20 = 48, then 48 - 3 = 45. 76 - 10 = 66, then 66 - 4 = 62.",
-        "right": "Both correct.",
-        "partly": "One correct.",
+        "solution": "68 - 20 = 48, then 48 - 3 = 45. 47 - 20 = 27, not 25, so Ali is not right (he took away 22 or changed the ones).",
+        "right": "45 and No.",
+        "partly": "One of the two correct.",
         "mistakes": [
           "(a) 55 (taking 13 or forgetting the 3).",
-          "(b) 70 or 62 reversed as 26."
+          "(b) circling Yes."
         ]
       },
       {
@@ -3425,9 +3437,9 @@
         "parts": [
           {
             "l": "a",
-            "text": "26 + 13 = [box] + 10",
-            "ans": "29",
-            "val": 29
+            "text": "26 + 10 = [box] + 9",
+            "ans": "27",
+            "val": 27
           },
           {
             "l": "b",
@@ -3436,17 +3448,17 @@
             "val": 8
           }
         ],
-        "say": "Question 8. Fill in the missing number in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box.",
-        "answer": "29; 8",
+        "say": "Question 8. Fill in the missing number in each box. Part a: 26 plus 10 equals box plus 9. Part b: 8 plus 7 equals 7 plus box.",
+        "answer": "27; 8",
         "val": [
-          29,
+          27,
           8
         ],
-        "solution": "(a) 26 + 13 = 39, and 39 is 29 + 10, so the box is 29. (b) Both sides must have the same total: 8 + 7 = 15, and 7 + 8 = 15, so the box is 8.",
+        "solution": "(a) 26 + 10 = 36, and 36 is 27 + 9, so the box is 27. (b) Both sides must have the same total: 8 + 7 = 15 and 7 + 8 = 15, so the box is 8.",
         "right": "Both correct.",
         "partly": "One correct.",
         "mistakes": [
-          "(a) 39 (writing the total of the left side).",
+          "(a) 36 (writing the total of the left side).",
           "(b) 15 (the total instead of the missing number)."
         ]
       },
@@ -3456,12 +3468,12 @@
         "strand": "length",
         "page": 3,
         "tier": "start",
-        "skill": "Draw a line of a given length and measure a printed line to the nearest centimetre",
+        "skill": "Draw a line of a given length, then a line that is 3 cm longer",
         "text": "Use your ruler.",
         "visual": {
           "type": "ruler_task",
           "draw_cm": 6,
-          "line_cm": 9
+          "extra_cm": 3
         },
         "parts": [
           {
@@ -3472,23 +3484,30 @@
           },
           {
             "l": "b",
-            "text": "The line above is ___ cm long.",
+            "text": "Under it, draw a line 3 cm longer.",
+            "ans": "A line 9 cm long (8.7 to 9.3 cm)",
+            "val": 9
+          },
+          {
+            "l": "c",
+            "text": "The second line is ___ cm long.",
             "ans": "9",
             "val": 9
           }
         ],
-        "say": "Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?",
-        "answer": "a line 6 cm long; 9 cm",
+        "say": "Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: under it, draw a line 3 centimetres longer. Part c: write how long the second line is.",
+        "answer": "a line 6 cm long; a line 9 cm long; 9 cm",
         "val": [
           6,
+          9,
           9
         ],
-        "solution": "Put the 0 mark of the ruler on the dot, draw to the 6 mark. The printed line starts at the 0 mark and ends at 9.",
-        "right": "A line 5.7 to 6.3 cm long that starts at the dot, and 9.",
-        "partly": "One of the two correct (a line between 5.5 and 6.5 cm counts as correct for part a if the photo is not clear).",
+        "solution": "Put the 0 mark of the ruler on the dot and draw to the 6 mark. A line 3 cm longer is 6 + 3 = 9 cm: draw to the 9 mark.",
+        "right": "Both lines drawn about right (6 cm: 5.7 to 6.3; 9 cm: 8.7 to 9.3) and 9 written.",
+        "partly": "One of the lines about right, or only the 9 written (a line within 0.5 cm of the target counts if the photo is not clear).",
         "mistakes": [
-          "Starting the line at 1 on the ruler (a 5 cm line).",
-          "(b) 10 (counting marks instead of gaps) or reading from the edge of the ruler."
+          "Starting a line at 1 on the ruler (5 cm and 8 cm lines).",
+          "(c) 3 (the extra only)."
         ]
       },
       {
@@ -3738,6 +3757,11 @@
       "The recording shows the tutor and the screen only; pause it during silent work if the platform allows."
     ],
     "sheet_check_bar_mm": 100,
-    "line_mm": 90
+    "page_instructions": [
+      "Fill in the correct answers in the spaces provided.",
+      "Fill in the correct answers in the spaces provided.",
+      "Fill in the correct answers in the spaces provided. Use your ruler for Question 9.",
+      "Show your working clearly. Write your answers in the spaces provided."
+    ]
   }
 }
