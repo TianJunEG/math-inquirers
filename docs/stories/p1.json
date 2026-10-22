@@ -58,7 +58,7 @@
       "years": "1820-1910",
       "country_or_region": "England (born in Florence, Italy)",
       "who": "Nurse who used coloured charts to show numbers",
-      "story": "Florence Nightingale is best known as a nurse. She was also very good at statistics, which means collecting and sorting numbers. She worked out how to turn her numbers into coloured pictures called charts, where a bigger wedge shows a bigger number. A chart helps people see the facts quickly. She used her numbers to show why hospitals needed to be cleaner.",
+      "story": "Florence Nightingale is best known as a nurse. She was also very good at statistics, which means collecting and sorting numbers. She turned her numbers into coloured pictures called charts, where a bigger wedge shows a bigger number. A chart helps people see the facts quickly. She used her numbers to show why hospitals needed to be cleaner.",
       "link_to_lesson": "Florence turned numbers into pictures so that people could read them at a glance, just like a picture graph.",
       "try_it": {
         "q": "A picture graph shows 4 apples, 2 pears and 5 bananas. Which fruit has the most? How many more bananas than pears?",
@@ -72,7 +72,7 @@
       "confidence": "high",
       "legend_note": "",
       "icon": "A lamp with a small round chart made of coloured wedges.",
-      "story_word_count": 62
+      "story_word_count": 58
     },
     {
       "lesson": 4,
@@ -153,7 +153,7 @@
       "years": "1977-2017",
       "country_or_region": "Iran (Tehran) and USA",
       "who": "Mathematician who thought by drawing shapes and curves",
-      "story": "Maryam Mirzakhani was born in Tehran, in Iran. As a child she loved reading, and she wanted to be a writer. Later she fell in love with maths, especially geometry, which is the maths of shapes. When she worked on a problem, she drew doodles on big sheets of paper and wrote ideas around the edges. Her daughter called it painting. In 2014 she became the first woman to win the Fields Medal, a top maths prize.",
+      "story": "Maryam Mirzakhani was born in Tehran, in Iran. As a child she wanted to be a writer. Later she turned to maths, especially geometry, which is the maths of shapes. When she worked on a problem, she drew doodles on big sheets of paper and wrote ideas around the edges. Her daughter called it painting. In 2014 she became the first woman to win the Fields Medal, a top maths prize.",
       "link_to_lesson": "Maryam solved problems about shapes by drawing them, and today the children look closely at 2D shapes.",
       "try_it": {
         "q": "Draw a triangle. How many sides does it have? How many corners?",
@@ -168,7 +168,7 @@
       "confidence": "high",
       "legend_note": "",
       "icon": "A big sheet of paper covered in loops, triangles and circles drawn with a pencil.",
-      "story_word_count": 77
+      "story_word_count": 71
     },
     {
       "lesson": 8,
@@ -225,7 +225,7 @@
       "years": "1887-1920",
       "country_or_region": "India (Tamil Nadu)",
       "who": "Indian mathematician who found surprising patterns in numbers",
-      "story": "Srinivasa Ramanujan was born in Erode, in India. He loved numbers and taught himself a lot of maths. He wrote down his ideas and sent them in letters to mathematicians in England. One of them, G. H. Hardy, invited him to Cambridge. A story that Hardy told himself: he rode in taxi number 1729 and called it a dull number. Ramanujan said it was very interesting. Even a plain number can hide a surprise.",
+      "story": "Srinivasa Ramanujan was born in Erode, in India. He loved numbers and worked on maths from a young age. He wrote down his ideas and sent them in letters to mathematicians in England. One of them was G. H. Hardy. Later Ramanujan went to Cambridge to work with him. A story that Hardy told himself: he rode in taxi number 1729 and called it a dull number. Ramanujan said it was very interesting. Even a plain number can hide a surprise.",
       "link_to_lesson": "Ramanujan treated numbers like puzzles to explore, which is what the children do on challenge day.",
       "try_it": {
         "q": "Puzzle: find two numbers that add up to 12 and have a difference of 2.",
@@ -241,7 +241,7 @@
       "confidence": "medium",
       "legend_note": "Taxi story labelled as 'a story that Hardy told himself'; it is Hardy's own account of the conversation.",
       "icon": "A taxi-shaped number plate showing 1729 with a small lightbulb.",
-      "story_word_count": 74
+      "story_word_count": 81
     }
   ]
 }
