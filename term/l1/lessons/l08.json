@@ -134,7 +134,7 @@
   "notes": "A 2-minute opening (the routine and the four inquirer rules were taught in Lesson 1), so Explore gets 16 minutes for hands-on balancing. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
  },
  "sneak_peek": {
-  "q1": "Ravi has 6 red beads and 4 blue beads. Siti has 5 red beads and 5 blue beads. Do they have the same number of beads? Draw dots to help.",
+  "q1": "Ravi has 6 red beads and 4 blue beads. Siti has 5 red beads and 5 blue beads. Do they have the same number of beads? Draw dots to help, then circle Yes or No.",
   "q2": "8 + 5 = 9 + ___. What number goes in the blank? Write how you know.",
   "a1": "Yes, the same: 10 beads each.",
   "a2": "4. 9 is 1 more than 8, so the blank is 1 less than 5. (Both sides make 13.)",
@@ -337,7 +337,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle one. Ravi has 6 red beads and 4 blue beads. Siti has 5 red beads and 5 blue beads. Do they have the same number of beads? Draw dots to help."
+      "text": "Puzzle one. Ravi has 6 red beads and 4 blue beads. Siti has 5 red beads and 5 blue beads. Do they have the same number of beads? Draw dots to help, then circle Yes or No."
      },
      {
       "k": "WORK",
@@ -475,7 +475,7 @@
      },
      {
       "k": "ASK",
-      "text": "What did you notice? When a number on one side got bigger, what happened to the other number?",
+      "text": "What did you notice? When a number on one side got greater, what happened to the other number?",
       "resp": 45
      },
      {
@@ -582,7 +582,7 @@
      },
      {
       "k": "SAY",
-      "text": "The two moved across. So the totals are the same. Now look at the right side of the slide: twenty-nine plus fourteen and thirty plus fifteen. Both numbers went up, so the total went up."
+      "text": "The 2 moved from one number to the other. So the totals are the same. Now look at the right side of the slide: twenty-nine plus fourteen and thirty plus fifteen. Both numbers went up, so the total went up."
      },
      {
       "k": "SLIDE",
@@ -694,7 +694,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: six, seven, eight. Question 5: ten, ten, four, nine. Question 6: Ben needs five blue pens. Question 7: forty-five."
+      "text": "Question 4: six, seven, eight. Question 5: ten, ten, four, nine. Question 6: Ben has five blue pens. Question 7: forty-five."
      },
      {
       "k": "SLIDE",
@@ -955,7 +955,7 @@
     },
     {
      "t": "p",
-     "text": "13 and how many more make 20?"
+     "text": "Start at 13. How many more make 20?"
     },
     {
      "t": "numrow",
@@ -1041,7 +1041,7 @@
         "items": [
          "Ravi has 6 red beads and 4 blue beads.",
          "Siti has 5 red beads and 5 blue beads.",
-         "Do they have the same number of beads? Draw dots to help."
+         "Do they have the same number of beads? Draw dots to help, then circle Yes or No."
         ]
        }
       ],
@@ -1107,7 +1107,7 @@
     },
     {
      "t": "chip",
-     "text": "Then try the 8 + 4 and 9 + a pile puzzle."
+     "text": "Next, match 8 + 4 with 9 + a second pile."
     }
    ],
    "note": "Round 2 and round 3, about 8 minutes, main room. Children move one thing from one pile to the other and count the total again: it stays 12. Then give two or three across: 5 + 7 and 4 + 8 are still 12. Round 3 asks them to match 8 + 4 with 9 + a pile (3), and 6 + 5 with 8 + a pile (3), by thinking about how the first number moved. Walk the cameras and ask how do you know."
@@ -1189,7 +1189,7 @@
      "rows": [
       [
        "What we do",
-       "The sum"
+       "What we write"
       ],
       [
        "Start",
@@ -1315,7 +1315,7 @@
         "head": "SAME TOTAL",
         "items": [
          "47 + 18 and 45 + 20",
-         "47 down 2, 18 up 2."
+         "47 goes down 2. 18 goes up 2."
         ]
        }
       ],
@@ -1325,7 +1325,7 @@
         "head": "NOT THE SAME",
         "items": [
          "29 + 14 and 30 + 15",
-         "29 up 1, 14 up 1."
+         "29 goes up 1. 14 goes up 1."
         ]
        }
       ]
@@ -1333,7 +1333,7 @@
     },
     {
      "t": "chip",
-     "text": "One goes down and one goes up by the same amount: the total stays the same."
+     "text": "One number goes down and one goes up by the same amount. The total stays the same."
     }
    ],
    "note": "Worked example for Think harder. 47 to 45 is 2 less, and 18 to 20 is 2 more: the 2 moved across, so the totals are the same (65 each). 29 to 30 is 1 more and 14 to 15 is 1 more: both went up, so the total went up (43 and 45). Ask: same total or different, and how do you know? Keep to about two minutes; it is a worked example, not a skill to drill."
@@ -1462,7 +1462,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: Mei has 9 + 6 = 15 pens, and Ben has 10, so he needs 5 blue pens. Question 7: 45, because 35 + 12 = 47 and 45 + 2 = 47. Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: Mei has 9 + 6 = 15 pens, and Ben has 10, so he has 5 blue pens. Question 7: 45, because 35 + 12 = 47 and 45 + 2 = 47. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-choice",
@@ -1689,7 +1689,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Fill in the blank so both sides are the same.",
+    "text": "Fill in the missing numbers.",
     "parts": [
      {
       "l": "a",
@@ -1763,19 +1763,25 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Siti fills in the blank and writes 9. Is she right? Write the number that makes both sides the same. Say what Siti mixed up.",
+    "text": "Siti says 6 + 3 = 5 + 9. Check the right side.",
     "parts": [
      {
-      "l": "",
-      "text": "6 + 3 = 5 + [] (Siti wrote 9)",
-      "ans": "9",
-      "val": 9
+      "l": "a",
+      "text": "Is Siti right? Circle Yes or No.",
+      "ans": "No",
+      "val": "no"
      },
      {
-      "l": "",
-      "text": "The blank should be []",
+      "l": "b",
+      "text": "The missing number is [].",
       "ans": "4",
       "val": 4
+     },
+     {
+      "l": "c",
+      "text": "I know because ___.",
+      "ans": "",
+      "val": "open"
      }
     ],
     "answer": "No. The blank should be 4 (6 + 3 = 9 and 5 + 4 = 9). Siti wrote the total of the left side, as if = meant the answer comes next.",
@@ -1789,29 +1795,29 @@
      "Not saying what she mixed up (any clear sentence about the equals sign or the right side is fine)."
     ],
     "mins": 2.5,
-    "lines": 1
+    "lines": 0
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "7 + 5 = 12. Each time, give 1 from the first number to the second number. The total stays 12. Fill in the blanks.",
+    "text": "7 + 5 = 12. Give 1 across from the 7 to the 5. Fill in the missing numbers.",
     "parts": [
      {
       "l": "a",
-      "text": "6 + [] = 12",
+      "text": "Give 1: 6 + [] = 12",
       "ans": "6",
       "val": 6
      },
      {
       "l": "b",
-      "text": "5 + [] = 12",
+      "text": "Give 1 more: 5 + [] = 12",
       "ans": "7",
       "val": 7
      },
      {
       "l": "c",
-      "text": "4 + [] = 12",
+      "text": "Give 1 more: 4 + [] = 12",
       "ans": "8",
       "val": 8
      }
@@ -1835,17 +1841,17 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Fill in the blanks. Look at how the first number moved.",
+    "text": "Fill in the missing numbers.",
     "parts": [
      {
       "l": "a",
-      "text": "20 + 30 = 40 + ___",
+      "text": "20 + 30 = 40 + []",
       "ans": "10",
       "val": 10
      },
      {
       "l": "b",
-      "text": "50 + 20 = 60 + ___",
+      "text": "50 + 20 = 60 + []",
       "ans": "10",
       "val": 10
      },
@@ -1882,11 +1888,11 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Mei has 9 red pens and 6 blue pens. Ben has 10 red pens. How many blue pens must Ben have to have the same number of pens as Mei?",
+    "text": "Mei has 9 red pens and 6 blue pens. Ben has 10 red pens and some blue pens. They have the same number of pens. How many blue pens does Ben have?",
     "parts": [
      {
       "l": "",
-      "text": "Ben needs [] blue pens",
+      "text": "Ben has [] blue pens.",
       "ans": "5",
       "val": 5
      }
@@ -1908,7 +1914,7 @@
     "id": "S7",
     "page": 2,
     "tier": "start",
-    "text": "In this sum the 12 became 2. That is one ten less. Fill in the blank.",
+    "text": "Fill in the missing number.",
     "parts": [
      {
       "l": "",
@@ -1936,8 +1942,21 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Mei says 47 + 18 and 45 + 20 have the same total. Ali says 45 + 20 is bigger. Who is right? Do not add. Say how the numbers moved.",
-    "parts": [],
+    "text": "Mei says 47 + 18 and 45 + 20 have the same total. Ali says 45 + 20 has the greater total. Do not add.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Who is right? Circle Mei or Ali.",
+      "ans": "Mei",
+      "val": "mei"
+     },
+     {
+      "l": "b",
+      "text": "I know because ___.",
+      "ans": "",
+      "val": "open"
+     }
+    ],
     "answer": "Mei. 47 went down by 2 to 45 and 18 went up by 2 to 20. The 2 moved across, so both totals are 65.",
     "val": [
      "Mei",
@@ -1950,29 +1969,29 @@
      "Adding both sums and not saying how the numbers moved (correct, but check the reason)."
     ],
     "mins": 5,
-    "lines": 3
+    "lines": 2
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Look at each pair. Do not add yet. Write SAME if the totals match. If not, write LEFT or RIGHT for the side with the bigger total.",
+    "text": "Do not add. Circle LEFT or RIGHT for the greater total, or circle SAME.",
     "parts": [
      {
       "l": "a",
-      "text": "29 + 14 and 30 + 13: ___",
+      "text": "29 + 14 and 30 + 13: LEFT / RIGHT / SAME",
       "ans": "SAME",
       "val": "same"
      },
      {
       "l": "b",
-      "text": "53 + 20 and 50 + 23: ___",
+      "text": "53 + 20 and 50 + 23: LEFT / RIGHT / SAME",
       "ans": "SAME",
       "val": "same"
      },
      {
       "l": "c",
-      "text": "26 + 15 and 28 + 16: ___",
+      "text": "26 + 15 and 28 + 16: LEFT / RIGHT / SAME",
       "ans": "RIGHT",
       "val": "right"
      }
@@ -1996,7 +2015,7 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Make adding easier. Fill in the blank, then write the total.",
+    "text": "Fill in the missing number. Then find the total.",
     "parts": [
      {
       "l": "a",
@@ -2006,7 +2025,7 @@
      },
      {
       "l": "b",
-      "text": "The total is ___",
+      "text": "The total is ___.",
       "ans": "75",
       "val": 75
      }
@@ -2029,11 +2048,17 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "Ben wrote 24 + 17 = 26 + 19. Is it balanced? If not, change the 19 to a number that makes it balance.",
+    "text": "Ben writes 24 + 17 = 26 + 19.",
     "parts": [
      {
-      "l": "",
-      "text": "Change the 19 to ___",
+      "l": "a",
+      "text": "Is it balanced? Circle Yes or No.",
+      "ans": "No",
+      "val": "no"
+     },
+     {
+      "l": "b",
+      "text": "Change the 19 to ___.",
       "ans": "15",
       "val": 15
      }
@@ -2050,7 +2075,7 @@
      "Changing the 26 and not saying which number you change."
     ],
     "mins": 4,
-    "lines": 2
+    "lines": 1
    }
   ],
   "go": [
@@ -2058,7 +2083,7 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Fill in both blanks so that every sum is the same.",
+    "text": "Fill in the missing numbers so that all three sums have the same total.",
     "parts": [
      {
       "l": "",
@@ -2088,16 +2113,22 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Two blanks. Write three different pairs of numbers that fill them and balance. What do you notice about the first blank and the second blank?",
+    "text": "Fill in the blanks so both sides are the same. Write 3 different pairs. Many answers are right.",
     "parts": [
      {
-      "l": "",
+      "l": "a",
       "text": "___ + 5 = 9 + ___",
       "ans": "e.g. 5 and 1",
       "val": [
        5,
        1
       ]
+     },
+     {
+      "l": "b",
+      "text": "I notice ___.",
+      "ans": "",
+      "val": "open"
      }
     ],
     "answer": "Any pair where the first blank is 4 more than the second, for example 5 and 1, 6 and 2, 7 and 3 (also 4 and 0).",
@@ -2111,23 +2142,23 @@
      "Giving one pair only."
     ],
     "mins": 6,
-    "lines": 4
+    "lines": 3
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Mei has 28 stickers on a page and 17 in her pocket. Ali and Ben have the same number in all. Ali has 30 on a page. How many are in his pocket?",
+    "text": "Mei has 28 stickers on a page and 17 in her pocket. Ali and Ben have the same total as Mei. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Ali's pocket: ___",
+      "text": "Ali has 30 stickers on his page. His pocket has ___ stickers.",
       "ans": "15",
       "val": 15
      },
      {
       "l": "b",
-      "text": "Ben has 25 on his page. His pocket: ___",
+      "text": "Ben has 25 stickers on his page. His pocket has ___ stickers.",
       "ans": "20",
       "val": 20
      }
@@ -2152,8 +2183,8 @@
    "page": 5,
    "tier": "investigation",
    "title": "Keep it the same",
-   "first": "Write 6 + 4. Now write 7 + 3, then 7 + 5. Which total is not 10? What did you do to the numbers?",
-   "text": "Pick two numbers. Add 3 to one and take 3 from the other. Then add 3 to both. Then take 2 from both. Which keep the total the same? Which change it, and by how much?",
+   "first": "Add: 6 + 4, then 7 + 3, then 7 + 5. Which total is not 10? Write what you did to the numbers.",
+   "text": "Pick two numbers. Add 3 to one and take 3 from the other. Then add 3 to both. Then take 2 from both. Which keep the total the same? By how much do the others change it?",
    "lines": 4,
    "answer": "Add some to one number and take the same from the other: the total stays the same (give and take). Add 3 to both: the total goes up by 6. Take 2 from both: the total goes down by 4. When both numbers change the same way, the total changes by double.",
    "val": [
@@ -2178,7 +2209,7 @@
  "exit": [
   {
    "id": "E1",
-   "text": "Fill in the blank.",
+   "text": "Fill in the missing number.",
    "parts": [
     {
      "l": "",
@@ -2199,11 +2230,11 @@
   },
   {
    "id": "E2",
-   "text": "Is 28 + 6 = 30 + 4 balanced? Write yes or no.",
+   "text": "Is 28 + 6 = 30 + 4 balanced?",
    "parts": [
     {
      "l": "",
-     "text": "Yes or no: ___",
+     "text": "Circle Yes or No.",
      "ans": "yes",
      "val": "yes"
     }
@@ -2219,7 +2250,7 @@
   },
   {
    "id": "E3",
-   "text": "Fill in the blank. Say how the numbers moved.",
+   "text": "Fill in the missing number.",
    "parts": [
     {
      "l": "",
@@ -2266,7 +2297,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Fill in the blank: 6 + 3 = 5 + ___",
+   "text": "Fill in the missing number: 6 + 3 = 5 + ___",
    "answer": "4",
    "val": 4,
    "solution": "6 + 3 is 9, and 5 + 4 is 9. The 6 became 5 (1 less), so the 3 becomes 4 (1 more)."
@@ -2274,7 +2305,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Fill in the blank: 10 + 4 = 9 + ___",
+   "text": "Fill in the missing number: 10 + 4 = 9 + ___",
    "answer": "5",
    "val": 5,
    "solution": "10 went down by 1 to 9, so 4 goes up by 1 to 5. Both sides make 14."
@@ -2282,7 +2313,7 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "Fill in the blank: 20 + 30 = 40 + ___",
+   "text": "Fill in the missing number: 20 + 30 = 40 + ___",
    "answer": "10",
    "val": 10,
    "solution": "20 went up by 20 to 40, so 30 goes down by 20 to 10. Both sides make 50."
@@ -2290,7 +2321,7 @@
   {
    "id": "H4",
    "tier": "think",
-   "text": "Ravi says 36 + 14 and 34 + 16 have the same total. Is he right? Do not add. Say how the numbers moved.",
+   "text": "Ravi says 36 + 14 and 34 + 16 have the same total. Do not add. Is he right? Circle Yes or No. Then write: I know because ___.",
    "answer": "Yes. 36 went down by 2 to 34 and 14 went up by 2 to 16. Both make 50.",
    "val": "yes",
    "solution": "One number goes down by 2 and the other goes up by 2, so the total stays the same."
@@ -2298,7 +2329,7 @@
   {
    "id": "H5",
    "tier": "go",
-   "text": "At home: put 12 small things in a pile of 7 and a pile of 5. Give one across and write the new sum, like 6 + 6 = 12. Keep going. How many sums can you write?",
+   "text": "Put 12 small things in a pile of 7 and a pile of 5. Give 1 across and write the new sum, like 6 + 6 = 12. How many sums can you write?",
    "answer": "Any list that shows the first number going down by 1 and the second going up by 1, for example 7 + 5, 6 + 6, 5 + 7, 4 + 8, 3 + 9, 2 + 10, 1 + 11, 0 + 12.",
    "val": "open",
    "solution": "Each time one thing moves across, the total stays 12. A grown-up can count the things on both piles to check."
@@ -2313,7 +2344,7 @@
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "Fill in the blank so both sides are the same: 5 + 3 = 4 + ___",
+    "q": "Fill in the missing number so both sides are the same: 5 + 3 = 4 + ___",
     "answer": 4,
     "hint": "The 5 became 4. It went down by 1. So what happens to the 3?",
     "steps": [
@@ -2355,7 +2386,7 @@
      "derive": {
       "c": "a-k"
      },
-     "q": "Fill in the blank so both sides are the same: {a} + {b} = {c} + ___",
+     "q": "Fill in the missing number so both sides are the same: {a} + {b} = {c} + ___",
      "answer": "b+k",
      "hint": "The {a} became {c}. It went down by {k}. So what happens to the {b}?",
      "steps": [
@@ -2369,7 +2400,7 @@
     "id": "c2",
     "tier": "core",
     "type": "number",
-    "q": "Fill in the blank so both sides are the same: 4 + 7 = 6 + ___",
+    "q": "Fill in the missing number so both sides are the same: 4 + 7 = 6 + ___",
     "answer": 5,
     "hint": "The 4 became 6. It went up by 2. So what happens to the 7?",
     "steps": [
@@ -2411,7 +2442,7 @@
      "derive": {
       "c": "a+k"
      },
-     "q": "Fill in the blank so both sides are the same: {a} + {b} = {c} + ___",
+     "q": "Fill in the missing number so both sides are the same: {a} + {b} = {c} + ___",
      "answer": "b-k",
      "hint": "The {a} became {c}. It went up by {k}. So what happens to the {b}?",
      "steps": [
@@ -2452,7 +2483,7 @@
     "id": "c4",
     "tier": "core",
     "type": "number",
-    "q": "Fill in the blank: 30 + 30 = 40 + ___",
+    "q": "Fill in the missing number: 30 + 30 = 40 + ___",
     "answer": 20,
     "hint": "30 went up by 10 to 40. What happens to the other 30?",
     "steps": [
@@ -2488,7 +2519,7 @@
       "b": "u*10",
       "c": "(t+1)*10"
      },
-     "q": "Fill in the blank: {a} + {b} = {c} + ___",
+     "q": "Fill in the missing number: {a} + {b} = {c} + ___",
      "answer": "(u-1)*10",
      "hint": "{a} went up by 10 to {c}. What happens to the {b}?",
      "steps": [
@@ -2529,7 +2560,7 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "Make adding easier: 49 + 26 = 50 + ___",
+    "q": "Fill in the missing number: 49 + 26 = 50 + ___",
     "answer": 25,
     "hint": "49 went up by 1 to 50. What happens to the 26?",
     "steps": [
@@ -2576,7 +2607,7 @@
       "a": "x*10-y",
       "c": "x*10"
      },
-     "q": "Make adding easier: {a} + {b} = {c} + ___",
+     "q": "Fill in the missing number: {a} + {b} = {c} + ___",
      "answer": "b-y",
      "hint": "{a} went up by {y} to {c}. What happens to the {b}?",
      "steps": [
@@ -2619,7 +2650,7 @@
     "id": "t3",
     "tier": "stretch",
     "type": "choice",
-    "q": "Do not add. Which total is bigger: 29 + 14 or 30 + 15?",
+    "q": "Do not add. Which total is greater: 29 + 14 or 30 + 15?",
     "options": [
      "29 + 14",
      "30 + 15",
@@ -2631,14 +2662,14 @@
     "steps": [
      "29 went up by 1 to 30.",
      "14 went up by 1 to 15.",
-     "Both went up, so 30 + 15 is bigger."
+     "Both went up, so 30 + 15 is greater."
     ],
     "slips": [
      {
       "a": [
        "They are the same"
       ],
-      "say": "Both numbers went up by 1. That makes the total 2 bigger."
+      "say": "Both numbers went up by 1. That makes the total 2 greater."
      }
     ]
    },
@@ -2646,7 +2677,7 @@
     "id": "t4",
     "tier": "stretch",
     "type": "number",
-    "q": "Ben wrote 24 + 17 = 26 + 19. It is not balanced. What should the 19 change to?",
+    "q": "Ben wrote 24 + 17 = 26 + 19. It is not balanced. What number should replace the 19?",
     "answer": 15,
     "hint": "Look at how the first number moved. The other number must move the opposite way.",
     "steps": [
@@ -2683,7 +2714,7 @@
       "c": "a+k",
       "d": "b+k"
      },
-     "q": "Ben wrote {a} + {b} = {c} + {d}. It is not balanced. What should the {d} change to?",
+     "q": "Ben wrote {a} + {b} = {c} + {d}. It is not balanced. What number should replace the {d}?",
      "answer": "b-k",
      "hint": "{a} went up by {k} to {c}. The other number must move the opposite way.",
      "steps": [
@@ -2715,7 +2746,7 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "Mei has 28 stickers on a page and 17 in her pocket. Ali has the same number in all. He has 30 on a page. How many are in his pocket?",
+    "q": "Mei has 28 stickers on a page and 17 in her pocket. Ali has the same total as Mei. He has 30 on a page. How many are in his pocket?",
     "answer": 15,
     "hint": "Compare Ali's page with Mei's page. Does his pocket have more or fewer?",
     "steps": [
@@ -2753,7 +2784,7 @@
      "derive": {
       "c": "a+k"
      },
-     "q": "Mei has {a} stickers on a page and {b} in her pocket. Ali has the same number in all. He has {c} on a page. How many are in his pocket?",
+     "q": "Mei has {a} stickers on a page and {b} in her pocket. Ali has the same total as Mei. He has {c} on a page. How many are in his pocket?",
      "answer": "b-k",
      "hint": "Compare Ali's page with Mei's page. Does his pocket have more or fewer?",
      "steps": [
@@ -2833,7 +2864,7 @@
    "blank: the line where the missing number goes"
   ],
   "try_home": [
-   "Two plates: put some small things in two piles on each plate. Ask: do the plates match? Give one thing across and count again.",
+   "Two plates: put two piles of small things on each plate. Ask: do the plates match? Give one thing across and count again.",
    "Say it: write 8 + 5 = 9 + ___ and ask your child to say how the 8 moved and what that means for the 5.",
    "Make a mistake on purpose: write 7 + 3 = 8 + 3 and ask your child to find what is wrong and fix it."
   ],
