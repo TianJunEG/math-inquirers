@@ -1,9 +1,357 @@
-{"kept": {
- "1": {"6":"Isaac Newton","8":"Leonhard Euler","10":"Srinivasa Ramanujan"},
- "2": {"2":"Carl Friedrich Gauss","7":"Ahmes"},
- "3": {"3":"John Napier","4":"Bhaskara II","5":"Sun Zi"},
- "4": {"1":"Sophie Germain","2":"Fibonacci","3":"Katherine Johnson","5":"Simon Stevin","6":"Eratosthenes","8":"Emmy Noether","9":"Florence Nightingale"},
- "5": {"4":"Liu Hui","5":"Archimedes","8":"Maryam Mirzakhani","10":"George Polya"},
- "6": {"3":"Brahmagupta","4":"Al-Khwarizmi","5":"Yang Hui","6":"Blaise Pascal","10":"Ada Lovelace"}},
- "replace": {"1":[1,2,3,4,5,7,9],"2":[1,3,4,5,6,8,9,10],"3":[1,2,6,7,8,9,10],"4":[4,7,10],"5":[1,2,3,6,7,9],"6":[1,2,7,8,9]},
- "new_chosen": []}
+{
+ "kept": {
+  "1": {
+   "6": "Isaac Newton",
+   "8": "Leonhard Euler",
+   "10": "Srinivasa Ramanujan"
+  },
+  "2": {
+   "2": "Carl Friedrich Gauss",
+   "7": "Ahmes"
+  },
+  "3": {
+   "3": "John Napier",
+   "4": "Bhaskara II",
+   "5": "Sun Zi"
+  },
+  "4": {
+   "1": "Sophie Germain",
+   "2": "Fibonacci",
+   "3": "Katherine Johnson",
+   "5": "Simon Stevin",
+   "6": "Eratosthenes",
+   "8": "Emmy Noether",
+   "9": "Florence Nightingale"
+  },
+  "5": {
+   "4": "Liu Hui",
+   "5": "Archimedes",
+   "8": "Maryam Mirzakhani",
+   "10": "George Polya"
+  },
+  "6": {
+   "3": "Brahmagupta",
+   "4": "Al-Khwarizmi",
+   "5": "Yang Hui",
+   "6": "Blaise Pascal",
+   "10": "Ada Lovelace"
+  }
+ },
+ "replace": {
+  "1": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   7,
+   9
+  ],
+  "2": [
+   1,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10
+  ],
+  "3": [
+   1,
+   2,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "4": [
+   4,
+   7,
+   10
+  ],
+  "5": [
+   1,
+   2,
+   3,
+   6,
+   7,
+   9
+  ],
+  "6": [
+   1,
+   2,
+   7,
+   8,
+   9
+  ]
+ },
+ "new_chosen": [
+  {
+   "level": 4,
+   "lesson": 4,
+   "name": "Mahavira"
+  },
+  {
+   "level": 4,
+   "lesson": 7,
+   "name": "Euclid"
+  },
+  {
+   "level": 4,
+   "lesson": 10,
+   "name": "Terence Tao"
+  },
+  {
+   "level": 6,
+   "lesson": 1,
+   "name": "Grace Hopper"
+  },
+  {
+   "level": 6,
+   "lesson": 7,
+   "name": "Cynthia Solomon"
+  },
+  {
+   "level": 6,
+   "lesson": 9,
+   "name": "Adolphe Quetelet"
+  },
+  {
+   "level": 2,
+   "lesson": 1,
+   "name": "Aryabhata"
+  },
+  {
+   "level": 2,
+   "lesson": 3,
+   "name": "Shakuntala Devi"
+  },
+  {
+   "level": 2,
+   "lesson": 4,
+   "name": "Hertha Ayrton"
+  },
+  {
+   "level": 2,
+   "lesson": 5,
+   "name": "Mary Somerville"
+  },
+  {
+   "level": 2,
+   "lesson": 6,
+   "name": "Luca Pacioli"
+  },
+  {
+   "level": 2,
+   "lesson": 8,
+   "name": "Alicia Boole Stott"
+  },
+  {
+   "level": 2,
+   "lesson": 9,
+   "name": "Thales of Miletus"
+  },
+  {
+   "level": 2,
+   "lesson": 10,
+   "name": "Paul Erdos"
+  },
+  {
+   "level": 5,
+   "lesson": 2,
+   "name": "Eugenia Cheng"
+  },
+  {
+   "level": 5,
+   "lesson": 3,
+   "name": "Alcuin of York"
+  },
+  {
+   "level": 5,
+   "lesson": 6,
+   "name": "Mary Jackson"
+  },
+  {
+   "level": 5,
+   "lesson": 9,
+   "name": "Al-Karaji"
+  },
+  {
+   "level": 6,
+   "lesson": 8,
+   "name": "Al-Kindi"
+  },
+  {
+   "level": 6,
+   "lesson": 2,
+   "name": "Kamal al-Din al-Farisi"
+  },
+  {
+   "level": 3,
+   "lesson": 7,
+   "name": "Karen Uhlenbeck"
+  },
+  {
+   "level": 3,
+   "lesson": 8,
+   "name": "Ibn al-Haytham"
+  },
+  {
+   "level": 3,
+   "lesson": 9,
+   "name": "Zu Chongzhi"
+  },
+  {
+   "level": 1,
+   "lesson": 1,
+   "name": "Julia Robinson"
+  },
+  {
+   "level": 1,
+   "lesson": 3,
+   "name": "Marie Neurath"
+  },
+  {
+   "level": 5,
+   "lesson": 7,
+   "name": "Adam Ries"
+  },
+  {
+   "level": 5,
+   "lesson": 1,
+   "name": "Dorothy Vaughan"
+  },
+  {
+   "level": 1,
+   "lesson": 1,
+   "name": "Gottfried Wilhelm Leibniz"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Madhava of Sangamagrama"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Sofia Kovalevskaya"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Robert Recorde"
+  },
+  {
+   "level": 1,
+   "lesson": 7,
+   "name": "Johannes Kepler"
+  },
+  {
+   "level": 1,
+   "lesson": 5,
+   "name": "Rene Descartes"
+  },
+  {
+   "level": 1,
+   "lesson": 4,
+   "name": "Ingrid Daubechies"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Annie Easley"
+  },
+  {
+   "level": 1,
+   "lesson": 1,
+   "name": "Seki Takakazu"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Caroline Herschel"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Jamshid al-Kashi"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Mary Cartwright"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Diophantus"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Maria Agnesi"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Marjorie Lee Browne"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Kathleen Ollerenshaw"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Nicole Oresme"
+  },
+  {
+   "level": 1,
+   "lesson": 1,
+   "name": "Al-Uqlidisi"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Emma Castelnuovo"
+  },
+  {
+   "level": 1,
+   "lesson": 2,
+   "name": "Evelyn Boyd Granville"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Mary Everest Boole"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Al-Samawal"
+  },
+  {
+   "level": 1,
+   "lesson": 9,
+   "name": "Al-Biruni"
+  },
+  {
+   "level": 1,
+   "lesson": 1,
+   "name": "Nicolas Chuquet"
+  },
+  {
+   "level": 1,
+   "lesson": 6,
+   "name": "Omar Khayyam"
+  },
+  {
+   "level": 1,
+   "lesson": 10,
+   "name": "Margaret Hamilton"
+  }
+ ]
+}

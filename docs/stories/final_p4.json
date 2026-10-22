@@ -1,0 +1,232 @@
+[
+ {
+  "lesson": 1,
+  "topic": "Factors and multiples",
+  "name": "Sophie Germain",
+  "years": "1776-1831",
+  "country_or_region": "France (Paris)",
+  "who": "A French girl who taught herself mathematics from her father's books",
+  "story": "Sophie Germain lived in Paris more than 200 years ago. As a teenager she began reading the books in her father's library, and she taught herself Latin and Greek so that she could read even more of them. Her parents were not happy about it, but she kept learning. Later she wrote to famous mathematicians using a man's name, M. Le Blanc. One of them, the great mathematician Gauss, praised her ideas about numbers, and later he found out who she really was. Sophie was fascinated by prime numbers, which have exactly two factors: 1 and themselves. She studied primes p where 2 times p plus 1 is also prime. Today these are called Sophie Germain primes. She also won a prize from the Paris Academy of Sciences for her work on how thin metal plates vibrate.",
+  "link_to_lesson": "Today you hunt for factors, and Sophie studied prime numbers, the numbers with only two factors.",
+  "try_it": {
+   "q": "Take 7. Is 2 times 7 plus 1 a prime? List the factors of your answer to prove it. Then try 5.",
+   "a": "2 x 7 + 1 = 15. The factors of 15 are 1, 3, 5 and 15, so 15 is not prime and 7 is not a Sophie Germain prime. For 5: 2 x 5 + 1 = 11, whose only factors are 1 and 11, so 11 is prime and 5 is a Sophie Germain prime."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Germain/",
+   "https://www.britannica.com/print/article/230626",
+   "https://en.wikipedia.org/wiki/Sophie_Germain"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A stack of old books with a small key tag showing 2p+1 on a number card (a pen-name mask is optional); not a portrait.",
+  "story_words": 137
+ },
+ {
+  "lesson": 2,
+  "topic": "Numbers to 100 000",
+  "name": "Leonardo of Pisa (Fibonacci)",
+  "years": "about 1170 - about 1240/1250",
+  "country_or_region": "Italy (Pisa), schooled in Bugia, now Bejaia, Algeria",
+  "who": "An Italian merchant's son who helped Europe learn the digits 0 to 9",
+  "story": "Leonardo of Pisa, whom we now call Fibonacci, lived about 800 years ago. His father was a merchant official who worked in Bugia, a trading town in North Africa that is now Bejaia in Algeria. Leonardo went there as a boy and learned to count with ten digits, 0 to 9, where each digit's place gives its value. In 1202 he finished a book, the Liber Abaci, which showed merchants how to use these digits for money, trade and bookkeeping. Place value is what lets ten digits write any big number, such as 47 305. Leonardo did not invent these digits, but his book helped them spread across Europe.",
+  "link_to_lesson": "Today you read and build numbers up to 100 000, and place value is the idea that Leonardo's book helped spread.",
+  "try_it": {
+   "q": "Use the digits 7, 0, 4, 9 and 2 once each. Write the biggest 5-digit number and the smallest 5-digit number you can.",
+   "a": "Biggest: 97 420. Smallest: 20 479 (the 0 cannot go first, or it would not be a 5-digit number)."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/",
+   "https://en.wikipedia.org/wiki/Fibonacci"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "Ten digit tiles 0 to 9 sitting in labelled place-value columns, with a small merchant's scale beside them.",
+  "story_words": 109
+ },
+ {
+  "lesson": 3,
+  "topic": "Four operations",
+  "name": "Katherine Johnson",
+  "years": "1918-2020",
+  "country_or_region": "USA (West Virginia and Virginia)",
+  "who": "A NASA mathematician who checked space-flight calculations",
+  "story": "Katherine Johnson grew up in West Virginia in the USA. She was so quick at school that she was moved up several grades. She became a research mathematician at NASA's Langley centre in Virginia, where early on people who did calculations were called computers. She worked out the flight path for Alan Shepard's 1961 flight, the first American in space. In 1962 astronaut John Glenn was about to orbit the Earth. NASA now had electronic computers, but accounts say Glenn asked for Katherine to check the machine's numbers by hand. Her answers matched, and that helped everyone trust the plan. Checking an answer a second way is a habit every mathematician uses. She received the Presidential Medal of Freedom in 2015.",
+  "link_to_lesson": "Today you use add, subtract, multiply and divide, and Katherine's job was to get these calculations right and to check them.",
+  "try_it": {
+   "q": "Check that 6 x 48 = 288 using a different method from the one you first used. (Hint: 48 is close to 50.)",
+   "a": "6 x 50 = 300, and 6 x 2 = 12, so 6 x 48 = 300 - 12 = 288. It checks out. You can also check with division: 288 divided by 6 = 48."
+  },
+  "source_urls": [
+   "https://science.nasa.gov/people/katherine-johnson",
+   "https://space.com/35218-hidden-figures-when-did-john-glenn-ask-for-the-girl-to-check-the-numbers.html",
+   "https://sciencenews.org/?p=3085327",
+   "https://education.casio.co.uk/blog/mathematicians-who-changed-the-world-series-katherine-johnson-2/"
+  ],
+  "confidence": "high",
+  "legend_note": "Accounts say John Glenn asked for her to check the numbers. The exact timing is uncertain and the film Hidden Figures dramatised the scene, so do not describe it as in the film.",
+  "icon_idea": "A pencil resting on a sheet with a big green tick beside a column of sums, and a small looping orbit path drawn above it.",
+  "story_words": 121
+ },
+ {
+  "lesson": 4,
+  "topic": "Fractions",
+  "name": "Mahavira",
+  "years": "about 800 - about 870 (he worked around 850)",
+  "country_or_region": "India (Karnataka, possibly Mysore)",
+  "who": "An Indian maths teacher-writer who explained how to work with fractions",
+  "story": "Mahavira lived in southern India about 1,200 years ago, around the year 850. Almost nothing else is known about his life, not even exactly where he was born. We do know he wrote a maths book called the Ganita Sara Sangraha, which means something like a collection of the essence of mathematics. He wrote it while a king named Amoghavarsha ruled the land. The book has nine chapters, and one of them explains how to work with fractions. It also shows how to split a fraction into unit fractions, which are fractions with 1 on top. For example, it shows that 2/17 can be written as 1/12 + 1/51 + 1/68. Splitting a fraction into smaller, friendlier pieces is a clever way to understand it, and you will do something like that today.",
+  "link_to_lesson": "Today you compare and change fractions, and Mahavira's book explained how to work with fractions and split them into unit fractions.",
+  "try_it": {
+   "q": "Mahavira liked splitting fractions into unit fractions. Show that 1/2 = 1/3 + 1/6 by making the denominators the same. Then split 3/4 into 1/2 plus a unit fraction.",
+   "a": "1/3 = 2/6, so 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2. For 3/4: 3/4 = 2/4 + 1/4 = 1/2 + 1/4."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Mahavira/",
+   "https://www.britannica.com/print/article/853508",
+   "https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)",
+   "https://mathshistory.st-andrews.ac.uk/DSB/mahariva.pdf"
+  ],
+  "confidence": "medium",
+  "legend_note": "",
+  "icon_idea": "A palm-leaf style strip cut into unequal unit-fraction pieces that fit together to make one whole bar; not a portrait.",
+  "story_words": 133
+ },
+ {
+  "lesson": 5,
+  "topic": "Decimals",
+  "name": "Simon Stevin",
+  "years": "1548-1620",
+  "country_or_region": "Flanders (born in Bruges, now Belgium)",
+  "who": "A Flemish mathematician who wrote a short book to teach decimals to everyone",
+  "story": "Simon Stevin was born in Bruges, in what is now Belgium, in 1548. He worked on many things, from trigonometry to the science of water and weights. In 1585 he published a small book called The Tenth (La Thiende) about decimal fractions. Stevin did not invent decimals. Others had used them before him. What he did was explain them clearly for the people who needed them. He said they would be useful for surveyors, carpet-makers, wine-gaugers, mint-masters, stargazers and every kind of merchant. He showed how to split a whole into tenths, hundredths and thousandths and how to calculate with them. We still use decimals this way for money and measuring today.",
+  "link_to_lesson": "Today you work with tenths, hundredths and thousandths, which is exactly what Stevin's small book explained.",
+  "try_it": {
+   "q": "Write 3 + 4/10 + 5/100 as a decimal. Then add 2.8 to your answer.",
+   "a": "3 + 4/10 + 5/100 = 3.45. Then 3.45 + 2.8 = 6.25."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Stevin/",
+   "https://www.britannica.com/print/article/565994"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A ruler marked in tenths with a bold decimal point, next to a small tape measure and a coin; not a portrait.",
+  "story_words": 112
+ },
+ {
+  "lesson": 6,
+  "topic": "Angles",
+  "name": "Eratosthenes",
+  "years": "about 276 BC - about 194 BC",
+  "country_or_region": "Cyrene (now Libya) and Alexandria, Egypt; ancient Greek world",
+  "who": "A Greek scholar who used a shadow angle to measure the Earth",
+  "story": "Eratosthenes was a Greek scholar who worked in the great library of Alexandria in Egypt, over 2,000 years ago. He heard that at noon on one day of the year the Sun shone straight down a deep well in the town of Syene, so nothing had a shadow. On that same day in Alexandria, a tall upright stick did make a shadow. Eratosthenes worked out that the shadow's angle was about 7.2 degrees, which is one fiftieth of a whole turn. That told him the two towns were one fiftieth of the way round the Earth. People had measured the distance between them as about 5,000 stadia, so he multiplied by 50. His answer, about 250,000 stadia, was surprisingly close to the real size. Historians cannot be sure how long his stadion was, so we cannot say exactly how close.",
+  "link_to_lesson": "Today you measure angles and turns, and Eratosthenes used the angle of a shadow to measure the whole Earth.",
+  "try_it": {
+   "q": "A whole turn is 360 degrees. If a shadow made an angle of 10 degrees, how many angles that size would fit all the way round?",
+   "a": "360 divided by 10 = 36, so 36 angles. (Eratosthenes had about 7.2 degrees, and 360 divided by 7.2 = 50.)"
+  },
+  "source_urls": [
+   "https://www.noaa.gov/jetstream/global/learning-lesson-shadow-knows-i",
+   "https://www.historyskills.com/classroom/ancient-history/eratosthenes-earth"
+  ],
+  "confidence": "high",
+  "legend_note": "The exact length of a stadion is uncertain, so how close his answer was is uncertain too.",
+  "icon_idea": "An upright stick on flat ground casting a short shadow, with a sun and a small angle arc drawn between the stick and a sunbeam.",
+  "story_words": 140
+ },
+ {
+  "lesson": 7,
+  "topic": "Area and Perimeter",
+  "name": "Euclid",
+  "years": "about 325 BC - about 265 BC (dates are estimates)",
+  "country_or_region": "Alexandria, Egypt (Greek-speaking world)",
+  "who": "A geometry teacher in Alexandria who wrote a book that was used for about 2,000 years",
+  "story": "Euclid taught mathematics in Alexandria, in Egypt, about 2,300 years ago. Very little is known about his life, but his book the Elements is famous. It has 13 books and was used to teach geometry for about 2,000 years. Euclid collected many ideas, put them in a careful order and proved each step from simple starting facts. In Book I he shows that two parallelograms on the same base and between the same two parallel lines have the same area, even if one looks more slanted. He also shows that a triangle on that base, between the same parallel lines, has exactly half the area of the parallelogram. This means that cutting a shape and sliding a piece can change how it looks without changing its area. Euclid wanted every claim backed by a reason, just as you do when you explain your working.",
+  "link_to_lesson": "Today you cut and rearrange shapes and explain what happens to area, which is the idea in Euclid's rule for parallelograms.",
+  "try_it": {
+   "q": "A rectangle is 8 cm long and 5 cm high. Slide its top side along to make a slanted parallelogram with the same base and the same height. What is the area of each? Then draw a triangle on the same base and the same height: what is its area?",
+   "a": "Rectangle: 8 x 5 = 40 square cm. The slanted parallelogram has the same base and height, so its area is also 40 square cm (its slanted sides are longer, so its perimeter is bigger). The triangle is half of this: 40 / 2 = 20 square cm."
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/",
+   "https://mathshistory.st-andrews.ac.uk/SH/euclid_sh.pdf",
+   "https://solarspell-dls.sfis.asu.edu/mea/wikipedia/wp/e/Euclid%2527s_Elements.htm",
+   "https://www.maths.tcd.ie/~dwilkins/Courses/MAU23302/EuclidStudyNotes/StudyNote_EuclidElementsBk01Prop35.pdf",
+   "https://www.maths.tcd.ie/~dwilkins/Courses/MAU23302/EuclidStudyNotes/StudyNote_EuclidElementsBk01Prop41.pdf"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A slanted parallelogram and a rectangle on the same base between two parallel lines, with a half-shaded triangle beside them; not a portrait.",
+  "story_words": 144
+ },
+ {
+  "lesson": 8,
+  "topic": "Symmetry and nets",
+  "name": "Emmy Noether",
+  "years": "1882-1935",
+  "country_or_region": "Germany (born in Erlangen)",
+  "who": "A German mathematician who found a link between symmetry and things that stay the same",
+  "story": "Emmy Noether was born in Erlangen, Germany, in 1882. When she wanted to study mathematics at university, women were only allowed to sit in on classes if the teacher gave permission. She kept going, and in 1907 she earned her doctorate. For years she worked without pay. Later, she was invited to Göttingen, where for a time her lectures had to be advertised under another professor's name. Still she carried on. In 1918 she proved a famous idea now called Noether's theorem. It says that when something in nature has a kind of symmetry, there is a matching quantity that stays the same. One example is that energy stays the same when the rules do not change over time. Symmetry is not only pretty. It tells us deep things.",
+  "link_to_lesson": "Today you explore symmetry, and Emmy showed that symmetry is useful as well as beautiful.",
+  "try_it": {
+   "q": "How many lines of symmetry does a square have? How many does a rectangle that is not a square have?",
+   "a": "A square has 4 lines of symmetry (2 through the middles of opposite sides and 2 along the diagonals). A rectangle that is not a square has 2 (through the middles of opposite sides)."
+  },
+  "source_urls": [
+   "https://britannica.com/print/article/417132",
+   "https://www.peba.kit.edu/english/6776.php"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A butterfly with matching wings and a dotted mirror line down the middle, sitting on a small chalkboard.",
+  "story_words": 129
+ },
+ {
+  "lesson": 9,
+  "topic": "Tables and line graphs",
+  "name": "Florence Nightingale",
+  "years": "1820-1910",
+  "country_or_region": "Britain (born in Florence, Italy)",
+  "who": "A British nurse who used charts to show people what the numbers meant",
+  "story": "Florence Nightingale was born in Florence, Italy, in 1820. She is best known as a nurse, but she also loved numbers and statistics. During the Crimean War in the 1850s she collected figures about the hospitals for soldiers. They showed that many more soldiers became sick from dirty, crowded conditions than from the fighting. She knew that long lists of numbers are hard to read, so she drew special charts to make the facts easy to see. Her ideas helped to bring in cleaner, safer hospitals. In 1858 she became the first woman to be elected a Fellow of the Statistical Society of London, now called the Royal Statistical Society. She showed that a clear table or graph can help people make better decisions.",
+  "link_to_lesson": "Today you read tables and line graphs, and Florence used tables and charts to make numbers easy to understand.",
+  "try_it": {
+   "q": "A table shows the temperature: 9 am 26 degrees, 12 noon 31 degrees, 3 pm 33 degrees, 6 pm 29 degrees. Between which two times did it rise the most, and by how much?",
+   "a": "9 am to 12 noon: it rose by 5 degrees (31 - 26). Noon to 3 pm: it rose by only 2 degrees. So the biggest rise was 9 am to 12 noon, by 5 degrees. (Between 3 pm and 6 pm it fell by 4 degrees.)"
+  },
+  "source_urls": [
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Nightingale/",
+   "https://nrich.maths.org/4790"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "A small oil lamp beside a simple line graph with a rising and falling line, drawn in friendly flat colours; not a portrait.",
+  "story_words": 124
+ },
+ {
+  "lesson": 10,
+  "topic": "Mixed heuristics (challenge day)",
+  "name": "Terence Tao",
+  "years": "born 1975",
+  "country_or_region": "Australia (born in Adelaide); now also works in the USA",
+  "who": "An Australian mathematician who first entered an international maths contest aged ten",
+  "story": "Terence Tao grew up in Adelaide, Australia. He enjoyed maths so much that he took university maths classes while still a schoolboy. In 1986 he entered the International Mathematical Olympiad, a contest where school students from many countries solve hard puzzle-style problems. He was only ten, the youngest competitor ever, and he won a bronze medal. He came back in 1987 and won silver. He came back again in 1988 and won gold. Each year he kept trying and did better, and he is still the youngest ever winner of each of the three medals. As an adult he became a professor, now at the University of California, Los Angeles (UCLA), and in 2006 he won the Fields Medal, a top prize in mathematics. Hard problems are for practising, and trying again is part of the plan.",
+  "link_to_lesson": "Today is Challenge Day, with competition-style puzzles like the ones in the Olympiad that Terence Tao entered three years in a row.",
+  "try_it": {
+   "q": "Use guess and check: a farm has hens and cows. Together they have 10 heads and 28 legs. How many hens and how many cows?",
+   "a": "6 hens and 4 cows. Check: 6 + 4 = 10 heads; 6 x 2 + 4 x 4 = 12 + 16 = 28 legs. (Try 5 cows: 20 + 10 = 30 legs, too many; 3 cows: 12 + 14 = 26, too few.)"
+  },
+  "source_urls": [
+   "https://en.wikipedia.org/wiki/Terence_Tao",
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Tao/",
+   "https://e.vnexpress.net/news/tech/personalities/meet-the-youngest-contestants-in-imo-history-5073123.html",
+   "https://www.ebsco.com/research-starters/biography/terence-tao"
+  ],
+  "confidence": "high",
+  "legend_note": "",
+  "icon_idea": "Three medals (bronze, silver, gold) in a row on a ribbon beside a puzzle piece; not a portrait.",
+  "story_words": 137
+ }
+]
