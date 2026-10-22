@@ -1,5 +1,5 @@
 """Printed pieces: student workbook (+ separate answer key), home practice sheet, one-page parent summary. Student style = hp/wb_style.css (A + D)."""
-import os, sys
+import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 import svg
@@ -14,7 +14,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .vis{width:310px;margin:6px 0 6px 4px}
 .al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:2px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
 .lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
@@ -28,6 +28,9 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
 .p1 .qbox:has(svg.h100)>.vis{width:292px!important}
 .tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
+.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
+.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
+.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
@@ -45,16 +48,38 @@ def hdr(d, tag, title=None, mi=False):
     return head[:i] + f'<div style="display:flex;align-items:flex-start"><div style="flex:1;min-width:0">' + head[i:] + f'</div>{img}</div>'
 
 
+CHOICE_PATTERNS = [(r'circle (yes or no|yes/no)', ('Yes', 'No')), (r'circle (right or wrong|right/wrong)', ('Right', 'Wrong')),
+                   (r'(circle|tick)( \(.\))? (true or false|true/false)', ('True', 'False'))]
+
+
+def choice_words(text, explicit=None):
+    """Words to print for the child to circle: explicit `choices`, else detected from the instruction ('Circle Yes or No.')."""
+    if explicit: return list(explicit)
+    for pat, words in CHOICE_PATTERNS:
+        if re.search(pat, text, re.I): return list(words)
+    return None
+
+
+def choice_html(words):
+    return '<span class="yn">' + ''.join(f'<span>{E(w)}</span>' for w in words) + '</span>'
+
+
 def qbox(q, label=None, draw=False):
     lab = label or q['id']
     vis = f'<div class="vis">{svg.render_visual(q["visual"])}</div>' if q.get('visual') else ''
+    if q.get('visual', {}).get('type') == 'ruler':   # true 1:1 scale on paper
+        v = q['visual']
+        vis = f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
     parts = ''
     if q.get('parts'):
         for p in q['parts']:
-            parts += f'<div class="sub"><span class="sl">{E(p["l"])}</span><span>{blanks(p["text"])}</span></div>'
+            cw = choice_words(p['text'], p.get('choices'))
+            parts += f'<div class="sub"><span class="sl">{E(p["l"])}</span><span>{blanks(p["text"])}</span>{choice_html(cw) if cw else ""}</div>'
     if q.get('draw'): vis += '<div class="draw"></div>'
     ln = ''.join('<div class="ln"></div>' for _ in range(q.get('lines', 0)))
-    return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{E(q["text"])}</span></div>{vis}{parts}{ln}</div>'
+    cq = choice_words(q['text'], q.get('choices'))
+    if cq and not any(choice_words(p['text'], p.get('choices')) for p in q.get('parts', [])): parts += f'<div class="sub">{choice_html(cq)}</div>'
+    return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{blanks(q["text"])}</span></div>{vis}{parts}{ln}</div>'
 
 
 def kit_pages(d):
@@ -81,13 +106,13 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
             '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my tutor will come and help)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
     P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
-             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 0) +
+             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
     body = ''.join(P)
-    for i in sorted(d.get('_tight', ()), reverse=True):    # pages measured over full get tighter spacing
+    for i in sorted(set(d.get('_tight', ())) | set(d.get('_tight2', ())), reverse=True):    # pages measured over full get tighter spacing
         parts = body.split('<div class="page')
-        if i + 1 < len(parts): parts[i + 1] = ' tight' + parts[i + 1] if not parts[i + 1].startswith(' ') else ' tight' + parts[i + 1]
+        if i + 1 < len(parts): parts[i + 1] = (' tight tight2' if i in d.get('_tight2', ()) else ' tight') + parts[i + 1]
         body = '<div class="page'.join(parts)
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{body}</body></html>'
 
@@ -112,10 +137,10 @@ def home_html(d):
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{blanks(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
+        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{blanks(h["text"])}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
-            f'<div class="page hm">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
+            f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
             f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
             f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link, key <b>{d["online_practice"]["key"]}</b>.</p></div></body></html>')
 
@@ -138,6 +163,7 @@ def parent_html(d):
 
 
 def build_print(d, pw):
+    import pdfcheck
     page_fill(pw, d)
     od = outdir(d)
     n = d['_num']
@@ -149,10 +175,25 @@ def build_print(d, pw):
         pg.pdf(path=os.path.join(od, pdfname), format=fmt, print_background=True, display_header_footer=bool(footer), header_template='<div></div>', footer_template=foot,
                margin={'top': '14mm', 'bottom': '16mm', 'left': '14mm', 'right': '14mm'} if footer else {'top': '12mm', 'bottom': '12mm', 'left': '15mm', 'right': '15mm'})
         pg.close()
-    f = 'Math Inquirers Term 1 • Notice it. Test it. Explain why.'
-    render('workbook', workbook_html(d), f + f' • Lesson {d["lesson_in_term"]}', f'L{n}_Workbook.pdf')
-    render('workbook_key', key_html(d), f + ' • Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
-    render('home', home_html(d), f + ' • Home practice', f'L{n}_Home_Practice.pdf')
+        return os.path.join(od, pdfname)
+    f = 'Math Inquirers Term 1 \u2022 Notice it. Test it. Explain why.'
+    # workbook: re-render with tighter spacing on the overflowing page until the real PDF has exactly the designed pages
+    want = workbook_html(d).count('<div class="page')
+    d.setdefault('_tight', set()); d.setdefault('_tight2', set())
+    for attempt in range(5):
+        path = render('workbook', workbook_html(d), f + f' \u2022 Lesson {d["lesson_in_term"]}', f'L{n}_Workbook.pdf')
+        got = pdfcheck.pdf_pages(path)
+        if got == want: break
+        fills = pdfcheck.pdf_fill(path)
+        orphan = next((i for i, x in enumerate(fills) if x < 0.15 and i > 0), None)
+        bad = (orphan - 1) if orphan is not None else max(range(len(fills)), key=lambda i: fills[i])
+        if bad in d['_tight']: d['_tight2'].add(bad)
+        d['_tight'].add(bad)
+    render('workbook_key', key_html(d), f + ' \u2022 Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
+    for lvl in (0, 1, 2):
+        d['_home_tight'] = lvl
+        path = render('home', home_html(d), f + ' \u2022 Home practice', f'L{n}_Home_Practice.pdf')
+        if pdfcheck.pdf_pages(path) == 2: break
     render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')
 
 
@@ -173,8 +214,8 @@ def page_fill(pw, d):
     """Fraction of the printable A4 height (267 mm) used by each workbook page except the kit page.
     Also chooses (1) how many writing lines the Investigation gets on page 5 (the most that still fit): d['_inv_lines'],
     (2) which pages are too full and get tighter spacing: d['_tight']."""
-    d['_tight'] = set(); d['_inv_lines'] = 0
-    for k in (6, 5, 4, 3, 2, 1, 0):
+    d['_tight'] = set(); d['_inv_lines'] = 4
+    for k in (6, 5, 4):
         d['_inv_lines'] = k
         fills = _measure(pw, d)
         if len(fills) < 5 or fills[4] <= 0.95:

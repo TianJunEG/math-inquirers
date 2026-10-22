@@ -209,6 +209,32 @@ def check_tiers(d):
         if 'easier' in i and i['easier'] not in {j['id'] for j in items}: fail(f"online practice: {i['id']} easier link broken")
 
 
+def check_workbook_items(d):
+    """Answer slots, printed choices and drawing size for every printed question."""
+    import b_print
+    qs = d['tiers']['start'] + d['tiers']['think'] + d['tiers']['go'] + d['exit']
+    for q in qs:
+        cw = b_print.choice_words(q['text'], q.get('choices')) or any(b_print.choice_words(p['text'], p.get('choices')) for p in q.get('parts', []))
+        vis = q.get('visual') or {}
+        on_picture = bool(vis.get('hide'))      # empty boxes drawn in the picture are the answer slots
+        if not (q.get('parts') or q.get('lines', 0) > 0 or q.get('draw') or cw or on_picture):
+            fail(f"workbook: {q['id']} has no answer slot (add parts with ___ or [], lines, draw, or choices)")
+        if re.search(r'circle (the )?(correct|right) (answer|word|one)\b', q['text'], re.I) and not q.get('choices'):
+            fail(f"workbook: {q['id']} says Circle but no choices are printed (add choices:[..])")
+        if re.search(r'\bcircle\b[^.]*\b(yes|no|true|false|right|wrong)\b', q['text'] + ' '.join(p['text'] for p in q.get('parts', [])), re.I) and not cw and not any(' / ' in p['text'] for p in q.get('parts', [])) and ' / ' not in q['text']:
+            fail(f"workbook: {q['id']} asks to circle a word but no choice words are printed")
+        if q.get('draw'):
+            t = q['text'] + ' ' + ' '.join(p['text'] for p in q.get('parts', []))
+            est = q.get('draw_strokes')
+            if est is None:
+                est = 0
+                for m in re.finditer(r'(\d+)\s+(bundles?|boxes|tens)\b', t): est += int(m.group(1)) * 10
+                rest = re.sub(r'(\d+)\s+(bundles?|boxes|tens)\b', ' ', t)
+                est += sum(int(n) for n in re.findall(r'\b(\d+)\b', rest) if int(n) < 100)
+            if est > 25: warn(f"workbook: {q['id']} asks the child to draw about {est} strokes (over 25 is heavy for ages 6-8): draw a bundle as one bar, or lower the numbers (or set draw_strokes)")
+    if not [f for f in FAILS if f.startswith('workbook:')]: ok('workbook: every question has an answer slot and printed choices')
+
+
 def check_words(d):
     bad = []
     for s in child_strings(d):
@@ -301,6 +327,13 @@ def check_outputs(d):
         for i, f in enumerate(fills, 1):
             if f < 0.40: fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
             elif f < 0.80 and not (name == 'Home_Practice' and i == 2): warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')
+        if name == 'Workbook':
+            import subprocess
+            for pgno in range(1, got + 1):
+                tx = subprocess.run(['pdftotext', '-layout', '-f', str(pgno), '-l', str(pgno), path, '-'], capture_output=True, text=True).stdout
+                lines = [l.strip() for l in tx.splitlines() if l.strip() and not l.strip().startswith('Math Inquirers') and not re.fullmatch(r'Page \d+', l.strip())]
+                lines = [l for l in lines if not re.fullmatch(r'Page\s*\d+', l)]
+                if lines and re.fullmatch(r'No\.?\s*[A-Z]?\d+', lines[-1]): fail(f'outputs: Workbook page {pgno} ends with a question tab ({lines[-1]}) and its body is on the next page')
         if got == n and all(f >= 0.40 for f in fills): ok(f'outputs: {name} PDF {got} pages, fill (measured on the PDF) {txt}')
 
 
@@ -505,7 +538,7 @@ def check_foreign(d):
 
 def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:

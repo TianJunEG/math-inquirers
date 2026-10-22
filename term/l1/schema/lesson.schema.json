@@ -592,11 +592,19 @@
         },
         "lines": {
           "type": "integer"
+        },
+        "choices": {
+          "type": "array",
+          "description": "words printed for the child to circle (for example Yes and No); detected automatically from 'Circle Yes or No.', 'Circle Right or Wrong.' and 'Circle/Tick True or False.'; a part may have its own choices"
+        },
+        "draw_strokes": {
+          "type": "number",
+          "description": "estimated strokes the child must draw (validator warns above 25); estimated from the text if absent"
         }
       }
     },
     "visual": {
-      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight}"
+      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out)"
     }
   }
 }

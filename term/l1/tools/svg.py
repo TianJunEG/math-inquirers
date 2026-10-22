@@ -303,6 +303,38 @@ def seq(items, gaps=None, hl=()):
     return f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number pattern" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
 
 
+def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
+    """A cm ruler strip with big numerals, 0 at the left start. Drawn at TRUE 1:1 scale when true_scale (print: 10 cm = 100 mm).
+    objects = [{"label": "pencil", "from": 0, "to": 9, "color": "#FFC93C"}] drawn above the ruler (a `from` other than the 0 mark
+    is a shifted start); mark = value of a dashed guide line. Not a cut-out: families use their own ruler (owner decision)."""
+    M, R = 7, 6                                   # mm of ruler edge before the 0 mark and after the last mark
+    n = end - start
+    W = M + n * 10 + R
+    objs = objects or []
+    oh = 13 * len(objs)                           # mm above the ruler for the objects
+    body_y, body_h = oh + 2, 19
+    H = body_y + body_h + 2
+    u = 10                                        # viewBox units per mm
+    x = lambda v: (M + (v - start) * 10) * u
+    p = [f'<rect x="0" y="{body_y * u}" width="{W * u}" height="{body_h * u}" rx="14" fill="#FFF3C4" stroke="{NAVY}" stroke-width="12"/>']
+    for k in range(0, n * 10 + 1):
+        v = start + k / 10
+        tall = 7 if k % 10 == 0 else (5 if k % 5 == 0 else 3)
+        p.append(f'<line x1="{x(v):.1f}" y1="{body_y * u}" x2="{x(v):.1f}" y2="{(body_y + tall) * u}" stroke="{NAVY}" stroke-width="{10 if k % 10 == 0 else 6}"/>')
+    for c in range(start, end + 1):
+        p.append(f'<text x="{x(c):.1f}" y="{(body_y + 16) * u}" font-size="62" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{c}</text>')
+    for i, o in enumerate(objs):
+        y0 = (1 + i * 13) * u
+        p.append(f'<rect x="{x(o["from"]):.1f}" y="{y0}" width="{(o["to"] - o["from"]) * 10 * u:.1f}" height="{9 * u}" rx="20" fill="{o.get("color", YEL)}" stroke="{NAVY}" stroke-width="10"/>')
+        if o.get('label'):
+            p.append(f'<text x="{(x(o["from"]) + x(o["to"])) / 2:.1f}" y="{y0 + 6.3 * u:.1f}" font-size="52" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{o["label"]}</text>')
+    if mark is not None:
+        p.append(f'<line x1="{x(mark):.1f}" y1="0" x2="{x(mark):.1f}" y2="{(body_y + body_h) * u}" stroke="{RED}" stroke-width="8" stroke-dasharray="30 20"/>')
+    size = f'width:{W}mm;height:{H}mm;max-width:none;' if true_scale else 'width:100%;height:auto;'
+    return (f'<svg viewBox="0 0 {W * u} {H * u}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="centimetre ruler from {start} to {end}" data-mm="{W}" '
+            f'style="{size}display:block">{"".join(p)}</svg>')
+
+
 def render_visual(v):
     t = v['type']
     if t == 'bundles':
@@ -315,6 +347,8 @@ def render_visual(v):
         return number_line(**{k: (([tuple(j) for j in x]) if k == 'jumps' else x) for k, x in v.items() if k in ('start', 'end', 'step', 'label_every', 'marks', 'hide', 'jumps', 'highlight', 'width', 'big')})
     if t == 'hundred_square':
         return hundred_square(v.get('blank', False))
+    if t == 'ruler':
+        return ruler(v.get('start', 0), v.get('end', 15), v.get('objects'), v.get('mark'))
     if t == 'hundred':
         kw = {k: v[k] for k in ('shade', 'shade2', 'hide', 'mark', 'outline', 'arrows', 'rows', 'cols', 'per', 'cell', 'qmarks', 'tags') if k in v}
         if 'tags' in kw: kw['tags'] = {int(a): b for a, b in kw['tags'].items()}

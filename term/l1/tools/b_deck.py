@@ -67,6 +67,7 @@ def visual(b, ctx_cols=1):
     if b['type'] == 'ten_frame': w = 640 if not b.get('extra') else 1000
     if b['type'] == 'scatter': w = 760
     if b['type'] == 'number_line': w = 1500 if ctx_cols == 1 else 760
+    if b['type'] == 'ruler': w = 1500 if ctx_cols == 1 else 800
     if b['type'] == 'hundred_square': w = 640
     s = svg.render_visual(b)
     inner = f'<div style="width:{w}px;max-width:100%">{s}</div>'
