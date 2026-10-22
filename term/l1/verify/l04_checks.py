@@ -102,8 +102,8 @@ def run(d):
     T = {q['id']: q for q in d['tiers']['start'] + d['tiers']['think'] + d['tiers']['go']}
     X = {q['id']: q for q in d['exit']}
     S = {s['id']: s for s in d['slides']}
-    import l04_ext
-    ext = l04_ext.hundred
+    import svg
+    ext = svg.hundred
 
     # the square itself
     eq(GRID[0][0], 1, 'top left'); eq(GRID[9][9], 100, 'bottom right'); eq(pos(11), (1, 0), '11 sits under 1')
