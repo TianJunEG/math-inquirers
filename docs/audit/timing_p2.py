@@ -96,105 +96,108 @@ PAIR = 1.15
 def say_words(s):
     return wc(' '.join(s))
 
-def lesson_model(n, D, sc):
+COMMON_FIX = dict(sneak_say_words=28, sneak_work=(45, 90), warm_q=2, ex_breakout_scale=0.667, deb_disc=15, ex_slides_cut=1,
+                  brk_act=120, chk_part=5, chk_q=10, talk_act=100 + 90 + 30, exit_check=80, exit_reveal=20, open_greet=0)
+
+def lesson_model(n, D, sc, fix=None):
+    """Return rows for one lesson. fix=None gives the plan as scripted; fix=dict gives the re-budgeted plan."""
     S = SCEN[sc]
+    fx = fix or {}
+    g = lambda k, d: fx.get(k, d)
     hp = HP[n]
     les = D['lessons'][n - 1]; scr = D['scripts'][str(n)]; dk = D['deck'][str(n)]; gp = D['gaps'][str(n)]; gc = D['gaps']['common']
     sl = slides(n)
     byid = {s[0]: s for s in sl}
+    ids = [s[0] for s in sl]
     sec = lambda words, wpm: words / wpm * 60.0
     saysec = lambda w: sec(w, S['say'])
     qsec = lambda w: sec(w, S['q'])
-    rows = []  # (part, scripted, speak, wait, act, trans, rec)
-    def add(part, scripted, speak=0, wait=0, act=0, trans=0, rec=None, note=''):
+    B = g('budget', {})
+    rows = []
+    def add(key, part, scripted, speak=0, wait=0, act=0, trans=0, rec=None, note=''):
         r = S['rec'] if rec is None else rec
-        rows.append(dict(part=part, sched=scripted, speak=speak / 60, wait=wait / 60, act=act / 60, trans=trans / 60,
-                         rec=r / 60, note=note))
-    nQ = lambda ask: len(ask)
+        rows.append(dict(key=key, part=part, sched=B.get(key, scripted), speak=speak / 60, wait=wait / 60, act=act / 60,
+                         trans=trans / 60, rec=r / 60, note=note))
+    n10 = n == 10
     # 1 Opening
-    add('Opening 0-1', 1, speak=saysec(say_words(scr['hook'])) + qsec(wc('Today we will ' + dk['today'])), wait=0,
-        act=0, trans=S['slide'] + 8 * 2)  # title slide + greeting each child by name (~2 s x 8)
+    add('open', 'Opening 0-1', 1, speak=saysec(say_words(scr['hook'])) + qsec(wc('Today we will ' + dk['today'])),
+        trans=S['slide'] + g('open_greet', 16))
     # 2 Sneak peek
     pre = gp['pre']
-    add('Sneak-peek 1-4', 3, speak=saysec(wc(gc['preSay'])) + qsec(sum(wc(x['q']) for x in pre)) + saysec(sum(wc(x['a']) for x in pre) + 12),
-        wait=0, act=(60 + 120) * S['act'] + 20, trans=S['slide'] + 15)
+    w1, w2 = g('sneak_work', (60, 120))
+    add('sneak', 'Sneak-peek 1-4', 3, speak=saysec(g('sneak_say_words', wc(gc['preSay']))) + qsec(sum(wc(x['q']) for x in pre)) + saysec(sum(wc(x['a']) for x in pre) + 12),
+        act=(w1 + w2) * S['act'] + 20, trans=S['slide'] + 15)
     # 3 Warm-up
-    wq = dk['warmQs']; ask3 = [wq[0], wq[2], wq[4]]
-    add('Warm-up 4-8', 4, speak=saysec(say_words(scr['warmIntro'])) + qsec(sum(wc(x[0]) for x in ask3)),
-        wait=3 * S['wait'], act=hp['game'] * S['act'], trans=2 * S['slide'])
+    wq = dk['warmQs']; askq = [wq[0], wq[2], wq[4]][:g('warm_q', 3)]
+    add('warm', 'Warm-up 4-8', 4, speak=saysec(say_words(scr['warmIntro']) * g('warm_intro_scale', 1)) + qsec(sum(wc(x[0]) for x in askq)),
+        wait=len(askq) * S['wait'], act=g('warm_game', hp['game']) * S['act'], trans=2 * S['slide'])
     # 4 Explore
-    n_ex_sl = sum(1 for s in sl if s[0] in ('explore1', 'goexp', 'explore2') or s[0].startswith('card'))
-    ex_speak = saysec(say_words(scr['predict']) + 15 + 4 + 20) + qsec(sum(wc(x) for x in dk['expSetup']) + sum(wc(x[0]) for x in dk['expAsk']))
-    ex_wait = S['wait'] * 0.7 + nQ(dk['expAsk']) * (S['wait'] + 30)  # predict (write a guess) + 3 debrief Qs with 'how do you know?'
-    ex_act = hp['ex_work'] * 60 * S['act'] + hp['ex_extra']
-    ex_trans = n_ex_sl * S['slide'] + 2 * S['breakout'] + hp['ex_mat'] * S['matx']
-    add('Explore 8-20', 12, speak=ex_speak, wait=ex_wait, act=ex_act, trans=ex_trans)
-    # 5 Mini-lesson: slides from teach1 to key
-    ids = [s[0] for s in sl]
+    n_ex_sl = sum(1 for s in sl if s[0] in ('explore1', 'goexp', 'explore2') or s[0].startswith('card')) - g('ex_slides_cut', 0)
+    deb_q = g('deb_q', len(dk['expAsk']))
+    ex_speak = saysec(say_words(scr['predict']) + 15 + 4 + 20) + qsec(sum(wc(x) for x in dk['expSetup']) + sum(wc(x[0]) for x in dk['expAsk'][:deb_q]))
+    ex_wait = S['wait'] * 0.7 + deb_q * (S['wait'] + g('deb_disc', 30) * S['wait'] / 30)
+    ex_act = g('ex_work', hp['ex_work']) * 60 * S['act'] + g('ex_extra', hp['ex_extra'])
+    ex_trans = n_ex_sl * S['slide'] + 2 * S['breakout'] * g('ex_breakout_scale', 1.0) + g('ex_mat', hp['ex_mat']) * S['matx']
+    add('explore', 'Explore 8-20', 12, speak=ex_speak, wait=ex_wait, act=ex_act, trans=ex_trans)
+    # 5 Mini-lesson: slides from teach1 to key, with optional drops/merges/additions
     i0 = ids.index('teach1'); i1 = ids.index('key')
-    mini = sl[i0:i1 + 1]
+    mini = [s for s in sl[i0:i1 + 1] if s[0] not in g('mini_drop', [])] + [byid[k] for k in g('mini_add', [])]
+    merged = set(g('mini_merge', []))
     teach_w = sum(s[1] for s in mini if s[0].startswith(('teach', 'we')))
     try_w = sum(s[1] for s in mini if s[0].startswith('try'))
-    n_teach = sum(1 for s in mini if s[0].startswith(('teach', 'we')))
+    n_teach = sum(1 for s in mini if s[0].startswith(('teach', 'we')) and s[0] not in merged)
     key_say = wc(dk['keyHead'] + ' ' + dk['keyBig']) + 12
     mini_speak = saysec(say_words(scr['think']) + key_say) + saysec(0.5 * teach_w) + qsec(try_w)
-    mini_wait = n_teach * S['wait'] + 15
     mini_act = 0; n_try = 0
-    for k, (items, sps) in hp['try_'].items():
-        mini_act += items * sps * S['act']; n_try += 1
-    mini_wait += n_try * (S['hold'] + 20)
-    add('Mini-lesson 20-32', 12, speak=mini_speak, wait=mini_wait, act=mini_act, trans=len(mini) * S['slide'])
+    for k, (items, sps) in g('mini_try', hp['try_']).items():
+        if k in [s[0] for s in mini]:
+            mini_act += items * sps * S['act']; n_try += 1
+    mini_wait = n_teach * S['wait'] + 15 + n_try * (S['hold'] + 20)
+    add('mini', 'Mini-lesson 20-32', 12, speak=mini_speak, wait=mini_wait, act=mini_act,
+        trans=(len(mini) - len(merged)) * S['slide'])
     # 6 Brain break
-    add('Brain break 32-36', 4, speak=saysec(wc(dk['brk'])), wait=0, act=150 * S['act'] + 45, trans=S['slide'])
-    # 7 Worksheet block (page 1 row includes the 2-minute start; L5, L6, L10 begin with a 2-minute teach slide)
+    add('brk', 'Brain break 32-36', 4, speak=saysec(wc(dk['brk'])), act=g('brk_act', 150 + 45) * S['act'] if False else g('brk_act', 195) * S['act'], trans=S['slide'])
+    # 7 Worksheet block
     ws_say = saysec(wc('Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.') + wc(gc['neutral']) + 8)
     pre_teach = hp.get('pre_teach', False)
     if pre_teach:
-        pt = [s for s in sl[ids.index('break') + 1: ids.index('ws1')]]
-        w = sum(s[1] for s in pt)
-        add('WS teach slide 36-38', 2, speak=saysec(w), wait=S['wait'], act=40 * S['act'], trans=len(pt) * S['slide'])
-        p1_sched = 12; p1_rec = 0
+        pt = sl[ids.index('break') + 1: ids.index('ws1')]
+        add('wst', 'WS teach slide 36-38', 2, speak=saysec(sum(s[1] for s in pt)), wait=S['wait'], act=40 * S['act'], trans=len(pt) * S['slide'])
+        p1_sched, p1_rec = 12, 0
+        p1name = 'WS page 1 pairs 38-50'
     else:
-        p1_sched = 14; p1_rec = None
-    p1, p2 = hp['ws']
-    p1_need = sum(p1) * PAIR * 60 * S['act']
-    p2_need = sum(p2) * 60 * S['act']
-    add('WS page 1 pairs 36-50' if not pre_teach else 'WS page 1 pairs 38-50', p1_sched, speak=ws_say, act=p1_need, trans=120 + S['slide'], rec=p1_rec, note='start 2 min + content demand of Core Q1-Q%d, MIDDLE, pairs' % len(p1))
-    def check(page, extra_slides=1):
-        parts = hp['parts'][page]; ex = hp['expl'][page]; q = len(hp['ws'][page])
-        ans_words = 0
-        return dict(speak=parts * 8 + q * 15 + ex * 30 + 10, trans=S['slide'])
-    c1 = check(0)
-    add('WS check page 1 50-52', 2, speak=c1['speak'] - 0, trans=c1['trans'], rec=0)
-    wt = hp['wsteach']
+        p1_sched, p1_rec = 14, None
+        p1name = 'WS page 1 pairs 36-50'
+    p1, p2 = g('ws_p1', hp['ws'][0]), g('ws_p2', hp['ws'][1])
+    add('p1', p1name, p1_sched, speak=ws_say, act=sum(p1) * PAIR * 60 * S['act'], trans=120 + S['slide'], rec=p1_rec,
+        note='start 2 min + Core demand, MIDDLE, pairs')
+    parts = g('parts', hp['parts']); expl = g('expl', hp['expl'])
+    chk = lambda page: (parts[page] * g('chk_part', 8) + len(hp['ws'][page] if False else (p1, p2)[page]) * g('chk_q', 15) + expl[page] * 30 + 10)
+    add('c1', 'WS check page 1 50-52', 2, speak=chk(0), trans=S['slide'], rec=0)
+    wt = g('wsteach', hp['wsteach'])
     wt_w = sum(byid[k][1] for k in wt)
-    wt_speak = saysec(wt_w)
     wt_wait = sum(S['wait'] if not k.startswith('try') else (S['hold'] + 20) for k in wt)
-    wt_act = sum(v for v in wt.values()) * S['act']
-    add('WS teaching 52-57', 5, speak=wt_speak, wait=wt_wait, act=wt_act, trans=len(wt) * S['slide'], rec=0)
-    add('WS page 2 alone 57-69', 12, act=p2_need, rec=0, note='content demand of Core Q%d-Q%d, MIDDLE' % (len(p1) + 1, len(p1) + len(p2)))
-    c2 = check(1)
-    add('WS check page 2 69-72', 3, speak=c2['speak'], trans=c2['trans'], rec=0)
-    # REC cue for worksheet counted on 'WS start'
+    add('wt', 'WS teaching 52-57', 5, speak=saysec(wt_w), wait=wt_wait, act=sum(wt.values()) * S['act'], trans=len(wt) * S['slide'], rec=0)
+    add('p2', 'WS page 2 alone 57-69', 12, act=sum(p2) * 60 * S['act'], rec=0, note='Core demand, MIDDLE')
+    add('c2', 'WS check page 2 69-72', 3, speak=chk(1), trans=S['slide'], rec=0)
     # 8 Talk
-    talk_words = say_words(scr['talk']) + 20
-    add('Talk time 72-80', 8, speak=saysec(talk_words) + qsec(wc(les['share'])), wait=S['wait'] * 1, act=120 * S['act'] + 3 * 45 + 45, trans=S['slide'])
+    add('talk', 'Talk time 72-80', 8, speak=saysec(say_words(scr['talk']) + 20) + qsec(wc(les['share'])), wait=S['wait'],
+        act=g('talk_act', 120 + 135 + 45) * S['act'], trans=S['slide'])
     # 9 Exit ticket
-    n10 = n == 10
-    add('Exit ticket %s' % ('80-85' if n10 else '80-87'), 5 if n10 else 7, speak=qsec(wc(les['exit']['q'])) + saysec(25), wait=0,
-        act=hp['exit_s'] * S['act'] + 8 * 15 + 30, trans=S['slide'] + 30)
+    add('exit', 'Exit ticket %s' % ('80-85' if n10 else '80-87'), 5 if n10 else 7, speak=qsec(wc(les['exit']['q'])) + saysec(25),
+        act=hp['exit_s'] * S['act'] + 8 * 0 + g('exit_check', 120) + g('exit_reveal', 30), trans=S['slide'] + 30)
     # 10 Looking back
-    add('Looking back %s' % ('85-87' if n10 else '87-89'), 2, speak=saysec(wc(gc['refSay'])), act=75 * S['act'], trans=S['slide'])
+    add('lb', 'Looking back %s' % ('85-87' if n10 else '87-89'), 2, speak=saysec(wc(gc['refSay'])), act=75 * S['act'], trans=S['slide'])
     # 11 Close
     if n10:
-        add('Certificates + close 87-90', 3, speak=saysec(say_words(scr['close'])), act=8 * 12 * S['act'], trans=S['slide'] + 20)
+        add('close', 'Certificates + close 87-90', 3, speak=saysec(say_words(scr['close'])), act=8 * 12 * S['act'], trans=S['slide'] + 20)
     else:
-        add('Closing + stamps 89-90', 1, speak=saysec(say_words(scr['close'])), act=20, trans=S['slide'] + 15)
-    # REC cue rows: the 'rec' value was assigned per row; rows for sub-parts of the worksheet carry rec=0 except start
+        add('close', 'Closing + stamps 89-90', 1, speak=saysec(say_words(scr['close'])), act=20, trans=S['slide'] + 15)
     for r in rows:
         r['need'] = r['speak'] + r['wait'] + r['act'] + r['trans'] + r['rec']
         r['diff'] = r['need'] - r['sched']
-    # the 'WS start' row holds the REC for the whole worksheet block, others 0
+    if fix is not None and 'buffer' in fx:
+        rows.append(dict(key='buffer', part='Standing buffer', sched=fx['buffer'], speak=0, wait=0, act=0, trans=0, rec=0, note='', need=0.0, diff=-fx['buffer']))
     return rows
 
 def flag(diff):

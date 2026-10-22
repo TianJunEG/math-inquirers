@@ -168,12 +168,14 @@ module.exports = {
     ...H.lines(1),
     H.sub('b', 'How can you get exactly 1 ℓ? Write the steps.'),
     ...H.lines(2),
-    H.q(3, 'Next puzzle. Start with both jugs empty. The first two rows are filled in for you. Now get exactly 4 ℓ in the 5 ℓ jug. Write each step in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, 'Next puzzle. Get exactly 4 ℓ in the 5 ℓ jug. Start with both jugs empty. The first three steps are done for you: you now have 2 ℓ in the 5 ℓ jug. Tip: act it out with two cups of different sizes, or draw the jugs. Where can that 2 ℓ go? Write each step in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
     H.tbl([1300, 4600, 2000, 2000], [
       H.row(['Step', 'What I do', '3 ℓ jug', '5 ℓ jug'].map((s, i) => H.cell(s, [1300, 4600, 2000, 2000][i], { bold: true, fill: 'EDEDED', h: 15 }))),
       H.row([H.cell('Start', 1300, { bold: true, h: 15 }), H.cell('both jugs empty', 4600, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 })]),
       H.row([H.cell('1', 1300, { bold: true, h: 15 }), H.cell('Fill the 5 ℓ jug', 4600, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 }), H.cell('5 ℓ', 2000, { h: 15 })]),
-      ...[2, 3, 4, 5, 6].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
+      H.row([H.cell('2', 1300, { bold: true, h: 15 }), H.cell('Pour the 5 ℓ jug into the 3 ℓ jug until it is full', 4600, { h: 15 }), H.cell('3 ℓ', 2000, { h: 15 }), H.cell('2 ℓ', 2000, { h: 15 })]),
+      H.row([H.cell('3', 1300, { bold: true, h: 15 }), H.cell('Empty the 3 ℓ jug', 4600, { h: 15 }), H.cell('0 ℓ', 2000, { h: 15 }), H.cell('2 ℓ', 2000, { h: 15 })]),
+      ...[4, 5, 6, 7].map(n => H.row([H.cell(String(n), 1300, { bold: true, h: 15 }), H.cell('', 4600, { h: 15 }), H.cell('', 2000, { h: 15 }), H.cell('', 2000, { h: 15 })]))
     ]),
     H.q(4, 'Siti has a red ribbon 64 cm long. Her blue ribbon is 18 cm shorter than the red ribbon.', { keepNext: true }),
     H.sub('a', 'How long is the blue ribbon?   ________ cm'),

@@ -19,7 +19,7 @@ MODEL (identical for every level; see docs/audit/timing_p4.md section 2)
              REC cue lines (real text from levels/reccues.js, spoken at 135 wpm), recording notice
 Three tutor scenarios: BEST (lean), TYPICAL, SLOW.  Camera/tech glitches ignored.
 """
-import json, re, html, subprocess, sys, os
+import json, re, html, subprocess, sys, os, math
 
 ROOT = os.environ.get('MI_ROOT', '/home/user/math-inquirers')
 P4 = ROOT + '/p4'
@@ -300,6 +300,29 @@ def lesson_model(x, sl, sc, fix=False, over=None):
                 n_core=len(q), n_sub=sum(z['sub'] for z in q), wb_words=sum(z['stem'] + z['subw'] for z in q))
     return rows, info
 
+
+FIX_OVER = {}      # per-lesson overrides of FIXPAR (see the report, section 6)
+
+def ceil_half(v):
+    return math.ceil(v * 2 - 1e-9) / 2.0
+
+def fix_budget(x, sl, n):
+    rows, info = lesson_model(x, sl, 'TYPICAL', fix=True, over=FIX_OVER.get(n))
+    rows_b, _ = lesson_model(x, sl, 'BEST', fix=True, over=FIX_OVER.get(n))
+    rows_s, _ = lesson_model(x, sl, 'SLOW', fix=True, over=FIX_OVER.get(n))
+    out = []
+    non = [r for r in rows if not r['part'].startswith('WS-')]
+    wsr = [r for r in rows if r['part'].startswith('WS-')]
+    nb = {r['part']: ceil_half(r['need']) for r in non}
+    spent = sum(nb.values())
+    ws_left = 90 - spent
+    wb = {r['part']: ceil_half(r['need']) for r in wsr}
+    d_key = [k for k in wb if k.startswith('WS-d')][0]
+    others = sum(v for k, v in wb.items() if k != d_key)
+    wb[d_key] = ws_left - others
+    need_d = [r for r in wsr if r['part'].startswith('WS-d')][0]['need']
+    return rows, rows_b, rows_s, nb, wb, ws_left, wb[d_key] - need_d, info
+
 R_CLOSE = 'Recording: well done for finishing the lesson! Show your journal and workbook to a grown-up and tell them one thing you found out.'
 
 def totals(rows):
@@ -386,6 +409,20 @@ def main():
         print('| %d | %d (%.1f min) | %.1f | %s | %s | %s | %.1f / %.1f | %s -> %s | %s -> %s | %s -> %s |' % (
             n, n1, info['p1_min'], w1, fmt('LOW', a), fmt('MID', a), fmt('HIGH', a), w2s, w2q,
             fm2('LOW', a), fm2('LOW', b), fm2('MID', a), fm2('MID', b), fm2('HIGH', a), fm2('HIGH', b)))
+
+    print('\n### Proposed budgets after the fixes (TYPICAL tutor)\n')
+    for n in sorted(allres):
+        x = [z for z in data if z['lesson']['n'] == n][0]
+        sl = parse_slides(n)
+        rows, rb, rs, nb, wb, ws_left, spare_d, info = fix_budget(x, sl, n)
+        old = {r['part']: r['scripted'] for r in rows}
+        print('\n**Lesson %d** worksheet window %.1f min (was 46), page-2 spare after priority items %.1f min' % (n, ws_left, spare_d))
+        print('| Part | Old | New budget | Need after fixes (best-typical-slow) |')
+        print('|---|--:|--:|--:|')
+        for i, r in enumerate(rows):
+            bud = nb.get(r['part'], wb.get(r['part']))
+            print('| %s | %.1f | %.1f | %.1f - %.1f - %.1f |' % (r['part'], r['scripted'], bud, rb[i]['need'], r['need'], rs[i]['need']))
+        print('| Sum | 90.0 | %.1f | typical sum %.1f |' % (sum(nb.values()) + sum(wb.values()), sum(r['need'] for r in rows)))
 
 if __name__ == '__main__':
     main()

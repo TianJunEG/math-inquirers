@@ -40,15 +40,15 @@ const squareSvg = g => {
 
 // two empty magic triangles with the number tiles
 const triSvg = () => {
-  const one = (ox, title) => {
+  const one = (ox, title, pre = {}) => {
     const pos = [[150, 40], [40, 230], [260, 230], [95, 135], [150, 230], [205, 135]];
     let s = T(ox + 150, -14, title, 20, TEAL);
     s += `<polygon points="${ox + 150},40 ${ox + 40},230 ${ox + 260},230" fill="none" stroke="${N}" stroke-width="3" stroke-linejoin="round"/>`;
-    pos.forEach(([x, y], i) => { s += `<circle cx="${ox + x}" cy="${y}" r="26" fill="${i < 3 ? Y : WH}" stroke="${N}" stroke-width="3"/>`; });
+    pos.forEach(([x, y], i) => { s += `<circle cx="${ox + x}" cy="${y}" r="26" fill="${i < 3 ? Y : WH}" stroke="${N}" stroke-width="3"/>`; if (pre[i]) s += T(ox + x, y + 7, pre[i], 20); });
     return s;
   };
-  let s = `<svg aria-label="Two empty magic triangles and the numbers 110 to 160" viewBox="0 0 600 392" width="480" xmlns="http://www.w3.org/2000/svg" style="width:480px;max-width:100%">`;
-  s += `<g transform="translate(0,34)">${one(0, '(a) Each side = 390')}${one(300, '(b) Each side = 420')}</g>`;
+  let s = `<svg aria-label="Two magic triangles (the first has 110 and 120 in two corners) and the numbers 110 to 160" viewBox="0 0 600 392" width="480" xmlns="http://www.w3.org/2000/svg" style="width:480px;max-width:100%">`;
+  s += `<g transform="translate(0,34)">${one(0, '(a) Each side = 390', { 0: 110, 1: 120 })}${one(300, '(b) Each side = 420')}</g>`;
   s += `<rect x="40" y="296" width="520" height="86" rx="12" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="6 4"/>` + T(300, 320, 'Number tiles: use all six in EACH triangle', 18, TEAL);
   [110, 120, 130, 140, 150, 160].forEach((n, i) => {
     const x = 60 + i * 82;
@@ -175,7 +175,7 @@ module.exports = {
     W.push(...H.lines(2));
     W.push(H.q(5, 'Magic triangle. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total.', { keepNext: true }));
     W.push(H.fig(triSvg()));
-    W.push(H.sub('a', 'Each side adds up to 390. Write the numbers in the circles. Which numbers are in the corners?  __________  (Start: try 110 and 120 as two corners. What goes between them?)'));
+    W.push(H.sub('a', 'Each side adds up to 390. The numbers 110 and 120 are already in two corners. First: what goes between them? Then fill in all the circles. Which numbers are in the corners?  __________'));
     W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model: two bars, and the long bar is 200 longer.', { keepNext: true }));
     W.push(...H.lines(4));
     W.push(H.p([H.t('Answer:   ____________   and   ____________', { bold: true })], { indent: { left: 560 }, before: 60 }));

@@ -76,10 +76,10 @@ module.exports = {
       { q: 'There are 20 bicycles and tricycles with 47 wheels altogether. How many tricycles are there?', a: '7 tricycles (and 13 bicycles). All bicycles: 40 wheels, 7 short, each swap adds 1.' },
       { q: 'Two next-door even numbers (like 6 and 8) multiply to make 624. What are they?', a: '24 and 26' },
       { q: 'Ravi spent $15 on a book. Then he spent half of the money left on a bag. He had $18 left. How much money did he have at first?', a: '$51 (18 × 2 = 36, 36 + 15 = 51)' },
-      { q: 'Ali, Ben and Siti are 9, 10 and 11 years old. Ben is older than Siti. Siti is not the youngest. How old is each child?', a: 'Ben 11, Siti 10, Ali 9.' },
-      { q: 'Mei is 9th from the front and 14th from the back of a queue. How many people are in the queue?', a: '22 (8 + 1 + 13)' },
+      { q: 'Ali, Ben, Mei and Siti are 8, 9, 10 and 11 years old, in some order. Ali is 2 years older than Siti. Ben is older than Mei. Siti is older than Mei. How old is each child?', a: 'Ali 11, Ben 10, Siti 9, Mei 8. Ali is 2 more than Siti, so (Siti, Ali) is (8, 10) or (9, 11). Mei is younger than both Siti and Ben. If Siti were 8, Mei would have to be younger than 8. So Siti is 9 and Ali is 11, and Mei is 8. Ben is the one left, 10.' },
+      { q: 'In a queue, Ali is 8th from the front and Ben is 6th from the back. There are 7 children between Ali and Ben. How many children are in the queue? Draw the queue first.', a: '21. Ali is 8th, the 7 children in between are 9th to 15th, and Ben is 16th. Ben is 6th from the back, so 5 children are behind him: 16 + 5 = 21.' },
       { q: 'There are 12 spiders (8 legs) and ants (6 legs) with 82 legs altogether. How many spiders are there?', a: '5 spiders (and 7 ants). All ants: 72 legs, 10 short, each swap adds 2.' },
-      { q: 'Three next-door numbers add up to 117. What is the biggest of the three?', a: '40 (38 + 39 + 40)' },
+      { q: 'Two next-door odd numbers (like 7 and 9) multiply to make 783. What are they?', a: '27 and 29. 28 × 28 = 784 is just above 783, so try the odd numbers on either side of 28: 27 × 29 = 783.' },
       { q: 'Siti and her dad are 48 years old altogether. In 6 years, her dad will be 4 times as old as Siti. How old is Siti now?', a: '6 (in 6 years the total is 60: 5 equal bars, so Siti will be 12)' }
     ],
     challenge: [
@@ -89,7 +89,7 @@ module.exports = {
       { q: 'Ali, Ben, Mei and Siti sit in a row of 4 seats, numbered 1 to 4 from the left. Mei sits at one end. Ben sits next to Mei. Ali does not sit next to Ben. Ali sits in seat 1 or seat 2. Who sits in each seat?', a: 'Seat 1 Ali, seat 2 Siti, seat 3 Ben, seat 4 Mei.' },
       { q: 'A cake costs $3 more than a drink. 4 cakes and 3 drinks cost $40. How much does a drink cost?', a: '$4 (a cake is $7). Suppose all 7 are drinks: take away 4 × $3 = $12, then $28 ÷ 7 = $4.' },
       { q: 'Ben’s uncle is 4 times as old as Ben. In 10 years, his uncle will be only twice as old as Ben. How old is Ben now?', a: '5 (uncle 20; in 10 years 15 and 30)' },
-      { q: 'A hawker centre has 15 tables. Some seat 4 people and some seat 6 people. There are 76 seats altogether. How many tables seat 6?', a: '8 tables seat 6 (and 7 seat 4). All seat 4: 60 seats, 16 short, each swap adds 2.' },
+      { q: 'A hawker centre has 15 tables. Some seat 4 people and some seat 6 people. There are 76 seats altogether. (a) How many tables seat 6? (b) What is the fewest and the most seats 15 tables could have? (c) Could the centre have 77 seats? Explain.', a: '(a) 8 tables seat 6 (and 7 seat 4). All seat 4: 60 seats, 16 short, each swap adds 2. (b) Fewest 60 (all seat 4), most 90 (all seat 6). (c) No. Every table seats an even number of people, so the total must be even, and 77 is odd.' },
       { q: 'Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 stickers left. How many did she have at first?', a: '32. Work backwards: (5 + 2) × 2 = 14, (14 + 2) × 2 = 32.' },
       { q: 'Make up your own heads-and-legs puzzle (chickens and goats, or bicycles and cars) that has exactly ONE answer. Check it by trying every number of one animal. Then explain why a farmer who counts 12 heads and 35 legs on a farm with only chickens and goats must have counted wrong.', a: 'Puzzles will vary: check by trying every possible number. Model: 10 vehicles, 32 wheels, cars (4 wheels) and motorcycles (2 wheels): 6 cars and 4 motorcycles is the only way. Why 35 is impossible: every chicken has 2 legs and every goat has 4, so the total number of legs is always even, and 35 is odd.' }
     ]
@@ -134,6 +134,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('b', '20 people are in a queue. Ben is 6th from the front. What is his place from the back?   ________'));
     W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? Draw bars.', { keepNext: true }));
+    W.push(H.sub('', 'Start here: try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.', { keepNext: true }));
     W.push(...H.lines(3));
     W.push(H.ans());
     return W;

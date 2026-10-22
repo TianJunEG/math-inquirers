@@ -566,12 +566,12 @@
     "a": "45¢"
    },
    {
-    "q": "Pay exactly $15 with the fewest notes. The notes are $2, $5, $10 and $50. (Use play notes.)",
-    "a": "$10 + $5 (2 notes)"
+    "q": "Pay exactly 60¢ with the fewest coins from 5¢, 10¢, 20¢ and 50¢. (Use play coins.)",
+    "a": "50¢ + 10¢ (2 coins)"
    },
    {
-    "q": "Pay exactly $17 with the fewest notes from $2, $5 and $10. Which notes do you use?",
-    "a": "$10 + $5 + $2 (3 notes)"
+    "q": "Pay exactly 35¢ using 20¢, 10¢ and 5¢ coins. Use play coins and find a way with 3 coins.",
+    "a": "20¢ + 10¢ + 5¢ (3 coins)"
    }
   ],
   "stretch": [
@@ -726,12 +726,22 @@
     "a": "3, 6 and 10 triangles."
    },
    {
-    "q": "A triangle has 4 lines drawn from the top corner to the bottom. How many triangles are there? Follow the pattern 3, 6, 10 … What would 5 lines give?",
-    "a": "15 triangles with 4 lines, and 21 with 5 lines (add 2, 3, 4, 5, 6 each time)."
+    "q": "A big triangle has lines drawn from its top corner to the bottom. With 1 line there are 3 triangles, with 2 lines 6, with 3 lines 10. How many triangles with 4 lines? With 5 lines? Draw it to check.",
+    "a": "15 triangles with 4 lines and 21 with 5 lines. The number added grows by 1 each time: 3, 6, 10, 15, 21 (+3, +4, +5, +6). Check by drawing: count the small triangles first, then the bigger ones made of 2, 3 … small ones.",
+    "img": [
+     "tri_lines.png",
+     420,
+     105
+    ]
    },
    {
-    "q": "A square is cut into 4 equal squares. One of the small squares is cut into 4 even smaller squares. How many squares can you find altogether?",
-    "a": "9 (1 big, 4 medium, 4 tiny)."
+    "q": "Draw a square and cut it into 4 equal squares. Then cut ONE of those small squares into 4 even smaller squares. How many squares can you find altogether? Count the small ones first, then the bigger ones.",
+    "a": "9 (1 big, 4 medium, 4 tiny).",
+    "img": [
+     "nested_sq.png",
+     160,
+     92
+    ]
    },
    {
     "q": "Draw your own triangle-counting puzzle: a big triangle with some lines inside. Count the triangles. Swap with a partner. Do you both get the same number? If not, find out who missed some.",
