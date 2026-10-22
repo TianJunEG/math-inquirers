@@ -54,7 +54,7 @@ page=f'''<title>Math Inquirers Parent Questions</title>
 <div class="card ask" style="margin-top:10px"><h3 style="font-size:18px">Ask a question</h3><textarea id="askq" placeholder="Type your question" style="min-height:80px"></textarea><button class="btn sm" id="askb">Send question</button><div id="askmsg"></div><p class="note">We answer the most common questions here. Your name is never shown.</p></div></aside>
 <div class="list" id="list">{cards}<div class="empty" id="none" hidden>No questions match. Try another word, or ask us.</div></div></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Primary 1 maths enrichment by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE.</p></div><div><b>About these answers</b><p style="margin-top:6px">Questions are ones parents commonly ask us. Answers are written by our teachers and checked against MOE sources where facts are involved.</p></div><div><b>Contact</b><p style="margin-top:6px">hello@mathinquirers.example (to confirm)</p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Primary 1 maths enrichment by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE.</p></div><div><b>About these answers</b><p style="margin-top:6px">Questions are ones parents commonly ask us. Answers are written by our teachers and checked against MOE sources where facts are involved.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: +65 9880 5962</p></div></footer>
 </div>
 <script>
 (function(){{"use strict";

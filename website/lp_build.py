@@ -25,7 +25,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <style>'''+css+extra+'''</style>
 <div class="wrap">
 <header class="bar"><a class="brand" href="#top" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="tab" href="#program" style="text-decoration:none">Program</a><a class="tab" href="#classes" style="text-decoration:none">Classes</a><a class="tab" href="#levels" style="text-decoration:none">Levels</a><a class="tab" href="#price" style="text-decoration:none">Price</a><a class="tab" href="#faq" style="text-decoration:none">FAQ</a><a class="btn yel sm" href="#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
-<div class="draft" id="draft"><b>Draft for Jasmine:</b> class times, the WhatsApp number and contact email are placeholders marked "to confirm". Remove this note before sharing.</div>
+
 <main id="top">
 <section class="hero"><div class="sec"><span class="eyebrow">November beta 2026 · Ages 6-8 (builds on Primary 1 maths)</span><h1>Math Inquirers <mark>Holiday</mark> Program</h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Ten hands-on lessons where children solve puzzles, test ideas with objects and explain their answers. Live online in small groups of up to 8, from your own home.</p>
 <div class="eb" id="ebBadge"><span>November beta</span><span class="big" id="ebPrice"></span><s id="ebFull"></s><span id="ebLeft" style="font-weight:700"></span></div>
@@ -66,7 +66,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <ul><li>The check is scored out of 10. 7 to 10: enrol at that level.</li><li>4 to 6: enrol at that level (the tutor will note that support may help), or choose one level down.</li><li>0 to 3: we recommend one level down.</li><li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up.</li></ul>
 <p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level. Ages 6-8 is the lowest level: if your child is a weaker learner there, they start with the free taster and a tutor chat.</p></section>
 
-<section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Fill this in and send it to us on WhatsApp. We reply within 2 working days to confirm the group and send payment details. Groups are small, so seats go in order of registration.</p><p class="small">WhatsApp: <b id="waShow"></b><br>Email: <b id="emShow"></b></p></div>
+<section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Fill this in and send it to us on WhatsApp. We reply within 2 working days to confirm the group and send payment details. Groups are small, so seats go in order of registration.</p><p class="small">WhatsApp: <b id="waShow"></b><span id="emLine1"><br>Email: <b id="emShow"></b></span></p></div>
 <form class="card" id="reg"><div class="grid2"><div class="field"><label for="r1">Parent's name</label><input id="r1" autocomplete="name"></div><div class="field"><label for="r2">Mobile</label><input id="r2" type="tel" autocomplete="tel"></div></div>
 <div class="grid2"><div class="field"><label for="r3">Child's name</label><input id="r3"></div><div class="field"><label for="r4">Level</label><select id="r4"><option>Ages 6-8 (builds on Primary 1 maths)</option><option>Ages 7-9 (builds on Primary 2 maths)</option><option>Ages 8-10 (builds on Primary 3 maths)</option><option>Ages 9-11 (builds on Primary 4 maths)</option><option>Ages 10-12 (builds on Primary 5 maths)</option><option>Ages 11-13 (maths + coding bridge, after PSLE)</option></select></div></div>
 <div class="field"><label for="r5">Group</label><select id="r5"></select></div>
@@ -88,16 +88,16 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <details><summary>How do I pay?</summary><p>There is nothing to pay when you register. We confirm the group first, then send payment details.</p></details>
 <details><summary>What if we need to cancel?</summary><p>You can cancel within 60 days of paying. Before the first lesson, we refund everything you have paid. After lessons start, we refund what you have paid for the lessons your child has not attended yet: for example, with 7 of 10 lessons left you get 7/10 of the fee back. If you pay in instalments, any instalment not yet due is simply cancelled. The workbook and kit are yours to keep. After 60 days, fees are not refundable. To cancel, message us on WhatsApp or email and we refund by PayNow.</p></details></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><br>Email: <span id="emFoot"></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><span id="emLine2"><br>Email: <span id="emFoot"></span></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script>
 (function(){
 "use strict";
 /* ---- settings to confirm ---- */
 var CONFIG={
-  whatsapp:"6590000000",           /* to confirm: number with 65, no spaces */
-  whatsappShow:"+65 9000 0000 (to confirm)",
-  email:"hello@mathinquirers.example (to confirm)",
+  whatsapp:"6598805962",           /* number with 65, no spaces */
+  whatsappShow:"+65 9880 5962",
+  email:"",                        /* no email yet: the Email lines are hidden while this is empty */
   price:650, intro:500,
   beta:__BETA__,
   classes:__CLASSES__
@@ -120,7 +120,7 @@ $("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session">
 function fillGroups(){var lv=$("r4").selectedIndex+1;var g=CONFIG.classes.filter(function(c){return c.level===lv});$("r5").innerHTML=g.map(function(c){return '<option value="'+c.id+'">'+esc("Level "+c.level+" · "+slotText(c)+" · from "+c.first)+'</option>'}).join("")+'<option value="any">Any group for this level</option>'}
 fillGroups();$("r4").addEventListener("change",fillGroups);
 try{var qs=new URLSearchParams(location.search),lv=parseInt(qs.get("level"),10);if(lv>=1&&lv<=6){$("r4").selectedIndex=lv-1;fillGroups();var gp=qs.get("group");if(gp){var os=$("r5").options;for(var oi=0;oi<os.length;oi++){if(os[oi].value===gp){$("r5").selectedIndex=oi}}}}}catch(e){}
-["waShow","waFoot"].forEach(function(i){$(i).textContent=CONFIG.whatsappShow});["emShow","emFoot"].forEach(function(i){$(i).textContent=CONFIG.email});
+["waShow","waFoot"].forEach(function(i){$(i).textContent=CONFIG.whatsappShow});["emShow","emFoot"].forEach(function(i){$(i).textContent=CONFIG.email});if(!CONFIG.email){["emLine1","emLine2"].forEach(function(i){$(i).hidden=true})}
 document.addEventListener("click",function(e){var p=e.target.closest("[data-pick]");if(p){$("r4").selectedIndex=+p.dataset.level-1;fillGroups();$("r5").value=p.dataset.pick}});
 $("pzCheck").addEventListener("click",function(){var v=($("pzA").value||"").replace(/\\D/g,"");$("pzMsg").innerHTML=v==="21"?'<div class="msg ok">Correct! Now ask: how do you know? 7 hops of 3 is 21.</div>':'<div class="msg no">Not yet. Try counting along a number line in 3s.</div>'});
 $("reg").addEventListener("submit",function(e){
