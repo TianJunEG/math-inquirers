@@ -82,13 +82,14 @@ module.exports = {
     hints: ['Hint 1: “Draw it: put people or bars on paper.”', 'Hint 2: “Make a table and cross out what cannot be.”', 'Hint 3: “List it in order, smallest first, so you do not miss one.”'],
     talk: ['“Which start helped you most today: draw it, list it or make a table? Why?”', '“Why do we take away 1 in a queue puzzle?”'],
     talkAns: 'Open answers for the first. Queue: the person is counted from the front AND from the back, so they are counted twice; take away 1.',
-    close: ['“You are real inquirers now: you notice, test, and explain why. Here is your certificate.”', 'Give each child a certificate and tell them one specific thing they did well in the program.']
+    close: ['“You are real inquirers now: you notice, test, and explain why. Here is your certificate.”', 'Give each certificate with ONE 20-second sentence about one specific thing the child did well in the program (8 children: under 3 minutes).']
   },
   deck: {
     today: 'Choose how to start a puzzle: draw it, list it or make a table. Solve a logic grid and read a bar graph with a scale.',
     warmGame: 'Relay chain. Each answer is passed on and becomes the start of the next question.',
-    warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2'], ['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
-    expSetup: ['Two stations, about 7 minutes each: List, then Measure. The timer is a guide, not a race. You may pass on a station.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer, or how far you got, and how you started.'],
+    warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2']],
+    takeHome: [['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
+    expSetup: ['Two stations, about 4 minutes each: List, then Measure. The timer is a guide, not a race. You may pass on a station.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer, or how far you got, and how you started.'],
     expPic: 'two station cards: three digit cards, and a 120 cm ribbon to be cut into 3 pieces.',
     expAsk: [['How did you start each puzzle?', 'Open: draw it, list it, make a table.'], ['How many numbers did the List station make? How do you know you have them all?', '6 numbers: 2 for each hundreds digit, listed in order.'], ['Measure station: how long is each piece of ribbon?', '30 cm, 40 cm and 50 cm (take away the extra 10 + 20 = 30 cm, 90 cm ÷ 3 = 30 cm).']],
     mini1: { head: 'Draw it: a queue', body: ['Siti is 4th from the front and 6th from the back of a queue.', 'How many people are in the queue?'], ans: '9 people: 3 in front, Siti, 5 behind (4 + 6 − 1 = 9).' },

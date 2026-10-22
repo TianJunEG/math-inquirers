@@ -2,22 +2,18 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T01:59:30Z"
+  "at": "2026-10-22T03:36:07Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 10 – Showcase Challenge",
  "order": [
   "p6l10-title",
   "p6l10-check",
-  "p6l10-warm1",
   "p6l10-explore1",
-  "p6l10-go",
   "p6l10-ws1",
   "p6l10-ws1ans",
-  "p6l10-explore2",
   "p6l10-teach1",
   "p6l10-we1",
-  "p6l10-try1",
   "p6l10-we2",
   "p6l10-we3",
   "p6l10-key",
@@ -31,7 +27,6 @@
   "p6l10-chdiag",
   "p6l10-chwalk",
   "p6l10-showcase",
-  "p6l10-talk",
   "p6l10-exit",
   "p6l10-reflect",
   "p6l10-end"

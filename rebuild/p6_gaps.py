@@ -120,12 +120,12 @@ def retime(n):
                 else: s=PILLRE.sub(lambda x:x.group(1)+pill+x.group(3),s,1)
                 pre=f'Minutes {BUDG.fmt(a)} to {BUDG.fmt(b)}'
                 if k=='explore1':
-                    ps,pe=_part(n,'Explore'); pre=f'Minutes {BUDG.fmt(ps)} to {BUDG.fmt(pe)} (this slide {BUDG.fmt(a)} to {BUDG.fmt(b)})'
+                    ps,pe=_part(n,'Explore') or _part(n,'Challenge'); pre=f'Minutes {BUDG.fmt(ps)} to {BUDG.fmt(pe)} (this slide {BUDG.fmt(a)} to {BUDG.fmt(b)})'
                 pre+='. '
             m=re.search(r'<aside>(.*?)</aside>',s,re.S)
             if m:
                 body=LEAD.sub('',m.group(1))
-                if k=='break': body=re.sub(r'^(Five|Two) minutes',BUDG.fmt(b-a)+' minutes',body)
+                if k=='break': body=re.sub(r'^(Five|Two|Three) minutes',BUDG.fmt(b-a)+' minutes',body)
                 s=s.replace(m.group(0),'<aside>'+pre+body+'</aside>',1)
         if s!=o: open(pth,'w',encoding='utf8').write(s)
 

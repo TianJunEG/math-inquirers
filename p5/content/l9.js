@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 9: Pattern Generalisers (patterns and number sense)
+const { TKQ, TKP } = require('./take.js');
 // Heuristics: look for a pattern, make a table, say the rule in words (no letters), work backwards from a total,
 // guess and check with a table, supposition ("suppose they are all the same").
 // Every pattern term, count and answer below was worked out and checked with a short Python script.
@@ -151,15 +152,15 @@ module.exports = {
     W.push(H.fig(tablesSvg()));
     W.push(H.sub('a', '4 tables:  ______ chairs.   5 tables:  ______ chairs.   10 tables:  ______ chairs.'));
     W.push(H.sub('b', 'Rule in words:   chairs  =  ______ × tables  +  ______'));
-    W.push(H.sub('c', 'How many tables are needed to seat exactly 50 people?   ______________'));
-    W.push(H.sub('d', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
+    W.push(H.sub('c', [TKP, 'How many tables are needed to seat exactly 50 people?   ______________']));
+    W.push(H.sub('d', [TKP, 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.'], { after: 20 }));
     W.push(...H.lines(1));
     // Q2 matchstick houses
     W.push(H.q(2, 'Matchstick houses are joined in a row.', { keepNext: true }));
     W.push(H.fig(housesSvg()));
     W.push(H.sub('a', 'Each new house adds ______ sticks. Why not 6?  ______________________________', { after: 40 }));
     W.push(H.sub('b', 'Rule:   sticks  =  ______ × houses  +  ______.   For 20 houses:  ______ sticks.'));
-    W.push(H.sub('c', 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________'));
+    W.push(H.sub('c', [TKP, 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________']));
     // ---- page 2 ----
     W.push(H.q(3, 'Guess and check with a table. Adult tickets to the Science Centre cost $12 each and child tickets cost $7 each. A group buys 15 tickets for $145 altogether. How many adult tickets do they buy?', { pb: true, before: 0, keepNext: true }));
     { const ws = [2000, 2000, 3400, 2500];
@@ -170,10 +171,10 @@ module.exports = {
     // Q5 supposition, coins
     W.push(H.q(4, 'Siti has 30 coins. They are all 20¢ and 50¢ coins, worth $10.20 altogether.', { keepNext: true }));
     W.push(H.sub('a', 'If all 30 coins were 20¢: worth ____________.  Each change of a 20¢ for a 50¢ adds ____________.'));
-    W.push(H.sub('b', 'How many 50¢ coins does Siti have? Show your working and check.', { after: 20 }));
+    W.push(H.sub('b', [TKP, 'How many 50¢ coins does Siti have? Show your working and check.'], { after: 20 }));
     W.push(...H.lines(2));
     // Q6 marks taken away
-    W.push(H.q(5, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
+    W.push(H.q(5, [TKQ, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
     W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
     W.push(...H.lines(2));
     W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong? Start here: all correct scores 100. Each wrong answer takes off 7. Write the scores for 0, 1, 2, 3 wrong: 100, ____, ____, ____. Is 80 in your list?', { after: 20 }));
