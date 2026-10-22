@@ -114,3 +114,106 @@ Extensions rather than gaps (idea exists, the contest format is new): logic form
 - Keep every new item inside the Level 2 rules (tables 2, 3, 4, 5, 10; numbers to 1000; no decimals except money). The contest breaks these rules in three problems.
 - Original practice drafts for gaps 1 to 7 and for the main extension types are in `docs/sasmo/g2_original_problems_draft.md` (draft, not yet in the program). Check them with a tutor before use.
 - Before building anything big, get one more year's papers (2019 onwards) and a few real child attempts: the evidence here is one five-year book and my categorisation.
+
+## 7. Addendum (22 Oct 2026): the 2020 and 2022 papers
+
+Four files were uploaded after the sections above were written. Two of them add new Grade 2 papers; the others are duplicates or another grade.
+
+### 7.1 What the new files were
+
+| File (start of name) | Pages | What it is | New? |
+|---|---|---|---|
+| 9d30fa1a G2 | 24 | "Primary 2 (Grade 2) GEP Practice, 2020, Contest Problems with Full Solutions" (SIMCC). Questions pp 1 to 13, the publisher's worked solutions pp 14 to 24. | **New: 2020, 25 problems, solutions supplied** |
+| a52eb14e "Sasmo Grade 2 past paper 2014-2018" | 66 | A phone scan of the question pages only of the 2014, 2015, 2016, 2017 and 2018 papers (pp 1 to 42, no solutions), followed by the same 2020 booklet again (pp 43 to 66). I spot-checked 2014 Q1 to Q15, 2015 Q1 to Q6 and 2018 Q5, Q6, Q24, Q25 against the book analysed above. | **Duplicate** of the 2014 to 2018 book and of the 2020 file; nothing new |
+| ea383ceb "Untitled" | 16 | The official **SASMO 2022 Primary 2 contest paper**: cover with rules, a rough-working page, Q1 to Q25. **No answers or solutions.** | **New: 2022, 25 problems, no solutions (I solved them, privately)** |
+| ce8a5cc9 G4 | 22 | Grade 4, 2019 (see `g4_analysis.md`) | Another grade |
+
+The 2019 and 2021 Grade 2 papers are still missing, so the book's five years plus 2020 and 2022 make **seven papers and 160 problems**.
+
+New format evidence from the 2022 cover and the section headings in both new papers: 25 questions in 1 hour 30 minutes (the minimum stay is 1 hour); no calculators; Section A is Q1 to 15, five options, **2 points each, minus 1 for a wrong answer, no penalty for blank**; Section B is Q16 to 25, **4 points each**, written as a 4-digit grid (answer 7 is shaded 0007). That is a maximum of 70. This **replaces my inference in section 1** that the book's perfect score of 85 was 15 questions at 3 marks plus 10 at 4 marks: the 2020 and 2022 papers print 2 and 4, and I do not know whether the older papers differed.
+
+### 7.2 Catalogue of the new 50 problems
+
+Verdict as in section 2: W = Level 2 prepares it, E = close idea or new format, G = real gap, X = out of rule for Level 2 (a 6, 7, 8 or 9 times table or a 2-digit by 1-digit step beyond the 2, 3, 4, 5, 10 tables). Difficulty bands were not rated for these.
+
+| ID | Sec | Skill tag | Type | Verdict |
+|---|---|---|---|---|
+| 20-1 | A | Count dots in a ring by rows | Counting figures | E |
+| 20-2 | A | Two missing items in a repeating strip | Repeating patterns | W |
+| 20-3 | A | Months with exactly 30 days | Calendar | G |
+| 20-4 | A | Match a key shape to a lock | Visual perception | G |
+| 20-5 | A | Next term, gaps grow by 3 as they fall | Sequences | G |
+| 20-6 | A | Two prices, total and difference | Bar model | W |
+| 20-7 | A | Cubes in a room-corner stack | 3D | E |
+| 20-8 | A | Age now from a past age, brother older, age later | Age | G |
+| 20-9 | A | Three balance scales, three fruits | Symbol equations | E |
+| 20-10 | A | Both sell the same, difference stays | Bar model | W |
+| 20-11 | A | Exchange chain of pots and cups, one volume given | Symbol equations | E |
+| 20-12 | A | 3 by 3 grid of plants, each feature cycles | Repeating patterns | E |
+| 20-13 | A | Two-digit even numbers in the 3 and 5 tables | Multiples | W |
+| 20-14 | A | Round table, who is in which year | Logic | E |
+| 20-15 | A | Which flat net makes the pyramid | 3D | G |
+| 20-16 | B | Sum of eight 2-digit numbers by pairing | Number sense | G |
+| 20-17 | B | Triangles in a crown figure by size | Counting figures | W |
+| 20-18 | B | Picture graph with a key of 7 | Graphs | X |
+| 20-19 | B | Group a sentence: 3 x 13 + 5 x 13 = A x 8 | Number sense | X |
+| 20-20 | B | Smallest number from exactly 27 matchsticks | Optimise under a limit (new type) | G |
+| 20-21 | B | 3-digit even number from clues | Number sense | W |
+| 20-22 | B | Ways for three different dice to total 12 | Counting ways | E |
+| 20-23 | B | Heads and legs, cows and chickens | Legs and heads | W |
+| 20-24 | B | Worst case: draws to be sure of 3 red | Worst case | G |
+| 20-25 | B | Letter addition, 3-digit plus 2-digit | Letter-digit sums | E |
+| 22-1 | A | Sum of eight numbers, pair to make tens | Number sense | G |
+| 22-2 | A | Shadow of an animal | Visual perception | G |
+| 22-3 | A | Next term, gaps grow by 1 as they fall | Sequences | G |
+| 22-4 | A | Length of one object from a ruler and repeated copies in a picture | Measure from a picture (new) | E |
+| 22-5 | A | Pyramid of cubes, painted, exactly 2 faces painted | 3D | E |
+| 22-6 | A | Sum of evens minus sum of odds, 1 to 40 | Number sense | G |
+| 22-7 | A | Opening hours with a break | Time | E |
+| 22-8 | A | Greatest equal piece from two ribbons | Multiples | E |
+| 22-9 | A | Nested shapes, missing figure | Repeating patterns | E |
+| 22-10 | A | Sum of the first ten terms of "add the two before" | Sequences | G |
+| 22-11 | A | Queue order from clues | Logic | W |
+| 22-12 | A | Rows from front and back, place in the row, total desks | Fence-post and positions | E |
+| 22-13 | A | Circle rule from three examples (a times b with a plus 1 each) | Symbol equations | X |
+| 22-14 | A | Next year that uses only two digits | Number sense | E |
+| 22-15 | A | Money: give half, then a third | Bar model | G |
+| 22-16 | B | Picture graph with a key of 3 | Graphs | W |
+| 22-17 | B | Triangles in a figure | Counting figures | W |
+| 22-18 | B | Sentence with a shape times 6 | Symbol equations | X |
+| 22-19 | B | Smallest 4-digit even number from four cards | Number sense | W |
+| 22-20 | B | Ages: three times now, mother three times at 18 | Age | G |
+| 22-21 | B | More and fewer than a day, total, find the first day | Bar model | W |
+| 22-22 | B | Animal equations, one of them a square | Symbol equations | X |
+| 22-23 | B | Trees every 7 m along paths of a plot | Fence-post and positions | E |
+| 22-24 | B | Letter addition, 2-digit plus 2-digit | Letter-digit sums | E |
+| 22-25 | B | Digits 1 to 8 around shaded squares | Constraint grids | G |
+
+New 50 by verdict: W 12, E 17, G 16, X 5. By section: A 30, B 20.
+
+### 7.3 Updated counts (110 + 50 = 160 problems)
+
+By verdict: well prepared 50 (31%), close idea or extension 51 (32%), real gap 51 (32%), out of rule 8 (5%). Out-of-rule items rose from 3 to 8: five of the new 50 (10%) need the 6, 7, 8 or 9 table.
+
+Type counts after adding the new papers (old count plus new): number sense and clever computing 17 (10 + 7); picture and symbol equations 12 (7 + 5); logic 11 (9 + 2); bar-model word problems 11 (7 + 4); counting figures and ways 11 (7 + 4); multiples 9 (7 + 2); number sequences 8 (5 + 3); 3D 8 (5 + 3); fence-post and positions 7 (5 + 2); age problems 7 (5 + 2); calendar and time 7 (5 + 2); visual perception 7 (5 + 2); repeating patterns 7 (4 + 3); letter-digit sums 5 (3 + 2); graphs and tables 5 (3 + 2); legs and heads 3 (2 + 1); worst case 3 (2 + 1); constraint grids 3 (2 + 1); two new single types, optimise under a limit (1) and measure from a picture (1). Types with no new problem keep their old counts (growing patterns 3, working backwards 3, money 2, rate 2, cross sums 2, one-offs 2, single problems 3). These sum to 160.
+
+### 7.4 What the new papers add
+
+- **Every earlier pattern repeats.** A changing-gap sequence is in the first 10 questions of all seven papers (2014 to 2018, 2020, 2022), and the 2022 paper has three sequence items. A sum that is easy once paired appears in 2015, 2016, 2017, 2018, 2020 and 2022 (twice in 2022). Age problems appear in 2014, 2015, 2016, 2017, 2020 and 2022. A letter-digit sum appears in five of the seven papers (2014, 2016, 2018, 2020, 2022); a "how many to be sure" worst case in three (2015, 2017, 2020). A "digits around a shaded square" or hexagon constraint grid is the last or second-to-last Section B item in 2017, 2018 and 2022. A triangle-counting figure is Q17 in both 2020 and 2022. Cubes in the corner of a room appear in 2016, 2017 and 2020.
+- **Matchsticks.** 20-20 ("the smallest number from exactly 27 sticks") is a new type here and the same idea as the Grade 3 20-23 (`g3_analysis.md`): most digits for a fixed number of sticks, then the smallest first digit that still works. Two different grades in the same year suggests it is a recurring setter's idea. It is one problem per paper, so low priority.
+- **Fractions of money.** 22-15 asks for half, then a third, of an amount of money between two people. Level 2's plan reaches "half of 36 sweets" at Go further only. This is the first fraction-of-an-amount item in the Grade 2 papers.
+- **Out-of-rule content is growing.** The new X items are 20-18 (key of 7), 20-19 (x 8), 22-13 (6 x 9), 22-18 (x 6) and 22-22 (a square of 7). Do not chase them: keep Level 2 inside the 2, 3, 4, 5, 10 tables.
+- **Unusual items worth a sentence.** 22-14 (the next year using two digits) and 22-8 (the greatest equal piece) are number-sense items in a new coat. 22-12 and 22-23 are the fence-post and position idea in a classroom and a plot of land (22-23 is ambiguous, see 7.5).
+
+### 7.5 Evidence-thin notes for the new papers
+
+- The 2022 paper has no answers in the file. I solved every 2022 problem except 22-2, and checked them by script where a script applies. Five need care: **22-2 (shadow) I did not solve** (picture only, no reliable reading); **22-4** reads a ruler from a drawing (stapler about 14 cm, so the eraser is 6 cm); **22-5** depends on whether the painted bottom of the pyramid counts (the first drawing shows the underside with a grid, so I read it as painted, giving 4; if the bottom is not painted the answer is 16, and both are answer options); **22-17** is 13 on my reading of the lines; **22-23** is 39 if the trees stand on every corner and are shared, 40 if the trees may avoid the corners, and the question's "greatest" does not settle which the setter meant. The 2022 answers are in the git-ignored `private_solution_notes_g2.md`.
+- For 2020 I re-derived by hand all the answers that depend on text only (20-3, 5, 6, 8 to 11, 13, 16, 18 to 25) and they matched the booklet. The picture items (20-1, 2, 4, 7, 12, 15, 17) follow the publisher.
+- Two papers added to five is still a small sample. A type with 1 to 3 problems is "occasionally seen", not "tested".
+
+### 7.6 Effect on the gaps and recommendations in sections 5 and 6
+
+- The order of gaps is unchanged, and the evidence for gaps 1 to 4 is stronger: changing-gap sequences (8 problems now), pairing sums (7), age problems (7), and calendar (7).
+- **New items to place:** worst case moves up (3 papers, written answer each time); the constraint grid is now a 3-in-7 repeat; fractions of an amount of money has one new example; matchsticks is one new example.
+- Visual perception is now 7 problems, all Section A. The recommendation stands: a three-minute warm-up routine, not a strand.
+- The term-plan lessons that should change because of this evidence are listed in the session report, not here, since this file does not edit the plan.
