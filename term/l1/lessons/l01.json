@@ -1970,17 +1970,17 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 47 straws. He ties them into bundles of ten.",
+        "text": "Ali has 47 straws. He ties them into bundles of ten. Fill in the blanks.",
         "parts": [
           {
             "l": "a",
-            "text": "How many full bundles can he make? ___",
+            "text": "He can make ___ full bundles.",
             "ans": "4",
             "val": 4
           },
           {
             "l": "b",
-            "text": "How many straws are left over? ___",
+            "text": "___ straws are left over.",
             "ans": "7",
             "val": 7
           }
@@ -2003,7 +2003,7 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Siti has 3 bundles of ten and 4 single sticks. She writes 43. Is Siti right? Write the number she should write, and say what she mixed up.",
+        "text": "Siti has 3 bundles of ten and 4 single sticks. She writes 43. That is not right. Write the correct number.",
         "parts": [
           {
             "l": "",
@@ -2029,7 +2029,7 @@
         "id": "S7",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 6 bundles of ten and no single sticks. Mei has 6 single sticks and no bundles. Draw what each child has in the box. Then write each number.",
+        "text": "Ali has 6 bundles of ten and 0 single sticks. Mei has 0 bundles and 6 single sticks. Draw Ali's sticks and Mei's sticks in the box. Then write each number.",
         "draw": true,
         "parts": [
           {
@@ -2065,7 +2065,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks has she? Hint: can she make another bundle?",
+        "text": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks does she have? Can she tie another bundle?",
         "parts": [
           {
             "l": "",
@@ -2091,11 +2091,11 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "41 is 4 tens and 1 one. Open one bundle. Now 41 is 3 tens and ___ ones.",
+        "text": "41 is 4 tens and 1 one. Open one of the 4 bundles.",
         "parts": [
           {
             "l": "",
-            "text": "3 tens and ___ ones",
+            "text": "Now 41 is 3 tens and ___ ones.",
             "ans": "11",
             "val": 11
           }
@@ -2117,7 +2117,7 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Mystery number. Clue 1: I am between 30 and 50. Clue 2: my ones digit is 6. Clue 3: my number of tens is even. What number am I?",
+        "text": "Mystery number. Clue 1: I am between 30 and 50. Clue 2: my ones digit is 6. Clue 3: my tens digit is even. What number am I?",
         "parts": [
           {
             "l": "",
@@ -2143,7 +2143,7 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Who has more, or do they have the same? Show how you know.",
+        "text": "Mei has 7 tens and 2 ones. Ali has 6 tens and 12 ones. Who has more, or are they the same? Show how you know.",
         "parts": [],
         "answer": "The same: 72 each (6 tens 12 ones is 7 tens 2 ones)",
         "val": [
@@ -2207,7 +2207,7 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "How many different ways can you show 30 with bundles of ten and loose sticks, if you may open bundles? Write each way as ___ tens and ___ ones. (3 tens and 0 ones is one way.)",
+        "text": "Show 30 as tens and ones. You may open bundles. How many different ways can you find? Write each way like this: 3 tens and 0 ones.",
         "parts": [],
         "answer": "4 ways: 3 tens 0 ones; 2 tens 10 ones; 1 ten 20 ones; 0 tens 30 ones",
         "val": [
@@ -2229,7 +2229,7 @@
       "tier": "investigation",
       "title": "Swap the digits",
       "first": "Write 14 and 41. Which number has more sticks? Then try 26 and 62, 52 and 25, and 77.",
-      "text": "Pick a two-digit number. Swap its two digits. Is the new number bigger, smaller or the same? Is it always one of these three? When does each happen?",
+      "text": "Pick a two-digit number. Swap its two digits. Is the new number bigger, smaller or the same? Try 6 numbers. Write what you notice.",
       "lines": 4,
       "answer": "Three things can happen. If the tens digit is smaller than the ones digit (14, 26), swapping makes a bigger number (41, 62). If the tens digit is bigger (52, 91), swapping makes a smaller number (25, 19). If the two digits are the same (77), the number stays the same.",
       "val": [
@@ -2304,7 +2304,7 @@
     },
     {
       "id": "E3",
-      "text": "Write the number: 7 tens and 0 ones. Why do we need the 0?",
+      "text": "Write the number: 7 tens and 0 ones.",
       "parts": [
         {
           "l": "",
@@ -2350,7 +2350,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "A box has 3 bundles of ten pencils and 8 loose pencils. How many pencils are there?",
+      "text": "Mei has 3 bundles of ten pencils and 8 single pencils. How many pencils does she have?",
       "answer": "38",
       "val": 38,
       "solution": "3 tens is 30, and 8 more is 38."
@@ -2377,7 +2377,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Ben has 4 tens and 12 ones. Is that 52 or 412? Show how you know.",
+      "text": "Ben has 4 tens and 12 ones. Circle his number: 52 or 412. Then show how you know.",
       "answer": "52 (12 ones make 1 ten and 2 ones, so 5 tens and 2 ones)",
       "val": 52,
       "solution": "Tie 10 of the 12 ones into a bundle: 5 bundles and 2 ones, which is 52."
@@ -2385,7 +2385,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: find 30 to 50 small things (pasta, clips, buttons). Make bundles of ten with bands, cups or rings on paper. Write: ___ tens and ___ ones = ___ . Then open one bundle and write the number a different way.",
+      "text": "At home: find 30 to 50 small things (pasta, clips, buttons). Tie bundles of ten with bands or put them in cups. Write: ___ tens and ___ ones = ___. Now open one bundle. Write the tens and ones again.",
       "answer": "Any: for example 3 tens and 7 ones = 37, and also 2 tens and 17 ones = 37. Check: tens x 10 + ones = how many things.",
       "val": "open",
       "solution": "A grown-up counts the things one by one to check the number. Opening a bundle gives one fewer ten and ten more ones."
@@ -2684,7 +2684,7 @@
         "id": "t1",
         "tier": "stretch",
         "type": "number",
-        "q": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks has she?",
+        "q": "Mei has 5 bundles of ten and 14 loose sticks. How many sticks does she have?",
         "answer": 64,
         "easier": "c1",
         "hint": "Tie 10 of the loose sticks into another bundle. How many bundles and singles now?",
@@ -2801,7 +2801,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "Mystery number. I am between 30 and 50. My ones digit is 6. My number of tens is even. What number am I?",
+        "q": "Mystery number. I am between 30 and 50. My ones digit is 6. My tens digit is even. What number am I?",
         "answer": 46,
         "easier": "c3",
         "hint": "List the numbers between 30 and 50 that end in 6. Then check the tens.",
@@ -3007,7 +3007,7 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make up your own mystery number puzzle with 3 clues (between which two numbers, the ones digit, and odd or even tens). Check that only ONE number fits.",
+        "q": "Make your own mystery number puzzle with 3 clues: between which two numbers, the ones digit, and whether the tens digit is odd or even. Check that only 1 number fits.",
         "hint": "Pick a secret number first. Then write clues that are true for it.",
         "steps": [
           "Check your secret number fits every clue.",
