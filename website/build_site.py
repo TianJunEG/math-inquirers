@@ -22,6 +22,10 @@ PAGES = [  # (source, output path, title, description)
      'Live online maths enrichment for children, in small groups of up to 8. Notice it. Test it. Explain why.'),
     ('hub/parent_questions.html', 'parent-questions/index.html', 'Parent questions about Primary maths',
      'Answers to common questions from Singapore parents about Primary maths, helping at home and stretching strong learners.'),
+    ('terms.html', 'terms/index.html', 'Terms and refund policy',
+     'Terms, fees and refund policy for the Math Inquirers November beta.'),
+    ('privacy.html', 'privacy/index.html', 'Privacy and recording notice',
+     'How Math Inquirers handles your details, lesson recordings and your child\'s work.'),
     ('weekly_dose_online.html', 'weekly-dose/index.html', 'Weekly Dose of Thinking Math online',
      'Sixty puzzles for children to try on screen, with hints and answers.'),
 ]
@@ -41,6 +45,7 @@ def fonts_css():
 
 def wrap(src, title, desc, path):
     s = open(os.path.join(HERE, src), encoding='utf-8').read()
+    s = s.replace('<!--STYLE-->', open(os.path.join(HERE, 'legal_style.txt'), encoding='utf-8').read())
     s = re.sub(r'<meta name="claude:[^>]*>\s*', '', s)
     s = re.sub(r'<link rel="preconnect"[^>]*>\s*', '', s)
     s = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>\s*', '', s)
@@ -90,7 +95,7 @@ def main():
         "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n"
         "  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n"
         '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n')
-    open(os.path.join(DIST, '_redirects'), 'w').write('/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n')
+    open(os.path.join(DIST, '_redirects'), 'w').write('/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n')
     print('built', DIST)
     for p in sorted(os.listdir(DIST)):
         print(' ', p)

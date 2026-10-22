@@ -68,7 +68,11 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <div class="grid2"><div class="field"><label for="r3">Child's name</label><input id="r3"></div><div class="field"><label for="r4">Level</label><select id="r4"><option>Ages 6-8 (builds on Primary 1 maths)</option><option>Ages 7-9 (builds on Primary 2 maths)</option><option>Ages 8-10 (builds on Primary 3 maths)</option><option>Ages 9-11 (builds on Primary 4 maths)</option><option>Ages 10-12 (builds on Primary 5 maths)</option><option>Ages 11-13 (maths + coding bridge, after PSLE)</option></select></div></div>
 <div class="field"><label for="r5">Group</label><select id="r5"></select></div>
 <div class="field"><label for="r6">Anything we should know? <span class="muted" style="font-weight:600">(optional)</span></label><textarea id="r6" style="min-height:70px"></textarea></div>
-<label class="check" for="r7"><input type="checkbox" id="r7"><span>I agree to Math Inquirers (Preciouslyours Pte Ltd) using these details to arrange the class and contact me about it.</span></label>
+<label class="check" for="r7"><input type="checkbox" id="r7"><span>I agree to Math Inquirers (Preciouslyours Pte Ltd) using my details to arrange the class and contact me about it.</span></label>
+<label class="check" for="r8"><input type="checkbox" id="r8"><span>I have read and agree to the <a href="/terms/" target="_blank">terms and refund policy</a>.</span></label>
+<label class="check" for="r9"><input type="checkbox" id="r9"><span>I understand lessons are recorded (the tutor and the shared screen) and shared only with enrolled families of my child's group. See the <a href="/privacy/" target="_blank">privacy and recording notice</a>.</span></label>
+<label class="check" for="r10"><input type="checkbox" id="r10"><span>I am the parent or guardian, and I agree to my child's work and answers being kept for the program as described in the privacy notice.</span></label>
+<label class="check" for="r11"><input type="checkbox" id="r11"><span>Optional: you may quote my feedback without my child's name.</span></label>
 <div id="regMsg"></div><button class="btn" type="submit">Send on WhatsApp</button></form></section>
 
 <section class="sec faq" id="faq"><div class="shead"><span class="eyebrow">Questions</span><h2>Parents often ask</h2></div>
@@ -81,7 +85,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <details><summary>How do I pay?</summary><p>There is nothing to pay when you register. We confirm the group first, then send payment details. The introductory price is for families who register for this first intake.</p></details>
 <details><summary>What if we need to cancel?</summary><p>You can cancel within 60 days of paying. Before the first lesson, we refund everything you have paid. After lessons start, we refund what you have paid for the lessons your child has not attended yet: for example, with 7 of 10 lessons left you get 7/10 of the fee back. If you pay in instalments, any instalment not yet due is simply cancelled. The workbook and kit are yours to keep. After 60 days, fees are not refundable. To cancel, message us on WhatsApp or email and we refund by PayNow.</p></details></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><br>Email: <span id="emFoot"></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA.</p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><br>Email: <span id="emFoot"></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script>
 (function(){
@@ -119,9 +123,9 @@ $("reg").addEventListener("submit",function(e){
   e.preventDefault();
   var f={p:$("r1").value.trim(),m:$("r2").value.trim(),c:$("r3").value.trim(),l:$("r4").value,g:$("r5").options[$("r5").selectedIndex].text,n:$("r6").value.trim()};
   if(!f.p||!f.m||!f.c){$("regMsg").innerHTML='<div class="msg no">Fill in your name, mobile and your child\\'s name.</div>';return}
-  if(!$("r7").checked){$("regMsg").innerHTML='<div class="msg no">Tick the consent box so we can contact you.</div>';return}
+  if(!($("r7").checked&&$("r8").checked&&$("r9").checked&&$("r10").checked)){$("regMsg").innerHTML='<div class="msg no">Please tick the four required boxes (contact, terms, recording, your child\\'s work).</div>';return}
   var price="beta S$"+CONFIG.beta.per+" a lesson, S$"+CONFIG.beta.total+" for all 10 lessons";
-  var msg="Hi! I'd like to register for the Math Inquirers November Beta.\\n\\nParent: "+f.p+"\\nMobile: "+f.m+"\\nChild: "+f.c+" ("+f.l+")\\nGroup: "+f.g+"\\nPrice: "+price+(f.n?"\\nNote: "+f.n:"");
+  var msg="Hi! I'd like to register for the Math Inquirers November Beta.\\n\\nParent: "+f.p+"\\nMobile: "+f.m+"\\nChild: "+f.c+" ("+f.l+")\\nGroup: "+f.g+"\\nPrice: "+price+(f.n?"\\nNote: "+f.n:"")+"\\nConsents: contact, terms, recording, child's work"+($("r11").checked?", feedback quotes":"");
   var url="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(msg);
   $("regMsg").innerHTML='<div class="waout"><div class="msg ok">Almost done. Tap the button to send this on WhatsApp.</div><pre>'+esc(msg)+'</pre><div class="row"><a class="btn teal" href="'+url+'" target="_blank" rel="noopener">Open WhatsApp</a><button class="btn alt sm" type="button" id="cp">Copy message</button></div><p class="small muted">If WhatsApp does not open, copy the message and send it to '+esc(CONFIG.whatsappShow)+' or '+esc(CONFIG.email)+'.</p></div>';
   $("cp").addEventListener("click",function(){var b=this;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(msg).then(function(){b.textContent="Copied"},function(){b.textContent="Select the text above to copy"});else b.textContent="Select the text above to copy"});
