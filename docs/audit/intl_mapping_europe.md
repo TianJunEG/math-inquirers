@@ -1,5 +1,7 @@
 # International syllabus mapping (Europe): Math Inquirers vs England, Finland, Estonia, Netherlands
 
+**Verified against MOE syllabus (Oct 2025).** Singapore references in this file (level names follow the Singapore year; P2 as the nearest match to England Year 3; the bar model) were checked: the syllabus itself never names the bar model (it is school practice), and the year mapping is as stated. No change needed. See `docs/moe/verification_report.md`.
+
 Prepared 2026-10-22. Read-only desk review; no lesson content was changed. This file is the only thing written to the repo.
 Program: Math Inquirers, six levels x 10 lessons (60 lessons). Level age bands: L1 6-8, L2 7-9, L3 8-10, L4 9-11, L5 10-12, L6 11-13 (post-PSLE maths plus a Scratch bridge). Lessons are enrichment (Core / Think Harder / Challenge; "Notice it. Test it. Explain why."). The "P1-P6" level names come from Singapore and are not school years elsewhere.
 

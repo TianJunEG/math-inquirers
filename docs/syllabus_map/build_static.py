@@ -18,7 +18,7 @@ places.remove('Singapore (MOE)'); places.insert(0, 'Singapore (MOE)')
 data = [[r['jurisdiction'], r['lesson'], r['lesson_title'], r['status'], int(r['unverified'])] for r in rows]
 RN = {'AT': 'At school level', 'NEW': 'School ideas, new settings', 'AHEAD': 'Reaches further', 'MIX': 'Mixed or unclear'}
 IC = {'AT': '\u2713', 'NEW': '\u25d0', 'AHEAD': '\u25b2', 'MIX': '?'}
-CN = {'good': 'Lesson-by-lesson evidence', 'some': 'Item-level evidence, some years unconfirmed', 'thin': 'Thin evidence'}
+CN = {'good': 'Lesson-by-lesson evidence', 'some': 'Item-level evidence, years checked', 'thin': 'Thin evidence'}
 TT = [('Start here', 'The core idea, at the school year'), ('Think harder', 'The same idea in an unfamiliar setting'), ('Go further', 'Challenge: mastery, then extension')]
 e = html.escape
 grid = '<div class="tgrid"><div class="hd colh"></div>' + ''.join(f'<div class="hd colh">{e(a)}<small>{e(b)}</small></div>' for a, b in TT)
@@ -85,9 +85,9 @@ a{color:inherit;font-weight:700}
 <div class="legend" id="legend"></div>
 <div class="cards" id="cards"></div>
 <div class="notes">
-<p id="sgnote" hidden>Singapore: compared with the MOE 2021 Primary Mathematics syllabus (updated October 2025), lesson by lesson. Where the syllabus names a topic in the same year, the lesson is marked as taught at school; harder questions inside a lesson can still go further (see the tier map below).</p>
+<p id="sgnote" hidden>Singapore: checked lesson by lesson against the MOE 2021 Primary Mathematics syllabus (updated October 2025); only three Secondary 1 placements could not be read from an MOE document. Where the syllabus names a topic in the same year, the lesson is marked as taught at school; harder questions inside a lesson can still go further (see the tier map below).</p>
 <p>Lessons use puzzles and explaining, not school-style practice, so “goes a little further” means the topic is usually met at school a year or more later. Level 1 is for ages 6 to 8, Level 2 for 7 to 9, Level 3 for 8 to 10, Level 4 for 9 to 11, Level 5 for 10 to 12 and Level 6 for 11 to 13. Each lesson box shows its number and a mark: ✓ Same, ▲ Later, – Not listed, ~ Mixed. Hover or tab to a lesson for details. The tenth lesson of each level is a mixed review and is not compared.</p>
-<p>This is our own comparison, made from public curriculum documents, and some placements could not be confirmed.</p>
+<p>This is our own comparison, made from public curriculum documents. Singapore was checked against the MOE syllabus text; for the other places some placements could not be confirmed.</p>
 </div>
 
 <h2 id="tiers">How the three tiers fit the syllabus</h2>
@@ -95,7 +95,7 @@ a{color:inherit;font-weight:700}
 <div class="legend"><span><i class="sw" data-r="AT" aria-hidden="true">✓</i>At school level</span><span><i class="sw" data-r="NEW" aria-hidden="true">◐</i>School ideas, new settings</span><span><i class="sw" data-r="AHEAD" aria-hidden="true">▲</i>Reaches further</span><span><i class="sw" data-r="MIX" aria-hidden="true">?</i>Mixed or unclear (thin evidence)</span></div>
 @@GRID@@
 <div class="notes">
-<p><b>How firm each row is.</b> Levels 1 to 3: a lesson-by-lesson audit lists which Think harder and Go further items go beyond the Singapore syllabus, so these rows are well supported. Levels 4 and 5: the audit lists the items that look ahead but gives no verdict for a whole tier, and several year placements could not be confirmed. Level 6: thin evidence. The audit compared whole lessons with Primary 6 and Secondary 1 and did not separate the tiers, so its cells are a best reading, not a finding.</p>
+<p><b>How firm each row is.</b> Levels 1 to 3: a lesson-by-lesson audit lists which Think harder and Go further items go beyond the Singapore syllabus, so these rows are well supported. Levels 4 and 5: the audit lists the items that look ahead but gives no verdict for a whole tier; their year placements have now been checked against the syllabus text. Level 6: thin evidence. The audit compared whole lessons with Primary 6 and Secondary 1 and did not separate the tiers, so its cells are a best reading, not a finding.</p>
 <p>A tier marked “at school level” can still hold the odd item that goes beyond, and a tier marked “reaches further” is mostly built from school-level ideas. These are desk comparisons, not a claim of alignment with any ministry.</p>
 </div>
 </main>

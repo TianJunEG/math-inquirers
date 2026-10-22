@@ -1,5 +1,7 @@
 # International syllabus mapping: Ontario, USA (Massachusetts), Australia (Victoria), India
 
+**Verified against MOE syllabus (Oct 2025).** Singapore references in this file (level names follow the Singapore year; P2 as the nearest match to England Year 3; the bar model) were checked: the syllabus itself never names the bar model (it is school practice), and the year mapping is as stated. No change needed. See `docs/moe/verification_report.md`.
+
 Math Inquirers Levels 1-6 (60 lessons) against the primary/elementary mathematics curricula of Ontario (Toronto), the United States (Common Core and the Massachusetts 2017 Framework), Australia (Australian Curriculum v9 and Victorian Curriculum F-10 Version 2.0) and India (NCF-SE 2023 and the new NCERT textbooks). Researched 2026-10-22. Read-only audit: no lesson content was edited.
 
 ## 0. How to read this document

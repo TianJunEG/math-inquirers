@@ -9,3 +9,5 @@ Data and builders for the parent syllabus map and the tier map.
 - `src/*_page_live.html`: page code of the three claude.ai dashboards (the data is uploaded from the two JSON files above). `src/legacy_*`: earlier scratch builders.
 
 Dashboards: parent map https://claude.ai/artifact/3CjaWn3L94tmTn8tEfaCTc, detailed map https://claude.ai/artifact/EVpMPxfpEEkMDoXSiJP8u8, tier map https://claude.ai/artifact/BGC9aLaVMX4sod2JEMaiiY
+
+Dashboards were refreshed on 2026-10-22 with the Singapore rows and tier rows verified against the MOE syllabus (Oct 2025); see docs/moe/verification_report.md.

@@ -1,5 +1,7 @@
 # International syllabus mapping: East Asia (Hong Kong, Mainland China, Japan, South Korea)
 
+**Verified against MOE syllabus (Oct 2025).** The Singapore placements cited in this file were checked against the official PDF: tables of 2, 3, 4, 5, 10 at P2 and 6, 7, 8, 9 at P3 (pp. 33, 35); letters for unknowns and algebra at P6 (p. 43); order of operations and brackets at **P5** (p. 41, not P4), so "one stage before Singapore's usual placement" below holds with Singapore at P5; no probability and no negative numbers anywhere in the primary syllabus. "Regrouping" versus "borrowing" is teacher usage, not syllabus wording. No other change needed. See `docs/moe/verification_report.md`.
+
 Math Inquirers Levels 1-6 (60 lessons) mapped against the primary mathematics curricula of Hong Kong, Mainland China, Japan and South Korea.
 Prepared 2026-10-22. Read-only audit: no lesson content was edited. This file is internal research, not marketing copy.
 
