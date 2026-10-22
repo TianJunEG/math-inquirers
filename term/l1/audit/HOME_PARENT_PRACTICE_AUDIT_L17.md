@@ -2,11 +2,11 @@
 
 Role HOME_PARENT_PRACTICE. Files audited: `out/l17/L17_Home_Practice.pdf` (2 pages), `L17_Parent_Summary.pdf` (1 page), `out/l17/practice/` (key `t2l17`, runner version 2, 14 items, 11 templated). Source data `lessons/l17.json`. Read first: owner decisions (Term 2 defaults 1, 2, 7, 9), `TERM_WIDE_AUDIT.md`, the L14 audit of this role (shared runner and print findings are not repeated), `website/privacy.html`.
 
-## Verdict: Ready after minor fixes
+## Verdict: Ready after minor fixes (one High runner defect first)
 
-All five home questions and all online answers are correct; the pictures render and match (12 of 12 variants of the picture item checked); a swapped answer order is refused; no network calls, no console errors, no overflow at phone or laptop width. Faults: the numbering clash on the parent page, a parent page that does not tell a parent what not to teach (and that gives the division sign as "sign for sharing" only), only one online item with a picture, and small template defects (grammar, fixed-wording items, no variant slips).
+All five home questions and all online answers are correct; the pictures render and match (12 of 12 variants of the picture item checked); a swapped answer order is refused on the first view of the picture item; no network calls, no console errors, no overflow at phone or laptop width. One real runner defect (L17-11, High): pressing "Try a similar one" on the picture item c1 shows the finished sentence with the answers and no answer boxes. Other faults: the numbering clash on the parent page, a parent page that does not tell a parent what not to teach (and that gives the division sign as "sign for sharing" only), only one online item with a picture, and small template defects (grammar, fixed-wording items, no variant slips).
 
-Counts (lesson-specific): 0 High, 2 Medium, 8 Low. Shared runner and print items: as L14, unchanged.
+Counts (lesson-specific): 1 High, 2 Medium, 9 Low. The High is a one-line runner fix (shared with every lesson that has a templated `fields` item). Shared runner and print items: as L14, unchanged.
 
 ## Method
 
@@ -41,7 +41,10 @@ Counts (lesson-specific): 0 High, 2 Medium, 8 Low. Shared runner and print items
 | L17-9 | Low | Home sheet intro | "Use counters on plates or draw it" but nothing says what "left over" means on the sheet (H4); only the parent page defines it. A parent with only the home sheet may not know the word is new. | One line under H4: "left over means not enough for another group". |
 | L17-10 | Low | Online g1 | The set item accepts spaces and a trailing comma (good); it does not accept the words "one, two ..." (correct, digits asked), but for a child who types `1 and 2 and 3` the message "Those fit" may mislead. | Message for `and`: "Put a comma between the numbers." |
 
-(Lesson-specific: High 0, Medium 2, Low 8.)
+| L17-11 | High | Online c1 (every item of type `fields` with a template), "Try a similar one" | First view is right: three answer boxes, picture of 3 plates and 12 counters. After two wrong answers and "Try a similar one", the variant card shows the completed sentence "20 counters are shared equally among 5 plates. Each plate has 4 counters." with **no input boxes** (0 inputs counted in the DOM). The answer is given away and the child cannot answer; pressing Check says "Type a number in every box. It is fine to guess." although there are no boxes. Cause: `practice.js` line 49 fills the frame with all variables (`v.frame = fill(t.frame, all)`) before the box builder splits it on `{id}`. | Fill only non-answer variables into the frame, or keep the `{a}`, `{b}`, `{c}` placeholders in the variant frame and fill the picture only. Re-test every `fields` template in Terms 1 and 2. |
+| L17-12 | Low | Online c1, "Let us look at it together" | In the shown-answer state the first line reads "The answer is 12 counters are shared equally among 3 plates. Each plate has 4 counters.." (double full stop; the sentence starts with the number) and the last step prints raw placeholders: "{a} groups of {b} = {c}." | Fill the step variables from the field answers; one full stop. |
+
+(Lesson-specific: High 1, Medium 2, Low 9.)
 
 ## C. Online practice behaviour (summary)
 
