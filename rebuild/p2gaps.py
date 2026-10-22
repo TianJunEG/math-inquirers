@@ -22,11 +22,11 @@ def precheck(K):
         body+=_row(128,tops[i],1250,lab,x['q'],size)+answer(1420,tops[i],372,x['short'])
     notes=('Minutes 1 to 4. Sneak-peek puzzles: two puzzles on the key idea of today, which the children have NOT learnt yet. Say out loud: "These are ideas we have not learnt yet. Guessing is welcome and so is I do not know. Nobody is marked." '
       'Question 1 is an access question: any child can try it with objects, a drawing or counting, so everyone has a first win (about 1 minute). Question 2 is the thinking question (about 2 minutes). '
-      'Answers are PRIVATE: each child holds their own paper to the camera for you only, or sends a private chat message. Do not raise whiteboards together, do not read answers out, do not name children. '
+      'Answers are PRIVATE: each child holds their own paper to the camera for you only, or writes it on their own paper and shows only you on camera. Do not raise whiteboards together, do not read answers out, do not name children. '
       f'Q1 answer: {_txt(g[0]["a"])} Listen for: {_txt(g[0]["w"])} '
       f'Q2 answer: {_txt(g[1]["a"])} Listen for: {_txt(g[1]["w"])} '
       'At the end click to show the answers as "one way to think about it", without saying who had what. Ask only for volunteers: "Would anyone like to tell us how they started?" '
-      'You may quietly invite a child to try Think harder by PRIVATE chat message. Never announce who is on which page. Pairs are not split unless both children agree. Children can move either way at any time. Everyone joins explore, the mini-lesson, the check-together slides and talk time.')
+      'Invite the WHOLE group at once, never one child: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Never announce who is on which page. Pairs are not split unless both children agree. Children can move either way at any time. Everyone joins explore, the mini-lesson, the check-together slides and talk time.')
     return sec(f'p2l{K}-precheck','1–4 MIN',body,notes)
 def goexp(K):
     w=G[str(K)]['whatif']
@@ -37,7 +37,7 @@ def goexp(K):
       f'Answer: {_txt(w["a"])} Take it at the debrief (minute 14) only if a pair offers it.')
     return sec(f'p2l{K}-goexp','8–14 MIN',body,notes)
 def reflect(K):
-    g=G[str(K)]; C=G['common']; ticks=g['unstuck']+['I asked for help','I am still stuck (my tutor will check in privately)']
+    g=G[str(K)]; C=G['common']; ticks=g['unstuck']+['I asked for help','I am still stuck (my tutor will check in during the session)']
     body=h2('Looking back')+p('Two minutes. Finish one line, two lines or all three. You may pass on any line.',32,600,MUTED)
     body+=qrow(128,290,1664,'1.','Something I did well …',40)+qrow(128,410,1664,'2.','The hardest part was …',40)
     body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">3. What helped me (tick any):</p>'+''.join(f'<p style="font-size:34px;font-weight:600;line-height:1.3"><span style="display:inline-block;width:30px;height:30px;border:4px solid {NAVY};border-radius:6px;background:#fff;vertical-align:middle;margin:0 14px -4px 0"></span>{E(t)}</p>' for t in ticks),None,WHITE,20,'18px 28px')
@@ -52,7 +52,7 @@ def add(S,K):
     S[f'{P}-precheck']=precheck(K); S[f'{P}-reflect']=reflect(K); S[f'{P}-goexp']=goexp(K)
     r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
     r(f'{P}-warm1','0–5 MIN','4–6 MIN'); r(f'{P}-warm1','Minutes 0 to 5.','Minutes 4 to 6 (a 2-minute game: one or two rounds).')
-    r(f'{P}-warm2','5–8 MIN','6–8 MIN'); r(f'{P}-warm2','Minutes 5 to 8.','Minutes 6 to 8 (2 minutes: ask questions 1, 3 and 5; 2 and 4 are spare). Children answer by thumbs, hands or private chat, not by naming a child.')
+    r(f'{P}-warm2','5–8 MIN','6–8 MIN'); r(f'{P}-warm2','Minutes 5 to 8.','Minutes 6 to 8 (2 minutes: ask questions 1, 3 and 5; 2 and 4 are spare). Children answer by thumbs, hands, not by naming a child.')
     s=S[f'{P}-title']
     s=re.sub(r'warm-up 0 to 8','Sneak-peek puzzles 1 to 4, warm-up game 4 to 6, quick questions 6 to 8',s)
     s=s.replace('exit ticket 80 to 90.','exit ticket 80 to 87, Looking back 87 to 89, closing and stamps 89 to 90.')
@@ -74,7 +74,7 @@ def add(S,K):
     S[t]=S[t].replace('“I know because …”','“I know because …”   “Pass.”')
     S[t]=S[t].replace('</aside>',' Talk time rules: you choose volunteers first ("Who would like to share?"); never cold-call a child by name; any child may say pass; no public tallies, scores or rankings.</aside>')
     w=f'{P}-ws1'
-    if w in S: S[w]=S[w].replace('</aside>',' Say once, to everyone: "After question 3 you may choose: carry on, or try Think harder." Never say who is on which page. You may invite a child quietly by private chat. Pairs are not split unless both children agree.</aside>')
+    if w in S: S[w]=S[w].replace('</aside>',' Say once, to everyone: "After question 3 you may choose: carry on, or try Think harder." Never say who is on which page. Invite the WHOLE group at once, never one child: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Pairs are not split unless both children agree.</aside>')
 def order(o,K):
     P=f'p2l{K}'; out=[]
     for i in o:

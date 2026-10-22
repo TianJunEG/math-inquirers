@@ -1,7 +1,7 @@
 """P4 fix pass, shared by rebuild/gen_p4l1.py ... gen_p4l10.py (own file for P4; slidekit.py is not edited).
 
 finish(S, n, G, pic=None) is called by each generator just before the slides are written. It
-  * rebuilds the warm-up check as "Sneak-peek puzzles" (access question + thinking question, answers shown privately),
+  * rebuilds the warm-up check as "Sneak-peek puzzles" (access question + thinking question, answers shown to the tutor only, on camera),
   * rebuilds the reflection slide ("Looking back", 2 minutes, pass allowed),
   * adds the 'Go further' what-if strip to the explore slide,
   * renames Core / Think Harder / Challenge / Open investigation neutrally (Start here / Think harder / Go further / Investigation),
@@ -17,7 +17,7 @@ from slidekit import *
 E = html.escape
 FOOTSTART = '\n<p style="position:absolute;left:128px;bottom:64px'
 
-TIME_PLAN = ('Time plan: opening 0 to 1, sneak-peek puzzles 1 to 4 (two ideas we have not learnt yet; answers shown privately, nobody marked), '
+TIME_PLAN = ('Time plan: opening 0 to 1, sneak-peek puzzles 1 to 4 (two ideas we have not learnt yet; answers shown to the tutor only, on camera, nobody marked), '
              'warm-up game 4 to 6 (one short round), quick questions 6 to 8, explore 8 to 18 (a Go further what-if is on the slide from minute 8), '
              'teaching 18 to 30 (click to reveal each step and answer; the "your turn" slides are optional, skip them if short of time), brain break 30 to 34, '
              'worksheet page 1 (Start here, in pairs) {P1}, short teaching before page 2 53 to 58, worksheet page 2 (on your own) 58 to 76 and check together 76 to 80, '
@@ -40,7 +40,7 @@ def check_slide(n, G, pic=None):
     ck = G['check']
     body = h2('Sneak-peek puzzles')
     body += p('Ideas we have not learnt yet. Guesses and "I do not know" are welcome. Nobody is marked.', 30, 600, MUTED)
-    body += p('Show your answer only to your tutor: hold your own paper to the camera, or use private chat.', 30, 600, MUTED)
+    body += p('Write your answer on your own paper. When your tutor says, hold it to the camera. Only your tutor looks.', 30, 600, MUTED)
     tops = [372, 660]
     labels = [('1', 'Try it'), ('2', 'Think')]
     for i, c in enumerate(ck):
@@ -58,12 +58,12 @@ def check_slide(n, G, pic=None):
     notes = (
         'Minutes 1 to 4 (3 minutes). SNEAK-PEEK PUZZLES. Say: "These are ideas we have not learnt yet. Guessing is welcome, drawing is welcome and so is saying I do not know. Nobody is marked, and nobody\'s answer is shown to the group." '
         'Puzzle 1 is a TRY IT puzzle: any child can start it with objects, a drawing or counting, so everyone has a first win. Puzzle 2 needs a little thinking. About 90 seconds each. '
-        'Children show their answers PRIVATELY: on their own paper held up to your camera, or in private chat. Never ask for boards up in front of the group, never read out whose answer is whose, and never say who got it right. '
+        'Children show their answers PRIVATELY: written on their own paper and held to the camera at the same moment for everyone (or shown only to you on camera). Never use private chat or DMs. Never ask for boards up in front of the group, never read out whose answer is whose, and never say who got it right. '
         'Then click to show each answer and talk it through for everyone ("some of you tried ..."), naming no child. Ask for volunteers first if you want a reason said aloud; nobody is called on by name, and passing is always fine. '
         'ANSWERS: 1) ' + ck[0]['a'] + ' 2) ' + ck[1]['a'] + ' '
         'A GOOD REASON: ' + G['why'] + ' '
         'Use what you see only to plan your help. It does not decide who is on which page and it is not recorded as a mark. '
-        'After question 3 on page 1 every child may choose: carry on, or try the Think harder page. You may quietly invite a child with a PRIVATE chat message ("try the Think harder page when you are ready"), never by name in front of the group, and you never announce who is on which page. '
+        'After question 3 on page 1 every child may choose: carry on, or try the Think harder page. Make the invitation to the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"), so nobody is singled out. Never message a child privately, never name a child, and never announce who is on which page. '
         'Everyone stays in the same room and every child turns to the page they choose. If a pair would be split, ask both children first; never leave a child alone on page 1 (join them to another pair or to yourself).')
     return sec(f'{ID}-check', '1–4 MIN', body, notes)
 
@@ -74,19 +74,19 @@ def reflect_slide(n, G):
     ID = f'p4l{n}'
     t0, t1 = ('88–90 MIN', '88 to 90 (2 minutes)') if n != 10 else ('87–89 MIN', '87 to 89 (2 minutes)')
     body = h2('Looking back')
-    body += p('2 minutes. Write, tick or pass: you choose. Nobody marks it and it is not shown to the group. Your tutor may read it privately.', 30, 600, MUTED)
+    body += p('2 minutes. Write, tick or pass: you choose. Nobody marks it and it is not shown to the group. Your tutor may look at it on camera if you hold it up.', 30, 600, MUTED)
     body += pin(128, 340, 1664, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px')
     body += pin(128, 460, 1664, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px')
     opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help']
     inner = p('What helped me:', 40, 700) + '<p style="font-size:32px;font-weight:600;line-height:1.9">' + ''.join(f'{_box()}{E(o)}' for o in opts) + '</p>'
-    inner += f'<p style="font-size:32px;font-weight:600;line-height:1.9">{_box()}<b>I am still stuck</b> (my tutor will check in privately){_box()}other: ______</p>'
+    inner += f'<p style="font-size:32px;font-weight:600;line-height:1.9">{_box()}<b>I am still stuck</b> (my tutor will check in with me){_box()}other: ______</p>'
     body += pin(128, 580, 1664, inner, None, WHITE, 20, '22px 34px')
     body += pin(128, 840, 1664, f'<p style="font-size:32px;font-weight:700;color:{TEAL}">{_box()}<b>I pass today.</b> That is always fine.</p>', None)
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me). '
              'Say: "You can write, tick or pass. Ticking I am still stuck is a good thing to do: it tells me where to help." Model one yourself first: "' + G['reflect'] + '" '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
-             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may read a child\'s page privately (the child holds it to your camera when you ask, or sends a photo by the approved private channel). '
-             'If I am still stuck is ticked, send a private message after the lesson or check in privately at the start of the next one. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
+             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos or private messages. '
+             'If I am still stuck is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a DM. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
     return sec(f'{ID}-reflect', t0, body, notes)
 
 def go_strip(txt):
@@ -161,7 +161,7 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     tipre = re.compile(r'(<p style="font-size:34px;font-weight:600;color:#3B4A6B;line-height:1\.3">)(.*?)(</p>)', re.S)
     S[w1] = tipre.sub(lambda m: m.group(1) + m.group(2) + E(' After question 3 you may choose: carry on, or try Think harder.') + m.group(3), S[w1], count=1)
     S[w2] = tipre.sub(lambda m: m.group(1) + E(G['cap'] + ' When you finish, choose: Think harder, Go further or the Investigation.') + m.group(3), S[w2], count=1)
-    S[w1] = S[w1].replace('</aside>', E(' CHOOSING: after question 3 every child may carry on or try the Think harder page. Invite a child quietly by PRIVATE chat only; never by name in front of the group; never announce who is on which page. If one child of a pair wants to move on, do not split the pair unless both agree; if a pair does lose a member, join the other child to another pair or to yourself straight away. Children on Think harder keep working through the page check; reading along is optional.') + '</aside>')
+    S[w1] = S[w1].replace('</aside>', E(' CHOOSING: after question 3 every child may carry on or try the Think harder page. Invite the WHOLE group ("when you have finished Start here you can choose Think harder, Go further or the Investigation"); never message a child privately, never name a child, never announce who is on which page. If one child of a pair wants to move on, do not split the pair unless both agree; if a pair does lose a member, join the other child to another pair or to yourself straight away. Children on Think harder keep working through the page check; reading along is optional.') + '</aside>')
     S[w2] = S[w2].replace('</aside>', E(' SOLO PAGE CAP: ' + G['cap'] + ' Children who finish choose Think harder, Go further or the Investigation; nobody is told which.') + '</aside>')
     # talk slide
     tk = S[f'{ID}-talk']
