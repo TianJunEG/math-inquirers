@@ -17,7 +17,8 @@ assert all(sum(k**3 for k in range(1, m + 1)) == sum(range(1, m + 1))**2 for m i
 checks[9] = (sum(k**3 for k in range(1, 5)), sum(range(1, 5)), sum(range(1, 5))**2, sum(range(1, 6)), sum(range(1, 6))**2)
 y = [n for n in range(0, 1000) if 2 * n + 6 == 20]; assert y == [7]; checks[10] = (14, 7)
 def shown(v):
-    if isinstance(v, F): return [f'{v.numerator}/{v.denominator}']
+    if isinstance(v, F) and v.denominator != 1 and (v * 100).denominator != 1: return [f'{v.numerator}/{v.denominator}']
+    if isinstance(v, F): v = float(v)
     return [str(int(v)) if float(v) == int(v) else f'{float(v):.2f}']
 bad = 0
 for n, vals in checks.items():
