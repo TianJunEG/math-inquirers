@@ -22,12 +22,12 @@
   "contest_moves": [
     "digit-card clue puzzle (find every number that fits two clues)",
     "list all the cases systematically (every number from the cards)",
-    "a number cannot start with 0 (smallest and biggest number with a 0 card)"
+    "a number cannot start with 0 (smallest and greatest number with a 0 card)"
   ],
   "objectives": [
     "Make two-digit numbers from two digit cards, and know that swapping the cards makes a different number.",
-    "Compare two numbers by looking at the tens first, then at the ones, and say which is bigger.",
-    "Make the biggest and the smallest number from two or three cards, including when one card is 0.",
+    "Compare two numbers by looking at the tens first, then at the ones, and say which is greater.",
+    "Make the greatest and the smallest number from two or three cards, including when one card is 0.",
     "Put up to four two-digit numbers in order, smallest first."
   ],
   "joining_cold": {
@@ -179,7 +179,7 @@
   },
   "sneak_peek": {
     "q1": "Count the stars in box A and box B. Which box has more stars? Write how many stars are in that box.",
-    "q2": "Ali has the digit cards 4 and 8. He puts the 4 first and makes 48. Mei swaps the cards and makes a new number. Who has the bigger number, Ali or Mei? Write the name, and why.",
+    "q2": "Ali has the digit cards 4 and 8. He puts the 4 first and makes 48. Mei swaps the cards and makes a new number. Who has the greater number? Circle Ali or Mei. I know because ___.",
     "a1": "18",
     "a2": "Mei. Her number is 84, which is 8 tens. Ali has 48, which is only 4 tens.",
     "val1": 18
@@ -206,7 +206,7 @@
       "action": "Watch and copy the examples. Rewind any step you missed."
     },
     "break": {
-      "say": "Recording: stand up and join in! Reach up tall for the bigger number, curl small for the smaller one.",
+      "say": "Recording: stand up and join in! Reach up tall for the greater number, curl small for the smaller one.",
       "action": "Stand up and show tall or small for each pair of numbers."
     },
     "work": {
@@ -381,7 +381,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Ali has the digit cards 4 and 8. He puts the 4 first and makes 48. Mei swaps the cards and makes a new number. Who has the bigger number, Ali or Mei? Write the name, and why."
+            "text": "Puzzle two. Ali has the digit cards 4 and 8. He puts the 4 first and makes 48. Mei swaps the cards and makes a new number. Who has the greater number? Circle Ali or Mei. I know because ___."
           },
           {
             "k": "WORK",
@@ -443,12 +443,12 @@
           },
           {
             "k": "ASK",
-            "text": "Which pile is bigger? Which number is bigger? How do you know?",
+            "text": "Which pile has more? Which number is greater? How do you know?",
             "resp": 45
           },
           {
             "k": "SAY",
-            "text": "The pile with more bars is bigger. That is why we look at the tens first."
+            "text": "The pile with more bars has the greater number. That is why we look at the tens first."
           },
           {
             "k": "SLIDE",
@@ -456,11 +456,11 @@
           },
           {
             "k": "SAY",
-            "text": "Show me! I say two cards. You make the biggest number you can. Hold it up to the camera on a count of three."
+            "text": "Show me! I say two cards. You make the greatest number you can. Hold it up to the camera on a count of three."
           },
           {
             "k": "SAY",
-            "text": "Cards seven and two. Biggest number."
+            "text": "Cards seven and two. Greatest number."
           },
           {
             "k": "WORK",
@@ -509,7 +509,7 @@
           },
           {
             "k": "ASK",
-            "text": "Which card went on the left to make the biggest number? And for the smallest number?",
+            "text": "Which card went on the left to make the greatest number? And for the smallest number?",
             "resp": 40
           },
           {
@@ -519,7 +519,7 @@
           },
           {
             "k": "SAY",
-            "text": "Biggest number: put the biggest card on the left. Smallest number: put the smallest card on the left. But a number does not start with 0, so 05 is just 5."
+            "text": "Greatest number: put the greatest card on the left. Smallest number: put the smallest card on the left. But a number does not start with 0, so 05 is just 5."
           },
           {
             "k": "STUCK",
@@ -561,7 +561,7 @@
           },
           {
             "k": "SAY",
-            "text": "Which is bigger, 61 or 59? Look at the bars. 6 bars is more than 5 bars. So 61 is bigger, even though 9 is a bigger digit than 1. We look at the tens first."
+            "text": "Which is greater, 61 or 59? Look at the bars. 6 bars is more than 5 bars. So 61 is greater, even though 9 is a greater digit than 1. We look at the tens first."
           },
           {
             "k": "SAY",
@@ -569,7 +569,7 @@
           },
           {
             "k": "ASK",
-            "text": "Which is bigger, 52 or 58? How do you know?",
+            "text": "Which is greater, 52 or 58? How do you know?",
             "resp": 20
           },
           {
@@ -578,7 +578,7 @@
           },
           {
             "k": "READ",
-            "text": "Your turn. Write the bigger number each time. 28 or 82. 61 or 59. 34 or 38."
+            "text": "Your turn. Write the greater number each time. 28 or 82. 61 or 59. 34 or 38."
           },
           {
             "k": "WORK",
@@ -599,11 +599,11 @@
           },
           {
             "k": "SAY",
-            "text": "Cards 7 and 2. For the biggest number, put the biggest card on the left: seventy-two. For the smallest, put the smallest card on the left: twenty-seven."
+            "text": "Cards 7 and 2. For the greatest number, put the greatest card on the left: seventy-two. For the smallest, put the smallest card on the left: twenty-seven."
           },
           {
             "k": "ASK",
-            "text": "Cards 4 and 9. What are the biggest and the smallest numbers?",
+            "text": "Cards 4 and 9. What are the greatest and the smallest numbers?",
             "resp": 25
           },
           {
@@ -612,7 +612,7 @@
           },
           {
             "k": "ASK",
-            "text": "Cards 1 and 6. Biggest number? Smallest number?",
+            "text": "Cards 1 and 6. Greatest number? Smallest number?",
             "resp": 25
           },
           {
@@ -638,7 +638,7 @@
           },
           {
             "k": "READ",
-            "text": "Put these in order, smallest first. 45, 54, 39, 40. Look at the tens first."
+            "text": "Arrange these in order. Begin with the smallest. 45, 54, 39, 40. Look at the tens first."
           },
           {
             "k": "WORK",
@@ -651,11 +651,11 @@
           },
           {
             "k": "NOTE",
-            "text": "Key words to use every time: digit, tens digit, ones digit, bigger, smaller. Do not teach the greater-than and less-than symbols. Do not teach three-digit numbers here (Go further only). Keep the zero rule short: 0 can not go on the left."
+            "text": "Key words to use every time: digit, tens digit, ones digit, greater, smaller. Do not teach the greater-than and less-than symbols. Do not teach three-digit numbers here (Go further only). Keep the zero rule short: 0 can not go on the left."
           },
           {
             "k": "STUCK",
-            "text": "If a child says 59 is bigger than 61 because 9 is bigger than 1: ask them to build both with bars and squares and count the bars first."
+            "text": "If a child says 59 is greater than 61 because 9 is greater than 1: ask them to build both with bars and squares and count the bars first."
           }
         ]
       },
@@ -672,7 +672,7 @@
           },
           {
             "k": "SAY",
-            "text": "Stand up and get a sip of water. I say two numbers. If the first one is bigger, reach up tall. If the first one is smaller, curl down small. If they are the same, hands on hips."
+            "text": "Stand up and get a sip of water. I say two numbers. If the first one is greater, reach up tall. If the first one is smaller, curl down small. If they are the same, hands on hips."
           },
           {
             "k": "WORK",
@@ -694,7 +694,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 1, Start here. Question 1: make two numbers with the cards 3 and 5. Question 2: write the bigger number each time. Question 3: look at the bars and squares and say who has more."
+            "text": "Page 1, Start here. Question 1: make two numbers with the cards 3 and 5. Question 2: write the greater number each time. Question 3: look at the bars and squares and say who has more."
           },
           {
             "k": "WORK",
@@ -719,7 +719,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: cards 6 and 2, the biggest and smallest. Question 5: put four numbers in order. Question 6: Ravi says 19 is bigger than 21. Is he right? Question 7: the cards 2 and 8. Question 8: Siti and Ravi have stickers, so draw bars and squares."
+            "text": "Page 2. Question 4: cards 6 and 2, the greatest and smallest. Question 5: arrange four numbers in order. Question 6: Ravi says that 19 is greater than 21. Is Ravi right? Question 7: the cards 2 and 8. Question 8: Siti and Ravi have stickers, so draw bars and squares."
           },
           {
             "k": "WORK",
@@ -732,7 +732,7 @@
           },
           {
             "k": "READ",
-            "text": "Sixty-two and twenty-six. Fourteen, twenty-five, forty-one, fifty-two. Ravi is not right: twenty-one is bigger. Eighty-two and twenty-eight. Ravi has more stickers."
+            "text": "Sixty-two and twenty-six. Fourteen, twenty-five, forty-one, fifty-two. Ravi is not right: twenty-one is greater. Eighty-two and twenty-eight. Ravi has more stickers."
           },
           {
             "k": "SLIDE",
@@ -774,7 +774,7 @@
           },
           {
             "k": "READ",
-            "text": "Mei says: for the smallest number, put the smallest card on the left. Do you agree? Try the cards 3 and 8. Then try the cards 0 and 5."
+            "text": "Is this always right? Put the smallest card on the left to make the smallest number. Try the cards 3 and 8. Then try 0 and 5. Circle Yes or No. I know because ___."
           },
           {
             "k": "WORK",
@@ -797,7 +797,7 @@
           },
           {
             "k": "SAY",
-            "text": "Back to the sneak-peek. Box B had more stars. For puzzle two, Mei has the bigger number: eighty-four is 8 tens, and Ali has forty-eight, only 4 tens."
+            "text": "Back to the sneak-peek. Box B had more stars. For puzzle two, Mei has the greater number: eighty-four is 8 tens, and Ali has forty-eight, only 4 tens."
           },
           {
             "k": "ASK",
@@ -931,7 +931,7 @@
           "t": "card",
           "head": "TODAY WE WILL",
           "items": [
-            "Make numbers with digit cards, and say which is bigger."
+            "Make numbers with digit cards, and say which is greater."
           ]
         }
       ],
@@ -1157,7 +1157,7 @@
             "Ali has the digit cards 4 and 8.",
             "He puts the 4 first and makes 48.",
             "Mei swaps the cards and makes a new number.",
-            "Who has the bigger number? Write the name, and why."
+            "Who has the greater number? Circle Ali or Mei. I know because ___."
           ]
         },
         {
@@ -1204,7 +1204,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Build both of your numbers with bars and squares. Which pile is bigger?"
+          "text": "Build both of your numbers with bars and squares. Which pile has more?"
         },
         {
           "t": "cols",
@@ -1232,7 +1232,7 @@
           ]
         }
       ],
-      "note": "Round 2, about 4 minutes, main room. Children take one of their pairs and build both numbers with the kit bars (tens) and squares (ones). The picture shows 53 and 35 as an example. They see that the pile with more bars is bigger, so the tens decide. Ask: which pile is bigger, and how do you know?"
+      "note": "Round 2, about 4 minutes, main room. Children take one of their pairs and build both numbers with the kit bars (tens) and squares (ones). The picture shows 53 and 35 as an example. They see that the pile with more bars is greater, so the tens decide. Ask: which pile is greater, and how do you know?"
     },
     {
       "id": "s-explore3",
@@ -1254,15 +1254,15 @@
             ],
             [
               "7 and 2",
-              "biggest number"
+              "greatest number"
             ],
             [
               "3 and 9",
-              "biggest number"
+              "greatest number"
             ],
             [
               "0 and 5",
-              "biggest number"
+              "greatest number"
             ],
             [
               "6 and 1",
@@ -1286,13 +1286,13 @@
         {
           "t": "list",
           "items": [
-            "Which card goes on the left for the biggest number?",
+            "Which card goes on the left for the greatest number?",
             "Which card goes on the left for the smallest number?",
             "What happens with a 0 card? Could you make 05?"
           ]
         }
       ],
-      "note": "Take one or two answers from volunteers. Key ideas: the biggest card goes on the left for the biggest number; the smallest card goes on the left for the smallest number; a number does not start with 0, so with 0 and 5 the only two-digit number is 50. Repeat a child's answer in your own words so the recording picks it up."
+      "note": "Take one or two answers from volunteers. Key ideas: the greatest card goes on the left for the greatest number; the smallest card goes on the left for the smallest number; a number does not start with 0, so with 0 and 5 the only two-digit number is 50. Repeat a child's answer in your own words so the recording picks it up."
     },
     {
       "id": "s-m1",
@@ -1343,7 +1343,7 @@
       "id": "s-m2",
       "part": "mini",
       "kind": "light",
-      "title": "Which is bigger? Tens first",
+      "title": "Which is greater? Tens first",
       "blocks": [
         {
           "t": "cols",
@@ -1379,17 +1379,17 @@
           ]
         }
       ],
-      "note": "Think aloud: 6 bars is more than 5 bars, so 61 is bigger than 59, even though the ones digit 9 is bigger than 1. Many children look at the ones first. Then a same-tens pair: 47 and 43 have 4 tens each, so look at the ones: 7 is more than 3. Ask: which is bigger, 52 or 58? Answer: 58."
+      "note": "Think aloud: 6 bars is more than 5 bars, so 61 is greater than 59, even though the ones digit 9 is greater than 1. Many children look at the ones first. Then a same-tens pair: 47 and 43 have 4 tens each, so look at the ones: 7 is more than 3. Ask: which is greater, 52 or 58? Answer: 58."
     },
     {
       "id": "s-m3",
       "part": "mini",
       "kind": "light",
-      "title": "Your turn: which is bigger?",
+      "title": "Your turn: which is greater?",
       "blocks": [
         {
           "t": "chip",
-          "text": "Write the bigger number each time. Timer: 1 minute"
+          "text": "Write the greater number each time. Timer: 1 minute"
         },
         {
           "t": "list",
@@ -1407,7 +1407,7 @@
       "id": "s-m3a",
       "part": "mini",
       "kind": "light",
-      "title": "Check: which is bigger?",
+      "title": "Check: which is greater?",
       "blocks": [
         {
           "t": "cols",
@@ -1451,7 +1451,7 @@
       "id": "s-m4",
       "part": "mini",
       "kind": "light",
-      "title": "Biggest and smallest",
+      "title": "Greatest and smallest",
       "blocks": [
         {
           "t": "numrow",
@@ -1466,7 +1466,7 @@
             [
               {
                 "t": "p",
-                "text": "Biggest: biggest card on the left"
+                "text": "Greatest: greatest card on the left"
               },
               {
                 "t": "answer",
@@ -1486,7 +1486,7 @@
           ]
         }
       ],
-      "note": "Worked example with the cards 7 and 2: the biggest number has the biggest card on the left (72); the smallest number has the smallest card on the left (27). Then ask for the cards 4 and 9 (94 and 49) without showing them. Both numbers use the same two cards."
+      "note": "Worked example with the cards 7 and 2: the greatest number has the greatest card on the left (72); the smallest number has the smallest card on the left (27). Then ask for the cards 4 and 9 (94 and 49) without showing them. Both numbers use the same two cards."
     },
     {
       "id": "s-m5",
@@ -1545,7 +1545,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "First number bigger? Reach up tall."
+          "text": "First number greater? Reach up tall."
         },
         {
           "t": "p",
@@ -1571,7 +1571,7 @@
           "text": "Sip some water."
         }
       ],
-      "note": "Four minutes. Stand up on camera. Call each pair of numbers: children reach up tall if the first is bigger, curl small if the first is smaller, hands on hips if they are the same. Pause after each pair and ask one child to say how they know. Keep it gentle for small spaces. No equipment."
+      "note": "Four minutes. Stand up on camera. Call each pair of numbers: children reach up tall if the first is greater, curl small if the first is smaller, hands on hips if they are the same. Pause after each pair and ask one child to say how they know. Keep it gentle for small spaces. No equipment."
     },
     {
       "id": "s-ws1",
@@ -1653,7 +1653,7 @@
           ]
         }
       ],
-      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 21 is bigger, because 2 tens is more than 1 ten. Question 8 answer: Ravi, 5 tens is more than 2 tens. Never ask a child to show a wrong answer to the group."
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 21 is greater, because 2 tens is more than 1 ten. Question 8 answer: Ravi, 5 tens is more than 2 tens. Never ask a child to show a wrong answer to the group."
     },
     {
       "id": "s-choice",
@@ -1679,7 +1679,7 @@
             ],
             [
               "Investigation (page 5)",
-              "Always, sometimes or never?"
+              "A pattern to find"
             ],
             [
               "Check",
@@ -1702,14 +1702,14 @@
       "blocks": [
         {
           "t": "card",
-          "head": "MEI SAYS",
+          "head": "TALK ABOUT IT",
           "items": [
-            "For the smallest number, put the smallest card on the left."
+            "Put the smallest card on the left to make the smallest number."
           ]
         },
         {
           "t": "p",
-          "text": "Do you agree? Try the cards 3 and 8. Then try the cards 0 and 5."
+          "text": "Is this always right? Try the cards 3 and 8. Then try the cards 0 and 5."
         },
         {
           "t": "chip",
@@ -1751,7 +1751,7 @@
         },
         {
           "t": "answer",
-          "text": "Puzzle 1: box B, 18 stars. Puzzle 2: Mei has the bigger number, 84."
+          "text": "Puzzle 1: box B, 18 stars. Puzzle 2: Mei has the greater number, 84."
         }
       ],
       "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. Puzzle 1: box A has 15 stars, box B has 18. Puzzle 2: 84 is 8 tens and 4 ones, 48 is 4 tens and 8 ones, so Mei has more."
@@ -1877,7 +1877,7 @@
             ],
             [
               "Is it always true?",
-              "The bigger card on the left makes the bigger number. Test it."
+              "Is the greater card on the left always the greater number? Test it."
             ],
             [
               "Make a puzzle",
@@ -1885,7 +1885,7 @@
             ],
             [
               "Teach it back",
-              "Show how to tell 61 is bigger than 59"
+              "Show how to tell 61 is greater than 59"
             ]
           ]
         },
@@ -1904,7 +1904,7 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "You have two digit cards: 3 and 5. Use both cards to make two numbers.",
+        "text": "You have two digit cards: 3 and 5. Make two numbers with both cards.",
         "parts": [
           {
             "l": "a",
@@ -1920,19 +1920,19 @@
           },
           {
             "l": "c",
-            "text": "The bigger number is ___",
+            "text": "The greater number is ___",
             "ans": "53",
             "val": 53
           }
         ],
-        "answer": "35 and 53. 53 is bigger.",
+        "answer": "35 and 53. 53 is greater.",
         "val": [
           35,
           53,
           53
         ],
         "hint": "Put the cards down side by side. Say the tens first. Swap them and say the new number.",
-        "solution": "With 3 on the left the number is 3 tens and 5 ones: 35. With 5 on the left it is 5 tens and 3 ones: 53. The same two cards make two numbers. 53 is bigger, because 5 tens is more than 3 tens.",
+        "solution": "With 3 on the left the number is 3 tens and 5 ones: 35. With 5 on the left it is 5 tens and 3 ones: 53. The same two cards make two numbers. 53 is greater, because 5 tens is more than 3 tens.",
         "mistakes": [
           "Writing 8 (3 + 5).",
           "Writing 35 twice."
@@ -1944,7 +1944,7 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Write the bigger number each time.",
+        "text": "Write the greater number each time.",
         "parts": [
           {
             "l": "a",
@@ -1981,7 +1981,7 @@
         "hint": "Look at the tens first. If the tens are the same, look at the ones. You can build both with your kit.",
         "solution": "(a) 7 tens is more than 2 tens: 72. (b) Same tens, 8 ones is more than 1 one: 48. (c) 6 tens is more than 5 tens: 65. (d) 3 tens is more than 1 ten: 30.",
         "mistakes": [
-          "Choosing the number with the bigger ones digit (saying 13 is bigger than 30).",
+          "Choosing the number with the greater ones digit (saying 13 is greater than 30).",
           "Not looking at the tens first."
         ],
         "mins": 3,
@@ -1991,7 +1991,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Mei's bars and squares are in the picture. Ben has 4 tens bars and 1 ones square.",
+        "text": "Look at the picture for Mei. Ben has 4 bars and 1 square.",
         "parts": [
           {
             "l": "a",
@@ -2007,7 +2007,7 @@
           },
           {
             "l": "c",
-            "text": "___ has the bigger number.",
+            "text": "___ has the greater number.",
             "ans": "Ben",
             "val": "Ben"
           }
@@ -2019,7 +2019,7 @@
           "Ben"
         ],
         "hint": "Count the bars for the tens and the squares for the ones. Then look at the tens first.",
-        "solution": "Mei has 3 bars and 8 squares: 38. Ben has 4 bars and 1 square: 41. 4 tens is more than 3 tens, so Ben has the bigger number, even though Mei has more squares.",
+        "solution": "Mei has 3 bars and 8 squares: 38. Ben has 4 bars and 1 square: 41. 4 tens is more than 3 tens, so Ben has the greater number, even though Mei has more squares.",
         "mistakes": [
           "Saying Mei has more because she has 8 squares.",
           "Reading Mei's picture as 83."
@@ -2037,11 +2037,11 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "You have the cards 6 and 2. Make the biggest and the smallest number.",
+        "text": "Use the cards 6 and 2.",
         "parts": [
           {
             "l": "a",
-            "text": "The biggest number is ___",
+            "text": "The greatest number is ___",
             "ans": "62",
             "val": 62
           },
@@ -2057,8 +2057,8 @@
           62,
           26
         ],
-        "hint": "Put the cards down both ways and read them. The bigger card on the left makes the bigger number.",
-        "solution": "The biggest card goes on the left for the biggest number: 62. The smallest card goes on the left for the smallest number: 26.",
+        "hint": "Put the cards down both ways and read them. The greater card on the left makes the greater number.",
+        "solution": "The greatest card goes on the left for the greatest number: 62. The smallest card goes on the left for the smallest number: 26.",
         "mistakes": [
           "Writing 62 for both.",
           "Writing 8 (6 + 2)."
@@ -2070,7 +2070,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Write these numbers in order. Start with the smallest: 52, 25, 41, 14.",
+        "text": "Arrange these in order. Begin with the smallest number: 52, 25, 41, 14.",
         "parts": [
           {
             "l": "",
@@ -2094,8 +2094,8 @@
         "hint": "Look at the tens first. Which number has the fewest tens?",
         "solution": "14 has 1 ten, 25 has 2 tens, 41 has 4 tens, 52 has 5 tens. Smallest first: 14, 25, 41, 52.",
         "mistakes": [
-          "Putting 25 after 41 because 5 is bigger than 1.",
-          "Writing them biggest first."
+          "Putting 25 after 41 because 5 is greater than 1.",
+          "Writing them greatest first."
         ],
         "mins": 2,
         "lines": 0
@@ -2104,27 +2104,33 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Ravi says 19 is bigger than 21, because 9 is bigger than 2. Is he right? Write why.",
+        "text": "Ravi says that 19 is greater than 21.",
         "parts": [
           {
-            "l": "",
-            "text": "The bigger number is ___",
+            "l": "a",
+            "text": "Is Ravi right? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "The greater number is ___",
             "ans": "21",
             "val": 21
           }
         ],
-        "answer": "No. 21 is bigger. 2 tens is more than 1 ten.",
+        "answer": "No. 21 is greater. 2 tens is more than 1 ten.",
         "val": [
           21
         ],
         "hint": "Build both with your kit. Count the bars first.",
-        "solution": "19 is 1 ten and 9 ones. 21 is 2 tens and 1 one. 2 tens is more than 1 ten, so 21 is bigger. Ravi looked at the ones digits first. Look at the tens first.",
+        "solution": "19 is 1 ten and 9 ones. 21 is 2 tens and 1 one. 2 tens is more than 1 ten, so 21 is greater. Ravi looked at the ones digits first. Look at the tens first.",
         "mistakes": [
           "Saying Ravi is right because 9 is more than 2.",
           "Not giving a reason (any clear sentence about the tens is fine)."
         ],
         "mins": 2.5,
-        "lines": 1
+        "lines": 0
       },
       {
         "id": "S7",
@@ -2134,7 +2140,7 @@
         "parts": [
           {
             "l": "a",
-            "text": "Make a number bigger than 50: ___",
+            "text": "Make a number greater than 50: ___",
             "ans": "82",
             "val": 82
           },
@@ -2150,7 +2156,7 @@
           82,
           28
         ],
-        "hint": "Try the 8 on the left, then the 2 on the left. Which number is bigger than 50?",
+        "hint": "Try the 8 on the left, then the 2 on the left. Which number is greater than 50?",
         "solution": "82 has 8 tens, which is more than 5 tens. 28 has only 2 tens, which is less than 5 tens.",
         "mistakes": [
           "Writing 82 for both parts.",
@@ -2163,7 +2169,7 @@
         "id": "S8",
         "page": 2,
         "tier": "start",
-        "text": "Siti has 25 stickers. Ravi has 52. Draw bars and squares. Who has more?",
+        "text": "Siti has 25 stickers. Ravi has 52 stickers. Draw bars and squares in the box.",
         "parts": [
           {
             "l": "",
@@ -2192,17 +2198,17 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "You have three digit cards: 3, 5 and 8. Use any two cards. What is the biggest number you can make? What is the smallest?",
+        "text": "You have the cards 3, 5 and 8. Use two cards to make the greatest number. Then make the smallest number.",
         "parts": [
           {
             "l": "a",
-            "text": "The biggest is ___",
+            "text": "The greatest number is ___",
             "ans": "85",
             "val": 85
           },
           {
             "l": "b",
-            "text": "The smallest is ___",
+            "text": "The smallest number is ___",
             "ans": "35",
             "val": 35
           }
@@ -2212,8 +2218,8 @@
           85,
           35
         ],
-        "hint": "Pick the biggest card for the tens to make the biggest number. Pick the smallest card for the tens to make the smallest.",
-        "solution": "Numbers you can make: 35, 38, 53, 58, 83, 85. The biggest is 85 (8 tens, the biggest card on the left, then the next biggest card). The smallest is 35.",
+        "hint": "Pick the greatest card for the tens to make the greatest number. Pick the smallest card for the tens to make the smallest.",
+        "solution": "Numbers you can make: 35, 38, 53, 58, 83, 85. The greatest is 85 (8 tens, the greatest card on the left, then the next greatest card). The smallest is 35.",
         "mistakes": [
           "Using all three cards.",
           "Writing 88 (using the 8 twice)."
@@ -2225,17 +2231,17 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "You have three digit cards: 0, 3 and 7. Use any two cards to make a two-digit number. What is the smallest you can make? What is the biggest? Be careful with the 0.",
+        "text": "You have the cards 0, 3 and 7. Use two cards to make the smallest and the greatest two-digit numbers.",
         "parts": [
           {
             "l": "a",
-            "text": "The smallest is ___",
+            "text": "The smallest number is ___",
             "ans": "30",
             "val": 30
           },
           {
             "l": "b",
-            "text": "The biggest is ___",
+            "text": "The greatest number is ___",
             "ans": "73",
             "val": 73
           }
@@ -2246,7 +2252,7 @@
           73
         ],
         "hint": "List the numbers you can make. Can 0 go on the left?",
-        "solution": "The 0 can not go on the left (03 is just 3). The two-digit numbers are 30, 37, 70 and 73. The smallest is 30 and the biggest is 73.",
+        "solution": "The 0 can not go on the left (03 is just 3). The two-digit numbers are 30, 37, 70 and 73. The smallest is 30 and the greatest is 73.",
         "mistakes": [
           "Writing 03 or 3 for the smallest.",
           "Writing 37 for the smallest."
@@ -2258,7 +2264,7 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Cards 1, 3, 5 and 7. Make two-digit numbers with two different cards. Clue 1: the number is more than 40. Clue 2: the left digit is bigger than the right digit. Write every number that fits.",
+        "text": "You have the cards 1, 3, 5 and 7. Make two-digit numbers with two different cards. The number is more than 40. Its left digit is greater than its right digit. Write all the numbers that fit.",
         "parts": [],
         "answer": "51, 53, 71, 73, 75",
         "val": [
@@ -2268,8 +2274,8 @@
           73,
           75
         ],
-        "hint": "First list the numbers that are more than 40. Then cross out any where the left digit is not bigger.",
-        "solution": "More than 40 means a tens card of 5 or 7. With 5 on the left: 51, 53, 57. With 7 on the left: 71, 73, 75. Clue 2 removes 57, because 5 is not bigger than 7. Left: 51, 53, 71, 73, 75.",
+        "hint": "First list the numbers that are more than 40. Then cross out any where the left digit is not greater.",
+        "solution": "More than 40 means a tens card of 5 or 7. With 5 on the left: 51, 53, 57. With 7 on the left: 71, 73, 75. Clue 2 removes 57, because 5 is not greater than 7. Left: 51, 53, 71, 73, 75.",
         "mistakes": [
           "Stopping after one or two numbers.",
           "Writing 57 (5 is less than 7)."
@@ -2281,8 +2287,15 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "You have the cards 2, 4 and 6. How many different two-digit numbers can you make with two different cards? Write them all.",
-        "parts": [],
+        "text": "You have the cards 2, 4 and 6. Use two different cards each time. Write all the two-digit numbers you can make.",
+        "parts": [
+          {
+            "l": "",
+            "text": "There are ___ numbers.",
+            "ans": "6",
+            "val": 6
+          }
+        ],
         "answer": "6 numbers: 24, 26, 42, 46, 62, 64",
         "val": [
           6,
@@ -2308,17 +2321,17 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "In a 3-digit number like 357, the left card counts the hundreds. You have the cards 4, 0 and 9. Use all three cards. Write the biggest and the smallest number. The 0 can not go on the left.",
+        "text": "You have the cards 4, 0 and 9. Use all three cards to make 3-digit numbers. Make the greatest number. Then make the smallest number.",
         "parts": [
           {
             "l": "a",
-            "text": "The biggest is ___",
+            "text": "The greatest number is ___",
             "ans": "940",
             "val": 940
           },
           {
             "l": "b",
-            "text": "The smallest is ___",
+            "text": "The smallest number is ___",
             "ans": "409",
             "val": 409
           }
@@ -2329,10 +2342,10 @@
           409
         ],
         "hint": "List every way to put the three cards in a row. Cross out the ones that start with 0.",
-        "solution": "The ways are 409, 490, 904, 940 (049 and 094 start with 0, so they are not 3-digit numbers). The biggest is 940. The smallest is 409.",
+        "solution": "The ways are 409, 490, 904, 940 (049 and 094 start with 0, so they are not 3-digit numbers). The greatest is 940. The smallest is 409.",
         "mistakes": [
           "Writing 049 as the smallest.",
-          "Writing 904 as the biggest (the 9 is on the left, but 4 should come next)."
+          "Writing 904 as the greatest (the 9 is on the left, but 4 should come next)."
         ],
         "mins": 5,
         "lines": 1
@@ -2341,17 +2354,17 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "You have the cards 1, 2, 3 and 4. A two-digit number uses two cards. How many different numbers can you make if each card is used only once? And if you may use the same card twice, like 11?",
+        "text": "You have the cards 1, 2, 3 and 4. Make two-digit numbers. How many numbers can you make?",
         "parts": [
           {
             "l": "a",
-            "text": "Each card once: ___ numbers",
+            "text": "Each card used once: ___ numbers",
             "ans": "12",
             "val": 12
           },
           {
             "l": "b",
-            "text": "A card may be used twice: ___ numbers",
+            "text": "A card used twice is allowed, like 11: ___ numbers",
             "ans": "16",
             "val": 16
           }
@@ -2374,7 +2387,7 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Use the cards 2, 5 and 8 once each to make a 3-digit number. Clue 1: more than 500. Clue 2: the ones digit is bigger than the tens digit. Clue 3: less than 600. What number am I?",
+        "text": "I make a 3-digit number with the cards 2, 5 and 8. Each card is used once. My number is greater than 500 and less than 600. My ones digit is greater than my tens digit. What number am I?",
         "parts": [
           {
             "l": "",
@@ -2388,7 +2401,7 @@
           528
         ],
         "hint": "List all the 3-digit numbers you can make with the cards. Cross out the numbers that break each clue in turn.",
-        "solution": "The numbers are 258, 285, 528, 582, 825, 852. More than 500: 528, 582, 825, 852. Less than 600: 528, 582. Ones digit bigger than tens digit: 528 (8 is bigger than 2). 582 has 2 and 8 the wrong way round.",
+        "solution": "The numbers are 258, 285, 528, 582, 825, 852. More than 500: 528, 582, 825, 852. Less than 600: 528, 582. Ones digit greater than tens digit: 528 (8 is greater than 2). 582 has 2 and 8 the wrong way round.",
         "mistakes": [
           "Stopping at 582 and not checking clue 2.",
           "Listing only some of the 6 numbers."
@@ -2401,17 +2414,17 @@
       "id": "I1",
       "page": 5,
       "tier": "investigation",
-      "title": "Is the bigger card always first?",
-      "first": "Take the cards 2 and 7. Make both numbers. Which number is bigger? Which card is on the left?",
-      "text": "Try the cards 3 and 9, 6 and 5, 0 and 8, 4 and 4. Is the bigger card on the left always the bigger number? When can you not make two numbers? What do you notice?",
+      "title": "Is the greater card always first?",
+      "first": "Take the cards 2 and 7. Make both numbers. Which number is greater? Which card is on the left?",
+      "text": "Try the cards 3 and 9, 6 and 5, 0 and 8, 4 and 4. Is the greater card on the left always the greater number? When can you not make two numbers? What do you notice?",
       "lines": 4,
-      "answer": "For two different cards, the bigger card on the left always makes the bigger number, because the tens decide. With the cards 0 and 8 you can only make 80, because 08 is just 8. With the same card twice (4 and 4) you can only make 44. So you can make two different two-digit numbers only when the two cards are different and neither is 0.",
+      "answer": "For two different cards, the greater card on the left always makes the greater number, because the tens decide. With the cards 0 and 8 you can only make 80, because 08 is just 8. With the same card twice (4 and 4) you can only make 44. So you can make two different two-digit numbers only when the two cards are different and neither is 0.",
       "val": [
-        "always bigger card on the left",
+        "always greater card on the left",
         "with 0 only one number",
         "same card only one number"
       ],
-      "look_for": "A child who tests several pairs, notices that the tens digit decides, and finds the two special cases (a 0 card, two matching cards). A reason using tens and ones is better than \"because it is bigger\".",
+      "look_for": "A child who tests several pairs, notices that the tens digit decides, and finds the two special cases (a 0 card, two matching cards). A reason using tens and ones is better than \"because it is greater\".",
       "mistakes": [
         "Saying 08 is a number you can make.",
         "Saying 4 and 4 makes two numbers."
@@ -2420,7 +2433,7 @@
     }
   },
   "talk": {
-    "question": "Mei says: for the smallest number, put the smallest card on the left. Do you agree? Try the cards 3 and 8. Then try the cards 0 and 5.",
+    "question": "Is this always right? Put the smallest card on the left to make the smallest number. Try the cards 3 and 8. Then try 0 and 5. Circle Yes or No. I know because ___.",
     "starter": "I think ... because ...",
     "answer": "For 3 and 8 she is right: 38 is smaller than 83. For 0 and 5 she is not quite right: the 0 can not go on the left, because 05 is just 5. The only two-digit number is 50. So the smallest card goes on the left, unless it is 0.",
     "look_for": "A reason that uses tens and ones (the card on the left counts the tens), and a child who notices that 0 can not lead."
@@ -2428,11 +2441,11 @@
   "exit": [
     {
       "id": "E1",
-      "text": "Write the bigger number: 39 or 41.",
+      "text": "Write the greater number: 39 or 41.",
       "parts": [
         {
           "l": "",
-          "text": "The bigger number is ___",
+          "text": "The greater number is ___",
           "ans": "41",
           "val": 41
         }
@@ -2441,18 +2454,18 @@
       "val": [
         41
       ],
-      "solution": "41 has 4 tens and 39 has only 3 tens, so 41 is bigger. Look at the tens first.",
+      "solution": "41 has 4 tens and 39 has only 3 tens, so 41 is greater. Look at the tens first.",
       "mistakes": [
-        "Writing 39 because 9 is bigger than 1."
+        "Writing 39 because 9 is greater than 1."
       ]
     },
     {
       "id": "E2",
-      "text": "You have the cards 7 and 3.",
+      "text": "Use the cards 7 and 3.",
       "parts": [
         {
           "l": "a",
-          "text": "The biggest number is ___",
+          "text": "The greatest number is ___",
           "ans": "73",
           "val": 73
         },
@@ -2468,7 +2481,7 @@
         73,
         37
       ],
-      "solution": "The biggest card on the left makes the biggest number: 73. The smallest card on the left makes the smallest number: 37.",
+      "solution": "The greatest card on the left makes the greatest number: 73. The smallest card on the left makes the smallest number: 37.",
       "mistakes": [
         "Writing 73 for both.",
         "Writing 10 (7 + 3)."
@@ -2476,7 +2489,7 @@
     },
     {
       "id": "E3",
-      "text": "Write these numbers in order, smallest first: 63, 36, 60.",
+      "text": "Arrange these in order. Begin with the smallest number: 63, 36, 60.",
       "parts": [
         {
           "l": "",
@@ -2498,7 +2511,7 @@
       "solution": "36 has 3 tens. 60 and 63 both have 6 tens. 60 has 0 ones and 63 has 3 ones, so 60 comes before 63.",
       "mistakes": [
         "Putting 60 before 36 or after 63.",
-        "Writing them biggest first."
+        "Writing them greatest first."
       ]
     }
   ],
@@ -2528,18 +2541,18 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "You have the digit cards 4 and 7. Write the two numbers you can make. Which one is bigger?",
-      "answer": "47 and 74. 74 is bigger.",
+      "text": "You have the digit cards 4 and 7. Write the two numbers you can make. Circle the greater number.",
+      "answer": "47 and 74. 74 is greater.",
       "val": [
         47,
         74
       ],
-      "solution": "With 4 on the left the number is 47. With 7 on the left the number is 74. 7 tens is more than 4 tens, so 74 is bigger."
+      "solution": "With 4 on the left the number is 47. With 7 on the left the number is 74. 7 tens is more than 4 tens, so 74 is greater."
     },
     {
       "id": "H2",
       "tier": "start",
-      "text": "Write these numbers in order. Start with the smallest: 72, 27, 70, 17.",
+      "text": "Arrange these in order. Begin with the smallest number: 72, 27, 70, 17.",
       "answer": "17, 27, 70, 72",
       "val": [
         17,
@@ -2552,26 +2565,26 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Ben says 38 is bigger than 41, because 8 is more than 1. Is he right? Say why.",
-      "answer": "No. 41 is bigger, because 4 tens is more than 3 tens.",
+      "text": "Ben says 38 is greater than 41. Is Ben right? Circle Yes or No. I know because ___.",
+      "answer": "No. 41 is greater, because 4 tens is more than 3 tens.",
       "val": 41,
       "solution": "41 has 4 tens and 38 has 3 tens. Look at the tens first. The ones digit only decides when the tens are the same."
     },
     {
       "id": "H4",
       "tier": "think",
-      "text": "You have the cards 0, 6 and 9. Use two cards. What is the smallest two-digit number you can make? And the biggest?",
+      "text": "You have the cards 0, 6 and 9. Use two cards each time. Write the smallest and the greatest two-digit numbers.",
       "answer": "60 and 96",
       "val": [
         60,
         96
       ],
-      "solution": "The 0 can not go on the left. The numbers are 60, 69, 90 and 96. The smallest is 60 and the biggest is 96."
+      "solution": "The 0 can not go on the left. The numbers are 60, 69, 90 and 96. The smallest is 60 and the greatest is 96."
     },
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: make digit cards 1, 2, 3, 4 and 5. How many different two-digit numbers can you make with two different cards? Write them in order, smallest first.",
+      "text": "At home: make digit cards 1, 2, 3, 4 and 5. How many different two-digit numbers can you make with two different cards? Arrange them in order. Begin with the smallest.",
       "answer": "20 numbers: 12, 13, 14, 15, 21, 23, 24, 25, 31, 32, 34, 35, 41, 42, 43, 45, 51, 52, 53, 54",
       "val": 20,
       "solution": "5 choices for the tens card and 4 choices left for the ones card: 5 x 4 = 20. List them with 1 on the left, then 2, then 3, then 4, then 5."
@@ -2586,20 +2599,20 @@
         "id": "c1",
         "tier": "core",
         "type": "number",
-        "q": "Which number is bigger, 61 or 38? Write the bigger number.",
+        "q": "Which number is greater, 61 or 38? Write the greater number.",
         "answer": 61,
         "hint": "Look at the tens first. 6 tens or 3 tens?",
         "steps": [
           "61 has 6 tens and 1 one.",
           "38 has 3 tens and 8 ones.",
-          "6 tens is more than 3 tens, so 61 is bigger."
+          "6 tens is more than 3 tens, so 61 is greater."
         ],
         "slips": [
           {
             "a": [
               38
             ],
-            "say": "38 has the bigger ones digit, but only 3 tens. Look at the tens first."
+            "say": "38 has the greater ones digit, but only 3 tens. Look at the tens first."
           }
         ],
         "tpl": {
@@ -2631,13 +2644,13 @@
             "a": "t1*10+o1",
             "b": "t2*10+o2"
           },
-          "q": "Which number is bigger, {a} or {b}? Write the bigger number.",
+          "q": "Which number is greater, {a} or {b}? Write the greater number.",
           "answer": "a",
           "hint": "Look at the tens first. {t1} tens or {t2} tens?",
           "steps": [
             "{a} has {t1} tens and {o1} ones.",
             "{b} has {t2} tens and {o2} ones.",
-            "{t1} tens is more than {t2} tens, so {ans} is bigger."
+            "{t1} tens is more than {t2} tens, so {ans} is greater."
           ]
         }
       },
@@ -2658,7 +2671,7 @@
             "a": [
               52
             ],
-            "say": "52 is the bigger number. Look for the one with fewer tens."
+            "say": "52 is the greater number. Look for the one with fewer tens."
           }
         ],
         "tpl": {
@@ -2704,20 +2717,20 @@
         "id": "c3",
         "tier": "core",
         "type": "number",
-        "q": "You have the digit cards 7 and 2. What is the biggest number you can make?",
+        "q": "You have the digit cards 7 and 2. What is the greatest number you can make?",
         "answer": 72,
-        "hint": "Put the bigger card on the left.",
+        "hint": "Put the greater card on the left.",
         "steps": [
-          "The left card counts the tens, so we want the bigger card there.",
+          "The left card counts the tens, so we want the greater card there.",
           "Put 7 on the left and 2 on the right.",
-          "The biggest number is 72."
+          "The greatest number is 72."
         ],
         "slips": [
           {
             "a": [
               27
             ],
-            "say": "27 is the smallest number. For the biggest, put the bigger card on the left."
+            "say": "27 is the smallest number. For the greatest, put the greater card on the left."
           },
           {
             "a": [
@@ -2742,13 +2755,13 @@
               4
             ]
           },
-          "q": "You have the digit cards {x} and {y}. What is the biggest number you can make?",
+          "q": "You have the digit cards {x} and {y}. What is the greatest number you can make?",
           "answer": "x*10+y",
-          "hint": "Put the bigger card on the left.",
+          "hint": "Put the greater card on the left.",
           "steps": [
-            "The left card counts the tens, so we want the bigger card there.",
+            "The left card counts the tens, so we want the greater card there.",
             "Put {x} on the left and {y} on the right.",
-            "The biggest number is {ans}."
+            "The greatest number is {ans}."
           ]
         }
       },
@@ -2769,7 +2782,7 @@
             "a": [
               72
             ],
-            "say": "72 is the biggest number. For the smallest, put the smaller card on the left."
+            "say": "72 is the greatest number. For the smallest, put the smaller card on the left."
           }
         ],
         "tpl": {
@@ -2829,7 +2842,7 @@
         "id": "c6",
         "tier": "core",
         "type": "choice",
-        "q": "Which number is the biggest?",
+        "q": "Which number is the greatest?",
         "options": [
           "36",
           "63",
@@ -2841,7 +2854,7 @@
         "steps": [
           "63 and 60 have the most tens: 6 tens.",
           "Compare their ones: 3 ones is more than 0 ones.",
-          "63 is the biggest."
+          "63 is the greatest."
         ],
         "slips": [
           {
@@ -2906,21 +2919,21 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "You have the digit cards 2, 5 and 8. Use any two cards. What is the biggest number you can make?",
+        "q": "You have the digit cards 2, 5 and 8. Use any two cards. What is the greatest number you can make?",
         "answer": 85,
         "easier": "c3",
-        "hint": "Which card is the biggest? Put it on the left. Then pick the biggest card that is left.",
+        "hint": "Which card is the greatest? Put it on the left. Then pick the greatest card that is left.",
         "steps": [
-          "The biggest card is 8. Put it on the left.",
-          "The biggest card left is 5. Put it on the right.",
-          "The biggest number is 85."
+          "The greatest card is 8. Put it on the left.",
+          "The greatest card left is 5. Put it on the right.",
+          "The greatest number is 85."
         ],
         "slips": [
           {
             "a": [
               58
             ],
-            "say": "58 has the 5 on the left. Put the biggest card on the left."
+            "say": "58 has the 5 on the left. Put the greatest card on the left."
           },
           {
             "a": [
@@ -2947,13 +2960,13 @@
               9
             ]
           },
-          "q": "You have the digit cards {x}, {y} and {z}. Use any two cards. What is the biggest number you can make?",
+          "q": "You have the digit cards {x}, {y} and {z}. Use any two cards. What is the greatest number you can make?",
           "answer": "z*10+y",
-          "hint": "Which card is the biggest? Put it on the left. Then pick the biggest card that is left.",
+          "hint": "Which card is the greatest? Put it on the left. Then pick the greatest card that is left.",
           "steps": [
-            "The biggest card is {z}. Put it on the left.",
-            "The biggest card left is {y}. Put it on the right.",
-            "The biggest number is {ans}."
+            "The greatest card is {z}. Put it on the left.",
+            "The greatest card left is {y}. Put it on the right.",
+            "The greatest number is {ans}."
           ]
         }
       },
@@ -3014,13 +3027,13 @@
         "id": "t4",
         "tier": "stretch",
         "type": "number",
-        "q": "You have the cards 1, 3, 5 and 7. Two different cards make a two-digit number. It is more than 40. The left digit is bigger than the right digit. How many numbers fit?",
+        "q": "You have the cards 1, 3, 5 and 7. Two different cards make a two-digit number. It is more than 40. The left digit is greater than the right digit. How many numbers fit?",
         "answer": 5,
         "easier": "c2",
-        "hint": "List the numbers that are more than 40. Then cross out the ones where the left digit is not bigger.",
+        "hint": "List the numbers that are more than 40. Then cross out the ones where the left digit is not greater.",
         "steps": [
           "More than 40: 51, 53, 57, 71, 73, 75.",
-          "Cross out 57, because 5 is not bigger than 7.",
+          "Cross out 57, because 5 is not greater than 7.",
           "Left: 51, 53, 71, 73, 75. That is 5 numbers."
         ],
         "slips": [
@@ -3036,21 +3049,21 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "You have the digit cards 3, 5 and 7. Use all three cards to make a 3-digit number. What is the biggest number you can make?",
+        "q": "You have the digit cards 3, 5 and 7. Use all three cards to make a 3-digit number. What is the greatest number you can make?",
         "answer": 753,
         "easier": "t2",
-        "hint": "The left card counts the hundreds. Put the biggest card on the left, then the next biggest.",
+        "hint": "The left card counts the hundreds. Put the greatest card on the left, then the next greatest.",
         "steps": [
-          "The biggest card is 7: put it on the left.",
-          "The next biggest is 5, then 3.",
-          "The biggest number is 753."
+          "The greatest card is 7: put it on the left.",
+          "The next greatest is 5, then 3.",
+          "The greatest number is 753."
         ],
         "slips": [
           {
             "a": [
               357
             ],
-            "say": "357 is the smallest number. For the biggest, put the biggest card on the left."
+            "say": "357 is the smallest number. For the greatest, put the greatest card on the left."
           }
         ],
         "tpl": {
@@ -3071,13 +3084,13 @@
               9
             ]
           },
-          "q": "You have the digit cards {x}, {y} and {z}. Use all three cards to make a 3-digit number. What is the biggest number you can make?",
+          "q": "You have the digit cards {x}, {y} and {z}. Use all three cards to make a 3-digit number. What is the greatest number you can make?",
           "answer": "z*100+y*10+x",
-          "hint": "The left card counts the hundreds. Put the biggest card on the left, then the next biggest.",
+          "hint": "The left card counts the hundreds. Put the greatest card on the left, then the next greatest.",
           "steps": [
-            "The biggest card is {z}: put it on the left.",
-            "The next biggest is {y}, then {x}.",
-            "The biggest number is {ans}."
+            "The greatest card is {z}: put it on the left.",
+            "The next greatest is {y}, then {x}.",
+            "The greatest number is {ans}."
           ]
         }
       },
@@ -3130,14 +3143,14 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "You make a 3-digit number with the cards 2, 5 and 8, each used once. It is more than 500 and less than 600. The ones digit is bigger than the tens digit. What number am I?",
+        "q": "You make a 3-digit number with the cards 2, 5 and 8, each used once. It is more than 500 and less than 600. The ones digit is greater than the tens digit. What number am I?",
         "answer": 528,
         "easier": "t4",
         "hint": "List all the numbers you can make. Cross out the ones that break a clue.",
         "steps": [
           "The numbers are 258, 285, 528, 582, 825, 852.",
           "More than 500 and less than 600: 528 and 582.",
-          "Ones digit bigger than tens digit: 528."
+          "Ones digit greater than tens digit: 528."
         ],
         "slips": [
           {
@@ -3152,27 +3165,27 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make up your own digit card puzzle with 2 clues (more than a number, and left digit bigger than right digit). Check which numbers fit.",
+        "q": "Make up your own digit card puzzle with 2 clues (more than a number, and left digit greater than right digit). Check which numbers fit.",
         "hint": "Pick four cards first. List every number you can make. Then write clues.",
         "steps": [
           "List every two-digit number from your cards.",
           "Check each clue, and cross out the numbers that break it.",
-          "For example, with the cards 2, 4, 6 and 8: more than 50, and the left digit is bigger than the right. The numbers are 62, 64, 82, 84, 86. That is five numbers."
+          "For example, with the cards 2, 4, 6 and 8: more than 50, and the left digit is greater than the right. The numbers are 62, 64, 82, 84, 86. That is five numbers."
         ]
       }
     ]
   },
   "parent": {
-    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the biggest and smallest numbers from two cards, even with a 0 card.",
+    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card.",
     "words": [
       "digit: one of the symbols 0 to 9",
       "tens digit: the left digit, it counts the tens",
       "ones digit: the right digit, it counts the ones",
-      "compare: say which number is bigger or smaller, or if they are the same"
+      "compare: say which number is greater or smaller, or if they are the same"
     ],
     "try_home": [
-      "Card game: write digit cards 0 to 9 on scrap paper. Each of you picks two cards and makes the biggest number you can. Who made the bigger number? Say why.",
-      "Swap it: pick two cards, read the number, swap the cards and read again. Ask: which is bigger, and how do you know?",
+      "Card game: write digit cards 0 to 9 on scrap paper. Each of you picks two cards and makes the greatest number you can. Who made the greater number? Say why.",
+      "Swap it: pick two cards, read the number, swap the cards and read again. Ask: which is greater, and how do you know?",
       "Spot it: look at house numbers or lift floors. Ask: which has more tens? Which digit tells you?"
     ],
     "ask": [
@@ -3212,15 +3225,15 @@
         "id": "M1",
         "title": "Is it always true?",
         "minutes": 4,
-        "tutor": "Mei says: the bigger card on the left always makes the bigger number. Is that always true? Try the pairs 2 and 9, 5 and 6, and 3 and 7 with your cards.",
-        "rec": "Recording: pause. Try three pairs of cards. Is the bigger card on the left always the bigger number?",
+        "tutor": "Mei says: the greater card on the left always makes the greater number. Is that always true? Try the pairs 2 and 9, 5 and 6, and 3 and 7 with your cards.",
+        "rec": "Recording: pause. Try three pairs of cards. Is the greater card on the left always the greater number?",
         "answer": "Yes, for two different cards. The left card counts the tens, so it decides. (If one card is 0 there is only one two-digit number, with the other card on the left.)"
       },
       {
         "id": "M2",
         "title": "Make a puzzle for your grown-up",
         "minutes": 4,
-        "tutor": "Pick three digit cards. Write two clues, like: it is more than 30, and the right digit is bigger than the left digit. Give it to your grown-up to solve.",
+        "tutor": "Pick three digit cards. Write two clues, like: it is more than 30, and the right digit is greater than the left digit. Give it to your grown-up to solve.",
         "rec": "Recording: pause. Pick three cards and write a two-clue puzzle for a grown-up to solve.",
         "answer": "No single answer. Check that the clues fit the secret number and say how many numbers fit."
       },
@@ -3228,9 +3241,9 @@
         "id": "M3",
         "title": "Teach it back",
         "minutes": 3,
-        "tutor": "Pretend your grown-up or a toy has never compared numbers. Teach them how to tell that 61 is bigger than 59, using tens and ones.",
-        "rec": "Recording: pause. Teach a grown-up how to tell that 61 is bigger than 59.",
-        "answer": "61 has 6 tens and 59 has 5 tens, so 61 is bigger. We look at the tens first. The ones only matter when the tens are the same."
+        "tutor": "Pretend your grown-up or a toy has never compared numbers. Teach them how to tell that 61 is greater than 59, using tens and ones.",
+        "rec": "Recording: pause. Teach a grown-up how to tell that 61 is greater than 59.",
+        "answer": "61 has 6 tens and 59 has 5 tens, so 61 is greater. We look at the tens first. The ones only matter when the tens are the same."
       }
     ]
   }
