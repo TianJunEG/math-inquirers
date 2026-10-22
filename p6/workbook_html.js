@@ -8,8 +8,9 @@ const W = [];
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const LASTQ1 = { 1: 3, 2: 2, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 2, 9: 4, 10: 3 };
 const FASTPTR = n => '<span style="float:right;font-size:11px;line-height:1.2;font-weight:700;color:#1F7A6F;text-align:right;text-decoration:none;max-width:330px;margin-top:2px;letter-spacing:0"><span style="display:inline-block;background:#FFC93C;color:#1B2A49;border:1.5px solid #1B2A49;padding:0 6px;margin-right:4px">Start here</span> After question ' + LASTQ1[n] + ' you may choose: carry on, or try Think harder.</span>';
-const hdr = (n, topic, title, pb = true, fast = false) => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span></div>`,
+const SB3 = { 1: 'L1_Sequence_Tester.sb3', 2: 'L2_Prime_Checker.sb3', 3: 'L3_Below_Zero.sb3', 4: 'L4_Function_Machine.sb3', 5: 'L5_Every_Order.sb3', 6: 'L6_Chance_Lab.sb3', 7: 'L7_Turtle_Start.sb3', 8: 'L8_Code_Machine.sb3', 9: 'L9_Mean_Machine.sb3', 10: 'starters L10A to L10D (pick one)' };
+const hdr = (n, topic, title, pb = true, fast = false, file = '') => [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span>${file ? `<span style="float:right;font-size:11px;font-weight:700;color:#1F7A6F;margin-top:6px;letter-spacing:0">Scratch file: ${file}</span>` : ''}</div>`,
   `<div class="p ltitle">${fast ? FASTPTR(n) : ''}${title}</div>`,
   `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
 ];
@@ -44,7 +45,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
-  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true));
+  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true, SB3[l.n]));
   W.push(...c.workbook(H));
   W.push(...finish(l.n));
   W.push(...extra(l.n));
