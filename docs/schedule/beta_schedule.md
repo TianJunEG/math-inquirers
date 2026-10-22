@@ -44,5 +44,5 @@ Level 6 is unaffected (Thu 24 and Sat 26 Dec). Reserved Wed/Thu groups released 
 
 ## Open points
 - Assumed school holidays from mid-November (weekday daytime slots for children). Confirm against the MOE 2026 calendar.
-- Beta fee shown as S$25 a lesson, S$250 for all 10 lessons, marked "to confirm".
+- Beta fee confirmed: S$25 a lesson, S$250 for all 10 lessons. Still to write before taking money: the terms and refund page and the consent wording for recording and children's work.
 - Tutors: the schedule assumes one tutor (you) for all 12 weekly sessions, about 18 teaching hours a week.
