@@ -26,7 +26,7 @@ Date 2026-10-22. Nothing committed. Shared files (`levels/*`, `rebuild/slidekit.
 | File | Before | After |
 |---|---|---|
 | Student workbook | 45 | 55 (+1 per lesson: the Finish page, by design) |
-| Tutor guide | 82 | 85 |
+| Tutor guide | 82 | 88 |
 | Weekly Dose | 25 | 25 |
 | Question Bank | 28 | 28 |
 | Email Pack | 12 | 12 |

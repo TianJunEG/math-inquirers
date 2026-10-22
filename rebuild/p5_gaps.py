@@ -125,7 +125,7 @@ def apply(n):
         if s2!=s: wr(fp,s2)
     edit(P+'warm1',lambda s:s.replace('>0–4 MIN<','>3–6 MIN<').replace('Minutes 0 to 4.','Minutes 3 to 6 (play only 1 or 2 rounds).').replace(' (play only 1 or 2 rounds to make room for the warm-up check)',' (play only 1 or 2 rounds)'))
     edit(P+'warm2',lambda s:s.replace('>4–9 MIN<','>6–9 MIN<').replace('Minutes 4 to 9.','Minutes 6 to 9.'))
-    edit(P+'title',lambda s:re.sub(r'Time plan:.*?(?:or for home\.|private chat message\.)',lambda m:E(PLAN+(' In this last lesson the 88 to 90 slot is certificates.' if n==10 else '')),s,count=1,flags=re.S))
+    edit(P+'title',lambda s:re.sub(r'Time plan:.*?(?:or for home\.|Investigation\.(?:"|&quot;|&#34;|&#x22;)?)',lambda m:E(PLAN+(' In this last lesson the 88 to 90 slot is certificates.' if n==10 else '')),s,count=1,flags=re.S))
 
     # ---- re-time every slide after the break ----
     order=d['order']

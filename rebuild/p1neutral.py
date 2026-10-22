@@ -36,7 +36,7 @@ SUBS = [
     ('Keep report-backs to 30 seconds each; shorten them if time is tight.', 'Report-backs are optional and short: one thing you tried, not the answer. Ask for volunteers.'),
     ('Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.', 'Whiteboard round. The tutor asks a quick question from each lesson. Everybody writes the answer at the same time. No passing round and nobody on the spot.'),
     ('Mental maths relay: a chain of quick questions from all 9 lessons passed around the group.', 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.'),
-    ('Note who needs a short catch-up next lesson.', 'Privately note who may need a short catch-up next lesson (never in front of the group).'),
+    ('Note who needs a short catch-up next lesson.', 'Note who may need a short catch-up next lesson (never in front of the group).'),
 ]
 
 WHATIF = {
@@ -210,7 +210,7 @@ def fix_l6(D):
     _w(D, 'l6-ws2', ws_preview('l6-ws2', '58–68 MIN', 'Worksheet page 2: on your own',
         [('Q3', '85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)'), ('Q4', 'Can 35¢ be made with 2 coins? Explain.')],
         'Want more? You may choose Think harder T1 in your workbook.',
-        'Children work alone. Privately note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
+        'Children work alone. Note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
     _w(D, 'l6-ws2ans', check_slide('l6-ws2ans', '68–72 MIN', 'Page 2: check together',
         [('Q3', '4 coins: 50 + 20 + 10 + 5.  6 coins: e.g. 50 + 10 + 10 + 5 + 5 + 5'), ('Q4', 'No: two coins make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100')],
         'Click after a child explains. Think harder T3 (Sam): six 10¢ = 60¢; each swap to a 20¢ adds 10¢; 30¢ more means 3 swaps.'))
@@ -236,7 +236,7 @@ def fix_l8(D):
         [('Q3', 'Pets grid. Each child has a different pet. Two boxes are crossed for you (Clue 1). Tick where it fits, cross where it cannot.'), ('Q4', 'Line-up. Draw 4 circles. Put in the sure ones first.'),
          ('Q5', 'If you have time: a number riddle.'), ('Q6', 'If you have time: odd one out. Find a reason, then a second reason.')],
         'Want more? You may choose Think harder T1 in your workbook.',
-        'Children work alone. Q3 says each child has a DIFFERENT pet: read that sentence aloud before they start; the two crosses for Clue 1 are printed. In Q4, "in front of" means somewhere in front, not always right in front. Q5 and Q6 are "if you have time"; the other two riddles are on Think harder T5. Privately note who may need a short catch-up next lesson.'))
+        'Children work alone. Q3 says each child has a DIFFERENT pet: read that sentence aloud before they start; the two crosses for Clue 1 are printed. In Q4, "in front of" means somewhere in front, not always right in front. Q5 and Q6 are "if you have time"; the other two riddles are on Think harder T5. Note who may need a short catch-up next lesson.'))
     _w(D, 'l8-ws2ans', check_slide('l8-ws2ans', '68–72 MIN', 'Page 2: check together',
         [('Q3', 'Ali: fish.    Mei: cat.    Ben: dog.'), ('Q4', '1st Mei,   2nd Ali,   3rd Ben,   4th Sam'), ('Q5', 'a) 15   (Think harder T5: 30 and 14)'), ('Q6', '11: we do not say it counting in 3s.  Or 6: the only even number.')],
         'Click each answer after a child explains. Q3: Ali has no cat and no dog, so fish. Mei has no dog, and the fish is taken, so cat. Ben has the dog. Q4: Mei is 1st; Ali is in front of Ben and Ben is in front of Sam, so the order of the last three is Ali, Ben, Sam. Q5a: between 10 and 20, odd, in the 5s: 15. Think harder T5: a) 30 (20 and 40 are not between 20 and 40); b) 14 (1 + 4 = 5, less than 20). Q6: also accept "11 is the only number with 2 digits".'))

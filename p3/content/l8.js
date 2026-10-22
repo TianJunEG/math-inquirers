@@ -55,7 +55,7 @@ const q2Fig = () => {
   const trap = [[0, 0], [5, 0], [3, 3], [0, 3]];
   let b = poly(shapeAt(plus, 40, 54, u, 3)) + poly(shapeAt(stair, 175, 54, u, 3)) + poly(shapeAt(house, 300, 0, u, 5)) + poly(shapeAt(trap, 440, 54, u, 3));
   [['A', 82], ['B', 217], ['C', 356], ['D', 510]].forEach(([l, x]) => { b += txt(x, 172, l, { size: 22 }); });
-  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 400);
+  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 320);
 };
 // Q3: 6 lines from one point, spread out like a fan (5 gaps of 30 degrees)
 const q3Fig = () => {
@@ -183,15 +183,13 @@ module.exports = {
       H.q(1, 'Fold a right-angle checker. Use it to sort the angles a to f.', { before: 20, keepNext: true }),
       H.fig(q1Fig()),
       H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
-      H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker.', { keepNext: true }),
-      H.p('Hint: a corner that dents INTO the shape is bigger than a right angle. Do not count it. A is done for you.', { after: 20 }),
+      H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker. A corner that dents INTO the shape is bigger than a right angle: do not count it. A is done for you.', { keepNext: true }),
       H.fig(q2Fig()),
       H.tbl([2475, 1856, 1856, 1857, 1856], [
         H.row(['Shape', 'A', 'B', 'C', 'D'].map((s, i) => H.cell(s, [2475, 1856, 1856, 1857, 1856][i], { bold: true, fill: 'EDEDED' }))),
         H.row([H.cell('Right angles inside', 2475, { bold: true }), H.cell('8', 1856, { h: 40, bold: true }), ...[1856, 1857, 1856].map(w => H.cell(' ', w, { h: 40 }))])
       ]),
-      H.fig(exFig()),
-      H.q(3, 'These 6 lines all start at point O.', { keepNext: true }),
+      H.q(3, 'These 6 lines all start at point O. (Example: 3 lines make 3 angles: 1 + 1 + 1.)', { keepNext: true }),
       side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
       H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
 
