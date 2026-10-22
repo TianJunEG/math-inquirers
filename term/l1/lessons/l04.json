@@ -17,7 +17,7 @@
       "Number-sequence patterns (counting in 2s, 5s and 10s)",
       "Tens and ones: 10 more and 10 less"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Growing-gap and sum-of-the-two-before sequences go beyond Primary 1 and sit at Think harder and Go further only."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Term 1 goes beyond the school Primary 1 syllabus on purpose: counting in 2s, 5s and 10s and moving by rows are P1, but the growing-gap and sum-of-the-two-before sequences, interleaved patterns and counting in 3s are not. They sit at Think harder, Go further and the Investigation only; every Start here item is approachable with the 100 square and counters. Do not tell families this is the school syllabus."
   },
   "contest_moves": [
     "changing-step sequence (the gap grows by 1)",
@@ -700,7 +700,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 3: write the next numbers in each pattern. Question 4: count in twos and colour 2, 4, 6 and so on to 30. Look at the last digits. Write the 5 different last digits. Question 5: fill in the empty squares a, b and c. Question 6: Siti counts in fives. Which number is wrong? Circle it. Then write what she should have said, and how you know."
+            "text": "Page 2. Question 3: write the next numbers in each pattern. Question 4: count in twos and colour 2, 4, 6 and so on to 30. Look at the last digits. Write the different last digits. Question 5: fill in the empty squares a, b and c. Question 6: Siti counts in fives. Which number is wrong? Circle it. Then write what she should have said."
           },
           {
             "k": "WORK",
@@ -1987,7 +1987,7 @@
           ]
         }
       ],
-      "note": "Read each answer aloud. Children check their own ticket in a different colour. For question 3 accept any clear reason about the last digit."
+      "note": "Read each answer aloud. Children check their own ticket in a different colour. For question 3 the answer is No. If a child says why, accept any clear reason about the last digit."
     },
     {
       "id": "s-look",
@@ -2270,7 +2270,7 @@
         "parts": [
           {
             "l": "",
-            "text": "The 5 different last digits are ___, ___, ___, ___, ___.",
+            "text": "The different last digits are ___, ___, ___, ___, ___.",
             "ans": "2, 4, 6, 8, 0 in any order",
             "val": [
               2,
@@ -2314,19 +2314,19 @@
         "parts": [
           {
             "l": "a",
-            "text": "Square a is ___",
+            "text": "Square a is ___.",
             "ans": "34",
             "val": 34
           },
           {
             "l": "b",
-            "text": "Square b is ___",
+            "text": "Square b is ___.",
             "ans": "43",
             "val": 43
           },
           {
             "l": "c",
-            "text": "Square c is ___",
+            "text": "Square c is ___.",
             "ans": "55",
             "val": 55
           }
@@ -2379,15 +2379,9 @@
             "text": "She should have said ___.",
             "ans": "25",
             "val": 25
-          },
-          {
-            "l": "b",
-            "text": "I know because ___.",
-            "ans": "counting in 5s ends in 0 or 5",
-            "val": "because"
           }
         ],
-        "answer": "26 is wrong. She should have said 25. Counting in 5s ends in 0 or 5.",
+        "answer": "26 is wrong. She should have said 25.",
         "val": [
           26,
           25
@@ -2396,10 +2390,10 @@
         "solution": "Counting in fives, 20 is followed by 25, then 30. 26 ends in 6, but numbers counted in fives end in 5 or 0. So Siti should have said 25.",
         "mistakes": [
           "Circling 30 or 35.",
-          "Writing 25 but giving no reason (a clear sentence about the last digit is enough)."
+          "Writing 26 again instead of 25."
         ],
-        "mins": 2.5,
-        "lines": 1
+        "mins": 2,
+        "lines": 0
       }
     ],
     "think": [
@@ -2459,11 +2453,11 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Look at this pattern: 6, 7, 9, 12, 16, __, __. First write the gaps between the numbers. Then write the next two numbers.",
+        "text": "Look at this pattern: 6, 7, 9, 12, 16 and so on. Find the next two numbers.",
         "parts": [
           {
             "l": "a",
-            "text": "The gaps are ___, ___, ___, ___",
+            "text": "The gaps between the numbers are ___, ___, ___, ___.",
             "ans": "1, 2, 3, 4",
             "val": [
               1,
@@ -2474,7 +2468,7 @@
           },
           {
             "l": "b",
-            "text": "The next two numbers are ___ and ___",
+            "text": "The next two numbers are ___ and ___.",
             "ans": "21 and 27",
             "val": [
               21,
@@ -2508,7 +2502,7 @@
         "parts": [
           {
             "l": "",
-            "text": "They both say ___, ___ and ___",
+            "text": "They both say ___, ___ and ___.",
             "ans": "10, 20 and 30",
             "val": [
               10,
@@ -2538,7 +2532,7 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Here is a number chain: 2, 6, ___, 14, 22, ___. After 2 and 6, each number is the last two numbers added together.",
+        "text": "Here is a number chain: 2, 6, ___, 14, 22, ___, 58. One rule makes the whole chain.",
         "parts": [
           {
             "l": "a",
@@ -2556,16 +2550,17 @@
             "val": "working"
           }
         ],
-        "answer": "8 and 36 (2 + 6 = 8, and 14 + 22 = 36)",
+        "answer": "8 and 36 (2 + 6 = 8, 14 + 22 = 36, and 22 + 36 = 58)",
         "val": [
           8,
           36
         ],
-        "hint": "Try the first gap: 2 and 6 added together is what? Does it match the next number?",
-        "solution": "2 + 6 = 8, so the first blank is 8. Check: 6 + 8 = 14 and 8 + 14 = 22, which are in the chain. The last blank is 14 + 22 = 36.",
+        "hint": "Look at 2, 6 and the number after them. What can you do with two numbers to get the next one? Check it on 14, 22 and 58.",
+        "solution": "Each number after the first two is the two numbers before it added together. 2 + 6 = 8, so the first blank is 8. Check: 6 + 8 = 14 and 8 + 14 = 22. The last blank is 14 + 22 = 36, and 22 + 36 = 58 matches the end of the chain.",
         "mistakes": [
           "Adding 6 each time (8, 14, 20).",
-          "Filling the first blank but not the last."
+          "Filling the first blank but not the last.",
+          "Not checking the rule on the numbers at the end of the chain."
         ],
         "mins": 5,
         "lines": 1
@@ -2574,11 +2569,11 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "Two patterns are mixed in one list: 5, 50, 10, 45, 15, 40, ___, ___. Write the next two numbers. Then write the 10th number in the list.",
+        "text": "Look at this list: 5, 50, 10, 45, 15, 40 and so on.",
         "parts": [
           {
             "l": "a",
-            "text": "The next two numbers are ___ and ___",
+            "text": "The next two numbers are ___ and ___.",
             "ans": "20 and 35",
             "val": [
               20,
@@ -2587,7 +2582,7 @@
           },
           {
             "l": "b",
-            "text": "The 10th number is ___",
+            "text": "The 10th number in the list is ___.",
             "ans": "30",
             "val": 30
           }
@@ -2615,25 +2610,34 @@
         "parts": [
           {
             "l": "a",
-            "text": "Yellow: 34 + 45 = ___",
+            "text": "Yellow: 34 + 45 = ___.",
             "ans": "79",
             "val": 79
           },
           {
             "l": "b",
-            "text": "Other two: 35 + 44 = ___",
+            "text": "Other two: 35 + 44 = ___.",
             "ans": "79",
             "val": 79
           },
           {
             "l": "c",
-            "text": "What do you notice?",
-            "ans": "Both add up to 79",
-            "val": "same"
+            "text": "Are the two totals the same? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "yes"
           },
           {
             "l": "d",
-            "text": "Try two more blocks. Does it work every time? Write why.",
+            "text": "Now try 52, 53, 62, 63. 52 + 63 = ___ and 53 + 62 = ___.",
+            "ans": "115 and 115",
+            "val": [
+              115,
+              115
+            ]
+          },
+          {
+            "l": "e",
+            "text": "Does it work every time? Circle Yes or No. Then write why.",
             "ans": "Yes: 1 and 10 are added in both pairs",
             "val": "yes"
           }
@@ -2659,7 +2663,7 @@
           "wide": false,
           "cell": 46
         },
-        "answer": "Both add up to 79. It always works: 1 and 10 are added in both pairs.",
+        "answer": "Both add up to 79, and 52 + 63 and 53 + 62 both make 115. It always works: 1 and 10 are added in both pairs.",
         "val": [
           "same"
         ],
@@ -2670,7 +2674,7 @@
           "Adding the numbers across the rows instead of along the slants."
         ],
         "mins": 7,
-        "lines": 3
+        "lines": 2
       }
     ],
     "investigation": {
@@ -2728,17 +2732,17 @@
     },
     {
       "id": "E2",
-      "text": "A counter is on 26. First it moves down 1 square. Then it moves right 1 square.",
+      "text": "A counter is on 26 on your 100 square. First it moves down 1 row. Then it moves right 1 square.",
       "parts": [
         {
           "l": "a",
-          "text": "After going down it is on ___",
+          "text": "After going down it is on ___.",
           "ans": "36",
           "val": 36
         },
         {
           "l": "b",
-          "text": "After going right it is on ___",
+          "text": "After going right it is on ___.",
           "ans": "37",
           "val": 37
         }
@@ -2760,7 +2764,7 @@
       "parts": [
         {
           "l": "",
-          "text": "Circle Yes or No. I know because ___.",
+          "text": "Circle Yes or No.",
           "ans": "No",
           "val": "no"
         }
@@ -2771,8 +2775,7 @@
       ],
       "solution": "Counting in twos, the last digit is always 0, 2, 4, 6 or 8. 25 ends in 5, so Mei does not say 25.",
       "mistakes": [
-        "Saying right because 25 is next to 24 or 26.",
-        "Not giving a reason."
+        "Saying yes because 25 is next to 24 or 26."
       ]
     }
   ],
@@ -2814,7 +2817,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "On the 100 square a counter is on 58. It moves down 1 square. Which number is it on?",
+      "text": "On the 100 square a counter is on 58. It moves down 1 row. Which number is it on?",
       "answer": "68",
       "val": 68,
       "solution": "Down one row is 10 more. 58 and 10 more is 68."
@@ -2962,7 +2965,7 @@
         "id": "c3",
         "tier": "core",
         "type": "number",
-        "q": "A counter is on 34 on the 100 square. The counter moves down 1 square. Which number is it on?",
+        "q": "A counter is on 34 on the 100 square. The counter moves down 1 row. Which number is it on?",
         "answer": 44,
         "hint": "Down one row is 10 more.",
         "steps": [
@@ -2997,7 +3000,7 @@
               87
             ]
           },
-          "q": "A counter is on {n} on the 100 square. The counter moves down 1 square. Which number is it on?",
+          "q": "A counter is on {n} on the 100 square. The counter moves down 1 row. Which number is it on?",
           "answer": "n+10",
           "hint": "Down one row is 10 more.",
           "steps": [
@@ -3469,7 +3472,7 @@
     ]
   },
   "parent": {
-    "summary": "We explored the 100 square. Your child counted in 10s, 5s and 2s with counters and saw the patterns: counting in tens makes one column, fives make two columns, twos make stripes. We also found that going right adds 1 and going down one row adds 10.",
+    "summary": "We explored the 100 square. Your child counted in 10s, 5s and 2s with counters and saw the patterns: counting in tens makes one column, fives make two columns, twos make stripes. We also found that going right adds 1 and going down one row adds 10. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions are harder than school work. Your child chooses how far to go, and can use the square and counters.",
     "words": [
       "row: a line of 10 numbers going across",
       "column: a line of numbers going down",
@@ -3495,7 +3498,7 @@
   "workbook": {
     "header": "Whole Numbers: patterns",
     "hint_p1": "Use your 100 square, counters or a drawing. Say your answer out loud, then write it.",
-    "hint_p3": "Use your 100 square, counters or a drawing. Then write how you know. Choose any question, in any order.",
+    "hint_p3": "Use your 100 square (the kit page), counters or a drawing. Then write how you know. Choose any question, in any order.",
     "kits": [
       {
         "type": "hundred",

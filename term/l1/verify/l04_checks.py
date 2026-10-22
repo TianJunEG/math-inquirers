@@ -196,6 +196,9 @@ def run(d):
     g1 = chain(2, 6, 6)
     eq(g1, [2, 6, 8, 14, 22, 36], 'G1 chain'); eq((g1[2], g1[5]), (8, 36), 'G1 blanks'); eq(T['G1']['val'], [8, 36], 'G1')
     eq([g1[0], g1[1], g1[3], g1[4]], [2, 6, 14, 22], 'G1 shown numbers')
+    g1l = chain(2, 6, 7)
+    eq(g1l[6], 58, 'G1 the shown last number 58 fits the same rule'); eq('22, ___, 58' in T['G1']['text'], True, 'G1 text shows 58')
+    eq([x for x in range(1, 40) if [2, 6, x, 14, 22][2] == x and 6 + x == 14 and x + 14 == 22], [8], 'G1 only 8 fits the first blank under the sum rule')
     g2 = interleave(5, 5, 50, 5, 10)
     eq(g2[:6], [5, 50, 10, 45, 15, 40], 'G2 shown part'); eq((g2[6], g2[7], g2[9]), (20, 35, 30), 'G2 answers'); eq(T['G2']['val'], [20, 35, 30], 'G2')
     for r in range(9):
@@ -206,6 +209,10 @@ def run(d):
     g3v = T['G3']['visual']
     eq((g3v['shade'], g3v['shade2']), ([34, 45], [35, 44]), 'G3 picture')
     eq(T['G3']['val'], ['same'], 'G3 val')
+    # G3 second block 52, 53 / 62, 63 (printed in part d)
+    eq((GRID[5][1], GRID[5][2], GRID[6][1], GRID[6][2]), (52, 53, 62, 63), 'G3 part d block')
+    eq((52 + 63, 53 + 62), (115, 115), 'G3 part d totals'); eq(T['G3']['parts'][3]['val'], [115, 115], 'G3 part d val')
+    eq('Now try 52, 53, 62, 63.' in T['G3']['parts'][3]['text'], True, 'G3 part d text')
     # Investigation: counting in 3s on the square
     threes = skip(3, 3, 100)
     byrow = {r: {c + 1 for c in range(10) if GRID[r][c] in threes} for r in range(10)}
