@@ -91,10 +91,13 @@ def run(d):
     eq(truth, [True, False, True, True], 'S6 truth'); eq(['T' if t else 'F' for t in truth], T['S6']['val'], 'S6 val')
     eq(len(T['S6']['tf']), 4, 'S6 rows')
     # ---- Think harder
-    v = T['T1']['visual']; eq((v['filled'][0], v['extra'][1]), (7, 8), 'T1 picture')
-    eq(double(7), 14, 'T1a'); eq(near_up(7), 15, 'T1b by one more counter'); eq(sum_by_counting([7, 8]), 15, 'T1b by counting'); eq(T['T1']['val'], [14, 15], 'T1 val')
-    eq([near_up(6), near_up(8), near_up(4), near_up(9)], [13, 17, 9, 19], 'T2'); eq(T['T2']['val'], [13, 17, 9, 19], 'T2 val')
-    eq([sum_by_counting([a, b]) for a, b in ((6, 7), (8, 9), (4, 5), (9, 10))], [13, 17, 9, 19], 'T2 by counting')
+    v = T['T1']['visual']; eq((v['filled'][0], v['extra'][1], v['ring']), (5, 6, 1), 'T1 picture: 5 red, 6 yellow, last one ringed')
+    eq(double(5), 10, 'T1a'); eq(near_up(5), 11, 'T1b by one more counter'); eq(sum_by_counting([5, 6]), 11, 'T1b by counting'); eq(T['T1']['val'], [10, 11], 'T1 val')
+    t2 = [tuple(int(x) for x in p['text'].split('=')[0].split('+')) for p in T['T2']['parts']]
+    eq(t2, [(3, 4), (8, 7), (10, 11), (2, 3)], 'T2 sums as printed')
+    eq([sum_by_counting(list(x)) for x in t2], [7, 15, 21, 5], 'T2 by counting'); eq(T['T2']['val'], [7, 15, 21, 5], 'T2 val')
+    eq([near_up(min(x)) for x in t2], [7, 15, 21, 5], 'T2 by double of the smaller and one more')
+    eq(set(t2) & {(6, 7), (8, 9), (4, 5), (9, 10)}, set(), 'T2 uses no number pair from the class Your turn slide')
     opts = T['T3']['mcq']['options']
     pairs = [[int(x) for x in o.split('+')] for o in opts]
     near = [i for i, (a, b) in enumerate(pairs, 1) if abs(a - b) == 1]
@@ -137,6 +140,8 @@ def run(d):
             if b.get('type') == 'ten_frame':
                 eq((b['filled'][0], b['extra'][1]), want, sid + ' picture')
     cols = [b for b in sl['s-m3b']['blocks'] if b['t'] == 'cols'][0]['cols']
-    eq([(c[0]['filled'][0], c[0]['extra'][1]) for c in cols], [(7, 7), (8, 8)], 's-m3b pictures are doubles')
+    eq([(c[0]['filled'][0], c[0]['extra'][1]) for c in cols], [(7, 8), (8, 8)], 's-m3b pictures: 7 red + 8 yellow, 8 red + 8 yellow')
+    eq([(c[0].get('ring', 0), c[0].get('dash', 0)) for c in cols], [(1, 0), (0, 1)], 's-m3b: one ringed (1 more), one dashed (1 less)')
+    eq(sum_by_counting([7, 8]), 15, 's-m3b first picture total: double 7 and the ringed counter'); eq(sum_by_counting([8, 8]) - 1, 15, 's-m3b second picture: double 8 less the dashed one')
     eq(8 + 8, 16, 's-m3b double 8'); eq(near_down(8), 15, 's-m3b 7 + 8 as double 8 less 1')
     return n
