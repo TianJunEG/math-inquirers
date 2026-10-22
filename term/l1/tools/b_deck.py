@@ -201,10 +201,25 @@ def slide_html(d, s):
     mi = s.get('mascot')
     if mi:
         w = 420 if mi['size'] == 'l' else 170
+        left = mi.get('side') == 'left'
+        edge = 110 if mi['size'] == 'l' else 128
+        mbot = 70 if mi['size'] == 'l' else 60
+        h = int(w * 834 / 826)
+        pos = f'left:{edge}px' if left else f'right:{edge}px'
         bub = ''
         if mi.get('say'):
-            bub = (f'<div style="position:absolute;right:{128 + w + 30}px;bottom:{70 + w - 80}px;max-width:520px;background:#FFFFFF;color:{NAVY};border-radius:28px;padding:18px 28px;font-size:34px;font-weight:700;line-height:1.25;box-shadow:0 6px 18px rgba(0,0,0,0.2)">{E(mi["say"])}</div>')
-        body += f'{bub}<img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:{110 if mi["size"] == "l" else 128}px;bottom:{70 if mi["size"] == "l" else 60}px;width:{w}px;height:auto">'
+            bw = 450 if mi['size'] == 'l' else 400
+            fs = 34 if mi['size'] == 'l' else 28
+            if mi['size'] == 'l':      # above Mi, tail pointing down at Mi's head
+                bx = (f'left:{edge + int(w * 0.30)}px' if left else f'right:{edge + 10}px')
+                by = f'bottom:{mbot + h + 40}px'
+                tail = (f'<svg width="70" height="48" viewBox="0 0 70 48" style="position:absolute;bottom:-44px;{"left" if left else "right"}:70px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L70 0 {"L10 48" if left else "L56 48"} Z" fill="#FFFFFF"/></svg>')
+            else:                      # beside small Mi, tail pointing sideways at Mi
+                bx = (f'left:{edge + w + 36}px' if left else f'right:{edge + w + 36}px')
+                by = f'bottom:{mbot + 40}px'
+                tail = (f'<svg width="40" height="44" viewBox="0 0 40 44" style="position:absolute;bottom:24px;{"left" if left else "right"}:-34px" xmlns="http://www.w3.org/2000/svg"><path d="{"M40 0 L40 44 L0 30 Z" if left else "M0 0 L0 44 L40 30 Z"}" fill="#FFFFFF"/></svg>')
+            bub = (f'<div data-mi-bubble="1" style="position:absolute;{bx};{by};width:{bw}px;background:#FFFFFF;color:{NAVY};border-radius:36px;padding:20px 30px;font-size:{fs}px;font-weight:700;line-height:1.25;text-align:center">{E(mi["say"])}{tail}</div>')
+        body += f'{bub}<img data-mi="1" alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;{pos};bottom:{mbot}px;width:{w}px;height:auto">'
     return (f'<section id="{s["id"]}" data-transition="fade" data-theme="modern2" style="{style}">\n{deco}\n{pill}\n{body}\n{foot}\n<aside>{E(s["note"])}</aside>\n</section>\n')
 
 
@@ -250,6 +265,19 @@ def build_deck(d, pw=None):
             return {id: s.id, bottom: Math.round(max), right: Math.round(right)}; })""")
         for r in res:
             if r['bottom'] > 1035 or r['right'] > 1800: problems.append(f"slide {r['id']} overflows (bottom {r['bottom']}, right {r['right']})")
+        hits = pg.evaluate("""() => { const out = [];
+          document.querySelectorAll('section').forEach(sec => { const sr = sec.getBoundingClientRect();
+            const bub = sec.querySelector('[data-mi-bubble]'), img = sec.querySelector('img[data-mi]'); if (!img) return;
+            const boxes = []; if (bub) boxes.push(['bubble', bub.getBoundingClientRect()]); boxes.push(['Mi', img.getBoundingClientRect()]);
+            boxes.forEach(([nm, r]) => { if (r.left < sr.left || r.right > sr.right || r.top < sr.top || r.bottom > sr.bottom) out.push(sec.id + ': ' + nm + ' is clipped by the slide edge'); });
+            const w = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT);
+            while (w.nextNode()) { const n = w.currentNode; if (!n.textContent.trim()) continue; const p = n.parentElement;
+              if (p.closest('aside') || p.closest('svg') || (bub && bub.contains(p))) continue;
+              const rg = document.createRange(); rg.selectNodeContents(n);
+              Array.from(rg.getClientRects()).forEach(t => { boxes.forEach(([nm, r]) => { if (t.width > 2 && t.left < r.right && t.right > r.left && t.top < r.bottom && t.bottom > r.top) out.push(sec.id + ': ' + nm + ' overlaps text "' + n.textContent.trim().slice(0, 30) + '"'); }); }); }
+            if (bub && img) { const a = bub.getBoundingClientRect(), c = img.getBoundingClientRect(); if (a.left < c.right && a.right > c.left && a.top < c.bottom - 0.35 * c.height && a.bottom > c.top) out.push(sec.id + ': bubble covers Mi'); } });
+          return out; }""")
+        problems += ['mascot ' + h for h in hits]
         pg.pdf(path=os.path.join(od, f"L{d['_num']}_Deck.pdf"), width='1920px', height='1080px', print_background=True)
         pg.close()
     return problems
