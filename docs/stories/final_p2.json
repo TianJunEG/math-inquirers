@@ -67,7 +67,7 @@
     "years": "1854-1923",
     "country_or_region": "Britain (born in Portsea, England)",
     "who": "A British scientist who studied the repeating ripple patterns in sand.",
-    "story": "Hertha Ayrton was born in England in 1854. She loved to find out why things happen. She became curious about the patterns of ripples that water makes in sand. She built a model sea in a zinc bath to study them. She saw that the ripples came in matching pairs, one on each side of the first ridge. In 1904 she was the first woman to present her own paper at the Royal Society, a famous group of scientists.",
+    "story": "Hertha Ayrton was born in England in 1854. She was a scientist and an inventor. She studied the patterns of ripples that water makes in sand. She built a model sea in a zinc bath to study them. She saw that the ripples came in matching pairs, one on each side of the first ridge. In 1904 she was the first woman to present her own paper at the Royal Society, a famous group of scientists.",
     "link_to_lesson": "Sand ripples make a pattern that repeats in a regular way, and you find far places in repeating patterns by counting in groups.",
     "try_it": "Ripples on a beach repeat: ridge, dip, dip, dip, then ridge, dip, dip, dip again. Is ripple number 20 a ridge or a dip? What about ripple number 21?",
     "try_it_answer": "The pattern repeats in groups of 4. Ripple 20 is the last of the fifth group (5 x 4 = 20), so it is a dip. Ripple 21 starts a new group, so it is a ridge.",
@@ -78,7 +78,7 @@
     "confidence": "medium",
     "legend_note": "",
     "icon_idea": "A zinc bath of sand with a repeating wavy ripple pattern and a small ruler beside it.",
-    "story_words": 79
+    "story_words": 76
   },
   {
     "lesson": 5,
