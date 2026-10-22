@@ -167,7 +167,7 @@ module.exports = {
     W.push(H.sub('a', '6  +  4  ×  5  −  2  =  48'));
     W.push(H.sub('b', '6  +  4  ×  5  −  2  =  18'));
     W.push(H.sub('c', '1 000 000  ÷  200  +  300  ×  2  =  4000'));
-    W.push(H.sub('d', 'Target 100! Use 3, 5, 7 and 9 once each, with any of +, −, ×, ÷ and brackets, to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
+    W.push(H.sub('d', 'Target 100! Use 3, 5, 7 and 9 once each with +, −, ×, ÷ and brackets to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
     W.push(...H.lines(1));
     // Q6 find all
     W.push(H.q(6, 'A 7-digit number rounded to the nearest thousand is 2 500 000. Its digits add up to 9.', { keepNext: true }));

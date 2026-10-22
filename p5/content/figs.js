@@ -32,7 +32,6 @@ const FIGS = {};
   let g = poly([bl, [x0 + 10 * s, yb], bigTR, [x0, yb - 10 * s]], WH) + poly([[x0 + 10 * s, yb], [x0 + 16 * s, yb], smallTR, [x0 + 10 * s, yb - 6 * s]], WH);
   g += poly([bl, bigTR, smallTR], 'rgba(255,201,60,0.55)', 3.5);
   g += T(x0 + 5 * s, yb + 22, 'big square: 10 cm') + T(x0 + 13 * s, yb + 22, '6 cm');
-  g += T(x0 + 5.6 * s, yb - 6.2 * s, 'the triangle', 15, TEAL);
   FIGS[4] = { GF6: svg('Two squares side by side on a line, a big one of side 10 cm and a small one of side 6 cm. A triangle joins the bottom-left corner and top-right corner of the big square and the top-right corner of the small square.', 280, 205, g, 52) };
 }
 // ---------- L4 Go further Q7: triangle ABC, D on BC with BD = 4 and DC = 8 ----------
@@ -46,7 +45,7 @@ const FIGS = {};
 }
 // ---------- L5 Go further Q7: tank (30 cm wide, 20 cm front to back), water 10 cm deep, block 10 x 10 x 15 stood upright ----------
 {
-  const s = 6, x0 = 40, yb = 150, tw = 30 * s, th = 22 * s; // front view; tank drawn 22 cm high
+  const s = 6, x0 = 80, yb = 150, tw = 30 * s, th = 22 * s; // front view; tank drawn 22 cm high
   let g = `<rect x="${x0}" y="${yb - 10 * s}" width="${tw}" height="${10 * s}" fill="${SKY}"/>`;
   g += `<path d="M${x0} ${yb - th} V${yb} H${x0 + tw} V${yb - th}" fill="none" stroke="${N}" stroke-width="4" stroke-linejoin="round"/>`;
   g += `<rect x="${x0 + 10 * s}" y="${yb - 15 * s}" width="${10 * s}" height="${15 * s}" fill="${Y}" stroke="${N}" stroke-width="3"/>`;
@@ -55,7 +54,7 @@ const FIGS = {};
   g += line([x0 - 14, yb - 10 * s], [x0 - 14, yb], 2, TEAL) + T(x0 - 18, yb - 5 * s + 5, '10 cm', 14, TEAL, 'end');
   g += T(x0 + tw / 2, yb + 24, 'base 30 cm by 20 cm  (front view)', 15, TEAL);
   g += T(x0 + 5 * s, yb - 10 * s - 8, 'water', 14, TEAL);
-  FIGS[5] = { GF7: svg('Front view of a tank with water 10 centimetres deep. A block 10 by 10 by 15 centimetres stands upright on the bottom, sticking out above the water.', 330, 185, g, 62) };
+  FIGS[5] = { GF7: svg('Front view of a tank with water 10 centimetres deep. A block 10 by 10 by 15 centimetres stands upright on the bottom, sticking out above the water.', 380, 185, g, 66) };
 }
 // ---------- L8 Think harder Q3: trapezium ABCD, AB parallel to DC, angle DAB 84, angle ABC 97 ----------
 {
@@ -68,35 +67,35 @@ const FIGS = {};
   g += arc(A, 0, rad(84), 26) + T(A[0] + 44, A[1] + 28, '84&#176;', 15, TEAL);
   g += arc(B, rad(180), rad(180 - 97), 26) + T(B[0] - 44, B[1] + 30, '97&#176;', 15, TEAL);
   g += T(150, 14, 'AB is parallel to DC', 14, TEAL);
-  FIGS[8] = { TH3: svg('Trapezium ABCD with AB parallel to DC. Angle DAB is 84 degrees and angle ABC is 97 degrees. The arrows on AB and DC show they are parallel.', 330, 180, g, 44) };
+  FIGS[8] = { TH3: svg('Trapezium ABCD with AB parallel to DC. Angle DAB is 84 degrees and angle ABC is 97 degrees. The arrows on AB and DC show they are parallel.', 330, 180, g, 40) };
 }
 // ---------- L8 Think harder Q4: square ABCD with an equilateral triangle CDE outside it ----------
 {
-  const s = 100, A = [90, 200], B = [190, 200], C = [190, 100], D = [90, 100], E = [140, 100 - 86.6];
+  const s = 100, A = [90, 224], B = [190, 224], C = [190, 124], D = [90, 124], E = [140, 124 - 86.6];
   let g = poly([A, B, C, D], WH) + poly([D, C, E], 'rgba(255,201,60,0.45)');
   g += tick(D, E) + tick(C, E) + tick(D, C);
   g += T(A[0] - 14, A[1] + 6, 'A') + T(B[0] + 14, B[1] + 6, 'B') + T(C[0] + 14, C[1] + 6, 'C') + T(D[0] - 14, D[1] + 6, 'D') + T(E[0], E[1] - 8, 'E');
-  g += T(140, 158, 'square', 14, TEAL, 'middle', 600) + T(240, 60, 'CDE is', 14, TEAL, 'start', 600) + T(240, 77, 'equilateral', 14, TEAL, 'start', 600);
-  FIGS[8].TH4 = svg('A square ABCD with an equilateral triangle CDE drawn on side CD, outside the square. Point E is outside the square.', 330, 215, g, 40);
+  g += T(140, 182, 'square', 14, TEAL, 'middle', 600) + T(240, 84, 'CDE is', 14, TEAL, 'start', 600) + T(240, 101, 'equilateral', 14, TEAL, 'start', 600);
+  FIGS[8].TH4 = svg('A square ABCD with an equilateral triangle CDE drawn on side CD, outside the square. Point E is outside the square.', 330, 240, g, 33);
 }
 // ---------- L8 Go further Q5: isosceles ABC (AB = AC, angle A = 40), D on AC with BD = BC ----------
 {
-  const L = 190, half = rad(20), B = [60, 190], BC = 2 * L * Math.sin(half), C = [B[0] + BC, 190];
-  const A = [B[0] + BC / 2, 190 - L * Math.cos(half)];
+  const L = 190, half = rad(20), B = [60, 214], BC = 2 * L * Math.sin(half), C = [B[0] + BC, 214];
+  const A = [B[0] + BC / 2, 214 - L * Math.cos(half)];
   const ux = (A[0] - C[0]) / L, uy = (A[1] - C[1]) / L, CD = 2 * BC * Math.cos(rad(70));
   const D = [C[0] + CD * ux, C[1] + CD * uy];
   let g = poly([A, B, C], WH) + line(B, D, 3, N, '7 5');
   g += tick(A, B, 1) + tick(A, C, 1) + tick(B, C, 2) + tick(B, D, 2);
   g += T(A[0], A[1] - 8, 'A') + T(B[0] - 14, B[1] + 6, 'B') + T(C[0] + 14, C[1] + 6, 'C') + T(D[0] + 14, D[1] - 2, 'D');
-  g += T(A[0], A[1] + 46, '40&#176;', 15, TEAL);
-  FIGS[8].GF5 = svg('Isosceles triangle ABC with AB equal to AC and angle BAC 40 degrees. D is a point on AC and BD is equal to BC (matching tick marks).', 280, 215, g, 52);
+  g += T(A[0], A[1] + 62, '40&#176;', 15, TEAL);
+  FIGS[8].GF5 = svg('Isosceles triangle ABC with AB equal to AC and angle BAC 40 degrees. D is a point on AC and BD is equal to BC (matching tick marks).', 280, 240, g, 52);
 }
 // ---------- L8 Go further Q6: square ABCD with equilateral triangle ABE inside ----------
 {
   const A = [60, 190], B = [180, 190], C = [180, 70], D = [60, 70], E = [120, 190 - 120 * Math.sqrt(3) / 2];
   let g = poly([A, B, C, D], WH) + poly([A, B, E], 'rgba(255,201,60,0.45)') + line(E, D, 3, N, '7 5') + line(E, C, 3, N, '7 5');
   g += tick(A, E) + tick(B, E) + tick(A, B);
-  g += T(A[0] - 14, A[1] + 6, 'A') + T(B[0] + 14, B[1] + 6, 'B') + T(C[0] + 14, C[1] + 6, 'C') + T(D[0] - 14, D[1] + 6, 'D') + T(E[0], E[1] - 10, 'E');
+  g += T(A[0] - 14, A[1] + 6, 'A') + T(B[0] + 14, B[1] + 6, 'B') + T(C[0] + 14, C[1] + 6, 'C') + T(D[0] - 14, D[1] + 6, 'D') + T(E[0], E[1] + 26, 'E');
   FIGS[8].GF6 = svg('A square ABCD with an equilateral triangle ABE drawn on side AB inside the square. Dashed lines join E to D and to C.', 260, 220, g, 46);
 }
 module.exports = FIGS;

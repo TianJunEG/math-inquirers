@@ -32,7 +32,7 @@ const shareBars = () => {
     g += txt(x0 - 10, y + 27, lab, 16, N, 'end');
     for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${i < shaded ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
   });
-  g += txt(x0 + w + 12, 40, 'shaded = a share', 15, TEAL, 'start', 600);
+  g += txt(x0 + w + 12, 40, 'shaded = a share', 19, TEAL, 'start', 600);
   return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 650 120" width="650" xmlns="http://www.w3.org/2000/svg" style="max-width:58%">${g}</svg>`;
 };
 

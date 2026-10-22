@@ -192,7 +192,7 @@ module.exports = {
       H.sub('d', 'Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
       H.q(5, 'A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.', { keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + figQ5() + '</div>', 3000, { h: 20 }),
-        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge there are 4 cubes: 2 corners and ____ cubes between them. On one face, the cubes that are not on an edge make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
+        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge: 2 corners and ____ cubes between. On one face, the middle cubes make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
       H.q(6, 'Container A is full of water. Tank B is empty.', { keepNext: true }),
       H.fig(figQ6()),
       H.sub('a', 'How many litres of water are in container A?   __________ ℓ'),

@@ -199,7 +199,7 @@ module.exports = {
   },
 
   workbook: H => [
-    H.p(['<b style="color:#1F7A6F">Reading angles:</b> angle BOC means the angle at O between the lines OB and OC (the letter in the middle is the corner).'], { after: 10 }),
+    H.p(['<b style="color:#1F7A6F">Reading angles:</b> angle BOC is the angle at O between OB and OC (the middle letter is the corner).'], { after: 10 }),
     H.p('Reasons:  A straight line 180°.   B point 360°.   C vertically opposite angles are equal.   D triangle 180°.   E isosceles: base angles are equal.   F parallelogram or trapezium: neighbours add to 180°.', { after: 20 }),
     H.q(1, 'Left: straight lines AB and CD cross at O. Right: four angles meet at a point. Drawings are not to scale, so do not use a protractor.', { before: 20, keepNext: true }),
     H.fig(q1Fig()),
@@ -213,7 +213,7 @@ module.exports = {
     H.sub('b', '(try this one if you like) Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),
     H.sub('c', 'Trapezium:   angle D = ______   angle C = ______', { after: 40 }),
     H.p('Reasons:  A straight line 180°.   B point 360°.   C vertically opposite angles are equal.   D triangle 180°.   E isosceles: base angles are equal.   F parallelogram or trapezium: neighbours add to 180°.', { pb: true, after: 60 }),
-    H.q(3, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle. Write the reason (a letter A to F, or in words) only for (b) and (d). For (a) and (c) just write the answer.', { before: 0, keepNext: true }),
+    H.q(3, 'In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle. Give a reason (a letter A to F, or words) for (b) and (d) only.', { before: 0, keepNext: true }),
     H.fig(q4Fig()),
     H.sub('a', 'Angle ADB = _____', { after: 40 }),
     H.sub('b', 'Angle BAD = ______  because ______________________', { after: 40 }),

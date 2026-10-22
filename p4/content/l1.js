@@ -154,7 +154,7 @@ module.exports = {
     W.push(H.ans('Factors of 49:'));
     W.push(H.q(6, 'Multiple riddles.', { keepNext: true }));
     W.push(H.sub('a', 'I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?', { keepNext: true }));
-    W.push(H.sub('', 'Step 1: multiples of 3 AND 4 between 30 and 70 (count in 12s): ______, ______, ______.  Step 2: cross out any multiple of 8. Left: ______ and ______.  Step 3: use the last clue.   <b>I am:</b> ________', { keepNext: true }));
+    W.push(H.sub('', 'Step 1: multiples of 3 AND 4 between 30 and 70 (count in 12s): ______, ______, ______.  Step 2: cross out any multiple of 8. Left: ______ and ______.  Step 3: use the last clue.   I am: ________', { keepNext: true }));
     W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
     W.push(...H.lines(2));
     return W;

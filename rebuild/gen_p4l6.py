@@ -90,7 +90,7 @@ def rsq(c,s,d0,col=TEAL):
 # ---------- 1. title ----------
 put('title',title_slide(f'{P}-title','LESSON 6  •  WEEK 3','Angle Turns','Angles',
  'Estimate and measure angles, find every angle in a fan, work out clock angles, turn on the 8-point compass and find missing angles in squares and rectangles.',
- 'Objective: Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each space) and turns of the minute hand (6° a minute), turn on the 8-point compass (45° steps) and work backwards from a turn, and find unknown angles in squares and rectangles. '
+ 'Objective: Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each space), turn on the 8-point compass (45° steps), and find unknown angles in squares and rectangles. '
  'Thinking strategies today: ESTIMATE FIRST (compare with 90° and 180°), COUNT THE TURN (12 clock spaces, 8 compass steps), WORK IN ORDER (every angle in a fan), WORK BACKWARDS (undo a turn). '
  'Materials: A protractor and a ruler for each child, a paper clock with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall. '
  'Online: children use their own protractor and a paper clock at home; the screen is North for the turning games, and children stand and turn on camera. '

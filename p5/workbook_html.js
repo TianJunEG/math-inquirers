@@ -20,8 +20,8 @@ const reflect = n => `<div class="p" style="border:3px solid #1F7A6F;border-radi
 <div style="margin:5px 0">Next time I will try ______________________________________________________________</div>
 <div style="margin:5px 0">${bx}${L.stuckTick(n)}${bx}Pass</div></div>`;
 // Neutral choice line at the top of page 1 (one short line; Lesson 1 says "question 2").
-const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:5px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceAfter(n)}:</b> carry on, or try Think harder. You can swap at any time.</div>`;
-const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2.</b> Start with ${txt}, then choose. You do not have to finish. Keep the last 10 minutes for Think harder, Go further or the Investigation.</div>`;
+const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:5px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceAfter(n)}:</b> carry on, or try Think harder. Swap any time.</div>`;
+const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2.</b> Start with ${txt}, then choose. You do not have to finish. Last 10 minutes: Think harder, Go further or the Investigation.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];

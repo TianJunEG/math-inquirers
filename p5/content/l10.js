@@ -112,7 +112,7 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    W.push(H.p('Choose a start: draw a model, list in order, make a table, work backwards or guess and check. Check your answer against EVERY clue.', { after: 40 }));
+    W.push(H.p('Choose a start: draw a model, list in order, make a table, work backwards or guess and check. Check EVERY clue.', { after: 40 }));
     // Q1 logic (was Q2)
     W.push(H.q(1, 'Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues to find who ordered what. Put a tick for yes and a cross for no.', { keepNext: true }));
     ['Clue 1:  Ali did not order laksa or satay.', 'Clue 2:  The roti prata was ordered by a girl (Mei and Siti are girls; Ali and Ben are boys).', 'Clue 3:  Ben did not order satay.     Clue 4:  Mei did not order roti prata.'].forEach(c => W.push(H.p(c, { indent: { left: 400 }, after: 10 })));

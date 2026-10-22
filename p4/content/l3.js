@@ -172,13 +172,11 @@ module.exports = {
     W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 124 plates altogether.', { keepNext: true }));
     W.push(H.sub('a', 'Draw a bar model.'));
     W.push(H.gap(240));
-    W.push(H.sub('b', 'How many plates of chicken rice did it sell?'));
-    W.push(H.ans());
-    W.push(H.sub('c', 'How many more plates of chicken rice than laksa did it sell?'));
-    W.push(H.ans());
+    W.push(H.sub('b', 'How many plates of chicken rice did it sell?   ____________'));
+    W.push(H.sub('c', 'How many more plates of chicken rice than laksa did it sell?   ____________'));
     W.push(H.q(7, 'Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
     W.push(H.fig(chainSvg()));
-    W.push(H.sub('', 'Hint: if two numbers next to each other are known, work backwards by taking away. If the gaps are in the middle, guess the 2nd number, test it, then adjust.'));
+    W.push(H.sub('', 'Hint: two neighbours known? Work backwards (take away). Gaps in the middle? Guess the 2nd number, test it, adjust.'));
     W.push(H.sub('a', ['Chain (a): work backwards from 13 and 21.     <b style="color:#1F7A6F">b</b>  Chain (b): guess the 2nd number, then check.']));
     return W;
   }
