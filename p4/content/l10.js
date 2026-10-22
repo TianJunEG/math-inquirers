@@ -51,10 +51,11 @@ module.exports = {
   deck: {
     today: 'Choose a way into tricky puzzles: guess and check, suppose, work backwards, and logic. Then check every fact.',
     warmGame: 'Who am I? Four clues, one at a time, on a 1 to 100 grid. Cross out every number that does not fit each clue until one is left.',
-    warmQs: [['Buses every 6 min and every 8 min leave together at 9:00. Next together?', '9:24'], ['Round 45 678 to the nearest thousand.', '46 000'], ['3/4 of 24 = ?', '18'], ['0.6 × 4 = ?', '2.4'], ['Turn clockwise from N to SW. How many degrees?', '225°']],
+    warmQs: [["Buses every 6 min and every 8 min leave together at 9:00. Next together?", "9:24"], ["Round 45 678 to the nearest thousand.", "46 000"], ["3/4 of 24 = ?", "18"]],
+    warmWeekly: [["0.6 × 4 = ?", "2.4"], ["Turn clockwise from N to SW. How many degrees?", "225°"]],
     expSetup: ['Four puzzle cards, A to D. Start with any card.', 'Read the card aloud with your partner.', 'Try something: a guess, a drawing or a table.', 'Write the answer AND how you got it.'],
     expPic: 'four puzzle cards: A "next-door numbers multiply to 210", B "10 bugs, 68 legs", C "double it, add 7, get 43", D "who has the fish?".',
-    expAsk: [['How did you start card B?', 'Suppose all 10 are beetles: 60 legs, 8 short; each spider adds 2 legs, so 4 spiders and 6 beetles.'], ['Which card was hardest? What helped?', 'Open answers: a table, a drawing, or starting at the end.'], ['Could any card have two answers? How do you know?', 'No: each one was checked. A: 14 × 15 = 210. C: 18. D: Ali fish, Mei cat, Ravi dog.']],
+    expAsk: [["How did you start card B?", "Suppose all 10 are beetles: 60 legs, 8 short; each spider adds 2 legs, so 4 spiders and 6 beetles."], ["Which card was hardest? What helped?", "Open answers: a table, a drawing, or starting at the end."]],
     mini1: { head: 'Guess and check with a table', table: [['Try', 'Product', ''], ['20 × 21', '420', 'too big'], ['17 × 18', '306', 'too small'], ['18 × 19', '342', 'just right']], body: ['Two next-door numbers multiply to make 342.', 'Each try tells you to go up or down.'], ans: '18 and 19' },
     mini2: { head: 'Suppose they are all the same', body: ['15 bicycles and tricycles have 38 wheels.', 'Suppose all are bicycles: 30 wheels. 8 short.', 'Each swap to a tricycle adds 1 wheel.'], ans: '8 tricycles and 7 bicycles. Check: 14 + 24 = 38.' },
     keyHead: 'Key idea: pick a way in',
