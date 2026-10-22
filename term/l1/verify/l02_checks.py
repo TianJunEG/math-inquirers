@@ -157,7 +157,13 @@ def run(d):
     eq(T['T3']['val'], cands, 'T3')
     eq([m for m in range(51, 60) if nearer_ten(m) == 60], [56, 57, 58, 59], 'T3 after clue 2')
     eq(nearer_ten(55), None, 'T3: 55 is exactly halfway')
-    eq(T['T4']['val'], line(97, 100) + [len(line(96, 100)) - 1], 'T4')
+    # T4: the frog hops 2 numbers at a time from 90 to 100; does it ever land on 99?
+    landings = list(range(90 + 2, 101, 2))
+    eq(landings, [92, 94, 96, 98, 100], 'T4 landings')
+    eq(T['T4']['val'][:2], [x for x in landings if x not in (92, 94, 100)], 'T4 blanks')
+    eq(99 in landings, False, 'T4 never lands on 99')
+    eq(T['T4']['parts'][1]['val'], 'no', 'T4b')
+    eq(T['T4']['val'], [96, 98], 'T4')
 
     # ---- Go further
     g1 = T['G1']['val']

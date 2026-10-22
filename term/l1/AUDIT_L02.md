@@ -7,7 +7,7 @@ Desk audit by the author (a model); no child has used this lesson. The table bel
 | Criterion | Result | Evidence |
 |---|---|---|
 | Schema valid (JSON Schema + key checks) | PASS | schema: all top-level keys present |
-| Every answer verified independently (verify/lNN_checks.py) | PASS | verify: 445 answer checks by independent script passed (term/l1/verify/l02_checks.py) |
+| Every answer verified independently (verify/lNN_checks.py) | PASS | verify: 448 answer checks by independent script passed (term/l1/verify/l02_checks.py) |
 | Online practice variants verified (expression, oracle, runner JS) | PASS | practice: 166 template variants verified three ways (expression, brute-force oracle, runner JavaScript calc) |
 | Timing: parts sum to 90, no part OVER, buffer, slow-class | PASS | timing: 11 parts, contiguous, sum = 90 minutes exactly |
 | Slides and script linked (each slide once, in its part) | PASS | link: 30 slides each shown exactly once, all question ids resolve |
@@ -17,11 +17,11 @@ Desk audit by the author (a model); no child has used this lesson. The table bel
 | Spare-time menu present | PASS | spare: 3 spare-time activities, 11 optional minutes (not in the 90 sum), rules present |
 | No copied contest text | PASS | copy: no 7-word overlap with docs/sasmo analysis/solution notes or docs/books (originals only) |
 | Mascot used modestly | PASS | mascot: Mi on 4 slides, short friendly lines only |
-| Workbook page fill (model) | PASS | pages: workbook page fill 93%, 92%, 92%, 89%, 87% (kit page excluded) |
-| Real PDF page count and fill | PASS | outputs: Workbook PDF 7 pages, fill (measured on the PDF) 97%, 96%, 98%, 93%, 92%, 82%, 82% |
+| Workbook page fill (model) | PASS | pages: workbook page fill 88%, 95%, 87%, 86%, 95% (kit page excluded) |
+| Real PDF page count and fill | PASS | outputs: Workbook PDF 7 pages, fill (measured on the PDF) 88%, 96%, 87%, 86%, 95%, 82%, 83% |
 | No template leak (other lesson titles, Lesson 1 text) | PASS | template leak: no other lesson title or stray Lesson 1 text in the built files |
 
-Timing: script 74.7 min of 90, slow-class 88.6 min. Workbook fill (model): 93%, 92%, 92%, 89%, 87%.
+Timing: script 74.7 min of 90, slow-class 88.6 min. Workbook fill (model): 88%, 95%, 87%, 86%, 95%. Validator after the fix pass: 17 pass, 0 warn, 0 FAIL.
 
 ## Judgement lines (author)
 
@@ -46,11 +46,19 @@ Timing: script 74.7 min of 90, slow-class 88.6 min. Workbook fill (model): 93%, 
 11 Pacing / compacting: 1 Choice after page 1, lockstep deck.
 12 Extension, not acceleration: 2 Halfway and equal jumps extend, no new topic.
 
-Total: 19 / 24
+Total: 19 / 24 (author). Independent auditor scored 17/24; after the fix pass the re-score is below.
 
 ## Known limits
 
 - Never trialled with children; times and difficulty are modelled.
 - Nearer ten is beyond Primary 1 (rounding is Primary 4); the syllabus check for this new-topic lesson is still open.
-- Investigation page has only one writing line (template); children use spare paper.
-- Kit pages are number cards; families without a printer use 11 paper squares.
+- Investigation page now has 4 writing lines (template fix 2379b77); no table of 41 to 49, children write on the lines or spare paper.
+- Kit pages are number cards (square ones cards, wide tens cards, no circles); families without a printer use 11 paper squares.
+
+## Fix pass (22 Oct 2026), re-score of the independent audit (instrument A)
+
+Independent auditor's 17/24 re-scored by the fix author (a model, not independent): 4 justify 1 to 2 (T1 and T3 now have writing lines, S8 has Yes/No printed); 2 depth 1 (unchanged, 8 + 4 + 3 items); 5, 7, 8, 11 unchanged at 1; 12 extension 1 (nearer ten stays informal). Re-score about 18/24. Tier compliance 15/15 (T4 replaced by a new idea: hopping 2 at a time and landing on 100, not counting on by 1). Start here still 8 items; not shortened (19 modelled minutes). Details in `audit/FIXES_L02.md`.
+
+Owner decision of 22 Oct 2026 applied: tutor guide (strand note and prep list) and parent summary now say that Term 1 goes beyond the school Primary 1 syllabus on purpose; nothing says MOE-aligned.
+
+Open: (1) syllabus check for the new-topic lesson (number-line scale, nearer ten) still with the owner or a tutor; (2) Start here still long (S4 and S5 involve reading and writing number words); (3) no table for the Investigation (template); (4) the T-page numbered line is not printed (children use their cards, frog or a drawing); (5) home sheet prints ___ not boxes (template).

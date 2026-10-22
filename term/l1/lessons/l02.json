@@ -18,7 +18,7 @@
       "Number line as a scale (tens marks, equal jumps)",
       "Which ten is nearer (beyond Primary 1: informal enrichment only)"
     ],
-    "note": "Strand label for the tutor only. NEW-TOPIC lesson: the syllabus names reading and writing numbers in numerals and words in Primary 1 Whole Numbers, but number-line scales and missing marks need a check by the owner or a tutor. Which ten is nearer is the idea behind rounding, which the syllabus first names in Primary 4 (nearest 10, p. 37); here it is informal enrichment at Think harder and the Investigation, never called rounding and never a rule. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned."
+    "note": "Strand label for the tutor only. NEW-TOPIC lesson: the syllabus names reading and writing numbers in numerals and words in Primary 1 Whole Numbers, but number-line scales and missing marks need a check by the owner or a tutor. Which ten is nearer is the idea behind rounding, which the syllabus first names in Primary 4 (nearest 10, p. 37); here it is informal enrichment at Think harder and the Investigation, never called rounding and never a rule. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Term 1 goes beyond the school Primary 1 syllabus on purpose (here: which ten is nearer, equal jumps in 3s, numbers between two marks); every Start here item is still approachable with the cards, the frog and the number line. Never describe the program as MOE-aligned."
   },
   "contest_moves": [
     "numbers between two marks (counting the numbers in the middle, not the hops)",
@@ -56,7 +56,7 @@
       "A timer slide or a visible clock"
     ],
     "kit_pages": [
-      "Two cut-out pages at the back of the workbook: ones number cards 0 to 10 (rounded cards) and tens number cards 0 to 100 (round cards). A grown-up cuts them out before the lesson."
+      "Two cut-out pages at the back of the workbook: ones number cards 0 to 10 (square cards) and tens number cards 0 to 100 (wide cards). A grown-up cuts them out before the lesson."
     ],
     "ruler": false,
     "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp; a grown-up cuts out the cards before the lesson. Small things never go near the mouth or ears."
@@ -144,9 +144,9 @@
   "workbook": {
     "choice_after": 3,
     "home_hint": "Use your number cards, a line you draw, or a toy frog.",
-    "header": "Whole Numbers: number line and number words",
+    "header": "Whole Numbers: number line",
     "hint_p1": "Use your number cards, your frog or a drawing. Say your answer out loud, then write it.",
-    "hint_p3": "Use your number line and count the hops. Then write how you know. Choose any question, in any order.",
+    "hint_p3": "Use your number cards, your frog or a drawing. Where there is a line, write how you know. Choose any question, in any order.",
     "kits": [
       {
         "type": "cards",
@@ -173,7 +173,7 @@
       {
         "type": "cards",
         "title": "Kit page 2: tens number cards 0 to 100",
-        "intro": "A grown-up cuts these out before the lesson. Put the round cards in order in a row. Keep them in an envelope.",
+        "intro": "A grown-up cuts these out before the lesson. Put the wide cards in order in a row. Keep them in an envelope.",
         "labels": [
           0,
           10,
@@ -188,10 +188,9 @@
           100
         ],
         "cols": 3,
-        "w": 150,
+        "w": 200,
         "h": 150,
-        "round": true,
-        "width": 75
+        "width": 100
       }
     ]
   },
@@ -483,7 +482,7 @@
           },
           {
             "k": "SAY",
-            "text": "Same line, new job. Now find your tens cards, the round ones: 0, 10, 20, up to 100. Put them in a row in order. Each hop is now a jump of ten."
+            "text": "Same line, new job. Now find your tens cards, the wide ones: 0, 10, 20, up to 100. Put them in a row in order. Each hop is now a jump of ten."
           },
           {
             "k": "WORK",
@@ -783,7 +782,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: write each number in digits. Question 5: write the number in words. Question 6: write the missing tens. Question 7: which two tens is each number between? Question 8: Is Siti correct? Then write the number after 59."
+            "text": "Page 2. Question 4: write each number in digits. Question 5: write the number in words. Question 6: write the missing tens. Question 7: which two tens is each number between? Question 8: Is Ben correct? Then write the number after 59."
           },
           {
             "k": "WORK",
@@ -1206,7 +1205,7 @@
           "text": "There is no card for 47. Where does it live?"
         }
       ],
-      "note": "Round 2, about 6 minutes. The same 11 places become a line in tens: this is the idea of a scale, the same line counted in ones or in tens. Children lay the 11 tens cards (round, from the kit page) in order, hop the frog in tens, then place it on 60, 30 and 90. Then hop in small steps from 40 to 50 through the gap. Then ask for 47: it lives between 40 and 50. Count the hops: 3 to 50, 7 to 40, so it is nearer 50. Children keep their line on the table until Talk time."
+      "note": "Round 2, about 6 minutes. The same 11 places become a line in tens: this is the idea of a scale, the same line counted in ones or in tens. Children lay the 11 tens cards (wide, from the kit page) in order, hop the frog in tens, then place it on 60, 30 and 90. Then hop in small steps from 40 to 50 through the gap. Then ask for 47: it lives between 40 and 50. Count the hops: 3 to 50, 7 to 40, so it is nearer 50. Children keep their line on the table until Talk time."
     },
     {
       "id": "s-explore3",
@@ -1703,7 +1702,7 @@
           ]
         }
       ],
-      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 8 answer: sixty. Siti kept counting ones after 9; after 59 a new ten begins. Never ask a child to show a wrong answer to the group."
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 8 answer: sixty. Ben kept counting ones after 9; after 59 a new ten begins. Never ask a child to show a wrong answer to the group."
     },
     {
       "id": "s-choice",
@@ -2127,13 +2126,13 @@
         "parts": [
           {
             "l": "a",
-            "text": "20 = ______",
+            "text": "20 = ___",
             "ans": "twenty",
             "val": "twenty"
           },
           {
             "l": "b",
-            "text": "40 = ______",
+            "text": "40 = ___",
             "ans": "forty",
             "val": "forty"
           }
@@ -2188,7 +2187,7 @@
         "id": "S7",
         "page": 2,
         "tier": "start",
-        "text": "Fill in the missing numbers.",
+        "text": "Fill in the blanks. Each number is between two tens.",
         "parts": [
           {
             "l": "a",
@@ -2219,8 +2218,8 @@
         "hint": "Look at the tens digit. 23 has 2 tens, so it is past 20 and not yet 30. Put your frog on it.",
         "solution": "(a) 23 is 2 tens and 3 more: between 20 and 30. (b) 68 is between 60 and 70.",
         "mistakes": [
-          "Writing 2 and 3 (digits) instead of 20 and 30.",
-          "Choosing the ten below twice, for example 60 and 60."
+          "Writing 22 and 24 (the numbers just before and after, not the tens).",
+          "Writing 2 and 3 (digits) instead of 20 and 30."
         ],
         "mins": 2.5,
         "lines": 0
@@ -2229,11 +2228,11 @@
         "id": "S8",
         "page": 2,
         "tier": "start",
-        "text": "Siti counts: 57, 58, 59, 510, 511.",
+        "text": "Ben counts: 57, 58, 59, 510, 511.",
         "parts": [
           {
             "l": "a",
-            "text": "Is Siti's counting correct? Circle Yes or No.",
+            "text": "Is Ben's counting correct? Circle Yes or No.",
             "ans": "No",
             "val": "no"
           },
@@ -2244,15 +2243,15 @@
             "val": 60
           }
         ],
-        "answer": "60. After 9 the ones are used up, so a new ten begins. Siti kept counting ones.",
+        "answer": "60. After 9 the ones are used up, so a new ten begins. Ben kept counting ones.",
         "val": [
           60
         ],
         "hint": "Say the numbers out loud in order: 57, 58, 59, and then? Tap your line.",
-        "solution": "After 59 the ones are used up, so we start a new ten: 6 tens and 0 ones, 60. Siti kept adding ones after the 9, so she wrote 510.",
+        "solution": "After 59 the ones are used up, so we start a new ten: 6 tens and 0 ones, 60. Ben kept adding ones after the 9, so he wrote 510.",
         "mistakes": [
           "Writing 510 (the ones digit goes past 9).",
-          "Not saying what she mixed up (any clear sentence about the tens is fine)."
+          "Circling Yes (not noticing 510 follows 59)."
         ],
         "mins": 2.5,
         "lines": 0
@@ -2290,7 +2289,7 @@
           "Counting the hops from the wrong ten."
         ],
         "mins": 4,
-        "lines": 0
+        "lines": 2
       },
       {
         "id": "T2",
@@ -2342,56 +2341,51 @@
           "Answering 54 (one before 55: clue 3 says one before ME is halfway)."
         ],
         "mins": 5,
-        "lines": 0
+        "lines": 2
       },
       {
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Mei's frog is on 96. It hops 1 number at a time to 100.",
+        "text": "Mei's frog is on 90. It hops 2 numbers at a time.",
         "parts": [
           {
             "l": "a",
-            "text": "It lands on [], [], [], [].",
-            "ans": "97, 98, 99, 100",
+            "text": "It lands on 92, 94, [], [], 100.",
+            "ans": "96 and 98",
             "val": [
-              97,
-              98,
-              99,
-              100
+              96,
+              98
             ]
           },
           {
             "l": "b",
-            "text": "It makes [] hops.",
-            "ans": "4",
-            "val": 4
+            "text": "Does it land on 99? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
           }
         ],
-        "answer": "97, 98, 99, 100 (4 hops)",
+        "answer": "96 and 98; No (it lands on 98, then 100)",
         "val": [
-          97,
-          98,
-          99,
-          100,
-          4
+          96,
+          98
         ],
-        "hint": "Say it out loud: 96, 97, 98, 99 and then? Ten tens make one hundred.",
-        "solution": "97, 98, 99, 100. The frog makes 4 hops. After 99 the ones and the tens are used up, so we write 100, one hundred.",
+        "hint": "Hop 2 at a time from 90 and say each landing out loud: 90, 92, 94, and then? Skip the number in between.",
+        "solution": "90, 92, 94, 96, 98, 100. The frog lands on 96 and 98. It hops over 99 (from 98 to 100), so it does not land on 99.",
         "mistakes": [
-          "Writing 910 or 9100 after 99.",
-          "Writing 96 as a landing (the frog starts there)."
+          "Writing 95 and 96 (hopping 1 at a time).",
+          "Circling Yes for 99 (counting every number, not every second number)."
         ],
         "mins": 4,
         "lines": 0,
         "visual": {
           "type": "number_line",
-          "start": 94,
+          "start": 90,
           "end": 100,
           "step": 1,
-          "label_every": 2,
+          "label_every": 10,
           "highlight": [
-            96
+            90
           ],
           "width": 460
         }
@@ -2490,19 +2484,25 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Make a puzzle. Draw 5 boxes in a row. The jumps are equal. Write numbers in 2 boxes that are not next to each other. Leave 3 boxes empty. Give it to a grown-up.",
-        "parts": [],
-        "answer": "Any correct line, for example 15, [], [], [], 35 (jump 5: 20, 25, 30).",
+        "text": "Make a puzzle. The jumps are equal. Write numbers in 2 boxes that are not next to each other. Leave 3 boxes empty. Give it to a grown-up.",
+        "parts": [
+          {
+            "l": "",
+            "text": "[], [], [], [], []",
+            "ans": "Any correct line",
+            "val": "open"
+          }
+        ],
+        "answer": "Any correct line, for example 15, __, __, __, 35 (jump 5: 20, 25, 30).",
         "val": "open",
-        "hint": "Pick a jump first, such as 5 or 10. Write the whole line. Then rub out the middle boxes.",
+        "hint": "Pick a jump first, such as 5 or 10. Write the whole line on the lines below. Then copy only 2 of the numbers into the boxes above.",
         "solution": "Example: jump 5: 15, 20, 25, 30, 35. Hide 20, 25 and 30. The grown-up counts the 4 jumps from 15 to 35, which is 20 altogether, so the jump is 5, and the boxes are 20, 25 and 30. Check: the same jump between every two boxes.",
         "mistakes": [
           "Making jumps that are not equal.",
           "Giving two numbers that do not fit one equal jump."
         ],
         "mins": 5,
-        "lines": 1,
-        "draw": true
+        "lines": 3
       }
     ],
     "investigation": {
@@ -2557,7 +2557,7 @@
     },
     {
       "id": "E2",
-      "text": "Fill in the missing numbers.",
+      "text": "Fill in the blanks. 76 is between two tens.",
       "parts": [
         {
           "l": "",
@@ -2576,6 +2576,7 @@
       ],
       "solution": "76 is 7 tens and 6 more, so it is past 70 and not yet 80.",
       "mistakes": [
+        "Writing 75 and 77 (just before and after, not the tens).",
         "Writing 7 and 8.",
         "Writing 60 and 70."
       ]
@@ -2652,7 +2653,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Fill in the blanks: 83 is between ___ and ___.",
+      "text": "Fill in the blanks. 83 is between two tens: ___ and ___.",
       "answer": "80 and 90",
       "val": [
         80,
@@ -3298,7 +3299,7 @@
     ]
   },
   "parent": {
-    "summary": "Every number has a spot on a number line and a name. Your child built a number line from cut-out cards, hopped a toy along it, read number names such as fourteen and forty, and found which two tens a number sits between.",
+    "summary": "Every number has a spot on a number line and a name. Your child built a number line from cut-out cards, hopped a toy along it, read number names such as fourteen and forty, and found which two tens a number sits between. Term 1 goes beyond the school Primary 1 syllabus on purpose, with help from cards and a toy frog.",
     "words": [
       "number line: numbers in order along a path, each with its own spot",
       "teen: ten and some more (fourteen is 14)",
@@ -3335,7 +3336,8 @@
     "Tell parents a week before: print the whole workbook including the two kit pages at the back, cut out the number cards beforehand, and find a small toy to be the frog. If there is no printer, 11 small pieces of paper with 0 to 10 on one side and the tens on the back work as well.",
     "Prepare your own row of 11 cards to show on camera: 0 to 10, then the tens 0 to 100.",
     "Have the slides open and check the timer slide is visible on screen share.",
-    "Check the recording settings exclude children's video."
+    "Check the recording settings exclude children's video.",
+    "Tell parents plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose (it is not a school-syllabus programme) and never call it MOE-aligned."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
