@@ -190,7 +190,7 @@ def parent_html(d):
     p = d['parent']
     li = lambda xs, cls='': ''.join(f'<li>{E(x)}</li>' for x in xs)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{PARENT_CSS}'
-            '@page{size:A4;margin:12mm 15mm}body{font-size:13.2px;line-height:1.38}.side h3{font-size:15px}.panel{padding:10px 14px;margin-bottom:10px}.panel h3{font-size:16px}.tips li{margin-bottom:6px}.hd{margin:0 0 10px}.big{font-size:60px}'
+            '@page{size:A4;margin:12mm 15mm}body{font-size:%spx;line-height:%s}' % (('13.2', '1.38'), ('12.6', '1.3'), ('12', '1.25'))[min(d.get('_parent_tight', 0), 2)] + '.side h3{font-size:15px}.panel{padding:10px 14px;margin-bottom:10px}.panel h3{font-size:16px}.tips li{margin-bottom:6px}.hd{margin:0 0 10px}.big{font-size:60px}'
             f'</style></head><body><div class="hd"><img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto"><div class="big">{d["lesson_in_term"]}</div><div><div class="tp">Level {d["level"]} • Term {d["term"]} • Lesson {d["lesson_in_term"]} • For parents</div><h1>{E(d["title"])}</h1></div></div>'
             f'<div class="cols"><div><div class="kick">What we did</div><p style="margin:3px 0 8px">{E(p["summary"])}</p>'
             f'<div class="quote">{E(p.get("quote") or d["big_idea"] + ".")}</div>'
@@ -240,7 +240,10 @@ def build_print(d, pw):
         d['_home_tight'] = lvl
         path = render('home', home_html(d), f + ' \u2022 Home practice', f'L{n}_Home_Practice.pdf')
         if pdfcheck.pdf_pages(path) == 2: break
-    render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')
+    for lvl in (0, 1, 2):          # the one-page parent summary: shrink the type a little until it is one page
+        d['_parent_tight'] = lvl
+        path = render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')
+        if pdfcheck.pdf_pages(path) == 1: break
 
 
 def _measure(pw, d):
