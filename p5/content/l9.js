@@ -181,3 +181,17 @@ module.exports = {
     return W;
   }
 };
+
+// ---- figure for the printed Go further B1 (the diamond dot pattern): figures 1, 2 and 3 ----
+{
+  const D = '#1B2A49', T = '#1F7A6F';
+  let g = '', x0 = 10;
+  [[1], [1, 3, 1], [1, 3, 5, 3, 1]].forEach((rows, f) => {
+    const w = 5 * 18, cx = x0 + w / 2, h = rows.length;
+    rows.forEach((n, r) => { for (let i = 0; i < n; i++) g += `<circle cx="${cx + (i - (n - 1) / 2) * 18}" cy="${20 + r * 18}" r="6" fill="#FFC93C" stroke="${D}" stroke-width="2"/>`; });
+    g += `<text x="${cx}" y="${20 + 4 * 18 + 24}" font-size="16" font-weight="700" text-anchor="middle" fill="${T}" font-family="Arial">Figure ${f + 1}</text>`;
+    x0 += w + 26;
+  });
+  const fig = `<svg aria-label="Three diamond dot patterns: figure 1 has 1 dot, figure 2 has rows of 1, 3 and 1 dots, figure 3 has rows of 1, 3, 5, 3 and 1 dots" viewBox="0 0 ${x0} 124" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(x0 * 0.8)}px;max-width:100%">${g}</svg>`;
+  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 3].fig = fig;
+}

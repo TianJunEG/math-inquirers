@@ -46,7 +46,7 @@ module.exports = {
     mistakes: ['Taking the second fraction of the whole amount instead of the remainder (1/4 of the remainder read as 1/4 of all the money).', 'Thinking the difference goes down by 10 when one person gives the other 10 (it goes down by 20: one loses 10, the other gains 10).', 'Keeping the units from the Before model when the thing that stays the same is a different amount, so the units in the two models are not the same size.'],
     extension: 'Make up your own before-and-after story where the total stays the same and the answer is 24. Swap with a partner and solve each other’s story with a model.',
     key: [
-      ['Q1', '(a) $20, $10, $30 (book 1/3 of $60 = $20, remainder $40, pen 1/4 of $40 = $10, left $30)  (b) Too little ($30 left is less than $36): Ravi had $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)  (d) 1/6 (1/4 of the 2/3 that was left)'],
+      ['Q1', '(a) $20, $10, $30 (book 1/3 of $60 = $20, remainder $40, pen 1/4 of $40 = $10, left $30)  (b) Too little ($30 left is less than $36): Ravi had $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)'],
       ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
       ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
       ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
@@ -124,7 +124,6 @@ module.exports = {
     H.sub('a', 'Try $60 first. The book costs $______, the pen costs $______, and $______ is left.'),
     H.sub('b', 'Ravi really had $36 left, not $30. Was $60 too much or too little for the money he had at first? How much money did Ravi have at first?'), H.ans(),
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
-    H.sub('d', '(try this one if you like) What fraction of his money did he spend on the pen?   ____________'),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
     H.p(['<b style="color:' + TEAL + '">Tip:</b> “3/4 as many” means that for every 3 stickers Siti has, Mei has 4. Try 3 and 4, then 6 and 8, then 9 and 12 … until the total is 84.'], { after: 20 }),
     H.fig(afterModel()),

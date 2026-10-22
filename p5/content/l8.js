@@ -208,7 +208,6 @@ module.exports = {
     H.sub('d', 'The missing angle at the point on the right = ________.   Which angle fact did you use? ______________________', { after: 40 }),
     H.q(2, 'Find the missing angles. Write each angle fact you use.', { keepNext: true, before: 100 }),
     H.p(['<b style="color:#1F7A6F">Hint:</b> in a parallelogram, neighbouring angles add to 180° and opposite angles are equal. A rhombus has 4 equal sides, so each triangle made by a diagonal is isosceles. In a trapezium, the angles between the parallel sides add to 180°.'], { after: 20 }),
-    H.p(['<b style="color:#1F7A6F">Write like this:</b> angle B = 108° because neighbours in a parallelogram add to 180°.'], { after: 20 }),
     H.fig(q3Fig()),
     H.sub('a', 'Parallelogram:   angle B = ______   angle C = ______   angle D = ______', { after: 40 }),
     H.sub('b', 'Rhombus:   angle PQR = ______   angle QPR = ______  (hint: PQ = QR)', { after: 40 }),
@@ -238,15 +237,15 @@ module.exports = {
   { const A = [20, 120], B = [150, 120], D = P(...A, 80, 135), C = [D[0] + 130, D[1]];
     chk(A, B, D, 135, 'A1 A'); chk(B, A, C, 45, 'A1 B'); chkPar(A, B, D, C, 'A1');
     const g = poly([A, B, C, D], SKY) + arc(A, B, D, 24, '3 × B', RED, 70, 15) + arc(B, A, C, 24, '', RED, 0) + tx(B[0] - 34, B[1] - 10, 'B', 17, RED) + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4);
-    module.exports.qbank.stretch[0].fig = svg(300, 140, 'A parallelogram ABCD in which angle A is three times angle B', g, 0.85); }
+    module.exports.qbank.stretch[0].fig = svg(300, 140, 'A parallelogram ABCD in which angle A is three times angle B', g, 0.7); }
   // A3: the same figure as Start here Q4 (the question text gives the 56 degrees)
-  module.exports.qbank.stretch[2].fig = q5Fig().replace('viewBox="0 0 600 190"', 'viewBox="40 10 340 180"').replace(/width:\d+px/, 'width:320px');
+  module.exports.qbank.stretch[2].fig = q5Fig().replace('viewBox="0 0 600 190"', 'viewBox="40 10 340 180"').replace(/width:\d+px/, 'width:230px');
   // A4: square ABCD with the equilateral triangle CDE outside it
   { const s = 100, A = [50, 190], B = [A[0] + s, A[1]], C = [B[0], A[1] - s], D = [A[0], C[1]], E = [A[0] + s / 2, D[1] - s * Math.sin(rad(60))];
     chk(D, A, E, 150, 'A4 ADE'); chk(A, D, E, 15, 'A4 DAE'); chkEq(D, C, D, E, 'A4 DC DE');
     const g = poly([A, B, C, D], SKY) + poly([D, C, E], Y) + line(A, E, TEAL, 3, '7 5') + arc(D, A, E, 26, '?', RED, 46, 17) + arc(A, D, E, 36, '?', RED, 56, 17)
       + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4) + pl(E, 'E', 0, -8);
-    module.exports.qbank.stretch[3].fig = svg(240, 230, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC; the line AE is drawn', g, 0.72); }
+    module.exports.qbank.stretch[3].fig = svg(240, 230, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC; the line AE is drawn', g, 0.62); }
   // B1: isosceles triangle ABC (AB = AC, angle A = 40) with D on AC and BD = BC
   { const A = [150, 20], L = 140, B = P(...A, L, 250), C = P(...A, L, 290);
     const BC = dist(B, C), CD = BC * Math.sin(rad(40)) / Math.sin(rad(70)), u = [(A[0] - C[0]) / L, (A[1] - C[1]) / L], D = [C[0] + u[0] * CD, C[1] + u[1] * CD];

@@ -55,12 +55,12 @@ module.exports = {
     ],
     extension: 'Write 1 as the sum of three different unit fractions. Is there more than one way? (Only one: 1/2 + 1/3 + 1/6.)',
     key: [
-      ['Q1', '(a) 5/8  (b) 9/4 = 2 1/4 m  (c) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)'],
+      ['Q1', '(a) 5/8  (b) Group A. 2/3 = 10/15 and 3/5 = 9/15. (Or: each child in A is 1/3 short of a whole pizza, in B 2/5 short, and 2/5 is more than 1/3.)'],
       ['Q2', '(a) 1/4 + 1/5 (9/20 − 5/20 = 4/20 = 1/5)  (b) 1/2 + 1/6 (2/3 − 1/2 = 4/6 − 3/6 = 1/6). The worked example is 7/10 = 1/2 + 1/5. (3/8 in two ways is Think harder A1.)'],
       ['Q3', '(a) 120  (b) 60  (c) 1/4. Ben 60, remainder 180, Ali 2/3 of 180 = 120, left 60 = 1/4 of 240.'],
       ['Q4', '(a) 1/30, 1/42. The bottom numbers are 1 × 2, 2 × 3, 3 × 4, 4 × 5, …  (b) 2/3, 3/4, 4/5  (c) 9/10. 1/90 is the 9th term (9 × 10), and each sum is 1 take away the next unit fraction.'],
       ['Q5', '(a) $120  (b) $36. Model: 10 equal units; game 4, book 3, left 3 units = $36, so 1 unit = $12.'],
-      ['Q6', '(a) 4/1 + 3/2 = 5 1/2  (b) 1/3 + 2/4 = 5/6 (1/4 + 2/3 = 11/12 is bigger, so test both ways)  (c) 1/4 + 2/3 = 11/12, only 1/12 away from 1']
+      ['Q6', '(a) 4/1 + 3/2 = 5 1/2  (b) 1/3 + 2/4 = 5/6 (1/4 + 2/3 = 11/12 is bigger, so test both ways). The sum closest to 1 is in the Think harder pool.']
     ]
   },
 
@@ -115,7 +115,8 @@ module.exports = {
       { q: 'Which is bigger, 5/6 or 6/7? Explain without finding common denominators.', a: '6/7. 5/6 is 1/6 short of 1 and 6/7 is only 1/7 short of 1, and 1/7 is smaller than 1/6.' },
       { q: '(A puzzle that goes further) A rope 3/4 m long is cut into 3 equal pieces. How long is each piece? Draw a bar to help.', a: '1/4 m (3/4 ÷ 3: 3 quarters shared by 3 pieces is 1 quarter each).' },
       { q: 'Find a fraction between 2/5 and 1/2 with 20 as the bottom number.', a: '9/20 (2/5 = 8/20 and 1/2 = 10/20).' },
-      { q: 'Which is bigger, 7/8 of 24 or 5/6 of 30?', a: '5/6 of 30. 7/8 of 24 = 21 and 5/6 of 30 = 25.' }
+      { q: 'Which is bigger, 7/8 of 24 or 5/6 of 30?', a: '5/6 of 30. 7/8 of 24 = 21 and 5/6 of 30 = 25.' },
+      { q: 'Use the digit cards 1, 2, 3 and 4 once each in the boxes to make two fractions and add them (fractions need not be proper). Which sum is closest to 1? Test every way.', a: '1/4 + 2/3 = 11/12 (only 1/12 away from 1). It is the closest of all 24 ways; 1/3 + 2/4 = 5/6 is 1/6 away.' }
     ],
     challenge: [
       { q: 'Write 1 as the sum of three different unit fractions. Find all the ways.', a: 'Only one way: 1/2 + 1/3 + 1/6. (The biggest part must be 1/2, and then 1/2 = 1/3 + 1/6 is the only split into two different unit fractions.)' },
@@ -135,8 +136,7 @@ module.exports = {
     // Q1 sharing
     W.push(H.q(1, 'Sharing. Remember: 3 ÷ 4 = 3/4 (3 pizzas shared by 4 children).', { before: 20, keepNext: true }));
     W.push(H.sub('a', '5 pizzas are shared equally among 8 children. Each gets  ______  of a pizza.'));
-    W.push(H.sub('b', 'A 9 m ribbon is cut into 4 equal pieces. Each piece is  ______  m long.  (a fraction or a mixed number is fine)'));
-    W.push(H.sub('c', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 20 }));
+    W.push(H.sub('b', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 20 }));
     W.push(H.p(['<b style="color:' + TEAL + '">Hint:</b> how much of a whole pizza is each child short of? Compare the two shortfalls.'], { after: 10 }));
     W.push(H.fig(shareBars()));
     // Q2 unit fractions
@@ -171,7 +171,6 @@ module.exports = {
     W.push(H.fig('<div style="text-align:center;font-size:24px;font-weight:700">' + boxfr() + ' &nbsp;+&nbsp; ' + boxfr() + '</div>'));
     W.push(H.sub('a', 'The largest sum:   ______________________'));
     W.push(H.sub('b', 'The smallest sum:   ______________________   Did you test both ways?'));
-    W.push(H.sub('c', 'The sum closest to 1:   ______________________'));
     return W;
   }
 };

@@ -30,7 +30,7 @@ const extra = (n) => {
   out.push(...hdr(n, ls.topic, 'INVESTIGATION'));
   out.push(banner('Investigation: ' + inv.title));
   out.push(`<div class="p" style="border:2px dashed #1F7A6F;border-radius:10px;padding:5px 12px;margin:4px 0 6px;background:#F3FAF8;font-size:17px"><b style="color:#1F7A6F">An open puzzle for everyone.</b> ${inv.first}</div>`);
-  out.push(q(8, '(a) ' + inv.parts[0], { before: 80, after: 30, keepNext: true }));
+  out.push(q('C', '(a) ' + inv.parts[0], { before: 80, after: 30, keepNext: true }));
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(b)</b> ${inv.parts[1]}</div>`);
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);
   out.push(...lines(6));
@@ -40,7 +40,7 @@ const extra = (n) => {
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Draw a big, neat diagram first and label every length or angle you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner(n === 7 ? 'Think harder  (A1 is a puzzle that goes further: percentage change)' : 'Think harder'));
   // Think harder questions are numbered A1 to A4 and Go further questions B1 to B3, so no printed number repeats Start here Q1 to Q6.
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('A' + (i + 1), x.q, { before: 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 2 : (n === 7 && i < 2 ? 1 : 3))); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('A' + (i + 1), x.q, { before: x.fig ? 90 : 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig ? 1 : (n === 7 && i < 2 ? 1 : 3))); });
   // Page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));

@@ -59,9 +59,9 @@ module.exports = {
     extension: 'Make a better-buy poster: three pack sizes of the same snack where the biggest pack is NOT the best buy. Swap with a partner: can they find the best buy and prove it?',
     key: [
       ['Q1', '(a) Bottles: 16, 48, 80; minutes for 160 bottles: 10; 12 minutes: 192 bottles  (b) 9.25 a.m. (400 ÷ 16 = 25 minutes)'],
-      ['Q2', '(a) A 70¢, B 73¢, C 65¢ (Shop C gives 12 cans for $7.80)  (b) Shop C  (c) Three ways make exactly 20 cans: 1 deal from C (12 cans) + 2 packs from B = $7.80 + $5.84 = $13.64 (the cheapest); 2 packs from A + 2 packs from B = $8.40 + $5.84 = $14.24; 5 packs from B = $14.60. Any correct way with its correct cost is fine'],
+      ['Q2', '(a) A 70¢, B 73¢, C 65¢ (Shop C gives 12 cans for $7.80)  (b) Shop C  (Ben needing exactly 20 cans with whole packs is in the Think harder pool: three ways, the cheapest is 1 deal from C + 2 packs from B = $13.64)'],
       ['Q3', '(a) 20 minutes (240 ÷ 12)  (b) 8 minutes (240 ÷ 30)  (c) 10 minutes (240 ÷ 24)  (d) 20 minutes (120 ÷ 6)'],
-      ['Q4', '(a) 18 minutes (900 ÷ 50)  (b) 20 minutes (P prints 150 pages alone in 5 min; 750 ÷ 50 = 15 min more)  (c) 540 pages (both work 18 min: P 30 × 18 = 540, Q 20 × 18 = 360)'],
+      ['Q4', '(a) 18 minutes (900 ÷ 50)  (b) 20 minutes (P prints 150 pages alone in 5 min; 750 ÷ 50 = 15 min more)  (Splitting 900 pages so both printers finish together, 540 pages to P, is in the Think harder pool)'],
       ['Q5', '(a) $4.80 (3 h 35 min: first hour $1.20, then 2 h 35 min is 5 half hours and 5 min, so 6 lots of 60¢ = $3.60)  (b) 3 hours ($3.60 − $1.20 = $2.40 = 4 half hours after the first hour)'],
       ['Q6', '(a) Gym A $50, $70, $90; Gym B $35, $70, $105  (b) 10 visits  (c) Gym A, by $12 ($86 and $98)']
     ]
@@ -114,7 +114,9 @@ module.exports = {
       { q: '3 machines make 360 masks in 4 minutes. At the same rate, how many masks do 5 machines make in 6 minutes?', a: '900 (1 machine makes 30 masks a minute: 30 × 5 × 6)' },
       { q: 'Shop X sells pens at 80¢ each. Shop Y sells 4 pens for $3.00 and gives 1 extra pen free with every 4 pens bought. Mei needs 20 pens. Which shop is cheaper, and by how much?', a: 'Shop Y by $4. At X, 20 pens cost $16.00. At Y, each deal gives 5 pens for $3.00, so 20 pens are 4 deals, $12.00.' },
       { q: 'A full tank holds 300 ℓ. A drain lets out 15 ℓ a minute, but a tap is left on that adds 5 ℓ a minute. How long does the tank take to empty?', a: '30 minutes (300 ÷ 10)' },
-      { q: 'A dripping tap drips 5 ml of water every 2 seconds. How many litres of water does it waste in one whole day?', a: '216 ℓ (in 1 day there are 86 400 seconds, 43 200 drips of 5 ml is 216 000 ml).' }
+      { q: 'A dripping tap drips 5 ml of water every 2 seconds. How many litres of water does it waste in one whole day?', a: '216 ℓ (in 1 day there are 86 400 seconds, 43 200 drips of 5 ml is 216 000 ml).' },
+      { q: 'Three shops sell the same can of drink: Shop A, 6 cans for $4.20; Shop B, 4 cans for $2.92; Shop C, a deal of 12 cans for $7.80 (10 cans and 2 free). Ben needs exactly 20 cans. He may buy from more than one shop, but only whole packs. Find the cheapest way and its cost.', a: '$13.64: 1 deal from C (12 cans, $7.80) + 2 packs from B (8 cans, $5.84). The only other ways are 2 packs from A + 2 packs from B = $14.24 and 5 packs from B = $14.60.' },
+      { q: 'Printer P prints 30 pages a minute and printer Q prints 20 pages a minute. Mei splits a 900-page job between them so that both printers start together and finish at the same time. How many pages does she give to P?', a: '540 pages (together they print 50 pages a minute, so the job takes 18 minutes; P prints 30 × 18 = 540 and Q prints 20 × 18 = 360)' }
     ],
     challenge: [
       { q: 'Printer P prints a job in 6 minutes. Printer Q prints the same job in 3 minutes. How long do they take working together?', a: '2 minutes (pretend the job is 6 pages: P prints 1 page a minute, Q 2 pages, together 3 a minute)' },
@@ -152,9 +154,6 @@ module.exports = {
       H.p(['<b style="color:#1F7A6F">Start here:</b> Shop A, 6 cans for $4.20, so 1 can costs $4.20 ÷ 6 = ______¢.'], { after: 20 }),
       H.sub('a', 'Price of 1 can:   A ________   B ________   C ________'),
       H.sub('b', 'Which shop is the best buy?   ________'),
-      H.sub('c', '(try this one if you like) Ben needs exactly 20 cans. He may buy from more than one shop, but only whole packs. Find one way and work out the cost.', { keepNext: true }),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> take Shop C’s deal (12 cans for $7.80). How many more cans does Ben still need? Can you make that many from one shop’s packs?'], { after: 20 }),
-      ...H.lines(1),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
         H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________<br>' + L('(d)') + '(try this one if you like) The tank is full. Both taps are off but the crack still leaks. How long until it is half full?   ________'), 6300, { h: 40 })])]),
@@ -163,7 +162,6 @@ module.exports = {
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),
       H.sub('b', 'Instead, P starts alone. After 5 minutes, Q joins in. How long does the whole job take from the start?', { keepNext: true }),
       ...H.lines(1),
-      H.sub('c', '(try this one if you like) Mei splits the 900 pages between P and Q so that both printers start together and finish at the same time. How many pages does she give to P? Hint: use your answer to (a).   ________'),
       H.q(5, 'Look at the car park sign.', { keepNext: true }),
       H.fig(figPark()),
       H.p(['<b style="color:#1F7A6F">Start here:</b> the time line shows the first hour, then half hours. Circle every half hour that Ali’s car is in the car park (a part of a half hour counts). Count them.'], { after: 10 }),

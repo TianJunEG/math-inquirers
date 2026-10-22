@@ -93,9 +93,9 @@ module.exports = {
       ['Q1', '(a) 24 cm³ (4 × 3 × 2)  (b) 40 cubes (the smallest cube it fits in is 4 × 4 × 4 = 64 cubes; 64 − 24 = 40)'],
       ['Q2', '(a) 8 cuboids: 1 × 1 × 36, 1 × 2 × 18, 1 × 3 × 12, 1 × 4 × 9, 1 × 6 × 6, 2 × 2 × 9, 2 × 3 × 6, 3 × 3 × 4  (b) only 3 × 3 × 4 (every other one has an edge longer than 5 cm)'],
       ['Q3', '(a) 27 ℓ (50 × 30 × 18 = 27 000 cm³)  (b) 33 ℓ (50 × 30 × 22 = 33 000 cm³)  (c) 12 cm (9000 ÷ 1500 = 6 cm lower; 18 − 6 = 12)'],
-      ['Q4', '(a) 5000 cm³ (5 × 10 × 10 × 10)  (b) 5 cm (5000 ÷ 1000)  (c) 20 cm  (d) 3000 cm³ (40 × 25 × 3)'],
+      ['Q4', '(a) 5000 cm³ (5 × 10 × 10 × 10)  (b) 5 cm (5000 ÷ 1000)  (c) 20 cm. (A stone that raises the water a further 3 cm has a volume of 3000 cm³, 40 × 25 × 3: Think harder pool.)'],
       ['Q5', '3 faces: 8 (corners)   2 faces: 24 (12 edges × 2)   1 face: 24 (6 faces × 4)   no paint: 8 (2 × 2 × 2 inside).  Check: 8 + 24 + 24 + 8 = 64'],
-      ['Q6', '(a) 14.4 ℓ (30 × 20 × 24 = 14 400 cm³)  (b) 12 cm (14 400 ÷ 1200)  (c) 8 cm (14 400 ÷ (600 + 1200) = 8)']
+      ['Q6', '(a) 14.4 ℓ (30 × 20 × 24 = 14 400 cm³)  (b) 12 cm (14 400 ÷ 1200). (Equal depth, 8 cm: 14 400 ÷ (600 + 1200) = 8: Think harder pool.)']
     ]
   },
 
@@ -146,7 +146,9 @@ module.exports = {
       { q: 'A tank is 60 cm long, 40 cm wide and 50 cm high. A bucket holds 8 ℓ. What is the fewest number of buckets of water needed to fill the tank at least 3/4 full?', a: '12 buckets (3/4 of 120 ℓ = 90 ℓ; 90 ÷ 8 = 11.25, so 11 buckets are not enough)' },
       { q: 'A tank has a base 40 cm by 30 cm. It holds 36 ℓ of water. How deep is the water?', a: '30 cm (36 000 ÷ 1200)' },
       { q: 'A cube-shaped container with 20-cm edges is full of water. All of it is poured into an empty tank with a base 50 cm by 32 cm. How deep is the water in the tank?', a: '5 cm (8000 ÷ 1600)' },
-      { q: 'A tank with a base 50 cm by 20 cm has water 8 cm deep. Ali pours in 3 ℓ of water. Then he drops in a stone with a volume of 500 cm³, and it sinks. How deep is the water now?', a: '11.5 cm (3 ℓ = 3000 cm³ raises the water 3000 ÷ 1000 = 3 cm to 11 cm; the stone raises it 500 ÷ 1000 = 0.5 cm more).' }
+      { q: 'A tank with a base 50 cm by 20 cm has water 8 cm deep. Ali pours in 3 ℓ of water. Then he drops in a stone with a volume of 500 cm³, and it sinks. How deep is the water now?', a: '11.5 cm (3 ℓ = 3000 cm³ raises the water 3000 ÷ 1000 = 3 cm to 11 cm; the stone raises it 500 ÷ 1000 = 0.5 cm more).' },
+      { q: 'A tank has a base 40 cm by 25 cm and the water is 20 cm deep. Ali drops in a stone and the water rises another 3 cm. What is the volume of the stone?', a: '3000 cm³ (40 × 25 × 3)' },
+      { q: 'Container A has a base 30 cm by 20 cm and is 24 cm high; it is full of water. Tank B has a base 40 cm by 30 cm and is empty. All the water from A is poured into B. Then some water is poured back from B into A until the water in A and B is equally deep. How deep is it?', a: '8 cm (14 400 cm³ of water spreads over both bases, 600 + 1200 = 1800 cm², so 14 400 ÷ 1800 = 8)' }
     ],
     challenge: [
       { q: 'A big cube is painted on the outside and cut into small cubes of the same size. 96 small cubes have exactly one painted face. How many small cubes are there altogether?', a: '216 (each face has 96 ÷ 6 = 16 = 4 × 4 one-face cubes, so the cube is 6 cubes along each edge: 6 × 6 × 6)' },
@@ -189,16 +191,13 @@ module.exports = {
       H.fig(figQ4()),
       H.p(['<b style="color:#1F7A6F">Start here:</b> the base is 40 × 25 = ______ cm². A layer of water 1 cm deep over the base is ______ cm³. The cubes take up space, so the water has to rise.'], { after: 20 }),
       H.sub('a', 'Volume of 5 cubes: ______ cm³   (b) Rise: ____ cm   (c) Depth now: ____ cm'),
-      H.sub('d', '(try this one if you like) Then Ali drops in a stone. The water rises another 3 cm. What is the volume of the stone?   ____________ cm³'),
       H.q(5, 'A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.', { keepNext: true }),
       H.tbl([3000, 6900], [H.row([H.cell('<div>' + figQ5() + '</div>', 3000, { h: 20 }),
-        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> every corner cube has 3 painted faces. Along one edge there are 4 cubes: 2 corners and ____ between them. On one face, the cubes not on an edge make a ____ by ____ square. Fill in the table.<br>How many small cubes have paint on exactly …') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
+        H.cell('<div>' + t('<b style="color:#1F7A6F">Start here:</b> corner cubes have 3 painted faces. An edge has 4 cubes: 2 corners and ____ between. The middle of a face is a ____ by ____ square of cubes. Fill in the table.') + paintTbl + t('How many small cubes have no paint at all?  ' + blank(60) + '<br>Check: do your four numbers add up to 64?') + '</div>', 6900, { h: 30 })])]),
       H.q(6, 'Container A is full of water. Tank B is empty.', { keepNext: true }),
       H.fig(figQ6()),
       H.sub('a', 'How many litres of water are in container A?   __________ ℓ'),
       H.sub('b', 'All of A is poured into B. How deep is the water in B?   ______ cm'),
-      H.sub('c', '(try this one if you like) Then some water is poured back from B into A until the water in A and B is equally deep. How deep is it?', { keepNext: true }),
-      ...H.lines(1)
     ];
   }
 };
@@ -206,8 +205,8 @@ module.exports = {
 // ---- figures for the printed Think harder (A1, A4) and Go further (B2, B3) items ----
 {
   // A1: the box 9 cm long, 6 cm wide and 5 cm high (no grid: the 2-cm cubes are for the child to imagine)
-  module.exports.qbank.stretch[0].fig = svg(260, 150, 'A box 9 cm long, 6 cm wide and 5 cm high',
-    box(OB(40, 130, 15), 9, 6, 5, { fill: [WTOP, '#FFFFFF', '#DCE6F2'], labels: ['9 cm', '5 cm', '6 cm'], lsize: 15 }), 230);
+  module.exports.qbank.stretch[0].fig = svg(280, 150, 'A box 9 cm long, 6 cm wide and 5 cm high',
+    box(OB(62, 130, 15), 9, 6, 5, { fill: [WTOP, '#FFFFFF', '#DCE6F2'], labels: ['9 cm', '5 cm', '6 cm'], lsize: 15 }), 250);
   // A4 and B2: a 3 by 4 by 5 cuboid made of 1-cm cubes, painted on the outside
   const cub = () => svg(250, 170, 'A cuboid 5 cubes long, 4 cubes wide and 3 cubes high, built from 1-centimetre cubes and painted on the outside',
     box(OB(20, 150, 30), 5, 4, 3, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }), 180);
