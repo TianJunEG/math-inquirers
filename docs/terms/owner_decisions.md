@@ -20,3 +20,7 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 - **Term 1 and the holiday course.** Holiday graduates now start at Term 1, but the Term 1 plans adapt the holiday lessons (9 of 10 in most levels). A graduate would repeat them.
 - Discount size for paying a term in full; term price (the website still says S$65 a lesson, S$650 for 10).
 - The 10th lesson per term: which content goes in it.
+
+## Resolved after follow-up (22 Oct 2026)
+- **Term 1 is written as new lessons.** The holiday course stays a standalone foundation course; all four terms are new content (40 new lessons per level). Holiday lessons are not reused; spiral review of holiday topics is allowed in warm-ups only.
+- **Full-term discount: 5%.**
