@@ -45,7 +45,7 @@ def check_slide(n, G, pic=None):
     labels = [('1', 'Try it'), ('2', 'Think')]
     for i, c in enumerate(ck):
         top = tops[i]
-        pw = 440
+        pw = (260 if (pic and pic.get(i) and 'viewBox="0 0 220' in pic[i]) else 440)
         qw = 1664 - 190 - 20 - (pw + 20 if (pic and pic.get(i)) else 0)
         lab = f'<div style="width:170px;flex:none;background:{WHITE};border-radius:20px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center"><p style="font-size:44px;font-weight:800;color:{TEAL};line-height:1">{labels[i][0]}</p><p style="font-size:26px;font-weight:700;color:{MUTED}">{labels[i][1]}</p></div>'
         qd = f'<div style="flex:1;min-width:0;background:{WHITE};border-radius:20px;padding:16px 28px;display:flex;align-items:center"><p style="font-size:32px;font-weight:700;line-height:1.28">{E(c["q"])}</p></div>'
