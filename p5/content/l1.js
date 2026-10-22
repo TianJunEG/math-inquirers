@@ -64,7 +64,7 @@ module.exports = {
     hook: ['Welcome to Math Inquirers P5! This holiday we play with puzzles that stretch you before P6. Every lesson we notice a pattern, test it and explain why.', 'Today our numbers grow up to 10 million. How big is a million, really? By the end you will know, and you will solve puzzles that most adults get wrong.'],
     warmIntro: ['Draw seven boxes for millions down to ones. I turn over one digit card at a time. Write it in a box straight away. No moving it later!', 'The winner is the number closest to 5 000 000. Think: where does a 4 go? A 9? A 0?'],
     predict: ['Before any working: how long is a million seconds? An hour, a day, a week, a month or a year? Write your guess in the corner of your whiteboard and do not change it.'],
-    exploreHints: ['Stuck: how many seconds in one minute? In one hour? Multiply, do not add.', 'Stuck on days: you know the seconds in one day. How many days make close to 1 000 000? Try 10 days first.', 'Finished early: how long is 10 million seconds? More or less than a school term?'],
+    exploreHints: ['Stuck: how many seconds in one minute? In one hour? Multiply, do not add.', 'Stuck on days: you know the seconds in one day. How many days make close to 1 000 000? Try 10 days first.', 'If a pair wants more: how long is 10 million seconds? More or less than a school term?'],
     think: [
       '“Cards 0, 1, 2, 4, 5, 7, 8. I want the number closest to 5 000 000. I could start with 5 and make the smallest number after it: 5 012 478. That is 12 478 too big.”',
       '“But I must also look just below the target. Start with 4 and make the biggest number after it: 4 875 210. That is 124 790 too small. I compare the two gaps: 12 478 is smaller, so 5 012 478 wins. I always test both sides.”',

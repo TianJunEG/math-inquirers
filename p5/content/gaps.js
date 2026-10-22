@@ -81,7 +81,7 @@ const L = {
     ],
     whatIf: ['Draw any five-sided shape and tear off its five corners. Fit them together. Do they fit on a straight line, or round a point, or neither? Predict first: how many degrees do the five corners make altogether?', '540°, which is one and a half turns (360° + 180°). A five-sided shape can be cut into 3 triangles from one corner, and 3 × 180° = 540°. A four-sided shape gives 2 triangles, 360°.'],
     pose: 'Draw a triangle and a parallelogram that share a side. Give two or three angles and ask for one more. Swap and solve.',
-    solo: 'Q3 (a) (b) and Q4 (a) (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
+    solo: 'Q4 (a) (b), then Q3 (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
   },
   9: {
     sneak: [

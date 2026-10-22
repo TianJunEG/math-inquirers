@@ -167,12 +167,14 @@ def model(n, D, S, fx=None):
     res['warm'] = part(speak=REC + say_s(W(sc['warmIntro'])) + read_s(sum(W(q) for q in wq)),
                        wait=len(wq) * (WAIT_Q + TAKE), act=(min(L['game'], fx.get('game_cap', 150)) if fx else L['game']), trans=2 * SLIDE)
     # --- explore ---
+    think30 = 30 if 'Think for 30 seconds' in ' '.join(sc.get('predict', [])) else 0   # protected think time before touching objects
+    think30_talk = 30 if any('Protected think time' in x for x in sc.get('talkRules', [])) else 0
     ea = dk['expAsk']
     out_, back_ = (BO_OUT, BO_BACK) if bo_e else (MAIN_OUT, MAIN_BACK)
     if fx: ea = ea[:2]; L['mat'] = min(L['mat'], 30); L['expl'] = min(L['expl'], fx.get('expl_cap', 390))
     res['explore'] = part(
         speak=REC + say_s(W(sc['predict']) + 15 + 10 + 0.5 * sum(W(a[1]) for a in ea)) + read_s(W(dk['expSetup']) + sum(W(a[0]) for a in ea)),
-        wait=20 + 30 + len(ea) * (WAIT_Q + TAKE), act=L['expl'], trans=2 * SLIDE + L['mat'] + out_ + back_ + 20)
+        wait=20 + 30 + len(ea) * (WAIT_Q + TAKE), act=L['expl'] + think30, trans=2 * SLIDE + L['mat'] + out_ + back_ + 20)
     # --- mini-lesson ---
     sp = wt = ac = 0
     for i in mini_ids:
@@ -221,8 +223,8 @@ def model(n, D, S, fx=None):
     # pairs talk 120 s + Investigation first step 120 s are activity; volunteers share 120 s is waiting/answers
     if fx:   # Investigation first step moves to take-home / next lesson opener; volunteers 90 s
         res['talk'] = part(speak=REC + say_s(W(sc['talk']) + 20) + read_s(tq) + 10, wait=90, act=120, trans=SLIDE + 30)
-    else:
-        res['talk'] = part(speak=REC + say_s(W(sc['talk']) + 20 + 15) + read_s(tq) + 10, wait=120, act=240,
+    else:   # + protected 30 s silent think before the pairs talk (and before the Investigation first step)
+        res['talk'] = part(speak=REC + say_s(W(sc['talk']) + 20 + 15) + read_s(tq) + 10, wait=120, act=240 + think30_talk,
                            trans=SLIDE + 30 + 30)
     # --- exit, reflection, closing ---
     ex = S[ids.index('exit')]['text']

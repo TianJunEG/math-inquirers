@@ -228,7 +228,7 @@ FIX = {
 STD = dict(open=1.5, sneak=4.5, warm=4.5, explore=13, mini=12, brk=3, wst=2.5, p1=14, c1=2.5, wt=4.5, p2=11.5, c2=2.5,
            talk=5, exit=5, lb=2, close=1.5)
 STD_L10 = dict(STD, close=3)
-DEV = {4: dict(wt=2.5), 10: dict(mini=10, p1=12, wt=3.5)}
+DEV = {4: dict(wt=2.5), 9: dict(mini=10.5), 10: dict(mini=10, p1=12, wt=3.5)}
 
 def final_budget(n):
     b = dict(STD_L10 if n == 10 else STD)

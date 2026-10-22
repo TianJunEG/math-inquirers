@@ -139,7 +139,7 @@ module.exports = {
     hook: ['Welcome back, inquirers! Today we are detectives again, and the clue is an angle. Surveyors, builders and pilots all use angles to find things they cannot measure. We will find angles without using a protractor at all.', 'Notice it, test it, explain why. Today "explain why" has a special meaning: every angle you find needs a REASON.'],
     warmIntro: ['Here are four angles. You are not allowed a protractor. Use the corner of your paper: that is 90°. Fold it in half: that is 45°. Write your guesses on your whiteboard.', 'Which was the hardest to guess? How did you decide?'],
     predict: ['Draw any triangle and tear off the three corners. What do you think will happen when you put the corners together side by side? Write it down before you try.', 'Now a four-sided shape. Will the four corners fit on a straight line, or round a point?'],
-    exploreHints: ['Stuck: put the three pointed corners together so that the points touch. Are they flat along the bottom?', 'Corners do not fit: draw a long straight line first and put the corners along it.', 'Finished early: draw a triangle with a right angle. Do the corners still fit the same way?'],
+    exploreHints: ['Stuck: put the three pointed corners together so that the points touch. Are they flat along the bottom?', 'Corners do not fit: draw a long straight line first and put the corners along it.', 'If a pair wants more: draw a triangle with a right angle. Do the corners still fit the same way?'],
     think: ['“I want the angle next to 75° on a straight line. A straight line is 180°, so 180 take away 75 is 105. My reason: angles on a straight line add up to 180°.”', '“Triangle with 50° and 30°: the three angles add up to 180°, so the third is 180 − 50 − 30 = 100°. My reason: angles in a triangle add up to 180°.”', '“This triangle is isosceles and the top angle is 50°. The other two angles are equal. 180 − 50 = 130, and 130 ÷ 2 = 65 each. My reason: base angles of an isosceles triangle are equal.”'],
     circulate: ['Ask: “What is your reason for that angle?”', 'Ask: “Which angle did you find first? Which angle does it help you find next?”', 'Ask: “Do your angles add up to 180° in each triangle? Check.”'],
     hints: ['Hint 1: “Write down every angle you know first.”', 'Hint 2: “Look for a straight line, a triangle or a pair of equal sides. Each one gives you an angle fact.”', 'Hint 3: “Find ONE new angle and give its reason. Then look again: what can you find with it?”'],
@@ -177,8 +177,9 @@ module.exports = {
     stretch: [
       { q: 'In parallelogram ABCD, angle A is 3 times angle B. Find angle A and angle B. Give your reason.', a: 'A = 135° and B = 45°. Adjacent angles of a parallelogram add up to 180°, so A and B make 4 equal parts of 45°: B = 45°, A = 135°.' },
       { q: 'An isosceles triangle has an angle of 110°. Find the other two angles. Why is there only one answer?', a: '35° and 35°. 110° cannot be a base angle (two of them would be 220°), so it is the top angle and 180° − 110° = 70° is shared by two equal base angles.' },
-      { q: 'In trapezium ABCD, AB is parallel to DC. Angle DAB is 84° and angle ABC is 97°. Find angle ADC and angle BCD.', a: 'ADC = 96° and BCD = 83° (angles between the parallel sides add up to 180°). Check: 84° + 97° + 96° + 83° = 360°.' },
+      { q: 'ABCD is a parallelogram and E is a point on DC with DA = DE. Angle ABC = 56°. (The figure is the same one as in Start here Q4.) Find angle AEC and angle EAB. Write the reason for each step.', a: 'AEC = 118° and EAB = 62°. ADC = 56° (opposite angles); DEA = (180° − 56°) ÷ 2 = 62° (DA = DE); AEC = 180° − 62° = 118° (straight line DC); DAB = 180° − 56° = 124° (neighbours in a parallelogram), so EAB = 124° − 62° = 62°.' },
       { q: 'ABCD is a square. CDE is an equilateral triangle, and E is outside the square. Find angle ADE and angle DAE.', a: 'ADE = 150° (90° + 60°). Triangle ADE is isosceles (AD = DE), so DAE = (180° − 150°) ÷ 2 = 15°.' },
+      { q: 'In trapezium ABCD, AB is parallel to DC. Angle DAB is 84° and angle ABC is 97°. Find angle ADC and angle BCD.', a: 'ADC = 96° and BCD = 83° (angles between the parallel sides add up to 180°). Check: 84° + 97° + 96° + 83° = 360°.' },
       { q: 'Rhombus ABCD has angle ABC = 100°. The diagonal AC is drawn. Find angle BAC.', a: '40° (AB = BC, so triangle ABC is isosceles: (180° − 100°) ÷ 2)' },
       { q: 'What is the smaller angle between the hands of a clock at 5 o\'clock? At 8 o\'clock?', a: '150° at 5 o\'clock (5 × 30°). At 8 o\'clock the big angle is 240°, so the smaller angle is 120°.' },
       { q: 'How many degrees does the minute hand of a clock turn through in 10 minutes? In 45 minutes?', a: '60° (a full turn of 360° takes 60 minutes, so 6° a minute) and 270°.' },
@@ -230,3 +231,31 @@ module.exports = {
     ...H.lines(1)
   ]
 };
+
+// ---------- figures for the printed Think harder (A1, A3, A4) and Go further (B1, B2) items ----------
+{
+  // A1: parallelogram ABCD with angle A three times angle B
+  { const A = [20, 120], B = [150, 120], D = P(...A, 80, 135), C = [D[0] + 130, D[1]];
+    chk(A, B, D, 135, 'A1 A'); chk(B, A, C, 45, 'A1 B'); chkPar(A, B, D, C, 'A1');
+    const g = poly([A, B, C, D], SKY) + arc(A, B, D, 24, '3 × B', RED, 70, 15) + arc(B, A, C, 24, '', RED, 0) + tx(B[0] - 34, B[1] - 10, 'B', 17, RED) + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4);
+    module.exports.qbank.stretch[0].fig = svg(300, 140, 'A parallelogram ABCD in which angle A is three times angle B', g, 0.85); }
+  // A3: the same figure as Start here Q4 (the question text gives the 56 degrees)
+  module.exports.qbank.stretch[2].fig = q5Fig();
+  // A4: square ABCD with the equilateral triangle CDE outside it
+  { const s = 100, A = [50, 190], B = [A[0] + s, A[1]], C = [B[0], A[1] - s], D = [A[0], C[1]], E = [A[0] + s / 2, D[1] - s * Math.sin(rad(60))];
+    chk(D, A, E, 150, 'A4 ADE'); chk(A, D, E, 15, 'A4 DAE'); chkEq(D, C, D, E, 'A4 DC DE');
+    const g = poly([A, B, C, D], SKY) + poly([D, C, E], Y) + line(A, E, TEAL, 3, '7 5') + arc(D, A, E, 26, '?', RED, 46, 17) + arc(A, D, E, 36, '?', RED, 56, 17)
+      + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4) + pl(E, 'E', 0, -8);
+    module.exports.qbank.stretch[3].fig = svg(240, 230, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC; the line AE is drawn', g, 0.72); }
+  // B1: isosceles triangle ABC (AB = AC, angle A = 40) with D on AC and BD = BC
+  { const A = [150, 20], L = 140, B = P(...A, L, 250), C = P(...A, L, 290);
+    const BC = dist(B, C), CD = BC * Math.sin(rad(40)) / Math.sin(rad(70)), u = [(A[0] - C[0]) / L, (A[1] - C[1]) / L], D = [C[0] + u[0] * CD, C[1] + u[1] * CD];
+    chkEq(B, C, B, D, 'B1 BC BD'); chk(A, B, C, 40, 'B1 A'); chk(B, A, C, 70, 'B1 B'); chk(B, C, D, 40, 'B1 DBC');
+    const g = poly([A, B, C], SKY) + line(B, D) + tick(A, B) + tick(A, C) + tick(B, C, 2) + tick(B, D, 2) + arc(A, B, C, 36, '40°', RED, 62, 16) + pl(A, 'A', 0, -8) + pl(B, 'B', -14, 12) + pl(C, 'C', 14, 12) + pl(D, 'D', 16, -2);
+    module.exports.qbank.challenge[6].fig = svg(300, 170, 'Isosceles triangle ABC with AB equal to AC and angle A 40 degrees. D is on AC and BD equals BC.', g, 0.8); }
+  // B2: square ABCD with E inside it so that ABE is equilateral
+  { const s = 110, A = [30, 150], B = [A[0] + s, A[1]], C = [B[0], A[1] - s], D = [A[0], C[1]], E = [A[0] + s / 2, A[1] - s * Math.sin(rad(60))];
+    chk(A, B, E, 60, 'B2 A'); chkEq(A, B, A, E, 'B2');
+    const g = poly([A, B, C, D], SKY) + poly([A, B, E], Y) + line(D, E, TEAL, 3, '7 5') + line(C, E, TEAL, 3, '7 5') + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4) + pl(E, 'E', 0, 22);
+    module.exports.qbank.challenge[7].fig = svg(180, 175, 'A square ABCD with a point E inside it so that triangle ABE is equilateral; the lines ED and EC are drawn', g, 0.8); }
+}
