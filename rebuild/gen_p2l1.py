@@ -58,7 +58,7 @@ put('p2l1-title',title_slide('p2l1-title','LESSON 1  •  WEEK 1','Digit Detecti
  'Build 3-digit numbers, find every number from digit cards by listing in order, and spot patterns on a 1000 chart.',
  'Objective: Read and build 3-digit numbers by place value (also with more than 9 tens), make every number from a set of digit cards by listing in order, find the biggest and smallest, and use patterns on a 1000 chart to count on and back in 1s, 10s and 100s. '
  'Thinking strategies taught today: MAKE A LIST IN ORDER and LOOK FOR A PATTERN. '
- 'Materials: Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1 to 100 number chart and the My own chart page from the kit (rows of 10). '
+ 'Materials: Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1000-chart pieces on the workbook page (rows of 10). '
  'Online: children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the 1000-chart pieces on the slides. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 

@@ -102,7 +102,7 @@ module.exports = {
     n: 6, week: 3, session: 'B', title: 'Angle Turns', topic: 'Angles',
     objective: 'Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each number) and turns of the minute hand (6° a minute), turn on the 8-point compass (45° steps) and work backwards from a turn, and find unknown angles in squares and rectangles.',
     skills: 'Estimating with 90° and 180°, measuring, systematic counting, adding and subtracting angles, working backwards, explaining with turns',
-    materials: 'A clear 180° protractor and a 30 cm ruler for each child (bring from home; first choice is a real clear plastic protractor from school, like the ruler; the kit has a fallback printable to print on a transparency (OHP) sheet only; the tutor keeps 2 or 3 spare protractors). The paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
+    materials: 'A clear 180° protractor and a 30 cm ruler for each child (a plastic school protractor is fine, cheap to buy; bring from home; the tutor keeps 2 or 3 spares). The paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
     online: 'Before the lesson, children find a clear 180° protractor and a 30 cm ruler (listed on the kit page; tell the tutor if you have none). They also use the paper clock cut out from the kit page. Self-view on screen may be mirrored: say turn towards your own right hand, not the screen’s left. The 8-point compass is shown on the slides; children stand and turn on camera, with the screen as North.',
     warmup: 'Robot turns: everyone stands facing the front (North). The tutor calls turns (quarter turn clockwise, half turn, 45° anticlockwise) and children turn, then name the direction they face.',
     explore: 'Pairs set a paper clock to every o’clock time and look at the angle between the hands. Which times make a right angle (check with a paper corner)? Which make a straight line? What is the angle at 1 o’clock?',
@@ -164,7 +164,7 @@ module.exports = {
       { q: 'The corner of a rectangle is 90°. A line from the corner cuts it into two angles. One angle is 64°. What is the other?', a: '26° (90° − 64°)' }
     ],
     stretch: [
-      { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)', fig: compass(125, ['SE']) },
+      { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)', fig: compass(420, ['SE']) },
       { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.' },
       { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)' },
       { q: 'A robot starts facing N. Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.', a: 'Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.' },
@@ -188,7 +188,7 @@ module.exports = {
   },
 
   workbook: H => [
-    H.q(1, 'Estimate each angle first. Then measure it with your protractor (a clear plastic one, like your ruler). The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
+    H.q(1, 'Estimate each angle first. Then measure it with your protractor. The arms are short: draw them longer with a ruler first. Tip: put the centre of the protractor on the corner, and count up from the 0 that lines up with one arm.', { before: 40, keepNext: true }),
     tip('hold the corner of a sheet of paper on each angle. Is the angle smaller or bigger than the corner (a right angle, 90°)? Use that for your estimate.'),
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
@@ -208,7 +208,7 @@ module.exports = {
     H.sub('a', ['At 4 o’clock:  ________          <b style="color:#1F7A6F">b</b>  At 7 o’clock:  ________']),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
-    H.fig(compass(140)),
+    H.fig(compass(420)),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
     H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),

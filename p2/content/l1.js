@@ -36,7 +36,7 @@ module.exports = {
     n: 1, week: 1, session: 'A', title: 'Digit Detectives', topic: 'Numbers to 1000',
     objective: 'Read and build 3-digit numbers by place value (also with more than 9 tens), make every number from a set of digit cards by listing in order, find the biggest and smallest, and use patterns on a 1000 chart to count on and back in 1s, 10s and 100s.',
     skills: 'Place value, making a list in order, looking for a pattern, reasoning about zero',
-    materials: 'Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1 to 100 number chart and the My own chart page from the kit (rows of 10).',
+    materials: 'Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1000-chart pieces on the workbook page (rows of 10).',
     online: 'Children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the slide 1000-chart pieces.',
     warmup: 'Place It Right: the tutor draws digit cards one at a time. After each card, children must write it in the hundreds, tens or ones box straight away and cannot move it. Biggest number wins. Then play again for the smallest.',
     explore: 'Pairs take the digit cards 3, 5 and 8 and make every 3-digit number they can, using each card once. They record each number, then find the biggest and the smallest and decide how they know they have found them all.',

@@ -74,7 +74,7 @@ function clockPage() {
   b += `<rect x="14" y="796" width="672" height="150" rx="12" fill="#F3FBF9" stroke="${TEAL}" stroke-width="3"/>`;
   b += `<text x="34" y="830" font-size="20" font-weight="800" fill="${TEAL}" font-family="Nunito Sans, Arial">Bring from home (not printed here)</text>`;
   ['A clear 180 degree protractor and a 30 cm ruler. Lesson 6 starts with them, so have them ready.',
-    'No protractor? Ask at school for a real clear plastic one first. Fallback: print the protractor kit page on a transparency sheet. Or tell your tutor: there are spares.',
+    'No protractor? A plastic school one is fine and cheap to buy. Or tell your tutor: there are spares.',
     'A ruler and two coloured pencils (Lessons 7 and 9). Scissors and tape (Lessons 4, 6, 7 and 8).',
     'Squared paper, if you want extra: the Square grid page can be cut into 1 cm squares for Lessons 7 and 8.'].forEach((t, i) => {
     b += `<text x="34" y="${858 + i * 24}" font-size="15" fill="${NAVY}" font-family="Nunito Sans, Arial">• ${t}</text>`;
@@ -83,54 +83,4 @@ function clockPage() {
 }
 
 
-// Cut-out 180 degree protractor, drawn in millimetres so it prints at actual size (print at 100%).
-// Radius 75 mm; outer scale 0 at the right, inner scale 0 at the left; ticks every 1, 5 and 10 degrees; check bar 5 cm.
-function protractor(copy) {
-  const R = 75, cx = 80, cy = 84, W = 160, Ht = 98;
-  const pt = (r, deg) => [cx + r * Math.cos(deg * Math.PI / 180), cy - r * Math.sin(deg * Math.PI / 180)];
-  const f = v => v.toFixed(2);
-  let b = `<path d="M${cx - R} ${cy} A${R} ${R} 0 0 1 ${cx + R} ${cy} L${cx + R} ${cy + 8} L${cx - R} ${cy + 8} Z" fill="#F4F9FD" stroke="${NAVY}" stroke-width="0.5" stroke-dasharray="2 1.4"/>`;
-  b += `<path d="M${cx - 50} ${cy} A50 50 0 0 1 ${cx + 50} ${cy}" fill="none" stroke="#9AA6C0" stroke-width="0.25"/>`;
-  for (let a = 0; a <= 180; a += 10) { const [x1, y1] = pt(14, a), [x2, y2] = pt(R - 9, a); b += `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="#B5BFD4" stroke-width="0.22"/>`; }
-  for (let a = 0; a <= 180; a++) {
-    const len = a % 10 === 0 ? 5 : a % 5 === 0 ? 3.4 : 2;
-    const [x1, y1] = pt(R, a), [x2, y2] = pt(R - len, a);
-    b += `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${NAVY}" stroke-width="${a % 10 === 0 ? 0.4 : 0.22}"/>`;
-  }
-  for (let a = 0; a <= 180; a++) {
-    const len = a % 10 === 0 ? 4 : a % 5 === 0 ? 2.8 : 1.6;
-    const [x1, y1] = pt(R - 22, a), [x2, y2] = pt(R - 22 + len, a);
-    b += `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${TEAL}" stroke-width="${a % 10 === 0 ? 0.4 : 0.22}"/>`;
-  }
-  for (let a = 0; a <= 180; a += 10) {
-    const [ox, oy] = pt(R - 9.2, a);
-    // outer scale: 0 at right (angle a measured from the right); inner scale: 0 at left
-    b += `<text x="${f(ox)}" y="${f(oy + 1.1)}" font-size="3.4" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial, sans-serif" transform="rotate(${90 - a} ${f(ox)} ${f(oy)})">${a}</text>`;
-  }
-  for (let a = 0; a <= 180; a += 10) {
-    const [x, y] = pt(R - 28, a);
-    b += `<text x="${f(x)}" y="${f(y + 1.1)}" font-size="3.4" font-weight="700" text-anchor="middle" fill="${TEAL}" font-family="Arial, sans-serif" transform="rotate(${90 - a} ${f(x)} ${f(y)})">${180 - a}</text>`;
-  }
-  // baseline and centre mark
-  b += `<line x1="${cx - R - 3}" y1="${cy}" x2="${cx + R + 3}" y2="${cy}" stroke="${NAVY}" stroke-width="0.5"/>`;
-  b += `<line x1="${cx}" y1="${cy - 9}" x2="${cx}" y2="${cy + 3.4}" stroke="${RED}" stroke-width="0.4"/><circle cx="${cx}" cy="${cy}" r="1.6" fill="none" stroke="${RED}" stroke-width="0.4"/><circle cx="${cx}" cy="${cy}" r="0.4" fill="${RED}"/>`;
-  b += `<text x="${cx}" y="${cy + 6.4}" font-size="3" text-anchor="middle" fill="${RED}" font-family="Arial, sans-serif" font-weight="700">centre: put on the corner</text>`;
-  b += `<text x="${cx - R + 1}" y="${cy + 6.5}" font-size="3" fill="${NAVY}" font-family="Arial, sans-serif" font-weight="700">baseline: line up with one arm</text>`;
-  b += `<text x="${cx}" y="${cy - 35}" font-size="3.6" font-weight="700" text-anchor="middle" fill="${NAVY}" stroke="#F4F9FD" stroke-width="1.2" paint-order="stroke" font-family="Arial, sans-serif">Math Inquirers 180° protractor ${copy}</text>`;
-  b += `<text x="${cx}" y="${cy - 30}" font-size="2.8" text-anchor="middle" fill="${TEAL}" stroke="#F4F9FD" stroke-width="1.2" paint-order="stroke" font-family="Arial, sans-serif">start at the 0 on the arm you line up</text>`;
-  return `<div class="p" style="text-align:center;margin:0 0 2mm"><svg viewBox="0 0 ${W} ${Ht}" width="${W}mm" height="${Ht}mm" xmlns="http://www.w3.org/2000/svg">${b}</svg></div>`;
-}
-// 5 cm check bar (millimetres, so it prints at actual size) with the print instruction
-function protractorCheckBar() {
-  let b = `<rect x="3.5" y="6" width="50" height="6" fill="${YEL}" stroke="${NAVY}" stroke-width="0.4"/>`;
-  for (let m = 0; m <= 50; m++) { const L = m % 10 === 0 ? 3 : m % 5 === 0 ? 2.2 : 1.3; b += `<line x1="${3.5 + m}" y1="12" x2="${3.5 + m}" y2="${12 - L}" stroke="${NAVY}" stroke-width="0.25"/>`; }
-  for (let c = 0; c <= 5; c++) b += `<text x="${3.5 + c * 10}" y="16.5" font-size="3.4" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial, sans-serif">${c}</text>`;
-  b += `<text x="56" y="9.8" font-size="3.6" font-weight="700" fill="${NAVY}" font-family="Arial, sans-serif">this bar is 5 cm long (50 mm)</text>`;
-  b += `<text x="3.5" y="3.2" font-size="4" font-weight="700" fill="${RED}" font-family="Arial, sans-serif">Print at 100% / actual size - check the bar is 5 cm</text>`;
-  return `<div class="p" style="margin:0 0 3mm"><svg viewBox="0 0 160 19" width="160mm" height="19mm" xmlns="http://www.w3.org/2000/svg">${b}</svg></div>`;
-}
-function protractorPage() {
-  return protractorCheckBar() + protractor('A') + protractor('B');
-}
-
-module.exports = { cards, graphGrids, clockPage, protractorPage, protractor, protractorCheckBar, H };
+module.exports = { cards, graphGrids, clockPage, H };
