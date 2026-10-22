@@ -1,4 +1,5 @@
-"""Fix-pass slides for Math Inquirers P2: 3-minute Sneak-peek puzzles (minutes 1 to 4), an Explore 'Go further' what-if slide, and a 2-minute 'Looking back' slide.
+"""Fix-pass slides for Math Inquirers P2: 4.5-minute Sneak-peek puzzles (minutes 1.5 to 6), an Explore 'Go further' what-if box (a corner box on the explore1 slide since the re-budget), and a 2-minute 'Looking back' slide.
+All clock times (pills, 'Minutes a to b' in the notes, the title slide's time plan) come from rebuild/p2budget.py: edit minutes there, not in the generators.
 Content comes from p2/gaps.json (shared with the workbook and the tutor guide; built by docs/audit/mk_gaps_p2.py).  Usage in a gen_p2lK.py:
     import p2gaps; p2gaps.add(S, K)            # before the slides are written; adds slides, re-times warm-up / exit, applies neutral labels
     order = p2gaps.order(order, K)             # after the order list exists
@@ -6,6 +7,7 @@ Content comes from p2/gaps.json (shared with the workbook and the tutor guide; b
 import json,os,re,subprocess
 import slidekit
 from slidekit import *
+import p2budget
 G=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','p2','gaps.json')))
 BOX=f'<span style="display:inline-block;width:46px;height:46px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle;margin:0 4px -8px"></span>'
 def _txt(s): return E(s).replace('{box}','[ ]')
@@ -53,67 +55,74 @@ def precheck(K):
         size=34 if len(x['q'])<190 else 31
         lab='Q1 (start here)' if i==0 else 'Q2 (think about it)'
         body+=_row(128,tops[i],1250,lab,x['q'],size)+answer(1420,tops[i],372,x['short'])
-    notes=('Minutes 1 to 4. Sneak-peek puzzles: two puzzles on the key idea of today, which the children have NOT learnt yet. Say out loud: "These are ideas we have not learnt yet. Guessing is welcome and so is I do not know. Nobody is marked." '
-      'Question 1 is an access question: any child can try it with objects, a drawing or counting, so everyone has a first win (about 1 minute). Question 2 is the thinking question (about 2 minutes). '
+    notes=('Minutes 1.5 to 6. Sneak-peek puzzles: two puzzles on the key idea of today, which the children have NOT learnt yet. Say out loud (about 28 words): "Two sneak-peek puzzles on ideas we have not learnt yet. Guessing is welcome, so is I do not know. Nobody is marked. Show your paper to me only." '
+      'Question 1 is an access question: any child can try it with objects, a drawing or counting, so everyone has a first win (about 45 seconds). Question 2 is the thinking question (about 90 seconds). Then about 2 minutes for the answers slide and the move on. '
       'Answers are PRIVATE: each child holds their own paper to the camera for you only, or writes it on their own paper and shows only you on camera. Do not raise whiteboards together, do not read answers out, do not name children. '
       f'Q1 answer: {_txt(g[0]["a"])} Listen for: {_txt(g[0]["w"])} '
       f'Q2 answer: {_txt(g[1]["a"])} Listen for: {_txt(g[1]["w"])} '
       'At the end click to show the answers as "one way to think about it", without saying who had what. Ask only for volunteers: "Would anyone like to tell us how they started?" '
       'Invite the WHOLE group at once, never one child: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Never announce who is on which page. Pairs are not split unless both children agree. Children can move either way at any time. Everyone joins explore, the mini-lesson, the check-together slides and talk time.')
-    return sec(f'p2l{K}-precheck','1–4 MIN',body,notes)
-def goexp(K):
+    return sec(f'p2l{K}-precheck','1.5–6 MIN',body,notes)
+def goexp_box(K,top=840):
+    """Since the re-budget the Go further what-if is a corner box on the explore1 slide (no slide of its own)."""
+    w=G[str(K)]['whatif']; q=w["q"].replace("Go further: ","")[:1].upper()+w["q"].replace("Go further: ","")[1:]
+    size=30 if len(q)<150 else 27
+    return pin(128,top,1664,f'<p style="font-size:24px;font-weight:800;letter-spacing:1px;color:{TEAL}">GO FURTHER (optional, any time you finish early)</p><p style="font-size:{size}px;font-weight:700;line-height:1.25">{E(q)}</p>',None,SOFT,20,'12px 26px')
+def goexp_note(K):
     w=G[str(K)]['whatif']
-    body=h2('Explore: go further')+p('Finished early, or curious? Try this any time during the explore. It is always your choice.',32,600,MUTED)
-    body+=pin(128,330,1664,f'<p style="font-size:44px;font-weight:700;line-height:1.3;color:{TEAL}">{E(w["q"].replace("Go further: ","")[:1].upper()+w["q"].replace("Go further: ","")[1:])}</p>',None,WHITE,24,'36px 44px')
-    body+=pin(128,640,1664,'<p style="font-size:34px;font-weight:600;line-height:1.3">Write or draw your answer on paper. Tell your partner or the group how you know when we come back together.</p>',None,SOFT,24,'28px 44px')
-    notes=('Minutes 8 to 14. Go further (a second what-if question, so nobody waits). Show this slide with the explore slide or post the question in the chat when the pairs go to their breakout rooms. It is for ANY child who finishes the explore task or wants more: say it to the whole group as a choice, never as a prize, and never name who tries it. Pairs stay together unless both children agree to split. '
-      f'Answer: {_txt(w["a"])} Take it at the debrief (minute 14) only if a pair offers it.')
-    return sec(f'p2l{K}-goexp','8–14 MIN',body,notes)
+    return (' Go further (a second what-if, so nobody waits) is the box at the foot of this slide; the question is also posted in the chat when the pairs go to their breakout rooms. It is for ANY child who finishes the explore task or wants more: say it to the whole group as a choice, never as a prize, and never name who tries it. Pairs stay together unless both children agree to split. '
+      f'Answer: {_txt(w["a"])} Take it at the debrief only if a pair offers it.')
 def reflect(K):
     g=G[str(K)]; C=G['common']; ticks=g['unstuck']+['I asked for help','I am still stuck (my tutor will check in during the session)']
     body=h2('Looking back')+p('Two minutes. Finish one line, two lines or all three. You may pass on any line.',32,600,MUTED)
     body+=qrow(128,290,1664,'1.','Something I did well …',40)+qrow(128,410,1664,'2.','The hardest part was …',40)
     body+=pin(128,530,1664,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">3. What helped me (tick any):</p>'+''.join(f'<p style="font-size:34px;font-weight:600;line-height:1.3"><span style="display:inline-block;width:30px;height:30px;border:4px solid {NAVY};border-radius:6px;background:#fff;vertical-align:middle;margin:0 14px -4px 0"></span>{E(t)}</p>' for t in ticks),None,WHITE,20,'18px 28px')
-    notes=('Minutes 87 to 89 (Lesson 10: 85 to 87). Looking back: about 2 minutes, in the box on the page called "Before you go: Investigation and Looking back" (the page after worksheet page 2; every child reaches it). Children finish one line, two lines or all three, and tick what helped. A pass is always allowed. No marks and no wrong answers. '
-      'Tutor script: SAY: '+C['refSay']+' DO: '+C['refDo']+' '+C['close'])
-    return sec(f'p2l{K}-reflect','85–87 MIN' if K==10 else '87–89 MIN',body,notes)
+    _lb=[x for x in p2budget.parts(K) if x['title']=='Looking back'][0]
+    notes=(f'Minutes {p2budget.fmt(_lb["start"])} to {p2budget.fmt(_lb["end"])}. Looking back: about 2 minutes, in the box on the page called "Before you go: Investigation and Looking back" (the page after worksheet page 2; every child reaches it). Children finish one line, two lines or all three, and tick what helped. A pass is always allowed. No marks and no wrong answers. '
+      'Tutor script: SAY: '+C['refSay']+' DO: '+C['refDo']+' '+(C['close'] if K!=10 else 'Certificates and closing take the last 3 minutes (87 to 90).'))
+    return sec(f'p2l{K}-reflect','87–89 MIN',body,notes)
 LABELS=[('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),('Early finishers','Any child who would like more'),('early finishers','any child who would like more'),('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further come next.'),('For early finishers','Think harder'),('>Stretch<','>Think harder<'),('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),
         ('For children who finish early. ','Open to any child who chooses it. '),('For children who finish early','Open to any child who chooses it'),('children who finish early','any child who chooses to'),
         ('for strong thinkers','for any thinker'),('for early finishers','for any child who chooses it')]
-def add(S,K):
-    P=f'p2l{K}'; ex=K==10
-    S[f'{P}-precheck']=precheck(K); S[f'{P}-reflect']=reflect(K); S[f'{P}-goexp']=goexp(K)
+def add(S,K,explore_box_top=840):
+    P=f'p2l{K}'
+    S[f'{P}-precheck']=precheck(K); S[f'{P}-reflect']=reflect(K)
     S[f'{P}-stretch']=think(K)
-    r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
-    r(f'{P}-warm1','0–5 MIN','4–6 MIN'); r(f'{P}-warm1','Minutes 0 to 5.','Minutes 4 to 6 (a 2-minute game: one or two rounds).')
-    r(f'{P}-warm2','5–8 MIN','6–8 MIN'); r(f'{P}-warm2','Minutes 5 to 8.','Minutes 6 to 8 (2 minutes: ask questions 1, 3 and 5; 2 and 4 are spare). Children answer by thumbs, hands, not by naming a child.')
+    # Go further what-if: a corner box on explore1 (no slide of its own)
+    e=S[f'{P}-explore1']
+    foot='<p style="position:absolute;left:128px;bottom:64px;'
+    assert foot in e, 'explore1 footer not found'
+    e=e.replace(foot,goexp_box(K,explore_box_top)+foot,1)
+    e=e.replace('</aside>',goexp_note(K)+'</aside>')
+    S[f'{P}-explore1']=e
     s=S[f'{P}-title']
-    s=re.sub(r'warm-up 0 to 8','Sneak-peek puzzles 1 to 4, warm-up game 4 to 6, quick questions 6 to 8',s)
-    s=s.replace('exit ticket 80 to 90.','exit ticket 80 to 87, Looking back 87 to 89, closing and stamps 89 to 90.')
-    s=s.replace('exit ticket 80 to 88, certificates 88 to 90','exit ticket 80 to 85, Looking back 85 to 87, certificates 87 to 90')
+    assert 'Time plan:' in s
+    s=s[:s.index('Time plan:')]+p2budget.plan_sentence(K)+' Kit ready at minute 0: ask families to put every item on the desk before the lesson starts (a 30-second check at the start).</aside>\n</section>\n'
     S[f'{P}-title']=s
+    r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
+    S[f'{P}-warm1']=S[f'{P}-warm1'].replace('</aside>',' A game of about 2.5 minutes: stop it on the clock even if the game is not finished.</aside>')
+    S[f'{P}-warm2']=S[f'{P}-warm2'].replace('</aside>',' Ask quick questions 1 and 3 only (about 2 minutes): children answer by thumbs, hands, not by naming a child. The other questions are spare.</aside>')
     e=S[f'{P}-exit']
-    if ex: e=e.replace('80–88 MIN','80–85 MIN').replace('Minutes 80 to 88.','Minutes 80 to 85.')
-    else: e=e.replace('80–90 MIN','80–87 MIN').replace('Minutes 80 to 90.','Minutes 80 to 87.')
-    S[f'{P}-exit']=e
+    S[f'{P}-exit']=e.replace('</aside>',' Hold-up: children hold their slips up one at a time (never all together); the answer is on the next click. About 2 minutes of child work.</aside>')
     for k in list(S):
         for a,b in LABELS: S[k]=S[k].replace(a,b)
         S[k]=re.sub(r'([Ww])hiteboards up( together)?',lambda m:m.group(1)+'hiteboards face down until 3, 2, 1 (or show only the tutor; never read a board out)',S[k])
     for suf,lab in (('stretch','THINK HARDER'),('challenge','GO FURTHER'),('chdiag','GO FURTHER'),('chwalk','GO FURTHER')):
         k=f'{P}-{suf}'
-        if k in S:
-            if suf!='stretch': S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further')
-            S[k]=re.sub(r'(<p style="position:absolute;right:128px;top:64px;[^>]*>)[^<]*(</p>)',lambda m:m.group(1)+lab+m.group(2),S[k],count=1)
+        if k in S and suf!='stretch': S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further')
     t=f'{P}-talk'
     S[t]=S[t].replace('“I know because …”','“I know because …”   “Pass.”')
     S[t]=S[t].replace('</aside>',' Talk time rules: you choose volunteers first ("Who would like to share?"); never cold-call a child by name; any child may say pass; no public tallies, scores or rankings.</aside>')
     w=f'{P}-ws1'
     if w in S: S[w]=S[w].replace('</aside>',' Say once, to everyone: "After question 3 you may choose: carry on, or try Think harder." Never say who is on which page. Invite the WHOLE group at once, never one child: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Pairs are not split unless both children agree.</aside>')
+    w=f'{P}-ws2'
+    if w in S: S[w]=S[w].replace('</aside>',' Tutor rule at minute '+p2budget.fmt([x for x in p2budget.parts(K) if x['title']=='Worksheet page 2 (alone)'][0]['start'])+': if the clock is more than 2 minutes late, drop the last Core question of page 2 to take-home (children draw a star beside it). Never shorten talk time, the exit ticket, looking back or the closing. Questions marked with a star and the words take-home on the page are done at home; their answers are still on the check-together slide.</aside>')
+    p2budget.apply(S,K)
+    return S
 def order(o,K):
     P=f'p2l{K}'; out=[]
     for i in o:
         out.append(i)
         if i==f'{P}-title': out.append(f'{P}-precheck')
-        if i==f'{P}-explore1': out.append(f'{P}-goexp')
         if i==f'{P}-exit': out.append(f'{P}-reflect')
     return out

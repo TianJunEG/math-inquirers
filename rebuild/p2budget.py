@@ -96,3 +96,29 @@ def plan_sentence(K):
     """The 'Time plan' of the title-slide notes."""
     ps = parts(K); a = lambda x: f"{x['title'].lower().replace(' (pairs)', '').replace(' (alone)', '')} {fmt(x['start'])} to {fmt(x['end'])}"
     return 'Time plan: ' + ', '.join(a(x) for x in ps) + '. The Think harder and Go further slides are optional, if you finish early (no clock time).'
+
+# ---------------------------------------------------------------------------------------------------------------
+def build(K, mini, teach, pre=None, warm=(2.5, 2.0), explore=(9.0, 4.0), optional=OPTIONAL_COMMON, extra=None, exitdur=None):
+    """Slide windows for lesson K from consecutive durations. mini / teach = [(short id, minutes), ...] that must fill the Mini-lesson and Short teaching parts exactly."""
+    P = {x['title']: (x['start'], x['end']) for x in parts(K)}
+    d = {}
+    d['precheck'] = P['Sneak-peek puzzles']
+    w0, w1 = P['Warm-up']; d['warm1'] = (w0, w0 + warm[0]); d['warm2'] = (w0 + warm[0], w1); assert abs(sum(warm) - (w1 - w0)) < 1e-9
+    e0, e1 = P['Explore']; d['explore1'] = (e0, e0 + explore[0]); d['explore2'] = (e0 + explore[0], e1); assert abs(sum(explore) - (e1 - e0)) < 1e-9
+    def seq(items, part):
+        a, b = P[part]; t = a
+        for sid, m in items:
+            d[sid] = (t, t + m); t += m
+        assert abs(t - b) < 1e-9, (K, part, t, b)
+    seq(mini, 'Mini-lesson'); seq(teach, 'Short teaching')
+    d['break'] = P['Brain break']
+    if pre: d[pre] = P['Worksheet teach slide']
+    d['ws1'] = P['Worksheet page 1 (pairs)']; d['ws1ans'] = P['Check together, page 1']
+    d['ws2'] = P['Worksheet page 2 (alone)']; d['ws2ans'] = P['Check together, page 2']
+    d['talk'] = P['Talk time']; d['exit'] = P['Exit ticket']; d['reflect'] = P['Looking back']
+    for o in optional: d[o] = OPT
+    d.update(extra or {})
+    SLIDES[K] = d
+    return d
+
+build(1, mini=[('teach1', 2), ('try1', 1.5), ('we1', 3), ('try2', 1.5), ('teachzero', 3), ('key', 1)], teach=[('teachchart', 2.5), ('teachriddle', 2)])
