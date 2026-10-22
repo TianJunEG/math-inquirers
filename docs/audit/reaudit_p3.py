@@ -19,11 +19,19 @@ NOW_A = {
     4: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1],
     5: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2],
     6: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2],
-    7: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2],
+    7: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2],   # blind value; criterion 5 corrected to 2 after compare, see POST_COMPARE_FIX
     8: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2],
     9: [2, 1, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2],
     10: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2],
 }
+
+# Post-compare correction (disclosed, not blind): while checking the baseline's L7 c5 = 2 I re-read slide p3l7-teach3
+# ("Find the area of this L-shape in two ways ... Two ways agree, so we can trust our answer") plus teach2 (push out) vs
+# Q4 hint (cut into two rectangles). My blind 1 had missed it. Corrected to 2. Every other criterion-5 '1' was re-checked
+# by grepping all 10 decks for 'two ways / another way / Way 1': no further change.
+POST_COMPARE_FIX = {(7, 5): (1, 2)}   # (lesson, criterion) -> (blind, corrected)
+for (_l, _c), (_b, _n) in POST_COMPARE_FIX.items():
+    NOW_A[_l][_c - 1] = _n
 
 # tier verdicts. Strict rule: B (borderline) counts as a violation; lenient: B counts as compliant.
 # Question bank items: core 6/lesson, think-harder (stretch) 8-9, challenge 8-9.
@@ -99,11 +107,62 @@ def diag_report():
                     {k: round(v, 2) for k, v in band.items()}))
     return out
 
-# ---------------------------------------------------------------- PHASE 2: baselines (filled in after the blind scoring)
-BASE_A_BEFORE = {}   # lesson -> 12 criteria (original audit)
-BASE_A_CLAIMED = {}  # lesson -> claimed 'after' total
-BASE_B_BEFORE = {}   # persona -> lesson -> 6 scores (original audit)
-BASE_TIER = {}       # before / claimed-after tier compliance
+# ---------------------------------------------------------------- PHASE 2: baselines (copied AFTER the blind scoring above)
+# Source: docs/audit/gifted_p3.md (rubric, 'before' = original audit; 'claimed' = the 'after rework' column of that file)
+BASE_A_BEFORE = {
+    1: [2, 1, 2, 2, 1, 1, 2, 1, 0, 1, 1, 2], 2: [2, 1, 2, 2, 1, 1, 1, 1, 0, 1, 1, 2], 3: [2, 1, 2, 2, 2, 1, 2, 1, 0, 1, 1, 2],
+    4: [2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2], 5: [2, 1, 2, 2, 1, 1, 2, 1, 0, 1, 1, 2], 6: [2, 1, 2, 2, 1, 1, 1, 1, 0, 1, 1, 2],
+    7: [2, 1, 2, 2, 2, 1, 2, 1, 0, 1, 1, 2], 8: [2, 1, 1, 1, 1, 1, 2, 1, 0, 1, 1, 2], 9: [2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1],
+    10: [2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2]}
+BASE_A_CLAIMED_TOTAL = {1: 18, 2: 17, 3: 19, 4: 18, 5: 18, 6: 17, 7: 19, 8: 16, 9: 17, 10: 18}
+# tier compliance: items audited, violations (original); claimed after rework = 100%
+BASE_TIER = {1: (29, 5), 2: (29, 5), 3: (29, 5), 4: (30, 8), 5: (32, 5), 6: (33, 9), 7: (32, 10), 8: (32, 12), 9: (30, 5), 10: (29, 5)}
+# Source: docs/audit/journey_p3.md section 1.1 per-lesson tables (original review)
+BASE_B_BEFORE = {
+    "LOW": {1: [4, 3, 4, 3, 3, 3], 2: [3, 2, 3, 2, 3, 3], 3: [2, 2, 3, 2, 3, 2], 4: [4, 3, 4, 3, 3, 3], 5: [3, 2, 3, 2, 3, 3],
+            6: [4, 3, 3, 3, 3, 3], 7: [3, 3, 4, 3, 3, 3], 8: [3, 2, 3, 3, 3, 3], 9: [2, 1, 3, 2, 3, 2], 10: [4, 3, 4, 4, 4, 3]},
+    "MIDDLE": {1: [5, 4, 4, 4, 4, 4], 2: [4, 3, 4, 3, 4, 4], 3: [4, 3, 4, 4, 4, 3], 4: [5, 4, 4, 4, 4, 4], 5: [4, 3, 4, 4, 4, 4],
+               6: [5, 4, 4, 4, 4, 4], 7: [4, 4, 4, 4, 4, 4], 8: [4, 3, 4, 4, 4, 4], 9: [3, 3, 4, 3, 4, 3], 10: [5, 4, 5, 4, 5, 4]},
+    "HIGH": {1: [5, 3, 4, 4, 4, 4], 2: [5, 4, 5, 4, 5, 4], 3: [5, 4, 5, 5, 5, 4], 4: [5, 3, 4, 4, 4, 4], 5: [5, 4, 4, 4, 5, 4],
+             6: [5, 3, 4, 4, 4, 4], 7: [5, 3, 5, 4, 5, 4], 8: [5, 4, 5, 4, 5, 4], 9: [5, 4, 5, 4, 5, 4], 10: [5, 3, 4, 4, 4, 4]}}
+# tier violations by lesson now (strict: borderline counts as violation; like-for-like: 'if time' stars counted with their question)
+NOW_TIER_ITEMS = {1: 29, 2: 30, 3: 29, 4: 30, 5: 32, 6: 33, 7: 32, 8: 32, 9: 30, 10: 29}   # QB + 6 Start-here + slide-only Think-harder (L5-L8: 3 each)
+NOW_TIER_VIOL = {1: 1, 2: 2, 3: 3, 4: 0, 5: 2, 6: 1, 7: 1, 8: 0, 9: 0, 10: 1}
+NOW_TIER_VIOL_LFL = {1: 0, 2: 1, 3: 1, 4: 0, 5: 1, 6: 1, 7: 1, 8: 0, 9: 0, 10: 0}
+
+def compare():
+    L = range(1, 11)
+    print("| L | before | claimed | now | d vs before | d vs claimed |"); 
+    for l in L:
+        b = sum(BASE_A_BEFORE[l]); c = BASE_A_CLAIMED_TOTAL[l]; n = sum(NOW_A[l])
+        print(f"| {l} | {b} | {c} | {n} | {n-b:+d} | {n-c:+d} |")
+    mb = mean(sum(BASE_A_BEFORE[l]) for l in L); mc = mean(BASE_A_CLAIMED_TOTAL.values()); mn = mean(sum(NOW_A[l]) for l in L)
+    print(f"| mean | {mb:.1f} | {mc:.1f} | {mn:.1f} | {mn-mb:+.1f} | {mn-mc:+.1f} |")
+    print()
+    print("criterion | before mean | now mean | delta | lessons up | lessons down")
+    for c in range(12):
+        bm = mean(BASE_A_BEFORE[l][c] for l in L); nm = mean(NOW_A[l][c] for l in L)
+        up = [l for l in L if NOW_A[l][c] > BASE_A_BEFORE[l][c]]; dn = [l for l in L if NOW_A[l][c] < BASE_A_BEFORE[l][c]]
+        print(f"{CRIT[c]} | {bm:.1f} | {nm:.1f} | {nm-bm:+.1f} | {up} | {dn}")
+    print()
+    print("heatmap lesson: LOW before/now, MIDDLE, HIGH, lesson mean")
+    for l in L:
+        row = []
+        for p in ("LOW", "MIDDLE", "HIGH"):
+            b = mean(BASE_B_BEFORE[p][l]); n = mean(NOW_B[p][l]); row.append((b, n))
+        print(l, " | ".join(f"{b:.2f} -> {n:.2f} ({n-b:+.2f})" for b, n in row),
+              f"| mean {mean(r[0] for r in row):.2f} -> {mean(r[1] for r in row):.2f}")
+    for p in ("LOW", "MIDDLE", "HIGH"):
+        print(p, "level mean", round(mean(mean(v) for v in BASE_B_BEFORE[p].values()), 2), "->", round(mean(mean(v) for v in NOW_B[p].values()), 2))
+        print("   dims before", [round(mean(BASE_B_BEFORE[p][l][i] for l in L), 1) for i in range(6)],
+              "now", [round(mean(NOW_B[p][l][i] for l in L), 1) for i in range(6)])
+    print()
+    tb = sum(v[0] for v in BASE_TIER.values()); vb = sum(v[1] for v in BASE_TIER.values())
+    tn = sum(NOW_TIER_ITEMS.values()); vn = sum(NOW_TIER_VIOL.values()); vl = sum(NOW_TIER_VIOL_LFL.values())
+    print(f"tier before {tb-vb}/{tb} = {100*(tb-vb)/tb:.1f}% ; now strict {tn-vn}/{tn} = {100*(tn-vn)/tn:.1f}% ; now like-for-like {tn-vl}/{tn} = {100*(tn-vl)/tn:.1f}%")
+    for l in L:
+        i, v = BASE_TIER[l]; ni, nv, nl = NOW_TIER_ITEMS[l], NOW_TIER_VIOL[l], NOW_TIER_VIOL_LFL[l]
+        print(f"L{l}: before {i-v}/{i} {100*(i-v)/i:.0f}% | now strict {ni-nv}/{ni} {100*(ni-nv)/ni:.0f}% | lfl {ni-nl}/{ni} {100*(ni-nl)/ni:.0f}%")
 
 if __name__ == "__main__":
     print("A totals now:", {k: sum(v) for k, v in NOW_A.items()}, "mean", round(mean(sum(v) for v in NOW_A.values()), 2))
@@ -119,3 +178,5 @@ if __name__ == "__main__":
     print("distinct items strict", allN - allB, "/", allN, round(100 * (allN - allB) / allN, 1))
     for r in diag_report():
         print(r)
+    print()
+    compare()

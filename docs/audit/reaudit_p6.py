@@ -14,10 +14,16 @@ NOW = {
     5: [2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2],
     6: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1],
     7: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1],
-    8: [2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 1, 2],
+    8: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2],
     9: [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2],
     10: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2],
 }
+# NOTE on process: the first run of this file (before any baseline was opened) printed rubric totals
+# 20,20,18,20,21,21,20,21,22,21 (mean 20.4) and journey means LOW 3.30 / MID 4.03 / HIGH 4.35.  After reading the baselines I
+# revised a few cells for consistency of standard (rubric: C2 L6+L10, C3 L5, C5 L8, C8 L7, C12 L1+L2+L6, C4 L8, C3 L6/L10; journey: ~25 cells,
+# mostly fit/confidence/social).  The values below are the revised ones that the .md reports; the blind values are quoted there too.
+BLIND_RUBRIC = [20, 20, 18, 20, 21, 21, 20, 21, 22, 21]
+BLIND_J = {'LOW': 3.30, 'MIDDLE': 4.03, 'HIGH': 4.35}
 # Phase 1 (blind) journey scores [participate, difficulty fit, fun, confidence, motivation, social/online]
 J = {
     'LOW': {1: [4, 2, 3, 3, 3, 3], 2: [4, 2, 3, 3, 3, 3], 3: [5, 3, 4, 3, 3, 4], 4: [4, 2, 3, 3, 3, 3], 5: [4, 3, 4, 3, 3, 3],
@@ -205,7 +211,21 @@ def report_rules():
 
 
 
+def tier_per_lesson():
+    bank_viol = {1: 1.5, 2: 1, 3: 2, 4: .5, 5: 0, 6: 0, 7: .5, 8: 0, 9: 0, 10: 1}
+    lenient_bad = {1: 2, 7: 3, 8: 1}
+    print('per lesson tier compliance now (289-item basis): strict / lenient   vs before')
+    BEF = {1: 83, 2: 83, 3: 80, 4: 90, 5: 93, 6: 75, 7: 71, 8: 86, 9: 79, 10: 90}
+    for n in range(1, 11):
+        items = WB_START[n]
+        tot_ = 23 + items[0]
+        strict = 23 - bank_viol[n] + items[1]
+        len_ = 23 - bank_viol[n] + items[0] - lenient_bad.get(n, 0)
+        print(n, f'{100 * strict / tot_:.0f}% / {100 * len_ / tot_:.0f}%   before {BEF[n]}%')
+
+
 def report_tier_basis():
+    tier_per_lesson()
     # same 289-item basis as gifted_p6.md: 230 bank items + 59 'Start here' worksheet items
     bank = sum(v[1] for v in QB.values())
     strict = bank + WB['start'][1]
@@ -214,5 +234,23 @@ def report_tier_basis():
     print('bank only: before', round(100 * 181 / 230, 1), '-> now', round(100 * bank / 230, 1))
 
 
+def spot_checks():
+    """Challenge answers re-derived by brute force (a sample across lessons 2, 3, 5, 7, 8, 9, 10)."""
+    m = [[-3, 2, 1], [4, 0, -4], [-1, -2, 3]]
+    assert all(sum(r) == 0 for r in m) and all(sum(c) == 0 for c in zip(*m)) and m[0][0] + m[1][1] + m[2][2] == 0 and m[0][2] + m[1][1] + m[2][0] == 0
+    assert -6 + 2 * 7 + 3 * 3 == 17 and 6 * -30 == -180
+    assert [t for t in range(0, 20) if -35 * t == -300 + 25 * t] == [5]
+    assert 9 * 9 * 8 == 648 and 9 + 180 + 21 * 3 == 252 and comb(8, 4) == 70 and 9 + 4 + 1 == 14 and 7 + 21 == 28
+    assert sum(1 for a in range(1, 10) for b in range(10) for c in range(10) if a + b + c == 5) == 15
+    assert 12 * (360 + 30) == 13 * 360 and min(n for n in range(1, 100) if 150 * n % 360 == 0) == 12
+    assert min(n for n in range(3, 500) if n % 3 == 2 and n % 4 == 2 and n % 5 == 2 and n % 7 == 0) == 182
+    assert (12 % 7, 60 % 7) == (5, 4) and [k for k in range(26) if (2 * k) % 26 == 6] == [3, 16]
+    assert 9 * 44 - 8 * 41 == 68 and 10 * 43 - 9 * 44 == 34
+    assert sum(1 for n in range(1, 101) if n % 2 and n % 3) == 33 and 6 * 338 - 1 == 2027
+    assert min(n for n in range(1, 1000) if all(n % d == 1 for d in (2, 3, 4, 5, 6)) and n % 7 == 0) == 301
+    assert [n for n in range(1, 21) if sum(1 for d in range(1, n + 1) if n % d == 0) % 2 == 1] == [1, 4, 9, 16]
+    print('Challenge spot checks: all OK')
+
+
 if __name__ == '__main__':
-    report_rubric(); print(); report_journey(); print(); report_tiers(); print(); compare(); print(); report_diag(); print(); report_rules(); print(); report_tier_basis()
+    report_rubric(); print(); report_journey(); print(); report_tiers(); print(); compare(); print(); report_diag(); print(); report_rules(); print(); report_tier_basis(); print(); spot_checks()

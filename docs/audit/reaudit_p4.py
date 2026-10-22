@@ -134,5 +134,72 @@ def scores():
         print(p, 'mean', round(sum(sum(JNOW[n][p]) / 6 for n in JNOW) / 10, 2),
               'dims', [round(sum(JNOW[n][p][i] for n in JNOW) / 10, 2) for i in range(6)])
 
+
+
+# ------------------------------------------------------------------ baselines (parsed from the earlier audits) and comparison
+import re, os
+HERE = os.path.dirname(os.path.abspath(__file__))
+CLAIMED_AFTER = {1: 16, 2: 14, 3: 14, 4: 14, 5: 13, 6: 12, 7: 17, 8: 15, 9: 14, 10: 16}   # gifted_p4.md summary table ("Rubric after /24", tier rework only)
+# strictness-aligned: only count gains over the original that a specific content change supports (see reaudit_p4.md section 4)
+ADJ_DROP = {1: {7: 1}, 2: {7: 1}, 3: {4: 1, 7: 1}, 4: {7: 1}, 5: {7: 1}, 6: {7: 1}, 7: {7: 1}, 8: {7: 1}, 9: {7: 1}, 10: {12: 1}}  # criterion -> points removed from NOW
+
+def base_gifted():
+    t = open(os.path.join(HERE, 'gifted_p4.md')).read()
+    parts = re.split(r'\n## Lesson (\d+):', t)
+    out = {}
+    for i in range(1, len(parts), 2):
+        rows = re.findall(r'^\| (\d+) \| ([^|]+) \| (\d) \|', parts[i + 1], re.M)
+        out[int(parts[i])] = [int(r[2]) for r in rows]
+    return out
+
+def base_journey():
+    t = open(os.path.join(HERE, 'journey_p4.md')).read()
+    parts = re.split(r'\n### Lesson (\d+):', t)
+    out = {}
+    for i in range(1, len(parts), 2):
+        n = int(parts[i])
+        for pm in re.finditer(r'\*\*(LOW|MIDDLE|HIGH)\*\* \(mean [\d.]+\)\n\n\| Criterion \| Score \| Evidence \|\n\|---\|---\|---\|\n((?:\|.*\n?)+)', parts[i + 1]):
+            rows = re.findall(r'^\| ([^|]+) \| (\d) \|', pm.group(2), re.M)
+            out.setdefault(n, {})[pm.group(1)] = [int(r[1]) for r in rows]
+    return out
+
+TIER_NOW = {  # lesson: (compliant, items) over the SAME item set the original audit used: QB core+stretch+challenge, workbook core questions, 3 slide Think Harder items
+ 1: (30, 32), 2: (27, 32), 3: (31, 36), 4: (28, 33), 5: (33, 35), 6: (32, 33), 7: (31, 33), 8: (30, 32), 9: (24, 31), 10: (27, 32)}
+TIER_BEFORE = {1: (24, 32), 2: (27, 32), 3: (25, 34), 4: (24, 33), 5: (25, 33), 6: (25, 33), 7: (29, 32), 8: (25, 32), 9: (30, 31), 10: (30, 32)}
+
+def compare():
+    bg, bj = base_gifted(), base_journey()
+    print('\n== rubric: before / claimed after / now (raw) / now (strictness-aligned) ==')
+    tb = tn = ta = tc = 0
+    for n in range(1, 11):
+        b, now = sum(bg[n]), sum(NOW[n]); adj = now - sum(ADJ_DROP[n].values()); c = CLAIMED_AFTER[n]
+        d = [NOW[n][i] - bg[n][i] for i in range(12)]
+        print(n, b, c, now, adj, 'deltas', ['%+d' % x if x else '0' for x in d])
+        tb += b; tc += c; tn += now; ta += adj
+    print('mean', tb / 10, tc / 10, tn / 10, ta / 10)
+    print('criterion means before', [round(sum(bg[n][i] for n in bg) / 10, 2) for i in range(12)])
+    print('criterion means now   ', [round(sum(NOW[n][i] for n in NOW) / 10, 2) for i in range(12)])
+    print('\n== tier compliance ==')
+    sb = sum(a for a, b in TIER_BEFORE.values()); ib = sum(b for a, b in TIER_BEFORE.values())
+    sn = sum(a for a, b in TIER_NOW.values()); inn = sum(b for a, b in TIER_NOW.values())
+    print('before %d/%d = %.1f%%   now %d/%d = %.1f%%' % (sb, ib, 100 * sb / ib, sn, inn, 100 * sn / inn))
+    for n in range(1, 11):
+        print(n, '%d/%d (%.0f%%)' % (*TIER_BEFORE[n], 100 * TIER_BEFORE[n][0] / TIER_BEFORE[n][1]), '->', '%d/%d (%.0f%%)' % (*TIER_NOW[n], 100 * TIER_NOW[n][0] / TIER_NOW[n][1]))
+    print('\n== journey: heatmap before -> now, delta ==')
+    for n in range(1, 11):
+        row = []
+        for p in PERS:
+            b = sum(bj[n][p]) / 6; a = sum(JNOW[n][p]) / 6
+            row.append('%s %.2f -> %.2f (%+.2f)' % (p, b, a, a - b))
+        print(n, ' | '.join(row))
+    for p in PERS:
+        mb = sum(sum(bj[n][p]) / 6 for n in bj) / 10; ma = sum(sum(JNOW[n][p]) / 6 for n in JNOW) / 10
+        db = [round(sum(bj[n][p][i] for n in bj) / 10, 2) for i in range(6)]
+        da = [round(sum(JNOW[n][p][i] for n in JNOW) / 10, 2) for i in range(6)]
+        print(p, 'mean %.2f -> %.2f' % (mb, ma), 'dims before', db, 'now', da, 'delta', [round(x - y, 2) for x, y in zip(da, db)])
+    big = [(n, p, round(sum(JNOW[n][p]) / 6 - sum(bj[n][p]) / 6, 2)) for n in bj for p in PERS if abs(sum(JNOW[n][p]) / 6 - sum(bj[n][p]) / 6) >= 0.5]
+    print('cells moving by >=0.5:', big)
+
+
 if __name__ == '__main__':
-    verify(); diag(); scores()
+    verify(); diag(); scores(); compare()

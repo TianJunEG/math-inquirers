@@ -57,7 +57,7 @@ G.push(h2('Sneak-peek puzzles, choice time and look-back (every lesson)'));
 G.push(h2('Setting up face to face'));
 ['Seat children in pairs. Keep a materials box per pair so no time is lost.', 'Print the workbook double-sided and staple it. Print the cut-out page on card for Lessons 6 and 9.', 'Keep the answer key with the tutor only. Collect worksheets at the end unless the group is told to keep them.', 'Use a whiteboard or large paper for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
-['Send parents the workbook and materials list one week before. Needed: counters or coins, two colours of paper pieces, a cup, straws or lolly sticks (never real matches or toothpicks), paper, a pencil and a cm ruler (Lesson 9).', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Do not record lessons (this is in the tutor agreement). Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
+['Send parents the workbook and materials list one week before. Needed: counters or coins, two colours of paper pieces, a cup, straws or lolly sticks (never real matches or toothpicks), paper, a pencil and a cm ruler (Lesson 9).', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Hold up the answer page to the camera at the end of each lesson, or take a photo and send it through the approved channel.', 'Lessons are recorded on the approved platform so that children who miss one can catch up; follow “Recording the lesson” in this guide. Do not make your own recordings or photos. Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
 G.push(h1('Materials master list', true));
 G.push(tbl([900, 2600, 3200, 3200], [row([hd('Lesson', 900), hd('Title', 2600), hd('Face to face', 3200), hd('Online set-up', 3200)]), ...L.lessons.map(l => row([c2(String(l.n), 900, { align: AlignmentType.CENTER, bold: true }), c2(l.title, 2600), c2(l.materials, 3200), c2(l.online, 3200)]))]));
@@ -71,6 +71,9 @@ const tag = (s, fill) => cell(s, 1000, { bold: true, fill, size: 18, h: 50, alig
 const seg = (time, title) => p([t(time + '   ', { bold: true, size: 22, color: 'FFFFFF' }), t(title, { bold: true, size: 22, color: 'FFFFFF' })], { before: 160, after: 60, keepNext: true, shading: { type: 'clear', fill: '1F3864', color: 'auto' } });
 const say = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'SAY   ' : '          ', { bold: true, size: 19, color: '1F6F5C' }), t('“' + s.replace(/^[“"]|[”"]$/g, '') + '”', { size: S, italics: true })], { after: 50, indent: { left: 900, hanging: 900 }, line: 280 })));
 const doo = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'DO     ' : '          ', { bold: true, size: 19, color: '7F6000' }), t(s, { size: S })], { after: 40, indent: { left: 900, hanging: 900 }, line: 280 })));
+const REC = require('../levels/reccues.js'); let CURL = null; const SEGS = [];
+const rec = (text) => G.push(p([t('REC   ', { bold: true, size: 19, color: '6B3FA0' }), t(text, { size: S, italics: true })], { after: 40, indent: { left: 900, hanging: 900 }, line: 280 }));
+const pushSeg = (time, title) => { G.push(seg(time, title)); const c = REC.cue(title, time, CURL); SEGS.push({ time, title, action: c.action }); rec(c.say); };
 const ask = (rows, h1c, h2c) => { G.push(tbl([4600, 5300], [row([hd(h1c || 'Ask', 4600), hd(h2c || 'Expect', 5300)]), ...rows.map(r => row([c2(r[0], 4600), c2(r[1], 5300)]))])); G.push(gap(40)); };
 const stuck = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'IF STUCK   ' : '                ', { bold: true, size: 19, color: 'A61C00' }), t(s, { size: S })], { after: 40, indent: { left: 1300, hanging: 1300 }, line: 280 })));
 
@@ -92,31 +95,43 @@ ask([
   ['Two children disagree', '“Both of you, convince the group using objects.” Let the objects decide.']
 ], 'If…', 'Then…');
 
+G.push(h1('Recording the lesson', true));
+G.push(tx(REC.RULES.why));
+G.push(h2('How to teach so the recording works'));
+REC.RULES.voice.forEach(x => G.push(bu(x)));
+G.push(h2('Privacy and consent'));
+REC.RULES.privacy.forEach(x => G.push(bu(x)));
+G.push(tx('These are suggested working rules. Make sure the parent consent wording, the tutor agreement and the platform settings match them before the first recorded lesson.'));
+G.push(h2('After the lesson'));
+REC.RULES.upload.forEach(x => G.push(bu(x)));
+
 L.lessons.forEach(l => {
+  CURL = l; SEGS.length = 0;
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
   G.push(tbl([1900, 8000], [
     ['Objective', l.objective], ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
-    ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.']
+    ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.'],
+    ['Watching the recording', 'A child who missed the live lesson watches the recording. They need: ' + l.materials + ' The REC lines tell them when to pause; the chapter list at the end of this lesson shows each part.']
   ].map(r => row([cell(r[0], 1900, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 60 }), c2(r[1], 8000, { h: 60 })]))));
   G.push(gap(40));
 
-  G.push(seg('0–2 min', 'Opening'));
+  pushSeg('0–2 min', 'Opening');
   say(s.hook);
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
 
-  G.push(seg('2–7 min', 'Warm-up game and quick questions'));
+  pushSeg('2–7 min', 'Warm-up game and quick questions');
   doo([WG[l.n] || d.warmGame]);
   say(s.warmIntro);
   doo(['After the game, ask the quick questions on the warm-up slides (minutes 5 to 7; if time is short, take questions 1 to 3). Use thumbs or a whisper to partners before taking answers.']);
   ask(d.warmQs.map(x => [x[0], x[1]]));
-  G.push(seg('7–10 min', 'Sneak-peek puzzles (3 minutes)'));
+  pushSeg('7–10 min', 'Sneak-peek puzzles (3 minutes)');
   say(['These two are sneak-peek puzzles. They are ideas we have not learnt yet, so a guess is a great start. “I do not know” is welcome too. Nobody is marked.', 'The first one you can try with counters or a drawing. Write or draw on your own paper. When I say, show it to me only (online: hold your paper up to the camera for me).']);
   doo(['Show the sneak-peek slide. Give about a minute for each question, then see the answers without a public board: face to face, walk round and look at papers held low; online, ask children to hold their papers to the camera at the same moment. Do not show or read out anyone’s answer. Click to show each answer to the whole group only after all children have had a try, and say “Lots of us had a different idea, and that is fine.”', 'Quietly note who found the second question easy. Do not write scores on the board or say who is “ahead”. At minute 40 invite the whole group: “When you have finished Start here, you can choose Think harder, Go further or the Investigation.” Do not name a child in front of the group. Everyone joins Explore and the Mini-lesson.', 'At minute 40: read questions 1 and 2 aloud, then pairs read the rest. Say: “After question 3 you may choose: carry on, or try Think harder.” Do not split a pair unless both children agree.']);
   ask(GAPS[String(l.n)].check.map((c, i) => [(i === 0 ? 'Sneak-peek 1 (any child can try): ' : 'Sneak-peek 2 (thinking): ') + c.q, c.a]), 'Question', 'Answer and why');
 
-  G.push(seg('10–25 min', 'Explore (in pairs, with objects)'));
+  pushSeg('10–25 min', 'Explore (in pairs, with objects)');
   say(s.predict);
   doo(d.expSetup.map((x, i) => (i + 1) + '. ' + x));
   say(['Talk to your partner while you work. I will come round and ask you questions.']);
@@ -125,7 +140,7 @@ L.lessons.forEach(l => {
   doo(['At about minute 22, say “Pencils down” and bring the group back together. Take the three questions below, one at a time.']);
   ask(d.expAsk.map(x => [x[0], x[1]]));
 
-  G.push(seg('25–35 min', 'Mini-lesson (you teach, they join in)'));
+  pushSeg('25–35 min', 'Mini-lesson (you teach, they join in)');
   doo(['Show the mini-lesson slides. Think aloud as you work. Say what you notice, what you test and how you check. Children copy how you think.']);
   say(s.think);
   G.push(tbl([4600, 5300], [row([hd('Worked example on the slides', 4600), hd('Answer', 5300)]), row([c2(d.mini1.head + '. ' + (d.mini1.body || []).join(' '), 4600), c2(d.mini1.ans, 5300)]), row([c2(d.mini2.head + '. ' + (d.mini2.body || []).join(' '), 4600), c2(d.mini2.ans, 5300)])]));
@@ -134,10 +149,10 @@ L.lessons.forEach(l => {
   doo(['Show the key idea slide at minutes 33 to 35. The “common mistakes” on that slide are for you, not the children. Watch for them during the worksheet:']);
   l.mistakes.forEach(m => G.push(bu(m)));
 
-  G.push(seg('35–40 min', 'Brain break'));
+  pushSeg('35–40 min', 'Brain break');
   doo([d.brk, 'Water. Toilet break for anyone who needs it. Keep it to five minutes.']);
 
-  G.push(seg('40–72 min', 'Worksheet (pairs, then alone, then check together)'));
+  pushSeg('40–72 min', 'Worksheet (pairs, then alone, then check together)');
   doo(['Minute 40: give out the workbook. Read the title of Lesson ' + l.n + ' aloud and read questions 1 and 2 aloud. Say “Pairs first. Talk before you write. After question 3 you may choose: carry on, or try Think harder.”', 'About minutes 40 to 54: pairs work together on the first page, with a short teaching slide before it and a check-together slide after it. After that, a short teaching slide, then about 10 minutes (58 to 68) when each child works alone on the second page; the exact times are on each slide. Minutes 68 to 72: everyone stands up and stretches for a minute, then check the second page together. Think harder (T), Go further (C) and the Investigation are not a timed part of the lesson: every child has them in the workbook and may choose them at any time, or at home.']);
   say(['Pairs first. Read each question aloud and talk about it before you write. I am not looking for speed. I am looking for good thinking.']);
   doo(['Circulate and ask:']);
@@ -148,16 +163,16 @@ L.lessons.forEach(l => {
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder T' + (i + 1) + ': ' + x.q, x.a]), ...(GAPS[String(l.n)].tx || []).map(x => ['Workbook Think harder ' + x.label + ': ' + x.q + ' ' + (x.subs || []).map(z => '(' + z[0] + ') ' + z[1]).join(' '), x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further C' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the Think harder and Go further pages in the workbook. The Think harder slide has three more questions; their answers are in the answer key below. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
-  G.push(seg('72–80 min', 'Talk time'));
+  pushSeg('72–80 min', 'Talk time');
   doo(['Bring the group back to a circle (or camera on, mics on). Ask for volunteers first: “Who would like to share?” Never call a child by name to answer. Say that passing is always fine. A child may show a drawing or let a partner speak. No tallies, no rankings.']);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
 
-  G.push(seg('80–88 min', 'Exit ticket and closing'));
+  pushSeg('80–88 min', 'Exit ticket and closing');
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
-  G.push(seg('88–90 min', 'Look-back (2 minutes)'));
+  pushSeg('88–90 min', 'Look-back (2 minutes)');
   say(['Turn to the Choose and look-back page and look at the box called “Look-back”. Tick what was hard for you and what helped you. Write or draw one thing you did well. You can pass. If you are still stuck, tick the box and I will come and help you. I will not say your name to the group. This is not shown to the group.', 'Thank you. Drawing it, using counters, asking a friend or asking for help: those are all good ways to get unstuck.']);
   doo(['Show the look-back slide. Keep it to two minutes. Do not ask children to read out their boxes. Never mark or grade the box, and never collect it in front of the group. You may look at it later. Praise the strategy a child used, not how quickly they finished.']);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (it is for you only). If a child marked D or H, plan two minutes of catch-up at the start of the next lesson in the open session (a shared breakout room or a hand signal, with a parent nearby), never by direct message.']);
@@ -168,6 +183,9 @@ L.lessons.forEach(l => {
   G.push(p([t('Think harder slide  ', { bold: true, size: 20 }), t(q.stretch.slice(4, 7).map((x, i) => (i + 1) + ') ' + x.a).join('  '), { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
   GAPS[String(l.n)].check.forEach((c, i) => G.push(p([t('Sneak-peek ' + (i + 1) + '  ', { bold: true, size: 20 }), t(c.a, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 })));
   G.push(p([t('Investigation (' + GAPS[String(l.n)].invest.title + ')  ', { bold: true, size: 20 }), t(GAPS[String(l.n)].invest.model, { size: 20 })], { after: 50, indent: { left: 240 }, line: 270 }));
+  G.push(h2('Recording chapters and what a child watching later does'));
+  G.push(tbl([1300, 3200, 5400], [row([hd('Time', 1300), hd('Chapter marker', 3200), hd('A child watching later', 5400)]), ...SEGS.map(x => row([c2(x.time, 1300), c2(x.title, 3200), c2(x.action, 5400)]))]));
+  G.push(gap(40));
 });
 
 /* ---------- Tracker ---------- */
@@ -183,7 +201,7 @@ G.push(h1('Tutor checklist', true));
 G.push(h2('Before each lesson'));
 ['Read the lesson plan and solve the worksheet yourself without looking at the key.', 'Check materials are ready, or the online set-up has been sent.', 'Test the platform, screen share and annotation tools 10 minutes early (online).', 'Print or open the slide deck for the lesson.'].forEach(s => G.push(bu(s)));
 G.push(h2('During the lesson'));
-['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. No private messages to children.', 'Do not take photos or recordings unless the Company has approved it and parents have consented.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
+['Circulate and ask questions rather than giving answers.', 'Use only the approved channels to contact parents. No private messages to children.', 'Do not take your own photos or recordings. The only recording is the lesson recording made on the approved platform under “Recording the lesson”.', 'If you have a concern about a child’s safety or welfare, tell the Company straight away.'].forEach(s => G.push(bu(s)));
 G.push(h2('After the lesson'));
 ['Stamp inquiry journals and fill in the tracker.', 'Collect worksheets and answer keys (face to face) and keep them secure.', 'Note any child who needs help, and plan a short catch-up at the start of the next lesson.'].forEach(s => G.push(bu(s)));
 

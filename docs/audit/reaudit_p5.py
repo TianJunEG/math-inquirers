@@ -173,3 +173,65 @@ for p in (.4,.5,.6,.7,.8,.9):
     d8=pb([p]*6+[p*.35]*2); b=(sum(d8[6:]),sum(d8[4:6]),sum(d8[:4]))
     same_new=sum(x*x for x in a); same_old=sum(x*x for x in b)
     print(p,'now',[round(x,2) for x in a],'same-band-twice',round(same_new,2),'| old',[round(x,2) for x in b],round(same_old,2))
+
+# ------------------------------------------------------------------
+# RUBRIC (instrument A): baseline (original, docs/audit/gifted_p5.md), earlier claimed 'after', and re-audit scores
+BASE={1:[2,1,1,1,1,1,1,1,0,1,1,2],2:[2,1,1,2,1,1,1,1,0,1,1,2],3:[2,1,1,2,1,1,1,1,1,1,1,2],4:[2,1,2,2,1,1,1,1,1,1,1,2],5:[2,1,2,2,1,1,1,2,0,1,1,2],
+      6:[2,1,1,2,2,1,1,2,1,1,1,2],7:[2,1,2,2,1,1,1,2,0,1,1,1],8:[2,1,2,2,1,1,1,1,0,1,1,2],9:[2,1,2,2,2,1,1,1,0,1,1,2],10:[2,1,1,2,2,1,2,1,1,2,1,2]}
+CLAIM_TOT={1:15,2:16,3:16,4:17,5:18,6:18,7:17,8:17,9:18,10:19}
+NOW={1:[2,1,2,2,1,2,2,1,1,2,2,2],2:[2,1,2,2,1,2,2,1,1,2,2,2],3:[2,1,2,2,1,2,2,1,2,2,2,2],4:[2,1,2,2,2,2,2,0,1,2,2,2],5:[2,1,1,2,1,2,2,1,1,2,2,2],
+     6:[2,1,1,1,1,2,2,2,2,1,2,2],7:[2,1,2,2,2,2,2,2,1,2,2,1],8:[2,1,2,2,1,2,2,0,1,2,2,2],9:[2,1,2,2,2,2,2,1,1,2,2,2],10:[2,1,2,2,2,2,2,1,2,2,2,2]}
+print('\nRUBRIC totals: lesson, before, claimed after, re-audit now, delta vs before, delta vs claimed; conservative (C7=1,C11=1)')
+tb=tc=tn=tcons=0
+for n in range(1,11):
+    b,c,w=sum(BASE[n]),CLAIM_TOT[n],sum(NOW[n]); cons=w-(NOW[n][6]==2)-(NOW[n][10]==2)
+    tb+=b;tc+=c;tn+=w;tcons+=cons
+    print(n,b,c,w,w-b,w-c,cons)
+print('mean',tb/10,tc/10,tn/10,tcons/10)
+names=['Low floor high ceiling','Depth over speed','Abstraction','Justification','Multiple paths','Challenge ladder','Student-led inquiry','Complexity/context','Creativity/posing','Metacognition','Pacing flexibility','Extension w/o acceleration']
+print('per criterion level mean: before, now, delta')
+for i in range(12):
+    bb=sum(BASE[n][i] for n in BASE)/10; ww=sum(NOW[n][i] for n in NOW)/10
+    print(f'C{i+1:2d} {names[i]:30s} {bb:.1f} {ww:.1f} {ww-bb:+.1f}')
+print('per-lesson per-criterion deltas now vs before')
+for n in range(1,11): print(n,[NOW[n][i]-BASE[n][i] for i in range(12)])
+
+# ------------------------------------------------------------------
+# JOURNEY (instrument B): baseline scores from docs/audit/journey_p5.py and re-audit scores. order P,F(raw),U,C,M,S
+JB={1:{'L':(3,2,3,3,3,3),'M':(4,3,4,4,4,4),'H':(5,4,3,4,3,3)},2:{'L':(3,2,3,2,2,3),'M':(4,3,4,3,4,4),'H':(4,4,4,4,4,3)},
+ 3:{'L':(2,1,3,2,2,2),'M':(3,2,3,3,3,4),'H':(4,3,4,4,4,3)},4:{'L':(4,2,4,4,3,3),'M':(5,3,5,4,4,4),'H':(4,4,4,4,4,3)},
+ 5:{'L':(3,2,4,3,3,2),'M':(4,3,5,4,4,3),'H':(5,4,4,4,4,3)},6:{'L':(3,1,3,2,2,2),'M':(4,2,4,3,4,4),'H':(5,4,4,4,4,3)},
+ 7:{'L':(4,2,4,3,4,3),'M':(5,3,5,4,5,4),'H':(5,4,4,4,4,3)},8:{'L':(3,2,3,3,2,3),'M':(4,3,4,4,3,4),'H':(4,4,5,5,4,3)},
+ 9:{'L':(4,2,4,3,3,3),'M':(4,3,4,4,4,4),'H':(5,4,5,5,5,3)},10:{'L':(3,2,4,3,3,2),'M':(4,3,5,4,4,3),'H':(4,3,5,4,5,3)}}
+JN={1:{'L':(4,2,3,3,3,4),'M':(5,3,4,4,4,4),'H':(5,4,4,4,4,4)},2:{'L':(3,2,3,3,3,4),'M':(5,3,4,4,4,4),'H':(5,3,5,4,4,4)},
+ 3:{'L':(4,2,3,3,3,3),'M':(4,3,4,3,4,4),'H':(5,3,4,4,4,4)},4:{'L':(5,3,4,4,3,4),'M':(5,3,5,4,4,4),'H':(5,4,4,4,4,4)},
+ 5:{'L':(4,2,4,3,3,3),'M':(5,3,5,4,4,4),'H':(5,3,4,4,4,4)},6:{'L':(3,2,3,2,2,3),'M':(4,3,4,3,4,4),'H':(5,3,4,4,4,4)},
+ 7:{'L':(4,2,4,3,3,4),'M':(5,3,5,4,5,4),'H':(5,3,5,4,4,4)},8:{'L':(4,2,3,2,3,3),'M':(4,3,4,3,4,4),'H':(5,3,5,5,4,4)},
+ 9:{'L':(5,3,4,3,3,4),'M':(5,3,5,4,4,4),'H':(5,4,5,5,5,4)},10:{'L':(4,2,4,3,3,3),'M':(5,3,5,4,4,4),'H':(5,3,5,4,5,4)}}
+fitq=lambda f:5-2*abs(f-3)
+mean6=lambda t:(t[0]+fitq(t[1])+t[2]+t[3]+t[4]+t[5])/6
+print('\nJOURNEY heatmap: lesson | LOW before->now | MID before->now | HIGH before->now')
+for n in range(1,11): print(n,*['%.2f->%.2f'%(mean6(JB[n][k]),mean6(JN[n][k])) for k in 'LMH'])
+for k,nm in zip('LMH',['LOW','MIDDLE','HIGH']):
+    b=sum(mean6(JB[n][k]) for n in JB)/10; w=sum(mean6(JN[n][k]) for n in JN)/10
+    dimb=[sum((JB[n][k][i] if i!=1 else fitq(JB[n][k][1])) for n in JB)/10 for i in range(6)]
+    dimn=[sum((JN[n][k][i] if i!=1 else fitq(JN[n][k][1])) for n in JN)/10 for i in range(6)]
+    print(nm,'mean %.2f -> %.2f'%(b,w),'dims before',['%.1f'%x for x in dimb],'now',['%.1f'%x for x in dimn])
+# sensitivity: raw fit unconverted (3 = 3), to show how much of the HIGH/MID change is the fit conversion
+for k,nm in zip('LMH',['LOW','MIDDLE','HIGH']):
+    raw=lambda D:sum(sum(D[n][k])/6 for n in D)/10
+    print(nm,'plain mean (no fit conversion) %.2f -> %.2f'%(raw(JB),raw(JN)))
+
+# ------------------------------------------------------------------
+# TIER COMPLIANCE (instrument A, step 3): counts from my item-by-item classification (see report section A.3)
+# printed Start-here pages: items, V (needs lesson's method, no entry for an untaught child), B (borderline)
+PC={1:(6,2,1),2:(6,1,1),3:(5,2,1),4:(5,1,2),5:(6,1,3),6:(6,1,3),7:(5,1,3),8:(5,2,2),9:(5,0,1),10:(6,0,2)}
+BB={1:(23,0,1),2:(23,0,2),3:(23,0,0),4:(23,0,1),5:(23,0,0),6:(23,0,0),7:(23,0,4),8:(24,0,3),9:(23,0,2),10:(23,0,0)}   # bank items, V, B
+tp=sum(v[0] for v in PC.values()); tv=sum(v[1] for v in PC.values()); tbb=sum(v[2] for v in PC.values())
+bi=sum(v[0] for v in BB.values()); bvb=sum(v[2] for v in BB.values())
+print('\nTIER: printed core items %d, V %d, B %d -> strict %.0f%%, lenient %.0f%%'%(tp,tv,tbb,100*(tp-tv-tbb)/tp,100*(tp-tv)/tp))
+print('bank items %d, B %d -> strict %.1f%%, lenient 100%%'%(bi,bvb,100*(bi-bvb)/bi))
+N=tp+bi; print('all %d: strict %.1f%% lenient %.1f%%'%(N,100*(N-tv-tbb-bvb)/N,100*(N-tv)/N))
+for n in range(1,11):
+    i=PC[n][0]+BB[n][0]; s=i-PC[n][1]-PC[n][2]-BB[n][2]; l=i-PC[n][1]
+    print(n,i,'strict %d (%.0f%%)'%(s,100*s/i),'lenient %d (%.0f%%)'%(l,100*l/i))

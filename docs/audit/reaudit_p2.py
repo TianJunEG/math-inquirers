@@ -112,6 +112,24 @@ def diag_table():
 
 # ---------------------------------------------------------------- PHASE 2: BASELINES (typed in after Phase 1 was frozen)
 BASE = {}   # filled in below by the lines added in Phase 2
+BASE['A_before'] = {1: [2,1,1,1,1,1,2,0,0,0,1,2], 2: [1,1,1,2,1,1,2,0,1,0,1,2], 3: [2,1,1,1,1,1,2,1,0,0,1,1],
+    4: [2,1,2,1,1,1,2,1,1,0,1,2], 5: [1,1,1,1,1,2,2,1,1,0,1,2], 6: [2,1,1,1,1,1,1,2,0,0,1,2],
+    7: [2,1,1,2,1,2,2,1,0,0,1,1], 8: [2,1,1,1,1,1,1,1,0,0,1,1], 9: [2,1,1,1,1,2,2,1,1,0,1,2], 10: [1,1,1,1,2,1,2,1,1,0,1,2]}   # gifted_p2.md rubric tables
+BASE['A_claimed_total'] = {1: 16, 2: 17, 3: 17, 4: 18, 5: 17, 6: 17, 7: 17, 8: 14, 9: 18, 10: 16}   # gifted_fixes_p2.md 'after' table (L10 lists 3 increments but states 16)
+BASE['A_claimed_delta'] = {1: {3:1,6:1,9:1,10:1}, 2: {3:1,6:1,9:1,10:1}, 3: {3:1,6:1,9:2,10:1}, 4: {6:1,9:1,10:1}, 5: {3:1,9:1,10:1},
+    6: {3:1,6:1,9:1,10:1}, 7: {3:1,9:1,10:1}, 8: {6:1,9:1,10:1}, 9: {3:1,9:1,10:1}, 10: {3:1,6:1,10:1}}
+BASE['tier'] = dict(items=317, ok=272, pct=86, challenge_bad=28, th_core_level=8, wb_core_no_entry=8, claimed_after_pct=100)
+# journey_p2.md six scores per persona (P,D,F,C,M,S); the baseline reviewer used LOW/MIDDLE/HIGH
+BASE['B_means'] = {'LOW': [3.33,2.75,3.33,3.42,2.83,3.75,3.58,3.17,2.58,3.25], 'MID': [4.17,3.58,4.17,4.17,3.75,4.42,4.25,4.0,3.5,4.08],
+    'HIGH': [3.0,4.17,3.83,3.83,4.17,4.0,3.58,4.08,4.08,4.17]}
+BASE['B_dims'] = {'LOW': [3.65,2.45,3.75,3.10,3.05,3.20], 'MID': [4.60,3.40,4.30,3.70,4.05,4.00], 'HIGH': [4.90,3.15,4.20,3.85,3.95,3.30]}
+BASE['B_persona'] = {'LOW': 3.20, 'MID': 4.01, 'HIGH': 3.89}
+
+# Post-Phase-2 consistency note: the baseline counted 'the standard swap table again' as a wrong-tier Challenge item.
+# Applying that same yardstick adds two more (L3 C7 trikes/cars 30 wheels - printed Go further No.5; L6 C8 5c/20c 8 things $1 - printed Go further No.6).
+ADJ_EXTRA_CHAL_V = {3: 1, 6: 1}
+# slide 'Think harder' items (3 per lesson, shown on the deck, NOT the same as the printed Think Harder page): 30 items, 1 Core-level (L2 item 3: 456 + 99 with the trick given)
+SLIDE_TH = (30, 1)
 
 if __name__ == '__main__':
     print('A totals now:', {n: a_total(n) for n in NOW_A}, 'mean', round(sum(map(a_total, NOW_A)) / 10, 2))
@@ -119,3 +137,57 @@ if __name__ == '__main__':
         print(p, {n: round(b_mean(n, p), 2) for n in NOW_B}, 'mean', round(sum(b_mean(n, p) for n in NOW_B) / 10, 2))
     t = tier_totals(); print('tier', t)
     for k, w, m, c, j in diag_table(): print(k, round(w, 1), round(m, 1), {a: f'{b:.0%}' for a, b in c.items()}, {a: f'{b:.0%}' for a, b in j.items()})
+
+# ---------------------------------------------------------------- PHASE 2 (after Phase 1 was frozen): like-for-like diagnostic re-run
+# Baseline profile rates copied from docs/audit/journey_p2.py (warm-up x4, main x6, stretch x2) so old and new rules can be compared on the SAME children.
+BASE_PROF = {
+    'strong-for-age (8y)': ([.98, .98, .97, .97], [.97, .9, .95, .9, .85, .95], [.6, .55]),
+    'typical-for-age (8y)': ([.97, .95, .92, .92], [.92, .6, .85, .7, .6, .85], [.2, .15]),
+    'weak-for-age (8y)': ([.85, .8, .55, .55], [.55, .15, .4, .2, .15, .45], [.02, .02]),
+    'younger strong (6y9m)': ([.98, .98, .95, .95], [.9, .55, .5, .75, .3, .6], [.5, .4]),
+    'older weak (9y)': ([.92, .9, .75, .75], [.75, .3, .65, .4, .35, .6], [.04, .04]),
+    'guesser/rusher': ([.9, .5, .5, .85], [.6, .1, .4, .3, .2, .35], [.03, .03]),
+}
+def old_rule(w, t):   # baseline page rule on total of 8
+    if t >= 6: return 'up' if (t == 8 and w == 4) else 'join'
+    if t >= 4: return 'down' if w <= 2 else 'join+support'
+    return 'down'
+def new_rule(w, m, s):  # as built in diag/build_diag.py: main 6 only, 4-6 / 2-3 / 0-1 ; warm-up<=2 steers down inside the middle row; stretch>=1 prompts the level-up suggestion inside the join row
+    if m >= 4: return 'join+tryUp' if s >= 1 else 'join'
+    if m >= 2: return 'chat(warm<=2: L1)' if w <= 2 else 'chat'
+    return 'down'
+def rerun():
+    rows = []
+    for name, (w, m, s) in BASE_PROF.items():
+        dw, dm, ds = dist(w), dist(m), dist(s)
+        # baseline rule uses total of main+stretch
+        dt = dist(m + s)
+        old = {}
+        for tw, pw in enumerate(dw):
+            for tt, pt in enumerate(dt):
+                k = old_rule(tw, tt); old[k] = old.get(k, 0) + pw * pt
+        new = {}
+        for tw, pw in enumerate(dw):
+            for tm, pm in enumerate(dm):
+                for ts, ps in enumerate(ds):
+                    k = new_rule(tw, tm, ts); new[k] = new.get(k, 0) + pw * pm * ps
+        rows.append((name, old, new))
+    return rows
+if __name__ == '__main__':
+    print('\n== like-for-like re-run: baseline profile rates, old rule vs rule as built ==')
+    for name, old, new in rerun():
+        f = lambda d: ', '.join(f'{k} {v:.0%}' for k, v in sorted(d.items(), key=lambda x: -x[1]) if v >= .005)
+        print(f'{name:24s} OLD: {f(old)}\n{"":24s} NEW: {f(new)}')
+
+
+def tier_summary():
+    t = tier_totals()
+    n = sum(v[0] for v in t.values()) + SLIDE_TH[0]; v = sum(x[1] for x in t.values()) + SLIDE_TH[1]
+    flat = sum(L['flat'] for L in TIER.values()); flatp = sum(L['flat_printed'] for L in TIER.values())
+    adj = v + sum(ADJ_EXTRA_CHAL_V.values())
+    return dict(items=n, viol=v, pct=100 * (n - v) / n, adj_viol=adj, adj_pct=100 * (n - adj) / n, flat=flat, flat_printed=flatp,
+                strict_pct=100 * (n - adj - flat) / n, by_tier={k: (a, b, 100 * (a - b) / a) for k, (a, b) in t.items()})
+
+if __name__ == '__main__':
+    print('\n== tier summary =='); print(tier_summary())
+    bt = BASE['A_before']; print('A before mean', sum(map(sum, bt.values())) / 10, ' claimed mean', sum(BASE['A_claimed_total'].values()) / 10, ' now mean', sum(map(a_total, NOW_A)) / 10)
