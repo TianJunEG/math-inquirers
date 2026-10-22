@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 E=html.escape
 LV=sys.argv[1]; R=os.path.dirname(os.path.abspath(__file__))+'/..'
 d=json.load(open(f'{R}/diag/content/{LV}.json'))
-NUM=int(LV[1:]); AGE=d['ageName']; SCH={1:'Covers Primary 1 topics',2:'Covers Primary 2 topics',3:'Covers Primary 3 topics',4:'Covers Primary 4 topics',5:'Covers Primary 5 topics',6:'For children after the PSLE'}[NUM]
+NUM=int(LV[1:]); AGE=d['ageName']; SCH={1:'Builds on Primary 1 maths',2:'Builds on Primary 2 maths',3:'Builds on Primary 3 maths',4:'Builds on Primary 4 maths',5:'Builds on Primary 5 maths',6:'For children after the PSLE'}[NUM]
 DOWN={1:None,2:('Level 1','Ages 6-8'),3:('Level 2','Ages 7-9'),4:('Level 3','Ages 8-10'),5:('Level 4','Ages 9-11'),6:('Level 5','Ages 10-12')}[NUM]
 UP={1:('Level 2','Ages 7-9'),2:('Level 3','Ages 8-10'),3:('Level 4','Ages 9-11'),4:('Level 5','Ages 10-12'),5:('Level 6','Ages 11-13'),6:None}[NUM]
 css=open(f'{R}/fonts/fonts.css').read()+'''

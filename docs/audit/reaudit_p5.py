@@ -120,3 +120,56 @@ for k,(W,M,S) in profiles.items():
     d=dist(W+M); print(f"{k:55s} join(6-8)={sum(v for a,v in d.items() if a>=6):.2f} support(4-5)={sum(v for a,v in d.items() if 4<=a<=5):.2f} down(0-3)={sum(v for a,v in d.items() if a<=3):.2f}")
 # 'not learnt yet' note: a younger-strong child scoring 0-1 main is sent to L4 even with 4/4 warm-up (rule ignores warm-up and stretch there)
 d=dist(profiles['younger strong (age 9, P4, topics not yet taught)'][1]); print('\nyounger strong P(main<=1)=',round(d[0]+d[1],3))
+
+# ------------------------------------------------------------------
+# LIKE-FOR-LIKE: reuse the per-item probabilities from docs/audit/journey_p5.py (the earlier audit's assumptions)
+PROF2 = {
+    'Strong for age':   [.98, .97, .99, .93, .97, .90, .92, .88, .93, .70, .55, .45],
+    'Typical for age':  [.85, .80, .92, .65, .75, .50, .65, .50, .70, .35, .18, .07],
+    'Weak for age':     [.55, .50, .80, .30, .50, .15, .30, .15, .40, .15, .03, .01],
+    'Younger and strong':[.97, .95, .98, .90, .85, .60, .25, .20, .40, .35, .30, .15],
+    'Older and weak':   [.60, .55, .85, .35, .60, .20, .50, .30, .55, .35, .04, .01],
+    'Guesser / rusher': [.60, .70, .85, .35, .50, .25, .45, .25, .35, .50, .08, .03],
+}
+M6NEW = {'Strong for age': .93, 'Typical for age': .65, 'Weak for age': .35, 'Younger and strong': .50, 'Older and weak': .50, 'Guesser / rusher': .45}
+def r_old(w,m,s):  # rule in force at the earlier audit: main+stretch out of 8
+    sc=m+s
+    if sc>=6: return 'P5 (+try P6)' if (sc==8 and w==4) else 'P5'
+    if sc>=4: return 'P5 w/ support or P4' if w<=2 else 'P5 w/ support'
+    return 'P4'
+def r_new(w,m,s):  # CURRENT rule, diag/build_diag.py: main out of 6 only; stretch only adds 'try L6 check' in the top row
+    if m>=4: return 'P5 (+try P6 check)' if s>=1 else 'P5'
+    if m>=2: return 'chat+taster, P5 w/ support (or P4 if warm<=2)' if w<=2 else 'chat+taster, P5 w/ support'
+    return 'P4'
+def r_prop(w,m,s):  # what the earlier audit recommended
+    if m>=5: return 'P5 (+try P6)' if (m==6 and w==4 and s>=1) else 'P5'
+    if m>=3: return 'P5 w/ support or P4' if w<=2 else 'P5 w/ support'
+    return 'tutor chat first' if w>=3 else 'P4'
+def pb(ps):
+    d=[1.0]
+    for p in ps:
+        n=[0.0]*(len(d)+1)
+        for i,v in enumerate(d): n[i]+=v*(1-p); n[i+1]+=v*p
+        d=n
+    return d
+def outc(ps,rule):
+    dw,dm,ds=pb(ps[:4]),pb(ps[4:10]),pb(ps[10:]); o={}
+    for w,a in enumerate(dw):
+        for m,b in enumerate(dm):
+            for s,c in enumerate(ds):
+                k=rule(w,m,s); o[k]=o.get(k,0)+a*b*c
+    return o
+def fmt(o): return ', '.join('%s %d%%'%(k,round(100*v)) for k,v in sorted(o.items(),key=lambda x:-x[1]) if v>=.005)
+print('\nLIKE-FOR-LIKE (earlier audit assumptions)')
+for n,ps in PROF2.items():
+    ps2=ps[:9]+[M6NEW[n]]+ps[10:]
+    print(n); print('   BEFORE (old rule, old items):',fmt(outc(ps,r_old))); print('   NOW    (current rule, new M6):',fmt(outc(ps2,r_new))); print('   earlier recommendation       :',fmt(outc(ps2,r_prop)))
+    # sensitivity: new W3 (3/4 of 48) a bit harder than 24x35 for weaker children
+    ps3=ps2[:]; ps3[2]=max(.3,ps3[2]-(.15 if n in ('Weak for age','Older and weak','Guesser / rusher') else .03))
+    print('   NOW, W3 harder (sensitivity) :',fmt(outc(ps3,r_new)))
+print('\nNoise at the cut, 6 main items, per-item p:  P(>=4 join) / P(2-3) / P(0-1)  [now]  vs old 8-item rule P(6-8)/P(4-5)/P(0-3) [stretch ~ p*0.35]')
+for p in (.4,.5,.6,.7,.8,.9):
+    d=pb([p]*6); a=(sum(d[4:]),sum(d[2:4]),sum(d[:2]))
+    d8=pb([p]*6+[p*.35]*2); b=(sum(d8[6:]),sum(d8[4:6]),sum(d8[:4]))
+    same_new=sum(x*x for x in a); same_old=sum(x*x for x in b)
+    print(p,'now',[round(x,2) for x in a],'same-band-twice',round(same_new,2),'| old',[round(x,2) for x in b],round(same_old,2))

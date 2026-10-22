@@ -2,7 +2,7 @@
 
 **Who:** children finishing Primary 5 Standard Mathematics (going into P6 in 2027), age 11. Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
-**Approach:** enrichment, non-routine problems and heuristics (the kind that stretch strong P5 children, in the spirit of competition maths), tagged to the P5 syllabus. Slogan: "Notice it. Test it. Explain why."
+**Approach:** enrichment, non-routine problems and heuristics (the kind that stretch strong P5 children, in the spirit of competition maths), on topics chosen to complement the P5 school year. Slogan: "Notice it. Test it. Explain why."
 Syllabus source: Tampines North Primary 2026 P5 Standard Mathematics scheme of work (numbers to 10 million; four operations; fraction and division; four operations of fractions; area of triangle; volume; decimals; rate; percentage; angles; properties of triangles; parallelogram, rhombus and trapezium).
 
 ## The 10 lessons

@@ -8,24 +8,24 @@ CRIT = ['LFHC', 'Depth', 'General', 'Justify', 'MultiPath', 'Ladder', 'Inquiry',
 # Phase 1 (blind) rubric scores, current material.  Order as CRIT.
 NOW = {
     1: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1],
-    2: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+    2: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1],
     3: [2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1],
     4: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1],
-    5: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2],
-    6: [2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2],
-    7: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 1],
-    8: [2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2],
+    5: [2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2],
+    6: [2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 1],
+    7: [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1],
+    8: [2, 1, 2, 1, 1, 2, 2, 2, 2, 2, 1, 2],
     9: [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2],
-    10: [2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2],
+    10: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2],
 }
 # Phase 1 (blind) journey scores [participate, difficulty fit, fun, confidence, motivation, social/online]
 J = {
-    'LOW': {1: [4, 2, 3, 3, 3, 3], 2: [4, 2, 3, 3, 3, 4], 3: [5, 3, 4, 4, 3, 4], 4: [5, 2, 4, 3, 3, 4], 5: [5, 3, 4, 4, 3, 4],
-            6: [4, 2, 5, 3, 4, 4], 7: [3, 1, 3, 2, 2, 3], 8: [4, 2, 4, 3, 3, 3], 9: [5, 3, 3, 4, 3, 4], 10: [3, 2, 3, 3, 3, 3]},
-    'MIDDLE': {1: [5, 4, 4, 4, 4, 4], 2: [5, 3, 4, 4, 4, 4], 3: [5, 4, 4, 4, 4, 4], 4: [5, 4, 4, 4, 4, 4], 5: [5, 4, 5, 4, 4, 4],
-               6: [5, 3, 5, 4, 4, 4], 7: [4, 2, 4, 3, 3, 4], 8: [5, 3, 5, 4, 4, 4], 9: [5, 4, 4, 4, 4, 4], 10: [4, 3, 4, 4, 4, 3]},
-    'HIGH': {1: [5, 4, 4, 4, 4, 4], 2: [5, 4, 4, 4, 5, 4], 3: [5, 3, 4, 4, 4, 4], 4: [5, 4, 5, 4, 5, 4], 5: [5, 4, 5, 4, 5, 4],
-             6: [5, 4, 5, 4, 5, 4], 7: [5, 3, 5, 4, 5, 4], 8: [5, 4, 5, 4, 5, 4], 9: [5, 4, 4, 4, 4, 4], 10: [5, 4, 5, 4, 5, 4]},
+    'LOW': {1: [4, 2, 3, 3, 3, 3], 2: [4, 2, 3, 3, 3, 3], 3: [5, 3, 4, 3, 3, 4], 4: [4, 2, 3, 3, 3, 3], 5: [4, 3, 4, 3, 3, 3],
+            6: [4, 2, 4, 3, 3, 4], 7: [3, 2, 3, 2, 3, 3], 8: [4, 2, 4, 3, 3, 3], 9: [4, 4, 3, 4, 3, 4], 10: [3, 2, 3, 3, 3, 3]},
+    'MIDDLE': {1: [5, 4, 4, 4, 4, 4], 2: [5, 3, 4, 4, 4, 4], 3: [5, 4, 4, 4, 4, 4], 4: [5, 3, 4, 4, 4, 4], 5: [5, 3, 5, 4, 4, 4],
+               6: [5, 4, 5, 4, 4, 4], 7: [4, 3, 4, 3, 4, 4], 8: [5, 3, 5, 4, 4, 4], 9: [5, 4, 4, 4, 4, 4], 10: [4, 3, 4, 4, 4, 3]},
+    'HIGH': {1: [5, 3, 4, 4, 4, 4], 2: [5, 3, 4, 4, 5, 4], 3: [5, 3, 4, 4, 4, 4], 4: [5, 3, 5, 4, 5, 4], 5: [5, 3, 5, 4, 5, 4],
+             6: [5, 4, 5, 4, 5, 4], 7: [5, 4, 5, 4, 5, 4], 8: [5, 4, 5, 4, 5, 4], 9: [5, 3, 3, 4, 4, 4], 10: [5, 4, 5, 4, 5, 4]},
 }
 DIM = ['participate', 'difficulty fit', 'fun', 'confidence', 'motivation', 'social/online']
 
@@ -35,6 +35,37 @@ QB = {'core': (60, 58.5), 'think': (80, 80), 'challenge': (90, 85)}
 # printed workbook: Start here (Core), Think harder page, Go further (Challenge): (items, compliant credit)
 WB_START = {1: (6, 2.5), 2: (6, 4.5), 3: (7, 6), 4: (7, 6), 5: (6, 5), 6: (5, 3), 7: (5, 1), 8: (5, 3), 9: (6, 4.5), 10: (6, 3.5)}
 WB = {'start': (59, sum(v[1] for v in WB_START.values())), 'think': (40, 38.5), 'go': (30, 30)}
+
+# ---------------- BASELINES (read in Phase 2, after the blind scores above were fixed) ----------------
+BEFORE = {1: [2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2], 2: [2, 1, 2, 2, 1, 1, 2, 1, 0, 1, 1, 1], 3: [1, 1, 1, 1, 1, 1, 2, 2, 0, 1, 1, 1],
+          4: [2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 1, 1], 5: [2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2], 6: [2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1],
+          7: [2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1], 8: [2, 1, 1, 1, 1, 1, 2, 2, 0, 1, 1, 2], 9: [2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 2],
+          10: [2, 1, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2]}
+CLAIM = {1: {6: 2, 9: 2}, 2: {6: 2, 9: 1}, 3: {1: 2, 6: 2, 9: 1}, 4: {}, 5: {}, 6: {6: 2, 9: 2}, 7: {6: 2, 9: 2}, 8: {6: 2, 9: 1}, 9: {6: 2, 9: 2}, 10: {}}
+BJ = {'LOW': {1: [3, 2, 3, 3, 3, 2], 2: [3, 2, 3, 2, 3, 2], 3: [4, 3, 4, 3, 3, 3], 4: [3, 2, 3, 2, 3, 2], 5: [3, 2, 4, 3, 3, 3], 6: [4, 2, 4, 2, 3, 3], 7: [2, 1, 3, 2, 3, 2], 8: [4, 2, 4, 2, 3, 3], 9: [4, 4, 3, 3, 3, 3], 10: [3, 2, 3, 2, 3, 1]},
+      'MIDDLE': {1: [4, 4, 4, 3, 4, 3], 2: [4, 3, 4, 3, 4, 3], 3: [5, 4, 4, 4, 4, 4], 4: [4, 3, 4, 3, 4, 4], 5: [4, 3, 5, 4, 4, 4], 6: [5, 4, 5, 4, 4, 4], 7: [3, 3, 4, 3, 4, 4], 8: [4, 3, 5, 4, 5, 4], 9: [5, 4, 4, 4, 4, 4], 10: [4, 3, 4, 3, 4, 3]},
+      'HIGH': {1: [5, 3, 4, 4, 4, 3], 2: [5, 3, 4, 4, 4, 4], 3: [5, 3, 4, 4, 4, 3], 4: [5, 3, 4, 4, 4, 4], 5: [5, 3, 5, 4, 4, 4], 6: [5, 3, 5, 4, 5, 4], 7: [4, 4, 5, 4, 5, 4], 8: [5, 4, 5, 4, 5, 4], 9: [5, 2, 3, 4, 3, 3], 10: [5, 3, 5, 4, 5, 3]}}
+B_TIER_BEFORE = (240, 289)  # items compliant / items audited in gifted_p6.md (qbank + worksheet items)
+
+
+def compare():
+    print('LESSON | before | claimed after | now | per-criterion deltas now vs before')
+    tb = ta = tn = 0
+    for n in NOW:
+        b = sum(BEFORE[n])
+        a = b + sum(v - BEFORE[n][c - 1] for c, v in CLAIM[n].items())
+        now = sum(NOW[n])
+        d = ', '.join(f'{CRIT[i]} {NOW[n][i] - BEFORE[n][i]:+d}' for i in range(12) if NOW[n][i] != BEFORE[n][i])
+        print(n, b, a, now, '|', d)
+        tb += b; ta += a; tn += now
+    print('LEVEL', tb / 10, ta / 10, tn / 10)
+    print('criterion means before/now', {c: (round(mean(BEFORE[n][i] for n in NOW), 2), round(mean(NOW[n][i] for n in NOW), 2)) for i, c in enumerate(CRIT)})
+    print('HEATMAP before -> now')
+    for n in range(1, 11):
+        print(n, {p: (round(mean(BJ[p][n]), 2), round(mean(J[p][n]), 2)) for p in J})
+    for p in J:
+        print(p, 'mean', round(mean(mean(v) for v in BJ[p].values()), 2), '->', round(mean(mean(v) for v in J[p].values()), 2))
+        print('  dims before', [round(mean(BJ[p][n][i] for n in BJ[p]), 1) for i in range(6)], 'now', [round(mean(J[p][n][i] for n in J[p]), 1) for i in range(6)])
 
 
 def tot(d):
@@ -138,5 +169,50 @@ def report_diag():
         print(p, 'down', round(pm(0) + pm(1), 3), 'chat', round(pm(2) + pm(3), 3), 'join', round(sum(pm(k) for k in range(4, 7)), 3))
 
 
+# ---- like-for-like rule comparison.  Per-question success rates [W1..W4, M5..M10, S11, S12].
+# Re-used from journey_p6.py where the question is unchanged (doubles machine, negatives, clock);
+# bumped where the fix pass made the item self-contained (prime and probability now defined, 'average').
+# These are my scenario estimates, not data.
+PROF2 = {
+    'strong for age (12, AL1-2)':  [.97, .97, .98, .90, .95, .90, .85, .85, .95, .85, .65, .50],
+    'typical for age (12, AL3-5)': [.85, .90, .93, .60, .70, .60, .55, .55, .70, .50, .20, .15],
+    'weak for age (12, AL6-8)':    [.35, .45, .60, .30, .30, .30, .25, .30, .30, .20, .05, .05],
+    'younger strong (11, P5)':     [.85, .80, .90, .70, .85, .70, .60, .65, .80, .80, .60, .40],
+    'older weak (13, Sec 1)':      [.50, .50, .75, .40, .35, .55, .50, .35, .45, .30, .10, .10],
+    'rusher (capable, careless)':  [.50, .60, .85, .50, .50, .50, .45, .45, .50, .35, .30, .20],
+    'pure guesser':                [.03, .03, .05, .03, .03, .03, .03, .03, .03, .05, .25, .03],
+}
+
+
+def rules(ps):
+    w, m, s = dist(ps[:4]), dist(ps[4:10]), dist(ps[10:])
+    m8 = dist(ps[4:])            # old rule scored main+stretch out of 8
+    pw2 = sum(v for k, v in w.items() if k <= 2)
+    old_join = sum(v for k, v in m8.items() if k >= 6); old_sup = sum(v for k, v in m8.items() if 4 <= k <= 5); old_down = sum(v for k, v in m8.items() if k <= 3)
+    old_l5 = old_down + old_sup * pw2
+    cj = sum(v for k, v in m.items() if k >= 4); cc = sum(v for k, v in m.items() if 2 <= k <= 3); cd = sum(v for k, v in m.items() if k <= 1)
+    cur_l5 = cd + cc * pw2           # 'down' plus 'chat, and warm-up <= 2 hint'
+    rj = sum(v for k, v in w.items() if k >= 3); rc = w.get(2, 0); rd = sum(v for k, v in w.items() if k <= 1)
+    return dict(old=(old_join, old_sup, old_down, old_l5), cur=(cj, cc, cd, cur_l5), rec=(rj, rc, rd))
+
+
+def report_rules():
+    print('profile | OLD 8-item rule: join/support/down, P(L5 suggested) | CURRENT main-6 rule: join/chat/down, P(L5 down or hinted) | warm-up-decides rule: join/catch-up/talk')
+    for k, ps in PROF2.items():
+        r = rules(ps)
+        f = lambda t: '/'.join(f'{x:.2f}' for x in t)
+        print(f'{k}: OLD {f(r["old"])} | CUR {f(r["cur"])} | REC {f(r["rec"])}')
+
+
+
+def report_tier_basis():
+    # same 289-item basis as gifted_p6.md: 230 bank items + 59 'Start here' worksheet items
+    bank = sum(v[1] for v in QB.values())
+    strict = bank + WB['start'][1]
+    lenient = bank + 59 - 6        # earlier audit's lenient reading: violation only if a child had no route in (6 items: L1 Q2,Q3; L7 Q2,Q4,Q5; L8 Q5)
+    print('tier compliance on the 289-item basis: before 240/289 = %.1f%%; claimed 100%%; now lenient %.1f/289 = %.1f%%, strict %.1f/289 = %.1f%%' % (100 * 240 / 289, lenient, 100 * lenient / 289, strict, 100 * strict / 289))
+    print('bank only: before', round(100 * 181 / 230, 1), '-> now', round(100 * bank / 230, 1))
+
+
 if __name__ == '__main__':
-    report_rubric(); print(); report_journey(); print(); report_tiers(); print(); report_diag()
+    report_rubric(); print(); report_journey(); print(); report_tiers(); print(); compare(); print(); report_diag(); print(); report_rules(); print(); report_tier_basis()

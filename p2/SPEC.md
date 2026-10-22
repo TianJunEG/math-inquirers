@@ -2,7 +2,7 @@
 
 **Who:** children finishing Primary 2 (going into P3 in 2027), age 8. Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
-**Approach:** enrichment, non-routine puzzles, tagged to the P2 syllabus. Slogan: "Notice it. Test it. Explain why."
+**Approach:** enrichment, non-routine puzzles, on topics chosen to complement the P2 school year. Slogan: "Notice it. Test it. Explain why."
 
 ## The 10 lessons
 | n | Week | Title | Topic (syllabus tag) | Puzzle focus |

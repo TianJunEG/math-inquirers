@@ -2,7 +2,7 @@
 
 **Who:** children finishing Primary 4 (going into P5 in 2027), age 10. Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
-**Approach:** enrichment, non-routine puzzles and heuristics, tagged to the P4 syllabus. Slogan: "Notice it. Test it. Explain why."
+**Approach:** enrichment, non-routine puzzles and heuristics, on topics chosen to complement the P4 school year. Slogan: "Notice it. Test it. Explain why."
 Syllabus source: Tampines North Primary 2026 P4 scheme of work (numbers to 100 000; factors and multiples; four operations; tables and line graphs; fractions; angles; rectangles and squares; decimals and their four operations; area and perimeter; nets; symmetry).
 
 ## The 10 lessons
