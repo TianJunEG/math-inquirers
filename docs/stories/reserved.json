@@ -357,6 +357,26 @@
    "level": 1,
    "lesson": 2,
    "name": "Thabit ibn Qurra"
+  },
+  {
+   "level": 3,
+   "lesson": 1,
+   "name": "Gerbert of Aurillac"
+  },
+  {
+   "level": 3,
+   "lesson": 2,
+   "name": "Wilhelm Schickard"
+  },
+  {
+   "level": 3,
+   "lesson": 6,
+   "name": "Maria Montessori"
+  },
+  {
+   "level": 3,
+   "lesson": 10,
+   "name": "Mary Eleanor Spear"
   }
  ]
 }
