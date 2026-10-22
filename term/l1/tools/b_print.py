@@ -2,6 +2,7 @@
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
+E = Ef      # family-facing pages: one lesson numbering scheme
 import svg
 
 WB_CSS = open(os.path.join(ROOT, 'hp', 'wb_style.css'), encoding='utf-8').read()
@@ -79,6 +80,14 @@ def _vis_html(v):
     return f'<div class="vis{" wide" if wide else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
 
 
+def inv_draw(inv):
+    """A drawing box on the Investigation page whenever the task asks the child to draw (inv.draw: true, or a number of boxes; or the words draw/sketch in the task)."""
+    dr = inv.get('draw')
+    if dr is None: dr = bool(re.search(r'\b(draw|sketch)\b', inv.get('first', '') + ' ' + inv.get('text', ''), re.I))
+    n = 1 if dr is True else int(dr or 0)
+    return ''.join('<div class="draw" style="height:%dpx"></div>' % (96 if n == 1 else 66) for _ in range(n))
+
+
 def inv_vis(inv):
     vs = ([inv['visual']] if inv.get('visual') else []) + list(inv.get('visuals') or [])
     if not vs: return ''
@@ -138,7 +147,7 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
             '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my grown-up will photograph this page for my tutor)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
     P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
-             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p>{inv_vis(inv)}<p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
+             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p>{inv_vis(inv)}<p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + inv_draw(inv) + '<div class="ln"></div>' * d.get('_inv_lines', 4) +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
     body = ''.join(P)

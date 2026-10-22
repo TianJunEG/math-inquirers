@@ -369,8 +369,8 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         body.append(f'<path d="M{xs:.1f} {ys0:.1f} C{xs:.1f} {mid:.1f} {xe:.1f} {mid:.1f} {xe:.1f} {ye - 14:.1f}" fill="none" stroke="{RED}" stroke-width="4.5" stroke-linecap="round"/>')
         body.append(f'<polygon points="{xe:.1f},{ye + 2:.1f} {xe - 11:.1f},{ye - 16:.1f} {xe + 11:.1f},{ye - 16:.1f}" fill="{RED}"/>')
         if arrow.get('v') is not None:
-            body.append(token_svg(str(arrow['v']), (xs + xe) / 2 + 52, mid + 4, 80, 50, 38))
-    W = name_w + mx * ux + 40
+            body.append(token_svg(str(arrow['v']), max(xs, xe) + 62, mid, 80, 50, 38))
+    W = name_w + mx * ux + (120 if arrow else 40)
     H = oy + len(bars) * (bar_h + vgap) + (50 if gap else 0)
     return _svg(W, H, ''.join(body), 'bar model: ' + ', '.join(f'{b.get("name", "")} {b["len"]}' for b in bars))
 
@@ -465,21 +465,29 @@ def picture_equation(rows=None, values=None, sym=60):
 
 # ------------------------------------------------------------------ ten-frame in two colours, dominoes
 
-def ten_frame2(filled=(0, 0), extra=(0, 0), cols=(RED, YEL)):
-    """Two-colour ten-frame: filled=[red, yellow] counters in the first frame (red first), extra=[red, yellow] in a second frame."""
+def ten_frame2(filled=(0, 0), extra=(0, 0), cols=(RED, YEL), ring=0, dash=0):
+    """Two-colour ten-frame: filled=[red, yellow] counters in the first frame (red first), extra=[red, yellow] in a second frame.
+    ring=k rings the last k counters (the '1 more'); dash=k draws the last k counters dashed and empty (the '1 less', taken away). Both act on the last frame that has counters."""
     cell = 64; body = []
 
-    def frame(x0, cnts):
+    def frame(x0, cnts, last=False):
         seq = [cols[0]] * cnts[0] + [cols[1]] * cnts[1]
         for r in range(2):
             for c in range(5):
                 x, y = x0 + c * cell, 6 + r * cell
                 body.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" fill="#fff" stroke="{NAVY}" stroke-width="2.4"/>')
                 i = r * 5 + c
-                if i < len(seq): body.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="22" fill="{seq[i]}" stroke="{NAVY}" stroke-width="2"/>')
-    frame(6, filled); W = 5 * cell + 12
-    if sum(extra):
-        frame(6 + 5 * cell + 40, extra); W = 10 * cell + 52
+                if i < len(seq):
+                    from_end = len(seq) - i
+                    if last and dash and from_end <= dash:
+                        body.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="22" fill="#fff" stroke="{RED}" stroke-width="3.4" stroke-dasharray="6 4"/><line x1="{x + cell * 0.25}" y1="{y + cell * 0.75}" x2="{x + cell * 0.75}" y2="{y + cell * 0.25}" stroke="{RED}" stroke-width="3.4"/>')
+                    else:
+                        body.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="22" fill="{seq[i]}" stroke="{NAVY}" stroke-width="2"/>')
+                        if last and ring and from_end <= ring: body.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="29" fill="none" stroke="{TEAL}" stroke-width="4.5"/>')
+    two = bool(sum(extra))
+    frame(6, filled, not two); W = 5 * cell + 12
+    if two:
+        frame(6 + 5 * cell + 40, extra, True); W = 10 * cell + 52
         body.append(f'<text x="{5 * cell + 26}" y="{6 + cell + 14}" font-size="46" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">+</text>')
     return _svg(W, 2 * cell + 12, ''.join(body), 'ten frame')
 

@@ -173,6 +173,9 @@ def build_html(d):
         r = d['rec'][p['id']]
         H.append(f'<tr><td>{p["start"]}:00</td><td>{E(p["title"])}</td><td><i>{E(r["say"])}</i></td><td>{E(r["action"])}</td></tr>')
     H.append('</table>')
+    nr = [x for x in d['slides'] if x.get('no_record')]
+    if nr:
+        H.append('<div class="box r"><b>Do not record these slides.</b> Pause the recording (or show a blank slide) while the check sheet is on screen, so the shared recording does not give away the questions or answers: ' + '; '.join(E(x['id'] + ' (' + x['title'] + ')') for x in nr) + '. ' + E(d.get('rec_pause_say', 'Say once to the camera: the recording pauses now and starts again after the check.')) + '</div>')
     # timing appendix
     H.append('<h2>9. Timing check (model, not a stopwatch)</h2><table><tr><th>Part</th><th>Allocated</th><th>Script</th><th>Slow class</th><th>Flag</th></tr>')
     for (p, a, u, sl, fl) in d['_timing_rows']:

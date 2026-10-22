@@ -275,8 +275,8 @@ def kit_figure(spec):
 MINT = '#BFE3DC'
 
 
-def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(1, 10), cols=(1, 10), per=10, cell=46, qmarks=False, tags=None):
-    """A numbered number square.  Cell (row r, column c) holds (r-1)*per + c.  rows and cols pick a window of the square.
+def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(1, 10), cols=(1, 10), per=10, cell=46, qmarks=False, tags=None, zero=False):
+    """A numbered number square.  Cell (row r, column c) holds (r-1)*per + c (zero=True: one less, so the square runs 0 to 99).  rows and cols pick a window of the square.
     shade = yellow cells, shade2 = mint cells, hide = cells left empty (for the child to fill, or '?' when qmarks),
     mark = a red counter sits on the cell, outline = thick teal border, arrows = [[from, to, label], ...]."""
     shade, shade2, hide, mark, outline = set(shade), set(shade2), set(hide), set(mark), set(outline)
@@ -289,7 +289,7 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
     centre = {}
     for r in range(r0, r1 + 1):
         for c in range(c0, c1 + 1):
-            n = (r - 1) * per + c
+            n = (r - 1) * per + c - (1 if zero else 0)
             x = pad + (c - c0) * cell; y = pad + (r - r0) * cell
             centre[n] = (x + cell / 2, y + cell / 2)
             fill = '#FFFFFF'
@@ -411,7 +411,7 @@ def _render_visual(v):
     if r is not None:
         return r
     if t == 'ten_frame' and isinstance(v.get('filled'), (list, tuple)):
-        return figs2.ten_frame2(tuple(v['filled']), tuple(v.get('extra', (0, 0))))
+        return figs2.ten_frame2(tuple(v['filled']), tuple(v.get('extra', (0, 0))), ring=v.get('ring', 0), dash=v.get('dash', 0))
     if t == 'bundles':
         return bundles(v['tens'], v['ones'], None, v.get('style', 'sticks'))
     if t == 'scatter':
@@ -425,7 +425,7 @@ def _render_visual(v):
     if t == 'ruler':
         return ruler(v.get('start', 0), v.get('end', 15), v.get('objects'), v.get('mark'))
     if t == 'hundred':
-        kw = {k: v[k] for k in ('shade', 'shade2', 'hide', 'mark', 'outline', 'arrows', 'rows', 'cols', 'per', 'cell', 'qmarks', 'tags') if k in v}
+        kw = {k: v[k] for k in ('shade', 'shade2', 'hide', 'mark', 'outline', 'arrows', 'rows', 'cols', 'per', 'cell', 'qmarks', 'tags', 'zero') if k in v}
         if 'tags' in kw: kw['tags'] = {int(a): b for a, b in kw['tags'].items()}
         if 'arrows' in kw: kw['arrows'] = [tuple(a) for a in kw['arrows']]
         if 'rows' in kw: kw['rows'] = tuple(kw['rows'])

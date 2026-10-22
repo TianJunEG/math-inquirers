@@ -267,7 +267,7 @@ def build_deck(d, pw=None):
         sections[f's{i}'] = {'description': part_map(d)[part]['title'], 'start': sid}
     deck = {'v': 4, 'createdOnFiles': {'v': 1, 'at': '2026-10-22T00:00:00Z'}, 'lists': 'css',
             'title': f"Math Inquirers Level {d['level']} Term {d['term']}: Lesson {d['lesson_in_term']} – {d['title']}",
-            'order': order, 'cover': order[0], 'sections': sections,
+            'order': order, 'cover': order[0], 'sections': sections, 'no_record': [x['id'] for x in d['slides'] if x.get('no_record')],
             'faces': {'fredoka': {'family': 'Fredoka', 'href': 'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},
                       'nunito-sans': {'family': 'Nunito Sans', 'href': 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap'}},
             'designSystems': []}

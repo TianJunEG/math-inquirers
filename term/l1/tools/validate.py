@@ -496,6 +496,8 @@ def check_answers(d):
             fr = it.get('frame', '')
             ids = [f['id'] for f in it.get('fields', [])]
             if not ids or any('{' + i + '}' not in fr for i in ids): fail(f"practice: {it['id']} fields item: every field id must appear as {{id}} in the frame")
+            stray = [m for m in re.findall(r'\{(\w+)\}', fr) if m not in ids]
+            if stray: warn(f"practice: {it['id']} fields item: frame has {{{stray[0]}}} which is not a field (write the number in the frame, or add a field)")
         if it.get('fig'):
             import svg
             try: svg.render_visual(it['fig'] if '{' not in json.dumps(it['fig']) else it['fig_base'])
@@ -679,6 +681,8 @@ def check_foreign(d):
             hits = [m.start() for m in re.finditer(r'\bLesson 1\b(?!\d)', t1)]
             for h in hits:
                 ctx = t1[max(0, h - 40):h + 30]
+                tm = re.search(r'Term (\d) \u2022 Lesson 1', t1[max(0, h - 12):h + 9])
+                if tm and int(tm.group(1)) != d['term']: continue          # a pointer to the first lesson of another term
                 if not re.search(r'previous|earlier|Lesson 1 to|Lessons? 1,|from Lesson 1|in Lesson 1', ctx, re.I): bad.append(f"{os.path.basename(f)} contains 'Lesson 1' ({ctx.strip()})")
         if d['term'] != 1 and re.search(r'Math Inquirers Term 1\b|\bTERM 1 (CHECK|\u2022)', t1): bad.append(f"{os.path.basename(f)} still says Term 1 (this is Term {d['term']})")
     if bad: fail('template leak: ' + '; '.join(sorted(set(bad))[:6]))

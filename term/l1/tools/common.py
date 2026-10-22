@@ -7,6 +7,19 @@ ROOT = os.path.dirname(os.path.dirname(L1))     # repo root
 OUT = os.path.join(L1, 'out')
 E = html.escape
 
+
+def fam(s):
+    """Family-facing pages use one numbering: 'Term 2 \u2022 Lesson 4'. An authored global number ('Lesson 14', 11 to 40) is rewritten to the term form; numbers 1 to 10 are already in-term and stay."""
+    def sub(m):
+        n = int(m.group(2))
+        if n <= 10 or n > 80: return m.group(0)
+        return f'Term {(n - 1) // 10 + 1} \u2022 Lesson {(n - 1) % 10 + 1}'
+    return re.sub(r'\b(Lesson )(\d{2})\b(?!\s*(?:to|-|\u2013)\s*\d)', sub, str(s))
+
+
+def Ef(s):
+    return html.escape(fam(s))
+
 NAVY = '#1B2A49'; TEAL = '#1F7A6F'; YEL = '#FFC93C'; CREAM = '#FFF9EC'; MUTED = '#3B4A6B'
 FOOT_PARENT = 'Math Inquirers  •  Notice it. Test it. Explain why.'   # legacy; use foot_text(d)
 
@@ -26,7 +39,38 @@ def load(num):
         d = json.load(f)
     d['_path'] = path
     d['_num'] = num
+    expand_reveals(d)
     return d
+
+
+def expand_reveals(d):
+    """A slide block marked "reveal": true is left off the slide while the question is asked. The slide is followed by a second slide
+    '<id>-ans' with every block, and a SLIDE line for it is added to the script after the last line that follows the question slide."""
+    import copy
+    new = []; made = {}
+    for s in d.get('slides', []):
+        if not any(isinstance(b, dict) and b.get('reveal') for b in s.get('blocks', [])):
+            new.append(s); continue
+        q = copy.deepcopy(s)
+        q['blocks'] = [b for b in s['blocks'] if not (isinstance(b, dict) and b.get('reveal'))]
+        a = copy.deepcopy(s)
+        a['id'] = s['id'] + '-ans'
+        for b in a['blocks']:
+            b.pop('reveal', None)
+        a['note'] = s.get('note', '') + ' (answer shown after the children have answered)'
+        a.pop('optional', None) if not s.get('optional') else None
+        new += [q, a]; made[s['id']] = a['id']
+    if not made: return
+    d['slides'] = new
+    for seg in d.get('script', {}).get('segments', []):
+        lines = seg['lines']; out = []; pending = None
+        for ln in lines:
+            if ln.get('k') == 'SLIDE' and pending:
+                out.append({'k': 'SLIDE', 'slide': pending}); pending = None
+            out.append(ln)
+            if ln.get('k') == 'SLIDE' and ln.get('slide') in made: pending = made[ln['slide']]
+        if pending: out.append({'k': 'SLIDE', 'slide': pending})
+        seg['lines'] = out
 
 
 def outdir(d, *sub):

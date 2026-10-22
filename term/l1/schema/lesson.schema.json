@@ -326,6 +326,10 @@
           "subtitle": {
             "type": "string"
           },
+          "no_record": {
+            "type": "boolean",
+            "description": "optional; true on a slide the tutor must not record (the check sheet): the guide lists it under Recording cues and deck.json carries it in no_record. Optional lesson field rec_pause_say gives the line to say."
+          },
           "optional": {
             "type": "boolean"
           },
@@ -371,6 +375,7 @@
         },
         "investigation": {
           "type": "object",
+          "description": "optional fields: visual / visuals (printed under the first task), draw (true or a number of drawing boxes; default: a box is added when the task says draw or sketch)",
           "required": [
             "id",
             "title",
