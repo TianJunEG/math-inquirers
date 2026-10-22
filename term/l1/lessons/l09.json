@@ -65,7 +65,7 @@
     "home_hint": "Use your ruler and spare paper.",
     "header": "Length: draw and measure",
     "hint_p1": "Use your ruler and a pencil. Say your answer out loud, then write it.",
-    "hint_p3": "Use your ruler and a drawing. Then write how you know. Choose any question, in any order."
+    "hint_p3": "Use your ruler and drawings to help. Choose any question, in any order."
   },
   "timing": {
     "skip_order": [
@@ -147,8 +147,8 @@
     "notes": "A 4-minute opening: greeting, the ruler check (everyone shows the 0 end to the camera), the recording notice and a hands-apart estimate. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time."
   },
   "sneak_peek": {
-    "q1": "Draw a dot. Now draw a line from the dot that is exactly 3 cm long. Use your ruler.",
-    "q2": "Ali puts the end of a pencil at the 1 mark on his ruler. The tip is at the 9 mark. Ali says: it is 9 cm long. Is he right? Write yes or no, and why.",
+    "q1": "Draw a dot. Use your ruler to draw a line from the dot, exactly 3 cm long.",
+    "q2": "Ali puts one end of a pencil at the 1 mark of his ruler. The other end is at the 9 mark. Ali says it is 9 cm long. Is he right? Write yes or no. Then write why.",
     "a1": "A line from the dot that is 3 cm long: the 0 mark on the dot and the 3 mark at the other end.",
     "a2": "No. It is 8 cm long. The pencil starts at the 1 mark, not the 0 mark, so the first centimetre of the ruler is not part of the pencil (9 take away 1 is 8).",
     "val1": 3
@@ -336,7 +336,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle one. Draw a dot. Now draw a line from the dot that is exactly 3 cm long. Use your ruler."
+            "text": "Puzzle one. Draw a dot. Use your ruler to draw a line from the dot, exactly 3 cm long."
           },
           {
             "k": "WORK",
@@ -345,7 +345,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. Ali puts the end of a pencil at the 1 mark on his ruler. The tip is at the 9 mark. Ali says: it is 9 cm long. Is he right? Write yes or no, and why."
+            "text": "Puzzle two. Ali puts one end of a pencil at the 1 mark of his ruler. The other end is at the 9 mark. Ali says it is 9 cm long. Is he right? Write yes or no. Then write why."
           },
           {
             "k": "WORK",
@@ -380,7 +380,7 @@
           },
           {
             "k": "SAY",
-            "text": "Today your ruler is your teacher. Find three things: a pencil, a spoon, an eraser or a toy. First guess how many centimetres long each one is. Then measure."
+            "text": "Today your ruler is your teacher. Find three things: a pencil, a spoon, a rubber or a toy. First guess how many centimetres long each one is. Then measure."
           },
           {
             "k": "SAY",
@@ -393,7 +393,7 @@
           },
           {
             "k": "ASK",
-            "text": "Tell me one of your things. My pencil is about how many centimetres? How close was your guess?",
+            "text": "Tell me about one of your things. How long was it? How close was your guess?",
             "resp": 50
           },
           {
@@ -542,7 +542,7 @@
           },
           {
             "k": "READ",
-            "text": "Your turn. Draw a line 5 cm long. Then: a line starts at the 2 mark and ends at the 9 mark. How long is it? Write both answers on your paper."
+            "text": "Your turn. Draw a line 5 cm long. Then: a line goes from the 2 mark to the 9 mark. How long is it? Write both answers on your paper."
           },
           {
             "k": "WORK",
@@ -580,7 +580,7 @@
           },
           {
             "k": "SAY",
-            "text": "Stand up and get a sip of water. We measure with our bodies today. A big jump is ten centimetres. A small hop is one centimetre. Fourteen centimetres is one big jump and four small hops."
+            "text": "Stand up and get a sip of water. We move our bodies today. Let us pretend. A big jump is 10 cm. A small hop is 1 cm. So 14 cm is one big jump and four small hops."
           },
           {
             "k": "WORK",
@@ -627,7 +627,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: Ali and Mei measure pencils. Question 5: draw a line 5 cm long, then a line 3 cm longer. Question 6: Mei says her line is 8 cm. Is she right? Question 7: the tip of Ben's spoon is between two marks."
+            "text": "Page 2. Question 4: Ali and Mei measure pencils. Question 5: draw a line 5 cm long, then a line 3 cm longer than the first. Question 6: Mei's line goes from the 0 mark to the 7 mark. Mei says it is 8 cm long. Is she correct? Question 7: the tip of Ben's spoon is between two marks."
           },
           {
             "k": "WORK",
@@ -682,7 +682,7 @@
           },
           {
             "k": "READ",
-            "text": "Mei measures a pencil and says it is 15 cm. Ben measures the same pencil and says it is 16 cm. What could have happened? How can we find out who is right?"
+            "text": "Mei measures a pencil and says it is 15 cm. Ben measures the same pencil and says it is 16 cm. Why might their answers be different? How can we check?"
           },
           {
             "k": "WORK",
@@ -705,7 +705,7 @@
           },
           {
             "k": "SAY",
-            "text": "Remember puzzle two? Ali put his pencil at the 1 mark and the tip was at the 9 mark. He said 9 cm. The pencil is 8 cm long, because it starts at the 1, not at the 0."
+            "text": "Remember puzzle two? Ali put his pencil at the 1 mark and the other end was at the 9 mark. He said 9 cm. The pencil is 8 cm long, because it starts at the 1, not at the 0."
           },
           {
             "k": "ASK",
@@ -801,7 +801,7 @@
           },
           {
             "k": "SAY",
-            "text": "Optional, only if you are on time: a strip of paper is 10 cm long. You may cut it at the 1 mark, the 2 mark and so on. How many different places can you cut? And if the strip is 20 cm long?",
+            "text": "Optional, only if you are on time: a strip of paper is 10 cm long. You may cut it at the 1 mark, the 2 mark and so on, but not at the ends. How many places can you cut? And if the strip is 20 cm long?",
             "optional": true
           },
           {
@@ -955,8 +955,8 @@
                 "head": "PUZZLE 1: anyone can try",
                 "items": [
                   "Draw a dot.",
-                  "Draw a line from the dot that is exactly 3 cm long.",
-                  "Use your ruler."
+                  "Use your ruler.",
+                  "Draw a line from the dot, exactly 3 cm long."
                 ]
               }
             ],
@@ -965,9 +965,9 @@
                 "t": "card",
                 "head": "PUZZLE 2: think",
                 "items": [
-                  "Ali puts the end of a pencil at the 1 mark on his ruler.",
-                  "The tip is at the 9 mark.",
-                  "Ali says: it is 9 cm long. Is he right? Write yes or no, and why."
+                  "Ali puts one end of a pencil at the 1 mark of his ruler.",
+                  "The other end is at the 9 mark.",
+                  "Ali says it is 9 cm long. Is he right? Write yes or no. Then write why."
                 ]
               }
             ]
@@ -985,7 +985,7 @@
         {
           "t": "list",
           "items": [
-            "Find 3 things: a pencil, a spoon, an eraser or a toy.",
+            "Find 3 things: a pencil, a spoon, a rubber or a toy.",
             "Guess how many cm long each one is.",
             "Put one end at the 0 mark. Read the mark at the other end.",
             "Say: my ___ is about ___ cm."
@@ -1220,7 +1220,7 @@
                 "t": "card",
                 "head": "WORK OUT",
                 "items": [
-                  "A line starts at the 2 mark and ends at the 9 mark.",
+                  "A line goes from the 2 mark to the 9 mark.",
                   "How long is it?"
                 ]
               }
@@ -1274,7 +1274,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "A big jump is 10 cm. A small hop is 1 cm."
+          "text": "Pretend a big jump is 10 cm. A small hop is 1 cm."
         },
         {
           "t": "numrow",
@@ -1427,7 +1427,7 @@
         },
         {
           "t": "p",
-          "text": "What could have happened? How can we find out who is right?"
+          "text": "Why might their answers be different? How can we check?"
         },
         {
           "t": "chip",
@@ -1552,11 +1552,11 @@
       "blocks": [
         {
           "t": "p",
-          "text": "A strip of paper is 10 cm long. You may cut it at the 1 mark, the 2 mark and so on."
+          "text": "A strip of paper is 10 cm long. You may cut it at the 1 mark, the 2 mark and so on, but not at the ends."
         },
         {
           "t": "p",
-          "text": "How many different places can you cut? What if the strip is 20 cm long?"
+          "text": "How many places can you cut? What if the strip is 20 cm long?"
         }
       ],
       "note": "Optional, only if you are on time. Answer: 9 places for the 10 cm strip (the marks 1 to 9), and 19 places for the 20 cm strip. We cannot cut at the 0 mark or the 10 mark, because that is the end of the strip. Take two answers and move on.",
@@ -1605,11 +1605,11 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "Draw a line 7 cm long in the box. Put the 0 mark of your ruler at the start of the line.",
+        "text": "In the box, draw a line 7 cm long. Start at the 0 mark.",
         "parts": [
           {
             "l": "",
-            "text": "My line starts at the ___ mark and ends at the ___ mark.",
+            "text": "The line starts at the ___ mark and ends at the ___ mark.",
             "ans": "0 and 7",
             "val": [
               0,
@@ -1646,7 +1646,7 @@
           },
           {
             "l": "b",
-            "text": "It is ___ cm longer than the short line.",
+            "text": "It is ___ cm longer than the shorter line.",
             "ans": "5",
             "val": 5
           }
@@ -1670,7 +1670,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Measure your pencil. First write your guess. Then measure to the nearest cm.",
+        "text": "Measure the length of your pencil. Write your guess first. Then measure to the nearest cm.",
         "parts": [
           {
             "l": "a",
@@ -1716,7 +1716,7 @@
           },
           {
             "l": "c",
-            "text": "Ali's pencil is ___ cm longer.",
+            "text": "Ali's pencil is ___ cm longer than Mei's.",
             "ans": "4",
             "val": 4
           }
@@ -1740,7 +1740,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Draw a line 5 cm long. Under it, draw a line that is 3 cm longer.",
+        "text": "Draw a line 5 cm long. Under it, draw a line 3 cm longer than the first line.",
         "parts": [
           {
             "l": "",
@@ -1767,11 +1767,11 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Mei wants a line 8 cm long. She puts the 0 mark at the start and draws to the 7 mark. She says: my line is 8 cm. Is she right?",
+        "text": "Mei's line goes from the 0 mark to the 7 mark. Mei says it is 8 cm long.",
         "parts": [
           {
             "l": "a",
-            "text": "Yes or no? ___",
+            "text": "Is Mei correct? Circle Yes or No.",
             "ans": "no",
             "val": "no"
           },
@@ -1787,10 +1787,10 @@
           "no",
           7
         ],
-        "hint": "Where does her line end on the ruler? Look at the mark. What mark should it end at?",
+        "hint": "Where does her line start and end on the ruler? Read the end mark.",
         "solution": "Mei started at 0 and stopped at the 7 mark, so her line is 7 cm long. A line 8 cm long must end at the 8 mark. She should draw on to the 8 mark.",
         "mistakes": [
-          "Saying yes because she wanted 8.",
+          "Saying yes because Mei said 8.",
           "Counting the 0 as one, so the 7 mark looked like 8."
         ],
         "mins": 2.5,
@@ -1828,7 +1828,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Mei draws a path with 3 straight pieces: 5 cm, 3 cm and 4 cm. Draw the path in the box with your ruler. How long is the whole path?",
+        "text": "Use your ruler to draw a path with 3 straight pieces: 5 cm, 3 cm and 4 cm.",
         "parts": [
           {
             "l": "",
@@ -1855,17 +1855,17 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "A line starts at the 2 mark of a ruler and ends at the 9 mark. A second line starts at the 3 mark and is 6 cm long.",
+        "text": "Line A starts at the 2 mark and ends at the 9 mark. Line B starts at the 3 mark and is 6 cm long.",
         "parts": [
           {
             "l": "a",
-            "text": "The first line is ___ cm long.",
+            "text": "Line A is ___ cm long.",
             "ans": "7",
             "val": 7
           },
           {
             "l": "b",
-            "text": "The second line ends at the ___ mark.",
+            "text": "Line B ends at the ___ mark.",
             "ans": "9",
             "val": 9
           }
@@ -1875,11 +1875,11 @@
           7,
           9
         ],
-        "hint": "Count the jumps from the start mark to the end mark. For the second line, jump 6 along from the 3 mark.",
+        "hint": "Count the jumps from the start mark to the end mark. For line B, jump 6 along from the 3 mark.",
         "solution": "(a) From the 2 mark to the 9 mark is 7 jumps: 9 take away 2 is 7 cm, not 9 cm. (b) Start at the 3 mark and jump on 6: 3 + 6 = 9. The line ends at the 9 mark.",
         "mistakes": [
-          "Writing 9 for the first line because the end is at the 9 mark.",
-          "Taking 6 away from 3, or writing 6 for the second answer."
+          "Writing 9 for line A because the end is at the 9 mark.",
+          "Taking 6 away from 3, or writing 6 for line B."
         ],
         "mins": 4,
         "lines": 0
@@ -1915,17 +1915,22 @@
         "id": "T4",
         "page": 3,
         "tier": "think",
-        "text": "Both pencils start at 0. To the nearest cm: Ali's tip is between the 16 and 17 marks, closer to 16. Mei's tip is between the 18 and 19 marks, closer to 19.",
+        "text": "Both pencils start at 0. Ali's tip is between 16 and 17, closer to 16. Mei's tip is between 18 and 19, closer to 19.",
         "parts": [
           {
-            "l": "",
-            "text": "Ali: ___ cm. Mei: ___ cm. Mei's is ___ cm longer.",
-            "ans": "16, 19 and 3",
+            "l": "a",
+            "text": "To the nearest cm, Ali's pencil is ___ cm and Mei's pencil is ___ cm long.",
+            "ans": "16 and 19",
             "val": [
               16,
-              19,
-              3
+              19
             ]
+          },
+          {
+            "l": "b",
+            "text": "Mei's pencil is ___ cm longer than Ali's.",
+            "ans": "3",
+            "val": 3
           }
         ],
         "answer": "16 cm; 19 cm; 3 cm longer",
@@ -1949,8 +1954,15 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "A ribbon is 30 cm long. Mei cuts it into three pieces. Piece A is 8 cm long. Piece B is 3 cm longer than piece A. How long is piece C?",
-        "parts": [],
+        "text": "A ribbon is 30 cm long. Mei cuts all of it into 3 pieces: A, B and C. Piece A is 8 cm long. Piece B is 3 cm longer than piece A. How long is piece C?",
+        "parts": [
+          {
+            "l": "",
+            "text": "Piece C is ___ cm long.",
+            "ans": "11",
+            "val": 11
+          }
+        ],
         "answer": "Piece C is 11 cm (B is 11 cm, A and B together are 19 cm, and 30 take away 19 is 11)",
         "val": [
           11
@@ -1962,7 +1974,7 @@
           "Writing 3 for piece B instead of 3 more than A."
         ],
         "mins": 5,
-        "lines": 4
+        "lines": 3
       },
       {
         "id": "G2",
@@ -2001,7 +2013,7 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Draw a path with 3 straight pieces. Every piece must be a different whole number of cm long. The whole path must be exactly 20 cm. Write the 3 lengths.",
+        "text": "Draw a path with 3 straight pieces. The pieces are all different lengths, in whole cm. The whole path is exactly 20 cm long. Many answers are right.",
         "parts": [
           {
             "l": "",
@@ -2028,8 +2040,8 @@
       "page": 5,
       "tier": "investigation",
       "title": "Does the start mark matter?",
-      "first": "Draw a line 6 cm long. Put the 2 mark of your ruler at its start. Which mark is at its end?",
-      "text": "Try 3 start marks. Is the length always the same? Is there a rule?",
+      "first": "Draw a line 6 cm long. Start it at the 2 mark of your ruler. Which mark does it end at?",
+      "text": "Try 3 more start marks. Each time, draw a line 6 cm long and write where it ends. What do you notice? Start with: I notice ...",
       "lines": 1,
       "answer": "The length stays 6 cm every time. From the 2 mark the line ends at 8; from 3 it ends at 9; from 5 it ends at 11. The end mark is always the start mark plus 6, so the end mark take away the start mark is always 6. Reading only the end mark gives the length only when the line starts at 0.",
       "val": [
@@ -2044,7 +2056,7 @@
     }
   },
   "talk": {
-    "question": "Mei measures a pencil and says it is 15 cm. Ben measures the same pencil and says it is 16 cm. What could have happened? How can we find out who is right?",
+    "question": "Mei measures a pencil and says it is 15 cm. Ben measures the same pencil and says it is 16 cm. Why might their answers be different? How can we check?",
     "starter": "I think ... because ...",
     "answer": "The tip may be between the 15 mark and the 16 mark, so one child chose the other mark. Or one child did not start at the 0 mark. We can check by measuring again with the 0 mark at the start, and by choosing the closer mark.",
     "look_for": "A reason about the start at 0 or about an end between two marks, and a way to check (measure again). Praise the check, not who is right."
@@ -2052,7 +2064,7 @@
   "exit": [
     {
       "id": "E1",
-      "text": "Draw a line 6 cm long on your spare paper. Then write where it starts and ends on your ruler.",
+      "text": "Draw a line 6 cm long on your spare paper. Start it at the 0 mark of your ruler. Then fill in the marks.",
       "parts": [
         {
           "l": "",
@@ -2077,11 +2089,11 @@
     },
     {
       "id": "E2",
-      "text": "Siti's eraser ends at the 6 mark and her pencil ends at the 15 mark. Both start at 0.",
+      "text": "Siti's rubber ends at the 6 mark and her pencil ends at the 15 mark. Both start at the 0 mark.",
       "parts": [
         {
           "l": "",
-          "text": "The pencil is ___ cm longer than the eraser.",
+          "text": "The pencil is ___ cm longer than the rubber.",
           "ans": "9",
           "val": 9
         }
@@ -2090,7 +2102,7 @@
       "val": [
         9
       ],
-      "solution": "The eraser is 6 cm and the pencil is 15 cm. 15 take away 6 is 9, so the pencil is 9 cm longer.",
+      "solution": "The rubber is 6 cm and the pencil is 15 cm. 15 take away 6 is 9, so the pencil is 9 cm longer.",
       "mistakes": [
         "Adding: 21.",
         "Writing 15 (the pencil, not the difference)."
@@ -2144,7 +2156,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "Draw a line 8 cm long on spare paper. On your ruler, where does it start? Where does it end?",
+      "text": "Draw a line 8 cm long on spare paper. Start it at the 0 mark of your ruler. Which mark does it end at?",
       "answer": "It starts at 0 and ends at 8",
       "val": [
         0,
@@ -2155,7 +2167,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "A pencil starts at the 0 mark and its tip is at the 17 mark. A crayon is 11 cm long. How much longer is the pencil?",
+      "text": "A pencil starts at the 0 mark and its tip is at the 17 mark. A crayon is 11 cm long. How many cm longer is the pencil?",
       "answer": "6 cm",
       "val": 6,
       "solution": "The pencil is 17 cm. 17 take away 11 is 6 (count on from 11 to 17: 6 jumps)."
@@ -2163,7 +2175,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "Measure a spoon, a toy and a book to the nearest cm. Write the lengths from shortest to longest.",
+      "text": "Measure a spoon, a toy and a crayon to the nearest cm. Write the 3 lengths in order, shortest first.",
       "answer": "OPEN ANSWER, accept any three lengths, written from smallest to largest. A grown-up can check one by measuring again",
       "val": "open",
       "solution": "Put one end at the 0 mark and read the mark at the other end. If the end is between two marks, write the closer one. Then put the numbers in order."
@@ -2171,7 +2183,7 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "A line starts at the 4 mark and ends at the 15 mark. How long is the line? Show how you know.",
+      "text": "A line starts at the 4 mark and ends at the 15 mark. How long is the line? Write: I know because ...",
       "answer": "11 cm (15 take away 4)",
       "val": 11,
       "solution": "Count the jumps from 4 to 15: 11 jumps. Or take 4 from 15, which is 11. It is not 15 cm, because the line starts at the 4 mark."
@@ -2179,7 +2191,7 @@
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: draw a path with 3 different straight pieces that is 25 cm long in all. Write each length. A grown-up checks with a ruler.",
+      "text": "Draw a path with 3 straight pieces. The pieces are all different lengths. The whole path is 25 cm long. Write the 3 lengths. A grown-up checks with a ruler.",
       "answer": "OPEN ANSWER, accept any 3 different whole numbers that add up to 25, for example 6, 8 and 11 (6 + 8 + 11 = 25)",
       "val": "open",
       "solution": "Choose three different numbers that add to 25, draw each piece with the 0 mark at the start, then measure and add to check."
@@ -2243,7 +2255,7 @@
         "id": "c2",
         "tier": "core",
         "type": "number",
-        "q": "Ali's line is 12 cm long. Mei's line is 5 cm long. How much longer is Ali's line?",
+        "q": "Ali's line is 12 cm long. Mei's line is 5 cm long. How many cm longer is Ali's line?",
         "answer": 7,
         "hint": "Count on from the short line to the long line, or take the short length from the long length.",
         "steps": [
@@ -2284,7 +2296,7 @@
               8
             ]
           },
-          "q": "Ali's line is {a} cm long. Mei's line is {b} cm long. How much longer is Ali's line?",
+          "q": "Ali's line is {a} cm long. Mei's line is {b} cm long. How many cm longer is Ali's line?",
           "answer": "a-b",
           "hint": "Count on from {b} to {a}, or take {b} from {a}.",
           "steps": [
@@ -2298,7 +2310,7 @@
         "id": "c3",
         "tier": "core",
         "type": "choice",
-        "q": "You are going to draw a line 6 cm long. Where do you put the 0 mark of your ruler?",
+        "q": "You draw a line 6 cm long. Where does the 0 mark of your ruler go?",
         "options": [
           "On the dot where the line starts",
           "On the dot where the line ends",
@@ -2317,7 +2329,7 @@
             "a": [
               "Anywhere is fine"
             ],
-            "say": "If the 0 is not at the start, the line will not be 6 cm long unless you take the start mark away."
+            "say": "If the 0 is not at the start, the line will not be 6 cm long."
           }
         ]
       },
@@ -2377,7 +2389,7 @@
         "id": "c5",
         "tier": "core",
         "type": "number",
-        "q": "The tip of a spoon is between the 14 mark and the 15 mark, closer to the 15 mark. The spoon starts at 0. How long is the spoon to the nearest cm?",
+        "q": "The tip of a spoon is between the 14 mark and the 15 mark, closer to the 15 mark. The spoon starts at the 0 mark. How long is the spoon to the nearest cm?",
         "answer": 15,
         "hint": "Which mark is the tip closer to?",
         "steps": [
@@ -2407,7 +2419,7 @@
           "derive": {
             "k": "m+1"
           },
-          "q": "The tip of a spoon is between the {m} mark and the {k} mark, closer to the {k} mark. The spoon starts at 0. How long is the spoon to the nearest cm?",
+          "q": "The tip of a spoon is between the {m} mark and the {k} mark, closer to the {k} mark. The spoon starts at the 0 mark. How long is the spoon to the nearest cm?",
           "answer": "m+1",
           "hint": "Which mark is the tip closer to?",
           "steps": [
@@ -2421,7 +2433,7 @@
         "id": "t1",
         "tier": "stretch",
         "type": "number",
-        "q": "A line starts at the 2 mark and ends at the 9 mark. How long is the line in cm?",
+        "q": "A line goes from the 2 mark to the 9 mark. How long is the line in cm?",
         "answer": 7,
         "hint": "Count the jumps from the start mark to the end mark.",
         "steps": [
@@ -2461,7 +2473,7 @@
               12
             ]
           },
-          "q": "A line starts at the {s} mark and ends at the {e} mark. How long is the line in cm?",
+          "q": "A line goes from the {s} mark to the {e} mark. How long is the line in cm?",
           "answer": "e-s",
           "hint": "Count the jumps from {s} to {e}, or take {s} from {e}.",
           "steps": [
@@ -2579,7 +2591,7 @@
         "id": "t4",
         "tier": "stretch",
         "type": "choice",
-        "q": "Ben starts a line at the 2 mark and it ends at the 9 mark. He says: it is 9 cm long. Is he right?",
+        "q": "Ben draws a line from the 2 mark to the 9 mark. He says it is 9 cm long. Is he right?",
         "options": [
           "Yes, it ends at 9",
           "No, it is 7 cm long",
@@ -2612,7 +2624,7 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "A ribbon is 30 cm long. Piece A is 8 cm. Piece B is 3 cm longer than piece A. How long is piece C, the rest of the ribbon?",
+        "q": "A ribbon is 30 cm long. It is cut into 3 pieces. Piece A is 8 cm. Piece B is 3 cm longer than piece A. How long is piece C?",
         "answer": 11,
         "hint": "Find piece B first. Then see how much of the 30 cm is left.",
         "steps": [
@@ -2657,7 +2669,7 @@
             "b": "a+d",
             "ab": "a+a+d"
           },
-          "q": "A ribbon is {T} cm long. Piece A is {a} cm. Piece B is {d} cm longer than piece A. How long is piece C, the rest of the ribbon?",
+          "q": "A ribbon is {T} cm long. It is cut into 3 pieces. Piece A is {a} cm. Piece B is {d} cm longer than piece A. How long is piece C?",
           "answer": "T-(a+a+d)",
           "hint": "Find piece B first. Then see how much of the {T} cm is left.",
           "steps": [
@@ -2671,7 +2683,7 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "A snail starts at the 4 mark of a long ruler. It crawls to the 13 mark. Then it crawls back 5 cm. In all, how far has the snail crawled?",
+        "q": "A snail starts at the 4 mark of a long ruler. It crawls to the 13 mark. Then it crawls back 5 cm. In all, how many cm has the snail crawled?",
         "answer": 14,
         "hint": "Find the way forward. Then add the way back.",
         "steps": [
@@ -2715,7 +2727,7 @@
           "derive": {
             "f": "e-s"
           },
-          "q": "A snail starts at the {s} mark of a long ruler. It crawls to the {e} mark. Then it crawls back {b} cm. In all, how far has the snail crawled?",
+          "q": "A snail starts at the {s} mark of a long ruler. It crawls to the {e} mark. Then it crawls back {b} cm. In all, how many cm has the snail crawled?",
           "answer": "e-s+b",
           "hint": "Find the way forward. Then add the way back.",
           "steps": [
@@ -2729,7 +2741,7 @@
         "id": "g3",
         "tier": "challenge",
         "type": "number",
-        "q": "A strip of paper is 10 cm long. You may cut it at a mark: the 1 mark, the 2 mark and so on, but not at the two ends. How many different places can you cut?",
+        "q": "A paper strip is 10 cm long. It has marks at 0, 1, 2 and so on up to 10. You cut it at one mark, but not at an end. How many places can you cut?",
         "answer": 9,
         "hint": "Which marks are inside the strip, not at the ends?",
         "steps": [
@@ -2763,7 +2775,7 @@
               20
             ]
           },
-          "q": "A strip of paper is {n} cm long. You may cut it at a mark: the 1 mark, the 2 mark and so on, but not at the two ends. How many different places can you cut?",
+          "q": "A paper strip is {n} cm long. It has marks at 0, 1, 2 and so on up to {n}. You cut it at one mark, but not at an end. How many places can you cut?",
           "answer": "n-1",
           "hint": "Which marks are inside the strip, not at the ends?",
           "steps": [
@@ -2777,7 +2789,7 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make up your own path puzzle: 3 straight pieces that are all different and add up to exactly 20 cm. Check by adding.",
+        "q": "Make your own path puzzle. Use 3 straight pieces, all different lengths. The whole path is exactly 20 cm. Check by adding.",
         "hint": "Pick 3 different numbers first. Add them. Change one until the total is 20.",
         "steps": [
           "Pick 3 different whole numbers.",
@@ -2798,7 +2810,7 @@
     ],
     "try_home": [
       "Measure it: find 5 things. Your child guesses each length, then measures to the nearest centimetre. Put them in order, shortest first.",
-      "Draw it: say a length such as 9 cm and let your child draw it. Swap: you draw, your child measures. Start at the edge on purpose, for them to spot.",
+      "Draw it: say a length such as 9 cm and let your child draw it. Swap: you draw, your child measures. Start at the edge of the ruler on purpose, so your child can spot it.",
       "Spot it: look at a tape measure or a growth chart. Ask: where is the 0? How many centimetres from here to there?"
     ],
     "ask": [
@@ -2837,7 +2849,7 @@
         "id": "M1",
         "title": "Is it always true?",
         "minutes": 4,
-        "tutor": "Mei says: a line that ends at the 9 mark is always 9 cm long. Is that always true? Draw lines that end at the 9 mark and start at 0, at 2 and at 4. Measure each one.",
+        "tutor": "Mei says a line that ends at the 9 mark is always 9 cm long. Is that always true? Draw lines that end at the 9 mark and start at 0, at 2 and at 4. Measure each one.",
         "rec": "Recording: pause. Draw 3 lines that all end at the 9 mark: one starts at 0, one at 2, one at 4. How long is each?",
         "answer": "Not always. A line that starts at 0 and ends at 9 is 9 cm. Starting at 2 it is 7 cm, and starting at 4 it is 5 cm. It is only true when the line starts at the 0 mark."
       },

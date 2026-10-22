@@ -142,8 +142,8 @@
     "notes": "Lesson 10 is the last lesson of the term, so it holds the end-of-term check: the part named Exit ticket and end-of-term check (minutes 50 to 83) is a 4-minute exit ticket followed by a 29-minute check (the check is taken on private paper; see the tutor key). To make room, Explore, the Mini-lesson and the Workbook are shorter than in other lessons: the workbook has 5 Start here questions, and Think harder, Go further and the Investigation can be taken home. The last 5 minutes are the standing buffer; a child who needs more time for the check may use it, and nothing new is started in it."
   },
   "sneak_peek": {
-    "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles has Ben? You may draw them.",
-    "q2": "How many marbles do Ali and Ben have altogether? Write the number, and write what you did first.",
+    "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them.",
+    "q2": "How many marbles do Ali and Ben have altogether? Write the number. Then write what you did first.",
     "a1": "7",
     "a2": "11. First find Ben's marbles: 4 + 3 = 7. Then add Ali's 4: 4 + 7 = 11.",
     "val1": 7,
@@ -263,17 +263,17 @@
           },
           {
             "k": "ASK",
-            "text": "Ali finds 5 more shells?",
+            "text": "Ali finds 5 more shells. Add or take away?",
             "resp": 6
           },
           {
             "k": "ASK",
-            "text": "Mei gives away 2 stickers?",
+            "text": "Mei gives away 2 stickers. Add or take away?",
             "resp": 6
           },
           {
             "k": "ASK",
-            "text": "4 more children join?",
+            "text": "4 more children join the line. Add or take away?",
             "resp": 6
           },
           {
@@ -354,7 +354,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle one. Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles has Ben? You may draw them."
+            "text": "Puzzle one. Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them."
           },
           {
             "k": "WORK",
@@ -363,7 +363,7 @@
           },
           {
             "k": "READ",
-            "text": "Puzzle two. How many marbles do Ali and Ben have altogether? Write the number, and write what you did first."
+            "text": "Puzzle two. How many marbles do Ali and Ben have altogether? Write the number. Then write what you did first."
           },
           {
             "k": "WORK",
@@ -402,11 +402,11 @@
           },
           {
             "k": "READ",
-            "text": "Story A. Mei has 8 buttons. She gets 5 more. Then she gives away 6. How many buttons has Mei now?"
+            "text": "Story A. Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now?"
           },
           {
             "k": "READ",
-            "text": "Mei has 8 buttons. She gets 5 more. Then she gives away 6."
+            "text": "Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons."
           },
           {
             "k": "WORK",
@@ -415,7 +415,7 @@
           },
           {
             "k": "ASK",
-            "text": "How many buttons has Mei now? What did you do first?",
+            "text": "How many buttons does Mei have now? What did you do first?",
             "resp": 20
           },
           {
@@ -428,7 +428,7 @@
           },
           {
             "k": "READ",
-            "text": "Story B. Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3. How many stickers has Ravi now?"
+            "text": "Story B. Ravi has 12 stickers. He gives 5 stickers to Siti. Then he finds 3 more stickers. How many stickers does Ravi have now?"
           },
           {
             "k": "WORK",
@@ -437,7 +437,7 @@
           },
           {
             "k": "ASK",
-            "text": "How many stickers has Ravi now? Which step came first?",
+            "text": "How many stickers does Ravi have now? Which step came first?",
             "resp": 18
           },
           {
@@ -489,7 +489,7 @@
           },
           {
             "k": "SAY",
-            "text": "Mei has 26 stickers. Ali gives her 10 more. Then she gives 5 to Ben. Step 1: she gets more, so add. Twenty-six plus ten is thirty-six. Step 2: she gives away, so take away. Thirty-six take away five is thirty-one."
+            "text": "Mei has 26 stickers. Ali gives her 10 more stickers. Then she gives 5 stickers to Ben. Step 1: she gets more, so add. Twenty-six plus ten is thirty-six. Step 2: she gives away, so take away. Thirty-six take away five is thirty-one."
           },
           {
             "k": "ASK",
@@ -502,7 +502,7 @@
           },
           {
             "k": "READ",
-            "text": "Your turn. Siti has 40 beads. She uses 20 for a bracelet. Then she buys 7 more beads. How many beads has Siti now? Write Step 1 and Step 2."
+            "text": "Your turn. Siti has 40 beads. She uses 20 beads for a bracelet. Then she buys 7 more beads. How many beads does Siti have now? Write Step 1 and Step 2."
           },
           {
             "k": "WORK",
@@ -545,7 +545,7 @@
           },
           {
             "k": "STUCK",
-            "text": "If a child reads fewer than as add: ask who has more, and who has the bigger number. If a child leaves Ravi out: put counters in a line on camera and touch each one."
+            "text": "If a child reads fewer than as add: ask who has more, and who has the greater number. If a child leaves Ravi out: put counters in a line on camera and touch each one."
           },
           {
             "k": "NOTE",
@@ -588,7 +588,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 1, Start here. Question 1: Ben has 30 cards. He gives away 20. Then he gets 6 more. Fill in the steps. Question 2: Mei has 42 stickers. She gets 7 more. Then she gives 10 to Ali. Write a number sentence for each step. Question 3: Ravi has 25 pencils. He buys 10 more. Then he loses 3. Circle the two number sentences he needs."
+            "text": "Page 1, Start here. Question 1: Ben has 30 cards. He gives 20 cards away. After that, he gets 6 more cards. Fill in the steps. Question 2: Mei has 42 stickers. She gets 7 more stickers. Then she gives 10 stickers to Ali. Write one number sentence for each step. Question 3: Ravi has 25 pencils. He buys 10 more pencils. Then he loses 3 pencils. Circle the two number sentences that fit the story."
           },
           {
             "k": "WORK",
@@ -609,7 +609,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4: write plus or minus for each story. Question 5: Ali has 23 marbles. Ben has 10 more than Ali. How many marbles altogether? Question 6: A bus has 30 children. 10 get off. Then 4 get on. Siti wrote 30 plus 10, then plus 4. What did she do wrong? Write the right steps."
+            "text": "Page 2. Question 4: write plus or minus for each story. Question 5: Ali has 23 marbles. Ben has 10 more than Ali. How many marbles altogether? Question 6: A bus has 30 children. 10 children get off. Then 4 children get on. Siti writes 30 plus 10 equals 40, and 40 plus 4 equals 44. Is Siti correct? Then find how many children are on the bus now."
           },
           {
             "k": "WORK",
@@ -622,7 +622,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 4: plus, minus, minus, plus. Question 5: Ben has thirty-three. They have fifty-six. Question 6: children who get off leave the bus, so take away. Thirty take away ten is twenty. Twenty plus four is twenty-four."
+            "text": "Question 4: plus, minus, minus, plus. Question 5: Ben has thirty-three. They have fifty-six. Question 6: no. Children who get off leave the bus, so take away. Thirty take away ten is twenty. Twenty plus four is twenty-four."
           },
           {
             "k": "SLIDE",
@@ -639,7 +639,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1: say what happens first; gives away means take away. Q2: use counters, one step at a time. Q3: ask which sentence starts from the answer of the first. Q4: does the word make it bigger or smaller? Q5: find Ben first. Q6: ask who leaves the bus."
+            "text": "Q1: say what happens first; gives away means take away. Q2: use counters, one step at a time. Q3: ask which sentence starts from the answer of the first. Q4: does the word make it greater or smaller? Q5: find Ben first. Q6: ask who leaves the bus."
           },
           {
             "k": "STUCK",
@@ -664,7 +664,7 @@
           },
           {
             "k": "READ",
-            "text": "Ravi says: Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25. Do you agree? Use counters to explain."
+            "text": "Siti has 20 stickers. Ali has 5 fewer stickers than Siti. Ravi says Ali has 25 stickers. Do you agree? Use counters to explain."
           },
           {
             "k": "WORK",
@@ -765,7 +765,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the bigger number. Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. You may make a ten first."
+            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number. Question 4. Read the numbers on your page. Count on in fives and write the next two numbers. Then count on in twos and write the next two numbers. Then finish the sentence about the last digit when we count in fives. Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5."
           },
           {
             "k": "WORK",
@@ -783,7 +783,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20. Question 7. Write 68 take away 23. Write 76 take away 14. Question 8. Write the number that goes in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?"
+            "text": "Question 6. Write 52 plus 10. Write 52 plus 30. Write 52 take away 20. Question 7. Write 68 take away 23. Write 76 take away 14. Question 8. Fill in the missing number in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box. Question 9. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: measure the printed line. How many centimetres long is it?"
           },
           {
             "k": "WORK",
@@ -796,7 +796,7 @@
           },
           {
             "k": "READ",
-            "text": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben. Write Step 1 and Step 2, one number sentence for each. Then write how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?"
+            "text": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. Then write how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
           },
           {
             "k": "WORK",
@@ -1073,7 +1073,7 @@
                 "items": [
                   "Ali has 4 marbles.",
                   "Ben has 3 more marbles than Ali.",
-                  "How many marbles has Ben?",
+                  "How many marbles does Ben have?",
                   "You may draw them."
                 ]
               }
@@ -1084,7 +1084,7 @@
                 "head": "PUZZLE 2: think",
                 "items": [
                   "How many marbles do Ali and Ben have altogether?",
-                  "Write the number. Write what you did first."
+                  "Write the number. Then write what you did first."
                 ]
               }
             ]
@@ -1113,11 +1113,11 @@
           "t": "card",
           "head": "STORY A",
           "items": [
-            "Mei has 8 buttons. She gets 5 more. Then she gives away 6."
+            "Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons."
           ]
         }
       ],
-      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more. Then she gives away 6. How many buttons has Mei now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask a few children to show their counters to the camera. Answer for the tutor: 7."
+      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask a few children to show their counters to the camera. Answer for the tutor: 7."
     },
     {
       "id": "s-explore2",
@@ -1156,11 +1156,11 @@
           "t": "card",
           "head": "STORY B",
           "items": [
-            "Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3."
+            "Ravi has 12 stickers. He gives 5 stickers to Siti. Then he finds 3 more stickers."
           ]
         }
       ],
-      "note": "Round 2, about 3 minutes. Read story B twice, with a first read for who and what, then a second read for the numbers and the question: Ravi has 12 stickers. He gives 5 to Siti. Then he finds 3. How many stickers has Ravi now? Children act it out: 12 - 5 = 7, then 7 + 3 = 10. Answer for the tutor: 10. Praise the two reads, not the speed."
+      "note": "Round 2, about 3 minutes. Read story B twice, with a first read for who and what, then a second read for the numbers and the question: Ravi has 12 stickers. He gives 5 stickers to Siti. Then he finds 3 more stickers. How many stickers does Ravi have now? Children act it out: 12 - 5 = 7, then 7 + 3 = 10. Answer for the tutor: 10. Praise the two reads, not the speed."
     },
     {
       "id": "s-explore3",
@@ -1226,7 +1226,7 @@
           "t": "card",
           "head": "STORY",
           "items": [
-            "Mei has 26 stickers. Ali gives her 10 more. Then she gives 5 to Ben. How many stickers has Mei now?"
+            "Mei has 26 stickers. Ali gives her 10 more stickers. Then she gives 5 stickers to Ben. How many stickers does Mei have now?"
           ]
         },
         {
@@ -1264,7 +1264,7 @@
           "t": "card",
           "head": "STORY",
           "items": [
-            "Siti has 40 beads. She uses 20 for a bracelet. Then she buys 7 more beads. How many beads has Siti now?"
+            "Siti has 40 beads. She uses 20 beads for a bracelet. Then she buys 7 more beads. How many beads does Siti have now?"
           ]
         },
         {
@@ -1340,7 +1340,7 @@
           "text": "Ask: who has more?"
         }
       ],
-      "note": "More than and fewer than compare two people. Ali has 14. Ben has 5 more, so Ben has 14 + 5 = 19. Ben has 5 fewer, so Ben has 14 - 5 = 9. Always ask who has more. Then the person with more has the bigger number. Keep it to one minute; the reversed wording (Ravi has more, find Mei) is for Think harder."
+      "note": "More than and fewer than compare two people. Ali has 14. Ben has 5 more, so Ben has 14 + 5 = 19. Ben has 5 fewer, so Ben has 14 - 5 = 9. Always ask who has more. Then the person with more has the greater number. Keep it to one minute; the reversed wording (Ravi has more, find Mei) is for Think harder."
     },
     {
       "id": "s-m5",
@@ -1490,7 +1490,7 @@
             ],
             [
               "Go further (page 4)",
-              "Bigger stories"
+              "Longer stories"
             ],
             [
               "Investigation (page 5)",
@@ -1519,7 +1519,9 @@
           "t": "card",
           "head": "RAVI SAYS",
           "items": [
-            "Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25."
+            "Siti has 20 stickers.",
+            "Ali has 5 fewer stickers than Siti.",
+            "Ravi says Ali has 25 stickers."
           ]
         },
         {
@@ -1628,7 +1630,7 @@
           "t": "card",
           "head": "AFTER",
           "items": [
-            "A grown-up takes a photo of each page and sends it to the tutor.",
+            "A grown-up takes a photo of each page and sends it to the program's parent contact.",
             "Nothing is shown to the group."
           ]
         }
@@ -1648,7 +1650,7 @@
             "Check your name is on page 1.",
             "Close the sheet. Put your pencil down.",
             "A grown-up takes one photo of each page, flat and from above.",
-            "Send it privately to your tutor."
+            "A grown-up sends the photos to the parent contact only, never to a child."
           ]
         },
         {
@@ -1777,17 +1779,17 @@
         "id": "S1",
         "page": 1,
         "tier": "start",
-        "text": "Read it twice. Ben has 30 cards. He gives away 20. Then he gets 6 more.",
+        "text": "Ben has 30 cards. He gives 20 cards away. After that, he gets 6 more cards.",
         "parts": [
           {
             "l": "a",
-            "text": "Step 1: 30 - 20 = ___",
+            "text": "Step 1: 30 - 20 = []",
             "ans": "10",
             "val": 10
           },
           {
             "l": "b",
-            "text": "Step 2: ___ + 6 = ___",
+            "text": "Step 2: [] + 6 = []",
             "ans": "10, 16",
             "val": [
               10,
@@ -1796,7 +1798,7 @@
           },
           {
             "l": "c",
-            "text": "Ben has ___ cards now.",
+            "text": "Ben has [] cards now.",
             "ans": "16",
             "val": 16
           }
@@ -1820,7 +1822,7 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Mei has 42 stickers. She gets 7 more. Then she gives 10 to Ali. Write a number sentence for each step.",
+        "text": "Mei has 42 stickers. She gets 7 more stickers. Then she gives 10 stickers to Ali. Write one number sentence for each step.",
         "parts": [
           {
             "l": "",
@@ -1847,7 +1849,7 @@
         "id": "S3",
         "page": 1,
         "tier": "start",
-        "text": "Ravi has 25 pencils. He buys 10 more. Then he loses 3. Circle the two number sentences Ravi needs. Then answer.",
+        "text": "Ravi has 25 pencils. He buys 10 more pencils. Then he loses 3 pencils. Circle the 2 number sentences that fit the story.",
         "parts": [
           {
             "l": "a",
@@ -1898,7 +1900,7 @@
         "id": "S4",
         "page": 2,
         "tier": "start",
-        "text": "Story words tell us what to do. Write + for add or - for take away.",
+        "text": "Write + or - in each blank.",
         "parts": [
           {
             "l": "a",
@@ -1932,7 +1934,7 @@
           "-",
           "+"
         ],
-        "hint": "Does the story word make the number bigger or smaller? Gets more makes it bigger.",
+        "hint": "Does the story word make the number greater or smaller? Gets more makes it greater.",
         "solution": "Finds more means add (+). Eats means take away (-). Gives away means take away (-). Join means more, so add (+).",
         "mistakes": [
           "Choosing + for gives away because there is a number in the sentence.",
@@ -1945,7 +1947,7 @@
         "id": "S5",
         "page": 2,
         "tier": "start",
-        "text": "Ali has 23 marbles. Ben has 10 more marbles than Ali. How many marbles do they have altogether? Draw if you like.",
+        "text": "Ali has 23 marbles. Ben has 10 more than Ali. How many marbles do they have altogether? Draw if you like.",
         "parts": [
           {
             "l": "",
@@ -1973,16 +1975,22 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "A bus has 30 children. 10 get off. Then 4 get on. Siti writes 30 + 10 = 40 and 40 + 4 = 44. What did Siti do wrong? Write the right steps and the answer.",
+        "text": "A bus has 30 children. 10 children get off. Then 4 children get on. Siti writes 30 + 10 = 40 and 40 + 4 = 44.",
         "parts": [
           {
-            "l": "",
-            "text": "There are ___ children on the bus now.",
+            "l": "a",
+            "text": "Is Siti right? Circle Yes or No.",
+            "ans": "no",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "The bus now has ___ children.",
             "ans": "24",
             "val": 24
           }
         ],
-        "answer": "Get off means take away: 30 - 10 = 20. Then 20 + 4 = 24. There are 24 children.",
+        "answer": "No. Get off means take away: 30 - 10 = 20. Then 20 + 4 = 24. There are 24 children.",
         "val": [
           20,
           24
@@ -1990,7 +1998,7 @@
         "hint": "Who leaves the bus? Do they make the bus fuller or emptier?",
         "solution": "Children who get off leave the bus, so take away: 30 - 10 = 20. Then 4 get on, so add: 20 + 4 = 24. Siti added the 10 instead of taking it away.",
         "mistakes": [
-          "Not saying what went wrong (any clear sentence about get off meaning take away is fine).",
+          "Circling Yes.",
           "Writing 44 again."
         ],
         "mins": 3,
@@ -2002,7 +2010,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Ravi has 15 marbles. Ravi has 3 more marbles than Mei. Hint: who has more, Ravi or Mei?",
+        "text": "Ravi has 15 marbles. He has 3 more marbles than Mei.",
         "parts": [
           {
             "l": "a",
@@ -2029,13 +2037,13 @@
           "Answering 12 for the second part."
         ],
         "mins": 4,
-        "lines": 1
+        "lines": 2
       },
       {
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Mei is in a line to buy lunch. There are 6 children in front of Mei. There are 4 children behind Mei. How many children are in the line?",
+        "text": "Mei is in a line to buy lunch. There are 6 children in front of her and 4 children behind her. How many children are in the line?",
         "parts": [
           {
             "l": "",
@@ -2061,7 +2069,7 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles has Siti?",
+        "text": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles does Siti have?",
         "parts": [
           {
             "l": "",
@@ -2082,7 +2090,7 @@
           "Answering 17 (stopping after Step 1)."
         ],
         "mins": 4,
-        "lines": 2
+        "lines": 3
       }
     ],
     "go": [
@@ -2090,7 +2098,7 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "A shop has 60 pencils. It sells 24 on Monday and 15 on Tuesday. On Wednesday a box of 30 pencils comes in. How many pencils does the shop have now?",
+        "text": "A shop has 60 pencils. It sells 24 pencils on Monday and 15 pencils on Tuesday. On Wednesday, a box of 30 pencils comes in. How many pencils does the shop have now?",
         "parts": [
           {
             "l": "",
@@ -2118,12 +2126,12 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "Here are two steps. Step 1: 25 + 10 = 35. Step 2: 35 - 8 = 27. Write a story that fits both steps. End with a question. Swap with a grown-up: do they get 27?",
+        "text": "Step 1: 25 + 10 = 35. Step 2: 35 - 8 = 27. Write a story that fits both steps. End your story with a question. Many stories are right.",
         "parts": [],
         "answer": "Any story where 25 grows by 10 and then 8 are taken away, and the question asks how many now. The answer is 27.",
         "val": "open",
         "hint": "Pick who and what. Step 1 adds 10. Step 2 takes away 8. What could 25 be?",
-        "solution": "For example: Ali has 25 stickers. He gets 10 more. Then he gives 8 to his sister. How many stickers has Ali now? 25 + 10 = 35, 35 - 8 = 27.",
+        "solution": "For example: Ali has 25 stickers. He gets 10 more. Then he gives 8 to his sister. How many stickers does Ali have now? 25 + 10 = 35, 35 - 8 = 27.",
         "mistakes": [
           "A story where the second step starts from 25 instead of 35.",
           "No question at the end."
@@ -2135,7 +2143,7 @@
         "id": "G3",
         "page": 4,
         "tier": "go",
-        "text": "Mei, Ali and Ben have 70 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells has Ben?",
+        "text": "Mei, Ali and Ben have 70 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells does Ben have?",
         "parts": [
           {
             "l": "",
@@ -2164,7 +2172,7 @@
       "id": "I1",
       "page": 5,
       "title": "Does the order matter?",
-      "first": "Start at 20. Add 10, then take away 5. Start again: take away 5 first, then add 10. Same answer?",
+      "first": "Start at 20. Add 10, then take away 5. Start again at 20. Take away 5 first, then add 10. Is the answer the same?",
       "text": "Pick your own numbers. Try both orders. Is the answer always the same? When can one order not work?",
       "lines": 4,
       "answer": "Both orders give the same answer (20 + 10 - 5 = 25 and 20 - 5 + 10 = 25) whenever both orders can be done. But the order can matter for what you are allowed to do: from 4 you cannot take away 6 first, though 4 + 10 - 6 = 8 works. So: the answer is the same, but you cannot take away more than you have.",
@@ -2181,7 +2189,7 @@
     }
   },
   "talk": {
-    "question": "Ravi says: \"Ali has 5 fewer stickers than Siti. Siti has 20. So Ali has 25.\" Do you agree? Use counters to explain.",
+    "question": "Siti has 20 stickers. Ali has 5 fewer stickers than Siti. Ravi says Ali has 25 stickers. Do you agree? Use counters to explain.",
     "starter": "I think ... because ...",
     "answer": "No. Fewer means less. Ali has 5 fewer than 20, so Ali has 20 - 5 = 15 stickers. Siti has more than Ali, so 25 cannot be right.",
     "look_for": "A reason that uses the word fewer or less and shows 20 with 5 taken away (not just because 25 is too big)."
@@ -2189,11 +2197,11 @@
   "exit": [
     {
       "id": "E1",
-      "text": "A bus has 25 children. 10 get off. Then 3 get on. How many children are on the bus now?",
+      "text": "A bus has 25 children. 10 children get off. Then 3 children get on. How many children are on the bus now?",
       "parts": [
         {
           "l": "",
-          "text": "___ children",
+          "text": "The bus now has ___ children.",
           "ans": "18",
           "val": 18
         }
@@ -2210,11 +2218,11 @@
     },
     {
       "id": "E2",
-      "text": "Ben has 6 stickers. Mei has 5 more stickers than Ben. How many stickers has Mei?",
+      "text": "Ben has 6 stickers. Mei has 5 more stickers than Ben. How many stickers does Mei have?",
       "parts": [
         {
           "l": "",
-          "text": "___ stickers",
+          "text": "Mei has ___ stickers.",
           "ans": "11",
           "val": 11
         }
@@ -2231,11 +2239,11 @@
     },
     {
       "id": "E3",
-      "text": "Ali has 7 fewer marbles than Mei. Mei has 20 marbles. How many marbles has Ali?",
+      "text": "Siti has 20 marbles. Her friend Ali has 7 fewer marbles than she has. How many marbles does Ali have?",
       "parts": [
         {
           "l": "",
-          "text": "___ marbles",
+          "text": "Ali has ___ marbles.",
           "ans": "13",
           "val": 13
         }
@@ -2277,7 +2285,7 @@
     {
       "id": "H1",
       "tier": "start",
-      "text": "Ali has 28 marbles. He wins 10. Then he gives 5 away. How many now?",
+      "text": "Ali has 28 marbles. He wins 10 more marbles. Then he gives 5 marbles away. How many marbles does he have now?",
       "answer": "33",
       "val": 33,
       "solution": "Step 1: 28 + 10 = 38. Step 2: 38 - 5 = 33."
@@ -2285,7 +2293,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "Mei has 14 stickers. Siti has 6 more. How many has Siti?",
+      "text": "Mei has 14 stickers. Siti has 6 more. How many stickers does Siti have?",
       "answer": "20",
       "val": 20,
       "solution": "Siti has more, so add: 14 + 6 = 20."
@@ -2293,7 +2301,7 @@
     {
       "id": "H3",
       "tier": "start",
-      "text": "40 pencils: 10 are red, 20 are blue, the rest green. How many green?",
+      "text": "A box has 40 pencils. 10 pencils are red and 20 pencils are blue. The rest are green. How many pencils are green?",
       "answer": "10",
       "val": 10,
       "solution": "Take away the red and the blue: 40 - 10 = 30, then 30 - 20 = 10."
@@ -2301,15 +2309,15 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Ben has 9 sweets, 4 fewer than Dev. How many sweets altogether?",
+      "text": "Ben has 9 sweets. He has 4 fewer than Kumar. How many sweets altogether?",
       "answer": "22",
       "val": 22,
-      "solution": "Ben has fewer, so Dev has more: 9 + 4 = 13. Together: 9 + 13 = 22."
+      "solution": "Ben has fewer, so Kumar has more: 9 + 4 = 13. Together: 9 + 13 = 22."
     },
     {
       "id": "H5",
       "tier": "go",
-      "text": "At home: make up a two-step story with numbers within 100. Write one number sentence for each step. Ask a grown-up to solve it.",
+      "text": "Make up a two-step story with numbers within 100. Write one number sentence for each step. Ask a grown-up to solve it.",
       "answer": "Any two-step story with the right sentences. Check each step: the second sentence starts from the answer to the first.",
       "val": "open",
       "solution": "A grown-up checks that each step has one add or one take away, and that the answer sentence matches the question."
@@ -2324,7 +2332,7 @@
         "id": "c1",
         "tier": "core",
         "type": "number",
-        "q": "Mei has 24 stickers. Ali gives her 10 more. How many stickers has Mei now?",
+        "q": "Mei has 24 stickers. Ali gives her 10 more. How many stickers does Mei have now?",
         "answer": 34,
         "hint": "Gives her more means Mei gets more. Add.",
         "steps": [
@@ -2356,7 +2364,7 @@
               6
             ]
           },
-          "q": "Mei has {a} stickers. Ali gives her {b} more. How many stickers has Mei now?",
+          "q": "Mei has {a} stickers. Ali gives her {b} more. How many stickers does Mei have now?",
           "answer": "a+b",
           "hint": "Gives her more means Mei gets more. Add.",
           "steps": [
@@ -2370,7 +2378,7 @@
         "id": "c2",
         "tier": "core",
         "type": "number",
-        "q": "A bus has 30 children. 10 get off. Then 4 get on. How many children are on the bus now?",
+        "q": "A bus has 30 children. 10 children get off. Then 4 children get on. How many children are on the bus now?",
         "answer": 24,
         "hint": "Two steps. Get off means take away. Get on means add.",
         "steps": [
@@ -2415,7 +2423,7 @@
           "derive": {
             "m": "a-b"
           },
-          "q": "A bus has {a} children. {b} get off. Then {c} get on. How many children are on the bus now?",
+          "q": "A bus has {a} children. {b} children get off. Then {c} children get on. How many children are on the bus now?",
           "answer": "a-b+c",
           "hint": "Two steps. Get off means take away. Get on means add.",
           "steps": [
@@ -2429,9 +2437,9 @@
         "id": "c3",
         "tier": "core",
         "type": "number",
-        "q": "Ben has 15 cards. Ali has 10 more cards than Ben. How many cards has Ali?",
+        "q": "Ben has 15 cards. Ali has 10 more cards than Ben. How many cards does Ali have?",
         "answer": 25,
-        "hint": "Ali has more than Ben, so Ali has the bigger number. Add.",
+        "hint": "Ali has more than Ben, so Ali has the greater number. Add.",
         "steps": [
           "Ali has more, so add.",
           "15 + 10 = 25.",
@@ -2459,9 +2467,9 @@
               20
             ]
           },
-          "q": "Ben has {a} cards. Ali has {b} more cards than Ben. How many cards has Ali?",
+          "q": "Ben has {a} cards. Ali has {b} more cards than Ben. How many cards does Ali have?",
           "answer": "a+b",
-          "hint": "Ali has more than Ben, so Ali has the bigger number. Add.",
+          "hint": "Ali has more than Ben, so Ali has the greater number. Add.",
           "steps": [
             "Ali has more, so add.",
             "{a} + {b}.",
@@ -2473,7 +2481,7 @@
         "id": "c4",
         "tier": "core",
         "type": "choice",
-        "q": "Siti has 30 beads. She uses 10 for a bracelet. Then she buys 6 more. Which number sentence is Step 1?",
+        "q": "Siti has 30 beads. She uses 10 beads for a bracelet. Then she buys 6 more. Which number sentence is Step 1?",
         "options": [
           "30 - 10 = 20",
           "30 + 10 = 40",
@@ -2506,7 +2514,7 @@
         "id": "c5",
         "tier": "core",
         "type": "number",
-        "q": "Ali has 24 marbles. Ben has 5 fewer marbles than Ali. How many marbles has Ben?",
+        "q": "Ali has 24 marbles. Ben has 5 fewer marbles than Ali. How many marbles does Ben have?",
         "answer": 19,
         "hint": "Ben has fewer, so Ben has the smaller number. Take away.",
         "steps": [
@@ -2537,7 +2545,7 @@
               3
             ]
           },
-          "q": "Ali has {a} marbles. Ben has {b} fewer marbles than Ali. How many marbles has Ben?",
+          "q": "Ali has {a} marbles. Ben has {b} fewer marbles than Ali. How many marbles does Ben have?",
           "answer": "a-b",
           "hint": "Ben has fewer, so Ben has the smaller number. Take away.",
           "steps": [
@@ -2598,7 +2606,7 @@
         "id": "t1",
         "tier": "stretch",
         "type": "number",
-        "q": "Ravi has 15 marbles. Ravi has 3 more marbles than Mei. How many marbles has Mei?",
+        "q": "Ravi has 15 marbles. He has 3 more marbles than Mei. How many marbles does Mei have?",
         "answer": 12,
         "hint": "Ravi has more, so Mei has fewer. Take away.",
         "steps": [
@@ -2629,7 +2637,7 @@
               6
             ]
           },
-          "q": "Ravi has {r} marbles. Ravi has {b} more marbles than Mei. How many marbles has Mei?",
+          "q": "Ravi has {r} marbles. He has {b} more marbles than Mei. How many marbles does Mei have?",
           "answer": "r-b",
           "hint": "Ravi has more, so Mei has fewer. Take away.",
           "steps": [
@@ -2693,7 +2701,7 @@
         "id": "t3",
         "tier": "stretch",
         "type": "number",
-        "q": "Ali has 24 cards. Ali has 6 fewer cards than Ben. How many cards have they altogether?",
+        "q": "Ali has 24 cards. He has 6 fewer cards than Ben. How many cards do they have altogether?",
         "answer": 54,
         "hint": "Ali has fewer, so Ben has more. Find Ben first.",
         "steps": [
@@ -2732,7 +2740,7 @@
           "derive": {
             "s": "a+b"
           },
-          "q": "Ali has {a} cards. Ali has {b} fewer cards than Ben. How many cards have they altogether?",
+          "q": "Ali has {a} cards. He has {b} fewer cards than Ben. How many cards do they have altogether?",
           "answer": "a+a+b",
           "hint": "Ali has fewer, so Ben has more. Find Ben first.",
           "steps": [
@@ -2747,7 +2755,7 @@
         "id": "t4",
         "tier": "stretch",
         "type": "number",
-        "q": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles has Siti?",
+        "q": "Ben has 12 marbles. Mei has 5 more marbles than Ben. Siti has 3 fewer marbles than Mei. How many marbles does Siti have?",
         "answer": 14,
         "hint": "Find Mei first. Siti is compared with Mei, not with Ben.",
         "steps": [
@@ -2790,7 +2798,7 @@
           "derive": {
             "m": "a+b"
           },
-          "q": "Ben has {a} marbles. Mei has {b} more marbles than Ben. Siti has {c} fewer marbles than Mei. How many marbles has Siti?",
+          "q": "Ben has {a} marbles. Mei has {b} more marbles than Ben. Siti has {c} fewer marbles than Mei. How many marbles does Siti have?",
           "answer": "a+b-c",
           "hint": "Find Mei first. Siti is compared with Mei, not with Ben.",
           "steps": [
@@ -2805,7 +2813,7 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "A shop has 60 pencils. It sells 24 on Monday and 15 on Tuesday. Then a box of 30 pencils comes in. How many pencils does the shop have now?",
+        "q": "A shop has 60 pencils. It sells 24 pencils on Monday and 15 pencils on Tuesday. Then a box of 30 pencils comes in. How many pencils does the shop have now?",
         "answer": 51,
         "hint": "Three things happen, so write three number sentences.",
         "steps": [
@@ -2854,7 +2862,7 @@
             "m": "s-a",
             "n": "s-a-b"
           },
-          "q": "A shop has {s} pencils. It sells {a} on Monday and {b} on Tuesday. Then a box of {c} pencils comes in. How many pencils does the shop have now?",
+          "q": "A shop has {s} pencils. It sells {a} pencils on Monday and {b} pencils on Tuesday. Then a box of {c} pencils comes in. How many pencils does the shop have now?",
           "answer": "s-a-b+c",
           "hint": "Three things happen, so write three number sentences.",
           "steps": [
@@ -2869,7 +2877,7 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "Mei, Ali and Ben have 80 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells has Ben?",
+        "q": "Mei, Ali and Ben have 80 shells altogether. Mei has 25 shells. Ali has 10 more shells than Mei. How many shells does Ben have?",
         "answer": 20,
         "hint": "Find Ali first. Then find how many Mei and Ali have together.",
         "steps": [
@@ -2911,7 +2919,7 @@
             "al": "m+k",
             "both": "m+m+k"
           },
-          "q": "Mei, Ali and Ben have {T} shells altogether. Mei has {m} shells. Ali has {k} more shells than Mei. How many shells has Ben?",
+          "q": "Mei, Ali and Ben have {T} shells altogether. Mei has {m} shells. Ali has {k} more shells than Mei. How many shells does Ben have?",
           "answer": "T-m-m-k",
           "hint": "Find Ali first. Then find how many Mei and Ali have together.",
           "steps": [
@@ -3061,7 +3069,7 @@
   "workbook": {
     "header": "Story steps",
     "hint_p1": "Use counters or a drawing. Read the story twice. Say your answer out loud, then write it.",
-    "hint_p3": "Use counters, draw a picture or draw the line of children. Then write how you know. Choose any question, in any order.",
+    "hint_p3": "Use counters or draw a picture to help. Choose any question, in any order.",
     "hint_p4": "Choose any question. Write one number sentence for each step. You do not have to finish them all.",
     "kits": [
       {
@@ -3080,7 +3088,7 @@
     "child_rules": [
       "This is a check for you and your tutor.",
       "It is not a race. Nobody else sees your answers.",
-      "Do your best. You may skip any question.",
+      "Read each question carefully. Write your answers in the spaces provided. You may skip any question.",
       "Question 9 needs your ruler.",
       "The last question is a Think harder question. It is optional."
     ],
@@ -3093,7 +3101,7 @@
         "page": 1,
         "tier": "start",
         "skill": "Tens and ones: read a picture of sticks in tens and ones",
-        "text": "Count the sticks.",
+        "text": "Count the sticks. Fill in the blanks.",
         "visual": {
           "type": "bundles",
           "tens": 4,
@@ -3111,7 +3119,7 @@
           },
           {
             "l": "b",
-            "text": "___ sticks altogether",
+            "text": "There are ___ sticks altogether.",
             "ans": "47",
             "val": 47
           }
@@ -3138,7 +3146,7 @@
         "page": 1,
         "tier": "start",
         "skill": "Number line to 100, the number just before, a number word in digits",
-        "text": "Look at the number line. Then answer.",
+        "text": "Look at the number line. Fill in the blanks.",
         "visual": {
           "type": "numberline",
           "lo": 60,
@@ -3153,19 +3161,19 @@
         "parts": [
           {
             "l": "a",
-            "text": "The arrow shows ___",
+            "text": "The arrow is pointing to ___.",
             "ans": "67",
             "val": 67
           },
           {
             "l": "b",
-            "text": "The number just before 80 is ___",
+            "text": "The number just before 80 is ___.",
             "ans": "79",
             "val": 79
           },
           {
             "l": "c",
-            "text": "Write in digits: fifty-three ___",
+            "text": "Write in digits: fifty-three = ___",
             "ans": "53",
             "val": 53
           }
@@ -3192,8 +3200,8 @@
         "strand": "numbers",
         "page": 2,
         "tier": "start",
-        "skill": "Make two numbers from two cards and say which is bigger",
-        "text": "You have two cards. Use both cards to make two different numbers.",
+        "skill": "Make two numbers from two cards and say which is greater",
+        "text": "Look at the two cards. Use both cards to make 2 different numbers.",
         "visual": {
           "type": "digitcards",
           "digits": [
@@ -3213,25 +3221,25 @@
           },
           {
             "l": "b",
-            "text": "The bigger number is ___",
+            "text": "The greater number is ___.",
             "ans": "83",
             "val": 83
           }
         ],
-        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the bigger number.",
-        "answer": "38 and 83; the bigger is 83",
+        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make two different numbers. Write them. Then write the greater number.",
+        "answer": "38 and 83; the greater is 83",
         "val": [
           38,
           83,
           83
         ],
-        "solution": "Put 3 first and 8 second to make 38. Put 8 first and 3 second to make 83. 83 has 8 tens and 38 has 3 tens, so 83 is bigger.",
-        "right": "38 and 83 (either order) and 83 as the bigger.",
-        "partly": "Both numbers made but the bigger one wrong, or only one number made and the bigger one right.",
+        "solution": "Put 3 first and 8 second to make 38. Put 8 first and 3 second to make 83. 83 has 8 tens and 38 has 3 tens, so 83 is greater.",
+        "right": "38 and 83 (either order) and 83 as the greater.",
+        "partly": "Both numbers made but the greater one wrong, or only one number made and the greater one right.",
         "mistakes": [
           "Writing 3 and 8 (single cards).",
           "Writing 38 twice.",
-          "Saying 38 is bigger because 8 is the bigger digit."
+          "Saying 38 is greater because 8 is the greater digit."
         ]
       },
       {
@@ -3241,11 +3249,11 @@
         "page": 2,
         "tier": "start",
         "skill": "Counting patterns in 5s and 2s, and what we see in the last digit",
-        "text": "Count on and fill in the gaps.",
+        "text": "Fill in the missing numbers.",
         "parts": [
           {
             "l": "a",
-            "text": "15, 20, 25, ___, ___",
+            "text": "Counting in 5s: 15, 20, 25, ___, ___",
             "ans": "30, 35",
             "val": [
               30,
@@ -3254,7 +3262,7 @@
           },
           {
             "l": "b",
-            "text": "22, 24, 26, ___, ___",
+            "text": "Counting in 2s: 22, 24, 26, ___, ___",
             "ans": "28, 30",
             "val": [
               28,
@@ -3263,7 +3271,7 @@
           },
           {
             "l": "c",
-            "text": "When we count in 5s, every number ends in 5 or ___",
+            "text": "Numbers in the 5s pattern end in 5 or ___.",
             "ans": "0",
             "val": 0
           }
@@ -3293,7 +3301,7 @@
         "page": 2,
         "tier": "start",
         "skill": "Add by making a ten, then with a tens number",
-        "text": "Look at the ten frames. You may make a ten first.",
+        "text": "Look at the ten frames. Fill in the missing numbers.",
         "visual": {
           "type": "tenframes",
           "a": 7,
@@ -3302,18 +3310,18 @@
         "parts": [
           {
             "l": "a",
-            "text": "7 + 5 = ___",
+            "text": "7 + 5 = [box]",
             "ans": "12",
             "val": 12
           },
           {
             "l": "b",
-            "text": "37 + 5 = ___",
+            "text": "37 + 5 = [box]",
             "ans": "42",
             "val": 42
           }
         ],
-        "say": "Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. You may make a ten first.",
+        "say": "Question 5. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5.",
         "answer": "12; 42",
         "val": [
           12,
@@ -3334,7 +3342,7 @@
         "page": 3,
         "tier": "start",
         "skill": "Add and take away tens (jumps of ten)",
-        "text": "Jump in tens. Write the answers.",
+        "text": "Add or subtract.",
         "parts": [
           {
             "l": "a",
@@ -3362,7 +3370,7 @@
           82,
           32
         ],
-        "solution": "Adding 10 makes the tens digit one bigger: 62. 3 tens more is 82. 2 tens fewer is 32. The ones digit stays 2.",
+        "solution": "Adding 10 makes the tens digit 1 more: 62. 3 tens more is 82. 2 tens fewer is 32. The ones digit stays 2.",
         "right": "All three correct.",
         "partly": "One or two correct.",
         "mistakes": [
@@ -3377,7 +3385,7 @@
         "page": 3,
         "tier": "start",
         "skill": "Take away tens and ones without renaming",
-        "text": "Take away. Write the answers.",
+        "text": "Subtract.",
         "parts": [
           {
             "l": "a",
@@ -3413,7 +3421,7 @@
         "page": 3,
         "tier": "start",
         "skill": "Equals as a balance: a box number",
-        "text": "Write the number that goes in the box.",
+        "text": "Fill in the missing number.",
         "parts": [
           {
             "l": "a",
@@ -3428,7 +3436,7 @@
             "val": 8
           }
         ],
-        "say": "Question 8. Write the number that goes in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box.",
+        "say": "Question 8. Fill in the missing number in each box. Part a: 26 plus 13 equals box plus 10. Part b: 8 plus 7 equals 7 plus box.",
         "answer": "29; 8",
         "val": [
           29,
@@ -3464,7 +3472,7 @@
           },
           {
             "l": "b",
-            "text": "This line is ___ cm long.",
+            "text": "The line above is ___ cm long.",
             "ans": "9",
             "val": 9
           }
@@ -3490,7 +3498,7 @@
         "page": 4,
         "tier": "start",
         "skill": "A two-step story, one operation per step",
-        "text": "Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben.",
+        "text": "Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write one number sentence for each step.",
         "parts": [
           {
             "l": "a",
@@ -3511,7 +3519,7 @@
             "val": 42
           }
         ],
-        "say": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more. Then she gives 3 to Ben. Write Step 1 and Step 2, one number sentence for each. Then write how many stickers Mei has now.",
+        "say": "Question 10. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. Then write how many stickers Mei has now.",
         "answer": "35 + 10 = 45; 45 - 3 = 42; Mei has 42 stickers",
         "val": [
           45,
@@ -3535,16 +3543,16 @@
       "lesson": 10,
       "strand": "stories",
       "skill": "Reading trap: who is in the group",
-      "text": "Think harder (optional). Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?",
+      "text": "Think harder (optional). Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?",
       "parts": [
         {
           "l": "",
-          "text": "___ children",
+          "text": "There are ___ children in the line.",
           "ans": "9",
           "val": 9
         }
       ],
-      "say": "The last question is a Think harder question, and it is optional. You may skip it. Ali stands in a line. There are 5 children in front of Ali and 3 children behind Ali. How many children are in the line?",
+      "say": "The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?",
       "answer": "9 children (5 + 3 + 1, counting Ali)",
       "val": [
         9
@@ -3710,7 +3718,7 @@
     "report_template": {
       "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
       "intro": "Term 1 progress note for [Name]",
-      "strength": "One thing [Name] did well this term: [the tutor adds one named strength from their own notes, for example: explained why 62 is bigger than 26 using bundles].",
+      "strength": "One thing [Name] did well this term: [the tutor adds one named strength from their own notes, for example: explained why 62 is greater than 26 using bundles].",
       "next_step": "One next step: [the tutor adds one next step, for example: act out two-step stories with counters at home].",
       "optional": "[Name] also tried the optional Think harder question. (Add this line only if the child answered it; never add a line if not.)",
       "closing": "This note is about [Name]'s own learning this term. It is not a mark and it does not compare children.",
