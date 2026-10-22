@@ -84,7 +84,7 @@ bx = lambda s: E(s).replace('[]', '<span class="boxb"></span>')
 
 def q_html(q, tier_label=None):
     vis = f'<div class="vis">{svg.render_visual(q["visual"])}</div>' if q.get('visual') else ''
-    parts = ''.join(f'<div class="small">{E(p["l"] + ")  " if p["l"] else "")}{bx(p["text"])}</div>' for p in q.get('parts', []))
+    parts = ''.join(f'<div class="small">{E("(" + p["l"] + ")  " if p["l"] else "")}{bx(p["text"])}</div>' for p in q.get('parts', []))
     h = f'<div class="h"><span class="id">{q["id"]}</span><b>{bx(q["text"])}</b></div>'
     inner = f'{vis}{h}{parts}<div class="a">Answer: {E(q["answer"])}</div>'
     if q.get('hint'): inner += f'<div class="m"><b>Hint (say this first):</b> {E(q["hint"])}</div>'
@@ -188,7 +188,7 @@ def build_guide(d, pw=None):
     open(hp, 'w', encoding='utf-8').write(html)
     if pw:
         pg = pw.new_page(); pg.goto('file://' + hp, wait_until='networkidle'); pg.wait_for_timeout(500)
-        foot = f'<div style="width:100%;font-size:8.5px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers Term 1 • Level 1 • Lesson {d["lesson_in_term"]}: {d["title"]} • Tutor guide</span><span>Page <span class="pageNumber"></span></span></div>'
+        foot = f'<div style="width:100%;font-size:8.5px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers Term {d["term"]} • Level 1 • Lesson {d["lesson_in_term"]}: {d["title"]} • Tutor guide</span><span>Page <span class="pageNumber"></span></span></div>'
         pg.pdf(path=os.path.join(od, f'L{d["_num"]}_Tutor_Guide.pdf'), format='A4', print_background=True, display_header_footer=True, header_template='<div></div>', footer_template=foot, margin={'top': '15mm', 'bottom': '17mm', 'left': '14mm', 'right': '14mm'})
         pg.close()
 

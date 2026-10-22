@@ -1,7 +1,7 @@
 // Online practice runner. Static: the lesson file holds the questions, answers, hints, worked solutions and variants.
 // Rules: no timers, no scores, no streaks, no leaderboard. Wrong answers get a hint, then a worked solution.
 (function () {
-  var q = new URLSearchParams(location.search), key = q.get('lesson') || 'p3l3';
+  var q = new URLSearchParams(location.search), key = q.get('lesson') || window.MI_LESSON || 'p3l3';
   var $ = function (id) { return document.getElementById(id); };
   var TIER = { core: 'Start here', stretch: 'Think harder', challenge: 'Go further' };
   var L, tier = q.get('set') || 'core', idx = 0, st = {}, saved = {};
@@ -45,12 +45,13 @@
     if (a == null || (Array.isArray(a) && !a.length && item.type === 'set') || (typeof a === 'number' && isNaN(a))) return { empty: true };
     if (item.type === 'number') return { ok: a === item.answer };
     if (item.type === 'choice') return { ok: a === item.answer };
+    if (item.ordered) return { ok: a.length === item.answer.length && a.every(function (v, i) { return v === item.answer[i]; }), part: a.some(function (v) { return item.answer.indexOf(v) > -1; }), extra: a.some(function (v) { return item.answer.indexOf(v) < 0; }), fewer: a.length < item.answer.length, order: a.length === item.answer.length && sameSet(a, item.answer) };
     return { ok: sameSet(a, item.answer), part: a.some(function (v) { return item.answer.indexOf(v) > -1; }), extra: a.some(function (v) { return item.answer.indexOf(v) < 0; }), fewer: a.length < item.answer.length };
   }
   function slipFor(item, a) {
     var out = null;
     (item.slips || []).forEach(function (s) {
-      var vals = s.a, hit = Array.isArray(a) ? (vals.length === a.length && vals.every(function (v) { return a.indexOf(v) > -1; })) : vals.indexOf(a) > -1;
+      var vals = s.a, hit = Array.isArray(a) ? (vals.length === a.length && (item.ordered ? vals.every(function (v, i) { return a[i] === v; }) : vals.every(function (v) { return a.indexOf(v) > -1; }))) : vals.indexOf(a) > -1;
       if (hit && !out) out = s.say;
     });
     return out;
@@ -67,13 +68,17 @@
     var d = $('dots'); d.textContent = '';
     items().forEach(function (it, i) { d.appendChild(h('button', { type: 'button', text: String(i + 1), class: saved[it.id] ? 'done' : '', 'aria-label': 'Question ' + (i + 1) + (saved[it.id] ? ', done' : ''), 'aria-current': String(i === idx), on: { click: function () { idx = i; render(); } } })); });
   }
+  function shuffled(item) {
+    if (!item._order) { var a = item.options.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } item._order = a; }
+    return item._order;
+  }
   function control(item) {
     var box = h('div', { id: 'ans', class: 'row' });
     if (item.type === 'number') box.appendChild(h('input', { type: 'text', inputmode: 'decimal', autocomplete: 'off', 'aria-label': 'Your answer', id: 'ansf' }));
     if (item.type === 'set') { box.appendChild(h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'aria-label': 'Your answers, separated by commas' })); }
     if (item.type === 'multi') item.options.forEach(function (o) { box.appendChild(h('label', { class: 'opt' }, [h('input', { type: 'checkbox', value: String(o) }), String(o)])); });
-    if (item.type === 'choice') item.options.forEach(function (o) { box.appendChild(h('label', { class: 'opt' }, [h('input', { type: 'radio', name: 'c', value: o }), o])); });
-    if (item.type === 'selfcheck') { box = h('div', { id: 'ans' }, [h('textarea', { 'aria-label': 'Your riddle', placeholder: 'Write your riddle here…' })]); }
+    if (item.type === 'choice') shuffled(item).forEach(function (o) { box.appendChild(h('label', { class: 'opt' }, [h('input', { type: 'radio', name: 'c', value: o }), o])); });
+    if (item.type === 'selfcheck') { box = h('div', { id: 'ans' }, [h('textarea', { 'aria-label': 'Your answer', placeholder: 'Write here…' })]); }
     return box;
   }
   function stepsBlock(item, title) { return h('div', {}, [h('h2', { text: title || 'How it works' }), h('ol', {}, item.steps.map(function (s) { return h('li', { text: s }); }))]); }
@@ -88,25 +93,32 @@
     var row = h('div', { class: 'row', style: 'margin-top:1rem' });
     var done = s.state === 'ok' || s.state === 'shown';
     if (item.type === 'selfcheck') {
-      row.appendChild(h('button', { type: 'button', class: 'act', text: 'Check my riddle', on: { click: function () { fb.textContent = ''; fb.appendChild(box('plain', stepsBlock(item, 'How to check it'))); saved[base.id] = 1; persist(); renderTiers(); extra(row, base, item, true); } } }));
+      row.appendChild(h('button', { type: 'button', class: 'act', text: item.button || 'Show me how to check', on: { click: function () { var ta = card.querySelector('textarea'); fb.textContent = ''; fb.appendChild(box('plain', stepsBlock(item, 'How to check it'))); if (ta && ta.value.trim()) { saved[base.id] = 1; persist(); renderTiers(); } extra(row, base, item, true); } } }));
     } else if (!done) {
       row.appendChild(h('button', { type: 'button', class: 'act', text: 'Check', on: { click: function () { check(base, item, s, fb, row); } } }));
       row.appendChild(h('button', { type: 'button', class: 'act quiet', text: 'Give me a hint', on: { click: function () { fb.textContent = ''; fb.appendChild(box('plain', h('p', { text: 'Hint: ' + item.hint }))); } } }));
     }
     card.appendChild(row); card.appendChild(fb);
     if (done) { fb.appendChild(box(s.state === 'ok' ? 'ok' : 'try', s.state === 'ok' ? [h('h2', { text: 'Yes, that is right.' }), stepsBlock(item)] : [h('h2', { text: 'Let us look at it together.' }), h('p', { text: 'The answer is ' + show(item.answer) + '.' }), stepsBlock(item, 'Here is how to get it')])); extra(row, base, item, false); }
-    var inp = card.querySelector('input[type=text],textarea'); if (inp && !done) inp.addEventListener('keydown', function (e) { if (e.key === 'Enter' && inp.tagName === 'INPUT') check(base, item, s, fb, row); });
+    var inp = card.querySelector('input[type=text],textarea'); if (inp && !done) { try { inp.focus({ preventScroll: true }); } catch (e) {} }
+    if (inp && !done) inp.addEventListener('keydown', function (e) { if (e.key === 'Enter' && inp.tagName === 'INPUT') check(base, item, s, fb, row); });
   }
   function box(cls, kids) { var d = h('div', { class: 'fb ' + cls }); [].concat(kids).forEach(function (k) { d.appendChild(k); }); return d; }
 
   function check(base, item, s, fb, row) {
     var a = readAnswer(item), j = judge(item, a); fb.textContent = '';
+    var raw = (document.querySelector('#ans input[type=text]') || {}).value;
+    if (item.type === 'number' && raw && raw.trim()) {
+      if (!/\d/.test(raw)) { fb.appendChild(box('plain', h('p', { text: 'Please type the answer with number digits, like 54.' }))); return; }
+      if (nums(raw).length > 1) { fb.appendChild(box('plain', h('p', { text: 'Please type just the answer number.' }))); return; }
+    }
     if (j.empty) { fb.appendChild(box('plain', h('p', { text: 'Type or choose an answer first. It is fine to guess.' }))); return; }
     if (j.ok) { s.state = 'ok'; saved[base.id] = 1; persist(); render(); return; }
-    s.tries++;
+    var sig = JSON.stringify(a); if (s.tries === 1 && s.last === sig) { fb.appendChild(box('plain', h('p', { text: 'That is the same answer as before. Read the hint and try a different one.' }))); return; }
+    s.last = sig; s.tries++;
     if (s.tries === 1) {
-      var slip = slipFor(item, a), msg = slip || (j.part && item.type !== 'number' ? (j.extra ? 'Some of these fit, but one does not. Check each one.' : 'Those fit. Are there more? Keep looking.') : 'Not quite yet. Have another go.');
-      fb.appendChild(box('try', [h('h2', { text: 'Nearly. Try once more.' }), h('p', { text: msg }), h('p', { class: 'sub', style: 'margin:.4rem 0 0', text: 'Hint: ' + item.hint })]));
+      var slip = slipFor(item, a), msg = slip || (j.order ? 'Those are the right numbers, but check which one goes in each blank.' : j.part && item.type !== 'number' ? (j.extra ? 'Some of these fit, but one does not. Check each one.' : 'Those fit. Are there more? Keep looking.') : 'Not quite yet. Have another go.');
+      fb.appendChild(box('try', [h('h2', { text: 'Not yet. Try once more.' }), h('p', { text: msg }), h('p', { class: 'sub', style: 'margin:.4rem 0 0', text: 'Hint: ' + item.hint })]));
     } else { s.state = 'shown'; saved[base.id] = 1; persist(); render(); }
   }
   function extra(row, base, item, selfcheck) {
@@ -116,9 +128,11 @@
     row.appendChild(h('button', { type: 'button', class: 'act' + (base.tpl ? ' quiet' : ''), text: idx < items().length - 1 ? 'Next question' : 'Back to the first one', on: { click: function () { idx = (idx + 1) % items().length; render(); window.scrollTo(0, 0); } } }));
   }
 
-  fetch('/data/' + key + '.json').then(function (r) { return r.json(); }).then(function (d) {
+  fetch('data/' + key + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (d) {
     L = d; document.title = 'Practice: ' + L.title + ' | Math Inquirers';
     $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + ' · Lesson ' + L.lesson + ' · ' + L.topic;
     if (!TIER[tier]) tier = 'core'; render();
+  }).catch(function () {
+    $('title').textContent = 'Practice'; $('card').textContent = 'This practice link is not complete. Please ask your tutor for the right link.';
   });
 })();

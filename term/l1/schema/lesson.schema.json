@@ -428,7 +428,7 @@
         "report_line",
         "term_line"
       ],
-      "description": "also optional: quote (the one-line big idea shown on the parent page; default big_idea)"
+      "description": "also optional: quote (the one-line big idea shown on the parent page; default big_idea) | next_materials: list or string of what the NEXT lesson needs (Parent Summary 'Have ready for next lesson')"
     },
     "spare_time": {
       "type": "object",
@@ -600,6 +600,9 @@
         "draw_strokes": {
           "type": "number",
           "description": "estimated strokes the child must draw (validator warns above 25); estimated from the text if absent"
+        },
+        "parts_note": {
+          "description": "part labels print as (a), (b); blanks: __ short, ___ standard, ____.._______ longer, [] box"
         }
       }
     },

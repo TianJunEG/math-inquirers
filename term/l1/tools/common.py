@@ -8,7 +8,11 @@ OUT = os.path.join(L1, 'out')
 E = html.escape
 
 NAVY = '#1B2A49'; TEAL = '#1F7A6F'; YEL = '#FFC93C'; CREAM = '#FFF9EC'; MUTED = '#3B4A6B'
-FOOT_PARENT = 'Math Inquirers Term 1  •  Notice it. Test it. Explain why.'
+FOOT_PARENT = 'Math Inquirers  •  Notice it. Test it. Explain why.'   # legacy; use foot_text(d)
+
+
+def foot_text(d):
+    return f"Math Inquirers Term {d['term']}  \u2022  Notice it. Test it. Explain why."
 
 # ---------------------------------------------------------------- loading
 
@@ -160,9 +164,15 @@ def p_html(s):
     return E(s)
 
 
+BLANK_MM = {2: 9, 3: 17, 4: 22, 5: 30, 6: 40, 7: 55}   # 7 or more underscores = the longest line      # printed width of an answer line by the number of underscores (3 = the standard blank)
+
+
 def blanks(text):
-    """Turn ___ in a question into a printed answer line and [] into an empty answer box (a clear square for ages 6-8)."""
-    return E(text).replace('___', '<span class="al"></span>').replace('[]', '<span class="boxb"></span>')
+    """Answer blanks in a question: __ (2 underscores) a short line for one digit, ___ the standard line, ____ to _______ longer lines
+    for words or numbers with units, and [] an empty answer box (a clear square for ages 6-8)."""
+    t = E(text)
+    t = re.sub(r'_{2,}', lambda m: f'<span class="al" style="min-width:{BLANK_MM[min(len(m.group(0)), 7)]}mm"></span>', t)
+    return t.replace('[]', '<span class="boxb"></span>')
 
 
 def kits(d):
@@ -193,5 +203,6 @@ def font_css():
 def mi_uri():
     """Mi the dolphin (owner-chosen mascot) as a data URI. The image file is never edited."""
     import base64
-    with open(os.path.join(L1, 'assets', 'mi_dolphin_transparent.png'), 'rb') as f:
+    nocalc = os.path.join(L1, 'assets', 'mi_dolphin_nocalc.png')    # used automatically if the owner supplies a version without the calculator
+    with open(nocalc if os.path.exists(nocalc) else os.path.join(L1, 'assets', 'mi_dolphin_transparent.png'), 'rb') as f:
         return 'data:image/png;base64,' + base64.b64encode(f.read()).decode()

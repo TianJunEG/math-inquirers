@@ -117,3 +117,15 @@ Safest to skip or make up: Lesson 4. Hardest to miss: Lessons 1 and 5 to 7.
 - **Drawing size:** a question with `draw: true` that needs about 25 strokes or more draws a validator warning (a bundle of ten counts as 10 strokes; ask for a bar or ring, or lower the numbers). Set `draw_strokes` to override the estimate.
 - **Ruler figure** (Lesson 9 and others): `{"type":"ruler","start":0,"end":12,"objects":[{"label":"pencil","from":0,"to":9,"color":"#FFC93C"},{"label":"crayon","from":2,"to":7.5}],"mark":9}`. In the workbook it prints at true 1:1 scale (measured on the PDF: a 12 cm ruler strip is 133.1 mm wide including margins; keep end minus start at most 15 so it fits the page). On slides it scales to the screen. It is never a cut-out: families use their own ruler (owner decision).
 - **PDF checks:** the page-fill check also fails if a workbook page ends with a question tab whose body is on the next page.
+
+## Fourth pass (term-wide audits, template batch)
+
+- **Term-independent template:** footers, covers and the check use `d["term"]`/`d["level"]` (nothing says "Term 1" any more); `common.foot_text(d)`.
+- **Part labels** print as (a), (b) in the workbook, guide and deck. **Blank widths:** `__` short line (one digit), `___` standard, `____` to `_______` longer lines; `[]` is an empty answer box.
+- **Figures:** `{"type":"plates","left":7,"right":5,"labels":["LEFT","RIGHT"]}` (two plates with counters); kit pages `{"type":"ten_frame"}` (4 ten-frames and 20 counters) and `{"type":"plates","labels":["LEFT","RIGHT"]}` (printable plate mat) in `workbook.kits`.
+- **Online practice:** the Term runner is `term/l1/runner/` (relative paths, so `index.html` works from a folder or a server; shuffled choices; "Not yet"; a typed word or several numbers does not use up a try; a repeated wrong answer does not use the second try; a missing practice link shows a message). A set item with `"ordered": true` is marked in the order given (e.g. two blanks), and an answer with the right numbers in the wrong order gets "check which one goes in each blank".
+- **Parent summary:** `parent.next_materials` (list or string: what the NEXT lesson needs) fills "Have ready for next lesson"; the validator warns if it is missing or if `parent.next` says "pencil and paper only" without it.
+- **Privacy on slides:** a phone number, email or link on any slide fails the validator (recorded slides are shared); say it aloud or put it in the grown-up note.
+- **End-of-term check generator** is now `tools/b_check.py` (built by `build.sh` for any lesson with an `end_of_term_check` block; Term 2 and later reuse it; set `dotbox: true` on a question that needs the dot box). The old `assets/l10_extras.py` only forwards to `build.sh 10`.
+- **Mi without the calculator:** if the owner supplies `term/l1/assets/mi_dolphin_nocalc.png` (same size, never edit the original) the builders use it automatically everywhere.
+- The answer-key PDF check fails if a section heading is left at the bottom of a page with its block on the next.

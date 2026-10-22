@@ -118,7 +118,7 @@ def all_strings(o):
 
 
 def load_extras():
-    spec = importlib.util.spec_from_file_location('l10_extras', os.path.join(L1, 'assets', 'l10_extras.py'))
+    spec = importlib.util.spec_from_file_location('l10_extras', os.path.join(L1, 'tools', 'b_check.py'))
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
     return m

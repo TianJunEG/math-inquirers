@@ -30,9 +30,10 @@ def main():
     for p in probs: print('LAYOUT', p)
     print('built', os.path.join(OUT, f'l{d["_num"]}'))
     if 'end_of_term_check' in d:     # Lesson 10: the end-of-term check files (student sheet, tutor key, grown-up note)
-        import subprocess
-        r = subprocess.run([sys.executable, os.path.join(L1, 'assets', 'l10_extras.py')])
-        if r.returncode: sys.exit('end-of-term check build FAILED (see above)')
+        import b_check
+        with sync_playwright() as pw2:
+            b2 = pw2.chromium.launch(); okc = b_check.build_check(d, b2); b2.close()
+        if not okc: sys.exit('end-of-term check build FAILED (see above)')
         validate.check_term_check(d)
     validate.check_foreign(d)   # after every output (including the term-check files) exists
     for f in validate.FAILS: print('FAIL ', f)

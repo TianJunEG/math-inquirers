@@ -206,9 +206,56 @@ def shapes_kit(shapes, size=70):
     return f'<svg viewBox="0 0 {cols * (size + 24) + 30} {rows * (size + 24) + 40}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
 
 
+def ten_frame_kit():
+    """Cut-out ten-frame page: 4 ten-frames (2 x 5 cells) and 20 counters (10 red, 10 yellow)."""
+    cell = 56; p = []
+    pos = [(30, 34, 'Ten-frame 1'), (370, 34, 'Ten-frame 2'), (30, 214, 'Ten-frame 3'), (370, 214, 'Ten-frame 4')]
+    for (x0, y0, name) in pos:
+        p.append(f'<text x="{x0}" y="{y0 - 10}" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">{name}</text>')
+        for r in range(2):
+            for c in range(5):
+                p.append(f'<rect x="{x0 + c * cell}" y="{y0 + r * cell}" width="{cell}" height="{cell}" fill="#fff" stroke="{NAVY}" stroke-width="2.4"/>')
+        p.append(f'<rect x="{x0 - 6}" y="{y0 - 6}" width="{5 * cell + 12}" height="{2 * cell + 12}" fill="none" stroke="#777" stroke-width="1.4" stroke-dasharray="7 5"/>')
+    p.append(f'<text x="30" y="400" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Counters: cut out all 20 (10 red, 10 yellow)</text>')
+    for row, col in ((0, RED), (1, YEL)):
+        for i in range(10):
+            p.append(f'<circle cx="{58 + i * 64}" cy="{438 + row * 66}" r="24" fill="{col}" stroke="{NAVY}" stroke-width="1.6" stroke-dasharray="5 3"/>')
+    return f'<svg viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def plates(left=0, right=0, labels=('LEFT', 'RIGHT'), colors=(YEL, SKY)):
+    """Two plates with counters: left and right counts (up to 20 on a plate), each plate named for the child to read."""
+    p = []
+    for k, (n, lab, col) in enumerate(zip((left, right), labels, colors)):
+        cx = 170 + k * 380
+        p.append(f'<circle cx="{cx}" cy="180" r="130" fill="#fff" stroke="{NAVY}" stroke-width="6"/><circle cx="{cx}" cy="180" r="104" fill="none" stroke="#B9C7DA" stroke-width="3"/>')
+        p.append(f'<text x="{cx}" y="38" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{lab}</text>')
+        per = 6 if n > 12 else 5
+        rows = (n + per - 1) // per
+        for i in range(n):
+            r, c = divmod(i, per)
+            inrow = per if r < rows - 1 or n % per == 0 else n % per
+            x = cx - (inrow - 1) * 21 + c * 42
+            y = 180 - (rows - 1) * 21 + r * 42
+            p.append(f'<circle cx="{x}" cy="{y}" r="17" fill="{col}" stroke="{NAVY}" stroke-width="2.4"/>')
+    return f'<svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="two plates: {left} on the left, {right} on the right" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
+def plates_mat(labels=('LEFT', 'RIGHT')):
+    """Printable two-plate mat (big circles with names) to lay counters on."""
+    p = []
+    for k, lab in enumerate(labels):
+        cx = 190 + k * 400
+        p.append(f'<circle cx="{cx}" cy="270" r="180" fill="#fff" stroke="{NAVY}" stroke-width="6"/><circle cx="{cx}" cy="270" r="146" fill="none" stroke="#B9C7DA" stroke-width="3"/>')
+        p.append(f'<text x="{cx}" y="64" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{lab}</text>')
+    return f'<svg viewBox="0 0 780 470" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
+
+
 def kit_figure(spec):
     t = spec['type']
     if t == 'base_ten': return kit_page_svg()
+    if t == 'ten_frame': return ten_frame_kit()
+    if t == 'plates': return plates_mat(tuple(spec.get('labels', ('LEFT', 'RIGHT'))))
     if t == 'hundred': return hundred(cell=spec.get('cell', 64))
     if t == 'hundred_square': return hundred_square(spec.get('blank', False))
     if t == 'number_strip': return number_strip_kit(spec.get('start', 0), spec.get('end', 50))
@@ -359,6 +406,8 @@ def render_visual(v):
         return out.replace('class="h100"', 'class="h100 wide"') if v.get('wide') else out
     if t == 'seq':
         return seq(v['items'], v.get('gaps'), v.get('hl', ()))
+    if t == 'plates':
+        return plates(v.get('left', 0), v.get('right', 0), tuple(v.get('labels', ('LEFT', 'RIGHT'))))
     if t == 'ten_to_bundle':
         return ten_to_bundle()
     raise ValueError('unknown visual ' + t)

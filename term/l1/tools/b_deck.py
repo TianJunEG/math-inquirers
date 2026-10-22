@@ -3,7 +3,7 @@
 Same look as the holiday decks (rebuild/slidekit.py + levels/restyle.py 'modern2'): light slides #F3F6FB with a top bar,
 navy gradient for title/break/end slides, Fredoka headings, Nunito Sans body, teal accent, yellow answers.
 """
-import json, os, sys
+import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 import svg
@@ -12,7 +12,6 @@ BF = "'Nunito Sans', Arial, sans-serif"
 HF = "'Fredoka', Arial, sans-serif"
 SOFTBG = '#F3F6FB'
 CARD = 'background:#FFFFFF;border:2px solid #DCE4F0;box-shadow:0 6px 18px rgba(27,42,73,0.08);border-radius:24px;'
-FOOT = FOOT_PARENT
 
 
 def bar():
@@ -119,7 +118,7 @@ def qs_block(d, ids, short):
         parts = ''
         for p in q.get('parts', []):
             if short: continue
-            parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E(p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
+            parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E("(" + p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
         if q.get('visual') and q['visual'].get('type') != 'hundred':   # a 100 square does not fit in a question row
             vis = f'<div style="width:{240 if compact else 340}px;flex:none">{svg.render_visual(q["visual"])}</div>'
@@ -129,7 +128,7 @@ def qs_block(d, ids, short):
 
 
 def blanks_dash(t):
-    return E(t).replace('___', '______').replace('[]', f'<span style="display:inline-block;width:44px;height:44px;border:3px solid {NAVY};border-radius:10px;background:#fff;vertical-align:middle;margin:0 6px"></span>')
+    return re.sub(r'_{2,}', lambda m: '_' * (len(m.group(0)) + 3), E(t)).replace('[]', f'<span style="display:inline-block;width:44px;height:44px;border:3px solid {NAVY};border-radius:10px;background:#fff;vertical-align:middle;margin:0 6px"></span>')
 
 
 def answers_block(d, ids):
@@ -191,12 +190,12 @@ def slide_html(d, s):
         bg = f'background:linear-gradient(135deg,{NAVY} 0%,#101B33 100%);color:{CREAM}'
         deco = bubbles() if kind == 'title' else bar()
         pill = f'<p style="position:absolute;right:128px;top:64px;font-size:28px;font-weight:700;letter-spacing:2px;color:{YEL}">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOT)}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(foot_text(d))}</p>'
     else:
         bg = f'background:{SOFTBG};color:{NAVY}'
         deco = bar()
         pill = f'<p style="position:absolute;right:128px;top:52px;font-size:26px;font-weight:800;letter-spacing:2px;color:{TEAL};background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 22px">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:48px;width:1400px;font-size:24px;color:#5B6785">{E(FOOT)}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:48px;width:1400px;font-size:24px;color:#5B6785">{E(foot_text(d))}</p>'
     if kind == 'title':
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(s["title"])}</h1>'

@@ -7,16 +7,16 @@ import svg
 WB_CSS = open(os.path.join(ROOT, 'hp', 'wb_style.css'), encoding='utf-8').read()
 PARENT_CSS = open(os.path.join(ROOT, 'hp', 'parent_style.css'), encoding='utf-8').read()
 EXTRA = """
-body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{min-width:70px!important;height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
 
 .pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
 .draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
 .vis{width:310px;margin:6px 0 6px 4px}
-.al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
+.al{display:inline-block;min-width:17mm;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:2px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
-.lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
+.lbk .r{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;font-size:16.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
 .wl{border-bottom:2px dotted #8A94AD;height:24px}
 .boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
@@ -31,6 +31,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
+.banner{break-after:avoid;display:block;width:fit-content}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
@@ -74,7 +75,7 @@ def qbox(q, label=None, draw=False):
     if q.get('parts'):
         for p in q['parts']:
             cw = choice_words(p['text'], p.get('choices'))
-            parts += f'<div class="sub"><span class="sl">{E(p["l"])}</span><span>{blanks(p["text"])}</span>{choice_html(cw) if cw else ""}</div>'
+            parts += f'<div class="sub"><span class="sl">{E("(" + p["l"] + ")") if p["l"] else ""}</span><span>{blanks(p["text"])}</span>{choice_html(cw) if cw else ""}</div>'
     if q.get('draw'): vis += '<div class="draw"></div>'
     ln = ''.join('<div class="ln"></div>' for _ in range(q.get('lines', 0)))
     cq = choice_words(q['text'], q.get('choices'))
@@ -157,7 +158,7 @@ def parent_html(d):
             f'<div class="panel"><h3>When your child is stuck</h3><p style="margin:0">{E(p["when_stuck"])}</p></div></div>'
             f'<div><div class="side"><h3>Words we used</h3><ul style="margin:0;padding-left:16px">{li(p["words"])}</ul></div>'
             f'<div class="side" style="margin-top:12px"><h3>Good questions</h3><ul style="margin:0;padding-left:16px">{li(p["ask"])}</ul></div>'
-            f'<div class="side" style="margin-top:12px"><h3>Things to have ready</h3><ul style="margin:0;padding-left:16px">{li(d["materials"]["child"][:3])}</ul></div></div></div>'
+            f'<div class="side" style="margin-top:12px"><h3>{"Have ready for next lesson" if p.get("next_materials") else "Things to have ready"}</h3><ul style="margin:0;padding-left:16px">{li(p["next_materials"] if isinstance(p.get("next_materials"), list) else ([p["next_materials"]] if p.get("next_materials") else d["materials"]["child"][:3]))}</ul></div></div></div>'
             f'<div class="panel"><h3>Next lesson</h3><p style="margin:0">{E(p["next"])} Missed a lesson? Every lesson is recorded; your tutor will share a private link with enrolled families.</p></div>'
             f'<p style="font-size:11.5px;color:#5B6785;margin:8px 0 0">{E(p["term_line"])} We share what we see in your child’s thinking, never a rank or a mark compared with other children. Math Inquirers by Preciouslyours Pte Ltd.</p></body></html>')
 
@@ -176,7 +177,7 @@ def build_print(d, pw):
                margin={'top': '14mm', 'bottom': '16mm', 'left': '14mm', 'right': '14mm'} if footer else {'top': '12mm', 'bottom': '12mm', 'left': '15mm', 'right': '15mm'})
         pg.close()
         return os.path.join(od, pdfname)
-    f = 'Math Inquirers Term 1 \u2022 Notice it. Test it. Explain why.'
+    f = f'Math Inquirers Term {d["term"]} \u2022 Notice it. Test it. Explain why.'
     # workbook: re-render with tighter spacing on the overflowing page until the real PDF has exactly the designed pages
     want = workbook_html(d).count('<div class="page')
     d.setdefault('_tight', set()); d.setdefault('_tight2', set())

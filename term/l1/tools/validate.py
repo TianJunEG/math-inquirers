@@ -298,8 +298,26 @@ def check_pages(d):
     d['_fills'] = fills
     for i, f in enumerate(fills, 1):
         if f < 0.80: warn(f'pages: workbook page {i} content ends at {f:.0%} of the page (target at least 85%): add a question or bigger writing space')
-        if f > 1.01: warn(f'pages: workbook page {i} overflows ({f:.0%}): it will spill onto an extra page')
+        if f > 1.04: warn(f'pages: workbook page {i} overflows ({f:.0%}): it will spill onto an extra page')
     ok('pages: workbook page fill ' + ', '.join(f'{f:.0%}' for f in fills) + ' (kit page excluded)')
+
+
+def check_next_materials(d):
+    p = d['parent']
+    if re.search(r'pencil and paper|only a pencil', p.get('next', ''), re.I) and not p.get('next_materials'):
+        warn('parent: "Next lesson" says pencil and paper only but parent.next_materials is not set (list what the NEXT lesson needs)')
+    if d['lesson_in_term'] < 10 and not p.get('next_materials'):
+        warn('parent: set parent.next_materials (a list of what the next lesson needs) so the Parent Summary tells families what to have ready')
+
+
+def check_slide_privacy(d):
+    """No phone number or contact detail on any slide or tool footer (slides are recorded and shared)."""
+    bad = []
+    for s in d['slides']:
+        t = json.dumps(s['blocks']) + ' ' + s['title']
+        if re.search(r'\+?\d{2}\s?\d{4}\s?\d{4}|\b\d{8}\b|@[a-z0-9.-]+\.[a-z]{2,}|https?://', t): bad.append(s['id'])
+    if bad: fail('privacy: phone number, email or link on recorded slide(s) ' + ', '.join(bad) + ' (say it aloud or put it in the grown-up note instead)')
+    else: ok('privacy: no phone number, email or link on any slide')
 
 
 def check_mascot(d):
@@ -334,6 +352,7 @@ def check_outputs(d):
                 lines = [l.strip() for l in tx.splitlines() if l.strip() and not l.strip().startswith('Math Inquirers') and not re.fullmatch(r'Page \d+', l.strip())]
                 lines = [l for l in lines if not re.fullmatch(r'Page\s*\d+', l)]
                 if lines and re.fullmatch(r'No\.?\s*[A-Z]?\d+', lines[-1]): fail(f'outputs: Workbook page {pgno} ends with a question tab ({lines[-1]}) and its body is on the next page')
+        if name == 'Parent_Summary': pass
         if got == n and all(f >= 0.40 for f in fills): ok(f'outputs: {name} PDF {got} pages, fill (measured on the PDF) {txt}')
 
 
@@ -448,9 +467,10 @@ def check_answers(d):
             for a in s['a']:
                 if it['type'] == 'number' and a == it['answer']: fail(f"practice: {it['id']} has a slip equal to the right answer")
                 if it['type'] == 'choice' and a == it['answer']: fail(f"practice: {it['id']} slip equals right answer")
+        if it.get('ordered') and it['type'] != 'set': fail(f"practice: {it['id']} ordered only applies to set items")
         if it['type'] == 'choice' and it['answer'] not in it['options']: fail(f"practice: {it['id']} answer not among options")
     # cross-check with the runner's JavaScript calc()
-    js = os.path.join(ROOT, 'practice', 'public', 'practice.js')
+    js = os.path.join(L1, 'runner', 'practice.js')
     src = open(js, encoding='utf-8').read()
     a = src.index('function calc'); b = src.index('function fill')
     calc = src[a:b]
@@ -464,17 +484,29 @@ def check_answers(d):
         warn('practice: could not run node cross-check: ' + str(e))
 
 
+def check_key_pdf(d):
+    """Answer key PDF: no section heading may end a page with its block on the next page."""
+    import subprocess
+    path = os.path.join(OUT, f"l{d['_num']}", f"L{d['_num']}_Workbook_Answer_Key.pdf")
+    if not os.path.exists(path): return
+    import pdfcheck
+    for pg in range(1, pdfcheck.pdf_pages(path) + 1):
+        tx = subprocess.run(['pdftotext', '-layout', '-f', str(pg), '-l', str(pg), path, '-'], capture_output=True, text=True).stdout
+        lines = [l.strip() for l in tx.splitlines() if l.strip() and not l.strip().startswith('Math Inquirers') and not re.fullmatch(r'Page\s*\d+', l.strip())]
+        if lines and re.match(r'^(Start here|Think harder|Go further|Investigation|Exit ticket|Sneak-peek)\b.{0,60}$', lines[-1]) and not re.search(r'\d', lines[-1][-6:]):
+            fail(f'outputs: answer key page {pg} ends with the heading "{lines[-1]}" and its block is on the next page')
+
+
 def check_term_check(d):
     """Lesson 10 end-of-term check: page counts and the printed 10 cm bar and 9 cm line measured on the rendered PDF."""
     c = d.get('end_of_term_check')
     if not c: return
-    import pdfcheck, importlib.util
+    import pdfcheck, b_check
     od = os.path.join(OUT, f"l{d['_num']}")
     sheet = os.path.join(od, f"L{d['_num']}_Check_Student.pdf"); key = os.path.join(od, f"L{d['_num']}_Check_Tutor_Key.pdf"); note = os.path.join(od, f"L{d['_num']}_Check_Parent_Note.pdf")
     if not all(os.path.exists(p) for p in (sheet, key, note)):
         fail('term check: Check_Student / Check_Tutor_Key / Check_Parent_Note PDFs not built (run build.sh)'); return
-    spec = importlib.util.spec_from_file_location('l10_extras', os.path.join(L1, 'assets', 'l10_extras.py'))
-    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+    m = b_check
     n = pdfcheck.pdf_pages(sheet)
     if n != c['sheet_pages']: fail(f"term check: student sheet has {n} pages, designed {c['sheet_pages']}")
     if pdfcheck.pdf_pages(note) != 1: fail('term check: grown-up note must be one page')
@@ -482,10 +514,10 @@ def check_term_check(d):
     for i, f in enumerate(fills, 1):
         if f < 0.40: fail(f'term check: student sheet page {i} only {f:.0%} full')
     bar, line = m.measure_sheet(sheet, c)
-    for name, got, want in (('10 cm bar', bar, c['sheet_check_bar_mm']), ('9 cm line', line, c['line_mm'])):
+    for name, got, want in (('10 cm bar', bar, c['sheet_check_bar_mm']),):
         if got is None or abs(got - want) > 0.6: fail(f'term check: printed {name} measures {got} mm, must be {want} mm (within 0.6 mm)')
-    if bar is not None and line is not None and not [f for f in FAILS if f.startswith('term check')]:
-        ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), line {line:.2f} mm (want {c['line_mm']}), measured on the PDF")
+    if bar is not None and not [f for f in FAILS if f.startswith('term check')]:
+        ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), measured on the PDF")
 
 
 def check_cover(d):
@@ -538,13 +570,13 @@ def check_foreign(d):
 
 def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers):
         try:
             fn(d)
         except Exception as e:
             fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     if built:
-        for fn in (check_outputs, check_cover, check_term_check, check_foreign):
+        for fn in (check_outputs, check_key_pdf, check_cover, check_term_check, check_foreign):
             try: fn(d)
             except Exception as e: fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     return d

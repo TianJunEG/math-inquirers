@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Practice | Math Inquirers</title>
-<link rel="stylesheet" href="/fonts.css">
+<link rel="stylesheet" href="fonts.css">
 <style>
-:root{--bg:#FFF8E7;--ink:#1B2A49;--mut:#5b6478;--card:#fff;--line:#d9d2bd;--yellow:#FFC93C;--teal:#1F7A6F;--tealbg:#e3f3ef;--warm:#B5481F;--warmbg:#fdeee6;--focus:#1B2A49}
+:root{--bg:#FFF8E7;--ink:#1B2A49;--mut:#5b6478;--card:#fff;--line:#8f8872;--yellow:#FFC93C;--teal:#1F7A6F;--tealbg:#e3f3ef;--warm:#B5481F;--warmbg:#fdeee6;--focus:#1B2A49}
 @media (prefers-color-scheme:dark){:root{--bg:#101a30;--ink:#f3efe2;--mut:#a8b2cc;--card:#1a2646;--line:#33436b;--tealbg:#16413d;--warm:#ffb08f;--warmbg:#3b2a26;--focus:#ffc93c}}
 *{box-sizing:border-box}html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font:18px/1.5 'Nunito Sans',Arial,sans-serif;padding-block:max(16px,env(safe-area-inset-top)) max(40px,env(safe-area-inset-bottom));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
@@ -11,10 +11,10 @@ main{max-width:46rem;margin:0 auto}
 h1{font:600 clamp(26px,5vw,36px)/1.15 Fredoka,Arial,sans-serif;margin:.2rem 0;text-wrap:balance}
 .sub{color:var(--mut);margin:0 0 1rem}
 .tiers{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem}
-.tiers button{font:inherit;font-weight:700;padding:.55rem 1rem;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.tiers button{font:inherit;font-weight:700;padding:.55rem 1rem;min-height:44px;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
 .tiers button[aria-pressed=true]{background:var(--yellow);color:#1B2A49}
 .dots{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 1rem}
-.dots button{width:2.1rem;height:2.1rem;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 14px 'Nunito Sans';cursor:pointer;padding:0}
+.dots button{width:2.75rem;height:2.75rem;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 14px 'Nunito Sans';cursor:pointer;padding:0}
 .dots button.done{background:var(--teal);border-color:var(--teal);color:#fff}
 .dots button[aria-current=true]{outline:3px solid var(--focus);outline-offset:2px}
 .card{background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:1.2rem 1.2rem 1.4rem;box-shadow:5px 5px 0 var(--ink)}
@@ -42,4 +42,4 @@ button.act:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
 <div class="dots" id="dots" role="group" aria-label="Questions"></div>
 <section class="card" id="card" aria-live="polite"></section>
 <p class="foot">There is no score and no timer. Try as many as you like, in any order. A grown-up can read along.</p>
-</main><script src="/practice.js"></script></body></html>
+</main><script>window.MI_LESSON="t1l07";</script><script src="practice.js"></script></body></html>

@@ -2748,6 +2748,7 @@
    },
    {
     "id": "g1",
+    "ordered": true,
     "tier": "challenge",
     "type": "set",
     "q": "Fill in both blanks: 19 + 28 = 20 + ___ = ___ + 30. Type the two numbers with a comma between them.",
