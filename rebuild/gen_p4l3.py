@@ -143,7 +143,7 @@ put('p4l3-break',break_slide('p4l3-break','28.5–32.5 MIN','Odd or even? Stand 
 
 # ---------- worksheet page 1 ----------
 put('p4l3-ws1',ws_preview('p4l3-ws1','32.5–49 MIN','Worksheet page 1: with your partner',[('Q1','Order of operations. Underline the part you do first.'),('Q2','Missing signs. Estimate, test, adjust.'),('Q3','On your own, first: brackets change the answer. Put one pair in to hit a target.')],'Stuck? Say the order out loud: brackets, then × and ÷, then + and −.','Minutes 32.5 to 49. Pairs do Q1 and Q2 (about 9 minutes of work). Q3 is the first question each child does on their own, at the start of page 2 time; its answer is checked together with page 2. Walk around. Ask "Which part do you work out first?" before giving any help. Q2d has four numbers: encourage children to test a sign in the first circle and see how big the answer is so far.'))
-put('p4l3-ws1ans',checks('p4l3-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 106   b) 250   c) 27   d) 98   e) 12'),('Q2','a) 7 × 6 − 4   b) 48 ÷ 6 × 2   c) 9 ÷ 3 + 5   d) 12 ÷ 3 + 2 × 5'))],
+put('p4l3-ws1ans',checks('p4l3-ws1ans','49–51 MIN','Page 1: check together',[('Q1','a) 106   b) 250   c) 27   d) 98   e) 12'),('Q2','a) 7 × 6 − 4   b) 48 ÷ 6 × 2   c) 9 ÷ 3 + 5   d) 12 ÷ 3 + 2 × 5')],
  'Click each answer after a pair explains theirs. Q1d: 45 ÷ 5 = 9 first, then 100 − 9 + 7 = 98 (not 55 ÷ 5 + 7). Q1e: 6 × 8 ÷ 4 = 48 ÷ 4 = 12. Q2d: 12 ÷ 3 = 4 and 2 × 5 = 10, 4 + 10 = 14; each puzzle on this page has only one answer.',gapy=170))
 
 # ---------- teach before page 2: work backwards ----------

@@ -202,7 +202,7 @@ g+=quarter(1270,120,100,0,MINT)+quarter(1270,140,100,90,MINT)+quarter(1250,140,1
 g+=T(1480,110,'Then make',32,MUTED)+T(1480,150,'new shapes!',32,MUTED)
 pic=SV(1620,270,g,'One paper circle cut into 2 half circles, and one paper circle cut into 4 quarter circles')
 body=h2('Explore: circle pieces')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take your 2 paper circles (cut out before the lesson, the same size).</li><li>Fold one in half and cut along the fold.</li><li>Fold the other in half, then in half again. Open it and cut along both folds.</li><li>Use your pieces to make new shapes. Name them!</li></ol>',extra='padding:24px 40px')
-body+=pin(128,580,1664,pic,None,WHITE,24,'8px 22px')
+body+=pin(128,555,1664,pic,None,WHITE,24,'8px 22px')
 put('p2l8-explore1',sec('p2l8-explore1','8–14 MIN',body,
  'Minutes 8 to 14. The two paper circles are cut out BEFORE the lesson (parents cut them; kit at minute 0). Pair work is 5.5 minutes. One circle gives 2 half circles; the other gives 4 quarter circles. Children then put pieces together: whole straight sides must touch. '
  'Things to make: a whole circle in different ways, a half circle from 2 quarter circles, a "fan", a "wave" (two half circles side by side, one turned over). Online: the same on camera.'))

@@ -158,9 +158,9 @@ for k,(lab,n) in enumerate(rows):
     g+=T(x0-24,y+46,lab,32,NAVY,700,'end')+bar(x0,y,sw_,62,n,(),WHITE,{0:[SKY,YEL,MINT,SOFT][k]})
     if n>1:
         for i in range(n): g+=sfrac(x0+sw_/n*(i+0.5),y+31,1,n,24)
-pic=SV(1620,330,g,'Four paper strips the same length: one whole, one folded into halves, one into quarters and one into eighths, with each part labelled')
+pic=SV(1620,330,g,'Four paper strips the same length: one whole, one folded into halves, one into quarters and one into eighths, with each part labelled',1400,285)
 body=h2('Explore: fold fair shares')+card(chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;margin:0"><li>Take 4 paper strips (already cut, all the same length).</li><li>Keep one whole. Fold one in half, one into quarters and one into eighths.</li><li>Open them out. Write the fraction on ONE part of each strip.</li><li>Line them up under the whole.</li></ol>',extra='padding:24px 40px')
-body+=pin(128,560,1664,pic,None,WHITE,24,'8px 22px')
+body+=pin(128,530,1664,pic,None,WHITE,24,'8px 22px')
 put('p2l7-explore1',sec('p2l7-explore1','8–14 MIN',body,
  'Minutes 8 to 14. The strips are cut before the lesson (kit at minute 0). Each child folds three strips (halves, quarters, eighths) and writes the fraction on one part of each, not all 15; pairs compare. Show how to fold in half by matching the ends. Quarters: fold in half, then in half again. Eighths: in half three times. '
  'Children line the strips up under each other, left ends together. '

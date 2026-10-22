@@ -124,21 +124,12 @@ body+=pin(128,790,1664,p('A puzzle is hard to hold in your head. On paper you ca
 put('p3l10-teach1',sec('p3l10-teach1','25–26 MIN',body,'Teach: the idea and why. "Today mixes everything. Clever inquirers do not know every answer straight away; they know how to START." Click each card and give an example from our P3 lessons: Draw it (bar models in Lesson 4, time lines in Lesson 9). List it (digit puzzles in Lesson 1, budgets in Lesson 9). Make a table (times-table patterns in Lesson 3). Click the last box and read it together. The next slides show each start in action.'))
 
 # ---------- we1: draw it (queue) ----------
-sp={3:(YEL,'Siti')}
-base=queue(9,sp,show={3},aria='A queue with Siti')
-front=queue(9,{0:(SKY,'1'),1:(SKY,'2'),2:(SKY,'3')},show={0,1,2},ends=False,aria='3 people in front of Siti')
-back=queue(9,{4:(GREEN,''),5:(GREEN,''),6:(GREEN,''),7:(GREEN,''),8:(GREEN,'')},show={4,5,6,7,8},ends=False,aria='5 people behind Siti')
-gap=min(150,(1664-260)/8)
-body=h2('Draw it: a queue')+card(p('Siti is 4th from the front and 6th from the back of a queue. How many people are in the queue?',38,700))
-body+=pin(128,380,1664,base)+pin(128,380,1664,front,'fade')+pin(128,380,1664,back,'fade')
-body+=step(1,'4th from the front: 3 people in front of Siti.',top=620,size=34)
-body+=step(2,'6th from the back: 5 people behind Siti.',top=720,size=34)
-body+=answer(128,820,1664,'3 + 1 + 5 = 9 people.   (4 + 6 = 10 counts Siti twice: 10 − 1 = 9)')
-put('p3l10-we1',sec('p3l10-we1','26–28 MIN',body,
- 'Worked example: draw it. Ask first: "Is it 10?" Many children add 4 + 6. Click: the 3 people in front appear, then the 5 behind, then the steps and answer. (Click order: front people, back people, step 1, step 2, answer.) '
- 'Think-aloud: "I draw Siti. 4th from the front means 3 people are in front of her. 6th from the back means 5 people behind her. Count: 3 + 1 + 5 = 9. If I add 4 + 6, I count Siti twice, so I take 1 away." Check by counting the drawing from both ends.'))
-put('p3l10-try1',try_slide('p3l10-try1','28–29 MIN','Your turn: draw it','Draw the people before you answer.',[('a','Ravi is 2nd from the front and 8th from the back. How many people?','9'),('b','10 people. Ben is 3rd from the front. Place from the back?','8th'),('c','Two numbers add up to 30. One is 6 more than the other.','12 and 18')],
- 'Whiteboards. a) 1 in front, Ravi, 7 behind: 9 (or 2 + 8 − 1). b) 2 in front, Ben, so 10 − 3 = 7 behind: Ben is 8th from the back (10 − 3 + 1). c) Draw two bars: take away the extra 6: 24; share: 12 and 12; give the 6 back: 12 and 18. Check 12 + 18 = 30.',36))
+body=h2('Draw it: a queue')+pin(128,230,1664,p('Example: Siti is 4th from the front and 6th from the back. 3 people in front + Siti + 5 behind = 9 people. (4 + 6 = 10 counts Siti twice.)',34,700),None,SOFT,20,'20px 30px')
+body+=pin(128,400,1664,p('Your turn. Draw the people before you answer.',34,600,MUTED),None)
+for i_,(a_,b_,c_) in enumerate([('a','Ravi is 2nd from the front and 8th from the back. How many people?','9'),('b','10 people. Ben is 3rd from the front. Place from the back?','8th'),('c','Two numbers add up to 30. One is 6 more than the other.','12 and 18')]):
+    body+=qrow(128,470+i_*140,1250,a_,b_,36)+answer(1420,470+i_*140,372,c_)
+put('p3l10-try1',sec('p3l10-try1','28–29 MIN',body,
+ 'Worked example and your turn in one slide (the old separate worked-example slide was merged here). Ask first: "Is it 10?" Many children add 4 + 6. Think-aloud: "I draw Siti. 4th from the front means 3 people are in front of her. 6th from the back means 5 people behind her. Count: 3 + 1 + 5 = 9. If I add 4 + 6, I count Siti twice, so I take 1 away." Then whiteboards. a) 1 in front, Ravi, 7 behind: 9 (or 2 + 8 − 1). b) 2 in front, Ben, so 10 − 3 = 7 behind: Ben is 8th from the back (10 − 3 + 1). c) Draw two bars: take away the extra 6: 24; share: 12 and 12; give the 6 back: 12 and 18. Check 12 + 18 = 30.',36))
 
 # ---------- we2: logic grid ----------
 R=['Ben','Siti','Ravi']; C=['curry puff','kaya toast','popiah']
@@ -230,7 +221,7 @@ put('p3l10-exit',sec('p3l10-exit','80–85 MIN',body,'Minutes 80 to 85. Answer: 
 put('end',dark_slide('end','WELL DONE, INQUIRERS · 85–90 MIN','Keep asking why',f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>','Certificates and a last stamp for every inquirer.','Minutes 85 to 90. Hand out certificates and stamp the journal: say each certificate in one 20-second sentence (one specific thing the child did well), about 2.7 minutes for 8 children. Ask for volunteers on "a puzzle I enjoyed" ONCE (pass is fine). Post the parent summary from the tutor guide after the lesson; do not read it out.'))
 
 # ---------- write ----------
-order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-we1','p3l10-try1','p3l10-we2','p3l10-try2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
+order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-try1','p3l10-we2','p3l10-try2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
 import p3_gifted; order[:]=p3_gifted.add(S,order,10)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)

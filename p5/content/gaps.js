@@ -114,7 +114,7 @@ const L = {
       ['Ali spends half of his money on a book. Then he spends half of the money he has LEFT on lunch. He has $6 left. How much did he have at first? Draw a picture or work from the end.', '$24. Work backwards: 6 × 2 = 12 before lunch, 12 × 2 = 24 before the book. A bar cut into 4 equal units, 1 unit = $6, also works.']
     ],
     pic: 'logic3',
-    whatIf: ['Card A has a twin: a number is TRIPLED, then 4 is taken away, then the answer is divided by 2, and the result is 7. What was the number? Then make up your own card of this kind whose answer is 10.', '6. Work backwards: 7 × 2 = 14, 14 + 4 = 18, 18 ÷ 3 = 6. Check: 6 × 3 = 18, 18 − 4 = 14, 14 ÷ 2 = 7. Any new card is fine if its working backwards gives a whole number and it checks when run forwards.'],
+    whatIf: ['Solve a SECOND puzzle card (one your pair did not get), and say how you started. Then: card A has a twin: a number is TRIPLED, then 4 is taken away, then the answer is divided by 2, and the result is 7. What was the number? Then make up your own card of this kind whose answer is 10.', '6. Work backwards: 7 × 2 = 14, 14 + 4 = 18, 18 ÷ 3 = 6. Check: 6 × 3 = 18, 18 − 4 = 14, 14 ÷ 2 = 7. Any new card is fine if its working backwards gives a whole number and it checks when run forwards.'],
     pose: 'Make up a logic puzzle with three friends, three snacks and three clues. Swap and solve; does only one answer fit?',
     p1: 'Q1 and Q2; Q3 is done in the page 2 time', take: 'Q4 (b) (c), Q5 and Q6 (page 2)',
     solo: 'Q3 (it is on page 1) and Q4 (a)', praise: 'You tried a different way to start when the first one did not work. That is what we practised all holiday.'

@@ -19,7 +19,7 @@ const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-rad
 <div style="margin:5px 0">${bx}I am still stuck (my tutor will check in with me)${bx}Pass</div></div>`;
 // Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
 // The number is the last question printed on page 1 of that lesson (2 or 3), computed in data.js from the real page break.
-const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. You can swap at any time.</div>`;
+const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. You can swap at any time. <b style="color:#D9662B">&#9733; take-home</b> parts are for home.</div>`;
 const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2 plan.</b> Start with ${txt}. Then choose what to try next. You do not have to finish the page. The Investigation is on the next page.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {
@@ -29,7 +29,7 @@ const extra = (n) => {
   // Page 3: the Investigation (an option for everyone, with an easy first step) and the reflection box
   out.push(...hdr(n, ls.topic, 'INVESTIGATION'));
   out.push(banner('Investigation: ' + inv.title));
-  out.push(`<div class="p" style="border:2px dashed #1F7A6F;border-radius:10px;padding:5px 12px;margin:4px 0 6px;background:#F3FAF8;font-size:17px"><b style="color:#1F7A6F">An open puzzle for everyone.</b> ${inv.first}</div>`);
+  out.push(`<div class="p" style="border:2px dashed #1F7A6F;border-radius:10px;padding:5px 12px;margin:4px 0 6px;background:#F3FAF8;font-size:17px"><b style="color:#1F7A6F">An open puzzle for everyone.</b> <b style="color:#D9662B">&#9733; take-home</b> (or the start of the next lesson). ${inv.first}</div>`);
   out.push(q('C', '(a) ' + inv.parts[0], { before: 80, after: 30, keepNext: true }));
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(b)</b> ${inv.parts[1]}</div>`);
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);

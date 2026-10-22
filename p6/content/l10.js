@@ -202,7 +202,7 @@ module.exports = {
       H.sub('c', 'A turtle draws a regular polygon, turning 24° at each corner. Sides?  ____'),
       H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now?  ____'),
 
-      H.q(4, 'Maths first! Work out what YOUR starter project should do BEFORE you run it. Do the part for the starter you picked; the other parts are take-home.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Maths first! Do the part for YOUR starter BEFORE you run it (the rest is take-home).', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Mystery Machine (× 3, then + 4).  n = 9 gives?  ____     OUT 58 came from?  ____'),
       H.sub('b', 'Prime or Not? How many factors does it count for 91?  ____     Prime?  ____'),
       H.sub('c', 'Lucky Seven, changed to count 8s: about how many 8s in 1000 rolls? Why?'),

@@ -85,10 +85,10 @@ cx_=640
 st+=f'<rect x="{cx_}" y="20" width="270" height="200" rx="16" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/>'+''.join(f'<circle cx="{cx_+60+k*75}" cy="{120}" r="{r}" fill="#E5E9F2" stroke="{NAVY}" stroke-width="3"/>'+T(cx_+60+k*75,130,l,26) for k,(l,r) in enumerate([('20¢',34),('50¢',38),('10¢',30)]))+T(cx_+135,256,'Coins',28)
 fx=950
 st+=f'<rect x="{fx}" y="20" width="270" height="200" rx="16" fill="{WHITE}" stroke="{NAVY}" stroke-width="4"/><rect x="{fx+25}" y="95" width="220" height="50" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>'+''.join(f'<line x1="{fx+25+k*44}" y1="95" x2="{fx+25+k*44}" y2="145" stroke="{NAVY}" stroke-width="3"/>' for k in range(1,5))+f'<rect x="{fx+25}" y="95" width="88" height="50" fill="{TEAL}" opacity=".55"/>'+T(fx+135,256,'Fraction strip',28)
-exp=svg(1240,270,st,'Four station cards: a picture graph, a logic grid, coins and a fraction strip')
+exp=svg(1240,270,st,'Four station cards: a picture graph, a logic grid, coins and a fraction strip','width:960px;height:209px')
 steps=['Your pair takes two station cards from the next slide (for example 1 and 3, or 2 and 4).','Read the card aloud. Before you solve it, write how you will start: draw, list or table.','Solve it and check it (about 2 minutes a card). Then take the other card.','Be ready to explain how you started and how you know.']
 body=h2('Explore: four puzzle stations')+pin(128,240,1664,chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:8px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',None,WHITE,24,'22px 36px')
-body+=pin(128,610,1664,exp,None,WHITE,24,'14px 20px','align-items:center')
+body+=pin(128,625,1664,exp,None,WHITE,24,'8px 20px','align-items:center')
 put('p2l10-explore1',sec('p2l10-explore1','8–9 MIN',body,'Minutes 8 to 9. Explain the plan: four station cards, all on the NEXT slide. Online, a tutor cannot visit four physical stations, so each breakout pair takes TWO cards (paste their text into the breakout room chat) and works about 2 minutes on each: 4.5 minutes of pair work in all, one round of breakout rooms. Answers are in the notes of the next slide. '
  'Walk round and ask "How did you start?" before anything else.'))
 

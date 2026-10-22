@@ -208,8 +208,8 @@ put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+a
 body=h2('Predict what the code says')
 body+=pin(128,240,860,blocks_svg([(0,'event','when green flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 4) − 1]'),(0,'looks','say [out]')],32,'when green flag clicked, ask IN? and wait, set out to answer times 4 minus 1, say out'),None)
 for i,(q,a) in enumerate([('You type 5. It says …','19'),('You type 0. It says …','−1'),('What do you type to get 35?','9  (35 + 1 = 36, 36 ÷ 4 = 9)')]):
-    body+=qrow(128,500+i*100,980,'',q,34)+answer(1140,500+i*100,652,a)
-body+=pin(128,800,1664,p('Q6, plan a search: repeat until (n × 6) + 5 = 71, change n by 1. It stops at n = 11 (backwards: 71 − 5 = 66, 66 ÷ 6).',30,700),'fade',SOFT,20,'14px 28px')
+    body+=qrow(128,522+i*95,980,'',q,34)+answer(1140,522+i*95,652,a)
+body+=pin(128,818,1664,p('Q6, plan a search: repeat until (n × 6) + 5 = 71, change n by 1. It stops at n = 11 (backwards: 71 − 5 = 66, 66 ÷ 6).',30,700),'fade',SOFT,20,'14px 28px')
 put(f'{L}-teachcode',sec(f'{L}-teachcode','54–55 MIN',body,'Teach before worksheet page 2 (Q4, and the second panel is the Q6 search; Q7 is the take-home question, so there is no live teaching for it). "answer" holds whatever was typed in. * means ×. The rule is OUT = 4n − 1. Ask: "Typing 0 gives a negative number. Where have we seen that before?" (Lesson 3). The last one is the machine run backwards. Python version: n = int(input("IN? ")) | out = n * 4 - 1 | print(out)  (typing 5 prints 19). Second panel, Q6 plans a search: "repeat until" is in Control; the = block is in Operators. Solve 6n + 5 = 71 by trying n = 0, 1, 2, 3 … until it works: the computer is not clever, it is fast, and it stops at n = 11. Our backwards method goes straight there (71 − 5 = 66, 66 ÷ 6 = 11). If the equation has no whole-number answer, like 6n + 5 = 70, it never stops: press the red stop sign. Python: n = 0 | while n * 6 + 5 != 71: n = n + 1 | print(n)  (prints 11).'))
 
 # ---------- 19 ws2 ----------

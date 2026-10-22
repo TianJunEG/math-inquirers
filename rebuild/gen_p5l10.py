@@ -83,21 +83,21 @@ put(P+'title',title_slide(P+'title','LESSON 10  •  WEEK 5B','Challenge Day','M
 
 # 2 warm1 relay cards
 cards=[('Place value','Value of the 5 in 2 507 314','500 000'),('Fractions','2/3 + 1/6','5/6'),('Triangle','Base 8 cm, height 5 cm. Area?','20 cm²'),('Volume','Cuboid 5 cm × 4 cm × 3 cm. Volume?','60 cm³'),
-       ('Rate','4 pens cost $6. Cost of 10 pens?','$15'),('Percentage','20% of $80','$16'),('Angles','Isosceles, top angle 40°. A base angle?','70°'),('Patterns','Sticks = 3 × figure + 1. Figure 10?','31')]
-body=h2('Warm-up: Mix-up Relay')+p('Read a card. A volunteer answers, then invites the next volunteer. You may say pass once.',34,600,MUTED)
-CW=397
+       ('Rate','4 pens cost $6. Cost of 10 pens?','$15'),('Percentage','20% of $80','$16')]
+body=h2('Warm-up: Mix-up Relay')+p('Six cards. A volunteer answers, then invites the next volunteer. You may say pass once.',34,600,MUTED)
+CW=536
 for i,(t,q,a) in enumerate(cards):
-    L=128+(i%4)*(CW+24); T=290+(i//4)*290
+    L=128+(i%3)*(CW+24); T=290+(i//3)*290
     body+=pin(L,T,CW,f'<p style="font-size:28px;font-weight:800;color:{TEAL}">{E(t)}</p><p style="font-size:32px;font-weight:700;line-height:1.25">{E(q)}</p>',None,WHITE,22,'16px 22px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY}')
     body+=pin(L+20,T+172,CW-40,f'<p style="font-size:34px;font-weight:800">{E(a)}</p>','pop',YEL,16,'8px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
-put(P+'warm1',sec(P+'warm1','0–4 MIN',body,'Minutes 0 to 4. Relay review: one card from each of our earlier topics. Read a card and ask for a volunteer; that child answers and invites the next volunteer. A child may say pass once, or choose a green (quick) or orange (think-about-it) card. Keep a private list so every child gets a turn before anyone has a second; do not call on a child by name who has not volunteered. Click to reveal each answer in order. A wrong answer gets a friendly "try again", never a groan. '
- 'Answers: 1) the 5 is in the hundred thousands place: 500 000. 2) 4/6 + 1/6 = 5/6. 3) 8 × 5 ÷ 2 = 20 cm². 4) 5 × 4 × 3 = 60 cm³. 5) $6 ÷ 4 = $1.50 each, × 10 = $15. 6) 10% is $8, so 20% is $16. 7) base angles are equal: (180° − 40°) ÷ 2 = 70°. 8) 3 × 10 + 1 = 31. '
+put(P+'warm1',sec(P+'warm1','0–4 MIN',body,'Minutes 0 to 4. Mix-up relay: SIX cards from our earlier topics (angles and patterns are in the quick questions). Read a card and ask for a volunteer; that child answers and invites the next volunteer. A child may say pass once, or choose a green (quick) or orange (think-about-it) card. Keep a private list so every child gets a turn before anyone has a second; do not call on a child by name who has not volunteered. Click to reveal each answer in order. A wrong answer gets a friendly "try again", never a groan. '
+ 'Answers: 1) the 5 is in the hundred thousands place: 500 000. 2) 4/6 + 1/6 = 5/6. 3) 8 × 5 ÷ 2 = 20 cm². 4) 5 × 4 × 3 = 60 cm³. 5) $6 ÷ 4 = $1.50 each, × 10 = $15. 6) 10% is $8, so 20% is $16. Volunteers who have not yet answered go first. '
  'Ask "Which lesson does this remind you of?" for each card.'))
 
 # 3 warm2
-qs=[('1.','What is 3/4 of 48?','36'),('2.','Area of a triangle with base 10 cm and height 6 cm','30 cm²'),('3.','A tap fills 6 ℓ in 2 minutes. How long for 45 ℓ?','15 minutes'),('4.','Two angles on a straight line: 65° and ___','115°'),('5.','5, 8, 11, 14, __','17')]
+qs=[('1.','What is 3/4 of 48?','36'),('2.','A tap fills 6 ℓ in 2 minutes. How long for 45 ℓ?','15 minutes'),('3.','Two angles on a straight line: 65° and ___','115°'),('4.','5, 8, 11, 14, __','17')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards up together, then click. Answers: 1) 48 ÷ 4 = 12, × 3 = 36. 2) 10 × 6 ÷ 2 = 30 cm². 3) 6 ℓ in 2 min is 3 ℓ per minute; 45 ÷ 3 = 15 minutes. 4) 180° − 65° = 115°. 5) add 3: 17. Ask after 3: "Which start did you use: a table, a rate per minute, or something else?"'))
+put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards up together, then click. Answers: 1) 48 ÷ 4 = 12, × 3 = 36. 2) 6 ℓ in 2 min is 3 ℓ per minute; 45 ÷ 3 = 15 minutes. 3) 180° − 65° = 115°. 4) add 3: 17. Ask after 2: "Which start did you use: a table, a rate per minute, or something else?" If you are short of time, skip question 4.'))
 
 # 4 explore1
 g=''
@@ -105,15 +105,15 @@ for i,(lab,col) in enumerate([('A',SKY),('B',YEL),('C','#BFE3DC'),('D','#F4A6A6'
     x=40+i*390
     g+=f'<rect x="{x}" y="10" width="340" height="120" rx="20" fill="{col}" stroke="{NAVY}" stroke-width="5"/>'+txt(x+170,90,lab,64)
 g+=txt(210,175,'number machine',30,NAVY,font='Nunito Sans, Arial')+txt(600,175,'pets logic',30,NAVY,font='Nunito Sans, Arial')+txt(990,175,'squares',30,NAVY,font='Nunito Sans, Arial')+txt(1380,175,'two numbers',30,NAVY,font='Nunito Sans, Arial')
-steps=''.join(f'<li>{E(s)}</li>' for s in ['Pick 2 of the 4 puzzle cards. Work in pairs.','Write your answer AND how you started: draw, list, table, work backwards, guess and check.','Check your answer against every clue.','Be ready to teach one card to the group in two sentences.'])
+steps=''.join(f'<li>{E(s)}</li>' for s in ['Your pair gets ONE puzzle card. Work in pairs.','Write your answer AND how you started: draw, list, table, work backwards, guess and check.','Check your answer against every clue.','Be ready to teach your card to the group in two sentences.'])
 body=h2('Explore: puzzle menu')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:8px">{steps}</ol>')
 body+=card(svgwrap(1580,200,'Four puzzle cards labelled A, B, C and D: a number machine, pets logic, squares and two numbers',g),extra='padding:20px 32px')
-put(P+'explore1',sec(P+'explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs choose 2 of 4 puzzle cards (online: the tutor puts each card on the shared screen). Card A: a number is doubled, 7 is added, the answer is divided by 3, giving 5; find the number. Card B: Ali, Ben and Mei have a cat, a dog and a fish; Ali has no dog; Ben has no cat and no dog. Card C: how many squares of all sizes are in a 2 by 2 grid? Card D: two numbers add to 20 and differ by 6. '
- 'Predict first: which card is the hardest? Children write the answer and how they started. Anyone who wants more (open to every pair): make a puzzle card for the next pair.'))
+put(P+'explore1',sec(P+'explore1','9–14 MIN',body,'Minutes 9 to 14. Each pair solves ONE of the 4 puzzle cards and teaches it (online: send one card per breakout room as an image; the second card is the Go further what-if). Pair work is at most 6 minutes. Card A: a number is doubled, 7 is added, the answer is divided by 3, giving 5; find the number. Card B: Ali, Ben and Mei have a cat, a dog and a fish; Ali has no dog; Ben has no cat and no dog. Card C: how many squares of all sizes are in a 2 by 2 grid? Card D: two numbers add to 20 and differ by 6. '
+ 'Predict first: which card is the hardest? Children write the answer and how they started. Anyone who wants more (open to every pair): solve a second card, or make a puzzle card for the next pair.'))
 
 # 5 explore2
-body=h2('Explore: talk about it')+numcards([('1.','Which cards did you solve? How did you START each one?'),('2.','Did anyone start a different way? Did you both get the same answer?'),('3.','How did you check your answer?')],40)
-put(P+'explore2',sec(P+'explore2','14–21 MIN',body,'Minutes 14 to 21. Gather pairs, then take one card at a time. Answers: A) 4: work backwards, 5 × 3 = 15, 15 − 7 = 8, 8 ÷ 2 = 4; check forwards. B) Ben has the fish, Ali the cat, Mei the dog (Ben has no cat and no dog, so fish; Ali has no dog, so cat; Mei has the dog). C) 5 squares: 4 small and 1 big; most children first say 4. D) 13 and 7 (guess and check, or: take away the 6, share 14 into 7 and 7, give the 6 back to one). '
+body=h2('Explore: talk about it')+numcards([('1.','Which card did you solve? How did you START it?'),('2.','Did anyone start a different way? Did you both get the same answer?')],40)
+put(P+'explore2',sec(P+'explore2','14–21 MIN',body,'Minutes 14 to 21. Pencils down: gather the pairs, then take one card at a time. Answers: A) 4: work backwards, 5 × 3 = 15, 15 − 7 = 8, 8 ÷ 2 = 4; check forwards. B) Ben has the fish, Ali the cat, Mei the dog (Ben has no cat and no dog, so fish; Ali has no dog, so cat; Mei has the dog). C) 5 squares: 4 small and 1 big; most children first say 4. D) 13 and 7 (guess and check, or: take away the 6, share 14 into 7 and 7, give the 6 back to one). '
  'Write the starts on the board as children say them: "work backwards", "tick and cross grid", "count by size", "guess and check". Do NOT give a method before they have tried; the next slides name them.'))
 
 # 6 teach1 toolbox
@@ -135,7 +135,7 @@ body+=step(2,'Undo the $10:  26 + 10 = $36.',top=650,size=32)
 body+=step(3,'$36 is 3/4 of her money (1/4 was spent). 1/4 = 36 ÷ 3 = $12, so all of it is 4 × 12 = $48.',top=740,size=32)
 body+=answer(128,830,1664,'$48.  Check forwards: 48 − 12 = 36, 36 − 10 = 26, 26 ÷ 2 = 13 ✓')
 put(P+'we1',sec(P+'we1','22–25 MIN',body,'Worked example: working backwards with fractions. Ask first: "What do we know? Only the END." Draw the steps as a machine going forwards, then go back along the machine with the OPPOSITE of each step, starting at the end. Think-aloud: "Half of what was left is $13, so what was left is $26. Before the $10 lunch she had $36. Now the tricky bit: she spent a quarter, so $36 is three quarters. If 3 quarters is $36, 1 quarter is $12, and four quarters is $48." Always check by running forwards. Common mistake: taking 3/4 of $36 or adding 1/4 of 36. Worksheet Q2 uses the same idea with different numbers.'))
-put(P+'try1',try_slide(P+'try1','25–26 MIN','Your turn: work backwards','Write the steps first. Undo the last step first.',[('a','A number is multiplied by 3, then 4 is added. The answer is 19. What is the number?','5'),('b','Ravi spends 1/2 of his money, then $5. He has $9 left. How much at first?','$28'),('c','Ali spends 1/3 of his money, then $6. He has $14 left. How much at first?','$30')],'Whiteboards, then click. a) 19 − 4 = 15, 15 ÷ 3 = 5. Check 5 × 3 + 4 = 19. b) 9 + 5 = 14, 14 is half, so 28. Check 28 ÷ 2 = 14, 14 − 5 = 9. c) 14 + 6 = 20; 20 is 2/3 of the money (1/3 was spent); 1/3 = 10, so 30. Check 30 − 10 = 20, 20 − 6 = 14.',34))
+put(P+'try1',try_slide(P+'try1','25–26 MIN','Your turn: work backwards','Write the steps first. Undo the last step first.',[('a','A number is multiplied by 3, then 4 is added. The answer is 19. What is the number?','5'),('b','Ravi spends 1/2 of his money, then $5. He has $9 left. How much at first?','$28'),],'Whiteboards, then click. a) 19 − 4 = 15, 15 ÷ 3 = 5. Check 5 × 3 + 4 = 19. b) 9 + 5 = 14, 14 is half, so 28. Check 28 ÷ 2 = 14, 14 − 5 = 9. (Two items only.)',34))
 
 # 9 we2 logic grid
 def lgrid(w=800):
@@ -165,7 +165,6 @@ body+=step(3,'Ben has two crosses, so Ben plays badminton. Ravi gets football.',
 body+=answer(128,740,1664,'Ravi football, Siti swimming, Ben badminton.  Check all three clues ✓') if False else ''
 body+=pin(980,815,812,p('Ravi football, Siti swimming, Ben badminton. Check all 3 clues ✓',32,800),'pop',YEL,20,'16px 26px')
 put(P+'we2',sec(P+'we2','26–29 MIN',body,'Worked example: a logic grid. Read the clues aloud and let children say where a cross goes before you click. Click 1 shows the crosses from the three clues and the first tick: Siti\'s row has two crosses, so only swimming is left. Click 2 (step 2): a tick means crosses in the rest of its column, so nobody else swims. Click 3 (step 3): Ben has crosses for swimming and football, so badminton; Ravi has the one left, football. Ask: "Could we have started with a different clue?" (Ben also gets a cross in football, but Siti is the one with two crosses at the start.) Finish with: check every clue against the answer. This is the method for worksheet Q1, which has four people.'))
-put(P+'try2',try_slide(P+'try2','29–30 MIN','Your turn: pick your start','Say which start you use before you answer.',[('a','Ali does not have red, Bo does not have blue, Cy has neither red nor blue. Red, blue or green: who has green?','Cy'),('b','Two numbers add to 30 and differ by 8. What are they?','19 and 11'),('c','How many squares of all sizes in a 2 by 2 grid?','5')],'Whiteboards. a) Logic grid: Cy has neither red nor blue, so green. Then Ali is not red, so blue, and Bo has red. b) Take away the 8: 22, share 11 and 11, add 8 to one: 19 and 11. Check 19 + 11 = 30 and 19 − 11 = 8. c) 4 small and 1 big: 5.',32))
 
 # 11 we3 model
 u=150
@@ -188,9 +187,9 @@ put(P+'key',sec(P+'key','32–33 MIN',body,'Say the key idea together. Common mi
 put(P+'break',break_slide(P+'break','33–37 MIN','Puzzle stretch: stand up and show a 3 by 3 grid with your fingers. How many squares can you find on it?','Five minutes. Online: everyone stands on camera. Children draw a 3 by 3 grid in the air, then count squares by size and whisper the answer to a partner or type it in the chat on the way back (14: 9 small, 4 of size 2 by 2 and 1 of size 3 by 3). Drink of water.'))
 
 # ws1
-put(P+'ws1',ws_preview(P+'ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Four people, four dishes. Logic grid.'),('Q2','Money puzzle with fractions. Work backwards.'),('Q3','Two amounts. Draw a model.')],'Stuck? Draw it, work backwards, or put the clues in a grid.','Minutes 37 to 49. Walk around. Ask "How did you start?" and "How do you know?" before giving any help. Q1 is the logic grid, a good first win: clue 2 and clue 4 together fix the roti prata. Q2: the story goes book (1/3), lunch, gift (half). Undo the gift first, then lunch, then the 1/3.'))
-put(P+'ws1ans',checks(P+'ws1ans','49–51 MIN','Page 1: check together',[('Q1','Ali chicken rice, Ben laksa, Mei satay, Siti roti prata'),('Q2','$63'),('Q3','Mei $60, Ravi $55')],
- 'Click each answer after a pair explains how they started. Q2: 15 × 2 = 30 before the gift; 30 + 12 = 42 before lunch; 42 is 2/3 of the money so 1/3 = 21 and all of it is 63. Check 63 − 21 = 42, 42 − 12 = 30, 30 ÷ 2 = 15. Q1: roti prata is a girl (clue 2) and not Mei (clue 4), so Siti. Ali is not laksa or satay, so chicken rice. Ben is not satay, so laksa; Mei satay. Q3: Mei is 4 units; Ravi is 3 units and $10. 7 units + $10 = $115; 7 units = $105; 1 unit = $15. Mei 60, Ravi 55. Check 3/4 of 60 = 45, 45 + 10 = 55.',gapy=190))
+put(P+'ws1',ws_preview(P+'ws1','37–49 MIN','Worksheet page 1: with your partner',[('Q1','Four people, four dishes. Logic grid.'),('Q2','Money puzzle with fractions. Work backwards.'),('Q3','Do this one in the page 2 time: two amounts, draw a model.')],'Stuck? Draw it, work backwards, or put the clues in a grid.','Minutes 37 to 49. Walk around. Ask "How did you start?" and "How do you know?" before giving any help. Q1 is the logic grid, a good first win: clue 2 and clue 4 together fix the roti prata. Q2: the story goes book (1/3), lunch, gift (half). Undo the gift first, then lunch, then the 1/3. Q3 (draw a model) is done in the page 2 time, so leave it for now.'))
+put(P+'ws1ans',checks(P+'ws1ans','49–51 MIN','Page 1: check together',[('Q1','Ali chicken rice, Ben laksa, Mei satay, Siti roti prata'),('Q2','$63')],
+ 'One pair explains Q2, the heaviest; click through Q1 (Q3 is checked on the page 2 check slide). Click each answer after a pair explains how they started. Q2: 15 × 2 = 30 before the gift; 30 + 12 = 42 before lunch; 42 is 2/3 of the money so 1/3 = 21 and all of it is 63. Check 63 − 21 = 42, 42 − 12 = 30, 30 ÷ 2 = 15. Q1: roti prata is a girl (clue 2) and not Mei (clue 4), so Siti. Ali is not laksa or satay, so chicken rice. Ben is not satay, so laksa; Mei satay..',gapy=190))
 
 # teach before page 2: counting squares
 s=90; g=''
@@ -216,22 +215,9 @@ body+=trow(128,420,['If it was …','Ali says','Ben says','Mei says','Liars'],Wl
 rows=[['Ali','lies','true','true','1'],['Ben','true','lies','lies','2'],['Mei','lies','true','lies','2']]
 for i,r in enumerate(rows): body+=trow(128,510+i*90,r,Wl,'rise',False,34)
 body+=answer(128,810,1664,'Only Ali gives exactly 1 liar. Ali broke the window.')
-put(P+'teachliar',sec(P+'teachliar','53–55 MIN',body,'Teach before worksheet page 2 (Q5). Try each suspect and count the liars: this is a table of cases. If Ali did it: Ali says Ben did it, which is a lie; Ben says "I did not", which is true; Mei says Ali did it, which is true. One liar: fits. If Ben did it: Ali is true, Ben is lying, Mei is lying: two liars, does not fit. If Mei did it: Ali is lying, Ben is true, Mei is lying: two liars, does not fit. Only Ali. Ask: "Why can we be sure there is only one answer?" (We tried every suspect.)'))
-
-# teach ages
-W5=[240,200,200,260]
-body=h2('Keep the age gap the same')+card(p('Dad is 38 and Sam is 10. In how many years will Dad be exactly 3 times as old as Sam?',34,700))
-body+=trow(128,400,['Years later','Dad','Sam','3 × Sam'],W5,None,True,34)
-for i,(y,d,sm) in enumerate([(1,39,11),(2,40,12),(3,41,13),(4,42,14)]):
-    body+=trow(128,490+i*80,[str(y),str(d),str(sm),str(3*sm)],W5,'rise',False,34)
-body+=pin(1330,400,462,p('The gap never changes: 38 − 10 = 28. When Dad is 3 times as old, 28 is 2 times Sam’s age, so Sam is 14. That is 4 years later.',30,700),'fade',SOFT,20,'20px 26px')
-body+=answer(128,830,1664,'In 4 years: Dad 42, Sam 14, and 3 × 14 = 42 ✓')
-put(P+'teachage',sec(P+'teachage','55–57 MIN',body,'Teach before worksheet page 2 (Q6). Two starts: a table (both ages go up by 1 each year, so the 3 × Sam column grows faster) and the age gap (the difference between two people\'s ages stays the same). With the gap: if Dad is 3 times as old as Sam, then Dad is Sam\'s age three times, so the gap of 28 is two Sam-ages: Sam is 14. 14 − 10 = 4 years. Ask: "Which start would be quicker for Dad 41 and Sam 3?" Common mistake: 38 ÷ 10 or adding years to only one person.'))
-
-# ws2
-put(P+'ws2',ws_preview(P+'ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Squares of all sizes in a 3 by 4 grid. Count by size.'),('Q5','Who broke the vase? Try each child and count the liars.'),('Q6','Ages: in how many years? And which start did you use?')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone. Q6b: look for children who can say WHY they chose a table or the age gap, not only which one.'))
-put(P+'ws2ans',checks(P+'ws2ans','72–76 MIN','Page 2: check together',[('Q4','a) 12   b) 6 of size 2 by 2 and 2 of size 3 by 3   c) 20 squares'),('Q5','Ben broke the vase'),('Q6','a) 7 years: Mum 48, Mei 16   b) open, say why')],
- 'Click after a child explains. Q4: size 1: 3 rows × 4 = 12; size 2: 2 rows × 3 positions = 6; size 3: 1 row × 2 positions = 2; total 20; no size 4 because the grid is only 3 rows tall. Q5: Ali did it: Ali lies (Ben did not), Ben lies (it was not Mei), Mei is true: 2 liars. Mei did it: Ali lies, Ben is true, Mei lies: 2 liars. Ben did it: Ali true, Ben lies, Mei true: 1 liar. So Ben. Q6: table: after 7 years Mum 48 and Mei 16. Or gap 32: Mei would be 16 (2 × 16 = 32), that is 7 years from now.',gapy=190))
+put(P+'ws2',ws_preview(P+'ws2','57–72 MIN','Worksheet page 2: on your own',[('Q3','From page 1: Mei and Ravi, $115 altogether. Draw a model.'),('Q4','Squares of all sizes in a 3 by 4 grid: (a) the 1 by 1 squares. Parts (b) (c) are take-home ★.'),('Q5','★ Take-home: who broke the vase? Try each child and count the liars.'),('Q6','★ Take-home: ages, in how many years? And which start did you use?')],'Want more? Think harder and Go further are at the back of your workbook.','Children work alone on Q3 (printed on page 1) and Q4 (a); Q4 (b) (c), Q5 and Q6 are take-home (starred). Q6b: look for children who can say WHY they chose a table or the age gap, not only which one.'))
+put(P+'ws2ans',checks(P+'ws2ans','72–76 MIN','Page 2: check together',[('Q3','Mei $60, Ravi $55'),('Q4','a) 12   b) 6 of size 2 by 2 and 2 of size 3 by 3   c) 20 squares'),('Q5','Ben broke the vase'),('Q6','a) 7 years: Mum 48, Mei 16   b) open, say why')],
+ 'One child explains Q3; click through the rest (Q4 (b) (c), Q5 and Q6 are take-home, their answers are here for you). Click after a child explains. Q3: Mei is 4 units; Ravi is 3 units and $10. 7 units + $10 = $115; 7 units = $105; 1 unit = $15. Mei 60, Ravi 55. Check 3/4 of 60 = 45, 45 + 10 = 55. Q4: size 1: 3 rows × 4 = 12; size 2: 2 rows × 3 positions = 6; size 3: 1 row × 2 positions = 2; total 20; no size 4 because the grid is only 3 rows tall. Q5: Ali did it: Ali lies (Ben did not), Ben lies (it was not Mei), Mei is true: 2 liars. Mei did it: Ali lies, Ben is true, Mei lies: 2 liars. Ben did it: Ali true, Ben lies, Mei true: 1 liar. So Ben. Q6: table: after 7 years Mum 48 and Mei 16. Or gap 32: Mei would be 16 (2 × 16 = 32), that is 7 years from now.',gapy=190))
 
 # stretch
 import p5_printed as _PP
@@ -268,10 +254,10 @@ body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Ravi spends 1/2 of his money 
 put(P+'exit',sec(P+'exit','82–88 MIN',body,'Minutes 82 to 88. Answer: $24. Work backwards: 7 + 5 = 12; 12 is half of his money, so 12 × 2 = 24. Check: 24 ÷ 2 = 12, 12 − 5 = 7. Extension: write your own logic puzzle with four people and four things. Does it have exactly ONE answer?'))
 put('end',(f'<section id="end" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
  f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">WELL DONE, INQUIRERS</p>\n<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">Keep asking why</h1>\n'
- f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n<p style="font-size:36px;color:#C9D4EC">Certificates and a last stamp for every inquirer. See you in Primary 6!</p>\n'
- f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
+ f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n<p style="font-size:36px;color:#C9D4EC">Certificates for every inquirer. The last stamp is typed in the chat. See you in Primary 6!</p>\n'
+ f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Hand out certificates: show each one for about 12 seconds on camera and send the PDF through the approved channel. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
 
-order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','we3','key','break','ws1','ws1ans','teachsq','teachliar','teachage','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
+order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','we3','key','break','ws1','ws1ans','teachsq','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
 order=_PP.fix_order(order,10,S)
 write_deck(10,'Math Inquirers P5: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':P+'title'},'s2':{'description':'Teach: how to choose a start','start':P+'teach1'},'s3':{'description':'Worksheet with teaching before each page','start':P+'break'},'s4':{'description':'Stretch, challenge, talk, exit and certificates','start':P+'stretch'}},D)
 
