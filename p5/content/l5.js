@@ -171,18 +171,18 @@ module.exports = {
       H.row([H.cell('Number of cubes', pw[0], { bold: true, h: 70 }), H.cell('8 corners', pw[1]), H.cell('12 edges × ____ = ____', pw[2]), H.cell('6 faces × ____ = ____', pw[3])])
     ]);
     return [
-      H.p(['<b style="color:#1F7A6F">Words and signs.</b> cm³ means cubic centimetres (1 cm³ is one small cube). ℓ means litres: 1 ℓ = 1000 cm³. The three edges of a cuboid are the length, the breadth (how wide) and the height.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Words and signs.</b> cm³ = cubic centimetres (one small cube). 1 ℓ = 1000 cm³. Breadth means how wide.'], { after: 20 }),
       H.q(1, 'This solid cuboid is built from 1-cm cubes.', { before: 20, keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figQ1() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds more 1-cm cubes to the solid, without taking any away, until the whole solid is a cube. What is the fewest number of cubes she must add? Explain.'), 6300, { h: 40 })])]),
+        H.cell(t(L('(a)') + 'What is its volume?   ' + blank(70) + ' cm³<br>' + L('(b)') + 'Mei adds 1-cm cubes (she takes none away) until the solid is a cube. What is the fewest cubes she must add? Explain.'), 6300, { h: 40 })])]),
       ...H.lines(1),
       H.q(2, 'Ravi has 36 one-centimetre cubes. He uses all of them to build one cuboid. Turning a cuboid round does not make a new one.', { keepNext: true }),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> 1×1×36, 1×2×18, 1×3×____, 1×4×____, 1×6×____. Then the shortest edge is 2, then 3.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> 1×1×36, 1×2×18, 1×3×___, 1×4×___, 1×6×___; then shortest edge 2, then 3.'], { after: 20 }),
       H.sub('a', 'List every cuboid he can build (length × breadth × height). Work in order. How many are there?', { keepNext: true }),
       ...H.lines(2),
       H.sub('b', '(try this one if you like) Which of them can fit inside a box 5 cm long, 5 cm wide and 5 cm high?   ________________'),
       H.q(3, 'A glass tank is 50 cm long, 30 cm wide and 40 cm high. The water in it is 18 cm deep.', { keepNext: true }),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> the water is 18 layers of cubes. One layer is 50 × 30 = ______ cubes. 18 layers hold ______ cm³. Then 1000 cm³ = 1 ℓ. A calculator is fine here.'], { after: 20 }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> 18 layers of cubes. One layer is 50 × 30 = ______ cubes, so 18 layers = ______ cm³. 1000 cm³ = 1 ℓ. A calculator is fine.'], { after: 20 }),
       H.tbl([4400, 5500], [H.row([H.cell('<div>' + figQ3() + '</div>', 4400, { h: 20 }),
         H.cell(t(L('(a)') + 'How many litres of water are in the tank?<br>' + blank(110) + ' ℓ<br>' + L('(b)') + 'How many more litres are needed to fill it to the top?<br>' + blank(110) + ' ℓ<br>' + L('(c)') + 'Instead, 9 ℓ of water is let out. How deep is the water now?<br>' + blank(110) + ' cm'), 5500, { h: 40 })])]),
 

@@ -89,7 +89,7 @@ def reflect_slide(n, G):
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me). '
              'Say: "You can write, tick or pass. Ticking I am still stuck is a good thing to do: it tells me where to help." Model one yourself first: "' + G['reflect'] + '" '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
-             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos of a child's work. '
+             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos of work. '
              'If I am still stuck is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
     return sec(f'{ID}-reflect', t0, body, notes)
 
@@ -154,6 +154,8 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     t = S[f'{ID}-title']
     t = re.sub(r'(LESSON \d+  •  WEEK \d+)', r'\1  •  0–1 MIN', t, count=1)
     t = re.sub(r'Time plan:.*?(</aside>)', lambda m: E(tp or _time_plan(n, _cq(G))) + m.group(1), t, count=1, flags=re.S)
+    if any('ON DEMAND' in h for k, h in S.items() if k != f'{ID}-title'):
+        t = t.replace('</aside>', E(' A slide marked ON DEMAND is not part of the teaching before page 2: show it only while children work on page 2, when a child chooses that choice question, and make the offer to the whole group. The page itself carries the same hint.') + '</aside>', 1)
     S[f'{ID}-title'] = t
     # go further strip on the explore slide
     S[f'{ID}-explore1'] = add_go_further(S[f'{ID}-explore1'], G['go2']['q'])

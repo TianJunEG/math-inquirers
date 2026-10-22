@@ -178,6 +178,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.q(7, 'Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
     W.push(H.fig(chainSvg()));
+    W.push(H.sub('', 'Hint: if two numbers next to each other are known, work backwards by taking away. If the gaps are in the middle, guess the 2nd number, test it, then adjust.'));
     W.push(H.sub('a', ['Chain (a): work backwards from 13 and 21.     <b style="color:#1F7A6F">b</b>  Chain (b): guess the 2nd number, then check.']));
     return W;
   }

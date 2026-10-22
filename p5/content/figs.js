@@ -68,7 +68,7 @@ const FIGS = {};
   g += arc(A, 0, rad(84), 26) + T(A[0] + 44, A[1] + 28, '84&#176;', 15, TEAL);
   g += arc(B, rad(180), rad(180 - 97), 26) + T(B[0] - 44, B[1] + 30, '97&#176;', 15, TEAL);
   g += T(150, 14, 'AB is parallel to DC', 14, TEAL);
-  FIGS[8] = { TH3: svg('Trapezium ABCD with AB parallel to DC. Angle DAB is 84 degrees and angle ABC is 97 degrees. The arrows on AB and DC show they are parallel.', 330, 180, g, 58) };
+  FIGS[8] = { TH3: svg('Trapezium ABCD with AB parallel to DC. Angle DAB is 84 degrees and angle ABC is 97 degrees. The arrows on AB and DC show they are parallel.', 330, 180, g, 44) };
 }
 // ---------- L8 Think harder Q4: square ABCD with an equilateral triangle CDE outside it ----------
 {
@@ -77,7 +77,7 @@ const FIGS = {};
   g += tick(D, E) + tick(C, E) + tick(D, C);
   g += T(A[0] - 14, A[1] + 6, 'A') + T(B[0] + 14, B[1] + 6, 'B') + T(C[0] + 14, C[1] + 6, 'C') + T(D[0] - 14, D[1] + 6, 'D') + T(E[0], E[1] - 8, 'E');
   g += T(140, 158, 'square', 14, TEAL, 'middle', 600) + T(240, 60, 'CDE is', 14, TEAL, 'start', 600) + T(240, 77, 'equilateral', 14, TEAL, 'start', 600);
-  FIGS[8].TH4 = svg('A square ABCD with an equilateral triangle CDE drawn on side CD, outside the square. Point E is outside the square.', 330, 215, g, 52);
+  FIGS[8].TH4 = svg('A square ABCD with an equilateral triangle CDE drawn on side CD, outside the square. Point E is outside the square.', 330, 215, g, 40);
 }
 // ---------- L8 Go further Q5: isosceles ABC (AB = AC, angle A = 40), D on AC with BD = BC ----------
 {

@@ -66,10 +66,10 @@ def reflect_slide_html(n,notes,stuck):
         +'<br>'+bx()+'I asked for help'+bx()+'checking my estimate'+bx()+E(stuck)+'</span>')
     items=[('1.','Something I did well ...',''),('2.','The hardest part was ...',''),('3.','What helped me ...',t3),('4.','Next time I will try ...','')]
     body=h2('Exit slip and reflection')+p('2 minutes. Use the box at the bottom of the Investigation page. Pass is always OK: write pass or tick a box.',30,600,MUTED)
-    tops=[300,410,520,740]
+    tops=[290,395,500,690]
     for (a,b,extra),t in zip(items,tops):
         body+=pin(128,t,1664,f'<p style="font-size:38px;font-weight:700"><span style="color:{TEAL};font-weight:800">{a}</span>  {E(b)}</p>'+extra,None,WHITE,20,'16px 28px')
-    body+=pin(128,880,1664,p('Your tutor may read this to plan the next lesson. It is never marked or shown to the group.',28,700,MUTED),None,SOFT,20,'12px 26px')
+    body+=pin(128,830,1664,p('Your tutor may read this to plan the next lesson. It is never marked or shown to the group.',28,700,MUTED),None,SOFT,20,'12px 26px')
     return sec(f'p5l{n}-reflect','86–88 MIN',body,notes)
 
 # ---------- helpers on existing slide files ----------

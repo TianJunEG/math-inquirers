@@ -156,9 +156,9 @@ body=h2('Work backwards through a machine')+pin(128,240,1664,machine([('?','q'),
 body+=step(1,'Undo ÷ 2: multiply.  21 × 2 = 42',top=530,size=36)
 body+=step(2,'Undo − 6: add.  42 + 6 = 48',top=640,size=36)
 body+=step(3,'Undo × 4: divide.  48 ÷ 4 = 12.   Check: 12 × 4 = 48, 48 − 6 = 42, 42 ÷ 2 = 21 ✓',top=750,size=36)
-put('p4l3-teachback',sec('p4l3-teachback','53–55 MIN',body,'Teach before worksheet page 2 (Q4). Only two methods are taught before page 2 (this one and the bar model); the number trick and the chain are OPTIONAL if time. Strategy: WORK BACKWARDS. Start at the END. Each step is undone with the opposite operation: × and ÷ undo each other, + and − undo each other. Ask before each click: "What was the last thing the machine did? How do we undo it?" Watch for children who take away 6 again instead of adding 6. Always check by going forwards.'))
-put('p4l3-trytrick',rtry('p4l3-trytrick','OPTIONAL • only if time','Your turn: a number trick','Think of a number. Double it. Add 10. Halve it. Take away the number you started with.',[('a','Start with 4.','4 → 8 → 18 → 9 → 5'),('b','Start with 9.','9 → 18 → 28 → 14 → 5'),('c','Why is it always 5?','Double, then halve: back to your number. Half of 10 is 5 more.')],
- 'Teach before worksheet page 2 (Q5 is a different trick). Everyone picks their own secret number and follows the steps on a whiteboard. On "Show me!", every board says 5. Ask: "How did that happen?" Draw it as a bar: your number is one bar; double it gives two bars; add 10; halve it gives one bar and 5; take away your bar and 5 is left. Try a big number to test it (100: 200, 210, 105, 5).',size=36,asize=30,qw=700,gapy=160))
+put('p4l3-teachback',sec('p4l3-teachback','53–55 MIN',body,'Teach before worksheet page 2 (Q4). Three quick things are taught before page 2: this machine (53 to 55), a one-minute number-trick demo for Q5 (55 to 56) and the bar model for Q6 (56 to 58). The number-chain slide (Q7, a choice question) is ON DEMAND and comes after page 2 starts. Strategy: WORK BACKWARDS. Start at the END. Each step is undone with the opposite operation: × and ÷ undo each other, + and − undo each other. Ask before each click: "What was the last thing the machine did? How do we undo it?" Watch for children who take away 6 again instead of adding 6. Always check by going forwards.'))
+put('p4l3-trytrick',rtry('p4l3-trytrick','55–56 MIN','Your turn: a number trick','Think of a number. Double it. Add 10. Halve it. Take away the number you started with.',[('a','Start with 4.','4 → 8 → 18 → 9 → 5'),('b','Start with 9.','9 → 18 → 28 → 14 → 5'),('c','Why is it always 5?','Double, then halve: back to your number. Half of 10 is 5 more.')],
+ 'Teach before worksheet page 2 (about 1 minute; Q5 is a different trick, with the steps already set out in a table on the page). Everyone picks their own secret number and follows the steps on a whiteboard. On "Show me!", every board says 5. Ask: "How did that happen?" Draw it as a bar: your number is one bar; double it gives two bars; add 10; halve it gives one bar and 5; take away your bar and 5 is left. Try a big number to test it (100: 200, 210, 105, 5).',size=36,asize=30,qw=700,gapy=160))
 
 # ---------- teach: bar model ----------
 u=190; g=''
@@ -174,7 +174,7 @@ body+=pin(128,330,1400,svgwrap(1300,260,'Bar model: Ali has 4 units, Ben has 1 u
 body+=step(1,'Ali has 4 units and Ben has 1 unit: 5 units altogether.',top=600,size=34)
 body+=step(2,'5 units = 1 345, so 1 unit = 1 345 ÷ 5 = 269.',top=700,size=34)
 body+=step(3,'Ali: 4 units = 269 × 4 = 1 076.   Check: 1 076 + 269 = 1 345 ✓',top=800,size=34)
-put('p4l3-teachbar',sec('p4l3-teachbar','55–58 MIN',body,'Teach before worksheet page 2 (Q6). Strategy: DRAW A BAR MODEL. Draw Ben\'s bar first (1 unit), then Ali\'s bar with 4 units the same size. The brace shows the total. Ask: "How many units altogether? What is one unit worth?" Show the division on the board: 1 345 ÷ 5 = 269 (13 hundreds ÷ 5 = 2 hundreds r 3 hundreds; 34 tens ÷ 5 = 6 tens r 4 tens; 45 ÷ 5 = 9). Extra question: "How many MORE stickers does Ali have?" (3 units = 807).'))
+put('p4l3-teachbar',sec('p4l3-teachbar','56–58 MIN',body,'Teach before worksheet page 2 (Q6). Strategy: DRAW A BAR MODEL. Draw Ben\'s bar first (1 unit), then Ali\'s bar with 4 units the same size. The brace shows the total. Ask: "How many units altogether? What is one unit worth?" Show the division on the board: 1 345 ÷ 5 = 269 (13 hundreds ÷ 5 = 2 hundreds r 3 hundreds; 34 tens ÷ 5 = 6 tens r 4 tens; 45 ÷ 5 = 9). Extra question: "How many MORE stickers does Ali have?" (3 units = 807).'))
 
 # ---------- teach: number chains ----------
 body=h2('Number chains: add the two before')+p('Example:  1, 3, 4, 7, 11   (1 + 3 = 4,  3 + 4 = 7,  4 + 7 = 11)',36,600,MUTED)
@@ -184,7 +184,7 @@ body+=pin(128,715,800,p('3, 6, 9, 15, 24',40,800),'pop',YEL,20,'16px 28px')
 body+=pin(992,320,800,p('Guess and check:  2, __, __, 16, __',36,800,TEAL))
 for i,t in enumerate(['Try 5:  2, 5, 7, 12.  Too small.','Try 8:  2, 8, 10, 18.  Too big.','Try 7:  2, 7, 9, 16 ✓']): body+=pin(992,400+i*105,800,p(t,32),'rise',WHITE)
 body+=pin(992,715,800,p('2, 7, 9, 16, 25',40,800),'pop',YEL,20,'16px 28px')
-put('p4l3-teachchain',sec('p4l3-teachchain','OPTIONAL • only if time',body,'Teach before worksheet page 2 (Q7). Read the example aloud. Left: when two numbers next to each other are known, work backwards by taking away. Right: when the gaps are in the middle, guess the 2nd number and test it, then adjust: 12 was too small and 18 too big, so the answer is in between. Ask: "When I add 1 to my guess, how much does the 4th number go up?" (by 2, because the guess is used twice). That helps strong children find it in one step.'))
+put('p4l3-teachchain',sec('p4l3-teachchain','ON DEMAND • Q7',body,'ON DEMAND: show this during page 2 (screen share or whiteboard) when a child chooses Q7, a choice question; the page carries the same hint. Read the example aloud. Left: when two numbers next to each other are known, work backwards by taking away. Right: when the gaps are in the middle, guess the 2nd number and test it, then adjust: 12 was too small and 18 too big, so the answer is in between. Ask: "When I add 1 to my guess, how much does the 4th number go up?" (by 2, because the guess is used twice). That helps strong children find it in one step.'))
 
 # ---------- worksheet page 2 ----------
 put('p4l3-ws2',ws_preview('p4l3-ws2','58–76 MIN','Worksheet page 2: on your own',[('Q4','Machine chain. Work backwards, then check forwards.'),('Q5','Number trick. Try it, notice, then explain why.'),('Q6','Hawker stall. Draw a bar model first.'),('Q7','Number chains. Work backwards, or guess and check.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who undo − with − when working backwards.'))
@@ -235,7 +235,7 @@ _G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify
 _ID='p4l3'
 _PIC=globals().get('PIC')
 
-order=['p4l3-title','p4l3-warm1','p4l3-warm2','p4l3-explore1','p4l3-explore2','p4l3-teach1','p4l3-try1','p4l3-we1','p4l3-try2','p4l3-we2','p4l3-try3','p4l3-key','p4l3-break','p4l3-ws1','p4l3-ws1ans','p4l3-teachback','p4l3-trytrick','p4l3-teachbar','p4l3-teachchain','p4l3-ws2','p4l3-ws2ans','p4l3-stretch','p4l3-challenge','p4l3-chdiag','p4l3-chwalk','p4l3-talk','p4l3-exit']
+order=['p4l3-title','p4l3-warm1','p4l3-warm2','p4l3-explore1','p4l3-explore2','p4l3-teach1','p4l3-try1','p4l3-we1','p4l3-try2','p4l3-we2','p4l3-try3','p4l3-key','p4l3-break','p4l3-ws1','p4l3-ws1ans','p4l3-teachback','p4l3-trytrick','p4l3-teachbar','p4l3-ws2','p4l3-teachchain','p4l3-ws2ans','p4l3-stretch','p4l3-challenge','p4l3-chdiag','p4l3-chwalk','p4l3-talk','p4l3-exit']
 p4_fix.finish(S,3,_G,pic=_PIC)
 order=p4_fix.order(order,3)
 assert set(order)==set(S), set(order)^set(S)

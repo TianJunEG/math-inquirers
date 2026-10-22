@@ -17,9 +17,9 @@ module.exports = {
   "parts": [
    "Take two unit fractions that are next to each other, such as 1/3 and 1/4. Take the smaller away from the bigger: 1/3 − 1/4 = ______. Try at least four more pairs (1/4 and 1/5, 1/5 and 1/6, 1/9 and 1/10, 1/20 and 1/21).",
    "What do you notice about the answer each time? Write your idea in words. Is it always true? Explain with a drawing (hint: cut a bar into 3 × 4 = 12 equal parts).",
-   "Use your idea to write 1/6 + 1/12 + 1/20 as one fraction without finding a common denominator."
+   "Use your idea to write 1/6 + 1/12 + 1/20 as one fraction without finding a common denominator. Then make up your own sum of this kind (three or four fractions) for a partner to solve."
   ],
-  "a": "Each answer is a unit fraction whose bottom number is the two bottom numbers multiplied: 1/3 − 1/4 = 1/12 (3 × 4), 1/4 − 1/5 = 1/20, 1/5 − 1/6 = 1/30, 1/9 − 1/10 = 1/90, 1/20 − 1/21 = 1/420. It is always true for neighbouring unit fractions (checked for every pair from 1/1 and 1/2 up to 1/1999 and 1/2000): cut a bar into n × (n + 1) parts; 1/n is (n + 1) parts and 1/(n + 1) is n parts, so the difference is 1 part. Part 3: 1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, so the sum is 1/2 − 1/5 = 3/10 (check: 10/60 + 5/60 + 3/60 = 18/60 = 3/10). Accept any clear picture or well-chosen examples; watch for \"it works for my five pairs so always\" and ask for the reason."
+  "a": "Each answer is a unit fraction whose bottom number is the two bottom numbers multiplied: 1/3 − 1/4 = 1/12 (3 × 4), 1/4 − 1/5 = 1/20, 1/5 − 1/6 = 1/30, 1/9 − 1/10 = 1/90, 1/20 − 1/21 = 1/420. It is always true for neighbouring unit fractions (checked for every pair from 1/1 and 1/2 up to 1/1999 and 1/2000): cut a bar into n × (n + 1) parts; 1/n is (n + 1) parts and 1/(n + 1) is n parts, so the difference is 1 part. Part 3: 1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, so the sum is 1/2 − 1/5 = 3/10 (check: 10/60 + 5/60 + 3/60 = 18/60 = 3/10). Make-up-your-own: any chain of neighbouring-pair fractions works, for example 1/2 + 1/6 + 1/12 + 1/20 = 1 − 1/5 = 4/5; check that the partner's answer matches the one found by adding the fractions the long way. Accept any clear picture or well-chosen examples; watch for \"it works for my five pairs so always\" and ask for the reason."
  },
  "3": {
   "title": "What if we change the total?",

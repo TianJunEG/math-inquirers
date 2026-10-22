@@ -67,7 +67,7 @@ const canBar = () => {
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A', title: 'Decimal Detectives', topic: 'Decimals',
-    objective: 'Read decimals to 3 places on number lines, compare and order them by place value, round to the nearest whole number, 1 or 2 decimal places and work backwards from a rounded number (smallest and largest), and solve money and mass puzzles with bar models.',
+    objective: 'Read decimals to 3 places on number lines, compare and order them by place value, round to the nearest whole number or 1 decimal place and work backwards from a rounded number (smallest and largest; rounding to 2 decimal places is only in Go further), and solve money and mass puzzles with bar models.',
     skills: 'Place value to thousandths, zooming in on a number line, ordering, rounding and rounding backwards, systematic listing, bar models, checking every clue',
     materials: 'Digit cards 0 to 9 and a decimal point card for each child (cut from the Digit, point, sign and bracket cards page), a place-value chart (ones, tenths, hundredths, thousandths), mini whiteboards, a metre ruler, play money.',
     online: 'Children cut out the digit cards and a decimal point from the kit page before the lesson and move them on camera. The tutor marks the zoom-in number lines on the slides.',

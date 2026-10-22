@@ -19,7 +19,7 @@ const angleIn = (px, py, pw, ph, d0, d1, r, name) => {
   const lab = pt(cx, cy, 48, (d0 + d1) / 2);
   return L([cx, cy], pt(cx, cy, r, d0)) + L([cx, cy], pt(cx, cy, r, d1)) + arc(cx, cy, 28, d0, d1) + T(lab[0], lab[1] + 7, name, 22, TEAL) + `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3.5" fill="${NAVY}"/>`;
 };
-const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c and d" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:420px;max-width:100%">` +
+const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c and d" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">` +
   `<rect x="2" y="2" width="596" height="356" rx="12" fill="${WHITE}" stroke="#C9D4EC" stroke-width="2"/><line x1="300" y1="12" x2="300" y2="348" stroke="#C9D4EC" stroke-width="2"/><line x1="12" y1="180" x2="588" y2="180" stroke="#C9D4EC" stroke-width="2"/>` +
   angleIn(0, 0, 300, 180, 0, 40, 170, 'a') + angleIn(300, 0, 300, 180, 20, 135, 145, 'b') +
   angleIn(0, 180, 300, 180, 200, 275, 145, 'c') + angleIn(300, 180, 300, 180, 12, 162, 140, 'd') + '</svg>';
@@ -27,7 +27,7 @@ const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c an
 // Q2: a fan of 4 rays from O: OA at 0°, OB at 30°, OC at 90°, OD at 135°
 const fan = () => {
   const O = [250, 228], R = 188;
-  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
+  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg" style="width:270px;max-width:100%">`;
   [[0, 'A'], [30, 'B'], [90, 'C'], [135, 'D']].forEach(([d, n]) => { s += L(O, pt(O[0], O[1], R, d)); const q = pt(O[0], O[1], R + 18, d); s += T(q[0], q[1] + 8, n, 24); });
   s += arc(O[0], O[1], 120, 0, 30) + arc(O[0], O[1], 60, 30, 90) + arc(O[0], O[1], 90, 90, 135);
   let q = pt(O[0], O[1], 145, 15); s += T(q[0] + 8, q[1] + 7, '30°', 21, TEAL);
@@ -50,7 +50,7 @@ const compass = () => {
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles
 const corners = () => {
-  let s = `<svg aria-label="A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side." viewBox="0 0 190 205" xmlns="http://www.w3.org/2000/svg" style="width:190px;max-width:100%">`;
+  let s = `<svg aria-label="A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side." viewBox="0 20 190 150" xmlns="http://www.w3.org/2000/svg" style="width:190px;max-width:100%">`;
   // (a) rectangle 150 x 100, top-left corner A
   const A = [20, 50];
   s += `<rect x="20" y="50" width="150" height="100" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
@@ -58,7 +58,6 @@ const corners = () => {
   s += L(A, e) + arc(A[0], A[1], 30, -32, 0) + arc(A[0], A[1], 22, -90, -32);
   let q = pt(A[0], A[1], 88, -13); s += T(q[0], q[1] + 6, 'a', 19, TEAL);
   q = pt(A[0], A[1], 64, -64); s += T(q[0] + 4, q[1] + 6, '58°', 18, TEAL);
-  s += T(95, 190, '(a) rectangle', 17, TEAL);
   return s + '</svg>';
 };
 

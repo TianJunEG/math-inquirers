@@ -216,7 +216,7 @@ put('p4l2-ws2ans',checks('p4l2-ws2ans','76–80 MIN','Page 2: check together',[(
 
 # ---------- stretch / challenge ----------
 st=[('1.','What is the largest whole number that rounds to 30 000 to the nearest ten thousand?'),('2.','Find the rule and write the next two numbers: 100 000, 97 500, 95 000, ___, ___'),('3.','Use the digit cards 1, 3, 5, 7 and 9 once each. Make the number closest to 60 000.')]
-put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 34 999 (35 000 is halfway and rounds up to 40 000). 2) Take away 2500: 92 500, 90 000. 3) 59 731 (269 away; the best above 60 000 is 61 357, which is 1357 away).'))
+put('p4l2-stretch',sec('p4l2-stretch','Early finishers / take-home',h2('Stretch')+numcards(st),'Answers: 1) 34 999 (35 000 is halfway and rounds up to 40 000). 2) Take away 2500: 92 500, 90 000. 3) 59 731 (269 away; the best above 60 000 is 71 359, which is 11 359 above, so 59 731 wins).'))
 ch=[('1.','How many 5-digit numbers have digits that add up to 3?'),('2.','The distance counter on Mr Tan\'s car shows 39 993 km. It reads the same forwards and backwards. What is the next number like this the counter will show? How many more kilometres is that?')]
 put('p4l2-challenge',sec('p4l2-challenge','Early finishers / take-home',h2('Challenge')+numcards(ch,36),'Pairs try first, then use the "see it" slide if stuck, then the walk-through. These are Go further Q5 and Q7. Answers: 1) 15 (10 starting with 1, 4 starting with 2, and 30 000). 2) 40 004, which is 11 km more.'))
 g1=''

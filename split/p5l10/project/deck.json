@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T04:44:13Z"
+  "at": "2026-10-22T04:54:06Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 10 – Challenge Day",
@@ -34,8 +34,8 @@
   "p5l10-chwalk",
   "p5l10-talk",
   "p5l10-exit",
-  "end",
-  "p5l10-reflect"
+  "p5l10-reflect",
+  "end"
  ],
  "cover": "p5l10-title",
  "sections": {

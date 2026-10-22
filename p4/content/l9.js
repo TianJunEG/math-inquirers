@@ -210,14 +210,14 @@ module.exports.gaps = {
  "invest": {
   "kind": "What if we change ...? What stays the same?",
   "head": "Sales have doubled!",
-  "intro": "A shop sold 50 phone cases in May and 100 in June. A newspaper says: \"Sales have doubled!\" (That is true: 100 is twice 50.) The same two numbers can be drawn as a graph that looks like a huge jump or as a graph that looks almost flat.",
+  "intro": "A shop sold 50 phone cases in May and 100 in June. A newspaper says: \"Sales have doubled!\" (That is true: 100 is twice 50.) Another newspaper reports the same two numbers, but its headline sounds much smaller.",
   "parts": [
    "On the first Graph grid, draw a line graph of May and June. Go up in 10s from 0 to 100. Is the line steep or gentle?",
-   "Now draw the same two numbers on the second grid so the rise looks HUGE. Choose a different scale and write it. Then say how you would make the rise look almost flat.",
-   "Which graph is the most honest? What would you ask the newspaper to add to its graph?"
+   "Write TWO headlines about May and June that are both TRUE: one that sounds big, like \"Sales have doubled!\", and one that sounds small. Hint: how many MORE cases were sold in June?",
+   "Which headline would you trust more? What would you ask the newspaper to add, so that readers are not tricked?"
   ],
   "lines": 4,
-  "key": "(a) Points (May, 50) and (June, 100); on a scale of 0 to 100 in 10s the line rises through 5 lines, a fair picture. (b) Any scale that starts above 0 with small steps makes the jump look huge (for example start at 45 and go up in 5s: 50 is 1 line up, 100 is 11 lines up). A tall scale that goes from 0 to 1000 in 100s makes the same rise look almost flat (50 is half a line, 100 is one line). Same numbers, different picture. (c) A graph that starts at 0, has equal steps and says what each line is worth is the fairest; the headline is only true because the numbers say so. Look for a child who says \"I read the scale before I looked at the line\" and who notices that the numbers did not change, only the drawing did. Easy first step: plot the two points on a 0 to 100 scale in 10s.",
+  "key": "(a) Points (May, 50) and (June, 100); on a scale of 0 to 100 in 10s the line rises through 5 lines, a fair picture. (b) Big: \"Sales have doubled!\" (100 is twice 50). Small: \"Shop sells 50 more cases in June\" or \"Sales up by 50 cases\". Both are TRUE, because 100 is twice 50 and 100 is 50 more than 50. Accept any two true headlines; check each one against the numbers. (c) The most trustworthy report gives both numbers (50 and 100) and the real rise, and shows a graph that starts at 0 with equal steps and the scale written on it. Look for a child who checks that a headline is TRUE before saying how it sounds, and who notices that the numbers did not change, only the words did. Easy first step: plot the two points on a 0 to 100 scale in 10s.",
   "easy": "On the Graph grid, write 0, 10, 20 ... up the side. Plot the points (May, 50) and (June, 100) and join them."
  },
  "reflect": "Something I did well: I read the scale first. The hardest part was reading between the lines on the scale. What helped me: writing what each line was worth.",

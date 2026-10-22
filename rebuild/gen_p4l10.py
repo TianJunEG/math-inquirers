@@ -263,7 +263,7 @@ put('p4l10-end',f'<section id="p4l10-end" data-transition="fade" style="backgrou
  f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">Keep asking why</h1>\n'
  f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n'
  f'<p style="font-size:36px;color:#C9D4EC">Certificates and a last stamp for every inquirer. See you in Primary 5!</p>\n'
- f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 88 to 90. Hand out certificates and the stamped inquiry journals. Ask each child to name one puzzle they enjoyed and one way in they will use again. Tell each child one specific thing they did well this holiday. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n')
+ f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Minutes 89 to 90. Hand out certificates and the stamped inquiry journals. Ask each child to name one puzzle they enjoyed and one way in they will use again. Tell each child one specific thing they did well this holiday. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n')
 
 # ---------- write ----------
 # ---------- fix pass (rebuild/p4_fix.py): sneak-peek puzzles, looking back, neutral names, go further, minute labels ----------

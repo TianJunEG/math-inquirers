@@ -214,7 +214,7 @@ body+=pin(128,715,800,p(f'{fr(2,5,40)} is bigger',40,800,raw=True),'pop',YEL,20,
 body+=pin(992,240,800,p('Which tool is quickest?',36,800,TEAL))
 for i,t in enumerate(['Denominators that go into each other (3 and 9): make the denominators the same.','One fraction near a half: compare each with a half.','Same numerator: the bigger pieces win.']): body+=pin(992,330+i*150,800,p(t,32,700),'rise',WHITE,20,'18px 24px')
 put('p4l4-teachcompare2',sec('p4l4-teachcompare2','54–55 MIN',body,'Minutes 54 to 55. Tool 3: same numerator, so look at the size of the pieces: sharing among 5 gives bigger pieces than sharing among 9. Then the choosing card on the right: click each line and ask the group for an example. Ask: "Which tool is quickest for 5/6 and 3/4?" (same denominator: twelfths).'))
-put('p4l4-trycompare',rtry('p4l4-trycompare','55–56 MIN • OPTIONAL','Your turn: which is bigger?','Choose a tool. Then explain.',[('a',f'{fr(5,6,32)}  or  {fr(3,4,32)} ?',f'{fr(5,6,32)} (10/12 &gt; 9/12)'),('b',f'{fr(4,10,32)}  or  {fr(5,8,32)} ?',f'{fr(5,8,32)} (more than a half)'),('c',f'{fr(3,4,32)}  or  {fr(3,10,32)} ?',f'{fr(3,4,32)} (bigger pieces)')],
+put('p4l4-trycompare',rtry('p4l4-trycompare','57–58 MIN • OPTIONAL','Your turn: which is bigger?','Choose a tool. Then explain.',[('a',f'{fr(5,6,32)}  or  {fr(3,4,32)} ?',f'{fr(5,6,32)} (10/12 &gt; 9/12)'),('b',f'{fr(4,10,32)}  or  {fr(5,8,32)} ?',f'{fr(5,8,32)} (more than a half)'),('c',f'{fr(3,4,32)}  or  {fr(3,10,32)} ?',f'{fr(3,4,32)} (bigger pieces)')],
  'Whiteboards. a) Twelfths: 5/6 = 10/12 and 3/4 = 9/12, so 5/6. b) 4/10 is less than a half (half of 10 is 5); 5/8 is more than a half (half of 8 is 4). c) Same numerator: quarters are bigger pieces than tenths, so 3/4.',top=320,gapy=165,qw=1000,size=36,asize=32))
 
 # ---------- teach: find the whole ----------
@@ -226,14 +226,14 @@ body+=step(1,'The whole bag is 3 units. 2 units are blue.',left=990,top=470,widt
 body+=step(2,'2 units = 24, so 1 unit = 24 ÷ 2 = 12.',left=990,top=585,width=802,size=32)
 body+=step(3,'3 units = 3 × 12 = 36.',left=990,top=700,width=802,size=32)
 body+=answer(128,810,1664,f'36 marbles.  Check: 36 ÷ 3 = 12, 2 × 12 = 24 ✓')
-put('p4l4-teachwhole',sec('p4l4-teachwhole','56–57 MIN',body,'Teach before worksheet page 2 (Q5). This time we know a PART, not the whole. Draw the whole bar in 3 units and shade 2 units; the 24 goes under the shaded part, the question mark over the whole. Think-aloud: "2 units are 24, so 1 unit is 12. The bag is 3 units: 36." Watch for children who find 2/3 of 24 (= 16): ask "Is the bag bigger or smaller than the blue marbles?"'))
+put('p4l4-teachwhole',sec('p4l4-teachwhole','55–57 MIN',body,'Teach before worksheet page 2 (Q5). This time we know a PART, not the whole. Draw the whole bar in 3 units and shade 2 units; the 24 goes under the shaded part, the question mark over the whole. Think-aloud: "2 units are 24, so 1 unit is 12. The bag is 3 units: 36." Watch for children who find 2/3 of 24 (= 16): ask "Is the bag bigger or smaller than the blue marbles?"'))
 
 # ---------- teach: find all ----------
 body=h2('Find ALL: make the denominators the same')
 body+=pin(128,240,1664,p(f'Fractions with denominator 8 between {fr(1,4,34)} and {fr(3,4,34)}',38,800,TEAL,raw=True))
 for i,t in enumerate([f'{fr(1,4,34)} = {fr(2,8,34)}  and  {fr(3,4,34)} = {fr(6,8,34)}',f'In between: {fr(3,8,34)}, {fr(4,8,34)}, {fr(5,8,34)}',f'{fr(2,8,34)} and {fr(6,8,34)} are EQUAL to the ends: they do not count.']): body+=pin(128,340+i*130,1664,p(t,34,raw=True),'rise',WHITE)
 body+=pin(128,750,1664,p('3 fractions.  Make a list in order, so none is missed.',40,800),'pop',YEL,20,'14px 28px')
-put('p4l4-teachfind',sec('p4l4-teachfind','57–58 MIN',body,'Minutes 57 to 58. Teach before worksheet page 2 (Q6). Strategy: MAKE A LIST IN ORDER. Change the end fractions to eighths, then list every eighth in between. The ends themselves do not count, because "between" means bigger than one and smaller than the other. The "Who am I?" riddle is now on the Think Harder page (stretch 4): it uses the same idea, list everything that fits the first clues and then cross out with each new clue (example: improper fraction, denominator 4, between 1 and 2, odd numerator, closer to 2 than to 1: 5/4, 6/4, 7/4; odd: 5/4, 7/4; closer to 2: 7/4).'))
+put('p4l4-teachfind',sec('p4l4-teachfind','ON DEMAND • Q6',body,'ON DEMAND: show this during page 2 (screen share or whiteboard) when a child chooses Q6, a choice question; the page carries a hint too. Only two ideas are taught before page 2 (comparing fractions, and finding the whole from a part), so the five minutes are not crowded. Strategy: MAKE A LIST IN ORDER. Change the end fractions to eighths, then list every eighth in between. The ends themselves do not count, because "between" means bigger than one and smaller than the other. The "Who am I?" riddle is now on the Think Harder page (stretch 4): it uses the same idea, list everything that fits the first clues and then cross out with each new clue (example: improper fraction, denominator 4, between 1 and 2, odd numerator, closer to 2 than to 1: 5/4, 6/4, 7/4; odd: 5/4, 7/4; closer to 2: 7/4).'))
 
 # ---------- worksheet page 2 ----------
 put('p4l4-ws2',ws_preview('p4l4-ws2','58–76 MIN','Worksheet page 2: on your own',[('Q4','Compare. Choose a tool and explain.'),('Q5','The red sweets. Draw the bar: you know a part, not the whole.'),('Q6','Find ALL the twelfths in between.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who still think a bigger denominator means a bigger fraction.'))
@@ -280,7 +280,7 @@ _G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify
 _ID='p4l4'
 _PIC=globals().get('PIC')
 
-order=['p4l4-title','p4l4-warm1','p4l4-warm2','p4l4-explore1','p4l4-explore2','p4l4-teach1','p4l4-we1','p4l4-try1','p4l4-teachline','p4l4-we2','p4l4-try2','p4l4-key','p4l4-break','p4l4-ws1','p4l4-ws1ans','p4l4-teachcompare','p4l4-teachcompare2','p4l4-trycompare','p4l4-teachwhole','p4l4-teachfind','p4l4-ws2','p4l4-ws2ans','p4l4-stretch','p4l4-challenge','p4l4-chdiag','p4l4-chwalk','p4l4-talk','p4l4-exit']
+order=['p4l4-title','p4l4-warm1','p4l4-warm2','p4l4-explore1','p4l4-explore2','p4l4-teach1','p4l4-we1','p4l4-try1','p4l4-teachline','p4l4-we2','p4l4-try2','p4l4-key','p4l4-break','p4l4-ws1','p4l4-ws1ans','p4l4-teachcompare','p4l4-teachcompare2','p4l4-teachwhole','p4l4-trycompare','p4l4-ws2','p4l4-teachfind','p4l4-ws2ans','p4l4-stretch','p4l4-challenge','p4l4-chdiag','p4l4-chwalk','p4l4-talk','p4l4-exit']
 p4_fix.finish(S,4,_G,pic=_PIC)
 order=p4_fix.order(order,4)
 assert set(order)==set(S), set(order)^set(S)

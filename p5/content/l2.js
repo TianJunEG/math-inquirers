@@ -33,7 +33,7 @@ const shareBars = () => {
     for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${i < shaded ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
   });
   g += txt(x0 + w + 12, 40, 'shaded = a share', 15, TEAL, 'start', 600);
-  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 650 120" width="650" xmlns="http://www.w3.org/2000/svg" style="max-width:60%">${g}</svg>`;
+  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 650 120" width="650" xmlns="http://www.w3.org/2000/svg" style="max-width:58%">${g}</svg>`;
 };
 
 module.exports = {
@@ -135,14 +135,14 @@ module.exports = {
     // Q1 sharing
     W.push(H.q(1, 'Sharing. Remember: a ÷ b = a/b.', { before: 20, keepNext: true }));
     W.push(H.sub('a', '5 pizzas are shared equally among 8 children. Each gets  ______  of a pizza.'));
-    W.push(H.sub('b', 'A 9 m ribbon is cut into 4 equal pieces. Each piece is  ______  m long.  (a fraction or a mixed number is fine)'));
+    W.push(H.sub('b', 'A 9 m ribbon is cut into 4 equal pieces. Each piece is  ______  m long.  (a fraction or mixed number)'));
     W.push(H.sub('c', 'Group A shares 2 pizzas among 3 children. Group B shares 3 pizzas among 5 children. In which group does each child get more? Explain.', { after: 20 }));
-    W.push(H.p(['<b style="color:' + TEAL + '">Hint:</b> how much of a whole pizza is each child short of? Compare the two shortfalls.'], { after: 10 }));
+    W.push(H.p(['<b style="color:' + TEAL + '">Hint:</b> how much of a whole pizza is each child short of?'], { after: 10 }));
     W.push(H.fig(shareBars()));
     // Q2 unit fractions
-    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away 1/2, then 1/3 … is what is left a unit fraction?', { keepNext: true }));
-    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + '. Write ' + fr(1, 2) + ' as tenths: ' + fr(1, 2) + ' = ' + fr('____', 10) + '. So ' + fr(7, 10) + ' − ' + fr(1, 2) + ' = ' + fr('____', 10) + ' = ' + fr(1, '____') + '.&nbsp; (b) Write ' + fr(1, 4) + ' as twentieths: ' + fr('____', 20) + '.'], { after: 20 }));
-    W.push(H.sub('a', [fr(7, 10) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
+    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away 1/2, then 1/3 … Is what is left a unit fraction?', { keepNext: true }));
+    W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + '. Write ' + fr(1, 2) + ' as tenths: ' + fr(1, 2) + ' = ' + fr('____', 10) + '. So ' + fr(7, 10) + ' − ' + fr(1, 2) + ' = ' + fr('____', 10) + ' = ' + fr(1, '____') + '.'], { after: 20 }));
+    W.push(H.sub('a', [fr(7, 10) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp; <span style="font-size:15px">(hint: ' + fr(1, 4) + ' = ' + fr('__', 20) + ')</span>']));
     W.push(H.sub('c', ['Find TWO ways for ' + fr(3, 8) + ':&nbsp;&nbsp; ' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr() + '&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;' + fr(3, 8) + ' = ' + ufr() + ' + ' + ufr()]));
     W.push(H.sub(' ', 'Test 1/3, 1/4, 1/5 … in order. How do you know when to stop?', { after: 40 }));
     W.push(...H.lines(1));

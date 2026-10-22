@@ -44,7 +44,7 @@ const extra = (n) => {
   b.stretch.slice(0, 4).forEach((x, i) => {
     out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true }));
     if (FIGS[n] && FIGS[n]['TH' + (i + 1)]) out.push(H.fig(FIGS[n]['TH' + (i + 1)]));
-    out.push(...lines(FIGS[n] && FIGS[n]['TH' + (i + 1)] ? 2 : (n === 7 && i < 2 ? 1 : 3)));
+    out.push(...lines(FIGS[n] && FIGS[n]['TH' + (i + 1)] ? 2 : (n === 7 && i < 2 ? 1 : (n === 8 ? 2 : 3))));
   });
   // Page 5: Go further
   out.push(p('', { pb: true, after: 0 }));

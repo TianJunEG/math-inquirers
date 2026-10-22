@@ -89,7 +89,7 @@ body+=pin(128,420,1664,svgwrap(1600,280,'Three empty boxes for ones, tenths and 
 body+=pin(128,770,1664,p('Where would you put a 4? A 5? A 9? Is a 6 in the ones box a good idea?',36,700),'fade',SOFT,20,'20px 30px')
 put('warm1',sec(f'{P}-warm1','4–6 MIN',body,
  'Minutes 4 to 6 (one short round, about 2 minutes: the Warm-up check came first). Target 5. Children draw three empty boxes with a point after the first on a whiteboard. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, everyone reads their number aloud; the number closest to 5 wins (work out how far each is from 5). '
- 'Play 3 rounds: target 5, then target 2.5, then the smallest number possible. Click to show the thinking question. Talk: "A 4 or a 5 belongs in the ones box: 4.9 something or 5.0 something is close to 5. A 9 in the ones box is a disaster. A 9 in the hundredths box hardly matters: it is only 9 hundredths." '
+ 'Play ONE round only (target 5), about 2 minutes. Keep target 2.5 and the smallest-number round for another day or for take-home. Click to show the thinking question. Talk: "A 4 or a 5 belongs in the ones box: 4.9 something or 5.0 something is close to 5. A 9 in the ones box is a disaster. A 9 in the hundredths box hardly matters: it is only 9 hundredths." '
  'Listen for children who say "the ones digit matters most, then the tenths". That is the key idea of today.'))
 
 # ---------- 3. quick questions ----------
@@ -153,7 +153,7 @@ body+=step(1,'Halfway marks: 3.75 and 3.85. The shaded numbers all round to 3.8.
 body+=step(2,'3.75 rounds UP to 3.8: it is the smallest.  3.85 rounds up to 3.9: not this one!',top=735,size=34)
 body+=answer(128,830,1664,'Smallest 3.75,  largest 3.84')
 put('we3',sec(f'{P}-we3','26–28 MIN',body,'This is the detective question: work backwards from the rounded number. Click to shade the band, then the steps. Ask before step 2: "Is 3.85 in or out?" Many children say in. Test it: 3.85 is exactly halfway, so it rounds UP to 3.9. So the largest with 2 decimal places is 3.84. Ask: "How many numbers with 2 decimal places round to 3.8?" (3.75 to 3.84: 10 numbers).'))
-put('try2',try_slide(f'{P}-try2','28–29 MIN • OPTIONAL','Your turn: round it','Find the neighbours and the halfway mark.',[('a','Round 5.349 to 2 decimal places.','5.35'),('b','Round 12.96 to 1 decimal place.','13.0'),('c','2 decimal places, rounds to 9 (whole number). Smallest? Largest?','8.50, 9.49')],'Whiteboards. a) Neighbours 5.34 and 5.35, halfway 5.345; 5.349 is past it. b) Neighbours 12.9 and 13.0: write 13.0, not 13, to show 1 decimal place. c) Halfway marks 8.5 and 9.5. 8.50 rounds up to 9, so it is the smallest; 9.50 would round to 10, so the largest is 9.49.',size=34))
+put('try2',try_slide(f'{P}-try2','28–29 MIN • OPTIONAL','Your turn: round it','Find the neighbours and the halfway mark.',[('a','Round 5.38 to 1 decimal place.','5.4'),('b','Round 12.96 to 1 decimal place.','13.0'),('c','2 decimal places, rounds to 9 (whole number). Smallest? Largest?','8.50, 9.49')],'Whiteboards. a) Neighbours 5.3 and 5.4, halfway 5.35; 5.38 is past it, so 5.4. b) Neighbours 12.9 and 13.0: write 13.0, not 13, to show 1 decimal place. c) Halfway marks 8.5 and 9.5. 8.50 rounds up to 9, so it is the smallest; 9.50 would round to 10, so the largest is 9.49.',size=34))
 
 # ---------- 12. key ----------
 body=h2('Key idea: line up the points')+card(p('Line up the decimal points and compare place by place: ones, tenths, hundredths, thousandths. More digits does not mean bigger.',44,700))+card(p('To round, find the two neighbours and the halfway mark. To round backwards, find the smallest and largest numbers that round to it.',38,600,MUTED))
@@ -173,7 +173,7 @@ body+=step(1,'There is no 3 card. Just below 3: start with 1, make the rest big:
 body+=step(2,'Just above 3: start with 4, make the rest small: 4.18',top=560,size=34)
 body+=step(3,'How far?  3 − 1.84 = 1.16.   4.18 − 3 = 1.18.',top=660,size=34)
 body+=answer(128,770,1664,'1.84 is closest (by just 0.02!)')
-put('teachcards',sec(f'{P}-teachcards','53–54 MIN',body,'Teach before worksheet page 2 (Q4 uses digit cards 3, 6, 9). Ask first: "Which do you think is closer to 3?" Most children pick one side without checking. Click through. Think-aloud: "Below 3 I want the biggest number that starts with a smaller digit: 1, then the biggest digits: 1.84. Above 3 I want the smallest number starting with a bigger digit: 4.18. Now I measure both distances." The lesson: always check both sides of the target.'))
+put('teachcards',sec(f'{P}-teachcards','53–55 MIN',body,'Teach before worksheet page 2 (Q4 uses digit cards 3, 6, 9). Ask first: "Which do you think is closer to 3?" Most children pick one side without checking. Click through. Think-aloud: "Below 3 I want the biggest number that starts with a smaller digit: 1, then the biggest digits: 1.84. Above 3 I want the smallest number starting with a bigger digit: 4.18. Now I measure both distances." The lesson: always check both sides of the target.'))
 
 # ---------- teach: bar model (Q5) ----------
 x0=150; bw=400; ew=190
@@ -187,7 +187,7 @@ body+=step(1,'Take away the extra:  $6.80 − $0.60 = $6.20',left=1110,top=400,w
 body+=step(2,'Two equal bars:  $6.20 ÷ 2 = $3.10  (Ben)',left=1110,top=530,width=682,size=32)
 body+=step(3,'Ravi:  $3.10 + $0.60 = $3.70',left=1110,top=660,width=682,size=32)
 body+=pin(128,780,1664,p('Check: $3.10 + $3.70 = $6.80, and $3.70 is $0.60 more than $3.10 ✓',36,700),'fade',SOFT,20,'18px 30px')
-put('teachbar',sec(f'{P}-teachbar','54–56 MIN',body,'Teach before worksheet page 2 (Q5). Draw the two bars first: "Who has more? Whose bar is longer? By how much?" Think-aloud: "If I cut off Ravi\'s extra 60 cents, the two bars are the same. Together they are $6.80 minus $0.60, which is $6.20. Shared equally: $6.20 divided by 2. 6 divided by 2 is 3, 20 cents divided by 2 is 10 cents: $3.10." Show the division as 6.20 ÷ 2 = 3.10 too. Always check BOTH clues at the end.'))
+put('teachbar',sec(f'{P}-teachbar','55–58 MIN',body,'Teach before worksheet page 2 (Q5). Draw the two bars first: "Who has more? Whose bar is longer? By how much?" Think-aloud: "If I cut off Ravi\'s extra 60 cents, the two bars are the same. Together they are $6.80 minus $0.60, which is $6.20. Shared equally: $6.20 divided by 2. 6 divided by 2 is 3, 20 cents divided by 2 is 10 cents: $3.10." Show the division as 6.20 ÷ 2 = 3.10 too. Always check BOTH clues at the end.'))
 
 # ---------- teach: mass with a container (Q6) ----------
 def scale(cx,label,cups,cap):
@@ -201,7 +201,7 @@ body+=pin(1180,240,612,p('The 5 cups all have the same mass. What is the mass of
 body+=step(1,'The cups alone:  2.3 kg − 0.55 kg = 1.75 kg   (write 2.30 − 0.55)',top=560,size=34)
 body+=step(2,'One cup:  1.75 kg ÷ 5 = 0.35 kg',top=660,size=34)
 body+=pin(128,770,1664,p('Check: 5 × 0.35 = 1.75, and 1.75 + 0.55 = 2.3 ✓',36,700),'fade',SOFT,20,'18px 30px')
-put('teachmass',sec(f'{P}-teachmass','56–57 MIN',body,'Teach before worksheet page 2 (Q6). Ask: "Why can\'t we just divide 2.3 by 5?" (the tray is on the scale too). Think-aloud: "First I take the tray away: 2.30 minus 0.55. I line up the points and write 2.3 as 2.30. That is 1.75 kg for 5 cups. Then 1.75 divided by 5: 175 hundredths divided by 5 is 35 hundredths, 0.35 kg." Q6b on the worksheet takes cans OUT: ask "How much mass leaves the scale?"'))
+put('teachmass',sec(f'{P}-teachmass','ON DEMAND • Q6',body,'ON DEMAND: show this during page 2 (screen share or whiteboard) when a child chooses Q6, a choice question; the page already sets out Step 1 and Step 2. Only two ideas are taught before page 2 (closest to a target, and the bar model). Ask: "Why can\'t we just divide 2.3 by 5?" (the tray is on the scale too). Think-aloud: "First I take the tray away: 2.30 minus 0.55. I line up the points and write 2.3 as 2.30. That is 1.75 kg for 5 cups. Then 1.75 divided by 5: 175 hundredths divided by 5 is 35 hundredths, 0.35 kg." Q6b on the worksheet takes cans OUT: ask "How much mass leaves the scale?"'))
 
 # ---------- teach: mystery decimal (Q7) ----------
 body=h2('Mystery decimal: list the cases, check every clue')+card(p('I have 2 decimal places. Rounded to 1 decimal place, I am 3.2. My hundredths digit is 6 more than my tenths digit.',38,700))
@@ -209,7 +209,7 @@ body+=step(1,'Rounds to 3.2, so I am from 3.15 to 3.24. My tenths digit is 1 or 
 body+=step(2,'Tenths 1: hundredths 1 + 6 = 7.  3.17 is from 3.15 to 3.24 ✓',top=520,size=34)
 body+=step(3,'Tenths 2: hundredths 2 + 6 = 8.  3.28 rounds to 3.3: not this one!',top=620,size=34)
 body+=answer(128,730,1664,'I am 3.17. Only one number fits every clue.')
-put('teachclue',sec(f'{P}-teachclue','57–58 MIN',body,'Optional stretch teaching (the mystery decimal with 3 places is Think Harder Q4). Strategy: use the rounding clue to make a short list, then test every case against every clue. Ask after step 1: "Why only tenths 1 or 2?" (3.15 to 3.19 have tenths 1; 3.20 to 3.24 have tenths 2). Stress step 3: the case that breaks a clue must be crossed out out loud, so children see why the answer is the only one.'))
+put('teachclue',sec(f'{P}-teachclue','ON DEMAND • Think harder Q4',body,'ON DEMAND (Think harder Q4, not part of the teaching before page 2): show it only if a child chooses that question (the mystery decimal with 3 places). Strategy: use the rounding clue to make a short list, then test every case against every clue. Ask after step 1: "Why only tenths 1 or 2?" (3.15 to 3.19 have tenths 1; 3.20 to 3.24 have tenths 2). Stress step 3: the case that breaks a clue must be crossed out out loud, so children see why the answer is the only one.'))
 
 # ---------- worksheet page 2 ----------
 put('ws2',ws_preview(f'{P}-ws2','58–76 MIN','Worksheet page 2: on your own',[('Q4','Digit cards 3, 6, 9: put the point after the first digit. List the 6 numbers, then find the one nearest 7.'),('Q5','Mei and Siti. Draw the bars: take away the extra, then share.'),('Q6','The box of cans. Take away the box first.')],'Done? Think harder and Go further come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who still compare decimals by their number of digits.'))
@@ -253,7 +253,7 @@ _G=json.loads(_sp.check_output(['node','-e',"process.stdout.write(JSON.stringify
 _ID='p4l5'
 _PIC=globals().get('PIC')
 
-order=[f'{P}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','we3','try2','key','break','ws1','ws1ans','teachcards','teachbar','teachmass','teachclue','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order=[f'{P}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','we3','try2','key','break','ws1','ws1ans','teachcards','teachbar','ws2','teachmass','teachclue','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 p4_fix.finish(S,5,_G,pic=_PIC)
 order=p4_fix.order(order,5)
 assert set(order)==set(S), set(order)^set(S)

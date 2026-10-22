@@ -143,10 +143,10 @@ L.lessons.forEach(l => {
   doo(['Circulate and ask:']);
   s.circulate.forEach(c => G.push(bu(c)));
   stuck(s.hints);
-  doo(['Children who choose more: Think harder T1 first (it is in the workbook), then the Think harder slide, then Go further, then the Investigation on the Choose and look-back page. Never announce who is on which page, and do not split a pair unless both children agree.']);
+  doo(['Children who choose more: Think harder T1 to T4 (the same four questions are in the workbook and on the Think harder slide), then Go further, then the Investigation on the Choose and look-back page. Never announce who is on which page, and do not split a pair unless both children agree.']);
   G.push(h2('Think harder, Go further and Investigation'));
   ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder T' + (i + 1) + ': ' + x.q, x.a]), ...(GAPS[String(l.n)].tx || []).map(x => ['Workbook Think harder ' + x.label + ': ' + x.q + ' ' + (x.subs || []).map(z => '(' + z[0] + ') ' + z[1]).join(' '), x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further C' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
-  G.push(tx('These are the questions on the Think harder and Go further pages in the workbook. The Think harder slide has three more questions; their answers are in the answer key below. More are in the separate Question Bank.', { size: 19, color: '666666' }));
+  G.push(tx('These are the questions on the Think harder and Go further pages in the workbook. The Think harder slide shows the same four questions as the workbook (T1 to T4), and the Go further slide shows C1 to C3; their answers are in the answer key below. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
   G.push(seg('72–80 min', 'Talk time'));
   doo(['Bring the group back to a circle (or camera on, mics on). Ask for volunteers first: “Who would like to share?” Never call a child by name to answer. Say that passing is always fine. A child may show a drawing or let a partner speak. No tallies, no rankings.']);
