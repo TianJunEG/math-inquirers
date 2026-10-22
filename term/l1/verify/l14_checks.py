@@ -60,12 +60,14 @@ def run(d):
     eq(truth, [True, False, True, False], 'S6'); eq(['T' if t else 'F' for t in truth], T['S6']['val'], 'S6 val')
     eq([r['s'] for r in T['S6']['tf']], ['6 is even.', '9 is even.', '15 is odd.', '20 is odd.'], 'S6 statements match the truth list')
     # ---- Think harder: test the claims by enumeration
-    eq([total(3, 4), total(5, 8), total(7, 2)], [7, 13, 9], 'T1 totals'); eq([kind(7), kind(13), kind(9)], ['odd'] * 3, 'T1 kinds')
+    t1 = [tuple(int(x) for x in p['text'].split('=')[0].split('+')) for p in T['T1']['parts'][:3]]; eq(t1, [(6, 5), (10, 3), (8, 1)], 'T1 sums as printed')
+    eq([total(*x) for x in t1], [11, 13, 9], 'T1 totals'); eq([kind(total(*x)) for x in t1], ['odd'] * 3, 'T1 kinds'); eq([kind(a) == 'odd' for a, b in t1].count(True) + [kind(b) == 'odd' for a, b in t1].count(True), 3, 'T1 each sum is one odd and one even')
+    eq(set(t1) & {(3, 4), (5, 8), (7, 2)}, set(), 'T1 shares no sum with the class table')
     claim_odd_even = all(kind(a + b) == 'odd' for a in range(1, 40) for b in range(1, 40) if kind(a) == 'odd' and kind(b) == 'even'); eq(claim_odd_even, True, 'T1 claim holds for all pairs up to 39')
-    eq(T['T1']['val'], [7, 'Odd', 13, 'Odd', 9, 'Odd', 'Yes'], 'T1 val')
+    eq(T['T1']['val'], [11, 'Odd', 13, 'Odd', 9, 'Odd', 'Yes'], 'T1 val')
     eq([kind(k).capitalize() for k in (57, 80, 34, 91)], ['Odd', 'Even', 'Even', 'Odd'], 'T2'); eq(T['T2']['val'], ['Odd', 'Even', 'Even', 'Odd'], 'T2 val')
-    eq(total(3, 5), 8, 'T3 total'); odd_odd_odd = [a + b for a in range(1, 30) for b in range(1, 30) if kind(a) == 'odd' and kind(b) == 'odd' and kind(a + b) == 'odd']
-    eq(odd_odd_odd, [], 'T3 odd + odd is never odd (so "always even")'); eq(T['T3']['val'], [8, 'No', 'Always'], 'T3 val')
+    eq(total(9, 3), 12, 'T3 total'); eq(kind(12), 'even', 'T3 total is even so the claim fails'); eq(T['T3']['parts'][0]['text'], '9 + 3 = [2]', 'T3 sum as printed'); odd_odd_odd = [a + b for a in range(1, 30) for b in range(1, 30) if kind(a) == 'odd' and kind(b) == 'odd' and kind(a + b) == 'odd']
+    eq(odd_odd_odd, [], 'T3(c) odd + odd is never odd'); eq(T['T3']['val'], [12, 'No', 'Never'], 'T3 val')
     eq([two_odds(12), two_odds(15), two_odds(20)], [True, False, True], 'T4'); eq(T['T4']['val'], ['Yes', 'No', 'Yes'], 'T4 val')
     eq((5 + 7, 9 + 11), (12, 20), 'T4 example pairs')
     # ---- Go further

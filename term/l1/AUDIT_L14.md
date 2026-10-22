@@ -55,3 +55,7 @@ Total: 19 / 24
 - The workbook model flags pages 3 and 5 as over 100 percent but the real PDF measures 87 and 97 percent; the builder tightens spacing on page 3.
 - Mini-lesson 9:35 of 12:00 (slow-class 11:18), explore 11:19 of 14:00: the lesson has about 3 spare minutes before the flex buffer.
 - next_materials for Lesson 15 (4 plates or bowls, 20 small things) follows the plan; Lesson 15 was not yet written when this was built, so the other author should confirm it.
+
+## Fix pass (T2 audits, see audit/FIXES_L14.md)
+
+T3(c) stem, key, guide and slide polarity now agree (odd + odd is odd: Never). Think harder T1 and T3 use new sums; answers on slides use `reveal` slides (s-explore1, s-explore3, s-m1, s-m3, s-m4) or no longer show answers (s-m2, s-m3b); 7 + 9 is built by the children; the number cards are asked for in the opening; recording order, camera wording, ticks, flat hand, knee taps, numbering fixed. Validator 0 FAIL 0 WARN, 76 answer checks, 178 practice variants; slow class 83:25 of 90; mini-lesson 13 min, flex 4; workbook fill 94, 89, 99, 90, 98%.
