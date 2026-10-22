@@ -136,7 +136,7 @@
   "sneak_peek": {
     "q1": "Count the stars. Write how many. You may draw rings round groups to help.",
     "q2": "Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number of sticks? Circle Yes or No. I know because ___.",
-    "a1": "24",
+    "a1": "24 stars",
     "a2": "Yes. 3 bundles of ten is 30, and 4 more is 34.",
     "val1": 24
   },

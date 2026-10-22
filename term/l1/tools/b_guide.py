@@ -40,7 +40,7 @@ tr{break-inside:avoid}
 .q .a{background:#E8F5F2;border-left:4px solid #1F7A6F;padding:2px 8px;margin:4px 0;font-weight:700}
 .q .m{font-size:11.5px;color:#3B4A6B}
 .vis{width:150px;float:right;margin-left:10px}
-.small{font-size:11px;color:#3B4A6B}
+.small{font-size:11px;color:#3B4A6B}.boxb{display:inline-block;width:13px;height:13px;border:1.5px solid #1B2A49;border-radius:3px;background:#fff;vertical-align:-2px;margin:0 2px}
 ul{margin:3px 0 3px 16px;padding:0}li{margin:1px 0}
 .ok{color:#1F7A6F;font-weight:800}.bad{color:#D64545;font-weight:800}
 """
@@ -79,10 +79,13 @@ def line_html(d, part, t0, sec, ln, sm):
     return f'<div class="ln {k}{" opt" if ln.get("optional") else ""}"><span class="ts">{ts}</span><span class="kd">{kd}</span><span class="tx">{txt}{extra}</span></div>'
 
 
+bx = lambda s: E(s).replace('[]', '<span class="boxb"></span>')
+
+
 def q_html(q, tier_label=None):
     vis = f'<div class="vis">{svg.render_visual(q["visual"])}</div>' if q.get('visual') else ''
-    parts = ''.join(f'<div class="small">{E(p["l"] + ")  " if p["l"] else "")}{E(p["text"])}</div>' for p in q.get('parts', []))
-    h = f'<div class="h"><span class="id">{q["id"]}</span><b>{E(q["text"])}</b></div>'
+    parts = ''.join(f'<div class="small">{E(p["l"] + ")  " if p["l"] else "")}{bx(p["text"])}</div>' for p in q.get('parts', []))
+    h = f'<div class="h"><span class="id">{q["id"]}</span><b>{bx(q["text"])}</b></div>'
     inner = f'{vis}{h}{parts}<div class="a">Answer: {E(q["answer"])}</div>'
     if q.get('hint'): inner += f'<div class="m"><b>Hint (say this first):</b> {E(q["hint"])}</div>'
     inner += f'<div class="m"><b>Worked solution:</b> {E(q["solution"])}</div>'

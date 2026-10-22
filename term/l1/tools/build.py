@@ -23,7 +23,7 @@ def main():
         b_print.build_print(d, b)
         b.close()
     b_practice.build_practice(d)
-    validate.FAILS.clear(); validate.check_outputs(d); validate.check_foreign(d)
+    validate.FAILS.clear(); validate.check_outputs(d)
     for f in validate.FAILS: print('FAIL ', f)
     for p in validate.PASSES[-3:]: print('PASS ', p)
     if validate.FAILS: sys.exit(1)
@@ -33,9 +33,10 @@ def main():
         import subprocess
         r = subprocess.run([sys.executable, os.path.join(L1, 'assets', 'l10_extras.py')])
         if r.returncode: sys.exit('end-of-term check build FAILED (see above)')
-        validate.FAILS.clear(); validate.check_term_check(d)
-        for f in validate.FAILS: print('FAIL ', f)
-        if validate.FAILS: sys.exit(1)
+        validate.check_term_check(d)
+    validate.check_foreign(d)   # after every output (including the term-check files) exists
+    for f in validate.FAILS: print('FAIL ', f)
+    if validate.FAILS: sys.exit(1)
     if audit.missing(d['_num']):
         audit.write_draft(d, validate.PASSES, validate.WARNS, validate.FAILS)
         print(f'AUDIT term/l1/AUDIT_L{d["_num"]}.md did not exist: a draft was generated.')

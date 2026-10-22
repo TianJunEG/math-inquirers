@@ -321,18 +321,32 @@ def shingles(text, n=7):
     return {' '.join(w[i:i + n]) for i in range(len(w) - n + 1)}
 
 
+STANDARD_PHRASES = [  # standard school-paper command wording (WORDING_GUIDE.md): allowed, never counted as copied problem text
+    r"arrange the numbers in order\.?(\s*begin with the (smallest|greatest|biggest|largest)\.?)?", r"begin with the (smallest|greatest|biggest|largest)\.?",
+    r"make the (greatest|smallest|biggest|largest) number( and the (greatest|smallest|biggest|largest) number)?", r"is \w+ correct\?\s*circle yes or no\.?",
+    r"circle yes or no", r"circle (the correct|the right) answer", r"fill in the (missing numbers?|blanks?|correct answers? in the spaces provided)",
+    r"write your answers? in the boxes provided", r"show all your workings clearly", r"tick \W?.?\W? ?true or false", r"count and write",
+    r"write a number sentence", r"find the total", r"complete the (table|pattern|number sentences?)", r"write the number", r"how many \w+ (are )?(there )?altogether\??"]
+
+
+def std_strip(text):
+    t = text.lower()
+    for p in STANDARD_PHRASES: t = re.sub(p, ' ', t)
+    return t
+
+
 def check_copy(d):
     own = set()
     for q in all_questions(d) + d['exit'] + d['home_practice']:
-        own |= shingles(q.get('text', '') + ' ' + ' '.join(p['text'] for p in q.get('parts', [])))
-    own |= shingles(d['sneak_peek']['q1'] + ' ' + d['sneak_peek']['q2'])
-    for it in d['online_practice']['items']: own |= shingles(it['q'])
+        own |= shingles(std_strip(q.get('text', '') + ' ' + ' '.join(p['text'] for p in q.get('parts', []))))
+    own |= shingles(std_strip(d['sneak_peek']['q1'] + ' ' + d['sneak_peek']['q2']))
+    for it in d['online_practice']['items']: own |= shingles(std_strip(it['q']))
     hits = []
     for folder in ('docs/sasmo', 'docs/books'):
         full = os.path.join(ROOT, folder)
         for f in sorted(os.listdir(full)):
             if not f.endswith('.md') or 'original' in f: continue
-            src = shingles(open(os.path.join(full, f), encoding='utf-8', errors='ignore').read())
+            src = shingles(std_strip(open(os.path.join(full, f), encoding='utf-8', errors='ignore').read()))
             common = own & src
             if common: hits.append((f, sorted(common)[:2]))
     if hits: fail('copy: 7-word overlaps with reference contest/book text: ' + str(hits))

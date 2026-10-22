@@ -110,6 +110,7 @@ def say(text):
 
 def qs_block(d, ids, short):
     qm = qmap(d)
+    compact = len(ids) >= 4
     rows = []
     for i in ids:
         q = qm[i]
@@ -120,9 +121,9 @@ def qs_block(d, ids, short):
             parts += f'<p style="font-size:34px;font-weight:600;color:{MUTED}">{E(p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
         if q.get('visual') and q['visual'].get('type') != 'hundred':   # a 100 square does not fit in a question row
-            vis = f'<div style="width:340px;flex:none">{svg.render_visual(q["visual"])}</div>'
-        rows.append(f'<div style="{CARD}padding:16px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
-                    f'<div style="flex:1;display:flex;flex-direction:column;gap:4px"><p style="font-size:36px;font-weight:700;line-height:1.25">{E(text)}</p>{parts}</div>{vis}</div>')
+            vis = f'<div style="width:{240 if compact else 340}px;flex:none">{svg.render_visual(q["visual"])}</div>'
+        rows.append(f'<div style="{CARD}padding:{8 if compact else 16}px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
+                    f'<div style="flex:1;display:flex;flex-direction:column;gap:4px"><p style="font-size:{32 if compact else 36}px;font-weight:700;line-height:1.2">{E(text)}</p>{parts}</div>{vis}</div>')
     return f'<div style="display:flex;flex-direction:column;gap:16px">{"".join(rows)}</div>'
 
 

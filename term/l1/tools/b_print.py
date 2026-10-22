@@ -14,7 +14,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .vis{width:310px;margin:6px 0 6px 4px}
 .al{display:inline-block;min-width:54px;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
 .lbk .r{display:flex;flex-wrap:wrap;gap:2px 8px;margin-top:5px;font-size:14.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
@@ -27,6 +27,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .qbox:has(svg.h100.wide){display:block}
 .qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
 .p1 .qbox:has(svg.h100)>.vis{width:292px!important}
+.tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
 .keybox .a{font-weight:800;color:#1F7A6F}
 """
@@ -35,7 +36,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 def hdr(d, tag, title=None, mi=False):
     head = (f'<div class="lh"><span class="lbadge">Term {d["term"]} • Lesson {d["lesson_in_term"]}</span><span class="ltopic">{E(header_topic(d))}</span>'
             f'<span style="margin-left:auto;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">{tag}</span></div>'
-            + (f'<div class="ltitle">{E(title)}</div>' if title else '')
+            + (f'<div class="ltitle" style="font-size:{38 if len(title) <= 24 else (30 if len(title) <= 36 else (25 if len(title) <= 48 else 21))}px;line-height:1.1">{E(title)}</div>' if title else '')
             + '<div class="namer"><b>Name</b><span></span><b>Date</b><span style="max-width:120px"></span></div>')
     if not mi:
         return head
@@ -79,25 +80,30 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>What helped me:</b>{bx(lb["helped"])}</div>'
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
             '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my tutor will come and help)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
-    P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">Choose this any time you like. You do not have to finish it.</p>'
-             f'<p style="margin:3px 0"><b>Easy first step:</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>Then:</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * 1 +
+    P.append(f'<div class="page p5">{hdr(d, "Choose, then look back")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
+             f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p><p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + '<div class="ln"></div>' * d.get('_inv_lines', 0) +
              f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
-    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{"".join(P)}</body></html>'
+    body = ''.join(P)
+    for i in sorted(d.get('_tight', ()), reverse=True):    # pages measured over full get tighter spacing
+        parts = body.split('<div class="page')
+        if i + 1 < len(parts): parts[i + 1] = ' tight' + parts[i + 1] if not parts[i + 1].startswith(' ') else ' tight' + parts[i + 1]
+        body = '<div class="page'.join(parts)
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{body}</body></html>'
 
 
 def key_html(d):
     t = d['tiers']; inv = t['investigation']
     P = [f'<h1 style="font-family:Fredoka;margin:0;color:#1B2A49">Answer key: Lesson {d["lesson_in_term"]}, {E(d["title"])}</h1><p style="font-size:13px;margin:2px 0 8px"><b>For the tutor and grown-ups.</b> Keep this page away from the child until they have finished and checked their own work. Ask <i>how do you know?</i> before saying right or wrong.</p>']
     def block(q):
-        return (f'<div class="keybox"><b>{q["id"]}.</b> {E(q["text"])}<div class="a">Answer: {E(q["answer"])}</div><div style="font-size:12.5px">{E(q["solution"])}</div>'
+        return (f'<div class="keybox"><b>{q["id"]}.</b> {blanks(q["text"])}<div class="a">Answer: {E(q["answer"])}</div><div style="font-size:12.5px">{E(q["solution"])}</div>'
                 f'<div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> {"; ".join(E(m) for m in q["mistakes"])}</div></div>')
     P.append('<div class="banner">Start here (pages 1 and 2)</div>' + ''.join(block(q) for q in t['start']))
     P.append('<div class="banner">Think harder (page 3)</div>' + ''.join(block(q) for q in t['think']))
     P.append('<div class="banner">Go further (page 4)</div>' + ''.join(block(q) for q in t['go']))
     P.append(f'<div class="banner">Investigation (page 5): {E(inv["title"])}</div><div class="keybox"><div class="a">{E(inv["answer"])}</div><div style="font-size:12px"><b>Look for:</b> {E(inv["look_for"])}</div></div>')
     P.append('<div class="banner">Exit ticket (page 5)</div>' + ''.join(block(q) for q in d['exit']))
-    P.append(f'<div class="banner">Sneak-peek puzzles (not in the workbook)</div><div class="keybox">1. {E(d["sneak_peek"]["a1"])} stars.<br>2. {E(d["sneak_peek"]["a2"])}</div>')
+    P.append(f'<div class="banner">Sneak-peek puzzles (not in the workbook)</div><div class="keybox">1. {E(d["sneak_peek"]["a1"])}<br>2. {E(d["sneak_peek"]["a2"])}</div>')
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}body{{background-image:none}}</style></head><body>{"".join(P)}</body></html>'
 
 
@@ -106,7 +112,7 @@ def home_html(d):
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{E(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
+        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{blanks(h["text"])}</span></div>' + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
             f'<div class="page hm">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
@@ -132,6 +138,7 @@ def parent_html(d):
 
 
 def build_print(d, pw):
+    page_fill(pw, d)
     od = outdir(d)
     n = d['_num']
     def render(name, html, footer, pdfname, fmt='A4'):
@@ -149,11 +156,10 @@ def build_print(d, pw):
     render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')
 
 
-def page_fill(pw, d):
-    """Fraction of the printable A4 height (267 mm) used by each workbook page except the kit page."""
+def _measure(pw, d):
     hp = os.path.join(outdir(d, 'html'), 'workbook_fill.html')
     open(hp, 'w', encoding='utf-8').write(workbook_html(d))
-    pg = pw.new_page(viewport={'width': 794, 'height': 1123})
+    pg = pw.new_page(viewport={'width': 688, 'height': 1123})
     pg.goto('file://' + hp, wait_until='networkidle'); pg.wait_for_timeout(300)
     res = pg.evaluate("""() => Array.from(document.querySelectorAll('.page:not(.kit)')).map(p => {
         const top = p.getBoundingClientRect().top; let m = 0;
@@ -161,3 +167,21 @@ def page_fill(pw, d):
         return m / (267 / 25.4 * 96); })""")
     pg.close()
     return res
+
+
+def page_fill(pw, d):
+    """Fraction of the printable A4 height (267 mm) used by each workbook page except the kit page.
+    Also chooses (1) how many writing lines the Investigation gets on page 5 (the most that still fit): d['_inv_lines'],
+    (2) which pages are too full and get tighter spacing: d['_tight']."""
+    d['_tight'] = set(); d['_inv_lines'] = 0
+    for k in (6, 5, 4, 3, 2, 1, 0):
+        d['_inv_lines'] = k
+        fills = _measure(pw, d)
+        if len(fills) < 5 or fills[4] <= 0.95:
+            break
+    fills = _measure(pw, d)
+    over = {i for i, f in enumerate(fills) if f > 0.975}
+    if over:
+        d['_tight'] = over
+        fills = _measure(pw, d)
+    return fills
