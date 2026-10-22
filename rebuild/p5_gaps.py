@@ -64,15 +64,15 @@ def pic_grid64():
     s+=f'<rect x="10" y="4" width="144" height="96" fill="none" stroke="{NAVY}" stroke-width="4"/><line x1="10" y1="100" x2="154" y2="4" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 6"/>'
     return _svg('A rectangle 6 squares wide and 4 squares tall on squared paper with a diagonal from one corner to the opposite corner',170,104,s)
 def pic_box432():
-    sx=30; ox,oy=14,96
+    sx=30; ox,oy=14,90
     def P(x,y,z): return (ox+x*sx+z*sx*0.433, oy-y*sx*0.62-z*sx*0.25)
     def poly(pts,fill): return '<polygon points="'+' '.join(f'{a:.1f},{b:.1f}' for a,b in (P(*q) for q in pts))+f'" fill="{fill}" stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"/>'
     s=poly([(0,0,0),(4,0,0),(4,2,0),(0,2,0)],'#FFC93C')+poly([(0,2,0),(4,2,0),(4,2,3),(0,2,3)],'#FFE08A')+poly([(4,0,0),(4,0,3),(4,2,3),(4,2,0)],'#F2B92E')
     for i in range(1,4):
         a=P(i,0,0);b=P(i,2,0);s+=f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" stroke="{NAVY}" stroke-width="1.5"/>'
     a=P(0,1,0);b=P(4,1,0);s+=f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}" stroke="{NAVY}" stroke-width="1.5"/>'
-    s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">4 long</text><text x="{P(4,1,1.5)[0]+8:.0f}" y="{P(4,1,1.5)[1]+8:.0f}" font-size="22" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">3 wide, 2 tall</text>'
-    return _svg('A box 4 cubes long, 3 cubes wide and 2 cubes tall',330,112,s)
+    s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">4 long</text><text x="{P(4,1,3)[0]+14:.0f}" y="{P(4,1,1.5)[1]+8:.0f}" font-size="22" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">3 wide, 2 tall</text>'
+    return _svg('A box 4 cubes long, 3 cubes wide and 2 cubes tall',350,124,s)
 def pic_bar12():
     s=f'<text x="0" y="30" font-size="26" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">12 litres in 4 minutes</text>'
     for i in range(4): s+=f'<rect x="{10+i*160}" y="44" width="160" height="46" fill="#FFFFFF" stroke="{NAVY}" stroke-width="4"/><text x="{10+i*160+80}" y="76" font-size="24" font-weight="700" text-anchor="middle" fill="{MUTED}" font-family="Nunito Sans, Arial">minute {i+1}</text>'

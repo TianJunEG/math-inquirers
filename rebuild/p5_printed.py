@@ -25,12 +25,12 @@ from slidekit import *
 def _fig(svg,w=560):
     m=re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"',svg)
     vw,vh=(float(m.group(1)),float(m.group(2))) if m else (600,200)
-    h=min(190,w*vh/vw); w2=h*vw/vh if h<w*vh/vw else w
+    h=min(210,w*vh/vw); w2=h*vw/vh if h<w*vh/vw else w
     s=re.sub(r'style="width:[\d.]+px;max-width:100%"',f'style="width:{w2:.0f}px;max-width:100%"',svg,count=1)
     return f'<div style="text-align:center">{s}</div>',h
 def _est(it,lab):
     if it.get('fig'):
-        lines=-(-len(it['q'])//58); return 64+max(46*lines,_fig(it['fig'],440)[1])+28
+        lines=-(-len(it['q'])//58); return 64+max(46*lines,_fig(it['fig'],520)[1])+28
     lines=-(-len(it['q'])//88); return 64+46*lines+28
 def _groups(its,limit=690):
     gs=[];cur=[];h=0
@@ -52,7 +52,7 @@ def slides(n,kind):
         for k,it in g:
             inner=p(f'<span style="color:{TEAL}">{kind}{k+1}.</span>  {E(it["q"])}',34,600,raw=True)
             if it.get('fig'):
-                body+=card('<div style="display:flex;gap:36px;align-items:center"><div style="flex:1;min-width:0">'+inner+'</div><div style="flex:none;width:440px">'+_fig(it['fig'],440)[0]+'</div></div>')
+                body+=card('<div style="display:flex;gap:36px;align-items:center"><div style="flex:1;min-width:0">'+inner+'</div><div style="flex:none;width:520px">'+_fig(it['fig'],520)[0]+'</div></div>')
             else: body+=card(inner)
         if kind=='B' and gi==len(gs)-1 and items(n)['pose']:
             body+=f'<div style="background:{SOFT};border-radius:24px;padding:20px 40px"><p style="font-size:30px;font-weight:700;line-height:1.3"><span style="color:{TEAL};font-weight:800">Make up your own.</span> {E(items(n)["pose"])} <i>Think for 30 seconds before anyone speaks.</i></p></div>'

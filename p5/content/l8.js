@@ -240,7 +240,7 @@ module.exports = {
     const g = poly([A, B, C, D], SKY) + arc(A, B, D, 24, '3 × B', RED, 70, 15) + arc(B, A, C, 24, '', RED, 0) + tx(B[0] - 34, B[1] - 10, 'B', 17, RED) + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4);
     module.exports.qbank.stretch[0].fig = svg(300, 140, 'A parallelogram ABCD in which angle A is three times angle B', g, 0.85); }
   // A3: the same figure as Start here Q4 (the question text gives the 56 degrees)
-  module.exports.qbank.stretch[2].fig = q5Fig();
+  module.exports.qbank.stretch[2].fig = q5Fig().replace('viewBox="0 0 600 190"', 'viewBox="40 10 340 180"').replace(/width:\d+px/, 'width:320px');
   // A4: square ABCD with the equilateral triangle CDE outside it
   { const s = 100, A = [50, 190], B = [A[0] + s, A[1]], C = [B[0], A[1] - s], D = [A[0], C[1]], E = [A[0] + s / 2, D[1] - s * Math.sin(rad(60))];
     chk(D, A, E, 150, 'A4 ADE'); chk(A, D, E, 15, 'A4 DAE'); chkEq(D, C, D, E, 'A4 DC DE');
