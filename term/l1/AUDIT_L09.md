@@ -56,3 +56,7 @@ Total: 17 / 24
 - S3, G3, H3 and H5 are open answers; accuracy of a drawn line cannot be checked on camera.
 - Online practice item c5 (nearest cm, tier "core") is kept as taught content; renaming it to a stretch item would change its id and `easier` links.
 - Template items for the owner: the validator's model page-fill estimate for page 5 (102%) disagrees with the PDF measurement (91%); ruler pictures on slides print very small on the deck question rows; Mi appears to hold a calculator in the shared asset (AUTHORING says never show it).
+
+## Second fix pass, 22 Oct 2026
+
+Changes are listed in `audit/FIXES2_L09.md`. Re-checked: validator 0 FAIL; 178 answer checks; 230 practice variants; slow-class script 89:35 (little margin; workbook overrun covered by the flex buffer and stated in the guide); workbook 5 pages, fill 84, 92, 95, 88, 91%; parent page one page. Start here has no rounding; the closer-mark idea is a Think harder preview. Ruler pictures are on the key slides; nothing is held up to the camera. The ruler dependency (no printed fallback) is still the owner's decision. No child has used the lesson; times are modelled.
