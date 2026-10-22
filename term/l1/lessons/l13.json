@@ -881,7 +881,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Odd and Even. Please have 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Odd plus Odd. Please have 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1838,7 +1838,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Odd and Even",
+      "Odd + Odd: Always, Sometimes, Never",
       "Have ready: 20 counters or small things of one kind, pencil and paper."
      ]
     }
@@ -3308,7 +3308,7 @@
    "Are the two numbers next to each other?"
   ],
   "when_stuck": "Let your child use counters or a drawing, and wait 10 seconds before helping. Asking 'what is double the smaller number?' works better than giving the answer. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Lesson 14: Odd and Even. Online practice: your tutor will share the practice link.",
+  "next": "Lesson 14: Odd + Odd: Always, Sometimes, Never. Online practice: your tutor will share the practice link.",
   "quote": "Double, then adjust: find the double, then move one.",
   "report_line": "Your child is learning to use doubles to add quickly and to say why a near double is 1 more or 1 less. This week: doubles to 10 + 10, tens doubles and near doubles.",
   "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
