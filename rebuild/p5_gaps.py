@@ -22,10 +22,10 @@ def story_slide_html(n,st):
     """Story break slide (optional, 2 minutes, skippable) placed right after the brain break slide, before the worksheet."""
     sub=f"{st['yshort']}   •   {st['cshort']}"+(f"   •   also spelled {st['also'].replace('also spelled ','')}" if st['also'] else '')
     body=h2('Story break: '+st['short'])+p(sub+'   •   '+st['who'],30,600,MUTED)
-    left=(f'<div style="width:1130px;flex:none;background:{WHITE};border-radius:24px;padding:30px 40px;display:flex;flex-direction:column;gap:14px">'
+    left=(f'<div style="box-sizing:border-box;width:1110px;flex:none;background:{WHITE};border-radius:24px;padding:30px 40px;display:flex;flex-direction:column;gap:14px">'
           f'<p style="font-size:33px;font-weight:600;line-height:1.36">{E(st["story"])}</p>'
           +(f'<p style="font-size:26px;font-weight:700;line-height:1.3;color:{TEAL}">Good to know: {E(st["legend"])}</p>' if st['legend'] else '')+'</div>')
-    right=(f'<div style="width:502px;flex:none;background:{SOFT};border-radius:24px;padding:28px 34px;display:flex;flex-direction:column;gap:12px">'
+    right=(f'<div style="box-sizing:border-box;width:522px;flex:none;background:{SOFT};border-radius:24px;padding:28px 34px;display:flex;flex-direction:column;gap:12px">'
            f'<p style="font-size:26px;font-weight:800;letter-spacing:2px;color:{TEAL}">TRY IT  (OPTIONAL)</p>'
            f'<p style="font-size:30px;font-weight:600;line-height:1.3">{E(st["q"])}</p>'
            f'<p style="font-size:26px;font-weight:700;color:{MUTED}">Have a go, or just listen. Pass is always fine.</p></div>')
