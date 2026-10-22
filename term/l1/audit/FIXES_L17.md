@@ -28,6 +28,7 @@ Inputs: WORKBOOK, GUIDE_DECK and HOME_PARENT_PRACTICE audits of L17, owner decis
 | L17-5 online t3 "1 cousins" | c now 2 to 4 |
 | L17-11, L17-12 (High, runner) | Not changed: shared runner file (`practice.js`); needs below |
 | L17-4, L17-6, L17-7, L17-8, L17-10 | Not changed: runner/template (pictures per item, templated choice items, generated slips, alt text, "and" message) |
+| Hand-off to Term 2 lesson 8 (strips cut in lesson 8) | s-end, SAY and parent box: strips page cut into ten strips by a grown-up, three cut after 6 cells (matches the lesson 8 fix pass) |
 | term_line on the parent page | Kept: it is the Term 2 line from the plan, shown on every parent page |
 
 Template needs: runner fix for `fields` templates in "Try a similar one" (answer boxes missing and frame filled, double full stop, raw placeholders); wider number line and array figures on the workbook; MCQ options on exit-ticket slides; aligned Share / Group choice words; per-item pictures and generated slips online.
