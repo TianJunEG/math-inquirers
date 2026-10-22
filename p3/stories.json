@@ -7,7 +7,7 @@
   "story": "Rózsa Péter was born in Budapest, in Hungary, in 1905. At university she began with chemistry, then changed to mathematics. She became one of the people who started the study of recursion. A recursive rule builds each new number from the number before it, so a pattern can keep going as far as you like. She taught at a university in Budapest and wrote a book for ordinary readers, called Playing with Infinity. She said she loved maths mainly because it is beautiful. In 1973 she became the first woman elected to the Hungarian Academy of Sciences.",
   "blurb": "Rózsa Péter (Hungary, 1905 to 1977) helped start the study of recursion: rules that build each number from the one before. In 1973 she became the first woman elected to the Hungarian Academy of Sciences.",
   "link": "Today you continue number patterns, and a rule that makes each number from the one before is the idea of recursion that she studied.",
-  "try-it": "Start at 5. The rule is: double the number, then add 1. Write the next four numbers. Can you predict the one after that?",
+  "try_it": "Start at 5. The rule is: double the number, then add 1. Write the next four numbers. Can you predict the one after that?",
   "answer": "11, 23, 47, 95 (5 x 2 + 1 = 11, 11 x 2 + 1 = 23, 23 x 2 + 1 = 47, 47 x 2 + 1 = 95). The next one is 95 x 2 + 1 = 191.",
   "confidence": "high",
   "note": ""
@@ -20,7 +20,7 @@
   "story": "Joan Clarke was born in London in 1917. She won a scholarship to Newnham College, Cambridge, to study mathematics, and she earned a double first, the top marks. Cambridge did not give women full degrees then, so hers was not officially awarded until 1948. In 1940 she joined the codebreakers at Bletchley Park and worked in Hut 8, on secret messages sent by the German navy. She used careful counting and chance to cut down how many possibilities had to be tested. Later she became deputy head of Hut 8.",
   "blurb": "Joan Clarke (England, 1917 to 1996) studied maths at Cambridge and worked as a codebreaker in Hut 8 at Bletchley Park. Codebreakers cut down how many possibilities they had to test, just as you do with letter puzzles.",
   "link": "Today you crack letter puzzles by trying possibilities and working out what must be true, and codebreakers also cut down possibilities to find the secret.",
-  "try-it": "Each letter is a different digit. A + A + A = BA, and B is not 0. Which digits are A and B? Check by adding.",
+  "try_it": "Each letter is a different digit. A + A + A = BA, and B is not 0. Which digits are A and B? Check by adding.",
   "answer": "A = 5 and B = 1, because 5 + 5 + 5 = 15 and 15 reads B A (1 then 5). No other pair of different digits works.",
   "confidence": "high",
   "note": "Sources differ slightly on the year she became deputy head and on her honours, so the story gives no years for those. Letter puzzles are our link; the sources do not say she did school-style puzzles."
@@ -33,7 +33,7 @@
   "story": "John Napier lived in Scotland, near Edinburgh. He looked after his family's farms, and maths was his hobby. He invented a set of rods with multiplication tables written on them. People call them Napier's bones. To multiply a big number, you place the rods side by side, read the rows, and add. His book about the rods came out in 1617. With the rods, you only need to add.",
   "blurb": "John Napier (Scotland, 1550 to 1617) looked after his family's farms, and maths was his hobby. He made rods with times tables written on them, called Napier's bones, so a big multiplication became reading rows and adding.",
   "link": "Napier's rods are made of times tables, so they turn multiplication into reading a table and adding, just like the tables of 6, 7, 8 and 9 we explore today.",
-  "try-it": "Make a rod for 9. Write 9 x 1 up to 9 x 9. What pattern do you see in the tens digits and in the ones digits?",
+  "try_it": "Make a rod for 9. Write 9 x 1 up to 9 x 9. What pattern do you see in the tens digits and in the ones digits?",
   "answer": "09, 18, 27, 36, 45, 54, 63, 72, 81. The tens digits go up by 1 each time (0 to 8) and the ones digits go down by 1 (9 to 1). Each pair of digits adds to 9.",
   "confidence": "high",
   "note": ""
@@ -46,7 +46,7 @@
   "story": "Bhaskara lived in India about 900 years ago. He wrote a maths book called the Lilavati. It has many word problems, with kings, elephants and pearl necklaces in them. A story often told says the book was named after his daughter. Historians have no proof that this story is true, so it is a legend. What we do know is that Bhaskara thought maths problems could be told as little tales, and that is a good way to learn.",
   "blurb": "Bhaskara II (India, 1114 to 1185) wrote the Lilavati, a maths book full of word problems about kings, elephants and pearl necklaces. A story says it was named after his daughter, but historians have no proof, so it is a legend.",
   "link": "Today we solve word problems by drawing a bar model, and Bhaskara's book is full of stories that ask us to find an unknown number.",
-  "try-it": "In the style of Bhaskara: a necklace has some pearls. Half of them fall on the floor, a quarter fall on the bed and 5 stay on the string. How many pearls were there? Draw a bar model.",
+  "try_it": "In the style of Bhaskara: a necklace has some pearls. Half of them fall on the floor, a quarter fall on the bed and 5 stay on the string. How many pearls were there? Draw a bar model.",
   "answer": "20 pearls. Half and a quarter make three quarters, so the 5 left is one quarter. One quarter is 5, so the whole is 4 x 5 = 20. Check: 10 + 5 + 5 = 20.",
   "confidence": "medium",
   "note": "A story often told says the Lilavati was named after Bhaskara's daughter (historians have no proof; it is a legend). The necklace problem in try-it is our own, written in the style of the book, not a copy of his."
@@ -59,7 +59,7 @@
   "story": "Almost nothing is known about the life of Sun Zi. We know the name of a Chinese maths book, the Sunzi Suanjing. Historians are not sure exactly when it was written, but it is more than 1,500 years old. It has a riddle about remainders: find a number that leaves 2 when we share it into groups of 3, leaves 3 in groups of 5, and leaves 2 in groups of 7. The answer is 23. The book also shows a method for riddles like this.",
   "blurb": "Almost nothing is known about Sun Zi (China, more than 1,500 years ago), but a Chinese maths book with his name, the Sunzi Suanjing, has a riddle about remainders. Its answer is 23: it leaves 2 in groups of 3, 3 in groups of 5 and 2 in groups of 7.",
   "link": "Today's \"what number am I?\" riddles use division with remainders, just like Sun Zi's riddle.",
-  "try-it": "Check the answer 23 for Sun Zi's riddle by dividing. Then find a number between 10 and 20 that leaves 1 when divided by 4 and leaves 2 when divided by 3.",
+  "try_it": "Check the answer 23 for Sun Zi's riddle by dividing. Then find a number between 10 and 20 that leaves 1 when divided by 4 and leaves 2 when divided by 3.",
   "answer": "23 / 3 = 7 r 2, 23 / 5 = 4 r 3, 23 / 7 = 3 r 2, so 23 works. The second riddle: 17 (17 / 4 = 4 r 1 and 17 / 3 = 5 r 2). Of 13 and 17, only 17 fits.",
   "confidence": "medium",
   "note": "Dates and author of the Sunzi Suanjing are uncertain; the story says so."
@@ -72,7 +72,7 @@
   "story": "Al-Hassar lived about 900 years ago, in the 12th century. Very little is known about his life, and his exact dates are not certain. Most sources say he came from Morocco. He wrote maths books about calculating. One is lost, and only part of another survives. In his chapter on fractions, he told readers to write the bottom number under a straight line and the top number above it. This is described as the first known use of the fraction bar. A little later, in 1202, Fibonacci used the same bar in his famous book.",
   "blurb": "Abu Bakr al-Hassar (Morocco and the Islamic West, 12th century; his exact dates are not known) wrote about fractions. He is described as the first known person to write the bottom number under a straight line and the top number above it, the fraction bar.",
   "link": "Today you read and compare fractions, and the bar between the top and bottom numbers is the one al-Hassar described.",
-  "try-it": "Write two thirds and three quarters with a fraction bar. Use a fraction wall, or twelfths, to decide which one is bigger.",
+  "try_it": "Write two thirds and three quarters with a fraction bar. Use a fraction wall, or twelfths, to decide which one is bigger.",
   "answer": "2/3 = 8/12 and 3/4 = 9/12, so 3/4 is bigger.",
   "confidence": "medium",
   "note": "His dates and place are uncertain, and the story says so. The claim that Fibonacci's use of the bar came after al-Hassar is stated by MAA and Muslim Heritage. The sources do not say whether Fibonacci learned the bar from al-Hassar."
@@ -85,7 +85,7 @@
   "story": "Karen Uhlenbeck was born in Cleveland, in the USA, in 1942. At university she began with physics but changed to mathematics. Think of a wire loop dipped in soapy water. The soap film pulls itself into the shape with the smallest area that fits the wire. Mathematicians call such shapes minimal surfaces. Uhlenbeck worked on them with another mathematician, Jonathan Sacks, and found new ways to study when and how they exist. In 2019 she became the first woman to win the Abel Prize, one of the top prizes in maths.",
   "blurb": "Karen Uhlenbeck (USA, born 1942) studies minimal surfaces, the shapes of smallest area, like a soap film on a wire loop. In 2019 she became the first woman to win the Abel Prize, one of the top prizes in maths.",
   "link": "Today you find area and perimeter, and she studied shapes that use the smallest area for the edge that holds them.",
-  "try-it": "Two wire frames have the same perimeter, 20 cm: a rectangle 6 cm by 4 cm, and a square 5 cm by 5 cm. Which soap film has the larger area?",
+  "try_it": "Two wire frames have the same perimeter, 20 cm: a rectangle 6 cm by 4 cm, and a square 5 cm by 5 cm. Which soap film has the larger area?",
   "answer": "Rectangle: 6 x 4 = 24 square cm. Square: 5 x 5 = 25 square cm. Both have perimeter 20 cm, and the square has the larger area, by 1 square cm.",
   "confidence": "high",
   "note": "The story uses the soap film only as a picture of 'least area'; the sources say a soap film settles into a minimal surface."
@@ -98,7 +98,7 @@
   "story": "Ibn al-Haytham was born about 1,000 years ago, probably in Basra, in what is now Iraq. He spent much of his working life in Cairo, in Egypt. He wrote the Book of Optics, in seven volumes, about light and sight. He argued that we see when light from an object enters our eyes, and he tested his ideas with experiments. He used geometry to work out how light bounces off mirrors. A story says he pretended to be mad to stay safe from a powerful ruler. Historians are not sure that is true, so it is a legend.",
   "blurb": "Ibn al-Haytham (about 965 to about 1040, born probably in Basra, worked in Cairo) wrote the Book of Optics about light and sight, and tested his ideas with experiments. He used geometry to work out where light goes when it bounces off a mirror.",
   "link": "Today you look for angles and perpendicular lines, and light bouncing off a mirror makes equal angles on either side of the perpendicular.",
-  "try-it": "A ray of light hits a flat mirror and makes an angle of 30 degrees with the mirror. The perpendicular to the mirror makes 90 degrees with it. What angle does the ray make with the perpendicular? The reflected ray leaves at the same angle on the other side of the perpendicular. How big is the angle between the two rays?",
+  "try_it": "A ray of light hits a flat mirror and makes an angle of 30 degrees with the mirror. The perpendicular to the mirror makes 90 degrees with it. What angle does the ray make with the perpendicular? The reflected ray leaves at the same angle on the other side of the perpendicular. How big is the angle between the two rays?",
   "answer": "90 - 30 = 60 degrees with the perpendicular. The reflected ray also makes 60 degrees, so the angle between the two rays is 60 + 60 = 120 degrees.",
   "confidence": "medium",
   "note": "The house-arrest story is a legend (MacTutor says it 'appears' true; Wikipedia calls it a legend). Birth place and death place are uncertain, and sources give 1039 or 1040. The equal-angles rule is the modern law of reflection and is not claimed as his own words."
@@ -111,7 +111,7 @@
   "story": "Zu Chongzhi lived in China about 1,500 years ago. His family were court astronomers who kept the calendar, and his father taught him mathematics and astronomy. Zu made a new calendar in the 460s. He measured the year as 365.24281 days. That is within about a minute of the length astronomers find today. He also showed that pi lies between 3.1415926 and 3.1415927, and he wrote a maths book with his son. Sadly that book is lost, so we do not know how he did his sums. Historians still are not sure of his exact dates.",
   "blurb": "Zu Chongzhi (China, about 1,500 years ago; sources differ on his exact dates) made a new calendar and measured the year as 365.24281 days, within about a minute of what astronomers find today. He also found that pi lies between 3.1415926 and 3.1415927.",
   "link": "Today you work with units of time, and Zu measured the year in days, hours and parts of a day.",
-  "try-it": "Zu's year was about 365 and a quarter days. How many hours is a quarter of a day? How many days are there in 4 years of that length?",
+  "try_it": "Zu's year was about 365 and a quarter days. How many hours is a quarter of a day? How many days are there in 4 years of that length?",
   "answer": "A quarter of a day is 24 / 4 = 6 hours. In 4 years: 4 x 365 = 1460 days, plus 4 quarters = 1 day, so 1461 days.",
   "confidence": "medium",
   "note": "Wikipedia and MacTutor disagree on his dates and on the polygon he used, so the story gives neither polygon nor an exact death year. The 'within about a minute' comparison is our own check: 365.24281481 - 365.24219878 days is about 53 seconds, and MacTutor says about 50 seconds. Only MacTutor says the calendar was never put into use, so the story leaves it out."
@@ -124,7 +124,7 @@
   "story": "Raymond Smullyan was born in New York in 1919. He was a mathematician, a logician, a magician and a pianist. He studied mathematics and logic on his own, and in 1959 he earned a doctorate at Princeton. He loved puzzles, and wrote many puzzle books, such as What Is the Name of This Book?, in 1978. In his famous puzzles, a knight always tells the truth and a knave always lies. You must use the clues to work out who is who. He also used puzzles to introduce big ideas in logic to readers of all ages.",
   "blurb": "Raymond Smullyan (USA, 1919 to 2017) was a mathematician, logician, magician and pianist who loved puzzles. In his famous puzzles a knight always tells the truth and a knave always lies, and you use the clues to work out who is who.",
   "link": "Today you solve logic puzzles with ticks and crosses, just like working out who is a knight and who is a knave.",
-  "try-it": "Ana says: 'Ben is a knave.' Ben says: 'We are both knights.' A knight always tells the truth and a knave always lies. Who is the knight and who is the knave?",
+  "try_it": "Ana says: 'Ben is a knave.' Ben says: 'We are both knights.' A knight always tells the truth and a knave always lies. Who is the knight and who is the knave?",
   "answer": "Ana is a knight and Ben is a knave. If Ben were a knight, both would be knights, but then Ana's words 'Ben is a knave' would be a lie, which a knight never tells. So Ben is a knave, his words are false, and Ana's words are true, so she is a knight.",
   "confidence": "high",
   "note": ""
