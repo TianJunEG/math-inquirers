@@ -17,7 +17,7 @@
    "Subtraction as a gap: how many more, how many fewer",
    "Relation between addition and subtraction (check by adding)"
   ],
-  "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Counting up as a subtraction method and the word difference sit inside the Primary 1 subtraction and inverse-relationship outcomes (docs/moe/syllabus_by_level.md, p. 31). The written renaming (borrowing) layout is not taught here."
+  "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose (for example two-digit minus two-digit within 100 and counting up across a ten), so Start here items such as 68 - 25 are explored in class with the kit and a worked first step before children try them alone; if a child cannot reach one after the class exploration, point them to the Think harder page. This is not a claim that the program matches or covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Counting up as a subtraction method and the word difference sit inside the Primary 1 subtraction and inverse-relationship outcomes (docs/moe/syllabus_by_level.md, p. 31). The written renaming (borrowing) layout is not taught here."
  },
  "contest_moves": [
   "difference as a gap (how many more)",
@@ -684,7 +684,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: take away, then check by adding. Question 5: Mei has 45 stickers and gives away 13. Draw it. Question 6: Siti says 59 take away 20 is 57. Question 7: a bus has 64 seats and children sit on 21 of them."
+      "text": "Page 2. Question 4: take away, then check by adding. Question 5: Mei has 45 stickers and gives away 13. Draw it. Question 6: Kumar says 59 take away 20 is 57. Question 7: a bus has 64 seats and 21 children are sitting."
      },
      {
       "k": "WORK",
@@ -1460,7 +1460,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 39, because she took away 2 ones instead of 2 tens. Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 39, because Kumar took away 2 ones instead of 2 tens. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-choice",
@@ -1705,7 +1705,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "___ tens and ___ ones are left",
+      "text": "___ tens and ___ ones are left.",
       "ans": "4 tens, 8 ones",
       "val": [
        4,
@@ -1850,14 +1850,20 @@
      "Not adding back the number taken away (adding 46 + 12).",
      "Writing 58 for the check."
     ],
-    "mins": 3,
-    "lines": 0
+    "mins": 2.5,
+    "lines": 0,
+    "visual": {
+     "type": "bundles",
+     "tens": 4,
+     "ones": 6,
+     "style": "kit"
+    }
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Mei has 45 stickers. She gives away 13. How many stickers are left? Draw bars and squares to help.",
+    "text": "Mei has 45 stickers. She gives away 13. How many stickers are left? Draw a bar for each ten and a square for each one.",
     "draw": true,
     "parts": [
      {
@@ -1878,17 +1884,18 @@
      "Writing 58 (adding instead of taking away)."
     ],
     "mins": 3.5,
-    "lines": 0
+    "lines": 0,
+    "draw_strokes": 14
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Siti says 59 - 20 = 57. Check her tens.",
+    "text": "Kumar says 59 - 20 = 57.",
     "parts": [
      {
       "l": "a",
-      "text": "Is Siti right? Circle Yes or No.",
+      "text": "Is Kumar right? Circle Yes or No.",
       "ans": "No",
       "val": "no"
      },
@@ -1897,36 +1904,30 @@
       "text": "59 - 20 = ___",
       "ans": "39",
       "val": 39
-     },
-     {
-      "l": "c",
-      "text": "I know because ___.",
-      "ans": "",
-      "val": "open"
      }
     ],
-    "answer": "No. 39. She took away 2 ones instead of 2 tens (57 is 59 - 2).",
+    "answer": "No. 39. He took away 2 ones instead of 2 tens (57 is 59 - 2).",
     "val": [
      39
     ],
     "hint": "Build 59 with your kit. Take away 2 bars, not 2 squares. What is left?",
-    "solution": "59 is 5 tens and 9 ones. Take away 2 tens: 3 tens and 9 ones, which is 39. Siti took away 2 ones, so she got 57.",
+    "solution": "59 is 5 tens and 9 ones. Take away 2 tens: 3 tens and 9 ones, which is 39. Kumar took away 2 ones, so he got 57.",
     "mistakes": [
-     "Saying she is right.",
+     "Saying he is right.",
      "Writing 79 (adding 20)."
     ],
-    "mins": 2.5,
-    "lines": 1
+    "mins": 2,
+    "lines": 0
    },
    {
     "id": "S7",
     "page": 2,
     "tier": "start",
-    "text": "A bus has 64 seats. Children sit on 21 of them. How many seats are empty?",
+    "text": "A bus has 64 seats. 21 children are sitting. How many seats are empty?",
     "parts": [
      {
       "l": "",
-      "text": "___ seats are empty",
+      "text": "___ seats are empty.",
       "ans": "43",
       "val": 43
      }
@@ -1950,98 +1951,80 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Mei has 62 beads. Ravi has 38 beads. Find how many more beads Mei has than Ravi. Fill in the blanks.",
+    "text": "Mei has 62 beads. Ravi has 38 beads. Find how many more beads Mei has than Ravi.",
     "parts": [
      {
-      "l": "a",
-      "text": "38 + ___ = 40",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "b",
-      "text": "40 + ___ = 60",
-      "ans": "20",
-      "val": 20
-     },
-     {
-      "l": "c",
-      "text": "60 + ___ = 62",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "d",
-      "text": "Mei has ___ more beads",
+      "l": "",
+      "text": "Mei has ___ more beads.",
       "ans": "24",
       "val": 24
      }
     ],
-    "answer": "2, 20, 2, so 24 more beads",
+    "answer": "24 more beads (38 to 40 is 2, 40 to 60 is 20, 60 to 62 is 2)",
     "val": [
-     2,
-     20,
-     2,
      24
     ],
     "hint": "38 needs 2 more to reach 40. Then jump by tens to 60. Then hop to 62. Add up the hops and the jump.",
     "solution": "38 to 40 is 2. 40 to 60 is 20. 60 to 62 is 2. The whole gap is 2 + 20 + 2 = 24. Check: 38 + 24 = 62.",
     "mistakes": [
      "Forgetting that two tens is 20 (writing 2).",
-     "Writing 62 - 38 as 36 or 34."
+     "Writing 62 - 38 as 36 or 34.",
+     "Subtracting the smaller digit from the larger in each column (62 - 38 = 36)."
     ],
     "mins": 4,
-    "lines": 0
+    "lines": 1,
+    "visual": {
+     "type": "number_line",
+     "start": 30,
+     "end": 70,
+     "step": 2,
+     "label_every": 10,
+     "marks": [
+      38,
+      62
+     ],
+     "highlight": [
+      38,
+      62
+     ]
+    }
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Find 83 - 77. Fill in the blanks.",
+    "text": "Find 83 - 77. Show how you found it.",
     "parts": [
      {
-      "l": "a",
-      "text": "77 + ___ = 80",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "b",
-      "text": "80 + ___ = 83",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "c",
+      "l": "",
       "text": "83 - 77 = ___",
       "ans": "6",
       "val": 6
      }
     ],
-    "answer": "3, 3, so 83 - 77 = 6",
+    "answer": "6 (77 to 80 is 3, 80 to 83 is 3)",
     "val": [
-     3,
-     3,
      6
     ],
     "hint": "What is the next ten after 77? How far is it? Then how far from that ten to 83?",
     "solution": "77 to 80 is 3. 80 to 83 is 3. The gap is 3 + 3 = 6. Check: 77 + 6 = 83.",
     "mistakes": [
      "Writing only one hop (3).",
-     "Taking away 83 - 7 = 76."
+     "Taking away 83 - 7 = 76.",
+     "Subtracting the smaller digit from the larger in each column (83 - 77 = 14)."
     ],
     "mins": 3,
-    "lines": 0
+    "lines": 2
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. How many more stickers than Ali does Ben have now?",
+    "text": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. Find how many more stickers Ben has than Ali now.",
     "parts": [
      {
       "l": "",
-      "text": "Ben has ___ more stickers",
+      "text": "Ben has ___ more stickers.",
       "ans": "7",
       "val": 7
      }
@@ -2067,7 +2050,7 @@
     "parts": [
      {
       "l": "",
-      "text": "___ pages are left",
+      "text": "___ pages are left.",
       "ans": "25",
       "val": 25
      }
@@ -2080,10 +2063,11 @@
     "solution": "46 to 50 is 4. 50 to 70 is 20. 70 to 71 is 1. The gap is 4 + 20 + 1 = 25. Check: 46 + 25 = 71.",
     "mistakes": [
      "Adding 71 + 46.",
-     "Forgetting the last hop of 1 (24)."
+     "Forgetting the last hop of 1 (24).",
+     "Subtracting the smaller digit from the larger in each column (71 - 46 = 35)."
     ],
     "mins": 4,
-    "lines": 0
+    "lines": 2
    }
   ],
   "go": [
@@ -2091,19 +2075,33 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Find each answer. Circle the quicker way for each. Then write why.",
+    "text": "Fill in the blanks. Circle the quicker way for each.",
     "parts": [
      {
       "l": "a",
-      "text": "71 - 68 = ___ Quicker: take away / count up",
+      "text": "71 - 68 = ___",
       "ans": "3",
-      "val": 3
+      "val": 3,
+      "choices": [
+       "take away",
+       "count up"
+      ]
      },
      {
       "l": "b",
-      "text": "71 - 20 = ___ Quicker: take away / count up",
+      "text": "71 - 20 = ___",
       "ans": "51",
-      "val": 51
+      "val": 51,
+      "choices": [
+       "take away",
+       "count up"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "I know because ___.",
+      "ans": "",
+      "val": "open"
      }
     ],
     "answer": "71 - 68 = 3 (count up: the numbers are close). 71 - 20 = 51 (take away: 2 tens).",
@@ -2118,7 +2116,7 @@
      "Counting up from 20 to 71 (too long)."
     ],
     "mins": 6,
-    "lines": 3
+    "lines": 2
    },
    {
     "id": "G2",
@@ -2149,7 +2147,7 @@
     "val": [
      36
     ],
-    "hint": "Take away: take away the 6 tens, then the 4 ones. Count up: hop from 64 to 70, then jump by tens to 100.",
+    "hint": "Take away: take away the 6 tens, then the 4 ones. Count up: hop from 64 to 70, then jump by tens to 100. You can draw a number line from 64 to 100.",
     "solution": "Take away: 100 - 60 = 40, and 40 - 4 = 36. Count up: 64 to 70 is 6, and 70 to 100 is 30, so 6 + 30 = 36. Both ways give 36. Check: 64 + 36 = 100.",
     "mistakes": [
      "Writing 164 (adding).",
@@ -2210,7 +2208,7 @@
    "tier": "investigation",
    "title": "When is counting up quicker?",
    "first": "Find 52 - 49 and 52 - 10. Try take away and count up for each one. Which way is quicker for each?",
-   "text": "Make up three subtractions where counting up is quicker, and three where taking away is quicker. Many answers are right. What do you notice about the two numbers?",
+   "text": "Write two subtractions where counting up is quicker, and two where taking away is quicker. Many answers are right. Then finish: Counting up is quicker when ___.",
    "lines": 4,
    "answer": "Counting up is quicker when the two numbers are close together, so the gap is short (52 - 49 is 3). Taking away is quicker when the number taken away is small or a whole number of tens (52 - 10 is 42). If the numbers are far apart and the small number is awkward, both ways take longer.",
    "val": [
@@ -2558,7 +2556,7 @@
     "id": "c4",
     "tier": "core",
     "type": "number",
-    "q": "A bus has 86 seats. Children sit on 32 of them. How many seats are empty?",
+    "q": "A bus has 86 seats. 32 children are sitting. How many seats are empty?",
     "answer": 54,
     "hint": "Empty seats are what is left when we take away the seats that have a child.",
     "steps": [
@@ -2589,7 +2587,7 @@
        14
       ]
      },
-     "q": "A bus has {a} seats. Children sit on {b} of them. How many seats are empty?",
+     "q": "A bus has {a} seats. {b} children are sitting. How many seats are empty?",
      "answer": "a-b",
      "hint": "Empty seats are what is left when we take away the seats that have a child.",
      "steps": [
@@ -2744,7 +2742,7 @@
     "id": "t3",
     "tier": "stretch",
     "type": "number",
-    "q": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. How many more stickers than Ali does Ben have now?",
+    "q": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. Find how many more stickers Ben has than Ali now.",
     "answer": 7,
     "easier": "c1",
     "hint": "Find each child's new number. Or think: both got the same 10 more.",
@@ -2789,7 +2787,7 @@
      "derive": {
       "b": "a+g"
      },
-     "q": "Ali has {a} stickers and Ben has {b} stickers. Then each child gets {c} more stickers. How many more stickers than Ali does Ben have now?",
+     "q": "Ali has {a} stickers and Ben has {b} stickers. Then each child gets {c} more stickers. Find how many more stickers Ben has than Ali now.",
      "answer": "(b+c)-(a+c)",
      "hint": "Find each child's new number. Or think: both got the same {c} more.",
      "steps": [
@@ -2996,13 +2994,13 @@
     "steps": [
      "Write the two numbers in your story and ask how many more.",
      "Count up from the smaller number: hop to the next ten, jump by tens, hop to the greater number.",
-     "Check: the smaller number plus your gap should make the greater number. For example: Ali has 47 cards and Ben has 71 cards. 47 to 50 is 3, 50 to 70 is 20, 70 to 71 is 1, so the gap is 24. Check: 47 + 24 = 71."
+     "Check: the smaller number plus your gap makes the greater number. For example, 47 + 24 = 71."
     ]
    }
   ]
  },
  "parent": {
-  "summary": "We learned two ways to find the answer to a subtraction. To find how many are left, we take away the tens, then the ones. To find how far apart two numbers are (the difference), we count up the gap: hop to the next ten, jump by tens, hop to the number. Your child built numbers with bars and squares, took them away, and counted up gaps such as 38 to 62.",
+  "summary": "We learned two ways to find the answer to a subtraction. To find how many are left, we take away the tens, then the ones. To find how far apart two numbers are (the difference), we count up the gap. This term goes beyond the school Primary 1 syllabus on purpose, with bars and squares to help.",
   "words": [
    "take away: find what is left (57 - 24 = 33)",
    "count up: find the gap from the smaller number to the greater number",

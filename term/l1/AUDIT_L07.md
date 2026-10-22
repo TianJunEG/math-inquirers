@@ -50,4 +50,13 @@ Total: 19 / 24
 
 ## Known limits
 
-- Never trialled with children; times and difficulty are modelled. Count-up for gaps that cross a ten is only lightly practised; the written renaming layout is deliberately not taught; the Investigation has little writing space on page 5.
+- Never trialled with children; times and difficulty are modelled. Count-up for gaps that cross a ten is only lightly practised; the written renaming layout is deliberately not taught.
+- Open after the fix pass (see `audit/FIXES_L07.md`): S1/S4 bar pictures are drawn smaller than the 15 mm kit pieces and the look-back print is small (both template); the key prints a section heading at the foot of page 1 (template); Mi holds a calculator (owner asset); E3 (quicker-way choice) is still an exit item (rule 25 enrichment, kept because it tests objective 4); Siti/Right-Wrong wording across lessons is a cross-lesson matter.
+
+## Fix pass, 22 Oct 2026 (re-score after the independent workbook audit)
+
+Independent audit scored Instrument A 17/24 and tier compliance 12/14 (86%). After the fixes the author re-scores honestly (no child observed):
+
+- Instrument A: 1 low floor 2; 2 depth 1; 3 generalise 2; 4 justify 2 (say-why prompts now only in Think harder, Go further and Investigation); 5 multiple paths 2; 6 ladder 2 (T1 now has a number line and no printed hops, T2 has none, so Think harder asks the child to choose the method; G1 to G3 still step up); 7 inquiry 1; 8 context 1; 9 posing 1 (Investigation now asks for four subtractions, with room to write); 10 metacognition 2; 11 compacting 1; 12 extension 1 (the two-digit minus two-digit items stay in Start here by owner decision of 22 Oct 2026). Total 18/24.
+- Tier compliance: Start here 7/7 reachable after class exploration with the kit (S1, S2, S5, S6 are direct; S3 is a printed worked step; S4 has the kit picture; S7 is a story with a 2-digit take-away that the lesson teaches). They are above the school P1 quiz range on purpose, and the tutor guide (strand note) and the parent page now say so plainly, with no MOE-aligned claim. A child who cannot reach S3, S4 or S7 after class is pointed to Think harder. Think harder 4/4, Go further 3/3. 14/14 on the author's reading; the auditor counted S3 and S4 as needing the taught method, so treat 12/14 as the cautious figure.
+- Start here time: now 19 minutes (was 20). Validator: 17 pass, 0 warn, 0 fail; workbook 6 pages, fills 90, 94, 96, 95, 99, 89%.
