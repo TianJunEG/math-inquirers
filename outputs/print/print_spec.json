@@ -1,0 +1,105 @@
+[
+ {
+  "level": 1,
+  "source_pages": 58,
+  "print_pages": 64,
+  "sheets": 32,
+  "blank_pages": 6,
+  "cutout_pages": [
+   53,
+   54,
+   55,
+   56,
+   57,
+   58
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P1_Workbook_PRINT.pdf"
+ },
+ {
+  "level": 2,
+  "source_pages": 66,
+  "print_pages": 74,
+  "sheets": 37,
+  "blank_pages": 8,
+  "cutout_pages": [
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P2_Workbook_PRINT.pdf"
+ },
+ {
+  "level": 3,
+  "source_pages": 58,
+  "print_pages": 64,
+  "sheets": 32,
+  "blank_pages": 6,
+  "cutout_pages": [
+   53,
+   54,
+   55,
+   56,
+   57,
+   58
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf"
+ },
+ {
+  "level": 4,
+  "source_pages": 66,
+  "print_pages": 76,
+  "sheets": 38,
+  "blank_pages": 10,
+  "cutout_pages": [
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P4_Workbook_PRINT.pdf"
+ },
+ {
+  "level": 5,
+  "source_pages": 57,
+  "print_pages": 62,
+  "sheets": 31,
+  "blank_pages": 5,
+  "cutout_pages": [
+   53,
+   54,
+   55,
+   56,
+   57
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P5_Workbook_PRINT.pdf"
+ },
+ {
+  "level": 6,
+  "source_pages": 55,
+  "print_pages": 58,
+  "sheets": 29,
+  "blank_pages": 3,
+  "cutout_pages": [
+   53,
+   54,
+   55
+  ],
+  "content_scale": 0.9429,
+  "file": "outputs/print/Math_Inquirers_P6_Workbook_PRINT.pdf"
+ }
+]
