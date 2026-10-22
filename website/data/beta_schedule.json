@@ -28,7 +28,7 @@
     }
    ],
    "first": "Tue 24 Nov",
-   "last": "Fri 25 Dec",
+   "last": "Thu 24 Dec",
    "lessons": [
     {
      "n": 1,
@@ -95,12 +95,14 @@
     },
     {
      "n": 10,
-     "date": "2026-12-25",
-     "day": "Fri",
+     "date": "2026-12-24",
+     "day": "Thu",
      "start": "09:00",
-     "end": "10:30"
+     "end": "10:30",
+     "moved": true
     }
-   ]
+   ],
+   "week5_exception": "Thu 24 Dec 09:00\u201310:30 instead of Fri 25 Dec"
   },
   {
    "id": "L2A",
@@ -121,7 +123,7 @@
     }
    ],
    "first": "Tue 24 Nov",
-   "last": "Fri 25 Dec",
+   "last": "Thu 24 Dec",
    "lessons": [
     {
      "n": 1,
@@ -188,12 +190,14 @@
     },
     {
      "n": 10,
-     "date": "2026-12-25",
-     "day": "Fri",
+     "date": "2026-12-24",
+     "day": "Thu",
      "start": "10:30",
-     "end": "12:00"
+     "end": "12:00",
+     "moved": true
     }
-   ]
+   ],
+   "week5_exception": "Thu 24 Dec 10:30\u201312:00 instead of Fri 25 Dec"
   },
   {
    "id": "L3A",
@@ -214,7 +218,7 @@
     }
    ],
    "first": "Tue 24 Nov",
-   "last": "Fri 25 Dec",
+   "last": "Thu 24 Dec",
    "lessons": [
     {
      "n": 1,
@@ -281,12 +285,14 @@
     },
     {
      "n": 10,
-     "date": "2026-12-25",
-     "day": "Fri",
+     "date": "2026-12-24",
+     "day": "Thu",
      "start": "12:00",
-     "end": "13:30"
+     "end": "13:30",
+     "moved": true
     }
-   ]
+   ],
+   "week5_exception": "Thu 24 Dec 12:00\u201313:30 instead of Fri 25 Dec"
   },
   {
    "id": "L4A",
@@ -307,7 +313,7 @@
     }
    ],
    "first": "Tue 24 Nov",
-   "last": "Fri 25 Dec",
+   "last": "Wed 23 Dec",
    "lessons": [
     {
      "n": 1,
@@ -374,12 +380,14 @@
     },
     {
      "n": 10,
-     "date": "2026-12-25",
-     "day": "Fri",
-     "start": "13:30",
-     "end": "15:00"
+     "date": "2026-12-23",
+     "day": "Wed",
+     "start": "12:45",
+     "end": "14:15",
+     "moved": true
     }
-   ]
+   ],
+   "week5_exception": "Wed 23 Dec 12:45\u201314:15 instead of Fri 25 Dec"
   },
   {
    "id": "L5A",
@@ -460,10 +468,11 @@
     },
     {
      "n": 9,
-     "date": "2026-12-25",
-     "day": "Fri",
-     "start": "15:00",
-     "end": "16:30"
+     "date": "2026-12-23",
+     "day": "Wed",
+     "start": "09:00",
+     "end": "10:30",
+     "moved": true
     },
     {
      "n": 10,
@@ -472,7 +481,8 @@
      "start": "11:15",
      "end": "12:45"
     }
-   ]
+   ],
+   "week5_exception": "Wed 23 Dec 09:00\u201310:30 instead of Fri 25 Dec"
   },
   {
    "id": "L6A",
@@ -567,5 +577,8 @@
     }
    ]
   }
+ ],
+ "no_lessons_on": [
+  "2026-12-25"
  ]
 }

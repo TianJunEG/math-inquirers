@@ -30,8 +30,18 @@ Source data: `website/data/beta_schedule.json` (published groups, feeds the sign
 ## Release rule
 When a published group reaches 8 children, release the best-fitting reserve for that level: publish its two times as "Group B", add it to the sign-up page, and mark the full group "Full". Never publish a reserve before a group is full. If more than four groups fill, the next step is to free more of your own time, not to overlap.
 
+## Christmas Day (decided: skip it)
+No lessons on Fri 25 Dec. The five Friday sessions of week 5 move into free windows on Wed 23 and Thu 24 Dec (checked against both calendars, 45 minutes clear of existing events):
+| Group | Replacement |
+|---|---|
+| Level 1 | Thu 24 Dec 9:00-10:30am (last lesson) |
+| Level 2 | Thu 24 Dec 10:30am-12:00pm (last lesson) |
+| Level 3 | Thu 24 Dec 12:00-1:30pm (last lesson) |
+| Level 4 | Wed 23 Dec 12:45-2:15pm (last lesson) |
+| Level 5 | Wed 23 Dec 9:00-10:30am (lesson 9; lesson 10 stays Sun 27 Dec) |
+Level 6 is unaffected (Thu 24 and Sat 26 Dec). Reserved Wed/Thu groups released later share Wed 23 and Thu 24 Dec with these sessions in week 5, so a released reserve needs its own week-5 times.
+
 ## Open points
-- Fri 25 Dec (Christmas Day) is lesson 10 for Level 1-4 groups; decide whether to move it (Thu 24 Dec works for Levels 1-4, not Level 5).
 - Assumed school holidays from mid-November (weekday daytime slots for children). Confirm against the MOE 2026 calendar.
 - Beta fee shown as S$25 a lesson, S$250 for all 10 lessons, marked "to confirm".
 - Tutors: the schedule assumes one tutor (you) for all 12 weekly sessions, about 18 teaching hours a week.

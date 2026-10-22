@@ -52,7 +52,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 
 <section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>A taste of Lesson 1</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
 
-<section class="sec" id="classes"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Choose a group</h2><p class="muted">Lessons start <b>Mon 23 Nov</b>. Each group meets twice a week for 5 weeks, 90 minutes a lesson, live online, up to 8 children. If a group fills, we open another.</p><div class="draft">Beta fee: S$<span id="betaPer"></span> a lesson, S$<span id="betaTot"></span> for all 10 lessons (to confirm).</div></div><div class="sessions" id="sess"></div><p class="small muted" style="margin-top:12px">Fri 25 Dec is Christmas Day, so the last lesson of a Friday group may move (to confirm). Each group has the same two weekly times for all 5 weeks.</p></section>
+<section class="sec" id="classes"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Choose a group</h2><p class="muted">Lessons start <b>Mon 23 Nov</b>. Each group meets twice a week for 5 weeks, 90 minutes a lesson, live online, up to 8 children. If a group fills, we open another.</p><div class="draft">Beta fee: S$<span id="betaPer"></span> a lesson, S$<span id="betaTot"></span> for all 10 lessons (to confirm).</div></div><div class="sessions" id="sess"></div><p class="small muted" style="margin-top:12px">No lessons on Fri 25 Dec (Christmas Day). Otherwise each group keeps the same two weekly times for all 5 weeks; where the final week differs it is shown on the card.</p></section>
 
 <section class="sec" id="price"><div class="shead"><span class="eyebrow">Price</span><h2>Everything included</h2></div><div class="pricebox"><div class="pcard hot"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:var(--card)">Introductory price</span><div class="amt" id="pE"></div><p id="pEnote"></p></div><div class="pcard"><span class="tag" style="justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--ink);border-radius:999px;padding:3px 10px">Regular price</span><div class="amt" id="pR"></div><p>S$65 a lesson for new families from Term 2 2027 (22 Mar). Founding families keep S$50 for all of 2027 if they enrol every term.</p></div></div><p class="small muted">For 15 hours of teaching, the printed workbook, cut-out kit, Inquiry Journal and certificate. No payment now: we confirm your place first and then send payment details.</p></section>
 
@@ -109,7 +109,7 @@ $("lessons").innerHTML=LESSONS.map(function(l,i){return '<div class="lesson"><di
 $("betaPer").textContent=CONFIG.beta.per;$("betaTot").textContent=CONFIG.beta.total;
 function t12(t){var p=t.split(":"),h=+p[0],m=p[1],a=h>=12?"pm":"am";h=h%12||12;return h+":"+m+a}
 function slotText(c){return c.sessions.map(function(x){return x.day+" "+t12(x.start)+"–"+t12(x.end)}).join(" & ")}
-$("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill p-ok">Open</span><span class="small muted">Up to '+c.seats+' children</span></div><h3>Level '+c.level+' <span class="muted small">ages '+esc(c.ages)+'</span></h3><p>'+c.sessions.map(function(x){return '<b>'+esc(x.day)+'</b> '+esc(t12(x.start))+'–'+esc(t12(x.end))}).join('<br>')+'<br><span class="muted small">First lesson '+esc(c.first)+' · last '+esc(c.last)+'<br>Live video class</span></p><a class="btn sm" href="#register" data-pick="'+c.id+'" data-level="'+c.level+'" style="justify-self:start">Choose Level '+c.level+'</a></div>'}).join("");
+$("sess").innerHTML=CONFIG.classes.map(function(c){return '<div class="session"><div class="row" style="justify-content:space-between"><span class="pill p-ok">Open</span><span class="small muted">Up to '+c.seats+' children</span></div><h3>Level '+c.level+' <span class="muted small">ages '+esc(c.ages)+'</span></h3><p>'+c.sessions.map(function(x){return '<b>'+esc(x.day)+'</b> '+esc(t12(x.start))+'–'+esc(t12(x.end))}).join('<br>')+'<br><span class="muted small">First lesson '+esc(c.first)+' · last '+esc(c.last)+(c.exc?'<br>'+esc(c.exc):'')+'<br>Live video class</span></p><a class="btn sm" href="#register" data-pick="'+c.id+'" data-level="'+c.level+'" style="justify-self:start">Choose Level '+c.level+'</a></div>'}).join("");
 function fillGroups(){var lv=$("r4").selectedIndex+1;var g=CONFIG.classes.filter(function(c){return c.level===lv});$("r5").innerHTML=g.map(function(c){return '<option value="'+c.id+'">'+esc("Level "+c.level+" · "+slotText(c)+" · from "+c.first)+'</option>'}).join("")+'<option value="any">Any group for this level</option>'}
 fillGroups();$("r4").addEventListener("change",fillGroups);
 ["waShow","waFoot"].forEach(function(i){$(i).textContent=CONFIG.whatsappShow});["emShow","emFoot"].forEach(function(i){$(i).textContent=CONFIG.email});
@@ -130,7 +130,15 @@ $("reg").addEventListener("submit",function(e){
 </script>'''
 import json
 sch=json.load(open('data/beta_schedule.json'))
-cls=[dict(id=g['id'],level=g['level'],ages=g['ages'],seats=g['seats'],sessions=g['sessions'],first=g['first'],last=g['last']) for g in sch['groups']]
+import datetime as _dt
+def _t12(t):
+    h,m=map(int,t.split(':')); return '%d:%02d%s'%((h%12) or 12,m,'pm' if h>=12 else 'am')
+def _exc(g):
+    for l in g['lessons']:
+        if l.get('moved'):
+            return 'Week 5: %s %s–%s (not Fri 25 Dec)'%(_dt.date.fromisoformat(l['date']).strftime('%a %-d %b'),_t12(l['start']),_t12(l['end']))
+    return ''
+cls=[dict(id=g['id'],level=g['level'],ages=g['ages'],seats=g['seats'],sessions=g['sessions'],first=g['first'],last=g['last'],exc=_exc(g)) for g in sch['groups']]
 html=html.replace('__CLASSES__',json.dumps(cls)).replace('__BETA__',json.dumps(dict(per=sch['price']['per_lesson'],total=sch['price']['total'])))
 open('mi_signup.html','w').write(html)
 print(len(html))
