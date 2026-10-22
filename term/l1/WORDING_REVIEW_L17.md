@@ -19,7 +19,7 @@ Every child-facing sentence (sneak-peek, slides, workbook S1-S7, T1-T4, G1-G3, I
 ## Checked and left as is
 - Fixed question words: "How many sweets does each friend get?", "How many pots does Ben use?", "in all", "left over", "How many more ... to fill one more bag?". No "bigger", no "divide" in any child text (the word is a grown-up word on the parent page only).
 - Quantities are numerals everywhere ("12 sweets", "3 friends"); number words only inside spoken lines where the tutor reads a number aloud.
-- Names: Mei, Ali, Ben, Ravi, Jenny, Wei, Lily, Jamie, Amelia, Jason, Siti (sneak-peek and home only), Aisha as the error-spotter. Siti is never the error-spotter.
+- Names: Mei, Ali, Ben, Ravi, Jenny, Wei, Lily, Jamie, Amelia, Jason, Siti (home practice only), Aisha as the error-spotter. Siti is never the error-spotter.
 - School-paper frames used: "[] groups of [] = []", "[] × [] = []", circle Share or Group (like Yes or No), MCQ with a bracket, "Show ... equally" and "Is ... correct? Circle Yes or No." True/False is kept for Lesson 18 and later.
 - Teaching sentences are in slides and the script, not in questions (rule 24): "count Ben too" is only a hint and a slide chip; "left over means not enough to make another group" is on a slide.
 - Beyond-Primary-1 statement: present in the moe note, the guide opening and the parent page (left over, the grown-up sign, all the ways to share 12); no MOE, SASMO or GEP claim anywhere.

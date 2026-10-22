@@ -1,0 +1,3421 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-08",
+ "level": 1,
+ "term": 2,
+ "lesson": 18,
+ "lesson_in_term": 8,
+ "title": "Times Stories",
+ "big_idea": "Draw equal strips, then solve",
+ "child_idea": "In a times story every group is the same size, so we draw equal boxes in a strip. We find the total, then do the next step. Twice as many means two equal strips.",
+ "skill": "Representing with strips",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Multiplication and Division",
+  "topics": [
+   "Equal-group word problems with products within 40 (Primary 1, Multiplication and Division 3.1 to 3.4, p. 31)",
+   "One extra step after a total: add or take away (Primary 1, Addition and Subtraction, p. 31)",
+   "Drawing a strip (bar model) and \"twice as many\" or \"3 times as many\" (not named in the Primary 1 syllabus topics)"
+  ],
+  "note": "Strand label for the tutor only. Equal-group stories with totals within 40, and one extra step of adding or taking away, are in the school Primary 1 syllabus (p. 31); Start here stays there (totals to 20 for the groups, answers within 40). BEYOND PRIMARY 1 ON PURPOSE: drawing the story as a strip (a bar model: schools use it from Primary 2, and this program says strip to children and \"strips (called bar models at school)\" to parents) and \"twice as many\" and \"3 times as many\" comparisons, with a total or a transfer, at Think harder and Go further. Owner decision of 22 Oct 2026: strong content with scaffolding, said plainly to families on the parent page. The strip is the whole lesson: if a child cannot draw it, they may use cups of counters. Do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order (owner default): 3 groups of 5 is 3 × 5; either order is accepted. Contest tags (tutor only): twice as many is two equal strips, a transfer after twice as many (T4), a total with a hidden unit (G3), doubling again and again (Investigation)."
+ },
+ "contest_moves": [
+  "twice as many is two equal strips, not 2 more (T2, T3)",
+  "a transfer after twice as many: Ali gives some so they have the same (T4)",
+  "a total with a hidden unit: 3 times as many, 24 together (G3)",
+  "doubling again and again: 3, 6, 12, 24 (Investigation)"
+ ],
+ "objectives": [
+  "Draw a story with same-size groups as a strip of equal boxes, write the number in each box and find the total.",
+  "Solve a story with a total and one more step: loose items added, or items taken away.",
+  "Match a story to its strip, and say when the boxes are not all the same.",
+  "Think harder: draw \"twice as many\" as two equal strips (not 2 more), find the total of two children, and use a transfer to make two amounts equal.",
+  "Go further: a story with groups of different sizes and a hidden start, and \"3 times as many\" with a total."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Two strips and the gap: who has more, and how many more (Lesson 12)",
+   "4 groups of 5 is 4 × 5: how many groups, how many in each, how many in all (Lesson 15)",
+   "One step at a time: 6 and 4 more, then give away 3 (Lesson 10)"
+  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up shows two strips with a picture, shows 4 bags of 5 and shows a two-step story with its two steps written out. The words strip, box, each, loose and twice as many are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Same-size groups as repeated adding (taught again, no holiday lesson needed)"
+  ],
+  "safe_to_miss": false,
+  "note": "Lessons 12 and 15 to 18 build on each other and Lesson 20 uses strips for price stories, so try not to miss Lesson 18. A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 20. A child who joins at Lesson 18 can follow, because the warm-up shows a strip, same-size groups and a two-step story with pictures; the Mini-lesson then draws the strip step by step."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook, kept flat, with the strips page (page 6) already cut into strips by a grown-up",
+   "About 20 small things of one kind (counters, buttons, dry pasta, coins). Not food",
+   "3 paper cups or plates",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Two or three paper strips and some counters to show on camera if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Strips page (page 6): ten strips of 10 equal cells in two colours, with dotted lines between the cells. A grown-up cuts out the strips before the lesson; a strip can be cut to any length at a dotted line"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. A grown-up does the cutting; children do not use scissors in the lesson. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Nothing in Explore needs more than 20 counters, 3 cups and 3 strips. A child with no strips draws boxes in a row."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 26
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 26,
+    "end": 38
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 38,
+    "end": 42
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 42,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 14 minutes of cups, counters and paper strips: a story as a strip, matching strips to stories, a total plus loose items, and twice as many. The mini-lesson has 12 because it draws the strip step by step, adds the two-step story and the twice-as-many strip. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time. Slow class: the workbook part is the tightest (see the guide timing table); say that pages 3 to 5 are for home.",
+  "skip_order": [
+   "Start with: cut the Mini-lesson check slide to two of the three stories",
+   "Then: shorten Explore round 2 (match the strip) to one story",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Ali has 3 bags. Each bag has 4 sweets. How many sweets does Ali have in all? You may draw to help.",
+  "q2": "Mei has 5 stickers. Ben has twice as many stickers as Mei. How many stickers do they have together? Then write or draw how you know.",
+  "a1": "12",
+  "a2": "15. Ben has twice as many as Mei: 5 and 5, which is 10. Mei has 5 and Ben has 10, so together they have 15.",
+  "val1": 12
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your strips, counters and cups. Pause or rewind any time.",
+   "action": "Gather your workbook, strips, pencil, paper, counters and cups. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Touch the numbers and say your answers before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Put counters in cups, lay out strips and test each story. Press play when you have tried.",
+   "action": "Pause. Put counters in cups, lay strips next to each story and make twice as many."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Clap in groups and say the total out loud.",
+   "action": "Stand up. Clap in same-size groups, then say each total out loud."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up if twice as many means 2 more, and show them with strips.",
+   "action": "Pause. Explain your answer to someone at home, with strips or counters and a reason."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Times Stories",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Draw a story as strips, then solve it."
+     ]
+    }
+   ],
+   "note": "Lesson 8 of Term 2, 90 minutes. Objective: draw an equal-group story as a strip, solve a story with one more step, and draw twice as many as two equal strips. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 26, mini-lesson 26 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off. Say plainly to grown-ups that equal-group stories are Primary 1 work and that drawing strips and twice as many go a little further.",
+   "subtitle": "Equal strips, one step at a time",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: two strips",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Ali",
+       "len": 9,
+       "text": "9"
+      },
+      {
+       "name": "Mei",
+       "len": 5,
+       "text": "5"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     }
+    },
+    {
+     "t": "p",
+     "text": "A longer strip has more. The gap is how many more."
+    }
+   ],
+   "note": "This is Lesson 12 again, taught from scratch: Ali has 9 and Mei has 5. The longer strip has more. The gap is the extra part, how many more. Ask: who has more (Ali), and how many more (4)? Children answer aloud or with fingers. A child who is unsure counts up from 5 to 9 on fingers. No writing, no marks.",
+   "mascot": {
+    "size": "s",
+    "say": "Strips tell stories!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Same-size groups",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "bag",
+     "n": 4,
+     "each": 5,
+     "icon": "pencil",
+     "per_row": 4
+    },
+    {
+     "t": "p",
+     "text": "4 groups of 5. Every bag has the same number."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "How many groups?",
+      "How many in each?",
+      "How many in all?"
+     ]
+    }
+   ],
+   "note": "This is Lesson 15 again, taught from scratch: 4 bags with 5 pencils in each bag is 4 groups of 5, and there are 20 pencils in all. Ask the three questions on the slide: 4 groups, 5 in each, 20 in all. Children answer aloud or with fingers. A child who is unsure counts the pencils in one bag, then counts in fives: 5, 10, 15, 20."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "One step at a time",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Step",
+       "The story"
+      ],
+      [
+       "Step 1",
+       "Ali has 6 stickers and gets 4 more."
+      ],
+      [
+       "Step 2",
+       "Then he gives away 3."
+      ]
+     ]
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "6 and 4 more",
+      "then take away 3"
+     ]
+    }
+   ],
+   "note": "This is Lesson 10 again: one operation in each step. Step 1: 6 and 4 more is 10. Step 2: 10 take away 3 is 7. Ask for step 1 first (10), then step 2 (7). Children answer aloud or with fingers. A child who is unsure uses counters: 6 and 4 more, then push 3 away. Say: we do one step at a time, and we write each step."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Ali has 3 bags.",
+         "Each bag has 4 sweets.",
+         "How many sweets does Ali have in all?",
+         "You may draw to help."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "bag",
+        "n": 3,
+        "each": 4,
+        "icon": "sweet",
+        "per_row": 3,
+        "empty": true
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Mei has 5 stickers.",
+         "Ben has twice as many stickers as Mei.",
+         "How many stickers do they have together?",
+         "Then write or draw how you know."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (3 bags with 4 sweets in each bag; 12 sweets) is an access question: any child can draw it or count it out; the empty bags are there to draw in. Puzzle 2 is a thinking question on the lesson idea: twice as many as 5 is 10, and 5 and 10 together are 15. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 12; 15. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: cups and a strip",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 3 cups on the table.",
+      "Put 5 counters in each cup.",
+      "Draw 3 boxes in a row. Write 5 in each box.",
+      "How many counters in all?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Counters",
+       "len": 15,
+       "text": ""
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "5"
+     },
+     "brace": {
+      "text": "?"
+     }
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Objects first. Children put 5 counters in each of 3 cups, then draw one strip of 3 boxes on their own paper: each box is one cup. They write 5 in each box and find the total: 15 (count in fives). Say the words once: each cup is a box; every box is the same size, so it is a strip of equal boxes. The picture shows the strip; the question mark is the total. A child with fewer counters uses 2 cups of 4. Do not ask for a number sentence yet."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Which strip is the story?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ben has 4 bags. Each bag has 3 sweets. Show 1, 2 or 3 fingers."
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Strip 1",
+       "len": 12,
+       "segments": [
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        }
+       ]
+      },
+      {
+       "name": "Strip 2",
+       "len": 12,
+       "segments": [
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        }
+       ]
+      },
+      {
+       "name": "Strip 3",
+       "len": 11,
+       "segments": [
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 2,
+         "text": "2"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Read the story: Ben has 4 bags with 3 sweets in each bag. Children show 1, 2 or 3 fingers for the strip that matches. Strip 1 is right: 4 boxes with 3 in each box. Strip 2 is 3 boxes of 4 (the numbers swapped). Strip 3 has 4 boxes but the last box is 2, so the boxes are not all the same. Do not name a child with a wrong answer. Then ask: what is the total (12)? Then give a second story with the same strips: Mei has 3 bags with 4 sweets in each bag (strip 2, 12)."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "A total and some loose ones",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 3 cups on the table with 5 counters in each cup.",
+      "Put 2 more counters on the table. They are loose: not in a cup.",
+      "How many counters are there in all?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Counters",
+       "len": 17,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 2,
+         "text": "2",
+         "colour": "mint"
+        }
+       ]
+      }
+     ],
+     "brace": {
+      "text": "?"
+     }
+    }
+   ],
+   "note": "Round 3, about 3 minutes. Children keep the 3 cups of 5 and add 2 loose counters (loose means not in a cup). They count the cups first: 15, then the loose ones: 17. The strip shows 3 boxes of 5 and one smaller box of 2 in a different colour. Say: first the boxes, then the loose ones, one step at a time. Ask: what did we do first (3 groups of 5 is 15)? What next (15 and 2 more is 17)? A child who writes 5 + 3 + 2 has not drawn equal boxes: ask them to build it with cups."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "Twice as many",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Make a strip of 6 cells for Mei.",
+      "Ali has twice as many. Make Ali a strip the same as Mei, and then another the same.",
+      "How many cells has Ali? How many are there together?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": 6,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        }
+       ]
+      },
+      {
+       "name": "Ali",
+       "len": 12,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 6,
+         "text": "6"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "note": "Round 4, about 3 minutes. Children cut or fold paper strips of 6 cells (a grown-up cut them at the dotted lines; or use counters in rows of 6). Mei has 1 strip. Ali has twice as many: two strips the same as Mei, 6 and 6, which is 12. Together they have 18. Ask: is twice as many the same as 2 more? Mei has 6, and 2 more would be 8; twice as many is 12. Key idea: twice as many is two equal strips. A child who says 8 has added 2: put Ali’s two strips next to Mei’s one."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Draw the story",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Read it.",
+      "Draw equal boxes.",
+      "Write the number in each box.",
+      "Find the total."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Sweets",
+       "len": 15,
+       "text": ""
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "5"
+     },
+     "brace": {
+      "text": "?"
+     }
+    },
+    {
+     "t": "p",
+     "text": "3 bags with 5 sweets in each bag."
+    }
+   ],
+   "note": "The four steps of a times story. Read it (3 bags with 5 sweets in each bag). Draw equal boxes: one box for each bag, 3 boxes. Write the number in each box: 5. Find the total: count in fives, 5, 10, 15; 5 + 5 + 5 = 15, or 3 × 5 = 15. Ask: how many boxes, what is in each box, what is the total? Say the unit once: every box is the same size. A child who draws 5 boxes with 3 in each has swapped the numbers: re-read the story."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "A total, then one more step",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Pens",
+       "len": 26,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 6,
+         "text": "6",
+         "colour": "mint"
+        }
+       ]
+      }
+     ],
+     "brace": {
+      "text": "?"
+     }
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Step",
+       "Number sentence"
+      ],
+      [
+       "Step 1",
+       "4 × 5 = ?"
+      ],
+      [
+       "Step 2",
+       "? + 6 = ?"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "4 boxes of 5 pens and 6 loose pens."
+    }
+   ],
+   "note": "A second step. Ali has 4 boxes with 5 pens in each box, and 6 loose pens. Draw 4 equal boxes of 5 and one more box of 6 in a different colour. Step 1: the pens in boxes, 4 groups of 5 is 20. Step 2: add the loose pens, 20 + 6 = 26. Ask: which step comes first? What does the different colour show? The table has question marks: let children say each total before you say it. Say: one operation in each step (Lesson 10). If the loose pens were given away, we would take away in step 2."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Twice as many",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": 8,
+       "segments": [
+        {
+         "v": 8,
+         "text": "8"
+        }
+       ]
+      },
+      {
+       "name": "Ali",
+       "len": 16,
+       "segments": [
+        {
+         "v": 8,
+         "text": "8"
+        },
+        {
+         "v": 8,
+         "text": "8"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Step",
+       "Number sentence"
+      ],
+      [
+       "Step 1",
+       "Ali: 8 + 8 = ?"
+      ],
+      [
+       "Step 2",
+       "Together: 8 + ? = ?"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Twice as many is two equal strips. It is not 2 more."
+    }
+   ],
+   "note": "Beyond Primary 1 on purpose. Mei has 8 stickers. Ali has twice as many: two strips the same as Mei’s, 8 and 8, which is 16. Together they have 8 and 16, which is 24. Ask: how many strips for Mei (1)? For Ali (2)? How many for both together (3 strips of 8)? Say it plainly: twice as many is two equal strips, not 2 more. Three times as many would be three equal strips (Go further). A child who says 10 has added 2: compare Ali’s strip with Mei’s."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Draw a strip. Write each step. Say the total."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "3 bags of 4 sweets",
+      "5 boxes of 2 pens and 3 loose pens",
+      "Mei has 5. Ali has twice as many."
+     ]
+    }
+   ],
+   "note": "Each child draws the three strips on their own paper and writes the answers. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: 12 sweets; 5 boxes of 2 is 10, and 3 loose pens make 13 pens; Ali has 10 stickers and together they have 15. Children may use counters or cups."
+  },
+  {
+   "id": "s-m4a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: draw the strip",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Story",
+       "Answer"
+      ],
+      [
+       "3 bags of 4 sweets",
+       "12 sweets"
+      ],
+      [
+       "5 boxes of 2 pens and 3 loose pens",
+       "13 pens"
+      ],
+      [
+       "Mei has 5. Ali has twice as many.",
+       "Ali 10, together 15"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 12 sweets; 13 pens (5 groups of 2 is 10, and 3 loose pens make 13); Ali has 10 stickers and together they have 15. Read each answer aloud so a child watching the recording can mark their own work. Children mark their own in another colour. Never ask a child to show a wrong answer to the group. Link back: twice as many as 5 is a double (Lesson 13)."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Clap in groups",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "I say a story. Clap softly in groups and pause."
+    },
+    {
+     "t": "p",
+     "text": "Say the total out loud together."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Call: 3 groups of 2 (clap 2, pause, clap 2, pause, clap 2: 6), 4 groups of 3 (12), 2 groups of 5 (10), 3 groups of 4 (12). Then one twice as many: clap 4 for Mei, then twice as many for Ali (two claps of 4: 8). Children clap softly or tap their thighs, pausing between groups, and say the total together. No equipment, no running, a little clear space. A child may stay seated and tap the table."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: fill in the numbers in the strip for 3 bags of 5 sweets. Question 2: 4 boxes of 3 pencils, fill in the blanks. Question 3: choose the strip that matches the story."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Answers: Q1 5, 5, 5 in the boxes and 15 sweets; Q2 4 groups of 3 = 12 and 12 pencils; Q3 strip 1."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: 3 boxes of 5 pens and 2 loose pens. Question 5: draw a strip for 2 bags of 6 sweets. Question 6: 4 bags of 3 marbles and then some marbles lost."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 15 pens in the boxes and 17 pens in all; Q5 2 equal boxes of 6 and 12 sweets; Q6 12 marbles in the bags and 10 marbles now."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Twice as many"
+      ],
+      [
+       "Go further (page 4)",
+       "Different groups and 3 times as many"
+      ],
+      [
+       "Investigation (page 5)",
+       "Doubling again and again"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "MEI HAS 8 STICKERS",
+     "items": [
+      "Ali has twice as many as Mei."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Does twice as many mean 2 more? How could we be sure?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children make Mei’s strip of 8 and Ali’s strip of twice as many with counters or paper strips, then try another number such as 5 or 6. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Twice as many is two equal strips: 8 and 8 is 16, which is 8 more than Mei, not 2 more. Mei has 8, so 2 more would be 10. Repeat each child’s answer in your own words for the recording. Do not claim it is proved for every number: we tested a few and used the strips."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": 5,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        }
+       ]
+      },
+      {
+       "name": "Ben",
+       "len": 10,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Together: 5 and 10 make 15."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone’s earlier answer. Mei has 5. Ben has twice as many: two strips of 5, which is 10. Together they have 5 and 10, which is 15. Puzzle 1: 3 bags of 4 sweets is 12 sweets."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children check their own ticket in a different colour. Answers: option 2, 4 × 5; 13 marbles; 10 sweets."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Picture Equations",
+      "Have ready: your workbook with its counters page, about 30 counters, 2 cups, 4 paper shape cards, pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: what if?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Siti",
+       "len": 6,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        }
+       ]
+      },
+      {
+       "name": "Dev",
+       "len": 18,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 6,
+         "text": "6"
+        }
+       ]
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     }
+    },
+    {
+     "t": "p",
+     "text": "Dev has 3 times as many stickers as Siti. Who has more? How many more?"
+    }
+   ],
+   "note": "Optional, only if you are on time. Siti has 6 stickers. Dev has 3 times as many: three strips of 6, which is 18. Dev has 18 and Siti has 6, so Dev has 12 more. Take two answers and move on. This repeats the twice-as-many idea with three strips.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Is twice as many the same as the number plus itself?"
+      ],
+      [
+       "Make a puzzle",
+       "Draw a strip story. Ask your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy 3 cups of 4 counters"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see your page and hands; cameras off is fine too. Pencil ready, and your strips, cups, counters and workbook on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we draw stories as strips. Every box in the strip is the same size. Then we solve the story, one step at a time."
+     },
+     {
+      "k": "DO",
+      "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two strips. Ali has 9 and Mei has 5. The longer strip has more. The gap is how many more."
+     },
+     {
+      "k": "ASK",
+      "text": "Who has more? How many more?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Check by counting up from five to nine on your fingers: six, seven, eight, nine. That is 4 jumps."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Same-size groups. 4 bags with 5 pencils in each bag. That is 4 groups of 5."
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups? How many in each group? How many pencils in all?",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "Count in fives to check: five, ten, fifteen, twenty."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "One step at a time. Ali has 6 stickers and gets 4 more. That is step one. Then he gives away 3. That is step two."
+     },
+     {
+      "k": "ASK",
+      "text": "Step one: 6 and 4 more. How many does Ali have?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Step two: take away 3. How many does he have now?",
+      "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Children try one more with counters: Mei has 8 and gets 5 more, then gives away 6.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many does Mei have at the end?",
+      "resp": 20
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about the strips, count up on fingers from 5 to 9. For the groups, count the pencils in one bag, then count in fives. For the steps, use counters: 6 and 4 more, then push 3 away."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: Ali, 4 more; 4, 5, 20; 10, 7; 7. Children answer with a whisper, fingers or hands. Nobody writes. Do not say times as many yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Ali has 3 bags. Each bag has 4 sweets. How many sweets does Ali have in all? You may draw to help."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw or count and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Mei has 5 stickers. Ben has twice as many stickers as Mei. How many stickers do they have together? Then write or draw how you know."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 12 sweets. Puzzle 2 answer: 15 (Ben has 10, and Mei has 5). Look for good ideas to praise later (a child who drew two groups of 5 for Ben, or who added 5 and 5 and then 5 more). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Put 3 cups on the table with 5 counters in each cup. Now draw 3 boxes in a row on your paper, one box for each cup. Write 5 in each box."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put 5 counters in each of 3 cups, then draw 3 boxes and write 5 in each.",
+      "s": 70
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are there in all? Count in fives.",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Every box is the same size, so it is a strip of equal boxes. Each cup is a box."
+     },
+     {
+      "k": "SAY",
+      "text": "Try one more. Put 4 cups on the table with 3 counters in each cup. Draw 4 boxes and write 3 in each box."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make 4 cups of 3 counters and draw the strip.",
+      "s": 55
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters in all? What is in each box?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Which strip is the story? Ben has 4 bags. Each bag has 3 sweets. Show one, two or three fingers."
+     },
+     {
+      "k": "ASK",
+      "text": "Which strip? One, two or three fingers.",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Strip one has 4 boxes with 3 in each box. Strip two has 3 boxes of 4. Strip three has 4 boxes, but the last box is 2, so the boxes are not equal."
+     },
+     {
+      "k": "ASK",
+      "text": "How many sweets does Ben have in all?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Mei has 3 bags with 4 sweets in each bag. Which strip is Mei’s?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Keep 3 cups with 5 counters in each cup. Now put 2 more counters on the table. They are loose: not in a cup."
+     },
+     {
+      "k": "WORK",
+      "text": "Children keep 3 cups of 5 and add 2 loose counters.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are there in the cups? Then how many in all?",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "First the boxes, then the loose ones. One step at a time. Now push 3 counters away."
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are left on the table?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "SAY",
+      "text": "Round four. Make a strip of 6 cells for Mei. Ali has twice as many. Make Ali a strip the same as Mei’s, and then another the same."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make Mei’s strip of 6 and Ali’s two strips of 6 (paper strips or counters in rows).",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "How many cells has Ali? How many are there together?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "Is twice as many the same as 2 more? Why not?",
+      "resp": 30
+     },
+     {
+      "k": "SAY",
+      "text": "Twice as many is two equal strips."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot draw boxes: use the cups of counters, or fold a strip. A child who says Ali has 8: put Ali’s two strips next to Mei’s one and count. A child who loses count in round 3: say the cups first (15), then the loose ones."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see builds on small tiles. Answers: 15; 12; strip 1, 12 sweets, strip 2; 15 and 2 more is 17, then 14; Ali has 12, together 18, not 2 more (that would be 8). Nothing here needs more than 20 counters, 3 cups and 3 strips."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A times story in four steps. Read it. Draw equal boxes. Write the number in each box. Find the total. Three bags with 5 sweets in each bag: 3 boxes with 5 in each."
+     },
+     {
+      "k": "ASK",
+      "text": "How many boxes? What is in each box? What is the total?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "Now a second step. Ali has 4 boxes with 5 pens in each box, and 6 loose pens. We draw 4 equal boxes, and then one more box in a different colour for the loose pens."
+     },
+     {
+      "k": "ASK",
+      "text": "Which step comes first? What is step one, and what is the total?",
+      "resp": 30
+     },
+     {
+      "k": "ASK",
+      "text": "Step two: add the loose pens. How many pens are there in all?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "What if Ali gave away 6 pens instead of finding 6 more? Which step would change, and what is the answer?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Twice as many. Mei has 8 stickers. Ali has twice as many. We draw Ali’s strip two times as long: 8 and 8. Twice as many is two equal strips. It is not 2 more."
+     },
+     {
+      "k": "ASK",
+      "text": "How many stickers does Ali have? How many do they have together?",
+      "resp": 30
+     },
+     {
+      "k": "SAY",
+      "text": "Three times as many would be three equal strips. We will try that on page 4."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Draw a strip for each story and write the answer. 3 bags of 4 sweets. 5 boxes of 2 pens and 3 loose pens. Mei has 5. Ali has twice as many."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw the strips and write the answers on their own paper.",
+      "s": 160
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4a"
+     },
+     {
+      "k": "READ",
+      "text": "Twelve sweets. Thirteen pens. Ali has ten, and together they have fifteen. Mark your own in another colour."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: strip, box, each, in all, loose, twice as many, step. Say bar model only as the school word for grown-ups. Equal-group stories are within the Primary 1 syllabus; drawing strips and twice as many go a little further, so keep the pace gentle and use the pictures. Accept a drawing with cups or counters instead of a strip."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child draws 5 boxes with 3 in each box for 3 bags of 5, ask them to read the story again and build it with cups. If a child says twice as many is 2 more, put Ali’s two strips next to Mei’s one."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I say a story. Clap softly in groups, with a pause between groups, and say the total."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 3 groups of 2, 4 groups of 3, 2 groups of 5, 3 groups of 4, then clap 4 for Mei and twice as many for Ali. Children clap softly (or tap their thighs) in groups, pausing between groups, and say the total aloud together.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: Mei has 3 bags. Each bag has 5 sweets. Write the number in each box of the strip, then fill in the blank. Question 2: Ben has 4 boxes. Each box has 3 pencils. Fill in the blanks. Question 3: Ben has 4 bags. Each bag has 3 sweets. Which strip shows Ben’s sweets? Write its number in the bracket."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 5, 5, 5, and 15 sweets. Question 2: 4 groups of 3 is 12, and 12 pencils. Question 3: strip 1. Mark your own page in another colour."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: Ali has 3 boxes with 5 pens in each box. He also has 2 loose pens. Fill in the blanks. Question 5: Mei has 2 bags. Each bag has 6 sweets. Draw the strip, then fill in the blank. Question 6: Ravi has 4 bags with 3 marbles in each bag. He loses 2 marbles. Fill in the blanks."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 15 pens in the boxes, and 17 pens in all. Question 5: 2 boxes of 6, and 12 sweets. Question 6: 12 marbles in the bags, and 10 marbles now."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 250
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: each box is one bag; write 5 in each box, then count in fives. Q2: 4 groups of 3, count in threes. Q3: 4 boxes with 3 in each box. Q4: boxes first, then the loose pens. Q5: draw 2 boxes the same size and write 6 in each. Q6: find the marbles in the bags, then take away 2."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for twice as many (two equal strips), a total for two children, a wrong claim to check and a transfer. Go further has groups of different sizes with a hidden start and 3 times as many. Do not announce who is on which page. Slow class: the workbook part needs about 28 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Mei has 8 stickers. Ali has twice as many as Mei. Does twice as many mean 2 more? How could we be sure?"
+     },
+     {
+      "k": "WORK",
+      "text": "Make Mei’s strip of 8 and Ali’s strip of twice as many with counters or paper strips. Then try another number, such as 5 or 6.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Mei has 5 stickers. Ben has twice as many: two strips of 5, which is 10. Together they have 15."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no. Twice as many is two equal strips: 8 and 8 is 16, which is 8 more than Mei, not 2 more (that would be 10). We tested 8 and one more number, and the strips show why. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Do not claim it is proved for every number."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Ali has 4 bags. Each bag has 5 sweets. Which number sentence finds how many sweets Ali has in all? Write its number in the bracket. E2. Lily has 2 bags with 5 marbles in each bag. She also has 3 loose marbles. Fill in the blank. E3. Ravi has 3 bags with 4 sweets in each bag. He eats 2 sweets. Fill in the blank.",
+      "s": 45
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: option 2, 4 times 5. E2: 13 marbles. E3: 10 sweets."
+     },
+     {
+      "k": "SAY",
+      "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child’s result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick ‘I am still stuck’, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Picture Equations. Please have your workbook with its counters page, about 30 counters, 2 cups, 4 paper shape cards, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Siti has 6 stickers. Dev has 3 times as many. Draw Dev’s strip. Who has more? How many more?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: Dev has 18, Siti has 6, so Dev has 12 more. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Mei has 3 bags. Each bag has 5 sweets. Write the number in each box of the strip. Then fill in the blank.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei has [2] sweets in all.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "answer": "5, 5, 5 in the boxes; 15 sweets",
+    "val": [
+     5,
+     5,
+     5,
+     15
+    ],
+    "hint": "Each box is one bag. Write the same number in every box. Then count in fives.",
+    "solution": "There are 3 bags, so 3 boxes, and each box is 5 sweets. 5 + 5 + 5 = 15, so Mei has 15 sweets in all.",
+    "mistakes": [
+     "Writing 3 in the boxes.",
+     "Adding 3 + 5 = 8."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Sweets",
+       "len": 15,
+       "text": ""
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "[]"
+     },
+     "brace": {
+      "text": "?"
+     }
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Ben has 4 boxes. Each box has 3 pencils. How many pencils does Ben have in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "[] groups of [] = [2]",
+      "ans": "4, 3, 12",
+      "val": [
+       4,
+       3,
+       12
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ben has [2] pencils in all.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "4 groups of 3 = 12; 12 pencils",
+    "val": [
+     4,
+     3,
+     12,
+     12
+    ],
+    "hint": "Write the number of boxes first. Then the number of pencils in each box.",
+    "solution": "4 boxes with 3 pencils in each box: 3 + 3 + 3 + 3 = 12. So 4 groups of 3 = 12 and Ben has 12 pencils.",
+    "mistakes": [
+     "Writing 3 groups of 4.",
+     "Adding 4 + 3 = 7."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Ben has 4 bags. Each bag has 3 sweets. Which strip shows Ben’s sweets? Write its number in the bracket.",
+    "parts": [],
+    "answer": "Strip 1",
+    "val": [
+     1
+    ],
+    "hint": "Look at the number of boxes and the number in each box. Are all the boxes the same?",
+    "solution": "Strip 1 has 4 boxes with 3 in each box: 4 bags of 3 sweets. Strip 2 has 3 boxes of 4. Strip 3 has 4 boxes but the last box has 2, so the boxes are not equal.",
+    "mistakes": [
+     "Choosing strip 2 because it has the same numbers.",
+     "Not noticing that the last box of strip 3 is smaller."
+    ],
+    "mins": 2,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Strip 1",
+       "len": 12,
+       "segments": [
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        }
+       ]
+      },
+      {
+       "name": "Strip 2",
+       "len": 12,
+       "segments": [
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        }
+       ]
+      },
+      {
+       "name": "Strip 3",
+       "len": 11,
+       "segments": [
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 2,
+         "text": "2"
+        }
+       ]
+      }
+     ]
+    },
+    "mcq": {
+     "options": [
+      "Strip 1",
+      "Strip 2",
+      "Strip 3"
+     ],
+     "bracket": true
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Ali has 3 boxes with 5 pens in each box. He also has 2 loose pens. How many pens does Ali have in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The boxes have [2] pens.",
+      "ans": "15",
+      "val": 15
+     },
+     {
+      "l": "b",
+      "text": "Ali has [2] pens in all.",
+      "ans": "17",
+      "val": 17
+     }
+    ],
+    "answer": "15 pens in the boxes; 17 pens in all",
+    "val": [
+     15,
+     17
+    ],
+    "hint": "Find the pens in the boxes first. Then add the loose pens.",
+    "solution": "Step 1: 3 boxes of 5 pens is 5 + 5 + 5 = 15. Step 2: 15 and 2 loose pens make 17 pens in all.",
+    "mistakes": [
+     "Writing 5 + 3 + 2 = 10.",
+     "Forgetting the loose pens."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Pens",
+       "len": 17,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 2,
+         "text": "2",
+         "colour": "mint"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Mei has 2 bags. Each bag has 6 sweets. Draw a strip. Then fill in the blank.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei has [2] sweets in all.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "A strip of 2 boxes with 6 in each box; 12 sweets",
+    "val": [
+     12
+    ],
+    "hint": "Draw 2 boxes the same size in a row. Write 6 in each box.",
+    "solution": "2 bags with 6 sweets in each bag: draw 2 equal boxes and write 6 in each. 6 + 6 = 12, so Mei has 12 sweets in all.",
+    "mistakes": [
+     "Drawing 6 boxes with 2 in each.",
+     "Drawing boxes that are not the same size."
+    ],
+    "mins": 3,
+    "draw": true,
+    "draw_strokes": 8
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Ravi has 4 bags with 3 marbles in each bag. He loses 2 marbles. How many marbles does Ravi have now?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The bags have [2] marbles.",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "Ravi has [2] marbles now.",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "12 marbles in the bags; 10 marbles now",
+    "val": [
+     12,
+     10
+    ],
+    "hint": "Find the marbles in the bags first. Then take away the marbles he loses.",
+    "solution": "Step 1: 4 bags of 3 marbles is 3 + 3 + 3 + 3 = 12. Step 2: he loses 2, so 12 - 2 = 10 marbles are left.",
+    "mistakes": [
+     "Adding the 2 marbles.",
+     "Taking 2 away from 4 or from 3."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Marbles",
+       "len": 12,
+       "segments": [
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        },
+        {
+         "v": 3,
+         "text": "3"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Jenny has 4 boxes with 5 pens in each box and 6 loose pens. She gives 9 pens away.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The boxes have [2] pens.",
+      "ans": "20",
+      "val": 20
+     },
+     {
+      "l": "b",
+      "text": "Jenny has [2] pens in all.",
+      "ans": "26",
+      "val": 26
+     },
+     {
+      "l": "c",
+      "text": "Jenny has [2] pens left.",
+      "ans": "17",
+      "val": 17
+     }
+    ],
+    "answer": "20 pens; 26 pens; 17 pens left",
+    "val": [
+     20,
+     26,
+     17
+    ],
+    "hint": "Do one step at a time: the boxes, then the loose pens, then the pens she gives away.",
+    "solution": "Step 1: 4 boxes of 5 is 20. Step 2: 20 and 6 loose pens make 26. Step 3: 26 take away 9 is 17 pens left.",
+    "mistakes": [
+     "Stopping at 26.",
+     "Taking away 9 from 20 before adding the loose pens."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Pens",
+       "len": 26,
+       "segments": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 6,
+         "text": "6",
+         "colour": "mint"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 8 marbles. Ali has twice as many marbles as Mei.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ali has [2] marbles.",
+      "ans": "16",
+      "val": 16
+     },
+     {
+      "l": "b",
+      "text": "They have [2] marbles together.",
+      "ans": "24",
+      "val": 24
+     }
+    ],
+    "answer": "16 marbles; 24 marbles together",
+    "val": [
+     16,
+     24
+    ],
+    "hint": "Draw Mei’s strip. Ali’s strip is two strips the same as Mei’s.",
+    "solution": "Mei’s strip is 8. Ali has twice as many: 8 and 8, which is 16. Together they have 8 + 16 = 24 marbles.",
+    "mistakes": [
+     "Writing 10 (8 + 2).",
+     "Writing 16 for together."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": 8,
+       "segments": [
+        {
+         "v": 8,
+         "text": "8"
+        }
+       ]
+      },
+      {
+       "name": "Ali",
+       "len": 16,
+       "segments": [
+        {
+         "v": 8,
+         "text": "[]"
+        },
+        {
+         "v": 8,
+         "text": "[]"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 6 stickers. Ravi has twice as many stickers as Mei. Jenny says Ravi has 8 stickers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is Jenny correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ravi has [2] stickers.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "No; 12 stickers",
+    "val": [
+     "No",
+     12
+    ],
+    "hint": "Twice as many is two strips the same as Mei’s. Draw them.",
+    "solution": "Mei has 6, so Ravi has two strips of 6: 6 + 6 = 12 stickers. Jenny added 2 to 6 to get 8, but twice as many is not 2 more. So Jenny is not correct.",
+    "mistakes": [
+     "Saying Yes because 6 and 2 make 8.",
+     "Writing 6 or 18."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Ali has twice as many cards as Mei. Ali has 24 cards. Ali gives some cards to Mei. Then they have the same number of cards.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei has [2] cards at first.",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "Ali gives [] cards to Mei.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "Mei 12 cards; Ali gives 6 cards",
+    "val": [
+     12,
+     6
+    ],
+    "hint": "Ali’s strip is two strips the same as Mei’s. Then share the gap equally.",
+    "solution": "Ali has two strips of 12, so Mei has 12. The gap is 12. Ali gives half of the gap: 6. Then Ali has 24 - 6 = 18 and Mei has 12 + 6 = 18. They have the same number.",
+    "mistakes": [
+     "Giving all 12 cards.",
+     "Writing 12 for (b)."
+    ],
+    "mins": 5,
+    "draw": true,
+    "draw_strokes": 8
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Wei puts 3 stickers on each of 4 cards. He puts 2 stickers on each of 5 other cards. He has 4 stickers left over.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The first 4 cards have [2] stickers.",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "The other 5 cards have [2] stickers.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "c",
+      "text": "Wei had [2] stickers at first.",
+      "ans": "26",
+      "val": 26
+     }
+    ],
+    "answer": "12 stickers; 10 stickers; 26 stickers at first",
+    "val": [
+     12,
+     10,
+     26
+    ],
+    "hint": "Find the stickers on each set of cards. Then add the stickers that are left over.",
+    "solution": "4 cards with 3 stickers: 3 + 3 + 3 + 3 = 12. 5 cards with 2 stickers: 2 + 2 + 2 + 2 + 2 = 10. 12 + 10 + 4 = 26 stickers at first.",
+    "mistakes": [
+     "Forgetting the 4 stickers left over.",
+     "Using 3 for both sets of cards."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Siti has 7 marbles. Ravi has 3 times as many marbles as Siti.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ravi has [2] marbles.",
+      "ans": "21",
+      "val": 21
+     },
+     {
+      "l": "b",
+      "text": "They have [2] marbles altogether.",
+      "ans": "28",
+      "val": 28
+     }
+    ],
+    "answer": "21 marbles; 28 marbles altogether",
+    "val": [
+     21,
+     28
+    ],
+    "hint": "Ravi’s strip is three strips the same as Siti’s.",
+    "solution": "Siti’s strip is 7. Ravi has 3 times as many: 7 + 7 + 7 = 21. Together: 7 + 21 = 28 marbles.",
+    "mistakes": [
+     "Writing 10 (7 + 3).",
+     "Writing 21 for altogether."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Siti",
+       "len": 7,
+       "segments": [
+        {
+         "v": 7,
+         "text": "7"
+        }
+       ]
+      },
+      {
+       "name": "Ravi",
+       "len": 21,
+       "segments": [
+        {
+         "v": 7,
+         "text": "[]"
+        },
+        {
+         "v": 7,
+         "text": "[]"
+        },
+        {
+         "v": 7,
+         "text": "[]"
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Kumar has 3 times as many pens as Lily. They have 24 pens together.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Lily has [] pens.",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "b",
+      "text": "Kumar has [2] pens.",
+      "ans": "18",
+      "val": 18
+     }
+    ],
+    "answer": "Lily 6 pens; Kumar 18 pens",
+    "val": [
+     6,
+     18
+    ],
+    "hint": "Draw 1 box for Lily and 3 boxes for Kumar. How many equal boxes in all?",
+    "solution": "Lily has 1 box and Kumar has 3 boxes, so there are 4 equal boxes. 24 pens in 4 equal boxes is 6 in each box (6 + 6 + 6 + 6 = 24). Lily has 6 and Kumar has 18. Check: 3 × 6 = 18 and 6 + 18 = 24.",
+    "mistakes": [
+     "Writing 8 (24 shared into 3).",
+     "Writing 3 times 24."
+    ],
+    "mins": 6,
+    "draw": true,
+    "draw_strokes": 12
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Twice, and twice again",
+   "first": "Mei has 3 stickers. Ali has twice as many. How many stickers does Ali have? Now Ben has twice as many as Ali.",
+   "text": "Jenny has twice as many stickers as Ben. Write how many stickers Mei, Ali, Ben and Jenny each have. What do you notice?",
+   "lines": 4,
+   "answer": "Mei 3, Ali 6, Ben 12, Jenny 24. Each child has twice as many as the child before, so each strip is twice as long as the one before. The numbers double each time: 3, 6, 12, 24.",
+   "val": [
+    3,
+    6,
+    12,
+    24
+   ],
+   "look_for": "A child who draws or builds each strip as two copies of the strip before, writes 3, 6, 12, 24 and notices that each number is double the last. Credit a child who says the strips get twice as long, or who checks 12 + 12. Do not mark down a child who finds only Ali and Ben.",
+   "mistakes": [
+    "Adding 3 each time: 3, 6, 9, 12.",
+    "Writing twice as many as 3 for every child."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Mei has 8 stickers. Ali has twice as many as Mei. Does twice as many mean 2 more? How could we be sure?",
+  "starter": "I think ... because ...",
+  "answer": "No. Twice as many is two equal strips: 8 and 8 is 16, which is 8 more than Mei, not 2 more (that would be 10). We test 8 and another number, and the strips show why. A few tests plus the picture are good evidence.",
+  "look_for": "A child who draws or builds Mei’s strip and Ali’s two strips, who tests another number, or who says twice is the number added to itself. Not just \"yes\" or \"no\"."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Ali has 4 bags. Each bag has 5 sweets. Which number sentence finds how many sweets Ali has in all? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) 4 × 5",
+   "val": [
+    2
+   ],
+   "solution": "4 bags with 5 sweets in each bag is 4 groups of 5, which is 4 × 5. Adding 4 + 5 joins the numbers of bags and sweets. 5 - 4 finds a gap.",
+   "mistakes": [
+    "Choosing 4 + 5.",
+    "Choosing 5 - 4."
+   ],
+   "mcq": {
+    "options": [
+     "4 + 5",
+     "4 × 5",
+     "5 - 4",
+     "4 + 4 + 4"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E2",
+   "text": "Lily has 2 bags with 5 marbles in each bag. She also has 3 loose marbles. How many marbles does Lily have in all?",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Lily has [2] marbles in all.",
+     "ans": "13",
+     "val": 13
+    }
+   ],
+   "answer": "13",
+   "val": [
+    13
+   ],
+   "solution": "Step 1: 2 bags of 5 marbles is 10. Step 2: 10 and 3 loose marbles make 13 marbles in all.",
+   "mistakes": [
+    "Writing 10 (forgetting the loose marbles).",
+    "Writing 2 + 5 + 3 = 10."
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "Ravi has 3 bags with 4 sweets in each bag. He eats 2 sweets. How many sweets does Ravi have now?",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Ravi has [2] sweets now.",
+     "ans": "10",
+     "val": 10
+    }
+   ],
+   "answer": "10",
+   "val": [
+    10
+   ],
+   "solution": "Step 1: 3 bags of 4 sweets is 12. Step 2: he eats 2, so 12 - 2 = 10 sweets are left.",
+   "mistakes": [
+    "Adding the 2 sweets: 14.",
+    "Writing 12 (forgetting the 2 he eats)."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "drawing the strip",
+   "the second step",
+   "twice as many",
+   "something else"
+  ],
+  "helped": [
+   "cups and counters",
+   "drawing it",
+   "one step at a time",
+   "I was not stuck"
+  ],
+  "next": [
+   "drawing it",
+   "using objects",
+   "checking it",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Siti has 5 bags. Each bag has 2 sweets. Fill in the blanks. [] × [] = [2]. Siti has [2] sweets in all.",
+   "answer": "5, 2, 10 and 10",
+   "val": [
+    5,
+    2,
+    10,
+    10
+   ],
+   "solution": "5 bags with 2 sweets in each bag: 2 + 2 + 2 + 2 + 2 = 10."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Ali has 3 boxes with 4 pens in each box and 5 loose pens. He has [2] pens in all.",
+   "answer": "17",
+   "val": [
+    17
+   ],
+   "solution": "3 boxes of 4 pens is 12. 12 and 5 loose pens make 17."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Mei has 4 bags with 4 stickers in each bag. She gives 3 stickers away. Mei has [2] stickers left.",
+   "answer": "13",
+   "val": [
+    13
+   ],
+   "solution": "4 bags of 4 stickers is 16. 16 take away 3 is 13."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Wei has 9 marbles. Ravi has twice as many marbles as Wei. They have [2] marbles together.",
+   "answer": "27",
+   "val": [
+    27
+   ],
+   "solution": "Ravi has 9 + 9 = 18 marbles. Together: 9 + 18 = 27."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "Mei has 5 stickers. Ali has 3 times as many stickers as Mei. Ben has 4 more stickers than Ali. Ben has [2] stickers.",
+   "answer": "19",
+   "val": [
+    19
+   ],
+   "solution": "Ali has 5 + 5 + 5 = 15 stickers. Ben has 15 + 4 = 19 stickers."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l18",
+  "title": "Times Stories",
+  "topic": "Equal strips and times stories",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "Look at the strip. Fill in the boxes.",
+    "hint": "Count the boxes. Read the number in one box. Then count in jumps.",
+    "steps": [
+     "Count the boxes.",
+     "Read the number in one box.",
+     "{a} groups of {b} = {c}."
+    ],
+    "slips": [],
+    "frame": "{a} groups of {b} = {c}",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 3
+     },
+     {
+      "id": "b",
+      "answer": 5
+     },
+     {
+      "id": "c",
+      "answer": 15
+     }
+    ],
+    "fig": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Sweets",
+       "len": "{c}",
+       "text": ""
+      }
+     ],
+     "units": {
+      "n": "{a}",
+      "text": "{b}"
+     },
+     "brace": {
+      "text": "?"
+     }
+    },
+    "fig_base": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Sweets",
+       "len": 15,
+       "text": ""
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "5"
+     },
+     "brace": {
+      "text": "?"
+     }
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "Look at the strip. Fill in the boxes.",
+     "frame": "{a} groups of {b} = {c}",
+     "answers": {
+      "a": "a",
+      "b": "b",
+      "c": "a*b"
+     },
+     "derive": {
+      "c": "a*b"
+     },
+     "hint": "Count the boxes. Read the number in one box. Then count in jumps.",
+     "steps": [
+      "Count the boxes.",
+      "Read the number in one box.",
+      "{a} groups of {b} = {c}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "Mei has 3 bags. Each bag has 5 sweets. How many sweets does Mei have in all?",
+    "answer": 15,
+    "hint": "Draw a box for each bag. Write the number of sweets in each box.",
+    "steps": [
+     "Draw 3 equal boxes.",
+     "Write 5 in each box.",
+     "5 + 5 + 5 = 15 sweets."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is 3 + 5. Draw 3 boxes with 5 in each box and add them."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "Mei has {a} bags. Each bag has {b} sweets. How many sweets does Mei have in all?",
+     "answer": "a*b",
+     "hint": "Draw a box for each bag. Write the number of sweets in each box.",
+     "steps": [
+      "Draw {a} equal boxes.",
+      "Write {b} in each box.",
+      "Add the boxes: {ans} sweets."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "Ali has 3 boxes with 5 pens in each box. He also has 2 loose pens. How many pens does Ali have in all?",
+    "answer": 17,
+    "hint": "Find the pens in the boxes first. Then add the loose pens.",
+    "steps": [
+     "3 groups of 5 = 15.",
+     "15 + 2 = 17.",
+     "Ali has 17 pens in all."
+    ],
+    "slips": [
+     {
+      "a": [
+       15
+      ],
+      "say": "15 is the pens in the boxes. Add the 2 loose pens."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "c": [
+       2,
+       3,
+       4,
+       6
+      ]
+     },
+     "q": "Ali has {a} boxes with {b} pens in each box. He also has {c} loose pens. How many pens does Ali have in all?",
+     "answer": "a*b+c",
+     "hint": "Find the pens in the boxes first. Then add the loose pens.",
+     "steps": [
+      "{a} groups of {b} = {s}.",
+      "{s} + {c} = {ans}.",
+      "Ali has {ans} pens in all."
+     ],
+     "derive": {
+      "s": "a*b"
+     }
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "number",
+    "q": "Ravi has 4 bags with 3 marbles in each bag. He loses 2 marbles. How many marbles does Ravi have now?",
+    "answer": 10,
+    "hint": "Find the marbles in the bags first. Then take away the marbles he loses.",
+    "steps": [
+     "4 groups of 3 = 12.",
+     "12 - 2 = 10.",
+     "Ravi has 10 marbles now."
+    ],
+    "slips": [
+     {
+      "a": [
+       14
+      ],
+      "say": "He loses marbles, so take away. Do not add."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       3,
+       4
+      ],
+      "c": [
+       1,
+       2,
+       3
+      ]
+     },
+     "q": "Ravi has {a} bags with {b} marbles in each bag. He loses {c} marbles. How many marbles does Ravi have now?",
+     "answer": "a*b-c",
+     "hint": "Find the marbles in the bags first. Then take away the marbles he loses.",
+     "steps": [
+      "{a} groups of {b} = {s}.",
+      "{s} - {c} = {ans}.",
+      "Ravi has {ans} marbles now."
+     ],
+     "derive": {
+      "s": "a*b"
+     }
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ali has 4 bags. Each bag has 5 sweets. Which number sentence finds how many sweets Ali has in all?",
+    "options": [
+     "4 + 5",
+     "4 × 5",
+     "5 - 4",
+     "4 + 4 + 4"
+    ],
+    "answer": "4 × 5",
+    "hint": "4 bags with 5 in each bag is 4 groups of 5.",
+    "steps": [
+     "Each bag has 5 sweets.",
+     "There are 4 bags: 4 groups of 5.",
+     "The number sentence is 4 × 5."
+    ],
+    "slips": [
+     {
+      "a": [
+       "4 + 5"
+      ],
+      "say": "4 + 5 joins the number of bags and the number of sweets. We need 4 groups of 5."
+     }
+    ]
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei has 6 stickers. Ali has twice as many stickers as Mei. How many stickers does Ali have?",
+    "answer": 12,
+    "easier": "c2",
+    "hint": "Ali’s strip is two strips the same as Mei’s.",
+    "steps": [
+     "Mei’s strip is 6.",
+     "Ali has two strips of 6.",
+     "6 + 6 = 12."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is 6 + 2. Twice as many is two strips the same as Mei’s."
+     }
+    ],
+    "fig": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": "{m}",
+       "text": "{m}"
+      },
+      {
+       "name": "Ali",
+       "len": "{d}",
+       "segments": [
+        {
+         "v": "{m}",
+         "text": "{m}"
+        },
+        {
+         "v": "{m}",
+         "text": "{m}"
+        }
+       ]
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mei",
+       "len": 6,
+       "text": "6"
+      },
+      {
+       "name": "Ali",
+       "len": 12,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 6,
+         "text": "6"
+        }
+       ]
+      }
+     ]
+    },
+    "tpl": {
+     "vars": {
+      "m": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {
+      "d": "2*m"
+     },
+     "q": "Mei has {m} stickers. Ali has twice as many stickers as Mei. How many stickers does Ali have?",
+     "answer": "2*m",
+     "hint": "Ali’s strip is two strips the same as Mei’s.",
+     "steps": [
+      "Mei’s strip is {m}.",
+      "Ali has two strips of {m}.",
+      "{m} + {m} = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei has 6 stickers. Ali has twice as many stickers as Mei. How many stickers do they have together?",
+    "answer": 18,
+    "easier": "t1",
+    "hint": "Find Ali’s stickers first. Then add Mei’s.",
+    "steps": [
+     "Ali has 6 + 6 = 12.",
+     "6 + 12 = 18.",
+     "Together they have 18."
+    ],
+    "slips": [
+     {
+      "a": [
+       12
+      ],
+      "say": "12 is Ali’s stickers. Add Mei’s stickers too."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "m": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {
+      "d": "2*m"
+     },
+     "q": "Mei has {m} stickers. Ali has twice as many stickers as Mei. How many stickers do they have together?",
+     "answer": "3*m",
+     "hint": "Find Ali’s stickers first. Then add Mei’s.",
+     "steps": [
+      "Ali has {m} + {m} = {d}.",
+      "{m} + {d} = {ans}.",
+      "Together they have {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Mei has 8 stickers. Ravi has twice as many stickers as Mei. Jenny says Ravi has 10 stickers. Is Jenny correct?",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "answer": "no",
+    "easier": "t1",
+    "hint": "Twice as many is two strips the same as Mei’s. How many is that?",
+    "steps": [
+     "Mei has 8.",
+     "Twice as many is 8 + 8 = 16.",
+     "Ravi has 16, not 10. Jenny is not correct."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "10 is 8 + 2. Twice as many is two strips of 8."
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ali has twice as many cards as Mei. Ali has 24 cards. Ali gives some cards to Mei. Then they have the same number. How many cards does Ali give?",
+    "answer": 6,
+    "easier": "t1",
+    "hint": "Find Mei’s cards. The gap is shared equally.",
+    "steps": [
+     "Mei has 12 cards.",
+     "The gap is 12.",
+     "Ali gives half of the gap: 6 cards."
+    ],
+    "slips": [
+     {
+      "a": [
+       12
+      ],
+      "say": "12 is the gap. Ali gives only half of the gap."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "m": [
+       4,
+       8,
+       12,
+       16
+      ]
+     },
+     "derive": {
+      "a": "2*m"
+     },
+     "q": "Ali has twice as many cards as Mei. Ali has {a} cards. Ali gives some cards to Mei. Then they have the same number. How many cards does Ali give?",
+     "answer": "m/2",
+     "hint": "Find Mei’s cards. The gap is shared equally.",
+     "steps": [
+      "Mei has {m} cards.",
+      "The gap is {m}.",
+      "Ali gives half of the gap: {ans} cards."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Wei puts 3 stickers on each of 4 cards. He puts 2 stickers on each of 5 other cards. He has 4 stickers left over. How many stickers did Wei have at first?",
+    "answer": 26,
+    "easier": "c3",
+    "hint": "Find the stickers on each set of cards. Then add the stickers left over.",
+    "steps": [
+     "4 groups of 3 = 12.",
+     "5 groups of 2 = 10.",
+     "12 + 10 + 4 = 26."
+    ],
+    "slips": [
+     {
+      "a": [
+       22
+      ],
+      "say": "22 is the stickers on the cards. Add the 4 left over."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "c": [
+       2,
+       3,
+       5
+      ],
+      "r": [
+       1,
+       2,
+       4
+      ]
+     },
+     "q": "Wei puts 3 stickers on each of {a} cards. He puts 2 stickers on each of {c} other cards. He has {r} stickers left over. How many stickers did Wei have at first?",
+     "answer": "3*a+2*c+r",
+     "hint": "Find the stickers on each set of cards. Then add the stickers left over.",
+     "steps": [
+      "{a} groups of 3 = {x}.",
+      "{c} groups of 2 = {y}.",
+      "{x} + {y} + {r} = {ans}."
+     ],
+     "derive": {
+      "x": "3*a",
+      "y": "2*c"
+     }
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Siti has 7 marbles. Ravi has 3 times as many marbles as Siti. How many marbles do they have altogether?",
+    "answer": 28,
+    "easier": "t2",
+    "hint": "Ravi’s strip is three strips the same as Siti’s.",
+    "steps": [
+     "Ravi has 7 + 7 + 7 = 21.",
+     "7 + 21 = 28.",
+     "They have 28 marbles altogether."
+    ],
+    "slips": [
+     {
+      "a": [
+       21
+      ],
+      "say": "21 is Ravi’s marbles. Add Siti’s marbles too."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "m": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "derive": {
+      "r": "3*m"
+     },
+     "q": "Siti has {m} marbles. Ravi has 3 times as many marbles as Siti. How many marbles do they have altogether?",
+     "answer": "4*m",
+     "hint": "Ravi’s strip is three strips the same as Siti’s.",
+     "steps": [
+      "Ravi has 3 groups of {m} = {r}.",
+      "{m} + {r} = {ans}.",
+      "They have {ans} marbles altogether."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Kumar has 3 times as many pens as Lily. They have 24 pens together. How many pens does Lily have?",
+    "answer": 6,
+    "easier": "g2",
+    "hint": "Draw 1 box for Lily and 3 boxes for Kumar. How many equal boxes in all?",
+    "steps": [
+     "Lily has 1 box and Kumar has 3 boxes: 4 boxes.",
+     "24 pens in 4 equal boxes is 6 in each.",
+     "Lily has 6 pens."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "24 is shared into 4 equal boxes, not 3."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "derive": {
+      "t": "4*k"
+     },
+     "q": "Kumar has 3 times as many pens as Lily. They have {t} pens together. How many pens does Lily have?",
+     "answer": "k",
+     "hint": "Draw 1 box for Lily and 3 boxes for Kumar. How many equal boxes in all?",
+     "steps": [
+      "Lily has 1 box and Kumar has 3 boxes: 4 boxes.",
+      "{t} pens in 4 equal boxes is {ans} in each.",
+      "Lily has {ans} pens."
+     ]
+    }
+   },
+   {
+    "id": "g4",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make up a strip story for a grown-up. Use bags and sweets, or twice as many. Many answers are right.",
+    "hint": "Choose how many boxes and what is in each box first.",
+    "steps": [
+     "Draw the boxes and write the number in each box.",
+     "Ask your grown-up for the total.",
+     "Check by counting in jumps."
+    ],
+    "slips": [],
+    "easier": "c1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Is twice as many the same as the number plus itself? Try 5, then 7, then 9, with strips. Can you find a number where it is not true?",
+    "rec": "Recording: pause. Make a strip for 5, then twice as many. Try 7 and 9 as well.",
+    "answer": "10, 14 and 18. No number breaks it: twice as many is two equal strips, which is the number added to itself."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Draw a strip story with bags and sweets, or with twice as many. Write the number in each box. Ask your grown-up for the total, then check together.",
+    "rec": "Recording: pause. Draw a strip story and ask a grown-up to find the total.",
+    "answer": "No single answer. Check that the boxes are the same size and that the total adds up."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never seen a strip. Put 4 counters in each of 3 cups. Show them the strip of 3 boxes and tell them the total.",
+    "rec": "Recording: pause. Show a grown-up 3 cups of 4 counters and draw the strip.",
+    "answer": "3 boxes with 4 in each box: 4 + 4 + 4 = 12 counters."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We drew stories as strips: one box for each group, the same number in every box. We found the total, then did one more step (2 loose pens, or 2 marbles lost). We met twice as many: two equal strips, not 2 more. Equal-group stories are Primary 1 work. Strips and twice as many go a little beyond Primary 1 on purpose; we start from cups of counters.",
+  "words": [
+   "strip: a row of equal boxes (a bar model at school)",
+   "each: how many are in one box or bag",
+   "loose: not in a box or a bag",
+   "twice as many: two equal strips"
+  ],
+  "try_home": [
+   "Cups: put 4 counters in each of 3 cups and draw 3 boxes with 4 in each. How many in all? Small things away from mouths.",
+   "Add a step: put 2 loose counters down, or take 2 away. What is the total now?",
+   "Twice as many: make a strip of 6, then twice as many. Is that 2 more?"
+  ],
+  "ask": [
+   "How many boxes? What is in each box?",
+   "What is step one? What is step two?"
+  ],
+  "when_stuck": "Let your child use cups and counters, or draw boxes in a row, and wait 10 seconds before helping. Asking ‘how many boxes?’ and ‘what is in each box?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Lesson 19: Picture Equations. Online practice: your tutor will share the practice link.",
+  "quote": "Draw the story as equal strips, then solve it one step at a time.",
+  "report_line": "Your child is learning to draw a story as strips, to solve it one step at a time and to see that twice as many is two equal strips. This week: equal-group stories, one more step and twice as many.",
+  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "next_materials": [
+   "The Lesson 19 workbook, with its counters page (a grown-up cuts out 20 counters)",
+   "About 30 small things (not food) and 2 small cups or bowls",
+   "4 small pieces of paper with a circle, a square, a triangle and a heart drawn on them",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. A grown-up does the cutting of the strips before the lesson; children do not use scissors in the lesson. Cups and plates stay on the table; use paper or plastic, not glass or china.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers for a choice. There is no private chat.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Clapping is soft; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the Think harder transfer (T4: Mei 12, Ali gives 6) and the Go further hidden unit (G3: Lily 6, Kumar 18) so you can answer a child who draws it another way.",
+  "Tell parents a week before: print the workbook pages and the strips page, and a grown-up cuts out the strips (ten strips, cut at the dotted lines when needed). Find 3 paper cups or plates and about 20 small things that are not food.",
+  "Have the slides open and have two or three paper strips and counters to show on camera if you wish. Check the strips are visible on screen share.",
+  "Check the recording captures the tutor and the shared screen. Children’s video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+  "Say plainly to families that equal-group stories are Primary 1 work, and that drawing strips (called bar models at school) and twice as many go a little beyond Primary 1 on purpose. Say strip to children. Twice as many is two equal strips, never \"2 more\". Do not call the lesson MOE-aligned. Lessons 15 to 18 build on one another."
+ ],
+ "workbook": {
+  "header": "Multiplication and Division: times stories",
+  "hint_p1": "Use cups and counters, or draw the strip. Every box is the same size.",
+  "hint_p2": "Draw the strip if it helps. Do one step at a time.",
+  "hint_p3": "Use strips or counters. Choose any question, in any order.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "home_hint": "Use cups and counters or draw the strip. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "unit_strips",
+    "rows": 10,
+    "cells": 10,
+    "title": "Kit page: strips",
+    "intro": "A grown-up cuts out the strips before the lesson. Cut a strip to any length at a dotted line."
+   }
+  ]
+ }
+}
