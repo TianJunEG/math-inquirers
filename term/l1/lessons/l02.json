@@ -142,6 +142,8 @@
     "val1": 20
   },
   "workbook": {
+    "choice_after": 3,
+    "home_hint": "Use your number cards, a line you draw, or a toy frog.",
     "header": "Whole Numbers: number line and number words",
     "hint_p1": "Use your number cards, your frog or a drawing. Say your answer out loud, then write it.",
     "hint_p3": "Use your number line and count the hops. Then write how you know. Choose any question, in any order.",
