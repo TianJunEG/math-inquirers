@@ -21,25 +21,24 @@
  },
  {
   "lesson": 2,
-  "name": "Eugenia Cheng",
-  "years": "born 1976",
-  "country_or_region": "England (now works in the United States)",
-  "who": "A mathematician who explains big ideas with cake and baking.",
-  "story": "Eugenia Cheng is a mathematician who was born in England in 1976 and studied maths at Cambridge University. Her research is in an area called category theory. She is well known for explaining maths with food. Her book How to Bake Pi came out in 2015, and each chapter opens with a dessert recipe. One example in the book is about three brothers and sisters trying to share a cake. Today she teaches maths to art students in Chicago. Cooking and baking use fractions all the time, such as half a cup of milk, a quarter of a cake or a third of the dough. Cheng shows that maths is not only for tests: it is also in the kitchen.",
-  "link_to_lesson": "Today you add, subtract and share with fractions, just like sharing a cake or following a recipe.",
+  "name": "Zhang Qiujian",
+  "years": "about 430-490 (dates uncertain)",
+  "country_or_region": "China",
+  "who": "A Chinese author of an old maths manual that gives lots of practice with fractions.",
+  "story": "Zhang Qiujian wrote a maths book in China about 1,500 years ago. Historians know almost nothing else about his life, and the dates are not certain. In his preface he told students not to fear multiplying and dividing as much as the tricky parts of working with fractions. Much of his book is practice with fractions, such as dividing one mixed number by another. He also gave problems to help with finding a common denominator. Later, his book became a textbook for students preparing for government exams.",
+  "link_to_lesson": "Today you add, divide and share with fractions, the same skills Zhang Qiujian wanted his students to practise.",
   "try_it": {
-   "q": "Three children share a cake. Ana eats 1/3 of it and Ben eats 1/4 of it. What fraction of the cake is left for the third child?",
-   "a": "1/3 + 1/4 = 4/12 + 3/12 = 7/12 eaten. 1 - 7/12 = 5/12 is left."
+   "q": "Zhang's students practised dividing fractions. Try one: 3/4 of a loaf is shared equally among 6 children. What fraction of the whole loaf does each child get? Hint: draw 3/4 and cut each quarter again.",
+   "a": "3/4 / 6 = 3/24 = 1/8 of the loaf."
   },
   "source_urls": [
-   "https://shop.hachettebookgroup.com/products/how-to-bake-pi",
-   "https://en.wikipedia.org/wiki/Eugenia_Cheng",
-   "https://stemettes.org/zine/articles/meet-eugenia-cheng/",
-   "https://www.ted.com/speakers/eugenia_cheng"
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Zhang_Qiujian/",
+   "https://en.wikipedia.org/wiki/Zhang_Qiujian_Suanjing",
+   "https://www.cambridge.org/core/product/7E654BC8863452F26F2E0C43892699F4/core-reader"
   ],
-  "confidence": "medium",
-  "legend_note": "",
-  "icon_idea": "A round cake cut into slices with a recipe card beside it."
+  "confidence": "high",
+  "legend_note": "Dates are uncertain: MacTutor gives about 430-490 and writing between 468 and 486, Wikipedia 466-485; some authors place him about 100 years earlier.",
+  "icon_idea": "A set of counting rods laid out beside a bamboo scroll with a fraction bar."
  },
  {
   "lesson": 3,
