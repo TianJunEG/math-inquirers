@@ -50,7 +50,7 @@ const compass = () => {
 
 // Q5: (a) rectangle with a line from a corner, (b) square corner cut into 3 angles
 const corners = () => {
-  let s = `<svg aria-label="Three drawings. (a) A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side. (b) A square with two lines from its bottom left corner making three angles: 15 degrees, angle b and 48 degrees." viewBox="0 0 380 205" xmlns="http://www.w3.org/2000/svg" style="width:380px;max-width:100%">`;
+  let s = `<svg aria-label="A rectangle with a line from its top left corner; the angle between the left side and the line is 58 degrees and angle a is between the line and the top side." viewBox="0 0 190 205" xmlns="http://www.w3.org/2000/svg" style="width:190px;max-width:100%">`;
   // (a) rectangle 150 x 100, top-left corner A
   const A = [20, 50];
   s += `<rect x="20" y="50" width="150" height="100" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
@@ -59,15 +59,6 @@ const corners = () => {
   let q = pt(A[0], A[1], 88, -13); s += T(q[0], q[1] + 6, 'a', 19, TEAL);
   q = pt(A[0], A[1], 64, -64); s += T(q[0] + 4, q[1] + 6, '58°', 18, TEAL);
   s += T(95, 190, '(a) rectangle', 17, TEAL);
-  // (b) square 140, bottom-left corner B
-  const B = [205, 170];
-  s += `<rect x="205" y="30" width="140" height="140" fill="${SKY}" stroke="${NAVY}" stroke-width="3"/>`;
-  s += L(B, [345, 170 - 140 * Math.tan(rad(15))]) + L(B, [345, 170 - 140 * Math.tan(rad(42))]);
-  s += arc(B[0], B[1], 70, 0, 15) + arc(B[0], B[1], 44, 15, 42) + arc(B[0], B[1], 30, 42, 90);
-  q = pt(B[0], B[1], 92, 7.5); s += T(q[0], q[1] + 6, '15°', 18, TEAL);
-  q = pt(B[0], B[1], 62, 28.5); s += T(q[0], q[1] + 6, 'b', 19, TEAL);
-  q = pt(B[0], B[1], 52, 66); s += T(q[0], q[1] + 6, '48°', 18, TEAL);
-  s += T(275, 196, '(b) square', 17, TEAL);
   return s + '</svg>';
 };
 
@@ -87,8 +78,8 @@ const overlapFig = () => {
 module.exports = {
   lesson: {
     n: 6, week: 3, session: 'B', title: 'Angle Turns', topic: 'Angles',
-    objective: 'Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each number) and turns of the minute hand (6° a minute), turn on the 8-point compass (45° steps) and work backwards from a turn, and find unknown angles in squares and rectangles.',
-    skills: 'Estimating with 90° and 180°, measuring, systematic counting, adding and subtracting angles, working backwards, explaining with turns',
+    objective: 'Estimate and measure angles with a protractor, find every angle in a fan of rays, work out angles between clock hands (30° for each number), turn on the 8-point compass (45° steps), and find an unknown angle in a rectangle corner.',
+    skills: 'Estimating with 90° and 180°, measuring, systematic counting, adding and subtracting angles, explaining with turns',
     materials: 'A protractor and a ruler for each child (bring from home: the kit page lists them), the paper clock from the cut-out page with a split pin (or a real clock), a square of paper for checking right angles, mini whiteboards, a compass card on the floor or wall.',
     online: 'Children use their own protractor and ruler and the paper clock cut out from the kit page. Self-view on screen may be mirrored: say turn towards your own right hand, not the screen’s left. The 8-point compass is shown on the slides; children stand and turn on camera, with the screen as North.',
     warmup: 'Robot turns: everyone stands facing the front (North). The tutor calls turns (quarter turn clockwise, half turn, 45° anticlockwise) and children turn, then name the direction they face.',
@@ -101,9 +92,9 @@ module.exports = {
     key: [
       ['Q1', 'a 40°,  b 115°,  c 75°,  d 150° (allow 2° either way; estimates within about 20° are good).  b and d are bigger than a right angle.'],
       ['Q2', '(a) 6 angles  (b) ∠AOB 30°, ∠BOC 60°, ∠COD 45°, ∠AOC 90°, ∠BOD 105°, ∠AOD 135°  (c) ∠AOC'],
-      ['Q3', '(a) 120°  (b) 150°  (c) 1 o’clock and 11 o’clock'],
-      ['Q4', '(a) N  (b) E  (c) 135° clockwise  (d) NE'],
-      ['Q5', '(a) ∠a = 32° (90° − 58°)  (b) ∠b = 27° (90° − 15° − 48°)'],
+      ['Q3', '(a) 120°  (b) 150°'],
+      ['Q4', '(a) N  (b) E'],
+      ['Q5', '∠a = 32° (90° − 58°)'],
       ['Q6', '(a) SW (N → E → NE → SW)']
     ]
   },
@@ -135,7 +126,7 @@ module.exports = {
     keySmall: 'Angles side by side add up. The corner of a square or rectangle is 90°.',
     brk: 'Compass dance. Stand facing North. Jump a quarter turn clockwise on each clap: N, E, S, W, N. Then half turns, then 45° steps saying each direction.',
     ws1: 'Page 1, in pairs: Q1 estimate then measure four angles, Q2 every angle in the fan.',
-    ws2: 'Page 2, on your own: Q3 clock angles, Q4 compass turns, Q5 corners of squares and rectangles, Q6 the robot.'
+    ws2: 'Page 2, on your own: Q3 clock angles, Q4 compass turns, Q5 a corner of a rectangle, Q6 the robot.'
   },
 
   qbank: {
@@ -150,7 +141,7 @@ module.exports = {
     stretch: [
       { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)' },
       { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.' },
-      { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)' },
+      { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (7 jumps of 5 minutes, and each jump is one clock space of 30°)' },
       { q: 'A robot starts facing N. Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.', a: 'Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.' },
       { q: 'Mei faces W. She turns clockwise until she faces SE. How many degrees does she turn?', a: '225° (W → NW → N → NE → E → SE: 5 steps of 45°)' },
       { q: 'Four rays come out of one point, making 3 angles side by side: 25°, 40° and 25°. How many angles are there altogether? What is the biggest?', a: '6 angles (25°, 40°, 25°, 65°, 65°, 90°); the biggest is 90°.' },
@@ -176,8 +167,8 @@ module.exports = {
     H.fig(fourAngles()),
     H.tbl([2400, 1875, 1875, 1875, 1875], [
       H.row(['Angle', 'a', 'b', 'c', 'd'].map((s, i) => H.cell(s, i ? 1875 : 2400, { bold: true, fill: 'EDEDED' }))),
-      H.row([H.cell('My estimate', 2400, { bold: true, h: 90 }), ...[0, 1, 2, 3].map(() => H.cell('', 1875))]),
-      H.row([H.cell('I measured', 2400, { bold: true, h: 90 }), ...[0, 1, 2, 3].map(() => H.cell('', 1875))])
+      H.row([H.cell('My estimate', 2400, { bold: true, h: 56 }), ...[0, 1, 2, 3].map(() => H.cell('', 1875))]),
+      H.row([H.cell('I measured', 2400, { bold: true, h: 56 }), ...[0, 1, 2, 3].map(() => H.cell('', 1875))])
     ]),
     H.gap(20),
     H.q(2, 'Four rays OA, OB, OC and OD come out of point O. ∠AOB means the angle at O between OA and OB.', { keepNext: true }),
@@ -189,16 +180,13 @@ module.exports = {
 
     H.q(3, 'Clock angles. A clock face has 12 equal spaces in 360°. Find the smaller angle.', { pb: true, before: 0, keepNext: true }),
     H.sub('a', ['At 4 o’clock:  ________          <b style="color:#1F7A6F">b</b>  At 7 o’clock:  ________']),
-    H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
     H.fig(compass()),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
-    H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),
-    H.sub('d', 'Ravi turns 90° anticlockwise and ends up facing NW. At first he faced:   ______'),
-    H.q(5, 'The corners of squares and rectangles are 90°. Find the angles marked a and b.', { keepNext: true }),
+    H.q(5, 'The corner of a rectangle is 90°. Find the angle marked a.', { keepNext: true }),
     H.fig(corners()),
-    H.sub('', '∠a = ________          ∠b = ________'),
+    H.sub('', '∠a = ________'),
     H.q(6, 'A robot starts facing N.', { keepNext: true }),
     H.sub('', 'It turns 90° clockwise, then 45° anticlockwise, then 180°. Now it faces:  ______')
   ]
