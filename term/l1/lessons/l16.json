@@ -1,0 +1,3092 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-06",
+ "level": 1,
+ "term": 2,
+ "lesson": 16,
+ "lesson_in_term": 6,
+ "title": "Skip-Count Tables",
+ "big_idea": "Tables are skip counts, and the last digits show a pattern",
+ "child_idea": "A table is counting in jumps: the 5s are 5, 10, 15 and so on. 6 jumps of 5 is 6 × 5 = 30. The last digits make a pattern.",
+ "skill": "Patterns to facts",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Multiplication and Division",
+  "topics": [
+   "Tables of 2, 5 and 10 as skip counts, multiplying within 40 (Primary 1, Multiplication and Division, p. 31)",
+   "Tables of 3 and 4 (Primary 2, p. 33)",
+   "Numbers that are in two tables (common multiples, Primary 4, p. 37)"
+  ],
+  "note": "Strand label for the tutor only. The 2, 5 and 10 tables within 40 are Primary 1 content and fill Start here. BEYOND PRIMARY 1 ON PURPOSE: the 3 and 4 tables are Primary 2 content (p. 33) and numbers that are in two tables (common multiples) are Primary 4 content (p. 37), so Think harder (the 4s as doubled 2s, numbers in both the 2s and the 5s) and Go further (the 4s and 3s, three tables) go past the school Primary 1 syllabus. Tables of 6 to 9 are Primary 3 and are left out. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order: 6 jumps of 5 is 6 × 5 (jumps first, then the size of the jump); either order is accepted in an answer. Contest tag (tutor only): numbers in two tables, shared multiples."
+ },
+ "contest_moves": [
+  "numbers that are in two tables (2s and 5s up to 40)",
+  "the 4s are the 2s doubled",
+  "a table number can be tested by its last digit"
+ ],
+ "objectives": [
+  "Build the 5s, 2s and 10s by counting in jumps along a 100 square and say facts such as \"6 fives is 30\" and 6 × 5 = 30.",
+  "Say that a table is skip counting, tell 6 × 5 (6 jumps of 5) from 6 + 5, and write a missing number in a table row (products to 40).",
+  "Notice the last digits of each table: 5 or 0 for the 5s, 0 for the 10s and 0, 2, 4, 6 or 8 for the 2s.",
+  "Think harder: use the 2s to find the 4s (4 × 6 is double 2 × 6), find the numbers that are in both the 2s and the 5s, and test a number by its last digit.",
+  "Go further: the 4s and 3s tables to 40 and the numbers they share with the 5s."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Count in 2s, 5s and 10s along a number square (Term 1)",
+   "Jumps of the same size along a number line (Term 1)",
+   "5 groups of 6 as repeated addition: 6 + 6 + 6 + 6 + 6 (Lesson 15, taught again with a picture)"
+  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up counts in jumps on a number square, shows jumps on a number line and builds 5 groups of 6 with a picture and one addition at a time. The word table and the × sign are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Skip counting in 2s, 5s and 10s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Lessons 15 to 18 build on one another (groups, tables, sharing, stories), so try not to miss Lesson 16. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here without Lesson 15 can follow, because the warm-up shows groups of as repeated addition and the Mini-lesson says the × sign again."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook with the 100 square kit page (page 6): nothing to cut",
+   "2 or 3 coloured pencils (pencil crayons or crayons)",
+   "About 20 small things of one kind (counters, buttons, dry pasta, coins) to use as frogs or to count",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "A paper copy of the 100 square and coloured pencils to show on camera if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "100 square (page 6): the numbers 1 to 100. Nothing to cut. Children colour on it lightly and use counters as frogs"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Pencil crayons are better than felt pens on the printed square."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 26
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 26,
+    "end": 38
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 38,
+    "end": 42
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 42,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 14 minutes on the 100 square: the 5s, then the 2s and 10s, then the last digits. The mini-lesson has 12 because it writes the facts down and separates 6 × 5 from 6 + 5. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: cut the Mini-lesson check slide to three facts",
+   "Then: shorten Explore round 3 to the 5s only",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Jenny puts 5 stickers on each page. She fills 4 pages. How many stickers is that altogether? You may draw or count in 5s.",
+  "q2": "Ali counts in 2s: 2, 4, 6, 8 and so on up to 20. Mei counts in 5s: 5, 10, 15, 20. Which numbers do they both say? Write them.",
+  "a1": "20",
+  "a2": "10 and 20. Ali says every second number and Mei says every fifth number, and they both say 10 and 20.",
+  "val1": 20
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, coloured pencils and counters. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, coloured pencils, paper and counters. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Touch the numbers and say your answers before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Use your 100 square and a counter to jump in fives, twos and tens. Press play when you have tried.",
+   "action": "Pause. Jump and colour on your 100 square, say each fact, and look at the last digits."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Whisper the in-between numbers and say the table numbers out loud.",
+   "action": "Stand up. Whisper the in-between numbers, say the table numbers loudly."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up if Wei is right, and test it on your 100 square.",
+   "action": "Pause. Explain your answer to someone at home, and test it on the 100 square."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Skip-Count Tables",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Build tables by counting in jumps."
+     ]
+    }
+   ],
+   "note": "Lesson 6 of Term 2, 90 minutes. Objective: build the 5s, 2s and 10s tables by counting in jumps along a 100 square, say and write the facts (6 × 5 = 30), notice the last digits, and use the 2s to find the 4s. Plain statement for families: the 2, 5 and 10 tables within 40 are Primary 1 work, but the 3 and 4 tables and numbers that are in two tables go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 26, mini-lesson 26 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Counting in jumps: the 2s, 5s and 10s",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: count in jumps",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Touch the yellow numbers as we say them"
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 66,
+     "cellpx": 100,
+     "shade": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Count in 2s: 2, 4, 6, 8 ..."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "2s",
+      "5s",
+      "10s"
+     ]
+    }
+   ],
+   "note": "The yellow numbers are the numbers we say when we count in twos. Count together to 20, touching each yellow number, then count in fives (5, 10, 15) and in tens (10, 20, 30). Ask: after 18 in twos (20), after 35 in fives (40), after 20 in tens (30). No writing, no marks. A child who is unsure touches each number on the screen.",
+   "mascot": {
+    "size": "s",
+    "say": "Counting in jumps is fun!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Jumps on a number line",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 20,
+     "step": 5,
+     "label_every": 5,
+     "jumps": [
+      [
+       0,
+       5,
+       "+5"
+      ],
+      [
+       5,
+       10,
+       "+5"
+      ],
+      [
+       10,
+       15,
+       "+5"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Every jump is the same size."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "next jump",
+      "3 jumps of 5",
+      "4 jumps of 2"
+     ]
+    }
+   ],
+   "note": "The frog jumps 5 each time and has made 3 jumps. Ask: where does the next jump land (20), where do 3 jumps of 5 land (15), how many jumps of 2 does it take to reach 8 (4). Children answer aloud or with fingers. A child who is unsure counts the jumps on fingers while saying the numbers."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "5 groups of 6",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "bag",
+     "n": 5,
+     "each": 6,
+     "icon": "counter_red",
+     "per_row": 5
+    },
+    {
+     "t": "p",
+     "text": "6 + 6 + 6 + 6 + 6: add one group at a time."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "6 + 6",
+      "12 + 6",
+      "3 groups of 5"
+     ]
+    }
+   ],
+   "note": "Five bags with 6 counters in each bag. We add one bag at a time: 6 + 6 = 12, then 12 + 6 = 18, and so on. Ask: 6 + 6 (12), 12 + 6 (18), 3 groups of 5 (15). Children answer aloud. This is Lesson 15 taught again: groups of is repeated addition, and a table is the same idea with the jump size fixed."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Jenny puts 5 stickers on each page.",
+         "She fills 4 pages.",
+         "How many stickers is that altogether?",
+         "You may draw or count in 5s."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Ali counts in 2s: 2, 4, 6, 8 and so on up to 20.",
+         "Mei counts in 5s: 5, 10, 15, 20.",
+         "Which numbers do they both say?",
+         "Write them."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (4 pages with 5 stickers; 20 stickers) is an access question: any child can draw or count in fives. Puzzle 2 is a thinking question on the lesson idea: numbers in two tables (10 and 20). Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 20; 10 and 20. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: jumps of 5",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put a counter on 0, just before the 1.",
+      "Jump 5 at a time. Colour each number you land on.",
+      "Say it: 1 five is 5, 2 fives is 10, 3 fives is 15 ...",
+      "How many jumps to land on 30?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 66,
+     "cellpx": 100
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Children use the 100 square on the kit page (page 6) and a counter as a frog. Start at 0, just before 1. Each jump of 5 lands on 5, 10, 15 ... up to 40; children colour each landing square lightly and say 1 five is 5, 2 fives is 10. Fingers count the jumps. Ask: how many jumps to land on 30 (6), on 25 (5), on 40 (8). Then say 6 fives is 30 and write 6 × 5 = 30 on the screen. The picture shows the numbers 1 to 40 with nothing coloured, so children find the landing numbers themselves."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Jumps of 2 and of 10",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Use a different colour for each table."
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 66,
+     "cellpx": 100
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Jump 2 at a time: how many jumps to land on 12?",
+      "Jump 10 at a time: how many jumps to land on 40?"
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Children colour the 2s in a second colour and put a ring round the 10s. Ask: how many jumps of 2 to land on 12 (6; 6 twos is 12) and how many jumps of 10 to land on 40 (4; 4 tens is 40). Say each fact with the sign: 6 × 2 = 12, 4 × 10 = 40. A child who loses count uses fingers for the jumps. Do not name a child with a wrong answer."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What do you notice?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Look at the last digits of the numbers you landed on."
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 66,
+     "cellpx": 100,
+     "shade": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "The 5s end in ...",
+      "The 10s end in ...",
+      "The 2s end in ..."
+     ]
+    }
+   ],
+   "note": "Round 3, about 5 minutes. Ask: look at the last digit of each yellow number (the 5s). What do you notice? (5, 0, 5, 0). The 10s end in 0. The 2s end in 0, 2, 4, 6 or 8. Let children say the pattern themselves. Then ask: is 35 in the 5s? is 28? Children answer with a thumb up or down. The picture here shows the 5s as an example only. Accept any correct pattern a child finds, such as the 5s are every second number of the 10s."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "The 5s table",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Jumps of 5",
+       "Say it",
+       "Write it"
+      ],
+      [
+       "1 jump",
+       "1 five is 5",
+       "1 × 5 = 5"
+      ],
+      [
+       "2 jumps",
+       "2 fives is 10",
+       "2 × 5 = 10"
+      ],
+      [
+       "3 jumps",
+       "3 fives is 15",
+       "3 × 5 = 15"
+      ],
+      [
+       "4 jumps",
+       "4 fives is 20",
+       "4 × 5 = 20"
+      ],
+      [
+       "5 jumps",
+       "5 fives is 25",
+       "5 × 5 = 25"
+      ],
+      [
+       "6 jumps",
+       "6 fives is 30",
+       "6 × 5 = 30"
+      ],
+      [
+       "7 jumps",
+       "7 fives is 35",
+       "7 × 5 = 35"
+      ],
+      [
+       "8 jumps",
+       "8 fives is 40",
+       "8 × 5 = 40"
+      ]
+     ]
+    }
+   ],
+   "note": "A table is a list of jumps. The first number is how many jumps and the second is the size of each jump: 6 × 5 is 6 jumps of 5, which lands on 30. Reveal the table one row at a time and let children say the total first. Link back to Lesson 15: 6 groups of 5 and 6 jumps of 5 are the same."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "The 2s and the 10s",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "The 2s",
+        "items": [
+         "1 × 2 = 2",
+         "2 × 2 = 4",
+         "3 × 2 = 6",
+         "4 × 2 = 8",
+         "5 × 2 = 10",
+         "6 × 2 = 12"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "The 10s",
+        "items": [
+         "1 × 10 = 10",
+         "2 × 10 = 20",
+         "3 × 10 = 30",
+         "4 × 10 = 40"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "The 2s are jumps of 2: 2, 4, 6, 8, 10, 12. The 10s are jumps of 10: 10, 20, 30, 40. Say each fact. Ask: what is 4 × 2 (8), what is 3 × 10 (30). Children who know the facts say them aloud; others look at the card. Note the 10s are every second number of the 5s."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Last digits",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Table",
+       "The last digit is"
+      ],
+      [
+       "The 5s",
+       "5 or 0"
+      ],
+      [
+       "The 10s",
+       "0"
+      ],
+      [
+       "The 2s",
+       "0, 2, 4, 6 or 8"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "A last digit can tell you if a number is in a table."
+    }
+   ],
+   "note": "Last digits make a pattern. The 5s end in 5 or 0; the 10s always end in 0; the 2s end in 0, 2, 4, 6 or 8. Ask: is 35 in the 5s table (yes, it ends in 5)? Is 28 in the 5s table (no, it ends in 8)? Say that the last digit helps us test; a few tests do not prove a rule for every number, but the jumps show why."
+  },
+  {
+   "id": "s-m3b",
+   "part": "mini",
+   "kind": "light",
+   "title": "Add or jump?",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Sum",
+       "What it means",
+       "Total"
+      ],
+      [
+       "6 + 5",
+       "6 and 5 more",
+       "11"
+      ],
+      [
+       "6 × 5",
+       "6 jumps of 5",
+       "30"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The sign tells you what to do."
+    }
+   ],
+   "note": "A common mix-up is 6 + 5 and 6 × 5. 6 + 5 means 6 and 5 more: 11. 6 × 5 means 6 jumps of 5: 30. Ask: what is 4 + 3 and what is 4 × 3 (7 and 12)? Link to the pictures: 4 groups of 3 is 4 × 3."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Write the fact and the total."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "3 × 5",
+      "6 × 2",
+      "4 × 10",
+      "8 × 5"
+     ]
+    }
+   ],
+   "note": "Each child writes the four totals on their own paper, for example 3 × 5 = 15 (3 jumps of 5). Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: 15, 12, 40, 40. Children may use the 100 square and a counter."
+  },
+  {
+   "id": "s-m4a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: the facts",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Fact",
+       "Jumps",
+       "Total"
+      ],
+      [
+       "3 × 5",
+       "5 + 5 + 5",
+       "15"
+      ],
+      [
+       "6 × 2",
+       "2 + 2 + 2 + 2 + 2 + 2",
+       "12"
+      ],
+      [
+       "4 × 10",
+       "10 + 10 + 10 + 10",
+       "40"
+      ],
+      [
+       "8 × 5",
+       "5 + 5 + 5 + 5 + 5 + 5 + 5 + 5",
+       "40"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 15, 12, 40, 40. Read each answer aloud so a child watching the recording can mark their own work. Children mark their own in another colour. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Whisper and say",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "I count 1, 2, 3 ... Say the 5s out loud."
+    },
+    {
+     "t": "p",
+     "text": "Whisper the numbers in between."
+    },
+    {
+     "t": "p",
+     "text": "Stand up. Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Count from 1 to 30 together: children whisper the in-between numbers and say every fifth number loudly. Then 1 to 20, loud for the 2s and whisper for the rest. No equipment, no running, a little clear space. A child may stay seated. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count in 5s and fill in three missing numbers. Question 2: a frog jumps on a number line. Question 3: 4 bundles of 10 straws."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Answers: Q1 15, 25, 35; Q2 3 jumps, each jump 5, 3 × 5 = 15; Q3 40 straws."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: 6 bikes with 2 wheels each. Question 5: a table of 5s facts with boxes. Question 6: true or false for four facts."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 12 and 12 wheels; Q5 10, 20, 30, 40; Q6 true, false, true, false."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "The 4s and numbers in two tables"
+      ],
+      [
+       "Go further (page 4)",
+       "The 4s and 3s, and jumps"
+      ],
+      [
+       "Investigation (page 5)",
+       "Last digits"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "WEI SAYS",
+     "items": [
+      "A number is in the 5s table if its last digit is 5 or 0."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is Wei right? How could we test it?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Wei’s rule on the 100 square: 15, 40, 28, 33. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: it works for the numbers we tested; the 5s alternate between ending in 5 and 0, so a number that ends in 5 or 0 is in the table, and one that ends in anything else is not. Repeat each child’s answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 66,
+     "cellpx": 100,
+     "shade": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      14,
+      16,
+      18,
+      22,
+      24,
+      26,
+      28,
+      32,
+      34,
+      36,
+      38
+     ],
+     "shade2": [
+      5,
+      15,
+      25,
+      35
+     ],
+     "outline": [
+      10,
+      20,
+      30,
+      40
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Yellow: 2s only. Green: 5s only. Border: both."
+    },
+    {
+     "t": "answer",
+     "text": "10 and 20 are in both. So are 30 and 40."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone’s earlier answer. Ali’s twos and Mei’s fives meet at 10 and 20 (and later at 30 and 40). The numbers in both tables end in 0. Puzzle 1: 4 pages of 5 stickers is 20."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children check their own ticket in a different colour. Answers: 15 and 25; option 2, 4 × 10 = 40; 6 × 5 = 30 and 30 stickers."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Sharing and Grouping",
+      "Have ready: about 20 counters or buttons, 5 plates or cups, pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: what if?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ben says: every number in the 10s table is also in the 5s table."
+    },
+    {
+     "t": "p",
+     "text": "Is Ben right?"
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Try",
+       "In the 5s table?"
+      ],
+      [
+       "10",
+       "Yes: 2 fives"
+      ],
+      [
+       "20",
+       "Yes: 4 fives"
+      ],
+      [
+       "30",
+       "Yes: 6 fives"
+      ]
+     ]
+    }
+   ],
+   "note": "Optional, only if you are on time. Answer: yes. Every jump of 10 is two jumps of 5, so a number in the 10s table is in the 5s table. The table shows 10, 20 and 30; children may try 40. Take two answers and move on.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Every number in the 10s is in the 5s. Test it."
+      ],
+      [
+       "Make a puzzle",
+       "Pick a number to 40. Ask your grown-up: is it in the 5s table?"
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to find 6 × 5 by jumping"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see your page and hands; cameras off is fine too. Pencil ready, and your 100 square, coloured pencils and counters on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we build tables by counting in jumps, and we look for patterns in the last digits. A table is just skip counting."
+     },
+     {
+      "k": "DO",
+      "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: the 2, 5 and 10 tables within 40 are Primary 1 work, but the 3 and 4 tables and numbers that are in two tables are beyond Primary 1 on purpose, always with the 100 square and counters."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Counting in jumps. Touch the yellow numbers as we count in twos: two, four, six, eight. Count with me up to twenty."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after eighteen when we count in twos?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Now count in fives: five, ten, fifteen, twenty."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after thirty-five when we count in fives?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "And in tens: ten, twenty."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after twenty when we count in tens?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "A frog jumps five each time. It has made three jumps. Every jump is the same size."
+     },
+     {
+      "k": "ASK",
+      "text": "Where does the next jump land?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where do three jumps of five land?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "How many jumps of two does it take to reach eight?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Five bags with six counters in each bag. We add one bag at a time: six and six."
+     },
+     {
+      "k": "ASK",
+      "text": "Six plus six?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Twelve plus six?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Three groups of five?",
+      "resp": 12
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about counting in jumps, touch each number on the screen and count slowly, one jump at a time on fingers. For the number line, count the jumps first, then read where the last one lands. For the bags, add one bag at a time and say the total each time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 20, 40, 30; 20, 15, 4; 12, 18, 15. Children answer with a whisper, fingers or hands. Nobody writes. Do not say table yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Jenny puts 5 stickers on each page. She fills 4 pages. How many stickers is that altogether? You may draw or count in 5s."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw or count and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Ali counts in 2s: 2, 4, 6, 8 and so on up to 20. Mei counts in 5s: 5, 10, 15, 20. Which numbers do they both say? Write them."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 20 stickers. Puzzle 2 answer: 10 and 20. Look for good ideas to praise later (a child who wrote both lists). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Find the 100 square on your kit page. Put a counter just before the one, on zero. This is your frog."
+     },
+     {
+      "k": "SAY",
+      "text": "Jump five at a time. Colour lightly each number you land on and say it: one five is five, two fives is ten, three fives is fifteen."
+     },
+     {
+      "k": "WORK",
+      "text": "Children jump in fives and colour the landing numbers up to 40, saying 1 five is 5, 2 fives is 10 and so on.",
+      "s": 190
+     },
+     {
+      "k": "ASK",
+      "text": "How many jumps did it take to land on thirty?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many jumps to land on twenty-five?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Six fives is thirty. We write it six times five is thirty."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Use a different colour. Jump two at a time and colour each number you land on."
+     },
+     {
+      "k": "WORK",
+      "text": "Children jump in twos and colour the landing numbers up to 20 or more.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "How many jumps of two to land on twelve?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now jump ten at a time. Put a ring round each number you land on."
+     },
+     {
+      "k": "WORK",
+      "text": "Children jump in tens and ring 10, 20, 30, 40.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "How many jumps of ten to land on forty?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Look at the last digit of each number you landed on in fives."
+     },
+     {
+      "k": "ASK",
+      "text": "What do you notice about the last digits of the fives? What about the tens, and the twos?",
+      "resp": 75
+     },
+     {
+      "k": "SAY",
+      "text": "The fives end in five or zero. The tens always end in zero. The twos end in zero, two, four, six or eight."
+     },
+     {
+      "k": "ASK",
+      "text": "Is thirty-five in the 5s? Is twenty-eight? Thumb up or thumb down.",
+      "resp": 20
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who loses their place: put the counter back on the last number they know and count the jumps again. A child who colours every number: say, only the numbers we land on. A child who starts on 1 instead of 0: the first jump from 0 lands on 5."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see colouring on small tiles. Answers: 6, 5, 8 jumps of 5 (30, 25, 40); 6 jumps of 2 to 12; 4 jumps of 10 to 40; 35 is in the 5s and 28 is not. Colour lightly with pencil crayon. Accept any correct pattern a child finds. Do not call it a table yet beyond saying the 5s are a table."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A table is a list of jumps. Look at the fives. One jump of five is five. Two jumps of five is ten. Six fives is thirty. We write it six times five is thirty."
+     },
+     {
+      "k": "ASK",
+      "text": "What is seven times five? How do you know?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "The twos: two, four, six, eight, ten, twelve. The tens: ten, twenty, thirty, forty. Say each fact with me."
+     },
+     {
+      "k": "ASK",
+      "text": "What is four times two? What is three times ten?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "The last digits make a pattern. The fives end in five or zero. The tens end in zero. The twos end in zero, two, four, six or eight."
+     },
+     {
+      "k": "ASK",
+      "text": "Is thirty-five in the 5s table? Is twenty-eight? How do you know?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3b"
+     },
+     {
+      "k": "SAY",
+      "text": "Take care with the sign. Six plus five means six and five more. Six times five means six jumps of five."
+     },
+     {
+      "k": "ASK",
+      "text": "What is four plus three? What is four times three?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Write the fact and the total. Three times five. Six times two. Four times ten. Eight times five."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the four totals on their own paper.",
+      "s": 150
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4a"
+     },
+     {
+      "k": "READ",
+      "text": "Fifteen. Twelve. Forty. Forty. Mark your own in another colour."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: table, jump, times, in a table, last digit. Say 6 jumps of 5 for 6 × 5. The 2, 5 and 10 tables within 40 are Primary 1 work; the 3 and 4 tables are beyond it on purpose and come in Think harder and Go further. Do not teach the tables by heart: the counting is the method. Accept 5 × 6 as a correct way to write the same total."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child writes 6 + 5 for 6 times 5, ask them to jump: start on 0 and jump 5 six times. If a child says a number is in a table without checking, ask: how can we test it?"
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I count from one. Say the numbers of the fives loudly and whisper the numbers in between."
+     },
+     {
+      "k": "WORK",
+      "text": "Count 1 to 30 together: whisper the in-between numbers, say every fifth number loudly. Then count 1 to 20 saying the twos loudly. Children may stay seated.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: count in 5s and fill in the missing numbers. Question 2: a frog jumps on a number line. Fill in the blanks. Question 3: Ravi has 4 bundles of 10 straws. How many straws does Ravi have in all?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 15, 25, 35. Question 2: 3 jumps, each jump 5, and 3 times 5 is 15. Question 3: 10, 20, 30, 40: 40 straws. Mark your own page in another colour."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: each bike has 2 wheels. How many wheels do 6 bikes have? Question 5: fill in the table of jumps of 5. Question 6: decide if each fact is True or False."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 6 times 2 is 12, so 12 wheels. Question 5: 10, 20, 30, 40. Question 6: true, false, true, false."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 290
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count in jumps of 5 and say each number. Q2: count the jumps, then the size of each jump. Q3: count the bundles in tens. Q4: add 2 six times, or count in twos. Q5: use your 100 square. Q6: count the jumps for each fact."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for using the 2s to find the 4s, numbers in two tables and the last digit of a number. Go further has the 4s and 3s. Do not announce who is on which page. Slow class: the workbook part needs about 30 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Wei says: a number is in the 5s table if its last digit is 5 or 0. Is Wei right? How could we test it?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test Wei’s rule on your 100 square with 15, 40, 28 and 33.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Ali’s twos and Mei’s fives meet at ten and twenty, and later at thirty and forty. The numbers in both tables end in zero."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: it works for the numbers we tested; the 5s end in 5 and 0 one after the other, so a number that ends in 5 or 0 is in the table and one that ends in any other digit is not. We tested a few numbers and the jumps show why. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Count in 5s. Fill in the missing numbers. E2. Which sentence is true? Write its number in the bracket. E3. Ben puts 5 stickers on each of 6 pages. How many stickers does Ben have in all? Fill in the blanks.",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 15 and 25. E2: option 2, 4 times 10 is 40. E3: 6 times 5 is 30, and Ben has 30 stickers."
+     },
+     {
+      "k": "SAY",
+      "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child’s result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick ‘I am still stuck’, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Sharing and Grouping. Please have about twenty counters or buttons, five plates or cups, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Ben says every number in the 10s table is also in the 5s table. Is Ben right? Try 10, 20, 30 and 40.",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: yes, because each jump of 10 is two jumps of 5. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Count in 5s. Fill in the missing numbers.",
+    "parts": [],
+    "answer": "15, 25, 35",
+    "val": [
+     15,
+     25,
+     35
+    ],
+    "hint": "Add 5 each time. Say the numbers: 5, 10, 15 ...",
+    "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30, 35, 40. The missing numbers are 15, 25 and 35.",
+    "mistakes": [
+     "Writing 14 or 16 (counting in 1s).",
+     "Skipping a number."
+    ],
+    "mins": 2,
+    "visual": {
+     "type": "table",
+     "rows": [
+      [
+       "5",
+       "10",
+       "[2]",
+       "20",
+       "[2]",
+       "30",
+       "[2]",
+       "40"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "A frog jumps along the number line. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The frog makes [] jumps.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "Each jump is [] long.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "c",
+      "text": "[] × [] = [2]",
+      "ans": "3, 5, 15",
+      "val": [
+       3,
+       5,
+       15
+      ]
+     }
+    ],
+    "answer": "3 jumps; each jump is 5; 3 × 5 = 15",
+    "val": [
+     3,
+     5,
+     3,
+     5,
+     15
+    ],
+    "hint": "Count the jumps. Then read the number on one jump.",
+    "solution": "The frog makes 3 jumps and each jump is 5. 5 + 5 + 5 = 15, so 3 jumps of 5 is 3 × 5 = 15.",
+    "mistakes": [
+     "Counting the numbers on the line instead of the jumps.",
+     "Writing 3 + 5 = 8."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "number_line",
+     "start": 0,
+     "end": 20,
+     "step": 5,
+     "label_every": 5,
+     "jumps": [
+      [
+       0,
+       5,
+       "+5"
+      ],
+      [
+       5,
+       10,
+       "+5"
+      ],
+      [
+       10,
+       15,
+       "+5"
+      ]
+     ],
+     "width": 500
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Ravi has 4 bundles of 10 straws. How many straws does Ravi have in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "10 + 10 + 10 + 10 = [2]",
+      "ans": "40",
+      "val": 40
+     },
+     {
+      "l": "b",
+      "text": "4 × 10 = [2]",
+      "ans": "40",
+      "val": 40
+     }
+    ],
+    "answer": "10 + 10 + 10 + 10 = 40; 4 × 10 = 40",
+    "val": [
+     40,
+     40
+    ],
+    "hint": "Count in 10s: 10, 20 ...",
+    "solution": "4 bundles of 10: 10 + 10 + 10 + 10 = 40. So 4 × 10 = 40 and Ravi has 40 straws.",
+    "mistakes": [
+     "Writing 4 + 10 = 14.",
+     "Counting the bundles as 4 straws."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bundles",
+     "tens": 4,
+     "ones": 0,
+     "style": "kit"
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Each bike has 2 wheels. How many wheels do 6 bikes have?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 × 2 = [2]",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "6 bikes have [2] wheels.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "12 wheels",
+    "val": [
+     12,
+     12
+    ],
+    "hint": "Count in 2s: 2, 4, 6 ... Use your fingers for the bikes.",
+    "solution": "6 bikes with 2 wheels each: 2 + 2 + 2 + 2 + 2 + 2 = 12. So 6 × 2 = 12.",
+    "mistakes": [
+     "Writing 8 (6 + 2).",
+     "Losing count of the bikes."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "objects",
+     "icon": "bike",
+     "n": 6,
+     "per_row": 3
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Fill in the table.",
+    "parts": [],
+    "answer": "10, 20, 30, 40",
+    "val": [
+     10,
+     20,
+     30,
+     40
+    ],
+    "hint": "Jump in 5s on your 100 square: 5, 10, 15 ...",
+    "solution": "2 × 5 = 10, 4 × 5 = 20, 6 × 5 = 30 and 8 × 5 = 40.",
+    "mistakes": [
+     "Adding: 2 + 5 = 7.",
+     "Writing the number of jumps in the Total box."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Jumps of 5",
+      "Total"
+     ],
+     "rows": [
+      [
+       "1 × 5",
+       "5"
+      ],
+      [
+       "2 × 5",
+       "[2]"
+      ],
+      [
+       "4 × 5",
+       "[2]"
+      ],
+      [
+       "6 × 5",
+       "[2]"
+      ],
+      [
+       "8 × 5",
+       "[2]"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Read each statement. Decide if it is True or False.",
+    "parts": [],
+    "answer": "True, False, True, False",
+    "val": [
+     "T",
+     "F",
+     "T",
+     "F"
+    ],
+    "hint": "Count the jumps for each fact, or use your 100 square.",
+    "solution": "5 × 4 = 20 is true. 3 × 10 is 30, not 40: false. 6 × 2 = 12 is true. 8 × 5 is 40, not 35: false.",
+    "mistakes": [
+     "Marking 3 × 10 = 40 as true.",
+     "Marking 8 × 5 = 35 as true because it ends in 5."
+    ],
+    "mins": 2.5,
+    "tf": [
+     {
+      "s": "5 × 4 = 20"
+     },
+     {
+      "s": "3 × 10 = 40"
+     },
+     {
+      "s": "6 × 2 = 12"
+     },
+     {
+      "s": "8 × 5 = 35"
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the dots. The top 2 rows are shaded. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "2 × 6 = [2]",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "4 × 6 = [2]",
+      "ans": "24",
+      "val": 24
+     }
+    ],
+    "answer": "2 × 6 = 12; 4 × 6 = 24",
+    "val": [
+     12,
+     24
+    ],
+    "hint": "The 4 rows are two lots of the 2 shaded rows.",
+    "solution": "2 rows of 6 dots is 2 × 6 = 12. All 4 rows are two lots of 12 dots: 12 + 12 = 24, so 4 × 6 = 24.",
+    "mistakes": [
+     "Writing 12 for both.",
+     "Adding 4 + 6 = 10."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "array",
+     "rows": 4,
+     "cols": 6,
+     "icon": "dot",
+     "shade_rows": [
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Colour the 2s yellow. Ring the 5s. Then fill in the blanks.",
+    "parts": [
+     {
+      "l": "",
+      "text": "The numbers in both tables are [2], [2], [2] and [2].",
+      "ans": "10, 20, 30, 40",
+      "val": [
+       10,
+       20,
+       30,
+       40
+      ]
+     }
+    ],
+    "answer": "10, 20, 30, 40",
+    "val": [
+     10,
+     20,
+     30,
+     40
+    ],
+    "hint": "Look for the numbers that are coloured and ringed.",
+    "solution": "The 2s are 2, 4, 6 ... 40. The 5s are 5, 10, 15 ... 40. The numbers in both are 10, 20, 30 and 40.",
+    "mistakes": [
+     "Listing every number in the 5s.",
+     "Missing 40."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "wide": true,
+     "cell": 46
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Is each number in the 5s table? Circle Yes or No.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "35",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "28",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "45",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "35 Yes; 28 No; 45 Yes",
+    "val": [
+     "Yes",
+     "No",
+     "Yes"
+    ],
+    "hint": "Look at the last digit. Count in 5s if you are not sure.",
+    "solution": "35 ends in 5: yes. 28 ends in 8: no. 45 ends in 5: yes (5, 10, ... 40, 45).",
+    "mistakes": [
+     "Saying 28 is in the table because it is close to 30.",
+     "Saying 45 is not in the table because it is not on the printed square."
+    ],
+    "mins": 2.5
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Count in 4s up to 40. Ring each number that is also in the 5s table. Then fill in the blanks.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Numbers in the 4s and the 5s: [2] and [2].",
+      "ans": "20, 40",
+      "val": [
+       20,
+       40
+      ]
+     }
+    ],
+    "answer": "20 and 40",
+    "val": [
+     20,
+     40
+    ],
+    "hint": "Check each number in the 4s: does it end in 5 or 0?",
+    "solution": "The 4s are 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. The ones that end in 5 or 0 are 20 and 40.",
+    "mistakes": [
+     "Ringing 10 (it is not in the 4s).",
+     "Ringing only 20."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "table",
+     "rows": [
+      [
+       "4",
+       "8",
+       "12",
+       "16",
+       "20",
+       "24",
+       "28",
+       "32",
+       "36",
+       "40"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Count in 3s up to 30. Fill in the missing numbers. Then find the numbers in both the 3s and the 5s.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The missing numbers are [2], [2] and [2].",
+      "ans": "12, 18, 24",
+      "val": [
+       12,
+       18,
+       24
+      ]
+     },
+     {
+      "l": "b",
+      "text": "In both the 3s and the 5s: [2] and [2].",
+      "ans": "15, 30",
+      "val": [
+       15,
+       30
+      ]
+     }
+    ],
+    "answer": "12, 18, 24; 15 and 30",
+    "val": [
+     12,
+     18,
+     24,
+     15,
+     30
+    ],
+    "hint": "Add 3 each time: 3, 6, 9 ...",
+    "solution": "The 3s are 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. The 5s up to 30 are 5, 10, 15, 20, 25, 30. The numbers in both are 15 and 30.",
+    "mistakes": [
+     "Writing 11 or 13 (counting wrongly after 9).",
+     "Writing 10 for a number in both tables."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "rows": [
+      [
+       "3",
+       "6",
+       "9",
+       "[2]",
+       "15",
+       "[2]",
+       "21",
+       "[2]",
+       "27",
+       "30"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Ali jumps 5 each time. Mei jumps 4 each time. They both want to reach 40.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ali needs [] jumps.",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "b",
+      "text": "Mei needs [2] jumps.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "c",
+      "text": "Mei needs [] more jumps than Ali.",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "Ali 8 jumps, Mei 10 jumps, 2 more",
+    "val": [
+     8,
+     10,
+     2
+    ],
+    "hint": "How many jumps of 5 land on 40? How many jumps of 4?",
+    "solution": "8 jumps of 5 make 40 (8 × 5 = 40). 10 jumps of 4 make 40 (10 × 4 = 40). 10 - 8 = 2 more jumps.",
+    "mistakes": [
+     "Guessing the number of jumps of 4 without counting in 4s.",
+     "Forgetting to subtract at the end."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "number_line",
+     "start": 0,
+     "end": 40,
+     "step": 5,
+     "label_every": 10,
+     "width": 700
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Last digits",
+   "first": "Write the last digit of each number in the 5s up to 40: 5, 10, 15, 20, 25, 30, 35, 40.",
+   "text": "A number is in both the 2s and the 5s. What can its last digit be? Try 10, 15, 20 and 25. Write what you notice.",
+   "lines": 4,
+   "answer": "The last digit is always 0. The 5s end in 5 or 0. The 2s end in 0, 2, 4, 6 or 8. The only digit in both lists is 0: 10, 20, 30 and 40 are in both; 15 and 25 are only in the 5s.",
+   "val": [
+    "0"
+   ],
+   "look_for": "A child who tests several numbers, writes the last digits of both tables and sees that only 0 is in both lists. Credit any clear reason. Do not mark a child down for stopping at a few tests.",
+   "mistakes": [
+    "Testing 15 and 25 and thinking they are in the 2s.",
+    "Writing only the first digit."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Wei says: a number is in the 5s table if its last digit is 5 or 0. Is Wei right? How could we test it?",
+  "starter": "I think ... because ...",
+  "answer": "It works for 15, 40, 35 and 50. The 5s end in 5 and 0 one after the other, so a number ending in anything else, like 28 or 33, is not in the table. We tested a few numbers, and the jumps show why.",
+  "look_for": "A child who tests more numbers, uses the 100 square or says the last digits alternate. Not just \"yes\" or \"no\"."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Count in 5s. Fill in the missing numbers.",
+   "parts": [
+    {
+     "l": "",
+     "text": "5, 10, [2], 20, [2], 30",
+     "ans": "15, 25",
+     "val": [
+      15,
+      25
+     ]
+    }
+   ],
+   "answer": "15 and 25",
+   "val": [
+    15,
+    25
+   ],
+   "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30.",
+   "mistakes": [
+    "Writing 11 or 12.",
+    "Skipping a number."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Which sentence is true? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) 4 × 10 = 40",
+   "val": [
+    2
+   ],
+   "solution": "4 × 10 = 40 (4 jumps of 10). 3 × 5 is 15, not 20; 6 × 2 is 12, not 14; 8 × 5 is 40, not 35.",
+   "mistakes": [
+    "Choosing 8 × 5 = 35.",
+    "Choosing 3 × 5 = 20."
+   ],
+   "mcq": {
+    "options": [
+     "3 × 5 = 20",
+     "4 × 10 = 40",
+     "6 × 2 = 14",
+     "8 × 5 = 35"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Ben puts 5 stickers on each of 6 pages. How many stickers does Ben have in all?",
+   "parts": [
+    {
+     "l": "a",
+     "text": "[] × [] = [2]",
+     "ans": "6, 5, 30",
+     "val": [
+      6,
+      5,
+      30
+     ]
+    },
+    {
+     "l": "b",
+     "text": "Ben has [2] stickers in all.",
+     "ans": "30",
+     "val": 30
+    }
+   ],
+   "answer": "6 × 5 = 30; 30 stickers",
+   "val": [
+    6,
+    5,
+    30,
+    30
+   ],
+   "solution": "6 pages with 5 stickers on each page: 6 jumps of 5 land on 30.",
+   "mistakes": [
+    "Writing 6 + 5 = 11.",
+    "Writing 5 × 6 = 11."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "counting the jumps",
+   "writing the facts",
+   "finding the last digits",
+   "something else"
+  ],
+  "helped": [
+   "the 100 square",
+   "a counter as a frog",
+   "drawing it",
+   "I was not stuck"
+  ],
+  "next": [
+   "drawing it",
+   "using objects",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Count in 2s. Fill in the blanks. 2, 4, 6, [], 10, [2]",
+   "answer": "8 and 12",
+   "val": [
+    8,
+    12
+   ],
+   "solution": "Counting in 2s: 2, 4, 6, 8, 10, 12."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Count in 5s. Fill in the blanks. 5, [2], 15, [2], 25, [2]",
+   "answer": "10, 20, 30",
+   "val": [
+    10,
+    20,
+    30
+   ],
+   "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "A bundle has 10 straws. How many straws are in 3 bundles? 3 × 10 = [2]",
+   "answer": "30",
+   "val": 30,
+   "solution": "3 jumps of 10: 10, 20, 30."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Which numbers up to 20 are in both the 2s and the 5s? Write them. ___ and ___",
+   "answer": "10 and 20",
+   "val": [
+    10,
+    20
+   ],
+   "solution": "The 5s are 5, 10, 15, 20. The 2s include 10 and 20 but not 5 or 15."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "Mei knows that 2 × 7 = 14. What is 4 × 7? ___",
+   "answer": "28",
+   "val": 28,
+   "solution": "4 × 7 is two lots of 2 × 7: 14 + 14 = 28."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l16",
+  "title": "Skip-Count Tables",
+  "topic": "Tables as skip counts",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A frog jumps 5 each time. Where does it land after 3 jumps?",
+    "answer": 15,
+    "hint": "Count in jumps: 5, 10, 15.",
+    "steps": [
+     "Jump 1 lands on 5.",
+     "Jump 2 lands on 10.",
+     "Jump 3 lands on 15."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is 3 + 5. The frog jumps 5 three times."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "b": [
+       2,
+       5
+      ]
+     },
+     "q": "A frog jumps {b} each time. Where does it land after {a} jumps?",
+     "answer": "a*b",
+     "hint": "Count in jumps of {b}.",
+     "steps": [
+      "Jump {a} times, adding {b} each time.",
+      "{a} × {b} = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "What is 4 × 10?",
+    "answer": 40,
+    "hint": "Count in 10s: 10, 20, 30 ...",
+    "steps": [
+     "4 jumps of 10.",
+     "10, 20, 30, 40."
+    ],
+    "slips": [
+     {
+      "a": [
+       14
+      ],
+      "say": "14 is 4 + 10. Make 4 jumps of 10."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "q": "What is {a} × 10?",
+     "answer": "a*10",
+     "hint": "Count in 10s: 10, 20, 30 ...",
+     "steps": [
+      "{a} jumps of 10.",
+      "{a} × 10 = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "set",
+    "ordered": true,
+    "q": "Count in 5s up to 30. Type the numbers with a comma between.",
+    "answer": [
+     5,
+     10,
+     15,
+     20,
+     25,
+     30
+    ],
+    "hint": "Add 5 each time.",
+    "steps": [
+     "5, 10, 15, 20, 25, 30."
+    ],
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "k": [
+       2,
+       5,
+       10
+      ],
+      "lim": [
+       20,
+       30,
+       40
+      ]
+     },
+     "ordered": true,
+     "q": "Count in {k}s up to {lim}. Type the numbers with a comma between.",
+     "answer": "multiples(k,lim)",
+     "hint": "Add {k} each time.",
+     "steps": [
+      "The numbers are {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Is 35 in the 5s table?",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "answer": "yes",
+    "hint": "Look at the last digit, or count in 5s.",
+    "steps": [
+     "35 ends in 5.",
+     "The 5s end in 5 or 0.",
+     "So 35 is in the 5s table."
+    ],
+    "slips": [
+     {
+      "a": [
+       "no"
+      ],
+      "say": "Count in 5s: 5, 10, 15, 20, 25, 30, 35. Do you say 35?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       10,
+       12,
+       15,
+       20,
+       21,
+       25,
+       27,
+       30,
+       34,
+       35,
+       40
+      ]
+     },
+     "q": "Is {n} in the 5s table?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "((n%5)*(n%5))%3",
+     "hint": "Look at the last digit, or count in 5s.",
+     "steps": [
+      "Look at the last digit of {n}.",
+      "The 5s end in 5 or 0.",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "choice",
+    "q": "Which is the same as 4 × 5?",
+    "options": [
+     "5 + 5 + 5 + 5",
+     "4 + 5",
+     "5 + 5 + 5",
+     "4 + 4 + 4"
+    ],
+    "answer": "5 + 5 + 5 + 5",
+    "hint": "4 × 5 is 4 jumps of 5.",
+    "steps": [
+     "4 jumps of 5.",
+     "5 + 5 + 5 + 5."
+    ],
+    "slips": [
+     {
+      "a": [
+       "4 + 5"
+      ],
+      "say": "4 + 5 is 4 and 5 more. 4 × 5 is 4 jumps of 5."
+     }
+    ]
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "number",
+    "q": "How many jumps of 5 does it take to land on 15?",
+    "answer": 3,
+    "hint": "Count the jumps: 5, 10, 15.",
+    "steps": [
+     "5 (1 jump), 10 (2 jumps), 15 (3 jumps).",
+     "3 jumps."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is the size of the jump. How many jumps?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       2,
+       5,
+       10
+      ],
+      "j": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "How many jumps of {k} does it take to land on {t}?",
+     "answer": "j",
+     "hint": "Count the jumps: {k}, then {k} more, and so on.",
+     "steps": [
+      "Count in {k}s until you reach {t}.",
+      "It takes {ans} jumps."
+     ],
+     "derive": {
+      "t": "k*j"
+     }
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "2 × 6 = 12. What is 4 × 6?",
+    "answer": 24,
+    "easier": "c1",
+    "hint": "4 × 6 is double 2 × 6.",
+    "steps": [
+     "2 × 6 = 12.",
+     "4 × 6 is two lots of 12.",
+     "12 + 12 = 24."
+    ],
+    "slips": [
+     {
+      "a": [
+       12
+      ],
+      "say": "12 is 2 × 6. Double it for 4 × 6."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "q": "2 × {n} = {s}. What is 4 × {n}?",
+     "answer": "4*n",
+     "hint": "4 × {n} is double 2 × {n}.",
+     "steps": [
+      "2 × {n} = {s}.",
+      "4 × {n} is two lots of {s}.",
+      "{s} + {s} = {ans}."
+     ],
+     "derive": {
+      "s": "2*n"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "set",
+    "q": "Which numbers are in both the 2s and the 5s? Count to 40. Type the numbers with a comma between.",
+    "answer": [
+     10,
+     20,
+     30,
+     40
+    ],
+    "easier": "c3",
+    "hint": "Write the 5s, then keep the ones in the 2s.",
+    "steps": [
+     "The 5s: 5, 10, 15 ... 40.",
+     "Keep the ones in the 2s: 10, 20, 30, 40."
+    ],
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "lim": [
+       20,
+       30,
+       40
+      ]
+     },
+     "q": "Which numbers are in both the 2s and the 5s? Count to {lim}. Type the numbers with a comma between.",
+     "answer": "common(2,5,lim)",
+     "hint": "Write the 5s, then keep the ones in the 2s.",
+     "steps": [
+      "Numbers in both: {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Which number is in both the 2s and the 5s?",
+    "options": [
+     "12",
+     "15",
+     "20",
+     "25"
+    ],
+    "answer": "20",
+    "easier": "c4",
+    "hint": "It must end in 0.",
+    "steps": [
+     "12 is only in the 2s.",
+     "15 and 25 are only in the 5s.",
+     "20 is in both."
+    ],
+    "slips": [
+     {
+      "a": [
+       "15"
+      ],
+      "say": "15 is in the 5s but not in the 2s: it is odd."
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei counts in 5s. What is the 4th number she says?",
+    "answer": 20,
+    "easier": "c6",
+    "hint": "Count 5, 10, 15 ...",
+    "steps": [
+     "1st: 5, 2nd: 10, 3rd: 15.",
+     "4th: 20."
+    ],
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "9 is 4 + 5. Count in jumps of 5."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "j": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "q": "Mei counts in 5s. What is the {j|ord} number she says?",
+     "answer": "5*j",
+     "hint": "Count 5, 10, 15 ...",
+     "steps": [
+      "Count in 5s until the {j|ord} number.",
+      "It is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Ali jumps 5 each time and Mei jumps 4 each time. They both reach 40. How many more jumps does Mei make than Ali?",
+    "answer": 2,
+    "easier": "t4",
+    "hint": "Count the jumps each child needs.",
+    "steps": [
+     "Ali: 8 jumps of 5.",
+     "Mei: 10 jumps of 4.",
+     "10 - 8 = 2."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is Ali’s jumps. How many more does Mei need?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       5,
+       8,
+       10
+      ],
+      "b": [
+       2,
+       4
+      ]
+     },
+     "q": "Ali jumps {a} each time and Mei jumps {b} each time. They both reach 40. How many more jumps does Mei make than Ali?",
+     "answer": "p-q",
+     "hint": "Count the jumps each child needs.",
+     "steps": [
+      "Ali: {q} jumps of {a}.",
+      "Mei: {p} jumps of {b}.",
+      "{p} - {q} = {ans}."
+     ],
+     "derive": {
+      "p": "40//b",
+      "q": "40//a"
+     }
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "set",
+    "q": "Which numbers up to 40 are in the 4s and also in the 5s? Type the numbers with a comma between.",
+    "answer": [
+     20,
+     40
+    ],
+    "easier": "t2",
+    "hint": "Write the 4s: 4, 8, 12 ... Which ones end in 5 or 0?",
+    "steps": [
+     "The 4s: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40.",
+     "Ending in 0 or 5: 20 and 40."
+    ],
+    "slips": []
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Pick a number up to 40. Ask a grown-up: is it in the 5s table? Check by counting in jumps. Many answers are right.",
+    "hint": "Look at the last digit first.",
+    "steps": [
+     "Choose a number.",
+     "Say what you think and why.",
+     "Count in 5s to check."
+    ],
+    "slips": [],
+    "easier": "c4"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Ben says: every number in the 10s table is also in the 5s table. Test 10, 20, 30 and 40. Can you find a number in the 10s that is not in the 5s?",
+    "rec": "Recording: pause. Test 10, 20, 30 and 40 in the 5s table. Can you find a number in the 10s that is not in the 5s?",
+    "answer": "All four are in the 5s: 2, 4, 6 and 8 jumps of 5. No number breaks it: each jump of 10 is two jumps of 5."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Pick a number up to 40. Ask your grown-up: is it in the 5s table? Then check by counting in jumps of 5.",
+    "rec": "Recording: pause. Pick a number to 40. Ask a grown-up if it is in the 5s table, then check by counting.",
+    "answer": "No single answer. Check with the last digit (5 or 0 means yes) and by counting in 5s."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never met a table. Show them how to find 6 × 5 by jumping in 5s on the 100 square.",
+    "rec": "Recording: pause. Show a grown-up how to find 6 × 5 by jumping in 5s on the 100 square.",
+    "answer": "6 jumps of 5 land on 30: 5, 10, 15, 20, 25, 30. So 6 × 5 = 30."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We built the 5s, 2s and 10s tables by counting in jumps along a 100 square and wrote the facts, such as 6 × 5 = 30. We looked at the last digits: the 5s end in 5 or 0, the 10s end in 0. The 2, 5 and 10 tables within 40 are Primary 1 work. The 4s (the 2s doubled), the 3s and numbers that are in two tables go past the school Primary 1 syllabus on purpose, always with the 100 square and counters.",
+  "words": [
+   "table: counting in jumps of the same size",
+   "6 × 5: 6 jumps of 5, which lands on 30",
+   "last digit: the ones digit of a number",
+   "in both tables: a number we say in two different counts"
+  ],
+  "try_home": [
+   "Jumps: count in 5s to 40 on the 100 square page. Colour each landing number. How many jumps to 30?",
+   "Detective: is 35 in the 5s table? Is 28? Ask your child how they know (look at the last digit).",
+   "Double it: if 2 × 6 = 12, what is 4 × 6? Show it with 24 counters in rows."
+  ],
+  "ask": [
+   "How many jumps? What size is each jump?",
+   "How do you know it is in the table?"
+  ],
+  "when_stuck": "Let your child count the jumps on fingers or move a counter along the 100 square, and wait 10 seconds before helping. Asking ‘what is the next number?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Lesson 17: Sharing and Grouping. Online practice: your tutor will share the practice link.",
+  "quote": "A table is counting in jumps, and the last digits show a pattern.",
+  "report_line": "Your child is learning that a times table is counting in jumps and that the last digits show patterns. This week: the 2s, 5s and 10s, with the 4s and 3s as extras.",
+  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "next_materials": [
+   "About 20 counters or buttons (not food)",
+   "5 plates or cups (paper plates are fine)",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Colour lightly with pencil crayons.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Counting aloud is quiet; a child may stay seated.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the lists for T2 (10, 20, 30, 40), G1 (20, 40) and G2 (15, 30) so you can answer a child who finds another number in two tables.",
+  "Tell parents a week before: print the workbook pages and the 100 square kit page (nothing to cut), and find coloured pencils and about 20 small things. Small things stay away from mouths and younger children.",
+  "Have the slides open and check the 100 square is visible on screen share. Have your own 100 square and a counter to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children’s video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+  "Be plain with families: the 2, 5 and 10 tables within 40 are Primary 1 work, but the 3 and 4 tables and numbers that are in two tables are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Do not teach tables by heart; the jumps are the method. Lessons 15 to 18 build on one another."
+ ],
+ "workbook": {
+  "header": "Multiplication and Division: skip-count tables",
+  "hint_p1": "Use your 100 square and a counter. Count in jumps.",
+  "hint_p2": "In 3 × 5, the first number is how many jumps and the second is the size of each jump.",
+  "hint_p3": "Use your 100 square or counters. Choose any question, in any order.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "home_hint": "Use your 100 square or count on your fingers. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "hundred",
+    "cell": 64,
+    "title": "Kit page: 100 square",
+    "intro": "Nothing to cut. Colour lightly with pencil crayons and use a counter as a frog."
+   }
+  ]
+ }
+}
