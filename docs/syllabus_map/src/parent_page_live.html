@@ -1,31 +1,33 @@
 <style>
-.pm{max-width:1100px;margin-inline:auto;font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.pm{max-width:1100px;margin-inline:auto;font-family:var(--font-anthropic-sans);color:var(--ink)}
 .pm h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0 0 .4rem;text-wrap:balance}
-.pm .lead{margin:0 0 var(--cds-gap-md);color:var(--color-fg-muted);font-size:var(--cds-font-size-body);line-height:1.5;max-width:62ch}
-.pm .pick{margin:0 0 .4rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.pm .lead{margin:0 0 var(--cds-gap-md);color:var(--mut);font-size:var(--cds-font-size-body);line-height:1.5;max-width:62ch}
+.pm .pick{margin:0 0 .4rem;font-size:var(--cds-font-size-caption);color:var(--mut)}
 .pm .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 var(--cds-gap-md)}
-.pm .chips button{font:inherit;font-size:var(--cds-font-size-body);padding:.4rem .8rem;border-radius:999px;border:1px solid var(--color-border-line);background:transparent;color:var(--color-fg);cursor:pointer}
-.pm .chips button[aria-pressed=true]{background:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
-.pm .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin:0 0 var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.pm .chips button{font:inherit;font-size:var(--cds-font-size-body);padding:.4rem .8rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.pm .chips button[aria-pressed=true]{background:var(--color-fg);color:var(--color-bg);border-color:var(--ink)}
+.pm .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin:0 0 var(--cds-gap-md);font-size:15px;color:var(--mut)}
 .pm .legend span{display:inline-flex;align-items:center;gap:.4rem}
 .pm .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--cds-gap-md)}
-.pm .card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.pm .card{background:var(--color-panel);border:1px solid var(--line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:.7rem;min-width:0}
 .pm .card h2{margin:0;font-size:var(--cds-font-size-heading);font-weight:500}
-.pm .card h2 small{font-weight:400;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);margin-left:.4rem}
+.pm .card h2 small{font-weight:400;color:var(--mut);font-size:var(--cds-font-size-caption);margin-left:.4rem}
 .pm .strip{display:grid;grid-template-columns:repeat(10,1fr);gap:3px}
-.pm .seg{height:2rem;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--color-bg);cursor:default;position:relative}
-.pm .seg:focus-visible{outline:2px solid var(--color-fg);outline-offset:1px}
-.pm .seg[data-s=SAME]{background:var(--c-same);color:var(--color-fg);font-weight:500}
-.pm .seg[data-s=EARLIER]{background:var(--c-same);color:var(--color-fg);font-weight:500}
-.pm .seg[data-s=LATER]{background:var(--c-later)}
-.pm .seg[data-s=NOT]{background:repeating-linear-gradient(135deg,var(--color-border-line) 0 2px,transparent 2px 5px);color:var(--color-fg-muted)}
-.pm .seg[data-s=MIXED]{background:transparent;border:1px dashed var(--color-border-line);color:var(--color-fg-muted)}
-.pm .sw{width:1.1rem;height:1.1rem;border-radius:4px;display:inline-block}
-.pm .say{margin:0;font-size:var(--cds-font-size-body);line-height:1.45}
+.pm{--same:#E4F2EA;--later:#FBEBCB;--new:#E6EDF8;--non:#E9E4D2;--ink:#1B2A49;--mut:#4A5470;--line:#8d93a6;--a-same:#1B6B49;--a-new:#2B4C94;--a-later:#8A4B00}
+.pm[data-mode=dark]{--same:#1B3B30;--later:#46320F;--new:#1F2F58;--non:#2A365A;--ink:#F3EFE2;--mut:#C3CBE0;--line:#6b7aa6;--a-same:#8FD9B3;--a-new:#A9C1FF;--a-later:#FFCF7A}
+.pm .seg{height:3rem;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:15px;line-height:1.1;font-weight:700;color:var(--ink);cursor:default;position:relative;border:1px solid var(--line);border-bottom:4px solid var(--line)}
+.pm .seg i{font-style:normal;font-size:12px;font-weight:700}
+.pm .seg:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.pm .seg[data-s=SAME],.pm .seg[data-s=EARLIER],.pm .sw[data-s=SAME],.pm .sw[data-s=EARLIER]{background:var(--same);border-bottom-color:var(--a-same)}
+.pm .seg[data-s=LATER],.pm .sw[data-s=LATER]{background:var(--later);border-bottom-color:var(--a-later)}
+.pm .seg[data-s=NOT],.pm .sw[data-s=NOT]{background:var(--non);border-bottom-color:var(--mut)}
+.pm .seg[data-s=MIXED],.pm .sw[data-s=MIXED]{background:transparent;border:1px dashed var(--mut);color:var(--mut)}
+.pm .sw{min-width:1.7rem;height:1.5rem;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font:700 13px/1 sans-serif;border:1px solid var(--line);border-bottom:4px solid var(--line);color:var(--ink)}
+.pm .say{margin:0;font-size:17px;line-height:1.45}
 .pm .say b{font-weight:600;font-variant-numeric:tabular-nums}
-.pm .further{margin:0;padding:0;list-style:none;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5}
-.pm .further li::before{content:"↑ ";color:var(--color-fg)}
-.pm .notes{margin:var(--cds-gap-md) 0 0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5;max-width:75ch}
+.pm .further{margin:0;padding:0;list-style:none;font-size:15px;color:var(--mut);line-height:1.5}
+.pm .further li::before{content:"▲ ";color:var(--a-later)}
+.pm .notes{margin:var(--cds-gap-md) 0 0;font-size:15px;color:var(--mut);line-height:1.5;max-width:75ch}
 .pm .notes p{margin:.3rem 0}
 .pm-tip{position:absolute;z-index:5;max-width:20rem;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);pointer-events:none;line-height:1.4}
 .pm-tip .t2{color:var(--cds-text-secondary)}
@@ -40,7 +42,7 @@
   <div class="notes">
     <p class="sg" id="sgnote" hidden>Singapore: compared with the MOE 2021 Primary Mathematics syllabus (updated October 2025), lesson by lesson. Math Inquirers is independent enrichment. It is not affiliated with or endorsed by MOE or the Gifted Education Programme. Where the syllabus names a topic in the same year, the lesson is marked as taught at school; harder questions inside a lesson can still go further (see the tier map).</p>
     <p>Math Inquirers is an enrichment program. Lessons use puzzles and explaining, not school-style practice, so “goes a little further” means the topic is usually met at school a year or more later.</p>
-    <p>Level 1 is for ages 6 to 8, Level 2 for 7 to 9, Level 3 for 8 to 10, Level 4 for 9 to 11, Level 5 for 10 to 12 and Level 6 for 11 to 13. Hover or tab to a lesson for details. The tenth lesson of each level is a mixed review and is not compared.</p>
+    <p>Level 1 is for ages 6 to 8, Level 2 for 7 to 9, Level 3 for 8 to 10, Level 4 for 9 to 11, Level 5 for 10 to 12 and Level 6 for 11 to 13. Each lesson box shows its number and a mark: ✓ Same, ▲ Later, – Not listed, ~ Mixed. Hover or tab to a lesson for details. The tenth lesson of each level is a mixed review and is not compared.</p>
     <p><a href="https://claude.ai/artifact/BGC9aLaVMX4sod2JEMaiiY" target="_blank" rel="noopener">See how the three levels of challenge in each lesson (Start here, Think harder, Go further) relate to the syllabus.</a></p>
     <p>This is our own comparison, made from public curriculum documents, and some placements could not be confirmed. It is not approved or endorsed by any education ministry.</p>
   </div>
@@ -52,15 +54,16 @@
   var PLACES=['Singapore (MOE)','Hong Kong','Mainland China','Japan','South Korea','England','Finland','Estonia','Netherlands','Ontario (Toronto)','USA (Massachusetts)','Australia (Victoria)','India (NCERT)'];
   var AGES={1:'ages 6 to 8',2:'ages 7 to 9',3:'ages 8 to 10',4:'ages 9 to 11',5:'ages 10 to 12',6:'ages 11 to 13'};
   var WORDS={SAME:['✓','Taught at school around this age'],EARLIER:['✓','Already met at school before this age'],LATER:['↑','Goes a little further than school'],NOT:['–','Not part of the school syllabus'],MIXED:['◇','Mixed review, not compared']};
-  root.style.setProperty('--c-later',dash.colors[1]);
-  root.style.setProperty('--c-same','color-mix(in srgb, '+dash.colors[2]+' 38%, var(--color-panel))');
+  function setMode(){var m=getComputedStyle(document.body).backgroundColor.match(/\d+/g)||[255,255,255];var l=(0.2126*m[0]+0.7152*m[1]+0.0722*m[2])/255;root.setAttribute('data-mode',l<0.5?'dark':'light')}
+  setMode();if(window.matchMedia)matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){setTimeout(setMode,50)});
+  var G={SAME:'\u2713',EARLIER:'\u2713',LATER:'\u25b2',NOT:'\u2013',MIXED:'~'};
   var place=PLACES[0];
   dash.calc('fit',{title:'Lessons by level and place',description:'Per place and level: mapped lessons, those already part of school at this age, those that go further, and those with no school equivalent.',inputs:['intl'],fn:function(intl){
     var o={};intl.forEach(function(r){if(r.status==='MIXED')return;var k=r.jurisdiction+'|'+r.level;o[k]=o[k]||{key:k,jurisdiction:r.jurisdiction,level:r.level,cells:0,match:0,ahead:0,none:0};var x=o[k];x.cells++;if(r.status==='LATER')x.ahead++;else if(r.status==='NOT')x.none++;else x.match++});
     return Object.keys(o).map(function(k){return o[k]});
   }});
   (function(){var l=document.getElementById('legend'),h='';
-    [['SAME','Taught at school around this age'],['LATER','Goes a little further than school'],['NOT','Not part of the school syllabus'],['MIXED','Mixed review']].forEach(function(p){h+='<span><i class="sw seg" data-s="'+p[0]+'"></i>'+p[1]+'</span>'});
+    [['SAME','Same','Taught at school around this age'],['LATER','Later','Goes a little further than school'],['NOT','Not listed','Not part of the school syllabus'],['MIXED','Mixed','Mixed review, not compared']].forEach(function(p){h+='<span><i class="sw" data-s="'+p[0]+'" aria-hidden="true">'+G[p[0]]+'</i><b>'+p[1]+':</b> '+p[2]+'</span>'});
     l.innerHTML=h})();
   function chips(){var c=document.getElementById('chips');c.innerHTML='';document.getElementById('sgnote').hidden=(place!==PLACES[0]);
     PLACES.forEach(function(p){var b=document.createElement('button');b.type='button';b.textContent=p;b.setAttribute('aria-pressed',String(p===place));b.addEventListener('click',function(){place=p;render()});c.appendChild(b)})}
@@ -74,7 +77,7 @@
   function span(txt,src,where,field){var s=document.createElement('b');s.setAttribute('data-source',src);s.setAttribute('data-where',where);s.setAttribute('data-field',field);s.textContent=txt;return s}
   var render=function(){};
   dash.onData(function(){
-    var d=dash.data('intl'),box=document.getElementById('cards');
+    setMode();var d=dash.data('intl'),box=document.getElementById('cards');
     if(d.status!=='ok'){box.textContent='';box.className=d.status==='error'?'cards':'cards dash-skeleton';return}
     box.className='cards';var rows=d.data,fit={};
     (dash.data('fit').data||[]).forEach(function(r){fit[r.key]=r});
@@ -88,7 +91,7 @@
         for(var n=1;n<=10;n++){
           var r=rows.filter(function(x){return x.jurisdiction===place&&x.lesson===L+'.'+n})[0];
           var e=document.createElement('div');e.className='seg';e.setAttribute('role','listitem');
-          if(r){e.setAttribute('data-s',r.status);e.tabIndex=0;e.textContent=n;
+          if(r){e.setAttribute('data-s',r.status);e.tabIndex=0;e.appendChild(document.createTextNode(n));var gi=document.createElement('i');gi.textContent=G[r.status];e.appendChild(gi);
             e.setAttribute('aria-label','Lesson '+r.lesson+', '+r.lesson_title+': '+WORDS[r.status][1]);
             (function(r){e.addEventListener('mouseenter',function(ev){showTip(ev,r)});e.addEventListener('focus',function(ev){showTip(ev,r)});e.addEventListener('mouseleave',function(){tip.hidden=true});e.addEventListener('blur',function(){tip.hidden=true})})(r);
             if(r.status==='LATER')ahead.push(r)}
