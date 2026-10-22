@@ -147,13 +147,21 @@ W.push(...extra(3));
 W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast());
 W.push(q(1, 'Look at the shape pattern. Draw the missing shapes in places 8 and 9.', { before: 60 }));
 W.push(img('shapes.png', 640, 92));
-W.push(q(2, 'The pattern keeps going in the same way.'));
+W.push(q(2, 'The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one? (Keep writing the pattern until you get there.)', { before: 100 }));
+W.push(ans('Answer:', 560));
+W.push(q(3, 'The pattern is red, red, blue, red, red, blue, red … What is the 8th one?', { before: 100 }));
+W.push(ans('Answer:', 560));
+W.push(q(4, 'The pattern keeps going in the same way.'));
 W.push(sub('a', 'What shape will be in place 10?   ____________________'));
 W.push(sub('b', 'What shape will be in place 12?   ____________________'));
 W.push(sub('c', 'What shape will be in place 30? (Keep drawing, or look for a shortcut.)   ____________'));
 W.push(sub('d', 'How do you know?'));
 W.push(...lines(2));
-W.push(q(3, 'Ben makes a row of triangles with sticks.', { keepNext: true, pb: true, before: 0 }));
+W.push(q(5, 'The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?', { pb: true, before: 0 }));
+W.push(ans('Answer:', 560));
+W.push(q(6, 'The pattern is A, B, C, D, A, B, C … What is the 11th one? (Write the letters in a row and number them.)', { before: 100 }));
+W.push(ans('Answer:', 560));
+W.push(q(7, 'Ben makes a row of triangles with sticks.', { keepNext: true }));
 W.push(img('sticks.png', 620, 127));
 W.push(sub('a', 'Count the sticks. Fill in the table. Keep going until you reach 10 triangles.'));
 { const ws = [CW - 7600, ...Array(10).fill(760)]; const vals = { 1: '3', 2: '5', 3: '7' };
@@ -166,7 +174,7 @@ W.push(sub('c', 'Why does he need only that many more sticks? (Look at the pictu
 W.push(...lines(2));
 W.push(sub('d', 'How many sticks are needed for 10 triangles?'));
 W.push(ans());
-W.push(q(4, 'If you have time: Ben has 15 sticks. How many triangles in a row can he make?'));
+W.push(q(8, 'If you have time: Ben has 15 sticks. How many triangles in a row can he make?'));
 W.push(ans('Answer:', 560));
 W.push(p([t('Show how you worked it out:', { italics: true })], { indent: { left: 560 } }));
 W.push(...lines(2));
@@ -208,7 +216,7 @@ W.push(ans());
 W.push(sub('b', 'Ali is 3rd from the front AND 3rd from the back. How many children are in the queue? Draw the children as circles first.'));
 W.push(ans());
 W.push(...lines(1));
-W.push(q(5, 'Make your own mystery number story. Give it to a friend to solve!'));
+W.push(q(5, [new C.TextRun('<svg aria-label="star" viewBox="0 0 24 24" width="20" height="20" style="vertical-align:-3px;margin-right:4px"><polygon points="12,1.5 15,8.6 22.5,9.2 16.8,14.1 18.6,21.5 12,17.6 5.4,21.5 7.2,14.1 1.5,9.2 9,8.6" fill="#FFC93C" stroke="#1B2A49" stroke-width="1.6" stroke-linejoin="round"/></svg><b>Take-home</b> '), t('(if you have time, or at home): make your own mystery number story. Give it to a friend to solve!')]));
 W.push(...lines(3));
 
 /* ---------- LESSON 6 ---------- */
@@ -233,6 +241,10 @@ W.push(sub('a', 'What is the smallest number of coins she can use? Which coins a
 W.push(sub('b', 'If you have time: find a different way that uses exactly 6 coins.')); W.push(ans());
 W.push(q(4, 'Can Ben make 35¢ using only 2 coins? Explain your answer.'));
 W.push(...lines(2));
+W.push(q(5, 'Ali has a 20¢ coin, a 10¢ coin and a 5¢ coin. How much money does he have?'));
+W.push(ans('Answer:', 560));
+W.push(q(6, 'Mei has two 20¢ coins and one 5¢ coin. How much money does she have?'));
+W.push(ans('Answer:', 560));
 
 /* ---------- LESSON 7 ---------- */
 W.push(...coreEnd(6));
@@ -304,7 +316,7 @@ W.push(sub('a', 'Which ribbon is the longest?   ____       (b)  Which is the sho
 W.push(sub('c', 'How many squares longer is ribbon A than ribbon B?   ____'));
 W.push(sub('d', 'Ribbon A and ribbon B are put end to end. How many squares long is that?   ____'));
 W.push(sub('e', 'Ribbon C is cut shorter by 2 squares. Which ribbon is it now the same length as?   ____'));
-W.push(q(2, 'Measure with cubes. Use the paper cube strip from the back of the workbook (or real cubes). Guess first, then measure. Write how far off your guess was.', { keepNext: true }));
+W.push(q(2, 'Use what you measured in Explore. Write your guess, what you measured, and how far off your guess was. Only the last row is new: guess first, then measure it with the paper cube strip from the back of the workbook (or real cubes).', { keepNext: true }));
 W.push(tbl([2900, 1900, 1900, 3200], [row(['Object', 'My guess', 'Measured', 'How far off my guess was'].map((s, i) => cell(s, [2900, 1900, 1900, 3200][i], { bold: true, fill: 'EDEDED' }))), ...['A pencil', 'A book', 'A shoe', 'My choice: ____________'].map(n => row([cell(n, 2900, { h: 110, align: AlignmentType.LEFT }), cell('', 1900), cell('', 1900), cell('', 3200)]))]));
 W.push(sub('a', 'Why must every cube be the same size?'));
 W.push(...lines(1));

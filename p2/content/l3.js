@@ -37,7 +37,7 @@ const lesson = {
   skills: 'Draw it (arrays), make a table, guess and check, working in order to find all the ways',
   materials: 'About 30 counters per pair, mini whiteboards, squared paper. Optional: picture cards of hens and goats, bicycles and tricycles.',
   online: 'Each child has 30 small objects (buttons, dried beans or Lego bricks) and a whiteboard or paper. The tutor shares the slides; children hold their arrays and tables up to the camera.',
-  warmup: 'Legs and wheels count: six picture cards (4 cars, 5 bicycles, 3 tricycles, 5 dogs, 6 hens, 2 cars and 1 bicycle). Count the wheels or legs in 2s, 3s, 4s or 5s, then click to check.',
+  warmup: 'Legs and wheels count: three picture cards (4 cars, 6 hens, 5 bicycles). Count the wheels or legs in 2s and 4s, then click to check. About 2.5 minutes.',
   explore: 'Farm legs: a pen has only hens (2 legs) and goats (4 legs). The farmer counts 16 legs. Pairs use counters or drawings to find every possible mix of hens and goats, and record each one.',
   mini: 'Arrays: rows × number in each row; two multiplication and two division facts from one array; count the hidden part of an array. Then "how many of each": start with all of one kind in a table and swap one at a time. Sharing with leftovers (Q4, Q5) is division with a remainder, a P3 topic: say "3 left over" in words and do not write remainders as "r 3".',
   share: 'Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?',
@@ -47,6 +47,7 @@ const lesson = {
     'Giving the number of whole groups as the answer when the leftover still needs a place (28 children, vans of 5: writing 5 vans instead of 6).',
     'In "how many of each" puzzles, matching only one clue (the legs) and forgetting to check the other (the number of animals).'
   ],
+  takehome: 'None: all six Core questions fit in class, so no Core item moves to take-home in this lesson.',
   extension: 'Find all the arrays (at least 2 rows, at least 2 in each row) for 16 counters. (3 ways: 2 rows of 8, 4 rows of 4, 8 rows of 2.)',
   key: [
     ['Q1', '(a) 4 × 5 = 20 and 5 × 4 = 20.  (b) 20 ÷ 4 = 5 and 20 ÷ 5 = 4.'],
@@ -82,14 +83,14 @@ const script = {
     'Hint 2: "Start with all of one kind. Then swap one at a time."',
     'Hint 3: "Make a table so you can see the pattern and do not miss a row."'
   ],
-  talk: ['"Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more?"', '"How did a table help you find how many hens and goats?"'],
-  talkAns: 'No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3. The table shows that every swap changes the legs by the same amount, so we can see how many swaps we need.',
+  talk: ['"Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more?"'],
+  talkAns: 'No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3.',
   close: ['"Today you drew arrays, made tables and checked both clues. Next time a puzzle has two kinds of things mixed up, start with all of one kind and swap one at a time."']
 };
 
 const deck = {
   today: 'Use arrays for multiplication and division, find how many of each with a table, and share with leftovers.',
-  warmGame: 'Legs and wheels count. Picture cards: 4 cars, 5 bicycles, 3 tricycles, 5 dogs, 6 hens, 2 cars and 1 bicycle. Count the wheels or legs in 2s, 3s, 4s or 5s.',
+  warmGame: 'Legs and wheels count, three picture cards: 4 cars, 6 hens, 5 bicycles. Count the wheels or legs in 2s and 4s. (Spare cards: 3 tricycles, 5 dogs, 2 cars and 1 bicycle.)',
   warmQs: [['3 × 5 = ?', '15'], ['4 groups of 4. How many?', '16'], ['20 ÷ 2 = ?', '10'], ['30 shared equally by 10 children. How many each?', '3'], ['How many 5s make 35?', '7']],
   expSetup: ['A pen has only hens (2 legs) and goats (4 legs).', 'The farmer counts 16 legs altogether.', 'Use counters or drawings to find a mix of hens and goats.', 'Find every mix. Record each one.'],
   expPic: 'a farm pen with a hen (2 legs) and a goat (4 legs) beside it and a sign that reads "16 legs".',
@@ -101,7 +102,7 @@ const deck = {
   keySmall: 'Every swap changes the total by the same amount. Check both clues at the end.',
   brk: 'Array moves. The tutor calls "3 rows of 4!": do 3 rows of 4 claps, counting 4, 8, 12. Then "5 rows of 2" jumps and "2 rows of 10" stomps.',
   ws1: 'Page 1, in pairs: Q1 an array, Q2 the cups under the cloth, Q3 hens and goats with a table.',
-  ws2: 'Page 2, on your own: Q4 sharing stickers, Q5 vans for a trip, Q6 all the arrays of 20 chairs, Q7 bicycles and tricycles.'
+  ws2: 'Page 2, on your own: Q4 sharing stickers, Q5 vans for a trip, Q6 all the arrays of 20 chairs. (Bicycles and tricycles is Go further 7, not part of page 2.)'
 };
 
 const qbank = {

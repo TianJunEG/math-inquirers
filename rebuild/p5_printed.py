@@ -56,7 +56,7 @@ def slides(n,kind):
             else: body+=card(inner)
         if kind=='B' and gi==len(gs)-1 and items(n)['pose']:
             body+=f'<div style="background:{SOFT};border-radius:24px;padding:20px 40px"><p style="font-size:30px;font-weight:700;line-height:1.3"><span style="color:{TEAL};font-weight:800">Make up your own.</span> {E(items(n)["pose"])} <i>Think for 30 seconds before anyone speaks.</i></p></div>'
-        out[suf]=sec(f'p5l{n}-{suf}','37–72 MIN  •  OPTION',body,notes)
+        out[suf]=sec(f'p5l{n}-{suf}','Optional, if you finish early',body,notes)
     return out
 def fix_order(order,n,S):
     """Insert the extra printed-item slides after their parent slide, and drop the old extras slide if it was emptied."""

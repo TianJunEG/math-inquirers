@@ -5,6 +5,7 @@ Data: hp/gaps.json (warm-up check questions and answers, open investigation, loo
 import os, re, json, glob
 from slidekit import *
 import p1fix
+import p1budget
 
 H = os.path.dirname(os.path.abspath(__file__))
 GAPS = json.load(open(os.path.join(H, '..', 'hp', 'gaps.json')))
@@ -41,13 +42,14 @@ def build(D, n):
             q += dotrow('Red', 7, '#C0392B') + dotrow('Blue', 5, '#2E6DA4') + dotrow('Green', 3, '#1E8449') + p('1 picture = 1 child', 28, 600, MUTED)
         ans = f'<div data-build-in="pop" style="width:470px;flex:none;background:{YEL};border-radius:20px;padding:18px 26px;display:flex;align-items:center"><p style="font-size:34px;font-weight:800;line-height:1.2">{E(c["short"])}</p></div>'
         body += f'<div style="display:flex;gap:24px;align-items:stretch"><div style="flex:1;background:{WHITE};border-radius:24px;padding:20px 34px;display:flex;flex-direction:column;gap:10px">{q}</div>{ans}</div>'
-    notes = ('Minutes 7 to 10 (3 minutes). SAY: "These two are sneak-peek puzzles. They are ideas we have not learnt yet, so a guess is a great start, and I do not know is welcome. Nobody is marked." '
+    a_, b_ = p1budget.SLIDES[n][p_ + 'warmcheck']
+    notes = (f'Minutes {a_} to {b_} (4 minutes). SAY (about 26 words, once): "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked." '
              'Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone starts with a win. Question 2 makes you think. '
-             'Answers are not shown on boards in front of the group: face to face, each child holds their own paper low so only the tutor sees it; online, each child shows their own paper to the tutor on camera, or everyone holds paper to the camera at the same moment. There are no private chat messages. '
+             'Children try both on their own paper (about a minute each). Then everyone shows their paper ONCE, after the second question: face to face, each child holds the paper low so only the tutor sees it; online, everyone holds the paper to the camera at the same moment. There are no private chat messages. '
              'Never use boards held up in front of the group, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
-             'Click to show each answer to the whole group only after everyone has had a try, and say "Lots of us had a different idea, and that is fine." '
-             'Look for good ideas to praise in a later lesson; do not keep a list of who found question 2 easy. At minute 40 invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
-    _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '7–10 MIN', body, notes))
+             'Then click to show each answer to the whole group and say "Lots of us had a different idea, and that is fine." '
+             f'Look for good ideas to praise in a later lesson; do not keep a list of who found question 2 easy. When the worksheet starts (minute {p1budget.ws_start(n)}) invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
+    _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '%d–%d MIN' % (a_, b_), body, notes))
     # ---- Look-back (2 minutes, short and safe) ----
     def optrow(items):
         return ''.join(f'<span style="display:inline-flex;align-items:center;margin-right:34px;white-space:nowrap">{BOX}{E(x)}</span>' for x in items)
@@ -56,13 +58,13 @@ def build(D, n):
             ('What helped me', optrow(['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'])),
             ('Next time I will try ...', optrow(['drawing it', 'using objects', 'checking my answer', 'asking a question'])),
             ('If you want', optrow(['I am still stuck (my tutor will come and help)', 'I would like to pass']))]
-    body = h2('Look-back') + chip('Two minutes. There are no right answers. You can pass. Nobody reads it out.', TEAL, CREAM, 28)
+    body = h2('Look-back') + chip('Three minutes. There are no right answers. You can pass. Nobody reads it out.', TEAL, CREAM, 28)
     inner = ''.join(f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k else ""}"><p style="width:430px;flex:none;font-size:34px;font-weight:800;color:{TEAL}">{E(a_)}</p><p style="font-size:28px;font-weight:600;line-height:1.5">{b_}</p></div>' for k, (a_, b_) in enumerate(rows))
     body += card(inner)
-    notes = ('Minutes 88 to 90 (2 minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
+    notes = (f'Minutes {p1budget.SLIDES[n][p_ + "reflect"][0]} to {p1budget.SLIDES[n][p_ + "reflect"][1]} ({p1budget.SLIDES[n][p_ + "reflect"][1] - p1budget.SLIDES[n][p_ + "reflect"][0]} minutes, after the exit ticket). Children tick or write the Look-back box on the Choose and look-back page of their workbook. A pass is always allowed. '
              'It is never marked, never collected in front of the group and never read out; the tutor may look at it afterwards. If a child ticks "I am still stuck", check in during the open session next lesson (a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a direct message). '
              'Do not ask children to share their boxes. Praise the strategy ("Drawing it got you unstuck"), not the speed. The "Next time I will try" row is optional and is never marked; at the start of the next lesson the tutor may say, to the whole group, "Today you could try drawing it, using objects or checking your answer" without naming anyone. Say: "Tick what was hard and what helped you. Write or draw one thing you did well. Then tick one thing you might try next time, if you like. You can pass."')
-    _w(D, p_ + 'reflect', sec(p_ + 'reflect', '88–90 MIN', body, notes))
+    _w(D, p_ + 'reflect', sec(p_ + 'reflect', '%d–%d MIN' % tuple(p1budget.SLIDES[n][p_ + 'reflect']), body, notes))
 
 
 def cleanup(D):

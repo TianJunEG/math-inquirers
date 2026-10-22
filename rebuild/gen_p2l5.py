@@ -62,23 +62,23 @@ put(f'{P}-title',title_slide(f'{P}-title',3,'Mystery Number Machines','Working B
 
 # 2 warm1 game
 body=h2('Warm-up: Guess my machine')+card(chip('WARM-UP GAME',YEL,NAVY)+p('I am a secret machine. Call out a number to put IN. I tell you what comes OUT. Can you guess what I do?',42))+card(machine([('4','q'),('?','op'),('12','res')],w=1100)+p('IN 4, OUT 12. Is it + 8? Or × 3? Test another number!',34,600,MUTED),extra='align-items:flex-start')
-put(f'{P}-warm1',sec(f'{P}-warm1','0–5 MIN',body,'Minutes 0 to 5. You are the machine. Pick a secret one-step rule (start with × 3). Children call IN numbers; you say the OUT. After two or three, ask for a guess. Point at the picture: IN 4, OUT 12 could be + 8 OR × 3, so test another IN (5 gives 15 for × 3 but 13 for + 8). '
- 'Good rules to use: × 3, + 15, × 10, ÷ 2 (only give even IN numbers), − 20, × 5. Then flip it: give only an OUT ("My machine is × 5. OUT is 35. What went IN?" 7). Listen for children who already "do the opposite".'))
+put(f'{P}-warm1',sec(f'{P}-warm1','0–5 MIN',body,'Minutes 0 to 5. You are the machine. Three rounds only (about 2.5 minutes): two rounds of IN to OUT guesses, then one OUT to IN round. Pick a secret one-step rule (start with × 3). Children call IN numbers; you say the OUT. After two or three, ask for a guess. Point at the picture: IN 4, OUT 12 could be + 8 OR × 3, so test another IN (5 gives 15 for × 3 but 13 for + 8). '
+ 'Good rules to use: × 3, + 15, × 10, ÷ 2 (only give even IN numbers), − 20, × 5. Round three is the flip: give only an OUT ("My machine is × 5. OUT is 35. What went IN?" 7). Listen for children who already "do the opposite".'))
 
 # 3 warm2
-qs=[('1.','I think of a number. I multiply it by 2. I get 18.','9'),('2.','I think of a number. I divide it by 5. I get 4.','20'),('3.','I think of a number. I take away 25. I get 40.','65'),('4.','What is the opposite of × 4?','÷ 4'),('5.','I multiply my number by 3, then add 4. I get 19.','5')]
+qs=[('1.','I think of a number. I multiply it by 2. I get 18.','9'),('2.','I think of a number. I take away 25. I get 40.','65')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, give thinking time, whiteboards up, then click for the answer. Ask "How did you find it?" each time. 1) 18 ÷ 2 = 9. 2) 4 × 5 = 20. 3) 40 + 25 = 65. 4) ÷ 4 undoes × 4. 5) Two steps: 19 − 4 = 15, 15 ÷ 3 = 5 (check: 5 × 3 = 15, 15 + 4 = 19). Do not teach question 5 yet: see who tries 19 ÷ 3 first; that is today’s big idea.'))
+put(f'{P}-warm2',sec(f'{P}-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, give thinking time, whiteboards up, then click for the answer. Ask "How did you find it?" each time. 1) 18 ÷ 2 = 9. 2) 40 + 25 = 65. Spare questions in the guide table: I divide by 5 and get 4 (20); the opposite of × 4 is ÷ 4; I multiply by 3, then add 4, and get 19 (5: 19 − 4 = 15, 15 ÷ 3 = 5; do not teach it yet, see who tries 19 ÷ 3 first, that is today’s big idea).'))
 
 # 4 explore1
 pic=machine([('?','q'),('× 2','op'),('+ 6','op'),('20','res')],back='go back to find the start',w=1300)
-put(f'{P}-explore1',explore1(f'{P}-explore1',['Pick one × card and one + or − card. Put them in a row: that is your machine.','Secretly choose a start number. Run it through both cards. Say only the OUT.','Your partner works backwards to find your start number. Check it together.','Swap the order of the two cards. Same start number. Is the OUT the same?'],pic,
- 'Minutes 8 to 14. Pairs build a two-step machine from the cards (one × card from × 2, × 3, × 4, × 5, × 10, and one + or − card). Partner A chooses a start number (keep it from 1 to 10) and says only the OUT. Partner B works backwards, then they check by going forwards. Partners swap roles every round, so each child both chooses the secret number and works backwards (never one child always being the solver). Then they swap the order of the cards and run the SAME start number. '
- 'Online: the tutor runs the machine on the slide and children work back on whiteboards; then pairs in breakout rooms make their own. Prediction first: "× 2 then + 6, start 4. Then + 6 then × 2, start 4. Same OUT?" Thumbs up or down.'))
+put(f'{P}-explore1',explore1(f'{P}-explore1',['Pick one × card and one + or − card. Put them in a row: that is your machine.','Secretly choose a start number. Run it through both cards. Say only the OUT.','Your partner works backwards to find your start number. Check it together.'],pic,
+ 'Minutes 8 to 14. Pairs build a two-step machine from the cards (one × card from × 2, × 3, × 4, × 5, × 10, and one + or − card). Partner A chooses a start number (keep it from 1 to 10) and says only the OUT. Partner B works backwards, then they check by going forwards. Partners swap roles every round, so each child both chooses the secret number and works backwards (never one child always being the solver). (Swapping the order of the two cards is dropped from the explore: the teachorder slide and worksheet Q5 ask exactly that.) '
+ 'Online: the tutor runs the machine on the slide and children work back on whiteboards; then pairs in breakout rooms make their own.'))
 
 # 5 explore2
-put(f'{P}-explore2',sec(f'{P}-explore2','14–20 MIN',h2('Explore: talk about it')+qcards([('1.','How did you find your partner’s start number?'),('2.','What is the opposite of × 3? Of − 8?'),('3.','Does it matter which card goes first?')],40),
- 'Minutes 14 to 20. Let pairs keep working, then gather them. Answers: 1) Undo the LAST card first with its opposite, then undo the first card. 2) ÷ 3 undoes × 3; + 8 undoes − 8. 3) Yes. Start 4: × 2 then + 6 gives 14, but + 6 then × 2 gives 20. Ask a pair whose machine could not be undone with a whole number (for example ÷ 3 first, then OUT 7 with + 2: 5 is not in the 3 table) to share: what went wrong?'))
+put(f'{P}-explore2',sec(f'{P}-explore2','14–20 MIN',h2('Explore: talk about it')+qcards([('1.','How did you find your partner’s start number?'),('2.','What is the opposite of × 3? Of − 8?')],40),
+ 'Minutes 14 to 20. Let pairs keep working, then gather them. Answers: 1) Undo the LAST card first with its opposite, then undo the first card. 2) ÷ 3 undoes × 3; + 8 undoes − 8. (Does the order of the cards matter? That is the teachorder slide and worksheet Q5, not asked here.) Ask a pair whose machine could not be undone with a whole number (for example ÷ 3 first, then OUT 7 with + 2: 5 is not in the 3 table) to share: what went wrong?'))
 
 # 6 teach1
 body=h2('Opposites undo each other')+'<div style="display:flex;gap:32px">'+card(p('+ 6  and  − 6',48,700)+p('Add 6, then take away 6: back where you started.',32,600,MUTED),extra='flex:1')+card(p('× 4  and  ÷ 4',48,700)+p('4 groups of 5 is 20. 20 shared into 4 groups is 5.',32,600,MUTED),extra='flex:1')+'</div>'
@@ -94,8 +94,8 @@ body+=step(3,'Check forwards:  7 × 3 = 21,  21 + 4 = 25 ✓   My number is 7.',
 put(f'{P}-we1',sec(f'{P}-we1','22–26 MIN',body,'Click to reveal each step; ask the group to predict it first. Analogy: "In the morning you put on socks, then shoes. At night you take off the shoes first." The last step done is the first step undone. Watch for children who do 25 ÷ 3 first: it does not even give a whole number, which is a clue they went the wrong way.'))
 
 # 8 try1
-put(f'{P}-try1',try_slide(f'{P}-try1','26–28 MIN','Your turn: whiteboards','Find what went IN. Undo the last step first, then check forwards.',[('a','? → × 2 → − 5 → 15','10'),('b','? → + 6 → × 5 → 50','4'),('c','? → ÷ 4 → + 9 → 14','20')],
- 'Whiteboards up together, then click. a) 15 + 5 = 20, 20 ÷ 2 = 10. b) The last step is × 5: 50 ÷ 5 = 10, then 10 − 6 = 4. c) 14 − 9 = 5, then the opposite of ÷ 4 is × 4: 5 × 4 = 20. Ask a child to explain b out loud, because the × comes last this time.',size=40))
+put(f'{P}-try1',try_slide(f'{P}-try1','26–28 MIN','Your turn: whiteboards','Find what went IN. Undo the last step first, then check forwards.',[('a','? → × 2 → − 5 → 15','10')],
+ 'Whiteboards up together, then click. One item: 15 + 5 = 20, 20 ÷ 2 = 10. Ask for the rule in words: "undo the last step first". (Items b and c are dropped: worksheet Q1 has the same types.)',size=40))
 
 # 9 we2 before-and-after bars
 U=14
@@ -108,8 +108,8 @@ put(f'{P}-we2',sec(f'{P}-we2','28–30 MIN',body,'Click 1: the "Now" bar (bottom
  'Say: "We read the story forwards but we solve it backwards, from the bottom bar up." The bars stop children from adding 18 and 25 to 60 without thinking.'))
 
 # 10 try2
-put(f'{P}-try2',try_slide(f'{P}-try2','30–31 MIN','Your turn: before and after','Start from what is there now. Undo each change.',[('a','Ali lost 12 cards. Now he has 30. How many at first?','42'),('b','Siti had $40. She spent some, then got $15. Now she has $35. How much did she spend?','$20'),('c','A bus: 9 got off, then 14 got on. Now 31 are on it. How many at first?','26')],
- 'Whiteboards. a) 30 + 12 = 42. b) Before the $15: 35 − 15 = $20. She went from $40 to $20, so she spent $20. c) 31 − 14 = 17, then 17 + 9 = 26 (check 26 − 9 = 17, 17 + 14 = 31).',size=34))
+put(f'{P}-try2',try_slide(f'{P}-try2','30–31 MIN','Your turn: before and after','Start from what is there now. Undo each change.',[('a','Ali lost 12 cards. Now he has 30. How many at first?','42'),('b','Siti had $40. She spent some, then got $15. Now she has $35. How much did she spend?','$20')],
+ 'Whiteboards. a) 30 + 12 = 42. b) Before the $15: 35 − 15 = $20. She went from $40 to $20, so she spent $20. Two items only: the bus item is dropped.',size=34))
 
 # 11 key
 body=h2('Key idea: undo it backwards')+card(p('Start at the end. Undo the LAST step first with its opposite, then the step before. Check by going forwards.',44,700))+card(p('Opposites:  + and −  undo each other.  × and ÷  undo each other.',38,600,MUTED))
@@ -129,11 +129,11 @@ put(f'{P}-teachrule',sec(f'{P}-teachrule','36–38 MIN',body,'Teach before works
  'Point out: with IN 1 every guess works, so the second pair is what tells them apart. Do not tell them the worksheet rule.'))
 
 # 14 ws1
-put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Mystery machines. Undo the last step first. Write the IN in the yellow box.'),('Q2','Two-step machine tables: fill in the OUT or the IN.')],'Check every answer by going forwards through the machine.','Minutes 38 to 50. Walk around. Ask "What was the last step? What is its opposite?" before giving any help. For Q2a the last two columns need going backwards. For Q2b suggest a table of guesses like the one on the last slide.'))
+put(f'{P}-ws1',ws_preview(f'{P}-ws1','38–50 MIN','Worksheet page 1: with your partner',[('Q1','Mystery machines (part d is a ★ take-home star). Undo the last step first. Write the IN in the yellow box.'),('Q2','Two-step machine tables: fill in the OUT or the IN.')],'Check every answer by going forwards through the machine.','Minutes 38 to 50. Walk around. Ask "What was the last step? What is its opposite?" before giving any help. Q1(d) (× 4, then − 15) is marked ★ take-home on the page: children do it at home. For Q2a the last two columns need going backwards. For Q2b suggest a table of guesses like the one on the last slide.'))
 
 # 15 ws1ans
-put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 10    b) 16    c) 24    d) 9'),('Q2a','IN 4 → OUT 14.  IN 10 → OUT 32.  OUT 17 ← IN 5.  OUT 29 ← IN 9.'),('Q2b','× 2, then + 1:  IN 3, 5, 10, 20 → OUT 7, 11, 21, 41')],
- 'Click after a pair explains. Q1: a) 27 − 7 = 20, 20 ÷ 2 = 10. b) 40 ÷ 5 = 8, 8 + 8 = 16. c) 20 − 12 = 8, 8 × 3 = 24. d) 21 + 15 = 36, 36 ÷ 4 = 9. Q2a: 4 × 3 + 2 = 14, 10 × 3 + 2 = 32; 17 − 2 = 15, 15 ÷ 3 = 5; 29 − 2 = 27, 27 ÷ 3 = 9. '
+put(f'{P}-ws1ans',check_slide(f'{P}-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 10    b) 16    c) 24    ★ take-home: d) 9'),('Q2a','IN 4 → OUT 14.  IN 10 → OUT 32.  OUT 17 ← IN 5.  OUT 29 ← IN 9.'),('Q2b','× 2, then + 1:  IN 3, 5, 10, 20 → OUT 7, 11, 21, 41')],
+ 'Click after a pair explains (answer lines only). Q1(d) is a take-home star: the answer stays here for children to mark at home. Q1: a) 27 − 7 = 20, 20 ÷ 2 = 10. b) 40 ÷ 5 = 8, 8 + 8 = 16. c) 20 − 12 = 8, 8 × 3 = 24. d) 21 + 15 = 36, 36 ÷ 4 = 9. Q2a: 4 × 3 + 2 = 14, 10 × 3 + 2 = 32; 17 − 2 = 15, 15 ÷ 3 = 5; 29 − 2 = 27, 27 ÷ 3 = 9. '
  'Q2b: 3 × 2 + 1 = 7, 5 × 2 + 1 = 11, 10 × 2 + 1 = 21, 20 × 2 + 1 = 41. (Finding a hidden rule from a table is Think harder 1.)',lw=220))
 
 # 16 teachparts (halves)
@@ -208,7 +208,7 @@ for i,t in enumerate(['After: Ben 20, Ali 20.','Undo it: Ben gets his 5 back: 20
 put(f'{P}-chwalk',sec(f'{P}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the machine runs twice, so we undo it twice, starting from the final OUT; the number in the middle is 8. Q2: the last thing that happened was "Ben gives 5", so we undo it: Ben takes 5 back and Ali gives 5 back. Ask: "Why is the difference 10 and not 5?" (Ben lost 5 AND Ali gained 5.)'))
 
 # 25 talk, 26 exit
-put(f'{P}-talk',talk_slide(f'{P}-talk','To undo “× 2, then + 6” with OUT 20, Mei takes away 6 first. Ali divides by 2 first. Who is right?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Make them test both ways. Answer: Mei is right: 20 − 6 = 14, 14 ÷ 2 = 7, and 7 × 2 + 6 = 20. Ali gets 20 ÷ 2 = 10, 10 − 6 = 4, but 4 × 2 + 6 = 14, not 20. The last step happened last, so it is undone first. Praise the reasons, not only the answers.'))
+put(f'{P}-talk',talk_slide(f'{P}-talk','To undo “× 2, then + 6” with OUT 20, Mei takes away 6 first. Ali divides by 2 first. Who is right?','Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Make them test both ways. Answer: Mei is right: 20 − 6 = 14, 14 ÷ 2 = 7, and 7 × 2 + 6 = 20. Ali gets 20 ÷ 2 = 10, 10 − 6 = 4, but 4 × 2 + 6 = 14, not 20. The last step happened last, so it is undone first. Praise the reasons, not only the answers.'))
 put(f'{P}-exit',exit_slide(f'{P}-exit','I think of a number. I multiply it by 4, then take away 6. I get 14. What is my number?','Minutes 80 to 90. Answer: 5 (14 + 6 = 20, 20 ÷ 4 = 5; check 5 × 4 = 20, 20 − 6 = 14). Extension: make a three-step machine with a × card, a ÷ card and a + card for a partner.'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','try2','key','break','teachrule','ws1','ws1ans','teachparts','teachorder','ws2','ws2ans','teachthree','stretch','challenge','chdiag','chwalk','talk','exit']

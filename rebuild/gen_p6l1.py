@@ -79,7 +79,7 @@ def check(sid,time,title,rows,notes,top=250,gap=135,size=36,lw=150):
     for i,(a,b) in enumerate(rows):
         tp=top+i*gap
         body+=pin(128,tp,lw-20,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'18px 24px')
-        body+=pin(128+lw,tp,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>','pop',YEL,20,'18px 26px')
+        body+=pin(128+lw,tp,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>',None,YEL,20,'18px 26px')
     return sec(sid,time,body,notes)
 
 # ---------- title ----------
@@ -98,19 +98,19 @@ put(f'{L}-title',f'''<section id="{L}-title" data-transition="fade" style="backg
 
 # ---------- warm-up 1: pattern quick-fire ----------
 cards=[('3, 7, 11, 15, …','19, 23  (add 4)'),('50, 44, 38, 32, …','26, 20  (take away 6)'),('1, 4, 9, 16, …','25, 36  (square numbers)'),
-       ('2, 4, 8, 16, …','32, 64  (double)'),('1, 1, 2, 3, 5, …','8, 13  (add the last two)'),('0.5, 1.25, 2, 2.75, …','3.5, 4.25  (add 0.75)')]
+       ('1, 1, 2, 3, 5, …','8, 13  (add the last two)')]
 body=h2('Warm-up: Next! Pattern quick-fire')+p('Type the next two terms in the chat. Say the rule if you spot it. No race, no points.',36,600,MUTED)
-CW=533
+CW=816
 for i,(a,b) in enumerate(cards):
-    Lf=128+(i%3)*(CW+32); T=300+(i//3)*290
+    Lf=128+(i%2)*(CW+32); T=300+(i//2)*290
     body+=pin(Lf,T,CW,f'<p style="font-family:{HF};font-size:30px;font-weight:600;color:{TEAL}">Card {i+1}</p><p style="font-family:{HF};font-size:48px;font-weight:600">{E(a)}</p>',None,WHITE,24,'20px 28px',f'box-sizing:border-box;height:260px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(Lf+20,T+160,CW-40,f'<p style="font-size:32px;font-weight:800">{E(b)}</p>','pop',SOFT,16,'12px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
-put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,'Minutes 5 to 8. Pairs (online: type in the chat). No racing, no points. Show one card at a time by pointing; click to reveal its answer (clicks go card 1 to card 6). Ask for the rule every time. Card 3 and card 5 are traps: the difference is NOT the same each time (square numbers go up by 3, 5, 7, 9; in card 5 each term is the sum of the two before, the Fibonacci numbers). Say: "Today we focus on the friendly kind, where the difference stays the same, like cards 1, 2 and 6." Card 6: 2.75 + 0.75 = 3.5, then 4.25.'))
+put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,'Minutes 5 to 8. Pairs (online: type in the chat). No racing, no points. Show one card at a time by pointing; click to reveal its answer (clicks go card 1 to card 4; four cards only, so the warm-up fits its 6.5 minutes). Ask for the rule every time. Card 3 and card 4 are traps: the difference is NOT the same each time (square numbers go up by 3, 5, 7, 9; in card 4 each term is the sum of the two before, the Fibonacci numbers). Say: "Today we focus on the friendly kind, where the difference stays the same, like cards 1 and 2."'))
 
 # ---------- warm-up 2 ----------
-qs=[('1.','4, 9, 14, 19, __','24'),('2.','The 10th term of 2, 4, 6, 8, …','20'),('3.','The 10th term of 3, 5, 7, 9, …','21'),('4.','Ali has $12 and saves $5 a week. How much after 6 weeks?','$42'),('5.','100, 93, 86, __','79')]
+qs=[('1.','The 10th term of 2, 4, 6, 8, …','20'),('2.','The 10th term of 3, 5, 7, 9, …','21'),('3.','Ali has $12 and saves $5 a week. How much after 6 weeks?','$42')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards up together, then click to reveal. Q2 and Q3 are the seed of today: 2, 4, 6, 8 is the 2 times table, so the 10th term is 2 × 10 = 20. 3, 5, 7, 9 is always 1 more than the 2 times table, so the 10th term is 21. Ask: "How did you get Q3 without counting on?" Q4: 12 + 6 × 5 = 42 (6 weeks, 6 jumps of $5, because Ali starts with $12 before any saving). Q5: take away 7.'))
+put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards up together, then click to reveal. Three questions only. Q1 and Q2 are the seed of today: 2, 4, 6, 8 is the 2 times table, so the 10th term is 2 × 10 = 20. 3, 5, 7, 9 is always 1 more than the 2 times table, so the 10th term is 21. Ask: "How did you get Q2 without counting on?" Q3: 12 + 6 × 5 = 42 (6 weeks, 6 jumps of $5, because Ali starts with $12 before any saving).'))
 
 # ---------- explore ----------
 def tri_svg(w=1000,h=250):
@@ -135,14 +135,14 @@ def tri_svg(w=1000,h=250):
         cwid=130 if i==0 else 58; xx=tx+(0 if i==0 else 130+(i-1)*58)
         g+=f'<rect x="{xx}" y="40" width="{cwid}" height="50" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/><text x="{xx+cwid/2}" y="74" font-size="24" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{c}</text>'
         g+=f'<rect x="{xx}" y="90" width="{cwid}" height="50" fill="{WHITE}" stroke="{NAVY}" stroke-width="3"/><text x="{xx+cwid/2}" y="124" font-size="24" font-weight="700" text-anchor="middle" fill="{RED if v=="?" else NAVY}" font-family="Nunito Sans, Arial">{v}</text>'
-    g+=f'<text x="{tx+210}" y="200" font-size="28" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">Predict. Then test in code.</text>'
+    g+=f'<text x="{tx+210}" y="200" font-size="28" font-weight="700" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">Predict first. We test it soon.</text>'
     return f'<svg aria-label="Matchstick triangles: patterns 1, 2 and 3 use 3, 5 and 7 sticks; table with question marks for patterns 10 and 100" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px;flex:none">{g}</svg>'
-steps=['Build matchstick triangles in a row: pattern 1 has 1 triangle, pattern 2 has 2, pattern 3 has 3.','Count the sticks in each pattern. Make a table.','Predict the sticks in pattern 10 and in pattern 100. Do not build them!','Check pattern 10 in Scratch with a loop and a variable.']
+steps=['Build matchstick triangles in a row: pattern 1 has 1 triangle, pattern 2 has 2, pattern 3 has 3.','Count the sticks in each pattern. Make a table.','Predict the sticks in pattern 10 and in pattern 100. Do not build them!']
 inner=chip('EXPLORE')+'<ol style="font-size:32px;font-weight:600;padding-left:48px;margin:0;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>'
 body=h2('Explore: what to do')+card(inner)+card(tri_svg(1450,320),extra='align-items:center;padding:12px 40px')
-put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs build with matchsticks (online: draw the sticks as lines). Insist on a written prediction for pattern 100 BEFORE anyone opens Scratch. Then Scratch: make a variable called sticks; blocks: when green flag clicked, set sticks to 3, repeat 9, change sticks by 2, say sticks. It says 21 (pattern 10). Ask: "Why repeat 9 and not 10?" Python (optional, for children who know it): sticks = 3, then for i in range(9): sticks = sticks + 2, then print(sticks). Prints 21.'))
-body=h2('Explore: talk about it')+talkcard('1.','How many sticks are in pattern 10?')+talkcard('2.','How many in pattern 100? How did you get it without building it?')+talkcard('3.','Which pattern uses exactly 75 sticks?')
-put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Pairs keep working, then gather. Answers: 1) 21. 2) 201: each new triangle adds 2 sticks, so 3 + 2 × 99 = 201; or "2 sticks per triangle plus 1 extra", 2 × 100 + 1 = 201. Both are right: celebrate both methods. 3) Pattern 37: work backwards, 75 − 1 = 74, 74 ÷ 2 = 37. Ask who checked pattern 100 in Scratch with repeat 99.'))
+put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs build with matchsticks (online: draw the sticks as lines). Insist on a written prediction for pattern 10 and pattern 100 BEFORE anything else. Scratch is NOT opened in this part: the loop that checks a pattern is built once, live, in the mini-lesson (the slide Test it in code), so nothing is built twice.'))
+body=h2('Explore: talk about it')+talkcard('1.','How many in pattern 100? How did you get it without building it?')+talkcard('2.','Which pattern uses exactly 75 sticks?')
+put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Pairs keep working, then gather. Two questions (pattern 10 is read from the table: 21). Answers: 1) 201: each new triangle adds 2 sticks, so 3 + 2 × 99 = 201; or "2 sticks per triangle plus 1 extra", 2 × 100 + 1 = 201. Both are right: celebrate both methods. 2) Pattern 37: work backwards, 75 − 1 = 74, 74 ÷ 2 = 37.'))
 
 # ---------- teach ----------
 W6=[190,118,118,118,118,118]
@@ -168,7 +168,7 @@ body+=step(2,'One loop = one jump: change term by 3.',left=880,top=380,width=912
 body+=step(3,'1st term to 100th term = 99 jumps: repeat 99.',left=880,top=500,width=912,size=34)
 body+=answer(880,640,912,'It says 302. Same as 3 × 100 + 2 ✓')
 body+=pin(128,780,1664,p('Maths first, then code to test it. If they disagree, one of them has a bug!',32,700,MUTED),'fade')
-put(f'{L}-we2',sec(f'{L}-we2','30–33 MIN',body,'Build it live in Scratch while children copy (make a variable called term first: Variables, Make a Variable). Ask before step 3: "How many times should it repeat?" Many say 100. Draw 4 terms with 3 jumps between them on the whiteboard: 4 terms, 3 jumps. So 100 terms, 99 jumps. Run it: 302. Then try repeat 100: it says 305, the 101st term. Python version (optional):\nterm = 5\nfor i in range(99):\n    term = term + 3\nprint(term)\nIt prints 302.'))
+put(f'{L}-we2',sec(f'{L}-we2','30–33 MIN',body,'This is the first time Scratch is opened today (about 4 minutes): open scratch.mit.edu, click Create, and build it live while children copy (make a variable called term first: Variables, Make a Variable). Ask before step 3: "How many times should it repeat?" Many say 100. Draw 4 terms with 3 jumps between them on the whiteboard: 4 terms, 3 jumps. So 100 terms, 99 jumps. Run it: 302. Then try repeat 100: it says 305, the 101st term. Python version (optional):\nterm = 5\nfor i in range(99):\n    term = term + 3\nprint(term)\nIt prints 302.'))
 body=h2('Key idea: the rule for the nth term')+card(p('The difference tells you the times table. Compare with it to find what to add or take away.',44,700))+card(p('From the 1st term to the nth term there are n − 1 jumps. Test your rule in code.',38,600,MUTED))
 put(f'{L}-key',sec(f'{L}-key','33–35 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Using only the difference as the rule (writing 3n for 5, 8, 11, …) and not comparing with the 1st term. (2) Off by one: doing 100 jumps from the 1st term (5 + 3 × 100) instead of 99, in the maths and in the repeat block. (3) Putting "change" before "say" in a loop, so the sprite never says the 1st term.'))
 put(f'{L}-break',f'''<section id="{L}-break" data-transition="fade" style="background:{TEAL};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">
@@ -188,9 +188,9 @@ body+=step(2,'Is 100 a term?  3n − 1 = 100, so 3n = 101. But 101 is not in the
 body+=step(3,'Shortcut: every term is 1 less than a multiple of 3.',top=650,size=36)
 put(f'{L}-teachwhich',sec(f'{L}-teachwhich','40–42 MIN',body,'Teach before worksheet page 1 (Q1d and Q3). This is the PSLE "think of a number" idea run backwards: undo the − 1, then undo the × 3. Check step 1 forwards: 3 × 21 − 1 = 62. For step 2, ask: "Which terms are near 100?" (98 is the 33rd, 101 would need n = 33⅔.)'))
 put(f'{L}-trywhich',try_slide(f'{L}-trywhich','42–44 MIN','Your turn: work backwards','Find the rule first. Then undo it.',[('a','Is 50 a term of 2, 6, 10, 14, …?','Yes: 13th'),('b','Which term of 6, 11, 16, … is 96?','The 19th'),('c','Is 75 a term of 4, 8, 12, 16, …?','No: all even')],'Whiteboards. a) Rule 4n − 2: 4n = 52, n = 13. b) Rule 5n + 1: 5n = 95, n = 19. c) Rule 4n: every term is a multiple of 4, so every term is even; 75 is odd.',size=36))
-put(f'{L}-ws1',ws_preview(f'{L}-ws1','44–54 MIN','Worksheet page 1: the maths, with your partner',[('Q1','Matchstick squares: table, rule, pattern 100, and which pattern has 61 sticks.'),('Q2','Two sequences: difference, rule for the nth term, 100th term.'),('Q3','Is it in the sequence? Work backwards.')],'Finished? Use the Python corner (or Scratch) to test your Q1 and Q2 answers.','Minutes 44 to 54. Pairs talk before they write. Ask "How did you check your rule?" Children who finish early test Q2 in Scratch: set term to the 1st term, repeat 99, change term by the difference, say term.'))
+put(f'{L}-ws1',ws_preview(f'{L}-ws1','44–54 MIN','Worksheet page 1: the maths, with your partner',[('Q1','Matchstick squares: table, rule, pattern 100, and which pattern has 61 sticks.'),('Q2','Two sequences: difference, rule for the nth term, 100th term.'),('Q3','Is it in the sequence? Work backwards.')],'Finished? Use the Python corner (or Scratch) to test your Q1 and Q2 answers.','Minutes 44 to 54. Pairs talk before they write. Ask "How did you check your rule?" Show this preview, do not read it aloud. Children who finish early test Q2 in Scratch: set term to the 1st term, repeat 99, change term by the difference, say term.'))
 put(f'{L}-ws1ans',check(f'{L}-ws1ans','54–56 MIN','Page 1: check together',[('Q1','a) 7, 10, 13, 16, 19; adds 3 (shares a side)  b) 3n + 1  c) 301  d) pattern 20'),('Q2','a) 4n + 2 → 402   b) 5n − 4 → 496'),('Q3','a) 4n + 1   b) yes, the 25th term   c) no: every term is odd, 150 is even')],
- 'Click after a pair explains. Q1a: 4 sticks for the first square, then only 3 for each new square because it shares a side. Q2: the other two sequences (2n + 7 and 0.5n) are now on the Think harder page. Q3b: 4n + 1 = 101, 4n = 100, n = 25.',size=36,gap=150))
+ 'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q2 (the rule idea), about 35 seconds a question. Q1a: 4 sticks for the first square, then only 3 for each new square because it shares a side. Q2: the other two sequences (2n + 7 and 0.5n) are now on the Think harder page. Q3b: 4n + 1 = 101, 4n = 100, n = 25.',size=36,gap=150))
 
 # ---------- before page 2: trace, plan, bug ----------
 prog=[HAT,('var','set x to (1)'),('ctl','repeat (3)',[('var','change x by (4)'),('look','say (x) for (1) seconds')])]
@@ -198,31 +198,12 @@ body=h2('Trace the code in a table')+pin(128,260,640,blocks(prog,34,'Code: set x
 Wt=[260,260]
 body+=trow(900,260,['Loop','x'],Wt,None,True)
 for i,(a,b) in enumerate([('1','5'),('2','9'),('3','13')]): body+=trow(900,350+i*90,[a,b],Wt,'rise')
-body+=pin(128,660,1664,p('It says 5, 9, 13.  With repeat 50, the last number is 1 + 4 × 50 = 201.',36,800),'fade',YEL,20,'20px 30px')
-put(f'{L}-teachtrace',sec(f'{L}-teachtrace','56–57 MIN',body,'Teach before worksheet page 2 (Q4). Point at each block in order and say what the computer does: "x is 1. Loop 1: change x by 4, x is 5, say 5." Click a row after children say it. Then ask for repeat 50 WITHOUT tracing 50 rows: x starts at 1 and gets 50 jumps of 4. Python (optional):\nx = 1\nfor i in range(3):\n    x = x + 4\n    print(x)\nPrints 5, 9, 13.'))
-prog=[HAT,('var','set n to (7)'),('ctl','repeat (10)',[('look','say (n) for (1) seconds'),('var','change n by (5)')])]
-body=h2('Plan your code: say 10 terms of 7, 12, 17, …')+pin(128,260,700,blocks(prog,32,'Code: set n to 7, repeat 10: say n, change n by 5'),None)
-body+=step(1,'set n to the 1st term: 7.',left=880,top=260,width=912,size=34)
-body+=step(2,'say BEFORE change, so the 1st term is said.',left=880,top=380,width=912,size=34)
-body+=step(3,'10 terms said: repeat 10.',left=880,top=500,width=912,size=34)
-body+=answer(880,620,912,'Last said: 7 + 5 × 9 = 52')
-body+=pin(128,770,1664,p('n ends at 57, but 57 is never said. Ask: what would swapping say and change do?',32,700,MUTED),'fade')
-put(f'{L}-teachplan',sec(f'{L}-teachplan','57–58 MIN',body,'Teach before worksheet page 2 (Q5). Plan on paper first: which variable, what start value, what goes inside the loop, in which order. If say and change are swapped, the sprite says 12, 17, …, 57: it misses the 1st term and says one extra. Python (optional):\nn = 7\nfor i in range(10):\n    print(n)\n    n = n + 5'))
-def posts_svg(w=1664,h=150):
-    g=''
-    for i in range(5):
-        x=140+i*330
-        g+=f'<circle cx="{x}" cy="60" r="44" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/><text x="{x}" y="76" font-size="40" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{["1st","2nd","3rd","4th","5th"][i]}</text>'
-        if i<4: g+=f'<path d="M{x+50} 40 Q{x+165} -10 {x+280} 40" fill="none" stroke="{TEAL}" stroke-width="5"/><polygon points="{x+284},44 {x+262},36 {x+276},20" fill="{TEAL}"/><text x="{x+165}" y="120" font-size="30" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">jump {i+1}</text>'
-    return f'<svg aria-label="5 terms joined by 4 jumps" viewBox="0 0 1664 140" xmlns="http://www.w3.org/2000/svg" style="width:{w}px;height:{h}px;flex:none">{g}</svg>'
-body=h2('Bug hunt: count the jumps')+pin(128,240,1664,posts_svg(),None)+pin(128,410,1664,p('5 terms, only 4 jumps. The 1st term is there before any jump.',36,700),None,SOFT,20,'18px 28px')
-body+=step(1,'Ben wants the 20th term of 2, 6, 10, … His code: set n to 2, repeat 20, change n by 4.',top=530,size=34)
-body+=step(2,'It says 2 + 20 × 4 = 82. But the rule 4n − 2 gives 78.',top=640,size=34)
-body+=step(3,'Fix: 1st term to 20th term is 19 jumps, so repeat 19 (2 + 19 × 4 = 78 ✓).',top=750,size=34)
-put(f'{L}-teachbug',sec(f'{L}-teachbug','58–59 MIN',body,'Teach before worksheet page 2 (Q6). This is the fence-post idea: 5 posts have 4 gaps. When the maths and the code disagree, find which one is wrong and why. Ask: "Is there another fix?" (yes: start n at −2, the 0th term, and keep repeat 20).'))
-put(f'{L}-ws2',ws_preview(f'{L}-ws2','59–72 MIN','Worksheet page 2: the code, on your own',[('Q4','Predict, then trace the loop in a table.'),('Q5','Plan your code: say the first 20 terms of 4, 10, 16, 22, …'),('Q6','Spot the bug in Mei’s code, then fix it.')],'Write on paper first, then test in Scratch. Finished early? Stretch and Challenge come next.','Children work alone. Let them test Q4 to Q6 in Scratch AFTER writing their prediction. Note who needs a short catch-up next lesson.'))
-put(f'{L}-ws2ans',check(f'{L}-ws2ans','72–75 MIN','Page 2: check together',[('Q4','x: 7, 12, 17, 22.  a) 22   b) 502 (2 + 100 × 5)'),('Q5','set n to 4, repeat 20 [say n for 1 seconds, change n by 6].  Last said: 118'),('Q6','a) 203   b) 199 (4n − 1)   c) repeat 49: the 1st term needs no jump')],
- 'Click after a child explains. Q5: say must come before change. The last number said is the 20th term, 6 × 20 − 2 = 118 (n ends at 124 but it is never said). Q6: 3 + 50 × 4 = 203 is the 51st term.',size=36,gap=150))
+body+=pin(128,670,1664,p('It says 5, 9, 13.  With repeat 50, the last number is 1 + 4 × 50 = 201.',36,800),'fade',YEL,20,'20px 30px')
+body+=pin(128,810,1664,p('Bug hunt (Q6): 5 terms have only 4 jumps. For the 20th term use repeat 19, not repeat 20.',34,700),'fade',SOFT,20,'16px 28px')
+put(f'{L}-teachtrace',sec(f'{L}-teachtrace','56–57 MIN',body,'Teach before worksheet page 2 (Q4, and the Q6 bug hunt as the second panel). Point at each block in order and say what the computer does: "x is 1. Loop 1: change x by 4, x is 5, say 5." Click a row after children say it. Then ask for repeat 50 WITHOUT tracing 50 rows: x starts at 1 and gets 50 jumps of 4. Python (optional):\nx = 1\nfor i in range(3):\n    x = x + 4\n    print(x)\nPrints 5, 9, 13. Bug hunt (Q6), the fence-post idea: 5 posts have 4 gaps, so the 1st term is there before any jump. Ben wants the 20th term of 2, 6, 10, … and writes repeat 20: it says 82, but the rule 4n − 2 gives 78. 1st term to 20th term is 19 jumps (2 + 19 × 4 = 78). Is there another fix? Yes: start n at −2 and keep repeat 20.'))
+put(f'{L}-ws2',ws_preview(f'{L}-ws2','59–72 MIN','Worksheet page 2: the code, on your own',[('Q4','Predict, then trace the loop in a table.'),('Q5','★ Take-home: plan your code to say the first 20 terms of 4, 10, 16, 22, …'),('Q6','Spot the bug in Mei’s code, then fix it.')],'Write on paper first, then test in Scratch. Finished early? Stretch and Challenge come next.','Children work alone on Q4 and Q6; Q5 (plan the code) is the take-home question, marked with a star in the workbook. Show this preview, do not read it aloud. Let them test Q4 and Q6 in Scratch AFTER writing their prediction. Note who needs a short catch-up next lesson.'))
+put(f'{L}-ws2ans',check(f'{L}-ws2ans','72–75 MIN','Page 2: check together',[('Q4','x: 7, 12, 17, 22.  a) 22   b) 502 (2 + 100 × 5)'),('Q5 ★','Take-home. set n to 4, repeat 20 [say n for 1 seconds, change n by 6].  Last said: 118'),('Q6','a) 203   b) 199 (4n − 1)   c) repeat 49: the 1st term needs no jump')],
+ 'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q6 (repeat 49, the fence-post idea). Q5 is the take-home question: the answer is here so children can mark it at home, and you take it up at the start of the next lesson. Say must come before change. The last number said is the 20th term, 6 × 20 − 2 = 118 (n ends at 124 but it is never said). Q6: 3 + 50 × 4 = 203 is the 51st term.',size=36,gap=150))
 
 # ---------- stretch, challenge ----------
 st=[('1.','The 5th term is 23 and the 6th term is 27. The difference is always the same. What is the 1st term? What is the rule?'),('2.','The 1st term is 4 and the 10th term is 40. What is the difference?'),('3.','Write a sequence whose 1st term is 10 and whose 100th term is 1000.')]
@@ -252,11 +233,11 @@ body+=pin(992,250,800,p('Q2: trace the table',36,800,TEAL))
 for i,t in enumerate(['k: 1, 2, 3, 4, 5','t: 1, 3, 6, 10, 15 → says 15','repeat 100: 1 + 2 + … + 100','Pairs 1 + 100, 2 + 99, …: 50 × 101 = 5050']): body+=pin(992,330+i*120,800,p(t,30),'rise',WHITE)
 put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried. Q1: the common terms go up by 15 because 15 is the smallest number in both the 3 and the 5 times tables; 14 + 15 = 29, then 44, then 59 (the next, 74, is too big). Q2: t adds up 1, 2, 3, … These are the triangle numbers. Python (optional):\nt = 0\nk = 0\nfor i in range(100):\n    k = k + 1\n    t = t + k\nprint(t)\nPrints 5050.'))
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ali says the 100th term of 7, 10, 13, … is 7 + 3 × 100 = 307. Is he right? Explain with a rule, a picture or code.',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Listen for: No. The 1st term is already 7 before any jump, so the 100th term is only 99 jumps away: 7 + 3 × 99 = 304. The rule 3n + 4 gives 304 too. Then ask: "When is the rule better than adding on? When is code better than both?" (The rule is fastest for one far term; code is best for listing many terms or checking.)'))
+put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. One question only. Pairs talk for 90 seconds, then volunteers share. Listen for: No. The 1st term is already 7 before any jump, so the 100th term is only 99 jumps away: 7 + 3 × 99 = 304. The rule 3n + 4 gives 304 too. Second question (only if flex is left, otherwise it is the opener of the next lesson): "When is the rule better than adding on? When is code better than both?" (The rule is fastest for one far term; code is best for listing many terms or checking.)'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('The sequence 8, 11, 14, 17, …',46,600)+p('(a) Write the rule for the nth term.   (b) Find the 100th term.   (c) A loop starts at the 1st term. How many times must it repeat “change by 3” to reach the 100th term?',38,600))+card(p('Write your answers on paper. Show your tutor, then collect your stamp.',34))
 put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 3n + 5  (b) 305  (c) 99 times. Extension: make the program say the position and the term together (for example "term 7 is 23") using a second variable pos and the join block, then make it stop at the first term bigger than 1000 (the 333rd term, 1001).'))
 
-order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','key','break','teachwhich','trywhich','ws1','ws1ans','teachtrace','teachplan','teachbug','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
+order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','key','break','teachwhich','trywhich','ws1','ws1ans','teachtrace','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D,'slides',f))

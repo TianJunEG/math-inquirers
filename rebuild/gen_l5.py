@@ -2,6 +2,7 @@ import json,os,sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','diag'))
 from slidekit import *
+from p1budget import STAR
 D=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','split','l5','project')
 S={}
 def put(sid,html): S[sid]=html
@@ -74,13 +75,13 @@ body=h2('Count each child once')+card(p('Ali is 3rd from the front AND 3rd from 
 put('l5-teachq2',sec('l5-teachq2','60–61 MIN',body,'Click 1: draw the queue so Ali is 3rd from both ends. Click 2: explain the double count. Then whiteboards for the "your turn" and click for 7. Extra if time: "10 children. Ben is 4th from the front. How many are behind him?" (6, because Ben is not behind himself).'))
 
 # 19. worksheet page 2
-body=h2('Worksheet page 2: on your own')+card(p('<span style="color:#1F7A6F;font-weight:800">Q3</span>  Marble puzzle. Draw a bar for each child.',40,600,raw=True)+p('<span style="color:#1F7A6F;font-weight:800">Q4</span>  Queue puzzles. Draw the circles.',40,600,raw=True)+p('<span style="color:#1F7A6F;font-weight:800">Q5</span>  Make your own mystery number story for a friend.',40,600,raw=True))+card(p('Finished early? Stretch and Challenge come next.',36,600,MUTED))
+body=h2('Worksheet page 2: on your own')+card(p('<span style="color:#1F7A6F;font-weight:800">Q3</span>  Marble puzzle. Draw a bar for each child.',40,600,raw=True)+p('<span style="color:#1F7A6F;font-weight:800">Q4</span>  Queue puzzles. Draw the circles.',40,600,raw=True)+p('<span style="color:#1F7A6F;font-weight:800">Q5</span>  '+STAR+'<b>Take-home</b> (if you have time): make your own mystery number story for a friend.',40,600,raw=True))+card(p('Finished early? Stretch and Challenge come next.',36,600,MUTED))
 put('l5-ws2',sec('l5-ws2','61–68 MIN',body,'Children work alone. Note who needs a short catch-up next lesson. Check that every child draws bars for Q3 and circles for Q4.'))
 
 # 20. page 2 go-through
 rows=[('Q3','Mei 13,  Ben 7,  Mei has 6 more than Ben,  28 altogether'),('Q4a','13 children are behind Mei (20 − 7)'),('Q4b','5 children: 3 + 3 counts Ali twice, so 6 − 1')]
 body=h2('Page 2: check together')+''.join(qrow(128,260+i*150,1664,a,'',38).replace('</span>  </p>','</span></p>') for i,(a,b) in enumerate(rows))+''.join(answer(330,260+i*150,1462,b) for i,(a,b) in enumerate(rows))
-put('l5-ws2ans',sec('l5-ws2ans','68–70 MIN',body,'Click each answer after a child explains. Q3: Mei = 8 + 5 = 13, Ben = 13 − 6 = 7, difference 13 − 7 = 6, total 8 + 13 + 7 = 28. Q4a: Mei is not behind herself, so 20 − 7 = 13. Q5: check that each story has one clear answer.'))
+put('l5-ws2ans',sec('l5-ws2ans','68–70 MIN',body,'Click each answer after a child explains. Q3: Mei = 8 + 5 = 13, Ben = 13 − 6 = 7, difference 13 − 7 = 6, total 8 + 13 + 7 = 28. Q4a: Mei is not behind herself, so 20 − 7 = 13. Q5 is a take-home item (marked with a star in the workbook): do not ask for it in class; if a child did it, check that the story has one clear answer. Say "pass is fine" for Q5 and for anything not finished.'))
 
 # 21. stretch (new items)
 st=[('1.','Ali and Ben have 20 marbles together. Ali has 4 more than Ben. How many does each have?'),('2.','Ben had some stickers. He gave away 6, got 4, then gave away 3. Now he has 10. How many did he have at first?'),('3.','Tom is 5th from the front. There are 4 children between Tom and Sue, who is last. How many are in the queue?')]
@@ -116,3 +117,4 @@ import p1gaps; p1gaps.apply(D,5)
 import p1fix
 p1fix.finish(D,5,{'l5-ws1':'42–52 MIN','l5-ws1ans':'52–54 MIN','l5-teachbar':'54–56 MIN','l5-teachq1':'56–57 MIN','l5-teachq2':'57–58 MIN','l5-ws2':'58–68 MIN'})
 import p1neutral; p1neutral.apply(D,5)
+import p1budget; p1budget.apply(D,5)

@@ -66,6 +66,7 @@ const lesson = {
     'Counting the whole pattern one by one to the far place instead of jumping to the end of a group.',
     'Growing patterns: multiplying by the step (10 squares × 3 = 30) and forgetting the start (the extra stick), instead of using the table or the rule.'
   ],
+  takehome: 'Page 1: Q2(c) (30 letters, how many Ts) and Q3(b) (beads altogether). Page 2: Q4(d) (23 petals) and Q5(d) (why does it go up by 2). The two machine and growing-pattern teaching slides moved into the mini-lesson.',
   extension: 'Make your own repeating pattern of 4 shapes. Write 3 "far place" questions about it for a partner, with the answers.',
   key: [
     ['Q1', '(a) Square (20 ends a group of 5).  (b) Circle (21 triangle, 22 circle, 23 circle).  (c) Triangle: 40 ends a group (5 × 8 = 40), so 41 starts again.'],
@@ -101,8 +102,8 @@ const script = {
     'Hint 2: "Find the nearest times-table number before your place. That shape ends a group."',
     'Hint 3: "Make a table and look at how much it goes up each time."'
   ],
-  talk: ['"A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?"', '"What if the pattern repeats every 3 shapes?"'],
-  talkAns: 'Every 5: yes, 10 and 20 are both in the 5 times table, so both are the last shape of a group. Every 3: no. 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape.',
+  talk: ['"A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?"'],
+  talkAns: 'Yes: 10 and 20 are both in the 5 times table, so both are the last shape of a group. (If it repeated every 3 shapes the answer would be no: 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape.)',
   close: ['"You did not draw 41 shapes today. You found the group, used a times table and counted on. That is how pattern machines think."']
 };
 
@@ -158,6 +159,7 @@ const qbank = {
 
 const workbook = H => {
   const out = [];
+  const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
   const hr = (ws, lab, vals, h = 80) => H.row([H.cell(lab, ws[0], { bold: true, fill: 'D9D9D9', h }), ...vals.map((v, i) => H.cell(v || ' ', ws[i + 1], { h }))]);
   // ---- page 1 (in pairs)
   out.push(H.q(1, 'This pattern keeps going in the same way. Here are places 1 to 10. Tip: draw a line after the LAST shape of each group.', { before: 20, keepNext: true }));
@@ -168,11 +170,12 @@ const workbook = H => {
   out.push(H.q(2, 'Ali writes the letters M, A, T, H again and again.', { keepNext: true }));
   out.push(H.fig(letterFig()));
   out.push(H.sub('a', 'What is the 18th letter?   ______        (b)  Where is the 10th letter H?   place ______'));
-  out.push(H.sub('c', 'Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.'));
+  out.push(H.sub('c', [TH(), H.t('Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.')]));
   out.push(...H.lines(1));
   out.push(H.q(3, 'Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … It has 12 red beads and ends with yellow beads. Tip: draw one group, then count the groups.', { keepNext: true }));
   out.push(H.fig(beadFig()));
-  out.push(H.sub('a', 'How many yellow beads?   ______        (b)  How many beads altogether?   ______'));
+  out.push(H.sub('a', 'How many yellow beads?   ______'));
+  out.push(H.sub('b', [TH(), H.t('How many beads altogether?   ______')]));
   // ---- page 2 (on your own)
   out.push(H.q(4, 'Each flower has 5 petals.', { pb: true, before: 0, keepNext: true }));
   out.push(H.fig(flowerFig()));
@@ -181,7 +184,7 @@ const workbook = H => {
     out.push(H.tbl(ws, [hr(ws, 'Flowers', ['1', '2', '3', '4', '5', '6']), hr(ws, 'Petals', ['5', '', '', '', '', ''])])); }
   out.push(H.gap(20));
   out.push(H.sub('b', 'Petals on 10 flowers?   ______        (c)  35 petals make how many flowers?   ______'));
-  out.push(H.sub('d', 'Mei has 23 petals. How many flowers?   ______     Petals left over?   ______'));
+  out.push(H.sub('d', [TH(), H.t('Mei has 23 petals. How many flowers?   ______     Petals left over?   ______')]));
   out.push(H.q(5, 'Square tables are pushed together in a row. One child sits at each open side.', { keepNext: true }));
   out.push(H.fig(tablesFig()));
   out.push(H.sub('a', 'Fill in the table.'));
@@ -189,7 +192,7 @@ const workbook = H => {
     out.push(H.tbl(ws, [hr(ws, 'Tables', ['1', '2', '3', '4', '5', '6']), hr(ws, 'Children', ['4', '6', '', '', '', ''])])); }
   out.push(H.gap(20));
   out.push(H.sub('b', 'Children at 10 tables?   ______        (c)  Tables for 20 children?   ______'));
-  out.push(H.sub('d', 'Why does the number of children go up by 2 each time?'));
+  out.push(H.sub('d', [TH(), H.t('Why does the number of children go up by 2 each time?')]));
   out.push(...H.lines(1));
   out.push(H.q(6, 'Ali counts in 3s: 3, 6, 9 … Mei counts in 4s: 4, 8, 12 … Which numbers from 1 to 36 do they BOTH say? Make two lists.', { keepNext: true }));
   out.push(H.sub('a', 'Ali:  3,  6,  9,  ____________________________________'));

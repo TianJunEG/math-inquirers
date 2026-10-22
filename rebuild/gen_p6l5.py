@@ -61,7 +61,7 @@ def checkrows(sid, time, title, rows, notes, size=32, lw=170):
         lines = max(1, math.ceil(len(b) * size * 0.52 / (1664 - lw - 52)))
         hgt = lines * size * 1.25 + 36
         body += pin(128, top, lw - 20, f'<p style="font-size:34px;font-weight:800;color:{TEAL}">{E(a)}</p>', None, WHITE, 20, '16px 22px')
-        body += pin(128 + lw, top, 1664 - lw, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', 'pop', YEL, 20, '18px 26px')
+        body += pin(128 + lw, top, 1664 - lw, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', None, YEL, 20, '18px 26px')
         top += hgt + 22
     return sec(sid, time, body, notes)
 def numcards(sid, time, title, items, notes, size=38):
@@ -69,7 +69,7 @@ def numcards(sid, time, title, items, notes, size=38):
 
 # ---------- 1 title ----------
 notes = (f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} "
-         "Time plan: warm-up 0 to 10, explore 10 to 25 (paper first, then at the computer), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
+         "Time plan: warm-up 0 to 10, explore 10 to 25 (paper only), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
          "worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. "
          "Before the lesson: share the starter project “Every Order” as an .sb3 file (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so \"join tea topping\" saying 21 means green with pearls.")
 body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {N}  •  WEEK 3</p>'
@@ -79,25 +79,25 @@ body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL
 put(f'{PRE}-title', f'<section id="{PRE}-title" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n{body}\n<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(slidekit.FOOT)}</p>\n<aside>{E(notes)}</aside>\n</section>\n')
 
 # ---------- 2 warm-up game ----------
-wc = [('Pages 15 to 40 of a book. How many pages?', '26  (40 − 15 + 1)'), ('How many 2-digit numbers are there?', '90  (10 to 99)'), ('Multiples of 5 from 5 to 100?', '20  (100 ÷ 5)'),
-      ('Lamp posts every 10 m on a 100 m road, one at each end?', '11  (10 gaps, 11 posts)'), ('Numbers from 1 to 100 with a 7 in them?', '19  (77 counted once)'), ('Even numbers from 2 to 50?', '25  (50 ÷ 2)')]
+wc = [('How many 2-digit numbers are there?', '90  (10 to 99)'), ('Multiples of 5 from 5 to 100?', '20  (100 ÷ 5)'),
+      ('Lamp posts every 10 m on a 100 m road, one at each end?', '11  (10 gaps, 11 posts)'), ('Numbers from 1 to 100 with a 7 in them?', '19  (77 counted once)')]
 body = h2('Warm-up: count it, don’t list it') + p('Work in pairs. Say HOW you counted. No race.', 34, 600, MUTED)
-CWD = 533
+CWD = 816
 for i, (q, a) in enumerate(wc):
-    Lx = 128 + (i % 3) * (CWD + 32); T = 290 + (i // 3) * 300
+    Lx = 128 + (i % 2) * (CWD + 32); T = 290 + (i // 2) * 300
     body += pin(Lx, T, CWD, f'<p style="font-family:{HF};font-size:36px;font-weight:600;line-height:1.2">{E(q)}</p>', None, WHITE, 24, '22px 26px', f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body += pin(Lx + 20, T + 176, CWD - 40, f'<p style="font-size:34px;font-weight:800;line-height:1.2">{E(a)}</p>', 'pop', SOFT, 16, '12px 18px', f'box-sizing:border-box;border:3px solid {NAVY}')
 put(f'{PRE}-warm1', sec(f'{PRE}-warm1', '0–5 MIN', body,
-    'Minutes 5 to 8. ' + DK['warmGame'] + ' Click once per card to show its answer (cards go left to right, top row first). '
-    'Answers: 26 pages (40 − 15 = 25 counts the gaps, so add 1); 90 two-digit numbers (99 − 10 + 1); 20 multiples of 5; 11 lamp posts (100 ÷ 10 = 10 gaps, plus 1); '
-    '19 numbers with a 7 (7, 17, …, 97 is 10; 70 to 79 is 10; 77 is in both lists, so 10 + 10 − 1); 25 even numbers. '
-    'Ask after each: "How did you count without listing?" Praise the "+ 1" fix (fence posts) and the "counted twice" fix (77): both come back today.'))
+    'Minutes 5 to 8. ' + DK['warmGame'] + ' Click once per card to show its answer (cards go left to right, top row first). Four puzzles only, so the warm-up fits. '
+    'Answers: 90 two-digit numbers (99 − 10 + 1: counting from 10 to 99 includes both ends); 20 multiples of 5; 11 lamp posts (100 ÷ 10 = 10 gaps, plus 1); '
+    '19 numbers with a 7 (7, 17, …, 97 is 10; 70 to 79 is 10; 77 is in both lists, so 10 + 10 − 1). '
+    'Ask after each: "How did you count without listing?" Praise the "+ 1" fix (fence posts: 11 lamp posts) and the "counted twice" fix (77): both come back today.'))
 
 # ---------- 3 quick questions ----------
 qs = DK['warmQs']
 body = h2('Quick questions') + ''.join(qrow(128, 240 + i * 128, 1250, f'{i + 1}.', q, 38) for i, (q, a) in enumerate(qs)) + ''.join(answer(1420, 240 + i * 128, 372, a) for i, (q, a) in enumerate(qs))
 put(f'{PRE}-warm2', sec(f'{PRE}-warm2', '5–10 MIN', body, 'Minutes 5 to 10. Whiteboards, then click to show each answer. ' + '  '.join(f'{i + 1}) {a}' for i, (q, a) in enumerate(qs)) +
-    '. For 2 ask for a quick way (1 + 10, 2 + 9 … five pairs of 11 = 55). For 5: the inner loop says "hi" twice for each of the 5 turns of the outer loop, 5 × 2 = 10. We use this idea a lot today.'))
+    '. Three questions only. For 3: the inner loop says "hi" twice for each of the 5 turns of the outer loop, 5 × 2 = 10. We use this idea a lot today.'))
 
 # ---------- 4 explore 1 ----------
 def menu_svg():
@@ -112,15 +112,14 @@ def menu_svg():
     s += f'<rect x="530" y="190" width="30" height="30" rx="6" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/><text x="575" y="216" font-size="28" font-weight="700" fill="{NAVY}" font-family="Nunito Sans, Arial">2 jelly</text>'
     s += f'<text x="530" y="270" font-size="28" font-weight="700" fill="{TEAL}" font-family="Nunito Sans, Arial">later: M or L</text></svg>'
     return s
-start_code = blocks_svg([('hat', 'when green flag clicked'), ('var', 'set tea to [1]'), ('ctrl', 'repeat [3]', [('look', 'say tea for 1 seconds'), ('var', 'change tea by [1]')])], 'Starter code: set tea to 1, repeat 3: say tea, change tea by 1', 26)
+start_code_unused = blocks_svg([('hat', 'when green flag clicked'), ('var', 'set tea to [1]'), ('ctrl', 'repeat [3]', [('look', 'say tea for 1 seconds'), ('var', 'change tea by [1]')])], 'Starter code: set tea to 1, repeat 3: say tea, change tea by 1', 26)
 steps = ''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
 body = h2('Explore: the bubble tea shop') + (f'<div style="display:flex;gap:32px;align-items:flex-start">'
         f'<div style="background:{WHITE};border-radius:24px;padding:26px 34px;display:flex;flex-direction:column;gap:12px;flex:1;min-width:0">{chip("EXPLORE")}<ol style="font-size:32px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3;margin:0">{steps}</ol></div>'
-        f'<div style="display:flex;flex-direction:column;gap:18px;flex:none">{menu_svg().replace("height:560px", "height:310px").replace("viewBox=\"0 0 760 560\"", "viewBox=\"0 0 760 310\"")}<div style="background:{WHITE};border-radius:20px;padding:14px 20px">{start_code}</div></div></div>')
+        f'<div style="display:flex;flex-direction:column;gap:18px;flex:none">{menu_svg().replace("height:560px", "height:400px").replace("viewBox=\"0 0 760 560\"", "viewBox=\"0 0 760 400\"")}</div></div>')
 put(f'{PRE}-explore1', sec(f'{PRE}-explore1', '10–15 MIN', body,
-    'Minutes 10 to 25 (this slide 10 to 15). ' + L['explore'] + ' Predict first: ' + SC['predict'][0] + ' Paper list first (about 5 minutes), then the computer. '
-    'The starter project says tea 1, 2, 3 (the menu board shows the numbers: 1 milk, 2 green, 3 taro; 1 pearls, 2 jelly; so "join tea topping" saying 21 means green with pearls). Children drag a second "repeat 2" block inside the first one (with set topping to 1 before it and change topping by 1 inside it) and use "say join tea topping". Hints: ' + ' '.join(SC['exploreHints']) +
-    ' Online: ' + L['online'] + '\nPython version (for children who know Python):\n' + 'teas = ["milk", "green", "taro"]\ntoppings = ["pearls", "jelly"]\ncount = 0\nfor tea in teas:\n    for top in toppings:\n        print(tea, "tea with", top)\n        count = count + 1\nprint(count, "orders")'))
+    'Minutes 10 to 25 (this slide 10 to 15). ' + L['explore'] + ' Predict first: ' + SC['predict'][0] + ' Paper only in this part: the list and the size prediction. Scratch is NOT opened here: the nested loop is built once, live, in the teaching slide Let the computer list them, so nothing is built twice. Hints: ' + ' '.join(SC['exploreHints']) +
+    ' Online: ' + L['online'] + '\nPython version (for children who know Python, used in the teaching slide):\n' + 'teas = ["milk", "green", "taro"]\ntoppings = ["pearls", "jelly"]\ncount = 0\nfor tea in teas:\n    for top in toppings:\n        print(tea, "tea with", top)\n        count = count + 1\nprint(count, "orders")'))
 
 # ---------- 5 explore 2 ----------
 body = h2('Explore: talk about it') + ''.join(card(p(f'<span style="color:{TEAL}">{i + 1}.</span>  {E(q)}', 40, 600, raw=True), extra='padding:30px 40px') for i, (q, a) in enumerate(DK['expAsk']))
@@ -169,14 +168,9 @@ body += box(1150, 420, 642, 'The inner loop runs all the way round for EACH shir
 body += box(1150, 570, 642, 'It says:  11, 12, 21, 22, 31, 32', 'rise', WHITE, 32)
 body += pin(1150, 700, 642, p('3 × 2 = 6 things said ✓', 38, 800), 'pop', YEL, 20, '18px 26px')
 put(f'{PRE}-teachcode', sec(f'{PRE}-teachcode', '30–32 MIN', body,
-    'Teach the code. Share your screen and build it live in Scratch if you can. Think-aloud: ' + SC['think'][1] + ' Point at "set shorts to 1": "Why must this go INSIDE the outer loop?" (so the shorts start again from 1 for every shirt; if it were outside, shirt 2 would start at shorts 3 and say 23 and 24, which are not real outfits). '
+    'Teach the code. This is the ONLY place the nested loop is built (about 3 minutes): share your screen, open the starter project Every Order and drag a second repeat inside the first, live. Think-aloud: ' + SC['think'][1] + ' Point at "set shorts to 1": "Why must this go INSIDE the outer loop?" (so the shorts start again from 1 for every shirt; if it were outside, shirt 2 would start at shorts 3 and say 23 and 24, which are not real outfits). '
     '"join shirt shorts" sticks the two numbers together: shirt 2 and shorts 1 says 21. Ask: "What would it say with repeat 4 inside?" (3 × 4 = 12 things). '
     '\nPython version:\ncount = 0\nfor shirt in range(1, 4):\n    for shorts in range(1, 3):\n        print(shirt, shorts)\n        count = count + 1\nprint(count, "outfits")'))
-
-# ---------- 10 try 2 ----------
-put(f'{PRE}-try2', try_slide(f'{PRE}-try2', '32–34 MIN', 'Predict: how many times?', 'Count the says before you run it.',
-    [('a', 'repeat 4 { repeat 5 { say hi } }', '20'), ('b', 'repeat 3 { say hi, repeat 2 { say ho } }', '9 (3 + 6)'), ('c', 'repeat 2 { repeat 3 { repeat 4 { say hi } } }', '24')],
-    'Whiteboards. a) 4 × 5 = 20. b) "hi" 3 times and "ho" 3 × 2 = 6 times: 9 says. c) 2 × 3 × 4 = 24: three loops, three choices. If time, run a) in Scratch to test.', size=34))
 
 # ---------- 11 key ----------
 body = h2(DK['keyHead']) + card(p(DK['keyBig'], 44, 700)) + card(p(DK['keySmall'], 36, 600, MUTED))
@@ -205,10 +199,10 @@ put(f'{PRE}-teachcards', sec(f'{PRE}-teachcards', '40–42 MIN', body, 'Teach be
 
 # ---------- 14-15 worksheet page 1 ----------
 put(f'{PRE}-ws1', ws_preview(f'{PRE}-ws1', '42–55 MIN', 'Worksheet page 1: with your partner', [('Q1', 'Outfits: multiply the choices.'), ('Q2', 'Digit cards 0, 3, 5, 8. List in order. No 0 at the front.'), ('Q3', 'Trace the code on paper first. Then build it in Scratch to check.')],
-    'Stuck? Draw a tree or fix the first choice.', 'Minutes 42 to 55. Walk around (or visit breakout rooms). Ask "How do you know you have them all?" before helping. Q3: insist the trace table is filled BEFORE they run the code.'))
+    'Stuck? Draw a tree or fix the first choice.', 'Minutes 42 to 55. Walk around (or visit breakout rooms). Ask "How do you know you have them all?" before helping. Q3: insist the trace table is filled BEFORE they run the code. Show this preview, do not read it aloud.'))
 k = dict(L['key'])
 put(f'{PRE}-ws1ans', checkrows(f'{PRE}-ws1ans', '55–57 MIN', 'Page 1: check together', [('Q1', 'a) 12   b) 24'), ('Q2', 'a) 9: 30, 35, 38, 50, 53, 58, 80, 83, 85   b) 18 (3 × 3 × 2)'), ('Q3', 'a) 11, 12, 13, 14, 21, 22   b) 12   c) 34   d) 20')],
-    'Click each answer after a pair explains. Q2a: tens 3 choices (not 0), ones 3 choices (the other three cards). Q2b: 3 × 3 × 2 = 18. Q3: a counts the turns of the outer loop, b the inner loop; b goes back to 1 every time a changes. Full key: ' + k['Q1'] + ' | ' + k['Q2'] + ' | ' + k['Q3']))
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q2 (digit cards: how do you know you have them all?), about 35 seconds a question. Q2a: tens 3 choices (not 0), ones 3 choices (the other three cards). Q2b: 3 × 3 × 2 = 18. Q3: a counts the turns of the outer loop, b the inner loop; b goes back to 1 every time a changes. Full key: ' + k['Q1'] + ' | ' + k['Q2'] + ' | ' + k['Q3']))
 
 # ---------- 16 teach handshakes ----------
 def penta_svg():
@@ -225,47 +219,14 @@ body += box(780, 370, 1012, 'A shakes 4 new hands, B 3 new, C 2, D 1, E 0.', 'ri
 body += box(780, 500, 1012, '4 + 3 + 2 + 1 = 10 handshakes', 'rise', WHITE, 34)
 body += box(780, 630, 1012, 'Or: 5 × 4 = 20 counts every handshake twice (A–B and B–A).  20 ÷ 2 = 10', 'rise', WHITE, 34)
 body += pin(780, 800, 1012, p('Count the lines in the picture: 10 ✓', 36, 800), 'pop', YEL, 20, '14px 26px')
-put(f'{PRE}-teachhand', sec(f'{PRE}-teachhand', '57–59 MIN', body, 'Teach before worksheet page 2 (Q4). Think-aloud: ' + SC['think'][2] + ' Ask: "With 6 friends?" (5 + 4 + 3 + 2 + 1 = 15, or 6 × 5 ÷ 2). Do not do 7 friends: that is the worksheet.'))
-
-# ---------- 17 handshake code ----------
-hand_code = [('hat', 'when green flag clicked'), ('var', 'set count to [0]'), ('var', 'set a to [1]'), ('ctrl', 'repeat [5]', [('var', 'set b to [1]'), ('ctrl', 'repeat [5]', [('ctrl', 'if [a < b] then', [('var', 'change count by [1]')]), ('var', 'change b by [1]')]), ('var', 'change a by [1]')]), ('look', 'say count')]
-body = h2('Test it in code: keep only a < b', 64)
-body += pin(128, 225, 720, blocks_svg(hand_code, 'Code: set count to 0, set a to 1, repeat 5: set b to 1, repeat 5: if a < b then change count by 1; change b by 1; change a by 1; say count', 24), None, WHITE, 20, '14px 18px')
-body += box(900, 240, 892, 'The loops check every pair (a, b): 5 × 5 = 25 pairs.', None, SOFT, 32)
-body += box(900, 380, 892, 'a = b is one person with themselves: not a handshake.', 'rise', WHITE, 32)
-body += box(900, 520, 892, 'a < b keeps 1–2 but not 2–1: each handshake once.', 'rise', WHITE, 32)
-body += pin(900, 660, 892, p('It says 10 ✓  (25 − 5 = 20, then 20 ÷ 2)', 36, 800), 'pop', YEL, 20, '16px 26px')
-put(f'{PRE}-teachhandcode', sec(f'{PRE}-teachhandcode', '59–60 MIN', body,
-    'Teach before worksheet page 2 (Q6 asks children to plan this program for 7 friends, so do not change the numbers to 7 here). Run it live if you can: it says 10, matching our maths. Ask: "What would it say with a = b?" (5) "With a > b?" (10 again: each pair once, the other way round). '
-    'This is our main program today. Python version:\ncount = 0\nfor a in range(1, 6):\n    for b in range(1, 6):\n        if a < b:\n            print(a, "shakes hands with", b)\n            count = count + 1\nprint(count, "handshakes")'))
-
-# ---------- 18 routes ----------
-def route_svg(stage):
-    c = 150; x0 = 70; y0 = 50; w = 3; hh = 2
-    s = f'<svg aria-label="Grid 3 squares wide and 2 tall, from A at the bottom left to B at the top right" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" style="width:640px;height:420px;flex:none">'
-    if stage == 0:
-        for i in range(hh + 1): s += f'<line x1="{x0}" y1="{y0 + i * c}" x2="{x0 + w * c}" y2="{y0 + i * c}" stroke="{NAVY}" stroke-width="6"/>'
-        for i in range(w + 1): s += f'<line x1="{x0 + i * c}" y1="{y0}" x2="{x0 + i * c}" y2="{y0 + hh * c}" stroke="{NAVY}" stroke-width="6"/>'
-        s += f'<text x="{x0 - 64}" y="{y0 + hh * c + 14}" font-size="40" font-weight="700" fill="{TEAL}" font-family="Fredoka, Arial">A</text><text x="{x0 + w * c + 42}" y="{y0 + 14}" font-size="40" font-weight="700" fill="{TEAL}" font-family="Fredoka, Arial">B</text>'
-    R = {}
-    for x in range(w + 1):
-        for y in range(hh + 1): R[x, y] = 1 if x == 0 or y == 0 else R[x - 1, y] + R[x, y - 1]
-    for (x, y), v in R.items():
-        show = stage == 0 and False or (stage == 1 and (x == 0 or y == 0)) or (stage == 2 and not (x == 0 or y == 0))
-        if show: s += f'<circle cx="{x0 + x * c}" cy="{y0 + (hh - y) * c}" r="34" fill="{YEL if (x, y) == (w, hh) else WHITE}" stroke="{NAVY}" stroke-width="4"/><text x="{x0 + x * c}" y="{y0 + (hh - y) * c + 14}" font-size="38" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{v}</text>'
-    return s + '</svg>'
-body = h2('Routes on a grid: add as you go') + p('Walk from A to B along the lines, going only right or up.', 34, 600, MUTED)
-body += pin(128, 330, 640, route_svg(0), None) + pin(128, 330, 640, route_svg(1), 'fade') + pin(128, 330, 640, route_svg(2), 'fade')
-body += box(830, 330, 962, 'Along the bottom and up the left side there is only 1 way to each point.', 'rise', WHITE, 32)
-body += box(830, 480, 962, 'Any other point is reached from the LEFT or from BELOW: add those two numbers.', 'rise', WHITE, 32)
-body += box(830, 650, 962, '1 + 2 = 3,  3 + 3 = 6,  4 + 6 = 10 routes to B', 'pop', YEL, 34)
-put(f'{PRE}-teachroute', sec(f'{PRE}-teachroute', '60–61 MIN', body, 'Teach before worksheet page 2 (Q5 uses a 3 by 3 grid with a puddle: do not solve it here). Clicks: the 1s on the edges, the first note, the other numbers, the second note, the answer. Check by listing: a route is 3 rights and 2 ups in some order, e.g. RRRUU, RRURU …; there are 10 of them. Ask: "If a point were blocked by a puddle, what number would you write there?" (0: no routes go through it) but let them use this on the worksheet themselves.'))
+body += box(128, 790, 1664, 'In code (Q6): check every pair (a, b) and keep only a < b. a = b is one person with themselves.', 'rise', SOFT, 32)
+put(f'{PRE}-teachhand', sec(f'{PRE}-teachhand', '57–59 MIN', body, 'Teach before worksheet page 2 (Q4, and the Q6 code as the bottom panel; Q5 routes is the take-home question, so there is no live teaching for it). Think-aloud: ' + SC['think'][2] + ' Ask: "With 6 friends?" (5 + 4 + 3 + 2 + 1 = 15, or 6 × 5 ÷ 2). Do not do 7 friends: that is the worksheet. Code panel: the loops check every pair (a, b): 5 × 5 = 25 pairs; a = b is not a handshake; a < b keeps 1 and 2 but not 2 and 1, so each handshake once. Run it live if you can: it says 10. Ask: "What would it say with a > b?" (10 again). Python version:\ncount = 0\nfor a in range(1, 6):\n    for b in range(1, 6):\n        if a < b:\n            count = count + 1\nprint(count, "handshakes")'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '61–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'Seven friends shake hands. Then find Ali’s mistake.'), ('Q5', 'Routes: add as you go. Then put 0 at the puddle.'), ('Q6', 'Plan the handshake program for 7 friends, then build it to test Q4.')],
-    'Finished early? Stretch and Challenge come next.', 'Children work alone. Note who needs a short catch-up next lesson. Children who finish Q6 build it in Scratch (or Python) and check that it agrees with Q4.'))
-put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21'), ('Q5', 'a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
-    'Click after a child explains. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
+put(f'{PRE}-ws2', ws_preview(f'{PRE}-ws2', '61–72 MIN', 'Worksheet page 2: on your own', [('Q4', 'Seven friends shake hands. Then find Ali’s mistake.'), ('Q5', '★ Take-home: routes, add as you go. Then put 0 at the puddle.'), ('Q6', 'Plan the handshake program for 7 friends, then build it to test Q4.')],
+    'Finished early? Stretch and Challenge come next.', 'Children work alone on Q4 and Q6; Q5 (routes) is the take-home question, marked with a star in the workbook. Show this preview, do not read it aloud. Note who needs a short catch-up next lesson. Children who finish Q6 build it in Scratch (or Python) and check that it agrees with Q4.'))
+put(f'{PRE}-ws2ans', checkrows(f'{PRE}-ws2ans', '72–75 MIN', 'Page 2: check together', [('Q4', 'a) 21   b) every handshake is counted twice: 42 ÷ 2 = 21'), ('Q5 ★', 'Take-home. a) 20 routes   b) 8 routes avoid P (12 go through it)'), ('Q6', 'repeat 7, repeat 7, if a < b.  It says 21 ✓   With a = b it says 7: each person with themselves')],
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q4 (why 42 ÷ 2). Q5 is the take-home question: its answer is here so children can mark it at home, and you take it up at the start of the next lesson. Q5 corner numbers (bottom row first): 1 1 1 1 / 1 2 3 4 / 1 3 6 10 / 1 4 10 20. With 0 at P: 1 1 1 1 / 1 0 1 2 / 1 1 2 4 / 1 2 4 8. Q6: the "if" is checked 7 × 7 = 49 times. Full key: ' + k['Q4'] + ' | ' + k['Q5'] + ' | ' + k['Q6']))
 
 # ---------- 21 stretch (not printed in the workbook) ----------
 st = QB['stretch'][4:7]
@@ -304,14 +265,14 @@ put(f'{PRE}-chwalk', sec(f'{PRE}-chwalk', 'Challenge', body, 'Use after pairs ha
 
 # ---------- 25 talk ----------
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”"'), 42, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
+put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): ' + SC['talkNext'] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
 
 # ---------- 26 exit ----------
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.', 34, 400))
 put(f'{PRE}-exit', sec(f'{PRE}-exit', '82–90 MIN', body, 'Minutes 82 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
 
 # ---------- write ----------
-order = [f'{PRE}-{x}' for x in ['title', 'warm1', 'warm2', 'explore1', 'explore2', 'teach1', 'we1', 'try1', 'teachcode', 'try2', 'key', 'break', 'teachcards', 'ws1', 'ws1ans', 'teachhand', 'teachhandcode', 'teachroute', 'ws2', 'ws2ans', 'stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit']]
+order = [f'{PRE}-{x}' for x in ['title', 'warm1', 'warm2', 'explore1', 'explore2', 'teach1', 'we1', 'try1', 'teachcode', 'key', 'break', 'teachcards', 'ws1', 'ws1ans', 'teachhand', 'ws2', 'ws2ans', 'stretch', 'challenge', 'chdiag', 'chwalk', 'talk', 'exit']]
 assert set(order) == set(S), set(order) ^ set(S)
 for f in os.listdir(os.path.join(D, 'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D, 'slides', f))

@@ -122,7 +122,7 @@ module.exports = {
  mini1: { head: 'Compare lengths', body: ['A pencil is 6 cubes long. A book is 9 cubes long.', 'How many cubes longer is the book?', 'Draw two bars to help.'], ans: '3 cubes longer (9 − 6).' },
  mini2: { head: 'Bigger unit, smaller count', body: ['1 clip is as long as 2 erasers.', 'A pen is 4 clips long. How many erasers long is the pen?', 'Why is the number of erasers bigger?'], ans: '8 erasers. Each eraser is shorter, so you need more of them.' },
  keyHead: 'Key idea: equal units', keyBig: 'Use equal units, no gaps, no overlaps, and start at zero.', keySmall: 'A bigger unit gives a smaller number.',
- brk: 'Giant steps. Take your biggest step and your smallest step across the room. Count each: which needs more steps?',
+ brk: 'Giant steps, in place. Take 5 giant steps on the spot, then 5 tiny steps. Which would take you further across a room? Why?',
  ws1: 'Page 1, in pairs: Q1 compare lengths, Q2 estimate and measure.',
  ws2: 'Page 2, on your own: Q3 hand spans, Q4 clips and erasers, Q5 cube puzzles, Q6 measure with a cm ruler.'
 },

@@ -68,6 +68,12 @@ const extra = (n) => {
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  const th = (L.content[n - 1].deck.takeHome || []);   // quick questions the lesson did not have time for (answers are in the tutor guide)
+  if (th.length) {
+    out.push(banner('★ Take-home'));
+    out.push(p(t('For home, if you like. These were extra warm-up questions. They are not for the lesson.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60 }));
+    th.forEach((x, i) => out.push(C.sub('abc'[i], x[0] + '   ______________', { after: 70 })));
+  }
   out.push(...hdr(n, ls.topic, 'INVESTIGATION AND LOOK BACK'));
   out.push(...investigation(n));
   out.push(...lookBack(n));

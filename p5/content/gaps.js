@@ -15,8 +15,9 @@ const L = {
       ['Put ONE pair of brackets in  4 + 6 × 5 − 3  to make 47. How do you know no other place makes 47?', '(4 + 6) × 5 − 3 = 47. The other single pairs give 16 or 31 (and so does no bracket at all). Brackets first, then × and ÷, then + and −.']
     ],
     pic: 'cards',
-    whatIf: ['A million seconds is about 11 and a half days. What about a BILLION seconds (1 000 000 000)? Guess first: days, months or years? Then use your calculator.', 'About 11 574 days, which is about 32 years. 1 000 000 000 ÷ 86 400 = 11 574.07 days; 11 574 ÷ 365 is about 31.7 years. A billion is a thousand millions, so 1000 × 11.6 days.'],
+    whatIf: ['A million seconds is about 11 and a half days. How long is 10 million seconds? Then guess first: how long is a BILLION seconds (1 000 000 000): days, months or years? Use your calculator.', '10 million seconds is about 116 days, nearly 4 months (10 times as long). A billion seconds is about 11 574 days, which is about 32 years: 1 000 000 000 ÷ 86 400 = 11 574.07 days; 11 574 ÷ 365 is about 31.7 years. A billion is a thousand millions, so 1000 × 11.6 days.'],
     pose: 'Write your own 7-digit number riddle with three clues. Swap with a partner and solve each other’s riddles.',
+    p1: 'Q2 (a) (b) and Q3 (a) (b) (c); Q1 is take-home', take: 'Q1 (page 1); Q5 (c) (d) and Q6 (page 2)',
     solo: 'Q4 and Q5 (a) (b)', praise: 'You got unstuck by drawing it. That is a real mathematician move.'
   },
   2: {
@@ -27,7 +28,8 @@ const L = {
     pic: 'bar3',
     whatIf: ['4 pizzas are shared among 5 children, 5 pizzas among 6 children, and 6 pizzas among 7 children. Who gets the biggest share? What do you notice as the group gets bigger?', '4/5, 5/6 and 6/7: the share grows each time (0.8, 0.83, 0.86). Each child is 1/5, 1/6, 1/7 short of a whole pizza, a smaller piece each time, so the shares creep up towards 1 pizza but never reach it.'],
     pose: 'Pick a fraction and write it as the sum of two different unit fractions. Challenge a partner to find your two.',
-    solo: 'Q5 and Q4 (a) (b)', praise: 'Drawing the bar again when it did not work is exactly right.'
+    p1: 'Q1 (a) (b) and Q2 (the worked example, (a) (b)); Q3 is take-home', take: 'Q3 (page 1); Q4 (b) (c) and Q6 (page 2)',
+    solo: 'Q5 and Q4 (a)', praise: 'Drawing the bar again when it did not work is exactly right.'
   },
   3: {
     sneak: [
@@ -37,7 +39,8 @@ const L = {
     pic: 'bars2',
     whatIf: ['Ali has 19 counters and Mei has 6 (25 altogether). Ali gives Mei counters one at a time. Can Mei ever have exactly as many as Ali? Why or why not? Try 24 altogether too.', 'No for 25: equal shares would be 12 and a half each, so an odd total can never be shared equally. With 24 (18 and 6) it works: 12 each after Ali gives 6. The total never changes when they only swap counters.'],
     pose: 'Make up a before-and-after story in which the total stays the same. Draw its model, then swap with a partner.',
-    solo: 'Q3 (a), Q4 (a) (b) and Q5 (a) (b)', praise: 'You drew the before and after bars side by side. That is how you saw what stayed the same.'
+    p1: 'Q1 (a) (b) (c) and Q2 (a) (b)', take: 'Q3 and Q5 (page 2)',
+    solo: 'Q4 (a) (b)', praise: 'You drew the before and after bars side by side. That is how you saw what stayed the same.'
   },
   4: {
     sneak: [
@@ -47,7 +50,8 @@ const L = {
     pic: 'grid64',
     whatIf: ['On squared paper draw THREE different triangles that each have an area of exactly 12 square units. Write the base and the height of each one. What do all three have in common?', 'For example base 6 and height 4, base 8 and height 3, base 12 and height 2, base 4 and height 6. Each time base × height = 24, which is double the area (12 × 2). Any triangle on the same base and height, leaning or not, is also fine.'],
     pose: 'Draw a rectangle, label its sides, and join points to make a shaded triangle. Work out its area, then swap with a partner.',
-    solo: 'Q5 and Q3', praise: 'You split the shape into triangles when it was too big. That is a strong strategy.'
+    p1: 'Q1 and Q2', take: 'Q3 (page 2)',
+    solo: 'Q5 and Q4', praise: 'You split the shape into triangles when it was too big. That is a strong strategy.'
   },
   5: {
     sneak: [
@@ -57,7 +61,8 @@ const L = {
     pic: 'box432',
     whatIf: ['Try other numbers of cubes: 12, 16, 18, 20, 24 and 30. Which number gives the MOST different cuboids? Which numbers up to 30 give only ONE?', '24 gives the most, 6 cuboids (12, 16, 18 and 20 give 4 each; 30 gives 5). Only the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29 (and 1) give just one cuboid, a single row: 1 × 1 × n. Checked by listing every case.'],
     pose: 'Make up a tank puzzle with a stone: choose the base, the depth of the water and the stone. Swap and solve.',
-    solo: 'Q4 (a) (b), then Q6 (a) (b)', praise: 'Thinking of the water as layers of cubes got you unstuck.'
+    p1: 'Q2 (a) (b) and Q3 (the Start-here line, (a) (b)); Q1 is take-home', take: 'Q1 and Q3 (c) (page 1); Q5 and Q6 (page 2)',
+    solo: 'Q4 (a) (b) (c)', praise: 'Thinking of the water as layers of cubes got you unstuck.'
   },
   6: {
     sneak: [
@@ -67,7 +72,8 @@ const L = {
     pic: 'bar12',
     whatIf: ['Printer A prints 18 pages a minute and printer B prints 25 pages a minute. Together they print 430 pages in 10 minutes. How many pages should each printer be given so that both finish at exactly the same time?', 'Printer A gets 180 pages (18 × 10) and printer B gets 250 pages (25 × 10); 180 + 250 = 430. If both work for the whole 10 minutes they finish together.'],
     pose: 'Make up a better-buy puzzle with three packs of the same thing. Which pack is the best buy? Swap and check.',
-    solo: 'Q4 (a), then Q6 (a) (b)', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
+    p1: 'Q1 (a) (b), Q2 (the Start-here line, (a) (b)) and Q3 (a)', take: 'Q3 (b) (c) (page 1); Q5 and Q6 (b) (c) (page 2)',
+    solo: 'Q4 (a) (b) and Q6 (a)', praise: 'Making a table of 1, 2, 3 minutes got you unstuck.'
   },
   7: {
     sneak: [
@@ -77,7 +83,8 @@ const L = {
     pic: 'hund',
     whatIf: ['A $200 price goes up 50% and then down 50%. What is the price now? Then try up 20% and down 20%. What do you notice about the final price each time?', 'Up 50% then down 50%: $200 → $300 → $150. Up 20% then down 20%: $200 → $240 → $192. The final price is always LESS than $200, because the "down" percentage is taken from the bigger new price.'],
     pose: 'Make up a price that goes up by a percentage and then down by the same percentage. Predict the final price, then test it.',
-    solo: 'Q4 (a) to (c)', praise: 'Using 10% as a stepping stone got you unstuck.'
+    p1: 'Q1 (a) (b) and Q3 (a) (b) (c); Q2 is done in the page 2 time', take: 'Q4 (d) and Q5 (page 2)',
+    solo: 'Q2 (a) to (d) (it is on page 1) and Q4 (a) to (c)', praise: 'Using 10% as a stepping stone got you unstuck.'
   },
   8: {
     sneak: [
@@ -87,7 +94,8 @@ const L = {
     pic: 'rt30',
     whatIf: ['Draw any five-sided shape and tear off its five corners. Fit them together. Do they fit on a straight line, or round a point, or neither? Predict first: how many degrees do the five corners make altogether?', '540°, which is one and a half turns (360° + 180°). A five-sided shape can be cut into 3 triangles from one corner, and 3 × 180° = 540°. A four-sided shape gives 2 triangles, 360°.'],
     pose: 'Draw a triangle and a parallelogram that share a side. Give two or three angles and ask for one more. Swap and solve.',
-    solo: 'Q4 (a) (b), then Q3 (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
+    p1: 'Q1 (a) to (d) and Q2 (a) (b)', take: 'Q2 (c) (page 1); Q3 (c) (d), and Q5 (page 2)',
+    solo: 'Q3 (a) (b) and Q4 (a) (b)', praise: 'Writing the angle on the diagram as soon as you found it got you unstuck.'
   },
   9: {
     sneak: [
@@ -97,7 +105,8 @@ const L = {
     pic: 'tri',
     whatIf: ['If 12 children each high-five every other child exactly once, how many high fives is that? Find a rule you could use for ANY number of children.', '66. With n children each high-fives (n − 1) others, but every high five is counted twice, so the number is n × (n − 1) ÷ 2. For 12 children: 12 × 11 ÷ 2 = 66. The table 1, 3, 6, 10, 15, 21 … also works.'],
     pose: 'Make up a growing pattern with dots or matchsticks. Draw figures 1, 2 and 3, and ask a partner for figure 10.',
-    solo: 'Q3 and Q4 (a) (b)', praise: 'Making a table of the first five figures got you unstuck.'
+    p1: 'Q1 (a) (b) and Q2 (a) (b)', take: 'Q1 (c) (d) and Q2 (c) (page 1); Q4 (b) and Q5 (page 2)',
+    solo: 'Q3 and Q4 (a)', praise: 'Making a table of the first five figures got you unstuck.'
   },
   10: {
     sneak: [
@@ -107,7 +116,8 @@ const L = {
     pic: 'logic3',
     whatIf: ['Card A has a twin: a number is TRIPLED, then 4 is taken away, then the answer is divided by 2, and the result is 7. What was the number? Then make up your own card of this kind whose answer is 10.', '6. Work backwards: 7 × 2 = 14, 14 + 4 = 18, 18 ÷ 3 = 6. Check: 6 × 3 = 18, 18 − 4 = 14, 14 ÷ 2 = 7. Any new card is fine if its working backwards gives a whole number and it checks when run forwards.'],
     pose: 'Make up a logic puzzle with three friends, three snacks and three clues. Swap and solve; does only one answer fit?',
-    solo: 'Q4, Q5 and Q6 (a)', praise: 'You tried a different way to start when the first one did not work. That is what we practised all holiday.'
+    p1: 'Q1 and Q2; Q3 is done in the page 2 time', take: 'Q4 (b) (c), Q5 and Q6 (page 2)',
+    solo: 'Q3 (it is on page 1) and Q4 (a)', praise: 'You tried a different way to start when the first one did not work. That is what we practised all holiday.'
   }
 };
 // short answers shown on the slide when the tutor clicks to reveal (full answers are in the notes and the guide)

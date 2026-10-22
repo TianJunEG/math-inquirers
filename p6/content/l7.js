@@ -230,7 +230,7 @@ module.exports = {
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
       H.q(4, 'Plan a star, then test it (move 120 for the 9-point star). Fill in the 9-point row.   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
-      H.q(5, 'Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
+      H.q(5, '★ Take-home. Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
       t5,
       H.sub('a', 'One more side adds  ______ °      (b)  For n sides:  total = ______________'),
       pyBox(H)

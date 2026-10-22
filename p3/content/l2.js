@@ -87,7 +87,7 @@ module.exports = {
     exploreHints: [
       'Stuck: “Put small digits in the hundreds of the two numbers you add. Try 1 and 2 in the hundreds.” (This is also printed on the explore slide.)',
       'Close but a digit repeats: “Swap two cards in the ones column and add again.”',
-      'Ready for more: the Go further what-if on the slide (smallest and biggest answer). Or: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
+      'Ready for more: the Go further card on the slide (find more sums; what is always true? the smallest and biggest answer). Or: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
     ],
     think: [
       '“4A68 + 17B5 = C043. I start at the ones: 8 + 5 = 13. I write 3 and carry 1.”',
@@ -104,9 +104,10 @@ module.exports = {
 
   deck: {
     today: 'Crack missing digits one column at a time, check subtraction by adding, and solve magic squares and letter puzzles.',
-    warmGame: 'Make 1000. The tutor shows a number; children write the number that makes 1000 with it: 350, 720, 105, 999, 460, 75.',
-    warmQs: [['3456 + 1000 = ?', '4456'], ['5000 − 1 = ?', '4999'], ['2700 + 300 = ?', '3000'], ['8000 − 2500 = ?', '5500'], ['4999 + 2 = ?', '5001']],
-    expSetup: ['Take the digit cards 1 to 9.', 'Make two 3-digit numbers that add up to a 3-digit number, using every card once.', 'Check the sum by adding.', 'Find more. What is always true?'],
+    warmGame: 'Make 1000. The tutor shows a number; children write the number that makes 1000 with it: 350, 720, 105 (round 1), then 999, 460, 75 (round 2).',
+    warmQs: [['3456 + 1000 = ?', '4456'], ['5000 − 1 = ?', '4999'], ['2700 + 300 = ?', '3000']],
+    takeHome: [['8000 − 2500 = ?', '5500'], ['4999 + 2 = ?', '5001']],
+    expSetup: ['Take the digit cards 1 to 9.', 'Make two 3-digit numbers that add up to a 3-digit number, using every card once.', 'Check the sum by adding.'],
     expPic: 'nine digit cards 1 to 9 above an empty column sum: three boxes plus three boxes equals three boxes.',
     expAsk: [
       ['How many sums did you find?', 'There are many: 168 if 173 + 286 and 286 + 173 count once. For example 173 + 286 = 459 and 218 + 349 = 567.'],
@@ -166,7 +167,7 @@ module.exports = {
     H.fig(cardsSvg(['1', '2', '3', '4', '5', '6'])),
     H.sub('a', 'Make the sum as GREAT as possible.          ________  +  ________  =  ________'),
     H.sub('b', 'Make the sum as SMALL as possible.          ________  +  ________  =  ________'),
-    H.sub('c', 'Make the DIFFERENCE as small as possible. Guess, check, then improve. Write your tries.'),
+    H.sub('c', '★ Take-home (not for the lesson). Make the DIFFERENCE as small as possible. Guess, check, then improve. Write your tries.'),
     ...H.lines(2),
     H.ans('Best:'),
 

@@ -99,7 +99,8 @@ module.exports = {
     ],
     circulate: ['Point to a line and ask: “Is this an increase or a decrease? By how much?”', 'Ask: “What is each line on the side worth? How do you know?”', 'Ask: “How can you check your missing number?”'],
     hints: ['Hint 1: “Find what one line on the scale is worth before you read anything.”', 'Hint 2: “Write the change between each pair of neighbours, with up or down.”', 'Hint 3: “Add the numbers you know, then take them away from the total.”'],
-    talk: ['“Two graphs show the same numbers, but one line looks much steeper. How can that be?”', '“How would you draw a fair graph if you wanted to compare two shops?”'],
+    talk: ["“Two graphs show the same numbers, but one line looks much steeper. How can that be?”"],
+    talkWeekly: ["“How would you draw a fair graph if you wanted to compare two shops?”"],
     talkAns: 'The scales are different. If a scale starts at a big number, or each line is worth very little, a small change looks huge. To compare fairly, use the same scale for both graphs, starting at 0.',
     close: ['“Today you read graphs like detectives: scale first, then the changes, and you caught a graph that was trying to trick you.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
@@ -107,10 +108,11 @@ module.exports = {
   deck: {
     today: 'Read line graphs and tables, find missing values, compare two lines and catch a graph that misleads.',
     warmGame: 'Which graph tells the story? Match four stories (a bath filling, a hawker centre from 10 am to 3 pm, a candle burning, a piggy bank nobody touches) to four line shapes, and say why.',
-    warmQs: [['75 − 48 = ?', '27'], ['On a scale in 10s, what is halfway between 40 and 50?', '45'], ['38 + 47 + 15 = ?', '100'], ['Four numbers total 200. Three are 45, 60 and 50. The fourth?', '45'], ['Bigger change: 120 to 95, or 60 to 90?', '60 to 90 (30)']],
+    warmQs: [["75 − 48 = ?", "27"], ["On a scale in 10s, what is halfway between 40 and 50?", "45"], ["38 + 47 + 15 = ?", "100"]],
+    warmWeekly: [["Four numbers total 200. Three are 45, 60 and 50. The fourth?", "45"], ["Bigger change: 120 to 95, or 60 to 90?", "60 to 90 (30)"]],
     expSetup: ['Look at the table: people in the queue at a chicken rice stall every half hour.', 'Choose a scale for the side of your grid (how much is each line worth?).', 'Plot each point and join the points with straight lines.', 'Write three things your graph tells you.'],
     expPic: 'a table of queue lengths (11:00 4, 11:30 9, 12:00 18, 12:30 22, 1:00 15, 1:30 7, 2:00 3) beside an empty graph grid with the times along the bottom.',
-    expAsk: [['When was the queue longest?', '12:30, with 22 people.'], ['Between which two times did the queue grow the most?', '11:30 to 12:00: up 9 people (the steepest line going up).'], ['When is the best time to buy chicken rice? Why?', '2:00 (3 people), or 11:00 (4 people): the shortest queues.']],
+    expAsk: [["When was the queue longest?", "12:30, with 22 people."], ["Between which two times did the queue grow the most?", "11:30 to 12:00: up 9 people (the steepest line going up)."]],
     mini1: { head: 'Reading a line graph', body: ['Books borrowed: Mon 25, Tue 40, Wed 35, Thu 60, Fri 50.', 'Scale: each line is worth 10. Monday is halfway between 20 and 30.', 'Changes: up 15, down 5, up 25, down 10. Which is the biggest increase?'], ans: 'Wednesday to Thursday: up 25. It is the steepest line going up.' },
     mini2: { head: 'Missing values in a table', table: [['', 'June', 'July', 'Total'], ['Ali', '26', '?', '61'], ['Mei', '?', '18', '50'], ['Ravi', '40', '27', '?'], ['Total', '?', '?', '?']], body: ['Use the row totals first, then add the columns.', 'Check: both ways must give the same grand total.'], ans: 'Ali 35, Mei 32, Ravi 67. June 98, July 80, altogether 178.' },
     keyHead: 'Key idea: scale first, then the changes',

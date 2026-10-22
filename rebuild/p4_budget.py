@@ -138,6 +138,13 @@ def part_at(n, minute):
     return None
 
 
+def break_lead(n):
+    """first sentences of the Brain break speaker note"""
+    end = fmt(dict((t, b) for t, a, b in parts(n))['Brain break'])
+    return (f'{fmt(DUR[n]["brk"])} minutes: water and toilet FIRST (about one minute), then the game (about two minutes), then back in your seats. '
+            f'CLOCK CHECK at the end of the break (minute {end}): if you are more than 1.5 minutes behind, skip the next optional item (the "your turn" slide, a second speaker-note question), never a check, the exit ticket or Looking back.')
+
+
 def check():
     for n in DUR:
         ps = parts(n)

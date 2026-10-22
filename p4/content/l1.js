@@ -59,7 +59,8 @@ module.exports = {
     ],
     circulate: ['Ask: “How do you know you have found every factor pair? Where did you stop?”', 'Ask: “Is that a factor or a multiple? Which is bigger?”', 'Ask: “Which list did you write: the factors, or the multiples? Which do you need for this question?”'],
     hints: ['Hint 1: “Try 1, 2, 3, 4 … in order. Does it go in exactly?”', 'Hint 2: “Draw the rectangles, or make them with tiles.”', 'Hint 3: “Write the first few multiples of each number in two rows. Circle the numbers in both rows.”'],
-    talk: ['“Ali says: bigger numbers always have more factors. Who agrees? Can you find an example that proves him wrong?”', '“Why did the 36-tile rectangles give an odd number of factors?”'],
+    talk: ["“Ali says: bigger numbers always have more factors. Who agrees? Can you find an example that proves him wrong?”"],
+    talkWeekly: ["“Why did the 36-tile rectangles give an odd number of factors?”"],
     talkAns: 'Ali is wrong. 24 has 8 factors but 29, which is bigger, has only 2 (1 and 29). 36 has an odd number of factors because one of its pairs is 6 × 6, and 6 is only counted once.',
     close: ['“Today you hunted factors in order, so none could hide. You found common factors for sharing and common multiples for timetables.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
@@ -67,10 +68,11 @@ module.exports = {
   deck: {
     today: 'Hunt down every factor of a number, use common factors and common multiples to solve puzzles, and crack multiple riddles.',
     warmGame: 'Fizz-Buzz. Count round the group from 1. Say "Fizz" for a multiple of 3, "Buzz" for a multiple of 4 and "Fizz-Buzz" for a multiple of both.',
-    warmQs: [['Is 7 a factor of 56?', 'Yes: 7 × 8 = 56'], ['The first five multiples of 6?', '6, 12, 18, 24, 30'], ['Name a common multiple of 4 and 6.', '12 (or 24, 36 …)'], ['Is 45 a multiple of 4?', 'No: 44 and 48 are'], ['18 as a product, 3 ways?', '1 × 18, 2 × 9, 3 × 6']],
+    warmQs: [["Is 7 a factor of 56?", "Yes: 7 × 8 = 56"], ["The first five multiples of 6?", "6, 12, 18, 24, 30"], ["Name a common multiple of 4 and 6.", "12 (or 24, 36 …)"]],
+    warmWeekly: [["Is 45 a multiple of 4?", "No: 44 and 48 are"], ["18 as a product, 3 ways?", "1 × 18, 2 × 9, 3 × 6"]],
     expSetup: ['Take 24 square tiles.', 'Use ALL the tiles to make a rectangle. Write it as a multiplication, like 2 × 12.', 'Make as many different rectangles as you can. A 2 by 12 and a 12 by 2 count as the same.', 'How do you know you have found them all?'],
     expPic: 'a rectangle of 24 tiles in 3 rows of 8, next to an empty grid for the next rectangle.',
-    expAsk: [['How many rectangles did you make?', '4: 1 × 24, 2 × 12, 3 × 8, 4 × 6.'], ['How do you know you have them all?', 'Try 1, 2, 3, 4, 5, 6 rows in order. 5 rows does not work; 6 rows is the 4 × 6 turned round.'], ['What do the side lengths tell us about 24?', 'They are the factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.']],
+    expAsk: [["How many rectangles did you make?", "4: 1 × 24, 2 × 12, 3 × 8, 4 × 6."], ["How do you know you have them all?", "Try 1, 2, 3, 4, 5, 6 rows in order. 5 rows does not work; 6 rows is the 4 × 6 turned round."]],
     mini1: { head: 'All the factor pairs of 36', body: ['Try 1, 2, 3 … in order: 1 × 36, 2 × 18, 3 × 12, 4 × 9.', '5 is not a factor. 6 × 6. The pairs have met.', 'How many factors? Draw a factor rainbow.'], ans: '9 factors: 1, 2, 3, 4, 6, 9, 12, 18, 36.' },
     mini2: { head: 'When do the buses meet again?', body: ['Bus A leaves every 6 minutes, bus B every 8 minutes.', 'Both leave at 7:00 am. List the multiples of 6 and of 8.', 'Which number is in both lists first?'], ans: '24 minutes, so 7:24 am. 24 is the smallest common multiple of 6 and 8.' },
     keyHead: 'Key idea: hunt in order', keyBig: 'Factors: try 1, 2, 3 … in order until the pairs meet. Multiples: list them and look for the first number in both lists.', keySmall: 'A factor goes into a number exactly. A multiple is in its times table.',

@@ -54,12 +54,12 @@ module.exports = {
 
   script: {
     hook: ['Today we are treasure hunters inside the times tables. The 6, 7, 8 and 9 tables are full of hidden patterns. If you can spot a pattern, you can use it to check answers and to find answers you have never learnt.'],
-    warmIntro: ['We are going to count round the group up to 40. The 7s strip is on the screen. When it is a number in the 7 times table, do not say it: hold up an open palm. That is a Buzz! If anyone misses one, that is fine: it is a tricky one and we check on the strip.', 'Which numbers did we Buzz? What do you notice about them?'],
-    predict: ['Here is a circle with the digits 0 to 9, like a clock. I write the 6 times table and look only at the last digit: 6, 12, 18 … the last digits are 6, 2, 8. If I join those dots in order, what shape do you think we will get? Will it ever touch an odd digit?'],
+    warmIntro: ['We are going to count round the group up to 40. The 7s strip is on the screen. When it is a number in the 7 times table, do not say it: hold up an open palm. That is a Buzz! Two rounds only.', 'Which numbers did we Buzz? What do you notice about them?'],
+    predict: ['I write the 6 times table and look only at the last digit: 6, 2, 8. If I join the dots in order, what shape? Will it ever touch an odd digit?'],
     exploreHints: [
       'Stuck: write the table down the side of your page first, then circle the last digit of each answer.',
       'Confused: "Look only at the ones digit. 6 × 3 = 18, so we join to the 8."',
-      'Ready for more: the Go further what-if on the slide (the 5s and the 9s). Or try the 7s and the 3s and compare.'
+      'Ready for more: the Go further what-if on the slide (the 5s and the 9s). Or try the 7s and the 3s and compare. (The 6s are done together on the shared screen; each pair makes just ONE more circle, the 4s.)'
     ],
     think: [
       '"Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then 8, 6, 4, 2, 0 again. So the pattern repeats every 5."',
@@ -76,19 +76,19 @@ module.exports = {
       'Hint 2: "Split the big fact into two smaller facts you know, then add."',
       'Hint 3: "For a grid puzzle, start with a number that can only be made in one way, like 81 or 49."'
     ],
-    talk: ['"Why is every answer in the 6 times table even?"', '"Why does the 7 times table have odd and even answers?"'],
-    talkAns: '6 groups can always be put into 3 pairs of groups, so nothing is left over: the answer is even. With 7 groups one group has no partner, so when each group is odd the answer is odd.',
+    talk: ['"Why is every answer in the 6 times table even?"', '"Why does the 7 times table have odd and even answers?"', '"Which is bigger, 6 × 8 or 7 × 7? Can you see why they are so close?"'],
+    talkAns: '6 groups can always be put into 3 pairs of groups, so nothing is left over: the answer is even. With 7 groups one group has no partner, so when each group is odd the answer is odd. Extra question: 7 × 7 = 49 is 1 more than 6 × 8 = 48 (do not explain it fully).',
     close: ['"You found patterns, tested them and explained why they work. That is exactly what mathematicians do."']
   },
 
   deck: {
     today: 'Find hidden patterns in the 6, 7, 8 and 9 times tables, use them to check answers, and solve times-table puzzles in order.',
-    warmGame: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. Hold up an open palm (Buzz) instead of saying a number in the 7 times table. Only the 7s are played.',
-    warmQs: [['6 × 7 = ?', '42'], ['9 × 9 = ?', '81'], ['8 × ? = 64', '8'], ['Which is bigger: 6 × 8 or 7 × 7?', '7 × 7 = 49 is 1 more than 6 × 8 = 48']],
-    expSetup: ['Draw 10 dots round a circle. Label them 0 to 9, like a clock.', 'Write the 6 times table. Circle the last digit of each answer.', 'Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.', 'Now do the same for the 4s and the 8s. Compare the shapes.'],
+    warmGame: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. Hold up an open palm (Buzz) instead of saying a number in the 7 times table. Only the 7s are played, in two short rounds.',
+    warmQs: [['6 × 7 = ?', '42'], ['9 × 9 = ?', '81'], ['8 × ? = 64', '8']],
+    expSetup: ['Draw 10 dots round a circle. Label them 0 to 9, like a clock.', 'With your tutor: write the 6 times table and circle the last digit of each answer.', 'Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.', 'Now make ONE more circle yourselves: the 4s. Compare the two shapes.'],
     expPic: 'a circle of 10 dots labelled 0 to 9 with a star joining 6, 2, 8, 4, 0.',
     expAsk: [
-      ['Which tables made the same shape?', 'The 4s and the 6s make the same star (going round opposite ways). The 2s and the 8s make the same shape.'],
+      ['Which tables made the same shape?', 'The 4s and the 6s make the same star (going round opposite ways). Pairs who also did the 8s: the 2s and the 8s make the same shape.'],
       ['Why does the 6s shape never touch an odd digit?', 'Every answer in the 6 times table is even: 6 groups can be put into 3 pairs of groups.'],
       ['Which table do you think makes the same shape as the 3s?', 'The 7s, because 3 + 7 = 10, just like 4 + 6 and 2 + 8.']
     ],

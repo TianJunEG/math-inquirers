@@ -97,7 +97,8 @@ module.exports = {
     think: ['“Where is the arrow? Between 2.3 and 2.4. I zoom in. That gap is cut into 10 equal steps, so each step is one hundredth, 0.01. The arrow is 6 steps past 2.3, so it is 2.36.”', '“Which is bigger, 4.37 or 4.307? I line up the points. Same ones, same tenths. Hundredths: 7 and 0. 7 hundredths is more, so 4.37 is bigger, even though 4.307 has more digits.”', '“A number with 2 decimal places rounds to 3.8. I look at the number line. The halfway marks are 3.75 and 3.85. 3.75 rounds up to 3.8, so it is the smallest. 3.85 would round up to 3.9, so the largest is 3.84.”'],
     circulate: ['Ask: “What is one small step worth on this number line? How do you know?”', 'Ask: “Line up the decimal points. Which place do you compare first?”', 'Ask: “Would this number round up or down? Where is the halfway mark?”'],
     hints: ['Hint 1: “Write each number in the place-value chart. Fill empty places with 0.”', 'Hint 2: “Count the steps between the two labelled marks. Divide the gap by the number of steps.”', 'Hint 3: “For bars: take away the extra part first, then share the rest equally.”'],
-    talk: ['“Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?”', '“Why does adding a zero to the end of 3.45 not change it, but putting a zero after the point (3.045) does?”'],
+    talk: ["“Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?”"],
+    talkWeekly: ["“Why does adding a zero to the end of 3.45 not change it, but putting a zero after the point (3.045) does?”"],
     talkAns: 'Ben is wrong. Line up the points: 3.405 and 3.450. The ones and tenths are the same; 0 hundredths is less than 5 hundredths, so 3.405 < 3.45. 3.45 = 3.450 because 0 thousandths adds nothing, but 3.045 moves the 4 into the hundredths place, so it is a different, smaller number.',
     close: ['“Today you zoomed in on number lines, lined up the points, and worked rounding backwards. Detectives check every clue, and you did. Well done, inquirers!”']
   },
@@ -105,10 +106,11 @@ module.exports = {
   deck: {
     today: 'Zoom in on number lines, order decimals to 3 places, round and work backwards from a rounded number, and solve money and mass puzzles.',
     warmGame: 'Target 5. Draw three empty boxes with a decimal point after the first. The tutor turns over digit cards one at a time; write each digit in a box straight away. The number closest to 5 wins.',
-    warmQs: [['What is the 7 worth in 3.475?', '7 hundredths (0.07)'], ['Write 6 tenths and 4 thousandths as a decimal.', '0.604'], ['Which is bigger: 0.8 or 0.75?', '0.8 (0.80 > 0.75)'], ['Round 4.68 to 1 decimal place.', '4.7'], ['How much more than $3.05 is $5?', '$1.95']],
+    warmQs: [["What is the 7 worth in 3.475?", "7 hundredths (0.07)"], ["Write 6 tenths and 4 thousandths as a decimal.", "0.604"], ["Which is bigger: 0.8 or 0.75?", "0.8 (0.80 > 0.75)"]],
+    warmWeekly: [["Round 4.68 to 1 decimal place.", "4.7"], ["How much more than $3.05 is $5?", "$1.95"]],
     expSetup: ['Take the digit cards 2, 5, 8 and the decimal point card.', 'Make a decimal with all four cards. The point goes between two digits.', 'Make as many different numbers as you can. Write each one down.', 'Put them in order. Which one is closest to 5?'],
     expPic: 'digit cards 2, 5 and 8 and a decimal point card, with an example 25.8 and the question “Which is closest to 5?”',
-    expAsk: [['How many different numbers did you make?', '12: six with 2 decimal places (2.58 … 8.52) and six with 1 decimal place (25.8 … 85.2).'], ['Which is the smallest? The largest?', '2.58 and 85.2.'], ['Which number is closest to 5? How do you know?', '5.28: it is only 0.28 away. 2.85 is 2.15 away.']],
+    expAsk: [["How many different numbers did you make?", "12: six with 2 decimal places (2.58 … 8.52) and six with 1 decimal place (25.8 … 85.2)."], ["Which is the smallest? The largest?", "2.58 and 85.2."]],
     mini1: { head: 'Order: 4.307, 4.37, 4.073, 4.3', body: ['Line up the decimal points in a place-value chart.', 'Fill empty places with 0: 4.300, 4.307, 4.370, 4.073.', 'Compare the tenths first, then the hundredths, then the thousandths.'], ans: '4.073, 4.3, 4.307, 4.37' },
     mini2: { head: 'Rounding backwards', body: ['A number with 2 decimal places rounds to 3.8 (to 1 decimal place).', 'The halfway marks are 3.75 and 3.85.', 'What is the smallest it can be? The largest?'], ans: 'Smallest 3.75, largest 3.84 (3.85 rounds to 3.9).' },
     keyHead: 'Key idea: line up the points',

@@ -7,7 +7,6 @@
  "lists": "css",
  "title": "Math Inquirers: Lesson 1 – Count with the Frog",
  "order": [
-  "cover",
   "routine",
   "rules",
   "l1-title",
@@ -40,7 +39,7 @@
  "sections": {
   "s1": {
    "description": "Warm-up and explore",
-   "start": "cover"
+   "start": "routine"
   },
   "s2": {
    "description": "Teach: find the rule, test a number, fill the gaps",

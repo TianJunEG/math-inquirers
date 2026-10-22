@@ -197,7 +197,7 @@ def fix_l3(D):
 
 
 def fix_l4(D):
-    p1fix.patch(D, 'l4-ws2', [('Ben has 15 sticks. How many triangles can he make?', 'If you have time: Ben has 15 sticks. How many triangles can he make?')], must=False)
+    p1fix.patch(D, 'l4-ws2', [('Q8</span>  Ben has 15 sticks. How many triangles can he make?', 'Q8</span>  If you have time: Ben has 15 sticks. How many triangles can he make?')], must=False)
 
 
 def fix_l5(D):
@@ -235,15 +235,15 @@ def fix_l6(D):
         [('Q1', '4 ways: 20 / 10+10 / 10+5+5 / 5+5+5+5.  Fewest: one 20¢.  Most: four 5¢.'), ('Q2', '4 ways: 20+5, 10+10+5, 10+5+5+5, five 5¢')],
         'Click after pairs explain. Q1c: "We started with the biggest coin and went one fewer each time until there were none." Q2: the same table as the worked example. Thirty cents (6 ways) is on the Think harder page (T4).'))
     _w(D, 'l6-ws2', ws_preview('l6-ws2', '58–68 MIN', 'Worksheet page 2: on your own',
-        [('Q3', '85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)'), ('Q4', 'Can 35¢ be made with 2 coins? Explain.')],
+        [('Q3', '85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)'), ('Q4', 'Can 35¢ be made with 2 coins? Explain.'), ('Q5–Q6', 'Count the money: how much does Ali have? How much does Mei have?')],
         'Want more? You may choose Think harder T1 in your workbook.',
-        'Children work alone. Note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
+        'Children work alone. Q5 and Q6 are short "count the money" items (Ali 20¢ + 10¢ + 5¢ = 35¢; Mei 20¢ + 20¢ + 5¢ = 45¢). Note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
     _w(D, 'l6-ws2ans', check_slide('l6-ws2ans', '68–72 MIN', 'Page 2: check together',
-        [('Q3', '4 coins: 50 + 20 + 10 + 5.  6 coins: e.g. 50 + 10 + 10 + 5 + 5 + 5'), ('Q4', 'No: two coins make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100')],
-        'Click after a child explains. Think harder T3 (Sam): six 10¢ = 60¢; each swap to a 20¢ adds 10¢; 30¢ more means 3 swaps.'))
+        [('Q3', '4 coins: 50 + 20 + 10 + 5.  6 coins: e.g. 50 + 10 + 10 + 5 + 5 + 5'), ('Q4', 'No: two coins make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100'), ('Q5, Q6', 'Q5: 35¢.   Q6: 45¢.')],
+        'Click after a child explains. Q5: 20, 30, 35. Q6: 20 + 20 = 40, then 45. Think harder T3 (Sam): six 10¢ = 60¢; each swap to a 20¢ adds 10¢; 30¢ more means 3 swaps.'))
     p1fix.stretch_chip(D, 'l6-ws2ans')
     p1fix.relabel(D, 'l6-teachfew', '54–58 MIN')
-    for sid in ('l6-teachnotes', 'l6-trynotes'): p1fix.relabel(D, sid, 'Your choice')
+    for sid in ('l6-teachnotes', 'l6-trynotes'): p1fix.relabel(D, sid, 'Optional, if you finish early')
     p1fix.patch(D, 'l6-teachnotes', [('Teach before worksheet page 2 (Q5 uses dollars).', 'Optional: dollars are now Think harder T5.')], must=False)
     p1fix.patch(D, 'l6-exit', [('Make 40¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', 'Show one way to make 30¢ with 20¢, 10¢ and 5¢ coins.'),
                                ('Answer: 20¢ + 10¢ + 10¢.', 'Answer: any correct way, for example 20¢ + 10¢, or 10¢ + 10¢ + 10¢, or 20¢ + 5¢ + 5¢.')], must=False)
@@ -268,7 +268,7 @@ def fix_l8(D):
         [('Q3', 'Ali: fish.    Mei: cat.    Ben: dog.'), ('Q4', '1st Mei,   2nd Ali,   3rd Ben,   4th Sam'), ('Q5', 'a) 15   (Think harder T5: 30 and 14)'), ('Q6', '11: we do not say it counting in 3s.  Or 6: the only even number.')],
         'Click each answer after a child explains. Q3: Ali has no cat and no dog, so fish. Mei has no dog, and the fish is taken, so cat. Ben has the dog. Q4: Mei is 1st; Ali is in front of Ben and Ben is in front of Sam, so the order of the last three is Ali, Ben, Sam. Q5a: between 10 and 20, odd, in the 5s: 15. Think harder T5: a) 30 (20 and 40 are not between 20 and 40); b) 14 (1 + 4 = 5, less than 20). Q6: also accept "11 is the only number with 2 digits".'))
     p1fix.stretch_chip(D, 'l8-ws2ans')
-    p1fix.patch(D, 'l8-teachriddle', [('Teach before worksheet page 2 (Q5 has three number riddles).', 'Teach before worksheet page 2 (Q5 has one number riddle; two more are Think harder T5).')], must=False)
+    
 
 
 def fix_l9(D):

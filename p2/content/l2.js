@@ -74,6 +74,7 @@ module.exports = {
       'Reading "=" as "the answer comes next": 350 + 140 = 300 + [ ] answered 490.',
       'Magic triangle: putting the biggest numbers in the corners when the side total is small (390 needs the smallest corners).'
     ],
+    takehome: 'Page 1: the line under Q1 (check one answer by adding the full numbers), and Q3 c and d (480 + ___ = 500 + 260, and Ravi\'s 398 + 205). Page 2: the whole of Q5 (the magic triangle); its teaching slide is not shown in class.',
     extension: 'Make your own missing-digit sum with two boxes that has exactly ONE answer. Swap with a partner. (Check: does any other digit also work?)',
     key: [
       ['Q1', '(a) 224 + 355 = 579  (b) 462 + 375 = 837  (c) 386 + 259 = 645'],
@@ -98,8 +99,8 @@ module.exports = {
     ],
     circulate: ['Ask: “Which column did you start with? Why?”', 'Ask: “Was there a carry into this column? How do you know?”', 'Ask: “What is each side of the = sign worth? Are they the same?”'],
     hints: ['Hint 1: “Start at the ones column.”', 'Hint 2: “Try a digit in the box and add. Too big or too small?”', 'Hint 3: “Turn the subtraction into an addition: answer + bottom number = top number.”'],
-    talk: ['“Why do we start at the ones column when we look for missing digits?”', '“Ravi says 398 + 205 = 400 + 203 without adding. How can he know?”'],
-    talkAns: 'The ones column can make a carry that changes the tens column, and the tens can change the hundreds, so we must know the ones first. Ravi moved 2 from 205 onto 398: the total does not change, so both sides are 603.',
+    talk: ['“Why do we start at the ones column when we look for missing digits?”'],
+    talkAns: 'The ones column can make a carry that changes the tens column, and the tens can change the hundreds, so we must know the ones first.',
     close: ['“You were digit detectives again: you started at the ones, checked every carry and proved each answer by adding.”', '“Exit ticket, then your stamp.”']
   },
 
@@ -153,17 +154,18 @@ module.exports = {
 
   workbook: H => {
     const W = [];
+    const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
     W.push(H.p('Each yellow box hides one digit (on the slides a hidden digit is a box too). Start at the ones column. Ask: was there a carry?', { after: 60 }));
     W.push(H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 60, keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '2?4', '35?', '579', '+'], ['(b)', '46?', '?75', '837', '+'], ['(c)', '?86', '2?9', '645', '+']], 'Three additions with missing digits')));
-    W.push(H.p('Check one of your answers by adding the full numbers:  ______ + ______ = ______', { after: 100 }));
+    W.push(H.p([TH(), H.t('Check one of your answers by adding the full numbers:  ______ + ______ = ______')], { after: 100 }));
     W.push(H.q(2, 'Find the missing digits. Try a digit and check it. Check: answer + the number you took away = the number you started with. Tip for (b): 3 − 7 cannot be done, so think 13 − 7.', { keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '7?8', '32?', '453', '−'], ['(b)', '5?3', '?67', '276', '−']], 'Two subtractions with missing digits')));
     W.push(H.q(3, 'The = sign means “is the same as”. Fill in the boxes.', { keepNext: true }));
     W.push(H.sub('a', '350 + 140  =  300 + ______'));
     W.push(H.sub('b', '625 − 200  =  ______ − 100'));
-    W.push(H.sub('c', '480 + ______  =  500 + 260'));
-    W.push(H.sub('d', 'Ravi says 398 + 205 = 400 + 203 is true. Is he right? Explain how you know without adding.'));
+    W.push(H.sub('c', [TH(), H.t('480 + ______  =  500 + 260')]));
+    W.push(H.sub('d', [TH(), H.t('Ravi says 398 + 205 = 400 + 203 is true. Is he right? Explain how you know without adding.')]));
     W.push(...H.lines(2));
 
     W.push(H.q(4, 'Magic square. Every row, column and diagonal adds up to the same total.', { keepNext: true }));
@@ -173,7 +175,7 @@ module.exports = {
     W.push(H.sub('b', 'Fill in the empty squares.'));
     W.push(H.sub('c', 'Add 100 to every number. Is it still a magic square? What is the new total? Explain.'));
     W.push(...H.lines(2));
-    W.push(H.q(5, 'Magic triangle. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total.', { keepNext: true }));
+    W.push(H.q(5, [TH(), H.t('Magic triangle. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total.')], { keepNext: true }));
     W.push(H.fig(triSvg()));
     W.push(H.sub('a', 'Each side adds up to 390. The numbers 110 and 120 are already in two corners. First: what goes between them? Then fill in all the circles. Which numbers are in the corners?  __________'));
     W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model: two bars, and the long bar is 200 longer.', { keepNext: true }));

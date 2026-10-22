@@ -144,7 +144,7 @@ module.exports = {
   deck: {
     today: 'Use a number line to compare, add and subtract negative numbers, and make a variable in code go below zero.',
     warmGame: 'Cold city line-up. Five cities at 7 a.m. on a December morning: Singapore 25 °C, Tokyo 3 °C, Seoul −7 °C, Beijing −9 °C, Harbin −22 °C. Put them in order from coldest to warmest, then find how many degrees warmer Tokyo is than Seoul.',
-    warmQs: [['It is 3 °C. It falls 5 degrees. What is it now?', '−2 °C'], ['Which is colder: −7 °C or −2 °C?', '−7 °C'], ['Count back in 3s: 6, 3, 0, __, __', '−3, −6'], ['What number is 4 less than 1?', '−3'], ['A lift is at B1. It goes down 2 floors. Where is it?', 'B3']],
+    warmQs: [['It is 3 °C. It falls 5 degrees. What is it now?', '−2 °C'], ['Which is colder: −7 °C or −2 °C?', '−7 °C'], ['A lift is at B1. It goes down 2 floors. Where is it?', 'B3']],
     expSetup: ['In Scratch, set x to 0: the sprite is in the middle of the stage.', 'Predict, then test: change x by 100, then change x by −250. Where is the sprite?', 'Build the thermometer: set temp to 5, repeat 6: change temp by −3, say temp.', 'Predict the last number it says. Then click the flag and check.'],
     expPic: 'the Scratch stage drawn as a number line from −240 to 240 with a yellow dot at −150, and the thermometer program drawn as coloured blocks (when green flag clicked, set temp to 5, repeat 6, change temp by −3, say temp).',
     expAsk: [['Where did the sprite end up after +100 and then −250?', 'x = −150'], ['What was the last number the thermometer said?', '−13 (2, −1, −4, −7, −10, −13)'], ['How do we make a variable go down in Scratch?', 'Change it by a negative number: adding a negative moves left.']],

@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T02:08:21Z"
+  "at": "2026-10-22T02:33:57Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 2 – Cryptarithm Crackers",
@@ -17,15 +17,13 @@
   "p3l2-try1",
   "p3l2-teach2",
   "p3l2-teach3",
-  "p3l2-try2",
   "p3l2-key",
   "p3l2-break",
+  "p3l2-teachmagic",
   "p3l2-ws1",
   "p3l2-ws1ans",
-  "p3l2-teachmagic",
   "p3l2-teachpyr",
   "p3l2-teach999",
-  "p3l2-teachshape",
   "p3l2-ws2",
   "p3l2-ws2ans",
   "p3l2-stretch",

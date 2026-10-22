@@ -182,7 +182,7 @@
    "finding missing digits",
    "magic squares and pyramids"
   ],
-  "go": "With the cards 1 to 9, what is the smallest answer you can make? The biggest?",
+  "go": "Find more sums. What is always true about the answer? What is the smallest answer? The biggest?",
   "didwell": [
    "I kept trying",
    "I asked a question",
@@ -329,14 +329,14 @@
    "spotting the pattern",
    "explaining why"
   ],
-  "go": "Try the 5s and the 9s. How many dots does each table touch? Why?",
+  "go": "Do the 8s too. Which tables make the same shape? Then the 5s and 9s: how many dots does each touch?",
   "didwell": [
    "I kept trying",
    "I asked a question",
    "I checked my answer",
    "I tried a new idea"
   ],
-  "goans": "The 5s touch only 2 dots (5 and 0). The 9s touch all 10 dots, going round the other way, like the 1s, because each 9 times answer is 1 less in the ones place than the one before.",
+  "goans": "The 8s make the same 5-sided shape as the 2s (8, 6, 4, 2, 0). The 5s touch only 2 dots (5 and 0). The 9s touch all 10 dots, going round the other way, like the 1s, because each 9 times answer is 1 less in the ones place than the one before.",
   "plan": {
    "title": [
     0,

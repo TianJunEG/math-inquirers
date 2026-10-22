@@ -63,11 +63,10 @@ def precheck(K):
       'At the end click to show the answers as "one way to think about it", without saying who had what. Ask only for volunteers: "Would anyone like to tell us how they started?" '
       'Invite the WHOLE group at once, never one child: "When you have finished Start here, you can choose Think harder, Go further or the Investigation." Never announce who is on which page. Pairs are not split unless both children agree. Children can move either way at any time. Everyone joins explore, the mini-lesson, the check-together slides and talk time.')
     return sec(f'p2l{K}-precheck','1.5–6 MIN',body,notes)
-def goexp_box(K,top=840):
+def goexp_box(K,top=872):
     """Since the re-budget the Go further what-if is a corner box on the explore1 slide (no slide of its own)."""
     w=G[str(K)]['whatif']; q=w["q"].replace("Go further: ","")[:1].upper()+w["q"].replace("Go further: ","")[1:]
-    size=30 if len(q)<150 else 27
-    return pin(128,top,1664,f'<p style="font-size:24px;font-weight:800;letter-spacing:1px;color:{TEAL}">GO FURTHER (optional, any time you finish early)</p><p style="font-size:{size}px;font-weight:700;line-height:1.25">{E(q)}</p>',None,SOFT,20,'12px 26px')
+    return pin(128,top,1610,f'<p style="font-size:27px;font-weight:700;line-height:1.28"><span style="color:{TEAL};font-weight:800;letter-spacing:1px">GO FURTHER (optional, any time you finish early):</span>  {E(q)}</p>',None,SOFT,20,'12px 26px')
 def goexp_note(K):
     w=G[str(K)]['whatif']
     return (' Go further (a second what-if, so nobody waits) is the box at the foot of this slide; the question is also posted in the chat when the pairs go to their breakout rooms. It is for ANY child who finishes the explore task or wants more: say it to the whole group as a choice, never as a prize, and never name who tries it. Pairs stay together unless both children agree to split. '
@@ -84,7 +83,7 @@ def reflect(K):
 LABELS=[('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),('Early finishers','Any child who would like more'),('early finishers','any child who would like more'),('Finished early? Stretch and Challenge come next.','Want more? Think harder and Go further come next.'),('For early finishers','Think harder'),('>Stretch<','>Think harder<'),('Stretch and Challenge slides are for early finishers.','The Think harder and Go further slides are open to every child who would like them.'),
         ('For children who finish early. ','Open to any child who chooses it. '),('For children who finish early','Open to any child who chooses it'),('children who finish early','any child who chooses to'),
         ('for strong thinkers','for any thinker'),('for early finishers','for any child who chooses it')]
-def add(S,K,explore_box_top=840):
+def add(S,K,explore_box_top=872):
     P=f'p2l{K}'
     S[f'{P}-precheck']=precheck(K); S[f'{P}-reflect']=reflect(K)
     S[f'{P}-stretch']=think(K)
@@ -102,6 +101,8 @@ def add(S,K,explore_box_top=840):
     r=lambda k,a,b: S.__setitem__(k,S[k].replace(a,b))
     S[f'{P}-warm1']=S[f'{P}-warm1'].replace('</aside>',' A game of about 2.5 minutes: stop it on the clock even if the game is not finished.</aside>')
     S[f'{P}-warm2']=S[f'{P}-warm2'].replace('</aside>',' Ask quick questions 1 and 3 only (about 2 minutes): children answer by thumbs, hands, not by naming a child. The other questions are spare.</aside>')
+    S[f'{P}-break']=S[f'{P}-break'].replace('Four minutes.','Three minutes: two of movement, one for a drink of water.')
+    S[f'{P}-explore2']=S[f'{P}-explore2'].replace('</aside>',' Keep it moving (about 4 minutes in all): ask "how do you know?" on question 2 only; about 15 seconds of talk on the other questions.</aside>')
     e=S[f'{P}-exit']
     S[f'{P}-exit']=e.replace('</aside>',' Hold-up: children hold their slips up one at a time (never all together); the answer is on the next click. About 2 minutes of child work.</aside>')
     for k in list(S):

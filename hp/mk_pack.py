@@ -39,7 +39,7 @@ def table(d,rows,widths=None,head=True):
 W=[
  (1,"Lessons 1 and 2","Number Patterns and Number Bonds",
   "Count with the Frog; Number Bond Inquiry",
-  "Cut-out kit pages (ten-frames, counters, number strips) are at the end of the week 1 PDF. Please cut them out and keep them in one envelope; we use them every week.",
+  "Cut-out kit pages (ten-frames, counters, number strips) are at the end of the week 1 PDF. Please cut them out and keep them in one envelope; we use them every week. Before Lesson 1, please cut out the two rows of the number strip (0 to 50) and tape them end to end, so we do not spend class time cutting.",
   "Ask your child: 'Pick a number from 1 to 10. How many ways can you split it into two parts? How do you know you found them all?'",
   ["3bJhBJ37ZoAfsuDo4LgWeH","1fsJ5Fj2abUf27LYUmuEqN"]),
  (2,"Lessons 3 and 4","Picture Graphs and Repeating and Growing Patterns",
@@ -59,7 +59,7 @@ W=[
   ["RL9jDmrZwdbjVnL98L2tEp","UjMh35Wk2hZfT59b3W1TtV"]),
  (5,"Lessons 9 and 10","Length and Challenge Day (mixed puzzles)",
   "Measure It; Challenge Day",
-  "The paper cube strips are on the cut-outs page (included again in the week 5 PDF). The Certificate of Completion is the last page.",
+  "The paper cube strips are on the cut-outs page (included again in the week 5 PDF). Before Lesson 9, please print that page and cut out Strip A, so we do not spend class time cutting. The Certificate of Completion is the last page.",
   "Ask your child: 'Measure the table with your hand span, then with a pencil. Why are the two numbers different?'",
   ["V7cAm5E5H9i2N8bp3ynmsi","KCqynhP5sQ5BiYCeUzgJNs"]),
 ]

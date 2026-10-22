@@ -108,7 +108,8 @@ module.exports = {
     ],
     circulate: ['Ask: "How many of these pieces make one whole?"', 'Ask: "Draw the bar. How many units? What is one unit worth?"', 'Ask: "Can you make the bottom numbers the same? Is it more or less than a half?"'],
     hints: ['Hint 1: "The denominator tells you how many pieces make one whole."', 'Hint 2: "For a fraction of a set, divide by the bottom number first, then multiply by the top number."', 'Hint 3: "To compare, change one fraction so both have the same denominator, or compare each with a half."'],
-    talk: ['"Which is more: 2 1/3 pizzas or 9/4 pizzas? Mei says 9/4 because 9 is a big number."', '"Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?"'],
+    talk: ["\"Which is more: 2 1/3 pizzas or 9/4 pizzas? Mei says 9/4 because 9 is a big number.\""],
+    talkWeekly: ["\"Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?\""],
     talkAns: '2 1/3 is more. 9/4 = 2 1/4, and both have 2 wholes. A third is bigger than a quarter (sharing one pizza among 3 gives bigger slices than sharing among 4), so 2 1/3 is bigger. Mei looked at the 9 alone, but quarters are small pieces. For Ravi: 3/5 is bigger, because fifths are bigger pieces than sevenths.',
     close: ['"You were real fraction explorers today: you built fractions, lined them up and compared them with good reasons."', '"Hand me your exit ticket and I will stamp your inquiry journal."']
   },
@@ -116,10 +117,11 @@ module.exports = {
   deck: {
     today: 'Change between improper fractions and mixed numbers, find a fraction of a set with a bar model, and compare fractions with different denominators.',
     warmGame: 'More or less than a half? Thumbs up for more, thumbs down for less, flat hand for exactly a half: 3/8, 5/9, 6/12, 7/10, 2/5, 4/7.',
-    warmQs: [['1/2 of 18 = ?', '9'], ['1/4 of 20 = ?', '5'], ['2/3 = ?/12', '8'], ['3/4 + 1/8 = ?', '7/8'], ['1 − 3/10 = ?', '7/10']],
+    warmQs: [["1/2 of 18 = ?", "9"], ["1/4 of 20 = ?", "5"], ["2/3 = ?/12", "8"]],
+    warmWeekly: [["3/4 + 1/8 = ?", "7/8"], ["1 − 3/10 = ?", "7/10"]],
     expSetup: ['Cut paper circles into 4 equal slices (quarters).', 'Ravi\'s group eats 11 slices. Take 11 quarter-slices.', 'Put the slices together to build whole pizzas.', 'Write how many pizzas they ate in two different ways.'],
     expPic: 'three pizzas cut into quarters: two whole pizzas and one pizza with 3 of its 4 slices, next to the question "11 slices = ? pizzas".',
-    expAsk: [['How many pizzas did they eat?', '2 whole pizzas and 3 quarters: 11/4 = 2 3/4.'], ['How many slices make exactly 3 pizzas?', '12 slices: 12/4 = 3.'], ['What if each pizza had 6 slices and they ate 11?', '11/6 = 1 5/6: one whole pizza and 5 sixths.']],
+    expAsk: [["How many pizzas did they eat?", "2 whole pizzas and 3 quarters: 11/4 = 2 3/4."], ["How many slices make exactly 3 pizzas?", "12 slices: 12/4 = 3."]],
     mini1: { head: 'Improper fraction to mixed number', body: ['7/3: fill whole bars of 3 thirds.', '3 + 3 + 1 = 7 thirds.', '2 wholes and 1 third.'], ans: '7/3 = 2 1/3' },
     mini2: { head: 'Fraction of a set', body: ['3/5 of 30 stickers.', '5 units = 30, so 1 unit = 6.', '3 units = ?'], ans: '18 stickers' },
     keyHead: 'Key idea: fractions can be more than 1', keyBig: 'The denominator tells how many pieces make 1 whole: 7/3 = 2 1/3.', keySmall: 'Fraction of a set: the denominator gives the units. Find 1 unit, then the units you need.',

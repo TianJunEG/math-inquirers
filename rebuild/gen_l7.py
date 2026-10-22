@@ -236,3 +236,4 @@ import p1gaps; p1gaps.apply(D,7)
 import p1fix
 p1fix.finish(D,7,{'l7-teach1':'25–28 MIN','l7-we1':'28–31 MIN','l7-try1':'31–34 MIN','l7-teachtri':'55–58 MIN','l7-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','we2','try2','we3'))
 import p1neutral; p1neutral.apply(D,7)
+import p1budget; p1budget.apply(D,7)

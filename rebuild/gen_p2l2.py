@@ -62,20 +62,20 @@ put('p2l2-title',title_slide('p2l2-title','LESSON 2  •  WEEK 1','Missing Digit
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------
-items=[('Partner to 100:','65','35'),('Partner to 100:','20','80'),('Partner to 100:','45','55'),('Partner to 1000:','370','630'),('Partner to 1000:','850','150'),('Partner to 1000:','125','875')]
+items=[('Partner to 100:','65','35'),('Partner to 1000:','370','630'),('Partner to 1000:','125','875')]   # three calls only (about 2.5 minutes)
 body=h2('Warm-up: Partners')+p('I say a number. You say its partner. Shout it out together!',36,600,MUTED)
 for i,(a,b,c) in enumerate(items):
-    col=i//3; row=i%3; L=128 if col==0 else 990; T=330+row*150
-    body+=qrow(L,T,500,a,b,40)+answer(L+572,T,178 if col else 200,c)
+    L=128; T=330+i*150
+    body+=qrow(L,T,900,a,b,44)+answer(L+980,T,300,c)
 put('p2l2-warm1',sec('p2l2-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Partners. Say a number; children call out the partner (online: unmute together or type in the chat). Click to reveal each answer, left column first. Then make up more: 30, 85, 99 for 100; 600, 240, 505 for 1000. '
+ 'Minutes 0 to 5. Partners. Say a number; children call out the partner (online: unmute together or type in the chat). Click to reveal each answer, left column first. Spare calls if the children want more: 30, 85, 99 for 100; 600, 240, 505 for 1000. Do not run over: three calls are enough. '
  'Ask after 125: "How did you find 875 so fast?" Listen for: "1 and 8 make 9 hundreds, 2 and 7 make 9 tens, 5 and 5 make 10 ones." That is the key to today\'s explore. '
  'Watch for: children who say 985 for 125 (making every column 10). The columns are 9, 9 and 10 because of the carries.'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','65 + __ = 100','35'),('2.','300 + 450 = ?','750'),('3.','700 − 250 = ?','450'),('4.','238 + 10 = ?','248'),('5.','500 − __ = 120','380')]
+qs=[('1.','65 + __ = 100','35'),('2.','700 − 250 = ?','450')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p2l2-warm2',sec('p2l2-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. For 3 ask: "How did you take 250 from 700?" (700 − 200 = 500, then − 50 = 450). For 5: "Which is easier: count on from 120 to 500, or take away?" (count on: 120 → 200 is 80, 200 → 500 is 300, so 380). Answers: 35, 750, 450, 248, 380.'))
+put('p2l2-warm2',sec('p2l2-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. For question 2 ask: "How did you take 250 from 700?" (700 − 200 = 500, then − 50 = 450). Answers: 35 and 450. Spare questions in the guide table: 300 + 450 = 750, 238 + 10 = 248, 500 − __ = 120 is 380 (count on: 120 → 200 is 80, 200 → 500 is 300).'))
 
 # ---------- 4. explore ----------
 g=colsum('358','641','999','+',x0=10,y0=50,c=96,size=60,shade=True)
@@ -93,22 +93,12 @@ body=h2('Missing digits: start at the ones')+pin(128,240,520,svgwrap(420,340,'Co
 body+=step(1,'Ones: 7 + the ones box ends in 3. 7 + 6 = 13, so the box is 6. Carry 1 ten.',left=740,top=240,width=1052,size=34)
 body+=step(2,'Tens: the tens box + 8 + 1 ends in 2. 3 + 8 + 1 = 12, so the box is 3. Carry 1 hundred.',left=740,top=370,width=1052,size=34)
 body+=step(3,'Hundreds: 4 + 2 + 1 = 7. It matches ✓',left=740,top=500,width=1052,size=34)
-body+=answer(128,660,1664,'437 + 286 = 723.   Check by adding the whole numbers.')
-body+=pin(128,780,1664,p('Ask every time: was there a carry into this column?',36,700),'fade',SOFT,20,'18px 30px')
-put('p2l2-teach1',sec('p2l2-teach1','20–24 MIN',body,'Teach. Ask first: "Which column should we start with?" Some children start at the hundreds: 4 + 2 = 6, not 7, and they get stuck. Show why the ones go first: a carry from the ones changes the tens, and a carry from the tens changes the hundreds. Think-aloud: "7 plus something ends in 3. 7 + 6 = 13. The box is 6, and I carry 1 ten. Tens: something + 8 + 1 ends in 2 …" Guess and check works too: "Try 2 in the tens box: 2 + 8 + 1 = 11. Ends in 1, not 2. Try 3."'))
-put('p2l2-try1',try_slide('p2l2-try1','24–26 MIN','Your turn: whiteboards','Find the missing digits. Start at the ones.',[('a','3[ ]2 + 145 = 487','4'),('b','15[ ] + 2[ ]7 = 412','5 and 5'),('c','[ ]64 + 17[ ] = 542','3 and 8')],'Write each as a column sum on the whiteboard first. a) No carries: 4 + 4 = 8. b) Ones: the first box + 7 ends in 2, so 5 (12, carry 1). Tens: 5 + the second box + 1 ends in 1, so 5 (11, carry 1). Hundreds 1 + 2 + 1 = 4 ✓: 155 + 257. c) Ones: 4 + 8 = 12. Tens: 6 + 7 + 1 = 14. Hundreds: the box + 1 + 1 = 5, so 3: 364 + 178.'))
+body+=answer(128,640,1664,'437 + 286 = 723 ✓   Ask every time: was there a carry into this column?')
+body+=pin(128,760,1610,p('Subtraction? Turn it round into an addition and work backwards:  6[ ]2 − 24[ ] = 385  becomes  385 + 24[ ] = 6[ ]2.',32,700)+p('Ones 5 + 7 = 12 (the box is 7); tens 8 + 4 + 1 = 13 (the box is 3); hundreds 3 + 2 + 1 = 6 ✓.   So 632 − 247 = 385.',30,600,MUTED),'fade',SOFT,20,'16px 30px')
+put('p2l2-teach1',sec('p2l2-teach1','20–24 MIN',body,'Teach. Ask first: "Which column should we start with?" Some children start at the hundreds: 4 + 2 = 6, not 7, and they get stuck. Show why the ones go first: a carry from the ones changes the tens, and a carry from the tens changes the hundreds. Think-aloud: "7 plus something ends in 3. 7 + 6 = 13. The box is 6, and I carry 1 ten. Tens: something + 8 + 1 ends in 2 …" Guess and check works too: "Try 2 in the tens box: 2 + 8 + 1 = 11. Ends in 1, not 2. Try 3." SUBTRACTION (this slide holds the old we2 slide as its last box): work backwards. Subtraction with gaps is hard, so undo it: 385 + 247 must make 632. Click to show the turned-round sum, then each step. Check the other way at the end: 632 − 247, ones 2 − 7 cannot be done, so take a ten: 12 − 7 = 5 ✓. The answer plus the number we took away gives back the number we started with.'))
+put('p2l2-try1',try_slide('p2l2-try1','24–26 MIN','Your turn: whiteboards','Find the missing digits. Start at the ones.',[('a','3[ ]2 + 145 = 487','4'),('b','15[ ] + 2[ ]7 = 412','5 and 5')],'Write each as a column sum on the whiteboard first. a) No carries: 4 + 4 = 8. b) Ones: the first box + 7 ends in 2, so 5 (12, carry 1). Tens: 5 + the second box + 1 ends in 1, so 5 (11, carry 1). Hundreds 1 + 2 + 1 = 4 ✓: 155 + 257. (The old item c, [ ]64 + 17[ ] = 542, is dropped: the worksheet has the same type.)'))
 
-# ---------- 8. worked example: subtraction ----------
-g=colsum('6?2','24?','385','−',x0=10,y0=0)
-g2=colsum('385','24?','6?2','+',x0=10,y0=0)
-body=h2('Subtraction: work backwards')+pin(128,240,440,svgwrap(420,340,'Column subtraction 6 box 2 minus 24 box equals 385',g).replace('width:420px;height:340px','width:360px;height:291px'),None,WHITE,24,'16px 30px')
-body+=pin(650,240,440,svgwrap(420,340,'The same sum turned into an addition',g2).replace('width:420px;height:340px','width:360px;height:291px'),'fade',SOFT,24,'16px 30px')
-body+=step(1,'Turn it round: 385 + 24[ ] = 6[ ]2',left=1180,top=240,width=612,size=34)
-body+=step(2,'Ones: 5 + the ones box ends in 2. 5 + 7 = 12, so the box is 7.',left=1180,top=370,width=612,size=34)
-body+=step(3,'Tens: 8 + 4 + 1 = 13, so the tens box is 3. Hundreds: 3 + 2 + 1 = 6 ✓',left=1180,top=520,width=612,size=34)
-body+=answer(128,700,1664,'632 − 247 = 385')
-put('p2l2-we2',sec('p2l2-we2','26–28 MIN',body,'Work backwards: the answer plus the number we took away gives back the number we started with. Click 1 shows the turned-round sum, then each step. Think-aloud: "Subtraction with gaps is hard, so I undo it. 385 + 247 must make 632." Check the other way at the end: 632 − 247. Ones: 2 − 7 cannot be done, so take a ten: 12 − 7 = 5 ✓.'))
-put('p2l2-try2',try_slide('p2l2-try2','28–30 MIN','Your turn: subtraction','Turn it into an addition first.',[('a','8[ ]5 − 321 = 514','3'),('b','74[ ] − 2[ ]8 = 465','3 and 7'),('c','9[ ]4 − [ ]37 = 517','5 and 4')],'Whiteboards. a) 514 + 321 = 835. b) 465 + 2[ ]8: ones 5 + 8 = 13, so 3; tens 6 + the box + 1 ends in 4, so 7; hundreds 4 + 2 + 1 = 7 ✓: 743 − 278. c) 517 + [ ]37: ones 7 + 7 = 14; tens 1 + 3 + 1 = 5; hundreds 5 + the box = 9, so 4: 954 − 437.'))
+put('p2l2-try2',try_slide('p2l2-try2','28–30 MIN','Your turn: subtraction','Turn it into an addition first.',[('a','8[ ]5 − 321 = 514','3')],'Whiteboards. One item only: 514 + 321 = 835, so the box is 3. Say it back in a sentence: "I turned it into an addition." (Items b and c are dropped: worksheet Q2 has the same type.)'))
 
 # ---------- 10. balance ----------
 body=h2('"=" means "is the same as"')+card(p('245 + 130 = 200 + [ ]',48,700))
@@ -118,15 +108,14 @@ body+=step(2,'So the box must be 45 more than 130.',left=1260,top=530,width=532,
 body+=step(3,'The box is 175. Check: both sides are 375 ✓',left=1260,top=690,width=532,size=34)
 body+=pin(128,700,1060,p('You can also work out one side: 245 + 130 = 375, then 375 − 200 = 175.',32,700),'fade',SOFT,20,'18px 28px')
 put('p2l2-teach3',sec('p2l2-teach3','30–31 MIN',body,'Teach. Ask first: "What goes in the box?" Some children say 375 because "the answer comes next". The see-saw must balance: both sides the same. Click through. Two ways: compare (look for the difference between 245 and 200), or work out the full side and subtract. Comparing is faster with big numbers, and it is how Ravi\'s question on the worksheet works.'))
-put('p2l2-try3',try_slide('p2l2-try3','31–32 MIN','Your turn: balance it','Both sides must be the same.',[('a','320 + 150 = 400 + [ ]','70'),('b','560 − 100 = [ ] − 200','660'),('c','True or false: 199 + 302 = 200 + 301','True: 501')],'Whiteboards. a) 320 is 80 less than 400, so the box is 80 less than 150: 70. b) Left side is 460, so the box − 200 = 460: the box is 660. c) 199 is 1 less than 200 and 302 is 1 more than 301. Both sides are 501.'))
 body=h2('Key idea: start at the ones')+card(p('Start at the ones column and ask: was there a carry? Check by adding the whole numbers.',44,700))+card(p('Turn a subtraction into an addition to work backwards. "=" means both sides are the same.',38,600,MUTED))
 put('p2l2-key',sec('p2l2-key','35 MIN',body,'Say the key ideas together. Common mistakes to watch for during the worksheet: (1) Forgetting the carried 1: in Q1c writing 6 in the tens box (8 + 6 = 14) instead of 5 (8 + 5 + 1 = 14). (2) Reading "=" as "the answer comes next": 350 + 140 = 300 + [ ] answered 490. (3) Magic triangle: putting the biggest numbers in the corners when the side total is small.'))
 put('p2l2-break',break_slide('p2l2-break','32–36 MIN','Balance bodies. Stand like a see-saw with arms out. The tutor says a number sentence: stay level if it is true, tip to one side if it is false.','Four minutes. Sentences to call: 300 + 200 = 400 + 100 (true); 250 + 250 = 600 (false); 999 = 1000 − 1 (true); 450 + 50 = 400 + 150 (false). Online: children lean in front of the camera.'))
 
 # ---------- worksheet page 1 ----------
-put('p2l2-ws1',ws_preview('p2l2-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','Missing digits in additions. Start at the ones, check the carry.'),('Q2','Missing digits in subtractions. Turn them into additions.'),('Q3','Balance it. Compare the numbers before you work anything out.')],'Stuck? Try a digit in the box, add, and see if it fits.','Minutes 36 to 50. Walk around. Ask "Was there a carry into this column?" before giving any help. Q3d: push for an explanation without working out both sides.'))
-put('p2l2-ws1ans',checks('p2l2-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 224 + 355 = 579   b) 462 + 375 = 837   c) 386 + 259 = 645'),('Q2','a) 778 − 325 = 453   b) 543 − 267 = 276'),('Q3','a) 190   b) 525   c) 280   d) Yes: 398 is 2 less than 400, 205 is 2 more than 203')],
- 'Click each answer after a pair explains theirs. Q1b: ones 2 + 5 = 7 (no carry), tens 6 + 7 = 13, hundreds 4 + 3 + 1 = 8. Q1c: ones 6 + 9 = 15, tens 8 + 5 + 1 = 14, hundreds 3 + 2 + 1 = 6. Q2b: 276 + 267 = 543. Q3d: both sides are 603; moving 2 from one number to the other does not change the total.',gapy=170))
+put('p2l2-ws1',ws_preview('p2l2-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','Missing digits in additions. Start at the ones, check the carry.'),('Q2','Missing digits in subtractions. Turn them into additions.'),('Q3','Balance it (a and b in class; c and d are ★ take-home stars). Compare the numbers before you work anything out.')],'Stuck? Try a digit in the box, add, and see if it fits.','Minutes 36 to 50. Walk around. Ask "Was there a carry into this column?" before giving any help. Q3 c and d and the line under Q1 (check one answer by adding) are marked ★ take-home on the page: children do them at home. Ravi\'s idea (Q3d) comes back at home, not in class.'))
+put('p2l2-ws1ans',checks('p2l2-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) 224 + 355 = 579   b) 462 + 375 = 837   c) 386 + 259 = 645'),('Q2','a) 778 − 325 = 453   b) 543 − 267 = 276'),('Q3','a) 190   b) 525   ★ take-home:  c) 280   d) Yes: 398 is 2 less than 400, 205 is 2 more than 203')],
+ 'Click each answer after a pair explains theirs. Q1b: ones 2 + 5 = 7 (no carry), tens 6 + 7 = 13, hundreds 4 + 3 + 1 = 8. Q1c: ones 6 + 9 = 15, tens 8 + 5 + 1 = 14, hundreds 3 + 2 + 1 = 6. Q2b: 276 + 267 = 543. Q3 c and d are take-home stars: the answers stay here so children can mark them at home (Q3d: both sides are 603; moving 2 from one number to the other does not change the total).',gapy=170))
 
 # ---------- teach: magic square ----------
 sq=[[220,270,260],[290,250,210],[240,230,280]]; given={(0,0),(0,1),(0,2),(1,1),(2,0)}
@@ -145,16 +134,6 @@ body+=step(3,'Diagonal: 220 + 250 + ? = 750, so the empty square is 280. Keep go
 body+=pin(700,640,1092,p('Check every row, column and diagonal at the end.',34,700),'fade',SOFT,20,'18px 28px')
 put('p2l2-teachsq',sec('p2l2-teachsq','52–54 MIN',body,'Teach before worksheet page 2 (Q4). Click order: step 1, step 2, step 3, the check line, then the full square appears. Ask the group for the last two (210 and 230) before the square is shown. The worksheet square uses different numbers and asks what happens if we add 100 to every number: do not tell them.'))
 
-# ---------- teach: magic triangle ----------
-body=h2('Magic triangles: think about the corners')+card(p('Put 11, 12, 13, 14, 15 and 16 in the circles so each side adds up to 42.',38,700))
-body+=pin(128,380,480,triangle_svg([None]*6,480,416),None)
-body+=step(1,'Each corner is on TWO sides. A big total needs big corners: try 14, 15, 16.',left=680,top=380,width=1112,size=34)
-body+=pin(128,380,480,triangle_svg([14,15,16,None,None,None],480,416),'fade')
-body+=step(2,'14 + ? + 15 = 42, so the circle is 13.   15 + ? + 16 = 42, so it is 11.',left=680,top=510,width=1112,size=34)
-body+=step(3,'16 + ? + 14 = 42, so the circle is 12. Every number used once ✓',left=680,top=640,width=1112,size=34)
-body+=pin(128,380,480,triangle_svg([14,15,16,13,11,12],480,416),'fade')
-put('p2l2-teachtri',sec('p2l2-teachtri','54–55 MIN',body,'Teach before worksheet page 2 (Q5). Here the total is BIG, so the big numbers go in the corners. On the worksheet the first total (390) is the SMALLEST possible: ask "Small total… so which numbers go in the corners?" but do not tell them. Click order: step 1, corners appear, step 2, step 3, the finished triangle. Check each side aloud: 14 + 13 + 15, 15 + 11 + 16, 16 + 12 + 14.'))
-
 # ---------- teach: two numbers (model) ----------
 g=(f'<rect x="200" y="20" width="400" height="80" rx="10" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/>'+txt(80,74,'small',34,NAVY,'start',800,'Nunito Sans, Arial')+txt(400,74,'?',44)
    +f'<rect x="200" y="130" width="400" height="80" rx="10" fill="{SKY}" stroke="{NAVY}" stroke-width="4"/><rect x="600" y="130" width="200" height="80" rx="10" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'
@@ -168,9 +147,9 @@ body+=step(3,'Give back the 100: 200 and 300. Check: 200 + 300 = 500 ✓',top=83
 put('p2l2-teachtwo',sec('p2l2-teachtwo','55–57 MIN',body,'Teach before worksheet page 2 (Q6). Draw a model: the big bar is the small bar plus the extra. Take the extra away, share what is left into two equal bars, then give the extra back. Children who guess and check (250 and 250? 150 and 350?) are welcome: ask them to check BOTH clues. Halving 400: half of 4 hundreds is 2 hundreds.'))
 
 # ---------- worksheet page 2 ----------
-put('p2l2-ws2',ws_preview('p2l2-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Magic square. Find the total from a full line first.'),('Q5','Magic triangle. Which numbers should go in the corners?'),('Q6','Two mystery numbers. Draw a model: take away the extra, halve, give it back.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially anyone still starting column sums at the hundreds.'))
-put('p2l2-ws2ans',checks('p2l2-ws2ans','69–72 MIN','Page 2: check together',[('Q4','a) 150   b) top 10; middle 30, 70; bottom 90   c) Yes, still magic: total 450 (150 + 3 hundreds)'),('Q5','corners 110, 120, 130; between them 160, 140, 150'),('Q6','250 and 450:  700 − 200 = 500,  half is 250,  250 + 200 = 450')],
- 'Click after a child explains. Q4c: every line has three numbers and each went up by 100, so every line total went up by 300. Q5a: 390 is the smallest total possible, so the smallest numbers are corners: 110 + 160 + 120, 120 + 140 + 130, 130 + 150 + 110. The side total 420 (corners 140, 150, 160) is Think harder 1. Q6 check: 250 + 450 = 700 and 450 − 250 = 200.',gapy=170))
+put('p2l2-ws2',ws_preview('p2l2-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Magic square. Find the total from a full line first.'),('Q5','★ Take-home star: magic triangle. Which numbers should go in the corners?'),('Q6','Two mystery numbers. Draw a model: take away the extra, halve, give it back.')],'Finished early? Stretch and Challenge come next.','Children work alone. Q5 (the magic triangle) is marked ★ take-home: it is done at home, and its teaching slide is not shown in class. Note who needs a short catch-up next lesson, especially anyone still starting column sums at the hundreds.'))
+put('p2l2-ws2ans',checks('p2l2-ws2ans','69–72 MIN','Page 2: check together',[('Q4','a) 150   b) top 10; middle 30, 70; bottom 90   c) Yes, still magic: total 450 (150 + 3 hundreds)'),('Q5','★ take-home:  corners 110, 120, 130; between them 160, 140, 150'),('Q6','250 and 450:  700 − 200 = 500,  half is 250,  250 + 200 = 450')],
+ 'Click after a child explains (answer lines only). Q4c: every line has three numbers and each went up by 100, so every line total went up by 300. Q5a: 390 is the smallest total possible, so the smallest numbers are corners: 110 + 160 + 120, 120 + 140 + 130, 130 + 150 + 110. The side total 420 (corners 140, 150, 160) is Think harder 1. Q6 check: 250 + 450 = 700 and 450 − 250 = 200.',gapy=170))
 
 # ---------- stretch / challenge ----------
 st=[('1.','Find the missing digits:  6A5 + B7C = 900'),('2.','The same number A goes in both places:  A + A + 250 = 750. What is A?'),('3.','Adding 99 is the same as adding 100, then taking away 1. Use it:  456 + 99 = ?')]
@@ -198,12 +177,12 @@ put('p2l2-chwalk',sec('p2l2-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- talk / exit ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Why do we start at the ones column when we look for missing digits?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put('p2l2-talk',sec('p2l2-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: the ones can make a carry that changes the tens, and the tens can make a carry that changes the hundreds. So we must know the ones first. Second question if time: "Ravi says 398 + 205 = 400 + 203 without adding. How can he know?" (He moved 2 from one number to the other; the total stays the same, 603.) Praise the reasons, not only the answers.'))
+put('p2l2-talk',sec('p2l2-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: the ones can make a carry that changes the tens, and the tens can make a carry that changes the hundreds. So we must know the ones first. Praise the reasons, not only the answers.'))
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('3[ ]4 + 257 = 601.  Which digit goes in the box?',52,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
 put('p2l2-exit',sec('p2l2-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: the box is 4 (344 + 257 = 601: ones 4 + 7 = 11, carry 1; tens 4 + 5 + 1 = 10, carry 1; hundreds 3 + 2 + 1 = 6). Bonus for anyone who would like it: 4[ ]6 + 37[ ] = 801 gives 2 in the first box and 5 in the second box (426 + 375 = 801). Extension: make your own missing-digit sum with two boxes and exactly one answer; swap with a partner.'))
 
 # ---------- write ----------
-order=['p2l2-title','p2l2-warm1','p2l2-warm2','p2l2-explore1','p2l2-explore2','p2l2-teach1','p2l2-try1','p2l2-we2','p2l2-try2','p2l2-teach3','p2l2-try3','p2l2-key','p2l2-break','p2l2-ws1','p2l2-ws1ans','p2l2-teachsq','p2l2-teachtri','p2l2-teachtwo','p2l2-ws2','p2l2-ws2ans','p2l2-stretch','p2l2-challenge','p2l2-chdiag','p2l2-chwalk','p2l2-talk','p2l2-exit']
+order=['p2l2-title','p2l2-warm1','p2l2-warm2','p2l2-explore1','p2l2-explore2','p2l2-teach1','p2l2-try1','p2l2-try2','p2l2-teach3','p2l2-key','p2l2-break','p2l2-ws1','p2l2-ws1ans','p2l2-teachsq','p2l2-teachtwo','p2l2-ws2','p2l2-ws2ans','p2l2-stretch','p2l2-challenge','p2l2-chdiag','p2l2-chwalk','p2l2-talk','p2l2-exit']
 p2gaps.add(S,2); order=p2gaps.order(order,2)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')

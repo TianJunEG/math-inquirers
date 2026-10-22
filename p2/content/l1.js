@@ -48,6 +48,7 @@ module.exports = {
       'Listing digit-card numbers at random, so one is missed or written twice, or counting 059 as a 3-digit number.',
       'Counting back in 10s across a hundred: 512, 502, 592 instead of 512, 502, 492.'
     ],
+    takehome: 'Page 2: Q4(b) (two squares below 385) and the whole of Q5 (count on and back, four items). The teaching slide for counting past a hundred is not shown in class.',
     extension: 'Use any three of the cards 1, 3, 5 and 7. How many different 3-digit numbers can you make? (24: 6 for each set of three cards, and there are 4 sets.)',
     key: [
       ['Q1', '(a) 407  (b) 752  (c) 3 tens; 13 tens  (d) 70'],
@@ -71,8 +72,8 @@ module.exports = {
     ],
     circulate: ['Ask: “How many of your numbers start with this card? Is that all of them?”', 'Ask: “What is this digit worth? How many tens is that?”', 'Ask: “Point to the number one square below this one on the chart. How much bigger is it?”'],
     hints: ['Hint 1: “Fix the hundreds digit first.”', 'Hint 2: “Build it with blocks: hundreds, tens and ones. Can 10 tens become a hundred?”', 'Hint 3: “Say the numbers out loud as you count on in 10s. What happens after 590?”'],
-    talk: ['“Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who agrees?”', '“How do you know you found every number from your digit cards?”'],
-    talkAns: '401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. We know we have every number because we listed them in order: each card starts the same number of numbers.',
+    talk: ['“Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who agrees?”'],
+    talkAns: '401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. Count on from 399: 400, 401.',
     close: ['“You were real detectives today: you made a list in order, so no number could hide from you.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -125,6 +126,7 @@ module.exports = {
 
   workbook: H => {
     const W = [];
+    const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
     W.push(H.p('A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.', { after: 80 }));
     W.push(H.q(1, 'Place value. Fill in the blanks.', { before: 60, keepNext: true }));
     W.push(H.sub('a', '4 hundreds, 0 tens and 7 ones  =  ________'));
@@ -152,8 +154,8 @@ module.exports = {
     W.push(H.q(4, 'These are pieces cut from a 1000 chart. Each row has 10 numbers. Fill in the empty squares.', { keepNext: true }));
     W.push(H.fig(pieceSvg()));
     W.push(H.sub('a', 'On the chart, one square DOWN is ______ more.  One square RIGHT is ______ more.'));
-    W.push(H.sub('b', 'Which number is 2 squares below 385 on the chart?  ________'));
-    W.push(H.q(5, 'Look for the pattern. Fill in the next numbers.', { keepNext: true }));
+    W.push(H.sub('b', [TH(), H.t('Which number is 2 squares below 385 on the chart?  ________')]));
+    W.push(H.q(5, [TH(), H.t('Look for the pattern. Fill in the next numbers.')], { keepNext: true }));
     W.push(H.sub('a', '47,   147,   247,   ______,   ______'));
     W.push(H.sub('b', '532,   522,   512,   ______,   ______'));
     W.push(H.sub('c', '980,   985,   990,   995,   ______'));

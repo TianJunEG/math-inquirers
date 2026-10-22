@@ -6,7 +6,7 @@ Run order in a generator: write the generated slides, then call finish(D, n, tim
 import os, re, glob
 
 LAB = re.compile(r'(position:absolute;right:128px;top:\d+px;[^">]*letter-spacing:2px;[^>]*>)([^<]*)(</p>)')
-OPTIONAL = 'Your choice'
+OPTIONAL = 'Optional, if you finish early'
 FINISHED_OLD = 'Finished early? Stretch and Challenge come next.'
 FINISHED_NEW = 'Want more? You may choose Think harder T1 in your workbook.'
 CHIP_MARK = 'Stand up and stretch'

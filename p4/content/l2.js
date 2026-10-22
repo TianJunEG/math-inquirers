@@ -69,7 +69,8 @@ module.exports = {
     ],
     circulate: ['Ask: “Which two round numbers is it between? Where is the halfway mark?”', 'Ask: “Could the number be bigger than that and still round to the same number?”', 'Ask: “Which clue gives you the fewest numbers to try? Start there.”'],
     hints: ['Hint 1: “Draw a number line. Mark the two round numbers and halfway.”', 'Hint 2: “Look only at the digit to the right of the place you round to.”', 'Hint 3: “For odd or even, choose the ones digit FIRST.”'],
-    talk: ['“Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Is she right?”', '“Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Is he right?”'],
+    talk: ["“Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Is she right?”"],
+    talkWeekly: ["“Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Is he right?”"],
     talkAns: 'Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 every time. Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, so it rounds to 50 000.',
     close: ['“Today you used number lines to round, and you worked backwards to find what a rounded number could really be.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
@@ -77,10 +78,11 @@ module.exports = {
   deck: {
     today: 'Round big numbers on a number line, work backwards from a rounded number, and solve 5-digit riddles and patterns.',
     warmGame: 'Place It Right (5 digits). The tutor turns over digit cards one at a time. Write each in a box straight away. Round 1: biggest wins. Round 2: closest to 50 000 wins.',
-    warmQs: [['What is the 7 worth in 47 352?', '7000'], ['Sixty thousand and forty-five in numerals?', '60 045'], ['1000 more than 59 600?', '60 600'], ['40 000 + 3000 + 50 + 8 = ?', '43 058'], ['36 815 to the nearest 1000?', '37 000']],
+    warmQs: [["What is the 7 worth in 47 352?", "7000"], ["Sixty thousand and forty-five in numerals?", "60 045"], ["1000 more than 59 600?", "60 600"]],
+    warmWeekly: [["40 000 + 3000 + 50 + 8 = ?", "43 058"], ["36 815 to the nearest 1000?", "37 000"]],
     expSetup: ['Take the digit cards 2, 4, 5, 7 and 9.', 'Make a 5-digit number using each card once. Write it down.', 'Round it to the nearest thousand. Does it round to 50 000?', 'Find ALL the numbers that round to 50 000. Which is closest to 50 000?'],
     expPic: 'five yellow digit cards 2, 4, 5, 7 and 9 above a number line from 49 000 to 51 000 with 49 500 and 50 500 marked.',
-    expAsk: [['Which numbers round to 50 000?', '49 527, 49 572, 49 725, 49 752.'], ['How do you know you have them all?', 'They must be from 49 500 to 50 499. With no 0 card, they start 49 and then 5 or 7: 2 numbers each.'], ['Which is closest to 50 000?', '49 752 (248 away).']],
+    expAsk: [["Which numbers round to 50 000?", "49 527, 49 572, 49 725, 49 752."], ["How do you know you have them all?", "They must be from 49 500 to 50 499. With no 0 card, they start 49 and then 5 or 7: 2 numbers each."]],
     mini1: { head: 'Round 36 482 to the nearest thousand', body: ['Which two thousands is it between? 36 000 and 37 000.', 'Halfway is 36 500.', 'Is 36 482 before or after halfway?'], ans: '36 000 (it is before halfway). To the nearest hundred it is 36 500.' },
     mini2: { head: 'Work backwards: what rounds to 25 000?', body: ['Rounded to the nearest thousand, a number is 25 000.', 'The halfway marks are 24 500 and 25 500.', 'What are the smallest and largest whole numbers it can be?'], ans: 'Smallest 24 500, largest 25 499 (25 500 rounds up to 26 000).' },
     keyHead: 'Key idea: find the halfway mark', keyBig: 'To round, find the two round numbers and the halfway mark. Halfway or more rounds up.', keySmall: 'Working backwards: the smallest number IS the halfway mark below; the largest is 1 less than the halfway mark above.',

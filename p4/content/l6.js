@@ -117,7 +117,8 @@ module.exports = {
     think: ['“I estimate first. This angle is a bit smaller than a right angle, so about 60 or 70 degrees. I put the centre of the protractor on the vertex and the baseline along one arm. That arm points to 0 on the inside scale, so I count up the inside scale: 10, 20 … 65. Not 115: my estimate says it is smaller than 90.”', '“A clock face is a full turn, 360 degrees, cut into 12 equal spaces. 360 divided by 12 is 30. At 2 o’clock the hands are 2 spaces apart: 60 degrees. At 10 o’clock I go the shorter way: also 2 spaces, 60 degrees.”', '“I face North-West. I turn 135 degrees clockwise. Each step on the compass is 45 degrees, so 135 is 3 steps: North, North-East, East. I face East.”'],
     circulate: ['Ask: “Is this angle bigger or smaller than a right angle? So which number on the protractor makes sense?”', 'Ask: “How many spaces apart are the hands? How many degrees is one space?”', 'Ask: “How many 45° steps is that turn? Which way: clockwise or anticlockwise?”'],
     hints: ['Hint 1: “Estimate first: compare with the corner of a page (90°).”', 'Hint 2: “Draw the clock or the compass and count the spaces or steps with your pencil.”', 'Hint 3: “For a corner of a square or rectangle: the parts add up to 90°. Take away the parts you know.”'],
-    talk: ['“Is turning 270° clockwise the same as turning 90° anticlockwise? Test it: stand up and do both.”', '“Ben says the angle at 3 o’clock is smaller than at 9 o’clock because 3 is smaller than 9. Who agrees?”'],
+    talk: ["“Is turning 270° clockwise the same as turning 90° anticlockwise? Test it: stand up and do both.”"],
+    talkWeekly: ["“Ben says the angle at 3 o’clock is smaller than at 9 o’clock because 3 is smaller than 9. Who agrees?”"],
     talkAns: 'Yes: 270° clockwise and 90° anticlockwise make a full turn (360°) together, so you end up facing the same way. Ben is wrong: at 3 o’clock and at 9 o’clock the hands are 3 spaces apart the shorter way, so both angles are 90°.',
     close: ['“Today you estimated before you measured, counted spaces on a clock and steps on a compass, and found every angle in a fan. Inquirers check with an estimate. Well done!”']
   },
@@ -125,10 +126,11 @@ module.exports = {
   deck: {
     today: 'Estimate and measure angles, find every angle in a fan, work out clock angles, turn on the 8-point compass and find missing angles in squares and rectangles.',
     warmGame: 'Robot turns. Stand and face the front (North). The tutor calls a turn; everyone turns and names the direction they now face.',
-    warmQs: [['How many degrees in a right angle?', '90°'], ['How many degrees in a half turn?', '180°'], ['How many right angles make a full turn?', '4'], ['Face N. Quarter turn anticlockwise. Which way now?', 'W'], ['Which is bigger: a 3/4 turn or 250°?', 'A 3/4 turn (270°)']],
+    warmQs: [["How many degrees in a right angle?", "90°"], ["How many degrees in a half turn?", "180°"], ["How many right angles make a full turn?", "4"]],
+    warmWeekly: [["Face N. Quarter turn anticlockwise. Which way now?", "W"], ["Which is bigger: a 3/4 turn or 250°?", "A 3/4 turn (270°)"]],
     expSetup: ['Take a paper clock with two hands.', 'Set it to each o’clock time: 1 o’clock, 2 o’clock … 12 o’clock.', 'Which times make a right angle between the hands? Check with a paper corner.', 'Which time makes a straight line? What is the angle at 1 o’clock?'],
     expPic: 'a clock face showing 3 o’clock with a small square marking the right angle between the hands, and the question “Which other times make a right angle?”',
-    expAsk: [['Which o’clock times make a right angle?', '3 o’clock and 9 o’clock.'], ['Which time makes a straight line?', '6 o’clock (180°, a half turn).'], ['What is the angle at 1 o’clock? How do you know?', '30°: a full turn is 360° and the clock has 12 equal spaces, 360 ÷ 12 = 30.']],
+    expAsk: [["Which o’clock times make a right angle?", "3 o’clock and 9 o’clock."], ["Which time makes a straight line?", "6 o’clock (180°, a half turn)."]],
     mini1: { head: 'Measure with a protractor', body: ['Estimate: the angle is smaller than a right angle.', 'Centre on the vertex, baseline along one arm.', 'Count up from the 0 on that arm: which number?'], ans: '65° (not 115°: the estimate says less than 90°).' },
     mini2: { head: 'Compass turns: 45° steps', body: ['Face NW. Turn 135° clockwise.', '135° = 3 steps of 45°.', 'Count 3 steps clockwise: N, NE, …'], ans: 'E.' },
     keyHead: 'Key idea: count the turn',

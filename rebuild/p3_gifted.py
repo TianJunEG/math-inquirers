@@ -89,18 +89,26 @@ def add(S,order,ln):
     box=pin(868,106,924,p(f'<span style="color:{TEAL};font-weight:800">Go further, any time:</span>  {rich(g["go"])}',26,600,raw=True),None,SOFT,20,'12px 22px','box-sizing:border-box')
     k='<p style="position:absolute;left:128px;bottom:64px'; assert k in e,ln
     e=e.replace(k,box+'\n'+k,1)
-    e=aside_add(e,'GO FURTHER (on the slide from minute 10, so nobody waits): '+plain(g['go'])+' Answer: '+plain(g['goans'])+' Any pair may choose it as soon as their first task is done; do not say who is ready for it. Online: pairs are in pre-assigned breakout rooms (set up before the lesson, auto-move in and auto-close with a timer, about 45 seconds per move). Visit each breakout room at least once while the pairs work (about 1 minute per room).')
+    e=aside_add(e,'GO FURTHER (on the slide from the start of explore, so nobody waits): '+plain(g['go'])+' Answer: '+plain(g['goans'])+' Any pair may choose it as soon as their first task is done; do not say who is ready for it. Online: pairs are in pre-assigned breakout rooms (set up before the lesson, auto-move in and auto-close with a timer, about 45 seconds per move). Visit each breakout room at least once while the pairs work (about 1 minute per room).')
     S[pre+'explore1']=e
+    # ---- worksheet: real page-1 clock, 60-second self-checks ----
+    w1=pl['ws1']; p1=w1[1]-w1[0]-3.5
+    S[pre+'ws1']=aside_add(S[pre+'ws1'],f'PAGE 1 CLOCK ({fm(w1[0])} to {fm(w1[1])}): about 2 minutes to hand out and get started, then pairs auto-move to their pre-assigned breakout rooms (about 45 seconds), about {fm(p1)} minutes of pair work with the room timer on, and auto-close back to the main room (about 45 seconds). Visit each room once. Items not finished are finished at home; the check slide covers them.')
+    for suf,pg in (('ws1ans','1'),('ws2ans','2')):
+        x=S[pre+suf]
+        x=x.replace(f'Page {pg}: check together',f'Page {pg}: self-check').replace(f'Page {pg}: Check together',f'Page {pg}: self-check')
+        x=aside_add(x,f'SELF-CHECK, about 60 seconds: children correct their own page against these answers in a different colour and hold the corrected page up to the camera once. Ask “how do you know?” on ONE question only. Do not go through every answer aloud.')
+        S[pre+suf]=x
     # ---- talk time rules ----
     tk=S[pre+'talk']
     tk=tk.replace('Ask each child','Ask volunteers').replace('each child','volunteers')
-    tk=aside_add(tk,'TALK TIME RULES: ask for volunteers first; a pass is always fine and so is sharing with a partner. No cold-calling by name, no public tallies or rankings, and nobody is told they were wrong in front of the group. Nobody is called on by name.')
+    tk=aside_add(tk,'TALK TIME FLOAT: this part holds the lesson\'s named 3-minute float. If you are behind, shorten talk time (one discussion question, then the partner share); if you are on time, use the full time for the second question and the return to sneak-peek puzzle 2. Never take time from the exit ticket, look back or stamp. TALK TIME RULES: ask for volunteers first; a pass is always fine and so is sharing with a partner. No cold-calling by name, no public tallies or rankings, and nobody is told they were wrong in front of the group. Nobody is called on by name.')
     k='<p style="position:absolute;left:128px;bottom:64px'; assert k in tk,ln
     tk=tk.replace(k,'<p style="font-size:28px;font-weight:700;color:#1F7A6F">You can share, share with a partner, or pass.</p>\n'+k,1)
     S[pre+'talk']=tk
     # ---- exit ticket: private ----
     ex=S[pre+'exit']
-    ex=aside_add(ex,'Answers are shown only to the tutor on camera (own paper). Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide, 2 minutes.')
+    ex=aside_add(ex,'Answers are shown only to the tutor on camera (own paper). Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide: allow 3 minutes, 2 for the children plus a short share.')
     S[pre+'exit']=ex
     # ---- look-back slide ----
     ex2=', '.join(g['reflect'])
@@ -109,10 +117,11 @@ def add(S,order,ln):
     c2=card(p('The hardest part was ...',40,800)+p('For example: '+ex2+', or something else.',28,500,MUTED))
     c3=card(p('What helped me:',40,800)+p('Tick one: drawing a picture, making a list, trying a number and checking, I asked for help, or I am still stuck (I can ask a grown-up).',28,500,MUTED))
     body=h2('Look back')+p('Two minutes. Open the last page of today’s lesson. Tick or write. You may pass on any line.',32,600,MUTED)+c1+c2+c3
-    notes=('Minutes 86 to 88. Look back: short and safe. SAY: "Turn to the last page of today and find Look back. Tick or write one thing for each line. There are no right answers, and you may pass on any line." Give a full 2 minutes. '
+    ra,rb=pl['reflect']
+    notes=(f'Minutes {fm(ra)} to {fm(rb)}. Look back: short and safe. SAY: "Turn to the last page of today and find Look back. Tick or write one thing for each line. There are no right answers, and you may pass on any line." Give the children a full 2 minutes, then a short share (the slide has 3 minutes). '
       'The page is never collected, marked or read out in front of the group. Children keep their page. The tutor does not see the page, so say: "If something is still puzzling you, you can show this page to a grown-up at home, or tell me at the start of next lesson." At the start of the next lesson, in the open session, invite anyone who would like another look at a puzzle (volunteers only, by hand signal or in the chat; never a private message). '
-      'Invite volunteers only (one or two) to share something they did well, or what helped. Praise the strategy ("you drew it and that got you unstuck"), not the speed or the answer. Then stamp the journal and close (minutes 88 to 90).')
-    S[pre+'reflect']=sec(pre+'reflect',f'{pl["reflect"][0]}–{pl["reflect"][1]} MIN',body,notes)
+      'Invite volunteers only (one or two) to share something they did well, or what helped. Praise the strategy ("you drew it and that got you unstuck"), not the speed or the answer. Then stamp the journal and close (minutes '+fm(rb)+' to 90).')
+    S[pre+'reflect']=sec(pre+'reflect',span(ra,rb),body,notes)
     new=list(order)
     if pre+'warmcheck' not in new: new.insert(new.index(pre+'title')+1,pre+'warmcheck')
     if pre+'reflect' not in new:

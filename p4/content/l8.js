@@ -134,7 +134,8 @@ module.exports = {
     ],
     circulate: ['Ask: “Which square is your base? Which ones become walls?”', 'Ask: “Which face lands on top of this one? Is anything already there?”', 'Ask: “How many squares is this corner from the line? Where is its partner?”'],
     hints: ['Hint 1: “Shade the base. Fold the walls up one at a time with your finger.”', 'Hint 2: “Look for a straight line of 3 squares. The ends are opposite.”', 'Hint 3: “Count the squares from the dashed line to each corner. Put a dot the same number of squares on the other side.”'],
-    talk: ['“Mei says every shape made of 6 squares folds into a cube. Ben says a shape with 4 squares in a row always does. Who is right?”', '“How can you tell two faces are opposite without folding?”'],
+    talk: ["“Mei says every shape made of 6 squares folds into a cube. Ben says a shape with 4 squares in a row always does. Who is right?”"],
+    talkWeekly: ["“How can you tell two faces are opposite without folding?”"],
     talkAns: 'Neither is right. A 2 by 3 rectangle has 6 squares but does not fold into a cube (Mei is wrong). A row of 4 with both extra squares on the same side does not fold either, because both close the same end (Ben is wrong). In a straight line of 3 squares, the two ends are opposite.',
     close: ['“You folded cubes in your head today, and you found the hidden partners in symmetric shapes.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
@@ -142,10 +143,11 @@ module.exports = {
   deck: {
     today: 'Find out which shapes fold into a cube, find opposite faces on a dice net, and complete symmetric figures.',
     warmGame: 'Fold It in Your Head. A letter made of squares appears. Show with your fingers how many lines of symmetry it has, then show where the fold goes.',
-    warmQs: [['How many faces does a cube have?', '6'], ['How many edges?', '12'], ['How many corners?', '8'], ['On a dice, 1 is opposite 6 and 2 is opposite 5. What is opposite 3?', '4'], ['How many ways can you fold a rectangle (not a square) so the halves match?', '2']],
+    warmQs: [["How many faces does a cube have?", "6"], ["How many edges?", "12"], ["How many corners?", "8"]],
+    warmWeekly: [["On a dice, 1 is opposite 6 and 2 is opposite 5. What is opposite 3?", "4"], ["How many ways can you fold a rectangle (not a square) so the halves match?", "2"]],
     expSetup: ['Take 6 paper squares.', 'Join them edge to edge (whole sides touching) and tape them.', 'Try to fold your shape into a cube: no gaps, no overlaps.', 'Draw every shape that works. Did any fail? Why?'],
     expPic: 'six loose paper squares, a cross-shaped net and a folded cube.',
-    expAsk: [['How many different nets did your group find?', 'There are 11 altogether (turned or flipped copies are the same).'], ['What made a shape fail?', 'Two squares landed on the same face: for example a 2 by 2 block, 5 in a row, or two squares closing the same end.'], ['Do all nets have 4 squares in a row?', 'No. Some have rows of 3 (2 rows of 3), and the staircase has no more than 2 in a row.']],
+    expAsk: [["How many different nets did your group find?", "There are 11 altogether (turned or flipped copies are the same)."], ["What made a shape fail?", "Two squares landed on the same face: for example a 2 by 2 block, 5 in a row, or two squares closing the same end."]],
     mini1: { head: 'Fold it in your head', body: ['Shade a base. The squares touching it fold up as walls.', 'A square joined to a wall swings round with it.', 'Is there one base, one lid and four walls?'], ans: 'Yes: it is a net of a cube. If two squares land in the same place, it is not.' },
     mini2: { head: 'Opposite faces', body: ['In a straight line of 3 squares, the ends are opposite.', 'The two ends of a step are opposite.', 'The last two faces are the last pair.'], ans: 'On a dice, opposite faces add up to 7.' },
     keyHead: 'Key idea: fold it in your head', keyBig: 'A net works when it has one base, one lid and four walls with nothing overlapping. In a line of 3, the ends are opposite.', keySmall: 'A line of symmetry: fold along it and the two halves match exactly.',

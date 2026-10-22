@@ -10,7 +10,7 @@ from slidekit import *
 
 H = os.path.dirname(os.path.abspath(__file__))
 QB = json.load(open(os.path.join(H, '..', 'hp', 'qbank.json')))
-OPT = 'Your choice'
+OPT = 'Optional, if you finish early'
 
 def _w(D, sid, s):
     open(os.path.join(D, 'slides', sid + '.html'), 'w').write(s)

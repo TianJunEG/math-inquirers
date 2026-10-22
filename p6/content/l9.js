@@ -202,7 +202,7 @@ module.exports = {
       H.sub('a', 'What does the sprite say?   ________'),
       H.sub('b', 'Jo adds a 5th score, 13, to the list. Which two blocks must change so the program works for a list of ANY length? What should it say now?'),
       ...H.lines(2),
-      H.q(6, 'The highest temperature each day for a week in Singapore, in °C:   29,  31,  33,  30,  32,  34,  28', { keepNext: true }),
+      H.q(6, '★ Take-home. The highest temperature each day for a week in Singapore, in °C:   29,  31,  33,  30,  32,  34,  28', { keepNext: true }),
       H.sub('a', 'Mean temperature?  ____ °C          (b)  Days hotter than the mean?  ____'),
       H.sub('c', 'Plan your code. The variable mean already holds your answer to (a). Fill in the two blanks so the program counts the days hotter than the mean. What will it say?', { keepNext: true }),
       side(codeSvg(planProg, 'Code blocks with two blanks: set count to 0, set i to 1, repeat length of temps (if item i of temps is greater than blank then change blank by 1; change i by 1), say count.'),

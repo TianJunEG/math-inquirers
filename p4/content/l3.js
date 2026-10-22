@@ -90,7 +90,8 @@ module.exports = {
     ],
     circulate: ['Ask: "Which part do you work out first? Point to it and underline it."', 'Ask: "Is your target big or small compared with the numbers? What does that tell you?"', 'Ask: "What is the opposite of this step? How do you undo it?"'],
     hints: ['Hint 1: "Underline the part in brackets, then the × and ÷ parts. Do those first."', 'Hint 2: "Estimate first. A big target usually needs a ×. Try one sign, then test it."', 'Hint 3: "Working backwards, start at the END and undo each step: × becomes ÷, − becomes +."'],
-    talk: ['"Ben says 20 − 8 + 2 = 10 because you add first. Mei says 14. Who is right?"', '"How did you know which sign to try first in the missing-sign puzzles?"'],
+    talk: ["\"Ben says 20 − 8 + 2 = 10 because you add first. Mei says 14. Who is right?\""],
+    talkWeekly: ["\"How did you know which sign to try first in the missing-sign puzzles?\""],
     talkAns: 'Mei is right. When there are only + and − (or only × and ÷), we work from left to right: 20 − 8 = 12, then 12 + 2 = 14. Ben worked out 8 + 2 first, which would need brackets: 20 − (8 + 2) = 10.',
     close: ['"Today you made the signs and brackets work for you, and you worked backwards like real detectives."', '"Hand me your exit ticket and I will stamp your inquiry journal."']
   },
@@ -98,10 +99,11 @@ module.exports = {
   deck: {
     today: 'Use the order of operations, find missing signs and brackets to hit a target, and work backwards through number chains.',
     warmGame: 'Target Numbers. Use the cards 2, 4, 5 and 9 (each once at most) with +, −, × and ÷ to hit 13, 22, 36 and 81.',
-    warmQs: [['25 × 4 = ?', '100'], ['4 800 ÷ 6 = ?', '800'], ['99 × 6 = ?', '594'], ['1 000 − 368 = ?', '632'], ['45 × 20 = ?', '900']],
+    warmQs: [["25 × 4 = ?", "100"], ["4 800 ÷ 6 = ?", "800"], ["99 × 6 = ?", "594"]],
+    warmWeekly: [["1 000 − 368 = ?", "632"], ["45 × 20 = ?", "900"]],
     expSetup: ['Write 6 + 4 × 3 − 2 on your whiteboard and work it out.', 'Put ONE pair of brackets somewhere. Work it out again.', 'Move the brackets to other places. Write every answer.', 'How many different answers? Which is the biggest? The smallest?'],
     expPic: 'number and sign cards 6 + 4 × 3 − 2 in a row, with a pair of bracket cards waiting above them.',
-    expAsk: [['How many different answers did you find?', '3 answers: 16, 28 and 10.'], ['Where do the brackets go for the biggest answer?', '(6 + 4) × 3 − 2 = 28.'], ['Why do some brackets not change the answer?', 'Brackets round 4 × 3 change nothing: × is done first anyway.']],
+    expAsk: [["How many different answers did you find?", "3 answers: 16, 28 and 10."], ["Where do the brackets go for the biggest answer?", "(6 + 4) × 3 − 2 = 28."]],
     mini1: { head: 'Order of operations', body: ['40 − 8 × 3 + 6 ÷ 2', '× and ÷ first: 24 and 3.', '40 − 24 + 3, left to right.'], ans: '19' },
     mini2: { head: 'Missing signs', body: ['8 ? 5 ? 3 = 37 (each ? is a sign)', '37 is big, so try ×: 8 × 5 = 40.', '40 and 3 make 37 how?'], ans: '8 × 5 − 3 = 37' },
     keyHead: 'Key idea: order matters', keyBig: 'Brackets first. Then × and ÷, then + and −, each from left to right.', keySmall: 'To hit a target: estimate, test, adjust. Working backwards: undo each step with the opposite operation.',

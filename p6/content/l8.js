@@ -208,7 +208,7 @@ module.exports = {
       H.sub('a', 'Which 3-letter word appears twice?  ________   What English word could it be?  ________', { after: 60 }),
       H.sub('b', 'If you are right, what shift turns T into B?  ______', { after: 60 }),
       H.sub('c', 'Decode the first word of the message with that shift:   ____________'),
-      H.q(5, 'Two shifts in a row. Shifts add up like jumps on a 26-hour clock. (Example: shift 2 then shift 3 moves A to C to F, the same as shift 5.)', { keepNext: true }),
+      H.q(5, '★ Take-home. Two shifts in a row. Shifts add up like jumps on a 26-hour clock. (Example: shift 2 then shift 3 moves A to C to F, the same as shift 5.)', { keepNext: true }),
       H.sub('a', 'Shift 6, then shift 9 is the same as one shift of  ______ .      (b)  Shift 19, then shift 12:  one shift of  ______ .', { after: 60 }),
       H.sub('c', 'Ben codes a message with shift 9, then codes the result with shift 17. What does he get? Why?', { after: 20 }), ...H.lines(1),
       H.sub('d', 'Which shift (not 0), used twice, always gives back the original message?   ______')

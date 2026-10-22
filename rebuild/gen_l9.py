@@ -126,35 +126,35 @@ body=h2('Key idea: measure fairly')+card(p('Use equal units with no gaps and no 
 put('l9-key',sec('l9-key','34–35 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Counting a ribbon\'s squares carelessly or counting a square twice: touch each one. (2) Answering "how much longer" with the length instead of the difference. (3) "End to end" means add the two lengths. (4) Leaving gaps between cubes in Q2. (5) On a ruler, reading the end mark when the object does not start at 0.'))
 
 # ---------- worksheet page 1 ----------
-put('l9-ws1',ws_preview('l9-ws1','40–51 MIN','Worksheet page 1: with your partner',[('Q1','Three ribbons made of squares. Count each one, then compare.'),('Q2','Guess, then measure with cubes. Find the difference between your guess and the measure.')],'Stuck? Line up the ends and touch each square as you count.','Minutes 40 to 51. Walk around. Ask "How do you know?" before giving any help. Q1: check children count the squares (A 7, B 5, C 9) before answering. Q2: watch for gaps and for cubes not starting at the end of the object. The "difference" column is the gap between guess and measure (for a guess of 8 and a measure of 6, the difference is 2).'))
+put('l9-ws1',ws_preview('l9-ws1','40–51 MIN','Worksheet page 1: with your partner',[('Q1','Three ribbons made of squares. Count each one, then compare.'),('Q2','Use what you measured in Explore. Write your guess, your measure and how far off you were. Only "My choice" is a new measure.')],'Stuck? Line up the ends and touch each square as you count.','Minutes 40 to 51. Walk around. Ask "How do you know?" before giving any help. Q1: check children count the squares (A 7, B 5, C 9) before answering. Q2: children copy the pencil, book and shoe numbers they found in Explore (no second measuring); only the "My choice" row is a new measure, so watch for gaps and for cubes not starting at the end of the object. The "How far off my guess was" column is the gap between guess and measure (for a guess of 8 and a measure of 6, it is 2).'))
 put('l9-ws1ans',check_slide('l9-ws1ans','51–53 MIN','Page 1: check together',[('Q1','a) C   b) B   c) 2 squares   d) 12 squares   e) A'),('Q2','Answers will be different. Same-size cubes make the counts fair to compare.')],'Click each answer after a pair explains theirs. Q1: A has 7 squares, B has 5, C has 9. c) 7 − 5 = 2. d) 7 + 5 = 12. e) C cut 2 shorter: 9 − 2 = 7, the same as A. Q2a: "If the cubes were different sizes, the numbers would not mean the same thing, so we could not compare."'))
 
 # ---------- teach before page 2: bigger unit ----------
 U=60
-stick=row_svg('Stick',[(1,9,WOOD,'solid')],U,200,aria='A stick 9 erasers long')
-clips=row_svg('Clips',[(3,3,CLIP,'clip')],U,200,after='3 clips',aria='3 clips cover the stick')
-ers=row_svg('Erasers',[(9,1,ERASER,'solid')],U,200,after='9 erasers',aria='9 erasers cover the stick')
-body=h2('Bigger unit, smaller number')+card(p('1 clip is as long as 3 erasers. We measure one stick with both.',38,700))
+stick=row_svg('Stick',[(1,8,WOOD,'solid')],U,200,aria='A stick 8 erasers long')
+clips=row_svg('Clips',[(4,2,CLIP,'clip')],U,200,after='4 clips',aria='4 clips cover the stick')
+ers=row_svg('Erasers',[(8,1,ERASER,'solid')],U,200,after='8 erasers',aria='8 erasers cover the stick')
+body=h2('Bigger unit, smaller number')+card(p('1 clip is as long as 2 erasers. We measure one stick with both.',38,700))
 body+=pin(128,350,1000,stick)+pin(128,440,1000,clips,'rise')+pin(128,530,1000,ers,'rise')
-body+=pin(1180,350,612,p('Same stick! Each clip covers 3 erasers, so we need fewer clips.',34,700),'fade',SOFT,20,'22px 26px')
+body+=pin(1180,350,612,p('Same stick! Each clip covers 2 erasers, so we need fewer clips.',34,700),'fade',SOFT,20,'22px 26px')
 body+=qrow(128,680,1250,'Your turn:','A path is 5 of Tom\'s steps or 7 of Sue\'s steps. Who takes bigger steps?',34)+answer(1420,680,372,'Tom')
-put('l9-teachunit',sec('l9-teachunit','53–55 MIN',body,'Teach before worksheet page 2 (Q3 and Q4). Use real clips and erasers if you have them (or draw). Click 1: the clips. Click 2: the erasers. Ask: "Is the stick longer when we use erasers?" (No, it is the same stick.) Click 3. Think-aloud: "A bigger unit covers more of the stick each time, so I need fewer of them. A smaller unit gives a bigger number." Your turn: whiteboards, then click. "Tom needs fewer steps for the same path, so each of his steps is bigger." Do not tell them the Q3 answer: it is the same idea with hand spans.'))
+put('l9-teachunit',sec('l9-teachunit','53–55 MIN',body,'Teach before worksheet page 2 (Q3 and Q4). 1 clip = 2 erasers here and on the worksheet. Use real clips and erasers if you have them (or draw). Click 1: the clips. Click 2: the erasers. Ask: "Is the stick longer when we use erasers?" (No, it is the same stick.) Click 3. Think-aloud: "A bigger unit covers more of the stick each time, so I need fewer of them. A smaller unit gives a bigger number." Your turn: write it on your own paper, then click. "Tom needs fewer steps for the same path, so each of his steps is bigger." Do not tell them the Q3 answer: it is the same idea with hand spans.'))
 
 # ---------- teach: change unit both ways ----------
 U=50
-L1=row_svg('clips',[(4,3,CLIP,'clip')],U,140,aria='Rope 4 clips long',lab_size=30)
-L2=row_svg('erasers',[(12,1,ERASER,'solid')],U,140,aria='The same rope is 12 erasers long',lab_size=30)
+L1=row_svg('clips',[(4,2,CLIP,'clip')],U,140,aria='Rope 4 clips long',lab_size=30)
+L2=row_svg('erasers',[(8,1,ERASER,'solid')],U,140,aria='The same rope is 8 erasers long',lab_size=30)
 R1=row_svg('erasers',[(6,1,ERASER,'solid')],U,140,aria='Book 6 erasers long',lab_size=30)
-R2=row_svg('clips',[(2,3,CLIP,'clip')],U,140,aria='The same book is 2 clips long',lab_size=30)
-body=h2('Change the unit: both ways')+card(p('1 clip is as long as 3 erasers.',40,700),SOFT)
+R2=row_svg('clips',[(3,2,CLIP,'clip')],U,140,aria='The same book is 3 clips long',lab_size=30)
+body=h2('Change the unit: both ways')+card(p('1 clip is as long as 2 erasers.',40,700),SOFT)
 body+=pin(128,365,800,p('Clips to erasers: a rope is 4 clips long.',34,800,TEAL))
 body+=pin(128,430,800,L1)+pin(128,510,800,L2,'rise')
-body+=step('A','Each clip is 3 erasers: 3, 6, 9, 12. The rope is 12 erasers long.',left=128,top=610,width=800,size=32)
+body+=step('A','Each clip is 2 erasers: 2, 4, 6, 8. The rope is 8 erasers long.',left=128,top=610,width=800,size=32)
 body+=pin(992,365,800,p('Erasers to clips: a book is 6 erasers long.',34,800,TEAL))
 body+=pin(992,430,800,R1)+pin(992,510,800,R2,'rise')
-body+=step('B','Put the erasers in groups of 3: 3, 6. That is 2 groups, so the book is 2 clips long.',left=992,top=610,width=800,size=32)
+body+=step('B','Put the erasers in groups of 2: 2, 4, 6. That is 3 groups, so the book is 3 clips long.',left=992,top=610,width=800,size=32)
 body+=pin(128,810,1664,p('To a smaller unit: the number gets bigger. To a bigger unit: the number gets smaller.',32,700),'fade',SOFT,20,'16px 28px')
-put('l9-teachconv',sec('l9-teachconv','55–57 MIN',body,'Teach before worksheet page 2 (Q4 goes both ways). Left side, click 1: draw 3 erasers under each clip. Click 2: count in 3s along the erasers: 3, 6, 9, 12. Think-aloud: "4 clips, and every clip is 3 erasers, so 3 and 3 and 3 and 3: 12 erasers." Right side, click 3: ring the erasers in 3s. Click 4: "6 erasers make 2 groups of 3, so 2 clips. I check: 3 + 3 = 6." Click 5: the summary. Ask: "Changing to erasers, did the number get bigger or smaller? Why?" The worksheet uses 1 clip = 2 erasers: the same method, groups of 2.'))
+put('l9-teachconv',sec('l9-teachconv','55–57 MIN',body,'Teach before worksheet page 2 (Q4 goes both ways). Left side, click 1: draw 2 erasers under each clip. Click 2: count in 2s along the erasers: 2, 4, 6, 8. Think-aloud: "4 clips, and every clip is 2 erasers, so 2 and 2 and 2 and 2: 8 erasers." Right side, click 3: ring the erasers in 2s. Click 4: "6 erasers make 3 groups of 2, so 3 clips. I check: 2 + 2 + 2 = 6." Click 5: the summary. Ask: "Changing to erasers, did the number get bigger or smaller? Why?" The teaching slides and the worksheet both use 1 clip = 2 erasers, so the worksheet Q4 is the same method (5 clips; 12 erasers).'))
 put('l9-tryconv',try_slide('l9-tryconv','57–58 MIN','Your turn: change the unit','Draw the bars. Count in groups.',[('a','1 clip = 3 erasers. A ribbon is 5 clips long. How many erasers?','15 erasers'),('b','1 clip = 3 erasers. A pen is 9 erasers long. How many clips?','3 clips'),('c','1 straw = 2 cubes. A tray is 8 cubes long. How many straws?','4 straws')],'Whiteboards. a) 3, 6, 9, 12, 15: 15 erasers. b) Groups of 3: 3, 6, 9 is 3 groups, so 3 clips. Check 3 + 3 + 3 = 9. c) Groups of 2: 2, 4, 6, 8 is 4 groups, so 4 straws. Ask after b: "Erasers to clips: bigger unit, so is the number bigger or smaller?"',34))
 
 # ---------- teach: longer than / shorter than ----------
@@ -221,3 +221,4 @@ import p1gaps; p1gaps.apply(D,9)
 import p1fix
 p1fix.finish(D,9,{'l9-ws1':'40–50 MIN','l9-ws1ans':'50–52 MIN','l9-teachunit':'52–54 MIN','l9-teachconv':'54–56 MIN','l9-tryconv':'56–57 MIN','l9-teachmore':'57–58 MIN','l9-ws2':'58–68 MIN'})
 import p1neutral; p1neutral.apply(D,9)
+import p1budget; p1budget.apply(D,9)

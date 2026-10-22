@@ -97,7 +97,8 @@ module.exports = {
     ],
     circulate: ['Ask: “Which side is opposite this one? How can that help you find the missing length?”', 'Ask: “Can you find the area another way to check?”', 'Ask: “You cut the shape and moved a piece. What stayed the same? What changed?”'],
     hints: ['Hint 1: “Mark every side with its length before you start. Use the opposite sides.”', 'Hint 2: “Draw the big rectangle round the shape. What is missing?”', 'Hint 3: “Push the steps out. Does the outline become a rectangle?”'],
-    talk: ['“Ben says a bigger area always means a bigger perimeter. Can you find two rectangles that prove him wrong?”', '“When we cut a shape and move the pieces, which stays the same, area or perimeter? Why?”'],
+    talk: ["“Ben says a bigger area always means a bigger perimeter. Can you find two rectangles that prove him wrong?”"],
+    talkWeekly: ["“When we cut a shape and move the pieces, which stays the same, area or perimeter? Why?”"],
     talkAns: 'Ben is wrong. A 1 cm by 12 cm rectangle has area 12 cm² and perimeter 26 cm, but a 4 cm by 4 cm square has a bigger area (16 cm²) and a smaller perimeter (16 cm). When we cut and move pieces, nothing is added or lost, so the area stays the same; the outline changes, so the perimeter can change.',
     close: ['“Today you were real architects: you split shapes, took pieces away and pushed steps out instead of counting every square.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
@@ -105,10 +106,11 @@ module.exports = {
   deck: {
     today: 'Find the area and perimeter of tricky shapes the smart way, and find out why the same area can have different perimeters.',
     warmGame: 'Area or Perimeter? The tutor reads a job. Hold up A if it covers the inside, P if it goes round the edge. Then explain why.',
-    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Perimeter of a square with sides of 9 cm?', '36 cm'], ['A rectangle has area 48 cm² and length 8 cm. Breadth?', '6 cm'], ['Perimeter of a rectangle 12 cm by 5 cm?', '34 cm'], ['A square has perimeter 28 cm. Its area?', '49 cm²']],
+    warmQs: [["Area of a rectangle 7 cm by 6 cm?", "42 cm²"], ["Perimeter of a square with sides of 9 cm?", "36 cm"], ["A rectangle has area 48 cm² and length 8 cm. Breadth?", "6 cm"]],
+    warmWeekly: [["Perimeter of a rectangle 12 cm by 5 cm?", "34 cm"], ["A square has perimeter 28 cm. Its area?", "49 cm²"]],
     expSetup: ['Take 12 square tiles. Each is 1 cm by 1 cm.', 'Use all 12 to make a rectangle. Write its length, breadth and perimeter.', 'Make every different rectangle you can.', 'Which has the longest perimeter? The shortest? What do you notice?'],
     expPic: 'twelve yellow square tiles next to a 1 cm grid with a 2 by 6 rectangle drawn on it, and a small table with the columns length, breadth and perimeter.',
-    expAsk: [['How many different rectangles did you make?', '3: 1 by 12, 2 by 6 and 3 by 4 (turning one round does not make a new one).'], ['Which has the longest perimeter? The shortest?', '1 by 12 has 26 cm; 3 by 4 has 14 cm.'], ['What do you notice?', 'All have area 12 cm², but the perimeters differ. Long and thin is biggest; closest to a square is smallest.']],
+    expAsk: [["How many different rectangles did you make?", "3: 1 by 12, 2 by 6 and 3 by 4 (turning one round does not make a new one)."], ["Which has the longest perimeter? The shortest?", "1 by 12 has 26 cm; 3 by 4 has 14 cm."]],
     mini1: { head: 'Area of an L-shape: split or take away', body: ['An 8 cm by 6 cm rectangle with a 3 cm by 2 cm piece missing from one corner.', 'Split: 5 × 6 + 3 × 4.', 'Take away: 8 × 6 − 3 × 2.'], ans: '42 cm² both ways.' },
     mini2: { head: 'Perimeter: push the steps out', body: ['The same L-shape. Two sides have no labels.', 'Slide the step sides out to the edges.', 'It becomes an 8 cm by 6 cm rectangle.'], ans: '28 cm, the same as the rectangle.' },
     keyHead: 'Key idea: split, take away, push out', keyBig: 'Area: split into rectangles or take the missing piece away. Perimeter: push the steps out to make a rectangle.', keySmall: 'The same area can have different perimeters. Close to a square gives the smallest perimeter.',

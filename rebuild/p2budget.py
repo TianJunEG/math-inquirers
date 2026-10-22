@@ -122,3 +122,15 @@ def build(K, mini, teach, pre=None, warm=(2.5, 2.0), explore=(9.0, 4.0), optiona
     return d
 
 build(1, mini=[('teach1', 2), ('try1', 1.5), ('we1', 3), ('try2', 1.5), ('teachzero', 3), ('key', 1)], teach=[('teachchart', 2.5), ('teachriddle', 2)])
+
+build(2, mini=[('teach1', 4), ('try1', 2), ('try2', 1.5), ('teach3', 3.5), ('key', 1)], teach=[('teachsq', 2.5), ('teachtwo', 2)])
+
+build(2, mini=[('teach1', 4), ('try1', 2), ('try2', 1.5), ('teach3', 3.5), ('key', 1)], teach=[('teachsq', 2.5), ('teachtwo', 2)])
+build(3, mini=[('teach1', 2.5), ('we1', 3), ('teach2', 3.5), ('try2', 2), ('key', 1)], teach=[('teachshare', 2), ('teachround', 1.5), ('teachall', 1)])
+build(4, mini=[('teach1', 2), ('we1', 2.5), ('teachcount', 1.5), ('teachtimes', 1.5), ('teachgrow', 1.5), ('try1', 2), ('key', 1)], teach=[('teachboth', 2.5)])
+build(5, mini=[('teach1', 2), ('we1', 3.5), ('try1', 1), ('we2', 3.5), ('try2', 1), ('key', 1)], teach=[('teachparts', 2.5), ('teachorder', 2)], pre='teachrule', extra={'teachthree': OPT})
+
+if __name__ == '__main__':
+    R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'p2', 'budget.json')
+    json.dump(budget_json(), open(R, 'w'), indent=1, ensure_ascii=False)
+    print('wrote', os.path.normpath(R))

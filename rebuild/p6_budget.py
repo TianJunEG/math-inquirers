@@ -75,7 +75,7 @@ BUD[6]=lesson(6,std(2,4.5,6,14.5,10.5,5,31.5),2.5,6,3.5,{
  'Mini-lesson':[('teach1',1.5),('we1',1.5),('try1',1),('teachtwo',2),('try2',1),('teachcode',2.5),('key',1)],'Brain break':[('break',5)],
  'Worksheet':[('teachbag',2),('ws1',10),('ws1ans',3),('teachfair',3),('ws2',11),('ws2ans',2.5)]})
 BUD[7]=lesson(7,std(2,4.5,6.5,14.5,12.5,5.5,30),2.5,5,3,{
- 'Sneak-peek puzzles':[('check',4.5)],'Warm-up':[('warm1',3),('warm2',3.5)],'Explore':[('explore1',5),('explore2',9.5)],
+ 'Sneak-peek puzzles':[('check',4.5)],'Warm-up':[('warm1',4),('warm2',2.5)],'Explore':[('explore1',5),('explore2',9.5)],
  'Mini-lesson':[('teach1',1.5),('we1',2),('try1',1.5),('we2',2),('try2',1.5),('we3',2.5),('key',1.5)],'Brain break':[('break',5.5)],
  'Worksheet':[('ws1',10),('ws1ans',3),('teachtrace',2.5),('teachstar',2.5),('ws2',9),('ws2ans',3)]})
 BUD[8]=lesson(8,std(2,4,5.5,14.5,11,5,31),4,6,3,{

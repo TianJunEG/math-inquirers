@@ -3,6 +3,7 @@
 // estimate by rounding to catch wrong answers; brackets first, then × and ÷, then + and −; write the range before "find all".
 // Every answer below was worked out and checked with a short Python script (exact search over all cases).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
+const { TKQ, TKP } = require('./take.js');
 const FF = 'Fredoka, Arial, sans-serif';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -39,9 +40,9 @@ module.exports = {
     skills: 'Place value to 10 million, testing both sides of a target, reasoning from clues in order, estimating by rounding, order of operations with brackets, making a list in order',
     materials: 'Digit cards 0 to 9 (one set per child), a 7-column place-value mat (M, HTh, TTh, Th, H, T, O), mini whiteboard, a calculator for the explore (every child needs one; a phone calculator is fine), workbook.',
     online: 'Children cut out paper digit cards and draw a 7-box place-value mat before the lesson and hold them up to the camera. The tutor shares the slides and writes on the place-value chart. Pairs work in breakout rooms for the explore and page 1. Before the lesson, ask every parent to put a calculator (a phone calculator is fine) next to the child for the explore.',
-    warmup: 'Million Maker: the tutor turns over digit cards one at a time; children write each digit in one of seven place-value boxes straight away and cannot move it. Closest to 5 000 000 wins. Then five quick questions on whiteboards.',
+    warmup: 'Million Maker: the tutor turns over digit cards one at a time; children write each digit in one of seven place-value boxes straight away and cannot move it. Closest to 5 000 000 wins. Then four quick questions on whiteboards.',
     explore: 'How long is a million seconds? Pairs guess first (an hour, a day, a week, a month or a year), then work out the seconds in an hour and in a day and use them to find how many days a million seconds lasts.',
-    mini: 'Read 7-digit numbers in groups of three from the right; tell the value of a digit apart from how many thousands a number has. Closest to a target with digit cards: build the best number just below and the best just above, then compare the gaps. Digit riddles: use the rounding clue to fix the first digits, follow the clues in order and check every clue at the end. Before page 2: estimate by rounding to catch wrong calculator answers; brackets first, then × and ÷, then + and −; for "find all" with rounding, write the range first.',
+    mini: 'Read 7-digit numbers in groups of three from the right; tell the value of a digit apart from how many thousands a number has. Closest to a target with digit cards: build the best number just below and the best just above, then compare the gaps. Digit riddles: use the rounding clue to fix the first digits, follow the clues in order and check every clue at the end. Before page 2: estimate by rounding to catch wrong calculator answers; brackets first, then × and ÷, then + and −. (The "find all" with rounding, writing the range first, is on the take-home Q6.)',
     share: 'Siti says a 7-digit number is always bigger than a 6-digit number. Ravi says not if the 6-digit number has bigger digits, like 999 999. Who is right? Explain.',
     exit: { q: '(a) What is the value of the digit 4 in 8 406 125?  (b) Add one pair of brackets to make it true:  5 + 3 × 8 − 2 = 62', a: '(a) 400 000  (b) (5 + 3) × 8 − 2 = 62' },
     mistakes: [
@@ -61,7 +62,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Math Inquirers P5! This holiday we play with puzzles that stretch your thinking. Every lesson we notice a pattern, test it and explain why.', 'Today our numbers grow up to 10 million. How big is a million, really? By the end you will know, and you will solve puzzles that most adults get wrong.'],
+    hook: ['Welcome to Math Inquirers P5! This holiday we play with puzzles that stretch your thinking. Every lesson we notice a pattern, test it and explain why.', 'Today our numbers grow up to 10 million, and you will find out how long a million seconds really is.'],
     warmIntro: ['Draw seven boxes for millions down to ones. I turn over one digit card at a time. Write it in a box straight away. No moving it later!', 'The winner is the number closest to 5 000 000. Think: where does a 4 go? A 9? A 0?'],
     predict: ['Before any working: how long is a million seconds? An hour, a day, a week, a month or a year? Write your guess in the corner of your whiteboard and do not change it.'],
     exploreHints: ['Stuck: how many seconds in one minute? In one hour? Multiply, do not add.', 'Stuck on days: you know the seconds in one day. How many days make close to 1 000 000? Try 10 days first.', 'If a pair wants more: how long is 10 million seconds? More or less than a school term?'],
@@ -72,26 +73,26 @@ module.exports = {
     ],
     circulate: ['Ask: “Did you look just below AND just above the target?”', 'Ask: “Which clue fixes the most digits? Start there.”', 'Ask: “Estimate first. Is the calculator answer about the right size?”'],
     hints: ['Hint 1: “Read the number in groups of three from the right: millions, thousands, ones.”', 'Hint 2: “Write the two best numbers, one just below and one just above, and find each gap.”', 'Hint 3: “Put each clue’s digit straight into the place-value chart as you go.”'],
-    talk: ['“Siti says a 7-digit number is always bigger than a 6-digit number. Ravi says not if the 6-digit number has bigger digits, like 999 999. Who is right?”', '“How did you check that you had found ALL the numbers in Q6?”'],
+    talk: ['“Siti says a 7-digit number is always bigger than a 6-digit number. Ravi says not if the 6-digit number has bigger digits, like 999 999. Who is right?”', '“How did you check that your riddle number in Q3 fits every clue?”'],
     talkAns: 'Siti is right. The smallest 7-digit number is 1 000 000 and the biggest 6-digit number is 999 999, which is 1 less. A 7-digit number has a millions digit that is at least 1, and that alone beats every 6-digit number, whatever its digits are.',
     close: ['“Today you read numbers up to 10 million, tested both sides of a target, followed clues to a single answer and used estimation and brackets. That is how inquirers work with big numbers.”', '“Do the exit ticket on your own, then show me.”']
   },
 
   deck: {
     today: 'Read and build numbers up to 10 million, solve digit puzzles, estimate to catch mistakes and use brackets to hit a target.',
-    warmGame: 'Million Maker. Draw seven boxes (M to O). The tutor turns over digit cards one at a time; write each one in a box straight away and do not move it. Closest to 5 000 000 wins. Play 3 rounds.',
-    warmQs: [['Write in numerals: 3 million, 40 thousand and 6', '3 040 006'], ['The value of the 7 in 2 716 450', '700 000'], ['4 560 000 ÷ 1000', '4560'], ['Round 6 849 500 to the nearest thousand', '6 850 000'], ['8 + 4 × 5 − 6 ÷ 2', '25']],
+    warmGame: 'Million Maker. Draw seven boxes (M to O). The tutor turns over digit cards one at a time; write each one in a box straight away and do not move it. Closest to 5 000 000 wins. Play 1 round.',
+    warmQs: [['Write in numerals: 3 million, 40 thousand and 6', '3 040 006'], ['The value of the 7 in 2 716 450', '700 000'], ['4 560 000 ÷ 1000', '4560'], ['Round 6 849 500 to the nearest thousand', '6 850 000']],
     expSetup: ['Guess first: is a million seconds about an hour, a day, a week, a month or a year? Write your guess.', 'Work out how many seconds there are in 1 hour.', 'Work out how many seconds there are in 1 day.', 'How many days is 1 000 000 seconds? Get as close as you can, then compare with your guess.'],
     expPic: 'a stopwatch next to a big counter showing 1 000 000 seconds, with a calendar page and a question mark.',
-    expAsk: [['How many seconds are in 1 day?', '86 400 (60 × 60 = 3600 in an hour, × 24).'], ['About how many days is a million seconds?', 'Between 11 and 12 days: 11 days = 950 400 s and 12 days = 1 036 800 s. About 11 and a half days.'], ['About how long is 10 million seconds?', 'About 116 days, nearly 4 months (10 × 11.6 days).']],
+    expAsk: [['How many seconds are in 1 day?', '86 400 (60 × 60 = 3600 in an hour, × 24).'], ['About how many days is a million seconds?', 'Between 11 and 12 days: 11 days = 950 400 s and 12 days = 1 036 800 s. About 11 and a half days.']],
     mini1: { head: 'Closest to 5 000 000 with the cards 0, 1, 2, 4, 5, 7, 8', body: ['Just above: start with 5, then the smallest: 5 012 478 (12 478 away).', 'Just below: start with 4, then the biggest: 4 875 210 (124 790 away).', 'Compare the gaps.'], ans: '5 012 478 is closest. Always test both sides of the target.' },
     mini2: { head: 'Digit riddle: rounds to 3 600 000 (nearest hundred thousand); ten thousands digit is 4 more than the hundred thousands digit; thousands digit is their difference; hundreds digit is half the thousands digit; tens digit 0; digits add to 31; all different', body: ['Rounding: 3 5 with a big digit next, or 3 6 with a small digit next.', '4 more: 5 + 4 = 9 works; 6 + 4 = 10 does not.', 'Thousands 9 − 5 = 4, hundreds 2, tens 0, ones 31 − 23 = 8.'], ans: '3 594 208. Check every clue at the end.' },
     keyHead: 'Key idea: test both sides, check every clue',
     keyBig: 'Place value tells you what each digit is worth. To get closest to a target, test the best number just below AND just above.',
     keySmall: 'Riddles: start with the clue that fixes the most digits, then check every clue at the end.',
     brk: 'Human number line: stand up and stretch as tall as 10 million, crouch as small as 1, then show where 5 million, 2 500 000 and 9 900 000 would be with your arms.',
-    ws1: 'Page 1, in pairs: Q1 place value, Q2 digit cards and the closest number, Q3 the digit riddle.',
-    ws2: 'Page 2, on your own: Q4 estimate to catch mistakes, Q5 brackets and a target of 100, Q6 find all the numbers.'
+    ws1: 'Page 1, in pairs: Q2 digit cards and the closest number, Q3 the digit riddle (Q1 place value is take-home).',
+    ws2: 'Page 2, on your own: Q4 estimate to catch mistakes, Q5 (a) (b) brackets (Q5 (c) and (d) and Q6, the numbers that round to 2 500 000, are take-home).'
   },
 
   qbank: {
@@ -131,7 +132,7 @@ module.exports = {
     const W = [];
     const raw = s => [s];
     // Q1 place value
-    W.push(H.q(1, 'Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.', { before: 20, keepNext: true }));
+    W.push(H.q(1, [TKQ, H.t('Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.')], { before: 20, keepNext: true }));
     W.push(H.sub('a', 'Numerals for five million, three hundred and eight thousand and forty:  ________'));
     W.push(H.sub('b', 'In 6 482 315, the digit 4 stands for ________.  The ten thousands digit is ____.'));
     W.push(H.sub('c', 'How many thousands make 3 250 000?   __________'));
@@ -165,11 +166,11 @@ module.exports = {
     W.push(H.q(5, 'Brackets first, then × and ÷, then + and −. Put in ONE pair of brackets to make each statement true.', { keepNext: true }));
     W.push(H.sub('a', '6  +  4  ×  5  −  2  =  48'));
     W.push(H.sub('b', '6  +  4  ×  5  −  2  =  18'));
-    W.push(H.sub('c', '1 000 000  ÷  200  +  300  ×  2  =  4000'));
+    W.push(H.sub('c', [TKP, H.t('1 000 000  ÷  200  +  300  ×  2  =  4000')]));
     W.push(H.sub('d', '(try this one if you like) Target 100! Use 3, 5, 7 and 9 once each, with any of +, −, ×, ÷ and brackets, to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
     W.push(...H.lines(1));
     // Q6 find all
-    W.push(H.q(6, 'A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?', { keepNext: true }));
+    W.push(H.q(6, [TKQ, H.t('A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?')], { keepNext: true }));
     W.push(H.fig(roundLine()));
     W.push(H.sub('a', 'Circle each one that rounds to 2 500 000:      2 499 499      2 499 500      2 500 000      2 500 499      2 500 500'));
     W.push(H.sub('b', 'The smallest number that rounds to 2 500 000 is ____________ and the greatest is ____________.', { after: 40 }));
