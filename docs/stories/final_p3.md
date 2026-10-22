@@ -16,7 +16,7 @@
 Lessons 3, 4, 5 (Napier, Bhaskara II, Sun Zi) are kept unchanged from p3.json. Women: Uhlenbeck, Spear (only two; no honest woman with a specific fractions link was found for lesson 6). Countries: China twice (Sun Zi, Zu Chongzhi), United States twice (Uhlenbeck, Spear), Morocco once.
 
 ## Claims I could not confirm
-- Whether Gerbert used a zero digit: sources say probably not; the story says historians think not.
+- Whether Gerbert used a zero digit: sources say probably not; the story says historians think not. Re-checked and kept: MacTutor and Wikipedia both describe his abacus with columns where a digit's value depends on its column, with a blank space or empty column for 'nothing', and this is exactly the place-value idea of lesson 1 (it does not need a zero digit). The story already says historians think he did not use zero.
 - Al-Hassar: no birth or death dates exist in the sources (Muslim Heritage lists 1100 for both, a placeholder). Wikipedia and Muslim Heritage both say he developed the fraction-bar notation; other sources say "introduced", so the story does not say first. His first book is lost and the second survives in part. MAA pages were not opened (HTTP 521/403). The claim he taught in Ceuta is only in search snippets and is not used.
 - Ibn al-Haytham: Britannica could not be opened (403); MacTutor does not state the equal-angle rule explicitly; Wikipedia credits him with a complete statement. The story says only that he studied reflection with angles, and notes earlier scholars knew the rule.
 - Zu Chongzhi: death year (500 or 501) and calendar date (462, 465, adopted 510) vary across sources; the calendar is not dated in the story. Britannica not opened (403).
