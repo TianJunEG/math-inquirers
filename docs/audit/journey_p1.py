@@ -151,3 +151,33 @@ for name, ps in PROF.items():
 print('\nSensitivity: typical child with higher accuracy (mains .85 average) under the CURRENT rule')
 hi = [.99,.98,.97,.97, .92,.92,.80,.70,.80,.85, .20,.10]
 o, tot, e = dist_outcomes(hi); print({k: round(100 * v) for k, v in sorted(o.items(), key=lambda x: -x[1]) if v > .005}, [round(100*x) for x in tot])
+
+# =====================  PART 1: scores (my judgement; evidence is in journey_p1.md)  =====================
+# order: Participate, Difficulty fit (3 = just right), Fun, Confidence, Motivation, Social/online
+S = {
+ 1: {'LOW': (4,2,3,2,3,3), 'MID': (5,3,4,3,4,4), 'HIGH': (5,2,4,3,3,3)},
+ 2: {'LOW': (4,2,3,3,3,3), 'MID': (5,3,4,3,3,4), 'HIGH': (5,2,3,4,3,3)},
+ 3: {'LOW': (5,3,5,4,4,4), 'MID': (5,4,5,4,4,4), 'HIGH': (5,2,4,4,3,4)},
+ 4: {'LOW': (5,3,4,3,3,3), 'MID': (5,4,4,4,4,4), 'HIGH': (5,2,3,3,3,3)},
+ 5: {'LOW': (4,2,3,2,3,3), 'MID': (5,3,4,3,4,4), 'HIGH': (5,3,4,4,4,3)},
+ 6: {'LOW': (3,1,2,1,2,2), 'MID': (4,2,3,2,3,3), 'HIGH': (5,3,5,4,4,4)},
+ 7: {'LOW': (4,3,4,3,3,3), 'MID': (5,3,5,4,4,4), 'HIGH': (5,3,5,4,4,3)},
+ 8: {'LOW': (3,2,3,2,3,3), 'MID': (4,3,4,3,4,4), 'HIGH': (5,3,5,4,4,4)},
+ 9: {'LOW': (4,2,4,3,3,3), 'MID': (5,3,4,3,4,4), 'HIGH': (5,3,4,4,4,3)},
+ 10:{'LOW': (3,2,3,3,4,2), 'MID': (4,3,4,4,4,3), 'HIGH': (5,3,5,4,5,4)},
+}
+print('\n=== HEATMAP (mean of six scores) ===')
+print('L   LOW   MID   HIGH')
+cells = []
+for n in range(1, 11):
+    m = {k: sum(v) / 6 for k, v in S[n].items()}
+    print('%-3d %.2f  %.2f  %.2f' % (n, m['LOW'], m['MID'], m['HIGH']))
+    cells += [(m[k], n, k) for k in m]
+for k in ('LOW', 'MID', 'HIGH'):
+    print(k, 'level mean %.2f' % (sum(sum(S[n][k]) / 6 for n in S) / 10),
+          '| by dimension P,D,F,C,M,S:', [round(sum(S[n][k][i] for n in S) / 10, 1) for i in range(6)])
+cells.sort()
+print('5 weakest:', [(round(a, 2), n, k) for a, n, k in cells[:7]])
+print('3 strongest:', [(round(a, 2), n, k) for a, n, k in cells[-6:]])
+ft = 'Fast track. Got both warm-up check questions right and can say why? Ask your tutor. You may go straight to the Think Harder and Challenge pages and the Open investigation while the group works on this page. Come back to the group for talk time.'
+print('Fast-track box words:', len(ft.split()))
