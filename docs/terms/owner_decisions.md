@@ -28,3 +28,7 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 ## Level 1 Term 1 content level (22 Oct 2026, after the independent workbook audits)
 - **Keep the stronger arithmetic.** Term 1 stays above the school Primary 1 quiz range (e.g. two-digit minus two-digit, crossing a ten, sums above 40). Do not pull Start here back to the school ceiling.
 - Consequences for the fix pass: keep the content, but (a) make every such Start here item approachable with scaffolding (tens bars, number line, bundles, worked partner step) so it is still explored in class, (b) say plainly in the tutor guide and parent summary that Term 1 goes beyond the school P1 syllabus on purpose (no overclaiming of 'MOE-aligned'), (c) keep tier labels honest: if an item is not approachable after class exploration, move it to Think harder.
+
+## End-of-term check (22 Oct 2026)
+- **The check takes 20 minutes** (not 29). Lesson 10's exit part shrinks; explore, mini-lesson and workbook time can grow back. The check keeps one question per lesson; cut to fit 20 minutes (a few questions can be shorter, or two questions can share a page) and keep the optional Think harder stretch item.
+- **Photos of the check are returned by the parent to the business WhatsApp (+65 9880 5962)** unless the owner changes it. Tutors never use personal phones for this. Default stays until changed.
