@@ -241,3 +241,6 @@ Owner replied: LOOKBACK-RETIRE, ACCEPT-NOTE, CARD-BOOK1, P39-TWO, WORD-UNUSED.
 - CARD-BOOK1: the Toolbox Card ships printed with Book 1.
 - P39-TWO: P1 semester booklet page P1-39 (Share and Group) is a two-star page.
 - WORD-UNUSED: the Level 1 holiday Word workbook (hp/workbook.js) is not used; ignore it (PDF is the only version).
+
+## 23 Oct 2026 (night): PUBLISHER-OK and LICENCE-ANNUAL
+Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math Inquirers" and an ANNUAL licence term for the school-book products (P1 semester booklets first). Licence wording itself is still a draft for a lawyer to approve before any school receives a booklet. Owner is the contact: pypteltd@gmail.com until a business email is given.
