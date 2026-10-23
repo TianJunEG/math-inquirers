@@ -215,3 +215,6 @@ Owner replied "Term-all" = accept all recommendations:
 - Decision 4: KEEP Level 1 Term 1 stronger-arithmetic decision (22 Oct) as is.
 - Decision 5: Level 6 Terms 3 and 4 around the PSLE: treat Term 3 as a BRIDGE block (not acceleration).
 - Quest placement: lesson 10 of each term (10, 20, 30, 40) for ALL levels (resolves the disagreement between Level 5, Level 6 and Level 3 pre-flight notes).
+
+## 23 Oct 2026 (night): ENTITY-OK
+Owner confirmed the copyright line "(c) 2026 Preciouslyours Pte Ltd" (entity and year) for the Primary 1 booklets and school-book products. Still open: registered office address (placeholder), publisher line, licence wording and term (lawyer), and how the school name is set per booklet.

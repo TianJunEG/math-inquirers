@@ -71,8 +71,8 @@ const grid = () => {
   const c = 52, x0 = 36, y0 = 30; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right. A puddle at point P is a hatched circle." viewBox="0 0 250 220" xmlns="http://www.w3.org/2000/svg" style="width:250px;max-width:100%">${FG.DEFS}`;
   for (let i = 0; i <= 3; i++) s += `<line x1="${x0}" y1="${y0 + i * c}" x2="${x0 + 3 * c}" y2="${y0 + i * c}" stroke="${NAVY}" stroke-width="4"/><line x1="${x0 + i * c}" y1="${y0}" x2="${x0 + i * c}" y2="${y0 + 3 * c}" stroke="${NAVY}" stroke-width="4"/>`;
   for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="${isP ? 19 : 17}" fill="${isP ? 'url(#mi-hatch)' : WHITE}" stroke="${NAVY}" stroke-width="${isP ? 4 : 2.5}"/>`; }
-  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 34}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 14}" y="${y0 - 8}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
-  s += `<rect x="${x0 + c - 46}" y="${y0 + 2 * c - 34}" width="26" height="26" rx="4" fill="#fff" stroke="${NAVY}" stroke-width="2"/><text x="${x0 + c - 33}" y="${y0 + 2 * c - 14}" font-size="22" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">P</text>`;
+  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 34}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 20}" y="${y0 - 14}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
+  s += `<rect x="${x0 + c + 14}" y="${y0 + 2 * c + 14}" width="26" height="24" rx="4" fill="#fff" stroke="${NAVY}" stroke-width="2"/><text x="${x0 + c + 27}" y="${y0 + 2 * c + 33}" font-size="22" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">P</text>`;
   return s + '</svg>';
 };
 

@@ -47,7 +47,7 @@ const extra = (n) => {
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know. Draw a big, neat diagram first and label every length or angle you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner(n === 7 ? 'Think harder  (A1 is a puzzle that goes further: percentage change)' : 'Think harder'));
   // Think harder questions are numbered A1 to A4 and Go further questions B1 to B3, so no printed number repeats Start here Q1 to Q6.
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('A' + (i + 1), x.q, { before: x.fig ? 90 : 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig, { maxH: n === 8 ? 200 : n === 5 ? 300 : 210 })); out.push(...lines(x.fig ? 1 : (n === 7 && i < 2 ? 1 : n === 8 ? 2 : 3))); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('A' + (i + 1), x.q, { before: x.fig ? 90 : 140, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig, { maxH: n === 8 ? 175 : n === 5 ? 300 : 210 })); out.push(...lines(x.fig ? 1 : (n === 7 && i < 2 ? 1 : n === 8 ? 2 : 3))); });
   // Page 5: Go further
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
@@ -79,5 +79,5 @@ L.content.forEach(c => {
 W.push('<div class="brk"></div>');
 W.push(...require('./kit.js')());
 W.push(`<div class="cert pb"><div class="ci"><div class="ct">CERTIFICATE OF COMPLETION</div><div class="cp">${PROG}</div><div class="cs">Primary 5 Holiday Program</div><div class="cl">This certifies that</div><div class="cn"></div><div class="cl">completed all 10 lessons, solved puzzles, spotted patterns and explained their thinking.</div><div class="cq">${SLOGAN}</div><div class="cl">Tutor: ____________________ &nbsp;&nbsp;&nbsp; Date: ________________</div></div></div>`);
-fs.writeFileSync('workbook_body.html', W.join('\n'));
+fs.writeFileSync('workbook_body.html', W.join('\n').replace(/(<text[^>]*?fill=")#D64545(")/g, '$1#1B2A49$2'));   // red text turns into hatched ghost digits in B&W: navy instead
 console.log('html body built');

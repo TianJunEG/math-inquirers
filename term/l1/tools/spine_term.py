@@ -83,9 +83,10 @@ def wb_chip(d, compact=False):
                 f'<span style="font-size:9pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>{icon(t["id"], 7)}'
                 f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:12pt;font-weight:700;white-space:nowrap">{E(t["name"])}</span>{used}'
                 f'<span style="margin-left:auto">{also}</span></div>')
-    return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:1mm 2.5mm;display:flex;gap:2.5mm;align-items:center">{icon(t["id"], 11)}'
-            f'<div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:center;gap:2mm"><span style="font-size:9pt;font-weight:800;letter-spacing:.06em">{LABELS["tool_of_day"]}</span>{used}</div>'
-            f'<div style="font-family:Fredoka,Arial,sans-serif;font-size:13pt;font-weight:700;line-height:1.15">{E(t["name"])}</div>'
+    # two rows: label + name + tick, then the definition and the 'also' tools (about 11 mm high: it fits beside Mi, so the page grows by about nothing)
+    return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:0.7mm 2.5mm;display:flex;gap:2.5mm;align-items:center">{icon(t["id"], 10)}'
+            f'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:2.5mm"><span style="font-size:8.5pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>'
+            f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:13pt;font-weight:700;line-height:1.15;white-space:nowrap">{E(t["name"])}</span><span style="margin-left:auto">{used}</span></div>'
             f'<div style="font-size:9pt;line-height:1.2">{E(x["def"])}{(" &nbsp; " + also) if also else ""}</div></div></div>')
 
 

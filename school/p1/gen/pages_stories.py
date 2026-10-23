@@ -58,7 +58,7 @@ def story_card(no, lines, pics, ans_html, below=False):
 def html_escape(s): return s.replace("&", "&amp;").replace("<", "&lt;")
 
 def page21():
-    rng = random.Random(2101)
+    rng = random.Random(2104)
     word = "MONKEY"
     kinds = ["add", "sub", "more", "fewer", "diff", "total"]
     objs = list(COUNT_KINDS)

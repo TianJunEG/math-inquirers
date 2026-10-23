@@ -133,8 +133,8 @@ module.exports = {
     keyBig: 'The average (mean) = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
     keySmall: 'One extreme value can pull the mean a long way. Then the median (middle value) or mode (most common) may describe a typical value better.',
     brk: 'Dice jumps. Roll two dice on screen: everyone does that many star jumps. Three rounds. What was the mean number of jumps per round?',
-    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes, Q4 a misleading mean (median and mode).',
-    ws2: 'Page 2, on your own: Q5 trace the mean program, Q6 Singapore temperatures and plan the code that counts the days above the mean.'
+    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes. Q4, a misleading mean (median and mode, with the dot plot), is at the top of the next sheet.',
+    ws2: 'On your own, on the next sheet after Q4: Q5 trace the mean program, Q6 Singapore temperatures and plan the code that counts the days above the mean.'
   },
 
   qbank: {

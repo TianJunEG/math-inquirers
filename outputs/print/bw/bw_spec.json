@@ -1,44 +1,44 @@
 [
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
   "pages": 22,
   "sheets": 11,
-  "mb": 2.95,
+  "mb": 2.92,
   "pale_tint_dropped_max": 0.0251
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_HomePack_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_HomePack_PRINT.pdf",
   "pages": 12,
   "sheets": 6,
   "mb": 1.11,
-  "pale_tint_dropped_max": 0.0347
+  "pale_tint_dropped_max": 0.0387
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_Workbook_PRINT.pdf",
-  "pages": 44,
-  "sheets": 22,
-  "mb": 5.08,
-  "pale_tint_dropped_max": 0.2258
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_Workbook_PRINT.pdf",
+  "pages": 42,
+  "sheets": 21,
+  "mb": 4.83,
+  "pale_tint_dropped_max": 0.3005
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
-  "pages": 28,
-  "sheets": 14,
-  "mb": 4.27,
-  "pale_tint_dropped_max": 0.4869
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
+  "pages": 30,
+  "sheets": 15,
+  "mb": 4.6,
+  "pale_tint_dropped_max": 0.4865
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_HomePack_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_HomePack_PRINT.pdf",
   "pages": 14,
   "sheets": 7,
-  "mb": 1.29,
-  "pale_tint_dropped_max": 0.0574
+  "mb": 1.35,
+  "pale_tint_dropped_max": 0.0578
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_Workbook_PRINT.pdf",
-  "pages": 48,
-  "sheets": 24,
-  "mb": 5.42,
-  "pale_tint_dropped_max": 0.2255
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_Workbook_PRINT.pdf",
+  "pages": 44,
+  "sheets": 22,
+  "mb": 5.76,
+  "pale_tint_dropped_max": 0.1949
  }
 ]

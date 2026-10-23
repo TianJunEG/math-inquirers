@@ -158,7 +158,7 @@ module.exports = {
     keySmall: 'A star goes round more than once: turn = 360° × times round ÷ points.',
     brk: 'Turtle dance. Walk a square on the spot: step, quarter turn, four times. Then a triangle: step, turn a third of a turn, three times. Then a hexagon.',
     ws1: 'Page 1: first the “Try it first” walk-a-square box (no tools needed), then in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
-    ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars, Q5 add up the inside angles and find a rule.'
+    ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars (with the star dots to draw on). Q5, a take-home, is on the next sheet: add up the inside angles and find a rule.'
   },
 
   moved: [

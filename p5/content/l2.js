@@ -34,7 +34,6 @@ const shareBars = () => {
     g += txt(x0 - 10, y + 27, lab, 18, N, 'end');
     for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${WH}" stroke="${N}" stroke-width="2.5"/>`;
   });
-  g += txt(x0 + w + 12, 40, 'same whole, cut in equal parts', 18, TEAL, 'start', 600);
   return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts and Group B in 5 equal parts. Nothing is shaded." viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 

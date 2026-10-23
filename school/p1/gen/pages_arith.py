@@ -246,12 +246,12 @@ def page11():
 # ---------------------------------------------------------------- P13
 def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
-    cols = m if g * (m * 10.0 + 5.4) <= 108 else max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
-    bw = cols * 10.0 + 2.4; h = rows * 10.0 + 2.4
+    cols = m if g * (m * 10.8 + 5.4) <= 108 else max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
+    bw = cols * 10.8 + 2.4; h = rows * 10.8 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
         for i in range(m):
-            p.append(obj_g(kind, x + 1.2 + (i % cols) * 10.0, 1.7 + (i // cols) * 10.0, _osz(kind)))
+            p.append(obj_g(kind, x + 1.2 + (i % cols) * 10.8, 1.7 + (i // cols) * 10.8, _osz(kind)))
         x += bw + 3.0
     return svg(x, h + 1, "".join(p)), h + 1
 
@@ -261,12 +261,12 @@ def page13():
     while True:
         items = [(rng.randint(2, 4), rng.randint(2, 5)) for _ in range(6)]
         tot = [g * m for g, m in items]
-        if len(set(tot)) == 6 and max(tot) <= 16 and min(tot) >= 6 and len(set(items)) == 6 and all(g * (max(2, (m + 1) // 2) * 10.0 + 5.4) <= 108 for g, m in items):
+        if len(set(tot)) == 6 and max(tot) <= 16 and min(tot) >= 6 and len(set(items)) == 6 and all(g * (max(2, (m + 1) // 2) * 10.8 + 5.4) <= 108 for g, m in items):
             table = make_code_table(tot, word, rng, 1, 40, n_decoy=2, tries=400)
             if table: break
     rows = ""; svgs = []
     for i, (g, m) in enumerate(items):
-        s, h = groups_svg(g, m, ["star", "ball", "cat", "dog"][i % 4]); svgs.append(s)
+        s, h = groups_svg(g, m, ["star", "ball", "cat", "drum"][i % 4]); svgs.append(s)
         rows += (f'<div class="grow"><span class="no">{i+1}</span><div class="gsvg">{s}</div>'
                  f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>things</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
     body = f'<div class="grows">{rows}</div><div class="ctc">{code_block(table)}</div>'
@@ -292,7 +292,7 @@ def page13():
     return P
 
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
-CMAP = {"apple": "apple", "star": "star", "ball": "fish", "cat": "balloon", "dog": "star"}
+CMAP = {"apple": "apple", "star": "star", "ball": "fish", "cat": "balloon", "drum": "star"}
 
 def share_svg(kind, n, g, per, mode):
     """objects in rows on the left (drawn at least 8 mm); for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
@@ -327,7 +327,7 @@ def read_share(s, mode):
 def page03():
     rng = random.Random(303)
     word = "SHADOW"
-    kinds_ = ["star", "ball", "cat", "dog"]
+    kinds_ = ["star", "ball", "cat", "drum"]
     while True:
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
@@ -404,7 +404,7 @@ def page05():
     rng = random.Random(505)
     word = "SQUARE"
     kinds = ["x", "x", "groups", "groups", "missA", "missB"]
-    okinds = ["star", "ball", "cat", "dog"]
+    okinds = ["star", "ball", "cat", "drum"]
     while True:
         rng.shuffle(kinds)
         items = []

@@ -259,8 +259,8 @@ def solve_compare_svg(s, ka, kb, mode):
 def page25():
     rng = random.Random(2505)
     word = "CLOTH"
-    kinds = ["apple", "star", "ball", "cat", "dog", "flower", "drum", "boat"]
-    small = ["star", "ball", "cat", "dog"]
+    kinds = ["apple", "star", "ball", "cat", "flower", "drum", "boat"]
+    small = ["star", "ball", "cat"]
     while True:
         k = rng.sample(kinds, 3) + rng.sample(small, 2) + rng.sample(small, 2)
         if k[3] == k[4] or k[5] == k[6]: continue

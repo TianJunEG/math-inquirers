@@ -243,9 +243,9 @@ module.exports = {
   // A4: square ABCD with the equilateral triangle CDE outside it
   { const s = 100, A = [50, 190], B = [A[0] + s, A[1]], C = [B[0], A[1] - s], D = [A[0], C[1]], E = [A[0] + s / 2, D[1] - s * Math.sin(rad(60))];
     chk(D, A, E, 150, 'A4 ADE'); chk(A, D, E, 15, 'A4 DAE'); chkEq(D, C, D, E, 'A4 DC DE');
-    const g = poly([A, B, C, D], SKY) + poly([D, C, E], Y) + line(A, E, TEAL, 3, '7 5') + arc(D, A, E, 26, '?', RED, 46, 17) + arc(A, D, E, 36, '?', RED, 56, 17)
-      + pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 4) + pl(D, 'D', -14, 4) + pl(E, 'E', 0, -8);
-    module.exports.qbank.stretch[3].fig = svg(240, 230, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC; the line AE is drawn', g, 0.62); }
+    const g = poly([A, B, C, D], SKY) + poly([D, C, E], Y) + line(A, E, TEAL, 3, '7 5') + arc(D, A, E, 26, '?', RED, 46, 26) + arc(A, D, E, 36, '?', RED, 56, 26)
+      + pl(A, 'A', -14, 16, 26) + pl(B, 'B', 14, 16, 26) + pl(C, 'C', 14, 4, 26) + pl(D, 'D', -14, 4, 26) + pl(E, 'E', 0, -8, 26);
+    module.exports.qbank.stretch[3].fig = svg(240, 230, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC; the line AE is drawn', g, 0.66); }
   // B1: isosceles triangle ABC (AB = AC, angle A = 40) with D on AC and BD = BC
   { const A = [150, 20], L = 140, B = P(...A, L, 250), C = P(...A, L, 290);
     const BC = dist(B, C), CD = BC * Math.sin(rad(40)) / Math.sin(rad(70)), u = [(A[0] - C[0]) / L, (A[1] - C[1]) / L], D = [C[0] + u[0] * CD, C[1] + u[1] * CD];

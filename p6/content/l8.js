@@ -142,8 +142,8 @@ module.exports = {
     keyBig: 'n mod m is the remainder when n is divided by m. On a clock with m numbers, counting past the end wraps round to the start.',
     keySmall: 'Caesar code: code number = (letter number + shift) mod 26. Decode: shift back (add 26 if you go below 0), or shift forward by 26 − shift.',
     brk: 'Clock arms. Your arm is the hour hand. The tutor calls a time and you point to it. Then “add 5 hours!” and you sweep your arm round to the new time. Try “add 12 hours!”',
-    ws1: 'Page 1, in pairs: Q1 clock and calendar puzzles with mod, Q2 code and decode with a Caesar shift (test it in Scratch).',
-    ws2: 'Page 2, on your own: Q3 trace the code machine in a table, Q4 crack a secret message, Q5 combine two shifts.'
+    ws1: 'Page 1, in pairs: Q1 clock and calendar puzzles with mod (the clock and week circles are printed beside it). Q2, code and decode with a Caesar shift (test it in Scratch), is at the top of the next sheet.',
+    ws2: 'Then on your own, on the sheet after that: Q3 trace the code machine in a table, Q4 crack a secret message, Q5 combine two shifts.'
   },
 
   moved: [
