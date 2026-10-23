@@ -42,10 +42,10 @@ I.append(IT(U, 'S', 2, 1,
             parts=[P('a', 'The primes between 90 and 110 are {ll}', [97, 101, 103, 107, 109], '97, 101, 103, 107, 109', list=True),
                    P('b', 'Write 330 as a product of primes: {ll}', [2, 3, 5, 11], '2 × 3 × 5 × 11', list=True)]))
 I.append(IT(U, 'S', 3, 1,
-            f'A diver is at {M}18 m. She rises 7 m and then dives 12 m.',
-            f'{M}18 + 7 = {M}11. Then {M}11 {M} 12 = {M}23. From {M}6 to 9 is 6 steps to 0 and 9 more: 15.',
-            parts=[P('a', 'She is now at {b} m.', [-23], f'{M}23'),
-                   P('b', 'The distance from −6 to 9 is {b}.', [15])]))
+            f"Mei's bank balance is {M}6 dollars, so she owes the bank. She pays in 15 dollars and then spends 20 dollars.",
+            f'{M}6 + 15 = 9. Then 9 {M} 20 = {M}11. From {M}6 up to 21 is 6 steps to 0 and 21 more: 27.',
+            parts=[P('a', 'Her balance is now {b} dollars.', [-11], f'{M}11'),
+                   P('b', 'Later her balance goes from −6 to 21 dollars. It rises by {b} dollars.', [27])]))
 I.append(IT(U, 'S', 4, 1,
             'Run the machines backwards.',
             f'(a) OUT 43: 43 + 7 = 50, and 50 ÷ 5 = 10. (b) 6n + 1 = 79 gives 6n = 78 and n = 13.',
@@ -76,16 +76,17 @@ I.append(IT(U, 'S', 8, 2,
                    P('b', 'Code MATH with a shift of 9: {l}', ['VJCQ'])]))
 I.append(IT(U, 'S', 9, 3,
             'Averages.',
-            f'(a) The total of 5 numbers is 5 {X} 14 = 70. 10 + 12 + 18 + 20 = 60, so the 5th is 10. (b) In order: 3, 7, 9, 11. The middle two are 7 and 9, so the median is 8.',
-            parts=[P('a', 'The mean of 5 numbers is 14. Four of them are 10, 12, 18 and 20. The 5th is {b}.', [10]),
-                   P('b', 'The median of 3, 11, 7, 9 is {b}.', [8])]))
+            f'(a) The total of 4 numbers is 4 {X} 15 = 60. 11 + 19 + 14 = 44, so the 4th is 16. (b) In order: 4, 9, 12, 15. The middle two are 9 and 12, so the median is halfway between them: 10.5.',
+            parts=[P('a', 'The mean of 4 numbers is 15. Three of them are 11, 19 and 14. The 4th is {b}.', [16]),
+                   P('b', 'The median of 15, 4, 9, 12 is {b}.', [10.5])]))
 I.append(IT(U, 'S', 10, 3,
-            'The program chooses a secret number n between 1 and 20 and displays an answer. Read the code.',
-            f'The program shows 4n + 3. If it shows 31, then 4n = 28 and n = 7. The smallest output is 4 {X} 1 + 3 = 7. The largest is 4 {X} 20 + 3 = 83.',
-            fig=code([['var', 'set n to (pick random 1 to 20)'], ['look', f'say (n {X} 4 + 3)']]),
-            parts=[P('a', 'It shows 31. The secret n was {b}.', [7]),
-                   P('b', 'The smallest number it can show is {b}.', [7]),
-                   P('c', 'The largest number it can show is {b}.', [83])],
+            'A game starts with a score of 50. This code plays 8 rounds. Run it by hand.',
+            'Each round takes away 8: 42, 34, 26, 18. The score 18 is below 20, so it resets to 50 after round 4. Rounds 5 to 8 repeat the pattern: 42, 34, 26, 18, and the score resets to 50 again after round 8. '
+            'After round 6 the score is 34.',
+            fig=code([['var', 'set score to (50)'], ['ctl', 'repeat (8)', [['var', f'change score by ({M}8)'], ['ctl', 'if <(score) {lt} (20)> then', [['var', 'set score to (50)']]]]], ['look', 'say (score)']]),
+            parts=[P('a', 'After round 6 the score is {b}.', [34]),
+                   P('b', 'The score first resets to 50 after round {b}.', [4]),
+                   P('c', 'The program says {b}.', [50])],
             figside=True))
 I.append(IT(U, 'S', 11, 3,
             'The steps of planning a program are mixed up. A: Test with a value you know. B: Do the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.',
