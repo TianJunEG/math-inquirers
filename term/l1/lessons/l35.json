@@ -3643,7 +3643,7 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Picture 1 has 5 stars. Picture 2 has 6 stars. How many more stars does Picture 2 have? There is ___ more star.",
+   "text": "Picture 1 has 5 stars. Picture 2 has 6 stars. How many more stars does Picture 2 have? Picture 2 has ___ more.",
    "answer": "1",
    "val": 1,
    "solution": "Count up from 5 to 6: 1. Picture 2 has 1 more star."
@@ -4290,7 +4290,7 @@
   "report_line": "Your child is learning to look closely and say exactly what is different, one feature at a time. This week: pictures that differ in shape, number, size, pattern or turn, the odd one out, and a repeating pattern.",
   "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
   "next_materials": [
-   "Book 8 (the last five lessons): tear out the paper-people page along the dashed line, then a grown-up cuts out the 8 paper people. Book 8 not here? Tell us on the business WhatsApp and we will send a PDF straight away",
+   "Book 8 (the last five lessons): tear out the paper-people page along the dashed line, then a grown-up cuts out the 8 paper people. If anything is missing or damaged, message us on WhatsApp",
    "The pair cards are not needed again: keep them for puzzles at home",
    "A pencil, a rubber and paper"
   ]

@@ -3,6 +3,7 @@ const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, Borde
 const L = require('./lessons.js');
 const BUD = require('./budget.json').lessons, BSL = require('./budget_slides.json');   // written by rebuild/p1budget.py: the one source of every clock time
 const GAPS = require('./gaps.json');
+const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const PROG = L.program, SLOGAN = L.slogan;
 const G = [];
 const S = 21; // body size (10.5pt)
@@ -58,6 +59,11 @@ G.push(h2('Teaching habits that matter'));
 
 G.push(h2('Sneak-peek puzzles, choice time and look-back (every lesson)'));
 ['Sneak-peek puzzles (4 minutes, from minute 8; 10 in Lesson 1, 6 in Lesson 10). Two questions on the lesson’s key idea. The first is an access question: every child can try it with objects, drawing or counting, so everyone starts with a win. The second makes you think. Say (one short line, about 26 words): “Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked.” Children write or draw on their own paper. Everyone answers ONCE, after the second question: face to face, each child keeps their own paper low so only the tutor sees it; online, nobody holds paper to the camera: children say the answer together on three or use fingers for choices. There are no private chat messages. Never use boards or paper held up in front of the group or to the camera. Never write scores down or announce them.', 'Choice time. Every workbook has the same neutral line on page 1: “After question 3 you may choose: carry on, or try Think harder.” Any child may choose. There is no list of who is ahead, and no criterion is printed. The tutor never announces who is on which page, and never names a child in front of the group. The tutor invites the WHOLE group at once, so nobody is singled out, for example: “When you have finished Start here, you can choose Think harder, Go further or the Investigation.” Say the same to any child who asks. Pairs are not split unless both children agree. A child who finds Think harder too hard goes back to Start here, with no fuss.', 'Online with a group of 8, the tutor does not look at pages on camera: children tick their own work against the answer slide and say answers together on three. Above 8 children, the helper keeps an eye on the children who have moved on while the tutor works with the others.', 'Talk time. Ask for volunteers first. Never call a child by name to answer. A child may pass, show a drawing or let a partner read for them. No public tallies and no rankings: do not say who is first or who got most right.', 'Look-back (three minutes, minutes 85 to 88; 87 to 90 in Lesson 10). The box is on the Choose and look-back page of the workbook, which every child reaches: “Something I did well”, “The hardest part was ...”, “What helped me”, “Next time I will try:” (optional, drawing it, using objects, checking my answer, asking a question), with tick options that include “I asked for help” and “I am still stuck (my tutor will come and help)”. Passing is always allowed. The box is never collected, shown or read out in front of the group. The tutor may look at it afterwards. If a child ticks “I am still stuck”, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a direct message. Praise the strategy (“Drawing it got you unstuck”), not the speed.', 'The Investigation is printed on the Choose and look-back page for every child, with an easy first step, and is optional. It has several valid answers. The key gives a model answer and what to look for. Accept any correct noticing, and ask “How do you know?”.'].forEach(s => G.push(bu(s)));
+G.push(h2('Toolbox and look-back (every lesson)'));
+G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on page 1, on the title slide (and a “Strategy of the day” slide) and named in your script. It is one of eight tools a child can choose for any problem. Say its name, point at the card, and at talk time ask where the tool helped. Lesson 10: children choose their own tool. Passing is always allowed.'));
+G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 6 to 8)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.A, 7400)]))]));
+G.push(gap(40));
+G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.A.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet, write one word or draw for question 3, and tick the tools they used. The timer is ' + SG.DATA.lookback.timer_seconds.A + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked.'));
 G.push(h2('Setting up face to face'));
 ['Seat children in pairs. Keep a materials box per pair so no time is lost.', 'Print the workbook double-sided and staple it. Print the cut-out page on card for Lessons 6 and 9.', 'Keep the answer key with the tutor only. Collect worksheets at the end unless the group is told to keep them.', 'Use a whiteboard or large paper for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
@@ -129,6 +135,7 @@ L.lessons.forEach(l => {
   pushSeg(rg('Opening'), 'Opening');
   say(s.hook);
   doo([l.n === 1 ? 'Greet each child by name. Show the routine slide for 30 seconds and name only the four phases (warm-up, explore, teach, worksheet); do not read the table. Read the four inquirer rules together. Then show the lesson title slide and read “Today we will…” aloud. This opening takes 4 minutes in Lesson 1.' : 'Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
+  { const sp = SG.info(1, l.n); say([sp.openSay]); doo([sp.openDo + (sp.kitLine ? ' Say: “' + sp.kitLine + '.”' : '')]); }
 
   pushSeg(rg('Warm-up'), 'Warm-up game and quick questions');
   doo([WG[l.n] || d.warmGame]);
@@ -176,7 +183,7 @@ L.lessons.forEach(l => {
   pushSeg(rg('Talk time'), 'Talk time');
   doo(['Bring the group back to a circle (or camera on, mics on). ' + (l.n === 10 ? 'Children swap the puzzle they wrote on page 2 (Q9) with a partner and solve it (about 2.5 minutes), then a 2-minute pair talk. ' : 'Pairs talk for 2 minutes (if you are behind, go straight to volunteers). ') + 'Ask for volunteers first: “Who would like to share?” Never call a child by name to answer. Say that passing is always fine. A child may show a drawing or let a partner speak. No tallies, no rankings.']);
   say(s.talk);
-  ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+  { const sp = SG.info(1, l.n); ask([[l.share, s.talkAns], [sp.talkAsk, sp.talkListen]], 'Discussion question', 'Listen for'); }
 
   pushSeg(rg('Exit ticket'), 'Exit ticket and closing');
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide.']);
@@ -184,8 +191,9 @@ L.lessons.forEach(l => {
   say(s.close);
   if (l.n === 10) doo(['Certificates (minutes 84 to 87): say the certificate line once to the group, then about 10 seconds per child with one specific thing they did well. Ask which puzzle they enjoyed as a thumbs-up question, or only of volunteers.']);
   pushSeg(rg('Look-back'), 'Look-back (' + (PT('Look-back').end - PT('Look-back').start) + ' minutes)');
-  say(['Turn to the Choose and look-back page and look at the box called “Look-back”. Tick what was hard for you and what helped you. Write or draw one thing you did well. If you like, tick one thing you will try next time. You can pass. If you are still stuck, tick the box and I will come and help you. I will not say your name to the group. This is not shown to the group.', 'Thank you. Drawing it, using counters, asking a friend or asking for help: those are all good ways to get unstuck.']);
-  doo(['Show the look-back slide. Keep it to three minutes. Do not ask children to read out their boxes. Never mark or grade the box, and never collect it in front of the group. You may look at it later. Praise the strategy a child used, not how quickly they finished.']);
+  { const sp = SG.info(1, l.n);
+    say([sp.lookSay, 'Thank you. Drawing it, listing, using counters or checking another way: those are all good ways to get unstuck.']);
+    doo(['Show the look-back slide and start its timer (' + sp.timer + ' seconds); the workbook box is on the Choose and look-back page. ' + sp.lookDo.replace(/^Start the timer\. /, '') + ' Never mark or grade the box, and never collect it in front of the group. You may look at it later. If a child ticks “I am still stuck”, visit in the open session next lesson, never by direct message. Pass is always allowed.']); }
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (it is for you only). If a child marked D or H, plan two minutes of catch-up at the start of the next lesson in the open session (a shared breakout room or a hand signal, with a parent nearby), never by direct message.']);
   if (PT('Flex time')) { pushSeg(rg('Flex time'), 'Flex time and closing'); doo(['This is the buffer. If the lesson ran late, finish what is still open (stamps, the look-back). If you are on time, say goodbye and thank the parents. Do not start anything new.']); }
   G.push(h2('Extension for children who want more'));

@@ -628,10 +628,14 @@
     },
     {
      "t": "chip",
-     "text": "Look from the top. Write a number for each stack. Draw 4 squares like a window. The stack at the top of the picture is the back left. The stack at the bottom is the front right."
+     "text": "Look from the top. Write a number for each stack. Draw 4 squares like a window."
+    },
+    {
+     "t": "chip",
+     "text": "Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right."
     }
    ],
-   "note": "Worked example. A stack with 6 cubes and none hidden: the back left stack has 1, the back right 1, the front left 3 and the front right 1. Children draw four squares in a 2 by 2 block on paper and write how many cubes are in each stack, the back stacks in the top row. The answer is on the next slide. Say: the top view is a plan of the stack, seen from above; the numbers say how tall each stack is. A child who writes the cubes they can see on each side has counted faces: ask, how many cubes are in this stack? Name the four stacks on the picture: the top one is the back left, the right one the back right, the left one the front left, the bottom one the front right. The back row is the top row of the top view."
+   "note": "Worked example. A stack with 6 cubes and none hidden: the back left stack has 1, the back right 1, the front left 3 and the front right 1. Children draw four squares in a 2 by 2 block on paper and write how many cubes are in each stack, the back stacks in the top row. The answer is on the next slide. Say: the top view is a plan of the stack, seen from above; the numbers say how tall each stack is. A child who writes the cubes they can see on each side has counted faces: ask, how many cubes are in this stack? Name the four stacks on the picture with the children: the top one is the back left, the right one the back right, the left one the front left, the bottom one the front right. The back row is the top row of the top view."
   },
   {
    "id": "s-m2-ans",
@@ -954,7 +958,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 2, 1 in the top row and 3, 1 in the bottom row. Q5 a line across the middle, from the left edge to the right edge. Q6 7 cubes."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 3, 0 in the top row and 2, 1 in the bottom row. Q5 a line across the middle, from the left edge to the right edge. Q6 7 cubes."
   },
   {
    "id": "s-choice",
@@ -1625,7 +1629,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: how many cubes are in the picture? Question 2: how many cubes are in the stack in all? How many cubes can you not see? Question 3: which top view matches the stack? In the picture, the stack at the top is the back left and the stack at the bottom is the front right. Circle A, B or C."
+      "text": "Page 1, Start here. Question 1: how many cubes are in the picture? Question 2: how many cubes are in the stack in all? How many cubes can you not see? Question 3: which top view matches the stack? Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Circle A, B or C."
      },
      {
       "k": "WORK",
@@ -1652,7 +1656,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: look at the stack. Write how many cubes are in each stack on the top view. The stack at the top of the picture is the back left; the stack at the bottom is the front right. Question 5: a paper square is folded so the top edge meets the bottom edge. Draw the fold line. Question 6: the top view shows how many cubes are in each stack. How many cubes are there in all?"
+      "text": "Page 2. Question 4: look at the stack. Write how many cubes are in each stack on the top view. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Question 5: a paper square is folded so the top edge meets the bottom edge. Draw the fold line. Question 6: the top view shows how many cubes are in each stack. How many cubes are there in all?"
      },
      {
       "k": "WORK",
@@ -1666,7 +1670,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: two and one in the top row, three and one in the bottom row. Question 5: a line across the middle, from the left edge to the right edge. Question 6: seven cubes. Tick your own page."
+      "text": "Question 4: three and nought in the top row, two and one in the bottom row. Question 5: a line across the middle, from the left edge to the right edge. Question 6: seven cubes. Tick your own page."
      },
      {
       "k": "SLIDE",
@@ -1955,7 +1959,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Which top view matches this stack? In the picture, the stack at the top is the back left and the stack at the bottom is the front right.",
+    "text": "Which top view matches this stack? Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
     "parts": [
      {
       "l": "",
@@ -1973,10 +1977,10 @@
     "val": [
      "B"
     ],
-    "hint": "The back stacks go in the top row. Which stack is the tallest? Is it at the back or at the front?",
-    "solution": "The tall stack of 2 is at the top of the picture, which is the back left. The back row has 2 and 1 and the front row has 1 and 1. So the top row is 2, 1 and the bottom row is 1, 1. That is picture B.",
+    "hint": "The back stacks go in the top row. Which stack is the tallest: is it at the back or at the front? Is it on the left or on the right?",
+    "solution": "The tall stack of 2 is the left stack in the picture, which is the front left. The back row is the top row: 1 and 1. The front row is the bottom row: 2 and 1. That is picture B.",
     "mistakes": [
-     "Choosing a view with the tall stack at the front (A or C).",
+     "Choosing a view with the tall stack at the back (A) or on the right (C).",
      "Putting the rows the wrong way up."
     ],
     "mins": 3,
@@ -1985,11 +1989,11 @@
       "type": "cube_stack",
       "heights": [
        [
-        2,
+        1,
         1
        ],
        [
-        1,
+        2,
         1
        ]
       ],
@@ -2000,11 +2004,11 @@
       "type": "cube_stack",
       "heights": [
        [
-        1,
+        2,
         1
        ],
        [
-        2,
+        1,
         1
        ]
       ],
@@ -2016,11 +2020,11 @@
       "type": "cube_stack",
       "heights": [
        [
-        2,
+        1,
         1
        ],
        [
-        1,
+        2,
         1
        ]
       ],
@@ -2033,11 +2037,11 @@
       "heights": [
        [
         1,
-        1
+        2
        ],
        [
         1,
-        2
+        1
        ]
       ],
       "mode": "top",
@@ -2050,20 +2054,20 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Look at the stack. Write how many cubes are in each stack on the top view. In the picture, the stack at the top is the back left and the stack at the bottom is the front right.",
+    "text": "Look at the stack. Write how many cubes are in each stack on the top view. Write 0 if there is no stack. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
     "parts": [],
-    "answer": "2 and 1 in the top row; 3 and 1 in the bottom row",
+    "answer": "3 and 0 in the top row; 2 and 1 in the bottom row",
     "val": [
-     2,
-     1,
      3,
+     0,
+     2,
      1
     ],
     "hint": "The back stacks go in the top row. Count the cubes in each stack.",
-    "solution": "The back row has a stack of 2 and a stack of 1. The front row has a stack of 3 and a stack of 1. The top view is 2, 1 on the top row and 3, 1 on the bottom row. That is 7 cubes in all.",
+    "solution": "The back row has a stack of 3 and no stack, so 3 and 0. The front row has a stack of 2 and a stack of 1. The top view is 3, 0 on the top row and 2, 1 on the bottom row. That is 6 cubes in all.",
     "mistakes": [
-     "Writing the rows the wrong way up.",
-     "Writing the number of faces you can see."
+     "Leaving the empty place blank or writing 1 there.",
+     "Writing the rows the wrong way up."
     ],
     "mins": 3,
     "visuals": [
@@ -2071,11 +2075,11 @@
       "type": "cube_stack",
       "heights": [
        [
-        2,
-        1
+        3,
+        0
        ],
        [
-        3,
+        2,
         1
        ]
       ],
@@ -2173,7 +2177,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "The stack has 9 cubes in all. In the picture, the stack at the top is the back left and the stack at the bottom is the front right.",
+    "text": "The stack has 9 cubes in all. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
     "parts": [
      {
       "l": "a",
@@ -2740,7 +2744,7 @@
   {
    "id": "H4",
    "tier": "think",
-   "text": "A paper is folded in half and one hole is punched. When it is opened, one hole is 3 steps from the fold line. How many steps from the fold line is the other hole? It is ___ steps.",
+   "text": "A paper is folded in half and one hole is punched. When it is opened there are 2 holes. One of them is 3 steps from the fold line. How many steps from the fold line is the other hole? It is ___ steps.",
    "answer": "3",
    "val": 3,
    "solution": "The two holes are the same distance from the fold line, one on each side. The other hole is 3 steps from it too."
@@ -3398,7 +3402,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 5; S2 3 and 1; S3 B; S4 2, 1 and 3, 1; S5 a line across the middle; S6 7; T1 3 and 2; T2 2 and A; T3 a hole 1 step right of the line, and 1; G1 4 and C; G2 2 and 1; G3 any four numbers from 1 to 3 that make 7; I1 2 dots, the same distance from the fold.",
+  "Solve every workbook question yourself first. Check the answers: S1 5; S2 3 and 1; S3 B; S4 3, 0 and 2, 1; S5 a line across the middle; S6 7; T1 3 and 2; T2 2 and A; T3 a hole 1 step right of the line, and 1; G1 4 and C; G2 2 and 1; G3 any four numbers from 1 to 3 that make 7; I1 2 dots, the same distance from the fold.",
   "Tell parents a week before: the fold-squares page (page 6 of the book) needs 4 squares cut out by a grown-up, and the family finds 12 small blocks of one size (building bricks or dice); a family with no blocks uses buttons on a drawn grid, and the lesson works with pictures. The next lesson needs the pair-cards page of Book 7 torn out, with its 12 cards cut out.",
   "Have the slides open. Have your own blocks and a paper square to show on camera if you wish. Practise the arm-fold break. When you read a stack question, say 'the back stacks are in the top row' every time.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",

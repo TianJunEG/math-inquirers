@@ -93,6 +93,11 @@ def open_v(u, v):
     return {(round(0.5 + 0.5 * u, 6), v), (round(0.5 - 0.5 * u, 6), v)}
 
 
+def open_h(u, v):
+    """Fold in half with the fold on the top edge of the folded paper: a hole at (u, v) of the folded paper is 2 holes when opened (one above the fold line, one below)."""
+    return {(u, round(0.5 + 0.5 * v, 6)), (u, round(0.5 - 0.5 * v, 6))}
+
+
 def open_quarter(u, v):
     """Fold twice (a vertical and a horizontal fold in the middle): the folded paper is a quarter, and a hole at (u, v) of it is 4 holes when opened."""
     xs = (round(0.5 + 0.5 * u, 6), round(0.5 - 0.5 * u, 6)); ys = (round(0.5 + 0.5 * v, 6), round(0.5 - 0.5 * v, 6))
@@ -103,6 +108,7 @@ def shown(spec):
     """The holes a workbook 'opened paper' picture draws, as the picture is specified."""
     f = spec['fold']; hs = [tuple(h) for h in spec['holes']]
     if f == 'v': return set().union(*[open_v(u, v) for u, v in hs])
+    if f == 'h': return set().union(*[open_h(u, v) for u, v in hs])
     if f == 'quarter': return set().union(*[open_quarter(u, v) for u, v in hs])
     return {(round(u, 6), round(v, 6)) for u, v in hs}
 
@@ -124,8 +130,8 @@ def figs_in(blocks):
 CLASS_STACKS = {'rem3': [[2, 1]], 'sneak1': [[2, 2]], 'sneak2': [[1, 1], [1, 2]], 'explore': [[1, 1], [2, 2]], 'm1': [[2, 2], [1, 2]], 'm2': [[1, 1], [3, 1]], 'm3': [[3, 1], [1, 1]]}
 CLASS_FOLDS = {'explore': ('v', (0.55, 0.3)), 'm4': ('v', (0.7, 0.7)), 'opt': ('quarter', (0.4, 0.6))}
 CLASS_MIRRORS = {'m5': (2, (0, 1))}
-WB_STACKS = {'S1': [[1, 2], [1, 1]], 'S2': [[1, 0], [1, 2]], 'S3': [[1, 1], [2, 1]], 'S4': [[1, 3], [1, 1]], 'S6': [[2, 3], [1, 1]], 'T1': [[2, 1], [1, 2]], 'G2': [[3, 1], [2, 2]], 'E1': [[1, 1], [2, 0]], 'E2': [[2, 1], [2, 1]]}
-WB_FOLDS = {'T2': ('v', (0.7, 0.5)), 'G1': ('quarter', (0.7, 0.6))}
+WB_STACKS = {'S1': [[1, 2], [1, 1]], 'S2': [[1, 0], [1, 2]], 'S3': [[1, 1], [2, 1]], 'S4': [[3, 0], [2, 1]], 'S6': [[2, 3], [1, 1]], 'T1': [[2, 3], [1, 3]], 'G2': [[3, 1], [2, 2]], 'E1': [[1, 1], [2, 0]], 'E2': [[2, 1], [2, 1]]}
+WB_FOLDS = {'T2': ('h', (0.3, 0.6)), 'G1': ('quarter', (0.7, 0.6))}
 WB_MIRRORS = {'T3': (2, (1, 3))}
 
 
@@ -230,24 +236,24 @@ def run(d):
     q = T['S1']; st = WB_STACKS['S1']; eq(q['visual']['heights'], st, 'S1 stack'); eq(total(st), 5, 'S1 total'); eq(hidden_cubes(st), set(), 'S1 no cube hidden, so counting the picture is right'); eq(q['val'], 5, 'S1 val')
     q = T['S2']; st = WB_STACKS['S2']; eq(q['visual']['heights'], st, 'S2 stack'); eq(nums(q['text']), [4], 'S2 text'); eq(total(st), 4, 'S2 total'); seen = total(st) - len(hidden_cubes(st)); eq((seen, len(hidden_cubes(st))), (3, 1), 'S2 3 seen, 1 hidden'); eq(q['val'], [3, 1], 'S2 val')
     q = T['S3']; st = WB_STACKS['S3']; vs = q['visuals']; eq(vs[0]['heights'], st, 'S3 stack'); eq(hidden_cubes(st), set(), 'S3 no hidden cube'); tvw = top_view(st)
-    opts = [v['heights'] for v in vs[1:]]; eq([o == tvw for o in opts], [False, True, False], 'S3 only B is the top view'); eq(q['parts'][0]['ans'], 'B', 'S3 answer'); eq(q['parts'][0]['choices'], ['A', 'B', 'C'], 'S3 labels')
+    opts = [v['heights'] for v in vs[1:]]; eq([o == tvw for o in opts], [False, True, False], 'S3 only B is the top view'); eq(tvw, [[1, 1], [2, 1]], 'S3 top view: the tall stack is the front left'); eq(q['parts'][0]['ans'], 'B', 'S3 answer'); eq(q['parts'][0]['choices'], ['A', 'B', 'C'], 'S3 labels')
     eq(sorted(map(str, opts)), sorted(map(str, [[[2, 1], [1, 1]], [[1, 1], [2, 1]], [[1, 2], [1, 1]]])), 'S3 options are three different top views'); eq(len({str(o) for o in opts}), 3, 'S3 options differ')
-    q = T['S4']; st = WB_STACKS['S4']; eq(q['visuals'][0]['heights'], st, 'S4 stack'); eq(hidden_cubes(st), set(), 'S4 no hidden cube'); eq(top_view(st), [[1, 3], [1, 1]], 'S4 top view'); eq(q['val'], [1, 3, 1, 1], 'S4 val'); eq(sum(1 for v in q['visuals'][1]['counts'].values() if v == '[]'), 4, 'S4 four boxes')
+    q = T['S4']; st = WB_STACKS['S4']; eq(q['visuals'][0]['heights'], st, 'S4 stack'); eq(hidden_cubes(st), set(), 'S4 no hidden cube'); eq(top_view(st), [[3, 0], [2, 1]], 'S4 top view'); eq(q['val'], [3, 0, 2, 1], 'S4 val'); eq(sum(1 for v in q['visuals'][1]['counts'].values() if v == '[]'), 4, 'S4 four boxes')
     q = T['S5']; eq(q['visual']['shape'], 'square', 'S5 square'); eq('across the middle' in q['answer'], True, 'S5 answer'); eq('top edge meets the bottom edge' in q['text'], True, 'S5 text')
     q = T['S6']; tv = q['visual']['heights']; eq(tv, WB_STACKS['S6'], 'S6 top view'); eq(total(tv), 7, 'S6 total'); eq(q['val'], 7, 'S6 val'); eq(sum(sum(r) for r in tv), 7, 'S6 sum')
     # ---------------------------------------------------------------- Think harder
-    q = T['T1']; st = WB_STACKS['T1']; eq(q['visuals'][0]['heights'], st, 'T1 stack'); eq(total(st), 6, 'T1 total'); eq(nums(q['text']), [6], 'T1 text'); box = q['visuals'][1]['counts']
-    given = [int(v) for v in box.values() if v != '[]']; eq(given, [2, 1, 1], 'T1 numbers on the top view'); missing = total(st) - sum(given); eq(missing, 2, 'T1 missing number'); eq(top_view(st)[1][1], 2, 'T1 missing number from the stack'); eq(box['1,1'], '[]', 'T1 front right is empty')
-    eq((total(st) - len(hidden_cubes(st)), len(hidden_cubes(st))), (5, 1), 'T1 5 seen, 1 hidden'); eq(q['val'], [2, 1], 'T1 val'); eq(nums(q['parts'][1]['text']), [5], 'T1 part b text')
-    q = T['T2']; vs = q['visuals']; f0 = vs[0]; eq(f0['stage'], 'folded', 'T2 folded picture'); right = open_v(*f0['holes'][0]); eq(len(right), 2, 'T2 2 holes'); res = [shown(v) == right for v in vs[1:]]
-    eq(res, [False, True, False], 'T2 exactly the second opened paper is right'); eq(q['val'], [2, 'second'], 'T2 val'); eq(sorted(right), sorted([(0.85, 0.5), (0.15, 0.5)]), 'T2 holes'); eq(len(shown(vs[1])), 2, 'T2 option 1 has 2 holes on one side'); eq(len(shown(vs[3])), 1, 'T2 option 3 has one hole')
-    eq(all(x > 0.5 for x, _ in shown(vs[1])), True, 'T2 option 1 has both holes on one side of the fold'); eq(f0['holes'] != [list(CLASS_FOLDS['m4'][1])], True, 'T2 hole differs from the class hole')
+    q = T['T1']; st = WB_STACKS['T1']; eq(q['visuals'][0]['heights'], st, 'T1 stack'); eq(total(st), 9, 'T1 total'); eq(nums(q['text']), [9], 'T1 text'); box = q['visuals'][1]['counts']
+    given = [int(v) for v in box.values() if v != '[]']; eq(given, [2, 3, 1], 'T1 numbers on the top view'); missing = total(st) - sum(given); eq(missing, 3, 'T1 missing number'); eq(top_view(st)[1][1], 3, 'T1 missing number from the stack'); eq(box['1,1'], '[]', 'T1 front right is empty')
+    eq((total(st) - len(hidden_cubes(st)), len(hidden_cubes(st))), (7, 2), 'T1 7 seen, 2 hidden'); eq(q['val'], [3, 2], 'T1 val'); eq(nums(q['parts'][1]['text']), [7], 'T1 part b text')
+    q = T['T2']; vs = q['visuals']; f0 = vs[0]; eq((f0['stage'], f0['fold']), ('folded', 'h'), 'T2 folded picture, fold at the top'); right = open_h(*f0['holes'][0]); eq(len(right), 2, 'T2 2 holes'); res = [shown(v) == right for v in vs[1:]]
+    eq(res, [True, False, False], 'T2 exactly the first opened paper (A) is right'); eq(q['val'], [2, 'A'], 'T2 val'); eq(q['parts'][1]['choices'], ['A', 'B', 'C'], 'T2 labels'); eq([v.get('tag') for v in vs[1:]], ['A', 'B', 'C'], 'T2 options are labelled'); eq(sorted(right), sorted([(0.3, 0.8), (0.3, 0.2)]), 'T2 holes'); eq(len(shown(vs[2])), 2, 'T2 option B has 2 holes on one side'); eq(len(shown(vs[3])), 1, 'T2 option C has one hole')
+    eq(all(y > 0.5 for _, y in shown(vs[2])), True, 'T2 option B has both holes on one side of the fold line'); eq(f0['fold'] != CLASS_FOLDS['m4'][0], True, 'T2 fold differs from the class fold (left edge)')
     q = T['T3']; f = q['visual']; sx = f['mirror']; (mx, my), = [tuple(p) for p in f['mark']]; other = 2 * sx - mx; steps = 0; x = mx
     while x < sx: x += 1; steps += 1
     eq((sx, mx, my, other, steps), (2, 1, 3, 3, 1), 'T3 other hole and steps'); eq(q['val'], ['drawn', 1], 'T3 val'); eq(f['cols'] >= other and f['rows'] >= my, True, 'T3 on the grid')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; vs = q['visuals']; f0 = vs[0]; eq((f0['stage'], f0['fold']), ('folded', 'quarter'), 'G1 folded twice'); right = open_quarter(*f0['holes'][0]); eq(len(right), 4, 'G1 4 holes'); res = [shown(v) == right for v in vs[1:]]
-    eq(res, [False, False, True], 'G1 exactly the third opened paper is right'); eq(q['val'], [4, 'third'], 'G1 val'); eq(len(shown(vs[1])), 2, 'G1 option 1 has 2 holes'); eq(len(shown(vs[2])), 4, 'G1 option 2 has 4 holes in a row'); eq(len({y for _, y in shown(vs[2])}), 1, 'G1 option 2 holes are all in one row, which two folds cannot make')
+    eq(res, [False, False, True], 'G1 exactly the third opened paper is right'); eq(q['val'], [4, 'C'], 'G1 val'); eq([v.get('tag') for v in vs[1:]], ['A', 'B', 'C'], 'G1 options are labelled'); eq(len(shown(vs[1])), 2, 'G1 option 1 has 2 holes'); eq(len(shown(vs[2])), 4, 'G1 option 2 has 4 holes in a row'); eq(len({y for _, y in shown(vs[2])}), 1, 'G1 option 2 holes are all in one row, which two folds cannot make')
     layers = 1
     for _ in range(2): layers *= 2
     eq(layers, 4, 'G1 two folds make 4 layers'); eq(f0['holes'] != [list(CLASS_FOLDS['opt'][1])], True, 'G1 hole differs from the optional slide')

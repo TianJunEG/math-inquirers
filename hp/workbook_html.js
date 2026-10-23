@@ -3,11 +3,22 @@ const { fs, D, CW, t, p, cell, tbl, row, q, sub, ans, lines, img, gap, banner, f
 const L = require('./lessons.js');
 const PROG = L.program, SLOGAN = L.slogan;
 const W = [];
-const hdr = (n, topic, title, pb = true, tag = 'Start here') => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span>${tag ? `<span style="margin-left:auto;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">${tag}</span>` : ''}</div>`,
-  `<div class="p ltitle">${title}</div>`,
-  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
-];
+const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
+const LEVEL = 1;
+const COMPACT = new Set([3, 6, 7]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const hdr = (n, topic, title, pb = true, tag = 'Start here') => {
+  const first = tag === 'Start here';   // the card sits on the first page of each lesson only
+  const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
+  const compact = first && COMPACT.has(n);
+  const card = first && !compact ? SP.card(LEVEL, n) : '';
+  const chip = compact ? SP.card(LEVEL, n, true) : '';
+  return [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span>${chip}${tag ? `<span style="margin-left:${compact ? '3mm' : 'auto'};background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">${tag}</span>` : ''}</div>`,
+  choose || !card ? `<div class="p ltitle">${title}</div>` : `<div class="p ltrow" style="display:flex;align-items:center;justify-content:space-between;gap:4mm;margin:4px 0 6px"><div class="ltitle" style="flex:1;min-width:0;margin:0 0 8px;${title.length > 15 ? 'font-size:29px;line-height:1.12' : ''}">${title}</div>${card}</div>`,
+  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`,
+  ...(choose ? [card] : [])
+  ];
+};
 
 const QB = require('./qbank.json');
 const NL = () => new TextRun('<br>');
@@ -19,16 +30,7 @@ const opt = (txt) => `<span style="white-space:nowrap">${ib(BOX, 19)}${esc2(txt)
 const esc2 = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const choice = () => `<div class="p" style="border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15.5px;line-height:1.3;margin:2px 0 8px">After question 3 you may choose: carry on, or try <b>Think harder</b>.</div>`;
 const fast = choice;
-const refl = (n) => { const h = GAPS[String(n)].hard;
-  const row = (lab, inner) => `<div style="display:flex;align-items:center;flex-wrap:wrap;gap:2px 6px;margin-top:6px;font-size:15.5px"><b style="flex:none;width:170px">${lab}</b><span style="flex:1;display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px">${inner}</span></div>`;
-  const ln = `<span style="flex:1;border-bottom:2px dotted #8A94AD;height:18px;min-width:60px"></span>`;
-  return [`<div class="p" style="border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:7px 14px 9px;margin-top:12px"><div style="font-weight:700;color:#1F7A6F;font-size:19px">Look-back <span style="font-weight:400;font-size:13.5px;color:#3B4A6B">Three minutes. There are no right answers. You can pass. Nobody reads it out.</span></div>`
-    + row('Something I did well:', ln)
-    + row('The hardest part was ...', h.map(opt).join('') + `<span style="white-space:nowrap">${ib(BOX, 19)}something else:</span>` + ln)
-    + row('What helped me:', ['counters or objects', 'drawing it', 'trying again', 'I asked for help', 'I was not stuck'].map(opt).join(''))
-    + row('Next time I will try:', ['drawing it', 'using objects', 'checking my answer', 'asking a question'].map(opt).join(''))
-    + row('', opt('I am still stuck (my tutor will come and help)') + opt('I would like to pass'))
-    + `</div>`]; };
+const refl = (n) => [SP.lookback(LEVEL)];   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old five-row box
 const invest = (n) => { const v = GAPS[String(n)].invest; return [banner('Investigation: ' + v.title), p(new TextRun('<i>Choose this any time you like. You do not have to finish it.</i>'), { before: 40, after: 40 }), p(new TextRun('<b>Easy first step:</b> ' + esc2(v.first)), { after: 40 }), p(new TextRun('<b>Then:</b> ' + esc2(v.q)), { after: 40 }), ...lines((v.lines || 4) + 2)]; };
 const coreEnd = (n) => [p('', { pb: true, after: 0 }), p(t('Lesson ' + n + '  •  ' + L.lessons[n - 1].topic.toUpperCase() + '  •  Choose, then look back', { bold: true, size: 22, color: '666666' }), { after: 60 }), ...invest(n), gap(60), ...refl(n)];
 const txp = (n) => (GAPS[String(n)].tx || []).flatMap(x => [q(x.label, x.q, { before: 60, after: 40, keepNext: true }), ...(x.subs || []).map(s => sub(s[0], s[1])), ...lines(1)]);
