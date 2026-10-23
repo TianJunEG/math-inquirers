@@ -1,6 +1,7 @@
 """Primary 4 topic banks for colour by code (level file: LEVEL, RULES, BANKS, GALLERY). Written for the Primary 4 school booklets from the Primary 2 file's design.
 Three banks: numbers up to 100 000, multiplication and division with larger numbers, decimals. Every form is form(answer, rng) -> Q or None (None: this
-answer cannot be made in this form). Numbers of 5 digits are written with a non-breaking space (45 280); 4-digit numbers have no gap."""
+answer cannot be made in this form). Numbers of 5 digits are written with a non-breaking space (45 280); 4-digit numbers have no gap.
+Most forms have a one-line and a stacked variant (two or three short lines) so that a question fits the small parts of a picture."""
 import math, re
 from fractions import Fraction
 import art as A
@@ -40,15 +41,14 @@ def _numbers4():
     def digit_value(a, r):
         for d in range(1, 10):
             for p in range(2, 5):
-                if d * 10 ** p == a:
-                    for _ in range(80):
-                        n = r.randint(10 ** 3, 99999); s = list(str(n))
-                        pos = len(s) - 1 - p
-                        if pos < 0: continue
-                        s[pos] = str(d)
-                        n = int("".join(s))
-                        if str(n).count(str(d)) == 1 and n >= 1000:
-                            return SEM([f"Value of the digit {d}", f"in {nb(n)}: {BOX}"], holds_eq(a), str(a), form="value of a digit")
+                if d * 10 ** p != a: continue
+                for _ in range(80):
+                    n = r.randint(10 ** 3, 99999); s = list(str(n)); pos = len(s) - 1 - p
+                    if pos < 0: continue
+                    s[pos] = str(d); n = int("".join(s))
+                    if str(n).count(str(d)) == 1 and n >= 1000:
+                        lines = r.choice([[f"Value of the digit {d}", f"in {nb(n)}: {BOX}"], [f"Value of {d} in", f"{nb(n)}", f"= {BOX}"]])
+                        return SEM(lines, holds_eq(a), str(a), form="value of a digit")
         return None
     def round_to(a, r):
         ss = [s for s in (10, 100, 1000) if a % s == 0]
@@ -56,14 +56,19 @@ def _numbers4():
         s = ch(r, ss[-2:]) if len(ss) >= 2 else ss[0]
         n = r.choice([a - s // 2, a + s // 2 - 1, r.randint(a - s // 2, a + s // 2 - 1)])
         if n == a or n < 1000: return None
-        return SEM([f"Round {nb(n)} to", f"the nearest {s}: {BOX}"], holds_eq(a), str(a), form=f"round to {s}")
+        lines = r.choice([[f"Round {nb(n)} to", f"the nearest {s}: {BOX}"], [f"Round {nb(n)}", f"to nearest {s}", f"= {BOX}"]])
+        return SEM(lines, holds_eq(a), str(a), form=f"round to {s}")
     def more_less(a, r):
         k = ch(r, [10, 100, 1000, 10000]); up = r.random() < .5
         base = a - k if up else a + k
         if base < 1000 or base > 99999 or k >= a: return None
-        return SEM([f"{nb(k)} {'more' if up else 'less'} than", f"{nb(base)}: {BOX}"], holds_eq(a), str(a), form="more or less")
+        w = "more" if up else "less"
+        lines = r.choice([[f"{nb(k)} {w} than", f"{nb(base)}: {BOX}"], [f"{nb(k)} {w}", f"than {nb(base)}", f"= {BOX}"]])
+        return SEM(lines, holds_eq(a), str(a), form="more or less")
     def words(a, r):
-        return SEM([words_of(a), f"= {BOX}"], holds_eq(a), str(a), form="words to number")
+        w = words_of(a); parts = w.split(", ")
+        lines = [w, f"= {BOX}"] if len(parts) == 1 and len(w) <= 15 else (parts + [f"= {BOX}"] if len(parts) > 1 else [w, f"= {BOX}"])
+        return SEM(lines, holds_eq(a), str(a), form="words to number")
     def expanded(a, r):
         if a >= 10000: return None
         if a < 1000: parts = [a - 100, 100]
@@ -75,17 +80,21 @@ def _numbers4():
         o = [a - r.choice([1, 10, 100, 101, 90, 9]) for _ in range(2)]
         if len(set(o + [a])) < 3 or min(o) < 1000: return None
         ns = o + [a]; r.shuffle(ns)
-        return SEM(["Greatest of", ", ".join(nb(x) for x in ns) + f": {BOX}"], holds_eq(a), str(a), form="greatest of three")
+        lines = r.choice([["Greatest of", ", ".join(nb(x) for x in ns) + f": {BOX}"], ["Greatest of", f"{nb(ns[0])}, {nb(ns[1])},", f"{nb(ns[2])}: {BOX}"]])
+        return SEM(lines, holds_eq(a), str(a), form="greatest of three")
     def smallest(a, r):
         o = [a + r.choice([1, 10, 100, 101, 90, 9]) for _ in range(2)]
         if len(set(o + [a])) < 3 or a < 1000 or max(o) > 99999: return None
         ns = o + [a]; r.shuffle(ns)
-        return SEM(["Smallest of", ", ".join(nb(x) for x in ns) + f": {BOX}"], holds_eq(a), str(a), form="smallest of three")
+        lines = r.choice([["Smallest of", ", ".join(nb(x) for x in ns) + f": {BOX}"], ["Smallest of", f"{nb(ns[0])}, {nb(ns[1])},", f"{nb(ns[2])}: {BOX}"]])
+        return SEM(lines, holds_eq(a), str(a), form="smallest of three")
     def pattern(a, r):
         s = ch(r, [100, 500, 1000, 2500, 250]); pos = r.randrange(0, 4); sg = r.choice([1, -1]) * s
         terms = [a - sg * pos + sg * i for i in range(4)]
         if min(terms) < 1000 or max(terms) > 99999: return None
-        return SEM(["Pattern: " + ", ".join(BOX if i == pos else nb(t) for i, t in enumerate(terms))], holds_eq(a), str(a), form="number pattern")
+        items = [BOX if i == pos else nb(t) for i, t in enumerate(terms)]
+        lines = [f"Pattern: {items[0]}, {items[1]},", f"{items[2]}, {items[3]}"]
+        return SEM(lines, holds_eq(a), str(a), form="number pattern")
     return [digit_value, round_to, more_less, words, expanded, greatest, smallest, pattern]
 
 # ------------------------------------------------------------------ multiplication and division of larger numbers
@@ -99,30 +108,35 @@ def _mult4():
         p = pairs(a, 2, 9, 100, 9999)
         if not p: return None
         x, y = r.choice(p)
-        q = EQ([f"{x} {X} {y} = {BOX}"], a, form="4 digits by 1 digit"); q.sig = ("mult", x, y); return q
+        lines = r.choice([[f"{x} {X} {y} = {BOX}"], [f"{x} {X} {y}", f"= {BOX}"], [f"{x}", f"{X} {y}", f"= {BOX}"]])
+        q = EQ(lines, a, form="4 digits by 1 digit"); q.sig = ("mult", x, y); return q
     def times2(a, r):
         p = pairs(a, 11, 99, 100, 999)
         if not p: return None
         x, y = r.choice(p)
-        q = EQ([f"{x} {X} {y} = {BOX}"], a, form="3 digits by 2 digits"); q.sig = ("mult", x, y); return q
+        lines = r.choice([[f"{x} {X} {y} = {BOX}"], [f"{x} {X} {y}", f"= {BOX}"], [f"{x}", f"{X} {y}", f"= {BOX}"]])
+        q = EQ(lines, a, form="3 digits by 2 digits"); q.sig = ("mult", x, y); return q
     def times_rev(a, r):
         p = pairs(a, 2, 9, 100, 9999)
         if not p: return None
         x, y = r.choice(p)
-        q = EQ([f"{y} {X} {x} = {BOX}"], a, form="1 digit by 4 digits"); q.sig = ("mult", x, y); return q
+        lines = r.choice([[f"{y} {X} {x} = {BOX}"], [f"{y} {X} {x}", f"= {BOX}"]])
+        q = EQ(lines, a, form="1 digit by 4 digits"); q.sig = ("mult", x, y); return q
     def missing(a, r):
         y = ch(r, range(2, 10)); z = a * y
         if z > 9999: return None
-        q = EQ([f"{BOX} {X} {y} = {z}"], a, form="missing factor"); q.sig = ("mult", a, y); return q
+        lines = r.choice([[f"{BOX} {X} {y} = {z}"], [f"{BOX} {X} {y}", f"= {z}"]])
+        q = EQ(lines, a, form="missing factor"); q.sig = ("mult", a, y); return q
     def divide(a, r):
         d = ch(r, range(2, 10)); n = a * d
         if n > 9999: return None
-        q = EQ([f"{n} {D} {d} = {BOX}"], a, form="divide"); q.sig = ("div", n, d); return q
+        lines = r.choice([[f"{n} {D} {d} = {BOX}"], [f"{n} {D} {d}", f"= {BOX}"], [f"{n}", f"{D} {d}", f"= {BOX}"]])
+        q = EQ(lines, a, form="divide"); q.sig = ("div", n, d); return q
     def story_mult(a, r):
         p = pairs(a, 3, 9, 100, 999)
         if not p: return None
         x, y = r.choice(p)
-        q = SEM([f"{y} trays, {x} eggs", f"in each tray. Eggs: {BOX}"], lambda v, t_=a: v == t_, str(a), form="story multiply"); q.sig = ("mult", x, y); return q
+        q = SEM([f"{y} trays of", f"{x} eggs: {BOX}"], lambda v, t_=a: v == t_, str(a), form="story multiply"); q.sig = ("mult", x, y); return q
     def story_div(a, r):
         d = ch(r, range(3, 9)); n = a * d
         if n > 9999: return None
@@ -130,7 +144,9 @@ def _mult4():
     def two_step(a, r):
         y = ch(r, range(2, 9)); z = r.randint(5, 95)
         if (a + z) % y or (a + z) // y < 100: return None
-        q = EQ([f"{(a + z) // y} {X} {y} {MINUS} {z} = {BOX}"], a, form="multiply then subtract"); q.sig = ("multsub", (a + z) // y, y, z); return q
+        x = (a + z) // y
+        lines = r.choice([[f"{x} {X} {y} {MINUS} {z} = {BOX}"], [f"{x} {X} {y} {MINUS} {z}", f"= {BOX}"]])
+        q = EQ(lines, a, form="multiply then subtract"); q.sig = ("multsub", x, y, z); return q
     return [times1, times2, times_rev, missing, divide, story_mult, story_div, two_step]
 
 # ------------------------------------------------------------------ decimals
@@ -155,35 +171,38 @@ def places(v):
 
 def _dec4():
     def holds_eq(t): return lambda v, t_=Fraction(t): v == t_
-    def two_dp(r, lo, hi):
-        return Fraction(r.randint(int(lo * 100), int(hi * 100)), 100)
+    def two_dp(r, lo, hi): return Fraction(r.randint(int(lo * 100), int(hi * 100)), 100)
     def add(a, r):
         for _ in range(60):
             x = two_dp(r, Fraction(1, 20), a - Fraction(1, 20)); y = a - x
-            if y > 0 and places(x) <= 2 and places(y) <= 2 and (places(x) == 2 or places(y) == 2):
-                return SEM([f"{ds(x)} + {ds(y)} = {BOX}"], holds_eq(a), ds(a), form="add decimals")
+            if y > 0 and (places(x) == 2 or places(y) == 2):
+                lines = r.choice([[f"{ds(x)} + {ds(y)} = {BOX}"], [f"{ds(x)} + {ds(y)}", f"= {BOX}"], [f"{ds(x)}", f"+ {ds(y)}", f"= {BOX}"]])
+                return SEM(lines, holds_eq(a), ds(a), form="add decimals")
         return None
     def sub(a, r):
         for _ in range(60):
             y = two_dp(r, Fraction(1, 20), Fraction(3)); x = a + y
-            if places(x) <= 2 and places(y) <= 2 and (places(x) == 2 or places(y) == 2) and x < 10:
-                return SEM([f"{ds(x)} {MINUS} {ds(y)} = {BOX}"], holds_eq(a), ds(a), form="subtract decimals")
+            if x < 10 and (places(x) == 2 or places(y) == 2):
+                lines = r.choice([[f"{ds(x)} {MINUS} {ds(y)} = {BOX}"], [f"{ds(x)} {MINUS} {ds(y)}", f"= {BOX}"], [f"{ds(x)}", f"{MINUS} {ds(y)}", f"= {BOX}"]])
+                return SEM(lines, holds_eq(a), ds(a), form="subtract decimals")
         return None
     def mult(a, r):
-        ds_ = [d for d in range(2, 10) if places(a / d) <= 2 and (a / d) * 100 == int((a / d) * 100) and a / d > 0]
-        if not ds_: return None
-        d = r.choice(ds_)
-        return SEM([f"{ds(a / d)} {X} {d} = {BOX}"], holds_eq(a), ds(a), form="multiply decimal")
+        dd = [d for d in range(2, 10) if places(a / d) <= 2]
+        if not dd: return None
+        d = r.choice(dd)
+        lines = r.choice([[f"{ds(a / d)} {X} {d} = {BOX}"], [f"{ds(a / d)} {X} {d}", f"= {BOX}"], [f"{ds(a / d)}", f"{X} {d}", f"= {BOX}"]])
+        return SEM(lines, holds_eq(a), ds(a), form="multiply decimal")
     def div(a, r):
-        ds_ = [d for d in range(2, 10) if places(a * d) <= 2]
-        if not ds_: return None
-        d = r.choice(ds_)
-        return SEM([f"{ds(a * d)} {D} {d} = {BOX}"], holds_eq(a), ds(a), form="divide to a decimal")
+        dd = [d for d in range(2, 10) if places(a * d) <= 2]
+        if not dd: return None
+        d = r.choice(dd)
+        lines = r.choice([[f"{ds(a * d)} {D} {d} = {BOX}"], [f"{ds(a * d)} {D} {d}", f"= {BOX}"], [f"{ds(a * d)}", f"{D} {d}", f"= {BOX}"]])
+        return SEM(lines, holds_eq(a), ds(a), form="divide to a decimal")
     def rounding(a, r):
         p = places(a)
         if p == 0:
             x = a + Fraction(r.randint(-49, 49), 100)
-            if x == a or x.denominator not in (1, 2, 4, 5, 10, 20, 25, 50, 100): return None
+            if x == a or places(x) == 0: return None
             return SEM([f"Round {ds(x)} to the", f"nearest whole number: {BOX}"], holds_eq(a), ds(a), form="round to whole")
         if p == 1:
             x = a + Fraction(r.choice([-4, -3, -2, -1, 1, 2, 3, 4]), 100)
@@ -193,12 +212,13 @@ def _dec4():
             return SEM([f"Round {ds(x)} to", f"2 decimal places: {BOX}"], holds_eq(a), ds(a), form="round to 2 d.p.")
         return None
     def frac_dec(a, r):
+        opts = []
         for d in (2, 4, 5, 10, 20, 25, 50, 100):
             n = a * d
-            if n.denominator == 1 and n > 0 and Fraction(n, d) != 1 and (math.gcd(int(n), d) == 1 or r.random() < .35):
-                if d >= 20 and r.random() < .3: continue
-                return SEM([f"{FRAC(int(n), d)} = {BOX}"], holds_eq(a), ds(a), form="fraction to decimal")
-        return None
+            if n.denominator == 1 and n > 0 and Fraction(n, d) != 1: opts.append((int(n), d))
+        if not opts: return None
+        n, d = r.choice(opts)
+        return SEM([f"{FRAC(n, d)} = {BOX}"], holds_eq(a), ds(a), form="fraction to decimal")
     def greatest(a, r):
         o = []
         for _ in range(30):
@@ -207,12 +227,15 @@ def _dec4():
             if len(o) == 2: break
         if len(o) < 2: return None
         ns = o + [a]; r.shuffle(ns)
-        return SEM(["Greatest of", ", ".join(ds(x) for x in ns) + f": {BOX}"], holds_eq(a), ds(a), form="greatest decimal")
+        lines = r.choice([["Greatest of", ", ".join(ds(x) for x in ns) + f": {BOX}"], ["Greatest of", f"{ds(ns[0])}, {ds(ns[1])},", f"{ds(ns[2])}: {BOX}"]])
+        return SEM(lines, holds_eq(a), ds(a), form="greatest decimal")
     def tenth(a, r):
         k = ch(r, [Fraction(1, 10), Fraction(1, 100)]); up = r.random() < .5
         base = a - k if up else a + k
         if base <= 0: return None
-        return SEM([f"{ds(k)} {'more' if up else 'less'} than {ds(base)}", f"is {BOX}"], holds_eq(a), ds(a), form="more or less decimal")
+        w = "more" if up else "less"
+        lines = r.choice([[f"{ds(k)} {w} than {ds(base)}", f"is {BOX}"], [f"{ds(k)} {w}", f"than {ds(base)}", f"is {BOX}"]])
+        return SEM(lines, holds_eq(a), ds(a), form="more or less decimal")
     return [add, sub, mult, div, rounding, frac_dec, greatest, tenth]
 
 def build_banks():
@@ -236,7 +259,7 @@ def build_banks():
 BANKS = build_banks()
 
 GALLERY = [
-    dict(id="CBC-P4-01", picture="elephant", bank="numbers4", tier=2, seed=401),
-    dict(id="CBC-P4-02", picture="castle", bank="mult4", tier=2, seed=402),
-    dict(id="CBC-P4-03", picture="sailboat", bank="dec4", tier=2, seed=403),
+    dict(id="CBC-P4-01", picture="bus", bank="numbers4", tier=2, seed=401),
+    dict(id="CBC-P4-02", picture="lorry", bank="mult4", tier=2, seed=402),
+    dict(id="CBC-P4-03", picture="ferry", bank="dec4", tier=2, seed=403),
 ]

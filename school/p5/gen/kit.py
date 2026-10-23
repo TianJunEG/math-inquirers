@@ -43,7 +43,9 @@ CLAIMED = {}      # page number -> code word, so that no two pages of one build 
 def word_candidates(no, n, avoid=()):
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
-    return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
+    res = [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
+    if res and no not in CLAIMED: CLAIMED[no] = res[0]          # pages that take the first candidate (lettered choices, orderings, matchings) claim it here
+    return res
 
 def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
     """(word, table): the first word of this page's sequence for which a code table with no undetected slip exists"""

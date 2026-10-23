@@ -126,21 +126,20 @@ def code_verify(answers, table, word, lo, hi, domain=None):
     (a slip that makes another real word counts as not detected); V4 guess resistance: how many common words fit the table letters."""
     spelled = "".join(table[a] for a in answers)
     ok2 = spelled == word and word.lower() in COMMON
+    dom = list(domain) if domain is not None else range(lo, hi + 1)
+    domset = set(dom)
     tot = det = 0
     undetected = []
     for i in range(len(answers)):
-        for v in (domain if domain is not None else range(lo, hi + 1)):
-            if v == answers[i]:
-                continue
-            tot += 1
-            L = table.get(v)
-            if L is None:
-                det += 1; continue
+        # a value of the domain that has no letter in the table is always detected; only the table entries can slip through
+        tot += len(domset) - (1 if answers[i] in domset else 0)
+        miss = 0
+        for v, L in table.items():
+            if v == answers[i] or v not in domset: continue
             m = word[:i] + L + word[i+1:]
-            if m != word and m.lower() not in BIG:
-                det += 1
-            else:
-                undetected.append((i, v, m))
+            if m != word and m.lower() in BIG:
+                undetected.append((i, v, m)); miss += 1
+        det += (len(domset) - (1 if answers[i] in domset else 0)) - miss
     n = len(word)
     cand = candidates(table.values(), n)
     swaps = []                                   # two answers written in each other's boxes

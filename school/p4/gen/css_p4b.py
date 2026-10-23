@@ -38,4 +38,49 @@ CSS_P4B = """
 .srows3.grid2 .tfo{display:flex;align-items:center;gap:2mm}.srows3.grid2 .tfo b{font-size:13pt;min-width:15mm}.afig>svg{display:block}
 .figwrap svg{max-width:none;width:170mm;height:auto}
 .srow3 .sq3 svg{max-width:none}
+.dect td.pt{font-size:22pt;width:8mm;border-left:none;border-right:none}.dect th:nth-child(2){border:none;width:8mm}
+.dcs{display:flex;gap:4mm;flex-wrap:wrap}.dcs.five{gap:3mm}
+.dc{position:relative;border:0.5mm solid #000;border-radius:2mm;min-width:36mm;height:16mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:19pt;padding:1.5mm 2mm 0 6mm}
+.dcs.five .dc{min-width:30mm;flex:1}
+.dc i.cl{position:absolute;left:1.2mm;top:1.2mm;width:6.5mm;height:6.5mm;font-size:11pt}
+.dc .fr{font-size:15pt}
+.mrows{display:flex;flex-direction:column;gap:1.5mm}
+.mrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding-bottom:1.2mm}
+.mrow .mq{font-family:'Fredoka';font-weight:600;font-size:19pt;min-width:42mm;display:inline-flex;align-items:center;gap:2mm}.mrow .mq .fr{font-size:15pt}
+.mrow .mto{flex:1;font-size:12pt;font-weight:700}
+.dcs.big{gap:6mm}.dcs.big .dc{height:24mm;font-size:28pt;min-width:50mm;padding-left:8mm}.dcs.big .dc i.cl{width:8mm;height:8mm;font-size:13pt}
+.msqwrap{display:flex;justify-content:center;padding:6mm 0}
+.msq{display:grid;grid-template-columns:repeat(3,50mm);grid-auto-rows:34mm;border:0.9mm solid #000}
+.mq3{border:0.9mm solid #000;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:30pt}
+.mq3 .ab.mb{width:38mm;height:17mm}
+.fgc svg{display:block;max-width:none}.fgc{display:flex;justify-content:center}
+.qc.fgq .qt{display:flex;flex-direction:column;align-items:center}.qc.fgq .fq{margin:0.5mm 0 0;font-size:12pt;font-weight:700}
+.qc.fgq{position:relative}.qc.fgq .no{position:absolute;left:2mm;top:2mm}
+.qc.fgq .qa{font-size:13pt;font-weight:700}
+.qc.fgq2 .qt{flex:none}.qc.fgq2 .qa{flex-direction:column;align-items:flex-start;gap:1mm;font-size:12pt;font-weight:700}.fq2{font-size:12pt;font-weight:700}
+.qc.fgq2 .no{position:absolute;left:2mm;top:2mm}.qc.fgq2{position:relative}
+.qc.fgq .qt{margin-left:6mm}
+.mfigs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3mm 5mm}
+.mfig{position:relative;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;justify-content:center;align-items:center;min-height:36mm}
+.mfig i.cl{position:absolute;left:2mm;top:2mm;width:8.5mm;height:8.5mm;font-size:13pt}
+.mrows2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5mm 6mm}
+.mrows2 .mrow{border-bottom:0.3mm solid #000}
+.mq2{flex:1;font-family:'Fredoka';font-weight:600;font-size:14pt}
+.srows3.grid2.corner .srow3{flex-direction:column;align-items:center;padding:2mm}.srows3.grid2.corner .sq3{flex:none}
+.sblock{display:flex;gap:6mm;align-items:center;margin-bottom:3mm}.sfig svg{display:block;max-width:none}
+.sqs{display:flex;flex-direction:column;gap:3mm;flex:1}.qrow2{display:flex;align-items:center;gap:2.5mm;font-size:12.5pt;line-height:1.2}.qrow2 .qt{flex:1}
+.tt37{border-collapse:collapse;margin:3mm auto 0;font-size:17pt}.tt37 th,.tt37 td{border:0.5mm solid #000;text-align:center;height:19mm;min-width:30mm;font-family:'Fredoka';font-weight:600}
+.tt37 th{background:#fff;font-weight:700;font-size:14pt}.tt37 .ab.tb{width:22mm;height:13mm}
+.lgraph{display:flex;justify-content:center;margin-bottom:2mm}.lgraph svg{max-width:none;width:160mm;height:auto}
+.lqs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3mm 6mm}
+.sblock.pieb .sfig svg{width:90mm;height:90mm}
+.srows3.grid2.solids .sopts{gap:1.5mm}.srows3.grid2.solids .tfo b{font-size:11.5pt;min-width:32mm}
+.netfig svg{max-width:none}.srows3.grid2.solids .afig>svg{width:40mm;height:34mm}.srows3.grid2.solids .srow3{min-height:42mm}.srows3.grid2 .afig.netfig>svg{width:38mm;height:31mm}.srows3.grid2 .afig.netfig{margin:4mm 0 0 4mm}.lqs{margin-bottom:2mm}
+"""
+CSS_P4B = CSS_P4B + """.codetable[style*="repeat(8"] .ct,.codetable[style*="repeat(9"] .ct{min-width:0;padding:0.6mm 1.2mm;gap:1mm;font-size:13.5pt}.codetable[style*="repeat(8"] .ct b,.codetable[style*="repeat(9"] .ct b{padding-left:1.2mm;font-size:16pt}
+.maze:not(.tall) .mcell small{font-size:9.5pt}
+"""
+CSS_P4B = CSS_P4B + """.dcs.big .dc{height:36mm;font-size:32pt}.qc.fgq .qt{margin-left:9mm}
+"""
+CSS_P4B = CSS_P4B + """.srows3.grid2.solids .afig{flex:none;width:40mm;margin-left:5mm}
 """

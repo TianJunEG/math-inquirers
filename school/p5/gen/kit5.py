@@ -230,7 +230,7 @@ def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     return P
 
 # --------------------------------------------------------------------------- matching (K1 + K4): write the letter of the matching card under each tile
-def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, pairs, word, key_lines, note, solve_left, solve_right, ps=False, checks=(), plain=None, left_title="Cards", right_title="Tiles"):
+def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, pairs, word, key_lines, note, solve_left, solve_right, ps=False, checks=(), plain=None, left_title="Cards", right_title="Tiles", raw_left=None, raw_right=None):
     """pairs: list of (left_html, right_html) in the ORDER OF THE TILES; the left card of tile i carries word[i].
     solve_left(text)->value and solve_right(text)->value are the independent readers; a card matches the tile with the same value."""
     n = len(pairs); assert n == len(word)
@@ -244,7 +244,8 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
                  mech_plain=plain or f"Letters of the matching cards, tile 1 to {n}, spell a word")
     lcards = re.findall(r'<div class="mcard2"><i class="cl">(\w)</i><div class="mc2">(.*?)</div></div>', body, re.S)
     tiles = re.findall(r'<div class="tv">(.*?)</div><span class="ab letter">', body, re.S)
-    lv = [(solve_left(to_text(h)), L) for L, h in lcards]
+    lv = [((raw_left(h) if raw_left else solve_left(to_text(h))), L) for L, h in lcards]
+    if raw_right: solve_right = raw_right
     got = ""
     for t in tiles:
         v = solve_right(to_text(t)); m = [L for x, L in lv if x == v]

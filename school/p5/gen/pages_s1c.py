@@ -199,7 +199,7 @@ def page17():
         "multiplying and dividing decimals (up to 3 decimal places) by 10, 100 and 1000", ["DE1.1"], "Code-breaker (decimal point shifts)",
         ["Work out each answer.", "Write it in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: dec(k), "; ".join(f"{i+1}) {dec(a)}" for i, a in enumerate(ans)),
-        "Six calculations: a whole number or a decimal of up to three places multiplied or divided by 10, 100 or 1000. No answer has more than three decimal places. The decoy letters stand for the usual slips: the decimal point moved one place too many or too few, or moved the wrong way. A box left blank gives no letter and the check cannot see it.",
+        "Six calculations: a whole number or a decimal of up to three places multiplied or divided by 10, 100 or 1000. No answer has four or more decimal places. The decoy letters stand for the usual slips: the decimal point moved one place too many or too few, or moved the wrong way. A box left blank gives no letter and the check cannot see it.",
         solved, cols=3, layout="c2", checks=[("V7 every number has at most 3 decimal places", all(len(dec(v).partition(".")[2]) <= 3 and len(dec(x).partition(".")[2]) <= 3 for x, op, p, v in items), "")])
     return P
 
@@ -250,7 +250,7 @@ def page18():
         "multiplying and dividing decimals by 10, 100, 1000 and their multiples", ["DE1.1"], "True or false table",
         ["Is each statement true or false?", "Circle the letter of the right choice in each row.", "Write the six letters in the boxes."],
         rng, rows, 2, word, "; ".join(f"{i+1}) {'T' if tr else 'F'} ({t})" for i, (t, tr) in enumerate(sts)),
-        "Six statements with decimals multiplied or divided by 10, 100, 1000 or a multiple such as 20, 300 or 2000. Each row has a T choice and an F choice with a letter. The false statements are the usual slips (the decimal point one place out, or the wrong number of zeros). The letters of the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
+        "Six statements with decimals multiplied or divided by 10, 100, 1000 or a multiple of 10, 100 or 1000. Each row has a T choice and an F choice with a letter. The false statements are the usual slips (the decimal point one place out, or the wrong number of zeros). The letters of the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
         solve_row, rows_cls="tfrows")
     return P
 

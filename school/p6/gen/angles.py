@@ -22,8 +22,14 @@ class Fig:
 
 def render(fig, W=50.0, H=36.0, mirror=False):
     pts = {k: ((-x if mirror else x), y) for k, (x, y) in fig.pts.items()}
-    xs = [p[0] for p in pts.values()]; ys = [p[1] for p in pts.values()]
     mx, my = 6.5, 5.5
+    def fit(pp):
+        xs = [p[0] for p in pp.values()]; ys = [p[1] for p in pp.values()]
+        bw, bh = max(xs) - min(xs), max(ys) - min(ys)
+        return min((W - 2 * mx) / bw, (H - 2 * my) / bh)
+    rot = {k: (y, -x) for k, (x, y) in pts.items()}
+    if fit(rot) > 1.25 * fit(pts): pts = rot              # a tall figure is turned on its side so that it can be drawn larger
+    xs = [p[0] for p in pts.values()]; ys = [p[1] for p in pts.values()]
     bw, bh = max(xs) - min(xs), max(ys) - min(ys)
     k = min((W - 2 * mx) / bw, (H - 2 * my) / bh)
     ox = mx + (W - 2 * mx - bw * k) / 2; oy = my + (H - 2 * my - bh * k) / 2
@@ -58,12 +64,12 @@ def render(fig, W=50.0, H=36.0, mirror=False):
         lx, ly = v[0] + lr * math.cos(bis), v[1] + lr * math.sin(bis)
         cls = "unk" if a["unk"] else "ang"
         out.append(f'<path class="{cls}" data-at="{a["at"]}" data-p="{a["p"]}" data-q="{a["q"]}" data-val="{html.escape(str(a["label"]))}" d="M{x1:.2f},{y1:.2f} A{r},{r} 0 0 {sweep} {x2:.2f},{y2:.2f}" fill="none" stroke="#000" stroke-width="{0.6 if not a["unk"] else 0.8}"/>')
-        out.append(f'<text class="al" x="{lx:.2f}" y="{ly:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.8" fill="#000">{html.escape(str(a["label"]))}</text>')
+        out.append(f'<text class="al" x="{lx:.2f}" y="{ly:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.8" fill="#000" stroke="#fff" stroke-width="1.1" paint-order="stroke" stroke-linejoin="round">{html.escape(str(a["label"]))}</text>')
     for n, (x, y) in S.items():
         out.append(f'<circle class="pt" data-v="{n}" cx="{x:.3f}" cy="{y:.3f}" r="0.5" fill="#000"/>')
         dx, dy = x - cx, y - cy; nn = math.hypot(dx, dy) or 1
         lx, ly = x + dx / nn * 3.4, y + dy / nn * 3.4
-        out.append(f'<text class="vl" x="{lx:.2f}" y="{ly:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{n}</text>')
+        out.append(f'<text class="vl" x="{lx:.2f}" y="{ly:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000" stroke="#fff" stroke-width="1.1" paint-order="stroke" stroke-linejoin="round">{n}</text>')
     return f'<svg xmlns="http://www.w3.org/2000/svg" class="fig-svg fig-ang" viewBox="0 0 {W:.1f} {H:.1f}" width="{W:.1f}mm" height="{H:.1f}mm">' + "".join(out) + "</svg>"
 
 # ------------------------------------------------------------------------------------------------ the families

@@ -249,7 +249,8 @@ def balance(left=None, right=None, tilt='level', width=1000, icon_size=44):
         P.append(f'<path d="M{ex - pw / 2 - 8:.1f} {py:.1f} H{ex + pw / 2 + 8:.1f} C{ex + pw / 2:.1f} {py + 40:.1f} {ex - pw / 2:.1f} {py + 40:.1f} {ex - pw / 2 - 8:.1f} {py:.1f} Z" {_o("#fff")}/>')
     H = by + 250 + 30
     P.insert(0, f'<rect x="{cx - 110}" y="{by + 246}" width="220" height="16" rx="6" {_o("#C9D2E3")}/>')
-    return f'<svg viewBox="0 0 {width} {H + 20}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pan balance" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
+    y0 = int(by - abs(ey_off) - 30)               # crop the empty space above the beam
+    return f'<svg viewBox="0 {y0} {width} {H + 20 - y0}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pan balance" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
 
 
 def shelf(items=None, title=None, size=64, per_row=6):

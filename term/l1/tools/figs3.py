@@ -348,20 +348,20 @@ def grid(rows=3, cols=3, kind='dots', poly=None, route=None, start=None, end=Non
     else:
         for r in range(rows + 1):
             for c in range(cols + 1):
-                x, y = P(c, r); body.append(f'<circle cx="{x}" cy="{y}" r="5.5" fill="{NAVY}"/>')
+                x, y = P(c, r); body.append(f'<circle cx="{x}" cy="{y}" r="7.5" fill="{NAVY}"/>')
     if route:
         for a, b in zip(route, route[1:]):
             (x1, y1), (x2, y2) = P(*a), P(*b)
             ang = math.atan2(y2 - y1, x2 - x1); hx, hy = x2 - 12 * math.cos(ang), y2 - 12 * math.sin(ang)
-            body.append(f'<line x1="{x1}" y1="{y1}" x2="{hx:.1f}" y2="{hy:.1f}" stroke="{RED}" stroke-width="6" stroke-linecap="round"/>')
+            body.append(f'<line x1="{x1}" y1="{y1}" x2="{hx:.1f}" y2="{hy:.1f}" stroke="{RED}" stroke-width="7.5" stroke-linecap="round"/>')
             lx, ly = -math.sin(ang), math.cos(ang)
             body.append(f'<polygon points="{x2:.1f},{y2:.1f} {x2 - 16 * math.cos(ang) + 9 * lx:.1f},{y2 - 16 * math.sin(ang) + 9 * ly:.1f} {x2 - 16 * math.cos(ang) - 9 * lx:.1f},{y2 - 16 * math.sin(ang) - 9 * ly:.1f}" fill="{RED}"/>')
     for p in mark:
-        x, y = P(*p); body.append(f'<circle cx="{x}" cy="{y}" r="12" fill="none" stroke="{TEAL}" stroke-width="4.4"/>')
+        x, y = P(*p); body.append(f'<circle cx="{x}" cy="{y}" r="15" fill="none" stroke="{TEAL}" stroke-width="5"/>')
     if start:
-        x, y = P(*start); body.append(f'<circle cx="{x}" cy="{y}" r="13" fill="{TEAL}" stroke="{NAVY}" stroke-width="2.6"/><text x="{x}" y="{y + 6}" font-size="17" font-weight="800" text-anchor="middle" fill="#fff" font-family="{FONT}">S</text>')
+        x, y = P(*start); body.append(f'<circle cx="{x}" cy="{y}" r="16" fill="{TEAL}" stroke="{NAVY}" stroke-width="2.6"/><text x="{x}" y="{y + 7.5}" font-size="21" font-weight="800" text-anchor="middle" fill="#fff" font-family="{FONT}">S</text>')
     if end:
-        x, y = P(*end); body.append(f'<rect x="{x - 13}" y="{y - 13}" width="26" height="26" rx="4" fill="{YEL}" stroke="{NAVY}" stroke-width="2.6"/><text x="{x}" y="{y + 6}" font-size="17" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">E</text>')
+        x, y = P(*end); body.append(f'<rect x="{x - 16}" y="{y - 16}" width="32" height="32" rx="5" fill="{YEL}" stroke="{NAVY}" stroke-width="2.6"/><text x="{x}" y="{y + 7.5}" font-size="21" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">E</text>')
     if mirror is not None:
         x = pad + mirror * cell; body.append(f'<line x1="{x}" y1="{pad - 16}" x2="{x}" y2="{pad + rows * cell + 16}" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 7"/>')
     return _svg(W, H, ''.join(body), f'{kind} grid {cols} by {rows}')
@@ -611,7 +611,7 @@ def render(v):
     if t == 'calendar': return calendar(v.get('start', 'Wed'), v.get('days', 31), v.get('highlight', ()), v.get('hide', ()), v.get('mark', ()), v.get('week'))
     if t == 'stick_pattern': return stick_pattern(v.get('shape', 'triangle'), v.get('n', 3), v.get('hide_last', False), v.get('label_each', False), handle=v.get('handle', False))
     if t == 'shapes2d': return _tagged(shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), _draw_size(v), label=v.get('label')), v.get('tag'))
-    if t == 'grid': return grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64))
+    if t == 'grid': return _tagged(grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64)), v.get('tag'))
     if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
     if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], v.get('draw') or 150), v.get('tag'))
     if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130), title=v.get('title')), v.get('tag'))

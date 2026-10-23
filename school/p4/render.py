@@ -147,7 +147,7 @@ table.tbl{border-collapse:collapse;width:100%;font-size:10.5pt}
 table.tbl th,table.tbl td{border:0.4mm solid #000;padding:1.2mm 2mm;text-align:left;vertical-align:top}
 table.tbl th{font-weight:800;border-bottom:0.8mm solid #000}
 table.tbl.cov{font-size:8.2pt}table.tbl.cov td:first-child{white-space:nowrap}table.tbl.cov td:last-child{white-space:nowrap}table.tbl.cov th,table.tbl.cov td{padding:0.35mm 1.4mm}
-table.tbl.cont{font-size:9pt}table.tbl.cont th,table.tbl.cont td{padding:0.5mm 1.6mm}
+table.tbl.cont{font-size:8.5pt}table.tbl.cont th,table.tbl.cont td{padding:0.2mm 1.6mm}
 .kentry{border:0.5mm solid #000;border-radius:2mm;padding:2.2mm 3.5mm;margin-bottom:3mm;font-size:10pt;line-height:1.25;break-inside:avoid}
 .kentry h4{font-family:'Fredoka';font-weight:600;font-size:13pt;margin:0 0 1.5mm}
 .kentry .tags{font-weight:700;margin-bottom:1mm}
@@ -237,7 +237,7 @@ from gen.outcomes import OUTCOMES, PAGE_OC, BOOKLETS, oc_label
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
 CONTACT = "pypteltd@gmail.com (business email for now, to be changed later)"
 REG_OFFICE = "66 Tannery Ln, Singapore 347805"
-NOT_AFFILIATED = "Not affiliated with or endorsed by the Ministry of Education, Singapore."      # plan section 12; on the licence page only
+NOT_AFFILIATED = "Not affiliated with or endorsed by the Ministry of Education, Singapore."      # plan section 12; on the cover only
 
 def draft_banner(what):
     if not DRAFT: return ""
@@ -292,7 +292,7 @@ def teacher_notes(pages, bk):
         ("loop", '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need in mks)
-    ps_ex = {1: 'stories with more than one step and families of multiplication and division facts', 2: 'comparing amounts of money, lengths of lessons given in hours and minutes and printed facts'}[bk["n"]]
+    ps_ex = {1: 'stories with more than one step, remainders and unequal sharing', 2: 'stories with fractions, decimals, perimeter and area and several steps'}[bk["n"]]
     return ('<section class="page fm notes"><h2>Teacher notes' + (" (DRAFT)"if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
             + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 4 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
@@ -309,8 +309,8 @@ def teacher_notes(pages, bk):
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
-            '<li><b>Drawings.</b> Pictures of rulers, scales, clocks, coins and notes are original drawings, not to scale unless a page says so. Coins and notes are inspired by Singapore money, not actual size (smaller than real) and in black and white.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: on the coin pages (Dollars and Cents, Purse Match) a light setting can fill in the small word cents on the coins. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size. Real $2 notes are purple, $5 green, $10 red.</p>'
+            '<li><b>Drawings.</b> Pictures of figures, solids, nets, graphs and protractors are original drawings. Rectilinear figures are drawn to a scale, but pupils are never asked to measure the page. A protractor picture is for reading only. Pupils use their own protractor and ruler only if a page says so.</li></ul>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting, so that the thin dashed lines on the pie charts and graphs stay visible. Each page is one side only. Pupils write on the page, and the answer boxes are large. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size.</p>'
             '</section>')
 
 def coverage_table(pages, bk):
@@ -319,9 +319,14 @@ def coverage_table(pages, bk):
         for o in PAGE_OC[p["no"]]:
             pos.setdefault(o, []).append(p["code"].split(" ")[0])
     items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(OUTCOMES[o][1])} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
-    absent = [oc_label(o) for o in OUTCOMES if o not in pos]
+    GAPS = ("AN1.3", "NT4.2")
+    grp = {}
+    for o in OUTCOMES:
+        if o not in pos and o not in GAPS: grp.setdefault(OUTCOMES[o][0], []).append(o.lstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
+    absent = "; ".join(f"{h} {', '.join(v)}" for h, v in grp.items())
     return ('<div class="cov2">' + items + '</div>'
-            + '<p style="font-size:8pt;margin-top:1.5mm">Outcomes practised in the other booklet: ' + html.escape("; ".join(absent)) + '.</p>')
+            + '<p style="font-size:8pt;margin-top:1.5mm">Practised in the other booklet: ' + html.escape(absent) + '.</p>'
+            + '<p style="font-size:8pt;margin-top:1mm">No page: drawing an angle of a given size (Angles 1.3) and drawing a solid (Nets 4.2). A printed page cannot check a drawing, so these are left to your lessons.</p>')
 
 def contents(pages, bk):
     rows = "".join(f'<tr><td>{p["code"].split(" ")[0]}</td><td>{p["code"].split("(")[1].rstrip(")")}</td><td>{html.escape(p["title"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)

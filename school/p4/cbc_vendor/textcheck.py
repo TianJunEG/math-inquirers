@@ -517,6 +517,7 @@ def _p1_shapes_bare(c):
 
 # ------------------------------------------------------------------ Primary 4 rules (numbers up to 100 000, larger multiplications and divisions, decimals)
 NUMP = r"(\d{1,3}(?: \d{3})+|\d+)"                     # a whole number, 5 digits or more with a gap
+NUMC = r"(?:\d{1,3}(?: \d{3})+|\d+)"                   # the same without a capturing group
 def numi(s): return int(s.replace(" ", ""))
 def round_half_up(x, p):
     x = Fraction(x); q = x * 10 ** p
@@ -532,17 +533,17 @@ def words_to_int4(s):
         else: raise Unparsed(s)
     return tot + cur
 
-@R(r"Value of the digit (\d) in " + NUMP + ": " + B)
+@R(r"Value of (?:the digit )?(\d) in " + NUMP + r"(?::| =) " + B)
 def p4_digit_value(m, c):
     n = m[2].replace(" ", ""); d = m[1]
     return int(d) * 10 ** (len(n) - 1 - n.index(d)) if n.count(d) == 1 else None
-@R(r"Round " + NUMP + r" to the nearest (\d+): " + B)
+@R(r"Round " + NUMP + r" to (?:the )?nearest (\d+)(?::| =) " + B)
 def p4_round_whole(m, c): return (numi(m[1]) + I(m[2]) // 2) // I(m[2]) * I(m[2])
-@R(NUMP + r" (more|less) than " + NUMP + ": " + B)
+@R(NUMP + r" (more|less) than " + NUMP + r"(?::| =) " + B)
 def p4_more_less(m, c): return numi(m[3]) + numi(m[1]) if m[2] == "more" else numi(m[3]) - numi(m[1])
 @R(r"([a-z ,\-]+) = " + B)
 def p4_words(m, c): return words_to_int4(m[1])
-@R(r"(Greatest|Smallest) of (" + NUMP + r"(?:, " + NUMP + r")+): " + B)
+@R(r"(Greatest|Smallest) of (" + NUMC + r"(?:, " + NUMC + r")+): " + B)
 def p4_extreme_whole(m, c):
     v = [numi(x) for x in m[2].split(", ")]
     return (max(v) if m[1] == "Greatest" else min(v)) if len(set(v)) == len(v) else None
@@ -550,12 +551,12 @@ def p4_extreme_whole(m, c):
 def p4_extreme_dec(m, c):
     v = [Fraction(x) for x in m[2].split(", ")]
     return (max(v) if m[1] == "Greatest" else min(v)) if len(set(v)) == len(v) else None
-@R(r"Pattern: (" + NUMP + r"|" + B + r")((?:, (?:" + NUMP + r"|" + B + r"))+)")
+@R(r"Pattern: (" + NUMC + r"|" + B + r")((?:, (?:" + NUMC + r"|" + B + r"))+)")
 def p4_pattern(m, c):
     items = [x.strip() for x in (m[1] + m[2]).split(", ")]
     items = [x if x == B else str(numi(x)) for x in items]
     return solve_sequence(items)
-@R(r"(\d+) trays, (\d+) eggs in each tray\. Eggs: " + B)
+@R(r"(\d+) trays of (\d+) eggs: " + B)
 def p4_trays(m, c): return I(m[1]) * I(m[2])
 @R(r"(\d+) stickers shared among (\d+)\. Each: " + B)
 def p4_share(m, c): return exact_div(I(m[1]), I(m[2]))

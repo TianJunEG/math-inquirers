@@ -10,7 +10,7 @@ BIG.update({"siring", "jailor"})      # words found by the P1 and P2 audits that
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
 # making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
 SAFE5 = "audio blank blimp blown blunt bound chimp climb cloth clown count cramp crazy crumb curve decoy depth doubt drank drift drown dwarf enjoy fable fault flank flask flora flown fluid force forum frank fruit gleam glory graph gravy grind growl grunt guild hound humid image ivory jumpy juice juicy knife logic maize mixed moved noisy omega opera piano picky pivot plank pound print prize quick round scowl shaft shove skimp sling smack snuck spicy squid stamp swamp swift swung thief think thumb trunk tulip uncle valet video vital voice wafer waltz width woman works wound woven yield young".split()
-SAFE6 = "answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany bowman cherub cobalt cougar curfew devour fabric fathom".split()
+SAFE6 = "answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany cobalt cougar curfew devour fabric fathom".split()
 _SAFE = {}
 
 def inner_ok(w):
@@ -80,7 +80,8 @@ def ab(cls=""):
     return '<span class="ab' + (" " + cls if cls else "") + '"></span>'
 
 def qcard(no, content, ans="", cls=""):
-    """one question card: number circle, content, answer area"""
+    """one question card: number circle, content, answer area (a ratio never breaks across a line: a non-breaking space on each side of its colon)"""
+    content = re.sub(r"(?<=\d) : (?=\d)", "\u00a0:\u00a0", content)
     return f'<div class="qc {cls}"><div class="qh"><span class="no">{no}</span><div class="qt">{content}</div></div>' + (f'<div class="qa">{ans}</div>' if ans else "") + '</div>'
 
 def qgrid(cards, cols=2, cls=""):

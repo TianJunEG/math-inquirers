@@ -89,7 +89,7 @@ def page01():
         "1.1 (dividing a proper fraction by a whole number)", ["FR1.1"], "Code-breaker (fractions)",
         ["Divide. Write each answer in simplest form.", "Use the code table."],
         cards, ans, table, word, 1, 1, "; ".join(f"{i+1}) {a}/{b}" for i, (a, b) in enumerate(ans)),
-        "Six items: four divisions of a proper fraction by a whole number (the top divides exactly, the top does not divide, the answer needs simplifying, a unit fraction) and two stories. The decoy letters stand for the answers a pupil gets by multiplying instead of dividing, by dividing the bottom number, or by leaving the answer unsimplified (for example 2/12 for 1/6). A box left blank gives no letter and the check cannot see it.",
+        "Six items: four divisions of a proper fraction by a whole number (the top divides exactly, the top does not divide, the answer needs simplifying, a unit fraction) and two stories. The decoy letters stand for the answers a pupil gets by multiplying instead of dividing, by dividing the bottom number, or by leaving the answer unsimplified. A box left blank gives no letter and the check cannot see it.",
         domain=fdomain(60), fmt=lambda k: fh(*k), ncols=2, cols=6)
     solved = [ftup(fs_solve(c)) for c in cards]
     P.v("V1 independent solver reads each printed card (fraction, whole number) and divides: equals the key", solved == ans, solved)
@@ -129,12 +129,15 @@ def page02():
                 if v != T and (3 <= v <= 10 or Fr(dv) * Fr(p, q) == T):
                     bad.append(fdiv_cell(dv, Fr(p, q)))
     bad = sorted(set(bad))
+    def prod_of(c):
+        a_, b_ = ptxt(c).split(" ÷ "); return pv(a_) * pv(b_)
+    must = [[c for c in bad if prod_of(c) == T], [c for c in bad if ev_cell(c) in (T - 1, T + 1)]]
     return route_page(2, 6202, "Dividing by Fractions", 1, "Dividing a whole number or a fraction by a fraction", STRAND_FR,
         "1.2 (dividing a whole number or a proper fraction by a proper fraction)", ["FR1.2"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on boxes where the answer is {T}.", "Do not step on a box twice."],
         rng, 4, 8, good, bad, ev_cell, Fr(T), str(T),
         f"A 4 by 4 grid of sixteen divisions: a whole number or a proper fraction divided by a proper fraction. The route follows the boxes that equal {T}. The wrong boxes include answers close to {T} and boxes where the two numbers multiply to {T}, which tempts a pupil who multiplies instead of dividing. Two extra boxes that equal {T} are dead ends. Counting the boxes shows a line that takes a shortcut.",
-        cls="maze sm tall")
+        cls="maze sm tall", must=must)
 
 # =============================================================================== P6-03 Fraction Stories  (FR1.1, FR1.2, choice)
 THINGS = [("cake", "of the cake"), ("garden", "of the garden"), ("pizza", "of the pizza"), ("field", "of the field"), ("wall", "of the wall")]
@@ -158,7 +161,7 @@ def fs3_row(rng, kind, N):
             if r.denominator <= 40: break
         w1 = Fr(p * n, q) if p * n < q else Fr(p, q) + Fr(1, n)
         th = rng.choice(THINGS)
-        stem = f'{fh(p, q)} {th[1]} is shared equally among {n} children. What fraction of the whole {th[0]} does each child get?'
+        stem = f'{fh(p, q)} {th[1]} is split into {n} equal portions for {n} children. What fraction of the whole {th[0]} is one portion?'
         return dict(stem=stem, right=r), [w1, Fr(1, n)]
     if kind == "glasses":
         while True:
@@ -323,7 +326,7 @@ def page05():
         "1.2, 1.6 (equivalent ratios; finding the missing term in equivalent ratios)", ["RA1.2", "RA1.6"], "Code-breaker (equivalent ratios)",
         ["Find the missing number in each box.", "Use the code table."],
         cards, ans, table, word, 1, 130, "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Six items: three two-part equations with the missing number in a different place, one three-part equation and two sharing stories. The decoy numbers are the answers a pupil gets by adding the same number to both terms instead of multiplying (for example 3 : 5 = 12 : 14). A box left blank gives no letter and the check cannot see it.", ncols=2)
+        "Six items: three two-part equations with the missing number in a different place, one three-part equation and two sharing stories. The decoy numbers are the answers a pupil gets by adding the same number to both terms instead of multiplying. A box left blank gives no letter and the check cannot see it.", ncols=2)
     solved = [mt_solve(c) for c in [it["html"] for it in its]]
     P.v("V1 independent solver reads each printed equation or story and finds the missing term (equal ratios): equals the key", solved == ans, solved)
     P.v("V7 ratios use whole numbers only, answers at most 130", all(1 <= a <= 130 for a in ans))
@@ -516,7 +519,7 @@ def fr_rows(rng, names):
     while True:
         a, b = rng.randint(1, 6), rng.randint(3, 11)
         if a < b and gcd(a, b) == 1 and a != 1: break
-    rows.append(dict(stem=f"The ratio of {names[4]}'s age to {names[4]}'s father's age is {a} : {b}. {names[4]}'s age is what fraction of his father's age?", right=("f", Fr(a, b)),
+    rows.append(dict(stem=f"The ratio of {names[4]}'s age to {names[4]}'s father's age is {a} : {b}. {names[4]}'s age is what fraction of the father's age?", right=("f", Fr(a, b)),
                      wrong=[("f", Fr(a, a + b)), ("f", Fr(b - a, b))]))
     while True:
         a, b = rng.sample(range(2, 9), 2)
@@ -525,7 +528,7 @@ def fr_rows(rng, names):
     rows.append(dict(stem=f"The ratio of {who[0]} to {who[1]} is {a} : {b}. What fraction of the animals or pupils are {who[ask]}?".replace("the animals or pupils", "the pupils" if who[0] == "boys" else "the pets"),
                      right=("f", Fr((a, b)[ask], a + b)), wrong=[("f", Fr((a, b)[1 - ask], a + b)), ("f", Fr((a, b)[ask], (a, b)[1 - ask]) if (a, b)[ask] < (a, b)[1 - ask] else Fr((a, b)[ask] , a + b + 1))]))
     p, q = pick_pq()
-    rows.append(dict(stem=f"{names[5]} spent {fh(p, q)} of her money. Find the ratio of the money she spent to the money she has left.", right=("r", (p, q - p)), wrong=[("r", (q - p, p)), ("r", (p, q))]))
+    rows.append(dict(stem=f"{names[5]} spent {fh(p, q)} of the money. Find the ratio of the money spent to the money left.", right=("r", (p, q - p)), wrong=[("r", (q - p, p)), ("r", (p, q))]))
     return rows
 
 def fr_opt(o):

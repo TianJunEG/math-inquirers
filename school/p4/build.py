@@ -64,7 +64,7 @@ def build_booklet(key, pages, school, outdir):
     bk = outcomes.BOOKLETS[key]
     bp = booklet_pages(pages, key)
     W = lambda name, h: open(os.path.join(outdir, name), "w").write(h)
-    title = f"Early Finisher Puzzles P2 {bk['name']}"
+    title = f"Early Finisher Puzzles P4 {bk['name']}"
     W(f"{key}_pupil.html", render.doc("".join(render.pupil_page(p, school) for p in bp), title))
     W(f"{key}_front.html", render.doc(render.cover(school, bk) + render.licence(school, bk) + render.teacher_notes(bp, bk) + render.contents(bp, bk), title + " front matter"))
     W(f"{key}_key.html", render.doc(render.key_pages(bp, school, pack_key(bp, school, outdir), bk), title + " answer key"))

@@ -56,7 +56,7 @@ def page08():
         solved.append(Fr(nums[0], nums[1]))
     P = code_page(8, 5108, "Sharing Equally", 1, "Fractions: dividing a whole number by a whole number", STRAND_FR,
         "dividing a whole number by a whole number: the quotient as a fraction or a mixed number", ["FR1.1"], "Code-breaker (division as a fraction)",
-        ["Divide. Write the answer as a fraction or a mixed number.", "Give each answer in its simplest form.", "Use the code table."],
+        ["Divide. Give a fraction, or a mixed number if the answer is more than 1.", "Give each answer in its simplest form.", "Use the code table."],
         cards, ans, word, table, dom, FM, "; ".join(f"{i+1}) {frac_txt(a)}" for i, a in enumerate(ans)),
         "Six divisions where the quotient is a fraction or a mixed number: four bare divisions (two that need simplifying) and two sharing stories. The decoy letters stand for the usual slips: the fraction turned upside down, the whole number part only, or the remainder only. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c2", checks=[("V7 no quotient is a whole number; divisors at most 12", all(a.denominator > 1 for a in ans) and all(m <= 12 for _, _, m in items), "")])
@@ -82,7 +82,7 @@ def page09():
         "expressing fractions as decimals", ["FR1.2"], "Matching (lettered cards)",
         ["Write each fraction as a decimal.", "Find the tile with that decimal.", "Write the card's letter in the box under the tile."],
         rng, pairs, word, "; ".join(f"{w}: {frac_txt(v)} = {dec(v)}" for w, v in zip(word, order)),
-        "Six cards with fractions and mixed numbers (denominators 2, 4, 5, 8, 20, 25, 40 and 50) and six tiles with decimals of one, two or three places, in order of size. A pupil finds each decimal by dividing the numerator by the denominator or by making an equivalent fraction with denominator 10, 100 or 1000. The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. A box left blank gives no letter and the check cannot see it.",
+        "Six cards with fractions and mixed numbers (denominators from 2 to 50) and six tiles with decimals of one, two or three places, in order of size. A pupil finds each decimal by dividing the numerator by the denominator or by making an equivalent fraction with denominator 10, 100 or 1000. The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. A box left blank gives no letter and the check cannot see it.",
         lambda t: evaluate(t), lambda t: evaluate(t), left_title="Cards",
         checks=[("V7 every decimal has at most 3 decimal places and every fraction has a denominator of 2 to 50", all(len(dec(v).partition(".")[2]) <= 3 and v.denominator <= 50 for v in order), "")])
     return P
@@ -221,7 +221,7 @@ def page11():
         "adding and subtracting mixed numbers", ["FR2.1"], "Maze / path",
         ["Start at START. Move up, down, left or right.", "Step only on boxes with the answer shown below.", "Do not step on a box twice."],
         grid, path, dead, "", lambda c: evaluate(to_text(c)) == T,
-        f"A 4 by 4 grid of sixteen additions and subtractions of mixed numbers (denominators 2, 3, 4, 6 and 8, never more than two different ones in one box). The boxes off the route make answers one quarter, one half, one third or one whole away from {frac_txt(T)}; some extra boxes that do make {frac_txt(T)} are dead ends. Counting the boxes shows a line that takes a shortcut.",
+        f"A 4 by 4 grid of sixteen additions and subtractions of mixed numbers (denominators 2, 3, 4, 6 and 8, never more than two different ones in one box). The boxes off the route make answers a fraction or a whole away from {frac_txt(T)}; some extra boxes that do make {frac_txt(T)} are dead ends. Counting the boxes shows a line that takes a shortcut.",
         lambda c: to_text(c), f"Does your line reach FINISH? Count its boxes: are there {L}? Does every box make {frac_txt(T)}?", extra_facts=frac_txt(T))
     # the target is printed in the instructions
     P["instr"] = ["Start at START. Move up, down, left or right.", f"Step only on boxes with the answer {frac_txt(T)}.", "Do not step on a box twice."]

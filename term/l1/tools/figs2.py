@@ -287,6 +287,7 @@ def line_up(n=8, names=None, front='left', marker='door', labels='ordinal', high
         xa, xb = pos(a), pos(b)
         x0, x1 = min(xa, xb), max(xa, xb)
         body.append(f'<path d="M{x0:.1f} 210 V222 H{x1:.1f} V210" fill="none" stroke="{RED}" stroke-width="4"/>')
+    if labels == 'none' and not between: H = 156            # no ordinal tags under the children: crop the empty strip
     return _svg(W, H + 12, ''.join(body), f'{n} children in a line, front on the {front}')
 
 

@@ -330,3 +330,57 @@ def dinosaur():
     b.decor('<circle cx="38" cy="28" r="2.8" fill="#000"/>', C(38, 28, 2.8))
     b.twin(["leg_1", "leg_2"]).twin(["neck_up", "neck_low"]).twin(["ground_1", "ground_2", "ground_3"]).twin(["body_ul", "body_lr"]).twin(["body_ur", "body_ll"]).twin(["sun", "cloud"])
     return b.done()
+
+# ---------------------------------------------------------------- Primary 4 pictures: big parts, so that longer questions fit (added in the school/p4 copy)
+@picture
+def bus():
+    b = Builder("bus", "Bus", blurb="bus with three roof parts, four windows, three body parts, two wheels, a sun and three strips of road")
+    wheels = C(46, 150, 21).union(C(134, 150, 21))
+    b.add("sun", C(24, 22, 19.5))
+    for i, (x0, x1) in enumerate([(8, 62), (62, 118), (118, 172)]):
+        b.add(f"roof_{i + 1}", R(x0, 44, x1, 66))
+    for i, (x0, x1) in enumerate([(8, 52), (52, 90), (90, 130), (130, 172)]):
+        b.add(f"window_{i + 1}", R(x0, 66, x1, 106))
+    body = R(8, 106, 172, 150) - wheels
+    for i, (x0, x1) in enumerate([(8, 62), (62, 118), (118, 172)]):
+        b.add(f"body_{i + 1}", body & R(x0, 0, x1, 200))
+    b.add("wheel_1", C(46, 150, 21)); b.add("wheel_2", C(134, 150, 21))
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"road_{i + 1}", R(x0, 174, x1, 200) - wheels)
+    b.twin(["wheel_1", "wheel_2", "sun"]).twin(["roof_1", "roof_3"]).twin(["window_1", "window_4", "roof_2"]).twin(["window_2", "window_3", "body_2"]).twin(["body_1", "body_3"]).twin(["road_1", "road_2", "road_3"])
+    return b.done()
+
+@picture
+def lorry():
+    b = Builder("lorry", "Lorry", blurb="lorry with a container of six parts, a cab with a window, three wheels, a sun and three strips of road")
+    wheels = C(34, 152, 20).union(C(92, 152, 20)).union(C(150, 152, 20))
+    b.add("sun", C(150, 24, 19.5))
+    cont = R(6, 40, 124, 132)
+    for j, (y0, y1) in enumerate([(40, 86), (86, 132)]):
+        for i, (x0, x1) in enumerate([(6, 45), (45, 85), (85, 124)]):
+            b.add(f"box_{j + 1}{i + 1}", R(x0, y0, x1, y1))
+    b.add("cab_window", P((132, 62), (168, 62), (168, 88), (132, 88)))
+    b.add("cab_body", (P((128, 54), (172, 54), (172, 132), (128, 132)) - P((132, 62), (168, 62), (168, 88), (132, 88))))
+    b.add("wheel_1", C(34, 152, 20)); b.add("wheel_2", C(92, 152, 20)); b.add("wheel_3", C(150, 152, 20))
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"road_{i + 1}", R(x0, 176, x1, 200) - wheels)
+    b.twin(["wheel_1", "wheel_3", "sun"]).twin(["wheel_2", "cab_body"]).twin(["box_11", "box_23"]).twin(["box_13", "box_21"]).twin(["box_12", "box_22", "cab_window"]).twin(["road_1", "road_2", "road_3"])
+    return b.done()
+
+@picture
+def ferry():
+    b = Builder("ferry", "Ferry", blurb="ferry with a funnel, a bridge, two decks of windows, a hull in three parts, a sun and three waves")
+    b.add("sun", C(24, 24, 19.5))
+    b.add("funnel", R(70, 36, 110, 62))
+    b.add("bridge", R(52, 62, 128, 92))
+    for i, (x0, x1) in enumerate([(14, 62), (62, 118), (118, 166)]):
+        b.add(f"deck_{i + 1}", R(x0, 92, x1, 124))
+    hull = P((8, 124), (172, 124), (150, 160), (30, 160))
+    for i, xr in enumerate([(0, 64), (64, 116), (116, 200)]):
+        b.add(f"hull_{i + 1}", hull & R(xr[0], 0, xr[1], 200))
+    for i, (y0, y1) in enumerate([(164, 178), (178, 190)]):
+        pass
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"wave_{i + 1}", R(x0, 164, x1, 200))
+    b.twin(["sun", "funnel"]).twin(["bridge", "deck_2"]).twin(["deck_1", "deck_3"]).twin(["hull_1", "hull_3"]).twin(["hull_2", "wave_2"]).twin(["wave_1", "wave_3"])
+    return b.done()

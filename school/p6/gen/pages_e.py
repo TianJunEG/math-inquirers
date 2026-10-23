@@ -18,11 +18,11 @@ def ang_make(rng, spec):
 def rand_spec(rng, fam):
     if fam == "iso_line": return ("iso_line", rng.choice(range(24, 101, 2)), "exterior")
     if fam == "iso_apex": return ("iso_line", rng.choice(range(24, 101, 2)), "apex")
-    if fam == "rhombus_diag": return ("rhombus_diag", rng.choice(range(40, 141, 2)))
-    if fam == "rhombus_opp": return ("rhombus_opp", rng.choice(range(40, 141, 2)))
+    if fam == "rhombus_diag": return ("rhombus_diag", rng.choice([x for x in range(40, 141, 2) if x != 90]))
+    if fam == "rhombus_opp": return ("rhombus_opp", rng.choice([x for x in range(40, 141, 2) if x != 90]))
     if fam == "sq_out": return ("sq_tri", True)
     if fam == "sq_in": return ("sq_tri", False)
-    if fam == "para_iso": return ("para_iso", rng.choice(range(60, 141, 2)))
+    if fam == "para_iso": return ("para_iso", rng.choice([x for x in range(60, 141, 2) if x != 90]))
     if fam == "trapezium": return ("trapezium", rng.choice([x for x in range(55, 126, 5) if x != 90]))
     return ("tri_ext", rng.randint(25, 80), rng.randint(25, 70))
 
@@ -45,7 +45,7 @@ def ang_pool(items):
     return pool
 
 def ang_card(i, it):
-    return qcard(i + 1, f'<div class="fig fcd">{it["svg"]}</div><p class="note1">{it["cap"]}</p>', f'{abx("w3")}{unit("°")}', cls="pos")
+    return qcard(i + 1, f'<div class="fig fcd">{it["svg"]}</div><p class="note1">{it["cap"]}</p>', f'{abx("w3")}{unit("°")}', cls="posb")
 
 def ang_solve(card):
     svg = re.search(r"<svg.*?</svg>", card, re.S).group(0)

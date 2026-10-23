@@ -8,6 +8,13 @@ SW = 0.5
 def T(x, y, s, anchor="middle", size=3.9, weight=600, attrs=""):
     return f'<text x="{x:.2f}" y="{y:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Fredoka" font-weight="{weight}" font-size="{size}" fill="#000" {attrs}>{s}</text>'
 
+def TB(x, y, s, anchor="middle", size=3.9, weight=600, attrs=""):
+    """a label with a white backing so that a line passing under it does not run through the digits"""
+    n = len(s.replace("&#176;", "x"))
+    wd = n * size * 0.58 + 1.0
+    x0 = x - wd / 2 if anchor == "middle" else x - 0.5 if anchor == "start" else x - wd + 0.5
+    return f'<rect x="{x0:.2f}" y="{y - size * 0.62:.2f}" width="{wd:.2f}" height="{size * 1.24:.2f}" fill="#fff"/>' + T(x, y, s, anchor, size, weight, attrs)
+
 def LN(x1, y1, x2, y2, sw=SW, dash=None, attrs=""):
     d = f' stroke-dasharray="{dash}"' if dash else ""
     return f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="#000" stroke-width="{sw}" stroke-linecap="round"{d} {attrs}/>'
@@ -43,11 +50,11 @@ def tri_base_height(b, h, foot=0.5, side=None, w=62, hh=40, name=None, pts_named
     if foot > 1: o.append(LN(C[0], y0, fx, y0, dash="1.2 1.2"))
     o.append(LN(fx, A[1], fx, y0, dash="1.8 1.2", attrs='data-r="hline"'))
     o.append(RA(fx, y0, -1 if foot > 0.5 else 1, 0, 0, -1))
-    o.append(T((B[0] + C[0]) / 2, y0 + 3.6, f"{b} cm", attrs='data-r="base"'))
-    o.append(T(fx + (2.0 if foot <= 0.5 else -2.0), (A[1] + y0) / 2, f"{h} cm", anchor="start" if foot <= 0.5 else "end", attrs='data-r="height"'))
+    o.append(T((B[0] + C[0]) / 2, y0 + 4.0, f"{b} cm", size=4.0, attrs='data-r="base"'))
+    o.append(TB(fx + (1.0 if foot <= 0.5 else -1.0), (A[1] + y0) / 2 + 2.0, f"{h} cm", anchor="start" if foot <= 0.5 else "end", size=3.9, attrs='data-r="height"'))
     if side is not None:
-        if foot > 0.15: o.append(T((A[0] + B[0]) / 2 - 1.5, (A[1] + B[1]) / 2 - 1, f"{side} cm", anchor="end", attrs='data-r="side"'))
-        else: o.append(T((A[0] + C[0]) / 2 + 1.5, (A[1] + C[1]) / 2 - 1, f"{side} cm", anchor="start", attrs='data-r="side"'))
+        if foot > 0.15 and foot < 0.9: o.append(T((A[0] + B[0]) / 2 - 1.8, (A[1] + B[1]) / 2 - 0.5, f"{side} cm", anchor="end", size=3.9, attrs='data-r="side"'))
+        else: o.append(T((A[0] + C[0]) / 2 + 1.8, (A[1] + C[1]) / 2 - 0.5, f"{side} cm", anchor="start", size=3.9, attrs='data-r="side"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="tri"')
 
 def read_tri(h):
@@ -67,26 +74,26 @@ def composite(kind, wd, ln, th, w=70, hh=48):
     side: rectangle wd x ln with a right-angled triangle (one side ln, width th) joined on the right."""
     tot_w = wd + (th if kind == "side" else 0)
     tot_h = ln + (th if kind == "house" else 0)
-    sc = min((w - 16) / tot_w, (hh - 12) / tot_h, 4.0)
-    x0, y0 = 8, hh - 6
+    sc = min((w - 22) / tot_w, (hh - 13) / tot_h, 5.0)
+    x0, y0 = 14, hh - 6
     W, L_, Th = wd * sc, ln * sc, th * sc
     o = []
     if kind == "house":
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W, y0 - L_), (x0 + W / 2, y0 - L_ - Th), (x0, y0 - L_)]))
         o.append(LN(x0, y0 - L_, x0 + W, y0 - L_, dash="1.4 1.2"))
         o.append(LN(x0 + W / 2, y0 - L_ - Th, x0 + W / 2, y0 - L_, dash="1.8 1.2"))
-        o.append(T(x0 + W / 2 + 1.5, y0 - L_ - Th / 2, f"{th} cm", anchor="start", attrs='data-r="th"'))
+        o.append(TB(x0 + W / 2 + 1.2, y0 - L_ - Th / 2, f"{th} cm", anchor="start", size=3.9, attrs='data-r="th"'))
     elif kind == "notch":
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W, y0 - L_), (x0 + W / 2, y0 - L_ + Th), (x0, y0 - L_)]))
         o.append(LN(x0, y0 - L_, x0 + W, y0 - L_, dash="1.4 1.2"))
         o.append(LN(x0 + W / 2, y0 - L_ + Th, x0 + W / 2, y0 - L_, dash="1.8 1.2"))
-        o.append(T(x0 + W / 2 + 1.5, y0 - L_ + Th / 2 - 1.0, f"{th} cm", anchor="start", attrs='data-r="th"'))
+        o.append(TB(x0 + W / 2 + 1.2, y0 - L_ + Th / 2 - 1.0, f"{th} cm", anchor="start", size=3.9, attrs='data-r="th"'))
     else:
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W + Th, y0), (x0 + W, y0 - L_), (x0, y0 - L_)]))
         o.append(LN(x0 + W, y0, x0 + W, y0 - L_, dash="1.4 1.2"))
-        o.append(T(x0 + W + Th / 2 + 0.5, y0 + 3.6, f"{th} cm", attrs='data-r="th"'))
+        o.append(T(x0 + W + Th / 2 + 0.5, y0 + 4.0, f"{th} cm", size=3.9, attrs='data-r="th"'))
     o.append(T(x0 + W / 2 - (0 if kind != "side" else 0), y0 + 3.6, f"{wd} cm", attrs='data-r="wd"'))
-    o.append(T(x0 - 1.5, y0 - L_ / 2, f"{ln} cm", anchor="end", attrs='data-r="ln"'))
+    o.append(T(x0 - 1.5, y0 - L_ / 2, f"{ln} cm", anchor="end", size=3.9, attrs='data-r="ln"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="{kind}"')
 
 def read_composite(h):
@@ -129,7 +136,7 @@ def read_units(h):
 
 def iso_dims(A, B, C, labels, w=64, hh=48, cube=False):
     """cuboid drawn in isometric view (proportional, capped), with length labels on three edges. labels = (texts for the i-edge, j-edge, k-edge) e.g. '12 cm'"""
-    sc = min((w - 18) / ((A + B) * C30), (hh - 16) / ((A + B) * S30 + C), 6.0)
+    sc = min((w - 28) / ((A + B) * C30), (hh - 16) / ((A + B) * S30 + C), 6.0)
     ox, oy = 8 + B * C30 * sc, 6 + C * sc
     P = lambda i, j, k: iso_pt(i, j, k, sc, ox, oy)
     o = [PG([P(0, 0, C), P(A, 0, C), P(A, B, C), P(0, B, C)]),
@@ -236,7 +243,7 @@ def tri_angles(kind, g, w=62, hh=42):
     elif kind == "equi": A_ = B_ = 60
     else: A_, B_ = 90, g[0]
     pts, C_ = build(A_, B_)
-    sc = min((w - 12) / max(p[0] for p in pts), (hh - 12) / max(p[1] for p in pts), 1.0)
+    sc = min((w - 12) / max(p[0] for p in pts), (hh - 12) / max(p[1] for p in pts), 1.4)
     ox, oy = 6, hh - 6
     P = [(ox + x * sc, oy - y * sc) for x, y in pts]
     o = [PG(P)]
@@ -248,21 +255,25 @@ def tri_angles(kind, g, w=62, hh=42):
     if kind in ("apex", "base"): o += [tick(P[0], P[2]), tick(P[1], P[2])]
     if kind == "equi": o += [tick(P[0], P[1]), tick(P[1], P[2]), tick(P[0], P[2])]
     # labels (inside near each vertex)
-    given = {"sum": [g[0], g[1], "?"], "apex": ["?", "?", g[0]], "base": [g[0], g[0], "?"], "equi": ["?", None, None], "right": [90, g[0], "?"]}[kind]
+    given = None
+    if kind == "sum": given = [g[0], g[1], "?"]
+    if kind == "equi": given = ["?", None, None]
     if kind == "apex": given = ["?", None, g[0]]
     if kind == "base": given = [g[0], None, "?"]
     if kind == "right": given = [None, g[0], "?"]
     pos = ["base1", "base2", "apex"]
-    cxm = sum(p[0] for p in P) / 3; cym = sum(p[1] for p in P) / 3
     for k in range(3):
         v = given[k]
         if v is None: continue
         if kind == "right" and v == 90: continue
         px, py = P[k]
-        dx, dy = cxm - px, cym - py; l = math.hypot(dx, dy)
-        d = 9.0 if k == 2 else 8.0
-        lx, ly = px + dx / l * d, py + dy / l * d
-        o.append(T(lx, ly, "?" if v == "?" else f"{v}°", size=3.5, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
+        u1 = (P[(k + 1) % 3][0] - px, P[(k + 1) % 3][1] - py); u2 = (P[(k + 2) % 3][0] - px, P[(k + 2) % 3][1] - py)
+        l1, l2 = math.hypot(*u1), math.hypot(*u2)
+        bx, by = u1[0] / l1 + u2[0] / l2, u1[1] / l1 + u2[1] / l2; bl = math.hypot(bx, by)
+        th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
+        d = min(5.2 / max(math.sin(th / 2), 0.2), 0.42 * min(l1, l2), 13.0)
+        lx, ly = px + bx / bl * d, py + by / bl * d
+        o.append(T(lx, ly, "?" if v == "?" else f"{v}\u00b0", size=3.3, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="tri-{kind}"')
 
 def read_tri_angles(h):
@@ -271,3 +282,96 @@ def read_tri_angles(h):
     labs = re.findall(r'data-v="([\d?]+)" data-pos="(\w+)"', h)
     ticks = len(re.findall(r'class="tick"', h)); ra = 'class="ra"' in h
     return kind, labs, ticks, ra
+
+# =============================================================================== two-step angle figures
+def _fit(P, w, hh, pad=5.0, cap=2.2):
+    xs = [p[0] for p in P.values()]; ys = [p[1] for p in P.values()]
+    sc = min((w - 2 * pad) / (max(xs) - min(xs)), (hh - 2 * pad) / (max(ys) - min(ys)), cap)
+    return {k: (pad + (x - min(xs)) * sc, pad + (y - min(ys)) * sc) for k, (x, y) in P.items()}
+
+def _lab(P, k, centre, v, pos, d=8.0, size=3.5):
+    px, py = P[k]; dx, dy = centre[0] - px, centre[1] - py; l = math.hypot(dx, dy) or 1
+    s = "?" if v == "?" else f"{v}°"
+    return T(px + dx / l * d, py + dy / l * d, s, size=size, attrs=f'data-v="{v}" data-pos="{pos}"')
+
+def ext_fig(a, b, w=64, hh=36):
+    """triangle ABC (angle b at B, angle a at A, the rest at C) with BC extended beyond C to D; the angle between CA and CD is asked"""
+    Cc = 180 - a - b
+    Bp, Cp = (0.0, 0.0), (40.0, 0.0)
+    ab = math.sin(math.radians(Cc)) / math.sin(math.radians(a)) * 40.0           # |BA|
+    Ap = (ab * math.cos(math.radians(b)), -ab * math.sin(math.radians(b)))
+    Dp = (40.0 + 16.0, 0.0)
+    P = _fit({"B": Bp, "C": Cp, "A": Ap, "D": Dp}, w, hh)
+    o = [PG([P["A"], P["B"], P["C"]]), LN(*P["C"], *P["D"])]
+    cen = ((P["A"][0] + P["B"][0] + P["C"][0]) / 3, (P["A"][1] + P["B"][1] + P["C"][1]) / 3)
+    o.append(_lab(P, "A", cen, a, "apex", 7.5)); o.append(_lab(P, "B", cen, b, "base1", 8.5))
+    cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
+    if ang > 0: o.append(ARC(cx, cy, 5.0, 0, ang, sw=0.45))
+    mid = ang / 2
+    o.append(T(cx + 10.5 * math.cos(math.radians(mid)), cy - 10.5 * math.sin(math.radians(mid)), "?", size=3.8, attrs='data-v="?" data-pos="ext"'))
+    return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="ext"')
+
+def isoext_fig(g, w=64, hh=36):
+    """isosceles triangle with apex angle g (printed), equal sides ticked, base extended beyond the right base vertex; the exterior angle there is asked"""
+    base = (180 - g) / 2
+    Bp, Cp = (0.0, 0.0), (40.0, 0.0)
+    h = 20.0 * math.tan(math.radians(base))
+    Ap = (20.0, -h)
+    P = _fit({"B": Bp, "C": Cp, "A": Ap, "D": (58.0, 0.0)}, w, hh)
+    o = [PG([P["A"], P["B"], P["C"]]), LN(*P["C"], *P["D"])]
+    def tick(p, q):
+        mx, my = (p[0] + q[0]) / 2, (p[1] + q[1]) / 2; dx, dy = q[0] - p[0], q[1] - p[1]; l = math.hypot(dx, dy); nx, ny = -dy / l, dx / l
+        return LN(mx - nx * 1.4, my - ny * 1.4, mx + nx * 1.4, my + ny * 1.4, attrs='class="tick"')
+    o += [tick(P["A"], P["B"]), tick(P["A"], P["C"])]
+    o.append(T(P["A"][0], P["A"][1] - 4.2, f"{g}\u00b0", size=3.5, attrs=f'data-v="{g}" data-pos="apex"'))
+    cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
+    o.append(ARC(cx, cy, 5.0, 0, ang, sw=0.45))
+    o.append(T(cx + 10.5 * math.cos(math.radians(ang / 2)), cy - 10.5 * math.sin(math.radians(ang / 2)), "?", size=3.8, attrs='data-v="?" data-pos="ext"'))
+    return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="isoext"')
+
+def bow_fig(a, b, c, w=60, hh=46):
+    """two straight lines cross at O; the triangle POQ above has angles a at P and b at Q, the triangle SOR below has angle c at S and ? at R"""
+    O_ = (0.0, 0.0)
+    ang_o = 180 - a - b
+    PQ = 30.0
+    OP = PQ * math.sin(math.radians(b)) / math.sin(math.radians(ang_o))
+    tP = math.radians(a)
+    Hh = OP * math.sin(tP)
+    Px = -OP * math.cos(tP); Qx = Px + PQ
+    P_ = (Px, -Hh); Q_ = (Qx, -Hh)
+    R_ang = a + b - c
+    Sd = 14.0
+    dirP = (-P_[0], -P_[1]); lp = math.hypot(*dirP); S_ = (dirP[0] / lp * Sd, dirP[1] / lp * Sd)
+    OR = Sd * math.sin(math.radians(c)) / math.sin(math.radians(R_ang))
+    dirQ = (-Q_[0], -Q_[1]); lq = math.hypot(*dirQ); R_ = (dirQ[0] / lq * OR, dirQ[1] / lq * OR)
+    P = _fit({"P": P_, "Q": Q_, "O": O_, "S": S_, "R": R_}, w, hh, pad=7.0)
+    o = [LN(*P["P"], *P["S"]), LN(*P["Q"], *P["R"]), LN(*P["P"], *P["Q"]), LN(*P["S"], *P["R"])]
+    ct = ((P["P"][0] + P["Q"][0] + P["O"][0]) / 3, (P["P"][1] + P["Q"][1] + P["O"][1]) / 3)
+    cb = ((P["S"][0] + P["R"][0] + P["O"][0]) / 3, (P["S"][1] + P["R"][1] + P["O"][1]) / 3)
+    o.append(_lab(P, "P", ct, a, "P", 7.5)); o.append(_lab(P, "Q", ct, b, "Q", 7.5))
+    o.append(_lab(P, "S", cb, c, "S", 7.5)); o.append(_lab(P, "R", cb, "?", "R", 7.5))
+    return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="bow"')
+
+def read_labels(h):
+    import re
+    kind = re.search(r'data-fig="(\w+)"', h).group(1)
+    return kind, {pos: v for v, pos in re.findall(r'data-v="([\d?]+)" data-pos="(\w+)"', h)}
+
+
+def ext2_fig(e, f, w=64, hh=34):
+    """triangle ABC on a straight line (extended both sides); the two exterior angles e (at B) and f (at C) are printed, the angle at A is asked"""
+    be, ga = 180 - e, 180 - f
+    al = 180 - be - ga
+    Bp, Cp = (0.0, 0.0), (40.0, 0.0)
+    ba = 40.0 * math.sin(math.radians(ga)) / math.sin(math.radians(al))
+    Ap = (ba * math.cos(math.radians(be)), -ba * math.sin(math.radians(be)))
+    P = _fit({"B": Bp, "C": Cp, "A": Ap, "L": (-12.0, 0.0), "R": (52.0, 0.0)}, w, hh, pad=5.0)
+    o = [PG([P["A"], P["B"], P["C"]]), LN(*P["L"], *P["R"])]
+    bx, by = P["B"]; cx, cy = P["C"]
+    o.append(ARC(bx, by, 5.0, be, 180, sw=0.45)); o.append(ARC(cx, cy, 5.0, 0, f, sw=0.45))
+    mb, mc = (be + 180) / 2, f / 2
+    o.append(T(bx + 10.5 * math.cos(math.radians(mb)), by - 10.5 * math.sin(math.radians(mb)), f"{e}\u00b0", size=3.4, attrs=f'data-v="{e}" data-pos="extB"'))
+    o.append(T(cx + 10.5 * math.cos(math.radians(mc)), cy - 10.5 * math.sin(math.radians(mc)), f"{f}\u00b0", size=3.4, attrs=f'data-v="{f}" data-pos="extC"'))
+    ax, ay = P["A"]
+    o.append(T(ax, ay + 7.0, "?", size=3.8, attrs='data-v="?" data-pos="apex"'))
+    return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="ext2"')

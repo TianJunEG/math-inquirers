@@ -260,40 +260,45 @@ def page04():
     rng = random.Random(4404)
     n, LEN = 5, 11
     cells = [(r, c) for r in range(n) for c in range(n)]
+    def claim(v, s, true):
+        r = round_to(v, s)
+        if true: return r
+        opts = [x for x in {(v // s) * s, (v // s + 1) * s, r - s, r + s} if x != r and x >= 10000]
+        return rng.choice(sorted(opts))
     for _ in range(20000):
-        T = rng.randrange(20000, 91000, 1000)
         path = induced_path(rng, n, LEN, min_dist=6)
-        scales = [10] * 4 + [100] * 3 + [1000] * 4; rng.shuffle(scales)
-        def on(s): return rng.choice([T - s // 2, T + s // 2 - 1, rng.randint(T - s // 2, T + s // 2 - 1), rng.randint(T - s // 2, T + s // 2 - 1)])
-        def off(s):
-            if rng.random() < .5: return rng.choice([T + s // 2, rng.randint(T + s // 2, T + 3 * s // 2 - 1)])
-            return rng.choice([T - s // 2 - 1, rng.randint(T - 3 * s // 2, T - s // 2 - 1)])
-        grid = {}
-        for i, cell in enumerate(path): grid[cell] = (on(scales[i]), scales[i])
         extra = dead_ends(rng, n, path, 3); dead = len(extra)
-        for cell in extra: s_ = rng.choice([10, 100, 1000]); grid[cell] = (on(s_), s_)
+        scales = [10] * 4 + [100] * 3 + [1000] * 4; rng.shuffle(scales)
+        grid = {}
+        for i, cell in enumerate(path): grid[cell] = (scales[i], True)
+        for cell in extra: grid[cell] = (rng.choice([10, 100, 1000]), True)
         for cell in cells:
-            if cell not in grid: s_ = rng.choice([10, 100, 1000]); grid[cell] = (off(s_), s_)
-        vals = [grid[c] for c in cells]
-        if len({v for v, _ in vals}) < 25: continue
-        texts = [[f'<b class="mn">{N(grid[(r, c)][0])}</b><small>nearest {grid[(r, c)][1]}</small>' for c in range(n)] for r in range(n)]
+            if cell not in grid: grid[cell] = (rng.choice([10, 100, 1000]), False)
+        data = {}
+        for cell, (s_, tr) in grid.items():
+            v = rng.randrange(10000, 99999)
+            if rng.random() < .3: v = v // s_ * s_ + s_ // 2        # half way: rounds up
+            data[cell] = (v, s_, claim(v, s_, tr))
+        if len({d[0] for d in data.values()}) < 25: continue
+        texts = [[f'<b class="mn">{N(data[(r, c)][0])}</b><small>{SYM_APPROX} {N(data[(r, c)][2])}<br>nearest {data[(r, c)][1]}</small>' for c in range(n)] for r in range(n)]
         start, finish = path[0], path[-1]
-        def ok(cell, texts=texts, T=T):
-            m = re.fullmatch(r'<b class="mn">(\d+)</b><small>nearest (\d+)</small>', strip_gap(texts[cell[0]][cell[1]]))
-            return round_to(int(m[1]), int(m[2])) == T
+        def ok(cell, texts=texts):
+            m = re.fullmatch(r'<b class="mn">(\d+)</b><small>.*?</svg> (\d+)<br>nearest (\d+)</small>', strip_gap(texts[cell[0]][cell[1]]))
+            return round_to(int(m[1]), int(m[3])) == int(m[2])
         if count_routes(ok, n, start, finish) == 1 and 2 <= dead <= 3: break
     else: raise RuntimeError("p04")
-    key = " -> ".join(f"({r+1},{c+1}) {Ntxt(grid[(r, c)][0])} to {grid[(r, c)][1]}" for r, c in path)
-    P = route_page(4, 4404, "Round It", 1, "Rounding numbers to the nearest 10, 100 or 1000", STRAND_NU,
-        "1.5 (rounding numbers to the nearest 10, 100 or 1000)", ["NU1.5"], "Maze / path (rounding)",
-        ["Start at START. Move up, down, left or right.", f"Step only on boxes that round to {Nt(T)}.", "Each box says how to round. Do not step on a box twice."],
+    key = " -> ".join(f"({r+1},{c+1}) {Ntxt(data[(r, c)][0])} = {Ntxt(data[(r, c)][2])} to {data[(r, c)][1]}" for r, c in path)
+    P = route_page(4, 4404, "Round It", 1, "Rounding numbers to the nearest 10, 100 or 1000; the sign for about", STRAND_NU,
+        "1.5, 1.6 (rounding numbers to the nearest 10, 100 or 1000; use of the sign for about)", ["NU1.5", "NU1.6"], "Maze / path (rounding, true statements)",
+        ["Each box says: number, about, rounded number.", "Start at START. Move up, down, left or right.", "Step only on boxes where the statement is true. Do not step on a box twice."],
         n, texts, start, finish, path, ok, "Route (row, column from top-left): " + key,
-        f"Does your line reach FINISH? Count its boxes: are there {len(path)}? Does every box round to {Nt(T)}?",
-        f"A 5 by 5 grid of numbers to round to the nearest 10, 100 or 1000 (each box says which). On the route every number rounds to {Ntxt(T)}; the boxes off the route round to a neighbour of {Ntxt(T)}, including numbers exactly half way (such as {Ntxt(T + 50)} to the nearest 100, which rounds up to {Ntxt(T + 100)}). {dead} extra boxes that do round to {Ntxt(T)} are dead ends. Counting the boxes shows a line that takes a shortcut. Pupils round half way numbers up.",
-        dead, facts=f"{T} " + " ".join(str(v) for v, s_ in vals), cls="maze")
-    P.v("V7 every number is between 10 000 and 99 999 and every box names 10, 100 or 1000", all(10000 <= v <= 99999 and s_ in (10, 100, 1000) for v, s_ in vals))
-    P.v("V7b all 25 numbers are different", len({v for v, _ in vals}) == 25)
-    P.v("V7c each of 10, 100 and 1000 is used on the route at least three times", all(sum(1 for c in path if grid[c][1] == s_) >= 3 for s_ in (10, 100, 1000)))
+        f"Does your line reach FINISH? Are there {len(path)} boxes? Is every box a true statement?",
+        f"A 5 by 5 grid of boxes, each with a number, the sign for about, a rounded number and the place it is rounded to (10, 100 or 1000). On the route every statement is true. Boxes off the route are false: they give the number rounded down when it should round up, up when it should round down, or one step too far. {dead} extra boxes with true statements are dead ends. Counting the boxes shows a line that takes a shortcut. Pupils round half way numbers up. The pupil reads the sign for about as is about.",
+        dead, facts=" ".join(str(d[0]) + " " + str(d[2]) for d in data.values()), cls="maze")
+    P.v("V7 every number is 5 digits and every box names 10, 100 or 1000", all(10000 <= d[0] <= 99999 and d[1] in (10, 100, 1000) for d in data.values()))
+    P.v("V7b all 25 numbers are different", len({d[0] for d in data.values()}) == 25)
+    P.v("V7c each of 10, 100 and 1000 is used on the route at least three times", all(sum(1 for c in path if data[c][1] == s_) >= 3 for s_ in (10, 100, 1000)))
+    P.v("V7d at least two half way numbers are on boxes (they round up)", sum(1 for d in data.values() if d[0] % d[1] == d[1] // 2) >= 2)
     return P
 
 # =============================================================================== P4-06 Factor or Not? (lettered Yes / No)

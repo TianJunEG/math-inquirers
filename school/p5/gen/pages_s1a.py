@@ -63,7 +63,7 @@ def page01():
             if len(cands) == 3: break
         if len(cands) < 3: continue
         cs = sorted(cands, reverse=True)
-        rows.append(dict(q="Which number is the greatest?", opts=[num(cs[0]), num(cs[1]), num(cs[2])]))
+        rows.append(dict(q="Which number is the greatest?", opts=[num(cs[0]), num(cs[1]), num(cs[2])], wide=True))
         # 6 a digit in a place
         pl = rng.choice([10_000, 100_000, 1000]); k_ = int(math.log10(pl))
         dd = str(rng.randint(2, 9))
@@ -112,7 +112,7 @@ def page01():
         ["Read each question.", "Circle the letter of the right choice in each row.", "Write the six letters in the boxes."],
         rng, rows, 3, word, key,
         "Six place-value questions with numbers to 10 million: the value of a digit, a numeral in words, words as a numeral, an expanded number, the greatest of three and the number with a digit in a named place. The wrong choices are the usual slips (a place value one place too high or too low, two neighbouring digits swapped, a zero in the wrong place). Each choice has a letter; the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
-        solve_row, checks=[("V7 every number is a whole number below 10 million", all(True for _ in rows), "")])
+        solve_row, rows_cls="tfrows tight")
     return P
 
 
@@ -232,7 +232,7 @@ def page03():
         rng, cards, word, True,
         "Order (smallest first): " + ", ".join(f"{c[0]} = {num(c[1])}" for c in sorted(cards, key=lambda c: c[1])),
         "Six cards, each a whole number multiplied or divided by 10, 100 or 1000. The cards are not in the order of the numbers printed on them: the pupil has to work out each answer and then order the six answers from smallest to greatest. The letters, read in that order, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
-        lambda t: evaluate(t), work=True, checks=[("V7 every number printed and every answer is below 10 million", all(v < 10_000_000 for _, v in cards), "")])
+        lambda t: evaluate(t), work=True, cols=2, checks=[("V7 every number printed and every answer is below 10 million", all(v < 10_000_000 for _, v in cards), "")])
     return P
 
 # =============================================================================== P5-04 Multiples Route (route)
@@ -263,7 +263,7 @@ def page04():
         "multiplying and dividing whole numbers by 10, 100, 1000 and their multiples", ["WN.X10"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on boxes with the answer {num(T)}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
-        f"A 4 by 4 grid of sixteen calculations, each a whole number multiplied or divided by a multiple of 10, 100 or 1000 (20, 300, 4000 and so on). The boxes off the route make answers near {num(T)} that come from a slip in the zeros ({', '.join(num(x) for x in sorted(set(offs)))}) and are not on the route; some extra boxes that do make {num(T)} are dead ends. Counting the boxes shows a line that takes a shortcut.",
+        f"A 4 by 4 grid of sixteen calculations, each a whole number multiplied or divided by a multiple of 10, 100 or 1000 . The boxes off the route make answers that come from a slip in the zeros (ten or a hundred times too big or too small) and some other near misses; some extra boxes that do make {num(T)} are dead ends. Counting the boxes shows a line that takes a shortcut.",
         lambda c: to_text(c), f"Does your line reach FINISH? Count its boxes: are there {L}? Does every box make {num(T)}?",
         checks=[("V7 every number printed is below 10 million", all(evaluate(to_text(g)) < 10_000_000 and max(int(x.replace(NB, "")) for x in re.findall(r"[\d\u00a0]+", g)) < 10_000_000 for row in grid for g in row), "")],
         extra_facts=str(T))
@@ -347,7 +347,7 @@ def page07():
         rows.append(f'<div class="eqrow"><span class="no">{i+1}</span><span class="eqt">{h}</span></div>')
     body = '<div class="eqlist">' + "".join(rows) + "</div>"
     P = new_page(7, 5107, "Both Sides Equal", 2, "Whole numbers: order of operations and brackets in number sentences", STRAND_WN,
-        "order of operations and use of brackets: finding the missing number", ["WN2.2", "WN2.3"], "Balance / equation (put the answer back)",
+        "order of operations and use of brackets: finding the missing number", ["WN2.2", "WN2.3"], "Balance (put the answer back)",
         "K7 put the answers back: every line must be true",
         ["Find the number that goes in each box.", "Use the order of operations.", "Write the number in the box."],
         body, "; ".join(f"{i+1}) {x}" for i, x in enumerate(ans)), "Every line is true when its number is put back.",

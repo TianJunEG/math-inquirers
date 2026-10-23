@@ -99,4 +99,16 @@ html,body{font-family:'Nunito Sans','DejaVu Sans','Liberation Sans',Arial,sans-s
 .ctc.dense .ct{font-size:11pt;gap:0.8mm;padding:0.6mm 0.4mm}
 .ctc.dense .ct b{font-size:13.5pt;padding-left:1mm;min-width:3.5mm}
 .ctc.dense .ct .n{font-size:11pt}
+.dom .dt{display:block;text-align:center}
+.dom .dt .ex,.dom .dt .wh{display:block}
+.qc.posb .no{position:absolute;left:2mm;bottom:2mm}.qc.posb .qh{justify-content:center}
+.mgrid.vert .mit .mrow .no{position:static}
+.mgrid.vert .mit{padding:1.2mm 2mm 1.6mm;gap:0.8mm}
+.mgrid.vert .mit .mtop{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:-6mm;position:relative;z-index:2}
+.mgrid.vert .mit .mtop .no{position:static}
+.mgrid.vert .mit .mcap{font-size:10.5pt;line-height:1.18;width:100%}
+.mgrid.vert .mit .mcap p{margin:0}
+.maze .sy{font-size:1.18em}
+.mnc{font-family:'Fredoka';font-weight:600;font-size:16pt;text-align:center;line-height:1.5}
+.mnc p{margin:0;font-size:13pt;font-weight:500;line-height:1.3}
 """

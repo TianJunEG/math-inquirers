@@ -24,11 +24,13 @@ CSS_P5 = """
 .mopts.col .mo .ot{white-space:normal;font-family:'Nunito Sans';font-weight:700;font-size:12pt;line-height:1.2}
 .mcrow.wide{flex-wrap:wrap;row-gap:1.6mm}.mcrow.wide .mq{flex:1 1 calc(100% - 12mm)}.mcrow.wide .mopts{flex:1 1 100%;justify-content:flex-start}
 .tfrows{gap:1.4mm}
+.tfrows .mcrow{padding:3.4mm 0}
+.tfrows.tight .mcrow{padding:1.3mm 0}
 .tfrow2{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding:3.4mm 0}
 .tfrow2 .qt{flex:1;font-size:15pt;font-family:'Fredoka';font-weight:500}
 /* ordering cards */
 .ocards{display:grid;gap:5mm 4mm}.ocards.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.ocards.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.ocard{position:relative;border:0.6mm solid #000;border-radius:2.5mm;min-height:36mm;display:flex;align-items:center;justify-content:center;padding:4mm 3mm 3mm 3mm}
+.ocard{position:relative;border:0.6mm solid #000;border-radius:2.5mm;min-height:50mm;display:flex;align-items:center;justify-content:center;padding:4mm 3mm 3mm 3mm}
 .ocard i.cl{position:absolute;left:2mm;top:2mm}
 .ocard{flex-direction:column;gap:3mm}
 .ocard .wk{font-family:'Fredoka';font-weight:600;font-size:17pt;display:flex;align-items:center;gap:2mm}
@@ -64,7 +66,7 @@ CSS_P5 = """
 .msq .mq3 .fans .ab.w2{width:13mm}
 /* number chain loop */
 .cloop{display:grid;grid-template-columns:repeat(5,auto);align-items:center;justify-content:center;gap:1mm 0;margin:0 auto}
-.cn{width:27mm;height:25mm;border:0.7mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:24pt}
+.cn{width:30mm;height:28mm;border:0.7mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:24pt}
 .cn.blank{border-style:solid}
 .cn .ab{width:18mm;height:13mm;border-width:0.5mm}
 .car{display:flex;flex-direction:column;align-items:center;gap:0.3mm;font-family:'Fredoka';font-weight:600;font-size:15pt;min-width:40mm}
@@ -72,7 +74,7 @@ CSS_P5 = """
 .car .arrow:after{content:'';position:absolute;right:-0.5mm;top:-2mm;border-left:4mm solid #000;border-top:2mm solid transparent;border-bottom:2mm solid transparent}
 .car.back .arrow:after{right:auto;left:-0.5mm;border-left:none;border-right:4mm solid #000}
 .vcon{display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:15pt;gap:0.5mm}
-.vcon .vline{height:20mm;border-left:0.7mm solid #000;position:relative}
+.vcon .vline{height:30mm;border-left:0.7mm solid #000;position:relative}
 .vcon.up .vline:before,.vcon.dn .vline:after{content:'';position:absolute;left:-2mm;border-left:2mm solid transparent;border-right:2mm solid transparent}
 .vcon.dn .vline:after{bottom:-0.5mm;border-top:4mm solid #000}
 .vcon.up .vline:before{top:-0.5mm;border-bottom:4mm solid #000}
@@ -91,6 +93,14 @@ CSS_P5 = """
 .stackq{display:flex;flex-direction:column;gap:1mm}
 .mq.big{font-size:17pt;font-family:'Fredoka';font-weight:500}
 .mq.big .fr{font-size:17pt}
+.mcgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3mm 4mm}
+.mcgrid .mcrow{flex-direction:column;align-items:flex-start;border:0.4mm solid #000;border-radius:2mm;padding:1.4mm 3mm;position:relative;gap:1.5mm}
+.mcgrid .mcrow .no{position:absolute;left:2mm;top:2mm}
+.mcgrid .mq{flex:none;padding-left:8mm;font-size:12pt;line-height:1.15}.mcgrid .mq svg{margin:1mm auto 0}
+.mcgrid .mopts{justify-content:center;width:100%}
+.mcard2:has(svg){padding:5mm 1mm 1mm}
+.mcard2:has(svg) .mc2 svg{max-width:none}
+.qg.c3 .qc svg.fsvg,.qg.c2 .qc svg.fsvg{max-width:100%;height:auto}
 em.msum{font-style:normal;font-weight:800;font-family:'Fredoka';font-size:16pt}
 .unit{font-size:14pt;font-weight:700;margin-left:1mm}
 """

@@ -291,7 +291,7 @@ def run(d):
     eq(v['start'][0] + 4 <= v['cols'] and v['start'][1] - 1 >= 0, True, 'S3 the path stays on the grid'); eq((v['rows'], v['cols']), (2, 4), 'S3 grid')
     q = T['S4']; vs = q['visuals']; orig = [tuple(p) for p in vs[0]['poly']]; opts = vs[1:]; res = [poly_edges([tuple(p) for p in w['poly']]) == poly_edges(orig) for w in opts]
     eq(res, [False, True, False], 'S4 only picture B is an exact copy'); eq(q['parts'][0]['ans'], 'B', 'S4 answer'); eq(opts[1]['poly'] != vs[0]['poly'], True, 'S4 the copy sits in a different place')
-    eq([w.get('counts') for w in opts], [{'2,0': 'A'}, {'2,0': 'B'}, {'2,0': 'C'}], 'S4 labels in order')
+    eq([w.get('tag') for w in opts], ['A', 'B', 'C'], 'S4 labels in order')
     ow = max(p[0] for p in orig) - min(p[0] for p in orig); oh = max(p[1] for p in orig) - min(p[1] for p in orig)
     sizes = [(max(p[0] for p in w['poly']) - min(p[0] for p in w['poly']), max(p[1] for p in w['poly']) - min(p[1] for p in w['poly'])) for w in opts]
     eq(sizes, [(3, 2), (3, 3), (4, 3)], 'S4: A is a step short, B same size, C a step too wide'); eq((ow, oh), (3, 3), 'S4 the T is 3 across and 3 up')

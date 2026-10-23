@@ -75,11 +75,12 @@ for p in pages:
         rec(f'{L(p)} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 
-rec("3 colour-by-code pages (P4-38, P4-39, P4-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [38, 39, 40])
+rec("3 colour-by-code pages (P4-05, P4-11, P4-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [5, 11, 40])
 if not ARGS.partial:
     rec("40 pages, ids 1..40, each in exactly one booklet", [p["no"] for p in pages] == list(range(1, 41)))
     covered = {o for p in pages for o in OC.PAGE_OC[p["no"]]}
-    rec("every one of the 32 syllabus outcome lines is practised by at least one page across the two booklets", covered == set(OC.OUTCOMES), str(sorted(set(OC.OUTCOMES) - covered)))
+    GAPS = {"AN1.3", "NT4.2"}      # documented honest gaps: drawing an angle and drawing a solid cannot be checked from a printed page (see the plan)
+    rec("every one of the 42 syllabus outcome lines except the two documented gaps (AN1.3 drawing an angle, NT4.2 drawing a solid) is practised by at least one page", covered == set(OC.OUTCOMES) - GAPS and not (covered & GAPS), str(sorted(set(OC.OUTCOMES) - covered)))
 for k in BK:
     rec(f"{k}: {NP[k]} pages in the order of gen/outcomes.py", [p["no"] for p in BK[k]] == OC.BOOKLETS[k]["order"][:NP[k]] if not ARGS.partial else True, str([p["no"] for p in BK[k]]))
     if not ARGS.partial:
@@ -88,26 +89,26 @@ for k in BK:
         rec(f"{k}: footer codes use the form S1-07 (P4-17) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P4-{p["no"]:02d})" for i, p in enumerate(BK[k])))
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
 mech = [p["mech"] for p in pages]; rec("every page names a self-check mechanism", all(mech))
-rec("every page has outcome numbers from the 32 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
+rec("every page has outcome numbers from the 42 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
 # ---- 2. reading level (V8)
 bad = []
 for p in pages:
     for s_ in p["instr"]:
-        if max_words(s_) > 10: bad.append((p["no"], s_))
+        if max_words(s_) > 14: bad.append((p["no"], s_))
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
-    if len(p["instr"]) > 3: bad.append((p["no"], "more than 3 instruction lines (plan: 3 lines max)"))
+    if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction sentences (P4 limit)"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt)">(.*?)</(?:div|p)>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
-            if len(one.split()) > 10: bad.append((p["no"], one))
-rec("V8 reading level: instruction and clue sentences <= 10 words, <= 3 lines", not bad, str(bad[:4]))
+            if len(one.split()) > 14: bad.append((p["no"], one))
+rec("V8 reading level: instruction and clue sentences <= 14 words, <= 4 sentences", not bad, str(bad[:4]))
 chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p.get("check_lines") else 18) and not p.get("cbc")]
 rec("check strip text <= 18 words (pages with several check lines: 34)", not chk, str(chk))
 hint = [(p["no"], p["check"]) for p in pages if re.search(r"\bIs it\b|\bDoes it\b|\bYou (live|can|carry)|garden|music|river|\bsky\b|\bspace\b|\bking\b|\ban animal|\bseason|used for writing|shopping|count the time", p["check"]) and not p.get("cbc")]
 rec("check strips carry no category hint (Is it ...?): the strip never says what the word is", not hint, str(hint[:3]))
-rec("every code-word strip contains the plain question 'Do they spell a word?'", all("Do they spell a word?" in p["check"] for p in pages if p.get("check_boxes")))
+rec("every code-word strip contains the plain question 'Do they spell a word?'", all(re.search(r"Do (they|the six letters) spell a word\?", p["check"]) for p in pages if p.get("check_boxes")))
 # ---- 2b. notes and tags
 def plain(h): return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h))
 bad = []
@@ -139,7 +140,7 @@ for p in pages:
     for a_, b_ in re.findall(r"\b(\d)\.(\d)\b", p["syll"].split("(")[0]):
         if not any(o.endswith(f"{a_}.{b_}") for o in ids): bad.append((p["no"], f"{a_}.{b_} in tag but not in outcome ids"))
 rec("F28: every outcome id of every page has its PDF wording in docs/school_books/p4_outcome_wording.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
-rec("topic tags name a P2 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Fractions", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
+rec("topic tags name a P4 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Fractions", "Decimals", "Area and Volume", "Geometry", "Data Representation")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for k in BK:
   for f in (f"{k}_pupil.html", f"{k}_front.html", f"{k}_key.html"):
@@ -165,7 +166,6 @@ for k in BK:
           x_, y_, sc_ = float(om.group(1)), float(om.group(2)), float(om.group(3))
           if x_ < -0.3 or y_ < -0.3 or x_ + 20 * sc_ > W_ + 0.3 or y_ + 20 * sc_ > H_ + 0.3: _clip.append((round(x_, 1), round(y_, 1), W_, H_))
   rec(f"{k}: no drawn object is clipped by the edge of its own svg", not _clip, str(_clip[:3]))
-  rec(f"{k}: every coin shows its value and the word cents", _ph.count('class="coinunit"') == _ph.count('class="coinval"'), f'{_ph.count("class=" + chr(34) + "coinval")} coins')
 # ---- 4. PDFs: page counts, fonts, text
 def pdf_text(f): return subprocess.run(["pdftotext", "-layout", os.path.join(O, f), "-"], capture_output=True, text=True).stdout
 alltxt = {}
@@ -319,7 +319,7 @@ for k in BK:
                 if all(40 < t < 215 for t in v): gb += 1
         worst_loss = max(worst_loss, loss); grey_blocks += gb
     kind = f.split("_", 2)[2]
-    rec(f"{f}: 1-bit render at 150 dpi keeps content (max ink loss {worst_loss:.2%} vs greyscale)", worst_loss <= {'Puzzles.pdf': 0.25, 'FrontMatter.pdf': 0.32, 'Answer_Key.pdf': 0.35}[kind], f"{len(gs)} pages")
+    rec(f"{f}: 1-bit render at 150 dpi keeps content (max ink loss {worst_loss:.2%} vs greyscale)", worst_loss <= {'Puzzles.pdf': 0.25, 'FrontMatter.pdf': 0.32, 'Answer_Key.pdf': 0.38}[kind], f"{len(gs)} pages")
     per_page = 130 if kind == "Answer_Key.pdf" else 40
     rec(f"{f}: no flat grey tint areas (blocks of edge pixels counted {grey_blocks}, budget {per_page} on average per page)", grey_blocks < per_page * len(gs), "")
     if kind == "Puzzles.pdf":

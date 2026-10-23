@@ -91,7 +91,7 @@ def page13():
         "3.1 (multiplication algorithm), 3.2 (division algorithm)", ["FO3.1", "FO3.2"], "Chain loop (operations)", "K8 the loop closes: the last arrow brings the pupil back to the start number",
         ["Start at the number in the circle.", "Follow each arrow and write the new number in the box.", "Go round the ring."],
         body, "Circles after the start, clockwise: " + ", ".join(Ntxt(v) for v in vals[1:]) + ". Arrows: " + ", ".join(optxt), "Going round the ring ends on the start number.",
-        f"A ring of six numbers. The pupil starts at {vals[0]} and follows five arrows, each a multiplication or a division by a 1-digit number, writing every new number. The sixth arrow takes the last number back to {vals[0]}. Every number the pupil writes is used by the next arrow, so one slip makes the ring fail to close. All the numbers stay below 100 000. The multiplications use the algorithm up to 4 digits by 1 digit and the divisions are exact.",
+        f"A ring of six numbers. The pupil starts at {vals[0]} and follows five arrows, each a multiplication or a division by a 1-digit number, writing every new number. The sixth arrow takes the last number back to {vals[0]}. Every number the pupil writes is used by the next arrow, so one slip makes the ring fail to close. All the numbers stay below one hundred thousand. The multiplications use the algorithm up to 4 digits by 1 digit and the divisions are exact.",
         check="Follow the last arrow. Do you come back to the start number?", mk=("loop",),
         mech_plain="Loop: following every arrow brings the pupil back to the start number", ps=True)
     g, rops = A4.read_ring(ring)
@@ -137,7 +137,7 @@ def page14():
         if res: word, table = res; break
     else: raise RuntimeError("p14")
     fr = lambda n, d: frac_html((n, d))
-    pic1 = A4.bars_svg(d1, t1); pic2 = A4.bars_svg(d2, t2)
+    pic1 = A4.bars_svg(d1, t1, w=30); pic2 = A4.bars_svg(d2, t2, w=30)
     box = '<span class="ab w2 fb"></span>'
     cards = [
         qcard(1, f"<p>Write the shaded amount as an improper fraction.</p>{pic1}", f'<span class="fr"><i>{ABS}</i><i>{d1}</i></span>', cls="pic"),
@@ -445,10 +445,10 @@ def page20():
     else: raise RuntimeError("p20")
     n1, n2_, n3, n4_, n5, n6 = names
     qs = [f"{n1} had {T1} stickers. {n1} gave {FR(f1)} of them to Ben and {FR(f2)} of them to Cy. How many stickers were left?",
-          f"A tank holds {T2} litres. It is {FR(Fraction(n2, d2))} empty. How many litres of water are in it?",
+          f"A tank holds {T2} litres. It is {FR(Fraction(n2, d2))} empty. Find the amount of water in the tank.",
           f"A book has {T3} pages. {n3} read {FR(g1)} of it on Monday and {FR(g2)} of it on Tuesday. How many pages are left?",
           f"{FR(Fraction(n4, d4))} of a number is {k4}. What is the number?",
-          f"{n5} spent {FR(h1)} of her money on a book and {FR(h2)} of it on a pen. She had ${left5} left. How much money had she at first?",
+          f"{n5} spent {FR(h1)} of her savings on a toy and {FR(h2)} of her savings on a card. Then ${left5} remained. Work out her savings at the start.",
           f"There are {T6} pupils. {FR(e1)} of them walk to school. {FR(e2)} of the rest take a bus. How many take a bus?"]
     units = ["", " litres", " pages", "", "", ""]
     cards = [qcard(i + 1, f'<div class="ptxt2">{q}</div>', ("$ " if i == 4 else "") + ABX + units[i], cls="span2 inl") for i, q in enumerate(qs)]
@@ -456,7 +456,7 @@ def page20():
         "2.1 (fraction as part of a set), 3.1 (adding and subtracting fractions)", ["FS2.1", "FA3.1"], "Code-breaker (fraction stories)",
         ["Read each story.", "Write the answer in the box.", INSTR_CODE], '<div class="qg c1">' + "".join(cards) + "</div>", ans, table, word, 0, 999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Six stories with two steps: the parts given away from a whole set and the number left, what is in a tank that is part empty, two parts of a book read and the pages left, the whole number from a fraction of it, the whole amount from two spent fractions and the money left, and a fraction of the rest. The decoy letters stand for the usual slips: stopping after the first step, giving the part instead of the rest, or taking the second fraction from the whole instead of from the rest. A box left blank gives no letter and the check cannot see it.",
+        "Six stories with two steps: the parts given away from a whole set and the number left, what is in a tank that is part empty, two parts of a book read and the pages left, the whole number from a fraction of it, the whole amount from two spent fractions of it and the money left, and a fraction of the rest. The decoy letters stand for the usual slips: stopping after the first step, giving the part instead of the rest, or taking the second fraction from the whole instead of from the rest. A box left blank gives no letter and the check cannot see it.",
         domain=dom, ps=True)
     solved = []
     parts = cards_of(P["body"])
@@ -465,7 +465,7 @@ def page20():
     f = frs(parts[1]); T = int(re.search(r"holds (\d+) litres", parts[1])[1]); solved.append(int(T - f[0] * T))
     f = frs(parts[2]); T = int(re.search(r"A book has (\d+) pages", parts[2])[1]); solved.append(int(T - f[0] * T - f[1] * T))
     f = frs(parts[3]); k = int(re.search(r"is (\d+)\. What", parts[3])[1]); solved.append(int(k / f[0]))
-    f = frs(parts[4]); k = int(re.search(r"\$(\d+) left", strip_gap(parts[4]))[1]); solved.append(int(k / (1 - f[0] - f[1])))
+    f = frs(parts[4]); k = int(re.search(r"\$(\d+) remained", strip_gap(parts[4]))[1]); solved.append(int(k / (1 - f[0] - f[1])))
     f = frs(parts[5]); T = int(re.search(r"There are (\d+) pupils", parts[5])[1]); solved.append(int((T - f[0] * T) * f[1]))
     P.v("V1 independent solver (fractions and numbers read from the printed stories; each story solved with exact fractions) equals the key", solved == ans, solved)
     P.v("V7 every fraction has a denominator within 12 and every answer is a whole number", all(Fraction(v).denominator == 1 for v in solved))

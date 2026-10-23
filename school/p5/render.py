@@ -1,4 +1,4 @@
-"""HTML/CSS (Primary 2 pack) for pupil pages, front matter and teacher key. Pure black and white only."""
+"""HTML/CSS (Primary 5 pack) for pupil pages, front matter and teacher key. Pure black and white only."""
 import html, datetime
 
 FONT = "../../../fonts/node_modules/@fontsource"
@@ -207,7 +207,7 @@ def key_footer(code):
     return (f'<footer class="pf"><span class="fl"><span class="fx">&copy; 2026 Preciouslyours Pte Ltd. Teacher answer key: not for pupils, not for resale.</span></span><span class="pc"><b>{code}</b></span></footer>')
 
 def pupil_page(p, school):
-    code = p.get("code") or f"P2-{p['no']:02d}"
+    code = p.get("code") or f"P5-{p['no']:02d}"
     instr = "".join(f"<p>{s}</p>" for s in (p.get("instr_html") or [html.escape(x) for x in p["instr"]]))
     lb = ""
     if p.get("check_boxes"):
@@ -248,7 +248,7 @@ def cover(school, bk):
     pub = '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd, trading as Math Inquirers</p><p style="font-size:9pt;margin-top:2mm">' + NOT_AFFILIATED + '</p>'
     return ('<section class="page cover fm"><div>' + (draft_banner("cover wording and title are not final.") if DRAFT else "") +
             '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
-            '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 2</div>'
+            '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 5</div>'
             f'<div class="big" style="font-size:28pt;margin-top:5mm">{html.escape(bk["name"])}</div><p class="sub" style="margin-top:2mm">{html.escape(bk["terms"])}</p></div>'
             '<div class="box">20 single-page puzzles<br>Almost every puzzle checks itself<br>One star and two star pages<br>Teacher answer key included</div>'
             f'<div><p style="font-size:13pt;margin:0 0 2mm">This booklet belongs to</p><span class="school">{s}</span>'
@@ -288,29 +288,31 @@ def teacher_notes(pages, bk):
         ("cbc", '<li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'),
         ("route", '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes, and every box on it must follow the rule on the page.</li>'),
         ("logic", '<li><b>Letters in an order, a grid or a choice.</b> Each number, card, picture or choice carries a letter; the letters, read in the order asked, must spell a word. Where one item is left out, its letter is a decoy that is not part of the word.</li>'),
-        ("total", '<li><b>Total.</b> The whole count must make the total printed in the strip (the graph pages add a second sum).</li>'),
-        ("loop", '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop.</li>'),
+        ("total", '<li><b>Total.</b> Every row, column and diagonal of the magic square must make the total printed on the page.</li>'),
+        ("loop", '<li><b>Loop.</b> A chain of circles joined by arrows goes all the way round; the last arrow must bring the pupil back to the start number.</li>'),
+        ("equal", '<li><b>Both sides equal.</b> The pupil puts each number back into its box and checks that both sides of every line are equal. A blank box makes the line untrue.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need in mks)
-    ps_ex = {1: 'stories with more than one step and families of multiplication and division facts', 2: 'comparing amounts of money, lengths of lessons given in hours and minutes and printed facts'}[bk["n"]]
+    ps_ex = {1: 'two-step stories with fractions, with measures and with decimals, and finding a missing number', 2: 'discount, GST and interest stories, rate stories, tank stories and angles found in two steps'}[bk["n"]]
     return ('<section class="page fm notes"><h2>Teacher notes' + (" (DRAFT)"if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
-            + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 2 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
-            f'<h3>Which terms</h3><p>The pages are grouped by the order in which Primary 2 topics are typically taught: this booklet follows {html.escape(bk["terms"])}, the other booklet follows {other}. Schools vary, so check your scheme of work: use a page whenever its topic has been taught, from either booklet.</p>'
+            + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 5 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
+            f'<h3>Which terms</h3><p>The pages are grouped by the order in which Primary 5 topics are typically taught: this booklet follows {html.escape(bk["terms"])}, the other booklet follows {other}. Schools vary, so check your scheme of work: use a page whenever its topic has been taught, from either booklet.</p>'
             f'<h3>Stars</h3><p>One star pages practise a topic as it is usually taught ({n1} pages). Two star pages use the same topics with two steps or two clues to combine ({n2} pages).</p>'
             '<h3>How the pages check themselves</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer, and it asks the pupil to see whether the answer makes sense. Every answer box and every letter box must be filled: a box left blank gives no letter, and the check cannot see it.</p>'
             f'<ul>{blt}</ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
-            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 129 000 English words counts as not rejected. Two wrong answers at once were not all tested.</p>'
             '</section>'
             '<section class="page fm notes"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 242 000 English words counts as not rejected. Two wrong answers at once were not all tested.</p>'
             '<h3>Using the pages</h3><ul>'
-            + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way. Light crayons work best: a dark crayon hides the number in the part on a photocopy.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
+            + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code page (' + cbc + ') takes longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way. Light crayons work best: a dark crayon hides the number in the part on a photocopy.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
-            '<li><b>Drawings.</b> Pictures of rulers, scales, clocks, coins and notes are original drawings, not to scale unless a page says so. Coins and notes are inspired by Singapore money, not actual size (smaller than real) and in black and white.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: on the coin pages (Dollars and Cents, Purse Match) a light setting can fill in the small word cents on the coins. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size. Real $2 notes are purple, $5 green, $10 red.</p>'
+            '<li><b>Drawings.</b> Figures of triangles, cuboids, tanks and angles are original drawings. Lengths and angles are not drawn to scale unless a page says so, so a pupil should use the numbers on the figure, not a ruler or a protractor.</li>'
+            '<li><b>Not covered.</b> A printed page cannot check a pupil who draws (a cuboid on an isometric grid, a triangle of a given area) or who builds with real cubes. These verbs of the syllabus are practised only by reading drawings; the plan lists them. Ratio, average, pie charts, fraction division, finding the whole from a percentage, percentage change, circles and algebra are Primary 6 or Primary 4 content in the syllabus summary and are not used.</li></ul>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large enough for handwriting. Use A4 and print at 100% (actual size). The small figures in the route and colour pages need a clear copy: use normal toner, not a light setting.</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size.</p>'
             '</section>')
 
 def coverage_table(pages, bk):
@@ -326,7 +328,7 @@ def coverage_table(pages, bk):
 def contents(pages, bk):
     rows = "".join(f'<tr><td>{p["code"].split(" ")[0]}</td><td>{p["code"].split("(")[1].rstrip(")")}</td><td>{html.escape(p["title"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)
     return (f'<section class="page fm"><h2>Contents: {html.escape(bk["name"])}</h2><table class="tbl cont"><tr><th>Page</th><th>Code</th><th>Puzzle</th><th>Tier</th></tr>'
-            + rows + '</table><p style="margin:2mm 0 0;font-size:9pt">Pages are independent. The footer code shows the page in this booklet and, in brackets, its number in the full set of 40 (P2-01 to P2-40).</p>'
+            + rows + '</table><p style="margin:2mm 0 0;font-size:9pt">Pages are independent. The footer code shows the page in this booklet and, in brackets, its number in the full set of 40 (P5-01 to P5-40).</p>'
             '<h3 style="margin:3mm 0 1mm;font-size:12pt">What the booklet covers</h3>' + coverage_table(pages, bk) + '</section>')
 
 # ------------------------------------------------------------------ teacher key
@@ -347,9 +349,9 @@ def key_pages(pages, school, packing, bk):
     pg = [1]
     def kf():
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
-    out = [f'<section class="page fm"><h2>Teacher answer key: Primary 2, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
+    out = [f'<section class="page fm"><h2>Teacher answer key: Primary 5, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 2 content in the Mathematics Syllabus, Primary (2021 edition, pages 33 and 34). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, using the outcome numbers of the Primary 5 (Standard) content in the Mathematics Syllabus, Primary (2021 edition, pages 41 and 42) where our summary prints them. The wording of each outcome line is our own summary, not the syllabus text. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

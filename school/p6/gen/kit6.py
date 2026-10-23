@@ -159,7 +159,7 @@ def make_table(no, answers, rng, lo, hi, pool=None, domain=None, n_decoy=3, trie
     return res
 
 # ------------------------------------------------------------------------------------------------ route (maze) page
-def build_maze(rng, n, L, good, bad, ev, target, dead=2, tries=30000, min_dist=3):
+def build_maze(rng, n, L, good, bad, ev, target, dead=2, tries=30000, min_dist=3, must=()):
     """good: list of html cells that equal `target`; bad: list of html cells that do not. ev(html) reads the printed cell.
     Returns (grid dict, path, start, finish) with exactly one simple route from START to FINISH over the cells equal to the target."""
     for _ in range(tries):
@@ -174,8 +174,11 @@ def build_maze(rng, n, L, good, bad, ev, target, dead=2, tries=30000, min_dist=3
             if opts and rng.random() < .6:
                 q = rng.choice(opts); grid[q] = pick[L + d]; d += 1
         if d < dead: continue
-        fill = rng.sample(bad, n * n - len(grid)) if len(bad) >= n * n - len(grid) else None
-        if fill is None: raise RuntimeError("not enough bad cells")
+        chosen = [rng.choice(g) for g in must]                      # one cell of each trap group is always on the grid
+        rest = n * n - len(grid) - len(chosen)
+        pool = [b for b in bad if b not in chosen]
+        fill = chosen + (rng.sample(pool, rest) if len(pool) >= rest else [])
+        if len(fill) != n * n - len(grid): raise RuntimeError("not enough bad cells")
         k = 0
         for r in range(n):
             for c in range(n):
@@ -185,8 +188,8 @@ def build_maze(rng, n, L, good, bad, ev, target, dead=2, tries=30000, min_dist=3
         if count_routes(ok, n, path[0], path[-1]) == 1: return grid, path, path[0], path[-1]
     raise RuntimeError("maze")
 
-def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, n, L, good, bad, ev, target, target_text, note, check=None, cls="maze tall", ps=False, dead=2, extra_note=""):
-    grid, path, start, finish = build_maze(rng, n, L, good, bad, ev, target, dead=dead)
+def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, n, L, good, bad, ev, target, target_text, note, check=None, cls="maze tall", ps=False, dead=2, extra_note="", must=()):
+    grid, path, start, finish = build_maze(rng, n, L, good, bad, ev, target, dead=dead, must=must)
     texts = [[grid[(r, c)] for c in range(n)] for r in range(n)]
     body = maze_html(n, texts, start, finish, cls=cls)
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, "K6 route closes at FINISH", instr, body,
@@ -211,6 +214,18 @@ def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     return P
 
 # ------------------------------------------------------------------------------------------------ lettered choices
+def choice_letters_distinct(rng, word, n_opts, tries=800):
+    """rows[i] = [right letter, wrong letters ...] with every decoy letter used in ONE row only (so a letter that is never right cannot be spotted by repetition) when
+    the alphabet allows it; no other way of choosing one option per row spells a word of the large list"""
+    avail = [c for c in ALPHA if c not in word]
+    need = len(word) * (n_opts - 1)
+    for _ in range(tries):
+        pool = rng.sample(avail, need) if need <= len(avail) else [rng.choice(avail) for _ in range(need)]
+        rows = [[word[i]] + pool[i * (n_opts - 1):(i + 1) * (n_opts - 1)] for i in range(len(word))]
+        if not any(w2.lower() in BIG for w2 in ("".join(rows[i][c] for i, c in enumerate(combo)) for combo in itertools.product(range(n_opts), repeat=len(word)) if any(combo))):
+            return rows
+    return choice_letters(rng, word, n_opts)
+
 def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, rows, solve_row, note, word=None, n_opts=3, check=None, ps=False,
                 key_rows=None, wide=False, grid=False):
     """rows: list of dict(stem=html, opts=[html,...], right=int). The letter beside the RIGHT option of row i is word[i]; wrong options carry decoy letters,
@@ -218,7 +233,7 @@ def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rn
     if word is None:
         word = word_candidates(no, len(rows))[0]
     CLAIMED[no] = word
-    letters = choice_letters(rng, word, n_opts)
+    letters = choice_letters_distinct(rng, word, n_opts)
     layout = []
     for r, lt in zip(rows, letters):
         opts = []
@@ -286,7 +301,7 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
         h = items[i]
         if vert and "<!--cap-->" in h:
             top, cap = h.split("<!--cap-->", 1)
-            return f'<div class="mit"><span class="no">{i+1}</span><div class="mtt">{top}</div><div class="mrow"><div class="mcap">{cap}</div><span class="ab"></span></div></div>'
+            return f'<div class="mit"><div class="mtop"><span class="no">{i+1}</span><span class="ab"></span></div><div class="mtt">{top}</div><div class="mcap">{cap}</div></div>'
         return f'<div class="mit"><span class="no">{i+1}</span><div class="mtt">{h}</div><span class="ab"></span></div>'
     its = "".join(one(i) for i in range(n))
     body = (f'<p class="lead">{lead_items}</p><div class="mgrid{" cmp" if compact else ""}{" vert" if vert else ""}" style="grid-template-columns:repeat({item_cols},minmax(0,1fr))">{its}</div>'
@@ -311,7 +326,7 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
 
 # ------------------------------------------------------------------------------------------------ ordering
 def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, cards, order_idx, read_card, note, word=None, check=None, ps=False,
-               ncols=3, lead="Write the letters in order.", key_text=None, direction="smallest first", card_text=None):
+               ncols=3, lead="Write the letters in order.", key_text=None, direction="smallest first", card_text=None, row_mm=None):
     """cards: list of html; order_idx = indices of the cards in the order asked. The card at order_idx[k] carries word[k]. read_card(card_html) -> sortable value."""
     n = len(cards)
     if word is None: word = word_candidates(no, n)[0]
@@ -321,7 +336,7 @@ def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     shown = list(range(n)); rng.shuffle(shown)
     while shown == list(order_idx): rng.shuffle(shown)
     crd = "".join(f'<div class="ocd"><i class="cl">{lab[j]}</i><div class="oct">{cards[j]}</div></div>' for j in shown)
-    body = (f'<div class="ogrid" style="grid-template-columns:repeat({ncols},minmax(0,1fr))">{crd}</div>'
+    body = (f'<div class="ogrid" style="grid-template-columns:repeat({ncols},minmax(0,1fr));{f'grid-auto-rows:{row_mm}mm' if row_mm else ''}">{crd}</div>'
             f'<div class="blk"><p class="lead">{lead}</p><div class="ansgrid2" style="margin-top:2mm">' + "".join('<span class="ab"></span>' for _ in range(n)) + '</div></div>')
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 letters in order spell a word ({n} letters) + K4 each card used once", instr, body,
                  key_text or f"{direction}: " + ", ".join(f"{lab[ci]} = {card_text(ci) if card_text else ptxt(cards[ci])}" for ci in order_idx), f"Word: {word}", note,
@@ -342,7 +357,7 @@ def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
 # ------------------------------------------------------------------------------------------------ domino loop
 def domino_html(code, left, right, start=False):
     tag = '<i class="dstart">START</i>' if start else ""
-    return f'<div class="dom"><i class="cl">{code}</i>{tag}<div class="dh">{left}</div><div class="dh r">{right}</div></div>'
+    return f'<div class="dom"><i class="cl">{code}</i>{tag}<div class="dh"><span class="dt">{left}</span></div><div class="dh r"><span class="dt">{right}</span></div></div>'
 
 def loop_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, halves, ev, note, word=None, check=None, ps=False, key_text=None):
     """halves: list of (left_html, right_html) in LOOP ORDER: ev(right of k) == ev(left of k+1), the last right equals the first left. Domino k carries word[k];

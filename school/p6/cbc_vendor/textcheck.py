@@ -515,6 +515,46 @@ def _p1_shapes_bare(c):
     w = "both" if "corners and the straight sides" in ins else ("sides" if "straight sides" in ins and "corners" not in ins else "corners")
     return sum((CORNERS[k] + SIDES[k]) if w == "both" else (SIDES if w == "sides" else CORNERS)[k] for k in c["meta"]["kinds"])
 
+# ---- Primary 6 (school/p6): ratio, percentage, volume, average, algebra, fractions
+@R(r"(\d+) : (\d+) = (\d+) : " + B)
+def p6_ratio_missing_second(m, c): return exact_div(I(m[2]) * I(m[3]), I(m[1]))
+@R(r"(\d+) : (\d+) = " + B + r" : (\d+)")
+def p6_ratio_missing_first(m, c): return exact_div(I(m[1]) * I(m[3]), I(m[2]))
+@R(r"Share (\d+) in the ratio (\d+) : (\d+)\. (Larger|Smaller): " + B)
+def p6_share(m, c):
+    n, a, b = I(m[1]), I(m[2]), I(m[3])
+    part = max(a, b) if m[4] == "Larger" else min(a, b)
+    return exact_div(n * part, a + b)
+@R(r"(\d+)% of " + B + r" is (\d+)")
+def p6_pct_whole(m, c): return exact_div(I(m[2]) * 100, I(m[1]))
+@R(r"(\d+)% of (\d+) = " + B)
+def p6_pct_of(m, c): return exact_div(I(m[1]) * I(m[2]), 100)
+@R(r"Up (\d+)% to (\d+)\. Before: " + B)
+def p6_before(m, c): return exact_div(I(m[2]) * 100, 100 + I(m[1]))
+@R(r"Cuboid (\d+)×(\d+)×(\d+) cm Vol " + B + " cm³")
+def p6_cuboid(m, c): return I(m[1]) * I(m[2]) * I(m[3])
+@R(r"Vol (\d+) cm³,? [Bb]ase (\d+) cm²,? Height " + B + " cm")
+def p6_height(m, c): return exact_div(I(m[1]), I(m[2]))
+@R(r"Cube, edge (\d+) cm Vol " + B + " cm³")
+def p6_cube_vol(m, c): return I(m[1]) ** 3
+@R(r"Cube Vol (\d+) cm³ Edge " + B + " cm")
+def p6_cube_edge(m, c):
+    e = round(I(m[1]) ** (1 / 3)); return e if e ** 3 == I(m[1]) else None
+@R(r"Average of (\d+), (\d+), (\d+) = " + B)
+def p6_avg(m, c): return exact_div(I(m[1]) + I(m[2]) + I(m[3]), 3)
+@R(r"Total (\d+), (\d+) numbers Average " + B)
+def p6_avg_total(m, c): return exact_div(I(m[1]), I(m[2]))
+@R(r"Average (\d+), (\d+) numbers Total " + B)
+def p6_total(m, c): return I(m[1]) * I(m[2])
+@R(r"Average of (\d+), (\d+) and (\d+): " + B)
+def p6_avg_mixed(m, c): return exact_div(I(m[1]) + I(m[2]) + I(m[3]), 3)
+@R(r"(\d+) ÷ (\d+)/(\d+) = " + B)
+def p6_fdiv(m, c): return exact_div(I(m[1]) * I(m[3]), I(m[2]))
+@R(r"(\d+)n \+ (\d+), n = (\d+) Value: " + B)
+def p6_subst(m, c): return I(m[1]) * I(m[3]) + I(m[2])
+@R(r"(\d+)n \+ (\d+) = (\d+) n = " + B)
+def p6_equation(m, c): return exact_div(I(m[3]) - I(m[2]), I(m[1]))
+
 # ------------------------------------------------------------------ entry points
 def solve(lines, meta=None, instr="", kind=None):
     """-> (value, rule name). `kind` == "dollars" when a money answer is stored in whole dollars (cents otherwise)."""

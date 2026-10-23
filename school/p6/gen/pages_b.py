@@ -19,13 +19,13 @@ def fw_item(rng, kind, N):
     if kind == "bare":
         t = f"{p}% of a number is {part}. Find the number."
     elif kind == "class":
-        t = f"{p}% of the pupils in a hall are boys. There are {part} boys. How many pupils are in the hall?"
+        t = f"Boys make up {p}% of the people in a hall. {part} boys are there. Find the number of people in the hall."
     elif kind == "sale":
         t = f"A bike is on sale at {p}% of its usual price. The sale price is ${part}. What is the usual price?"
     elif kind == "save":
-        t = f"{N} saved {p}% of her pocket money. She saved ${part}. How much pocket money did she get?"
+        t = f"{N} saved ${part}, which is {p}% of {N}'s pocket money. How much pocket money did {N} get?"
     elif kind == "ribbon":
-        t = f"{p}% of a ribbon is {part} cm long. How long is the whole ribbon in cm?"
+        t = f"{p}% of a ribbon is {part} cm long. Work out the whole length in cm."
     else:
         t = f"A tank is {p}% full. It holds {part} {LITRE} of water. How much water does the full tank hold in {LITRE}?"
     wrong = []
@@ -89,12 +89,13 @@ def page11():
     for a in range(20, 241, 20):
         bad.append(ud_cell("Down", a, a * 3 // 4)); bad.append(ud_cell("Up", a * 3 // 4, a))
     bad = sorted(set(bad)); good = sorted(set(good))
+    must = [[c for c in bad if ev_ud(c) == -25], [c for c in bad if ev_ud(c) == Fr(100, 3)]]
     return route_page(11, 7111, "Percent Up and Down", 1, "Percentage increase and decrease", STRAND_PC,
         "1.2 (percentage increase or decrease)", ["PC1.2"], "Maze / path",
         ["Start at START. Move up, down, left or right.", "Step only on boxes that show a 25% increase.", "Do not step on a box twice."],
         rng, 4, 8, good, bad, ev_ud, T, "a 25% increase",
-        "A 4 by 4 grid of sixteen changes, each written as Up or Down from one number to another. The route follows the boxes that are a 25% increase. The wrong boxes include 25% decreases (a pupil who ignores the word Down) and increases from a smaller number to the old one (for example Up from 60 to 80, which is 33 and a third per cent, not 25%), and other percentages. Two extra 25% increases are dead ends. Counting the boxes shows a line that takes a shortcut.",
-        cls="maze sm tall", check="Does your line reach FINISH? Count its boxes: are there 8? Is every box a 25% increase?")
+        "A 4 by 4 grid of sixteen changes, each written as Up or Down from one number to another. The route follows the boxes that are a 25% increase. The wrong boxes include 25% decreases (a pupil who ignores the word Down) and increases from a smaller number to the old one (a rise of one third, not 25%), and other percentages. Two extra 25% increases are dead ends. Counting the boxes shows a line that takes a shortcut.",
+        cls="maze sm tall", check="Does your line reach FINISH? Count its boxes: are there 8? Is every box a 25% increase?", must=must)
 
 # =============================================================================== P6-12 Percent Stories  (PC1.1, PC1.2, code)
 def ps_item(rng, kind, names):
@@ -115,7 +116,7 @@ def ps_item(rng, kind, names):
         while True:
             p = rng.choice([20, 25, 30, 40, 60]); first = rng.randint(5, 50) * 10; left = first * (100 - p) // 100
             if first * (100 - p) % 100 == 0: break
-        t = f"A shop sold {p}% of its mangoes. It has {left} mangoes left. How many mangoes did it have at first?"
+        t = f"A shop sold {p}% of its mangoes and had {left} mangoes left. Find the number of mangoes at the start of the day."
         return dict(t=t, ans=first, wrong=[left * p // 100 if left * p % 100 == 0 else left + p, first - left, left + first * 0 + p])
     if kind == "grew":
         while True:
@@ -167,7 +168,7 @@ def page12():
         "1.1, 1.2 (finding the whole given a part and the percentage; percentage increase or decrease)", ["PC1.1", "PC1.2"], "Code-breaker (percentage stories)",
         ["Work out each answer.", "Write it in the box.", "Use the code table."],
         cards, ans, table, word, 1, 1000, "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Six stories: the usual price after a discount, the old price after a rise, the amount at first after some were sold, a percentage increase, a percentage decrease, and the smaller quantity when the other is a percentage more. Three need the whole from a part that is more or less than 100%, so the pupil must divide by the right percentage. The decoy numbers are what a pupil gets by taking the percentage of the given amount, by finding only the difference, or by adding or subtracting the percentage as a number. A box left blank gives no letter and the check cannot see it.",
+        "Six stories: the usual price after a discount, the old price after a rise, the amount at first after some were sold, a percentage increase, a percentage decrease, and the smaller quantity when the other is a percentage more. Three need the whole from a part that is a percentage above or below it, so the pupil must divide by the right percentage. The decoy numbers are what a pupil gets by taking the percentage of the given amount, by finding only the difference, or by adding or subtracting the percentage as a number. A box left blank gives no letter and the check cannot see it.",
         ncols=1, ps=False)
     solved = [ps_solve(it["t"]) for it in its]
     P.v("V1 independent solver reads each printed story and finds the answer: equals the key", solved == ans, solved)
@@ -176,8 +177,8 @@ def page12():
 
 # =============================================================================== P6-13 Letters for Numbers  (AL1.1, AL1.2, choice)
 LET = ["n", "p", "k", "y", "w", "t"]
-def al_row(rng, kind, L, N, M):
-    K = rng.randint(2, 9)
+def al_row(rng, kind, L, N, M, K=None):
+    K = K or rng.randint(2, 9)
     Lh = V(L)
     if kind == "more":
         return dict(stem=f"A pen costs ${Lh}. A ruler costs ${K} more than the pen. How many dollars does the ruler cost?", right=f"{Lh} + {K}", wrong=[f"{Lh} − {K}", f"{K}{Lh}"])
@@ -217,7 +218,8 @@ def page13():
     kinds = ["more", "less", "times", "share", "age", "boxes"]
     for _ in range(100):
         letters = rng.sample(LET, 6); names = rng.sample(PEOPLE, 12)
-        rows = [al_row(rng, k, letters[i], names[2 * i], names[2 * i + 1]) for i, k in enumerate(kinds)]
+        Ks = rng.sample(range(2, 10), 6)
+        rows = [al_row(rng, k, letters[i], names[2 * i], names[2 * i + 1], Ks[i]) for i, k in enumerate(kinds)]
         rng.shuffle(rows)
         if len({r["stem"] for r in rows}) == 6: break
     crows = []
@@ -249,7 +251,7 @@ def lin(expr, letter=None):
 def simp_item(rng, kind, L):
     l = V(L)
     while True:
-        a, b, c, d = rng.randint(2, 9), rng.randint(1, 8), rng.randint(1, 14), rng.randint(1, 9)
+        a, b, c, d = rng.randint(2, 9), rng.randint(2, 8), rng.randint(1, 14), rng.randint(2, 9)
         if kind == "k1": t = f"{a}{l} + {b}{l} + {c}"; ans = (a + b, c)
         elif kind == "k2":
             if a <= b: continue
@@ -267,30 +269,47 @@ def simp_item(rng, kind, L):
     if kind in ("k2", "k4", "k6"): wrong.append((a + b, ans[1]))
     return dict(t=t, ans=ans, wrong=[w for w in wrong if w[0] >= 1 and w[1] >= 0], L=L)
 
+def simp_cards(rng, its):
+    """eight cards: the six simplest forms and two decoys (a wrong simplification of two of the expressions)"""
+    right = [it["ans"] for it in its]
+    decs = []
+    for it in rng.sample(its, 2):
+        c, k = it["ans"]
+        for w in ((k, c) if k >= 2 else (c + 1, k), (c + k, 1), (c - 1, k + 1), (c + 1, k - 1 if k > 1 else k + 2)):
+            if w[0] >= 1 and w[1] >= 1 and w not in right and w not in [d[0] for d in decs]:
+                decs.append((w, it["L"])); break
+    return decs
+
 def page14():
     rng = random.Random(7414)
     kinds = ["k1", "k2", "k3", "k4", "k5", "k6"]
-    dom = [(c, k) for c in range(1, 31) for k in range(0, 41)]
     for _ in range(300):
         letters = rng.sample(LET + ["a", "m"], 6)
         its = [simp_item(rng, k, L) for k, L in zip(kinds, letters)]; rng.shuffle(its)
-        ans = [it["ans"] for it in its]
-        if not distinct(ans): continue
-        pool = sorted({w for it in its for w in it["wrong"] if w not in ans and w in set(dom)})
-        res = make_table(14, ans, rng, 1, 1, pool=pool, domain=dom, n_decoy=3)
-        if res: word, table = res; break
-    lof = {it["ans"]: it["L"] for it in its}
-    fmt = lambda k: f'{k[0]}{V(lof.get(k, "n"))} + {k[1]}'
-    cards = [qcard(i + 1, f'<div class="eqn">{it["t"]}</div><div class="eqn">= {abx("w2")}{V(it["L"])} + {abx("w2")}</div>', "") for i, it in enumerate(its)]
-    P = code_page(14, 7414, "Simplify", 1, "Algebra: simplifying expressions with one letter", STRAND_AL,
-        "1.3 (simplifying simple linear expressions, no brackets)", ["AL1.3"], "Code-breaker (simplifying)",
-        ["Simplify each expression.", "Write the numbers in the boxes.", "Use the code table."],
-        cards, ans, table, word, 1, 1, "; ".join(f"{i+1}) {a}{it['L']} + {b}" for i, (it, (a, b)) in enumerate(zip(its, ans))),
-        "Six expressions with one letter and no brackets: adding like terms, subtracting like terms, and expressions where the letter terms and the numbers are mixed up, one with a lone letter (n means 1n). The answer has the form (a number) times the letter plus a number. The decoy answers are what a pupil gets by adding the letter terms to the numbers, by swapping the two numbers, or by taking one too many or too few of the letter. A box left blank gives no letter and the check cannot see it.",
-        domain=dom, fmt=fmt, ncols=2, cols=3)
-    solved = [lin(ptxt(it["t"]), it["L"]) for it in its]
-    P.v("V1 independent solver reads the printed expression and collects like terms: equals the key", solved == ans, solved)
-    P.v("V7 every answer has a letter coefficient of 2 or more and a positive number term", all(c >= 2 and k >= 1 for c, k in ans))
+        ans = [(it["ans"], it["L"]) for it in its]
+        if not distinct([a for a, _ in ans]) or len({L for _, L in ans}) < 6: continue
+        decs = simp_cards(rng, its)
+        if len(decs) < 2: continue
+        allc = ans + decs
+        if len({a for a, _ in allc}) < 8: continue
+        break
+    order = list(range(8)); rng.shuffle(order)
+    card_html = [f'<span class="rt">{c}{V(L)} + {k}</span>' for (c, k), L in [allc[j] for j in order]]
+    right = [order.index(i) for i in range(6)]
+    item_html = [f'<div class="eqn">{it["t"]}</div>' for it in its]
+    def solve_item(ih, chs):
+        c, k = lin(ptxt(ih))
+        L = re.search(r"[a-z]", ptxt(ih)).group(0)
+        for j, ch_ in enumerate(chs):
+            t = ptxt(ch_)
+            if re.search(r"[a-z]", t).group(0) == L and lin(t) == (c, k): return j
+        return -1
+    P = match_page(14, 7414, "Simplify", 1, "Algebra: simplifying expressions with one letter", STRAND_AL,
+        "1.3 (simplifying simple linear expressions, no brackets)", ["AL1.3"], "Matching (simplest form)",
+        ["Simplify each expression.", "Find the card with the simplest form.", "Write the card letter in the box. Use each card once."],
+        rng, item_html, card_html, right, solve_item,
+        "Six expressions with one letter and no brackets: adding like terms, subtracting like terms, and expressions where the letter terms and the numbers are mixed up, one with a lone letter (n means 1n). Each is matched to its simplest form among eight cards. Two cards are decoys: a wrong simplification, such as the two numbers swapped or all the terms added together. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. A box left blank gives no letter and the check cannot see it.",
+        item_cols=2, card_cols=4)
     return P
 
 # =============================================================================== P6-15 Substitute  (AL1.4, domino loop)

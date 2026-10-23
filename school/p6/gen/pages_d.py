@@ -34,7 +34,7 @@ def ss_figure(rng, kind, tag):
     if kind == "ssemi": return F.sq_semi_fig(rng.choice([14, 28]))
     if kind == "sqq": return F.sq_minus_quarter_fig(rng.choice([14, 28]), tag)
     if kind == "sqs": return F.sq_minus_semi_fig(rng.choice([14, 28]), tag)
-    L = rng.choice([10, 12, 14, 16, 18, 20, 24]); W = rng.randint(6, 14); h = rng.choice([4, 6, 8, 10, 12])
+    L = rng.choice([8, 10, 12, 14, 16]); W = rng.randint(4, 10); h = rng.choice([6, 8, 10, 12])
     return F.rect_tri_fig(L, W, h)
 
 def page21():
@@ -59,7 +59,7 @@ def page21():
         if res: word, table = res; break
     cards = []
     for i, f in enumerate(figs_):
-        cards.append(qcard(i + 1, f'<div class="fig fcd">{f}</div>', f'{abx("w3")}{unit("cm²")}', cls="pos"))
+        cards.append(qcard(i + 1, f'<div class="fig fcd">{f}</div>', f'{abx("w3")}{unit("cm²")}', cls="posb"))
     P = code_page(21, 8121, "Shaded Shapes", 1, "Area of composite figures", STRAND_AV,
         "1.3 (composite figures made of squares, rectangles, triangles, semicircles and quarter circles)", ["AV1.3"], "Code-breaker (composite areas)",
         [f"Take {PIP} as 22/7. All lengths are in cm.", "Find the area of each figure. For a hatched figure, find the hatched part.", "Write the answer in the box. Use the code table."],
@@ -325,7 +325,7 @@ def tank_item(rng, kind):
             V = rng.randint(6, 40)
             h = Fr(V * 1000, A) / Fr(*q)
             if h.denominator == 1 and 10 <= h <= 80: break
-        return dict(t=f"A tank with a base area of {A} cm² is {fh(*q)} full when it holds {V} {LITRE} of water. How high is the tank, in cm?", ans=int(h))
+        return dict(t=f"A tank has a base area of {A} cm². It is {fh(*q)} full with {V} {LITRE} of water. How high is the tank in cm?", ans=int(h))
     e = rng.choice([20, 30, 40, 50])
     return dict(t=f"A cube-shaped tank has an edge of {e} cm. How many {LITRE} of water does it hold when it is full?", ans=e ** 3 // 1000)
 
@@ -342,7 +342,7 @@ def tank_solve(t):
         l, b, d = map(int, re.search(r"base (\d+) cm by (\d+) cm. The water in it is (\d+) cm", t).groups()); return l * b * d // 1000
     if "poured" in t:
         V, l, b = map(int, re.search(r"(\d+) ℓ? ?of water is poured into an empty tank with a base (\d+) cm by (\d+) cm", t.replace("ℓ", "ℓ")).groups()); return V * 1000 // (l * b)
-    m = re.search(rf"base area of (\d+) cm² is (\d+){FSL}(\d+) full when it holds (\d+) ", t)
+    m = re.search(rf"base area of (\d+) cm². It is (\d+){FSL}(\d+) full with (\d+) ", t)
     A, p, q, V = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
     return int(Fr(V * 1000, A) / Fr(p, q))
 

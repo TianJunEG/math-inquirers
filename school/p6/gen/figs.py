@@ -11,7 +11,7 @@ def _svg(w, h, inner, cls="fig-svg", defs=""):
 
 def _t(x, y, s, anchor="middle", size=3.9, cls="lab", bold=True):
     return (f'<text class="{cls}" x="{x:.2f}" y="{y:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Nunito Sans" '
-            f'font-weight="{800 if bold else 400}" font-size="{size}" fill="#000">{s}</text>')
+            f'font-weight="{800 if bold else 400}" font-size="{size}" fill="#000" stroke="#fff" stroke-width="1.0" paint-order="stroke" stroke-linejoin="round">{s}</text>')
 
 def _hatch_id(tag):
     return f"h{tag}"
@@ -103,16 +103,21 @@ def cuboid_fig(l, b, h, unit="cm", box=(40, 31)):
              + _t(x0 + fw + dx / 2, y0 - fh_ + dy - 2.6, s(b), anchor="middle", cls="lab b"))
     return _svg(bw, bh, inner, "fig-svg fig-cuboid")
 
-def rect_tri_fig(L, W, h, unit="cm", box=(44, 34)):
-    """a rectangle L by W with a triangle of height h on top of its side L"""
-    bw, bh = box; k = min((bw - 16) / L, (bh - 9) / (W + h)); l, w, t = L * k, W * k, h * k
-    x0 = 12; y1 = bh - 4.5; y0 = y1 - w
-    d = f"M{x0},{y1} L{x0+l},{y1} L{x0+l},{y0} L{x0+l/2},{y0-t} L{x0},{y0} Z"
+def rect_tri_fig(L, W, h, unit="cm", box=(50, 38)):
+    """a rectangle L by W with a triangle of height h on top of its side L; L is labelled under the figure, W on the left, and the height h on a
+    dimension line to the right (so no label touches a drawn line)"""
+    bw, bh = box; k = min((bw - 28) / L, (bh - 10) / (W + h)); l, w, t = L * k, W * k, h * k
+    x0 = 13; y1 = bh - 5.5; y0 = y1 - w; ya = y0 - t; xd = x0 + l + 4
+    d = f"M{x0},{y1} L{x0+l},{y1} L{x0+l},{y0} L{x0+l/2},{ya} L{x0},{y0} Z"
     inner = (f'<path class="rtri" d="{d}" fill="#fff" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>'
              f'<line x1="{x0}" y1="{y0}" x2="{x0+l}" y2="{y0}" stroke="#000" stroke-width="0.35" stroke-dasharray="1.2 1"/>'
-             f'<line x1="{x0+l/2}" y1="{y0}" x2="{x0+l/2}" y2="{y0-t}" stroke="#000" stroke-width="0.35" stroke-dasharray="1.2 1"/>'
-             + _t(x0 + l / 2, y1 - 3.0, f"{L} {unit}", cls="lab top") + _t(x0 - 1.2, y0 + w / 2, f"{W} {unit}", anchor="end", cls="lab left")
-             + _t(x0 + l / 2 + 1.0, y0 - t / 2, f"{h} {unit}", anchor="start", cls="lab hgt", size=3.5))
+             f'<line x1="{x0+l/2}" y1="{ya}" x2="{xd+1.2}" y2="{ya}" stroke="#000" stroke-width="0.3"/>'
+             f'<line x1="{x0+l}" y1="{y0}" x2="{xd+1.2}" y2="{y0}" stroke="#000" stroke-width="0.3"/>'
+             f'<line x1="{xd}" y1="{ya}" x2="{xd}" y2="{y0}" stroke="#000" stroke-width="0.4"/>'
+             f'<polyline points="{xd-0.9},{ya+1.8} {xd},{ya} {xd+0.9},{ya+1.8}" fill="none" stroke="#000" stroke-width="0.4"/>'
+             f'<polyline points="{xd-0.9},{y0-1.8} {xd},{y0} {xd+0.9},{y0-1.8}" fill="none" stroke="#000" stroke-width="0.4"/>'
+             + _t(x0 + l / 2, y1 + 3.3, f"{L} {unit}", cls="lab top") + _t(x0 - 1.2, y0 + w / 2, f"{W} {unit}", anchor="end", cls="lab left")
+             + _t(xd + 1.8, (ya + y0) / 2, f"{h} {unit}", anchor="start", cls="lab hgt", size=3.6))
     return _svg(bw, bh, inner, "fig-svg fig-rtri")
 
 def sq_minus_semi_fig(s, tag, unit="cm", box=(36, 36)):
@@ -125,10 +130,10 @@ def sq_minus_semi_fig(s, tag, unit="cm", box=(36, 36)):
     return _svg(bw, bh + 2, inner, "fig-svg fig-sqs", defs=hatch_def(tag))
 
 # ------------------------------------------------------------------ pie chart
-def pie_fig(sectors, tag="p", W=112.0, H=66.0):
+def pie_fig(sectors, tag="p", W=100.0, H=52.0, R=17.0):
     """sectors: list of (name, pct, hidden); drawn clockwise from the top. A hidden sector prints ? instead of its percentage.
     Each sector is a path whose end points give its angle; the name and percentage are text labels outside the pie."""
-    cx, cy, R = W / 2, H / 2 + 0.5, 22.0
+    cx, cy = W / 2, H / 2 + 2.0
     out = []; a = -math.pi / 2
     for name, pct, hidden in sectors:
         span = 2 * math.pi * pct / 100; a0, a1 = a, a + span
@@ -159,7 +164,7 @@ def read_pie(s):
     return {k: (round(v[0], 2), v[1]) for k, v in res.items()}
 
 # ------------------------------------------------------------------ nets
-def net_fig(cells, size=6.6):
+def net_fig(cells, size=8.4):
     rs = [r for r, c in cells]; cs = [c for r, c in cells]
     r0, c0 = min(rs), min(cs); h = (max(rs) - r0 + 1) * size; w = (max(cs) - c0 + 1) * size
     pad = 1.0

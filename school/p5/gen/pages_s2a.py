@@ -11,6 +11,11 @@ from .art5 import *
 PEOPLE = [("Ali", "He"), ("Mei", "She"), ("Siti", "She"), ("Ben", "He"), ("Kumar", "He"), ("Hana", "She"), ("Wei", "He"), ("Ravi", "He"), ("Lily", "She"), ("Aisha", "She")]
 
 def pct(n): return f"{n}%"
+def terminating(v):
+    d = Fr(v).denominator
+    while d % 2 == 0: d //= 2
+    while d % 5 == 0: d //= 5
+    return d == 1
 def money_val(t):
     return Fr(Decimal(t.replace("$", "").replace(NB, "").replace(",", "")))
 
@@ -33,9 +38,10 @@ def page21():
           "A box has {n} pens. {k} of them are blue. What percentage of the pens are blue?"]
     for _ in range(8000):
         items = []
+        bar_ns = [10, 20, 25, rng.choice([10, 20, 25])]; rng.shuffle(bar_ns)
         for kd in ["bar", "bar", "bar", "bar", "txt", "txt"]:
             if kd == "bar":
-                n = rng.choice([10, 20, 25]); k = rng.randint(1, n - 1)
+                n = bar_ns.pop(); k = rng.randint(1, n - 1)
             else:
                 n = rng.choice([20, 25, 40, 50, 200 // 4]); k = rng.randint(2, n - 1)
                 if (k * 100) % n: continue
@@ -43,7 +49,7 @@ def page21():
         if len(items) < 6 or any(it[3] is None for it in items): continue
         ans = [Fr(it[3]) for it in items]
         if not distinct(ans): continue
-        if sum(1 for it in items if it[1] == 25) > 2: continue
+        if sum(1 for it in items if it[1] == 25) > 2 or len({it[1] for it in items if it[0] == 'bar'}) < 3: continue
         pool = []
         for kd, n, k, a in items: pool += [Fr(k), Fr(100 - a), Fr(n - k), Fr(a + 10), Fr(a - 10) if a > 10 else Fr(a + 5), Fr(a * 2)]
         pool = [p for p in dict.fromkeys(pool) if p not in ans and 0 < p <= 100]
@@ -66,7 +72,7 @@ def page21():
         "expressing a part of a whole as a percentage; the sign %", ["PC.PART"], "Code-breaker (percentages)",
         ["Find the percentage in each question.", "Write it in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: pct(int(k)), "; ".join(f"{i+1}) {int(a)}%" for i, a in enumerate(ans)),
-        "Six questions: four bars divided into 10, 20 or 25 equal parts with some parts shaded, and two stories with a part and a whole. The pupil writes the part of the whole as a percentage. The decoy letters stand for the usual slips: giving the number of shaded parts, giving the percentage not shaded, or giving the number of parts left over. A box left blank gives no letter and the check cannot see it.",
+        "Six questions: four bars divided into equal parts with some parts shaded, and two stories with a part and a whole. The pupil writes the part of the whole as a percentage. The decoy letters stand for the usual slips: giving the number of shaded parts, giving the percentage not shaded, or giving the number of parts left over. A box left blank gives no letter and the check cannot see it.",
         solved, cols=3, layout="c2", checks=[("V7 every answer is a whole percentage from 1 to 99", all(a.denominator == 1 and 1 <= a <= 99 for a in ans), "")])
     return P
 
@@ -114,7 +120,7 @@ def page24():
         "finding GST and the price with GST", ["PC1.4", "PC.OF"], "Matching (lettered cards)",
         ["GST is 9% of the price before GST.", "Work out the price with GST for each card.", "Write the card's letter in the box under the matching tile."],
         rng, pairs, word, "; ".join(f"{w}: {a} -> {b}" for w, (a, b) in zip(word, pairs)),
-        "Six cards with a price before GST (multiples of $5) and six tiles with the price with 9% GST, in order of size. The pupil finds 9% of the price, adds it, and matches the card with the tile. The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. GST is 9% (the rate in 2024 and 2025); the page states it. A box left blank gives no letter and the check cannot see it.",
+        "Six cards with a price before GST (multiples of $5) and six tiles with the price with 9% GST, in order of size. The pupil finds 9% of the price, adds it, and matches the card with the tile. The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. GST is 9%; the page states the rate. A box left blank gives no letter and the check cannot see it.",
         sl, sr, left_title="Cards")
     return P
 
@@ -165,28 +171,28 @@ def page26():
     rng = random.Random(5126)
     for _ in range(6000):
         word = word_candidates(26, 6)[0]
-        rows = []; keys = []
-        # rate x2
+        rows = []; keys = []; seen = {"rate": 0, "total": 0, "units": 0}
         for kd in ["rate", "total", "units", "rate", "total", "units"]:
+            var = seen[kd]; seen[kd] += 1
             if kd == "rate":
                 b = rng.choice([3, 4, 5, 6, 8]); a = b * rng.randint(3, 12)
-                tmpl = rng.choice([("A tap fills {a} ℓ of water in {b} minutes. How many ℓ does it fill in 1 minute?", "ℓ"), ("A worker packs {a} boxes in {b} hours. How many boxes does the worker pack in 1 hour?", "boxes")])
+                tmpl = [("A tap fills {a} ℓ of water in {b} minutes. How many ℓ does it fill in 1 minute?", "ℓ"), ("A worker packs {a} boxes in {b} hours. How many boxes does the worker pack in 1 hour?", "boxes")][var]
                 q = tmpl[0].format(a=a, b=b); right = Fr(a, b); wrong = [Fr(b, a), Fr(a * b), Fr(a - b)]; u = tmpl[1]; fmt = lambda v: dec(v)
             elif kd == "total":
-                if rng.random() < .5:
+                if var == 0:
                     p = Fr(rng.choice([120, 150, 180, 240, 250, 320, 450]), 100); n = rng.randint(4, 9)
                     q = f"A pen costs ${dec(p, 2)}. How much do {n} pens cost?"; right = p * n; wrong = [p / n, p + n, right + 1]; u = ""; fmt = lambda v: "$" + dec(Fr(v), 2)
                 else:
                     r = rng.randint(4, 9); m = rng.randint(6, 15)
                     q = f"Water flows from a pipe at {r} ℓ a minute. How many ℓ flow in {m} minutes?"; right = Fr(r * m); wrong = [Fr(m, r) if m % r == 0 else Fr(r + m), Fr(r * m + r), Fr(r * m - m)]; u = "ℓ"; fmt = lambda v: dec(v)
             else:
-                if rng.random() < .5:
+                if var == 0:
                     a = rng.choice([6, 8, 9, 12, 15, 20]); n = rng.randint(3, 9)
                     q = f"A machine makes {a} toys in 1 hour. How many hours does it take to make {a * n} toys?"; right = Fr(n); wrong = [Fr(a * a * n), Fr(a * n - a), Fr(n + a)]; u = "hours"; fmt = lambda v: dec(v)
                 else:
                     p = rng.choice([2, 3, 4, 5, 6]); n = rng.randint(3, 9)
                     q = f"Rice costs ${p} for 1 kg. Mei has ${p * n}. How many kg can she buy?"; right = Fr(n); wrong = [Fr(p * p * n), Fr(p * n - p), Fr(n + p)]; u = "kg"; fmt = lambda v: dec(v)
-            wrong = [w for w in dict.fromkeys(wrong) if w != right and w > 0]
+            wrong = [w for w in dict.fromkeys(wrong) if w != right and w > 0 and terminating(w)]
             if len(wrong) < 2: break
             wrong = rng.sample(wrong, 2)
             rows.append(dict(q=q, opts=[fmt(right) + (" " + u if u else ""), fmt(wrong[0]) + (" " + u if u else ""), fmt(wrong[1]) + (" " + u if u else "")], wide=True)); keys.append(fmt(right) + (" " + u if u else ""))

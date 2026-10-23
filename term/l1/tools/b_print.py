@@ -30,8 +30,8 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
 .p1 .qbox:has(svg.h100)>.vis{width:296px!important}
 .tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
-.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
-.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
+.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight7.p5 .qt{font-size:15.5px}
+.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .lbk .r{font-size:13px!important}.tight4 .qbox{margin:6px 4px 1px 4px!important;padding:13px 10px 1px!important}.tight4 .ln{height:18px!important;margin-top:1px!important}.tight4 .lastln{display:none!important}.tight4 .draw{height:54px!important}.tight4 .q,.tight4 .sub{line-height:1.22}.tight4 .banner{margin:3px 0 2px!important}.tight3 .tf td{padding:4px 10px!important}.tight4 .tf td{padding:2px 10px!important}.tight3 .tf{margin:3px 4px}.tight4 .namer{padding:3px 10px!important;margin-bottom:4px!important}.tight4 .lh{margin-bottom:2px!important}.tight4>p[style*=italic]{font-size:15.5px!important;margin:0 0 1px!important;line-height:1.2}.tight4>p[style*=italic]+.qbox,.tight4>.choice+p+.qbox{margin-top:14px!important}.tight4>.choice{margin:0 0 3px!important;padding:2px 10px!important}.tight4 .sub{margin-top:2px}.tight5 .vis,.tight5 .hvis{zoom:.9}.tight6 .vis{zoom:.8}.tight7 .qt,.tight7 .sub{font-size:15px!important}.tight7 .banner{font-size:15px!important}
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}
@@ -85,7 +85,11 @@ def _vis_html(v):
     nar = v.get('type') in ('round_table', 'domino')
     sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
     md = v.get('type') in ('cube_stack', 'grid', 'calendar')
-    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" gw" if gw else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+    if v.get('mm') and not v.get('px'):      # base unit in millimetres on the printed page: a grid cell, a cube edge, a tile cell
+        v = dict(v); t = v.get('type'); unit = {'grid': v.get('cell', 64), 'panel': v.get('cell', 130), 'cube_stack': 40 if v.get('mode') == 'top' else 46}.get(t)
+        m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg.render_visual({k: x for k, x in v.items() if k not in ('size', 'mm', 'px')}))
+        if unit and m: v['px'] = int(round(float(m.group(1)) / unit * v['mm'] * 3.78)); v.pop('size', None)
+    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" gw" if gw else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}"{(" style=" + chr(34) + "width:%dpx!important;max-width:%dpx!important" % (v["px"], v["px"]) + chr(34)) if v.get("px") else ""}>{svg.render_visual(v)}</div>'
 
 
 def inv_draw(inv):
@@ -108,7 +112,12 @@ def qbox(q, label=None, draw=False):
     vis = _vis_html(q['visual']) if q.get('visual') else ''
     if q.get('visuals'):      # two or more pictures in one question, side by side
         k = len(q['visuals'])
-        if q.get('stack'): vis += ''.join(_vis_html(v) for v in q['visuals'])      # one figure under another, each full width
+        if q.get('vlayout'):      # rows of figures, e.g. [1, 3]: one figure, then three side by side
+            it = iter(q['visuals'])
+            for nrow in q['vlayout']:
+                row = [next(it) for _ in range(nrow)]
+                vis += f'<div class="visrow" style="--n:{len(row)}">' + ''.join(_vis_html(v) for v in row) + '</div>'
+        elif q.get('stack'): vis += ''.join(_vis_html(v) for v in q['visuals'])      # one figure under another, each full width
         else: vis += f'<div class="visrow" style="--n:{k}">' + ''.join(_vis_html(v) for v in q['visuals']) + '</div>'
     parts = ''
     if q.get('parts'):
@@ -124,7 +133,8 @@ def qbox(q, label=None, draw=False):
     if q.get('mcq'):          # options (1) to (4) with a bracket at the right margin
         opts = ''.join(f'<div class="mo"><span class="mn">({i})</span><span>{blanks(str(o))}</span></div>' for i, o in enumerate(q['mcq']['options'], 1))
         parts += f'<div class="mcq"><div>{opts}</div>' + ('<span class="mbr">(&nbsp;&nbsp;&nbsp;&nbsp;)</span>' if q['mcq'].get('bracket', True) else '') + '</div>'
-    ln = ''.join('<div class="ln"></div>' for _ in range(q.get('lines', 0)))
+    nl = q.get('lines', 0)
+    ln = ''.join('<div class="ln%s"></div>' % (' lastln' if (k == nl - 1 and nl >= 2) else '') for k in range(nl))
     if q.get('steps'):        # labelled step lines
         ln += ''.join(f'<div class="stp"><b>{E(s)}</b><span class="ln" style="flex:1"></span></div>' for s in q['steps'])
     cq = choice_words(q['text'], q.get('choices'))
@@ -187,9 +197,9 @@ def workbook_html(d, key=False):
                  f'<div class="banner" style="margin-top:6px">Exit ticket</div><p style="font-style:italic;margin:2px 0">On your own, at the end of the lesson. No looking back.</p>{ex}{look}</div>')
     P += kit_pages(d)
     body = ''.join(P)
-    for i in sorted(set(d.get('_tight', ())) | set(d.get('_tight2', ())) | set(d.get('_tight3', ())), reverse=True):    # pages measured over full get tighter spacing
+    for i in sorted(set(d.get('_tight', ())) | set(d.get('_tight2', ())) | set(d.get('_tight3', ())) | set(d.get('_tight4', ())) | set(d.get('_tight5', ())) | set(d.get('_tight6', ())) | set(d.get('_tight7', ())), reverse=True):    # pages measured over full get tighter spacing
         parts = body.split('<div class="page')
-        if i + 1 < len(parts): parts[i + 1] = (' tight tight2 tight3' if i in d.get('_tight3', ()) else (' tight tight2' if i in d.get('_tight2', ()) else ' tight')) + parts[i + 1]
+        if i + 1 < len(parts): parts[i + 1] = (' tight tight2 tight3 tight4 tight5 tight6 tight7' if i in d.get('_tight7', ()) else ' tight tight2 tight3 tight4 tight5 tight6' if i in d.get('_tight6', ()) else ' tight tight2 tight3 tight4 tight5' if i in d.get('_tight5', ()) else ' tight tight2 tight3 tight4' if i in d.get('_tight4', ()) else ' tight tight2 tight3' if i in d.get('_tight3', ()) else (' tight tight2' if i in d.get('_tight2', ()) else ' tight')) + parts[i + 1]
         body = '<div class="page'.join(parts)
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}{SPT.CSS}</style></head><body>{body}</body></html>'
 
@@ -271,21 +281,20 @@ def build_print(d, pw):
     f = f'Math Inquirers Term {d["term"]} \u2022 Notice it. Test it. Explain why.'
     # workbook: re-render with tighter spacing on the overflowing page until the real PDF has exactly the designed pages
     want = workbook_html(d).count('<div class="page')
-    d.setdefault('_tight', set()); d.setdefault('_tight2', set()); d.setdefault('_tight3', set())
-    for attempt in range(8):
+    d.setdefault('_tight', set()); d.setdefault('_tight2', set()); d.setdefault('_tight3', set()); d.setdefault('_tight4', set()); d.setdefault('_tight5', set()); d.setdefault('_tight6', set()); d.setdefault('_tight7', set())
+    esc = lambda bad: (d['_tight7'].add(bad) if bad in d['_tight6'] else d['_tight6'].add(bad) if bad in d['_tight5'] else d['_tight5'].add(bad) if bad in d['_tight4'] else d['_tight4'].add(bad) if bad in d['_tight3'] else d['_tight3'].add(bad) if bad in d['_tight2'] else d['_tight2'].add(bad) if bad in d['_tight'] else d['_tight'].add(bad))
+    for attempt in range(18):
         path = render('workbook', workbook_html(d), f + f' \u2022 Lesson {d["lesson_in_term"]}', f'L{n}_Workbook.pdf')
         got = pdfcheck.pdf_pages(path)
+        if os.environ.get('TIGHT_DEBUG'): print('FIT', attempt, got, want, sorted(d['_tight']), sorted(d['_tight2']), sorted(d['_tight3']), sorted(d['_tight4']), sorted(d['_tight5']), sorted(d['_tight6']), sorted(d['_tight7']), [round(x, 3) for x in _measure(pw, d)], [round(x, 2) for x in pdfcheck.pdf_fill(path)])
         if got == want: break
         try:
             mf = _measure(pw, d)           # measured designed-page heights: a page that is over full gets tighter spacing (works when the page before an orphan is not full)
-            over = [i for i, f in enumerate(mf) if f > 0.965]
+            over = [i for i, f in enumerate(mf) if f > 0.995]   # only a page that is really over full gets tighter (text shrinks only at the last level, tight4)
         except Exception:
             over = []
         if over:
-            for bad in over:
-                if bad in d['_tight2']: d['_tight3'].add(bad)
-                if bad in d['_tight']: d['_tight2'].add(bad)
-                d['_tight'].add(bad)
+            for bad in over: esc(bad)
             continue
         fills = pdfcheck.pdf_fill(path)
         bads = []; hi = -1                       # map PDF pages to designed pages: an orphan page belongs to the designed page before it
@@ -293,10 +302,7 @@ def build_print(d, pw):
             if x < 0.40 and i > 0 and fills[i - 1] >= 0.88: bads.append(hi)
             else: hi += 1
         bads = bads or [max(range(len(fills)), key=lambda i: fills[i])]
-        for bad in bads:
-            if bad in d['_tight2']: d['_tight3'].add(bad)
-            if bad in d['_tight']: d['_tight2'].add(bad)
-            d['_tight'].add(bad)
+        for bad in bads: esc(bad)
     if kits(d):          # a one-sided kit-only PDF, so the kit page is never the back of the exit-ticket page
         kp = workbook_html(d)
         head = kp[:kp.index('<body>') + 6]
