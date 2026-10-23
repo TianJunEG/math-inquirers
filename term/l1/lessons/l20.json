@@ -1493,7 +1493,7 @@
      {
       "k": "WORK",
       "text": "Children point to a tool card on their own table for each card.",
-      "s": 40
+      "s": 30
      },
      {
       "k": "ASK",
@@ -1516,7 +1516,7 @@
      {
       "k": "WORK",
       "text": "Children point to a tool card for each card.",
-      "s": 40
+      "s": 30
      },
      {
       "k": "ASK",
@@ -1631,7 +1631,7 @@
      {
       "k": "WORK",
       "text": "Children try work backwards on their own paper.",
-      "s": 60
+      "s": 45
      },
      {
       "k": "ASK",
@@ -1649,7 +1649,7 @@
      {
       "k": "WORK",
       "text": "Children work on their own paper. Wait 10 seconds before helping.",
-      "s": 100
+      "s": 75
      },
      {
       "k": "SLIDE",
@@ -1726,7 +1726,7 @@
      {
       "k": "WORK",
       "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
-      "s": 150
+      "s": 130
      },
      {
       "k": "SAY",
@@ -1739,7 +1739,7 @@
      {
       "k": "WORK",
       "text": "Children work quietly on page 2 (gates 3 and 4).",
-      "s": 160
+      "s": 135
      },
      {
       "k": "SAY",
@@ -1761,7 +1761,7 @@
      {
       "k": "WORK",
       "text": "Children work quietly on page 3 (gates 5 and 6).",
-      "s": 160
+      "s": 135
      },
      {
       "k": "SAY",
@@ -1774,7 +1774,7 @@
      {
       "k": "WORK",
       "text": "Children work quietly on page 4: gates 7 and 8, then the optional secret cave item if they wish.",
-      "s": 230
+      "s": 205
      },
      {
       "k": "SLIDE",
@@ -1964,7 +1964,11 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers, for the whole term. Next term starts with What Time Is It?, the first lesson of Term 3. You need your Term 3 book. A grown-up tears out the clock page and cuts out the 6 clock hands; the 2 clock faces can stay on the page. Keep your dollar tokens from Term 2 Lesson 9, because we need them again in Lesson 24. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers, for the whole term. Next term starts with What Time Is It?, the first lesson of Term 3. You need your Term 3 book. A grown-up tears out the clock page and cuts out the 6 clock hands; the 2 clock faces can stay on the page."
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your dollar tokens from Term 2 Lesson 9, because we need them again in Lesson 24. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
