@@ -140,3 +140,11 @@ Re-check: `validate.py` once at the end, 735 checks, 0 failed. Every changed pag
 - Colour boxes widened to 15.8 mm by 11 mm ("20 000" no longer tight).
 - Code words are not changed across levels; they remain distinct within P4.
 - Re-check: `validate.py` once, 735 checks, 0 failed. P4-05 and P4-11 changed content when rebuilt (the picture layout picks questions) and were solved again by hand from the render (counts and marks match the key); P4-40, P4-04 and P4-30 were re-read and agree. P4-05 was viewed as a 1-bit copy; P4-10 and P4-12 in colour.
+
+## After the round-3 audit
+
+- R3-3: the P4-11 teacher note now describes the page (3- or 4-digit numbers times 1- or 2-digit numbers, a missing factor, a division by a 1-digit number, trays of eggs).
+- R3-2: "A number half way rounds up." is printed only on P4-04 and P4-05.
+- R3-1: the "Working" caption is gone; P4-10 has a blank working area of 12 mm under each product line and P4-12 a rule and 8 mm of space in each card.
+- Colour pages, key against pupil page: for P4-05, P4-11 and P4-40 I compared the pupil page and the key page of the final build by text (pdftotext) and by rendering both side by side. They show exactly the same questions, the same numbers and the same picture (the key adds the answer and colour to each part). The few tokens that differ are headers and number formatting.
+- `validate.py` once at the end: 735 checks, 0 failed. P4-11 and P4-40 pupil content is unchanged from the last hand-solve; only an instruction line was removed.

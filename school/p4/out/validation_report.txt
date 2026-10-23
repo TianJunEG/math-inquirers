@@ -567,13 +567,13 @@ PASS  S1 pupil page 09 layout (no overflow/clipping/margin breach)
 PASS  S1 pupil page 09 page-fill: puzzle content 170 of 183 mm  0.93
 PASS  S1 pupil page 09 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 10 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 10 page-fill: puzzle content 170 of 183 mm  0.93
+PASS  S1 pupil page 10 page-fill: puzzle content 176 of 183 mm  0.96
 PASS  S1 pupil page 10 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 11 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 11 page-fill: puzzle content 192 of 193 mm  0.99
+PASS  S1 pupil page 11 page-fill: puzzle content 198 of 200 mm  0.99
 PASS  S1 pupil page 11 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 12 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 12 page-fill: puzzle content 173 of 183 mm  0.95
+PASS  S1 pupil page 12 page-fill: puzzle content 175 of 183 mm  0.96
 PASS  S1 pupil page 12 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 13 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 13 page-fill: puzzle content 135 of 183 mm  0.74
@@ -687,7 +687,7 @@ PASS  S2 pupil page 19 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 19 page-fill: puzzle content 148 of 183 mm  0.81
 PASS  S2 pupil page 19 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 20 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 20 page-fill: puzzle content 192 of 193 mm  0.99
+PASS  S2 pupil page 20 page-fill: puzzle content 198 of 200 mm  0.99
 PASS  S2 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 01 min text size >= 8 pt  9.0 pt
@@ -722,13 +722,13 @@ PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(20, 0, 12)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 12)]
 PASS  P4_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.82% vs greyscale)  20 pages
-PASS  P4_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 194, budget 40 on average per page)  
+PASS  P4_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 182, budget 40 on average per page)  
 PASS  P4_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.04% vs greyscale)  5 pages
 PASS  P4_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 132, budget 40 on average per page)  
 PASS  P4_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.11% vs greyscale)  10 pages
-PASS  P4_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 827, budget 130 on average per page)  
+PASS  P4_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 835, budget 130 on average per page)  
 PASS  P4_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.24% vs greyscale)  20 pages
-PASS  P4_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 180, budget 40 on average per page)  
+PASS  P4_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 174, budget 40 on average per page)  
 PASS  P4_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.04% vs greyscale)  5 pages
 PASS  P4_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 150, budget 40 on average per page)  
 PASS  P4_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 35.12% vs greyscale)  9 pages

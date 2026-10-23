@@ -147,14 +147,14 @@ def page05():
 
 def page11():
     return cbc_page(11, dict(id="CBC-P4-02", picture="lorry", bank="mult4", tier=2, seed=402, level=4), "Colour the Lorry",
-        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O.", "A number half way rounds up."],
+        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O."],
         "Number and Algebra - Whole Numbers", "3.1, 3.2 (multiplication algorithm up to 4 digits by 1 digit and 3 digits by 2 digits; division algorithm up to 4 digits by 1 digit)",
-        "Every part asks a multiplication or division with larger numbers: 4 digits by 1 digit, 3 digits by 2 digits, a missing factor, a division of a 4-digit number by a 1-digit number, a short story or a multiplication followed by a subtraction.",
+        "Every part asks a multiplication or division with larger numbers: a 3-digit or 4-digit number times a 1-digit or 2-digit number, a missing factor, a division by a 1-digit number or a short story about trays of eggs. Answers are built so that no two different parts of the same colour are needed to tell them apart: each answer is one of the five key numbers.",
         oc=["FO3.1", "FO3.2"])
 
 def page40():
     return cbc_page(40, dict(id="CBC-P4-03", picture="ferry", bank="dec4", tier=2, seed=403, level=4), "Colour the Ferry",
-        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O.", "A number half way rounds up."],
+        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O."],
         "Number and Algebra - Decimals", "1.2, 1.4, 1.5, 2.1, 3.1, 3.2 (comparing decimals, fractions as decimals, rounding, adding and subtracting, multiplying and dividing decimals)",
         "Every part works with decimals up to 2 decimal places: adding or subtracting, multiplying or dividing by a 1-digit number, a whole number divided by a whole number, rounding to a whole number, 1 or 2 decimal places, a fraction written as a decimal, the greatest of three decimals or 0.1 or 0.01 more or less.",
         oc=["DP1.2", "DP1.4", "DP1.5", "DA2.1", "DM3.1", "DM3.2"])
