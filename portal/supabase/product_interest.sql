@@ -74,10 +74,11 @@ begin
     raise exception 'invalid_input' using errcode = '22023';
   end if;
   for e in select * from jsonb_array_elements(p_items) loop
-    if jsonb_typeof(e) <> 'object'
+    if (jsonb_typeof(e) <> 'object'
        or jsonb_typeof(e->'product') is distinct from 'string' or (e->>'product') !~ '^[a-z0-9-]{1,24}$'
        or jsonb_typeof(e->'format')  is distinct from 'string' or (e->>'format') not in ('soft','physical')
-       or jsonb_typeof(e->'qty')     is distinct from 'number' or (e->>'qty') !~ '^[0-9]{1,2}$' or (e->>'qty')::int not between 1 and 10 then
+       or jsonb_typeof(e->'qty')     is distinct from 'number'
+       or (case when (e->>'qty') ~ '^[0-9]{1,2}$' then (e->>'qty')::int not between 1 and 10 else true end)) then
       raise exception 'invalid_input' using errcode = '22023';
     end if;
   end loop;

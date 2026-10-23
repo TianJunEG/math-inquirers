@@ -179,3 +179,6 @@ Owner: "Agree for 9-13 yrs." Decision: timed practice is allowed as an OPTIONAL 
 - Page N20 (copy on the grid) is REPLACED by "complete the half figure" with a printed match to check against.
 - Footer page codes print BOTH, e.g. "S1-07 (P1-08)".
 - Still defaulting to the plan's recommendations for the other items in its section 7 (colour-by-code pages kept at 3, paper-driven extras kept and tagged problem solving, syllabus tag list extended to the PDF's own wording, original coin art, names/prices/licence wording stay DRAFT).
+
+## 23 Oct 2026 (evening): shop "Tell me when it's ready" SQL applied live
+Owner-side session applied portal/supabase/product_interest.sql to the math-inquirers Supabase project (table empty; 6 functions incl. delete-on-request and 12-month cleanup, run in the SQL editor because the MCP connector hangs on SQL containing delete). Quantity check hardened (bracketed case expression); local file updated to match. Tests: qty 1.5 rejected with invalid_input, honeypot reports success and saves nothing. Open: Supabase dashboard showed a technical-issue banner at the time.
