@@ -1928,5 +1928,12 @@
  ],
  "problems": [],
  "soft_pages": 96,
- "print_pages": 96
+ "print_pages": 96,
+ "bw_pipeline": {
+  "pages": 96,
+  "dpi": 600,
+  "mb": 11.97,
+  "check_bw_failures": 0,
+  "pale_tint_dropped_max": 0.0036
+ }
 }

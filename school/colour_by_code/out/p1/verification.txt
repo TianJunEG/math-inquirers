@@ -248,9 +248,9 @@ PASS  CBC-08: every question has exactly one answer and it is one of the five ke
 PASS  CBC-08: independent evaluator re-solves all 14 printed questions from their text and picture; each equals the answer coloured and that answer is a key value  []
 PASS  CBC-08: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)  0 repeated
 PASS  CBC-08: no clock face is drawn twice and no digital time is printed twice  
-PASS  CBC-08: all five key values and colours are used (counts [2, 4, 2, 4, 2], each at least 2)  
-PASS  CBC-08: tally printed on the pupil page equals the tally of the answers  printed [2, 4, 2, 4, 2]
-PASS  CBC-08: tally printed on the teacher page equals the tally of the answers  printed [2, 4, 2, 4, 2]
+PASS  CBC-08: all five key values and colours are used (counts [4, 4, 2, 2, 2], each at least 2)  
+PASS  CBC-08: tally printed on the pupil page equals the tally of the answers  printed [4, 4, 2, 2, 2]
+PASS  CBC-08: tally printed on the teacher page equals the tally of the answers  printed [4, 4, 2, 2, 2]
 PASS  CBC-08: mirror pairs share one colour (7 pairs)  
 PASS  CBC-08: twin-mark sets share one colour (0 sets)  
 PASS  CBC-08: single-slip detection 322/322 = 100.0% (every wrong value of every region; needs >= 95%)  
@@ -258,7 +258,7 @@ PASS  CBC-08: single-slip detection for wrong values that do have a crayon colou
 PASS  CBC-08: double-slip detection by enumeration 1456/1456 = 100.0% (every pair of regions, every pair of wrong colours; needs >= 95%)  
 PASS  CBC-08: swap detection 76/76 = 100.0% (two regions exchange their colours, tally unchanged; needs >= 95%)  
 PASS  CBC-08: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
-PASS  CBC-08: smallest pupil text 4.2 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-08: smallest pupil text 4.7 mm (>= 4.2 mm, about 12 pt)  
 PASS  CBC-08: every region is at least 28 mm wide where its label sits (narrowest (34.6, 'up_in_r'))  
 PASS  CBC-09: pupil and teacher PDFs exist  
 PASS  CBC-09: every question has exactly one answer and it is one of the five key values  []
@@ -565,10 +565,10 @@ PASS  CBC-08 pupil: footer has a school-name field and the worksheet code
 PASS  CBC-08 pupil: time uses only o'clock and half past  
 PASS  CBC-08 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-08 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
-PASS  CBC-08 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.6%, needs <= 25%)  
+PASS  CBC-08 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.7%, needs <= 25%)  
 PASS  CBC-08 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
-PASS  CBC-08 pupil: all 14 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
-PASS  CBC-08 pupil: every label keeps its ink in the 1-bit render (worst 20% lost, up_in_l; needs <= 40%)  
+PASS  CBC-08 pupil: all 14 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  
+PASS  CBC-08 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, up_tip_r; needs <= 40%)  
 PASS  CBC-08 teacher: one A4 page  
 PASS  CBC-08 teacher: fonts embedded  3 fonts
 PASS  CBC-08 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
@@ -578,7 +578,7 @@ PASS  CBC-08 teacher: html uses only black and white (#000, #fff)  ['#000', '#ff
 PASS  CBC-08 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
 PASS  CBC-08 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.0%, needs <= 25%)  
 PASS  CBC-08 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
-PASS  CBC-08 teacher: all 14 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
+PASS  CBC-08 teacher: all 14 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  
 PASS  CBC-08 teacher: every label keeps its ink in the 1-bit render (worst 22% lost, lo_3_l; needs <= 40%)  
 PASS  CBC-09 pupil: one A4 page  
 PASS  CBC-09 pupil: fonts embedded  3 fonts

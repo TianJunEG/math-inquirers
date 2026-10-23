@@ -2,7 +2,7 @@
 |---|---|---|---|---|---|---|---|---|---|---|
 | CBC-P2-01 | Rocket | Numbers to 1000: place value, order | 1 | 120, 250, 340, 470, 560 | 15 | tally, mirror pairs | 15000/15000 = 100.0% | 99.9% / 97.7% | 4.4 mm | PASS |
 | CBC-P2-02 | Car | Addition within 1000, with renaming | 2 | 412, 536, 653, 724, 841 | 13 | tally, small marks (parts with the same mark share a colour) | 13000/13000 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |
-| CBC-P2-03 | Elephant | Subtraction within 1000, with renaming | 2 | 158, 247, 364, 475, 586 | 14 | tally, mirror pairs | 14000/14000 = 100.0% | 99.9% / 98.7% | 4.9 mm | FAIL |
+| CBC-P2-03 | Owl | Subtraction within 1000, with renaming | 2 | 158, 247, 364, 475, 586 | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 14000/14000 = 100.0% | 99.9% / 98.7% | 4.9 mm | PASS |
 | CBC-P2-04 | House | Multiplication: tables of 2, 3, 4, 5 and 10 | 1 | 6, 12, 15, 20, 30 | 17 | tally, small marks (parts with the same mark share a colour) | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.8 mm | PASS |
 | CBC-P2-05 | Castle | Division: sharing and grouping | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.8 mm | PASS |
 | CBC-P2-06 | Owl | Fractions: parts, compare, add and subtract like fractions | 1 | ⟨1|2⟩, ⟨1|3⟩, ⟨1|4⟩, ⟨2|3⟩, ⟨3|4⟩ | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 910/910 = 100.0% | 99.9% / 98.7% | 4.6 mm | PASS |

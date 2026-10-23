@@ -45,7 +45,10 @@ def canon(q):
     Two questions of one sheet with the same canon are the same exercise (7 + 3 and 3 + 7, the same clock twice, 17 - 5 - 4 and 17 - 4 - 5)."""
     text = " ".join(q.lines)
     facts = [("clock", int(h) % 12, int(m)) for h, m in re.findall(r"(\d{1,2}):(\d\d)", text)]
-    text = re.sub(r"\d{1,2}:\d\d", " ", text)
+    rest = re.sub(r"\d{1,2}:\d\d", " ", text)
+    if facts and q.art is None and re.fullmatch(r"[\sA-Za-z?:]*", rest) and not re.search(r"later|before|after|minute|hour|past|\bto\b|lasts|starts|film", rest, re.I):
+        return ((), "", tuple(facts))                    # a bare digital time: the same time in another wording is the same exercise
+    text = rest
     nums = tuple(sorted(re.findall(r"\d+(?:\.\d+)?", text)))
     words = "".join(sorted(re.sub(r"[\d\s.,]", "", text)))              # the wording without digits, spacing or line breaks, in any order (7 + 3 and 3 + 7 agree)
     k = q.art.meta if q.art is not None else {}
@@ -162,7 +165,7 @@ svg.pic .ul{{stroke:#000;stroke-width:0.4}}
 svg.pic .fb{{stroke:#000;stroke-width:0.45}}
 .chk{{border:0.8mm solid #000;border-radius:3mm;padding:1.6mm 4mm;margin-top:1mm;font-size:10.5pt;line-height:1.28}}
 .chk b{{font-family:'Fredoka';font-weight:600}}.chk div{{margin-top:0.2mm}}svg.mk{{vertical-align:-0.9mm;margin:0 0.6mm}}
-footer{{margin-top:auto;display:flex;justify-content:space-between;font-size:8pt;padding-top:1mm;gap:6mm}}
+footer{{margin-top:auto;display:flex;justify-content:space-between;font-size:8pt;padding-top:1mm;gap:6mm}}footer span:first-child{{white-space:nowrap}}
 """
 
 def key_html(text):

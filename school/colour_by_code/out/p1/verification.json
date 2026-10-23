@@ -166,9 +166,9 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.2,
-   "min_teacher_font_mm": 3.7,
-   "teacher_short_labels": 1,
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 3.4,
+   "teacher_short_labels": 3,
    "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-09": {
