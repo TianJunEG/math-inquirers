@@ -108,7 +108,7 @@ def _():
     return {'a': ['A' if A > B else 'B'], 'b': s([abs(A - B)])}
 
 
-@check('L1U06-S11')
+@check('L1U06-T03')
 def _():
     w = [(a, b) for a in range(0, 5) for b in range(0, 5) if 20 * a + 10 * b == 40]
     return {'a': [f'{a},{b}' for a, b in w], 'b': s([len(w)])}
@@ -150,7 +150,7 @@ def _():
     return {'a': s([sols[0][0]]), 'b': s([sols[0][1]])}
 
 
-@check('L1U06-T03')
+@check('L1U06-S11')
 def _():
     toys = {'Car': 6, 'Top': 7, 'Ball': 8, 'Kite': 9, 'Drum': 12}
     pairs = [p for p in itertools.combinations(toys, 2) if sum(toys[x] for x in p) == 15]

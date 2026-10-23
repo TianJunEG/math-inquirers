@@ -272,7 +272,7 @@
    "id": "L1U10-S08",
    "tier": "start",
    "page": 2,
-   "text": "Lily is older than Ray. Jamie is younger than Ray. Amelia is older than Lily. Write the names, oldest first.\n{l}",
+   "text": "Lily is older than Ray. Jamie is younger than Ray. Amelia is older than Lily. Write the names, oldest first.\n{ll}",
    "answer": {
     "value": [
      "Amelia",
@@ -440,7 +440,7 @@
    "id": "L1U10-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ray, Lily, Jason and Siti sit on chairs 1 to 4. Ray is on chair 4 and Lily is next to Ray. Jason has a lower chair number than Siti. Write the names from chair 1 to chair 4.\n{l}",
+   "text": "Ray, Lily, Jason and Siti sit on chairs 1 to 4. Ray is on chair 4 and Lily is next to Ray. Jason has a lower chair number than Siti. Write the names from chair 1 to chair 4.\n{ll}",
    "answer": {
     "value": [
      "Jason",
@@ -472,7 +472,7 @@
      "Undo -4:"
     ]
    },
-   "hint": "Start at 11 and undo the steps. Begin with the last step.",
+   "hint": "Start at 11. Undo the last step first.",
    "explanation": "Go backwards. Undo adding 2: 11 - 2 = 9. Undo cutting off 3: 9 + 3 = 12. Undo cutting off 4: 12 + 4 = 16. Check: 16 - 4 = 12, 12 - 3 = 9, 9 + 2 = 11."
   },
   {
@@ -513,7 +513,7 @@
      }
     }
    ],
-   "hint": "Write the parts after each fold. Double the last number each time.",
+   "hint": "Write the number of parts after each fold.",
    "explanation": "Parts after each fold: 2, 4, 8, 16, 32. (a) 3 folds make 8 parts. (b) 5 folds make 32 parts. (c) 16 parts need 4 folds."
   },
   {
@@ -558,7 +558,7 @@
      "Guess:"
     ]
    },
-   "hint": "Guess Aisha's number. Find Ben's and Mei's. Add all 3. Change your guess.",
+   "hint": "Guess Aisha's number. Does the total come to 24?",
    "explanation": "Try 6 for Aisha. Ben has 6 + 4 = 10. Mei has 10 - 2 = 8. Together 6 + 10 + 8 = 24. A smaller guess gives less than 24 and a greater guess gives more than 24."
   },
   {
@@ -598,7 +598,7 @@
      }
     }
    ],
-   "hint": "Count the sides of the triangles first. How many sides are left for squares?",
+   "hint": "Count the sides of the 3 triangles first.",
    "explanation": "A triangle has 3 sides: 3 + 3 + 3 = 9. The squares have 17 - 9 = 8 sides. A square has 4 sides, and 4 + 4 = 8, so there are 2 squares."
   },
   {

@@ -318,7 +318,7 @@
      "Write the numbers:"
     ]
    },
-   "hint": "Each box has 3 more than the one before.",
+   "hint": "Compare box 1 and box 2. How many more stickers?",
    "explanation": "3, 6, 9, 12, 15, 18. The 4th box has 12, the 5th has 15 and the 6th has 18."
   },
   {
@@ -514,7 +514,7 @@
      ""
     ]
    },
-   "hint": "Write the numbers she lands on, one hop at a time. Stop when you pass 40.",
+   "hint": "Hop from 2. Write each number you land on.",
    "explanation": "2, 7, 12, 17, 22, 27, 32, 37, 42. She lands on 37. She jumps from 37 over 40 to 42."
   },
   {
@@ -552,7 +552,7 @@
      "Mei:"
     ]
    },
-   "hint": "Write Ali's numbers on one line and Mei's numbers on the other. Look for matches.",
+   "hint": "Write Ali's numbers and Mei's numbers. Look for matches.",
    "explanation": "Ali says 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48. Mei says 10, 20, 30, 40, 50. They both say 20 and 40, and 40 - 20 = 20."
   },
   {
@@ -592,7 +592,7 @@
      }
     }
    ],
-   "hint": "From 10 to 25 is 15. Share 15 equally between the hops.",
+   "hint": "Draw the hops from the 2nd number to the 5th. How far in all?",
    "explanation": "From the 2nd to the 5th number is 3 hops (2nd to 3rd, 3rd to 4th, 4th to 5th). They make 25 - 10 = 15, so each hop is 15 / 3 = 5. Go back one hop from 10: the 1st number is 5."
   },
   {
@@ -642,7 +642,7 @@
      }
     }
    ],
-   "hint": "How many more dots does each triangle have than the one before? Is it always the same?",
+   "hint": "How many new dots does each triangle add? Is it the same?",
    "explanation": "Each triangle has one more row than the one before, and the new row has one more dot. So the extra dots are 2, 3, 4, 5, 6, 7: 1, 3, 6, 10, 15, 21, 28."
   },
   {
@@ -666,7 +666,7 @@
      "Both:"
     ]
    },
-   "hint": "Write each pattern on its own line. Then look for the same number in both lines.",
+   "hint": "List each pattern up to 40. Which numbers are on both lists?",
    "explanation": "Mei says 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Ali says 2, 7, 12, 17, 22, 27, 32, 37. The same numbers are 7, 22 and 37, and each is 15 more than the one before."
   },
   {
@@ -692,7 +692,7 @@
      ""
     ]
    },
-   "hint": "20 is 18 more than 2. Which equal hops make exactly 18?",
+   "hint": "How far is it from 2 to 20? Try different hops.",
    "explanation": "You need equal hops that make 18 from 2 to 20. Hops of 1 (18 of them), 2 (9), 3 (6), 6 (3), 9 (2) and 18 (1) all work."
   },
   {

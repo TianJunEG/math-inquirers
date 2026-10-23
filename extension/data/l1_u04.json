@@ -518,7 +518,7 @@
      }
     }
    ],
-   "hint": "Count in 3s for the cores. Each core has 2 stars. Write the places of the stars: 2, 3, 5 ...",
+   "hint": "Find the core. How many stars are in one core?",
    "explanation": "(a) The core has 3 shapes and 15 ends a core, so it is a star. (b) 18 shapes make 6 cores with 2 stars each: 12. (c) The stars are in places 2, 3, 5, 6, 8. The 5th star is in place 8."
   },
   {
@@ -568,7 +568,7 @@
      }
     }
    ],
-   "hint": "The 1st triangle uses 3 straws. Each new triangle uses 2 more. Keep counting: 3, 5, 7 ...",
+   "hint": "How many straws for 1 triangle? How many for each new one?",
    "explanation": "The numbers of straws are 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23. 11 triangles use 23 straws. 12 triangles need 25, which is too many. 24 - 23 = 1 straw is left."
   },
   {
@@ -598,7 +598,7 @@
      }
     }
    ],
-   "hint": "Make a table. Write the day and the stickers. Add 3 each time.",
+   "hint": "Make a table. Write the day and the stickers.",
    "explanation": "Add 3 each day: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. Day 6 is 20. 32 is the 10th number, so it is day 10."
   },
   {
@@ -631,7 +631,7 @@
      }
     }
    ],
-   "hint": "Write the jumps: +1, +2, +3 ... What is the next jump?",
+   "hint": "Write the jump between each pair of numbers.",
    "explanation": "The jumps are 1, 2, 3, 4 and then 5, 6, 7. So 11 + 5 = 16 and 16 + 6 = 22. Then 22 + 7 = 29. The numbers are 1, 2, 4, 7, 11, 16, 22, 29. The 8th is 29."
   },
   {
@@ -687,7 +687,7 @@
      }
     }
    ],
-   "hint": "Ravi uses 3 straws for each triangle. Mei starts with 3 and adds 2 for each new triangle.",
+   "hint": "How many straws does Mei add for each new triangle?",
    "explanation": "Ravi: 3, 6, 9, 12, 15, 18, 21. Mei: 3, 5, 7, 9, 11, 13, 15. The gap is 21 - 15 = 6 straws."
   },
   {
@@ -742,7 +742,7 @@
      }
     }
    ],
-   "hint": "Stars are in places 2, 4, 6 ... Cs are in places 3, 6, 9 ... Which place is in both lists?",
+   "hint": "Write the places of the stars. Then the places of the Cs.",
    "explanation": "Stars are in even places. Cs are in places 3, 6, 9, 12, 15, 18, 21, 24. The places in both lists are 6, 12, 18 and 24."
   },
   {

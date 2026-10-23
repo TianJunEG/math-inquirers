@@ -83,7 +83,7 @@ def _():
     return {'a': s([n for n in nums if n % 2 == 1]), 'b': s([n for n in nums if n % 2 == 0])}
 
 
-@check('L1U08-S06')
+@check('L1U08-T03')
 def _():
     nums = range(5, 15)
     both = [n for n in nums if n > 8 and n % 2 == 1]
@@ -150,7 +150,7 @@ def _():
     return {'a': s([len(both)]), 'b': s([len(out)])}
 
 
-@check('L1U08-T03')
+@check('L1U08-S06')
 def _():
     people = ['Mei', 'Aisha', 'Ravi', 'Ben', 'Siti']
     sols = [dict(zip(people, p)) for p in itertools.permutations([5, 6, 7, 8, 9])]

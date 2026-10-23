@@ -384,43 +384,56 @@
    "id": "L1U06-S11",
    "tier": "start",
    "page": 3,
-   "text": "Make 40¢ with only 20¢ and 10¢ coins. Write every way in the table. Each row is one way.",
+   "text": "Mei buys exactly 2 toys for $15. There are 2 ways.",
+   "figure": {
+    "type": "tags",
+    "items": [
+     {
+      "name": "Car",
+      "amount": "$6"
+     },
+     {
+      "name": "Top",
+      "amount": "$7"
+     },
+     {
+      "name": "Ball",
+      "amount": "$8"
+     },
+     {
+      "name": "Kite",
+      "amount": "$9"
+     },
+     {
+      "name": "Drum",
+      "amount": "$12"
+     }
+    ],
+    "width_mm": 170
+   },
    "parts": [
     {
      "label": "a",
-     "text": "Write the ways in the table.",
+     "text": "The Car and the   {circ:Top|Ball|Kite|Drum}",
      "answer": {
       "value": [
-       "2,0",
-       "1,2",
-       "0,4"
+       "Kite"
       ],
-      "text": "2 coins of 20¢ and 0 of 10¢;  1 and 2;  0 and 4",
-      "list": true,
-      "unordered": true
+      "text": "Kite"
      }
     },
     {
      "label": "b",
-     "text": "There are {b} ways.",
+     "text": "The Top and the   {circ:Car|Ball|Kite|Drum}",
      "answer": {
       "value": [
-       "3"
+       "Ball"
       ],
-      "text": "3"
+      "text": "Ball"
      }
     }
    ],
-   "space": {
-    "table": {
-     "cols": [
-      "20¢ coins",
-      "10¢ coins"
-     ],
-     "rows": 3
-    }
-   },
-   "explanation": "Start with the most 20¢ coins. Two 20¢ coins make 40¢. One 20¢ and two 10¢ coins make 40¢. No 20¢ needs four 10¢ coins. That is 3 ways."
+   "explanation": "$6 + $9 = $15 and $7 + $8 = $15. The Drum needs $3 more, and no toy costs $3."
   },
   {
    "id": "L1U06-S12",
@@ -548,7 +561,7 @@
      "Set 2:"
     ]
    },
-   "hint": "Try the 50¢ coin first. What is left to make with 3 coins?",
+   "hint": "Try the 50¢ coin first. What is left to pay?",
    "explanation": "With 50¢, 15¢ is left, made by 5¢ + 5¢ + 5¢. Without 50¢, try 20¢ + 20¢ + 20¢ = 60¢, then 5¢ makes 65¢. A 10¢ coin makes no more sets."
   },
   {
@@ -588,64 +601,51 @@
      "rows": 3
     }
    },
-   "hint": "Guess how many 5¢ coins. The other coins are 10¢. Find the total. Change your guess.",
+   "hint": "Guess how many are 5¢ coins. Does the total match?",
    "explanation": "Try 4 coins of 5¢ and 3 coins of 10¢. 4 x 5¢ = 20¢ and 3 x 10¢ = 30¢. 20¢ + 30¢ = 50¢, and 4 + 3 = 7 coins."
   },
   {
    "id": "L1U06-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei buys exactly 2 toys for $15. There are 2 ways.",
-   "figure": {
-    "type": "tags",
-    "items": [
-     {
-      "name": "Car",
-      "amount": "$6"
-     },
-     {
-      "name": "Top",
-      "amount": "$7"
-     },
-     {
-      "name": "Ball",
-      "amount": "$8"
-     },
-     {
-      "name": "Kite",
-      "amount": "$9"
-     },
-     {
-      "name": "Drum",
-      "amount": "$12"
-     }
-    ],
-    "width_mm": 170
-   },
+   "text": "Make 40¢ with only 20¢ and 10¢ coins. Write every way in the table. Each row is one way.",
    "parts": [
     {
      "label": "a",
-     "text": "The Car and the   {circ:Top|Ball|Kite|Drum}",
+     "text": "Write the ways in the table.",
      "answer": {
       "value": [
-       "Kite"
+       "2,0",
+       "1,2",
+       "0,4"
       ],
-      "text": "Kite"
+      "text": "2 coins of 20¢ and 0 of 10¢;  1 and 2;  0 and 4",
+      "list": true,
+      "unordered": true
      }
     },
     {
      "label": "b",
-     "text": "The Top and the   {circ:Car|Ball|Kite|Drum}",
+     "text": "There are {b} ways.",
      "answer": {
       "value": [
-       "Ball"
+       "3"
       ],
-      "text": "Ball"
+      "text": "3"
      }
     }
    ],
-   "hint": "Pick one toy. How much money is left for the second toy?",
-   "explanation": "$6 + $9 = $15 and $7 + $8 = $15. The Drum needs $3 more, and no toy costs $3."
+   "space": {
+    "table": {
+     "cols": [
+      "20¢ coins",
+      "10¢ coins"
+     ],
+     "rows": 3
+    }
+   },
+   "explanation": "Start with the most 20¢ coins. Two 20¢ coins make 40¢. One 20¢ and two 10¢ coins make 40¢. No 20¢ needs four 10¢ coins. That is 3 ways.",
+   "hint": "Start with the most 20¢ coins you can use."
   },
   {
    "id": "L1U06-G01",
@@ -690,7 +690,7 @@
      "Half of 50¢:"
     ]
    },
-   "hint": "What is half of 50¢? Can 20¢ and 10¢ coins make that amount?",
+   "hint": "What is half of 50¢? Can those coins make it?",
    "explanation": "(a) 40¢ + 40¢ = 80¢. (b) 20¢ four times is 80¢. (c) Each child would get 25¢. Coins of 20¢ and 10¢ only make 10¢, 20¢, 30¢ and so on, never 25¢."
   },
   {
@@ -726,7 +726,7 @@
      "Bag:"
     ]
    },
-   "hint": "Change is the money that is left. How much did Wei really spend?",
+   "hint": "How much money did Wei really spend?",
    "explanation": "He spends $50 - $12 = $38 altogether. The bag costs the rest: $38 - $18 = $20. Check: $20 + $18 = $38 and $50 - $38 = $12."
   },
   {
@@ -747,7 +747,7 @@
     },
     {
      "label": "b",
-     "text": "They are: {l}",
+     "text": "They are: {ll}",
      "answer": {
       "value": [
        "10",
@@ -768,7 +768,7 @@
      "Try:"
     ]
    },
-   "hint": "Use as many $10 notes as you can. Then look at what is left.",
+   "hint": "Start with the largest note that fits. What is left?",
    "explanation": "Three $10 notes make $30. $8 is left: $5 + $2 + $1. That is 3 + 3 = 6 pieces. Four $10 notes are too much, and no 5 pieces make $38."
   },
   {

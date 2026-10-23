@@ -312,7 +312,7 @@
    "parts": [
     {
      "label": "",
-     "text": "Write their numbers: {l}",
+     "text": "Write their numbers: {ll}",
      "answer": {
       "value": [
        "2",
@@ -848,7 +848,7 @@
      }
     }
    ],
-   "hint": "Slide a 2 square rectangle along. Then try 3 long and 4 long.",
+   "hint": "Slide a 2 square rectangle along the strip.",
    "explanation": "1 square long: 4. 2 squares long: 3. 3 squares long: 2. 4 squares long: 1. Altogether 4 + 3 + 2 + 1 = 10."
   },
   {
@@ -1167,7 +1167,7 @@
      }
     }
    ],
-   "hint": "Try rows of 1, then 2, then 3. Does each row fit exactly?",
+   "hint": "Try rows of 1 tile, then 2, then 3. Does it fit exactly?",
    "explanation": "(a) 12 tiles: 12 by 1, 6 by 2 and 4 by 3. That is 3 rectangles. (b) 9 tiles: 9 by 1 and 3 by 3. That is 2 rectangles, and one is a square."
   },
   {

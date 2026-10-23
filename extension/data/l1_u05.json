@@ -466,7 +466,7 @@
      }
     }
    ],
-   "hint": "Go back one step at a time. Start with the last step: giving 4 to Siti.",
+   "hint": "Go back one step at a time. Which step is the last?",
    "explanation": "Undo the last step first: 13 + 4 = 17. Undo getting 8: 17 - 8 = 9. Undo giving 5 to Ali: 9 + 5 = 14. Check: 14 - 5 = 9, 9 + 8 = 17, 17 - 4 = 13."
   },
   {
@@ -506,7 +506,7 @@
      }
     }
    ],
-   "hint": "Try IN 10. Add 9, then take away 4. What do you get? How far is that from 10?",
+   "hint": "Try IN 10. What is OUT? How far is it from 10?",
    "explanation": "Adding 9 and taking away 4 is the same as adding 5. IN 11 gives 11 + 5 = 16. For OUT 30, go backwards: 30 - 5 = 25."
   },
   {
@@ -587,7 +587,7 @@
      }
     }
    ],
-   "hint": "Undo the last step first. Then ask: which number added to itself makes this?",
+   "hint": "Undo the last step first. Then which double is that?",
    "explanation": "(b) Undo add 4: 18 - 4 = 14. 7 + 7 = 14, so her number is 7. (c) Undo take away 5: 11 + 5 = 16. 8 + 8 = 16, so her number is 8."
   },
   {
@@ -637,7 +637,7 @@
      }
     }
    ],
-   "hint": "Do each one a step at a time. In part (d), can you take 9 away from 5?",
+   "hint": "Do each one a step at a time. Check part (d) with care.",
    "explanation": "12 + 6 = 18, 18 - 9 = 9, and 12 - 9 = 3, 3 + 6 = 9. Both give 9. 5 + 6 = 11, 11 - 9 = 2. But you cannot take 9 from 5, so for 5 the order does matter."
   },
   {
@@ -664,7 +664,7 @@
      "Day 3:"
     ]
    },
-   "hint": "Write the step after each day. Then write it after each night.",
+   "hint": "Where is the frog after day 1? And after night 1?",
    "explanation": "Start at the top and go backwards. On the last day the frog starts on step 8 and climbs 4 to reach 12. It starts each day 2 steps higher: day 1 starts on 0, day 2 on 2, day 3 on 4, day 4 on 6, day 5 on 8. So it gets out on day 5."
   },
   {

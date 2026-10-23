@@ -49,7 +49,7 @@ def _():
     return {'a': tf(games['Catch'] > games['Hopscotch']), 'b': tf(games['Marbles'] == 4)}
 
 
-@check('L1U03-S04')
+@check('L1U03-T02')
 def _():
     asked = 5   # the size of the school is not given and 5 friends are a small part of it
     return ['We cannot tell'] if asked < 10 else ['Yes']
@@ -94,7 +94,7 @@ def _():
     return {'a': s([int(kids['Chess'])]), 'b': s([int(kids['Chess'] - kids['Singing'])])}
 
 
-@check('L1U03-T02')
+@check('L1U03-S04')
 def _():
     seen = [9, 6, 8]
     farm = [x for x in range(0, 31) if sum(seen) + x == 30]

@@ -137,7 +137,7 @@
    "id": "L1U09-S03",
    "tier": "start",
    "page": 1,
-   "text": "Arrange the lengths in order. Begin with the shortest.\n14 cubes, 9 cubes, 12 cubes, 6 cubes\n{l}",
+   "text": "Arrange the lengths in order. Begin with the shortest.\n14 cubes, 9 cubes, 12 cubes, 6 cubes\n{ll}",
    "answer": {
     "value": [
      "6",
@@ -490,7 +490,7 @@
      "Draw the ribbon:"
     ]
    },
-   "hint": "Draw the ribbon as one bar. Mark 4 equal pieces. Count the places you cut.",
+   "hint": "Draw the ribbon as one bar. Mark the 4 pieces.",
    "explanation": "4 equal pieces: 6 + 6 + 6 + 6 = 24, so each piece is 6 cubes. Cut between the pieces: 3 cuts make 4 pieces. The last piece needs no cut."
   },
   {
@@ -526,7 +526,7 @@
      "Bag:"
     ]
    },
-   "hint": "First change clips into cubes. Then use the pen to find the bag.",
+   "hint": "Change clips into cubes first.",
    "explanation": "The pen is 5 clips, and each clip is 2 cubes: 2 + 2 + 2 + 2 + 2 = 10 cubes. The bag is 2 pens: 10 + 10 = 20 cubes."
   },
   {
@@ -613,7 +613,7 @@
      }
     }
    ],
-   "hint": "Count the gaps in the picture, not the posts. How many gaps are there for 2 posts?",
+   "hint": "Count the gaps, not the posts. How many gaps for 2 posts?",
    "explanation": "(a) Posts and gaps alternate. The first post has no gap before it, so 6 posts have 5 gaps. (b) 5 gaps of 3 cubes: 3 + 3 + 3 + 3 + 3 = 15. (c) 10 posts have 10 - 1 = 9 gaps. There is always 1 gap fewer than posts."
   },
   {
@@ -648,7 +648,7 @@
      "Ali's rope:"
     ]
    },
-   "hint": "Change the rods into cubes first. Then compare the ropes.",
+   "hint": "Change the rods into cubes first.",
    "explanation": "Ali's rope: 3 rods are 4 + 4 + 4 = 12 cubes, and 2 more cubes make 14. Mei's rope is also 14 cubes. The ropes are the same length."
   },
   {
@@ -669,7 +669,7 @@
      "{b} pieces of 4 cubes and {b} pieces of 3 cubes."
     ]
    },
-   "hint": "Try one piece of 4 cubes. Can 3-cube pieces fill what is left? Then try two.",
+   "hint": "Try 1 piece of 4 cubes. What is left?",
    "explanation": "One 4-cube piece leaves 10 cubes, and 3-cube pieces cannot fill 10. Two 4-cube pieces leave 6 cubes, and 3 + 3 = 6. So 4 + 4 + 3 + 3 = 14. Three 4-cube pieces leave 2 cubes, which a 3-cube piece cannot fill."
   },
   {

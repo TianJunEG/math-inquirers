@@ -1,0 +1,3552 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-02",
+ "level": 1,
+ "term": 4,
+ "lesson": 32,
+ "lesson_in_term": 2,
+ "title": "Build the Figure",
+ "big_idea": "Make big shapes from small shapes, and find the small shapes inside a big one",
+ "child_idea": "Put shapes together to make a figure. Look inside a figure to find the shapes it is made of.",
+ "skill": "Putting shapes together and taking them apart",
+ "ages": "6-8",
+ "moe": {
+  "strand": "2D Shapes: forming figures and finding the shapes in a figure (Primary 1)",
+  "topics": [
+   "Form figures from given shapes, and identify the shapes in a figure (Primary 1, 2D Shapes 1.2 and 1.3, p. 32)",
+   "Count a named shape in a picture made of shapes (seen in Primary 1 school papers)",
+   "Counting every triangle of every size in a figure with crossing lines, and the fewest pieces that make a figure, are not Primary 1 outcomes"
+  ],
+  "note": "Strand label for the tutor only. Start here is Primary 1 shapes work: count each kind of shape in a picture, cut a square into 2 triangles, build a boat from squares and triangles, read a rectangle as rows of squares, and say what 2 shapes make together (2 squares, 2 half circles, 2 quarter circles). Think harder splits a figure into its shapes with a ruler (DIAG), counts every shape of each kind into a table (TAB), and meets the beyond puzzle Every Triangle: a square with both corner-to-corner lines holds 8 triangles, 4 small and 4 big. Go further asks for the fewest pieces (a 2 by 3 rectangle needs 3, not 6), a list of the piece sets that make a figure with a check that none is missing (LIST), and a figure to make for a partner. BEYOND PRIMARY 1 ON PURPOSE, at Think harder and Go further only: counting hidden and overlapping triangles, the fewest pieces, and which sets of pieces make a figure. No Primary 1 school paper in the sample we studied asks a child to build a figure from pieces (the papers count and name shapes in a picture), so the building wording is marked unverified. Do not call this lesson MOE-aligned. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type. Contest tag (tutor only): counting figures (SASMO, 6 of 100)."
+ },
+ "contest_moves": [
+  "table: count each kind of shape in a figure into a table (TAB)",
+  "draw it: split a figure into its shapes with a ruler (DIAG)",
+  "count every triangle of every size in a figure (Every Triangle)",
+  "list: which sets of pieces make this figure, with a check that none is missing (LIST)",
+  "fewest pieces: the same figure made with the smallest number of pieces"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Count each kind of shape in a picture and in a figure, and say how many more of one kind than another.",
+  "Put 2 triangles together, whole side to whole side, to make a square or a bigger triangle, and say what 2 squares, 2 half circles or 2 quarter circles make.",
+  "Build a figure from squares and triangles and say how many pieces of each kind it needs.",
+  "Think harder: split a figure into its shapes with a ruler, count shapes of each kind into a table, and count every triangle in a square with both corner lines.",
+  "Go further: find the fewest pieces that make a figure, say which sets of pieces make it, and draw a figure for a partner to count."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Name a triangle, a square and a rectangle by their sides and corners (the holiday course, taught again with clues)",
+   "Fold a paper square corner to corner and name the 2 shapes (Term 4 Lesson 1, taught again with a spare square)",
+   "Count the squares in a rectangle by rows (Term 2 Lesson 5, taught again with a picture)"
+  ],
+  "assumes": "Only counting to 12 and the names of three shapes. Nothing from an earlier lesson is needed: the warm-up names shapes from clues, folds a square corner to corner and counts squares by rows. The words whole side, piece and figure are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Naming circle, square, rectangle and triangle (holiday course)"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: no later lesson needs it except Count Everything (Term 4 Lesson 6), which counts squares in a grid and has its own warm-up, and the year Quest, which has a gate on shapes. A child who misses it watches the recording, puts 2 triangles together every way they can and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches the shape names, the corner fold and counting by rows."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 7): the 2 shape-pieces pages (pages 6 and 7), torn out along the dashed line, with the 20 pieces cut out by a grown-up beforehand: 6 squares, 3 rectangles, 6 triangles, 2 half circles, 2 quarter circles and 1 circle. Nobody cuts during the lesson",
+   "No printer or no cutting? A grown-up cuts 6 squares (3 cm each side), 3 rectangles (3 cm by 6 cm) and 6 triangles (cut a 3 cm square corner to corner) from card or paper, and any round shapes you like",
+   "A paper square from last lesson (or any paper square), a ruler (the one you keep at home), a pencil, a rubber and spare paper",
+   "A coloured pencil is helpful"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own set of pieces to build a figure on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Shape-pieces pages (pages 6 and 7): 6 squares and 3 rectangles on page 6; 6 triangles, 2 half circles, 2 quarter circles and 1 circle on page 7, cut out by a grown-up. Each square is 3 cm. Keep the 20 pieces in an envelope with your name"
+  ],
+  "ruler": true,
+  "notes": "A ruler is used to draw straight lines (Start here S2 and Think harder T1). Nothing needs to be bought. The pieces are small and have corners: they stay on the table, nothing goes in the mouth or ears, and they are kept away from younger brothers and sisters. No scissors, matches, toothpicks or anything sharp in the lesson: a grown-up cuts the pieces beforehand. In class we use the squares, rectangles and triangles to build figures; the half circles, quarter circles and the circle are for Start here S5 and for free building. All the straight pieces are on the same 3 cm unit (a rectangle is 2 squares, a triangle is half a square).",
+  "kit_contract": [
+   {
+    "piece": "squares (3 cm)",
+    "supplied": 6,
+    "max_used": 6,
+    "used_by": [
+     "G1",
+     "G2"
+    ]
+   },
+   {
+    "piece": "rectangles (3 cm by 6 cm)",
+    "supplied": 3,
+    "max_used": 3,
+    "used_by": [
+     "G1",
+     "G2"
+    ]
+   },
+   {
+    "piece": "triangles (half a 3 cm square)",
+    "supplied": 6,
+    "max_used": 4,
+    "used_by": [
+     "explore",
+     "S3",
+     "T1"
+    ]
+   },
+   {
+    "piece": "half circles",
+    "supplied": 2,
+    "max_used": 2,
+    "used_by": [
+     "S5"
+    ]
+   },
+   {
+    "piece": "quarter circles",
+    "supplied": 2,
+    "max_used": 2,
+    "used_by": [
+     "S5"
+    ]
+   },
+   {
+    "piece": "circle",
+    "supplied": 1,
+    "max_used": 1,
+    "used_by": [
+     "explore"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 24
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 24,
+    "end": 36
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 36,
+    "end": 40
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 40,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes with the pieces: 2 triangles make a square and a bigger triangle, build a house from a picture, then build a picture of your own and count each kind of shape. The mini-lesson has 12 minutes because it adds what 2 squares and 2 half circles make, finds the shapes inside a figure and counts each kind, and shows that a rectangle can replace 2 squares. Start here (pages 1 and 2) takes a middle child about 16 minutes, so page 1 gets about 8 minutes and page 2 about 8, and many children reach Think harder only after the choice slide; Think harder, Go further and the Investigation are for every child to choose, for home and for next time. Answers are asked, then shown (answer slides for Explore, the mini-lesson and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional slide and the spare-time menu are used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (your own picture) to 3 minutes and carry the counting by kind to the Mini-lesson",
+   "Then: cut the second item of the Your turn slide (s-m5)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Look at the picture. How many triangles are there? Write the number.",
+  "q2": "Put 2 triangles from your kit together so that whole sides touch. Name one shape you can make. Draw it.",
+  "a1": "2",
+  "a2": "A square, or a bigger triangle, or a slanted four-sided shape. Many answers are right: it depends on which sides touch.",
+  "val1": "2"
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, a ruler, paper and your 20 shape pieces. Pause or rewind any time.",
+   "action": "Gather your shape pieces, pencil, ruler and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Name each shape, fold a paper square corner to corner, and count the squares by rows.",
+   "action": "Play along. Fold a paper square corner to corner. Say each answer out loud."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles. Use 2 triangles for the second one. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles with your pieces. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Put 2 triangles together, build the house from the picture, then make your own picture.",
+   "action": "Pause. Make a square from 2 triangles. Build the house. Make your own picture and count each shape."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples with your pieces. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Make the shapes with your arms and body as I call them.",
+   "action": "Stand up. Make each shape with your arms as it is called."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up whether 2 triangles always make a square, and test it with your pieces.",
+   "action": "Pause. Explain your answer to someone at home and test it with your pieces."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one figure you built.",
+   "action": "Show a grown-up your workbook and one figure you built."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Build the Figure",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Put shapes together.",
+      "Find the shapes inside a figure."
+     ]
+    }
+   ],
+   "note": "Lesson 2 of Term 4, 90 minutes. Objective: put 2 triangles together to make a square or a bigger triangle, build a figure from squares and triangles, count each kind of shape in a figure, and meet the beyond-Primary-1 puzzle Every Triangle. Plain statement for families: counting and naming shapes in a picture is Primary 1 work, and so is putting shapes together; counting every triangle of every size, finding the fewest pieces and listing which sets of pieces make a figure go past the school Primary 1 syllabus on purpose, at Think harder and Go further only. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice in one line before you start the recording: the tutor, the shared screen and any voice that is not muted are recorded; a child may keep the camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "subtitle": "Big shapes from small shapes",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Which shape am I?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "triangle",
+        "parts": 1,
+        "label": "A",
+        "size": 96
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "square",
+        "parts": 1,
+        "label": "B",
+        "size": 96
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "rectangle",
+        "parts": 1,
+        "label": "C",
+        "size": 96
+       }
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Which shape has 3 corners? Which has 4 sides that are all the same? Which has 2 long sides and 2 short sides?"
+    }
+   ],
+   "note": "Three shapes labelled A, B and C: A is a triangle, B a square, C a rectangle. Ask each clue and let children answer on three or with fingers (1, 2 or 3 for A, B, C): 3 corners is A, the triangle; 4 equal sides is B, the square; 2 long sides and 2 short sides is C, the rectangle. Then ask for the names. The slide never shows the names. This is the holiday-course naming, taught again with clues so a child who joins cold can follow. A child who is unsure touches the sides with a finger and counts the corners.",
+   "mascot": {
+    "size": "s",
+    "say": "Count the corners!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Fold a square corner to corner",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Take a paper square. Fold it corner to corner."
+    },
+    {
+     "t": "p",
+     "text": "Open it. What 2 shapes do you see?"
+    }
+   ],
+   "note": "Children fold a paper square (a spare one from last lesson, or any paper square) corner to corner, open it and trace the fold. The fold cuts the square into 2 triangles, and each triangle is a half of the square. Ask: how many shapes, what are they called, are they the same size (lay one on the other). This is Term 4 Lesson 1 taught again. A child with no paper square draws a square and a line from one corner to the opposite corner. The slide never shows the answer. Answer: 2 triangles."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count by rows",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "squares",
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "cell": 62,
+     "size": "m"
+    },
+    {
+     "t": "p",
+     "text": "How many squares make the rectangle? Count by rows."
+    }
+   ],
+   "note": "A rectangle made of 2 rows of 3 squares. Children count the squares row by row: 3, then 3 more, 6 in all. This is the array idea from Term 2 Lesson 5, taught again so that counting squares by rows is easy later. Ask: how many in each row, how many rows, how many in all. The slide never shows the count. A child who is unsure points to each square and counts in ones. Answer: 6."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Look at the picture. How many triangles are there?"
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "square",
+          "n": 1,
+          "colour": 1,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 0,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 3,
+          "pattern": 1,
+          "size": "m"
+         },
+         {
+          "shape": "square",
+          "n": 1,
+          "colour": 1,
+          "pattern": 0,
+          "size": "m"
+         }
+        ],
+        "cols": 5,
+        "cell": 70
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Put 2 triangles from your kit together so that whole sides touch. Name one shape you can make. Draw it."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: any child can count the triangles in a row of 5 pictures (the 2 triangles are different colours and one has stripes, so the count does not depend on colour). Puzzle 2 is a thinking question on the lesson idea: 2 triangles put together make a square, a bigger triangle or a slanted four-sided shape, depending on which sides touch. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write and draw on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 2; many answers are right. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: 2 triangles",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Take 2 triangles from your kit.",
+      "Put them together so whole sides touch.",
+      "Make a square.",
+      "Now make a bigger triangle."
+     ],
+     "ordered": true
+    },
+    {
+     "t": "chip",
+     "text": "Whole sides must touch."
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Each child has 2 triangles from the kit page. Ask them to put the 2 triangles together so that a whole side touches a whole side (not a corner and not half a side). They find a square (the 2 longest sides touch) and a bigger triangle (2 short sides touch, with the right-angle corners on the same side). Some find a slanted four-sided shape: praise it, it is a third way. Ask: what shape did you make; which sides touched. The answer pictures are on the next slide, after the children have answered. Answers: a square; a bigger triangle. A child with no triangles cuts a paper square corner to corner (the grown-up cuts). Nobody holds a figure up to the camera: children say what they made."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: 2 triangles",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Take 2 triangles from your kit.",
+      "Put them together so whole sides touch.",
+      "Make a square.",
+      "Now make a bigger triangle."
+     ],
+     "ordered": true
+    },
+    {
+     "t": "chip",
+     "text": "Whole sides must touch."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "square",
+        "parts": 1,
+        "size": 130
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 1,
+        "cols": 2,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          1
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          1,
+          0
+         ]
+        ],
+        "cell": 64,
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 TRIANGLES MAKE",
+        "items": [
+         "a square.",
+         "a bigger triangle."
+        ]
+       }
+      ]
+     ],
+     "weights": [
+      1,
+      1,
+      3
+     ]
+    }
+   ],
+   "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: build the house",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "items": [
+         "Look at the house.",
+         "Build it with your squares and triangles.",
+         "Which pieces did you use?"
+        ],
+        "ordered": true
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 2,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "cell": 64,
+        "size": "m"
+       }
+      ]
+     ],
+     "weights": [
+      3,
+      2
+     ]
+    }
+   ],
+   "note": "Round 2, about 5 minutes. The house is drawn on dots; each square on the dot grid is one square piece and each slanted half-square is one triangle. Children build the house on the table with their pieces, check it matches the picture, and say which pieces they used: 2 squares for the bottom and 2 triangles for the roof, 4 pieces in all. Ask: which pieces did you use; how many of each; how did you know the roof needs triangles (the slanted sides). The answer is on the next slide. Some children use 1 rectangle for the bottom: that works and is a good idea, so ask whether it uses more or fewer pieces; the fewest-pieces question comes back at Go further. Answers: 2 squares and 2 triangles, 4 pieces."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: build the house",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "items": [
+         "Look at the house.",
+         "Build it with your squares and triangles.",
+         "Which pieces did you use?"
+        ],
+        "ordered": true
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 2,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "cell": 64,
+        "size": "m"
+       }
+      ]
+     ],
+     "weights": [
+      3,
+      2
+     ]
+    },
+    {
+     "t": "card",
+     "head": "THE HOUSE USES",
+     "items": [
+      "2 squares and 2 triangles.",
+      "That is 4 pieces."
+     ]
+    }
+   ],
+   "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: your own picture",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Make a picture with your pieces: a robot, a rocket or a boat.",
+      "Use at least 3 different kinds of shape.",
+      "Count how many of each shape you used.",
+      "Say it: My picture has ... squares and ... triangles."
+     ],
+     "ordered": true
+    },
+    {
+     "t": "chip",
+     "text": "Keep it on the table. Say it. Nobody holds it up."
+    }
+   ],
+   "note": "Round 3, about 3 minutes. Children make any picture they like with up to 8 pieces. They count each kind and say it aloud to a grown-up or to the screen: my picture has 2 squares, 3 triangles and a circle. Volunteers say their count; nobody holds a figure up to the camera and nobody is compared. Ask: which kind did you use most; how many pieces in all. A child who needs a start builds a robot: a rectangle body, a square head and 2 triangle feet. Praise any picture; the point is counting by kind. No answers on the slide."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "2 shapes make 1 shape",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "2 SQUARES",
+        "items": [
+         "make a rectangle."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 1,
+        "cols": 2,
+        "kind": "squares",
+        "squares": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ]
+        ],
+        "cell": 60,
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 HALF CIRCLES",
+        "items": [
+         "make a circle."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "circle",
+        "parts": 1,
+        "size": 110
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 TRIANGLES",
+        "items": [
+         "make a square or a bigger triangle."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "square",
+        "parts": 1,
+        "size": 110
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Three ways that 2 pieces make 1 shape, with whole sides touching. 2 squares side by side make a rectangle: show it with 2 kit squares. 2 half circles with their straight sides together make a circle: show it with the 2 half circles. 2 triangles make a square or a bigger triangle, as in Explore. Children try each with their pieces. Ask: what do 2 squares make (a rectangle); what do 2 half circles make (a circle); what do 2 triangles make (it depends on which sides touch). Say: the shapes must touch with whole sides. The pictures show the made shape."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Find the shapes inside",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Look at the house. Count each kind of shape."
+    },
+    {
+     "t": "visual",
+     "type": "shapes2d",
+     "shape": "circle",
+     "parts": 1,
+     "size": 140,
+     "compose": "house"
+    },
+    {
+     "t": "p",
+     "text": "How many triangles? How many rectangles? How many squares?"
+    }
+   ],
+   "note": "Now we look inside a figure. The house is made of shapes: the roof is a triangle, the wall and the door are rectangles, the window is a square. Ask each question, then wait: how many triangles (1), how many rectangles (2), how many squares (1). Children point to each shape on their own screen and count aloud on three. The answer appears on the next slide, after the children have answered. A child who says 2 squares is asked whether the window is as tall as it is wide. Answers: 1 triangle; 2 rectangles; 1 square. Do not name a child with a wrong answer."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Find the shapes inside",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Look at the house. Count each kind of shape."
+    },
+    {
+     "t": "visual",
+     "type": "shapes2d",
+     "shape": "circle",
+     "parts": 1,
+     "size": 140,
+     "compose": "house"
+    },
+    {
+     "t": "p",
+     "text": "How many triangles? How many rectangles? How many squares?"
+    },
+    {
+     "t": "answer",
+     "text": "1 triangle, 2 rectangles and 1 square. The roof is a triangle. The wall and the door are rectangles. The window is a square."
+    }
+   ],
+   "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Count each kind",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Count each kind. Which kind is there most of?"
+    },
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 3,
+       "pattern": 2,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      }
+     ],
+     "cols": 3,
+     "cell": 70
+    }
+   ],
+   "note": "A row of shapes to count by kind. Count the triangles one at a time, touching each (children point to their screen), then the circles, then the squares. Say a method: count one kind at a time, and make a mark so that you never count one twice. Ask: how many triangles, how many circles, how many squares, how many shapes in all, which kind is most. The answer appears on the next slide. Answers: 4 triangles, 1 circle, 1 square: 6 in all; the triangles are the most."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Count each kind",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Count each kind. Which kind is there most of?"
+    },
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 3,
+       "pattern": 2,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      }
+     ],
+     "cols": 3,
+     "cell": 70
+    },
+    {
+     "t": "answer",
+     "text": "4 triangles, 1 circle and 1 square. There are 6 shapes in all. There are most triangles."
+    }
+   ],
+   "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "A rectangle can replace 2 squares",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 1,
+        "cols": 4,
+        "kind": "squares",
+        "squares": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          3
+         ]
+        ],
+        "cell": 60,
+        "size": "m"
+       },
+       {
+        "t": "card",
+        "head": "4 SQUARES",
+        "items": [
+         "make a long rectangle.",
+         "That is 4 pieces."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 RECTANGLES",
+        "items": [
+         "make the same long rectangle.",
+         "That is 2 pieces."
+        ]
+       },
+       {
+        "t": "p",
+        "text": "A rectangle is as long as 2 squares."
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "The same figure can be made with different pieces. Show 4 squares in a row, and then the same row made from 2 rectangles of your kit, each 2 squares long. Ask: how many pieces with squares (4); how many pieces with rectangles (2); which uses fewer pieces (the rectangles). Say: a rectangle in our kit is as long as 2 squares. This is the idea of the fewest pieces, which comes back at Go further. Children lay their pieces on the table to check. Answers: 4 pieces; 2 pieces."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "ITEM 1",
+        "items": [
+         "A picture has 3 circles and 2 squares. How many shapes are there?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "ITEM 2",
+        "items": [
+         "Can 2 squares make a triangle? Say Yes or No."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Two quick items, answered on the children's own paper or said quietly on three (say so aloud). Item 1: 3 circles and 2 squares make 5 shapes in all. Item 2: 2 squares cannot make a triangle: put 2 squares side by side and you get a rectangle. Walk the cameras and wait 10 seconds before helping. Nobody holds paper up. The next slide shows the answers and children tick their own work. Answers: 5; No."
+  },
+  {
+   "id": "s-m5-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "ITEM 1",
+        "items": [
+         "A picture has 3 circles and 2 squares. How many shapes are there?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "ITEM 2",
+        "items": [
+         "Can 2 squares make a triangle? Say Yes or No."
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Item 1: 5 shapes. Item 2: No. 2 squares make a rectangle, not a triangle."
+    }
+   ],
+   "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Shape stretch",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Make each shape I call."
+    },
+    {
+     "t": "p",
+     "text": "Triangle. Rectangle. Circle."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up with a little clear space. Call the shapes one at a time and children make them with their arms and body: a triangle (hands together above the head like a roof), a rectangle (stand tall and then stretch the arms out wide), a circle (arms in a big ring in front), a square (elbows out). Then call 2 shapes at once: make a triangle with one arm and a circle with the other. A child may stay seated and make the shapes with their hands. No equipment, no running. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 and 2. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 and 2 aloud. Children work on their own with their pieces; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: count each kind of shape in a picture and say how many more of one kind. Question 2: draw a line on a square to show 2 triangles, and say what part of the square each triangle is."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4 squares, 3 triangles, 1 circle, 1 more square than triangles; Q2 a line from one corner to the opposite corner, and each triangle is a half of the square."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 3 to 5. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S3",
+      "S4",
+      "S5"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 3 to 5 aloud, one at a time. Question 3: build the boat with squares and triangles, using as few triangles as you can, and say how many of each. Question 4: a rectangle made of squares in rows: how many in each row, how many rows, how many in all. Question 5: what do 2 squares, 2 half circles and 2 quarter circles make. Children may use their pieces. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S3",
+      "S4",
+      "S5"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q3 2 triangles and 2 squares; Q4 4 squares in each row, 3 rows, 12 squares in all; Q5 2 squares make a rectangle, 2 half circles make a circle, 2 quarter circles make a half circle."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Split a figure. Every Triangle"
+      ],
+      [
+       "Go further (page 4)",
+       "The fewest pieces"
+      ],
+      [
+       "Investigation (page 5)",
+       "2 triangles, many shapes"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD SAYS",
+     "items": [
+      "2 triangles always make a square."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is the child right? Test it with your triangles."
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it with their 2 kit triangles: try touching different sides. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 2 triangles can make a square when the 2 longest sides touch, a bigger triangle when 2 short sides touch, and a slanted four-sided shape. It depends on which sides touch. Repeat each child answer in your own words for the recording. The child who is wrong is a child in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 2 triangles. Puzzle 2: a square, a bigger triangle or a slanted four-sided shape. Many answers are right."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you found a good shape. Do not read out anyone earlier answer. Puzzle 1: the row has 2 triangles; the squares and the circle are not triangles. Puzzle 2: 2 triangles make a square when the longest sides touch, and a bigger triangle when 2 short sides touch; some children found a slanted four-sided shape. It was the same idea as the child in the talk question."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, and the words Yes and No. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 7; Yes; 3. Do not read out any child result."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one figure you built today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Copy on the Grid",
+      "Have ready: the grid page (it is not cut), a button for a counter, a ruler and a pencil."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs nothing cut: the grid page in the Term 4 book is for drawing on, a button or a small coin is the counter, and a ruler and a pencil. Keep the shape pieces in their envelope. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Optional: 4 squares, one rectangle",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mei has 4 squares. She makes a square with all 4."
+    },
+    {
+     "t": "p",
+     "text": "What shape is it? Can she make it with fewer pieces?"
+    }
+   ],
+   "note": "Optional, only if you are on time. 4 squares in a 2 by 2 block make a big square. With the kit rectangles (each 2 squares long) she can make it with 2 rectangles: 2 pieces instead of 4. Children try with their pieces. Take two answers and move on. This links to the fewest pieces at Go further. Answers: a bigger square; yes, 2 rectangles. There is no picture on purpose: children build it.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Do 2 squares always make a rectangle?"
+      ],
+      [
+       "Make a puzzle",
+       "Build a figure. Ask: how many of each shape?"
+      ],
+      [
+       "Teach it back",
+       "Show a toy how 2 triangles make a square."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 8
+     },
+     {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive, before the recording starts. Check that you can see each child.",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your 20 shape pieces on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we put small shapes together to make big shapes, and we look inside a big shape to find the small ones."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice before you start the recording, and do not use children's first names once it is running. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: counting and naming shapes in a picture, and putting shapes together, are school Primary 1 work. Counting every triangle of every size, finding the fewest pieces and listing which sets of pieces make a figure go beyond Primary 1 on purpose, at Think harder and Go further only. The pieces are never cut in the lesson: a grown-up cuts them beforehand."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper or a figure to the camera. A child without the pieces folds paper squares and draws shapes."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Three clues, three shapes. Look at shapes A, B and C."
+     },
+     {
+      "k": "ASK",
+      "text": "Which shape has 3 corners?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Which shape has 4 sides that are all the same?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Which shape has 2 long sides and 2 short sides?",
+      "resp": 14
+     },
+     {
+      "k": "ASK",
+      "text": "What are the three shapes called?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Take a paper square and fold it corner to corner. Open it and trace the fold."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fold a paper square corner to corner, open it and trace the fold.",
+      "s": 45
+     },
+     {
+      "k": "ASK",
+      "text": "What 2 shapes do you see? How do you know they match?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Now count the squares in the rectangle, row by row."
+     },
+     {
+      "k": "ASK",
+      "text": "How many squares are in each row? How many rows?",
+      "resp": 18
+     },
+     {
+      "k": "ASK",
+      "text": "How many squares are there in all?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Shapes can be put together and taken apart. That is our idea for today."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure of a shape name, point to the shape and say its name. For corners, touch each corner and count. If a child cannot fold corner to corner, fold the paper once so two edges meet and trace the fold. For counting, point to each square and count in ones."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: A the triangle, B the square, C the rectangle; the fold makes 2 triangles that match; 3 squares in each row, 2 rows, 6 squares in all. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 6 and the shape names."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Look at the picture. How many triangles are there? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count the triangles and write the number on their own paper.",
+      "s": 30
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Put 2 triangles from your kit together so that whole sides touch. Name one shape you can make. Draw it."
+     },
+     {
+      "k": "WORK",
+      "text": "Children try 2 triangles on the table and draw or write one shape.",
+      "s": 70
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 2. Puzzle 2 answer: many answers are right (a square, a bigger triangle or a slanted four-sided shape). Look for good ideas to praise later (a child who said it depends on which sides touch). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today your pieces are the teacher. Take 2 triangles from your kit. Put them together so that whole sides touch. Make a square."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put 2 triangles together to make a square.",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "Which sides touched to make the square?",
+      "resp": 18
+     },
+     {
+      "k": "SAY",
+      "text": "Now make a bigger triangle with the same 2 triangles."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make a bigger triangle from the 2 triangles.",
+      "s": 45
+     },
+     {
+      "k": "ASK",
+      "text": "What shapes did you make? Did anyone find a third way?",
+      "resp": 22
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "2 triangles make a square. 2 triangles make a bigger triangle. Whole sides must touch."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Here is a house on dots. Build it with your squares and triangles. Then tell me which pieces you used."
+     },
+     {
+      "k": "WORK",
+      "text": "Children build the house on the table from the picture.",
+      "s": 85
+     },
+     {
+      "k": "ASK",
+      "text": "Which pieces did you use? How many of each?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The house uses 2 squares and 2 triangles. That is 4 pieces. The slanted sides of the roof need triangles."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Make a picture of your own: a robot, a rocket or a boat. Use at least 3 different kinds of shape. Then count how many of each shape you used."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make their own picture with up to 8 pieces and count each kind.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to say: my picture has this many squares, this many triangles, and so on? Volunteers first.",
+      "resp": 40
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot start builds a robot: a rectangle for the body, a square for the head and 2 triangles for the feet. A child whose pieces do not touch whole side to whole side is asked to slide them until the sides match. A child with no kit pieces folds paper squares corner to corner to make triangles."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. Answers: a square; a bigger triangle; the house is 2 squares and 2 triangles (4 pieces); a child with a rectangle for the bottom of the house has used 3 pieces, which is fine. Do not say the answer before the children do. Do not name a child with a wrong answer."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two shapes can make one shape. Put 2 squares side by side. Whole sides touch."
+     },
+     {
+      "k": "ASK",
+      "text": "What shape do 2 squares make?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Put the 2 half circles together, with their straight sides touching."
+     },
+     {
+      "k": "ASK",
+      "text": "What shape do 2 half circles make?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "And 2 triangles can make a square or a bigger triangle. It depends which sides touch."
+     },
+     {
+      "k": "WORK",
+      "text": "Children try 2 squares, 2 half circles and 2 triangles with their pieces.",
+      "s": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now we look inside a figure. This house is made of shapes. Count each kind."
+     },
+     {
+      "k": "ASK",
+      "text": "How many triangles are in the house?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many rectangles? Remember, the wall and the door.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many squares?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "1 triangle, 2 rectangles and 1 square. The window is a square because it is as tall as it is wide."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Count each kind, one kind at a time. Touch each shape as you count it, so you never count one twice."
+     },
+     {
+      "k": "ASK",
+      "text": "How many triangles are there?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many circles? How many squares?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many shapes are there in all? Which kind is there most of?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "4 triangles, 1 circle and 1 square. That is 6 shapes in all."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The same figure can be made with different pieces. Here are 4 squares in a row. A rectangle in our kit is as long as 2 squares."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make a row of 4 squares, then the same row with 2 rectangles.",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "How many pieces with squares? How many with rectangles? Which uses fewer?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Your turn. Item one: a picture has 3 circles and 2 squares. How many shapes are there? Item two: can 2 squares make a triangle? Say it on three, or write it on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or say the two answers. Wait 10 seconds before helping.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Item one: 5 shapes. Item two: No. Tick your own work with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: piece, whole side, figure, kind of shape, in all. Say it the same way each time: the figure has 2 squares and 2 triangles, so 4 pieces. Do not use the word wrong for a child, only for a picture or a statement."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child cannot find the triangles in the house, ask them to trace the pointed shape on top. If a child counts a shape twice, ask them to touch each shape once and move on. If pieces do not fit, check that whole sides touch."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I call a shape and you make it with your arms or your body. A triangle: hands together above your head. A rectangle: stand tall, then stretch your arms out wide. A circle: a big ring with your arms."
+     },
+     {
+      "k": "WORK",
+      "text": "Call triangle, rectangle, circle and square one at a time, then call 2 shapes at once, one with each arm. Children make each shape; a child who sits makes the shapes with their hands.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: look at the picture of 8 shapes. Count each kind and fill in the blanks. Question 2: a square is cut into 2 triangles. Draw the line with your ruler. Then circle half or quarter."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 and 2. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 400
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 4 squares, 3 triangles, 1 circle, and 1 more square than triangles. Question 2: a line from one corner to the opposite corner, and each triangle is a half. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 2 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 3: build the boat with squares and triangles. Use as few triangles as you can. Fill in how many of each. Question 4: the rectangle is made of squares. Fill in the squares in each row, the rows, and the squares in all. Question 5: fill in what 2 squares make, what 2 half circles make and what 2 quarter circles make."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 3 to 5.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 3: 2 triangles and 2 squares. Question 4: 4 squares in each row, 3 rows, 12 squares in all. Question 5: a rectangle; a circle; a half circle. Tick your own page with a tick."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 250
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count one kind at a time and touch each shape. Q2: a line from one corner to the opposite corner makes 2 triangles. Q3: the slanted ends of the boat need triangles. Q4: count the squares in one row, then count the rows. Q5: try the pieces with whole sides touching."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder splits a figure with a ruler, counts shapes of each kind into a table and has the beyond puzzle Every Triangle. Go further has the fewest pieces, which sets of pieces make a figure, and a figure to draw for a partner (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child says: 2 triangles always make a square. Is the child right? Test it with your triangles."
+     },
+     {
+      "k": "WORK",
+      "text": "Test it with your 2 triangles: try touching different sides.",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: 2 triangles. Puzzle two: many answers are right. It depends which sides touch."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no. 2 triangles can make a square when the longest sides touch, a bigger triangle when 2 short sides touch, and a slanted four-sided shape. It depends on which sides touch. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Mei makes a picture with 3 squares, 2 triangles and 2 circles. How many shapes are in the picture? Fill in the blank. E2. Can 2 triangles make a square? Circle Yes or No. E3. A rectangle is made of 6 squares. Mei makes it again with rectangles that are each 2 squares long. How many rectangles does she need? Fill in the blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 165
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 7. E2: Yes. E3: 3."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Copy on the Grid. Nothing needs cutting. Please have the grid page ready, a button for a counter, a ruler and a pencil. Keep your shape pieces in their envelope. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Mei has 4 squares. She makes a bigger square with all 4. Can she make it with fewer pieces?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers. Children try with their pieces.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 squares make a bigger square, and 2 rectangles can make it with 2 pieces instead of 4. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the picture of 8 shapes. Count each kind. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "How many squares? []",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "How many triangles? []",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "How many circles? []",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "d",
+      "text": "How many more squares than triangles? []",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "4 squares; 3 triangles; 1 circle; 1 more square than triangles",
+    "val": [
+     4,
+     3,
+     1,
+     1
+    ],
+    "hint": "Count one kind at a time. Touch each shape as you count it, so you do not count one twice.",
+    "solution": "There are 4 squares, 3 triangles and 1 circle: 4 + 3 + 1 = 8 shapes. 4 squares is 1 more than 3 triangles.",
+    "mistakes": [
+     "Counting a shape twice or missing one.",
+     "Writing the total, 8, in one of the blanks.",
+     "Writing 4 for the difference."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "colour": 0,
+       "pattern": 2,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      }
+     ],
+     "cols": 4,
+     "cell": 78
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "A square is cut into 2 triangles. Use your ruler. Draw the line.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw 1 line on the square to make 2 triangles.",
+      "ans": "a line from corner to corner",
+      "val": "line"
+     },
+     {
+      "l": "b",
+      "text": "Each triangle is a half or a quarter of the square. Circle one.",
+      "ans": "half",
+      "val": "half",
+      "choices": [
+       "half",
+       "quarter"
+      ]
+     }
+    ],
+    "answer": "a line from one corner to the opposite corner; half",
+    "val": [
+     "line",
+     "half"
+    ],
+    "hint": "The 2 triangles must be the same size. Draw the line from one corner to the opposite corner.",
+    "solution": "A line from one corner to the opposite corner cuts the square into 2 triangles that match. Each triangle is 1 of 2 equal parts, so each is a half of the square.",
+    "mistakes": [
+     "Drawing a line across the middle: that makes 2 rectangles.",
+     "Writing quarter: there are only 2 parts."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "shapes2d",
+     "shape": "square",
+     "parts": 1,
+     "size": 95
+    }
+   },
+   {
+    "id": "S3",
+    "page": 2,
+    "tier": "start",
+    "text": "Build the boat with squares and triangles. Use as few triangles as you can. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The boat uses [] triangles.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "The boat uses [] squares.",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "2 triangles; 2 squares",
+    "val": [
+     2,
+     2
+    ],
+    "hint": "Look at the 2 slanted ends of the boat. Which piece has a slanted side? Then fill the middle with squares.",
+    "solution": "Each slanted end needs 1 triangle, so there are 2 triangles. The middle is 2 squares side by side. The boat is 2 triangles and 2 squares.",
+    "mistakes": [
+     "Using squares for the slanted ends.",
+     "Writing 4 triangles (2 more for the middle)."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "grid",
+     "rows": 1,
+     "cols": 4,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "cell": 64,
+     "size": "m"
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "The rectangle is made of squares. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] squares in each row.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "There are [] rows.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "There are [] squares in all.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "4; 3; 12",
+    "val": [
+     4,
+     3,
+     12
+    ],
+    "hint": "Count the squares in one row first. Then count the rows. Then count all the squares.",
+    "solution": "There are 4 squares in each row and 3 rows: 4, 8, 12. So there are 12 squares in all.",
+    "mistakes": [
+     "Writing 7 (4 + 3).",
+     "Counting only one row."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "squares",
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "cell": 46,
+     "size": "s"
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Fill in the blanks. Circle one word each time.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "2 squares make a ____ . Circle one.",
+      "ans": "rectangle",
+      "val": "rectangle",
+      "choices": [
+       "rectangle",
+       "triangle",
+       "circle"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "2 half circles make a ____ . Circle one.",
+      "ans": "circle",
+      "val": "circle",
+      "choices": [
+       "circle",
+       "square",
+       "triangle"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "2 quarter circles make a ____ . Circle one.",
+      "ans": "half circle",
+      "val": "half circle",
+      "choices": [
+       "half circle",
+       "circle",
+       "square"
+      ]
+     }
+    ],
+    "answer": "rectangle; circle; half circle",
+    "val": [
+     "rectangle",
+     "circle",
+     "half circle"
+    ],
+    "hint": "Try it with your pieces. Put the 2 pieces together so that whole sides touch.",
+    "solution": "2 squares side by side make a rectangle. 2 half circles with their straight sides together make a circle. 2 quarter circles with their straight sides together make a half circle.",
+    "mistakes": [
+     "Writing square for 2 squares.",
+     "Writing circle for 2 quarter circles: it takes 4."
+    ],
+    "mins": 2.5
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Use your ruler. Split the figure into its shapes.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw 1 line to split the figure into 1 triangle and 1 square.",
+      "ans": "1 line across",
+      "val": "1 line"
+     },
+     {
+      "l": "b",
+      "text": "Draw 2 more lines to split the square into 4 small squares.",
+      "ans": "2 lines",
+      "val": "2 lines"
+     }
+    ],
+    "answer": "a line across at the bottom of the roof; 2 more lines through the middle",
+    "val": [
+     "line",
+     "2 lines"
+    ],
+    "hint": "The roof is the pointed shape on top. Where does the roof end and the square begin? Then think about 4 small squares inside the big square.",
+    "solution": "Draw a line across from one side of the house to the other, where the roof ends. That splits the figure into 1 triangle and 1 big square. Then draw 1 line down the middle and 1 line across the middle of the big square: that makes 4 small squares.",
+    "mistakes": [
+     "Drawing a line down the middle of the whole house.",
+     "Drawing only 1 extra line in the square."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 2,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "cell": 64,
+     "size": "m"
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Count each kind of shape in the picture. Fill in the table.",
+    "parts": [],
+    "answer": "triangles 5; squares 6; circles 3",
+    "val": [
+     5,
+     6,
+     3
+    ],
+    "hint": "Count one kind at a time. Each tile has 1 to 4 shapes of the same kind. Add up the shapes, not the tiles.",
+    "solution": "Triangles: 3 and 2 make 5. Squares: 2 and 4 make 6. Circles: 1 and 2 make 3. 5 + 6 + 3 = 14 shapes in all.",
+    "mistakes": [
+     "Counting the tiles instead of the shapes.",
+     "Counting a tile that has 4 shapes as 1."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 3,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 2,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "colour": 0,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "triangle",
+       "n": 2,
+       "colour": 2,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 4,
+       "colour": 1,
+       "pattern": 0,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 2,
+       "colour": 0,
+       "pattern": 0,
+       "size": "m"
+      }
+     ],
+     "cols": 3,
+     "cell": 84
+    },
+    "visuals": [
+     {
+      "type": "table",
+      "head": [
+       "Triangles",
+       "Squares",
+       "Circles"
+      ],
+      "rows": [
+       [
+        "[]",
+        "[]",
+        "[]"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Every Triangle. The square has 2 lines from corner to corner. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] small triangles.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "There are [] big triangles.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "c",
+      "text": "There are [] triangles in all.",
+      "ans": "8",
+      "val": 8
+     }
+    ],
+    "answer": "4; 4; 8",
+    "val": [
+     4,
+     4,
+     8
+    ],
+    "hint": "First count the small triangles next to the middle. Then count the big triangles that use 3 corners of the square.",
+    "solution": "There are 4 small triangles, each with the middle point as one corner. There are 4 big triangles, each made of 2 small ones and using 3 corners of the square: A B C, B C D, C D A and D A B. 4 and 4 make 8 triangles in all.",
+    "mistakes": [
+     "Counting only the 4 small triangles.",
+     "Counting a big triangle twice."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "network",
+     "n": 4,
+     "all": true,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "The rectangle is 2 rows of 3 squares. Build it with the fewest pieces. Use squares and rectangles from your kit.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "With squares only it takes [] pieces.",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "b",
+      "text": "With the fewest pieces it takes [] pieces.",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "answer": "6; 3",
+    "val": [
+     6,
+     3
+    ],
+    "hint": "A rectangle in the kit is as long as 2 squares. How many of them cover 6 squares?",
+    "solution": "With squares only it takes 6 pieces. A kit rectangle covers 2 squares, so 3 rectangles cover 6 squares. 3 pieces is the fewest, because no piece covers more than 2 squares.",
+    "mistakes": [
+     "Writing 6 for the fewest.",
+     "Writing 2 (2 rectangles cover only 4 squares)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "squares",
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "cell": 46,
+     "size": "s"
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "The staircase is made of 6 squares. Which sets of pieces make it? Tick True or False for each set.",
+    "parts": [],
+    "answer": "true; false; true; false",
+    "val": [
+     "True",
+     "False",
+     "True",
+     "False"
+    ],
+    "hint": "Try each set with your pieces. A rectangle covers 2 squares that touch side by side. Check that no square of the staircase is left out.",
+    "solution": "6 squares make it: True. 3 rectangles cannot make it: after the top square and the bottom right square each take a neighbour, the 2 squares left over do not touch, so they need 2 squares, not 1 rectangle: False. 2 rectangles and 2 squares cover 4 + 2 = 6 squares: True. 2 rectangles and 3 squares cover 7 squares, too many: False.",
+    "mistakes": [
+     "Saying True for any set with the right number of squares but the wrong shape.",
+     "Not checking that the total is 6."
+    ],
+    "mins": 6,
+    "tf": [
+     {
+      "s": "6 squares."
+     },
+     {
+      "s": "3 rectangles."
+     },
+     {
+      "s": "2 rectangles and 2 squares."
+     },
+     {
+      "s": "2 rectangles and 3 squares."
+     }
+    ],
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "squares",
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "cell": 40,
+     "size": "s"
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Draw a figure for a partner. It has exactly 2 triangles, 1 square and 1 rectangle. Many answers are right.",
+    "parts": [],
+    "answer": "any figure with exactly 2 triangles, 1 square and 1 rectangle",
+    "val": [
+     "figure"
+    ],
+    "hint": "Draw the pieces touching with whole sides. Then count each kind. Check: 2 triangles, 1 square, 1 rectangle.",
+    "solution": "A house works: a rectangle for the wall, a square for a window, and 2 triangles for the roof. Count each kind to check your figure: 2 triangles, 1 square, 1 rectangle.",
+    "mistakes": [
+     "Drawing 2 rectangles.",
+     "Not counting the shapes at the end."
+    ],
+    "mins": 5,
+    "draw": true
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "2 triangles, many shapes",
+   "first": "Put 2 triangles together so whole sides touch. Make a square. Draw it.",
+   "text": "Find other shapes you can make with 2 triangles. Draw each one. How many different shapes can you find?",
+   "draw": 2,
+   "answer": "First: a square (the 2 longest sides touch). Then 3 different shapes in all when whole sides touch: a square, a bigger triangle (2 short sides touch, the right-angle corners together) and a slanted four-sided shape (2 short sides touch, turned the other way). A child who finds 2 has the main idea; a child who finds the third has seen that it depends on which sides touch.",
+   "val": [
+    "3"
+   ],
+   "look_for": "A child who tries different sides and draws each result, who says the shape depends on which sides touch, and who checks that whole sides touch. Credit any clear reason. Do not mark a child down for stopping at 2 shapes.",
+   "mistakes": [
+    "Letting only a corner touch.",
+    "Drawing the same shape twice (a turned square is the same square)."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child says: 2 triangles always make a square. Is the child right? Test it with your triangles.",
+  "starter": "I think ... because ...",
+  "answer": "No. 2 triangles can make a square when the 2 longest sides touch, a bigger triangle when 2 short sides touch, and a slanted four-sided shape. It depends on which sides touch.",
+  "look_for": "A child who tests it with the pieces and finds a shape that is not a square, or says it depends on which sides touch. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Mei makes a picture with 3 squares, 2 triangles and 2 circles. How many shapes are in the picture? Fill in the blank.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] shapes in the picture.",
+     "ans": "7",
+     "val": 7
+    }
+   ],
+   "answer": "7",
+   "val": [
+    7
+   ],
+   "solution": "3 squares, 2 triangles and 2 circles: 3 + 2 + 2 = 7 shapes.",
+   "mistakes": [
+    "Writing 3, the squares only.",
+    "Writing 5 (leaving out the circles)."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Can 2 triangles make a square? Circle Yes or No.",
+   "parts": [],
+   "answer": "Yes",
+   "val": [
+    "Yes"
+   ],
+   "solution": "Yes: when the 2 longest sides touch, 2 triangles make a square.",
+   "mistakes": [
+    "Saying No because they are not squares.",
+    "Not trying it with the pieces."
+   ],
+   "choices": [
+    "Yes",
+    "No"
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "A rectangle is made of 6 squares. Mei makes it again with rectangles that are each 2 squares long. How many rectangles does she need?",
+   "parts": [
+    {
+     "l": "",
+     "text": "She needs [] rectangles.",
+     "ans": "3",
+     "val": 3
+    }
+   ],
+   "answer": "3",
+   "val": [
+    3
+   ],
+   "solution": "Each rectangle covers 2 squares. 2, 4, 6: she needs 3 rectangles.",
+   "mistakes": [
+    "Writing 6, the squares.",
+    "Writing 2."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "putting pieces together",
+   "counting each kind",
+   "splitting a figure",
+   "something else"
+  ],
+  "helped": [
+   "my shape pieces",
+   "touching each shape as I count",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "trying the pieces first",
+   "counting one kind at a time",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "A picture has 5 circles and 2 squares. There are ____ more circles than squares.",
+   "answer": "3",
+   "val": 3,
+   "solution": "5 circles and 2 squares: 5 take away 2 is 3, so there are 3 more circles."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "2 squares make a ____ . Write rectangle, circle or triangle.",
+   "answer": "rectangle",
+   "val": "rectangle",
+   "solution": "2 squares side by side, with whole sides touching, make a rectangle."
+  },
+  {
+   "id": "H3",
+   "tier": "think",
+   "text": "A square is cut corner to corner into 2 triangles. 4 squares are cut this way. How many triangles are there? ____",
+   "answer": "8",
+   "val": 8,
+   "solution": "Each square makes 2 triangles: 2, 4, 6, 8. 4 squares make 8 triangles."
+  },
+  {
+   "id": "H4",
+   "tier": "go",
+   "text": "A rectangle is made of 2 rows of 4 squares. Rectangles that are 2 squares long cover it. The fewest pieces is ____ .",
+   "answer": "4",
+   "val": 4,
+   "solution": "The rectangle has 8 squares. Each piece covers at most 2 squares, so it takes 4 pieces."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 2",
+   "text": "Ali has 14 pencils. Mei has 9 pencils. Draw a strip for each. Ali has ____ more pencils than Mei.",
+   "answer": "5 more pencils",
+   "val": 5,
+   "solution": "Ali's strip is longer. The gap is 14 take away 9, which is 5."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l32",
+  "title": "Build the Figure",
+  "topic": "Putting shapes together and counting shapes in a figure",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A picture has 3 squares and 2 triangles. How many shapes are in the picture?",
+    "hint": "Count the squares. Then count the triangles. Then put the counts together.",
+    "steps": [
+     "There are 3 squares.",
+     "There are 2 triangles.",
+     "3 and 2 make 5 shapes."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       3,
+       2
+      ],
+      "say": "That is only one kind of shape. Put the squares and the triangles together."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "A picture has {a} squares and {b} triangles. How many shapes are in the picture?",
+     "answer": "a+b",
+     "hint": "Count the squares. Then count the triangles. Then put the counts together.",
+     "steps": [
+      "There are {a} squares.",
+      "There are {b} triangles.",
+      "{a} and {b} make {ans} shapes."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "choice",
+    "q": "2 squares are put side by side with whole sides touching. What shape do they make?",
+    "hint": "Think of 2 squares in a row. The new shape is long.",
+    "steps": [
+     "2 squares side by side make a long shape.",
+     "It has 4 sides: 2 long and 2 short.",
+     "It is a rectangle."
+    ],
+    "options": [
+     "rectangle",
+     "triangle",
+     "circle"
+    ],
+    "answer": "rectangle",
+    "slips": [
+     {
+      "a": [
+       "triangle"
+      ],
+      "say": "A triangle has 3 sides. 2 squares side by side make a shape with 4 sides."
+     }
+    ]
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "2 half circles are put together with their straight sides touching. What shape do they make?",
+    "hint": "Each half circle is half of a whole shape.",
+    "steps": [
+     "2 halves make 1 whole.",
+     "The whole shape is round.",
+     "It is a circle."
+    ],
+    "options": [
+     "circle",
+     "square",
+     "triangle"
+    ],
+    "answer": "circle",
+    "slips": [
+     {
+      "a": [
+       "square"
+      ],
+      "say": "Half circles are round. Think of 2 halves making 1 whole."
+     }
+    ]
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Can 2 triangles make a square? Try it with your pieces.",
+    "hint": "Put the 2 longest sides together.",
+    "steps": [
+     "Put the 2 longest sides of the triangles together.",
+     "The 2 triangles make a square."
+    ],
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "answer": "Yes",
+    "slips": [
+     {
+      "a": [
+       "No"
+      ],
+      "say": "Try again with the 2 longest sides touching."
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A square is cut corner to corner into 2 triangles. 3 squares are cut the same way. How many triangles are there?",
+    "hint": "Each square makes 2 triangles. Count in 2s.",
+    "steps": [
+     "1 square makes 2 triangles.",
+     "3 squares make 2, 4, 6 triangles.",
+     "There are 6 triangles."
+    ],
+    "answer": 6,
+    "slips": [
+     {
+      "a": [
+       3,
+       5
+      ],
+      "say": "Each square makes 2 triangles, not 1. Count in 2s."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "A square is cut corner to corner into 2 triangles. {n} squares are cut the same way. How many triangles are there?",
+     "answer": "2*n",
+     "hint": "Each square makes 2 triangles. Count in 2s.",
+     "steps": [
+      "1 square makes 2 triangles.",
+      "{n} squares make {ans} triangles."
+     ]
+    }
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ben has breakfast at 7:30. Is it am or pm?",
+    "options": [
+     "am",
+     "pm"
+    ],
+    "answer": "am",
+    "hint": "Breakfast is in the morning.",
+    "steps": [
+     "Breakfast is in the morning.",
+     "The morning is am."
+    ],
+    "slips": [
+     {
+      "a": [
+       "pm"
+      ],
+      "say": "pm is the afternoon and evening. Is breakfast then?"
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ravi has tea at 6:20 in the evening. Is it am or pm?",
+    "options": [
+     "am",
+     "pm"
+    ],
+    "answer": "pm",
+    "hint": "Tea is in the evening.",
+    "steps": [
+     "Tea in the evening is after noon.",
+     "After noon is pm."
+    ],
+    "slips": [
+     {
+      "a": [
+       "am"
+      ],
+      "say": "am is the morning. Is tea then?"
+     }
+    ]
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A rectangle is made of 8 squares. Rectangles that are each 2 squares long cover it. How many rectangles are needed?",
+    "easier": "c5",
+    "hint": "Each rectangle covers 2 squares. Count in 2s up to 8.",
+    "steps": [
+     "Each rectangle covers 2 squares.",
+     "2, 4, 6, 8: 4 rectangles.",
+     "4 rectangles cover the 8 squares."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       8,
+       2
+      ],
+      "say": "Each rectangle covers 2 squares. How many 2s make 8?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       4,
+       6,
+       8,
+       10,
+       12
+      ]
+     },
+     "q": "A rectangle is made of {n} squares. Rectangles that are each 2 squares long cover it. How many rectangles are needed?",
+     "answer": "n//2",
+     "hint": "Each rectangle covers 2 squares. Count in 2s.",
+     "steps": [
+      "Each rectangle covers 2 squares.",
+      "Count in 2s up to {n}.",
+      "{ans} rectangles cover the {n} squares."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "The square has 2 lines from corner to corner. How many triangles are there in all? Count the small ones and the big ones.",
+    "easier": "c5",
+    "hint": "4 small triangles touch the middle point. Then find the big triangles that use 3 corners of the square.",
+    "steps": [
+     "There are 4 small triangles next to the middle.",
+     "There are 4 big triangles: each is made of 2 small ones.",
+     "4 and 4 make 8 triangles."
+    ],
+    "answer": 8,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the small triangles only. Look for the big ones too."
+     }
+    ],
+    "fig": {
+     "type": "network",
+     "n": 4,
+     "all": true
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "True or False: the fewest pieces that make a rectangle of 2 rows of 3 squares, with squares and rectangles, is 3.",
+    "easier": "c2",
+    "hint": "A rectangle covers 2 squares. How many cover 6 squares?",
+    "steps": [
+     "A rectangle piece covers 2 squares.",
+     "2, 4, 6: 3 rectangles cover 6 squares.",
+     "No piece covers more than 2, so 3 is the fewest."
+    ],
+    "options": [
+     "True",
+     "False"
+    ],
+    "answer": "True",
+    "slips": [
+     {
+      "a": [
+       "False"
+      ],
+      "say": "3 rectangles of 2 squares cover 6 squares. Could 2 pieces do it?"
+     }
+    ]
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A rectangle is 2 rows of 4 squares. Rectangles that are each 2 squares long cover it. What is the fewest number of pieces?",
+    "easier": "t1",
+    "hint": "Count the squares in all. A piece covers at most 2 squares.",
+    "steps": [
+     "2 rows of 4 squares is 8 squares.",
+     "A piece covers at most 2 squares.",
+     "8 shared into 2s is 4 pieces."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       8,
+       2
+      ],
+      "say": "A piece covers 2 squares. How many pieces for 8 squares?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "q": "A rectangle is 2 rows of {n} squares. Rectangles that are each 2 squares long cover it. What is the fewest number of pieces?",
+     "answer": "n",
+     "hint": "Count the squares in all. A piece covers at most 2 squares.",
+     "steps": [
+      "2 rows of {n} squares is {n} 2s.",
+      "A piece covers at most 2 squares.",
+      "The fewest is {ans} pieces."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "The staircase is made of 6 squares. Use squares and rectangles that are each 2 squares long. What is the fewest number of pieces?",
+    "easier": "t1",
+    "hint": "Try to cover the staircase with rectangles first. Which squares are left over?",
+    "steps": [
+     "The top square and the bottom right square each have only 1 neighbour.",
+     "Put a rectangle on each of them. The 2 squares left over do not touch.",
+     "They need 2 squares: 2 rectangles and 2 squares make 4 pieces."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       3,
+       6
+      ],
+      "say": "3 rectangles cannot cover the staircase. Try it with your pieces."
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "squares",
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "cell": 44,
+     "size": "m"
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Draw a figure with exactly 3 triangles and 2 squares. Ask a grown-up to count each kind and check.",
+    "easier": "c1",
+    "hint": "Draw a roof with 2 triangles and add 1 more triangle somewhere. Then add 2 squares.",
+    "steps": [
+     "Draw the shapes with whole sides touching.",
+     "Count the triangles and the squares.",
+     "Ask a grown-up to count too."
+    ]
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 40, use one menu activity then.",
+   "A few children ahead: a few children may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "A child says: 2 squares always make a rectangle. Is that always true? Try putting the 2 squares together in different ways.",
+    "rec": "Recording: pause. Do 2 squares always make a rectangle? Try putting them together in different ways.",
+    "answer": "Not always. 2 squares make a rectangle when whole sides touch. If only a corner touches, or one square is slid along the other, the shape is not a rectangle."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Build a figure with 5 pieces. Ask a grown-up to count each kind of shape and say how many pieces in all. Check together.",
+    "rec": "Recording: pause. Build a figure with 5 pieces. Ask a grown-up to count each kind of shape.",
+    "answer": "No single answer. A good puzzle has pieces with whole sides touching, and the count of each kind adds up to 5."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never put shapes together. Show how 2 triangles make a square: the 2 longest sides touch.",
+    "rec": "Recording: pause. Show a grown-up how 2 triangles make a square, with the 2 longest sides touching.",
+    "answer": "Put the 2 longest sides of the 2 triangles together. The 2 triangles make a square."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We put shapes together and looked inside figures. Your child made a square and a bigger triangle from 2 triangles, built a house and a boat from squares and triangles, and counted each kind of shape in a picture. Putting shapes together and naming the shapes in a figure are Primary 1 ideas.",
+  "words": [
+   "figure: a picture made of shapes",
+   "piece: one of the paper shapes in the kit",
+   "whole side: the full length of a side",
+   "half circle, quarter circle: half or a quarter of a circle",
+   "fewest: the smallest number"
+  ],
+  "try_home": [
+   "Put 2 triangles together so whole sides touch. What shapes can you make? Draw them.",
+   "Build a house or a boat with the pieces. Ask: how many of each shape did you use?",
+   "Look at a window, a plate or a book. Ask: what shapes can you see?"
+  ],
+  "ask": [
+   "Which sides are touching?",
+   "How many of each shape?",
+   "Did you count any shape twice?"
+  ],
+  "when_stuck": "Let your child try the pieces and wait 10 seconds before helping. Asking 'Which sides are touching?' works better than moving the pieces for them. Please do not say that 2 triangles always make a square: it depends which sides touch. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson, Term 4 Lesson 3: Copy on the Grid. Online practice: your tutor shares the link (please do not share it). The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off.",
+  "quote": "Big shapes are made of small shapes. Count one kind at a time.",
+  "report_line": "Your child is learning to build figures from shapes and to count the shapes inside a figure. This week: squares, triangles and rectangles in pictures.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make problems of their own.",
+  "next_materials": [
+   "Your Term 4 book (Book 7) open at the next lesson: its grid page is not cut, nothing to cut",
+   "A button or a small coin as a counter (a button is best)",
+   "A ruler (the one you keep at home), a pencil and a rubber",
+   "Keep the shape pieces in their envelope"
+  ]
+ },
+ "safeguarding": [
+  "The shape pieces are small and have corners: they stay on the table, nothing goes in the mouth or ears, and they are kept away from younger brothers and sisters. No scissors, matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cuts the 20 pieces beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a figure up to the camera: a gallery view shows everyone. Children say what they built, tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Making shapes with the arms is quiet and small; a child may stay seated and make the shapes with their hands.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed.",
+  "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers on three are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back)."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first, with your own pieces and a ruler. Check: S1 4, 3, 1 and 1 more; S2 a corner-to-corner line and half; S3 2 triangles and 2 squares; S4 4, 3, 12; S5 rectangle, circle, half circle; T1 one line across the bottom of the roof, then 2 more lines; T2 triangles 5, squares 6, circles 3; T3 4, 4 and 8; G1 6 and 3; G2 true, false, true, false; G3 any figure with exactly 2 triangles, 1 square and 1 rectangle; I1 a square first, then 3 different shapes in all; E1 7; E2 Yes; E3 3.",
+  "Tell families before this lesson (the goodbye in Term 4 Lesson 1 says so): the shape-pieces pages (pages 6 and 7 of the Term 4 book) are torn out along the dashed line; a grown-up cuts out the 20 pieces (6 squares, 3 rectangles, 6 triangles, 2 half circles, 2 quarter circles, 1 circle) and keeps them in an envelope; a paper square from last lesson and a ruler. Print the kit at 100 percent so a square keeps its 3 cm sides. No printer: a grown-up cuts 6 squares (3 cm), 3 rectangles (3 cm by 6 cm) and 6 triangles (a 3 cm square cut corner to corner) from card or paper.",
+  "Have the slides open. Have your own pieces to build on camera if you wish. Say piece, whole side, kind of shape and in all the same way every time. Do not say that 2 triangles always make a square. Do not write fraction notation.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Nobody holds paper or a figure up to the camera.",
+  "Be plain with families: counting and naming shapes in a picture, and putting shapes together, are school Primary 1 work (2D Shapes 1.2 and 1.3). No Primary 1 school paper in the sample we studied asks a child to build a figure from pieces, so the building wording is marked unverified. Counting every triangle of every size (Every Triangle), the fewest pieces and which sets of pieces make a figure go beyond Primary 1 on purpose, at Think harder and Go further only. Do not call the lesson MOE-aligned.",
+  "Slides s-explore1, s-explore2, s-m2, s-m3 and s-m5 keep the answer off the screen while you ask: it appears on the slide after. Read every question aloud, including the numbers under the shapes and the shape names: the pictures on the slides are small."
+ ],
+ "workbook": {
+  "header": "Shapes in a figure: build and count",
+  "hint_p1": "Use your pieces to check. Count one kind of shape at a time.",
+  "hint_p2": "Use your pieces and your ruler. Whole sides must touch.",
+  "hint_p3": "Use your pieces or draw it. Choose any question, in any order.",
+  "hint_p4": "Use your pieces. Choose any question. You do not have to finish them all.",
+  "choice_after": 2,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your pieces or draw it. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "shape_pieces",
+    "page": 1,
+    "title": "Kit page 1: squares and rectangles",
+    "intro": "A grown-up cuts out all 9 pieces before the lesson: 6 squares and 3 rectangles. Each square is 3 cm, and a rectangle is as long as 2 squares. Print at 100 percent. No printer or no cutting? A grown-up cuts them from card or paper. Keep the pieces in an envelope."
+   },
+   {
+    "type": "shape_pieces",
+    "page": 2,
+    "title": "Kit page 2: triangles and curved pieces",
+    "intro": "A grown-up cuts out all 11 pieces before the lesson: 6 triangles (each is half of a square), 2 half circles, 2 quarter circles and 1 circle. Print at 100 percent. Keep the pieces in the same envelope as page 1."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Every Triangle",
+  "where": [
+   "T3",
+   "G1",
+   "G2"
+  ],
+  "text": "A square with both corner-to-corner lines holds 8 triangles: 4 small ones next to the middle and 4 big ones, each made of 2 small ones (T3). Counting triangles of every size is not a Primary 1 outcome; naming and counting shapes in a picture is. G1 and G2 ask for the fewest pieces (a 2 by 3 rectangle needs 3, not 6; the staircase needs 4) and which sets of pieces make a figure (the LIST type): enrichment at Go further only. T1 (split a figure with a ruler) is the DIAG item and T2 (count each kind into a table) the TAB item. Named puzzle: Every Triangle.",
+  "parent": "Counting every triangle of every size in a square with 2 lines, finding the fewest pieces that make a figure, and saying which sets of pieces make it go past the school Primary 1 syllabus on purpose."
+ }
+}
