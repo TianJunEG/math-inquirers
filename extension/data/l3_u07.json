@@ -10,7 +10,7 @@
  "learn": {
   "intro": "Area is the flat space inside a shape. We count squares and write cm². Perimeter is the distance all the way round the edge, in cm.",
   "example": {
-   "problem": "The figure is made of squares that are 1 cm by 1 cm. Find its area and its perimeter.",
+   "problem": "The figure is made of squares with sides of 1 cm. What are its area and its perimeter?",
    "figure": {
     "type": "l3_cells",
     "rows": [
@@ -33,7 +33,8 @@
    "steps": [
     "Area: count the squares, or length × width.",
     "Perimeter: add all the sides.",
-    "Rectangle: perimeter = 2 × (length + width)."
+    "Rectangle: perimeter = 2 × (length + width).",
+    "Write cm for the perimeter and cm² for the area."
    ]
   },
   "try": {
@@ -80,15 +81,14 @@
     "list": true
    },
    "explanation": "Area: 8 × 3 = 24 cm². Perimeter: 8 + 3 + 8 + 3 = 22 cm, or 2 × (8 + 3) = 22 cm."
-  },
-  "tight": true
+  }
  },
  "items": [
   {
    "id": "L3U07-S01",
    "tier": "start",
    "page": 1,
-   "text": "Each small square is 1 cm by 1 cm. Find the area and the perimeter of each figure.",
+   "text": "Every square in the picture has sides of 1 cm. What are the area and the perimeter of each figure?",
    "parts": [
     {
      "label": "a",
@@ -128,12 +128,12 @@
     },
     {
      "label": "d",
-     "text": "The 2 figures with the same area but different perimeters are   {circ:A and B|A and C|B and C}",
+     "text": "Same area, different perimeter:   {circ:A,B|A,C|B,C}",
      "answer": {
       "value": [
-       "B and C"
+       "B,C"
       ],
-      "text": "B and C"
+      "text": "B,C"
      }
     }
    ],
@@ -170,7 +170,7 @@
    "id": "L3U07-S02",
    "tier": "start",
    "page": 1,
-   "text": "Find the area and the perimeter of each rectangle.",
+   "text": "What are the area and the perimeter of each rectangle?",
    "parts": [
     {
      "label": "a",
@@ -227,7 +227,7 @@
     },
     {
      "label": "c",
-     "text": "A square has a perimeter of 36 cm. Each side is {b} cm.",
+     "text": "A square garden has a fence 36 m long all round. Each side is {b} m.",
      "answer": {
       "value": [
        "9"
@@ -236,7 +236,8 @@
      }
     }
    ],
-   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 cm."
+   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 cm.",
+   "partsrow": true
   },
   {
    "id": "L3U07-S04",
@@ -265,7 +266,8 @@
      }
     }
    ],
-   "explanation": "Length + width is half of the perimeter: 30 ÷ 2 = 15. So the width is 15 - 9 = 6 cm. The area is 9 × 6 = 54 cm²."
+   "explanation": "Length + width is half of the perimeter: 30 ÷ 2 = 15. So the width is 15 - 9 = 6 cm. The area is 9 × 6 = 54 cm².",
+   "partsrow": true
   },
   {
    "id": "L3U07-S05",
@@ -304,13 +306,14 @@
      }
     }
    ],
-   "explanation": "(a) 15 ÷ 3 = 5. (b) 9 ÷ 3 = 3. (c) 5 rows of 3 tiles make 5 × 3 = 15 tiles."
+   "explanation": "(a) 15 ÷ 3 = 5. (b) 9 ÷ 3 = 3. (c) 5 rows of 3 tiles make 5 × 3 = 15 tiles.",
+   "partsrow": true
   },
   {
    "id": "L3U07-S06",
    "tier": "start",
    "page": 2,
-   "text": "Mei has 14 cm of wire. She bends all of it into a rectangle. Each side is a whole number of cm. List ALL the rectangles.",
+   "text": "Mei has 14 cm of wire. She bends all of it into a rectangle. All the sides are whole numbers of cm. List ALL the rectangles.",
    "parts": [
     {
      "label": "a",
@@ -349,7 +352,7 @@
    "id": "L3U07-S07",
    "tier": "start",
    "page": 2,
-   "text": "Find the 2 missing sides a and b. Then find the area and the perimeter of the figure.",
+   "text": "Find the missing sides a and b first. Then find the area, and then the perimeter.",
    "parts": [
     {
      "label": "a",
@@ -423,7 +426,7 @@
      ]
     ],
     "k": 34,
-    "width_mm": 96,
+    "width_mm": 88,
     "labels": [
      {
       "side": 0,
@@ -455,8 +458,8 @@
   {
    "id": "L3U07-S08",
    "tier": "start",
-   "page": 2,
-   "text": "Each small square is 1 cm by 1 cm.",
+   "page": 3,
+   "text": "Every square in the picture has sides of 1 cm.",
    "parts": [
     {
      "label": "a",
@@ -507,41 +510,13 @@
      "XXXX..",
      "XX...."
     ],
-    "width_mm": 74,
+    "width_mm": 64,
     "cell": 52
-   }
+   },
+   "partsrow": true
   },
   {
    "id": "L3U07-S09",
-   "tier": "start",
-   "page": 3,
-   "text": "Siti has a rectangular garden, 9 m long and 5 m wide. A fence goes all round it. She covers the garden with grass.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "The fence is {b} m long.",
-     "answer": {
-      "value": [
-       "28"
-      ],
-      "text": "28"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The grass covers {b} m².",
-     "answer": {
-      "value": [
-       "45"
-      ],
-      "text": "45"
-     }
-    }
-   ],
-   "explanation": "(a) The fence is the perimeter: 2 × (9 + 5) = 28 m. (b) The grass covers the area: 9 × 5 = 45 m²."
-  },
-  {
-   "id": "L3U07-S10",
    "tier": "start",
    "page": 3,
    "text": "Mei draws a rectangle 10 cm long and 2 cm wide. Ben draws a square with the same perimeter.",
@@ -580,10 +555,10 @@
    "explanation": "(a) Mei’s perimeter is 2 × (10 + 2) = 24 cm, so Ben’s side is 24 ÷ 4 = 6 cm. (b) Ben’s area is 6 × 6 = 36 cm² and Mei’s area is 10 × 2 = 20 cm². (c) 36 - 20 = 16 cm²."
   },
   {
-   "id": "L3U07-S11",
+   "id": "L3U07-S10",
    "tier": "start",
    "page": 3,
-   "text": "The figure of 4 squares has a perimeter of 10 cm. Ali adds ONE more square to it, in the place A, B or C.",
+   "text": "The figure has a perimeter of 10 cm. Ali adds ONE square at A, B or C.",
    "parts": [
     {
      "label": "a",
@@ -622,68 +597,7 @@
    "figside": true
   },
   {
-   "id": "L3U07-S12",
-   "tier": "start",
-   "page": 3,
-   "text": "Both shapes are made of 8 squares. Each square is 1 cm by 1 cm.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "The row has a perimeter of {b} cm.",
-     "answer": {
-      "value": [
-       "18"
-      ],
-      "text": "18"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The 2 by 4 rectangle has a perimeter of {b} cm.",
-     "answer": {
-      "value": [
-       "12"
-      ],
-      "text": "12"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The shape with the smaller perimeter is the   {circ:row|2 by 4 rectangle}",
-     "answer": {
-      "value": [
-       "2 by 4 rectangle"
-      ],
-      "text": "2 by 4 rectangle"
-     }
-    }
-   ],
-   "explanation": "(a) The row is 8 cm long and 1 cm wide: 2 × (8 + 1) = 18 cm. (b) 2 × (4 + 2) = 12 cm. (c) Both have area 8 cm², but the shape that is nearer to a square has the smaller perimeter.",
-   "figure": {
-    "type": "l3_cells",
-    "shapes": [
-     {
-      "rows": [
-       "XXXXXXXX"
-      ],
-      "label": "row",
-      "cell": 40
-     },
-     {
-      "rows": [
-       "XXXX",
-       "XXXX"
-      ],
-      "label": "2 by 4",
-      "cell": 40
-     }
-    ],
-    "cell": 40,
-    "width_mm": 120
-   }
-  },
-  {
-   "id": "L3U07-S13",
+   "id": "L3U07-S11",
    "tier": "start",
    "page": 3,
    "text": "A square room has a floor area of 64 m².",
@@ -709,7 +623,8 @@
      }
     }
    ],
-   "explanation": "(a) 8 × 8 = 64, so each side is 8 m. (b) The border is the perimeter: 4 × 8 = 32 m."
+   "explanation": "(a) 8 × 8 = 64, so each side is 8 m. (b) The border is the perimeter: 4 × 8 = 32 m.",
+   "partsrow": true
   },
   {
    "id": "L3U07-T01",
@@ -752,7 +667,7 @@
    "hint": "Each rectangle is 8 cm by 4 cm. Draw it.",
    "space": {
     "rows": [
-     "Draw the cut:"
+     "Working:"
     ]
    }
   },
@@ -760,7 +675,7 @@
    "id": "L3U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "A rectangle has an area of 36 cm² and a perimeter of 26 cm.",
+   "text": "A rectangle has area 36 cm² and perimeter 26 cm.",
    "parts": [
     {
      "label": "a",
@@ -829,7 +744,7 @@
      }
     }
    ],
-   "explanation": "(a) 9 × 6 = 54, and 54 - 6 = 48 m². (b) Cutting a corner does not change the perimeter: 2 × (9 + 6) = 30 m. (c) A notch in the middle of a side takes away 3 m of edge and adds 3 + 2 + 2 = 7 m of new edge, so the perimeter grows by 4: 34 m.",
+   "explanation": "(a) 9 × 6 = 54, and 54 - 6 = 48 m². (b) Cutting a corner does not change the perimeter: 2 × (9 + 6) = 30 m. (c) A notch in the middle of a side takes away 3 m of edge. It adds 3 + 2 + 2 = 7 m of new edge. So the perimeter grows by 4 m: 34 m.",
    "figure": {
     "type": "l3_poly",
     "pts": [
@@ -911,41 +826,6 @@
   },
   {
    "id": "L3U07-G02",
-   "tier": "go",
-   "page": 5,
-   "text": "3 equal squares are joined in a row to make a rectangle. Its perimeter is 40 cm.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "Each square has sides of {b} cm.",
-     "answer": {
-      "value": [
-       "5"
-      ],
-      "text": "5"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The rectangle has an area of {b} cm².",
-     "answer": {
-      "value": [
-       "75"
-      ],
-      "text": "75"
-     }
-    }
-   ],
-   "explanation": "The rectangle is 3 square sides long and 1 side wide, so its perimeter is 3 + 1 + 3 + 1 = 8 sides. 40 ÷ 8 = 5 cm. The area is 3 squares of 5 × 5 = 25 cm², so 75 cm².",
-   "hint": "The rectangle is 3 sides of a square long and 1 side wide.",
-   "space": {
-    "rows": [
-     "Draw it:"
-    ]
-   }
-  },
-  {
-   "id": "L3U07-G03",
    "tier": "go",
    "page": 5,
    "text": "Beyond Level 3: A path round a pond.\nA pond is 6 m long and 4 m wide. A path 1 m wide goes all round the pond.",
@@ -1036,7 +916,7 @@
    "hint": "Find the area of the whole rectangle. Take away the pond."
   },
   {
-   "id": "L3U07-G04",
+   "id": "L3U07-G03",
    "tier": "go",
    "page": 5,
    "text": "Beyond Level 3: The largest square tile.\nA floor is 12 m long and 10 m wide. It is covered exactly with square tiles of one size. The side of a tile is a whole number of metres.",
@@ -1100,7 +980,7 @@
    "id": "L3U07-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Each small square is 1 cm by 1 cm. The area is {b} cm². The perimeter is {b} cm.",
+   "text": "Every square has sides of 1 cm. The area is {b} cm². The perimeter is {b} cm.",
    "answer": {
     "value": [
      "7",
@@ -1117,7 +997,7 @@
      "XX.",
      "XX."
     ],
-    "width_mm": 48,
+    "width_mm": 36,
     "cell": 52
    },
    "figright": true

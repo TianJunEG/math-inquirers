@@ -313,3 +313,29 @@ def turtle(spec, w=None):
 
 
 FIGS['l6_turtle'] = turtle
+
+
+# ================================================================================================ clock face
+def clock(spec, w=None):
+    """A 12-hour clock face.  spec: hand (hour 1-12, drawn as one hand), ring [hours] (numbers drawn with a ring), r (mm), title."""
+    import math
+    r = spec.get('r', 19) * U
+    cx, cy = r + 14, r + 14 + (22 if spec.get('title') else 0)
+    P = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="{NAVY}" stroke-width="3.6"/>']
+    for h in range(1, 13):
+        a = math.radians(h * 30)
+        P.append(L(cx + (r - 8) * math.sin(a), cy - (r - 8) * math.cos(a), cx + r * math.sin(a), cy - r * math.cos(a), 3))
+        tx, ty = cx + (r - 26) * math.sin(a), cy - (r - 26) * math.cos(a)
+        if h in spec.get('ring', []):
+            P.append(f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="15" fill="none" stroke="{NAVY}" stroke-width="3.4"/>')
+        P.append(T(tx, ty + 7, h, 19, weight=800))
+    if spec.get('hand'):
+        a = math.radians(spec['hand'] * 30)
+        P.append(L(cx, cy, cx + (r - 40) * math.sin(a), cy - (r - 40) * math.cos(a), 5.5))
+    P.append(f'<circle cx="{cx}" cy="{cy}" r="6" fill="{NAVY}"/>')
+    if spec.get('title'):
+        P.append(T(cx, 18, spec['title'], 17))
+    return wrap(''.join(P), 2 * r + 28, 2 * r + 28 + (22 if spec.get('title') else 0), 'clock face', w)
+
+
+FIGS['l6_clock'] = clock

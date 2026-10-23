@@ -66,7 +66,7 @@ I.append(IT(U, 'S', 4, 2,
             f'All the turns add to 360{D}. The first 4 add to 60 + 85 + 110 + 50 = 305, so the last turn is 360 {M} 305 = 55{D}. The inside angle there is 180 {M} 55 = 125{D}. '
             f'The 5 inside angles add to 5 {X} 180 {M} 360 = 540{D}.',
             parts=[P('a', 'The last turn is {b}°.', [55]),
-                   P('b', 'The inside angle at that corner is {b}°.', [125]),
+                   P('b', 'The inside angle there is {b}°.', [125]),
                    P('c', 'The 5 inside angles add up to {b}°.', [540])],
             partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'S', 5, 2,
@@ -86,13 +86,13 @@ I.append(IT(U, 'S', 6, 2,
                    P('c', 'Each inside angle is {b}°.', [168])],
             figside=True))
 I.append(IT(U, 'S', 7, 2,
-            'Circle every turn angle that draws a regular polygon with a whole number of sides.',
+            'Circle each turn angle that draws a regular polygon. The number of sides must be a whole number.',
             f'The turn must divide 360 exactly. 360 ÷ 24 = 15 sides, ÷ 30 = 12, ÷ 45 = 8, ÷ 72 = 5 and ÷ 120 = 3 sides. '
             f'360 ÷ 50, 64, 100 and 150 are not whole numbers.',
             fig=grid([['24°', '30°', '45°', '50°', '64°', '72°', '100°', '120°', '150°']], [15] * 9, ch=10),
             answer=A([24, 30, 45, 72, 120], f'24{D}, 30{D}, 45{D}, 72{D}, 120{D}', list=True, unordered=True)))
 I.append(IT(U, 'S', 8, 3,
-            'A turtle draws a 10-point star that goes round the centre 3 times. It runs repeat 10 [move 80, turn ↻ ?].',
+            'A turtle draws a star with 10 points and winds round the centre 3 times. It runs repeat 10 [move 80, turn ↻ ?].',
             f'Going round 3 times, the turtle turns 3 {X} 360 = 1080{D} in all. 1080 ÷ 10 = 108{D} at each point. The angle at each point is 180 {M} 108 = 72{D}.',
             parts=[P('a', 'The total turning is {b}°.', [1080]),
                    P('b', 'Each turn is {b}°.', [108]),
@@ -107,13 +107,13 @@ I.append(IT(U, 'S', 9, 3,
                    P('c', 'Change 50 to 80. It walks {b} steps.', [360])],
             figside=True))
 I.append(IT(U, 'S', 10, 3,
-            'Regular shapes fit around a point with no gap and no overlap when their inside angles add to 360°.',
+            'Shapes fit around a point when their inside angles add to 360°. Check each group.',
             f'Triangle angle 60: 6 {X} 60 = 360. Square angle 90: 3 {X} 90 = 270, which is less than 360, so there is a gap of 90. Hexagon angle 120: 2 {X} 120 + 2 {X} 60 = 360.',
             parts=[P('a', '6 triangles: {b}°', [360]),
                    P('b', '3 squares: {b}°. Is there a gap?   {circ:Yes|No}', [270, 'Yes'], '270°, Yes'),
                    P('c', '2 hexagons and 2 triangles: {b}°', [360])]))
 I.append(IT(U, 'S', 11, 3,
-            'In a regular polygon the inside angle is a number of times the turn angle.',
+            'Each inside angle is a few times the turn angle. Find the number of sides.',
             f'Turn + inside = 180. If the inside angle is k times the turn, then (k + 1) {X} turn = 180. k = 2: turn 60, so 6 sides. k = 5: turn 30, so 12 sides. k = 8: turn 20, so 18 sides.',
             parts=[P('a', '2 times as big: {b} sides.', [6]),
                    P('b', '5 times as big: {b} sides.', [12]),
@@ -130,7 +130,7 @@ I.append(IT(U, 'T', 1, 4,
                    P('c', 'It first faces the start direction after {b} repeats.', [18])],
             hint='Find the first multiple of 100 that is also a multiple of 360.', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 2, 4,
-            'The inside angles of a regular polygon add up to 2340°.',
+            'All the inside angles of a regular polygon total 2340°.',
             f'The sum of the inside angles is (n {M} 2) {X} 180, so n {M} 2 = 2340 ÷ 180 = 13 and n = 15. Each inside angle is 2340 ÷ 15 = 156{D}. The turn is 180 {M} 156 = 24{D}. '
             f'Check: 360 ÷ 24 = 15.',
             parts=[P('a', 'The polygon has {b} sides.', [15]),
@@ -179,7 +179,7 @@ I.append(IT(U, 'C', 2, 6,
             f'360 ÷ 45 = 8 sides.',
             answer=A([8], '8')))
 I.append(IT(U, 'C', 3, 6,
-            f'Each inside angle of a regular polygon is 156°. The polygon has {{b}} sides.',
+            f'A regular polygon has inside angles of 156° each. It has {{b}} sides.',
             f'The turn is 180 {M} 156 = 24{D}, and 360 ÷ 24 = 15 sides.',
             answer=A([15], '15')))
 I.append(IT(U, 'C', 4, 6,
@@ -187,6 +187,5 @@ I.append(IT(U, 'C', 4, 6,
             f'The turns add to 360. 95 + 80 + 105 = 280, so the last turn is 360 {M} 280 = 80{D}.',
             answer=A([80], '80°')))
 
-learn['tight'] = True
 write_unit(7, 'Turtle geometry', 'Angles in polygons',
            'I can find the turn angle and the inside angle of a regular polygon. I can predict what a turtle program draws.', learn, I)

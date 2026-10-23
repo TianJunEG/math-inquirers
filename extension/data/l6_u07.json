@@ -64,8 +64,7 @@
     "text": "20°, 160°"
    },
    "explanation": "360° ÷ 18 = 20° for the turn. The inside angle is 180° − 20° = 160°."
-  },
-  "tight": true
+  }
  },
  "items": [
   {
@@ -240,7 +239,7 @@
     },
     {
      "label": "b",
-     "text": "The inside angle at that corner is {b}°.",
+     "text": "The inside angle there is {b}°.",
      "answer": {
       "value": [
        "125"
@@ -312,10 +311,102 @@
    "explanation": "Turn: 360 ÷ 18 = 20°. Inside angle: 180 − 20 = 160°. All 18 inside angles: 18 × 160 = 2880°. Check with (18 − 2) × 180 = 16 × 180 = 2880."
   },
   {
+   "id": "L6U07-S07",
+   "tier": "start",
+   "text": "Circle each turn angle that draws a regular polygon. The number of sides must be a whole number.",
+   "page": 2,
+   "answer": {
+    "value": [
+     "24",
+     "30",
+     "45",
+     "72",
+     "120"
+    ],
+    "text": "24°, 30°, 45°, 72°, 120°",
+    "list": true,
+    "unordered": true
+   },
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "24°",
+      "30°",
+      "45°",
+      "50°",
+      "64°",
+      "72°",
+      "100°",
+      "120°",
+      "150°"
+     ]
+    ],
+    "cw": [
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15
+    ],
+    "rowhead": false,
+    "ch": 10
+   },
+   "explanation": "The turn must divide 360 exactly. 360 ÷ 24 = 15 sides, ÷ 30 = 12, ÷ 45 = 8, ÷ 72 = 5 and ÷ 120 = 3 sides. 360 ÷ 50, 64, 100 and 150 are not whole numbers."
+  },
+  {
+   "id": "L6U07-S08",
+   "tier": "start",
+   "text": "A turtle draws a star with 10 points and winds round the centre 3 times. It runs repeat 10 [move 80, turn ↻ ?].",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The total turning is {b}°.",
+     "answer": {
+      "value": [
+       "1080"
+      ],
+      "text": "1080"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each turn is {b}°.",
+     "answer": {
+      "value": [
+       "108"
+      ],
+      "text": "108"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The angle at each point is {b}°.",
+     "answer": {
+      "value": [
+       "72"
+      ],
+      "text": "72"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Going round 3 times, the turtle turns 3 × 360 = 1080° in all. 1080 ÷ 10 = 108° at each point. The angle at each point is 180 − 108 = 72°."
+  },
+  {
    "id": "L6U07-S06",
    "tier": "start",
    "text": "A turtle draws a regular shape with 30 sides. Fill in the blanks.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -369,98 +460,6 @@
    },
    "explanation": "30 sides need 30 repeats. The turn is 360 ÷ 30 = 12°. The inside angle is 180 − 12 = 168°.",
    "figside": true
-  },
-  {
-   "id": "L6U07-S07",
-   "tier": "start",
-   "text": "Circle every turn angle that draws a regular polygon with a whole number of sides.",
-   "page": 2,
-   "answer": {
-    "value": [
-     "24",
-     "30",
-     "45",
-     "72",
-     "120"
-    ],
-    "text": "24°, 30°, 45°, 72°, 120°",
-    "list": true,
-    "unordered": true
-   },
-   "figure": {
-    "type": "l6_grid",
-    "rows": [
-     [
-      "24°",
-      "30°",
-      "45°",
-      "50°",
-      "64°",
-      "72°",
-      "100°",
-      "120°",
-      "150°"
-     ]
-    ],
-    "cw": [
-     15,
-     15,
-     15,
-     15,
-     15,
-     15,
-     15,
-     15,
-     15
-    ],
-    "rowhead": false,
-    "ch": 10
-   },
-   "explanation": "The turn must divide 360 exactly. 360 ÷ 24 = 15 sides, ÷ 30 = 12, ÷ 45 = 8, ÷ 72 = 5 and ÷ 120 = 3 sides. 360 ÷ 50, 64, 100 and 150 are not whole numbers."
-  },
-  {
-   "id": "L6U07-S08",
-   "tier": "start",
-   "text": "A turtle draws a 10-point star that goes round the centre 3 times. It runs repeat 10 [move 80, turn ↻ ?].",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The total turning is {b}°.",
-     "answer": {
-      "value": [
-       "1080"
-      ],
-      "text": "1080"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Each turn is {b}°.",
-     "answer": {
-      "value": [
-       "108"
-      ],
-      "text": "108"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The angle at each point is {b}°.",
-     "answer": {
-      "value": [
-       "72"
-      ],
-      "text": "72"
-     }
-    }
-   ],
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
-   "explanation": "Going round 3 times, the turtle turns 3 × 360 = 1080° in all. 1080 ÷ 10 = 108° at each point. The angle at each point is 180 − 108 = 72°."
   },
   {
    "id": "L6U07-S09",
@@ -532,7 +531,7 @@
   {
    "id": "L6U07-S10",
    "tier": "start",
-   "text": "Regular shapes fit around a point with no gap and no overlap when their inside angles add to 360°.",
+   "text": "Shapes fit around a point when their inside angles add to 360°. Check each group.",
    "page": 3,
    "parts": [
     {
@@ -572,7 +571,7 @@
   {
    "id": "L6U07-S11",
    "tier": "start",
-   "text": "In a regular polygon the inside angle is a number of times the turn angle.",
+   "text": "Each inside angle is a few times the turn angle. Find the number of sides.",
    "page": 3,
    "parts": [
     {
@@ -664,7 +663,7 @@
   {
    "id": "L6U07-T02",
    "tier": "think",
-   "text": "The inside angles of a regular polygon add up to 2340°.",
+   "text": "All the inside angles of a regular polygon total 2340°.",
    "page": 4,
    "parts": [
     {
@@ -904,7 +903,7 @@
   {
    "id": "L6U07-C03",
    "tier": "quiz",
-   "text": "Each inside angle of a regular polygon is 156°. The polygon has {b} sides.",
+   "text": "A regular polygon has inside angles of 156° each. It has {b} sides.",
    "page": 6,
    "answer": {
     "value": [
