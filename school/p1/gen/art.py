@@ -46,7 +46,7 @@ GLYPH_SIZE = {"apple": 11.0, "flower": 10.5, "star": 9.0, "ball": 9.0, "cat": 9.
 def osz(kind): return GLYPH_SIZE[kind]
 def opitch(kind): return GLYPH_SIZE[kind] + 0.8
 COUNT_KINDS = ["apple", "star", "ball", "cat", "dog", "flower", "drum", "boat"]
-NAMES.update({"ball": ("balls", "bowl", "bowls"), "cat": ("cats", "bag", "bags"), "dog": ("dogs", "box", "boxes"), "drum": ("drums", "box", "boxes"), "boat": ("boats", "box", "boxes")})
+
 
 from . import common as _c
 _c.OBJ_NAMES.update({'ball': ('balls', 'bowl', 'bowls'), 'cat': ('cats', 'bag', 'bags'), 'dog': ('dogs', 'box', 'boxes')})

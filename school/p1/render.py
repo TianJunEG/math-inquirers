@@ -264,7 +264,7 @@ def licence(school, bk):
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
             '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ". Registered office: " + REG_OFFICE) if DRAFT else "") + '</p>'
-            '<h3>Notes</h3><p>The licence is for the edition bought. The school name shown on each page is set when the booklet is made. '
+            '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line at the foot of each page, by hand or when the booklet is made. '
             f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
             f'<p>{NOT_AFFILIATED} The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
             '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')

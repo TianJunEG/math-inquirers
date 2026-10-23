@@ -67,11 +67,11 @@ def page21():
         names = rng.sample(PEOPLE, 6)
         o = rng.sample(objs, 6)
         for i, kd in enumerate(kinds):
-            if kd == "add": a = rng.randint(4, 7); b = rng.randint(2, 8)
-            elif kd == "sub": a = rng.randint(6, 8); b = rng.randint(2, a - 2)
-            elif kd in ("more", "fewer"): a = rng.randint(3, 7); b = rng.randint(2, 8)
-            elif kd == "diff": a = rng.randint(6, 8); b = rng.randint(2, a - 2)
-            else: a = rng.randint(3, 7); b = rng.randint(3, 7)
+            if kd == "add": a = rng.randint(4, 6); b = rng.randint(2, 9)
+            elif kd == "sub": a = 6; b = rng.randint(2, 4)
+            elif kd in ("more", "fewer"): a = rng.randint(3, 6); b = rng.randint(2, 9)
+            elif kd == "diff": a = 6; b = rng.randint(2, 4)
+            else: a = rng.randint(3, 6); b = rng.randint(3, 6)
             N = names[i]; M = rng.choice([x for x in PEOPLE if x != N])
             items.append(dict(kind=kd, a=a, b=b, N=N, M=M, obj=o[i]))
         ans = []
@@ -84,16 +84,16 @@ def page21():
         for it in items:
             wrong |= {it["a"] + it["b"], it["a"] - it["b"]}
         wrong = sorted(w for w in wrong if 0 <= w <= 20 and w not in ans)
-        table = make_code_table(ans, word, rng, 0, 20, n_decoy=2, near=(1, -1, 2, -2, 10, -10), tries=300, pool=wrong)
+        table = make_code_table(ans, word, rng, 0, 20, n_decoy=2, near=(1, -1, 2, -2, 10, -10), tries=60, pool=wrong)
         if table: break
     cards = []; texts = []; picobjs = []
     for i, it in enumerate(items):
         pl = OBJN[it["obj"]][1]
         lines = story_text(it["kind"], it["a"], it["b"], it["N"], it["M"], pl, it["obj"]); texts.append(lines)
-        s1, _, _ = row_svg(it["obj"], it["a"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"])))
+        s1, _, _ = row_svg(it["obj"], it["a"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=6)
         pics = [s1]; cnt = [it["a"]]
         if it["kind"] in ("diff", "total"):
-            s2, _, _ = row_svg(it["obj"], it["b"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"]))); pics.append(s2); cnt.append(it["b"])
+            s2, _, _ = row_svg(it["obj"], it["b"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=6); pics.append(s2); cnt.append(it["b"])
         picobjs.append(pics)
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
@@ -186,7 +186,7 @@ def page22():
     P = Page(no=22, title="Two-Step Stories", tier=2, topic="Two-step stories: add, take away, work backwards",
              strand="Number and Algebra - Whole Numbers", syll="2.1, 2.2, 2.5, 2.7 (two-step stories within 100: problem solving, work backwards, a printed fact)",
              ptype="Code-breaker (two-step stories)", mech="K1 code word (6 letters) + K7 put the answer back",
-             instr=["Read each story.", "Write the answer to each step.", "Use the code table."],
+             instr=["Read each story.", "Write the answer to each step.", "Code table: use the last box."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {it['s1']} then {it['fin']}" for i, it in enumerate(items)), check_result=f"Code word: {word}"),
              note=("Six stories with two boxes each. The second box (the end answer) is the one looked up in the code table. Two stories say 'at first': the pupil starts from the number now and works backwards. "
@@ -253,7 +253,7 @@ def page39():
         else: lines = ["Fact: 1 bird has 2 legs.", f"{N} counts {it['l']} legs.", "How many birds?"]
         texts.append(lines)
         if k in ("car", "bird"): pics = [row_svg(k, 1, size=14.0 if k == "car" else 12.5, pitch=15)[0]]
-        else: pics = [row_svg(it["obj"], it["n"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"])))[0]]
+        else: pics = [row_svg(it["obj"], it["n"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=6)[0]]
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",

@@ -1,47 +1,5 @@
 [
  {
-  "file": "outputs/print/bw/Math_Inquirers_P1_Workbook_PRINT.pdf",
-  "pages": 68,
-  "sheets": 34,
-  "mb": 14.83,
-  "pale_tint_dropped_max": 0.4003
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P2_Workbook_PRINT.pdf",
-  "pages": 74,
-  "sheets": 37,
-  "mb": 14.62,
-  "pale_tint_dropped_max": 0.3787
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P3_Workbook_PRINT.pdf",
-  "pages": 70,
-  "sheets": 35,
-  "mb": 17.41,
-  "pale_tint_dropped_max": 0.2463
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P4_Workbook_PRINT.pdf",
-  "pages": 76,
-  "sheets": 38,
-  "mb": 11.98,
-  "pale_tint_dropped_max": 0.4205
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P5_Workbook_PRINT.pdf",
-  "pages": 62,
-  "sheets": 31,
-  "mb": 10.48,
-  "pale_tint_dropped_max": 0.2575
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P6_Workbook_PRINT.pdf",
-  "pages": 62,
-  "sheets": 31,
-  "mb": 11.28,
-  "pale_tint_dropped_max": 0.2255
- },
- {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
   "pages": 22,
   "sheets": 11,
@@ -52,35 +10,35 @@
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_HomePack_PRINT.pdf",
   "pages": 12,
   "sheets": 6,
-  "mb": 1.11,
+  "mb": 1.1,
   "pale_tint_dropped_max": 0.0355
  },
  {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_Workbook_PRINT.pdf",
   "pages": 46,
   "sheets": 23,
-  "mb": 6.53,
+  "mb": 6.41,
   "pale_tint_dropped_max": 0.3378
  },
  {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
   "pages": 30,
   "sheets": 15,
-  "mb": 4.66,
+  "mb": 4.67,
   "pale_tint_dropped_max": 0.5064
  },
  {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_HomePack_PRINT.pdf",
   "pages": 14,
   "sheets": 7,
-  "mb": 1.28,
+  "mb": 1.29,
   "pale_tint_dropped_max": 0.0699
  },
  {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_Workbook_PRINT.pdf",
-  "pages": 46,
-  "sheets": 23,
-  "mb": 6.48,
+  "pages": 44,
+  "sheets": 22,
+  "mb": 6.49,
   "pale_tint_dropped_max": 0.3377
  }
 ]
