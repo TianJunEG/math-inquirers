@@ -51,3 +51,7 @@ Total: 21 / 24
 ## Known limits
 
 - Never trialled with children; times and difficulty are modelled. Wording unverified against Primary 1 papers for 'check by a different way' (no paper evidence). Time items are o'clock and half past only, as the papers show. Estimating is beyond Primary 1 and is flagged on the parent page.
+
+## Fix pass (Term 3 independent audits)
+
+See `audit/FIXES_T3_L29.md`. After the fix pass: validator 22 pass, 0 FAIL; script 67:40 of 90, slow class 79:54; workbook page fill 94, 99, 97, 94, 99% (kit page 69%); T1 made unambiguous, S5 and E1 and the G3 example no longer reuse class numbers, online static items replaced, hand-off to Lesson 30 aligned. Open: kit page spacing and labels, black and white build, L20 hand-off (shared tools or other owner).
