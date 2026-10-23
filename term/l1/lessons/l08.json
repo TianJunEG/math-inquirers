@@ -30,7 +30,8 @@
  "contest_moves": [
   "balance both sides of the equals sign",
   "give and take (compensation) between two addends",
-  "say two sums are equal without adding"
+  "say two sums are equal without adding",
+  "three numbers, four true number sentences: the whole and its two parts (T5)"
  ],
  "objectives": [
   "Say that = means 'is the same amount as' and check whether two sums balance.",
@@ -750,7 +751,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q2 (drawing): draw each pile as dots and make the right plate match the left. Q3: build 6 and 3 on one plate, then 5 and some more on the other. Q5 and Q7: ask did the first number go up or down, and by how much? Q6: how many pens does Mei have all together?"
+      "text": "Q2 (drawing): draw each pile as dots and make the right plate match the left. Q3: build 6 and 3 on one plate, then 5 and some more on the other. Q5 and Q7: ask did the first number go up or down, and by how much? Q6: how many pens does Mei have all together? Think harder T5: say the whole and the two parts. Two parts make the whole; take a part from the whole to find the other part."
      },
      {
       "k": "STUCK",
@@ -2198,6 +2199,65 @@
     ],
     "mins": 4,
     "lines": 1
+   },
+   {
+    "id": "T5",
+    "page": 3,
+    "tier": "think",
+    "text": "Use the three numbers 6, 9 and 15. The biggest number, 15, is the whole. Fill in the number sentences.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 + 9 = ___",
+      "ans": "15",
+      "val": 15
+     },
+     {
+      "l": "b",
+      "text": "9 + ___ = 15",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "c",
+      "text": "15 - 6 = ___",
+      "ans": "9",
+      "val": 9
+     },
+     {
+      "l": "d",
+      "text": "15 - ___ = 6",
+      "ans": "9",
+      "val": 9
+     },
+     {
+      "l": "e",
+      "text": "Ali writes 9 - 6 = 15. Is it true? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "15, 6, 9, 9, No (9 - 6 = 3; the whole, 15, goes first in a take-away)",
+    "val": [
+     15,
+     6,
+     9,
+     9,
+     "No"
+    ],
+    "hint": "Two small numbers make the big one: 6 and 9 make 15. To take away, start at the big number, 15.",
+    "solution": "6 + 9 = 15. 9 + 6 = 15, so the blank in (b) is 6. Taking one part from the whole leaves the other part: 15 - 6 = 9 and 15 - 9 = 6, so the blank in (d) is 9. Ali is not right: 9 - 6 = 3, not 15. The whole, 15, is the number you start from when you take away.",
+    "mistakes": [
+     "Writing 9 in (b) because 9 is in the line.",
+     "Writing 6 in (d) because 6 is on the right.",
+     "Saying Yes to (e) because the same three numbers are used."
+    ],
+    "mins": 5,
+    "lines": 0
    }
   ],
   "go": [

@@ -158,7 +158,7 @@
      }
     ]
    },
-   "explanation": "The labelled numbers are every 2 steps. A is 1 step right of −10, so −9. B is 1 step left of −2, so −3. C is 1 step left of 6, so 5. From −9 to −3 is 6 steps and from −3 to 5 is 8 steps (3 steps to 0, then 5 more)."
+   "explanation": "A is 1 step right of −10: −9. B is 1 step left of −2: −3. C is 1 step left of 6: 5. From −9 to −3 is 6 steps. From −3 to 5 is 3 + 5 = 8 steps."
   },
   {
    "id": "L6U03-S03",
@@ -840,7 +840,7 @@
      ""
     ]
    },
-   "explanation": "After 3 minutes A is at −12 − 12 = −24 and B is at −40 + 18 = −22. B is now above A. After 2 minutes A is −20 and B is −28, so B is still below. After 5 minutes A is −32 and B is −10: the gap is 22 m.",
+   "explanation": "After 3 minutes A is at −24 and B at −22, so B is above A (after 2 minutes A −20 and B −28). After 5 minutes A −32 and B −10: 22 m apart.",
    "partsrow": true
   },
   {
@@ -902,7 +902,7 @@
     ]
    },
    "hint": "Is a greater than b? Choose the right branch first.",
-   "explanation": "It says how far apart a and b are. a = −8 and b = 5: a is not greater, so it says 5 − (−8) = 13. a = −3 and b = −9: a is greater, so it says −3 − (−9) = 6. The program always says the gap between a and b, whichever is greater.",
+   "explanation": "It says how far apart a and b are. a = −8, b = 5: a is not greater, so 5 − (−8) = 13. a = −3, b = −9: a is greater, so −3 − (−9) = 6. Equal numbers give 0.",
    "figside": true
   },
   {

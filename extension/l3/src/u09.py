@@ -11,7 +11,7 @@ def seg(w, t='', style='plain'):
 u.learn(
     'Use one unit before you add or take away. 1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml and $1 = 100¢.',
     {'problem': 'A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?',
-     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '80 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '2 m 35 cm'}]}], 'width_mm': 76, 'u': 60, 'lab': 20},
+     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '80 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '2 m 35 cm'}]}], 'width_mm': 68, 'u': 60, 'lab': 20},
      'steps': ['Change to cm: 2 m 35 cm = 235 cm.', 'Take away: 235 - 80 = 155 cm = 1 m 55 cm.'],
      'answer': 'The ribbon is 1 m 55 cm long.'},
     {'title': 'Tips',
@@ -19,7 +19,7 @@ u.learn(
     {'text': 'A jug holds 2 ℓ 350 ml. Ali pours out 800 ml. The jug now holds {b} ℓ {b} ml.', 'answer': A(['1', '550'], '1 ℓ 550 ml', list=True),
      'explanation': '2 ℓ 350 ml = 2350 ml. Then 2350 - 800 = 1550 ml = 1 ℓ 550 ml. Check: 1550 + 800 = 2350.'},
     example2={'problem': 'A film starts at 2:50 pm and ends at 4:20 pm. How long is the film?',
-              'figure': {'type': 'l3_timeline', 'points': [{'t': '2:50'}, {'t': '3:00'}, {'t': '4:00'}, {'t': '4:20'}], 'arcs': [{'a': 0, 'b': 1, 'text': '10 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '20 min'}], 'width_mm': 112},
+              'figure': {'type': 'l3_timeline', 'points': [{'t': '2:50'}, {'t': '3:00'}, {'t': '4:00'}, {'t': '4:20'}], 'arcs': [{'a': 0, 'b': 1, 'text': '10 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '20 min'}], 'width_mm': 100},
               'steps': ['Jump to the next o’clock, then to 4:00, then to 4:20.', 'Add the jumps: 10 min + 1 h + 20 min = 1 h 30 min.'],
               'answer': 'The film is 1 h 30 min long.'})
 u.u['learn']['tight'] = True

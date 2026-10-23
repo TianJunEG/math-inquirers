@@ -602,7 +602,7 @@
      }
     }
    ],
-   "explanation": "Start with 7: 11, 33, 24, 8, then 8 − 7 = 1. Start with 12: 16, 48, 39, 13, then 13 − 12 = 1. With n the steps give n + 4, 3n + 12, 3n + 3, n + 1, and n + 1 − n = 1. The answer is always 1."
+   "explanation": "Start with 7: 11, 33, 24, 8, then 8 − 7 = 1. Start with 12: 16, 48, 39, 13, then 1. With n: n + 4, 3n + 12, 3n + 3, n + 1, then n + 1 − n = 1. Always 1."
   },
   {
    "id": "L6U04-S11",
@@ -671,7 +671,7 @@
      ]
     ]
    },
-   "explanation": "6 is not more than 10, so it says 6 × 2 = 12. 15 is more than 10, so it says 15 − 10 = 5. For 8: the first branch gives answer − 10 = 8 when answer = 18, and the second gives answer × 2 = 8 when answer = 4. Two numbers work.",
+   "explanation": "6 is not more than 10, so it says 12. 15 is more than 10, so it says 5. Says 8: answer − 10 = 8 gives 18, answer × 2 = 8 gives 4.",
    "figside": true
   },
   {

@@ -871,7 +871,7 @@
     }
    ],
    "hint": "The path round the shape is about 3.14 times the distance across.",
-   "explanation": "360 turns of 1° add to 360°, one full turn, so the path closes. Inside angle: 180 − 1 = 179°. The path is 360 steps long. For a circle, the distance round is about 3.14 × the distance across, so the distance across is about 360 ÷ 3.14 = 114.6, which is 115 to the nearest whole number."
+   "explanation": "360 turns of 1° make one full turn, so the path closes. Inside angle 180 − 1 = 179°. The path is 360 steps long. Round ≈ 3.14 × across, so across ≈ 360 ÷ 3.14 = 114.6, about 115."
   },
   {
    "id": "L6U07-C01",

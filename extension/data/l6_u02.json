@@ -284,7 +284,7 @@
      "{ll}"
     ]
    },
-   "explanation": "Try each prime and see if 26 take away that prime is also prime: 26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 all work. 26 − 2, 26 − 5, 26 − 11, 26 − 17 are 24, 21, 15 and 9, which are not prime. There are 3 ways."
+   "explanation": "26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 are all prime. 26 − 2, 26 − 5, 26 − 11 and 26 − 17 are 24, 21, 15, 9: not prime. 3 ways."
   },
   {
    "id": "L6U02-S04",
@@ -479,7 +479,7 @@
      }
     }
    ],
-   "explanation": "(a) 372: the last 2 digits, 72, are in the 4 times table (72 = 4 × 18), so Yes. (b) 2457: the digits add to 2 + 4 + 5 + 7 = 18, a multiple of 3, so Yes. (c) 6835: the digits add to 22, which is not a multiple of 9, so No."
+   "explanation": "(a) 72 is in the 4 times table (4 × 18): Yes. (b) 2 + 4 + 5 + 7 = 18, a multiple of 3: Yes. (c) 6 + 8 + 3 + 5 = 22, not a multiple of 9: No."
   },
   {
    "id": "L6U02-S07",
@@ -724,7 +724,7 @@
      ""
     ]
    },
-   "explanation": "p can be 7, 11 or 13: 2 × 3 × 7 = 42, 2 × 3 × 11 = 66 and 2 × 3 × 13 = 78. p = 17 gives 102, which is too big. 42 has factors 1, 2, 3, 6, 7, 14, 21, 42, so 8 factors. 66 and 78 also have 8."
+   "explanation": "p = 7, 11 or 13 gives 42, 66 and 78 (p = 17 gives 102, too big). 42 has the factors 1, 2, 3, 6, 7, 14, 21, 42: 8 factors, and so do 66 and 78."
   },
   {
    "id": "L6U02-T03",
@@ -943,7 +943,7 @@
     "fs": 17
    },
    "hint": "Why can you stop at 7? Think of 8 × 8.",
-   "explanation": "Cross out multiples of 2, 3, 5 and 7. The next prime, 11, has 11 × 11 = 121, which is above 60, so you can stop at 7. The numbers left are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: that is 17 primes. The 10th is 29.",
+   "explanation": "Cross out multiples of 2, 3, 5 and 7 (11 × 11 = 121 is above 60, so stop at 7). Left: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: 17 primes. The 10th is 29.",
    "partsrow": true
   },
   {
@@ -1007,7 +1007,7 @@
     ]
    },
    "hint": "Write d each time. It stops when n mod d is 0.",
-   "explanation": "n = 221: d goes 2, 3, ... and stops at 13, because 221 mod 13 = 0. It says 13, after 11 repeats (d = 2 to 13). n = 97: d keeps going until d = 97, because 97 is prime. It says 97. If the code says n itself, then n is prime.",
+   "explanation": "n = 221: d goes 2, 3, ... and stops at 13 (221 mod 13 = 0), after 11 repeats. n = 97: d goes on to 97, because 97 is prime. If it says n itself, n is prime.",
    "figside": true
   },
   {

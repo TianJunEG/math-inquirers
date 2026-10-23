@@ -32,3 +32,28 @@ WHY = {
  'L6U02-S03': "84 = 4 × 21 = 2 × 2 × 3 × 7. 90 = 9 × 10 = 3 × 3 × 2 × 5, so 90 = 2 × 3 × 3 × 5.",
  'L6U01-T02': "The 5th term is 4 × 5 + 2 = 22. Q adds 4 sixteen times: 22 + 64 = 86, which is term 5 + 16 = 21. P starts at the 1st term, so it needs 21 − 1 = 20 repeats (6 + 20 × 4 = 86).",
 }
+
+WHY.update({
+ 'L6U07-G03': "360 turns of 1° make one full turn, so the path closes. Inside angle 180 − 1 = 179°. The path is 360 steps long. Round ≈ 3.14 × across, so across ≈ 360 ÷ 3.14 = 114.6, about 115.",
+ 'L6U03-G02': "It says how far apart a and b are. a = −8, b = 5: a is not greater, so 5 − (−8) = 13. a = −3, b = −9: a is greater, so −3 − (−9) = 6. Equal numbers give 0.",
+ 'L6U01-S01': "Pattern 1 has 7 sticks, pattern 2 has 12, pattern 3 has 17: each column adds 5, so the rule is 5n + 2. Pattern 40: 202. For 92: 5n = 90, n = 18.",
+ 'L6U01-G03': "t after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. It stops when t is above 100, after repeat 14: k = 14, t = 105. (Triangle numbers.)",
+ 'L6U04-S11': "6 is not more than 10, so it says 12. 15 is more than 10, so it says 5. Says 8: answer − 10 = 8 gives 18, answer × 2 = 8 gives 4.",
+ 'L6U02-T02': "p = 7, 11 or 13 gives 42, 66 and 78 (p = 17 gives 102, too big). 42 has the factors 1, 2, 3, 6, 7, 14, 21, 42: 8 factors, and so do 66 and 78.",
+ 'L6U02-S05': "26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 are all prime. 26 − 2, 26 − 5, 26 − 11 and 26 − 17 are 24, 21, 15, 9: not prime. 3 ways.",
+ 'L6U02-G02': "Cross out multiples of 2, 3, 5 and 7 (11 × 11 = 121 is above 60, so stop at 7). Left: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: 17 primes. The 10th is 29.",
+ 'L6U10-S02': "91, 93, 95, 99, 105 and 111 are not prime (7 × 13, 3 × 31, 5 × 19, 9 × 11, 5 × 21, 3 × 37). The primes are 97, 101, 103, 107, 109. 330 = 3 × 11 × 2 × 5.",
+ 'L6U05-S03': "Each new friend shakes hands with all the earlier friends. 6 friends: 1 + 2 + 3 + 4 + 5 = 15. 8 friends: 1 + ... + 7 = 28. 36 = 1 + ... + 8, so 9 friends.",
+ 'L6U02-S06': "(a) 72 is in the 4 times table (4 × 18): Yes. (b) 2 + 4 + 5 + 7 = 18, a multiple of 3: Yes. (c) 6 + 8 + 3 + 5 = 22, not a multiple of 9: No.",
+ 'L6U09-S06': "5, 7, 7, 9, 12: median 7, mode 7, mean 40 ÷ 5 = 8. 2, 4, 6, 8: the middle two are 4 and 6, so the median is 5.",
+ 'L6U05-S11': "Row of 5: 5 + 4 + 3 + 2 + 1 = 15 (5 of length 1, 4 of length 2, ...). Row of 7: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.",
+ 'L6U04-S10': "Start with 7: 11, 33, 24, 8, then 8 − 7 = 1. Start with 12: 16, 48, 39, 13, then 1. With n: n + 4, 3n + 12, 3n + 3, n + 1, then n + 1 − n = 1. Always 1.",
+ 'L6U03-S02': "A is 1 step right of −10: −9. B is 1 step left of −2: −3. C is 1 step left of 6: 5. From −9 to −3 is 6 steps. From −3 to 5 is 3 + 5 = 8 steps.",
+ 'L6U02-G03': "n = 221: d goes 2, 3, ... and stops at 13 (221 mod 13 = 0), after 11 repeats. n = 97: d goes on to 97, because 97 is prime. If it says n itself, n is prime.",
+ 'L6U09-S01': "(a) 40 ÷ 4 = 10. (b) 25 ÷ 5 = 5 (the 0s count as values). (c) 11 ÷ 4 = 2.75.",
+ 'L6U08-G03': "4 + 7 + 2 = 13, and 20 is the next multiple of 10: check digit 7. 9 + 8 + 1 = 18: check digit 2. 5 + 3 + 6 = 14 needs 6, not 9: not valid.",
+ 'L6U08-G01': "MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 gives 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 gives 2, 14, 3, 4, 18: CODES. A letter can be coded in different ways.",
+ 'L6U03-G01': "After 3 minutes A is at −24 and B at −22, so B is above A (after 2 minutes A −20 and B −28). After 5 minutes A −32 and B −10: 22 m apart.",
+ 'L6U01-S02': "(a) The difference is 6; each term is 2 more than 6, 12, 18, 24: 6n + 2, and 602. (b) The difference is 5; each term is 2 less than 5, 10, 15, 20: 5n − 2, and 498.",
+ 'L6U01-T03': "From the 4th to the 9th term is 5 jumps and the terms rose by 30, so each jump is 6. Back 3 jumps from 23: 5. The rule is 6n − 1.",
+})

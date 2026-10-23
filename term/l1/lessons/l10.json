@@ -29,7 +29,8 @@
     "two-step story, one operation per step",
     "reversed wording (fewer than, more than)",
     "reading trap: who is in the group",
-    "three-step story"
+    "three-step story",
+    "work backwards: a two-step \"at first\" story, one operation per step (T5)"
   ],
   "objectives": [
     "Read a short story twice: first to say what it is about, then to pick out the numbers and the question.",
@@ -817,7 +818,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1: say what happens first; gives away means take away. Q2: use counters, one step at a time. Q3: ask which sentence starts from the answer of the first. Q4: does the word make it greater or smaller? Q5: find Ben first. Q6: ask who leaves the bus."
+            "text": "Q1: say what happens first; gives away means take away. Q2: use counters, one step at a time. Q3: ask which sentence starts from the answer of the first. Q4: does the word make it greater or smaller? Q5: find Ben first. Q6: ask who leaves the bus. Think harder T5: start at the end of the story and undo the last step first."
           },
           {
             "k": "STUCK",
@@ -2404,6 +2405,40 @@
         ],
         "mins": 4,
         "lines": 1
+      },
+      {
+        "id": "T5",
+        "page": 3,
+        "tier": "think",
+        "text": "Lily had some stamps. She gave 8 stamps to Ravi. Then her aunt gave her 5 stamps. Now Lily has 20 stamps. Go backwards from 20 to find how many stamps Lily had at first.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Before her aunt gave her 5 stamps, Lily had ___ stamps.",
+            "ans": "15",
+            "val": 15
+          },
+          {
+            "l": "b",
+            "text": "At first Lily had ___ stamps.",
+            "ans": "23",
+            "val": 23
+          }
+        ],
+        "answer": "15 stamps, then 23 stamps at first (20 - 5 = 15, 15 + 8 = 23)",
+        "val": [
+          15,
+          23
+        ],
+        "hint": "Start at 20, the end of the story. Undo the last step first: her aunt gave her 5, so take 5 away. Then undo the step before it.",
+        "solution": "The last step was gaining 5, so before it Lily had 20 - 5 = 15. The first step was giving away 8, so before it Lily had 15 + 8 = 23. Check by going forwards: 23 - 8 = 15, then 15 + 5 = 20.",
+        "mistakes": [
+          "Adding 8 and 5 to 20 (33).",
+          "Doing both steps the same way, for example 20 - 5 - 8 = 7.",
+          "Undoing the steps in the story order instead of backwards."
+        ],
+        "mins": 4,
+        "lines": 2
       }
     ],
     "go": [

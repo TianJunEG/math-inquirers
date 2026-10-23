@@ -141,4 +141,8 @@ def run(d):
     eq((items['t1']['answer'], items['t2']['answer'], items['t4']['answer']), (3, 2, 3), 't1 t2 t4 authored'); eq(group_up(14, 4), (3, 2), 't1 t2'); eq(group_up(17, 5), (3, 2), 't4')
     eq(items['t3']['answer'], 5, 't3 authored'); eq(deal(20, 4)[0], 5, 't3')
     eq(items['g1']['answer'], divisors(12), 'g1 authored'); eq(items['g2']['answer'], 8, 'g2 authored'); eq(items['g3']['answer'], 6, 'g3 authored'); eq(share_each(18, 3), 6, 'g3')
+    # Retrofit T5 (true or false, 16 marbles shared with none left over)
+    eq(T['T5']['val'][:3], ['True' if left_over(16, k) == 0 else 'False' for k in (3, 4, 6)], 'T5 true or false')
+    eq(T['T5']['val'][3], left_over(16, 3), 'T5 left over among 3'); eq(left_over(16, 3), 1, 'T5 1 left over')
+    eq([left_over(16, k) for k in (3, 4, 6)], [1, 0, 4], 'T5 left over')
     return n

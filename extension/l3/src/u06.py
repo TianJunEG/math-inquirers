@@ -14,7 +14,7 @@ def bars(items, cols=2, w=120, **kw):
 u.learn(
     'A fraction wall shows one whole cut into equal parts. A longer piece of the wall is a greater fraction. To compare fractions, look at where the pieces end.',
     {'problem': 'Which is greater, 5/8 or 3/4? Use the fraction wall.',
-     'figure': {'type': 'l3_wall', 'dens': [4, 8], 'shade': {'4': [0, 1, 2], '8': [0, 1, 2, 3, 4]}, 'width_mm': 124},
+     'figure': {'type': 'l3_wall', 'dens': [4, 8], 'shade': {'4': [0, 1, 2], '8': [0, 1, 2, 3, 4]}, 'width_mm': 112},
      'steps': ['Shade 5/8 on the row of eighths.', 'Shade 3/4 on the row of quarters.',
                'The end of 3/4 lines up with the end of 6/8.', '6/8 is more than 5/8, so 3/4 is greater.'],
      'answer': '3/4 is greater than 5/8.'},
@@ -24,7 +24,7 @@ u.learn(
     {'text': 'Circle <, = or >.   7/12 ' + CMP + ' 2/3', 'answer': A('<'),
      'explanation': '2/3 = 8/12 on the wall. 7/12 is less than 8/12, so 7/12 < 2/3.'})
 u.u['learn']['example2'] = {'problem': 'What is 1/2 + 1/4? Use the fraction wall.',
-    'figure': {'type': 'l3_wall', 'dens': [2, 4], 'shade': {'2': [0], '4': [0, 1, 2]}, 'width_mm': 124},
+    'figure': {'type': 'l3_wall', 'dens': [2, 4], 'shade': {'2': [0], '4': [0, 1, 2]}, 'width_mm': 112},
     'steps': ['On the wall, 1/2 is the same length as 2/4.', 'Add the quarters: 2/4 + 1/4 = 3/4.'], 'answer': '1/2 + 1/4 = 3/4.'}
 u.u['learn']['tight'] = True
 

@@ -32,7 +32,8 @@
  "contest_moves": [
   "list the ways to make equal groups of 24 (G3)",
   "count in jumps instead of one by one",
-  "turn an array: 2 × 8 = 8 × 2"
+  "turn an array: 2 × 8 = 8 × 2",
+  "true or false about equal groups: can 15 be put equally onto 3, 4 or 5 plates? (T5)"
  ],
  "objectives": [
   "Say whether groups are equal (the same number in every group) and add counters to make unequal groups equal.",
@@ -1637,7 +1638,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: count each group aloud. Q2: count the plates, then the cookies on one plate. Q3: add 2 again and again, or count in twos. Q4: draw 4 dots on one plate, then copy. Q5: groups first, then in each. Q6: 4 boxes of 5, add 5 four times."
+      "text": "Q1: count each group aloud. Q2: count the plates, then the cookies on one plate. Q3: add 2 again and again, or count in twos. Q4: draw 4 dots on one plate, then copy. Q5: groups first, then in each. Q6: 4 boxes of 5, add 5 four times. Think harder T5: deal the apples onto the plates, or count in jumps. Is there any left over?"
      },
      {
       "k": "STUCK",
@@ -2277,6 +2278,38 @@
       ]
      ]
     }
+   },
+   {
+    "id": "T5",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 15 apples. She puts them equally onto plates, with none left over. Is each sentence true or false?",
+    "parts": [],
+    "tf": [
+     {
+      "s": "She can use 3 plates."
+     },
+     {
+      "s": "She can use 4 plates."
+     },
+     {
+      "s": "She can use 5 plates."
+     }
+    ],
+    "lines": 0,
+    "answer": "True, False, True (3 plates of 5, 4 plates leave 3 over, 5 plates of 3)",
+    "val": [
+     "True",
+     "False",
+     "True"
+    ],
+    "hint": "Count in jumps of the number of plates, or deal the apples out one at a time. Does the count land on 15?",
+    "solution": "3 plates: 3 groups of 5 is 15, so true. 4 plates: 4, 8, 12, 16 jumps over 15 (3 groups of 4 is 12 and 3 are left over), so false. 5 plates: 5 groups of 3 is 15, so true.",
+    "mistakes": [
+     "Saying true for 4 plates because 4 is a small number.",
+     "Not checking that nothing is left over."
+    ],
+    "mins": 4
    }
   ],
   "go": [

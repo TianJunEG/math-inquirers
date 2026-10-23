@@ -1344,7 +1344,7 @@
     }
    ],
    "hint": "Use the shifts 1, 2, 3, 1, 2 in turn, one for each letter.",
-   "explanation": "MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 is 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 is 2, 14, 3, 4, 18: CODES. The same letter can be coded in different ways, so counting the commonest letter does not work."
+   "explanation": "MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 gives 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 gives 2, 14, 3, 4, 18: CODES. A letter can be coded in different ways."
   },
   {
    "id": "L6U08-G02",
@@ -1453,7 +1453,7 @@
      "Working:"
     ]
    },
-   "explanation": "4 + 7 + 2 = 13, and the next multiple of 10 is 20, so the check digit is 7. 9 + 8 + 1 = 18, so the check digit is 2. 5 + 3 + 6 = 14, so the last digit must be 6, not 9: the code is not valid."
+   "explanation": "4 + 7 + 2 = 13, and 20 is the next multiple of 10: check digit 7. 9 + 8 + 1 = 18: check digit 2. 5 + 3 + 6 = 14 needs 6, not 9: not valid."
   },
   {
    "id": "L6U08-C01",

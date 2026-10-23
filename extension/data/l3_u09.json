@@ -36,7 +36,7 @@
       ]
      }
     ],
-    "width_mm": 76,
+    "width_mm": 68,
     "u": 60,
     "lab": 20
    },
@@ -101,7 +101,7 @@
       "text": "20 min"
      }
     ],
-    "width_mm": 112
+    "width_mm": 100
    },
    "steps": [
     "Jump to the next o’clock, then to 4:00, then to 4:20.",

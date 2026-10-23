@@ -190,4 +190,10 @@ def run(d):
         for q in O['g3']['tpl']['vars']['q']:
             eq(q > p, True, f'g3 variant {p},{q} positive')
             eq(ORACLES['g3'](dict(p=p, q=q)), q - p, f'g3 difference {p},{q}')
+    # Retrofit T5 (three numbers, four sentences): 6, 9 and 15
+    parts = [p['val'] for p in T['T5']['parts']]
+    eq(parts[:4], [6 + 9, [x for x in range(0, 30) if 9 + x == 15][0], 15 - 6, [x for x in range(0, 30) if 15 - x == 6][0]], 'T5 a to d')
+    eq(parts[:4], [15, 6, 9, 9], 'T5 values')
+    eq(9 - 6 == 15, False, 'T5 e: 9 - 6 is not 15'); eq(parts[4], 'No', 'T5 e')
+    eq(sorted([6 + 9, 9 + 6]), [15, 15], 'T5 both addition sentences make 15'); eq(15 - 9, 6, 'T5 15 - 9')
     return n

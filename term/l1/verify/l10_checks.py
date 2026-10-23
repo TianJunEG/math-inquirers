@@ -288,6 +288,11 @@ def run(d):
         stmts += sweep_equations(s)
     eq(stmts > 60, True, 'arithmetic sweep found many statements')
 
+    # Retrofit T5 (work backwards, two steps): ends with 20 after giving away 8 then gaining 5
+    start = 23
+    eq(T['T5']['val'], [20 - 5, 20 - 5 + 8], 'T5 backwards')
+    eq(start - 8 + 5, 20, 'T5 forwards check'); eq(T['T5']['val'][1], start, 'T5 start')
+    eq(20 + 8 + 5 == start, False, 'T5 slip 33')
     n += check_block(d, eq)
     return n
 

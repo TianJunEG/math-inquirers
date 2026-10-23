@@ -107,7 +107,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) 14 + 9 + 11 + 6 = 40, and 40 ÷ 4 = 10. (b) 9 + 0 + 6 + 0 + 10 = 25, and 25 ÷ 5 = 5 (the 0s count as values). (c) 1.5 + 2.5 + 4 + 3 = 11, and 11 ÷ 4 = 2.75."
+   "explanation": "(a) 40 ÷ 4 = 10. (b) 25 ÷ 5 = 5 (the 0s count as values). (c) 11 ÷ 4 = 2.75."
   },
   {
    "id": "L6U09-S02",
@@ -308,7 +308,7 @@
      }
     }
    ],
-   "explanation": "12, 7, 9, 7, 5 in order: 5, 7, 7, 9, 12. The middle one is 7, the mode is 7 and the mean is 40 ÷ 5 = 8. 2, 8, 4, 6 in order: 2, 4, 6, 8. The 2 middle values are 4 and 6, so the median is halfway between them: 5.",
+   "explanation": "5, 7, 7, 9, 12: median 7, mode 7, mean 40 ÷ 5 = 8. 2, 4, 6, 8: the middle two are 4 and 6, so the median is 5.",
    "partsrow": true
   },
   {

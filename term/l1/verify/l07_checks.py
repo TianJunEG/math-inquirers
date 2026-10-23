@@ -196,4 +196,8 @@ def run(d):
     eq(O['c5']['answer'], '33 + 24 = 57', 'c5'); eq(33 + 24, 57, 'c5 value')
     eq(O['t4']['answer'], 'Count up from 79 to 82', 't4'); eq(count_up(79, 82), 3, 't4 gap'); eq(hops(79, 82), (1, 0, 2), 't4 hops 1 then 2')
     eq(count_up(47, 71), 24, 'g4 example gap'); eq(47 + 24, 71, 'g4 example check')
+    # Retrofit T5 (work backwards): 45 left after giving away 23; the start is found by putting the pieces back
+    eq(T['T5']['val'], [count_up(45, 45 + 23) + 45], 'T5')
+    eq(take_away(68, 23), 45, 'T5 check: 68 take away 23 leaves 45')
+    eq(take_away(45, 23) == 68, False, 'T5 slip: 45 - 23 is not the start')
     return n

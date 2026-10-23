@@ -29,7 +29,8 @@
   },
   "contest_moves": [
     "difference as a gap (how many more)",
-    "the gap stays the same when both numbers move by the same amount"
+    "the gap stays the same when both numbers move by the same amount",
+    "work backwards: a take-away story with the start unknown (T5)"
   ],
   "objectives": [
     "Take away tens and then ones from a number within 100 (no renaming), and say what is left.",
@@ -761,7 +762,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both."
+            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: draw the beads she gave away and the beads she kept, then put them together."
           },
           {
             "k": "STUCK",
@@ -2129,6 +2130,33 @@
           "Adding 71 + 46.",
           "Forgetting the last hop of 1 (24).",
           "Subtracting the smaller digit from the larger in each column (71 - 46 = 35)."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T5",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei had some beads. She gave away 23 beads. Now Mei has 45 beads. How many beads did Mei have at first?",
+        "parts": [
+          {
+            "l": "",
+            "text": "Mei had ___ beads at first.",
+            "ans": "68",
+            "val": 68
+          }
+        ],
+        "answer": "68 beads (45 + 23 = 68)",
+        "val": [
+          68
+        ],
+        "hint": "Mei gave 23 beads away and still has 45. Draw the beads she gave away next to the beads she kept. Put them together.",
+        "solution": "Mei gave away 23 beads and has 45 left. The beads she gave away and the beads she kept were all her beads at first. 45 + 23 = 68. Check: 68 take away 23 is 45.",
+        "mistakes": [
+          "Taking away: writing 45 - 23 = 22.",
+          "Writing 45 (the beads she has now).",
+          "Adding the tens and ones wrongly (45 + 23 = 58 or 78)."
         ],
         "mins": 4,
         "lines": 2

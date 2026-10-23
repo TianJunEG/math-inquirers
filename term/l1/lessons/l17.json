@@ -30,7 +30,8 @@
  "contest_moves": [
   "who is in the group: \"shares with his 3 cousins\" means 4 people (T2)",
   "list every number of friends that can share 12 equally (G1)",
-  "a pattern in what is left over when 13 to 20 are shared among 4 (Investigation)"
+  "a pattern in what is left over when 13 to 20 are shared among 4 (Investigation)",
+  "true or false about sharing equally: can 16 be shared among 3, 4 or 6 with none left over? (T5)"
  ],
  "objectives": [
   "Share a set equally by dealing one at a time, and say how many each one gets.",
@@ -1676,7 +1677,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: deal one dot at a time to each plate. Q2: ring 3 cookies, then 3 more, until none are left. Q3: deal the sweets to 2 friends, or count in jumps of 2 to 14. Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with 3 each is 4 groups of 3, and either order is right. Q7: does the story say how many friends, or how many in each box?"
+      "text": "Q1: deal one dot at a time to each plate. Q2: ring 3 cookies, then 3 more, until none are left. Q3: deal the sweets to 2 friends, or count in jumps of 2 to 14. Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with 3 each is 4 groups of 3, and either order is right. Q7: does the story say how many friends, or how many in each box? Think harder T5: deal the marbles out one at a time. If any are left over, the sentence is false."
      },
      {
       "k": "STUCK",
@@ -2286,6 +2287,46 @@
     "mistakes": [
      "Writing 2 for (c), the number left over.",
      "Writing 4 bags."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T5",
+    "page": 3,
+    "tier": "think",
+    "text": "Kumar has 16 marbles. He shares them equally among children, with none left over. Is each sentence true or false?",
+    "parts": [
+     {
+      "l": "",
+      "text": "If Kumar shares 16 marbles among 3 children, ___ marbles are left over.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "tf": [
+     {
+      "s": "He can share them among 3 children."
+     },
+     {
+      "s": "He can share them among 4 children."
+     },
+     {
+      "s": "He can share them among 6 children."
+     }
+    ],
+    "lines": 0,
+    "answer": "False, True, False; 1 marble is left over when 16 are shared among 3 children",
+    "val": [
+     "False",
+     "True",
+     "False",
+     1
+    ],
+    "hint": "Deal the marbles out one at a time to the children, or count in jumps: 3, 6, 9 ... Does the count land on 16?",
+    "solution": "Among 3 children each gets 5, which uses 15 marbles, and 1 is left over, so false. Among 4 children each gets 4, because 4 groups of 4 is 16, so true. Among 6 children each gets 2, which uses 12 marbles, and 4 are left over, so false.",
+    "mistakes": [
+     "Saying true because the marbles can be shared \"nearly\" equally.",
+     "Forgetting that none may be left over."
     ],
     "mins": 4
    }
