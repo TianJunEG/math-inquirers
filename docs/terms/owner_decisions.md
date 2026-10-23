@@ -10,7 +10,7 @@ Source: the owner's replies in the working session. Anything marked "open" is no
 5. **Payment.** Price is per term. Options: (a) pay in full at the start of the term, with a **small discount**; (b) three instalments: first at the start, second after 3 lessons, third after another 3 lessons. A payment schedule is shown to the parent.
 6. **Contest-style items** (digit-sum tests, gaps and posts, chance, ratio notation in Level 5, cryptarithms, pairing sums, worst-case counting): taught at **Think harder**, never Start here. In the plans, move them from Go further to Think harder where they were Go further.
 7. **Level 4 holiday course:** no cryptarithm lesson is added. The term plan already holds them.
-8. Payments run through HitPay from launch; PayNow by hand during the beta (see terms page).
+8. Payments run online from launch (originally HitPay; **replaced by Stripe on 23 Oct 2026**, see below); PayNow by hand during the beta (see terms page).
 
 ## Keep in view (KIV)
 - Level 5 lessons 28 and 29 merge; lesson 32 may be too full; a secondary speed preview in lesson 15.
@@ -130,3 +130,9 @@ Keep "Puzzle Day" as the Lesson 10 name for holiday Levels 1 to 4. Levels 5 and 
 
 ## 23 Oct 2026: delivery address retention = 30 days after delivery (owner)
 Owner chose 30 days (assistant's recommendation) instead of 90 days after the program: delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later (or sooner on request once the parcel has arrived and no resend is needed). The printer and courier are asked not to keep the details after delivery. To be reflected in privacy.html (retention table and consent line), the sign-up consent wording (website/lp_build.py / mi_signup.html) and the dispatch list notes. Still open: who pays printing and postage (default: included in the S$250), the parcel policy (draft: report within 7 days, one free resend), the register-by date.
+
+## 23 Oct 2026: payment gateway is Stripe, replaces HitPay (owner)
+Owner decision: online payment goes through Stripe Checkout (card and PayNow, SGD), not HitPay. The earlier HitPay code was never called with real keys and has been removed; history is in git. Built: Cloudflare Pages Functions `stripe-create-checkout` and `stripe-webhook`, `portal/supabase/stripe_migration.sql` (review first, not yet applied), portal payment mode `stripe` (`PORTAL_PAYMENT_MODE`), terms/privacy wording (drafts for the lawyer, including Stripe processing data outside Singapore). Manual PayNow stays the beta default and the fallback. Refunds are made in the Stripe dashboard and marked by hand. Fees: check Stripe's current Singapore pricing; none are stated in the repo. The Stripe setup checklist is in `portal/README.md`. Still to do by the owner: Stripe account for Preciouslyours Pte Ltd, test keys, Cloudflare secrets, webhook endpoint, test-mode run, go live.
+
+## 23 Oct 2026: extension workbooks extend the HOLIDAY program (owner clarification)
+The Level 1 extension workbook pilot (and the other levels) is an EXTENSION OF THE HOLIDAY PROGRAM of the same level: its 10 units follow the 10 holiday lessons in order (same topics and ideas, harder and further, new questions), so a child who finished the holiday program can carry on, and the unit titles can say "Holiday Lesson N: more practice". Each unit still re-explains the idea briefly with a worked example so it works alone (a buyer who did not attend must not be lost), and it never repeats the holiday workbook's questions. It is not an extension of the term-time program.
