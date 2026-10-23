@@ -29,6 +29,12 @@ def deck_dir(level, n): return os.path.join(ROOT, 'split', key_of(level, n), 'pr
 
 def fig_html(spec):
     name, kw = spec
+    kw = dict(kw); z = kw.pop('zoom', None)
+    h = _fig_html(name, kw)
+    return f'<div style="zoom:{z}">{h}</div>' if z else h
+
+
+def _fig_html(name, kw):
     if name == 'seq':
         return K.seq_table(**kw)
     if name == 'sym':
@@ -40,7 +46,7 @@ def fig_html(spec):
     if name == 'iso': return K.iso(**{'s': 64, **kw})
     if name == 'clock': return K.clock(size=400, **kw)
     if name == 'heights': return K.height_grid(cell=120, **kw)
-    if name == 'window': return K.window(cell=130, **kw)
+    if name == 'window': return K.window(**{'cell': 130, **kw})
     if name == 'path': return K.path_posts(**kw)
     if name == 'faces':
         seq = [('open', 'smile'), ('closed', 'flat'), ('open', 'open'), ('closed', 'smile'), ('open', 'flat'), ('closed', 'open')][:kw['n']]

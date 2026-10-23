@@ -360,13 +360,13 @@ add(id='L3-FACE1', level=3, lesson=10, slot='slide', group='g1', skill='Picture 
 add(id='L3-POSTS1', level=3, lesson=10, slot='slide', group='g2', skill='Gaps and posts, both sides of a path', tool='draw',
     stem='A path is 24 m long. Lanterns stand on both sides of the path, one every 3 m. There is a lantern at both ends of each side.',
     parts=['How many lanterns are there altogether?'],
-    fig=('path', dict(length_label='24 m', gap_label='3 m')),
+    fig=('path', dict(length_label='24 m', gap_label='3 m', zoom=0.6)),
     a='24 / 3 = 8 gaps, so 9 lanterns on one side. Two sides: 18 lanterns.', p=dict(length=24, step=3, sides=2), ans=[18],
     say='Do one side first. Count the gaps, then the lanterns.', ask='How many gaps on one side? One more lantern than gaps, so how many? Then what?', listen='"8 gaps, 9 lanterns, doubled."')
 add(id='L3-RECT1', level=3, lesson=10, slot='slide', group='g2', skill='Counting rectangles by size', tool='list',
     stem='A window has 3 panes across and 2 panes up and down. Count every rectangle you can find (squares count too).',
     parts=['How many rectangles are there? Count them by size.'],
-    fig=('window', dict(cols=3, rows=2)),
+    fig=('window', dict(cols=3, rows=2, cell=84)),
     a='1 by 1: 6. 2 across by 1: 4. 3 across by 1: 2. 1 across by 2 up: 3. 2 by 2: 2. 3 across by 2 up: 1. In all: 18.', p=dict(cols=3, rows=2), ans=[18],
     say='Count by size. Make a table: size, how many.', ask='How many of the smallest size? Of the next size? How do you know you have not missed any?', listen='A table by size.')
 add(id='L3-CHAIN1', level=3, lesson=4, slot='bank', skill='Balance chains', tool='draw',

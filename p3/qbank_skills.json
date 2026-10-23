@@ -1,0 +1,226 @@
+{
+ "2": {
+  "skills": [
+   {
+    "id": "L3-PAIR1",
+    "slot": "slide",
+    "skill": "Pairing: make tens and hundreds",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Add these in your head. Look for pairs that make a ten or a hundred. a) 8 + 7 + 2 + 3 + 6 + 4 + 9 + 1 = [ ] b) 260 + 140 + 380 + 120 + 410 + 90 = [ ]",
+    "a": "a) 8 + 2, 7 + 3, 6 + 4 and 9 + 1 each make 10, so 40. b) 260 + 140 = 400, 380 + 120 = 500, 410 + 90 = 500, so 1400.",
+    "say": "Do not add left to right. Hunt for partners.",
+    "ask": "Which numbers are partners? How did you find the partner of 260?",
+    "listen": "\"260 + 140 = 400, because 60 + 40 = 100.\""
+   },
+   {
+    "id": "L3-SERIES1",
+    "slot": "slide",
+    "skill": "Series sums: first plus last",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Ali adds a list of numbers that go up by the same step: 3 + 10 + 17 + 24 + 31 + 38 + 45 + 52 a) What is the first number plus the last number? b) How many pairs are there? c) What is the total?",
+    "a": "a) 3 + 52 = 55. b) 4 pairs (8 numbers). c) 4 x 55 = 220.",
+    "say": "Write the list twice: forwards, then backwards underneath.",
+    "ask": "What is the second number plus the second last? What do you notice?",
+    "listen": "\"Every pair makes 55.\""
+   },
+   {
+    "id": "L3-PAIR2",
+    "slot": "bank",
+    "skill": "Series sums: a long list",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Add the numbers. a) 1 + 2 + 3 + ... + 40 = [ ] b) Kumar reads 4 pages on day 1, then 3 more pages each day than the day before: 4, 7, 10 and so on. How many pages has he read after 7 days?",
+    "a": "a) 1 + 40 = 41, 20 pairs, 820. b) The days read 4, 7, 10, 13, 16, 19, 22. First plus last is 26; 3 pairs and a middle number 13: 78 + 13 = 91.",
+    "say": "If there is an odd number of numbers, one number is left in the middle.",
+    "ask": "How many pairs? What is left over?",
+    "listen": "The middle number is half of first plus last."
+   },
+   {
+    "id": "L3-SHARE1",
+    "slot": "bank",
+    "skill": "Shape sums: a shared centre",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Draw 3 lines that cross in the middle. Each line has 3 circles: one at each end and one in the centre. The centre circle is shared by all 3 lines (7 circles in all). Use the numbers 1 to 7 once each so that each line adds up to 12. 4 goes in the centre. 7 is at one end of a line. What number is at the other end of that line?",
+    "a": "1 (7 + 4 + 1 = 12). The other lines use 2 and 6, and 3 and 5.",
+    "say": "The centre counts for every line. How much is left for the two ends of each line?",
+    "ask": "What do the two ends of a line add up to?",
+    "listen": "\"8 for the ends\": the pairs are 1 and 7, 2 and 6, 3 and 5."
+   }
+  ]
+ },
+ "3": {
+  "skills": [
+   {
+    "id": "L3-DIV3",
+    "slot": "slide",
+    "skill": "Divisibility: the digit sum test for 3",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Write the first ten numbers in the 3 table, from 3 up to 30. a) Add the digits of each number. What do you notice? b) Is 483 in the 3 table? Is 725?",
+    "a": "a) The digit sums are 3, 6, 9, 3, 6, 9, 3, 6, 9, 3: always a number from the 3 table. b) 483: 4 + 8 + 3 = 15, which is in the 3 table, so yes (3 x 161). 725: 7 + 2 + 5 = 14, which is not, so no.",
+    "say": "Last lesson we looked at the digit sums of the 9 table. Do the same for the 3 table.",
+    "ask": "What do the digit sums have in common? Does the test work for 30? For 483?",
+    "listen": "\"The digit sum is in the 3 table\". Check by dividing: 483 / 3."
+   },
+   {
+    "id": "L3-DIV6",
+    "slot": "slide",
+    "skill": "Divisibility: 2 and 3 means 6",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A number is in the 2 table and in the 3 table. a) Which other table is it in? b) Is 534 in the 6 table? Is 357?",
+    "a": "a) The 6 table. b) 534 is even and its digit sum is 12, so yes (6 x 89). 357 is odd, so no.",
+    "say": "List the first multiples of 2 and of 3 and circle the numbers in both.",
+    "ask": "What do 6, 12, 18 have in common? Why must a number in both tables be in the 6 table?",
+    "listen": "\"Even and in the 3 table\"."
+   },
+   {
+    "id": "L3-RANGE1",
+    "slot": "slide",
+    "skill": "Counting multiples in a range",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Ali counts the numbers in the 4 table from 50 to 150. a) How many numbers in the 4 table are there up to 150? b) How many are there up to 49? c) How many are there from 50 to 150?",
+    "a": "a) 37 (150 / 4 is 37 remainder 2). b) 12 (49 / 4 is 12 remainder 1). c) 37 - 12 = 25.",
+    "say": "Count to the top, then take away the ones that come too early.",
+    "ask": "How do you find how many 4s fit into 150? Which numbers did you take away?",
+    "listen": "\"Divide by 4, ignore the remainder\"."
+   },
+   {
+    "id": "L3-RANGE2",
+    "slot": "bank",
+    "skill": "Counting multiples in a range",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Answer each question. a) Count the numbers in the 3 table from 100 to 200. b) Count the numbers in the 6 table up to 100. c) Up to 60, count the numbers that are in both the 2 table and the 5 table.",
+    "a": "a) 33 (102 to 198). b) 16. c) 6 (10, 20, 30, 40, 50, 60: the 10 table).",
+    "say": "Count up to the top, then take away.",
+    "ask": "Why is c the 10 table?",
+    "listen": "2 and 5 together make 10."
+   }
+  ]
+ },
+ "4": {
+  "skills": [
+   {
+    "id": "L3-CHAIN1",
+    "slot": "bank",
+    "skill": "Balance chains",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "1 melon balances 3 pears. 1 pear balances 4 plums. a) How many plums balance 1 melon? b) How many plums balance 2 melons? c) Which is the heaviest, and which is the lightest: melon, pear or plum?",
+    "a": "a) 12 plums. b) 24 plums. c) The melon is the heaviest and the plum is the lightest.",
+    "say": "Draw a balance for each sentence.",
+    "ask": "How many plums for 3 pears?",
+    "listen": "Multiply along the chain."
+   }
+  ]
+ },
+ "7": {
+  "skills": [
+   {
+    "id": "L3-TOP1",
+    "slot": "slide",
+    "skill": "Spatial: reading a top view with heights",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Cubes are stacked on squares. Each number shows how many cubes are stacked on that square. a) How many cubes are there in all? b) Look from the front. In each column you see the tallest stack. How many squares make the front view?",
+    "a": "a) 11 cubes. b) 7 squares (the tallest stacks in the columns are 2, 3 and 2).",
+    "say": "Build it with cubes, then look at it from the front, at table level.",
+    "ask": "Which cubes do you not see from the front? What do you look for in each column?",
+    "listen": "\"Only the tallest stack in each column matters from the front.\""
+   },
+   {
+    "id": "L3-TOP2",
+    "slot": "bank",
+    "skill": "Spatial: side view",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A top view has 3 rows and 2 columns. The rows, from the back to the front, are 3 2, then 1 1, then 2 3. a) How many cubes are there in all? b) Look from the right side. You see the tallest stack in each row. How many squares make the side view?",
+    "a": "a) 12 cubes. b) 7 squares (3, 1 and 3).",
+    "say": "Draw the top view as a grid.",
+    "ask": "Which way are you looking?",
+    "listen": "Rows, not columns, from the side."
+   }
+  ]
+ },
+ "10": {
+  "skills": [
+   {
+    "id": "L3-FACE1",
+    "slot": "slide",
+    "skill": "Picture patterns: each feature has its own cycle",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "The faces keep going in the same way. a) What does face 9 look like? b) What does face 14 look like? c) What is the first face after face 1 that looks exactly like face 1?",
+    "a": "The eyes repeat every 2 faces (open, closed). The mouth repeats every 3 faces (smile, flat, open). a) Face 9: open eyes, open mouth. b) Face 14: closed eyes, flat mouth. c) Face 7 (6 is the first place where both cycles start again).",
+    "say": "Name each feature. Make a table with a row for the eyes and a row for the mouth.",
+    "ask": "How often do the eyes repeat? The mouth? When do they both start again?",
+    "listen": "\"Two cycles at the same time.\""
+   },
+   {
+    "id": "L3-POSTS1",
+    "slot": "slide",
+    "skill": "Gaps and posts, both sides of a path",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A path is 24 m long. Lanterns stand on both sides of the path, one every 3 m. There is a lantern at both ends of each side. How many lanterns are there altogether?",
+    "a": "24 / 3 = 8 gaps, so 9 lanterns on one side. Two sides: 18 lanterns.",
+    "say": "Do one side first. Count the gaps, then the lanterns.",
+    "ask": "How many gaps on one side? One more lantern than gaps, so how many? Then what?",
+    "listen": "\"8 gaps, 9 lanterns, doubled.\""
+   },
+   {
+    "id": "L3-RECT1",
+    "slot": "slide",
+    "skill": "Counting rectangles by size",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "A window has 3 panes across and 2 panes up and down. Count every rectangle you can find (squares count too). How many rectangles are there? Count them by size.",
+    "a": "1 by 1: 6. 2 across by 1: 4. 3 across by 1: 2. 1 across by 2 up: 3. 2 by 2: 2. 3 across by 2 up: 1. In all: 18.",
+    "say": "Count by size. Make a table: size, how many.",
+    "ask": "How many of the smallest size? Of the next size? How do you know you have not missed any?",
+    "listen": "A table by size."
+   },
+   {
+    "id": "L3-OP1",
+    "slot": "bank",
+    "skill": "Number patterns: find a secret rule",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A machine uses a secret rule for the star sign. 2 star 3 = 8. 4 star 1 = 8. 5 star 2 = 15. 3 star 3 = 12. Find 6 star 4.",
+    "a": "30. The rule is: multiply the first number by one more than the second number (2 x 4 = 8, 4 x 2 = 8, 5 x 3 = 15, 3 x 4 = 12, so 6 x 5 = 30).",
+    "say": "Make a table of the numbers going in and the number coming out.",
+    "ask": "What do you try first? Does your rule work for every row?",
+    "listen": "Test the rule on all four examples."
+   },
+   {
+    "id": "L3-BOUND1",
+    "slot": "bank",
+    "skill": "Smallest and greatest possible; impossible totals",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Mei picks 3 different number cards from 1 to 9 and adds them. a) Find her smallest possible total. b) Find her greatest possible total. c) Can she make a total of 25? How do you know?",
+    "a": "a) 6 (1 + 2 + 3). b) 24 (7 + 8 + 9). c) No, 25 is greater than the greatest total, 24.",
+    "say": "Think about the smallest cards and then the greatest cards.",
+    "ask": "How do you know you cannot go higher than 24?",
+    "listen": "Reasoning with the greatest three cards."
+   },
+   {
+    "id": "L3-STICK1",
+    "slot": "bank",
+    "skill": "Most digits from a fixed number of sticks",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Ravi makes digits from sticks. Sticks needed for each digit: 1 needs 2; 7 needs 3; 4 needs 4; 2, 3 and 5 need 5 each; 0, 6 and 9 need 6 each; 8 needs 7. Ravi has exactly 7 sticks. a) What is the most digits he can make? b) What is the greatest number he can make with that many digits?",
+    "a": "a) 3 digits (each digit needs at least 2 sticks, and 4 digits need at least 8). b) 711 (the only way to use exactly 7 sticks with 3 digits is 2 + 2 + 3: the digits 1, 1 and 7).",
+    "say": "Which digit costs the least? Start there.",
+    "ask": "Why can he not make 4 digits? Which digits fit in 7 sticks with 3 digits?",
+    "listen": "A systematic check of costs."
+   }
+  ]
+ }
+}
