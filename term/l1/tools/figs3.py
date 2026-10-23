@@ -486,18 +486,17 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p', title=
     pid = f'{tag}pat{_PANEL_N}x'
     body = []
     dl = []
-    def _pats(i, x0, y0):
-        # patterns are anchored to the tile's own corner, so identical tiles always show identical stripes and dots
-        o = f'patternUnits="userSpaceOnUse" x="0" y="0"'
-        return (f'<pattern id="{pid}{i}_1" width="14" height="14" {o} patternTransform="translate({x0} {y0}) rotate(45)"><rect width="14" height="14" fill="#fff"/><rect x="0" y="0" width="5.5" height="14" fill="{NAVY}"/></pattern>'
-                f'<pattern id="{pid}{i}_2" width="19" height="19" {o} patternTransform="translate({x0 + 2} {y0 + 2})"><rect width="19" height="19" fill="#fff"/><circle cx="9.5" cy="9.5" r="4.6" fill="{NAVY}"/></pattern>'
-                f'<pattern id="{pid}{i}_3" width="16" height="16" {o} patternTransform="translate({x0} {y0})"><rect width="16" height="16" fill="#fff"/><path d="M0 0 L16 16 M16 0 L0 16" stroke="{NAVY}" stroke-width="3.4"/></pattern>')
+    def _pats(pfx, cx, cy):
+        # patterns are anchored to the shape's own centre (a dot or a stripe sits exactly on it), so identical shapes always show identical stripes and dots;
+        # fine pitch so that even a small shape holds several dots or stripes
+        return (f'<pattern id="{pfx}1" x="-5" y="-5" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="translate({cx:.1f} {cy:.1f}) rotate(45)"><rect x="-5" y="-5" width="10" height="10" fill="#fff"/><rect x="-1.8" y="-5" width="3.6" height="10" fill="{NAVY}"/></pattern>'
+                f'<pattern id="{pfx}2" x="-5.5" y="-5.5" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="translate({cx:.1f} {cy:.1f})"><rect x="-5.5" y="-5.5" width="11" height="11" fill="#fff"/><circle cx="0" cy="0" r="3" fill="{NAVY}"/></pattern>'
+                f'<pattern id="{pfx}3" x="-6" y="-6" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="translate({cx:.1f} {cy:.1f})"><rect x="-6" y="-6" width="12" height="12" fill="#fff"/><path d="M-6 -6 L6 6 M6 -6 L-6 6" stroke="{NAVY}" stroke-width="2.6"/></pattern>')
     rsz = {'s': 0.2, 'm': 0.3, 'l': 0.42}
     lab_h = 44 if labels else 0
     top = 46 if title else 0
     for i, t in enumerate(tiles):
         r, c = divmod(i, cols); x0 = 10 + c * (cell + 12); y0 = 10 + top + r * (cell + 12 + lab_h)
-        dl.append(_pats(i, x0, y0))
         body.append(f'<rect x="{x0}" y="{y0}" width="{cell}" height="{cell}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3"/>')
         if i in hide:
             body.append(f'<text x="{x0 + cell / 2}" y="{y0 + cell / 2 + 20}" font-size="64" font-weight="800" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">?</text>')
@@ -507,8 +506,10 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p', title=
             elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
             elif n == 3: pos = [(0.5, 0.28), (0.28, 0.7), (0.72, 0.7)]
             else: pos = [(0.3, 0.3), (0.7, 0.3), (0.3, 0.7), (0.7, 0.7)]
-            for (px, py) in pos:
-                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid + str(i) + '_', bool(t.get('shadow'))))
+            for k, (px, py) in enumerate(pos):
+                pfx = f'{pid}{i}s{k}_'
+                dl.append(_pats(pfx, x0 + px * cell, y0 + py * cell))
+                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pfx, bool(t.get('shadow'))))
         if labels:
             lt = labels[i] if i < len(labels) else ''
             body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 34}" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
@@ -902,16 +903,18 @@ def _sun_card(spec, x, y, cw, ch):
     global _SUN_N
     _, n, size, pat = spec.split(':'); n = int(n)
     _SUN_N += 1; pid = f'sunpat{_SUN_N}'
-    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.095}[size] * cw
+    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.08}[size] * cw
     if n == 1: pos = [(0.5, 0.5)]
     elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
-    elif n == 5: pos = [(0.17, 0.25), (0.5, 0.25), (0.83, 0.25), (0.33, 0.75), (0.67, 0.75)]
+    elif n == 5: pos = [(0.22, 0.27), (0.5, 0.27), (0.78, 0.27), (0.36, 0.73), (0.64, 0.73)]
     else: raise ValueError('sun card: N must be 1, 2 or 5')
-    fill = {'plain': YEL, 'striped': f'url(#{pid}s)', 'dotted': f'url(#{pid}d)'}[pat]
-    out = [f'<defs><pattern id="{pid}s" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="translate({x:.1f} {y:.1f}) rotate(45)"><rect width="10" height="10" fill="#fff"/><rect width="4" height="10" fill="{NAVY}"/></pattern>'
-           f'<pattern id="{pid}d" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="translate({x:.1f} {y:.1f})"><rect width="13" height="13" fill="#fff"/><circle cx="6.5" cy="6.5" r="3.3" fill="{NAVY}"/></pattern></defs>']
+    out = []
     for (px, py) in pos:
         cx, cy = x + px * cw, y + py * ch
+        _SUN_N += 1; q = f'sunpat{_SUN_N}'
+        out.append(f'<defs><pattern id="{q}s" x="-5" y="-5" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="translate({cx:.1f} {cy:.1f}) rotate(45)"><rect x="-5" y="-5" width="10" height="10" fill="#fff"/><rect x="-1.8" y="-5" width="3.6" height="10" fill="{NAVY}"/></pattern>'
+                   f'<pattern id="{q}d" x="-5.5" y="-5.5" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="translate({cx:.1f} {cy:.1f})"><rect x="-5.5" y="-5.5" width="11" height="11" fill="#fff"/><circle cx="0" cy="0" r="3" fill="{NAVY}"/></pattern></defs>')
+        fill = {'plain': YEL, 'striped': f'url(#{q}s)', 'dotted': f'url(#{q}d)'}[pat]
         for k in range(8):
             a = k * math.pi / 4
             out.append(f'<line x1="{cx + R * 1.25 * math.cos(a):.1f}" y1="{cy + R * 1.25 * math.sin(a):.1f}" x2="{cx + R * 1.6 * math.cos(a):.1f}" y2="{cy + R * 1.6 * math.sin(a):.1f}" stroke="{NAVY}" stroke-width="{3.4 if size != "small" else 2.6}" stroke-linecap="round"/>')
