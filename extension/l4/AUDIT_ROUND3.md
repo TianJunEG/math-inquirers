@@ -140,3 +140,7 @@ Count: 27 clone replacements as announced + U2 G01, U2 C01, U9 C01, U10 S07, U10
 2. The small Lows (U3 T2 drawing, U9 S4 "each line is worth 10", "dashed").
 3. Remove the DRAFT licence line when the owner and lawyer approve the text.
 4. Child trial for pace, reading load of the Learn it pages, Unit 6 with a protractor.
+
+## Fixes made after round 3 (23 Oct)
+
+Eleven "too close" items rewritten with a new frame as well as a new story (compared by hand with `p4/content/l*.js`): U3 T3 (two jars: total and difference, then equalise: 27 and 15), U4 T1 (least and greatest n with 1/2 < n/9 < 5/6: 5 and 7), U4 T2 (fractions of a 24-hour day: 5 hours), U6 G2 (Ferris wheel with 12 seats: 7, 150, 10), U7 T2 (three squares from their areas, perimeter of the row: 26, with figure), U7 T3 (two 8 by 3 rectangles joined two ways: 28 and 38), U8 T2 (top and bottom faces of dice add to 7: 5, 9, 14), U9 S4 (journey graph with a rest: 40, 1, 5, 30; "each line is worth 10 km"), U9 S5 (rows of seats, rule in words: 35 and 70), U10 S2 (totals from 5¢, 10¢, 50¢ coins: 7 and 3), U10 S12 (lock code: 603). Lows: U3 T2 has a drawn number tower, U8 T3 says "dashed", U10 S6 is now a film-session time puzzle (S5 keeps the magic pot), working rows added to U5 S10 and U6 G1. The seven borderline items were left. Every new answer is recomputed in `verify/l4_uNN_checks.py` (425 answers, 0 mismatches); 100 pages.
