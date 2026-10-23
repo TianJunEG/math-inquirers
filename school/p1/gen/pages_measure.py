@@ -50,7 +50,7 @@ def page15():
              instr=["Add the coins in each purse.", "Write the total in cents.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=5,
              key=dict(answers=", ".join(f"{i+1}) {t}\u00a2" for i, t in enumerate(tot)), check_result=f"Code word: {word}"),
-             note="Coins used: 5\u00a2, 10\u00a2, 20\u00a2, 50\u00a2, drawn by value as printed numbers. Totals stay below $1. Coin sizes grow with value but the number is what matters.",
+             note="Coins used: 5\u00a2, 10\u00a2, 20\u00a2, 50\u00a2. Each coin shows its value and the word cents. The coins are original line drawings (a small picture on each, not a copy of any real coin), with sizes in the true proportion of the real coins. Totals stay below $1.",
              seed=1515)
     solved = [sum(int(m) for m in re.findall(r'class="coinval"[^>]*>(\d+)<', s)) for s in svgs]
     P.v("V1 coin values read from the drawing add to the key", solved == tot, solved)

@@ -175,7 +175,7 @@ def check_slides_links(d):
     # page references in script/notes must match
     pages = {q['page'] for t in ('start', 'think', 'go') for q in d['tiers'][t]} | {d['tiers']['investigation']['page']}
     txt = ' '.join(ln.get('text', '') for seg in d['script']['segments'] for ln in seg['lines']) + ' ' + ' '.join(s['note'] for s in d['slides'])
-    nk = max(1, len(kits(d)))
+    nk = max(1, kit_pages_total(d))
     kp = set(range(6, 6 + nk)) | set(range(max(pages) + 1, max(pages) + 1 + nk))
     for m in re.finditer(r'\bpages? (\d+)', txt, re.I):
         if int(m.group(1)) not in pages | kp: fail(f'link: text mentions page {m.group(1)} which does not exist (pages {sorted(pages)} and kit pages {sorted(kp)})')
@@ -306,7 +306,7 @@ def check_pages(d):
     if os.path.exists(wbp):      # the built PDF is the truth; the layout model can over-report (the builder tightens pages to fit)
         import pdfcheck
         allf = pdfcheck.pdf_fill(wbp, 14, 16)
-        fills = allf[:len(allf) - len(kits(d))] if kits(d) else allf
+        fills = allf[:len(allf) - kit_pages_total(d)] if kits(d) else allf
         d['_fills'] = fills
         for i, f in enumerate(fills, 1):
             if f < 0.80: warn(f'pages: workbook page {i} content ends at {f:.0%} of the page (target at least 85%): add a question or bigger writing space')
@@ -366,7 +366,7 @@ def check_outputs(d):
         got = pdfcheck.pdf_pages(path); fills = pdfcheck.pdf_fill(path, *mg)
         txt = ', '.join(f'{f:.0%}' for f in fills)
         if got != n: fail(f'outputs: {name} PDF has {got} pages but {n} are designed (a question block spilled onto an orphan page); fill {txt}')
-        nk = len(kits(d)) if name == 'Workbook' else 0          # a kit page may be short (play money coins, sticks): only question pages must be full
+        nk = kit_pages_total(d) if name == 'Workbook' else 0          # a kit page may be short (play money coins, sticks): only question pages must be full
         for i, f in enumerate(fills, 1):
             if f < 0.40 and not (nk and i > len(fills) - nk and got == n): fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
             elif f < 0.80 and name != 'Home_Answers': warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')

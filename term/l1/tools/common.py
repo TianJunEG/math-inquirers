@@ -238,6 +238,18 @@ def blanks(text):
     return blank_tokens(t, 'print')
 
 
+def kit_pages_total(d):
+    """Printed kit pages: one for each kit, more for a kit that runs over (the fold shapes)."""
+    n = 0
+    for k in kits(d):
+        try:
+            import figs3
+            n += figs3.kit_page_count(k) if k.get('type') in figs3.KITS3 else 1
+        except Exception:
+            n += 1
+    return n
+
+
 def kits(d):
     """Kit pages a lesson declares: workbook.kits = [] (none) or [{type, title, intro, ...}]. Absent = the legacy tens-bars page."""
     wb = d.get('workbook', {})

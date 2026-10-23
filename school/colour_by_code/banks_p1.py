@@ -283,8 +283,12 @@ def _time(tier):
         h, m = a
         if m == 0: return SEM([f"It is {cyc(h + 1)} o'clock.", f"1 hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour before")
         return SEM([f"It is half past {cyc(h + 1)}.", f"1 hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour before, half past")
+    def spare(a, r):
+        h, m = a
+        if m == 0: return SEM([f"It is half past {h}.", f"Half an hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="half an hour before half past")
+        return SEM([f"It is half past {cyc(h - 1)}.", f"1 hour later: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour after half past")
     for f_ in (clock_stack, clock_row, clock_alone, clock_short): f_.pref = 1          # a clock sheet shows clock faces wherever one fits (one face per time)
-    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1, earlier]
+    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1, earlier, spare]
     if tier == 2:
         def later2(a, r):
             h, m = a
@@ -404,7 +408,7 @@ def _mult1(tier):
         c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10] + [(y, x) for x, y in _pairs(a) if y <= 5 and x <= 10]
         if not c: return None
         rows, cols = r.choice(c)
-        q = SEM(["How many dots?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
+        q = SEM(["How many stars?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
         q.extra = lambda ans, rows=rows, cols=cols: rows * cols == ans
         q.sig = ("mult", rows, cols)
         return q
@@ -412,7 +416,7 @@ def _mult1(tier):
         c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10]
         if not c: return None
         n, per = r.choice(c); art = A.groups(n, per)
-        q = SEM(["How many dots", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
+        q = SEM(["How many stars", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
         q.extra = lambda ans, n=n, per=per: n * per == ans
         q.sig = ("mult", n, per)
         return q
@@ -440,7 +444,7 @@ def _share1(tier):
         d = _ch(r, (2, 3, 4, 5)); n = a * d
         if n > 20: return None
         art = A.groups(d, a)
-        q = SEM(["How many dots", f"in each box? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="dots in each box")
+        q = SEM(["How many stars", f"in each box? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="stars in each box")
         q.extra = lambda ans, art=art: art.meta["per"] == ans
         q.sig = ("div", n, d)
         return q
@@ -567,12 +571,12 @@ GALLERY = [
     dict(id="CBC-04", picture="house",     bank="place",   tier=1, seed=104),
     dict(id="CBC-05", picture="icecream",  bank="count",   tier=2, seed=105),
     dict(id="CBC-06", picture="owl",       bank="compare", tier=2, seed=106),
-    dict(id="CBC-07", picture="sailboat",  bank="money",   tier=1, seed=107),
+    dict(id="CBC-07", picture="sailboat",  bank="money",   tier=1, seed=109),
     dict(id="CBC-08", picture="butterfly", bank="time",    tier=1, seed=74),
     dict(id="CBC-09", picture="icecream",  bank="length",  tier=1, seed=109),
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=128),
     dict(id="CBC-11", picture="car",       bank="mult",    tier=2, seed=3),
-    dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=2),
-    dict(id="CBC-13", picture="icecream",  bank="pgraph",  tier=1, seed=20),
+    dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=3),
+    dict(id="CBC-13", picture="rocket",    bank="pgraph",  tier=1, seed=23),
     dict(id="CBC-14", picture="sailboat",  bank="ordinal", tier=1, seed=1),
 ]

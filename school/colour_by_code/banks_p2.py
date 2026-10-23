@@ -262,7 +262,7 @@ def _mult(tier):
         c = [(x, y) for x, y in pairs_for(a) if x <= 5 and y <= 10] + [(y, x) for x, y in pairs_for(a) if y <= 5 and x <= 10]
         if not c: return None
         rows, cols = r.choice(c)
-        q = SEM(["How many dots?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
+        q = SEM(["How many stars?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
         q.extra = lambda ans, rows=rows, cols=cols: rows * cols == ans
         q.sig = ("mult", rows, cols)
         return q
@@ -270,7 +270,7 @@ def _mult(tier):
         c = [(x, y) for x, y in pairs_for(a) if x <= 5 and y <= 10]
         if not c: return None
         n, per = r.choice(c); art = A.groups(n, per)
-        q = SEM(["How many dots", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
+        q = SEM(["How many stars", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
         q.extra = lambda ans, n=n, per=per: n * per == ans
         q.sig = ("mult", n, per)
         return q
@@ -815,9 +815,9 @@ GALLERY = [
     dict(id="CBC-P2-07", picture="dinosaur", bank="money", tier=2, seed=1),
     dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=1, seed=308),
     dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=2, seed=309),
-    dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=4),
-    dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=313),
-    dict(id="CBC-P2-12", picture="icecream", bank="oddeven", tier=2, seed=312),
+    dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=10),
+    dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=316),
+    dict(id="CBC-P2-12", picture="icecream", bank="oddeven", tier=2, seed=323),
     dict(id="CBC-P2-13", picture="fish", bank="pattern", tier=1, seed=1),
     dict(id="CBC-P2-14", picture="dinosaur", bank="mult", tier=2, seed=1),
     dict(id="CBC-P2-15", picture="house", bank="frac", tier=2, seed=1),

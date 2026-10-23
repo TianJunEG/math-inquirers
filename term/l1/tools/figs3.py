@@ -238,7 +238,7 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
         x1, y1, x2, y2 = x1 + ux * g, y1 + uy * g, x2 - ux * g, y2 - uy * g
         dash = ' stroke-dasharray="7 6"' if ghost else ''
         col = '#8A94AD' if ghost else NAVY
-        body.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="8" stroke-linecap="butt"{dash}/>')
+        body.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="7" stroke-linecap="butt"{dash}/>')
         if not ghost:
             body.append(f'<circle cx="{x1:.1f}" cy="{y1:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/><circle cx="{x2:.1f}" cy="{y2:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/>')
     x0 = 24; yb = 20 + side * 0.9 + 6
@@ -603,7 +603,51 @@ def render(v):
 FIGURES3 = {'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 
 
-# ================================================================== kit pages (700-unit viewBox, 1 mm about 4.58 units, cut lines at least 6 mm apart)
+# ================================================================== kit pages
+# Every kit is drawn on a 700-unit wide viewBox that prints at kit_pct(spec) percent of the 182 mm text width, so a size in millimetres is exact:
+# u = units per mm = 700 / (182 * pct / 100). Cut lines are at least 6 mm apart (KIT_GAP). A kit may need more than one page: the pages are joined with
+# KIT_SEP and b_print.kit_pages prints one page for each.
+
+PAGE_MM = 182.0
+KIT_GAP = 6.0                       # mm between neighbouring cut lines
+KIT_SEP = '<!--KITPAGE-->'
+KIT_AVAIL_MM = 200.0                # height left on a kit page under the header, title, intro and note
+FOLD_D_MM = 88                      # default circle / square size for the fold-shapes kit ("about 9 cm"); any d_mm is honoured
+KIT_PCT = {'clock_kit': 100, 'event_cards': 100, 'play_money': 100, 'price_tags': 100, 'grid_tiles': 100, 'mistake_cards': 100,
+           'stick_strips': 100, 'calendar_cards': 100}
+# kits that a later lesson uses again (the kit note says "We use them again" only for these): clock (Term 3 Lessons 2, 3), play money (Lessons 5, 6), price tags (Lesson 6)
+KIT_REUSED = {'clock_kit', 'play_money', 'price_tags'}
+
+
+def kit_pct(spec):
+    """Share of the text width a kit prints at. A kit whose pieces are too wide for 182 mm (two 95 mm shapes in a row) prints a little wider."""
+    if spec.get('width'): return spec['width']
+    if spec.get('type') == 'fold_shapes':
+        d = spec.get('d_mm', FOLD_D_MM)
+        return 100 if 2 * d + KIT_GAP <= PAGE_MM else min(110, round((2 * d + KIT_GAP) / PAGE_MM * 100 + 0.5))
+    return KIT_PCT.get(spec.get('type'), 84)
+
+
+def kit_style(spec):
+    """CSS for the box that holds the kit drawing: a wider kit is centred on the page."""
+    p = kit_pct(spec)
+    return f'width:{p}%;margin-left:{-(p - 100) / 200 * PAGE_MM:.1f}mm' if p > 100 else f'width:{p}%'
+
+
+def kit_reused(spec):
+    """True when a later lesson uses these pieces again. spec['reused'] (true or false) overrides the built-in list."""
+    if 'reused' in spec: return bool(spec['reused'])
+    return spec.get('type') in KIT_REUSED
+
+
+def kit_unit(spec):
+    return 700.0 / (PAGE_MM * kit_pct(spec) / 100.0)
+
+
+def kit_page_count(spec):
+    r = render_kit(spec)
+    return (r.count(KIT_SEP) + 1) if r else 1
+
 
 def _kit(w, h, body, label=''):
     return f'<svg viewBox="0 0 {w:.0f} {h:.0f}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{_esc(label)}" style="width:100%;height:auto;display:block">{"".join(body)}</svg>'
@@ -621,93 +665,132 @@ def _head(txt, y=22):
     return f'<text x="4" y="{y}" font-size="20" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">{_esc(txt)}</text>'
 
 
-def clock_kit(faces=2, hour_hands=3, minute_hands=3, labels='all'):
-    """Cut-out clock faces (each ~9 cm across) and loose hands: hour hands short and wide, minute hands long and thin. No fastener (D4): lay the hands on the face."""
-    b = [_head(f'Clock faces: cut out both. Hands: cut out all {hour_hands + minute_hands}.')]
-    d = 9 * MM * 10 / 10 * 1.0
-    r = 4.4 * 10 * MM / 10 * 10 / 10
-    r = 205 / 2                      # about 45 mm radius would be 206 units: a 90 mm face
+def _inner(svgtxt):
+    return svgtxt[svgtxt.index('>') + 1:svgtxt.rindex('</svg>')]
+
+
+def _words(txt, maxch):
+    """Split a short label into lines of at most maxch characters."""
+    out, cur = [], ''
+    for w in str(txt).split():
+        if cur and len(cur) + 1 + len(w) > maxch: out.append(cur); cur = w
+        else: cur = (cur + ' ' + w).strip()
+    return out + ([cur] if cur else [])
+
+
+def clock_kit(faces=2, hour_hands=3, minute_hands=3, labels='all', u=None):
+    """Cut-out clock faces (80 mm across, two in a row) and loose hands: hour hands short and wide (24 mm), minute hands long and thin (36 mm, shorter than the
+    face radius so a laid hand never overhangs). Each hand has a dot at the end that goes in the middle. No fastener (D4): lay the hands on the face."""
+    u = u or 700 / PAGE_MM
+    gap = KIT_GAP * u
+    b = [_head(f'Cut out {faces} clock faces and {hour_hands + minute_hands} hands: {faces + hour_hands + minute_hands} pieces in all.')]
+    r = 40 * u; rc = r + 1.6 * u                       # face radius and its cut line
+    per = 2
+    y = 34 + rc
     for k in range(faces):
-        cx = 175 + k * 350; cy = 36 + r + 20
+        c = k % per; row = k // per
+        nrow = min(per, faces - row * per)
+        wtot = nrow * 2 * rc + (nrow - 1) * gap
+        cx = (700 - wtot) / 2 + rc + c * (2 * rc + gap); cy = y + row * (2 * rc + gap)
         inner = clock(12, 0, True, labels, ticks=True)
-        b.append(f'<g transform="translate({cx - r:.1f},{cy - r:.1f}) scale({2 * r / 220:.4f})">{inner[inner.index(">") + 1:inner.rindex("</svg>")]}</g>')
-        b.append(_cutcircle(cx, cy, r + 4, 'none'))
-    y = 36 + 2 * r + 60
-    b.append(_head('Hour hands (short, wide)', y)); y += 18
+        sc = 2 * r / 196.0
+        b.append(f'<g transform="translate({cx - 110 * sc:.1f},{cy - 110 * sc:.1f}) scale({sc:.4f})">{_inner(inner)}</g>')
+        b.append(_cutcircle(cx, cy, rc, 'none'))
+    rows_f = (faces + per - 1) // per
+    y = 34 + rows_f * (2 * rc + gap) + 4
+    b.append(_head(f'Hour hands (short, wide): cut out {hour_hands}', y)); y += 8
+    hw, hh = 28 * u, 8 * u
     for k in range(hour_hands):
-        x = 20 + k * 120
-        b.append(f'<path d="M{x} {y} h{3.6 * MM * 10:.0f} l16 12 l-16 12 h-{3.6 * MM * 10:.0f} Z" transform="translate(0 {k * 0})" fill="#fff" stroke="{CUT}" stroke-width="2" stroke-dasharray="7 5"/>' if False else _cutbox(x, y + k * 0, 104, 30, 15))
-        b.append(f'<line x1="{x + 14}" y1="{y + 15}" x2="{x + 90}" y2="{y + 15}" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>')
-    y += 60
-    b.append(_head('Minute hands (long, thin)', y)); y += 18
+        x = 4 + k * (hw + gap)
+        b.append(_cutbox(x, y, hw, hh, 12))
+        b.append(f'<line x1="{x + 4 * u:.1f}" y1="{y + hh / 2:.1f}" x2="{x + 4 * u + 24 * u:.1f}" y2="{y + hh / 2:.1f}" stroke="{NAVY}" stroke-width="{2.4 * u:.1f}" stroke-linecap="round"/>')
+        b.append(f'<circle cx="{x + 4 * u:.1f}" cy="{y + hh / 2:.1f}" r="{1.0 * u:.1f}" fill="#fff"/>')
+    y += hh + gap + 8
+    b.append(_head(f'Minute hands (long, thin): cut out {minute_hands}', y)); y += 8
+    mw, mh = 40 * u, 7 * u
     for k in range(minute_hands):
-        yy = y + k * 40
-        b.append(_cutbox(20, yy, 190, 28, 14))
-        b.append(f'<line x1="34" y1="{yy + 14}" x2="196" y2="{yy + 14}" stroke="{NAVY}" stroke-width="3.6" stroke-linecap="round"/>')
-    b.append(f'<text x="260" y="{y + 40}" font-size="17" fill="#3B4A6B" font-family="Nunito Sans, Arial">Lay a hour hand and a minute hand on a face, with the ends</text>')
-    b.append(f'<text x="260" y="{y + 62}" font-size="17" fill="#3B4A6B" font-family="Nunito Sans, Arial">together at the middle. No pins: keep the hands flat.</text>')
-    return _kit(700, y + 3 * 40 + 20, b, 'clock faces and hands')
+        x = 4 + k * (mw + gap)
+        b.append(_cutbox(x, y, mw, mh, 10))
+        b.append(f'<line x1="{x + 2 * u:.1f}" y1="{y + mh / 2:.1f}" x2="{x + 2 * u + 36 * u:.1f}" y2="{y + mh / 2:.1f}" stroke="{NAVY}" stroke-width="{1.2 * u:.1f}" stroke-linecap="round"/>')
+        b.append(f'<circle cx="{x + 2 * u:.1f}" cy="{y + mh / 2:.1f}" r="{1.0 * u:.1f}" fill="#fff" stroke="{NAVY}" stroke-width="1.2"/>')
+    y += mh + gap + 6
+    for i, t in enumerate(('Lay an hour hand and a minute hand on a face, with the dotted ends', 'together at the middle. No pins: keep the hands flat.')):
+        b.append(f'<text x="4" y="{y + 18 * i:.1f}" font-size="17" fill="#3B4A6B" font-family="Nunito Sans, Arial">{t}</text>')
+    return _kit(700, y + 40, b, 'clock faces and hands')
 
 
-def play_money(page=1, counts=None):
-    """Two pages of stylised PLAY MONEY. page 1 = coins (5c x4, 10c x6, 20c x4, 50c x2), page 2 = notes ($2 x5, $5 x4, $10 x3, $50 x1). `counts` overrides {value: n}."""
+COIN_MM = {'5c': 20, '10c': 22, '20c': 24, '50c': 26, '$1': 28}
+NOTE_MM = {'$2': (50, 25), '$5': (51, 25.5), '$10': (52, 26), '$50': (53, 26.5)}     # up to three notes in a row
+
+
+def play_money(page=1, counts=None, u=None):
+    """Two pages of stylised PLAY MONEY. page 1 = coins (5c x4, 10c x6, 20c x4, 50c x2), page 2 = notes ($2 x5, $5 x4, $10 x3, $50 x1). `counts` overrides {value: n}.
+    Coins are 20 to 26 mm, notes about 50 by 25 mm (three in a row), 6 mm between cut lines."""
+    u = u or 700 / PAGE_MM
     default = {1: {'5c': 4, '10c': 6, '20c': 4, '50c': 2}, 2: {'$2': 5, '$5': 4, '$10': 3, '$50': 1}}[page]
     cnt = {_canon(k): n for k, n in (counts or default).items()}
     b = [_head('Play money: a grown-up cuts out every piece. It is not real money.')]
-    x = 12; y = 70; rowh = 0
+    gap = KIT_GAP * u; pad = 1.5 * u
+    x = 4 * u; y = 36; rowh = 0
     for v, n in cnt.items():
         for _ in range(n):
-            w, h = (NOTE_SIZE[v] if v in NOTE_SIZE else (COIN_SIZE[v], COIN_SIZE[v]))
-            w2, h2 = w + 26, h + 26
-            if x + w2 > 690: x = 12; y += rowh + 6; rowh = 0
-            cx, cy = x + w2 / 2, y + h2 / 2
-            b.append(_cutbox(x, y, w2, h2, 10, '#fff'))
-            b.append(_note(v, cx, cy) if v in NOTE_SIZE else _coin(v, cx, cy))
-            x += w2 + 8; rowh = max(rowh, h2)
+            w, h = ((NOTE_MM[v][0] * u, NOTE_MM[v][1] * u) if v in NOTE_MM else (COIN_MM[v] * u, COIN_MM[v] * u))
+            cw, ch = w + 2 * pad, h + 2 * pad
+            if x + cw > 700 - 4 * u + 0.1: x = 4 * u; y += rowh + gap; rowh = 0
+            cx, cy = x + cw / 2, y + ch / 2
+            b.append(_cutbox(x, y, cw, ch, 10 if v not in NOTE_MM else 6, '#fff'))
+            b.append(_note(v, cx, cy, (w, h)) if v in NOTE_MM else _coin(v, cx, cy, w))
+            x += cw + gap; rowh = max(rowh, ch)
     return _kit(700, y + rowh + 20, b, 'play money')
 
 
-def price_tags(prices=None, items=None, blank=3):
-    """12 tags: 9 priced, `blank` blank ones to write on. prices/items lists for the priced tags."""
+def price_tags(prices=None, items=None, blank=3, u=None):
+    """12 tags (each 54 by 44 mm, 6 mm between cut lines, the grid centred on the page): 9 priced, `blank` blank ones to write on."""
+    u = u or 700 / PAGE_MM
     prices = prices or ['$2', '$3', '$4', '$5', '$6', '$7', '$8', '$9', '$10']
     items = items or ['pencil', 'rubber', 'ruler', 'glue', 'bag', 'book', 'cup', 'ball', 'pen']
     b = [_head('Price tags: a grown-up cuts out all 12. Write a price on the blank ones.')]
-    cw, ch = 210, 170
+    cw, ch, gap = 54 * u, 44 * u, KIT_GAP * u
+    x0 = (700 - (3 * cw + 2 * gap)) / 2
     for i in range(len(prices) + blank):
         c, r = i % 3, i // 3
-        x, y = 14 + c * (cw + 20), 40 + r * (ch + 16)
+        x, y = x0 + c * (cw + gap), 34 + r * (ch + gap)
         b.append(_cutbox(x, y, cw, ch, 14))
         if i < len(prices):
             inner = price_tag(items[i % len(items)], prices[i], False, 130)
-            b.append(f'<g transform="translate({x + 20},{y + 4}) scale(1)">{inner[inner.index(">") + 1:inner.rindex("</svg>")]}</g>')
+            b.append(f'<g transform="translate({x + (cw - 140) / 2:.1f},{y + (ch - 160) / 2:.1f})">{_inner(inner)}</g>')
         else:
-            b.append(f'<line x1="{x + 30}" y1="{y + 120}" x2="{x + cw - 30}" y2="{y + 120}" stroke="{NAVY}" stroke-width="2.4"/><text x="{x + cw / 2}" y="{y + 70}" font-size="18" text-anchor="middle" fill="#5B6785" font-family="Nunito Sans, Arial">write here</text>')
+            b.append(f'<line x1="{x + 30}" y1="{y + ch * 0.7:.1f}" x2="{x + cw - 30}" y2="{y + ch * 0.7:.1f}" stroke="{NAVY}" stroke-width="2.4"/><text x="{x + cw / 2:.1f}" y="{y + ch * 0.45:.1f}" font-size="20" text-anchor="middle" fill="#5B6785" font-family="Nunito Sans, Arial">write here</text>')
     rows = (len(prices) + blank + 2) // 3
-    return _kit(700, 40 + rows * (ch + 16) + 10, b, 'price tags')
+    return _kit(700, 34 + rows * (ch + gap), b, 'price tags')
 
 
-def grid_tiles(symbols=('circle', 'square', 'triangle', 'star'), per=4, digits=True):
-    """16 tiles (4 symbols x 4, each with a digit 1-4) and two mats (3 x 3 and 4 x 4: not cut)."""
+def grid_tiles(symbols=('circle', 'square', 'triangle', 'star'), per=4, digits=True, u=None):
+    """16 tiles (22 mm, 6 mm between cut lines; 4 symbols x 4, each with a digit 1-4) and two mats (3 x 3 and 4 x 4, 24 mm squares, side by side: not cut)."""
+    u = u or 700 / PAGE_MM
     b = [_head('Tiles: cut out all 16 (a grown-up cuts). The mats are not cut.')]
-    t = 22 * MM * 1.0 * 0.9
+    t = 22 * u; gap = KIT_GAP * u
+    n_row = 6
+    x0 = (700 - (n_row * t + (n_row - 1) * gap)) / 2
     k = 0
     for si, sym in enumerate(symbols):
         for d in range(per):
-            x = 12 + (k % 6) * (t + 14); y = 34 + (k // 6) * (t + 14); k += 1
+            x = x0 + (k % n_row) * (t + gap); y = 34 + (k // n_row) * (t + gap); k += 1
             b.append(_cutbox(x, y, t, t, 8))
             b.append(_sym_shape(sym, x + t * 0.4, y + t * 0.42, t * 0.26))
-            if digits: b.append(f'<text x="{x + t * 0.78}" y="{y + t * 0.88}" font-size="26" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{d + 1}{"&#818;" if False else ""}</text>')
-    y0 = 34 + 3 * (t + 14) + 20
-    b.append(_head('Mat 1 (3 by 3)', y0))
-    cs = 24 * MM * 1.0
+            if digits: b.append(f'<text x="{x + t * 0.78:.1f}" y="{y + t * 0.88:.1f}" font-size="{t * 0.3:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{d + 1}</text>')
+    rows = (k + n_row - 1) // n_row
+    y0 = 34 + rows * (t + gap) + 20
+    cs = 24 * u
+    xm = (700 - (7 * cs + gap)) / 2
+    b.append(_head('Mat 1 (3 by 3)', y0).replace('x="4"', f'x="{xm:.0f}"'))
     for r in range(3):
-        for c in range(3): b.append(f'<rect x="{12 + c * cs}" y="{y0 + 10 + r * cs}" width="{cs}" height="{cs}" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/>')
-    x2 = 12 + 3 * cs + 50
-    b.append(f'<text x="{x2}" y="{y0}" font-size="20" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Mat 2 (4 by 4)</text>')
-    cs2 = 20 * MM * 1.0
+        for c in range(3): b.append(f'<rect x="{xm + c * cs:.1f}" y="{y0 + 10 + r * cs:.1f}" width="{cs:.1f}" height="{cs:.1f}" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/>')
+    x2 = xm + 3 * cs + gap
+    b.append(f'<text x="{x2:.0f}" y="{y0}" font-size="20" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Mat 2 (4 by 4)</text>')
     for r in range(4):
-        for c in range(4): b.append(f'<rect x="{x2 + c * cs2}" y="{y0 + 10 + r * cs2}" width="{cs2}" height="{cs2}" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/>')
-    return _kit(700, y0 + 20 + 4 * cs2 + 20, b, 'grid tiles and mats')
+        for c in range(4): b.append(f'<rect x="{x2 + c * cs:.1f}" y="{y0 + 10 + r * cs:.1f}" width="{cs:.1f}" height="{cs:.1f}" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/>')
+    return _kit(700, y0 + 20 + 4 * cs + 10, b, 'grid tiles and mats')
 
 
 def _sym_shape(sym, x, y, r):
@@ -718,171 +801,239 @@ def _sym_shape(sym, x, y, r):
             'heart': f'<path d="M{x} {y + r} C{x - r * 1.6} {y - r * .2} {x - r * .7} {y - r * 1.1} {x} {y - r * .3} C{x + r * .7} {y - r * 1.1} {x + r * 1.6} {y - r * .2} {x} {y + r}" {_o("#FF8FB1")}/>'}[sym]
 
 
-def mistake_cards(cards=None):
-    """8 cards (text from `cards`, 4 right and 4 wrong sums) and a two-pocket mat (RIGHT / WRONG; the mat is not cut)."""
+def mistake_cards(cards=None, u=None):
+    """8 cards (85 by 16 mm, 6 mm between cut lines; text from `cards`, 4 right and 4 wrong sums) and a two-pocket mat (RIGHT / WRONG; the mat is not cut)."""
+    u = u or 700 / PAGE_MM
     cards = cards or ['23 + 14 = 37', '45 + 12 = 56', '60 - 20 = 40', '38 + 5 = 44', '17 + 3 = 20', '52 - 9 = 42', '30 + 40 = 70', '81 - 6 = 74']
     b = [_head('Cards: a grown-up cuts out all 8. The mat is not cut.')]
+    cw, ch, gap = 85 * u, 16 * u, KIT_GAP * u
+    x0 = (700 - (2 * cw + gap)) / 2
     for i, t in enumerate(cards[:8]):
-        x = 12 + (i % 2) * 336; y = 36 + (i // 2) * 80
-        b.append(_cutbox(x, y, 316, 64, 10)); b.append(f'<text x="{x + 158}" y="{y + 42}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
-    y = 36 + 4 * 80 + 20
+        x = x0 + (i % 2) * (cw + gap); y = 34 + (i // 2) * (ch + gap)
+        b.append(_cutbox(x, y, cw, ch, 10)); b.append(f'<text x="{x + cw / 2:.1f}" y="{y + ch / 2 + 10:.1f}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
+    y = 34 + 4 * (ch + gap) + 14
     for k, lab in enumerate(('RIGHT', 'WRONG')):
-        x = 12 + k * 340
-        b.append(f'<rect x="{x}" y="{y}" width="320" height="210" rx="14" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/><text x="{x + 160}" y="{y + 120}" font-size="44" font-weight="800" text-anchor="middle" fill="#B9C7DA" font-family="{FONT}">{lab}</text>')
-    return _kit(700, y + 230, b, 'mistake cards')
+        x = x0 + k * (cw + gap)
+        b.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{cw:.1f}" height="{55 * u:.1f}" rx="14" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/><text x="{x + cw / 2:.1f}" y="{y + 55 * u / 2 + 14:.1f}" font-size="44" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{lab}</text>')
+    return _kit(700, y + 55 * u + 10, b, 'mistake cards')
 
 
-def fold_shapes(circles=4, squares=4, rects=2, d_mm=95):
-    """Circles, squares and grid rectangles for folding (about 9.5 cm). A grown-up cuts them out; children only fold."""
-    d = d_mm * MM * 0.5 * 2 / 2
-    d = 130
-    b = [_head('Shapes to fold: a grown-up cuts them out. Children only fold.')]
-    items = [('c', i) for i in range(circles)] + [('s', i) for i in range(squares)] + [('r', i) for i in range(rects)]
-    for k, (kind, _) in enumerate(items):
-        x = 12 + (k % 4) * 172; y = 36 + (k // 4) * 172
-        if kind == 'c': b.append(_cutcircle(x + d / 2 + 10, y + d / 2 + 10, d / 2))
-        elif kind == 's': b.append(_cutbox(x, y, d, d, 4))
-        else:
-            b.append(_cutbox(x, y, d + 30, d * 0.7, 4))
-            for g in range(1, 4): b.append(f'<line x1="{x + g * (d + 30) / 4}" y1="{y}" x2="{x + g * (d + 30) / 4}" y2="{y + d * 0.7}" stroke="#B9C7DA" stroke-width="1.6"/>')
-    rows = (len(items) + 3) // 4
-    return _kit(700, 36 + rows * 172 + 10, b, 'shapes to fold')
+def fold_shapes(circles=4, squares=4, rects=2, d_mm=FOLD_D_MM, u=None):
+    """Circles and squares (d_mm across, any size is honoured) and long rectangles (d_mm by d_mm / 2, drawn as a 4 by 2 grid of faint lines) for folding.
+    A grown-up cuts them out; children only fold. Two shapes per row; the kit runs over as many pages as it needs."""
+    d_mm = d_mm or FOLD_D_MM
+    if u is None: u = kit_unit({'type': 'fold_shapes', 'd_mm': d_mm})
+    width_mm = 700 / u
+    d = d_mm * u; gap = KIT_GAP * u
+    cols = max(1, int((width_mm + KIT_GAP) // (d_mm + KIT_GAP)))
+    rows = []                                           # (kind, count in this row)
+    for kind, n in (('c', circles), ('s', squares), ('r', rects)):
+        while n > 0: rows.append((kind, min(cols, n))); n -= cols
+    pages, cur, ymm = [], [], 0.0
+    for kind, k in rows:
+        hmm = d_mm / 2 if kind == 'r' else d_mm
+        if cur and ymm + hmm > KIT_AVAIL_MM: pages.append(cur); cur, ymm = [], 0.0
+        cur.append((kind, k, ymm, hmm)); ymm += hmm + KIT_GAP
+    if cur: pages.append(cur)
+    out = []
+    for pi, pg in enumerate(pages):
+        b = [_head('Shapes to fold: a grown-up cuts them out. Children only fold.' + (f'   (page {pi + 1} of {len(pages)})' if len(pages) > 1 else ''))]
+        for kind, k, ymm_, hmm in pg:
+            x0 = (700 - (k * d + (k - 1) * gap)) / 2
+            for c in range(k):
+                x = x0 + c * (d + gap); y = 36 + ymm_ * u
+                if kind == 'c': b.append(_cutcircle(x + d / 2, y + d / 2, d / 2))
+                elif kind == 's': b.append(_cutbox(x, y, d, d, 4))
+                else:
+                    h = hmm * u
+                    b.append(_cutbox(x, y, d, h, 4))
+                    for g in range(1, 4): b.append(f'<line x1="{x + g * d / 4:.1f}" y1="{y:.1f}" x2="{x + g * d / 4:.1f}" y2="{y + h:.1f}" stroke="#8A94AD" stroke-width="1.8"/>')
+                    b.append(f'<line x1="{x:.1f}" y1="{y + h / 2:.1f}" x2="{x + d:.1f}" y2="{y + h / 2:.1f}" stroke="#8A94AD" stroke-width="1.8"/>')
+        last = pg[-1]
+        out.append(_kit(700, 36 + (last[2] + last[3]) * u + 10, b, 'shapes to fold'))
+    return KIT_SEP.join(out)
 
 
-def shape_pieces(counts=None, unit_mm=30, page=None):
+def shape_pieces(counts=None, unit_mm=30, page=None, u=None):
     """Pieces on a 3 cm unit: squares, rectangles (1 x 2), triangles (half a square), half circles, quarter circles, one circle. A grown-up cuts them out."""
     counts = counts or {'square': 6, 'rectangle': 3, 'triangle': 6, 'half_circle': 2, 'quarter_circle': 2, 'circle': 1}
     if page == 1: counts = {k: v for k, v in counts.items() if k in ('square', 'rectangle')}
     elif page == 2: counts = {k: v for k, v in counts.items() if k not in ('square', 'rectangle')}
-    u = unit_mm * MM
+    u = u or MM
+    uu = unit_mm * u; gap = KIT_GAP * u
     b = [_head('Pieces: a grown-up cuts out all of them. Each square is 3 cm.')]
     x = 14; y = 40; rowh = 0
     for kind, n in counts.items():
         for _ in range(n):
-            w, h = {'square': (u, u), 'rectangle': (2 * u, u), 'triangle': (u, u), 'half_circle': (u * 1.4, u * 0.8), 'quarter_circle': (u * 0.9, u * 0.9), 'circle': (u * 1.2, u * 1.2)}[kind]
-            if x + w + 10 > 690: x = 14; y += rowh + 20; rowh = 0
+            w, h = {'square': (uu, uu), 'rectangle': (2 * uu, uu), 'triangle': (uu, uu), 'half_circle': (uu * 1.4, uu * 0.8), 'quarter_circle': (uu * 0.9, uu * 0.9), 'circle': (uu * 1.2, uu * 1.2)}[kind]
+            if x + w + 10 > 690: x = 14; y += rowh + gap; rowh = 0
             if kind in ('square', 'rectangle'): b.append(_cutbox(x, y, w, h, 3, SOFT))
             elif kind == 'triangle': b.append(f'<polygon points="{x},{y + h} {x + w},{y + h} {x},{y}" fill="{SKY}" stroke="{CUT}" stroke-width="2" stroke-dasharray="7 5"/>')
             elif kind == 'half_circle': b.append(f'<path d="M{x} {y + h} A{w / 2} {h} 0 0 1 {x + w} {y + h} Z" fill="{MINT}" stroke="{CUT}" stroke-width="2" stroke-dasharray="7 5"/>')
             elif kind == 'quarter_circle': b.append(f'<path d="M{x} {y + h} V{y} A{w} {h} 0 0 1 {x + w} {y + h} Z" fill="#F6C9D0" stroke="{CUT}" stroke-width="2" stroke-dasharray="7 5"/>')
             else: b.append(_cutcircle(x + w / 2, y + h / 2, w / 2, '#FFE59A'))
-            x += w + 18; rowh = max(rowh, h)
+            x += w + gap; rowh = max(rowh, h)
     return _kit(700, y + rowh + 20, b, 'shape pieces')
 
 
-def pair_cards(labels=None, sets=3, per=4):
-    """12 cards in 3 sets of 4 (a grown-up cuts them out). labels: list of card texts, or icon names given as 'icon:house'."""
+def _card_face(t, x, y, cw, ch):
+    """The face of a card: an icon ('icon:apple'), text ('3'), or both: 'icon:apple+3' / ['icon:apple', '3'] / {'icon': 'apple', 'text': '3'} puts the picture above the words."""
+    icon_name = text = None
+    if isinstance(t, dict): icon_name, text = t.get('icon'), t.get('text')
+    elif isinstance(t, (list, tuple)):
+        for p in t:
+            if str(p).startswith('icon:'): icon_name = str(p)[5:]
+            else: text = str(p)
+    else:
+        t = str(t)
+        if '+' in t and t.startswith('icon:'): a, _, c = t.partition('+'); icon_name, text = a[5:], c
+        elif t.startswith('icon:'): icon_name = t[5:]
+        else: text = t
+    cx = x + cw / 2
+    if icon_name and text:
+        return icon(icon_name, cx, y + ch * 0.4, ch * 0.5) + f'<text x="{cx:.1f}" y="{y + ch * 0.9:.1f}" font-size="{ch * 0.22:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(text)}</text>'
+    if icon_name: return icon(icon_name, cx, y + ch / 2, ch * 0.64)
+    return f'<text x="{cx:.1f}" y="{y + ch * 0.64:.1f}" font-size="{ch * 0.35:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(text or "")}</text>'
+
+
+def pair_cards(labels=None, sets=3, per=4, u=None):
+    """12 cards in 3 sets of 4 (a grown-up cuts them out). labels: list of card faces: text, 'icon:house', or a mixed card ('icon:apple+3', ['icon:apple', '3'], {'icon':..,'text':..}).
+    6 mm between cut lines."""
+    u = u or MM
     n = sets * per
     labels = labels or [str(i + 1) for i in range(n)]
+    gap = KIT_GAP * u
+    cw = (700 - 8 - (per - 1) * gap) / per; ch = cw * 0.88
     b = [_head(f'Cards: a grown-up cuts out all {n}.')]
     for i in range(n):
-        x = 12 + (i % 4) * 172; y = 36 + (i // 4) * 150
-        b.append(_cutbox(x, y, 156, 132, 10))
-        t = labels[i % len(labels)]
-        if str(t).startswith('icon:'): b.append(icon(t[5:], x + 78, y + 66, 84))
-        else: b.append(f'<text x="{x + 78}" y="{y + 84}" font-size="46" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
-    return _kit(700, 36 + ((n + 3) // 4) * 150 + 10, b, 'pair cards')
+        x = 4 + (i % per) * (cw + gap); y = 36 + (i // per) * (ch + gap)
+        b.append(_cutbox(x, y, cw, ch, 10))
+        b.append(_card_face(labels[i % len(labels)], x, y, cw, ch))
+    return _kit(700, 36 + ((n + per - 1) // per) * (ch + gap) + 10, b, 'pair cards')
 
 
-def grid_mat(routes=3, copies=2, rows=3, cols=3):
-    """Printed grids to draw on (not cut): `routes` dot grids and `copies` square grids with a dashed mirror line."""
+def grid_mat(routes=3, copies=2, rows=3, cols=3, u=None):
+    """Printed grids to draw on (not cut): `routes` numbered dot grids and `copies` numbered square-dot grids with a dashed mirror line, each in its own frame."""
     b = [_head('Grids: keep this page flat to draw on. No cutting.')]
-    cs = 70
+    sp = 54; pad = 22; fw = cols * sp + 2 * pad; fh = rows * sp + 2 * pad + 22; gp = (700 - 8 - routes * fw) / max(routes - 1, 1) if routes > 1 else 0
     for i in range(routes):
-        x0 = 20 + i * 225; y0 = 50
+        x0 = 4 + i * (fw + gp); y0 = 38
+        b.append(f'<rect x="{x0:.1f}" y="{y0}" width="{fw}" height="{fh}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/><text x="{x0 + 12:.1f}" y="{y0 + 22}" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Grid {i + 1}</text>')
         for r in range(rows + 1):
-            for c in range(cols + 1): b.append(f'<circle cx="{x0 + c * cs * 0.9}" cy="{y0 + r * cs * 0.9}" r="5" fill="{NAVY}"/>')
-    y1 = 50 + (rows + 1) * cs * 0.9 + 50
-    b.append(_head('Copy grids: draw the other half', y1 - 14))
+            for c in range(cols + 1): b.append(f'<circle cx="{x0 + pad + c * sp:.1f}" cy="{y0 + pad + 22 + r * sp}" r="5" fill="{NAVY}"/>')
+    y1 = 38 + fh + 40
+    sp2 = 44; cfw = 6 * sp2 + 2 * 26
     for i in range(copies):
-        x0 = 20 + i * 340
+        x0 = 4 + i * (cfw + 16); cfh = 3 * sp2 + 2 * 22 + 22
+        b.append(f'<rect x="{x0}" y="{y1}" width="{cfw}" height="{cfh}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="2.6"/><text x="{x0 + 12}" y="{y1 + 22}" font-size="18" font-weight="800" fill="{NAVY}" font-family="Nunito Sans, Arial">Copy grid {i + 1}: draw the other half</text>')
         for r in range(4):
-            for c in range(7): b.append(f'<circle cx="{x0 + c * 46}" cy="{y1 + 20 + r * 46}" r="4.6" fill="{NAVY}"/>')
-        b.append(f'<line x1="{x0 + 3 * 46}" y1="{y1 + 4}" x2="{x0 + 3 * 46}" y2="{y1 + 20 + 3 * 46 + 16}" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 7"/>')
-    return _kit(700, y1 + 20 + 3 * 46 + 30, b, 'grid mat')
+            for c in range(7): b.append(f'<circle cx="{x0 + 26 + c * sp2}" cy="{y1 + 22 + 24 + r * sp2}" r="4.6" fill="{NAVY}"/>')
+        b.append(f'<line x1="{x0 + 26 + 3 * sp2}" y1="{y1 + 30}" x2="{x0 + 26 + 3 * sp2}" y2="{y1 + cfh - 10}" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 7"/>')
+    return _kit(700, y1 + 3 * sp2 + 2 * 22 + 22 + 14, b, 'grid mat')
 
 
-def graph_mat(cols_=5, rows_=8, cell=62):
-    """An empty picture-graph mat: `cols_` columns by `rows_` rows and a key box (not cut)."""
+def graph_mat(cols_=5, rows_=8, cell=62, u=None):
+    """An empty picture-graph mat: `cols_` columns by `rows_` rows and a key box (not cut). Nothing else is printed under the squares."""
     b = [_head('Graph mat: keep this page flat. Draw one picture in a square.')]
     x0 = 70; y0 = 50
     for r in range(rows_):
         for c in range(cols_): b.append(f'<rect x="{x0 + c * cell}" y="{y0 + r * cell}" width="{cell}" height="{cell}" fill="#fff" stroke="{NAVY}" stroke-width="2.4"/>')
-        b.append(f'<text x="{x0 - 12}" y="{y0 + (rows_ - 1 - r) * cell + cell / 2 + 7}" font-size="19" text-anchor="end" fill="#5B6785" font-family="Nunito Sans, Arial">{r + 1}</text>' if False else '')
-    for c in range(cols_): b.append(f'<line x1="{x0 + c * cell + cell / 2}" y1="{y0 + rows_ * cell + 6}" x2="{x0 + c * cell + cell / 2}" y2="{y0 + rows_ * cell + 30}" stroke="{NAVY}" stroke-width="2.4"/>')
     b.append(f'<rect x="{x0 + cols_ * cell + 20}" y="{y0}" width="120" height="110" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3"/><text x="{x0 + cols_ * cell + 80}" y="{y0 + 40}" font-size="24" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">KEY</text><text x="{x0 + cols_ * cell + 80}" y="{y0 + 84}" font-size="20" text-anchor="middle" fill="#5B6785" font-family="Nunito Sans, Arial">1 picture =</text>')
-    return _kit(700, y0 + rows_ * cell + 50, b, 'graph mat')
+    return _kit(700, y0 + rows_ * cell + 20, b, 'graph mat')
 
 
-def tool_cards(tools=None, problems=None):
-    """7 tool cards (picture and word) and 8 problem cards (a grown-up cuts them out)."""
+def tool_cards(tools=None, problems=None, u=None):
+    """7 tool cards (picture and word) and 8 problem cards (a grown-up cuts them out), 6 mm between cut lines."""
+    u = u or MM
+    gap = KIT_GAP * u
     tools = tools or [('t_strip', 'Strip'), ('t_table', 'Table'), ('t_list', 'List'), ('t_draw', 'Draw'), ('t_back', 'Work backwards'), ('t_find', 'Find one'), ('t_steps', 'Steps')]
     problems = problems or ['Problem %d' % (i + 1) for i in range(8)]
     b = [_head('Tool cards and problem cards: a grown-up cuts out all 15.')]
+    cw, chh = (700 - 8 - 3 * gap) / 4, 150
     for i, (ic, nm) in enumerate(tools):
-        x = 12 + (i % 4) * 172; y = 36 + (i // 4) * 170
-        b.append(_cutbox(x, y, 156, 152, 12)); b.append(icon(ic, x + 78, y + 56, 70))
-        b.append(f'<text x="{x + 78}" y="{y + 126}" font-size="{26 if len(nm) < 9 else 20}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(nm)}</text>')
-    y0 = 36 + 2 * 170 + 10
+        x = 4 + (i % 4) * (cw + gap); y = 36 + (i // 4) * (chh + gap)
+        b.append(_cutbox(x, y, cw, chh, 12)); b.append(icon(ic, x + cw / 2, y + 56, 70))
+        fs = 26 if len(nm) < 9 else (20 if len(nm) <= 11 else 17)
+        b.append(f'<text x="{x + cw / 2:.1f}" y="{y + 126}" font-size="{fs}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(nm)}</text>')
+    y0 = 36 + 2 * (chh + gap) + 6
+    pw = (700 - 8 - gap) / 2
     for i, t in enumerate(problems):
-        x = 12 + (i % 2) * 336; y = y0 + (i // 2) * 108
-        b.append(_cutbox(x, y, 316, 92, 10)); b.append(f'<text x="{x + 158}" y="{y + 40}" font-size="17" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{_esc(t)[:52]}</text>')
-    return _kit(700, y0 + 4 * 108 + 10, b, 'tool and problem cards')
+        x = 4 + (i % 2) * (pw + gap); y = y0 + (i // 2) * (80 + gap)
+        b.append(_cutbox(x, y, pw, 80, 10)); b.append(f'<text x="{x + pw / 2:.1f}" y="{y + 46}" font-size="18" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{_esc(t)[:52]}</text>')
+    return _kit(700, y0 + 4 * (80 + gap) + 4, b, 'tool and problem cards')
 
 
-def event_cards(events=None):
-    """8 event cards (a picture and a few words) and an a.m. / p.m. mat (not cut)."""
+def event_cards(events=None, u=None):
+    """8 event cards (38 by 36 mm, a picture and a few words, 6 mm between cut lines) and an am / pm mat (two boxes 85 by 100 mm: big enough to hold four cards each; not cut)."""
+    u = u or 700 / PAGE_MM
     events = events or [('sun', 'wake up'), ('bus', 'go to school'), ('school', 'maths class'), ('shop', 'buy bread'), ('bath', 'have a bath'), ('bed', 'go to bed'), ('moon', 'look at the moon'), ('house', 'come home')]
     b = [_head('Event cards: a grown-up cuts out all 8. The mat is not cut.')]
+    cw, ch, gap = 38 * u, 36 * u, KIT_GAP * u
+    x0 = (700 - (4 * cw + 3 * gap)) / 2
     for i, (ic, t) in enumerate(events[:8]):
-        x = 12 + (i % 4) * 172; y = 36 + (i // 4) * 170
-        b.append(_cutbox(x, y, 156, 152, 12)); b.append(icon(ic, x + 78, y + 54, 64))
-        b.append(f'<text x="{x + 78}" y="{y + 118}" font-size="18" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{_esc(t)}</text>')
-    y = 36 + 2 * 170 + 10
-    for k, (lab, ic) in enumerate((('a.m. (night and morning)', 'sun'), ('p.m. (afternoon and evening)', 'moon'))):
-        x = 12 + k * 340
-        b.append(f'<rect x="{x}" y="{y}" width="320" height="250" rx="14" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>' + icon(ic, x + 40, y + 44, 48) + f'<text x="{x + 160}" y="{y + 52}" font-size="22" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{lab[:12]}</text>')
-    return _kit(700, y + 270, b, 'event cards and mat')
+        x = x0 + (i % 4) * (cw + gap); y = 34 + (i // 4) * (ch + gap)
+        b.append(_cutbox(x, y, cw, ch, 10)); b.append(icon(ic, x + cw / 2, y + ch * 0.32, ch * 0.42))
+        lines = _words(t, 11)
+        if len(lines) > 2: lines = [' '.join(lines[:-1]), lines[-1]]
+        for j, ln in enumerate(lines[:2]):
+            b.append(f'<text x="{x + cw / 2:.1f}" y="{y + ch * (0.68 + 0.19 * j):.1f}" font-size="{ch * 0.15:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{_esc(ln)}</text>')
+    y = 34 + 2 * (ch + gap) + 8
+    bw, bh = 85 * u, 100 * u
+    xm = (700 - (2 * bw + gap)) / 2
+    for k, (lab, ic) in enumerate((('am (night and morning)', 'sun'), ('pm (afternoon and evening)', 'moon'))):
+        x = xm + k * (bw + gap)
+        b.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="14" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>' + icon(ic, x + 34, y + 36, 44)
+                 + f'<text x="{x + bw / 2 + 24:.1f}" y="{y + 48:.1f}" font-size="17" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="Nunito Sans, Arial">{lab}</text>')
+    return _kit(700, y + bh + 10, b, 'event cards and mat')
 
 
-def stick_strips(n=14, length_mm=60):
-    """Short strips to use as sticks (a grown-up cuts them out). Never matchsticks."""
+def stick_strips(n=14, length_mm=60, u=None):
+    """Short strips to use as sticks (a grown-up cuts them out): 8 mm wide, 6 mm between cut lines. Never matchsticks."""
+    u = u or 700 / PAGE_MM
     b = [_head(f'Sticks: a grown-up cuts out all {n}.')]
-    L = length_mm * MM
+    L, h, gap = length_mm * u, 8 * u, KIT_GAP * u
+    x0 = (700 - (2 * L + gap)) / 2
     for i in range(n):
-        x = 20 + (i % 2) * 340; y = 38 + (i // 2) * 46
-        b.append(_cutbox(x, y, L, 28, 14, SOFT)); b.append(f'<line x1="{x + 14}" y1="{y + 14}" x2="{x + L - 14}" y2="{y + 14}" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>')
-    return _kit(700, 38 + ((n + 1) // 2) * 46 + 10, b, 'sticks')
+        x = x0 + (i % 2) * (L + gap); y = 36 + (i // 2) * (h + gap)
+        b.append(_cutbox(x, y, L, h, 14, SOFT)); b.append(f'<line x1="{x + 14:.1f}" y1="{y + h / 2:.1f}" x2="{x + L - 14:.1f}" y2="{y + h / 2:.1f}" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>')
+    return _kit(700, 36 + ((n + 1) // 2) * (h + gap) + 4, b, 'sticks')
 
 
-def calendar_cards(start='Wed', days=31):
-    """A month page (not cut) and 7 day-name cards (a grown-up cuts them out)."""
-    cal = calendar(start, days, cell=76)
+def calendar_cards(start='Wed', days=31, u=None):
+    """A month page (not cut) and 7 day-name cards (a grown-up cuts them out, 6 mm between cut lines)."""
+    u = u or 700 / PAGE_MM
+    cell = 82
+    cal = calendar(start, days, cell=cell)
     b = [_head('Month page: keep it flat. Day cards: a grown-up cuts out all 7.')]
-    b.append(f'<g transform="translate(10,36)">{cal[cal.index(">") + 1:cal.rindex("</svg>")]}</g>')
-    y = 36 + 6 * 76 + 40
+    rows = (DAYS.index(start[:3].title()) + days + 6) // 7
+    b.append(f'<g transform="translate({(700 - (14 + 7 * cell)) / 2:.1f},36)">{_inner(cal)}</g>')
+    gap = KIT_GAP * u
+    y = 36 + 14 + (rows + 1) * cell + 26
+    cw = (700 - 8 - 3 * gap) / 4
     for i, d in enumerate(DAYS):
-        x = 12 + (i % 4) * 172; yy = y + (i // 4) * 80
-        b.append(_cutbox(x, yy, 156, 62, 10)); b.append(f'<text x="{x + 78}" y="{yy + 42}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{d}</text>')
-    return _kit(700, y + 2 * 80 + 10, b, 'calendar and day cards')
+        x = 4 + (i % 4) * (cw + gap); yy = y + (i // 4) * (62 + gap)
+        b.append(_cutbox(x, yy, cw, 62, 10)); b.append(f'<text x="{x + cw / 2:.1f}" y="{yy + 42}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{d}</text>')
+    return _kit(700, y + 2 * (62 + gap), b, 'calendar and day cards')
 
 
 def render_kit(spec):
     t = spec['type']
-    if t == 'clock_kit': return clock_kit(spec.get('faces', 2), spec.get('hour_hands', 3), spec.get('minute_hands', 3), spec.get('labels', 'all'))
-    if t == 'play_money': return play_money(spec.get('page', 1), spec.get('counts'))
-    if t == 'price_tags': return price_tags(spec.get('prices'), spec.get('items'), spec.get('blank', 3))
-    if t == 'grid_tiles': return grid_tiles()
-    if t == 'mistake_cards': return mistake_cards(spec.get('cards'))
-    if t == 'fold_shapes': return fold_shapes(spec.get('circles', 4), spec.get('squares', 4), spec.get('rects', 2))
-    if t == 'shape_pieces': return shape_pieces(spec.get('counts'), page=spec.get('page'))
-    if t == 'pair_cards': return pair_cards(spec.get('labels'), spec.get('sets', 3), spec.get('per', 4))
-    if t == 'grid_mat': return grid_mat(spec.get('routes', 3), spec.get('copies', 2))
-    if t == 'graph_mat': return graph_mat(spec.get('cols', 5), spec.get('rows', 8))
-    if t == 'tool_cards': return tool_cards(spec.get('tools'), spec.get('problems'))
-    if t == 'event_cards': return event_cards(spec.get('events'))
-    if t == 'stick_strips': return stick_strips(spec.get('n', 14))
-    if t == 'calendar_cards': return calendar_cards(spec.get('start', 'Wed'), spec.get('days', 31))
+    if t not in KITS3: return None
+    u = kit_unit(spec)
+    if t == 'clock_kit': return clock_kit(spec.get('faces', 2), spec.get('hour_hands', 3), spec.get('minute_hands', 3), spec.get('labels', 'all'), u)
+    if t == 'play_money': return play_money(spec.get('page', 1), spec.get('counts'), u)
+    if t == 'price_tags': return price_tags(spec.get('prices'), spec.get('items'), spec.get('blank', 3), u)
+    if t == 'grid_tiles': return grid_tiles(u=u)
+    if t == 'mistake_cards': return mistake_cards(spec.get('cards'), u)
+    if t == 'fold_shapes': return fold_shapes(spec.get('circles', 4), spec.get('squares', 4), spec.get('rects', 2), spec.get('d_mm', FOLD_D_MM), u)
+    if t == 'shape_pieces': return shape_pieces(spec.get('counts'), spec.get('unit_mm', 30), spec.get('page'), u)
+    if t == 'pair_cards': return pair_cards(spec.get('labels'), spec.get('sets', 3), spec.get('per', 4), u)
+    if t == 'grid_mat': return grid_mat(spec.get('routes', 3), spec.get('copies', 2), u=u)
+    if t == 'graph_mat': return graph_mat(spec.get('cols', 5), spec.get('rows', 8), u=u)
+    if t == 'tool_cards': return tool_cards(spec.get('tools'), spec.get('problems'), u)
+    if t == 'event_cards': return event_cards(spec.get('events'), u)
+    if t == 'stick_strips': return stick_strips(spec.get('n', 14), spec.get('length_mm', 60), u)
+    if t == 'calendar_cards': return calendar_cards(spec.get('start', 'Wed'), spec.get('days', 31), u)
     return None
 
 

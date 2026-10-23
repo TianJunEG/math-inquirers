@@ -162,6 +162,11 @@ for f in ("pupil.html", "front.html", "key.html"):
     rec(f"answer boxes at least 12 mm high in {f}", min(abh) >= 12 if abh else True, f"min {min(abh) if abh else '-'}")
     op = re.findall(r"opacity|rgba|rgb\(|hsl|gradient|filter", h)
     rec(f"no opacity/alpha/gradient in {f}", not op, str(op[:3]))
+_ph = open(os.path.join(O, "pupil.html")).read()
+rec("audit 3 follow-up: no bare black dot is drawn as a countable thing (objects on P1-03 and P1-13, faces on P1-20)", 'class="dot"' not in _ph and "dotc" not in _ph, f'{_ph.count(chr(34).join(["class=", "obj", ""]))} objects drawn')
+rec("audit 3 follow-up: every coin on P1-15 shows its value and the word cents", _ph.count('class="coinunit"') == _ph.count('class="coinval"') > 0, f'{_ph.count("class=" + chr(34) + "coinval")} coins')
+rec("audit 3 follow-up: every ruler strip on P1-17 has a start arrow and bold start tick; two strips start at 0 and four away from 0", _ph.count('class="arrow"') == 6)
+rec("audit 3 follow-up: P1-20 uses the smiley face symbol (printed faces and the key face)", _ph.count('class="face"') >= 8)
 KEYPAGES = 1 + len(re.findall(r'class="page fm[ a-z]*" >', open(os.path.join(O, 'key.html')).read()))   # intro page + entry pages
 # ---- 4. PDFs: page counts, fonts, text
 exp = {"P1_Puzzles.pdf": 20, "P1_FrontMatter.pdf": 5, "P1_Complete_Pack.pdf": 25, "P1_Answer_Key.pdf": KEYPAGES}

@@ -285,7 +285,7 @@ def run(d):
     import figs3
     svg = figs3.fold_shapes(4, 4, 2)
     n_circ = len(re.findall(r'<circle[^>]*stroke-dasharray', svg)); n_rect = len(re.findall(r'<rect[^>]*stroke-dasharray', svg)); n_lines = len(re.findall(r'<line ', svg))
-    eq((n_circ, n_rect, n_lines), (4, 6, 6), 'kit page: 4 circles, 4 squares plus 2 rectangles (6 cut boxes), 3 faint lines on each rectangle')
+    eq((n_circ, n_rect, n_lines), (4, 6, 8), 'kit page: 4 circles, 4 squares plus 2 rectangles (6 cut boxes), each rectangle a 4 by 2 grid (3 + 1 faint lines)')
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
     eq([kc[k]['supplied'] for k in kc], [n_circ, 4, 2], 'kit contract supplied matches the page (circles, squares, rectangles)')
     eq(all(r['supplied'] >= r['max_used'] for r in kc.values()), True, 'kit contract: supplied >= used')

@@ -453,7 +453,7 @@ def tally_marks(m, c):
 
 
 # ---- sharing from a picture, ordinals (Primary 1)
-@R(r"How many dots in each box\? " + B)
+@R(r"How many stars in each box\? " + B)
 def dots_each(m, c):
     if not meta_is(c, "groups"): return NOT_ME
     return c["meta"]["per"]
@@ -487,7 +487,7 @@ def just_before(m, c): return I(m[1]) - 1
 def ord_between(m, c): return I(m[1]) + 1 if I(m[2]) - I(m[1]) == 2 else None
 
 # ---- pictures that carry the whole question (the text is only a blank or a caption)
-@R(r"(?:What time is it\?|What number\?|How much\?|How much money\?|How long\?|How many dots\?|How many dots in all\?|Tally marks:)? ?(?:\$)?" + B + "?" + CENT + "?(?: cm)?")
+@R(r"(?:What time is it\?|What number\?|How much\?|How much money\?|How long\?|How many dots\?|How many stars\?|How many dots in all\?|How many stars in all\?|Tally marks:)? ?(?:\$)?" + B + "?" + CENT + "?(?: cm)?")
 def picture_only(m, c):
     k = c["meta"]
     if k is None: return NOT_ME
