@@ -36,7 +36,7 @@
   "l1-exit",
   "l1-reflect"
  ],
- "cover": "cover",
+ "cover": "l1-title",
  "sections": {
   "s1": {
    "description": "Warm-up and explore",
