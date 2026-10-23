@@ -25,12 +25,10 @@ const roundLine = () => {
   const x0 = 40, x1 = 560, y = 60;
   const ticks = [['2 499 000', x0], ['2 499 500', x0 + 130], ['2 500 000', 300], ['2 500 500', x1 - 130], ['2 501 000', x1]];
   let g = `<line x1="${x0 - 20}" y1="${y}" x2="${x1 + 20}" y2="${y}" stroke="${N}" stroke-width="3"/>`;
-  g += `<rect x="${x0 + 130}" y="${y - 14}" width="260" height="28" fill="${SKY}" stroke="${N}" stroke-width="2" stroke-dasharray="6 4"/>`;
   ticks.forEach(([s, x], i) => {
     g += `<line x1="${x}" y1="${y - 18}" x2="${x}" y2="${y + 18}" stroke="${N}" stroke-width="3"/>` + txt(x, y + 44, s, 15, i === 2 ? TEAL : N);
   });
-  g += txt(300, 26, 'Which numbers round to 2 500 000?', 16, TEAL);
-  return `<svg aria-label="Number line from 2 499 000 to 2 501 000 with the middle part, around 2 500 000, shaded" viewBox="0 0 600 116" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  return `<svg aria-label="Number line from 2 499 000 to 2 501 000 marked every 500 from 2 499 000 to 2 501 000" viewBox="0 0 600 116" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 module.exports = {
