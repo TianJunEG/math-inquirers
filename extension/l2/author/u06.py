@@ -37,7 +37,7 @@ items = [
    why='Marker pen: $2 + 50¢ + 20¢ + 10¢ + 5¢ is 5 pieces. Kite: $5 + $2 + 20¢ + 20¢ is 4 pieces. Backpack: $10 + $10 + $2 + $1 + 50¢ + 10¢ + 5¢ is 7 pieces (there is no $20 note).'),
  I('start', 2, 'Find EVERY way to pay exactly $7 using $1 coins, $2 notes and $5 notes. Begin with as many $5 notes as you can. Write each way in a row. Some rows may stay empty.',
    figure={'type': 'l2_table', 'cols': ['Way', '$5', '$2', '$1', 'Pieces'], 'rows': [[c, None, None, None, None] for c in 'ABCDEFG'], 'first_bold': True, 'widths': [1, 1.2, 1.2, 1.2, 1.6], 'row_h': 56, 'head_h': 56, 'size': 32, 'width_mm': 132},
-   parts=[P('a', 'How many ways are there? {b}', '6'), P('b', 'The way with exactly 4 pieces has {b} $2 notes and {b} $1 coin.', ['3', '1'], '3 $2 notes and 1 $1 coin')],
+   parts=[P('a', 'How many ways are there? {b}', '6'), P('b', 'The way with exactly 4 pieces has {b} $2 notes and {b} $1 coins.', ['3', '1'], '3 $2 notes and 1 $1 coin')],
    why='Ways ($5, $2, $1): 1, 1, 0 / 1, 0, 2 / 0, 3, 1 / 0, 2, 3 / 0, 1, 5 / 0, 0, 7. That is 6 ways. Their pieces are 2, 3, 4, 5, 6 and 7. Only 0, 3, 1 has 4 pieces: three $2 notes and one $1 coin.'),
  I('start', 2, 'Find the change.', partsrow=True, parts=[
    P('a', 'A ruler costs 70¢. Kumar pays with a $1 coin. Change: {b} ¢', '30'), P('b', 'A book costs $4.30. Mei pays with a $10 note. Change: $ {b}', '5.70'), P('c', 'A bag costs $37. Ali pays with a $50 note. Change: $ {b}', '13'),
@@ -53,7 +53,7 @@ items = [
    why='(a) 12 pencils is 3 groups of 4, so 3 × $1 = $3. (b) 20 stickers is 4 groups of 5, so 4 × $2 = $8. (c) $6 is 3 groups of $2, so 3 × 5 = 15 stickers.'),
  I('start', 3, 'Ali buys 2 toys for exactly $12.50. Which 2 toys? {b} and {b}', figure=tags([('Car', '$4.50'), ('Ball', '$6.25'), ('Top', '$8.00'), ('Kite', '$3.75')], width_mm=150), value=['Car', 'Top'], atext='Car and Top', unordered=True,
    why='$4.50 + $8.00 = $12.50. Check the others: Car + Ball = $10.75, Car + Kite = $8.25, Ball + Top = $14.25, Ball + Kite = $10.00, Top + Kite = $11.75. Only Car and Top.'),
- I('start', 3, 'Mei pays exactly 95¢ with 4 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the coins. {b}¢ + {b}¢ + {b}¢ + {b}¢', value=['50', '20', '20', '5'], atext='50¢ + 20¢ + 20¢ + 5¢', unordered=True,
+ I('start', 3, 'Mei pays exactly 95¢ with 4 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the coins. {b}¢ + {b}¢ + {b}¢ + {b}¢', value=['50', '20', '20', '5'], atext='50¢ + 20¢ + 20¢ + 5¢ (any order)', unordered=True,
    why='Start with 50¢. 45¢ is left for 3 coins. 20¢ + 20¢ = 40¢, and 5¢ makes 45¢. Check: 50 + 20 + 20 + 5 = 95. No other 4 coins make 95¢.'),
  # Think harder
  I('think', 4, 'Pay 35¢ with 5¢, 10¢ and 20¢ coins. List EVERY way in the table.',
@@ -71,7 +71,7 @@ items = [
    hint='Take away the extra $4. Share what is left equally.',
    why='Take away the extra $4: $13 - $4 = $9. Two equal bars share $9, so each is $4.50. The puzzle costs $4.50 and the book costs $4.50 + $4 = $8.50. Check: 4.50 + 8.50 = 13.00.'),
  # Go further
- I('go', 5, 'Beyond: a shop sign says PAY HALF. You pay half of the amount on the tag.', beyond='Halving money', parts=[
+ I('go', 5, 'A shop sign says PAY HALF. You pay half of the amount on the tag.', beyond='Halving money', parts=[
    P('a', 'A ball has a tag of $9.60. You pay $ {b}', '4.80'), P('b', 'A hat has a tag of $14.50. You pay $ {b}', '7.25'), P('c', 'A kite costs $5.80 with PAY HALF. The tag says $ {b}', '11.60')],
    hint='Half of dollars first. Then half of cents. Go back with double.',
    why='(a) Half of $9.60 is $4.80. (b) Half of $14 is $7 and half of 50¢ is 25¢: $7.25. (c) The tag is double: $5.80 + $5.80 = $11.60.'),

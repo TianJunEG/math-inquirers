@@ -162,10 +162,11 @@ def _():
 
 @check('G04')
 def _():
-    ops = [('+', 5), ('*', 2)]
-    sol = [x for x in range(0, 200) if run(run(x, ops), ops) == 70]
+    A = [('*', 2), ('+', 3)]
+    B = [('-', 5), ('*', 3)]
+    sol = [x for x in range(0, 300) if run(run(x, A), B) == 36]
     assert len(sol) == 1
-    return s(sol)
+    return {'a': s([run(sol[0], A)]), 'b': s(sol)}
 
 
 @check('C01')
@@ -180,7 +181,7 @@ def _():
 
 @check('C03')
 def _():
-    return s([find_in([('*', 5), ('-', 3)], 32)])
+    return s([find_in([('*', 2), ('+', 9)], 25)])
 
 
 @check('C04')

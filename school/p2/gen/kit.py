@@ -4,6 +4,8 @@ the PRINTED text or drawing, and hands validate.py a `model` for the independent
 import random, itertools, re, html as _html
 from .common import *
 
+BIG.update({"siring", "jailor"})      # words found by the P1 and P2 audits that the 129 000-word list lacked
+
 # --------------------------------------------------------------------------- code words
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
 # making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.

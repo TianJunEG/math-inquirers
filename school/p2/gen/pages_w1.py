@@ -311,7 +311,7 @@ def page05():
         texts.append(t); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>'))
     P = code_items_page(5, 5505, "Share It Out", 1, "Division: sharing and grouping, the sign ÷", STRAND_MD,
         "3.2, 3.4 (use of ÷; dividing within the multiplication tables)", ["MD3.2", "MD3.4"], "Code-breaker (division)",
-        ["Share or group. Find each answer.", "Write the answer in the box.", INSTR_CODE],
+        ["Share or group. The sharer gets a share too.", "Write the answer in the box.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 1, 50,
         "; ".join(f"{i+1}) {it['n']} ÷ {it.get('d', it.get('fr', 0) + 1)} = {x}" for i, (it, x) in enumerate(zip(items, ans))),
         "Division by 2, 3, 4, 5 and 10 within the tables: two bare sums with the sign ÷, equal sharing, grouping into boxes, a 'how many 3s in 12' item and one story where the sharer also gets a share ('shares with 3 friends' means 4 people). The decoy letters stand for subtracting or for using the number of friends instead of the number of people. A box left blank gives no letter and the check cannot see it.")
@@ -340,7 +340,7 @@ def page06():
             items = sorted(notes, key=lambda x: -x[1]) + sorted(coins, key=lambda x: -x[1])
             purses.append(items)
         tot = [sum(100 * v if t == "n" else v for t, v in p) for p in purses]
-        if all(A.money_width(p) <= 104 for p in purses) and distinct(tot) and 150 <= min(tot) and max(tot) <= 2500 and all(len({v for t, v in p if t == "c"}) >= 2 for p in purses):
+        if all(A.money_width(p) <= 108 for p in purses) and distinct(tot) and 150 <= min(tot) and max(tot) <= 2500 and all(len({v for t, v in p if t == "c"}) >= 2 for p in purses):
             pool = set()
             for p, t in zip(purses, tot):
                 pool |= {t + 5, t - 5, t + 10, t - 10, t + 50, t - 50, t + 100, t - 100}
@@ -352,7 +352,7 @@ def page06():
     cards = [qcard(i + 1, s, '<span class="dl">$</span><span class="ab w4"></span>', cls="inl") for i, s in enumerate(svgs)]
     P = code_items_page(6, 5606, "Dollars and Cents", 1, "Money: counting coins and notes, decimal notation", STRAND_MO,
         "1.1, 1.2 (counting money in dollars and cents; reading and writing money in decimal notation)", ["MO1.1", "MO1.2"], "Code-breaker (money)",
-        ["Count the money in each purse.", "Write the total, like $3.45.", INSTR_CODE],
+        ["Count the money in each row.", "Write the total, like $3.45.", INSTR_CODE],
         qgrid(cards, 1), tot, table, word, 5, 2500,
         "; ".join(f"{i+1}) {A.dollars(t)}" for i, t in enumerate(tot)),
         "Coins (5¢, 10¢, 20¢, 50¢, $1) and notes ($2, $5, $10) are original line drawings, inspired by Singapore money but not copies of any coin or note, drawn larger than real and in black and white. Each coin shows its value and the word cents; each note shows its value twice. Totals are written in dollars and cents ($3.45). The decoy letters stand for a coin missed or counted twice. A box left blank gives no letter and the check cannot see it.",

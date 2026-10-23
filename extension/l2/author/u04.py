@@ -19,15 +19,15 @@ learn = {
  'try': {'text': 'The pattern star, square, square repeats again and again. What is the 14th shape?   {circ:star|square}', 'answer': A('square'),
          'explanation': 'One group has 3 shapes. 12 is in the 3 times table, so place 12 is the last shape of a group. Place 13 is a star and place 14 is a square.'}}
 
-TB = lambda cols, rows, w=150, ws=None: {'type': 'l2_table', 'cols': cols, 'rows': rows, 'first_bold': True, 'widths': ws or [2.2] + [1] * (len(cols) - 1), 'width_mm': w}
+TB = lambda cols, rows, w=150, ws=None, **kw: {'type': 'l2_table', 'cols': cols, 'rows': rows, 'first_bold': True, 'widths': ws or [2.2] + [1] * (len(cols) - 1), 'width_mm': w, **kw}
 
 items = [
- I('start', 1, 'Count in 4s. Fill in the next numbers.   4,   8,   12,   {b},   {b},   {b}', value=['16', '20', '24'], atext='16, 20, 24', why='Add 4 each time: 12 + 4 = 16, 16 + 4 = 20, 20 + 4 = 24. These are in the 4 times table.'),
+ I('start', 1, 'Count back in 5s. Fill in the next numbers.   60,   55,   50,   {b},   {b},   {b}', value=['45', '40', '35'], atext='45, 40, 35', why='Take away 5 each time: 50 - 5 = 45, 45 - 5 = 40, 40 - 5 = 35. These numbers are in the 5 times table.'),
  I('start', 1, 'This pattern repeats again and again. Here are places 1 to 10.', figure=pat(['star', 'square', 'square', 'circle', 'star', 'square', 'square', 'circle', 'star', 'square'], width_mm=150),
    partsrow=True, parts=[P('a', 'Place 16 is a   {circ:star|square|circle}', 'circle'), P('b', 'Place 22 is a   {circ:star|square|circle}', 'square'), P('c', 'Place 33 is a   {circ:star|square|circle}', 'star')],
    why='One group has 4 shapes. (a) 16 ends a group: a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group, so 33 is a star.'),
  I('start', 1, 'Ali writes the letters of CHESS again and again.', figure=pat(list('CHESSCHESS'), width_mm=150),
-   partsrow=True, parts=[P('a', 'The 17th letter is {b}', 'H'), P('b', 'The 6th letter E is in place {b}', '28'), P('c', 'In 30 letters there are {b} letters S.', '12')],
+   partsrow=True, parts=[P('a', 'The 17th letter is {b}', 'H'), P('b', 'The 6th E is in place {b}', '28'), P('c', 'In 30 letters there are {b} letters S.', '12')],
    why='One group is C, H, E, S, S. (a) 15 ends a group, so 16 is C and 17 is H. (b) E is 3rd in a group: 3, 8, 13, 18, 23, 28. (c) 6 groups with 2 S each: 12.'),
  I('start', 1, 'A bead string has 1 square bead, then 4 round beads, again and again. Here are the first 10 beads.', figure=pat(['square', 'circle', 'circle', 'circle', 'circle', 'square', 'circle', 'circle', 'circle', 'circle'], width_mm=150, numbers=False),
    parts=[P('a', 'The string has 8 square beads. How many round beads are there? {b}', '32'), P('b', 'How many beads are on the string altogether? {b}', '40')],
@@ -55,18 +55,19 @@ items = [
    space={'rows': ['Working:']},
    why='Each tower has 2 more cubes: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. Tower 10 has 22 cubes and tower 8 has 18 cubes. Another way: tower n has n × 2 + 2 cubes, so tower 10 has 20 + 2 = 22.'),
  # Think harder
- I('think', 4, 'A pattern starts at 3. It goes up 2, then up 4, then up 2, then up 4, and so on: 3, 5, 9, 11, 15 ...', parts=[
-   P('a', 'Will it say 41? {circ:Yes|No}', 'Yes'), P('b', 'Will it say 40? {circ:Yes|No}', 'No')],
-   space={'rows': ['Working:']}, hint='Write more numbers. Are they odd or even?',
-   why='Every 2 steps the number goes up by 6: 3, 5, 9, 11, 15, 17, 21, 23, 27, 29, 33, 35, 39, 41. So 41 is in the pattern. All the numbers are odd (odd + 2 and odd + 4 stay odd), so it never says 40.'),
+ I('think', 4, 'A frog starts at 0. It hops 3, then 1, then 3, then 1, and so on. It lands on 3, 4, 7, 8, 11 ...', parts=[
+   P('a', 'Will it land on 27? {circ:Yes|No}', 'Yes'), P('b', 'Will it land on 30? {circ:Yes|No}', 'No'), P('c', 'Will it land on 40? {circ:Yes|No}', 'Yes')],
+   space={'rows': ['Working:']}, hint='Write the landing places. Look at the 4 times table.',
+   why='Every 2 hops the frog goes 4 further: 3, 4, 7, 8, 11, 12, 15, 16 ... It lands on the 4 times table and on the number 3 before each one. 27 = 24 + 3: yes. 30 is between 28 and 31: no. 40 = 4 × 10: yes.'),
  I('think', 4, 'This pattern repeats again and again. Here are places 1 to 10. Could a star be in this place?', figure=pat(['square', 'star', 'circle', 'circle', 'triangle'] * 2, width_mm=150),
    partsrow=True, parts=[P('a', 'Place 17   {circ:Yes|No}', 'Yes'), P('b', 'Place 22   {circ:Yes|No}', 'Yes'), P('c', 'Place 35   {circ:Yes|No}', 'No'), P('d', 'Place 47   {circ:Yes|No}', 'Yes')],
    hint='Stars are 2 more than a number in the 5 times table.',
    why='The star is the 2nd of 5 shapes: places 2, 7, 12, 17, 22 ... (2 more than the 5 times table). 17 and 22: yes. 35 is the last shape: no. 47 = 45 + 2: yes.'),
- I('think', 4, 'Sticks make a chain of triangles. 1 triangle uses 3 sticks, 2 triangles use 5 sticks and 3 triangles use 7 sticks.', figure={'type': 'l2_sticks', 'kind': 'tri', 'counts': [1, 2, 3], 'width_mm': 100},
-   parts=[P('a', '10 triangles use {b} sticks.', '21'), P('b', 'Ben has 40 sticks. The most triangles he can make is {b}', '19'), P('c', 'Sticks left over: {b}', '1')],
-   hint='Each triangle adds 2 sticks. Find the rule.',
-   why='Each new triangle adds 2 sticks, and the first stick adds 1. 10 triangles: 10 × 2 + 1 = 21. 19 triangles use 19 × 2 + 1 = 39 sticks, and 20 triangles need 41. So Ben makes 19 triangles with 40 - 39 = 1 stick left.'),
+ I('think', 4, 'A toy train has an engine and carriages. The engine holds 2 children. Each carriage holds 5 children.',
+   figure=TB(['Carriages', '0', '1', '2', '3'], [['Children', '2', '7', '12', None]], w=110, ws=[1.8, 1, 1, 1, 1], size=30),
+   parts=[P('a', '4 carriages hold {b} children.', '22'), P('b', '8 carriages hold {b} children.', '42'), P('c', '37 children fill {b} carriages.', '7')],
+   hint='Each carriage adds 5. The engine is extra.',
+   why='Each carriage adds 5 children, and the engine holds 2: 2, 7, 12, 17, 22 ... (a) 4 carriages: 2 + 20 = 22. (b) 8 carriages: 2 + 40 = 42. (c) 37 - 2 = 35 children are in carriages, and 35 ÷ 5 = 7 carriages.'),
  # Go further
  I('go', 5, '1, 4, 9, 16 are square numbers: 1 × 1, 2 × 2, 3 × 3, 4 × 4.', beyond='Square numbers', parts=[
    P('a', '6 × 6 = {b}', '36'), P('b', 'The next 2 square numbers after 25 are {b} and {b}.', ['36', '49'], '36 and 49'), P('c', 'The 10th square number is {b}', '100')],

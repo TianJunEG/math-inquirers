@@ -67,7 +67,7 @@ items = [
    space={'rows': ['Working:']}, hint='List the numbers that go into groups of 3 first.',
    why='Groups of 3 with none left over: 30, 33, 36, 39, 42, 45, 48. Groups of 4 with 1 left: 33 and 45. Groups of 5 with 3 left: 33 has 3 left, 45 has none. So 33.'),
  # Go further
- I('go', 5, 'Beyond: the 6 times table. 6 × 5 = 30, and 6 more is 6 × 6.', beyond='The 6 times table', partsrow=True, parts=[
+ I('go', 5, 'The 6 times table. 6 × 5 = 30, and 6 more is 6 × 6.', beyond='The 6 times table', partsrow=True, parts=[
    P('a', '6 × 6 = {b}', '36'), P('b', '6 × 8 = {b}', '48'), P('c', '54 ÷ 6 = {b}', '9'), P('d', '6 × 7 = {b}', '42')],
    hint='Count on in 6s from 30. Or double the 3 times table.',
    why='(a) 30 + 6 = 36. (b) 6 × 8 is double 3 × 8 = 24, so 48. (c) 6 × 9 = 54, so 54 ÷ 6 = 9. (d) 36 + 6 = 42.'),

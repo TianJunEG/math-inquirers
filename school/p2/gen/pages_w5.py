@@ -58,7 +58,7 @@ def read_solid(s):
         return "cube" if abs(w - h) < 0.2 and abs(ox - 0.45 * w) < 0.3 else "cuboid"
     return "cylinder"
 
-SOLID_DIMS = {"cube": [dict(w=16), dict(w=14)], "cuboid": [dict(w=24, h=11, d=13), dict(w=14, h=22, d=12), dict(w=22, h=14, d=18)],
+SOLID_DIMS = {"cube": [dict(w=16), dict(w=14)], "cuboid": [dict(w=26, h=12, d=14), dict(w=13, h=26, d=12), dict(w=26, h=13, d=18)],
               "cylinder": [dict(w=14, h=17), dict(w=18, h=10), dict(w=11, h=22)], "cone": [dict(w=17, h=19), dict(w=13, h=21), dict(w=20, h=14)], "sphere": [dict(w=17), dict(w=14)]}
 NAMES5 = ["cube", "cuboid", "cone", "cylinder", "sphere"]
 
@@ -89,7 +89,7 @@ def page34():
         "K1 the letter of the right name in each row spells a word (6 letters, two decoy letters in each row)",
         ["Name each solid.", "Circle the letter of its name.", "Write the six letters in the boxes."],
         '<div class="srows3">' + "".join(rows_h) + '</div>', "; ".join(f"{i+1}) {k}: {next(l for n, l in o if n == k)}" for i, (k, o) in enumerate(zip(kinds, layout))), f"Word: {word}",
-        "Six drawings of solids (one of each kind and one repeated, in different shapes and sizes: a tall and a short cylinder, a long and a tall cuboid). Each row offers three names with letters. A cube and a cuboid are offered together in several rows, so the pupil must see whether all the faces are squares. The letters of the right names, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. The drawings are pictures of solids; no real solid is handled. A box left blank gives no letter and the check cannot see it.",
+        "Six drawings of solids (one of each kind and one repeated, in different shapes and sizes: a tall and a short cylinder, a long and a tall cuboid). Each row offers three names with letters. A cube and a cuboid are offered together in several rows, so the pupil must see whether all the faces are squares. The letters of the right names, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A cube has six faces that are all squares; every cuboid drawn is at least twice as long as it is high. The drawings are pictures of solids; no real solid is handled. A box left blank gives no letter and the check cannot see it.",
         check="Write the six letters in order. Do they spell a word?", check_boxes=6, mk=("code",),
         mech_plain="Word from the letters of the right names (6 letters)")
     pics = re.findall(r'<div class="sol">(<svg.*?</svg>)</div>', "".join(rows_h))

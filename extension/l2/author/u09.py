@@ -73,7 +73,7 @@ items = [
    hint='4 stops, but how many walks?',
    why='4 stops of 20 minutes is 80 minutes. There are only 3 walks between 4 stops: 3 × 5 = 15 minutes. 80 + 15 = 95 minutes. 9:15 plus 95 minutes: 9:15 to 10:15 is 60 minutes, then 35 more: 10:50 am.'),
  # Go further
- I('go', 5, 'Beyond: the 24-hour clock. After noon add 12 to the hour: 1:30 pm is 13:30.', beyond='24-hour clock', partsrow=True, parts=[
+ I('go', 5, 'The 24-hour clock. After noon add 12 to the hour: 1:30 pm is 13:30.', beyond='24-hour clock', partsrow=True, parts=[
    P('a', '3:45 pm = {b} : 45', '15'), P('b', '18:10 = {b} : 10 pm', '6'), P('c', '20:05 = {b} : 05 pm', '8')],
    hint='After noon: add 12 to the hour. Going back: take 12 away.',
    why='(a) 3 + 12 = 15, so 15:45. (b) 18 - 12 = 6, so 6:10 pm. (c) 20 - 12 = 8, so 8:05 pm.'),

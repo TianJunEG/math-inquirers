@@ -132,9 +132,9 @@ def _():
 
 @check('T02')
 def _():
-    n = 4
-    by_len = {L: n - L + 1 for L in range(1, n + 1)}
-    return {'a': s([by_len[1]]), 'b': s([by_len[2]]), 'c': s([by_len[3]]), 'd': s([by_len[4], rectangles(1, 4)])}
+    n = 5
+    pieces = {L: sum(1 for start in range(n) if start + L <= n) for L in range(1, n + 1)}      # a piece is a run of neighbouring stamps
+    return {'a': s([pieces[1]]), 'b': s([pieces[2]]), 'c': s([pieces[3]]), 'd': s([pieces[4] + pieces[5], sum(pieces.values())])}
 
 
 @check('T03')
@@ -146,8 +146,8 @@ def _():
 
 @check('G01')
 def _():
-    layers = [k * k for k in range(1, 6)]
-    return {'a': s([layers[-1]]), 'b': s([sum(layers)])}
+    rows6 = list(range(1, 7))
+    return {'a': s([rows6[-1]]), 'b': s([sum(rows6)]), 'c': s([sum(range(1, 9))])}
 
 
 @check('G02')

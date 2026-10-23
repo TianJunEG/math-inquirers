@@ -80,11 +80,11 @@ def run(d):
     eq(times(4, 3), 12, 'S6'); eq(share_each(12, 4), 3, 'S6 each'); eq(times(4, 3) == 12, True, 'S6 matches'); eq(T['S6']['val'], [4, 3, 12, 'Yes'], 'S6 val')
     eq((deal(12, 3), group_up(12, 6)), ([4, 4, 4], (2, 0)), 'S7 Lily deals 12 to 3 friends (share), Jamie packs boxes of 6 (group)'); eq(T['S7']['val'], ['Share', 'Group'], 'S7 val')
     # ---- Think harder
-    eq(d['tiers']['think'][0]['visual']['n'], 19, 'T1 picture'); eq(group_up(19, 4), (4, 3), 'T1'); eq(T['T1']['val'], [4, 3], 'T1 val'); eq(T['T1']['text'].startswith('Ali has 19 sweets'), True, 'T1 text says 19'); eq(19 in (12, 14, 15, 16, 18), False, 'T1 is not a class number (class left-over example is 14 and 15 in groups of 4)')
+    eq(d['tiers']['think'][0]['visual']['n'], 19, 'T1 picture'); eq(group_up(19, 4), (4, 3), 'T1'); eq(T['T1']['val'], [4, 3, 1], 'T1 val'); eq(T['T1']['text'].startswith('Ali has 19 sweets'), True, 'T1 text says 19'); eq(19 in (12, 14, 15, 16, 18), False, 'T1 is not a class number (class left-over example is 14 and 15 in groups of 4)')
     eq(group_up(15, 4), (3, 3), 'm4 question: 15 in groups of 4')
     people = 1 + 3; eq(people, 4, 'T2 people'); eq(deal(20, people), [5, 5, 5, 5], 'T2'); eq(deal(20, 3), [7, 7, 6], 'T2 sharing among 3 would not be equal'); eq(people == 3, False, 'T2 Aisha is wrong'); eq(T['T2']['val'], ['No', 5], 'T2 val')
     eq(group_up(18, 6), (3, 0), 'T3 A bags'); eq(deal(18, 6), [3] * 6, 'T3 B each'); eq(T['T3']['val'], ['Group', 3, 'Share', 3], 'T3 val'); eq(T['T3']['text'].startswith('Mei has 18 sweets'), True, 'T3 text says 18'); eq('bags of 6' in T['T3']['parts'][0]['text'] and 'among 6 bags' in T['T3']['parts'][2]['text'], True, 'T3 stories use 6')
-    eq(group_up(17, 5), (3, 2), 'T4 bags and left over'); eq(5 - 2, 3, 'T4 more needed'); eq(group_up(17 + 3, 5), (4, 0), 'T4 with 3 more it is 4 full bags'); eq(T['T4']['val'], [3, 2, 3], 'T4 val')
+    eq(T['T1']['val'][2], 4 - group_up(19, 4)[1], 'T1 c: 1 more sweet'); eq(group_up(19 + 1, 4), (5, 0), 'T1 c: with 1 more it is 5 full groups')
     # ---- Go further
     rowfr = T['G1']['visual']['head'][1:]; each = [share_each(12, int(f)) for f in rowfr]
     eq(each, [12, 6, 4, 3, 2, 1], 'G1 table'); eq([share_left(12, int(f)) for f in rowfr], [0] * 6, 'G1 none left over')
@@ -141,8 +141,8 @@ def run(d):
     eq((items['t1']['answer'], items['t2']['answer'], items['t4']['answer']), (3, 2, 3), 't1 t2 t4 authored'); eq(group_up(14, 4), (3, 2), 't1 t2'); eq(group_up(17, 5), (3, 2), 't4')
     eq(items['t3']['answer'], 5, 't3 authored'); eq(deal(20, 4)[0], 5, 't3')
     eq(items['g1']['answer'], divisors(12), 'g1 authored'); eq(items['g2']['answer'], 8, 'g2 authored'); eq(items['g3']['answer'], 6, 'g3 authored'); eq(share_each(18, 3), 6, 'g3')
-    # Retrofit T5 (true or false, 16 marbles shared with none left over)
-    eq(T['T5']['val'][:3], ['True' if left_over(16, k) == 0 else 'False' for k in (3, 4, 6)], 'T5 true or false')
-    eq(T['T5']['val'][3], left_over(16, 3), 'T5 left over among 3'); eq(left_over(16, 3), 1, 'T5 1 left over')
-    eq([left_over(16, k) for k in (3, 4, 6)], [1, 0, 4], 'T5 left over')
+    # Retrofit T4 (was T5; the Ravi sticker item was merged into T1 c) (true or false, 16 marbles shared with none left over)
+    eq(T['T4']['val'][:3], ['True' if left_over(16, k) == 0 else 'False' for k in (3, 4, 6)], 'T4 true or false')
+    eq(T['T4']['val'][3], left_over(16, 3), 'T4 left over among 3'); eq(left_over(16, 3), 1, 'T4 1 left over')
+    eq([left_over(16, k) for k in (3, 4, 6)], [1, 0, 4], 'T4 left over')
     return n

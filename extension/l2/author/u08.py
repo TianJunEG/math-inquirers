@@ -10,14 +10,21 @@ def stacks(*sts, **kw):
 SEMI, QUA, SQ, TRI = 'semicircle', 'quarter', 'square', 'triangle'
 
 learn = {
+ 'tight': True,
  'intro': 'Shapes can be put together and taken apart. A half circle has 1 straight side. A quarter circle has 2 straight sides. To count shapes, work in order and count one kind at a time.',
  'example': {
   'problem': 'Count every square in this grid, big and small. It has 2 rows and 2 columns.',
-  'figure': {'type': 'l2_grid', 'values': [['', ''], ['', '']], 'cell': 80, 'width_mm': 50}, 'side': True,
+  'figure': {'type': 'l2_grid', 'values': [['', ''], ['', '']], 'cell': 80, 'width_mm': 36},
   'steps': ['Count the small squares first: 4.', 'Look for larger squares. One square is 2 by 2: the whole grid. That is 1.', 'Add: 4 + 1 = 5 squares.'],
   'answer': '5 squares in all.'},
+ 'example2': {
+  'problem': 'Count the cubes in this stack. It is 2 cubes deep. The back is like the front.',
+  'figure': {'type': 'l2_cubes', 'stacks': [{'heights': [[2, 1], [2, 1]]}], 'width_mm': 36},
+  'steps': ['Count one row: 2 + 1 = 3 cubes.', 'The 2 rows are the same: 3 + 3 = 6 cubes.'],
+  'answer': 'The stack has 6 cubes.'},
+ 'pair': True,
  'howto': {'title': 'How to count shapes', 'steps': ['Count the smallest shapes first.', 'Then count the next size up.', 'Keep going to the largest.', 'Add the counts.']},
- 'facts': {'title': 'Solids', 'lines': ['Cube: 6 flat square faces.', 'Cylinder: 2 flat circles and 1 curved face.', 'Cubes in a stack: count layer by layer.']},
+ 'facts': {'title': 'Solids', 'lines': ['Cube: 6 flat square faces.', 'Cylinder: 2 flat circles and 1 curved face.', 'Cone: 1 flat circle and 1 curved face.', 'Sphere: no flat face.', 'Stacks: count row by row.']},
  'try': {'text': 'A grid has 2 rows and 3 columns. How many squares are there, big and small? {b}', 'answer': A('8'),
          'explanation': 'Small squares: 2 rows of 3 is 6. Squares 2 by 2: 2 of them. 6 + 2 = 8 squares. There is no 3 by 3 square because the grid is only 2 high.'}}
 
@@ -58,26 +65,26 @@ items = [
    P('c', 'The flat face of a cone is a   {circ:triangle|circle|square}', 'circle')],
    why='(a) A cube has 6 faces and each one is a square. (b) The 2 flat faces of a cylinder are circles. (c) The flat face of a cone is its base, a circle.'),
  # Think harder
- I('think', 4, 'Beyond: a net folds up into a solid. Which nets fold up into a cube? Every square must become a different face.', beyond='Cube nets',
+ I('think', 4, 'A net folds up into a solid. Which nets fold into a cube? Each square must be a new face.', beyond='Cube nets',
    figure={'type': 'l2_nets', 'nets': [{'label': 'A', 'cells': [[1, 0], [1, 1], [1, 2], [1, 3], [0, 1], [2, 1]]}, {'label': 'B', 'cells': [[0, 0], [0, 1], [1, 1], [1, 2], [2, 2], [2, 3]]},
                                        {'label': 'C', 'cells': [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 2]]}, {'label': 'D', 'cells': [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0], [2, 1]]}], 'width_mm': 150},
    partsrow=True, parts=[P('a', 'A   {circ:Yes|No}', 'Yes'), P('b', 'B   {circ:Yes|No}', 'Yes'), P('c', 'C   {circ:Yes|No}', 'No'), P('d', 'D   {circ:Yes|No}', 'No')],
-   hint='A line of 5 squares cannot fold into a cube.',
+   hint='Fold in your head. Where does each square land?',
    why='A is a cross and B is a staircase of 3 pairs: both fold into a cube. C has a row of 5 squares: the 5th lands on the 1st face. D has a 2 by 2 block: 4 squares cannot all be different faces. So C and D do not fold.'),
- I('think', 4, 'Count the rectangles in a row of 4 squares. A square is a rectangle too.', figure={'type': 'l2_grid', 'values': [['', '', '', '']], 'cell': 76, 'width_mm': 52},
-   partsrow=True, parts=[P('a', '1 square long: {b}', '4'), P('b', '2 squares long: {b}', '3'), P('c', '3 squares long: {b}', '2'), P('d', '4 squares long: {b}   All: {b}', ['1', '10'], '1 and 10 in all')],
-   hint='A rectangle 2 squares long can start in 3 places.',
-   why='1 square long: 4. 2 squares long: they start at square 1, 2 or 3, so 3. 3 squares long: they start at square 1 or 2, so 2. 4 squares long: 1. Total: 4 + 3 + 2 + 1 = 10.'),
+ I('think', 4, 'A strip has 5 stamps in a row. Mei tears off 1 or more stamps that touch.', figure={'type': 'l2_grid', 'values': [['', '', '', '', '']], 'cell': 70, 'width_mm': 52},
+   partsrow=True, parts=[P('a', 'Pieces of 1 stamp: {b}', '5'), P('b', 'Pieces of 2 stamps: {b}', '4'), P('c', 'Pieces of 3 stamps: {b}', '3'), P('d', 'Pieces of 4 or 5 stamps: {b}   All the pieces: {b}', ['3', '15'], '3 and 15 in all')],
+   hint='A piece of 2 stamps can start at stamp 1, 2, 3 or 4.',
+   why='1 stamp: 5 pieces. 2 stamps: they start at stamp 1, 2, 3 or 4, so 4. 3 stamps: 3. 4 stamps: 2. 5 stamps: 1. So 4 or 5 stamps: 2 + 1 = 3. All the pieces: 5 + 4 + 3 + 2 + 1 = 15.'),
  I('think', 4, 'A big triangle has 1 line across. It has 2 lines from its top corner.', figure={'type': 'l2_trilines', 'apex': 2, 'across': 1, 'width_mm': 50}, figside=True,
    partsrow=False, parts=[P('a', 'Sitting on the base: {b}', '6'), P('b', 'Sitting on the middle line: {b}', '6'), P('c', 'All the triangles: {b}', '12')],
    hint='Count the triangles that sit on each line separately.',
    why='The 2 lines from the top and the 2 sloping sides make 4 lines. Any 2 of them make a triangle on each line across: 6. There are 2 lines across, the base and the middle: 6 + 6 = 12 triangles.'),
  # Go further
- I('go', 5, 'Beyond: a pyramid of cubes has 5 layers. The top layer is 1 by 1, then 2 by 2, then 3 by 3, then 4 by 4. The bottom layer is 5 by 5.', beyond='Square numbers in a pyramid', parts=[
-   P('a', 'The bottom layer has {b} cubes.', '25'), P('b', 'The pyramid has {b} cubes.', '55')],
-   hint='Add the layers: 1 + 4 + 9 ...',
-   why='(a) 5 by 5 = 25 cubes. (b) 1 + 4 + 9 + 16 + 25 = 55 cubes.'),
- I('go', 5, 'Small cubes make a big cube that is 4 long, 4 wide and 4 high. The outside is painted. Count the small cubes with each number of painted faces.', partsrow=True, parts=[
+ I('go', 5, 'A shop stacks cans in a triangle. The top row has 1 can, the next row has 2 cans, then 3 cans, and so on.', beyond='Triangle numbers', parts=[
+   P('a', '6 rows: the bottom row has {b} cans.', '6'), P('b', '6 rows: {b} cans in all.', '21'), P('c', '8 rows: {b} cans in all.', '36')],
+   hint='Add the rows: 1 + 2 + 3 ...',
+   why='(a) Row 6 has 6 cans. (b) 1 + 2 + 3 + 4 + 5 + 6 = 21. (c) 21 + 7 + 8 = 36 (the rows 7 and 8 have 7 and 8 cans).'),
+ I('go', 5, 'Small cubes make a big cube that is 4 long, 4 wide and 4 high. The outside is painted. Count the small cubes with each number of painted faces.', beyond='Painted cubes', partsrow=True, parts=[
    P('a', '3 faces painted: {b}', '8'), P('b', '2 faces painted: {b}', '24'), P('c', '1 face painted: {b}', '24'), P('d', 'No paint: {b}', '8')],
    hint='Corners, edges, faces, inside. Check they make 64.',
    why='3 faces: the 8 corners. 2 faces: 12 edges with 2 cubes each: 24. 1 face: 6 faces with a 2 by 2 middle: 24. No paint: the 2 by 2 by 2 middle: 8. Check: 8 + 24 + 24 + 8 = 64.'),
@@ -85,7 +92,7 @@ items = [
    atext='Open. Examples: 4 long, 3 wide and 2 high is 12 + 12 = 24. Or layers of 12, 8 and 4 cubes: 12 + 8 + 4 = 24.', space={'rows': ['Stack 1:']},
    hint='Each layer needs a layer under it.',
    why='Example 1: 4 by 3 by 2: each layer has 12 cubes and there are 2 layers: 24. Example 2: a layer of 4 by 3 (12), a layer of 4 by 2 (8) and a layer of 2 by 2 (4): 12 + 8 + 4 = 24.'),
- I('go', 5, 'Count the rectangles in a grid with 2 rows and 3 columns. A square counts too. {b}', figure={'type': 'l2_grid', 'values': [['', '', ''], ['', '', '']], 'cell': 66, 'width_mm': 50}, figside=True, value='18',
+ I('go', 5, 'Count the rectangles in a grid with 2 rows and 3 columns. A square counts too. {b}', figure={'type': 'l2_grid', 'values': [['', '', ''], ['', '', '']], 'cell': 66, 'width_mm': 42}, figside=True, value='18',
    hint='Sort them by size: 1 by 1, 1 by 2, 1 by 3, 2 by 1, 2 by 2, 2 by 3.',
    why='1 by 1: 6. 1 high and 2 long: 4. 1 high and 3 long: 2. 2 high and 1 long: 3. 2 high and 2 long: 2. 2 high and 3 long: 1. Total: 6 + 4 + 2 + 3 + 2 + 1 = 18.'),
  # Check yourself

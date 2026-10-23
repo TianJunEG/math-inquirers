@@ -35,11 +35,11 @@ items = [
    partsrow=True, parts=[P('a', 'IN {b}', '8'), P('b', 'IN {b}', '13'), P('c', 'IN {b}', '20')],
    why='(a) 25 - 9 = 16, then 16 ÷ 2 = 8. Check: 8 × 2 = 16, 16 + 9 = 25. (b) 28 ÷ 4 = 7, then 7 + 6 = 13. Check: 13 - 6 = 7, 7 × 4 = 28. (c) 11 - 7 = 4, then 4 × 5 = 20. Check: 20 ÷ 5 = 4, 4 + 7 = 11.'),
  I('start', 2, 'This machine does × 4, then - 1. Fill in the table.', figure={'type': 'l2_table', 'cols': ['IN', '3', '6', None, None], 'rows': [['OUT', None, None, '31', '39']], 'first_bold': True, 'widths': [1.4, 1, 1, 1, 1], 'width_mm': 120},
-   parts=[P('a', 'Write the 4 missing numbers. Do the OUT of IN 3 and 6 first, then work backwards for 31 and 39.', ['11', '23', '8', '10'], '11, 23, 8, 10', lst=True)],
+   parts=[P('a', 'Write the 4 missing numbers. Do the OUT of IN 3 and 6 first, then work backwards for 31 and 39.', ['11', '23', '8', '10'], '11 and 23 in the OUT row, 8 and 10 in the IN row', lst=True)],
    why='IN 3: 3 × 4 = 12, 12 - 1 = 11. IN 6: 6 × 4 = 24, 24 - 1 = 23. OUT 31: 31 + 1 = 32, 32 ÷ 4 = 8. OUT 39: 39 + 1 = 40, 40 ÷ 4 = 10.'),
- I('start', 2, 'A machine multiplies by one number and then adds another. IN 3 gives OUT 11. IN 6 gives OUT 17.', figure={'type': 'l2_table', 'cols': ['IN', '3', '6', '10'], 'rows': [['OUT', '11', '17', None]], 'first_bold': True, 'widths': [1.4, 1, 1, 1], 'width_mm': 100},
-   parts=[P('a', 'The machine multiplies by   {circ:2|3|4}', '2'), P('b', 'Then it adds {b}', '5'), P('c', 'IN 10 gives OUT {b}', '25')],
-   why='Try × 2 on IN 3: 6, and 11 - 6 = 5, so + 5. Test IN 6: 12 + 5 = 17. It fits. × 3 and × 4 do not fit both numbers. IN 10: 10 × 2 = 20, 20 + 5 = 25.'),
+ I('start', 2, 'A fair machine gives stickers for tokens. Each token gives the same number of stickers, plus a bonus. 3 tokens give 11 stickers. 6 tokens give 17.', figure={'type': 'l2_table', 'cols': ['Tokens', '3', '6', '10'], 'rows': [['Stickers', '11', '17', None]], 'first_bold': True, 'widths': [1.4, 1, 1, 1], 'width_mm': 100},
+   parts=[P('a', 'Each token gives   {circ:2|3|4}   stickers.', '2'), P('b', 'The bonus is {b} stickers.', '5'), P('c', '10 tokens give {b} stickers.', '25')],
+   why='Try 2 stickers a token: 3 tokens give 6, and 11 - 6 = 5 is the bonus. Test 6 tokens: 12 + 5 = 17. It fits. 3 and 4 a token do not fit both. 10 tokens: 20 + 5 = 25.'),
  I('start', 2, 'Ali had some marbles. He lost 18 in a game. Then he won 25 marbles. Now he has 60.', figure=mach('?', '- 18', '+ 25', '60', width_mm=150),
    parts=[P('a', 'Before he won 25, Ali had {b} marbles.', '35'), P('b', 'At first Ali had {b} marbles.', '53'), P('c', 'Check: 53 - 18 = {b}, then + 25 = {b}', ['35', '60'], '35, then 60')],
    why='Undo the last step: 60 - 25 = 35. Undo the first step: 35 + 18 = 53. Check: 53 - 18 = 35, then 35 + 25 = 60.'),
@@ -75,7 +75,7 @@ items = [
    hint='Write the first OUT numbers. What do you see?',
    why='IN 1, 2, 3, 4 give 5, 9, 13, 17: always 1 more than the 4 times table. 29 = 28 + 1: yes. 30 is skipped (29, 33): no. 33 = 32 + 1: yes. 42 is skipped (41, 45): no.'),
  # Go further
- I('go', 5, 'Beyond: a letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.', beyond='Letters for numbers', parts=[
+ I('go', 5, 'A letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.', beyond='Letters for numbers', parts=[
    P('a', '3 × n + 4 = 25. n = {b}', '7'), P('b', '5 × n - 3 = 27. n = {b}', '6'), P('c', 'n ÷ 2 + 8 = 13. n = {b}', '10')],
    hint='Work backwards, just like a machine.',
    why='(a) 25 - 4 = 21, 21 ÷ 3 = 7. (b) 27 + 3 = 30, 30 ÷ 5 = 6. (c) 13 - 8 = 5, 5 × 2 = 10.'),
@@ -87,13 +87,15 @@ items = [
    atext='Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)',
    space={'rows': ['My riddle:', 'Check going forwards:']}, hint='Start at 12. Do 2 steps forwards. Then write the riddle.',
    why='Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.'),
- I('go', 5, 'A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. Which number went in first? {b}', value='10',
-   hint='Work backwards twice. Undo × 2 first each time.', space={'rows': ['Working:']},
-   why='Undo the second run: 70 ÷ 2 = 35, 35 - 5 = 30. So the first OUT was 30. Undo the first run: 30 ÷ 2 = 15, 15 - 5 = 10. Check: 10 + 5 = 15, × 2 = 30; 30 + 5 = 35, × 2 = 70.'),
+ I('go', 5, 'Machine A does × 2, then + 3. Machine B does - 5, then × 3. A number goes into A. The OUT of A goes into B. The final OUT is 36.',
+   figure=mach('?', '× 2', '+ 3', '- 5', '× 3', '36', width_mm=150), figside=False,
+   parts=[P('a', 'The OUT of machine A was {b}', '17'), P('b', 'The number that went into A was {b}', '7')],
+   hint='Undo machine B first. Then undo machine A.',
+   why='Undo B: 36 ÷ 3 = 12, then 12 + 5 = 17. That is the OUT of A. Undo A: 17 - 3 = 14, then 14 ÷ 2 = 7. Check: 7 → 14 → 17 → 12 → 36.'),
  # Check yourself
  I('quiz', 0, 'I multiply a number by 4, then add 6. I get 38. My number: {b}', value='8', why='38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38.'),
  I('quiz', 0, 'Kumar gave away 14 stickers, then bought 9. Now 31. At first: {b}', value='36', why='Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31.'),
- I('quiz', 0, 'A machine does × 5, then - 3. The OUT is 32. What went IN? {b}', value='7', why='32 + 3 = 35, then 35 ÷ 5 = 7. Check: 7 × 5 = 35, 35 - 3 = 32.'),
+ I('quiz', 0, 'Kumar doubles his number, then adds 9. He gets 25. His number: {b}', value='8', why='25 - 9 = 16, then 16 ÷ 2 = 8. Check: 8 × 2 = 16, 16 + 9 = 25.'),
  I('quiz', 0, '5 equal bags. Bag 5 has 4 left after losing 6. Pens in all: {b}', value='50', why='Bag 5 had 4 + 6 = 10 pens before. Every bag had 10, so 5 × 10 = 50 pens.'),
 ]
 build(5, 'Mystery number machines', 'Working backwards', 'I can find a mystery number by working backwards. I undo the last step first. I can use bars for before-and-after stories.', learn, items, snug=['start1', 'start2', 'start3'])

@@ -78,7 +78,7 @@ def page09():
         ["Start at START. Move up, down, left or right.", "Go to the box with the word for your number.", "The number is at the foot of the box."],
         body, "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {words3(top[(r, c)])} / {bot[(r, c)]}" for r, c in path),
         f"Route reaches FINISH through {L} boxes; every top word names the number at the foot of the box before it.",
-        f"A 4 by 4 grid. Each box has a number in words on top and a numeral at the foot. From a box the pupil moves to a touching box whose top words say the numeral at the foot of the box being left. All numbers are 3-digit. Wrong turns are boxes that look right but are not: digits swapped (341 and three hundred and fourteen), teen and ty mixed up (313 and three hundred and thirty), a zero in the wrong place (305 and three hundred and fifty). {dead} wrong turns can be entered from the route and lead nowhere, so the box count and the words matter. Pupils read numbers in words and match them with numerals; writing number words by hand is not checked by this page.",
+        f"A 4 by 4 grid. Each box has a number in words on top and a numeral at the foot. From a box the pupil moves to a touching box whose top words say the numeral at the foot of the box being left. All numbers are 3-digit. Wrong turns are boxes that look right but are not: digits swapped (341 and three hundred and fourteen), teen and ty mixed up (313 and three hundred and thirty), a zero in the wrong place (305 and three hundred and fifty). Sometimes two touching boxes have the same words on top, so the pupil may meet two choices; only one leads on to FINISH. {dead} wrong turns can be entered from the route and lead nowhere, so the box count and the words matter. Pupils read numbers in words and match them with numerals; writing number words by hand is not checked by this page.",
         check=f"Does your line reach FINISH? Count its boxes: are there {L}? Does each top word match?", mk=("route",),
         mech_plain="Route: each step goes to a box whose top words say the numeral at the foot of the box you leave; the line must reach FINISH through the right number of boxes")
     cells = {}
@@ -145,7 +145,7 @@ def page10():
         cards_h.append(qcard(i + 1, dc + f"<p>{QTXT[kd]}</p>", '<span class="ab w3"></span>'))
     P = code_items_page(10, 6010, "Digit Cards", 2, "Numbers to 1000: make, compare and order numbers from digit cards", STRAND_WN,
         "1.2, 1.4 (place values; comparing and ordering numbers); odd and even numbers 1.6", ["WN1.2", "WN1.4", "WN1.6"], "Code-breaker (digit cards)",
-        ["Use all three cards once each.", "Make the number. Write it in the box.", INSTR_CODE],
+        ["Use all three cards once each.", "Make a 3-digit number. Write it in the box.", INSTR_CODE],
         qgrid(cards_h, 3), ans, table, word, 100, 999,
         "; ".join(f"{i+1}) {k}: {a}" for i, ((k, c), a) in enumerate(zip(items, ans))),
         "Six sets of three digit cards: greatest, smallest, second greatest, second smallest, greatest even and smallest odd. A zero card cannot be the hundreds digit. The decoy letters stand for the other arrangements of the same cards, so a pupil who makes a different number from the same cards still gets a letter, but not the right one. A box left blank gives no letter and the check cannot see it.")
@@ -397,27 +397,30 @@ def frac_fig(kind, n, shaded, rng):
     """a figure cut into n EQUAL parts with the parts in `shaded` black (white separators inside black areas); kind: bar, circle, grid (rows x cols)"""
     def part(tag, geom, i):
         sh = i in shaded
-        return f'<{tag} class="part{" sh" if sh else ""}" {geom} fill="{"#000" if sh else "#fff"}" stroke="{"#fff" if sh else "#000"}" stroke-width="{0.9 if sh else 0.6}" stroke-linejoin="round"/>'
+        return f'<{tag} class="part{" sh" if sh else ""}" {geom} fill="{"#000" if sh else "#fff"}" stroke="{"none" if sh else "#000"}" stroke-width="0.6" stroke-linejoin="round"/>'
+    def gap(tag, geom, i):
+        return f'<{tag} class="ol" {geom} fill="none" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/>' if i in shaded else ""
     items = []; outline = ""
     if kind == "bar":
         w = 48.0; h = 13.0; u = w / n
-        for i in range(n): items.append((i, part("rect", f'x="{1+i*u:.2f}" y="1" width="{u:.2f}" height="{h}"', i)))
+        for i in range(n): items.append((i, part("rect", f'x="{1+i*u:.2f}" y="1" width="{u:.2f}" height="{h}"', i), gap("rect", f'x="{1+i*u:.2f}" y="1" width="{u:.2f}" height="{h}"', i)))
         outline = f'<rect x="1" y="1" width="{w}" height="{h}" fill="none" stroke="#000" stroke-width="0.8"/>'; W, H = w + 2, h + 2
     elif kind == "circle":
         r = 12.5; cx = cy = r + 1
         for i in range(n):
             a0 = -math.pi / 2 + 2 * math.pi * i / n; a1 = -math.pi / 2 + 2 * math.pi * (i + 1) / n
             x0, y0 = cx + r * math.cos(a0), cy + r * math.sin(a0); x1, y1 = cx + r * math.cos(a1), cy + r * math.sin(a1)
-            items.append((i, part("path", f'd="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z"', i)))
+            items.append((i, part("path", f'd="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z"', i), gap("path", f'd="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z"', i)))
         outline = f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#000" stroke-width="0.8"/>'; W = H = 2 * r + 2
     else:
         rows, cols = {4: (2, 2), 6: (2, 3), 8: (2, 4), 9: (3, 3), 10: (2, 5), 12: (3, 4)}[n]
         u = 9.5
         for i in range(n):
             rr, cc = divmod(i, cols)
-            items.append((i, part("rect", f'x="{1+cc*u:.2f}" y="{1+rr*u:.2f}" width="{u}" height="{u}"', i)))
+            items.append((i, part("rect", f'x="{1+cc*u:.2f}" y="{1+rr*u:.2f}" width="{u}" height="{u}"', i), gap("rect", f'x="{1+cc*u:.2f}" y="{1+rr*u:.2f}" width="{u}" height="{u}"', i)))
         outline = f'<rect x="1" y="1" width="{cols*u}" height="{rows*u}" fill="none" stroke="#000" stroke-width="0.8"/>'; W, H = cols * u + 2, rows * u + 2
-    ordered = [x for i, x in items if i in shaded] + [x for i, x in items if i not in shaded]      # white parts last, so their outlines stay visible
+    # black fills first, then a white line (1.1 mm wide, centred on each shaded part's edge), then the white parts with black outlines, then the outer outline
+    ordered = [x[1] for x in items if x[0] in shaded] + [x[2] for x in items] + [x[1] for x in items if x[0] not in shaded]
     return svg(round(W, 1), round(H, 1), "".join(ordered) + outline)
 
 def read_frac(s):

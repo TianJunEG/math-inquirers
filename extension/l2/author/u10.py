@@ -36,12 +36,12 @@ items = [
    why='0 cannot be first. Start with 5: 507, 570. Start with 7: 705, 750. (b) Greatest 750, smallest 507. (c) 705 and 750 are between 600 and 800: 2 numbers.'),
  I('start', 2, 'Ben has 6 coins. Each coin is 10¢ or 20¢. They are worth $1.10 altogether. Fill in the table.',
    figure=TB(['10¢ coins', '6', '5', '4', '3', '2', '1'], [['20¢ coins', '0', '1', '2', '3', '4', '5'], ['Total', '60¢', '70¢', None, None, None, None]], w=104, ws=[1.9, 1, 1, 1, 1, 1, 1], size=30),
-   parts=[P('a', 'Write the 4 missing totals: {ll}', ['80', '90', '100', '110'], '80¢, 90¢, 100¢, 110¢', lst=True), P('b', 'Ben has {b} coin of 10¢ and {b} coins of 20¢.', ['1', '5'], '1 coin of 10¢ and 5 coins of 20¢')],
+   parts=[P('a', 'Write the 4 missing totals: {ll}', ['80', '90', '100', '110'], '80¢, 90¢, 100¢, 110¢', lst=True), P('b', 'Ben has {b} coins of 10¢ and {b} coins of 20¢.', ['1', '5'], '1 coin of 10¢ and 5 coins of 20¢')],
    why='Each swap of a 10¢ for a 20¢ adds 10¢: 60, 70, 80, 90, 100, 110. $1.10 is the last column: 1 coin of 10¢ and 5 coins of 20¢. Check: 10 + 100 = 110 and 1 + 5 = 6 coins.'),
  I('start', 3, 'Ali, Mei and Ravi each have 1 fruit: an apple, a banana or a mango. Mei has the mango. Ali does not have the apple.', figure={'type': 'l2_lgrid', 'rows': ['Ali', 'Mei', 'Ravi'], 'cols': ['apple', 'banana', 'mango'], 'width_mm': 80}, figside=True,
    parts=[P('a', 'Ali has the {b}', 'banana'), P('b', 'Mei has the {b}', 'mango'), P('c', 'Ravi has the {b}', 'apple')],
    why='Mei has the mango, so cross out mango for Ali and Ravi. Ali does not have the apple and not the mango, so Ali has the banana. Ravi has the apple.'),
- I('start', 3, 'Mei cuts a pizza into 6 equal slices. She eats 1/6 and Ali eats 2/6. Each slice is 100 g.', parts=[
+ I('start', 3, 'Mei cuts a pizza into 6 equal slices. She eats 1/6 and Ali eats 2/6. Each slice is 100 g. Write fractions in sixths.', parts=[
    P('a', 'They eat {b} of the pizza.', '3/6'), P('b', '{b} of the pizza is left.', '3/6'), P('c', 'The mass of the pizza left is {b} g.', '300')],
    why='(a) 1/6 + 2/6 = 3/6. (b) 6/6 - 3/6 = 3/6. (c) 3 slices left, 3 × 100 g = 300 g.'),
  I('start', 3, 'Aisha buys 3 pens. Each pen costs $1.20. She pays with a $5 note.', parts=[
@@ -67,7 +67,7 @@ items = [
    hint='Add each day to the total of the day before.',
    why='Mei saves 2, 4, 6, 8, 10 so her totals are 2, 6, 12, 20, 30. Ali saves 5 a day: 5, 10, 15, 20, 25. On day 4 they are level at $20. On day 5 Mei has $30 and Ali has $25, so Mei has $5 more.'),
  # Go further
- I('go', 5, 'Beyond: half a picture. Each picture stands for 10 children, so half a picture stands for 5 children.', beyond='Half pictures',
+ I('go', 5, 'Half a picture. Each picture stands for 10 children, so half a picture stands for 5 children.', beyond='Half pictures',
    figure=pg([('Dogs', 3.5), ('Cats', 2.5)], {'value': 10}, width_mm=90),
    partsrow=True, parts=[P('a', 'Dogs: {b} children', '35'), P('b', 'Cats: {b} children', '25'), P('c', 'More dogs than cats: {b}', '10')],
    hint='3 pictures is 30. Add the half picture.',
@@ -88,6 +88,6 @@ items = [
  I('quiz', 0, 'Each picture stands for 10 children. How many children chose Tuesday? {b}', figure=pg([('Monday', 3), ('Tuesday', 5)], {'value': 10}, width_mm=84), figright=True, value='50', why='Tuesday has 5 pictures. Each picture is 10 children. 5 × 10 = 50 children.'),
  I('quiz', 0, 'Use the digit cards 1, 0 and 4 once each. How many 3-digit numbers can you make? {b}', value='4', why='0 cannot be first. Start with 1: 104, 140. Start with 4: 401, 410. That is 4 numbers.'),
  I('quiz', 0, 'Ali, Ben and Mei have red, blue and green. Mei has blue. Ali does not have red. Ben has {b}', value='red', why='Mei has blue. Ali does not have red, so Ali has green. Ben has red.'),
- I('quiz', 0, 'A pizza has 12 slices. 5/12 is eaten. What fraction is left? {b}', value='7/12', why='12/12 - 5/12 = 7/12 is left.'),
+ I('quiz', 0, 'A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {b}', value='7/12', why='12/12 - 5/12 = 7/12 is left.'),
 ]
 build(10, 'Puzzle day', 'Mixed puzzles', 'I can choose a way to start a puzzle. I can read picture graphs and logic grids. I can check my answer against every clue.', learn, items, snug=['start1', 'start2', 'start3'])

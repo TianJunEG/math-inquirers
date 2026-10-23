@@ -31,7 +31,7 @@
   "who is in the group: \"shares with his 3 cousins\" means 4 people (T2)",
   "list every number of friends that can share 12 equally (G1)",
   "a pattern in what is left over when 13 to 20 are shared among 4 (Investigation)",
-  "true or false about sharing equally: can 16 be shared among 3, 4 or 6 with none left over? (T5)"
+  "true or false about sharing equally: can 16 be shared among 3, 4 or 6 with none left over? (T4)"
  ],
  "objectives": [
   "Share a set equally by dealing one at a time, and say how many each one gets.",
@@ -1677,7 +1677,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: deal one dot at a time to each plate. Q2: ring 3 cookies, then 3 more, until none are left. Q3: deal the sweets to 2 friends, or count in jumps of 2 to 14. Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with 3 each is 4 groups of 3, and either order is right. Q7: does the story say how many friends, or how many in each box? Think harder T5: deal the marbles out one at a time. If any are left over, the sentence is false."
+      "text": "Q1: deal one dot at a time to each plate. Q2: ring 3 cookies, then 3 more, until none are left. Q3: deal the sweets to 2 friends, or count in jumps of 2 to 14. Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with 3 each is 4 groups of 3, and either order is right. Q7: does the story say how many friends, or how many in each box? Think harder T4: deal the marbles out one at a time. If any are left over, the sentence is false."
      },
      {
       "k": "STUCK",
@@ -2139,26 +2139,34 @@
       "text": "There are [] sweets left over.",
       "ans": "3",
       "val": 3
+     },
+     {
+      "l": "c",
+      "text": "Ali needs [] more sweets to make one more group of 4.",
+      "ans": "1",
+      "val": 1
      }
     ],
-    "answer": "4 groups; 3 left over",
+    "answer": "4 groups; 3 left over; 1 more sweet",
     "val": [
      4,
-     3
+     3,
+     1
     ],
-    "hint": "Make groups of 4 until there are not enough for another group. Count what is left.",
-    "solution": "4, 8, 12, 16 is 4 groups, and 16 sweets are used. 19 - 16 = 3 sweets are left. Three is not enough for another group of 4.",
+    "hint": "Make groups of 4 until there are not enough for another group. Count what is left. For (c), how many more make 4?",
+    "solution": "4, 8, 12, 16 is 4 groups, and 16 sweets are used. 19 - 16 = 3 sweets are left. Three is not enough for another group of 4. 3 and 1 make 4, so 1 more sweet gives one more group of 4 (20 sweets make 5 groups).",
     "mistakes": [
      "Writing 5 groups by rounding up.",
-     "Forgetting the sweets left over."
+     "Forgetting the sweets left over.",
+     "Writing 3 for (c), the number left over."
     ],
-    "mins": 4,
+    "mins": 5,
     "visual": {
      "type": "objects",
      "icon": "sweet",
      "n": 19,
      "per_row": 10,
-     "size": "m"
+     "size": "l"
     }
    },
    {
@@ -2253,45 +2261,6 @@
    },
    {
     "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "Ravi has 17 stickers. He puts 5 stickers in each bag.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "He fills [] bags.",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "b",
-      "text": "There are [] stickers left over.",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "c",
-      "text": "He needs [] more stickers to fill one more bag.",
-      "ans": "3",
-      "val": 3
-     }
-    ],
-    "answer": "3 bags; 2 left over; 3 more",
-    "val": [
-     3,
-     2,
-     3
-    ],
-    "hint": "Count in 5s: 5, 10, 15. What is left? Then think how many more make 5.",
-    "solution": "3 bags use 15 stickers, so 2 stickers are left over. One more bag needs 5 stickers, and 2 + 3 = 5, so he needs 3 more.",
-    "mistakes": [
-     "Writing 2 for (c), the number left over.",
-     "Writing 4 bags."
-    ],
-    "mins": 4
-   },
-   {
-    "id": "T5",
     "page": 3,
     "tier": "think",
     "text": "Kumar has 16 marbles. He shares them equally among children, with none left over. Is each sentence true or false?",

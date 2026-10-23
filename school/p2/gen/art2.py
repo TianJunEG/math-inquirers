@@ -34,7 +34,7 @@ def read_pv_chart(s):
 
 # ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; much larger than real)
 COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7, 100: 24.65}          # real diameters (mm): only the RATIOS are used (a fact, not a design)
-COIN_D = {v: d * 0.70 for v, d in COIN_REAL.items()}
+COIN_D = {v: d * 0.84 for v, d in COIN_REAL.items()}
 NOTE_W, NOTE_H = 27.0, 13.5
 
 def _motif(v, cx, cy, u):
@@ -58,8 +58,8 @@ def coin_g(v, x, cy):
     return (f'<g class="coin" data-v="{v}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
             f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
             + _motif(v, cx, cy - r * 0.62, r) +
-            f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.0:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.60:.1f}" fill="#000">{lab}</text>'
-            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.54:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*(0.36 if v < 100 else 0.32):.1f}" fill="#000">{unit}</text></g>')
+            f'<text class="coinval" x="{cx:.1f}" y="{cy-r*0.08:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.58:.1f}" fill="#000">{lab}</text>'
+            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.50:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="2.7" fill="#000">{unit}</text></g>')
 
 def note_g(v, x, y):
     """an original note design: a frame, the value in two corners, a simple bird in the middle; not a copy of any real note"""

@@ -11,9 +11,16 @@ learn = {
  'intro': 'A fraction names equal parts of one whole. The bottom number says how many equal parts the whole is cut into. The top number says how many parts we take.',
  'example': {
   'problem': 'Kumar cuts a pizza into 8 equal slices. He eats 3 slices. What fraction did he eat? What fraction is left?',
-  'figure': fr({'kind': 'bar', 'n': 8, 'shaded': 3, 'w': 400}, width_mm=96), 'side': False,
+  'figure': fr({'kind': 'bar', 'n': 8, 'shaded': 3, 'w': 400}, width_mm=60), 'side': False,
   'steps': ['The slices are equal. There are 8 of them: the bottom number is 8.', 'He eats 3 slices: the top number is 3. He ate 3/8.', 'Slices left: 8 - 3 = 5. So 5/8 is left.', 'Check: 3/8 + 5/8 = 8/8 = 1 whole pizza.'],
   'answer': 'He ate 3/8. 5/8 is left.'},
+ 'example2': {
+  'problem': 'The number line goes from 0 to 1 in 4 equal steps. What fraction does the arrow show?',
+  'figure': fr({'kind': 'line', 'n': 4, 'arrows': [{'k': 3, 'label': '?'}], 'w': 320}, width_mm=62),
+  'steps': ['Each step is 1/4.', 'The arrow is 3 steps from 0: 3/4.'],
+  'answer': 'The arrow shows 3/4.'},
+ 'pair': True,
+ 'tight': True,
  'howto': {'title': 'How to name a fraction', 'steps': ['Check that the parts are equal.', 'Count all the parts: the bottom number.', 'Count the parts you take: the top number.', 'Same bottom number? Just add or subtract the tops.']},
  'facts': {'title': 'Remember', 'lines': ['More parts means smaller parts: 1/6 is less than 1/4.', 'Like fractions: 2/7 + 3/7 = 5/7. The bottom number stays.', 'All the parts make 1 whole: 7/7 = 1.']},
  'try': {'text': 'Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {b}', 'answer': A('7/10'),
@@ -70,7 +77,7 @@ items = [
    hint='Take away the extra 6/12. Share what is left.',
    why='The whole is 12/12. Take away the extra 6/12: 6/12 is left. Share it between the two equal parts: 3/12 and 3/12. Give the extra back to one of them: 3/12 and 9/12. Check: 3/12 + 9/12 = 12/12.'),
  # Go further
- I('go', 5, 'Beyond: equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.', beyond='Equal fractions', partsrow=True, parts=[
+ I('go', 5, 'Equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.', beyond='Equal fractions', partsrow=True, parts=[
    P('a', '1/2 = {b}/6', '3'), P('b', '2/3 = {b}/6', '4'), P('c', '3/4 = {b}/8', '6')],
    hint='Line up 2 bars of the same length. Cut one into more parts.',
    why='(a) A half of 6 sixths is 3 sixths. (b) A third is 2 sixths, so 2 thirds are 4 sixths. (c) A quarter is 2 eighths, so 3 quarters are 6 eighths.'),
@@ -90,6 +97,6 @@ items = [
  I('quiz', 0, 'What fraction is shaded? {b}', figure=fr({'kind': 'bar', 'n': 8, 'shaded': 5, 'w': 360}, width_mm=60), figright=True, value='5/8', why='The bar has 8 equal parts. 5 are shaded. The fraction is 5/8.'),
  I('quiz', 0, 'Which is greater?   {circ:1/5|1/9}', value='1/5', why='The more parts a whole is cut into, the smaller each part. 5 parts are greater than 9 parts, so 1/5 is greater.'),
  I('quiz', 0, '2/7 + 4/7 = {b}', value='6/7', why='2 sevenths + 4 sevenths = 6 sevenths. The bottom number stays 7.'),
- I('quiz', 0, 'A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. How much is left? {b}', value='4/12', why='5/12 + 3/12 = 8/12 eaten. 12/12 - 8/12 = 4/12 is left.'),
+ I('quiz', 0, 'A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. What is left, in twelfths? {b}', value='4/12', why='5/12 + 3/12 = 8/12 eaten. 12/12 - 8/12 = 4/12 is left.'),
 ]
 build(7, 'Fair shares', 'Fractions', 'I can name fractions of a whole. I can compare fractions and add like fractions. I can solve fair-sharing stories with a bar.', learn, items, snug=['start1', 'start2', 'start3'])

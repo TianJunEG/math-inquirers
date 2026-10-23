@@ -321,7 +321,7 @@ for k in BK:
     kind = f.split("_", 2)[2]
     rec(f"{f}: 1-bit render at 150 dpi keeps content (max ink loss {worst_loss:.2%} vs greyscale)", worst_loss <= {'Puzzles.pdf': 0.25, 'FrontMatter.pdf': 0.32, 'Answer_Key.pdf': 0.35}[kind], f"{len(gs)} pages")
     per_page = 130 if kind == "Answer_Key.pdf" else 40
-    rec(f"{f}: no flat grey tint areas (blocks counted {grey_blocks}, limit {per_page} per page)", grey_blocks < per_page * len(gs), "")
+    rec(f"{f}: no flat grey tint areas (blocks of edge pixels counted {grey_blocks}, budget {per_page} on average per page)", grey_blocks < per_page * len(gs), "")
     if kind == "Puzzles.pdf":
         keep = os.path.join(O, "bilevel_check", k); shutil.rmtree(keep, ignore_errors=True); os.makedirs(keep)
         for m in ms: Image.open(m).convert("1").save(os.path.join(keep, os.path.basename(m).replace(".pbm", ".png")), optimize=True)

@@ -39,7 +39,7 @@ def _():
 
 @check('S01')
 def _():
-    return s(steps(4, 4, 6)[3:])
+    return s(steps(60, -5, 6)[3:])
 
 
 @check('S02')
@@ -113,12 +113,13 @@ def _():
 
 @check('T01')
 def _():
-    seq, v, add = [], 3, 2
-    while v < 100:
-        seq.append(v)
-        v += add
-        add = 4 if add == 2 else 2
-    return {'a': ['Yes' if 41 in seq else 'No'], 'b': ['Yes' if 40 in seq else 'No']}
+    pos, lands, hop = 0, set(), 3
+    while pos < 100:
+        pos += hop
+        lands.add(pos)
+        hop = 1 if hop == 3 else 3
+    Y = lambda n: 'Yes' if n in lands else 'No'
+    return {'a': [Y(27)], 'b': [Y(30)], 'c': [Y(40)]}
 
 
 @check('T02')
@@ -130,11 +131,12 @@ def _():
 
 @check('T03')
 def _():
-    def sticks(n):                      # triangles in a chain: 3 sticks, then 2 more for each extra triangle
-        return 3 + 2 * (n - 1)
-    assert [sticks(1), sticks(2), sticks(3)] == [3, 5, 7]
-    best = max(n for n in range(1, 60) if sticks(n) <= 40)
-    return {'a': s([sticks(10)]), 'b': s([best]), 'c': s([40 - sticks(best)])}
+    def holds(k):                          # the engine holds 2 and every carriage 5 more
+        return 2 + sum(5 for _ in range(k))
+    assert [holds(0), holds(1), holds(2)] == [2, 7, 12]
+    need = [k for k in range(0, 30) if holds(k) == 37]
+    assert len(need) == 1
+    return {'a': s([holds(4)]), 'b': s([holds(8)]), 'c': s(need)}
 
 
 @check('G01')

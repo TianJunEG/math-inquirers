@@ -246,7 +246,7 @@ def tf_statement(kind, rng, true):
         v = q if true else rng.choice([q + 1, q - 1, q + 2, n - d, d])
         return f"{n} ÷ {d} = {v}", v == q
     if kind == "rel":
-        a = rng.choice([2, 3, 4, 5]); b = rng.randint(3, 9); p = a * b
+        b = rng.choice([2, 3, 4, 5]); a = rng.randint(3, 9); p = a * b
         if true: return f"If {a} × {b} = {p}, then {p} ÷ {b} = {a}.", True
         w = rng.choice([x for x in (a + 1, a - 1, b, p - b) if x > 0 and x != a])
         return f"If {a} × {b} = {p}, then {p} ÷ {b} = {w}.", False
@@ -495,7 +495,7 @@ def page24():
             items = sorted([("n", rng.choice([2, 5])) for _ in range(n_notes)], key=lambda x: -x[1]) + sorted([("c", rng.choice(COINS)) for _ in range(n_coins)], key=lambda x: -x[1])
             purses.append(items)
         tot = [sum(100 * v if t == "n" else v for t, v in p) for p in purses]
-        if all(A.money_width(p) <= 66 for p in purses) and len(set(tot)) == 6 and 100 <= min(tot) and max(tot) <= 1200:
+        if all(A.money_width(p) <= 74 for p in purses) and len(set(tot)) == 6 and 100 <= min(tot) and max(tot) <= 1200:
             break
     word = word_candidates(24, 6)[0]; CLAIMED[24] = word
     order = list(range(6)); rng.shuffle(order)          # printed purse order
