@@ -255,7 +255,7 @@ def _grid_cells(rows, cols): return atoms_of_cells([(r, c) for r in range(rows) 
 ORACLES = {
     'c1': lambda e: len(['sq'] * e['a'] + ['tr'] * e['b']),
     'c5': lambda e: sum(len([1, 2]) for _ in range(e['n'])),
-    't1': lambda e: min_pieces(atoms_of_cells([(0, c) for c in range(e['n'])]), ('rectangle',)) if e['n'] % 2 == 0 and False else min(len(t) for t in tilings(atoms_of_cells([(0, c) for c in range(e['n'])]), ('rectangle',))),
+    't1': lambda e: min_pieces(atoms_of_cells([(0, c) for c in range(e['n'])]), ('rectangle',)),
     'g1': lambda e: min_pieces(_grid_cells(2, e['n']), ('square', 'rectangle')),
 }
 BASE_ENV = {'c1': {'a': 3, 'b': 2}, 'c5': {'n': 3}, 't1': {'n': 8}, 'g1': {'n': 4}}
@@ -359,10 +359,11 @@ def run(d):
     pts = [(F(round(math.cos(-math.pi / 2 + 2 * math.pi * k / 4))), F(round(math.sin(-math.pi / 2 + 2 * math.pi * k / 4)))) for k in range(4)]
     segs = [(pts[a_], pts[b_]) for a_ in range(4) for b_ in range(a_ + 1, 4)]
     tri = triangles_in(segs); small = [t for t in tri if (F(0), F(0)) in t]; big = [t for t in tri if (F(0), F(0)) not in t]
-    eq((len(small), len(big), len(tri)), tuple(T['T3']['val']), 'T3 small, big, all triangles'); eq(len(T['T3']['val']), 3, 'T3 val')
+    eq((len(small), len(big), len(tri)), (4, 4, 8), 'T3 small, big, all triangles'); eq(T['T3']['val'], [8], 'T3 val is the total')
     eq((len(tri), figs_in(T['T3'], 'network')[0]['n'], figs_in(T['T3'], 'network')[0].get('all')), (8, 4, True), 'T3 the figure is 4 dots with every line')
-    # only 4 of the 8 are small (the diagonals cross in the middle, which is not one of the 4 dots)
-    eq(len(triangles_in(segs[:0] + [s for s in segs if s not in (segs[1], segs[4])])), 4, 'T3 with only the 4 sides drawn there are no triangles with the middle... (4 sides + 2 diagonals removed leaves 4 sides)') if False else None
+    # with only the 4 sides drawn (no corner lines) there is no triangle at all: the 8 come from the 2 lines
+    sides = [s_ for s_ in segs if s_ not in (segs[1], segs[4])]
+    eq(len(sides), 4, 'T3 the 4 sides'); eq(len(triangles_in(sides)), 0, 'T3 the 4 sides alone make no triangle: all 8 come from the 2 corner lines')
     eq(len(d['tiers']['think']), 3, 'three Think harder questions')
 
     # ---------------- Go further
@@ -371,7 +372,6 @@ def run(d):
     eq(min(len(t) for t in tilings(rg)), 3, 'G1 the fewest is still 3 even with triangles allowed'); eq(T['G1']['val'], [6, 3], 'G1 val')
     sg = gr(T['G2'])[0]; rs = region_of(sg); cs2 = counts(tilings(rs, ('square', 'rectangle')))
     eq(cs2, {(6, 0, 0), (4, 1, 0), (2, 2, 0)}, 'G2 every way to make the staircase from squares and rectangles')
-    stm = [(6, 0), (0, 3), (2, 2) if False else (2, 2), (3, 2)]
     eq([(s_, r_, 0) in cs2 for (s_, r_) in [(6, 0), (0, 3), (2, 2), (3, 2)]], [True, False, True, False], 'G2 the four sets')
     eq(['True' if (s_, r_, 0) in cs2 else 'False' for (s_, r_) in [(6, 0), (0, 3), (2, 2), (3, 2)]], T['G2']['val'], 'G2 val')
     eq(min(len(t) for t in tilings(rs, ('square', 'rectangle'))), 4, 'G2 the fewest pieces for the staircase is 4'); eq(6 // 2, 3, 'G2 3 rectangles would cover 6 squares (but they do not fit)')
@@ -399,7 +399,7 @@ def run(d):
     from figs3 import MM
     eq(round(max(w for w, h in rr) / MM / 2), 30, 'the square on the kit page is 30 mm')
     eq(all(r_['supplied'] >= r_['max_used'] for r_ in kc.values()), True, 'kit contract: supplied >= used')
-    eq(max(g_['cols'] * g_['rows'] for g_ in [g1g]), 6, 'G1 the most squares a task needs is 6'); eq(3, 3, 'G1 uses the 3 rectangles (3 pieces)')
+    eq(g1g['cols'] * g1g['rows'], 6, 'G1 the most squares a task needs is 6, the kit has 6'); eq(min(len(t) for t in tsq), kc['rectangles (3 cm by 6 cm)']['max_used'], 'G1 the fewest build uses all 3 kit rectangles')
 
     # ---------------- no class picture is repeated in the workbook or exit ticket
     class_figs = []
@@ -416,7 +416,9 @@ def run(d):
     items = {it['id']: it for it in d['online_practice']['items']}
     eq((items['c2']['answer'], items['c3']['answer'], items['c4']['answer']), ('rectangle', 'circle', 'Yes'), 'core statics')
     eq((items['t2']['answer'], len(tri)), (8, 8), 't2 the diamond has 8 triangles'); eq(items['t3']['answer'], 'True', 't3 3 is the fewest for 2 by 3')
-    eq(items['g2']['answer'], 4, 'g2 the staircase needs 4 pieces'); eq((items['r1']['answer'], items['r2']['answer']), ('the short hand', 'Ben') if False else (items['r1']['answer'], items['r2']['answer']), 'rewind items copied from Term 3 Lesson 2')
+    eq(items['g2']['answer'], 4, 'g2 the staircase needs 4 pieces')
+    eq(((7, 30) < (12, 0), items['r1']['answer'], 'morning' if 'breakfast' in items['r1']['q'] else '?'), (True, 'am', 'morning'), 'r1 rewind (Term 3 Lesson 2): breakfast at 7:30 is am')
+    eq(('evening' in items['r2']['q'], items['r2']['answer']), (True, 'pm'), 'r2 rewind: tea in the evening is pm')
     return n
 
 

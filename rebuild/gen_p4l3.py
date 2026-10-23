@@ -82,7 +82,7 @@ for i,(t,a) in enumerate(targets):
     body+=pin(L,490,392,p('TARGET',28,800,TEAL)+f'<p style="font-family:{HF};font-size:110px;font-weight:600;line-height:1">{t}</p>',None,WHITE,24,'20px 28px',f'box-sizing:border-box;height:330px;align-items:center;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,700,344,p(a,40,800),'pop',SOFT,16,'12px 18px',f'box-sizing:border-box;align-items:center;border:3px solid {NAVY}')
 put('p4l3-warm1',sec('p4l3-warm1','6.5–8.5 MIN',body,
- 'Minutes 6.5 to 8.5 (one short round, about 90 seconds: the Sneak-peek puzzles came first). Target Numbers. Children copy the four cards 2, 4, 5 and 9 onto their whiteboards. Point to one target at a time: "Make 13. Go!" Everyone writes a sentence and holds it up at the same moment: there is no race and no points. Click to show one way for each target (clicks reveal 13, 22, 36, 81 in order). '
+ 'Minutes 6.5 to 8.5 (one short round, about 90 seconds: the Sneak-peek puzzles came first). Target Numbers. Children copy the four cards 2, 4, 5 and 9 onto their whiteboards. Point to one target at a time: "Make 13. Go!" Everyone writes a sentence and reads it aloud together on three: there is no race and no points. Click to show one way for each target (clicks reveal 13, 22, 36, 81 in order). '
  'Other ways: 13 = 2 × 9 − 5; 22 = 2 × 9 + 4; 81 needs brackets: (4 + 5) × 9. '
  'Listen for children who write 2 + 4 × 5 and say 30: they added first. That leads straight into today\'s lesson. Finisher: "Can you make 100?" (Let them try; it cannot be done with these cards and signs, which is a good thing to notice.)'))
 

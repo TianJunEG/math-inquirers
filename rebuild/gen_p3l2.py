@@ -43,9 +43,27 @@ sys.path.insert(0,os.path.join(H,'..'))
 from levels.diagrams import column_png
 LC={'A':'#FFC93C','B':'#7DC4F0','C':'#96D28C','D':'#F09678','E':'#BEA0E6','F':'#F0AAC8'}
 def col_img(rows,op,result,height=330,cell=110,alt='Column sum with letters for digits'):
-    fp=tempfile.mktemp(suffix='.png'); column_png(fp,rows,op,result,cell=cell)
-    b=base64.b64encode(open(fp,'rb').read()).decode(); os.remove(fp)
-    return f'<img alt="{E(alt)}" src="data:image/png;base64,{b}" style="height:{height}px;width:auto;flex:none;align-self:center">'
+    """Column sum drawn as inline SVG (same geometry as levels/diagrams.column_png; no data: images in slides)."""
+    n=max(len(r.replace(' ','')) for r in rows+[result]); W=(n+2)*cell; Hh=(len(rows)+2)*cell
+    s=''
+    def row(y,r,lead=''):
+        out=''
+        r=r.replace(' ','').rjust(n)
+        if lead: out+=f'<text x="{cell*0.35:.0f}" y="{y+cell*0.68:.0f}" font-size="{int(cell*0.6)}" font-weight="700" fill="{NAVY}" font-family="Fredoka, Arial">{E(lead)}</text>'
+        for k,ch in enumerate(r):
+            x=(k+1.5)*cell
+            if ch=='_': out+=f'<rect x="{x+4:.0f}" y="{y+4:.0f}" width="{cell-8}" height="{cell-8}" rx="10" fill="#FFFFFF" stroke="{NAVY}" stroke-width="4"/>'
+            elif ch.isalpha():
+                out+=f'<rect x="{x+4:.0f}" y="{y+4:.0f}" width="{cell-8}" height="{cell-8}" rx="10" fill="{LC.get(ch.upper(),"#C8C8C8")}" stroke="{NAVY}" stroke-width="4"/>'
+                out+=f'<text x="{x+cell/2:.0f}" y="{y+cell*0.68:.0f}" font-size="{int(cell*0.6)}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{ch}</text>'
+            elif ch!=' ':
+                out+=f'<text x="{x+cell/2:.0f}" y="{y+cell*0.68:.0f}" font-size="{int(cell*0.6)}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="Fredoka, Arial">{ch}</text>'
+        return out
+    for k,r in enumerate(rows): s+=row(k*cell,r,op if k==len(rows)-1 else '')
+    y=len(rows)*cell; s+=f'<line x1="{cell*0.3:.0f}" y1="{y+4}" x2="{W-cell*0.3:.0f}" y2="{y+4}" stroke="{NAVY}" stroke-width="5"/>'
+    s+=row(y+8,result)
+    w=round(height*W/Hh)
+    return f'<svg aria-label="{E(alt)}" viewBox="0 0 {W} {Hh}" xmlns="http://www.w3.org/2000/svg" style="height:{height}px;width:{w}px;flex:none;align-self:center">{s}</svg>'
 # ---------- SVG pieces ----------
 def shape(k,cx,cy,r):
     if k=='C': return f'<circle cx="{cx}" cy="{cy}" r="{r*0.8:.1f}" fill="{TEAL}" stroke="{NAVY}" stroke-width="4"/>'

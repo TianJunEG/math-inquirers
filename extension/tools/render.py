@@ -77,11 +77,16 @@ def item_html(it, n, theme, hint=True, extra_cls=''):
     if it.get('beyond'):
         out.append(f'<div class="beyond">&#9733; Beyond Level 1: {esc(it["beyond"])}</div>')
     out.append(f'<div class="stem">{mk(it["text"])}</div>')
-    if it.get('figure'):
-        out.append(fig_html(it['figure'], theme))
+    parts_html = ''
     if it.get('parts'):
-        out.append('<div class="parts">' + ''.join(
-            f'<div class="part"><span class="plab">{("(" + p["label"] + ")") if p["label"] else ""}</span><span>{mk(p["text"])}</span></div>' for p in it['parts']) + '</div>')
+        parts_html = '<div class="parts">' + ''.join(
+            f'<div class="part"><span class="plab">{("(" + p["label"] + ")") if p["label"] else ""}</span><span>{mk(p["text"])}</span></div>' for p in it['parts']) + '</div>'
+    if it.get('figure') and it.get('figside'):      # figure to the right of the answer parts (saves height)
+        out.append(f'<div class="figside">{parts_html}{fig_html(it["figure"], theme)}</div>')
+    else:
+        if it.get('figure'):
+            out.append(fig_html(it['figure'], theme))
+        out.append(parts_html)
     out.append(space_html(it.get('space')))
     if hint and it.get('hint'):
         out.append(f'<div class="hint"><b>Hint.</b> {esc(it["hint"])}</div>')
@@ -124,6 +129,11 @@ def facts_html(F, theme):
     return f'<div class="howto facts"><span class="tab">{esc(F["title"])}</span>{body}</div>'
 
 
+def snug(unit, key):
+    """Optional tighter spacing for one practice page (unit JSON: "snug": ["think", "start2", ...])."""
+    return ' snug' if key in unit.get('snug', []) else ''
+
+
 def unit_pages(unit, theme, cfg):
     """The seven pages of a unit as dicts {kind, label, body}."""
     L = unit['learn']; ex = L['example']
@@ -138,10 +148,14 @@ def unit_pages(unit, theme, cfg):
     learn = [head(unit, cfg), '<div class="pbody learn' + (' tight' if L.get('tight') else '') + '">',
              f'<div class="h1">Learn it: {esc(unit["topic"])}</div>',
              f'<div class="goal"><b>My goal.</b> {esc(unit["goal"])}</div>',
-             f'<div class="lead">{mk(L["intro"])}</div>',
-             worked_html(ex, theme, 'Worked example 1' if L.get('example2') else 'Worked example')]
-    if L.get('example2'):
-        learn.append(worked_html(L['example2'], theme, 'Worked example 2'))
+             (f'<div class="lead">{mk(L["intro"])}</div>' if L.get('intro') else '')]
+    w1 = worked_html(ex, theme, 'Worked example 1' if L.get('example2') else 'Worked example')
+    if L.get('example2') and L.get('pair'):
+        learn.append(f'<div class="two wexpair">{w1}{worked_html(L["example2"], theme, "Worked example 2")}</div>')
+    else:
+        learn.append(w1)
+        if L.get('example2'):
+            learn.append(worked_html(L['example2'], theme, 'Worked example 2'))
     learn.append(row)
     tr = L['try']
     learn.append('<div class="tryit"><div class="tier t-start" style="margin-bottom:2mm;font-size:14pt">' + ICON['start'] + '<span>Your turn</span><small>Answer at the back of the book.</small></div>'
@@ -153,27 +167,27 @@ def unit_pages(unit, theme, cfg):
     cnt = 0
     for pn in (1, 2, 3):
         its = items_of(unit, 'start', pn)
-        body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('start', subs[pn])]
+        body = [head(unit, cfg), '<div class="pbody practice' + snug(unit, f'start{pn}') + '">', tier_banner('start', subs[pn])]
         for it in its:
             cnt += 1
             body.append(item_html(it, cnt, theme))
         body.append('</div>')
         pages.append({'kind': 'practice', 'label': f'Start here {pn}', 'body': ''.join(body)})
     # 5 think harder
-    body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('think', 'Hints are upside down. Try first!')]
+    body = [head(unit, cfg), '<div class="pbody practice' + snug(unit, 'think') + '">', tier_banner('think', 'Hints are upside down. Try first!')]
     for i, it in enumerate(items_of(unit, 'think'), 1):
         body.append(item_html(it, i, theme))
     body.append('</div>')
     pages.append({'kind': 'practice', 'label': 'Think harder', 'body': ''.join(body)})
     # 6 go further
-    body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('go', 'A weekend page. Big challenges. Hints are upside down.')]
+    body = [head(unit, cfg), '<div class="pbody practice' + snug(unit, 'go') + '">', tier_banner('go', 'A weekend page. Big challenges. Hints are upside down.')]
     for i, it in enumerate(items_of(unit, 'go'), 1):
         body.append(item_html(it, i, theme))
     body.append('</div>')
     pages.append({'kind': 'practice', 'label': 'Go further', 'body': ''.join(body)})
     # 7 check yourself
     qs = items_of(unit, 'quiz')
-    body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('quiz', 'No hints. Try each one on your own.')]
+    body = [head(unit, cfg), '<div class="pbody practice' + snug(unit, 'quiz') + '">', tier_banner('quiz', 'No hints. Try each one on your own.')]
     for i, it in enumerate(qs, 1):
         it2 = it if it.get('figure') else dict(it, space={'rows': ['Working:']})   # a graph or picture item is answered in the box: no working line
         body.append(item_html(it2, i, theme, hint=False))

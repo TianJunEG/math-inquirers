@@ -8,9 +8,9 @@
  "holiday_lesson": 8,
  "goal": "I can use clues, fill in a logic grid and sort numbers into loops.",
  "learn": {
-  "intro": "Clues help us find an answer without guessing. A logic grid uses a tick for yes and a cross for no. Two loops sort numbers by two rules.",
+  "intro": "",
   "example": {
-   "problem": "Ravi, Jenny and Wei each pick a different drink: milk, juice or tea. Ravi picks tea. Jenny does not pick milk. Who picks what?",
+   "problem": "Ravi, Jenny and Wei each pick milk, juice or tea. Ravi picks tea. Jenny does not pick milk. Who picks what?",
    "figure": {
     "type": "logic_grid",
     "rows": [
@@ -23,7 +23,7 @@
      "juice",
      "tea"
     ],
-    "width_mm": 58,
+    "width_mm": 46,
     "marks": {
      "0,0": "no",
      "0,1": "no",
@@ -39,7 +39,7 @@
    "steps": [
     "Ravi picks tea. Tick it. Cross out the rest of that row and column.",
     "Jenny does not pick milk. Cross out that box.",
-    "Jenny's row has 1 empty box left: juice. Wei gets milk."
+    "Jenny's last empty box is juice. Wei gets milk."
    ],
    "answer": "Ravi: tea. Jenny: juice. Wei: milk.",
    "side": true
@@ -47,9 +47,9 @@
   "howto": {
    "title": "How to use grids and loops",
    "steps": [
-    "Read one clue at a time. Tick or cross the boxes.",
-    "A row with 1 empty box gets a tick.",
-    "Test each number against both rules."
+    "Read a clue. Tick or cross.",
+    "Tick a row's last empty box.",
+    "Test numbers against both rules."
    ]
   },
   "try": {
@@ -67,7 +67,7 @@
      "kite",
      "drum"
     ],
-    "width_mm": 50
+    "width_mm": 44
    },
    "parts": [
     {
@@ -81,15 +81,16 @@
      }
     }
    ],
-   "explanation": "Ben has the drum. Mei does not have the ball or the drum, so Mei has the kite. The ball is left for Kumar."
+   "explanation": "Ben has the drum. Mei does not have the ball or the drum, so Mei has the kite. The ball is left for Kumar.",
+   "figside": true
   },
   "example2": {
-   "problem": "Sort the numbers 2 to 9 into the loops. One loop is even numbers. The other loop is more than 6.",
+   "problem": "Sort 2 to 9 into the loops. One rule is even. One rule is more than 6.",
    "figure": {
     "type": "loops",
     "a": "even",
     "b": "more than 6",
-    "width_mm": 78,
+    "width_mm": 56,
     "regions": {
      "a": [
       2,
@@ -112,8 +113,7 @@
    "side": true,
    "steps": [
     "Test each number against both rules.",
-    "8 is even and more than 6. It goes in the middle, where the loops meet.",
-    "2, 4 and 6 are only even. 7 and 9 are only more than 6.",
+    "8 is even and more than 6. It goes in the middle.",
     "3 and 5 are neither. They go outside both loops."
    ],
    "answer": "In both loops: 8. Outside both loops: 3 and 5."
@@ -121,9 +121,9 @@
   "facts": {
    "title": "Odd and even",
    "lines": [
-    "Even numbers end in 0, 2, 4, 6 or 8.",
-    "Odd numbers end in 1, 3, 5, 7 or 9.",
-    "Counting in 4s, we say 4, 8, 12, 16 ..."
+    "Even: ends in 0, 2, 4, 6 or 8.",
+    "Odd: ends in 1, 3, 5, 7 or 9.",
+    "Counting in 4s: 4, 8, 12, 16 ..."
    ]
   },
   "tight": true
@@ -401,7 +401,13 @@
      }
     }
    ],
-   "explanation": "In 3s: 3, 6, 9, 12, 15, 18, 21, 24. In 4s: 4, 8, 12, 16, 20, 24. Both: 12 and 24. The 4s list has 6 numbers, and 2 of them are also in the 3s list, so 6 - 2 = 4 are in 4s only."
+   "explanation": "In 3s: 3, 6, 9, 12, 15, 18, 21, 24. In 4s: 4, 8, 12, 16, 20, 24. Both: 12 and 24. The 4s list has 6 numbers, and 2 of them are also in the 3s list, so 6 - 2 = 4 are in 4s only.",
+   "space": {
+    "rows": [
+     "Counting in 3s:",
+     "Counting in 4s:"
+    ]
+   }
   },
   {
    "id": "L1U08-S09",
@@ -533,7 +539,7 @@
      "piano",
      "bell"
     ],
-    "width_mm": 64
+    "width_mm": 56
    },
    "parts": [
     {
@@ -599,7 +605,7 @@
     "type": "loops",
     "a": "more than 8",
     "b": "odd",
-    "width_mm": 100
+    "width_mm": 84
    },
    "parts": [
     {
@@ -627,7 +633,8 @@
     }
    ],
    "explanation": "More than 8: 9, 10, 11, 12, 13, 14. Odd: 5, 7, 9, 11, 13. In both: 9, 11 and 13. Outside both: 6 and 8, which are not more than 8 and not odd.",
-   "hint": "Sort the numbers one at a time. Test both rules."
+   "hint": "Sort the numbers one at a time. Test both rules.",
+   "figside": true
   },
   {
    "id": "L1U08-G01",
@@ -881,5 +888,8 @@
    },
    "explanation": "The order from tallest is Ali, Mei, Ravi. Ravi is the shortest, so he is not taller than Ali."
   }
+ ],
+ "snug": [
+  "think"
  ]
 }

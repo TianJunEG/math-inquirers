@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:14mm 14mm 16mm 14mm}
+*{box-sizing:border-box}
+html{background:#fff}
+body{margin:0;font-family:'Fredoka','Inter',Arial,sans-serif;color:#1B2A49;font-size:17.5px;line-height:1.38;background-color:#fff;background-image:linear-gradient(#E3ECF6 1px,transparent 1px),linear-gradient(90deg,#E3ECF6 1px,transparent 1px);background-size:22px 22px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.p{break-inside:avoid}
+.pb{break-before:page}
+.kn{break-after:avoid}
+.lh{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.lbadge{background:#1F7A6F;color:#FFF9EC;border-radius:999px;padding:6px 18px;font-weight:700;font-size:17px}
+.ltopic{font-weight:600;color:#1F7A6F;font-size:16px;letter-spacing:.3px}
+.ltitle{font-size:38px;font-weight:700;line-height:1.05;margin:2px 0 10px;color:#1B2A49}
+.namer{display:flex;align-items:flex-end;gap:8px;font-size:14px;color:#3B4A6B;margin-bottom:14px}
+.namer span{flex:1;border-bottom:2px dotted #8A94AD;height:18px}
+.q{display:flex;align-items:flex-start;gap:10px;font-weight:600}
+.qn{flex:none;width:30px;height:30px;border-radius:50%;background:#FFC93C;color:#1B2A49;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;position:relative;top:-1px}
+.qt{flex:1}
+.sub{display:flex;gap:8px;padding-left:40px;align-items:baseline}
+.sl{flex:none;width:24px;height:24px;border-radius:7px;background:#FFF0C2;color:#1B2A49;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.ans{display:flex;gap:8px;align-items:flex-end}
+.al{flex:1;max-width:300px;border-bottom:2px dotted #8A94AD;height:20px}
+.ln{border-bottom:2px dotted #8A94AD;height:28px;margin:4px 0 0 40px;break-inside:avoid}
+.banner{background:#1F7A6F;color:#FFF9EC;border-radius:14px;padding:7px 18px;font-weight:700;font-size:19px;margin:8px 0 6px}
+table.tb{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #1B2A49;border-radius:14px;overflow:hidden;margin:6px 0;break-inside:avoid}
+table.tb td{border:1px solid #C9D4EC;vertical-align:middle;font-size:16px}
+.img{margin:6px 0}
+.img img{height:auto}
+.badge{display:inline-block;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:8px 22px;font-weight:700;font-size:16px;letter-spacing:.5px}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:28px;height:262mm;padding:44px 40px;position:relative;break-inside:avoid}
+.ctitle{font-size:96px;font-weight:700;line-height:.95;margin-top:40px}
+.ctitle span{color:#FFC93C}
+.cslogan{font-size:28px;font-weight:600;color:#FFC93C;margin-top:26px}
+.cname{margin-top:34px;font-size:18px;display:flex;gap:8px;align-items:flex-end;color:#C9D4EC}
+.cname i{flex:1;border-bottom:2px dotted #C9D4EC;height:20px}
+.rules{position:absolute;left:40px;right:40px;bottom:44px;background:#fff;color:#1B2A49;border-radius:22px;padding:20px 26px}
+.rt{font-size:24px;font-weight:700;color:#1F7A6F;margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:17px;font-weight:600}
+.rg b{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#FFC93C;align-items:center;justify-content:center;margin-right:8px}
+.jt{font-size:40px;font-weight:700}
+.jsub{color:#3B4A6B;margin-bottom:16px;font-size:17px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stamp{background:#fff;border-radius:18px;border:2px solid #1B2A49;padding:12px 16px;height:128px;position:relative}
+.sn{font-weight:700;color:#1F7A6F;font-size:15px}
+.st{font-weight:600;font-size:17px;margin-top:2px}
+.sc{position:absolute;right:14px;bottom:12px;width:58px;height:58px;border:3px dashed #8A94AD;border-radius:50%}
+.cert{height:262mm;display:flex;align-items:center;justify-content:center}
+.ci{border:6px double #1B2A49;border-radius:24px;padding:48px 40px;text-align:center;background:#fff;width:100%}
+.ct{font-size:40px;font-weight:700;color:#1B2A49;margin-bottom:24px}
+.cp{font-size:30px;font-weight:700;color:#1F7A6F}
+.cs{font-size:20px;margin-bottom:28px}
+.cl{font-size:19px;margin:12px 0}
+.cn{border-bottom:3px dotted #1B2A49;height:44px;max-width:420px;margin:12px auto}
+.cq{font-size:30px;font-weight:700;color:#1F7A6F;margin:26px 0 36px}
+
+.brk{break-before:page;height:0;margin:0;padding:0}
+
+.kt{font-family:Fredoka,sans-serif;font-size:34px;font-weight:600;color:#1B2A49;text-align:center}.ks{text-align:center;font-size:16px;margin:4px 0 10px}.kl{font-weight:800;font-size:18px;color:#1B2A49;margin:12px 0 4px}
+
+/* ===== A + D combined style ===== */
+.lh{gap:0;margin:0 0 4px;border-bottom:3px solid #1F7A6F}
+.lbadge{border-radius:0;background:#1F7A6F;color:#fff;padding:8px 18px;font-weight:600}
+.ltopic{background:#fff;padding:8px 14px;flex:1;text-transform:uppercase;font-size:13px;letter-spacing:.08em;font-family:'Nunito Sans',sans-serif;font-weight:800}
+.ltitle{text-decoration:underline wavy #FFC93C 4px;text-underline-offset:10px;margin:10px 0 16px}
+.namer{background:#fff;border:2px dashed #1B2A49;border-radius:8px;padding:8px 12px}
+.namer span{border-bottom:1.5px solid #1B2A49}
+.qbox{background:#fff;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49;padding:24px 14px 10px;margin:22px 4px 16px 4px;position:relative;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.qbox .q{margin-top:0!important}
+.qbox .qn{position:absolute;left:-9px;top:-15px;width:auto;height:auto;border-radius:2px;background:#FFC93C;border:2px solid #1B2A49;padding:1px 11px;font-size:16px;transform:rotate(-4deg);top:-15px}
+.qbox .qn:before{content:"No. "}
+.qn{border-radius:3px}
+.sub{padding-left:2px}
+.sl{width:auto;height:auto;background:none;border-radius:0;color:#1F7A6F;font-weight:800;font-size:16px;font-family:'Nunito Sans',sans-serif}
+.ln{margin-left:4px}
+.ans{padding-left:4px!important}
+.al{border-bottom:2px dashed #1B2A49}
+.banner{border-radius:3px;display:inline-block;padding:5px 16px;transform:rotate(-1deg);border:2px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49}
+table.tb{border-radius:4px}
+.cover{background:none;color:#1B2A49;border-radius:0;padding:10px 0 0}
+.ccard{background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;margin-top:6px}
+.cover .badge{background:#1F7A6F;color:#fff;border-radius:0;font-family:'Nunito Sans',sans-serif;font-weight:800;letter-spacing:.1em;font-size:14px;padding:6px 12px}
+.ctitle{color:#1B2A49;margin-top:14px;font-weight:600}
+.ctitle span{color:#1B2A49;background:linear-gradient(transparent 55%,#FFC93C 55%)}
+.cslogan{color:#1F7A6F;margin-top:16px}
+.cover .cname{color:#1B2A49;background:#fff;border:2px dashed #1B2A49;border-radius:10px;padding:14px 18px;margin-top:30px}
+.cover .cname i{border-bottom:1.5px solid #1B2A49}
+.cover .rules{position:static;margin-top:24px;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49}
+.rg b{border-radius:3px;border:2px solid #1B2A49;transform:rotate(-4deg)}
+.sc{border-radius:6px}
+.stamp{border-radius:4px;box-shadow:3px 3px 0 #1B2A49}
+body{font-size:16.5px}
+.qbox{padding:20px 12px 8px;margin:18px 4px 12px 4px}
+.ln{height:25px;margin-top:2px}
+.ltitle{margin:8px 0 12px}
+.namer{margin-bottom:8px}
+.qbox{break-inside:avoid}
+.qwrap{padding-top:16px;break-inside:avoid}.qwrap>.qbox{margin-top:2px}
+
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+
+.pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
+.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
+.vis{width:310px;margin:6px 0 6px 4px}
+.al{display:inline-block;min-width:17mm;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
+.choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm{padding-left:3mm}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
+.lbk .r{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;font-size:16.5px;align-items:center}.lbk .r b{flex:none;width:165px}
+.bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
+.wl{border-bottom:2px dotted #8A94AD;height:24px}
+.boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
+.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 310px;column-gap:8px;align-items:start}
+.qbox:has(svg.h100)>.q{grid-column:1 / span 2}
+.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:310px!important;margin:0!important}
+.qbox:has(svg.h100)>.sub,.qbox:has(svg.h100)>.ln,.qbox:has(svg.h100)>.draw{grid-column:1}
+.qbox:has(svg.h100.wide){display:block}
+.qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
+.p1 .qbox:has(svg.h100)>.vis{width:296px!important}
+.tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
+.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
+.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
+.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
+.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
+.banner{break-after:avoid;display:block;width:fit-content}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
+.visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
+.tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
+.mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
+.stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
+.keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
+.keybox .a{font-weight:800;color:#1F7A6F}
+</style></head><body><div class="page hm t1"><div class="lh"><span class="lbadge">Term 4 • Lesson 4</span><span class="ltopic">Views: stacks and folds</span><span style="margin-left:auto;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:4px 16px;font-weight:700;font-size:15px">Home practice</span></div><div class="ltitle" style="font-size:30px;line-height:1.1">Cubes and Views: practice at home</div><div class="namer"><b>Name</b><span></span><b>Date</b><span style="max-width:120px"></span></div><p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. Use blocks and paper. Small pieces stay on the table, away from little brothers and sisters. Pencil dots only: do not punch holes. A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next. The answers are on a separate sheet, so they never print on the back of this one.</p><div class="qbox"><div class="q"><span class="qn">1</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">Start here</span><br>The top view of a stack shows 2, 1, 3 and 2 cubes. How many cubes are in the stack? There are <span class="al" style="min-width:17mm"></span> cubes.</span></div><div class="ln"></div></div><div class="qbox"><div class="q"><span class="qn">2</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">Start here</span><br>A stack is 3 cubes tall. How many cubes are under the top cube? There are <span class="al" style="min-width:17mm"></span> cubes.</span></div><div class="ln"></div></div><div class="qbox"><div class="q"><span class="qn">3</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">Start here</span><br>Lily has 12 blocks. She builds a stack with 7 blocks. How many blocks are left? There are <span class="al" style="min-width:17mm"></span> blocks left.</span></div><div class="ln"></div></div><div class="qbox"><div class="q"><span class="qn">4</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">Think harder</span><br>A paper is folded in half and one hole is punched. When it is opened, one hole is 3 steps from the fold line. How many steps from the fold line is the other hole? It is <span class="al" style="min-width:17mm"></span> steps.</span></div><div class="ln"></div></div><div class="qbox"><div class="q"><span class="qn">5</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">Start here • Practice from earlier: Term 2 Lesson 4</span><br>Ali has 13 counters. He puts them in pairs. How many counters are left over? <span class="al" style="min-width:17mm"></span> counter is left over.</span></div><div class="ln"></div><div class="ln"></div></div></div></body></html>

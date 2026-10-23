@@ -110,7 +110,7 @@ def add(S,K,explore_box_top=872):
         S[k]=re.sub(r'([Ww])hiteboards up( together)?',lambda m:m.group(1)+'hiteboards face down until 3, 2, 1 (then say the answer together on three; never read a board out)',S[k])
     for suf,lab in (('stretch','THINK HARDER'),('challenge','GO FURTHER'),('chdiag','GO FURTHER'),('chwalk','GO FURTHER')):
         k=f'{P}-{suf}'
-        if k in S and suf!='stretch': S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further')
+        if k in S and suf!='stretch': S[k]=S[k].replace('Challenge','Go further').replace('challenge','go-further').replace(f'id="{P}-go-further"',f'id="{k}"')
     t=f'{P}-talk'
     S[t]=S[t].replace('“I know because …”','“I know because …”   “Pass.”')
     S[t]=S[t].replace('</aside>',' Talk time rules: you choose volunteers first ("Who would like to share?"); never cold-call a child by name; any child may say pass; no public tallies, scores or rankings.</aside>')

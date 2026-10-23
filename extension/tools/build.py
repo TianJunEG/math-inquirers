@@ -107,8 +107,7 @@ def welcome(book, theme, ctx):
             '<li>Check yourself score 2 or less? Repeat Learn it and one Start here page.</li>'
             '<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li></ul></div>'
             '<div class="box"><h3>The four labels</h3>' + legend() + '</div>'
-            '<div class="box"><h3>Tips</h3><ul><li>Use a pencil. Mistakes help you learn.</li><li>Read each question twice before you write.</li>'
-            '<li>Think harder and Go further are not a race. Come back another day.</li></ul></div></div>')
+            '<p class="note" style="margin:0"><b>Tip:</b> use a pencil. Mistakes help you learn. Read each question twice before you write.</p></div>')
 
 
 def contents(book, theme, ctx):

@@ -252,7 +252,7 @@ put('p6l10-showcase',sec('p6l10-showcase','62–87 MIN',body,
 
 # ---------------- 24. exit ----------------
 body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],42))+card(p('Write it on your exit slip (Finish page). The last line answers: what was the hardest bug you fixed today, and how did you find it? When your tutor says show, tick the slip against the answer slide. Then collect your last stamp.',34))
-put('p6l10-exit',sec('p6l10-exit','88–90 MIN',body,'The talk question is folded into the exit slip as its last line (there is no separate talk time): "'+SC['talk'][0].strip('“”')+'" Everyone holds the slip up at the same moment. '+L['exit']['a']+' Extension to take home: '+L['extension']))
+put('p6l10-exit',sec('p6l10-exit','88–90 MIN',body,'The talk question is folded into the exit slip as its last line (there is no separate talk time): "'+SC['talk'][0].strip('“”')+'" Everyone ticks the slip against the answer slide. '+L['exit']['a']+' Extension to take home: '+L['extension']))
 
 # ---------------- 25. end (certificates) ----------------
 put('p6l10-end',color_slide('p6l10-end',NAVY,'WELL DONE, INQUIRERS','Ten lessons of maths and code','Notice it. Test it. Explain why.','Certificates (sent as PDFs) and a last stamp for every inquirer.',

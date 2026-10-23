@@ -433,7 +433,12 @@
      }
     }
    ],
-   "explanation": "$6 + $9 = $15 and $7 + $8 = $15. The Drum needs $3 more, and no toy costs $3."
+   "explanation": "$6 + $9 = $15 and $7 + $8 = $15. The Drum needs $3 more, and no toy costs $3.",
+   "space": {
+    "rows": [
+     "Try:"
+    ]
+   }
   },
   {
    "id": "L1U06-S12",

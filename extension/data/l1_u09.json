@@ -21,7 +21,8 @@
       "end": 11,
       "hops": true
      }
-    ]
+    ],
+    "caption": true
    },
    "steps": [
     "Find where the crayon starts: the 4 mark. It does not start at 0.",
@@ -51,7 +52,7 @@
    "explanation": "The marker starts at 2 and ends at 8. Subtract: 8 - 2 = 6. Check by counting the spaces from 2 to 8: 6 hops.",
    "figure": {
     "type": "ruler",
-    "max": 10,
+    "max": 9,
     "objects": [
      {
       "label": "marker",
@@ -60,7 +61,8 @@
      }
     ]
    }
-  }
+  },
+  "tight": true
  },
  "items": [
   {
@@ -95,7 +97,8 @@
        }
       ]
      }
-    ]
+    ],
+    "width_mm": 60
    },
    "parts": [
     {
@@ -211,7 +214,8 @@
        }
       ]
      }
-    ]
+    ],
+    "width_mm": 76
    },
    "parts": [
     {
@@ -553,7 +557,7 @@
    "id": "L1U09-T03",
    "tier": "think",
    "page": 4,
-   "text": "A pencil lies from the 3 cm mark to the 10 cm mark of a ruler. A crayon is 2 cm longer than the pencil. It starts at the 2 cm mark.",
+   "text": "A pencil starts at mark 3 of a ruler. It ends at mark 10. A crayon is 2 cm longer. It starts at mark 2.",
    "parts": [
     {
      "label": "a",
@@ -746,5 +750,8 @@
    ],
    "explanation": "B is 8 + 3 = 11 cubes. C is 8 - 2 = 6 cubes. A is 8 cubes. 11 is the greatest, so B is longest."
   }
+ ],
+ "snug": [
+  "start1"
  ]
 }

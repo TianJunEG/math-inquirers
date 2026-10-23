@@ -33,7 +33,8 @@
       "label": "Thursday",
       "n": 2
      }
-    ]
+    ],
+    "scale": 0.15
    },
    "steps": [
     "Read the key. 1 picture is 1 book.",
@@ -109,7 +110,8 @@
       "label": "Marbles",
       "n": 3
      }
-    ]
+    ],
+    "scale": 0.155
    },
    "parts": [
     {
@@ -209,7 +211,7 @@
   {
    "id": "L1U03-S04",
    "tier": "start",
-   "page": 2,
+   "page": 1,
    "text": "30 children vote for a class trip. Zoo gets 9 votes, museum 6 and beach 8. The rest vote for the farm.",
    "parts": [
     {
@@ -262,7 +264,8 @@
       "label": "Siti",
       "n": 5
      }
-    ]
+    ],
+    "scale": 0.16
    },
    "parts": [
     {
@@ -396,7 +399,7 @@
       "n": 7
      }
     ],
-    "scale": 0.13
+    "scale": 0.14
    },
    "parts": [
     {
@@ -521,7 +524,8 @@
       "label": "Chess",
       "n": 5.5
      }
-    ]
+    ],
+    "scale": 0.15
    },
    "parts": [
     {
@@ -629,7 +633,7 @@
    "beyond": "Build a graph from clues",
    "figure": {
     "type": "picture_graph",
-    "scale": 0.14,
+    "scale": 0.15,
     "icon": "star",
     "key": "= 1 shell",
     "rows": [
@@ -768,7 +772,7 @@
       "n": 3
      }
     ],
-    "width_mm": 96
+    "width_mm": 76
    },
    "answer": {
     "value": [
@@ -817,5 +821,10 @@
    },
    "explanation": "Aisha read 3 books. Kumar read 8 books. 3 is fewer."
   }
+ ],
+ "snug": [
+  "start1",
+  "start3",
+  "quiz"
  ]
 }

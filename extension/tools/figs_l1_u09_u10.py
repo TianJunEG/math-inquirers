@@ -79,7 +79,7 @@ def ruler(spec, w=None):
     ry = top + nobj * (OH + gap) + 4       # top of ruler
     RHt = 74
     W = X0 * 2 + mx * CM
-    note = spec.get('_theme') == 'colour'        # soft copy only: a reminder to print at 100 percent
+    note = spec.get('_theme') == 'colour' and spec.get('caption')        # soft copy only: a reminder to print at 100 percent
     H = ry + RHt + (66 if hop else 12) + (24 if note else 0)
     P = []
     for i, o in enumerate(objs):

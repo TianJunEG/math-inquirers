@@ -11,7 +11,7 @@ Every child-facing sentence (workbook, exit ticket, home sheet, slides, online p
 - Rule 25 (keep to what children are tested on): halves and quarters of a circle and a square are Primary 1 shapes work. A half and a quarter of 8, 12 or 16 small squares, cutting the same half into different shapes and the whole from a quarter are enrichment and sit at Think harder and Go further only, never in Start here, the exit ticket or the home sheet slots 1 and 2.
 - Choice questions use Yes or No and half or quarter printed on the answer line (rule 19); no 'say why' prompt in Start here.
 - Riddles (G2) are one short paragraph each ('I have 1 straight side and 1 curved side. 2 of me make a circle.'), rule 20.
-- Reading load: no child-facing string over 40 words (validator). The longest, the G1 stem, is 28 words in three short sentences.
+- Reading load: no child-facing string over 40 words (validator). The longest, the G1 stem, is 21 words in four short sentences.
 - Names: Mei appears only in the optional slide ('Mei folds a paper square corner to corner'); Kumar is in the rewind item copied from Term 2 Lesson 1; no name is attached to a wrong answer.
 - Changed during review: the Investigation first step lost 'so the edges meet' (one line on the page); S2 now points to shape B in question 1 instead of repeating a picture; S4 lost its pictures (the page was full); exit E1 asks 'Is each part a half or a quarter?' without a picture; the G1 sub-question 'Is half of each rectangle coloured?' was removed because the stem already says so.
 - Open: no Primary 1 paper in the sample asks an equal-parts question, so the whole lesson wording is marked unverified (D22). The tutor should check 'Is half of each shape coloured?' against a school paper when one is supplied.

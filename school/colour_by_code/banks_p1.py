@@ -335,7 +335,8 @@ def _shapes(tier):
             if a % mult: return None
             cs = _combos(ks, a // mult)
             if not cs: return None
-            c = r.choice(cs); r.shuffle(c)
+            small = [x for x in cs if len(x) <= 2]
+            c = r.choice(small if small and r.random() < 0.8 else cs); c = list(c); r.shuffle(c)
             lines, sol = words(a)
             q = SEM(lines, lambda v, t=a: v == t, str(a), art=A.shapes(c), layout=layout, form=words.__name__)
             q.sol = sol
@@ -550,11 +551,11 @@ GALLERY = [
     dict(id="CBC-05", picture="icecream",  bank="count",   tier=2, seed=105),
     dict(id="CBC-06", picture="owl",       bank="compare", tier=2, seed=106),
     dict(id="CBC-07", picture="sailboat",  bank="money",   tier=1, seed=107),
-    dict(id="CBC-08", picture="butterfly", bank="time",    tier=1, seed=108),
+    dict(id="CBC-08", picture="butterfly", bank="time",    tier=1, seed=1),
     dict(id="CBC-09", picture="icecream",  bank="length",  tier=1, seed=109),
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=114),
     dict(id="CBC-11", picture="car",       bank="mult",    tier=2, seed=1),
     dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=1),
-    dict(id="CBC-13", picture="icecream",  bank="pgraph",  tier=1, seed=5),
+    dict(id="CBC-13", picture="icecream",  bank="pgraph",  tier=1, seed=20),
     dict(id="CBC-14", picture="sailboat",  bank="ordinal", tier=1, seed=1),
 ]

@@ -37,7 +37,7 @@
  "joining_cold": {
   "remember": [
    "Name a triangle, a square and a rectangle by their sides and corners (the holiday course, taught again with clues)",
-   "Fold a paper square corner to corner and name the 2 shapes (Term 4 Lesson 1, taught again with a spare square)",
+   "Fold a paper square corner to corner and name the 2 shapes (the first lesson of Term 4, taught again with a spare square)",
    "Count the squares in a rectangle by rows (Term 2 Lesson 5, taught again with a picture)"
   ],
   "assumes": "Only counting to 12 and the names of three shapes. Nothing from an earlier lesson is needed: the warm-up names shapes from clues, folds a square corner to corner and counts squares by rows. The words whole side, piece and figure are taught in Explore and the Mini-lesson.",
@@ -319,11 +319,7 @@
      "text": "Which shape has 3 corners? Which has 4 sides that are all the same? Which has 2 long sides and 2 short sides?"
     }
    ],
-   "note": "Three shapes labelled A, B and C: A is a triangle, B a square, C a rectangle. Ask each clue and let children answer on three or with fingers (1, 2 or 3 for A, B, C): 3 corners is A, the triangle; 4 equal sides is B, the square; 2 long sides and 2 short sides is C, the rectangle. Then ask for the names. The slide never shows the names. This is the holiday-course naming, taught again with clues so a child who joins cold can follow. A child who is unsure touches the sides with a finger and counts the corners.",
-   "mascot": {
-    "size": "s",
-    "say": "Count the corners!"
-   }
+   "note": "Three shapes labelled A, B and C: A is a triangle, B a square, C a rectangle. Ask each clue and let children answer on three or with fingers (1, 2 or 3 for A, B, C): 3 corners is A, the triangle; 4 equal sides is B, the square; 2 long sides and 2 short sides is C, the rectangle. Then ask for the names. The slide never shows the names. This is the holiday-course naming, taught again with clues so a child who joins cold can follow. A child who is unsure touches the sides with a finger and counts the corners."
   },
   {
    "id": "s-rem2",
@@ -340,7 +336,11 @@
      "text": "Open it. What 2 shapes do you see?"
     }
    ],
-   "note": "Children fold a paper square (a spare one from last lesson, or any paper square) corner to corner, open it and trace the fold. The fold cuts the square into 2 triangles, and each triangle is a half of the square. Ask: how many shapes, what are they called, are they the same size (lay one on the other). This is Term 4 Lesson 1 taught again. A child with no paper square draws a square and a line from one corner to the opposite corner. The slide never shows the answer. Answer: 2 triangles."
+   "note": "Children fold a paper square (a spare one from last lesson, or any paper square) corner to corner, open it and trace the fold. The fold cuts the square into 2 triangles, and each triangle is a half of the square. Ask: how many shapes, what are they called, are they the same size (lay one on the other). This is the first lesson of Term 4 taught again. A child with no paper square draws a square and a line from one corner to the opposite corner. The slide never shows the answer. Answer: 2 triangles.",
+   "mascot": {
+    "size": "s",
+    "say": "Fold it carefully!"
+   }
   },
   {
    "id": "s-rem3",
@@ -805,16 +805,37 @@
      "text": "Look at the house. Count each kind of shape."
     },
     {
-     "t": "visual",
-     "type": "shapes2d",
-     "shape": "circle",
-     "parts": 1,
-     "size": 140,
-     "compose": "house"
-    },
-    {
-     "t": "p",
-     "text": "How many triangles? How many rectangles? How many squares?"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "circle",
+        "parts": 1,
+        "size": 140,
+        "compose": "house"
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "How many triangles?"
+       },
+       {
+        "t": "p",
+        "text": "How many rectangles?"
+       },
+       {
+        "t": "p",
+        "text": "How many squares?"
+       }
+      ]
+     ],
+     "weights": [
+      1,
+      2
+     ]
     }
    ],
    "note": "Now we look inside a figure. The house is made of shapes: the roof is a triangle, the wall and the door are rectangles, the window is a square. Ask each question, then wait: how many triangles (1), how many rectangles (2), how many squares (1). Children point to each shape on their own screen and count aloud on three. The answer appears on the next slide, after the children have answered. A child who says 2 squares is asked whether the window is as tall as it is wide. Answers: 1 triangle; 2 rectangles; 1 square. Do not name a child with a wrong answer."
@@ -830,16 +851,37 @@
      "text": "Look at the house. Count each kind of shape."
     },
     {
-     "t": "visual",
-     "type": "shapes2d",
-     "shape": "circle",
-     "parts": 1,
-     "size": 140,
-     "compose": "house"
-    },
-    {
-     "t": "p",
-     "text": "How many triangles? How many rectangles? How many squares?"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "shapes2d",
+        "shape": "circle",
+        "parts": 1,
+        "size": 140,
+        "compose": "house"
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "How many triangles?"
+       },
+       {
+        "t": "p",
+        "text": "How many rectangles?"
+       },
+       {
+        "t": "p",
+        "text": "How many squares?"
+       }
+      ]
+     ],
+     "weights": [
+      1,
+      2
+     ]
     },
     {
      "t": "answer",
@@ -859,54 +901,71 @@
      "text": "Count each kind. Which kind is there most of?"
     },
     {
-     "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "circle",
-       "n": 1,
-       "colour": 1,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "square",
-       "n": 1,
-       "colour": 3,
-       "pattern": 2,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      }
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "colour": 1,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "square",
+          "n": 1,
+          "colour": 3,
+          "pattern": 2,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         }
+        ],
+        "cols": 3,
+        "cell": 70
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "How many triangles? How many circles? How many squares?"
+       }
+      ]
      ],
-     "cols": 3,
-     "cell": 70
+     "weights": [
+      1,
+      2
+     ]
     }
    ],
    "note": "A row of shapes to count by kind. Count the triangles one at a time, touching each (children point to their screen), then the circles, then the squares. Say a method: count one kind at a time, and make a mark so that you never count one twice. Ask: how many triangles, how many circles, how many squares, how many shapes in all, which kind is most. The answer appears on the next slide. Answers: 4 triangles, 1 circle, 1 square: 6 in all; the triangles are the most."
@@ -922,54 +981,71 @@
      "text": "Count each kind. Which kind is there most of?"
     },
     {
-     "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "circle",
-       "n": 1,
-       "colour": 1,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "square",
-       "n": 1,
-       "colour": 3,
-       "pattern": 2,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "colour": 2,
-       "pattern": 0,
-       "size": "m"
-      }
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "colour": 1,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "square",
+          "n": 1,
+          "colour": 3,
+          "pattern": 2,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "colour": 2,
+          "pattern": 0,
+          "size": "m"
+         }
+        ],
+        "cols": 3,
+        "cell": 70
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "How many triangles? How many circles? How many squares?"
+       }
+      ]
      ],
-     "cols": 3,
-     "cell": 70
+     "weights": [
+      1,
+      2
+     ]
     },
     {
      "t": "answer",
@@ -988,6 +1064,14 @@
      "t": "cols",
      "cols": [
       [
+       {
+        "t": "card",
+        "head": "4 SQUARES",
+        "items": [
+         "make a long rectangle.",
+         "That is 4 pieces."
+        ]
+       },
        {
         "t": "visual",
         "type": "grid",
@@ -1014,14 +1098,6 @@
         ],
         "cell": 60,
         "size": "m"
-       },
-       {
-        "t": "card",
-        "head": "4 SQUARES",
-        "items": [
-         "make a long rectangle.",
-         "That is 4 pieces."
-        ]
        }
       ],
       [
@@ -2204,56 +2280,56 @@
        "n": 1,
        "colour": 1,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "triangle",
        "n": 1,
        "colour": 2,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "circle",
        "n": 1,
        "colour": 0,
        "pattern": 2,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "square",
        "n": 1,
        "colour": 1,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "triangle",
        "n": 1,
        "colour": 2,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "square",
        "n": 1,
        "colour": 1,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "triangle",
        "n": 1,
        "colour": 2,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       },
       {
        "shape": "square",
        "n": 1,
        "colour": 1,
        "pattern": 0,
-       "size": "m"
+       "size": "l"
       }
      ],
      "cols": 4,
@@ -2572,7 +2648,7 @@
       ]
      ],
      "cell": 64,
-     "size": "m"
+     "size": "s"
     }
    },
    {
@@ -2665,31 +2741,17 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Every Triangle. The square has 2 lines from corner to corner. Fill in the blanks.",
+    "text": "Every Triangle. The square is turned on its corner. It has 2 lines from corner to corner. Count the small triangles and the big triangles. Fill in the blank.",
     "parts": [
      {
-      "l": "a",
-      "text": "There are [] small triangles.",
-      "ans": "4",
-      "val": 4
-     },
-     {
-      "l": "b",
-      "text": "There are [] big triangles.",
-      "ans": "4",
-      "val": 4
-     },
-     {
-      "l": "c",
+      "l": "",
       "text": "There are [] triangles in all.",
       "ans": "8",
       "val": 8
      }
     ],
-    "answer": "4; 4; 8",
+    "answer": "8",
     "val": [
-     4,
-     4,
      8
     ],
     "hint": "First count the small triangles next to the middle. Then count the big triangles that use 3 corners of the square.",
@@ -2875,7 +2937,7 @@
    "title": "2 triangles, many shapes",
    "first": "Put 2 triangles together so whole sides touch. Make a square. Draw it.",
    "text": "Find other shapes you can make with 2 triangles. Draw each one. How many different shapes can you find?",
-   "draw": 2,
+   "draw": 1,
    "answer": "First: a square (the 2 longest sides touch). Then 3 different shapes in all when whole sides touch: a square, a bigger triangle (2 short sides touch, the right-angle corners together) and a slanted four-sided shape (2 short sides touch, turned the other way). A child who finds 2 has the main idea; a child who finds the third has seen that it depends on which sides touch.",
    "val": [
     "3"
@@ -3278,7 +3340,7 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "The square has 2 lines from corner to corner. How many triangles are there in all? Count the small ones and the big ones.",
+    "q": "The square is turned on its corner. It has 2 lines from corner to corner. How many triangles are there in all? Count the small ones and the big ones.",
     "easier": "c5",
     "hint": "4 small triangles touch the middle point. Then find the big triangles that use 3 corners of the square.",
     "steps": [
@@ -3475,12 +3537,11 @@
   ]
  },
  "parent": {
-  "summary": "We put shapes together and looked inside figures. Your child made a square and a bigger triangle from 2 triangles, built a house and a boat from squares and triangles, and counted each kind of shape in a picture. Putting shapes together and naming the shapes in a figure are Primary 1 ideas.",
+  "summary": "We put shapes together and looked inside figures. Your child made a square and a bigger triangle from 2 triangles, built a house from squares and triangles, and counted each kind of shape in a picture. These are Primary 1 shapes ideas.",
   "words": [
    "figure: a picture made of shapes",
-   "piece: one of the paper shapes in the kit",
+   "piece: one paper shape from the kit",
    "whole side: the full length of a side",
-   "half circle, quarter circle: half or a quarter of a circle",
    "fewest: the smallest number"
   ],
   "try_home": [
@@ -3493,15 +3554,14 @@
    "How many of each shape?",
    "Did you count any shape twice?"
   ],
-  "when_stuck": "Let your child try the pieces and wait 10 seconds before helping. Asking 'Which sides are touching?' works better than moving the pieces for them. Please do not say that 2 triangles always make a square: it depends which sides touch. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "when_stuck": "Let your child try the pieces and wait 10 seconds before helping. Asking 'Which sides are touching?' works better than moving the pieces for them. Please do not say that 2 triangles always make a square. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
   "next": "Next lesson, Term 4 Lesson 3: Copy on the Grid. Online practice: your tutor shares the link (please do not share it). The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off.",
   "quote": "Big shapes are made of small shapes. Count one kind at a time.",
   "report_line": "Your child is learning to build figures from shapes and to count the shapes inside a figure. This week: squares, triangles and rectangles in pictures.",
   "term_line": "Your child is learning to choose a way to solve a problem, and to make problems of their own.",
   "next_materials": [
-   "Your Term 4 book (Book 7) open at the next lesson: its grid page is not cut, nothing to cut",
-   "A button or a small coin as a counter (a button is best)",
-   "A ruler (the one you keep at home), a pencil and a rubber",
+   "Nothing to cut: the grid page in your Term 4 book (Book 7) is for drawing on",
+   "A button or a small coin as a counter, a ruler, a pencil and a rubber",
    "Keep the shape pieces in their envelope"
   ]
  },
@@ -3516,8 +3576,8 @@
   "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers on three are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back)."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own pieces and a ruler. Check: S1 4, 3, 1 and 1 more; S2 a corner-to-corner line and half; S3 2 triangles and 2 squares; S4 4, 3, 12; S5 rectangle, circle, half circle; T1 one line across the bottom of the roof, then 2 more lines; T2 triangles 5, squares 6, circles 3; T3 4, 4 and 8; G1 6 and 3; G2 true, false, true, false; G3 any figure with exactly 2 triangles, 1 square and 1 rectangle; I1 a square first, then 3 different shapes in all; E1 7; E2 Yes; E3 3.",
-  "Tell families before this lesson (the goodbye in Term 4 Lesson 1 says so): the shape-pieces pages (pages 6 and 7 of the Term 4 book) are torn out along the dashed line; a grown-up cuts out the 20 pieces (6 squares, 3 rectangles, 6 triangles, 2 half circles, 2 quarter circles, 1 circle) and keeps them in an envelope; a paper square from last lesson and a ruler. Print the kit at 100 percent so a square keeps its 3 cm sides. No printer: a grown-up cuts 6 squares (3 cm), 3 rectangles (3 cm by 6 cm) and 6 triangles (a 3 cm square cut corner to corner) from card or paper.",
+  "Solve every workbook question yourself first, with your own pieces and a ruler. Check: S1 4, 3, 1 and 1 more; S2 a corner-to-corner line and half; S3 2 triangles and 2 squares; S4 4, 3, 12; S5 rectangle, circle, half circle; T1 one line across the bottom of the roof, then 2 more lines; T2 triangles 5, squares 6, circles 3; T3 8 (4 small and 4 big); G1 6 and 3; G2 true, false, true, false; G3 any figure with exactly 2 triangles, 1 square and 1 rectangle; I1 a square first, then 3 different shapes in all; E1 7; E2 Yes; E3 3.",
+  "Tell families before this lesson (the goodbye of the first lesson of Term 4 says so): the shape-pieces pages (pages 6 and 7 of the Term 4 book) are torn out along the dashed line; a grown-up cuts out the 20 pieces (6 squares, 3 rectangles, 6 triangles, 2 half circles, 2 quarter circles, 1 circle) and keeps them in an envelope; a paper square from last lesson and a ruler. Print the kit at 100 percent so a square keeps its 3 cm sides. No printer: a grown-up cuts 6 squares (3 cm), 3 rectangles (3 cm by 6 cm) and 6 triangles (a 3 cm square cut corner to corner) from card or paper.",
   "Have the slides open. Have your own pieces to build on camera if you wish. Say piece, whole side, kind of shape and in all the same way every time. Do not say that 2 triangles always make a square. Do not write fraction notation.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Nobody holds paper or a figure up to the camera.",
   "Be plain with families: counting and naming shapes in a picture, and putting shapes together, are school Primary 1 work (2D Shapes 1.2 and 1.3). No Primary 1 school paper in the sample we studied asks a child to build a figure from pieces, so the building wording is marked unverified. Counting every triangle of every size (Every Triangle), the fewest pieces and which sets of pieces make a figure go beyond Primary 1 on purpose, at Think harder and Go further only. Do not call the lesson MOE-aligned.",

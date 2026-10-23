@@ -11,7 +11,7 @@ deck and live in mascot/blob_ids.json {deckkey: {pose: "/_blob/<id>"}} (written 
 import sys,os,re,json
 HERE=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.join(HERE,'..')
 MAP=os.path.join(ROOT,'mascot','blob_ids.json')
-LEVELS_ON={'1','2','3'}                       # add '4','5','6' when the owner extends Mi to the older levels
+LEVELS_ON={'1','2','3','4','5','6'}                       # all six levels (Levels 4-6 added 23 Oct, smaller and more subtle)
 H={'1':230,'2':230,'3':230,'4':170,'5':160,'6':150}   # image height px; older levels smaller and more subtle
 OP={'1':1,'2':1,'3':1,'4':0.92,'5':0.88,'6':0.85}
 ASPECT={'hello_wave':699/834,'stretch':389/834,'goodbye_wave':644/834,'map':806/834,'trophy':842/834,'cheer':571/834}
@@ -39,6 +39,9 @@ def put(html,pose,lv,url,sid=''):
     html=IMG.sub('',html)
     h=H[lv]
     if lv=='3' and sid.endswith('reflect'): h=120   # P3 look-back cards run to the bottom-right corner: keep Mi clear of the text
+    if lv in '456' and sid.endswith('reflect'): h=120   # look-back cards reach y=893: keep the older-level Mi below them
+    if lv in '456' and sid.endswith('-title') and 'margin-right:150px' not in html:   # keep the 'Today we will' card clear of Mi
+        html=html.replace('background:#26385F;border-radius:24px;','background:#26385F;margin-right:150px;border-radius:24px;',1)
     w=round(h*ASPECT[pose])
     op='' if OP[lv]==1 else f';opacity:{OP[lv]}'
     tag=(f'<img data-mi="{pose}" src="{url}" alt="{ALT[pose]}" style="position:absolute;right:44px;bottom:{18 if h<150 else 30}px;'

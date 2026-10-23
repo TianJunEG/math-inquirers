@@ -8,7 +8,7 @@
  "holiday_lesson": 4,
  "goal": "I can find the core of a pattern and use it to find a shape far along. I can follow a growing pattern and find the rule.",
  "learn": {
-  "intro": "A repeating pattern has a core that goes round and round. We can count in the size of the core to find a far place. A growing pattern gets larger by the same amount each time. A table helps.",
+  "intro": "A repeating pattern has a core that goes round and round. Count in the size of the core to find a far place. A growing pattern gets larger by the same amount each time.",
   "example": {
    "problem": "The pattern keeps going. What is the 14th shape?",
    "figure": {
@@ -27,7 +27,7 @@
      "circle",
      "circle"
     ],
-    "per_row": 12
+    "per_row": 6
    },
    "steps": [
     "Find the core. It is triangle, circle, circle: 3 shapes.",
@@ -69,7 +69,7 @@
    "explanation": "The core has 4 shapes. Place 8 ends a core. Place 9 is a circle and place 10 is a square."
   },
   "example2": {
-   "problem": "Ali has 4 marbles on day 1. Each day he has 5 more marbles than the day before. How many marbles does he have on day 5?",
+   "problem": "Ali has 4 marbles on day 1. Each day he has 5 more than the day before. How many marbles on day 5?",
    "figure": {
     "type": "grow_table",
     "head": "Day",
@@ -82,17 +82,17 @@
      24
     ],
     "step": "+5",
-    "width_mm": 92
+    "width_mm": 78
    },
    "steps": [
-    "Make a table. Write the days 1 to 5. Write 4 under day 1.",
-    "Find the rule. Each day has 5 more. The rule is add 5.",
-    "Add 5 each time: 9, 14, 19, 24.",
-    "Check: from day 1 to day 5 there are 4 hops of 5. 4 + 20 = 24."
+    "Make a table. Write 4 under day 1.",
+    "Each day has 5 more. The rule is add 5: 9, 14, 19, 24.",
+    "Check: 4 hops of 5 is 20. 4 + 20 = 24."
    ],
    "answer": "On day 5 he has 24 marbles."
   },
-  "tight": true
+  "tight": true,
+  "pair": true
  },
  "items": [
   {
@@ -712,7 +712,7 @@
      }
     }
    ],
-   "hint": "How many straws does Mei add for each new triangle?",
+   "hint": "How many straws does each new triangle add?",
    "explanation": "Ravi: 3, 6, 9, 12, 15, 18, 21. Mei: 3, 5, 7, 9, 11, 13, 15. The gap is 21 - 15 = 6 straws."
   },
   {

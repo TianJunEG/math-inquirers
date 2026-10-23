@@ -54,7 +54,8 @@ def canon(q):
         mm = round(k["minute_angle"] / 6.0) % 60; hh = round((k["hour_angle"] - mm * 0.5) / 30.0) % 12
         facts.append(("clock", hh, mm))
     elif kind in ("coins", "notes", "cash"): facts.append((kind, tuple(sorted(k["values"]))))
-    elif kind in ("shapes", "solids", "shapes_row"): facts.append((kind, tuple(sorted(k["kinds"]))))
+    elif kind == "shapes": facts.append((kind, tuple(k["kinds"])))              # the order in the row is what a pupil sees
+    elif kind in ("solids", "shapes_row"): facts.append((kind, tuple(sorted(k["kinds"]))))
     elif kind == "array": facts.append((kind, tuple(sorted((k["rows"], k["cols"])))))
     elif kind: facts.append((kind, tuple(sorted((a, str(b)) for a, b in k.items() if a != "kind"))))
     if kind in ("clock", "coins", "notes", "cash", "ruler", "blocks", "array", "groups", "tally", "shapes", "solids", "shapes_row", "queue"):
@@ -86,7 +87,7 @@ def make_sheet(spec, school=""):
                     if sig in seen and not allow_dup: continue
                     content = L.Content(q.lines, q.art, q.layout)
                     p = L.fit(content, boxes, ref=ref)
-                    if p is None: break
+                    if p is None: continue                  # this random variant is too big for the region: try another variant of the form
                     col = f"({COLOURS[idx[reg.id]]})"
                     ta = L.Content(q.sol + [col], q.art, q.layout)
                     tb = L.Content(q.sol[:-1] + [q.sol[-1] + " " + col], q.art, q.layout)
