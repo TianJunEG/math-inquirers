@@ -329,6 +329,9 @@ def _bar_label(text, cx, cy, w, h, size):
     return f'<rect x="{cx - bw / 2:.1f}" y="{cy - bh / 2:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="{bh / 2:.1f}" fill="#fff" stroke="{NAVY}" stroke-width="2"/>' + token_svg(t, cx, cy, w, h, size)
 
 
+_GAP_N = 0
+
+
 def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow=None, unit_px=None, name_w=120, bar_h=64, vgap=34):
     """Strips drawn to scale (length proportional to value). bars=[{name,len,segments:[{v,text,colour}],colour}].
     brace={'text':'[]','over':'all'|index}: a bracket over the bars with a label; gap={'between':[0,1],'text':'?'}: dashed guide and
@@ -367,8 +370,13 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         ya = ys[a] + bar_h; yc = ys[c]
         ytop, ybot = (ya, yc) if ys[a] < ys[c] else (ys[c] + bar_h, ys[a])
         body.append(f'<line x1="{xa:.1f}" y1="{ys[a] + bar_h}" x2="{xa:.1f}" y2="{ys[c]}" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="8 6"/>' if ys[a] < ys[c] else f'<line x1="{xc:.1f}" y1="{ys[c] + bar_h}" x2="{xc:.1f}" y2="{ys[a]}" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="8 6"/>')
-        body.append(f'<path d="M{lo:.1f} {ys[max(a, c)] + bar_h + 12} V{ys[max(a, c)] + bar_h + 22} H{hi:.1f} V{ys[max(a, c)] + bar_h + 12}" fill="none" stroke="{RED}" stroke-width="4"/>')
-        body.append(token_svg(gap.get('text', '?'), (lo + hi) / 2, ys[max(a, c)] + bar_h + 52, max(hi - lo, 60), 50, 40))
+        global _GAP_N
+        _GAP_N += 1; gid = f'gap{_GAP_N}h'
+        sh = a if bars[a]['len'] < bars[c]['len'] else c          # the shorter bar gets a ghost piece: the part that is missing
+        body.append(f'<defs><pattern id="{gid}" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#fff"/><line x1="0" y1="0" x2="0" y2="14" stroke="{RED}" stroke-width="5"/></pattern></defs>')
+        body.append(f'<rect x="{lo:.1f}" y="{ys[sh] + 2}" width="{hi - lo:.1f}" height="{bar_h - 4}" fill="url(#{gid})" stroke="{RED}" stroke-width="3.4" stroke-dasharray="9 6"/>')
+        body.append(f'<path d="M{lo:.1f} {ys[max(a, c)] + bar_h + 12} V{ys[max(a, c)] + bar_h + 24} H{hi:.1f} V{ys[max(a, c)] + bar_h + 12}" fill="none" stroke="{RED}" stroke-width="8" stroke-linejoin="round"/>')
+        body.append(token_svg(gap.get('text', '?'), (lo + hi) / 2, ys[max(a, c)] + bar_h + 58, max(hi - lo, 80), 58, 46))
     if brace:
         over = brace.get('over', 'all')
         idxs = range(len(bars)) if over == 'all' else [over]
@@ -386,7 +394,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         if arrow.get('v') is not None:
             body.append(token_svg(str(arrow['v']), max(xs, xe) + 62, mid, 80, 50, 38))
     W = name_w + mx * ux + (120 if arrow else 40)
-    H = oy + len(bars) * (bar_h + vgap) + (50 if gap else 0)
+    H = oy + len(bars) * (bar_h + vgap) + (62 if gap else 0)
     return _svg(W, H, ''.join(body), 'bar model: ' + ', '.join(f'{b.get("name", "")} {b["len"]}' for b in bars))
 
 

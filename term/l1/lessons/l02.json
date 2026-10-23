@@ -2797,7 +2797,7 @@
         "fig": {
           "type": "number_line",
           "start": "{=n-3}",
-          "end": "{=n+3}",
+          "end": "{=n+1}",
           "step": 1,
           "label_every": 1,
           "hide": [
@@ -2808,7 +2808,7 @@
         "fig_base": {
           "type": "number_line",
           "start": 36,
-          "end": 42,
+          "end": 40,
           "step": 1,
           "label_every": 1,
           "hide": [
@@ -2868,7 +2868,7 @@
         },
         "fig": {
           "type": "number_line",
-          "start": "{=n-3}",
+          "start": "{=n-1}",
           "end": "{=n+3}",
           "step": 1,
           "label_every": 1,
@@ -2879,7 +2879,7 @@
         },
         "fig_base": {
           "type": "number_line",
-          "start": 57,
+          "start": 59,
           "end": 63,
           "step": 1,
           "label_every": 1,
