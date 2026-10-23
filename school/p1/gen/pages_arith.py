@@ -370,7 +370,7 @@ def page03():
              instr=["Share equally: each one gets the same.", "Write how many.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Pictures of apples, stars, fish and balloons, with empty plates, boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects. A printed line says each container gets the same number (the sharer rule).",
+             note="Pictures of stars, balls, cats and drums (each at least 8 mm across), with empty boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects. A printed line says each container gets the same number (the sharer rule).",
              seed=303)
     P.v("V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key", solved == ans, solved)
     cv = code_verify(ans, table, word, 1, 20)

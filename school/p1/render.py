@@ -197,10 +197,9 @@ def tick_svg():
 
 def footer(code, school):
     name = html.escape(school) if school.strip() else "________________________"
-    tail = "only. Not for resale." if school.strip() else "(school name) only. Not for resale."
-    # until the owner confirms the entity and year (licence page placeholder) the (c) line is left out; a --final build prints it
-    cr = "" if DRAFT else '<span class="fx">&copy; 2026 Preciouslyours Pte Ltd.</span> '
-    return (f'<footer class="pf"><span class="fl">{cr}<span class="fx">Photocopy licence:</span> <span class="sn">{name}</span> <span class="fx">{tail}</span></span>'
+    lab = "Photocopy licence:" if school.strip() else "Photocopy licence. School name (write here):"
+    tail = "only. Not for resale."
+    return (f'<footer class="pf"><span class="fl"><span class="fx">&copy; 2026 Preciouslyours Pte Ltd.</span> <span class="fx">{lab}</span> <span class="sn">{name}</span> <span class="fx">{tail}</span></span>'
             f'<span class="pc"><b>{code}</b></span></footer>')
 
 def pupil_page(p, school):
@@ -255,7 +254,7 @@ def cover(school, bk):
 def licence(school, bk):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in, before any school receives this booklet.")
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the term of the licence and the registered office address below must be filled in, before any school receives this booklet.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
@@ -264,10 +263,10 @@ def licence(school, bk):
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
             '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ". Registered office: " + REG_OFFICE) if DRAFT else "") + '</p>'
-            '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line at the foot of each page, by hand or when the booklet is made. '
+            '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line marked School name (write here) at the foot of each page, by hand or when the booklet is made. '
             f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
             f'<p>{NOT_AFFILIATED} The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
-            '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')
+            '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + ("" if DRAFT else " All rights reserved.") + '</p></section>')
 
 def _plist(pages, pred):
     return ", ".join(p["code"].split(" ")[0] for p in pages if pred(p))

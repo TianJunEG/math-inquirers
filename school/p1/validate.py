@@ -217,7 +217,8 @@ for k in BK:
     kt = alltxt[f"P1_{k}_Answer_Key.pdf"]
     rec(f"{k}: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)", ("DRAFT" in kt and "pypteltd@gmail.com" in kt) or not render.DRAFT)
     rec(f"{k}: the cover does not claim that every puzzle checks itself", "Every puzzle checks itself" not in fm_flat and "Almost every puzzle checks itself" in fm_flat)
-    rec(f"{k}: no (c) line in pupil footers while the entity and year are unconfirmed (DRAFT build)", ("Preciouslyours" not in pt) or not render.DRAFT)
+    rec(f"{k}: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)", pt.count("2026 Preciouslyours Pte Ltd.") == NP[k])
+    rec(f"{k}: the licence page no longer calls the entity or year unconfirmed, and still marks the registered office as a placeholder", "owner to confirm" not in fm_flat and "[registered office address" in fm_flat)
 if not ARGS.partial or 6 in [p["no"] for p in BK["S2"]]:
     rec("o'clock and half past used for clock times in the Semester 2 key", "o'clock" in alltxt["P1_S2_Answer_Key.pdf"] and "half past" in alltxt["P1_S2_Answer_Key.pdf"])
 # ---- 4c. a 68-character school name must not wrap the footer or split the page code
