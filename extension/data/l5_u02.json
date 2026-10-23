@@ -66,7 +66,7 @@
    }
   },
   "howto": {
-   "title": "How to take a fraction of a remainder",
+   "title": "How to",
    "steps": [
     "Draw a bar. Cut it into equal small parts.",
     "Take the first fraction. Find what is left.",
@@ -74,6 +74,14 @@
    ]
   },
   "tight": true,
+  "facts": {
+   "title": "Remember",
+   "lines": [
+    "a ÷ b = a/b. For example, 3 ÷ 4 = 3/4.",
+    "A unit fraction has 1 on top, such as 1/5.",
+    "To add or subtract, use the same bottom number."
+   ]
+  },
   "try": {
    "id": "L5U02-L01",
    "text": "Mei has 120 beads. She uses 1/4 of them for a bracelet. Then she uses 2/3 of the rest for a necklace. How many beads are left? {b}",
@@ -264,7 +272,7 @@
    "id": "L5U02-S04",
    "tier": "start",
    "page": 1,
-   "text": "Work out each answer. Write it in its simplest form.",
+   "text": "Find each answer. Write it in its simplest form.",
    "parts": [
     {
      "label": "a",
@@ -302,7 +310,7 @@
   {
    "id": "L5U02-S05",
    "tier": "start",
-   "page": 1,
+   "page": 2,
    "text": "Ravi walks 3/4 km each day. He does this for 6 days. How far does he walk in all? Write a mixed number. {b} km",
    "answer": {
     "value": [
@@ -332,6 +340,7 @@
    "text": "Write 7/12 as a sum of 2 different unit fractions. A unit fraction has 1 on top.\nTake away 1/3 first: 7/12 - 1/3 = {b}. So 7/12 = 1/3 + {b}.",
    "answer": {
     "value": [
+     "1/4",
      "1/4"
     ],
     "text": "1/4 (7/12 = 1/3 + 1/4)"
@@ -342,17 +351,17 @@
    "id": "L5U02-S08",
    "tier": "start",
    "page": 2,
-   "text": "Look at the pattern: 1/2, 2/3, 3/4, 4/5, ...",
+   "text": "Look at the pattern: 1/3, 2/5, 3/7, 4/9, ...",
    "parts": [
     {
      "label": "a",
-     "text": "The next two fractions are {b} and {b}.",
+     "text": "The next 2 fractions are {b} and {b}.",
      "answer": {
       "value": [
-       "5/6",
-       "6/7"
+       "5/11",
+       "6/13"
       ],
-      "text": "5/6, 6/7"
+      "text": "5/11, 6/13"
      }
     },
     {
@@ -360,23 +369,23 @@
      "text": "The 10th fraction is {b}.",
      "answer": {
       "value": [
-       "10/11"
+       "10/21"
       ],
-      "text": "10/11"
+      "text": "10/21"
      }
     },
     {
      "label": "c",
-     "text": "19/20 is the {b}th fraction.",
+     "text": "13/27 is the {b}th fraction.",
      "answer": {
       "value": [
-       "19"
+       "13"
       ],
-      "text": "19"
+      "text": "13"
      }
     }
    ],
-   "explanation": "The top number is the position. The bottom is 1 more. (a) 5/6 and 6/7. (b) 10/11. (c) 19/20 has 19 on top, so it is the 19th."
+   "explanation": "The top number is the position. The bottom number goes up by 2 each time: 2n + 1 for position n. (a) 5/11 and 6/13. (b) 2 × 10 + 1 = 21, so 10/21. (c) 13/27 has 13 on top, and 2 × 13 + 1 = 27, so it is the 13th."
   },
   {
    "id": "L5U02-S09",
@@ -518,7 +527,7 @@
    "id": "L5U02-S12",
    "tier": "start",
    "page": 3,
-   "text": "Mei spent 1/3 of her money on a book. She spent 1/2 of the rest on lunch. She had $18 left. Use the model.",
+   "text": "Mei buys a book with 1/3 of her money. Then she pays 1/2 of the rest for lunch. She has $18 left. Use the model.",
    "figure": {
     "type": "l5_bars",
     "rows": [
@@ -535,7 +544,7 @@
        },
        {
         "n": 1,
-        "text": "$18"
+        "text": "left"
        }
       ],
       "brace": {
@@ -570,6 +579,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "The book is 1 part. The rest is 2 parts, and lunch is half of the rest, which is 1 part. The $18 left is also 1 part. So lunch cost $18 and 3 parts = 3 × $18 = $54."
   },
   {
@@ -582,6 +596,11 @@
      "15"
     ],
     "text": "15 children"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
    },
    "explanation": "3/8 of 40 = 15 walk. 1/4 of 40 = 10 take the bus. 15 + 10 = 25, so 40 - 25 = 15 cycle."
   },
@@ -628,7 +647,7 @@
    "id": "L5U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Write 2/5 as the sum of 2 different unit fractions. Test 1/3, 1/4, 1/5, ... in order. Stop when the first fraction is less than half of 2/5.",
+   "text": "Write 2/5 as the sum of 2 different unit fractions. Try 1/3 first, then 1/4, then 1/5. Stop when the first fraction is less than half of 2/5.",
    "parts": [
     {
      "label": "",
@@ -645,7 +664,9 @@
    ],
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "Take away a unit fraction. Is what is left a unit fraction?",
@@ -665,17 +686,18 @@
    "space": {
     "rows": [
      "Working:",
+     "",
      ""
     ]
    },
-   "hint": "Find the fraction of ALL the eggs that is left after each sale.",
+   "hint": "Find the fraction of ALL the eggs that is left at each step.",
    "explanation": "After the morning 2/3 of the eggs are left. In the afternoon 1/4 of those are sold, so 3/4 of 2/3 = 1/2 are left. In the evening 2/5 of those are sold, so 3/5 of 1/2 = 3/10 are left. 36 eggs are 3/10 of the whole. 1/10 is 12 eggs, so the whole is 120 eggs."
   },
   {
    "id": "L5U02-T03",
    "tier": "think",
    "page": 4,
-   "text": "Use the cards 2, 3, 5 and 7 once each to make 2 fractions. Add the 2 fractions. Fractions need not be proper.",
+   "text": "Look at the cards. Make 2 fractions and add them. Each card is used once. The fractions need not be proper.",
    "figure": {
     "type": "l5_cards",
     "items": [
@@ -710,7 +732,9 @@
    ],
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "A big top and a small bottom make a big fraction.",
@@ -795,7 +819,7 @@
    "id": "L5U02-G04",
    "tier": "go",
    "page": 5,
-   "text": "Work out 1/3 + 1/15 + 1/35 + 1/63. {b}",
+   "text": "Find 1/3 + 1/15 + 1/35 + 1/63. {b}",
    "answer": {
     "value": [
      "4/9"
@@ -838,13 +862,14 @@
      }
     }
    ],
-   "explanation": "(a) 5 ÷ 6 = 5/6. (b) 7 ÷ 3: 3 goes into 7 two times with 1 left, so 2 and 1/3."
+   "explanation": "(a) 5 ÷ 6 = 5/6. (b) 7 ÷ 3: 3 goes into 7 two times with 1 left, so 2 and 1/3.",
+   "partsrow": true
   },
   {
    "id": "L5U02-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Work out. Write each answer in its simplest form.",
+   "text": "Find each answer in its simplest form.",
    "parts": [
     {
      "label": "a",
@@ -867,7 +892,8 @@
      }
     }
    ],
-   "explanation": "(a) 21/24 - 8/24 = 13/24. (b) 4/10 + 3/10 = 7/10."
+   "explanation": "(a) 21/24 - 8/24 = 13/24. (b) 4/10 + 3/10 = 7/10.",
+   "partsrow": true
   },
   {
    "id": "L5U02-C03",

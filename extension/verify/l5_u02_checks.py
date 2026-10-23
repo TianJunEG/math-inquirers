@@ -75,13 +75,14 @@ def _():
 
 @check('L5U02-S07')
 def _():
-    return [fmt(Fr(7, 12) - Fr(1, 3))]
+    left = fmt(Fr(7, 12) - Fr(1, 3))
+    return [left, left]
 
 
 @check('L5U02-S08')
 def _():
-    seq = lambda k: Fr(k, k + 1)
-    pos = next(k for k in range(1, 100) if seq(k) == Fr(19, 20))
+    seq = lambda k: Fr(k, 2 * k + 1)
+    pos = next(k for k in range(1, 100) if seq(k) == Fr(13, 27))
     return {'a': [fmt(seq(5)), fmt(seq(6))], 'b': [fmt(seq(10))], 'c': [str(pos)]}
 
 

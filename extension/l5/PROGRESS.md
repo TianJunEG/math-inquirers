@@ -8,7 +8,7 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | Unit | Title | Data | Checks | Built and viewed | Committed |
 |---|---|---|---|---|---|
 | 1 | Million puzzles | yes | yes (41) | yes | yes |
-| 2 | Fraction feats | | | | |
+| 2 | Fraction feats | yes | yes | yes | yes |
 | 3 | Before and after | | | | |
 | 4 | Triangle areas | | | | |
 | 5 | Volume vault | | | | |
@@ -18,4 +18,4 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 9 | Pattern generalisers | | | | |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 2.
+Resume: next unit is 3.
