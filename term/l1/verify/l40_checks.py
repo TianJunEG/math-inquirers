@@ -155,7 +155,7 @@ def run(d):
     tb = F('s-m2-ans')['rows']; eq([(int(r[0]), int(r[1])) for r in tb], ps, 'm2 table pairs'); eq([int(r[2]) for r in tb], [b - a for a, b in ps], 'm2 table differences'); eq([r for r in tb if int(r[2]) == 3], [['3', '6', '3']], 'm2 only 3 and 6')
     eq(nums(' '.join(sl['s-m2']['blocks'][0]['items'])), [9, 3], 'm2 text')
     puz = nums(' '.join(sl['s-m3']['blocks'][0]['items'])); eq(puz, [8, 2, 6, 2], 'm3 text'); eq(6 + 2 == 8, True, 'm3 the first clue fits'); eq(6 - 2 == 2, False, 'm3 the second clue does not fit'); eq(6 - 2, 4, 'm3 6 is 4 more than 2')
-    eq([(a, b) for a, b in pairs_that_make(8) if b - a == 4], [(3, 5)], 'm3 exactly one pair fits both clues: 3 and 5'); eq('5 and 3' in sl['s-m3-ans']['blocks'][0]['text'], True, 'm3-ans names 5 and 3')
+    eq([(a, b) for a, b in pairs_that_make(8) if b - a == 2], [(3, 5)], 'm3 exactly one pair fits both clues: 3 and 5'); eq('5 and 3' in sl['s-m3-ans']['blocks'][0]['text'], True, 'm3-ans names 5 and 3')
     eq(len(sl['s-m4']['blocks'][0]['items']), 4, 'm4 four checks')
     eq([x for x in range(0, 30) if x == 5 + 7], [12], 'opt puzzle: 5 more than 7 has exactly one answer 12')
     # ---------------------------------------------------------------- Start here
@@ -180,7 +180,7 @@ def run(d):
     eq([b - a for a, b in ps], [12, 10, 8, 6, 4, 2, 0], 'G1 differences'); sol = [(a, b) for a, b in ps if b - a == 4]; eq(sol, [(4, 8)], 'G1 exactly one pair is 4 apart'); eq(q['val'], [4, 8, 1], 'G1 val'); eq(len(sol), 1, 'G1 one pair'); eq(nums(q['text']), [12, 4, 12], 'G1 text')
     eq(d['beyond']['name'], 'Puzzle With a Proof', 'G1 named puzzle'); eq(set(d['beyond']['where']) == {'G1', 'G3'}, True, 'beyond items')
     q = T['G2']; eq(6 + 4 == 10, True, 'G2 the first clue fits'); eq(6 - 4, 2, 'G2 6 and 4 are 2 apart'); eq(6 - 4 == 4, False, 'G2 the second clue does not fit'); fit = [(a, b) for a, b in pairs_that_make(10) if b - a == 4]; eq(fit, [(3, 7)], 'G2 exactly one pair fits'); eq(q['val'], ['No', 2, 3, 7], 'G2 val'); eq(nums(q['text']), [10, 4, 6, 4], 'G2 text')
-    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq([(a, b) for a, b in pairs_that_make(8) if b - a == 4], [(3, 5)], 'G3 model puzzle: 8 and 2 apart is 3 and 5'); eq(len(pairs_that_make(8)), 5, 'G3 model lists 5 pairs'); eq(q['lines'] >= 3, True, 'G3 has lines')
+    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq([(a, b) for a, b in pairs_that_make(8) if b - a == 2], [(3, 5)], 'G3 model puzzle: 8 and 2 apart is 3 and 5'); eq(len(pairs_that_make(8)), 5, 'G3 model lists 5 pairs'); eq(q['lines'] >= 3, True, 'G3 has lines')
     eq(inv['val'], ['open'], 'I1 open'); eq(inv['lines'] >= 4, True, 'I1 has 4 lines')
     # ---------------------------------------------------------------- Exit ticket
     q = X['E1']; eq(find(lambda x: x - 5 == 9), [14], 'E1 her number is 14'); eq(q['val'], 14, 'E1 val'); eq(nums(q['text']), [5, 9], 'E1 text')
@@ -190,7 +190,7 @@ def run(d):
     q = X['E3']; eq(7 + 8, 15, 'E3 7 + 8'); eq(15 == 16, False, 'E3 the child is wrong'); eq(find(lambda x: x + 8 == 16), [8], 'E3 16 take away 8 is 8, not 7'); eq(q['val'], ['Wrong'], 'E3 val'); eq(nums(q['text']), [7, 8, 16], 'E3 text')
     # ---------------------------------------------------------------- home practice
     q = H['H1']; eq(plus(12, 5), 17, 'H1'); eq(q['val'], 17, 'H1 val')
-    q = H['H2']; eq([(a, b) for a, b in pairs_that_make(14) if b - a == 4], [(6, 8)], 'H2 exactly one pair'); eq(q['val'], [6, 8], 'H2 val')
+    q = H['H2']; eq([(a, b) for a, b in pairs_that_make(14) if b - a == 2], [(6, 8)], 'H2 exactly one pair'); eq(q['val'], [6, 8], 'H2 val')
     q = H['H3']; eq(find(lambda x: x + 8 == 20), [12], 'H3 20 take away 8'); eq(12 == 13, False, 'H3 the child is wrong'); eq(q['val'], ['Wrong', 12], 'H3 val')
     q = H['H4']; fits = [x for x in range(0, 40) if 7 < x < 12]; eq(fits, [8, 9, 10, 11], 'H4 four numbers fit'); eq(q['val'], 4, 'H4 val')
     l20 = json.load(open(os.path.join(L1, 'lessons', 'l20.json')))['home_practice']; src = [h for h in l20 if h['id'] == 'H1'][0]; q = H['H5']

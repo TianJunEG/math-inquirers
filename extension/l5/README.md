@@ -47,7 +47,7 @@ All type names start with `l5_` so they cannot clash with another level's plug-i
 9. Growing patterns (matchstick hexagons, plus-shaped tiles (Learn), U-shaped tiles, tables and chairs, double staircases, L-layers), the rule in words, far figures and backwards, number patterns, guess and check with a table, supposition (legs), marks with a penalty, adding a pattern.
 10. Logic grids (worked example and a 4 by 4), working backwards (number and fraction versions), two numbers from a sum and a difference, counting squares and rectangles by size, who is lying, age difference, supposition, systematic listing, digit counting, worst-case thinking.
 
-Same skills as the holiday program, with new numbers and contexts. After three audit rounds the items whose story, question and numbers matched a holiday item were replaced with new frames (each audit's class B list was checked against the holiday lines in `p5/content`). Many items are still "same type, new numbers" (class A): that is the design, and the Welcome text promises only new numbers and stories.
+Same skills as the holiday program, with new numbers and contexts. After five audit rounds the items whose story, question and numbers matched a holiday item were replaced with new frames (each audit's class B list was checked against the holiday lines in `p5/content`). Many items are still "same type, new numbers" (class A): that is the design, and the Welcome text promises only new numbers and stories.
 
 ## Answer checks (`verify/l5_uNN_checks.py`)
 
@@ -108,7 +108,7 @@ Every item and every part has a function that recomputes the answer without read
 
 ## Changes after audit round 3 (`AUDIT_ROUND3.md`)
 
-- New frames (holiday lines read first): unit 4 S01 (triangles 18 by 12 and 25 by 12) and S06 (parallelogram 16 by 9), S09 (metres and centimetres); unit 5 G03 (cube volumes) and T03 (wall lifted out of a tank); unit 6 T03 (fuel, supposition); unit 7 S13 (percent of the whole from a part), T03 (service charge), G01 (two rises), G02 (salt water); unit 8 C01 (OD halves an angle); unit 3 S12 (parts of money).
+- New frames (holiday lines read first): unit 4 S01 (triangles 18 by 12 and 36 by 20) and S06 (parallelogram 16 by 9), S09 (metres and centimetres); unit 5 G03 (cube volumes) and T03 (wall lifted out of a tank); unit 6 T03 (fuel, supposition); unit 7 S13 (percent of the whole from a part), T03 (service charge), G01 (two rises), G02 (salt water); unit 8 C01 (OD halves an angle); unit 3 S12 (parts of money).
 - Unit 4 Check yourself 3 no longer hatches the triangle, so the dashed height shows; the Learn Reasons box in unit 8 has the equilateral line and a clearer trapezium line; the unit 9 marks line says "costs its marks plus the penalty"; unit 10 S12 reads "greater than".
 
 1. Page count is 100 after shortening about 140 Why lines (owner decision L5-TRIM). The Why texts are now very short; some units explain less than the holiday program does.

@@ -26,4 +26,4 @@ Resume: nothing outstanding. Final build: print 100 pages, soft 99; all gates pa
 
 23 Oct (audit round 3): eight items given new frames (units 4, 5, 6, 7, 8) plus smaller fixes; print 100 pages, all gates pass.
 
-23 Oct (audit round 4): U4 S01(b), U7 G01, U3 S12 given new numbers and contexts; U5 T03 depth 6; U8 S01/S05 labels really spaced (keep flag); docs page counts: print 100, soft 99.
+23 Oct (audit round 4): U4 S01(b), U7 G01, U3 S12 given new numbers and contexts; U5 T03 depth 6; U8 S01, S05, S08 label and arc radii set separately in the generator (new r and tr values, so labels no longer overlap); docs page counts: print 100, soft 99.
