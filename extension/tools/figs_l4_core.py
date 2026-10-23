@@ -245,8 +245,10 @@ def l4_grid(spec, w=None):
         P.append(_t(left + i * cs + cs / 2, top - 10, _esc(t), 26))
     for i, t in enumerate(spec.get('row_labels', [])):
         P.append(_t(left - 10, top + i * cs + cs / 2 + 9, _esc(t), 26, anchor='end'))
-    ax = spec.get('axis')
-    if ax:
+    axes = list(spec.get('axes', []))
+    if spec.get('axis'):
+        axes.append(spec['axis'])
+    for ax in axes:
         if ax['kind'] == 'v':
             x = left + ax['at'] * cs
             P.append(f'<line x1="{x}" y1="{top - 8}" x2="{x}" y2="{top + R * cs + 8}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="14 8"/>')

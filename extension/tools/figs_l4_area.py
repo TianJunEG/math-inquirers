@@ -89,24 +89,39 @@ def l4_poly(spec, w=None):
 
 
 def l4_tiles(spec, w=None):
+    """shapes [{cells:[[col,row],..], name?, labels?:{"col,row": text}, shade?: bool (default true: hatched/yellow; false: white tiles)}], cell, gap, per_row."""
     c = spec.get('cell', 46)
     gap = spec.get('gap', 1.2)
+    per_row = spec.get('per_row', len(spec['shapes']))
     P = []
-    x0 = 12
-    H = 0
-    for sh in spec['shapes']:
-        cells = sh['cells']
-        mx = min(x for x, y in cells)
-        my = min(y for x, y in cells)
-        wd = max(x for x, y in cells) - mx + 1
-        ht = max(y for x, y in cells) - my + 1
-        for (x, y) in cells:
-            P.append(f'<rect x="{x0 + (x - mx) * c:.1f}" y="{10 + (y - my) * c:.1f}" width="{c}" height="{c}" fill="{YEL if sh.get("shade", True) else SKY}" stroke="{NAVY}" stroke-width="3.4"/>')
-        if sh.get('name'):
-            P.append(_t(x0 + wd * c / 2, 10 + ht * c + 40, _esc(sh['name']), 28, weight=800))
-        H = max(H, 10 + ht * c + (56 if sh.get('name') else 14))
-        x0 += wd * c + gap * c
-    return F._wrap(''.join(P), x0 - gap * c + 12, H, spec.get('label', 'shapes made of square tiles'), w or spec.get('width_mm', 140))
+    y0 = 10
+    maxw = 0
+    shapes = spec['shapes']
+    for r0 in range(0, len(shapes), per_row):
+        row = shapes[r0:r0 + per_row]
+        x0 = 12
+        rowh = 0
+        for sh in row:
+            cells = sh['cells']
+            mx = min(x for x, y in cells)
+            my = min(y for x, y in cells)
+            wd = max(x for x, y in cells) - mx + 1
+            ht = max(y for x, y in cells) - my + 1
+            fill = YEL if sh.get('shade', True) else SKY
+            for (x, y) in cells:
+                px, py = x0 + (x - mx) * c, y0 + (y - my) * c
+                P.append(f'<rect x="{px:.1f}" y="{py:.1f}" width="{c}" height="{c}" fill="{fill}" stroke="{NAVY}" stroke-width="3.4"/>')
+                t = sh.get('labels', {}).get(f'{x},{y}')
+                if t is not None:
+                    P.append(f'<rect x="{px + c * 0.18:.1f}" y="{py + c * 0.2:.1f}" width="{c * 0.64:.1f}" height="{c * 0.6:.1f}" rx="6" fill="#fff"/>')
+                    P.append(_t(px + c / 2, py + c / 2 + 10, _esc(t), 30, weight=800))
+            if sh.get('name'):
+                P.append(_t(x0 + wd * c / 2, y0 + ht * c + 40, _esc(sh['name']), 28, weight=800))
+            rowh = max(rowh, ht * c + (56 if sh.get('name') else 14))
+            x0 += wd * c + gap * c
+        maxw = max(maxw, x0 - gap * c + 12)
+        y0 += rowh + 14
+    return F._wrap(''.join(P), maxw, y0, spec.get('label', 'shapes made of square tiles'), w or spec.get('width_mm', 140))
 
 
 FIGS = {'l4_poly': l4_poly, 'l4_tiles': l4_tiles}

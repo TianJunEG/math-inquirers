@@ -90,21 +90,32 @@ def table_block(table, fmt=str, cols=None):
     items = "".join(f'<div class="ct"><span class="n">{fmt(k)}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in table.items())
     return f'<div class="blk ctc"><p class="lead">Code table</p><div class="codetable" style="grid-template-columns:repeat({cols},1fr)">{items}</div></div>'
 
-# vertical sums (algorithm layout): numbers right-aligned over a rule, answer box below
-def vsum_html(top, bot, op, miss=None, ans_box=True):
-    """top/bot are ints or strings of digits (a '?' marks a missing digit shown as a box)"""
-    def digs(x):
-        s = str(x)
-        return "".join('<i class="ab"></i>' if ch == "?" else f"<i>{ch}</i>" for ch in s)
-    return (f'<div class="vsum"><div class="vr"><em></em>{digs(top)}</div><div class="vr"><em>{op}</em>{digs(bot)}</div><div class="vrule"></div>'
-            + ('<div class="vr vans"><em></em><span class="ab w3"></span></div>' if ans_box else '') + '</div>')
+# vertical sums (algorithm layout): numbers right-aligned over a rule, answer box (or the result row) below
+def _digs(x):
+    return "".join('<i class="ab"></i>' if ch == "?" else f"<i>{ch}</i>" for ch in str(x))
+
+def vsum_html(top, bot, op, res=None, ans_box=True):
+    """top/bot/res are ints or strings of digits ('?' marks a missing digit, drawn as an answer box); without res a wide answer box is drawn"""
+    last = (f'<div class="vr"><em></em>{_digs(res)}</div>' if res is not None else ('<div class="vr vans"><em></em><span class="ab w3"></span></div>' if ans_box else ""))
+    return f'<div class="vsum"><div class="vr"><em></em>{_digs(top)}</div><div class="vr"><em>{op}</em>{_digs(bot)}</div><div class="vrule"></div>{last}</div>'
 
 def parse_vsum(h):
-    """independent reader of a vsum: returns (top, bottom, op)"""
+    """independent reader of a vsum: returns (top, bottom, op) as ints"""
     rows = re.findall(r'<div class="vr">(.*?)</div>', h)
     def num(r): return int("".join(re.findall(r"<i>(\d)</i>", r)))
     op = re.search(r"<em>(.*?)</em>", rows[1]).group(1)
     return num(rows[0]), num(rows[1]), op
+
+def parse_vsum3(h):
+    """independent reader of a vsum with a result row: returns (top, bottom, result, op) as strings of digits with '?' for a missing digit"""
+    rows = re.findall(r'<div class="vr">(.*?)</div>', h)
+    def num(r): return "".join("?" if t.startswith('<i class="ab"') else t[3] for t in re.findall(r"<i[^>]*>(?:\d)?</i>", r))
+    op = re.search(r"<em>(.*?)</em>", rows[1]).group(1)
+    return num(rows[0]), num(rows[1]), num(rows[2]), op
+
+def frac_html(f):
+    k, n = f
+    return f'<span class="fr"><i>{k}</i><i>{n}</i></span>'
 
 # --------------------------------------------------------------------------- routes (grid mazes)
 def neighbours(r, c, n):

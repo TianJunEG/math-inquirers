@@ -281,3 +281,9 @@ Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in 
 ## 23 Oct 2026 (night): DISCOUNT-DROP and sibling/friend discount
 - DISCOUNT-DROP: the 5% full-term discount is dropped (no instalments, one payment before lesson 1).
 - Owner wants a discount for siblings / friends. Amount, which products (beta fee? term fee?), who qualifies (siblings in the same household, a friend who joins with a referral code?), whether the discount is for both children or the new one only, and whether it stacks with the existing referral credit prototype (website/referral.html) are NOT yet decided. Terms page has a marked placeholder; no number published.
+
+## 23 Oct 2026 (night): GAPS-SLIDES-NOW, SAMPLER-YES, PILOT-L2, P1-WEAK-ACCEPT
+- GAPS-SLIDES-NOW: close the top SASMO-skill gaps in the HOLIDAY program now with slide and tutor-bank items (decks, guides, question banks), per docs/sasmo/holiday_skill_coverage.md; printed workbooks stay frozen (print order Fri 6 Nov); printed additions go to the next holiday cycle (v2). Decks/guides/banks may change until about mid-November.
+- SAMPLER-YES: make a 4-page Primary 1 sampler, a one-page school summary (no price) and a draft email for the owner to send; the owner sends it (nothing is sent by the assistant); lawyer sees the licence wording before wide sending.
+- PILOT-L2: pilot Level 2 Term 1 (10 lessons) first, per docs/terms/levels_2_6_term_build_plan.md, once Level 1 is final (tools move to term/tools/ with golden-master check). Other plan decisions (section 8) remain open.
+- P1-WEAK-ACCEPT: Primary 1 booklets keep recognition-level coverage of "forming figures" and "copy on a grid" (teacher glance on two pages).

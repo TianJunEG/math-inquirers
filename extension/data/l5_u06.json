@@ -1,0 +1,699 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 6,
+ "id": "L5U06",
+ "title": "Rate racers",
+ "topic": "Rate",
+ "holiday_lesson": 6,
+ "goal": "I can find a rate for 1 unit and use it to scale up. I can compare buys, and add rates when taps or machines work together.",
+ "learn": {
+  "intro": "A rate tells how much for 1 unit, such as litres in 1 minute. Find the amount for 1 unit first. Then multiply to scale up, or divide to find how long.",
+  "example": {
+   "problem": "A printer prints 90 pages in 6 minutes. How many pages does it print in 15 minutes? How many minutes does it need for 300 pages?",
+   "steps": [
+    "Find the rate: 90 ÷ 6 = 15 pages in 1 minute.",
+    "In 15 minutes: 15 × 15 = 225 pages.",
+    "For 300 pages: 300 ÷ 15 = 20 minutes.",
+    "Check: 20 minutes × 15 pages = 300 pages."
+   ],
+   "answer": "It prints 225 pages in 15 minutes. It needs 20 minutes for 300 pages.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "Minutes",
+     "Pages"
+    ],
+    "rows": [
+     [
+      6,
+      90
+     ],
+     [
+      1,
+      15
+     ],
+     [
+      15,
+      225
+     ],
+     [
+      20,
+      300
+     ]
+    ],
+    "width_mm": 64,
+    "rowh": 40,
+    "size": 20,
+    "alt": "rate table"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Find the amount for 1 unit.",
+    "Multiply to scale up. Divide to find how long.",
+    "Check with the other way round."
+   ]
+  },
+  "facts": {
+   "title": "Better buy",
+   "lines": [
+    "Find the cost of 1 item.",
+    "Or compare the cost of the same number of items."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U06-L01",
+   "text": "A machine fills 24 bottles in 4 minutes. How many bottles does it fill in 11 minutes? {b}",
+   "answer": {
+    "value": [
+     "66"
+    ],
+    "text": "66 bottles"
+   },
+   "explanation": "24 ÷ 4 = 6 bottles in 1 minute. In 11 minutes: 6 × 11 = 66 bottles."
+  }
+ },
+ "items": [
+  {
+   "id": "L5U06-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "A tap fills 18 litres in 3 minutes. Fill in the table. Write the missing numbers.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "Minutes",
+     "Litres"
+    ],
+    "rows": [
+     [
+      3,
+      18
+     ],
+     [
+      1,
+      null
+     ],
+     [
+      5,
+      null
+     ],
+     [
+      8,
+      null
+     ]
+    ],
+    "width_mm": 60,
+    "rowh": 38,
+    "size": 20,
+    "alt": "rate table with blanks"
+   },
+   "answer": {
+    "value": [
+     "6",
+     "30",
+     "48"
+    ],
+    "text": "6, 30, 48",
+    "list": true
+   },
+   "explanation": "In 3 minutes: 18 litres. In 1 minute: 18 ÷ 3 = 6 litres. In 5 minutes: 5 × 6 = 30 litres. In 8 minutes: 8 × 6 = 48 litres."
+  },
+  {
+   "id": "L5U06-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Six pens cost $4.20.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "One pen costs $ {b}",
+     "answer": {
+      "value": [
+       "0.70"
+      ],
+      "text": "0.70"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Nine pens cost $ {b}",
+     "answer": {
+      "value": [
+       "6.30"
+      ],
+      "text": "6.30"
+     }
+    }
+   ],
+   "explanation": "(a) $4.20 ÷ 6 = $0.70. (b) 9 × $0.70 = $6.30."
+  },
+  {
+   "id": "L5U06-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "An oven bakes 36 rolls in 4 minutes.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It bakes {b} rolls in 1 minute.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In 25 minutes it bakes {b} rolls.",
+     "answer": {
+      "value": [
+       "225"
+      ],
+      "text": "225"
+     }
+    },
+    {
+     "label": "c",
+     "text": "It needs {b} minutes to bake 270 rolls.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "(a) 36 ÷ 4 = 9 rolls a minute. (b) 25 × 9 = 225. (c) 270 ÷ 9 = 30 minutes."
+  },
+  {
+   "id": "L5U06-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Pack A has 5 pencils for $2.50. Pack B has 8 pencils for $3.60.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Pack A costs $ {b} for 1 pencil.",
+     "answer": {
+      "value": [
+       "0.50"
+      ],
+      "text": "0.50"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Pack B costs $ {b} for 1 pencil.",
+     "answer": {
+      "value": [
+       "0.45"
+      ],
+      "text": "0.45"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The better buy is   {circ:Pack A|Pack B}",
+     "answer": {
+      "value": [
+       "Pack B"
+      ],
+      "text": "Pack B"
+     }
+    }
+   ],
+   "explanation": "(a) $2.50 ÷ 5 = $0.50. (b) $3.60 ÷ 8 = $0.45. (c) $0.45 is less than $0.50, so Pack B is the better buy."
+  },
+  {
+   "id": "L5U06-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Shop X sells 3 cans for $2.40. Shop Y sells 5 cans for $3.75. Mei needs 15 cans.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "15 cans at Shop X cost $ {b}",
+     "answer": {
+      "value": [
+       "12.00"
+      ],
+      "text": "12.00"
+     }
+    },
+    {
+     "label": "b",
+     "text": "15 cans at Shop Y cost $ {b}",
+     "answer": {
+      "value": [
+       "11.25"
+      ],
+      "text": "11.25"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The cheaper shop is   {circ:Shop X|Shop Y}",
+     "answer": {
+      "value": [
+       "Shop Y"
+      ],
+      "text": "Shop Y"
+     }
+    }
+   ],
+   "explanation": "15 cans is 5 packs of 3 at X: 5 × $2.40 = $12.00. 15 cans is 3 packs of 5 at Y: 3 × $3.75 = $11.25. Shop Y is cheaper."
+  },
+  {
+   "id": "L5U06-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Tap A fills 14 litres a minute. Tap B fills 6 litres a minute. Both taps are on.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Together they fill {b} litres in 1 minute.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "They need {b} minutes to fill a 200 litre tank.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "(a) 14 + 6 = 20 litres a minute. (b) 200 ÷ 20 = 10 minutes."
+  },
+  {
+   "id": "L5U06-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "A pump puts 25 litres a minute into a tank. A drain lets out 10 litres a minute. Both are on. In how many minutes is a 300 litre tank full? {b}",
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20 minutes"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The tank gains 25 - 10 = 15 litres each minute. 300 ÷ 15 = 20 minutes."
+  },
+  {
+   "id": "L5U06-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Printer P makes 40 pages each minute. Printer Q makes 20 pages each minute. Together they make one job of 900 pages. How many minutes does the job take? {b}",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15 minutes"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Together they print 40 + 20 = 60 pages a minute. 900 ÷ 60 = 15 minutes."
+  },
+  {
+   "id": "L5U06-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "The first hour of parking costs $2.00. Each extra 30 minutes costs $0.80, and a part of 30 minutes counts as a whole one. Mei parks for 2 hours 20 minutes. How much does she pay? $ {b}",
+   "answer": {
+    "value": [
+     "4.40"
+    ],
+    "text": "$4.40"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The first hour is $2.00. After that 1 hour 20 minutes is left. That is 2 full half hours and 20 minutes more, which counts as one more half hour: 3 lots. 3 × $0.80 = $2.40. Total: $2.00 + $2.40 = $4.40."
+  },
+  {
+   "id": "L5U06-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "A tank has 240 litres of water. A pump takes out 15 litres each minute.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "After 9 minutes, {b} litres are left.",
+     "answer": {
+      "value": [
+       "105"
+      ],
+      "text": "105"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The tank is empty after {b} minutes.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "explanation": "(a) 9 × 15 = 135 litres are taken out. 240 - 135 = 105 litres are left. (b) 240 ÷ 15 = 16 minutes."
+  },
+  {
+   "id": "L5U06-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "A tap drips 4 ml of water every 10 seconds.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "In 1 minute it drips {b} ml.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In 1 hour it drips {b} ml.",
+     "answer": {
+      "value": [
+       "1440"
+      ],
+      "text": "1440"
+     }
+    },
+    {
+     "label": "c",
+     "text": "That is {b} litres in 1 hour.",
+     "answer": {
+      "value": [
+       "1.44"
+      ],
+      "text": "1.44"
+     }
+    }
+   ],
+   "explanation": "(a) 1 minute is 60 seconds, or 6 lots of 10 seconds. 6 × 4 = 24 ml. (b) 60 minutes: 60 × 24 = 1440 ml. (c) 1440 ÷ 1000 = 1.44 litres."
+  },
+  {
+   "id": "L5U06-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "If 6 cans cost $3.60, then 12 cans cost $7.20.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A larger pack is always the better buy.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Tap A fills 5 litres a minute. Tap B fills 7 litres a minute. Together they fill 12 litres a minute.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) True: double the cans, double the cost. (b) False: the larger pack can cost more for each item. (c) True: 5 + 7 = 12."
+  },
+  {
+   "id": "L5U06-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Gym plan A costs $20 a month and then $4 for each visit. Plan B costs $8 for each visit and has no monthly fee. For how many visits in a month do the 2 plans cost the same? {b}",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 visits"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Each visit costs Plan B $4 more than Plan A. The $20 monthly fee of Plan A is paid back after 20 ÷ 4 = 5 visits. At 5 visits: Plan A costs 20 + 20 = $40 and Plan B costs 5 × 8 = $40."
+  },
+  {
+   "id": "L5U06-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "A pipe delivers 1.5 litres of water every 20 seconds. How many litres does it deliver in 5 minutes? {b} litres",
+   "answer": {
+    "value": [
+     "22.5"
+    ],
+    "text": "22.5 litres"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "5 minutes is 300 seconds, which is 15 lots of 20 seconds. 15 × 1.5 = 22.5 litres. (Or: 3 × 1.5 = 4.5 litres in 1 minute, and 5 × 4.5 = 22.5.)"
+  },
+  {
+   "id": "L5U06-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Pen packs: A has 5 pens for $3.00, B has 8 pens for $4.70 and C has 12 pens for $6.90. Mei needs exactly 32 pens and may mix packs. Find the least total cost. $ {b}",
+   "answer": {
+    "value": [
+     "18.50"
+    ],
+    "text": "$18.50 (1 pack B and 2 packs C)"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "List every way to make 32 pens with whole packs.",
+   "explanation": "Find the ways to make exactly 32 pens: 1 pack B + 2 packs C (8 + 24), 4 packs B (32), and 4 packs A + 1 pack C (20 + 12). Costs: $4.70 + 2 × $6.90 = $18.50; 4 × $4.70 = $18.80; 4 × $3.00 + $6.90 = $18.90. The least is $18.50."
+  },
+  {
+   "id": "L5U06-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Alone, printer P needs 12 minutes for a job. Alone, printer Q needs 20 minutes for the same job. Find the time for the job when both work. {b} minutes",
+   "answer": {
+    "value": [
+     "7.5"
+    ],
+    "text": "7.5 minutes (7 1/2)"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Pretend the job has 60 pages. How many pages a minute for each?",
+   "explanation": "Pretend the job has 60 pages (a number that 12 and 20 both go into). P prints 60 ÷ 12 = 5 pages a minute. Q prints 60 ÷ 20 = 3 pages a minute. Together: 8 pages a minute. 60 ÷ 8 = 7.5 minutes."
+  },
+  {
+   "id": "L5U06-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "4 printers print 480 sheets in 6 minutes. All the printers work at the same rate. How many sheets do 6 printers print in 5 minutes? {b}",
+   "answer": {
+    "value": [
+     "600"
+    ],
+    "text": "600 sheets"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Find the sheets for 1 printer in 1 minute first.",
+   "explanation": "4 printers print 480 sheets in 6 minutes, so 1 printer in 6 minutes prints 480 ÷ 4 = 120 sheets. In 1 minute 1 printer prints 120 ÷ 6 = 20 sheets. 6 printers in 5 minutes: 6 × 5 × 20 = 600 sheets."
+  },
+  {
+   "id": "L5U06-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: Average rate\nA tank holds 120 litres. The first 60 litres go in at 6 litres a minute and the second 60 litres at 12 litres a minute. Average rate = total litres ÷ total minutes. Find the average rate for the whole tank. {b} litres a minute",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 litres a minute"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Find the minutes for each half first. Then add the minutes.",
+   "explanation": "First half: 60 ÷ 6 = 10 minutes. Second half: 60 ÷ 12 = 5 minutes. The whole tank takes 15 minutes. The average rate is 120 ÷ 15 = 8 litres a minute. It is not (6 + 12) ÷ 2 = 9, because more time is spent at the slow rate."
+  },
+  {
+   "id": "L5U06-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Tank A has 90 litres. A pump takes 5 litres out of it each minute. Tank B has 10 litres. A tap puts 3 litres into it each minute. After how many minutes do the 2 tanks have the same amount of water? {b} minutes",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10 minutes (40 litres each)"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "How many litres does the gap between the tanks close each minute?",
+   "explanation": "At first A has 80 litres more than B. Each minute A loses 5 and B gains 3, so the gap closes by 8 litres. 80 ÷ 8 = 10 minutes. Then A has 90 - 50 = 40 litres and B has 10 + 30 = 40 litres."
+  },
+  {
+   "id": "L5U06-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Tap A fills 8 litres a minute. Tap B fills 12 litres a minute. Tap A is turned on at the start. Tap B is turned on 5 minutes later. How many minutes after the start is a 200 litre tank full? {b} minutes",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 minutes"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "How many litres has tap A put in before tap B starts?",
+   "explanation": "In the first 5 minutes tap A puts in 5 × 8 = 40 litres. 200 - 40 = 160 litres are left. Together the taps put in 8 + 12 = 20 litres a minute. 160 ÷ 20 = 8 more minutes. The tank is full 5 + 8 = 13 minutes after the start."
+  },
+  {
+   "id": "L5U06-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A copier makes 54 copies in 3 minutes. How many in 8 minutes? {b}",
+   "answer": {
+    "value": [
+     "144"
+    ],
+    "text": "144 copies"
+   },
+   "explanation": "54 ÷ 3 = 18 copies in 1 minute. 8 × 18 = 144 copies."
+  },
+  {
+   "id": "L5U06-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "5 mangoes cost $4.00. 8 mangoes cost $6.00.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The better buy is   {circ:5 mangoes|8 mangoes}",
+     "answer": {
+      "value": [
+       "8 mangoes"
+      ],
+      "text": "8 mangoes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It costs $ {b} for 1 mango.",
+     "answer": {
+      "value": [
+       "0.75"
+      ],
+      "text": "0.75"
+     }
+    }
+   ],
+   "explanation": "5 mangoes: $4.00 ÷ 5 = $0.80 each. 8 mangoes: $6.00 ÷ 8 = $0.75 each. $0.75 is less, so 8 mangoes is the better buy.",
+   "partsrow": true
+  },
+  {
+   "id": "L5U06-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Tap A fills 9 litres a minute, tap B fills 11 and a leak loses 4. All 3 work together. Find the time to fill 160 litres. {b} min",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10 minutes"
+   },
+   "explanation": "The tank gains 9 + 11 - 4 = 16 litres each minute. 160 ÷ 16 = 10 minutes."
+  },
+  {
+   "id": "L5U06-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Parking: $1.50 for the first hour, then $0.60 for each extra 30 minutes (a part counts as a whole one). How much for 2 hours 45 minutes? $ {b}",
+   "answer": {
+    "value": [
+     "3.90"
+    ],
+    "text": "$3.90"
+   },
+   "explanation": "The first hour is $1.50. 1 hour 45 minutes is left: 3 full half hours and 15 minutes more, so 4 lots. 4 × $0.60 = $2.40. Total: $1.50 + $2.40 = $3.90."
+  }
+ ]
+}

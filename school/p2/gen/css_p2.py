@@ -2,7 +2,7 @@
 CSS_P2 = """
 /* ---- Primary 2 pages ---- */
 .ab.w3{width:23mm}.ab.w4{width:30mm}.ab.w5{width:38mm}
-.qg{display:grid;gap:3.5mm 5mm}.qg.c1{grid-template-columns:1fr}.qg.c2{grid-template-columns:1fr 1fr}.qg.c3{grid-template-columns:1fr 1fr 1fr}
+.qg{display:grid;gap:3.5mm 5mm}.qg.c1{grid-template-columns:1fr}.qg.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.qg.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .qc{border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm;display:flex;flex-direction:column;gap:1.5mm;justify-content:space-between}
 .qc .qh{display:flex;align-items:flex-start;gap:2.5mm}.qc .qt{flex:1;font-size:13.5pt;line-height:1.22}.qc .qt p{margin:0}
 .qc .qa{display:flex;align-items:center;justify-content:flex-end;gap:2mm;font-size:14pt}
@@ -31,4 +31,21 @@ CSS_P2 = """
 .qc{position:relative}.qc.pos .no{position:absolute;left:2mm;top:2mm}.qc.pos .qh{justify-content:center}
 .clk svg{width:47mm;height:47mm}
 .qc.inl{padding:1mm 3mm}
+/* domino maze (words over numerals) */
+.dm{display:flex;flex-direction:column;align-items:center;gap:1.2mm;width:100%}
+.dm .dw{font-family:'Nunito Sans';font-weight:800;font-size:11pt;line-height:1.1;text-align:center;padding:0 1mm}
+.dm .dl{width:80%;border-top:0.4mm solid #000;height:0}
+.dm .dn{font-family:'Fredoka';font-weight:600;font-size:22pt}
+/* digit cards */
+.dcards{display:flex;gap:2mm;justify-content:center;margin-bottom:1.5mm}
+.dcard{width:11.5mm;height:17mm;border:0.6mm solid #000;border-radius:1.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:24pt}
+/* number sequences */
+.sqrows{display:flex;flex-direction:column;gap:3.2mm}
+.sqrows .srow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.seq{display:flex;gap:2mm;align-items:center}.seq .sq{width:20mm;height:13mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:18pt}
+.seq .ab.w3{width:20mm;height:13mm}
+/* fractions */
+.fans{display:flex;flex-direction:column;align-items:center;gap:0}.fans .ab.w2{width:15mm;height:12mm}.fans .fline{width:17mm;border-top:0.7mm solid #000;height:0;margin:0.6mm 0}
+.ffig{display:flex;justify-content:center;align-items:center;min-height:30mm}.ffig svg{max-width:none}
+.ct .fr{font-size:11pt;margin-right:0.5mm}
 """
