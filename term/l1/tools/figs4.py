@@ -186,9 +186,77 @@ def jump_lines(start=0, end=100, step=1, label_every=10, rows=None, room=True, w
     return (f'<svg viewBox="0 0 {width} {y}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line from {start} to {end}" style="width:100%;height:auto;display:block">{"".join(P)}</svg>')
 
 
+# ------------------------------------------------------------------ balance
+
+def _bal_items(items, isz):
+    """Measure the pieces on one pan: returns (list of (kind, spec, w, h), total width). A piece: {'icon':'button','n':6}, {'text':'5'}, {'blank':True} or a plain number/str."""
+    out = []
+    for it in items:
+        if not isinstance(it, dict): it = {'text': str(it)}
+        if it.get('icon'):
+            n = it.get('n', 1); cols = it.get('cols') or min(n, 3 if n > 4 else n); rows = -(-n // cols)
+            out.append(('icons', it, cols * (isz + 4), rows * (isz + 4)))
+        elif it.get('blank'):
+            out.append(('blank', it, it.get('w', 150), 90))
+        else:
+            out.append(('text', it, 78 if len(str(it['text'])) <= 2 else 28 * len(str(it['text'])) + 24, 64))
+    return out
+
+
+def balance(left=None, right=None, tilt='level', width=1000, icon_size=44):
+    """A pan balance. left / right = lists of pieces on each pan: {'icon': 'button', 'n': 6} a group of pictures, {'text': '5'} a number tile ('?' is a plain tile),
+    {'blank': True} a dashed empty place for the child to draw in. tilt: 'level', 'left' (left pan lower = heavier) or 'right'."""
+    cx = width / 2; L = 290
+    ang = {'level': 0, 'left': 7, 'right': -7}[tilt]
+    ey_off = L * math.sin(math.radians(ang)); ex_off = L * math.cos(math.radians(ang))
+    by = 120                                     # beam pivot y
+    P = []
+    P.append(f'<polygon points="{cx - 70},{by + 250} {cx + 70},{by + 250} {cx},{by + 14}" {_o("#C9D2E3")}/>')
+    P.append(f'<line x1="{cx - ex_off:.1f}" y1="{by + ey_off:.1f}" x2="{cx + ex_off:.1f}" y2="{by - ey_off:.1f}" stroke="{NAVY}" stroke-width="14" stroke-linecap="round"/>')
+    P.append(f'<circle cx="{cx}" cy="{by}" r="16" {_o(YEL)}/>')
+    isz = icon_size
+    for side, items in ((-1, left or []), (1, right or [])):
+        ex = cx + side * ex_off; ey = by + side * (-1) * (-ey_off) if False else (by + ey_off if side < 0 else by - ey_off)
+        py = ey + 190                            # pan rim y
+        pw = 300
+        P.append(f'<path d="M{ex:.1f} {ey:.1f} L{ex - pw / 2:.1f} {py:.1f} M{ex:.1f} {ey:.1f} L{ex + pw / 2:.1f} {py:.1f}" stroke="{NAVY}" stroke-width="3.4" fill="none"/>')
+        P.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="8" {_o(YEL)}/>')
+        pcs = _bal_items(items, isz)
+        plus_after = {id(a[1]): (a[0] == 'text' and b[0] == 'text') for a, b in zip(pcs, pcs[1:])}
+        gap = 34
+        tw = sum(w for _, _, w, _ in pcs) + gap * max(0, len(pcs) - 1)
+        sc = min(1.0, (pw - 30) / tw) if tw else 1.0
+        x = ex - tw * sc / 2
+        for kind, it, w, h in pcs:
+            wc = w * sc; hc = h * sc
+            y1 = py - 6 - hc
+            if kind == 'icons':
+                n = it.get('n', 1); cols = it.get('cols') or min(n, 3 if n > 4 else n)
+                for k in range(n):
+                    r_, c_ = divmod(k, cols)
+                    P.append(icon(it['icon'], x + (c_ + .5) * (isz + 4) * sc, y1 + (r_ + .5) * (isz + 4) * sc, isz * sc))
+            elif kind == 'blank':
+                P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="3" stroke-dasharray="9 7"/>')
+            else:
+                t = str(it['text'])
+                if t == '?':
+                    P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/><text x="{x + wc / 2:.1f}" y="{y1 + hc * 0.72:.1f}" font-size="{44 * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">?</text>')
+                else:
+                    P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" {_o(YEL)}/><text x="{x + wc / 2:.1f}" y="{y1 + hc * 0.7:.1f}" font-size="{(40 if len(t) <= 2 else 28) * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
+            x += wc + gap * sc
+            if kind == 'text' and plus_after.get(id(it)):
+                P.append(f'<text x="{x - gap * sc / 2:.1f}" y="{y1 + hc * 0.68:.1f}" font-size="{40 * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">+</text>')
+        P.append(f'<path d="M{ex - pw / 2 - 8:.1f} {py:.1f} H{ex + pw / 2 + 8:.1f} C{ex + pw / 2:.1f} {py + 40:.1f} {ex - pw / 2:.1f} {py + 40:.1f} {ex - pw / 2 - 8:.1f} {py:.1f} Z" {_o("#fff")}/>')
+    H = by + 250 + 30
+    P.insert(0, f'<rect x="{cx - 110}" y="{by + 246}" width="220" height="16" rx="6" {_o("#C9D2E3")}/>')
+    return f'<svg viewBox="0 0 {width} {H + 20}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pan balance" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
+
+
 def render(v):
     """Dispatch for the new figure types; None if v['type'] is not one of them (called first from figs2.render)."""
     t = v['type']
     if t == 'jump_lines':
         return jump_lines(v.get('start', 0), v.get('end', 100), v.get('step', 1), v.get('label_every', 10), v.get('rows'), v.get('room', True))
+    if t == 'balance':
+        return balance(v.get('left'), v.get('right'), v.get('tilt', 'level'))
     return None
