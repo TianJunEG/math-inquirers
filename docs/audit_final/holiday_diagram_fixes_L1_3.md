@@ -22,7 +22,7 @@ Question wording was changed only where the figure needed it (listed below). Eve
 |---|---|---|---|---|---|---|
 | 1 | 58 | 61 | 64 | 68 | 32 | 34 |
 | 2 | 62 | 66 | 70 | 74 | 35 | 37 |
-| 3 | 58 | 62 | 64 | 68 | 32 | 34 |
+| 3 | 58 | 63 | 64 | 70 | 32 | 35 |
 
 `outputs/print/print_spec.json` was updated for these three levels (all counts are even; blank pages: 7 / 8 / 6).
 The increases are real: the new figures are taller than the one-line answers they replace and the "Start here" pages were already full. Where a page break was forced (`pb`) I removed it only when that let the page count stay the same.
@@ -136,3 +136,22 @@ Tutor guides: not rebuilt on purpose. I searched the guide sources and PDFs for 
 Not updated (out of scope): the Level 1 Word workbook `hp/workbook.js` / `P1_Holiday_Program_Student_Workbook.docx` still has the old figures and the old No.3 / No.4 wording.
 
 Page-count documents updated to 68 / 74 / 68 print pages (34 / 37 / 34 sheets): `docs/printing/quote_request.md`, `docs/holiday_readiness.md` (Level 1: 61-page workbook, 68 print; Level 3: 62-page workbook), `docs/product/face_to_face_pilot_plan.md` (Level 1 print file, cut-out source pages 56-61). Older audit notes that quote 64 / 70 / 64 are history and were left as they are.
+
+## Third pass: fixes from the independent review (`holiday_diagram_review_L1_3.md`)
+
+All High and Medium items fixed. Page counts after this pass: workbooks 61 / 66 / 63; print files 68 / 74 / 70 pages (34 / 37 / 35 sheets, blank pages 7 / 8 / 7). **Level 3 changed: 68 -> 70 print pages (one more source page: the L7 No.6 grids are now 6.9 mm per cell).** `docs/printing/quote_request.md` and `docs/holiday_readiness.md` updated; `print_spec.json` and `bw_spec.json` rows rewritten; check_bw.py ok (non-grey 0.00000).
+
+High:
+- H1 L1 L3 T1 key box widened (half star and "= 1 child" fit).
+- H2 L3 L10 No.1: the Lime juice placeholder is now only a short dashed base with "?" above the axis (no top edge, so the answer 50 is neither shown nor contradicted; the instruction said "stop at 50", but any drawn height would hand over the answer).
+- H3 L3 L10 No.5: captions now "1 square / 2 squares / 3 squares" at about 11 pt, not clipped.
+- H4 L3 L9 No.5: (b) second hop ends at an unlabelled "?" tick 25 minutes after 5:00 (two hops of 25 minutes = the 50-minute lesson); (c) the line now starts at 7:00, so the answer 7:25 pm sits on it.
+- H5 L2 L7 No.3: all fraction bars printed unshaded (equal length, parts marked).
+- H6 L3 L9 C5: top margin added, brace label no longer cut.
+Medium:
+- L2 L9 balances (No.1, T1, T3, C6) redrawn: bigger viewBox, scales spaced apart, items sit under the beam, captions complete, weight labels 14 units (about 10 pt); No.1 is now three scales in one row with names under each pan. C7 and T2 time lines have room for "8:15 am" and the "? min" labels.
+- L2 L6 T1 row label no longer clipped; L5 No.3 / No.4 bars drawn at full width (labels about 10 pt); L3 hens spaced; L3 T1 bicycle captions bigger; L8 No.4b grid darker.
+- L2 L6 tutor guide: take-home page references now "Page 1: Q1 last row; Page 2: Q2(b) and Q3(b); Page 3: Q4(b)"; the Level 2 guide was rebuilt (112 pages, unchanged) and the weekly zip too.
+- L1: Venn loops bigger (overlap about 24 mm), house flag and sun bigger (house.png and venn.png redrawn), queue "front" label moved, pet icons spaced.
+- L3: L5 No.1 counters no longer sliced; L9 T3 box segment now 1.25 books wide (to scale); 24-hour strip "pm" label in a white box; L4 No.5 "?" moved off the dashed line; L10 No.3 queue (a) label moved off the connector and (b) ordinals removed; L8 No.2 shapes A-D drawn 1.5x; staircase captions 18 units; L4 bar labels 20 units; L7 No.6 grids 6.9 mm per cell (costs one page).
+Not done (Medium, cost): the nearly empty pages (Level 3 L4 T4, L8 No.3, L9 No.6, L10 No.6; Level 2 L1 No.6, L2 No.6, L5 T4, L9 T4): the questions cannot fold up without cutting figures or lines, and each fix would cost the child writing space. Level 1 L8 No.1 and L6 T5 tags remain as listed above.
