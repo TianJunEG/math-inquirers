@@ -59,9 +59,9 @@ html, body { background: var(--paper); color: var(--ink); font-family: 'Liberati
 .draw span { position:absolute; left:4mm; top:1.8mm; font-size:10.5pt }
 .stuck { border:0.6mm solid var(--ink); border-radius:3mm; background:var(--tint); padding:2.6mm 4mm 3mm; margin-top:3.6mm }
 .stuck .lab { font-size:14pt; font-weight:800 }
-.steps { display:flex; flex-direction:column; gap:1.5mm; margin-top:1.8mm }
+.steps { display:flex; flex-direction:column; gap:2.2mm; margin-top:2.4mm }
 .step { display:flex; align-items:center; gap:3mm; font-size:14pt; font-weight:800 }
-.step i { font-style:normal; flex:none; width:6.4mm; height:6.4mm; line-height:5.4mm; text-align:center; border:0.5mm solid var(--ink); border-radius:50%; background:var(--paper); font-size:11pt }
+.step i { font-style:normal; flex:none; width:3.2mm; height:3.2mm; border-radius:50%; background:var(--ink) }
 .spacer { flex:1 }
 .pub { font-size:9pt; text-align:center; margin-top:2mm }
 """
@@ -94,7 +94,7 @@ def back(band, bw):
     qhtml = ''.join(f'<div class="q"><div class="n">{n}</div><div class="t">{E(p[n-1])}</div></div>' for n in (1, 2, 3))
     cap = {'A': 'Draw or write one word.'}.get(band, 'I checked by ...')
     ages = AGES[band][0]
-    steps = ''.join(f'<div class="step"><i>{i}</i>{E(w)}</div>' for i, w in enumerate(STUCK_STEPS, 1))
+    steps = ''.join(f'<div class="step"><i></i>{E(w)}</div>' for i, w in enumerate(STUCK_STEPS, 1))
     return (f'<section class="page"><div class="top"><div><h1>Look back</h1><div class="sub">Toolbox Card</div></div>'
             f'<div class="age"><span>AGES</span><b>{ages}</b></div></div>'
             f'<div class="intro">{E(lb["intro"])}</div><div class="qs">{qhtml}</div>'
@@ -105,7 +105,7 @@ def back(band, bw):
 
 def page_html(band, bw):
     qpt = {'A': 13, 'B': 12.5, 'C': 12}[band]
-    drawh = {'A': 34, 'B': 30, 'C': 24}[band]
+    drawh = {'A': 48, 'B': 40, 'C': 34}[band]
     css = CSS.replace("QPT", str(qpt)).replace("DRAWH", str(drawh))
     return (f'<!doctype html><html><head><meta charset="utf-8"><title>Toolbox Card {band}</title><style>{css}</style></head>'
             f'<body class="{"bw" if bw else "col"}">{front(band, bw)}{back(band, bw)}</body></html>')
@@ -119,7 +119,7 @@ def render(pw, html_text, path):
     b.close()
 
 
-def to_1bit(src_pdf, dst_pdf, dpi=600):
+def to_1bit(src_pdf, dst_pdf, dpi=600, title='Toolbox Card'):
     import fitz
     from PIL import Image
     doc = fitz.open(src_pdf)
@@ -128,7 +128,7 @@ def to_1bit(src_pdf, dst_pdf, dpi=600):
         pm = pg.get_pixmap(matrix=fitz.Matrix(dpi / 72, dpi / 72), colorspace=fitz.csGRAY, alpha=False)
         im = Image.frombytes('L', (pm.width, pm.height), pm.samples)
         imgs.append(im.point(lambda v: 0 if v < 140 else 255).convert('1'))
-    imgs[0].save(dst_pdf, 'PDF', resolution=dpi, save_all=True, append_images=imgs[1:])
+    imgs[0].save(dst_pdf, 'PDF', resolution=dpi, save_all=True, append_images=imgs[1:], title=title, author='Math Inquirers')
     doc.close()
 
 
@@ -146,7 +146,7 @@ def main():
             render(pw, page_html(band, False), os.path.join(OUT, stem + '_SCREEN_colour.pdf'))
             tmp = os.path.join(a.tmp, stem + '_vec.pdf')
             render(pw, page_html(band, True), tmp)
-            to_1bit(tmp, os.path.join(OUT, stem + '_PRINT_BW.pdf'))
+            to_1bit(tmp, os.path.join(OUT, stem + '_PRINT_BW.pdf'), title=f'Toolbox Card {band} (ages {AGES[band][0]}) print')
             os.remove(tmp)
             print('built', stem)
     try:
