@@ -7,7 +7,7 @@ const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align
 const W = [];
 const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
 const LEVEL = 5;
-const COMPACT = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const COMPACT = new Set([]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
 const hdr = (n, topic, title, pb = true, first = false) => {   // first = the lesson's "Start here" page: it carries the strategy card
   const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
   const compact = first && COMPACT.has(n);

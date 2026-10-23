@@ -11,7 +11,7 @@ const FASTPTR = n => '<span style="float:right;font-size:11px;line-height:1.2;fo
 const SB3 = { 1: 'L1_Sequence_Tester.sb3', 2: 'L2_Prime_Checker.sb3', 3: 'L3_Below_Zero.sb3', 4: 'L4_Function_Machine.sb3', 5: 'L5_Every_Order.sb3', 6: 'L6_Chance_Lab.sb3', 7: 'L7_Turtle_Start.sb3', 8: 'L8_Code_Machine.sb3', 9: 'L9_Mean_Machine.sb3', 10: 'starters L10A to L10D (pick one)' };
 const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
 const LEVEL = 6;
-const COMPACT = new Set([]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const COMPACT = new Set([1, 2, 3, 6, 7, 8, 9]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
 const hdr = (n, topic, title, pb = true, fast = false, file = '') => {   // fast = the lesson's "Start here" page (it carries the strategy card)
   const first = fast;
   const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';

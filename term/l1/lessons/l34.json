@@ -1908,7 +1908,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 60
+     "size": 50
     }
    },
    {
@@ -1952,18 +1952,18 @@
       ]
      ],
      "mode": "iso",
-     "size": 60
+     "size": 50
     }
    },
    {
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Which top view matches this stack? Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
+    "text": "Which top view matches this stack?",
     "parts": [
      {
       "l": "",
-      "text": "Circle A, B or C.",
+      "text": "Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Circle A, B or C.",
       "ans": "B",
       "val": "B",
       "choices": [
@@ -2013,7 +2013,7 @@
        ]
       ],
       "mode": "top",
-      "size": 42,
+      "size": 40,
       "tag": "A"
      },
      {
@@ -2029,7 +2029,7 @@
        ]
       ],
       "mode": "top",
-      "size": 42,
+      "size": 40,
       "tag": "B"
      },
      {
@@ -2045,7 +2045,7 @@
        ]
       ],
       "mode": "top",
-      "size": 42,
+      "size": 40,
       "tag": "C"
      }
     ]
