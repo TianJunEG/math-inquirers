@@ -73,3 +73,6 @@ Owner asked (22 Oct) that every lesson contains something beyond the syllabus fo
 
 ## 23 Oct 2026: prices on hold
 Owner: hold the school puzzle book price points for now. The SGD bands in docs/school_books/pricing_research.md (S$89 per level licence, S$349 bundle, S$3.50 printed copy, S$15 physical / S$8 PDF home workbook) are inferred placeholders, NOT decisions. Do not put any price on a page, website or quote until the owner decides.
+
+## 23 Oct 2026: Term 3-4 defaults updated from Primary 1 school papers (assistant-chosen; owner may change)
+Source: docs/books/p1_school_paper_patterns.md (32 PDFs, about 38 tests, 17 schools, 2018-2024 from the owner's Drive folder "P1 Math"; the folder has about 107 PDFs, only 32 read; pictures lost in OCR). Changes to pre-flight defaults: (D2) money is written with the cent sign 50¢ (never "50c", never $1.50 in Start here); $1 = 100¢ stories are P1; "fewest coins and notes" is a real P1 item; no $20 note. (D5) Start here time wording = "o'clock" and "half past" only, times to 5 minutes as digits with am/pm; "quarter past/to" and "ten past" only at Think harder or beyond-syllabus items; half-hour and 1-hour durations including find-the-start are P1. Picture graphs: always 1 picture = 1 (scales beyond 1:1 only as beyond-syllabus item). No paper evidence for lessons 27 and 30-35 (wording marked unverified).
