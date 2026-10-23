@@ -21,7 +21,7 @@ def only(xs):
 
 @check('L3U10-L01')
 def _():
-    front, back = 2, 7
+    front, back = 3, 9
     line = [None] * (front + back - 1)
     return s([len(line)])
 

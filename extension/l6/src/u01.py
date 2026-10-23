@@ -53,7 +53,7 @@ I.append(IT(U, 'S', 3, 1,
                    P('b', 'Is 205 a term?  {circ:Yes|No}', ['No']),
                    P('c', 'The 60th term is {b}.', [302])]))
 I.append(IT(U, 'S', 4, 1,
-            'Trace the code. The sprite says x first, then changes it. Fill in the trace table.',
+            'Trace the code. The sprite says x first, then changes it. Fill in the trace table. The key to the code blocks is on page 27.',
             'Loop 1: it says 3, then x becomes 9. Loop 2: says 9, x becomes 15. Loop 3: says 15, x becomes 21. Loop 4: says 21, x becomes 27. '
             'The last number said is 21 but x ends as 27. With repeat 50 it says the 1st term, then 49 jumps later it says 3 + 49 × 6 = 297.',
             fig=code([HAT, ['var', 'set x to (3)'], ['ctl', 'repeat (4)', [['look', 'say (x) for (1) seconds'], ['var', 'change x by (6)']]]],

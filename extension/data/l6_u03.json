@@ -40,7 +40,7 @@
    },
    "steps": [
     "Start at −8. Rising moves right: 5 steps to −3.",
-    "Falling moves left. From −3, 3 steps reach 0, then 6 more steps.",
+    "Falling moves left. From −3, move 9 steps left to −12. This jump does not cross 0.",
     "The thermometer reads −12 °C.",
     "Check by adding: −8 + 5 − 9 = −12."
    ],
@@ -584,12 +584,12 @@
   {
    "id": "L6U03-S10",
    "tier": "start",
-   "text": "Heights are measured from sea level, 0 m. A cave is at −35 m, a cliff top is at 48 m and a boat is at −6 m.",
+   "text": "In a card game, scores can go below 0. Ali has −35 points, Ben has 48 points and Cy has −6 points.",
    "page": 3,
    "parts": [
     {
      "label": "a",
-     "text": "The cliff top is {b} m above the cave.",
+     "text": "Ben is {b} points ahead of Ali.",
      "answer": {
       "value": [
        "83"
@@ -599,7 +599,7 @@
     },
     {
      "label": "b",
-     "text": "The boat is {b} m above the cave.",
+     "text": "Cy is {b} points ahead of Ali.",
      "answer": {
       "value": [
        "29"
@@ -609,7 +609,7 @@
     },
     {
      "label": "c",
-     "text": "A bird is 12 m above the cliff top. It is at {b} m.",
+     "text": "Ben wins a round and gets 12 more points. He has {b} points.",
      "answer": {
       "value": [
        "60"
@@ -618,7 +618,7 @@
      }
     }
    ],
-   "explanation": "(a) From −35 up to 0 is 35, then 48 more: 83 m. (b) From −35 up to −6 is 29 m. (c) 48 + 12 = 60 m."
+   "explanation": "(a) From −35 up to 0 is 35, then 48 more: 83 points. (b) From −35 up to −6 is 29 points. (c) 48 + 12 = 60 points."
   },
   {
    "id": "L6U03-T01",

@@ -71,9 +71,9 @@ S.append(item(U+'-S10', 'start', 3, 'Each pizza is cut into 8 slices. The childr
          P('b', 'How many slices are in 5 whole pizzas? {b} slices', A(40)),
          P('c', 'How many more slices make 4 whole pizzas? {b} slices', A(5))],
   why='(a) 27 ÷ 8 = 3 remainder 3, so 3 3/8 pizzas. (b) 5 × 8 = 40. (c) 4 pizzas are 32 slices, and 32 − 27 = 5.'))
-S.append(item(U+'-S11', 'start', 3, 'A rope is 2 2/3 m long. It is cut into pieces that are each 1/3 m long.',
-  parts=[P('a', 'How many pieces are there? {b} pieces', A(8)), P('b', 'Siti uses 5 pieces. How much rope is left? {b} m', A(1))],
-  why='Each metre has 3 thirds. 2 2/3 m is 8 thirds, so there are 8 pieces. After 5 pieces, 3 pieces are left, and 3 thirds make 1 m.',
+S.append(item(U+'-S11', 'start', 3, 'A jug holds 2 1/2 litres of juice. Each cup holds 1/4 litre.',
+  parts=[P('a', 'How many cups can a full jug fill? {b} cups', A(10)), P('b', 'Ravi fills 6 cups. How much juice is left? {b} litre', A(1))],
+  why='Each litre has 4 quarters. 2 1/2 litres is 10 quarters, so 10 cups. After 6 cups, 4 quarters are left, and 4 quarters make 1 litre.',
   space={'rows': ['Working:']}))
 S.append(item(U+'-S12', 'start', 3, 'Aisha has 48 stickers. Mei gets 1/4 of the stickers. Ben gets 1/3 of the stickers that are left. How many stickers does Aisha keep? {b}',
   ans=A(24), why='1/4 of 48 is 12, so she has 48 − 12 = 36 left. 1/3 of 36 is 12. Then 36 − 12 = 24 stickers.',
@@ -83,17 +83,17 @@ S.append(item(U+'-S13', 'start', 3, 'How many?',
   parts=[P('a', 'quarters in 5 wholes: {b}', A(20)), P('b', 'sixths in 3 wholes: {b}', A(18)), P('c', 'halves in 2 1/2: {b}', A(5))],
   why='(a) 5 × 4 = 20. (b) 3 × 6 = 18. (c) 2 wholes make 4 halves, and 1/2 makes 1 more half: 5 halves.'))
 
-T.append(item(U+'-T01', 'think', 4, 'Find the fraction. It has 7 on the bottom. It lies between 3 and 4, closer to 4 than to 3. Its top number is even.\n{b}/{b}',
-  ans=A(26, 7, text='26/7'), hint='List the fractions between 3 and 4. Cross out those that do not fit.',
-  why='Between 3 and 4 with denominator 7: 22/7, 23/7, 24/7, 25/7, 26/7, 27/7. Even numerators: 22, 24, 26. 3 1/2 is 24.5/7, so closer to 4 means 25/7 or more. Only 26/7 fits.',
+T.append(item(U+'-T01', 'think', 4, 'A fraction is equal to 2/3. Its top and bottom numbers add up to 35. Find the fraction.\n{b}/{b}',
+  ans=A(14, 21, text='14/21'), hint='Write 2/3, 4/6, 6/9 and so on. Add the top and bottom each time.',
+  why='The fractions equal to 2/3 are 4/6, 6/9, 8/12 and so on. Their top and bottom add up to 10, 15, 20 and so on, in fives. 35 = 7 × 5, so the fraction is 2 × 7 over 3 × 7 = 14/21.',
   space={'rows': ['List:', '', '']}))
-T.append(item(U+'-T02', 'think', 4, 'A book took 2/5 of Mei\'s money. A toy took 1/3 of her money. She has $24 left. How much money did Mei start with? ${b}',
-  ans=A(90), hint='Which number do 5 and 3 both go into?',
-  why='2/5 = 6/15 and 1/3 = 5/15, so she spent 11/15. 4/15 is left. 4 units = $24, so 1 unit = $6 and 15 units = $90.',
+T.append(item(U+'-T02', 'think', 4, 'A team scored some goals. Ali scored 2/5 of them and Ben scored 1/4 of them. Kumar scored the other 21 goals. How many goals did the team score? {b}',
+  ans=A(60), hint='Which number do 5 and 4 both go into?',
+  why='2/5 = 8/20 and 1/4 = 5/20, so Ali and Ben scored 13/20. Kumar scored 7/20. 7 units = 21, so 1 unit = 3 and 20 units = 60 goals.',
   space={'rows': ['Draw a bar model here.', '', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Siti reads 1/3 of a book on Monday, then 3/4 of the pages that remain on Tuesday. 20 pages are still unread. How long is the book? {b} pages',
-  ans=A(120), hint='After Monday, 2/3 of the book is left. 1/4 of that is 20 pages.',
-  why='After Monday, 2/3 of the book is left. On Tuesday she reads 3/4 of that, so 1/4 of it is left. 1/4 of 2/3 is 1/6 of the book. 1/6 = 20 pages, so the book has 6 × 20 = 120 pages.',
+T.append(item(U+'-T03', 'think', 4, 'In a class, 1/3 of the children are boys. 3/4 of the girls wear glasses. 18 girls wear glasses. How many children are in the class? {b}',
+  ans=A(36), hint='The girls are 2/3 of the class. Find 3/4 of 2/3.',
+  why='The girls are 2/3 of the class. 3/4 of 2/3 is 6/12 = 1/2 of the class. 1/2 of the class is 18, so the class has 2 × 18 = 36 children.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Think about fractions with denominator 20 that are greater than 1/4 and less than 3/5.',

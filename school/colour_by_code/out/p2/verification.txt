@@ -47,10 +47,10 @@ PASS  bank frac tier 2: key has five distinct values inside the domain
 PASS  bank frac tier 2: 1112 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
 PASS  bank frac tier 2: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank money tier 1: key has five distinct values inside the domain  
-PASS  bank money tier 1: 410 sample questions each have exactly one answer in the domain, equal to the intended one (5 forms)  []
+PASS  bank money tier 1: 412 sample questions each have exactly one answer in the domain, equal to the intended one (5 forms)  []
 PASS  bank money tier 1: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank money tier 2: key has five distinct values inside the domain  
-PASS  bank money tier 2: 838 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank money tier 2: 842 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
 PASS  bank money tier 2: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank time tier 1: key has five distinct values inside the domain  
 PASS  bank time tier 1: 1375 sample questions each have exactly one answer in the domain, equal to the intended one (11 forms)  []
@@ -270,7 +270,7 @@ PASS  CBC-P2-07: single-slip detection for wrong values that do have a crayon co
 PASS  CBC-P2-07: double-slip detection by enumeration 1679/1680 = 99.9% (every pair of regions, every pair of wrong colours; needs >= 95%)  
 PASS  CBC-P2-07: swap detection 88/89 = 98.9% (two regions exchange their colours, tally unchanged; needs >= 95%)  
 PASS  CBC-P2-07: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
-PASS  CBC-P2-07: smallest pupil text 4.6 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-07: smallest pupil text 4.8 mm (>= 4.2 mm, about 12 pt)  
 PASS  CBC-P2-07: every region is at least 28 mm wide where its label sits (narrowest (37.9, 'neck_low'))  
 PASS  CBC-P2-08: pupil and teacher PDFs exist  
 PASS  CBC-P2-08: every question has exactly one answer and it is one of the five key values  []
@@ -608,17 +608,17 @@ PASS  CBC-P2-07 pupil: wording rules (no price, Mi, alignment claim, division si
 PASS  CBC-P2-07 pupil: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-07 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-P2-07 pupil: every blank box a pupil writes in is at least 6 mm wide (11 boxes, smallest 6.0 mm)  
-PASS  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
 PASS  CBC-P2-07 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.1%, needs <= 25%)  
 PASS  CBC-P2-07 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-07 pupil: all 15 regions stay separate white areas in the 1-bit render (35 large white areas incl. background and boxes)  
-PASS  CBC-P2-07 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, body_ll; needs <= 40%)  
+PASS  CBC-P2-07 pupil: every label keeps its ink in the 1-bit render (worst 19% lost, body_ll; needs <= 40%)  
 PASS  CBC-P2-07 teacher: one A4 page  
 PASS  CBC-P2-07 teacher: fonts embedded  3 fonts
 PASS  CBC-P2-07 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
 PASS  CBC-P2-07 teacher: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-07 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
-PASS  CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
 PASS  CBC-P2-07 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.9%, needs <= 25%)  
 PASS  CBC-P2-07 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-07 teacher: all 15 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  

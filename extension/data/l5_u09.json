@@ -102,7 +102,7 @@
    "lines": [
     "Suppose all are the cheaper kind.",
     "Find how far short the total is.",
-    "Divide by the price difference."
+    "Divide by the difference in value."
    ]
   },
   "tight": true,
@@ -508,7 +508,7 @@
    "id": "L5U09-S05",
    "tier": "start",
    "page": 2,
-   "text": "Tiles make U shapes. The bottom row of figure 1 has 3 tiles and a tile above each end. Each new figure has a bottom row 1 tile longer. Its two sides are 1 tile taller.",
+   "text": "Tiles make U shapes. The bottom row of figure 1 has 3 tiles and a tile above each end. Each new figure has a bottom row 1 tile longer. Its 2 sides are 1 tile taller.",
    "figure": {
     "type": "l5_pat",
     "mm": 8,
@@ -1045,7 +1045,7 @@
      ""
     ]
    },
-   "hint": "Suppose all are 10¢ coins. How many cents short is that?",
+   "hint": "Start by supposing all the coins are the same kind.",
    "explanation": "All 10¢: $2.40, which is $5.40 short. Each $1 coin adds 90¢. 540 ÷ 90 = 6 coins."
   },
   {

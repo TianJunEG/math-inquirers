@@ -121,8 +121,8 @@ u.T('Lines from a point O make angles. 2 lines give 1 angle, 3 lines give 3 angl
     why='With 5 lines there are 4 small angles. Then 3 angles made of 2 small angles, 2 made of 3, and 1 made of 4. 4 + 3 + 2 + 1 = 10. With 7 lines the small angles are 6: 6 + 5 + 4 + 3 + 2 + 1 = 21.')
 u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it reach the bottom row of dots.', parts=[
     P('a', 'Your line reaches the bottom row at   {circ:P|Q|R|S}', A('R'))],
-    figure={'type': 'l3_segs', 'k': 44, 'pad': 40, 'width_mm': 64, 'dots': [7, 7], 'segs': [[0, 2, 4, 4]],
-            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -26, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 26}, {'x': 2, 'y': 6, 't': 'C', 'dy': -34},
+    figure={'type': 'l3_segs', 'k': 44, 'pad': 52, 'width_mm': 70, 'dots': [7, 7], 'segs': [[0, 2, 4, 4]],
+            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -26, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 26}, {'x': 2, 'y': 6, 't': 'C', 'dy': -32},
                        {'x': 2, 'y': 0, 't': 'P', 'dy': 40}, {'x': 4, 'y': 0, 't': 'Q', 'dy': 40}, {'x': 5, 'y': 0, 't': 'R', 'dy': 40}, {'x': 6, 'y': 0, 't': 'S', 'dy': 40}]},
     figside=True,
     hint='AB goes 2 across and 1 up. Turn it a quarter turn.',

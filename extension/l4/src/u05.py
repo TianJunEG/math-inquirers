@@ -58,14 +58,14 @@ S.append(item(U+'-S07', 'start', 2, 'Round 6.847.',
 S.append(item(U+'-S08', 'start', 2, 'Ali buys a ruler for $1.85 and a notebook for $2.40. He pays with a $5 note. How much change does he get? ${b}',
   ans=A('0.75'), why='$1.85 + $2.40 = $4.25. $5.00 − $4.25 = $0.75, which is 75¢.',
   space={'rows': ['Working:', '']}))
-S.append(item(U+'-S09', 'start', 3, 'Ravi and Kumar have $12.60 altogether. Ravi has $2.40 more than Kumar.',
-  fig=BARS([{'label': 'Kumar', 'segs': [{'u': 2}]}, {'label': 'Ravi', 'segs': [{'u': 2}, {'u': 1.5, 'k': 'q', 't': '$2.40'}]}], vbrace={'text': '$12.60'}, width_mm=120, unit=52, row_h=38, gap=14),
-  parts=[P('a', 'Kumar has ${b}', A('5.10')), P('b', 'Ravi has ${b}', A('7.50'))], partsrow=True,
-  why='Take away the extra $2.40: $12.60 − $2.40 = $10.20. Two equal parts are $10.20, so Kumar has $10.20 ÷ 2 = $5.10. Ravi has $5.10 + $2.40 = $7.50.'))
-S.append(item(U+'-S10', 'start', 3, 'A box holds 4 packs of rice. All the packs have the same mass. The box and packs together have a mass of 4.1 kg. The empty box has a mass of 0.5 kg.',
-  parts=[P('a', 'The 4 packs together: {b} kg', A('3.6')), P('b', 'One pack: {b} kg', A('0.9')),
-         P('c', 'Kumar takes out 1 pack. The box and packs now have a mass of {b} kg', A('3.2'))],
-  why='4.1 − 0.5 = 3.6 kg for the 4 packs. 3.6 ÷ 4 = 0.9 kg for 1 pack. After 1 pack is taken out, the mass is 4.1 − 0.9 = 3.2 kg.',
+S.append(item(U+'-S09', 'start', 3, 'Siti\'s bag and Ali\'s bag have a mass of 8.8 kg together. Ali\'s bag is 3 times as heavy as Siti\'s bag.',
+  fig=BARS([{'label': 'Siti', 'segs': [{'u': 1}]}, {'label': 'Ali', 'segs': [{'u': 1}, {'u': 1}, {'u': 1}]}], vbrace={'text': '8.8 kg'}, width_mm=120, unit=40, row_h=38, gap=14),
+  parts=[P('a', 'Siti\'s bag: {b} kg', A('2.2')), P('b', 'Ali\'s bag: {b} kg', A('6.6'))], partsrow=True,
+  why='Siti\'s bag is 1 unit and Ali\'s bag is 3 units. 4 units = 8.8 kg, so 1 unit = 8.8 ÷ 4 = 2.2 kg. Ali\'s bag is 3 × 2.2 = 6.6 kg.'))
+S.append(item(U+'-S10', 'start', 3, '4 identical books have a mass of 2.8 kg. A pencil case has a mass of 0.35 kg.',
+  parts=[P('a', 'One book: {b} kg', A('0.7')), P('b', 'One book and the pencil case: {b} kg', A('1.05')),
+         P('c', '3 books and the pencil case: {b} kg', A('2.45'))],
+  why='(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg.',
   space={'rows': ['Working:']}))
 S.append(item(U+'-S11', 'start', 3, 'Find the value of each.',
   parts=[P('a', '4.7 + 2.35 = {b}', A('7.05')), P('b', '9.2 − 3.64 = {b}', A('5.56')),
@@ -91,9 +91,9 @@ T.append(item(U+'-T03', 'think', 4, 'A mug costs $2.40 more than a cup. 3 mugs a
   why='If every mug cost the same as a cup, the 5 items would cost $17.20 − 3 × $2.40 = $17.20 − $7.20 = $10.00. So a cup costs $10.00 ÷ 5 = $2.00 and a mug costs $4.40. Check: 3 × $4.40 + 2 × $2.00 = $13.20 + $4.00 = $17.20.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
-G.append(item(U+'-G01', 'go', 5, 'A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. Find the mass of the bottle when it is empty.\n{b} kg',
-  ans=A('0.24'), hint='The juice drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.',
-  why='The juice that was drunk has a mass of 1.26 − 0.58 = 0.68 kg, and that is 2 thirds of the juice. 1 third is 0.34 kg, so all the juice is 1.02 kg. The empty bottle is 1.26 − 1.02 = 0.24 kg.',
+G.append(item(U+'-G01', 'go', 5, 'A cat and a dog have a mass of 9.3 kg together. The dog and a rabbit have a mass of 8.2 kg. The cat and the rabbit have a mass of 5.9 kg. Find the mass of the rabbit.\n{b} kg',
+  ans=A('2.4'), hint='Add the 3 totals. Each animal is counted twice.',
+  why='Each animal is counted twice in 9.3 + 8.2 + 5.9 = 23.4 kg, so all three together are 11.7 kg. The rabbit is 11.7 − 9.3 = 2.4 kg.',
   space={'rows': ['Working:', '']}))
 G.append(item(U+'-G02', 'go', 5, 'Mei has 12 coins. They are all 10¢ coins and 50¢ coins. Altogether they are worth $3.60. How many 50¢ coins does she have? {b}',
   ans=A(6), hint='Suppose all 12 coins are 10¢. How much money is that?',

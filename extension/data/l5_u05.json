@@ -662,7 +662,7 @@
    "id": "L5U05-S12",
    "tier": "start",
    "page": 3,
-   "text": "A tub 45 cm long, 40 cm wide and 30 cm high is full of water. All the water is poured into an empty tank with a 60 cm × 30 cm floor. Find the depth of the water in the tank. {b} cm",
+   "text": "A tub 45 cm long, 40 cm wide and 30 cm high is full of water. All of the water goes into an empty tank. The tank floor is 60 cm × 30 cm. Find the depth of the water in the tank. {b} cm",
    "answer": {
     "value": [
      "30"
@@ -732,7 +732,7 @@
    "id": "L5U05-T01",
    "tier": "think",
    "page": 4,
-   "text": "A big cube is made of small cubes. Its outside is painted. Then it is taken apart. 64 small cubes have no paint at all. How many small cubes make the big cube? {b}",
+   "text": "A big cube is made of small cubes. Its outside is painted. Then it is taken apart. 64 of the small cubes have no paint. How many small cubes make the big cube? {b}",
    "answer": {
     "value": [
      "216"
@@ -874,7 +874,7 @@
      ""
     ]
    },
-   "hint": "Count the tunnel cubes. The middle cubes are in all 3 tunnels.",
+   "hint": "Count the cubes in one tunnel. Then think about overlap.",
    "explanation": "The cube is 216 small cubes. Each tunnel has 24. The 8 middle cubes are in all 3 tunnels, so the tunnels remove 72 - 16 = 56. 216 - 56 = 160 cm³.",
    "beyond": "Cubes with tunnels"
   },

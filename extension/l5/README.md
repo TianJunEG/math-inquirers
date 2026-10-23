@@ -1,6 +1,6 @@
 # Level 5 Extension Workbook: author notes for the audit
 
-Built 23 Oct 2026 by the Level 5 author agent with the Level 1 pipeline (`extension/tools/build.py --level 5`). Ages 10-12, self-study, answers inside the book, black-and-white print edition plus colour soft copy. No price, no MOE / GEP / SASMO claim, no tutor or class dependence. Not pushed.
+Built 23 Oct 2026 by the Level 5 author agent with the Level 1 pipeline (`extension/tools/build.py --level 5`). Ages 10-12, self-study, answers inside the book, black-and-white print edition plus colour soft copy. No price, no MOE / GEP / SASMO claim, no tutor or class dependence. Pushed to claude/great-fermi-1hv4vc.
 
 ## Files owned by Level 5
 
@@ -42,12 +42,12 @@ All type names start with `l5_` so they cannot clash with another level's plug-i
 4. Triangle area with the right height (slanting sides as decoys), same base and same height, missing base or height, composite shapes, shaded areas by taking away, outside height, grid triangles, listing base-height pairs.
 5. Cuboid volume by layers, litres and cm3, water depth and volume, water added or removed, stone displacement, packing cubes that cannot be cut, painted cubes, pouring between tanks, block standing in a tank, filling with a leak, cuboid from three face areas.
 6. Rate tables, cost of one, better buy (same number of items or cost of one), taps and printers working together with a leak, "each extra 30 minutes or part of it", two plans compared, rate from a drip, doing a job together (pretend amount).
-7. Percent from the hundred grid and bars, 10 percent / 5 percent / 1 percent building, discount then 9 percent GST on the reduced cost, percentage of a remainder, buy-2-get-1-free against a discount, the up-then-down trap, comparing marks.
+7. Percent from the hundred grid and bars, 10 percent / 5 percent / 1 percent building, discount then 9 percent GST on the reduced cost, percentage of a remainder, second-item-half-cost against a discount, the up-then-down trap, comparing marks.
 8. Angle chasing with reasons: straight line, point, vertically opposite, triangle sum, isosceles, equilateral, parallelogram, rhombus, trapezium, all cases of an isosceles triangle, reasons to circle, clock angles.
-9. Growing patterns (matchstick hexagons, plus-shaped tiles, tables and chairs, staircases, L-layers), the rule in words, far figures and backwards, number patterns, guess and check with a table, supposition (legs), marks with a penalty, adding a pattern.
+9. Growing patterns (matchstick hexagons, plus-shaped tiles (Learn), U-shaped tiles, tables and chairs, double staircases, L-layers), the rule in words, far figures and backwards, number patterns, guess and check with a table, supposition (legs), marks with a penalty, adding a pattern.
 10. Logic grids (worked example and a 4 by 4), working backwards (number and fraction versions), two numbers from a sum and a difference, counting squares and rectangles by size, who is lying, age difference, supposition, systematic listing, digit counting, worst-case thinking.
 
-No holiday question is repeated. Numbers, contexts and often the question are different even where the type is the same.
+Same skills as the holiday program, with new numbers and contexts. After the independent audit (`AUDIT.md`, H2) every item that shared a key number, name, rule or answer with a holiday item was replaced by a new story, new numbers and often a different question (for example unit 9 double staircase, unit 5 tub and tank, unit 10 race and cake puzzles). Many items are still "same type, new numbers" (class A in the audit): that is the design, and the Welcome text promises only new numbers and stories.
 
 ## Answer checks (`verify/l5_uNN_checks.py`)
 
@@ -65,7 +65,7 @@ Every item and every part has a function that recomputes the answer without read
 | Gate | Result |
 |---|---|
 | answers | 416 answers, 0 mismatches |
-| duplicates (`dup_check.py --level 5`) | 0 shared 7-word runs with the holiday program or the private source texts; the skeleton REVIEW list was read: 52 lines, all "same sentence form, new numbers" (for example the sharing question, backwards money, tank base and water depth); none is a reworded holiday question |
+| duplicates (`dup_check.py --level 5`) | 0 shared 7-word runs with the holiday program or the private source texts; the skeleton REVIEW list was read: 52 lines, all "same sentence form, new numbers" (for example the sharing question, backwards money, tank base and water depth; the list was re-read after the audit fixes); none is a reworded holiday question |
 | wording | 0 errors |
 | black and white | print PDF: 0 colour pixels, no flat grey (the soft copy is colour) |
 | fill and overflow | every unit page between 0.85 and 1.00 of the body, no overflow |
@@ -85,10 +85,22 @@ Every item and every part has a function that recomputes the answer without read
 - Geometry, solid and pattern figures use fixed scales (`mm` per unit) so lengths on paper are proportional; labels are at least 10 pt (the figure renderer raises small text). Pattern tiles and sticks are 7 to 8 mm; chairs in the table pattern and the 1 cm grid cells in two area items are about 5 mm (a deliberate trade for page space; list in "Open points").
 - Hatching (print) replaces yellow; water is drawn with wave lines, not shading; text labels have a white halo so a label that crosses a line stays readable in print. Nothing is meant by colour alone: shaded parts are also named in the text or by letters.
 
+## Changes after the independent audit (`AUDIT.md`)
+
+- H1: the Why lines of unit 9 were shifted because the short Whys were applied before the items were renumbered; fixed in the generator (the override now runs after renumbering). All 244 Whys were re-read against their items.
+- H2: about 45 items were replaced or reframed (units 1 to 10), with new numbers, contexts and checks. Closest cases were changed first (unit 9 staircase, unit 5 container, painted cubes, tank floors, block and face areas, unit 3 Siti items, unit 6 printers and parking, unit 7 shoes and gift, unit 10 age and logic items).
+- H3: unit 9 Start here 5 is now a U-shaped pattern (rule 3 x figure + 2, figure with 98 tiles); the Learn page keeps the plus sign.
+- Learn pages: unit 9 has a supposition box, unit 8 a Reasons box with isosceles, parallelogram and trapezium facts, units 1, 2, 5 and 6 have one more box line (rounding 5, fraction of a fraction, pouring and packing, teams and leaks).
+- Answer boxes: `{bw}` is used for mixed numbers, money with cents, 14 400 and sport names.
+- Ambiguities: unit 4 base and height pairs, unit 2 mixed-number and simplest-form requests, "Read" instead of "Mark", unit 1 "do not join digits".
+- Give-aways removed: the drawn construction lines in unit 4 Go further 3 and unit 8 Think harder 3, the pre-cut bars in units 2 and 3, hints that stated the whole method (now start-only).
+- Figures: unit 4 Start here 1, 5 and Check yourself 1, unit 8 Start here 1, 6, 7, Go further 3 and Check yourself 4 were redrawn or relabelled.
+- The letter n is no longer used in unit 9.
+
 ## Open points for the owner or the next agent
 
 1. Page count is 100 after shortening about 140 Why lines (owner decision L5-TRIM). The Why texts are now very short; some units explain less than the holiday program does.
 2. Child trial and a cold read audit have not been done for Level 5. The hints are one line of at most 68 characters (checked); the Go further and Think harder difficulty is untested with children.
-3. Objects under 8 mm: chairs in the unit 9 tables item, the grid squares in two unit 4 items, the matchstick hexagons in the Try (all 5 mm or more).
+3. Objects under 8 mm: chairs in the unit 9 tables item (5 mm), the grid squares in the unit 4 grid items (3.9 mm cells, 1 cm squares) and the unit 10 grids (5.3 mm cells), the matchstick hexagons in the Try. All are legible at print size.
 4. The printer proof and the 600 dpi 1-bit file (Print_BW.pdf) are produced by the shared build; the dotted grid and the hatching have only been checked at 200 dpi (`bw_check.py`) and by `print/check_bw.py`.
 5. `verify_all.sh 5` was not used as a whole because its black-and-white step scans every level's output; the same steps were run one by one for Level 5.

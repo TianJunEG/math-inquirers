@@ -1,6 +1,6 @@
 # Level 5 Extension Workbook: progress
 
-Author: Level 5 agent. Branch claude/great-fermi-1hv4vc. Not pushed.
+Author: Level 5 agent. Branch claude/great-fermi-1hv4vc. Pushed to claude/great-fermi-1hv4vc.
 
 Working files outside the repo: generator scripts in the scratchpad (l5w/uNN.py) write extension/data/l5_uNN.json; the JSON is the source of truth.
 Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).

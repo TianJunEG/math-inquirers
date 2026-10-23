@@ -192,27 +192,27 @@
   {
    "id": "L6U09-S04",
    "tier": "start",
-   "text": "4 test scores have a mean of 82. Three of the scores are 78, 90 and 85.",
+   "text": "A baker sells cakes on 5 days. The mean is 40 cakes a day. On 4 of the days the baker sells 35, 52, 38 and 41 cakes.",
    "page": 1,
    "parts": [
     {
      "label": "a",
-     "text": "The 4th score is {b}.",
+     "text": "On the 5th day the baker sells {b} cakes.",
      "answer": {
       "value": [
-       "75"
+       "34"
       ],
-      "text": "75"
+      "text": "34"
      }
     },
     {
      "label": "b",
-     "text": "A 5th score of {b} keeps the mean at 82.",
+     "text": "A 6th day with {b} cakes keeps the mean at 40.",
      "answer": {
       "value": [
-       "82"
+       "40"
       ],
-      "text": "82"
+      "text": "40"
      }
     }
    ],
@@ -221,7 +221,7 @@
      "Working:"
     ]
    },
-   "explanation": "Total of 4 scores = 4 × 82 = 328. The known scores add to 78 + 90 + 85 = 253. The 4th score is 328 − 253 = 75. A 5th score equal to the mean, 82, keeps the mean at 82."
+   "explanation": "Total for 5 days = 5 × 40 = 200. The known days add to 35 + 52 + 38 + 41 = 166. Day 5: 200 − 166 = 34 cakes. A 6th day equal to the mean, 40, keeps the mean at 40."
   },
   {
    "id": "L6U09-S05",

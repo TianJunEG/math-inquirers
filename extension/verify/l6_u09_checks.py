@@ -80,8 +80,8 @@ def _():
 
 @check('L6U09-S04')
 def _():
-    x = [x for x in range(0, 101) if mean([78, 90, 85, x]) == 82][0]
-    y = [y for y in range(0, 101) if mean([78, 90, 85, x, y]) == 82][0]
+    x = [x for x in range(0, 101) if mean([35, 52, 38, 41, x]) == 40][0]
+    y = [y for y in range(0, 101) if mean([35, 52, 38, 41, x, y]) == 40][0]
     return {'a': [x], 'b': [y]}
 
 

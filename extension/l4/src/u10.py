@@ -30,22 +30,22 @@ S.append(item(U+'-S01', 'start', 1, 'Two next-door numbers multiply to make 506.
   ans=A(22, 23, text='22 and 23'), partsrow=False,
   why='20 × 21 = 420 is too small. 25 × 26 = 650 is too big. 22 × 23 = 506. Use each try to decide the next one: 21 × 22 = 462 is too small, so go up.',
   space={'rows': ['The numbers are {b} and {b}']}))
-S.append(item(U+'-S02', 'start', 1, 'Mei buys some $3 pens and some $5 notebooks. She buys at least 1 of each. She pays exactly $41.',
-  parts=[P('a', 'How many different ways can she do it? {b}', A(3)), P('b', 'The way with the fewest pens: {b} pens and {b} notebooks', A(2, 7, text='2 pens and 7 notebooks'))],
-  why='Try the number of notebooks: 1 notebook leaves $36, which is 12 pens. 2 leaves $31 (no). 3 leaves $26 (no). 4 leaves $21, which is 7 pens. 5 leaves $16 (no). 6 leaves $11 (no). 7 leaves $6, which is 2 pens. 8 notebooks cost $40 and leave $1 (no). So the ways are 12 pens and 1 notebook, 7 pens and 4 notebooks, and 2 pens and 7 notebooks.',
-  space={'rows': ['Notebooks, money left, pens: {ll}', 'My answer: {l}']}))
-S.append(item(U+'-S03', 'start', 1, 'A farm has hens (2 legs) and cows (4 legs). There are 17 animals with 50 legs.',
-  parts=[P('a', 'Suppose all 17 are hens. They have {b} legs.', A(34)), P('b', 'That is {b} legs short.', A(16)),
-         P('c', 'Each swap to a cow adds 2 legs. There are {b} cows.', A(8))],
+S.append(item(U+'-S02', 'start', 1, 'A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each and fills the tank exactly.',
+  parts=[P('a', 'How many different ways can he do it? {b}', A(2)), P('b', 'The way with the fewest trips: {b} buckets and {b} cans', A(6, 4, text='6 buckets and 4 cans'))],
+  why='Try the cans: 1 can leaves 42 L = 14 buckets. 4 cans leave 18 L = 6 buckets. 2, 3, 5 and 6 cans leave amounts that are not in 3s. 2 ways. Fewest trips: 6 + 4 = 10.',
+  space={'rows': ['Cans, litres left, buckets: {ll}', 'My answer: {l}']}))
+S.append(item(U+'-S03', 'start', 1, 'A concert sold 17 tickets. Some cost $6 and some cost $10. The takings were $134.',
+  parts=[P('a', 'Suppose all 17 cost $6. They cost ${b}.', A(102)), P('b', 'That is ${b} too little.', A(32)),
+         P('c', 'Each swap to a $10 ticket adds $4. There are {b} tickets at $10.', A(8))],
   space={'rows': ['Check:']},
-  why='(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens. Check: 8 × 4 + 9 × 2 = 32 + 18 = 50.'))
-S.append(item(U+'-S04', 'start', 2, 'A shed has bicycles (2 wheels) and tricycles (3 wheels). There are 13 of them with 33 wheels.',
-  parts=[P('a', 'The number of tricycles is {b}', A(7)), P('b', 'The number of bicycles is {b}', A(6))], partsrow=True,
-  why='Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles. Check: 7 × 3 + 6 × 2 = 33.',
+  why='(a) 17 × 6 = 102. (b) 134 − 102 = 32. (c) 32 ÷ 4 = 8 swaps, so 8 tickets at $10 and 9 at $6.'))
+S.append(item(U+'-S04', 'start', 2, 'A shop has 13 bags of rice. Some bags are 3 kg and some are 5 kg. They have a mass of 49 kg in all.',
+  parts=[P('a', 'The number of 5 kg bags is {b}', A(5)), P('b', 'The number of 3 kg bags is {b}', A(8))], partsrow=True,
+  why='Suppose all 13 are 3 kg: 39 kg. That is 10 kg short. Each swap to a 5 kg bag adds 2 kg, so 5 bags of 5 kg and 13 − 5 = 8 bags of 3 kg.',
   space={'rows': ['Working:']}))
-S.append(item(U+'-S05', 'start', 2, 'Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. Find how many she had at the start. {b}',
-  fig={'type': 'l4_flow', 'items': [None, None, None, 25], 'ops': ['÷ 2', '+ 12', '− 7'], 'width_mm': 130},
-  ans=A(40), why='Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40. Check: half of 40 is 20, 20 + 12 = 32, 32 − 7 = 25.'))
+S.append(item(U+'-S05', 'start', 2, 'A magic pot triples the coins put into it. Then 8 coins are taken out. Then the pot halves the coins that are left. Now there are 20 coins. How many coins were put in at the start? {b}',
+  fig={'type': 'l4_flow', 'items': [None, None, None, 20], 'ops': ['× 3', '− 8', '÷ 2'], 'width_mm': 130},
+  ans=A(16), why='Work backwards. Undo halving: 20 × 2 = 40. Undo taking out 8: 40 + 8 = 48. Undo tripling: 48 ÷ 3 = 16.'))
 S.append(item(U+'-S06', 'start', 2, 'Kumar thinks of a number. He doubles it, adds 14 and then divides by 4. His answer is 10. What is his number? {b}',
   ans=A(13), why='Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13. Check: 13 × 2 = 26, 26 + 14 = 40, 40 ÷ 4 = 10.',
   space={'rows': ['Working:', '']}))
@@ -67,9 +67,10 @@ S.append(item(U+'-S10', 'start', 3, 'Ravi has 9 coins. They are 20¢ coins and 5
 S.append(item(U+'-S11', 'start', 3, 'Three next-door numbers add up to 87. What are they? {b}, {b}, {b}',
   ans=A(28, 29, 30, text='28, 29, 30'), why='The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30. Check: 28 + 29 + 30 = 87.',
   space={'rows': ['Working:']}))
-S.append(item(U+'-S12', 'start', 3, 'Who am I? My 2 digits add up to 12. Swapping them gives a number 18 greater than me. {b}',
-  ans=A(57), why='Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57.',
-  space={'rows': ['Try:']}))
+S.append(item(U+'-S12', 'start', 3, 'Who am I? My 2 digits differ by 4. I am a multiple of 7. {b}',
+  ans=A(84), hint='List the 2-digit multiples of 7. Check the digits.',
+  why='The 2-digit multiples of 7 are 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91 and 98. Only 84 has digits that differ by 4.',
+  space={'rows': ['List:']}))
 
 T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes of 5. Ali buys 12 boxes with 45 pens in all.',
   parts=[P('a', 'The number of boxes of 5 is {b}', A(7)), P('b', 'The number of boxes of 2 is {b}', A(5))], partsrow=True,

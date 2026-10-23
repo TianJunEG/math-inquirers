@@ -42,15 +42,15 @@ S.append(item(U+'-S03', 'start', 1, 'The table shows the library books 3 classes
          P('b', 'Which class borrowed fewer books in Week 2 than in Week 1? {circ:4A|4B|4C}', A('4B'))],
   figside=True,
   why='4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and only 29 in Week 2.'))
-S.append(item(U+'-S04', 'start', 2, 'The graph shows money in Ali\'s box and in Mei\'s box. The amounts are at the end of each week.',
-  fig=LINE([{'ymin': 0, 'ymax': 100, 'step': 10, 'label_every': 2, 'series': [{'name': 'Ali', 'values': [20, 30, 40, 50, 60, 70, 80, 90]}, {'name': 'Mei', 'values': [50, 55, 60, 65, 70, 75, 80, 85]}]}], ['1', '2', '3', '4', '5', '6', '7', '8'], xlabel='Week', width_mm=120, plot_w=440, plot_h=190),
-  parts=[P('a', 'Mei\'s money in Week 3: ${b}', A(60)), P('b', 'Each week Ali adds ${b}.', A(10)),
-         P('c', 'Both have equal money in Week {b}.', A(7)), P('d', 'Ali first has more than Mei in Week {b}.', A(8))], partsrow=True,
-  why='(a) The Mei line (dashed, square points) is on 60 in Week 3. (b) Ali\'s line goes up by 10 each week. (c) The lines meet in Week 7, where both have $80. (d) Ali has $90 in Week 8 and Mei has $85, so Week 8 is the first week Ali has more.'))
-S.append(item(U+'-S05', 'start', 2, 'Siti reads more pages each day. She reads the same number more each day. Fill in the table.',
-  fig={'type': 'l4_table', 'head': ['Day', '1', '2', '3', '4', '5'], 'rows': [['Pages', '12', '', '', '27', '']], 'widths': [1.4, 1, 1, 1, 1, 1], 'cell_h': 58, 'font': 28, 'first_col_head': True, 'width_mm': 120},
-  parts=[P('a', 'She reads {b} more pages each day.', A(5)), P('b', 'In the 5 days she reads {b} pages.', A(110))],
-  why='Day 1 to Day 4 is 3 days, and 27 − 12 = 15, so she reads 15 ÷ 3 = 5 more each day. The days are 12, 17, 22, 27 and 32. The total is 12 + 17 + 22 + 27 + 32 = 110 pages.',
+S.append(item(U+'-S04', 'start', 2, 'The graph shows the stickers in Kumar\'s album and in Aisha\'s album. The numbers are at the end of each week.',
+  fig=LINE([{'ymin': 0, 'ymax': 100, 'step': 10, 'label_every': 2, 'series': [{'name': 'Kumar', 'values': [20, 30, 40, 50, 60, 70, 80, 90]}, {'name': 'Aisha', 'values': [50, 55, 60, 65, 70, 75, 80, 85]}]}], ['1', '2', '3', '4', '5', '6', '7', '8'], xlabel='Week', width_mm=120, plot_w=440, plot_h=190),
+  parts=[P('a', 'Aisha\'s stickers in Week 1: {b}', A(50)), P('b', 'Each week Aisha adds {b} stickers.', A(5)),
+         P('c', 'In Week 5 Kumar has {b} fewer stickers than Aisha.', A(10)), P('d', 'The 2 lines meet at {b} stickers.', A(80))], partsrow=True,
+  why='(a) The Aisha line (dashed, square points) starts on 50. (b) It goes up by 5 each week. (c) In Week 5 Kumar has 60 and Aisha has 70. (d) The lines meet in Week 7 at 80.'))
+S.append(item(U+'-S05', 'start', 2, 'A tank fills at a steady rate. The table shows the litres of water at some minutes. Fill in the table.',
+  fig={'type': 'l4_table', 'head': ['Minute', '1', '2', '3', '4', '5'], 'rows': [['Litres', '', '31', '', '', '55']], 'widths': [1.4, 1, 1, 1, 1, 1], 'cell_h': 58, 'font': 28, 'first_col_head': True, 'width_mm': 120},
+  parts=[P('a', 'The tank gains {b} litres each minute.', A(8)), P('b', 'At minute 9 the tank holds {b} litres.', A(87))],
+  why='Minute 2 to minute 5 is 3 minutes, and 55 − 31 = 24, so the tank gains 24 ÷ 3 = 8 litres a minute. Minute 1 is 23. Minute 9 is 8 minutes later: 23 + 8 × 8 = 87.',
   space={'rows': ['Working:']}))
 S.append(item(U+'-S06', 'start', 3, 'Two bakeries show the cakes they sold. Look at each scale. Bakery Q\'s scale starts at 40.',
   fig=LINE([{'title': 'Bakery P', 'ymin': 0, 'ymax': 100, 'step': 20, 'series': [{'values': [40, 52, 64, 88]}]}, {'title': 'Bakery Q', 'ymin': 40, 'ymax': 52, 'step': 2, 'label_every': 1, 'series': [{'values': [42, 45, 48, 52]}]}], ['Jan', 'Feb', 'Mar', 'Apr'], width_mm=150, plot_w=300, plot_h=160),

@@ -49,6 +49,7 @@
     "Going once round, the turtle turns 360° in all.",
     "Turn = 360° ÷ number of sides.",
     "Inside angle = 180° − turn.",
+    "All the inside angles of a polygon add to sides × 180 − 360.",
     "Test it in code: repeat (sides) [move, turn]."
    ]
   },

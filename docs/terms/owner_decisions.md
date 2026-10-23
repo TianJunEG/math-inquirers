@@ -321,3 +321,7 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-23 (owner, coin and note art)
 - COINS-FIX-SIZE (owner wrote it in own words): (1) coin sizes follow real Singapore proportions as closely as the specifications allow; (2) notes drawn at 2:1 and bigger for higher values; (3) add a small "Pictures are not actual size" line to the teacher notes. Applies to P1, P2 and the colour_by_code library (and later P3-6 booklets). The art stays original (symbols, no real designs).
+
+## 2026-10-23 (owner replies, template and Level 4)
+- L4-REPLACE: replace the Level 4 extension holiday-clone items (new stories and frames).
+- TEMPLATE-LOWS-FIX: fix the shared extension-template Lows in all levels: Contents page prints each unit title twice; cover age line ("Ages 7-9" style) must match the level; certificate plaque has garbled pseudo-text.

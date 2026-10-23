@@ -1,6 +1,9 @@
 # Level 5: requests for shared tool changes (not made by the Level 5 author)
 
-1. `extension/tools/render.py`, line with `Beyond Level 1:` prints "Beyond Level 1" for every level. Please use `unit["level"]` ("Beyond Level {level}"). Workaround used in Level 5: the item key `beyond` is NOT used; the first line of the item text reads "Beyond Level 5: <name>".
-2. `extension/verify/wording_lint.py` NUMWORD rule flags place-value phrases ("ten thousands", "two hundred and five thousand"). Workaround used in Level 5: the hyphenated forms "ten-thousands" and "hundred-thousands", and numerals in "write the number" items.
-3. Quiz items without a figure always get a "Working:" row (render.py). Optional: a unit key to switch it off for one item. Workaround: none needed.
-4. (coordinator note, 23 Oct) Welcome page: build.py line 110 prints "The rulers in Unit 9 are printed at real size" (print) and "so the rulers are true size" (soft) for every level; Level 5 has no rulers. The per-level Welcome/equipment text and the "Beyond Level N" label are being moved into `extension/config/levels.json` by the Level 4 agent. When that lands: set the Level 5 keys (no ruler line; beyond label "Beyond Level 5"), rebuild with `python3 extension/tools/build.py --level 5`, and re-run the Level 5 gates. Not yet done: the change was not in the working tree at the time of writing.
+Resolved (23 Oct): the shared build now supports the `beyond` item key ("Beyond Level 5"), `{bw}` wide answer boxes, and per-level Welcome text from `extension/config/levels.json`. Level 5 uses all three.
+
+Still open, optional:
+
+1. `extension/verify/wording_lint.py` NUMWORD rule flags place-value phrases ("ten thousands", "two hundred and five thousand"). Workaround used in Level 5: the hyphenated forms "ten-thousands" and "hundred-thousands", and numerals in "write the number" items.
+2. Quiz items without a figure always get a "Working:" row (render.py). Optional: a unit key to switch it off for one item. Workaround: none needed (a few Check yourself items were reworded to fit).
+3. `wording_lint.py` has a fixed cast list of names; Level 5 uses Lin, Mo, Kai and Dev, which give only WARN lines.

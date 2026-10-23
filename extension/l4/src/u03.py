@@ -80,14 +80,14 @@ T.append(item(U+'-T01', 'think', 4, 'Beyond Level 4: Order of operations\nRule: 
   hint='In part (a), do 4 × 9 and 12 ÷ 3 before anything else.',
   why='(a) 4 × 9 = 36 and 12 ÷ 3 = 4. Then 60 − 36 + 4 = 24 + 4 = 28. (b) Brackets first: 13 + 7 = 20. Then 5 × 20 = 100 and 100 − 6 = 94.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'In a chain, add the last 2 numbers to make the next number. The 5th number is 41 and the 6th is 66. What is the 1st number? {b}',
-  ans=A(7), hint='Work backwards. The 4th number is 66 − 41.',
-  why='The 4th number is 66 − 41 = 25. The 3rd is 41 − 25 = 16. The 2nd is 25 − 16 = 9. The 1st is 16 − 9 = 7. The chain is 7, 9, 16, 25, 41, 66.',
+T.append(item(U+'-T02', 'think', 4, 'A number tower has 3 numbers at the bottom: 5, a missing number and 11. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}',
+  ans=A(18), hint='Write the 2 numbers in the middle row. They add up to 52.',
+  why='The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29.',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Mei has 5 times as many stickers as Lily. Mei gives 36 of hers to Lily. Then both girls have equal amounts.',
-  parts=[P('a', 'Lily at first: {b} stickers', A(18)), P('b', 'Mei at first: {b} stickers', A(90))],
-  hint='Before the gift, how many more does Mei have than Lily?',
-  why='Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90. Check: 90 − 36 = 54 and 18 + 36 = 54.',
+T.append(item(U+'-T03', 'think', 4, 'Kumar and Siti have 90 stickers altogether. Kumar has 5 times as many as Siti. Kumar gives some stickers to Siti. Then they have equal amounts.',
+  parts=[P('a', 'Siti at first: {b} stickers', A(15)), P('b', 'Kumar gives Siti {b} stickers', A(30))],
+  hint='Each of them ends with half of the 90 stickers.',
+  why='Siti is 1 unit and Kumar is 5 units. 6 units = 90, so 1 unit = 15. Siti has 15 and Kumar has 75. Equal shares are 45 each, so Kumar gives 75 − 45 = 30.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Beyond Level 4: Signs and brackets\nRule: brackets first, then × and ÷, then + and −.',

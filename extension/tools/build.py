@@ -36,10 +36,13 @@ def font_css():
 
 def mi_uri(pose, theme):
     src = os.path.join(ROOT, 'mascot', 'poses', pose + '.png')
+    clean = os.path.join(EXT, 'assets', pose + '_clean.png')   # copy with the garbled plaque text blanked (original mascot file untouched)
+    if os.path.exists(clean):
+        src = clean
     if theme == 'colour':
         return data_uri(src)
     cache = os.path.join(EXT, 'assets', 'bw'); os.makedirs(cache, exist_ok=True)
-    dst = os.path.join(cache, pose + '_bw.png')
+    dst = os.path.join(cache, pose + ('_clean' if src == clean else '') + '_bw.png')
     if not os.path.exists(dst):
         im = Image.open(src).convert('RGBA')
         bg = Image.new('RGBA', im.size, (255, 255, 255, 255)); bg.alpha_composite(im)
@@ -126,8 +129,11 @@ def contents(book, theme, ctx):
         title = book['titles'].get(n, topic)
         hl = book['lessons'].get(n)
         if n in ctx['unit_start']:
-            rows.append(f'<tr><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>{esc(topic)}'
-                        f'{" &middot; follows Holiday Program Lesson " + str(hl) if hl else ""} &middot; answers on page {ctx["ans_start"][n]}</small></td>'
+            bits = [] if ' '.join(topic.lower().split()) == ' '.join(title.lower().split()) else [esc(topic)]   # no repeat of the title
+            if hl:
+                bits.append('follows Holiday Program Lesson ' + str(hl))
+            bits.append(f'answers on page {ctx["ans_start"][n]}')
+            rows.append(f'<tr><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>{" &middot; ".join(bits)}</small></td>'
                         f'<td class="p">page {ctx["unit_start"][n]}</td></tr>')
         else:
             rows.append(f'<tr class="later"><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>Not in this proof edition</small></td><td class="p">&ndash;</td></tr>')

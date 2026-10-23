@@ -145,8 +145,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8667
    },
-   "min_pupil_font_mm": 4.6,
-   "min_teacher_font_mm": 3.6,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 3.4,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.9
   },
@@ -573,7 +573,7 @@
    "bad": 0
   },
   "bank money tier 1": {
-   "questions": 410,
+   "questions": 412,
    "forms": [
     "cash_short",
     "cashq",
@@ -584,7 +584,7 @@
    "bad": 0
   },
   "bank money tier 2": {
-   "questions": 838,
+   "questions": 842,
    "forms": [
     "add",
     "cash_short",

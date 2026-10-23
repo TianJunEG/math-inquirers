@@ -71,7 +71,8 @@
    },
    "lines": [
     "The number is 4 053 201.",
-    "M is millions. TTh is ten-thousands."
+    "M is millions. TTh is ten-thousands.",
+    "Rounding: a 5 in the next place rounds up."
    ]
   },
   "tight": true,
@@ -649,7 +650,7 @@
     }
    ],
    "hint": "Clues 2 and 3 fix the first 3 digits. Then use Clue 6.",
-   "explanation": "Clue 2: 6 350 000 to 6 449 999. Clue 3 leaves 6 4 3. The tens digit is 0. The other 3 digits add to 33 - 6 - 4 - 3 - 0 = 20. Thousands t and hundreds t + 2: t = 5 gives 5, 7 and ones 8. So 6 435 708."
+   "explanation": "Clue 2: 6 350 000 to 6 449 999. Clue 3 leaves 6 4 3, and the tens digit is 0. The other 3 digits add to 33 - 6 - 4 - 3 = 20. With thousands t and hundreds t + 2, only t = 5 keeps all digits different: 5, 7 and ones 8. So 6 435 708."
   },
   {
    "id": "L5U01-T02",
@@ -760,7 +761,7 @@
    "id": "L5U01-G03",
    "tier": "go",
    "page": 5,
-   "text": "Use each of 3, 4, 7 and 9 once. You may use + - × ÷ and brackets. What is the number closest to 100 that you can make? {b}",
+   "text": "Use each of 3, 4, 7 and 9 once. You may use + - × ÷ and brackets. Do not join digits. What is the number closest to 100 that you can make? {b}",
    "answer": {
     "value": [
      "101"
@@ -774,7 +775,7 @@
      ""
     ]
    },
-   "hint": "9 × 11 is 99, but 11 is hard to make. Try 3 × 4 × 9.",
+   "hint": "Try multiplying first. Which product is near 100?",
    "explanation": "3 × 4 × 9 - 7 = 101, which is 1 away. 99 and 100 cannot be made, and 102 is 2 away. So 101."
   },
   {

@@ -82,15 +82,15 @@ T.append(item(U+'-T01', 'think', 4, 'Mei paints each face of a cube red or blue.
   hint='Which faces share an edge with a given face?',
   why='(a) A face shares an edge with 4 faces and is opposite just 1. Two opposite red faces do not share an edge. A third red face would touch one of them. So the most is 2. (b) Take 3 faces that meet at one corner. They are not opposite each other, so 3 red faces work. A 4th red face would be opposite one of them. So the most is 3.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Mei sees 3 faces of a dice at the same corner. Their numbers add up to 10.',
-  parts=[P('a', 'The numbers she can see, smallest first: {b} {b} {b}', A(1, 4, 5)), P('b', 'The numbers she cannot see, smallest first: {b} {b} {b}', A(2, 3, 6))],
+T.append(item(U+'-T02', 'think', 4, 'Ravi sees 3 faces of a dice at the same corner. The 3 numbers multiply to make 36.',
+  parts=[P('a', 'The numbers he can see, smallest first: {b} {b} {b}', A(2, 3, 6)), P('b', 'The numbers he cannot see, smallest first: {b} {b} {b}', A(1, 4, 5))],
   hint='At a corner, the 3 faces are from 3 different opposite pairs.',
-  why='The pairs are 1 and 6, 2 and 5, 3 and 4. She sees one number from each pair, so no two of the 3 numbers add up to 7. The only choice with a total of 10 is 1, 5 and 4. The hidden faces are opposite: 6, 2 and 3.',
+  why='The pairs are 1 and 6, 2 and 5, 3 and 4. He sees one from each pair. Only 6 × 2 × 3 gives 36. The hidden faces are opposite: 1, 5 and 4.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 3 squares. A fold down the middle must make the halves match. How many patterns can you make? {b}',
-  fig=GRID(3, 3, 44, axis={'kind': 'v', 'at': 1.5}, width_mm=42),
-  ans=A(10), hint='Middle-column squares match themselves. The others come in pairs.',
-  why='The 3 shaded squares are 3 from the middle column, or 1 from the middle column and 1 pair. 3 in the middle column: 1 way. 1 in the middle column (3 choices) and 1 pair (3 rows to choose): 3 × 3 = 9 ways. 1 + 9 = 10.',
+T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 4 squares. A fold along the dotted diagonal must make the halves match. How many patterns can you make? {b}',
+  fig=GRID(3, 3, 44, axis={'kind': 'd', 'at': 0}, width_mm=42),
+  ans=A(12), hint='Squares on the diagonal match themselves. The others come in pairs.',
+  why='Squares on the diagonal: 3. The others make 3 pairs. 2 pairs: 3 ways. 2 diagonal squares (3 ways) and 1 pair (3 ways): 9 ways. 3 + 9 = 12.',
   figright=True, space={'rows': ['List:', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Beyond Level 4: Painted cubes\nPaint all the outside faces of a big cube that is 3 by 3 by 3. Then cut it into 27 small cubes.',

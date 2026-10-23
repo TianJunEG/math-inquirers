@@ -400,7 +400,7 @@
    "id": "L5U07-S09",
    "tier": "start",
    "page": 2,
-   "text": "Caps cost $16 each. Shop P takes 15% off each cap. Shop Q sells the second cap at half price. Siti buys 2 caps.",
+   "text": "Caps cost $16 each. Shop P takes 15% off each cap. Shop Q sells the second cap at half cost. Siti buys 2 caps.",
    "parts": [
     {
      "label": "a",
@@ -699,7 +699,7 @@
      ""
     ]
    },
-   "hint": "$60 is 75% of the old cost. What is 25% of the old cost?",
+   "hint": "$60 is what percentage of the old cost?",
    "explanation": "$60 is 75% of the old cost. 25% = $20, so 100% = $80.",
    "beyond": "Working back from a percentage"
   },
@@ -722,7 +722,7 @@
      ""
     ]
    },
-   "hint": "$432 is 108% of the cost before GST. What is 1%?",
+   "hint": "$432 is what percentage of the cost before GST?",
    "explanation": "$432 is 108% of the cost before GST, so 1% = $4. The GST is 8 × $4 = $32.",
    "beyond": "GST in the cost"
   },
@@ -805,7 +805,7 @@
      ""
     ]
    },
-   "hint": "The red beads stay the same. Find their share of the new total.",
+   "hint": "Which beads do not change? Start with them.",
    "explanation": "Red: 40% of 50 = 20, unchanged. Later red is 20% of all, so the total is 100 and blue is 80. Added: 80 - 30 = 50."
   },
   {

@@ -193,7 +193,7 @@
    "id": "L5U08-S01",
    "tier": "start",
    "page": 1,
-   "text": "Lines AB and CD cross at O. Angle BOC is twice angle AOC. Find each angle.",
+   "text": "Two straight lines, AB and CD, meet at O. Angle BOC is twice angle AOC. Find each angle.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1632,7 +1632,7 @@
      "Working:"
     ]
    },
-   "hint": "Find D first. Then use the isosceles triangle ADC.",
+   "hint": "Find angle D first.",
    "explanation": "(a) 180° - 70° = 110°. (b) AD = DC: (180° - 110°) ÷ 2 = 35°. (c) C = 100°, so ACB = 100° - 35° = 65°.",
    "figside": true
   },
@@ -2008,7 +2008,7 @@
      ""
     ]
    },
-   "hint": "Call angle A one unit. Use the isosceles triangles one at a time.",
+   "hint": "Call angle A one unit. Which triangles are isosceles?",
    "explanation": "Let angle A be 1 unit. DCA = 1, BDC = 2, DBC = 2, ACB = ABC = 2, so DCB = 1. Triangle DBC: 5 units = 180°, so 1 unit = 36°.",
    "figright": true
   },

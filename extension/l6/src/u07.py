@@ -33,6 +33,7 @@ learn = {
               'steps': ['Going once round, the turtle turns 360° in all.',
                         'Turn = 360° ÷ number of sides.',
                         'Inside angle = 180° − turn.',
+                        'All the inside angles of a polygon add to sides × 180 − 360.',
                         'Test it in code: repeat (sides) [move, turn].']},
     'try': IT(U, 'L', 1, 0, 'A regular polygon has 9 sides. The turn at each corner is {b}° and the inside angle is {b}°.',
               f'360° ÷ 9 = 40° for the turn. The inside angle is 180° {M} 40° = 140°.',

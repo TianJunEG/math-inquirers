@@ -117,8 +117,9 @@ def _():
 
 @check('L3U06-T02')
 def _():
-    lo, hi = Fr(1, 3), Fr(1, 2)
-    return {'a': s([only(t for t in range(1, 12) if lo < Fr(t, 12) < hi)]), 'b': s([sum(1 for t in range(1, 24) if lo < Fr(t, 24) < hi)])}
+    def find(total):
+        return only([(t, bb) for bb in range(1, 100) for t in range(1, bb) if Fr(t, bb) == Fr(3, 4) and t + bb == total])
+    return {'a': s(find(28)), 'b': s(find(42))}
 
 
 @check('L3U06-T03')

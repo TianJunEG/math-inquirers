@@ -227,7 +227,7 @@
    "id": "L5U03-S04",
    "tier": "start",
    "page": 1,
-   "text": "One shelf has 52 books. Another shelf has 34 books. Some books are moved from the first shelf to the second. Then both shelves have the same number of books. How many books are moved? {b}",
+   "text": "One shelf has 52 books. Another shelf has 34 books. Some books are moved from the first shelf to the second. Then each shelf holds an equal number. How many books are moved? {b}",
    "answer": {
     "value": [
      "9"
@@ -575,7 +575,7 @@
    "id": "L5U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ali and Ben have 132 cards altogether. Ben gives 14 cards to Ali. Then Ben has 4/7 as many cards as Ali. How many cards did Ben have at first? {b}",
+   "text": "Ali and Ben have 132 cards altogether. Ben gives 14 cards to Ali. Then Ben has 4/7 of Ali's number of cards. How many cards did Ben have at first? {b}",
    "answer": {
     "value": [
      "62"
@@ -697,7 +697,7 @@
      "Working:"
     ]
    },
-   "hint": "The white beads do not change. What fraction of each total is white?",
+   "hint": "Which beads do not change? Start with them.",
    "explanation": "The white beads stay the same: 5/7 of the start and 5/6 of the end. White is 5 parts, so the total goes from 7 parts to 6 parts. 1 part = 24, so 7 × 24 = 168."
   },
   {

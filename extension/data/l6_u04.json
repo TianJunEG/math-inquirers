@@ -6,9 +6,9 @@
  "title": "Algebra machines",
  "topic": "Machines and equations",
  "holiday_lesson": 4,
- "goal": "I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.",
+ "goal": "I can write a machine rule with a letter and run a machine backwards.",
  "learn": {
-  "intro": "A number machine follows a rule: IN goes in and OUT comes out. We write the rule with a letter, such as OUT = 4n + 3. To find the IN for a given OUT, run the machine backwards and undo the last step first.",
+  "intro": "A number machine follows a rule, such as OUT = 4n + 3. To find the IN for a given OUT, run the machine backwards and undo the last step first.",
   "example": {
    "problem": "A machine does × 7, then − 4. OUT is 45. What was IN?",
    "figure": {
@@ -57,14 +57,18 @@
   "facts": {
    "title": "Reading the code blocks",
    "lines": [
+    "set x to 5: put 5 in x",
+    "change x by 2: add 2 to x",
+    "say x: show x",
+    "ask ... and wait: gives answer",
     "repeat 5: do the inside 5 times",
-    "repeat until <test>: stop when true",
+    "repeat until <test>: stop if true",
     "if <test> then / else: choose a part",
     "n mod d: remainder of n ÷ d",
     "pick random 1 to 6: like a die",
     "item i of list: the i-th item",
-    "answer: what the user typed in",
-    "↻ turn: turn clockwise"
+    "length of list: how many items",
+    "↻ turn: clockwise. Dashed box: blank"
    ]
   },
   "tight": true

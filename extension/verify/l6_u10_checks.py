@@ -90,7 +90,7 @@ def _():
 
 @check('L6U10-S01')
 def _():
-    seq = [10 + 7 * k for k in range(0, 60)]
+    seq = [8 + 6 * k for k in range(0, 60)]
     a, b = fit_rule([(k + 1, v) for k, v in enumerate(seq[:5])])
     return {'a': [a, b], 'b': [seq[49]], 'c': [seq.index(164) + 1]}
 
@@ -132,8 +132,9 @@ def _():
 
 @check('L6U10-S07')
 def _():
-    n = [n for n in range(3, 400) if n * 4 == 360][0]
-    return {'a': [n], 'b': [180 - 4]}
+    turn = 180 - 165
+    n = [n for n in range(3, 400) if n * turn == 360][0]
+    return {'a': [turn], 'b': [n]}
 
 
 @check('L6U10-S08')
@@ -143,7 +144,7 @@ def _():
 
 @check('L6U10-S09')
 def _():
-    fourth = [x for x in range(0, 100) if mean([11, 19, 14, x]) == 15][0]
+    fourth = [x for x in range(0, 100) if mean([9, 15, 12, 17, x]) == 13][0]
     ys = sorted([15, 4, 9, 12])
     return {'a': [fourth], 'b': [(ys[1] + ys[2]) / 2]}
 
@@ -175,10 +176,11 @@ def _():
 
 @check('L6U10-S13')
 def _():
-    two = list(itertools.product(range(1, 7), repeat=2))
-    twelve = len([1 for a, b in two if a * b == 12])
-    odd = Fraction(len([1 for a, b in two if (a * b) % 2 == 1]), 36)
-    return {'a': [twelve], 'b': [odd.numerator, odd.denominator], 'c': [int(360 * odd)]}
+    pairs = list(itertools.product(range(1, 5), range(1, 4)))
+    three = len([1 for a, b in pairs if a + b == 3])
+    p = Fraction(three, len(pairs))
+    assert len(pairs) == 12
+    return {'a': [three], 'b': [p.numerator, p.denominator], 'c': [int(240 * p)]}
 
 
 @check('L6U10-S14')
@@ -234,7 +236,7 @@ def _():
     prog = prog_of('L6U10-G02')
     spins = range(1, 9)
     mult3 = len([n for n in spins if n > 6])
-    evens = len([n for n in spins if n > 4])
+    evens = len([n for n in spins if n > 3])
     rep = [b for b in prog if b[1].startswith('repeat')][0][1]
     times = int(rep.split('(')[1].rstrip(')'))
     return {'a': [mult3], 'b': [round(times * Fraction(mult3, 8))], 'c': [round(times * Fraction(evens, 8))]}
@@ -256,7 +258,7 @@ def _():
 
 @check('L6U10-C01')
 def _():
-    a, b = fit_rule([(1, 4), (2, 11), (3, 18), (4, 25)])
+    a, b = fit_rule([(1, 3), (2, 7), (3, 11), (4, 15)])
     return s([a, -b])
 
 

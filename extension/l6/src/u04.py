@@ -7,8 +7,7 @@ M = '−'
 X = '×'
 
 learn = {
-    'intro': 'A number machine follows a rule: IN goes in and OUT comes out. We write the rule with a letter, such as OUT = 4n + 3. '
-             'To find the IN for a given OUT, run the machine backwards and undo the last step first.',
+    'intro': 'A number machine follows a rule, such as OUT = 4n + 3. To find the IN for a given OUT, run the machine backwards and undo the last step first.',
     'example': {
         'problem': f'A machine does {X} 7, then {M} 4. OUT is 45. What was IN?',
         'figure': {'type': 'l6_machine', 'chain': ['n', f'{X} 7', '', f'{M} 4', '45'], 'undo': [f'÷ 7', '+ 4']},
@@ -192,14 +191,18 @@ I.append(IT(U, 'C', 4, 6,
             answer=A([13], '13')))
 
 learn['facts'] = {'title': 'Reading the code blocks', 'lines': [
+    'set x to 5: put 5 in x',
+    'change x by 2: add 2 to x',
+    'say x: show x',
+    'ask ... and wait: gives answer',
     'repeat 5: do the inside 5 times',
-    'repeat until <test>: stop when true',
+    'repeat until <test>: stop if true',
     'if <test> then / else: choose a part',
     'n mod d: remainder of n ÷ d',
     'pick random 1 to 6: like a die',
     'item i of list: the i-th item',
-    'answer: what the user typed in',
-    '↻ turn: turn clockwise']}
+    'length of list: how many items',
+    '↻ turn: clockwise. Dashed box: blank']}
 learn['tight'] = True
 write_unit(4, 'Algebra machines', 'Machines and equations',
-           'I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.', learn, I)
+           'I can write a machine rule with a letter and run a machine backwards.', learn, I)

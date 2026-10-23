@@ -83,11 +83,11 @@ u.T('Look at the fractions with bottom number 12. List every one between 1/3 and
     hint='Change 1/3 and 2/3 into twelfths first.',
     why='1/3 = 4/12 and 2/3 = 8/12. The twelfths between 4/12 and 8/12 are 5/12, 6/12 and 7/12. The fractions 4/12 and 8/12 are not between.',
     space={'rows': ['Working:', '', '', '']})
-u.T('Look at the fractions between 1/3 and 1/2.', parts=[
-    P('a', 'A fraction with bottom number 12 is between them. It is {b}/12.', A('5')),
-    P('b', 'With bottom number 24 there are {b} fractions between them.', A('3'))],
-    hint='Write 1/3 and 1/2 with the same bottom number first.',
-    why='(a) 1/3 = 4/12 and 1/2 = 6/12. The only top number between 4 and 6 is 5: 5/12. (b) 1/3 = 8/24 and 1/2 = 12/24. The tops 9, 10 and 11 fit: 3 fractions.',
+u.T('Ben writes fractions that are equal to 3/4. He adds the top number and the bottom number.', parts=[
+    P('a', 'The sum is 28 for the fraction {b}/{b}.', A(['12', '16'], '12/16', list=True)),
+    P('b', 'The sum is 42 for the fraction {b}/{b}.', A(['18', '24'], '18/24', list=True))],
+    hint='Write equal fractions of 3/4. Add the top and bottom each time.',
+    why='Equal fractions of 3/4 are 3/4, 6/8, 9/12, 12/16, 15/20, 18/24. Their sums are 7, 14, 21, 28, 35, 42. So 12/16 has sum 28 and 18/24 has sum 42.',
     space={'rows': ['My list:', '', '']})
 u.T('A jug is full of juice. Mei drinks 1/4 of the jug. Ali drinks 1/3 of the jug.', parts=[
     P('a', 'Together they drink {b}/12 of the jug.', A('7')), P('b', '{b}/12 of the jug is left.', A('5'))],

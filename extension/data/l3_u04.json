@@ -73,9 +73,9 @@
   "facts": {
    "title": "More models",
    "lines": [
-    "Times as many: Ben has 3 times as many as Ali, 48 in all. 4 equal boxes: 48 ÷ 4 = 12 each.",
-    "Total and difference: 50 in all and Mei has 10 more. Take away the 10: 40. Share it: 20 and 30.",
-    "Same after giving: 70 and 50. The gap is 20. The child with more gives half the gap, 10. Both have 60."
+    "3 times as many, 48 in all: 4 boxes, 48 ÷ 4 = 12.",
+    "50 in all, 10 more: 50 - 10 = 40, so 20 and 30.",
+    "70 and 50: the gap is 20. Give half the gap, 10: 60 each."
    ]
   }
  },

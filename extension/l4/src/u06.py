@@ -88,20 +88,20 @@ T.append(item(U+'-T03', 'think', 4, 'A robot faces N. It turns 90° clockwise, t
   why='In steps of 45°: +2, −3, +5, −1. From N: 2 steps is E, then 3 steps back is NW, then 5 steps forward is S, then 1 step back is SE. The turns add to 90° + 135° + 225° + 45° = 495°.',
   space={'rows': ['Working:', '']}))
 
-G.append(item(U+'-G01', 'go', 5, 'Six rays leave one point. They make 5 equal angles in a row. The 2 outside rays are 150° apart.',
-  parts=[P('a', 'How many angles can you find in all? {b}', A(15)), P('b', 'Count the right angles among them. {b}', A(3))],
-  hint='One small angle is 30°. Count 1-part, 2-part, 3-part angles.',
-  why='Each small angle is 150° ÷ 5 = 30°. Angles made of 1 part: 5. Of 2 parts: 4. Of 3 parts: 3. Of 4 parts: 2. Of 5 parts: 1. In all 5 + 4 + 3 + 2 + 1 = 15. A right angle is 3 parts of 30°, and there are 3 of them.',
+G.append(item(U+'-G01', 'go', 5, 'Four rays leave a point O on a straight line and make 4 angles on one side of the line. Each angle is 10° greater than the one before it.',
+  parts=[P('a', 'The smallest angle is {b}°', A(30)), P('b', 'The greatest angle is {b}°', A(60))],
+  hint='The 4 angles add up to 180°. Take away the extra degrees first.',
+  why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.',
   space={'rows': ['Working:']}))
-G.append(item(U+'-G02', 'go', 5, 'A robot faces N. It turns 135° clockwise again and again.',
-  parts=[P('a', 'How many turns until it faces N again? {b}', A(8)), P('b', 'After 50 turns it faces {b}', A('W'))],
-  hint='135° is 3 steps of 45°. Write the directions after each turn.',
-  why='Each turn is 3 steps. The directions are SE, W, NE, S, NW, E, SW, N. It faces N again after 8 turns. 50 turns is 6 lots of 8, which is 48 turns, and 2 more turns. After 48 turns it faces N. 2 more turns take it to SE and then W.',
+G.append(item(U+'-G02', 'go', 5, 'A dancer faces N. She turns 90° clockwise and then 45° anticlockwise. She does these 2 turns again and again.',
+  parts=[P('a', 'After how many pairs of turns does she face N again? {b}', A(8)), P('b', 'After 21 pairs she faces {b}', A('SW'))],
+  hint='One pair of turns is 1 step of 45°. Write the directions.',
+  why='Each pair is 90° − 45° = 45°, 1 step clockwise: NE, E, SE, S, SW, W, NW, N. After 8 pairs she faces N. 21 = 2 × 8 + 5, so she faces the same way as after 5 pairs: SW.',
   space={'rows': ['List:']}))
-G.append(item(U+'-G03', 'go', 5, 'A rectangle corner of 90° is cut by 2 lines. The middle angle is 2 times the smallest. The greatest is 6 times the smallest.',
-  parts=[P('a', 'The smallest angle is {b}°', A(10)), P('b', 'The greatest angle is {b}°', A(60))],
-  hint='Count the equal parts. 1 + 2 + 6 = 9.',
-  why='The 3 angles are 1, 2 and 6 equal parts. That is 9 parts in all, and 9 parts = 90°, so 1 part = 10°. The smallest is 10°, the middle is 20° and the greatest is 60°.',
+G.append(item(U+'-G03', 'go', 5, 'A round pizza is cut from the centre into 4 slices. The 2nd slice is 2 times the 1st. The 3rd and 4th slices are each 3 times the 1st.',
+  parts=[P('a', 'The smallest slice has an angle of {b}°', A(40)), P('b', 'The 4th slice has an angle of {b}°', A(120))],
+  hint='Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.',
+  why='The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°.',
   space={'rows': ['Working:']}))
 G.append(item(U+'-G04', 'go', 5, 'Think about the smaller angle between the clock hands at each o\'clock time. Which times give an angle between 100° and 160°?',
   parts=[P('a', 'How many times are there? {b}', A(4)), P('b', 'Write the times: {b} {b} {b} {b}', A(4, 5, 7, 8, text='4, 5, 7 and 8 o\'clock'))],

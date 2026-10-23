@@ -55,12 +55,13 @@ S.append(item(U+'-S05', 'start', 2, 'The staircase has 4 equal steps. Each step 
   parts=[P('a', 'Perimeter: {b} cm', A(40)), P('b', 'Area: {b} cm²', A(60))],
   figside=True,
   why='(a) Push the steps out. The staircase fits in a rectangle that is 12 cm by 8 cm, so the perimeter is 2 × (12 + 8) = 40 cm. (b) The rows are 12, 9, 6 and 3 cm long and each is 2 cm high: 2 × (12 + 9 + 6 + 3) = 2 × 30 = 60 cm².'))
-S.append(item(U+'-S06', 'start', 2, 'A photo is 12 cm long and 9 cm wide. It sits in a frame that is 2 cm wide all round.',
-  fig=POLY([dict({'pts': [[0, 0], [16, 0], [16, 13], [0, 13]], 'hole': [[2, 2], [14, 2], [14, 11], [2, 11]], 'fill': 'hatch', 'hole_labels': [{'seg': 0, 'text': '12 cm'}, {'seg': 1, 'text': '9 cm'}]})], cell=16, width_mm=70),
-  parts=[P('a', 'Photo and frame: {b} cm by {b} cm', A(16, 13, text='16 cm by 13 cm')),
-         P('b', 'Area of the frame only: {b} cm²', A(100))],
+S.append(item(U+'-S06', 'start', 2, 'A lawn is 16 m long and 10 m wide. A square pond with sides of 4 m sits in the lawn.',
+  fig=POLY([dict({'pts': [[0, 0], [16, 0], [16, 10], [0, 10]], 'hole': [[6, 3], [10, 3], [10, 7], [6, 7]], 'fill': 'hatch', 'hole_labels': [{'seg': 0, 'text': '4 m'}, {'seg': 1, 'text': '4 m'}]})], cell=16, width_mm=70),
+  parts=[P('a', 'Area of the lawn without the pond: {b} m²', A(144)),
+         P('b', 'Length of the 2 edges, round the lawn and round the pond: {b} m', A(68))],
   figside=True,
-  why='(a) The frame adds 2 cm on each side: 12 + 2 + 2 = 16 and 9 + 2 + 2 = 13. (b) The whole is 16 × 13 = 208 cm². The photo is 12 × 9 = 108 cm². The frame is 208 − 108 = 100 cm².'))
+  why='(a) The lawn is 16 × 10 = 160 m². The pond is 4 × 4 = 16 m². 160 − 16 = 144 m². (b) The lawn edge is 2 × (16 + 10) = 52 m. The pond edge is 4 × 4 = 16 m. 52 + 16 = 68 m.',
+  space={'rows': ['Working:', '']}))
 S.append(item(U+'-S07', 'start', 3, 'Cut a 10 cm by 3 cm strip on the dashed line. Join the 2 pieces to make a 5 cm by 6 cm rectangle.',
   fig=POLY([L_([[0, 0], [10, 0], [10, 3], [0, 3]], [{'seg': 0, 'text': '10 cm'}, {'seg': 1, 'text': '3 cm'}], dashed=[[[5, 0], [5, 3]]]),
             L_([[0, 0], [5, 0], [5, 6], [0, 6]], [{'seg': 0, 'text': '5 cm'}, {'seg': 1, 'text': '6 cm'}], dashed=[[[0, 3], [5, 3]]], ox=14.5)], cell=20, width_mm=135),
@@ -77,21 +78,22 @@ S.append(item(U+'-S09', 'start', 3, 'A hall floor is 12 m long and 8 m wide. It 
   why='(a) 12 ÷ 2 = 6 tiles along the length and 8 ÷ 2 = 4 tiles along the width. 6 × 4 = 24 tiles. (b) The tiles not along the edge make a block of 4 by 2 = 8 tiles. 24 − 8 = 16 dark tiles.',
   space={'rows': ['Working:', '']}))
 
-T.append(item(U+'-T01', 'think', 4, 'A square is cut into 2 identical rectangles, as shown. Each rectangle has a perimeter of 30 cm. The area of the square is {b} cm².',
-  fig=POLY([L_([[0, 0], [8, 0], [8, 8], [0, 8]], dashed=[[[4, 0], [4, 8]]])], cell=14, width_mm=36, padx=14, pady=14),
-  ans=A(100), hint='Each rectangle has 3 sides that equal the side of the square.', figright=True,
-  why='Each rectangle is 1 whole side and 1 half side, twice round: 2 × (s + s/2) = 3 × s. So 3 sides of the square make 30 cm, and each side is 10 cm. The area of the square is 10 × 10 = 100 cm².',
+T.append(item(U+'-T01', 'think', 4, 'A rectangle has a perimeter of 42 cm. Its length is 5 cm more than its width. What is its area? {b} cm²',
+  ans=A(104), hint='Length + width is half of the perimeter.',
+  why='Half of the perimeter is length + width = 21 cm. The length is 5 more than the width, so 21 − 5 = 16 cm is 2 widths. The width is 8 cm and the length is 13 cm: 13 × 8 = 104 cm².',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Mei has 28 m of fence for a rectangular pen. The sides are whole numbers of metres.',
-  parts=[P('a', 'The greatest area when the pen needs 4 fenced sides: {b} m²', A(49)),
-         P('b', 'The greatest area when one side is a wall that needs no fence: {b} m²', A(98))],
-  hint='For (b), the fence makes 2 short sides and 1 long side.',
-  why='(a) The 4 sides use 28 m, so length + width = 14. The greatest area is a 7 m square: 7 × 7 = 49 m². (b) The fence is 2 widths and 1 length: 2w + l = 28. Try w = 7 and l = 14: area 98 m². Try w = 6, l = 16: 96. Try w = 8, l = 12: 96. The greatest is 98 m².',
+T.append(item(U+'-T02', 'think', 4, 'Rectangles have an area of 36 cm² and whole-cm sides. A 2 by 18 rectangle is the same as an 18 by 2 rectangle.',
+  parts=[P('a', 'How many different rectangles are there? {b}', A(5)),
+         P('b', 'The greatest perimeter of these rectangles: {b} cm', A(74))],
+  hint='List the pairs of numbers that multiply to make 36.',
+  why='The pairs are 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6: 5 rectangles. The thinnest, 1 by 36, has the greatest perimeter: 2 × 37 = 74 cm.',
   space={'rows': ['List:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'A garden is 12 m long and 9 m wide. Two paths, each 2 m wide, cross it. One path runs along the length and one runs across the width. What is the area of the garden that is NOT path? {b} m²',
-  ans=A(70), hint='Slide the paths to the edge. The grass makes 1 rectangle.',
-  why='Move the paths to the edges. The grass is then one rectangle that is 12 − 2 = 10 m long and 9 − 2 = 7 m wide: 10 × 7 = 70 m². Check: 108 − 24 − 18 + 4 = 70, because the crossing square is counted twice.',
-  space={'rows': ['Working:', '', '']}))
+T.append(item(U+'-T03', 'think', 4, 'A tray is 15 cm long and 9 cm wide. A square of side 3 cm is cut off each of the 4 corners.',
+  parts=[P('a', 'The area of the shape that is left: {b} cm²', A(99)),
+         P('b', 'The perimeter of the shape that is left: {b} cm', A(48))],
+  hint='For (b), slide each cut edge back to the corner.',
+  why='(a) 15 × 9 = 135 cm². The 4 squares are 4 × 9 = 36 cm². 135 − 36 = 99 cm². (b) Each cut keeps the perimeter the same, so it is 2 × (15 + 9) = 48 cm.',
+  space={'rows': ['Working:', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Three identical squares are joined in an L shape. The perimeter of the L shape is 40 cm. Find its area.\n{b} cm²',
   fig={'type': 'l4_tiles', 'shapes': [{'cells': [[0, 0], [0, 1], [1, 1]]}], 'cell': 36, 'width_mm': 32},
@@ -103,12 +105,12 @@ G.append(item(U+'-G02', 'go', 5, 'Take a square with sides of 4 cm. Its area is 
   ans=A(6, 3, text='Length 6 cm, width 3 cm'), hint='Try a width of 1, then 2, then 3. Does the area equal the perimeter?',
   why='Try width 3: length 6 gives an area of 18 cm² and a perimeter of 2 × 9 = 18 cm. For width 1 and width 2, no length works: width 2 gives 2l and 2l + 4. Widths of 4 or more give only the 4 by 4 square. So the other rectangle is 6 cm by 3 cm.',
   space={'rows': ['Try:']}))
-G.append(item(U+'-G03', 'go', 5, 'Two strips, each 10 cm by 2 cm, cross in the middle. Together they make a plus shape.',
-  fig=POLY([L_([[4, 0], [6, 0], [6, 4], [10, 4], [10, 6], [6, 6], [6, 10], [4, 10], [4, 6], [0, 6], [0, 4], [4, 4]])], cell=14, width_mm=40, padx=14, pady=14),
-  parts=[P('a', 'Area of the plus shape: {b} cm²', A(36)), P('b', 'Perimeter of the plus shape: {b} cm', A(40))],
-  hint='The middle square is part of both rectangles.',
+G.append(item(U+'-G03', 'go', 5, 'Two squares with sides of 6 cm overlap at one corner. The overlap is a square with sides of 2 cm.',
+  fig=POLY([L_([[0, 0], [6, 0], [6, 4], [10, 4], [10, 10], [4, 10], [4, 6], [0, 6]], dashed=[[[4, 4], [6, 4]], [[6, 4], [6, 6]], [[4, 6], [6, 6]], [[4, 4], [4, 6]]])], cell=14, width_mm=40, padx=14, pady=14),
+  parts=[P('a', 'Area of the whole shape: {b} cm²', A(68)), P('b', 'Perimeter of the whole shape: {b} cm', A(40))],
+  hint='The overlap is part of both squares.',
   figright=True,
-  why='(a) 10 × 2 + 10 × 2 = 40, but the 2 cm by 2 cm square in the middle is counted twice: 40 − 4 = 36 cm². (b) Each of the 4 arms is 4 cm long and 2 cm wide. Round one arm the edge is 4 + 2 + 4 = 10 cm, so 4 arms make 40 cm.',
+  why='(a) 36 + 36 = 72, but the 2 by 2 overlap is counted twice: 72 − 4 = 68 cm². (b) Go round the edge: 6 + 4 + 4 + 6 + 6 + 4 + 4 + 6 = 40 cm.',
   ))
 G.append(item(U+'-G04', 'go', 5, 'A square floor is covered with square tiles. The tiles along the edge are dark and all the others are light.',
   parts=[P('a', 'The floor is 8 tiles by 8 tiles. How many dark tiles? {b}', A(28)),

@@ -49,15 +49,19 @@ def _():
 
 @check('L5U10-S03')
 def _():
-    people, pets = ['Aisha', 'Wei', 'Ravi'], ['turtle', 'parrot', 'goldfish']
-    sols = solutions(people, pets, [lambda a: a['Ravi'] not in ('parrot', 'goldfish'), lambda a: a['Aisha'] != 'goldfish'])
-    assert len(sols) == 1
-    return [next(p for p, d in sols[0].items() if d == 'parrot')]
+    runners = ['Ali', 'Mei', 'Siti']
+    wins = set()
+    for order in itertools.permutations(runners):                  # order[0] won, order[2] was last
+        pos = {r: i for i, r in enumerate(order)}
+        if pos['Ali'] != 0 and pos['Siti'] != 2 and pos['Mei'] > pos['Siti']:
+            wins.add(order[0])
+    assert len(wins) == 1
+    return sorted(wins)
 
 
 @check('L5U10-S04')
 def _():
-    pairs = [(a, b) for a in range(0, 100) for b in range(0, 100) if a + b == 52 and a - b == 14]
+    pairs = [(a, b) for a in range(0, 100) for b in range(0, 100) if a + b == 75 and a - b == 19]
     assert len(pairs) == 1
     return {'a': [str(pairs[0][0])], 'b': [str(pairs[0][1])]}
 
@@ -74,12 +78,12 @@ def _():
 
 @check('L5U10-S06')
 def _():
-    kids = ['Ali', 'Ben', 'Siti']
+    kids = ['Kai', 'Lin', 'Mo']
     ok = []
     for culprit in kids:
-        said = {'Ali': culprit != 'Ali'}                      # "I did not break the vase."
-        said['Ben'] = culprit == 'Ali'                        # "Ali broke the vase."
-        said['Siti'] = not said['Ben']                        # "Ben is lying."
+        said = {'Kai': culprit == 'Mo'}                       # "Mo ate it."
+        said['Lin'] = culprit != 'Lin'                        # "I did not eat it."
+        said['Mo'] = not said['Kai']                          # "Kai is lying."
         if sum(said.values()) == 1:
             ok.append(culprit)
     assert len(ok) == 1
@@ -89,7 +93,7 @@ def _():
 @check('L5U10-S07')
 def _():
     for years in range(0, 200):
-        if 40 + years == 3 * (8 + years):
+        if 2 * (8 + years) == 36 + years:
             return [str(years)]
 
 
@@ -127,7 +131,7 @@ def _():
 
 @check('L5U10-S12')
 def _():
-    return [str(sum(str(n).count('5') for n in range(1, 61)))]
+    return [str(sum(str(n).count('7') for n in range(1, 81)))]
 
 
 @check('L5U10-T01')
@@ -143,7 +147,7 @@ def _():
 
 @check('L5U10-T02')
 def _():
-    w, h = 4, 2
+    w, h = 5, 2
     squares = sum(count_squares(w, h, k) for k in range(1, 3))
     rects = 0
     for x1, x2 in itertools.combinations(range(w + 1), 2):          # pick 2 vertical lines
@@ -165,16 +169,16 @@ def _():
 
 @check('L5U10-G01')
 def _():
-    return [str(sum(1 for n in range(100, 1000) if sum(map(int, str(n))) == 7))]
+    return [str(sum(1 for n in range(100, 1000) if sum(map(int, str(n))) == 8 and len(set(str(n))) == 3))]
 
 
 @check('L5U10-G02')
 def _():
     sols = []
-    for k in range(0, 13):                  # k coins of 50c and k coins of 10c
-        twenty = 24 - 2 * k
-        if twenty >= 0 and 50 * k + 10 * k + 20 * twenty == 700:
-            sols.append((k, twenty))
+    for k in range(0, 16):                  # k coins of 5c and k coins of 20c
+        ten = 30 - 2 * k
+        if ten >= 0 and 5 * k + 20 * k + 10 * ten == 345:
+            sols.append((k, ten))
     assert len(sols) == 1
     return {'a': [str(sols[0][0])], 'b': [str(sols[0][0])], 'c': [str(sols[0][1])]}
 

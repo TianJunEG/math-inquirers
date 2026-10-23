@@ -59,11 +59,11 @@ S.append(item(U+'-S07', 'start', 2, 'Ravi has 30 red marbles and 45 blue marbles
          P('b', 'Then each bag has {b} red and {b} blue.', A(2, 3, text='2 red and 3 blue'))],
   why='The number of bags is a common factor of 30 and 45. The common factors are 1, 3, 5 and 15, so the greatest is 15. Each bag has 30 ÷ 15 = 2 red and 45 ÷ 15 = 3 blue.',
   space={'rows': ['Factors of 30: {ll}', 'Factors of 45: {ll}']}))
-S.append(item(U+'-S08', 'start', 2, 'Kumar jogs every 10 days. Aisha jogs every 15 days. They both jog today.',
-  parts=[P('a', 'They next jog together after {b} days.', A(30)),
-         P('b', 'How many more times do they jog together in the next 100 days? {b} times', A(3))],
-  why='The least common multiple of 10 and 15 is 30 (10, 20, 30 and 15, 30). They jog together after 30, 60 and 90 days. The next, 120 days, is after the 100 days. That is 3 times.',
-  space={'rows': ['Kumar: 10, 20, {l}', 'Aisha: 15, 30, {l}']}))
+S.append(item(U+'-S08', 'start', 2, 'Kumar jogs every 12 days. Aisha jogs every 18 days. They both jog today.',
+  parts=[P('a', 'They next jog together after {b} days.', A(36)),
+         P('b', 'In the next 100 days, they jog together {b} times.', A(2))],
+  why='The least common multiple of 12 and 18 is 36 (12, 24, 36 and 18, 36). They jog together after 36 and 72 days. The next, 108 days, is after the 100 days. That is 2 times.',
+  space={'rows': ['Kumar: 12, 24, {l}', 'Aisha: 18, 36, {l}']}))
 S.append(item(U+'-S09', 'start', 2, 'Who am I? I am between 50 and 100. Both 6 and 7 go into me exactly.\nI am {b}.',
   ans=A(84),
   why='A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 50 and 100.'))
