@@ -11,5 +11,7 @@ Fix pass (23 Oct): about 25 holiday-clone items replaced by new contexts (L3-REP
 
 Round-2 audit fixes (AUDIT_ROUND2.md, 23 Oct): C1-C8 clone items replaced with new stories and frames (U6 T2 equal fractions with a sum; U5 S5 reverse division; U5 S6b greatest number with remainder 5; U5 T3 same answer and remainder; U7 Try and C2; U3 C2 split a product; U10 S6 cafe meals and C3 height order; U4 S10 zoo, T1 shelves, S11 name fixed); U8 label C moved, dent defined on the Learn page, Check 2 reworded; U9 Learn examples and S4 changed; Whys restored (U3 S10, U7 C1, U2 T3); U4 and U5 Learn pages have worked lines; U10 L1-L3 polish.
 
-Build: 100 pages (soft and print). Gates: run_checks (461 answers), dup_check (0 FAIL), wording_lint, build (no overflow), bw_check, check_bw, fill_check all pass.
+Round-3 fixes (AUDIT_ROUND3.md): U6 T2 (order fractions with 24ths), U5 T3 (wheel with 8 seats), U5 S5 (list adding 5, same remainder), U5 S6(b) (6 times table with remainder 1), U8 T3 (steps shape, 14 corners and 5 dents), U8 Check 2 (Y instead of T), U7 Learn Try wording, U4 T1 wording. Rebuilt with the current shared tools (clean trophy plaque, no repeated Contents titles); the DRAFT licence line stays by owner decision. The vector print file is in extension/l3/build_extras/.
+
+Build: 100 pages (soft and print). Gates: run_checks (462 answers), dup_check (0 FAIL), wording_lint, build (no overflow), bw_check, check_bw, fill_check all pass.
 Open: certificate plaque and the DRAFT licence line are shared assets (not edited). Resume point: none.
