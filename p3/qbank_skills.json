@@ -61,7 +61,7 @@
     "tool_name": "Spot the pattern",
     "q": "Write the first ten numbers in the 3 table, from 3 up to 30. a) Add the digits of each number. What do you notice? b) Is 483 in the 3 table? Is 725?",
     "a": "a) The digit sums are 3, 6, 9, 3, 6, 9, 3, 6, 9, 3: always a number from the 3 table. b) 483: 4 + 8 + 3 = 15, which is in the 3 table, so yes (3 x 161). 725: 7 + 2 + 5 = 14, which is not, so no.",
-    "say": "Last lesson we looked at the digit sums of the 9 table. Do the same for the 3 table.",
+    "say": "Remember the digit sums of the 9 table in the workbook? Do the same for the 3 table.",
     "ask": "What do the digit sums have in common? Does the test work for 30? For 483?",
     "listen": "\"The digit sum is in the 3 table\". Check by dividing: 483 / 3."
    },

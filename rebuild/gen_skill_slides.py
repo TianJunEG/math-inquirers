@@ -143,6 +143,13 @@ def write_sheet(level):
     h.append('</body></html>')
     path = os.path.join(out_dir, f'Math_Inquirers_L{level}_Skill_Additions_Tutor_Sheet.html')
     open(path, 'w', encoding='utf-8').write('\n'.join(h))
+    try:   # digital PDF copy (tutor sheet, not a printed item)
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as pw:
+            b = pw.chromium.launch(); pg = b.new_page(); pg.goto('file://' + os.path.abspath(path))
+            pg.pdf(path=path[:-5] + '.pdf', format='A4', margin={'top': '14mm', 'bottom': '14mm', 'left': '12mm', 'right': '12mm'}, print_background=True); b.close()
+    except Exception as e:
+        print('PDF skipped:', e)
     return path
 
 

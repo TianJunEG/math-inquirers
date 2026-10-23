@@ -7,7 +7,7 @@
     "skill": "Sequences: each number is made from the two before",
     "tool": "pattern",
     "tool_name": "Spot the pattern",
-    "q": "Mei writes a pattern: 1, 2, 3, 5, 8, __, __ a) Fill in the gap row. What do you notice? b) Write the next two numbers.",
+    "q": "Mei writes a pattern: 1, 2, 3, 5, 8, __, __ a) Look at the gaps between the numbers. What do you notice? b) Write the next two numbers.",
     "a": "a) The gaps are 1, 1, 2, 3, 5: they are the pattern numbers again. Each number is the two numbers before it added together (3 + 5 = 8). b) 13 and 21.",
     "say": "Some patterns do not add the same number each time. Look at the gaps.",
     "ask": "What is the gap between 1 and 2? Between 2 and 3? Does the gap stay the same? What do you notice about the gaps and the numbers?",

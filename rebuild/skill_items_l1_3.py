@@ -51,7 +51,7 @@ def add(**k):
 # =====================================================================  LEVEL 1
 add(id='L1-SEQ1', level=1, lesson=1, slot='slide', group='g1', skill='Sequences: each number is made from the two before', tool='pattern',
     stem='Mei writes a pattern: 1, 2, 3, 5, 8, __, __',
-    parts=['a) Fill in the gap row. What do you notice?', 'b) Write the next two numbers.'],
+    parts=['a) Look at the gaps between the numbers. What do you notice?', 'b) Write the next two numbers.'],
     fig=('seq', dict(terms=[1, 2, 3, 5, 8, 0, 0], gaps=[1, 1, 2, 3, None, None], blanks_from=5)),
     a='a) The gaps are 1, 1, 2, 3, 5: they are the pattern numbers again. Each number is the two numbers before it added together (3 + 5 = 8). b) 13 and 21.',
     p=dict(start=[1, 2], n=7), ans=[13, 21],
@@ -322,7 +322,7 @@ add(id='L3-DIV3', level=3, lesson=3, slot='slide', group='g1', skill='Divisibili
     stem='Write the first ten numbers in the 3 table, from 3 up to 30.',
     parts=['a) Add the digits of each number. What do you notice?', 'b) Is 483 in the 3 table? Is 725?'],
     a='a) The digit sums are 3, 6, 9, 3, 6, 9, 3, 6, 9, 3: always a number from the 3 table. b) 483: 4 + 8 + 3 = 15, which is in the 3 table, so yes (3 x 161). 725: 7 + 2 + 5 = 14, which is not, so no.', p=dict(tests=[483, 725]), ans=['yes', 'no'],
-    say='Last lesson we looked at the digit sums of the 9 table. Do the same for the 3 table.', ask='What do the digit sums have in common? Does the test work for 30? For 483?', listen='"The digit sum is in the 3 table". Check by dividing: 483 / 3.')
+    say='Remember the digit sums of the 9 table in the workbook? Do the same for the 3 table.', ask='What do the digit sums have in common? Does the test work for 30? For 483?', listen='"The digit sum is in the 3 table". Check by dividing: 483 / 3.')
 add(id='L3-DIV6', level=3, lesson=3, slot='slide', group='g1', skill='Divisibility: 2 and 3 means 6', tool='table',
     stem='A number is in the 2 table and in the 3 table.',
     parts=['a) Which other table is it in?', 'b) Is 534 in the 6 table? Is 357?'],
