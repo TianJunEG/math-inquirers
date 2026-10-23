@@ -14,12 +14,12 @@ def page01():
         c2 = (rng.randint(2, 4), 0, rng.randint(1, 4), rng.randint(1, 4)) if rng.random() < .5 else (rng.randint(2, 4), rng.randint(1, 4), 0, rng.randint(1, 4))
         n = rng.choice([x for x in range(1200, 9900) if len(set(str(x))) == 4 and "0" not in str(x)])
         d = int(rng.choice(str(n)))
-        reg = (rng.randint(2, 6), rng.randint(11, 15), rng.randint(1, 8))          # thousands, hundreds (more than 9), ones
-        zero = (rng.randint(2, 9), rng.randint(1, 9))                              # thousands and tens
+        reg = (rng.randint(2, 6), rng.randint(11, 15), rng.randint(2, 8))          # thousands, hundreds (more than 9), ones
+        zero = (rng.randint(2, 9), rng.randint(2, 9))                              # thousands and tens
         hn = rng.choice([x for x in range(1200, 9700, 100)])
         items = [dict(k="chart", c=c1), dict(k="chart", c=c2), dict(k="digit", n=n, d=d), dict(k="regroup", th=reg[0], h=reg[1], o=reg[2]),
                  dict(k="zero", th=zero[0], t=zero[1]), dict(k="hundreds", n=hn)]
-        rng.shuffle(items)
+        rng.shuffle(items); items.sort(key=lambda it: it["k"] != "chart")
         def val(it):
             return {"chart": lambda i: 1000 * i["c"][0] + 100 * i["c"][1] + 10 * i["c"][2] + i["c"][3], "digit": lambda i: i["d"] * 10 ** (3 - str(i["n"]).index(str(i["d"]))),
                     "regroup": lambda i: 1000 * i["th"] + 100 * i["h"] + i["o"], "zero": lambda i: 1000 * i["th"] + 10 * i["t"], "hundreds": lambda i: i["n"] // 100}[it["k"]](it)
@@ -51,8 +51,8 @@ def page01():
             texts.append(t); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w4"></span>'))
     P = code_items_page(1, 3101, "Thousands, Hundreds, Tens, Ones", 1, "Place value: numbers to 10 000", STRAND_WN,
         "1.1, 1.2 (counting in hundreds; number notation, representations and place values)", ["WN1.1", "WN1.2"], "Code-breaker (place value)",
-        ["Look at each item.", "Write the number in the box.", INSTR_CODE],
-        '<div class="qg c2">' + "".join(cards) + "</div>", ans, table, word, 0, 9999,
+        ["Write the number in the box.", INSTR_CODE],
+        '<div class="qg c1">' + "".join(cards[:2]) + '</div><div class="qg c2" style="margin-top:3.5mm">' + "".join(cards[2:]) + "</div>", ans, table, word, 0, 9999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
         "Two place-value charts (discs marked 1000, 100, 10 and 1; one chart has a column with no discs), the value of a digit, a regrouped number (more than 9 hundreds), a number with a zero hundreds place and the number of hundreds in a number. The wrong numbers a pupil gets by writing the digits in a different order, or the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
     solved = []; ci = 0; ti = 0
@@ -220,7 +220,7 @@ def page03():
     P = code_items_page(3, 3303, "Digit Cards", 2, "Numbers to 10 000: make, compare and order numbers from digit cards", STRAND_WN,
         "1.2, 1.4 (place values; comparing and ordering numbers)", ["WN1.2", "WN1.4"], "Code-breaker (digit cards)",
         ["Use all four cards once each.", "Make a 4-digit number. A number cannot start with 0.", INSTR_CODE],
-        qgrid(cards_h, 3), ans, table, word, 1000, 9999,
+        qgrid(cards_h, 2), ans, table, word, 1000, 9999,
         "; ".join(f"{i+1}) {k}: {a}" for i, ((k, c), a) in enumerate(zip(items, ans))),
         "Six sets of four digit cards: greatest, smallest, greatest even, smallest even, greatest odd and smallest odd. A zero card cannot be the thousands digit. The decoy letters stand for the other arrangements of the same cards, so a pupil who makes a different number from the same cards still gets a letter, but not the right one. A box left blank gives no letter and the check cannot see it.")
     solved = []
@@ -327,9 +327,9 @@ def page05():
     specs_rows = []
     for r in rows:
         right = r["seq"][r["gap"]]
-        wrongs = {right + 10, right - 10, right + 100, right - 100, right + 1000, right - 1000, right + 1, right - 1}
+        wrongs = {right + 10, right - 10, right + 100, right - 100, right + 1000, right - 1000}
         if r["kind"] == "alt":
-            a, b = r["st"]; wrongs |= {right + (a - b), right - (a - b)}
+            a, b = r["st"]; wrongs = {right + a, right - a, right + b, right - b, right + 100, right - 100}
         wrongs = sorted(w for w in wrongs if 1000 <= w <= 9999 and w != right and w not in r["seq"])
         w2 = rng.sample(wrongs, 2)
         cells = [None if i == r["gap"] else v for i, v in enumerate(r["seq"])]
