@@ -46,3 +46,10 @@ Written by the author agent. The author did not audit its own work: every point 
 - Rebuilt at 100 pages; run_checks (497), dup_check, wording_lint, bw_check and check_bw OK.
 - OPEN: the Welcome page (page 3) overflows by 12.4 mm in the soft copy and 6.1 mm in print, so fill_check fails on that one page. It comes from the Level 2 entry in extension/config/levels.json (welcome_notes plus the longer print note). I may not edit levels.json (edit was blocked). Suggested fix: shorten or remove the Level 2 welcome_notes entry ("Beyond Level 2 is ahead of school. You may skip it.") and the colour print note.
 - Welcome overflow resolved by the coordinator's levels.json edit; rebuilt, fill_check and all gates OK (100 pages).
+
+## Round 2 fixes (AUDIT_ROUND2.md)
+- R1 U9 Learn example 2 now a concert at 7:55 pm for 30 minutes (ends 8:25 pm); the U9 clock facts say "count in 5s" and "short hand: read the smaller number". A second small clock was not added (page is full).
+- R2 U3 T01 now scooters and trikes (same numbers, answers unchanged). R3 U4 T01 now a beetle, 30 changed to 26 (still No). U4 S10 towers now start 5, 7, 9 (tower 10 has 23, tower 8 has 19). U4 S01 frame reworded.
+- R5 word answers (banana, mango, apple, tennis, chess, art, swimming, Car, Top) use wide boxes. R6 U5 G03: the extra ruled line did not fit, so it stays one line. R7 U8 Learn stack is now 8 cubes (heights 3 and 1). U10 T03 is now a two-pump story (same answers).
+- R4 (DRAFT licence line) kept on purpose until the lawyer approves.
+- Rebuilt at 100 pages; all gates OK; U9 Learn, U10 and U6 pages viewed in 1-bit.
