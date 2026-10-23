@@ -188,7 +188,7 @@ def groups(container='plate', n=3, each=3, icon_name='apple', counts=None, empty
         x = 10 + c * (cw + gap); y = 10 + r * (ch + 56 + gap)
         body.append(_container(container, x, y, cw, ch))
         if not empty:
-            isz = 42 if cnt <= 6 else 32
+            isz = 52 if cnt <= 6 else 36
             cols = 3 if cnt <= 6 else 4
             rws = (cnt + cols - 1) // cols
             for i in range(cnt):

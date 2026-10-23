@@ -164,6 +164,14 @@ for k in BK:
     rec(f"no opacity/alpha/gradient in {f}", not op, str(op[:3]))
   _ph = open(os.path.join(O, f"{k}_pupil.html")).read()
   rec(f"{k}: no bare black dot is drawn as a countable thing", 'class="dot"' not in _ph and "dotc" not in _ph)
+  # no drawn object is clipped by the edge of its own svg (found on P1-25: the loose apples ran past the frame)
+  _clip = []
+  for sm in re.finditer(r'<svg[^>]*viewBox="0 0 ([\d.]+) ([\d.]+)"[^>]*>(.*?)</svg>', _ph, re.S):
+      W_, H_ = float(sm.group(1)), float(sm.group(2))
+      for om in re.finditer(r'class="obj"[^>]*translate\(([-\d.]+),([-\d.]+)\) scale\(([\d.]+)\)', sm.group(3)):
+          x_, y_, sc_ = float(om.group(1)), float(om.group(2)), float(om.group(3))
+          if x_ < -0.3 or y_ < -0.3 or x_ + 20 * sc_ > W_ + 0.3 or y_ + 20 * sc_ > H_ + 0.3: _clip.append((round(x_, 1), round(y_, 1), W_, H_))
+  rec(f"{k}: no drawn object is clipped by the edge of its own svg", not _clip, str(_clip[:3]))
   if 15 in [p["no"] for p in BK[k]]:
     rec(f"{k}: every coin shows its value and the word cents (P1-15, P1-28)", _ph.count('class="coinunit"') == _ph.count('class="coinval"') > 0, f'{_ph.count("class=" + chr(34) + "coinval")} coins')
   if 17 in [p["no"] for p in BK[k]]:

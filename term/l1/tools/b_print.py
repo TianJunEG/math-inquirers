@@ -34,7 +34,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}
-.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.gw{width:370px!important}.p1 .vis.gw{width:330px!important}.visrow .vis.gw{width:calc(100%/var(--n) - 10px)!important;max-width:330px}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
 .visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
 .tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
@@ -78,10 +78,11 @@ def _vis_html(v):
     wide = v.get('type') in ('table', 'bar_model', 'line_up', 'picture_graph', 'money', 'balance')
     xw = v.get('type') in ('number_line', 'seq', 'jump_lines')
     arr = v.get('type') == 'array'
+    gw = v.get('type') == 'groups'
     nar = v.get('type') in ('round_table', 'domino')
     sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
     md = v.get('type') in ('cube_stack', 'grid', 'calendar')
-    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" gw" if gw else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
 
 
 def inv_draw(inv):
@@ -270,6 +271,17 @@ def build_print(d, pw):
         path = render('workbook', workbook_html(d), f + f' \u2022 Lesson {d["lesson_in_term"]}', f'L{n}_Workbook.pdf')
         got = pdfcheck.pdf_pages(path)
         if got == want: break
+        try:
+            mf = _measure(pw, d)           # measured designed-page heights: a page that is over full gets tighter spacing (works when the page before an orphan is not full)
+            over = [i for i, f in enumerate(mf) if f > 0.965]
+        except Exception:
+            over = []
+        if over:
+            for bad in over:
+                if bad in d['_tight2']: d['_tight3'].add(bad)
+                if bad in d['_tight']: d['_tight2'].add(bad)
+                d['_tight'].add(bad)
+            continue
         fills = pdfcheck.pdf_fill(path)
         bads = []; hi = -1                       # map PDF pages to designed pages: an orphan page belongs to the designed page before it
         for i, x in enumerate(fills):

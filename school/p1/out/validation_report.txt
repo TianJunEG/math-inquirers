@@ -186,14 +186,14 @@ PASS  S1-03 (P1-24) V3 wrong turns exist (route boxes with a legal step to an of
 PASS  S1-03 (P1-24) V3b at least two ordinal steps and at least four number-word steps on the route  
 PASS  S1-03 (P1-24) V3c a shortcut that ignores the rule is shorter than the route, so the box count rejects it  
 PASS  S1-03 (P1-24) V7 numbers within 99 and ordinals to 10th  
-PASS  S1-01 (P1-25) V1 objects counted in the drawings (and unmatched objects in the two comparing pictures) equal the key  [8, 10, 17, 7, 1]
+PASS  S1-01 (P1-25) V1 objects counted in the drawings (and unmatched objects in the two comparing pictures) equal the key  [8, 10, 16, 4, 7]
 PASS  S1-01 (P1-25) V1b the questions name the sets the right way round (more than: the longer row first; fewer than: the shorter row first)  
 PASS  S1-01 (P1-25) V1c at most one set has more than 12 objects  
 PASS  S1-01 (P1-25) V2 code word spells CLOTH  
 PASS  S1-01 (P1-25) V3 no single slip spells another word (large word list, 129 000 words)  100/100
 PASS  S1-01 (P1-25) V3c no swap of two answers spells a word  []
 PASS  S1-01 (P1-25) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['cloth']
-PASS  S1-01 (P1-25) V4 guess resistance: at least 3 common words fit the table letters  ['cloth', 'clout', 'cough', 'ghoul', 'gulch', 'lough']
+PASS  S1-01 (P1-25) V4 guess resistance: at least 3 common words fit the table letters  ['cloth', 'clout', 'touch', 'vouch']
 PASS  S1-15 (P1-26) V1 independent reader: each box in the chart is deduced from its printed neighbours (all agree), 10 more and 10 less are read from the chart, the table continues its pattern; all equal the key  [43, 76, 70, 44, 9, 15]
 PASS  S1-15 (P1-26) V1b the 10 more and 10 less answers are printed cells (not boxes), answers distinct and within 100  
 PASS  S1-15 (P1-26) V2 code word spells PEANUT  
@@ -394,7 +394,7 @@ PASS  S1-03 (P1-24) enumeration: plausible single slips rejected 120/120 = 100.0
 PASS  S1-03 (P1-24) enumeration: every other value of one answer rejected 120/120 = 100.0% (needs >= 95%)  
 PASS  S1-01 (P1-25) has a self-check model for the enumeration  
 PASS  S1-01 (P1-25) check passes the right answers  
-PASS  S1-01 (P1-25) enumeration: plausible single slips rejected 50/50 = 100.0% (needs >= 95%)  
+PASS  S1-01 (P1-25) enumeration: plausible single slips rejected 54/54 = 100.0% (needs >= 95%)  
 PASS  S1-01 (P1-25) enumeration: every other value of one answer rejected 100/100 = 100.0% (needs >= 95%)  
 PASS  S1-15 (P1-26) has a self-check model for the enumeration  
 PASS  S1-15 (P1-26) check passes the right answers  
@@ -475,7 +475,7 @@ PASS  V8 reading level: instruction and clue sentences <= 8 words, <= 3 lines  [
 PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
-FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(5, ['40'])]
+PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
 PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  the P1-18 note does not claim half-hour additions cross the hour unless one does  
 PASS  F28: every outcome id of every page has its PDF wording in the Primary 1 section of docs/moe/syllabus_by_level.md, and the numbers in each tag are the page's own outcome ids  []
@@ -499,6 +499,7 @@ PASS  no division sign in S1_key.html (P2 syllabus)
 PASS  answer boxes at least 12 mm high in S1_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_key.html  []
 PASS  S1: no bare black dot is drawn as a countable thing  
+PASS  S1: no drawn object is clipped by the edge of its own svg  []
 PASS  S1: every ruler strip on P1-17 has a start arrow  
 PASS  B/W colours only in S2_pupil.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S2_pupil.html  min 0.25
@@ -519,6 +520,7 @@ PASS  no division sign in S2_key.html (P2 syllabus)
 PASS  answer boxes at least 12 mm high in S2_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_key.html  []
 PASS  S2: no bare black dot is drawn as a countable thing  
+PASS  S2: no drawn object is clipped by the edge of its own svg  []
 PASS  S2: every coin shows its value and the word cents (P1-15, P1-28)  42 coins
 PASS  S2: P1-20 uses the smiley face symbol  
 PASS  P1_S1_Puzzles.pdf has 20 pages  20
@@ -667,8 +669,8 @@ PASS  S1 key page 09 layout (no overflow/clipping/margin breach)
 PASS  S1 key page 09 min text size >= 8 pt  8.0 pt
 PASS  S1 key page 10 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 10 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 01 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  S2 pupil page 01 page-fill: puzzle content 184 of 183 mm  1.00
+PASS  S2 pupil page 01 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 01 page-fill: puzzle content 163 of 183 mm  0.89
 PASS  S2 pupil page 01 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 02 page-fill: puzzle content 161 of 183 mm  0.88
@@ -764,12 +766,12 @@ PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 173, limit 40 p
 PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.34% vs greyscale)  5 pages
 PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 125, limit 40 per page)  
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.03% vs greyscale)  10 pages
-PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 591, limit 75 per page)  
+PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 592, limit 75 per page)  
 PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.15% vs greyscale)  20 pages
-PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 167, limit 40 per page)  
+PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 166, limit 40 per page)  
 PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.29% vs greyscale)  5 pages
 PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 121, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.82% vs greyscale)  9 pages
 PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 542, limit 75 per page)  
 
-TOTAL 773 checks, 2 failed
+TOTAL 775 checks, 0 failed

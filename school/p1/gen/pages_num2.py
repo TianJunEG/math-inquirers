@@ -240,7 +240,7 @@ def frame_svg(kind, k, pitch=9.0, size=7.4):
     for i in range(1, 5): inner += '<line x1="%.1f" y1="0.8" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.35"/>' % (i * pitch + 0.8, i * pitch + 0.8, 2 * pitch + 0.8)
     for i in range(10): inner += art.obj_g(kind, 0.8 + (i % 5) * pitch + 0.8, 0.8 + (i // 5) * pitch + 0.8, size)
     for i in range(k): inner += art.obj_g(kind, 1 + i * (pitch - 1), 2 * pitch + 3.2, size)
-    return common_svg(5 * pitch + 2, 2 * pitch + 3.2 + size + 1.5, inner)
+    return common_svg(max(5 * pitch + 2, 1 + k * (pitch - 1) + 1), 2 * pitch + 3.2 + size + 1.5, inner)
 
 def compare_svg(ka, a, kb, b, pitch=8.0, size=6.6, gap=11):
     top = "".join(art.obj_g(ka, 1 + i * pitch, 0.5, size) for i in range(a))
@@ -259,7 +259,7 @@ def page25():
     kinds = ["apple", "bird", "star", "fish", "balloon", "sweet", "flower", "ball", "car", "kite"]
     while True:
         k = rng.sample(kinds, 7)
-        c1, c2 = rng.randint(6, 9), rng.randint(10, 12); fk = rng.randint(3, 8)
+        c1, c2 = rng.randint(6, 9), rng.randint(10, 12); fk = rng.randint(3, 6)
         a1, b1 = rng.randint(6, 10), rng.randint(2, 5); a2, b2 = rng.randint(5, 10), rng.randint(2, 4)
         d1, d2 = a1 - b1, a2 - b2
         ans = [c1, c2, 10 + fk, d1, d2]
