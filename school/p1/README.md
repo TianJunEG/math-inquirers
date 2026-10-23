@@ -1,108 +1,75 @@
-# Early Finisher Puzzles, Primary 1 (pilot)
+# Early Finisher Puzzles, Primary 1: two semester booklets (pilot)
 
-Pilot of the school early-finisher puzzle workbook (plan: `docs/school_books/plan.md`; owner decisions: `docs/terms/owner_decisions.md` addenda 5 to 10).
-20 single-sided A4 pages, every page self-checking, pure black and white, school name printed in each page footer, teacher answer key with syllabus topic tags.
-Not for sale as is: it is a pilot for owner review (see open questions). The cover, licence and teacher notes carry DRAFT stamps, the owner's business email and a registered-office placeholder until the owner and a lawyer approve the wording.
-Third audit (`AUDIT_3.md`) and its fixes, with the owner-feedback rework (objects instead of dots, spacing, coins, rulers, picture-graph faces, ice cream, 6 mm boxes): `AUDIT_FIXES_3.md`. Second audit (`AUDIT_2.md`) and its fixes: `AUDIT_FIXES_2.md`. First audit: `AUDIT.md`, `AUDIT_FIXES.md`.
+Two booklets of 20 single-sided A4 pages each (Semester 1 = Terms 1 and 2, Semester 2 = Terms 3 and 4; the split follows the typical order, schools vary), 40 pages in all, P1-01 to P1-40.
+Every page is self-checking, pure black and white, with the school name and a page code like `S1-07 (P1-08)` in the footer, and each booklet has its own teacher answer key with outcome tags.
+Not for sale as is: a pilot for owner review. Cover, licence and teacher notes carry DRAFT stamps, the business email pypteltd@gmail.com and a registered-office placeholder until the owner and a lawyer approve the wording.
+Plan: `docs/school_books/p1_semester_booklets_plan.md`; build report and open items: `docs/school_books/p1_semester_booklets_build_report.md`; owner decisions: `docs/terms/owner_decisions.md` (23 Oct 2026, evening). Earlier audits of the 20-page pilot: `AUDIT*.md`, `AUDIT_FIXES*.md`.
 
 ## Regenerate
 
 ```
 cd school/p1
-python3 build.py --school "Name of School"   # omit --school to print a blank line to write the name on
+python3 build.py --school "Name of School"   # both booklets; omit --school to print a blank line to write the name on
+python3 build.py --booklet S1                # one booklet
 python3 build.py --final                     # leave out the DRAFT stamps (only after the owner and a lawyer approve the front matter)
-python3 validate.py                          # 381 checks; exit code 1 on any failure (about 40 seconds)
+python3 validate.py                          # about 770 checks; exit code 1 on any failure (about 3 minutes)
+python3 validate.py --partial                # work in progress: not every one of the 40 pages exists yet
 ```
 
-Needs: python3 with `playwright` (chromium), `pypdf`, `Pillow`, `shapely`, `fonttools`, `brotli`, `numpy`, `scipy`; poppler (`pdftoppm`, `pdfinfo`, `pdffonts`, `pdftotext`); fonts from `/fonts/node_modules/@fontsource` (Fredoka, Nunito Sans).
-All puzzles are generated from fixed seeds, so a rebuild gives identical puzzles. Only the footer changes with `--school`.
+Needs: python3 with `playwright` (chromium), `pypdf`, `Pillow`, `shapely`, `fonttools`, `brotli`, `numpy`, `scipy`; poppler (`pdftoppm`, `pdfinfo`, `pdffonts`, `pdftotext`); fonts from `fonts/node_modules/@fontsource` (Fredoka, Nunito Sans).
+All puzzles come from fixed seeds, so a rebuild gives identical puzzles. Only the footer changes with `--school`.
 
-Outputs in `out/`:
+Outputs in `out/` (committed: the PDFs, `verification.json`, `validation_report.txt`; not committed: `out/*.html`, `out/bilevel_check/`):
 
 | File | Pages | Use |
 |---|---|---|
-| `P1_Puzzles.pdf` | 20 | The pupil pages P1-01 to P1-20. Photocopy these. |
-| `P1_FrontMatter.pdf` | 5 | Cover, photocopy licence, teacher notes (2 pages, with pack contents), contents list (all DRAFT-stamped unless built with `--final`) |
-| `P1_Complete_Pack.pdf` | 25 | Front matter (5) + puzzles (20): the whole printable pack |
-| `P1_Answer_Key.pdf` | 11 | Teacher key: intro and topic coverage, then answers, check result, syllabus tag, note and a small solved picture where one helps (picture, grid, route, magic square and graph pages), then one full answer page for each colour-by-code page |
-| `verification.json`, `validation_report.txt` | | Machine record of every check, including the wrong-answer enumeration per page |
+| `P1_S1_Puzzles.pdf`, `P1_S2_Puzzles.pdf` | 20 each | The pupil pages. Photocopy these. |
+| `P1_S1_FrontMatter.pdf`, `P1_S2_FrontMatter.pdf` | 5 each | Cover, photocopy licence, teacher notes (2 pages), contents and outcome coverage |
+| `P1_S1_Complete_Pack.pdf`, `P1_S2_Complete_Pack.pdf` | 25 each | Front matter + puzzles |
+| `P1_S1_Answer_Key.pdf`, `P1_S2_Answer_Key.pdf` | see report | Teacher key: answers, check result, syllabus outcome numbers, notes, small solved pictures, full answer pages for colour-by-code pages |
 
-The committed PDFs are built without a school name (blank line in the footer). `out/*.html` and `out/bilevel_check/` are regenerated and not committed.
+The four PDFs of the old single 20-page pack (`P1_Puzzles.pdf` and so on) were removed: the booklets replace them.
 
 ## Code layout
 
-- `gen/common.py` code tables and the code-word tests, the large word lists (`gen/words_en.txt.gz`, about 129 000 words of 2 to 8 letters; `gen/words_common.txt.gz`, the 20 000 most frequent), SVG shapes, reading-level helper.
-- `gen/pages_numbers.py` pages 2, 4, 7; `gen/pages_arith.py` pages 3, 5, 8, 9, 10, 11, 13; `gen/pages_measure.py` pages 6, 15 to 20; `gen/pages_cbc.py` the colour-by-code pages 1, 12 and 14, built with the picture and topic generator copied unchanged from `school/colour_by_code` (commit e7d74e1, after its audit fixes) into `cbc_vendor/` so later edits there cannot change this pack. Each `pageNN()` makes the puzzle from a seed, re-solves it with separate solver code (brute force, exhaustive route search, reading the answer back from the drawn picture, or the library's independent text evaluator), and hands `validate.py` a `model` (right answers, possible values of each answer, the pupil's check as a function) for the independent wrong-answer enumeration.
-- `render.py` HTML/CSS (black and white only), page frame, front matter, key. `build.py` makes the PDFs. `validate.py` runs all checks.
+- `gen/outcomes.py`: the 32 Primary 1 outcome lines in the syllabus PDF's wording, which outcomes each page exercises, and the page order of each booklet (the only place the split is defined).
+- `gen/common.py` code tables, the word lists (`gen/words_en.txt.gz`, about 129 000 words; `gen/words_common.txt.gz`), SVG shapes, object art. `gen/art.py` extra objects (bird, flower, pets, toys). `gen/css_new.py` CSS of the new pages.
+- Old pages: `gen/pages_numbers.py` (P1-02, 04, 07), `gen/pages_arith.py` (P1-03, 05, 08 to 11, 13), `gen/pages_measure.py` (P1-06, 15 to 20), `gen/pages_cbc.py` (P1-01, 12, 14; picture library vendored in `cbc_vendor/`).
+- New pages (P1-21 to P1-40): `gen/pages_stories.py` (21, 22, 39, 40), `gen/pages_num2.py` (23 to 26, 37, 38), `gen/pages_money_time.py` (27 to 30), `gen/pages_meas2.py` (31 to 36).
+  Each `pageNN()` makes the puzzle from a seed, re-solves it with separate solver code that reads the PRINTED text or drawing (not the generator's data), and hands `validate.py` a `model` (right answers, the values each answer could take, the pupil's check as a function) for the independent wrong-answer enumeration.
+- `render.py` HTML/CSS, page frame, front matter and key per booklet. `build.py` makes the PDFs. `validate.py` runs all checks.
 
-## Puzzle inventory
+## The 20 new pages
 
-Tier: 1 = one star, 2 = two stars. Check mechanisms use the plan's codes: K1 code word, K3 check-sum/total, K4 grid consistency, K6 route closes, K7 put the answer back. "Enumeration" = the share of single wrong answers (or wrong arrangements) the pupil's own check rejects, counted by `validate.py` independently of the generator. Every code-word page also records V3 (no single slip and no swap of two answers spells another word of the 129 000-word list), V4 (guess resistance, see below). Syllabus tags use the outcome numbers or ranges of the Primary 1 section of `docs/moe/syllabus_by_level.md`; `validate.py` checks every topic phrase against that file (F28).
+| Code | Title | Stars | Outcomes | Check |
+|---|---|---|---|---|
+| S1-10 (P1-21) | Story Sums | 2 | Addition and Subtraction 2.1, Addition and Subtraction 2.2, Addition and Subtraction 2.7 | K1 code word |
+| S2-20 (P1-22) | Two-Step Stories | 2 | Addition and Subtraction 2.1, Addition and Subtraction 2.2, Addition and Subtraction 2.5, Addition and Subtraction 2.7 | K1 code word |
+| S2-07 (P1-23) | Stack It Up | 1 | Addition and Subtraction 2.5, Addition and Subtraction 2.6 | K1 code word |
+| S1-03 (P1-24) | Words and Numbers | 1 | Whole Numbers 1.3, Whole Numbers 1.7 | K6 route closes at FINISH through the stated number of boxes |
+| S1-01 (P1-25) | Count the Crowd | 1 | Whole Numbers 1.1, Whole Numbers 1.4 | K1 code word |
+| S1-15 (P1-26) | Chart Patterns | 2 | Whole Numbers 1.6, Whole Numbers 1.2, Whole Numbers 1.5 | K1 code word |
+| S2-13 (P1-27) | Which Two Items? | 2 | Money 1.1, Addition and Subtraction 2.5 | K1 letters of the chosen items, cheaper first, spell a word |
+| S2-11 (P1-28) | Fewest Coins | 1 | Money 1.1 | K1 code word |
+| S2-16 (P1-29) | How Long Does It Last? | 1 | Time 2.3, Time 2.4, Time 2.1 | K1 code word |
+| S2-15 (P1-30) | Morning or Evening? | 1 | Time 2.1, Time 2.2 | K6 route closes at FINISH through the stated number of boxes |
+| S1-18 (P1-31) | Shortest to Longest | 1 | Length 1.2, Length 1.3 | K1 letters of the strips, shortest first, spell a word |
+| S2-08 (P1-32) | Measure and Draw | 1 | Length 1.1, Length 1.2, Length 1.4 | K1 code word |
+| S1-16 (P1-33) | Shape Builder | 2 | 2D Shapes 1.1, 2D Shapes 1.2, 2D Shapes 1.3 | K3 the five counts add to 16 + K1 code word |
+| S1-17 (P1-34) | Finish the Figure | 2 | 2D Shapes 1.4 | K1 letter of the matching right half in each row spells a word |
+| S2-17 (P1-35) | Read the Picture Graph | 1 | Picture Graphs 1.1 | K1 code word |
+| S2-19 (P1-36) | Graph Detective Two | 2 | Picture Graphs 1.1 | K3 the total of all stars, and a second sum that uses the answers to a) and b) |
+| S1-08 (P1-37) | Bonds and Families | 2 | Addition and Subtraction 2.1, Addition and Subtraction 2.2, Addition and Subtraction 2.3 | K8 the loop closes: every number joined by = matches |
+| S1-12 (P1-38) | More or Fewer | 2 | Whole Numbers 1.4, Addition and Subtraction 2.1 | K4 grid + K1 letter beside each amount spells a word |
+| S2-02 (P1-39) | Share and Group | 1 | Multiplication and Division 3.1, Multiplication and Division 3.4 | K1 code word |
+| S2-05 (P1-40) | True or False | 2 | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.3 | K1 letter of the ticked answer in each row spells a word |
 
-| Page | Topic tag (P1 syllabus) | Puzzle type | Tier | Self-check | Enumeration (plausible slips; all values) |
-|---|---|---|---|---|---|
-| P1-01 Colour the Rocket | Whole Numbers 1.1, 1.2 (count a set, tens and ones) | Colour by code (CBC): 15 parts, tens-and-ones questions, key of 5 numbers to 5 colours | 1 | tally + matching left and right parts (6 pairs, all true) | 118/118; 150/150; double slips 1678/1680, swaps 86/88 |
-| P1-02 Mystery Numbers | Whole Numbers 1.2, 1.5 (tens and ones, compare and order numbers) | Number riddles, 3 clues each, every clue needed | 2 | K1 + K7, 5 letters (JUICE) | 60/60; 495/495 |
-| P1-03 Fair Shares | Multiplication and Division 3.4 (dividing within 20: sharing and grouping, no division sign) | Code-breaker: share apples, stars, fish or balloons equally among drawn plates, boxes, bowls or bags; put objects into groups of (a dashed loop shows the first group) | 1 | K1 + K7, 6 letters (SHADOW) | 56/56; 114/114 |
-| P1-04 Sticker Grid | Whole Numbers 1.5 (compare and order numbers) | Logic grid 5 x 5 with a cross-and-tick example | 2 | K1 letter beside each of 6 numbers (one is unused, one decoy letter), read down the list = FRUIT | 719/719 wrong placements of 5 of the 6 numbers are not a word; FRUIT has one arrangement only |
-| P1-05 Times Code | Multiplication and Division 3.1 to 3.3 (sign x, multiplying within 40) | Code-breaker: a x b, groups of, missing factor (the second multiplication page) | 2 | K1 + K7, 6 letters (SQUARE) | 65/65; 234/234 |
-| P1-06 What Time Is It? | Time 2.1 (tell time: o'clock and half past) | Code-breaker: six clocks, o'clock and half past only | 1 | K1, 6 letters (SECOND) | 138/138; 138/138 |
-| P1-07 The Queue | Whole Numbers 1.7 (ordinal numbers first to tenth) | Logic (queue of 5 from 6 children; two clues compare two children) | 2 | K1 shirt letters read 1st to 5th = ENJOY (one child is not in the queue, decoy letter) | 719/719 wrong queues are not a word; ENJOY has one arrangement only |
-| P1-08 Make Twelve | Addition and Subtraction 2.1 to 2.7 (add within 20, mental calculation) | Maze 4 x 4 on sums that make 12 | 1 | K6 with a box count (8 boxes, every box makes 12) | 120/120 |
-| P1-09 Magic Square | Addition and Subtraction 2.1 to 2.7 (adding more than two 1-digit numbers) | Magic square, 3 givens, both corner-to-corner lines drawn | 2 | K3, 8 line totals = 15 | 42/42; 48/48 |
-| P1-10 Take Away Code | Addition and Subtraction 2.1 to 2.7 (subtract within 20, inverse relationship) | Code-breaker | 1 | K1 + K7, 6 letters (COUSIN) | 63/63; 114/114 |
-| P1-11 Big Number Sums | Addition and Subtraction 2.1 to 2.7 (within 100: 2-digit and ones, 2-digit and tens, missing number) | Code-breaker | 2 | K1 + K7, 6 letters (FAMILY) | 71/71; 594/594 |
-| P1-12 Colour the House | Geometry 1.1 (identify, name, describe 2D shapes) | Colour by code: 17 parts, count corners; matching parts carry small marks | 1 | tally + small marks (6 sets) | 156/156; 204/204; double 2174/2176, swaps 112/114 |
-| P1-13 Equal Groups | Multiplication and Division 3.1 to 3.3 (equal groups, sign x, within 40) | Code-breaker (count bags and the apples, stars, fish or balloons in each; boxes labelled bags, things, total) | 1 | K1, 6 letters (NUMBER) | 71/71; 234/234 |
-| P1-14 Colour the Ice Cream | Whole Numbers 1.6 (number patterns; counting in 2s, 5s, 10s) | Colour by code: 12 parts, missing number in a count pattern | 2 | tally + matching left and right parts | 144/144; 1200/1200; double 1055/1056, swaps 56/57 |
-| P1-15 Coin Purses | Money (count money in cents up to $1) | Code-breaker; original coin drawings with the value and the word cents, true size ratios | 1 | K1, 5 letters (PIANO) | 59/59; 475/475 |
-| P1-16 Shop Prices | Money (dollars up to $100) with 2.1 to 2.7 | Logic grid 5 x 5 with a cross-and-tick example, letter beside each price, plus a total looked up in a code table | 2 | K1 (FROZEN: 5 price letters + 1 total letter) | arrangements 119/119; total letter 58/58; FROZEN has one arrangement only |
-| P1-17 How Long? | Length 1.1, 1.2 (measure in cm) | Code-breaker (read a ruler drawn at 10 mm to 1 cm; two strips start at 0, four at 1 to 4, a bold arrow shows the start: a small extension, see the key) | 1 | K1, 6 letters (LENGTH) | 50/50; 66/66 |
-| P1-18 Clock Time | Time 2.1 and 2.4 (to 5 minutes; 1 hour and half an hour later) | Code-breaker (clock faces; at least 3 of 5 clocks are 5-minute times) | 2 | K1, 5 letters (CLIMB) | 715/715 |
-| P1-19 Shape Count | Geometry 1.1, 1.3 (name 2D shapes; shapes in a figure) | Count shapes + code | 1 | K3 (total 15) + K1, 5 letters (BUILD) | 34/34; 40/40 |
-| P1-20 Fruit Graph | Statistics: picture graphs | Graph detective, 3 missing rows from 3 difference clues; a smiley face is 1 child (a circle is fine to draw); the first two clues add different amounts | 2 | K3 the total, and a second sum: the row chosen in a) plus the answer to b); all 63 misreadings of the clues (more/fewer, Apple and Banana exchanged) fail | 40/40 |
+The 20 earlier pages keep their numbers P1-01 to P1-20 (inventory and enumeration rates in `AUDIT_FIXES_3.md` and `out/verification.json`). Changes made while building the booklets: P1-03 sharer line, P1-05 arrays, P1-13 bigger bags (totals within 24), P1-07 drawn people, clock numerals redrawn (P1-06, 18, 29), P1-13 and P1-16 retagged.
 
-Mix: 10 one-star (P1-01, 03, 06, 08, 10, 12, 13, 15, 17, 19), 10 two-star (P1-02, 04, 05, 07, 09, 11, 14, 16, 18, 20). Strands: whole numbers 5 (P1-01, 02, 04, 07, 14), add/subtract 4 (P1-08, 09, 10, 11), multiplication and sharing 3 (P1-03, 05, 13), money 2, time 2 (P1-06, 18), shapes 2 (P1-12, 19), length 1, picture graph 1. Types: 3 colour by code, 11 code-breakers (P1-02, 03, 05, 06, 10, 11, 13, 15, 17, 18, 19), 3 logic pages (P1-04, 07, 16), 1 maze, 1 magic square, 1 graph detective. (P1-19 counts and also uses a code.)
+## Rules every page keeps
 
-Stars (how decided): one star = one skill as usually taught; two stars = the same topics with two steps or two clues to combine (a missing-number step, a clue that compares two things, two checks to satisfy). P1-07 now has two clues that compare two children (in front of, behind, next to), so it is a two-star page; P1-08 is a 4 x 4 grid (16 sums, 8-box route) so it is a light one-star page; P1-06 is the one-star time page (o'clock and half past only), P1-18 is the two-star time page (5 minutes plus 1 hour or half an hour later) and is marked in the notes as a late-year page.
-
-### Code-word pages: what the strip says and what is tested
-
-The check strip on a code-word page is "Write the letters in order. Do they spell a word?" and nothing more: no category hint (the first version said "Is it in the sky?", which let a pupil guess the word and read the answers off the table). `validate.py` fails any strip that says "Is it ..." or names a category.
-- V3: a slip that changes one answer to any other value, and a swap of two answers, must not spell any word of a list of about 129 000 English words (`gen/words_en.txt.gz`: two public word lists plus the 80 000 most frequent words). The table's decoy letters are chosen from letters that cannot form a word with the code word (`bad_letters`), so this holds by construction and by enumeration.
-- V3d (owner decision, 23 Oct 2026: no wrong placement may spell another word): the letters of every code word have exactly ONE arrangement that is a word in the large list (`common.anagrams`). Words replaced for that reason: CLOUD (COULD), FRIEND (FINDER, REFIND), BELOW (BOWEL, ELBOW), SNAKE (SNEAK, SKEAN), STREAM (MASTER), MONDAY (DYNAMO), ADULT (DULAT), OCEAN (CANOE). New words: JUICE, SHADOW, FRUIT, ENJOY, COUSIN, FROZEN, CLIMB, BUILD. SQUARE, SECOND, FAMILY, NUMBER, PIANO and LENGTH already had one arrangement. `common.make_code_table` and the three logic pages are rebuilt on that rule.
-- V4 guess resistance, code pages: at least 3 common words (the 20 000 most frequent words) can be made from the letters in the code table, so the word cannot be guessed from its length. A word with one arrangement can still be found by someone who unscrambles its letters, so the logic pages use a decoy: P1-04 lists six numbers for five children and P1-07 shows six children for five places, a clue says which one is left out, and its letter is not in the word (`common.decoy_options` picks only decoys for which no pick of 5 of the 6 letters, in any order, spells another word: 719 of 719 wrong placements are not words). P1-16 gets its sixth letter from a code table of 4 letters. See `AUDIT_FIXES_3.md`, section Code words.
-
-How the wrong-answer enumeration works (`validate.py`, section 1b, independent of the generator): for every page it tries every single change of one answer and counts how many the pupil's own check rejects. Two rates must be at least 95%: plausible slips (plus or minus 1, 2, 3, 4, 5 or 10 for number answers; any other value for letters, boxes or times) and every other value in the page's range. Logic and ordering pages are also tested on every wrong arrangement (all permutations: 119). The colour-by-code pages are also tested on every double slip (every pair of regions, every pair of wrong colours) and every swap, 95% each. The build fails if any rate is below 95%.
-
-## What validate.py checks
-
-- Every puzzle record: unique solution, the check works with the right answers, numbers in the P1 range (V1, V2, V7); and, for every page, the wrong-answer enumeration with a 95% floor (V3); code pages: no slip or swap spells a word of the large list (V3, V3c), guess resistance (V4); colour pages: the library's independent evaluator re-solves every printed question from its text and picture, and the printed left-right rule is true (no two parts sit in mirror-image places without being a declared pair).
-- Coverage within the 20-page budget: add and subtract within 100, sharing and grouping, two multiplication pages, a one-star o'clock and half past page and the five-minute page; strand counts.
-- Wording and content rules on all printed text: no division sign, money as 50¢ never 50c, no column/diagonal/divide on pupil pages, no window/wall/scale wording (parts a pupil cannot find), no Mi, MOE, alignment or affiliation wording on pupil pages or front matter, no price or quote wording, no category hint in a check strip, o'clock and half past in the key, every number of 11 or more in a teacher note found on the page, every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page, syllabus numbers inside the P1 ranges and every topic phrase found in `docs/moe/syllabus_by_level.md`, answer boxes at least 12 mm high.
-- Front matter: DRAFT stamps and the owner email and the registered-office placeholder present (unless built with `--final`), none on pupil pages. A 68-character school name keeps the footer on one line with the page code (the name shrinks with an ellipsis).
-- Reading level (V8, simplified): instruction and clue sentences at most 8 words, at most 3 instruction lines, check text at most 18 words (P1-20 has two checks: at most 34).
-- Layout in the browser for all 20 pages (also front matter and key): no overflow, no text clipped, every element inside the 14.5 mm print-safe margin, puzzle content fills at least 55% of the puzzle area, text at least 8 pt, puzzle area never touches the check strip; every label of every colour-by-code part inside its own region, clear of outlines and decorations (pupil pages and key answer pages).
-- Fonts embedded, A4, 20 / 5 / 25 / 11 pages, school-name footer and page code on every page, file sizes (all under 2 MB).
-- Black and white (owner addendum 10): only `#000` and `#fff` in the HTML/CSS, no opacity, alpha or gradients, SVG strokes at least 0.2 mm and rule borders at least 0.25 mm (0.57 pt and 0.7 pt; the minimum asked is 0.5 pt), every PDF page (pupil pages, front matter, key) rendered at 150 dpi as 1-bit and compared with greyscale: bilevel keeps the ink (at most 25% loss on pupil pages, 30% on the text-only front matter, 35% on the key, which has small text) and no flat grey tint areas. The 1-bit pages for the pupil pack are written to `out/bilevel_check/` and were viewed.
-
-Not covered by any script: the hand check of every page picture (done by viewing every changed page at 70 dpi, and clocks, rulers and the new icons at 150 dpi 1-bit), and any check of age-appropriate content beyond the word rules above.
-
-## Syllabus items not covered by a puzzle
-
-Reading and writing numbers in words, measuring and drawing a line to the nearest cm, am and pm, copying figures on a dot or square grid, forming figures from shapes, the number sentence signs on their own, ordinals beyond 5th, naming a shape from a description (the shape-riddle page was dropped for the new coverage pages). Add and subtract within 100 is P1-11 (no renaming), sharing and grouping is P1-03, multiplication is P1-05 and P1-13.
-
-## Page rules used
-
-Black and white only; A4, 15 mm margins (all content inside 14.5 mm); body text 15 pt, check text 14 pt, footer 8 pt; instruction sentences at most 8 words and at most 3 lines; numerals for quantities; answer boxes at least 12 mm high (checked); money written 50¢, times as o'clock and half past in text (5-minute times only on P1-18); all puzzles original (own generators, own number sets; no contest, book or past-paper problem used). No Mi, no alignment or affiliation wording on pupil pages. The licence page and teacher notes carry no endorsement claim; the key names the syllabus edition in plain words.
+Black and white only (#000/#fff, strokes at least 0.57 pt); A4 with 15 mm margins; instruction sentences at most 8 words, at most 3 lines; answer boxes at least 12 mm high; money as 50¢; times as o'clock and half past in words, 5-minute times as digits, am and pm without full stops; no division sign, fractions, odd or even, or shapes beyond the six on the syllabus list; no Mi, MOE, alignment or price wording (the licence page has one not-affiliated sentence). Code words: exactly one arrangement of the letters is a word, so no wrong placement of the answers spells a word, tested against the 129 000-word list. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
 
 ## Open questions for the owner
 
-1. Product name: "Early Finisher Puzzles, Primary 1" is a working title. Final school-neutral name?
-2. Publisher line, entity, year, licence wording, term of the licence (perpetual or annual) and a contact address: the cover, licence page and teacher notes now say DRAFT and show the owner's business email pypteltd@gmail.com ("for now, to be changed later", `CONTACT` in `render.py`) and still show `[registered office address: to be added by the owner]` (`REG_OFFICE`). The pupil-page footers still print "(c) 2026 Preciouslyours Pte Ltd" (owner to confirm entity and year); build with `--final` once approved (a `--final` build prints no contact line, as before; add one in `render.py` if wanted).
-3. Colour-by-code: 3 of 20 pages (P1-01, 12, 14). Pupils need crayons in five colours; a pencil-only copy can write Y, R, B, G, O in each part (stated in the notes). Owner to say whether 3 is right and whether crayons can be assumed in early-finisher trays. The library's blank boxes inside the colour pictures are now 6 mm square (a blank inside a stacked fraction stays smaller); the check does not depend on them.
-4. Teacher key states the syllabus edition and page numbers (Primary 1, pages 31 and 32, 2021 edition) in plain text. Keep, or move to the product page? Outcome numbers are given as the ranges that `docs/moe/syllabus_by_level.md` supports; the individual numbers within 2.1 to 2.7 are not asserted.
-5. A pupil trial (4 to 6 children) is still needed: especially the maze, the ruler on P1-17, the clocks on P1-06 and P1-18, and whether a pupil reads the letters on the logic pages and guesses.
-6. Independent audit round 3 (plan section 11): hand-solve 20% of pages, mono photocopy test on a real copier, and the V9 non-copy comparison against `hp/qbank.json`, which is not run here.
-7. Is 10 one-star and 10 two-star the right split? Strand spread: whole numbers 5, add/subtract 4, multiplication and sharing 3, money 2, time 2, shapes 2, length 1, graph 1. Is "1 star" labelling shown to pupils only as star symbols plus the teacher note?
-8. Printed bulk option: the licence page now says "Printed sets: details to follow". Print route, loose-leaf layout and prices are not decided (prices are on hold).
+See `docs/school_books/p1_semester_booklets_build_report.md`, section "Items for the owner".

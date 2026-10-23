@@ -369,3 +369,16 @@ Present: `coins_svg`, `clock_svg`, `ruler_unit`, `groups_svg`, `share_svg`, `fac
 6. **P1 pack:** add `array`/`ten_frame`/`number_line`/`base_ten`; put an array on P1-05, number lines on P1-02, P1-10 and P1-11, a queue on P1-07; enlarge icons (P1-03, P1-13, P1-19) and redraw clock numerals (P1-06, P1-18).
 7. **Galleries:** switch `mini_graph` symbols to the object, enlarge mini clocks, coins and rulers on CBC-07, 08, 09 and 14, and add bag and array pictures on CBC-11 and 12. Apply the same to P2.
 8. **Check:** rerun each unit's verify, render at 80 dpi, and re-measure rulers. Add a check that every item with an A grade has a figure.
+
+## P1 pack: fixes made while building the two semester booklets (23 Oct 2026, owner approved diagrams)
+
+Part of the semester-booklet build (`school/p1`, see `docs/school_books/p1_semester_booklets_build_report.md`). Code words unchanged (JUICE, SHADOW, FRUIT, ENJOY, COUSIN, FROZEN, CLIMB, BUILD kept), all one-arrangement and letter-safe; validate.py 0 failures after the changes.
+
+| Item | Finding above | Fix |
+|---|---|---|
+| P1-05 Times Code | no figure at all (High) | every item now has an array of objects (rows = groups, objects in a row = the number in each group). Factors 2 to 5 (10 dropped so the array fits), products within 25. New check V1c counts the array objects against the sentence. New code table for SQUARE. |
+| P1-03 Fair Shares, P1-13 Equal Groups | icons tiny, bags as boxes (High) | P1-03 objects 7.0 mm (was 6.2) and a printed sharer line; P1-13 bags hold their things in two rows, objects about 6.3 mm on the page (was about 3 to 4 mm after scaling), totals within 24. |
+| P1-06, P1-18 clocks (and the new clock pages) | numerals small and unevenly placed (High) | `clock_svg`: numerals on a true circle with centred baseline, larger; hour hand shorter, minute hand stops inside the numerals. Verified at 200 dpi. Clocks on the new pages are 36 mm. |
+| P1-07 The Queue | children are bare circles (High) | drawn people (face, shirt with the letter, arms, legs). A front arrow was not added: the page still says "The front is 1st". |
+| CBC-13 graph rows with one smiley, mini clocks, coins, rulers in the colour sheets | D | NOT done: the colour sheets in `school/colour_by_code` are a separate gallery (the booklets use only CBC-11, CBC-10 and CBC-05 as P1-01, 12 and 14, which are unaffected); the library redraw is not cheap. Open. |
+| P1-02, P1-10, P1-11 number lines, tens and ones sticks; P1-16 item pictures; P1-19 composite picture; P1-17 numerals | B or D (Med, Low) | not done (not in the requested list). |
