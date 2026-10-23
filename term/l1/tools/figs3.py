@@ -473,7 +473,7 @@ def _tile_shape(shape, x, y, r, fillc, pat, turn, pid, shadow=False):
 _PANEL_N = 0
 
 
-def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
+def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p', title=None):
     """A row or grid of tiles. tile = {shape: circle|square|triangle|star, n: 1-4, size: s|m|l, colour: 0-3, pattern: 0-3, turn: degrees}.
     colour and pattern together show a feature in grey print (pattern 0 plain, 1 stripes, 2 dots, 3 cross-hatch). hide=[index] draws a '?' tile.
     labels=['A','B',...] prints a letter under each tile (or a '[]' answer box). tile 'shadow': true draws that tile as a dark silhouette (shadow match);
@@ -493,9 +493,10 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
                 f'<pattern id="{pid}{i}_2" width="19" height="19" {o} patternTransform="translate({x0 + 2} {y0 + 2})"><rect width="19" height="19" fill="#fff"/><circle cx="9.5" cy="9.5" r="4.6" fill="{NAVY}"/></pattern>'
                 f'<pattern id="{pid}{i}_3" width="16" height="16" {o} patternTransform="translate({x0} {y0})"><rect width="16" height="16" fill="#fff"/><path d="M0 0 L16 16 M16 0 L0 16" stroke="{NAVY}" stroke-width="3.4"/></pattern>')
     rsz = {'s': 0.2, 'm': 0.3, 'l': 0.42}
-    lab_h = 36 if labels else 0
+    lab_h = 44 if labels else 0
+    top = 46 if title else 0
     for i, t in enumerate(tiles):
-        r, c = divmod(i, cols); x0 = 10 + c * (cell + 12); y0 = 10 + r * (cell + 12 + lab_h)
+        r, c = divmod(i, cols); x0 = 10 + c * (cell + 12); y0 = 10 + top + r * (cell + 12 + lab_h)
         dl.append(_pats(i, x0, y0))
         body.append(f'<rect x="{x0}" y="{y0}" width="{cell}" height="{cell}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3"/>')
         if i in hide:
@@ -510,8 +511,9 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
                 body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid + str(i) + '_', bool(t.get('shadow'))))
         if labels:
             lt = labels[i] if i < len(labels) else ''
-            body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 30}" font-size="28" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
-    W = 20 + cols * (cell + 12); H = 20 + rows * (cell + 12 + lab_h)
+            body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 34}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
+    W = 20 + cols * (cell + 12); H = 20 + top + rows * (cell + 12 + lab_h)
+    if title: body.append(f'<text x="12" y="36" font-size="30" font-weight="800" fill="{TEAL}" font-family="{FONT}">{_esc(title)}</text>')
     return _svg(W, H, '<defs>' + ''.join(dl) + '</defs>' + ''.join(body), 'a row of picture tiles')
 
 
@@ -610,7 +612,7 @@ def render(v):
     if t == 'grid': return grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64))
     if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
     if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], v.get('draw') or 150), v.get('tag'))
-    if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130)), v.get('tag'))
+    if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130), title=v.get('title')), v.get('tag'))
     if t == 'network': return network(v.get('n', 4), v.get('lines'), v.get('all', False), v.get('labels'), count=v.get('count'), tag=v.get('tag'))
     if t == 'picture_graph': return picture_graph(v.get('rows'), v.get('icon', 'apple'), v.get('each', 1), v.get('title'), v.get('orient', 'rows'), v.get('key', True), v.get('tally', False))
     return None

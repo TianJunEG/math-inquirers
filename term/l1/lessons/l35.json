@@ -2366,8 +2366,14 @@
         "pattern": 2
        }
       ],
-      "cell": 100,
-      "cols": 3
+      "cell": 82,
+      "cols": 3,
+      "title": "Picture 1",
+      "labels": [
+       "1",
+       "2",
+       "3"
+      ]
      },
      {
       "type": "panel",
@@ -2391,8 +2397,14 @@
         "turn": 180
        }
       ],
-      "cell": 100,
-      "cols": 3
+      "cell": 82,
+      "cols": 3,
+      "title": "Picture 2",
+      "labels": [
+       "1",
+       "2",
+       "3"
+      ]
      }
     ]
    },
@@ -2451,8 +2463,9 @@
         "pattern": 1
        }
       ],
-      "cell": 90,
-      "cols": 2
+      "cell": 78,
+      "cols": 2,
+      "title": "Picture A"
      },
      {
       "type": "panel",
@@ -2469,8 +2482,9 @@
         "pattern": 1
        }
       ],
-      "cell": 90,
-      "cols": 2
+      "cell": 78,
+      "cols": 2,
+      "title": "Picture B"
      },
      {
       "type": "panel",
@@ -2487,8 +2501,9 @@
         "pattern": 2
        }
       ],
-      "cell": 90,
-      "cols": 2
+      "cell": 78,
+      "cols": 2,
+      "title": "Picture C"
      },
      {
       "type": "panel",
@@ -2505,8 +2520,9 @@
         "pattern": 2
        }
       ],
-      "cell": 90,
-      "cols": 2
+      "cell": 78,
+      "cols": 2,
+      "title": "Picture D"
      }
     ]
    },
@@ -2616,7 +2632,8 @@
     "mins": 3,
     "visuals": [
      {
-      "type": "objects",
+      "type": "shelf",
+      "title": "Shelf 1",
       "items": [
        {
         "icon": "cookie",
@@ -2627,11 +2644,11 @@
         "n": 2
        }
       ],
-      "per_row": 3,
-      "size": "s"
+      "per_row": 5
      },
      {
-      "type": "objects",
+      "type": "shelf",
+      "title": "Shelf 2",
       "items": [
        {
         "icon": "cookie",
@@ -2642,8 +2659,7 @@
         "n": 3
        }
       ],
-      "per_row": 3,
-      "size": "s"
+      "per_row": 5
      }
     ]
    },
@@ -2706,7 +2722,14 @@
        }
       ],
       "cell": 88,
-      "cols": 4
+      "cols": 4,
+      "title": "Picture 1",
+      "labels": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
      },
      {
       "type": "panel",
@@ -2734,7 +2757,14 @@
        }
       ],
       "cell": 88,
-      "cols": 4
+      "cols": 4,
+      "title": "Picture 2",
+      "labels": [
+       "1",
+       "2",
+       "3",
+       "4"
+      ]
      }
     ]
    },

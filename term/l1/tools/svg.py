@@ -398,7 +398,7 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
             f'style="{size}display:block">{"".join(p)}</svg>')
 
 
-SIZE_TYPES = {'jump_lines', 'balance', 'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation', 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
+SIZE_TYPES = {'jump_lines', 'balance', 'shelf', 'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation', 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 # money: its canvas is a fixed width so every coin has one scale in every picture; only the words s, m, l shrink it (a number is ignored)
 SIZE_PCT = {'s': 55, 'm': 78, 'l': 100}
 

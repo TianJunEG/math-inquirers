@@ -744,7 +744,7 @@ def has_placeholder(x):
 
 
 FIGURE_TYPES = {'bundles', 'scatter', 'ten_frame', 'ten_to_bundle', 'hundred_square', 'hundred', 'seq', 'number_line', 'ruler', 'plates', 'objects', 'groups', 'array', 'line_up',
-                'round_table', 'bar_model', 'table', 'picture_equation', 'domino', 'jump_lines', 'balance',
+                'round_table', 'bar_model', 'table', 'picture_equation', 'domino', 'jump_lines', 'balance', 'shelf',
                 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 
 

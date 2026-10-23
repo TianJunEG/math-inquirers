@@ -252,11 +252,29 @@ def balance(left=None, right=None, tilt='level', width=1000, icon_size=44):
     return f'<svg viewBox="0 0 {width} {H + 20}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pan balance" style="width:100%;height:auto;display:block">{"".join(P)}</svg>'
 
 
+def shelf(items=None, title=None, size=64, per_row=6):
+    """A shelf: pictures standing on a board, with a name above ('Shelf 1'). items=[{'icon':'cookie','n':3}, ...] in order from the left."""
+    flat = []
+    for it in items or []: flat += [it['icon']] * it.get('n', 1)
+    cols = min(per_row, max(len(flat), 1)); rows = -(-len(flat) // cols)
+    W = cols * (size + 8) + 40; top = 50 if title else 8
+    P = []
+    if title: P.append(f'<text x="14" y="38" font-size="36" font-weight="800" fill="{TEAL}" font-family="{FONT}">{_esc(title)}</text>')
+    for r in range(rows):
+        yb = top + (r + 1) * (size + 12)
+        for k, ic in enumerate(flat[r * cols:(r + 1) * cols]):
+            P.append(icon(ic, 20 + k * (size + 8) + size / 2 + 4, yb - size / 2, size))
+        P.append(f'<rect x="6" y="{yb}" width="{W - 12}" height="14" rx="4" {_o("#C98B5A")}/>')
+    return _svg(W, top + rows * (size + 12) + 18, ''.join(P), title or 'shelf')
+
+
 def render(v):
     """Dispatch for the new figure types; None if v['type'] is not one of them (called first from figs2.render)."""
     t = v['type']
     if t == 'jump_lines':
         return jump_lines(v.get('start', 0), v.get('end', 100), v.get('step', 1), v.get('label_every', 10), v.get('rows'), v.get('room', True))
+    if t == 'shelf':
+        return shelf(v.get('items'), v.get('title'), v.get('size', 64), v.get('per_row', 6))
     if t == 'balance':
         return balance(v.get('left'), v.get('right'), v.get('tilt', 'level'))
     return None

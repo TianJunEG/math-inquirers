@@ -460,6 +460,7 @@ def _more_ok(val, c, chosen):
     if k == "gt": return val[c[1]] > val[c[2]]
 
 def more_text(c):
+    c = tuple(c) + (0, 0, 0)
     return {"none": f"Nobody has {c[1]}.", "more": f"{c[1]} has {c[3]} more than {c[2]}.", "fewer": f"{c[1]} has {c[3]} fewer than {c[2]}.",
             "equal": f"{c[1]} gives {c[2]} {c[3]}: the same.", "gt": f"{c[1]} has more than {c[2]}."}[c[0]]
 
@@ -490,16 +491,21 @@ def page38():
                 if d > 0: pool += [("more", a, b, d), ("fewer", b, a, d)]
                 if d > 0 and d % 2 == 0: pool.append(("equal", a, b, d // 2))
         rng.shuffle(pool)
+        req = []
+        for kind in ("more", "fewer", "equal"):
+            c = next((x for x in pool if x[0] == kind), None)
+            if c: req.append(c)
+        if len(req) < 3: continue
+        cl = [("none", unused)] + req
         for c in pool:
-            if len(cl) >= 7: break
-            if any(c[:3] == x[:3] for x in cl): continue
+            if len(solve_more(names, nums, cl)) == 1: break
+            if c in cl or len(cl) >= 8: continue
             cl.append(c)
         if len(solve_more(names, nums, cl)) != 1: continue
-        for c in cl[1:]:
+        for c in list(cl[1:]):
             rest = [x for x in cl if x != c]
             if len(solve_more(names, nums, rest)) == 1: cl = rest
-        kinds = {c[0] for c in cl}
-        if len(cl) < 5 or not {"more", "fewer"} <= kinds or "equal" not in kinds: continue
+        if len(cl) < 5 or not {"more", "fewer", "equal"} <= {c[0] for c in cl}: continue
         break
     decoy = max(decoy_options(word), key=lambda d: (len(small_words(word + d)), rng.random()))
     letter_of = {truth[n]: word[i] for i, n in enumerate(names)}; letter_of[unused] = decoy
