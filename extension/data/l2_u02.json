@@ -594,7 +594,7 @@
    "id": "L2U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Put the numbers 120, 135, 150, 165, 180 and 195 in the circles, once each, so that every side adds up to 450.",
+   "text": "Fill the 6 circles with 120, 135, 150, 165, 180 and 195. Use each number once. Each side must add to 450.",
    "figure": {
     "type": "l2_triangle",
     "values": [
@@ -605,7 +605,7 @@
      null,
      null
     ],
-    "width_mm": 62
+    "width_mm": 56
    },
    "parts": [
     {
@@ -740,7 +740,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 86
+    "width_mm": 80
    },
    "parts": [
     {
@@ -923,7 +923,7 @@
      "43?",
      "689"
     ],
-    "width_mm": 36
+    "width_mm": 26
    },
    "answer": {
     "value": [

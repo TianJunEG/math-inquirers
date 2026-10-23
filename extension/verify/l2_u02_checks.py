@@ -87,17 +87,17 @@ def _():
     return {'a': s([460 - 80]), 'b': s([b]), 'c': s([a])}
 
 
-@check('08')
+@check('S08')
 def _():
     return s([x for x in range(0, 501) if x + 135 + 210 == 500])
 
 
-@check('06')
+@check('S06')
 def _():
     return {'a': s([346 + 278]), 'b': ['Yes' if 614 - 278 == 346 else 'No'], 'c': s([614 - 278])}
 
 
-@check('07')
+@check('S07')
 def _():
     taken = [x for x in range(0, 345) if 345 - x == 128][0]     # the story: 345 start, some taken away, 128 left
     opts = {'(1)': 345 + taken == 128, '(2)': 345 - taken == 128, '(3)': taken - 345 == 128, '(4)': 128 - taken == 345}
