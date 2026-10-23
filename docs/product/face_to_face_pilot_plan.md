@@ -252,7 +252,7 @@ Everything printed is black and white and double-sided (owner decision; `docs/pr
 
 | Item | Source file | Quantity (default) |
 |---|---|---|
-| Level 1 student workbook with kit pages | `outputs/print/bw/Math_Inquirers_P1_Workbook_PRINT.pdf` (64 print pages, 32 sheets; kit/cut-out pages are source pages 53-58) | 8 plus 2 spare |
+| Level 1 student workbook with kit pages | `outputs/print/bw/Math_Inquirers_P1_Workbook_PRINT.pdf` (68 print pages, 34 sheets; kit/cut-out pages are source pages 56-61) | 8 plus 2 spare |
 | Tutor answer key | Level 1 tutor guide (`hp/Math_Inquirers_P1_Tutor_Guide.pdf`); check the print-ready black-and-white option with the printer | 1 for the tutor, 1 for the assistant |
 | Lesson decks | Decks are built for screen sharing | A screen or projector, or printed slide notes |
 | Tutor observation sheet | `ops/out/tutor_observation_sheet.pdf` (built as a dry-run timing sheet; the learning-record sheet in section 4 is a new layout, not yet built) | 10 copies of the learning-record sheet, 5 timing sheets |
