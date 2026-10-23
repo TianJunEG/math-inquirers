@@ -2074,11 +2074,11 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Look at the dots in rows. Fill in the blanks.",
+    "text": "Look at the stars in rows. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Rows of dots: [] × [] = [2]",
+      "text": "Rows of stars: [] × [] = [2]",
       "ans": "2, 8, 16",
       "val": [
        2,
@@ -2103,7 +2103,7 @@
       "val": "Yes"
      }
     ],
-    "answer": "2 × 8 = 16; 8 × 2 = 16; Yes. (In (a) 8 × 2 = 16 is also right if the child counted the dots in one row first; then (b) is 2 × 8.)",
+    "answer": "2 × 8 = 16; 8 × 2 = 16; Yes. (In (a) 8 × 2 = 16 is also right if the child counted the stars in one row first; then (b) is 2 × 8.)",
     "val": [
      2,
      8,
@@ -2113,8 +2113,8 @@
      16,
      "Yes"
     ],
-    "hint": "Count the rows. Then count the dots in one row.",
-    "solution": "The picture has 2 rows with 8 dots in each row: 2 × 8 = 16. Turned on its side it has 8 rows with 2 dots in each row: 8 × 2 = 16. The totals are the same, so 2 × 8 = 8 × 2.",
+    "hint": "Count the rows. Then count the stars in one row.",
+    "solution": "The picture has 2 rows with 8 stars in each row: 2 × 8 = 16. Turned on its side it has 8 rows with 2 stars in each row: 8 × 2 = 16. The totals are the same, so 2 × 8 = 8 × 2.",
     "mistakes": [
      "Adding 2 + 8 = 10.",
      "Thinking the totals must be different because the pictures look different."
@@ -2124,7 +2124,7 @@
      "type": "array",
      "rows": 2,
      "cols": 8,
-     "icon": "dot"
+     "icon": "sticker"
     }
    },
    {

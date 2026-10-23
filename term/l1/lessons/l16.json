@@ -2037,7 +2037,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Look at the dots. The top 2 rows are in the box. Fill in the blanks.",
+    "text": "Look at the ladybirds. The top 2 rows are in the box. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
@@ -2058,7 +2058,7 @@
      20
     ],
     "hint": "The 4 rows are two lots of the 2 boxed rows.",
-    "solution": "2 rows of 5 dots is 2 × 5 = 10. All 4 rows are two lots of 10 dots: 10 + 10 = 20, so 4 × 5 = 20.",
+    "solution": "2 rows of 5 ladybirds is 2 × 5 = 10. All 4 rows are two lots of 10 ladybirds: 10 + 10 = 20, so 4 × 5 = 20.",
     "mistakes": [
      "Writing 10 for both.",
      "Adding 4 + 5 = 9."
@@ -2068,7 +2068,7 @@
      "type": "array",
      "rows": 4,
      "cols": 5,
-     "icon": "dot",
+     "icon": "ladybird",
      "shade_rows": [
       1,
       2

@@ -1836,19 +1836,19 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Count the dots by rows.",
+    "text": "Count the flowers by rows.",
     "parts": [
      {
       "l": "",
-      "text": "There are [] dots.",
+      "text": "There are [] flowers.",
       "ans": "20",
       "val": 20
      }
     ],
-    "answer": "20 dots",
+    "answer": "20 flowers",
     "val": 20,
-    "hint": "Count the dots in one row. Then add the rows.",
-    "solution": "Each row has 5 dots. There are 4 rows. 5 and 5 make 10, and 5 and 5 make 10. 10 and 10 make 20 dots.",
+    "hint": "Count the flowers in one row. Then add the rows.",
+    "solution": "Each row has 5 flowers. There are 4 rows. 5 and 5 make 10, and 5 and 5 make 10. 10 and 10 make 20 flowers.",
     "mistakes": [
      "Counting only one row.",
      "Counting a row twice."
@@ -1858,7 +1858,7 @@
      "type": "array",
      "rows": 4,
      "cols": 5,
-     "icon": "dot",
+     "icon": "flower",
      "size": "m"
     }
    },

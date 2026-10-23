@@ -249,13 +249,19 @@ Olympiad-type problem moves worked in (original problems only; none copied from 
 
 ## 5. Assessment and progress
 
-**End-of-term check (10 questions, one per lesson, 25 minutes, in the first 25 minutes of the term's last full lesson; Term 4: in lesson 39 so presentations in 40 keep their time; no grade, no ranking):** question k comes from the term's k-th lesson, written at the tier below.
+**Mi's Challenge Quest (replaces the earlier 10-question end-of-term check; owner decision, 22 Oct 2026, `docs/terms/owner_decisions.md`, section "end-of-term check becomes Mi's Challenge Quest").** Lesson 10 of each term keeps a 20-minute slot after the break (and the same slot in lessons 20, 30 and 40), but it is a game, not a test. Eight short gates, each tied to a lesson of the term and written at Start here level (never a contest move, never a repeat of that lesson's own items), and one optional cave. Children work in pairs or as a group quest with Mi, each writing their own answers on private paper. No scores or marks are shown to the child, no ranking, no visible timer, no strand profile or mark out of ten, and the words "test" and "exam" appear on no child or parent page. The tutor keeps private notes only; they feed the one-line parent report and next-term group advice. Photos of the Quest Log are returned by the parent to the business WhatsApp (+65 9880 5962, never printed on a slide). A child who joined late or missed a lesson simply skips the gate of that lesson. Contest-type items never appear at a gate; a code-trace gate is allowed in Terms 3 and 4. For ages 9 to 13 (Levels 4, 5, 6) an optional, clearly labelled Quest Sprint may sit inside or beside the Quest (owner decision, 23 Oct 2026): accurate answers only, pace shown against the child's own baseline, no leaderboard, anxious children may opt out; it is not a check.
+
+*Update, 23 Oct 2026 (TERM-YES data fix): other mentions in this plan of a 10-question or timed end-of-term check (header, term notes, effort table, open questions) are superseded by the Quest; the old check's per-lesson question lists are no longer an assessment, only a possible source of gate topics.*
+
+**Gate topic starting points (from the superseded check, kept as history, one topic per lesson, and any S, T or G marks refer to the old check, not to gates, which are all Start here level; the authors of each Quest choose, recompute and tag the real gates):**
+
 - Q1-5 Start here: familiar-context items parallel to the lesson's main idea, no new vocabulary.
 - Q6-8 Think harder: the same idea in a new setting.
 - Q9 Go further: one "find all" or "is it always true?" item.
 - Q10 Explain: "write one sentence on why" or "trace this code and say what it prints".
 
 Questions by term (lesson in brackets): **T1** place value or rounding (1), fraction order (2), conversion (3), shortcut (4), divisibility test (5), sequence rule (6), area and perimeter (7), fraction of a quantity (8), tiling bound (9), code trace of the studio program (10). **T2** ratio share (11), fraction of fraction (12), percent change (13), rate or combined rate (14), circle (15), volume (16), angle chase or clock hands (17), symmetry (18), mixture or fair share (19), scale (20). **T3** expand (21), solve (22), inequality (23), coordinates (24), graph (25), power or last digit (26), HCF/LCM or trailing zeros (27), binary (28), reachable numbers (29), trace code (30). **T4** mean and outlier (31), scatter (32), tree (33), arrangement or count by size (34), recursion (35), logic or cryptarithm (36), strategy (37), views or rotation (38), plan a test (39), explain the project (40). Mark each strand "secure / growing / not yet" and use it to plan support for the next term, and to decide the catch-up card for a mid-year joiner.
+
 
 **Parent report line per term (neutral, evidence based; no scores or predictions):**
 - T1: "This term [Name] worked on place value, fractions, decimals and percent, number shortcuts, divisibility tests, sequence rules and area, with a small program most weeks. [Name] showed [one observed example]. Next term we move to ratio, rates and shapes."

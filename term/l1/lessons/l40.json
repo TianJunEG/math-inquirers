@@ -1925,29 +1925,29 @@
         "id": "S6",
         "page": 2,
         "tier": "start",
-        "text": "Count by rows. Look at the dots.",
-        "answer": "4 rows; 20 dots",
+        "text": "Count by rows. Look at the apples.",
+        "answer": "4 rows; 20 apples",
         "val": [
           4,
           20
         ],
-        "hint": "Count the dots in one row. Then count on by rows.",
-        "solution": "There are 4 rows of 5 dots: 5, 10, 15, 20. There are 20 dots in all.",
+        "hint": "Count the apples in one row. Then count on by rows.",
+        "solution": "There are 4 rows of 5 apples: 5, 10, 15, 20. There are 20 apples in all.",
         "mistakes": [
-          "Writing the dots in one row only.",
+          "Writing the apples in one row only.",
           "Writing 9 (4 and 5 added)."
         ],
         "mins": 2.5,
         "parts": [
           {
             "l": "a",
-            "text": "There are [] rows of dots.",
+            "text": "There are [] rows of apples.",
             "ans": "4",
             "val": 4
           },
           {
             "l": "b",
-            "text": "There are [] dots in all.",
+            "text": "There are [] apples in all.",
             "ans": "20",
             "val": 20
           }
@@ -1956,7 +1956,8 @@
           "type": "array",
           "rows": 4,
           "cols": 5,
-          "size": 60
+          "size": 60,
+          "icon": "apple"
         }
       }
     ],

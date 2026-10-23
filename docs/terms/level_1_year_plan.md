@@ -160,7 +160,11 @@ Books-analysis gaps (docs/books/word_problems_g1_g2_analysis.md): multi-step sto
 
 ## 5. Assessment and progress
 
-**End-of-term check (about 20 minutes, in the last 20 minutes of Lesson 10 of the term or in the make-up slot, 10 questions, one per lesson, privately returned):** 4 Start here, 4 Think harder, 2 Go further, one of each thread. Question types per term (question n follows lesson n of the term):
+**Mi's Challenge Quest (replaces the earlier 10-question end-of-term check; owner decision, 22 Oct 2026, `docs/terms/owner_decisions.md`, section "end-of-term check becomes Mi's Challenge Quest").** Lesson 10 of each term keeps a 20-minute slot after the break (and the same slot in lessons 20, 30 and 40), but it is a game, not a test. Eight short gates, each tied to a lesson of the term and written at Start here level (never a contest move, never a repeat of that lesson's own items), and one optional cave. Children work in pairs or as a group quest with Mi, each writing their own answers on private paper. No scores or marks are shown to the child, no ranking, no visible timer, no strand profile or mark out of ten, and the words "test" and "exam" appear on no child or parent page. The tutor keeps private notes only; they feed the one-line parent report and next-term group advice. Photos of the Quest Log are returned by the parent to the business WhatsApp (+65 9880 5962, never printed on a slide). A child who joined late or missed a lesson simply skips the gate of that lesson. Gates are tagged by lesson (`term/l1/tools/b_quest.py` builds them from each lesson's `challenge_quest` block).
+
+*Update, 23 Oct 2026 (TERM-YES data fix): other mentions in this plan of a 10-question or timed end-of-term check (header, term notes, effort table, open questions) are superseded by the Quest; the old check's per-lesson question lists are no longer an assessment, only a possible source of gate topics.*
+
+**Gate topic starting points (from the superseded check, kept as history, one topic per lesson, and any S, T or G marks refer to the old check, not to gates, which are all Start here level; the authors of each Quest choose, recompute and tag the real gates):**
 
 | Term | The 10 questions |
 |---|---|
@@ -168,6 +172,7 @@ Books-analysis gaps (docs/books/word_problems_g1_g2_analysis.md): multi-step sto
 | 2 | An ordinal clue (8th from the front); a bar-strip story or a transfer; a double or near double; an odd/even claim and why; equal groups; a table fact; share 12 and group 14; a times story; a picture equation; price of one from a group |
 | 3 | Time to the quarter hour; time to 5 minutes and am/pm; a duration; dollars and change; compare two prices; spend exactly $20; a small Latin square; a growing pattern table and the 20th term; find the mistake; a day-of-the-week clue |
 | 4 | Half/quarter; shapes in a figure; copy on a grid or count routes; a view or fold and punch; spot the odd one out; count every way; make a picture graph; read a 1-to-2 graph; choose a tool; write a puzzle or explain a mistake |
+
 
 **Parent report line per term** (what we saw, not a rank): T1 "Your child is learning to see numbers as tens and ones, to notice patterns and to say why." T2 "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example." T3 "Your child is learning to give a reason, and to read time and money in real life." T4 "Your child is learning to choose a method and write a problem for others." Add one named strength and one next step from the tutor. A mid-year joiner gets a report line only for the lessons attended. No claim of exam outcomes, GEP or SASMO results.
 

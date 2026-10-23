@@ -2093,7 +2093,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Ali has 19 counters. He puts them into groups of 4.",
+    "text": "Ali has 19 sweets. He puts them into groups of 4.",
     "parts": [
      {
       "l": "a",
@@ -2103,7 +2103,7 @@
      },
      {
       "l": "b",
-      "text": "There are [] counters left over.",
+      "text": "There are [] sweets left over.",
       "ans": "3",
       "val": 3
      }
@@ -2114,15 +2114,15 @@
      3
     ],
     "hint": "Make groups of 4 until there are not enough for another group. Count what is left.",
-    "solution": "4, 8, 12, 16 is 4 groups, and 16 counters are used. 19 - 16 = 3 counters are left. Three is not enough for another group of 4.",
+    "solution": "4, 8, 12, 16 is 4 groups, and 16 sweets are used. 19 - 16 = 3 sweets are left. Three is not enough for another group of 4.",
     "mistakes": [
      "Writing 5 groups by rounding up.",
-     "Forgetting the counters left over."
+     "Forgetting the sweets left over."
     ],
     "mins": 4,
     "visual": {
      "type": "objects",
-     "icon": "counter_red",
+     "icon": "sweet",
      "n": 19,
      "per_row": 10
     }

@@ -521,7 +521,8 @@ def domino(left=0, right=0):
     for half, n in ((0, left), (1, right)):
         cx = 6 + s / 2 + half * s; cy = 6 + s / 2
         for (dx, dy) in _PIPS[n]:
-            body.append(f'<circle cx="{cx + dx * 34:.1f}" cy="{cy + dy * 34:.1f}" r="11" fill="{NAVY}"/>')
+            px, py = cx + dx * 34, cy + dy * 34
+            body.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="13" fill="{RED if half == 0 else TEAL}" stroke="{NAVY}" stroke-width="2.6"/><circle cx="{px - 4:.1f}" cy="{py - 4.5:.1f}" r="3.4" fill="#fff"/>')
     return _svg(2 * s + 12, s + 12, ''.join(body), f'domino {left} and {right}')
 
 
