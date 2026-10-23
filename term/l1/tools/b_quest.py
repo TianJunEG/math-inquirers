@@ -129,19 +129,22 @@ def normalise_privacy(items):
 # ------------------------------------------------------------------ child pages: Quest Log
 
 TOOL_RULE = 'Under each gate, circle the tool you used. There is no wrong tool. Tick "I checked" when you have checked your answer.'
-TOOL_CSS = ('.tstrip{margin:5px 0 0;padding-top:3px;border-top:1.5px dashed #C9D4EC;display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;font-size:12px;font-weight:700;color:#1B2A49;break-inside:avoid}'
-            '.tstrip .tl{font-family:Fredoka,Arial,sans-serif;color:#1F7A6F;font-size:12px;margin-right:2px}'
-            '.tstrip .tp{display:inline-flex;align-items:center;gap:4px;padding:0 2px;white-space:nowrap}.tstrip .tp svg{color:#1B2A49;flex:none}'
-            '.tstrip.tmany{font-size:10.5px;gap:1px 4px;margin-top:3px;padding-top:2px}.tstrip.tmany .tl{font-size:10.5px}.tstrip.tmany .tp{gap:2px;padding:0 1px}.tstrip .ck{margin-left:4px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}'
-            '.tstrip .cb{display:inline-block;width:14px;height:14px;border:2px solid #1B2A49;border-radius:3px;background:#fff}')
+def tool_css(px=12.0, pxm=10.5):
+    """CSS of the tool row. px: text size (CSS px) of a row of five or fewer names, pxm: of a longer row. A lesson raises them with challenge_quest.tool_px / tool_px_many as far as its four Quest Log pages allow."""
+    return (('.tstrip{margin:5px 0 0;padding-top:3px;border-top:1.5px dashed #C9D4EC;display:flex;flex-wrap:wrap;align-items:center;gap:2px 9px;font-size:%spx;font-weight:700;color:#1B2A49;break-inside:avoid}'
+             '.tstrip .tl{font-family:Fredoka,Arial,sans-serif;color:#1F7A6F;font-size:%spx;margin-right:2px}'
+             '.tstrip .tp{display:inline-flex;align-items:center;gap:4px;padding:0 2px;white-space:nowrap}.tstrip .tp svg{color:#1B2A49;flex:none}'
+             '.tstrip.tmany{font-size:%spx;gap:2px 6px;margin-top:3px;padding-top:2px}.tstrip.tmany .tl{font-size:%spx}.tstrip.tmany .tp{gap:3px;padding:0 1px}.tstrip .ck{margin-left:4px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}'
+             '.tstrip .cb{display:inline-block;width:14px;height:14px;border:2px solid #1B2A49;border-radius:3px;background:#fff}') % (px, px, pxm, pxm))
 
 
-def tool_strip_html(ids, cave=False):
+def tool_strip_html(ids, cave=False, px=12.0, pxm=10.5):
     """One compact row under a gate: the tool cards met so far (icon + card name) for the child to circle, then the "I checked" tick."""
     sp = spine_tools()
-    pills = ''.join(f'<span class="tp">{icon_svg(i, 13 if len(ids) > 5 else 16)}{E(sp[i]["name"])}</span>' for i in ids) + '<span class="tp">No tool</span>'
+    many = len(ids) > 5
+    pills = ''.join(f'<span class="tp">{icon_svg(i, round(13 * pxm / 10.5) if many else round(16 * px / 12))}{E(sp[i]["name"])}</span>' for i in ids) + '<span class="tp">No tool</span>'
     tick = '' if cave else '<span class="ck"><i class="cb"></i>I checked</span>'
-    return f'<div class="tstrip{" tmany" if len(ids) > 5 else ""}"><span class="tl">{"My tool" if cave else "Tool I used"}</span>{pills}{tick}</div>'
+    return f'<div class="tstrip{" tmany" if many else ""}"><span class="tl">{"My tool" if cave else "Tool I used"}</span>{pills}{tick}</div>'
 
 
 def quest_log_html(d):
@@ -152,7 +155,8 @@ def quest_log_html(d):
     tools = tool_row_ids(q, t)                                # Quest v2: a tool row under every gate (empty list: built as before)
     if tools:
         shim['end_of_term_check'] = q = dict(q, child_rules=list(q['child_rules']) + [q.get('tool_rule') or TOOL_RULE])
-        strip = tool_strip_html(tools)
+        tpx, tpxm = q.get('tool_px', 12.0), q.get('tool_px_many', 10.5)
+        strip = tool_strip_html(tools, px=tpx, pxm=tpxm)
         orig = bc.qbox2
         bc.qbox2 = lambda *a, **k: (lambda b: b[:-len('</div>')] + strip + '</div>')(orig(*a, **k))
     try:
@@ -186,8 +190,8 @@ def quest_log_html(d):
         cave_end = '<div class="foot">You may skip this one. Mi will swim round it.</div></div>'
         assert cave_end in h, 'quest log: secret cave block not found'
         because = ('<div class="sub2"><span class="sl">because</span><span>I chose it because <span class="wl2" style="width:62%"></span></span></div>' if q['optional'].get('because') else '')
-        h = h.replace(cave_end, tool_strip_html(tools, cave=True) + because + cave_end, 1)
-    h = h.replace('</head>', '<style>.csheet .qbox .qn:before,.csheet .qn:before{content:"Gate "}' + (TOOL_CSS if tools else '') + '</style></head>', 1)
+        h = h.replace(cave_end, tool_strip_html(tools, cave=True, px=tpx, pxm=tpxm) + because + cave_end, 1)
+    h = h.replace('</head>', '<style>.csheet .qbox .qn:before,.csheet .qn:before{content:"Gate "}.csheet .p2 .pins,.csheet .p3 .pins,.csheet .p4 .pins{font-size:17.7px}' + (tool_css(tpx, tpxm) if tools else '') + '</style></head>', 1)
     marker = '</ul></div>'
     assert marker in h
     if q.get('quest_map', True):                      # a lesson whose page 1 is full sets quest_map to false
@@ -223,7 +227,7 @@ def tutor_notes_html(d):
     H.append('<h2>2. Playing it: before and during</h2><ol>' + ''.join(f'<li>{E(x)}</li>' for x in c['give']) + '</ol>')
     if tools:
         H.append('<div class="box t"><b>The tool row and the I checked tick (on every gate).</b><ul>'
-                 f'<li>The row shows only the tools this class has met: {E(tname(tools))}, and No tool. The child circles one. There is no right tool: two gates can be solved well in more than one way, and a child who circles In my head is telling you the truth.</li>'
+                 f'<li>The row shows only the tools this class has met: {E(tname(tools))}, and No tool. The child circles one. There is no right tool: two gates can be solved well in more than one way, and a child who circles No tool is telling you the truth.</li>'
                  '<li>Do not say or hint a tool while the quest is on. No gate question names a tool (the names fade at Start here and Think harder; the quest is where the child chooses).</li>'
                  '<li>The circle and the tick are never marked, added up or compared. They tell you what to ask in the lesson look-back and what to write in your notes, in words.</li>'
                  '<li>A gate with no circle is fine: write nothing about it.</li></ul></div>')

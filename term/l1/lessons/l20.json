@@ -3862,7 +3862,8 @@
    "slow_child_factor": 1.4
   },
   "quest_map": false,
-  "tool_row": "term"
+  "tool_row": "term",
+  "tool_px_many": 17.7
  },
  "limits": {
   "max_parent_words": 120

@@ -4411,6 +4411,7 @@
       "slow_child_factor": 1.7
     },
     "tool_row": "term",
+    "tool_px": 12.2,
     "quest_map": false
   },
   "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the look-back."
