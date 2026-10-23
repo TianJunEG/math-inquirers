@@ -157,7 +157,7 @@ put(f'{PRE}-we1', sec(f'{PRE}-we1', '27–29 MIN', body, 'Click through the step
 # ---------- 8 try 1 ----------
 put(f'{PRE}-try1', try_slide(f'{PRE}-try1', '29–30 MIN', 'Your turn: whiteboards', 'Multiply the choices. Watch out for repeats.',
     [('a', '5 sandwiches, 4 drinks. Meal sets of 1 + 1?', '20'), ('b', 'Codes of 2 letters from A, B, C (repeats allowed)?', '9'), ('c', '4 runners. Ways to give gold AND silver?', '12')],
-    'Whiteboards up together, then click. a) 5 × 4 = 20. b) 3 × 3 = 9: AA, AB, AC, BA, BB, BC, CA, CB, CC. c) 4 × 3 = 12: gold can go to any of 4, then silver to one of the other 3. Ask: "Why is c not 4 × 4?" (one runner cannot win both).', size=36))
+    'Write it, say the answer together on three, then click. a) 5 × 4 = 20. b) 3 × 3 = 9: AA, AB, AC, BA, BB, BC, CA, CB, CC. c) 4 × 3 = 12: gold can go to any of 4, then silver to one of the other 3. Ask: "Why is c not 4 × 4?" (one runner cannot win both).', size=36))
 
 # ---------- 9 teach code: nested loops ----------
 outfit_code = [('hat', 'when green flag clicked'), ('var', 'set shirt to [1]'), ('ctrl', 'repeat [3]', [('var', 'set shorts to [1]'), ('ctrl', 'repeat [2]', [('look', 'say [join shirt shorts] for 1 seconds'), ('var', 'change shorts by [1]')]), ('var', 'change shirt by [1]')])]
@@ -268,7 +268,7 @@ body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].str
 put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): ' + SC['talkNext'] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
 
 # ---------- 26 exit ----------
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put(f'{PRE}-exit', sec(f'{PRE}-exit', '82–90 MIN', body, 'Minutes 82 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
 
 # ---------- write ----------

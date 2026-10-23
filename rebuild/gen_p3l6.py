@@ -132,7 +132,7 @@ put('p3l6-explore1',sec('p3l6-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Parents cut the printed strips out BEFORE the lesson (the one-week-before message says so), so nobody spends time finding or cutting strips. Pairs only MARK halves, quarters and eighths (fold in half again and again), then compare them with the printed thirds, sixths and twelfths (about 6.5 minutes of pair work). '
  'Children label every part (1/2, 1/4 …) and stack the strips. Stress: the parts in a row must be equal, or they are not halves, thirds … '
  'Hints: "Which pieces line up with the dashed line at one half?" Ready for more: "Find three different pieces that together cover exactly one half." (with three DIFFERENT pieces the only way is 1/4 + 1/6 + 1/12; 1/4 + 1/8 + 1/8 repeats a piece). '
- 'Online: children hold their wall up to the camera.'))
+ 'Online: children describe their wall aloud.'))
 
 # ---------- 5. explore: talk ----------
 body=h2('Explore: talk about it')+items([('1.','How many '+F(1,8)+' pieces fit exactly on '+F(1,2)+'?'),('2.','Which is bigger, '+F(1,6)+' or '+F(1,8)+'? Why?'),('3.','Can eighths cover '+F(1,3)+' exactly?')],40)
@@ -160,7 +160,7 @@ put('p3l6-we1',sec('p3l6-we1','26–28 MIN',body,
 # ---------- 8. try: equal fractions ----------
 put('p3l6-try1',try_raw('p3l6-try1','28–29 MIN','Your turn: equal fractions','What goes in the box? Use the wall or multiply.',
  [('a',F(1,3)+' = '+F(BOX,9),'3'),('b',F(3,5)+' = '+F(6,BOX),'10'),('c',F(5,6)+' = '+F(BOX,12),'10')],
- 'Whiteboards up together, then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
+ 'Write it, say the answer together on three, then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
 
 # ---------- 9. worked example: compare ----------
 bars2=(T(150,46,'5/6',34,TEAL)+bar(300,10,1340,56,12,[TEAL]*10,3,False)+T(150,126,'3/4',34,TEAL)+bar(300,90,1340,56,12,[YEL]*9,3,False))

@@ -104,7 +104,7 @@ put('p4l8-warm1',sec('p4l8-warm1','6.5–8.5 MIN',body+cards+ans,
  'Z is the surprise: it looks balanced, but folding it never makes the halves match (it turns upside down onto itself, which is a different idea). Hold up a small mirror along a line if you have one: if the picture in the mirror looks like the whole letter, it is a line of symmetry.'))
 qs=[('1.','How many faces does a cube have?','6'),('2.','How many edges does a cube have?','12'),('3.','How many corners does a cube have?','8')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,34) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l8-warm2',sec('p4l8-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Hold up a real cube or dice if you can. Three questions, about 30 seconds each: whiteboards up together, then click. No follow-up questions. Answers: 6, 12, 8. The other two warm-up questions (what is opposite 3 on a dice; how many folds of a rectangle make the halves match) are in the Weekly Dose of Thinking Math.'))
+put('p4l8-warm2',sec('p4l8-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Hold up a real cube or dice if you can. Three questions, about 30 seconds each: write it, say the answer together on three, then click. No follow-up questions. Answers: 6, 12, 8. The other two warm-up questions (what is opposite 3 on a dice; how many folds of a rectangle make the halves match) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore ----------
 g=''.join(f'<rect x="{20+i*60}" y="50" width="48" height="48" rx="4" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>' for i in range(6))

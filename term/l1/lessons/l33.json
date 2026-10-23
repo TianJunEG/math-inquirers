@@ -17,7 +17,7 @@
    "Position words: left, right, up and down, and counting steps between dots (Primary 1 process skills)",
    "Listing every case without missing one (Primary 1 heuristics, pp. 13 to 14)"
   ],
-  "note": "Strand label for the tutor only. Copying figures on a dot or square grid is a listed Primary 1 outcome (Geometry, 1.4). Coordinates are not in the syllabus anywhere, so the lesson says only '3 right, 2 up' from a start dot, never a pair of numbers. Start here is Primary 1 work with scaffolding: copy a figure by counting the steps between the dots, say a move as right and up, follow directions with right and up, pick the exact copy, finish a rectangle and read a path. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: counting how many different routes there are on a grid when a counter moves only right or up (how many ways, a listing and counting move), a path that repeats (continue a pattern), the left move, adding at the corners to count the routes on a bigger grid, and a route that must pass a given corner. Named puzzle: Count the Routes. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. There is no school-paper evidence for grid copying (P1 paper patterns, section 6), so the wording is unverified. Non-routine types (tutor only): how many ways (routes in a small grid), continue a path from its directions."
+  "note": "Strand label for the tutor only. Copying figures on a dot or square grid is a listed Primary 1 outcome (Geometry, 1.4). Coordinates are not in the syllabus anywhere, so the lesson says only '3 right, 2 up' from a start dot, never a pair of numbers. Start here is Primary 1 work with scaffolding: copy a figure by counting the steps between the dots, say a move as right and up, follow directions with right and up, pick the exact copy, finish a rectangle and read a path. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: counting how many different routes there are on a grid when a counter moves only right or up (how many ways, a listing and counting move), a path that repeats (continue a pattern), adding at the corners to count the routes on a bigger grid, and a route that must pass a given corner. Named puzzle: Count the Routes. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. There is no school-paper evidence for grid copying (P1 paper patterns, section 6), so the wording is unverified. Non-routine types (tutor only): how many ways (routes in a small grid), continue a path from its directions."
  },
  "contest_moves": [
   "count the routes: right or up only, listing every route in order so none is missed (how many ways)",
@@ -30,7 +30,7 @@
   "Copy a figure exactly on a dot grid by counting the steps between the dots, not the dots.",
   "Say a move from a start dot as how many right and how many up, and follow directions with right and up.",
   "Pick the exact copy of a figure and finish a rectangle from three corners.",
-  "Think harder: list every route that goes only right or up on a small grid, continue a repeating path, and follow a path with a left move.",
+  "Think harder: list every route that goes only right or up on a small grid, and continue a repeating path.",
   "Go further: add the corner numbers to count the routes on a bigger grid, count the routes that pass a given corner, and describe a figure for a friend to copy."
  ],
  "joining_cold": {
@@ -1159,7 +1159,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: copy the L shape on the empty grid, then say how many steps across and up. Question 2: from S to E, how many right and how many up, and draw a path. Question 3: follow the directions and ring where you stop."
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: copy the L shape on the empty grid, then say how many steps across and up. Question 2: from S to E, how many right and how many up. Question 3: follow the directions, draw the path and ring where you stop."
   },
   {
    "id": "s-ws1ans",
@@ -1176,7 +1176,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: a copy of the L, 3 and 3. Q2: 2 right, 3 up, and any path that only goes right or up. Q3: a line 4 right then 1 up, ringed at the end."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: a copy of the L, 3 and 3. Q2: 2 right, 2 up. Q3: a line 4 right then 1 up, ringed at the end."
   },
   {
    "id": "s-ws2",
@@ -1198,7 +1198,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: which picture is an exact copy of the T; circle first, second or third. Question 5: three corners of a rectangle are ringed; draw the missing corner and say how far it is from S. Question 6: tick True or False for four sentences about the path. Wait 10 seconds before helping."
+   "note": "Read questions 4 to 6 aloud. Question 4: which picture is an exact copy of the first picture; circle A, B or C. Question 5: S and two ringed dots are corners of a rectangle; draw the missing corner and say how far it is from S. Question 6: tick True or False for three sentences about a row of five dots. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -1215,7 +1215,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 second. Q5 the corner is 3 right and 2 up from S. Q6 True, False, True, False."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 B. Q5 the corner is 3 right and 2 up from S. Q6 True, False, True."
   },
   {
    "id": "s-choice",
@@ -1331,7 +1331,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 2 right, 2 up; E2 5 right, 4 up; E3 No, then 5 steps across."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4 right, 1 up; E2 5 right, 4 up; E3 No, then 5 steps across."
   },
   {
    "id": "s-look",
@@ -1923,7 +1923,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: Mei draws an L shape on a grid. Part a: copy the L shape on the empty grid. Part b: the L shape is blank steps across and blank steps up. Question 2: a counter starts at S. It moves only right and up to reach E. Part a: the counter moves blank right and blank up. Part b: draw the counter's path from S to E. Question 3: start at S. Go four steps right. Then go one step up. Part a: draw the path. Part b: draw a ring round the dot where you stop."
+      "text": "Page 1, Start here. Question 1: Mei draws an L shape on a grid. Copy it on the empty grid. The L shape is blank steps across and blank steps up. Question 2: a counter starts at S. It moves only right and up to reach E. The counter moves blank right and blank up. Question 3: start at S. Go four steps right. Then go one step up. Draw the path. Then draw a ring round the dot where you stop."
      },
      {
       "k": "WORK",
@@ -1937,7 +1937,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: a copy of the L shape. Three steps across and three steps up. Question 2: two right, three up, and any path that only goes right or up. Question 3: a line four right then one up, with a ring at the end. Tick your own page with a tick."
+      "text": "Question 1: a copy of the L shape. Three steps across and three steps up. Question 2: two right, two up. Question 3: a line four right then one up, with a ring at the end. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1950,7 +1950,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: which picture is an exact copy of the T shape? Circle first, second or third. Question 5: three corners of a rectangle are ringed. Part a: draw a ring round the missing corner and join the dots. Part b: the missing corner is blank right and blank up from S. Question 6: tick True or False for each sentence about the path."
+      "text": "Page 2. Question 4: look at the first picture. Which picture is an exact copy of it? Circle A, B or C. Question 5: S and the two ringed dots are three corners of a rectangle. Part a: draw the missing corner and join the dots to finish the rectangle. Part b: the missing corner is blank right and blank up from S. Question 6: look at the row of dots. Tick True or False for each sentence."
      },
      {
       "k": "WORK",
@@ -1964,7 +1964,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: the second picture. Question 5: three right, two up. Question 6: True, False, True, False. Tick your own page."
+      "text": "Question 4: B. Question 5: three right, two up. Question 6: True, False, True. Tick your own page."
      },
      {
       "k": "SLIDE",
@@ -1987,7 +1987,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: count the steps across the bottom of the L, then the steps up the side. Q2: count the steps right along the bottom, then the steps up. Q3: put your pencil on S and count four jumps right. Q4: count the steps across the top bar and down the stem in each picture. Q5: the missing corner is above or below one corner and level with another. Q6: check each sentence on the picture."
+      "text": "Q1: count the steps across the bottom of the L, then the steps up the side. Q2: count the steps right along the bottom, then the steps up. Q3: put your pencil on S and count four jumps right. Q4: count the steps across the top bar and down the stem in each picture. Q5: the missing corner is above or below one corner and level with another. Q6: touch the first dot and jump to the next dot, again and again."
      },
      {
       "k": "STUCK",
@@ -1995,7 +1995,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has counting the routes on two small grids, a path that repeats and a path with a left move. Go further has adding at the corners (beyond Primary 1 on purpose), a corner the route must pass and drawing a figure for a friend to copy. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+      "text": "Think harder has counting the routes on two small grids and a path that repeats. Go further has adding at the corners (beyond Primary 1 on purpose), a corner the route must pass and drawing a figure for a friend to copy. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -2068,7 +2068,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. A counter starts at S and moves only right and up to reach E. Part a: the counter moves blank right and blank up. E2. A counter moves two right and three up. Then it moves three right and one up. In all it moves blank right and blank up. E3. A figure is five steps across and two steps up. A child draws a copy that is six steps across and two steps up. Part a: is it an exact copy? Circle Yes or No. Part b: an exact copy is blank steps across."
+      "text": "E1. A counter starts at S and moves only right and up to reach E. Part a: the counter moves blank right and blank up. E2. A counter moves two right and three up. Then it moves three right and one up. In all it moves blank right and blank up. E3. A figure is five steps across and two up. A child draws a copy six steps across and two up. Part a: is it an exact copy? Circle Yes or No. Part b: an exact copy is blank steps across."
      },
      {
       "k": "WORK",
@@ -2082,7 +2082,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: two right, two up. E2: five right, four up. E3: No. Five steps across."
+      "text": "E1: four right, one up. E2: five right, four up. E3: No. Five steps across."
      },
      {
       "k": "SAY",
@@ -2967,7 +2967,7 @@
    "page": 5,
    "tier": "investigation",
    "title": "Same steps, different routes",
-   "first": "Draw two different routes from S to E. Use a different line for each. Count the steps in each route: ____ steps and ____ steps.",
+   "first": "Draw two different routes from S to E. Count the steps in each route: ____ and ____.",
    "text": "Do all the routes from S to E have the same number of steps? Write why.",
    "visual": {
     "type": "grid",
@@ -3073,7 +3073,7 @@
   },
   {
    "id": "E3",
-   "text": "A figure is 5 steps across and 2 steps up. A child draws a copy that is 6 steps across and 2 steps up.",
+   "text": "A figure is 5 steps across and 2 up. A child draws a copy 6 steps across and 2 up.",
    "parts": [
     {
      "l": "a",
@@ -3885,7 +3885,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 a copy, 3 and 3; S2 2 right, 3 up; S3 a line 4 right then 1 up; S4 B; S5 3 right, 2 up; S6 True, False, False, True; T1 U R R R, R U R R, R R U R and 4; T2 R R U U, R U R U, R U U R and 6; T3 9 and 3, 15 and 5; T4 2 right, 2 up; G1 4; 3, 6, 10 and 10; G2 3, 2 and 6; G3 any three corners; I1 5 and 5, every route is 3 right and 2 up.",
+  "Solve every workbook question yourself first. Check the answers: S1 a copy, 3 and 3; S2 2 right, 2 up; S3 a line 4 right then 1 up; S4 B; S5 3 right, 2 up; S6 True, False, True; T1 U R R R, R U R R, R R U R and 4; T2 R R U U, R U R U, R U U R and 6; T3 9 and 3, 15 and 5; G1 4; 3, 6, 10 and 10; G2 3, 2 and 6; G3 any three corners; I1 5 and 5, every route is 3 right and 2 up.",
   "Tell parents a week before: the grid page (page 6 of the book) is not cut and needs a button from home. For the lesson after this one, the 4 paper squares on the fold-squares page of Book 7 are torn out and cut by a grown-up, and the family finds 12 small blocks of one size (building bricks or dice); a family with no blocks is fine, the lesson works with pictures.",
   "Have the slides open. Have your own grid page and a button to show on camera if you wish. Practise the body directions for the break so that right and left match what children see on the screen.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
@@ -3955,7 +3955,7 @@
    "G1",
    "G2"
   ],
-  "text": "Counting how many different routes a counter can take from the bottom left to the top right of a grid when it moves only right or up (a grid 3 across and 1 up has 4, 2 across and 2 up has 6, 3 across and 2 up has 10), by listing every route in order and then by adding at the corners, and counting the routes that pass a given corner. Counting ways is not a Primary 1 outcome (the nearest idea is listing every case, a heuristic) and routes are not in the syllabus at any level. The other items (a repeating path and a left move) are following-directions tasks. Named puzzle: Count the Routes.",
+  "text": "Counting how many different routes a counter can take from the bottom left to the top right of a grid when it moves only right or up (a grid 3 across and 1 up has 4, 2 across and 2 up has 6, 3 across and 2 up has 10), by listing every route in order and then by adding at the corners, and counting the routes that pass a given corner. Counting ways is not a Primary 1 outcome (the nearest idea is listing every case, a heuristic) and routes are not in the syllabus at any level. The other Think harder item (a repeating path) is a following-directions task. Named puzzle: Count the Routes.",
   "parent": "Counting how many different routes a counter can take on a grid (listing them, then adding at the corners) goes past the Primary 1 syllabus on purpose. Copying a figure and saying right and up are Primary 1 work."
  }
 }

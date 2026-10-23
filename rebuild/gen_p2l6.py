@@ -94,7 +94,7 @@ put(f'{P}-title',title_slide(f'{P}-title',3,'Market Day','Money',
  'Pay exactly with the fewest notes and coins, list every way in order, give change and work backwards with money.',
  'Objective: Read and write money in dollars and cents, pay exactly with the fewest notes and coins, make a list in order to find every way to pay, give change by counting on, decide whether there is enough money, and work backwards to find how much someone had at first. '
  'Materials: play money (coins 5¢, 10¢, 20¢, 50¢, $1; notes $2, $5, $10, $50), about 6 of each per pair, price tags, mini whiteboards. '
- 'Online: print the cut-out coins and notes, or use real money at home; the shop and toy stall are on the slides and children show their money to the camera. '
+ 'Online: print the cut-out coins and notes, or use real money at home; the shop and toy stall are on the slides and children count their money aloud and say the total together on three. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, short teaching 36 to 38, worksheet page 1 38 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. '
  'Level: P2 adds and subtracts money in dollars only or in cents only; mixed amounts like $3.45 are only counted out with notes and coins, never added in columns. Singapore money has no $20 note.'))
 

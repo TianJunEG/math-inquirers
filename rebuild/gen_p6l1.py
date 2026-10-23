@@ -85,7 +85,7 @@ def check(sid,time,title,rows,notes,top=250,gap=135,size=36,lw=150):
 # ---------- title ----------
 OBJ='Continue a sequence, find the rule for the nth term of a sequence with a constant difference, use it to find far terms such as the 100th, work backwards to decide whether a number is in a sequence, and test predictions with a loop and a variable in Scratch.'
 MAT='Laptop or desktop with Scratch 3 open (scratch.mit.edu, no account needed), about 25 matchsticks or toothpicks per child (or squared paper), mini whiteboard, workbook. Optional: a Python editor for children who already know Python.'
-ONL='The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.'
+ONL='The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children tick their own work against the answer slide or share their screen when asked; nothing is held up to the camera. Matchsticks can be drawn as lines.'
 put(f'{L}-title',f'''<section id="{L}-title" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">
 <p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON 1  •  WEEK 1  •  MATHS + CODE</p>
 <h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">Code the Pattern</h1>
@@ -110,7 +110,7 @@ put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,'Minutes 5 to 8. Pairs (onlin
 # ---------- warm-up 2 ----------
 qs=[('1.','The 10th term of 2, 4, 6, 8, …','20'),('2.','The 10th term of 3, 5, 7, 9, …','21'),('3.','Ali has $12 and saves $5 a week. How much after 6 weeks?','$42')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards up together, then click to reveal. Three questions only. Q1 and Q2 are the seed of today: 2, 4, 6, 8 is the 2 times table, so the 10th term is 2 × 10 = 20. 3, 5, 7, 9 is always 1 more than the 2 times table, so the 10th term is 21. Ask: "How did you get Q2 without counting on?" Q3: 12 + 6 × 5 = 42 (6 weeks, 6 jumps of $5, because Ali starts with $12 before any saving).'))
+put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Write it, say the answer together on three, then click to reveal. Three questions only. Q1 and Q2 are the seed of today: 2, 4, 6, 8 is the 2 times table, so the 10th term is 2 × 10 = 20. 3, 5, 7, 9 is always 1 more than the 2 times table, so the 10th term is 21. Ask: "How did you get Q2 without counting on?" Q3: 12 + 6 × 5 = 42 (6 weeks, 6 jumps of $5, because Ali starts with $12 before any saving).'))
 
 # ---------- explore ----------
 def tri_svg(w=1000,h=250):

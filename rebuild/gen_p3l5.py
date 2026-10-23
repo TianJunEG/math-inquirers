@@ -42,7 +42,7 @@ put('p3l5-title',title_slide('p3l5-title','LESSON 5  •  WEEK 3','Remainder Rid
  'Objective: Divide with remainders, check that the remainder is smaller than the number we divide by, decide what the leftover means in a story (one more group, or leave it out), work backwards from groups and leftovers, and solve "what number am I?" riddles by making a list. '
  'Heuristics taught today: WORK BACKWARDS (start number = groups × size + leftover) and MAKE A LIST (list the numbers that fit one clue, then test each with the other clue). '
  'Materials: 25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers. '
- 'Online: children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls; whiteboards are held up to the camera. '
+ 'Online: children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls; children write on whiteboards. '
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up game ----------
@@ -62,7 +62,7 @@ put('p3l5-warm1',sec('p3l5-warm1','0–5 MIN',body,
 qs=[('1.','17 ÷ 5','3 r 2'),('2.','30 ÷ 7','4 r 2'),('3.','45 ÷ 6','7 r 3')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,40) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
 put('p3l5-warm2',sec('p3l5-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Write "r" for remainder. Whiteboards up together, then click. After each one ask: "How can we check?" (answer × divisor + remainder: 7 × 6 + 3 = 45). '
+ 'Minutes 5 to 10. Write "r" for remainder. Write it, say the answer together on three, then click. After each one ask: "How can we check?" (answer × divisor + remainder: 7 × 6 + 3 = 45). '
  'Answers: 1) 3 r 2  2) 4 r 2  3) 7 r 3. Three quick questions only; 50 ÷ 8 (6 r 2) and 63 ÷ 9 (7 r 0, nothing left over because 63 is in the 9 table) are on the take-home box of the Go further page in the workbook.'))
 
 # ---------- 4. explore: what to do ----------
@@ -82,7 +82,7 @@ put('p3l5-explore1',sec('p3l5-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Predict first: "Which group size will leave nothing over?" Pairs make the groups with real counters (cups help) and fill in the table on a whiteboard. '
  'Results: 2s: 12 groups, 1 left. 3s: 8 groups, 1 left. 4s: 6 groups, 1 left. 5s: 5 groups, 0 left. 6s: 4 groups, 1 left. '
  'Hints: "Use a times-table fact: 6 × 4 = 24." Ready for more: "Try 49 counters. Which group sizes leave 1 over? Why?" (2, 3, 4, 6 and 8 all leave 1, because 48 is in all those tables; 7s leave 0.) '
- 'Online: children use beans or buttons and hold the whiteboard to the camera.'))
+ 'Online: children use beans or buttons and use the whiteboard.'))
 
 # ---------- 5. explore: talk ----------
 body=h2('Explore: talk about it')+items([('1.','Which group size left nothing over?'),('2.','Why did 2s, 3s, 4s and 6s all leave 1 over?'),('3.','In groups of 4, can 4 or more be left over?')],40)
@@ -122,7 +122,7 @@ put('p3l5-we1',sec('p3l5-we1','27–29 MIN',body,
 # ---------- 8. try 1 ----------
 put('p3l5-try1',try_slide('p3l5-try1','29–30 MIN','Your turn: whiteboards','Write the answer and the remainder. Check that the remainder is small enough.',
  [('a','29 ÷ 4','7 r 1'),('b','52 ÷ 9','5 r 7'),('c','Tom says 40 ÷ 6 = 5 r 10. Fix it.','6 r 4')],
- 'Whiteboards up together, then click. a) 4 × 7 = 28, 1 left. b) 9 × 5 = 45, 7 left (7 is smaller than 9, so it is fine). c) 10 is bigger than 6, so another group fits: 6 × 6 = 36, 4 left. Ask: "How could Tom have noticed his mistake?"'))
+ 'Write it, say the answer together on three, then click. a) 4 × 7 = 28, 1 left. b) 9 × 5 = 45, 7 left (7 is smaller than 9, so it is fine). c) 10 is bigger than 6, so another group fits: 6 × 6 = 36, 4 left. Ask: "How could Tom have noticed his mistake?"'))
 
 # ---------- 9. worked example 2: what does the leftover mean ----------
 body=h2('Worked example: what does the leftover mean?')+card(p('A van holds 8 people. 50 people go on a trip. How many vans are needed?',40,700))

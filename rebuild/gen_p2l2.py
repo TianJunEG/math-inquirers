@@ -75,7 +75,7 @@ put('p2l2-warm1',sec('p2l2-warm1','0–5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','65 + __ = 100','35'),('2.','700 − 250 = ?','450')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p2l2-warm2',sec('p2l2-warm2','5–8 MIN',body,'Minutes 5 to 8. Whiteboards up together, then click. For question 2 ask: "How did you take 250 from 700?" (700 − 200 = 500, then − 50 = 450). Answers: 35 and 450. Spare questions in the guide table: 300 + 450 = 750, 238 + 10 = 248, 500 − __ = 120 is 380 (count on: 120 → 200 is 80, 200 → 500 is 300).'))
+put('p2l2-warm2',sec('p2l2-warm2','5–8 MIN',body,'Minutes 5 to 8. Write it, say the answer together on three, then click. For question 2 ask: "How did you take 250 from 700?" (700 − 200 = 500, then − 50 = 450). Answers: 35 and 450. Spare questions in the guide table: 300 + 450 = 750, 238 + 10 = 248, 500 − __ = 120 is 380 (count on: 120 → 200 is 80, 200 → 500 is 300).'))
 
 # ---------- 4. explore ----------
 g=colsum('358','641','999','+',x0=10,y0=50,c=96,size=60,shade=True)

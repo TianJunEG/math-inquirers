@@ -113,7 +113,7 @@ put('p3l9-we1',sec('p3l9-we1','27–29 MIN',body,
  'Worked example. Ask first: "Can we take 850 away from 100 g?" (Not without breaking the kilograms.) Click each step. Think-aloud: "I change the bag to grams: 2 kg is 2000 g, plus 100 is 2100 g. Now it is a normal take-away: 2100 − 850 = 1250 g. I change back: 1000 g of it is 1 kg, so 1 kg 250 g. I check by adding back: 1250 + 850 = 2100." '
  'Some children prefer to work in kg and g separately (renaming 1 kg as 1000 g): accept it, but show why one unit is less likely to go wrong.'))
 put('p3l9-try1',try_slide('p3l9-try1','29–30 MIN','Your turn: one unit','Whiteboards. Change to the smaller unit first.',[('a','4 m 9 cm = __ cm','409 cm'),('b','2750 ml = __ ℓ __ ml','2 ℓ 750 ml'),('c','Which is longer: 3 m 5 cm or 350 cm?','350 cm')],
- 'Whiteboards up together, then click. a) 400 + 9 = 409 (not 49). b) 2000 ml is 2 ℓ, 750 ml left. c) 3 m 5 cm = 305 cm, so 350 cm is longer by 45 cm. Ask a child to explain c: the "5" in 3 m 5 cm is only 5 cm.',38))
+ 'Write it, say the answer together on three, then click. a) 400 + 9 = 409 (not 49). b) 2000 ml is 2 ℓ, 750 ml left. c) 3 m 5 cm = 305 cm, so 350 cm is longer by 45 cm. Ask a child to explain c: the "5" in 3 m 5 cm is only 5 cm.',38))
 
 # ---------- 9. teach: time line ----------
 def tline(ticks,arcs=(),w=1664,h=230,only_arcs=False,aria='Time line'):

@@ -100,7 +100,7 @@ put('p4l7-warm1',sec('p4l7-warm1','6.5–8.5 MIN',body+cards+ans,
 # ---------- 3. quick questions ----------
 qs=[('1.','Area of a rectangle 7 cm by 6 cm?','42 cm²'),('2.','Perimeter of a square with sides of 9 cm?','36 cm'),('3.','Area 48 cm², length 8 cm. Breadth?','6 cm')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l7-warm2',sec('p4l7-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Whiteboards up together, then click. Three questions, about 30 seconds each. Insist on units: cm for perimeter, cm² for area. No follow-up questions. For 3: 48 ÷ 8, or which number times 8 makes 48. Answers: 42 cm², 36 cm, 6 cm. The other two warm-up questions (perimeter of a 12 by 5 rectangle; a square with perimeter 28 cm, its area) are in the Weekly Dose of Thinking Math.'))
+put('p4l7-warm2',sec('p4l7-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Write it, say the answer together on three, then click. Three questions, about 30 seconds each. Insist on units: cm for perimeter, cm² for area. No follow-up questions. For 3: 48 ÷ 8, or which number times 8 makes 48. Answers: 42 cm², 36 cm, 6 cm. The other two warm-up questions (perimeter of a 12 by 5 rectangle; a square with perimeter 28 cm, its area) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore ----------
 c=40; g=''

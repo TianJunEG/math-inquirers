@@ -76,7 +76,7 @@ put('p4l1-warm1',sec('p4l1-warm1','7–9 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','Is 7 a factor of 56?','Yes: 7 × 8'),('2.','The first five multiples of 6?','6, 12, 18, 24, 30'),('3.','A common multiple of 4 and 6?','12, 24, 36 …'),]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1100,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1268,250+i*125,524,c) for i,(a,b,c) in enumerate(qs))
-put('p4l1-warm2',sec('p4l1-warm2','9–12.5 MIN',body,'Minutes 9 to 12.5. Three questions, about 30 seconds each: read each aloud, whiteboards up together, then click to show. No follow-up questions: if a child raises it, a factor goes INTO a number (56 is a multiple of 7), and 12 is the smallest common multiple of 4 and 6. Answers: yes, 6 12 18 24 30, 12 (or 24, 36). The other two warm-up questions (Is 45 a multiple of 4? Write 18 as a product, 3 ways) are in the Weekly Dose of Thinking Math.'))
+put('p4l1-warm2',sec('p4l1-warm2','9–12.5 MIN',body,'Minutes 9 to 12.5. Three questions, about 30 seconds each: read each aloud, write it, say the answer together on three, then click to show. No follow-up questions: if a child raises it, a factor goes INTO a number (56 is a multiple of 7), and 12 is the smallest common multiple of 4 and 6. Answers: yes, 6 12 18 24 30, 12 (or 24, 36). The other two warm-up questions (Is 45 a multiple of 4? Write 18 as a product, 3 ways) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore: what to do ----------
 DASH=' stroke-dasharray="6 5"'

@@ -75,7 +75,7 @@ put(PFX+'title',title_slide(PFX+'title','LESSON 7  •  WEEK 4','Area Architects
  'Find every rectangle with the same fence, push steps out to find perimeters fast, and cut up or fill in shapes to find their area.',
  'Objective: Find the area and perimeter of figures made of squares and rectangles, list every rectangle with a given perimeter in order, and change the shape (push the steps out; cut it up or fill it in) to find perimeters and areas quickly. Heuristics taught today: (1) make a list in order, (2) change the shape. '
  'Materials: 12 square tiles (or 12 squares cut from 1 cm grid paper) per child, 1 cm grid paper, mini whiteboards, a ruler. '
- 'Online: children cut 12 squares from squared paper (or draw on squared paper) and hold their rectangles up to the camera; annotate the grid slides with the pen tool. '
+ 'Online: children cut 12 squares from squared paper (or draw on squared paper) and check them against the grid slides, which are annotated with the pen tool. '
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge are for early finishers. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ================= 2. warm-up game =================

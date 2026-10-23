@@ -79,7 +79,7 @@ put(P+'title',title_slide(P+'title','LESSON 9  •  WEEK 5A','Pattern Generalise
  'Objective: Continue growing patterns drawn as figures, say the rule for any figure in words (for example, sticks = 3 × figure number + 1) and explain it from the picture, work backwards from a total to find the figure, and solve "two kinds of things" problems with a guess-and-check table and with supposition. '
  'Thinking strategies today: LOOK FOR A PATTERN, MAKE A TABLE, WORK BACKWARDS, GUESS AND CHECK, SUPPOSITION. '
  'Materials: matchsticks or toothpicks (about 40), square paper tiles or the square grid from the cut-out pages, mini whiteboards, workbook. '
- 'Online: children have toothpicks and paper squares ready on the desk and build each figure on camera; pairs go to breakout rooms for the explore and page 1 and hold their tables up to the camera. '
+ 'Online: children have toothpicks and paper squares ready on the desk and build each figure on camera; pairs go to breakout rooms for the explore and page 1 and check their tables against the slide. '
  'Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 2 you may choose: carry on, or try Think harder), check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation."'))
 
 # 2 warm1: guess my rule
@@ -99,7 +99,7 @@ put(P+'warm1',sec(P+'warm1','0–4 MIN',body,
 # 3 warm2
 qs=[('1.','7, 11, 15, 19, __, __','23, 27'),('2.','1, 4, 9, 16, 25, __','36'),('3.','2, 6, 18, 54, __','162'),('4.','The 20th even number','40')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards up together, then click. Ask after 1: "What is the rule? add 4." After 2: "What do you notice about 1, 4, 9, 16, 25?" (square numbers: 1 × 1, 2 × 2 ...). After 3: "multiply by 3 each time", so it is not the same kind of pattern as 1. After 4: the 20th even number is 2 × 20 = 40, a rule in words: 2 × the place. Answers: 23 and 27; 36; 162; 40. If you are short of time, skip question 4.'))
+put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Write it, say the answer together on three, then click. Ask after 1: "What is the rule? add 4." After 2: "What do you notice about 1, 4, 9, 16, 25?" (square numbers: 1 × 1, 2 × 2 ...). After 3: "multiply by 3 each time", so it is not the same kind of pattern as 1. After 4: the 20th even number is 2 × 20 = 40, a rule in words: 2 × the place. Answers: 23 and 27; 36; 162; 40. If you are short of time, skip question 4.'))
 
 # 4 explore1
 g=''

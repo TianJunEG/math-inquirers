@@ -95,14 +95,14 @@ body=h2('Warm-up: Place It Right')+card(p('I turn over one digit card at a time.
 body+=pin(128,400,1664,svgwrap(1600,270,'Five empty place-value boxes TTh, Th, H, T, O and a digit card 4 waiting to be placed',g),None,WHITE,24,'12px 32px')
 body+=pin(128,740,1664,p('Round 2: where does a 4 go? A 5? Is 49 999 or 50 100 closer to 50 000?',36,700),'fade',SOFT,20,'20px 30px')
 put('p4l2-warm1',sec('p4l2-warm1','6.5–8.5 MIN',body,
- 'Minutes 6.5 to 8.5 (one short round, about 90 seconds: the Sneak-peek puzzles came first). Place It Right with 5 digits. Children draw five boxes: TTh, Th, H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After five cards, read the numbers aloud: biggest wins. '
+ 'Minutes 6.5 to 8.5 (one short round, about 90 seconds: the Sneak-peek puzzles came first). Place It Right with 5 digits. Children draw five boxes: TTh, Th, H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: read the digit aloud; nothing is held up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After five cards, read the numbers aloud: biggest wins. '
  'Round 2: closest to 50 000 wins. Click to show the thinking question. Talk: "A 4 or a 5 in the ten thousands place. If you have a 4, you want the other digits BIG (49 9..). If you have a 5, you want them small (50 1..)." 49 999 is 1 away and 50 100 is 100 away. '
  'Listen for children who compare the distances; that is rounding thinking, and it comes straight back in the explore.'))
 
 # ---------- 3. quick questions ----------
 qs=[('1.','What is the 7 worth in 47 352?','7000'),('2.','Sixty thousand and forty-five in numerals?','60 045'),('3.','1000 more than 59 600?','60 600')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l2-warm2',sec('p4l2-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: read each aloud, whiteboards up together, then click. No follow-up questions. If a child writes 6045 or 600 045 for question 2, say it as "60 thousand, 0 hundreds, 4 tens, 5 ones". In question 3 the thousands digit was 9, so the ten thousands digit changes too. Do not teach the halfway rule yet. Answers: 7000, 60 045, 60 600. The other two warm-up questions (40 000 + 3000 + 50 + 8; 36 815 to the nearest 1000) are in the Weekly Dose of Thinking Math.'))
+put('p4l2-warm2',sec('p4l2-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: read each aloud, write it, say the answer together on three, then click. No follow-up questions. If a child writes 6045 or 600 045 for question 2, say it as "60 thousand, 0 hundreds, 4 tens, 5 ones". In question 3 the thousands digit was 9, so the ten thousands digit changes too. Do not teach the halfway rule yet. Answers: 7000, 60 045, 60 600. The other two warm-up questions (40 000 + 3000 + 50 + 8; 36 815 to the nearest 1000) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore: what to do ----------
 nl=NL(49000,51000,700,1500,150)

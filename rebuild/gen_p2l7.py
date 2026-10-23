@@ -227,7 +227,7 @@ tops=[300,520,680]
 for k,(pic,ph,q,a) in enumerate([(p_a,200,'Shaded? Not shaded?','{2/3}  and  {1/3}'),(p_b,100,'Shaded? Not shaded?','{5/12}  and  {7/12}')]):
     body+=pin(128,tops[k],300,pic,None,WHITE,20,'8px 20px')+qrowx(500,tops[k]+(40 if k==0 else 0),860,'abc'[k],q,36)+ansx(1400,tops[k]+(40 if k==0 else 0),392,a,size=34)
 put('p2l7-try1',sec('p2l7-try1','25–26 MIN',body,
- 'Whiteboards up together, then click. a) 3 equal parts, 2 shaded: 2/3 shaded, 1/3 not shaded. b) 12 equal parts (twelfths); count the shaded ones carefully, they are not next to each other: 5, so 5/12 shaded and 7/12 not shaded (5 + 7 = 12). '
+ 'Write it, say the answer together on three, then click. a) 3 equal parts, 2 shaded: 2/3 shaded, 1/3 not shaded. b) 12 equal parts (twelfths); count the shaded ones carefully, they are not next to each other: 5, so 5/12 shaded and 7/12 not shaded (5 + 7 = 12). '
  '(The old item c, the unequal parts trap, is dropped: worksheet Q1 B and D are the same idea.)'))
 
 # 9. we2: compare unit fractions

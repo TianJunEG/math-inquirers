@@ -77,9 +77,9 @@ def add(S,order,ln):
         picx=p(pic,84,800,NAVY) .replace('<p style="','<p style="letter-spacing:40px;font-family:Fredoka, Arial, sans-serif;margin:4px 0;',1) if pic else ''
         body+=pin(128,top,1664,p(f'<span style="color:{TEAL};font-weight:800">Puzzle {i+1}.</span>  {rich(c["q"])}',36,600,raw=True)+picx+p(hint,26,700,TEAL),None,WHITE,20,'20px 30px','box-sizing:border-box;min-height:215px')
     wa,wb=pl['warmcheck']
-    notes=(f'Minutes {fm(wa)} to {fm(wb)}. Sneak-peek puzzles: two small puzzles on ideas we have not learnt yet. Give about 1 minute for each puzzle, then say "show me" ONCE for both: children hold up their paper with both answers in one camera hold-up (about 30 seconds). SAY: "These are ideas we have not learnt yet. Guessing is welcome and so is I do not know. Nobody is marked." '
+    notes=(f'Minutes {fm(wa)} to {fm(wb)}. Sneak-peek puzzles: two small puzzles on ideas we have not learnt yet. Give about 1 minute for each puzzle, then say "say it" ONCE for both: children say both answers together on three (about 30 seconds); nothing is held up to the camera. SAY: "These are ideas we have not learnt yet. Guessing is welcome and so is I do not know. Nobody is marked." '
       'Puzzle 1 is an ACCESS puzzle: any child can try it with objects, a drawing or counting, so everyone has a first win. Puzzle 2 is a thinking puzzle. '
-      'Children write both answers on their own paper and show them only to the tutor on camera (or everybody holds paper to the camera at the same moment, once for both puzzles). No private messages. Never answers read out, never "who got it?". Do not show the answers on the slide now. '
+      'Children write both answers on their own paper and say them together on three (once for both puzzles); nothing is held up to the camera. No private messages. Never answers read out, never "who got it?". Do not show the answers on the slide now. '
       + ' '.join(f'Puzzle {i+1} answer (tutor only): {plain(c["a"])}. Listen for: {plain(c["why"])}' for i,c in enumerate(g['check']))
       + ' Come back to puzzle 2 at talk time: "Now we know the idea, how could it help?" (volunteers only). '
       'Invite the WHOLE group once, never one child; this is an invitation, not a ranking, and any child may choose Think harder or the Investigation after question 3 of page 1. Never announce who is on which page, and never split pairs unless both children agree.')
@@ -97,7 +97,7 @@ def add(S,order,ln):
     for suf,pg in (('ws1ans','1'),('ws2ans','2')):
         x=S[pre+suf]
         x=x.replace(f'Page {pg}: check together',f'Page {pg}: self-check').replace(f'Page {pg}: Check together',f'Page {pg}: self-check')
-        x=aside_add(x,f'SELF-CHECK, about 60 seconds: children correct their own page against these answers in a different colour and hold the corrected page up to the camera once. Ask “how do you know?” on ONE question only. Do not go through every answer aloud.')
+        x=aside_add(x,f'SELF-CHECK, about 60 seconds: children correct their own page against these answers in a different colour and tick the corrected page against the answer slide (nothing is held up to the camera). Ask “how do you know?” on ONE question only. Do not go through every answer aloud.')
         S[pre+suf]=x
     # ---- talk time rules ----
     tk=S[pre+'talk']
@@ -108,7 +108,7 @@ def add(S,order,ln):
     S[pre+'talk']=tk
     # ---- exit ticket: private ----
     ex=S[pre+'exit']
-    ex=aside_add(ex,'Answers are shown only to the tutor on camera (own paper). Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide: allow 3 minutes, 2 for the children plus a short share.')
+    ex=aside_add(ex,'Answers stay on the child’s own paper and are ticked against the answer slide. Never mark or read out answers in front of the group. Reflection (look back) follows on the next slide: allow 3 minutes, 2 for the children plus a short share.')
     S[pre+'exit']=ex
     # ---- look-back slide ----
     ex2=', '.join(g['reflect'])

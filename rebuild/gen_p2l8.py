@@ -275,7 +275,7 @@ for k,(pic,q,a) in enumerate([(g22,'A 2 by 2 grid. How many squares?','5'),(g32,
     top=300+k*190
     body+=pin(128,top,280,pic,None,WHITE,20,'10px 10px')+qrowx(470,top+30,900,'abc'[k],q,36)+ansx(1420,top+30,372,a,size=36)
 put('p2l8-try2',sec('p2l8-try2','28–30 MIN',body,
- 'Whiteboards up together, then click. a) 4 + 1 = 5. b) 6 small + 2 squares made of 4 (the 2 by 2 window fits in 2 places) = 8. There is no 3 by 3 square: the grid is only 2 high. Ask a child to show the window sliding along b. (Item c is dropped: worksheet Q2 has the same type.)'))
+ 'Write it, say the answer together on three, then click. a) 4 + 1 = 5. b) 6 small + 2 squares made of 4 (the 2 by 2 window fits in 2 places) = 8. There is no 3 by 3 square: the grid is only 2 high. Ask a child to show the window sliding along b. (Item c is dropped: worksheet Q2 has the same type.)'))
 
 # 12. key
 body=h2('Key idea: count in order')+card(p('Sort what you count: by size, by the line it sits on, or by layer. Then you never miss one or count one twice.',44,700))+card(p('Name a piece by its sides: a half circle has 1 straight side, a quarter circle has 2.',38,600,MUTED))

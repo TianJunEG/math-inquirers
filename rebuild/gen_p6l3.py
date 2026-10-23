@@ -133,7 +133,7 @@ put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,
 # ---------- 3 warm2 ----------
 qs=[('1.','It is 3 °C. It falls 5 degrees. What is it now?','−2 °C'),('2.','Which is colder: −7 °C or −2 °C?','−7 °C'),('3.','A lift is at B1. It goes down 2 floors. Where is it?','B3')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards: write, hold up together, then click. Three questions only. Answers: 1) −2 °C (3 down to 0, then 2 more).  2) −7 °C (further below 0).  3) B3. Ask: "Where have you seen numbers below zero?" (freezer, weather apps for Japan or Korea, basement lifts, golf scores, a bank balance that is overdrawn, sea level.)'))
+put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards: write, say the answer together on three, then click. Three questions only. Answers: 1) −2 °C (3 down to 0, then 2 more).  2) −7 °C (further below 0).  3) B3. Ask: "Where have you seen numbers below zero?" (freezer, weather apps for Japan or Korea, basement lifts, golf scores, a bank balance that is overdrawn, sea level.)'))
 
 # ---------- 4 explore1 ----------
 stage=(f'<svg aria-label="The Scratch stage is a number line: x goes from minus 240 to 240" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="width:700px;height:304px;flex:none">'
@@ -274,7 +274,7 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ben says −8 is bigger 
 put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Both questions are kept in this lesson (it has the flex). Pairs talk for 2 minutes, then share. Answer: No. −8 is further left on the number line, so it is smaller: −8 °C is colder than −3 °C, and floor −8 is lower than floor −3. The digits 8 and 3 tell us how FAR from 0, not which side. Praise reasons that use a picture or a real example. Second question if time: "Why does change by −3 make a number go down?"'))
 
 # ---------- 25 exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('It is −3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('It is −3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.',34,400))
 put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: −5 °C (−3 − 6 = −9, then −9 + 4 = −5). Extension: write a Scratch program that starts temp at −3 and shows each change, then try it.'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachtrace','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']

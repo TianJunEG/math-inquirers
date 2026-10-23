@@ -56,7 +56,7 @@ G2=[('Swim',6,BLUE),('Run',2,RED),('Cycle',6,GRN),('Skip',5,GOLD)]
 body=h2('Your turn: whiteboards')+pin(128,240,1000,graph(G2,rh=60),None)+keybox(1180,240,612,'Key:  ● = 1 child')+pin(1180,370,612,p('Our favourite sports',34,700,MUTED),None)
 for i,(a,b,c) in enumerate([('a','Which two sports are tied?','Swim, cycle'),('b','How many more chose swim than run?','4'),('c','How many children voted altogether?','19')]):
     body+=qrow(128,530+i*120,1250,a,b,36)+answer(1420,530+i*120,372,c)
-put('l3-try1',sec('l3-try1','27–28 MIN',body,'Whiteboards up together, then click. a) Swim and cycle both have 6. b) Match up: 4 swim dots have no partner, 6 − 2 = 4. c) 6 + 6 = 12, 12 + 2 = 14, 14 + 5 = 19. For c, ask: "Did anyone find a quick way?" Anyone who answers 8 for b has added: line up the two rows again.'))
+put('l3-try1',sec('l3-try1','27–28 MIN',body,'Write it, say the answer together on three, then click. a) Swim and cycle both have 6. b) Match up: 4 swim dots have no partner, 6 − 2 = 4. c) 6 + 6 = 12, 12 + 2 = 14, 14 + 5 = 19. For c, ask: "Did anyone find a quick way?" Anyone who answers 8 for b has added: line up the two rows again.'))
 
 # ---- teach 2: key of 2 ----
 G3=[('Pizza',4,RED),('Noodles',6,GOLD),('Rice',2,GRN)]

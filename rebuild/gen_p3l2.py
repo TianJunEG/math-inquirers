@@ -118,7 +118,7 @@ put(PRE+'warm1',sec(PRE+'warm1','0–5 MIN',body,
  'Quick finisher: "Make 10 000 with 3500." (6500)'))
 qs=[('1.','3456 + 1000 = ?','4456'),('2.','5000 − 1 = ?','4999'),('3.','2700 + 300 = ?','3000')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Mental maths, no written working. Whiteboards up together, then click. Ask for 2: "Which digits changed when we took away 1? Why did so many change?" (every 0 had to be exchanged). Three quick questions only. Questions 4 and 5 (8000 − 2500: 5500; 4999 + 2: 5001) are on the take-home box of the Go further page in the workbook.'))
+put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Mental maths, no written working. Write it, say the answer together on three, then click. Ask for 2: "Which digits changed when we took away 1? Why did so many change?" (every 0 had to be exchanged). Three quick questions only. Questions 4 and 5 (8000 − 2500: 5500; 4999 + 2: 5001) are on the take-home box of the Go further page in the workbook.'))
 # ---------- explore ----------
 def explore_pic():
     cards=digit_cards(list('123456789'),cw=70,ch=86,gap=14)

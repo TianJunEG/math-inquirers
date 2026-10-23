@@ -211,7 +211,7 @@ put('p6l7-we1', sec('p6l7-we1', '26–28 MIN', body,
 # ================= 8. your turn 1 =================
 put('p6l7-try1', qa_slide('p6l7-try1', '28–29 MIN', 'Your turn: regular polygons', 'Whiteboards. Turn first, then the inside angle.',
     [('a', 'A regular 20-sided polygon. What is the turn?', '18°'), ('b', 'What is its inside angle?', '162°'), ('c', '360 sides: the turn and the inside angle? What does it look like?', '1° and 179°')],
-    'Whiteboards up together, then click. a) 360 ÷ 20 = 18°. b) 180 − 18 = 162°. c) 360 ÷ 360 = 1°, inside 179°: with tiny steps (move 1) it looks just like a circle. That is how Scratch artists draw circles: repeat 360 [move 1, turn right 1]. Let a fast pair test it.'))
+    'Write it, say the answer together on three, then click. a) 360 ÷ 20 = 18°. b) 180 − 18 = 162°. c) 360 ÷ 360 = 1°, inside 179°: with tiny steps (move 1) it looks just like a circle. That is how Scratch artists draw circles: repeat 360 [move 1, turn right 1]. Let a fast pair test it.'))
 
 # ================= 9. worked example 2: backwards =================
 body = h2('Worked example: work backwards') + card(p('Each inside angle of a regular polygon is 174°. How many sides does it have?', 38, 700), extra='padding:24px 40px')
@@ -338,7 +338,7 @@ body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].str
 put('p6l7-talk', sec('p6l7-talk', '75–82 MIN', body, 'One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): ' + SC['talkNext'].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put('p6l7-exit', sec('p6l7-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]}. Children who write 175 sides and 5° have swapped the two steps: ask "Which angle does the turtle turn?" Extension: {L["extension"]}'))
 
 # ---------- write ----------

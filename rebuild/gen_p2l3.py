@@ -78,7 +78,7 @@ put('p2l3-title',title_slide('p2l3-title','P2  •  LESSON 3  •  WEEK 2','Legs
  'Objective: Read an array as rows of equal groups and write two multiplication and two division sentences for it; solve "how many of each" legs and wheels puzzles with a table; share with leftovers and decide what the leftover means; find all the arrays for a number. Tables used: 2, 3, 4, 5 and 10 only. '
  'Level note: sharing with leftovers (Q4, Q5) is division with a remainder, which is a P3 topic. It is a natural lead-in, so say "3 left over" in words and do not write remainders as "r 3". Thinking strategies taught today: DRAW IT (arrays, plates, boats) and MAKE A TABLE (start with all of one kind, swap one at a time; guess and check). '
  'Materials: About 30 counters per pair, mini whiteboards, squared paper. Optional picture cards of hens and goats, bicycles and tricycles. '
- 'Online: Each child has 30 small objects (buttons, beans or Lego bricks) and a whiteboard or paper; children hold arrays and tables up to the camera. '
+ 'Online: Each child has 30 small objects (buttons, beans or Lego bricks) and a whiteboard or paper; children check arrays and tables against the slide. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------

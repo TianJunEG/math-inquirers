@@ -78,7 +78,7 @@ body=h2('Your turn: count the squares')+stitle('Draw it on your whiteboard. Smal
 body+=pin(128,330,300,row3,None,WHITE,20,'24px 30px')+qrow(500,330,880,'a','How many squares are in a row of 3 squares?',38)+answer(1420,330,372,'3')
 body+=pin(128,480,300,lsh,None,WHITE,20,'18px 30px')+qrow(500,480,880,'b','A 2 by 2 square with one more square stuck on. How many squares?',38)+answer(1420,480,372,'6')
 body+=qrow(128,700,1252,'c','Draw a shape made of small squares that has exactly 5 squares in it.',38)+answer(1420,700,372,'2 by 2 grid, or a row of 5')
-put('l7-try1',sec('l7-try1','29–30 MIN',body,'Whiteboards up together, then click. a) 3: there is no bigger square, because a bigger square needs 2 rows. b) 6: 5 small squares and 1 square made of 4 small ones (the 2 by 2 part). The extra square cannot make a second big square because the square above it is missing: show this with your 2 by 2 window. c) Open: a 2 by 2 grid (4 + 1) or a row of 5 small squares (5 + 0) both work. Ask a child with each answer to explain.'))
+put('l7-try1',sec('l7-try1','29–30 MIN',body,'Write it, say the answer together on three, then click. a) 3: there is no bigger square, because a bigger square needs 2 rows. b) 6: 5 small squares and 1 square made of 4 small ones (the 2 by 2 part). The extra square cannot make a second big square because the square above it is missing: show this with your 2 by 2 window. c) Open: a 2 by 2 grid (4 + 1) or a row of 5 small squares (5 + 0) both work. Ask a child with each answer to explain.'))
 
 # ---------- 9. worked example: rectangles in a strip of 4 ----------
 c=95; base=SV(400,115,gridb(10,10,4,1,c),'A strip of 4 squares')

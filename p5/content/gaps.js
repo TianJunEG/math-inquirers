@@ -1,7 +1,7 @@
 // P5 enrichment features, rewritten in the fix pass (docs/audit/fixpass_p5.md):
 //  sneak   = two "sneak-peek puzzles" at minutes 0-3: [0] an ACCESS question any child can try with objects, drawing or counting
 //            (a guaranteed first win), [1] a thinking question. Ideas not yet taught; guessing and "I do not know" welcome; answers
-//            are shown privately (own paper shown only to the tutor on camera, or all held up together); nobody is marked.
+//            are shown privately (own paper ticked against the answer slide or said together on three); nobody is marked.
 //  pic     = optional picture drawn on the slide beside the question (see rebuild/p5_gaps.py)
 //  whatIf  = a second what-if question from the explore stage, for any child who is ready for more now (so nobody waits)
 //  solo    = what to begin with on workbook page 2 (printed as a neutral line; the page is a menu, not a wall)

@@ -68,7 +68,7 @@ module.exports = {
     objective: 'Find the area and perimeter of figures made of squares and rectangles, find every rectangle with a given perimeter by listing in order, and use “change the shape” (push the steps out; cut up or fill in) to find perimeters and areas quickly.',
     skills: 'Systematic listing, changing the shape, spatial reasoning, explaining',
     materials: '12 square tiles (or 12 squares cut from 1 cm grid paper) per child, 1 cm grid paper, mini whiteboards, a ruler. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Children cut 12 squares from squared paper (or draw on squared paper) and hold up their rectangles to the camera; the tutor shares a grid slide to draw on.',
+    online: 'Children cut 12 squares from squared paper (or draw on squared paper) and check them against the grid slide the tutor shares; nothing is held up to the camera.',
     warmup: 'Area or perimeter? The tutor reads a job (fence a garden, tile a floor). Children trace a finger round the edge for perimeter or wipe a flat palm for area. Then quick questions on squares and rectangles.',
     explore: 'Use exactly 12 squares to make every different rectangle. Record the length, width and perimeter of each. Which has the longest perimeter? The shortest?',
     mini: 'List rectangles with a perimeter of 20 cm in order (length + width = 10). Push the steps of a staircase out to see it has the same perimeter as a rectangle; watch out for dents. Find the area of an L-shape two ways: cut it into rectangles, or fill in the corner and take it away. Before page 1: a square with the same perimeter as a rectangle. Before page 2: what happens to the perimeter when one square is added.',

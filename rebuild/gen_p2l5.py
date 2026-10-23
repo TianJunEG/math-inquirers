@@ -95,7 +95,7 @@ put(f'{P}-we1',sec(f'{P}-we1','22–26 MIN',body,'Click to reveal each step; ask
 
 # 8 try1
 put(f'{P}-try1',try_slide(f'{P}-try1','26–28 MIN','Your turn: whiteboards','Find what went IN. Undo the last step first, then check forwards.',[('a','? → × 2 → − 5 → 15','10')],
- 'Whiteboards up together, then click. One item: 15 + 5 = 20, 20 ÷ 2 = 10. Ask for the rule in words: "undo the last step first". (Items b and c are dropped: worksheet Q1 has the same types.)',size=40))
+ 'Write it, say the answer together on three, then click. One item: 15 + 5 = 20, 20 ÷ 2 = 10. Ask for the rule in words: "undo the last step first". (Items b and c are dropped: worksheet Q1 has the same types.)',size=40))
 
 # 9 we2 before-and-after bars
 U=14

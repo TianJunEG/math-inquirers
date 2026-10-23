@@ -66,7 +66,7 @@ put(PRE+'warm1',sec(PRE+'warm1','0–5 MIN',body,
 # ---------- warm-up 2 ----------
 qs=[('1.','What is the value of the 7 in 4719?','700'),('2.','3000 + 40 + 5 = ?','3045'),('3.','What is 1 more than 4999?','5000')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, whiteboards up together, then click to show. Answers: 700; 3045 (watch for 345: there are no hundreds, so we write 0 in the hundreds place); 5000. Three quick questions only. Questions 4 and 5 (100 less than 6050: 5950; which is greater, 7089 or 7098: 7098) are on the take-home box of the Go further page in the workbook.'))
+put(PRE+'warm2',sec(PRE+'warm2','5–10 MIN',body,'Minutes 5 to 10. Read each aloud, give thinking time, write it, say the answer together on three, then click to show. Answers: 700; 3045 (watch for 345: there are no hundreds, so we write 0 in the hundreds place); 5000. Three quick questions only. Questions 4 and 5 (100 less than 6050: 5950; which is greater, 7089 or 7098: 7098) are on the take-home box of the Go further page in the workbook.'))
 # ---------- explore ----------
 def explore_pic():
     s='<svg aria-label="Digit cards 2, 4, 6, 8 above a number line from 4000 to 6000" viewBox="0 0 1600 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:230px;display:block">'

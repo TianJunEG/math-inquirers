@@ -309,7 +309,7 @@ body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].str
 put(f'{PRE}-talk', sec(f'{PRE}-talk', '75–82 MIN', body, 'Minutes 75 to 82. Both questions are kept in this lesson (it has the time). Pairs talk for 2 minutes, then share. Follow-up: ' + SC['talk'][1] + ' Answer: ' + SC['talkAns'] + ' Close: ' + SC['close'][0]))
 
 # ---------- 27 exit ----------
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 44, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 44, 600)) + card(p('Write your answer on a slip of paper (or type it in the chat). When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put(f'{PRE}-exit', sec(f'{PRE}-exit', '82–90 MIN', body, 'Minutes 82 to 90. Answer: ' + L['exit']['a'] + ' Extension: ' + L['extension']))
 
 # ---------- write ----------

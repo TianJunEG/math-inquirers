@@ -45,8 +45,8 @@ def build(D, n):
     a_, b_ = p1budget.SLIDES[n][p_ + 'warmcheck']
     notes = (f'Minutes {a_} to {b_} (4 minutes). SAY (about 26 words, once): "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked." '
              'Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone starts with a win. Question 2 makes you think. '
-             'Children try both on their own paper (about a minute each). Then everyone shows their paper ONCE, after the second question: face to face, each child holds the paper low so only the tutor sees it; online, everyone holds the paper to the camera at the same moment. There are no private chat messages. '
-             'Never use boards held up in front of the group, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
+             'Children try both on their own paper (about a minute each). Then everyone answers ONCE, after the second question: face to face, each child keeps the paper low so only the tutor sees it; online, children say the answers together on three (nothing is held up to the camera). There are no private chat messages. '
+             'Never use boards or paper held up in front of the group or to the camera, and never read out or compare anyone\'s answer. Do not write scores down or announce them. '
              'Then click to show each answer to the whole group and say "Lots of us had a different idea, and that is fine." '
              f'Look for good ideas to praise in a later lesson; do not keep a list of who found question 2 easy. When the worksheet starts (minute {p1budget.ws_start(n)}) invite the WHOLE group (“When you have finished Start here, you can choose Think harder, Go further or the Investigation”), never one child by name. Everyone joins Explore and the Mini-lesson. Answers: ' + '  '.join(f'{i + 1}) {c["a"]}' for i, c in enumerate(g['check'])))
     _w(D, p_ + 'warmcheck', sec(p_ + 'warmcheck', '%d–%d MIN' % (a_, b_), body, notes))

@@ -124,7 +124,7 @@ put('p5l8-warm1',sec('p5l8-warm1','0–4 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','Straight line: 180° − 125° = ?','55°'),('2.','At a point: 150°, 90°, 80° and one more. Find it.','40°'),('3.','A triangle has angles 90° and 35°. Third angle?','55°'),('4.','Isosceles triangle, top angle 40°. One base angle?','70°')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p5l8-warm2',sec('p5l8-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. Ask "What is your reason?" each time. 1) Angles on a straight line add up to 180°: 55°. 2) Angles at a point add up to 360°: 150 + 90 + 80 = 320, so 40°. 3) Angles in a triangle add up to 180°: 180 − 90 − 35 = 55°. 4) The two base angles are equal: (180 − 40) ÷ 2 = 70°. Answers: 55°, 40°, 55°, 70°. If you are short of time, skip question 4.'))
+put('p5l8-warm2',sec('p5l8-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, write it, say the answer together on three, then click to show. Ask "What is your reason?" each time. 1) Angles on a straight line add up to 180°: 55°. 2) Angles at a point add up to 360°: 150 + 90 + 80 = 320, so 40°. 3) Angles in a triangle add up to 180°: 180 − 90 − 35 = 55°. 4) The two base angles are equal: (180 − 40) ÷ 2 = 70°. Answers: 55°, 40°, 55°, 70°. If you are short of time, skip question 4.'))
 
 # ---------- 4. explore: what to do ----------
 Bp=(30,200); Cp=(Bp[0]+190,200)
@@ -144,7 +144,7 @@ steps=''.join(f'<li>{E(s)}</li>' for s in ['Draw any triangle and colour its thr
 body=h2('Explore: tear it up')+card(chip('EXPLORE')+f'<ol style="font-size:32px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
 body+=card(svgwrap(860,250,'A triangle with three coloured corners and, next to it, the three corners fitted side by side along a straight line',g,0.84),extra='padding:6px 32px')
 put('p5l8-explore1',sec('p5l8-explore1','9–14 MIN',body,'Minutes 9 to 14. Children draw a triangle (any shape: one fat, one thin, one with a right angle is best), colour the corners and tear them off. They must predict first (thumbs: a straight line, a curve, a gap?). Then they fit the corners together with the points touching: the three corners make a straight line. '
- 'Then the four-sided shape: the four corners fit round a point. Pair work is at most 6.5 minutes. Anyone who wants more (open to every pair): a different triangle. Is it still a straight line? Online: children hold the torn corners up to the camera. Protractor optional: measure the three corners of one triangle and add them up (they will be close to 180°, not exact: that is the nature of measuring).'))
+ 'Then the four-sided shape: the four corners fit round a point. Pair work is at most 6.5 minutes. Anyone who wants more (open to every pair): a different triangle. Is it still a straight line? Online: children describe the torn corners aloud. Protractor optional: measure the three corners of one triangle and add them up (they will be close to 180°, not exact: that is the nature of measuring).'))
 
 # ---------- 5. explore: talk ----------
 body=h2('Explore: talk about it')+numcards([('1.','Where did the three corners of the triangle fit? What does that tell you?'),('2.','Where did the four corners of the four-sided shape fit? What does that tell you?')],40)

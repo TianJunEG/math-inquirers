@@ -100,7 +100,7 @@ const RULES = {
   privacy: [
     'Only record on the approved platform, and only with parent consent given at registration. Do not make your own recordings or photos.',
     'Record the tutor and the shared screen only. Turn off or exclude the other children’s video in the recording (use active-speaker or screen-only recording), and keep children’s names off the screen.',
-    'Do not read out a child’s name together with a right or wrong answer. Do not show a child’s page to the camera in the recording.',
+    'Do not read out a child’s name together with a right or wrong answer. Do not show a child’s page to the camera in the recording, and do not ask children to hold pages up.',
     'Share the recording only through a private link to enrolled families, and delete it when the program ends, or after the period the parents agreed to.',
     'Tell the group at the start of each lesson that it is being recorded and what is recorded. A parent or child who does not wish to be in it can keep the camera off.'
   ],

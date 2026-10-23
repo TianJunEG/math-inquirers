@@ -92,7 +92,7 @@ put('p4l4-title',title_slide('p4l4-title','LESSON 4  •  WEEK 2','Fraction Fron
  'Objective: Change between improper fractions and mixed numbers using fraction bars and number lines, find a fraction of a set (and the whole set from a part) with a bar model, and compare fractions with different denominators by making the denominators the same, comparing with one half, or comparing pieces when the numerators are the same. '
  'Thinking strategies taught today: DRAW A MODEL (fraction bars, number lines, bar models), MAKE A LIST IN ORDER and COMPARE WITH A BENCHMARK (one half). '
  'Materials: paper strips (one per child, to fold into halves, quarters and eighths), paper circles to cut into quarters, 30 counters, mini whiteboards and markers. '
- 'Online: before the lesson children cut out 3 paper circles and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards. '
+ 'Online: before the lesson children cut out 3 paper circles and cut each into 4 equal slices; they fold paper strips on camera and write on mini whiteboards (no hold-ups to the camera). '
  'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: more or less than a half ----------
@@ -114,7 +114,7 @@ qs=[('1.',f'{fr(1,2,S30)} of 18 = ?','9'),('2.',f'{fr(1,4,S30)} of 20 = ?','5'),
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     t=240+i*132; body+=rq(128,t,1250,a,b,40)+ra(1420,t,372,c,'pop',40)
-put('p4l4-warm2',sec('p4l4-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: read each aloud, whiteboards up together, then click. No follow-up questions. 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. Answers: 9, 5, 8. The other two warm-up questions (3/4 + 1/8; 1 − 3/10) are in the Weekly Dose of Thinking Math.'))
+put('p4l4-warm2',sec('p4l4-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: read each aloud, write it, say the answer together on three, then click. No follow-up questions. 2) 20 ÷ 4 = 5. 3) Thirds to twelfths: multiply top and bottom by 4, so 8/12. Answers: 9, 5, 8. The other two warm-up questions (3/4 + 1/8; 1 − 3/10) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore: pizza party ----------
 def pizza(cx,cy,r,filled):

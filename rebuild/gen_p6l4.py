@@ -252,7 +252,7 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('To solve 4n + 7 = 43, Ra
 put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. One question only. Pairs talk for 90 seconds, then volunteers share. Both get n = 9. Backwards is quicker by hand and works for big numbers (4n + 7 = 4007 would take Ravi 1000 tries). Trying every n is easy to code and also works when there is no easy backwards step, like n × n + n = 90 (n = 9). But a search must stop: if there is no whole-number answer, it would run forever. Praise answers that say WHEN each is better.'))
 
 # ---------- 26 exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A machine does × 4, then + 5.   (a) IN 6: what is OUT?   (b) OUT 45: what was IN?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A machine does × 4, then + 5.   (a) IN 6: what is OUT?   (b) OUT 45: what was IN?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.',34,400))
 put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 29 (6 × 4 + 5).  (b) 10 (45 − 5 = 40, 40 ÷ 4 = 10; check 10 × 4 + 5 = 45). Extension: write the rule with n (4n + 5) and build it in Scratch.'))
 
 order=['title','warm1','warm2','explore1','explore2','teach1','we1','teach2','we2','try2','key','break','ws1','ws1ans','teachcode','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']

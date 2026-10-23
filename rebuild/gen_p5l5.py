@@ -31,7 +31,7 @@ put('warm1',sec(sid('warm1'),'0–4 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','A cuboid is 7 cm by 5 cm by 2 cm. Volume?','70 cm³'),('2.','1 ℓ = ? cm³','1000 cm³'),('3.','3.2 ℓ = ? ml','3200 ml'),('4.','A cube has a volume of 125 cm³. Each edge?','5 cm')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('warm2',sec(sid('warm2'),'4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. Answers: 70 cm3, 1000 cm3, 3200 ml, 5 cm. If you are short of time, skip question 4. After 4 ask: "Which number multiplied by itself three times gives 125?" (5 x 5 x 5). After 2 ask: "How big is a 1000 cm3 box?" (10 cm by 10 cm by 10 cm, about the size of a small tissue box). 1 ml is the same as 1 cm3: a small sugar cube of water.'))
+put('warm2',sec(sid('warm2'),'4–9 MIN',body,'Minutes 4 to 9. Read each aloud, write it, say the answer together on three, then click to show. Answers: 70 cm3, 1000 cm3, 3200 ml, 5 cm. If you are short of time, skip question 4. After 4 ask: "Which number multiplied by itself three times gives 125?" (5 x 5 x 5). After 2 ask: "How big is a 1000 cm3 box?" (10 cm by 10 cm by 10 cm, about the size of a small tissue box). 1 ml is the same as 1 cm3: a small sugar cube of water.'))
 
 # ---------- 4. explore ----------
 P1=OB(30,150,30); P2=OB(330,150,30)
@@ -64,7 +64,7 @@ body+=step(2,'8 ℓ = 8000 cm³.  One cm of height holds  40 × 25 = 1000 cm³.'
 body+=step(3,'The water rises  8000 ÷ 1000 = 8 cm.   Now 12 + 8 = 20 cm deep.',left=860,top=690,width=932,size=32)
 body+=pin(860,845,932,p('Check: 40 × 25 × 20 = 20 000 cm³ = 20 ℓ = 12 ℓ + 8 ℓ ✓',34,700),'fade',SOFT,20,'16px 28px')
 put('we1',sec(sid('we1'),'23–26 MIN',body,'Click to reveal each step and let children say it first. Think-aloud: "The water is a cuboid too: 40 by 25 by 12. That is 12 000 cm3, and 1000 cm3 is 1 litre, so 12 litres. Adding 8 litres is 8000 cm3. The floor of the tank is 40 x 25 = 1000 cm2, so every centimetre of depth holds 1000 cm3. That means 8000 cm3 is 8 cm more." Stress: change litres to cm3 BEFORE dividing. The drawing is to scale: the tank is 30 cm tall and the water is 12 cm, so the water is a bit less than half way. Ask: "How many more litres fill the tank to the top?" (40 x 25 x 10 = 10 000 cm3 = 10 litres).'))
-put('try1',try_slide(sid('try1'),'26–27 MIN','Your turn: whiteboards','Change litres to cm³ before you divide.',[('a','Base 20 cm by 10 cm, water 6 cm deep. How many ℓ?','1.2 ℓ'),('b','Base 30 cm by 20 cm. 3 ℓ of water. How deep?','5 cm'),],'Whiteboards up together, then click. a) 20 x 10 x 6 = 1200 cm3 = 1.2 litres. b) 3 litres = 3000 cm3; base 600 cm2; 3000 / 600 = 5 cm. Watch for children who write 3 / 600 without changing litres to cm3. (Two items only.)',size=36))
+put('try1',try_slide(sid('try1'),'26–27 MIN','Your turn: whiteboards','Change litres to cm³ before you divide.',[('a','Base 20 cm by 10 cm, water 6 cm deep. How many ℓ?','1.2 ℓ'),('b','Base 30 cm by 20 cm. 3 ℓ of water. How deep?','5 cm'),],'Write it, say the answer together on three, then click. a) 20 x 10 x 6 = 1200 cm3 = 1.2 litres. b) 3 litres = 3000 cm3; base 600 cm2; 3000 / 600 = 5 cm. Watch for children who write 3 / 600 without changing litres to cm3. (Two items only.)',size=36))
 
 # ---------- 7. worked example: a stone sinks ----------
 Pa=OB(30,300,7); Pb=OB(360,300,7)

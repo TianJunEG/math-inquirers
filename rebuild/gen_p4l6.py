@@ -111,7 +111,7 @@ put('warm1',sec(f'{P}-warm1','6.5–8.5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','How many degrees in a right angle?','90°'),('2.','How many degrees in a half turn?','180°'),('3.','How many right angles make a full turn?','4')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('warm2',sec(f'{P}-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: whiteboards up together, then click. No follow-up questions. 1) 90°. 2) 180°: two right angles. 3) 4, so a full turn is 4 × 90° = 360°. The other two warm-up questions (face N, quarter turn anticlockwise; a 3/4 turn or 250°) are in the Weekly Dose of Thinking Math.'))
+put('warm2',sec(f'{P}-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: write it, say the answer together on three, then click. No follow-up questions. 1) 90°. 2) 180°: two right angles. 3) 4, so a full turn is 4 × 90° = 360°. The other two warm-up questions (face N, quarter turn anticlockwise; a 3/4 turn or 250°) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore: what to do ----------
 g=clock(100,100,92,3,0,nums='main')+rsq((100,100),26,0,RED)
@@ -119,7 +119,7 @@ g+=f'<rect x="260" y="20" width="800" height="160" rx="20" fill="{SOFT}" stroke=
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Take a paper clock with two hands.','Set it to each o’clock time: 1 o’clock, 2 o’clock … 12 o’clock.','Which times make a right angle between the hands? Check with a paper corner.','Which time makes a straight line? What is the angle at 1 o’clock?'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
 body+=card(svgwrap(1060,200,'A clock showing 3 o’clock with a right angle marked between the hands, and the question which other o’clock times make a right angle',g),extra='padding:16px 32px;align-items:center')
-put('explore1',sec(f'{P}-explore1','11.5–20.5 MIN',body,'Minutes 11.5 to 20.5. Pairs use a paper clock (online: a paper clock at home or a real clock held to the camera). Ask them to predict first: which times make a right angle? Most children say 3 o’clock; fewer think of 9 o’clock. They check each time with the corner of a square of paper. Early finishers: what is the angle at 1 o’clock? At 2 o’clock? Can you work it out without a protractor?'))
+put('explore1',sec(f'{P}-explore1','11.5–20.5 MIN',body,'Minutes 11.5 to 20.5. Pairs use a paper clock (online: a paper clock at home or a real clock). Ask them to predict first: which times make a right angle? Most children say 3 o’clock; fewer think of 9 o’clock. They check each time with the corner of a square of paper. Early finishers: what is the angle at 1 o’clock? At 2 o’clock? Can you work it out without a protractor?'))
 
 # ---------- 5. explore: talk ----------
 body=h2('Explore: talk about it')+numcards([('1.','Which o’clock times make a right angle?'),('2.','Which time makes a straight line? What turn is that?')],40)

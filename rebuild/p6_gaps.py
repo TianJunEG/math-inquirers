@@ -15,7 +15,7 @@ def short(a,limit=215):
     return out
 
 def sneak_slide(L,g):
-    body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. When your tutor says show, everyone holds their paper to the camera at the same moment.</p>'
+    body=h2('Sneak-peek puzzles')+f'<p style="font-size:26px;font-weight:700;color:{MUTED};line-height:1.3">Two ideas we have not learnt yet. Guessing is welcome. “I do not know” is welcome. Nobody is marked. When your tutor says, everyone says the answer together on three.</p>'
     top=330
     for i,(q,a) in enumerate(g['sneak']):
         lab='Puzzle 1: try it with objects, a drawing or counting' if i==0 else 'Puzzle 2: have a think'
@@ -28,7 +28,7 @@ def sneak_slide(L,g):
     assert top-14<=925,(L,top)
     a,b=BUDG.BUD[int(L[3:])]['slides']['check']
     notes=(f"Minutes {BUDG.fmt(a)} to {BUDG.fmt(b)} ({BUDG.fmt(b-a)} minutes). These are ideas we have not learnt yet: say so, and say that guessing and \"I do not know\" are welcome and nobody is marked. Read the two puzzles aloud. Puzzle 1 is an access puzzle: any child can try it with objects, a drawing or counting, so everyone can get a first win. Puzzle 2 is a thinking puzzle on today's idea. "
-      "ONE show moment only: after both puzzles, everyone holds their paper to the camera at the same moment (or shows it to you only on camera). Never private chat. Never compare answers across children, never read wrong answers aloud. Then click to reveal the answers one after the other and move on with no reaction round: say each answer in 15 words or fewer, then say: \"Both of these are what we learn today.\" "
+      "ONE check moment only: after both puzzles, everyone says the answers together on three (nothing is held up to the camera). Never private chat. Never compare answers across children, never read wrong answers aloud. Then click to reveal the answers one after the other and move on with no reaction round: say each answer in 15 words or fewer, then say: \"Both of these are what we learn today.\" "
       "Answers: "+' '.join(f'Puzzle {i+1}: {a}' for i,(q,a) in enumerate(g['sneak']))+" "
       "Invite the WHOLE group, never one child: say \"When you have finished Start here, you can choose Think harder, Go further or the Investigation.\" Nobody is singled out. Any child can choose it and any child can go back. Never announce who is on which page and never say advanced or top group. Do not record this as a mark. Do not split a pair unless both children agree.")
     return sec(f'{L}-check',BUDG.pill(int(L[3:]),'check'),body,notes)
@@ -63,8 +63,8 @@ SUBS=[
  (r'early finishers','anyone who wants more'),
  (r'Early finishers','Anyone who wants more'),
  (r'Think Harder','Think harder'),
- (r'Whiteboards up together, then click to reveal\.','Thumbs or a whisper to a partner, then click to reveal.'),
- (r'Write your answers on paper\. Show your tutor, then collect your stamp\.','Write on your exit slip (Finish page). When your tutor says show, hold it to the camera at the same moment.'),
+ (r'Write it, say the answer together on three, then click to reveal\.','Thumbs or a whisper to a partner, then click to reveal.'),
+ (r'Write your answers on paper\. Show your tutor, then collect your stamp\.','Write on your exit slip (Finish page). When your tutor says, say your answer together on three.'),
 ]
 def clean(L,D):
     sl=os.path.join(D,'slides')

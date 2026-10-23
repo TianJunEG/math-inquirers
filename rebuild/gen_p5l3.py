@@ -18,7 +18,7 @@ cards=[('Card 1','Give away 1/4 of the jar.','90 left'),('Card 2','Give away 1/3
 for i,(a,b,c) in enumerate(cards):
     body+=qrow(128,660+i*110,1250,a,b,36)+answer(1420,660+i*110,372,c)
 put('warm1',sec(f'{L}-warm1','0–4 MIN',body,
- 'Minutes 0 to 4. What is left? Children have mini whiteboards. Say "Card 1" and read it; give thinking time; children write the number left and hold up boards together; click to show the answer. Then Card 2. '
+ 'Minutes 0 to 4. What is left? Children have mini whiteboards. Say "Card 1" and read it; give thinking time; children write the number left and say the answer together on three; click to show the answer. Then Card 2. '
  'Talk: Card 2 says "of what is left", so we take 1/3 of 90, not 1/3 of 120 (90 − 30 = 60). Tutor extension if the group is ready: a third card, give away 5/6 of what is left (5/6 of 60 is 50, so 10 are left). Ask: "Did anyone take 1/3 of 120? What would that give? (40; the story would be different.)" '
  'The bar shows the first card: 120 is cut into 12 units of 10, and 1/4 is 3 units. Listen for children who draw the remainder as a new bar. Answers: 90, 60. This is the idea of the whole lesson: after each step the amount we start from changes.'))
 
@@ -27,7 +27,7 @@ qs=[('1.','What is 2/5 of 45?','18'),('2.','3/4 of a number is 27. What is the n
 body=h2('Quick questions')
 for i,(a,b,c) in enumerate(qs):
     body+=qrow(128,240+i*130,1370,a,b,34)+answer(1530,240+i*130,262,c)
-put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, hold up boards together, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 36 (3 units = 27, 1 unit = 9, 4 units = 36).  3) 1/4 (1/3 of 3 quarters is 1 quarter).  4) Still 12: both get the same, so the gap does not change.  Question 4 is one of the two big ideas of today (the other is that the total stays the same when cards move between two children); do not explain yet, just ask "why?" and collect ideas. If you are short of time, skip question 4.',
+put('warm2',sec(f'{L}-warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards: read each question aloud, give thinking time, write on boards, say the answer together on three, click to show. Answers: 1) 18 (45 ÷ 5 = 9, 9 × 2).  2) 36 (3 units = 27, 1 unit = 9, 4 units = 36).  3) 1/4 (1/3 of 3 quarters is 1 quarter).  4) Still 12: both get the same, so the gap does not change.  Question 4 is one of the two big ideas of today (the other is that the total stays the same when cards move between two children); do not explain yet, just ask "why?" and collect ideas. If you are short of time, skip question 4.',
  ))
 
 # ---- 4. explore: what to do ----
@@ -38,7 +38,7 @@ g+=f'<path d="M1000 50 H1050 M1030 36 L1052 50 L1030 64" fill="none" stroke="{TE
 steps=''.join(f'<li>{E(s)}</li>' for s in DK['expSetup'])
 body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:6px">{steps}</ol>')
 body+=card(svgwrap(1500,140,'Ali has a row of 18 counters and Mei a row of 6 counters; Ali gives Mei counters one at a time',g),extra='padding:14px 32px')
-put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs use 24 counters or paper squares (online: paper squares on the desk, camera up as usual; hold the table up to the camera). Predict first: when Ali gives counters away, does the total change? Does the difference change? Let pairs record in two tables: Ali, Mei, total, difference. Second table: start again at 18 and 6 and give BOTH children 2 more each time. Anyone who wants more (open to every pair): find when Mei has 1/3 as many as Ali (right at the start: 18 and 6), and 3/5 as many (after Ali gives 3: 15 and 9).'))
+put('explore1',sec(f'{L}-explore1','9–14 MIN',body,'Minutes 9 to 14. Pairs use 24 counters or paper squares (online: paper squares on the desk, camera up as usual; check the table against the slide). Predict first: when Ali gives counters away, does the total change? Does the difference change? Let pairs record in two tables: Ali, Mei, total, difference. Second table: start again at 18 and 6 and give BOTH children 2 more each time. Anyone who wants more (open to every pair): find when Mei has 1/3 as many as Ali (right at the start: 18 and 6), and 3/5 as many (after Ali gives 3: 15 and 9).'))
 body=h2('Explore: talk about it')+numcards([('1.',DK['expAsk'][0][0]),('2.',DK['expAsk'][1][0])],40)
 put('explore2',sec(f'{L}-explore2','14–21 MIN',body,'Minutes 14 to 21. Pencils down: gather the pairs. Build one table on the board and ask for each row. Answers: 1) The total: 24 every time Ali gives Mei counters (16 and 8, 15 and 9 …). 2) The difference: 12 every time both get 2 more (20 and 8, 22 and 10 …). (Not asked together: when did Mei have 1/2 as many as Ali? After Ali gives 2 (16 and 8), and after both get 6 more (24 and 12).) Ask: "Why does the total stay the same when Ali gives and the difference stay the same when both get?" Do NOT tell: the next slides name these two ideas.'))
 

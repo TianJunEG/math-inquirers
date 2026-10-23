@@ -82,7 +82,7 @@ put('p4l9-title',title_slide('p4l9-title','LESSON 9  •  WEEK 5','Data Detectiv
  'Objective: Read values and trends from line graphs (using the scale), find the biggest increase or decrease, find missing values in tables and graphs from totals and patterns, compare two lines on one graph, and explain why a graph with a different scale can mislead. '
  'Thinking strategies today: READ THE SCALE FIRST, LIST THE CHANGES, and WORK FROM THE TOTAL. '
  'Materials: Mini whiteboards, a ruler and two coloured pencils per child, printed blank graph grids (or squared paper), the queue table for the explore task. '
- 'Online: children use a printed blank grid or squared paper and hold it up to the camera; the tutor plots on the slide graphs while children call out where each point goes. '
+ 'Online: children use a printed blank grid or squared paper and check it against the graphs the tutor plots on the slides; while children call out where each point goes (nothing is held up to the camera). '
  'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up: which graph tells the story ----------
@@ -106,7 +106,7 @@ put('p4l9-warm1',sec('p4l9-warm1','6.5–8.5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','75 − 48 = ?','27'),('2.','Scale in 10s: halfway between 40 and 50?','45'),('3.','38 + 47 + 15 = ?','100')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l9-warm2',sec('p4l9-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: whiteboards up together, then click. No follow-up questions. Each one is a skill for today: 1) 27, the size of a change. 2) 45, reading halfway between two grid lines. 3) 100: add 85 + 15. The other two warm-up questions (four numbers total 200; which is the bigger change, 120 to 95 or 60 to 90) are in the Weekly Dose of Thinking Math.'))
+put('p4l9-warm2',sec('p4l9-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions, about 30 seconds each: write it, say the answer together on three, then click. No follow-up questions. Each one is a skill for today: 1) 27, the size of a change. 2) 45, reading halfway between two grid lines. 3) 100: add 85 + 15. The other two warm-up questions (four numbers total 200; which is the bigger change, 120 to 95 or 60 to 90) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore ----------
 times=['11:00','11:30','12:00','12:30','1:00','1:30','2:00']; ppl=[4,9,18,22,15,7,3]

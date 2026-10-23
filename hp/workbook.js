@@ -342,7 +342,7 @@ W.push(sub('c', 'My pencil: ____ cm. Longer or shorter than 10 cm?   ________'))
 
 /* ---------- LESSON 10 ---------- */
 W.push(...coreEnd(9)); W.push(...extra(9));
-W.push(...hdr(10, 'Mixed Puzzles', 'CHALLENGE DAY!')); W.push(fast());
+W.push(...hdr(10, 'Mixed Puzzles', 'PUZZLE DAY!')); W.push(fast());
 W.push(p([t('Show how you know. Remember the inquirer rules!', { italics: true })], { after: 60 }));
 W.push(q(1, 'Pattern:   3,   8,   13,   18,   ____,   ____       Rule: ______________', { before: 40 }));
 W.push(q(2, 'Two numbers add up to 12. One is 2 more than the other. What are they?   ____ and ____'));

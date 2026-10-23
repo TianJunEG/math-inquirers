@@ -87,7 +87,7 @@ module.exports = {
     mini1: { head: 'Place value: more than 9 tens', body: ['5 hundreds, 12 tens and 4 ones.', '12 tens = 120.', '500 + 120 + 4 = ?'], ans: '624. Ten of the tens make another hundred.' },
     mini2: { head: 'Every number from 1, 6, 9', body: ['Fix the hundreds digit, then swap the other two.', '1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961.', 'How many? Which is biggest?'], ans: '6 numbers. Biggest 961, smallest 169.' },
     keyHead: 'Key idea: list in order', keyBig: 'Fix the hundreds digit, then swap the others. Each card starts the same number of numbers.', keySmall: 'Zero can never be the hundreds digit. Biggest digit first makes the biggest number.',
-    brk: 'Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Show your new number on camera. Is it bigger or smaller?',
+    brk: 'Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Say your new number together on three. Is it bigger or smaller?',
     ws1: 'Page 1, in pairs: Q1 place value, Q2 the cards 2, 7, 4, Q3 the cards with a zero.',
     ws2: 'Page 2, on your own: Q4 chart pieces, Q5 count on and back, Q6 digit riddles.'
   },

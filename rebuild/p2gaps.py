@@ -57,7 +57,7 @@ def precheck(K):
         body+=_row(128,tops[i],1250,lab,x['q'],size)+answer(1420,tops[i],372,x['short'])
     notes=('Minutes 1.5 to 6. Sneak-peek puzzles: two puzzles on the key idea of today, which the children have NOT learnt yet. Say out loud (about 28 words): "Two sneak-peek puzzles on ideas we have not learnt yet. Guessing is welcome, so is I do not know. Nobody is marked. Show your paper to me only." '
       'Question 1 is an access question: any child can try it with objects, a drawing or counting, so everyone has a first win (about 45 seconds). Question 2 is the thinking question (about 90 seconds). Then about 2 minutes for the answers slide and the move on. '
-      'Answers are PRIVATE: each child holds their own paper to the camera for you only, or writes it on their own paper and shows only you on camera. Do not raise whiteboards together, do not read answers out, do not name children. '
+      'Answers are PRIVATE: each child writes on their own paper and says the answer together on three; nothing is held up to the camera. Do not raise whiteboards together, do not read answers out, do not name children. '
       f'Q1 answer: {_txt(g[0]["a"])} Listen for: {_txt(g[0]["w"])} '
       f'Q2 answer: {_txt(g[1]["a"])} Listen for: {_txt(g[1]["w"])} '
       'At the end click to show the answers as "one way to think about it", without saying who had what. Ask only for volunteers: "Would anyone like to tell us how they started?" '
@@ -104,7 +104,7 @@ def add(S,K,explore_box_top=872):
     S[f'{P}-break']=S[f'{P}-break'].replace('Four minutes.','Three minutes: two of movement, one for a drink of water.')
     S[f'{P}-explore2']=S[f'{P}-explore2'].replace('</aside>',' Keep it moving (about 4 minutes in all): ask "how do you know?" on question 2 only; about 15 seconds of talk on the other questions.</aside>')
     e=S[f'{P}-exit']
-    S[f'{P}-exit']=e.replace('</aside>',' Hold-up: children hold their slips up one at a time (never all together); the answer is on the next click. About 2 minutes of child work.</aside>')
+    S[f'{P}-exit']=e.replace('</aside>',' Children keep slips on their desks and tick them against the answer on the next click; nothing is held up. About 2 minutes of child work.</aside>')
     for k in list(S):
         for a,b in LABELS: S[k]=S[k].replace(a,b)
         S[k]=re.sub(r'([Ww])hiteboards up( together)?',lambda m:m.group(1)+'hiteboards face down until 3, 2, 1 (or show only the tutor; never read a board out)',S[k])

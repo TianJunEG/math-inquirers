@@ -135,7 +135,7 @@ put('p5l2-warm1',sec('p5l2-warm1','0–4 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','Write 3 ÷ 4 as a fraction','3/4'),('2.','2/3 + 1/6 = ?','5/6'),('3.','3/4 of 20 = ?','15'),('4.','2/5 × 3/4 = ?','3/10')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*128,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*128,372,c) for i,(a,b,c) in enumerate(qs))
-put('p5l2-warm2',sec('p5l2-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. 1) The top is what is shared, the bottom is how many share. 2) 4/6 + 1/6 = 5/6. 3) 20 ÷ 4 = 5, × 3 = 15. 4) 6/20 = 3/10. Ask: "Who added the bottoms in question 2?" Answers: 3/4, 5/6, 15, 3/10. If you are short of time, skip question 4.'))
+put('p5l2-warm2',sec('p5l2-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, write it, say the answer together on three, then click to show. 1) The top is what is shared, the bottom is how many share. 2) 4/6 + 1/6 = 5/6. 3) 20 ÷ 4 = 5, × 3 = 15. 4) 6/20 = 3/10. Ask: "Who added the bottoms in question 2?" Answers: 3/4, 5/6, 15, 3/10. If you are short of time, skip question 4.'))
 
 # ---------- 4. explore ----------
 g=''.join(pizza(110+i*210,90,70,1,1) for i in range(3))
@@ -166,7 +166,7 @@ body+=sstep(1,f'The top number is what is <b>shared</b>. The bottom number is <b
 body+=sstep(2,f'{F(3,5)} ÷ 2: cut each fifth in half. 3 fifths become 6 tenths, shared in 2 groups: 3 tenths. So {F(3,5)} ÷ 2 = {F(3,10)}.',790,size=32)
 put('p5l2-teach1',sec('p5l2-teach1','21–24 MIN',body,'Teach. Draw the two pizzas cut in fifths. "Each friend takes one slice from each pizza: 1/5 + 1/5 = 2/5. So 2 ÷ 5 = 2/5." Then the second idea: a fraction divided by a whole number. Draw a bar of 5 parts with 3 shaded; cut every part in half so there are 10 small parts and 6 shaded; two friends share the 6 shaded parts: 3 each, 3/10. Say: "Dividing by 2 makes each piece twice as small, so the bottom number doubles: 3/5 ÷ 2 = 3/10." '
  'Check: 3/10 × 2 = 6/10 = 3/5. Ask: "What is 3/4 ÷ 3?" (1/4: shortcut, the top 3 can be shared in 3 groups of 1.) Children who have not met it may need the picture twice.'))
-put('p5l2-try1',try_raw('p5l2-try1','24–25 MIN','Your turn: whiteboards','Draw a quick picture if you need one.',[('a',f'4 ÷ 7 as a fraction',F(4,7)),('b',f'{F(4,5)} ÷ 3',F(4,15))],'Whiteboards up together, then click. a) 4 pizzas among 7: 4/7. b) 4/5 ÷ 3: cut each fifth into 3 pieces, so 4 fifths = 12 fifteenths; shared by 3 gives 4 fifteenths: 4/15. (Two items only.)'))
+put('p5l2-try1',try_raw('p5l2-try1','24–25 MIN','Your turn: whiteboards','Draw a quick picture if you need one.',[('a',f'4 ÷ 7 as a fraction',F(4,7)),('b',f'{F(4,5)} ÷ 3',F(4,15))],'Write it, say the answer together on three, then click. a) 4 pizzas among 7: 4/7. b) 4/5 ÷ 3: cut each fifth into 3 pieces, so 4 fifths = 12 fifteenths; shared by 3 gives 4 fifteenths: 4/15. (Two items only.)'))
 
 # ---------- 8. worked example: unit fractions ----------
 body=h2('Worked example: two different unit fractions')+card(rp(f'Write {F(7,12)} as the sum of two <b>different</b> unit fractions (1 on top).',38,700))

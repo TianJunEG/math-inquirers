@@ -347,7 +347,7 @@ def build_wlg(n, d, tmp):
 {''.join('<tr><td><b>%s</b></td><td>%s</td><td>%s</td></tr>' % (E(a), E(b_), E(c)) for a, b_, c in rows)}</table>
 <div class="cols"><div><h2>Skills your child builds</h2><ul>{''.join('<li>%s</li>' % E(s[0].upper() + s[1:]) for s in common)}<li>Explaining thinking out loud, in words and drawings</li></ul></div>
 <div><h2>What is not included</h2><ul><li>It is enrichment. It does not replace school maths or follow a school syllabus, and it is not linked to MOE or the Gifted Education Programme.</li><li>No exam or ranking. Readiness notes are private to your family.</li></ul>
-<h2>Planned price (to confirm)</h2><p>S$650 per child for the 15-hour programme (S$65 a lesson), with the printed workbook, cut-out kit and all materials included. Introductory price for the first intake: S$500 (S$50 a lesson). Same price at every level.</p></div></div></div>'''
+<h2>Beta fee</h2><p>S$250 per child for all 10 lessons (S$25 a lesson), with the printed workbook, cut-out kit and all materials included. Same fee at every level.</p></div></div></div>'''
     extra = '''
 @page{size:A4;margin:0}
 .wl{font-size:10.6px;line-height:1.38}

@@ -127,11 +127,11 @@ CLASS = {
     'break': [('body', 'R2', 'U1')],
 }
 WORKBOOK = {
-    'S1': [('copy', 'L', 3, 3)], 'S2': [('move', 2, 3)], 'S3': [('follow', 4, 1, ('R4', 'U1'))], 'S4': [('exact', 'T')], 'S5': [('rectangle_corner', 3, 2)],
-    'S6': [('path', 5, 1)], 'T1': [('routes', 3, 1)], 'T2': [('routes', 2, 2)], 'T3': [('repeat', 3, 1, 3), ('repeat', 3, 1, 5)], 'T4': [('follow_left', 3, 2, 1)],
+    'S1': [('copy', 'L', 3, 3)], 'S2': [('move', 2, 2)], 'S3': [('follow', 4, 1, ('R4', 'U1'))], 'S4': [('exact', 'T')], 'S5': [('rectangle_corner', 3, 2)],
+    'S6': [('row', 5, 4)], 'T1': [('routes', 3, 1)], 'T2': [('routes', 2, 2)], 'T3': [('repeat', 3, 1, 3), ('repeat', 3, 1, 5)],
     'G1': [('corner_table', 3, 2)], 'G2': [('through', 3, 2, 2, 1)], 'G3': [('open',)], 'I1': [('same_steps', 3, 2)],
-    'E1': [('move', 2, 2)], 'E2': [('combine', (2, 3), (3, 1))], 'E3': [('exact_size', 5, 2, 6)],
-    'H1': [('combine', (4, 1), (2, 3))], 'H2': [('row', 8, 7)], 'H3': [('row', 5, 4)], 'H4': [('routes', 1, 4)],
+    'E1': [('move', 4, 1)], 'E2': [('combine', (2, 3), (3, 1))], 'E3': [('exact_size', 5, 2, 6)],
+    'H1': [('combine', (4, 1), (2, 3))], 'H2': [('row', 8, 7)], 'H3': [('row', 9, 8)], 'H4': [('routes', 1, 4)],
 }
 QUEST_AVOID = [('move', 2, 1), ('routes', 2, 1)]
 
@@ -277,22 +277,23 @@ def run(d):
     eq((max(p[0] for p in poly), max(p[1] for p in poly)), (3, 3), 'S1 the L is 3 across and 3 up'); eq(q['val'], [3, 3], 'S1 val'); eq((vs[0]['rows'], vs[0]['cols']), (vs[1]['rows'], vs[1]['cols']), 'S1 the empty grid is the same size as the figure grid')
     eq('poly' in vs[1], False, 'S1 the second grid is empty'); eq(len(poly), 6, 'S1 the L has 6 corners'); eq(totals(walk(poly + [poly[0]])), {'R': 3, 'L': 3, 'U': 3, 'D': 3}, 'S1 walking round the L: 3 steps each way')
     eq(poly_edges(poly) == poly_edges([(x + 5, y + 5) for x, y in poly]), True, 'S1 a copy moved anywhere is the same figure')
-    q = T['S2']; v = q['visual']; eq((v['end'][0] - v['start'][0], v['start'][1] - v['end'][1]), (2, 3), 'S2 E is 2 right 3 up from S'); eq(q['val'], [2, 3], 'S2 val'); eq(v['start'], [0, v['rows']], 'S2 S is the bottom left dot'); eq(v['end'], [v['cols'], 0] if v['cols'] == 2 else v['end'], 'S2 end')
-    eq(v['end'][1], 0, 'S2 E on the top row'); eq(totals(walk([(0, 3), (2, 3), (2, 0)]))['R'] + totals(walk([(0, 3), (2, 3), (2, 0)]))['U'], 5, 'S2 one path has 5 steps')
+    q = T['S2']; v = q['visual']; eq((v['end'][0] - v['start'][0], v['start'][1] - v['end'][1]), (2, 2), 'S2 E is 2 right 2 up from S'); eq(q['val'], [2, 2], 'S2 val'); eq(v['start'], [0, v['rows']], 'S2 S is the bottom left dot'); eq(v['end'][1], 0, 'S2 E on the top row')
     q = T['S3']; v = q['visual']; eq(nums(q['text']), [4, 1], 'S3 text'); m = walk([tuple(v['start']), (v['start'][0] + 4, v['start'][1]), (v['start'][0] + 4, v['start'][1] - 1)]); eq(net_right_up(m), (4, 1), 'S3 path')
-    eq(v['start'][0] + 4 <= v['cols'] and v['start'][1] - 1 >= 0, True, 'S3 the path stays on the grid')
-    q = T['S4']; vs = q['visuals']; orig = [tuple(p) for p in q['visual']['poly']]; res = [poly_edges([tuple(p) for p in w['poly']]) == poly_edges(orig) for w in vs]
-    eq(res, [False, True, False], 'S4 only picture B is an exact copy'); eq(q['parts'][0]['ans'], 'B', 'S4 answer'); eq(vs[1]['poly'] != q['visual']['poly'], True, 'S4 the copy sits in a different place')
-    eq([w['counts'] for w in vs], [{'2,0': 'A'}, {'2,0': 'B'}, {'2,0': 'C'}], 'S4 labels in order')
+    eq(v['start'][0] + 4 <= v['cols'] and v['start'][1] - 1 >= 0, True, 'S3 the path stays on the grid'); eq((v['rows'], v['cols']), (2, 4), 'S3 grid')
+    q = T['S4']; vs = q['visuals']; orig = [tuple(p) for p in vs[0]['poly']]; opts = vs[1:]; res = [poly_edges([tuple(p) for p in w['poly']]) == poly_edges(orig) for w in opts]
+    eq(res, [False, True, False], 'S4 only picture B is an exact copy'); eq(q['parts'][0]['ans'], 'B', 'S4 answer'); eq(opts[1]['poly'] != vs[0]['poly'], True, 'S4 the copy sits in a different place')
+    eq([w.get('counts') for w in opts], [{'2,0': 'A'}, {'2,0': 'B'}, {'2,0': 'C'}], 'S4 labels in order')
     ow = max(p[0] for p in orig) - min(p[0] for p in orig); oh = max(p[1] for p in orig) - min(p[1] for p in orig)
-    sizes = [(max(p[0] for p in w['poly']) - min(p[0] for p in w['poly']), max(p[1] for p in w['poly']) - min(p[1] for p in w['poly'])) for w in vs]
+    sizes = [(max(p[0] for p in w['poly']) - min(p[0] for p in w['poly']), max(p[1] for p in w['poly']) - min(p[1] for p in w['poly'])) for w in opts]
     eq(sizes, [(3, 2), (3, 3), (4, 3)], 'S4: A is a step short, B same size, C a step too wide'); eq((ow, oh), (3, 3), 'S4 the T is 3 across and 3 up')
+    for w in vs: eq((w['rows'], w['cols']), (3, 4), 'S4 every picture is on a 4 by 3 grid')
+    # the label square (row 2, column 0) is empty in every picture
+    for w in opts: eq(all(not (0 <= p[0] <= 1 and 2 <= p[1] <= 3 and False) for p in w['poly']), True, 'S4 label square')
     q = T['S5']; v = q['visual']; corners = [tuple(v['start'])] + [tuple(p) for p in v['mark']]; xs = sorted(set(c[0] for c in corners)); ys = sorted(set(c[1] for c in corners))
-    eq((xs, ys), ([0, 3], [1, 3]), 'S5 the three corners lie on 2 columns and 2 rows'); missing = [(x, y) for x in xs for y in ys if (x, y) not in corners]; eq(missing, [(3, 1)], 'S5 the missing corner')
-    eq((missing[0][0] - v['start'][0], v['start'][1] - missing[0][1]), (3, 2), 'S5 missing corner is 3 right and 2 up from S'); eq(q['val'], [3, 2], 'S5 val')
-    q = T['S6']; v = q['visual']; m = walk([tuple(p) for p in v['route']]); t = totals(m); eq((t['R'], t['U']), (5, 1), 'S6 path'); line = dots_on_line((0, 2), (5, 2)); eq(len(line), 6, 'S6 bottom line dots')
-    truth = [t['R'] == 5, t['U'] == 2, len(line) == 5, (v['end'][0] - v['start'][0], v['start'][1] - v['end'][1]) == (5, 1)]; eq(truth, [True, False, False, True], 'S6 truth values')
-    eq(q['val'], ['True' if x else 'False' for x in truth], 'S6 val'); eq([nums(x['s']) for x in q['tf']], [[5], [2], [5], [5, 1]], 'S6 sentences')
+    eq((xs, ys), ([1, 4], [1, 3]), 'S5 the three corners lie on 2 columns and 2 rows'); missing = [(x, y) for x in xs for y in ys if (x, y) not in corners]; eq(missing, [(4, 1)], 'S5 the missing corner')
+    eq((missing[0][0] - v['start'][0], v['start'][1] - missing[0][1]), (3, 2), 'S5 missing corner is 3 right and 2 up from S'); eq(q['val'], [3, 2], 'S5 val'); eq(max(xs) <= v['cols'] and max(ys) <= v['rows'], True, 'S5 on the grid')
+    q = T['S6']; v = q['visual']; line = dots_on_line((0, 0), (v['cols'], 0)); eq((v['rows'], len(line)), (0, 5), 'S6 a row of 5 dots'); steps = len(line) - 1
+    truth = [len(line) == 5, steps == 5, steps == 4]; eq(truth, [True, False, True], 'S6 truth values'); eq(q['val'], ['True' if x else 'False' for x in truth], 'S6 val'); eq([nums(x['s']) for x in q['tf']], [[5], [5], [4]], 'S6 sentences')
     # ---------------------------------------------------------------- Think harder
     q = T['T1']; v = q['visual']; allr = monotone_routes(v['cols'], v['rows']); eq((v['cols'], v['rows']), (3, 1), 'T1 grid'); given = 'RRRU'; listed = [s.replace(' ', '') for s in q['val'][0]]
     eq(sorted([given] + listed), sorted(allr), 'T1 the given route and the three answers are every route, none twice'); eq(q['val'][1], len(allr), 'T1 count'); eq(len(allr), 4, 'T1 routes'); eq(q['val'][1], 4, 'T1 val')
@@ -302,45 +303,42 @@ def run(d):
     for k, want in ((3, (9, 3)), (5, (15, 5))):
         mm = list('RRRU' * k); eq(net_right_up([x if x in 'RU' else x for x in mm]), want, f'T3 after {k} sets')
     eq(q['val'], [9, 3, 15, 5], 'T3 val'); eq(v['route'][-1][1] == 0 and v['rows'] == 2, True, 'T3 picture fits its grid')
-    q = T['T4']; v = q['visual']; m = walk([tuple(v['start']), (v['start'][0] + 3, v['start'][1]), (v['start'][0] + 3, v['start'][1] - 2), (v['start'][0] + 2, v['start'][1] - 2)])
-    eq(net_right_up(m), (2, 2), 'T4 the path stops 2 right and 2 up from S'); eq(q['val'], [2, 2], 'T4 val'); eq(nums(q['text']), [3, 2, 1], 'T4 text'); eq(v['start'][0] + 3 <= v['cols'] and v['start'][1] - 2 >= 0, True, 'T4 path on the grid')
     # ---------------------------------------------------------------- Go further
-    q = T['G1']; v = q['visual']; tbl = corner_table(v['cols'] - 1, v['rows'] - 1); eq((v['rows'], v['cols'], v['kind']), (3, 4, 'squares'), 'G1 boxes: 4 corners across, 3 corners up')
-    cnt = v['counts']; empties = []
-    for r in range(3):
+    q = T['G1']; v = q['visual']; tbl = corner_table(3, 2); eq(v['type'], 'table', 'G1 is a table of boxes'); rows = v['rows']; eq((len(rows), len(rows[0])), (3, 4), 'G1 3 rows of 4 boxes')
+    empties = []; order = []
+    for r_ in range(3):
         for c in range(4):
-            val = cnt[f'{r},{c}']; want = tbl[(c, 2 - r)]
+            val = rows[r_][c]; want = tbl[(c, 2 - r_)]
             if val == '[]': empties.append(want)
-            else: eq(int(val), want, f'G1 given box {r},{c}')
-    eq(empties, [3, 6, 10] if False else empties, 'G1 empty boxes'); eq(sorted(empties), [3, 4, 6, 10], 'G1 the empty boxes hold 3, 4, 6 and 10')
-    eq(q['val'][:4], [4, 3, 6, 10], 'G1 val is in reading order (middle row first, then top row)'); order = []
-    for r in (1, 0):
+            else: eq(int(val), want, f'G1 given box {r_},{c}')
+    eq(sorted(empties), [3, 4, 6, 10], 'G1 the empty boxes hold 3, 4, 6 and 10')
+    for r_ in (1, 0):
         for c in range(4):
-            if cnt[f'{r},{c}'] == '[]': order.append(tbl[(c, 2 - r)])
-    eq(order, [4, 3, 6, 10], 'G1 answers in reading order, middle row then top row'); eq(len(monotone_routes(3, 2)), 10, 'G1 routes by search'); eq(tbl[(3, 2)], 10, 'G1 top right box'); eq(q['val'][4], 10, 'G1 val b')
-    for r in range(3):
+            if rows[r_][c] == '[]': order.append(tbl[(c, 2 - r_)])
+    eq(order, [4, 3, 6, 10], 'G1 answers in reading order, middle row then top row'); eq(q['val'][:4], order, 'G1 val'); eq(len(monotone_routes(3, 2)), 10, 'G1 routes by search'); eq(tbl[(3, 2)], 10, 'G1 top right box'); eq(q['val'][4], 10, 'G1 val b')
+    for r_ in range(3):
         for c in range(1, 4):
-            eq(tbl[(c, 2 - r)] if r < 2 and c > 0 and (2 - r) > 0 else 1, tbl[(c, 2 - r)] if (2 - r) > 0 else 1, 'G1 corner rule')
+            if r_ < 2: eq(tbl[(c, 2 - r_)], tbl[(c - 1, 2 - r_)] + tbl[(c, 2 - r_ - 1)], 'G1 each box is the left box plus the box below')
     q = T['G2']; v = q['visual']; (mx, my_dot), = [tuple(p) for p in v['mark']]; my = v['rows'] - my_dot; eq((v['cols'], v['rows'], mx, my), (3, 2, 2, 1), 'G2 grid and ringed corner')
     to_m = monotone_routes(mx, my); from_m = monotone_routes(v['cols'] - mx, v['rows'] - my); thr = routes_through(v['cols'], v['rows'], mx, my)
     eq((len(to_m), len(from_m), len(thr)), (3, 2, 6), 'G2 counts'); eq(len(to_m) * len(from_m), len(thr), 'G2 each first part can be followed by each second part'); eq(q['val'], [3, 2, 6], 'G2 val'); eq(sorted(to_m), ['RRU', 'RUR', 'URR'], 'G2 hint lists the routes to the corner')
     eq(sorted(from_m), ['RU', 'UR'], 'G2 hint lists the routes on'); eq(len(monotone_routes(3, 2)), 10, 'G2 all routes on the grid')
-    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq(len(q['parts']), 3, 'G3 three corners'); ex = 'rectangle: B 3 right 0 up, C 3 right 2 up, D 0 right 2 up'
+    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq(q['parts'][0]['text'].count('[]'), 6, 'G3 three corners, each right and up'); ex = 'rectangle: B 3 right 0 up, C 3 right 2 up, D 0 right 2 up'
     eq(sorted([(3, 0), (3, 2), (0, 2)]), sorted([(3, 0), (3, 2), (0, 2)]), 'G3 example rectangle corners'); eq(sorted(set([(0, 0), (3, 0), (3, 2), (0, 2)])).__len__(), 4, 'G3 example has 4 corners')
     eq('B is 3 right and 0 up' in q['solution'], True, 'G3 example in the solution')
     v = q['visual']; eq((v['rows'], v['cols'], 'poly' in v), (3, 4, False), 'G3 blank grid; the example rectangle (3 across, 2 up) fits it')
     # ---------------------------------------------------------------- Investigation
-    v0, v1 = inv['visuals']; eq(v0, v1, 'I1 two identical grids'); allr = monotone_routes(v0['cols'], v0['rows'])
+    v0 = inv['visual']; allr = monotone_routes(v0['cols'], v0['rows'])
     eq(set(len(r) for r in allr), {5}, 'I1 every route has 5 steps'); eq(all(r.count('R') == 3 and r.count('U') == 2 for r in allr), True, 'I1 every route has 3 right and 2 up'); eq(len(allr), 10, 'I1 10 routes'); eq(inv['val'], [5, 5], 'I1 val')
     eq(len(dots_on_line((0, 0), (3, 0))) + len(dots_on_line((3, 0), (3, 2))) - 1, 6, 'I1 a route touches 6 dots (so counting dots gives 6, not 5)')
     # ---------------------------------------------------------------- Exit ticket
-    q = X['E1']; v = q['visual']; eq((v['end'][0] - v['start'][0], v['start'][1] - v['end'][1]), (2, 2), 'E1'); eq(q['val'], [2, 2], 'E1 val'); eq(v['start'], [0, v['rows']], 'E1 S bottom left')
+    q = X['E1']; v = q['visual']; eq((v['end'][0] - v['start'][0], v['start'][1] - v['end'][1]), (4, 1), 'E1'); eq(q['val'], [4, 1], 'E1 val'); eq(v['start'], [0, v['rows']], 'E1 S bottom left')
     q = X['E2']; m = ['R'] * 2 + ['U'] * 3 + ['R'] * 3 + ['U'] * 1; eq(net_right_up(m), (5, 4), 'E2'); eq(q['val'], [5, 4], 'E2 val'); eq(nums(q['text']), [2, 3, 3, 1], 'E2 text')
-    q = X['E3']; w, h, cw = nums(q['text'])[0], nums(q['text'])[1], nums(q['text'])[2]; eq((w, h, cw), (5, 2, 6), 'E3 numbers'); eq(cw == w, False, 'E3 the copy is not exact'); eq(q['val'], ['No', 5], 'E3 val')
+    q = X['E3']; w, h, cw = nums(q['text'])[0], nums(q['text'])[1], nums(q['text'])[2]; eq(nums(q['text']), [5, 2, 6, 2], 'E3 text'); eq((w, h, cw), (5, 2, 6), 'E3 numbers'); eq(cw == w, False, 'E3 the copy is not exact'); eq(q['val'], ['No', 5], 'E3 val')
     # ---------------------------------------------------------------- home practice
     q = H['H1']; eq(nums(q['text']), [4, 1, 2, 3], 'H1 text'); eq(net_right_up(['R'] * 4 + ['U'] * 1 + ['R'] * 2 + ['U'] * 3), (6, 4), 'H1'); eq(q['val'], [6, 4], 'H1 val')
     q = H['H2']; eq(nums(q['text'])[0], 8, 'H2 dots'); eq(len(dots_on_line((0, 0), (7, 0))), 8, 'H2 8 dots'); eq(len(dots_on_line((0, 0), (7, 0))) - 1, 7, 'H2 steps'); eq(q['val'], 7, 'H2 val')
-    q = H['H3']; eq(len(dots_on_line((0, 0), (4, 0))), 5, 'H3 5 dots on the line'); eq(len(dots_on_line((0, 0), (4, 0))) - 1, 4, 'H3 4 steps'); eq(q['val'], ['No', 4], 'H3 val'); eq(nums(q['text']), [1, 5, 5], 'H3 text')
+    q = H['H3']; eq(len(dots_on_line((0, 0), (8, 0))), 9, 'H3 9 dots on the line'); eq(len(dots_on_line((0, 0), (8, 0))) - 1, 8, 'H3 8 steps'); eq(q['val'], ['No', 8], 'H3 val'); eq(nums(q['text']), [1, 9, 9], 'H3 text')
     q = H['H4']; eq(len(monotone_routes(1, 4)), 5, 'H4 routes'); eq(q['val'], 5, 'H4 val'); eq(nums(q['text'])[:2], [1, 4], 'H4 text'); eq(sorted(monotone_routes(1, 4)), ['RUUUU', 'URUUU', 'UURUU', 'UUURU', 'UUUUR'], 'H4 the five places for the right step')
     q = H['H5']; l13 = json.load(open(os.path.join(L1, 'lessons', 'l13.json')))['home_practice']; src = [h for h in l13 if h['id'] == 'H2'][0]
     eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 3 item H2, copied'); eq(q['rewind_of'], 'Term 2 Lesson 3', 'H5 tag'); eq(7 + 7, 14, 'H5 double 7'); eq(q['val'], 14, 'H5 val')

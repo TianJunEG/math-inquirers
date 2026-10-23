@@ -83,7 +83,7 @@ for i,s_ in enumerate(sent):
     body+=pin(L,T_,800,p(f'<span style="color:{TEAL};font-weight:800">{i+1}.</span>  {E(s_)}',36,700,raw=True),None,WHITE,24,'18px 28px',f'box-sizing:border-box;height:280px;border:4px solid {NAVY}')
     body+=pin(L+28,T_+96,744,mini(i+1),'pop')
 put('p3l4-warm1',sec('p3l4-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Arm bars. Play TWO rounds of two sentences (1 and 2, then 3 and 4). Read each sentence aloud. Children hold their two hands apart, one above the other, to show the two bars (online: in front of the camera), then draw the bars on whiteboards in 10 seconds. Click to show a model after each one (clicks reveal 1, 2, 3, 4 in order). '
+ 'Minutes 0 to 5. Arm bars. Play TWO rounds of two sentences (1 and 2, then 3 and 4). Read each sentence aloud. Children hold their two hands apart, one above the other, to show the two bars (online: in view of the camera), then draw the bars on whiteboards in 10 seconds. Click to show a model after each one (clicks reveal 1, 2, 3, 4 in order). '
  'Ask: "Whose bar is longer? How do you show the 5?" For 2: "How many equal parts does Mei have?" (3). For 3: "Altogether means we show the total with a bracket." For 4: "Fewer: Siti\'s bar is shorter. The dashed piece shows what she does not have." '
  'Watch for: children who draw "4 fewer" as a longer bar, and children who draw 3 times as many with 4 parts.'))
 

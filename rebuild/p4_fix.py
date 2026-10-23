@@ -1,7 +1,7 @@
 """P4 fix pass, shared by rebuild/gen_p4l1.py ... gen_p4l10.py (own file for P4; slidekit.py is not edited).
 
 finish(S, n, G, pic=None) is called by each generator just before the slides are written. It
-  * rebuilds the warm-up check as "Sneak-peek puzzles" (access question + thinking question, answers shown to the tutor only, on camera),
+  * rebuilds the warm-up check as "Sneak-peek puzzles" (access question + thinking question, answers ticked or said together on three; nothing held up to the camera),
   * rebuilds the reflection slide ("Looking back", 2 minutes, pass allowed),
   * adds the 'Go further' what-if strip to the explore slide,
   * renames Core / Think Harder / Challenge / Open investigation neutrally (Start here / Think harder / Go further / Investigation),
@@ -39,7 +39,7 @@ def _time_plan(n, G):
     if n == 6:
         pre = ' (the first 2 minutes are the protractor demo)'
     s = (f'Time plan (90 minutes in all; every part has a budget and there is a {buf}-minute standing buffer inside the page-2 block). '
-         f'Opening {_r(*P["Opening"])}. Sneak-peek puzzles {_r(*P["Sneak-peek puzzles"])} (puzzle 1 about 60 seconds, puzzle 2 about 90 seconds, then ONE hold-up moment for both papers; answers shown to the tutor only, on camera, nobody marked). '
+         f'Opening {_r(*P["Opening"])}. Sneak-peek puzzles {_r(*P["Sneak-peek puzzles"])} (puzzle 1 about 60 seconds, puzzle 2 about 90 seconds, then ONE check moment for both puzzles; answers ticked or said together on three; nothing held up to the camera, nobody marked). '
          f'Warm-up game {_win(n, "warm1")} (one short round, about 90 seconds), quick questions {_win(n, "warm2")} (three questions). '
          f'Explore {_r(*P["Explore (in pairs)"])} (the only breakout of the first half: about 60 seconds each way, closed by a 60-second timer; a Go further what-if is on the slide from the start; two debrief questions). '
          f'Teaching {_r(*P["Mini-lesson"])} (click to reveal each step and answer; {tries}). '
@@ -62,7 +62,7 @@ def check_slide(n, G, pic=None):
     ck = G['check']
     body = h2('Sneak-peek puzzles')
     body += p('Ideas we have not learnt yet. Guesses and "I do not know" are welcome. Nobody is marked.', 30, 600, MUTED)
-    body += p('Write your answer on your own paper. When your tutor says, hold it to the camera. Only your tutor looks.', 30, 600, MUTED)
+    body += p('Write your answer on your own paper. When your tutor says, say your answer together on three. Only your tutor looks.', 30, 600, MUTED)
     tops = [372, 660]
     labels = [('1', 'Try it'), ('2', 'Think')]
     for i, c in enumerate(ck):
@@ -80,7 +80,7 @@ def check_slide(n, G, pic=None):
     notes = (
         f'Minutes {B.fmt(B.window(n, "check")[0])} to {B.fmt(B.window(n, "check")[1])} ({B.fmt(B.DUR[n]["sneak"])} minutes). SNEAK-PEEK PUZZLES. Say: "These are ideas we have not learnt yet. Guessing is welcome, drawing is welcome and so is saying I do not know. Nobody is marked, and nobody\'s answer is shown to the group." '
         'Puzzle 1 is a TRY IT puzzle: any child can start it with objects, a drawing or counting, so everyone has a first win. Puzzle 2 needs a little thinking. Give about 60 seconds for puzzle 1 and about 90 seconds for puzzle 2. '
-        'Children show their answers PRIVATELY: written on their own paper and held to the camera at the same moment for everyone (or shown only to you on camera). Make ONE hold-up moment for both papers, after puzzle 2. Never use private chat or DMs. Never ask for boards up in front of the group, never read out whose answer is whose, and never say who got it right. '
+        'Children show their answers PRIVATELY: written on their own paper and said together on three (nothing is held up to the camera). Make ONE check for both puzzles, after puzzle 2: children say the answers together on three. Never use private chat or DMs. Never ask for boards or paper held up in front of the group or to the camera, never read out whose answer is whose, and never say who got it right. '
         'Then click to show each answer and talk it through for everyone ("some of you tried ..."), naming no child. Nobody is called on by name, and passing is always fine. '
         'ANSWERS: 1) ' + ck[0]['a'] + ' 2) ' + ck[1]['a'] + ' '
         'A GOOD REASON: ' + G['why'] + ' '
@@ -110,7 +110,7 @@ def reflect_slide(n, G):
     notes = (f'Minutes {t1}. LOOKING BACK. Children fill in the box on the Investigation page, the page every child has (something I did well; the hardest part was; what helped me; one thing I could try next). '
              'Say one sentence: "Turn to page 3, the Looking back box. Write, tick or pass. Two minutes, no talking." The printed box says the rest. Model one yourself first: "' + G['reflect'] + '" Say: "Ticking I am still stuck is a good thing to do: it tells me where to help." '
              'Do not ask anyone to read theirs out. If a child wants to share, take one volunteer and thank them for the strategy. '
-             'Never grade it, never correct it, never collect it for marks and never show it to the group. You may look at a child\'s page only when the child holds it to your camera. Never ask for photos or private messages. '
+             'Never grade it, never correct it, never collect it for marks and never show it to the group. Never ask a child to hold a page to the camera. Never ask for photos or private messages. '
              'If I am still stuck is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a DM. Praise strategies ("you drew it", "you asked for help"), not speed or scores.')
     return sec(f'{ID}-reflect', t0, body, notes)
 

@@ -104,7 +104,7 @@ def check_slide_html(n,rows,pic,notes):
         body+=pin(128,top,1150,inner,None,WHITE,20,'16px 28px')
         body+=pin(1310,top,482,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(short)}</p>','pop',YEL,20,'16px 22px')
         top+=hq+30
-    body+=pin(128,max(top,780),1664,p('Show your paper ONCE, after both puzzles: only to your tutor, or all hold paper to the camera together.',28,700,MUTED),None,SOFT,20,'14px 26px')
+    body+=pin(128,max(top,780),1664,p('Say your answers ONCE, after both puzzles, together on three.',28,700,MUTED),None,SOFT,20,'14px 26px')
     return sec(f'p5l{n}-check',BUDG.pill(n,'check'),body,notes)
 
 def bx(): return '<span style="display:inline-block;width:28px;height:28px;border:4px solid #1B2A49;border-radius:7px;vertical-align:-5px;margin:0 10px 0 20px;background:#FFFFFF"></span>'
@@ -141,7 +141,7 @@ def plan_text(n,cq):
     g=lambda t:f"{f(P(t)[0])} to {f(P(t)[1])}"
     bu=P('Buffer'); ex=BUDG.BUD[n]['slides']
     last=('certificates and goodbye ' if n==10 else 'stamp typed in the chat and goodbye ')+f"{f(ex['end'][0] if n==10 else ex['reflect'][1])} to {f(ex['end'][1] if n==10 else ex['reflect'][1]+BUDG.CLOSE[n])}"
-    t=(f"Time plan (the exact minutes of this lesson; every lesson adds up to 90): opening {g('Opening')}, sneak-peek puzzles {g('Sneak')} (one hold-up for both puzzles, no volunteer round, nobody is marked), "
+    t=(f"Time plan (the exact minutes of this lesson; every lesson adds up to 90): opening {g('Opening')}, sneak-peek puzzles {g('Sneak')} (one check for both puzzles, no volunteer round, nobody is marked), "
        f"warm-up {g('Warm-up')} (one game round, four quick questions), explore {g('Explore')} (pair work {f(PAIRWORK[n])} minutes at most, then two questions together; a Go further what-if is on the explore slide for any pair that finishes), "
        f"teaching {g('Mini')} (click to reveal each step and answer), brain break {g('Brain')}, workbook page 1 {g('Worksheet page 1')} (the questions without a star; after question {cq} you may choose: carry on, or try Think harder), "
        f"check together {g('Check page 1')}, ")
@@ -188,7 +188,7 @@ def apply(n):
     ans='; '.join(f'Q{i+1}: {a[1]}' for i,a in enumerate(g['check']))
     cn=('SNEAK-PEEK PUZZLES. Show puzzle 1 and give about a minute; click to show the short answer later. Then show puzzle 2 and give about a minute. '
         'Open with one line only: "Guessing is welcome. Nobody is marked." Puzzle 1 is an access puzzle: any child can try it with objects, drawing or counting, so everyone can start well. Puzzle 2 is a thinking puzzle. '
-        'ONE hold-up for both puzzles: after puzzle 2, everyone shows their paper at the same moment (own paper shown only to you as you walk round; online, all hold paper to the camera together, or show it to you only, on camera). '
+        'ONE check for both puzzles: after puzzle 2, everyone says the answers together on three (face to face, you may glance at papers held low as you walk round; online, nothing is held up to the camera). '
         'Then click through the two short answers and say each with one short reason. NO volunteer round here (volunteers come in the talk time). Never boards in front of the group, never read out answers with names, no tally, no ranking. Never record scores. '
         f'Answers and what to listen for. {ans} '
         +' '.join(g['sc']))

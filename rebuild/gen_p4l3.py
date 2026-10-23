@@ -69,7 +69,7 @@ put('p4l3-title',title_slide('p4l3-title','LESSON 3  •  WEEK 2','Operation Det
  'Objective: Use the order of operations (brackets first, then × and ÷ from left to right, then + and − from left to right), find missing signs and brackets to hit a target, work backwards through a chain of operations, and solve "times as many" problems with a bar model. '
  'Thinking strategies taught today: ESTIMATE, TEST AND ADJUST (guess and check), WORK BACKWARDS and DRAW A BAR MODEL. '
  'Materials: mini whiteboards and markers; paper number cards 0 to 9; sign cards +, −, ×, ÷ and two pairs of bracket cards per child; scrap paper for bar models. '
- 'Online: children write on whiteboards and hold them up to the camera; before the lesson they cut out the sign and bracket cards so they can move them on camera in the explore task. '
+ 'Online: children write on whiteboards and say the answer together on three; before the lesson they cut out the sign and bracket cards so they can move them on camera in the explore task. '
  'Time plan: (written by rebuild/p4_fix.py from rebuild/p4_budget.py).'))
 
 # ---------- 2. warm-up game: target numbers ----------
@@ -89,7 +89,7 @@ put('p4l3-warm1',sec('p4l3-warm1','6.5–8.5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','25 × 4 = ?','100'),('2.','48 ÷ 6 = ?','8'),('3.','9 × 6 = ?','54')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l3-warm2',sec('p4l3-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Mental maths, three questions, about 30 seconds each. Read each aloud, whiteboards up together, then click. No follow-up questions. Answers: 100, 8, 54. The other two warm-up questions (1 000 − 368; 4 × 20) are in the Weekly Dose of Thinking Math.'))
+put('p4l3-warm2',sec('p4l3-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Mental maths, three questions, about 30 seconds each. Read each aloud, write it, say the answer together on three, then click. No follow-up questions. Answers: 100, 8, 54. The other two warm-up questions (1 000 − 368; 4 × 20) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore ----------
 g=tiles([('6','n'),('+','s'),('4','n'),('×','s'),('3','n'),('−','s'),('2','n')],330,80,100,110,18,60)

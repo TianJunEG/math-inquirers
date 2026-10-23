@@ -78,7 +78,7 @@ put(P+'title',title_slide(P+'title','LESSON 10  •  WEEK 5B','Challenge Day','M
  'Choose a start for a puzzle: draw a model, work backwards, use a logic grid, list in order or guess and check. Then check every clue.',
  'Objective: Choose a way to start a puzzle (draw a model, list in order, make a table, work backwards, guess and check or suppose, use a logic grid), solve competition-style problems, check every answer against every clue, and explain why the chosen start works. '
  'Materials: puzzle cards for 4 stations (backwards, logic, counting, guess and check), mini whiteboards, scrap paper, a 3 by 4 grid drawn on paper, certificates, stamps. '
- 'Online: each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together; children hold their working up to the camera. '
+ 'Online: each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together; children check their working against the slide and explain it aloud. '
  'Time plan: sneak-peek puzzles 0 to 3 (private answers, nobody is marked), warm-up 3 to 9, explore 9 to 21 (a Go further what-if is on the explore slide for anyone who wants more), teaching 21 to 33 (click to reveal each step and answer), brain break 33 to 37, workbook page 1 37 to 49 (after question 3 you may choose: carry on, or try Think harder), check together 49 to 53, short teaching before page 2 53 to 58, workbook page 2 58 to 72 (alone: start with the questions named at the top, then choose; nobody has to finish), check together 72 to 76, talk time 76 to 82 (you may say pass; volunteers first; then everyone tries the first step of the Investigation), exit ticket 82 to 86, reflection 86 to 88 (pass is always OK), stamp and goodbye 88 to 90. Think harder, Go further and the Investigation are open to every child. The tutor never announces who is on which page, and never splits a pair unless both children agree. Invite the WHOLE group, never one child: "when you have finished Start here you can choose Think harder, Go further or the Investigation." In this last lesson the 88 to 90 slot is certificates.'))
 
 # 2 warm1 relay cards
@@ -97,7 +97,7 @@ put(P+'warm1',sec(P+'warm1','0–4 MIN',body,'Minutes 0 to 4. Mix-up relay: SIX 
 # 3 warm2
 qs=[('1.','What is 3/4 of 48?','36'),('2.','A tap fills 6 ℓ in 2 minutes. How long for 45 ℓ?','15 minutes'),('3.','Two angles on a straight line: 65° and ___','115°'),('4.','5, 8, 11, 14, __','17')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Whiteboards up together, then click. Answers: 1) 48 ÷ 4 = 12, × 3 = 36. 2) 6 ℓ in 2 min is 3 ℓ per minute; 45 ÷ 3 = 15 minutes. 3) 180° − 65° = 115°. 4) add 3: 17. Ask after 2: "Which start did you use: a table, a rate per minute, or something else?" If you are short of time, skip question 4.'))
+put(P+'warm2',sec(P+'warm2','4–9 MIN',body,'Minutes 4 to 9. Write it, say the answer together on three, then click. Answers: 1) 48 ÷ 4 = 12, × 3 = 36. 2) 6 ℓ in 2 min is 3 ℓ per minute; 45 ÷ 3 = 15 minutes. 3) 180° − 65° = 115°. 4) add 3: 17. Ask after 2: "Which start did you use: a table, a rate per minute, or something else?" If you are short of time, skip question 4.'))
 
 # 4 explore1
 g=''
@@ -255,7 +255,7 @@ put(P+'exit',sec(P+'exit','82–88 MIN',body,'Minutes 82 to 88. Answer: $24. Wor
 put('end',(f'<section id="end" data-transition="fade" style="background:{NAVY};color:{CREAM};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px">\n'
  f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">WELL DONE, INQUIRERS</p>\n<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">Keep asking why</h1>\n'
  f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>\n<p style="font-size:36px;color:#C9D4EC">Certificates for every inquirer. The last stamp is typed in the chat. See you in Primary 6!</p>\n'
- f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Hand out certificates: show each one for about 12 seconds on camera and send the PDF through the approved channel. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
+ f'<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#B7C3DD">{E(FOOTX)}</p>\n<aside>{E("Hand out certificates: show each one for about 12 seconds on screen and send the PDF through the approved channel. Ask each child to name one puzzle they enjoyed and one start they will use again. Give parents the one-page summary from the tutor guide.")}</aside>\n</section>\n'))
 
 order=[P+x for x in ['title','warm1','warm2','explore1','explore2','teach1','we1','try1','we2','we3','key','break','ws1','ws1ans','teachsq','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]+['end']
 order=_PP.fix_order(order,10,S)

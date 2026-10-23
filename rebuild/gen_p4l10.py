@@ -82,7 +82,7 @@ put('p4l10-warm1',sec('p4l10-warm1','6.5–8.5 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','Buses every 6 min and every 8 min leave together at 9:00. Next together?','9:24'),('2.','Round 45 678 to the nearest thousand.','46 000'),('3.','3/4 of 24 = ?','18')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,34) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p4l10-warm2',sec('p4l10-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions from earlier lessons, about 30 seconds each. Whiteboards up together, then click. No follow-up questions. 1) 9:24: the first common multiple of 6 and 8 is 24 (Factor Hunters). 2) 46 000: the hundreds digit is 6, so round up (Big Number Puzzles). 3) 24 ÷ 4 = 6, 6 × 3 = 18 (Fraction Frontier). The other two (0.6 × 4 = 2.4; turn clockwise from N to SW, 225°) are in the Weekly Dose of Thinking Math.'))
+put('p4l10-warm2',sec('p4l10-warm2','8.5–11.5 MIN',body,'Minutes 8.5 to 11.5. Three questions from earlier lessons, about 30 seconds each. Write it, say the answer together on three, then click. No follow-up questions. 1) 9:24: the first common multiple of 6 and 8 is 24 (Factor Hunters). 2) 46 000: the hundreds digit is 6, so round up (Big Number Puzzles). 3) 24 ÷ 4 = 6, 6 × 3 = 18 (Fraction Frontier). The other two (0.6 × 4 = 2.4; turn clockwise from N to SW, 225°) are in the Weekly Dose of Thinking Math.'))
 
 # ---------- 4. explore ----------
 cards=[('A','Guess and check','Two next-door numbers','multiply to 210.'),('B','Heads and legs','Spiders and beetles:','10 bugs, 68 legs.'),('C','Work backwards','Double it, add 7.','I get 43.'),('D','Logic','Ali, Mei, Ravi: cat,','dog, fish. Who has what?')]

@@ -66,7 +66,7 @@ put('p5l7-title',title_slide('p5l7-title','LESSON 7  •  WEEK 4A','Percentage P
 
 # ---------- 2. warm-up game ----------
 cols=[(30,'30% shaded'),(45,'45% shaded'),(64,'64% shaded')]
-body=h2('Warm-up: Hundred-Square Snap')+card(p('Each big square has 100 small squares. Write the percentage SHADED and the percentage NOT shaded. Whiteboards up together!',36,700),extra='padding:24px 40px')
+body=h2('Warm-up: Hundred-Square Snap')+card(p('Each big square has 100 small squares. Write the percentage SHADED and the percentage NOT shaded. Say it together on three!',36,700),extra='padding:24px 40px')
 for i,(n,lab) in enumerate(cols):
     L=128+i*580
     body+=pin(L,380,420,hundred(n,400),None,WHITE,20,'4px 4px')
@@ -80,7 +80,7 @@ put('p5l7-warm1',sec('p5l7-warm1','0–4 MIN',body,
 # ---------- 3. quick questions ----------
 qs=[('1.','50% of $90','$45'),('2.','10% of 350','35'),('3.','25% of 48','12'),('4.','1% of $700','$7')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p5l7-warm2',sec('p5l7-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, whiteboards up together, then click to show. Ask "How did you do it?" each time. 1) 50% is half: $45. 2) 10% is one tenth: 350 ÷ 10 = 35. 3) 25% is a quarter: 48 ÷ 4 = 12. 4) 1% is one hundredth: $700 ÷ 100 = $7. Answers: $45, 35, 12, $7. If you are short of time, skip question 4.'))
+put('p5l7-warm2',sec('p5l7-warm2','4–9 MIN',body,'Minutes 4 to 9. Read each aloud, write it, say the answer together on three, then click to show. Ask "How did you do it?" each time. 1) 50% is half: $45. 2) 10% is one tenth: 350 ÷ 10 = 35. 3) 25% is a quarter: 48 ÷ 4 = 12. 4) 1% is one hundredth: $700 ÷ 100 = $7. Answers: $45, 35, 12, $7. If you are short of time, skip question 4.'))
 
 # ---------- 4. explore: what to do ----------
 def tag(x,y,txt_,fill=YEL):

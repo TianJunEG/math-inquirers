@@ -146,7 +146,7 @@ body += pin(128, 270, 420, SV(420, 420, clock(9), 'A clock showing 9 o’clock')
 rows = [('1.', 'It is 7 o’clock. 3 hours later?', '10 o’clock'), ('2.', 'It is 10 o’clock. 4 hours later?', '2 o’clock'), ('3.', 'It is 3 o’clock. 5 hours ago?', '10 o’clock'), ('4.', 'It is 8 o’clock. 12 hours later?', '8 o’clock')]
 for i, (a, b, c) in enumerate(rows): body += qrow(620, 290 + i * 118, 760, a, b, 34) + answer(1420, 290 + i * 118, 372, c)
 put('p6l8-warm1', sec('p6l8-warm1', '0–5 MIN', body,
-    'Minutes 0 to 5. Four calls only (the day-of-the-week jump was cut). Show each question, give thinking time, whiteboards up together, then click. 1) 10 o’clock. 2) 10 + 4 = 14, past 12, so 2 o’clock. 3) 3 − 5 = −2: go back 3 to 12, then 2 more to 10. 4) 12 hours is a full turn: back to 8. Ask: "What do you do when you go past 12?" (start again at 1). This wrapping round is today\'s big idea.'))
+    'Minutes 0 to 5. Four calls only (the day-of-the-week jump was cut). Show each question, give thinking time, write it, say the answer together on three, then click. 1) 10 o’clock. 2) 10 + 4 = 14, past 12, so 2 o’clock. 3) 3 − 5 = −2: go back 3 to 12, then 2 more to 10. 4) 12 hours is a full turn: back to 8. Ask: "What do you do when you go past 12?" (start again at 1). This wrapping round is today\'s big idea.'))
 
 # ================= 3. warm2 =================
 qs = [(f'{i+1}.', q, a) for i, (q, a) in enumerate(DK['warmQs'])]
@@ -161,7 +161,7 @@ body = h2('Explore: make a code strip')
 body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
 body += card(strip_svg(3, (23, 24, 25), 1560, 'Shift-3 code strip: the top row is A to Z, the bottom row starts at D. X, Y and Z are highlighted and sit above A, B and C.'), extra='padding:14px 28px')
 put('p6l8-explore1', sec('p6l8-explore1', '10–15 MIN', body,
-    'The shifted alphabet strip is SHOWN on the slide (A above D), so nobody copies it out (this saves about 1.5 minutes). Children code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: children hold their coded name on paper up to the camera (or the tutor reads out the coded names) and partners decode on paper. Finished early: invent your own shift and send a coded word with one clue.'))
+    'The shifted alphabet strip is SHOWN on the slide (A above D), so nobody copies it out (this saves about 1.5 minutes). Children code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: the tutor reads out the coded names and partners decode on paper. Finished early: invent your own shift and send a coded word with one clue.'))
 
 # ================= 5. explore2 =================
 body = h2('Explore: talk about it') + ''.join(card(p(num(f'{i+1}.', q), 40, 600, raw=True)) for i, (q, a) in enumerate(DK['expAsk']))
@@ -315,7 +315,7 @@ body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].str
 put('p6l8-talk', sec('p6l8-talk', '75–82 MIN', body, 'Both questions are kept in this lesson (it has 4 minutes of flex). Pairs talk for 2 minutes, then share. Second question: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says show, hold it to the camera. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put('p6l8-exit', sec('p6l8-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]} Extension: {L["extension"]}'))
 
 order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-key', 'p6l8-break',

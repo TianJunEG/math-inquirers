@@ -254,7 +254,7 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(L['share'],42))+card(p('S
 put('p6l9-talk',sec('p6l9-talk','75–82 MIN',body,'One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): '+SC['talkNext']+' Answer: '+SC['talkAns']+' Praise the reasons, not only the answers.'))
 
 # ---------------- 26. exit ----------------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],44))+card(p('Write your answer on a slip of paper or in the chat. Show your working. When your tutor says show, hold it to the camera. Then collect your stamp.',34))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(L['exit']['q'],44))+card(p('Write your answer on a slip of paper or in the chat. Show your working. When your tutor says, say your answer together on three. Then collect your stamp.',34))
 put('p6l9-exit',sec('p6l9-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+L['exit']['a']+' '+SC['close'][0]+' '+SC['close'][1]+' Extension: '+L['extension']))
 
 # ---------------- write ----------------
