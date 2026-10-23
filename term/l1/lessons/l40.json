@@ -6,9 +6,9 @@
   "lesson": 40,
   "lesson_in_term": 10,
   "title": "Inquirers' Showcase",
-  "big_idea": "Teach what you found: a good puzzle has one answer and a check",
-  "child_idea": "Teach a favourite idea from the year in a minute. A good puzzle has a story, numbers, one question and one answer. Check it a second way.",
-  "skill": "Communicating",
+  "big_idea": "Pick the tool that fits, teach what you found, and write a puzzle with one answer and a check",
+  "child_idea": "We have eight tools. Pick the tool that fits, say why, and check. Teach a favourite idea in a minute. A good puzzle has a story, numbers, one question and one answer.",
+  "skill": "Choosing a method and communicating",
   "ages": "6-8",
   "moe": {
     "strand": "Processes: communicating, reasoning and a look back over the year (pp. 13 to 14 of the syllabus pages we hold); Mi's Challenge Quest of the year",
@@ -19,7 +19,7 @@
       "Mi's Challenge Quest of the year: 8 short gates, one for each part of Term 4, and an optional secret cave (all at Start here level; a key where each picture stands for 2 goes beyond Primary 1)",
       "Beyond Primary 1 on purpose: Puzzle With a Proof, writing a puzzle with a rule and showing why its answer must be right by listing every case (Think harder and Go further only)"
     ],
-    "note": "Strand label for the tutor only. This is the last lesson of the year. It holds Mi's Challenge Quest (20 minutes at minutes 35 to 55, a game with Mi on private paper with a quest partner, never a test) and the Showcase: volunteers teach a favourite idea from the year in about a minute (a pass is always fine, no voting, no ranking). Start here is approachable and light: choose a favourite page, tick what you know well, pick the clear puzzle, check a puzzle answer, and make a ten. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: writing a puzzle with a rule and an answer that is the only answer, listing every case to prove it (Puzzle With a Proof), and finding the wrong step in a puzzle a child in another class wrote. The Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Lesson 38, and the plain statement is on the grown-up note. Non-routine types (tutor only): write a puzzle with a rule and check it (CHAL), check a friend's puzzle and say what is wrong (EXP). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check, no scores; strong content with scaffolding, said plainly to families; every lesson names a beyond item; puzzles are shared inside the group only and nothing is compiled into a book (D9). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, D18): wrong working is always a child or a child in another class, never a cast name."
+    "note": "Strand label for the tutor only. This is the last lesson of the year. It holds Mi's Challenge Quest (20 minutes at minutes 35 to 55, a game with Mi on private paper with a quest partner, never a test) and the Showcase: volunteers teach a favourite idea from the year in about a minute (a pass is always fine, no voting, no ranking). Start here is approachable and light: choose a favourite page, tick what you know well, pick the clear puzzle, check a puzzle answer, and make a ten. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: writing a puzzle with a rule and an answer that is the only answer, listing every case to prove it (Puzzle With a Proof), and finding the wrong step in a puzzle a child in another class wrote. The Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Lesson 38, and the plain statement is on the grown-up note. Non-routine types (tutor only): write a puzzle with a rule and check it (CHAL), check a friend's puzzle and say what is wrong (EXP). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check, no scores; strong content with scaffolding, said plainly to families; every lesson names a beyond item; puzzles are shared inside the group only and nothing is compiled into a book (D9). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, D18): wrong working is always a child or a child in another class, never a cast name. REFRAMED (owner decision X10-BEFORE, 23 Oct 2026): this is a choose-the-tool consolidation lesson. It keeps the Showcase and the puzzle-writing content and adds the eight tool names (the toolbox card): the Remember part shows the whole toolbox, Start here asks the child to write the tool used and tick I checked, and the Quest has two mixed gates (gates 4 and 7, no lesson tag, so Lessons 35 and 39 are no longer visited by a tagged gate: Lesson 39 is the toolbox lesson and the whole Quest is a choose-the-tool task)."
   },
   "contest_moves": [
     "write a puzzle with a rule, solve it, and show why the answer must be right by listing every case (Puzzle With a Proof)",
@@ -29,11 +29,12 @@
   ],
   "contest_where": "Think harder, Go further and the Investigation",
   "objectives": [
-    "Choose a favourite idea from the year and teach it in about a minute with the frame: my idea, how it works, an example.",
+    "Choose a favourite idea from the year and teach it in about a minute with the frame: my idea, my tool and why, an example and a check.",
+    "Name the eight tools of the toolbox card and pick the one you would start with for a mixed problem, then say why and check.",
     "Say what a good puzzle needs: a story, numbers, one question and one answer.",
     "Think harder: write a puzzle with an answer, swap it with a partner and solve it, and spot which puzzle has exactly one answer.",
     "Go further: write a puzzle with a rule and show why its answer must be right; check a friend's puzzle and say what is wrong.",
-    "Play Mi's Challenge Quest: one gate for each part of Term 4, on private paper, with no scores."
+    "Play Mi's Challenge Quest: eight gates on private paper with no scores. Six gates visit the parts of Term 4 and two are mixed gates with no lesson tag; under each gate you circle the tool you used and tick I checked."
   ],
   "joining_cold": {
     "remember": [
@@ -208,13 +209,13 @@
           "t": "card",
           "head": "TODAY WE WILL",
           "items": [
+            "Pick a tool and say why.",
             "Teach one idea from the year.",
-            "Write and check a puzzle.",
             "Play Mi's Challenge Quest."
           ]
         }
       ],
-      "note": "Lesson 10 of Term 4, 90 minutes, the last lesson of the year. Objective: choose a favourite idea from the year and teach it in about a minute, say what a good puzzle needs, write a puzzle and check a friend's puzzle. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). Plain statement for families: writing a puzzle with a rule and showing why its answer must be right goes beyond Primary 1 on purpose, at Think harder and Go further only; the Quest gate on picture graphs reads a key where each picture stands for 2, which is Primary 2. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 70, showcase 70 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+      "note": "Lesson 10 of Term 4, 90 minutes, the last lesson of the year. Objective: pick the tool that fits and say why, choose a favourite idea from the year and teach it in about a minute, say what a good puzzle needs, write a puzzle and check a friend's puzzle. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). Plain statement for families: writing a puzzle with a rule and showing why its answer must be right goes beyond Primary 1 on purpose, at Think harder and Go further only; the Quest gate on picture graphs reads a key where each picture stands for 2, which is Primary 2. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 70, showcase 70 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
       "subtitle": "Teach what you found",
       "mascot": {
         "size": "l",
@@ -302,23 +303,63 @@
       "id": "s-rem3",
       "part": "remember",
       "kind": "light",
-      "title": "I remember: a story",
+      "title": "I remember: my eight tools",
       "blocks": [
         {
-          "t": "card",
-          "head": "A STORY WITH TWO STEPS",
-          "items": [
-            "Mei has 7 stickers.",
-            "She gets 5 more stickers.",
-            "Then she gives 4 stickers away."
-          ]
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "Tool",
+            "Use it when"
+          ],
+          "rows": [
+            [
+              "Draw it",
+              "You can make a picture or a bar."
+            ],
+            [
+              "Act it out",
+              "You can use counters, cards or a clock."
+            ],
+            [
+              "Spot the pattern",
+              "Something repeats or grows."
+            ],
+            [
+              "List every way",
+              "You need every way."
+            ],
+            [
+              "Make a table",
+              "You can put what you know in rows."
+            ],
+            [
+              "Work backwards",
+              "You know the end, not the start."
+            ],
+            [
+              "Guess and check",
+              "You can pick a number and test it."
+            ],
+            [
+              "Try something simpler",
+              "You can start with smaller numbers."
+            ]
+          ],
+          "col_w": [
+            4,
+            7
+          ],
+          "cell_h": 58,
+          "font": 26,
+          "size": 88
         },
         {
           "t": "chip",
-          "text": "How many stickers does Mei have now?"
+          "text": "Which tool have you used the most this year?"
         }
       ],
-      "note": "A story with two steps (Term 1 Lesson 10, taught again). Step 1: 7 and 5 make 12. Step 2: 12 take away 4 is 8. Ask: how many stickers does Mei have now (8). A child who is unsure acts it out with counters or fingers. Your turn, no new picture: Ben has 9 sweets, eats 3, then buys 6 more: how many now (12). Children answer aloud. No writing. Say: that was three ideas we know. Today we teach one."
+      "note": "The whole toolbox, the same eight names as the toolbox card (taught again for anyone who joins cold). Read each row aloud. Ask: which tool have you used the most this year. Volunteers first; a pass is always fine. Say: today we do not learn a new tool; we choose one, say why, and check. A child with the toolbox card from the kit may point to it. No writing."
     },
     {
       "id": "s-sneak",
@@ -643,6 +684,7 @@
             "Pencil ready. Counters are fine.",
             "Your quest partner sits beside you.",
             "I read each gate. Then you write.",
+            "Under each gate, circle the tool you used.",
             "You may skip a gate. It is not a race."
           ]
         },
@@ -655,7 +697,7 @@
           ]
         }
       ],
-      "note": "Introduce the Quest for about a minute: Mi the dolphin swims home to the Home Reef after a whole year, through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the Quest tutor notes (L40_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
+      "note": "Introduce the Quest for about a minute: Mi the dolphin swims home to the Home Reef after a whole year, through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; under each gate you circle the tool you used and tick I checked; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the Quest tutor notes (L40_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
       "no_record": true,
       "mascot": {
         "size": "s",
@@ -829,8 +871,8 @@
           "head": "TEACH US IN ABOUT A MINUTE",
           "items": [
             "My favourite idea is ___.",
-            "It works like this: ___.",
-            "Here is an example: ___."
+            "My tool is ___ because ___.",
+            "Here is an example and a check: ___."
           ]
         },
         {
@@ -838,7 +880,7 @@
           "text": "Volunteers only. A pass is always fine."
         }
       ],
-      "note": "The Showcase, about 11 minutes. Volunteers teach one favourite idea from the year in about a minute with the frame on the slide; they may hold a page up to themselves, not to the camera, and may read from their page. Rules, said aloud before anyone starts: a pass is always fine; you may teach your grown-up instead (microphone muted) and tell us I taught my grown-up; your voice is recorded if you are not muted; everyone else listens, and afterwards may say one thing they learned; no voting, no best, no ranking, no counting of claps. Take up to five volunteers, one at a time, volunteers first; repeat each idea in your own words so the recording picks it up. Puzzles are shared inside the group only. Nobody collects a puzzle."
+      "note": "The Showcase, about 11 minutes. Volunteers teach one favourite idea from the year in about a minute with the frame on the slide (the idea, the tool and why, an example and a check); they may hold a page up to themselves, not to the camera, and may read from their page. Rules, said aloud before anyone starts: a pass is always fine; you may teach your grown-up instead (microphone muted) and tell us I taught my grown-up; your voice is recorded if you are not muted; everyone else listens, and afterwards may say one thing they learned; no voting, no best, no ranking, no counting of claps. Take up to five volunteers, one at a time, volunteers first; repeat each idea in your own words so the recording picks it up. Puzzles are shared inside the group only. Nobody collects a puzzle."
     },
     {
       "id": "s-look",
@@ -1075,21 +1117,21 @@
           {
             "k": "SLIDE",
             "slide": "s-rem3",
-            "s": 12
+            "s": 15
           },
           {
             "k": "SAY",
-            "text": "Third, a story with two steps. Mei has seven stickers. She gets five more. Then she gives four away."
+            "text": "Third, our eight tools. Draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, and try something simpler."
           },
           {
             "k": "ASK",
-            "text": "How many stickers does Mei have now?",
-            "resp": 40
+            "text": "Which tool have you used the most this year? Say it, or point to it on your toolbox card.",
+            "resp": 30
           },
           {
             "k": "WORK",
-            "text": "Your turn. Ben has nine sweets, eats three, then buys six more. How many now? Say it with me.",
-            "s": 25
+            "text": "Your turn. Pick one tool and say one problem it could help with. Say it with me.",
+            "s": 20
           },
           {
             "k": "WORK",
@@ -1098,11 +1140,11 @@
           },
           {
             "k": "STUCK",
-            "text": "If a child is unsure about the pattern, count on fingers three at a time. For making a ten, count on from eight six times. For the story, act it out with counters or fingers, one step at a time."
+            "text": "If a child is unsure about the pattern, count on fingers three at a time. For making a ten, count on from eight six times. For the tools, read each row slowly and let the child point to a card."
           },
           {
             "k": "NOTE",
-            "text": "Answers: the next numbers are 15 and 18; 8 and 6 make 14; Mei has 8 stickers. Your turns: 21 and 24; 14; 12. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+            "text": "Answers: the next numbers are 15 and 18; 8 and 6 make 14; any tool with a reason. Your turns: 21 and 24; 14. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: the toolbox page is all you need."
           }
         ]
       },
@@ -1374,6 +1416,10 @@
             "text": "It is a game, not a race, and nobody gets a score. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
           },
           {
+            "k": "SAY",
+            "text": "Under each gate there is a row of tools. Circle the tool you used. There is no wrong tool. When you have checked your answer, tick I checked."
+          },
+          {
             "k": "DO",
             "text": "Children open the closed Quest Log, with a pencil. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
             "s": 25
@@ -1393,7 +1439,7 @@
           },
           {
             "k": "READ",
-            "text": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes. Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern."
+            "text": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes. Gate 4. Ben has 5 coins. They are 5-cent coins and 10-cent coins. They make 40 cents. Write how many five-cent coins and how many ten-cent coins."
           },
           {
             "k": "WORK",
@@ -1415,24 +1461,24 @@
           },
           {
             "k": "READ",
-            "text": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 3 boxes have 5 pencils in each box, so blank pencils in all. Gate 6. Look at the graph. Each picture stands for 2 flowers. Part a: Ali has blank flowers. Part b: Mei has blank more flowers than Ali."
+            "text": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 3 boxes have 5 pencils in each box, so blank pencils in all. Gate 6. Look at the graph. Each picture stands for 2 flowers. Part a: Ali has blank flowers. Part b: Mei has blank more flowers than Ali. Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Row 5 has blank blocks."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 3 (gates 5 and 6).",
-            "s": 125
+            "text": "Children work quietly on page 3 (gates 5, 6 and 7).",
+            "s": 135
           },
           {
             "k": "SAY",
-            "text": "Gates five and six are open! Two gates left. Turn to page 4."
+            "text": "Gates five, six and seven are open! One gate left. Turn to page 4."
           },
           {
             "k": "READ",
-            "text": "Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks. Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank. The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all."
+            "text": "Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank. The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all. Then write why you chose your tool."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 4: gates 7 and 8, then the optional secret cave item if they wish.",
+            "text": "Children work quietly on page 4: gate 8, then the optional secret cave item if they wish.",
             "s": 165
           },
           {
@@ -1482,7 +1528,7 @@
           {
             "k": "WORK",
             "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-            "s": 270
+            "s": 255
           },
           {
             "k": "SLIDE",
@@ -1500,12 +1546,12 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4. A child in another class wrote a puzzle and an answer. Siti has nine stickers. Ravi has four more stickers than Siti. How many stickers does Ravi have? The child says five. Part a: is the answer right? Circle Right or Wrong. Part b: the right answer is blank. Question 5. Mi makes a ten first to add nine and seven. Part a: nine and blank make ten. Part b: seven take away your answer to part a is blank. Part c: ten and your answer to part b make blank. Question 6. Count by rows. Part a: there are blank rows of dots. Part b: there are blank dots in all."
+            "text": "Page 2. Question 4. A child in another class wrote a puzzle and an answer. Siti has nine stickers. Ravi has four more stickers than Siti. How many stickers does Ravi have? The child says five. Part a: is the answer right? Circle Right or Wrong. Part b: the right answer is blank. Question 5. Mi makes a ten first to add nine and seven. Part a: nine and blank make ten. Part b: seven take away your answer to part a is blank. Part c: ten and your answer to part b make blank. Question 6. Under each of questions 4 to 6, write the tool you used and tick I checked. Count by rows. Part a: there are blank rows of dots. Part b: there are blank dots in all."
           },
           {
             "k": "WORK",
             "text": "Page 2, questions 4 to 6.",
-            "s": 290
+            "s": 265
           },
           {
             "k": "SLIDE",
@@ -1535,7 +1581,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Think harder has write a puzzle, swap it and solve it, and which puzzle has exactly one answer. Go further has Puzzle With a Proof (beyond Primary 1 on purpose), a friend's puzzle, and writing your own with a proof. Do not announce who is on which page. Start here takes a middle child about 10 minutes. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+            "text": "Think harder has write a puzzle, swap it and solve it, and which puzzle has exactly one answer. Go further has Puzzle With a Proof (beyond Primary 1 on purpose), a friend's puzzle, and writing your own with a proof. Do not announce who is on which page. Start here takes a middle child about 10 minutes, with the tool line. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
           }
         ]
       },
@@ -1562,7 +1608,7 @@
           },
           {
             "k": "SAY",
-            "text": "Now the Showcase. Teach us one idea you found this year, in about a minute. Use the three lines on the slide: my favourite idea is, it works like this, here is an example. A pass is always fine."
+            "text": "Now the Showcase. Teach us one idea you found this year, in about a minute. Use the three lines on the slide: my favourite idea is, my tool is and why, here is an example and a check. A pass is always fine."
           },
           {
             "k": "SAY",
@@ -1879,6 +1925,12 @@
             "text": "The right answer is [] stickers.",
             "ans": "13",
             "val": 13
+          },
+          {
+            "l": "c",
+            "text": "Tool I used: ______ . I checked: [ ]",
+            "ans": "Any tool that fits. A reason matters more than the name.",
+            "val": "any"
           }
         ]
       },
@@ -1918,6 +1970,12 @@
             "text": "10 and your answer to part b make [] .",
             "ans": "16",
             "val": 16
+          },
+          {
+            "l": "d",
+            "text": "Tool I used: ______ . I checked: [ ]",
+            "ans": "Any tool that fits. A reason matters more than the name.",
+            "val": "any"
           }
         ]
       },
@@ -1950,6 +2008,12 @@
             "text": "There are [] apples in all.",
             "ans": "20",
             "val": 20
+          },
+          {
+            "l": "c",
+            "text": "Tool I used: ______ . I checked: [ ]",
+            "ans": "Any tool that fits. A reason matters more than the name.",
+            "val": "any"
           }
         ],
         "visual": {
@@ -2324,19 +2388,19 @@
   ],
   "look_back": {
     "hardest": [
+      "picking a tool",
       "writing a puzzle",
       "checking a puzzle",
-      "Mi's Challenge Quest",
-      "something else"
+      "Mi's Challenge Quest"
     ],
     "helped": [
       "my quest partner",
-      "drawing it",
+      "the tool cards",
       "checking a second way",
       "I was not stuck"
     ],
     "next": [
-      "writing a puzzle",
+      "picking a tool and saying why",
       "checking a second way",
       "teaching an idea",
       "asking a question"
@@ -2853,7 +2917,7 @@
             "A week after the {a|ord} is the {ans|ord}."
           ]
         },
-        "rewind_of": "Term 3 Lesson 10"
+        "rewind_of": "Term 3 Lesson 7"
       },
       {
         "id": "r2",
@@ -2893,12 +2957,12 @@
             "{w} weeks is {ans} days."
           ]
         },
-        "rewind_of": "Term 3 Lesson 10"
+        "rewind_of": "Term 3 Lesson 7"
       }
     ]
   },
   "parent": {
-    "summary": "We looked back over the year. Your child chose a favourite idea to teach, learned what a good puzzle needs (a story, numbers, one question and one answer), checked a puzzle a child in another class wrote, and played Mi's Challenge Quest, our end-of-year game, on private paper. Your tutor then sends one line about what we saw.",
+    "summary": "We looked back over the year. Your child practised picking a tool for a mixed problem and saying why, chose a favourite idea to teach, learned what a good puzzle needs (a story, numbers, one question and one answer), checked a puzzle a child in another class wrote, and played Mi's Challenge Quest, our end-of-year game, on private paper. Your tutor then sends one line about what we saw.",
     "words": [
       "puzzle: a story with numbers and one question",
       "clue: a fact that helps to find the answer",
@@ -2919,7 +2983,7 @@
     "when_stuck": "Let your child look at a favourite page and wait 10 seconds before helping. Asking \"What is the question?\" works better than giving the answer. Please do not chant rules. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
     "next": "What comes next is the first lesson of Level 2 or the holiday program. Your tutor will tell you which one, and the start date, and send a note about what to have ready. Mi's Challenge Quest: please send one photo of each of the 4 pages to the business WhatsApp today. Online practice: your tutor will share the link. The recording link is private: please do not share it.",
     "quote": "Teach what you found. A good puzzle has one answer and a check.",
-    "report_line": "Your child is learning to explain an idea to others and to write and check a puzzle. This week: a favourite idea taught in a minute, puzzles with one answer, and Mi's Challenge Quest.",
+    "report_line": "Your child is learning to pick a tool, say why, explain an idea to others, and write and check a puzzle. This week: tools, a favourite idea taught in a minute, puzzles with one answer, and Mi's Challenge Quest.",
     "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
     "next_materials": [
       "Nothing to prepare yet. Your tutor will send a note about the first lesson of Level 2 or the holiday program",
@@ -3005,21 +3069,19 @@
     "minutes": 20,
     "scope": "year",
     "where": "Lesson 40 (the last lesson of the year), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
-    "plan_note": "The end-of-year slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for the next program. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level except the key of 2 in gate 6 (taught in Lesson 38 and said plainly on the grown-up note). Lessons 31 and 32 share gate 1 and Lessons 37 and 38 share gate 6, so every lesson of Term 4 is still visited. Gate 8 asks the child to check a puzzle a child in another class wrote, which is the claim-testing the year line talks about. The secret cave joins two ideas the group has met (money in cents and a growing pattern) in an unseen way. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest sits straight after the brain break so children are fresh. The Quest Log carries the Term 4 pictures (a folded circle, a rectangle of squares, a dot grid, a stack of cubes, a folded paper, four tiles, a network of lines and a picture graph). The year look-back (a minute, no scores) is the OUR YEAR card on the last Quest slide. Time is written as digits where it appears; money with the cent sign.",
+    "plan_note": "The end-of-year slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for the next program. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level except the key of 2 in gate 6 (taught in Lesson 38 and said plainly on the grown-up note). Lessons 31 and 32 share gate 1 and Lessons 37 and 38 share gate 6, so every lesson of Term 4 is still visited. Gate 8 asks the child to check a puzzle a child in another class wrote, which is the claim-testing the year line talks about. The secret cave joins two ideas the group has met (money in cents and a growing pattern) in an unseen way. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest sits straight after the brain break so children are fresh. The Quest Log carries the Term 4 pictures (a folded circle, a rectangle of squares, a dot grid, a stack of cubes, a folded paper, four tiles, a network of lines and a picture graph). The year look-back (a minute, no scores) is the OUR YEAR card on the last Quest slide. Time is written as digits where it appears; money with the cent sign. REFRAMED: under each gate the child circles the tool used and ticks I checked; no gate names a tool. Gates 4 and 7 are mixed gates with no lesson tag (Lessons 35 and 39 are not visited by a tagged gate).",
     "sheet_pages": 4,
     "story": "Mi the dolphin is swimming home to the Home Reef after a whole year. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
     "child_rules": [
-      "Mi is swimming home to the Home Reef and needs your help at 8 gates.",
-      "Use your own paper. Talk with your quest partner, then write your own answer.",
-      "It is not a race. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate: Mi swims round it.",
-      "The secret cave at the end is optional, just for fun."
+      "Mi needs your help at 8 gates. Talk with your quest partner, then write your own answer.",
+      "It is not a race. Your answers are private. You may skip a gate: Mi swims round it."
     ],
     "child_footer": "Math Inquirers Term 4 Mi's Challenge Quest.",
     "page_instructions": [
       "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
-      "Gates 3 and 4: keep swimming.",
-      "Gates 5 and 6: nearly home.",
-      "Gates 7 and 8 and the secret cave: the last stretch. Circle Yes or No where you see it."
+      "Gates 3, 4 and 5: keep swimming.",
+      "Gates 6 and 7: nearly home.",
+      "Gate 8 and the secret cave: the last stretch. Circle Yes or No where you see it."
     ],
     "questions": [
       {
@@ -3072,7 +3134,7 @@
           "type": "shapes2d",
           "shape": "circle",
           "parts": 1,
-          "size": 30
+          "size": 18
         }
       },
       {
@@ -3123,7 +3185,7 @@
             2,
             0
           ],
-          "size": 45
+          "size": 27
         }
       },
       {
@@ -3175,13 +3237,13 @@
               ]
             ],
             "mode": "iso",
-            "size": 30
+            "size": 18
           },
           {
             "type": "fold_punch",
             "stage": "paper",
             "fold": "h",
-            "size": 30,
+            "size": 18,
             "draw": 110
           },
           {
@@ -3194,84 +3256,48 @@
                 0.7
               ]
             ],
-            "size": 30,
+            "size": 18,
             "draw": 110
           }
         ]
       },
       {
         "id": "C4",
-        "lesson": 35,
-        "strand": "spot",
+        "lesson": "mixed",
+        "strand": "choose",
         "page": 2,
         "tier": "start",
-        "skill": "The odd one out and what is different (Lesson 35)",
-        "text": "Three tiles are alike. One tile is the odd one out.",
+        "tools": [
+          "guess",
+          "list",
+          "table"
+        ],
+        "skill": "Five coins that make an amount (mixed: no lesson tag)",
+        "text": "Ben has 5 coins. They are 5-cent coins and 10-cent coins. They make 40 cents.",
         "parts": [
           {
             "l": "a",
-            "text": "Circle the odd one out: A, B, C or D.",
-            "ans": "C",
-            "val": "C"
-          },
-          {
-            "l": "b",
-            "text": "Circle what is different: shape, number, size or pattern.",
-            "ans": "shape",
-            "val": "shape"
+            "text": "Ben has ___ five-cent coins and ___ ten-cent coins.",
+            "ans": "2 and 3",
+            "val": [
+              2,
+              3
+            ]
           }
         ],
-        "say": "Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern.",
-        "answer": "C; shape",
+        "say": "Gate 4. Ben has 5 coins. They are 5-cent coins and 10-cent coins. They make 40 cents. Write how many five-cent coins and how many ten-cent coins.",
+        "answer": "2 five-cent and 3 ten-cent",
         "val": [
-          "C",
-          "shape"
+          2,
+          3
         ],
-        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 2 circles, so it is the odd one out, and the shape is different.",
-        "right": "Both correct.",
-        "partly": "One of the two correct.",
+        "solution": "Try 3 and 2: 15 and 20 make 35, too low. Try 2 and 3: 10 and 30 make 40. That is 5 coins.",
+        "right": "Both numbers correct.",
+        "partly": "-",
         "mistakes": [
-          "(a) A, B or D (one of the alike tiles).",
-          "(b) number or size (looking at the wrong feature)."
-        ],
-        "visual": {
-          "type": "panel",
-          "tiles": [
-            {
-              "shape": "triangle",
-              "n": 2,
-              "size": "m",
-              "pattern": 2
-            },
-            {
-              "shape": "triangle",
-              "n": 2,
-              "size": "m",
-              "pattern": 2
-            },
-            {
-              "shape": "circle",
-              "n": 2,
-              "size": "m",
-              "pattern": 2
-            },
-            {
-              "shape": "triangle",
-              "n": 2,
-              "size": "m",
-              "pattern": 2
-            }
-          ],
-          "cell": 100,
-          "cols": 4,
-          "labels": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ],
-          "size": 75
-        }
+          "3 and 2 (35 cents).",
+          "4 and 1 (30 cents)."
+        ]
       },
       {
         "id": "C5",
@@ -3348,7 +3374,7 @@
             "D",
             "E"
           ],
-          "size": 48
+          "size": 29
         }
       },
       {
@@ -3404,43 +3430,41 @@
           "icon": "flower",
           "title": "Flowers",
           "each": 2,
-          "size": 85
+          "size": 52
         }
       },
       {
         "id": "C7",
-        "lesson": 39,
-        "strand": "graphs",
-        "page": 4,
+        "lesson": "mixed",
+        "strand": "choose",
+        "page": 3,
         "tier": "start",
-        "skill": "Choose a tool: a growing pattern in a table (Lesson 39)",
+        "skill": "A growing tower (mixed: no lesson tag)",
         "text": "A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before.",
         "parts": [
           {
-            "l": "a",
-            "text": "Circle the tool that fits best: Strip, Table or Work backwards.",
-            "ans": "Table",
-            "val": "Table"
-          },
-          {
-            "l": "b",
+            "l": "",
             "text": "Row 5 has ___ blocks.",
             "ans": "22",
             "val": 22
           }
         ],
-        "say": "Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks.",
-        "answer": "Table; 22",
+        "say": "Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Row 5 has blank blocks.",
+        "answer": "22",
         "val": [
-          "Table",
           22
         ],
-        "solution": "The numbers grow by 4 each time, so a table fits: 6, 10, 14, 18, 22. Row 5 has 22 blocks.",
-        "right": "Both correct (a strip is a sensible second choice for part a).",
-        "partly": "One of the two correct.",
+        "solution": "Add 4 each time: 6, 10, 14, 18, 22. Row 5 has 22 blocks.",
+        "right": "22.",
+        "partly": "-",
         "mistakes": [
-          "(a) Work backwards.",
-          "(b) 18 (row 4) or 26 (row 6)."
+          "18 (row 4).",
+          "20 or 26."
+        ],
+        "tools": [
+          "table",
+          "pattern",
+          "draw"
         ]
       },
       {
@@ -3513,7 +3537,12 @@
         "(a) 20 (Thursday).",
         "(b) 25 (only Friday) or 65 (one day left out)."
       ],
-      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing."
+      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing.",
+      "because": true,
+      "tools": [
+        "pattern",
+        "table"
+      ]
     },
     "strands": [
       {
@@ -3564,14 +3593,12 @@
         "parent_name": "Spotting and counting",
         "moe_label": "Process skills; Whole numbers",
         "lessons": [
-          35,
           36
         ],
         "questions": [
-          "C4",
           "C5"
         ],
-        "looked_at": "the odd one out, counting lines, and equal groups",
+        "looked_at": "counting lines and equal groups",
         "saw_examples": [
           "[Name] named the one thing that was different between tiles.",
           "[Name] counted lines one by one without missing or repeating any."
@@ -3588,12 +3615,10 @@
         "lessons": [
           37,
           38,
-          39,
           40
         ],
         "questions": [
           "C6",
-          "C7",
           "C8"
         ],
         "looked_at": "reading a picture graph where each picture stands for 2, choosing a tool, and checking a friend's puzzle",
@@ -3605,6 +3630,27 @@
         "next_examples": [
           "Draw a graph where each picture stands for 2 and ask your child to read a row.",
           "Write a puzzle with a rule and ask: does it have exactly one answer?"
+        ]
+      },
+      {
+        "id": "choose",
+        "parent_name": "Choosing a tool",
+        "moe_label": "Process skills; choosing a method",
+        "lessons": [
+          39,
+          40
+        ],
+        "questions": [
+          "C4",
+          "C7"
+        ],
+        "looked_at": "choosing a way to start a new problem, and checking it",
+        "saw_examples": [
+          "[Name] chose a tool for a problem that was new and said why.",
+          "[Name] checked an answer a second way."
+        ],
+        "next_examples": [
+          "Ask: which tool will you start with, and why? Then: how can you check it another way?"
         ]
       }
     ],
@@ -3636,7 +3682,7 @@
       "No answer is said aloud during or after the Quest. Gates open for everyone, whatever the answers.",
       "No clock, countdown or timer is shown; nobody is told who finished first or last.",
       "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
-      "No score, no x out of 8, no ranking, no tally, no comparison between children, not even in your own notes.",
+      "No score, no x out of 8, no ranking, no comparison between children, and no tally or count of any kind on a child's page or anywhere a family can see. In your own notes: words only. You may circle one of the three words (with help / with a prompt / on their own) for each habit in the private notes sheet (section 5); never add the circles up, never compare children, and never say or show the words to a child or a grown-up.",
       "The recording captures the tutor, the shared screen and any voice that is not muted: the recording is paused for the whole Quest (slides s-quest1 and s-quest2) and restarted for the workbook. The WhatsApp number is never on a slide."
     ],
     "notes_sheet": {
@@ -3698,7 +3744,8 @@
       "stretch_seconds": 60,
       "slow_child_factor": 1.4
     },
-    "quest_map": false
+    "quest_map": false,
+    "tool_row": "term"
   },
   "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the workbook. Pause the recording before you read the first gate."
 }
