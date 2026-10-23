@@ -2708,21 +2708,21 @@
  ],
  "look_back": {
   "hardest": [
-   "counting hidden cubes",
-   "reading the top view",
-   "folding and holes",
+   "hidden cubes",
+   "top views",
+   "folding",
    "something else"
   ],
   "helped": [
    "my blocks",
-   "the top view numbers",
-   "folding the paper",
+   "top view numbers",
+   "folding paper",
    "I was not stuck"
   ],
   "next": [
-   "counting every cube",
-   "reading a top view",
-   "predicting the holes",
+   "hidden cubes",
+   "top views",
+   "holes",
    "asking a question"
   ]
  },

@@ -317,7 +317,7 @@ def bw_print(built, outdir, level):
     vec = os.path.join(outdir, f'Math_Inquirers_L{level}_Extension_Workbook_Print_BW_vector.pdf')
     final = os.path.join(outdir, f'Math_Inquirers_L{level}_Extension_Workbook_Print_BW.pdf')
     os.replace(built['print'], vec)
-    tmp = final + '.tmp'
+    tmp = final[:-4] + '_tmp.pdf'
     n, dropped = mb.convert_pdf(vec, tmp)
     r = PdfReader(tmp); w = PdfWriter()
     for pg in r.pages:

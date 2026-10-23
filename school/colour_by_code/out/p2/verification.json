@@ -1,39 +1,8 @@
 {
- "passed": 709,
- "failed": 32,
+ "passed": 740,
+ "failed": 1,
  "failures": [
-  "CBC-P2-01: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-01: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-02: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-02: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-03: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-03: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-04: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-04: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-05: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-05: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-06: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-06: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-07: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
-  "CBC-P2-07: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-07: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-08: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-08: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-09: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-09: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-10: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
-  "CBC-P2-10: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-10: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-11: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-11: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-12: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-12: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-13: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-13: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-14: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-14: tally printed on the teacher page equals the tally of the answers",
-  "CBC-P2-15: tally printed on the pupil page equals the tally of the answers",
-  "CBC-P2-15: tally printed on the teacher page equals the tally of the answers"
+  "CBC-P2-03 teacher: real browser text of all 14 labels lies inside its region, clear of outlines and decorations"
  ],
  "worksheets": {
   "CBC-P2-01": {
@@ -52,8 +21,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 4.1,
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -115,8 +84,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 3.6,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 4.4,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -136,10 +105,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.9,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 4.2,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 35.5
+   "narrowest_region_width_at_label_mm": 38.0
   },
   "CBC-P2-06": {
    "single_slip": {
@@ -178,8 +147,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8667
    },
-   "min_pupil_font_mm": 4.8,
-   "min_teacher_font_mm": 3.5,
+   "min_pupil_font_mm": 4.3,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.9
   },
@@ -220,8 +189,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8462
    },
-   "min_pupil_font_mm": 4.3,
-   "min_teacher_font_mm": 4.1,
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 36.2
   },
@@ -242,9 +211,9 @@
     "caught_by_structure_checks": 1.0
    },
    "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 3.6,
+   "min_teacher_font_mm": 4.5,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.9
+   "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-P2-11": {
    "single_slip": {
@@ -305,7 +274,7 @@
     "caught_by_structure_checks": 0.875
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.3,
+   "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
   },

@@ -802,7 +802,7 @@ BANKS = build_banks()
 GALLERY = [
     dict(id="CBC-P2-01", picture="rocket", bank="numbers", tier=1, seed=301),
     dict(id="CBC-P2-02", picture="car", bank="add", tier=2, seed=302),
-    dict(id="CBC-P2-03", picture="elephant", bank="sub", tier=2, seed=303),
+    dict(id="CBC-P2-03", picture="owl", bank="sub", tier=2, seed=303),
     dict(id="CBC-P2-04", picture="house", bank="mult", tier=1, seed=304),
     dict(id="CBC-P2-05", picture="castle", bank="div", tier=1, seed=305),
     dict(id="CBC-P2-06", picture="owl", bank="frac", tier=1, seed=4),
