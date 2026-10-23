@@ -19,6 +19,13 @@ def repeated_add(each, times):      # each + each + ... (times terms)
     return s
 
 
+def left_over(total_items, plates):  # deal the items one at a time onto the plates; what is left when a full round cannot be made
+    left = total_items
+    while left >= plates:
+        left -= plates
+    return left
+
+
 def equal(counts): return all(c == counts[0] for c in counts)
 
 

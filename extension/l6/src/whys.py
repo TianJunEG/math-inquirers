@@ -57,3 +57,18 @@ WHY.update({
  'L6U01-S02': "(a) The difference is 6; each term is 2 more than 6, 12, 18, 24: 6n + 2, and 602. (b) The difference is 5; each term is 2 less than 5, 10, 15, 20: 5n − 2, and 498.",
  'L6U01-T03': "From the 4th to the 9th term is 5 jumps and the terms rose by 30, so each jump is 6. Back 3 jumps from 23: 5. The rule is 6n − 1.",
 })
+WHY.update({
+ 'L6U07-S04': "All the turns add to 360°. The first 4 add to 305, so the last turn is 55° and the inside angle there is 125°. The 5 inside angles add to 5 × 180 − 360 = 540°.",
+ 'L6U04-T03': "IN up 5 and OUT up 25, so × 5. 5 × 3 = 15 but OUT is 13, so take away 2: OUT = 5n − 2. For OUT 98: 5n = 100, n = 20.",
+ 'L6U03-G03': "(a) 5, 4, 3, 2, 1 BC: 4 steps. (b) 3 BC, 2 BC, 1 BC, AD 1, 2, 3, 4: 6 steps. (c) 10 BC to 1 BC is 9 steps, 1 more to AD 1, then 11 to AD 12: 21 years.",
+ 'L6U02-S08': "(a) Primes from 40 to 60: 41, 43, 47, 53, 59. Only 53 has digits adding to 8. (b) Primes from 60 to 80: 61, 67, 71, 73, 79. Only 71 + 2 = 73 is prime.",
+ 'L6U04-S07': "Start at 0 and add 1 until 7 × n − 4 is 73. 7 × 10 − 4 = 66 is too small, and 7 × 11 − 4 = 73, so it says 11. Check: (73 + 4) ÷ 7 = 11.",
+ 'L6U09-S07': "Total 19600, and 19600 ÷ 7 = 2800. In order the middle (4th) value is 1700. The owner's 9500 pulls the mean up, so the median is more typical.",
+ 'L6U08-T01': "Remainder 3 when divided by 5: 3, 8, 13, 18, ... 18 is the first with remainder 4 when divided by 7. The pattern repeats every 35, so the next is 53.",
+ 'L6U08-S07': "T = 19 and A = 0, so the shift is 7 (19 + 7 = 26 = 0). Decode XBPJR: 23, 1, 15, 9, 17 minus 7 is 16, −6, 8, 2, 10. −6 + 26 = 20. The numbers 16, 20, 8, 2, 10 are QUICK.",
+ 'L6U06-S05': "The primes up to 10 are 2, 3, 5, 7: Ali wins on 4 numbers and Ben on the other 6. 4 is not 6, so it is not fair: Ben is favoured.",
+ 'L6U10-T03': "Digits adding to 10: 19, 28, 37, 46, 55, 64, 73, 82, 91. Primes: 19, 37, 73. Reversed: 91 = 7 × 13 is not prime, but 73 and 37 both are.",
+ 'L6U08-T02': "10 Jan to 10 Apr: 31 + 28 + 31 = 90 days. 90 mod 7 = 6 (90 = 12 × 7 + 6). Tuesday and 6 more days is Monday.",
+ 'L6U04-T02': "Ali n, brother n + 4, mother 3n: 5n + 4 = 64, so n = 12. Ali is 12, his brother 16, their mother 36 (12 + 16 + 36 = 64).",
+ 'L6U02-T01': "(a) 16 has 5 factors (1, 2, 4, 8, 16). (b) 36 has 9 (1, 2, 3, 4, 6, 9, 12, 18, 36). (c) 48 has 10 (1, 2, 3, 4, 6, 8, 12, 16, 24, 48). Smaller numbers have fewer.",
+})

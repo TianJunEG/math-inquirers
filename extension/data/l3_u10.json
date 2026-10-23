@@ -3,7 +3,7 @@
  "level": 3,
  "unit": 10,
  "id": "L3U10",
- "title": "Puzzle day",
+ "title": "Think it through",
  "topic": "Mixed puzzles",
  "holiday_lesson": 10,
  "goal": "I can start a puzzle by drawing it, listing it or making a table. I can read a bar graph and solve logic puzzles.",
@@ -58,7 +58,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Who read the most books?   {circ:Ali|Ben|Mei|Siti}",
+     "text": "Most books: {b}",
      "answer": {
       "value": [
        "Mei"

@@ -807,7 +807,7 @@
     "ch": 8,
     "fs": 16
    },
-   "explanation": "T = 19 and A = 0, so the shift took 19 to 26, which is 0: the shift is 7. Decode XBPJR: 23, 1, 15, 9, 17 minus 7 is 16, −6, 8, 2, 10. Adding 26 to −6 gives 20. The numbers 16, 20, 8, 2, 10 are QUICK."
+   "explanation": "T = 19 and A = 0, so the shift is 7 (19 + 7 = 26 = 0). Decode XBPJR: 23, 1, 15, 9, 17 minus 7 is 16, −6, 8, 2, 10. −6 + 26 = 20. The numbers 16, 20, 8, 2, 10 are QUICK."
   },
   {
    "id": "L6U08-S10",
@@ -1221,7 +1221,7 @@
      ""
     ]
    },
-   "explanation": "Numbers with remainder 3 when divided by 5: 3, 8, 13, 18, 23, ... Of these, 18 = 2 × 7 + 4 is the first with remainder 4 when divided by 7. The pattern repeats every 5 × 7 = 35, so the next is 18 + 35 = 53."
+   "explanation": "Remainder 3 when divided by 5: 3, 8, 13, 18, ... 18 is the first with remainder 4 when divided by 7. The pattern repeats every 35, so the next is 53."
   },
   {
    "id": "L6U08-T02",
@@ -1267,7 +1267,7 @@
      ""
     ]
    },
-   "explanation": "From 10 Jan to 10 Feb is 31 days, to 10 Mar is 28 more, and to 10 Apr is 31 more: 31 + 28 + 31 = 90 days. 90 mod 7 = 6, because 90 = 12 × 7 + 6. Tuesday and 6 more days is Monday.",
+   "explanation": "10 Jan to 10 Apr: 31 + 28 + 31 = 90 days. 90 mod 7 = 6 (90 = 12 × 7 + 6). Tuesday and 6 more days is Monday.",
    "partsrow": true
   },
   {

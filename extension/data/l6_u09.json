@@ -348,7 +348,7 @@
      }
     }
    ],
-   "explanation": "Total: 1500 + 1600 + 1600 + 1700 + 1800 + 1900 + 9500 = 19600, and 19600 ÷ 7 = 2800. In order the middle (4th) value is 1700. Only the owner earns 9500. The mean is pulled up by that one value, so the median 1700 is more typical."
+   "explanation": "Total 19600, and 19600 ÷ 7 = 2800. In order the middle (4th) value is 1700. The owner's 9500 pulls the mean up, so the median is more typical."
   },
   {
    "id": "L6U09-S11",

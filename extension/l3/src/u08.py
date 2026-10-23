@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(8, 'Angle and line detectives', 'Angles and lines',
+u = Unit(8, 'Corners and lines', 'Angles and lines',
          'I can compare angles with a right angle. I can find perpendicular and parallel lines. I can count angles in a figure.')
 
 

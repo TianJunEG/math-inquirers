@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(3, 'Times table treasure', 'Tables of 6, 7, 8 and 9',
+u = Unit(3, 'Times table tricks', 'Tables of 6, 7, 8 and 9',
          'I can use facts I know to find new times table facts. I can find patterns and solve number puzzles.')
 
 

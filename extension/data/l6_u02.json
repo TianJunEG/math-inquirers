@@ -401,7 +401,7 @@
      }
     }
    ],
-   "explanation": "(a) The primes between 40 and 60 are 41, 43, 47, 53 and 59. Only 53 has digits that add to 8. (b) The primes between 60 and 80 are 61, 67, 71, 73 and 79. Adding 2 gives 63, 69, 73, 75, 81, and only 73 is prime, so I am 71."
+   "explanation": "(a) Primes from 40 to 60: 41, 43, 47, 53, 59. Only 53 has digits adding to 8. (b) Primes from 60 to 80: 61, 67, 71, 73, 79. Only 71 + 2 = 73 is prime."
   },
   {
    "id": "L6U02-S09",
@@ -674,7 +674,7 @@
      ""
     ]
    },
-   "explanation": "(a) 16 has 1, 2, 4, 8, 16: 5 factors, and no smaller number has 5. (b) 36 has 1, 2, 3, 4, 6, 9, 12, 18, 36: 9 factors. (c) 48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Numbers below 48 have fewer.",
+   "explanation": "(a) 16 has 5 factors (1, 2, 4, 8, 16). (b) 36 has 9 (1, 2, 3, 4, 6, 9, 12, 18, 36). (c) 48 has 10 (1, 2, 3, 4, 6, 8, 12, 16, 24, 48). Smaller numbers have fewer.",
    "partsrow": true
   },
   {

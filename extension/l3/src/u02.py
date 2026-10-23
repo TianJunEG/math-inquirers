@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(2, 'Cryptarithm crackers', 'Addition and subtraction',
+u = Unit(2, 'Find the digit', 'Addition and subtraction',
          'I can find missing digits in sums and take-aways. I can solve magic squares and number pyramids.')
 H4 = ['Th', 'H', 'T', 'O']
 

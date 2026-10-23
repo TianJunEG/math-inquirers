@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(6, 'Fraction walls', 'Fractions',
+u = Unit(6, 'Build a wall', 'Fractions',
          'I can use a fraction wall to find equal fractions. I can compare fractions and add and subtract them.')
 CMP = '{circ:<|=|>}'
 

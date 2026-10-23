@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(9, 'Measure and money masters', 'Length, mass, volume, money and time',
+u = Unit(9, 'Measure it, pay it', 'Length, mass, volume, money and time',
          'I can change units, solve money problems and find how long things last.')
 
 

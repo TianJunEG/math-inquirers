@@ -949,7 +949,7 @@
      ""
     ]
    },
-   "explanation": "(a) 5 BC, 4 BC, 3 BC, 2 BC, 1 BC: 4 steps. (b) 3 BC to 2 BC, 1 BC, AD 1, AD 2, AD 3, AD 4: 6 steps. (c) 10 BC to 1 BC is 9 steps, 1 step to AD 1, then 11 steps to AD 12: 21 years.",
+   "explanation": "(a) 5, 4, 3, 2, 1 BC: 4 steps. (b) 3 BC, 2 BC, 1 BC, AD 1, 2, 3, 4: 6 steps. (c) 10 BC to 1 BC is 9 steps, 1 more to AD 1, then 11 to AD 12: 21 years.",
    "partsrow": true
   },
   {

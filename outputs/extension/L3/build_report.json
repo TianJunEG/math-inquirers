@@ -417,9 +417,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9984712924819773,
+   "fill": 0.9792256694129763,
    "over": false,
-   "excess_mm": -0.4,
+   "excess_mm": -5.3,
    "edition": "soft"
   },
   {
@@ -627,9 +627,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9994850669412977,
+   "fill": 0.972869464469619,
    "over": false,
-   "excess_mm": -0.1,
+   "excess_mm": -7,
    "edition": "soft"
   },
   {
@@ -1433,9 +1433,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0067102214212151,
-   "over": true,
-   "excess_mm": 1.7,
+   "fill": 0.9874645983522142,
+   "over": false,
+   "excess_mm": -3.2,
    "edition": "print"
   },
   {
@@ -1643,9 +1643,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0077239958805355,
-   "over": true,
-   "excess_mm": 2,
+   "fill": 0.9811083934088568,
+   "over": false,
+   "excess_mm": -4.9,
    "edition": "print"
   },
   {
@@ -2046,17 +2046,14 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "print page 41 (Unit 6 \u00b7 Learn it): content overflows the page (natural height minus body 1.7 mm)",
-  "print page 62 (Unit 9 \u00b7 Learn it): content overflows the page (natural height minus body 2 mm)"
- ],
+ "problems": [],
  "soft_pages": 102,
  "print_pages": 102,
  "bw_pipeline": {
   "pages": 102,
   "dpi": 600,
-  "mb": 13.42,
+  "mb": 13.34,
   "check_bw_failures": 0,
-  "pale_tint_dropped_max": 0.0067
+  "pale_tint_dropped_max": 0.0036
  }
 }

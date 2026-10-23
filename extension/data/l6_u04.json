@@ -426,7 +426,7 @@
      ]
     ]
    },
-   "explanation": "The search starts at 0 and adds 1 each time, until 7 × n − 4 is 73. 7 × 10 − 4 = 66 is too small and 7 × 11 − 4 = 73. It says 11. Check backwards: 73 + 4 = 77 and 77 ÷ 7 = 11.",
+   "explanation": "Start at 0 and add 1 until 7 × n − 4 is 73. 7 × 10 − 4 = 66 is too small, and 7 × 11 − 4 = 73, so it says 11. Check: (73 + 4) ÷ 7 = 11.",
    "figside": true
   },
   {
@@ -809,7 +809,7 @@
     }
    },
    "hint": "Add up the n boxes first. Then add the extra 4.",
-   "explanation": "Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.",
+   "explanation": "Ali n, brother n + 4, mother 3n: 5n + 4 = 64, so n = 12. Ali is 12, his brother 16, their mother 36 (12 + 16 + 36 = 64).",
    "figright": true,
    "partsrow": true
   },
@@ -857,7 +857,7 @@
      "Working:"
     ]
    },
-   "explanation": "IN goes up 5 (3 to 8) and OUT goes up 25 (13 to 38), so the × part is 25 ÷ 5 = 5. 5 × 3 = 15, but OUT is 13, so take away 2: OUT = 5n − 2. For OUT 98: 5n = 100 and n = 20.",
+   "explanation": "IN up 5 and OUT up 25, so × 5. 5 × 3 = 15 but OUT is 13, so take away 2: OUT = 5n − 2. For OUT 98: 5n = 100, n = 20.",
    "partsrow": true
   },
   {

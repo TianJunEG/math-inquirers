@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(7, 'Area architects', 'Area and perimeter',
+u = Unit(7, 'Around and inside', 'Area and perimeter',
          'I can find the area and the perimeter of rectangles and of shapes made of squares.')
 
 

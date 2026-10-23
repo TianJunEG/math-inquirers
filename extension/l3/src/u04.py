@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(4, 'Model makers', 'Word problems with bar models',
+u = Unit(4, 'Draw the problem', 'Word problems with bar models',
          'I can draw a bar model for a word problem. I can use it to decide what to add, subtract or divide.')
 
 

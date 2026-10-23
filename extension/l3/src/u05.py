@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(5, 'Remainder riddles', 'Division with remainders',
+u = Unit(5, 'What is left over?', 'Division with remainders',
          'I can divide with a remainder. I can decide what the remainder means in a story. I can find a mystery number.')
 DAYS = '{circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}'
 

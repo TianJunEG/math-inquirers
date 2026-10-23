@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(1, 'Number sleuths', 'Numbers to 10 000',
+u = Unit(1, 'Digits, cards and clues', 'Numbers to 10 000',
          'I can read, build and order 4-digit numbers. I can use clues to find a mystery number.')
 cards = lambda *d: {'type': 'l3_cards', 'items': list(d)}
 

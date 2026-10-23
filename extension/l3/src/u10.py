@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(10, 'Puzzle day', 'Mixed puzzles',
+u = Unit(10, 'Think it through', 'Mixed puzzles',
          'I can start a puzzle by drawing it, listing it or making a table. I can read a bar graph and solve logic puzzles.')
 
 
@@ -37,7 +37,7 @@ u.u['learn']['tight'] = True
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'The bar graph shows the books 4 children read. Kumar read 15 more books than Siti. Draw Kumar’s bar on the graph.', parts=[
-    P('a', 'Who read the most books?   {circ:Ali|Ben|Mei|Siti}', A('Mei')),
+    P('a', 'Most books: {b}', A('Mei')),
     P('b', 'Mei read {b} more than Ben.', A('15')),
     P('c', 'Kumar read {b}.', A('25')),
     P('d', 'In all they read {b}.', A('105'))],

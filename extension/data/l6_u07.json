@@ -263,7 +263,7 @@
      "Working:"
     ]
    },
-   "explanation": "All the turns add to 360°. The first 4 add to 60 + 85 + 110 + 50 = 305, so the last turn is 360 − 305 = 55°. The inside angle there is 180 − 55 = 125°. The 5 inside angles add to 5 × 180 − 360 = 540°.",
+   "explanation": "All the turns add to 360°. The first 4 add to 305, so the last turn is 55° and the inside angle there is 125°. The 5 inside angles add to 5 × 180 − 360 = 540°.",
    "partsrow": true
   },
   {
