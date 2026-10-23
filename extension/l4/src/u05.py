@@ -19,7 +19,7 @@ learn = {
   'answer': 'Least 6.25 and greatest 6.34.'},
  'pair': True, 'tight': True,
  'howto': {'title': 'How to do it',
-           'steps': ['Number line: work out what 1 small step is worth.',
+           'steps': ['Number line: find what 1 small step is worth.',
                      'Compare: line up the points. Add zeros to fill the gaps.',
                      'Round: find the 2 neighbours. Halfway rounds up.']},
  'facts': {'title': 'Place value', 'figure': {'type': 'l4_table', 'head': ['ones', '.', 'tenths', 'hundredths', 'thousandths'], 'rows': [['3', '.', '4', '0', '5']], 'widths': [1, 0.5, 1.3, 1.7, 2], 'cell_h': 50, 'font': 26, 'width_mm': 84},
@@ -52,7 +52,7 @@ S.append(item(U+'-S06', 'start', 2, 'Write the value of the digit 6 in each numb
   parts=[P('a', '4.562: {b}', A('0.06')), P('b', '6.043: {b}', A('6')), P('c', '0.936: {b}', A('0.006'))], partsrow=True,
   why='In 4.562 the 6 is in the hundredths place: 0.06. In 6.043 it is in the ones place: 6. In 0.936 it is in the thousandths place: 0.006.'))
 S.append(item(U+'-S07', 'start', 2, 'Round 6.847.',
-  parts=[P('a', 'To the nearest whole number: {b}', A(7)), P('b', 'To 1 decimal place: {b}', A('6.8')), P('c', 'To 2 decimal places: {b}', A('6.85'))],
+  parts=[P('a', 'Nearest 1: {b}', A(7)), P('b', 'Nearest 0.1: {b}', A('6.8')), P('c', 'Nearest 0.01: {b}', A('6.85'))],
   space={'rows': ['Working:']},
   why='(a) 6.847 is between 6 and 7 and is past 6.5, so 7. (b) 6.847 is between 6.8 and 6.9. The halfway mark is 6.85, so it rounds to 6.8. (c) 6.847 is between 6.84 and 6.85. The halfway mark is 6.845, so it rounds up to 6.85.'))
 S.append(item(U+'-S08', 'start', 2, 'Ali buys a ruler for $1.85 and a notebook for $2.40. He pays with a $5 note. How much change does he get? ${b}',
@@ -81,7 +81,7 @@ T.append(item(U+'-T01', 'think', 4, 'A number has 3 decimal places. Rounded to 2
   hint='Find the halfway marks next to 4.27. Which ones round to 4.27?',
   why='4.265 is halfway between 4.26 and 4.27, so it rounds up to 4.27. 4.275 would round up to 4.28, so the greatest is 4.274.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between two digits. Make the number that is closest to 20.\n{b}',
+T.append(item(U+'-T02', 'think', 4, 'Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between 2 digits. Make the number that is closest to 20.\n{b}',
   ans=A('19.64'), hint='List the numbers that start with 1 and with 9. Which are near 20?',
   why='Numbers just below 20 start with 19: 19.64 and 19.46. 19.64 is 0.36 below 20 and 19.46 is 0.54 below. Numbers that start with 14 or 16 are further away, and the numbers above 20 start with 41, 46, 49, 61 and so on, which are much further.',
   space={'rows': ['List:', '', '']}))
@@ -91,8 +91,8 @@ T.append(item(U+'-T03', 'think', 4, 'A mug costs $2.40 more than a cup. 3 mugs a
   why='If every mug cost the same as a cup, the 5 items would cost $17.20 − 3 × $2.40 = $17.20 − $7.20 = $10.00. So a cup costs $10.00 ÷ 5 = $2.00 and a mug costs $4.40. Check: 3 × $4.40 + 2 × $2.00 = $13.20 + $4.00 = $17.20.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
-G.append(item(U+'-G01', 'go', 5, 'A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. What is the mass of the empty bottle?\n{b} kg',
-  ans=A('0.24'), hint='The juice that was drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.',
+G.append(item(U+'-G01', 'go', 5, 'A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. Find the mass of the bottle when it is empty.\n{b} kg',
+  ans=A('0.24'), hint='The juice drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.',
   why='The juice that was drunk has a mass of 1.26 − 0.58 = 0.68 kg, and that is 2 thirds of the juice. 1 third is 0.34 kg, so all the juice is 1.02 kg. The empty bottle is 1.26 − 1.02 = 0.24 kg.',
   space={'rows': ['Working:', '']}))
 G.append(item(U+'-G02', 'go', 5, 'Mei has 12 coins. They are all 10¢ coins and 50¢ coins. Altogether they are worth $3.60. How many 50¢ coins does she have? {b}',
@@ -116,7 +116,7 @@ C.append(item(U+'-C02', 'quiz', None, 'Round 7.846 to the nearest whole number {
   why='7.846 is past 7.5, so 8. It is below 7.85, so 7.8. It is past 7.845, so 7.85.'))
 C.append(item(U+'-C03', 'quiz', None, 'Siti buys 4 notebooks at $1.35 each and pays $10. Her change is ${b}', ans=A('4.60'),
   why='4 × $1.35 = $5.40. $10.00 − $5.40 = $4.60.'))
-C.append(item(U+'-C04', 'quiz', None, 'A number with 2 decimal places rounds to 3.6 to 1 decimal place. The least it can be is {b} and the greatest is {b}.', ans=A('3.55', '3.64', text='Least 3.55, greatest 3.64'),
+C.append(item(U+'-C04', 'quiz', None, 'Rounding to 1 decimal place gives 3.6. The number has 2 decimal places. The least is {b} and the greatest is {b}.', ans=A('3.55', '3.64', text='Least 3.55, greatest 3.64'),
   why='3.55 is halfway between 3.5 and 3.6, so it rounds up to 3.6. 3.65 would round up to 3.7, so the greatest is 3.64.'))
 
 unit = {'schema_version': 1, 'level': 4, 'unit': 5, 'id': U, 'title': 'Decimal Detectives', 'topic': 'Decimals', 'holiday_lesson': 5,

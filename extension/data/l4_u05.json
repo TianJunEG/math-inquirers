@@ -85,7 +85,7 @@
   "howto": {
    "title": "How to do it",
    "steps": [
-    "Number line: work out what 1 small step is worth.",
+    "Number line: find what 1 small step is worth.",
     "Compare: line up the points. Add zeros to fill the gaps.",
     "Round: find the 2 neighbours. Halfway rounds up."
    ]
@@ -418,7 +418,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "To the nearest whole number: {b}",
+     "text": "Nearest 1: {b}",
      "answer": {
       "value": [
        "7"
@@ -428,7 +428,7 @@
     },
     {
      "label": "b",
-     "text": "To 1 decimal place: {b}",
+     "text": "Nearest 0.1: {b}",
      "answer": {
       "value": [
        "6.8"
@@ -438,7 +438,7 @@
     },
     {
      "label": "c",
-     "text": "To 2 decimal places: {b}",
+     "text": "Nearest 0.01: {b}",
      "answer": {
       "value": [
        "6.85"
@@ -724,7 +724,7 @@
    "id": "L4U05-T02",
    "tier": "think",
    "page": 4,
-   "text": "Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between two digits. Make the number that is closest to 20.\n{b}",
+   "text": "Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between 2 digits. Make the number that is closest to 20.\n{b}",
    "answer": {
     "value": [
      "19.64"
@@ -782,7 +782,7 @@
    "id": "L4U05-G01",
    "tier": "go",
    "page": 5,
-   "text": "A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. What is the mass of the empty bottle?\n{b} kg",
+   "text": "A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. Find the mass of the bottle when it is empty.\n{b} kg",
    "answer": {
     "value": [
      "0.24"
@@ -795,7 +795,7 @@
      ""
     ]
    },
-   "hint": "The juice that was drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.",
+   "hint": "The juice drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.",
    "explanation": "The juice that was drunk has a mass of 1.26 − 0.58 = 0.68 kg, and that is 2 thirds of the juice. 1 third is 0.34 kg, so all the juice is 1.02 kg. The empty bottle is 1.26 − 1.02 = 0.24 kg."
   },
   {
@@ -933,7 +933,7 @@
   {
    "id": "L4U05-C04",
    "tier": "quiz",
-   "text": "A number with 2 decimal places rounds to 3.6 to 1 decimal place. The least it can be is {b} and the greatest is {b}.",
+   "text": "Rounding to 1 decimal place gives 3.6. The number has 2 decimal places. The least is {b} and the greatest is {b}.",
    "answer": {
     "value": [
      "3.55",
