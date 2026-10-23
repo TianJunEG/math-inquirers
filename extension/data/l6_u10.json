@@ -770,7 +770,7 @@
   {
    "id": "L6U10-G02",
    "tier": "go",
-   "text": "A program spins an 8-part spinner (1 to 8) 800 times and counts the numbers over 6.",
+   "text": "A program spins an 8-part spinner (1 to 8) 800 times and counts the numbers greater than 6.",
    "page": 5,
    "parts": [
     {
