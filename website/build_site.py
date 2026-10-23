@@ -160,7 +160,7 @@ def main():
     todo.append(('index.html', 'Request-another-time form: retention default (12 months) and consent wording are drafts for the owner/lawyer; privacy.html carries the matching [bracket] note. Placeholder slots live in data/interest_slots.json.'))
     todo.append(('index.html', 'Request-another-time form mode: ' + ('saves to Supabase (submit_interest_request); apply portal/supabase/interest_requests.sql first' if INTEREST_PORTAL else 'WhatsApp fallback only (build with --with-portal and SUPABASE_URL/SUPABASE_ANON_KEY to save requests)')))
     for t in ('[register-by date] not set: set delivery.register_by once in data/beta_schedule.json (shown on the home page, level pages, terms and the FAQ); default: order the print run by about 9 Nov for a 24 Nov start, from the printer lead time' if not REGBY_SET else None,
-              '[who pays printing/postage] owner to confirm; pages default to "included in the S$250 beta fee" (terms.html section 3, home, level pages, FAQ)',
+              '[who pays printing/postage] CONFIRMED by owner 23 Oct: included in the S$250 beta fee (nothing to do)',
               '[parcel policy] draft default: report within 7 days, we reprint and resend once at no cost; a lawyer to confirm (terms.html section 3, home FAQ)',
               '[address retention] draft default: delivery name/address/phone deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later (owner decision 23 Oct); lawyer to confirm; also name the printer and courier in privacy.html',
               'delivery fields (address, postal code, parcel phone) and the delivery consent are on the WhatsApp registration form only; the portal sign-up does not collect them yet (see portal/README.md)'):

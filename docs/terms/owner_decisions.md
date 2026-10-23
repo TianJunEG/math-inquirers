@@ -136,3 +136,10 @@ Owner decision: online payment goes through Stripe Checkout (card and PayNow, SG
 
 ## 23 Oct 2026: extension workbooks extend the HOLIDAY program (owner clarification)
 The Level 1 extension workbook pilot (and the other levels) is an EXTENSION OF THE HOLIDAY PROGRAM of the same level: its 10 units follow the 10 holiday lessons in order (same topics and ideas, harder and further, new questions), so a child who finished the holiday program can carry on, and the unit titles can say "Holiday Lesson N: more practice". Each unit still re-explains the idea briefly with a worked example so it works alone (a buyer who did not attend must not be lost), and it never repeats the holiday workbook's questions. It is not an extension of the term-time program.
+
+## 23 Oct 2026: printing and postage for the posted beta workbook are INCLUDED in the program fee (owner)
+Owner: printing and postage are included in the program fees (the S$250 beta fee), no separate charge (matches the draft terms). Parcel policy: draft stands unless the owner changes it (report within 7 days of the first lesson or of delivery, one free resend, PDF sent straight away; second loss to be discussed): owner to confirm.
+
+## 23 Oct 2026: PRINTED workbooks are black and white; SOFT COPIES stay colour (owner decision)
+Owner: the printable (physical, posted) workbooks must be black and white; soft copies (PDF downloads, designed PDFs) stay in colour. Applies to the six holiday workbooks and the Level 1 term books (workbook, answer key, home pack), and to later levels. Printed on cheaper stock (80 to 100 gsm), double-sided. Implementation: `print/make_bw_print.py` turns the colour print PDFs into 1-bit 600 dpi B&W print PDFs in `outputs/print/bw/` (same pages, binding, blank backs, gutter); colour is mapped to patterns by hue family so nothing depends on colour alone; `print/check_bw.py` measures non-grey pixels and light tints. Colour print PDFs stay in `outputs/print/` for soft copies. See `docs/printing/README_bw.md`. Quote request and print spec updated.
+
