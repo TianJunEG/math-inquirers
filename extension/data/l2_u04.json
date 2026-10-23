@@ -1,0 +1,930 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 4,
+ "id": "L2U04",
+ "title": "Pattern machines",
+ "topic": "Patterns with multiplication",
+ "holiday_lesson": 4,
+ "goal": "I can find far places in a repeating pattern. I can use a table and a rule for a growing pattern. I can find numbers that two counting patterns share.",
+ "learn": {
+  "intro": "A repeating pattern is one group again and again. The last shape of each group is in a times table. A growing pattern goes up by the same number each step. A table helps.",
+  "example": {
+   "problem": "This pattern repeats again and again. What is the 26th shape?",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "triangle",
+     "circle",
+     "circle",
+     "square",
+     "triangle",
+     "circle",
+     "circle",
+     "square",
+     "triangle",
+     "circle",
+     "circle",
+     "square"
+    ],
+    "per_row": 12,
+    "sep": 4,
+    "width_mm": 150
+   },
+   "steps": [
+    "One group has 4 shapes: triangle, circle, circle, square.",
+    "Groups end in the 4 times table: 4, 8, 12, 16, 20, 24.",
+    "Place 24 is the last shape of a group, a square.",
+    "Place 25 starts again with a triangle. Place 26 is a circle."
+   ],
+   "answer": "The 26th shape is a circle."
+  },
+  "howto": {
+   "title": "How to find a far place",
+   "steps": [
+    "Find the size of one group.",
+    "Count in groups to near your place.",
+    "That place is the LAST shape of a group.",
+    "Count on to your place."
+   ]
+  },
+  "facts": {
+   "title": "Growing patterns",
+   "lines": [
+    "Each step adds the same number.",
+    "A table shows the steps and the rule.",
+    "Check: is the number in the pattern?"
+   ]
+  },
+  "try": {
+   "id": "L2U04-L01",
+   "text": "The pattern star, square, square repeats again and again. What is the 14th shape?   {circ:star|square}",
+   "answer": {
+    "value": [
+     "square"
+    ],
+    "text": "square"
+   },
+   "explanation": "One group has 3 shapes. 12 is in the 3 times table, so place 12 is the last shape of a group. Place 13 is a star and place 14 is a square."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U04-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Count in 4s. Fill in the next numbers.   4,   8,   12,   {b},   {b},   {b}",
+   "answer": {
+    "value": [
+     "16",
+     "20",
+     "24"
+    ],
+    "text": "16, 20, 24"
+   },
+   "explanation": "Add 4 each time: 12 + 4 = 16, 16 + 4 = 20, 20 + 4 = 24. These are in the 4 times table."
+  },
+  {
+   "id": "L2U04-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "This pattern repeats again and again. Here are places 1 to 10.",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "star",
+     "square",
+     "square",
+     "circle",
+     "star",
+     "square",
+     "square",
+     "circle",
+     "star",
+     "square"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Place 16 is a   {circ:star|square|circle}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Place 22 is a   {circ:star|square|circle}",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Place 33 is a   {circ:star|square|circle}",
+     "answer": {
+      "value": [
+       "star"
+      ],
+      "text": "star"
+     }
+    }
+   ],
+   "explanation": "One group has 4 shapes, so groups end in the 4 times table. (a) 16 ends a group: the last shape is a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group (4 × 8), so 33 starts again with a star.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U04-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Ali writes the letters of CHESS again and again.",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "C",
+     "H",
+     "E",
+     "S",
+     "S",
+     "C",
+     "H",
+     "E",
+     "S",
+     "S"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 17th letter is {b}",
+     "answer": {
+      "value": [
+       "H"
+      ],
+      "text": "H"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 6th letter E is in place {b}",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In 30 letters there are {b} letters S.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "One group has 5 letters: C, H, E, S, S. (a) 15 ends a group, so 16 is C and 17 is H. (b) E is the 3rd letter of a group: places 3, 8, 13, 18, 23, 28. The 6th E is in place 28. (c) 30 letters is 6 groups. Each group has 2 S, so 6 × 2 = 12.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U04-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A bead string has 1 square bead, then 4 round beads, again and again. Here are the first 10 beads.",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "square",
+     "circle",
+     "circle",
+     "circle",
+     "circle",
+     "square",
+     "circle",
+     "circle",
+     "circle",
+     "circle"
+    ],
+    "width_mm": 150,
+    "numbers": false
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The string has 8 square beads. How many round beads are there? {b}",
+     "answer": {
+      "value": [
+       "32"
+      ],
+      "text": "32"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many beads are on the string altogether? {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "explanation": "One group has 1 square and 4 round beads, 5 beads in all. 8 square beads means 8 groups. (a) 8 groups of 4 round beads: 8 × 4 = 32. (b) 8 groups of 5 beads: 8 × 5 = 40. Check: 8 + 32 = 40."
+  },
+  {
+   "id": "L2U04-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Each pizza is cut into 4 slices.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "Pizzas",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "rows": [
+     [
+      "Slices",
+      "4",
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     2.2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill in the table.",
+     "answer": {
+      "value": [
+       "8",
+       "12",
+       "16",
+       "20",
+       "24"
+      ],
+      "text": "8, 12, 16, 20, 24",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "10 pizzas have {b} slices.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "28 slices make {b} pizzas.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "d",
+     "text": "14 slices make {b} pizzas and {b} slices are left over.",
+     "answer": {
+      "value": [
+       "3",
+       "2"
+      ],
+      "text": "3 pizzas and 2 slices"
+     }
+    }
+   ],
+   "explanation": "Each pizza adds 4 slices: 4, 8, 12, 16, 20, 24. (b) 10 × 4 = 40. (c) 4 × 7 = 28. (d) 3 pizzas use 12 slices, and 14 - 12 = 2 slices are left over."
+  },
+  {
+   "id": "L2U04-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Sticks make a chain of squares. 1 square uses 4 sticks, 2 squares use 7 sticks and 3 squares use 10 sticks.",
+   "figure": {
+    "type": "l2_sticks",
+    "kind": "sq",
+    "counts": [
+     1,
+     2,
+     3
+    ],
+    "width_mm": 96
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 squares use {b} sticks.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "b",
+     "text": "6 squares use {b} sticks.",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    },
+    {
+     "label": "c",
+     "text": "8 squares use {b} sticks.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    }
+   ],
+   "explanation": "Each new square adds 3 sticks: 4, 7, 10, 13, 16, 19, 22, 25. (a) 13. (b) 19. (c) 25. Another way: 8 squares need 8 × 3 = 24 sticks, plus 1 extra for the first side. 24 + 1 = 25."
+  },
+  {
+   "id": "L2U04-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Find the rule. Then write the next 2 numbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "7, 12, 17, 22, {b}, {b}    The rule is   {circ:add 4|add 5|add 7}",
+     "answer": {
+      "value": [
+       "27",
+       "32",
+       "add 5"
+      ],
+      "text": "27, 32 and add 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "50, 44, 38, {b}, {b}    The rule is   {circ:subtract 5|subtract 6|subtract 7}",
+     "answer": {
+      "value": [
+       "32",
+       "26",
+       "subtract 6"
+      ],
+      "text": "32, 26 and subtract 6"
+     }
+    }
+   ],
+   "explanation": "(a) Each number is 5 more: 22 + 5 = 27 and 27 + 5 = 32. (b) Each number is 6 less: 38 - 6 = 32 and 32 - 6 = 26."
+  },
+  {
+   "id": "L2U04-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Siti counts in 3s from 3. Ravi counts in 5s from 5. Write each list up to 40 on the lines below the questions.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The numbers they both say are:  {ll}",
+     "answer": {
+      "value": [
+       "15",
+       "30"
+      ],
+      "text": "15 and 30",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "The next number they both say is {b}",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    }
+   ],
+   "explanation": "Siti: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39. Ravi: 5, 10, 15, 20, 25, 30, 35, 40. Both say 15 and 30. They meet every 15, so the next is 30 + 15 = 45.",
+   "space": {
+    "rows": [
+     "Siti: 3, 6, 9,",
+     "Ravi: 5, 10, 15,"
+    ]
+   }
+  },
+  {
+   "id": "L2U04-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "A pattern goes triangle, circle, circle, again and again. Here are places 1 to 9.",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "triangle",
+     "circle",
+     "circle",
+     "triangle",
+     "circle",
+     "circle",
+     "triangle",
+     "circle",
+     "circle"
+    ],
+    "width_mm": 130
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "24 shapes make {b} groups of 3.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} circles in the first 24 shapes.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "There are {b} triangles in the first 24 shapes.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) 24 ÷ 3 = 8 groups. (b) Each group has 2 circles: 8 × 2 = 16. (c) Each group has 1 triangle: 8 × 1 = 8. Check: 16 + 8 = 24.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U04-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Towers of cubes grow in the same way. Tower 1 is 4 cubes tall. Tower 2 is 6 cubes tall. Tower 3 is 8 cubes tall.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "Tower",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "rows": [
+     [
+      "Cubes",
+      "4",
+      "6",
+      "8",
+      null,
+      null,
+      null
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     2.2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill in the table.",
+     "answer": {
+      "value": [
+       "10",
+       "12",
+       "14"
+      ],
+      "text": "10, 12, 14",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Tower 10 has {b} cubes.",
+     "answer": {
+      "value": [
+       "22"
+      ],
+      "text": "22"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Tower {b} has 18 cubes.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "Each tower has 2 more cubes: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. Tower 10 has 22 cubes and tower 8 has 18 cubes. Another way: tower n has n × 2 + 2 cubes, so tower 10 has 20 + 2 = 22.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U04-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A pattern starts at 3. It goes up 2, then up 4, then up 2, then up 4, and so on: 3, 5, 9, 11, 15 ...",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Will it say 41? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Will it say 40? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "Every 2 steps the number goes up by 6: 3, 5, 9, 11, 15, 17, 21, 23, 27, 29, 33, 35, 39, 41. So 41 is in the pattern. All the numbers are odd (odd + 2 and odd + 4 stay odd), so it never says 40.",
+   "hint": "Write more numbers. Are they odd or even?",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U04-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "This pattern repeats again and again. Here are places 1 to 10. Could a star be in this place?",
+   "figure": {
+    "type": "l2_pattern",
+    "items": [
+     "square",
+     "star",
+     "circle",
+     "circle",
+     "triangle",
+     "square",
+     "star",
+     "circle",
+     "circle",
+     "triangle"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Place 17   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Place 22   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Place 35   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Place 47   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "explanation": "One group has 5 shapes and the star is the 2nd one. Stars are in places 2, 7, 12, 17, 22 ... that is 2 more than the 5 times table. 17 = 15 + 2, yes. 22 = 20 + 2, yes. 35 is in the 5 times table, so it is the last shape: no. 47 = 45 + 2, yes.",
+   "hint": "Stars are 2 more than a number in the 5 times table.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U04-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Sticks make a chain of triangles. 1 triangle uses 3 sticks, 2 triangles use 5 sticks and 3 triangles use 7 sticks.",
+   "figure": {
+    "type": "l2_sticks",
+    "kind": "tri",
+    "counts": [
+     1,
+     2,
+     3
+    ],
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "10 triangles use {b} sticks.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has 40 sticks. The most triangles he can make is {b}",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Sticks left over: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "explanation": "Each new triangle adds 2 sticks, and the first stick adds 1. 10 triangles: 10 × 2 + 1 = 21. 19 triangles use 19 × 2 + 1 = 39 sticks, and 20 triangles need 41. So Ben makes 19 triangles with 40 - 39 = 1 stick left.",
+   "hint": "Each triangle adds 2 sticks. Find the rule."
+  },
+  {
+   "id": "L2U04-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "1, 4, 9, 16 are square numbers: 1 × 1, 2 × 2, 3 × 3, 4 × 4.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 × 6 = {b}",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The next 2 square numbers after 25 are {b} and {b}.",
+     "answer": {
+      "value": [
+       "36",
+       "49"
+      ],
+      "text": "36 and 49"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 10th square number is {b}",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    }
+   ],
+   "explanation": "(a) 6 × 6 = 36. (b) After 5 × 5 = 25 come 6 × 6 = 36 and 7 × 7 = 49. (c) 10 × 10 = 100. The gaps grow by 2 each time: 3, 5, 7, 9 ...",
+   "hint": "A square number is a number times itself.",
+   "beyond": "Square numbers"
+  },
+  {
+   "id": "L2U04-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Frog A lands on 4, 8, 12 ... (jumps of 4). Frog B starts on 1 and lands on 4, 7, 10 ... (jumps of 3).",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Up to 30, they both land on {b}, {b} and {b}.",
+     "answer": {
+      "value": [
+       "4",
+       "16",
+       "28"
+      ],
+      "text": "4, 16 and 28",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "The next number they both land on is {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Frog C starts at 2 and jumps 4. Do A and C ever land on the same number? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "Frog A: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Frog B: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Both: 4, 16, 28 and then 40. They meet every 12 because 12 is in both the 3 and 4 times tables. Frog C lands on 2, 6, 10 ... always 2 more than a 4 times table number, and Frog A lands only on the 4 times table: never together.",
+   "hint": "They land together every 12. Why 12?"
+  },
+  {
+   "id": "L2U04-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "The pattern star, circle, circle, square, square repeats again and again. Ravi says place 40 is a star. Siti says place 40 is a square.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Who is right? {circ:Ravi|Siti}",
+     "answer": {
+      "value": [
+       "Siti"
+      ],
+      "text": "Siti"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Place 43 is a   {circ:star|circle|square}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    }
+   ],
+   "explanation": "One group has 5 shapes and 40 is in the 5 times table, so place 40 is the last shape of a group: a square. Siti is right. Place 41 is a star, place 42 and place 43 are circles.",
+   "hint": "Place 40 is in the 5 times table. It is the last shape."
+  },
+  {
+   "id": "L2U04-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own pattern of 4 shapes. It repeats again and again. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: triangle, square, circle, circle. Place 28 ends a group, so place 29 is a triangle and place 30 is a square."
+   },
+   "explanation": "Example: triangle, square, circle, circle repeats. Groups end at 4, 8, ... 28. Place 28 is a circle, so place 29 is a triangle and place 30 is a square.",
+   "hint": "Place 28 is the last shape of a group. Count on from there.",
+   "space": {
+    "rows": [
+     "Draw the first 8 shapes:",
+     "Place 30 is a:"
+    ]
+   }
+  },
+  {
+   "id": "L2U04-C01",
+   "tier": "quiz",
+   "text": "The pattern star, circle, square repeats again and again. The 20th shape is a   {circ:star|circle|square}",
+   "answer": {
+    "value": [
+     "circle"
+    ],
+    "text": "circle"
+   },
+   "explanation": "One group has 3 shapes. 18 is in the 3 times table, so place 18 is a square. Place 19 is a star and place 20 is a circle."
+  },
+  {
+   "id": "L2U04-C02",
+   "tier": "quiz",
+   "text": "Each box has 5 pens. 9 boxes have {b} pens.",
+   "answer": {
+    "value": [
+     "45"
+    ],
+    "text": "45"
+   },
+   "explanation": "9 groups of 5: 5, 10, 15, 20, 25, 30, 35, 40, 45."
+  },
+  {
+   "id": "L2U04-C03",
+   "tier": "quiz",
+   "text": "Count in 4s from 4 and in 5s from 5, up to 40. How many numbers are in both lists? {b}",
+   "answer": {
+    "value": [
+     "2"
+    ],
+    "text": "2"
+   },
+   "explanation": "Ali says 4, 8, ... 40. Mei says 5, 10, ... 40. Both say 20 and 40. That is 2 numbers."
+  },
+  {
+   "id": "L2U04-C04",
+   "tier": "quiz",
+   "text": "Tower 1 has 3 cubes, tower 2 has 7 and tower 3 has 11. Tower 6 has {b} cubes.",
+   "answer": {
+    "value": [
+     "23"
+    ],
+    "text": "23"
+   },
+   "explanation": "Each tower has 4 more: 3, 7, 11, 15, 19, 23. Tower 6 has 23 cubes."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}
