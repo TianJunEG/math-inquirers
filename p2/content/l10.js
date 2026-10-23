@@ -22,14 +22,14 @@ const graphFig = (() => {
 })();
 const cakeFig = svg(600, 64, `<rect x="50" y="8" width="500" height="48" rx="6" fill="${Y}" stroke="${N}" stroke-width="3"/>` + Array.from({ length: 9 }, (_, i) => `<line x1="${100 + i * 50}" y1="8" x2="${100 + i * 50}" y2="56" stroke="${N}" stroke-width="2.5"/>`).join(''), 'A cake cut into 10 equal pieces in a row');
 const towersFig = (() => {
-  // Tower 1 = 4 cubes, Tower 2 = 8 cubes, Tower 3 = 12 cubes (one cube = 9 px high)
-  let b = '', x = 150; const c = 9;
+  // Tower 1 = 4 cubes, Tower 2 = 8 cubes, Tower 3 = 12 cubes; each cube 36 x 18 units so the cubes can be counted
+  let b = '', x = 90; const ch = 18, cw = 36;
   [1, 2, 3].forEach(n => {
-    for (let i = 0; i < 4 * n; i++) b += `<rect x="${x}" y="${118 - (i + 1) * c}" width="${c * 3}" height="${c}" fill="${Y}" stroke="${N}" stroke-width="1.5"/>`;
-    b += txt(x + c * 1.5, 138, 'Tower ' + n, 15);
-    x += 110;
+    for (let i = 0; i < 4 * n; i++) b += `<rect x="${x}" y="${232 - (i + 1) * ch}" width="${cw}" height="${ch}" fill="${Y}" stroke="${N}" stroke-width="2.2"/>`;
+    b += txt(x + cw / 2, 254, 'Tower ' + n, 17);
+    x += 170;
   });
-  return `<svg viewBox="0 0 600 146" width="420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three towers of cubes. Tower 1 has 4 cubes, Tower 2 has 8 cubes, Tower 3 has 12 cubes" style="max-width:100%">${b}</svg>`;
+  return `<svg viewBox="0 0 600 262" width="520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three towers of cubes. Tower 1 has 4 cubes, Tower 2 has 8 cubes, Tower 3 has 12 cubes" style="max-width:100%">${b}</svg>`;
 })();
 const W5 = [2300, 1900, 1900, 1900, 1900];
 

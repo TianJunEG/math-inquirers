@@ -67,7 +67,7 @@ const extra = (n) => {
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(p(t('Think harder is for anyone who wants it. Try a question, then try the Investigation on the last page of this lesson if you like.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); const fx = FG[n + '.t' + (i + 1)]; if (fx) out.push(fx()); out.push(...lines(fx ? 1 : 3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); const fx = FG[n + '.t' + (i + 1)]; if (fx) out.push(fx()); out.push(...lines(fx ? 1 : (n === 8 ? 2 : 3))); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));

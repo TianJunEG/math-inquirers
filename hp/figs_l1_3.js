@@ -190,7 +190,7 @@ const pictograph = (o) => {
 // ---------------------------------------------------------------- clock face (>= 35 mm: r >= 66 units). Hour hand short and thick, minute hand long and thin.
 const clockF = (cx, cy, r, h, m, o = {}) => {
   let s = C(cx, cy, r, '#fff', { sw: 3.2 });
-  for (let i = 0; i < 60; i++) { const a = i * Math.PI / 30, big = i % 5 === 0, r1 = r - (big ? 10 : 5); s += L(cx + r1 * Math.sin(a), cy - r1 * Math.cos(a), cx + (r - 2) * Math.sin(a), cy - (r - 2) * Math.cos(a), { sw: big ? 2.4 : 1.2 }); }
+  for (let i = 0; i < 60; i++) { if (o.minor === false && i % 5) continue; const a = i * Math.PI / 30, big = i % 5 === 0, r1 = r - (big ? 10 : 5); s += L(cx + r1 * Math.sin(a), cy - r1 * Math.cos(a), cx + (r - 2) * Math.sin(a), cy - (r - 2) * Math.cos(a), { sw: big ? 2.4 : 1.2 }); }
   if (o.numbers !== false) for (let i = 1; i <= 12; i++) { const a = i * Math.PI / 6, rr = r - 24; s += T(cx + rr * Math.sin(a), cy - rr * Math.cos(a) + 6, i, Math.max(15, r * .2)); }
   if (h !== null) {
     const ha = ((h % 12) + m / 60) * Math.PI / 6, ma = m * Math.PI / 30;

@@ -94,10 +94,39 @@ const queue3b = () => {
   s += C(520, y, r, Y) + T(520, y + 6, 'Siti', 12) + T(520, y + 36, 'last', 14);
   return W(svg(600, 106, s, 'Ali is 2nd from the front, 3 people are between Ali and Siti, and Siti is last'), 0);
 };
+// small item pictures for the shopping list (about 9 mm), shown above each name
+const itemPic3 = (name) => {
+  const k = {
+    'Book': () => `<rect x="8" y="5" width="32" height="36" rx="3" fill="${BL}" stroke="${NAVY}" stroke-width="2.4"/><line x1="15" y1="5" x2="15" y2="41" stroke="${NAVY}" stroke-width="2"/><line x1="21" y1="16" x2="34" y2="16" stroke="${NAVY}" stroke-width="2"/><line x1="21" y1="24" x2="34" y2="24" stroke="${NAVY}" stroke-width="2"/>`,
+    'Pen set': () => [10, 20, 30].map((x, i) => `<rect x="${x}" y="6" width="7" height="32" rx="2" fill="${[Y, RD, GR][i]}" stroke="${NAVY}" stroke-width="2"/><polygon points="${x},38 ${x + 7},38 ${x + 3.5},44" fill="${NAVY}"/>`).join(''),
+    'Puzzle': () => `<path d="M8 10 H20 a5 5 0 1 1 8 0 H40 V22 a5 5 0 1 0 0 8 V40 H8 Z" fill="${GR}" stroke="${NAVY}" stroke-width="2.4" stroke-linejoin="round"/>`,
+    'Stickers': () => `<polygon points="24,4 29,17 43,17 32,26 36,40 24,32 12,40 16,26 5,17 19,17" fill="${Y}" stroke="${NAVY}" stroke-width="2.4" stroke-linejoin="round"/>`,
+    'Water bottle': () => `<rect x="17" y="3" width="14" height="7" rx="2" fill="#fff" stroke="${NAVY}" stroke-width="2.2"/><path d="M15 12 H33 V40 Q33 44 29 44 H19 Q15 44 15 40 Z" fill="${BL}" stroke="${NAVY}" stroke-width="2.4"/>`
+  }[name];
+  return k ? `<svg viewBox="0 0 48 48" width="34" height="34" xmlns="http://www.w3.org/2000/svg" aria-label="${name}" style="vertical-align:middle">${k()}</svg>` : '';
+};
+const l9c = () => bm({ rows: [{ label: '3 m 6 cm', segs: [{ u: 100, t: '1 m', k: 'a' }, { u: 100, t: '1 m', k: 'a' }, { u: 100, t: '1 m', k: 'a' }, { u: 22, t: '6', k: 'h', size: 13 }], brace: { from: 0, to: 322, t: '= ? cm', pos: 'top' } }], unit: 1.5, labelW: 96, rowH: 34, y0: 14 }, 'A bar for 3 m 6 cm: three 1 m pieces and 6 cm');
+const clocks11 = () => { let s = ''; for (let k = 1; k <= 11; k++) { const col = (k - 1) % 6, row = Math.floor((k - 1) / 6), cx = 50 + col * 100, cy = 38 + row * 88; s += F.clockF(cx, cy, 33, k, 0, { numbers: false, minor: false }) + T(cx, cy + 53, k + ':00', 15); } return W(svg(600, 182, s, 'Eleven clock faces showing 1 o’clock to 11 o’clock'), 2); };
+// base-ten blocks key: thousand cube, hundred flat, ten rod, one unit
+const blocksKey = () => {
+  let s = '', x = 10;
+  // thousand: a cube drawn as front face + top + side
+  s += R(x, 22, 46, 46, '#fff', { sw: 2.4 }) + P([[x, 22], [x + 14, 10], [x + 60, 10], [x + 46, 22]], '#F0F2F6', { sw: 2.2 }) + P([[x + 46, 22], [x + 60, 10], [x + 60, 56], [x + 46, 68]], '#DDE2EC', { sw: 2.2 });
+  for (let i = 1; i < 10; i++) s += L(x + i * 4.6, 22, x + i * 4.6, 68, { sw: .6 }) + L(x, 22 + i * 4.6, x + 46, 22 + i * 4.6, { sw: .6 });
+  s += T(x + 30, 90, '1 thousand', 15); x += 120;
+  s += R(x, 22, 46, 46, '#fff', { sw: 2.4 }); for (let i = 1; i < 10; i++) s += L(x + i * 4.6, 22, x + i * 4.6, 68, { sw: .8 }) + L(x, 22 + i * 4.6, x + 46, 22 + i * 4.6, { sw: .8 });
+  s += T(x + 23, 90, '1 hundred', 15); x += 110;
+  s += R(x, 22, 9, 46, '#fff', { sw: 2.4 }); for (let i = 1; i < 10; i++) s += L(x, 22 + i * 4.6, x + 9, 22 + i * 4.6, { sw: .8 });
+  s += T(x + 4, 90, '1 ten', 15); x += 90;
+  s += R(x, 59, 9, 9, Y, { sw: 2.2 }); s += T(x + 4, 90, '1 one', 15);
+  s += T(330, 52, '10 hundreds make 1 thousand', 15, { a: 'start', w: 600, i: true, c: '#44506F' });
+  return W(svg(600, 100, s, 'Base-ten blocks: a thousand cube, a hundred flat, a ten rod and a one unit'), 2);
+};
 const FX = {
+  '8.t3': clocks11,
   '4.4': l4q4, '4.5': l4q5, '4.6': l4q6, '4.t1': l4t1, '4.t2': l4t2, '4.t3': l4t3, '4.t4': l4t4, '4.c7': l4c7,
   '6.5': l6q5, '6.t2': l6t2, '6.t3': l6t3, '6.t4': l6t4, '6.c6': l6c6,
   '9.1f': ribbon3m, '9.4': l9q4, '9.5a': l9q5a, '9.5b': l9q5b, '9.5c': l9q5c, '9.6': l9q6, '9.t2': l9t2, '9.t3': l9t3, '9.c5': l9c5, '9.c6': l9c6,
   '10.3a': queue3, '10.3b': queue3b,
 };
-module.exports = { FX };
+module.exports = { FX, itemPic3 };

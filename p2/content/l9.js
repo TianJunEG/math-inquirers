@@ -27,11 +27,7 @@ const scale = (cx, top, left, right, label, arm) => {
     `<line x1="${cx - arm}" y1="${by + 3}" x2="${cx + arm}" y2="${by + 3}" stroke="${N}" stroke-width="5"/>` +
     `<line x1="${cx}" y1="${by + 3}" x2="${cx}" y2="${by + 44}" stroke="${N}" stroke-width="6"/><polygon points="${cx},${by - 5} ${cx - 7},${by + 7} ${cx + 7},${by + 7}" fill="${Y}" stroke="${N}" stroke-width="2"/><rect x="${cx - 34}" y="${by + 44}" width="68" height="10" rx="4" fill="${N}"/>`;
 };
-const scalesFig = svg(600, 125,
-  scale(88, 2, ['melon'], ['apple', 'apple'], 'Scale 1', 52) +
-  scale(270, 2, ['apple'], ['w100', 'w100'], 'Scale 2', 56) +
-  scale(476, 2, ['melon'], ['apple', 'lemon', 'lemon', 'lemon', 'lemon'], 'Scale 3', 62),
-  'Three balanced scales. Scale 1: one melon balances two apples. Scale 2: one apple balances two 100 g weights. Scale 3: one melon balances one apple and four lemons.');
+const scalesFig = require('../figs_l2.js').scalesQ1();
 
 const jug = (x, base, h, w, lab) => `<path d="M${x} ${base - h} L${x + w} ${base - h} L${x + w} ${base} L${x} ${base} Z" fill="${SKY}" stroke="${N}" stroke-width="3"/><path d="M${x + w} ${base - h + 10} q18 4 18 ${h / 3} q0 ${h / 4} -18 ${h / 3}" fill="none" stroke="${N}" stroke-width="3"/><path d="M${x} ${base - h} l-10 -8" stroke="${N}" stroke-width="3"/>${txt(x + w / 2, base - h / 2 + 7, lab, 20)}`;
 const jugsFig = svg(600, 86,

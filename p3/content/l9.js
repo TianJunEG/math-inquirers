@@ -107,7 +107,7 @@ module.exports = {
     W.push(...lines(1));
     W.push(q(3, 'Siti has $20. She wants to buy 3 different things from this list.', { keepNext: true }));
     { const ws = [1980, 1980, 1980, 1980, 1980];
-      W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
+      W.push(tbl(ws, [row(['Book', 'Pen set', 'Puzzle', 'Stickers', 'Water bottle'].map((s, i) => cell(['<div style="text-align:center">' + require('../figs_l3.js').itemPic3(s) + '</div>', s], ws[i], { bold: true, fill: 'EDEDED', h: 20 }))),
         row(['$7.85', '$4.60', '$6.90', '$2.35', '$5.50'].map((s, i) => cell(s, ws[i], { h: 40, size: 26 })))])); }
     W.push(sub('a', 'Can she buy the book, the puzzle and the water bottle? Show how you know.  ______________________'));
     W.push(sub('b', '(if time) Which 3 things should she buy to spend as much of her $20 as she can? How much change will she get?'));

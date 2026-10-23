@@ -86,14 +86,15 @@ const fracT3 = () => fracBars([{ label: '3/8 + 2/8', n: 8, s: 3, s2: 2, tail: '=
 const itemShape = (name, cx, cy, sz) => {
   if (name === 'apple') return icon('apple', cx, cy, sz);
   if (name === 'lemon') return `<ellipse cx="${cx}" cy="${cy}" rx="${sz * .42}" ry="${sz * .3}" fill="${Y}" stroke="${NAVY}" stroke-width="2.4"/>` + P([[cx - sz * .42, cy], [cx - sz * .52, cy - 3], [cx - sz * .52, cy + 3]], Y, { sw: 1.6 }) + P([[cx + sz * .42, cy], [cx + sz * .52, cy - 3], [cx + sz * .52, cy + 3]], Y, { sw: 1.6 });
+  if (name === 'melon') return `<ellipse cx="${cx}" cy="${cy}" rx="${sz * .6}" ry="${sz * .46}" fill="${GR}" stroke="${NAVY}" stroke-width="2.6"/>` + `<path d="M${cx - sz * .2} ${cy - sz * .44} Q${cx - sz * .36} ${cy} ${cx - sz * .2} ${cy + sz * .44} M${cx + sz * .2} ${cy - sz * .44} Q${cx + sz * .36} ${cy} ${cx + sz * .2} ${cy + sz * .44}" fill="none" stroke="${NAVY}" stroke-width="1.8"/>`;
   if (name === 'pomelo') return C(cx, cy, sz * .56, GR, { sw: 2.6 }) + `<path d="M${cx - sz * .3} ${cy - sz * .15} Q${cx} ${cy - sz * .4} ${cx + sz * .3} ${cy - sz * .15}" fill="none" stroke="${NAVY}" stroke-width="1.8"/>`;
   if (name === 'cube') return R(cx - sz * .36, cy - sz * .36, sz * .72, sz * .72, BL, { sw: 2.4 }) + L(cx - sz * .36, cy - sz * .36 + 8, cx + sz * .36, cy - sz * .36 + 8, { sw: 1.4 });
   if (name === 'ball') return C(cx, cy, sz * .42, RD, { sw: 2.4 }) + `<path d="M${cx - sz * .4} ${cy} Q${cx} ${cy + sz * .2} ${cx + sz * .4} ${cy}" fill="none" stroke="${NAVY}" stroke-width="1.8"/>`;
-  if (name.startsWith('w:')) return P([[cx - sz * .5, cy + sz * .36], [cx + sz * .5, cy + sz * .36], [cx + sz * .3, cy - sz * .36], [cx - sz * .3, cy - sz * .36]], '#E6E9F0', { sw: 2.4 }) + T(cx, cy + sz * .2, name.slice(2), 12, { w: 800 });
+  if (name.startsWith('w:')) return P([[cx - sz * .5, cy + sz * .36], [cx + sz * .5, cy + sz * .36], [cx + sz * .3, cy - sz * .36], [cx - sz * .3, cy - sz * .36]], '#E6E9F0', { sw: 2.4 }) + T(cx, cy + sz * .2, name.slice(2).replace(' g', 'g'), 11, { w: 800 });
   return '';
 };
 const scaleF = (cx, left, right, o = {}) => {
-  const arm = o.arm || 130, y = 40, sz = o.sz || 34; let s = '';
+  const arm = o.arm || 130, y = o.y || 40, sz = o.sz || 34; let s = '';
   s += L(cx, y, cx, y + 96, { sw: 3 }) + P([[cx - 22, y + 96], [cx + 22, y + 96], [cx, y + 6]], '#fff', { sw: 2.4 }) + L(cx - arm, y, cx + arm, y, { sw: 4 });
   [[cx - arm, left], [cx + arm, right]].forEach(([px, items]) => {
     s += L(px, y, px - 46, y + 38, { sw: 1.8 }) + L(px, y, px + 46, y + 38, { sw: 1.8 }) + `<path d="M${px - 50} ${y + 38} Q${px} ${y + 56} ${px + 50} ${y + 38}" fill="#fff" stroke="${NAVY}" stroke-width="2.6"/>`;
@@ -103,6 +104,13 @@ const scaleF = (cx, left, right, o = {}) => {
   return s;
 };
 const balances = (defs, label, h) => W(svg(600, h || 166, defs.map((d, i) => scaleF(160 + i * 280, d[0], d[1], { arm: 88, sz: 30 })).join('') + defs.map((d, i) => T(160 + i * 280, 156, 'Scale ' + (i + 1), 16)).join(''), label), 2);
+// L9 No.1: three level scales, each item named under its pan
+const scalesQ1 = () => {
+  const defs = [[['melon'], ['apple', 'apple'], 'melon', '2 apples', 150, 0], [['apple'], ['w:100 g', 'w:100 g'], 'apple', 'two 100 g weights', 450, 0], [['melon'], ['apple', 'lemon', 'lemon', 'lemon', 'lemon'], 'melon', 'apple and 4 lemons', 300, 170]];
+  let s = '';
+  defs.forEach((d, i) => { const cx = d[4], oy = d[5]; s += `<g transform="translate(0,${oy})">` + scaleF(cx, d[0], d[1], { arm: 76, sz: 34, y: 40 }) + T(cx, 14, 'Scale ' + (i + 1), 17) + T(cx - 76, 150, d[2], 15, { w: 700 }) + T(cx + 76, 150, d[3], 15, { w: 700 }) + '</g>'; });
+  return svg(600, 335, s, 'Three level scales. Scale 1: a melon and 2 apples. Scale 2: an apple and two 100 g weights. Scale 3: a melon and an apple with 4 lemons.');
+};
 const balT1 = () => balances([[['apple', 'apple', 'lemon'], ['pomelo']], [['pomelo'], ['lemon', 'lemon', 'lemon', 'lemon', 'lemon']]], 'Two level scales: 2 apples and a lemon balance a pomelo; a pomelo balances 5 lemons', 150);
 const balT3 = () => balances([[['apple', 'apple', 'apple'], ['pomelo']], [['pomelo', 'apple', 'apple'], ['w:500 g']]], 'Two level scales: 3 apples balance a pomelo; a pomelo and 2 apples balance 500 g', 150);
 const balC6 = () => balances([[['cube', 'cube', 'ball'], ['ball', 'ball']], [['ball', 'cube'], ['w:300 g']]], 'Two level scales: 2 cubes and a ball balance 2 balls; a ball and a cube balance 300 g', 150);
@@ -134,7 +142,24 @@ const blocksT3 = () => {
 const strip12 = () => fracBars([{ label: 'one whole', n: 12, s: 0 }], { label: 'A strip cut into 12 equal parts' });
 const strip10 = () => fracBars([{ label: 'one whole', n: 10, s: 0 }], { label: 'A strip cut into 10 equal parts' });
 const kiteBar = () => bm({ rows: [{ label: 'Ben’s money', segs: [{ u: 2, t: 'kite (half)', k: 'a', size: 15 }, { u: .8, t: '$4', k: 'h' }, { u: 1.2, t: '$6 left', k: 'b', size: 15 }], brace: { from: 0, to: 4, t: '? at first', pos: 'top' } }], unit: 100, labelW: 90, rowH: 36 }, 'Ben’s money as a bar cut in half');
+// L3 No.3: a pen of 7 animals, all hens to start (2 legs each), one swapped for a goat at a time
+const hens7 = () => { let s = R(6, 4, 300, 56, '#fff', { sw: 2.2, rx: 8, dash: true }) + T(160, 76, 'the pen: 7 animals', 15, { w: 600, c: '#44506F' }); for (let i = 0; i < 7; i++) s += icon('bird', 36 + i * 38, 34, 34); s += T(330, 28, 'hen: 2 legs', 16, { a: 'start' }) + T(330, 52, 'goat: 4 legs', 16, { a: 'start' }); return W(svg(500, 84, s, 'A pen with 7 hens, each hen has 2 legs and each goat has 4 legs'), 2); };
+// L3 No.5: one van with 5 seats and 28 children
+const vans28 = () => { let s = R(6, 6, 188, 46, '#fff', { sw: 2.6, rx: 8 }); for (let i = 0; i < 5; i++) s += R(16 + i * 34, 14, 28, 30, Y, { sw: 2, rx: 4 }); s += T(100, 72, 'one van: 5 seats', 15); for (let i = 0; i < 28; i++) s += icon('face', 250 + (i % 14) * 24, 22 + Math.floor(i / 14) * 28, 22, { v: i }); s += T(400, 78, '28 children', 15); return W(svg(600, 90, s, 'A van with 5 seats and 28 children waiting'), 2); };
+// layers seen from above: [[cols, rows, label], ...]
+const layers = (defs, label) => { let s = '', x = 10; const c = 30; defs.forEach(([cols, rows, name]) => { for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) s += R(x + i * c, 24 + j * c, c, c, Y, { sw: 2.2 }); s += T(x + cols * c / 2, 14, name, 16); x += cols * c + 40; }); return W(svg(Math.max(x, 300), 24 + 4 * 30 + 12, s, label), 2); };
+const layersT1 = () => layers([[4, 3, 'bottom layer'], [3, 2, 'middle layer'], [1, 1, 'top']], 'Three layers of cubes seen from above: 4 by 3, 3 by 2 and 1');
+const layersC5 = () => layers([[1, 1, 'top'], [2, 2, 'next'], [3, 3, 'next'], [4, 4, 'bottom']], 'Four layers seen from above: 1 by 1, 2 by 2, 3 by 3 and 4 by 4');
+// L4 T4: houses made of sticks in a row (a house is 2 walls, a floor and 2 roof sticks; houses share walls): 5, 9, 13 sticks
+const stickHouses = () => {
+  let s = '', x = 14; const w = 40, h = 36, r = 22; const st = (x1, y1, x2, y2) => L(x1, y1, x2, y2, { sw: 6, c: '#B8860B' }) + L(x1, y1, x2, y2, { sw: 2, c: NAVY });
+  [1, 2, 3].forEach(k => { const y0 = 12 + r; for (let i = 0; i <= k; i++) s += st(x + i * w, y0, x + i * w, y0 + h); for (let i = 0; i < k; i++) s += st(x + i * w, y0 + h, x + (i + 1) * w, y0 + h) + st(x + i * w, y0, x + i * w + w / 2, y0 - r) + st(x + i * w + w / 2, y0 - r, x + (i + 1) * w, y0); s += T(x + k * w / 2, y0 + h + 26, k + (k > 1 ? ' houses' : ' house'), 16); x += k * w + 50; });
+  return W(svg(Math.max(x, 300), 112, s, 'Houses made of sticks in a row: 1, 2 and 3 houses'), 2);
+};
 const FX2 = {
+  '4.t4': stickHouses,
+  '8.t1': layersT1, '8.c5': layersC5,
+  '3.3': hens7, '3.5': vans28,
   '4.c6': towers, '4.c7': frogs, '9.t2': l9t2, '9.c7': l9c7, '9.t1': balT1, '9.t3': balT3, '9.c6': balC6, '1.t3': blocksT3, '7.c5': strip12, '7.c6': strip10, '6.t1': kiteBar,
 };
 const FX = {
@@ -145,4 +170,4 @@ const FX = {
   '5.t2': benBars, '5.t3': sitiBars, '5.t4': marbleBars,
   '6.1': legend1, '6.2': pay8, '6.3': changeLines, '6.5': spendBar, '6.6': stickerEraser,
 };
-module.exports = { fracQ3, itemPic, FX, W, bm, fracBars, sharing23, bars700, benBars, sitiBars, marbleBars, legend1, pay8, changeLines, spendBar };
+module.exports = { scalesQ1, fracQ3, itemPic, FX, W, bm, fracBars, sharing23, bars700, benBars, sitiBars, marbleBars, legend1, pay8, changeLines, spendBar };
