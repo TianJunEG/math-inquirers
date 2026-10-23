@@ -91,8 +91,8 @@ def page23():
              instr=["Add or take away.", "Write tens and ones in the boxes.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {it['a']} {it['op']} {it['b']} = {it['res']}" + ("" if it["k"] in ("add", "sub") else f" (missing digit {it['a'] % 10})") for i, it in enumerate(items)), check_result=f"Code word: {word}"),
-             note=("Four written sums (two adding, two taking away) have two boxes for the answer, tens then ones. Two sums have the answer printed and a box for the ones digit of the top number, so the pupil must undo the sum. "
-                   "All sums are within 100 and none needs renaming: no ones digits add to more than 9 and none take a bigger ones digit from a smaller one. "
+             note=("Four written sums (two adding, two taking away) have two boxes for the answer, tens then ones. Two sums have the answer printed and a box for the ones of the top number, so the pupil must undo the sum. "
+                   "All sums are within 100 and none needs renaming: the ones always add to 9 or less and a take-away never needs a borrow. "
                    "The syllabus lists algorithms (written methods) for adding and subtracting within 100 without giving a limit; the safe reading used here is no renaming."),
              seed=2303)
     solved = [solve_vsum(h) for h in htmls]
@@ -190,7 +190,7 @@ def page24():
     P = Page(no=24, title="Words and Numbers", tier=1, topic="Number words, numerals and ordinals",
              strand="Number and Algebra - Whole Numbers", syll="1.3, 1.7 (reading and writing numbers in numerals and in words; ordinal numbers and symbols)",
              ptype="Maze / path", mech="K6 route closes at FINISH through the stated number of boxes",
-             instr=["Start at START.", "Go to a box with the word for your number.", "Move up, down, left or right."],
+             instr=["Start at START.", "Go to the box saying your number.", "Move up, down, left or right."],
              mech_plain="Route: each step goes to a box whose top word says the number at the foot of the box you leave; the line must reach FINISH through the right number of boxes",
              body=body, check=f"Does your line reach FINISH? Count its boxes: are there {L}? Does each top word match?", check_boxes=None,
              key=dict(answers="Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {token_word(top[(r, c)])} / {token_num(bot[(r, c)])}" for r, c in path), check_result=f"Route reaches FINISH through {L} boxes; every top word names the number at the foot of the box before it."),
@@ -283,7 +283,7 @@ def page25():
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=5,
              key=dict(answers=f"1) {c1}, 2) {c2}, 3) 10 + {fk} = {10 + fk}, 4) {a1} - {b1} = {d1} more, 5) {a2} - {b2} = {d2} fewer", check_result=f"Code word: {word}"),
              note=("Three counting items (the third is a full ten frame and some more) and two comparing items. In the comparing items every picture in the shorter row is joined by a line to one in the longer row; the pictures with no line are the answer to how many more or how many fewer. "
-                   "Pictures are objects, never bare dots. Sets are 12 or fewer except the ten frame item (13 to 18)."),
+                   "Pictures are objects, never bare dots. Sets are 12 or fewer except the ten frame item, which has over 12."),
              seed=2505)
     solved = [sum(count_objs(s1).values()), sum(count_objs(s2).values()), sum(count_objs(s3).values()),
               solve_compare_svg(cmp1, k[3], k[4], "more"), solve_compare_svg(cmp2, k[5], k[6], "fewer")]

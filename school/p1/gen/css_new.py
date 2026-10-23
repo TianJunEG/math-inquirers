@@ -29,9 +29,9 @@ CSS_NEW += """
 .cc .ch{display:flex;align-items:center;gap:2mm;align-self:stretch}.cc .ch .cq{flex:1;font-size:12.5pt;line-height:1.2}.cc .ch .ab{flex:none}
 /* N06 hundred chart */
 .hchart{display:grid;grid-template-columns:repeat(10,13.4mm);margin:0 auto;border:0.8mm solid #000;width:max-content}
-.hc{border:0.4mm solid #000;height:11.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:13pt}
-.hc.ab{border-radius:0;width:auto;height:11.5mm;background:#fff}
+.hc{border:0.4mm solid #000;height:12mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:13pt}
+.hc.ab{border-radius:0;width:auto;height:12mm;background:#fff}
 .dtable{border-collapse:collapse;margin:0 auto}.dtable th,.dtable td{border:0.5mm solid #000;width:22mm;height:12.5mm;text-align:center;font-family:'Fredoka';font-weight:600;font-size:15pt}.dtable th{font-family:'Nunito Sans';font-weight:800;font-size:11pt;height:8mm}
-.dtable td .ab{width:16mm;height:11mm;border-width:0.5mm}
+.dtable td .ab{width:16mm;height:12mm;border-width:0.5mm}
 .mq{display:flex;gap:6mm;justify-content:center;font-size:14.5pt;flex-wrap:wrap}.mq .mqi{display:flex;align-items:center;gap:2mm}
 """
