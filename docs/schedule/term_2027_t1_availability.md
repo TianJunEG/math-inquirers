@@ -1,5 +1,7 @@
 # 2027 Term 1: Jasmine's availability and usable slots (draft, to confirm)
 
+**UPDATE 23 Oct 2026: term lessons are 90 minutes (owner decision). Sections 1-6 below are the superseded 75-minute history; the current slots are in section 7.**
+
 Written 23 Oct 2026 from Jasmine's weekly availability grid (yellow = free, red = blocked, white = taken) and her 2027 term-time slot grid (`docs/terms/owner_decisions.md`, entry "2027 term-time slot grid"). Everything marked "assumed" is for her to confirm. Singapore time. One tutor, all lessons online.
 
 ## 1. The transcribed grid
@@ -66,3 +68,35 @@ Spare slots for second groups: Sat 6:00-7:15pm (Levels 3-5), Thu 7:45-9:00pm (Le
 
 ## 6. Website
 The usable slots are placeholders in `website/data/interest_slots.json` (ids `T27-...`), labelled "2027 term time" and "Not open yet", under each suggested level. No 2027 dates or prices are shown. The 2026 holiday placeholders are unchanged.
+
+## 7. CURRENT: 90-minute re-derivation (supersedes sections 2-6)
+Rules: 90-minute lesson; at least 15 minutes to any other class or her private lesson/commitment (before and after); finish by 9:00pm; weekday start 3:00pm or later, weekend 9:00am or later; taken/blocked times as in section 1 (Sat 2:00-5:00pm orchestra, Sat 12:30-2:00pm lunch, Sun 10:30am-2:00pm church/lunch blocked). Computed by script on a 15-minute grid (every start time checked), then a maximal non-overlapping set per day with 15-minute breaks, earliest first. Anchors 3:00 / 4:45 / 6:30pm do not give the maximum on any day, so the pattern is packed instead.
+
+| Day | Free window after buffers | Slots (8 total) |
+|---|---|---|
+| Mon, Tue, Wed | no 90-minute window | none (Tue 3:00-4:30pm overlaps the 4:15pm lesson) |
+| Thu | 5:45-9:00pm | 5:45-7:15pm, 7:30-9:00pm |
+| Fri | 3:00-5:45pm | 3:00-4:30pm (4:15-5:45pm is the only other start; one lesson fits) |
+| Sat | 5:15-9:00pm | 5:15-6:45pm, 7:00-8:30pm |
+| Sun | 3:45-9:00pm | 3:45-5:15pm, 5:30-7:00pm, 7:15-8:45pm |
+
+Site ids and suggested levels (younger earlier): T27-FRI-1500 (L1-2), T27-SUN-1545 (L1-3), T27-THU-1745 (L3-5), T27-SAT-1715 (L3-5), T27-SUN-1730 (L3-5), T27-THU-1930 (L5-6), T27-SAT-1900 (L5-6), T27-SUN-1915 (L5-6).
+
+Flags:
+- Zero-buffer slots: none in the set. Sat 5:00-6:30pm would touch the orchestra (not used; Sat starts 5:15pm).
+- Ending after 8:30pm: Thu 7:30-9:00pm (ends 9:00pm) and Sun 7:15-8:45pm (Sunday night before school): Levels 5-6 only, not for younger levels. Sat 7:00-8:30pm ends exactly 8:30pm: Level 5-6 only.
+- Only one early weekday slot (Fri 3:00pm) now exists for Levels 1-2; the 75-minute set had two. Sun 3:45pm is the other early slot.
+- Slot count: 8 (was 9). Each level page lists at most 9 placeholders (Level 5), under the form's 12-selection cap; total site placeholders 14 (6 holiday + 8 term), but a parent only sees their own level's.
+
+DEFAULT draft assignment (for Jasmine to change), one weekly slot per level:
+| Level | Slot |
+|---|---|
+| 1 (6-8) | Fri 3:00-4:30pm |
+| 2 (7-9) | Sun 3:45-5:15pm |
+| 3 (8-10) | Sun 5:30-7:00pm |
+| 4 (9-11) | Thu 5:45-7:15pm |
+| 5 (10-12) | Sat 5:15-6:45pm |
+| 6 (11-13) | Sat 7:00-8:30pm |
+Spares: Thu 7:30-9:00pm and Sun 7:15-8:45pm (Levels 5-6), nothing early for a second Level 1-2 group.
+
+Open questions 1 (slot length) is closed: 90 minutes. Questions 2-4 and 6 still apply.
