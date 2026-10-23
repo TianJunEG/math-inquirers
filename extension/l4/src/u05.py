@@ -59,13 +59,14 @@ S.append(item(U+'-S08', 'start', 2, 'Ali buys a ruler for $1.85 and a notebook f
   ans=A('0.75'), why='$1.85 + $2.40 = $4.25. $5.00 − $4.25 = $0.75, which is 75¢.',
   space={'rows': ['Working:', '']}))
 S.append(item(U+'-S09', 'start', 3, 'Siti\'s bag and Ali\'s bag have a mass of 8.8 kg together. Ali\'s bag is 3 times as heavy as Siti\'s bag.',
-  fig=BARS([{'label': 'Siti', 'segs': [{'u': 1}]}, {'label': 'Ali', 'segs': [{'u': 1}, {'u': 1}, {'u': 1}]}], vbrace={'text': '8.8 kg'}, width_mm=120, unit=40, row_h=38, gap=14),
+  fig=BARS([{'label': 'Siti', 'segs': [{'u': 1}]}, {'label': 'Ali', 'segs': [{'u': 1}, {'u': 1}, {'u': 1}]}], vbrace={'text': '8.8 kg'}, width_mm=120, unit=40, row_h=32, gap=8),
   parts=[P('a', 'Siti\'s bag: {b} kg', A('2.2')), P('b', 'Ali\'s bag: {b} kg', A('6.6'))], partsrow=True,
   why='Siti\'s bag is 1 unit and Ali\'s bag is 3 units. 4 units = 8.8 kg, so 1 unit = 8.8 ÷ 4 = 2.2 kg. Ali\'s bag is 3 × 2.2 = 6.6 kg.'))
 S.append(item(U+'-S10', 'start', 3, '4 identical books have a mass of 2.8 kg. A pencil case has a mass of 0.35 kg.',
   parts=[P('a', 'One book: {b} kg', A('0.7')), P('b', 'One book and the pencil case: {b} kg', A('1.05')),
          P('c', '3 books and the pencil case: {b} kg', A('2.45'))],
-  why='(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg.'))
+  why='(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg.',
+  space={'rows': ['Working:']}))
 S.append(item(U+'-S11', 'start', 3, 'Find the value of each.',
   parts=[P('a', '4.7 + 2.35 = {b}', A('7.05')), P('b', '9.2 − 3.64 = {b}', A('5.56')),
          P('c', '2.5 × 4 = {b}', A(10)), P('d', '7.2 ÷ 6 = {b}', A('1.2'))],

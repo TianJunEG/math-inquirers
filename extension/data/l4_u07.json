@@ -948,7 +948,7 @@
    "id": "L4U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line, as shown. Find the perimeter of the whole shape. {b} cm",
+   "text": "Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line. What is the perimeter of the whole shape? {b} cm",
    "figure": {
     "type": "l4_poly",
     "shapes": [
@@ -1016,7 +1016,7 @@
    "id": "L4U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make one bigger rectangle.",
+   "text": "Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make 1 rectangle.",
    "parts": [
     {
      "label": "a",

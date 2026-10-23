@@ -82,12 +82,12 @@ T.append(item(U+'-T01', 'think', 4, 'A rectangle has a perimeter of 42 cm. Its l
   ans=A(104), hint='Length + width is half of the perimeter.',
   why='Half of the perimeter is length + width = 21 cm. The length is 5 more than the width, so 21 − 5 = 16 cm is 2 widths. The width is 8 cm and the length is 13 cm: 13 × 8 = 104 cm².',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line, as shown. Find the perimeter of the whole shape. {b} cm',
+T.append(item(U+'-T02', 'think', 4, 'Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line. What is the perimeter of the whole shape? {b} cm',
   fig=POLY([L_([[0, 0], [9, 0], [9, 4], [5, 4], [5, 3], [2, 3], [2, 2], [0, 2]])], cell=14, width_mm=56, padx=14, pady=14),
   ans=A(26), hint='Find the side of each square first.', figright=True,
   why='The sides are 2, 3 and 4 cm. Push the steps out: the shape fits in a 9 cm by 4 cm rectangle with the same perimeter, 2 × (9 + 4) = 26 cm.',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make one bigger rectangle.',
+T.append(item(U+'-T03', 'think', 4, 'Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make 1 rectangle.',
   parts=[P('a', 'Joined along an 8 cm side, the perimeter is {b} cm', A(28)),
          P('b', 'Joined along a 3 cm side, the perimeter is {b} cm', A(38))],
   hint='Draw both. Find the length and width of each big rectangle.',

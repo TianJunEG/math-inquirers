@@ -33,7 +33,7 @@ S.append(item(U+'-S01', 'start', 1, 'Two next-door numbers multiply to make 506.
 S.append(item(U+'-S02', 'start', 1, 'Mei has one 5¢ coin, one 10¢ coin and one 50¢ coin. She picks some of the coins. She picks at least 1.',
   parts=[P('a', 'How many different totals can she make? {b}', A(7)), P('b', 'How many of the totals are more than 50¢? {b}', A(3))],
   why='The totals are 5, 10, 50, 15, 55, 60 and 65: 7 totals. The totals above 50 are 55, 60 and 65: 3 totals.',
-  space={'rows': ['Totals: {ll}']}))
+  space={'rows': ['Totals: {ll}', '']}))
 S.append(item(U+'-S03', 'start', 1, 'A concert sold 17 tickets. Some cost $6 and some cost $10. The takings were $134.',
   parts=[P('a', 'Suppose all 17 cost $6. They cost ${b}.', A(102)), P('b', 'That is ${b} too little.', A(32)),
          P('c', 'Each swap to a $10 ticket adds $4. There are {b} tickets at $10.', A(8))],

@@ -209,7 +209,8 @@
    ],
    "space": {
     "rows": [
-     "Totals: {ll}"
+     "Totals: {ll}",
+     ""
     ]
    },
    "explanation": "The totals are 5, 10, 50, 15, 55, 60 and 65: 7 totals. The totals above 50 are 55, 60 and 65: 3 totals."

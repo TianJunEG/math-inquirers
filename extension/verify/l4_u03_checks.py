@@ -134,7 +134,9 @@ def _():
 
 @check('L4U03-T02')
 def _():
-    f = ITEM['L4U03-T02']['figure']['rows']
+    import json, os
+    ud = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'data', 'l4_u03.json')))
+    f = next(i for i in ud['items'] if i['id'] == 'L4U03-T02')['figure']['rows']
     assert f[0]['segs'][0]['t'] == '52' and [x.get('t') for x in f[2]['segs']] == ['5', None, '11']
     found = []
     for m in range(1, 200):

@@ -91,19 +91,18 @@ T.append(item(U+'-T03', 'think', 4, 'A robot faces N. It turns 90° clockwise, t
 G.append(item(U+'-G01', 'go', 5, 'Four rays leave a point O on a straight line. They make 4 angles. Each angle is 10° greater than the one before it.',
   parts=[P('a', 'The smallest angle is {b}°', A(30)), P('b', 'The greatest angle is {b}°', A(60))],
   hint='The 4 angles add up to 180°. Take away the extra degrees first.',
-  why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.'))
+  why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.',
+  space={'rows': ['Working:']}))
 G.append(item(U+'-G02', 'go', 5, 'A Ferris wheel has 12 equal seats, numbered 1 to 12 clockwise. Seat 1 is at the top.',
   parts=[P('a', 'The seat at the bottom is Seat {b}', A(7)),
          P('b', 'The smaller angle at the centre between Seat 2 and Seat 9: {b}°', A(150)),
          P('c', 'The wheel turns 270° clockwise. Seat 1 is now where Seat {b} was', A(10))],
   hint='12 seats share 360°. What is the angle between neighbours?',
-  why='(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10.',
-  space={'rows': ['Working:']}))
+  why='(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10.'))
 G.append(item(U+'-G03', 'go', 5, 'A round pizza is cut from the centre into 4 slices. The 2nd slice is 2 times the 1st. The 3rd and 4th slices are each 3 times the 1st.',
   parts=[P('a', 'The smallest slice has an angle of {b}°', A(40)), P('b', 'The 4th slice has an angle of {b}°', A(120))],
   hint='Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.',
-  why='The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°.',
-  space={'rows': ['Working:']}))
+  why='The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°.'))
 G.append(item(U+'-G04', 'go', 5, 'Think about the smaller angle between the clock hands at each o\'clock time. Which times give an angle between 100° and 160°?',
   parts=[P('a', 'How many times are there? {b}', A(4)), P('b', 'Write the times: {b} {b} {b} {b}', A(4, 5, 7, 8, text='4, 5, 7 and 8 o\'clock'))],
   hint='Write the angle for every o\'clock time first.',

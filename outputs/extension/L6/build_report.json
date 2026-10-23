@@ -207,9 +207,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9119947219361483,
+   "fill": 0.8876802265705458,
    "over": false,
-   "excess_mm": -22.6,
+   "excess_mm": -28.9,
    "edition": "soft"
   },
   {
@@ -277,9 +277,9 @@
    "kind": "learn",
    "label": "Unit 4 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9914231462409887,
+   "fill": 0.980931385169928,
    "over": false,
-   "excess_mm": -2.2,
+   "excess_mm": -4.9,
    "edition": "soft"
   },
   {
@@ -834,9 +834,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9296794541709578,
+   "fill": 0.9704557157569516,
    "over": false,
-   "excess_mm": -18.1,
+   "excess_mm": -7.6,
    "edition": "soft"
   },
   {
@@ -1203,9 +1203,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9161141864057673,
+   "fill": 0.8917996910401648,
    "over": false,
-   "excess_mm": -21.6,
+   "excess_mm": -27.8,
    "edition": "print"
   },
   {
@@ -1273,9 +1273,9 @@
    "kind": "learn",
    "label": "Unit 4 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9955426107106076,
+   "fill": 0.9850508496395468,
    "over": false,
-   "excess_mm": -1.1,
+   "excess_mm": -3.8,
    "edition": "print"
   },
   {
@@ -1830,9 +1830,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9296794541709578,
+   "fill": 0.9704557157569516,
    "over": false,
-   "excess_mm": -18.1,
+   "excess_mm": -7.6,
    "edition": "print"
   },
   {
@@ -2012,7 +2012,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 12.74,
+  "mb": 12.75,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0037
  }

@@ -904,11 +904,11 @@
    "id": "L4U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "On every dice, the top face and the bottom face add up to 7.",
+   "text": "Dice stand on a table. On every dice, the top and bottom faces add up to 7.",
    "parts": [
     {
      "label": "a",
-     "text": "2 dice stand on a table. The tops add up to 9. The bottoms add up to {b}",
+     "text": "2 dice: tops add up to 9, so bottoms add up to {b}",
      "answer": {
       "value": [
        "5"
@@ -918,7 +918,7 @@
     },
     {
      "label": "b",
-     "text": "3 dice stand on a table. The tops add up to 12. The bottoms add up to {b}",
+     "text": "3 dice: tops add up to 12, so bottoms add up to {b}",
      "answer": {
       "value": [
        "9"
@@ -928,7 +928,7 @@
     },
     {
      "label": "c",
-     "text": "One dice stands on a table. The 4 side faces add up to {b}",
+     "text": "1 dice: the 4 side faces add up to {b}",
      "answer": {
       "value": [
        "14"
