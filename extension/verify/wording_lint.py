@@ -24,7 +24,7 @@ CAST = {'Ali', 'Mei', 'Siti', 'Ben', 'Kumar', 'Aisha', 'Wei', 'Ravi', 'Jenny', '
 
 def plain(t):
     t = re.sub(r'\{circ:([^}]*)\}', lambda m: ' '.join(m.group(1).split('|')), t)
-    return t.replace('{b}', ' ').replace('{l}', ' ')
+    return t.replace('{b}', ' ').replace('{ll}', ' ').replace('{l}', ' ')
 
 
 def sentences(t):
@@ -84,6 +84,12 @@ def main():
                  (u['id'] + ' example answer', L['example']['answer'], 'stem')]
         texts += [(f'{u["id"]} step {i + 1}', s, 'stem') for i, s in enumerate(L['example']['steps'])]
         texts += [(f'{u["id"]} how-to {i + 1}', s, 'stem') for i, s in enumerate(L['howto']['steps'])]
+        if L.get('example2'):
+            e2 = L['example2']
+            texts += [(u['id'] + ' example 2', e2['problem'], 'stem'), (u['id'] + ' example 2 answer', e2['answer'], 'stem')]
+            texts += [(f'{u["id"]} step2 {i + 1}', s, 'stem') for i, s in enumerate(e2['steps'])]
+        if L.get('facts'):
+            texts += [(f'{u["id"]} facts {i + 1}', s, 'stem') for i, s in enumerate(L['facts'].get('lines', []))]
         tr = L['try']; texts += [(tr['id'], tr['text'], 'stem'), (tr['id'] + ' why', tr['explanation'], 'explain')]
         for it in u['items']:
             texts.append((it['id'], it['text'], 'stem'))
@@ -91,6 +97,8 @@ def main():
                 texts.append((f'{it["id"]}({p["label"]})', p['text'], 'part'))
             if it.get('hint'):
                 texts.append((it['id'] + ' hint', it['hint'], 'hint'))
+                if len(it['hint']) > 68:
+                    errs.append(f'{it["id"]} hint: {len(it["hint"])} characters (max 68: one line at 11 pt)')
             texts.append((it['id'] + ' why', it['explanation'], 'explain'))
         for where, t, kind in texts:
             n += 1

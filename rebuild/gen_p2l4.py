@@ -34,7 +34,7 @@ def talk_slide(sid,time,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
     return sec(sid,time,body,notes)
 def exit_slide(sid,time,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,time,body,notes)
 def svgwrap(label,vw,vh,inner,w=None,h=None,extra=''):
     w=w or vw; h=h or vh
@@ -73,7 +73,7 @@ put('p2l4-title',title_slide('p2l4-title','P2  •  LESSON 4  •  WEEK 2','Patt
  'Objective: Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it forwards and backwards; find the numbers that two counting patterns share. Tables used: 2, 3, 4, 5 and 10 only. '
  'Thinking strategies taught today: LOOK FOR A PATTERN (group size, where groups end) and MAKE A TABLE / MAKE A LIST (growing patterns, two counting lists). '
  'Materials: Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters. '
- 'Online: Coloured pencils and squared paper (or Lego bricks) for the cube train; children draw sticks for the growing pattern and hold up their tables. '
+ 'Online: Coloured pencils and squared paper (or Lego bricks) for the cube train; children draw sticks for the growing pattern and check their tables against the slide. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------

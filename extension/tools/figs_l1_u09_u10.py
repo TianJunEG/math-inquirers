@@ -79,7 +79,8 @@ def ruler(spec, w=None):
     ry = top + nobj * (OH + gap) + 4       # top of ruler
     RHt = 74
     W = X0 * 2 + mx * CM
-    H = ry + RHt + (66 if hop else 12)
+    note = spec.get('_theme') == 'colour'        # soft copy only: a reminder to print at 100 percent
+    H = ry + RHt + (66 if hop else 12) + (24 if note else 0)
     P = []
     for i, o in enumerate(objs):
         y = top + i * (OH + gap)
@@ -108,6 +109,8 @@ def ruler(spec, w=None):
             yb = ry + RHt + 6
             P.append(f'<path d="M{a},{yb} Q{(a + b) / 2},{yb + 36} {b},{yb}" fill="none" stroke="{TEAL}" stroke-width="3.4" stroke-linecap="round"/>')
             P.append(_t((a + b) / 2, yb + 54, k + 1, 22, TEAL, weight=800))
+    if note:
+        P.append(_t(W - 8, H - 6, 'Real size when printed at 100%', 17, anchor='end', weight=600))
     return F._wrap(''.join(P), W, H, 'centimetre ruler', w or round(W * 10 / CM, 1))
 
 

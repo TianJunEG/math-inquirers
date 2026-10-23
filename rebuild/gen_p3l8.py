@@ -300,7 +300,7 @@ put(PFX+'talk',S_(PFX+'talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk fo
 
 # ================= 25. exit =================
 lets=letter_svg('FVHZ',90,130,70,12,'The letters F, V, H and Z')
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Which letters have BOTH a pair of parallel lines and a pair of perpendicular lines?',44,600)+lets)+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Which letters have BOTH a pair of parallel lines and a pair of perpendicular lines?',44,600)+lets)+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: F and H. F: the top and middle lines are parallel, and each meets the upright line at a right angle. H: the two upright lines are parallel, and the middle line is perpendicular to both. V: two lines that meet, not at a right angle. Z: the top and bottom are parallel, but the slanted line is not perpendicular to them. Extension: how many right angles are in a square drawn as a noughts-and-crosses grid? (36)'))
 
 # ---------- write ----------

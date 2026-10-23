@@ -27,7 +27,7 @@ STARTERS=card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”  
 def talk_slide(sid,q,notes):
     return sec(sid,'72–80 MIN',h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42))+STARTERS,notes)
 def exit_slide(sid,q,notes):
-    return sec(sid,'80–90 MIN',h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400)),notes)
+    return sec(sid,'80–90 MIN',h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400)),notes)
 def explore1(sid,steps,pic,notes):
     lis=''.join(f'<li>{E(s)}</li>' for s in steps)
     body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:48px;margin:0;display:flex;flex-direction:column;gap:8px;line-height:1.3">{lis}</ol>',extra='padding:24px 40px')+card(pic,extra='padding:16px 24px;align-items:center')

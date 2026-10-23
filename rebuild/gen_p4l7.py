@@ -253,7 +253,7 @@ put('p4l7-talk',sec('p4l7-talk','78.5–82.5 MIN',body,'Minutes 78.5 to 82.5. Pa
 c=46
 X=2*c
 ex=SV(10*c,7*c,grid(0,0,10,7,c)+PL(X,c,c,[(0,0),(5,0),(5,2),(7,2),(7,5),(0,5)])+T(X+3.5*c,c+5*c+40,'7 cm',30)+T(X-10,c+2.5*c+10,'5 cm',30,NAVY,'end')+T(X+6*c,c+2*c+36,'2 cm',28,RED)+T(X+5*c+10,c+1*c+10,'2 cm',28,RED,'start'),'A 7 cm by 5 cm rectangle with a 2 cm square cut from one corner')
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{ex}'+p('A 7 cm by 5 cm rectangle has a 2 cm by 2 cm square cut from one corner. Find the area and the perimeter of the shape left.',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{ex}'+p('A 7 cm by 5 cm rectangle has a 2 cm by 2 cm square cut from one corner. Find the area and the perimeter of the shape left.',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p4l7-exit',sec('p4l7-exit','82.5–86.5 MIN',body,'Minutes 82.5 to 86.5. Answer: area 35 − 4 = 31 cm²; perimeter 24 cm, the same as the 7 by 5 rectangle (push the corner back out). Children who write 20 cm for the perimeter forgot the two new sides; children who write 31 cm mixed up area and perimeter. Extension: Ravi has 24 m of fencing for a rectangular pen with whole-metre sides. One side is a wall and needs no fence. What is the largest area? (72 m²: 6 m, 12 m, 6 m.)'))
 
 # ---------- write ----------

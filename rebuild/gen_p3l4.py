@@ -31,7 +31,7 @@ def talk_slide(sid,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
     return sec(sid,'70–80 MIN',body,notes)
 def exit_slide(sid,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,'80–90 MIN',body,notes)
 def check_rows(sid,time,title,rows,notes,lw=210,gap=128,size=38):
     body=h2(title)

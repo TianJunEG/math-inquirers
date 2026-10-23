@@ -200,7 +200,7 @@ put('p2l1-chwalk',sec('p2l1-chwalk','Challenge',body,'Use after pairs have tried
 # ---------- talk / exit ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Which is bigger, 401 or 399? Ali says 399, because it has two 9s. Who is right? Why?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p2l1-talk',sec('p2l1-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: 401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. Count on from 399: 400, 401. Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Use the digit cards 6, 0 and 2 once each. Write the biggest and the smallest 3-digit number.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Use the digit cards 6, 0 and 2 once each. Write the biggest and the smallest 3-digit number.',46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p2l1-exit',sec('p2l1-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: biggest 620, smallest 206 (not 026, which is not a 3-digit number). Extension: use any three of the cards 1, 3, 5 and 7. How many different 3-digit numbers can you make? (24)'))
 
 # ---------- write ----------

@@ -17,7 +17,7 @@ TIERS = {'start', 'think', 'go', 'quiz'}
 def blanks(item_or_part, figure=None):
     n = 0
     t = item_or_part.get('text', '')
-    n += len(re.findall(r'\{b\}|\{l\}|\{circ:', t))
+    n += len(re.findall(r'\{b\}|\{ll\}|\{l\}|\{circ:', t))
     return n
 
 

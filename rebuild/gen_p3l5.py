@@ -262,7 +262,7 @@ put('p3l5-talk',sec('p3l5-talk','70–80 MIN',body,
  'Answer: If the leftover were as big as the group size, we could make one more group, so the remainder is always smaller. The 3 pupils left over still need a seat, so we need one more minibus. Praise the reasons, not only the answers.'))
 
 # ---------- 26. exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('29 children go on a ride. Each car holds 4 children. How many cars are needed? Write the division and explain the leftover.',44,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('29 children go on a ride. Each car holds 4 children. How many cars are needed? Write the division and explain the leftover.',44,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p3l5-exit',sec('p3l5-exit','80–90 MIN',body,
  'Minutes 80 to 90. Answer: 29 ÷ 4 = 7 r 1. 8 cars are needed: the 1 child left over still needs a car. Extension: Find the smallest number bigger than 1 that leaves a remainder of 1 when divided by 2, 3, 4, 5 and 6 (61).'))
 

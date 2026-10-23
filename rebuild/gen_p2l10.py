@@ -30,7 +30,7 @@ def talk_slide(sid,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I started by …”   “I noticed that …”   “I know because …”',38,600))
     return sec(sid,'72–80 MIN',body,notes)
 def exit_slide(sid,q,a,notes,time='80–90 MIN'):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer and how you know on a slip of paper. Show it to your tutor, then collect your stamp.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer and how you know on a slip of paper. Tick it when your tutor shows the answer, then collect your stamp.',34,400))
     body+=answer(128,760,1664,'Answer: '+a)
     return sec(sid,time,body,notes)
 def write_deck(lesson_title,order,sections):

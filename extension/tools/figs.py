@@ -173,7 +173,7 @@ def render(spec, theme='colour'):
     elif t == 'number_line':
         s = number_line(**{k: v for k, v in spec.items() if k != 'type'})
     elif t in _plugin_figs():
-        s = _plugin_figs()[t](spec, w)
+        s = _plugin_figs()[t](dict(spec, _theme=theme), w)
     else:
         raise ValueError('unknown figure type ' + t)
     if w and 'width:' not in s.split('style="', 1)[1].split('"')[0]:

@@ -105,7 +105,7 @@ put(PRE+'title',title_slide(PRE+'title','Crack missing digits one column at a ti
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 # ---------- warm-up 1: make 1000 ----------
 pairs=[('350','650'),('720','280'),('105','895'),('999','1'),('460','540'),('75','925')]
-body=h2('Warm-up: Make 1000')+p('What goes with each number to make 1000? Write it, then hold it up.',36,600,MUTED)
+body=h2('Warm-up: Make 1000')+p('What goes with each number to make 1000? Write it, then say it together on three.',36,600,MUTED)
 CW=533
 for i,(a,b) in enumerate(pairs):
     L=128+(i%3)*(CW+32); T=290+(i//3)*300
@@ -113,7 +113,7 @@ for i,(a,b) in enumerate(pairs):
     body+=pin(L,T,CW,inner,None,WHITE,24,'28px 32px',f'box-sizing:border-box;height:270px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,T+160,CW-48,f'<p style="font-size:40px;font-weight:800;line-height:1.2">{E(b)}</p>','pop',SOFT,16,'12px 20px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put(PRE+'warm1',sec(PRE+'warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Make 1000. Play TWO rounds of three cards: round 1 is the top row (350, 720, 105), round 2 the bottom row (999, 460, 75). Point to one card at a time; children write the missing number on their whiteboards and hold them up together; click to reveal. Answers: 650, 280, 895, 1, 540, 925. '
+ 'Minutes 0 to 5. Make 1000. Play TWO rounds of three cards: round 1 is the top row (350, 720, 105), round 2 the bottom row (999, 460, 75). Point to one card at a time; children write the missing number on their whiteboards and say the answer together on three; click to reveal. Answers: 650, 280, 895, 1, 540, 925. '
  'Ask: "How did you work out 720?" Good ways: count on to the next hundred (720 → 800 is 80) then to 1000 (200 more), so 280; or use bonds of 10 for each place. For 105 watch for 995 (it is 895: 105 + 895 = 1000). '
  'Quick finisher: "Make 10 000 with 3500." (6500)'))
 qs=[('1.','3456 + 1000 = ?','4456'),('2.','5000 − 1 = ?','4999'),('3.','2700 + 300 = ?','3000')]
@@ -218,7 +218,7 @@ for i,t in enumerate(['Tens: B + C + carry ends in B, so C + carry = 10. C = 9, 
 put(PRE+'chwalk',sec(PRE+'chwalk','Challenge',body,'Use after pairs have tried. Q1: the thousands decide most of the difference, so make them next to each other; then make the bigger number as small as it can be and the smaller number as big as it can be. Trying every neighbouring pair: 2345 − 1876 = 469, 3145 − 2876 = 269, 4125 − 3876 = 249, 5123 − 4876 = 247, 6123 − 5874 = 249, 7123 − 6854 = 269, 8123 − 7654 = 469. Q2: C cannot be 0 (the answer would start with 0), so C + carry = 10 means C = 9. Then the hundreds give A = 4 (4 + 4 + 1 = 9) and the ones give 9 + 5 = 14.'))
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Why do we always start a missing-digit puzzle at the ones column?',42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
 put(PRE+'talk',sec(PRE+'talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answer: a carry moves from right to left, so the ones column is the only one with nothing coming into it. Once we know the ones, we know the carry, and the next column has only one possible digit, and so on. That is also why each puzzle has only one answer. Follow-up: "How did checking by adding help you?" Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Find the missing digit in the box.',44)+'<div style="display:flex;justify-content:center">'+col_img(['5_3','126'],'+','689',height=300,alt='5, an empty box, 3 plus 126 equals 689, the box is a missing digit')+'</div>')+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Find the missing digit in the box.',44)+'<div style="display:flex;justify-content:center">'+col_img(['5_3','126'],'+','689',height=300,alt='5, an empty box, 3 plus 126 equals 689, the box is a missing digit')+'</div>')+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put(PRE+'exit',sec(PRE+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 563 + 126 = 689 (the digit in the box is 6). Ones 3 + 6 = 9; tens: box + 2 = 8, so the box is 6; hundreds 5 + 1 = 6. Extension: find three sums of two 3-digit numbers with a 3-digit answer that use the digits 1 to 9 once each; add the digits of each answer (always 18).'))
 
 ORDER=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','teach3','key','break','teachmagic','ws1','ws1ans','teachpyr','teach999','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']

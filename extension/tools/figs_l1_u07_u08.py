@@ -125,17 +125,19 @@ def loops(spec, w=None):
     P.append(f'<circle cx="{bx}" cy="{cy}" r="{r}" fill="{SOFT}" fill-opacity="0.55" stroke="none"/>')
     P.append(f'<circle cx="{ax}" cy="{cy}" r="{r}" fill="none" stroke="{NAVY}" stroke-width="{SW + 0.6}"/>')   # outlines on top of the fills (no grey line in print)
     P.append(f'<circle cx="{bx}" cy="{cy}" r="{r}" fill="none" stroke="{NAVY}" stroke-width="{SW + 0.6}" stroke-dasharray="14 7"/>')
-    P.append(_t(ax - 40, 36, spec['a'], 27))
-    P.append(_t(bx + 40, 36, spec['b'], 27))
+    P.append(_t(ax - 40, 36, spec['a'], 29))
+    P.append(_t(bx + 40, 36, spec['b'], 29))
 
     def put(key, cx, cyy, per_row):
-        vals = reg.get(key) or []
+        """Numbers are separated by commas (a space alone made 3 7 / 9 read like 37)."""
+        vals = [str(v) for v in (reg.get(key) or [])]
         if not vals:
             return
-        rows = [vals[i:i + per_row] for i in range(0, len(vals), per_row)]
-        y0 = cyy - (len(rows) - 1) * 17
+        toks = [v + (',' if i < len(vals) - 1 else '') for i, v in enumerate(vals)]
+        rows = [toks[i:i + per_row] for i in range(0, len(toks), per_row)]
+        y0 = cyy - (len(rows) - 1) * 19
         for k, row in enumerate(rows):
-            P.append(_t(cx, y0 + k * 34 + 10, '  '.join(str(v) for v in row), 28))
+            P.append(_t(cx, y0 + k * 38 + 11, ' '.join(row), 31))
     put('a', ax - 45, cy, 2)
     put('ab', (ax + bx) / 2, cy, 1)
     put('b', bx + 45, cy, 2)
@@ -185,4 +187,19 @@ def latin(spec, w=None):
     return F._wrap(''.join(P), 16 + n * cs, 16 + len(g) * cs, 'number grid', w or round((16 + n * cs) * 0.2, 1))
 
 
-FIGS = {'shapes': shapes, 'grids': grids, 'draw': draw, 'loops': loops, 'logic_grid': logic_grid, 'latin': latin}
+# ------------------------------------------------------------------------------------------------ names table (unit 7 Learn it)
+def names_table(spec, w=None):
+    """Shape names with the number of sides: a row of shapes, each with its name and its number of sides under it."""
+    names = spec['items']
+    cw = 104
+    P = []
+    for c, nm in enumerate(names):
+        cx = 6 + c * cw + cw / 2
+        P.append(shape_path(nm, cx, 46, 30))
+        P.append(_t(cx, 112, nm, 23 if len(nm) < 9 else 21))
+        P.append(_t(cx, 142, f'{SIDES[nm]} sides', 21, weight=600))
+    W = 12 + len(names) * cw
+    return F._wrap(''.join(P), W, 156, 'shape names', w or round(W * 0.16, 1))
+
+
+FIGS = {'names_table': names_table, 'shapes': shapes, 'grids': grids, 'draw': draw, 'loops': loops, 'logic_grid': logic_grid, 'latin': latin}

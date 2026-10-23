@@ -278,7 +278,7 @@ c=80
 dl2={(0,0):'3',(1,1):'1',(1,0):'2',(2,1):'?'}
 NETX=[(0,0),(1,0),(1,1),(2,1),(3,1),(3,2)]
 exfig=SV(4*c+20,3*c+20,cellsq(NETX,c,10,10,WHITE,dl2,40),'A dice net with 3, 2, 1 and a question mark in the squares, and two more empty squares')
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{exfig}'+p('This dice net shows 3, 2 and 1. Opposite faces add up to 7. Which number goes in the square marked "?"',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+f'<div style="display:flex;gap:40px;align-items:center">{exfig}'+p('This dice net shows 3, 2 and 1. Opposite faces add up to 7. Which number goes in the square marked "?"',42,600)+'</div>')+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p4l8-exit',sec('p4l8-exit','84–86.5 MIN',body,'Minutes 84 to 86.5. Answer: 4. The 3, 2, 1 and ? squares make a staircase: the 3 and the ? are the two ends of the step, so they are opposite, and 3 + 4 = 7. Children who write 6 or 5 chose a square next to it. Extension: fill in the other two squares. The square right of the ? is opposite the 1, so 6; the bottom-right square is opposite the 2, so 5.'))
 
 # ---------- write ----------

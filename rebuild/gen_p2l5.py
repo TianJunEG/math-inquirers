@@ -27,7 +27,7 @@ STARTERS=card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”  
 def talk_slide(sid,q,notes):
     return sec(sid,'72–80 MIN',h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42))+STARTERS,notes)
 def exit_slide(sid,q,notes):
-    return sec(sid,'80–90 MIN',h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400)),notes)
+    return sec(sid,'80–90 MIN',h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400)),notes)
 def explore1(sid,steps,pic,notes):
     lis=''.join(f'<li>{E(s)}</li>' for s in steps)
     body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:48px;margin:0;display:flex;flex-direction:column;gap:8px;line-height:1.3">{lis}</ol>',extra='padding:24px 40px')+card(pic,extra='padding:16px 24px;align-items:center')
@@ -56,7 +56,7 @@ put(f'{P}-title',title_slide(f'{P}-title',3,'Mystery Number Machines','Working B
  'Find mystery numbers in two-step machines with + − × ÷ by working backwards, and draw before-and-after bars for stories.',
  'Objective: Find a mystery number in two-step puzzles with +, −, × and ÷ by working backwards (undo the LAST step first with the opposite operation), check by going forwards, and use before-and-after bar models for stories where an amount changes. '
  'Materials: mini whiteboards, counters, paper cups, number machine cards (× 2, × 3, × 4, × 5, × 10, and + or − cards from 1 to 20), paper strips for bars. '
- 'Online: machine cards are shown on the slides; children write on whiteboards and hold them up; for bars they draw on paper or fold a paper strip into equal parts. '
+ 'Online: machine cards are shown on the slides; children write on whiteboards and say the answer together on three; for bars they draw on paper or fold a paper strip into equal parts. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, short teaching 36 to 38, worksheet page 1 38 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. '
  'Level: × and ÷ only with the 2, 3, 4, 5 and 10 tables; all numbers within 1000.'))
 

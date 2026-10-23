@@ -142,7 +142,7 @@ put('chwalk',sec(f'{L}-chwalk','Optional, if you finish early',body,'Use after p
 # ---- talk, exit ----
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(LS['share'],42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“What stays the same is …”   “I know because …”   “One unit is worth …”',38,600))
 put('talk',sec(f'{L}-talk','76–82 MIN',body,'Minutes 76 to 82. Pairs talk for 2 minutes, then share. Answer: Yes. If Ali gives Mei 20 marbles, Ali has 30 and Mei has 50: the difference is 20 again, but now Mei has more. The total is 80 the whole time. Ask: "When does the total stay the same? When does the difference stay the same?" (Giving between two people keeps the total. Both getting or spending the same keeps the difference.) Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(LS['exit']['q'],44,600))+card(p('Draw a model on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(LS['exit']['q'],44,600))+card(p('Draw a model on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: '+LS['exit']['a']+' Extension: '+LS['extension']))
 
 order=[f'{L}-{x}' for x in ['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','key','break','ws1','ws1ans','teachdiff','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']]

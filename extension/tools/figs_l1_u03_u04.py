@@ -11,6 +11,7 @@ import figs as F
 NAVY, SKY, YEL, GREY = F.NAVY, F.SKY, F.YEL, F.GREY
 _uid = itertools.count(1)
 SC = 0.14  # mm per viewBox unit when a spec gives no width_mm (keeps every figure the same scale)
+GROW = 1.4  # picture graphs are drawn 1.4 times larger than first built (icons were too small for ages 6-8)
 SW = 3.0   # stroke width in viewBox units (>= 0.5 pt when the figure is 100 to 170 mm wide)
 
 
@@ -116,7 +117,7 @@ def picture_graph(spec, width_mm=None):
         parts += p
         y += h + (18 if gi < len(graphs) - 1 else 0)
         W = max(W, w)
-    return F._wrap(''.join(parts), W, y + 2, 'picture graph', width_mm or round(W * spec.get('scale', SC), 1))
+    return F._wrap(''.join(parts), W, y + 2, 'picture graph', width_mm or round(W * spec.get('scale', SC) * GROW, 1))
 
 
 # ---------------------------------------------------------------- a row of shapes with place numbers
@@ -283,7 +284,32 @@ def tally(rows, width_mm=None):
     return F._wrap(''.join(parts), W, 4 * 0 + len(rows) * RH + 8, 'tally chart', width_mm or round(W * SC, 1))
 
 
-FIGS = {
+def grow_table(spec, width_mm=None):
+    """A growing pattern as a table: top row 'head' (day, week...) 1, 2, 3...; second row 'label' (leaves...) with the values;
+    small arcs and the step (+3) drawn between neighbouring values under the table."""
+    vals = spec['values']
+    n = len(vals)
+    LAB, CW, RH = 170, 78, 56
+    W = LAB + n * CW + 6
+    P = []
+    for r, (lab, row) in enumerate(((spec['head'], list(range(1, n + 1))), (spec['label'], vals))):
+        y = 4 + r * RH
+        P.append(f'<rect x="3" y="{y}" width="{LAB}" height="{RH}" fill="{SKY if r == 0 else '#fff'}" stroke="{NAVY}" stroke-width="{SW}"/>')
+        P.append(_t(3 + LAB / 2, y + RH / 2 + 10, lab, 28))
+        for c, v in enumerate(row):
+            x = 3 + LAB + c * CW
+            P.append(f'<rect x="{x}" y="{y}" width="{CW}" height="{RH}" fill="{SKY if r == 0 else '#fff'}" stroke="{NAVY}" stroke-width="{SW}"/>')
+            P.append(_t(x + CW / 2, y + RH / 2 + 10, v, 30))
+    yb = 4 + 2 * RH + 4
+    for c in range(n - 1):
+        a = 3 + LAB + c * CW + CW / 2 + 6
+        b = 3 + LAB + (c + 1) * CW + CW / 2 - 6
+        P.append(f'<path d="M{a},{yb} Q{(a + b) / 2},{yb + 30} {b},{yb}" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round"/>')
+        P.append(_t((a + b) / 2, yb + 52, spec['step'], 26))
+    return F._wrap(''.join(P), W, yb + 62, 'growing pattern table', width_mm or round(W * 0.17, 1))
+
+
+FIGS = {'grow_table': grow_table, 
     'picture_graph': lambda s, w: picture_graph(s, w),
     'shape_row': lambda s, w: shape_row(s['items'], s.get('start_no', 1), s.get('per_row', 10), s.get('numbers', True), w, s.get('items2')),
     'stick_rows': lambda s, w: stick_rows(s['rows'], w),

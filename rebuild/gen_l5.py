@@ -23,7 +23,7 @@ put('l5-we1',sec('l5-we1','28–30 MIN',body,'Click to reveal each step. Say eac
 # 8. try 1
 tq=[('a','? → + 7 → 15','8'),('b','? → − 4 → 9','13'),('c','? → + 9 → 20','11')]
 body=h2('Your turn: whiteboards')+p('Write the mystery number. Then check it by going forwards.',34,600,MUTED)+''.join(qrow(128,340+i*150,1250,a,b,42) for i,(a,b,c) in enumerate(tq))+''.join(answer(1420,340+i*150,372,c) for i,(a,b,c) in enumerate(tq))
-put('l5-try1',sec('l5-try1','30–31 MIN',body,'Children write on whiteboards and hold them up together. Click for each answer. For b, ask: "The machine took 4 away, so what is the opposite?" (add 4: 9 + 4 = 13). Anyone who writes 5 for b has taken away again: show it with counters.'))
+put('l5-try1',sec('l5-try1','30–31 MIN',body,'Children write on whiteboards and say the answer together on three. Click for each answer. For b, ask: "The machine took 4 away, so what is the opposite?" (add 4: 9 + 4 = 13). Anyone who writes 5 for b has taken away again: show it with counters.'))
 
 # 9. worked example 2
 body=h2('Worked example: two steps')+card(p('I think of a number. I add 5, then I take away 3. I get 9.',44,700))+step(1,'Draw it:  ? → + 5 → B → − 3 → 9',top=430,size=36)+step(2,'Undo the LAST step first: the opposite of − 3 is + 3.  9 + 3 = 12',top=540,size=36)+step(3,'Then undo + 5:  12 − 5 = 7',top=650,size=36)+step(4,'Check forwards:  7 + 5 = 12,  12 − 3 = 9  ✓  My number is 7.',top=760,size=36)

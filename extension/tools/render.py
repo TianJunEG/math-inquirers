@@ -24,14 +24,14 @@ def mk(text):
     """Inline markup: {b} answer box, {l} answer line, {circ:a|b|c} choices to circle, newline = line break."""
     t = esc(text)
     t = re.sub(r'\{circ:([^}]*)\}', lambda m: '<span class="circ">' + ''.join(f'<i>{o}</i>' for o in m.group(1).split('|')) + '</span>', t)
-    t = t.replace('{b}', '<span class="abox"></span>').replace('{l}', '<span class="aline"></span>')
+    t = t.replace('{b}', '<span class="abox"></span>').replace('{ll}', '<span class="aline long"></span>').replace('{l}', '<span class="aline"></span>')
     return t.replace('\n', '<br>')
 
 
 def plain(text):
     """Text without markup, for lint / checks / answers."""
     t = re.sub(r'\{circ:([^}]*)\}', lambda m: ' / '.join(m.group(1).split('|')), text)
-    return t.replace('{b}', '___').replace('{l}', '___').replace('\n', ' ')
+    return t.replace('{b}', '___').replace('{ll}', '___').replace('{l}', '___').replace('\n', ' ')
 
 
 def data_uri(path):
@@ -103,24 +103,49 @@ def items_of(unit, tier, page=None):
     return [it for it in unit['items'] if it['tier'] == tier and (page is None or it['page'] == page)]
 
 
+def worked_html(ex, theme, label):
+    """A worked example box. Optional: figure, side (figure to the left of the steps), figure sizes come from the spec."""
+    steps = ''.join(f'<li><span>{mk(s)}</span></li>' for s in ex['steps'])
+    fig = fig_html(ex['figure'], theme) if ex.get('figure') else ''
+    if ex.get('side') and fig:
+        mid = f'<div class="exside"><div class="exfig">{fig}</div><ol class="steps">{steps}</ol></div>'
+    else:
+        mid = fig + f'<ol class="steps">{steps}</ol>'
+    return (f'<div class="wex"><span class="tab">{label}</span><div class="stem">{mk(ex["problem"])}</div>{mid}'
+            f'<div class="ansbar">Answer: {esc(ex["answer"])}</div></div>')
+
+
+def facts_html(F, theme):
+    body = ''
+    if F.get('figure'):
+        body += fig_html(F['figure'], theme)
+    if F.get('lines'):
+        body += '<ul>' + ''.join(f'<li>{mk(x)}</li>' for x in F['lines']) + '</ul>'
+    return f'<div class="howto facts"><span class="tab">{esc(F["title"])}</span>{body}</div>'
+
+
 def unit_pages(unit, theme, cfg):
-    """The six pages of a unit as dicts {kind, label, body}."""
+    """The seven pages of a unit as dicts {kind, label, body}."""
     L = unit['learn']; ex = L['example']
     pages = []
     # 1 learn it
-    steps = ''.join(f'<li><span>{mk(s)}</span></li>' for s in ex['steps'])
-    learn = [head(unit, cfg), '<div class="pbody">',
+    howto = ('<div class="howto"><span class="tab">' + esc(L["howto"]["title"]) + '</span><ol>'
+             + ''.join(f'<li>{mk(s)}</li>' for s in L['howto']['steps']) + '</ol></div>')
+    if L.get('facts'):
+        row = f'<div class="two hf">{howto}{facts_html(L["facts"], theme)}</div>'
+    else:
+        row = howto
+    learn = [head(unit, cfg), '<div class="pbody learn' + (' tight' if L.get('tight') else '') + '">',
              f'<div class="h1">Learn it: {esc(unit["topic"])}</div>',
              f'<div class="goal"><b>My goal.</b> {esc(unit["goal"])}</div>',
              f'<div class="lead">{mk(L["intro"])}</div>',
-             '<div class="wex"><span class="tab">Worked example</span>',
-             f'<div class="stem">{mk(ex["problem"])}</div>', fig_html(ex['figure'], theme) if ex.get('figure') else '',
-             f'<ol class="steps">{steps}</ol><div class="ansbar">Answer: {esc(ex["answer"])}</div></div>',
-             f'<div class="howto"><span class="tab">{esc(L["howto"]["title"])}</span><ol>' + ''.join(f'<li>{mk(s)}</li>' for s in L['howto']['steps']) + '</ol></div>']
+             worked_html(ex, theme, 'Worked example 1' if L.get('example2') else 'Worked example')]
+    if L.get('example2'):
+        learn.append(worked_html(L['example2'], theme, 'Worked example 2'))
+    learn.append(row)
     tr = L['try']
-    tit = dict(tr, tier='quiz', text=tr['text'])
     learn.append('<div class="tryit"><div class="tier t-start" style="margin-bottom:2mm;font-size:14pt">' + ICON['start'] + '<span>Your turn</span><small>Answer at the back of the book.</small></div>'
-                 + item_html(dict(tr, tier='start'), 'Try', theme, hint=False) + '</div>')
+                 + item_html(dict(tr, tier='start'), 'Try', theme, hint=False, extra_cls='trysz') + '</div>')
     learn.append('</div>')
     pages.append({'kind': 'learn', 'label': 'Learn it', 'body': ''.join(learn)})
     # 2-4 start here
@@ -141,7 +166,7 @@ def unit_pages(unit, theme, cfg):
     body.append('</div>')
     pages.append({'kind': 'practice', 'label': 'Think harder', 'body': ''.join(body)})
     # 6 go further
-    body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('go', 'Big challenges. Hints are upside down.')]
+    body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('go', 'A weekend page. Big challenges. Hints are upside down.')]
     for i, it in enumerate(items_of(unit, 'go'), 1):
         body.append(item_html(it, i, theme))
     body.append('</div>')

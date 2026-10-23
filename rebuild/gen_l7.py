@@ -206,7 +206,7 @@ put('l7-chwalk',sec('l7-chwalk','Challenge',body,'Use after pairs have tried. Q1
 
 # ---------- exit ticket (new: the old one repeated worksheet Q4B) ----------
 eg=SV(252,252,gridb(6,6,3,3,80),'A grid 3 squares long and 3 squares high')
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('How many squares are in this grid? Count every size.',46,600)+eg)+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('How many squares are in this grid? Count every size.',46,600)+eg)+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('l7-exit',sec('l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 14 (9 small squares + 4 squares made of 4 small squares + 1 whole grid). This is the grid we counted in the worked example, so it checks the core idea. Children who write 9 counted only the small squares: ask "Are there any bigger squares hiding?" Extension: how many squares are in a grid 4 squares long and 2 squares high? (11: 8 + 3). Then 4 long and 3 high? (20: 12 + 6 + 2).'))
 
 

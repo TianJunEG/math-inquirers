@@ -35,7 +35,7 @@ def talk_slide(sid,time,prompt,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(prompt,42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
     return sec(sid,time,body,notes)
 def exit_slide(sid,time,q,notes,extra=''):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p(extra or 'Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p(extra or 'Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,time,body,notes)
 
 # ---------- 1. title ----------
@@ -56,7 +56,7 @@ for i,(t,a) in enumerate(cards):
     body+=pin(L,Tp,CWd,p(t,34,700),None,WHITE,24,'22px 24px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+24,Tp+150,120,f'<p style="font-family:{HF};font-size:48px;font-weight:600;text-align:center">{E(a)}</p>','pop',YEL,16,'4px 10px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p3l9-warm1',sec('p3l9-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Play TWO rounds of four cards (the top row, then the bottom row). Name that unit. Read each card aloud; children write the unit on whiteboards and hold them up together, then click to show (the cards reveal in order). '
+ 'Minutes 0 to 5. Play TWO rounds of four cards (the top row, then the bottom row). Name that unit. Read each card aloud; children write the unit on whiteboards and say the answer together on three, then click to show (the cards reveal in order). '
  'Ask each time: "Why not the other units?" A bus is 12 m (12 cm is a finger, 12 km is a long trip). A pencil is 15 cm. An MRT ride of about 15 km. Rice 5 kg. An eraser about 20 g. Medicine 5 ml. A fish tank about 40 ℓ. A watermelon about 3 kg. '
  'Quick finisher: "Put these in order: 1 m, 90 cm, 1 km." (90 cm, 1 m, 1 km). Watch for children who mix up mass and volume units (kg for a drink).'))
 

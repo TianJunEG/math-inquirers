@@ -28,7 +28,7 @@ def grams(tokens, n):
 
 def strip_markup(t):
     t = re.sub(r'\{circ:([^}]*)\}', lambda m: ' '.join(m.group(1).split('|')), t)
-    return t.replace('{b}', ' ').replace('{l}', ' ')
+    return t.replace('{b}', ' ').replace('{ll}', ' ').replace('{l}', ' ')
 
 
 def question_texts(unit):

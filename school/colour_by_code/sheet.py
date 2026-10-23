@@ -23,16 +23,21 @@ def components(pic):
     return list(comp.values())
 
 def assign(pic, rng):
-    """answer index 0..4 for every region: matching sets (mirror pairs, twin marks) share one; every colour used 2 to 4 times"""
+    """answer index 0..4 for every region: matching sets (mirror pairs, twin marks) share one; every colour used 2 or 3 times (4 on big pictures).
+    Balanced random fill: the sets, largest first, go to a random colour among those with room, so no colour is crowded."""
     comps = components(pic); n = len(pic.regions)
-    for _ in range(20000):
-        idx = {}
-        for c in comps:
-            k = rng.randrange(5)
+    for tries in range(15000):
+        cap = max(3, math.ceil(n / 5)) + (0 if tries < 3000 else 1 if tries < 9000 else 2)       # three a colour where the matching sets allow it, else four
+        order = sorted(comps, key=lambda c: (-len(c), rng.random()))
+        cnt = [0] * 5; idx = {}
+        for c in order:
+            room = [k for k in range(5) if cnt[k] + len(c) <= cap]
+            if not room: break
+            low = min(cnt[k] for k in room); k = rng.choice([k for k in room if cnt[k] <= low + 1])
+            cnt[k] += len(c)
             for rid in c: idx[rid] = k
-        cnt = Counter(idx.values())
-        if len(cnt) < 5 or min(cnt.values()) < 2 or max(cnt.values()) > max(4, math.ceil(n / 5) + 1): continue
-        return idx
+        else:
+            if min(cnt) >= 2: return idx
     raise BuildError("no assignment")
 
 def canon(q):
@@ -52,6 +57,8 @@ def canon(q):
     elif kind in ("shapes", "solids", "shapes_row"): facts.append((kind, tuple(sorted(k["kinds"]))))
     elif kind == "array": facts.append((kind, tuple(sorted((k["rows"], k["cols"])))))
     elif kind: facts.append((kind, tuple(sorted((a, str(b)) for a, b in k.items() if a != "kind"))))
+    if kind in ("clock", "coins", "notes", "cash", "ruler", "blocks", "array", "groups", "tally", "shapes", "solids", "shapes_row", "queue"):
+        return ((), "", tuple(sorted(facts, key=str)))          # the picture IS the question: another wording of the same picture is the same exercise
     return (nums, words, tuple(sorted(facts, key=str)))
 
 def make_sheet(spec, school=""):

@@ -34,7 +34,7 @@ def face(k):
 def build(D, n):
     g = GAPS[str(n)]; p_ = 'l%d-' % n
     # ---- Sneak-peek puzzles (was "Warm-up check"): private, ungraded, ideas we have not learnt yet ----
-    body = h2('Sneak-peek puzzles') + chip('Ideas we have not learnt yet. A guess is a great start. Your own paper: show only your tutor.', TEAL, CREAM, 28)
+    body = h2('Sneak-peek puzzles') + chip('Ideas we have not learnt yet. A guess is a great start. Your own paper: say it together on three.', TEAL, CREAM, 28)
     tags = ['Anyone can try this one: use counters, draw or count', 'Now think about this one']
     for i, c in enumerate(g['check']):
         q = chip(tags[i], YEL if i == 0 else SKY, NAVY, 24) + p(f'<span style="color:{TEAL};font-weight:800">{i + 1}.</span>  {E(c["q"])}', 36, 600, raw=True)

@@ -251,7 +251,7 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Two gardens have the sam
 put(PFX+'talk',S_(PFX+'talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answer: No. A 9 m by 1 m garden and a 5 m by 5 m garden both have a 20 m fence, but the areas are 9 m² and 25 m². Follow-up: "When does pushing out the steps NOT work?" (When the shape has a dent: the walls of the dent are extra.) Praise the reasons, not only the answers.'))
 
 # ================= 25. exit =================
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?',46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 8 cm². Length + width = 12 ÷ 2 = 6, so the width is 2 cm; 4 × 2 = 8. Children who write 48 multiplied 12 × 4; children who write 8 cm found the width as 12 − 4. Extension: find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (6 rectangles; 6 by 6, 36 cm²)'))
 
 # ---------- write ----------

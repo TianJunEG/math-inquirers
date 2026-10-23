@@ -39,7 +39,7 @@ def check(path, dpi=200):
 
 
 if __name__ == '__main__':
-    files = sys.argv[1:] or sorted(glob.glob(os.path.join(ROOT, 'outputs', 'extension', 'L*', '*Print_BW.pdf')))
+    files = sys.argv[1:] or sorted(glob.glob(os.path.join(ROOT, 'outputs', 'extension', 'L*', '*Print_BW*.pdf')))
     fails = 0
     for f in files:
         n, w, bad = check(f)

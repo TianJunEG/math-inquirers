@@ -65,7 +65,7 @@ def legend():
     return ('<div class="legend">'
             f'<div>{ICON["start"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Start here.</b> The main path. Do these first.</span></div>'
             f'<div>{ICON["think"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Think harder.</b> Longer problems. Hints are upside down.</span></div>'
-            f'<div>{ICON["go"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Go further.</b> Big challenges, just for fun.</span></div>'
+            f'<div>{ICON["go"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Go further.</b> A weekend page. Big challenges, just for fun.</span></div>'
             f'<div>{ICON["quiz"].replace("<svg", "<svg fill=\"none\" stroke=\"currentColor\"")}<span><b>Check yourself.</b> Four quick questions at the end.</span></div></div>')
 
 
@@ -89,19 +89,23 @@ def licence(book, theme, ctx):
 
 
 def welcome(book, theme, ctx):
+    ic = lambda k: ICON[k].replace('<svg', '<svg fill="' + ('none' if k == 'quiz' else 'currentColor') + '" stroke="currentColor"')
+    kid = ('<div class="box kid"><h3>For you</h3><div class="legend">'
+           f'<div>{ic("start")}<span>Read <b>Learn it</b>. Then do <b>Start here</b>.</span></div>'
+           f'<div>{ic("think")}<span>Stuck? Read the hint. It is upside down!</span></div>'
+           f'<div>{ic("quiz")}<span>Do <b>Check yourself</b>. Then look at the answers.</span></div></div></div>')
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
             f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You do not need a teacher.</div></div>'
             f'<img class="welcome-mi" alt="Mi the dolphin" src="{mi_uri("mi_writing_desk", theme)}"></div>'
-            '<div class="two"><div class="box"><h3>For the child</h3><ol>'
-            '<li>Read <b>Learn it</b>. Look at the worked example.</li><li>Do <b>Start here</b>. Write in the boxes and on the lines.</li>'
-            '<li>Try <b>Think harder</b>. Stuck? Read the hint. It is upside down!</li><li>Try <b>Go further</b> when you want a big challenge.</li>'
-            '<li>Do <b>Check yourself</b> and count your score.</li></ol></div>'
+            + kid +
             '<div class="box"><h3>For the grown-up</h3><ul>'
-            '<li>Practice for the same ideas as the Holiday Program, with new numbers and stories.</li>'
-            '<li>About 3 short sessions a week, 20 to 25 minutes each (see the pace plan).</li>'
+            '<li>Practice for the same ideas as the Holiday Program (our school-holiday maths course), with new numbers and stories. '
+            'You do not need to have joined it: every unit starts with a worked example.</li>'
+            '<li>3 short sessions a week, 20 to 25 minutes each. <b>Go further</b> is a weekend page: a big challenge for another day (see the pace plan).</li>'
             '<li>Let your child try before looking at the answers.</li>'
             f'<li>Answers are at the back, from page {ctx["divider_pg"]}, with a short reason for each. Read the reason together.</li>'
-            '<li>Check yourself score 2 or less? Repeat Learn it and one Start here page.</li></ul></div></div>'
+            '<li>Check yourself score 2 or less? Repeat Learn it and one Start here page.</li>'
+            '<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li></ul></div>'
             '<div class="box"><h3>The four labels</h3>' + legend() + '</div>'
             '<div class="box"><h3>Tips</h3><ul><li>Use a pencil. Mistakes help you learn.</li><li>Read each question twice before you write.</li>'
             '<li>Think harder and Go further are not a race. Come back another day.</li></ul></div></div>')
@@ -109,10 +113,13 @@ def welcome(book, theme, ctx):
 
 def contents(book, theme, ctx):
     rows = []
-    for n, title in enumerate(book['unit_titles'], 1):
-        built = n in ctx['unit_start']
-        if built:
-            rows.append(f'<tr><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>Learn it, practice and check &middot; answers on page {ctx["ans_start"][n]}</small></td><td class="p">page {ctx["unit_start"][n]}</td></tr>')
+    for n, topic in enumerate(book['unit_titles'], 1):
+        title = book['titles'].get(n, topic)
+        hl = book['lessons'].get(n)
+        if n in ctx['unit_start']:
+            rows.append(f'<tr><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>{esc(topic)}'
+                        f'{" &middot; follows Holiday Program Lesson " + str(hl) if hl else ""} &middot; answers on page {ctx["ans_start"][n]}</small></td>'
+                        f'<td class="p">page {ctx["unit_start"][n]}</td></tr>')
         else:
             rows.append(f'<tr class="later"><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>Not in this proof edition</small></td><td class="p">&ndash;</td></tr>')
     extra = (f'<tr><td class="n"></td><td class="t"><b>My progress</b></td><td class="p">page {ctx["progress_pg"]}</td></tr>'
@@ -124,24 +131,27 @@ def contents(book, theme, ctx):
 
 def pace(book, theme, ctx):
     rows = []
-    for n, title in enumerate(book['unit_titles'], 1):
+    for n, topic in enumerate(book['unit_titles'], 1):
+        title = book['titles'].get(n, topic)
         if n in ctx['unit_start']:
             s = ctx['unit_start'][n]
-            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td>{s}-{s + 1}</td><td>{s + 2}-{s + 3}</td><td>{s + 4}-{s + 6}</td>'
+            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td>{s}-{s + 1}</td><td>{s + 2}-{s + 3}</td><td>{s + 4} and {s + 6}</td><td>{s + 5}</td>'
                         '<td><span class="tick"></span></td></tr>')
         else:
-            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td colspan="3">Not in this proof edition</td><td><span class="tick"></span></td></tr>')
+            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td colspan="4">Not in this proof edition</td><td><span class="tick"></span></td></tr>')
     return ('<div class="pbody"><div class="h1">My pace plan</div>'
-            '<div class="lead">Numbers in the table are page numbers. One unit a week for 10 weeks. Three short sessions a week, about 20 to 25 minutes each. Tick the box when the week is done.</div>'
-            '<table class="grid pace"><tr><th>Week</th><th>Unit</th><th>Session 1<br><small>Learn it, Start here</small></th><th>Session 2<br><small>Start here</small></th><th>Session 3<br><small>Think harder, Go further, Check yourself</small></th><th>Done</th></tr>' + ''.join(rows) +
-            '<tr><td><b>11</b></td><td class="l"><b>Catch-up week</b></td><td colspan="3">Repeat any Check yourself where your score was 2 or less.</td><td><span class="tick"></span></td></tr></table>'
+            '<div class="lead">Numbers in the table are page numbers. One unit a week for 10 weeks. Three short sessions a week, about 20 to 25 minutes each. '
+            '<b>Go further</b> is a weekend page: do it on a weekend, when there is time to think. Tick the box when the week is done.</div>'
+            '<table class="grid pace"><tr><th>Week</th><th>Unit</th><th>Session 1<br><small>Learn it, Start here</small></th><th>Session 2<br><small>Start here</small></th><th>Session 3<br><small>Think harder, Check yourself</small></th><th>Weekend page<br><small>Go further</small></th><th>Done</th></tr>' + ''.join(rows) +
+            '<tr><td><b>11</b></td><td class="l"><b>Catch-up week</b></td><td colspan="4">Repeat any Check yourself where your score was 2 or less.</td><td><span class="tick"></span></td></tr></table>'
             '<div class="box"><h3>Tips for the grown-up</h3><ul><li>Short and often beats one long session. Stop while your child still wants more.</li>'
-            '<li>Session 3 has the harder pages: it is fine to do only some of them. Missed a week? Carry on.</li></ul></div></div>')
+            '<li>Go further has big challenges. It is fine to skip it, or to do only one question. Missed a week? Carry on.</li></ul></div></div>')
 
 
 def progress(book, theme, ctx):
     rows = []
-    for n, title in enumerate(book['unit_titles'], 1):
+    for n, topic in enumerate(book['unit_titles'], 1):
+        title = book['titles'].get(n, topic)
         rows.append(f'<tr><td><b>{n}</b></td><td class="l">{esc(title)}</td>' + '<td><span class="tick"></span></td>' * 4 +
                     '<td>&nbsp;&nbsp;&nbsp;/ 4</td><td style="width:22mm"></td></tr>')
     return ('<div class="pbody"><div class="h1">My progress</div><div class="lead">Tick each box when you finish. Write your Check yourself score.</div>'
@@ -160,7 +170,7 @@ def certificate(book, theme, ctx):
 
 def divider(book, theme, ctx):
     return ('<div class="divider"><h1>Answers</h1><p>For grown-ups. Please let your child try each question first, then read the short reason together.</p>'
-            '<p>Printed copy: this section is at the end of the book. If you want to keep the answers apart while your child works, take these pages out along the dashed line in the margin.</p></div>')
+            '<p>Want to keep the answers out of sight while your child works? Print the answer pages on their own and keep them in an envelope, or cover them with a folded sheet of paper.</p></div>')
 
 
 def ans_head(book):
@@ -191,9 +201,7 @@ def paginate_answers(page, blocks, css, cfg_vars):
 # ---------------------------------------------------------------- compose + render
 def section(kind, body, no, edition, gutter_note=False, blank=False, exempt=False, label=''):
     par = 'recto' if no % 2 == 1 else 'verso'
-    gl = ''
-    if edition == 'print' and gutter_note:
-        gl = '<div class="gutterline"></div>' + ('<div class="gutternote">Answer pages: tear or cut along the dashed line to take them out</div>' if kind == 'divider' else '')
+    gl = ''   # no margin dash or tear note: the answer pages are printed double-sided and cannot be torn out (audit L17)
     if blank:
         return f'<section class="page {par} blank" data-kind="blank" data-no="{no}" data-exempt="1"></section>'
     foot = f'<div class="pf"><span class="folio">{no}</span><span>Math Inquirers &middot; Extension Workbook &middot; {esc(label)}</span></div>' if kind not in ('cover', 'cert', 'divider') else ''
@@ -201,10 +209,11 @@ def section(kind, body, no, edition, gutter_note=False, blank=False, exempt=Fals
             f'{gl}<div class="pg">{body}</div>{foot}</section>')
 
 
-def build(level, unit_ids, outdir):
+def build(level, unit_ids, outdir, bw=True):
     lv = CFG['levels'][str(level)]
     units = [json.load(open(os.path.join(EXT, 'data', f'l{level}_u{u:02d}.json'), encoding='utf-8')) for u in unit_ids]
-    book = {'level': level, 'unit_titles': lv['units'], 'proof': len(units) < 10}
+    book = {'level': level, 'unit_titles': lv['units'], 'proof': len(units) < 10,
+            'titles': {u['unit']: u['title'] for u in units}, 'lessons': {u['unit']: u.get('holiday_lesson') for u in units}}
     cfg_vars = (f"--fs:{lv['font_px']}px;--line:{lv['line_mm']}mm;--boxw:{lv['box_mm'][0]}mm;--boxh:{lv['box_mm'][1]}mm")
     css = font_css() + open(os.path.join(HERE, 'ext.css'), encoding='utf-8').read()
     os.makedirs(outdir, exist_ok=True)
@@ -280,6 +289,10 @@ def build(level, unit_ids, outdir):
                 if m['fill'] is not None and not m['exempt'] and m['fill'] < PG['min_fill']:
                     report['problems'].append(f'{edition} page {m["no"]} ({m["label"]}): natural fill {m["fill"]:.2f} < {PG["min_fill"]}')
             report['pages'] += meas
+            if edition == 'print':   # every hint must fit on one line (audit M6)
+                wraps = page.evaluate('''() => Array.from(document.querySelectorAll('.hint')).filter(h => h.getBoundingClientRect().height > 30).map(h => h.parentElement.id)''')
+                for w_ in wraps:
+                    report['problems'].append(f'hint wraps to two lines: {w_}')
             name = f'Math_Inquirers_L{level}_Extension_Workbook_' + ('Soft_Copy_Colour.pdf' if edition == 'soft' else 'Print_BW.pdf')
             pdf = os.path.join(outdir, name)
             page.pdf(path=pdf, width='210mm', height='297mm', print_background=True, margin={'top': '0', 'bottom': '0', 'left': '0', 'right': '0'}, prefer_css_page_size=True)
@@ -289,8 +302,35 @@ def build(level, unit_ids, outdir):
             report[edition + '_pages'] = no - 1
         br.close()
     finalise(built, units, ctx, level, lv)
+    if bw:
+        report['bw_pipeline'] = bw_print(built, outdir, level)
     json.dump(report, open(os.path.join(outdir, 'build_report.json'), 'w'), indent=1)
     return report, built
+
+
+def bw_print(built, outdir, level):
+    """Run the native black-and-white print PDF through the project print pipeline (print/make_bw_print.py: 1-bit, 600 dpi, CCITT G4,
+    docs/printing/README_bw.md) and check it (print/check_bw.py).  The native vector PDF is kept as ..._Print_BW_vector.pdf (source and
+    smaller reference); ..._Print_BW.pdf is the 1-bit file for the printer."""
+    from pypdf import PdfReader, PdfWriter
+    sys.path.insert(0, os.path.join(ROOT, 'print'))
+    import make_bw_print as mb, check_bw
+    vec = os.path.join(outdir, f'Math_Inquirers_L{level}_Extension_Workbook_Print_BW_vector.pdf')
+    final = os.path.join(outdir, f'Math_Inquirers_L{level}_Extension_Workbook_Print_BW.pdf')
+    os.replace(built['print'], vec)
+    tmp = final + '.tmp'
+    n, dropped = mb.convert_pdf(vec, tmp)
+    r = PdfReader(tmp); w = PdfWriter()
+    for pg in r.pages:
+        w.add_page(pg)
+    w.add_metadata({'/Title': f'Math Inquirers Extension Workbook Level {level} (print, black and white, 1-bit 600 dpi)', '/Author': 'Math Inquirers',
+                    '/Subject': 'Self-study extension workbook with answers'})
+    with open(final, 'wb') as f:
+        w.write(f)
+    os.unlink(tmp)
+    built['print'] = final; built['print_vector'] = vec
+    bad = check_bw.check([final])
+    return {'pages': n, 'dpi': mb.DPI, 'mb': round(os.path.getsize(final) / 1e6, 2), 'check_bw_failures': bad, 'pale_tint_dropped_max': max(dropped)}
 
 
 def head_front(title, book):
@@ -321,12 +361,13 @@ if __name__ == '__main__':
     ap.add_argument('--level', type=int, default=1)
     ap.add_argument('--units', default='')
     ap.add_argument('--out', default='')
+    ap.add_argument('--no-bw', action='store_true', help='skip the 1-bit 600 dpi conversion (quick builds)')
     a = ap.parse_args()
     ids = [int(x) for x in a.units.split(',')] if a.units else sorted(int(re.search(r'_u(\d+)\.json', f).group(1)) for f in glob.glob(os.path.join(EXT, 'data', f'l{a.level}_u*.json')))
     out = a.out or os.path.join(ROOT, 'outputs', 'extension', f'L{a.level}')
-    rep, built = build(a.level, ids, out)
+    rep, built = build(a.level, ids, out, bw=not a.no_bw)
     for ed, f in built.items():
-        print(ed, f, rep[ed + '_pages'], 'pages')
+        print(ed, f, rep.get(ed + '_pages', ''), 'pages')
     for pr in rep['problems']:
         print('PROBLEM:', pr)
-    sys.exit(1 if rep['problems'] else 0)
+    sys.exit(1 if rep['problems'] or rep.get('bw_pipeline', {}).get('check_bw_failures') else 0)

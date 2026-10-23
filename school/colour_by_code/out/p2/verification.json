@@ -1,13 +1,39 @@
 {
- "passed": 612,
- "failed": 6,
+ "passed": 709,
+ "failed": 32,
  "failures": [
-  "bank frac tier 1: 964 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)",
-  "bank frac tier 2: 1112 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)",
-  "CBC-P2-06: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
-  "CBC-P2-08: no clock face or digital time is shown twice",
+  "CBC-P2-01: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-01: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-02: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-02: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-03: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-03: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-04: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-04: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-05: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-05: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-06: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-06: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-07: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
+  "CBC-P2-07: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-07: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-08: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-08: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-09: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-09: tally printed on the teacher page equals the tally of the answers",
   "CBC-P2-10: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
-  "Primary 2 gallery has 14 to 16 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids"
+  "CBC-P2-10: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-10: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-11: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-11: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-12: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-12: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-13: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-13: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-14: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-14: tally printed on the teacher page equals the tally of the answers",
+  "CBC-P2-15: tally printed on the pupil page equals the tally of the answers",
+  "CBC-P2-15: tally printed on the teacher page equals the tally of the answers"
  ],
  "worksheets": {
   "CBC-P2-01": {
@@ -26,19 +52,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8
    },
-   "min_pupil_font_mm": 4.7,
-   "min_teacher_font_mm": 4.2,
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 4.1,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
   "CBC-P2-02": {
    "single_slip": {
     "double_cases": 1248,
-    "double_detected": 1248,
-    "double_rate": 1.0,
-    "swap_cases": 66,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
     "swap_detected": 66,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9851,
     "wrong_values": 13000,
     "in_key": 52,
     "detected_all": 13000,
@@ -48,7 +74,7 @@
     "caught_by_structure_checks": 0.8462
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.5,
+   "min_teacher_font_mm": 4.4,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.0
   },
@@ -78,9 +104,9 @@
     "double_cases": 2176,
     "double_detected": 2173,
     "double_rate": 0.9986,
-    "swap_cases": 113,
-    "swap_detected": 110,
-    "swap_rate": 0.9735,
+    "swap_cases": 114,
+    "swap_detected": 111,
+    "swap_rate": 0.9737,
     "wrong_values": 1700,
     "in_key": 68,
     "detected_all": 1700,
@@ -89,8 +115,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.4,
-   "min_teacher_font_mm": 4.4,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 3.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -99,9 +125,9 @@
     "double_cases": 2176,
     "double_detected": 2173,
     "double_rate": 0.9986,
-    "swap_cases": 113,
-    "swap_detected": 110,
-    "swap_rate": 0.9735,
+    "swap_cases": 115,
+    "swap_detected": 112,
+    "swap_rate": 0.9739,
     "wrong_values": 1700,
     "in_key": 68,
     "detected_all": 1700,
@@ -113,7 +139,7 @@
    "min_pupil_font_mm": 4.9,
    "min_teacher_font_mm": 4.9,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 38.0
+   "narrowest_region_width_at_label_mm": 35.5
   },
   "CBC-P2-06": {
    "single_slip": {
@@ -131,19 +157,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8571
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 3.7,
+   "min_pupil_font_mm": 4.6,
+   "min_teacher_font_mm": 3.8,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 40.0
+   "narrowest_region_width_at_label_mm": 39.8
   },
   "CBC-P2-07": {
    "single_slip": {
     "double_cases": 1680,
     "double_detected": 1679,
     "double_rate": 0.9994,
-    "swap_cases": 88,
-    "swap_detected": 87,
-    "swap_rate": 0.9886,
+    "swap_cases": 89,
+    "swap_detected": 88,
+    "swap_rate": 0.9888,
     "wrong_values": 30000,
     "in_key": 60,
     "detected_all": 30000,
@@ -152,8 +178,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8667
    },
-   "min_pupil_font_mm": 4.3,
-   "min_teacher_font_mm": 4.0,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 3.5,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.9
   },
@@ -173,19 +199,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.2,
-   "min_teacher_font_mm": 3.6,
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-P2-09": {
    "single_slip": {
     "double_cases": 1248,
-    "double_detected": 1248,
-    "double_rate": 1.0,
-    "swap_cases": 66,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
     "swap_detected": 66,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9851,
     "wrong_values": 65052,
     "in_key": 52,
     "detected_all": 65052,
@@ -194,10 +220,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8462
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.2,
+   "min_pupil_font_mm": 4.3,
+   "min_teacher_font_mm": 4.1,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 31.0
+   "narrowest_region_width_at_label_mm": 36.2
   },
   "CBC-P2-10": {
    "single_slip": {
@@ -215,10 +241,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.4,
+   "min_pupil_font_mm": 4.5,
    "min_teacher_font_mm": 3.6,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.6
+   "narrowest_region_width_at_label_mm": 34.9
   },
   "CBC-P2-11": {
    "single_slip": {
@@ -236,19 +262,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.7,
-   "min_teacher_font_mm": 4.5,
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 4.2,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 36.2
+   "narrowest_region_width_at_label_mm": 37.0
   },
   "CBC-P2-12": {
    "single_slip": {
     "double_cases": 1056,
-    "double_detected": 1056,
-    "double_rate": 1.0,
-    "swap_cases": 56,
+    "double_detected": 1055,
+    "double_rate": 0.9991,
+    "swap_cases": 57,
     "swap_detected": 56,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9825,
     "wrong_values": 12000,
     "in_key": 48,
     "detected_all": 12000,
@@ -261,6 +287,69 @@
    "min_teacher_font_mm": 3.9,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-P2-13": {
+   "single_slip": {
+    "double_cases": 1920,
+    "double_detected": 1919,
+    "double_rate": 0.9995,
+    "swap_cases": 100,
+    "swap_detected": 99,
+    "swap_rate": 0.99,
+    "wrong_values": 16000,
+    "in_key": 64,
+    "detected_all": 16000,
+    "rate_all": 1.0,
+    "detected_in_key": 64,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.875
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.3,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-P2-14": {
+   "single_slip": {
+    "double_cases": 1680,
+    "double_detected": 1679,
+    "double_rate": 0.9994,
+    "swap_cases": 89,
+    "swap_detected": 88,
+    "swap_rate": 0.9888,
+    "wrong_values": 1500,
+    "in_key": 60,
+    "detected_all": 1500,
+    "rate_all": 1.0,
+    "detected_in_key": 60,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8667
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.2,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.9
+  },
+  "CBC-P2-15": {
+   "single_slip": {
+    "double_cases": 2176,
+    "double_detected": 2173,
+    "double_rate": 0.9986,
+    "swap_cases": 115,
+    "swap_detected": 112,
+    "swap_rate": 0.9739,
+    "wrong_values": 1105,
+    "in_key": 68,
+    "detected_all": 1105,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8235
+   },
+   "min_pupil_font_mm": 4.6,
+   "min_teacher_font_mm": 3.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
   }
  },
  "banks_and_pictures": {
@@ -498,7 +587,7 @@
     "unshaded",
     "whole"
    ],
-   "bad": 850
+   "bad": 0
   },
   "bank frac tier 2": {
    "questions": 1112,
@@ -514,7 +603,7 @@
     "unshaded",
     "whole"
    ],
-   "bad": 975
+   "bad": 0
   },
   "bank money tier 1": {
    "questions": 1023,

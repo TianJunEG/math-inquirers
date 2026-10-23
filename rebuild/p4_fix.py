@@ -96,7 +96,7 @@ def reflect_slide(n, G):
     ID = f'p4l{n}'
     t0 = B.pill(n, 'reflect'); w = B.window(n, 'reflect'); t1 = f'{B.fmt(w[0])} to {B.fmt(w[1])} (2 minutes of writing, {B.fmt(B.DUR[n]["look"])} minutes with the routine)'
     body = h2('Looking back')
-    body += p('2 minutes. Write, tick or pass: you choose. Nobody marks it and it is not shown to the group. Your tutor may look at it on camera if you hold it up.', 30, 600, MUTED)
+    body += p('2 minutes. Write, tick or pass: you choose. Nobody marks it and it is not shown to the group. Nothing is held up to the camera.', 30, 600, MUTED)
     body += pin(128, 340, 820, p('Something I did well …', 40, 700), None, WHITE, 20, '22px 34px', 'box-sizing:border-box;')
     body += pin(972, 340, 820, p('The hardest part was …', 40, 700), None, WHITE, 20, '22px 34px', 'box-sizing:border-box;')
     opts = ['drawing it', 'a list or table', 'a smaller number', 'my partner', 'reading it again', 'I asked for help', 'other: ______']

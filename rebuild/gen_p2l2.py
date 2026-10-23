@@ -178,7 +178,7 @@ put('p2l2-chwalk',sec('p2l2-chwalk','Challenge',body,'Use after pairs have tried
 # ---------- talk / exit ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Why do we start at the ones column when we look for missing digits?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p2l2-talk',sec('p2l2-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: the ones can make a carry that changes the tens, and the tens can make a carry that changes the hundreds. So we must know the ones first. Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('3[ ]4 + 257 = 601.  Which digit goes in the box?',52,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('3[ ]4 + 257 = 601.  Which digit goes in the box?',52,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p2l2-exit',sec('p2l2-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: the box is 4 (344 + 257 = 601: ones 4 + 7 = 11, carry 1; tens 4 + 5 + 1 = 10, carry 1; hundreds 3 + 2 + 1 = 6). Bonus for anyone who would like it: 4[ ]6 + 37[ ] = 801 gives 2 in the first box and 5 in the second box (426 + 375 = 801). Extension: make your own missing-digit sum with two boxes and exactly one answer; swap with a partner.'))
 
 # ---------- write ----------

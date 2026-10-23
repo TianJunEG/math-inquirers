@@ -72,7 +72,7 @@ for i,(n,lab) in enumerate(cols):
     body+=pin(L,380,420,hundred(n,400),None,WHITE,20,'4px 4px')
     body+=pin(L,820,500,p(f'{n}% shaded,  {100-n}% not shaded',32,800),'pop',YEL,20,'14px 18px')
 put('p5l7-warm1',sec('p5l7-warm1','0–4 MIN',body,
- 'Minutes 0 to 4. Hundred-Square Snap. Show the three squares one at a time (cover the other two with your hand or paper online). Children write on whiteboards: the percentage shaded and the percentage NOT shaded, then hold them up together. Click to show the answers. '
+ 'Minutes 0 to 4. Hundred-Square Snap. Show the three squares one at a time (cover the other two with your hand or paper online). Children write on whiteboards: the percentage shaded and the percentage NOT shaded, then say them together on three. Click to show the answers. '
  'Square 1: 30 shaded (3 full rows) so 30% shaded, 70% not shaded. Square 2: 45 shaded (4 rows and 5 more) so 45% and 55%. Square 3: 64 shaded (6 rows and 4 more) so 64% and 36%. '
  'Ask: "Who found the not-shaded part without counting? How?" (100 take away the shaded part.) "Why is the whole 100?" (percent means out of 100). '
  'Listen for: children counting every small square. Praise rows of 10: each row is 10%.'))
@@ -222,7 +222,7 @@ put('p5l7-chwalk',sec('p5l7-chwalk','Optional, if you finish early',body,'Use af
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Which is better for the shopper: add 9% GST first and then take 20% off, or take 20% off first and then add 9% GST?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
 put('p5l7-talk',sec('p5l7-talk','76–82 MIN',body,'Minutes 76 to 82. Pairs try it with $100 for 2 minutes, then share. Answer: it is exactly the same. GST first: $109, then 20% off ($21.80) is $87.20. Discount first: $80, then 9% GST ($7.20) is $87.20. Each change is a multiplication, and the order of multiplying does not matter. '
  'Second question if time: Mei says "20% off and then 9% GST is the same as 11% off." Is she right? (No: 11% off $100 would be $89, but the real price is $87.20, because the GST is on the smaller sale price.) Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A $30 toy is sold at 20% off. Then 9% GST is added to the sale price. How much do you pay?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A $30 toy is sold at 20% off. Then 9% GST is added to the sale price. How much do you pay?',46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p5l7-exit',sec('p5l7-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: $26.16. 20% of $30 = $6, sale price $24. 9% of $24: 10% = $2.40, 1% = $0.24, so 9% = $2.16. $24 + $2.16 = $26.16. Extension: a shop raises every price by 25%, then has a "20% off everything" sale. Is the sale price more than, less than or the same as the old price? Try $40, $100 and $64. (The same: up 25% then down 20% always gives back the old price. $40 to $50 to $40; $100 to $125 to $100; $64 to $80 to $64. Siti on the worksheet fell for the opposite trap: it is NOT the same as up 5%.)'))
 
 # ---------- write ----------

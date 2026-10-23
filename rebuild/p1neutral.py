@@ -37,19 +37,19 @@ SUBS = [
     ('Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.', 'Whiteboard round. The tutor asks a quick question from each lesson. Everybody writes the answer at the same time. No passing round and nobody on the spot.'),
     ('Mental maths relay: a chain of quick questions from all 9 lessons passed around the group.', 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.'),
     # ---- re-audit fix pass: no boards or paper held up in front of the group or to the camera (private-paper rule); no "Challenge" label ----
-    ('Children write on whiteboards and hold them up together.', 'Children write on their own paper or whiteboard. Nobody holds a board or paper up in front of the group or to the camera: face to face, each child keeps the paper low so only the tutor sees it; online, children say answers together on three or use fingers.'),
+    ('Children write on whiteboards and say the answer together on three.', 'Children write on their own paper or whiteboard. Nobody holds a board or paper up in front of the group or to the camera: face to face, each child keeps the paper low so only the tutor sees it; online, children say answers together on three or use fingers.'),
     ('Write it, say the answer together on three, then click.', 'Children write on their own paper and say the answer together on three (online: nothing is held up to the camera). Never ask for boards or paper held up in front of the group or to the camera. Then click.'),
     ('Children write the answer on whiteboards, then click.', 'Children write the answer on their own paper and say it together on three, then click.'),
     ('Whiteboards, then click.', 'Own paper; say the answer together on three, then click.'),
-    ('Whiteboards again.', 'Own paper again, shown only to the tutor.'),
-    ('Whiteboards. ', 'Own paper, shown only to the tutor. '),
+    ('Whiteboards again.', 'Own paper again, ticked against the answer slide.'),
+    ('Whiteboards. ', 'Own paper, ticked against the answer slide. '),
     ('Whiteboard round.', 'Whiteboard round (boards stay low or on the desk; nobody holds a board or paper up in front of the group or to the camera).'),
-    ('take answers on whiteboards, then click', 'take answers on each child\'s own paper (shown only to the tutor), then click'),
+    ('take answers on whiteboards, then click', 'take answers on each child\'s own paper (ticked against the answer slide), then click'),
     ('Your turn: whiteboards, then click.', 'Your turn: write it on your own paper, then click.'),
     ('Your turn: whiteboards', 'Your turn: write it'),
-    ('Your turn: children count on whiteboards, then click', 'Your turn: children count on their own paper (shown only to the tutor), then click'),
-    ('Then whiteboards for the &quot;your turn&quot; and click for 7.', 'Then children write the &quot;your turn&quot; answer on their own paper (shown only to the tutor) and click for 7.'),
-    ('after children try it on whiteboards.', 'after children try it on their own paper (shown only to the tutor).'),
+    ('Your turn: children count on whiteboards, then click', 'Your turn: children count on their own paper (ticked against the answer slide), then click'),
+    ('Then whiteboards for the &quot;your turn&quot; and click for 7.', 'Then children write the &quot;your turn&quot; answer on their own paper (ticked against the answer slide) and click for 7.'),
+    ('after children try it on whiteboards.', 'after children try it on their own paper (ticked against the answer slide).'),
     ('Draw it on your whiteboard.', 'Draw it on your own paper.'),
     ('Draw a grid on your whiteboard.', 'Draw a grid on your own paper.'),
     ('Ask a child to show the part that sticks out on their bars for a.', 'Ask for a volunteer (never a named child) to show the part that sticks out on their bars for a, or show it yourself.'),
@@ -252,7 +252,7 @@ def fix_l6(D):
 def fix_l7(D):
     body = h2('Exit ticket')
     inner = chip('EXIT TICKET', TEAL, CREAM, 28) + p('A shape has 6 sides. How many corners does it have? What is the shape called?', 46, 600)
-    body += card(inner, WHITE, CARD_X) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 500), WHITE, CARD_X)
+    body += card(inner, WHITE, CARD_X) + card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.', 34, 500), WHITE, CARD_X)
     notes = ('Minutes 80 to 88. Answer: 6 corners; it is a hexagon (the same number of corners as sides). This replaces the 14-squares grid, which is a hard ending for the lesson. '
              'Extension: how many squares are in a 3 by 3 grid? (14: 9 + 4 + 1).')
     _w(D, 'l7-exit', sec('l7-exit', '80–88 MIN', body, notes))

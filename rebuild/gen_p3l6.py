@@ -113,7 +113,7 @@ for i,(sv,a) in enumerate(shapes):
     body+=pin(L,320,CW,f'<div style="display:flex;justify-content:center">{sv}</div>',None,WHITE,24,'20px 20px',f'box-sizing:border-box;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L,640,CW,f'<p style="font-size:44px;font-weight:800;text-align:center">{a}</p>','pop',YEL,20,'12px 18px','box-sizing:border-box')
 put('p3l6-warm1',sec('p3l6-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction, hold it up, then click to reveal (clicks go left to right). '
+ 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction, say it together on three, then click to reveal (clicks go left to right). '
  'Answers: circle 3/8; rectangle 4/6, which is the same as 2/3 (the 4 shaded parts fill two of the three columns); hexagon 5/6; bar 7/10. '
  'Ask every time: "How do you know the parts are equal?" (same size triangles, same size squares). Ask: "What fraction is NOT shaded?" (5/8, 2/6, 1/6, 3/10).'))
 
@@ -277,7 +277,7 @@ put('p3l6-talk',sec('p3l6-talk','70–80 MIN',body,
  'Answer: The same whole is cut into more pieces, so each eighth is smaller than each sixth. 1/3 + 1/3 is two thirds; the pieces are still thirds, so we add only the top numbers (2/6 is just 1/3). Praise the reasons, not only the answers.'))
 
 # ---------- 26. exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+rp('Ali says  '+F(1,4)+' + '+F(1,8)+' = '+F(2,12)+'.  Is he right? Write the correct answer and show how you know.',44))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+rp('Ali says  '+F(1,4)+' + '+F(1,8)+' = '+F(2,12)+'.  Is he right? Write the correct answer and show how you know.',44))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p3l6-exit',sec('p3l6-exit','80–90 MIN',body,
  'Minutes 80 to 90. Answer: No. 1/4 = 2/8, so 1/4 + 1/8 = 2/8 + 1/8 = 3/8. We add the parts, not the bottom numbers. Extension: How many different ways can you fill one whole bar using 1/2, 1/4 and 1/8 pieces, as many of each as you like? (9 ways.)'))
 

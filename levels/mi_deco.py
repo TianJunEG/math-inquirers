@@ -35,11 +35,13 @@ def plan(order,ln):
     P[last]='goodbye_wave'
     return P
 IMG=re.compile(r'<img data-mi="[^>]*>\n?')
-def put(html,pose,lv,url):
+def put(html,pose,lv,url,sid=''):
     html=IMG.sub('',html)
-    h=H[lv]; w=round(h*ASPECT[pose])
+    h=H[lv]
+    if lv=='3' and sid.endswith('reflect'): h=120   # P3 look-back cards run to the bottom-right corner: keep Mi clear of the text
+    w=round(h*ASPECT[pose])
     op='' if OP[lv]==1 else f';opacity:{OP[lv]}'
-    tag=(f'<img data-mi="{pose}" src="{url}" alt="{ALT[pose]}" style="position:absolute;right:44px;bottom:30px;'
+    tag=(f'<img data-mi="{pose}" src="{url}" alt="{ALT[pose]}" style="position:absolute;right:44px;bottom:{18 if h<150 else 30}px;'
          f'width:{w}px;height:{h}px;object-fit:contain{op}">\n')
     i=html.rfind('<aside')
     if i<0: i=html.rfind('</section>')
@@ -55,7 +57,7 @@ def apply(d):
         f=os.path.join(d,'project','slides',sid+'.html')
         if not os.path.exists(f): continue
         url=bm.get(pose) or (f'/_blob/PENDING-{pose}' if os.environ.get('MI_PREVIEW') else None)
-        a=open(f).read(); b=put(a,pose,lv,url) if url else IMG.sub('',a)   # no uploaded asset for this deck yet: no Mi (never a broken image)
+        a=open(f).read(); b=put(a,pose,lv,url,sid) if url else IMG.sub('',a)   # no uploaded asset for this deck yet: no Mi (never a broken image)
         if a!=b: open(f,'w').write(b); n+=1
     return n
 if __name__=='__main__':

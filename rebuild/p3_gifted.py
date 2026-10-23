@@ -70,7 +70,7 @@ def add(S,order,ln):
     S[pre+'title']=t
     # ---- sneak-peek slide ----
     body=h2('Sneak-peek puzzles')+p('Ideas we have not learnt yet. Have a go: guessing and “I do not know” are welcome. Nobody is marked.',32,600,MUTED)
-    body+=p('Write both answers on your own paper. When your tutor says “show me”, hold the paper up once for both.',30,600,MUTED)
+    body+=p('Write both answers on your own paper. When your tutor says “say it”, say both answers together on three.',30,600,MUTED)
     for i,c in enumerate(g['check']):
         pic=c.get('pic'); top=395+(i*(330 if (g['check'][0].get('pic')) else 250))
         hint='Try it with objects, a drawing or counting.' if i==0 else 'Think about it. Show how you thought.'
