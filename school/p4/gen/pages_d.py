@@ -22,7 +22,7 @@ def fact_statement(rng, kind, true):
     if kind == "parallel":
         n = 2 if true else rng.choice([1, 3, 4]); return f"A {s} has {n} pair{'s' if n != 1 else ''} of parallel sides."
     if kind == "equal4":
-        n = 4 if true else rng.choice([2, 3]); return f"A square has {n} equal sides."
+        return "All four sides of a square are equal." if true else f"Only {rng.choice(['two', 'three'])} sides of a square are equal."
     if kind == "pairs":
         n = 2 if true else rng.choice([1, 3, 4]); return f"A rectangle has {n} pair{'s' if n != 1 else ''} of equal sides."
     if kind == "opposite":
@@ -37,8 +37,8 @@ def judge_statement(t):
     if m: return int(m[2]) == 4
     m = re.fullmatch(r"A (rectangle|square) has (\d) pairs? of parallel sides\.", t)
     if m: return int(m[2]) == 2
-    m = re.fullmatch(r"A square has (\d) equal sides\.", t)
-    if m: return int(m[1]) == 4
+    if re.fullmatch(r"All four sides of a square are equal\.", t): return True
+    if re.fullmatch(r"Only (two|three) sides of a square are equal\.", t): return False
     m = re.fullmatch(r"A (rectangle) has (\d) pairs? of equal sides\.", t)
     if m: return int(m[2]) == 2
     m = re.fullmatch(r"Opposite sides of a (rectangle|square) are (parallel|equal|perpendicular)\.", t)
@@ -71,7 +71,7 @@ def page31():
         "2.1 (properties of rectangle and square, excluding diagonal properties)", ["RS2.1"], "Choice table (true or false)",
         ["Is each statement true or false?", "Circle the letter of the right answer.", "Write the six letters in the boxes."], rows, word, rows_l, [word[i] for i in range(6)],
         "; ".join(f"{i+1}) {'True' if t else 'False'}: {q}" for i, (q, t) in enumerate(zip(qs, truths))),
-        "Six statements about rectangles and squares: right angles, pairs of parallel sides, equal sides, pairs of equal sides, opposite sides and sides that meet at a corner. Diagonals are not used. A square has all four sides equal and two pairs of parallel sides. Statements about pairs of equal sides are only made about rectangles, because the number of pairs in a square can be counted two ways. A statement about a square being a rectangle is not asked. Each row has a True and a False, each with a letter. The letters of the right answers, read down the rows, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
+        "Six statements about rectangles and squares: right angles, pairs of parallel sides, equal sides, pairs of equal sides, opposite sides and sides that meet at a corner. Diagonals are not used. All four sides of a square are equal and a square has two pairs of parallel sides. Statements about pairs of equal sides are only made about rectangles, because the number of pairs in a square can be counted two ways. A statement about a square being a rectangle is not asked. Each row has a True and a False, each with a letter. The letters of the right answers, read down the rows, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
     solved = []
     for content, opts in rows_of(P["body"]):
         d = {re.sub(r"<[^>]+>", "", t): l for t, l in opts}; q = re.sub(r"<[^>]+>", "", content)
@@ -198,7 +198,7 @@ def page33():
         fig = A6.mirror_svg(FIGS33[f], AXES33[(f, a)] if kind == "axis" else None)
         cap = "Is the dashed line a line of symmetry?" if kind == "axis" else "Does the figure have a line of symmetry?"
         right, other = rows_l[i]; yes_l, no_l = (right, other) if tr else (other, right)
-        rows.append(choice_row(i + 1, f'<div class="afig">{fig}<p class="aq">{cap}</p></div>', ["Yes", "No"], [yes_l, no_l], "cc"))
+        rows.append(choice_row(i + 1, f'<div class="afig mir">{fig}<p class="aq">{cap}</p></div>', ["Yes", "No"], [yes_l, no_l], "cc"))
     P = choice_page(33, 7333, "Mirror Lines", 1, "Line symmetry: is it a line of symmetry? is the figure symmetric?", STRAND_GE,
         "3.1 (identifying symmetric figures), 3.2 (determining whether a straight line is a line of symmetry of a symmetric figure)", ["LS3.1", "LS3.2"], "Choice cards (symmetry)",
         ["Look at each figure.", "Circle the letter of the right answer.", "Write the six letters in the boxes."], rows, word, rows_l, [word[i] for i in range(6)],
@@ -407,7 +407,7 @@ def page37():
         rp = [None if ("r", r) in blank else rt[r] for r in range(3)]; kp = [None if ("k", c) in blank else ct[c] for c in range(3)]; gp = None if ("g",) in blank else g
         if solve_table(cp, rp, kp, gp) is None: continue
         if sum(1 for k in blank if k[0] == "c") < 3 or ("g",) in blank: continue
-        blank.sort(key=lambda k: (0 if k[0] == "c" else 1 if k[0] == "r" else 2, k[1:]))
+        blank.sort(key=lambda k: (k[1], k[2]) if k[0] == "c" else (k[1], 3) if k[0] == "r" else (3, k[1]))        # reading order: row by row, left to right, then the bottom row
         ans = [val(k) for k in blank]
         if not distinct(ans): continue
         pool = {a + d for a in ans for d in (-1, 1, -10, 10)}
@@ -429,7 +429,10 @@ def page37():
     grid = read_table(body)
     cp = [row[:3] for row in grid[:3]]; rp = [row[3] for row in grid[:3]]; kp = grid[3][:3]; gp = grid[3][3]
     sol = solve_table(cp, rp, kp, gp)
-    unk = [("c", r, c) for r in range(3) for c in range(3) if cp[r][c] is None] + [("r", r) for r in range(3) if rp[r] is None] + [("k", c) for c in range(3) if kp[c] is None]
+    unk = []
+    for r in range(3):          # the pupil's order, read from the printed table: row by row, left to right, then the bottom row
+        unk += [("c", r, c) for c in range(3) if cp[r][c] is None] + ([("r", r)] if rp[r] is None else [])
+    unk += [("k", c) for c in range(3) if kp[c] is None]
     got = [sol[0][k[1]][k[2]] if k[0] == "c" else sol[1][k[1]] if k[0] == "r" else sol[2][k[1]] for k in unk]
     P.v("V1 independent solver (printed table read back, every blank found from row and column totals) equals the key, in reading order", got == ans, got)
     def consistent(a):

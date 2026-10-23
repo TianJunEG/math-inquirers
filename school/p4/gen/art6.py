@@ -42,7 +42,7 @@ def mirror_svg(poly, axis=None, size=(46, 34)):
     p = [f'<polygon class="fig" points="{" ".join(f"{x:.2f},{y:.2f}" for x, y in poly)}" fill="#fff" stroke="#000" stroke-width="0.7" stroke-linejoin="round"/>']
     if axis:
         (x1, y1), (x2, y2) = axis; dx, dy = x2 - x1, y2 - y1; L = math.hypot(dx, dy); ux, uy = dx / L, dy / L
-        e = 3.0
+        e = 2.0
         p.append(f'<line class="axis" x1="{x1 - ux * e:.2f}" y1="{y1 - uy * e:.2f}" x2="{x2 + ux * e:.2f}" y2="{y2 + uy * e:.2f}" stroke="#000" stroke-width="0.6" stroke-dasharray="2.2 1.4"/>')
     return svg(W, H, "".join(p))
 
@@ -76,7 +76,7 @@ def has_line_of_symmetry(poly):
 def symm_svg(ncols, nrows, on, axis, cell=5.2):
     """a grid of squares with the shaded squares of one side of a dashed line; axis = ('v', k) the line is between column k-1 and k (k columns on its left), or ('h', k)"""
     o = 7.0
-    W = o + ncols * cell + 2; H = nrows * cell + 5.5
+    W = o + ncols * cell + 2; H = nrows * cell + 7.5
     p = []
     for r in range(nrows):
         p.append(f'<text class="rn" x="{o - 2.0:.2f}" y="{3 + r * cell + cell / 2 + 0.2:.2f}" text-anchor="end" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.3" fill="#000">{r + 1}</text>')

@@ -75,12 +75,14 @@ CSS_P4B = """
 .lqs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3mm 6mm}
 .sblock.pieb .sfig svg{width:90mm;height:90mm}
 .srows3.grid2.solids .sopts{gap:1.5mm}.srows3.grid2.solids .tfo b{font-size:11.5pt;min-width:32mm}
-.netfig svg{max-width:none}.srows3.grid2.solids .afig>svg{width:40mm;height:34mm}.srows3.grid2.solids .srow3{min-height:42mm}.srows3.grid2 .afig.netfig>svg{width:38mm;height:31mm}.srows3.grid2 .afig.netfig{margin:4mm 0 0 4mm}.lqs{margin-bottom:2mm}
+.netfig svg{max-width:none}.srows3.grid2.solids .afig>svg{width:33mm;height:28mm}.srows3.grid2.solids .srow3{min-height:42mm}.srows3.grid2 .afig.netfig>svg{width:38mm;height:31mm}.srows3.grid2 .afig.netfig{margin:4mm 0 0 4mm}.lqs{margin-bottom:2mm}
 """
 CSS_P4B = CSS_P4B + """.codetable[style*="repeat(8"] .ct,.codetable[style*="repeat(9"] .ct{min-width:0;padding:0.6mm 1.2mm;gap:1mm;font-size:13.5pt}.codetable[style*="repeat(8"] .ct b,.codetable[style*="repeat(9"] .ct b{padding-left:1.2mm;font-size:16pt}
 .maze:not(.tall) .mcell small{font-size:9.5pt}
 """
 CSS_P4B = CSS_P4B + """.dcs.big .dc{height:36mm;font-size:32pt}.qc.fgq .qt{margin-left:9mm}
 """
-CSS_P4B = CSS_P4B + """.srows3.grid2.solids .afig{flex:none;width:40mm;margin-left:5mm}
+CSS_P4B = CSS_P4B + """.srows3.grid2.solids .afig{flex:none;width:33mm;margin-left:2mm}
+"""
+CSS_P4B = CSS_P4B + """.afig.mir>svg{width:44mm;height:32.5mm;margin-left:5mm}.afig.mir .aq{margin-top:2mm}
 """

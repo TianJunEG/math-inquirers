@@ -187,7 +187,7 @@ def _dec4():
                 return SEM(lines, holds_eq(a), ds(a), form="subtract decimals")
         return None
     def mult(a, r):
-        dd = [d for d in range(2, 10) if places(a / d) <= 2]
+        dd = [d for d in range(2, 10) if places(a / d) <= 2 and a / d != 1]
         if not dd: return None
         d = r.choice(dd)
         lines = r.choice([[f"{ds(a / d)} {X} {d} = {BOX}"], [f"{ds(a / d)} {X} {d}", f"= {BOX}"], [f"{ds(a / d)}", f"{X} {d}", f"= {BOX}"]])

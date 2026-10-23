@@ -440,14 +440,14 @@ def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False, compass=Fals
             body.append(f'<path d="{left}" fill="#9FB6DE" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{right}" fill="#C8D6EF" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{top}" fill="#EEF3FB" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/>')
     W = 40 + (R + C) * w3; H = oy + (R + C) * h3 + 20        # tight to the stack: a low stack is drawn larger
     if compass:      # a compass at the left: arrows on the floor directions (back = up right, left = up left, front = down left, right = down right)
-        cx, cy = 104, H * 0.5; L1 = 40; cw, ch = L1 * 0.866, L1 * 0.5
+        cx, cy = 96, H * 0.5; L1 = 34; cw, ch = L1 * 0.866, L1 * 0.5
         comp = []
-        for word, dx, dy, lx, ly, anc in (('BACK', cw, -ch, 4, -6, 'start'), ('LEFT', -cw, -ch, -4, -6, 'end'), ('FRONT', -cw, ch, -4, 17, 'end'), ('RIGHT', cw, ch, 4, 17, 'start')):
+        for word, dx, dy, lx, ly, anc in (('BACK', cw, -ch, 4, -5, 'start'), ('LEFT', -cw, -ch, -4, -5, 'end'), ('FRONT', -cw, ch, -4, 17, 'end'), ('RIGHT', cw, ch, 4, 17, 'start')):
             ex, ey = cx + dx, cy + dy; ang = math.atan2(dy, dx)
             comp.append(f'<line x1="{cx}" y1="{cy:.1f}" x2="{ex:.1f}" y2="{ey:.1f}" stroke="{TEAL}" stroke-width="3.4" stroke-linecap="round"/>'
                         f'<polygon points="{ex:.1f},{ey:.1f} {ex - 11 * math.cos(ang) + 6 * math.sin(ang):.1f},{ey - 11 * math.sin(ang) - 6 * math.cos(ang):.1f} {ex - 11 * math.cos(ang) - 6 * math.sin(ang):.1f},{ey - 11 * math.sin(ang) + 6 * math.cos(ang):.1f}" fill="{TEAL}"/>'
-                        f'<text x="{ex + lx:.1f}" y="{ey + ly:.1f}" font-size="17" font-weight="800" text-anchor="{anc}" fill="{TEAL}" font-family="{FONT}">{word}</text>')
-        return _svg(W + 170, H, ''.join(comp) + f'<g transform="translate(170,0)">' + ''.join(body) + '</g>', 'a stack of cubes with a compass: back is up right, left is up left')
+                        f'<text x="{ex + lx:.1f}" y="{ey + ly:.1f}" font-size="19" font-weight="800" text-anchor="{anc}" fill="{TEAL}" font-family="{FONT}">{word}</text>')
+        return _svg(W + 192, H, ''.join(comp) + f'<g transform="translate(192,0)">' + ''.join(body) + '</g>', 'a stack of cubes with a compass: back is up right, left is up left')
     return _svg(W, H, ''.join(body), 'a stack of cubes')
 
 

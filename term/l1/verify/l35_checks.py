@@ -274,9 +274,8 @@ def run(d):
         else: kinds.append('different shape')
     eq(kinds, ['flipped', 'turned', 'other number of squares', 'different shape'], 'G1 kinds of options'); eq(q['val'], ['B'], 'G1 val')
     eq(len(q['visuals']), 4, 'G1 four options below the shape'); eq(q['parts'][0]['choices'], ['A', 'B', 'C', 'D'], 'G1 choices')
-    eq([[v['counts'][k] for k in v['counts']][0] for v in q['visuals']], ['A', 'B', 'C', 'D'], 'G1 labels in order')
-    for v, c in zip(q['visuals'], opts):
-        (rr, cc), = [tuple(int(x) for x in k.split(',')) for k in v['counts']]; eq((cc, rr) in c, False, 'G1 a label never sits on its shape')
+    eq([v.get('tag') for v in q['visuals']], ['A', 'B', 'C', 'D'], 'G1 labels in order')
+    eq(all('counts' not in v for v in q['visuals']), True, 'G1 the letter is a badge beside the picture, never on the shape')
     eq(rots[1] == normalise(opts[1]), True, 'G1 option B is the shape turned a quarter turn to the right')
     eq(letter(1), 'B', 'G1 letter B')
     q = T['G2']; ts = tiles(q['visual']); od = odd_ones(ts); eq(sorted(od), [(1, 'size'), (3, 'pattern')], 'G2 two odd ones: B by size, D by pattern'); eq(q['val'], ['D', 'B'], 'G2 val'); eq([x['ans'] for x in q['parts']], ['D', 'B'], 'G2 answers')
