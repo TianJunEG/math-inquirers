@@ -91,7 +91,7 @@ SHORT = {
  'L3U10-S03': '(a) 3rd to 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.',
  'L3U10-S06': 'Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700; the others are much farther.',
  'L3U10-S10': '2 juices cost 2 × 1.85 = 3.70. With the sandwich: 3.70 + 3.40 = 7.10. Change: 10.00 - 7.10 = 2.90.',
- 'L3U10-T03': 'Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.',
+ 'L3U10-T03': 'Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.',
  'L3U10-G01': 'There are 16 small squares. A 2 by 2 square fits in 3 places across and 3 down: 9. A 3 by 3 square fits 2 across and 2 down: 4. There is 1 big square. 16 + 9 + 4 + 1 = 30.',
  'L3U10-G03': 'If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢.',
  'L3U01-G01': 'Sum 4: first digit 4 gives 1 number (400), 3 gives 2, 2 gives 3, 1 gives 4: 1 + 2 + 3 + 4 = 10. Sum 5, first digit 1 gives 5 numbers: 1 + 2 + 3 + 4 + 5 = 15.',
@@ -147,7 +147,7 @@ SHORT = {
  'L3U04-S02': '(a) Aisha has fewer: 1450 - 380 = 1070. (b) Together: 1450 + 1070 = 2520.',
  'L3U08-S07': 'Turning right from north: east, south, west. (a) 1 turn: east. (b) 3 turns: west. (c) 2 turns left: west, then south. Two right angles either way: south.',
  'L3U09-T03': 'The 2 notebooks cost $3 more than 2 pens (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. A pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.',
- 'L3U10-T03': 'Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.',
+ 'L3U10-T03': 'Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.',
  'L3U04-G03': 'In the example, take away the 12: 60 - 12 = 48, 48 ÷ 2 = 24. Ali has 24 and Ben has 36.',
  'L3U05-S12': 'A number leaves remainder 3 when it is 3 more than a number in the 5 times table: 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 = 40 + 1 leaves 1.',
 }

@@ -1,10 +1,6 @@
-# Level 3: shared tool changes wanted (nothing here has been edited by the Level 3 agent)
+# Level 3: shared tool notes
 
-1. `extension/tools/render.py` line 80 prints the beyond label as "Beyond Level 1: <name>" for every level. Wanted: `Beyond Level {unit.level}: ...`
-   (the `unit` dict is not passed to `item_html`, so it needs one more argument). Work-around used in Level 3: the item field `beyond`
-   is NOT used; the first line of the item text reads "Beyond Level 3: <name>." (plain text, same wording).
-2. `extension/tools/build.py` line 110, welcome page: the print edition says "The rulers in Unit 9 are printed at real size." This is only
-   true for Level 1. Level 3 Unit 9 does have a real-size ruler (1 cm = 10 mm), so the sentence happens to be correct for Level 3 too.
-3. Figure types: every Level 3 type is prefixed `l3_` so that plug-in names cannot clash with other levels (see `extension/tools/figs_l3_*.py`).
-
-4. Coordinator note (23 Oct): build.py/render.py are being changed (by the Level 4 agent) to read the Welcome/equipment text and the "Beyond Level N" label from `extension/config/levels.json`. At the time of the final Level 3 build that change was not yet in the tree. When it is: set the Level 3 keys (Unit 9 real-size ruler line applies; Level 3 needs ruler, nothing else), optionally move "Beyond Level 3: ..." from the item text to the `beyond` field, rebuild and re-run the gates.
+1. Done by the coordinator: the renderer prints "Beyond Level N" from the book's level. Level 3 now uses the item `beyond` key (no text workaround).
+2. Done: per-level Welcome keys in `extension/config/levels.json`. Level 3 sets `welcome_equipment`, `welcome_notes: []` and an empty `welcome_print_note` (a longer Welcome page overflowed). Unit 9 rulers are real size, which the Welcome page does not mention for Level 3.
+3. Figure types are prefixed `l3_` (see `extension/tools/figs_l3_*.py`).
+4. Still shared and not changed here: the certificate plaque artwork, the DRAFT licence line, and the contents page showing a unit title twice in some rows (Level 3 unit titles differ from the config names to avoid it).

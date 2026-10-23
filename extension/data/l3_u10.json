@@ -708,7 +708,7 @@
      }
     }
    ],
-   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.",
+   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
    "partsrow": true,
    "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
    "space": {

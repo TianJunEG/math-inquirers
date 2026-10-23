@@ -1,23 +1,23 @@
 [
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
-  "pages": 22,
-  "sheets": 11,
-  "mb": 2.87,
-  "pale_tint_dropped_max": 0.0251
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
+  "pages": 30,
+  "sheets": 15,
+  "mb": 4.57,
+  "pale_tint_dropped_max": 0.5381
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_HomePack_PRINT.pdf",
-  "pages": 12,
-  "sheets": 6,
-  "mb": 1.14,
-  "pale_tint_dropped_max": 0.0368
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_HomePack_PRINT.pdf",
+  "pages": 14,
+  "sheets": 7,
+  "mb": 1.33,
+  "pale_tint_dropped_max": 0.0911
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book3_Lessons01-05_Workbook_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_Workbook_PRINT.pdf",
   "pages": 46,
   "sheets": 23,
-  "mb": 5.85,
-  "pale_tint_dropped_max": 0.2258
+  "mb": 5.44,
+  "pale_tint_dropped_max": 0.2649
  }
 ]
