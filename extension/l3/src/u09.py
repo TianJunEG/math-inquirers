@@ -44,7 +44,7 @@ u.S(1, 'A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.', par
 u.S(2, 'Read the water level in each jug.', parts=[
     P('a', 'Jug A holds {b} ml.', A('350')), P('b', 'Jug B holds {b} ml.', A('600')), P('c', 'Jug C holds {b} ml.', A('850')),
     P('d', 'Jug C holds {b} ml more than jug A.', A('500'))],
-    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 90},
+    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 78},
     why='Each small mark is 50 ml. A is 1 mark above 300: 350 ml. B is at 600 ml. C is 1 mark above 800: 850 ml. 850 - 350 = 500 ml.')
 u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.', parts=[
     P('a', 'They cost ${b} in all.', A('4.05')), P('b', 'Her change is ${b}.', A('0.95'))],
@@ -52,7 +52,7 @@ u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.
 u.S(2, 'Siti has $20 and buys the first 3 things on the list.', parts=[
     P('a', 'They cost ${b} in all.', A('14.45')), P('b', 'Her change is ${b}.', A('5.55')),
     P('c', 'Can she buy all 4 things on the list?   {circ:Yes|No}', A('Yes'))],
-    figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 84, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
+    figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 76, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
     why='(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) All 4 things cost 14.45 + 1.75 = 16.20, which is less than $20. So she can.')
 u.S(2, 'A box with 6 books weighs 2 kg 250 g. The empty box weighs 450 g. All the books have the same mass. One book weighs {b} g.', A('300'),
     why='2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g.')
@@ -62,7 +62,7 @@ u.S(3, 'Write the time in the other kind of time.', parts=[
     partsrow=True,
     why='After 12 noon, add 12 to the hour for 24-hour time. (b) 1 + 12 = 13. (c) 9 + 12 = 21. For (d) and (e), take away 12: 16 - 12 = 4 and 20 - 12 = 8.')
 u.S(3, 'How long does each take? Use a time line to help.', parts=[
-    P('a', 'Aisha’s class starts at 5:25 pm and ends at 6:40 pm. It lasts {b} h {b} min.', A(['1', '15'], '1 h 15 min', list=True)),
+    P('a', 'Aisha’s class: 5:25 pm to 6:40 pm. It lasts {b} h {b} min.', A(['1', '15'], '1 h 15 min', list=True)),
     P('b', 'Ben’s class starts at 3:40 pm and lasts 55 minutes. It ends at {b}.', A('4:35 pm')),
     P('c', 'A show ends at 8:15 pm. It is 1 h 45 min long. It starts at {b}.', A('6:30 pm'))],
     space={'rows': ['Time line:']},

@@ -343,7 +343,7 @@
     ],
     "major": 200,
     "minor": 50,
-    "width_mm": 90
+    "width_mm": 78
    }
   },
   {
@@ -419,7 +419,7 @@
     "cw": 118,
     "ch": 42,
     "fs": 26,
-    "width_mm": 84,
+    "width_mm": 76,
     "rows": [
      [
       "Book",
@@ -517,7 +517,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Aisha’s class starts at 5:25 pm and ends at 6:40 pm. It lasts {b} h {b} min.",
+     "text": "Aisha’s class: 5:25 pm to 6:40 pm. It lasts {b} h {b} min.",
      "answer": {
       "value": [
        "1",

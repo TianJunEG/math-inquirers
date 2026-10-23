@@ -800,7 +800,7 @@
     ]
    },
    "hint": "Make a table. Write x and y after each repeat.",
-   "explanation": "Right 10, down 20, left 30, up 40 gives x = 10 − 30 = −20 and y = −20 + 40 = 20 after 4 repeats. The next 4 moves are right 50, down 60, left 70, up 80: x = −20 + 50 − 70 = −40 and y = 20 − 60 + 80 = 40. Every 4 repeats adds −20 to x and 20 to y, so after 12 repeats it is at (−60, 60)."
+   "explanation": "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60)."
   },
   {
    "id": "L6U07-G02",

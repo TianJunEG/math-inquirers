@@ -755,7 +755,7 @@
      "Working:"
     ]
    },
-   "explanation": "An even total needs both dice odd (3 × 3 = 9 ways) or both dice even (3 × 3 = 9 ways): 18 of the 36. So 18/36 each: fair. Game 2: Ali wins on 7, which is 6/36, and Ben on the other 30/36. If Ali scores 5 points a win and Ben scores 1, then 6 × 5 = 30 and 30 × 1 = 30: fair."
+   "explanation": "An even total needs 2 odd dice (3 × 3 = 9 ways) or 2 even dice (9 ways): 18 of 36, so it is fair. In Game 2 Ali wins 6/36 and Ben 30/36. If Ali scores 5 points a win and Ben 1, then 6 × 5 = 30 = 30 × 1: fair."
   },
   {
    "id": "L6U06-T02",
@@ -1018,7 +1018,7 @@
      "Working:"
     ]
    },
-   "explanation": "A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. If the prize is 5 dollars you win about 100 × 5 = 500 dollars, so you lose money. The game is fair when the winnings equal what you paid: 100 × prize = 1200, so the prize is 12 dollars."
+   "explanation": "A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. With a 5-dollar prize you win about 500, so you lose. Fair means 100 × prize = 1200: the prize is 12 dollars."
   },
   {
    "id": "L6U06-C01",
