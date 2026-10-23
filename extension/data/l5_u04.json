@@ -196,31 +196,31 @@
       0
      ],
      "B": [
-      6,
+      8,
       0
      ],
      "C": [
-      3,
-      4
+      4,
+      3
      ],
      "S": [
-      3,
+      4,
       0
      ],
      "P": [
-      9,
+      11,
       0
      ],
      "Q": [
-      19,
+      25,
       0
      ],
      "R": [
-      14,
+      16,
       12
      ],
      "H": [
-      14,
+      16,
       0
      ]
     },
@@ -270,7 +270,7 @@
      {
       "a": "A",
       "b": "B",
-      "text": "6 cm",
+      "text": "8 cm",
       "ref": "C"
      },
      {
@@ -290,7 +290,7 @@
      {
       "a": "P",
       "b": "Q",
-      "text": "10 cm",
+      "text": "14 cm",
       "ref": "R"
      },
      {
@@ -303,45 +303,46 @@
      {
       "a": "Q",
       "b": "R",
-      "text": "13 cm",
+      "text": "15 cm",
       "ref": "P",
       "dist": 26
      }
     ],
     "texts": [
      {
-      "t": "4 cm",
+      "t": "3 cm",
       "at": [
-       4.3,
-       1.5
+       5.5,
+       1.0
       ],
       "size": 18
      },
      {
       "t": "12 cm",
       "at": [
-       15.5,
-       6
-      ]
+       19.0,
+       5
+      ],
+      "size": 18
      },
      {
       "t": "(a)",
       "at": [
-       3,
-       6.3
+       4,
+       5.2
       ]
      },
      {
       "t": "(b)",
       "at": [
-       14,
+       16,
        14.3
       ]
      }
     ],
     "vlab": false,
     "alt": "two triangles with their heights",
-    "mm": 3.1
+    "mm": 3.3
    },
    "parts": [
     {
@@ -359,13 +360,13 @@
      "text": "Triangle (b): {b} cm²",
      "answer": {
       "value": [
-       "60"
+       "84"
       ],
-      "text": "60"
+      "text": "84"
      }
     }
    ],
-   "explanation": "(a) 1/2 × 6 × 4 = 12. (b) 1/2 × 10 × 12 = 60. Slanting sides are not used.",
+   "explanation": "(a) 1/2 × 8 × 3 = 12. (b) 1/2 × 14 × 12 = 84. Slanting sides are not used.",
    "partsrow": true,
    "figside": true
   },
@@ -656,15 +657,15 @@
      {
       "t": "5 cm",
       "at": [
-       9.6,
-       10.6
+       4.3,
+       10.4
       ],
       "size": 18
      }
     ],
     "vlab": false,
     "alt": "a square with a triangle on top",
-    "mm": 2.08
+    "mm": 3.0
    },
    "answer": {
     "value": [
@@ -808,7 +809,7 @@
      "C": "t"
     },
     "alt": "triangle on a square grid",
-    "mm": 4.4
+    "mm": 3.9
    },
    "answer": {
     "value": [
@@ -926,16 +927,16 @@
    "id": "L5U04-S09",
    "tier": "start",
    "page": 3,
-   "text": "The areas of a square and a triangle are equal. The square has sides of 10 cm. The base of the triangle is 25 cm.",
+   "text": "The areas of a square and a triangle are equal. The square has sides of 12 cm. The base of the triangle is 18 cm.",
    "parts": [
     {
      "label": "a",
      "text": "The area of the square is {b} cm².",
      "answer": {
       "value": [
-       "100"
+       "144"
       ],
-      "text": "100"
+      "text": "144"
      }
     },
     {
@@ -943,9 +944,9 @@
      "text": "The height of the triangle is {b} cm.",
      "answer": {
       "value": [
-       "8"
+       "16"
       ],
-      "text": "8"
+      "text": "16"
      }
     }
    ],
@@ -954,7 +955,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) 10 × 10 = 100. (b) The triangle has area 100 too, so base × height = 200. 200 ÷ 25 = 8."
+   "explanation": "(a) 12 × 12 = 144. (b) The triangle has area 144 too, so base × height = 288. 288 ÷ 18 = 16."
   },
   {
    "id": "L5U04-S10",
@@ -1064,7 +1065,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "How many different pairs of base and height are possible? {b}",
+     "text": "How many pairs of base and height are possible? (Base 3 with height 6 is not the same pair as base 6 with height 3.) {b}",
      "answer": {
       "value": [
        "6"
@@ -1317,7 +1318,7 @@
      "Working:"
     ]
    },
-   "hint": "Take the 3 white triangles away from the rectangle.",
+   "hint": "The shaded triangle is part of the rectangle. What is the rest?",
    "explanation": "Rectangle 14 × 10 = 140. White triangles: 35 + 17.5 + 35 = 87.5. 140 - 87.5 = 52.5 cm².",
    "figright": true
   },
@@ -1494,7 +1495,7 @@
      "Working:"
     ]
    },
-   "hint": "Take away the 3 white right-angled triangles.",
+   "hint": "Which shapes are left when you remove triangle DEF?",
    "explanation": "Square 16 × 16 = 256. White triangles: 32 + 48 + 64 = 144. 256 - 144 = 112 cm².",
    "figright": true
   },
@@ -1607,12 +1608,6 @@
       "fill": "shade"
      }
     ],
-    "lines": [
-     {
-      "a": "D",
-      "b": "C"
-     }
-    ],
     "vlab": {
      "A": "l",
      "B": "br",
@@ -1634,8 +1629,8 @@
      "Working:"
     ]
    },
-   "hint": "Join D to C. Compare ADC with ABC first.",
-   "explanation": "Join D to C. ADC = 1/4 of 96 = 24. ADE = 1/3 of ADC = 8 cm².",
+   "hint": "Draw one more line. Compare a bigger triangle with ABC first.",
+   "explanation": "Draw DC. ADC = 1/4 of 96 = 24. ADE = 1/3 of ADC = 8 cm².",
    "figright": true,
    "beyond": "Corner triangles"
   },
@@ -1653,15 +1648,15 @@
       0
      ],
      "B": [
-      24,
+      16,
       0
      ],
      "C": [
-      12,
-      5
+      8,
+      6
      ],
      "H": [
-      12,
+      8,
       0
      ]
     },
@@ -1693,56 +1688,56 @@
      {
       "a": "A",
       "b": "B",
-      "text": "24 cm"
+      "text": "16 cm"
      },
      {
       "a": "A",
       "b": "C",
-      "text": "13 cm",
+      "text": "10 cm",
       "dist": 26
      },
      {
       "a": "B",
       "b": "C",
-      "text": "13 cm",
+      "text": "10 cm",
       "dist": 26
      }
     ],
     "texts": [
      {
-      "t": "5 cm",
+      "t": "6 cm",
       "at": [
-       14.2,
-       1.9
+       10.3,
+       2.4
       ],
       "size": 18
      }
     ],
     "vlab": false,
     "alt": "triangle with a dashed height",
-    "mm": 1.83
+    "mm": 2.33
    },
    "answer": {
     "value": [
-     "60"
+     "48"
     ],
-    "text": "60 cm²"
+    "text": "48 cm²"
    },
-   "explanation": "1/2 × 24 × 5 = 60. The sides 13 and 13 are not used.",
+   "explanation": "1/2 × 16 × 6 = 48. The sides 10 and 10 are not used.",
    "figright": true
   },
   {
    "id": "L5U04-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "A triangle has an area of 54 cm². Its base is 12 cm. Find its height. {b} cm",
+   "text": "A triangle has an area of 70 cm². Its base is 14 cm. Find its height. {b} cm",
    "answer": {
     "value": [
-     "9"
+     "10"
     ],
-    "text": "9 cm"
+    "text": "10 cm"
    },
-   "explanation": "2 × 54 = 108 is base × height. 108 ÷ 12 = 9."
+   "explanation": "2 × 70 = 140 is base × height. 140 ÷ 14 = 10."
   },
   {
    "id": "L5U04-C03",
@@ -1833,7 +1828,7 @@
     ],
     "vlab": false,
     "alt": "rectangle with a triangle on its right side",
-    "mm": 2.9
+    "mm": 2.6
    },
    "answer": {
     "value": [
@@ -1841,7 +1836,7 @@
     ],
     "text": "72 cm²"
    },
-   "explanation": "Rectangle 60 + triangle 1/2 × 6 × 4 = 12. Total 72 cm².",
+   "explanation": "Rectangle 10 × 6 = 60. The triangle has base 6 and height 14 - 10 = 4: area 12. Total 72 cm².",
    "figright": true
   },
   {

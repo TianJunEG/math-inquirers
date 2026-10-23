@@ -118,40 +118,40 @@
    "id": "L5U03-S01",
    "tier": "start",
    "page": 1,
-   "text": "Aisha has $80. A book takes 1/4 of her money. A pen takes 1/3 of the money that is then left.",
+   "text": "Nina has $96. A hat takes 3/8 of her money. A scarf takes 2/5 of the money then left.",
    "parts": [
     {
      "label": "a",
-     "text": "The book costs $ {b}",
+     "text": "The hat costs $ {b}",
      "answer": {
       "value": [
-       "20"
+       "36"
       ],
-      "text": "20"
+      "text": "36"
      }
     },
     {
      "label": "b",
-     "text": "The pen costs $ {b}",
+     "text": "The scarf costs $ {b}",
      "answer": {
       "value": [
-       "20"
+       "24"
       ],
-      "text": "20"
+      "text": "24"
      }
     },
     {
      "label": "c",
-     "text": "Aisha has $ {b} left.",
+     "text": "Nina has $ {b} left.",
      "answer": {
       "value": [
-       "40"
+       "36"
       ],
-      "text": "40"
+      "text": "36"
      }
     }
    ],
-   "explanation": "(a) 1/4 of 80 = 20. (b) 80 - 20 = 60 is left. 1/3 of 60 = 20. (c) 60 - 20 = 40 is left."
+   "explanation": "(a) 3/8 of 96 = 36. (b) 96 - 36 = 60 is left. 2/5 of 60 = 24. (c) 60 - 24 = 36 is left."
   },
   {
    "id": "L5U03-S02",
@@ -196,22 +196,22 @@
    "id": "L5U03-S03",
    "tier": "start",
    "page": 1,
-   "text": "Ben is 12 years old. His aunt is 41 years old.",
+   "text": "Dev is 9 years old. His uncle is 38 years old.",
    "parts": [
     {
      "label": "a",
-     "text": "In 6 years Ben will be {b} and his aunt will be {b}.",
+     "text": "In 8 years Dev will be {b} and his uncle will be {b}.",
      "answer": {
       "value": [
-       "18",
-       "47"
+       "17",
+       "46"
       ],
-      "text": "18, 47"
+      "text": "17, 46"
      }
     },
     {
      "label": "b",
-     "text": "Now the aunt is {b} years older than Ben. In 6 years she is {b} years older.",
+     "text": "Now the uncle is {b} years older than Dev. In 8 years he is {b} years older.",
      "answer": {
       "value": [
        "29",
@@ -221,107 +221,86 @@
      }
     }
    ],
-   "explanation": "(a) 18 and 47. (b) 29 and 29: equal years added keep the difference."
+   "explanation": "(a) 17 and 46. (b) 29 and 29: equal years added keep the difference."
   },
   {
    "id": "L5U03-S04",
    "tier": "start",
    "page": 1,
-   "text": "Ali has 38 stamps. Mei has 24 stamps. Ali gives some stamps to Mei. Then each child has an equal number of stamps. How many stamps does Ali give? {b}",
+   "text": "One shelf has 52 books. Another shelf has 34 books. Some books are moved from the first shelf to the second. Then both shelves have the same number of books. How many books are moved? {b}",
    "answer": {
     "value": [
-     "7"
+     "9"
     ],
-    "text": "7 stamps"
+    "text": "9 books"
    },
-   "explanation": "The total stays 38 + 24 = 62. Each has 62 ÷ 2 = 31. Ali has 38 - 31 = 7 stamps too many, so he gives 7."
+   "explanation": "The total stays 52 + 34 = 86. Each shelf has 43. The first shelf loses 52 - 43 = 9 books."
   },
   {
    "id": "L5U03-S05",
    "tier": "start",
    "page": 1,
-   "text": "There are 48 children. 5/12 of them wear glasses. How many more children do not wear glasses than wear glasses? {b}",
+   "text": "A jar holds 72 sweets. 5/12 of them are mints. How many more sweets are not mints than mints? {b}",
    "answer": {
     "value": [
-     "8"
+     "12"
     ],
-    "text": "8 children"
+    "text": "12 sweets"
    },
-   "explanation": "1/12 of 48 = 4. 5/12 of 48 = 20 wear glasses. 48 - 20 = 28 do not. 28 - 20 = 8 more."
+   "explanation": "1/12 of 72 = 6. 5/12 of 72 = 30 are mints. 72 - 30 = 42 are not. 42 - 30 = 12 more."
   },
   {
    "id": "L5U03-S06",
    "tier": "start",
    "page": 2,
-   "text": "A bag has 15 green beads and 9 yellow beads. Then 6 more yellow beads are put in.",
+   "text": "A box has 12 red cubes and 8 blue cubes. Then 10 more red cubes are put in.",
    "parts": [
     {
      "label": "a",
-     "text": "The beads that did not change are   {circ:green|yellow}",
+     "text": "The cubes that did not change are   {circ:red|blue}",
      "answer": {
       "value": [
-       "green"
+       "blue"
       ],
-      "text": "green"
+      "text": "blue"
      }
     },
     {
      "label": "b",
-     "text": "At first, green beads are {b} of the beads.  (simplest form)",
+     "text": "At first, blue cubes are {b} of the cubes.  (simplest form)",
      "answer": {
       "value": [
-       "5/8"
+       "2/5"
       ],
-      "text": "5/8"
+      "text": "2/5"
      }
     },
     {
      "label": "c",
-     "text": "Now, green beads are {b} of the beads.  (simplest form)",
+     "text": "Now, blue cubes are {b} of the cubes.  (simplest form)",
      "answer": {
       "value": [
-       "1/2"
+       "4/15"
       ],
-      "text": "1/2"
+      "text": "4/15"
      }
     }
    ],
-   "explanation": "(a) Only yellow beads were added. (b) 15 of 24 = 5/8. (c) 15 of 30 = 1/2."
+   "explanation": "(a) Only red cubes were added. (b) 8 of 20 = 2/5. (c) 8 of 30 = 4/15."
   },
   {
    "id": "L5U03-S07",
    "tier": "start",
    "page": 2,
-   "text": "Ray spent 2/5 of his money on a bag. He has $45 left. Use the bar model.",
+   "text": "Ray spent 2/5 of his money on a bag. He has $45 left. Cut the bar to show each step.",
    "figure": {
     "type": "l5_bars",
     "rows": [
      {
       "cells": [
        {
-        "n": 1,
-        "text": "bag",
-        "shade": true
-       },
-       {
-        "n": 1,
-        "text": "bag",
-        "shade": true
-       },
-       {
-        "n": 1,
-        "text": "left",
-        "shade": false
-       },
-       {
-        "n": 1,
-        "text": "left",
-        "shade": false
-       },
-       {
-        "n": 1,
-        "text": "left",
-        "shade": false
+        "n": 5,
+        "text": "Ray's money"
        }
       ],
       "brace": {
@@ -332,7 +311,7 @@
      }
     ],
     "width_mm": 110,
-    "alt": "bar of 5 equal parts"
+    "alt": "bar for the money, not yet cut"
    },
    "parts": [
     {
@@ -459,58 +438,58 @@
    "id": "L5U03-S11",
    "tier": "start",
    "page": 3,
-   "text": "Ravi has $45. Ben has $21. Their mother gives each boy $15.",
+   "text": "Dev has $56. Mei has $29. Their uncle gives each child $12.",
    "parts": [
     {
      "label": "a",
-     "text": "Ravi has $ {b} now.",
+     "text": "Dev has $ {b} now.",
      "answer": {
       "value": [
-       "60"
+       "68"
       ],
-      "text": "60"
+      "text": "68"
      }
     },
     {
      "label": "b",
-     "text": "Ben has $ {b} now.",
+     "text": "Mei has $ {b} now.",
      "answer": {
       "value": [
-       "36"
+       "41"
       ],
-      "text": "36"
+      "text": "41"
      }
     },
     {
      "label": "c",
-     "text": "Ravi has $ {b} more than Ben now.",
+     "text": "Dev has $ {b} more than Mei now.",
      "answer": {
       "value": [
-       "24"
+       "27"
       ],
-      "text": "24"
+      "text": "27"
      }
     }
    ],
-   "explanation": "(a) 45 + 15 = 60. (b) 21 + 15 = 36. (c) 60 - 36 = 24. Before the gift 45 - 21 = 24 too. The difference did not change."
+   "explanation": "(a) 56 + 12 = 68. (b) 29 + 12 = 41. (c) 68 - 41 = 27. Before the gift 56 - 29 = 27 too. The difference did not change."
   },
   {
    "id": "L5U03-S12",
    "tier": "start",
    "page": 3,
-   "text": "Siti buys a shirt with 1/4 of her money. Shoes take 1/3 of the rest. She keeps $30. How much money did Siti start with? $ {b}",
+   "text": "Hana buys a shirt with 1/5 of her money. Shoes take 3/8 of the rest. She keeps $40. How much money did Hana start with? $ {b}",
    "answer": {
     "value": [
-     "60"
+     "80"
     ],
-    "text": "$60"
+    "text": "$80"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Shirt 1 unit, shoes 1 unit, left 2 units = $30. 1 unit = $15, so $60."
+   "explanation": "Shirt 2 units, shoes 3 units, left 5 units of 10 = $40. 1 unit = $8, so $80."
   },
   {
    "id": "L5U03-S13",
@@ -573,12 +552,12 @@
    "id": "L5U03-T01",
    "tier": "think",
    "page": 4,
-   "text": "On Monday Siti uses 2/5 of her money. On Tuesday she uses 1/3 of what is left. In all she uses $90. How much money did Siti start with? $ {b}",
+   "text": "On Monday Ravi spends 3/8 of his money. On Tuesday he spends 2/5 of what is left. After Tuesday he has $60. How much money did Ravi start with? $ {b}",
    "answer": {
     "value": [
-     "150"
+     "160"
     ],
-    "text": "$150"
+    "text": "$160"
    },
    "space": {
     "rows": [
@@ -589,19 +568,19 @@
      ""
     ]
    },
-   "hint": "Cut the whole into 15 equal units. Count the units spent.",
-   "explanation": "2/5 = 6/15, so Monday takes 6 units of 15. The rest is 9 units and Tuesday takes 3. 9 units = $90, so 1 unit = $10 and the total is $150."
+   "hint": "Find what fraction of all the money is left at the end.",
+   "explanation": "Monday leaves 5/8. Tuesday takes 2/5 of 5/8 = 2/8. Left 3/8 = $60, so 1/8 = $20 and the whole is $160."
   },
   {
    "id": "L5U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "Siti and Mei have 120 beads altogether. Siti gives 10 beads to Mei. Then Siti has 3/5 as many beads as Mei. How many beads did Siti have at first? {b}",
+   "text": "Ali and Ben have 132 cards altogether. Ben gives 14 cards to Ali. Then Ben has 4/7 as many cards as Ali. How many cards did Ben have at first? {b}",
    "answer": {
     "value": [
-     "55"
+     "62"
     ],
-    "text": "55 beads"
+    "text": "62 cards"
    },
    "space": {
     "rows": [
@@ -612,19 +591,19 @@
      ""
     ]
    },
-   "hint": "The total stays the same. Find each child's beads after.",
-   "explanation": "After: Siti 3 units, Mei 5 units. 8 units = 120, so 1 unit = 15. Siti has 45 now. She gave away 10, so at first she had 45 + 10 = 55."
+   "hint": "The total stays the same. Find each child's cards after.",
+   "explanation": "After: Ben 4 units, Ali 7 units. 11 units = 132, so 1 unit = 12. Ben has 48 now. Before giving 14 he had 48 + 14 = 62."
   },
   {
    "id": "L5U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Ravi is 38 years old. His son is 10 years old. In how many years will the son be 1/3 of his father's age? {b} years",
+   "text": "Ravi is 42 years old. His son is 12 years old. In how many years will the son be 1/3 of his father's age? {b} years",
    "answer": {
     "value": [
-     "4"
+     "3"
     ],
-    "text": "4 years"
+    "text": "3 years"
    },
    "space": {
     "rows": [
@@ -636,7 +615,7 @@
     ]
    },
    "hint": "The difference in their ages never changes. How many units is it?",
-   "explanation": "The difference stays 28 years. The son is 1 unit and the father 3 units, so 2 units = 28. 1 unit = 14, which is 4 years from now."
+   "explanation": "The difference stays 30 years. The son is 1 unit and the father 3 units, so 2 units = 30. 1 unit = 15, which is 3 years from now."
   },
   {
    "id": "L5U03-G01",
@@ -783,30 +762,30 @@
    "id": "L5U03-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "A jar has 18 blue beads and 12 yellow beads. Then 20 yellow beads are put in.",
+   "text": "A pond has 24 ducks and 16 geese. Then 24 more geese come to the pond.",
    "parts": [
     {
      "label": "a",
-     "text": "The beads that did not change are   {circ:blue|yellow}",
+     "text": "The birds that did not change are   {circ:ducks|geese}",
      "answer": {
       "value": [
-       "blue"
+       "ducks"
       ],
-      "text": "blue"
+      "text": "ducks"
      }
     },
     {
      "label": "b",
-     "text": "The fraction of beads that are blue is now {b}",
+     "text": "The fraction of birds that are ducks is now {b}",
      "answer": {
       "value": [
-       "9/25"
+       "3/8"
       ],
-      "text": "9/25"
+      "text": "3/8"
      }
     }
    ],
-   "explanation": "(a) Only yellow beads were added, so the 18 blue beads did not change. (b) Now there are 18 + 32 = 50 beads. 18/50 = 9/25."
+   "explanation": "(a) Only geese came, so the 24 ducks did not change. (b) Now there are 24 + 40 = 64 birds. 24/64 = 3/8."
   }
  ]
 }

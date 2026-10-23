@@ -34,12 +34,12 @@ def minutes_until(target, start, step, limit=10000):
     return t
 
 
-def half_hour_lots(minutes_after_first_hour):
-    """Number of half hours or parts of a half hour."""
+def half_hour_lots(minutes_after_first_hour, size=30):
+    """Number of blocks of `size` minutes, or parts of one."""
     lots, left = 0, minutes_after_first_hour
     while left > 0:
         lots += 1
-        left -= 30
+        left -= size
     return lots
 
 
@@ -92,13 +92,13 @@ def _():
 
 @check('L5U06-S08')
 def _():
-    return [str(minutes_until(900, 0, 40 + 20))]
+    return [str(minutes_until(1200, 0, 35 + 25))]
 
 
 @check('L5U06-S09')
 def _():
-    minutes = 2 * 60 + 20
-    return [money(200 + 80 * half_hour_lots(minutes - 60))]
+    minutes = 3 * 60 + 40
+    return [money(300 + 120 * half_hour_lots(minutes - 120, 15))]
 
 
 @check('L5U06-S10')
@@ -131,7 +131,7 @@ def _():
 @check('L5U06-S13')
 def _():
     for visits in range(1, 100):
-        if 2000 + 400 * visits == 800 * visits:
+        if 1800 + 200 * visits == 500 * visits:
             return [str(visits)]
 
 
@@ -153,15 +153,15 @@ def _():
 
 @check('L5U06-T02')
 def _():
-    job = 12 * 20          # any common multiple works: pages
-    rate = Fr(job, 12) + Fr(job, 20)
+    job = 20 * 30          # any common multiple works
+    rate = Fr(job, 20) + Fr(job, 30)
     return [fmt(Fr(job) / rate)]
 
 
 @check('L5U06-T03')
 def _():
-    one_printer_one_minute = Fr(480, 4) / 6
-    return [fmt(one_printer_one_minute * 6 * 5)]
+    one_worker_one_minute = Fr(400, 5) / 8
+    return [fmt(one_worker_one_minute * 8 * 6)]
 
 
 @check('L5U06-G01')
@@ -185,9 +185,9 @@ def _():
 @check('L5U06-G03')
 def _():
     water, t = 0, 0
-    while water < 200:
+    while water < 312:
         t += 1
-        water += 8 + (12 if t > 5 else 0)
+        water += 9 + (11 if t > 8 else 0)
     return [str(t)]
 
 
@@ -209,5 +209,5 @@ def _():
 
 @check('L5U06-C04')
 def _():
-    minutes = 2 * 60 + 45
-    return [money(150 + 60 * half_hour_lots(minutes - 60))]
+    minutes = 1 * 60 + 55
+    return [money(500 + 200 * half_hour_lots(minutes - 30, 20))]

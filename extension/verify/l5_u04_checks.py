@@ -63,7 +63,11 @@ def _():
 
 @check('L5U04-S01')
 def _():
-    return {'a': [fmt(area([(0, 0), (6, 0), (3, 4)]))], 'b': [fmt(area([(9, 0), (19, 0), (14, 12)]))]}
+    import math
+    A, B, C = (0, 0), (8, 0), (4, 3)
+    P, Q, R = (11, 0), (25, 0), (16, 12)
+    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [5, 5, 13, 15]   # the labelled slanting sides
+    return {'a': [fmt(area([A, B, C]))], 'b': [fmt(area([P, Q, R]))]}
 
 
 @check('L5U04-S02')
@@ -120,8 +124,8 @@ def _():
 
 @check('L5U04-S09')
 def _():
-    sq = 10 * 10
-    h = next(h for h in range(1, 500) if Fr(25 * h, 2) == sq)
+    sq = 12 * 12
+    h = next(h for h in range(1, 500) if Fr(18 * h, 2) == sq)
     return {'a': [str(sq)], 'b': [str(h)]}
 
 
@@ -197,12 +201,14 @@ def _():
 
 @check('L5U04-C01')
 def _():
-    return [fmt(area([(0, 0), (24, 0), (12, 5)]))]
+    import math
+    assert math.dist((0, 0), (8, 6)) == 10 and math.dist((16, 0), (8, 6)) == 10
+    return [fmt(area([(0, 0), (16, 0), (8, 6)]))]
 
 
 @check('L5U04-C02')
 def _():
-    return [str(next(h for h in range(1, 200) if Fr(12 * h, 2) == 54))]
+    return [str(next(h for h in range(1, 200) if Fr(14 * h, 2) == 70))]
 
 
 @check('L5U04-C03')

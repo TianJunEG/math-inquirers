@@ -41,8 +41,10 @@ def _():
 
 @check('L5U05-S01')
 def _():
-    layer = 4 * 3
-    return {'a': [str(layer)], 'b': ['2'], 'c': [str(count_cubes(4, 3, 2)), str(count_cubes(4, 3, 2))]}
+    # 5 long, 2 wide, 3 high: the front bottom row, the bottom layer, all the cubes
+    front_row = sum(1 for x, y, z in itertools.product(range(5), range(2), range(3)) if y == 0 and z == 0)
+    layer = sum(1 for x, y, z in itertools.product(range(5), range(2), range(3)) if z == 0)
+    return {'a': [str(front_row)], 'b': [str(layer)], 'c': [str(count_cubes(5, 2, 3)), str(count_cubes(5, 2, 3))]}
 
 
 @check('L5U05-S02')
@@ -71,8 +73,8 @@ def _():
 
 @check('L5U05-S06')
 def _():
-    rise = Fr(4 * 1000, 50 * 20)
-    return {'a': [fmt(rise)], 'b': [fmt(6 + rise)]}
+    rise = Fr(5 * 1000, 40 * 25)
+    return {'a': [fmt(rise)], 'b': [fmt(7 + rise)]}
 
 
 @check('L5U05-S07')
@@ -105,13 +107,13 @@ def _():
 
 @check('L5U05-S12')
 def _():
-    return [fmt(Fr(30 ** 3, 60 * 45))]
+    return [fmt(Fr(45 * 40 * 30, 60 * 30))]
 
 
 @check('L5U05-S13')
 def _():
     for cap in range(1, 1000):
-        if Fr(7, 10) * cap - Fr(2, 5) * cap == 18:
+        if Fr(7, 12) * cap - Fr(3, 8) * cap == 35:
             return [str(cap)]
 
 
@@ -124,22 +126,22 @@ def _():
 @check('L5U05-T01')
 def _():
     for n in range(3, 40):
-        if painted_faces(n).get(1, 0) == 54:
+        if painted_faces(n).get(0, 0) == 64:
             return [str(n ** 3)]
 
 
 @check('L5U05-T02')
 def _():
-    vol = 40 * 30 * 18
-    return [fmt(Fr(vol, 40 * 30 + 30 * 20))]
+    vol = 50 * 20 * 24
+    return [fmt(Fr(vol, 50 * 20 + 25 * 20))]
 
 
 @check('L5U05-T03')
 def _():
-    water = 40 * 20 * 9
-    free_floor = 40 * 20 - 10 * 20
+    water = 50 * 30 * 8
+    free_floor = 50 * 30 - 20 * 15
     depth = Fr(water, free_floor)
-    assert depth < 15          # the block sticks out of the water, so the free-floor rule applies all the way up
+    assert depth < 12          # the block sticks out of the water, so the free-floor rule applies all the way up
     return [fmt(depth)]
 
 
@@ -170,7 +172,7 @@ def _():
 @check('L5U05-G03')
 def _():
     sols = [(a, b, c) for a in range(1, 40) for b in range(a, 40) for c in range(b, 40)
-            if sorted([a * b, a * c, b * c]) == [24, 36, 54]]
+            if sorted([a * b, a * c, b * c]) == [20, 28, 35]]
     assert len(sols) == 1
     a, b, c = sols[0]
     return [str(a * b * c)]
@@ -188,7 +190,7 @@ def _():
 
 @check('L5U05-C03')
 def _():
-    return [str(painted_faces(4)[2])]
+    return [str(painted_faces(5)[2])]
 
 
 @check('L5U05-C04')

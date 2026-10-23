@@ -57,10 +57,11 @@
    ]
   },
   "facts": {
-   "title": "Better buy",
+   "title": "Buys and teams",
    "lines": [
-    "Find the cost of 1 item.",
-    "Or compare the cost of the same number of items."
+    "Better buy: find the cost of 1 item.",
+    "Taps working together: add the rates.",
+    "A leak: take its rate away."
    ]
   },
   "tight": true,
@@ -319,37 +320,37 @@
    "id": "L5U06-S08",
    "tier": "start",
    "page": 2,
-   "text": "Printer P makes 40 pages each minute. Printer Q makes 20 pages each minute. Together they make one job of 900 pages. How many minutes does the job take? {b}",
+   "text": "Machine P folds 35 booklets each minute. Machine Q folds 25 booklets each minute. Together they fold one order of 1200 booklets. How many minutes does the order take? {b}",
    "answer": {
     "value": [
-     "15"
+     "20"
     ],
-    "text": "15 minutes"
+    "text": "20 minutes"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Together they print 40 + 20 = 60 pages a minute. 900 ÷ 60 = 15 minutes."
+   "explanation": "Together they fold 35 + 25 = 60 booklets a minute. 1200 ÷ 60 = 20 minutes."
   },
   {
    "id": "L5U06-S09",
    "tier": "start",
    "page": 2,
-   "text": "The first hour of parking costs $2.00. Each extra 30 minutes costs $0.80, and a part of 30 minutes counts as a whole one. Mei parks for 2 hours 20 minutes. How much does she pay? $ {b}",
+   "text": "A car park charges $3.00 for the first 2 hours. After that it charges $1.20 for each 15 minutes, and a part of 15 minutes counts as a whole one. Ravi parks for 3 hours 40 minutes. How much does he pay? $ {bw}",
    "answer": {
     "value": [
-     "4.40"
+     "11.40"
     ],
-    "text": "$4.40"
+    "text": "$11.40"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "First hour $2.00. Then 1 hour 20 minutes is 2 half hours and a part, so 3 lots: 3 × $0.80 = $2.40. Total $4.40."
+   "explanation": "First 2 hours $3.00. Then 1 hour 40 minutes is 6 quarter hours and a part, so 7 lots: 7 × $1.20 = $8.40. Total $11.40."
   },
   {
    "id": "L5U06-S10",
@@ -462,19 +463,19 @@
    "id": "L5U06-S13",
    "tier": "start",
    "page": 3,
-   "text": "Gym plan A costs $20 a month and then $4 for each visit. Plan B costs $8 for each visit and has no monthly fee. For how many visits in a month do the 2 plans cost the same? {b}",
+   "text": "Gym plan A costs $18 a month and then $2 for each visit. Plan B costs $5 for each visit and has no monthly fee. For how many visits in a month do the 2 plans cost the same? {b}",
    "answer": {
     "value": [
-     "5"
+     "6"
     ],
-    "text": "5 visits"
+    "text": "6 visits"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Plan B costs $4 more a visit. The $20 fee is paid back after 20 ÷ 4 = 5 visits (both $40)."
+   "explanation": "Plan B costs $3 more a visit. The $18 fee is paid back after 18 ÷ 3 = 6 visits (both $30)."
   },
   {
    "id": "L5U06-S14",
@@ -498,7 +499,7 @@
    "id": "L5U06-T01",
    "tier": "think",
    "page": 4,
-   "text": "Pen packs: A has 5 pens for $3.00, B has 8 pens for $4.70 and C has 12 pens for $6.90. Mei needs exactly 32 pens and may mix packs. Find the least total cost. $ {b}",
+   "text": "Pen packs: A has 5 pens for $3.00, B has 8 pens for $4.70 and C has 12 pens for $6.90. Mei needs exactly 32 pens and may mix packs. Find the least total cost. $ {bw}",
    "answer": {
     "value": [
      "18.50"
@@ -520,12 +521,12 @@
    "id": "L5U06-T02",
    "tier": "think",
    "page": 4,
-   "text": "Alone, printer P needs 12 minutes for a job. Alone, printer Q needs 20 minutes for the same job. Find the time for the job when both work. {b} minutes",
+   "text": "Alone, hose P needs 20 minutes to fill a pool. Alone, hose Q needs 30 minutes to fill the same pool. Find the time to fill the pool when both hoses are on. {b} minutes",
    "answer": {
     "value": [
-     "7.5"
+     "12"
     ],
-    "text": "7.5 minutes (7 1/2)"
+    "text": "12 minutes"
    },
    "space": {
     "rows": [
@@ -535,19 +536,19 @@
      ""
     ]
    },
-   "hint": "Pretend the job has 60 pages. How many pages a minute for each?",
-   "explanation": "Pretend 60 pages. P: 5 a minute. Q: 3 a minute. Together 8 a minute. 60 ÷ 8 = 7.5 minutes."
+   "hint": "Pretend the pool holds a number that 20 and 30 both go into.",
+   "explanation": "Pretend 60 litres. P: 3 a minute. Q: 2 a minute. Together 5 a minute. 60 ÷ 5 = 12 minutes."
   },
   {
    "id": "L5U06-T03",
    "tier": "think",
    "page": 4,
-   "text": "4 printers print 480 sheets in 6 minutes. All the printers work at the same rate. How many sheets do 6 printers print in 5 minutes? {b}",
+   "text": "5 workers pack 400 boxes in 8 minutes. All the workers pack at the same rate. How many boxes do 8 workers pack in 6 minutes? {b}",
    "answer": {
     "value": [
-     "600"
+     "480"
     ],
-    "text": "600 sheets"
+    "text": "480 boxes"
    },
    "space": {
     "rows": [
@@ -557,8 +558,8 @@
      ""
     ]
    },
-   "hint": "Find the sheets for 1 printer in 1 minute first.",
-   "explanation": "1 printer prints 480 ÷ 4 ÷ 6 = 20 sheets a minute. 6 × 5 × 20 = 600 sheets."
+   "hint": "Find the boxes for 1 worker in 1 minute first.",
+   "explanation": "1 worker packs 400 ÷ 5 ÷ 8 = 10 boxes a minute. 8 × 6 × 10 = 480 boxes."
   },
   {
    "id": "L5U06-G01",
@@ -609,12 +610,12 @@
    "id": "L5U06-G03",
    "tier": "go",
    "page": 5,
-   "text": "Tap A fills 8 litres a minute. Tap B fills 12 litres a minute. Tap A is turned on at the start. Tap B is turned on 5 minutes later. How many minutes after the start is a 200 litre tank full? {b} minutes",
+   "text": "Tap A fills 9 litres a minute. Tap B fills 11 litres a minute. Tap A is turned on at the start. Tap B is turned on 8 minutes later. How many minutes after the start is a 312 litre tank full? {b} minutes",
    "answer": {
     "value": [
-     "13"
+     "20"
     ],
-    "text": "13 minutes"
+    "text": "20 minutes"
    },
    "space": {
     "rows": [
@@ -624,8 +625,8 @@
      ""
     ]
    },
-   "hint": "How many litres has tap A put in before tap B starts?",
-   "explanation": "Tap A alone: 5 × 8 = 40 litres. 160 left at 20 a minute: 8 minutes. 5 + 8 = 13 minutes."
+   "hint": "What has happened before tap B is turned on?",
+   "explanation": "Tap A alone: 8 × 9 = 72 litres. 240 left at 20 a minute: 12 minutes. 8 + 12 = 20 minutes."
   },
   {
    "id": "L5U06-C01",
@@ -687,14 +688,14 @@
    "id": "L5U06-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "Parking: $1.50 for the first hour, then $0.60 for each extra 30 minutes (a part counts as a whole one). How much for 2 hours 45 minutes? $ {b}",
+   "text": "Bike hire costs $5.00 for the first 30 minutes. After that it costs $2.00 for each 20 minutes, and a part of 20 minutes counts as a whole one. How much for 1 hour 55 minutes? $ {b}",
    "answer": {
     "value": [
-     "3.90"
+     "15.00"
     ],
-    "text": "$3.90"
+    "text": "$15.00"
    },
-   "explanation": "First hour $1.50. 1 hour 45 minutes is 4 lots: 4 × $0.60 = $2.40. Total $3.90."
+   "explanation": "First 30 minutes $5.00. 85 minutes is 5 lots of 20: 5 × $2.00 = $10.00. Total $15.00."
   }
  ]
 }

@@ -27,10 +27,10 @@ def _():
 
 @check('L5U03-S01')
 def _():
-    m = 80
-    book = m * Fr(1, 4)
+    m = 96
+    book = m * Fr(3, 8)
     rest = m - book
-    pen = rest * Fr(1, 3)
+    pen = rest * Fr(2, 5)
     return {'a': [fs(book)], 'b': [fs(pen)], 'c': [fs(rest - pen)]}
 
 
@@ -42,30 +42,29 @@ def _():
 
 @check('L5U03-S03')
 def _():
-    ben, aunt = 12 + 6, 41 + 6
-    return {'a': [str(ben), str(aunt)], 'b': [str(41 - 12), str(aunt - ben)]}
+    ben, aunt = 9 + 8, 38 + 8
+    return {'a': [str(ben), str(aunt)], 'b': [str(38 - 9), str(aunt - ben)]}
 
 
 @check('L5U03-S04')
 def _():
     for g in range(0, 39):
-        if 38 - g == 24 + g:
+        if 52 - g == 34 + g:
             return [str(g)]
 
 
 @check('L5U03-S05')
 def _():
-    wear = Fr(5, 12) * 48
-    return [fs(48 - wear - wear)]
+    mints = Fr(5, 12) * 72
+    return [fs(72 - mints - mints)]
 
 
 @check('L5U03-S06')
 def _():
-    green, yellow = 15, 9
-    yellow2 = yellow + 6
-    changed = 'yellow' if yellow2 != yellow else 'green'
-    unchanged = 'green' if changed == 'yellow' else 'yellow'
-    return {'a': [unchanged], 'b': [fs(Fr(green, green + yellow))], 'c': [fs(Fr(green, green + yellow2))]}
+    red, blue = 12, 8
+    red2 = red + 10
+    unchanged = 'blue' if red2 != red else 'red'
+    return {'a': [unchanged], 'b': [fs(Fr(blue, red + blue))], 'c': [fs(Fr(blue, red2 + blue))]}
 
 
 @check('L5U03-S07')
@@ -98,16 +97,16 @@ def _():
 
 @check('L5U03-S11')
 def _():
-    ravi, ben = 45 + 15, 21 + 15
+    ravi, ben = 56 + 12, 29 + 12
     return {'a': [str(ravi)], 'b': [str(ben)], 'c': [str(ravi - ben)]}
 
 
 @check('L5U03-S12')
 def _():
-    for m in range(12, 1000, 12):
-        left = m - m / 4
-        left -= left / 3
-        if left == 30:
+    for m in range(10, 1000, 10):
+        left = m - Fr(m, 5)
+        left -= left * Fr(3, 8)
+        if left == 40:
             return [str(m)]
 
 
@@ -131,26 +130,26 @@ def _():
 
 @check('L5U03-T01')
 def _():
-    for m in range(15, 1000, 15):
-        mon = Fr(2, 5) * m
-        tue = Fr(1, 3) * (m - mon)
-        if mon + tue == 90:
+    for m in range(8, 1000, 8):
+        mon = Fr(3, 8) * m
+        tue = Fr(2, 5) * (m - mon)
+        if m - mon - tue == 60:
             return [str(m)]
 
 
 @check('L5U03-T02')
 def _():
-    for siti in range(1, 120):
-        mei = 120 - siti
-        s2, m2 = siti - 10, mei + 10
-        if Fr(s2) == Fr(3, 5) * m2:
+    for siti in range(1, 132):
+        mei = 132 - siti
+        s2, m2 = siti - 14, mei + 14
+        if Fr(s2) == Fr(4, 7) * m2:
             return [str(siti)]
 
 
 @check('L5U03-T03')
 def _():
     for y in range(1, 100):
-        if Fr(10 + y) == Fr(1, 3) * (38 + y):
+        if Fr(12 + y) == Fr(1, 3) * (42 + y):
             return [str(y)]
 
 
@@ -217,5 +216,5 @@ def _():
 
 @check('L5U03-C04')
 def _():
-    blue, yellow = 18, 12 + 20
-    return {'a': ['blue'], 'b': [fs(Fr(blue, blue + yellow))]}
+    blue, yellow = 24, 16 + 24
+    return {'a': ['ducks' if yellow != 16 else 'geese'], 'b': [fs(Fr(blue, blue + yellow))]}
