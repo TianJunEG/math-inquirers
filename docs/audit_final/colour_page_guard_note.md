@@ -28,3 +28,14 @@ Done 23 Oct 2026, following `colour_page_key_match_check.md`. Code-hardening onl
 - P5: port the same validate block (replace `P4` by `P5` in the PDF names) and set `school/p5/cbc_vendor/layout.py:15` `BOX_SIDE = 9.0`. Not touched (other agents are working there).
 - P6: has the HTML check and the default (11.0); it does not have the sheet-vs-PDF text check, which can be copied from P4 if wanted.
 - `school/colour_by_code/layout.py` still defaults to 6.0 (nothing there sets another size).
+
+## Primary 3 and Primary 6 (23 Oct 2026, follow-up)
+
+Code hardening only. Changed: `school/p3/cbc_vendor/layout.py` (`BOX_SIDE = 12.0`, the value `gen/pages_cbc.py` `cbc_page()` sets; the try/finally wrapper is left in place), `school/p3/validate.py` (the P4 block ported, `P4_` changed to `P3_`: the HTML pupil-vs-key check plus the sheet-vs-PDF check), `school/p6/validate.py` (the sheet-vs-PDF check added after its existing HTML check; its 11.0 default is unchanged).
+
+- Sheet level: for P3-14, 39, 40 and the P6 colour pages (S1-09, S2-12, S2-20) I dumped every question line and answer, key text, check text, body SVG hash, teacher SVG hash, thumbnail hash and instruction before and after: **identical** (both levels).
+- PDF level: built all eight PDFs per level once with a copy of the old code and once with the new, in scratch dirs (`build.py --outdir`, with the `fonts` folder reachable so both builds use the real fonts), and compared `pdftotext -layout` and the md5 of every page at 70 dpi: **all 16 PDFs identical in text and pixels** (also S1_key.html and S2_pupil.html byte-identical). `school/p3/out`, `school/p6/out` and other levels were not touched.
+- `validate.py` once per level on the scratch builds (`--outdir`), new code vs old code on the same old build:
+  - P3: new 755 checks, 1 failed; old 744 checks, 1 failed (+11 new PASS lines: 2 HTML + 3 pages x 3 PDFs). The failure `S2 pupil page 08 layout (no overflow/clipping/margin breach): content leaves puzzle area` is the same with the OLD code (not a colour page; a rendering effect in this container).
+  - P6: new 757 checks, 5 failed; old 748, 5 failed (+9 new PASS lines for the PDF check; the HTML check was already there). The 5 failures (S1/S2 "marked DRAFT ... 6 DRAFT stamps", S1/S2 front page 02 layout, S2 key page 01 layout) are all identical with the OLD code and none is on a colour page.
+- Still open: P5 (done by its builder), `school/colour_by_code/layout.py` default 6.0.
