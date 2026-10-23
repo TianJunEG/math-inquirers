@@ -887,10 +887,10 @@
     ],
     "max": 40,
     "step": 10,
-    "width_mm": 60,
+    "width_mm": 56,
     "minor": 5,
     "unit_label": "pencils",
-    "h": 170
+    "h": 140
    },
    "figright": true
   },
