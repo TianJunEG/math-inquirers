@@ -2058,28 +2058,28 @@
       "h": 1,
       "m": 0,
       "digital": "[]",
-      "size": 100
+      "size": 92
      },
      {
       "type": "clock",
       "h": 8,
       "m": 0,
       "digital": "[]",
-      "size": 100
+      "size": 92
      },
      {
       "type": "clock",
       "h": 3,
       "m": 30,
       "digital": "[]",
-      "size": 100
+      "size": 92
      },
      {
       "type": "clock",
       "h": 9,
       "m": 30,
       "digital": "[]",
-      "size": 100
+      "size": 92
      }
     ]
    },
@@ -2112,7 +2112,8 @@
      "h": 4,
      "m": 0,
      "hide_hands": true,
-     "digital": "4:00"
+     "digital": "4:00",
+     "size": 70
     }
    },
    {
@@ -2144,21 +2145,21 @@
       "h": 7,
       "m": 0,
       "digital": "(1)",
-      "size": 100
+      "size": 80
      },
      {
       "type": "clock",
       "h": 7,
       "m": 30,
       "digital": "(2)",
-      "size": 100
+      "size": 80
      },
      {
       "type": "clock",
       "h": 1,
       "m": 30,
       "digital": "(3)",
-      "size": 100
+      "size": 80
      }
     ]
    },
@@ -2307,14 +2308,14 @@
       "h": 7,
       "m": 15,
       "digital": "[]",
-      "size": 100
+      "size": 80
      },
      {
       "type": "clock",
       "h": 2,
       "m": 45,
       "digital": "[]",
-      "size": 100
+      "size": 80
      }
     ]
    },
@@ -2357,7 +2358,7 @@
      "type": "clock",
      "h": 8,
      "m": 30,
-     "size": 100
+     "size": 70
     }
    },
    {
@@ -2383,7 +2384,7 @@
      "type": "clock",
      "h": 4,
      "m": 15,
-     "size": 100
+     "size": 70
     },
     "tf": [
      {
@@ -2546,14 +2547,14 @@
      "h": 6,
      "m": 0,
      "digital": "[]",
-     "size": 100
+     "size": 44
     },
     {
      "type": "clock",
      "h": 6,
      "m": 30,
      "digital": "[]",
-     "size": 100
+     "size": 44
     }
    ]
   },
@@ -2583,7 +2584,7 @@
     "m": 30,
     "hide_hands": true,
     "digital": "5:30",
-    "size": 100
+    "size": 44
    }
   },
   {
