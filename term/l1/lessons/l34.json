@@ -2587,7 +2587,7 @@
    "page": 5,
    "tier": "investigation",
    "title": "Fold, mark and open",
-   "first": "Fold a paper square in half. Mark one dot on it, away from the fold. How many dots when you open it? ____",
+   "first": "Fold a square in half. Mark one dot away from the fold. How many dots when opened? ____",
    "text": "Open it. Write one thing that is the same about the dots.",
    "lines": 4,
    "draw": 0,
@@ -2641,7 +2641,7 @@
      ]
     ],
     "mode": "iso",
-    "size": 24
+    "size": 20
    }
   },
   {
