@@ -197,8 +197,9 @@
             "text": ""
           },
           {
-            "k": "REC",
-            "text": "@rec"
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
           },
           {
             "k": "SAY",
@@ -207,6 +208,15 @@
           {
             "k": "SAY",
             "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -1024,7 +1034,7 @@
           ]
         }
       ],
-      "note": "Read the four rules together. Say the recording notice in your own words: the platform records the tutor, the shared screen and any voice that is unmuted; children's video is excluded; names are kept off the screen. A child or parent who does not wish to be heard can stay muted, and a camera can stay off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
+      "note": "Read the four rules together. Repeat the recording notice in the same words as at the start: this lesson is recorded; the recording has the tutor, the shared screen and any voice that is not muted. A child or parent who does not wish to be heard can stay muted, and a camera can stay off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
     },
     {
       "id": "s-rem1",
@@ -3158,7 +3168,7 @@
     "Solve every workbook question yourself first.",
     "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups. Small things stay away from mouths and from younger children.",
     "Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
     "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
   ],
   "spare_time": {

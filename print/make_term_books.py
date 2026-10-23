@@ -82,6 +82,7 @@ def overlay(W, H, fn):
 
 
 def cover_page(W, H, lvl, term, a, b, kind, bookno, ages):
+    # a, b are the lesson numbers WITHIN the term (Term 2 Lessons 1 to 5), the same numbers the page headers print
     def draw(c):
         c.setFillColor(TEAL); c.rect(0, H - 250, W, 250, stroke=0, fill=1)
         c.setFillColor(GOLD); c.rect(0, H - 258, W, 8, stroke=0, fill=1)
@@ -91,7 +92,7 @@ def cover_page(W, H, lvl, term, a, b, kind, bookno, ages):
         c.setFillColor(TEAL); c.setFont('Helvetica-Bold', 34)
         c.drawCentredString(W / 2, H - 330, KINDS[kind][1] if kind != 'workbook' else 'Workbook')
         c.setFillColor(INK); c.setFont('Helvetica-Bold', 26); c.drawCentredString(W / 2, H - 375, f'Book {bookno}')
-        c.setFont('Helvetica', 22); c.drawCentredString(W / 2, H - 410, f'Lessons {a} to {b}')
+        c.setFont('Helvetica', 22); c.drawCentredString(W / 2, H - 410, f'Term {term}, Lessons {a} to {b}')
         if os.path.exists(MASCOT):
             img = ImageReader(MASCOT); iw, ih = img.getSize(); h = 190; w = h * iw / ih
             c.drawImage(img, (W - w) / 2, 230, w, h, mask='auto')
@@ -147,7 +148,7 @@ def folio(W, H, n, g, odd):
     return overlay(W, H, draw)
 
 
-def build_book(level, term, bookno, lessons, kind, ages=''):
+def build_book(level, term, bookno, lessons, kind, ages='', per_term=10):
     suffix, label, recto, kitmode = KINDS[kind]
     g = GUTTER_MM / 25.4 * 72
     items = []  # ('cover'|'contents'|('src',reader,idx,kit)|None)
@@ -168,7 +169,7 @@ def build_book(level, term, bookno, lessons, kind, ages=''):
             seq.append(None)           # start each lesson on a front page
         wbpath = os.path.join(ROOT, 'term', f'l{level}', 'out', f'l{ln:02d}', f'L{ln:02d}_Workbook.pdf')
         topic, title = lesson_title(wbpath)
-        toc.append((f'Lesson {ln}', (re.sub(r'\b(And|Of|The|To|In|On|A)\b', lambda m: m.group(1).lower(), title) or topic, topic), len(seq) + 1))
+        toc.append((f'Lesson {(ln - 1) % per_term + 1}', (re.sub(r'\b(And|Of|The|To|In|On|A)\b', lambda m: m.group(1).lower(), title) or topic, topic), len(seq) + 1))
         toc[-1] = (toc[-1][0], (toc[-1][1][0][:1].upper() + toc[-1][1][0][1:], toc[-1][1][1]), toc[-1][2])
         ktypes, realsize = lesson_info(level, ln)
         kn = 0
@@ -194,7 +195,7 @@ def build_book(level, term, bookno, lessons, kind, ages=''):
         seq.append(None)
     s = (W - g) / W
     ty = (H - s * H) / 2
-    a, b = lessons[0], lessons[-1]
+    a, b = (lessons[0] - 1) % per_term + 1, (lessons[-1] - 1) % per_term + 1     # numbers within the term, as printed on every page header
     cover = cover_page(W, H, level, term, a, b, kind, bookno, ages)
     cont = contents_page(W, H, level, term, kind, bookno, toc, kitmode and any(x and x != 'cover' and x != 'contents' and x[3] for x in seq))
     wr = PdfWriter()
@@ -255,7 +256,7 @@ if __name__ == '__main__':
         ls = list(range(start, min(start + a.size, a.last + 1)))
         term = (ls[0] - 1) // a.per_term + 1
         for kind in a.kinds.split(','):
-            r = build_book(a.level, term, (ls[0] - 1) // a.size + 1, ls, kind, a.ages)
+            r = build_book(a.level, term, (ls[0] - 1) // a.size + 1, ls, kind, a.ages, a.per_term)
             rows.append(r)
             print(r['file'].split('/')[-1], r['print_pages'], 'pages', r['sheets'], 'sheets', r['blank_pages'], 'blank', 'kit', r['kit_pages'])
     json.dump(rows, open(os.path.join(OUT, 'term_books_spec.json'), 'w'), indent=1)

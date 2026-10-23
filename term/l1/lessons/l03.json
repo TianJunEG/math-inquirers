@@ -240,8 +240,9 @@
             "slide": "s-title"
           },
           {
-            "k": "REC",
-            "text": "@rec"
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
           },
           {
             "k": "SAY",
@@ -250,6 +251,15 @@
           {
             "k": "SAY",
             "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -3260,7 +3270,7 @@
     "Solve every workbook question yourself first, including the lists in Think harder and Go further.",
     "Tell parents a week before: print the whole workbook (the five lesson pages and the two kit pages), and cut out both kit pages (digit cards, and tens bars and ones squares). If a family cannot print, 20 scraps of paper (0 to 9 written twice, by a grown-up before the lesson) work as digit cards.",
     "Make your own set of digit cards 0 to 9 to show on camera. Have the slides open and check the timer slide and the kit page are visible on screen share.",
-    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
     "Tell families plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is approachable with the kit and is explored in class; Go further is optional and not a claim about school exams."
   ],
   "spare_time": {

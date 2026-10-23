@@ -239,6 +239,9 @@ def array(rows=3, cols=4, icon_name='dot', hide=(), shade_rows=(), pairs=False, 
                 body.append(f'<rect x="{cx - cell * 0.36:.1f}" y="{cy - cell * 0.36:.1f}" width="{cell * 0.72:.1f}" height="{cell * 0.72:.1f}" rx="6" fill="#fff" stroke="{NAVY}" stroke-width="2.6" stroke-dasharray="6 4"/>')
             else:
                 body.append(icon(icon_name, cx, cy, cell * 0.78))
+    if shade_rows:   # a dark box round the shaded rows, so the cue survives black-and-white printing
+        r0, r1 = min(shade_rows), max(shade_rows)
+        body.append(f'<rect x="{ox - 3:.1f}" y="{oy + (r0 - 1) * cell - 3:.1f}" width="{cols * cell + 6:.1f}" height="{(r1 - r0 + 1) * cell + 6:.1f}" rx="10" fill="none" stroke="{NAVY}" stroke-width="3.5"/>')
     W = ox + cols * cell + 10 + (60 if col_label and False else 0)
     H = oy + rows * cell + (62 if col_label else 10)
     if row_label: body.append(token_svg(row_label, 24, oy + rows * cell / 2, 44, 52, 28))

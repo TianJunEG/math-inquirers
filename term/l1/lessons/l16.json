@@ -686,7 +686,7 @@
       [
        {
         "t": "p",
-        "text": "The top 2 rows are shaded."
+        "text": "The top 2 rows are in the box."
        },
        {
         "t": "p",
@@ -701,7 +701,7 @@
      "reveal": true
     }
    ],
-   "note": "The 4s are the 2s doubled. The top 2 rows are 2 × 6 = 12. All 4 rows are two lots of the shaded rows, so 4 × 6 is 12 + 12 = 24. Ask for 2 × 6 first, then 4 × 6, and let children say the doubling themselves. The answer comes on the next slide. Workbook T1 uses the same idea with new numbers."
+   "note": "The 4s are the 2s doubled. The top 2 rows are 2 × 6 = 12. All 4 rows are two lots of the boxed rows, so 4 × 6 is 12 + 12 = 24. Ask for 2 × 6 first, then 4 × 6, and let children say the doubling themselves. The answer comes on the next slide. Workbook T1 uses the same idea with new numbers."
   },
   {
    "id": "s-m4",
@@ -1459,11 +1459,11 @@
      },
      {
       "k": "SAY",
-      "text": "Doubling helps with the fours. Look at the dots. The top 2 rows are shaded: two rows of six."
+      "text": "Doubling helps with the fours. Look at the dots. The top 2 rows are in the box: two rows of six."
      },
      {
       "k": "ASK",
-      "text": "What is two times six? All four rows are two lots of the shaded rows. What is four times six?",
+      "text": "What is two times six? All four rows are two lots of the boxed rows. What is four times six?",
       "resp": 30
      },
      {
@@ -2037,7 +2037,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Look at the dots. The top 2 rows are shaded. Fill in the blanks.",
+    "text": "Look at the dots. The top 2 rows are in the box. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
@@ -2057,7 +2057,7 @@
      10,
      20
     ],
-    "hint": "The 4 rows are two lots of the 2 shaded rows.",
+    "hint": "The 4 rows are two lots of the 2 boxed rows.",
     "solution": "2 rows of 5 dots is 2 × 5 = 10. All 4 rows are two lots of 10 dots: 10 + 10 = 20, so 4 × 5 = 20.",
     "mistakes": [
      "Writing 10 for both.",

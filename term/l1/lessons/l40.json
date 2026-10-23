@@ -1,0 +1,3697 @@
+{
+  "schema_version": 1,
+  "id": "l1-t4-10",
+  "level": 1,
+  "term": 4,
+  "lesson": 40,
+  "lesson_in_term": 10,
+  "title": "Inquirers' Showcase",
+  "big_idea": "Teach what you found: a good puzzle has one answer and a check",
+  "child_idea": "Teach a favourite idea from the year in a minute. A good puzzle has a story, numbers, one question and one answer. Check it a second way.",
+  "skill": "Communicating",
+  "ages": "6-8",
+  "moe": {
+    "strand": "Processes: communicating, reasoning and a look back over the year (pp. 13 to 14 of the syllabus pages we hold); Mi's Challenge Quest of the year",
+    "topics": [
+      "Teaching a favourite idea from the year in a short talk with a frame (communicating, Primary 1)",
+      "Writing a short story puzzle with numbers, one question and one answer, and checking it a second way (Primary 1 number stories within 20)",
+      "Checking a puzzle a child in another class wrote: do the numbers fit the rule? (checking and explaining)",
+      "Mi's Challenge Quest of the year: 8 short gates, one for each part of Term 4, and an optional secret cave (all at Start here level; a key where each picture stands for 2 goes beyond Primary 1)",
+      "Beyond Primary 1 on purpose: Puzzle With a Proof, writing a puzzle with a rule and showing why its answer must be right by listing every case (Think harder and Go further only)"
+    ],
+    "note": "Strand label for the tutor only. This is the last lesson of the year. It holds Mi's Challenge Quest (20 minutes at minutes 35 to 55, a game with Mi on private paper with a quest partner, never a test) and the Showcase: volunteers teach a favourite idea from the year in about a minute (a pass is always fine, no voting, no ranking). Start here is approachable and light: choose a favourite page, tick what you know well, pick the clear puzzle, check a puzzle answer, and make a ten. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: writing a puzzle with a rule and an answer that is the only answer, listing every case to prove it (Puzzle With a Proof), and finding the wrong step in a puzzle a child in another class wrote. The Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Lesson 38, and the plain statement is on the grown-up note. Non-routine types (tutor only): write a puzzle with a rule and check it (CHAL), check a friend's puzzle and say what is wrong (EXP). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check, no scores; strong content with scaffolding, said plainly to families; every lesson names a beyond item; puzzles are shared inside the group only and nothing is compiled into a book (D9). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, D18): wrong working is always a child or a child in another class, never a cast name."
+  },
+  "contest_moves": [
+    "write a puzzle with a rule, solve it, and show why the answer must be right by listing every case (Puzzle With a Proof)",
+    "check a friend's puzzle and say what is wrong: the numbers do not fit the rule (two numbers that make 10 and differ by 4 are 3 and 7, not 6 and 4)",
+    "a puzzle with many answers is not yet a good puzzle: add a clue until it has exactly one answer",
+    "teach an idea in a minute: the idea, an example and a check"
+  ],
+  "contest_where": "Think harder, Go further and the Investigation",
+  "objectives": [
+    "Choose a favourite idea from the year and teach it in about a minute with the frame: my idea, how it works, an example.",
+    "Say what a good puzzle needs: a story, numbers, one question and one answer.",
+    "Think harder: write a puzzle with an answer, swap it with a partner and solve it, and spot which puzzle has exactly one answer.",
+    "Go further: write a puzzle with a rule and show why its answer must be right; check a friend's puzzle and say what is wrong.",
+    "Play Mi's Challenge Quest: one gate for each part of Term 4, on private paper, with no scores."
+  ],
+  "joining_cold": {
+    "remember": [
+      "A counting pattern: 3, 6, 9, 12 and the next number (Term 1 Lesson 4 and Term 2 Lesson 16, taught again with a picture)",
+      "A way to add: make a ten first (Term 1 Lesson 5, taught again on a number line)",
+      "A short story with two steps (Term 1 Lesson 10, taught again with a picture)"
+    ],
+    "assumes": "Only counting to 20 and adding and taking away small numbers. Nothing from the lessons before is needed: the warm-up re-teaches a pattern, making a ten and a two-step story, and the Quest is a game on ideas the child met this term; a child who joins here does the Quest and the Showcase on the ideas they know.",
+    "holiday_topics_revisited": [
+      "Skip counting in 2s, 3s, 5s and 10s",
+      "Number stories"
+    ],
+    "safe_to_miss": false,
+    "note": "Try not to miss this lesson: it holds Mi's Challenge Quest of the year. A child who misses it plays at the make-up slot (small group or a pair, a parent beside the child on camera) BEFORE watching the recording: the Quest is not in the recording. The lesson itself needs only counting to 20, so a child who joins here cold can follow the warm-up and the first workbook page; the family may leave out gates for lessons the child did not attend."
+  },
+  "materials": {
+    "child": [
+      "Your Quest Log (4 pages, in your Term 4 book, Book 8), kept closed in an envelope until the tutor says to open it, a quest partner (a grown-up or a brother or sister), and a pencil and rubber",
+      "One favourite page from your year books (or a drawing of a favourite puzzle) to talk about, and plain paper",
+      "Your Term 4 book (Book 8) and workbook pages 1 to 5. Nothing to cut out and nothing to find at home",
+      "A pencil, a rubber and spare paper"
+    ],
+    "tutor": [
+      "The slide deck and the quest files (tutor notes with the private notes sheet, grown-up note)",
+      "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest",
+      "A visible clock for the rest of the lesson"
+    ],
+    "kit_pages": [],
+    "ruler": false,
+    "notes": "No ruler is needed and nothing needs to be bought. There is no kit page. No matches, toothpicks or anything sharp. Nobody cuts during the lesson. A favourite page from a book stays at home if a family prefers: the child can draw it instead. Puzzles written in this lesson are shared inside the group only, and a puzzle leaves the group only if the grown-up agrees.",
+    "kit_contract": []
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 8,
+        "end": 12
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 12,
+        "end": 22
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 22,
+        "end": 31
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 31,
+        "end": 35
+      },
+      {
+        "id": "exit",
+        "title": "Mi's Challenge Quest",
+        "start": 35,
+        "end": 55
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 55,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Showcase and talk time",
+        "start": 70,
+        "end": 84
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 84,
+        "end": 86
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 86,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "Lesson 40 is the last lesson of the year, so it holds Mi's Challenge Quest. The Quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh. The Showcase follows the workbook (minutes 70 to 84, volunteers only, about a minute each). The workbook is light: Start here is two pages and takes a middle child about 10 minutes in the 15 minutes, so pages 3 to 5 are for home. The exit ticket (E1 to E3) is not done live: the Quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (which puzzle is good, then write your own); the Mini-lesson has 9 (teach it in a minute with a rehearsal in pairs, a puzzle with a rule and a proof, check a friend's puzzle). The last 4 minutes are the standing buffer; nothing new is started in it.",
+    "skip_order": [
+      "In a slow class the workbook part runs over: take the time from the 4-minute flex buffer; pages 3 to 5 are always for home",
+      "Shorten the Showcase to three volunteers",
+      "the optional slide and the optional exit ticket",
+      "never shorten Mi's Challenge Quest"
+    ]
+  },
+  "sneak_peek": {
+    "q1": "Ali has 6 pens and Mei has 4 pens. Write a question for this puzzle.",
+    "q2": "Write a number bigger than 3 and smaller than 8. Is this a good puzzle? Circle Yes or No. I know because ___.",
+    "a1": "Many questions are right: How many pens in all? (10) How many more pens does Ali have than Mei? (2).",
+    "a2": "No. Many numbers fit (4, 5, 6 and 7). A good puzzle has exactly one answer."
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and a favourite page. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper and a favourite page. Keep the Quest Log closed. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+      "action": "Play along. Say each answer out loud before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Write your own puzzle with a story, numbers and one question. Then solve it and check it a second way.",
+      "action": "Pause. Write a puzzle, solve it, and check it a second way."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Make a quarter turn, count in 3s with claps, and sit down.",
+      "action": "Stand up. Make a quarter turn and count in 3s with claps, then sit down."
+    },
+    "exit": {
+      "say": "Recording: Mi's Challenge Quest is not recorded. Skip ahead to the workbook. Play the Quest as your tutor arranges.",
+      "action": "Skip to the workbook. Play Mi's Challenge Quest live, or at the make-up slot, not from the video."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2."
+    },
+    "talk": {
+      "say": "Recording: pause. Teach a grown-up your favourite idea from the year in about a minute.",
+      "action": "Pause. Teach someone at home your favourite idea: my idea, how it works, an example."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing the year! Show a grown-up your favourite page and say why you like it.",
+      "action": "Show a grown-up your favourite page and say why you like it."
+    }
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Inquirers' Showcase",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Teach one idea from the year.",
+            "Write and check a puzzle.",
+            "Play Mi's Challenge Quest."
+          ]
+        }
+      ],
+      "note": "Lesson 10 of Term 4, 90 minutes, the last lesson of the year. Objective: choose a favourite idea from the year and teach it in about a minute, say what a good puzzle needs, write a puzzle and check a friend's puzzle. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). Plain statement for families: writing a puzzle with a rule and showing why its answer must be right goes beyond Primary 1 on purpose, at Think harder and Go further only; the Quest gate on picture graphs reads a key where each picture stands for 2, which is Primary 2. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 70, showcase 70 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+      "subtitle": "Teach what you found",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "I remember: a pattern",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "seq",
+          "items": [
+            3,
+            6,
+            9,
+            12,
+            null,
+            null
+          ],
+          "gaps": [
+            "+3",
+            "+3",
+            "+3",
+            "+3",
+            "+3"
+          ],
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Count in 3s. What are the next two numbers?"
+        }
+      ],
+      "note": "A pattern (Term 1 Lesson 4 and Term 2 Lesson 16, taught again with a picture). The numbers go 3, 6, 9, 12 and then two empty boxes. Ask: what are the next two numbers (15 and 18). Then ask for volunteers: who remembers a pattern from this year? A pass is always fine. A child who is unsure counts on fingers, three at a time. Your turn, no new picture: count in 3s from 18 (21, 24). Children answer aloud. No writing."
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "I remember: a way to add",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 0,
+          "end": 20,
+          "step": 1,
+          "label_every": 2,
+          "marks": [
+            8
+          ],
+          "jumps": [
+            [
+              8,
+              10,
+              "+2"
+            ],
+            [
+              10,
+              14,
+              "+4"
+            ]
+          ],
+          "hide": [
+            14
+          ],
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Make a ten first. What is 8 + 6?"
+        }
+      ],
+      "note": "A way to add (Term 1 Lesson 5, taught again on a number line). 8 and 2 make 10, then 4 more makes 14: the 6 was split into 2 and 4. Ask: what is 8 + 6 (14). A child who is unsure counts on from 8 on fingers, six times. Your turn, no new picture: 9 + 5 (9 and 1 make 10, then 4 more is 14). Children answer aloud. No writing.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time!"
+      }
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "I remember: a story",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "A STORY WITH TWO STEPS",
+          "items": [
+            "Mei has 7 stickers.",
+            "She gets 5 more stickers.",
+            "Then she gives 4 stickers away."
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "How many stickers does Mei have now?"
+        }
+      ],
+      "note": "A story with two steps (Term 1 Lesson 10, taught again). Step 1: 7 and 5 make 12. Step 2: 12 take away 4 is 8. Ask: how many stickers does Mei have now (8). A child who is unsure acts it out with counters or fingers. Your turn, no new picture: Ben has 9 sweets, eats 3, then buys 6 more: how many now (12). Children answer aloud. No writing. Say: that was three ideas we know. Today we teach one."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Your paper is not collected."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Ali has 6 pens.",
+                  "Mei has 4 pens.",
+                  "Write a question for this puzzle."
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "Write a number bigger than 3 and smaller than 8.",
+                  "Is this a good puzzle? Circle Yes or No.",
+                  "I know because ___."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 is an access question: Ali has 6 pens and Mei has 4 pens, and the child writes a question (how many pens in all, how many more pens does Ali have than Mei: many questions are right). Puzzle 2 is a thinking question on the lesson idea: a good puzzle has exactly one answer, and this one has four (4, 5, 6 and 7). A child who writes 5 has answered it: that is a good start, do not correct it now. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; your paper is not collected. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: many questions are right; No, many numbers fit. Do not reveal puzzle 2 until the Showcase. Do not write scores or keep a list."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: which puzzle is good?",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Puzzle",
+              "What it says"
+            ],
+            [
+              "A",
+              "Ali has 8 pens and Mei has 5 pens."
+            ],
+            [
+              "B",
+              "Think of an even number between 1 and 20."
+            ],
+            [
+              "C",
+              "Ravi has 7 pencils. Jamie has 2 more pencils than Ravi. How many pencils does Jamie have?"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Which puzzle is a good puzzle? What is wrong with the others?"
+        }
+      ],
+      "note": "Round 1, about 3 minutes. Read the three puzzles aloud with their numbers, then ask: which one is a good puzzle, and what is wrong with the others. Take answers from volunteers; a pass is fine. Answers are on the next slide: A has no question; B has many answers (2, 4, 6 and so on); C is a good puzzle. A child who says C because it is longer: ask, what does C have that A and B do not? Nobody holds paper to the camera."
+    },
+    {
+      "id": "s-explore1-ans",
+      "part": "explore",
+      "kind": "light",
+      "title": "A good puzzle",
+      "blocks": [
+        {
+          "t": "answer",
+          "text": "A has no question. B has many answers. C is good: a story, numbers, one question and one answer."
+        }
+      ],
+      "note": "The answer for round 1. Puzzle A has numbers but no question. Puzzle B has no single answer: any even number from 2 to 18 fits. Puzzle C has a story, numbers and one question, and exactly one answer (9). Say: a good puzzle has a story, numbers, one question and one answer. Children tick their own thinking with a tick. Do not name any child."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: write your own puzzle",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Pick two numbers up to 20.",
+            "Write a short story with a name.",
+            "Write one question.",
+            "Solve it.",
+            "Check it a second way."
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Use your own paper. Then tell your quest partner your puzzle."
+        }
+      ],
+      "note": "Round 2, about 5 minutes. Read the five steps one at a time. Children write their own puzzle on their own paper: two numbers up to 20, a short story with a name, one question. They solve it, then check it a second way (a different method or working backwards). The quest partner may solve it quietly. Walk the cameras and ask how do you know. A child who needs help starts with two numbers and a name: Mei has 6 and Ben has 3. A child who writes a puzzle with two answers: ask, how many answers does it have? Puzzles stay inside the group: nobody shares a puzzle outside the group unless the grown-up agrees. Nobody holds paper to the camera."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "What does a good puzzle need?",
+            "Why do we check a puzzle a second way?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key ideas: a story, numbers, one question and one answer; a second check can find a puzzle with two answers or a wrong answer; a hard puzzle is not better than a clear one. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Teach it in one minute",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "MY IDEA",
+          "items": [
+            "My favourite idea is counting by rows.",
+            "It works like this: count one row, then count on by rows.",
+            "Here is an example: 3 rows of 4 squares. 4, 8, 12.",
+            "Check: 3 rows of 4 is 4 + 4 + 4 = 12."
+          ]
+        },
+        {
+          "t": "visual",
+          "type": "grid",
+          "rows": 3,
+          "cols": 4,
+          "kind": "squares",
+          "size": 40
+        }
+      ],
+      "note": "Modelled teaching, about 90 seconds. The frame has four lines: my favourite idea is; it works like this; here is an example; check. Read the model aloud, pointing to the rows of the grid: 4, 8, 12. Say: you will use these four lines in the Showcase; you may use your favourite page to help you. A pass is always fine and you may teach your grown-up instead. Say: your voice is recorded if you are not muted. Do not say best or better about any idea."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "A puzzle with a rule",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "MI'S PUZZLE",
+          "items": [
+            "Two numbers add up to 9.",
+            "One number is 3 more than the other.",
+            "What are the two numbers?"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "List every pair that makes 9. Then find the pair that fits."
+        }
+      ],
+      "note": "Worked example, a puzzle with a rule. Children list every pair of whole numbers that make 9 on their own paper, starting with 0 and 9, and find the pair whose difference is 3. Ask: what are the two numbers (3 and 6). The answer is on the next slide. Say: listing every pair shows that no other pair works. That is a proof. A child who writes 6 and 3 and stops has the answer: ask, how do you know there is not another pair?"
+    },
+    {
+      "id": "s-m2-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "Only one pair fits",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "First",
+            "Second",
+            "Difference"
+          ],
+          "rows": [
+            [
+              "0",
+              "9",
+              "9"
+            ],
+            [
+              "1",
+              "8",
+              "7"
+            ],
+            [
+              "2",
+              "7",
+              "5"
+            ],
+            [
+              "3",
+              "6",
+              "3"
+            ],
+            [
+              "4",
+              "5",
+              "1"
+            ]
+          ],
+          "cell_h": 64,
+          "font": 32,
+          "size": 100
+        },
+        {
+          "t": "answer",
+          "text": "Only 3 and 6 differ by 3. The answer is 3 and 6, and no other pair works."
+        }
+      ],
+      "note": "The answer for the example on the slide before. The five pairs are 0 and 9, 1 and 8, 2 and 7, 3 and 6, 4 and 5; the differences are 9, 7, 5, 3 and 1. Only 3 and 6 differ by 3. Read it aloud so that children can tick their own work. Say: we listed every case, so the answer must be right and it is the only answer."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check a friend's puzzle",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "A CHILD IN ANOTHER CLASS WROTE",
+          "items": [
+            "Two numbers add up to 8.",
+            "One number is 2 more than the other.",
+            "The numbers are 6 and 2."
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Is the puzzle right? How do you know?"
+        }
+      ],
+      "note": "Worked example, checking. Children check both clues on their own paper: 6 and 2 add up to 8 (the first clue fits), but 6 is 4 more than 2, not 2 more (the second clue does not). Ask: is the puzzle right (no); how do you know. The answer is on the next slide. Say: check every clue, not just one. The child in the story is in another class: no cast name is given the wrong answer."
+    },
+    {
+      "id": "s-m3-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "The second clue does not fit",
+      "blocks": [
+        {
+          "t": "answer",
+          "text": "No. 6 + 2 = 8, but 6 is 4 more than 2, not 2 more. The numbers that fit are 5 and 3."
+        }
+      ],
+      "note": "The answer for the example on the slide before. The first clue fits: 6 and 2 make 8. The second clue does not: 6 take away 2 is 4, not 2. The right numbers are 5 and 3: 5 + 3 = 8 and 5 take away 3 is 2. Read it aloud so that children can tick their own work. Say: a friend's puzzle is checked clue by clue."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Before you share a puzzle",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "It has a story, numbers and one question.",
+            "It has exactly one answer.",
+            "You checked it a second way.",
+            "It is your own puzzle: not copied."
+          ]
+        }
+      ],
+      "note": "Read the four checks aloud. Say: these are the four checks for the puzzle in the workbook and for the Showcase. Say: a puzzle is shared inside our group only, unless your grown-up says yes. Take one answer to: which check would you do first. Do not collect puzzles and do not compile them. About 1 minute."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "A year in moves",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Stand up. Make a quarter turn."
+        },
+        {
+          "t": "p",
+          "text": "Count in 3s and clap each time."
+        },
+        {
+          "t": "p",
+          "text": "Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera with a little clear space. Make a slow quarter turn (the same as a quarter of a circle) and sit or stand still again. Count in 3s from 0 to 18 with a clap each time. Stretch up high, then curl small, like a shape being folded in half. Ask: how many claps to reach 18 (6). No equipment, no running. A child may stay seated and move one arm. Do not give prizes or compare children."
+    },
+    {
+      "id": "s-quest1",
+      "part": "exit",
+      "kind": "light",
+      "title": "Mi's Challenge Quest",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Your own paper. Mi swims with you."
+        },
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Open your Quest Log. Name on page 1.",
+            "Pencil ready. Counters are fine.",
+            "Your quest partner sits beside you.",
+            "I read each gate. Then you write.",
+            "You may skip a gate. It is not a race."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "AFTER",
+          "items": [
+            "A grown-up takes a photo of each page and sends it to the program's business WhatsApp.",
+            "Nothing is shown to the group."
+          ]
+        }
+      ],
+      "note": "Introduce the Quest for about a minute: Mi the dolphin swims home to the Home Reef after a whole year, through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the Quest tutor notes (L40_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
+      "no_record": true,
+      "mascot": {
+        "size": "s",
+        "say": "Let's swim home to the reef!"
+      }
+    },
+    {
+      "id": "s-quest2",
+      "part": "exit",
+      "kind": "light",
+      "title": "The Home Reef",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Make sure your name is on every page.",
+            "Close the Quest Log. Put your pencil down.",
+            "A grown-up takes one photo of each page, flat and from above.",
+            "A grown-up sends the photos to the program's business WhatsApp number in the grown-up note, and nowhere else."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "OUR YEAR",
+          "items": [
+            "Term 1: tens and ones, adding and patterns.",
+            "Term 2: strips, groups, sharing and finding one.",
+            "Term 3: time, money, tables and checking.",
+            "Term 4: shapes, grids, counting, graphs and tools."
+          ]
+        }
+      ],
+      "note": "Say thank you and look back over the year together, in a minute: tens and ones, adding and patterns; strips, groups, sharing and finding one; time, money, tables and checking; shapes, grids, counting, graphs and tools. No scores and no comparing. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
+      "no_record": true
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. Question 1: choose a favourite page, picture or puzzle and say why: many answers are right. Question 2: tick one box for each of four ideas, I know it well or I am learning it: nobody sees the ticks but the grown-up and the tutor. Question 3: which one is a clear puzzle."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 many answers are right; Q2 many answers are right; Q3 option 2, the puzzle with a story, numbers and one question."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 6. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 4 to 6 aloud. Question 4: a child in another class wrote a puzzle and an answer: is the answer right, and what is the right answer. Question 5: make a ten first: 9 + 7. Question 6: count the dots by rows. Wait 10 seconds before helping."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 Wrong, and 13 stickers. Q5 1, then 6, then 16. Q6 4 rows and 20 dots."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Pages 3 to 5 are for home",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Write a puzzle, swap it, and find the puzzle with one answer"
+            ],
+            [
+              "Go further (page 4)",
+              "Puzzle With a Proof, a friend's puzzle, your own proof"
+            ],
+            [
+              "Investigation (page 5)",
+              "Teach it in a minute"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may try them at home. Nothing is collected."
+        }
+      ],
+      "note": "Say that pages 3 to 5 are for home this lesson, because the Quest and the Showcase take the time, and that everyone may try them. Never announce who is on which page and never name a child. Model answers are in the tutor guide. About 20 seconds."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "answer",
+          "text": "Puzzle 1: many questions are right, for example How many pens in all? Puzzle 2: No. The numbers 4, 5, 6 and 7 all fit. A good puzzle has one answer."
+        }
+      ],
+      "note": "Reveal both puzzles now. Say: many of you wrote a good question. Do not read out anyone earlier answer. Puzzle 1: how many pens in all (10) and how many more pens does Ali have than Mei (2) are both good questions. Puzzle 2: 4, 5, 6 and 7 all fit, so it has four answers and is not a good puzzle yet. It was the same idea as Explore: a good puzzle has one answer."
+    },
+    {
+      "id": "s-show",
+      "part": "talk",
+      "kind": "light",
+      "title": "Showcase",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TEACH US IN ABOUT A MINUTE",
+          "items": [
+            "My favourite idea is ___.",
+            "It works like this: ___.",
+            "Here is an example: ___."
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Volunteers only. A pass is always fine."
+        }
+      ],
+      "note": "The Showcase, about 11 minutes. Volunteers teach one favourite idea from the year in about a minute with the frame on the slide; they may hold a page up to themselves, not to the camera, and may read from their page. Rules, said aloud before anyone starts: a pass is always fine; you may teach your grown-up instead (microphone muted) and tell us I taught my grown-up; your voice is recorded if you are not muted; everyone else listens, and afterwards may say one thing they learned; no voting, no best, no ranking, no counting of claps. Take up to five volunteers, one at a time, volunteers first; repeat each idea in your own words so the recording picks it up. Puzzles are shared inside the group only. Nobody collects a puzzle."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page and send it to the business WhatsApp (the number is in the parent summary, never on a slide); you then help in the open session when the next program starts. Never a direct message to a child. The Next time I will try row is optional.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up your favourite page. Say why you like it."
+        },
+        {
+          "t": "card",
+          "head": "WHAT NEXT",
+          "items": [
+            "The first lesson of Level 2 or the holiday program.",
+            "Your tutor will tell you which one, and the start date."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 86 to 90 are flex time: the buffer. A child who needs longer to finish the Quest may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide. Remind families that the tutor sends one line about what we saw in Mi's Challenge Quest, never a mark, and that the tutor will send a note about the first lesson of Level 2 or the holiday program. Nothing is printed here about materials for it.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking this year!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: one answer?",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write a puzzle whose answer is 12 and that has exactly one answer."
+        }
+      ],
+      "note": "Optional, only if you are on time. Children think of a puzzle with exactly one answer 12, for example: I am a number. I am 5 more than 7. Take two puzzles from volunteers and check with the class that each has exactly one answer. A child whose puzzle has two answers adds a clue. This links to the four checks in the Mini-lesson. Take two answers and move on.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Does every puzzle with one answer have a check? Try one."
+            ],
+            [
+              "Make a puzzle",
+              "Write a puzzle for your grown-up and check it a second way."
+            ],
+            [
+              "Teach it back",
+              "Teach a toy your favourite idea from the year."
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    },
+    {
+      "id": "s-exit",
+      "part": "flex",
+      "kind": "light",
+      "title": "Exit ticket (optional)",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Optional and not done live: the Quest was the exit. If time allows or the whole class is ahead, children answer on page 5. Read E1, E2 and E3 aloud, and the four options of E2. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat.",
+      "optional": true
+    },
+    {
+      "id": "s-exitans",
+      "part": "flex",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 14; E2 option 2, 11; E3 Wrong.",
+      "optional": true
+    }
+  ],
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title",
+            "s": 10
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Pencil ready, and your workbook. Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "SAY",
+            "text": "Today is the last lesson of the year. We teach one idea we found, we write a puzzle, and we play Mi's Challenge Quest."
+          },
+          {
+            "k": "NOTE",
+            "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+          },
+          {
+            "k": "NOTE",
+            "text": "Plain statement for families when it comes up: writing a puzzle with a rule and showing why its answer must be right goes beyond Primary 1 on purpose, at Think harder and Go further only; the Quest gate on picture graphs reads a key where each picture stands for 2, which is Primary 2."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may try Think harder, Go further or the Investigation at home; nobody holds paper to the camera. Nothing from earlier lessons is needed."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Three things we remember from the year. First, a pattern. Count in threes."
+          },
+          {
+            "k": "ASK",
+            "text": "What are the next two numbers? Who remembers a pattern from this year? A pass is always fine.",
+            "resp": 45
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. Count in threes from eighteen. Say it with me.",
+            "s": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Second, a way to add. We make a ten first."
+          },
+          {
+            "k": "ASK",
+            "text": "What is eight and six? Count on with your fingers.",
+            "resp": 40
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. What is nine and five? Say it with me.",
+            "s": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Third, a story with two steps. Mei has seven stickers. She gets five more. Then she gives four away."
+          },
+          {
+            "k": "ASK",
+            "text": "How many stickers does Mei have now?",
+            "resp": 40
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. Ben has nine sweets, eats three, then buys six more. How many now? Say it with me.",
+            "s": 25
+          },
+          {
+            "k": "WORK",
+            "text": "Say each answer with me: fifteen and eighteen; fourteen; eight; twenty-one and twenty-four; fourteen; twelve. Then stretch your fingers.",
+            "s": 15
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child is unsure about the pattern, count on fingers three at a time. For making a ten, count on from eight six times. For the story, act it out with counters or fingers, one step at a time."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: the next numbers are 15 and 18; 8 and 6 make 14; Mei has 8 stickers. Your turns: 21 and 24; 14; 12. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Your paper is not collected."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Ali has six pens. Mei has four pens. Write a question for this puzzle."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write on their own paper.",
+            "s": 30
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Write a number bigger than three and smaller than eight. Is this a good puzzle? Circle Yes or No. I know because blank."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 80
+          },
+          {
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at the Showcase."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: many questions are right (how many pens in all, how many more pens does Ali have than Mei). Puzzle 2 answer: No, because 4, 5, 6 and 7 all fit. A child who writes 5 has answered it: do not correct it now. Look for good ideas to praise later. Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today we are puzzle makers. Three puzzles first. Listen."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle A. Ali has eight pens and Mei has five pens. Puzzle B. Think of an even number between one and twenty. Puzzle C. Ravi has seven pencils. Jamie has two more pencils than Ravi. How many pencils does Jamie have?"
+          },
+          {
+            "k": "ASK",
+            "text": "Which puzzle is a good puzzle? What is wrong with the others? A pass is always fine.",
+            "resp": 75
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "A has no question. B has many answers. C is a good puzzle: a story, numbers, one question and one answer."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Now you write your own puzzle on your own paper. Read the five steps with me."
+          },
+          {
+            "k": "READ",
+            "text": "One. Pick two numbers up to twenty. Two. Write a short story with a name. Three. Write one question. Four. Solve it. Five. Check it a second way."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write, solve and check their own puzzle. Tutor walks the cameras and asks how do you know. Quest partners may solve it quietly.",
+            "s": 190
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3",
+            "s": 8
+          },
+          {
+            "k": "ASK",
+            "text": "What does a good puzzle need? Why do we check a puzzle a second way?",
+            "resp": 55
+          },
+          {
+            "k": "SAY",
+            "text": "A good puzzle has a story, numbers, one question and one answer. A second check can find a mistake."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who needs help starts with two numbers and a name: Mei has six and Ben has three. A child whose puzzle has two answers: ask, how many answers does it have? A child who cannot check a second way: work backwards, or draw it."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only. Puzzle answers: A has no question; B has many answers; C is good (9). Puzzles stay inside the group: nobody shares a puzzle outside the group unless the grown-up agrees. Do not say the rule before the children do."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Teach it in one minute. I teach you an idea I like, in four lines."
+          },
+          {
+            "k": "SAY",
+            "text": "My favourite idea is counting by rows. It works like this: count one row, then count on by rows. Here is an example: three rows of four squares. Four, eight, twelve. Check: three rows of four is four and four and four, twelve."
+          },
+          {
+            "k": "SAY",
+            "text": "You will use the same four lines in the Showcase. Your voice is recorded if you are not muted. A pass is always fine, and you may teach your grown-up instead."
+          },
+          {
+            "k": "WORK",
+            "text": "Rehearse: children say the four lines for their own favourite idea to their quest partner, in a whisper. Tutor walks the cameras.",
+            "s": 60
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "A puzzle with a rule. Mi's puzzle. Two numbers add up to nine. One number is three more than the other."
+          },
+          {
+            "k": "ASK",
+            "text": "What are the two numbers? List every pair that makes nine on your paper.",
+            "resp": 85
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Nought and nine. One and eight. Two and seven. Three and six. Four and five. Only three and six are three apart. The answer is three and six, and no other pair works. Listing every case is a proof."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Check a friend's puzzle. A child in another class wrote this. Two numbers add up to eight. One number is two more than the other. The numbers are six and two."
+          },
+          {
+            "k": "ASK",
+            "text": "Is the puzzle right? How do you know?",
+            "resp": 70
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "No. Six and two make eight, but six is four more than two, not two more. The numbers that fit are five and three. Check every clue."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Before you share a puzzle. One. It has a story, numbers and one question. Two. It has exactly one answer. Three. You checked it a second way. Four. It is your own puzzle, not copied."
+          },
+          {
+            "k": "ASK",
+            "text": "Which check would you do first?",
+            "resp": 35
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child writes 6 and 3 for Mi's puzzle and stops, ask: how do you know there is not another pair? If a child says the friend's puzzle is right because 6 and 2 make 8, ask: does the second clue fit? Check every clue."
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: puzzle, rule, check, clue, one answer. The slides keep the answers off the screen while you ask: read every question with its numbers aloud. Class numbers are not used in the workbook."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. We make a quarter turn. We count in threes and clap. Do it with me."
+          },
+          {
+            "k": "WORK",
+            "text": "Make a slow quarter turn. Count in threes from nought to eighteen with a clap each time. Ask how many claps to reach eighteen. Then stretch up high and curl small, like a folded shape. Seated children move one arm.",
+            "s": 170
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-quest1",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming home to the Home Reef after a whole year, and eight gates are in the way. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
+          },
+          {
+            "k": "SAY",
+            "text": "It is a game, not a race, and nobody gets a score. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
+          },
+          {
+            "k": "SAY",
+            "text": "The recording pauses now for Mi's Challenge Quest, and starts again for the workbook."
+          },
+          {
+            "k": "DO",
+            "text": "Pause the recording now. Children open the closed Quest Log, with a pencil. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
+            "s": 25
+          },
+          {
+            "k": "READ",
+            "text": "Page 1. Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 2 rows of 3 squares, so blank squares in all. Gate 2. A counter starts at S. It moves only right or up to reach E. Part a: it moves blank steps in all. Part b: there are blank different routes from S to E."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
+            "s": 135
+          },
+          {
+            "k": "SAY",
+            "text": "Gates one and two are open! Mi swims on. Turn to page 2."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Look at the folded paper. It is folded in half once and one hole is punched. Part b: when the paper is opened there are blank holes. Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 2 (gates 3 and 4).",
+            "s": 150
+          },
+          {
+            "k": "SAY",
+            "text": "Gates three and four are open!"
+          },
+          {
+            "k": "MOVE",
+            "text": "One-minute stretch: stand, shake out your hands, sip some water. Paper stays on the table.",
+            "s": 30
+          },
+          {
+            "k": "SAY",
+            "text": "Turn to page 3. The Home Reef is getting closer."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 4 bags have 3 sweets in each bag, so blank sweets in all. Gate 6. Look at the graph. Each picture stands for 2 stickers. Part a: Ali has blank stickers. Part b: Mei has blank more stickers than Ali."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 3 (gates 5 and 6).",
+            "s": 125
+          },
+          {
+            "k": "SAY",
+            "text": "Gates five and six are open! Two gates left. Turn to page 4."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 7. A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks. Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank. The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 4: gates 7 and 8, then the optional secret cave item if they wish.",
+            "s": 165
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-quest2",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "You reached the Home Reef! Make sure your name is on every page and close your Quest Log. Well done for a whole year of trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. Mi's tutor will send you one line about what we saw, never a mark."
+          },
+          {
+            "k": "DO",
+            "text": "Say nothing about answers. Remind the group that nothing is added up and no answer is read out. Look back over the year together in a minute (the OUR YEAR card). Restart the recording for the workbook. Children who did not finish may use a few minutes of the workbook time.",
+            "s": 30
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who says they cannot do a gate: say to the whole group that skipping is fine, Mi swims round it, and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
+          },
+          {
+            "k": "NOTE",
+            "text": "The answers, your private notes sheet for each child, the group advice sheet and the one-line templates for the grown-up are in L40_Quest_Tutor_Notes.pdf. Do not collect or look at any paper during the lesson. Photos arrive only on the program's business WhatsApp and the line goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the Quest is the exit."
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: look back at your year books. Choose a favourite page, picture or puzzle. Part a: my favourite is blank. Part b: I like it because blank. Many answers are right. Question 2: tick one idea in each row, I know it well or I am learning it. Nobody sees your ticks but your grown-up and your tutor. Question 3: which one is a clear puzzle? Write its number in the brackets."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 270
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: many answers are right. Question 2: many answers are right. Question 3: option two. Tick your own page with a tick."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4. A child in another class wrote a puzzle and an answer. Siti has nine stickers. Ravi has four more stickers than Siti. How many stickers does Ravi have? The child says five. Part a: is the answer right? Circle Right or Wrong. Part b: the right answer is blank. Question 5. Mi makes a ten first to add nine and seven. Part a: nine and blank make ten. Part b: seven take away that is blank. Part c: ten and that make blank. Question 6. Count by rows. Part a: there are blank rows of dots. Part b: there are blank dots in all."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 6.",
+            "s": 290
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Question 4: wrong, and thirteen stickers. Question 5: one, then six, then sixteen. Question 6: four rows, and twenty dots. Tick your own page."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Pages three to five are for home this time: a puzzle to write, a puzzle with a proof, and teach it in a minute. Everyone may try them. Nothing is collected."
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1: flip through your year books and stop at a page you liked. Q2: tick the first box that feels true. Q3: a clear puzzle has a story, numbers and one question. Q4: add, because more means the numbers are joined. Q5: nine needs one more to make ten. Q6: count the dots in one row, then count on by rows."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session when the next program starts. Never a private message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder has write a puzzle, swap it and solve it, and which puzzle has exactly one answer. Go further has Puzzle With a Proof (beyond Primary 1 on purpose), a friend's puzzle, and writing your own with a proof. Do not announce who is on which page. Start here takes a middle child about 10 minutes. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember the sneak-peek? Puzzle one: many questions are right, for example, how many pens in all. Puzzle two: no. Four, five, six and seven all fit, so it is not a good puzzle yet."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-show",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Now the Showcase. Teach us one idea you found this year, in about a minute. Use the three lines on the slide: my favourite idea is, it works like this, here is an example. A pass is always fine."
+          },
+          {
+            "k": "SAY",
+            "text": "You may teach your grown-up instead, with your microphone muted, and tell us I taught my grown-up. If you teach us, your voice is recorded. Everyone else listens. Afterwards you may say one thing you learned. There is no voting and no best."
+          },
+          {
+            "k": "WORK",
+            "text": "Think time: children choose their idea and say it to their quest partner.",
+            "s": 50
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to teach us an idea? Volunteers first. A pass is always fine.",
+            "resp": 85
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. Who would like to teach us the next idea?"
+          },
+          {
+            "k": "ASK",
+            "text": "Another volunteer. One idea, about a minute.",
+            "resp": 85
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. Another idea?"
+          },
+          {
+            "k": "ASK",
+            "text": "Another volunteer. One idea, about a minute.",
+            "resp": 85
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. Is there one more?"
+          },
+          {
+            "k": "ASK",
+            "text": "Another volunteer, if there is one. One idea, about a minute.",
+            "resp": 85
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. One more, if there is one."
+          },
+          {
+            "k": "ASK",
+            "text": "Another volunteer, if there is one. One idea, about a minute.",
+            "resp": 85
+          },
+          {
+            "k": "ASK",
+            "text": "One thing you learned from a friend. You can say it, or you can just nod.",
+            "resp": 60
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you, inquirers. You found, you tested and you explained, all year."
+          },
+          {
+            "k": "NOTE",
+            "text": "Volunteers only, up to five, one at a time; about a minute each. Repeat each idea in your own words for the recording. Never call a child by name to answer; no voting, no best, no ranking, no counting of claps. A child who does not want to be recorded teaches a grown-up with the microphone muted. Puzzles stay inside the group; nothing is collected or compiled; a puzzle leaves the group only if the grown-up agrees. If fewer children volunteer, finish early: the time goes to the flex buffer. Praise the reason, not the speed. A volunteer whose idea has a small mistake: say the right idea in your own words without naming the mistake."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page and send it to our business WhatsApp. Then we will help you."
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5.",
+            "s": 50
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers, for the whole year. What comes next is the first lesson of Level 2 or the holiday program. Your tutor will tell you which one, and the start date. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time. Write a puzzle whose answer is twelve and that has exactly one answer.",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two puzzles from volunteers and check that each has exactly one answer.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exit",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "READ",
+            "text": "Optional exit ticket. Question 1: Mei thinks of a number. She takes away five and gets nine. What is her number? Question 2: which puzzle has exactly one answer? Option 1: write a number bigger than six. Option 2: I am a number. I am three more than eight. Option 3: Ali has three pens. Option 4: how many pens? Write its number in the bracket. Question 3: a child in another class says seven and eight make sixteen. Circle Right or Wrong.",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on page 5 on their own.",
+            "s": 100,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: fourteen. Question 2: option two, eleven. Question 3: wrong. Tick your own ticket with a tick.",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. A child who needs more time for the Quest may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: for example I am a number, I am 5 more than 7. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Look back at your year books. Choose a favourite page, picture or puzzle. Many answers are right.",
+        "answer": "Many answers are right",
+        "val": [
+          "open"
+        ],
+        "hint": "Flip through your books. Stop at a page you liked.",
+        "solution": "Many answers are right. A good answer names the page, picture or puzzle and gives one reason.",
+        "mistakes": [
+          "Writing only that it was fun: add one thing about the maths.",
+          "Leaving it blank: you may pass."
+        ],
+        "mins": 2,
+        "parts": [
+          {
+            "l": "a",
+            "text": "My favourite is ___ .",
+            "ans": "many answers are right",
+            "val": "open"
+          },
+          {
+            "l": "b",
+            "text": "I like it because ___ .",
+            "ans": "many answers are right",
+            "val": "open"
+          }
+        ]
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Tick one idea in each row. Nobody sees your ticks except your grown-up and your tutor.",
+        "answer": "Many answers are right",
+        "val": [
+          "open"
+        ],
+        "hint": "Tick the first one that feels true. You can change it later.",
+        "solution": "Many answers are right. The ticks show what to practise: an idea you are learning is a good idea to teach a toy.",
+        "mistakes": [
+          "Ticking one box for every idea without thinking.",
+          "Feeling that one box is better: neither box is better."
+        ],
+        "mins": 2,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Telling the time on a clock.",
+            "ans": "many answers are right",
+            "val": "open",
+            "choices": [
+              "I know it well",
+              "I am learning it"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "Coins and change.",
+            "ans": "many answers are right",
+            "val": "open",
+            "choices": [
+              "I know it well",
+              "I am learning it"
+            ]
+          },
+          {
+            "l": "c",
+            "text": "Counting everything.",
+            "ans": "many answers are right",
+            "val": "open",
+            "choices": [
+              "I know it well",
+              "I am learning it"
+            ]
+          },
+          {
+            "l": "d",
+            "text": "Reading a graph.",
+            "ans": "many answers are right",
+            "val": "open",
+            "choices": [
+              "I know it well",
+              "I am learning it"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Which one is a clear puzzle? Write its number in the brackets.",
+        "answer": "(2)",
+        "val": [
+          2
+        ],
+        "hint": "A clear puzzle has a story, numbers and one question.",
+        "solution": "Option (2) has a story (Ali and Mei), numbers (6 and 3) and one question. Option (1) has no numbers. Option (3) has no question. Option (4) has no story or numbers.",
+        "mistakes": [
+          "Choosing (4), a question with no story.",
+          "Choosing (3), a story with no question."
+        ],
+        "mins": 2,
+        "mcq": {
+          "options": [
+            "Ali has some pens and Mei has some pens.",
+            "Ali has 6 pens. Mei has 3 more pens than Ali. How many pens does Mei have?",
+            "Ali has 6 pens. Mei has 3 more pens.",
+            "How many pens does Mei have?"
+          ],
+          "bracket": true
+        }
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "A child in another class wrote a puzzle and an answer. Siti has 9 stickers. Ravi has 4 more stickers than Siti. How many stickers does Ravi have? The child says 5.",
+        "answer": "Wrong; 13 stickers",
+        "val": [
+          "Wrong",
+          13
+        ],
+        "hint": "More means we join the numbers. Do we add or take away?",
+        "solution": "Ravi has 4 more than 9, so 9 + 4 = 13 stickers. The answer 5 is 9 take away 4, which is not what 4 more means. Check: 13 take away 9 is 4.",
+        "mistakes": [
+          "Saying Right because 9 and 4 are in the puzzle.",
+          "Writing 5 (taking away)."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is the answer right? Circle Right or Wrong.",
+            "ans": "Wrong",
+            "val": "Wrong",
+            "choices": [
+              "Right",
+              "Wrong"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The right answer is [] stickers.",
+            "ans": "13",
+            "val": 13
+          }
+        ]
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Mi makes a ten first to add 9 + 7. Fill in the blanks.",
+        "answer": "1; 6; 16",
+        "val": [
+          1,
+          6,
+          16
+        ],
+        "hint": "9 needs 1 more to make 10. Take that 1 from the 7.",
+        "solution": "9 and 1 make 10. 7 take away 1 is 6. 10 and 6 make 16.",
+        "mistakes": [
+          "Writing 2 for the first blank.",
+          "Forgetting to take the 1 from the 7."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "9 and [] make 10.",
+            "ans": "1",
+            "val": 1
+          },
+          {
+            "l": "b",
+            "text": "7 take away that is [] .",
+            "ans": "6",
+            "val": 6
+          },
+          {
+            "l": "c",
+            "text": "10 and that make [] .",
+            "ans": "16",
+            "val": 16
+          }
+        ]
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Count by rows. Look at the dots.",
+        "answer": "4 rows; 20 dots",
+        "val": [
+          4,
+          20
+        ],
+        "hint": "Count the dots in one row. Then count on by rows.",
+        "solution": "There are 4 rows of 5 dots: 5, 10, 15, 20. There are 20 dots in all.",
+        "mistakes": [
+          "Writing the dots in one row only.",
+          "Writing 9 (4 and 5 added)."
+        ],
+        "mins": 2.5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "There are [] rows of dots.",
+            "ans": "4",
+            "val": 4
+          },
+          {
+            "l": "b",
+            "text": "There are [] dots in all.",
+            "ans": "20",
+            "val": 20
+          }
+        ],
+        "visual": {
+          "type": "array",
+          "rows": 4,
+          "cols": 5,
+          "size": 60
+        }
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Write a puzzle for a new Level 1 child. It needs a story, numbers, one question and one answer. Use two numbers up to 20. Many answers are right.",
+        "answer": "Many answers are right",
+        "val": [
+          "open"
+        ],
+        "hint": "Start with two numbers and a name. Then write one question.",
+        "solution": "Many answers are right. A good puzzle has a story, numbers, one question and exactly one answer, for example: Wei has 8 stickers. Lily has 5 more stickers than Wei. How many stickers does Lily have? The answer is 13.",
+        "mistakes": [
+          "Writing a story with no question.",
+          "Writing a puzzle with two answers."
+        ],
+        "mins": 5,
+        "lines": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "My answer is [] .",
+            "ans": "many answers are right",
+            "val": "open"
+          }
+        ]
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Read your puzzle from question T1 to your quest partner. Your partner solves it. Fill in the blanks.",
+        "answer": "Many answers are right",
+        "val": [
+          "open"
+        ],
+        "hint": "Read your puzzle slowly. Do not say your answer.",
+        "solution": "Many answers are right. If your partner gets a different answer, your puzzle may have two answers or a mistake. Check it again.",
+        "mistakes": [
+          "Telling your partner the answer first.",
+          "Not checking a different answer."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "My partner's answer is [] .",
+            "ans": "many answers are right",
+            "val": "open"
+          },
+          {
+            "l": "b",
+            "text": "Is it the same as mine? Circle Yes or No.",
+            "ans": "many answers are right",
+            "val": "open",
+            "choices": [
+              "Yes",
+              "No"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Puzzle A: Write a number bigger than 10 and smaller than 15. Puzzle B: I am a number. I am 4 more than 9. Puzzle C: Ali has 3 pens and Mei has 4 pens.",
+        "answer": "B; 4",
+        "val": [
+          "B",
+          4
+        ],
+        "hint": "A puzzle with one answer has only one number that fits.",
+        "solution": "Puzzle B has exactly one answer: 13. Puzzle A has four answers: 11, 12, 13 and 14. Puzzle C has no question.",
+        "mistakes": [
+          "Choosing C (it has numbers but no question).",
+          "Writing 5 for puzzle A (11 to 15 counted)."
+        ],
+        "mins": 4,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Which puzzle has exactly one answer? Circle A, B or C.",
+            "ans": "B",
+            "val": "B",
+            "choices": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "Puzzle A has [] answers.",
+            "ans": "4",
+            "val": 4
+          }
+        ]
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Mi's puzzle: Two numbers add up to 12. One number is 2 more than the other. Fill in the table of every pair that makes 12. Then answer (a) and (b).",
+        "answer": "5 and 7; 1 pair",
+        "val": [
+          5,
+          7,
+          1
+        ],
+        "hint": "Start at 0 and 12. Take 1 from the first number and give it to the second. Find the difference each time.",
+        "solution": "The pairs are 0 and 12, 1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6. The differences are 12, 10, 8, 6, 4, 2 and 0. Only 5 and 7 differ by 2. So the numbers are 5 and 7, and no other pair works.",
+        "mistakes": [
+          "Stopping at 5 and 7 without listing every pair.",
+          "Writing 6 and 6 (the difference is 0)."
+        ],
+        "mins": 7,
+        "parts": [
+          {
+            "l": "a",
+            "text": "The numbers are [] and [] .",
+            "ans": "5 and 7",
+            "val": [
+              5,
+              7
+            ]
+          },
+          {
+            "l": "b",
+            "text": "[] pair has a difference of 2.",
+            "ans": "1",
+            "val": 1
+          }
+        ],
+        "visual": {
+          "type": "table",
+          "head": [
+            "First",
+            "Second",
+            "Difference"
+          ],
+          "rows": [
+            [
+              "0",
+              "12",
+              "12"
+            ],
+            [
+              "1",
+              "11",
+              "[]"
+            ],
+            [
+              "2",
+              "10",
+              "[]"
+            ],
+            [
+              "3",
+              "9",
+              "[]"
+            ],
+            [
+              "4",
+              "8",
+              "[]"
+            ],
+            [
+              "5",
+              "7",
+              "[]"
+            ],
+            [
+              "6",
+              "6",
+              "[]"
+            ]
+          ],
+          "cell_h": 40,
+          "font": 30,
+          "size": 85
+        }
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "A child in another class wrote a puzzle: Two numbers add up to 10. One number is 4 more than the other. The numbers are 6 and 4.",
+        "answer": "No; 2; 3 and 7",
+        "val": [
+          "No",
+          2,
+          3,
+          7
+        ],
+        "hint": "Check each clue. Do 6 and 4 add up to 10? Is 6 four more than 4?",
+        "solution": "6 + 4 = 10, so the first clue fits. 6 take away 4 is 2, not 4, so the second clue does not fit. The numbers that fit are 3 and 7: 3 + 7 = 10 and 7 take away 3 is 4.",
+        "mistakes": [
+          "Saying Yes because the numbers add up to 10.",
+          "Writing 4 for the difference."
+        ],
+        "mins": 6,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is the puzzle right? Circle Yes or No.",
+            "ans": "No",
+            "val": "No",
+            "choices": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "6 and 4 are [] apart.",
+            "ans": "2",
+            "val": 2
+          },
+          {
+            "l": "c",
+            "text": "The numbers that fit are [] and [] .",
+            "ans": "3 and 7",
+            "val": [
+              3,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Write a puzzle with a rule for a friend. Solve it. Then show why your answer must be right: draw it, list every case, or check a second way. Many answers are right.",
+        "answer": "Many answers are right",
+        "val": [
+          "open"
+        ],
+        "hint": "Use two numbers. Make a rule. Try every case, like the table in G1.",
+        "solution": "Many answers are right. A good puzzle has a rule, one answer, and a proof: every case is listed, or the answer is checked a second way. For example: Two numbers add up to 8. One is 2 more than the other. 0 and 8, 1 and 7, 2 and 6, 3 and 5, 4 and 4. Only 3 and 5 are 2 apart.",
+        "mistakes": [
+          "Writing a puzzle with two answers.",
+          "Copying a puzzle from a book or from class."
+        ],
+        "mins": 7,
+        "lines": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "My answer is [] .",
+            "ans": "many answers are right",
+            "val": "open"
+          },
+          {
+            "l": "b",
+            "text": "I showed it by ___ .",
+            "ans": "many answers are right",
+            "val": "open"
+          }
+        ]
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Teach it in a minute",
+      "first": "Write the name of your favourite idea from the year: ____",
+      "text": "Write or draw how you will teach it: the idea, one example and one check. Then teach it to your grown-up.",
+      "lines": 4,
+      "draw": 0,
+      "answer": "Many answers are right. A good plan names the idea, gives an example with numbers or a picture, and one check.",
+      "val": [
+        "open"
+      ],
+      "look_for": "A child who names an idea from the year, gives one example with numbers or a picture, and says one check. Credit any clear idea. A child who writes only the name has the first step: ask, what is an example? A child who chooses an idea from the last lessons has looked back well; one from Term 1 has too.",
+      "mistakes": [
+        "Naming an idea but giving no example.",
+        "Teaching a puzzle that has two answers."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Teach us one favourite idea from the year in about a minute. Use the frame: My favourite idea is ___. It works like this: ___. Here is an example: ___. Everyone else listens.",
+    "starter": "My favourite idea is ...",
+    "answer": "Many answers are right. A model: My favourite idea is make a ten. It works like this: to add 9 + 4, take 1 from the 4 to make 10, then add the 3 that is left. Here is an example: 9 + 4 = 10 + 3 = 13.",
+    "look_for": "A child who names an idea, says how it works and gives an example. A pass is always fine, and a child may teach a grown-up instead. Never compare ideas and never say best."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Mei thinks of a number. She takes away 5 and gets 9.",
+      "parts": [
+        {
+          "l": "",
+          "text": "Mei's number is [] .",
+          "ans": "14",
+          "val": 14
+        }
+      ],
+      "answer": "14",
+      "val": 14,
+      "solution": "Work backwards: 9 and 5 make 14. Check: 14 take away 5 is 9.",
+      "mistakes": [
+        "Writing 4 (9 take away 5).",
+        "Not checking."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Which puzzle has exactly one answer? Write its number in the bracket.",
+      "parts": [],
+      "answer": "(2) 11",
+      "val": [
+        2
+      ],
+      "solution": "Option (2) has one answer: 3 more than 8 is 11. Option (1) has many answers. Option (3) has no question. Option (4) has no story.",
+      "mistakes": [
+        "Choosing (1): many numbers are bigger than 6.",
+        "Choosing (3): no question."
+      ],
+      "mcq": {
+        "options": [
+          "Write a number bigger than 6.",
+          "I am a number. I am 3 more than 8.",
+          "Ali has 3 pens.",
+          "How many pens?"
+        ],
+        "bracket": true
+      }
+    },
+    {
+      "id": "E3",
+      "text": "A child in another class says 7 + 8 = 16.",
+      "parts": [
+        {
+          "l": "",
+          "text": "Circle Right or Wrong.",
+          "ans": "Wrong",
+          "val": "Wrong",
+          "choices": [
+            "Right",
+            "Wrong"
+          ]
+        }
+      ],
+      "answer": "Wrong",
+      "val": [
+        "Wrong"
+      ],
+      "solution": "7 + 8 = 15, not 16. Check: 16 take away 8 is 8, not 7.",
+      "mistakes": [
+        "Choosing Right without checking.",
+        "Writing 17."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "writing a puzzle",
+      "checking a puzzle",
+      "Mi's Challenge Quest",
+      "something else"
+    ],
+    "helped": [
+      "my quest partner",
+      "drawing it",
+      "checking a second way",
+      "I was not stuck"
+    ],
+    "next": [
+      "writing a puzzle",
+      "checking a second way",
+      "teaching an idea",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "A puzzle says: I am a number. I am 5 more than 12. What number am I? ___",
+      "answer": "17",
+      "val": 17,
+      "solution": "12 and 5 make 17. Check: 17 take away 12 is 5."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Two numbers add up to 14. One number is 2 more than the other. The numbers are ___ and ___ .",
+      "answer": "6 and 8",
+      "val": [
+        6,
+        8
+      ],
+      "solution": "List the pairs: 6 and 8 add up to 14, and 8 is 2 more than 6. Check: no other pair that adds up to 14 is 2 apart."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "A child in another class says 20 take away 8 is 13. Circle Right or Wrong: ___ . The right answer is ___ .",
+      "answer": "Wrong; 12",
+      "val": [
+        "Wrong",
+        12
+      ],
+      "solution": "20 take away 8 is 12. Check: 12 and 8 make 20."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Write a number bigger than 7 and smaller than 12. How many numbers fit this puzzle? ___ numbers.",
+      "answer": "4",
+      "val": 4,
+      "solution": "8, 9, 10 and 11 all fit, so there are 4 numbers. A good puzzle has exactly one answer, so this one needs another clue."
+    },
+    {
+      "id": "H5",
+      "tier": "start",
+      "text": "5 pens cost $10. How much does 1 pen cost? $___",
+      "answer": "$2",
+      "val": 2,
+      "solution": "$10 shared equally among 5 pens is $2 each.",
+      "rewind_of": "Term 2 Lesson 10"
+    }
+  ],
+  "online_practice": {
+    "key": "t4l40",
+    "title": "Inquirers' Showcase",
+    "topic": "Write a puzzle with one answer, check a friend's puzzle, and teach an idea",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "I am a number. I am 4 more than 11. What number am I?",
+        "hint": "More means we add.",
+        "steps": [
+          "4 more than 11.",
+          "11 and 4 make 15.",
+          "I am 15."
+        ],
+        "answer": 15,
+        "slips": [
+          {
+            "a": [
+              7
+            ],
+            "say": "That is 11 take away 4. More means we add."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              3,
+              4,
+              5,
+              6
+            ],
+            "b": [
+              8,
+              9,
+              11,
+              12
+            ]
+          },
+          "derive": {},
+          "q": "I am a number. I am {a} more than {b}. What number am I?",
+          "answer": "a+b",
+          "hint": "More means we add.",
+          "steps": [
+            "{a} more than {b}.",
+            "{b} and {a} make {ans}.",
+            "I am {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "Two numbers add up to 12. One number is 2 more than the other. What is the smaller number?",
+        "hint": "List the pairs that make 12. Find the pair that is 2 apart.",
+        "steps": [
+          "The pairs are 5 and 7, 4 and 8, and so on.",
+          "5 and 7 make 12, and 7 is 2 more than 5.",
+          "The smaller number is 5."
+        ],
+        "answer": 5,
+        "slips": [
+          {
+            "a": [
+              7
+            ],
+            "say": "That is the bigger number. Which number is smaller?"
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "d": [
+              2,
+              4
+            ]
+          },
+          "derive": {
+            "t": "2*s+d"
+          },
+          "q": "Two numbers add up to {t}. One number is {d} more than the other. What is the smaller number?",
+          "answer": "s",
+          "hint": "List the pairs that make {t}. Find the pair that is {d} apart.",
+          "steps": [
+            "List the pairs that make {t}.",
+            "Find the pair that is {d} apart.",
+            "The smaller number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which one is a good puzzle?",
+        "hint": "A good puzzle has a story, numbers and one question.",
+        "steps": [
+          "A good puzzle has a story, numbers and one question.",
+          "The second one has all three.",
+          "It is a good puzzle."
+        ],
+        "answer": "Ali has 5 pens. Mei has 3 more pens than Ali. How many pens does Mei have?",
+        "slips": [
+          {
+            "a": [
+              "How many pens does Mei have?"
+            ],
+            "say": "That is only a question. A good puzzle has a story and numbers too."
+          }
+        ],
+        "options": [
+          "Ali has 5 pens.",
+          "Ali has 5 pens. Mei has 3 more pens than Ali. How many pens does Mei have?",
+          "How many pens does Mei have?"
+        ]
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "choice",
+        "q": "A child writes: Write a number between 1 and 9. Does this puzzle have exactly one answer?",
+        "hint": "Many numbers fit.",
+        "steps": [
+          "Try 2. It fits.",
+          "Try 5. It fits too.",
+          "Many numbers fit, so it does not have exactly one answer."
+        ],
+        "answer": "No",
+        "slips": [
+          {
+            "a": [
+              "Yes"
+            ],
+            "say": "Try two different numbers. Do both fit?"
+          }
+        ],
+        "options": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "number",
+        "q": "Mei thinks of a number. She takes away 5 and gets 9. What is her number?",
+        "hint": "Work backwards. Add the 5.",
+        "steps": [
+          "We know the end: 9.",
+          "Undo the take away: 9 and 5.",
+          "Her number is 14."
+        ],
+        "answer": 14,
+        "slips": [
+          {
+            "a": [
+              4
+            ],
+            "say": "That is 9 take away 5. Work backwards: add the 5."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "r": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "a": [
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "derive": {},
+          "q": "Mei thinks of a number. She takes away {a} and gets {r}. What is her number?",
+          "answer": "r+a",
+          "hint": "Work backwards. Add the {a}.",
+          "steps": [
+            "We know the end: {r}.",
+            "Undo the take away: {r} and {a}.",
+            "Her number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "How many whole numbers are bigger than 5 and smaller than 11?",
+        "hint": "List them: 6, 7, and so on.",
+        "steps": [
+          "List the numbers: 6, 7, 8, 9, 10.",
+          "Count them.",
+          "There are 5 numbers."
+        ],
+        "answer": 5,
+        "slips": [
+          {
+            "a": [
+              6
+            ],
+            "say": "Do not count 5 or 11. Bigger than 5 starts at 6."
+          }
+        ],
+        "easier": "c4",
+        "tpl": {
+          "vars": {
+            "a": [
+              3,
+              5,
+              7
+            ],
+            "b": [
+              9,
+              11,
+              12
+            ]
+          },
+          "derive": {},
+          "q": "How many whole numbers are bigger than {a} and smaller than {b}?",
+          "answer": "b-a-1",
+          "hint": "List them. Do not count {a} or {b}.",
+          "steps": [
+            "List the numbers from {a} to {b}.",
+            "Leave out {a} and {b}.",
+            "Count them: {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "A child writes: Two numbers add up to 10. One is 4 more than the other. The numbers are 6 and 4. What is wrong?",
+        "hint": "Check each clue.",
+        "steps": [
+          "6 and 4 add up to 10. That clue fits.",
+          "6 is 2 more than 4, not 4 more.",
+          "The second clue does not fit."
+        ],
+        "answer": "6 is not 4 more than 4",
+        "slips": [
+          {
+            "a": [
+              "6 and 4 do not add up to 10"
+            ],
+            "say": "6 and 4 do make 10. Check the other clue."
+          }
+        ],
+        "options": [
+          "6 and 4 do not add up to 10",
+          "6 is not 4 more than 4",
+          "Nothing is wrong"
+        ],
+        "easier": "c4"
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "number",
+        "q": "A child in another class writes 8 + 6 = 15. What is the right answer?",
+        "hint": "Add again, or check by taking away.",
+        "steps": [
+          "8 and 2 make 10.",
+          "6 take away 2 is 4, and 10 and 4 make 14.",
+          "The right answer is 14."
+        ],
+        "answer": 14,
+        "slips": [
+          {
+            "a": [
+              15
+            ],
+            "say": "That is the wrong answer the child wrote."
+          }
+        ],
+        "easier": "c1",
+        "tpl": {
+          "vars": {
+            "a": [
+              7,
+              8,
+              9
+            ],
+            "b": [
+              5,
+              6,
+              7
+            ]
+          },
+          "derive": {
+            "w": "a+b+1"
+          },
+          "q": "A child in another class writes {a} + {b} = {w}. What is the right answer?",
+          "answer": "a+b",
+          "hint": "Add again, or check by taking away.",
+          "steps": [
+            "Add {a} and {b} again.",
+            "Make a ten first.",
+            "The right answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Two numbers add up to 14. One number is 4 more than the other. What is the bigger number?",
+        "hint": "List the pairs that make 14. Find the pair that is 4 apart.",
+        "steps": [
+          "The pairs are 5 and 9, 6 and 8, and so on.",
+          "5 and 9 make 14, and 9 is 4 more than 5.",
+          "The bigger number is 9."
+        ],
+        "answer": 9,
+        "slips": [
+          {
+            "a": [
+              5
+            ],
+            "say": "That is the smaller number. Which number is bigger?"
+          }
+        ],
+        "easier": "c2",
+        "tpl": {
+          "vars": {
+            "s": [
+              3,
+              4,
+              5,
+              6
+            ],
+            "d": [
+              2,
+              4,
+              6
+            ]
+          },
+          "derive": {
+            "t": "2*s+d"
+          },
+          "q": "Two numbers add up to {t}. One number is {d} more than the other. What is the bigger number?",
+          "answer": "s+d",
+          "hint": "List the pairs that make {t}. Find the pair that is {d} apart.",
+          "steps": [
+            "List the pairs that make {t}.",
+            "Find the pair that is {d} apart.",
+            "The bigger number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "How many different pairs of whole numbers add up to 9? Count 0 and 9 as a pair. Do not count the same pair twice.",
+        "hint": "List the pairs in order: 0 and 9, 1 and 8, and so on.",
+        "steps": [
+          "0 and 9, 1 and 8, 2 and 7, 3 and 6, 4 and 5.",
+          "5 and 4 is the same pair as 4 and 5.",
+          "There are 5 pairs."
+        ],
+        "answer": 5,
+        "slips": [
+          {
+            "a": [
+              10
+            ],
+            "say": "That counts 4 and 5 and 5 and 4 as two pairs. Count each pair once."
+          }
+        ],
+        "easier": "t1",
+        "tpl": {
+          "vars": {
+            "t": [
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "derive": {},
+          "q": "How many different pairs of whole numbers add up to {t}? Count 0 and {t} as a pair. Do not count the same pair twice.",
+          "answer": "t//2+1",
+          "hint": "List the pairs in order: 0 and {t}, 1 and the next, and so on.",
+          "steps": [
+            "List the pairs in order, starting with 0 and {t}.",
+            "Stop when the pairs start to repeat.",
+            "There are {ans} pairs."
+          ]
+        }
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Write your own puzzle with a rule. Check that it has exactly one answer, and show why.",
+        "hint": "Use two numbers. List every case.",
+        "steps": [
+          "Write a rule and two numbers.",
+          "List every case.",
+          "Check there is exactly one answer."
+        ],
+        "easier": "c2"
+      },
+      {
+        "id": "r1",
+        "tier": "core",
+        "type": "number",
+        "q": "A week after the 5th is which date? Write the number.",
+        "hint": "A week is 7 days. Add 7.",
+        "steps": [
+          "A week is 7 days.",
+          "5 and 7 make 12.",
+          "A week after the 5th is the 12th."
+        ],
+        "answer": 12,
+        "slips": [
+          {
+            "a": [
+              7
+            ],
+            "say": "7 is the days in a week. Add them to the date."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              2,
+              3,
+              5,
+              8,
+              9,
+              11,
+              14,
+              16,
+              20
+            ]
+          },
+          "derive": {},
+          "q": "A week after the {a|ord} is which date? Write the number.",
+          "answer": "a+7",
+          "hint": "A week is 7 days. Add 7.",
+          "steps": [
+            "A week is 7 days.",
+            "{a} and 7 make {ans}.",
+            "A week after the {a|ord} is the {ans|ord}."
+          ]
+        },
+        "rewind_of": "Term 3 Lesson 10"
+      },
+      {
+        "id": "r2",
+        "tier": "core",
+        "type": "number",
+        "q": "How many days are in 2 weeks?",
+        "hint": "One week is 7 days. Count in 7s.",
+        "steps": [
+          "One week is 7 days.",
+          "7 and 7 make 14.",
+          "2 weeks is 14 days."
+        ],
+        "answer": 14,
+        "slips": [
+          {
+            "a": [
+              2
+            ],
+            "say": "2 is the number of weeks. Count the days: 7 for each week."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "w": [
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {},
+          "q": "How many days are in {w} weeks?",
+          "answer": "7*w",
+          "hint": "One week is 7 days. Count in 7s.",
+          "steps": [
+            "One week is 7 days.",
+            "Count in 7s, {w} times.",
+            "{w} weeks is {ans} days."
+          ]
+        },
+        "rewind_of": "Term 3 Lesson 10"
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We looked back over the year. Your child chose a favourite idea to teach, learned what a good puzzle needs (a story, numbers, one question and one answer), checked a puzzle a child in another class wrote, and played Mi's Challenge Quest, our end-of-year game, on private paper. Your tutor then sends one line about what we saw.",
+    "words": [
+      "puzzle: a story with numbers and one question",
+      "clue: a fact that helps to find the answer",
+      "rule: what the numbers must follow",
+      "check: solve it a second way",
+      "quest partner: you, or a brother or sister, beside your child"
+    ],
+    "try_home": [
+      "Ask your child to teach you a favourite idea from the year in one minute: my idea, how it works, an example.",
+      "Write a puzzle together. Ask: does it have exactly one answer? How do you know?",
+      "Make a mistake on purpose in a sum. Ask your child to check it clue by clue."
+    ],
+    "ask": [
+      "What is your favourite idea, and why?",
+      "What does a good puzzle need?",
+      "How do you know there is only one answer?"
+    ],
+    "when_stuck": "Let your child look at a favourite page and wait 10 seconds before helping. Asking \"What is the question?\" works better than giving the answer. Please do not chant rules. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+    "next": "What comes next is the first lesson of Level 2 or the holiday program. Your tutor will tell you which one, and the start date, and send a note about what to have ready. Mi's Challenge Quest: please send one photo of each of the 4 pages to the business WhatsApp today. Online practice: your tutor will share the link. The recording link is private: please do not share it.",
+    "quote": "Teach what you found. A good puzzle has one answer and a check.",
+    "report_line": "Your child is learning to explain an idea to others and to write and check a puzzle. This week: a favourite idea taught in a minute, puzzles with one answer, and Mi's Challenge Quest.",
+    "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+    "next_materials": [
+      "Nothing to prepare yet. Your tutor will send a note about the first lesson of Level 2 or the holiday program",
+      "Keep your Term 4 book and your Quest Log: you may like to look back at them"
+    ]
+  },
+  "safeguarding": [
+    "There are no small pieces and nothing to cut out in this lesson. No matches or toothpicks, nothing sharp.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. Mi's Challenge Quest stays flat on the table and is never held up or read out, and nothing is added up in front of the group. There is no private chat.",
+    "The Showcase is voluntary. A pass is always allowed, and a child may teach a grown-up with the microphone muted instead. A child's voice is recorded if they are unmuted, and the tutor says so before anyone starts. There is no voting, no best, no ranking and no counting of claps. Puzzles are shared inside the group only; nothing is collected or compiled; a puzzle leaves the group only if the grown-up agrees.",
+    "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. The quarter turn is slow; a child may stay seated and move one arm.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session when the next program starts. The Quest photos follow the same route and are opened only on the business WhatsApp, never on a personal phone. No private messages to children.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question and every Quest gate (and the secret cave item) yourself first, with the Quest tutor notes (L40_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Workbook answers: S1 and S2 many answers are right; S3 (2); S4 Wrong and 13; S5 1, 6 and 16; S6 4 and 20; T1 and T2 many answers are right; T3 B and 4; G1 5 and 7, and 1 pair; G2 No, 2, and 3 and 7; G3 many answers are right; I1 open. Exit ticket: E1 14; E2 (2); E3 Wrong.",
+    "A week before, tell the families to have ready: the Quest Log (4 pages, in Book 8), kept closed in an envelope; a quest partner (a grown-up or a brother or sister); one favourite page from the year books (or a drawing of a favourite puzzle) and plain paper. Send them the grown-up note (L40_Quest_Parent_Note.pdf). A family whose Quest Log is missing or damaged tells you: arrange the make-up slot, and send the PDF straight away (printing and postage are included in the program fee, owner decision of 23 Oct 2026; draft parcel policy, owner to confirm: report a missing or damaged book, the pages go out as a PDF straight away, one free resend, a second loss is discussed; delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later).",
+    "Have the slides open. The Quest is straight after the brain break, minutes 35 to 55, then the workbook, then the Showcase. Have the Quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the Quest. Delete each child's notes sheet when the line is sent.",
+    "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded, so say before the Showcase that a child may teach a grown-up with the microphone muted. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs. PAUSE the recording for the whole Quest (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
+    "Be plain with families: writing a puzzle with a rule and showing why its answer must be right (Puzzle With a Proof) goes beyond the Primary 1 syllabus on purpose, at Think harder and Go further only; the Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Lesson 38. Do not call the lesson MOE-aligned. Puzzles written in the lesson stay inside the group, and no book of puzzles is compiled.",
+    "Showcase: volunteers only, up to five, about a minute each. No voting, no best, no ranking, no counting of claps. A pass is always fine. Repeat each idea in your own words for the recording. Last lesson of the year: say goodbye warmly, name the next step only as the first lesson of Level 2 or the holiday program, and promise nothing more."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 4-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "A child says: every puzzle with one answer can be checked a second way. Is that always true? Test it with the puzzle: I am a number, I am 5 more than 7. Check it by taking away.",
+        "rec": "Recording: pause. Test whether a puzzle with one answer can always be checked a second way.",
+        "answer": "Yes, for puzzles like these. 7 and 5 make 12. Check: 12 take away 5 is 7. A second way finds a mistake."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Write a puzzle with a story, numbers and one question. Ask your grown-up to solve it, then check it a second way together.",
+        "rec": "Recording: pause. Write a puzzle and ask a grown-up to solve it, then check it together.",
+        "answer": "No single answer. Check: the puzzle has a story, numbers, one question and exactly one answer."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Teach a toy your favourite idea from the year with the three lines: my favourite idea is, it works like this, here is an example.",
+        "rec": "Recording: pause. Teach a toy your favourite idea from the year in three lines.",
+        "answer": "No single answer. A good lesson names the idea, says how it works and gives an example."
+      }
+    ]
+  },
+  "workbook": {
+    "header": "Showcase: teach what you found",
+    "hint_p1": "Look back over your year. Many answers are right. Nothing is collected.",
+    "hint_p2": "Check every clue. Make a ten first.",
+    "hint_p3": "A good puzzle has a story, numbers, one question and one answer. Choose any question, in any order.",
+    "hint_p4": "List every case to show the answer is the only one. Choose any question. You do not have to finish them all.",
+    "choice_after": 3,
+    "inv_intro": "",
+    "inv_first_label": "First:",
+    "inv_then_label": "Next:",
+    "home_hint": "Look back at your books. Check every puzzle a second way.",
+    "kits": []
+  },
+  "beyond": {
+    "name": "Puzzle With a Proof",
+    "where": [
+      "G1",
+      "G3"
+    ],
+    "text": "Two numbers add up to 12 and one is 2 more than the other: list every pair that makes 12 (0 and 12 up to 6 and 6), find the differences, and see that only 5 and 7 differ by 2. The proof is the list: every case was tried, so the answer is the only one. Writing a puzzle with a rule and a proof (G3), and checking a friend's puzzle clue by clue (G2), are the steps around it. This is beyond Primary 1 on purpose: the syllabus pages we hold name no list of heuristics, and no Primary 1 paper asks a child to write a puzzle. Named puzzle: Puzzle With a Proof.",
+    "parent": "Writing a puzzle with a rule and showing why its answer is the only one goes past the Primary 1 syllabus on purpose."
+  },
+  "challenge_quest": {
+    "title": "Mi's Challenge Quest",
+    "minutes": 20,
+    "scope": "year",
+    "where": "Lesson 40 (the last lesson of the year), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
+    "plan_note": "The end-of-year slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for the next program. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level except the key of 2 in gate 6 (taught in Lesson 38 and said plainly on the grown-up note). Lessons 31 and 32 share gate 1 and Lessons 37 and 38 share gate 6, so every lesson of Term 4 is still visited. Gate 8 asks the child to check a puzzle a child in another class wrote, which is the claim-testing the year line talks about. The secret cave joins two ideas the group has met (money in cents and a growing pattern) in an unseen way. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest sits straight after the brain break so children are fresh. The Quest Log carries the Term 4 pictures (a folded circle, a rectangle of squares, a dot grid, a stack of cubes, a folded paper, four tiles, a network of lines and a picture graph). The year look-back (a minute, no scores) is the OUR YEAR card on the last Quest slide. Time is written as digits where it appears; money with the cent sign.",
+    "sheet_pages": 4,
+    "story": "Mi the dolphin is swimming home to the Home Reef after a whole year. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
+    "child_rules": [
+      "Mi is swimming home to the Home Reef and needs your help at 8 gates.",
+      "Use your own paper. Talk with your quest partner, then write your own answer.",
+      "It is not a race. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate: Mi swims round it.",
+      "The secret cave at the end is optional, just for fun."
+    ],
+    "child_footer": "Math Inquirers Term 4 Mi's Challenge Quest.",
+    "page_instructions": [
+      "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
+      "Gates 3 and 4: keep swimming.",
+      "Gates 5 and 6: nearly home.",
+      "Gates 7 and 8 and the secret cave: the last stretch. Circle Yes or No where you see it."
+    ],
+    "questions": [
+      {
+        "id": "C1",
+        "lesson": [
+          31,
+          32
+        ],
+        "strand": "shapes",
+        "page": 1,
+        "tier": "start",
+        "skill": "Halves and quarters of a circle, and a rectangle made of squares (Lessons 31 and 32)",
+        "text": "A circle is folded in half and in half again. A rectangle is made of 2 rows of 3 squares.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The circle has ___ equal parts.",
+            "ans": "4",
+            "val": 4
+          },
+          {
+            "l": "b",
+            "text": "Each part is called a ___ .",
+            "ans": "quarter",
+            "val": "quarter"
+          },
+          {
+            "l": "c",
+            "text": "The rectangle has ___ squares in all.",
+            "ans": "6",
+            "val": 6
+          }
+        ],
+        "say": "Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 2 rows of 3 squares, so blank squares in all.",
+        "answer": "4; quarter; 6",
+        "val": [
+          4,
+          "quarter",
+          6
+        ],
+        "solution": "Half and half again makes 4 equal parts, and each part is a quarter. 2 rows of 3 squares: 3 and 3 make 6 squares.",
+        "right": "All three correct.",
+        "partly": "Two of the three correct.",
+        "mistakes": [
+          "(a) 2 (only one fold counted).",
+          "(b) half.",
+          "(c) 5 (adding 2 and 3)."
+        ],
+        "visuals": [
+          {
+            "type": "shapes2d",
+            "shape": "circle",
+            "parts": 4,
+            "shade": [
+              1
+            ],
+            "size": 28
+          },
+          {
+            "type": "grid",
+            "rows": 2,
+            "cols": 3,
+            "kind": "squares",
+            "size": 32
+          }
+        ]
+      },
+      {
+        "id": "C2",
+        "lesson": 33,
+        "strand": "grids",
+        "page": 1,
+        "tier": "start",
+        "skill": "Steps and routes on a dot grid (Lesson 33)",
+        "text": "A counter starts at S. It moves only right or up to reach E.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "It moves ___ steps in all.",
+            "ans": "3",
+            "val": 3
+          },
+          {
+            "l": "b",
+            "text": "There are ___ different routes from S to E.",
+            "ans": "3",
+            "val": 3
+          }
+        ],
+        "say": "Gate 2. A counter starts at S. It moves only right or up to reach E. Part a: it moves blank steps in all. Part b: there are blank different routes from S to E.",
+        "answer": "3; 3",
+        "val": [
+          3,
+          3
+        ],
+        "solution": "2 steps right and 1 step up make 3 steps. The routes are right right up, right up right, and up right right: 3 routes.",
+        "right": "Both correct.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) 2 (counting only the right steps).",
+          "(b) 1 or 2 (only one route found)."
+        ],
+        "visual": {
+          "type": "grid",
+          "rows": 1,
+          "cols": 2,
+          "kind": "dots",
+          "start": [
+            0,
+            1
+          ],
+          "end": [
+            2,
+            0
+          ],
+          "size": 62
+        }
+      },
+      {
+        "id": "C3",
+        "lesson": 34,
+        "strand": "grids",
+        "page": 2,
+        "tier": "start",
+        "skill": "Cubes in a stack, and a paper folded once and punched once (Lesson 34)",
+        "text": "Look at the stack of cubes. Then look at the folded paper.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "There are ___ cubes in all.",
+            "ans": "6",
+            "val": 6
+          },
+          {
+            "l": "b",
+            "text": "The paper is folded in half once and one hole is punched. When it is opened there are ___ holes.",
+            "ans": "2",
+            "val": 2
+          }
+        ],
+        "say": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Look at the folded paper. It is folded in half once and one hole is punched. Part b: when the paper is opened there are blank holes.",
+        "answer": "6; 2",
+        "val": [
+          6,
+          2
+        ],
+        "solution": "The stacks have 2, 2, 1 and 1 cubes: 2 and 2 make 4, and 1 and 1 more make 6 cubes. A folded paper has 2 layers, so one hole goes through both: 2 holes.",
+        "right": "Both correct.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) 4 or 5 (a hidden cube not counted).",
+          "(b) 1 (the second layer forgotten)."
+        ],
+        "visuals": [
+          {
+            "type": "cube_stack",
+            "heights": [
+              [
+                2,
+                2
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "mode": "iso",
+            "size": 30
+          },
+          {
+            "type": "fold_punch",
+            "stage": "folded",
+            "fold": "h",
+            "holes": [
+              [
+                0.5,
+                0.7
+              ]
+            ],
+            "size": 30
+          }
+        ]
+      },
+      {
+        "id": "C4",
+        "lesson": 35,
+        "strand": "spot",
+        "page": 2,
+        "tier": "start",
+        "skill": "The odd one out and what is different (Lesson 35)",
+        "text": "Three tiles are alike. One tile is the odd one out.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Circle the odd one out: A, B, C or D.",
+            "ans": "C",
+            "val": "C"
+          },
+          {
+            "l": "b",
+            "text": "Circle what is different: shape, number, size or pattern.",
+            "ans": "number",
+            "val": "number"
+          }
+        ],
+        "say": "Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern.",
+        "answer": "C; number",
+        "val": [
+          "C",
+          "number"
+        ],
+        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 3 triangles, so it is the odd one out, and the number is different.",
+        "right": "Both correct.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) A, B or D (one of the alike tiles).",
+          "(b) shape or size (looking at the wrong feature)."
+        ],
+        "visual": {
+          "type": "panel",
+          "tiles": [
+            {
+              "shape": "triangle",
+              "n": 2,
+              "size": "m",
+              "pattern": 2
+            },
+            {
+              "shape": "triangle",
+              "n": 2,
+              "size": "m",
+              "pattern": 2
+            },
+            {
+              "shape": "triangle",
+              "n": 3,
+              "size": "m",
+              "pattern": 2
+            },
+            {
+              "shape": "triangle",
+              "n": 2,
+              "size": "m",
+              "pattern": 2
+            }
+          ],
+          "cell": 100,
+          "cols": 4,
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "size": 55
+        }
+      },
+      {
+        "id": "C5",
+        "lesson": 36,
+        "strand": "spot",
+        "page": 3,
+        "tier": "start",
+        "skill": "Counting lines and equal groups (Lesson 36)",
+        "text": "Each line joins two dots. 4 bags have 3 sweets in each bag.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "There are ___ lines.",
+            "ans": "6",
+            "val": 6
+          },
+          {
+            "l": "b",
+            "text": "The 4 bags have ___ sweets in all.",
+            "ans": "12",
+            "val": 12
+          }
+        ],
+        "say": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 4 bags have 3 sweets in each bag, so blank sweets in all.",
+        "answer": "6; 12",
+        "val": [
+          6,
+          12
+        ],
+        "solution": "Count each line once: 6 lines. 4 bags of 3 sweets: 3, 6, 9, 12 sweets.",
+        "right": "Both correct.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) 5 or 7 (a line missed or counted twice).",
+          "(b) 7 (adding 4 and 3)."
+        ],
+        "visual": {
+          "type": "network",
+          "n": 4,
+          "lines": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "size": 48
+        }
+      },
+      {
+        "id": "C6",
+        "lesson": [
+          37,
+          38
+        ],
+        "strand": "graphs",
+        "page": 3,
+        "tier": "start",
+        "skill": "Reading a picture graph with each picture standing for 2 (Lessons 37 and 38)",
+        "text": "Look at the graph. Each picture stands for 2 stickers.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ali has ___ stickers.",
+            "ans": "6",
+            "val": 6
+          },
+          {
+            "l": "b",
+            "text": "Mei has ___ more stickers than Ali.",
+            "ans": "4",
+            "val": 4
+          }
+        ],
+        "say": "Gate 6. Look at the graph. Each picture stands for 2 stickers. Part a: Ali has blank stickers. Part b: Mei has blank more stickers than Ali.",
+        "answer": "6; 4",
+        "val": [
+          6,
+          4
+        ],
+        "solution": "Ali has 3 pictures: 2, 4, 6 stickers. Mei has 5 pictures, which is 2 more pictures than Ali, and 2 pictures of 2 are 4 more stickers.",
+        "right": "Both correct.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) 3 (counting pictures, not stickers).",
+          "(b) 2 (2 more pictures, not 4 more stickers)."
+        ],
+        "visual": {
+          "type": "picture_graph",
+          "rows": [
+            {
+              "label": "Ali",
+              "n": 3
+            },
+            {
+              "label": "Mei",
+              "n": 5
+            }
+          ],
+          "icon": "sticker",
+          "title": "Stickers",
+          "each": 2,
+          "size": 55
+        }
+      },
+      {
+        "id": "C7",
+        "lesson": 39,
+        "strand": "graphs",
+        "page": 4,
+        "tier": "start",
+        "skill": "Choose a tool: a growing pattern in a table (Lesson 39)",
+        "text": "A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Circle the tool that fits best: Strip, Table or Work backwards.",
+            "ans": "Table",
+            "val": "Table"
+          },
+          {
+            "l": "b",
+            "text": "Row 5 has ___ blocks.",
+            "ans": "17",
+            "val": 17
+          }
+        ],
+        "say": "Gate 7. A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks.",
+        "answer": "Table; 17",
+        "val": [
+          "Table",
+          17
+        ],
+        "solution": "The numbers grow by 3 each time, so a table fits: 5, 8, 11, 14, 17. Row 5 has 17 blocks.",
+        "right": "Both correct (a strip is a sensible second choice for part a).",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) Work backwards.",
+          "(b) 14 (row 4) or 20 (row 6)."
+        ]
+      },
+      {
+        "id": "C8",
+        "lesson": 40,
+        "strand": "graphs",
+        "page": 4,
+        "tier": "start",
+        "skill": "Check a friend's puzzle (Lesson 40)",
+        "text": "A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is the puzzle right? Circle Yes or No. [yesno]",
+            "ans": "No",
+            "val": "No"
+          },
+          {
+            "l": "b",
+            "text": "The right number is ___ .",
+            "ans": "8",
+            "val": 8
+          }
+        ],
+        "say": "Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank.",
+        "answer": "No; 8",
+        "val": [
+          "No",
+          8
+        ],
+        "solution": "Check: 7 and 5 make 12, not 13. Work backwards: 13 take away 5 is 8. Check: 8 and 5 make 13.",
+        "right": "No and 8.",
+        "partly": "One of the two correct.",
+        "mistakes": [
+          "(a) Yes (not checking).",
+          "(b) 7 again or 18."
+        ]
+      }
+    ],
+    "optional": {
+      "id": "CT",
+      "tier": "think",
+      "optional": true,
+      "lesson": "beyond",
+      "strand": "cave",
+      "skill": "Saving 5 cents more each day (money in cents and a growing pattern joined)",
+      "text": "Think harder (optional). Ali saves 5¢ on Monday, 10¢ on Tuesday and 15¢ on Wednesday. Each day he saves 5¢ more than the day before.",
+      "parts": [
+        {
+          "l": "a",
+          "text": "On Friday he saves ___ ¢.",
+          "ans": "25",
+          "val": 25
+        },
+        {
+          "l": "b",
+          "text": "From Monday to Friday he saves ___ ¢ in all.",
+          "ans": "75",
+          "val": 75
+        }
+      ],
+      "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all.",
+      "answer": "25¢; 75¢",
+      "val": [
+        25,
+        75
+      ],
+      "solution": "Monday 5, Tuesday 10, Wednesday 15, Thursday 20, Friday 25. In all: 5 + 10 + 15 + 20 + 25 = 75 cents.",
+      "mistakes": [
+        "(a) 20 (Thursday).",
+        "(b) 25 (only Friday) or 65 (one day left out)."
+      ],
+      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing."
+    },
+    "strands": [
+      {
+        "id": "shapes",
+        "parent_name": "Shapes and parts",
+        "moe_label": "Shapes; fractions as words",
+        "lessons": [
+          31,
+          32
+        ],
+        "questions": [
+          "C1"
+        ],
+        "looked_at": "halves and quarters of a circle, and a rectangle made of squares",
+        "saw_examples": [
+          "[Name] folded a circle in half and in half again and found 4 equal parts called quarters.",
+          "[Name] counted the squares in a rectangle by rows."
+        ],
+        "next_examples": [
+          "Fold a paper circle or square in half and in half again, and name the parts.",
+          "Count the squares in a bar of chocolate by rows."
+        ]
+      },
+      {
+        "id": "grids",
+        "parent_name": "Grids and views",
+        "moe_label": "Position and space",
+        "lessons": [
+          33,
+          34
+        ],
+        "questions": [
+          "C2",
+          "C3"
+        ],
+        "looked_at": "steps and routes on a dot grid, cubes in a stack, and a paper folded and punched",
+        "saw_examples": [
+          "[Name] found the routes on a small grid by listing them in order.",
+          "[Name] counted the cubes in a stack and said why a folded paper makes more holes."
+        ],
+        "next_examples": [
+          "Draw a small dot grid and find every route from one corner to the other.",
+          "Fold a paper in half, make one hole with a pencil point on a soft surface, and open it: how many?"
+        ]
+      },
+      {
+        "id": "spot",
+        "parent_name": "Spotting and counting",
+        "moe_label": "Process skills; Whole numbers",
+        "lessons": [
+          35,
+          36
+        ],
+        "questions": [
+          "C4",
+          "C5"
+        ],
+        "looked_at": "the odd one out, counting lines, and equal groups",
+        "saw_examples": [
+          "[Name] named the one thing that was different between tiles.",
+          "[Name] counted lines one by one without missing or repeating any."
+        ],
+        "next_examples": [
+          "Lay out four small things, three alike and one different, and ask what is different.",
+          "Count the windows of a building by rows."
+        ]
+      },
+      {
+        "id": "graphs",
+        "parent_name": "Graphs, tools and puzzles",
+        "moe_label": "Statistics; Process skills",
+        "lessons": [
+          37,
+          38,
+          39,
+          40
+        ],
+        "questions": [
+          "C6",
+          "C7",
+          "C8"
+        ],
+        "looked_at": "reading a picture graph where each picture stands for 2, choosing a tool, and checking a friend's puzzle",
+        "saw_examples": [
+          "[Name] read the key first and counted in 2s along a row of pictures.",
+          "[Name] chose a table for a pattern and found a later row.",
+          "[Name] checked a puzzle clue by clue and found the one that did not fit."
+        ],
+        "next_examples": [
+          "Draw a graph where each picture stands for 2 and ask your child to read a row.",
+          "Write a puzzle with a rule and ask: does it have exactly one answer?"
+        ]
+      }
+    ],
+    "give": [
+      "A week before: send the grown-up note (L40_Quest_Parent_Note.pdf). The Quest Log (4 pages) is in each child's Term 4 book (Book 8): families keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family whose book has a missing or damaged Quest Log page tells you: arrange another way (for example the make-up slot, with L40_Quest_Log.pdf sent to the family another way, as a PDF straight away).",
+      "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
+      "Start at minute 35 (straight after the brain break) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
+      "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 2.5 minutes for page 1, 3 for page 2, 2.5 for page 3 and 3 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
+      "Allowed: fingers, counters and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly.",
+      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2 and look back over the year in a minute with the OUR YEAR card (no scores, no comparing). Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, a picture, a list, talking to the partner."
+    ],
+    "after": [
+      "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
+      "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you; accept either order of the two routes you see in gate 2, and a table or a strip in gate 7 part a. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the Quest goes back to the child or the group except thanks.",
+      "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 8, no ranking, no comparison with other children, no prediction.",
+      "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of the next program. It is kept for the next tutor and is never shown to families.",
+      "Once the line is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete each child's notes sheet when the line is sent (keep only the line in the family file, and the group advice sheet). Never forward the photos or save them to a personal phone or any other device.",
+      "At the start of the next program say to the whole group: thank you for playing Mi's Challenge Quest; there is nothing to share and nothing to fear. Never name a child or an answer."
+    ],
+    "late": [
+      "A child who was away or whose family prefers another time: plays the Quest at the make-up slot BEFORE watching the recording (the Quest is not on the recording, so no gate is given away). It is a small group or a pair with Mi, with a parent beside the child on camera. The tutor never sits alone with one child on a private call.",
+      "A child who joined late: the family may choose to leave out gates for lessons the child did not attend. Write nothing for those gates; if no gate of an area was taught, the line for the grown-up says nothing about that area.",
+      "A family that does not want the Quest: no problem. The child does the Lesson 40 work as usual and the line for the grown-up uses your own notes from the lessons only.",
+      "A child who is upset or stuck: remind the group (open session) that every gate can be skipped and Mi swims round it. Do not single the child out. The grown-up may stop the Quest at any time.",
+      "A family whose Quest Log is missing or damaged: tell the family to say so a week before and arrange another way (for example the make-up slot, with L40_Quest_Log.pdf sent to the family another way). Never ask a child about it in front of the group."
+    ],
+    "privacy_checklist": [
+      "Quest Logs are never held up to the camera and never read out.",
+      "No answer is said aloud during or after the Quest. Gates open for everyone, whatever the answers.",
+      "No clock, countdown or timer is shown; nobody is told who finished first or last.",
+      "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
+      "No score, no x out of 8, no ranking, no tally, no comparison between children, not even in your own notes.",
+      "The recording captures the tutor, the shared screen and any voice that is not muted: the recording is paused for the whole Quest (slides s-quest1 and s-quest2) and restarted for the workbook. The WhatsApp number is never on a slide."
+    ],
+    "notes_sheet": {
+      "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
+      "prompts": [
+        "Something the child did well (a named strength, for example: found every route on the grid by listing them in order)",
+        "How they started: counters, a picture, a list, or in their head",
+        "Where they paused or turned to their partner, and what helped",
+        "One next step for home (small and concrete)",
+        "Did they try the secret cave? (a neutral note only)"
+      ],
+      "group_how": "When all the notes are written, look across them without names. Write what several children were still working on and how you will use the first two lessons of the next program (a warm-up, a picture, a game). This page never goes to families.",
+      "group_prompts": [
+        "Gates or ideas where several children paused (no names)",
+        "A warm-up or game to bring back in the first lesson of the next program",
+        "What worked well about the quest as a game, to keep next time"
+      ]
+    },
+    "saw_line": {
+      "heading": "Mi's Challenge Quest: [Name]",
+      "pattern": "In Mi's Challenge Quest, [Name] [one specific thing you saw, in plain words]. [Optional: one small next step at home.]",
+      "how": "One or two sentences at most. Say what the child did (counted coins in tens and fives, read a clock to 5 minutes, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
+      "example": "In Mi's Challenge Quest, Mei folded a circle into quarters and found every route on a small grid by listing them. A good next step: draw a small dot grid and find every route from one corner to the other.",
+      "parent_example": "For example: In Mi's Challenge Quest, Mei listed every route on a small grid.",
+      "closing": "This line describes [Name]'s own thinking in the game. It does not compare children."
+    },
+    "parent_note": {
+      "title": "Mi's Challenge Quest: a note for grown-ups",
+      "what": "In the last lesson of the year we play Mi's Challenge Quest. Mi the dolphin swims home to the Home Reef and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. The gates look back over Term 4: shapes, grids, cubes, spotting, counting, a picture graph, choosing a tool and checking a puzzle. Reading a graph where each picture stands for 2, and the tool and puzzle gates, go past the school Primary 1 syllabus on purpose, so a few gates may be new.",
+      "before": [
+        "The Quest Log (4 pages) is in your child's Term 4 book (Book 8). Keep it closed, in an envelope, until the tutor says to open it. Something missing from the book? Tell us a week before and we will find another way.",
+        "We send you this note a week before the lesson.",
+        "Have a pencil, a rubber and a quiet table. Counters and fingers are fine."
+      ],
+      "during": [
+        "Be the quest partner: sit beside your child. You may talk about how to start and ask 'how do you know?', but please do not give answers or hints.",
+        "Skipping a gate is fine; Mi swims round it. If your child is upset, you may stop at any time.",
+        "The paper stays flat on the table. Cameras may be on or off."
+      ],
+      "after": [
+        "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
+        "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
+        "We use the photos only to write one line about your child. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
+      ],
+      "back": "Within a few days we send you ONE line, written from our private notes, about what we saw your child do in the Quest, with a small next step if it helps. It only describes what your child did, and it never compares children. If you would rather not play the Quest, tell us: that is fine.",
+      "make_up": "Missed the lesson or need another time? The Quest is not on the recording, but your child can play it at the make-up slot, before watching the recording."
+    },
+    "timing_model": {
+      "child_seconds": {
+        "C1": 80,
+        "C2": 70,
+        "C3": 80,
+        "C4": 70,
+        "C5": 70,
+        "C6": 70,
+        "C7": 80,
+        "C8": 80
+      },
+      "stretch_seconds": 60,
+      "slow_child_factor": 1.4
+    },
+    "quest_map": false
+  },
+  "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the workbook. Pause the recording before you read the first gate."
+}

@@ -2286,7 +2286,7 @@
      },
      {
       "l": "c",
-      "text": "Odd + odd is odd. Circle one.",
+      "text": "Add any two odd numbers. Is the total odd? Circle one.",
       "ans": "Never",
       "val": "Never",
       "choices": [

@@ -195,8 +195,9 @@
             "slide": "s-title"
           },
           {
-            "k": "REC",
-            "text": "@rec"
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
           },
           {
             "k": "SAY",
@@ -205,6 +206,15 @@
           {
             "k": "SAY",
             "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -3078,7 +3088,7 @@
     "Solve every workbook question yourself first, making a ten each time.",
     "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 20 small things of two kinds and a sheet of paper for a ten-frame. Small things stay away from mouths and younger children.",
     "Have the slides open and check the kit page is visible on screen share. Have a paper ten-frame and two kinds of counters to show on camera if you wish.",
-    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
     "Be plain with families: Term 1 goes beyond the school Primary 1 syllabus on purpose (for example adding across a ten, totals above 40). Do not call it MOE-aligned. Start here items above the school range are scaffolded; the tier labels stay honest."
   ],
   "spare_time": {

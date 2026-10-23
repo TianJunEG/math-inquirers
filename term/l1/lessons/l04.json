@@ -201,8 +201,9 @@
             "slide": "s-title"
           },
           {
-            "k": "REC",
-            "text": "@rec"
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
           },
           {
             "k": "SAY",
@@ -211,6 +212,15 @@
           {
             "k": "SAY",
             "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -3544,7 +3554,7 @@
     "Solve every workbook question yourself first, including the colouring.",
     "Tell parents a week before: print workbook pages 1 to 6 (page 6 is the 100 square, no cutting needed), find about 12 counters and two or three colours. Counters stay away from mouths and younger children.",
     "Have the slides open and check the 100 square on screen share. Keep a visible clock: the deck has no timer slide.",
-    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs."
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",

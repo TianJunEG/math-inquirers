@@ -205,8 +205,9 @@
             "slide": "s-title"
           },
           {
-            "k": "REC",
-            "text": "@rec"
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
           },
           {
             "k": "SAY",
@@ -215,6 +216,15 @@
           {
             "k": "SAY",
             "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -903,11 +913,11 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? Your tutor will tell you the start date."
+            "text": "Well done, inquirers, for the whole term. Next term starts with Term 2 Lesson 1, Who Is Where? Your tutor will tell you the start date."
           },
           {
             "k": "SAY",
-            "text": "Please have your Lesson 11 workbook with its cards page cut out by a grown-up (the place cards and the number cards), ten small things to put in a row (toys, cups or shoes), a coin or button, a small paper that says FRONT, a pencil and paper. Keep the cards in an envelope."
+            "text": "Please have your Term 2 Lesson 1 workbook with its cards page cut out by a grown-up (the place cards and the number cards), ten small things to put in a row (toys, cups or shoes), a coin or button, a small paper that says FRONT, a pencil and paper. Keep the cards in an envelope."
           },
           {
             "k": "SLIDE",
@@ -1851,8 +1861,8 @@
           "t": "card",
           "head": "NEXT TERM",
           "items": [
-            "Term 2, Lesson 11: Who Is Where?",
-            "Cut out the cards on the Lesson 11 workbook kit page and keep them in an envelope.",
+            "Term 2, Lesson 1: Who Is Where?",
+            "Cut out the cards on the Term 2 Lesson 1 workbook kit page and keep them in an envelope.",
             "Bring 10 small things, a coin, a paper that says FRONT, a pencil and paper."
           ]
         }
@@ -3252,12 +3262,12 @@
       "Did we count everyone?"
     ],
     "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962.",
-    "next": "Term 2 starts with Lesson 11: Who Is Where? If your child played Mi's Chal\u00adlenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
+    "next": "Term 2 starts with its Lesson 1: Who Is Where? If your child played Mi's Chal\u00adlenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and Mi's Chal\u00adlenge Quest.",
     "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
     "quote": "One step at a time. Read it twice, then write one number sentence for each step.",
     "next_materials": [
-      "The Lesson 11 workbook with its cards page (page 6) cut out and kept in an envelope",
+      "The Term 2 Lesson 1 workbook with its cards page (page 6) cut out and kept in an envelope",
       "Ten small things for a row, a coin, a paper that says FRONT, a pencil and paper. Your tutor will tell you the Term 2 start date"
     ]
   },
@@ -3847,7 +3857,7 @@
       "title": "Mi's Challenge Quest: a note for grown-ups",
       "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Term 1 goes beyond the school Primary 1 syllabus on purpose, so a few gates may be new.",
       "before": [
-        "We send you this note and the Quest Log a week before. Print the Quest Log at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler. No printer? Tell us a week before and we will find another way.",
+        "We send you this note and a loose copy of the Quest Log a week before. The Quest Log is also printed on the last pages of the Term 1 workbook book (Book 2); if you use the book, keep it closed until the tutor says to open it. If you print the loose copy, print it at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler. No printer? Tell us a week before and we will find another way.",
         "Keep the Quest Log folded or in an envelope until the tutor says to open it.",
         "Have a pencil, a rubber, a ruler with centimetres and a quiet table. Counters and fingers are fine."
       ],
