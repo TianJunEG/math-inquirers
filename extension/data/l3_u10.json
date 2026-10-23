@@ -568,7 +568,7 @@
     "text": "162, 252 and 342",
     "list": true
    },
-   "explanation": "The hundreds digit is 1, 2 or 3. The ones digit is even and not 0, so it is 2, 4 or 6, and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: tens + ones = 7, so 5 and 2. With 3: tens + ones = 6, so 4 and 2. The numbers are 162, 252 and 342."
+   "explanation": "The hundreds digit is 1, 2 or 3. The ones digit is 2, 4 or 6 and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: 7, so 5 and 2. With 3: 6, so 4 and 2. The numbers are 162, 252 and 342."
   },
   {
    "id": "L3U10-S09",
@@ -651,7 +651,7 @@
     ],
     "text": "Aisha"
    },
-   "explanation": "If Ben did it: Aisha tells the truth, and Wei tells the truth (Ben’s words are a lie). That is 2 true statements. If Wei did it: Ben and Aisha both tell the truth. If Aisha did it: Ben lies, Aisha lies and Wei tells the truth. That is exactly 1. So Aisha did it.",
+   "explanation": "If Ben did it, Aisha and Wei both tell the truth: 2 truths. If Wei did it, Ben and Aisha both tell the truth: 2 truths. If Aisha did it, only Wei tells the truth: exactly 1. So Aisha did it.",
    "hint": "Pick one child. Are exactly 1 of the 3 sayings true?",
    "space": {
     "rows": [
@@ -708,7 +708,7 @@
      }
     }
    ],
-   "explanation": "Monday is 1 box. Tuesday is 1 box and 15. Wednesday is 2 boxes. Thursday is 2 boxes take away 10. In all: 6 boxes + 15 - 10 = 6 boxes + 5 = 185. So 6 boxes = 180 and 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
+   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
    "partsrow": true,
    "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
    "space": {
@@ -797,7 +797,7 @@
      }
     }
    ],
-   "explanation": "(a) Put 1 coin on each side. If the scale tips, the light coin is on the high side. If it balances, it is the coin left out. That is 1 weighing. (b) Weigh 3 coins against 3 coins. This shows which group of 3 has the light coin. Then use the 1 weighing from (a). That is 2 weighings.",
+   "explanation": "(a) Put 1 coin on each side. If the scale tips, the light coin is on the high side. If it balances, it is the coin left out: 1 weighing. (b) Weigh 3 coins against 3 coins to find the group of 3 with the light coin. Then use (a): 2 weighings.",
    "hint": "Put 3 coins on each side. What does the scale tell you?"
   },
   {

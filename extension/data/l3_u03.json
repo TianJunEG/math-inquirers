@@ -623,7 +623,7 @@
      }
     }
    ],
-   "explanation": "49 = 7 × 7, so row 2 and column 1 are both 7. Then 42 = 6 × 7 gives row 1 = 6, and 48 = 6 × 8 gives column 2 = 8. 63 = 7 × 9 gives column 3 = 9. 72 = 8 × 9 gives row 3 = 8. A = 6 × 9 = 54, B = 7 × 8 = 56, C = 8 × 7 = 56 and D = 8 × 8 = 64.",
+   "explanation": "49 = 7 × 7, so row 2 and column 1 are 7. 42 = 6 × 7 gives row 1 = 6. 48 = 6 × 8 gives column 2 = 8. 63 = 7 × 9 gives column 3 = 9. 72 = 8 × 9 gives row 3 = 8. A = 54, B = 56, C = 56, D = 64.",
    "partsrow": true,
    "figure": {
     "type": "l3_grid",

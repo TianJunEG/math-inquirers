@@ -635,7 +635,7 @@
      }
     }
    ],
-   "explanation": "Every number that starts with 1 or 2 is below 2500, because the second digit is at most 4. So only numbers that start with 3 or 4 are greater than 2500: 6 + 6 = 12. In order the list begins 1234, 1243, 1324, 1342, 1423, 1432, and the 7th is 2134.",
+   "explanation": "Numbers that start with 1 or 2 are below 2500, because the second digit is at most 4. Only those that start with 3 or 4 are greater: 6 + 6 = 12. The list begins 1234, 1243, 1324, 1342, 1423, 1432, so the 7th is 2134.",
    "hint": "List them from the smallest. Fix the first digit.",
    "space": {
     "rows": [

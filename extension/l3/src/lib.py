@@ -81,6 +81,11 @@ class Unit:
     def save(self):
         for it in self.items:
             it['explanation'] = self._short(it['explanation'])
+            try:
+                import short
+                it['explanation'] = short.SHORT.get(it['id'], it['explanation'])
+            except ImportError:
+                pass
         self.u['items'] = self.items
         for k in ('snug',):
             pass

@@ -715,7 +715,7 @@
      }
     }
    ],
-   "explanation": "(a) 3 + 5 = 8, and 8 ÷ 7 leaves remainder 1. Test: 10 + 5 = 15 and 15 ÷ 7 = 2 remainder 1. (b) 3 + 3 = 6, which is smaller than 7. Test: 20 ÷ 7 = 2 remainder 6. (c) 5 + 5 = 10, and 10 ÷ 8 leaves remainder 2. Test: 13 doubled is 26, and 26 ÷ 8 = 3 remainder 2.",
+   "explanation": "(a) 3 + 5 = 8, and 8 ÷ 7 leaves 1. (b) 3 + 3 = 6, which is smaller than 7. (c) 5 + 5 = 10, and 10 ÷ 8 leaves 2. Test with real numbers: 10 + 5 = 15 leaves 1; 20 leaves 6; 26 ÷ 8 leaves 2.",
    "hint": "Try a number like 10 (remainder 3 when divided by 7). Test it.",
    "space": {
     "rows": [
@@ -734,7 +734,7 @@
     ],
     "text": "58"
    },
-   "explanation": "1 left over when counting in 3s is the same as being 2 short of a full group. Counting in 4s with 2 left is 2 short too, and counting in 5s with 3 left is 2 short. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first such number is 60 (and then 120). 60 - 2 = 58.",
+   "explanation": "Each clue is 2 short of a full group: 1 left in 3s, 2 left in 4s and 3 left in 5s. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first one is 60, so the number is 58.",
    "hint": "Compare each clue with a full group."
   },
   {

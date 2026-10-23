@@ -807,7 +807,7 @@
      }
     }
    ],
-   "explanation": "Write everything in eighths: a half is 4, a quarter is 2, an eighth is 1. The 6 pieces must make 8 eighths. With no halves: 2 quarters (4) and 4 eighths (4) make 8. Using 1 half is not possible with 6 pieces: the other 5 pieces would have to make 4 eighths, but each is at least 1.",
+   "explanation": "In eighths a half is 4, a quarter is 2 and an eighth is 1. 6 pieces must make 8 eighths. 2 quarters (4) and 4 eighths (4) make 8. A half would leave 5 pieces to make 4 eighths, which cannot be done.",
    "hint": "Eighths are the smallest. Most of the 6 pieces must be small.",
    "space": {
     "rows": [

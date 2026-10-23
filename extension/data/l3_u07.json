@@ -137,7 +137,7 @@
      }
     }
    ],
-   "explanation": "Area is the number of squares: A has 8, B has 4 + 2 = 6 and C has 6. Perimeter is the length of the edge: A is 2 × (4 + 2) = 12. B: the box round it is 4 by 2, with a perimeter of 12. The dent in the bottom adds a wall of 1 cm on each side: 12 + 2 = 14. C is 2 × (3 + 2) = 10. B and C have the same area, 6, but different perimeters.",
+   "explanation": "Area is the number of squares: A 8, B 6, C 6. A is 2 × (4 + 2) = 12 and C is 2 × (3 + 2) = 10. B fits a 4 by 2 box (12), and the dent adds 1 cm on each side: 14. B and C have the same area but different perimeters.",
    "figure": {
     "type": "l3_cells",
     "shapes": [
@@ -395,7 +395,7 @@
      }
     }
    ],
-   "explanation": "a is the top of the lower part: 8 - 4 = 4 cm. b is the rest of the left height: 6 - 3 = 3 cm. Area: cut into a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to a box 8 by 6: 2 × (8 + 6) = 28 cm.",
+   "explanation": "a = 8 - 4 = 4 cm and b = 6 - 3 = 3 cm. Area: a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to a box 8 by 6: 2 × (8 + 6) = 28 cm.",
    "partsrow": true,
    "figure": {
     "type": "l3_poly",
@@ -504,7 +504,7 @@
      }
     }
    ],
-   "explanation": "(a) 6 + 4 + 2 = 12 cm². (b) The staircase has the same perimeter as its box, 6 by 3: 2 × (6 + 3) = 18 cm. (c) The rectangle has 6 × 3 = 18 squares, so he adds 18 - 12 = 6. (d) 18 cm: filling the steps does not change the perimeter.",
+   "explanation": "(a) 6 + 4 + 2 = 12 cm². (b) Same as its 6 by 3 box: 2 × (6 + 3) = 18 cm. (c) The rectangle has 18 squares: 18 - 12 = 6 more. (d) 18 cm: filling the steps does not change the perimeter.",
    "figure": {
     "type": "l3_cells",
     "rows": [
@@ -585,7 +585,7 @@
      }
     }
    ],
-   "explanation": "A square that touches the figure along only 1 side adds 2 to the perimeter. A and B each touch 1 side, so the perimeter becomes 12 cm. C fits into the corner and touches 2 sides: it hides 2 cm of the old edge and adds 2 cm, so the perimeter stays 10 cm.",
+   "explanation": "A square that touches the figure on only 1 side adds 2 to the perimeter: A and B give 12 cm. C fits into the corner and touches 2 sides: it hides 2 cm and adds 2 cm, so the perimeter stays 10 cm.",
    "figure": {
     "type": "l3_cells",
     "rows": [
@@ -746,7 +746,7 @@
      }
     }
    ],
-   "explanation": "(a) 4 × 4 = 16 and 3 × 3 = 9, so 25 cm². (b) The figure has no dents, so its perimeter is the same as its box: the box is 7 cm by 4 cm, 2 × (7 + 4) = 22 cm. (c) The new figure fits in a box 4 cm by 7 cm and has no dents: 2 × (4 + 7) = 22 cm. The perimeter does not change.",
+   "explanation": "(a) 16 + 9 = 25 cm². (b) The figure has no dents, so its perimeter equals its box, 7 cm by 4 cm: 2 × (7 + 4) = 22 cm. (c) The new figure fits a 4 by 7 box and has no dents: 22 cm again.",
    "figure": {
     "type": "l3_poly",
     "pts": [

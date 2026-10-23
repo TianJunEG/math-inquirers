@@ -598,7 +598,7 @@
      }
     }
    ],
-   "explanation": "The short hand shows the hour and the long hand shows the minutes. A: the long hand points at 2, which is 10 minutes, and the short hand is just past 4. B: the long hand points at 9, which is 45 minutes. C: the long hand points at 5, which is 25 minutes.",
+   "explanation": "The short hand shows the hour and the long hand the minutes. A: long hand at 2 is 10 minutes, short hand just past 4. B: long hand at 9 is 45 minutes. C: long hand at 5 is 25 minutes.",
    "partsrow": true,
    "figure": {
     "type": "l3_clock",

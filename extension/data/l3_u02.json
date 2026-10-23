@@ -578,7 +578,7 @@
      }
     }
    ],
-   "explanation": "For the greatest sum, put the 2 greatest digits in the hundreds places. Then the next 2 in the tens places, and the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
+   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens places, the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest sum: do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -693,7 +693,7 @@
     ],
     "text": "194"
    },
-   "explanation": "The smallest digit, 1, goes in the hundreds place. The next smallest, 3 and 5, go in the two tens places. The others, 6 and 8, go in the ones places. For example 136 + 58 = 194, and every way of placing the digits like this gives 194.",
+   "explanation": "The smallest digit, 1, goes in the hundreds place. The next smallest, 3 and 5, go in the tens places. 6 and 8 go in the ones places. For example 136 + 58 = 194, and every such way gives 194.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -752,7 +752,7 @@
      }
     }
    ],
-   "explanation": "Add the middle row, the middle column and the 2 diagonals. The middle number is counted 4 times, and every other number once, so 4 totals = all 9 numbers + 3 times the middle number. All 9 numbers make 3 totals, so the total is 3 times the middle: 3 x 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
+   "explanation": "The middle number is in 4 lines (the middle row and column and both diagonals). Adding those 4 lines counts the middle 4 times and every other number once, which is 3 totals + 3 × the middle. So the total is 3 × 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
    "hint": "The middle number is in 4 lines. Add those 4 lines.",
    "figure": {
     "type": "l3_grid",
@@ -932,7 +932,7 @@
      }
     }
    ],
-   "explanation": "99 = 9 x 11, 143 = 13 x 11, 121 = 11 x 11. Here is why. A 2-digit number with digits A and B is 10 A + B. Its reverse is 10 B + A. Together they make 11 A + 11 B, which is 11 x (A + B). So the answer is always in the 11 times table.",
+   "explanation": "99 = 9 × 11, 143 = 13 × 11, 121 = 11 × 11. A number with digits A and B is 10 A + B, and its reverse is 10 B + A. Together they are 11 × (A + B), always in the 11 times table.",
    "hint": "Add the tens digit and ones digit. Compare with the answers.",
    "partsrow": true
   },

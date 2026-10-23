@@ -361,7 +361,7 @@
      }
     }
    ],
-   "explanation": "F has 2 parallel arms and a stem that meets them at right angles. V has 2 sloping lines that are neither parallel nor perpendicular. N has 2 parallel upright lines, but its sloping line is not perpendicular to them. L has 2 lines that meet at a right angle.",
+   "explanation": "F has parallel arms and a stem at right angles to them. V has neither. N has 2 parallel upright lines, but its sloping line is not at a right angle. L has 2 lines that meet at a right angle.",
    "figure": {
     "type": "l3_segs",
     "segs": [
@@ -817,7 +817,7 @@
      }
     }
    ],
-   "explanation": "(a) Each corner of a rectangle is a right angle: 4. (b) The 2 long sides are parallel and the 2 short sides are parallel: 2 pairs. (c) If a triangle had 2 right angles, those sides would be parallel and never meet to make a triangle. (d) The sides of a square meet at right angles."
+   "explanation": "(a) Each corner of a rectangle is a right angle: 4. (b) The 2 long sides are parallel and the 2 short sides are parallel: 2 pairs. (c) 2 right angles would make 2 parallel sides, which never meet to close a triangle: at most 1. (d) The sides of a square meet at right angles."
   },
   {
    "id": "L3U08-S09",
@@ -1267,7 +1267,7 @@
      }
     }
    ],
-   "explanation": "(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line that crosses 2 parallel lines makes the same angle with both. So a right angle with one means a right angle with the other.",
+   "explanation": "(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line across 2 parallel lines makes the same angle with both, so yes.",
    "figure": {
     "type": "l3_segs",
     "k": 44,

@@ -814,9 +814,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9844393666323378,
+   "fill": 0.9640512358393409,
    "over": false,
-   "excess_mm": -4,
+   "excess_mm": -9.2,
    "edition": "soft"
   },
   {
@@ -834,9 +834,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9520951338825953,
+   "fill": 0.9113188722966015,
    "over": false,
-   "excess_mm": -12.3,
+   "excess_mm": -22.8,
    "edition": "soft"
   },
   {
@@ -844,9 +844,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9840692584963955,
+   "fill": 0.9636811277033985,
    "over": false,
-   "excess_mm": -4.1,
+   "excess_mm": -9.3,
    "edition": "soft"
   },
   {
@@ -854,9 +854,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9569065396498455,
+   "fill": 0.9365184088568486,
    "over": false,
-   "excess_mm": -11.1,
+   "excess_mm": -16.3,
    "edition": "soft"
   },
   {
@@ -904,9 +904,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9718395983522142,
+   "fill": 0.9310633367662204,
    "over": false,
-   "excess_mm": -7.2,
+   "excess_mm": -17.7,
    "edition": "soft"
   },
   {
@@ -924,9 +924,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.934490859938208,
+   "fill": 0.9885588311019567,
    "over": false,
-   "excess_mm": -16.8,
+   "excess_mm": -2.9,
    "edition": "soft"
   },
   {
@@ -934,9 +934,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.913024588053553,
+   "fill": 0.986096807415036,
    "over": false,
-   "excess_mm": -22.3,
+   "excess_mm": -3.6,
    "edition": "soft"
   },
   {
@@ -944,9 +944,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9394953656024717,
+   "fill": 0.9830554840370752,
    "over": false,
-   "excess_mm": -15.5,
+   "excess_mm": -4.4,
    "edition": "soft"
   },
   {
@@ -954,9 +954,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9089212152420185,
+   "fill": 0.9721131565396498,
    "over": false,
-   "excess_mm": -23.4,
+   "excess_mm": -7.2,
    "edition": "soft"
   },
   {
@@ -964,9 +964,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8987191040164778,
+   "fill": 0.9626673532440783,
    "over": false,
-   "excess_mm": -26,
+   "excess_mm": -9.6,
    "edition": "soft"
   },
   {
@@ -974,9 +974,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8779608650875386,
+   "fill": 0.9643247940267765,
    "over": false,
-   "excess_mm": -31.4,
+   "excess_mm": -9.2,
    "edition": "soft"
   },
   {
@@ -984,9 +984,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9772946704428425,
+   "fill": 0.9218910916580845,
    "over": false,
-   "excess_mm": -5.8,
+   "excess_mm": -20.1,
    "edition": "soft"
   },
   {
@@ -994,9 +994,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9872232234809475,
+   "fill": 0.9734970391349125,
    "over": false,
-   "excess_mm": -3.3,
+   "excess_mm": -6.8,
    "edition": "soft"
   },
   {
@@ -1004,9 +1004,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9489411688980433,
+   "fill": 0.9015029608650875,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -25.3,
    "edition": "soft"
   },
   {
@@ -1014,19 +1014,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9627156282183316,
+   "fill": 0.5901615602471678,
    "over": false,
-   "excess_mm": -9.6,
-   "edition": "soft"
-  },
-  {
-   "no": 102,
-   "kind": "answers",
-   "label": "Answers",
-   "exempt": true,
-   "fill": 0.18051622039134912,
-   "over": false,
-   "excess_mm": -210.5,
+   "excess_mm": -105.3,
    "edition": "soft"
   },
   {
@@ -1830,9 +1820,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9844393666323378,
+   "fill": 0.9640512358393409,
    "over": false,
-   "excess_mm": -4,
+   "excess_mm": -9.2,
    "edition": "print"
   },
   {
@@ -1850,9 +1840,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9520951338825953,
+   "fill": 0.9113188722966015,
    "over": false,
-   "excess_mm": -12.3,
+   "excess_mm": -22.8,
    "edition": "print"
   },
   {
@@ -1860,9 +1850,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9840692584963955,
+   "fill": 0.9636811277033985,
    "over": false,
-   "excess_mm": -4.1,
+   "excess_mm": -9.3,
    "edition": "print"
   },
   {
@@ -1870,9 +1860,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9569065396498455,
+   "fill": 0.9365184088568486,
    "over": false,
-   "excess_mm": -11.1,
+   "excess_mm": -16.3,
    "edition": "print"
   },
   {
@@ -1920,9 +1910,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9718395983522142,
+   "fill": 0.9310633367662204,
    "over": false,
-   "excess_mm": -7.2,
+   "excess_mm": -17.7,
    "edition": "print"
   },
   {
@@ -1940,9 +1930,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.934490859938208,
+   "fill": 0.9885588311019567,
    "over": false,
-   "excess_mm": -16.8,
+   "excess_mm": -2.9,
    "edition": "print"
   },
   {
@@ -1950,9 +1940,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.913024588053553,
+   "fill": 0.986096807415036,
    "over": false,
-   "excess_mm": -22.3,
+   "excess_mm": -3.6,
    "edition": "print"
   },
   {
@@ -1960,9 +1950,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9394953656024717,
+   "fill": 0.9830554840370752,
    "over": false,
-   "excess_mm": -15.5,
+   "excess_mm": -4.4,
    "edition": "print"
   },
   {
@@ -1970,9 +1960,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9089212152420185,
+   "fill": 0.9721131565396498,
    "over": false,
-   "excess_mm": -23.4,
+   "excess_mm": -7.2,
    "edition": "print"
   },
   {
@@ -1980,9 +1970,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8987191040164778,
+   "fill": 0.9626673532440783,
    "over": false,
-   "excess_mm": -26,
+   "excess_mm": -9.6,
    "edition": "print"
   },
   {
@@ -1990,9 +1980,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8779608650875386,
+   "fill": 0.9643247940267765,
    "over": false,
-   "excess_mm": -31.4,
+   "excess_mm": -9.2,
    "edition": "print"
   },
   {
@@ -2000,9 +1990,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9772946704428425,
+   "fill": 0.9218910916580845,
    "over": false,
-   "excess_mm": -5.8,
+   "excess_mm": -20.1,
    "edition": "print"
   },
   {
@@ -2010,9 +2000,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9872232234809475,
+   "fill": 0.9734970391349125,
    "over": false,
-   "excess_mm": -3.3,
+   "excess_mm": -6.8,
    "edition": "print"
   },
   {
@@ -2020,9 +2010,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9489411688980433,
+   "fill": 0.9015029608650875,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -25.3,
    "edition": "print"
   },
   {
@@ -2030,25 +2020,24 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9627156282183316,
+   "fill": 0.5901615602471678,
    "over": false,
-   "excess_mm": -9.6,
+   "excess_mm": -105.3,
    "edition": "print"
   },
   {
    "no": 102,
-   "kind": "answers",
-   "label": "Answers",
+   "kind": "blank",
+   "label": null,
    "exempt": true,
-   "fill": 0.18051622039134912,
+   "fill": null,
    "over": false,
-   "excess_mm": -210.5,
    "edition": "print"
   }
  ],
  "problems": [
   "print page 10 (Unit 1 \u00b7 Think harder): content overflows the page (natural height minus body 1.5 mm)"
  ],
- "soft_pages": 102,
+ "soft_pages": 101,
  "print_pages": 102
 }
