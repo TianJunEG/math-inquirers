@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 1.011650360453141,
-   "over": true,
-   "excess_mm": 3,
+   "fill": 0.9899105303810505,
+   "over": false,
+   "excess_mm": -2.6,
    "edition": "soft"
   },
   {
@@ -1033,9 +1033,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9899105303810505,
+   "fill": 0.9638903192584964,
    "over": false,
-   "excess_mm": -2.6,
+   "excess_mm": -9.3,
    "edition": "print"
   },
   {
@@ -2006,9 +2006,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 3 (Welcome): content overflows the page (natural height minus body 3 mm)"
- ],
+ "problems": [],
  "soft_pages": 100,
  "print_pages": 100,
  "bw_pipeline": {
