@@ -27,3 +27,5 @@ Final gates (last full run): run_checks 493 answers, 0 mismatches; dup_check OK 
 
 ## If work must resume
 Edit `extension/l2/author/uNN.py`, run it, update `extension/verify/l2_uNN_checks.py` (ids follow printed order), then `python3 extension/tools/build.py --level 2 --units N --no-bw --out <scratch>` for a quick view and the full gate list in README.md.
+
+Phase 2 (audit fixes) done: 100 pages, all gates OK. Waiting on shared Welcome/beyond-label/box-width fix (not landed).

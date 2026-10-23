@@ -30,3 +30,12 @@ Written by the author agent. The author did not audit its own work: every point 
 - The beyond label in the shared renderer prints "Beyond Level 1" in every book (TOOL_REQUESTS.md item 1).
 - The shared lint forbids the word "price"; the money unit uses "cost" and "tag" instead (TOOL_REQUESTS.md item 5).
 - Licence page contact: handled by the shared build text (not edited here).
+
+## Phase 2: audit fixes (AUDIT.md)
+- Fixed: repeated holiday items U4 S01/T03, U5 C03/G04, U2 G04 replaced; same-frame items U8 G01/T02, U4 T01, U5 S06 given new contexts (checks rewritten).
+- Fixed: Learn pages for Units 7 (fraction number line), 8 (stack of cubes, cone and sphere), 9 (clocks, am/pm, elapsed time, jugs, unit conversion); U9 S06 shortened.
+- Fixed: second readings (U3 T02d/G04, U4 S03b, U10 S08/C04, U7 C04), U2 G02 Why letters, answer-giving hints (U2 T01, U8 T01), singular "coin" (U6 S04b, U10 S06b), U3 S04 animals redrawn, weak Whys (U2 S09/S11, U3 S06).
+- Low: the vector PDF moved to extension/l2/build_extras/ (not in the sellable folder).
+- Gates after rebuild: 100 pages, 497 answers checked, dup_check, wording_lint, bw_check, fill_check, print/check_bw all OK.
+- OPEN (shared tool, not mine): Welcome page rulers sentence, "Beyond Level N" label, wider answer boxes (M7). The Level 4 fix has not landed in build.py, render.py or levels.json; requests are in TOOL_REQUESTS.md.
+- Declined/deferred: M5/M6 tier moves, M9 pace plan, shared-template Lows (Contents titles twice, Welcome hint wording, certificate plaque, DRAFT line).
