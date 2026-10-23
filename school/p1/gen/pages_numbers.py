@@ -149,7 +149,7 @@ def page04():
              body=body, check="Read the five letters down your list. Do they spell a word?", check_boxes=5,
              key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names) + f"; nobody has {unused} (letter {best} is the decoy)", check_result=f"Letters down the list: {word}"),
              note=f"Six numbers are listed but there are only five children: a clue says which number nobody has, and its letter ({best}) is a decoy that is not part of the word. "
-                  f"The five letters of the word have exactly one arrangement that is a word, so no wrong placement of the numbers spells a word: all {n_wrong} wrong ways to give the children five of the six numbers were tested (checked against a list of about 129 000 words). "
+                  f"The five letters of the word have exactly one arrangement that is a word, so no wrong placement of the numbers spells a word: every wrong way to give the children five of the six numbers was tested against a very large word list. "
                   "A pupil whose letters are not a word must go back to the clues. The page shows a worked example of crosses and ticks. Clues on this page: " + ", ".join(w for k, w in (("gt", "more than"), ("lt", "fewer than"), ("max", "greatest"), ("min", "smallest"), ("second", "second greatest")) if any(c[0] == k for c in cl)) + ".",
              seed=404)
     sols = solve_compare(names, nums, cl)
@@ -284,7 +284,7 @@ def page07():
              body=body, check="Read the shirt letters from 1st to 5th. Do they spell a word?", check_boxes=5,
              key=dict(answers=", ".join(f"{ordinal(i+1)} {n}" for i, n in enumerate(order)) + f"; {out} is not in the queue (letter {decoy} is the decoy)", check_result=f"Word: {word}"),
              note=f"Six children are shown but the queue has five places: a clue says who is not in the queue, and that child's shirt letter ({decoy}) is a decoy that is not part of the word. "
-                  f"The top row is not in queue order. The five letters of the word have exactly one arrangement that is a word, so no wrong queue spells a word: all {n_wrong} wrong queues of five of the six children were tested (checked against a list of about 129 000 words). "
+                  f"The top row is not in queue order. The five letters of the word have exactly one arrangement that is a word, so no wrong queue spells a word: every wrong queue of five of the six children was tested against a very large word list. "
                   "Clues on this page: " + ", ".join(w for k, w in (("pos", "ordinal numbers (" + ", ".join(ordinal(n) for n in ord_used) + ")"), ("first", "first"), ("last", "last"), ("front", "in front of"), ("behind", "behind"), ("next", "next to")) if any(c[0] == k for c in body_cl)) + ". Two or more clues compare two children, so the pupil must combine them. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
              seed=707)
     sol = solve_queue(names, cl)
