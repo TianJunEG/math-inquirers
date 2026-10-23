@@ -43,8 +43,13 @@ CLAIMED = {}      # page number -> code word, so that no two pages of one build 
 # words of those booklets that appear in the safe pools): a school that buys the series should not meet a word twice (audit L3)
 REPEATS = set("BANDIT CAMPUS COUSIN DONKEY FATHOM FIGURE FRUITY PEANUT TEACUP BOTANY BOUNCE MAGNET SHADOW BACKUP BEHIND BUDGIE CLOUDS COBALT CREAMY CURFEW DAINTY FAMILY FROZEN GUITAR HUNGRY LENGTH MONKEY NUMBER SAILOR SPONGE SQUARE STRING TONGUE TURKEY WIZARD ANSWER".split())
 
+# the nine pages that changed their word, and the words of the other pages as first built: a replacement word comes only from the words no page used,
+# so no other page has to change its word
+REPLACED = {4, 6, 8, 13, 21, 23, 30, 31, 32}
+USED_FIRST_BUILD = set("BANDIT BIRCH BLUNT CAMPUS CANOPY COUSIN DEVOUR DONKEY FATHOM FIGURE FRUITY GOPHER JUNIOR PEANUT POLICE PUBLIC QUIVER SAUCY SCRIBE SHRIMP SPRUCE SWIVEL TEACUP THRIVE TUXEDO UPDATE VOLUME WALNUT WISDOM WOMBAT WORKS".split())
+
 def word_candidates(no, n, avoid=()):
-    avoid = set(avoid) | REPEATS
+    avoid = set(avoid) | REPEATS | (USED_FIRST_BUILD if no in REPLACED else set())
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
     return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
