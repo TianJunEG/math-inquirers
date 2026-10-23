@@ -700,7 +700,7 @@
      }
     }
    ],
-   "explanation": "Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9. Check: area 9 × 4 = 36 and perimeter 2 × 13 = 26.",
+   "explanation": "Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9.",
    "hint": "List pairs that multiply to 36. Then add each pair.",
    "space": {
     "rows": [

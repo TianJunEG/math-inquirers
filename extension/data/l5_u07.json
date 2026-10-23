@@ -27,52 +27,62 @@
        {
         "n": 1,
         "text": "10%",
-        "shade": true
+        "shade": true,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": true
+        "shade": true,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": true
+        "shade": true,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        },
        {
         "n": 1,
         "text": "10%",
-        "shade": false
+        "shade": false,
+        "size": 16
        }
       ],
       "brace": {

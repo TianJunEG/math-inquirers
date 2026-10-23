@@ -581,7 +581,7 @@
     ],
     "text": "7"
    },
-   "explanation": "Work backwards. Add 4 to 17: 21. Divide by 3: 7. Check: 7 × 3 = 21, and 21 - 4 = 17.",
+   "explanation": "Work backwards. Add 4 to 17: 21. Divide by 3: 7.",
    "space": {
     "rows": [
      "Working backwards:"
@@ -708,7 +708,7 @@
      }
     }
    ],
-   "explanation": "Monday is 1 box. Tuesday is 1 box and 15. Wednesday is 2 boxes. Thursday is 2 boxes take away 10. In all: 6 boxes + 15 - 10 = 6 boxes + 5 = 185. So 6 boxes = 180 and 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50. Check: 30 + 45 + 60 + 50 = 185.",
+   "explanation": "Monday is 1 box. Tuesday is 1 box and 15. Wednesday is 2 boxes. Thursday is 2 boxes take away 10. In all: 6 boxes + 15 - 10 = 6 boxes + 5 = 185. So 6 boxes = 180 and 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
    "partsrow": true,
    "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
    "space": {
@@ -827,7 +827,7 @@
      }
     }
    ],
-   "explanation": "If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, which is 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢. Check: 10 + 7 × 20 = 150.",
+   "explanation": "If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, which is 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢.",
    "hint": "Try 4 of each. How much are they worth?",
    "space": {
     "table": {
@@ -851,7 +851,7 @@
     ],
     "text": "Answers vary. Example: Lily, Wei and Kumar each play a different game: chess, ball or cards. Lily does not play ball. Wei plays neither chess nor cards. Kumar does not play chess. Answer: Lily plays chess, Wei plays ball, Kumar plays cards."
    },
-   "explanation": "Check that your clues are true for your answer and that every other arrangement breaks a clue. In the example, Wei plays ball (clue 2), then Kumar cannot play chess (clue 3), so Kumar plays cards and Lily plays chess.",
+   "explanation": "In the example, Wei plays ball (clue 2), then Kumar cannot play chess (clue 3), so Kumar plays cards and Lily plays chess.",
    "hint": "Pick the answer first. Then write clues that rule out the others.",
    "space": {
     "rows": [

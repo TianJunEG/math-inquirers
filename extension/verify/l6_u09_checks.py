@@ -54,7 +54,7 @@ def modes(xs):
 
 @check('L6U09-L01')
 def _():
-    x = [x for x in range(0, 200) if mean([9, 15, 10, x]) == 12][0]
+    x = [x for x in range(0, 200) if mean([8, 14, 12, 7, x]) == 10][0]
     return s([x])
 
 
@@ -143,10 +143,11 @@ def _():
 def _():
     sols = []
     for t in itertools.combinations_with_replacement(range(1, 31), 5):
-        if sum(t) == 35 and t[2] == 6 and t[-1] == 13 and modes(list(t)) == [4] and t.count(4) == 2:
+        if mean(list(t)) == 8 and median(list(t)) == 7 and t[-1] == 12 and modes(list(t)) == [5]:
             sols.append(t)
     assert len(sols) == 1
-    return s(sols[0])
+    t = sols[0]
+    return {'a': [sum(t)], 'b': [t[0]], 'c': [t[3]]}
 
 
 @check('L6U09-T02')
@@ -158,8 +159,8 @@ def _():
 
 @check('L6U09-T03')
 def _():
-    total = 3 * fr(6.4)
-    third = total - fr(5.5) - fr(7.2)
+    total = 3 * fr(4.6)
+    third = total - fr(3.9) - fr(5.4)
     return {'a': [num(total)], 'b': [num(third)]}
 
 

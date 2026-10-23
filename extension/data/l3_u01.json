@@ -715,7 +715,7 @@
     ],
     "text": "Answers vary. Example: I am between 7000 and 8000. My hundreds digit is double my tens digit. My ones digit is 1 more than my tens digit. My digits add up to 16. The only number is 7423."
    },
-   "explanation": "Check that every clue is true for your secret number. Then list the numbers that fit clue 1, and cross out those that fail clue 2, and so on. In the example, the tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.",
+   "explanation": "Then list the numbers that fit clue 1, and cross out those that fail clue 2, and so on. In the example, the tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.",
    "hint": "Pick the number first. Then write clues about its digits.",
    "space": {
     "rows": [

@@ -47,20 +47,21 @@
     "Add all the values. A value of 0 still counts.",
     "Divide the total by how many values there are.",
     "Missing value: total = mean × how many, then take away the values you know.",
-    "Median is the middle value in order. Mode is the most common value."
+    "Median: put the values in order and take the middle one. With 2 middle values, go halfway between them.",
+    "Mode: the value that appears most often."
    ]
   },
   "try": {
    "id": "L6U09-L01",
    "tier": "start",
-   "text": "The mean of 4 numbers is 12. Three of them are 9, 15 and 10. The 4th number is {b}.",
+   "text": "Kumar saves for 5 weeks. The mean is 10 dollars a week. In the first 4 weeks he saves 8, 14, 12 and 7 dollars. In week 5 he saves {b} dollars.",
    "answer": {
     "value": [
-     "14"
+     "9"
     ],
-    "text": "14"
+    "text": "9"
    },
-   "explanation": "The total of 4 numbers is 4 × 12 = 48. The 3 known numbers add to 9 + 15 + 10 = 34. The 4th number is 48 − 34 = 14."
+   "explanation": "The total for 5 weeks is 5 × 10 = 50 dollars. The first 4 weeks add to 8 + 14 + 12 + 7 = 41. Week 5: 50 − 41 = 9 dollars."
   },
   "tight": true
  },
@@ -250,7 +251,7 @@
     },
     {
      "label": "c",
-     "text": "Take away the value 14. The new mean is {b}.",
+     "text": "Start again from 10, 12 and 14. Take away the value 14. The new mean is {b}.",
      "answer": {
       "value": [
        "11"
@@ -314,7 +315,7 @@
   {
    "id": "L6U09-S07",
    "tier": "start",
-   "text": "A cafe has 7 staff. Their pay in dollars a month is 1500, 1600, 1600, 1700, 1800, 1900 and 9500.",
+   "text": "A cafe has 7 staff. Their pay in dollars a month is 1500, 1600, 1600, 1700, 1800, 1900 and 9500. The owner earns the 9500.",
    "page": 2,
    "parts": [
     {
@@ -567,29 +568,49 @@
   {
    "id": "L6U09-T01",
    "tier": "think",
-   "text": "Five whole numbers have a mean of 7 and a median of 6. Their only mode is 4, and the largest number is 13.",
+   "text": "Five friends have ages that are whole numbers of years. The mean age is 8 and the median age is 7. The only mode is 5, and the oldest friend is 12.",
    "page": 4,
-   "answer": {
-    "value": [
-     "4",
-     "4",
-     "6",
-     "8",
-     "13"
-    ],
-    "text": "4, 4, 6, 8, 13",
-    "list": true
-   },
-   "hint": "The 2 smallest are 4 and 4. Use the total for the other.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 5 ages add up to {b}.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The two youngest friends are each {b} years old.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The second oldest friend is {b} years old.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    }
+   ],
+   "hint": "Put the ages in order. What does the median tell you?",
    "space": {
     "rows": [
-     "The numbers are {ll}",
      "Working:",
-     "",
      ""
     ]
    },
-   "explanation": "The total is 5 × 7 = 35. The middle number is 6, and the mode 4 is also the smallest, so the first two are 4 and 4: 4, 4, 6, ?, 13. The 4th is 35 − 27 = 8."
+   "explanation": "The ages add up to 5 × 8 = 40. In order the ages are a, b, 7, d, 12. The mode 5 appears at least twice, and only a and b are below 7, so a = b = 5. Then 5 + 5 + 7 + d + 12 = 40, so d = 40 − 29 = 11. The ages are 5, 5, 7, 11, 12.",
+   "partsrow": true
   },
   {
    "id": "L6U09-T02",
@@ -651,27 +672,27 @@
   {
    "id": "L6U09-T03",
    "tier": "think",
-   "text": "The mean of 3 numbers is 6.4. Two of them are 5.5 and 7.2.",
+   "text": "Wei runs 3 laps. The mean lap time is 4.6 minutes. Two laps take 3.9 and 5.4 minutes.",
    "page": 4,
    "parts": [
     {
      "label": "a",
-     "text": "The 3 numbers add up to {b}.",
+     "text": "The 3 laps take {b} minutes in all.",
      "answer": {
       "value": [
-       "19.2"
+       "13.8"
       ],
-      "text": "19.2"
+      "text": "13.8"
      }
     },
     {
      "label": "b",
-     "text": "The third number is {b}.",
+     "text": "The third lap takes {b} minutes.",
      "answer": {
       "value": [
-       "6.5"
+       "4.5"
       ],
-      "text": "6.5"
+      "text": "4.5"
      }
     }
    ],
@@ -683,7 +704,7 @@
      ""
     ]
    },
-   "explanation": "The total is 3 × 6.4 = 19.2. The known numbers add to 5.5 + 7.2 = 12.7. The third number is 19.2 − 12.7 = 6.5."
+   "explanation": "The total time is 3 × 4.6 = 13.8 minutes. The known laps add to 3.9 + 5.4 = 9.3. The third lap took 13.8 − 9.3 = 4.5 minutes."
   },
   {
    "id": "L6U09-G01",
@@ -864,7 +885,7 @@
     "rowhead": true,
     "ch": 9
    },
-   "hint": "2 matches with 0 goals, 4 with 1 goal: count goals for each column.",
+   "hint": "In each column, multiply the goals by the matches.",
    "explanation": "Total goals: 0 × 2 + 1 × 4 + 2 × 3 + 3 × 1 = 13. Mean = 13 ÷ 10 = 1.3. In order, the 5th and 6th of the 10 values are both 1, so the median is 1.",
    "partsrow": true,
    "beyond": "A frequency table"

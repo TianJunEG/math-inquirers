@@ -668,7 +668,7 @@
      }
     }
    ],
-   "explanation": "Giving each cousin 2 more crayons uses the 11 crayons that were not used and needs 7 more: 11 + 7 = 18 crayons. So 18 ÷ 2 = 9 cousins. The crayons: 9 × 3 + 11 = 38. Check: 9 × 5 = 45 and 45 - 38 = 7 more are needed.",
+   "explanation": "Giving each cousin 2 more crayons uses the 11 crayons that were not used and needs 7 more: 11 + 7 = 18 crayons. So 18 ÷ 2 = 9 cousins. The crayons: 9 × 3 + 11 = 38.",
    "hint": "Compare the 2 plans: each cousin gets 2 more crayons.",
    "space": {
     "rows": [
@@ -734,7 +734,7 @@
     ],
     "text": "58"
    },
-   "explanation": "1 left over when counting in 3s is the same as being 2 short of a full group. Counting in 4s with 2 left is 2 short too, and counting in 5s with 3 left is 2 short. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first such number is 60 (and then 120). 60 - 2 = 58. Check: 58 ÷ 3 = 19 r 1, 58 ÷ 4 = 14 r 2, 58 ÷ 5 = 11 r 3.",
+   "explanation": "1 left over when counting in 3s is the same as being 2 short of a full group. Counting in 4s with 2 left is 2 short too, and counting in 5s with 3 left is 2 short. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first such number is 60 (and then 120). 60 - 2 = 58.",
    "hint": "Compare each clue with a full group."
   },
   {
@@ -748,7 +748,7 @@
     ],
     "text": "Answers vary. Example: I am between 10 and 25. When I am divided by 4 the remainder is 1. When I am divided by 3 the remainder is 2. The only number is 17."
    },
-   "explanation": "Check that your number gives the remainders you wrote, and list the numbers that fit your first clue. Test each with the second clue. In the example, the numbers with remainder 1 when divided by 4 are 13, 17 and 21. Only 17 leaves remainder 2 when divided by 3.",
+   "explanation": "Test each with the second clue. In the example, the numbers with remainder 1 when divided by 4 are 13, 17 and 21. Only 17 leaves remainder 2 when divided by 3.",
    "hint": "Pick your number first. Then find its remainders.",
    "space": {
     "rows": [

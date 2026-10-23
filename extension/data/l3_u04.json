@@ -91,7 +91,7 @@
     ],
     "text": "1525"
    },
-   "explanation": "The whole bar is 2400 eggs. One part is 875, so the white part is 2400 - 875 = 1525. Check: 875 + 1525 = 2400.",
+   "explanation": "The whole bar is 2400 eggs. One part is 875, so the white part is 2400 - 875 = 1525.",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -306,7 +306,7 @@
      }
     }
    ],
-   "explanation": "Take away the extra 18 from the total: 90 - 18 = 72. Share the 72 into 2 equal parts: 36 each. Wei has 36. Kumar has 36 + 18 = 54. Check: 36 + 54 = 90.",
+   "explanation": "Take away the extra 18 from the total: 90 - 18 = 72. Share the 72 into 2 equal parts: 36 each. Wei has 36. Kumar has 36 + 18 = 54.",
    "space": {
     "rows": [
      "Draw your model:",
@@ -326,7 +326,7 @@
     ],
     "text": "13"
    },
-   "explanation": "The gap is 78 - 52 = 26 cm. The piece closes the gap from both sides, so it is half of the gap: 26 ÷ 2 = 13 cm. Check: 78 - 13 = 65 and 52 + 13 = 65.",
+   "explanation": "The gap is 78 - 52 = 26 cm. The piece closes the gap from both sides, so it is half of the gap: 26 ÷ 2 = 13 cm.",
    "space": {
     "rows": [
      "Draw your model:",
@@ -384,7 +384,7 @@
     ],
     "text": "24.85"
    },
-   "explanation": "First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85. Check: 25.15 + 24.85 = 50.00."
+   "explanation": "First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85."
   },
   {
    "id": "L3U04-S10",
@@ -479,7 +479,7 @@
     ],
     "text": "21"
    },
-   "explanation": "At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles. Check: 21 + 21 = 42.",
+   "explanation": "At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles.",
    "hint": "Find how many each has at first. Then how many each has later.",
    "space": {
     "rows": [
@@ -515,7 +515,7 @@
      }
     }
    ],
-   "explanation": "The second bill has 3 more pens and costs $23 - $14 = $9 more. So 3 pens cost $9 and 1 pen costs $3. The box costs $14 - 2 × $3 = $8. Check: 8 + 15 = 23.",
+   "explanation": "The second bill has 3 more pens and costs $23 - $14 = $9 more. So 3 pens cost $9 and 1 pen costs $3. The box costs $14 - 2 × $3 = $8.",
    "hint": "What is different between the 2 bills?",
    "space": {
     "rows": [
@@ -537,7 +537,7 @@
     ],
     "text": "21"
    },
-   "explanation": "The gap is 35 - 7 = 28 years and it never changes. When the father is twice as old, Ravi is 1 box and his father is 2 boxes, so 1 box = the gap = 28. Ravi is 28, which is 21 years from now. Check: 28 and 56.",
+   "explanation": "The gap is 35 - 7 = 28 years and it never changes. When the father is twice as old, Ravi is 1 box and his father is 2 boxes, so 1 box = the gap = 28. Ravi is 28, which is 21 years from now.",
    "hint": "The age gap never changes. Draw a bar for each age.",
    "space": {
     "rows": [
@@ -583,7 +583,7 @@
      }
     }
    ],
-   "explanation": "Lily is 1 box. Kumar is 1 box and 12. Aisha is 2 boxes and 24. In all: 4 boxes and 36 = 140. So 4 boxes = 104 and 1 box = 26. Lily 26, Kumar 38, Aisha 76. Check: 26 + 38 + 76 = 140.",
+   "explanation": "Lily is 1 box. Kumar is 1 box and 12. Aisha is 2 boxes and 24. In all: 4 boxes and 36 = 140. So 4 boxes = 104 and 1 box = 26. Lily 26, Kumar 38, Aisha 76.",
    "hint": "Draw Lily as 1 bar. Build Kumar and Aisha from that bar.",
    "partsrow": true,
    "space": {
@@ -623,7 +623,7 @@
     ],
     "text": "Answers vary. Example: Ali and Ben have 60 stickers in all. Ben has 12 more stickers than Ali. Ali has 24 stickers and Ben has 36 stickers."
    },
-   "explanation": "Check that the story says 60 in all and 12 more for Ben, and that the answer works. In the example, take away the 12: 60 - 12 = 48, and 48 ÷ 2 = 24. Ali has 24 and Ben has 24 + 12 = 36.",
+   "explanation": "In the example, take away the 12: 60 - 12 = 48, and 48 ÷ 2 = 24. Ali has 24 and Ben has 24 + 12 = 36.",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -678,7 +678,7 @@
     ],
     "text": "625"
    },
-   "explanation": "2000 - 735 = 1265. Then 1265 - 640 = 625. Check: 735 + 640 + 625 = 2000."
+   "explanation": "2000 - 735 = 1265. Then 1265 - 640 = 625."
   },
   {
    "id": "L3U04-C02",

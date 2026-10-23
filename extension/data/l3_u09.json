@@ -374,7 +374,7 @@
      }
     }
    ],
-   "explanation": "(a) 2.65 + 1.40 = 4.05. (b) 5.00 - 4.05 = 0.95. Check: 4.05 + 0.95 = 5.00."
+   "explanation": "(a) 2.65 + 1.40 = 4.05. (b) 5.00 - 4.05 = 0.95."
   },
   {
    "id": "L3U09-S07",
@@ -724,7 +724,7 @@
      }
     }
    ],
-   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. One pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70. Check: 2 × 2.70 + 3 × 1.20 = 5.40 + 3.60 = 9.00.",
+   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. One pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.",
    "hint": "How much more do 2 notebooks cost than 2 pens?",
    "space": {
     "rows": [
@@ -806,7 +806,7 @@
     ],
     "text": "Answers vary. Example: A book costs $6.40 and a pen costs $2.15. How much more does the book cost than the pen? The answer is $4.25."
    },
-   "explanation": "Check that your story uses both amounts and gives $4.25. The only way is the difference: 6.40 - 2.15 = 4.25. A sum of the two would be $8.55.",
+   "explanation": "The only way is the difference: 6.40 - 2.15 = 4.25. A sum of the two would be $8.55.",
    "hint": "Which sum or take-away of $6.40 and $2.15 gives $4.25?",
    "space": {
     "rows": [
@@ -827,7 +827,7 @@
     ],
     "text": "07:15"
    },
-   "explanation": "From 22:30 to 24:00 (midnight) is 1 h 30 min. The rest of the shift is 8 h 45 min - 1 h 30 min = 7 h 15 min after midnight. So it ends at 07:15. Check: 22:30 + 8 h = 06:30, and 45 min more is 07:15.",
+   "explanation": "From 22:30 to 24:00 (midnight) is 1 h 30 min. The rest of the shift is 8 h 45 min - 1 h 30 min = 7 h 15 min after midnight. So it ends at 07:15.",
    "hint": "How long is it from 22:30 to midnight?",
    "space": {
     "rows": [
@@ -887,7 +887,7 @@
     ],
     "text": "2.65"
    },
-   "explanation": "5.00 - 2.35 = 2.65. Check: 2.35 + 2.65 = 5.00."
+   "explanation": "5.00 - 2.35 = 2.65."
   }
  ]
 }

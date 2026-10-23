@@ -698,7 +698,7 @@
     "text": "6/15",
     "list": true
    },
-   "explanation": "Equal fractions of 2/5 are 4/10, 6/15, 8/20. The gap between bottom and top is 3, 6, 9, 12. The gap is 9 for 6/15. Check: 15 - 6 = 9.",
+   "explanation": "Equal fractions of 2/5 are 4/10, 6/15, 8/20. The gap between bottom and top is 3, 6, 9, 12. The gap is 9 for 6/15.",
    "hint": "Write fractions equal to 2/5. Look at the gap each time.",
    "space": {
     "rows": [
@@ -870,7 +870,7 @@
     ],
     "text": "Answers vary. Example: Ali eats 3/8 of a pizza and Mei eats 2/8 of it. Together they eat 5/8 of the pizza."
    },
-   "explanation": "Check that your fractions all have the same bottom number, and that the story gives 5/8. In the example, 3/8 + 2/8 = 5/8.",
+   "explanation": "In the example, 3/8 + 2/8 = 5/8.",
    "hint": "Pick 2 fractions with bottom number 8 that add up to 5/8.",
    "space": {
     "rows": [

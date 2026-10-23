@@ -107,7 +107,7 @@
      }
     }
    ],
-   "explanation": "(a) Ones 6 + 1 = 7 and tens 4 + 5 = 9 are fine. Hundreds: ? + 2 = 5, so ? is 3. (b) Ones: 9 + 5 = 14, carry 1. Tens: ? + 3 + 1 ends in 0, so ? is 6 and 10 is made. Check: 2669 + 1435 = 4104."
+   "explanation": "(a) Ones 6 + 1 = 7 and tens 4 + 5 = 9 are fine. Hundreds: ? + 2 = 5, so ? is 3. (b) Ones: 9 + 5 = 14, carry 1. Tens: ? + 3 + 1 ends in 0, so ? is 6 and 10 is made."
   },
   {
    "id": "L3U02-S02",
@@ -165,7 +165,7 @@
      }
     }
    ],
-   "explanation": "(a) 3875 + 2968 = 6843. (b) 3875 - 2968 = 907. Check: 2968 + 907 = 3875."
+   "explanation": "(a) 3875 + 2968 = 6843. (b) 3875 - 2968 = 907."
   },
   {
    "id": "L3U02-S04",
@@ -178,7 +178,7 @@
     ],
     "text": "2375"
    },
-   "explanation": "First add what he used: 2475 + 3150 = 5625. Then 8000 - 5625 = 2375. Check: 5625 + 2375 = 8000."
+   "explanation": "First add what he used: 2475 + 3150 = 5625. Then 8000 - 5625 = 2375."
   },
   {
    "id": "L3U02-S05",
@@ -217,7 +217,7 @@
      }
     }
    ],
-   "explanation": "The check should give back 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232. Check: 3232 + 1768 = 5000."
+   "explanation": "The check should give back 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232."
   },
   {
    "id": "L3U02-S06",
@@ -343,7 +343,7 @@
      }
     }
    ],
-   "explanation": "P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480. Check: 350 + 480 = 830.",
+   "explanation": "P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [
@@ -391,7 +391,7 @@
      }
     }
    ],
-   "explanation": "Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9 and 1 is carried. Hundreds: ? + 4 + 1 ends in 1, so ? is 6 and 1 is carried. Thousands: 3 + 2 + 1 = 6. Check: 3652 + 2496 = 6148.",
+   "explanation": "Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9 and 1 is carried. Hundreds: ? + 4 + 1 ends in 1, so ? is 6 and 1 is carried. Thousands: 3 + 2 + 1 = 6.",
    "figure": {
     "type": "l3_vsum",
     "heads": [
@@ -544,7 +544,7 @@
     ],
     "text": "5525"
    },
-   "explanation": "9000 - 3475 = 5525. Check: 3475 + 5525 = 9000.",
+   "explanation": "9000 - 3475 = 5525.",
    "space": {
     "rows": [
      "Working:"
@@ -618,7 +618,7 @@
      }
     }
    ],
-   "explanation": "(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430.",
+   "explanation": "(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640.",
    "space": {
     "rows": [
      "Working:"
@@ -672,7 +672,7 @@
      }
     }
    ],
-   "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0. Check: 51 + 59 = 110.",
+   "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0.",
    "hint": "Look at the left digit of the answer. Which digit can it be?",
    "partsrow": true,
    "space": {
@@ -836,7 +836,7 @@
      }
     }
    ],
-   "explanation": "Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: then B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. Hundreds: 2 + 1 = 3 = C. Check: 263 + 63 = 326. No other digits work.",
+   "explanation": "Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: then B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. Hundreds: 2 + 1 = 3 = C. No other digits work.",
    "hint": "Look at the ones: C + C ends in B. List the choices for C.",
    "partsrow": true,
    "space": {
@@ -857,7 +857,7 @@
     ],
     "text": "440"
    },
-   "explanation": "In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.",
+   "explanation": "In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [
@@ -947,7 +947,7 @@
     ],
     "text": "Answers vary. Example: top brick 800, middle left brick 370, bottom right brick 180 shown. The hidden bricks are 430 (middle right), 250 (bottom middle) and 120 (bottom left)."
    },
-   "explanation": "Check that your pyramid adds up correctly and that the 3 shown bricks fix all the others. In the example: 800 - 370 = 430, then 430 - 180 = 250, then 370 - 250 = 120.",
+   "explanation": "In the example: 800 - 370 = 430, then 430 - 180 = 250, then 370 - 250 = 120.",
    "hint": "Make a full pyramid first. Then hide 3 bricks.",
    "space": {
     "rows": [
@@ -992,7 +992,7 @@
     ],
     "text": "520"
    },
-   "explanation": "M is the sum of 240 and 280: 240 + 280 = 520. Check: 520 + 640 = 1160.",
+   "explanation": "M is the sum of 240 and 280: 240 + 280 = 520.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [
@@ -1024,7 +1024,7 @@
     ],
     "text": "2895"
    },
-   "explanation": "2845 + 3260 = 6105. Then 9000 - 6105 = 2895. Check: 6105 + 2895 = 9000."
+   "explanation": "2845 + 3260 = 6105. Then 9000 - 6105 = 2895."
   }
  ]
 }

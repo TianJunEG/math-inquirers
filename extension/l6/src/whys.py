@@ -21,7 +21,6 @@ WHY = {
  'L6U04-S01': "IN goes up 2 and OUT goes up 6, so each 1 of IN adds 3: × 3. 3 × 1 = 3 but OUT is 5, so add 2: OUT = 3n + 2. IN 10 gives 32. For OUT 50: 3n = 48, n = 16.",
  'L6U09-G03': "Total goals: 0 × 2 + 1 × 4 + 2 × 3 + 3 × 1 = 13. Mean = 13 ÷ 10 = 1.3. In order, the 5th and 6th of the 10 values are both 1, so the median is 1.",
  'L6U05-S09': "First digit: 3 choices (not 0), second: 3 (0 is allowed), third: 2. 3 × 3 × 2 = 18. Odd numbers end in 1 or 3; then the first digit has 2 choices and the middle digit 2: 2 × 2 × 2 = 8.",
- 'L6U09-T01': "The total is 5 × 7 = 35. The middle number is 6, and the mode 4 is also the smallest, so the first two are 4 and 4: 4, 4, 6, ?, 13. The 4th is 35 − 27 = 8.",
  'L6U05-T02': "4 × 3 × 2 × 1 = 24 numbers. Even numbers end in 2 or 4: 2 × 3 × 2 × 1 = 12. Multiples of 4 end in 12, 24 or 32, and each leaves 2 numbers: 3 × 2 = 6.",
  'L6U01-S04': "Loop 1 says 3, then x = 9. Loop 2 says 9, x = 15. Loop 3 says 15, x = 21. Loop 4 says 21, x = 27. The last number said is 21, and x ends as 27. With repeat 50 the last said is 3 + 49 × 6 = 297.",
  'L6U01-G02': "Places 1, 3, 5, ... say 3, 7, 11, ...: up by 4. Places 2, 4, 6, ... say 20, 25, 30, ...: up by 5. Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second: 20 + 9 × 5 = 65.",

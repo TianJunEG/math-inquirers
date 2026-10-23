@@ -311,3 +311,7 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 - SPINE-CHOICES-OK: accept the spine choices for Level 1 term lessons 13, 19, 27.
 - L10-TRIM: shorten Level 1 term lesson 10 by about 3 minutes (currently exactly 90:00).
 - CHIP-NAMES: add tool names under the icons on the page-1 chip of the choose lessons (10, 20, 30, 40).
+
+## 2026-10-23 (owner replies, fourth batch)
+- L6-TUTOR-ASKED: owner has asked a tutor to run the Level 6 extension code items in Scratch; Level 6 not for sale until the result is back.
+- LAWYER-ASKED: owner has asked the lawyer to approve the P1/P2 school booklet licence wording; P1 and P2 booklets stay held until approval.

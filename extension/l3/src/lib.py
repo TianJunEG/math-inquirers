@@ -71,7 +71,16 @@ class Unit:
     def C(self, text, ans=None, why='', parts=None, **kw):
         return self.add('C', 6, text, ans, why, parts, **kw)
 
+    @staticmethod
+    def _short(e):
+        import re
+        ss = re.split(r'(?<=[.?!])\s+(?=[A-Z(])', e)
+        keep = [x for x in ss if not x.startswith('Check')]
+        return ' '.join(keep) if keep else e
+
     def save(self):
+        for it in self.items:
+            it['explanation'] = self._short(it['explanation'])
         self.u['items'] = self.items
         for k in ('snug',):
             pass

@@ -757,9 +757,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0213858135942326,
-   "over": true,
-   "excess_mm": 5.5,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "soft"
   },
   {
@@ -1773,9 +1773,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0213858135942326,
-   "over": true,
-   "excess_mm": 5.5,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "print"
   },
   {
@@ -2047,9 +2047,7 @@
   }
  ],
  "problems": [
-  "soft page 75 (Unit 10 \u00b7 Check yourself): content overflows the page (natural height minus body 5.5 mm)",
-  "print page 10 (Unit 1 \u00b7 Think harder): content overflows the page (natural height minus body 1.5 mm)",
-  "print page 75 (Unit 10 \u00b7 Check yourself): content overflows the page (natural height minus body 5.5 mm)"
+  "print page 10 (Unit 1 \u00b7 Think harder): content overflows the page (natural height minus body 1.5 mm)"
  ],
  "soft_pages": 102,
  "print_pages": 102

@@ -498,7 +498,7 @@
      }
     }
    ],
-   "explanation": "Check the number of rows from 2 upwards: 2 rows of 15, 3 rows of 10, 5 rows of 6, 6 rows of 5, 10 rows of 3 and 15 rows of 2. 4 rows does not work because 30 is not in the 4 times table. That is 6 ways.",
+   "explanation": "That is 6 ways.",
    "space": {
     "table": {
      "cols": [
@@ -716,7 +716,7 @@
     "text": "738, 963, 1089",
     "list": true
    },
-   "explanation": "738: 7 + 3 + 8 = 18, then 1 + 8 = 9. 825: 8 + 2 + 5 = 15, then 1 + 5 = 6, so not. 963: 9 + 6 + 3 = 18, then 9. 1089: 1 + 0 + 8 + 9 = 18, then 9. Check: 738 = 9 × 82, 963 = 9 × 107, 1089 = 9 × 121.",
+   "explanation": "738: 7 + 3 + 8 = 18, then 1 + 8 = 9. 825: 8 + 2 + 5 = 15, then 1 + 5 = 6, so not. 963: 9 + 6 + 3 = 18, then 9. 1089: 1 + 0 + 8 + 9 = 18, then 9.",
    "hint": "Add the digits of each number. Keep adding until 1 digit is left."
   },
   {
@@ -804,7 +804,7 @@
     ],
     "text": "Answers vary. Example: the products 42, 48 and 49 are shown. The row numbers are 6 and 7 and the column numbers are 7 and 8, so the hidden product is 56."
    },
-   "explanation": "Check that each shown product belongs to the numbers you chose. Check that no other row and column numbers from 6 to 9 give the same 3 products. In the example, 42 = 6 × 7 and 48 = 6 × 8 give row 6 and columns 7 and 8. Also 49 = 7 × 7 gives row 7. The hidden product is 7 × 8 = 56.",
+   "explanation": "In the example, 42 = 6 × 7 and 48 = 6 × 8 give row 6 and columns 7 and 8. Also 49 = 7 × 7 gives row 7. The hidden product is 7 × 8 = 56.",
    "hint": "Pick the row and column numbers first. Then multiply.",
    "space": {
     "rows": [
@@ -847,7 +847,7 @@
     ],
     "text": "56"
    },
-   "explanation": "7 × 8 = 56. Check: 8 × 7 = 56."
+   "explanation": "7 × 8 = 56."
   },
   {
    "id": "L3U03-C02",

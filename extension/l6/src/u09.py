@@ -20,10 +20,11 @@ learn = {
               'steps': ['Add all the values. A value of 0 still counts.',
                         'Divide the total by how many values there are.',
                         'Missing value: total = mean × how many, then take away the values you know.',
-                        'Median is the middle value in order. Mode is the most common value.']},
-    'try': IT(U, 'L', 1, 0, 'The mean of 4 numbers is 12. Three of them are 9, 15 and 10. The 4th number is {b}.',
-              f'The total of 4 numbers is 4 {X} 12 = 48. The 3 known numbers add to 9 + 15 + 10 = 34. The 4th number is 48 {M} 34 = 14.',
-              answer=A([14], '14')),
+                        'Median: put the values in order and take the middle one. With 2 middle values, go halfway between them.',
+                        'Mode: the value that appears most often.']},
+    'try': IT(U, 'L', 1, 0, 'Kumar saves for 5 weeks. The mean is 10 dollars a week. In the first 4 weeks he saves 8, 14, 12 and 7 dollars. In week 5 he saves {b} dollars.',
+              f'The total for 5 weeks is 5 {X} 10 = 50 dollars. The first 4 weeks add to 8 + 14 + 12 + 7 = 41. Week 5: 50 {M} 41 = 9 dollars.',
+              answer=A([9], '9')),
 }
 
 # ---------------------------------------------------------------- Start here
@@ -57,7 +58,7 @@ I.append(IT(U, 'S', 5, 2,
             f'(a) A new value equal to the mean does not change it: the mean stays at 12. (b) 10 + 12 + 14 + 20 = 56, and 56 ÷ 4 = 14. (c) 10 + 12 = 22, and 22 ÷ 2 = 11.',
             parts=[P('a', 'Add the value 12. The mean   {circ:goes up|stays the same|goes down}', ['stays the same']),
                    P('b', 'Add the value 20. The new mean is {b}.', [14]),
-                   P('c', 'Take away the value 14. The new mean is {b}.', [11])]))
+                   P('c', 'Start again from 10, 12 and 14. Take away the value 14. The new mean is {b}.', [11])]))
 I.append(IT(U, 'S', 6, 2,
             'The median is the middle value when the values are in order. The mode is the value that appears most often.',
             '12, 7, 9, 7, 5 in order: 5, 7, 7, 9, 12. The middle one is 7, the mode is 7 and the mean is 40 ÷ 5 = 8. '
@@ -68,7 +69,7 @@ I.append(IT(U, 'S', 6, 2,
                    P('d', 'For 2, 8, 4, 6 the median is {b}.', [5])],
             partsrow=True))
 I.append(IT(U, 'S', 7, 2,
-            'A cafe has 7 staff. Their pay in dollars a month is 1500, 1600, 1600, 1700, 1800, 1900 and 9500.',
+            'A cafe has 7 staff. Their pay in dollars a month is 1500, 1600, 1600, 1700, 1800, 1900 and 9500. The owner earns the 9500.',
             'Total: 1500 + 1600 + 1600 + 1700 + 1800 + 1900 + 9500 = 19600, and 19600 ÷ 7 = 2800. In order the middle (4th) value is 1700. '
             'Only the owner earns 9500. The mean is pulled up by that one value, so the median 1700 is more typical.',
             parts=[P('a', 'The mean pay is {b} dollars.', [2800]),
@@ -106,11 +107,13 @@ I.append(IT(U, 'S', 11, 3,
 
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
-            'Five whole numbers have a mean of 7 and a median of 6. Their only mode is 4, and the largest number is 13.',
-            f'The total is 5 {X} 7 = 35. In order the middle number is 6. 4 is the mode and the smallest, so the first two numbers are 4 and 4: 4, 4, 6, ?, 13. '
-            f'4 + 4 + 6 + 13 = 27, so the 4th number is 35 {M} 27 = 8. The numbers are 4, 4, 6, 8, 13.',
-            answer=A([4, 4, 6, 8, 13], '4, 4, 6, 8, 13', list=True),
-            hint='The 2 smallest are 4 and 4. Use the total for the other.', space={'rows': ['The numbers are {ll}', 'Working:', '', '']}))
+            'Five friends have ages that are whole numbers of years. The mean age is 8 and the median age is 7. The only mode is 5, and the oldest friend is 12.',
+            f'The ages add up to 5 {X} 8 = 40. In order the ages are a, b, 7, d, 12. The mode 5 appears at least twice, and only a and b are below 7, so a = b = 5. '
+            f'Then 5 + 5 + 7 + d + 12 = 40, so d = 40 {M} 29 = 11. The ages are 5, 5, 7, 11, 12.',
+            parts=[P('a', 'The 5 ages add up to {b}.', [40]),
+                   P('b', 'The two youngest friends are each {b} years old.', [5]),
+                   P('c', 'The second oldest friend is {b} years old.', [11])],
+            hint='Put the ages in order. What does the median tell you?', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 2, 4,
             'A class has 12 girls and 18 boys. The girls have a mean mass of 40 kg. The boys have a mean mass of 45 kg.',
             f'Girls: 12 {X} 40 = 480 kg. Boys: 18 {X} 45 = 810 kg. All 30: 480 + 810 = 1290 kg. 1290 ÷ 30 = 43. The mean of the whole class is 43 kg, not 42.5, because there are more boys.',
@@ -120,10 +123,10 @@ I.append(IT(U, 'T', 2, 4,
                    P('d', 'It is more than 42.5 because there are more   {circ:girls|boys}', ['boys'])],
             hint='Find each group total first. Then find the total for all 30.', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 3, 4,
-            'The mean of 3 numbers is 6.4. Two of them are 5.5 and 7.2.',
-            f'The total is 3 {X} 6.4 = 19.2. The known numbers add to 5.5 + 7.2 = 12.7. The third number is 19.2 {M} 12.7 = 6.5.',
-            parts=[P('a', 'The 3 numbers add up to {b}.', [19.2]),
-                   P('b', 'The third number is {b}.', [6.5])],
+            'Wei runs 3 laps. The mean lap time is 4.6 minutes. Two laps take 3.9 and 5.4 minutes.',
+            f'The total time is 3 {X} 4.6 = 13.8 minutes. The known laps add to 3.9 + 5.4 = 9.3. The third lap took 13.8 {M} 9.3 = 4.5 minutes.',
+            parts=[P('a', 'The 3 laps take {b} minutes in all.', [13.8]),
+                   P('b', 'The third lap takes {b} minutes.', [4.5])],
             hint='Total = mean × how many. Then take away what you know.', space={'rows': ['Working:', '', '']}))
 
 # ---------------------------------------------------------------- Go further
@@ -151,7 +154,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'The team scored {b} goals in all.', [13]),
                    P('b', 'The mean number of goals is {b}.', [1.3]),
                    P('c', 'The median number of goals is {b}.', [1])],
-            hint='2 matches with 0 goals, 4 with 1 goal: count goals for each column.', partsrow=True, beyond='A frequency table'))
+            hint='In each column, multiply the goals by the matches.', partsrow=True, beyond='A frequency table'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,
