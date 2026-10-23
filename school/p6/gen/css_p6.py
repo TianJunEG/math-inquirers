@@ -1,9 +1,7 @@
 """CSS of the Primary 6 page types (added to render.CSS after the shared P2 CSS it was copied from). Pure black and white."""
 CSS_P6 = """
 /* ---- Primary 6 pages ---- */
-.cbrt{position:relative;display:inline-block;width:1.45em;color:transparent;font-weight:700}
-.cbrt::before{content:"\221A";position:absolute;left:0.5em;top:0;color:#000;font-size:1.15em}
-.cbrt::after{content:"3";position:absolute;left:0.02em;top:-0.38em;color:#000;font-size:0.95em;font-weight:800}
+.cbrt{font-size:1.7em;font-weight:700;line-height:0.5;vertical-align:-0.14em;margin-right:0.2mm}
 .sy{font-family:'DejaVu Sans','Liberation Sans',Arial,sans-serif;font-weight:400}
 .mx{font-family:'Fredoka';font-weight:600;font-size:1.25em;margin-right:0.6mm;vertical-align:middle}
 .unit{font-size:13pt;font-weight:700;margin-left:1mm;white-space:nowrap}
