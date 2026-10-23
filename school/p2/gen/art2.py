@@ -36,7 +36,14 @@ def read_pv_chart(s):
 COIN_REAL = {5: 16.75, 10: 18.5, 20: 21.0, 50: 23.0, 100: 24.65}        # real diameters (mm, MAS, current coins; see docs/school_books/coin_note_specs.md): only the RATIOS are used (a fact, not a design)
 COIN_D = {v: d * 0.80 for v, d in COIN_REAL.items()}                      # drawn at 0.80 of real size
 NOTE_REAL = {2: (126, 63), 5: (133, 66), 10: (141, 69)}                   # real notes (mm, MAS Portrait series): width x height; every note is 2:1 and a higher value is bigger
+import os as _os
+if _os.environ.get("MONEY_ART") == "real":      # optional real-image variant (MONEY_ART=real), off by default and never used in the booklets
+    import importlib.util as _iu
+    _sp = _iu.spec_from_file_location("realart", _os.environ["MONEY_ART_MODULE"]); _REAL_ART = _iu.module_from_spec(_sp); _sp.loader.exec_module(_REAL_ART)
+else:
+    _REAL_ART = None
 NOTE_K = 0.215                                                            # notes drawn at 0.215 of real size (a $2 note is 27.1 x 13.5 mm, a $10 note 30.3 x 14.8 mm)
+if _REAL_ART: NOTE_K = _REAL_ART.NOTE_SCALE
 NOTE_WH = {v: (w * NOTE_K, h * NOTE_K) for v, (w, h) in NOTE_REAL.items()}
 NOTE_W, NOTE_H = NOTE_WH[10]                                              # the largest note (a row is as high as its tallest item)
 
@@ -56,6 +63,7 @@ def _motif(v, cx, cy, u):
 
 def coin_g(v, x, cy):
     d = COIN_D[v]; r = d / 2; cx = x + r
+    if _REAL_ART: return _REAL_ART.coin(v, cx, cy, d)
     lab = str(v) if v < 100 else "$1"
     unit = "cents" if v < 100 else "dollar"
     return (f'<g class="coin" data-v="{v}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
@@ -66,6 +74,7 @@ def coin_g(v, x, cy):
 def note_g(v, x, y):
     """an original note design: a frame, the value in two corners, a simple bird in the middle; not a copy of any real note"""
     W, H = NOTE_WH[v]
+    if _REAL_ART: return _REAL_ART.note(v, x, y, *NOTE_REAL[v])[0]
     bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/>')
     return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W:.1f}" height="{H:.1f}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
             f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8:.1f}" height="{H-2.8:.1f}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
