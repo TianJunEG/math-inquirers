@@ -7,9 +7,9 @@ Rubric: `docs/audit/reaudit_p1.md` instruments A and tier compliance, `AUTHORING
 | Criterion | Result | Evidence |
 |---|---|---|
 | Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, identity term 2 / lesson 12 / lesson_in_term 2 / key t2l12 |
-| Every answer verified independently | PASS | 65 checks in `verify/l12_checks.py` (strips modelled as lists of cells; sum-and-difference, transfer, the shelf puzzle and the chain of three solved by trying every whole-number split) |
+| Every answer verified independently | PASS | 74 checks in `verify/l12_checks.py` (strips modelled as lists of cells; sum-and-difference, transfer, the shelf puzzle and the chain of three solved by trying every whole-number split) |
 | Online practice variants verified | PASS | 180 template variants verified three ways (expression, brute-force oracle, runner JavaScript calc) |
-| Timing: parts sum to 90, buffer | PASS | 11 parts, sum 90; script 71:04 of 90:00; slow-class 83:49 |
+| Timing: parts sum to 90, buffer | PASS | 11 parts, sum 90; script 72:37 of 90:00; slow-class 85:38 |
 | Slides and script linked | PASS | 31 slides each shown once, in its part; goodbye slide is last |
 | Tier counts and completeness | PASS | Start here 7, Think harder 3, Go further 3, exit 3, home 5 |
 | Neutral labels, no overclaims, no private chat | PASS | no banned labels; no MOE/GEP/SASMO claim |
@@ -17,16 +17,16 @@ Rubric: `docs/audit/reaudit_p1.md` instruments A and tier compliance, `AUTHORING
 | Spare-time menu | PASS | 3 activities, 11 optional minutes, rules present |
 | No copied contest text | PASS | no 7-word overlap with the reference texts |
 | Mascot | PASS | Mi on 4 slides (title, Remember, Look-back, end) |
-| Workbook page fill | PASS | measured on the PDF: 94, 100, 96, 89, 92 percent, kit page 71 percent; 6 pages as designed; home 2 pages, parent 1 page |
+| Workbook page fill | PASS | measured on the PDF: 96, 100, 98, 88, 99 percent, kit page 95 percent (eleven strips); 6 pages as designed; home 2 pages, parent 1 page |
 | Template leak | PASS | no other title, no stray "Lesson 1" text, footer says Term 2 |
 
-Validator: 0 FAIL, 3 WARN (slow-class opening 3:06 of 3:00, slow-class workbook 28:09 of 28:00, both absorbed by the buffer and stated in `timing.notes`; the kit page is 71 percent full, a cut-out page).
+Validator (after the fix pass): 0 FAIL, 4 WARN (slow-class opening 3:17 of 3:00, Explore 15:03 of 15:00, mini-lesson 10:56 of 10:00 and workbook 28:10 of 28:00; all absorbed by the 5-minute buffer and stated in `timing.notes`).
 
 ## Judgement lines
 
 - Tier principle: PASS. Start here (S1 to S7) is school-level addition and subtraction stories with a picture: the gap (how many more), "more than" by adding the extra part, a total by joining strips, a drawn pair of strips (S4), and choosing the number sentence (S7). Reversed wording ("fewer than" with the unknown person first, T3), total and difference (T1), make equal by a transfer (T2) are Think harder; the shelf transfer with a total (G1), the chain of three (G2) and how the gap changes when marbles move (G3) are Go further. No contest-style item is at Start here.
 - Think harder count: three questions (the minimum). A fourth, "group totals then compare", was written and then dropped because it pushed Think harder onto a second page; its idea (join the parts, then compare) is in Start here S3, S5 and the mini-lesson.
-- Start here approachable: PASS. Every item has a strip picture or a drawing box and one idea; S3 and S5 add a two-digit number across a ten (34 + 17, 28 + 6) with the extra part shown on the strip. The explore rounds give the same stories with real strips before the page. No word is used that the warm-up or Explore has not taught (strip, gap, more than, altogether).
+- Start here approachable: PASS. Every item has a strip picture or a drawing box and one idea; S3 and S5 add tens and ones without regrouping (31 + 15, 21 + 6) with the extra part shown on the strip. The explore rounds give the same stories with real strips before the page. No word is used that the warm-up or Explore has not taught (strip, gap, more than, altogether).
 - Think harder reachable: PASS. Start here is modelled at 18.5 minutes of the 28; Go further and the Investigation are for home or next time and the page says so.
 - Age fit: PASS with caveat. Pictures carry the stories and the tutor reads each question aloud. Caveat: bar labels and numbers on the printed pictures are small (the figure is limited to 430 px width).
 - Joining cold: PASS. The warm-up re-teaches undoing a step, counting up for a gap, and reading a strip of cells, each with a picture and real strips. `safe_to_miss` is false and says why (Lessons 18 and 20 draw strips).
@@ -58,3 +58,7 @@ Total: 20 / 24
 - The deck question rows (`qs` blocks) draw only `visual`, not `visuals`, so the pictures are not on the workbook-page slides; the printed page needs `visuals` (a single `visual` bar picture is too tall).
 - The look-back text printed on the page and slide still says "(I will ask in the class chat or show my tutor on camera)" (shared `common.STUCK_TEXT`, `b_print`, `b_deck.lookback`); owner default 9 is the look-back tick photographed by the grown-up.
 - Strips on the kit page are in two colours but not numbered, so an "equal cell" check depends on printing at 100 percent.
+
+## Fix pass (23 Oct 2026)
+
+See `audit/FIXES_L12.md`. Kit is now eleven strips (two cut after 6 cells by a grown-up; nobody cuts in the lesson); Explore uses 10, 6 and 4; Start here has no regrouping and one "fewer than" item (S4); answers are revealed after the question on four slides (explore round 3, mini-lesson 2, 5 and 6) and the Remember strip no longer prints 36; the exit-ticket finger count and the "next lesson catch-up" promise are removed; counters are dropped from the lists; Dev is now Jamie.

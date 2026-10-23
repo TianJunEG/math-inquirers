@@ -49,7 +49,7 @@
   "child": [
    "Ten small things of any kind in a row on the table: toys, cups, spoons or shoes (they can all be different)",
    "One coin or button as a marker, and a small piece of paper to write FRONT on",
-   "The printed workbook (pages 1 to 5) and the kit page (place cards and number cards), already cut out by a grown-up",
+   "The printed workbook (pages 1 to 5) and the kit page (place cards and number cards), already cut out by a grown-up. If there is no printer, write 1st to 10th and 1 to 10 on twenty small scraps of paper",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
@@ -97,7 +97,7 @@
     ],
     "cols": 5,
     "title": "Kit page: place cards and number cards",
-    "intro": "A grown-up cuts these out before the lesson. The top two rows say which place. The bottom two rows say how many."
+    "intro": "A grown-up cuts these out before the lesson. The top two rows say which place. The bottom two rows say how many. Question G2 has 13 children: draw that one."
    }
   ]
  },
@@ -967,7 +967,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Bar Strips. Ask your grown-up to cut out the strips page from the printed workbook before we start. You also need two colouring pencils, about 20 counters such as buttons or coins, a pencil and paper. Your grown-up will see the list in the note."
+      "text": "Well done, inquirers. Next lesson is Bar Strips. Ask your grown-up to cut up the strips page from the printed workbook before we start: they cut it into strips and cut two of the strips after 6 cells. Nobody cuts during the lesson. You also need two colouring pencils, a pencil and paper. Your grown-up will see the list in the note."
      },
      {
       "k": "SAY",
@@ -1857,7 +1857,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Bar Strips. Bring the strips page already cut out by a grown-up, 2 colouring pencils and about 20 counters."
+      "Bar Strips. Bring the strips page already cut up by a grown-up (two strips cut after 6 cells) and 2 colouring pencils."
      ]
     }
    ],
@@ -2340,7 +2340,7 @@
      6,
      "7th"
     ],
-    "hint": "Turn Ben's place around to count from the front. For the middle, there are the same number of children on each side.",
+    "hint": "The cards stop at 10th, so draw this line of 13. Turn Ben's place around to count from the front. For the middle, there are the same number of children on each side.",
     "solution": "(a) Ben is 11th from the front (13 - 3 + 1 = 11). Between the 4th and the 11th are the 5th to the 10th: 6 children. (b) The middle child has 6 children in front and 6 behind, so is 7th.",
     "mistakes": [
      "Writing 7 for (a) by doing 11 - 4.",
@@ -3048,10 +3048,8 @@
   "report_line": "Your child is learning to name places in a line, to count them from either end and to find who is where from clues. This week: the places 1st to 10th, and counting from the front and from the back.",
   "term_line": "Over this term your child will learn to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 12 workbook, with the strips page (page 6) already cut out by a grown-up",
-   "Two colouring pencils in two different colours",
-   "About 20 counters (buttons, coins or pasta)",
-   "A pencil and spare paper"
+   "The printed Lesson 12 workbook; before the lesson a grown-up cuts its strips page into 11 strips, two cut after 6 cells",
+   "Two colouring pencils, a pencil and spare paper"
   ]
  },
  "safeguarding": [
@@ -3066,7 +3064,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself with a row of real things first. Check the numbers in Go further question 1 against the table picture: seat 1 is at the top and the seats go round clockwise.",
-  "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the place cards and number cards) printed and cut out by a grown-up, ten small things for a row, a coin or button, a small paper to write FRONT on, a pencil and spare paper.",
+  "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the place cards and number cards) printed on its own sheet (or one side only) and cut out by a grown-up (no printer: twenty paper scraps with 1st to 10th and 1 to 10), ten small things for a row, a coin or button, a small paper to write FRONT on, a pencil and spare paper.",
   "Have ten small things in a row on your table and a paper marked FRONT, and the slides open. Draw nothing under the webcam: the recording cannot show it.",
   "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
   "Say plainly if a parent asks: Start here is school Primary 1 work (places up to 10th). Think harder and Go further go beyond it on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with a picture or a row of real things.",

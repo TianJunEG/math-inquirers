@@ -27,7 +27,7 @@ Sources: WORKBOOK_AUDIT_L11, GUIDE_DECK_AUDIT_L11, HOME_PARENT_PRACTICE_AUDIT_L1
 | 4 timing | Dropped "after 9" question and the take-away-three step; Explore 13, Mini 11; slow class 85:10; note says the buffer is used at 30 s per question |
 | 5 public finger count | Removed; note says nobody shows scores |
 | 6 previews cost time | Kept (T1, T2 need them for tier honesty) but each is a question then a reveal; tutor told to just say answers if late |
-| 7 L10 hand-off | NOT fixed here: needs l10.json goodbye and next_materials to list Lesson 11 items (another lesson's file); L11 tutor_prep already says tell parents a week before |
+| 7 L10 hand-off | NOT fixed here (another agent owns `l10.json`). The Lesson 10 goodbye (script, last segment) and its `parent.next_materials` still list the OLD materials, "about ten counters, a pencil and paper". Lesson 11 needs: ten small things of any kind for a row, a coin or button, a paper to write FRONT on, the printed Lesson 11 workbook with its kit page (place and number cards) cut out by a grown-up (no printer: twenty paper scraps, 1st to 10th and 1 to 10), a pencil and paper. L11 tutor_prep already says tell parents a week before |
 | 8 FRONT/name | As workbook 6 |
 | 9, 10 thumbnails, m1 colours | Template (not edited) |
 | 11 break line | "The last move was the fifth. What was it? Jump once." |
@@ -52,3 +52,13 @@ Sources: WORKBOOK_AUDIT_L11, GUIDE_DECK_AUDIT_L11, HOME_PARENT_PRACTICE_AUDIT_L1
 
 ## Template or other-lesson needs
 line_up/box size option; round_table width CSS; look-back box size; footer margin; home sheet drawing box and answers on a separate sheet; home title format; runner ordered-list message; aria label of figures; Lesson 10 hand-off materials.
+
+## Cut-out audit follow-up (23 Oct 2026, lesson-level rows of CUTOUT_AUDIT.md)
+| Row | Action |
+|---|---|
+| F13 / hand-off L11 -> L12 | `parent.next_materials`, the spoken goodbye and the s-end slide now say: the strips page is cut into 11 strips and two are cut after 6 cells before the lesson; nobody cuts during the lesson; counters dropped (Lesson 12 no longer uses them) |
+| F16 line of 13 | G2 is drawn only: hint and kit intro say the cards stop at 10th. Card size (28 x 19 mm) is a kit-tool matter (not edited) |
+| T10 no printer | materials and tutor_prep: write 1st to 10th and 1 to 10 on twenty paper scraps |
+| T7 / F11 | The standard kit note (batch 5) now carries the grown-up cuts and envelope lines; tutor_prep says print the kit page on its own sheet |
+| F21 L10 -> L11 hand-off | Not in this file: `l10.json` (see row 7 above) |
+Rebuilt: validator 0 FAIL, workbook 6 pages (fills 99/99/98/93/98%), parent 1 page 96%.

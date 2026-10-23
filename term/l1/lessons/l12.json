@@ -37,7 +37,7 @@
    "The gap between two numbers, by counting up (how many more is 14 than 9)",
    "A strip of cells is a number: 36 is three strips of 10 and a strip of 6"
   ],
-  "assumes": "Only counting to 20 and showing a number with fingers. The warm-up teaches undoing a step, counting up to find a gap, and reading a strip of cells with a picture and with real strips; nothing from Term 1 or Lesson 11 is needed.",
+  "assumes": "Adding a one-digit number to a number up to 20 (15 + 7) and adding or taking away tens and ones that do not regroup (31 + 15, 45 - 30). The warm-up teaches undoing a step, counting up to find a gap, and reading a strip of cells with a picture and with real strips; nothing from Term 1 or Lesson 11 is needed.",
   "holiday_topics_revisited": [
    "Mystery Number (undo a step), used as a warm-up only"
   ],
@@ -46,9 +46,8 @@
  },
  "materials": {
   "child": [
-   "The printed workbook (pages 1 to 5) and the strips kit page (page 6), already cut into strips by a grown-up",
+   "The printed workbook (pages 1 to 5) and the strips kit page (page 6), already cut into strips by a grown-up (two of the strips cut after 6 cells)",
    "Two colouring pencils in two different colours",
-   "About 20 counters: buttons, coins or pasta",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
@@ -56,26 +55,26 @@
    "A clock or timer on your own device, not on the shared screen"
   ],
   "kit_pages": [
-   "Page 6 of the workbook: eight strips of 10 equal cells in two colours, with dotted lines between the cells; a grown-up cuts out the strips before the lesson, and a strip can be cut to any length at a dotted line"
+   "Page 6 of the workbook: eleven strips of 10 equal cells in two colours, with dotted lines between the cells. Before the lesson a grown-up cuts the page into the eleven strips (cut between the strips, not between the cells) and cuts two of them after 6 cells, which makes two pieces of 6 and two pieces of 4. Nobody cuts during the lesson. Strips of ten are for building; bigger numbers are drawn"
   ],
   "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: counters can be buttons, coins or pasta. A grown-up does the cutting; children do not use scissors in the lesson. No matches, toothpicks or anything sharp. Small things stay on the table: nothing goes in the mouth or ears."
+  "notes": "No ruler is needed. Nothing needs to be bought. A grown-up does all the cutting before the lesson; children do not use scissors and nobody cuts during the lesson. If there is no printer, draw boxes in a row, ten to a row. No matches, toothpicks or anything sharp. Small things stay on the table: nothing goes in the mouth or ears."
  },
  "workbook": {
   "header": "Strips: draw the story",
-  "hint_p1": "Look at the strips. A longer strip means more. Say your answer out loud, then write it.",
-  "hint_p2": "Draw or use your strips if you like. Read each question carefully.",
-  "hint_p3": "Use your strips or draw them. Choose any question, in any order.",
+  "hint_p1": "Look at the strips. A longer strip means more. Say your answer out loud, then write it. Your kit strips are for small numbers: for big numbers, draw a long box for each ten.",
+  "hint_p2": "Draw or use your strips if you like. For big numbers, draw a long box for each ten. Read each question carefully.",
+  "hint_p3": "Use your strips or draw them. Big numbers are drawn. Choose any question, in any order.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "home_hint": "Use paper strips or draw boxes in a row.",
   "choice_after": 3,
   "kits": [
    {
     "type": "unit_strips",
-    "rows": 8,
+    "rows": 11,
     "cells": 10,
     "title": "Kit page: strips",
-    "intro": "A grown-up cuts out the strips before the lesson. Cut a strip to any length at a dotted line."
+    "intro": "Cut between the strips, then cut two strips after 6 cells."
    }
   ]
  },
@@ -156,7 +155,7 @@
    "the third Explore round (altogether and the gap) can be said from the slide",
    "never shorten the exit ticket reading or the look-back"
   ],
-  "notes": "The opening is 3 minutes (a one-minute reminder card of the four routines for children who joined this term, then the recording statement); the 2 minutes saved go to Explore. Start here is about 18 minutes for a middle child, so most children reach Think harder in class; Go further and the Investigation are for home or next time. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the opening runs 3:06 of 3:00 and the workbook 28:09 of 28:00, and the whole lesson needs 83:49 of 90:00; the buffer absorbs it, so do not plan to use the menu in a slow class."
+  "notes": "The opening is 3 minutes (a one-minute reminder card of the four routines for children who joined this term, then the recording statement); the 2 minutes saved go to Explore. Start here is about 18 minutes for a middle child, so most children reach Think harder in class; Go further and the Investigation are for home or next time. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the opening runs 3:17 of 3:00, the Explore 15:03 of 15:00, the mini-lesson 10:56 of 10:00 and the workbook 28:10 of 28:00, and the whole lesson needs 85:38 of 90:00; the buffer absorbs it, so do not plan to use the menu in a slow class."
  },
  "sneak_peek": {
   "q1": "Mei has 5 stickers. Ali has 3 more stickers than Mei. How many stickers does Ali have? You may draw strips.",
@@ -168,8 +167,8 @@
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your strips, two colouring pencils and your counters. Pause or rewind any time.",
-   "action": "Gather your workbook, cut-out strips, two colouring pencils, counters and a pencil. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your strips and two colouring pencils. Pause or rewind any time.",
+   "action": "Gather your workbook, cut-out strips, two colouring pencils and a pencil. Press play when ready."
   },
   "remember": {
    "say": "Recording: join in! Use your fingers and say each answer before I do. Pause if you need longer.",
@@ -227,7 +226,7 @@
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Pencil ready, and your strips, two colouring pencils and counters on the table. Cameras can be on or off, as you like."
+      "text": "Hello, inquirers! Pencil ready, and your strips and two colouring pencils on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
@@ -235,7 +234,7 @@
      },
      {
       "k": "SAY",
-      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
      },
      {
       "k": "DO",
@@ -248,7 +247,7 @@
      },
      {
       "k": "SAY",
-      "text": "A reminder of four things. Listen first, then try. Answer on three, with fingers, or with a thumbs up. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
+      "text": "A reminder of four things. Listen first, then try. Answer on three: say it quietly to your room, show fingers, or give a thumbs up. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
      },
      {
       "k": "SAY",
@@ -313,11 +312,11 @@
      },
      {
       "k": "SAY",
-      "text": "Warm-up three. A strip is a number. This strip has 36 cells: three strips of ten, and one strip of six. Take your kit strips and make 36 the same way. Or draw a long box for a ten."
+      "text": "Warm-up three. A strip is a number. This strip has three strips of ten, and one piece of six. Take your kit strips and make it the same way. Or draw a long box for a ten."
      },
      {
       "k": "WORK",
-      "text": "Children lay three strips of 10 and a strip of 6 cells (or draw them).",
+      "text": "Children lay three strips of 10 and the piece of 6 cells (or draw them).",
       "s": 45
      },
      {
@@ -391,11 +390,11 @@
      },
      {
       "k": "SAY",
-      "text": "Today your strips are people's things. Take a strip of 12 cells and a strip of 8 cells. If a strip is too long, a grown-up cut it at a dotted line before the lesson."
+      "text": "Today your strips are people's things. Take a whole strip of 10 cells and a piece of 6 cells."
      },
      {
       "k": "WORK",
-      "text": "Children find or cut a strip of 12 cells and a strip of 8 cells (cut by a grown-up) and lay them side by side, left ends together.",
+      "text": "Children take a strip of 10 cells and a piece of 6 cells and lay them side by side, left ends together.",
       "s": 60
      },
      {
@@ -410,7 +409,7 @@
      },
      {
       "k": "SAY",
-      "text": "The extra part is the gap. The long strip is 4 cells longer, so 12 is 4 more than 8."
+      "text": "The extra part is the gap. The long strip is 4 cells longer, so 10 is 4 more than 6."
      },
      {
       "k": "SLIDE",
@@ -418,11 +417,11 @@
      },
      {
       "k": "SAY",
-      "text": "Now a story. Mei has 5 stickers. Ali has 3 more stickers than Mei. Make Mei's strip. Then make Ali's strip: Mei's strip and 3 more cells, in a second colour."
+      "text": "Now a story. Mei has 6 stickers. Ali has 4 more stickers than Mei. Make Mei's strip from the piece of 6. Then make Ali's strip: Mei's strip and 4 more cells."
      },
      {
       "k": "WORK",
-      "text": "Children make Mei's strip of 5 and Ali's strip of 5 cells and 3 more in a second colour.",
+      "text": "Children make Mei's strip from the piece of 6 and Ali's strip from the 6 and the piece of 4 more.",
       "s": 65
      },
      {
@@ -432,16 +431,16 @@
      },
      {
       "k": "SAY",
-      "text": "Another story. Mei has 9 stickers. Ali has 4 more stickers than Mei. Change your strips. How many stickers does Ali have now?"
+      "text": "Another story. Mei has 10 stickers. Ali has 4 more stickers than Mei. Change your strips. How many stickers does Ali have now?"
      },
      {
       "k": "WORK",
-      "text": "Children change their strips: Mei 9 and Ali 9 and 4 more.",
+      "text": "Children change their strips: Mei a whole strip of 10, and Ali a whole strip of 10 and the piece of 4 more.",
       "s": 45
      },
      {
       "k": "ASK",
-      "text": "Show me on your fingers: how many has Ali?",
+      "text": "How many has Ali now? Say it on three.",
       "resp": 12
      },
      {
@@ -450,7 +449,7 @@
      },
      {
       "k": "SAY",
-      "text": "Keep Mei 9 and Ali 13. Side by side, the gap says how many more: 4. Now push the strips end to end. The whole strip says how many in all."
+      "text": "Keep Mei 10 and Ali 14. Side by side, the gap says how many more. Now push the strips end to end. The whole strip says how many in all."
      },
      {
       "k": "WORK",
@@ -464,7 +463,7 @@
      },
      {
       "k": "SAY",
-      "text": "9 and 13 make 22 in all. Side by side: the gap, 4 more. End to end: the whole, 22 altogether."
+      "text": "10 and 14 make 24 in all. Side by side: the gap, 4 more. End to end: the whole, 24 altogether."
      },
      {
       "k": "SLIDE",
@@ -472,11 +471,11 @@
      },
      {
       "k": "SAY",
-      "text": "Now fewer than. Ali has 13 stickers. Mei has 4 fewer stickers than Ali. Make Ali's strip of 13. Take 4 cells off the end of Ali's strip. That is Mei's strip."
+      "text": "Now fewer than. Ali has 14 stickers. Mei has 4 fewer stickers than Ali. Make Ali's strip of 14: a whole strip and the piece of 4. Take the 4 cells off the end of Ali's strip. That is Mei's strip."
      },
      {
       "k": "WORK",
-      "text": "Children make Ali's strip of 13 cells and take 4 cells off for Mei.",
+      "text": "Children make Ali's strip of 14 cells and take the piece of 4 cells off for Mei.",
       "s": 60
      },
      {
@@ -486,7 +485,7 @@
      },
      {
       "k": "SAY",
-      "text": "Fewer than means a shorter strip. Mei's strip is Ali's strip with 4 cells taken off: 13 take away 4 is 9."
+      "text": "Fewer than means a shorter strip. Mei's strip is Ali's strip with 4 cells taken off: 14 take away 4 is 10."
      },
      {
       "k": "SAY",
@@ -509,11 +508,11 @@
      },
      {
       "k": "STUCK",
-      "text": "A child who lays the strips with the left ends not together: ask them to line up the left ends first. A child with no kit strips: draw two rows of boxes. A child who says Ali has 3 for the first story: ask, is that Ali's strip or only the extra part?"
+      "text": "A child who lays the strips with the left ends not together: ask them to line up the left ends first. A child with no kit strips: draw two rows of boxes. A child who says Ali has 4 for the first story: ask, is that Ali's strip or only the extra part?"
      },
      {
       "k": "NOTE",
-      "text": "Main room only: no breakout rooms. Answers: Mei 5, Ali 8; Mei 9, Ali 13; 22 in all; gap 4. The three rounds are objects first, then the story, then the two ways to join strips. Praise a reason, not speed. Repeat a child's answer in your own words so the recording picks it up."
+      "text": "Main room only: no breakout rooms. Answers: Mei 6, Ali 10; Mei 10, Ali 14; 24 in all; gap 4. Nobody cuts in the lesson: the strips are already cut into whole strips, pieces of 6 and pieces of 4. The three rounds are objects first, then the story, then the two ways to join strips. Praise a reason, not speed. Repeat a child's answer in your own words so the recording picks it up."
      }
     ]
    },
@@ -530,11 +529,11 @@
      },
      {
       "k": "SAY",
-      "text": "A strip for each person. Siti has 12 beads and Dev has 7 beads. Siti's strip is longer, because 12 is more than 7. The extra part is the gap."
+      "text": "A strip for each person. Siti has 12 beads and Jamie has 7 beads. Siti's strip is longer, because 12 is more than 7. The extra part is the gap."
      },
      {
       "k": "ASK",
-      "text": "How many more beads does Siti have than Dev? Count up from 7 to 12, or take 7 from 12.",
+      "text": "How many more beads does Siti have than Jamie? Count up from 7 to 12, or take 7 from 12.",
       "resp": 20
      },
      {
@@ -547,7 +546,7 @@
      },
      {
       "k": "SAY",
-      "text": "A story with more than. Dev has 14 beads. Siti has 6 more beads than Dev. Draw Dev's strip. Then draw Siti's strip: Dev's strip and 6 more."
+      "text": "A story with more than. Jamie has 14 beads. Siti has 6 more beads than Jamie. Draw Jamie's strip. Then draw Siti's strip: Jamie's strip and 6 more."
      },
      {
       "k": "ASK",
@@ -564,7 +563,7 @@
      },
      {
       "k": "SAY",
-      "text": "Altogether: join the strips end to end. Siti has 14 and Dev has 7. Altogether is the whole line of strips: 14 and 7 make 21."
+      "text": "Altogether: join the strips end to end. Siti has 14 and Jamie has 7. Altogether is the whole line of strips: 14 and 7 make 21."
      },
      {
       "k": "ASK",
@@ -624,7 +623,11 @@
      },
      {
       "k": "SAY",
-      "text": "And another. Ali has 30 stickers and Mei has 18. Ali gives some to Mei so they have the same. The gap is 12. Ali gives half of the gap, so Mei gains 6 and Ali loses 6."
+      "text": "And another. Ali has 30 stickers and Mei has 18. Ali gives some to Mei so they have the same. The gap is 12."
+     },
+     {
+      "k": "SAY",
+      "text": "Why half? If Ali gave all 12, Mei would have 12 more than Ali. So Ali gives only half of the gap: 6. Mei gains 6 and Ali loses 6."
      },
      {
       "k": "NOTE",
@@ -675,7 +678,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: Ali has 12 stickers. Mei has 8 stickers. How many more stickers does Ali have than Mei? Question 2: Ben has 15 marbles. Kumar has 7 more marbles than Ben. How many marbles does Kumar have? Question 3: Siti has 34 beads. Dev has 17 more beads than Siti. How many beads does Dev have, and how many do they have altogether?"
+      "text": "Page 1, Start here. Question 1: Ali has 12 stickers. Mei has 8 stickers. How many more stickers does Ali have than Mei? Question 2: Ben has 15 marbles. Kumar has 7 more marbles than Ben. How many marbles does Kumar have? Question 3: Siti has 31 beads. Jamie has 15 more beads than Siti. How many beads does Jamie have, and how many do they have altogether?"
      },
      {
       "k": "WORK",
@@ -688,7 +691,7 @@
      },
      {
       "k": "READ",
-      "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: 4 more stickers. Question 2: 22 marbles. Question 3: Dev has 51 beads, and they have 85 beads altogether. Check your own page in another colour."
+      "text": "Answers for page 1. If you are still working, carry on and check later. Question 1: 4 more stickers. Question 2: 22 marbles. Question 3: Jamie has 46 beads, and they have 77 beads altogether. Check your own page in another colour."
      },
      {
       "k": "SAY",
@@ -700,7 +703,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: draw a strip for Mei and a strip for Ravi. Mei has 9 cards. Ravi has 5 cards. How many more cards does Mei have than Ravi? Question 5: Mei has 28 stickers. Ali has 6 more stickers than Mei. How many stickers does Ali have, and how many altogether? Question 6: Wei has 45 stamps. Jenny has 30 stamps. How many more stamps does Wei have than Jenny? Question 7: Aisha has 40 beads and Lily has 24 beads. Choose the number sentence that finds how many more beads Aisha has than Lily."
+      "text": "Page 2. Question 4: draw a strip for Mei and a strip for Ravi. Mei has 9 cards. Ravi has 4 fewer cards than Mei. How many cards does Ravi have? Question 5: Mei has 21 stickers. Ali has 6 more stickers than Mei. How many stickers does Ali have, and how many altogether? Question 6: Wei has 45 stamps. Jenny has 30 stamps. How many more stamps does Wei have than Jenny? Question 7: Aisha has 40 beads and Lily has 24 beads. Choose the number sentence that finds how many more beads Aisha has than Lily."
      },
      {
       "k": "WORK",
@@ -713,7 +716,7 @@
      },
      {
       "k": "READ",
-      "text": "Answers for page 2. If you are still working, carry on and check later. Question 4: 4 more cards. Question 5: Ali has 34 stickers, and they have 62 altogether. Question 6: 15 more stamps. Question 7: number 2, 40 take away 24."
+      "text": "Answers for page 2. If you are still working, carry on and check later. Question 4: Ravi has 5 cards. Question 5: Ali has 27 stickers, and they have 48 altogether. Question 6: 15 more stamps. Question 7: number 2, 40 take away 24."
      },
      {
       "k": "SLIDE",
@@ -734,7 +737,7 @@
      },
      {
       "k": "STUCK",
-      "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class. Open the next lesson with one short catch-up question for the whole group. Never a private message to a child, never a private room."
+      "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class; the tutor replies to the grown-up only. Never a private message to a child, never a private room."
      },
      {
       "k": "NOTE",
@@ -755,7 +758,7 @@
      },
      {
       "k": "READ",
-      "text": "Aisha has 12 marbles and Ben has 20 marbles. Aisha draws two strips of the same length. Is her picture a good picture? Why, or why not?"
+      "text": "Aisha has 12 marbles and Ben has 20 marbles. Aisha draws one strip for herself and one strip for Ben, the same length. Is her picture a good picture? Why, or why not?"
      },
      {
       "k": "WORK",
@@ -808,7 +811,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: Ali has 13 stickers. Mei has 9 stickers. How many more stickers does Ali have than Mei? Question 2: Ben has 27 marbles. Siti has 15 more marbles than Ben. How many marbles does Siti have? Question 3: Wei has 25 cards. Jenny has 8 more cards than Wei. How many cards do they have altogether?"
+      "text": "Question 1: Ali has 13 stickers. Mei has 9 stickers. How many more stickers does Ali have than Mei? Question 2: Ben has 24 marbles. Siti has 13 more marbles than Ben. How many marbles does Siti have? Question 3: Wei has 22 cards. Jenny has 5 more cards than Wei. How many cards do they have altogether?"
      },
      {
       "k": "WORK",
@@ -821,20 +824,15 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 4 more stickers. Question 2: 42 marbles. Question 3: 58 cards altogether. Jenny has 33 cards, and 25 and 33 make 58."
+      "text": "Question 1: 4 more stickers. Question 2: 37 marbles. Question 3: 49 cards altogether. Jenny has 27 cards, and 22 and 27 make 49."
      },
      {
       "k": "SAY",
       "text": "Tick the ones you got right, in a different colour. Well done. Show your ticket to a grown-up."
      },
      {
-      "k": "ASK",
-      "text": "Show me with your fingers how many you got right: three, two, one, or none yet. A pass is fine.",
-      "resp": 15
-     },
-     {
       "k": "NOTE",
-      "text": "Look at the room as a whole, not at any one tile. If many children show one or two fingers, spend two minutes at the start of Lesson 13 on the gap and on adding the extra part, in the open session, no names. Do not write a child's name next to an answer and do not read out anyone's result."
+      "text": "Look at the room as a whole, not at any one tile, while the children tick their tickets: nobody shows or says a score. Do not write a child's name next to an answer and do not read out anyone's result. Any child who needs more practice with the gap or with adding the extra part ticks the still-stuck box on their look-back page, or does the online practice at home."
      }
     ]
    },
@@ -947,7 +945,7 @@
      "ordered": true,
      "items": [
       "Listen first, then try. A guess is a good start.",
-      "Answer on three, with fingers, or with a thumbs up.",
+      "Answer on three: say it quietly to your room, show fingers, or give a thumbs up.",
       "Tick your own work on the answer slide.",
       "Still stuck? Tick the box on your look-back page and show your grown-up."
      ]
@@ -967,7 +965,7 @@
      "mode": "compare",
      "bars": [
       {
-       "name": "Whole",
+       "name": "10",
        "len": 10,
        "segments": [
         {
@@ -1033,7 +1031,7 @@
      "mode": "compare",
      "bars": [
       {
-       "name": "36",
+       "name": "A strip",
        "len": 36,
        "segments": [
         {
@@ -1058,10 +1056,10 @@
     },
     {
      "t": "p",
-     "text": "Make 36 with your strips: three strips of 10 and one strip of 6."
+     "text": "Make this strip with your kit strips: three strips of 10 and one piece of 6. How many cells in all?"
     }
    ],
-   "note": "The picture is a strip of 36 cells: three tens and a six. Children make 36 from their kit strips (or draw boxes in a row), then count in tens: 10, 20, 30, 36. This lets a child who has never seen a strip read one before the lesson uses them to show a story. A child with no strips draws a long box for ten."
+   "note": "The picture is a strip of three tens and a six; the total is not printed, so the children find it (36). Children make 36 from their kit strips (or draw boxes in a row), then count in tens: 10, 20, 30, 36. This lets a child who has never seen a strip read one before the lesson uses them to show a story. A child with no strips draws a long box for ten."
   },
   {
    "id": "s-sneak",
@@ -1113,7 +1111,7 @@
      "t": "list",
      "ordered": true,
      "items": [
-      "Take a strip of 12 cells and a strip of 8 cells.",
+      "Take a strip of 10 cells and a piece of 6 cells.",
       "Lay them side by side. Line up the left ends.",
       "Touch the extra cells on the long strip."
      ]
@@ -1125,18 +1123,18 @@
      "bars": [
       {
        "name": "Long",
-       "len": 12,
-       "text": "12"
+       "len": 10,
+       "text": "10"
       },
       {
        "name": "Short",
-       "len": 8,
-       "text": "8"
+       "len": 6,
+       "text": "6"
       }
      ]
     }
    ],
-   "note": "Round 1, about 4 minutes. Objects first, no writing. Children find or cut a 12-cell strip and an 8-cell strip (a grown-up cuts them at the dotted lines before the lesson), lay them side by side with the left ends together, and touch the extra cells. Answer: 4 extra cells. The extra part is the gap. Say: 12 is 4 more than 8."
+   "note": "Round 1, about 4 minutes. Objects first, no writing. Children take a whole strip of 10 cells and a piece of 6 cells (cut by a grown-up before the lesson; nobody cuts in the lesson), lay them side by side with the left ends together, and touch the extra cells. Answer: 4 extra cells. The extra part is the gap. Say: 10 is 4 more than 6."
   },
   {
    "id": "s-explore2",
@@ -1146,7 +1144,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Mei has 5 stickers. Ali has 3 more stickers than Mei."
+     "text": "Mei has 6 stickers. Ali has 4 more stickers than Mei."
     },
     {
      "t": "visual",
@@ -1155,20 +1153,20 @@
      "bars": [
       {
        "name": "Mei",
-       "len": 5,
-       "text": "5"
+       "len": 6,
+       "text": "6"
       },
       {
        "name": "Ali",
-       "len": 8,
+       "len": 10,
        "segments": [
         {
-         "v": 5,
-         "text": "5"
+         "v": 6,
+         "text": "6"
         },
         {
-         "v": 3,
-         "text": "3"
+         "v": 4,
+         "text": "4"
         }
        ]
       }
@@ -1176,10 +1174,10 @@
     },
     {
      "t": "chip",
-     "text": "Ali's strip: Mei's strip and 3 more cells."
+     "text": "Ali's strip: Mei's strip and 4 more cells."
     }
    ],
-   "note": "Round 2, about 6 minutes. Children make Mei's strip of 5 cells, then Ali's strip: 5 cells and 3 more cells in a second colour. Count all of Ali's strip: 8. Then change the story: Mei has 9 and Ali has 4 more, so Ali has 13. A child who says 3 for Ali has counted only the extra part."
+   "note": "Round 2, about 6 minutes. Children make Mei's strip from the piece of 6 cells, then Ali's strip: the 6 cells and the piece of 4 more cells. Count all of Ali's strip: 10. Then change the story: Mei has 10 and Ali has 4 more, so Ali has 14 (a whole strip and the piece of 4). A child who says 4 for Ali has counted only the extra part."
   },
   {
    "id": "s-explore3",
@@ -1194,13 +1192,13 @@
      "bars": [
       {
        "name": "Mei",
-       "len": 9,
-       "text": "9"
+       "len": 10,
+       "text": "10"
       },
       {
        "name": "Ali",
-       "len": 13,
-       "text": "13"
+       "len": 14,
+       "text": "14"
       }
      ],
      "gap": {
@@ -1208,7 +1206,7 @@
        0,
        1
       ],
-      "text": "4"
+      "text": "?"
      }
     },
     {
@@ -1233,9 +1231,14 @@
        }
       ]
      ]
+    },
+    {
+     "t": "chip",
+     "reveal": true,
+     "text": "Side by side: the gap is 4 more. End to end: 24 altogether."
     }
    ],
-   "note": "Round 3, about 4 minutes. Keep Mei 9 and Ali 13. Side by side, the gap is 4: Ali has 4 more. Push the two strips end to end: 22 cells altogether. Ask: what did you notice? Take volunteers. Key idea: side by side for more or fewer, end to end for altogether. Do not use number sentences on a board yet."
+   "note": "Round 3, about 4 minutes. Keep Mei 10 and Ali 14. Side by side, the gap is 4: Ali has 4 more. Push the two strips end to end: 24 cells altogether. The gap and the total appear only after the children have answered. Ask: what did you notice? Take volunteers. Key idea: side by side for more or fewer, end to end for altogether. Do not use number sentences on a board yet."
   },
   {
    "id": "s-explore4",
@@ -1245,7 +1248,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Ali has 13 stickers. Mei has 4 fewer stickers than Ali."
+     "text": "Ali has 14 stickers. Mei has 4 fewer stickers than Ali."
     },
     {
      "t": "visual",
@@ -1254,12 +1257,12 @@
      "bars": [
       {
        "name": "Ali",
-       "len": 13,
-       "text": "13"
+       "len": 14,
+       "text": "14"
       },
       {
        "name": "Mei",
-       "len": 9,
+       "len": 10,
        "text": "?"
       }
      ],
@@ -1276,7 +1279,7 @@
      "text": "Mei's strip: Ali's strip with 4 cells taken off."
     }
    ],
-   "note": "Round 4, about 4 minutes. Fewer than means a shorter strip. Children make Ali's strip of 13 cells and take 4 cells off for Mei: 9 left. Then they draw two strips for a new story on their own paper: Ravi has 6 marbles and Siti has 5 more, so Siti has 11. Nobody holds paper to the camera: answers are said on three. A child who writes 4 has given the gap, not Mei's number."
+   "note": "Round 4, about 4 minutes. Fewer than means a shorter strip. Children make Ali's strip of 14 cells (a whole strip and the piece of 4) and take the 4 cells off for Mei: 10 left. Then they draw two strips for a new story on their own paper: Ravi has 6 marbles and Siti has 5 more, so Siti has 11. Nobody holds paper to the camera: answers are said on three. A child who writes 4 has given the gap, not Mei's number."
   },
   {
    "id": "s-m1",
@@ -1295,7 +1298,7 @@
        "text": "12"
       },
       {
-       "name": "Dev",
+       "name": "Jamie",
        "len": 7,
        "text": "7"
       }
@@ -1312,7 +1315,7 @@
      "t": "card",
      "head": "THE GAP",
      "items": [
-      "Siti has 12. Dev has 7.",
+      "Siti has 12. Jamie has 7.",
       "How many more? 12 take away 7."
      ]
     }
@@ -1331,7 +1334,7 @@
      "mode": "compare",
      "bars": [
       {
-       "name": "Dev",
+       "name": "Jamie",
        "len": 14,
        "text": "14"
       },
@@ -1353,14 +1356,18 @@
     },
     {
      "t": "card",
-     "head": "DEV HAS 14. SITI HAS 6 MORE.",
+     "head": "JAMIE HAS 14. SITI HAS 6 MORE.",
      "items": [
-      "Siti's strip is Dev's strip and 6 more.",
-      "14 and 6 more is 20."
+      "Siti's strip is Jamie's strip and 6 more."
      ]
+    },
+    {
+     "t": "chip",
+     "reveal": true,
+     "text": "14 and 6 more is 20."
     }
    ],
-   "note": "Siti has 6 more beads than Dev, so Siti's strip is Dev's strip and 6 more cells. Ask: how many beads does Siti have? Add the extra part: 14 + 6 = 20. When the extra part is known, we add. When the gap is unknown, we take away."
+   "note": "Siti has 6 more beads than Jamie, so Siti's strip is Jamie's strip and 6 more cells. Ask: how many beads does Siti have? Add the extra part: 14 + 6 = 20. When the extra part is known, we add. When the gap is unknown, we take away."
   },
   {
    "id": "s-m3",
@@ -1379,7 +1386,7 @@
        "text": "14"
       },
       {
-       "name": "Dev",
+       "name": "Jamie",
        "len": 7,
        "text": "7"
       }
@@ -1490,9 +1497,13 @@
      "t": "card",
      "head": "40 ALTOGETHER. ALI HAS 8 MORE.",
      "items": [
-      "Take the extra 8 away: 32 is left.",
-      "Two equal strips of 16."
+      "Take the extra 8 away. What is left?"
      ]
+    },
+    {
+     "t": "chip",
+     "reveal": true,
+     "text": "32 is left: two equal strips of 16."
     }
    ],
    "note": "THINK HARDER PREVIEW: Start here never needs this idea. Ali and Mei have 40 altogether and Ali has 8 more. Take the extra 8 away from the total: 32 is left, which is two equal strips. Each strip is 16. Mei has 16, and Ali has 16 and 8 more, which is 24. Check: 16 + 24 = 40 and 24 is 8 more than 16. Take one answer to what happens to the strips when the 8 is taken away."
@@ -1522,16 +1533,21 @@
      "arrow": {
       "from": 0,
       "to": 1,
-      "v": "6"
+      "v": "?"
      }
     },
     {
      "t": "card",
      "head": "ALI HAS 30. MEI HAS 18.",
      "items": [
-      "The gap is 12.",
-      "Ali gives half of the gap: 6."
+      "Ali gives some to Mei so they have the same.",
+      "The gap is 12."
      ]
+    },
+    {
+     "t": "chip",
+     "reveal": true,
+     "text": "Ali gives half of the gap: 6."
     }
    ],
    "note": "THINK HARDER PREVIEW: Start here never needs this idea. Ali gives some stickers to Mei so they have the same. The gap is 12. If Ali gives all 12, Mei would have 12 more than Ali. Ali gives half of the gap, 6: Ali has 24 and Mei has 24. Check: 30 take away 6 is 24 and 18 and 6 is 24. Ask: why half of the gap? Take one answer and move on."
@@ -1594,7 +1610,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Question 1: 4 more stickers. Question 2: 22 marbles. Question 3: 51 beads and 85 altogether."
+   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group. Question 1: 4 more stickers. Question 2: 22 marbles. Question 3: 46 beads and 77 altogether."
   },
   {
    "id": "s-ws2",
@@ -1635,7 +1651,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 4: 4 more cards. Question 5: 34 stickers and 62 altogether. Question 6: 15 more stamps. Question 7: sentence (2), 40 take away 24. Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 4: Ravi has 5 cards. Question 5: 27 stickers and 48 altogether. Question 6: 15 more stamps. Question 7: sentence (2), 40 take away 24. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-choice",
@@ -1687,7 +1703,7 @@
      "head": "AISHA'S PICTURE",
      "items": [
       "Aisha has 12 marbles. Ben has 20 marbles.",
-      "Aisha draws two strips the same length."
+      "Aisha draws one strip for herself and one for Ben, the same length."
      ]
     },
     {
@@ -1758,7 +1774,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and show fingers for how many they got right."
+   "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and tick it privately. Nobody shows or says how many they got right."
   },
   {
    "id": "s-exitans",
@@ -1775,7 +1791,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children check their own ticket in a different colour. Question 1: 13 take away 9 is 4. Question 2: 27 and 15 more is 42. Question 3: Jenny has 25 and 8 more, which is 33; 25 and 33 make 58."
+   "note": "Read each answer aloud. Children check their own ticket in a different colour. Question 1: 13 take away 9 is 4. Question 2: 24 and 13 more is 37. Question 3: Jenny has 22 and 5 more, which is 27; 22 and 27 make 49."
   },
   {
    "id": "s-look",
@@ -1787,7 +1803,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message. The Next time I will try row is optional.",
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; Never a direct message. The Next time I will try row is optional.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1980,31 +1996,31 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Siti has 34 beads. Dev has 17 more beads than Siti.",
-    "answer": "Dev has 51 beads; 85 altogether",
+    "text": "Siti has 31 beads. Jamie has 15 more beads than Siti.",
+    "answer": "Jamie has 46 beads; 77 altogether",
     "val": [
-     51,
-     85
+     46,
+     77
     ],
-    "hint": "(a) Add the extra 17 to Siti's 34. (b) Join both strips: Siti's beads and Dev's beads.",
-    "solution": "(a) Dev has Siti's 34 and 17 more: 34 + 17 = 51. (b) Altogether is both strips end to end: 34 + 51 = 85.",
+    "hint": "(a) Add the extra 15 to Siti's 31: add the tens, then the ones. (b) Join both strips: Siti's beads and Jamie's beads.",
+    "solution": "(a) Jamie has Siti's 31 and 15 more: 31 + 15 = 46. (b) Altogether is both strips end to end: 31 + 46 = 77.",
     "mistakes": [
-     "Writing 17 for Dev.",
-     "Writing 51 for the total."
+     "Writing 15 for Jamie.",
+     "Writing 46 for the total."
     ],
     "mins": 3,
     "parts": [
      {
       "l": "a",
-      "text": "Dev has [2] beads.",
-      "ans": "51",
-      "val": 51
+      "text": "Jamie has [2] beads.",
+      "ans": "46",
+      "val": 46
      },
      {
       "l": "b",
       "text": "They have [2] beads altogether.",
-      "ans": "85",
-      "val": 85
+      "ans": "77",
+      "val": 77
      }
     ],
     "lines": 0,
@@ -2014,20 +2030,20 @@
       "bars": [
        {
         "name": "Siti",
-        "len": 34,
-        "text": "34"
+        "len": 31,
+        "text": "31"
        },
        {
-        "name": "Dev",
-        "len": 51,
+        "name": "Jamie",
+        "len": 46,
         "segments": [
          {
-          "v": 34,
-          "text": "34"
+          "v": 31,
+          "text": "31"
          },
          {
-          "v": 17,
-          "text": "17"
+          "v": 15,
+          "text": "15"
          }
         ]
        }
@@ -2039,24 +2055,24 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Mei has 9 cards. Ravi has 5 cards. Draw a strip for Mei and a strip for Ravi.",
-    "answer": "4 more cards (Mei's strip is longer by 4 cells)",
+    "text": "Mei has 9 cards. Ravi has 4 fewer cards than Mei. Draw a strip for Mei and a strip for Ravi.",
+    "answer": "Ravi has 5 cards (his strip is shorter by 4 cells)",
     "val": [
-     4
+     5
     ],
-    "hint": "Draw Mei's strip 9 boxes long and Ravi's strip 5 boxes long, one under the other.",
-    "solution": "Mei's strip has 9 boxes and Ravi's strip has 5 boxes. The extra 4 boxes on Mei's strip are the gap: 9 take away 5 is 4.",
+    "hint": "Draw Mei's strip 9 boxes long. Ravi's strip is shorter: leave out 4 boxes.",
+    "solution": "Mei's strip has 9 boxes. Ravi has 4 fewer, so his strip has 4 boxes fewer: 9 take away 4 is 5. Ravi has 5 cards.",
     "mistakes": [
-     "Drawing both strips the same length.",
-     "Adding 9 + 5 = 14."
+     "Writing 4, the gap.",
+     "Adding 9 + 4 = 13."
     ],
     "mins": 3,
     "parts": [
      {
       "l": "",
-      "text": "Mei has [] more cards than Ravi.",
-      "ans": "4",
-      "val": 4
+      "text": "Ravi has [] cards.",
+      "ans": "5",
+      "val": 5
      }
     ],
     "lines": 0,
@@ -2067,31 +2083,31 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Mei has 28 stickers. Ali has 6 more stickers than Mei.",
-    "answer": "Ali has 34 stickers; 62 altogether",
+    "text": "Mei has 21 stickers. Ali has 6 more stickers than Mei.",
+    "answer": "Ali has 27 stickers; 48 altogether",
     "val": [
-     34,
-     62
+     27,
+     48
     ],
     "hint": "(a) Ali's strip is Mei's strip and 6 more. (b) Join Mei's strip and Ali's strip.",
-    "solution": "(a) Ali has 28 and 6 more: 28 + 6 = 34. (b) Altogether: 28 + 34 = 62.",
+    "solution": "(a) Ali has 21 and 6 more: 21 + 6 = 27. (b) Altogether: 21 + 27 = 48.",
     "mistakes": [
-     "Writing 22 by taking away.",
-     "Writing 34 for the total."
+     "Writing 15 by taking away.",
+     "Writing 27 for the total."
     ],
     "mins": 3,
     "parts": [
      {
       "l": "a",
       "text": "Ali has [2] stickers.",
-      "ans": "34",
-      "val": 34
+      "ans": "27",
+      "val": 27
      },
      {
       "l": "b",
       "text": "They have [2] stickers altogether.",
-      "ans": "62",
-      "val": 62
+      "ans": "48",
+      "val": 48
      }
     ],
     "lines": 0,
@@ -2101,16 +2117,16 @@
       "bars": [
        {
         "name": "Mei",
-        "len": 28,
-        "text": "28"
+        "len": 21,
+        "text": "21"
        },
        {
         "name": "Ali",
-        "len": 34,
+        "len": 27,
         "segments": [
          {
-          "v": 28,
-          "text": "28"
+          "v": 21,
+          "text": "21"
          },
          {
           "v": 6,
@@ -2535,8 +2551,8 @@
    "tier": "investigation",
    "title": "Same total, different gaps",
    "first": "Ali and Mei have 10 stickers altogether. Ali has 2 more than Mei. Draw two strips. How many stickers does each child have?",
-   "text": "Now try the same total, 10, with 4 more, and then 6 more. Write each pair. Line 4: I notice ...",
-   "lines": 4,
+   "text": "Now try the same total, 10, with 4 more, and then 6 more. Draw the strips and write each pair. Then write one thing you notice.",
+   "lines": 2,
    "answer": "With 2 more: Ali 6 and Mei 4. With 4 more: Ali 7 and Mei 3. With 6 more: Ali 8 and Mei 2. Each time the bigger number goes up by 1 and the smaller goes down by 1, as the gap goes up by 2. With a total of 10 the gap is always an even number, and the bigger number is half of the total and half of the gap added together.",
    "val": [
     "6 and 4",
@@ -2548,11 +2564,12 @@
     "Writing 5 and 5 plus the gap (not checking the total).",
     "Trying only one gap."
    ],
-   "mins": 8
+   "mins": 8,
+   "draw": true
   }
  },
  "talk": {
-  "question": "Aisha has 12 marbles and Ben has 20 marbles. Aisha draws two strips of the same length. Is her picture a good picture? Why, or why not?",
+  "question": "Aisha has 12 marbles and Ben has 20 marbles. Aisha draws one strip for herself and one strip for Ben, the same length. Is her picture a good picture? Why, or why not?",
   "starter": "I think ... because ...",
   "answer": "No. Ben has more marbles, so Ben's strip must be longer. The extra part of Ben's strip is the gap, 8. Two strips of the same length would mean they have the same number.",
   "look_for": "A reason that says the strips must be different lengths because the numbers are different, and, for a strong answer, that the extra part is the gap. Praise the reason, not who is right."
@@ -2581,20 +2598,20 @@
   },
   {
    "id": "E2",
-   "text": "Ben has 27 marbles. Siti has 15 more marbles than Ben.",
-   "answer": "42 marbles",
+   "text": "Ben has 24 marbles. Siti has 13 more marbles than Ben.",
+   "answer": "37 marbles",
    "val": [
-    42
+    37
    ],
    "parts": [
     {
      "l": "",
      "text": "Siti has [2] marbles.",
-     "ans": "42",
-     "val": 42
+     "ans": "37",
+     "val": 37
     }
    ],
-   "solution": "Siti has Ben's 27 and 15 more: 27 + 15 = 42.",
+   "solution": "Siti has Ben's 24 and 13 more: 24 + 13 = 37.",
    "mistakes": [
     "Writing 12 by taking away."
    ],
@@ -2602,20 +2619,20 @@
   },
   {
    "id": "E3",
-   "text": "Wei has 25 cards. Jenny has 8 more cards than Wei.",
-   "answer": "58 cards",
+   "text": "Wei has 22 cards. Jenny has 5 more cards than Wei.",
+   "answer": "49 cards",
    "val": [
-    58
+    49
    ],
    "parts": [
     {
      "l": "",
      "text": "They have [2] cards altogether.",
-     "ans": "58",
-     "val": 58
+     "ans": "49",
+     "val": 49
     }
    ],
-   "solution": "Jenny has 25 + 8 = 33 cards. Altogether: 25 + 33 = 58.",
+   "solution": "Jenny has 22 + 5 = 27 cards. Altogether: 22 + 27 = 49.",
    "mistakes": [
     "Writing 33, only Jenny's cards."
    ],
@@ -2708,7 +2725,7 @@
       "a": [
        20
       ],
-      "say": "20 joins the strips. How many more is the gap between them: take away."
+      "say": "20 joins the strips. How many more asks for the gap, so take away."
      },
      {
       "a": [
@@ -2929,11 +2946,11 @@
     "id": "c4",
     "tier": "core",
     "type": "number",
-    "q": "Siti has 10 beads. Dev has 4 more beads than Siti. How many beads do they have altogether?",
+    "q": "Siti has 10 beads. Jamie has 4 more beads than Siti. How many beads do they have altogether?",
     "answer": 24,
-    "hint": "Find Dev's beads first. Then join the two strips.",
+    "hint": "Find Jamie's beads first. Then join the two strips.",
     "steps": [
-     "Dev has Siti's 10 beads and 4 more: 14.",
+     "Jamie has Siti's 10 beads and 4 more: 14.",
      "Join the strips: 10 + 14.",
      "They have 24 beads altogether."
     ],
@@ -2942,13 +2959,13 @@
       "a": [
        14
       ],
-      "say": "14 is only Dev's beads. Altogether means both strips joined."
+      "say": "14 is only Jamie's beads. Altogether means both strips joined."
      },
      {
       "a": [
        4
       ],
-      "say": "4 is how many more Dev has. Altogether is the whole line of strips."
+      "say": "4 is how many more Jamie has. Altogether is the whole line of strips."
      }
     ],
     "tpl": {
@@ -2967,12 +2984,12 @@
        8
       ]
      },
-     "q": "Siti has {a} beads. Dev has {d} more beads than Siti. How many beads do they have altogether?",
+     "q": "Siti has {a} beads. Jamie has {d} more beads than Siti. How many beads do they have altogether?",
      "answer": "2*a+d",
-     "hint": "Find Dev's beads first. Then join the two strips.",
+     "hint": "Find Jamie's beads first. Then join the two strips.",
      "steps": [
-      "Dev has Siti's {a} beads and {d} more.",
-      "Join the strips: Siti's {a} and Dev's beads.",
+      "Jamie has Siti's {a} beads and {d} more.",
+      "Join the strips: Siti's {a} and Jamie's beads.",
       "They have {ans} beads altogether."
      ]
     }
@@ -3245,17 +3262,17 @@
   "try_home": [
    "Draw it: tell a small story, such as Ali has 8 sweets and Mei has 3 more. Your child draws two strips of boxes and says how many Mei has.",
    "Compare: pick two stacks of coins or two rows of buttons. Ask how many more are in the bigger one, and how your child knows.",
-   "Make equal: give one child 10 counters and the other 6. How many should move so both have the same? Check by moving them."
+   "Make equal: give one child 10 buttons or coins and the other 6. How many should move so both have the same? Check by moving them."
   ],
   "ask": [
    "How do you know?",
    "Whose strip is longer?",
    "Is it the gap, or the whole line?"
   ],
-  "when_stuck": "Let your child lay two strips side by side, or draw boxes in two rows, and count the extra boxes. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
-  "next": "Lesson 13: Doubles and Near Doubles. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "when_stuck": "Let your child lay two strips side by side, or draw boxes in two rows, and count the extra boxes. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class; the tutor replies to the grown-up only. Photos are kept for 90 days after the program ends, then deleted.",
+  "next": "Lesson 13: Doubles and Near Doubles. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to the families in your child's group: please do not share it. Online practice for this lesson (no timers, no scores): your tutor sends the link on the day of the lesson.",
   "report_line": "Your child is learning to draw a story as strips, to find how many more from the gap and to join strips for altogether. This week: more than, fewer than and how many more.",
-  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "term_line": "Over this term your child will learn to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
    "The printed Lesson 13 workbook, with its kit page of ten-frames and 20 counters cut out by a grown-up",
    "If there is no printer: about 20 small things of two kinds, such as 10 buttons and 10 coins",
@@ -3263,18 +3280,18 @@
   ]
  },
  "safeguarding": [
-  "A grown-up does the cutting before the lesson; children do not use scissors in the lesson. Small things stay on the table: nothing goes in the mouth or ears. Counters are buttons, coins or pasta; no matches, toothpicks or anything sharp.",
+  "A grown-up does all the cutting before the lesson; children do not use scissors and nobody cuts during the lesson. Keep the cut pieces away from little brothers and sisters. Small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp.",
   "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
   "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
   "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
-  "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room.",
+  "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. No private messages to children and no private room.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself with real strips first. Check that the Think harder and Go further totals give whole numbers: Think harder question 1 (40 and 8), Go further question 1 (52 and 7) and question 2 (90 and 10).",
-  "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the strips) printed and cut into strips by a grown-up, two colouring pencils in two different colours, about 20 counters, a pencil and spare paper. Ask them to print at 100% (actual size) so the strips have equal cells.",
-  "Have two paper strips of different lengths (about 12 and 8 cells) and the slides open. Hold the strips side by side and end to end on camera, in front of a plain background. Draw nothing under the webcam: the recording cannot show it.",
+  "Solve every workbook question yourself with real strips first. Check that the Think harder and Go further totals give whole numbers: Think harder question 1 (40 and 8), Go further question 1 (52 and 7) and question 2 (90 and 10). The kit makes 6, 4, 10 and 14 without cutting; bigger numbers are drawn.",
+  "Tell parents a week before: workbook pages 1 to 5 printed on A4; page 6 (the strips) printed on its own sheet (or one side only) and cut into the eleven strips by a grown-up, with two of the strips cut after 6 cells (nobody cuts during the lesson); two colouring pencils in two different colours; a pencil and spare paper. Ask them to print at 100% (actual size) so the strips have equal cells. Keep the pieces in an envelope with the child's name.",
+  "Have two paper strips of different lengths (a strip of 10 cells and a piece of 6) and the slides open. Hold the strips side by side and end to end on camera, in front of a plain background. Draw nothing under the webcam: the recording cannot show it.",
   "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
   "Say plainly if a parent asks: Start here is school-level addition and subtraction stories. Strips (called bar models at school), total and difference, and make-equal go beyond Primary 1 on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with strips and a picture."
  ],
@@ -3298,17 +3315,17 @@
     "id": "M2",
     "title": "Make a puzzle for your grown-up",
     "minutes": 4,
-    "tutor": "Make a strip puzzle: tell the total and how many more, for example 20 altogether and 4 more. Ask your grown-up for each number. Check with counters.",
-    "rec": "Recording: pause. Make a total-and-more puzzle for a grown-up. Check the answer with counters.",
+    "tutor": "Make a strip puzzle: tell the total and how many more, for example 20 altogether and 4 more. Ask your grown-up for each number. Check with strips or drawn boxes.",
+    "rec": "Recording: pause. Make a total-and-more puzzle for a grown-up. Check the answer with strips or drawn boxes.",
     "answer": "No single answer. The total must be even when the two numbers differ by an even number. For 20 altogether and 4 more the numbers are 12 and 8."
    },
    {
     "id": "M3",
     "title": "Act it out",
     "minutes": 3,
-    "tutor": "Put 10 counters in one row and 4 counters in another. Move counters from the long row to the short row until the rows are the same. How many did you move?",
-    "rec": "Recording: pause. Make a row of 10 and a row of 4. Move counters until the rows are equal.",
-    "answer": "3 counters move: the rows end at 7 and 7. The gap was 6 and half of 6 is 3."
+    "tutor": "Put 10 small things in one row and 4 in another, or draw them. Move things across until the rows match. How many moved?",
+    "rec": "Recording: pause. Make a row of 10 and a row of 4, or draw them. Move one at a time until the rows match.",
+    "answer": "3 things move: the rows end at 7 and 7. The gap was 6 and half of 6 is 3."
    }
   ]
  }

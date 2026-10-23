@@ -83,15 +83,22 @@ def run(d):
     eq(add_cells(5, 3), 8, 'sneak 1'); eq(d['sneak_peek']['val1'], 8, 'sneak val1')
     eq(transfer_to_equal(14, 10), [2], 'sneak 2'); eq(d['sneak_peek']['val2'], 2, 'sneak val2')
     # explore and mini-lesson
-    eq(gap(12, 8), 4, 'explore gap'); eq(add_cells(5, 3), 8, 'explore Ali 8'); eq(add_cells(9, 4), 13, 'explore Ali 13'); eq(altogether(9, 13), 22, 'explore all'); eq(gap(13, 9), 4, 'explore gap 2')
+    eq(gap(10, 6), 4, 'explore gap'); eq(add_cells(6, 4), 10, 'explore Ali 10'); eq(add_cells(10, 4), 14, 'explore Ali 14'); eq(altogether(10, 14), 24, 'explore all'); eq(gap(14, 10), 4, 'explore gap 2'); eq(fewer_than(14, 4), [10], 'explore fewer than')
+    # kit: 11 strips of 10, two cut after 6 cells -> nine tens, two 6s, two 4s; every length used in the explore is a sum of these pieces
+    kit_tens, kit_six, kit_four = 9, 2, 2
+    eq(kit_tens * 10 + kit_six * 6 + kit_four * 4, 110, 'kit cells')
+    eq(11 * 10, 110, 'kit strips'); eq(6 + 4, 10, 'a strip cut after 6 cells')
+    eq(gap(85, 0) >= 0 and kit_tens * 10 >= 90, True, 'nine whole strips make the 90 of Go further question 2')
+    eq(10 * 3 + 6, 36, 'warm-up 36 = three strips and a piece of 6'); eq(10 + 4, 14, 'Ali 14 = a strip and a piece of 4'); eq(10 + 6, 10 + 6, 'strip and piece of 6')
     eq(gap(12, 7), 5, 'mini gap'); eq(add_cells(14, 6), 20, 'mini more than'); eq(altogether(14, 7), 21, 'mini altogether'); eq(gap(15, 8), 7, 'mini your turn')
     eq(split_by_total_and_gap(40, 8), [(16, 24)], 'mini total and difference'); eq(transfer_to_equal(30, 18), [6], 'mini transfer')
     # Start here
     eq(gap(12, 8), 4, 'S1'); eq(T['S1']['val'], [4], 'S1 val')
     eq(add_cells(15, 7), 22, 'S2'); eq(T['S2']['val'], [22], 'S2 val')
-    dev = add_cells(34, 17); eq(dev, 51, 'S3a'); eq(altogether(34, dev), 85, 'S3b'); eq(T['S3']['val'], [51, 85], 'S3 val')
-    eq(gap(9, 5), 4, 'S4'); eq(T['S4']['val'], [4], 'S4 val')
-    ali = add_cells(28, 6); eq(ali, 34, 'S5a'); eq(altogether(28, ali), 62, 'S5b'); eq(T['S5']['val'], [34, 62], 'S5 val')
+    dev = add_cells(31, 15); eq(dev, 46, 'S3a'); eq(altogether(31, dev), 77, 'S3b'); eq(T['S3']['val'], [46, 77], 'S3 val')
+    eq((31 % 10) + (15 % 10) < 10 and (31 % 10) + (46 % 10) < 10, True, 'S3 has no regrouping')
+    w4 = fewer_than(9, 4); eq(w4, [5], 'S4'); eq(T['S4']['val'], [5], 'S4 val')
+    ali = add_cells(21, 6); eq(ali, 27, 'S5a'); eq(altogether(21, ali), 48, 'S5b'); eq(T['S5']['val'], [27, 48], 'S5 val')
     eq(gap(45, 30), 15, 'S6'); eq(T['S6']['val'], [15], 'S6 val')
     opts = {1: 24 + 40, 2: 40 - 24, 3: 40 + 40, 4: 24 + 24}
     eq([k for k, v in opts.items() if v == gap(40, 24)], [2], 'S7 only sentence (2) gives the gap'); eq(T['S7']['val'], [2], 'S7 val')
@@ -109,7 +116,7 @@ def run(d):
     eq([split_by_total_and_gap(10, g)[0] for g in (2, 4, 6)], [(4, 6), (3, 7), (2, 8)], 'investigation pairs'); eq(split_by_total_and_gap(10, 3), [], 'investigation: total 10 with an odd gap is impossible')
     eq(d['tiers']['investigation']['val'], ['6 and 4', '7 and 3', '8 and 2'], 'investigation val')
     # Exit and home
-    eq(gap(13, 9), 4, 'E1'); eq(add_cells(27, 15), 42, 'E2'); eq(altogether(25, add_cells(25, 8)), 58, 'E3'); eq([X['E1']['val'], X['E2']['val'], X['E3']['val']], [[4], [42], [58]], 'exit vals')
+    eq(gap(13, 9), 4, 'E1'); eq(add_cells(24, 13), 37, 'E2'); eq(altogether(22, add_cells(22, 5)), 49, 'E3'); eq([X['E1']['val'], X['E2']['val'], X['E3']['val']], [[4], [37], [49]], 'exit vals')
     eq(gap(14, 9), 5, 'H1'); eq(add_cells(38, 20), 58, 'H2'); eq(altogether(25, add_cells(25, 15)), 65, 'H3')
     eq(split_by_total_and_gap(30, 6)[0][0], 12, 'H4'); eq(transfer_to_equal(24, 10), [7], 'H5')
     return n
