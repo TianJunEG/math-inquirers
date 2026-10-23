@@ -63,7 +63,7 @@ def _():
 
 @check('L5U04-S01')
 def _():
-    return {'a': [fmt(area([(0, 0), (6, 0), (3, 4)]))], 'b': [fmt(area([(9, 0), (25, 0), (17, 8)]))]}
+    return {'a': [fmt(area([(0, 0), (6, 0), (3, 4)]))], 'b': [fmt(area([(9, 0), (19, 0), (14, 12)]))]}
 
 
 @check('L5U04-S02')
@@ -80,13 +80,13 @@ def _():
         return next(h for h in range(1, 200) if Fr(base * h, 2) == area_)
     def b_of(area_, h):
         return next(b for b in range(1, 200) if Fr(b * h, 2) == area_)
-    return {'a': [str(h_of(36, 9))], 'b': [str(b_of(45, 9))], 'c': [str(h_of(28, 7))]}
+    return {'a': [str(h_of(36, 9))], 'b': [str(b_of(45, 9))]}
 
 
 @check('L5U04-S04')
 def _():
     areas = {area([(0, 0), (12, 0), (px, 7)]) for px in range(0, 13)}
-    verdict = 'stays the same' if len(areas) == 1 else 'changes'
+    verdict = 'is the same' if len(areas) == 1 else 'changes'
     return {'a': [fmt(area([(0, 0), (12, 0), (4, 7)]))], 'b': [verdict]}
 
 
@@ -115,7 +115,7 @@ def _():
 
 @check('L5U04-S08')
 def _():
-    return [fmt(area([(0, 0), (12, 0), (20, 15)]))]
+    return [fmt(area([(0, 0), (11, 0), (16, 12)]))]
 
 
 @check('L5U04-S09')
@@ -197,7 +197,7 @@ def _():
 
 @check('L5U04-C01')
 def _():
-    return [fmt(area([(0, 0), (28, 0), (8, 15)]))]
+    return [fmt(area([(0, 0), (24, 0), (12, 5)]))]
 
 
 @check('L5U04-C02')

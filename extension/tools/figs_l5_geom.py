@@ -28,7 +28,8 @@ FILL = {'shade': YEL, 'light': SOFT, 'sky': SKY, None: 'none'}
 
 
 def _t(x, y, txt, size=20, fill=NAVY, anchor='middle', weight=800):
-    return F._t(round(x, 1), round(y, 1), txt, size, fill, anchor, weight)
+    # white halo behind the text so that a label that crosses a line stays readable (also in print)
+    return F._t(round(x, 1), round(y, 1), txt, size, fill, anchor, weight).replace('<text ', '<text stroke="#fff" stroke-width="6" stroke-linejoin="round" paint-order="stroke" ', 1)
 
 
 def poly(spec, w=None):

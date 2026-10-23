@@ -10,7 +10,7 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 1 | Million puzzles | yes | yes (41) | yes | yes |
 | 2 | Fraction feats | yes | yes | yes | yes |
 | 3 | Before and after | yes | yes | yes | yes |
-| 4 | Triangle areas | | | | |
+| 4 | Triangle areas | yes | yes | yes | yes |
 | 5 | Volume vault | | | | |
 | 6 | Rate racers | | | | |
 | 7 | Percentage puzzles | | | | |
@@ -18,4 +18,4 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 9 | Pattern generalisers | | | | |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 4.
+Resume: next unit is 5.

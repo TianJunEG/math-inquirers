@@ -12,12 +12,12 @@
   "example": {
    "problem": "Find the area of triangle ABC. The dashed line is the height.",
    "steps": [
-    "Choose the base: AB = 21 cm. The height meets AB at a right angle: it is 8 cm.",
-    "The sides AC = 10 cm and BC = 17 cm are slanting. They are not heights, so we do not use them.",
+    "Choose the base: AB = 21 cm. The height meets AB at a right angle: it is 8 cm.",
+    "The sides AC = 10 cm and BC = 17 cm are slanting. They are not heights, so we do not use them.",
     "Area = 1/2 × base × height = 1/2 × 21 × 8.",
     "21 × 8 = 168 and half of 168 is 84."
    ],
-   "answer": "The area of triangle ABC is 84 cm².",
+   "answer": "The area of triangle ABC is 84 cm².",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -67,23 +67,23 @@
      {
       "a": "A",
       "b": "B",
-      "text": "21 cm",
+      "text": "21 cm",
       "line": true
      },
      {
       "a": "A",
       "b": "C",
-      "text": "10 cm"
+      "text": "10 cm"
      },
      {
       "a": "B",
       "b": "C",
-      "text": "17 cm"
+      "text": "17 cm"
      }
     ],
     "texts": [
      {
-      "t": "8 cm",
+      "t": "8 cm",
       "at": [
        7.8,
        3.6
@@ -110,14 +110,14 @@
   "tight": true,
   "try": {
    "id": "L5U04-L01",
-   "text": "Triangle PQR has a right angle at Q. PQ = 9 cm, QR = 12 cm and PR = 15 cm. Find its area. {b} cm²",
+   "text": "Triangle PQR has a right angle at Q. PQ = 9 cm, QR = 12 cm and PR = 15 cm. Find its area. {b} cm²",
    "answer": {
     "value": [
      "54"
     ],
-    "text": "54 cm²"
+    "text": "54 cm²"
    },
-   "explanation": "The right angle is at Q, so the sides PQ and QR meet at a right angle. Take QR as the base and PQ as the height. 1/2 × 12 × 9 = 54. The side PR = 15 cm is slanting, so it is not used.",
+   "explanation": "The right angle is at Q, so the sides PQ and QR meet at a right angle. Take QR as the base and PQ as the height. 1/2 × 12 × 9 = 54. The side PR = 15 cm is slanting, so it is not used.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 80,
@@ -157,17 +157,17 @@
      {
       "a": "P",
       "b": "Q",
-      "text": "9 cm"
+      "text": "9 cm"
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "12 cm"
+      "text": "12 cm"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "15 cm"
+      "text": "15 cm"
      }
     ],
     "vlab": {
@@ -212,15 +212,15 @@
       0
      ],
      "Q": [
-      25,
+      19,
       0
      ],
      "R": [
-      17,
-      8
+      14,
+      12
      ],
      "H": [
-      17,
+      14,
       0
      ]
     },
@@ -257,7 +257,7 @@
       "at": "S",
       "a": "B",
       "b": "C",
-      "size": 14
+      "size": 12
      },
      {
       "at": "H",
@@ -270,74 +270,78 @@
      {
       "a": "A",
       "b": "B",
-      "text": "6 cm",
+      "text": "6 cm",
       "ref": "C"
      },
      {
       "a": "A",
       "b": "C",
-      "text": "5 cm",
-      "ref": "B"
+      "text": "5 cm",
+      "ref": "B",
+      "dist": 26
      },
      {
       "a": "B",
       "b": "C",
-      "text": "5 cm",
-      "ref": "A"
+      "text": "5 cm",
+      "ref": "A",
+      "dist": 26
      },
      {
       "a": "P",
       "b": "Q",
-      "text": "16 cm",
+      "text": "10 cm",
       "ref": "R"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "10 cm",
-      "ref": "Q"
+      "text": "13 cm",
+      "ref": "Q",
+      "dist": 26
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "10 cm",
-      "ref": "P"
+      "text": "13 cm",
+      "ref": "P",
+      "dist": 26
      }
     ],
     "texts": [
      {
-      "t": "4 cm",
+      "t": "4 cm",
       "at": [
-       3.9,
-       1.7
+       4.3,
+       1.5
       ],
-      "size": 20
+      "size": 18
      },
      {
-      "t": "8 cm",
+      "t": "12 cm",
       "at": [
-       18.1,
-       4
+       15.5,
+       6
       ]
      },
      {
       "t": "(a)",
       "at": [
        3,
-       5.4
+       6.3
       ]
      },
      {
       "t": "(b)",
       "at": [
-       17,
-       9.6
+       14,
+       14.3
       ]
      }
     ],
     "vlab": false,
     "alt": "two triangles with their heights",
-    "mm": 2.64
+    "mm": 3.1
    },
    "parts": [
     {
@@ -355,13 +359,13 @@
      "text": "Triangle (b): {b} cm²",
      "answer": {
       "value": [
-       "64"
+       "60"
       ],
-      "text": "64"
+      "text": "60"
      }
     }
    ],
-   "explanation": "Use the dashed height with the base it meets at a right angle. (a) 1/2 × 6 × 4 = 12. (b) 1/2 × 16 × 8 = 64. The slanting sides (5 and 5, 10 and 10) are not used.",
+   "explanation": "Use the dashed height with the base it meets at a right angle. (a) 1/2 × 6 × 4 = 12. (b) 1/2 × 10 × 12 = 60. The slanting sides (5 and 5, 13 and 13) are not used.",
    "partsrow": true,
    "figside": true
   },
@@ -409,17 +413,17 @@
      {
       "a": "P",
       "b": "Q",
-      "text": "6 cm"
+      "text": "6 cm"
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "8 cm"
+      "text": "8 cm"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "10 cm"
+      "text": "10 cm"
      }
     ],
     "vlab": {
@@ -427,7 +431,7 @@
      "Q": "bl",
      "R": "br"
     },
-    "mm": 5.0
+    "mm": 3.2
    },
    "parts": [
     {
@@ -461,7 +465,7 @@
      }
     }
    ],
-   "explanation": "(a) 1/2 × 8 × 6 = 24. (b) PQ meets QR at the right angle Q, so the height is PQ = 6 cm. (c) With PQ as the base, the height is QR, because QR meets PQ at a right angle. PR is slanting.",
+   "explanation": "(a) 1/2 × 8 × 6 = 24. (b) PQ meets QR at the right angle Q, so the height is PQ = 6 cm. (c) With PQ as the base, the height is QR, because QR meets PQ at a right angle. PR is slanting.",
    "figside": true
   },
   {
@@ -472,7 +476,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Area 36 cm² and base 9 cm. The height is {b} cm.",
+     "text": "Area 36 cm² and base 9 cm. The height is {b} cm.",
      "answer": {
       "value": [
        "8"
@@ -482,26 +486,16 @@
     },
     {
      "label": "b",
-     "text": "Area 45 cm² and height 9 cm. The base is {b} cm.",
+     "text": "Area 45 cm² and height 9 cm. The base is {b} cm.",
      "answer": {
       "value": [
        "10"
       ],
       "text": "10"
      }
-    },
-    {
-     "label": "c",
-     "text": "Area 28 cm² and base 7 cm. The height is {b} cm.",
-     "answer": {
-      "value": [
-       "8"
-      ],
-      "text": "8"
-     }
     }
    ],
-   "explanation": "Base × height is 2 times the area. (a) 2 × 36 = 72 and 72 ÷ 9 = 8. (b) 2 × 45 = 90 and 90 ÷ 9 = 10. (c) 2 × 28 = 56 and 56 ÷ 7 = 8."
+   "explanation": "Base × height is 2 times the area. (a) 2 × 36 = 72 and 72 ÷ 9 = 8. (b) 2 × 45 = 90 and 90 ÷ 9 = 10."
   },
   {
    "id": "L5U04-S04",
@@ -556,16 +550,16 @@
      {
       "a": "A",
       "b": "B",
-      "text": "12 cm"
+      "text": "12 cm"
      },
      {
       "a": "B",
       "b": "C",
-      "text": "7 cm"
+      "text": "7 cm"
      }
     ],
     "alt": "rectangle with a shaded triangle",
-    "mm": 4.29
+    "mm": 3.86
    },
    "parts": [
     {
@@ -580,23 +574,23 @@
     },
     {
      "label": "b",
-     "text": "P slides along DC. The area   {circ:gets greater|gets smaller|stays the same}",
+     "text": "P slides along DC. The area   {circ:gets greater|gets smaller|is the same}",
      "answer": {
       "value": [
-       "stays the same"
+       "is the same"
       ],
-      "text": "stays the same"
+      "text": "is the same"
      }
     }
    ],
-   "explanation": "(a) The base AB is 12 cm and the height is 7 cm, the distance between the 2 lines. 1/2 × 12 × 7 = 42. (b) Wherever P is on DC, the base is still 12 cm and the height is still 7 cm, so the area stays the same.",
+   "explanation": "(a) The base AB is 12 cm and the height is 7 cm, the distance between the 2 lines. 1/2 × 12 × 7 = 42. (b) Wherever P is on DC, the base is still 12 cm and the height is still 7 cm, so the area stays the same.",
    "figside": true
   },
   {
    "id": "L5U04-S05",
    "tier": "start",
    "page": 2,
-   "text": "A square has sides of 8 cm. A triangle stands on its top edge, with the same 8 cm as its base. The triangle is 5 cm tall. What is the total area? {b} cm²",
+   "text": "A square has sides of 8 cm. A triangle stands on its top edge, with the same 8 cm as its base. The triangle is 5 cm tall. What is the total area? {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 80,
@@ -655,30 +649,30 @@
      {
       "a": "A",
       "b": "B",
-      "text": "8 cm"
+      "text": "8 cm"
      }
     ],
     "texts": [
      {
-      "t": "5 cm",
+      "t": "5 cm",
       "at": [
-       4.4,
-       10.4
+       9.6,
+       10.6
       ],
-      "size": 20
+      "size": 18
      }
     ],
     "vlab": false,
     "alt": "a square with a triangle on top",
-    "mm": 2.31
+    "mm": 2.08
    },
    "answer": {
     "value": [
      "84"
     ],
-    "text": "84 cm²"
+    "text": "84 cm²"
    },
-   "explanation": "The square is 8 × 8 = 64 cm². The triangle is 1/2 × 8 × 5 = 20 cm². Add: 64 + 20 = 84 cm².",
+   "explanation": "The square is 8 × 8 = 64 cm². The triangle is 1/2 × 8 × 5 = 20 cm². Add: 64 + 20 = 84 cm².",
    "figright": true
   },
   {
@@ -734,16 +728,16 @@
      {
       "a": "A",
       "b": "B",
-      "text": "14 cm"
+      "text": "14 cm"
      },
      {
       "a": "B",
       "b": "C",
-      "text": "9 cm"
+      "text": "9 cm"
      }
     ],
     "alt": "rectangle with a shaded triangle",
-    "mm": 3.33
+    "mm": 3.0
    },
    "parts": [
     {
@@ -767,14 +761,14 @@
      }
     }
    ],
-   "explanation": "(a) 1/2 × 14 × 9 = 63. (b) The rectangle is 14 × 9 = 126 cm². 126 - 63 = 63. The 2 white triangles also add to half of the rectangle.",
+   "explanation": "(a) 1/2 × 14 × 9 = 63. (b) The rectangle is 14 × 9 = 126 cm². 126 - 63 = 63. The 2 white triangles also add to half of the rectangle.",
    "figside": true
   },
   {
    "id": "L5U04-S07",
    "tier": "start",
    "page": 2,
-   "text": "Each square on the grid is 1 cm². Find the area of the triangle. {b} cm²",
+   "text": "Each square on the grid is 1 cm². Find the area of the triangle. {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 110,
@@ -805,7 +799,7 @@
     "grid": {
      "x0": 0,
      "y0": 0,
-     "x1": 9,
+     "x1": 8,
      "y1": 7
     },
     "vlab": {
@@ -814,15 +808,15 @@
      "C": "t"
     },
     "alt": "triangle on a square grid",
-    "mm": 4.29
+    "mm": 4.4
    },
    "answer": {
     "value": [
      "15"
     ],
-    "text": "15 cm²"
+    "text": "15 cm²"
    },
-   "explanation": "The base AB is 6 squares long. The top point C is 5 squares above the base, so the height is 5. 1/2 × 6 × 5 = 15 cm².",
+   "explanation": "The base AB is 6 squares long. The top point C is 5 squares above the base, so the height is 5. 1/2 × 6 × 5 = 15 cm².",
    "figright": true
   },
   {
@@ -839,15 +833,15 @@
       0
      ],
      "C": [
-      12,
+      11,
       0
      ],
      "A": [
-      20,
-      15
+      16,
+      12
      ],
      "H": [
-      20,
+      16,
       0
      ]
     },
@@ -876,35 +870,37 @@
       "at": "H",
       "a": "C",
       "b": "A",
-      "size": 16
+      "size": 14
      }
     ],
     "dims": [
      {
       "a": "B",
       "b": "C",
-      "text": "12 cm",
+      "text": "11 cm",
       "line": true
      },
      {
       "a": "A",
       "b": "B",
-      "text": "25 cm",
-      "off": 1
-     },
-     {
-      "a": "A",
-      "b": "C",
-      "text": "17 cm",
-      "off": -1
+      "text": "20 cm",
+      "ref": "C"
      }
     ],
     "texts": [
      {
-      "t": "15 cm",
+      "t": "13 cm",
       "at": [
-       18.3,
-       7.5
+       12.4,
+       6.2
+      ],
+      "size": 18
+     },
+     {
+      "t": "12 cm",
+      "at": [
+       18.8,
+       6
       ]
      }
     ],
@@ -915,22 +911,22 @@
      "H": "br"
     },
     "alt": "triangle with a height outside",
-    "mm": 2.0
+    "mm": 2.25
    },
    "answer": {
     "value": [
-     "90"
+     "66"
     ],
-    "text": "90 cm²"
+    "text": "66 cm²"
    },
-   "explanation": "Use BC as the base. The height from A meets the line BC extended at a right angle at H, and it is 15 cm. The base is only BC = 12 cm, not BH. 1/2 × 12 × 15 = 90. The slanting sides 25 and 17 are not used.",
+   "explanation": "Use BC as the base. The height from A meets the line BC extended at a right angle at H, and it is 12 cm. The base is only BC = 11 cm, not BH. 1/2 × 11 × 12 = 66. The slanting sides 20 and 13 are not used.",
    "figright": true
   },
   {
    "id": "L5U04-S09",
    "tier": "start",
    "page": 3,
-   "text": "The areas of a square and a triangle are equal. The square has sides of 10 cm. The base of the triangle is 25 cm.",
+   "text": "The areas of a square and a triangle are equal. The square has sides of 10 cm. The base of the triangle is 25 cm.",
    "parts": [
     {
      "label": "a",
@@ -953,6 +949,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "(a) 10 × 10 = 100. (b) The triangle has area 100 too, so base × height = 200. 200 ÷ 25 = 8. Check: 1/2 × 25 × 8 = 100."
   },
   {
@@ -1015,23 +1016,23 @@
      {
       "a": "A",
       "b": "B",
-      "text": "12 cm"
+      "text": "12 cm"
      },
      {
       "a": "A",
       "b": "E",
-      "text": "9 cm"
+      "text": "9 cm"
      },
      {
       "a": "B",
       "b": "C",
-      "text": "4 cm",
+      "text": "4 cm",
       "off": 1
      },
      {
       "a": "E",
       "b": "D",
-      "text": "8 cm"
+      "text": "8 cm"
      }
     ],
     "vlab": {
@@ -1045,16 +1046,21 @@
     "value": [
      "98"
     ],
-    "text": "98 cm²"
+    "text": "98 cm²"
    },
-   "explanation": "Think of the full rectangle 12 by 9 = 108 cm². The cut-off corner is a right-angled triangle. Its legs are 12 - 8 = 4 cm along the top and 9 - 4 = 5 cm down the right side. Its area is 1/2 × 4 × 5 = 10. The shape is 108 - 10 = 98 cm².",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Think of the full rectangle 12 by 9 = 108 cm². The cut-off corner is a right-angled triangle. Its legs are 12 - 8 = 4 cm along the top and 9 - 4 = 5 cm down the right side. Its area is 1/2 × 4 × 5 = 10. The shape is 108 - 10 = 98 cm².",
    "figright": true
   },
   {
    "id": "L5U04-S11",
    "tier": "start",
    "page": 3,
-   "text": "A triangle has an area of 9 cm². Its base and height are whole numbers of cm.",
+   "text": "A triangle has an area of 9 cm². Its base and height are whole numbers of cm.",
    "parts": [
     {
      "label": "a",
@@ -1068,7 +1074,7 @@
     },
     {
      "label": "b",
-     "text": "The pair with a base of 3 cm has a height of {b} cm.",
+     "text": "The pair with a base of 3 cm has a height of {b} cm.",
      "answer": {
       "value": [
        "6"
@@ -1077,6 +1083,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "Base × height = 18. The pairs are 1 and 18, 2 and 9, 3 and 6, 6 and 3, 9 and 2, 18 and 1: 6 pairs. A base of 3 goes with a height of 6."
   },
   {
@@ -1107,7 +1118,7 @@
     },
     {
      "label": "c",
-     "text": "A triangle with base 10 cm and height 6 cm has the same area as a triangle with base 6 cm and height 10 cm.   {circ:True|False}",
+     "text": "A triangle with base 10 cm and height 6 cm has the same area as a triangle with base 6 cm and height 10 cm.   {circ:True|False}",
      "answer": {
       "value": [
        "True"
@@ -1116,13 +1127,13 @@
      }
     }
    ],
-   "explanation": "(a) True: that is what makes it the height. (b) False: a slanting side does not meet the base at a right angle. (c) True: both have area 1/2 × 10 × 6 = 30 cm²."
+   "explanation": "(a) True: that is what makes it the height. (b) False: a slanting side does not meet the base at a right angle. (c) True: both have area 1/2 × 10 × 6 = 30 cm²."
   },
   {
    "id": "L5U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "Triangle PQR has a right angle at Q. Its sides are 6 cm, 8 cm and 10 cm. Now use the 10 cm side PR as the base. The height from Q to PR is {b} cm.",
+   "text": "Triangle PQR has a right angle at Q. Its sides are 6 cm, 8 cm and 10 cm. Now use the 10 cm side PR as the base. The height from Q to PR is {b} cm.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 70,
@@ -1162,17 +1173,17 @@
      {
       "a": "P",
       "b": "Q",
-      "text": "6 cm"
+      "text": "6 cm"
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "8 cm"
+      "text": "8 cm"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "10 cm"
+      "text": "10 cm"
      }
     ],
     "vlab": {
@@ -1186,22 +1197,22 @@
     "value": [
      "4.8"
     ],
-    "text": "4.8 cm"
+    "text": "4.8 cm"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "hint": "Find the area first. Then use the 10 cm side as the base.",
-   "explanation": "The area does not depend on which side is the base. Use the 2 sides at the right angle: 1/2 × 8 × 6 = 24 cm². Now the base is 10 cm: 1/2 × 10 × height = 24, so 5 × height = 24 and the height is 4.8 cm.",
+   "hint": "Find the area first. Then use the 10 cm side as the base.",
+   "explanation": "The area does not depend on which side is the base. Use the 2 sides at the right angle: 1/2 × 8 × 6 = 24 cm². Now the base is 10 cm: 1/2 × 10 × height = 24, so 5 × height = 24 and the height is 4.8 cm.",
    "figright": true
   },
   {
    "id": "L5U04-T02",
    "tier": "think",
    "page": 4,
-   "text": "ABCD is a rectangle, 14 cm by 10 cm. M is the middle of BC. N is the middle of CD. How much area does the shaded triangle AMN cover? {b} cm²",
+   "text": "ABCD is a rectangle, 14 cm by 10 cm. M is the middle of BC. N is the middle of CD. How much area does the shaded triangle AMN cover? {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 115,
@@ -1276,12 +1287,12 @@
      {
       "a": "A",
       "b": "B",
-      "text": "14 cm"
+      "text": "14 cm"
      },
      {
-      "a": "B",
-      "b": "C",
-      "text": "10 cm"
+      "a": "A",
+      "b": "D",
+      "text": "10 cm"
      }
     ],
     "vlab": {
@@ -1299,7 +1310,7 @@
     "value": [
      "52.5"
     ],
-    "text": "52.5 cm²"
+    "text": "52.5 cm²"
    },
    "space": {
     "rows": [
@@ -1307,14 +1318,14 @@
     ]
    },
    "hint": "Take the 3 white triangles away from the rectangle.",
-   "explanation": "The rectangle is 14 × 10 = 140 cm². White triangle ABM: 1/2 × 14 × 5 = 35. White triangle MCN: legs 5 and 7, 1/2 × 5 × 7 = 17.5. White triangle ADN: 1/2 × 10 × 7 = 35. White total: 35 + 17.5 + 35 = 87.5. Shaded: 140 - 87.5 = 52.5 cm².",
+   "explanation": "The rectangle is 14 × 10 = 140 cm². White triangle ABM: 1/2 × 14 × 5 = 35. White triangle MCN: legs 5 and 7, 1/2 × 5 × 7 = 17.5. White triangle ADN: 1/2 × 10 × 7 = 35. White total: 35 + 17.5 + 35 = 87.5. Shaded: 140 - 87.5 = 52.5 cm².",
    "figright": true
   },
   {
    "id": "L5U04-T03",
    "tier": "think",
    "page": 4,
-   "text": "The area of triangle ABC is 72 cm². D is on BC and BD is 1/3 of BC. E is the middle of AD.",
+   "text": "The area of triangle ABC is 72 cm². D is on BC and BD is 1/3 of BC. E is the middle of AD.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1365,7 +1376,7 @@
      "D": "b",
      "C": "br",
      "A": "t",
-     "E": "l"
+     "E": "tl"
     },
     "alt": "triangle ABC with D on BC",
     "mm": 4.0
@@ -1398,14 +1409,14 @@
     ]
    },
    "hint": "ABD and ABC have the same height. Compare their bases.",
-   "explanation": "(a) Triangles ABD and ABC have the same height from A. The base BD is 1/3 of BC, so ABD is 1/3 of 72 = 24 cm². (b) Triangles BDE and ABD have the same height from B to the line AD. The base DE is half of DA, so BDE is half of 24 = 12 cm².",
+   "explanation": "(a) Triangles ABD and ABC have the same height from A. The base BD is 1/3 of BC, so ABD is 1/3 of 72 = 24 cm². (b) Triangles BDE and ABD have the same height from B to the line AD. The base DE is half of DA, so BDE is half of 24 = 12 cm².",
    "figside": true
   },
   {
    "id": "L5U04-G01",
    "tier": "go",
    "page": 5,
-   "text": "ABCD is a square with sides of 16 cm. E lies on AB, 4 cm from A. F is the middle of BC. What is the area of triangle DEF? {b} cm²",
+   "text": "ABCD is a square with sides of 16 cm. E lies on AB, 4 cm from A. F is the middle of BC. What is the area of triangle DEF? {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1457,8 +1468,8 @@
     "dims": [
      {
       "a": "A",
-      "b": "B",
-      "text": "16 cm"
+      "b": "D",
+      "text": "16 cm"
      }
     ],
     "vlab": {
@@ -1476,7 +1487,7 @@
     "value": [
      "112"
     ],
-    "text": "112 cm²"
+    "text": "112 cm²"
    },
    "space": {
     "rows": [
@@ -1484,14 +1495,14 @@
     ]
    },
    "hint": "Take away the 3 white right-angled triangles.",
-   "explanation": "The square is 16 × 16 = 256 cm². White triangle ADE: 1/2 × 16 × 4 = 32. White triangle EBF: EB = 12 and BF = 8, so 1/2 × 12 × 8 = 48. White triangle FCD: 1/2 × 16 × 8 = 64. White total: 32 + 48 + 64 = 144. Shaded: 256 - 144 = 112 cm².",
+   "explanation": "The square is 16 × 16 = 256 cm². White triangle ADE: 1/2 × 16 × 4 = 32. White triangle EBF: EB = 12 and BF = 8, so 1/2 × 12 × 8 = 48. White triangle FCD: 1/2 × 16 × 8 = 64. White total: 32 + 48 + 64 = 144. Shaded: 256 - 144 = 112 cm².",
    "figright": true
   },
   {
    "id": "L5U04-G02",
    "tier": "go",
    "page": 5,
-   "text": "Each square on the grid is 1 cm². The corners of the triangle are on grid points. Find its area. {b} cm²",
+   "text": "Each square on the grid is 1 cm². The corners of the triangle are on grid points. Find its area. {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 110,
@@ -1537,7 +1548,7 @@
     "value": [
      "13"
     ],
-    "text": "13 cm²"
+    "text": "13 cm²"
    },
    "space": {
     "rows": [
@@ -1545,14 +1556,14 @@
     ]
    },
    "hint": "Draw a rectangle round the triangle. Take away 3 triangles.",
-   "explanation": "The rectangle round the triangle goes from 1 to 7 across and 1 to 6 up: 6 × 5 = 30 cm². Three right-angled triangles are outside the shape: 1/2 × 6 × 2 = 6, 1/2 × 4 × 3 = 6 and 1/2 × 2 × 5 = 5. Together 17. The triangle is 30 - 17 = 13 cm².",
+   "explanation": "The rectangle round the triangle goes from 1 to 7 across and 1 to 6 up: 6 × 5 = 30 cm². Three right-angled triangles are outside the shape: 1/2 × 6 × 2 = 6, 1/2 × 4 × 3 = 6 and 1/2 × 2 × 5 = 5. Together 17. The triangle is 30 - 17 = 13 cm².",
    "figright": true
   },
   {
    "id": "L5U04-G03",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Corner triangles\nTriangle ABC has an area of 96 cm². D is on AB with AD = 1/4 of AB. E is on AC with AE = 1/3 of AC. Find the area of triangle ADE. {b} cm²",
+   "text": "Beyond Level 5: Corner triangles\nTriangle ABC has an area of 96 cm². D is on AB with AD = 1/4 of AB. E is on AC with AE = 1/3 of AC. Find the area of triangle ADE. {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1616,7 +1627,7 @@
     "value": [
      "8"
     ],
-    "text": "8 cm²"
+    "text": "8 cm²"
    },
    "space": {
     "rows": [
@@ -1624,7 +1635,7 @@
     ]
    },
    "hint": "Join D to C. Compare ADC with ABC first.",
-   "explanation": "Join D to C. Triangles ADC and ABC have the same height from C, and AD is 1/4 of AB, so ADC = 1/4 of 96 = 24 cm². Now triangles ADE and ADC have the same height from D, and AE is 1/3 of AC, so ADE = 1/3 of 24 = 8 cm². The small triangle is 1/4 × 1/3 = 1/12 of the whole.",
+   "explanation": "Join D to C. Triangles ADC and ABC have the same height from C, and AD is 1/4 of AB, so ADC = 1/4 of 96 = 24 cm². Now triangles ADE and ADC have the same height from D, and AE is 1/3 of AC, so ADE = 1/3 of 24 = 8 cm². The small triangle is 1/4 × 1/3 = 1/12 of the whole.",
    "figright": true
   },
   {
@@ -1641,15 +1652,15 @@
       0
      ],
      "B": [
-      28,
+      24,
       0
      ],
      "C": [
-      8,
-      15
+      12,
+      5
      ],
      "H": [
-      8,
+      12,
       0
      ]
     },
@@ -1674,62 +1685,61 @@
       "at": "H",
       "a": "B",
       "b": "C",
-      "size": 16
+      "size": 12
      }
     ],
     "dims": [
      {
       "a": "A",
       "b": "B",
-      "text": "28 cm"
+      "text": "24 cm"
      },
      {
       "a": "A",
       "b": "C",
-      "text": "17 cm"
+      "text": "13 cm",
+      "dist": 26
      },
      {
       "a": "B",
       "b": "C",
-      "text": "25 cm"
+      "text": "13 cm",
+      "dist": 26
      }
     ],
     "texts": [
      {
-      "t": "15 cm",
+      "t": "5 cm",
       "at": [
-       9.8,
-       7
-      ]
+       14.2,
+       1.9
+      ],
+      "size": 18
      }
     ],
-    "vlab": {
-     "A": "bl",
-     "B": "br",
-     "C": "t"
-    },
+    "vlab": false,
     "alt": "triangle with a dashed height",
-    "mm": 1.2
+    "mm": 1.83
    },
    "answer": {
     "value": [
-     "210"
+     "60"
     ],
-    "text": "210 cm²"
+    "text": "60 cm²"
    },
-   "explanation": "The base is 28 cm and the height that meets it at a right angle is 15 cm. 1/2 × 28 × 15 = 210. The slanting sides (17 and 25) are not used.",
+   "explanation": "The base is 24 cm and the height that meets it at a right angle is 5 cm. 1/2 × 24 × 5 = 60. The slanting sides (13 and 13) are not used.",
    "figright": true
   },
   {
    "id": "L5U04-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "A triangle has an area of 54 cm². Its base is 12 cm. Find its height. {b} cm",
+   "text": "A triangle has an area of 54 cm². Its base is 12 cm. Find its height. {b} cm",
    "answer": {
     "value": [
      "9"
     ],
-    "text": "9 cm"
+    "text": "9 cm"
    },
    "explanation": "2 × 54 = 108 is base × height. 108 ÷ 12 = 9. Check: 1/2 × 12 × 9 = 54."
   },
@@ -1802,49 +1812,49 @@
      {
       "a": "A",
       "b": "B",
-      "text": "10 cm"
+      "text": "10 cm"
      },
      {
       "a": "A",
       "b": "D",
-      "text": "6 cm"
+      "text": "6 cm"
      }
     ],
     "texts": [
      {
-      "t": "4 cm",
+      "t": "4 cm",
       "at": [
-       12,
-       1.6
+       16.4,
+       3
       ],
-      "size": 20
+      "size": 18
      }
     ],
     "vlab": false,
     "alt": "rectangle with a triangle on its right side",
-    "mm": 3.0
+    "mm": 2.9
    },
    "answer": {
     "value": [
      "72"
     ],
-    "text": "72 cm²"
+    "text": "72 cm²"
    },
-   "explanation": "The rectangle is 10 × 6 = 60 cm². The triangle on the right has a base of 6 cm (the side BC) and a height of 4 cm. 1/2 × 6 × 4 = 12. Total: 60 + 12 = 72 cm².",
+   "explanation": "The rectangle is 10 × 6 = 60 cm². The triangle on the right has a base of 6 cm (the side BC) and a height of 4 cm. 1/2 × 6 × 4 = 12. Total: 60 + 12 = 72 cm².",
    "figright": true
   },
   {
    "id": "L5U04-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "A garden is a triangle with a base of 18 m and a height of 10 m. One bag of seed covers 6 m². How many bags are needed to cover the whole garden? {b}",
+   "text": "A garden is a triangle with a base of 18 m and a height of 10 m. One bag of seed covers 6 m². How many bags are needed to cover the whole garden? {b}",
    "answer": {
     "value": [
      "15"
     ],
     "text": "15 bags"
    },
-   "explanation": "The area is 1/2 × 18 × 10 = 90 m². 90 ÷ 6 = 15 bags."
+   "explanation": "The area is 1/2 × 18 × 10 = 90 m². 90 ÷ 6 = 15 bags."
   }
  ]
 }
