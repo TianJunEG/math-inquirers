@@ -2711,7 +2711,7 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "A ribbon is 30 cm long. It is cut into 3 pieces. Piece A is 8 cm. Piece B is 3 cm longer than piece A. How long is piece C?",
+        "q": "A ribbon of length 30 cm is cut into 3 pieces. Piece A is 8 cm. Piece B is 3 cm longer than piece A. How long is piece C?",
         "answer": 11,
         "hint": "Find piece B first. Then see how much of the 30 cm is left.",
         "steps": [
@@ -2756,7 +2756,7 @@
             "b": "a+d",
             "ab": "a+a+d"
           },
-          "q": "A ribbon is {T} cm long. It is cut into 3 pieces. Piece A is {a} cm. Piece B is {d} cm longer than piece A. How long is piece C?",
+          "q": "A ribbon of length {T} cm is cut into 3 pieces. Piece A is {a} cm. Piece B is {d} cm longer than piece A. How long is piece C?",
           "answer": "T-(a+a+d)",
           "hint": "Find piece B first. Then see how much of the {T} cm is left.",
           "steps": [

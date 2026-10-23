@@ -435,13 +435,9 @@ def check_block(d, eq):
     eq(all(sl_.get('no_record') for sl_ in d['slides'] if sl_['id'] in ('s-quest1', 's-quest2')), True, 'quest slides are not on the shared recording')
     own = set()
     for s in facing + [q['say'] for q in qs]:
-        own |= validate.shingles(s)
-    for folder in ('docs/sasmo', 'docs/books'):
-        full = os.path.join(ROOT, folder)
-        for f in sorted(os.listdir(full)):
-            if not f.endswith('.md') or 'original' in f:
-                continue
-            common_ = own & validate.shingles(open(os.path.join(full, f), encoding='utf-8', errors='ignore').read())
-            assert not common_, f'7-word overlap with {f}: {sorted(common_)[:2]}'
+        own |= validate.shingles(validate.std_strip(s))
+    for f, txt in validate.external_sources():
+        common_ = own & validate.shingles(validate.std_strip(txt))
+        assert not common_, f'7-word overlap with {f}: {sorted(common_)[:2]}'
     n_extra += 1
     return n_extra

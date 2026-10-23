@@ -2388,7 +2388,7 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "52 books are on two shelves. 7 books move from the top shelf to the bottom shelf. Then both shelves have the same number of books.",
+    "text": "52 books are on two shelves. 7 books move from the top shelf to the bottom shelf. Then both shelves have equal numbers of books.",
     "answer": "Top 33; bottom 19",
     "val": [
      33,

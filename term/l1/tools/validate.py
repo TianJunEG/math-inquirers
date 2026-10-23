@@ -403,13 +403,39 @@ STANDARD_PHRASES = [  # standard school-paper command wording (WORDING_GUIDE.md)
     r"make the (greatest|smallest|biggest|largest) number( and the (greatest|smallest|biggest|largest) number)?", r"is \w+ correct\?\s*circle yes or no\.?",
     r"circle yes or no", r"circle (the correct|the right) answer", r"fill in the (missing numbers?|blanks?|correct answers? in the spaces provided)",
     r"write your answers? in the boxes provided", r"show all your workings clearly", r"tick \W?.?\W? ?true or false", r"count and write",
-    r"write a number sentence", r"find the total", r"complete the (table|pattern|number sentences?)", r"put a tick (\\(.\\) )?in the correct box", r"tick (\\(.\\) )?true or false", r"write a multiplication sentence", r"how many more to make equal groups", r"write the number", r"how many \w+ (are )?(there )?altogether\??"]
+    r"write a number sentence", r"find the total", r"complete the (table|pattern|number sentences?)", r"put a tick (\\(.\\) )?in the correct box", r"tick (\\(.\\) )?true or false", r"write a multiplication sentence", r"how many more to make equal groups", r"write the number", r"how many \w+ (are )?(there )?altogether\??", r"how many \w+ do (they|you|we|the children|the \w+) have altogether\??"]
 
 
 def std_strip(text):
     t = text.lower()
     for p in STANDARD_PHRASES: t = re.sub(p, ' ', t)
     return t
+
+
+def is_external_source(name):
+    """True for text we did NOT author: private extracts (private_*), contest/school-paper analyses and pattern notes.
+    Our own original work (non-routine catalogues, *original* drafts) is never an external source."""
+    n = name.lower()
+    if 'original' in n or 'catalogue' in n: return False
+    return n.startswith('private_') or n.endswith('_analysis.md') or 'patterns' in n or '/private_' in n
+
+
+def external_sources(root=None):
+    """Yield (relative name, text) for every external source text under docs/sasmo and docs/books (recursing into private_* folders)."""
+    root = root or ROOT
+    for folder in ('docs/sasmo', 'docs/books'):
+        base = os.path.join(root, folder)
+        if not os.path.isdir(base): continue
+        for dp, dns, fns in os.walk(base):
+            dns.sort()
+            rel_dir = os.path.relpath(dp, root).replace(os.sep, '/')
+            for f in sorted(fns):
+                if not f.lower().endswith(('.md', '.txt')): continue
+                rel = rel_dir + '/' + f
+                in_private = '/private_' in rel
+                if not (in_private or is_external_source(f)): continue
+                if 'original' in f.lower() or 'catalogue' in f.lower(): continue
+                yield rel, open(os.path.join(dp, f), encoding='utf-8', errors='ignore').read()
 
 
 def check_copy(d):
@@ -419,15 +445,11 @@ def check_copy(d):
     own |= shingles(std_strip(d['sneak_peek']['q1'] + ' ' + d['sneak_peek']['q2']))
     for it in d['online_practice']['items']: own |= shingles(std_strip(it['q']))
     hits = []
-    for folder in ('docs/sasmo', 'docs/books'):
-        full = os.path.join(ROOT, folder)
-        for f in sorted(os.listdir(full)):
-            if not f.endswith('.md') or 'original' in f: continue
-            src = shingles(std_strip(open(os.path.join(full, f), encoding='utf-8', errors='ignore').read()))
-            common = own & src
-            if common: hits.append((f, sorted(common)[:2]))
+    for f, txt in external_sources():
+        common = own & shingles(std_strip(txt))
+        if common: hits.append((f, sorted(common)[:2]))
     if hits: fail('copy: 7-word overlaps with reference contest/book text: ' + str(hits))
-    else: ok('copy: no 7-word overlap with docs/sasmo analysis/solution notes or docs/books (originals only)')
+    else: ok('copy: no 7-word overlap with external source text (contest/book/school-paper analyses and private extracts; our own catalogues and drafts excluded)')
 
 
 def load_checks(d):
