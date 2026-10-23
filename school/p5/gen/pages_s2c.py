@@ -20,7 +20,7 @@ def unknown_angle(h):
     raise ValueError(kind)
 
 # --------------------------------------------------------------------------- cells for the route and rows for the lettered choices
-def make_fig(rng, V, kind=None, w=40, hh=26, scale_up=1.0):
+def make_fig(rng, V, kind=None, w=42, hh=34, scale_up=1.0):
     """an angle figure whose marked angle is V degrees; returns svg html"""
     kind = kind or rng.choice(["line", "line", "point", "opp", "opp"])
     for _ in range(300):
@@ -72,7 +72,7 @@ def page36():
         ["Start at START. Move up, down, left or right.", f"Step only on figures where the angle marked ? is {T}{DEG}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
         f"A 4 by 4 grid of sixteen angle figures: angles on a straight line (they make a straight angle), angles at a point (a full turn) and two straight lines crossing (vertically opposite angles are equal; neighbouring angles make a straight angle). The angle marked ? is {T}{DEG} on the route. The boxes off the route give an answer a little more or less than {T}{DEG}, or the angle next to it; some extra boxes that do give {T}{DEG} are dead ends. Counting the boxes shows a line that takes a shortcut. Figures are not drawn to scale.",
-        lambda c: f"? = {unknown_angle(c)}{DEG}", f"Does your line reach FINISH? Count its boxes: are there 8? Is every angle marked ? equal to {T}{DEG}?", extra_facts=str(T))
+        lambda c: f"? = {unknown_angle(c)}{DEG}", f"Does your line reach FINISH? Count its boxes: are there 8? Is every angle marked ? equal to {T}{DEG}?", extra_facts=str(T), cls="maze tall")
     return P
 
 # =============================================================================== P5-37 Find the Angle (lettered choices)
