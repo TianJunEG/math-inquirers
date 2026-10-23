@@ -3,8 +3,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import *
 
 learn = {
- 'tight': True,
- 'intro': 'A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth. To find every number from some digit cards, make a list in order.',
+ 'intro': 'A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.',
  'example': {
   'problem': 'Use the digit cards 4, 1 and 7 once each. List every 3-digit number you can make. Which is the biggest? Which is the smallest?',
   'figure': {'type': 'l2_cards', 'items': [4, 1, 7], 'width_mm': 46}, 'side': True,
@@ -43,11 +42,13 @@ items = [
    P('b', 'Which number is closest to 600? {b}', '581'),
    P('c', 'How many of your numbers are odd? {b}', '4')],
    why='(a) The biggest digit goes first for the biggest number: 851. The smallest digit goes first for the smallest: 158. (b) 581 is only 19 away from 600; 518 is 82 away. (c) A number is odd if it ends in 1, 3, 5, 7 or 9: 185, 581, 815 and 851 are odd.'),
- I('start', 2, 'Use the cards 6, 0 and 4 once each. Write every 3-digit number you can make.  {ll}', figure={'type': 'l2_cards', 'items': [6, 0, 4], 'width_mm': 46},
-   figside=False, value=['406', '460', '604', '640'], atext='406, 460, 604, 640', lst=True,
+ I('start', 2, 'Use the cards 6, 0 and 4 once each.', figure={'type': 'l2_cards', 'items': [6, 0, 4], 'width_mm': 46},
+   parts=[P('a', 'Write every 3-digit number you can make.  {ll}', ['406', '460', '604', '640'], '406, 460, 604, 640', lst=True), P('b', 'How many numbers did you write? {b}', '4')],
    why='0 cannot be the hundreds digit, so only 6 or 4 can start. Start with 4: 406 and 460. Start with 6: 604 and 640. That is 4 numbers.'),
- I('start', 2, 'I am a 3-digit number. My hundreds digit is 6. My ones digit is 2 less than my tens digit. My digits add up to 14. What number am I? {b}', value='653',
-   why='The tens digit and ones digit add up to 14 - 6 = 8. The tens digit is 2 more than the ones digit: 5 and 3. So the number is 653.'),
+ I('start', 2, 'Who am I? Write each number.', parts=[
+   P('a', 'I am a 3-digit number. My hundreds digit is 6. My ones digit is 2 less than my tens digit. My digits add up to 14. {b}', '653'),
+   P('b', 'I am an odd number between 300 and 310. My digits add up to 8. {b}', '305')],
+   why='(a) The tens and ones digits add up to 14 - 6 = 8. The tens digit is 2 more than the ones digit: 5 and 3. The number is 653. (b) Odd numbers between 300 and 310: 301, 303, 305, 307, 309. Only 3 + 0 + 5 = 8, so 305.'),
  # ---- page 3
  I('start', 3, 'Look at the number line. It goes from 300 to 400.', figure={'type': 'l2_nline', 'lo': 300, 'hi': 400, 'step': 10, 'labels': [300, 350, 400], 'arrows': [{'at': 340, 'label': 'A'}, {'at': 370, 'label': 'B'}], 'width_mm': 150},
    partsrow=True, parts=[P('a', 'Arrow A shows {b}', '340'), P('b', 'Arrow B shows {b}', '370'), P('c', 'B is {b} more than A.', '30')],
@@ -65,7 +66,7 @@ items = [
  # ---- Think harder
  I('think', 4, 'Use the cards 1, 4, 6 and 9. Pick 3 different cards each time to make 3-digit numbers.', figure={'type': 'l2_cards', 'items': [1, 4, 6, 9], 'width_mm': 66},
    parts=[P('a', 'How many even numbers can you make? {b}', '12'), P('b', 'How many of those even numbers are greater than 600? {b}', '6')],
-   hint='Fix the ones digit first. An even number ends in 4 or 6.',
+   hint='Fix the ones digit first. An even number ends in 4 or 6.', space={'rows': ['Working:']},
    why='(a) Even numbers end in 4 or 6. Ones digit 4: 2 of 1, 6, 9 fill the other places: 3 x 2 = 6 numbers. Ones digit 6: 6 numbers. 6 + 6 = 12. (b) Ending in 4: 614, 694, 914, 964. Ending in 6: 916, 946. That is 6 numbers.'),
  I('think', 4, 'I am an odd 3-digit number. My tens digit is 0. My digits add up to 11.', parts=[
    P('a', 'The numbers I could be:  {ll}', ['209', '407', '605', '803'], '209, 407, 605, 803', lst=True), P('b', 'Which of them is closest to 500? {b}', '407')],
@@ -73,7 +74,7 @@ items = [
    why='(a) The hundreds and ones digits add up to 11 and the ones digit is odd: (2, 9), (4, 7), (6, 5), (8, 3). (10, 1) is not allowed. The numbers are 209, 407, 605 and 803. (b) 407 is 93 from 500 and 605 is 105 from 500.'),
  I('think', 4, 'Ali writes the numbers 1 to 100 in a row. Then he writes 101 to 200 in a row.', parts=[
    P('a', 'How many times does he write the digit 7 from 1 to 100? {b}', '20'), P('b', 'How many times does he write the digit 7 from 1 to 200? {b}', '40')],
-   hint='Count the 7s in the ones place. Then count the 7s in the tens place.',
+   hint='Count the 7s in the ones place. Then count the 7s in the tens place.', space={'rows': ['Working:']},
    why='(a) 7s in the ones place: 7, 17, ... 97 is 10 numbers. 7s in the tens place: 70 to 79 is 10 numbers. 77 has two 7s. 10 + 10 = 20. (b) 101 to 200 is the same pattern, so 20 more: 20 + 20 = 40.'),
  # ---- Go further
  I('go', 5, '10 hundreds make 1 thousand. We write 1 thousand as 1000.', beyond='Thousands', parts=[
@@ -81,10 +82,10 @@ items = [
    hint='A thousand is 10 hundreds. Write the thousands digit first.',
    why='(a) 4000 + 200 + 0 + 7 = 4207. (b) Adding 1000 adds 1 to the thousands digit: 2650 becomes 3650. (c) 20 hundreds is 2000 and 5 hundreds is 500, so 2500.'),
  I('go', 5, 'A mirror number reads the same forwards and backwards, such as 262 and 909. How many 3-digit mirror numbers are there? {b}', value='90',
-   hint='The ones digit must match the hundreds digit. Count the choices.',
+   hint='The ones digit must match the hundreds digit. Count the choices.', space={'rows': ['Working:']},
    why='The hundreds digit can be 1 to 9: 9 choices. The tens digit can be 0 to 9: 10 choices. The ones digit must be the same as the hundreds digit. 9 x 10 = 90.'),
  I('go', 5, 'I am a 3-digit number. My tens digit is 5. My digits add up to 12. When my hundreds digit and ones digit swap places, the new number is 297 more than me. What number am I? {b}', value='255',
-   hint='The hundreds and ones digits add up to 7. Try pairs and swap them.',
+   hint='The hundreds and ones digits add up to 7. Try pairs and swap them.', space={'rows': ['Working:']},
    why='The hundreds and ones digits add up to 12 - 5 = 7. Try 156: swapping gives 651, which is 495 more. Try 255: swapping gives 552, which is 297 more. So the number is 255.'),
  I('go', 5, 'Make your own riddle about the number 372. Write 3 clues so that only 372 fits. Many answers are right.', value='open', atext='Open. Example: "I am a 3-digit number. I am between 300 and 400. My digits add up to 12. My ones digit is 2." Check that no other number fits all 3 clues.',
    space={'rows': ['Clue 1:', 'Clue 2:', 'Clue 3:']}, hint='Say how many numbers still fit after each clue.',

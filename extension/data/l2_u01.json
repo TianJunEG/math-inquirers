@@ -8,8 +8,7 @@
  "holiday_lesson": 1,
  "goal": "I can read and build 3-digit numbers. I can list every number from a set of digit cards and use patterns on a 1000 chart.",
  "learn": {
-  "tight": true,
-  "intro": "A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth. To find every number from some digit cards, make a list in order.",
+  "intro": "A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.",
   "example": {
    "problem": "Use the digit cards 4, 1 and 7 once each. List every 3-digit number you can make. Which is the biggest? Which is the smallest?",
    "figure": {
@@ -290,7 +289,7 @@
    "id": "L2U01-S07",
    "tier": "start",
    "page": 2,
-   "text": "Use the cards 6, 0 and 4 once each. Write every 3-digit number you can make.  {ll}",
+   "text": "Use the cards 6, 0 and 4 once each.",
    "figure": {
     "type": "l2_cards",
     "items": [
@@ -300,31 +299,62 @@
     ],
     "width_mm": 46
    },
-   "answer": {
-    "value": [
-     "406",
-     "460",
-     "604",
-     "640"
-    ],
-    "text": "406, 460, 604, 640",
-    "list": true
-   },
-   "explanation": "0 cannot be the hundreds digit, so only 6 or 4 can start. Start with 4: 406 and 460. Start with 6: 604 and 640. That is 4 numbers.",
-   "figside": false
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write every 3-digit number you can make.  {ll}",
+     "answer": {
+      "value": [
+       "406",
+       "460",
+       "604",
+       "640"
+      ],
+      "text": "406, 460, 604, 640",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many numbers did you write? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "0 cannot be the hundreds digit, so only 6 or 4 can start. Start with 4: 406 and 460. Start with 6: 604 and 640. That is 4 numbers."
   },
   {
    "id": "L2U01-S08",
    "tier": "start",
    "page": 2,
-   "text": "I am a 3-digit number. My hundreds digit is 6. My ones digit is 2 less than my tens digit. My digits add up to 14. What number am I? {b}",
-   "answer": {
-    "value": [
-     "653"
-    ],
-    "text": "653"
-   },
-   "explanation": "The tens digit and ones digit add up to 14 - 6 = 8. The tens digit is 2 more than the ones digit: 5 and 3. So the number is 653."
+   "text": "Who am I? Write each number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "I am a 3-digit number. My hundreds digit is 6. My ones digit is 2 less than my tens digit. My digits add up to 14. {b}",
+     "answer": {
+      "value": [
+       "653"
+      ],
+      "text": "653"
+     }
+    },
+    {
+     "label": "b",
+     "text": "I am an odd number between 300 and 310. My digits add up to 8. {b}",
+     "answer": {
+      "value": [
+       "305"
+      ],
+      "text": "305"
+     }
+    }
+   ],
+   "explanation": "(a) The tens and ones digits add up to 14 - 6 = 8. The tens digit is 2 more than the ones digit: 5 and 3. The number is 653. (b) Odd numbers between 300 and 310: 301, 303, 305, 307, 309. Only 3 + 0 + 5 = 8, so 305."
   },
   {
    "id": "L2U01-S09",
@@ -569,7 +599,12 @@
     }
    ],
    "explanation": "(a) Even numbers end in 4 or 6. Ones digit 4: 2 of 1, 6, 9 fill the other places: 3 x 2 = 6 numbers. Ones digit 6: 6 numbers. 6 + 6 = 12. (b) Ending in 4: 614, 694, 914, 964. Ending in 6: 916, 946. That is 6 numbers.",
-   "hint": "Fix the ones digit first. An even number ends in 4 or 6."
+   "hint": "Fix the ones digit first. An even number ends in 4 or 6.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L2U01-T02",
@@ -633,7 +668,12 @@
     }
    ],
    "explanation": "(a) 7s in the ones place: 7, 17, ... 97 is 10 numbers. 7s in the tens place: 70 to 79 is 10 numbers. 77 has two 7s. 10 + 10 = 20. (b) 101 to 200 is the same pattern, so 20 more: 20 + 20 = 40.",
-   "hint": "Count the 7s in the ones place. Then count the 7s in the tens place."
+   "hint": "Count the 7s in the ones place. Then count the 7s in the tens place.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L2U01-G01",
@@ -688,7 +728,12 @@
     "text": "90"
    },
    "explanation": "The hundreds digit can be 1 to 9: 9 choices. The tens digit can be 0 to 9: 10 choices. The ones digit must be the same as the hundreds digit. 9 x 10 = 90.",
-   "hint": "The ones digit must match the hundreds digit. Count the choices."
+   "hint": "The ones digit must match the hundreds digit. Count the choices.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L2U01-G03",
@@ -702,7 +747,12 @@
     "text": "255"
    },
    "explanation": "The hundreds and ones digits add up to 12 - 5 = 7. Try 156: swapping gives 651, which is 495 more. Try 255: swapping gives 552, which is 297 more. So the number is 255.",
-   "hint": "The hundreds and ones digits add up to 7. Try pairs and swap them."
+   "hint": "The hundreds and ones digits add up to 7. Try pairs and swap them.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L2U01-G04",
