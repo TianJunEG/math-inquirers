@@ -4355,18 +4355,18 @@
    {
     "type": "pair_cards",
     "labels": [
-     "icon:sun+2 suns",
-     "icon:sun+2 suns",
-     "icon:sun+2 suns",
-     "icon:sun+5 suns",
-     "icon:sun+big",
-     "icon:sun+big",
-     "icon:sun+big",
-     "icon:sun+small",
-     "icon:sun+striped",
-     "icon:sun+striped",
-     "icon:sun+striped",
-     "icon:sun+dotted"
+     "sun:2:mid:plain",
+     "sun:2:mid:plain",
+     "sun:2:mid:plain",
+     "sun:5:mid:plain",
+     "sun:1:big:plain",
+     "sun:1:big:plain",
+     "sun:1:big:plain",
+     "sun:1:small:plain",
+     "sun:1:mid:striped",
+     "sun:1:mid:striped",
+     "sun:1:mid:striped",
+     "sun:1:mid:dotted"
     ],
     "title": "Kit page: pair cards",
     "intro": "A grown-up cuts out the 12 cards before the lesson. Each row of 4 is one set: three cards are alike and one is different in just one thing. Keep each row together in a pile. No cutting? Draw 4 small suns on paper: 3 the same and 1 different in one thing (how many, how big, or which pattern)."

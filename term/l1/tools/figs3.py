@@ -469,6 +469,9 @@ def _tile_shape(shape, x, y, r, fillc, pat, turn, pid, shadow=False):
     raise ValueError('unknown panel shape ' + shape)
 
 
+_PANEL_N = 0
+
+
 def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
     """A row or grid of tiles. tile = {shape: circle|square|triangle|star, n: 1-4, size: s|m|l, colour: 0-3, pattern: 0-3, turn: degrees}.
     colour and pattern together show a feature in grey print (pattern 0 plain, 1 stripes, 2 dots, 3 cross-hatch). hide=[index] draws a '?' tile.
@@ -477,15 +480,22 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
     tiles = tiles or []
     cols = cols or len(tiles)
     rows = (len(tiles) + cols - 1) // cols
-    pid = f'{tag}pat'
-    defs = (f'<defs><pattern id="{pid}1" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#fff"/><line x1="0" y1="0" x2="0" y2="9" stroke="{NAVY}" stroke-width="3"/></pattern>'
-            f'<pattern id="{pid}2" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#fff"/><circle cx="6" cy="6" r="2.6" fill="{NAVY}"/></pattern>'
-            f'<pattern id="{pid}3" width="11" height="11" patternUnits="userSpaceOnUse"><rect width="11" height="11" fill="#fff"/><path d="M0 0 L11 11 M11 0 L0 11" stroke="{NAVY}" stroke-width="1.8"/></pattern></defs>')
-    body = [defs]
+    global _PANEL_N
+    _PANEL_N += 1
+    pid = f'{tag}pat{_PANEL_N}x'
+    body = []
+    dl = []
+    def _pats(i, x0, y0):
+        # patterns are anchored to the tile's own corner, so identical tiles always show identical stripes and dots
+        o = f'patternUnits="userSpaceOnUse" x="0" y="0"'
+        return (f'<pattern id="{pid}{i}_1" width="14" height="14" {o} patternTransform="translate({x0} {y0}) rotate(45)"><rect width="14" height="14" fill="#fff"/><rect x="0" y="0" width="5.5" height="14" fill="{NAVY}"/></pattern>'
+                f'<pattern id="{pid}{i}_2" width="19" height="19" {o} patternTransform="translate({x0 + 2} {y0 + 2})"><rect width="19" height="19" fill="#fff"/><circle cx="9.5" cy="9.5" r="4.6" fill="{NAVY}"/></pattern>'
+                f'<pattern id="{pid}{i}_3" width="16" height="16" {o} patternTransform="translate({x0} {y0})"><rect width="16" height="16" fill="#fff"/><path d="M0 0 L16 16 M16 0 L0 16" stroke="{NAVY}" stroke-width="3.4"/></pattern>')
     rsz = {'s': 0.2, 'm': 0.3, 'l': 0.42}
     lab_h = 36 if labels else 0
     for i, t in enumerate(tiles):
         r, c = divmod(i, cols); x0 = 10 + c * (cell + 12); y0 = 10 + r * (cell + 12 + lab_h)
+        dl.append(_pats(i, x0, y0))
         body.append(f'<rect x="{x0}" y="{y0}" width="{cell}" height="{cell}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3"/>')
         if i in hide:
             body.append(f'<text x="{x0 + cell / 2}" y="{y0 + cell / 2 + 20}" font-size="64" font-weight="800" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">?</text>')
@@ -496,12 +506,12 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
             elif n == 3: pos = [(0.5, 0.28), (0.28, 0.7), (0.72, 0.7)]
             else: pos = [(0.3, 0.3), (0.7, 0.3), (0.3, 0.7), (0.7, 0.7)]
             for (px, py) in pos:
-                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid, bool(t.get('shadow'))))
+                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid + str(i) + '_', bool(t.get('shadow'))))
         if labels:
             lt = labels[i] if i < len(labels) else ''
             body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 30}" font-size="28" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
     W = 20 + cols * (cell + 12); H = 20 + rows * (cell + 12 + lab_h)
-    return _svg(W, H, ''.join(body), 'a row of picture tiles')
+    return _svg(W, H, '<defs>' + ''.join(dl) + '</defs>' + ''.join(body), 'a row of picture tiles')
 
 
 # ------------------------------------------------------------------ network (handshakes)
@@ -876,9 +886,35 @@ def shape_pieces(counts=None, unit_mm=30, page=None, u=None):
     return _kit(700, y + rowh + 20, b, 'shape pieces')
 
 
+_SUN_N = 0
+
+
+def _sun_card(spec, x, y, cw, ch):
+    """A pair-card face that really shows what a set differs in: 'sun:N:size:pattern' = N suns (1-5), size big|mid|small, pattern plain|striped|dotted."""
+    global _SUN_N
+    _, n, size, pat = spec.split(':'); n = int(n)
+    _SUN_N += 1; pid = f'sunpat{_SUN_N}'
+    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10}[size] * cw * (1 if n == 1 else 0.82 if n <= 2 else 0.74)
+    if n == 1: pos = [(0.5, 0.5)]
+    elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
+    elif n == 5: pos = [(0.22, 0.28), (0.5, 0.2), (0.78, 0.28), (0.34, 0.72), (0.66, 0.72)]
+    else: raise ValueError('sun card: N must be 1, 2 or 5')
+    fill = {'plain': YEL, 'striped': f'url(#{pid}s)', 'dotted': f'url(#{pid}d)'}[pat]
+    out = [f'<defs><pattern id="{pid}s" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="translate({x:.1f} {y:.1f}) rotate(45)"><rect width="10" height="10" fill="#fff"/><rect width="4" height="10" fill="{NAVY}"/></pattern>'
+           f'<pattern id="{pid}d" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="translate({x:.1f} {y:.1f})"><rect width="13" height="13" fill="#fff"/><circle cx="6.5" cy="6.5" r="3.3" fill="{NAVY}"/></pattern></defs>']
+    for (px, py) in pos:
+        cx, cy = x + px * cw, y + py * ch
+        for k in range(8):
+            a = k * math.pi / 4
+            out.append(f'<line x1="{cx + R * 1.25 * math.cos(a):.1f}" y1="{cy + R * 1.25 * math.sin(a):.1f}" x2="{cx + R * 1.7 * math.cos(a):.1f}" y2="{cy + R * 1.7 * math.sin(a):.1f}" stroke="{NAVY}" stroke-width="{3.4 if size != "small" else 2.6}" stroke-linecap="round"/>')
+        out.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{R:.1f}" fill="{fill}" stroke="{NAVY}" stroke-width="3"/>')
+    return ''.join(out)
+
+
 def _card_face(t, x, y, cw, ch):
     """The face of a card: an icon ('icon:apple'), text ('3'), or both: 'icon:apple+3' / ['icon:apple', '3'] / {'icon': 'apple', 'text': '3'} puts the picture above the words."""
     icon_name = text = None
+    if isinstance(t, str) and t.startswith('sun:'): return _sun_card(t, x, y, cw, ch)
     if isinstance(t, dict): icon_name, text = t.get('icon'), t.get('text')
     elif isinstance(t, (list, tuple)):
         for p in t:

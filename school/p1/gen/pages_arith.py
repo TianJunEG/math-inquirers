@@ -350,7 +350,7 @@ def page03():
             t1 = f"Put {n} {nm} in groups of {per}."; t2 = "How many groups?"
         texts.append((t1, t2))
         rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shmid"><p class="shtxt">{t1} {t2}</p><div class="shsvg">{s_}</div></div><span class="ab"></span></div>')
-    body = f'<p class="lead" style="margin:0 0 1mm">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div>{code_block(table)}'
+    body = f'<p class="lead" style="margin:0;font-size:11pt">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div>{code_block(table)}'
     solved = []; drawn = []
     for (t1, t2), s_, (kind, n, g, per) in zip(texts, svgs, items):
         n_obj, n_cont, inside = read_share(s_, kind)

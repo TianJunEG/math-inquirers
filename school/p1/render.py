@@ -15,11 +15,11 @@ html,body{margin:0;padding:0;background:#fff;color:#000;font-family:'Nunito Sans
 .page{width:210mm;height:297mm;padding:15mm;display:flex;flex-direction:column;overflow:hidden;position:relative;break-after:page;background:#fff}
 .page:last-child{break-after:auto}
 header.ph{display:flex;align-items:center;gap:4mm;border-bottom:0.8mm solid #000;padding-bottom:2.5mm;height:19mm}
-.code{font-family:'Fredoka';font-weight:600;font-size:12pt;border:0.5mm solid #000;border-radius:2mm;padding:1mm 2.5mm}
-h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.05;flex:1}
+.code{font-family:'Fredoka';font-weight:600;font-size:10pt;border:0.5mm solid #000;border-radius:2mm;padding:1mm 2mm;white-space:nowrap;text-align:center;line-height:1.15}
+h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.05;flex:1;min-width:0}
 .stars svg{vertical-align:middle;margin-left:0.5mm}
 .nameline{font-size:11pt;line-height:1.9;text-align:right;white-space:nowrap}
-.nameline span{display:inline-block;border-bottom:0.4mm solid #000;width:36mm}
+.nameline span{display:inline-block;border-bottom:0.4mm solid #000;width:30mm}
 .topic{font-size:11.5pt;font-weight:700;padding:2mm 0 1mm}
 .instr{font-size:15pt;line-height:1.3;padding:1mm 0 2mm}
 .instr p{margin:0.4mm 0}
@@ -133,6 +133,7 @@ svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle
 .qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */
 .fm{font-size:13pt;line-height:1.4}
+.fm.notes{font-size:11.5pt;line-height:1.32}.fm.notes h3{margin:3.5mm 0 1mm}.fm.notes .draft{margin-bottom:2mm}
 .fm h2{font-family:'Fredoka';font-weight:600;font-size:22pt;margin:0 0 4mm;border-bottom:0.8mm solid #000;padding-bottom:2mm}
 .fm h3{font-family:'Fredoka';font-weight:600;font-size:14pt;margin:5mm 0 1.5mm}
 .fm p{margin:1.5mm 0}.fm ul{margin:1mm 0 1mm 6mm;padding:0}
@@ -279,7 +280,7 @@ def teacher_notes(pages, bk):
         ({37}, '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop, and the top numbers must add to the printed total.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need is None or _has(pages, need))
-    return ('<section class="page fm"><h2>Teacher notes' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+    return ('<section class="page fm notes"><h2>Teacher notes' + (" (DRAFT)"if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
             + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
             f'<h3>Which terms</h3><p>The pages are grouped by the order in which Primary 1 topics are typically taught: this booklet follows {html.escape(bk["terms"])}, the other booklet follows {other}. Schools vary, so check your scheme of work: a page can be used at any time once the topic has been taught, and a school that teaches a topic earlier can use the other booklet early.</p>'
@@ -289,7 +290,7 @@ def teacher_notes(pages, bk):
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
             '<h3>How the checks were tested</h3><p>For every page, a script tried every single wrong answer (any other value in the page\'s range) and every wrong arrangement of the logic pages. The check rejected at least 95% of them on every page. A wrong answer that spells any word of a list of about 129 000 English words counts as not rejected.</p>'
             '</section>'
-            '<section class="page fm"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+            '<section class="page fm notes"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
             '<h3>Using the pages</h3><ul>'
             + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'

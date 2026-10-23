@@ -147,10 +147,11 @@ const pictureRowF = (o, y0) => {
     else out += icon(it, cx, cy, s);
     if (o.numbers !== false) out += T(cx, cy + s / 2 + 22, (o.start || 1) + i, 16, { c: NAVY });
   });
+  if (o.answer) { const ax = (o.x0 === undefined ? 12 : o.x0) + pitch * o.items.length + 14; out += T(ax, y0 + s / 2 + 12, 'Answer:', 17, { a: 'start' }) + L(ax + 74, y0 + s / 2 + 14, ax + 74 + (o.answerW || 70), y0 + s / 2 + 14, { sw: 2, dash: true }); }
   return out;
 };
 const pictureRow = (o) => {
-  const s = o.size || 42, pitch = o.pitch || s + 12, W = (o.x0 === undefined ? 12 : o.x0) * 2 + pitch * o.items.length, H = s + 6 + (o.numbers === false ? 6 : 26);
+  const s = o.size || 42, pitch = o.pitch || s + 12, W = (o.x0 === undefined ? 12 : o.x0) * 2 + pitch * o.items.length + (o.answer ? 20 + 74 + (o.answerW || 70) : 0), H = s + 6 + (o.numbers === false ? 6 : 26);
   return svg(W, H, pictureRowF(o, 2), o.label || 'picture row', W);
 };
 

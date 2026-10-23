@@ -24,15 +24,15 @@ const stickerBoxes = () => {
 };
 
 // pattern rows
-const row = (items, o = {}) => W(svg((o.x0 === undefined ? 12 : o.x0) * 2 + (o.pitch || (o.size || 40) + 12) * items.length, (o.size || 40) + 34, pictureRowF({ items, ...o }, 2), o.label || 'pattern row'), 2);
+const row = (items, o = {}) => W(svg((o.x0 === undefined ? 12 : o.x0) * 2 + (o.pitch || (o.size || 40) + 12) * items.length + (o.answer ? 20 + 74 + (o.answerW || 70) : 0), (o.size || 40) + 34, pictureRowF({ items, ...o }, 2), o.label || 'pattern row'), 2);
 const pat = (core, len) => Array.from({ length: len }, (_, i) => core[i % core.length]);
 const blanks = n => Array(n).fill('?');
 // No.4: circle, star, square repeating, places 1-8 shown and 9-12 empty
 const p4 = () => row([...pat(['circle', 'star', 'square'], 8), ...blanks(4)], { size: 32, pitch: 46, label: 'A repeating pattern of shapes, places 1 to 8 shown, 9 to 12 empty' });
 const p1 = () => row([...pat(['circle', 'triangle', 'square'], 7), '?', '?'], { size: 34, pitch: 48, label: 'Shape pattern circle triangle square, places 8 and 9 empty' });
 // No.2: circle, square, triangle, circle, square, triangle, circle, then empty to place 10
-const p2 = () => row([...pat(['circle', 'square', 'triangle'], 7), ...blanks(3)], { size: 32, pitch: 46, label: 'Shape pattern, 7 shown and places 8 to 10 empty' });
-const p3 = () => row([...pat(['red', 'red', 'blue'], 7), ...blanks(1)], { size: 32, pitch: 46, label: 'Counter pattern red red blue, 7 shown and place 8 empty' });
+const p2 = () => row([...pat(['circle', 'square', 'triangle'], 7), ...blanks(3)], { size: 32, pitch: 42, answer: true, answerW: 80, label: 'Shape pattern, 7 shown and places 8 to 10 empty' });
+const p3 = () => row([...pat(['red', 'red', 'blue'], 7), ...blanks(1)], { size: 32, pitch: 42, answer: true, answerW: 80, label: 'Counter pattern red red blue, 7 shown and place 8 empty' });
 const p5 = () => row([...pat(['cat', 'dog', 'dog'], 7), ...blanks(5)], { size: 38, pitch: 48, label: 'Animal pattern cat dog dog, 7 shown and places 8 to 12 empty' });
 const p6 = () => row([...['=A', '=B', '=C', '=D', '=A', '=B', '=C'].map(x => '#' + x[1]), ...blanks(4)], { size: 38, pitch: 48, label: 'Letter tiles A B C D A B C then empty places 8 to 11' });
 // Think harder T1: circle, triangle, triangle, square (2 cores shown + places to 14 empty); T3: red blue blue x2 shown
@@ -134,9 +134,10 @@ const FX = {
   '3.T2': Object.assign(() => '', { lines: 1 }),
   '3.T3': Object.assign(() => blankRow('Pizza'), { lines: 1 }),
   '3.T4': Object.assign(() => appleRow(), { lines: 1 }),
-  '4.T1': Object.assign(() => t1(), { lines: 2 }),
-  '4.T3': Object.assign(() => t3(), { lines: 2 }),
-  '4.T4': Object.assign(() => stickSquares(), { lines: 2 }),
+  '4.T1': Object.assign(() => t1(), { lines: 1 }),
+  '4.T2': Object.assign(() => '', { lines: 2 }),
+  '4.T3': Object.assign(() => t3(), { lines: 1 }),
+  '4.T4': Object.assign(() => stickSquares(), { lines: 1 }),
   '4.C2': Object.assign(() => dotTriangles(), { lines: 3 }),
 };
 module.exports = { p1, queue20, FX, frogLines, stickerBoxes, p2, p3, p4, p5, p6, t1, t3, stickSquares, dotTriangles, coinCell, coinsRow, purse, trayRow, benTwo, fruitGraph, petGraph, starGraph, blankRow, appleRow, clipEraser, pencilCubes, ruler6, W };

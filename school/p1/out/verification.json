@@ -142,7 +142,7 @@
   "tier": 1,
   "topic": "Sharing equally and making equal groups (within 20)",
   "strand": "Number and Algebra - Multiplication and Division",
-  "syll": "3.4 (dividing within 20: sharing and grouping, no division sign)",
+  "syll": "3.1, 3.4 (dividing within 20: sharing and grouping, no division sign)",
   "outcomes": [
    "MD3.1",
    "MD3.4"
@@ -484,7 +484,7 @@
   "tier": 2,
   "topic": "Adding three 1-digit numbers",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.7 (adding more than two 1-digit numbers)",
+  "syll": "2.4 (adding more than two 1-digit numbers)",
   "outcomes": [
    "AS2.4"
   ],
@@ -580,7 +580,7 @@
   "tier": 2,
   "topic": "Add and subtract within 100",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
+  "syll": "2.5, 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
   "outcomes": [
    "AS2.5",
    "AS2.7"
@@ -713,7 +713,7 @@
   "code": "S1-20 (P1-13)",
   "title": "Equal Groups",
   "tier": 1,
-  "topic": "Multiplication: equal groups",
+  "topic": "Multiplication: equal groups and repeated addition",
   "strand": "Number and Algebra - Multiplication and Division",
   "syll": "3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
   "outcomes": [
@@ -851,7 +851,7 @@
   "tier": 1,
   "topic": "Money: counting coins in cents (up to $1)",
   "strand": "Number and Algebra - Money",
-  "syll": "Money (count money in cents up to $1)",
+  "syll": "Money 1.1 (count money in cents up to $1)",
   "outcomes": [
    "MO1.1"
   ],
@@ -908,7 +908,7 @@
   "tier": 2,
   "topic": "Money: dollars, more and less",
   "strand": "Number and Algebra - Money",
-  "syll": "Money (dollars up to $100) with 2.1 to 2.7 (add, subtract)",
+  "syll": "Money 1.1 (dollars up to $100), 2.7 (add, subtract); guess and check, problem solving",
   "outcomes": [
    "MO1.1",
    "AS2.7"
@@ -1159,8 +1159,8 @@
   "title": "Fruit Graph",
   "tier": 2,
   "topic": "Picture graphs: read, complete and answer",
-  "strand": "Statistics - Data Analysis",
-  "syll": "Picture graphs (read and interpret picture graphs)",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "Statistics 1.1 (read and interpret picture graphs)",
   "outcomes": [
    "ST1.1"
   ],

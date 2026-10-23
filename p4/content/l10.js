@@ -2,6 +2,23 @@
 // Every answer below was worked out and checked with a script; each logic puzzle was checked by trying every
 // arrangement, and has exactly one answer. "Find all" questions list every case.
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
+const { T, C, L, N, Y, TEAL, RED } = FG;
+// Q5: two queues. (a) Mei counted from the front and from the back; (b) 20 people with Ben marked. Nothing is counted for the child.
+const queueFig = () => {
+  let s = T(8, 24, '(a)', { size: 20, fill: TEAL, anchor: 'start' });
+  s += T(70, 24, 'FRONT', { size: 16, fill: '#5B6785' }) + T(578, 24, 'BACK', { size: 16, anchor: 'end', fill: '#5B6785' });
+  for (let i = 0; i < 7; i++) { const x = 70 + i * 46, mei = i === 6; s += C(x, 62, 18, { fill: mei ? Y : '#fff', w: mei ? 4 : 3 }) + T(x, 68, i + 1, { size: 17 }); }
+  s += T(70 + 6 * 46, 30, 'Mei', { size: 19, fill: TEAL }) + T(70 + 7 * 46 + 60, 70, '. . . . . . . .', { size: 30 });
+  s += `<path d="M52 88 q0 10 10 10 L${70 + 6 * 46 + 8} 98 q10 0 10 -10" fill="none" stroke="${N}" stroke-width="3"/>` + T(70 + 3 * 46, 124, '7th from the front', { size: 18, fill: TEAL });
+  s += `<path d="M${70 + 6 * 46 - 18} 88 q0 10 10 10 L568 98 q10 0 10 -10" fill="none" stroke="${RED}" stroke-width="3" stroke-dasharray="7 4"/>` + T((70 + 6 * 46 + 568) / 2, 124, 'Mei is 12th from the back', { size: 18, fill: RED });
+  return FG.svg(600, 140, s, 'A queue of circles. Seven numbered circles from the front with Mei the 7th, then dots for the rest of the queue to the back. A bracket marks 7th from the front, and a dashed bracket from Mei to the back marks that Mei is 12th from the back.');
+};
+// Q6: the bars for "in 5 years"
+const ageFig = () => FG.barModel({ rowH: 38, left: 150, right: 130, rows: [{ name: 'Ben in 5 yrs', segs: [{ u: 1 }] }, { name: 'Father in 5 yrs', segs: [{ u: 1 }, { u: 1 }, { u: 1 }] }],
+  ann: [{ k: 'rbrace', r1: 0, r2: 1, at: 3, t: '? years' }],
+  label: 'Bars for their ages in 5 years. Ben has 1 equal part and his father has 3 equal parts of the same size. A brace on the right is marked with a question mark.' });
+
 module.exports = {
   lesson: {
     n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed heuristics',
@@ -132,14 +149,14 @@ module.exports = {
       ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, g[0], { bold: true, fill: 'EDEDED', h: 70 }), ...[1, 2, 3, 4].map(i => H.cell('', g[i], { h: 70 }))]))]));
     W.push(H.gap(40));
     W.push(H.sub('a', 'Ali: ___________   Ben: ___________   Mei: ___________   Siti: ___________'));
-    W.push(H.q(5, 'Draw the queue.', { keepNext: true }));
-    W.push(H.sub('a', 'Mei is 7th from the front and 12th from the back of a queue at the MRT gantry. How many people are in the queue?'));
-    W.push(H.ans());
+    W.push(H.q(5, 'The queue for (a) is drawn for you. Count carefully: who is counted twice?', { keepNext: true }));
+    W.push(H.fig(queueFig()));
+    W.push(H.sub('a', 'Mei is 7th from the front and 12th from the back of a queue at the MRT gantry. How many people are in the queue?   ________'));
     W.push(H.sub('b', '20 people are in a queue. Ben is 6th from the front. What is his place from the back?   ________'));
-    W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? Draw bars.', { keepNext: true }));
+    W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? The bars show their ages in 5 years.', { keepNext: true }));
+    W.push(H.fig(ageFig()));
     W.push(tip('try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.'));
-    W.push(...H.lines(3));
-    W.push(H.ans());
+    W.push(H.ans('Ben is ______ years old now. Check:'));
     return W;
   }
 };
