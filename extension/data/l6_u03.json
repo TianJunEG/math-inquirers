@@ -32,15 +32,14 @@
      {
       "a": -3,
       "b": -12,
-      "lab": "−9",
-      "below": true
+      "lab": "−9"
      }
     ],
     "unit": "°C"
    },
    "steps": [
     "Start at −8. Rising moves right: 5 steps to −3.",
-    "Falling moves left. From −3, move 9 steps left to −12. This jump does not cross 0.",
+    "Falling moves left. From −3, move 9 steps left to −12. It does not cross 0.",
     "The thermometer reads −12 °C.",
     "Check by adding: −8 + 5 − 9 = −12."
    ],

@@ -11,9 +11,9 @@ learn = {
     'example': {
         'problem': f'A freezer thermometer reads {M}8 \u00b0C. The door is opened and it rises 5 degrees. Then the door is shut and it falls 9 degrees. What does it read now?',
         'figure': {'type': 'l6_nline', 'lo': -14, 'hi': 2, 'mm': 8, 'every': 2, 'marks': [{'at': -8, 'lab': 'start'}],
-                   'jumps': [{'a': -8, 'b': -3, 'lab': '+5'}, {'a': -3, 'b': -12, 'lab': f'{M}9', 'below': True}], 'unit': '\u00b0C'},
+                   'jumps': [{'a': -8, 'b': -3, 'lab': '+5'}, {'a': -3, 'b': -12, 'lab': f'{M}9'}], 'unit': '\u00b0C'},
         'steps': [f'Start at {M}8. Rising moves right: 5 steps to {M}3.',
-                  f'Falling moves left. From {M}3, move 9 steps left to {M}12. This jump does not cross 0.',
+                  f'Falling moves left. From {M}3, move 9 steps left to {M}12. It does not cross 0.',
                   f'The thermometer reads {M}12 \u00b0C.',
                   f'Check by adding: {M}8 + 5 {M} 9 = {M}12.'],
         'answer': f'It reads {M}12 \u00b0C.'},
