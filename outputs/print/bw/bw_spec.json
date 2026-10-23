@@ -5,5 +5,12 @@
   "sheets": 35,
   "mb": 14.09,
   "pale_tint_dropped_max": 0.3786
+ },
+ {
+  "file": "outputs/print/bw/Math_Inquirers_P3_Workbook_PRINT.pdf",
+  "pages": 64,
+  "sheets": 32,
+  "mb": 16.92,
+  "pale_tint_dropped_max": 0.2451
  }
 ]
