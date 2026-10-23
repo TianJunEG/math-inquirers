@@ -51,7 +51,7 @@ const extra = (n) => {
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 40 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + TH.length + 1, x.q, { before: 120, after: 30, keepNext: true })); if (x.fig) out.push(H.fig(x.fig, { maxH: 200 })); out.push(...lines(i === 2 ? 3 : 2)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + TH.length + 1, x.q, { before: 120, after: 30, keepNext: true })); if (x.fig) out.push(H.fig(x.fig, { maxH: 200 })); out.push(...lines(x.fig ? 1 : (i === 2 ? 3 : 2))); });
   return out;
 };
 const stamps = L.lessons.map(ls => `<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');
