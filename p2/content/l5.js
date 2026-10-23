@@ -5,7 +5,7 @@ const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHIT
 
 // Q4 picture: a bar cut into 3 equal bags, one bag split into "taken out" and "left" (no numbers given)
 const barQ4 = () => {
-  let s = `<svg aria-label="A bar for all of Ravi’s sweets, cut into 3 equal bags. One bag is split into two parts." viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:430px;max-width:100%">`;
+  let s = `<svg aria-label="A bar for all of Ravi’s sweets, cut into 3 equal bags. One bag is split into two parts." viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
   s += `<path d="M40 52 v-12 H520 v12" fill="none" stroke="${NAVY}" stroke-width="3"/>`;
   s += `<text x="280" y="28" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">all of Ravi’s sweets: ?</text>`;
   for (let i = 0; i < 3; i++) s += `<rect x="${40 + i * 160}" y="62" width="160" height="56" fill="${i === 2 ? WHITE : SKY}" stroke="${NAVY}" stroke-width="3"/><text x="${i === 2 ? 472 : 120 + i * 160}" y="97" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">bag ${i + 1}</text>`;
@@ -18,7 +18,7 @@ const barQ4 = () => {
 // Q3 picture: before-and-after bars, drawn to scale (6 units per number), with the two unknown bars shown as "?"
 const barQ3 = () => {
   const bar = (y, w, label, fill, txt, dash) => `<rect x="150" y="${y}" width="${w}" height="40" fill="${fill}" stroke="${NAVY}" stroke-width="3"${dash ? ' stroke-dasharray="8 6"' : ''}/><text x="140" y="${y + 26}" font-size="16" font-weight="700" text-anchor="end" fill="${NAVY}" font-family="Arial">${label}</text><text x="${150 + w / 2}" y="${y + 28}" font-size="20" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${txt}</text>`;
-  let s = `<svg aria-label="Three bars drawn to scale: Siti at first (unknown), after giving 24 stickers (unknown), and now (50 stickers)." viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:430px;max-width:100%">`;
+  let s = `<svg aria-label="Three bars drawn to scale: Siti at first (unknown), after giving 24 stickers (unknown), and now (50 stickers)." viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:600px;max-width:100%">`;
   s += bar(10, 354, 'At first', WHITE, '?', true) + bar(70, 210, 'Gave 24', WHITE, '?', true) + bar(130, 300, 'Now', YEL, '50', false);
   s += `<text x="520" y="64" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">− 24</text><text x="470" y="124" font-size="15" font-weight="700" fill="${TEAL}" font-family="Arial">+ 15</text>`;
   return s + '</svg>';

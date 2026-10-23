@@ -29,7 +29,7 @@ module.exports = {
     share: 'Mei says: “To pay $40 with the fewest notes, I use two $20 notes.” What would you tell her?',
     exit: { q: 'A pen costs $3.65. Pay exactly with the fewest notes and coins.', a: '$2 + $1 + 50¢ + 10¢ + 5¢ (5 pieces)' },
     mistakes: ['Mixing up dollars and cents: writing 345¢ as $34.5, or reading $3.05 as $3.50.', 'Using a $20 note (there is no $20 note), or not starting with the biggest note that fits when finding the fewest.', 'Listing ways with no order, so some ways are missed or the same way is written twice.'],
-    takehome: 'Page 1: the last row of Q1 (the bicycle, $76) and Q2(b) (the two ways that use exactly 4 pieces). Page 2: Q3(b) (change from $50, fewest notes) and Q4(b) (pairs with exactly $3 change).',
+    takehome: 'Page 1: the last row of Q1 (the bicycle, $76). Page 2: Q2(b) (the two ways that use exactly 4 pieces) and Q3(b) (change from $50, fewest notes). Page 3: Q4(b) (pairs with exactly $3 change).',
     extension: 'Find every way to pay exactly $10 using $5 notes, $2 notes and $1 coins. (There are 10.)',
     key: [
       ['Q1', 'Curry puff $1.65: $1 + 50¢ + 10¢ + 5¢ (4).  Notebook $4.30: $2 + $2 + 20¢ + 10¢ (4).  Umbrella $18.75: $10 + $5 + $2 + $1 + 50¢ + 20¢ + 5¢ (7).  Bicycle $76: $50 + $10 + $10 + $5 + $1 (5).'],

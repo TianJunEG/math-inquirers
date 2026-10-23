@@ -34,10 +34,10 @@ const rich = s => esc2(s).replace(/\[\[(\d+)\/(\d+)\]\]/g, (m, n, d) => fr(n, d)
 const tick = `<span style="display:inline-block;width:13px;height:13px;border:2px solid ${NAVY};border-radius:3px;background:#fff;vertical-align:-2px;margin:0 5px 0 14px"></span>`;
 const startHere = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:12.5px;line-height:1.4"><b>Start here.</b> After question 3 you may choose: carry on, or try Think harder.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 25 })])]);
 const stairsSvg = () => {
-  const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px">`;
+  const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px">`;
   [[1, 20], [2, 130], [3, 270]].forEach(([k, x0]) => {
     for (let c = 1; c <= k; c++) for (let r = 0; r < c; r++) s += `<rect x="${x0 + (c - 1) * u}" y="${90 - (r + 1) * u}" width="${u}" height="${u}" fill="#FFC93C" stroke="${NAVY}" stroke-width="2.5"/>`;
-    s += `<text x="${x0 + k * u / 2}" y="106" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${k} step${k > 1 ? 's' : ''}</text>`;
+    s += `<text x="${x0 + k * u / 2}" y="106" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${k} step${k > 1 ? 's' : ''}</text>`;
   });
   return s + '</svg>';
 };

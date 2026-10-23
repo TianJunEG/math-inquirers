@@ -17,7 +17,7 @@ const drinksGraph = () => {
   data.forEach(([n, v, pat], i) => {
     const x = x0 + 19 + i * slot;
     if (v !== null) s += `<rect x="${x}" y="${y0 - v * k}" width="${bw}" height="${v * k}" fill="url(#${pat})" stroke="${NAVY}" stroke-width="2.5"/>` + `<rect x="${x + bw / 2 - 18}" y="${y0 - v * k - 26}" width="36" height="22" fill="#fff"/>` + txt(x + bw / 2, y0 - v * k - 8, String(v), { size: 18 });
-    else s += `<rect x="${x}" y="${y0 - 60 * k}" width="${bw}" height="${60 * k}" fill="none" stroke="${NAVY}" stroke-width="2.4" stroke-dasharray="7 6"/>` + txt(x + bw / 2, y0 - 60 * k + 28, '?', { size: 24 });
+    else s += `<rect x="${x}" y="${y0 - 6}" width="${bw}" height="6" fill="none" stroke="${NAVY}" stroke-width="2.4" stroke-dasharray="7 5"/>` + txt(x + bw / 2, y0 - 16, '?', { size: 26 });
     s += txt(x + bw / 2, y0 + 24, n, { size: 17 });
   });
   s += txt(26, y0 - 120, 'Number of cups', { size: 17, extra: ` transform="rotate(-90 26 ${y0 - 120})"` });
@@ -28,14 +28,14 @@ const drinksGraph = () => {
 const sticks = () => {
   const u = 52; let s = '';
   const stick = (x1, y1, x2, y2) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${NAVY}" stroke-width="7" stroke-linecap="round"/><circle cx="${x2}" cy="${y2}" r="0"/>`;
-  let ox = 20;
+  let ox = 60;
   [1, 2, 3].forEach((n, j) => {
     for (let i = 0; i < n; i++) { const x = ox + i * u; s += stick(x, 20, x + u, 20) + stick(x, 20 + u, x + u, 20 + u); }
     for (let i = 0; i <= n; i++) { const x = ox + i * u; s += stick(x, 20, x, 20 + u); }
-    s += txt(ox + n * u / 2, 20 + u + 32, `${n} square${n > 1 ? 's' : ''}: ${[4, 7, 10][j]} sticks`, { size: 15 });
-    ox += n * u + 70;
+    s += txt(ox + n * u / 2, 20 + u + 36, `${n} square${n > 1 ? 's' : ''}`, { size: 22 });
+    ox += n * u + 80;
   });
-  return `<svg aria-label="Matchstick squares: 1 square uses 4 sticks, 2 squares use 7 sticks, 3 squares use 10 sticks" viewBox="0 0 600 115" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Matchstick squares: 1 square, 2 squares and 3 squares in a row made with sticks" viewBox="0 0 600 125" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">${s}</svg>`;
 };
 const digitCards = () => {
   let s = '';

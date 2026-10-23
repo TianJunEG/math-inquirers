@@ -56,7 +56,7 @@ const q2Fig = () => {
   const trap = [[0, 0], [5, 0], [3, 3], [0, 3]];
   let b = poly(shapeAt(plus, 40, 54, u, 3)) + poly(shapeAt(stair, 175, 54, u, 3)) + poly(shapeAt(house, 300, 0, u, 5)) + poly(shapeAt(trap, 440, 54, u, 3));
   [['A', 82], ['B', 217], ['C', 356], ['D', 510]].forEach(([l, x]) => { b += txt(x, 172, l, { size: 22 }); });
-  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 320);
+  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 500);
 };
 // Q3: 6 lines from one point, spread out like a fan (5 gaps of 30 degrees)
 const q3Fig = () => {

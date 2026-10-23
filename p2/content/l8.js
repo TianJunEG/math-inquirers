@@ -83,8 +83,8 @@ const q5svg = (from = 0, to = 4) => {
 };
 const q5bsvg = () => {
   const c = 30, x0 = 195, y0 = 6; let s = '';
-  for (let i = 0; i <= 7; i++) s += line(x0 + i * c - 30, y0, x0 + i * c - 30, y0 + 4 * c, 1.5, '#B9C7DD', '3 4');
-  for (let j = 0; j <= 4; j++) s += line(x0 - 30, y0 + j * c, x0 + 6 * c, y0 + j * c, 1.5, '#B9C7DD', '3 4');
+  for (let i = 0; i <= 7; i++) s += line(x0 + i * c - 30, y0, x0 + i * c - 30, y0 + 4 * c, 1.5, '#6F7F9E', '3 4');
+  for (let j = 0; j <= 4; j++) s += line(x0 - 30, y0 + j * c, x0 + 6 * c, y0 + j * c, 1.5, '#6F7F9E', '3 4');
   s += net(['.....', '..#..', '.####', '.....'], x0 - 30, y0, c);
   return svg(600, 132, s, 'A row of 4 squares with 1 square above the second square, on a dotted grid', 420);
 };

@@ -2,10 +2,10 @@
 // Heuristics taught: work backwards (groups × size + leftover) and make a list (then test each clue).
 const NV = '#1B2A49', YL = '#FFC93C';
 const shareSvg = () => {
-  let s = `<svg aria-label="Six empty plates and 47 counters to share" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">`;
+  let s = `<svg aria-label="Six empty plates and 47 counters to share" viewBox="0 0 600 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">`;
   for (let i = 0; i < 6; i++) s += `<circle cx="${60 + i * 96}" cy="42" r="34" fill="#fff" stroke="${NV}" stroke-width="3" stroke-dasharray="7 5"/>`;
-  s += `<text x="300" y="104" font-size="16" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">47 counters to share among the 6 plates</text>`;
-  for (let k = 0; k < 47; k++) s += `<circle cx="${40 + (k % 12) * 46}" cy="${126 + Math.floor(k / 12) * 20}" r="8" fill="${YL}" stroke="${NV}" stroke-width="2"/>`;
+  s += `<text x="300" y="104" font-size="18" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">47 counters to share among the 6 plates</text>`;
+  for (let k = 0; k < 47; k++) s += `<circle cx="${40 + (k % 12) * 46}" cy="${128 + Math.floor(k / 12) * 22}" r="9" fill="${YL}" stroke="${NV}" stroke-width="2"/>`;
   return s + '</svg>';
 };
 

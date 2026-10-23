@@ -2271,7 +2271,48 @@
           "Answering 17 (stopping after Step 1)."
         ],
         "mins": 4,
-        "lines": 3
+        "lines": 3,
+        "visual": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ben",
+              "len": 12,
+              "text": "12"
+            },
+            {
+              "name": "Mei",
+              "len": 17,
+              "segments": [
+                {
+                  "v": 12,
+                  "text": ""
+                },
+                {
+                  "v": 5,
+                  "text": "+5",
+                  "colour": "teal"
+                }
+              ]
+            },
+            {
+              "name": "Siti",
+              "len": 14,
+              "segments": [
+                {
+                  "v": 14,
+                  "text": "?"
+                },
+                {
+                  "v": 3,
+                  "text": "-3",
+                  "colour": "grey"
+                }
+              ]
+            }
+          ],
+          "size": "m"
+        }
       },
       {
         "id": "T4",
@@ -2415,7 +2456,35 @@
           "Taking only Mei's shells from 70."
         ],
         "mins": 6,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Shells",
+              "len": 70,
+              "segments": [
+                {
+                  "v": 25,
+                  "text": "Mei 25"
+                },
+                {
+                  "v": 35,
+                  "text": "Ali ?"
+                },
+                {
+                  "v": 10,
+                  "text": "Ben ?"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": "70",
+            "over": 0
+          },
+          "size": "m"
+        }
       }
     ],
     "investigation": {

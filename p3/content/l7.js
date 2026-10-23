@@ -60,7 +60,7 @@ const q5Fig = () => {
   const c = 30, L = [[2, 1], [2, 2], [2, 3], [3, 3]];
   let b = '';
   [[40, '(a)'], [340, '(b)']].forEach(([x0, l]) => { b += txt(x0 + 90, 24, l, { size: 24 }) + bgGrid(x0, 32, 6, 5, c) + cellsFig(L, x0, 32, c); });
-  return svg(600, 190, b, 'Two copies of an L shape made of 4 squares on a 1 cm grid: 3 squares in a column with 1 more square to the right of the bottom one', 300);
+  return svg(600, 190, b, 'Two copies of an L shape made of 4 squares on a 1 cm grid: 3 squares in a column with 1 more square to the right of the bottom one', 520);
 };
 module.exports = {
   lesson: {

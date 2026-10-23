@@ -116,7 +116,7 @@ const barModelF = (o, y0) => {
     (r.segs || []).forEach(g => {
       const w = g.u * unit;
       s += R(x, top, w, rh, SEGFILL[g.k || 'w'], { dash: g.k === 'd', sw: 2.6 });
-      if (g.t !== undefined && g.t !== '') s += (g.k === 'h' || g.k === 'dt' ? `<rect x="${f1(x + w / 2 - (String(g.t).length * 5 + 6))}" y="${f1(top + rh / 2 - 13)}" width="${f1(String(g.t).length * 10 + 12)}" height="26" fill="#fff" rx="4"/>` : '') + T(x + w / 2, top + rh / 2 + 6, g.t, g.size || 17);
+      if (g.t !== undefined && g.t !== '') s += (g.k === 'h' || g.k === 'dt' ? `<rect x="${f1(x + w / 2 - (String(g.t).length * 5 + 6))}" y="${f1(top + rh / 2 - 13)}" width="${f1(String(g.t).length * 10 + 12)}" height="26" fill="#fff" rx="4"/>` : '') + T(x + w * (g.tpos || .5), top + rh / 2 + 6, g.t, g.size || 17);
       x += w;
     });
     if (r.tail) s += T(x + 10, top + rh / 2 + 7, r.tail, 22, { a: 'start', c: TEAL });

@@ -21,14 +21,14 @@ function trayFig() {
   g += `<rect x="96" y="80" width="474" height="114" rx="12" fill="${RED}" stroke="${N}" stroke-width="3"/>`;
   for (let i = 1; i < 9; i++) g += `<line x1="${96 + i * 52.7}" y1="80" x2="${96 + i * 52.7}" y2="194" stroke="#F2A7A7" stroke-width="3"/>`;
   g += `<line x1="96" y1="137" x2="570" y2="137" stroke="#F2A7A7" stroke-width="3"/>` + txt(333, 145, 'cloth', { size: 26, fill: W });
-  return svg(600, 214, 'A tray of cups in 3 rows of 10. A cloth covers all of rows 2 and 3 except the first cup in each row', g, 360);
+  return svg(600, 214, 'A tray of cups in 3 rows of 10. A cloth covers all of rows 2 and 3 except the first cup in each row', g, 480);
 }
 // Q7: a bicycle and a tricycle
 function cyclesFig() {
   const wheel = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${W}" stroke="${N}" stroke-width="4"/><circle cx="${x}" cy="${y}" r="4" fill="${N}"/>`;
   let g = wheel(70, 100, 34) + wheel(200, 100, 34) + `<path d="M70 100 L120 52 L175 52 L200 100 M120 52 L135 100 L70 100 M175 52 L170 34 M160 34 L184 34" fill="none" stroke="${TEAL}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="108" y="40" width="26" height="9" rx="4" fill="${N}"/>` + txt(135, 160, 'bicycle: 2 wheels', { size: 20 });
   g += wheel(500, 96, 38) + [372, 414].map(x => `<ellipse cx="${x}" cy="108" rx="11" ry="28" fill="${W}" stroke="${N}" stroke-width="4"/><circle cx="${x}" cy="108" r="3" fill="${N}"/>`).join('') + `<path d="M372 108 L414 108 M393 108 L460 70 L500 96 M460 70 L452 44 M440 44 L466 44" fill="none" stroke="${RED}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="408" y="62" width="30" height="9" rx="4" fill="${N}"/>` + txt(440, 160, 'tricycle: 3 wheels', { size: 20 });
-  return svg(600, 172, 'A bicycle with 2 wheels and a tricycle with 3 wheels: one big front wheel and two rear wheels side by side', g, 360);
+  return svg(600, 172, 'A bicycle with 2 wheels and a tricycle with 3 wheels: one big front wheel and two rear wheels side by side', g, 480);
 }
 
 const lesson = {
