@@ -371,11 +371,11 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False, broken=Non
     drawn with a broken (zig-zag) left end (broken=False turns that off). objects = [{"label": "pencil", "from": 0, "to": 9, "kind": "pencil"|"crayon"|"snail"|"bar",
     "color": "#FFC93C"}]: each object is a picture lying just above the scale with dashed drop lines from both ends down to the scale, so its end marks can be read;
     a `from` other than the start mark is a shifted start. mark = value of a dashed guide line. Not a cut-out: families use their own ruler (owner decision)."""
-    M, R = 7, 6                                   # mm of ruler edge before the first mark and after the last mark
-    n = end - start
-    W = M + n * 10 + R
     objs = objects or []
     if broken is None: broken = start > 0
+    M, R = (11 if broken else 7), 6               # mm of ruler edge before the first mark and after the last mark
+    n = end - start
+    W = M + n * 10 + R
     ob = 16                                       # mm for one object row (label + picture)
     oh = ob * len(objs) + (2 if objs else 0)      # mm above the ruler for the objects
     body_y, body_h = oh + 2, 19
@@ -385,7 +385,7 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False, broken=Non
     ty, by = body_y * u, (body_y + body_h) * u
     if broken:
         zz = ''.join(f' L{(30 if k % 2 == 0 else 0) + 0:.0f},{ty + (k + 1) * (by - ty) / 8:.1f}' for k in range(7))
-        path = f'M0,{ty} L{(W * u) - 14},{ty} Q{W * u},{ty} {W * u},{ty + 14} L{W * u},{by - 14} Q{W * u},{by} {(W * u) - 14},{by} L0,{by}' + ''.join(f' L{(60 if k % 2 == 0 else 0)},{by - (k + 1) * (by - ty) / 8:.1f}' for k in range(7)) + ' Z'
+        path = f'M0,{ty} L{(W * u) - 14},{ty} Q{W * u},{ty} {W * u},{ty + 14} L{W * u},{by - 14} Q{W * u},{by} {(W * u) - 14},{by} L0,{by}' + ''.join(f' L{(44 if k % 2 == 0 else 0)},{by - (k + 1) * (by - ty) / 8:.1f}' for k in range(7)) + ' Z'
         p = [f'<path d="{path}" fill="#FFF3C4" stroke="{NAVY}" stroke-width="12" stroke-linejoin="round"/>']
     else:
         p = [f'<rect x="0" y="{ty}" width="{W * u}" height="{body_h * u}" rx="14" fill="#FFF3C4" stroke="{NAVY}" stroke-width="12"/>']
@@ -395,11 +395,11 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False, broken=Non
         p.append(f'<line x1="{x(v):.1f}" y1="{ty}" x2="{x(v):.1f}" y2="{(body_y + tall) * u}" stroke="{NAVY}" stroke-width="{10 if k % 10 == 0 else 6}"/>')
     for c in range(start, end + 1):
         p.append(f'<text x="{x(c):.1f}" y="{(body_y + 16) * u}" font-size="62" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{c}</text>')
+    drops = []
     for i, o in enumerate(objs):
         bottom = (body_y - 1.5 - i * ob) * u; top = bottom - 9 * u
         xa, xb = x(o['from']), x(o['to'])
-        for xx in (xa, xb):
-            p.append(f'<line x1="{xx:.1f}" y1="{bottom:.1f}" x2="{xx:.1f}" y2="{ty}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="14 12"/>')
+        drops.append((xa, xb, bottom))
         kind = o.get('kind') or ('pencil' if 'pencil' in o.get('label', '').lower() else 'snail' if 'snail' in o.get('label', '').lower() else 'bar')
         col = o.get('color', YEL); mid = (top + bottom) / 2
         if kind in ('pencil', 'crayon'):
@@ -409,13 +409,17 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False, broken=Non
             p.append(f'<rect x="{xa:.1f}" y="{top:.1f}" width="{min(70, (xb - xa) * 0.12):.1f}" height="{bottom - top:.1f}" fill="#F28C9C" stroke="{NAVY}" stroke-width="8"/>')
         elif kind == 'snail':
             hh = bottom - top
-            p.append(f'<path d="M{xa:.1f},{bottom:.1f} L{xa:.1f},{bottom - 18:.1f} L{xb - 40:.1f},{bottom - 18:.1f} Q{xb:.1f},{bottom - 18:.1f} {xb:.1f},{top + 24:.1f} L{xb:.1f},{bottom:.1f} Z" fill="{col}" stroke="{NAVY}" stroke-width="10" stroke-linejoin="round"/>')
-            p.append(f'<circle cx="{xa + min(110, (xb - xa) * .3):.1f}" cy="{bottom - hh * 0.5:.1f}" r="{hh * 0.42:.1f}" fill="#C98B5A" stroke="{NAVY}" stroke-width="8"/>')
-            p.append(f'<line x1="{xb - 12:.1f}" y1="{top + 24:.1f}" x2="{xb - 12:.1f}" y2="{top:.1f}" stroke="{NAVY}" stroke-width="7" stroke-linecap="round"/>')
+            p.append(f'<rect x="{xa:.1f}" y="{bottom - hh * 0.38:.1f}" width="{xb - xa:.1f}" height="{hh * 0.38:.1f}" rx="{hh * 0.19:.1f}" fill="{col}" stroke="{NAVY}" stroke-width="9"/>')
+            p.append(f'<circle cx="{xa + (xb - xa) * 0.4:.1f}" cy="{bottom - hh * 0.55:.1f}" r="{hh * 0.42:.1f}" fill="#C98B5A" stroke="{NAVY}" stroke-width="8"/>')
+            p.append(f'<circle cx="{xa + (xb - xa) * 0.4:.1f}" cy="{bottom - hh * 0.55:.1f}" r="{hh * 0.2:.1f}" fill="none" stroke="{NAVY}" stroke-width="6"/>')
+            p.append(f'<path d="M{xb - 16:.1f},{bottom - hh * 0.38:.1f} L{xb - 16:.1f},{top + 6:.1f} M{xb - 56:.1f},{bottom - hh * 0.38:.1f} L{xb - 60:.1f},{top + 16:.1f}" stroke="{NAVY}" stroke-width="7" stroke-linecap="round"/>')
         else:
             p.append(f'<rect x="{xa:.1f}" y="{top:.1f}" width="{xb - xa:.1f}" height="{bottom - top:.1f}" rx="20" fill="{col}" stroke="{NAVY}" stroke-width="10"/>')
         if o.get('label'):
             p.append(f'<text x="{xa:.1f}" y="{top - 14:.1f}" font-size="52" font-weight="700" fill="{NAVY}" font-family="{FONT}">{o["label"]}</text>')
+    for (xa, xb, bottom) in drops:
+        for xx in (xa, xb):
+            p.append(f'<line x1="{xx:.1f}" y1="{bottom:.1f}" x2="{xx:.1f}" y2="{ty}" stroke="{RED}" stroke-width="5" stroke-dasharray="14 10"/>')
     if mark is not None:
         p.append(f'<line x1="{x(mark):.1f}" y1="0" x2="{x(mark):.1f}" y2="{(body_y + body_h) * u}" stroke="{RED}" stroke-width="8" stroke-dasharray="30 20"/>')
     size = f'width:{W}mm;height:{H}mm;max-width:none;' if true_scale else 'width:100%;height:auto;'

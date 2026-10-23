@@ -133,7 +133,7 @@ svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle
 .qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */
 .fm{font-size:13pt;line-height:1.4}
-.cov2{column-count:2;column-gap:5mm;font-size:8pt;line-height:1.2}.covi{break-inside:avoid;margin:0 0 1.2mm;border-bottom:0.2mm solid #000;padding-bottom:0.6mm}.covp{font-weight:800;white-space:nowrap}
+.cov2{column-count:2;column-gap:5mm;font-size:8pt;line-height:1.2}.covi{break-inside:avoid;margin:0 0 1.2mm;border-bottom:0.3mm solid #000;padding-bottom:0.6mm}.covp{font-weight:800;white-space:nowrap}
 .fm.notes{font-size:11pt;line-height:1.28}.fm.notes h3{margin:3.5mm 0 1mm}.fm.notes .draft{margin-bottom:2mm}
 .fm h2{font-family:'Fredoka';font-weight:600;font-size:22pt;margin:0 0 4mm;border-bottom:0.8mm solid #000;padding-bottom:2mm}
 .fm h3{font-family:'Fredoka';font-weight:600;font-size:14pt;margin:5mm 0 1.5mm}
