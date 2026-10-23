@@ -8,6 +8,7 @@
  "title": "Math Inquirers P3: Lesson 2 – Cryptarithm Crackers",
  "order": [
   "p3l2-title",
+  "p3l2-tool",
   "p3l2-warmcheck",
   "p3l2-warm1",
   "p3l2-warm2",
