@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9378701081359423,
+   "fill": 0.9638903192584964,
    "over": false,
-   "excess_mm": -16,
+   "excess_mm": -9.3,
    "edition": "soft"
   },
   {
@@ -1033,9 +1033,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9378701081359423,
+   "fill": 0.9638903192584964,
    "over": false,
-   "excess_mm": -16,
+   "excess_mm": -9.3,
    "edition": "print"
   },
   {
@@ -2012,7 +2012,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 12.75,
+  "mb": 12.76,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0037
  }
