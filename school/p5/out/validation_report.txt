@@ -568,7 +568,7 @@ PASS  S1 pupil page 15 page-fill: puzzle content 133 of 183 mm  0.72
 PASS  S1 pupil page 15 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 15 answer boxes at least 12 mm high and 11 mm wide (rendered)  12.0 x 11.0 mm
 PASS  S1 pupil page 16 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 16 page-fill: puzzle content 151 of 183 mm  0.83
+PASS  S1 pupil page 16 page-fill: puzzle content 161 of 183 mm  0.88
 PASS  S1 pupil page 16 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 16 answer boxes at least 12 mm high and 11 mm wide (rendered)  12.0 x 11.0 mm
 PASS  S1 pupil page 17 layout (no overflow/clipping/margin breach)  
@@ -677,7 +677,7 @@ PASS  S2 pupil page 16 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 16 page-fill: puzzle content 162 of 183 mm  0.88
 PASS  S2 pupil page 16 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 17 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 17 page-fill: puzzle content 167 of 190 mm  0.88
+PASS  S2 pupil page 17 page-fill: puzzle content 179 of 190 mm  0.94
 PASS  S2 pupil page 17 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 17 answer boxes at least 12 mm high and 11 mm wide (rendered)  12.0 x 11.0 mm
 PASS  S2 pupil page 18 layout (no overflow/clipping/margin breach)  
@@ -722,21 +722,23 @@ PASS  S2 key page 09 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 09 min text size >= 8 pt  8.0 pt
 PASS  S2 key page 10 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 10 min text size >= 8 pt  8.0 pt
+PASS  S1: every question printed on a colour page is printed in the key too  []
+PASS  S2: every question printed on a colour page is printed in the key too  []
 PASS  S1_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(5, 0, 15)]
 PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 15)]
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 14)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(10, 0, 14)]
-PASS  P5_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
-PASS  P5_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 165, budget 40 on average per page)  
+PASS  P5_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.48% vs greyscale)  20 pages
+PASS  P5_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 159, budget 40 on average per page)  
 PASS  P5_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.43% vs greyscale)  5 pages
 PASS  P5_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 147, budget 40 on average per page)  
 PASS  P5_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.50% vs greyscale)  9 pages
 PASS  P5_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 661, budget 130 on average per page)  
 PASS  P5_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.72% vs greyscale)  20 pages
-PASS  P5_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 202, budget 40 on average per page)  
+PASS  P5_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 199, budget 40 on average per page)  
 PASS  P5_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.41% vs greyscale)  5 pages
 PASS  P5_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 142, budget 40 on average per page)  
 PASS  P5_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.68% vs greyscale)  10 pages
-PASS  P5_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 700, budget 130 on average per page)  
+PASS  P5_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 720, budget 130 on average per page)  
 
-TOTAL 740 checks, 0 failed
+TOTAL 742 checks, 0 failed
