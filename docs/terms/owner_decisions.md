@@ -79,3 +79,4 @@ Source: docs/books/p1_school_paper_patterns.md (32 PDFs, about 38 tests, 17 scho
 
 ## 23 Oct 2026: 2027 term-time slot grid (owner-supplied)
 Weekday slots: 3:00-4:15pm, 4:30-5:45pm, 6:00-7:15pm, 7:45-9:00pm. Weekend slots: 9:00-10:15am, 10:30-11:45am, 12:00-1:15pm, 1:30-2:45pm, 3:00-4:15pm, 4:30-5:45pm, 6:00-7:15pm, 7:45-9:00pm. Each slot is 75 minutes with a 15-minute break between most slots (30 minutes before the 7:45pm slot). Sunday 11:15am is church time (owner, 23 Oct) so Sunday 10:30-11:45am and 12:00-1:15pm need checking before use. OPEN QUESTION raised by the assistant: the term lessons are written as 90-minute lessons; these slots are 75 minutes. Owner to decide: shorten term lessons to 75 minutes, or use 90-minute lessons across modified slots.
+Addendum (23 Oct 2026): Saturday 12:30-2:00pm is the owner's lunch time (not free for classes). Confirmed for the 2027 Term 1 availability grid.
