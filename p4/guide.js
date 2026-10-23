@@ -2,6 +2,7 @@ const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan;
+const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const BUD = require('./budget.json').lessons;          // the clock of every lesson (rebuild/p4_budget.py writes it)
 const fm = x => String(Math.round(x * 10) / 10);
 const bp = (n, title) => BUD[n].parts.find(p => p.title === title);
@@ -55,7 +56,7 @@ const R = [
   [dr('Worksheet'), 'Worksheet', 'Page 1 in pairs, check page 1, short teaching, page 2 alone, check page 2. The last 2 to 3 minutes of the page-2 block are the standing buffer: it is spent first if earlier parts overran, then the choice questions, and never the checks, the exit ticket or Looking back. Tutor asks “how do you know?” rather than giving answers. The exact windows are in each lesson script.', 'Printed workbook, tutor circulates.', 'Printed workbook. Child ticks their own page against the answer slide. Nothing is held up to the camera. Tutor checks one or two answers each.'],
   [dr('Talk time'), 'Talk time', 'One minute of pair talk (no breakout: tell the grown-up beside you, or write one sentence), then volunteers share one answer and explain it.', 'Each child shares in turn.', 'Each child unmutes in turn.'],
   [dr('Exit ticket'), 'Exit ticket and stamp', 'One question on a slip of paper. Stamp the inquiry journal.', 'Paper slip, tutor stamps.', 'Child writes the answer on the slip. Nothing is held up to the camera. Tutor stamps the next time or posts it.'],
-  [dr('Looking back'), 'Looking back (2 minutes of writing)', 'Children fill in the small “Looking back” box on page 3, a page every child reaches, with a tick-box for one thing they could try next. Write, tick or pass. Nobody is made to share. Never graded or collected. (Lesson 10 ends with 2.5 minutes of certificates and goodbye as a whole group.)', 'Pencil and workbook.', 'Children write on the printed page. Passing is always allowed. A child who ticks “still stuck” gets a check-in in the open session.']
+  [dr('Looking back'), 'Looking back (2.5 minutes)', 'Common look-back: one problem, three questions (answered what was asked? makes sense? checked another way?), tool ticks, 90-second timer, then stamp the journals. Write, tick or pass. Nobody is made to share. Never graded or collected. (Lesson 10 ends with 2.5 minutes of certificates and goodbye as a whole group.)', 'Pencil and workbook.', 'Children write on the printed page. Passing is always allowed. A child who ticks “still stuck” gets a check-in in the open session.']
 ];
 G.push(tbl([1100, 1450, 2800, 2150, 2400], [row([hd('Minutes', 1100), hd('Part', 1450), hd('What happens', 2800), hd('Face to face', 2150), hd('Online', 2400)]), ...R.map(r => row([c2(r[0], 1100, { align: AlignmentType.CENTER, bold: true }), c2(r[1], 1450, { bold: true }), c2(r[2], 2800), c2(r[3], 2150), c2(r[4], 2400)]))]));
 G.push(h2('The clock in every lesson'));
@@ -69,6 +70,11 @@ G.push(h2('Teaching habits that matter'));
 
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: digit, point, sign and bracket cards (Lessons 2, 3, 5, 10), square grid (Lessons 7, 8), dot grid and cube net (Lesson 8), graph grids (Lesson 9), fraction wall (Lesson 4), right-angle testers (Lesson 6), and a paper clock, pizza circles and what-to-bring page (Lessons 4, 6). Children bring a clear plastic 180 degree protractor and a 30 cm ruler for Lesson 6 (a school one is fine; they are cheap to buy). Lesson 6 Q1 asks children to measure with it, and the arms there are drawn short with the instruction to extend them with a ruler. Tutors keep two or three spare protractors.', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
+G.push(h2('Toolbox and look-back (every lesson)'));
+G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on page 1, as a badge on the title and talk slides, and named in your script. It is one of eight tools a child can choose for any problem. Say its name, point at the card, and at talk time ask where the tool helped. Lesson 10: children choose their own tool. Passing is always allowed.'));
+G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 8 to 10)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.B, 7400)]))]));
+G.push(gap(40));
+G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.B.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet, write one short line “I checked by …” for question 3, and tick the tools they used. The timer is ' + SG.DATA.lookback.timer_seconds.B + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked. At this level Talk time is one minute longer than before and the look-back one minute shorter: the extra minute is for the tool question.'));
 G.push(h2('Setting up online'));
 ['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, scissors, a ruler, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Nothing is held up to the camera. At the end of each lesson children tick their own work against the answer slide. If a child is still stuck, they mark their own look-back page and the parent photographs it for the tutor after class (business WhatsApp), never during the recorded class.', 'Lessons are recorded on the approved platform so that children who miss one can catch up; follow “Recording the lesson” in this guide. Do not make your own recordings or photos. Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
@@ -140,6 +146,7 @@ L.lessons.forEach(l => {
   ps('Opening', 'Opening');
   say(s.hook);
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud. Keep it to one minute.']);
+  { const sp = SG.info(4, l.n); say([sp.openSay]); doo([sp.openDo]); }
 
   ps('Sneak-peek puzzles', 'Sneak-peek puzzles', 3);
   say(['Two sneak-peek puzzles about ' + l.gaps.idea + '. These are ideas we have not learnt yet, so guessing and “I do not know” are welcome. Nobody is marked. Write your answer on your own paper and say it together with everyone on three.']);
@@ -192,6 +199,7 @@ L.lessons.forEach(l => {
   doo(['Bring the group back to a circle (or camera on, mics on). Pair talk is one minute and needs no breakout room: children tell the grown-up beside them, or write one sentence. Then ask for volunteers first. No cold-calling, nobody has to speak, and passing is always fine. Never keep a tally or scoreboard in front of the group. Praise the reasons, not the speed.']);
   say(s.talk);
   ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+  { const sp = SG.info(4, l.n); ask([[sp.talkAsk, sp.talkListen]], 'Tool question (the extra minute)', 'Listen for'); }
   if (s.talkWeekly) doo(['Moved to the Weekly Dose of Thinking Math (not asked in class): ' + s.talkWeekly.join(' ') + ' ' + (s.talkWeeklyAns || '')]);
 
   ps('Exit ticket', 'Exit ticket and closing');
@@ -199,9 +207,10 @@ L.lessons.forEach(l => {
   ask([[l.exit.q, l.exit.a]], 'Exit ticket', 'Answer');
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
-  ps('Looking back', 'Looking back (2 minutes of writing)', 2);
-  say(['Turn to page 3, the Looking back box. Write, tick or pass. Two minutes, no talking.', 'Model one yourself first: “' + l.gaps.reflect + '” Ticking “I am still stuck” is a good thing to do: it tells me where to help.']);
-  doo(['Run it in two minutes. It is never collected, never graded, never corrected and never shown to the group. Do not ask a child to hold a box or page to the camera; children tick their own box against the answer slide. Do not ask anyone to read theirs aloud; if a child wants to share, take one volunteer and thank them for the strategy. If “I am still stuck” is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a direct message. Praise the strategy (“you drew it”, “you asked for help”), not the speed or the score.']);
+  ps('Looking back', 'Looking back (' + fm(P('Looking back').end - P('Looking back').start) + ' minutes: timer, then stamps)', 2);
+  { const sp = SG.info(4, l.n);
+    say([sp.lookSay, 'Thank you. Drawing it, listing, going backwards or checking another way: those are all good ways to get unstuck.']);
+    doo(['Show the look-back slide and start its timer (' + sp.timer + ' seconds); the workbook box is on the Investigation and Look back page (page 3 of the lesson). ' + sp.lookDo.replace(/^Start the timer\. /, '') + ' It is never collected, never graded, never corrected and never shown to the group; children tick their own box. Do not ask a child to hold a page to the camera. If “I am still stuck” is ticked, check in during the open session: a quick visit to the shared breakout room or a hand signal, with a parent nearby. Never send a direct message. Praise a check you saw (“you went backwards”, “you drew it”), not speed. Then stamp the journals.']); }
   if (l.n === 10) {
     ps('Certificates and goodbye', 'Certificates and goodbye');
     say(s.farewell);
